@@ -101636,6 +101636,14 @@ html:not(.custom-theme-background) .container-Vrgqxz {
     padding: 11px 20px
 }
 
+.marketingPage-2Ut4qv .mainColumn-3pLT0l {
+    width: 1000px
+}
+
+.marketingPage-2Ut4qv .textBody-1qjeO3 {
+    max-width: 400px
+}
+
 .brandShine-2_xHTj {
     color: hsl(var(--brand-500-hsl)/.1) !important
 }
@@ -103086,8 +103094,10 @@ html:not(.custom-theme-background) .container-Vrgqxz {
 }
 
 .collectiblesBannerFullscreen-1ukkvK {
-    margin-top: -40px;
-    margin-bottom: 80px
+    margin-top: -40px !important;
+    margin-bottom: 80px !important;
+    max-width: 824px;
+    min-width: 600px
 }
 
 .trialOfferWrapper-2Y24ok {
@@ -169481,4 +169491,4 @@ html .invoiceCancelRow-dVOR64 {
     margin-bottom: 16px
 }
 
-/*# sourceMappingURL=40532.aba06d6fdfebc2e3d679.css.map*/
+/*# sourceMappingURL=40532.02cfce393d957615cb7d.css.map*/

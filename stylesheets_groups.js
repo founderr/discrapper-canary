@@ -6246,7 +6246,9 @@
                 mainColumn: "mainColumn-3pLT0l",
                 title: "title-10uSQB",
                 buttons: "buttons-3RORp3",
-                ctaButton: "ctaButton-1ZepkT"
+                ctaButton: "ctaButton-1ZepkT",
+                marketingPage: "marketingPage-2Ut4qv",
+                textBody: "textBody-1qjeO3"
             }
         },
         869667: e => {
