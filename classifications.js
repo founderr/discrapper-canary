@@ -22053,6 +22053,8 @@
                     USER_TRIAL_OFFER_ACKNOWLEDGED: function(t) {
                         return "/users/@me/billing/user-trial-offer/".concat(t, "/ack")
                     },
+                    USER_OFFER: "/users/@me/billing/user-offer",
+                    USER_OFFER_ACKNOWLEDGED: "/users/@me/billing/user-offer/ack",
                     GUILD_DISCOVERY: "/discoverable-guilds",
                     GUILD_DISCOVERY_CATEGORIES: "/discovery/categories",
                     GUILD_DISCOVERY_VALID_TERM: "/discovery/valid-term",
@@ -37015,7 +37017,7 @@
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-2aa2cbe0c2ba42f2b2ce18e78fccf7ddb27d1424",
+                    release: "discord_web-08430b82f1657706f4c6c33383ab3176f3264964",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37042,8 +37044,8 @@
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "228828") ? t : "");
-                X.YA("builtAt", String("1695053409693"));
+                X.YA("buildNumber", null !== (t = "228840") ? t : "");
+                X.YA("builtAt", String("1695054917856"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
