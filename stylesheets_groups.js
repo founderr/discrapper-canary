@@ -17845,8 +17845,7 @@
         324003: e => {
             e.exports = {
                 headerContainer: "headerContainer-20VxQq",
-                closeContainer: "closeContainer-3ve08B",
-                closeIcon: "closeIcon-22RzWm",
+                closeButton: "closeButton-2Bzz-z",
                 headerImage: "headerImage-1LiIsw",
                 headerImageContainer: "headerImageContainer-O0GBPA"
             }
