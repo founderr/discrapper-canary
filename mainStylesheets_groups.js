@@ -13967,6 +13967,7 @@
                 marginBottom8: "marginBottom8-3hMfMI",
                 marginTop20: "marginTop20-1oC6yh",
                 marginBottom20: "marginBottom20-2t4TRh",
+                flexRow: "flexRow-89It6P",
                 badgedItem: "badgedItem-qaR-jm"
             }
         },
