@@ -1,4 +1,3 @@
-/*! For license information please see daa47461947d5bf23486.js.LICENSE.txt */
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
     [6944, 27979], {
         479049: (t, e) => {
@@ -1939,4 +1938,3 @@
         }
     }
 ]);
-//# sourceMappingURL=daa47461947d5bf23486.js.map

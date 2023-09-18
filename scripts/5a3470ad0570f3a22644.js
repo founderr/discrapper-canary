@@ -1,4 +1,3 @@
-/*! For license information please see 5a3470ad0570f3a22644.js.LICENSE.txt */
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
     [99676], {
         218156: (e, t) => {
@@ -8002,4 +8001,3 @@
         }
     }
 ]);
-//# sourceMappingURL=5a3470ad0570f3a22644.js.map
