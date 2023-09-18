@@ -6222,6 +6222,17 @@
                 description: "description-zNcVcn"
             }
         },
+        402102: e => {
+            e.exports = {
+                container: "container-5qN7ct",
+                slideInFromLeft: "slideInFromLeft-3-SF6U",
+                content: "content-1bnD2b",
+                ctaContainer: "ctaContainer-3GjHpt",
+                cta: "cta-3QwYgo",
+                collectiblesList: "collectiblesList-tJGgEQ",
+                item: "item-2WPK-W"
+            }
+        },
         311198: e => {
             e.exports = {
                 modalContentOverrides: "modalContentOverrides-a09q4S",
@@ -16710,7 +16721,8 @@
                 icon: "icon-eUBS01",
                 description: "description-1Dd2kv",
                 modal: "modal-3GUHHK",
-                divider: "divider-on9OTV"
+                divider: "divider-on9OTV",
+                popoutContainer: "popoutContainer-K6KTrn"
             }
         },
         657513: e => {
