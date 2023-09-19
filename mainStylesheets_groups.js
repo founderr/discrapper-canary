@@ -21954,6 +21954,7 @@
             e.exports = {
                 userProfileOuter: "userProfileOuter-2tQwNf",
                 userPopoutOuter: "userPopoutOuter-1OHwPL userProfileOuter-2tQwNf",
+                allowOverflow: "allowOverflow-2P8o8L",
                 userProfileModalOuter: "userProfileModalOuter-2wdWjU userProfileOuter-2tQwNf",
                 userPanelOuter: "userPanelOuter-XfFELn",
                 userProfileOuterThemed: "userProfileOuterThemed-2BgJCM",
@@ -22139,6 +22140,7 @@
             e.exports = {
                 referencePosition: "referencePosition-1TDKF3",
                 containerWrapper: "containerWrapper-WZBNDK",
+                animation: "animation-2Ht874",
                 slideInFromBottom: "slideInFromBottom-30Bm31",
                 container: "container-25mm3w",
                 avatarSection: "avatarSection-3AUnZj",
