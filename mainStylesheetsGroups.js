@@ -819,10 +819,11 @@
                 refundRules: "refundRules-3z0sWD",
                 copiableContainer: "copiableContainer-3dqyhP",
                 paymentInfo: "paymentInfo-F_YvXL",
-                guildProductPurchaseBenefits: "guildProductPurchaseBenefits-3vVJX9",
-                guildProductBenefitsContainer: "guildProductBenefitsContainer-xvdW4N",
+                divider: "divider-WyLucM",
+                sectionDivider: "sectionDivider-2xnNB9 divider-WyLucM",
+                guildProductBenefits: "guildProductBenefits-3hRdeR",
                 guildProductBenefitLabel: "guildProductBenefitLabel-2yT05v",
-                divider: "divider-WyLucM"
+                warningBlock: "warningBlock-2jxO3N"
             }
         },
         215276: e => {
