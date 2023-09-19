@@ -24816,6 +24816,7 @@
                 t.MESSAGE_EMBEDS_ACTION_COMPLETED = "message_embeds_action_completed";
                 t.SEND_MESSAGE_FAILURE = "send_message_failure";
                 t.SEND_MESSAGE_QUEUED = "send_message_queued";
+                t.SEND_MESSAGE_ROUNDTRIP = "send_message_roundtrip";
                 t.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED = "vc_tile_activities_entry_point_viewed";
                 t.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED = "vc_tile_activities_entry_point_closed";
                 t.KV_FIELD_TRIAL_EXECUTED = "kv_field_trial_executed";
@@ -37029,7 +37030,7 @@
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-aa7ae17771d55b857da73a6a5b15621d97046ccc",
+                    release: "discord_web-b92e21cd762f76c329c96bc6e673fbfd41c68742",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37056,8 +37057,8 @@
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "229267") ? t : "");
-                X.YA("builtAt", String("1695145365847"));
+                X.YA("buildNumber", null !== (t = "229275") ? t : "");
+                X.YA("builtAt", String("1695146638142"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
