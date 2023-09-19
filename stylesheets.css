@@ -63581,6 +63581,11 @@ h6.title-1p9WyQ {
     margin-bottom: 2vw
 }
 
+.appSlide-3sO7IJ {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
 .listing-HhaQVc {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -169674,5 +169679,3 @@ html .invoiceCancelRow-dVOR64 {
 .roleSubscriptionText-qC6RcZ {
     margin-bottom: 16px
 }
-
-/*# sourceMappingURL=40532.30dba53b7461c71a72bd.css.map*/

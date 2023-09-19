@@ -4610,7 +4610,8 @@
                 buttons: "buttons-JBedyJ",
                 headerBanner: "headerBanner-ZCUdfQ",
                 partnerBadge: "partnerBadge-3119_J",
-                errorImage: "errorImage-3RV8JF"
+                errorImage: "errorImage-3RV8JF",
+                appSlide: "appSlide-3sO7IJ"
             }
         },
         469313: e => {
