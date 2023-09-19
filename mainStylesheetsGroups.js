@@ -10498,6 +10498,7 @@
                 container: "container-2qjEOK",
                 header: "header-elFGge",
                 sidebar: "sidebar-2rB69-",
+                scroller: "scroller-qwiOD6",
                 page: "page-2dwf_i",
                 innerHeader: "innerHeader-216XtR"
             }
