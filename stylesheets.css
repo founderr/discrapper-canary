@@ -133153,20 +133153,20 @@ input::-webkit-outer-spin-button {
     padding: 16px
 }
 
-.subscribeFooter-35dQiH {
+.modalFooterUpsell-31vIjm {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between
 }
 
-.buttonsRight-3BSRx7,
-.subscribeFooter-35dQiH {
+.modalFooterUpsell-31vIjm,
+.modalFooterUpsellButtons-F05wS0 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex
 }
 
-.goToShopButton-daTECK {
+.modalFooterShopButton-2okLGY {
     background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color)
 }
 
