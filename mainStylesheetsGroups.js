@@ -6269,6 +6269,7 @@
                 closeIcon: "closeIcon-ErXdZG",
                 cardsContainer: "cardsContainer-2kdrm8",
                 shop: "shop-3sIaH8",
+                itemTypeTitle: "itemTypeTitle-fjLyoh",
                 closeWrapper: "closeWrapper-4ioOGM"
             }
         },

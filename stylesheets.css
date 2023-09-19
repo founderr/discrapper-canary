@@ -162623,6 +162623,7 @@ html .invoiceCancelRow-3s2UuC {
 
 .shopBanner-PEO5bV {
     grid-column: 1/-1;
+    margin-top: 40px;
     position: relative;
     background-size: cover;
     width: 100%;
@@ -163105,7 +163106,7 @@ html .invoiceCancelRow-3s2UuC {
 
 .cardsContainer-2kdrm8 {
     max-width: 1060px;
-    margin-top: 40px;
+    margin-top: 26px;
     display: grid;
     grid-gap: 24px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -163114,6 +163115,11 @@ html .invoiceCancelRow-3s2UuC {
 
 .shop-3sIaH8 {
     background-color: var(--background-floating)
+}
+
+.itemTypeTitle-fjLyoh {
+    text-transform: uppercase;
+    margin-top: 26px
 }
 
 @media (max-width:1204px) {
