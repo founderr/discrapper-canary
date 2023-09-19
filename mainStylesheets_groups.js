@@ -6247,23 +6247,6 @@
                 confettiCanvas: "confettiCanvas-1iBV68"
             }
         },
-        232043: e => {
-            e.exports = {
-                premiumFeatureBannerBackground: "premiumFeatureBannerBackground-2y3EUg",
-                container: "container-2giTRz premiumFeatureBannerBackground-2y3EUg",
-                containerDefaultMargin: "containerDefaultMargin-ajoaVC",
-                avatars: "avatars-14vQ8F",
-                avatar1: "avatar1-rvUTGU",
-                avatar2: "avatar2-1IdW0v",
-                avatar3: "avatar3-3iB1dt",
-                mainColumn: "mainColumn-3pLT0l",
-                title: "title-10uSQB",
-                buttons: "buttons-3RORp3",
-                ctaButton: "ctaButton-1ZepkT",
-                marketingPage: "marketingPage-2Ut4qv",
-                textBody: "textBody-1qjeO3"
-            }
-        },
         869667: e => {
             e.exports = {
                 page: "page-LilLhg",
@@ -6392,6 +6375,23 @@
                 blueHeadset: "blueHeadset-3YaP41",
                 greenSmoke: "greenSmoke-18S32C",
                 premiumUnlockHook: "premiumUnlockHook-3W9Gfe"
+            }
+        },
+        298790: e => {
+            e.exports = {
+                premiumFeatureBannerBackground: "premiumFeatureBannerBackground-Epwl-X",
+                container: "container-5BK5-N premiumFeatureBannerBackground-Epwl-X",
+                containerDefaultMargin: "containerDefaultMargin-3T8Dq_",
+                avatars: "avatars-bkeu7E",
+                avatar1: "avatar1-1rcc7k",
+                avatar2: "avatar2-vlNb-U",
+                avatar3: "avatar3-2d_OoU",
+                mainColumn: "mainColumn-3aeB42",
+                title: "title-CXxZie",
+                buttons: "buttons-2BQREU",
+                ctaButton: "ctaButton-30CBdb",
+                marketingPage: "marketingPage-1HmCSX",
+                textBody: "textBody-1mECjS"
             }
         },
         853252: e => {
