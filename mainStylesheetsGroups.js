@@ -6667,6 +6667,7 @@
                 tab: "tab-2E41_Z",
                 tabSelected: "tabSelected-1a9MlN",
                 tabDisabled: "tabDisabled-1l0OgZ",
+                tabPreviewClose: "tabPreviewClose-Ic6Mxe",
                 iconContainer: "iconContainer-2gP6IM",
                 filters: "filters-1CqCVQ"
             }
