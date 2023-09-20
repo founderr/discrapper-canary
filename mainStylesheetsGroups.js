@@ -806,6 +806,7 @@
                 description: "description-1IgJoT",
                 descriptionIcon: "descriptionIcon-2pgk4E",
                 guildDescriptionIcon: "guildDescriptionIcon-7TAzNI",
+                shopIcon: "shopIcon-24fi5M",
                 expand: "expand-3Nh1P5",
                 downloadInvoice: "downloadInvoice-2WzTit",
                 downloadRefundInvoice: "downloadRefundInvoice-1_jCFz",
