@@ -4947,8 +4947,6 @@
                 modalContent: "modalContent-1X6ssz",
                 modalPreview: "modalPreview-2hTuZp",
                 modalFooter: "modalFooter-jdWlLy",
-                modalFooterUpsell: "modalFooterUpsell-31vIjm",
-                modalFooterUpsellButtons: "modalFooterUpsellButtons-F05wS0",
                 modalFooterShopButton: "modalFooterShopButton-2okLGY"
             }
         },
