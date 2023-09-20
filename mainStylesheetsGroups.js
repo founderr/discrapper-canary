@@ -1182,7 +1182,6 @@
                 section: "section-2zQkYM",
                 graphContainer: "graphContainer-3Txdak",
                 separator: "separator-15Vn3M",
-                callscopeContainer: "callscopeContainer-3fNX2e",
                 popoutText: "popoutText-3NRmTw",
                 popoutTextDetails: "popoutTextDetails-zNomhC",
                 popoutBottom: "popoutBottom-15-vLu",
