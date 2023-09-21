@@ -163554,12 +163554,8 @@ html .invoiceCancelRow-3s2UuC {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    pointer-events: none;
     top: 32px;
-    right: 32px
-}
-
-.closeIcon-ErXdZG {
+    right: 32px;
     pointer-events: all
 }
 
