@@ -1,9 +1,0 @@
-(this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    [40116], {
-        340116: (e, p, r) => {
-            e.exports = function() {
-                return new Worker(r.p + "2958de4d37daed221c27.worker.js")
-            }
-        }
-    }
-]);
