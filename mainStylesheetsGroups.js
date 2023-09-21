@@ -19207,7 +19207,8 @@
                 fullscreenWrapper: "fullscreenWrapper-39cv9k",
                 innerWrapper: "innerWrapper-Eo2E86",
                 invisible: "invisible-3WrAZ6",
-                button: "button-2j-SXS"
+                button: "button-2j-SXS",
+                shinyButton: "shinyButton-3_LSN1"
             }
         },
         33928: e => {
