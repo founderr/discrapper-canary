@@ -133479,7 +133479,8 @@ input::-webkit-outer-spin-button {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 0
+    padding: 0;
+    overflow: hidden
 }
 
 .modalHeadings-3LBRJZ {
