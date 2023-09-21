@@ -6388,8 +6388,11 @@
             e.exports = {
                 skeleton: "skeleton-1U6yWM",
                 placeholderPulse: "placeholderPulse-ooES5N",
+                bannerBody: "bannerBody-20oTYV",
                 cardBody: "cardBody-1ntQaF",
                 cardAvatar: "cardAvatar-DsY13f",
+                cardTitle: "cardTitle-3D3z1l",
+                cardDescription: "cardDescription-1eoWy6",
                 cardSummary: "cardSummary-218DWR"
             }
         },
