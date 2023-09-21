@@ -20079,6 +20079,7 @@
         256187: e => {
             e.exports = {
                 profileEffects: "profileEffects-km5xa2",
+                hovered: "hovered-1pHBzl",
                 inner: "inner-2xMRmK",
                 effect: "effect-23JFo_"
             }
