@@ -22299,6 +22299,8 @@
                 scrollerSeparator: "scrollerSeparator-6DmwRQ",
                 editClydeButton: "editClydeButton-1EJ7XD",
                 editClydeButtonInner: "editClydeButtonInner-3tIOpf",
+                clydeErrorText: "clydeErrorText-21B00D",
+                sadClyde: "sadClyde-ej4LbK",
                 pencilIcon: "pencilIcon-3ZoLdr"
             }
         },
