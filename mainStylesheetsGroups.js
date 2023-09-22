@@ -6255,7 +6255,9 @@
                 collectibles: "collectibles-1NhnmF",
                 collectiblesList: "collectiblesList-tJGgEQ",
                 item: "item-2WPK-W",
-                selectedItem: "selectedItem-2jIRkM"
+                selectedItem: "selectedItem-2jIRkM",
+                avatarDecorationItem: "avatarDecorationItem-2rZe1f",
+                loading: "loading-1Jf2O1"
             }
         },
         311198: e => {
