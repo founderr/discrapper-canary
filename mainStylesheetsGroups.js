@@ -6305,7 +6305,6 @@
         630505: e => {
             e.exports = {
                 shopCard: "shopCard-H3oN50",
-                shopCardBody: "shopCardBody-G0vZ9T",
                 avatar: "avatar-jvUUbt",
                 avatarPurchased: "avatarPurchased-3h_bK-",
                 cardText: "cardText-2OugTh",
