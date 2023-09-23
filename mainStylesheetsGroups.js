@@ -6290,6 +6290,7 @@
                 cardsContainer: "cardsContainer-2kdrm8",
                 shop: "shop-3sIaH8",
                 itemTypeTitle: "itemTypeTitle-fjLyoh",
+                pageWrapper: "pageWrapper-3Au6sJ",
                 closeWrapper: "closeWrapper-4ioOGM"
             }
         },

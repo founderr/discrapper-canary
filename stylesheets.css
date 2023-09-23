@@ -163583,7 +163583,8 @@ html .invoiceCancelRow-3s2UuC {
     padding: 60px 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    position: relative
+    position: relative;
+    min-width: 300px
 }
 
 .bannerBackgroundWrapper-29zgRc {
@@ -163714,7 +163715,7 @@ html .invoiceCancelRow-3s2UuC {
     padding: 0 32px 32px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 44px auto;
+    margin: 44px 0 300px;
     position: relative;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -163730,7 +163731,7 @@ html .invoiceCancelRow-3s2UuC {
 }
 
 .close-1CF18x {
-    position: fixed;
+    position: sticky;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
@@ -163756,9 +163757,24 @@ html .invoiceCancelRow-3s2UuC {
     margin-top: 26px
 }
 
-@media (max-width:1204px) {
-    .page-LilLhg {
-        padding: 32px 84px 32px 32px
+.pageWrapper-3Au6sJ {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    left: 20px
+}
+
+@media (max-width:1124px) {
+    .close-1CF18x {
+        position: fixed
     }
 }
 
