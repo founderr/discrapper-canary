@@ -13409,7 +13409,8 @@ html.disable-forced-colors * {
 }
 
 .avatarSection-3AUnZj {
-    width: 52px
+    width: 52px;
+    cursor: pointer
 }
 
 .content-wpwQTU {
@@ -13425,11 +13426,11 @@ html.disable-forced-colors * {
     flex-direction: column;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center
+    justify-content: center;
+    cursor: pointer
 }
 
 .ctaLink-33fT8d {
-    cursor: pointer;
     text-decoration: underline
 }
 
