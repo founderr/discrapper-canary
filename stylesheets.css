@@ -102685,7 +102685,8 @@ html:not(.custom-theme-background) .container-Vrgqxz {
     flex-direction: row;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center
+    justify-content: center;
+    min-height: 100px
 }
 
 .containerDefaultMargin-3T8Dq_ {
@@ -102722,7 +102723,7 @@ html:not(.custom-theme-background) .container-Vrgqxz {
     position: absolute;
     -webkit-transform: rotate(-9.161deg) scale(.85);
     transform: rotate(-9.161deg) scale(.85);
-    bottom: -12px;
+    top: 56px;
     left: 24px
 }
 
@@ -102730,7 +102731,8 @@ html:not(.custom-theme-background) .container-Vrgqxz {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    padding: 18px 12px 18px 4px
+    padding: 0 12px 0 4px;
+    margin: auto 0
 }
 
 .title-CXxZie {
@@ -109925,7 +109927,7 @@ html .tabBadge-h4HGed {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    overflow: scroll;
+    overflow: auto;
     margin: 0 16px 0 24px
 }
 
