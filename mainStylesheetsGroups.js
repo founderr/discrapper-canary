@@ -11130,6 +11130,7 @@
         939043: e => {
             e.exports = {
                 welcomeMessageContainer: "welcomeMessageContainer-35bQR5",
+                welcomeMessageProfileContainer: "welcomeMessageProfileContainer-39rNYb",
                 avatar: "avatar-3b6R5I",
                 avatarBackground: "avatarBackground-2PaDOT",
                 avatarBorder: "avatarBorder-20IrEw",
