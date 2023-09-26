@@ -37031,7 +37031,7 @@
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-45e8ae58b90d5734e48e1ec8c24f05109eaf17e7",
+                    release: "discord_web-bbdf97aa8f7f9b431d65ef28718bc22b719ce306",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37058,8 +37058,8 @@
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "231424") ? t : "");
-                X.YA("builtAt", String("1695755489153"));
+                X.YA("buildNumber", null !== (t = "231439") ? t : "");
+                X.YA("builtAt", String("1695757391957"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
@@ -40886,10 +40886,10 @@
                 t[t.POLL = 43] = "POLL"
             }(n || (n = {}));
             var a = {
-                DELETABLE: new Set([0, 6, 7, 8, 9, 10, 11, 12, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 31, 32, 33, 34, 35, 40, 41, 42]),
+                DELETABLE: new Set([0, 6, 7, 8, 9, 10, 11, 12, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 29, 31, 32, 33, 34, 35, 40, 41, 42, 43]),
                 GUILD_DISCOVERY_STATUS: new Set([14, 15, 16, 17]),
-                USER_MESSAGE: new Set([0, 19, 20, 23, 35, 41]),
-                REPLYABLE: new Set([0, 7, 19, 20, 23, 24, 25, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42]),
+                USER_MESSAGE: new Set([0, 19, 20, 23, 35, 41, 43]),
+                REPLYABLE: new Set([0, 7, 19, 20, 23, 24, 25, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43]),
                 LAZY_LOADED_MESSAGE_REFERENCES: new Set([19, 21]),
                 AVAILABLE_IN_GUILD_FEED: new Set([0, 19]),
                 DEADCHAT_PROMPTS: new Set([40, 42]),
