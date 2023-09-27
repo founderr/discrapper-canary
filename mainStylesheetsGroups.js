@@ -20207,6 +20207,7 @@
         },
         418877: e => {
             e.exports = {
+                modal: "modal-3Dr350",
                 subscribeFooter: "subscribeFooter-3rMXge",
                 buttonsRight: "buttonsRight-3JWUcH",
                 modalHeader: "modalHeader-QZFdV1",
