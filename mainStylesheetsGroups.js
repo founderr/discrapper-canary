@@ -20229,6 +20229,7 @@
                 effectDescriptionContainer: "effectDescriptionContainer-1y_8OR",
                 effectDescription: "effectDescription-3TiVDd",
                 effectName: "effectName-2B6JQP",
+                effectPurchasedAt: "effectPurchasedAt-34gVOT",
                 replayButton: "replayButton-3ja54M",
                 replayButtonText: "replayButtonText-1tQs6j",
                 retryIcon: "retryIcon-3yWMmW"
