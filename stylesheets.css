@@ -71338,8 +71338,7 @@ strong {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    min-width: 0;
-    padding: 0 68px
+    min-width: 0
 }
 
 @media (max-width:724px) {
