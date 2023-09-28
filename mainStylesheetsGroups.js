@@ -20067,6 +20067,7 @@
                 gifTag: "gifTag-TF1Coa",
                 bannerUploaderInnerSquare: "bannerUploaderInnerSquare-2c2J8_ banner-3D8GgT",
                 bannerUploaderInnerSquareEmpty: "bannerUploaderInnerSquareEmpty-NmkmF3 banner-3D8GgT",
+                noBorderRadius: "noBorderRadius-bCqfLW",
                 bannerNormal: "bannerNormal-2jf-df banner-3D8GgT",
                 bannerNitroUpsell: "bannerNitroUpsell-2iP18z",
                 bannerNitroUpsellText: "bannerNitroUpsellText-Ll6vKY",
