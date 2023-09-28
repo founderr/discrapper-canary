@@ -12630,6 +12630,8 @@
                 stageIcon: "stageIcon-1Gi-1l",
                 userNames: "userNames-2j2GW-",
                 joinButton: "joinButton-1HdI2a",
+                rsvpButton: "rsvpButton-1rIlgm",
+                buttonIcon: "buttonIcon-lnv1wf",
                 closeIcon: "closeIcon-1AEDhI"
             }
         },
