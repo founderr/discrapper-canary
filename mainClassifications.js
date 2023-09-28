@@ -24899,7 +24899,9 @@
                 t.BROADCAST_LIST_VISITED = "broadcast_list_visited";
                 t.APP_ICON_UPDATED = "app_icon_updated";
                 t.CHANNEL_LIST_END_REACHED = "channel_list_end_reached";
-                t.COLLECTIBLES_SHOP_VIEWED = "collectibles_shop_viewed"
+                t.COLLECTIBLES_SHOP_VIEWED = "collectibles_shop_viewed";
+                t.UPDATER_METRICS_DOWNLOAD = "updater_metrics_download";
+                t.UPDATER_METRICS_INSTALL = "updater_metrics_install"
             }(Zr || (Zr = {}));
             ! function(t) {
                 t.CANARY = "canary";
@@ -25524,8 +25526,7 @@
                 t.GOG = "gog";
                 t.EPIC = "epic"
             }(Pn || (Pn = {}));
-            var vn, Bn, bn = Object.freeze((x(Mn = {}, Pn.DISCORD, "Discord"), x(Mn, Pn.STEAM, "Steam"),
-                    x(Mn, Pn.UPLAY, "Uplay"), x(Mn, Pn.BATTLENET, "Battle.net"), x(Mn, Pn.ORIGIN, "Origin"), x(Mn, Pn.GOG, "GOG"), x(Mn, Pn.TWITCH, "Twitch"), x(Mn, Pn.EPIC, "Epic"), Mn)),
+            var vn, Bn, bn = Object.freeze((x(Mn = {}, Pn.DISCORD, "Discord"), x(Mn, Pn.STEAM, "Steam"), x(Mn, Pn.UPLAY, "Uplay"), x(Mn, Pn.BATTLENET, "Battle.net"), x(Mn, Pn.ORIGIN, "Origin"), x(Mn, Pn.GOG, "GOG"), x(Mn, Pn.TWITCH, "Twitch"), x(Mn, Pn.EPIC, "Epic"), Mn)),
                 wn = 6016,
                 Hn = 3384;
             ! function(t) {
@@ -37045,7 +37046,7 @@ c.jH)(t)}.\nUrl: ${A(t)}`);
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-c00adffe1864d36cbb7106fa8ff0d1a0d35dc12b",
+                    release: "discord_web-a14150fc2c35418e7a5918de2be2f48bfba052bf",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37072,8 +37073,8 @@ c.jH)(t)}.\nUrl: ${A(t)}`);
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "232340") ? t : "");
-                X.YA("builtAt", String("1695926401815"));
+                X.YA("buildNumber", null !== (t = "232342") ? t : "");
+                X.YA("builtAt", String("1695926601931"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
