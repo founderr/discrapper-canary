@@ -20082,7 +20082,8 @@
                 defaultCursor: "defaultCursor-19IIDd",
                 profileCustomizationPreviewWithTheme: "profileCustomizationPreviewWithTheme-HgdsC2 profileCustomizationPreview-3zZw6E",
                 profileCustomizationPreviewWithoutTheme: "profileCustomizationPreviewWithoutTheme-1CinaI profileCustomizationPreview-3zZw6E",
-                profileEffectsModalCustomizationPreview: "profileEffectsModalCustomizationPreview-3OBu4K profileCustomizationPreview-3zZw6E",
+                profileEffectsModalCustomizationPreviewWithoutTheme: "profileEffectsModalCustomizationPreviewWithoutTheme-1GZC9b profileCustomizationPreview-3zZw6E",
+                profileEffectsModalCustomizationPreviewWithTheme: "profileEffectsModalCustomizationPreviewWithTheme-2B1NHu profileCustomizationPreview-3zZw6E",
                 body: "body-3lbupa",
                 status: "status-170GHg",
                 statusDotBackground: "statusDotBackground-16Gr51",
@@ -20235,6 +20236,8 @@
         818424: e => {
             e.exports = {
                 previewContainer: "previewContainer-1wwj4v",
+                previewContainerWithTheme: "previewContainerWithTheme-2GxmaE previewContainer-1wwj4v",
+                previewContainerWithoutTheme: "previewContainerWithoutTheme-2nRTiv previewContainer-1wwj4v",
                 effectDescriptionBorder: "effectDescriptionBorder-336gnM",
                 effectDescriptionBorderWithGradient: "effectDescriptionBorderWithGradient-3GHthf effectDescriptionBorder-336gnM",
                 effectDescriptionNoGradient: "effectDescriptionNoGradient-d7Q-Lc effectDescriptionBorder-336gnM",

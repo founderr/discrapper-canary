@@ -134677,8 +134677,12 @@ input::-webkit-outer-spin-button {
     width: 340px
 }
 
-.profileEffectsModalCustomizationPreview-3OBu4K {
+.profileEffectsModalCustomizationPreviewWithoutTheme-1GZC9b {
     width: 280px
+}
+
+.profileEffectsModalCustomizationPreviewWithTheme-2B1NHu {
+    width: 288px
 }
 
 .body-3lbupa {
@@ -170279,10 +170283,17 @@ html .invoiceCancelRow-3s2UuC {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    width: 280px;
     min-height: 560px;
     margin: 6.5px 3px 0 2px;
     padding-left: 10px
+}
+
+.previewContainerWithTheme-2GxmaE {
+    width: 288px
+}
+
+.previewContainerWithoutTheme-2nRTiv {
+    width: 280px
 }
 
 .effectDescriptionBorder-336gnM {
