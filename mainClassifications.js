@@ -21253,6 +21253,9 @@
                     GUILD_MEMBER_AVATAR: function(t, e, r, n) {
                         return "/guilds/".concat(t, "/users/").concat(e, "/avatars/").concat(r, ".").concat(n)
                     },
+                    CLYDE_PROFILES_AVATAR: function(t, e, r) {
+                        return "/clyde-profiles/".concat(t, "/avatars/").concat(e, ".").concat(r)
+                    },
                     SET_GUILD_MEMBER: function(t) {
                         return "/guilds/".concat(t, "/members/@me")
                     },
@@ -21502,6 +21505,10 @@
                     GUILD_MEMBER_BANNER: function(t, e, r) {
                         var n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "png";
                         return "/guilds/".concat(t, "/users/").concat(e, "/banners/").concat(r, ".").concat(n)
+                    },
+                    CLYDE_PROFILES_BANNER: function(t, e) {
+                        var r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "png";
+                        return "/clyde-profiles/".concat(t, "/banners/").concat(e, ".").concat(r)
                     },
                     MESSAGES: function(t) {
                         return "/channels/".concat(t, "/messages")
@@ -22516,6 +22523,12 @@
                     },
                     BULK_GUILD_BAN: function(t) {
                         return "/guilds/".concat(t, "/bulk-ban")
+                    },
+                    CLYDE_PROFILES: function(t) {
+                        return "/clyde-profiles/".concat(t)
+                    },
+                    CLYDE_PROFILES_CREATE: function(t) {
+                        return "/guilds/".concat(t, "/clyde-profiles")
                     }
                 }),
                 St = Object.freeze({
@@ -37046,7 +37059,7 @@ c.jH)(t)}.\nUrl: ${A(t)}`);
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-c02df653366e047e6060df28961fe26bbfc3492b",
+                    release: "discord_web-bc0b04df6ba98ff97f58b211c42a958d4cb23cc7",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37073,8 +37086,8 @@ c.jH)(t)}.\nUrl: ${A(t)}`);
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "232630") ? t : "");
-                X.YA("builtAt", String("1695948880107"));
+                X.YA("buildNumber", null !== (t = "232632") ? t : "");
+                X.YA("builtAt", String("1695949628588"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
