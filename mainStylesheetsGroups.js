@@ -12280,7 +12280,9 @@
         661492: e => {
             e.exports = {
                 closeButton: "closeButton-2swOfr",
-                content: "content-1OV4rb"
+                content: "content-1OV4rb",
+                warningHeading: "warningHeading-3LQtSZ",
+                warningIcon: "warningIcon-UbN-0c"
             }
         },
         666309: e => {

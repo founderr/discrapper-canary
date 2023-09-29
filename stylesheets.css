@@ -165542,6 +165542,18 @@ html .invoiceCancelRow-3s2UuC {
     margin: 16px 0
 }
 
+.warningHeading-3LQtSZ {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 6px
+}
+
+.warningIcon-UbN-0c {
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+
 .header-1XFMZK {
     display: -webkit-box;
     display: -ms-flexbox;
