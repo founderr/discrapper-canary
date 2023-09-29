@@ -20894,7 +20894,8 @@
                 t.POMELO_ELIGIBLE = "POMELO_ELIGIBLE";
                 t.GUILD_RAID_NOTIFICATION = "GUILD_RAID_NOTIFICATION";
                 t.SAFETY_USER_SENTIMENT_NAGBAR = "SAFETY_USER_SENTIMENT_NAGBAR";
-                t.SERVER_USAGE_SURVEY = "SERVER_USAGE_SURVEY"
+                t.SERVER_USAGE_SURVEY = "SERVER_USAGE_SURVEY";
+                t.WIN32_DEPRECATED_MESSAGE = "WIN32_DEPRECATED_MESSAGE"
             }(h || (h = {}));
             ! function(t) {
                 t.RESOLVING = "RESOLVING";
@@ -25498,7 +25499,8 @@
                 t.CLIPS = "16861982215703";
                 t.REMIXING_TEXT_SUPPORT = "15145601963031-Remix-FAQ#h_01H2Y1F86HNTVKWNVJJSB4C6A5";
                 t.SERVER_SUBSCRIPTION_AND_PRODUCTS = "10423011974551";
-                t.SERVER_PRODUCTS = "10423011974551#docs-internal-guid-918e991a-7fff-03d5-8326-5d065e5edeb1"
+                t.SERVER_PRODUCTS = "10423011974551#docs-internal-guid-918e991a-7fff-03d5-8326-5d065e5edeb1";
+                t.WIN32_DEPRECATE = "213491697"
             }(Ln || (Ln = {}));
             var Cn, gn, Un, Pn, Mn, mn = function(t) {
                     return "https://www.youtube.com/embed/".concat(t)
@@ -37059,7 +37061,7 @@ c.jH)(t)}.\nUrl: ${A(t)}`);
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-1dbc00affa1b863cff1632e86dd4ac06c2ab34b3",
+                    release: "discord_web-a6cea41b9a6f67bfd438a574f573b1dad00f44bb",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37086,8 +37088,8 @@ c.jH)(t)}.\nUrl: ${A(t)}`);
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "232643") ? t : "");
-                X.YA("builtAt", String("1695951447531"));
+                X.YA("buildNumber", null !== (t = "232646") ? t : "");
+                X.YA("builtAt", String("1695952023757"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
