@@ -106717,6 +106717,10 @@ strong {
     background-color: var(--info-danger-background)
 }
 
+.buildOverride-1HKGZe {
+    background-color: var(--status-positive-background)
+}
+
 .icon-3F2JOt {
     display: inline-block;
     vertical-align: middle;
