@@ -6375,6 +6375,7 @@
                 avatar: "avatar-jvUUbt",
                 avatarPurchased: "avatarPurchased-3h_bK-",
                 cardText: "cardText-2OugTh",
+                cardTextProfileEffect: "cardTextProfileEffect-3ulRYT",
                 description: "description-1aSbLq",
                 price: "price-ehI2ay",
                 buttonsContainer: "buttonsContainer-1B5Td_",
