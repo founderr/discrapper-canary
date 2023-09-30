@@ -6354,7 +6354,7 @@
                 cta: "cta-3QwYgo",
                 close: "close-3G3kj9",
                 closeIcon: "closeIcon-221Mzj",
-                collectibles: "collectibles-1NhnmF",
+                listWrapper: "listWrapper-3rA0-L",
                 collectiblesList: "collectiblesList-tJGgEQ",
                 item: "item-2WPK-W",
                 selectedItem: "selectedItem-2jIRkM",
