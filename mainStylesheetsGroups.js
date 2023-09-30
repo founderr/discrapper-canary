@@ -6547,7 +6547,9 @@
                 title: "title-CXxZie",
                 buttons: "buttons-2BQREU",
                 ctaButton: "ctaButton-30CBdb",
-                textBody: "textBody-1mECjS"
+                textBody: "textBody-1mECjS",
+                upsellArt: "upsellArt-1BE-fp",
+                profileEffectsUpsellArt: "profileEffectsUpsellArt-1k9puR"
             }
         },
         799012: e => {
