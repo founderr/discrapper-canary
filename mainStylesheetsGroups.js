@@ -20340,10 +20340,12 @@
         418877: e => {
             e.exports = {
                 modal: "modal-3Dr350",
-                subscribeFooter: "subscribeFooter-3rMXge",
+                modalFooter: "modalFooter-2Xpaik",
                 buttonsRight: "buttonsRight-3JWUcH",
+                modalBody: "modalBody-3w24P1",
                 modalHeader: "modalHeader-QZFdV1",
-                modalTitle: "modalTitle-27DLRj",
+                modalHeadings: "modalHeadings-1FFBHj",
+                modalCloseButton: "modalCloseButton-3UuEsg",
                 premiumIcon: "premiumIcon-2zT6sO",
                 modalDescription: "modalDescription-l9dq3V",
                 discoverMorePerks: "discoverMorePerks-8syRxl",
