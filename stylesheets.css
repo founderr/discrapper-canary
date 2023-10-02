@@ -86457,12 +86457,12 @@ strong {
     color: var(--interactive-active)
 }
 
-.selected-VDl2J3 .previewChannelRowContent-3fpJu0:hover .fullPreview-2Jh2uC .closeButton-1FeJeB {
+.selected-VDl2J3 .previewChannelRowContent-3fpJu0:hover .closeButton-1FeJeB {
     display: block
 }
 
-.selected-VDl2J3 .previewChannelRowContent-3fpJu0:hover .fullPreview-2Jh2uC .money-2DSXfU,
-.selected-VDl2J3 .previewChannelRowContent-3fpJu0:hover .fullPreview-2Jh2uC .questionMark-ZD83vL {
+.selected-VDl2J3 .previewChannelRowContent-3fpJu0:hover .money-2DSXfU,
+.selected-VDl2J3 .previewChannelRowContent-3fpJu0:hover .questionMark-ZD83vL {
     display: none
 }
 

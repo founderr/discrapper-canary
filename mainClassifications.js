@@ -24840,6 +24840,7 @@
                 t.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED = "guild_role_subscription_store_page_toggled";
                 t.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED = "guild_role_subscription_team_setup_clicked";
                 t.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED = "guild_role_subscription_setup_modal_closed";
+                t.GUILD_SHOP_PREVIEW_CLICK = "guild_shop_preview_click";
                 t.MESSAGE_ACTION_SHEET_OPENED = "message_action_sheet_opened";
                 t.SNOWSGIVING_PAGE_CTA_CLICKED = "snowsgiving_page_cta_clicked";
                 t.REACTION_ACTION_SHEET_OPENED = "reaction_action_sheet_opened";
@@ -25550,8 +25551,8 @@
                 t.GOG = "gog";
                 t.EPIC = "epic"
             }(Pn || (Pn = {}));
-            var vn, Bn, bn = Object.freeze((x(Mn = {}, Pn.DISCORD, "Discord"), x(Mn, Pn.STEAM, "Steam"), x(Mn, Pn.UPLAY, "Uplay"), x(Mn, Pn.BATTLENET, "Battle.net"), x(Mn, Pn.ORIGIN, "Origin"), x(Mn, Pn.GOG, "GOG"),
-                    x(Mn, Pn.TWITCH, "Twitch"), x(Mn, Pn.EPIC, "Epic"), Mn)),
+            var vn, Bn, bn = Object.freeze((x(Mn = {}, Pn.DISCORD, "Discord"),
+                    x(Mn, Pn.STEAM, "Steam"), x(Mn, Pn.UPLAY, "Uplay"), x(Mn, Pn.BATTLENET, "Battle.net"), x(Mn, Pn.ORIGIN, "Origin"), x(Mn, Pn.GOG, "GOG"), x(Mn, Pn.TWITCH, "Twitch"), x(Mn, Pn.EPIC, "Epic"), Mn)),
                 wn = 6016,
                 Hn = 3384;
             ! function(t) {
@@ -26776,7 +26777,8 @@
                                             const r = A(t);
                                             return !r || (0, u.U0)(r, e)
                                         }(t, e.allowUrls)) {
-                                        ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && E.kg.warn(`Event dropped due to not being matched by \`allowUrls\` option.\nEvent: ${(0,c.jH)(t)}.\nUrl: ${A(t)}`);
+                                        ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && E.kg.warn(`Event dropped due to not being matched by \`allowUrls\` option.\nEvent: ${(0,
+c.jH)(t)}.\nUrl: ${A(t)}`);
                                         return !0
                                     }
                                     return !1
@@ -27060,7 +27062,8 @@
             }
 
             function v(t, e) {
-                const [r, n] = t;
+                const [r, n] = t
+                ;
                 let a = JSON.stringify(r);
 
                 function i(t) {
@@ -28361,8 +28364,7 @@
                 return {
                     $: e,
                     add: function(n) {
-                        if (!(void 0 === t || e.length < t)) return (0,
-                            Kt.$2)(new kt("Not adding Promise because buffer limit was reached."));
+                        if (!(void 0 === t || e.length < t)) return (0, Kt.$2)(new kt("Not adding Promise because buffer limit was reached."));
                         const a = n(); - 1 === e.indexOf(a) && e.push(a);
                         a.then((() => r(a))).then(null, (() => r(a).then(null, (() => {}))));
                         return a
@@ -29164,7 +29166,8 @@
                         return this._transport.send(t).then(null, (t => {
                             ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && E.kg.error("Error while sending event:", t)
                         }))
-                    }("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && E.kg.error("Transport disabled")
+                    }
+                    ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && E.kg.error("Transport disabled")
                 }
                 _clearOutcomes() {
                     const t = this._outcomes;
@@ -29255,8 +29258,7 @@
                     const a = e;
                     if ("stack" in e) i = Ae(t, e);
                     else {
-                        const e = a.name || ((0,
-                                h.TX)(a) ? "DOMError" : "DOMException"),
+                        const e = a.name || ((0, h.TX)(a) ? "DOMError" : "DOMException"),
                             o = a.message ? `${e}: ${a.message}` : e;
                         i = he(t, o, r, n);
                         (0, c.Db)(i, o)
@@ -29329,8 +29331,7 @@
             }) {
                 const r = (0, o.zf)(t),
                     n = e ? "promise rejection" : "exception";
-                if ((0,
-                        h.VW)(t)) return `Event \`ErrorEvent\` captured as ${n} with message \`${t.message}\``;
+                if ((0, h.VW)(t)) return `Event \`ErrorEvent\` captured as ${n} with message \`${t.message}\``;
                 if ((0, h.cO)(t)) {
                     return `Event \`${function(t){try{const e=Object.getPrototypeOf(t);return e?e.constructor.name:void 0}catch(t){}}(t)}\` (type=${t.type}) captured as ${n}`
                 }
@@ -29498,8 +29499,7 @@
                                 startTimestamp: e,
                                 endTimestamp: r
                             };
-                        (0,
-                            T.Gd)().addBreadcrumb({
+                        (0, T.Gd)().addBreadcrumb({
                             category: "fetch",
                             data: n,
                             level: "error",
@@ -37072,7 +37072,7 @@
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-e9bf237ce36af086ff68c827ed85036322ee1190",
+                    release: "discord_web-6287f931a21903917522d1bef6906e74a4eaefc7",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37099,8 +37099,8 @@
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "233501") ? t : "");
-                X.YA("builtAt", String("1696289434970"));
+                X.YA("buildNumber", null !== (t = "233511") ? t : "");
+                X.YA("builtAt", String("1696290051616"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);

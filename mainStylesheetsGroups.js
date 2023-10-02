@@ -14721,7 +14721,6 @@
                 channelLabel: "channelLabel-14dlkc",
                 shopIcon: "shopIcon-1Bvujq",
                 selected: "selected-VDl2J3",
-                fullPreview: "fullPreview-2Jh2uC",
                 closeButton: "closeButton-1FeJeB",
                 money: "money-2DSXfU",
                 questionMark: "questionMark-ZD83vL",
