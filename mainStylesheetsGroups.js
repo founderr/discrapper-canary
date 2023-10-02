@@ -11016,7 +11016,8 @@
                 addRoleIcon: "addRoleIcon-5oV6RN",
                 roleTooltip: "roleTooltip-WIu418",
                 roleTooltipItemContainer: "roleTooltipItemContainer-3Jvgqd",
-                roleTooltipItem: "roleTooltipItem-1kJZ1v"
+                roleTooltipItem: "roleTooltipItem-1kJZ1v",
+                disabledActionTooltip: "disabledActionTooltip-4AW_kU"
             }
         },
         498087: e => {
