@@ -41510,6 +41510,10 @@ input[type=checked]:focus-visible+.label-3TDpbn {
     height: 100%
 }
 
+.textArea-2pmFjo *>span {
+    color: var(--white-100)
+}
+
 .theme-dark .bioTextArea-3TCvr_,
 .theme-light .bioTextArea-3TCvr_ {
     background: var(--input-background)
