@@ -37072,7 +37072,7 @@
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-76273615bfe8b44b20af213f2c37160b0d2f5b67",
+                    release: "discord_web-942cfcf735e099ef12e350cda363e5496c3b77c2",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37099,8 +37099,8 @@
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "233423") ? t : "");
-                X.YA("builtAt", String("1696283377300"));
+                X.YA("buildNumber", null !== (t = "233436") ? t : "");
+                X.YA("builtAt", String("1696284434599"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
@@ -40847,7 +40847,7 @@
                 GUILD_FEED_FEATURABLE_MESSAGES: new Set([0, 5, 11]),
                 ROLE_SUBSCRIPTIONS: new Set([0, 2, 5, 13, 15, 16]),
                 ICON_EMOJIS: new Set([0, 2, 5, 13, 15]),
-                SUMMARIZEABLE: new Set([0, 2, 11, 12, 13]),
+                SUMMARIZEABLE: new Set([0]),
                 POLLS: new Set([0, 2, 3, 11, 12, 13]),
                 ALL: new Set([0, 1, 2, 3, 4, 5, 6, 10, 11, 12, 13, 14, 15, 16])
             }
