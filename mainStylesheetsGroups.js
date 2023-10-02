@@ -25197,7 +25197,11 @@
                 wrapper: "wrapper-rWtXPd",
                 videoWrapper: "videoWrapper-KvX9hj",
                 downloadLink: "downloadLink-3cavAH",
-                mobileCloseWrapper: "mobileCloseWrapper-2byadv"
+                mobileCloseWrapper: "mobileCloseWrapper-2byadv",
+                obscureContainer: "obscureContainer-B0o4ps",
+                obscureWrapper: "obscureWrapper-2PC2QZ",
+                obscure: "obscure-nthVvO",
+                controlsOffset: "controlsOffset-1Jggv4"
             }
         },
         323121: e => {
@@ -25301,7 +25305,9 @@
                 spoilerMarkdownContent: "spoilerMarkdownContent-2R1Vwe",
                 obscuredBlockContent: "obscuredBlockContent-2QCAD4",
                 obscuredTextContent: "obscuredTextContent-3vHOH3",
-                obscuredTextContentInner: "obscuredTextContentInner-2ytmvF"
+                obscuredTextContentInner: "obscuredTextContentInner-2ytmvF",
+                obscureButtonContainer: "obscureButtonContainer-ELAZd7",
+                obscureHoverButton: "obscureHoverButton-3MRFX1"
             }
         },
         224477: e => {
@@ -26373,8 +26379,6 @@
                 inline: "inline-18PIBU",
                 hiddenAttachment: "hiddenAttachment-1ujFOi",
                 obscured: "obscured-20kiwN",
-                obscureButtonContainer: "obscureButtonContainer-3nx5-P",
-                obscureHoverButton: "obscureHoverButton-2ODc_8",
                 attachmentContentItem: "attachmentContentItem-UKeiCx",
                 removeAttachmentButton: "removeAttachmentButton-1iO1qS",
                 spoilerRemoveAttachmentButton: "spoilerRemoveAttachmentButton-3aeXPK removeAttachmentButton-1iO1qS",
