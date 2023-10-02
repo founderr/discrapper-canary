@@ -22291,6 +22291,14 @@ html.disable-forced-colors * {
     background-color: hsl(var(--black-500-hsl)/.6)
 }
 
+.pencilContainerDark-3nPbrs {
+    background-color: var(--black-500)
+}
+
+.pencilContainerDark-3nPbrs:hover {
+    background-color: var(--black-500)
+}
+
 .editIcon-3h_5Rm {
     color: #fff
 }

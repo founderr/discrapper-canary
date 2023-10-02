@@ -22153,6 +22153,7 @@
                 panelBanner: "panelBanner-2KnOzw bannerPremium-kkSkPv",
                 cancelModalBanner: "cancelModalBanner-3sqsYA bannerPremium-kkSkPv",
                 pencilContainer: "pencilContainer-18TrEJ",
+                pencilContainerDark: "pencilContainerDark-3nPbrs pencilContainer-18TrEJ",
                 editIcon: "editIcon-3h_5Rm",
                 closeIcon: "closeIcon-gxNG0p",
                 premiumIconTooltipContent: "premiumIconTooltipContent-e6VnCZ",
