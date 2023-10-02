@@ -20895,7 +20895,8 @@
                 t.GUILD_RAID_NOTIFICATION = "GUILD_RAID_NOTIFICATION";
                 t.SAFETY_USER_SENTIMENT_NAGBAR = "SAFETY_USER_SENTIMENT_NAGBAR";
                 t.SERVER_USAGE_SURVEY = "SERVER_USAGE_SURVEY";
-                t.WIN32_DEPRECATED_MESSAGE = "WIN32_DEPRECATED_MESSAGE"
+                t.WIN32_DEPRECATED_MESSAGE = "WIN32_DEPRECATED_MESSAGE";
+                t.BLOCKED_BY_PROXY = "BLOCKED_BY_PROXY"
             }(h || (h = {}));
             ! function(t) {
                 t.RESOLVING = "RESOLVING";
@@ -21045,8 +21046,8 @@
                 t.SEND_FAILED = "SEND_FAILED"
             }(j || (j = {}));
             var z, Z, $, q, J, Q, tt, et, rt, nt, at, it, ot, _t, st = new Set([G.u.REPLY, G.u.THREAD_STARTER_MESSAGE]),
-                Et = Object.freeze((x(z = {}, G.u.DEFAULT, !0), x(z, G.u.CHANNEL_PINNED_MESSAGE, !0), x(z, G.u.USER_JOIN, !0), x(z, G.u.GUILD_BOOST, !0), x(z, G.u.GUILD_BOOST_TIER_1, !0),
-                    x(z, G.u.GUILD_BOOST_TIER_2, !0), x(z, G.u.GUILD_BOOST_TIER_3, !0), x(z, G.u.CHANNEL_FOLLOW_ADD, !0), x(z, G.u.THREAD_CREATED, !0), x(z, G.u.REPLY, !0), x(z, G.u.CHAT_INPUT_COMMAND, !0), x(z, G.u.GUILD_INVITE_REMINDER, !0), x(z, G.u.CONTEXT_MENU_COMMAND, !0), x(z, G.u.AUTO_MODERATION_ACTION, !0), x(z, G.u.ROLE_SUBSCRIPTION_PURCHASE, !0), x(z, G.u.INTERACTION_PREMIUM_UPSELL, !0), x(z, G.u.STAGE_START, !0), x(z, G.u.STAGE_END, !0), x(z, G.u.STAGE_TOPIC, !0), x(z, G.u.STAGE_SPEAKER, !0), x(z, G.u.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION, !0), x(z, G.u.GUILD_DEADCHAT_REVIVE_PROMPT, !0), z));
+                Et = Object.freeze((x(z = {}, G.u.DEFAULT, !0), x(z, G.u.CHANNEL_PINNED_MESSAGE, !0), x(z, G.u.USER_JOIN, !0), x(z, G.u.GUILD_BOOST, !0),
+                    x(z, G.u.GUILD_BOOST_TIER_1, !0), x(z, G.u.GUILD_BOOST_TIER_2, !0), x(z, G.u.GUILD_BOOST_TIER_3, !0), x(z, G.u.CHANNEL_FOLLOW_ADD, !0), x(z, G.u.THREAD_CREATED, !0), x(z, G.u.REPLY, !0), x(z, G.u.CHAT_INPUT_COMMAND, !0), x(z, G.u.GUILD_INVITE_REMINDER, !0), x(z, G.u.CONTEXT_MENU_COMMAND, !0), x(z, G.u.AUTO_MODERATION_ACTION, !0), x(z, G.u.ROLE_SUBSCRIPTION_PURCHASE, !0), x(z, G.u.INTERACTION_PREMIUM_UPSELL, !0), x(z, G.u.STAGE_START, !0), x(z, G.u.STAGE_END, !0), x(z, G.u.STAGE_TOPIC, !0), x(z, G.u.STAGE_SPEAKER, !0), x(z, G.u.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION, !0), x(z, G.u.GUILD_DEADCHAT_REVIVE_PROMPT, !0), z));
             ! function(t) {
                 t[t.CROSSPOSTED = 1] = "CROSSPOSTED";
                 t[t.IS_CROSSPOST = 2] = "IS_CROSSPOST";
@@ -23056,6 +23057,7 @@
                 t[t.TAG_REQUIRED = 40067] = "TAG_REQUIRED";
                 t[t.USER_QUARANTINED = 40068] = "USER_QUARANTINED";
                 t[t.INVITES_DISABLED = 40069] = "INVITES_DISABLED";
+                t[t.BLOCKED_BY_PROXY = 40333] = "BLOCKED_BY_PROXY";
                 t[t.INVALID_ACCESS = 50001] = "INVALID_ACCESS";
                 t[t.INVALID_ACCOUNT_TYPE = 50002] = "INVALID_ACCOUNT_TYPE";
                 t[t.INVALID_ACTION_DM = 50003] = "INVALID_ACTION_DM";
@@ -37067,7 +37069,7 @@
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-68c5c2078da89f7c23eb850710c76a5774ef6407",
+                    release: "discord_web-5b6042606fee117ce9afc543b87f8e41330401b2",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37094,8 +37096,8 @@
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "233336") ? t : "");
-                X.YA("builtAt", String("1696278515935"));
+                X.YA("buildNumber", null !== (t = "233338") ? t : "");
+                X.YA("builtAt", String("1696278594558"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
