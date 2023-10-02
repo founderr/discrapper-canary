@@ -20259,6 +20259,12 @@
                 presetEffectBackground: "presetEffectBackground-2FjhQJ"
             }
         },
+        686559: e => {
+            e.exports = {
+                shopArt: "shopArt-3HBKJX",
+                static: "static-1TvOp8"
+            }
+        },
         146967: e => {
             e.exports = {
                 previewContainer: "previewContainer-3HzSb7",

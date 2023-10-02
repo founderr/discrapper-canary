@@ -110350,6 +110350,20 @@ html .tabBadge-h4HGed {
     height: 231px
 }
 
+.shopArt-3HBKJX {
+    background: no-repeat url(/assets/28d57a10fec72b8581352dce5daa9c70.png) 50% 50%/cover transparent;
+    height: 158px;
+    width: 100%;
+    margin-top: -230px;
+    margin-bottom: 158px;
+    -webkit-transform: translateY(158px);
+    transform: translateY(158px)
+}
+
+.static-1TvOp8 {
+    background: no-repeat url(/assets/025ecbe1073a103f3afac0995f82bcac.png) 50% 50%/cover transparent
+}
+
 .header-2lFgXZ {
     margin-top: 8px;
     display: -webkit-box;
