@@ -41648,17 +41648,6 @@ input[type=checked]:focus-visible+.label-3TDpbn {
     background: var(--input-background)
 }
 
-.giftBox-5g9APR,
-.giftBoxHighlighted-3OVp07 {
-    background-color: var(--background-secondary-alt);
-    border-radius: 8px;
-    border: 3px solid var(--transparent)
-}
-
-.giftBoxHighlighted-3OVp07 {
-    border: 3px solid var(--brand-360)
-}
-
 .customGiftBox-fAjo-m,
 .customGiftBoxHighlighted-rMoa5Q {
     background-color: var(--transparent);
@@ -41667,7 +41656,8 @@ input[type=checked]:focus-visible+.label-3TDpbn {
 }
 
 .customGiftBoxHighlighted-rMoa5Q {
-    border: 3px solid var(--brand-360)
+    border: 2px solid var(--brand-500);
+    padding: 2px
 }
 
 .infoIcon-chB-oI {
@@ -41707,8 +41697,8 @@ input[type=checked]:focus-visible+.label-3TDpbn {
     -ms-flex-align: center;
     align-items: center;
     gap: 9px;
-    margin-top: 16px;
-    margin-bottom: 16px
+    margin: 25px auto auto;
+    max-width: 90%
 }
 
 .planOption-187LtR {
@@ -41837,12 +41827,27 @@ input[type=checked]:focus-visible+.label-3TDpbn {
     margin-bottom: 30px
 }
 
-.giftRecipientName-35QsQT {
+.giftRecipientName-35QsQT,
+.giftRecipientTag-2-wRC- {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 200px
+}
+
+.giftRecipientTag-2-wRC- {
     color: GrayText
 }
 
 .stepBody-3ZoVrh {
     padding-top: 12px
+}
+
+.giftOptions-33xCmt {
+    max-width: 75%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
 }
 
 .stepBodyCustomGift-2Xj4sH {
@@ -41976,7 +41981,8 @@ input[type=checked]:focus-visible+.label-3TDpbn {
 }
 
 .giftMainAnimation-n9Ztg4 {
-    margin-bottom: 20px
+    margin-bottom: 15px;
+    height: 215px
 }
 
 .shaker-bevRrZ {
@@ -42403,7 +42409,7 @@ input[type=checked]:focus-visible+.label-3TDpbn {
 .giftSentMessage-1sDSS2 {
     margin-top: 16px;
     margin-bottom: 8px;
-    color: var(--header-secondary)
+    color: var(--header-primary)
 }
 
 .giftRecipient-gvWTeE {
@@ -42449,7 +42455,7 @@ input[type=checked]:focus-visible+.label-3TDpbn {
 }
 
 .headerCustomGifting-a8qVSV {
-    margin-top: 60px
+    margin-top: 24px
 }
 
 .termsCheckbox-2icdza {
@@ -49202,9 +49208,9 @@ html .progress-2Otdc- {
 
 .customGiftEmbedBox-1L9BlG {
     position: absolute;
+    top: -8px;
     height: 90%;
-    right: -4px;
-    bottom: 20px;
+    right: 36px;
     z-index: 1
 }
 
@@ -140166,7 +140172,10 @@ html .invoiceCancelRow-3s2UuC {
 
 .customGiftHeader-291ESt {
     font-size: 20px;
-    margin-top: 0
+    text-align: center;
+    margin-top: 10px;
+    width: 75%;
+    line-height: 1.25
 }
 
 .backSplash-3pzAIg {
@@ -140186,10 +140195,17 @@ html .invoiceCancelRow-3s2UuC {
 }
 
 .customMessage-3qmTJs {
-    font-size: 30px;
+    font-size: calc(10px + 1.4vw);
     margin-bottom: 35px;
     line-height: 1;
-    text-align: center
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 450px
 }
 
 .giftAnimation-3vYrv4 {

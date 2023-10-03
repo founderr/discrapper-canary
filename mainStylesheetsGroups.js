@@ -19804,8 +19804,6 @@
         },
         614278: e => {
             e.exports = {
-                giftBox: "giftBox-5g9APR",
-                giftBoxHighlighted: "giftBoxHighlighted-3OVp07",
                 customGiftBox: "customGiftBox-fAjo-m",
                 customGiftBoxHighlighted: "customGiftBoxHighlighted-rMoa5Q"
             }
@@ -19832,6 +19830,7 @@
         710431: e => {
             e.exports = {
                 stepBody: "stepBody-3ZoVrh",
+                giftOptions: "giftOptions-33xCmt",
                 stepBodyCustomGift: "stepBodyCustomGift-2Xj4sH",
                 bodyColumnMiddle: "bodyColumnMiddle-yHnZIj",
                 bodyColumnRight: "bodyColumnRight-31A5Yf",
@@ -19941,7 +19940,8 @@
             e.exports = {
                 giftRecipientInfo: "giftRecipientInfo-oLFZzH",
                 content: "content-GeF06t",
-                giftRecipientName: "giftRecipientName-35QsQT"
+                giftRecipientName: "giftRecipientName-35QsQT",
+                giftRecipientTag: "giftRecipientTag-2-wRC-"
             }
         },
         787257: e => {
