@@ -26378,6 +26378,7 @@
                 inline: "inline-18PIBU",
                 hiddenAttachment: "hiddenAttachment-1ujFOi",
                 obscured: "obscured-20kiwN",
+                obscureVideo: "obscureVideo-9qK0C4",
                 attachmentContentItem: "attachmentContentItem-UKeiCx",
                 removeAttachmentButton: "removeAttachmentButton-1iO1qS",
                 spoilerRemoveAttachmentButton: "spoilerRemoveAttachmentButton-3aeXPK removeAttachmentButton-1iO1qS",
