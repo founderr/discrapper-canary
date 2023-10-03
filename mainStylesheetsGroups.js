@@ -6386,7 +6386,9 @@
                 close: "close-1CF18x",
                 cardsContainer: "cardsContainer-2kdrm8",
                 shop: "shop-3sIaH8",
+                itemTypeTitleContainer: "itemTypeTitleContainer-3KVj87",
                 itemTypeTitle: "itemTypeTitle-fjLyoh",
+                newItemTypeBadge: "newItemTypeBadge-2_xpQl",
                 pageWrapper: "pageWrapper-3Au6sJ",
                 closeWrapper: "closeWrapper-4ioOGM"
             }
