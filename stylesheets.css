@@ -47643,7 +47643,7 @@ input[type=checked]:focus-visible+.label-3TDpbn {
     position: relative
 }
 
-.compact-2Nkcau .messageContent-2t3eCI .emoji.jumboable {
+.compact-2Nkcau .messageContent-2t3eCI .jumboable {
     width: var(--custom-emoji-size-emoji);
     height: var(--custom-emoji-size-emoji);
     min-height: var(--custom-emoji-size-emoji)
