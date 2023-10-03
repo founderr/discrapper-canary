@@ -6433,6 +6433,7 @@
         727918: e => {
             e.exports = {
                 wrapper: "wrapper-2pTC1G",
+                heading1: "heading1-2oLmb_",
                 reload: "reload-1YKUlg"
             }
         },

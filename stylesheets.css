@@ -164305,6 +164305,7 @@ html .invoiceCancelRow-3s2UuC {
 }
 
 .wrapper-2pTC1G {
+    margin-top: 80px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -164321,6 +164322,11 @@ html .invoiceCancelRow-3s2UuC {
     min-height: 300px
 }
 
+.heading1-2oLmb_ {
+    margin-bottom: 24px
+}
+
+.heading1-2oLmb_,
 .reload-1YKUlg {
     margin-top: 24px
 }
