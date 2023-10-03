@@ -20260,8 +20260,9 @@
         },
         686559: e => {
             e.exports = {
+                loading: "loading-2lROMq",
                 shopArt: "shopArt-3HBKJX",
-                static: "static-1TvOp8"
+                imageLoader: "imageLoader-LqGjD_"
             }
         },
         146967: e => {
