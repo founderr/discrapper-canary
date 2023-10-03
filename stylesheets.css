@@ -47757,12 +47757,10 @@ input[type=checked]:focus-visible+.label-3TDpbn {
     overflow: hidden;
     -o-object-fit: contain;
     object-fit: contain;
-    margin-left: .25rem;
     vertical-align: top;
     position: relative;
-    top: 1px;
-    height: calc(1rem + 4px);
-    width: calc(1rem + 4px);
+    height: 1rem;
+    width: 1rem;
     cursor: pointer;
     text-indent: 0
 }
