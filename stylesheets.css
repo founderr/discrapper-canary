@@ -11230,8 +11230,8 @@ html.decorate-links .lowSaturationUnderline-Z6CW6z {
 
 .editorAnimate-2BAiXS {
     margin-right: calc(var(--custom-client-themes-editor-content-width)*-1 + var(--custom-client-themes-editor-editor-padding)*2*-1);
-    -webkit-animation: slidein-zGJHpq .1s ease-in 1s forwards;
-    animation: slidein-zGJHpq .1s ease-in 1s forwards
+    -webkit-animation: slidein-zGJHpq .25s ease-in 1s forwards;
+    animation: slidein-zGJHpq .25s ease-in 1s forwards
 }
 
 @-webkit-keyframes slidein-zGJHpq {
