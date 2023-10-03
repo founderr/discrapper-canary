@@ -19788,8 +19788,7 @@
         22865: e => {
             e.exports = {
                 body: "body-2atPTk",
-                textArea: "textArea-2pmFjo",
-                bioTextArea: "bioTextArea-3TCvr_"
+                textArea: "textArea-2pmFjo"
             }
         },
         820794: e => {
