@@ -19803,6 +19803,7 @@
                 giftBoxHeaderContainer: "giftBoxHeaderContainer-3BUaXT",
                 infoIconContainer: "infoIconContainer-7wlSbF",
                 giftMainAnimation: "giftMainAnimation-3mE9-P",
+                animation: "animation-2G0RUD",
                 spinner: "spinner-2R6WcU",
                 giftBoxHeaderText: "giftBoxHeaderText-2ndxNR",
                 giftBoxOptionContainer: "giftBoxOptionContainer-ruho5Z"
