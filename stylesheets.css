@@ -68036,6 +68036,14 @@ strong {
     margin: auto
 }
 
+.calloutContainer-2WCWZC {
+    margin-top: 4px;
+    margin-bottom: 2px;
+    padding: 8px 16px;
+    background-color: var(--background-primary);
+    border-radius: 8px
+}
+
 .unread-O4ZgUu {
     position: absolute;
     top: 28px;
