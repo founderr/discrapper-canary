@@ -29931,10 +29931,8 @@ img[alt] {
 
 .cardIcon-1rZ5-N {
     position: absolute;
-    top: 50%;
-    left: 10px;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%)
+    top: 10px;
+    left: 10px
 }
 
 .cardInput-33x7OF {
