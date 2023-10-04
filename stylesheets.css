@@ -16008,8 +16008,7 @@ html.disable-forced-colors * {
 }
 
 .explicitContentWarningText-1Kq9Yl {
-    margin-top: 4px;
-    color: var(--__current--spoiler-warning-text-color)
+    margin-top: var(--spacing-4)
 }
 
 .spoilerWarning-1JN1Ot {
