@@ -24393,6 +24393,7 @@
                 t.PREMIUM_MARKETING_PAGE_EXITED = "premium_marketing_page_exited";
                 t.PREMIUM_MARKETING_PERK_CARD_FLIPPED = "premium_marketing_perk_card_flipped";
                 t.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED = "premium_marketing_what_is_new_card_hovered";
+                t.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED = "premium_marketing_perks_see_all_clicked";
                 t.STORE_DIRECTORY_VIEWED = "store_directory_viewed";
                 t.STORE_DIRECTORY_BROWSE_VIEWED = "store_directory_browse_viewed";
                 t.STORE_DIRECTORY_FILTER_UPDATED = "store_directory_filter_updated";
@@ -37085,7 +37086,7 @@ sentry_client:`${e.name}/${e.version}`}})}(t,n)}`
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-a144a5973887c51c327c303e7718a2b4f9759a9e",
+                    release: "discord_web-4a74d05055a80544ff644923b54cdfad700f99bc",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37112,8 +37113,8 @@ sentry_client:`${e.name}/${e.version}`}})}(t,n)}`
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "234486") ? t : "");
-                X.YA("builtAt", String("1696461864634"));
+                X.YA("buildNumber", null !== (t = "234494") ? t : "");
+                X.YA("builtAt", String("1696462184195"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
