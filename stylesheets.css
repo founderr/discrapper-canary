@@ -157735,6 +157735,14 @@ html .invoiceCancelRow-3s2UuC {
     gap: 8px
 }
 
+.buttonsContainer-2n9c_e {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: var(--spacing-8);
+    margin-bottom: var(--spacing-24)
+}
+
 .container-3wgZ8J {
     position: relative;
     background-color: var(--background-secondary);
