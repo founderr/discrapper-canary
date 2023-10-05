@@ -11166,6 +11166,8 @@ html.decorate-links .lowSaturationUnderline-Z6CW6z {
 .appIconSelection-3Iponf {
     border-radius: 50%;
     overflow: hidden;
+    -webkit-box-shadow: 0 0 2px var(--interactive-normal);
+    box-shadow: 0 0 2px var(--interactive-normal);
     cursor: pointer
 }
 
