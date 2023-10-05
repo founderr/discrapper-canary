@@ -103945,12 +103945,16 @@ strong {
 }
 
 .perksCards-2Gq6cx {
-    width: 100%
+    width: calc(100% - 32px)
 }
 
 .giftNitro-2xJWhA,
 .manageMembership-3EhpQs {
     margin-top: 64px
+}
+
+.giftNitro-2xJWhA {
+    width: calc(100% - 32px)
 }
 
 .footerSpacing-4r9UzV {
