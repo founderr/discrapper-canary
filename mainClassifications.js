@@ -21879,6 +21879,7 @@
                         return "/channels/".concat(t, "/messages/search/tabs")
                     },
                     BILLING_STRIPE_SETUP_INTENT_SECRET: "/users/@me/billing/stripe/setup-intents",
+                    BILLING_ADYEN_PAYMENT_METHODS: "/users/@me/billing/adyen/payment-methods",
                     BILLING_PAYMENT_SOURCES: "/users/@me/billing/payment-sources",
                     BILLING_PAYMENT_SOURCES_VALIDATE_BILLING_ADDRESS: "/users/@me/billing/payment-sources/validate-billing-address",
                     BILLING_PAYMENT_SOURCE: function(t) {
@@ -37091,7 +37092,7 @@ sentry_client:`${e.name}/${e.version}`}})}(t,n)}`
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-554a762363ed9155b20f96128c0f5cacff7018b8",
+                    release: "discord_web-22dba3ca777581a2fb77a324e1dbf7f5c8e87f70",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37118,8 +37119,8 @@ sentry_client:`${e.name}/${e.version}`}})}(t,n)}`
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "234980") ? t : "");
-                X.YA("builtAt", String("1696543750239"));
+                X.YA("buildNumber", null !== (t = "234984") ? t : "");
+                X.YA("builtAt", String("1696544160520"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
