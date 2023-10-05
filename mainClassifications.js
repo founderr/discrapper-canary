@@ -25380,11 +25380,11 @@
                 t.GIF = "GIF"
             }(Sn || (Sn = {}));
             var Dn, Cn = Object.freeze({
-                GIPHY: {
+                GIF: {
                     type: Sn.GIF,
-                    command: "giphy",
-                    title: "Giphy",
-                    commandId: "-8"
+                    command: "gif",
+                    title: "Gif",
+                    commandId: "-16"
                 },
                 TENOR: {
                     type: Sn.GIF,
@@ -37090,7 +37090,7 @@ sentry_client:`${e.name}/${e.version}`}})}(t,n)}`
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-142052e60c36de1d663d5ea75a9f6bd24c368e6d",
+                    release: "discord_web-3dbd1fa8c201b658580d6d73192b5c67e681eb7e",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37117,8 +37117,8 @@ sentry_client:`${e.name}/${e.version}`}})}(t,n)}`
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "234832") ? t : "");
-                X.YA("builtAt", String("1696535466961"));
+                X.YA("buildNumber", null !== (t = "234833") ? t : "");
+                X.YA("builtAt", String("1696535584875"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
