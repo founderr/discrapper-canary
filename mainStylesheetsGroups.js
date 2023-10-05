@@ -6451,7 +6451,11 @@
                 itemTypeTitleContainer: "itemTypeTitleContainer-3KVj87",
                 itemTypeTitle: "itemTypeTitle-fjLyoh",
                 newItemTypeBadge: "newItemTypeBadge-2_xpQl",
+                pageWrapperFullscreen: "pageWrapperFullscreen-2nKaAh",
                 pageWrapper: "pageWrapper-3Au6sJ",
+                headerBar: "headerBar-292C6X",
+                logo: "logo-2i6m3N",
+                title: "title-dzyan3",
                 closeWrapper: "closeWrapper-4ioOGM"
             }
         },
@@ -6527,13 +6531,6 @@
                 largeRightSparkle: "largeRightSparkle-3neVXZ",
                 smallRightSparkle: "smallRightSparkle-3WyLPd",
                 subscribeButton: "subscribeButton-3rUkdg"
-            }
-        },
-        852519: e => {
-            e.exports = {
-                headerBar: "headerBar-31lc7l",
-                logo: "logo-dP5Wg0",
-                title: "title-2qzIW4"
             }
         },
         315758: e => {
