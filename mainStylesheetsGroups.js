@@ -19340,6 +19340,7 @@
                 noBackground: "noBackground-GkDHNy",
                 heading: "heading-2tPnY1",
                 subtitle: "subtitle-16COWT",
+                moreSubtitleMargin: "moreSubtitleMargin-2VNvT8",
                 fullWidth: "fullWidth-NgZ6OT",
                 cardContainer: "cardContainer-2ZcjK6"
             }
