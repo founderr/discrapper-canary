@@ -20986,7 +20986,9 @@ html.disable-forced-colors * {
 }
 
 .pencilIcon-3ZoLdr {
-    padding-right: 8px
+    padding-right: 8px;
+    width: 16px;
+    height: 16px
 }
 
 .referencePosition-3awUp7 {
