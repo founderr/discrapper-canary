@@ -25019,7 +25019,8 @@
                 t.CLYDE_ADMIN_NUX = "CLYDE_ADMIN_NUX";
                 t.CLYDE_USER_NUX = "CLYDE_USER_NUX";
                 t.SUMMARIES = "SUMMARIES";
-                t.SUMMARIES_ENABLED = "SUMMARIES_ENABLED"
+                t.SUMMARIES_ENABLED = "SUMMARIES_ENABLED";
+                t.CLYDE_PERSONALITIES_NUX = "CLYDE_PERSONALITIES_NUX"
             }(tn || (tn = {}));
             var rn, nn, an, on = Object.freeze({
                     STORAGE_MANIFEST: function(t, e) {
@@ -37098,7 +37099,7 @@ sentry_client:`${e.name}/${e.version}`}})}(t,n)}`
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-37e2dfd20a1b6c3f6db22d00af0175e59958b2a9",
+                    release: "discord_web-a75fe4aebf03b9e9bebede6c71bb25d517716729",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37125,8 +37126,8 @@ sentry_client:`${e.name}/${e.version}`}})}(t,n)}`
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "235608") ? t : "");
-                X.YA("builtAt", String("1696634931045"));
+                X.YA("buildNumber", null !== (t = "235613") ? t : "");
+                X.YA("builtAt", String("1696635358731"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
