@@ -5046,8 +5046,9 @@
                 tooltip: "tooltip-2UaXP-",
                 tooltipInner: "tooltipInner-1P2vsJ",
                 tooltipText: "tooltipText-EQbODE",
-                badge: "badge-1IU7uc",
-                itemBadge: "itemBadge-2VGhY3 badge-1IU7uc"
+                iconBadge: "iconBadge-2grb37",
+                newBadge: "newBadge-29fT5u",
+                newBadgeText: "newBadgeText-3UcxPL"
             }
         },
         904044: e => {
