@@ -19330,6 +19330,7 @@
                 sizeGizmoText: "sizeGizmoText-OBigQJ",
                 arrow: "arrow-33qzVi",
                 subscriberNitroHome: "subscriberNitroHome-2yhIpB",
+                reducedMotion: "reducedMotion-3BlabZ",
                 partiallyHidden: "partiallyHidden-1_IhuR",
                 cover: "cover-20EvR4",
                 hidden: "hidden-3VVAdD"
@@ -19361,6 +19362,7 @@
                 cover: "cover-1nw8ay",
                 flipped: "flipped-1ykbgv",
                 flipCardButtonContainer: "flipCardButtonContainer--NA2Tt",
+                reducedMotion: "reducedMotion-Tfo8id",
                 flipCardBack: "flipCardBack-WarPiy",
                 flipCardFront: "flipCardFront-13TUSs",
                 flipCardHidden: "flipCardHidden-1lvo4J",
