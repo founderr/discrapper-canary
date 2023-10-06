@@ -21624,6 +21624,9 @@
                     CHANNEL_INTEGRATION: function(t, e) {
                         return "/channels/".concat(t, "/integrations/").concat(e)
                     },
+                    CHANNEL_SAFETY_WARNINGS_ACK: function(t) {
+                        return "/channels/".concat(t, "/safety-warnings/ack")
+                    },
                     FORUM_TAGS: function(t) {
                         return "/channels/".concat(t, "/tags")
                     },
@@ -37092,7 +37095,7 @@ sentry_client:`${e.name}/${e.version}`}})}(t,n)}`
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-516d2dba984d82bdbf0bc52a7521e49fc8aa0dab",
+                    release: "discord_web-cc2298f4a6a366acc958cd2b2afc3ca30e374408",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37119,8 +37122,8 @@ sentry_client:`${e.name}/${e.version}`}})}(t,n)}`
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "235328") ? t : "");
-                X.YA("builtAt", String("1696616648017"));
+                X.YA("buildNumber", null !== (t = "235330") ? t : "");
+                X.YA("builtAt", String("1696616735915"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
