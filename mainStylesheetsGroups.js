@@ -20259,6 +20259,7 @@
                 profileEffects: "profileEffects-km5xa2",
                 hovered: "hovered-1pHBzl",
                 inner: "inner-2xMRmK",
+                innerNoRadius: "innerNoRadius-33APt0 inner-2xMRmK",
                 effect: "effect-23JFo_"
             }
         },
