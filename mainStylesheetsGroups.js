@@ -20315,8 +20315,9 @@
                 tooltip: "tooltip-LmVZ7y",
                 tooltipInner: "tooltipInner-1NJzfW",
                 tooltipText: "tooltipText-2hhyIB",
-                badge: "badge-w5FhZi",
-                lockBadge: "lockBadge-1GRfLm badge-w5FhZi",
+                lockBadge: "lockBadge-1GRfLm",
+                newBadge: "newBadge-2yfmTf",
+                newBadgeText: "newBadgeText-2MMr66",
                 presetEffectImg: "presetEffectImg-1QMW5H",
                 presetEffectBackground: "presetEffectBackground-2FjhQJ"
             }
