@@ -37092,7 +37092,7 @@ sentry_client:`${e.name}/${e.version}`}})}(t,n)}`
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-0fa444b74de0525d304047a2508fae69c5b0dfac",
+                    release: "discord_web-280c9e32c578fdd1eda7f1417915226ea27c0a60",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37119,8 +37119,8 @@ sentry_client:`${e.name}/${e.version}`}})}(t,n)}`
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "235231") ? t : "");
-                X.YA("builtAt", String("1696610030578"));
+                X.YA("buildNumber", null !== (t = "235248") ? t : "");
+                X.YA("builtAt", String("1696611764709"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
@@ -37781,7 +37781,7 @@ sentry_client:`${e.name}/${e.version}`}})}(t,n)}`
                     [P.MOMO_WALLET, "momo_wallet"],
                     [P.KAKAOPAY, "kakaopay"],
                     [P.GOPAY_WALLET, "gopay_wallet"],
-                    [P.CASH_APP, "cash_app"]
+                    [P.CASH_APP, "cashapp"]
                 ]),
                 w = new Map([
                     [P.BANCONTACT, "bancontact"],
