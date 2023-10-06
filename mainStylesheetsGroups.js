@@ -22250,6 +22250,7 @@
             e.exports = {
                 container: "container-1gYwHN",
                 containerWithContent: "containerWithContent-2Yws8V container-1gYwHN",
+                clydeBadgeList: "clydeBadgeList-1CA7wP",
                 clickable: "clickable-1knRMS",
                 profileBadge: "profileBadge-12r2Nm",
                 profileBadge24: "profileBadge24-sH1efV profileBadge-12r2Nm",
