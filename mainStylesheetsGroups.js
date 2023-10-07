@@ -6898,6 +6898,8 @@
                 twoColumnWidth: "1439px",
                 previewContentContainer: "previewContentContainer-3DVSWl",
                 previewContent: "previewContent-2af7FX",
+                previewListingCard: "previewListingCard-ldXXr9",
+                questionMark: "questionMark-2Teekp",
                 learnMoreTipContainer: "learnMoreTipContainer-zpYfCh",
                 infoCircle: "infoCircle-HFPPT3"
             }

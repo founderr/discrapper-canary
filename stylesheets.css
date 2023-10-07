@@ -54246,8 +54246,7 @@ html .progress-2Otdc- {
     gap: 8px;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
-    color: var(--interactive-normal)
+    align-items: center
 }
 
 .container-Vrgqxz {
@@ -77643,7 +77642,7 @@ strong {
 }
 
 .muralImageReducedWidth-1qNk55 {
-    height: 100%;
+    width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     display: none
@@ -77717,6 +77716,19 @@ strong {
     .previewContent-2af7FX {
         gap: 24px
     }
+}
+
+.previewListingCard-ldXXr9 {
+    position: relative;
+    pointer-events: none
+}
+
+.questionMark-2Teekp {
+    position: absolute;
+    top: 50px;
+    right: 120px;
+    width: auto;
+    height: 100px
 }
 
 .learnMoreTipContainer-zpYfCh {
