@@ -12406,12 +12406,6 @@
                 labelTooltipIcon: "labelTooltipIcon-1C8fNH"
             }
         },
-        327178: e => {
-            e.exports = {
-                changeTeamButton: "changeTeamButton-2u3mhe",
-                selectTeamButton: "selectTeamButton-3yMx5j"
-            }
-        },
         661492: e => {
             e.exports = {
                 closeButton: "closeButton-2swOfr",
