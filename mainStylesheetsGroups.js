@@ -6621,11 +6621,11 @@
                 avatar3: "avatar3-2d_OoU",
                 mainColumn: "mainColumn-3aeB42",
                 title: "title-CXxZie",
-                buttons: "buttons-2BQREU",
                 ctaButton: "ctaButton-30CBdb",
                 textBody: "textBody-1mECjS",
                 upsellArt: "upsellArt-1BE-fp",
-                profileEffectsUpsellArt: "profileEffectsUpsellArt-1k9puR"
+                profileEffectsUpsellArt: "profileEffectsUpsellArt-1k9puR",
+                falloweenBackground: "falloweenBackground-3tuKdZ"
             }
         },
         799012: e => {
