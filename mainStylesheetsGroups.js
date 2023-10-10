@@ -22667,7 +22667,8 @@
         137983: e => {
             e.exports = {
                 title: "title-3CjiSS",
-                body: "body-N0onUF"
+                body: "body-N0onUF",
+                clydeMoreInfo: "clydeMoreInfo-2A8F4b"
             }
         },
         668165: e => {
