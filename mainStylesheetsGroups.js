@@ -18651,6 +18651,7 @@
         442721: e => {
             e.exports = {
                 container: "container-3iMGyg",
+                hasVoted: "hasVoted-_nJTyJ",
                 bottomBar: "bottomBar-ro4pra"
             }
         },
@@ -18658,9 +18659,14 @@
             e.exports = {
                 answersContainer: "answersContainer-3UoJTU",
                 answer: "answer-2O-3jX",
+                answerContent: "answerContent-1nElXU",
                 selectedAnswer: "selectedAnswer-VoVfDx",
                 label: "label-2Iu6HQ",
-                avatarForSelected: "avatarForSelected-SOh0il"
+                avatarForSelected: "avatarForSelected-SOh0il",
+                hasVoted: "hasVoted-39_Fso",
+                didSelfVote: "didSelfVote-EBW898",
+                votePercentageBar: "votePercentageBar-2knasZ",
+                votesData: "votesData-2PwvhU"
             }
         },
         491206: e => {
