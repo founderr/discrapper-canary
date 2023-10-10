@@ -8440,6 +8440,11 @@
                 badge: "badge-39TqBS"
             }
         },
+        286720: e => {
+            e.exports = {
+                obscuredIcon: "obscuredIcon-3WZyZh"
+            }
+        },
         581145: e => {
             e.exports = {
                 container: "container-q2_DnH",
