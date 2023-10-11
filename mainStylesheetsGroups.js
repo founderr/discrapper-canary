@@ -20933,6 +20933,15 @@
                 alt: "alt-3_Cl_W"
             }
         },
+        162630: e => {
+            e.exports = {
+                strangerDangerBanner: "strangerDangerBanner-2wxVfR",
+                safetyShieldIcon: "safetyShieldIcon-1zLay_",
+                buttons: "buttons-LfwThR",
+                shieldAndHeading: "shieldAndHeading-21F2Rf",
+                closeButton: "closeButton-1VfP30"
+            }
+        },
         103893: e => {
             e.exports = {
                 sharedCanvas: "sharedCanvas-1l4N32"
