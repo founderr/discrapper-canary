@@ -146149,11 +146149,14 @@ html .invoiceCancelRow-3s2UuC {
 }
 
 .serverSelectTitle-AQrb3T {
-    margin-bottom: 8px
+    margin-bottom: 8px;
+    color: var(--header-primary)
 }
 
 .serverSelectDescription-Ij3a7x {
-    margin-bottom: 24px
+    text-align: center;
+    margin-bottom: 24px;
+    color: var(--header-secondary)
 }
 
 .serverSelectField-1A-Gi1 {
