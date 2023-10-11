@@ -4105,7 +4105,9 @@
                 hidden: "hidden-2gI5HH",
                 iframe: "iframe-2GuF98",
                 pipNonInteractive: "pipNonInteractive-H1RjSN",
-                clickShield: "clickShield-3YjF1f"
+                clickShield: "clickShield-3YjF1f",
+                clickable: "clickable-1fwNHP",
+                fillParent: "fillParent-3nJ5Jf"
             }
         },
         844203: e => {
