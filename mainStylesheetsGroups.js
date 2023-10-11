@@ -20063,6 +20063,12 @@
                 giftRecipientTag: "giftRecipientTag-2-wRC-"
             }
         },
+        439460: e => {
+            e.exports = {
+                icon: "icon-1AmDFr",
+                connectionInstructions: "connectionInstructions-RMhd6Y"
+            }
+        },
         787257: e => {
             e.exports = {
                 back: "back-Uv5ziB"
