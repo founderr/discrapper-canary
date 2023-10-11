@@ -24342,6 +24342,7 @@
                 t.SPAM_MESSAGE_REQUESTS_VIEWED = "spam_message_requests_viewed";
                 t.MESSAGE_REQUESTS_VIEWED = "message_requests_viewed";
                 t.MESSAGE_REQUEST_PREVIEW_VIEWED = "message_request_preview_viewed";
+                t.EXPLICIT_MEDIA_OBSCURITY_TOGGLE = "explicit_media_obscurity_toggle";
                 t.DOWNLOAD_APP = "download_app";
                 t.PAYMENT_FLOW_STARTED = "payment_flow_started";
                 t.PAYMENT_FLOW_COMPLETED = "payment_flow_completed";
@@ -37111,7 +37112,7 @@
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-6c46912750c5bd882c853a5e7e0ae78856145462",
+                    release: "discord_web-5aa67d71c7f92af3debd0b6a14b7b2e84a111d1a",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37138,8 +37139,8 @@
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "236210") ? t : "");
-                X.YA("builtAt", String("1697035600814"));
+                X.YA("buildNumber", null !== (t = "236211") ? t : "");
+                X.YA("builtAt", String("1697035938183"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
