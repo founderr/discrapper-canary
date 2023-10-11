@@ -16871,10 +16871,7 @@ html.disable-forced-colors * {
 }
 
 .audioElement-2sSZbc {
-    position: absolute;
-    display: block;
-    width: 0;
-    height: 0
+    display: none
 }
 
 .volumeButton-CSiHXl {
