@@ -139389,6 +139389,11 @@ input::-webkit-outer-spin-button {
     padding-bottom: 8px
 }
 
+.personalityTip-16c-qj {
+    padding-top: 2px;
+    color: var(--text-warning)
+}
+
 .fakeActivityTitle-3-_pB_ {
     font-weight: 700
 }

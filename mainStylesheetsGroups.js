@@ -6399,7 +6399,8 @@
         587629: e => {
             e.exports = {
                 errorBlock: "errorBlock-9lvTiZ",
-                description: "description-zNcVcn"
+                description: "description-zNcVcn",
+                personalityTip: "personalityTip-16c-qj"
             }
         },
         462128: e => {
