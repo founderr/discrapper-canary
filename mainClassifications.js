@@ -20556,8 +20556,9 @@
                 ETv: () => H.ET,
                 ldS: () => H.ld,
                 gLR: () => za,
-                T23: () => Ja,
-                BVn: () => qa
+                T23: () => Qa,
+                BVn: () => qa,
+                zo9: () => Ja
             });
             r(756583);
             var n, a, i, o, _, s, E, c, u, I, R, l, A, T, f, d, N, O, p, h, S, L, D, C = r(441143),
@@ -26268,11 +26269,16 @@
                 t[t.DISABLED = 1] = "DISABLED";
                 t[t.ENABLED = 2] = "ENABLED"
             }(za || (za = {}));
-            var qa, Ja = "https://creator-support.discord.com/hc/en-us/articles/12653663868823";
+            var qa, Ja, Qa = "https://creator-support.discord.com/hc/en-us/articles/12653663868823";
             ! function(t) {
                 t[t.CLIPS_ENABLED = 1] = "CLIPS_ENABLED";
                 t[t.ALLOW_VOICE_RECORDING = 2] = "ALLOW_VOICE_RECORDING"
-            }(qa || (qa = {}))
+            }(qa || (qa = {}));
+            ! function(t) {
+                t.LOADING = "LOADING";
+                t.ERROR = "ERROR";
+                t.READY = "READY"
+            }(Ja || (Ja = {}))
         },
         761001: (t, e, r) => {
             "use strict";
@@ -37113,7 +37119,7 @@
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-3e16c63ff5b926eb51a9dca0e5a273ef5e3c9e4e",
+                    release: "discord_web-dcbbe8308a9a07e2af2d7fe92aa63bb32727be2c",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37140,8 +37146,8 @@
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "236828") ? t : "");
-                X.YA("builtAt", String("1697148361031"));
+                X.YA("buildNumber", null !== (t = "236830") ? t : "");
+                X.YA("builtAt", String("1697148551658"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
