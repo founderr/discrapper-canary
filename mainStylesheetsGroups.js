@@ -20358,7 +20358,6 @@
                 modal: "modal-3Dr350",
                 modalFooter: "modalFooter-2Xpaik",
                 buttonsRight: "buttonsRight-3JWUcH",
-                modalBody: "modalBody-3w24P1",
                 modalHeader: "modalHeader-QZFdV1",
                 modalHeadings: "modalHeadings-1FFBHj",
                 modalCloseButton: "modalCloseButton-3UuEsg",
