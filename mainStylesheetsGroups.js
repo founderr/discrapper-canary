@@ -5009,7 +5009,6 @@
             e.exports = {
                 spinner: "spinner-4mFvw6",
                 modal: "modal-1A4ZZd",
-                modalBody: "modalBody-3r6E4y",
                 modalHeader: "modalHeader-1ZzUf6",
                 modalHeadings: "modalHeadings-3LBRJZ",
                 modalCloseButton: "modalCloseButton-3n0qvD",
