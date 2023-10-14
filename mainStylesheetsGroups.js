@@ -19915,11 +19915,13 @@
                 newTag: "newTag-1dxayD",
                 betaTag: "betaTag-Du-GmI",
                 sizeGizmo: "sizeGizmo-2e2TJ3",
+                sizeGizmoExpanded: "sizeGizmoExpanded-1DrihT",
                 sizeGizmoText: "sizeGizmoText-3iC3QK",
                 arrow: "arrow-aRp2RJ",
                 subscriberNitroHome: "subscriberNitroHome-2_AaPs",
                 reducedMotion: "reducedMotion-37y367",
                 partiallyHidden: "partiallyHidden-3nbrXP",
+                customButton: "customButton-1_-Ifg",
                 cover: "cover-2KjMR5",
                 hidden: "hidden-1HKjZ1"
             }
