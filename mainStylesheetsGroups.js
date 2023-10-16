@@ -18867,6 +18867,15 @@
                 tag: "tag-3aNT7f"
             }
         },
+        586271: e => {
+            e.exports = {
+                nitroIconSubHeader: "nitroIconSubHeader-_QuFvv",
+                termsApplyBodyText: "termsApplyBodyText-3OCICg",
+                termsApplyAnchor: "termsApplyAnchor-3xz78k",
+                buttonWide: "buttonWide-1P1wWr",
+                innerButton: "innerButton-rYe1Qx"
+            }
+        },
         225504: e => {
             e.exports = {
                 bogoTrialBadge: "bogoTrialBadge-2-iWF2",
