@@ -22383,6 +22383,9 @@
                         return "/soundboard-sounds/".concat(t)
                     },
                     SOUNDBOARD_DEFAULT_SOUNDS: "/soundboard-default-sounds",
+                    SEND_SOUNDBOARD_SOUND: function(t) {
+                        return "/channels/".concat(t, "/send-soundboard-sound")
+                    },
                     APPLICATION_COMMANDS_SEARCH: function(t) {
                         return "/channels/".concat(t, "/application-commands/search")
                     },
@@ -37131,7 +37134,7 @@
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-a02647ebbea0f7d25090d482ef6b6123dd4f98c1",
+                    release: "discord_web-5f06cc9f452dc7a8ba5a912e4b6a356501f727a3",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37158,8 +37161,8 @@
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "237894") ? t : "");
-                X.YA("builtAt", String("1697570073750"));
+                X.YA("buildNumber", null !== (t = "237905") ? t : "");
+                X.YA("builtAt", String("1697571504736"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
