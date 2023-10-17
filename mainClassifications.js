@@ -24804,6 +24804,7 @@
                 t.STICKER_UPLOAD_STARTED = "sticker_upload_started";
                 t.STICKER_UPLOAD_COMPLETED = "sticker_upload_completed";
                 t.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED = "sticker_upload_file_size_limit_exceeded";
+                t.APP_DIRECTORY_OPENED = "app_directory_opened";
                 t.APP_DIRECTORY_PAGE_VIEWED = "app_directory_page_viewed";
                 t.APP_DIRECTORY_SEARCH_STARTED = "app_directory_search_started";
                 t.APP_DIRECTORY_SEARCHED = "app_directory_searched";
@@ -37134,7 +37135,7 @@
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-5b4c2f9dae87df0e5fb838d8e13a7d4f5d0c8f2a",
+                    release: "discord_web-dec5fb2a9c52dcabcfeca493bdc0684a9134440b",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37161,8 +37162,8 @@
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "237944") ? t : "");
-                X.YA("builtAt", String("1697575050837"));
+                X.YA("buildNumber", null !== (t = "237948") ? t : "");
+                X.YA("builtAt", String("1697575252742"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
