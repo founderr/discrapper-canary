@@ -12559,6 +12559,7 @@
         215737: e => {
             e.exports = {
                 eventStatusContainer: "eventStatusContainer-3K6TiP",
+                isRecurring: "isRecurring-zStNFE",
                 eventStatusGreen: "eventStatusGreen-2-f2N8",
                 eventStatusBrand: "eventStatusBrand-3D-ae6",
                 eventStatusLabel: "eventStatusLabel-1og3vG",
