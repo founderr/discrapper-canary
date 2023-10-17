@@ -22301,9 +22301,6 @@
                     GUILD_CLYDE_ADD_MEMBER: function(t) {
                         return "/guilds/".concat(t, "/members/clyde")
                     },
-                    CHANNEL_BASED_CLYDE_PERSONALITY: function(t) {
-                        return "/channels/".concat(t, "/channel-based-clyde-personality")
-                    },
                     CREATOR_MONETIZATION_ENABLE_REQUESTS: function(t) {
                         return "/guilds/".concat(t, "/creator-monetization/enable-requests")
                     },
@@ -22562,6 +22559,7 @@
                     CLYDE_PROFILES_CREATE: function(t) {
                         return "/guilds/".concat(t, "/clyde-profiles")
                     },
+                    CLYDE_PROFILES_GENERATE_PERSONALITY: "/clyde-profiles/generate-personality",
                     POLL_ANSWERS: function(t, e) {
                         return "/channels/".concat(t, "/polls/").concat(e, "/answers")
                     }
@@ -24356,6 +24354,8 @@
                 t.MESSAGE_REQUESTS_VIEWED = "message_requests_viewed";
                 t.MESSAGE_REQUEST_PREVIEW_VIEWED = "message_request_preview_viewed";
                 t.EXPLICIT_MEDIA_OBSCURITY_TOGGLE = "explicit_media_obscurity_toggle";
+                t.EXPLICIT_MEDIA_ACTION = "explicit_media_action";
+                t.CHANNEL_SAFETY_WARNING_VIEWED = "channel_safety_warning_viewed";
                 t.DOWNLOAD_APP = "download_app";
                 t.PAYMENT_FLOW_STARTED = "payment_flow_started";
                 t.PAYMENT_FLOW_COMPLETED = "payment_flow_completed";
@@ -24888,6 +24888,7 @@
                 t.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED = "guild_role_subscription_team_setup_clicked";
                 t.GUILD_ROLE_SUBSCRIPTION_SETUP_MODAL_CLOSED = "guild_role_subscription_setup_modal_closed";
                 t.GUILD_SHOP_PREVIEW_CLICK = "guild_shop_preview_click";
+                t.GUILD_SHOP_COPY_LINK = "guild_shop_copy_link";
                 t.GUILD_SHOP_EMBED_CLICKED = "guild_shop_embed_clicked";
                 t.MESSAGE_ACTION_SHEET_OPENED = "message_action_sheet_opened";
                 t.SNOWSGIVING_PAGE_CTA_CLICKED = "snowsgiving_page_cta_clicked";
@@ -24929,6 +24930,7 @@
                 t.CLYDE_AI_SHARE_LINK_COPIED = "clyde_ai_share_link_copied";
                 t.CLYDE_AI_SHARE_LINK_SENT = "clyde_ai_share_link_sent";
                 t.CLYDE_AI_SHARED_PROFILE_APPLIED = "clyde_ai_shared_profile_applied";
+                t.CLYDE_AI_GENERATE_PERSONALITY_CLICKED = "clyde_ai_generate_personality_clicked";
                 t.APPLE_PARTNER_IAP_REQUEST_SENT = "apple_partner_iap_request_sent";
                 t.POMELO_ERRORS = "pomelo_errors";
                 t.POMELO_EDIT_STEP_VIEWED = "pomelo_edit_step_viewed";
@@ -24978,8 +24980,7 @@
                 t.COLLECTIBLES_SHOP_VIEWED = "collectibles_shop_viewed";
                 t.UPDATER_METRICS_DOWNLOAD = "updater_metrics_download";
                 t.UPDATER_METRICS_INSTALL = "updater_metrics_install";
-                t.CHANNEL_PROMPT_ACTION_CLICKED = "channel_prompt_action_clicked";
-                t.EXPLICIT_MEDIA_ACTION = "explicit_media_action"
+                t.CHANNEL_PROMPT_ACTION_CLICKED = "channel_prompt_action_clicked"
             }($r || ($r = {}));
             ! function(t) {
                 t.CANARY = "canary";
@@ -37135,7 +37136,7 @@
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-9b100117bbcc48fd18e7d1d6bccc24f4a936b5ff",
+                    release: "discord_web-140d8a09f60122a23f7d0fc1cf29bec67cc41d9b",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37162,8 +37163,8 @@
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                X.YA("buildNumber", null !== (t = "237966") ? t : "");
-                X.YA("builtAt", String("1697576865684"));
+                X.YA("buildNumber", null !== (t = "238090") ? t : "");
+                X.YA("builtAt", String("1697583101429"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) X.YA(r, e[r]);
