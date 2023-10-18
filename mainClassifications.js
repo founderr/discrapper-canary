@@ -24305,6 +24305,7 @@
                 t.ACTIVITIES_PAGE_FEELING_LUCKY_CLICKED = "activities_page_feeling_lucky_clicked";
                 t.ACTIVITY_SHARE_MOMENT_SEND = "activity_share_moment_send";
                 t.ACTIVITY_SHARE_MOMENT_COPY = "activity_share_moment_copy";
+                t.ACTIVITY_SHELF_CLOSE = "activity_shelf_close";
                 t.BROWSER_HANDOFF_SUCCEEDED = "browser_handoff_succeeded";
                 t.SHOW_TUTORIAL = "show_tutorial";
                 t.CLOSE_TUTORIAL = "close_tutorial";
@@ -25611,8 +25612,7 @@
                 t.GOG = "gog";
                 t.EPIC = "epic"
             }(Pn || (Pn = {}));
-            var vn, Bn, bn = Object.freeze((Y(Mn = {}, Pn.DISCORD, "Discord"), Y(Mn, Pn.STEAM, "Steam"), Y(Mn, Pn.UPLAY, "Uplay"), Y(Mn, Pn.BATTLENET, "Battle.net"), Y(Mn, Pn.ORIGIN, "Origin"), Y(Mn, Pn.GOG, "GOG"),
-                    Y(Mn, Pn.TWITCH, "Twitch"), Y(Mn, Pn.EPIC, "Epic"), Mn)),
+            var vn, Bn, bn = Object.freeze((Y(Mn = {}, Pn.DISCORD, "Discord"), Y(Mn, Pn.STEAM, "Steam"), Y(Mn, Pn.UPLAY, "Uplay"), Y(Mn, Pn.BATTLENET, "Battle.net"), Y(Mn, Pn.ORIGIN, "Origin"), Y(Mn, Pn.GOG, "GOG"), Y(Mn, Pn.TWITCH, "Twitch"), Y(Mn, Pn.EPIC, "Epic"), Mn)),
                 wn = 6016,
                 Hn = 3384;
             ! function(t) {
@@ -26818,7 +26818,8 @@
                                             const r = I(t);
                                             return !r || (0, s.U0)(r, e)
                                         }(t, e.allowUrls)) {
-                                        ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && o.kg.warn(`Event dropped due to not being matched by \`allowUrls\` option.\nEvent: ${(0,_.jH)(t)}.\nUrl: ${I(t)}`);
+                                        ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && o.kg.warn(`Event dropped due to not being matched by \`allowUrls\` option.\nEvent: ${(0,
+_.jH)(t)}.\nUrl: ${I(t)}`);
                                         return !0
                                     }
                                     return !1
@@ -27015,8 +27016,7 @@
             function g(t, e = {}) {
                 const r = "string" == typeof e ? e : e.tunnel,
                     n = "string" != typeof e && e._metadata ? e._metadata.sdk : void 0;
-                return r || `${function(t){
-return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sentry_key:t.publicKey,sentry_version:"7",...e&&{sentry_client:`${e.name}/${e.version}`}})}(t,n)}`
+                return r || `${function(t){return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sentry_key:t.publicKey,sentry_version:"7",...e&&{sentry_client:`${e.name}/${e.version}`}})}(t,n)}`
             }
             const U = /\(error: (.*)\)/;
 
@@ -27165,7 +27165,8 @@ return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sen
                             ! function() {
                                 if (!("XMLHttpRequest" in Y)) return;
                                 const t = XMLHttpRequest.prototype;
-                                (0, R.hl)(t, "open", (function(t) {
+                                (0,
+                                    R.hl)(t, "open", (function(t) {
                                     return function(...e) {
                                         const r = e[1],
                                             n = this.__sentry_xhr_v2__ = {
@@ -27471,7 +27472,8 @@ return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sen
                             }
                 }]
             }()) {
-                const [o, _] = i;
+                const [o, _] = i
+                ;
                 if (null == e || ["number", "boolean", "string"].includes(typeof e) && !(0, w.i2)(e)) return e;
                 const s = function(t, e) {
                     try {
@@ -27854,8 +27856,7 @@ return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sen
                     return a
                 }
                 captureEvent(t, e, r) {
-                    if (e && e.originalException && (0,
-                            _.YO)(e.originalException)) {
+                    if (e && e.originalException && (0, _.YO)(e.originalException)) {
                         ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && o.kg.log(Nt);
                         return
                     }
@@ -28248,7 +28249,8 @@ return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sen
                     const a = e;
                     if ("stack" in e) i = Ct(t, e);
                     else {
-                        const e = a.name || ((0, w.TX)(a) ? "DOMError" : "DOMException"),
+                        const e = a.name || ((0,
+                                w.TX)(a) ? "DOMError" : "DOMException"),
                             o = a.message ? `${e}: ${a.message}` : e;
                         i = yt(t, o, r, n);
                         (0, _.Db)(i, o)
@@ -28262,8 +28264,7 @@ return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sen
                 if ((0, w.VZ)(e)) return Ct(t, e);
                 if ((0, w.PO)(e) || (0, w.cO)(e)) {
                     i = function(t, e, r, n) {
-                        const a = (0,
-                                T.Gd)().getClient(),
+                        const a = (0, T.Gd)().getClient(),
                             i = a && a.getOptions().normalizeDepth,
                             o = {
                                 exception: {
@@ -28322,7 +28323,8 @@ return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sen
             }) {
                 const r = (0, R.zf)(t),
                     n = e ? "promise rejection" : "exception";
-                if ((0, w.VW)(t)) return `Event \`ErrorEvent\` captured as ${n} with message \`${t.message}\``;
+                if ((0,
+                        w.VW)(t)) return `Event \`ErrorEvent\` captured as ${n} with message \`${t.message}\``;
                 if ((0, w.cO)(t)) {
                     return `Event \`${function(t){try{const e=Object.getPrototypeOf(t);return e?e.constructor.name:void 0}catch(t){}}(t)}\` (type=${t.type}) captured as ${n}`
                 }
@@ -28550,7 +28552,8 @@ return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sen
                                 startTimestamp: e,
                                 endTimestamp: r
                             };
-                        (0, T.Gd)().addBreadcrumb({
+                        (0,
+                            T.Gd)().addBreadcrumb({
                             category: "fetch",
                             data: n,
                             level: "error",
@@ -28801,8 +28804,7 @@ return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sen
             }
 
             function ae(t, e, r, n) {
-                (0,
-                    _.EG)(r, {
+                (0, _.EG)(r, {
                     handled: !1,
                     type: n
                 });
@@ -28956,8 +28958,7 @@ return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sen
                 if (!(i.exception && i.exception.values && o && (0, w.V9)(o.originalException, Error))) return;
                 const _ = i.exception.values.length > 0 ? i.exception.values[i.exception.values.length - 1] : void 0;
                 _ && (i.exception.values = (E = Re(t, e, a, o.originalException, n, i.exception.values, _, 0), c = r, E.map((t => {
-                    t.value && (t.value = (0,
-                        s.$G)(t.value, c));
+                    t.value && (t.value = (0, s.$G)(t.value, c));
                     return t
                 }))));
                 var E, c
@@ -29256,8 +29257,7 @@ return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sen
                 return {
                     $: e,
                     add: function(n) {
-                        if (!(void 0 === t || e.length < t)) return (0,
-                            b.$2)(new It("Not adding Promise because buffer limit was reached."));
+                        if (!(void 0 === t || e.length < t)) return (0, b.$2)(new It("Not adding Promise because buffer limit was reached."));
                         const a = n(); - 1 === e.indexOf(a) && e.push(a);
                         a.then((() => r(a))).then(null, (() => r(a).then(null, (() => {}))));
                         return a
@@ -30029,7 +30029,8 @@ return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sen
                     if (Object.keys(this._measurements).length > 0) {
                         ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && o.kg.log("[Measurements] Adding measurements to transaction", JSON.stringify(this._measurements, void 0, 2));
                         a.measurements = this._measurements
-                    }("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && o.kg.log(`[Tracing] Finishing ${this.op} transaction: ${this.name}.`);
+                    }
+                    ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && o.kg.log(`[Tracing] Finishing ${this.op} transaction: ${this.name}.`);
                     return this._hub.captureEvent(a)
                 }
                 toContext() {
@@ -30282,8 +30283,7 @@ return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sen
                     })
                 }
                 if (! function(t) {
-                        if ((0,
-                                w.i2)(t) || "number" != typeof t && "boolean" != typeof t) {
+                        if ((0, w.i2)(t) || "number" != typeof t && "boolean" != typeof t) {
                             ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && o.kg.warn(`[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got ${JSON.stringify(t)} of type ${JSON.stringify(typeof t)}.`);
                             return !1
                         }
@@ -37140,7 +37140,7 @@ return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sen
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-9d1066b9fc5e1de87cd4f7130a5116547e7336fd",
+                    release: "discord_web-6a09abfc6772b48bc5498ca925632d0f0e1ff287",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37167,8 +37167,8 @@ return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sen
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                Bt.YA("buildNumber", null !== (t = "238159") ? t : "");
-                Bt.YA("builtAt", String("1697588680955"));
+                Bt.YA("buildNumber", null !== (t = "238168") ? t : "");
+                Bt.YA("builtAt", String("1697589320536"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) Bt.YA(r, e[r]);
