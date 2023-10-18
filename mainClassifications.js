@@ -22741,8 +22741,12 @@
                     GUILD_PRODUCT: function(t, e) {
                         return "/channels/".concat(t, "/shop/").concat(e)
                     },
+                    REPORT: "/report",
                     COLLECTIBLES_SHOP: "/shop",
-                    REPORT: "/report"
+                    COLLECTIBLES_SHOP_FULLSCREEN: "/shop/fullscreen",
+                    COLLECTIBLES_SHOP_PRODUCT_DETAIL: function(t) {
+                        return "/shop/product/".concat(t)
+                    }
                 }),
                 Lt = (0, v.F)(ht),
                 Dt = (0, v.F)(St, [":", "?", "@"]);
@@ -37145,7 +37149,7 @@ _.jH)(t)}.\nUrl: ${I(t)}`);
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-24992cba7b97cb37c8b2e713d2db06dce0d136b2",
+                    release: "discord_web-f9f2da1d997cc1f878444beae51fc953d68c843c",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37172,8 +37176,8 @@ _.jH)(t)}.\nUrl: ${I(t)}`);
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                Bt.YA("buildNumber", null !== (t = "238523") ? t : "");
-                Bt.YA("builtAt", String("1697671606588"));
+                Bt.YA("buildNumber", null !== (t = "238528") ? t : "");
+                Bt.YA("builtAt", String("1697671846651"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) Bt.YA(r, e[r]);
