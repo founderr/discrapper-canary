@@ -3,11 +3,45 @@
         821977: (e, t, n) => {
             e.exports = n.p + "424e0085e3d4fff22b0668bba7424868.png"
         },
+        613815: (e, t, n) => {
+            "use strict";
+            n.d(t, {
+                Z: () => o
+            });
+            var r = (0, n(260561).B)({
+                kind: "user",
+                id: "2023-10_collectibles_shop_for_all",
+                label: "Collectibles Shop For All",
+                defaultConfig: {
+                    shopForAllEnabled: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "Enables Collectibles Shop For All",
+                    config: {
+                        shopForAllEnabled: !0
+                    }
+                }]
+            });
+            const o = function(e) {
+                var t = e.location,
+                    n = e.autoTrackExposure,
+                    o = void 0 === n || n,
+                    i = e.trackExposureOptions,
+                    l = void 0 === i ? {} : i;
+                return r.useExperiment({
+                    location: t
+                }, {
+                    autoTrackExposure: o,
+                    trackExposureOptions: l
+                })
+            }
+        },
         309244: (e, t, n) => {
             "use strict";
             n.r(t);
             n.d(t, {
-                default: () => we
+                default: () => xe
             });
             var r = n(785893),
                 o = n(667294),
@@ -15,21 +49,21 @@
                 l = n(202351),
                 c = n(70418),
                 a = n(735885),
-                u = n(153686),
-                s = n(19585),
+                s = n(153686),
+                u = n(19585),
                 f = n(339938),
                 d = n(349771),
                 p = n(379667),
                 y = n(300023),
                 m = n(681714);
 
-            function h(e, t) {
+            function b(e, t) {
                 (null == t || t > e.length) && (t = e.length);
                 for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n];
                 return r
             }
 
-            function b(e, t) {
+            function h(e, t) {
                 return function(e) {
                     if (Array.isArray(e)) return e
                 }(e) || function(e, t) {
@@ -57,11 +91,11 @@
                     }
                 }(e, t) || function(e, t) {
                     if (!e) return;
-                    if ("string" == typeof e) return h(e, t);
+                    if ("string" == typeof e) return b(e, t);
                     var n = Object.prototype.toString.call(e).slice(8, -1);
                     "Object" === n && e.constructor && (n = e.constructor.name);
                     if ("Map" === n || "Set" === n) return Array.from(n);
-                    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return h(e, t)
+                    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return b(e, t)
                 }(e, t) || function() {
                     throw new TypeError("Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
                 }()
@@ -74,18 +108,19 @@
                 j = n(579194),
                 S = n(764797),
                 C = n(767539),
-                w = n(30027),
-                x = n(618354),
-                A = n(341133),
-                I = n(384411),
+                x = n(613815),
+                A = n(30027),
+                w = n(618354),
+                I = n(341133),
+                _ = n(384411),
                 Z = n(968449),
-                _ = n(364412),
+                T = n(364412),
                 D = (n(241213), n(116094)),
                 N = n(473708),
-                T = n(818424),
-                R = n.n(T);
+                R = n(818424),
+                L = n.n(R);
 
-            function L(e, t, n) {
+            function F(e, t, n) {
                 t in e ? Object.defineProperty(e, t, {
                     value: n,
                     enumerable: !0,
@@ -103,7 +138,7 @@
                         return Object.getOwnPropertyDescriptor(n, e).enumerable
                     }))));
                     r.forEach((function(t) {
-                        L(e, t, n[t])
+                        F(e, t, n[t])
                     }))
                 }
                 return e
@@ -126,39 +161,43 @@
                 }));
                 return e
             }
-            var F = function(e) {
+            var B = function(e) {
                 var t, n = e.effectIsOwned,
                     o = e.pendingProfileEffectRecord,
                     i = e.userIsPremium,
                     a = (0, l.e7)([C.Z], (function() {
                         return C.Z.getPurchase(null == o ? void 0 : o.skuId)
                     })),
-                    u = (0, l.e7)([S.Z], (function() {
+                    s = (0, l.e7)([S.Z], (function() {
                         return S.Z.getProduct(null == o ? void 0 : o.skuId)
                     })),
-                    s = (0, l.e7)([I.default], (function() {
-                        return I.default.locale
-                    }));
+                    u = (0, l.e7)([_.default], (function() {
+                        return _.default.locale
+                    })),
+                    f = (0, x.Z)({
+                        location: "ProfileEffectPreview"
+                    }).shopForAllEnabled,
+                    d = i || f ? N.Z.Messages.CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE_PREMIUM : N.Z.Messages.CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE;
                 return null != o ? (0, r.jsx)("div", {
-                    className: n ? R().effectDescriptionNoGradient : R().effectDescriptionBorderWithGradient,
+                    className: n ? L().effectDescriptionNoGradient : L().effectDescriptionBorderWithGradient,
                     children: (0, r.jsxs)("div", {
-                        className: R().effectDescriptionContainer,
+                        className: L().effectDescriptionContainer,
                         children: [(0, r.jsx)(c.Text, {
                             color: "header-primary",
                             variant: "text-sm/semibold",
-                            className: R().effectName,
-                            children: null !== (t = null == a ? void 0 : a.name) && void 0 !== t ? t : null == u ? void 0 : u.name
+                            className: L().effectName,
+                            children: null !== (t = null == a ? void 0 : a.name) && void 0 !== t ? t : null == s ? void 0 : s.name
                         }), (0, r.jsx)(c.Text, {
                             color: "text-normal",
                             variant: "text-sm/normal",
-                            className: R().effectDescription,
-                            children: null != a ? a.summary : i ? N.Z.Messages.CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE_PREMIUM : N.Z.Messages.CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE
+                            className: L().effectDescription,
+                            children: null != a ? a.summary : d
                         }), null != a && (0, r.jsx)(c.Text, {
                             variant: "text-xxs/normal",
                             color: "text-muted",
-                            className: R().effectPurchasedAt,
+                            className: L().effectPurchasedAt,
                             children: N.Z.Messages.COLLECTIBLES_ACQUIRED_DATE.format({
-                                date: a.purchasedAt.toLocaleDateString(s, {
+                                date: a.purchasedAt.toLocaleDateString(u, {
                                     month: "long",
                                     year: "numeric"
                                 })
@@ -167,7 +206,7 @@
                     })
                 }) : null
             };
-            const B = function(e) {
+            const H = function(e) {
                 var t, n = e.user,
                     o = e.pendingProfileEffectRecord,
                     i = e.canApplySelectedChange,
@@ -179,26 +218,27 @@
                         })
                     })),
                     a = c.pendingAvatar,
-                    u = c.pendingBanner,
-                    s = c.pendingBio,
+                    s = c.pendingBanner,
+                    u = c.pendingBio,
                     f = c.pendingPronouns,
                     d = c.pendingGlobalName,
                     p = c.pendingAccentColor,
                     y = c.pendingAvatarDecoration,
                     m = c.pendingThemeColors,
-                    h = D.ZP.isPremium(n),
-                    b = (0, v.Z)(n.id),
-                    g = Boolean(null == b ? void 0 : b.getPreviewBio(s).value),
-                    O = Z.dN.useSetting() && null != s ? w.ZP.parse(void 0, s).content : s,
+                    b = D.ZP.isPremium(n),
+                    h = (0,
+                        v.Z)(n.id),
+                    g = Boolean(null == h ? void 0 : h.getPreviewBio(u).value),
+                    O = Z.dN.useSetting() && null != u ? A.ZP.parse(void 0, u).content : u,
                     P = D.ZP.canUsePremiumProfileCustomization(n),
-                    S = (null == b ? void 0 : b.canUsePremiumProfileCustomization) || P,
+                    S = (null == h ? void 0 : h.canUsePremiumProfileCustomization) || P,
                     C = {
                         user: n,
                         canUsePremiumCustomization: P,
-                        onUpsellClick: _.Z,
+                        onUpsellClick: T.Z,
                         onAvatarChange: j.I5,
-                        onBannerChange: A.g_,
-                        pendingBanner: u,
+                        onBannerChange: I.g_,
+                        pendingBanner: s,
                         pendingBio: O,
                         pendingPronouns: f,
                         pendingAvatar: a,
@@ -210,27 +250,26 @@
                         hideFakeActivity: g
                     };
                 return (0, r.jsxs)("div", {
-                    className: S ? R().previewContainerWithTheme : R().previewContainerWithoutTheme,
-                    children: [(0, r.jsx)(x.Z, k(M({}, C), {
+                    className: S ? L().previewContainerWithTheme : L().previewContainerWithoutTheme,
+                    children: [(0, r.jsx)(w.Z, k(M({}, C), {
                         disabledInputs: !0,
                         forProfileEffectModal: !0
-                    })), !1, (0, r.jsx)(F, {
+                    })), !1, (0, r.jsx)(B, {
                         effectIsOwned: i,
                         pendingProfileEffectRecord: o,
-                        userIsPremium: h
+                        userIsPremium: b
                     })]
                 })
             };
-            var H = n(294184),
-                U = n.n(H),
-                G = n(498964),
-                W = n(517586),
-                z = n(318715),
-                V = n(937150),
-                Y = n(243764),
-                $ = n(778613),
-                K = n(97990),
-                Q = n(616276),
+            var U = n(294184),
+                G = n.n(U),
+                W = n(498964),
+                z = n(517586),
+                V = n(318715),
+                Y = n(937150),
+                $ = n(243764),
+                K = n(778613),
+                Q = n(97990),
                 q = n(531441),
                 X = n(2590),
                 J = n(165043),
@@ -334,22 +373,22 @@
                         }
                         return i
                     }
-                }(e, t) || se(e, t) || function() {
+                }(e, t) || ue(e, t) || function() {
                     throw new TypeError("Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
                 }()
             }
 
-            function ue(e) {
+            function se(e) {
                 return function(e) {
                     if (Array.isArray(e)) return re(e)
                 }(e) || function(e) {
                     if ("undefined" != typeof Symbol && null != e[Symbol.iterator] || null != e["@@iterator"]) return Array.from(e)
-                }(e) || se(e) || function() {
+                }(e) || ue(e) || function() {
                     throw new TypeError("Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
                 }()
             }
 
-            function se(e, t) {
+            function ue(e, t) {
                 if (e) {
                     if ("string" == typeof e) return re(e, t);
                     var n = Object.prototype.toString.call(e).slice(8, -1);
@@ -371,7 +410,7 @@
                         o = void 0 !== n && n,
                         i = ce(e, ["children", "isSelected"]);
                     return (0, r.jsx)(c.Clickable, le(ie({
-                        className: U()(ee().effectGridItem, oe({}, ee().selected, o))
+                        className: G()(ee().effectGridItem, oe({}, ee().selected, o))
                     }, i), {
                         onClick: i.onSelect,
                         children: t
@@ -383,20 +422,20 @@
                         l = e.section,
                         c = e.isSelected,
                         a = ce(e, ["profileEffect", "innerRef", "section", "isSelected"]),
-                        u = (0, z.ZP)([y.Z], (function() {
+                        s = (0, V.ZP)([y.Z], (function() {
                             return y.Z.getProfileEffectById(n.id)
                         })),
-                        s = (0, z.ZP)([V.Z], (function() {
-                            return V.Z.isItemViewed(n)
+                        u = (0, V.ZP)([Y.Z], (function() {
+                            return Y.Z.isItemViewed(n)
                         })),
                         f = o.useRef(null),
-                        d = null !== (t = null == u ? void 0 : u.config) && void 0 !== t ? t : {},
+                        d = null !== (t = null == s ? void 0 : s.config) && void 0 !== t ? t : {},
                         p = d.accessibilityLabel,
                         m = d.thumbnailPreviewSrc,
-                        h = d.title,
-                        b = ae(o.useState(c), 2),
-                        g = b[0],
-                        v = b[1];
+                        b = d.title,
+                        h = ae(o.useState(c), 2),
+                        g = h[0],
+                        v = h[1];
                     o.useEffect((function() {
                         c && v(!0)
                     }), [c]);
@@ -411,21 +450,21 @@
                         }), (0, r.jsx)("img", {
                             className: ee().presetEffectImg,
                             src: m,
-                            alt: h
-                        }), l === fe.PURCHASED ? null : s || c || g ? (0, r.jsx)(q.G2, {
+                            alt: b
+                        }), l === fe.PURCHASED ? null : u || c || g ? (0, r.jsx)(q.G2, {
                             icon: function() {
-                                return (0, r.jsx)(K.Z, {
+                                return (0, r.jsx)(Q.Z, {
                                     width: 12,
                                     height: 12
                                 })
                             },
-                            color: W.Z.BACKGROUND_ACCENT,
+                            color: z.Z.BACKGROUND_ACCENT,
                             className: ee().lockBadge
                         }) : (0, r.jsx)(q.lB, {
                             className: ee().newBadge,
                             text: (0, r.jsxs)("div", {
                                 className: ee().newBadgeText,
-                                children: [(0, r.jsx)(K.Z, {
+                                children: [(0, r.jsx)(Q.Z, {
                                     width: 12,
                                     height: 12
                                 }), N.Z.Messages.NEW]
@@ -436,15 +475,15 @@
                 me = {
                     id: -2
                 },
-                he = {
+                be = {
                     id: -1
                 };
-            const be = function(e) {
+            const he = function(e) {
                 var t, n = e.user,
                     i = e.pendingProfileEffect,
                     l = e.selectedProfileEffectRef,
-                    u = e.purchasedProfileEffects,
-                    s = e.previewEffects,
+                    s = e.purchasedProfileEffects,
+                    u = e.previewEffects,
                     f = e.onSelect,
                     d = e.onClose,
                     p = function() {
@@ -452,22 +491,25 @@
                         (0, a.jN)(X.S9g.COLLECTIBLES_SHOP)
                     },
                     y = D.ZP.canUsePremiumProfileCustomization(n),
-                    m = u.length > 0,
-                    h = 0 === s.length,
-                    b = o.useMemo((function() {
+                    m = s.length > 0,
+                    b = (0, x.Z)({
+                        location: "ProfileEffectSelection"
+                    }).shopForAllEnabled,
+                    h = 0 === u.length,
+                    g = o.useMemo((function() {
                         var e = {
                                 section: fe.PURCHASED,
-                                items: [me, he].concat(ue(u)),
+                                items: [me, be].concat(se(s)),
                                 header: N.Z.Messages.PROFILE_EFFECT_MODAL_PURCHASES_HEADER
                             },
                             t = {
                                 section: fe.PREVIEW,
-                                items: s,
+                                items: u,
                                 header: N.Z.Messages.PROFILE_EFFECT_MODAL_SHOP_PREVIEW_HEADER
                             };
-                        return h ? [e] : y || m ? [e, t] : [t]
-                    }), [u, s, y, m, h]),
-                    g = null != i;
+                        return h ? [e] : !!m || (y || b) ? [e, t] : [t]
+                    }), [s, u, y, m, h, b]),
+                    v = null != i;
                 return (0, r.jsx)("section", {
                     children: (0, r.jsx)(c.MasonryList, {
                         fade: !0,
@@ -477,21 +519,21 @@
                         paddingHorizontal: 12,
                         className: ee().list,
                         columns: 3,
-                        sections: b.map((function(e) {
+                        sections: g.map((function(e) {
                             return e.items.length
                         })),
                         renderItem: function(e, t, n, o) {
-                            var a = b[e],
-                                u = a.section,
-                                s = a.items;
-                            return (0, G.EQ)(s[t]).with(me, (function() {
+                            var a = g[e],
+                                s = a.section,
+                                u = a.items;
+                            return (0, W.EQ)(u[t]).with(me, (function() {
                                 return (0, r.jsxs)(pe, {
                                     style: ie({}, n),
-                                    isSelected: !g,
+                                    isSelected: !v,
                                     onSelect: function() {
                                         return f(null)
                                     },
-                                    children: [(0, r.jsx)($.Z, {
+                                    children: [(0, r.jsx)(K.Z, {
                                         className: ee().notAllowedIcon
                                     }), (0, r.jsx)(c.Text, {
                                         variant: "text-xs/normal",
@@ -499,16 +541,12 @@
                                         children: N.Z.Messages.NONE
                                     })]
                                 }, o)
-                            })).with(he, (function() {
+                            })).with(be, (function() {
                                 return (0, r.jsxs)(pe, {
                                     style: n,
                                     onSelect: p,
-                                    children: [(0, r.jsx)(Y.Z, {
+                                    children: [(0, r.jsx)($.Z, {
                                         className: ee().shopIcon
-                                    }), (0, r.jsx)(Q.Z, {
-                                        foreground: ee().shopSparkleBig
-                                    }), (0, r.jsx)(Q.Z, {
-                                        foreground: ee().shopSparkleSmall
                                     }), (0, r.jsx)(c.Text, {
                                         variant: "text-xs/normal",
                                         color: "header-primary",
@@ -519,7 +557,7 @@
                                 var t = i === e.id;
                                 return (0, r.jsx)(ye, {
                                     style: ie({}, n),
-                                    section: u,
+                                    section: s,
                                     profileEffect: e,
                                     innerRef: t ? l : void 0,
                                     isSelected: t,
@@ -530,12 +568,13 @@
                             }))
                         },
                         renderSection: function(e) {
-                            var t = b[e].header;
+                            var t = g[e].header;
                             return (0, r.jsx)("div", {
                                 style: {
                                     height: "".concat(16, "px")
                                 },
-                                children: (0, r.jsx)(c.FormTitle, {
+                                children: (0,
+                                    r.jsx)(c.FormTitle, {
                                     children: t
                                 })
                             })
@@ -545,7 +584,7 @@
                         },
                         getItemKey: function(e, n) {
                             var r;
-                            return null !== (t = null === (r = b[e].items[n]) || void 0 === r ? void 0 : r.id) && void 0 !== t ? t : null
+                            return null !== (t = null === (r = g[e].items[n]) || void 0 === r ? void 0 : r.id) && void 0 !== t ? t : null
                         },
                         getItemHeight: de,
                         removeEdgeItemGutters: !0
@@ -628,7 +667,8 @@
                         },
                         children: N.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
                     });
-                return (0, r.jsx)(c.ModalFooter, {
+                return (0,
+                    r.jsx)(c.ModalFooter, {
                     className: ve().modalFooter,
                     children: (0, r.jsxs)("div", {
                         className: ve().buttonsRight,
@@ -647,13 +687,13 @@
                     n = e.purchasedProfileEffects,
                     i = e.previewEffects,
                     a = e.onClose,
-                    u = e.initialSelectedProfileEffectID,
-                    s = e.currentSavedEffectID,
+                    s = e.initialSelectedProfileEffectID,
+                    u = e.currentSavedEffectID,
                     f = (0, l.e7)([E.Z], (function() {
                         return E.Z.getPendingProfileEffectID()
                     })),
                     d = Oe(o.useState((function() {
-                        return null != u ? u : void 0 !== f ? f : null == s ? null : null != s ? s : null
+                        return null != s ? s : void 0 !== f ? f : null == u ? null : null != u ? u : null
                     })), 2),
                     p = d[0],
                     y = d[1],
@@ -666,10 +706,10 @@
                             return (null == e ? void 0 : e.id) === p
                         }))) && void 0 !== e ? e : null, r]
                     }), [p, n, i]), 2),
-                    h = m[0],
-                    b = m[1],
+                    b = m[0],
+                    h = m[1],
                     v = o.useRef(null),
-                    O = p === (void 0 === f ? null != s ? s : null : f),
+                    O = p === (void 0 === f ? null != u ? u : null : f),
                     P = o.useCallback((function(e) {
                         y(e)
                     }), [y]);
@@ -692,7 +732,7 @@
                         })]
                     }), (0, r.jsxs)(c.ModalContent, {
                         className: ve().modalContent,
-                        children: [(0, r.jsx)(be, {
+                        children: [(0, r.jsx)(he, {
                             user: t,
                             pendingProfileEffect: p,
                             selectedProfileEffectRef: v,
@@ -700,27 +740,27 @@
                             previewEffects: i,
                             onSelect: P,
                             onClose: a
-                        }), (0, r.jsx)(B, {
+                        }), (0, r.jsx)(H, {
                             user: t,
-                            canApplySelectedChange: b,
-                            pendingProfileEffectRecord: h
+                            canApplySelectedChange: h,
+                            pendingProfileEffectRecord: b
                         })]
                     }), (0, r.jsx)(Se, {
                         onApply: function() {
-                            (0, g.$C)(p, s);
+                            (0, g.$C)(p, u);
                             a()
                         },
                         onClose: a,
-                        canApplySelectedChange: b,
+                        canApplySelectedChange: h,
                         disableApplyButton: O
                     })]
                 })
             }
 
-            function we(e) {
+            function xe(e) {
                 var t, n = e.transitionState,
                     a = e.analyticsLocations,
-                    h = e.initialSelectedEffectID,
+                    b = e.initialSelectedEffectID,
                     g = e.onClose,
                     E = function() {
                         var e = (0, m.ZP)(),
@@ -728,19 +768,19 @@
                             n = e.error,
                             r = e.categories,
                             i = e.purchases,
-                            c = b((0, l.Wu)([y.Z], (function() {
+                            c = h((0, l.Wu)([y.Z], (function() {
                                 return [y.Z.isFetching, y.Z.fetchError, y.Z.profileEffects]
                             })), 3),
                             a = c[0],
-                            u = c[1],
-                            s = c[2];
+                            s = c[1],
+                            u = c[2];
                         (0, o.useEffect)((function() {
                             (0, p.z)()
                         }), []);
                         return {
                             isFetching: t || a,
-                            error: null != n ? n : u,
-                            profileEffects: s,
+                            error: null != n ? n : s,
+                            profileEffects: u,
                             categories: r,
                             purchases: i
                         }
@@ -748,20 +788,20 @@
                     j = E.isFetching,
                     S = E.categories,
                     C = E.purchases,
-                    w = (0, l.e7)([O.default], (function() {
+                    x = (0, l.e7)([O.default], (function() {
                         return O.default.getCurrentUser()
                     })),
-                    x = (0, s.Z)(a, u.Z.EDIT_PROFILE_EFFECT_MODAL),
-                    A = x.AnalyticsLocationProvider,
-                    I = x.analyticsLocations,
-                    Z = Oe(o.useMemo((function() {
+                    A = (0, u.Z)(a, s.Z.EDIT_PROFILE_EFFECT_MODAL),
+                    w = A.AnalyticsLocationProvider,
+                    I = A.analyticsLocations,
+                    _ = Oe(o.useMemo((function() {
                         var e = (0, d.bl)(S, C);
                         return [e.purchased, e.shopPreviews]
                     }), [S, C]), 2),
-                    _ = Z[0],
-                    D = Z[1],
-                    N = (0, v.Z)(null !== (t = null == w ? void 0 : w.id) && void 0 !== t ? t : ""),
-                    T = null == N ? void 0 : N.profileEffectID;
+                    Z = _[0],
+                    T = _[1],
+                    D = (0, v.Z)(null !== (t = null == x ? void 0 : x.id) && void 0 !== t ? t : ""),
+                    N = null == D ? void 0 : D.profileEffectID;
                 o.useEffect((function() {
                     P.default.track(X.rMx.OPEN_MODAL, {
                         type: X.jXE.PROFILE_EFFECT_CUSTOMIZATION,
@@ -776,7 +816,7 @@
                         })
                     }
                 }), [S]);
-                return null == w ? null : (0, r.jsx)(A, {
+                return null == x ? null : (0, r.jsx)(w, {
                     children: (0, r.jsx)(c.ModalRoot, {
                         transitionState: n,
                         size: c.ModalSize.DYNAMIC,
@@ -785,11 +825,11 @@
                             className: ve().spinner,
                             type: c.Spinner.Type.SPINNING_CIRCLE
                         }) : (0, r.jsx)(Ce, {
-                            user: w,
-                            purchasedProfileEffects: _,
-                            previewEffects: D,
-                            initialSelectedProfileEffectID: h,
-                            currentSavedEffectID: T,
+                            user: x,
+                            purchasedProfileEffects: Z,
+                            previewEffects: T,
+                            initialSelectedProfileEffectID: b,
+                            currentSavedEffectID: N,
                             onClose: g
                         })
                     })
@@ -845,7 +885,7 @@
                 return e
             }
 
-            function u(e, t) {
+            function s(e, t) {
                 t = null != t ? t : {};
                 Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : function(e, t) {
                     var n = Object.keys(e);
@@ -862,7 +902,7 @@
                 }));
                 return e
             }
-            var s = function(e, t) {
+            var u = function(e, t) {
                 var n, r, o, i, l = {
                     label: 0,
                     sent: function() {
@@ -949,14 +989,14 @@
             function f() {
                 (0, o.openModalLazy)(c((function() {
                     var e, t;
-                    return s(this, (function(o) {
+                    return u(this, (function(o) {
                         switch (o.label) {
                             case 0:
                                 return [4, n.e(92189).then(n.bind(n, 92189))];
                             case 1:
                                 e = o.sent(), t = e.default;
                                 return [2, function(e) {
-                                    return (0, r.jsx)(t, u(function(e) {
+                                    return (0, r.jsx)(t, s(function(e) {
                                         for (var t = 1; t < arguments.length; t++) {
                                             var n = null != arguments[t] ? arguments[t] : {},
                                                 r = Object.keys(n);
