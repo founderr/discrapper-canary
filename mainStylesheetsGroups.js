@@ -16787,6 +16787,8 @@
                 visuallyHidden: "visuallyHidden-2l2eT-",
                 tooltipContainer: "tooltipContainer-2dvP1b",
                 tooltip: "tooltip-YqxAkk",
+                tooltipHeadingContainer: "tooltipHeadingContainer-2beORg",
+                nitroWheel: "nitroWheel-1HmTvG",
                 shine: "shine-2nh48-",
                 Shine: "Shine-2jTWpi",
                 label: "label-3ake0C",
