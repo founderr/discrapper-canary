@@ -23956,7 +23956,8 @@
                 t.VOICE_PANEL_OPEN = "VOICE_PANEL_OPEN";
                 t.VOICE_PANEL_CLOSE = "VOICE_PANEL_CLOSE";
                 t.VOICE_PANEL_PIP_CONTENT_READY = "VOICE_PANEL_PIP_CONTENT_READY";
-                t.MANUAL_IFRAME_RESIZING = "MANUAL_IFRAME_RESIZING"
+                t.MANUAL_IFRAME_RESIZING = "MANUAL_IFRAME_RESIZING";
+                t.NAVIGATOR_READY = "NAVIGATOR_READY"
             }(lr || (lr = {}));
             ! function(t) {
                 t.TOGGLE_REACTION_POPOUT = "TOGGLE_REACTION_POPOUT";
@@ -37140,7 +37141,7 @@ _.jH)(t)}.\nUrl: ${I(t)}`);
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-af44ca315dc3e8a59e9c6430c5d0003cc1824e2a",
+                    release: "discord_web-3ab4dd2e1be5b573c6f4ff69801a46d5d4b29001",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37167,8 +37168,8 @@ _.jH)(t)}.\nUrl: ${I(t)}`);
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                Bt.YA("buildNumber", null !== (t = "238197") ? t : "");
-                Bt.YA("builtAt", String("1697592991082"));
+                Bt.YA("buildNumber", null !== (t = "238204") ? t : "");
+                Bt.YA("builtAt", String("1697593997039"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) Bt.YA(r, e[r]);
