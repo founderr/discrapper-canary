@@ -20909,6 +20909,17 @@
                 alt: "alt-3_Cl_W"
             }
         },
+        377783: e => {
+            e.exports = {
+                modalHeader: "modalHeader-aXX4U-",
+                modalHeaderText: "modalHeaderText-1XCDbV",
+                closeButton: "closeButton-36t9Vn",
+                modalContent: "modalContent-1Avzh-",
+                tipsSection: "tipsSection-1h5_LK",
+                tipRow: "tipRow-3yztTZ",
+                tipNumber: "tipNumber-MasoFQ"
+            }
+        },
         162630: e => {
             e.exports = {
                 strangerDangerBanner: "strangerDangerBanner-2wxVfR",
