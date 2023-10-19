@@ -3218,7 +3218,7 @@
                 xt = r(930948),
                 vt = r(42028),
                 wt = r(694278),
-                Et = r(185759),
+                Et = r(795628),
                 Pt = r(927570),
                 Ct = r.n(Pt);
 
@@ -3350,19 +3350,22 @@
                     c = void 0 !== a && a,
                     s = e.onContextMenu,
                     u = e.showUsernamePopout,
-                    f = e.onClickUsername,
-                    d = e.onPopoutRequestClose;
-                return (0, n.jsxs)(n.Fragment, {
+                    f = e.roleIcon,
+                    d = e.onClickUsername,
+                    h = e.onPopoutRequestClose;
+                return (0,
+                    n.jsxs)(n.Fragment, {
                     children: [(0, n.jsx)(Et.Z, {
                         message: i,
                         channel: o,
                         author: l,
                         compact: c,
+                        roleIcon: f,
                         showPopout: u,
                         renderPopout: t,
-                        onClick: f,
+                        onClick: d,
                         onContextMenu: s,
-                        onPopoutRequestClose: d,
+                        onPopoutRequestClose: h,
                         decorations: r,
                         renderRemixTag: !0
                     }), c && (0, n.jsxs)(n.Fragment, {

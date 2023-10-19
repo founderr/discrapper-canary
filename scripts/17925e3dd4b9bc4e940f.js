@@ -26622,6 +26622,8 @@
                 hasBadges: "hasBadges-kliaM8",
                 botTagCompact: "botTagCompact-1idyyC botTag-1NoD0B",
                 botTagCozy: "botTagCozy-3NTBvK botTag-1NoD0B",
+                nitroBadgeSvg: "nitroBadgeSvg-15nli7 botTag-1NoD0B",
+                nitroAuthorBadgeContainer: "nitroAuthorBadgeContainer-2LKf05",
                 replyLink: "replyLink-25gPcI",
                 separator: "separator-AebOhG",
                 messageEditorCompact: "messageEditorCompact-3dWt-L",
