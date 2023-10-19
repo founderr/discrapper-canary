@@ -17543,9 +17543,10 @@
                 var n;
                 return null === (n = _i.getState().polls[e]) || void 0 === n ? void 0 : n[t]
             }
-            var Si = n(498964);
+            var Si = n(498964),
+                Pi = n(508151);
 
-            function Pi(e) {
+            function Ti(e) {
                 var t = h()();
                 if (!(e <= t)) {
                     var n = e.diff(t, "days");
@@ -17562,13 +17563,13 @@
                     })
                 }
             }
-            var Ti = {
+            var Ci = {
                 channelId: "",
                 selectedAnswerIds: new Set,
                 submitting: !1
             };
 
-            function Ci(e, t) {
+            function Ni(e, t) {
                 var n = !0,
                     r = !1,
                     o = void 0;
@@ -17589,14 +17590,14 @@
                 }
             }
 
-            function Ni(e) {
+            function wi(e) {
                 var t, n, r = (n = e.getChannelId(), _i((function(e) {
                         var t;
                         return null !== (t = e.polls[n]) && void 0 !== t ? t : Ei
                     }), u.Z)),
                     i = r[e.id],
                     a = function(e) {
-                        if (null != e) return Pi(e)
+                        if (null != e) return Ti(e)
                     }(null === (t = e.poll) || void 0 === t ? void 0 : t.expiry);
                 return o.useMemo((function() {
                     return function(e, t) {
@@ -17606,9 +17607,9 @@
                             var a, l = U.default.getCurrentUser(),
                                 s = null === (n = Gt.Z.getChannel(e.getChannelId())) || void 0 === n || null === (r = n.getGuildId) || void 0 === r ? void 0 : r.call(n),
                                 c = null == l ? void 0 : l.getAvatarURL(s, 20, !1),
-                                u = null != o ? o : Pi(i.expiry),
+                                u = null != o ? o : Ti(i.expiry),
                                 f = null == u,
-                                d = null !== (a = null != t ? t : ji(e.getChannelId(), e.id)) && void 0 !== a ? a : Ti,
+                                d = null !== (a = null != t ? t : ji(e.getChannelId(), e.id)) && void 0 !== a ? a : Ci,
                                 p = d.selectedAnswerIds,
                                 h = d.submitting,
                                 m = i.answers,
@@ -17619,7 +17620,7 @@
                                 }), 0),
                                 O = m.map((function(t) {
                                     var n, r, o, i = "".concat(t.answer_id),
-                                        a = Ci(e, i),
+                                        a = Ni(e, i),
                                         l = null !== (r = null == a || null === (n = a.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== r ? r : 0;
                                     return {
                                         answerId: i,
@@ -17632,7 +17633,7 @@
                                         isSelected: p.has(i),
                                         didSelfVote: null !== (o = null == a ? void 0 : a.me_vote) && void 0 !== o && o,
                                         votesPercentage: Math.round(l / b * 100),
-                                        votes: (0, Si.EQ)(y).with(2, (function() {
+                                        votes: (0, Si.EQ)(y).with(Pi.C.IMAGE_ONLY_ANSWERS, (function() {
                                             return "(".concat(l, ")")
                                         })).otherwise((function() {
                                             return oe.Z.Messages.POLL_VOTES_COUNT.format({
@@ -17681,8 +17682,7 @@
                     })
                 }), [e, i, a])
             }
-            var wi = n(508151),
-                Ai = n(352980),
+            var Ai = n(352980),
                 xi = n(281110),
                 Mi = n(347365);
 
@@ -18291,7 +18291,7 @@
                         })
                     }), [t]),
                     l = function(e, t) {
-                        return (0, Si.EQ)(t.layoutType).with(wi.C.DEFAULT, (function() {
+                        return (0, Si.EQ)(t.layoutType).with(Pi.C.DEFAULT, (function() {
                             return (0, r.jsx)(ra, {
                                 channelId: e.getChannelId(),
                                 messageId: e.id,
@@ -22809,7 +22809,7 @@
                     w = (0,
                         Cn.tu)(null !== (n = i.guild_id) && void 0 !== n ? n : "", (null !== (o = a.editedTimestamp) && void 0 !== o ? o : a.timestamp).valueOf()),
                     A = (0, Oo.Z)(null == i ? void 0 : i.id),
-                    x = Ni(a);
+                    x = wi(a);
                 return (0, r.jsx)(Wu, Lu(Ru(Lu(Ru({
                     canSuppressEmbeds: j,
                     canDeleteAttachments: S

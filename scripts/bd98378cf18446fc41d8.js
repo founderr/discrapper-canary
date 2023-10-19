@@ -11491,7 +11491,8 @@
             var n;
             ! function(t) {
                 t[t.UNKNOWN = 0] = "UNKNOWN";
-                t[t.DEFAULT = 1] = "DEFAULT"
+                t[t.DEFAULT = 1] = "DEFAULT";
+                t[t.IMAGE_ONLY_ANSWERS = 2] = "IMAGE_ONLY_ANSWERS"
             }(n || (n = {}))
         },
         954358: (t, e, r) => {
@@ -11541,8 +11542,7 @@
                         return i(e, r)
                     },
                     useStoreApi: function() {
-                        var e = (0,
-                            n.useContext)(t);
+                        var e = (0, n.useContext)(t);
                         if (!e) throw new Error("Seems like you have not used zustand provider as an ancestor.");
                         return (0, n.useMemo)((function() {
                             return {

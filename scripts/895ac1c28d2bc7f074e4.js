@@ -240,8 +240,8 @@
                 g = t(254082),
                 m = t(2590),
                 N = t(473708),
-                y = t(878101),
-                S = t.n(y);
+                S = t(878101),
+                y = t.n(S);
 
             function v(e, n) {
                 if (!(e instanceof n)) throw new TypeError("Cannot call a class as a function")
@@ -402,14 +402,14 @@
                         u = T(o, ["channel", "message", "showContextMenuHint"]),
                         l = i.type === m.d4z.GUILD_ANNOUNCEMENT && (0, O.yE)(a.flags, m.iLy.CROSSPOSTED);
                     c && (e = (0, r.jsx)(h.Z, {
-                        className: S().spacingTop,
+                        className: y().spacingTop,
                         children: N.Z.Messages.DELETE_MESSAGE_CONTEXT_MENU_HINT.format()
                     }));
                     (0, g.vc)(a) && (n = (0, r.jsx)(s.FormSwitch, {
                         value: t,
                         onChange: this.handleToggleReport,
                         hideBorder: !0,
-                        className: S().spacingTop,
+                        className: y().spacingTop,
                         children: N.Z.Messages.DELETE_MESSAGE_REPORT
                     }));
                     return (0, r.jsx)(f.Z.Provider, {
@@ -422,10 +422,10 @@
                         }, u), {
                             children: [(0, r.jsx)(s.Text, {
                                 variant: "text-md/normal",
-                                className: S().spacing,
+                                className: y().spacing,
                                 children: l ? N.Z.Messages.DELETE_FOLLOWED_NEWS_BODY : N.Z.Messages.DELETE_MESSAGE_BODY
                             }), (0, r.jsx)("div", {
-                                className: S().message,
+                                className: y().message,
                                 children: (0, r.jsx)(E.Z, {
                                     channel: i,
                                     message: a,
@@ -457,10 +457,10 @@
                             }, t), {
                                 children: [(0, r.jsx)(s.Text, {
                                     variant: "text-md/normal",
-                                    className: S().spacing,
+                                    className: y().spacing,
                                     children: o
                                 }), (0, r.jsx)("div", {
-                                    className: S().message,
+                                    className: y().message,
                                     children: (0, r.jsx)(E.Z, {
                                         channel: e,
                                         message: n,
@@ -486,10 +486,10 @@
                             }, t), {
                                 children: [(0, r.jsx)(s.Text, {
                                     variant: "text-md/normal",
-                                    className: S().spacing,
+                                    className: y().spacing,
                                     children: N.Z.Messages.UNPIN_MESSAGE_BODY
                                 }), (0, r.jsx)("div", {
-                                    className: a()(S().message, S().spacing),
+                                    className: a()(y().message, y().spacing),
                                     children: (0, r.jsx)(E.Z, {
                                         channel: e,
                                         message: n,
@@ -528,7 +528,7 @@
                         }, o), {
                             children: (0, r.jsx)(s.Text, {
                                 variant: "text-md/normal",
-                                className: S().spacing,
+                                className: y().spacing,
                                 children: N.Z.Messages.EDIT_FOLLOWED_NEWS_BODY
                             })
                         }))
@@ -827,8 +827,8 @@
                 g = t(930948),
                 m = t(530607),
                 N = t(847839),
-                y = t(92517),
-                S = t(2590);
+                S = t(92517),
+                y = t(2590);
 
             function v(e, n, t, r, o, i, a) {
                 try {
@@ -974,7 +974,7 @@
 
             function T(e) {
                 var n = e.getGuildId();
-                null != n && u.Z.open(n, S.pNK.OVERVIEW)
+                null != n && u.Z.open(n, y.pNK.OVERVIEW)
             }
 
             function D(e, n, t) {
@@ -982,7 +982,7 @@
             }
 
             function P(e, n) {
-                _.default.track(S.rMx.MESSAGE_LINK_COPIED, {
+                _.default.track(y.rMx.MESSAGE_LINK_COPIED, {
                     message_id: n.id,
                     channel: n.channel_id
                 });
@@ -990,7 +990,7 @@
             }
 
             function L(e, n, t) {
-                n.state === S.yb.SEND_FAILED || t.shiftKey ? a.Z.deleteMessage(e.id, n.id, n.state === S.yb.SEND_FAILED) : s.Z.confirmDelete(e, n)
+                n.state === y.yb.SEND_FAILED || t.shiftKey ? a.Z.deleteMessage(e.id, n.id, n.state === y.yb.SEND_FAILED) : s.Z.confirmDelete(e, n)
             }
 
             function C(e, n) {
@@ -1010,7 +1010,7 @@
             }
 
             function j(e, n) {
-                (0, y.Z)(e, n, void 0, m.Z.getOptions(n.id))
+                (0, S.Z)(e, n, void 0, m.Z.getOptions(n.id))
             }
 
             function w(e, n) {
@@ -1053,7 +1053,7 @@
                     shouldMention: !t.shiftKey && !o,
                     showMentionToggle: !r && !o
                 });
-                g.S.dispatchToLastSubscribed(S.CkL.TEXTAREA_FOCUS)
+                g.S.dispatchToLastSubscribed(y.CkL.TEXTAREA_FOCUS)
             }
 
             function G(e, n) {
@@ -1202,9 +1202,9 @@
                     return O(this, t)
                 }
             }
-            var y = {};
+            var S = {};
 
-            function S(e) {
+            function y(e) {
                 var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
                     t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
@@ -1223,11 +1223,11 @@
 
             function v(e) {
                 var n = e.channel;
-                delete y[n.id]
+                delete S[n.id]
             }
 
             function I() {
-                o().forEach(y, (function(e) {
+                o().forEach(S, (function(e) {
                     o().forEach(e.messages, (function(e) {
                         e.timestamp.locale(c.default.locale)
                     }))
@@ -1235,7 +1235,7 @@
             }
 
             function b() {
-                o().forEach(y, (function(e) {
+                o().forEach(S, (function(e) {
                     e.messages = e.messages.map((function(e) {
                         return e.set("blocked", E.Z.isBlocked(e.author.id))
                     }))
@@ -1265,21 +1265,21 @@
                 };
                 r.getPinnedMessages = function(e) {
                     var n;
-                    return null !== (n = y[e]) && void 0 !== n ? n : void 0
+                    return null !== (n = S[e]) && void 0 !== n ? n : void 0
                 };
                 r.loaded = function(e) {
-                    return null != y[e] && y[e].loaded
+                    return null != S[e] && S[e].loaded
                 };
                 return t
             }(i.ZP.Store);
             M.displayName = "ChannelPinsStore";
             const A = new M(a.Z, {
                 CONNECTION_OPEN: function() {
-                    y = {}
+                    S = {}
                 },
                 GUILD_DELETE: function(e) {
                     var n = e.guild;
-                    y = o()(y).filter((function(e) {
+                    S = o()(S).filter((function(e) {
                         return e.guildId !== n.id
                     })).keyBy("id").value()
                 },
@@ -1287,20 +1287,20 @@
                     var n = e.message.id,
                         t = e.message.channel_id;
                     if (null == t) return !1;
-                    var r = y[t];
+                    var r = S[t];
                     if (null == r && !e.message.pinned) return !1;
                     if (null != e.message.author)
                         if (e.message.pinned) {
                             if (null == r) {
-                                r = S(t, [e.message], !1);
-                                y[t] = r;
+                                r = y(t, [e.message], !1);
+                                S[t] = r;
                                 return
                             }
                             r.messages = r.messages.slice();
                             var i = o().findIndex(r.messages, (function(e) {
                                 return e.id === n
                             })); - 1 === i ? r.messages.unshift((0, s.e5)(e.message)) : r.messages[i] = (0, s.wi)(r.messages[i], e.message);
-                            y[t] = r
+                            S[t] = r
                         } else {
                             if (null == r) return;
                             var a = o().findIndex(r.messages, (function(e) {
@@ -1309,7 +1309,7 @@
                             if (-1 === a) return;
                             r.messages = r.messages.slice();
                             r.messages.splice(a, 1);
-                            y[t] = r
+                            S[t] = r
                         }
                     else if (null != r) {
                         var c = o().findIndex(r.messages, (function(e) {
@@ -1321,7 +1321,7 @@
                             if (l !== u) {
                                 var f = r.messages.slice();
                                 f[c] = l;
-                                y[t].messages = f
+                                S[t].messages = f
                             }
                         }
                     }
@@ -1329,34 +1329,34 @@
                 MESSAGE_DELETE: function(e) {
                     var n = e.id,
                         t = e.channelId,
-                        r = y[t];
+                        r = S[t];
                     if (null == r) return !1;
                     if (0 === o().remove(r.messages, (function(e) {
                             return e.id === n
                         })).length) return !1;
                     r.messages = r.messages.slice();
-                    y[t] = r
+                    S[t] = r
                 },
                 MESSAGE_DELETE_BULK: function(e) {
                     var n = e.ids,
                         t = e.channelId,
-                        r = y[t];
+                        r = S[t];
                     null != r && (r.messages = r.messages.filter((function(e) {
                         return -1 === n.indexOf(e.id)
                     })))
                 },
                 LOAD_PINNED_MESSAGES: function(e) {
                     var n = e.channelId;
-                    y[n] = S(n, [], !1, !0)
+                    S[n] = y(n, [], !1, !0)
                 },
                 LOAD_PINNED_MESSAGES_SUCCESS: function(e) {
                     var n = e.channelId,
                         t = e.messages;
-                    y[n] = S(n, t, !0)
+                    S[n] = y(n, t, !0)
                 },
                 LOAD_PINNED_MESSAGES_FAILURE: function(e) {
                     var n = e.channelId;
-                    delete y[n]
+                    delete S[n]
                 },
                 USER_SETTINGS_PROTO_UPDATE: I,
                 I18N_LOAD_SUCCESS: I,
@@ -1482,7 +1482,7 @@
         },
         646161: (e, n, t) => {
             t.d(n, {
-                DW: () => S,
+                DW: () => y,
                 Gn: () => I,
                 t3: () => v,
                 w4: () => N
@@ -1521,18 +1521,18 @@
                 return "".concat(c.fzT.DESKTOP).concat(r, "?platform=").concat(e).concat(o)
             }
 
-            function y() {
+            function S() {
                 var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (r = i().os) || void 0 === r ? void 0 : r.family;
                 return null == e ? O : -1 !== e.indexOf(l) || -1 !== e.indexOf(f) || -1 !== e.indexOf(d) || -1 !== e.indexOf(E) || -1 !== e.indexOf(p) || -1 !== e.indexOf(_) ? m : -1 !== e.indexOf(h) ? g : O
             }
 
-            function S(e) {
+            function y(e) {
                 var n;
-                return (u(n = {}, O, "Windows"), u(n, g, "Mac"), u(n, m, "Linux"), n)[y(e)]
+                return (u(n = {}, O, "Windows"), u(n, g, "Mac"), u(n, m, "Linux"), n)[S(e)]
             }
 
             function v() {
-                var e = y();
+                var e = S();
                 return N(e, !1, e === m ? "tar.gz" : null)
             }
 
@@ -1728,7 +1728,8 @@
             var r;
             ! function(e) {
                 e[e.UNKNOWN = 0] = "UNKNOWN";
-                e[e.DEFAULT = 1] = "DEFAULT"
+                e[e.DEFAULT = 1] = "DEFAULT";
+                e[e.IMAGE_ONLY_ANSWERS = 2] = "IMAGE_ONLY_ANSWERS"
             }(r || (r = {}))
         },
         954358: (e, n, t) => {
