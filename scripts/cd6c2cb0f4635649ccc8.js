@@ -327,6 +327,7 @@
                 preemptiveExpandRate: "Pre-emptive Expand Rate",
                 qpSum: "QP Sum",
                 quartzFrames: "Quartz Frames",
+                screenCaptureKitFrames: "ScreenCaptureKit frames",
                 receiverBitrateEstimate: "Receiver Bitrate Estimate (REMB)",
                 relativePlayoutDelay: "Relative Playout Delay",
                 relativeReceptionDelay: "Relative Reception Delay",
@@ -1118,8 +1119,7 @@
                                 src: e.getAvatarURL(n, 24),
                                 "aria-label": e.username,
                                 className: w().avatar
-                            }), (0,
-                                r.jsx)("span", {
+                            }), (0, r.jsx)("span", {
                                 className: w().username,
                                 children: null != t ? t : R.ZP.getName(e)
                             })]

@@ -6081,6 +6081,7 @@
                 priceWrapper: "priceWrapper-3XSWjw",
                 price: "price-1Nd6eJ",
                 strikedPrice: "strikedPrice-3AIrSN",
+                fullPrice: "fullPrice-26UjNQ",
                 premiumIcon: "premiumIcon-3J0XnZ"
             }
         },
@@ -6203,7 +6204,9 @@
                 tooltip: "tooltip-1sdgrM",
                 profileCustomizationBody: "profileCustomizationBody-3_pZnZ",
                 priceTag: "priceTag-2Fjcol",
-                headingWithItemTypePill: "headingWithItemTypePill-lySTP5"
+                headingWithItemTypePill: "headingWithItemTypePill-lySTP5",
+                buttonsContainer: "buttonsContainer-2tCf-a",
+                unlockDiscountButton: "unlockDiscountButton-XPl56S"
             }
         },
         407061: e => {
