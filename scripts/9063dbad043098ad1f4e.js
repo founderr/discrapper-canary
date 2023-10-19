@@ -14392,7 +14392,7 @@
                                 skuName: s
                             });
                             if (e.isSubscription) {
-                                if (null == a) throw new Error("How could you let this happen??");
+                                if (null == a) return oe.Z.Messages.LOADING;
                                 if (null != i) {
                                     return (a.interval === dt.rV.MONTH ? oe.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_MONTHS : oe.Z.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_DEFAULT_YEARS).format({
                                         username: Q.ZP.getUserTag(i),
