@@ -47379,17 +47379,17 @@
                 RQ = sn.ZP.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
 
             function wQ(e) {
-                var t = e.channel,
-                    n = e.otherUser,
-                    o = e.active,
-                    i = (0, s.e7)([y.Z], (function() {
+                var t, n = e.channel,
+                    o = e.otherUser,
+                    i = e.active,
+                    a = (0, s.e7)([y.Z], (function() {
                         return y.Z.useReducedMotion
                     })),
-                    a = (0, s.e7)([Ms.Z], (function() {
-                        return null == n ? null : Ms.Z.getNickname(n.id)
+                    l = (0, s.e7)([Ms.Z], (function() {
+                        return null == o ? null : Ms.Z.getNickname(o.id)
                     })),
-                    l = !i && o,
-                    u = function(e) {
+                    u = !a && i,
+                    f = function(e) {
                         var t = (0, EQ.a)(e),
                             n = gQ(mQ({
                                 lastMessageId: (0, s.e7)([Sk.ZP], (function() {
@@ -47397,40 +47397,40 @@
                                 }))
                             }, t));
                         return null == n ? "" : (0, yQ.Ye)(n)
-                    }(t),
-                    f = (0, mk.Z)({
-                        user: n,
+                    }(n),
+                    d = (0, mk.Z)({
+                        user: o,
                         size: (0, bk.y9)(c.AvatarSizes.SIZE_40),
                         animateOnHover: !0
                     }).avatarDecorationSrc;
                 return (0, r.jsxs)(r.Fragment, {
                     children: [(0, r.jsx)(RQ, {
                         className: jQ().avatar,
-                        src: (0, hQ.x)(t, 40, l),
-                        avatarDecoration: f,
+                        src: (0, hQ.x)(n, 40, u),
+                        avatarDecoration: d,
                         size: c.AvatarSizes.SIZE_40,
-                        "aria-label": n.username
+                        "aria-label": null !== (t = null == o ? void 0 : o.username) && void 0 !== t ? t : $.Z.Messages.UNKNOWN_USER
                     }), (0, r.jsxs)("div", {
                         className: jQ().userPreview,
                         children: [(0, r.jsxs)("div", {
                             className: jQ().userContainerWithPreview,
                             children: [(0, r.jsx)(pQ.Z, {
-                                nick: a,
-                                user: n,
+                                nick: l,
+                                user: o,
                                 showAccountIdentifier: !0,
                                 className: jQ().tagContainer,
                                 usernameClass: jQ().username,
-                                discriminatorClass: null != xh.ZP.getGlobalName(n) ? jQ().globalName : jQ().discriminator
+                                discriminatorClass: null != xh.ZP.getGlobalName(o) ? jQ().globalName : jQ().discriminator
                             }), (0, r.jsx)(c.Text, {
                                 className: jQ().timestampWithPreview,
                                 color: "text-muted",
                                 variant: "text-xs/normal",
-                                children: u
+                                children: f
                             })]
                         }), (0, r.jsx)("div", {
                             className: jQ().messagePreview,
                             children: (0, r.jsx)(AQ, {
-                                channel: t
+                                channel: n
                             })
                         })]
                     })]
@@ -47445,7 +47445,8 @@
                     i = e.channel,
                     a = wX(),
                     s = o.useCallback((function() {
-                        (0, c.showToast)((0, c.createToast)($.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE))
+                        (0, c.showToast)((0,
+                            c.createToast)($.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE))
                     }), []),
                     l = o.useCallback((function() {
                         dp.Z.closeChannelSidebar(jh.uZ)
@@ -62951,7 +62952,7 @@
                         children: [(0, r.jsx)(tn, {
                             className: doe().icon
                         }), $.Z.Messages.DEV_NOTICE_STAGING.format({
-                            buildNumber: "238695"
+                            buildNumber: "238697"
                         }), (0, r.jsx)(u, {})]
                     })
                 }
