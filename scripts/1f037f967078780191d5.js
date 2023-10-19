@@ -10297,115 +10297,117 @@
                             i = n.channelId,
                             a = n.renderExtraElement,
                             u = e.attributes,
-                            c = e.children,
-                            s = null !== (t = null == a ? void 0 : a(e)) && void 0 !== t ? t : function(e, t, n) {
-                                var o = e.attributes,
-                                    i = e.children,
-                                    a = e.element;
-                                switch (a.type) {
-                                    case "line":
-                                        var u;
-                                        return (null === (u = a.codeBlockState) || void 0 === u ? void 0 : u.isInCodeBlock) ? (0, r.jsx)("div", js(Cs({
-                                            className: bs().codeLine,
-                                            spellCheck: null == a.codeBlockState || null == a.codeBlockState.lang
-                                        }, o), {
+                            c = e.children;
+                        "rtl" === u.dir && (u.style = Fs(Hs({}, u.style), {
+                            textAlign: "right"
+                        }));
+                        var s = null !== (t = null == a ? void 0 : a(e)) && void 0 !== t ? t : function(e, t, n) {
+                            var o = e.attributes,
+                                i = e.children,
+                                a = e.element;
+                            switch (a.type) {
+                                case "line":
+                                    var u;
+                                    return (null === (u = a.codeBlockState) || void 0 === u ? void 0 : u.isInCodeBlock) ? (0, r.jsx)("div", js(Cs({
+                                        className: bs().codeLine,
+                                        spellCheck: null == a.codeBlockState || null == a.codeBlockState.lang
+                                    }, o), {
+                                        children: i
+                                    })) : (0, r.jsx)("div", js(Cs({}, o), {
+                                        children: i
+                                    }));
+                                case "blockQuote":
+                                    var c = l()(rs().blockquoteContainer, rs().slateBlockquoteContainer);
+                                    return (0, r.jsxs)("div", js(Cs({}, o), {
+                                        className: c,
+                                        children: [(0, r.jsx)("span", {
+                                            contentEditable: !1,
+                                            className: rs().blockquoteDivider
+                                        }), (0, r.jsx)("blockquote", {
                                             children: i
-                                        })) : (0, r.jsx)("div", js(Cs({}, o), {
-                                            children: i
-                                        }));
-                                    case "blockQuote":
-                                        var c = l()(rs().blockquoteContainer, rs().slateBlockquoteContainer);
-                                        return (0, r.jsxs)("div", js(Cs({}, o), {
-                                            className: c,
-                                            children: [(0, r.jsx)("span", {
-                                                contentEditable: !1,
-                                                className: rs().blockquoteDivider
-                                            }), (0, r.jsx)("blockquote", {
-                                                children: i
-                                            })]
-                                        }));
-                                    case "emoji":
-                                        return (0, r.jsxs)(Es, {
-                                            attributes: o,
-                                            children: [(0, r.jsx)(as, {
-                                                emoji: a.emoji
-                                            }), i]
-                                        });
-                                    case "customEmoji":
-                                        return (0, r.jsxs)(Es, {
-                                            attributes: o,
-                                            children: [(0, r.jsx)(us, {
-                                                emoji: a.emoji
-                                            }), i]
-                                        });
-                                    case "textMention":
-                                        return (0, r.jsxs)(Es, {
-                                            attributes: o,
-                                            children: [(0, r.jsx)(cs, {
-                                                text: a.name,
-                                                channelId: n,
-                                                guildId: t
-                                            }), i]
-                                        });
-                                    case "userMention":
-                                        return (0, r.jsxs)(Es, {
-                                            attributes: o,
-                                            children: [(0, r.jsx)(ss, {
-                                                id: a.userId,
-                                                channelId: n,
-                                                guildId: t
-                                            }), i]
-                                        });
-                                    case "roleMention":
-                                        return (0, r.jsxs)(Es, {
-                                            attributes: o,
-                                            children: [(0, r.jsx)(fs, {
-                                                id: a.roleId,
-                                                guildId: t
-                                            }), i]
-                                        });
-                                    case "channelMention":
-                                        return (0, r.jsxs)(Es, {
-                                            attributes: o,
-                                            children: [(0, r.jsx)(ds, {
-                                                id: a.channelId
-                                            }), i]
-                                        });
-                                    case "staticRouteLink":
-                                        return (0, r.jsxs)(Es, {
-                                            attributes: o,
-                                            children: [(0, r.jsx)(ys, {
-                                                id: a.channelId
-                                            }), i]
-                                        });
-                                    case "soundboard":
-                                        return (0, r.jsxs)(Es, {
-                                            attributes: o,
-                                            children: [(0, r.jsx)(ps, {
-                                                id: a.soundId
-                                            }), i]
-                                        });
-                                    case "commandMention":
-                                        return (0, r.jsxs)(Es, {
-                                            attributes: o,
-                                            children: [(0, r.jsx)(hs, {
-                                                text: a.commandName,
-                                                id: a.commandId
-                                            }), i]
-                                        });
-                                    case "timestamp":
-                                        return (0, r.jsxs)(Es, {
-                                            attributes: o,
-                                            children: [(0, r.jsx)(vs, {
-                                                timestamp: a.parsed
-                                            }), i]
-                                        });
-                                    default:
-                                        return null
-                                }
-                            }(e, o, i);
-                        return null != s ? s : (0,
-                            r.jsx)("div", Fs(Hs({}, u), {
+                                        })]
+                                    }));
+                                case "emoji":
+                                    return (0, r.jsxs)(Es, {
+                                        attributes: o,
+                                        children: [(0, r.jsx)(as, {
+                                            emoji: a.emoji
+                                        }), i]
+                                    });
+                                case "customEmoji":
+                                    return (0, r.jsxs)(Es, {
+                                        attributes: o,
+                                        children: [(0, r.jsx)(us, {
+                                            emoji: a.emoji
+                                        }), i]
+                                    });
+                                case "textMention":
+                                    return (0, r.jsxs)(Es, {
+                                        attributes: o,
+                                        children: [(0, r.jsx)(cs, {
+                                            text: a.name,
+                                            channelId: n,
+                                            guildId: t
+                                        }), i]
+                                    });
+                                case "userMention":
+                                    return (0, r.jsxs)(Es, {
+                                        attributes: o,
+                                        children: [(0, r.jsx)(ss, {
+                                            id: a.userId,
+                                            channelId: n,
+                                            guildId: t
+                                        }), i]
+                                    });
+                                case "roleMention":
+                                    return (0, r.jsxs)(Es, {
+                                        attributes: o,
+                                        children: [(0, r.jsx)(fs, {
+                                            id: a.roleId,
+                                            guildId: t
+                                        }), i]
+                                    });
+                                case "channelMention":
+                                    return (0, r.jsxs)(Es, {
+                                        attributes: o,
+                                        children: [(0, r.jsx)(ds, {
+                                            id: a.channelId
+                                        }), i]
+                                    });
+                                case "staticRouteLink":
+                                    return (0, r.jsxs)(Es, {
+                                        attributes: o,
+                                        children: [(0, r.jsx)(ys, {
+                                            id: a.channelId
+                                        }), i]
+                                    });
+                                case "soundboard":
+                                    return (0, r.jsxs)(Es, {
+                                        attributes: o,
+                                        children: [(0, r.jsx)(ps, {
+                                            id: a.soundId
+                                        }), i]
+                                    });
+                                case "commandMention":
+                                    return (0, r.jsxs)(Es, {
+                                        attributes: o,
+                                        children: [(0, r.jsx)(hs, {
+                                            text: a.commandName,
+                                            id: a.commandId
+                                        }), i]
+                                    });
+                                case "timestamp":
+                                    return (0, r.jsxs)(Es, {
+                                        attributes: o,
+                                        children: [(0, r.jsx)(vs, {
+                                            timestamp: a.parsed
+                                        }), i]
+                                    });
+                                default:
+                                    return null
+                            }
+                        }(e, o, i);
+                        return null != s ? s : (0, r.jsx)("div", Fs(Hs({}, u), {
                             children: c
                         }))
                     };
