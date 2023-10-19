@@ -60,25 +60,24 @@
         790405: (e, t, n) => {
             "use strict";
             n.d(t, {
-                Nz: () => p,
-                QQ: () => v,
-                QY: () => _,
-                j8: () => g,
-                jn: () => y,
-                m$: () => h,
-                oO: () => b,
-                qt: () => m,
-                u$: () => S,
-                yC: () => d
+                Nz: () => d,
+                QQ: () => E,
+                QY: () => S,
+                j8: () => v,
+                jn: () => h,
+                m$: () => p,
+                oO: () => y,
+                qt: () => g,
+                u$: () => m,
+                yC: () => f
             });
             var r = n(744564),
                 o = n(396043),
-                i = n(747126),
-                a = n(923555),
-                l = n(473903),
-                u = n(2590);
+                i = n(923555),
+                a = n(206823),
+                l = n(2590);
 
-            function c(e, t, n) {
+            function u(e, t, n) {
                 t in e ? Object.defineProperty(e, t, {
                     value: n,
                     enumerable: !0,
@@ -88,7 +87,7 @@
                 return e
             }
 
-            function s(e) {
+            function c(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
@@ -96,13 +95,13 @@
                         return Object.getOwnPropertyDescriptor(n, e).enumerable
                     }))));
                     r.forEach((function(t) {
-                        c(e, t, n[t])
+                        u(e, t, n[t])
                     }))
                 }
                 return e
             }
 
-            function f(e, t) {
+            function s(e, t) {
                 t = null != t ? t : {};
                 Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : function(e, t) {
                     var n = Object.keys(e);
@@ -120,18 +119,14 @@
                 return e
             }
 
-            function d(e, t, n) {
-                if (i.Z.didAgree(e)) {
-                    var c = l.default.getCurrentUser();
-                    if (null == c) return;
-                    t.include_nsfw = null == c.nsfwAllowed || c.nsfwAllowed
-                }
-                var s = Object.keys(t);
-                o.ZP.trackWithMetadata(u.rMx.SEARCH_STARTED, {
-                    search_type: a.Z.getSearchType(),
-                    prev_search_id: a.Z.getAnalyticsId(e),
-                    num_modifiers: s.length,
-                    modifiers: s.reduce((function(e, n) {
+            function f(e, t, n) {
+                (0, a.jW)(t, e);
+                var u = Object.keys(t);
+                o.ZP.trackWithMetadata(l.rMx.SEARCH_STARTED, {
+                    search_type: i.Z.getSearchType(),
+                    prev_search_id: i.Z.getAnalyticsId(e),
+                    num_modifiers: u.length,
+                    modifiers: u.reduce((function(e, n) {
                         var r = t[n];
                         e[n] = Array.isArray(r) ? r.length : 1;
                         return e
@@ -145,64 +140,64 @@
                 })
             }
 
-            function p(e, t) {
-                var n = a.Z.getQuery(e),
+            function d(e, t) {
+                var n = i.Z.getQuery(e),
                     r = function(e) {
                         switch (e) {
-                            case u.QIO.MOST_RELEVANT:
+                            case l.QIO.MOST_RELEVANT:
                                 return {
                                     sort_by: "relevance", sort_order: "desc"
                                 };
-                            case u.QIO.OLDEST:
+                            case l.QIO.OLDEST:
                                 return {
                                     sort_by: "timestamp", sort_order: "asc"
                                 };
-                            case u.QIO.NEWEST:
+                            case l.QIO.NEWEST:
                             default:
                                 return {
                                     sort_by: "timestamp", sort_order: "desc"
                                 }
                         }
                     }(t);
-                return d(e, f(s({}, n, r), {
+                return f(e, s(c({}, n, r), {
                     offset: 0
                 }))
             }
 
-            function h(e) {
-                var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.vpv;
-                return O(e, t)
+            function p(e) {
+                var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.vpv;
+                return b(e, t)
             }
 
-            function y(e) {
-                var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.vpv;
-                return O(e, -t)
+            function h(e) {
+                var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.vpv;
+                return b(e, -t)
+            }
+
+            function y(e, t) {
+                return O(e, t * l.vpv)
             }
 
             function b(e, t) {
-                return E(e, t * u.vpv)
+                return O(e, i.Z.getOffset(e) + t)
             }
 
             function O(e, t) {
-                return E(e, a.Z.getOffset(e) + t)
-            }
-
-            function E(e, t) {
-                var n = a.Z.getQuery(e),
-                    r = a.Z.getTotalResults(e);
-                if (!(t < 0 || t > r)) return d(e, f(s({}, n), {
+                var n = i.Z.getQuery(e),
+                    r = i.Z.getTotalResults(e);
+                if (!(t < 0 || t > r)) return f(e, s(c({}, n), {
                     offset: t
                 }))
             }
 
-            function v(e) {
+            function E(e) {
                 r.Z.dispatch({
                     type: "SEARCH_CLEAR_HISTORY",
                     searchId: e
                 })
             }
 
-            function g(e, t) {
+            function v(e, t) {
                 null != e && r.Z.dispatch({
                     type: "SEARCH_EDITOR_STATE_CHANGE",
                     searchId: e,
@@ -210,9 +205,9 @@
                 })
             }
 
-            function m(e) {
-                o.ZP.trackWithMetadata(u.rMx.SEARCH_CLOSED, {
-                    search_id: a.Z.getAnalyticsId(e)
+            function g(e) {
+                o.ZP.trackWithMetadata(l.rMx.SEARCH_CLOSED, {
+                    search_id: i.Z.getAnalyticsId(e)
                 });
                 r.Z.wait((function() {
                     return r.Z.dispatch({
@@ -222,7 +217,7 @@
                 }))
             }
 
-            function S(e, t, n) {
+            function m(e, t, n) {
                 null != e && r.Z.dispatch({
                     type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE",
                     searchId: e,
@@ -231,7 +226,7 @@
                 })
             }
 
-            function _(e, t) {
+            function S(e, t) {
                 r.Z.dispatch({
                     type: "SEARCH_SET_SHOW_BLOCKED_RESULTS",
                     searchId: e,
@@ -631,8 +626,7 @@
                             n = e.canCloseAllMessages,
                             o = e.canManageMessages,
                             i = e.channel;
-                        return null == t ? null : n || o || null != i && i.isPrivate() ? (0,
-                            r.jsx)(f.Button, {
+                        return null == t ? null : n || o || null != i && i.isPrivate() ? (0, r.jsx)(f.Button, {
                             look: f.Button.Looks.BLANK,
                             size: f.Button.Sizes.NONE,
                             onClick: this.handleClickClose,
@@ -3543,7 +3537,8 @@
             }
 
             function Ze() {
-                (0, C.WU)()
+                (0,
+                    C.WU)()
             }
 
             function ke(e) {
@@ -3902,7 +3897,8 @@
                         l = (0, ce.KS)(o);
                     return (0, r.jsxs)("div", {
                         className: We().resultChannel,
-                        children: [null != l ? (0, r.jsx)(l, {
+                        children: [null != l ? (0,
+                            r.jsx)(l, {
                             className: We().searchResultChannelIcon
                         }) : null, (0, r.jsx)("strong", {
                             children: (0, ue.F6)(o, ye.default, fe.Z)
@@ -3992,8 +3988,7 @@
                     },
                     groupTip: function(e) {
                         var t = e.searchId;
-                        return (0,
-                            r.jsx)(y.Tooltip, {
+                        return (0, r.jsx)(y.Tooltip, {
                             text: Q.Z.Messages.SEARCH_CLEAR_HISTORY,
                             position: "left",
                             children: function(e) {
@@ -5447,7 +5442,7 @@
                                 },
                                 oldFormErrors: !0
                             }).then((function(e) {
-                                if (null == e.body || "ee05992ab7be9a0c7fc8e17e59e0b54db3bc5aa6" === e.body.hash) return n._handleUpdateNotAvailable();
+                                if (null == e.body || "5dba5a42c0ff6ec91ddb84904f7c530f1009bbe7" === e.body.hash) return n._handleUpdateNotAvailable();
                                 if (e.body.required || (0, Tn.fD)()) return n._handleUpdateDownloaded(!1);
                                 var t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? Dn : Mn;
                                 if (Date.now() - Ln > t) {
