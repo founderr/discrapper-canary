@@ -5442,7 +5442,7 @@
                                 },
                                 oldFormErrors: !0
                             }).then((function(e) {
-                                if (null == e.body || "2573150c3408aa81e752a22bc2c9a62e87610596" === e.body.hash) return n._handleUpdateNotAvailable();
+                                if (null == e.body || "a456ad62a2082a66e7bcdce66814a68d4e96d405" === e.body.hash) return n._handleUpdateNotAvailable();
                                 if (e.body.required || (0, Tn.fD)()) return n._handleUpdateDownloaded(!1);
                                 var t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? Dn : Mn;
                                 if (Date.now() - Ln > t) {

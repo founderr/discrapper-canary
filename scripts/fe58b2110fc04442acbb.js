@@ -13886,7 +13886,7 @@
 
             function Zl() {
                 var e, t, n, r, o = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    i = null === (e = "2573150c3408aa81e752a22bc2c9a62e87610596") ? void 0 : e.substring(0, 7),
+                    i = null === (e = "a456ad62a2082a66e7bcdce66814a68d4e96d405") ? void 0 : e.substring(0, 7),
                     s = null === fe.Z || void 0 === fe.Z ? void 0 : fe.Z.remoteApp.getVersion(),
                     a = null === (t = null === fe.Z || void 0 === fe.Z ? void 0 : fe.Z.remoteApp.getBuildNumber) || void 0 === t ? void 0 : t(),
                     l = null === (n = null === fe.Z || void 0 === fe.Z ? void 0 : fe.Z.remoteApp.getAppArch) || void 0 === n ? void 0 : n(),
@@ -13899,7 +13899,7 @@
                         className: Ll().line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [o, " ", "238902", " ", (0, p.jsxs)("span", {
+                        children: [o, " ", "238906", " ", (0, p.jsxs)("span", {
                             className: Ll().versionHash,
                             children: ["(", i, ")"]
                         })]
@@ -14934,7 +14934,7 @@
                     })
                 })
             };
-            var Lc = n(24595);
+            var Lc = n(264486);
 
             function Zc() {
                 var e = (0, r.e7)([no.default], (function() {
@@ -15025,8 +15025,7 @@
                     viewBox: "0 0 24 24",
                     className: a
                 }, (0, Gc.Z)(c)), {
-                    children: (0,
-                        p.jsx)("path", {
+                    children: (0, p.jsx)("path", {
                         className: l,
                         fill: s,
                         d: "M17.836 6.009A4.794 4.794 0 0 1 15.658 2h-3.439l-.005 13.78a2.892 2.892 0 0 1-2.885 2.782 2.893 2.893 0 0 1-2.89-2.89 2.894 2.894 0 0 1 2.89-2.89c.298 0 .583.048.853.133v-3.51a6.308 6.308 0 0 0-.853-.062A6.336 6.336 0 0 0 3 15.672a6.324 6.324 0 0 0 2.702 5.181A6.29 6.29 0 0 0 9.329 22a6.336 6.336 0 0 0 6.329-6.329V8.683c1.348.968 3 1.539 4.784 1.539V6.783c-.96 0-1.855-.285-2.605-.775v.001Z"
