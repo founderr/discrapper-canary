@@ -190,20 +190,29 @@
                     return {
                         success: !1
                     }
-                })), y(r, l.jw.STRING, (function(e, t) {
-                    var n, r = null === (n = function(e) {
+                })), y(r, l.jw.STRING, (function(e, t, n) {
+                    var r, o = null === (r = function(e) {
                         switch (e.type) {
                             case "emoji":
                                 return e.surrogate;
                             case "text":
                                 return e.text
                         }
-                    }(e)) || void 0 === n ? void 0 : n.trim();
-                    return null == t.choices || null != r && t.choices.map((function(e) {
+                    }(e)) || void 0 === r ? void 0 : r.trim();
+                    if (t.autocomplete) {
+                        var i = s.Z.getAutocompleteLastChoices(n, t.name);
+                        if (null != i) {
+                            var a, u;
+                            o = String(null !== (u = null === (a = i.find((function(e) {
+                                return e.name === o
+                            }))) || void 0 === a ? void 0 : a.value) && void 0 !== u ? u : o)
+                        }
+                    }
+                    return null == t.choices || null != o && t.choices.map((function(e) {
                         return e.displayName
-                    })).includes(r) ? t.type !== l.jw.STRING || void 0 === t.minLength && void 0 === t.maxLength ? {
+                    })).includes(o) ? t.type !== l.jw.STRING || void 0 === t.minLength && void 0 === t.maxLength ? {
                         success: !0
-                    } : void 0 !== r ? function(e, t, n) {
+                    } : void 0 !== o ? function(e, t, n) {
                         if (void 0 !== t.minLength && e.length < t.minLength || void 0 !== t.maxLength && e.length > t.maxLength) {
                             if (void 0 !== t.maxLength && void 0 !== t.minLength && t.minLength === t.maxLength) return {
                                 success: !1,
@@ -234,7 +243,7 @@
                         return {
                             success: !0
                         }
-                    }(r, t, {
+                    }(o, t, {
                         exactRangeErrorMessage: p.Z.Messages.COMMAND_VALIDATION_STRING_EXACT_RANGE_ERROR,
                         rangeErrorMessage: p.Z.Messages.COMMAND_VALIDATION_STRING_RANGE_ERROR,
                         minErrorMessage: p.Z.Messages.COMMAND_VALIDATION_STRING_MINIMUM_ERROR,
@@ -306,8 +315,7 @@
                     } : m(a, t, p.Z.Messages.COMMAND_VALIDATION_NUMBER_RANGE_ERROR, p.Z.Messages.COMMAND_VALIDATION_NUMBER_MINIMUM_ERROR, p.Z.Messages.COMMAND_VALIDATION_NUMBER_MAXIMUM_ERROR)
                 })), y(r, l.jw.USER, (function(e, t, n, r) {
                     if ("text" === e.type) {
-                        if ((0,
-                                f.BH)(e.text)) return {
+                        if ((0, f.BH)(e.text)) return {
                             success: !0
                         };
                         var o = (0, a.K)(e.text, r, n, {
