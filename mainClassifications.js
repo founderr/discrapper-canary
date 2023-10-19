@@ -37149,7 +37149,7 @@ _.jH)(t)}.\nUrl: ${I(t)}`);
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-a5d07ac0deb87a99e2b32b604fbce062110a1f47",
+                    release: "discord_web-f3b8e89c98833d9d33ab2782383bf08eef1a73b7",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37176,8 +37176,8 @@ _.jH)(t)}.\nUrl: ${I(t)}`);
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                Bt.YA("buildNumber", null !== (t = "238538") ? t : "");
-                Bt.YA("builtAt", String("1697673035432"));
+                Bt.YA("buildNumber", null !== (t = "238541") ? t : "");
+                Bt.YA("builtAt", String("1697673794713"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) Bt.YA(r, e[r]);
@@ -38255,6 +38255,7 @@ _.jH)(t)}.\nUrl: ${I(t)}`);
                 t.TERMS_MAY_2020 = "/archive/terms/may-2020";
                 t.PRIVACY_JUNE_2020 = "/archive/privacy/june-2020";
                 t.GUIDELINES_MAY_2020 = "/archive/guidelines/may-2020";
+                t.FALL_RELEASE_2023 = "/fallrelease";
                 t.REFRESH_XBOX_OFFER = "/new/discord-xbox-offer-2019";
                 t.REFRESH_WHY_DISCORD = "/why-discord-is-different";
                 t.WHY_DISCORD = "/why-discord";
