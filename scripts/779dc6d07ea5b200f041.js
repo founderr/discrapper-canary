@@ -9,7 +9,7 @@
         432301: (e, n, t) => {
             "use strict";
             t.d(n, {
-                Z: () => C,
+                Z: () => x,
                 m: () => w
             });
             var r = t(785893),
@@ -111,7 +111,7 @@
                     throw new TypeError("Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
                 }()
             }
-            var w, I, x = function(e, n) {
+            var w, I, A = function(e, n) {
                 var t, r, i, a, o = {
                     label: 0,
                     sent: function() {
@@ -198,8 +198,8 @@
                 e[e.WUMPUS = 0] = "WUMPUS";
                 e[e.PHIBI = 1] = "PHIBI"
             }(w || (w = {}));
-            var A = (S(I = {}, w.WUMPUS, v().activityCharacterWumpus), S(I, w.PHIBI, v().activityCharacterPhibi), I);
-            const C = i.memo((function(e) {
+            var C = (S(I = {}, w.WUMPUS, v().activityCharacterWumpus), S(I, w.PHIBI, v().activityCharacterPhibi), I);
+            const x = i.memo((function(e) {
                 var n = e.activityName,
                     t = e.activityCharacter,
                     a = void 0 === t ? w.WUMPUS : t,
@@ -220,12 +220,12 @@
                         }
                     })), 2),
                     I = S[0],
-                    C = S[1],
-                    E = i.useRef({
+                    x = S[1],
+                    T = i.useRef({
                         seconds: b,
                         jitter: P((function() {
                             var e;
-                            return x(this, (function(n) {
+                            return A(this, (function(n) {
                                 switch (n.label) {
                                     case 0:
                                         0;
@@ -233,8 +233,8 @@
                                             if (s.Z.useReducedMotion) return 0;
                                             e -= 5399;
                                             return Math.min(10, e / 300 * 10)
-                                        }(E.current.seconds);
-                                        C({
+                                        }(T.current.seconds);
+                                        x({
                                             rotate: "-".concat(e, "deg")
                                         });
                                         return [4, new Promise((function(e) {
@@ -242,7 +242,7 @@
                                         }))];
                                     case 1:
                                         n.sent();
-                                        C({
+                                        x({
                                             rotate: "".concat(e, "deg")
                                         });
                                         return [4, new Promise((function(e) {
@@ -258,12 +258,12 @@
                         }))
                     });
                 i.useEffect((function() {
-                    E.current.seconds = b
+                    T.current.seconds = b
                 }));
                 i.useEffect((function() {
                     var e = setInterval((function() {
                         g((function(e) {
-                            5399 === e && E.current.jitter();
+                            5399 === e && T.current.jitter();
                             return ++e
                         }))
                     }), 1e3);
@@ -271,7 +271,7 @@
                         return clearInterval(e)
                     }
                 }), []);
-                var T = a === w.WUMPUS ? y() : p();
+                var E = a === w.WUMPUS ? y() : p();
                 return (0, r.jsxs)(c.Z, {
                     lastSection: !0,
                     "aria-hidden": !0,
@@ -282,10 +282,10 @@
                     }), (0, r.jsxs)("div", {
                         className: v().fakeActivityLayout,
                         children: [(0, r.jsx)("div", {
-                            className: o()(v().fakeActivityIcon, A[a]),
+                            className: o()(v().fakeActivityIcon, C[a]),
                             children: (0, r.jsx)(l.animated.img, {
                                 className: v().fakeActivityPencil,
-                                src: T,
+                                src: E,
                                 style: I
                             })
                         }), (0, r.jsxs)("div", {
@@ -344,16 +344,16 @@
                 j = t(265022),
                 w = t(183490),
                 I = t(849699),
-                x = t(74188),
-                A = t(485552),
-                C = t(906615),
-                E = t(550773),
-                T = t(89303),
+                A = t(74188),
+                C = t(485552),
+                x = t(906615),
+                T = t(550773),
+                E = t(89303),
                 N = t(945123),
                 U = t(760028),
                 O = t(184308),
-                Z = t(169844),
-                k = t(968449),
+                k = t(169844),
+                Z = t(968449),
                 M = t(21372),
                 B = t(491260),
                 R = t(793461),
@@ -573,14 +573,14 @@
                     }
                 },
                 ue = G.ZP.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar,
-                se = (0, x.zW)({
+                se = (0, A.zW)({
                     premiumUserWithBanner: X().avatarUploaderPremium,
                     premiumUserWithoutBanner: X().avatarUploaderPremiumNoBanner,
                     default: X().avatarUploaderNormal
                 });
 
             function ce(e) {
-                var n, a, x, G = e.user,
+                var n, a, A, G = e.user,
                     Q = e.guild,
                     ee = e.canUsePremiumCustomization,
                     ne = e.onUpsellClick,
@@ -599,17 +599,17 @@
                     je = e.activityName,
                     we = e.activityCharacter,
                     Ie = e.isTryItOutFlow,
-                    xe = void 0 !== Ie && Ie,
-                    Ae = e.disabledInputs,
-                    Ce = void 0 !== Ae && Ae,
-                    Ee = e.hideExampleButton,
-                    Te = void 0 !== Ee && Ee,
+                    Ae = void 0 !== Ie && Ie,
+                    Ce = e.disabledInputs,
+                    xe = void 0 !== Ce && Ce,
+                    Te = e.hideExampleButton,
+                    Ee = void 0 !== Te && Te,
                     Ne = e.hideFakeActivity,
                     Ue = void 0 !== Ne && Ne,
                     Oe = e.hideBioSection,
-                    Ze = void 0 !== Oe && Oe,
-                    ke = e.forProfileEffectModal,
-                    Me = void 0 !== ke && ke,
+                    ke = void 0 !== Oe && Oe,
+                    Ze = e.forProfileEffectModal,
+                    Me = void 0 !== Ze && Ze,
                     Be = e.pendingProfileEffectID,
                     Re = e.bodyClassName,
                     _e = function() {
@@ -637,8 +637,8 @@
                     Le = oe(i.useState(!1), 2),
                     De = Le[0],
                     We = Le[1],
-                    Fe = k.QK.getSetting(),
-                    Ge = (0, Z.Z)({
+                    Fe = Z.QK.getSetting(),
+                    Ge = (0, k.Z)({
                         user: G,
                         guildId: null == Q ? void 0 : Q.id,
                         avatarDecorationOverride: ye,
@@ -671,7 +671,7 @@
                     ln = null == $e ? void 0 : $e.getPreviewBanner(ve, on),
                     un = null != ln,
                     sn = null != (null == $e ? void 0 : $e.profileEffectID),
-                    cn = null !== (x = (0, V.gh)(be, null == Je ? void 0 : Je.nick)) && void 0 !== x ? x : (0, V.zJ)(ge, F.ZP.getName(G)),
+                    cn = null !== (A = (0, V.gh)(be, null == Je ? void 0 : Je.nick)) && void 0 !== A ? A : (0, V.zJ)(ge, F.ZP.getName(G)),
                     fn = oe((0, u.Wu)([B.Z], (function() {
                         return [B.Z.findActivity(G.id, (function(e) {
                             return e.type === $.IIU.CUSTOM_STATUS
@@ -771,19 +771,17 @@
                         }
                     }
                 }), [$e, Fe]);
-                var Sn, jn, wn, In, xn, An = null == Q,
-                    Cn = null == $e ? void 0 : $e.profileEffectID;
-                return (0, r.jsxs)(A.Z, {
+                var Sn, jn, wn, In, An, Cn = null == Q,
+                    xn = null == $e ? void 0 : $e.profileEffectID;
+                return (0, r.jsxs)(C.Z, {
                     forceShowPremium: ee,
                     user: G,
                     guildId: null == Q ? void 0 : Q.id,
                     profileType: Y.y0.POPOUT,
                     pendingThemeColors: Pe,
                     className: Me ? pn ? X().profileEffectsModalCustomizationPreviewWithTheme : X().profileEffectsModalCustomizationPreviewWithoutTheme : pn ? X().profileCustomizationPreviewWithTheme : X().profileCustomizationPreviewWithoutTheme,
-                    children: [null != Be ? (0, r.jsx)(S.Z, {
-                        profileEffectID: Be
-                    }) : null !== Be && null != Cn && (0, r.jsx)(S.Z, {
-                        profileEffectID: Cn
+                    children: [(0, r.jsx)(S.Z, {
+                        profileEffectID: void 0 !== Be ? Be : xn
                     }), (0, r.jsxs)(c.HeadingLevel, {
                         children: [(0, r.jsx)(I.Z, {
                             profileType: Y.y0.POPOUT,
@@ -802,7 +800,7 @@
                                 children: [(0, r.jsx)(P.Z, {
                                     className: X().bannerUploader,
                                     showRemoveButton: !1,
-                                    disabled: !ee || Ce,
+                                    disabled: !ee || xe,
                                     image: ln,
                                     makeURL: function() {
                                         return ln
@@ -814,7 +812,7 @@
                                     imageClassName: o()(un ? X().bannerUploaderInnerSquare : X().bannerUploaderInnerSquareEmpty),
                                     hint: J.Z.Messages.CHANGE_BANNER,
                                     onOpenImageSelectModal: function() {
-                                        return (0, V.$r)(K.pC.BANNER, null == Je ? void 0 : Je.guildId, xe, void 0)
+                                        return (0, V.$r)(K.pC.BANNER, null == Je ? void 0 : Je.guildId, Ae, void 0)
                                     },
                                     hideSize: !0,
                                     maxFileSizeBytes: q.B,
@@ -827,7 +825,7 @@
                                 style: {
                                     backgroundColor: rn
                                 },
-                                children: Ce ? null : (0, r.jsx)(c.Clickable, {
+                                children: xe ? null : (0, r.jsx)(c.Clickable, {
                                     onClick: function() {
                                         return null == ne ? void 0 : ne({
                                             object: $.qAy.EDIT_PROFILE_BANNER
@@ -841,16 +839,17 @@
                                     })
                                 })
                             })
-                        }), An ? (In = function() {
-                            return (0, V.$r)(K.pC.AVATAR, null == Je ? void 0 : Je.guildId, xe)
-                        }, xn = function() {
+                        }), Cn ? (In = function() {
+                            return (0,
+                                V.$r)(K.pC.AVATAR, null == Je ? void 0 : Je.guildId, Ae)
+                        }, An = function() {
                             return (0, y.ps)({
                                 analyticsLocations: Pn,
-                                isTryItOutFlow: xe
+                                isTryItOutFlow: Ae
                             })
                         }, (0, r.jsxs)(c.Clickable, ae(ie({}, qe), {
-                            "aria-disabled": Ce,
-                            onClick: Ce ? void 0 : function(e) {
+                            "aria-disabled": xe,
+                            onClick: xe ? void 0 : function(e) {
                                 (0, f.jW)(e, te((function() {
                                     var e, n;
                                     return le(this, (function(i) {
@@ -862,7 +861,7 @@
                                                 return [2, function() {
                                                     return (0, r.jsx)(n, {
                                                         changeAvatarAction: In,
-                                                        changeDecorationAction: xn
+                                                        changeDecorationAction: An
                                                     })
                                                 }]
                                         }
@@ -873,14 +872,14 @@
                                 isPremium: ee,
                                 hasBanner: un,
                                 hasProfileEffect: sn
-                            }), re({}, X().defaultCursor, Ce)),
+                            }), re({}, X().defaultCursor, xe)),
                             children: [(0, r.jsx)(ue, {
                                 className: X().avatarUploaderInner,
                                 src: Ve,
                                 avatarDecoration: He,
                                 size: c.AvatarSizes.SIZE_80,
                                 "aria-label": G.username
-                            }), Ce ? null : (0, r.jsx)("div", {
+                            }), xe ? null : (0, r.jsx)("div", {
                                 className: X().hoverIconWrapper,
                                 children: (0, r.jsx)(L.Z, {
                                     className: X().hoverIcon,
@@ -894,7 +893,7 @@
                                 hasProfileEffect: sn
                             }),
                             children: [(0, r.jsx)(P.Z, {
-                                disabled: Ce,
+                                disabled: xe,
                                 ref: ze,
                                 showIcon: null == He,
                                 hint: jn ? J.Z.Messages.UNLOCK_GUILD_MEMBER_AVATAR : J.Z.Messages.CHANGE_AVATAR,
@@ -908,7 +907,7 @@
                                 maxFileSizeBytes: q.B,
                                 onFileSizeError: V.Wf,
                                 onOpenImageSelectModal: function() {
-                                    return (0, V.$r)(K.pC.AVATAR, null == Je ? void 0 : Je.guildId, xe, void 0)
+                                    return (0, V.$r)(K.pC.AVATAR, null == Je ? void 0 : Je.guildId, Ae, void 0)
                                 }
                             }), null != He && (0, r.jsx)("img", {
                                 className: X().avatarDecoration,
@@ -924,28 +923,27 @@
                                 })
                             },
                             children: wn
-                        }) : wn), (0, r.jsx)(E.Cb, {
+                        }) : wn), (0, r.jsx)(T.Cb, {
                             user: G,
                             guildId: null == Q ? void 0 : Q.id,
-                            isTryItOutFlow: xe,
+                            isTryItOutFlow: Ae,
                             forProfileEffectModal: Me
-                        }), (Sn = null == $e ? void 0 : $e.getPreviewBio(me), (0, r.jsxs)(A.Z.Inner, {
+                        }), (Sn = null == $e ? void 0 : $e.getPreviewBio(me), (0, r.jsxs)(C.Z.Inner, {
                             className: o()(X().body, Re),
                             children: [(0, r.jsx)(O.Z, {
-                                isTryItOut: xe,
+                                isTryItOut: Ae,
                                 user: G,
                                 nickname: null != cn ? cn : G.username,
                                 pronouns: null != pe ? pe : null == $e ? void 0 : $e.pronouns,
                                 usernameIcon: function() {
-                                    if (null != Je && null !== he && (null != Je.avatar || null != he)) return (0,
-                                        r.jsx)(T.Z, {
+                                    if (null != Je && null !== he && (null != Je.avatar || null != he)) return (0, r.jsx)(E.Z, {
                                         user: G,
                                         nickname: cn
                                     })
                                 }()
                             }), !Me && (0, r.jsx)(U.Z, {
                                 customStatusActivity: dn
-                            }), (0, r.jsx)(C.Z, {}), !Ze && (0, r.jsx)(N.Z, {
+                            }), (0, r.jsx)(x.Z, {}), !ke && (0, r.jsx)(N.Z, {
                                 isUsingGuildBio: null == Sn ? void 0 : Sn.isUsingGuildValue,
                                 guild: Q,
                                 bio: null == Sn ? void 0 : Sn.value,
@@ -955,7 +953,7 @@
                             }), !Ue && (0, r.jsx)(H.Z, {
                                 activityName: je,
                                 activityCharacter: we,
-                                showExampleButton: null == Q && !Te
+                                showExampleButton: null == Q && !Ee
                             })]
                         }))]
                     })]
