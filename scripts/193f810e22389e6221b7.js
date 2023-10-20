@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    [77230], {
+    [94298], {
         811770: (e, r) => {
             "use strict";
             r.__esModule = !0;
@@ -4268,7 +4268,7 @@
                 }))
             }
         },
-        400111: (e, r, t) => {
+        141665: (e, r, t) => {
             "use strict";
             t.d(r, {
                 J: () => c
@@ -5147,6 +5147,39 @@
                         figma: {
                             ignore: !0
                         }
+                    }
+                }
+            }, {
+                "polls-victor-border": {
+                    name: "text-warning"
+                },
+                "polls-victor-fill": {
+                    dark: "yellow.200",
+                    light: "yellow.200"
+                },
+                "polls-victor-label": {
+                    dark: "primary.600",
+                    light: "primary.600"
+                },
+                "polls-voted-border": {
+                    name: "text-positive"
+                },
+                "polls-voted-fill": {
+                    dark: "green.160",
+                    light: "green.160"
+                },
+                "polls-voted-label": {
+                    dark: "primary.600",
+                    light: "primary.600"
+                },
+                "polls-image-normal-border": {
+                    dark: {
+                        color: "black.430",
+                        opacity: .9
+                    },
+                    light: {
+                        color: "black.430",
+                        opacity: .9
                     }
                 }
             }, {
