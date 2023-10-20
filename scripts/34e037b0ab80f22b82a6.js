@@ -6179,7 +6179,8 @@
                 smallLeftSparkle: "smallLeftSparkle-3AL0_n",
                 largeRightSparkle: "largeRightSparkle-3neVXZ",
                 smallRightSparkle: "smallRightSparkle-3WyLPd",
-                subscribeButton: "subscribeButton-3rUkdg"
+                subscribeButton: "subscribeButton-3rUkdg",
+                heroDescriptionWithSidebar: "heroDescriptionWithSidebar-2aGzXk"
             }
         },
         315758: e => {
