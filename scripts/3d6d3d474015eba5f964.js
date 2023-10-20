@@ -11961,7 +11961,7 @@
                 }) : e[t] = n;
                 return e
             }
-            var Os = Object.freeze((Ts(hs = {}, Dr.KQ.ProfileCustomizationScrollPositions.TRY_IT_OUT, oe.oAB.PROFILE_CUSTOMIZATION), Ts(hs, Dr.KQ.AccessibilityScrollPositions.REDUCED_MOTION, oe.oAB.ACCESSIBILITY), Ts(hs, Dr.KQ.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME, oe.oAB.ACCESSIBILITY), Ts(hs, Dr.KQ.AccessibilityScrollPositions.LEGACY_CHAT_INPUT, oe.oAB.ACCESSIBILITY), hs));
+            var Os = Object.freeze((Ts(hs = {}, Dr.KQ.ProfileCustomizationScrollPositions.TRY_IT_OUT, oe.oAB.PROFILE_CUSTOMIZATION), Ts(hs, Dr.KQ.AccessibilityScrollPositions.REDUCED_MOTION, oe.oAB.ACCESSIBILITY), Ts(hs, Dr.KQ.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME, oe.oAB.ACCESSIBILITY), hs));
             const Is = function(e, t) {
                 var n = (0, r.e7)([Ye.Z], (function() {
                         return Ye.Z.useReducedMotion
@@ -13894,7 +13894,7 @@
 
             function wl() {
                 var e, t, n, r, o = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    i = null === (e = "e9f5e972a74fb56a0e9a95babdfc69b1a1c5c178") ? void 0 : e.substring(0, 7),
+                    i = null === (e = "f1fd9eefac2659c2c7043f05ddad4dd538b80f4c") ? void 0 : e.substring(0, 7),
                     s = null === fe.Z || void 0 === fe.Z ? void 0 : fe.Z.remoteApp.getVersion(),
                     a = null === (t = null === fe.Z || void 0 === fe.Z ? void 0 : fe.Z.remoteApp.getBuildNumber) || void 0 === t ? void 0 : t(),
                     l = null === (n = null === fe.Z || void 0 === fe.Z ? void 0 : fe.Z.remoteApp.getAppArch) || void 0 === n ? void 0 : n(),
@@ -13907,7 +13907,7 @@
                         className: Zl().line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [o, " ", "239231", " ", (0, p.jsxs)("span", {
+                        children: [o, " ", "239230", " ", (0, p.jsxs)("span", {
                             className: Zl().versionHash,
                             children: ["(", i, ")"]
                         })]
@@ -16076,11 +16076,8 @@
                 var e = (0, r.e7)([Ye.Z], (function() {
                         return Ye.Z.isSubmitButtonEnabled
                     })),
-                    t = Gs.dN.useSetting(),
-                    n = m.useRef(null);
-                Is(n, Dr.rP.LEGACY_CHAT_INPUT);
+                    t = Gs.dN.useSetting();
                 return (0, p.jsxs)(S.FormItem, {
-                    ref: n,
                     children: [(0, p.jsx)(S.FormTitle, {
                         className: le().marginBottom8,
                         children: P.Z.Messages.FORM_LABEL_ACCESSIBILITY_CHAT_INPUT
@@ -16109,7 +16106,8 @@
 
             function od() {
                 var e = Gs.OW.useSetting(),
-                    t = (0, r.e7)([Cu.Z], (function() {
+                    t = (0,
+                        r.e7)([Cu.Z], (function() {
                         return Cu.Z.speechRate
                     })),
                     n = ku(m.useState(!1), 2),
@@ -16270,8 +16268,8 @@
                         return function(i) {
                             if (n) throw new TypeError("Generator is already executing.");
                             for (; s;) try {
-                                if (n = 1,
-                                    r && (o = 2 & i[0] ? r.return : i[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, i[1])).done) return o;
+                                if (n = 1, r && (o = 2 & i[0] ? r.return : i[0] ? r.throw || ((o = r.return) && o.call(r),
+                                        0) : r.next) && !(o = o.call(r, i[1])).done) return o;
                                 (r = 0, o) && (i = [2 & i[0], o.value]);
                                 switch (i[0]) {
                                     case 0:
@@ -16343,7 +16341,8 @@
                             case 1:
                                 t = o.sent(), r = t.default;
                                 return [2, function(t) {
-                                    return (0, p.jsx)(r, dd({
+                                    return (0,
+                                        p.jsx)(r, dd({
                                         claimRequired: e
                                     }, t))
                                 }]
@@ -16799,8 +16798,7 @@
                     children: [(0, p.jsxs)(S.ModalHeader, {
                         className: qd().header,
                         separator: !1,
-                        children: [(0,
-                            p.jsxs)(S.Heading, {
+                        children: [(0, p.jsxs)(S.Heading, {
                             id: a,
                             variant: "heading-lg/semibold",
                             children: [_ === zd.INIT && P.Z.Messages.TWO_FA_WEBAUTHN_REGISTER, _ === zd.REGISTER && P.Z.Messages.TWO_FA_WEBAUTHN_INTERACT, _ === zd.NAME && P.Z.Messages.TWO_FA_WEBAUTHN_NAME]
@@ -16955,8 +16953,7 @@
                                 }))
                             })))
                         }
-                    }), (0,
-                        p.jsx)(S.MenuItem, {
+                    }), (0, p.jsx)(S.MenuItem, {
                         id: "webauthn-delete-credential-".concat(r.id),
                         label: P.Z.Messages.TWO_FA_WEBAUTHN_DELETE_CREDENTIAL,
                         color: "danger",
@@ -17003,8 +17000,7 @@
                                 className: qd().credentialItem,
                                 onContextMenu: function(t) {
                                     (0, vd.vq)(t, (function(t) {
-                                        return (0,
-                                            p.jsx)(af, nf(tf({}, t), {
+                                        return (0, p.jsx)(af, nf(tf({}, t), {
                                             credential: e
                                         }))
                                     }))
@@ -17229,8 +17225,7 @@
                                         s.trys.pop();
                                         continue;
                                     default:
-                                        if (!(o = s.trys,
-                                                o = o.length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
+                                        if (!(o = s.trys, o = o.length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
                                             s = 0;
                                             continue
                                         }
