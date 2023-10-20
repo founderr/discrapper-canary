@@ -15,24 +15,24 @@
         95189: (e, r, t) => {
             "use strict";
             t.d(r, {
-                Z: () => y
+                Z: () => M
             });
             var n = t(785893),
                 a = t(667294),
                 o = t(294184),
-                i = t.n(o),
-                s = t(70418),
+                s = t.n(o),
+                i = t(70418),
                 l = t(515169),
                 c = t(386364),
                 u = t(802139),
                 d = t(443812),
                 _ = t(531441),
                 O = t(652591),
-                f = t(575945),
-                p = t(74535);
+                p = t(575945),
+                f = t(74535);
             const N = function(e) {
                 var r = e.className,
-                    t = (0, p.ZP)();
+                    t = (0, f.ZP)();
                 return (0, n.jsxs)("svg", {
                     width: "700",
                     height: "613",
@@ -40,8 +40,8 @@
                     className: r,
                     xmlns: "http://www.w3.org/2000/svg",
                     children: [(0, n.jsx)("path", {
-                        fill: (0, f.wj)(t) ? "url(#paint0_linear_127_14184)" : "white",
-                        opacity: (0, f.wj)(t) ? "0.5" : "1",
+                        fill: (0, p.wj)(t) ? "url(#paint0_linear_127_14184)" : "white",
+                        opacity: (0, p.wj)(t) ? "0.5" : "1",
                         d: "M351 41C185.4 -31.8 48 10.6667 0 41V605C0 609.418 3.58174 613 8.00002 613H692C696.418 613 700 609.418 700 605V41C653.333 71.3333 516.6 113.8 351 41Z"
                     }), (0, n.jsx)("defs", {
                         children: (0, n.jsxs)("linearGradient", {
@@ -97,32 +97,32 @@
                     var r = e.tagText,
                         t = e.className;
                     return (0, n.jsx)(_.IG, {
-                        className: i()(h().tag, t),
+                        className: s()(h().tag, t),
                         text: r
                     })
                 },
-                S = function(e) {
+                y = function(e) {
                     var r = e.header,
                         t = e.subHeader,
                         a = e.imageSrc,
                         o = e.tagText,
                         l = e.wideStyle;
                     return (0, n.jsxs)("div", {
-                        className: i()(h().featureCard, T({}, h().wideStyle, l)),
+                        className: s()(h().featureCard, T({}, h().wideStyle, l)),
                         children: [null != o ? (0, n.jsx)(C, {
                             tagText: o,
                             className: h().featureCardTag
                         }) : null, (0, n.jsx)("img", {
                             alt: "",
-                            className: i()(h().featureCardImg, T({}, h().wideStyle, l)),
+                            className: s()(h().featureCardImg, T({}, h().wideStyle, l)),
                             src: a
                         }), (0, n.jsxs)("div", {
                             className: h().featureCardTextGroup,
-                            children: [(0, n.jsx)(s.Heading, {
+                            children: [(0, n.jsx)(i.Heading, {
                                 variant: "heading-lg/extrabold",
                                 className: h().featureCardTextHeader,
                                 children: r
-                            }), (0, n.jsx)(s.Text, {
+                            }), (0, n.jsx)(i.Text, {
                                 variant: "text-sm/normal",
                                 children: t
                             })]
@@ -130,51 +130,51 @@
                     })
                 };
 
-            function y(e) {
+            function M(e) {
                 var r = e.className,
                     t = e.renderModalProps,
                     o = e.videoHref,
                     _ = e.video,
-                    f = e.videoThumbnail,
-                    p = e.modalDismissibleContent,
+                    p = e.videoThumbnail,
+                    f = e.modalDismissibleContent,
                     E = e.header,
                     C = e.subHeader,
-                    y = e.subHeaderExtra,
-                    M = e.featureCards,
-                    P = e.changeLogId,
+                    M = e.subHeaderExtra,
+                    P = e.featureCards,
+                    S = e.changeLogId,
                     j = e.button,
                     v = t.onClose,
                     A = t.transitionState,
                     D = (0, d.Dt)(),
-                    x = M.length % 2 == 0;
+                    x = P.length % 2 == 0;
                 a.useEffect((function() {
-                    (0, l.kk)(p);
+                    (0, l.kk)(f);
                     var e = Date.now();
                     O.default.track(b.rMx.CHANGE_LOG_OPENED, {
-                        change_log_id: P
+                        change_log_id: S
                     });
                     return function() {
                         O.default.track(b.rMx.CHANGE_LOG_CLOSED, {
-                            change_log_id: P,
+                            change_log_id: S,
                             seconds_open: Math.round((Date.now() - e) / 1e3)
                         });
-                        (0, l.EW)(p, {
+                        (0, l.EW)(f, {
                             dismissAction: g.L.DISMISS
                         })
                     }
-                }), [p, P]);
-                return (0, n.jsxs)(s.ModalRoot, {
-                    className: i()(h().root, r),
+                }), [f, S]);
+                return (0, n.jsxs)(i.ModalRoot, {
+                    className: s()(h().root, r),
                     transitionState: A,
                     "aria-labelledby": D,
-                    children: [(0, n.jsx)(s.ModalCloseButton, {
+                    children: [(0, n.jsx)(i.ModalCloseButton, {
                         className: h().closeButton,
                         onClick: v
                     }), (0, n.jsx)(N, {
                         className: h().splash
-                    }), (0, n.jsxs)(s.ModalContent, {
+                    }), (0, n.jsxs)(i.ModalContent, {
                         className: h().content,
-                        children: [(0, n.jsx)(s.Heading, {
+                        children: [(0, n.jsx)(i.Heading, {
                             variant: "display-md",
                             className: h().headerText,
                             children: E
@@ -182,7 +182,7 @@
                             className: h().video,
                             allowFullScreen: !1,
                             href: o,
-                            thumbnail: f,
+                            thumbnail: p,
                             video: _,
                             maxWidth: _.width,
                             maxHeight: _.height,
@@ -191,17 +191,17 @@
                             renderLinkComponent: c.iT,
                             onPlay: function() {
                                 O.default.track(b.rMx.CHANGE_LOG_VIDEO_INTERACTED, {
-                                    change_log_id: P
+                                    change_log_id: S
                                 })
                             }
-                        }), (0, n.jsx)(s.Heading, {
+                        }), (0, n.jsx)(i.Heading, {
                             variant: "heading-lg/extrabold",
                             className: h().bodyText,
                             children: C
-                        }), null == y ? void 0 : y(), (0, n.jsx)("div", {
-                            className: i()(h().featureCardGroup, T({}, h().wideStyle, x)),
-                            children: M.map((function(e, r) {
-                                return (0, n.jsx)(S, m(function(e) {
+                        }), null == M ? void 0 : M(), (0, n.jsx)("div", {
+                            className: s()(h().featureCardGroup, T({}, h().wideStyle, x)),
+                            children: P.map((function(e, r) {
+                                return (0, n.jsx)(y, m(function(e) {
                                     for (var r = 1; r < arguments.length; r++) {
                                         var t = null != arguments[r] ? arguments[r] : {},
                                             n = Object.keys(t);
@@ -231,27 +231,27 @@
             var n = t(785893),
                 a = (t(667294), t(202351)),
                 o = t(418705),
-                i = t(70418),
-                s = t(579581),
+                s = t(70418),
+                i = t(579581),
                 l = t(153686),
                 c = t(19585),
                 u = t(276611),
                 d = t(384411),
                 _ = t(709189),
                 O = t(652591),
-                f = t(348592),
-                p = t(116094),
+                p = t(348592),
+                f = t(116094),
                 N = t(536392),
                 b = t(717035),
                 g = t(203600);
 
             function E(e) {
-                var r = e.defaultString,
+                var r = e.defaultResponse,
                     t = e.onNonSubscriber,
                     n = e.onTier0TrialOffer,
                     o = e.onTier2TrialOffer,
-                    i = e.onTier0TrialPeriod,
-                    s = e.onTier2TrialPeriod,
+                    s = e.onTier0TrialPeriod,
+                    i = e.onTier2TrialPeriod,
                     l = e.onNonTier2Subscriber,
                     c = e.onTier2Subscriber,
                     u = e.onCustomCriteria,
@@ -259,24 +259,24 @@
                     _ = (0, a.e7)([N.Z], (function() {
                         return N.Z.getPremiumTypeSubscription()
                     })),
-                    O = p.ZP.getPremiumTypeFromSubscription(_);
-                return null != u ? u() : null != d && g.nG[d.trial_id].skus.includes(g.Si.TIER_0) ? null != n ? n : r : null != d && g.nG[d.trial_id].skus.includes(g.Si.TIER_2) ? null != o ? o : r : null != _ && null != _.trialId && O === g.p9.TIER_0 ? null != i ? i : r : null != _ && null != _.trialId && O === g.p9.TIER_2 ? null != s ? s : r : null == O ? null != t ? t : r : O === g.p9.TIER_0 || O === g.p9.TIER_1 ? null != l ? l : r : O === g.p9.TIER_2 && null != c ? c : r
+                    O = f.ZP.getPremiumTypeFromSubscription(_);
+                return null != u ? u() : null != d && g.nG[d.trial_id].skus.includes(g.Si.TIER_0) ? null != n ? n : r : null != d && g.nG[d.trial_id].skus.includes(g.Si.TIER_2) ? null != o ? o : r : null != _ && null != _.trialId && O === g.p9.TIER_0 ? null != s ? s : r : null != _ && null != _.trialId && O === g.p9.TIER_2 ? null != i ? i : r : null == O ? null != t ? t : r : O === g.p9.TIER_0 || O === g.p9.TIER_1 ? null != l ? l : r : O === g.p9.TIER_2 && null != c ? c : r
             }
             var h = t(95189),
                 T = t(2590),
                 m = t(473708),
                 C = t(586271),
-                S = t.n(C),
-                y = t(939992),
-                M = t.n(y),
-                P = t(518996),
-                j = t.n(P),
+                y = t.n(C),
+                M = t(939992),
+                P = t.n(M),
+                S = t(518996),
+                j = t.n(S),
                 v = t(252635),
                 A = t.n(v),
                 D = t(497206),
                 x = t.n(D);
 
-            function I(e, r, t) {
+            function R(e, r, t) {
                 r in e ? Object.defineProperty(e, r, {
                     value: t,
                     enumerable: !0,
@@ -286,7 +286,7 @@
                 return e
             }
 
-            function R(e) {
+            function I(e) {
                 for (var r = 1; r < arguments.length; r++) {
                     var t = null != arguments[r] ? arguments[r] : {},
                         n = Object.keys(t);
@@ -294,7 +294,7 @@
                         return Object.getOwnPropertyDescriptor(t, e).enumerable
                     }))));
                     n.forEach((function(r) {
-                        I(e, r, t[r])
+                        R(e, r, t[r])
                     }))
                 }
                 return e
@@ -327,10 +327,10 @@
                         return d.default.locale
                     })),
                     C = N.split("-")[0],
-                    y = "en" === C ? "0" : "1",
-                    P = "zh-CN" === N ? "zh-Hans" : "zh-TW" === N ? "zh-Hant" : C,
+                    M = "en" === C ? "0" : "1",
+                    S = "zh-CN" === N ? "zh-Hans" : "zh-TW" === N ? "zh-Hant" : C,
                     v = {
-                        url: "".concat((0, T.ivE)(H), "?vq=large&rel=0&controls=0&showinfo=0&cc_load_policy=").concat(y, "&cc_lang_pref=").concat(P),
+                        url: "".concat((0, T.ivE)(H), "?vq=large&rel=0&controls=0&showinfo=0&cc_load_policy=").concat(M, "&cc_lang_pref=").concat(S),
                         width: 498,
                         height: 280
                     },
@@ -339,26 +339,41 @@
                         width: 498,
                         height: 280
                     },
-                    I = (0, s.O)().location,
+                    R = (0, i.O)().location,
                     U = (0, c.Z)(l.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL).analyticsLocations,
                     Z = (0,
                         b.N)(),
                     G = null == Z ? void 0 : Z.subscription_trial,
-                    k = (0, p.Rt)({
+                    k = (0, f.Rt)({
                         intervalType: null == G ? void 0 : G.interval,
                         intervalCount: null == G ? void 0 : G.interval_count
                     }),
                     B = E({
-                        defaultString: m.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN,
+                        defaultResponse: m.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN,
                         onTier0TrialOffer: k,
                         onTier2TrialOffer: k,
                         onNonTier2Subscriber: m.Z.Messages.INTERACTION_PREMIUM_UPSELL_CTA
                     }),
                     Q = E({
-                        defaultString: "get_nitro_button",
+                        defaultResponse: "get_nitro_button",
                         onNonTier2Subscriber: "upgrade_plan_button",
                         onTier0TrialOffer: "trial_offer_button",
                         onTier2TrialOffer: "trial_offer_button"
+                    }),
+                    z = E({
+                        defaultResponse: function() {
+                            return (0, u.Z)({
+                                subscriptionTier: g.Si.TIER_2,
+                                analyticsLocations: U,
+                                analyticsObject: w(I({}, R), {
+                                    object: T.qAy.BUTTON_CTA,
+                                    objectType: T.Qqv.TIER_2
+                                }),
+                                onClose: function(e) {
+                                    e && t()
+                                }
+                            })
+                        }
                     });
                 return (0, n.jsx)(h.Z, {
                     renderModalProps: r,
@@ -369,12 +384,12 @@
                     header: m.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_HEADER_NON_SUB,
                     subHeader: m.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_SUB,
                     subHeaderExtra: function() {
-                        return (0, n.jsx)(i.Anchor, {
-                            className: S().termsApplyAnchor,
-                            href: f.Z.getArticleURL(T.BhN.SUMMER_2023_BOGO),
-                            children: (0, n.jsx)(i.Heading, {
+                        return (0, n.jsx)(s.Anchor, {
+                            className: y().termsApplyAnchor,
+                            href: p.Z.getArticleURL(T.BhN.SUMMER_2023_BOGO),
+                            children: (0, n.jsx)(s.Heading, {
                                 variant: "heading-md/normal",
-                                className: S().termsApplyBodyText,
+                                className: y().termsApplyBodyText,
                                 children: m.Z.Messages.BOGO_TERMS_APPLY
                             })
                         })
@@ -382,7 +397,7 @@
                     featureCards: [{
                         header: m.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_HEADER,
                         subHeader: m.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_DESCRIPTION,
-                        imageSrc: M()
+                        imageSrc: P()
                     }, {
                         header: m.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_HEADER,
                         subHeader: m.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_DESCRIPTION,
@@ -400,10 +415,10 @@
                     button: function() {
                         var e = Date.now();
                         return (0, n.jsxs)(_.C, {
-                            className: S().buttonWide,
-                            innerClassName: S().innerButton,
-                            color: i.Button.Colors.GREEN,
-                            size: i.Button.Sizes.SMALL,
+                            className: y().buttonWide,
+                            innerClassName: y().innerButton,
+                            color: s.Button.Colors.GREEN,
+                            size: s.Button.Sizes.SMALL,
                             onClick: function() {
                                 O.default.track(T.rMx.CHANGE_LOG_CTA_CLICKED, {
                                     change_log_id: L,
@@ -411,21 +426,11 @@
                                     seconds_open: Math.round((Date.now() - e) / 1e3),
                                     target: "q4_drop_payment_modal"
                                 });
-                                (0, u.Z)({
-                                    subscriptionTier: g.Si.TIER_2,
-                                    analyticsLocations: U,
-                                    analyticsObject: w(R({}, I), {
-                                        object: T.qAy.BUTTON_CTA,
-                                        objectType: T.Qqv.TIER_2
-                                    }),
-                                    onClose: function(e) {
-                                        e && t()
-                                    }
-                                })
+                                z()
                             },
                             children: [(0, n.jsx)("img", {
                                 alt: "",
-                                className: S().nitroIconSubHeader,
+                                className: y().nitroIconSubHeader,
                                 src: x()
                             }), B]
                         })
