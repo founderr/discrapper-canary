@@ -379,7 +379,7 @@
                 },
                 getLoadingTips: function() {
                     var e = Date.now();
-                    if (!(e < c || e > u)) return "en-US" === a.Z.getLocale() || e >= 16978212e5 ? [a.Z.Messages.HALLOWEEN_LOADING_TEXT_1, a.Z.Messages.HALLOWEEN_LOADING_TEXT_2, a.Z.Messages.HALLOWEEN_LOADING_TEXT_3, a.Z.Messages.HALLOWEEN_LOADING_TEXT_4, a.Z.Messages.HALLOWEEN_LOADING_TEXT_5, a.Z.Messages.HALLOWEEN_LOADING_TEXT_6, a.Z.Messages.HALLOWEEN_LOADING_TEXT_7, a.Z.Messages.HALLOWEEN_LOADING_TEXT_8, a.Z.Messages.HALLOWEEN_LOADING_TEXT_9] : void 0
+                    if (!(e < c || e > u)) return "en-US" === a.Z.getLocale() || e >= 16982532e5 ? [a.Z.Messages.HALLOWEEN_LOADING_TEXT_1, a.Z.Messages.HALLOWEEN_LOADING_TEXT_2, a.Z.Messages.HALLOWEEN_LOADING_TEXT_3, a.Z.Messages.HALLOWEEN_LOADING_TEXT_4, a.Z.Messages.HALLOWEEN_LOADING_TEXT_5, a.Z.Messages.HALLOWEEN_LOADING_TEXT_6, a.Z.Messages.HALLOWEEN_LOADING_TEXT_7, a.Z.Messages.HALLOWEEN_LOADING_TEXT_8, a.Z.Messages.HALLOWEEN_LOADING_TEXT_9] : void 0
                 }
             }
         },
