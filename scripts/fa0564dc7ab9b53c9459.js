@@ -406,7 +406,7 @@
                                 })]
                             }), (0, r.jsxs)("div", {
                                 className: q().buttonsContainer,
-                                children: [y && Y ? re(k.Z.Messages.UNLOCK_WITH_NITRO) : v || y ? null != _ ? (0, r.jsx)(i.Button, {
+                                children: [y && Y && !v ? re(k.Z.Messages.UNLOCK_WITH_NITRO) : v || y ? null != _ ? (0, r.jsx)(i.Button, {
                                     className: q().button,
                                     look: i.Button.Looks.FILLED,
                                     onClick: function() {
@@ -461,7 +461,7 @@
                                         })
                                     },
                                     children: ee ? k.Z.Messages.COLLECTIBLES_BUY_PROFILE_EFFECT : k.Z.Messages.COLLECTIBLES_BUY_DECORATION
-                                }) : re(k.Z.Messages.COLLECTIBLES_NON_PREMIUM_SHOP_CTA), !y || Y || null != _ ? null : (0, r.jsx)(p.Z, {
+                                }) : re(k.Z.Messages.COLLECTIBLES_NON_PREMIUM_SHOP_CTA), !y || Y || null != _ || v ? null : (0, r.jsx)(p.Z, {
                                     subscriptionTier: K.Si.TIER_2,
                                     fullWidth: !0,
                                     color: i.Button.Colors.WHITE,
