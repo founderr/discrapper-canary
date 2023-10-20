@@ -1960,7 +1960,8 @@
                     w = e.guildId,
                     Z = e.referralTrialOfferId,
                     k = e.skuId,
-                    D = (0,
+                    D = e.returnRef,
+                    U = (0,
                         c.Z)().analyticsLocations;
                 a.useEffect((function() {
                     f.Z.isLoadedForPremiumSKUs() || o.Z.wait((function() {
@@ -1972,15 +1973,15 @@
                 }, {
                     autoTrackExposure: !0
                 });
-                var U = (0, h.usePaymentContext)(),
-                    B = U.giftRecipient,
-                    H = U.step,
-                    F = (0, p.a8)(B) && H === y.h8.PLAN_SELECT;
-                null != B && u.$.getCurrentConfig({
+                var B = (0, h.usePaymentContext)(),
+                    H = B.giftRecipient,
+                    F = B.step,
+                    Y = (0, p.a8)(H) && F === y.h8.PLAN_SELECT;
+                null != H && u.$.getCurrentConfig({
                     location: "initialRelease_PremiumPaymentModal"
                 });
                 return (0, n.jsx)(m.PaymentModal, {
-                    analyticsLocations: D,
+                    analyticsLocations: U,
                     analyticsLocation: t,
                     analyticsObject: r,
                     analyticsSourceLocation: i,
@@ -2007,7 +2008,8 @@
                     referralTrialOfferId: Z,
                     skuId: k,
                     shakeWhilePurchasing: !0,
-                    isLargeModal: F
+                    isLargeModal: Y,
+                    returnRef: D
                 })
             }
 

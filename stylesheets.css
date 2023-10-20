@@ -158254,6 +158254,11 @@ html .invoiceCancelRow-3s2UuC {
     z-index: 1
 }
 
+.getPremiumHook-32OWJj {
+    cursor: pointer;
+    text-decoration: underline
+}
+
 .previewContainer-3HzSb7 {
     position: relative;
     display: -webkit-box;
