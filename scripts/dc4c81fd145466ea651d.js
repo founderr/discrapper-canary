@@ -1699,7 +1699,7 @@
                 }
             }))(K)
         },
-        963495: (e, t, n) => {
+        508649: (e, t, n) => {
             "use strict";
             n.r(t);
             n.d(t, {
@@ -49286,9 +49286,17 @@
             });
             var sJ = n(514722),
                 cJ = n(473664),
-                lJ = n(339938),
-                uJ = n(322581),
-                fJ = n(904044),
+                lJ = n(339938);
+            const uJ = function(e, t, n) {
+                return (0, bc.NZ)({
+                    avatarDecoration: {
+                        asset: e
+                    },
+                    size: (0, bk.y9)(t),
+                    canAnimate: n
+                })
+            };
+            var fJ = n(904044),
                 dJ = n.n(fJ),
                 pJ = n(53496),
                 hJ = n.n(pJ),
@@ -49324,7 +49332,8 @@
                     },
                     header: t ? $.Z.Messages.AVATAR_DECORATION_SHOP_UPSELL_NITRO_HEADER : $.Z.Messages.AVATAR_DECORATION_SHOP_UPSELL_HEADER,
                     body: (0, r.jsx)(r.Fragment, {
-                        children: (0, r.jsx)(c.Text, {
+                        children: (0,
+                            r.jsx)(c.Text, {
                             variant: "text-sm/normal",
                             color: "always-white",
                             children: t ? $.Z.Messages.AVATAR_DECORATION_SHOP_UPSELL_NITRO_CONTENT : $.Z.Messages.AVATAR_DECORATION_SHOP_UPSELL_CONTENT
@@ -49340,19 +49349,19 @@
                             children: [(0, r.jsx)(c.Avatar, {
                                 className: dJ().avatar1,
                                 src: hJ(),
-                                avatarDecoration: (0, uJ.Z)("a_1dbc603c181999b9815cb426dfec71a6", _J, n),
+                                avatarDecoration: uJ("a_1dbc603c181999b9815cb426dfec71a6", _J, n),
                                 size: _J,
                                 "aria-hidden": !0
                             }), (0, r.jsx)(c.Avatar, {
                                 className: dJ().avatar2,
                                 src: EJ(),
-                                avatarDecoration: (0, uJ.Z)("a_9b7b74e72efe1bc5a6beddced3da3c0f", _J, n),
+                                avatarDecoration: uJ("a_9b7b74e72efe1bc5a6beddced3da3c0f", _J, n),
                                 size: _J,
                                 "aria-hidden": !0
                             }), (0, r.jsx)(c.Avatar, {
                                 className: dJ().avatar3,
                                 src: mJ(),
-                                avatarDecoration: (0, uJ.Z)("a_db9baf0ba7cf449d2b027c06309dbe8d", _J, n),
+                                avatarDecoration: uJ("a_db9baf0ba7cf449d2b027c06309dbe8d", _J, n),
                                 size: _J,
                                 "aria-hidden": !0
                             })]
@@ -49452,7 +49461,8 @@
             function HJ(e) {
                 var t = e.markAsDismissed,
                     n = e.partnerGame;
-                (0, ZJ.hs)(n, K.nv.POPOUT, K.zs.DROPS_QUEST_ENROLLMENT);
+                (0,
+                    ZJ.hs)(n, K.nv.POPOUT, K.zs.DROPS_QUEST_ENROLLMENT);
                 var o = (0, ZJ.au)(n);
                 if (null == o) return null;
                 var i, a, s = (i = o.drop, a = o.config.streamLengthRequirement, {
@@ -49583,8 +49593,7 @@
                         fullWidth: !0,
                         color: c.Button.Colors.WHITE,
                         children: $.Z.Messages.NOT_NOW
-                    }), (0,
-                        r.jsx)("div", {
+                    }), (0, r.jsx)("div", {
                         className: FJ().pointer
                     })]
                 })
@@ -49683,8 +49692,7 @@
                     autoTrackExposure: !1
                 });
                 var r = null != (null === (t = e.avatarDecoration) || void 0 === t ? void 0 : t.skuId),
-                    o = r0((0,
-                        Rg.B)(r ? [] : [Fn.z$.COLLECTIBLES_STATUS_POPOUT_UPSELL], void 0, !0), 2),
+                    o = r0((0, Rg.B)(r ? [] : [Fn.z$.COLLECTIBLES_STATUS_POPOUT_UPSELL], void 0, !0), 2),
                     i = o[0],
                     a = o[1];
                 return {
@@ -49745,7 +49753,8 @@
                     n = e.onClose,
                     i = e.user,
                     a = o0(i).dismiss,
-                    l = (0, e0.ZP)(),
+                    l = (0,
+                        e0.ZP)(),
                     u = l.categories,
                     f = l.isFetching,
                     d = (0, $J.Z)({
@@ -49808,7 +49817,8 @@
                     style: v,
                     children: [(0, r.jsx)("div", {
                         className: a0().content,
-                        children: (0, r.jsx)(c.HeadingLevel, {
+                        children: (0,
+                            r.jsx)(c.HeadingLevel, {
                             component: (0, r.jsxs)(c.Heading, {
                                 variant: "heading-lg/semibold",
                                 className: a0().title,
@@ -49843,8 +49853,7 @@
 
             function h0(e) {
                 var t = e.avatarDecoration,
-                    n = (0,
-                        s.e7)([z.default], (function() {
+                    n = (0, s.e7)([z.default], (function() {
                         return z.default.getCurrentUser()
                     })),
                     o = (0, mk.Z)({
@@ -49859,7 +49868,8 @@
                     }),
                     u = l.pendingAvatarDecoration,
                     f = l.setPendingAvatarDecoration;
-                return (0, r.jsx)(c.FocusRing, {
+                return (0,
+                    r.jsx)(c.FocusRing, {
                     children: (0, r.jsx)(c.Clickable, l0(c0({}, a), {
                         className: Bt()(a0().item, s0({}, a0().selectedItem, (null == u ? void 0 : u.skuId) === t.skuId)),
                         onClick: function() {
@@ -50209,8 +50219,7 @@
                                         a.trys.pop();
                                         continue;
                                     default:
-                                        if (!(o = a.trys,
-                                                o = o.length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
+                                        if (!(o = a.trys, o = o.length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
                                             a = 0;
                                             continue
                                         }
@@ -50286,8 +50295,7 @@
                     f = e.onSelect,
                     d = e.closePopout,
                     p = (0, hV.O)(),
-                    h = (0,
-                        RI.Z)(Kc.Z.ACCOUNT_PROFILE_POPOUT).AnalyticsLocationProvider,
+                    h = (0, RI.Z)(Kc.Z.ACCOUNT_PROFILE_POPOUT).AnalyticsLocationProvider,
                     y = (0, Ok.Z)(t.id, a),
                     E = U0((0, s.Wu)([xs.Z], (function() {
                         var e, n = t.id;
@@ -50493,7 +50501,8 @@
                                             },
                                             children: Yo.tq ? void 0 : _
                                         }, "status-picker"), A]
-                                    }), (0, r.jsx)(c.MenuGroup, {
+                                    }), (0,
+                                        r.jsx)(c.MenuGroup, {
                                         children: (0, r.jsx)(c.MenuItem, {
                                             id: "switch-account",
                                             focusedClassName: w0().menuItemFocused,
@@ -50838,7 +50847,8 @@
                     n = (0, ME.ZP)([y.Z], (function() {
                         return y.Z.useReducedMotion
                     })),
-                    i = (0, RI.Z)(Kc.Z.PROFILE_EFFECT_SHOP_COACHMARK).analyticsLocations,
+                    i = (0,
+                        RI.Z)(Kc.Z.PROFILE_EFFECT_SHOP_COACHMARK).analyticsLocations,
                     a = b1(o.useState(!1), 2),
                     s = a[0],
                     l = a[1],
@@ -50900,8 +50910,7 @@
                             className: l1().imageLoader,
                             "aria-hidden": !0,
                             role: "presentation",
-                            children: [(0,
-                                r.jsx)("img", {
+                            children: [(0, r.jsx)("img", {
                                 src: p1(),
                                 alt: " ",
                                 onLoad: function() {
@@ -51555,7 +51564,8 @@
                                     case 1:
                                         e = o.sent(), t = e.default;
                                         return [2, function() {
-                                            return (0, r.jsx)(t, {
+                                            return (0,
+                                                r.jsx)(t, {
                                                 onClose: oO.Zy,
                                                 renderOutputDevices: !0,
                                                 renderOutputVolume: !0
@@ -51593,8 +51603,7 @@
                             r = n.shouldShowNametagTooltip,
                             o = n.copiedStreak;
                         if (null != t) {
-                            (0,
-                                bv.JG)(xh.ZP.getUserTag(t, {
+                            (0, bv.JG)(xh.ZP.getUserTag(t, {
                                 decoration: "never",
                                 identifiable: "always"
                             }));
@@ -51775,7 +51784,8 @@
                             var n = t.onClick,
                                 o = t.onMouseEnter,
                                 a = h2(t, ["onClick", "onMouseEnter"]);
-                            return (0, r.jsx)(c.Clickable, p2(d2({}, a), {
+                            return (0,
+                                r.jsx)(c.Clickable, p2(d2({}, a), {
                                 onMouseEnter: function() {
                                     if (i) {
                                         e.copiedTimeout.stop();
@@ -51824,7 +51834,8 @@
                                 var d;
                                 return (0, r.jsxs)(c.Clickable, p2(d2({}, t), {
                                     "aria-label": $.Z.Messages.SET_STATUS,
-                                    className: Bt()(r2().avatarWrapper, (d = {}, u2(d, r2().withTagAsButton, s), u2(d, r2().withTagless, l), d)),
+                                    className: Bt()(r2().avatarWrapper, (d = {},
+                                        u2(d, r2().withTagAsButton, s), u2(d, r2().withTagless, l), d)),
                                     children: [(0, r.jsx)(_2, {
                                         size: c.AvatarSizes.SIZE_32,
                                         src: i.getAvatarURL(void 0, 32, !1),
@@ -62953,7 +62964,7 @@
                         children: [(0, r.jsx)(tn, {
                             className: doe().icon
                         }), $.Z.Messages.DEV_NOTICE_STAGING.format({
-                            buildNumber: "238939"
+                            buildNumber: "238943"
                         }), (0, r.jsx)(u, {})]
                     })
                 }

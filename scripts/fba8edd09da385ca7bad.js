@@ -18,32 +18,8 @@
         377236: (e, t, n) => {
             e.exports = n.p + "6cf42ec75591247991e68cfaf7801a29.svg"
         },
-        193339: (e, t, n) => {
-            e.exports = n.p + "6582346b72d89b4481953e57b89b8efb.png"
-        },
-        421282: (e, t, n) => {
-            e.exports = n.p + "63bc86bb61aee3c5912c6c512d95b659.svg"
-        },
-        556863: (e, t, n) => {
-            e.exports = n.p + "360c55c0ac68c9e6e0a01fba79f37710.svg"
-        },
-        280175: (e, t, n) => {
-            e.exports = n.p + "64eb05564f131bfd46ff70523e137186.svg"
-        },
-        864716: (e, t, n) => {
-            e.exports = n.p + "220d91abf96ce92ee9b3518cbf5e7d73.svg"
-        },
-        807092: (e, t, n) => {
-            e.exports = n.p + "b54f23f162f88999b5a5b374782582e9.svg"
-        },
-        345073: (e, t, n) => {
-            e.exports = n.p + "6fde21586acdb19e9707decd04a1d216.svg"
-        },
         80056: (e, t, n) => {
             e.exports = n.p + "1b894d107a5eff139021264d67d59cdd.png"
-        },
-        133761: (e, t, n) => {
-            e.exports = n.p + "95de0e48db8c5090549d5ac2a0e18f84.png"
         },
         288831: (e, t, n) => {
             e.exports = n.p + "43548a6c2d71932b98dd4c24f8813300.svg"
@@ -431,8 +407,8 @@
                 }({}, I.oT), (T(u = {}, O.EkH.CAROUSEL_NEXT, _.lI), T(u, O.EkH.CAROUSEL_PREV, _.hd), u)),
                 h = n(241166),
                 R = n(91174),
-                m = n(791243),
-                g = n(784426),
+                g = n(791243),
+                m = n(784426),
                 P = n(686874),
                 y = n(658689),
                 b = n(70418),
@@ -452,8 +428,7 @@
                     user: L.default.getCurrentUser()
                 }
             }))((0, d.Z)((0, y.Z)((function(e) {
-                var t = (0,
-                        N.Z)(A.Z.HOME_PAGE_PREMIUM_TAB).AnalyticsLocationProvider,
+                var t = (0, N.Z)(A.Z.HOME_PAGE_PREMIUM_TAB).AnalyticsLocationProvider,
                     n = o.useRef(null),
                     s = e.isAuthenticated,
                     a = e.user;
@@ -478,7 +453,8 @@
                             children: null == a ? (0, r.jsx)(M.Z, {
                                 align: M.Z.Align.CENTER,
                                 justify: M.Z.Justify.CENTER,
-                                children: (0, r.jsx)(b.Spinner, {
+                                children: (0,
+                                    r.jsx)(b.Spinner, {
                                     className: D().spinner
                                 })
                             }) : (0, r.jsx)("div", {
@@ -582,7 +558,8 @@
                             o = n.skuId,
                             s = n.applicationId,
                             i = null != t ? t : o;
-                        return null != r ? (0, G.rV)(r) : null != i ? (0, G.km)(i) : null != s ? (0, G.Hq)(s) : void 0
+                        return null != r ? (0, G.rV)(r) : null != i ? (0, G.km)(i) : null != s ? (0,
+                            G.Hq)(s) : void 0
                     };
                     return e
                 }
@@ -614,15 +591,15 @@
                 X = n(492036),
                 q = n.n(X);
 
-            function $(e, t) {
+            function J(e, t) {
                 if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
             }
 
-            function J(e) {
-                J = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
+            function $(e) {
+                $ = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
                     return e.__proto__ || Object.getPrototypeOf(e)
                 };
-                return J(e)
+                return $(e)
             }
 
             function ee(e, t) {
@@ -656,9 +633,9 @@
                     }
                 }();
                 return function() {
-                    var n, r = J(e);
+                    var n, r = $(e);
                     if (t) {
-                        var o = J(this).constructor;
+                        var o = $(this).constructor;
                         n = Reflect.construct(r, arguments, o)
                     } else n = r.apply(this, arguments);
                     return ee(this, n)
@@ -690,7 +667,7 @@
                 var t = re(n);
 
                 function n() {
-                    $(this, n);
+                    J(this, n);
                     var e;
                     (e = t.apply(this, arguments)).renderStoreListing = function(t) {
                         var n = t.match.params,
@@ -747,7 +724,7 @@
                 var o = n.prototype;
                 o.componentDidMount = function() {
                     l(this.props.location);
-                    this.stopListeningToHistory = (0, g.s1)().listen((function(e) {
+                    this.stopListeningToHistory = (0, m.s1)().listen((function(e) {
                         e.pathname.startsWith(O.Z5c.APPLICATION_STORE) && l(e)
                     }));
                     this.props.isAuthenticated && (0, f.tZ)();
@@ -783,7 +760,7 @@
                             location: n,
                             render: this.renderContent
                         });
-                    return (0, r.jsx)(m.Z, {
+                    return (0, r.jsx)(g.Z, {
                         renderCustomMessage: this.renderCustomErrorMessage,
                         children: o
                     })
@@ -927,11 +904,11 @@
             };
 
             function R(e) {
-                return m.apply(this, arguments)
+                return g.apply(this, arguments)
             }
 
-            function m() {
-                return (m = S((function(e) {
+            function g() {
+                return (g = S((function(e) {
                     var t, n, r;
                     return h(this, (function(o) {
                         switch (o.label) {
@@ -969,7 +946,7 @@
                     }))
                 }))).apply(this, arguments)
             }
-            var g = n(595138),
+            var m = n(595138),
                 P = n(810274),
                 y = n(213276),
                 b = n(192607),
@@ -1047,13 +1024,13 @@
             }
             var Q, X, q;
 
-            function $() {
+            function J() {
                 X = {};
                 Q = {};
                 q = new Set
             }
-            $();
-            var J = function(e) {
+            J();
+            var $ = function(e) {
                 ! function(e, t) {
                     if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function");
                     e.prototype = Object.create(t && t.prototype, {
@@ -1081,8 +1058,8 @@
                 };
                 return n
             }(u.ZP.Store);
-            J.displayName = "ApplicationStatisticsStore";
-            const ee = new J(E.Z, {
+            $.displayName = "ApplicationStatisticsStore";
+            const ee = new $(E.Z, {
                 APPLICATION_ACTIVITY_STATISTICS_FETCH_START: function(e) {
                     var t = e.applicationId;
                     q.add(t)
@@ -1098,7 +1075,7 @@
                     q.delete(n);
                     Q[n] = t
                 },
-                LOGOUT: $
+                LOGOUT: J
             });
             var te = n(556747),
                 ne = n(151367),
@@ -1224,7 +1201,7 @@
             function Re(e) {
                 return he(_e.THING, e)
             }
-            var me, ge, Pe, ye = Re;
+            var ge, me, Pe, ye = Re;
 
             function be(e) {
                 return he(_e.PRODUCT, e)
@@ -1241,7 +1218,7 @@
                 e.NEW = "http://schema.org/NewCondition";
                 e.REFURBISHED = "http://schema.org/RefurbishedCondition";
                 e.USED = "http://schema.org/UsedCondition"
-            }(me || (me = {}));
+            }(ge || (ge = {}));
             ! function(e) {
                 e.DISCONTINUED = "http://schema.org/Discontinued";
                 e.IN_STOCK = "http://schema.org/InStock";
@@ -1252,13 +1229,13 @@
                 e.PREORDER = "http://schema.org/PreOrder";
                 e.PRESALE = "http://schema.org/PreSale";
                 e.SOLD_OUT = "http://schema.org/SoldOut"
-            }(ge || (ge = {}));
+            }(me || (me = {}));
 
             function Ae(e) {
                 return he(_e.OFFER, e)
             }
-            Ae.ItemConditions = me;
-            Ae.ItemAvailability = ge;
+            Ae.ItemConditions = ge;
+            Ae.ItemAvailability = me;
             ! function(e) {
                 e.YEARLY = "ANN";
                 e.MONTHLY = "MON"
@@ -1363,7 +1340,8 @@
                     SIXTEEN: "4",
                     EIGHTEEN: "5"
                 },
-                ze = (He(We = {}, O.aIt.ESRB, (He(Fe = {}, Ve.EVERYONE, ke().esrbEveryone), He(Fe, Ve.EVERYONE_TEN_PLUS, ke().esrbEveryoneTenPlus), He(Fe, Ve.TEEN, ke().esrbTeen), He(Fe, Ve.MATURE, ke().esrbMature), He(Fe, Ve.ADULT, ke().esrbAdult), He(Fe, Ve.RATING_PENDING, ke().esrbRatingPending), Fe)), He(We, O.aIt.PEGI, (He(Ke = {}, Ye.THREE, ke().pegiThree), He(Ke, Ye.SEVEN, ke().pegiSeven), He(Ke, Ye.TWELVE, ke().pegiTwelve), He(Ke, Ye.SIXTEEN, ke().pegiSixteen), He(Ke, Ye.EIGHTEEN, ke().pegiEighteen), Ke)), We);
+                ze = (He(We = {}, O.aIt.ESRB, (He(Fe = {}, Ve.EVERYONE, ke().esrbEveryone), He(Fe, Ve.EVERYONE_TEN_PLUS, ke().esrbEveryoneTenPlus), He(Fe, Ve.TEEN, ke().esrbTeen), He(Fe, Ve.MATURE, ke().esrbMature), He(Fe, Ve.ADULT, ke().esrbAdult), He(Fe, Ve.RATING_PENDING, ke().esrbRatingPending), Fe)), He(We, O.aIt.PEGI, (He(Ke = {}, Ye.THREE, ke().pegiThree), He(Ke, Ye.SEVEN, ke().pegiSeven), He(Ke, Ye.TWELVE, ke().pegiTwelve),
+                    He(Ke, Ye.SIXTEEN, ke().pegiSixteen), He(Ke, Ye.EIGHTEEN, ke().pegiEighteen), Ke)), We);
             const Qe = function(e) {
                 var t = e.agency,
                     n = e.rating,
@@ -1375,9 +1353,9 @@
             };
             var Xe = n(473708),
                 qe = n(379485),
-                $e = n.n(qe);
+                Je = n.n(qe);
 
-            function Je(e, t) {
+            function $e(e, t) {
                 if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
             }
 
@@ -1452,7 +1430,7 @@
                 var t = st(n);
 
                 function n() {
-                    Je(this, n);
+                    $e(this, n);
                     return t.apply(this, arguments)
                 }
                 var o = n.prototype;
@@ -1461,7 +1439,7 @@
                         t = e.contentRating,
                         n = e.contentRatingAgency;
                     return null == t || null == n ? null : (0, r.jsx)(Qe, {
-                        className: $e().rating,
+                        className: Je().rating,
                         agency: n,
                         rating: t.rating
                     })
@@ -1476,59 +1454,58 @@
                     var i = function() {
                             var e;
                             return et(e = {}, O.aIt.ESRB, {
-                                    1: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_ALCOHOL_REFERENCE,
-                                    2: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_ANIMATED_BLOOD,
-                                    3: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_BLOOD,
-                                    4: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_BLOOD_AND_GORE,
-                                    5: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_CARTOON_VIOLENCE,
-                                    6: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_COMIC_MISCHIEF,
-                                    7: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_CRUDE_HUMOR,
-                                    8: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_DRUG_REFERENCE,
-                                    9: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_FANTASY_VIOLENCE,
-                                    10: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_INTENSE_VIOLENCE,
-                                    11: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_LANGUAGE,
-                                    12: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_LYRICS,
-                                    13: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MATURE_HUMOR,
-                                    14: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_NUDITY,
-                                    15: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_PARTUAL_NUDITY,
-                                    16: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_REAL_GAMBLING,
-                                    17: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_SEXUAL_CONTENT,
-                                    18: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_SEXUAL_THEMES,
-                                    19: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_SEXUAL_VIOLENCE,
-                                    20: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_SIMULATED_GAMBLING,
-                                    21: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_STRONG_LANGUAGE,
-                                    22: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_STRONG_LYRICS,
-                                    23: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_STRONG_SEXUAL_CONTENT,
-                                    24: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_SUGGESTIVE_THEMES,
-                                    25: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_TOBACCO_REFERENCE,
-                                    26: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_USE_OF_ALCOHOL,
-                                    27: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_USE_OF_DRUGS,
-                                    28: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_USE_OF_TOBACCO,
-                                    29: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_VIOLENCE,
-                                    30: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_VIOLENT_REFERENCES,
-                                    31: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_IN_GAME_PURCHASES,
-                                    32: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_USERS_INTERACT,
-                                    33: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_SHARES_LOCATION,
-                                    34: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_UNRESTRICTED_INTERNET,
-                                    35: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MILD_BLOOD,
-                                    36: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MILD_CARTOON_VIOLENCE,
-                                    37: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MILD_FANTASY_VIOLENCE,
-                                    38: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MILD_LANGUAGE,
-                                    39: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MILD_LYRICS,
-                                    40: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MILD_SEXUAL_THEMES,
-                                    41: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MILD_SUGGESTIVE_THEMES,
-                                    42: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MILD_VIOLENCE,
-                                    43: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_ANIMATED_VIOLENCE
-                                }),
-                                et(e, O.aIt.PEGI, {
-                                    1: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_VIOLENCE,
-                                    2: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_BAD_LANGUAGE,
-                                    3: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_FEAR,
-                                    4: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_GAMBLING,
-                                    5: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_SEX,
-                                    6: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_DRUGS,
-                                    7: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_DISCRIMINATION
-                                }), e
+                                1: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_ALCOHOL_REFERENCE,
+                                2: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_ANIMATED_BLOOD,
+                                3: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_BLOOD,
+                                4: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_BLOOD_AND_GORE,
+                                5: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_CARTOON_VIOLENCE,
+                                6: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_COMIC_MISCHIEF,
+                                7: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_CRUDE_HUMOR,
+                                8: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_DRUG_REFERENCE,
+                                9: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_FANTASY_VIOLENCE,
+                                10: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_INTENSE_VIOLENCE,
+                                11: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_LANGUAGE,
+                                12: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_LYRICS,
+                                13: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MATURE_HUMOR,
+                                14: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_NUDITY,
+                                15: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_PARTUAL_NUDITY,
+                                16: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_REAL_GAMBLING,
+                                17: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_SEXUAL_CONTENT,
+                                18: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_SEXUAL_THEMES,
+                                19: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_SEXUAL_VIOLENCE,
+                                20: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_SIMULATED_GAMBLING,
+                                21: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_STRONG_LANGUAGE,
+                                22: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_STRONG_LYRICS,
+                                23: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_STRONG_SEXUAL_CONTENT,
+                                24: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_SUGGESTIVE_THEMES,
+                                25: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_TOBACCO_REFERENCE,
+                                26: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_USE_OF_ALCOHOL,
+                                27: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_USE_OF_DRUGS,
+                                28: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_USE_OF_TOBACCO,
+                                29: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_VIOLENCE,
+                                30: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_VIOLENT_REFERENCES,
+                                31: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_IN_GAME_PURCHASES,
+                                32: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_USERS_INTERACT,
+                                33: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_SHARES_LOCATION,
+                                34: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_UNRESTRICTED_INTERNET,
+                                35: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MILD_BLOOD,
+                                36: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MILD_CARTOON_VIOLENCE,
+                                37: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MILD_FANTASY_VIOLENCE,
+                                38: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MILD_LANGUAGE,
+                                39: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MILD_LYRICS,
+                                40: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MILD_SEXUAL_THEMES,
+                                41: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MILD_SUGGESTIVE_THEMES,
+                                42: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_MILD_VIOLENCE,
+                                43: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_ESRB_ANIMATED_VIOLENCE
+                            }), et(e, O.aIt.PEGI, {
+                                1: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_VIOLENCE,
+                                2: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_BAD_LANGUAGE,
+                                3: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_FEAR,
+                                4: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_GAMBLING,
+                                5: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_SEX,
+                                6: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_DRUGS,
+                                7: Xe.Z.Messages.APPLICATION_STORE_RATING_DESCRIPTORS_PEGI_DISCRIMINATION
+                            }), e
                         }(),
                         a = n.descriptors.map((function(e) {
                             return i[o][e]
@@ -1538,9 +1515,9 @@
                         children: [(0, r.jsx)(ae.Z, {
                             children: Xe.Z.Messages.APPLICATION_STORE_SECTION_TITLE_RATINGS
                         }), (0, r.jsxs)(ce.Z, {
-                            className: $e().content,
+                            className: Je().content,
                             children: [this.renderContentRatingImage(), (0, r.jsx)("div", {
-                                className: $e().info,
+                                className: Je().info,
                                 children: a
                             })]
                         })]
@@ -1657,7 +1634,7 @@
                 }
                 return o
             }
-            const mt = (0, dt.hN)((function(e) {
+            const gt = (0, dt.hN)((function(e) {
                 var t = e.width,
                     n = void 0 === t ? 24 : t,
                     o = e.height,
@@ -1732,7 +1709,7 @@
                     })
                 }))
             }));
-            var gt = n(816132),
+            var mt = n(816132),
                 Pt = n(297005),
                 yt = n(940547),
                 bt = n(822970);
@@ -1867,7 +1844,7 @@
                     getTooltip: function() {
                         return Xe.Z.Messages.APPLICATION_STORE_LOCAL_MULTIPLAYER_TOOLTIP
                     },
-                    IconComponent: gt.Z
+                    IconComponent: mt.Z
                 }, {
                     feature: O.Qa3.ONLINE_MULTIPLAYER,
                     getText: function() {
@@ -1876,7 +1853,7 @@
                     getTooltip: function() {
                         return Xe.Z.Messages.APPLICATION_STORE_ONLINE_MULTIPLAYER_TOOLTIP
                     },
-                    IconComponent: gt.Z
+                    IconComponent: mt.Z
                 }, {
                     feature: O.Qa3.PVP,
                     getText: function() {
@@ -1885,7 +1862,7 @@
                     getTooltip: function() {
                         return Xe.Z.Messages.APPLICATION_STORE_PVP_TOOLTIP
                     },
-                    IconComponent: mt
+                    IconComponent: gt
                 }, {
                     feature: O.Qa3.LOCAL_COOP,
                     getText: function() {
@@ -1894,7 +1871,7 @@
                     getTooltip: function() {
                         return Xe.Z.Messages.APPLICATION_STORE_LOCAL_COOP_TOOLTIP
                     },
-                    IconComponent: gt.Z
+                    IconComponent: mt.Z
                 }, {
                     feature: O.Qa3.ONLINE_COOP,
                     getText: function() {
@@ -1903,7 +1880,7 @@
                     getTooltip: function() {
                         return Xe.Z.Messages.APPLICATION_STORE_ONLINE_COOP_TOOLTIP
                     },
-                    IconComponent: gt.Z
+                    IconComponent: mt.Z
                 }, {
                     feature: O.Qa3.CROSS_PLATFORM,
                     getText: function() {
@@ -2136,7 +2113,7 @@
                     return zt(this, n)
                 }
             }
-            var $t = function(e) {
+            var Jt = function(e) {
                 ! function(e, t) {
                     if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function");
                     e.prototype = Object.create(t && t.prototype, {
@@ -2170,7 +2147,7 @@
                 };
                 return n
             }(o.PureComponent);
-            const Jt = $t;
+            const $t = Jt;
             var en = n(725778),
                 tn = n(554904),
                 nn = n(432921),
@@ -2326,7 +2303,7 @@
                 e.SHORT = "SHORT";
                 e.LONG = "LONG"
             }(Sn || (Sn = {}));
-            var mn = function(e) {
+            var gn = function(e) {
                 ! function(e, t) {
                     if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function");
                     e.prototype = Object.create(t && t.prototype, {
@@ -2376,14 +2353,14 @@
                 };
                 return n
             }(o.PureComponent);
-            mn.defaultProps = {
+            gn.defaultProps = {
                 messageStyle: Sn.LONG
             };
-            const gn = u.ZP.connectStores([En.Z], (function() {
+            const mn = u.ZP.connectStores([En.Z], (function() {
                 return {
                     purchaseError: En.Z.error
                 }
-            }))(mn);
+            }))(gn);
             var Pn = n(473727),
                 yn = n(810978),
                 bn = n(708689),
@@ -2537,7 +2514,7 @@
                 }
             }
 
-            function $n(e, t, n) {
+            function Jn(e, t, n) {
                 t in e ? Object.defineProperty(e, t, {
                     value: n,
                     enumerable: !0,
@@ -2547,11 +2524,11 @@
                 return e
             }
 
-            function Jn(e) {
-                Jn = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
+            function $n(e) {
+                $n = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
                     return e.__proto__ || Object.getPrototypeOf(e)
                 };
-                return Jn(e)
+                return $n(e)
             }
 
             function er(e) {
@@ -2562,7 +2539,7 @@
                         return Object.getOwnPropertyDescriptor(n, e).enumerable
                     }))));
                     r.forEach((function(t) {
-                        $n(e, t, n[t])
+                        Jn(e, t, n[t])
                     }))
                 }
                 return e
@@ -2617,9 +2594,9 @@
                     }
                 }();
                 return function() {
-                    var n, r = Jn(e);
+                    var n, r = $n(e);
                     if (t) {
-                        var o = Jn(this).constructor;
+                        var o = $n(this).constructor;
                         n = Reflect.construct(r, arguments, o)
                     } else n = r.apply(this, arguments);
                     return nr(this, n)
@@ -2852,9 +2829,9 @@
             var Sr = n(289283),
                 hr = n(908056),
                 Rr = n(348592),
-                mr = n(120415),
-                gr = n(785258),
-                Pr = n.n(gr);
+                gr = n(120415),
+                mr = n(785258),
+                Pr = n.n(mr);
 
             function yr(e, t) {
                 if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
@@ -2957,12 +2934,12 @@
                             case Cr.REQUIRES_DESKTOP_APP:
                                 return Xe.Z.Messages.APPLICATION_STORE_WARNING_REQUIRES_DESKTOP_APP_TITLE;
                             case Cr.UNAVAILABLE_OPERATING_SYSTEM:
-                                switch ((0, mr.Xf)()) {
-                                    case mr.AB.WINDOWS:
+                                switch ((0, gr.Xf)()) {
+                                    case gr.AB.WINDOWS:
                                         return Xe.Z.Messages.APPLICATION_STORE_WARNING_UNAVAILABLE_WINDOWS_TITLE;
-                                    case mr.AB.OSX:
+                                    case gr.AB.OSX:
                                         return Xe.Z.Messages.APPLICATION_STORE_WARNING_UNAVAILABLE_MAC_OS_TITLE;
-                                    case mr.AB.LINUX:
+                                    case gr.AB.LINUX:
                                         return Xe.Z.Messages.APPLICATION_STORE_WARNING_UNAVAILABLE_LINUX_TITLE;
                                     default:
                                         return Xe.Z.Messages.APPLICATION_STORE_WARNING_REQUIRES_DESKTOP_APP_TITLE
@@ -2994,7 +2971,7 @@
                                     }
                                 });
                             case Cr.UNAVAILABLE_OPERATING_SYSTEM:
-                                return (0, mr.Xf)() === mr.AB.LINUX ? Xe.Z.Messages.APPLICATION_STORE_WARNING_UNAVAILABLE_LINUX_DESCRIPTION : Xe.Z.Messages.APPLICATION_STORE_WARNING_UNAVAILABLE_OS_DESCRIPTION;
+                                return (0, gr.Xf)() === gr.AB.LINUX ? Xe.Z.Messages.APPLICATION_STORE_WARNING_UNAVAILABLE_LINUX_DESCRIPTION : Xe.Z.Messages.APPLICATION_STORE_WARNING_UNAVAILABLE_OS_DESCRIPTION;
                             case Cr.DLC_REQUIRES_BASE_APPLICATION:
                                 var n = this.props.dependentSku;
                                 return null == n ? null : Xe.Z.Messages.APPLICATION_STORE_WARNING_DLC_REQUIRES_BASE_APPLICATION_DESCRIPTION.format({
@@ -3064,7 +3041,7 @@
                             s = e.className,
                             i = [];
                         t.restricted && i.push(this.renderWarning(Cr.RESTRICTED_IN_REGION));
-                        (0, mr.$L)() ? i.push(this.renderWarning(Cr.REQUIRES_DESKTOP_APP)): t.supportedOperatingSystems.includes((0, Ue.hX)((0, mr.Xf)())) || i.push(this.renderWarning(Cr.UNAVAILABLE_OPERATING_SYSTEM));
+                        (0, gr.$L)() ? i.push(this.renderWarning(Cr.REQUIRES_DESKTOP_APP)): t.supportedOperatingSystems.includes((0, Ue.hX)((0, gr.Xf)())) || i.push(this.renderWarning(Cr.UNAVAILABLE_OPERATING_SYSTEM));
                         null == n || o || i.push(this.renderWarning(Cr.DLC_REQUIRES_BASE_APPLICATION));
                         t.accessType === O.kGb.EARLY_ACCESS && i.push(this.renderWarning(Cr.EARLY_ACCESS));
                         return 0 === i.length ? null : (0, r.jsx)("div", {
@@ -3304,9 +3281,9 @@
             }))(zr));
             var Xr = n(203600),
                 qr = n(235710),
-                $r = n.n(qr),
-                Jr = n(889069),
-                eo = n.n(Jr);
+                Jr = n.n(qr),
+                $r = n(889069),
+                eo = n.n($r);
 
             function to(e, t) {
                 (null == t || t > e.length) && (t = e.length);
@@ -3466,7 +3443,7 @@
                         o = e.currentUser,
                         s = e.premiumSubscriptionPlan,
                         i = e.premiumSKUId;
-                    null != t || n || null == o || r.type === O.epS.DURABLE_PRIMARY || (0, g.yD)(r.applicationId);
+                    null != t || n || null == o || r.type === O.epS.DURABLE_PRIMARY || (0, m.yD)(r.applicationId);
                     r.premium && !Wn.ZP.canInstallPremiumApplications(o) && null == s && (0, yn.GZ)(i)
                 };
                 s.getApplicationBuyButton = function() {
@@ -3512,7 +3489,7 @@
                     if (!0 === t) {
                         var a = null != n && n.isHidden();
                         return (0, r.jsxs)(Pn.rU, {
-                            className: $r().entitledHeader,
+                            className: Jr().entitledHeader,
                             to: {
                                 pathname: O.Z5c.APPLICATION_LIBRARY,
                                 state: {
@@ -3521,27 +3498,27 @@
                             },
                             onClick: this.handleViewLibrary,
                             children: [(0, r.jsx)(Fn.Z, {
-                                className: $r().entitledHeaderIcon
+                                className: Jr().entitledHeaderIcon
                             }), (0, r.jsx)("div", {
                                 children: a ? Xe.Z.Messages.APPLICATION_STORE_PURCHASE_IN_LIBRARY_HIDDEN : Xe.Z.Messages.APPLICATION_STORE_PURCHASE_IN_LIBRARY
                             })]
                         })
                     }
                     return o.exclusive ? (0, r.jsxs)("div", {
-                        className: $r().exclusiveHeader,
+                        className: Jr().exclusiveHeader,
                         children: [(0, r.jsx)("div", {
-                            className: $r().exclusiveHeaderExclusive,
+                            className: Jr().exclusiveHeaderExclusive,
                             children: Xe.Z.Messages.APPLICATION_STORE_PURCHASE_HEADER_FIRST_ON
                         }), (0, r.jsx)(Hn.Z, {
-                            className: $r().exclusiveHeaderIcon
+                            className: Jr().exclusiveHeaderIcon
                         })]
                     }) : o.premium && null != i ? (0,
                         r.jsxs)("div", {
-                        className: $r().premiumHeader,
+                        className: Jr().premiumHeader,
                         children: [(0, r.jsx)(Kn.Z, {
-                            className: $r().premiumHeaderIcon
+                            className: Jr().premiumHeaderIcon
                         }), Wn.ZP.canInstallPremiumApplications(s) ? null : (0, r.jsx)("div", {
-                            className: $r().premiumHeaderPrice,
+                            className: Jr().premiumHeaderPrice,
                             children: Xe.Z.Messages.BILLING_PRICE_PER_MONTH.format({
                                 price: (0, De.T4)(i.price, i.currency)
                             })
@@ -3556,12 +3533,12 @@
                         i = e.channelId;
                     return null != t.entitlementBranchId || 0 === t.alternativeSkuIds.length ? null : (0, r.jsxs)(o.Fragment, {
                         children: [(0, r.jsx)("div", {
-                            className: $r().actionText,
+                            className: Jr().actionText,
                             children: Xe.Z.Messages.APPLICATION_STORE_LISTING_SELECT_EDITION
                         }), (0, r.jsx)(ar, {
                             storeListing: t,
                             selectedSkuId: n.id,
-                            className: $r().alternativeSkus,
+                            className: Jr().alternativeSkus,
                             guildId: s,
                             channelId: i
                         })]
@@ -3573,9 +3550,9 @@
                         n = e.sku,
                         o = e.isFocused;
                     return n.isPreorder() && null != n.preorderReleaseAt && t ? (0, r.jsxs)("div", {
-                        className: $r().countdownSection,
+                        className: Jr().countdownSection,
                         children: [(0, r.jsx)("div", {
-                            className: $r().countdownHeader,
+                            className: Jr().countdownHeader,
                             children: Xe.Z.Messages.APPLICATION_STORE_PURCHASE_HEADER_TIME_LEFT_UNTIL_RELEASE
                         }), (0, r.jsx)(kn, {
                             endTime: n.preorderReleaseAt.valueOf(),
@@ -3590,7 +3567,7 @@
                     if (!n.isPreorder() || null == n.preorderApproximateReleaseDate && null != n.preorderReleaseAt && t) return null;
                     var o = (0, Vn.en)(n);
                     return (0, r.jsx)("div", {
-                        className: $r().releaseDate,
+                        className: Jr().releaseDate,
                         children: Xe.Z.Messages.APPLICATION_STORE_PURCHASE_AVAILABLE_DATE.format({
                             releaseDate: o
                         })
@@ -3602,12 +3579,12 @@
                         n = e.storeListing,
                         o = e.isEntitled;
                     if (t.restricted) return (0, r.jsx)("div", {
-                        className: $r().price,
+                        className: Jr().price,
                         children: Xe.Z.Messages.APPLICATION_STORE_RESTRICTED
                     });
                     var s = null != n.entitlementBranchId;
                     return t.available && (t.premium || null != t.getPrice()) || s ? (0, r.jsxs)("div", {
-                        className: $r().price,
+                        className: Jr().price,
                         children: [(0, r.jsx)(bn.Z, {
                             type: bn.Z.Types.LISTING,
                             inLibrary: !0 === o,
@@ -3616,10 +3593,10 @@
                         }), this.renderApproximatePreorderInfo()]
                     }) : !t.available && t.premium ? (0,
                         r.jsx)("div", {
-                        className: i()($r().price, eo().listingPrice),
+                        className: i()(Jr().price, eo().listingPrice),
                         children: Xe.Z.Messages.APPLICATION_STORE_FREE_WITH_PREMIUM
                     }) : (0, r.jsx)("div", {
-                        className: $r().price,
+                        className: Jr().price,
                         children: Xe.Z.Messages.APPLICATION_STORE_COMING_SOON
                     })
                 };
@@ -3637,9 +3614,9 @@
                         children: [this.renderAccuratePreorderInfo(), (0, r.jsxs)(ce.Z, {
                             justify: ce.Z.Justify.BETWEEN,
                             align: ce.Z.Align.CENTER,
-                            className: $r().headerBar,
+                            className: Jr().headerBar,
                             children: [(0, r.jsx)("div", {
-                                className: $r().actionText,
+                                className: Jr().actionText,
                                 children: this.getActionText()
                             }), (0, r.jsx)(Dr.n, {
                                 systems: t.supportedOperatingSystems
@@ -3658,7 +3635,7 @@
                                 applicationId: n.id,
                                 channelId: s,
                                 color: d.Button.Colors.PRIMARY,
-                                className: $r().secondaryBuyButton,
+                                className: Jr().secondaryBuyButton,
                                 forceDistribution: !0,
                                 shouldRenderPrice: !0,
                                 fullWidth: !0,
@@ -3666,7 +3643,7 @@
                             }) : null]
                         }) : null, l && !u ? (0, r.jsx)(b.Z, {
                             asGift: !0,
-                            className: $r().secondaryBuyButton,
+                            className: Jr().secondaryBuyButton,
                             skuId: t.id,
                             applicationId: n.id,
                             channelId: s,
@@ -3674,10 +3651,10 @@
                             onStoreListing: !0,
                             color: !0 === i ? d.Button.Colors.GREEN : d.Button.Colors.PRIMARY,
                             hover: d.Button.Hovers.DEFAULT
-                        }) : null, (0, r.jsx)(gn, {
-                            className: $r().purchaseError
+                        }) : null, (0, r.jsx)(mn, {
+                            className: Jr().purchaseError
                         }), (0, r.jsx)(wr, {
-                            className: $r().warning,
+                            className: Jr().warning,
                             sku: t
                         })]
                     })
@@ -3694,10 +3671,10 @@
                     return (0, r.jsxs)("div", {
                         className: c,
                         children: [this.renderHeader(), (0, r.jsxs)("div", {
-                            className: $r().bodySection,
+                            className: Jr().bodySection,
                             children: [this.renderAlternativeSkus(), this.renderBody()]
                         }), null == n.entitlementBranchId ? (0, r.jsx)("div", {
-                            className: $r().bodySection,
+                            className: Jr().bodySection,
                             children: (0, r.jsx)(Qr, {
                                 storeListing: n,
                                 sku: o,
@@ -3706,7 +3683,7 @@
                                 fetchStoreListing: a
                             })
                         }) : null, (0, r.jsx)("div", {
-                            className: $r().bodySection,
+                            className: Jr().bodySection,
                             children: (0, r.jsx)(Tr, {
                                 game: t,
                                 sku: o
@@ -3845,8 +3822,8 @@
                     })
                 }))
             }), Oo.d);
-            var mo = n(50543),
-                go = n.n(mo);
+            var go = n(50543),
+                mo = n.n(go);
 
             function Po(e, t) {
                 if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
@@ -3902,9 +3879,9 @@
                     var t = e.IconComponent,
                         n = e.className;
                     return (0, r.jsx)("div", {
-                        className: i()(go().iconCircle, n),
+                        className: i()(mo().iconCircle, n),
                         children: (0, r.jsx)(t, {
-                            className: go().icon
+                            className: mo().icon
                         })
                     })
                 },
@@ -3914,14 +3891,14 @@
                         o = e.text,
                         s = e.className;
                     return (0, r.jsxs)("div", {
-                        className: i()(go().recommendationReason, s),
+                        className: i()(mo().recommendationReason, s),
                         children: [t, (0, r.jsxs)("div", {
-                            className: go().description,
+                            className: mo().description,
                             children: [null != n ? (0, r.jsx)("div", {
-                                className: go().smallHeader,
+                                className: mo().smallHeader,
                                 children: n
                             }) : null, (0, r.jsx)("div", {
-                                className: go().text,
+                                className: mo().text,
                                 children: o
                             })]
                         })]
@@ -3967,7 +3944,7 @@
                             className: n,
                             circle: (0, r.jsx)(Co, {
                                 IconComponent: Ro,
-                                className: go().earlyAccess
+                                className: mo().earlyAccess
                             }),
                             smallHeader: Xe.Z.Messages.APPLICATION_STORE_EARLY_ACCESS,
                             text: (0, Cn.vc)(t.releaseDate, "LL")
@@ -3975,7 +3952,7 @@
                             className: n,
                             circle: (0, r.jsx)(Co, {
                                 IconComponent: Ro,
-                                className: go().earlyAccess
+                                className: mo().earlyAccess
                             }),
                             text: Xe.Z.Messages.APPLICATION_STORE_EARLY_ACCESS
                         }) : t.type === O.AzA.FLAVOR_TEXT ? (0, r.jsx)(Lo, {
@@ -3988,7 +3965,7 @@
                             className: n,
                             circle: (0, r.jsx)(Co, {
                                 IconComponent: Me.Z,
-                                className: go().premiumCircle
+                                className: mo().premiumCircle
                             }),
                             text: Xe.Z.Messages.APPLICATION_STORE_FREE_PREMIUM_CONTENT
                         }) : null
@@ -4302,13 +4279,13 @@
                     };
                     return n
                 }(o.PureComponent);
-            const $o = qo;
-            var Jo, es = n(657539),
+            const Jo = qo;
+            var $o, es = n(657539),
                 ts = n(570940),
                 ns = n.n(ts);
             ! function(e) {
                 e[e.STAFF_NOTES = 1] = "STAFF_NOTES"
-            }(Jo || (Jo = {}));
+            }($o || ($o = {}));
             var rs = u.ZP.connectStores([ie.Z], (function() {
                     return {
                         animate: ie.Z.isFocused()
@@ -4338,7 +4315,7 @@
                 os = function(e) {
                     var t = e.data,
                         n = e.className;
-                    if (t.type === Jo.STAFF_NOTES) {
+                    if (t.type === $o.STAFF_NOTES) {
                         if (null == t.staffNotes) return null;
                         var o = t.staffNotes,
                             s = o.user,
@@ -4356,7 +4333,7 @@
                     }
                     throw new Error("Unknown type")
                 };
-            os.Types = Jo;
+            os.Types = $o;
             const ss = os;
             var is = n(611418),
                 as = n.n(is);
@@ -4438,7 +4415,7 @@
                             children: [e.map((function(e) {
                                 return (0, r.jsx)("div", {
                                     className: as().unit,
-                                    children: (0, r.jsx)($o, {
+                                    children: (0, r.jsx)(Jo, {
                                         reason: e,
                                         hidePersonalInformation: n
                                     })
@@ -4508,20 +4485,20 @@
             }
 
             function Rs(e, t) {
-                return !t || "object" !== gs(t) && "function" != typeof t ? function(e) {
+                return !t || "object" !== ms(t) && "function" != typeof t ? function(e) {
                     if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
                     return e
                 }(e) : t
             }
 
-            function ms(e, t) {
-                ms = Object.setPrototypeOf || function(e, t) {
+            function gs(e, t) {
+                gs = Object.setPrototypeOf || function(e, t) {
                     e.__proto__ = t;
                     return e
                 };
-                return ms(e, t)
+                return gs(e, t)
             }
-            var gs = function(e) {
+            var ms = function(e) {
                 return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e
             };
 
@@ -4556,7 +4533,7 @@
                             configurable: !0
                         }
                     });
-                    t && ms(e, t)
+                    t && gs(e, t)
                 }(n, e);
                 var t = Ps(n);
 
@@ -4717,7 +4694,7 @@
                         return Xe.Z.Messages.LINUX
                 }
             }
-            var ks = (Ms(Ds = {}, O.TaA.WINDOWS, mr.AB.WINDOWS), Ms(Ds, O.TaA.MACOS, mr.AB.OSX), Ms(Ds, O.TaA.LINUX, mr.AB.LINUX), Ds),
+            var ks = (Ms(Ds = {}, O.TaA.WINDOWS, gr.AB.WINDOWS), Ms(Ds, O.TaA.MACOS, gr.AB.OSX), Ms(Ds, O.TaA.LINUX, gr.AB.LINUX), Ds),
                 Hs = function(e) {
                     xs(n, e);
                     var t = Bs(n);
@@ -4756,7 +4733,7 @@
                                 selectedOperatingSystem: e
                             })
                         };
-                        var o = (0, mr.Xf)(),
+                        var o = (0, gr.Xf)(),
                             s = Object.keys(e.systemRequirements),
                             i = s[0],
                             a = !0,
@@ -4951,19 +4928,19 @@
                 return o
             }
 
-            function $s(e, t) {
+            function Js(e, t) {
                 return !t || "object" !== ei(t) && "function" != typeof t ? function(e) {
                     if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
                     return e
                 }(e) : t
             }
 
-            function Js(e, t) {
-                Js = Object.setPrototypeOf || function(e, t) {
+            function $s(e, t) {
+                $s = Object.setPrototypeOf || function(e, t) {
                     e.__proto__ = t;
                     return e
                 };
-                return Js(e, t)
+                return $s(e, t)
             }
             var ei = function(e) {
                 return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e
@@ -4987,7 +4964,7 @@
                         var o = Qs(this).constructor;
                         n = Reflect.construct(r, arguments, o)
                     } else n = r.apply(this, arguments);
-                    return $s(this, n)
+                    return Js(this, n)
                 }
             }
             var ni = {
@@ -5006,7 +4983,7 @@
                                 configurable: !0
                             }
                         });
-                        t && Js(e, t)
+                        t && $s(e, t)
                     }(n, e);
                     var t = ti(n);
 
@@ -5170,7 +5147,7 @@
                     return Ti(this, n)
                 }
             }
-            var mi = function(e, t) {
+            var gi = function(e, t) {
                     var n, r, o, s, i = {
                         label: 0,
                         sent: function() {
@@ -5253,7 +5230,7 @@
                         }
                     }
                 },
-                gi = function(e) {
+                mi = function(e) {
                     ! function(e, t) {
                         if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function");
                         e.prototype = Object.create(t && t.prototype, {
@@ -5272,7 +5249,7 @@
                         var e, r = di(e = t.apply(this, arguments));
                         e.handleJoinOrView = _i((function() {
                             var e, t, n, o, s, i;
-                            return mi(this, (function(a) {
+                            return gi(this, (function(a) {
                                 switch (a.label) {
                                     case 0:
                                         e = r.props, t = e.guild, n = e.skuId, o = e.isInGuild, s = e.isLurking;
@@ -5412,7 +5389,7 @@
                     isInGuild: null != k.Z.getGuild(t.id) && !n,
                     isLurking: n
                 }
-            }))(gi));
+            }))(mi));
             var yi = n(575854),
                 bi = n.n(yi);
 
@@ -5790,7 +5767,7 @@
                                         entitlementBranchId: null != c ? c.entitlementBranchId : null,
                                         channelId: null != l ? l.id : null,
                                         onStoreListing: !0
-                                    }) : null, (0, r.jsx)(gn, {
+                                    }) : null, (0, r.jsx)(mn, {
                                         messageStyle: Sn.SHORT,
                                         className: bi().purchaseError
                                     })]
@@ -5861,7 +5838,7 @@
                     } else this._analyticsSource = O.SaU;
                     (null == n || n.isSlimDirectoryVersion()) && a();
                     if (null != t) {
-                        r || s || (0, g.yD)(t.applicationId);
+                        r || s || (0, m.yD)(t.applicationId);
                         o && E.Z.wait((function() {
                             return R(t.applicationId)
                         }))
@@ -6109,7 +6086,7 @@
                     })
                 };
                 u.renderApplicationLegalInfo = function(e) {
-                    return (0, r.jsx)(Jt, {
+                    return (0, r.jsx)($t, {
                         sku: e,
                         className: bi().legalInfo
                     })
@@ -6416,32 +6393,16 @@
                 }(o.Component)
             }
         },
-        322581: (e, t, n) => {
-            "use strict";
-            n.d(t, {
-                Z: () => s
-            });
-            var r = n(775173),
-                o = n(995141);
-            const s = function(e, t, n) {
-                return (0, r.NZ)({
-                    avatarDecoration: {
-                        asset: e
-                    },
-                    size: (0, o.y9)(t),
-                    canAnimate: n
-                })
-            }
-        },
         123435: (e, t, n) => {
             "use strict";
             n.d(t, {
-                Vq: () => g,
-                c8: () => m,
+                Vq: () => m,
+                c8: () => g,
                 oQ: () => P
             });
             var r = n(785893),
-                o = (n(667294), n(294184)),
+                o = (n(667294),
+                    n(294184)),
                 s = n.n(o),
                 i = n(795308),
                 a = n(575945),
@@ -6488,13 +6449,13 @@
                 })
             }
 
-            function m() {
+            function g() {
                 return (0, r.jsx)(R, {
                     className: I().settings
                 })
             }
 
-            function g() {
+            function m() {
                 return (0, r.jsx)(R, {
                     className: I().modal
                 })
@@ -6502,7 +6463,8 @@
 
             function P(e) {
                 var t = e.className;
-                return (0, p.Q)() ? (0, r.jsxs)(c.Card, {
+                return (0, p.Q)() ? (0,
+                    r.jsxs)(c.Card, {
                     className: s()(I().blockedPaymentsWarning, t),
                     type: c.Card.Types.CUSTOM,
                     children: [(0, r.jsx)(u.Z, {
@@ -6520,59 +6482,28 @@
         329974: (e, t, n) => {
             "use strict";
             n.d(t, {
-                Z: () => q
+                Z: () => P
             });
-            var r = n(785893),
-                o = n(667294),
-                s = n(294184),
-                i = n.n(s),
-                a = n(498964),
-                c = n(318715),
-                l = n(418705),
-                u = n(575945),
-                f = n(70418),
-                p = n(662478),
-                d = n(74535),
-                E = n(316878),
-                _ = n(153686),
-                I = n(19585),
-                O = n(322581),
-                T = n(627342),
-                S = n(82337),
-                h = n(652591),
-                R = n(339938),
-                m = n(560465),
-                g = n(2590),
-                P = n(203600),
-                y = n(473708),
-                b = n(229531),
-                A = n.n(b),
-                N = n(193339),
-                v = n.n(N),
-                C = n(421282),
-                L = n.n(C),
-                M = n(556863),
-                j = n.n(M),
-                x = n(280175),
-                Z = n.n(x),
-                w = n(864716),
-                D = n.n(w),
-                U = n(807092),
-                B = n.n(U),
-                G = n(345073),
-                k = n.n(G),
-                H = n(80056),
-                F = n.n(H),
-                K = n(133761),
-                W = n.n(K);
+            var r, o = n(785893),
+                s = n(667294),
+                i = n(294184),
+                a = n.n(i),
+                c = n(70418),
+                l = n(153686),
+                u = n(19585),
+                f = n(82337),
+                p = n(652591),
+                d = n(339938),
+                E = n(560465),
+                _ = n(2590),
+                I = n(203600),
+                O = n(473708),
+                T = n(229531),
+                S = n.n(T),
+                h = n(80056),
+                R = n.n(h);
 
-            function V(e, t) {
-                (null == t || t > e.length) && (t = e.length);
-                for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n];
-                return r
-            }
-
-            function Y(e, t, n) {
+            function g(e, t, n) {
                 t in e ? Object.defineProperty(e, t, {
                     value: n,
                     enumerable: !0,
@@ -6581,217 +6512,64 @@
                 }) : e[t] = n;
                 return e
             }
-
-            function z(e, t) {
-                return function(e) {
-                    if (Array.isArray(e)) return e
-                }(e) || function(e, t) {
-                    var n = null == e ? null : "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"];
-                    if (null != n) {
-                        var r, o, s = [],
-                            i = !0,
-                            a = !1;
-                        try {
-                            for (n = n.call(e); !(i = (r = n.next()).done); i = !0) {
-                                s.push(r.value);
-                                if (t && s.length === t) break
-                            }
-                        } catch (e) {
-                            a = !0;
-                            o = e
-                        } finally {
-                            try {
-                                i || null == n.return || n.return()
-                            } finally {
-                                if (a) throw o
-                            }
-                        }
-                        return s
-                    }
-                }(e, t) || function(e, t) {
-                    if (!e) return;
-                    if ("string" == typeof e) return V(e, t);
-                    var n = Object.prototype.toString.call(e).slice(8, -1);
-                    "Object" === n && e.constructor && (n = e.constructor.name);
-                    if ("Map" === n || "Set" === n) return Array.from(n);
-                    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return V(e, t)
-                }(e, t) || function() {
-                    throw new TypeError("Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
-                }()
-            }
-            var Q, X = (Y(Q = {}, P.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL, _.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL), Y(Q, P.cd.COLLECTIBLES_PREMIUM_MARKETING_PAGE_UPSELL, _.Z.COLLECTIBLES_PREMIUM_MARKETING_PAGE_UPSELL), Q);
-            const q = function(e) {
+            var m = (g(r = {}, I.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL, l.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL), g(r, I.cd.COLLECTIBLES_PREMIUM_MARKETING_PAGE_UPSELL, l.Z.COLLECTIBLES_PREMIUM_MARKETING_PAGE_UPSELL), r);
+            const P = function(e) {
                 var t = e.type,
                     n = e.isMarketingPage,
-                    s = e.className,
-                    _ = X[t],
-                    P = (0, I.Z)(_).analyticsLocations,
-                    b = (0, S.A)({
-                        location: "CollectiblesUpsellBanner"
-                    }),
-                    N = (0, m.Z)({
-                        location: "CollectiblesUpsellBanner"
-                    }),
-                    C = N.canUseFalloweenAvatarDecorations,
-                    M = N.canUseFalloweenProfileEffects,
-                    x = o.useRef(null),
-                    w = (0, p.Z)(x),
-                    U = (0, c.ZP)([E.Z], (function() {
-                        return E.Z.useReducedMotion
-                    })),
-                    G = function(e, t) {
-                        var n = z((0, T.B)(t ? [e] : []), 2),
-                            r = n[0],
-                            s = n[1];
-                        o.useEffect((function() {
-                            return function() {
-                                r === e && s()
-                            }
-                        }), [r, e, s]);
-                        return r === e
-                    }(l.z$.COLLECTIBLES_PROFILE_BANNER_ANIMATION, !U && !b),
-                    H = !U && (G || w),
-                    K = (0, d.Fg)();
-                o.useEffect((function() {
-                    h.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, {
+                    r = e.className,
+                    i = m[t],
+                    l = (0, u.Z)(i).analyticsLocations;
+                (0, f.A)({
+                    location: "CollectiblesUpsellBanner"
+                });
+                (0, E.Z)({
+                    location: "CollectiblesUpsellBanner"
+                });
+                var I = s.useRef(null);
+                s.useEffect((function() {
+                    p.default.track(_.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: t,
-                        location_stack: P
+                        location_stack: l
                     })
-                }), [t, P]);
-                var V;
-                return (0, r.jsxs)("div", {
-                    ref: x,
-                    className: i()(A().container, s, (V = {}, Y(V, A().marketingPage, n), Y(V, A().containerDefaultMargin, !n), Y(V, A().falloweenBackground, C || M), V)),
-                    children: [(0, a.EQ)([b, C, M]).with([!0, !1, !1], (function() {
-                        return (0, r.jsxs)(r.Fragment, {
-                            children: [(0, r.jsx)("div", {
-                                className: A().upsellArt,
-                                "aria-hidden": !0,
-                                role: "presentation",
-                                children: (0, r.jsx)("img", {
-                                    src: W(),
-                                    className: A().profileEffectsUpsellArt,
-                                    alt: " "
-                                })
-                            }), (0, r.jsxs)("div", {
-                                className: A().mainColumn,
-                                children: [(0, r.jsx)(f.Heading, {
-                                    variant: "heading-lg/bold",
-                                    color: "always-white",
-                                    className: A().title,
-                                    children: y.Z.Messages.PROFILE_EFFECTS_HERO_BANNER_TITLE
-                                }), (0, r.jsx)(f.Text, {
-                                    className: A().textBody,
-                                    variant: "text-sm/normal",
-                                    color: "always-white",
-                                    children: y.Z.Messages.PROFILE_EFFECTS_HERO_BANNER_SUBTITLE
-                                })]
+                }), [t, l]);
+                var T;
+                return (0, o.jsxs)("div", {
+                    ref: I,
+                    className: a()(S().container, r, (T = {}, g(T, S().marketingPage, n), g(T, S().containerDefaultMargin, !n), g(T, S().falloweenBackground, !0), T)),
+                    children: [(0, o.jsxs)(o.Fragment, {
+                        children: [(0, o.jsx)("div", {
+                            className: S().upsellArt,
+                            "aria-hidden": !0,
+                            role: "presentation",
+                            children: (0, o.jsx)("img", {
+                                src: R(),
+                                className: S().profileEffectsUpsellArt,
+                                alt: " "
+                            })
+                        }), (0, o.jsxs)("div", {
+                            className: S().mainColumn,
+                            children: [(0, o.jsx)(c.Heading, {
+                                variant: "heading-lg/bold",
+                                color: "always-white",
+                                className: S().title,
+                                children: O.Z.Messages.COLLECTIBLES_FALLOWEEN_UPSELL_BANNER_TITLE
+                            }), (0, o.jsx)(c.Text, {
+                                className: S().textBody,
+                                variant: "text-sm/normal",
+                                color: "always-white",
+                                children: O.Z.Messages.COLLECTIBLES_FALLOWEEN_UPSELL_BANNER_DESCRIPTION
                             })]
-                        })
-                    })).with([a.P.any, !0, !1], (function() {
-                        return (0, r.jsxs)(r.Fragment, {
-                            children: [(0, r.jsx)("div", {
-                                className: A().upsellArt,
-                                "aria-hidden": !0,
-                                role: "presentation",
-                                children: (0, r.jsx)("img", {
-                                    src: v(),
-                                    className: A().profileEffectsUpsellArt,
-                                    alt: " "
-                                })
-                            }), (0, r.jsxs)("div", {
-                                className: A().mainColumn,
-                                children: [(0, r.jsx)(f.Heading, {
-                                    variant: "heading-lg/bold",
-                                    color: "always-white",
-                                    className: A().title,
-                                    children: y.Z.Messages.COLLECTIBLES_FALLOWEEN_UPSELL_BANNER_TITLE
-                                }), (0, r.jsx)(f.Text, {
-                                    className: A().textBody,
-                                    variant: "text-sm/normal",
-                                    color: "always-white",
-                                    children: y.Z.Messages.COLLECTIBLES_FALLOWEEN_UPSELL_BANNER_DESCRIPTION
-                                })]
-                            })]
-                        })
-                    })).with([!1, !1, !1], (function() {
-                        return (0, r.jsxs)(r.Fragment, {
-                            children: [(0, r.jsxs)("div", {
-                                className: A().avatars,
-                                "aria-hidden": !0,
-                                role: "presentation",
-                                children: [(0, r.jsx)(f.Avatar, {
-                                    className: A().avatar1,
-                                    src: (0, u.ap)(K) ? j() : L(),
-                                    avatarDecoration: (0, O.Z)("a_29a0533cb3de61aa8179810188f3830d", f.AvatarSizes.SIZE_80, H),
-                                    size: f.AvatarSizes.SIZE_80,
-                                    "aria-hidden": !0
-                                }), (0, r.jsx)(f.Avatar, {
-                                    className: A().avatar2,
-                                    src: (0, u.ap)(K) ? D() : Z(),
-                                    avatarDecoration: (0, O.Z)("a_c3c09bd122898be35093d0d59850f627", f.AvatarSizes.SIZE_80, H),
-                                    size: f.AvatarSizes.SIZE_80,
-                                    "aria-hidden": !0
-                                }), (0, r.jsx)(f.Avatar, {
-                                    className: A().avatar3,
-                                    src: (0, u.ap)(K) ? k() : B(),
-                                    avatarDecoration: (0, O.Z)("a_911e48f3a695c7f6c267843ab6a96f2f", f.AvatarSizes.SIZE_56, H),
-                                    size: f.AvatarSizes.SIZE_56,
-                                    "aria-hidden": !0
-                                })]
-                            }), (0, r.jsxs)("div", {
-                                className: A().mainColumn,
-                                children: [(0, r.jsx)(f.Heading, {
-                                    variant: "heading-lg/bold",
-                                    color: "always-white",
-                                    className: A().title,
-                                    children: y.Z.Messages.COLLECTIBLES_UPSELL_ENTRYPOINT_HEADER
-                                }), (0, r.jsx)(f.Text, {
-                                    className: A().textBody,
-                                    variant: "text-sm/normal",
-                                    color: "always-white",
-                                    children: y.Z.Messages.COLLECTIBLES_IAP_BANNER_SUBTITLE
-                                })]
-                            })]
-                        })
-                    })).with([!0, !0, !0], (function() {
-                        return (0, r.jsxs)(r.Fragment, {
-                            children: [(0, r.jsx)("div", {
-                                className: A().upsellArt,
-                                "aria-hidden": !0,
-                                role: "presentation",
-                                children: (0, r.jsx)("img", {
-                                    src: F(),
-                                    className: A().profileEffectsUpsellArt,
-                                    alt: " "
-                                })
-                            }), (0, r.jsxs)("div", {
-                                className: A().mainColumn,
-                                children: [(0, r.jsx)(f.Heading, {
-                                    variant: "heading-lg/bold",
-                                    color: "always-white",
-                                    className: A().title,
-                                    children: y.Z.Messages.COLLECTIBLES_FALLOWEEN_UPSELL_BANNER_TITLE
-                                }), (0, r.jsx)(f.Text, {
-                                    className: A().textBody,
-                                    variant: "text-sm/normal",
-                                    color: "always-white",
-                                    children: y.Z.Messages.COLLECTIBLES_FALLOWEEN_UPSELL_BANNER_DESCRIPTION
-                                })]
-                            })]
-                        })
-                    })).otherwise((function() {
-                        return null
-                    })), (0, r.jsx)(f.Button, {
+                        })]
+                    }), (0, o.jsx)(c.Button, {
                         onClick: function() {
-                            (0, R.mK)({
-                                analyticsLocations: P,
-                                analyticsSource: _
+                            (0, d.mK)({
+                                analyticsLocations: l,
+                                analyticsSource: i
                             })
                         },
-                        className: A().ctaButton,
-                        look: f.Button.Looks.INVERTED,
-                        children: y.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
+                        className: S().ctaButton,
+                        look: c.Button.Looks.INVERTED,
+                        children: O.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
                     })]
                 })
             }
@@ -6883,7 +6661,8 @@
                 c = n(809118);
 
             function l(e) {
-                return (0, o.Z)(e) ? c.H + e.name : (0, r.Z)(e) && null != e.party && null != e.party.id ? i.r9.id : (0, s.Z)(e) && null != e.url ? a._ + e.url : null != e.application_id ? e.application_id : null
+                return (0, o.Z)(e) ? c.H + e.name : (0, r.Z)(e) && null != e.party && null != e.party.id ? i.r9.id : (0,
+                    s.Z)(e) && null != e.url ? a._ + e.url : null != e.application_id ? e.application_id : null
             }
         },
         43299: (e, t, n) => {
@@ -6992,13 +6771,13 @@
                         T = t.amount,
                         S = t.currency,
                         R = t.paymentSourceTypes,
-                        m = 0 !== R.length,
-                        g = h(d),
+                        g = 0 !== R.length,
+                        m = h(d),
                         P = (0, i.T4)(T, S, {
                             style: "currency",
                             currency: S,
                             currencyDisplay: "symbol",
-                            localeOverride: g
+                            localeOverride: m
                         }),
                         y = l.Z.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY.format({
                             helpCenterLink: s.Z.getArticleURL(a.BhN.LOCALIZED_PRICING),
@@ -7026,7 +6805,7 @@
                         currencyISOCode: S.toUpperCase(),
                         helpCenterLink: s.Z.getArticleURL(a.BhN.LOCALIZED_PRICING)
                     }));
-                    if (m) {
+                    if (g) {
                         var b = O.filter((function(e) {
                                 return R.includes(e)
                             })),
@@ -7055,7 +6834,7 @@
                         localizedPricingBannerLinkOnly: l.Z.Messages.LOCALIZED_PRICING_BANNER_LINK_ONLY.format({
                             helpCenterLink: s.Z.getArticleURL(a.BhN.LOCALIZED_PRICING)
                         }),
-                        localizedPricingBannerSubNotif: m ? void 0 : l.Z.Messages.LOCALIZED_PRICING_BANNER_SUB_NOTIF
+                        localizedPricingBannerSubNotif: g ? void 0 : l.Z.Messages.LOCALIZED_PRICING_BANNER_SUB_NOTIF
                     }
                 },
                 h = function(e) {
@@ -7242,8 +7021,7 @@
                         return function(s) {
                             if (n) throw new TypeError("Generator is already executing.");
                             for (; i;) try {
-                                if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r),
-                                        0) : r.next) && !(o = o.call(r, s[1])).done) return o;
+                                if (n = 1, r && (o = 2 & s[0] ? r.return : s[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, s[1])).done) return o;
                                 (r = 0, o) && (s = [2 & s[0], o.value]);
                                 switch (s[0]) {
                                     case 0:
@@ -7349,11 +7127,11 @@
             }
 
             function R(e) {
-                return m.apply(this, arguments)
+                return g.apply(this, arguments)
             }
 
-            function m() {
-                return (m = d((function(e) {
+            function g() {
+                return (g = d((function(e) {
                     var t, n, r, o, c, f, p, d, E, T, h, R;
                     return S(this, (function(S) {
                         switch (S.label) {
@@ -7397,8 +7175,8 @@
                 }))).apply(this, arguments)
             }
 
-            function g() {
-                return (g = d((function(e) {
+            function m() {
+                return (m = d((function(e) {
                     var t, n;
                     return S(this, (function(r) {
                         switch (r.label) {
@@ -7482,7 +7260,7 @@
             function b(e) {
                 var t = (0, r.useCallback)((function() {
                     return function(e) {
-                        return g.apply(this, arguments)
+                        return m.apply(this, arguments)
                     }(e)
                 }), [JSON.stringify(e)]);
                 return P(e, t)
@@ -7571,8 +7349,8 @@
                 S = n(123435),
                 h = n(793461),
                 R = n(536392),
-                m = n(652591),
-                g = n(522382),
+                g = n(652591),
+                m = n(522382),
                 P = n(636786),
                 y = n(402727),
                 b = n(895058),
@@ -7675,7 +7453,8 @@
             const z = function(e) {
                 var t = e.endDate,
                     n = (0, K.Z)(t, 1e3);
-                return (0, r.jsx)(r.Fragment, {
+                return (0,
+                    r.jsx)(r.Fragment, {
                     children: n.days > 0 ? V.Z.Messages.BOGO_UNTIL_OFFER_ENDS_DAYS.format({
                         days: n.days
                     }) : V.Z.Messages.BOGO_UNTIL_OFFER_ENDS.format({
@@ -7688,8 +7467,8 @@
             var Q = n(611274),
                 X = n(856680),
                 q = n(83435),
-                $ = n(203600),
-                J = n(2590),
+                J = n(203600),
+                $ = n(2590),
                 ee = n(686463),
                 te = n.n(ee);
 
@@ -7729,15 +7508,15 @@
                                 variant: "text-sm/medium",
                                 color: "always-white",
                                 children: null == o ? V.Z.Messages.BOGO_PERKS_SUBTITLE_NON_SUB_FORMATTED.format({
-                                    helpCenterLink: F.Z.getArticleURL(J.BhN.SUMMER_2023_BOGO)
+                                    helpCenterLink: F.Z.getArticleURL($.BhN.SUMMER_2023_BOGO)
                                 }) : V.Z.Messages.BOGO_PERKS_SUBTITLE_SUB_FORMATTED.format({
-                                    helpCenterLink: F.Z.getArticleURL(J.BhN.SUMMER_2023_BOGO)
+                                    helpCenterLink: F.Z.getArticleURL($.BhN.SUMMER_2023_BOGO)
                                 })
                             })]
                         }), (0, r.jsx)(X.Z, {
                             buttonText: V.Z.Messages.BOGO_CLAIM_OFFER,
                             buttonTextClassName: te().subscribeButtonText,
-                            subscriptionTier: $.Si.TIER_2,
+                            subscriptionTier: J.Si.TIER_2,
                             className: te().subscribeButton,
                             forceInverted: !0
                         })]
@@ -7762,8 +7541,8 @@
                 Se = n.n(Te),
                 he = n(147520),
                 Re = n.n(he),
-                me = n(185535),
-                ge = n.n(me),
+                ge = n(185535),
+                me = n.n(ge),
                 Pe = n(350569),
                 ye = n.n(Pe),
                 be = n(315515),
@@ -7792,8 +7571,8 @@
                 Qe = n.n(ze),
                 Xe = n(506039),
                 qe = n.n(Xe),
-                $e = n(680251),
-                Je = n.n($e),
+                Je = n(680251),
+                $e = n.n(Je),
                 et = n(819425),
                 tt = n.n(et),
                 nt = n(393631),
@@ -7826,13 +7605,13 @@
                     ["GR", ve()],
                     ["FI", ye()],
                     ["PT", rt()],
-                    ["NO", Je()],
+                    ["NO", $e()],
                     ["BE", le()],
                     ["AT", ae()],
                     ["CH", de()],
                     ["FR", Ae()],
                     ["DE", Se()],
-                    ["ES", ge()],
+                    ["ES", me()],
                     ["IT", Be()],
                     ["NL", qe()],
                     ["PL", tt()],
@@ -7859,7 +7638,7 @@
                     o = (0, a.e7)([W.default], (function() {
                         return W.default.locale
                     }));
-                (0, se.U)(J.jXE.SETTINGS_PREMIUM_BANNER, n);
+                (0, se.U)($.jXE.SETTINGS_PREMIUM_BANNER, n);
                 var s = (0, a.e7)([R.Z], (function() {
                         return R.Z.getPremiumTypeSubscription()
                     })),
@@ -7905,7 +7684,7 @@
                     s = (0, a.e7)([W.default], (function() {
                         return W.default.locale
                     }));
-                (0, se.U)(J.jXE.SETTINGS_PREMIUM_BANNER, o);
+                (0, se.U)($.jXE.SETTINGS_PREMIUM_BANNER, o);
                 var c, u = (0, a.e7)([R.Z], (function() {
                         return R.Z.getPremiumTypeSubscription()
                     })),
@@ -7938,17 +7717,17 @@
                         children: [(0, r.jsx)(X.Z, {
                             forceInverted: !0,
                             className: St().ctaButton,
-                            subscriptionTier: $.Si.TIER_2
+                            subscriptionTier: J.Si.TIER_2
                         }), (0, r.jsx)(Ot.Z, {
                             forceWhite: !0,
-                            subscriptionTier: $.Si.TIER_2,
+                            subscriptionTier: J.Si.TIER_2,
                             className: St().ctaButton
                         })]
                     })]
                 })
             };
-            var mt = n(250361),
-                gt = n(396179),
+            var gt = n(250361),
+                mt = n(396179),
                 Pt = n(818417),
                 yt = n(771417),
                 bt = n.n(yt);
@@ -7973,9 +7752,9 @@
                 C.ZP.isBoostOnlySubscription(t) ? c = V.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != u && (c = C.ZP.getDisplayPremiumType(u.planId));
                 if (null == c) return null;
                 var f, p = function() {
-                        return gt.Z.open(J.oAB.SUBSCRIPTIONS)
+                        return mt.Z.open($.oAB.SUBSCRIPTIONS)
                     },
-                    d = (null != u ? C.ZP.getSkuIdForPlan(u.planId) : null) === $.Si.TIER_1;
+                    d = (null != u ? C.ZP.getSkuIdForPlan(u.planId) : null) === J.Si.TIER_1;
                 return (0, r.jsxs)(l.Card, {
                     className: i()(bt().container, n, (f = {}, At(f, bt().lightTextLink, s), At(f, bt().centerText, a), f)),
                     type: l.Card.Types.CUSTOM,
@@ -7985,7 +7764,7 @@
                         variant: "text-sm/medium",
                         color: a || s ? "always-white" : "text-normal",
                         children: d ? V.Z.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
-                            helpdeskArticle: F.Z.getArticleURL(J.BhN.PREMIUM_DETAILS),
+                            helpdeskArticle: F.Z.getArticleURL($.BhN.PREMIUM_DETAILS),
                             onSubscriptionsClick: p
                         }) : V.Z.Messages.PREMIUM_SUBSCRIPTION_MANAGE_YOURS_LINK.format({
                             subscriptionName: c,
@@ -8058,7 +7837,7 @@
                     o = e.className,
                     s = e.subscriptionTier,
                     c = null != (t = (0, a.e7)([Zt.Z], (function() {
-                        return Zt.Z.getForSkuAndInterval($.Si.TIER_0, $.rV.MONTH)
+                        return Zt.Z.getForSkuAndInterval(J.Si.TIER_0, J.rV.MONTH)
                     }))) ? (0, C.gy)(t) : "…",
                     u = (0, I.Z)(_.Z.PREMIUM_MARKETING_HERO_CTA).AnalyticsLocationProvider,
                     f = (0, xt._O)(),
@@ -8140,9 +7919,9 @@
                 Qt = n(575945),
                 Xt = n(74535),
                 qt = n(473903),
-                $t = n(131559),
-                Jt = n(288831),
-                en = n.n(Jt),
+                Jt = n(131559),
+                $t = n(288831),
+                en = n.n($t),
                 tn = n(511856),
                 nn = n.n(tn),
                 rn = n(485670),
@@ -8163,8 +7942,8 @@
                 Sn = n.n(Tn),
                 hn = n(78421),
                 Rn = n.n(hn),
-                mn = n(353808),
-                gn = n.n(mn),
+                gn = n(353808),
+                mn = n.n(gn),
                 Pn = n(17877),
                 yn = n.n(Pn),
                 bn = n(329701),
@@ -8238,8 +8017,8 @@
                             title: V.Z.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILES_PERK_TITLE,
                             description: function(e) {
                                 var t = function() {
-                                    gt.Z.open(J.oAB.PROFILE_CUSTOMIZATION, null, {
-                                        scrollPosition: $t.Y_.TRY_IT_OUT,
+                                    mt.Z.open($.oAB.PROFILE_CUSTOMIZATION, null, {
+                                        scrollPosition: Jt.Y_.TRY_IT_OUT,
                                         analyticsLocations: e
                                     })
                                 };
@@ -8286,19 +8065,19 @@
                         stickers: {
                             title: V.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
                             description: V.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                            imageSource: Xn(n, gn(), Wn()),
+                            imageSource: Xn(n, mn(), Wn()),
                             imageClassName: t.stickersImage
                         },
                         stickersBurst: {
                             title: V.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                             description: V.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                            imageSource: Xn(n, gn(), Wn()),
+                            imageSource: Xn(n, mn(), Wn()),
                             imageClassName: t.stickersImage
                         },
                         stickersPerkDiscoverability: {
                             title: V.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                             description: V.Z.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-                            imageSource: Xn(n, gn(), Wn()),
+                            imageSource: Xn(n, mn(), Wn()),
                             imageClassName: t.stickersImage
                         },
                         streaming: {
@@ -8331,8 +8110,8 @@
                         }
                     }
                 };
-            var $n = n(912154),
-                Jn = n.n($n);
+            var Jn = n(912154),
+                $n = n.n(Jn);
 
             function er(e, t) {
                 (null == t || t > e.length) && (t = e.length);
@@ -8392,11 +8171,11 @@
                         n = e.onClick;
                     return (0, r.jsxs)(l.Clickable, {
                         onClick: n,
-                        className: Jn().customButton,
+                        className: $n().customButton,
                         children: [t ? V.Z.Messages.PREMIUM_MARKETING_PERKS_SEE_LESS : V.Z.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, t ? (0, r.jsx)(zt.Z, {
-                            className: Jn().arrow
+                            className: $n().arrow
                         }) : (0, r.jsx)(Yt.Z, {
-                            className: Jn().arrow
+                            className: $n().arrow
                         })]
                     })
                 },
@@ -8416,25 +8195,25 @@
                         T = E.analyticsLocations;
                     return (0, r.jsx)(O, {
                         children: (0, r.jsxs)("div", {
-                            className: i()(Jn().perkCard, o),
+                            className: i()($n().perkCard, o),
                             children: [f ? (0, r.jsx)(jt.Z, {
-                                className: Jn().perkCardNewBadge,
+                                className: $n().perkCardNewBadge,
                                 shouldInheritBackgroundColor: !0,
                                 shouldInheritTextColor: !0
                             }) : null, d ? (0, r.jsx)(Kt, {
-                                className: Jn().perkCardEarlyAccessBadge
+                                className: $n().perkCardEarlyAccessBadge
                             }) : null, (0, r.jsx)("img", {
                                 src: s,
                                 alt: "",
-                                className: i()(a, Jn().perksCardArt)
+                                className: i()(a, $n().perksCardArt)
                             }), (0, r.jsxs)("div", {
                                 children: [(0, r.jsxs)(l.Heading, {
                                     variant: "heading-lg/extrabold",
-                                    className: Jn().perkCardHeading,
+                                    className: $n().perkCardHeading,
                                     children: [t, " ", c]
                                 }), (0, r.jsx)(l.Text, {
                                     variant: "text-sm/normal",
-                                    className: Jn().perkCardDescription,
+                                    className: $n().perkCardDescription,
                                     children: "function" == typeof n ? n(T) : n
                                 })]
                             })]
@@ -8449,7 +8228,7 @@
                     f = u[0],
                     p = u[1],
                     d = qn({
-                        styles: Jn()
+                        styles: $n()
                     }),
                     E = (0, v.ZP)([Gt.Z], (function() {
                         return Gt.Z.useReducedMotion
@@ -8463,13 +8242,13 @@
                     }).showIconSetting,
                     h = [d.emoji, d.streaming, d.upload, S ? d.customAppIcons : null, d.soundboard, T ? d.remix : d.videoBackground, O ? d.superReactions : d.longerMessages, d.stickersPerkDiscoverability, d.badgeAlt, S ? null : d.moreGuilds];
                 return (0, r.jsxs)("div", {
-                    className: i()(Jn().perksContainer, s, (t = {}, tr(t, Jn().partiallyHidden, c && !f), tr(t, Jn().subscriberNitroHome, c), tr(t, Jn().reducedMotion, E), t)),
+                    className: i()($n().perksContainer, s, (t = {}, tr(t, $n().partiallyHidden, c && !f), tr(t, $n().subscriberNitroHome, c), tr(t, $n().reducedMotion, E), t)),
                     children: [(0, r.jsx)(l.Heading, {
                         variant: "heading-xxl/extrabold",
-                        className: Jn().perksTitle,
+                        className: $n().perksTitle,
                         children: c ? V.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : V.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE
                     }), (0, r.jsx)("div", {
-                        className: i()(Jn().perkCardContainer, tr({}, Jn().perkCardContainerExpanded, f)),
+                        className: i()($n().perkCardContainer, tr({}, $n().perkCardContainerExpanded, f)),
                         children: h.map((function(e) {
                             return null != e && (0, r.jsx)(or, function(e) {
                                 for (var t = 1; t < arguments.length; t++) {
@@ -8487,10 +8266,10 @@
                         }))
                     }), c && (0, r.jsxs)(r.Fragment, {
                         children: [(0, r.jsx)("div", {
-                            className: i()((n = {}, tr(n, Jn().sizeGizmo, !f), tr(n, Jn().sizeGizmoExpanded, f), n)),
+                            className: i()((n = {}, tr(n, $n().sizeGizmo, !f), tr(n, $n().sizeGizmoExpanded, f), n)),
                             children: (0, r.jsx)(rr, {
                                 onClick: function() {
-                                    m.default.track(J.rMx.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
+                                    g.default.track($.rMx.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
                                         location_stack: _,
                                         was_expanded: f
                                     });
@@ -8499,7 +8278,7 @@
                                 isShowingAll: f
                             })
                         }), (0, r.jsx)("div", {
-                            className: i()(Jn().cover, tr({}, Jn().hidden, f))
+                            className: i()($n().cover, tr({}, $n().hidden, f))
                         })]
                     })]
                 })
@@ -8519,8 +8298,8 @@
                 Sr = n.n(Tr),
                 hr = n(53508),
                 Rr = n.n(hr),
-                mr = n(771337),
-                gr = n.n(mr),
+                gr = n(771337),
+                mr = n.n(gr),
                 Pr = n(958291),
                 yr = n.n(Pr),
                 br = n(880382),
@@ -8546,12 +8325,12 @@
                         return R.Z.getPremiumTypeSubscription()
                     })),
                     n = null != t ? C.ZP.getPremiumPlanItem(t) : null,
-                    r = (null != n ? C.ZP.getSkuIdForPlan(n.planId) : null) === $.Si.TIER_2,
+                    r = (null != n ? C.ZP.getSkuIdForPlan(n.planId) : null) === J.Si.TIER_2,
                     o = (0, dr.JP)().flipped,
                     s = (0, dr.as)().flipped,
                     i = (0, ur.Z)(),
                     a = (0, pr.Z)({
-                        scrollPosition: $t.Y_.TRY_IT_OUT,
+                        scrollPosition: Jt.Y_.TRY_IT_OUT,
                         analyticsLocations: e
                     }),
                     c = function() {
@@ -8589,7 +8368,7 @@
                         description: V.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_DESCRIPTION,
                         descriptionCta: V.Z.Messages.TAKE_ME_THERE,
                         onCtaClick: function() {
-                            gt.Z.open(J.oAB.APPEARANCE, null, {
+                            mt.Z.open($.oAB.APPEARANCE, null, {
                                 openWithoutBackstack: !0,
                                 analyticsLocations: e
                             })
@@ -8604,21 +8383,21 @@
                         descriptionCta: i ? V.Z.Messages.TAKE_ME_THERE : V.Z.Messages.LEARN_MORE,
                         pillText: V.Z.Messages.EARLY_ACCESS,
                         onCtaClick: i ? function() {
-                            gt.Z.open(J.oAB.CLIPS, null, {
+                            mt.Z.open($.oAB.CLIPS, null, {
                                 openWithoutBackstack: !0,
                                 analyticsLocations: e
                             })
                         } : function() {
-                            window.open(F.Z.getArticleURL(J.BhN.CLIPS), "_blank")
+                            window.open(F.Z.getArticleURL($.BhN.CLIPS), "_blank")
                         },
-                        perkImage: gr()
+                        perkImage: mr()
                     } : {
                         name: ir.CLIPS,
                         title: V.Z.Messages.CLIPS,
                         subtitle: V.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
                         description: V.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_NON_SUB,
                         pillText: V.Z.Messages.EARLY_ACCESS,
-                        perkImage: gr()
+                        perkImage: mr()
                     },
                     entranceSounds: r ? {
                         name: ir.ENTRANCE_SOUNDS,
@@ -8627,7 +8406,7 @@
                         description: V.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
                         descriptionCta: V.Z.Messages.TAKE_ME_THERE,
                         onCtaClick: function() {
-                            gt.Z.open(J.oAB.VOICE, $t.GA, {
+                            mt.Z.open($.oAB.VOICE, Jt.GA, {
                                 openWithoutBackstack: !0,
                                 analyticsLocations: e
                             })
@@ -8692,7 +8471,7 @@
                         description: V.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_DESCRIPTION,
                         descriptionCta: V.Z.Messages.TAKE_ME_THERE,
                         onCtaClick: function() {
-                            gt.Z.open(J.oAB.GUILD_BOOSTING, null, {
+                            mt.Z.open($.oAB.GUILD_BOOSTING, null, {
                                 openWithoutBackstack: !0,
                                 analyticsLocations: e
                             })
@@ -8915,11 +8694,11 @@
                         S = Ur(5),
                         h = S.easterEggLevel,
                         R = S.isEasterEggTriggered,
-                        g = S.onHover,
+                        m = S.onHover,
                         P = S.onUnhover;
                     e = Fr({
                         onMouseEnter: (0, jr.debounce)((function() {
-                            m.default.track(J.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
+                            g.default.track($.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                                 card_type: (0, jr.snakeCase)(t)
                             })
                         }), 800)
@@ -8928,7 +8707,7 @@
                     o.useEffect((function() {
                         if (u && p) {
                             I(!0);
-                            m.default.track(J.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
+                            g.default.track($.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
                                 card_type: t
                             });
                             null != a && (0, xr.EW)(a)
@@ -8941,8 +8720,8 @@
                         var A;
                         return (0, r.jsx)("div", {
                             className: i()(Gr().flipCardContainer, Hr({}, Gr().forceShadow, c)),
-                            onMouseEnter: g,
-                            onFocus: g,
+                            onMouseEnter: m,
+                            onFocus: m,
                             onMouseLeave: P,
                             onBlur: P,
                             children: (0, r.jsxs)("div", {
@@ -8978,7 +8757,7 @@
                             onTransitionEnd: function(e) {
                                 if (p && "transform" === e.propertyName && e.target.classList.contains(Gr().flipCard)) {
                                     I(!0);
-                                    m.default.track(J.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
+                                    g.default.track($.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
                                         card_type: t
                                     });
                                     null != a && (0, xr.EW)(a)
@@ -9075,7 +8854,7 @@
             var Qr, Xr = n(75623),
                 qr = n.n(Xr);
 
-            function $r(e, t, n) {
+            function Jr(e, t, n) {
                 t in e ? Object.defineProperty(e, t, {
                     value: n,
                     enumerable: !0,
@@ -9085,7 +8864,7 @@
                 return e
             }
 
-            function Jr(e, t) {
+            function $r(e, t) {
                 t = null != t ? t : {};
                 Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : function(e, t) {
                     var n = Object.keys(e);
@@ -9133,7 +8912,7 @@
                                 return R.Z.getPremiumTypeSubscription()
                             })),
                             n = null != t ? C.ZP.getPremiumPlanItem(t) : null,
-                            r = (null != n ? C.ZP.getSkuIdForPlan(n.planId) : null) === $.Si.TIER_2;
+                            r = (null != n ? C.ZP.getSkuIdForPlan(n.planId) : null) === J.Si.TIER_2;
                         return e ? r ? {
                             title: V.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_SUB,
                             subtitle: V.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_SUB
@@ -9165,7 +8944,7 @@
                     isShown: !a,
                     children: (0, r.jsxs)("div", {
                         ref: c,
-                        className: i()(qr().section, $r({}, qr().noBackground, a)),
+                        className: i()(qr().section, Jr({}, qr().noBackground, a)),
                         children: [(0, r.jsx)(l.Heading, {
                             variant: "heading-xxl/extrabold",
                             color: "header-primary",
@@ -9174,12 +8953,12 @@
                         }), (0, r.jsx)(l.Text, {
                             variant: "text-lg/normal",
                             color: "header-primary",
-                            className: i()(qr().subtitle, (_ = {}, $r(_, qr().fullWidth, f), $r(_, qr().moreSubtitleMargin, I), _)),
+                            className: i()(qr().subtitle, (_ = {}, Jr(_, qr().fullWidth, f), Jr(_, qr().moreSubtitleMargin, I), _)),
                             children: d.subtitle
                         }), (0, r.jsx)("div", {
                             className: qr().cardContainer,
                             children: E.map((function(e, t) {
-                                return (0, r.jsx)(zr, Jr(function(e) {
+                                return (0, r.jsx)(zr, $r(function(e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
@@ -9187,7 +8966,7 @@
                                             return Object.getOwnPropertyDescriptor(n, e).enumerable
                                         }))));
                                         r.forEach((function(t) {
-                                            $r(e, t, n[t])
+                                            Jr(e, t, n[t])
                                         }))
                                     }
                                     return e
@@ -9218,7 +8997,7 @@
                     c = e.subscriptionTier,
                     l = null === (t = (0, N.N)()) || void 0 === t ? void 0 : t.subscription_trial,
                     u = (0, A.Ng)(),
-                    f = (0, A.Wp)(u, $.Si.TIER_2) ? $.Si.TIER_2 : void 0,
+                    f = (0, A.Wp)(u, J.Si.TIER_2) ? J.Si.TIER_2 : void 0,
                     p = (0, v.ZP)([Gt.Z], (function() {
                         return Gt.Z.useReducedMotion
                     })),
@@ -9232,7 +9011,7 @@
                         immediate: p
                     }),
                     E = {
-                        section: J.jXE.MARKETING_FLOATING_CTA
+                        section: $.jXE.MARKETING_FLOATING_CTA
                     };
                 return (0, r.jsx)(to.animated.div, {
                     className: i()(ro().wrapper, (o = {}, oo(o, ro().fullscreenWrapper, a), oo(o, ro().invisible, !s), o)),
@@ -9332,9 +9111,9 @@
                     })),
                     S = null != T ? (0, C.Af)(T) : null,
                     h = null != S ? C.ZP.getSkuIdForPlan(S.planId) : null,
-                    m = null !== h && h !== $.Si.TIER_2 ? $.Si.TIER_2 : null,
-                    g = (0, b.n)(),
-                    P = null != g,
+                    g = null !== h && h !== J.Si.TIER_2 ? J.Si.TIER_2 : null,
+                    m = (0, b.n)(),
+                    P = null != m,
                     y = (0, A.Ng)(),
                     v = (0, N.N)(),
                     L = null == v || null === (t = v.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
@@ -9364,7 +9143,7 @@
                         r.jsx)(Mt, {
                         lifted: !n && M
                     }) : null, !n && P ? (0, r.jsx)(Rt, {
-                        localizedPricingPromo: g,
+                        localizedPricingPromo: m,
                         smallGap: !0
                     }) : (0, r.jsx)(x.$, {
                         onChange: function(e) {
@@ -9373,15 +9152,15 @@
                         threshold: 0,
                         active: !0,
                         children: (0, r.jsx)(Ut, {
-                            subscriptionTier: m,
+                            subscriptionTier: g,
                             isFullscreen: n || M,
                             className: i()(n ? co().fullscreenHero : M ? co().settingsHeroNoBackground : co().settingsHero, (k = {}, Oo(k, co().trialMarketingMargin, M), Oo(k, co().settingsHeroBogoHeight, !n && j), Oo(k, co().settingsHeroBogoMarginFullscreen, n && j), Oo(k, co().noTopPaddingOverride, null != T), k))
                         })
                     }), !n && (0, r.jsx)(w.Z, {
-                        type: $.cd.COLLECTIBLES_PREMIUM_MARKETING_PAGE_UPSELL,
+                        type: J.cd.COLLECTIBLES_PREMIUM_MARKETING_PAGE_UPSELL,
                         className: co().collectiblesBanner
                     }), F && n && (0, r.jsx)(w.Z, {
-                        type: $.cd.COLLECTIBLES_PREMIUM_MARKETING_PAGE_UPSELL,
+                        type: J.cd.COLLECTIBLES_PREMIUM_MARKETING_PAGE_UPSELL,
                         className: i()(co().collectiblesBanner, co().collectiblesBannerFullscreen),
                         isMarketingPage: !0
                     }), (0, r.jsxs)("div", {
@@ -9389,19 +9168,19 @@
                         children: [(0, r.jsx)(re, {
                             isFullscreen: n
                         }), n && P && (0, r.jsx)(It, {
-                            localizedPricingPromo: g
+                            localizedPricingPromo: m
                         }), (0, r.jsx)(x.$, {
                             onChange: function(e) {
                                 return d(e)
                             },
                             threshold: .1,
                             active: !0,
-                            children: (0, r.jsx)(mt.ZP, {
+                            children: (0, r.jsx)(gt.ZP, {
                                 showWumpus: !0,
-                                tier0CTAButton: L === $.Si.TIER_2 || j || null != y ? (0, r.jsx)(X.Z, {
+                                tier0CTAButton: L === J.Si.TIER_2 || j || null != y ? (0, r.jsx)(X.Z, {
                                     forceInverted: !0,
                                     showIcon: !1,
-                                    subscriptionTier: $.Si.TIER_0,
+                                    subscriptionTier: J.Si.TIER_0,
                                     className: co().marginTopForButtons,
                                     look: l.ButtonLooks.OUTLINED,
                                     color: l.ButtonColors.WHITE,
@@ -9409,13 +9188,13 @@
                                 }) : (0, r.jsx)(X.Z, {
                                     forceInverted: !0,
                                     showIcon: !1,
-                                    subscriptionTier: $.Si.TIER_0,
+                                    subscriptionTier: J.Si.TIER_0,
                                     className: co().marginTopForButtons
                                 }),
-                                tier2CTAButton: L === $.Si.TIER_0 ? (0, r.jsx)(X.Z, {
+                                tier2CTAButton: L === J.Si.TIER_0 ? (0, r.jsx)(X.Z, {
                                     forceInverted: !0,
                                     showIcon: !1,
-                                    subscriptionTier: $.Si.TIER_2,
+                                    subscriptionTier: J.Si.TIER_2,
                                     className: co().marginTopForButtons,
                                     look: l.ButtonLooks.OUTLINED,
                                     color: l.ButtonColors.WHITE,
@@ -9423,7 +9202,7 @@
                                 }) : (0, r.jsx)(X.Z, {
                                     forceInverted: !0,
                                     showIcon: !1,
-                                    subscriptionTier: $.Si.TIER_2,
+                                    subscriptionTier: J.Si.TIER_2,
                                     className: co().marginTopForButtons,
                                     isEligibleForBogoPromotion: j
                                 })
@@ -9458,7 +9237,7 @@
                     }), (0, r.jsx)(so, {
                         isVisible: E && I,
                         isFullscreen: n,
-                        subscriptionTier: m
+                        subscriptionTier: g
                     }), (0, r.jsx)(D.Z, {
                         src: uo(),
                         className: co().bottomIllustration,
@@ -9470,28 +9249,28 @@
             };
             var ho = n(455706),
                 Ro = n(726206),
-                mo = n.n(Ro);
-            const go = function(e) {
+                go = n.n(Ro);
+            const mo = function(e) {
                 var t = e.className,
                     n = (0, I.Z)(_.Z.PREMIUM_MARKETING_GIFT_SECTION).AnalyticsLocationProvider;
                 return (0, r.jsx)(n, {
                     children: (0, r.jsx)("div", {
-                        className: i()(mo().container, t),
+                        className: i()(go().container, t),
                         children: (0, r.jsxs)("div", {
-                            className: mo().textContainer,
+                            className: go().textContainer,
                             children: [(0, r.jsx)(l.Heading, {
                                 variant: "heading-lg/extrabold",
-                                className: mo().heading,
+                                className: go().heading,
                                 children: V.Z.Messages.GIFT_NITRO
                             }), (0, r.jsx)(l.Text, {
                                 variant: "text-sm/medium",
                                 children: V.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
                             }), (0, r.jsx)(ho.Z, {
                                 isGift: !0,
-                                className: mo().giftCardButton,
+                                className: go().giftCardButton,
                                 look: l.Button.Looks.OUTLINED,
                                 buttonText: V.Z.Messages.GIFT_NITRO,
-                                buttonTextClassName: mo().giftButtonCTA,
+                                buttonTextClassName: go().giftButtonCTA,
                                 color: l.Button.Colors.CUSTOM
                             })]
                         })
@@ -9510,10 +9289,10 @@
                     children: (0, r.jsxs)("div", {
                         className: i()(yo().container, t),
                         "data-testid": "subscriber-nitro-home-hero-header",
-                        children: [o && (0, r.jsx)(mt.Cy, {
+                        children: [o && (0, r.jsx)(gt.Cy, {
                             text: V.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
                             className: yo().trialPill,
-                            colorOptions: mt.VE.PREMIUM_TIER_2_WHITE_FILL
+                            colorOptions: gt.VE.PREMIUM_TIER_2_WHITE_FILL
                         }), (0, r.jsxs)("div", {
                             className: yo().textContainer,
                             children: [(0, r.jsx)(l.Heading, {
@@ -9606,7 +9385,7 @@
                 }()
             }
             const jo = function() {
-                var e, t = (Lo(e = {}, $.p9.TIER_0, V.Z.Messages.PREMIUM_TIER_0), Lo(e, $.p9.TIER_1, V.Z.Messages.PREMIUM_TIER_1), Lo(e, $.p9.TIER_2, V.Z.Messages.PREMIUM_TIER_2), e),
+                var e, t = (Lo(e = {}, J.p9.TIER_0, V.Z.Messages.PREMIUM_TIER_0), Lo(e, J.p9.TIER_1, V.Z.Messages.PREMIUM_TIER_1), Lo(e, J.p9.TIER_2, V.Z.Messages.PREMIUM_TIER_2), e),
                     n = (0, v.ZP)([R.Z], (function() {
                         return R.Z.getPremiumTypeSubscription()
                     })),
@@ -9654,7 +9433,7 @@
                             look: l.Button.Looks.OUTLINED,
                             color: l.Button.Colors.CUSTOM,
                             onClick: function() {
-                                gt.Z.open(J.oAB.SUBSCRIPTIONS, null, {
+                                mt.Z.open($.oAB.SUBSCRIPTIONS, null, {
                                     analyticsLocations: c
                                 })
                             },
@@ -9722,7 +9501,7 @@
                             isSubscriberNitroHome: !0
                         }), (0, r.jsx)(wo, {
                             className: ko().manageMembership
-                        }), (0, r.jsx)(go, {
+                        }), (0, r.jsx)(mo, {
                             className: ko().giftNitro
                         }), (0, r.jsx)("div", {
                             className: ko().footerSpacing
@@ -9744,7 +9523,7 @@
                         return R.Z.getPremiumTypeSubscription()
                     })),
                     a = null != i ? C.ZP.getPremiumPlanItem(i) : null,
-                    c = (null != a ? C.ZP.getSkuIdForPlan(a.planId) : null) === $.Si.TIER_2,
+                    c = (null != a ? C.ZP.getSkuIdForPlan(a.planId) : null) === J.Si.TIER_2,
                     l = j(!0, !c).enabled;
                 o.useEffect((function() {
                     if (null != n || null != s) {
@@ -9752,10 +9531,10 @@
                             location: "PremiumMarketing"
                         }, {
                             autoTrackExposure: !1
-                        }).enabled ? (0, g.a)(n, s) : null != n && P.Z.acknowledgeUserTrialOffer(n)
+                        }).enabled ? (0, m.a)(n, s) : null != n && P.Z.acknowledgeUserTrialOffer(n)
                     }
                 }), [n, s]);
-                var u = t === $.EZ.ApplicationStoreHome;
+                var u = t === J.EZ.ApplicationStoreHome;
                 return u && c && l ? (0, r.jsx)(Ho, {}) : (0, r.jsx)(So, {
                     isFullscreen: u
                 })
@@ -9921,7 +9700,7 @@
             };
             const qo = function(e) {
                 var t = e.entrypoint,
-                    n = void 0 === t ? $.EZ.UserSettings : t,
+                    n = void 0 === t ? J.EZ.UserSettings : t,
                     s = (0, O.Q)(),
                     v = (0, I.Z)(_.Z.PREMIUM_MARKETING),
                     C = v.AnalyticsLocationProvider,
@@ -9946,7 +9725,7 @@
                             switch (t.label) {
                                 case 0:
                                     e = Date.now();
-                                    return [4, Promise.all([f.jg(), (0, p.X8)(), f.tZ(), (0, d.Y2)(H, null, J.JjL.DISCOVERY)])];
+                                    return [4, Promise.all([f.jg(), (0, p.X8)(), f.tZ(), (0, d.Y2)(H, null, $.JjL.DISCOVERY)])];
                                 case 1:
                                     t.sent();
                                     G.current = Date.now() - e;
@@ -9962,11 +9741,11 @@
                             location: "PremiumMarketingPage"
                         }, {
                             autoTrackExposure: !1
-                        }).enabled ? (0, g.a)(x, Z) : null != x && null == x.expires_at && P.Z.acknowledgeUserTrialOffer(x)
+                        }).enabled ? (0, m.a)(x, Z) : null != x && null == x.expires_at && P.Z.acknowledgeUserTrialOffer(x)
                     }
                 }), [s, x, Z]);
                 o.useEffect((function() {
-                    U || m.default.track(J.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
+                    U || g.default.track($.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
                         location_stack: L,
                         load_duration_ms: G.current
                     })
@@ -9983,7 +9762,7 @@
                         }), (0, r.jsx)(c.Z, {
                             onChange: function(e) {
                                 if (e && !K) {
-                                    m.default.track(J.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                                    g.default.track($.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                                         location_stack: M
                                     });
                                     W(!0)
@@ -10107,8 +9886,8 @@
                 S = n(536392),
                 h = n(621329),
                 R = n(189865),
-                m = n(116094),
-                g = n(575641),
+                g = n(116094),
+                m = n(575641),
                 P = n(666870),
                 y = n(717035),
                 b = n(611274),
@@ -10216,7 +9995,7 @@
                     var t, n = e.premiumType,
                         o = (0, p.ZP)();
                     t = n === C.p9.TIER_0 ? (0, c.wj)(o) ? w() : U() : (0, c.wj)(o) ? G() : H();
-                    var s = (0, m.Px)(n);
+                    var s = (0, g.Px)(n);
                     return (0, r.jsx)("img", {
                         src: t,
                         className: x().logo,
@@ -10232,7 +10011,7 @@
                         children: [t, " ", n]
                     })
                 },
-                $ = function(e) {
+                J = function(e) {
                     var t = e.text;
                     return (0, r.jsx)(l.Text, {
                         color: "header-primary",
@@ -10240,7 +10019,7 @@
                         children: t
                     })
                 },
-                J = function(e) {
+                $ = function(e) {
                     return e.includes ? (0, r.jsxs)(r.Fragment, {
                         children: [(0, r.jsx)(h.Z, {
                             className: x().checkmarkIcon,
@@ -10338,14 +10117,14 @@
                     oe = (0, a.e7)([T.default], (function() {
                         return T.default.getCurrentUser()
                     })),
-                    se = (0, m.M5)(oe, C.p9.TIER_2),
+                    se = (0, g.M5)(oe, C.p9.TIER_2),
                     ie = (0, y.N)(),
                     ae = null == ie || null === (t = ie.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
                     ce = (0, P.rT)(),
                     le = (0, b.Vi)();
                 if (!G || !k) return null;
-                var ue, fe = m.ZP.getDefaultPrice(C.Xh.PREMIUM_MONTH_TIER_0),
-                    pe = m.ZP.getDefaultPrice(C.Xh.PREMIUM_MONTH_TIER_2),
+                var ue, fe = g.ZP.getDefaultPrice(C.Xh.PREMIUM_MONTH_TIER_0),
+                    pe = g.ZP.getDefaultPrice(C.Xh.PREMIUM_MONTH_TIER_2),
                     de = {
                         label: (0, r.jsx)(l.Heading, {
                             className: x().textColor,
@@ -10364,49 +10143,49 @@
                             text: M.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PRICE
                         }),
                         column1: (0, r.jsx)(r.Fragment, {
-                            children: (0, r.jsx)($, {
-                                text: m.ZP.formatPriceString(fe, C.rV.MONTH)
+                            children: (0, r.jsx)(J, {
+                                text: g.ZP.formatPriceString(fe, C.rV.MONTH)
                             })
                         }),
                         column2: (0, r.jsx)(r.Fragment, {
-                            children: (0, r.jsx)($, {
-                                text: m.ZP.formatPriceString(pe, C.rV.MONTH)
+                            children: (0, r.jsx)(J, {
+                                text: g.ZP.formatPriceString(pe, C.rV.MONTH)
                             })
                         })
                     }, {
                         label: (0, r.jsx)(q, {
                             text: M.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_EMOJI
                         }),
-                        column1: (0, r.jsx)(J, {
+                        column1: (0, r.jsx)($, {
                             includes: !0
                         }),
-                        column2: (0, r.jsx)(J, {
+                        column2: (0, r.jsx)($, {
                             includes: !0
                         })
                     }, {
                         label: (0, r.jsx)(q, {
                             text: M.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STICKER
                         }),
-                        column1: (0, r.jsx)(J, {
+                        column1: (0, r.jsx)($, {
                             includes: !0
                         }),
-                        column2: (0, r.jsx)(J, {
+                        column2: (0, r.jsx)($, {
                             includes: !0
                         })
                     }].concat(Y(F ? [{
                         label: (0, r.jsx)(q, {
                             text: M.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SUPER_REACTIONS
                         }),
-                        column1: K ? (0, r.jsx)(J, {
+                        column1: K ? (0, r.jsx)($, {
                             includes: !0
-                        }) : (0, r.jsx)($, {
+                        }) : (0, r.jsx)(J, {
                             text: M.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_SUPER_REACTIONS.format({
                                 weeklyReactionsNumber: I.KC.TIER_0
                             })
                         }),
-                        column2: K ? (0, r.jsx)(J, {
+                        column2: K ? (0, r.jsx)($, {
                             includes: !0
-                        }) : (0, r.jsx)($, {
+                        }) : (0, r.jsx)(J, {
                             text: M.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_SUPER_REACTIONS.format({
                                 weeklyReactionsNumber: I.KC.TIER_2
                             })
@@ -10415,124 +10194,124 @@
                         label: (0, r.jsx)(q, {
                             text: M.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_UPLOAD
                         }),
-                        column1: (0, r.jsx)($, {
-                            text: (0, m.v9)(C.p9.TIER_0)
+                        column1: (0, r.jsx)(J, {
+                            text: (0, g.v9)(C.p9.TIER_0)
                         }),
                         column2: (0,
-                            r.jsx)($, {
-                            text: (0, m.v9)(C.p9.TIER_2)
+                            r.jsx)(J, {
+                            text: (0, g.v9)(C.p9.TIER_2)
                         })
                     }, {
                         label: (0, r.jsx)(q, {
                             text: M.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_STREAMING
                         }),
-                        column1: (0, r.jsx)(J, {
+                        column1: (0, r.jsx)($, {
                             includes: !1
                         }),
-                        column2: (0, r.jsx)($, {
+                        column2: (0, r.jsx)(J, {
                             text: M.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_STREAMING_DETAILS
                         })
                     }, {
                         label: (0, r.jsx)(q, {
                             text: M.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BOOSTS.format({
                                 numBoosts: C.cb,
-                                percentageOff: (0, g.T3)(O.default.locale, C.Rr / 100)
+                                percentageOff: (0, m.T3)(O.default.locale, C.Rr / 100)
                             })
                         }),
-                        column1: (0, r.jsx)(J, {
+                        column1: (0, r.jsx)($, {
                             includes: !1
                         }),
-                        column2: (0, r.jsx)(J, {
+                        column2: (0, r.jsx)($, {
                             includes: !0
                         })
                     }, {
                         label: (0, r.jsx)(q, {
                             text: M.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PROFILE_THEMES
                         }),
-                        column1: (0, r.jsx)(J, {
+                        column1: (0, r.jsx)($, {
                             includes: !1
                         }),
-                        column2: (0, r.jsx)(J, {
+                        column2: (0, r.jsx)($, {
                             includes: !0
                         })
                     }, {
                         label: (0, r.jsx)(q, {
                             text: M.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_PROFILE
                         }),
-                        column1: (0, r.jsx)(J, {
+                        column1: (0, r.jsx)($, {
                             includes: !1
                         }),
-                        column2: (0, r.jsx)(J, {
+                        column2: (0, r.jsx)($, {
                             includes: !0
                         })
                     }, {
                         label: (0, r.jsx)(q, {
                             text: M.Z.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_GRID
                         }),
-                        column1: (0, r.jsx)(J, {
+                        column1: (0, r.jsx)($, {
                             includes: !1
                         }),
-                        column2: (0, r.jsx)(J, {
+                        column2: (0, r.jsx)($, {
                             includes: !0
                         })
                     }, {
                         label: (0, r.jsx)(q, {
                             text: M.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_CLIENT_THEME
                         }),
-                        column1: (0, r.jsx)(J, {
+                        column1: (0, r.jsx)($, {
                             includes: !1
                         }),
-                        column2: (0, r.jsx)(J, {
+                        column2: (0, r.jsx)($, {
                             includes: !0
                         })
                     }, {
                         label: (0, r.jsx)(q, {
                             text: M.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BADGE
                         }),
-                        column1: (0, r.jsx)(J, {
+                        column1: (0, r.jsx)($, {
                             includes: !0
                         }),
-                        column2: (0, r.jsx)(J, {
+                        column2: (0, r.jsx)($, {
                             includes: !0
                         })
                     }, {
                         label: (0, r.jsx)(q, {
                             text: M.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_VIDEO_BACKGROUND
                         }),
-                        column1: (0, r.jsx)(J, {
+                        column1: (0, r.jsx)($, {
                             includes: !0
                         }),
-                        column2: (0, r.jsx)(J, {
+                        column2: (0, r.jsx)($, {
                             includes: !0
                         })
                     }, {
                         label: (0, r.jsx)(q, {
                             text: M.Z.Messages.SOUNDBOARD_MARKETING_CUSTOM_SOUNDS_ANYWHERE
                         }),
-                        column1: (0, r.jsx)(J, {
+                        column1: (0, r.jsx)($, {
                             includes: !1
                         }),
-                        column2: (0, r.jsx)(J, {
+                        column2: (0, r.jsx)($, {
                             includes: !0
                         })
                     }, {
                         label: (0, r.jsx)(q, {
                             text: M.Z.Messages.SOUNDBOARD_MARKETING_CUSTOM_ENTRY_SOUNDS
                         }),
-                        column1: (0, r.jsx)(J, {
+                        column1: (0, r.jsx)($, {
                             includes: !1
                         }),
-                        column2: (0, r.jsx)(J, {
+                        column2: (0, r.jsx)($, {
                             includes: !0
                         })
                     }, {
                         label: (0, r.jsx)(q, {
                             text: M.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SERVER_LIMIT
                         }),
-                        column1: (0, r.jsx)(J, {
+                        column1: (0, r.jsx)($, {
                             includes: !1
                         }),
-                        column2: (0, r.jsx)(J, {
+                        column2: (0, r.jsx)($, {
                             includes: !0
                         })
                     }, {
@@ -10541,10 +10320,10 @@
                                 maxChars: L.en1
                             })
                         }),
-                        column1: (0, r.jsx)(J, {
+                        column1: (0, r.jsx)($, {
                             includes: !1
                         }),
-                        column2: (0, r.jsx)(J, {
+                        column2: (0, r.jsx)($, {
                             includes: !0
                         })
                     }]);
@@ -10701,8 +10480,8 @@
                 }()
             }
             var R = new Date("2022-11-29T07:59:59.000Z"),
-                m = (new Date("2022-11-28T10:59:59.000Z"), I()(R)),
-                g = (0, T.B)({
+                g = (new Date("2022-11-28T10:59:59.000Z"), I()(R)),
+                m = (0, T.B)({
                     kind: "user",
                     id: "2022-11_premium_bogo_month_promotion",
                     label: "Nitro Promo for Black Friday",
@@ -10728,7 +10507,7 @@
                 });
 
             function P() {
-                var e = g.useExperiment({
+                var e = m.useExperiment({
                         location: "c172d1_1"
                     }, {
                         autoTrackExposure: !1
@@ -10737,16 +10516,16 @@
                     n = e.canShowPromoMaterials,
                     r = function(e) {
                         var t = h(o.useState((function() {
-                                return m.isAfter(Date.now())
+                                return g.isAfter(Date.now())
                             })), 2),
                             n = t[0],
                             r = t[1];
                         o.useEffect((function() {
                             var t = new O.V7,
                                 o = function() {
-                                    var e = m.diff(Date.now(), "second");
+                                    var e = g.diff(Date.now(), "second");
                                     null == t || t.start(e, (function() {
-                                        m.isBefore(Date.now()) ? r(!1) : o()
+                                        g.isBefore(Date.now()) ? r(!1) : o()
                                     }))
                                 };
                             n && e && o();
@@ -10808,9 +10587,9 @@
                     S = void 0 !== T && T,
                     h = e.useShorterCTA,
                     R = void 0 !== h && h,
-                    m = M(e, ["forceInverted", "subscriptionTier", "isEligibleForBogoPromotion", "isPersistentCTA", "useShorterCTA"]),
-                    g = (0, a.ZP)(),
-                    v = (0, s.wj)(g) || n,
+                    g = M(e, ["forceInverted", "subscriptionTier", "isEligibleForBogoPromotion", "isPersistentCTA", "useShorterCTA"]),
+                    m = (0, a.ZP)(),
+                    v = (0, s.wj)(m) || n,
                     j = function() {
                         var e = (0, f.e7)([E.Z], (function() {
                                 return E.Z.getPremiumTypeSubscription()
@@ -10895,13 +10674,13 @@
                 }({
                     color: i.ButtonColors.BRAND,
                     look: v ? i.ButtonLooks.INVERTED : void 0,
-                    buttonShineClassName: "buttonShineClassName" in m ? m.buttonShineClassName : v ? C().brandShine : void 0,
+                    buttonShineClassName: "buttonShineClassName" in g ? g.buttonShineClassName : v ? C().brandShine : void 0,
                     trialId: null == x ? void 0 : x.id,
                     buttonText: U,
                     buttonTextClassName: D ? C().freeTrialText : void 0,
                     onlyShineOnHover: !0,
                     subscriptionTier: _
-                }, m))
+                }, g))
             }
         },
         75912: (e, t, n) => {
@@ -11309,9 +11088,9 @@
             }
             var h = !1,
                 R = {},
-                m = {};
+                g = {};
 
-            function g(e) {
+            function m(e) {
                 var t = !1;
                 e.forEach((function(e) {
                     t = !1 !== y(e) || t
@@ -11320,14 +11099,14 @@
             }
 
             function P(e) {
-                var t = m[e];
+                var t = g[e];
                 if (null == t) return !1;
                 var n = t.gameId;
                 if (null != R[n]) {
                     delete(R = E({}, R))[n][e];
                     0 === Object.values(R[n]).length && delete R[n]
                 }
-                delete(m = E({}, m))[e];
+                delete(g = E({}, g))[e];
                 return !0
             }
 
@@ -11341,12 +11120,12 @@
                 if (null == o) return P(n.id);
                 var i = (0, s.Z)(o);
                 if (null == i) return P(n.id);
-                var c, u = m[n.id];
+                var c, u = g[n.id];
                 null != u && u.gameId !== i && P(n.id);
                 var f = null !== (c = null === (t = o.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== c ? c : Date.now();
                 ! function(e, t) {
                     R = _(E({}, R), p({}, e, _(E({}, R[e]), p({}, t.userId, t))));
-                    m = _(E({}, m), p({}, t.userId, {
+                    g = _(E({}, g), p({}, t.userId, {
                         gameId: e,
                         startedPlaying: t.startedPlaying
                     }))
@@ -11362,7 +11141,7 @@
                 var e = !1;
                 a.Z.needsRefresh() || h || (e = function() {
                     R = {};
-                    m = {};
+                    g = {};
                     var e = !1;
                     i.Z.getUserIds().forEach((function(t) {
                         var n = c.default.getUser(t);
@@ -11403,7 +11182,7 @@
                     return R[e]
                 };
                 r.getUserGame = function(e) {
-                    return m[e]
+                    return g[e]
                 };
                 ! function(e, t, n) {
                     t && f(e.prototype, t);
@@ -11416,7 +11195,7 @@
                 }, {
                     key: "usersPlaying",
                     get: function() {
-                        return m
+                        return g
                     }
                 }, {
                     key: "gameIds",
@@ -11430,14 +11209,14 @@
             const N = new A(o.Z, {
                 CONNECTION_OPEN: function() {
                     R = {};
-                    m = {}
+                    g = {}
                 },
                 CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
-                    return g(e.presences)
+                    return m(e.presences)
                 },
                 LOGOUT: function() {
                     R = {};
-                    m = {}
+                    g = {}
                 },
                 PRESENCE_UPDATES: function(e) {
                     return e.updates.map((function(e) {
@@ -11447,7 +11226,7 @@
                     }))
                 },
                 PRESENCES_REPLACE: function(e) {
-                    return g(e.presences)
+                    return m(e.presences)
                 }
             })
         },
