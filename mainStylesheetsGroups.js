@@ -6159,6 +6159,7 @@
                 shopLogo: "shopLogo-2NbABu",
                 shopLogoText: "shopLogoText-2dikaw",
                 heroBanner: "heroBanner-15dNeS",
+                shopForAllHeroBanner: "shopForAllHeroBanner-jXZ8ub",
                 bannerBackgroundWrapper: "bannerBackgroundWrapper-29zgRc",
                 bannerBackground: "bannerBackground-AHhCcI",
                 bannerForeground: "bannerForeground-2T7puc",
