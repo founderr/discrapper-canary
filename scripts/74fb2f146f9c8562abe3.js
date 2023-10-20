@@ -163,8 +163,8 @@
                 V = n(539273),
                 Y = n(788169),
                 q = n(473903),
-                J = n(901654),
-                $ = n(498619),
+                $ = n(901654),
+                J = n(498619),
                 K = n(930948),
                 Q = n(72580),
                 X = n(773148),
@@ -495,7 +495,7 @@
                         Z = null,
                         M = "";
                     if (P) {
-                        Z = (0, r.jsx)($.Z, {
+                        Z = (0, r.jsx)(J.Z, {
                             className: te().slowModeIcon
                         });
                         if (w >= y.UF9.HOUR) {
@@ -613,8 +613,8 @@
                         typingUsers: (0, h.e7)([Y.Z], (function() {
                             return Y.Z.getTypingUsers(t.id)
                         })),
-                        isFocused: (0, h.e7)([J.Z], (function() {
-                            return J.Z.isFocused()
+                        isFocused: (0, h.e7)([$.Z], (function() {
+                            return $.Z.isFocused()
                         })),
                         guildId: t.guild_id,
                         slowmodeCooldownGuess: c,
@@ -870,37 +870,38 @@
                 m = n(531304),
                 g = n(677681),
                 b = n(840474),
-                y = n(210643),
-                O = n(841150),
-                v = n(916286),
-                j = n(804808),
-                w = n(30778),
-                S = n(386364),
-                x = n(203244),
-                P = n(968449),
-                E = n(804185),
-                T = n(61209),
-                C = n(682776),
-                Z = n(840922),
-                N = n(901654),
-                M = n(579722),
-                A = n(490932),
-                I = n(507488),
-                _ = n(921122),
-                R = n(763536),
-                L = n(531441),
-                D = n(96606),
-                k = n(70145),
-                F = n(621862),
-                U = n(358969),
-                H = n(234798),
-                B = n(572615),
-                z = n(524600),
-                G = n(822110),
-                W = n(503871),
-                V = n(16896),
-                Y = n(589519),
-                q = n(661076);
+                y = n(957992),
+                O = n(210643),
+                v = n(841150),
+                j = n(916286),
+                w = n(804808),
+                S = n(30778),
+                x = n(386364),
+                P = n(203244),
+                E = n(968449),
+                T = n(804185),
+                C = n(61209),
+                Z = n(682776),
+                N = n(840922),
+                M = n(901654),
+                A = n(579722),
+                I = n(490932),
+                _ = n(507488),
+                R = n(921122),
+                L = n(763536),
+                D = n(531441),
+                k = n(96606),
+                F = n(70145),
+                U = n(621862),
+                H = n(358969),
+                B = n(234798),
+                z = n(572615),
+                G = n(524600),
+                W = n(822110),
+                V = n(503871),
+                Y = n(16896),
+                q = n(589519),
+                $ = n(661076);
 
             function J(e, t) {
                 (null == t || t > e.length) && (t = e.length);
@@ -908,7 +909,7 @@
                 return r
             }
 
-            function $(e, t) {
+            function K(e, t) {
                 return function(e) {
                     if (Array.isArray(e)) return e
                 }(e) || function(e, t) {
@@ -945,9 +946,8 @@
                     throw new TypeError("Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
                 }()
             }
-            var K = n(630097),
-                Q = n(2590),
-                X = n(493254),
+            var Q = n(630097),
+                X = n(2590),
                 ee = n(939198),
                 te = n(473708),
                 ne = n(581145),
@@ -1074,21 +1074,21 @@
                     h = function(e) {
                         var t = e.threadId,
                             n = e.overrideMedia,
-                            r = (0, d.e7)([T.Z], (function() {
-                                return T.Z.getChannel(t)
+                            r = (0, d.e7)([C.Z], (function() {
+                                return C.Z.getChannel(t)
                             }));
                         s()(null != r, "the thread should not be null here, a store must have missed an update");
-                        var o = (0, d.e7)([E.ZP], (function() {
-                                return E.ZP.getCurrentSidebarChannelId(r.parent_id) === r.id
+                        var o = (0, d.e7)([T.ZP], (function() {
+                                return T.ZP.getCurrentSidebarChannelId(r.parent_id) === r.id
                             })),
-                            i = (0, H.cl)(r).firstMessage,
-                            a = (0, U.mX)({
+                            i = (0, B.cl)(r).firstMessage,
+                            a = (0, H.mX)({
                                 firstMessage: i
                             }),
                             l = a.content,
                             c = a.firstMedia,
                             u = null != n ? n : c,
-                            f = (0, U.nP)(r).messageCountText;
+                            f = (0, H.nP)(r).messageCountText;
                         return {
                             channel: r,
                             isOpen: o,
@@ -1110,7 +1110,7 @@
                     w = (0, g.Z)(),
                     S = w.ref,
                     x = w.height,
-                    P = (0, W.xH)((function(e) {
+                    P = (0, V.xH)((function(e) {
                         return e.setCardHeight
                     }));
                 o.useEffect((function() {
@@ -1119,9 +1119,9 @@
                 o.useEffect((function() {
                     null == i || i(S.current, t)
                 }), [S, i, t]);
-                var C = o.useRef(null),
-                    Z = (0, K.Z)({
-                        facepileRef: C,
+                var E = o.useRef(null),
+                    Z = (0, Q.Z)({
+                        facepileRef: E,
                         goToThread: n,
                         channel: m
                     }),
@@ -1130,7 +1130,7 @@
                     A = (0, f.JA)(t),
                     I = (A.role, A.onFocus),
                     _ = ue(A, ["role", "onFocus"]),
-                    R = (0, q.Z)(I),
+                    R = (0, $.Z)(I),
                     L = R.isFocused,
                     D = R.handleFocus,
                     k = R.handleBlur;
@@ -1168,7 +1168,7 @@
                             children: (0, r.jsx)(Oe, {
                                 channel: m,
                                 firstMessage: O,
-                                facepileRef: C
+                                facepileRef: E
                             })
                         })]
                     }), (null == O ? void 0 : O.blocked) || null == j ? null : (0, r.jsx)(Pe, {
@@ -1184,13 +1184,13 @@
                     i = e.content,
                     l = e.hasMediaAttachment,
                     s = e.containerWidth,
-                    c = (0, U.J$)(t),
+                    c = (0, H.J$)(t),
                     u = c.isNew,
                     f = c.hasUnreads,
                     d = ge(t),
                     m = function(e, t, n) {
                         var r = o.useRef(null),
-                            i = $(o.useState(!1), 2),
+                            i = K(o.useState(!1), 2),
                             a = i[0],
                             l = i[1],
                             s = o.useCallback((function() {
@@ -1211,7 +1211,7 @@
                     b = m.isNewBadgeOverflow;
                 return (0, r.jsxs)("div", {
                     className: re().body,
-                    children: [(0, r.jsx)(Y.ZP, {
+                    children: [(0, r.jsx)(q.ZP, {
                         channel: t
                     }), (0, r.jsx)("div", {
                         className: a()(re().header, le({}, re().withNewBadgeOverflow, b)),
@@ -1226,14 +1226,14 @@
                                     ref: g,
                                     children: [d, u && (0, r.jsx)("span", {
                                         className: re().newBadgeWrapper,
-                                        children: (0, r.jsx)(L.IG, {
+                                        children: (0, r.jsx)(D.IG, {
                                             className: re().newBadge,
                                             color: h.Z.unsafe_rawColors.BRAND_260.css,
                                             text: te.Z.Messages.NEW
                                         })
                                     })]
                                 })
-                            }), u && b && (0, r.jsx)(L.IG, {
+                            }), u && b && (0, r.jsx)(D.IG, {
                                 className: re().newBadge,
                                 color: h.Z.unsafe_rawColors.BRAND_260.css,
                                 text: te.Z.Messages.NEW
@@ -1253,17 +1253,17 @@
             }
 
             function ge(e) {
-                var t = (0, d.e7)([z.Z], (function() {
-                        return z.Z.getHasSearchResults(e.parent_id)
+                var t = (0, d.e7)([G.Z], (function() {
+                        return G.Z.getHasSearchResults(e.parent_id)
                     })),
-                    n = (0, d.e7)([z.Z], (function() {
-                        return z.Z.getSearchQuery(e.parent_id)
+                    n = (0, d.e7)([G.Z], (function() {
+                        return G.Z.getSearchQuery(e.parent_id)
                     })),
                     r = o.useMemo((function() {
                         return (0, b.nC)(t && null != n ? n : "")
                     }), [t, n]);
                 return o.useMemo((function() {
-                    return (0, j.ZP)({
+                    return (0, w.ZP)({
                         content: e.name,
                         embeds: []
                     }, {
@@ -1278,16 +1278,16 @@
                     o = e.content,
                     i = e.hasMediaAttachment,
                     l = e.hasUnreads,
-                    s = (0, d.e7)([Z.Z], (function() {
-                        return null != t && Z.Z.isBlocked(t.author.id)
+                    s = (0, d.e7)([N.Z], (function() {
+                        return null != t && N.Z.isBlocked(t.author.id)
                     })),
-                    c = (0, d.e7)([B.Z], (function() {
-                        return B.Z.isLoading(n.id)
+                    c = (0, d.e7)([z.Z], (function() {
+                        return z.Z.isLoading(n.id)
                     })),
-                    u = (0, d.e7)([C.Z], (function() {
-                        return C.Z.can(Q.Plq.MANAGE_MESSAGES, n)
+                    u = (0, d.e7)([Z.Z], (function() {
+                        return Z.Z.can(X.Plq.MANAGE_MESSAGES, n)
                     })),
-                    f = P.cC.useSetting(),
+                    f = E.cC.useSetting(),
                     h = null;
                 if (s) h = (0, r.jsx)(p.Text, {
                     className: re().blockedMessage,
@@ -1299,7 +1299,7 @@
                     var m = null == t ? {
                             contentPlaceholder: null,
                             renderedContent: null
-                        } : (0, R.f)(t, o, s, a()(re().messageContent, ie().inlineFormat, ie().smallFontSize), {
+                        } : (0, L.f)(t, o, s, a()(re().messageContent, ie().inlineFormat, ie().smallFontSize), {
                             iconClass: re().messageContentIcon,
                             iconSize: ee.WW
                         }),
@@ -1317,9 +1317,9 @@
                         children: null == t ? c ? null : te.Z.Messages.REPLY_QUOTE_MESSAGE_DELETED : g
                     })
                 }
-                return (0, r.jsxs)(I.a.Provider, {
-                    value: (0, v.Z)(f, u),
-                    children: [!s && (0, r.jsx)(V.Z, {
+                return (0, r.jsxs)(_.a.Provider, {
+                    value: (0, j.Z)(f, u),
+                    children: [!s && (0, r.jsx)(Y.Z, {
                         channel: n,
                         message: t,
                         renderColon: null != h,
@@ -1336,7 +1336,7 @@
                 var t = e.channel,
                     n = e.facepileRef,
                     o = e.firstMessage,
-                    i = (0, U.Q)(t),
+                    i = (0, H.Q)(t),
                     a = null != (null == o ? void 0 : o.reactions) && o.reactions.length > 0;
                 return (0, r.jsxs)("div", {
                     className: re().footer,
@@ -1380,7 +1380,7 @@
                     n = e.iconSize,
                     o = e.showReadState,
                     i = void 0 !== o && o,
-                    l = (0, U.nP)(t),
+                    l = (0, H.nP)(t),
                     s = l.messageCountText,
                     c = l.unreadCount,
                     u = i && null == c;
@@ -1388,11 +1388,11 @@
                     className: a()(re().messageCountBox, le({}, re().hasRead, u)),
                     children: [(0, r.jsx)("span", {
                         className: re().messageCountIcon,
-                        children: (0, r.jsx)(_.Z, {
+                        children: (0, r.jsx)(R.Z, {
                             width: n,
                             height: n
                         })
-                    }), "number" == typeof s ? (0, r.jsx)(M.Z, {
+                    }), "number" == typeof s ? (0, r.jsx)(A.Z, {
                         value: s,
                         digitWidth: 9,
                         className: re().messageCountText
@@ -1413,15 +1413,15 @@
             function je(e) {
                 var t = e.firstMessage,
                     n = e.channel,
-                    o = (0, d.e7)([T.Z], (function() {
-                        return T.Z.getChannel(n.parent_id)
+                    o = (0, d.e7)([C.Z], (function() {
+                        return C.Z.getChannel(n.parent_id)
                     })),
-                    i = (0, U.Bs)(o),
-                    a = (0, w.Z)(n),
+                    i = (0, H.Bs)(o),
+                    a = (0, S.Z)(n),
                     l = a.disableReactionCreates,
                     s = a.isLurking,
                     c = a.isPendingMember;
-                return null == i || l ? null : (0, r.jsx)(x.le, {
+                return null == i || l ? null : (0, r.jsx)(P.le, {
                     className: re().updateReactionButton,
                     message: t,
                     readOnly: n.isArchivedLockedThread(),
@@ -1434,7 +1434,7 @@
                     burst_count: 0,
                     me: !1,
                     me_burst: !1,
-                    type: O.O.NORMAL,
+                    type: v.O.NORMAL,
                     emojiSize: "reaction"
                 })
             }
@@ -1442,30 +1442,30 @@
             function we(e) {
                 var t, n = e.firstMessage,
                     o = e.channel,
-                    i = (0, U.IN)(n),
-                    a = (0, w.Z)(o),
+                    i = (0, H.IN)(n),
+                    a = (0, S.Z)(o),
                     l = a.disableReactionUpdates,
                     s = a.isLurking,
                     c = a.isPendingMember;
-                return null == i ? null : (0, r.jsx)(x.le, se({
+                return null == i ? null : (0, r.jsx)(P.le, se({
                     className: re().updateReactionButton,
                     message: n,
                     readOnly: l || o.isArchivedLockedThread(),
                     isLurking: s,
                     isPendingMember: c,
                     useChatFontScaling: !1,
-                    type: i.burst_count >= i.count ? O.O.BURST : O.O.NORMAL,
+                    type: i.burst_count >= i.count ? v.O.BURST : v.O.NORMAL,
                     emojiSize: "reaction"
                 }, i), "".concat(null !== (t = i.emoji.id) && void 0 !== t ? t : 0, ":").concat(i.emoji.name))
             }
 
             function Se(e) {
                 var t, n = e.channel,
-                    o = (0, F.H)(n.parent_id).sortOrder,
-                    i = (0, U.xw)(n, o),
+                    o = (0, U.H)(n.parent_id).sortOrder,
+                    i = (0, H.xw)(n, o),
                     a = null === (t = n.threadMetadata) || void 0 === t ? void 0 : t.createTimestamp,
                     l = null == a ? null : te.Z.Messages.FORUM_POST_CREATED_AT_TOOLTIP.format({
-                        timestamp: (0, k.vc)(u()(a), "LLLL")
+                        timestamp: (0, F.vc)(u()(a), "LLLL")
                     });
                 return (0, r.jsx)(p.Tooltip, {
                     text: l,
@@ -1486,10 +1486,10 @@
                 var t = e.channel,
                     n = e.userIds,
                     o = e.facepileRef,
-                    i = (0, U.iM)(t, n);
+                    i = (0, H.iM)(t, n);
                 return (0, r.jsx)("div", {
                     ref: o,
-                    children: (0, r.jsx)(D.Z, {
+                    children: (0, r.jsx)(k.Z, {
                         className: re().facepile,
                         showDefaultAvatarsForNullUsers: !0,
                         guildId: t.guild_id,
@@ -1505,23 +1505,23 @@
             function Pe(e) {
                 var t, n, o, i = e.channel,
                     l = e.firstMedia,
-                    s = (0, d.e7)([N.Z], (function() {
-                        return N.Z.isFocused()
+                    s = (0, d.e7)([M.Z], (function() {
+                        return M.Z.isFocused()
                     })),
-                    c = X.LR.test(l.src),
-                    u = P.QK.useSetting(),
-                    f = fe((0, y.hL)({
+                    c = (0, y.d$)(l.src),
+                    u = E.QK.useSetting(),
+                    f = fe((0, O.hL)({
                         media: l,
                         channel: i
                     }), 2),
                     h = f[0],
                     m = f[1],
-                    g = (0, y.MC)(m),
+                    g = (0, O.MC)(m),
                     b = l.src,
-                    O = l.width,
-                    v = l.height,
-                    j = l.alt;
-                v > O ? n = he : t = de;
+                    v = l.width,
+                    j = l.height,
+                    w = l.alt;
+                j > v ? n = he : t = de;
                 return (0, r.jsx)(p.FocusBlock, {
                     enabled: !0,
                     children: (0, r.jsxs)("div", {
@@ -1529,27 +1529,27 @@
                         onClick: function(e) {
                             return e.stopPropagation()
                         },
-                        children: [b.startsWith("data:") ? (0, r.jsx)(A.Z, {
+                        children: [b.startsWith("data:") ? (0, r.jsx)(I.Z, {
                             src: b,
                             maxHeight: t,
                             maxWidth: n,
-                            width: O,
-                            height: v,
-                            alt: null != j && h ? g : j,
+                            width: v,
+                            height: j,
+                            alt: null != w && h ? g : w,
                             className: re().thumbnailContainer,
                             imageClassName: a()((o = {}, le(o, re().obscured, h), le(o, re().thumbnailOverride, !0), o))
-                        }) : (0, S.Yi)({
+                        }) : (0, x.Yi)({
                             src: b,
                             maxHeight: t,
                             maxWidth: n,
-                            width: O,
-                            height: v,
-                            alt: null != j && h ? g : j,
+                            width: v,
+                            height: j,
+                            alt: null != w && h ? g : w,
                             autoPlay: u,
                             animated: c && !h && s,
                             containerClassName: re().thumbnailContainer,
                             imageClassName: a()(le({}, re().obscured, h))
-                        }), h && (0, r.jsx)(G.Z, {
+                        }), h && (0, r.jsx)(W.Z, {
                             iconClassname: re().obscuredTag,
                             obscureReason: m
                         })]

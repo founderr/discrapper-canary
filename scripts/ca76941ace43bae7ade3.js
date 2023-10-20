@@ -167,20 +167,21 @@
                 a = n(331607),
                 l = n(70418),
                 c = n(494889),
-                s = n(443812),
-                f = n(786170),
-                d = n(279008),
-                p = n(392354),
-                O = n(347365),
-                b = n(985774);
+                s = n(957992),
+                f = n(443812),
+                d = n(786170),
+                p = n(279008),
+                O = n(392354),
+                b = n(347365),
+                y = n(985774);
 
-            function y(e, t) {
+            function g(e, t) {
                 (null == t || t > e.length) && (t = e.length);
                 for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n];
                 return r
             }
 
-            function g(e, t, n, r, o, i, u) {
+            function E(e, t, n, r, o, i, u) {
                 try {
                     var a = e[i](u),
                         l = a.value
@@ -191,7 +192,7 @@
                 a.done ? t(l) : Promise.resolve(l).then(r, o)
             }
 
-            function E(e, t) {
+            function v(e, t) {
                 return function(e) {
                     if (Array.isArray(e)) return e
                 }(e) || function(e, t) {
@@ -219,16 +220,16 @@
                     }
                 }(e, t) || function(e, t) {
                     if (!e) return;
-                    if ("string" == typeof e) return y(e, t);
+                    if ("string" == typeof e) return g(e, t);
                     var n = Object.prototype.toString.call(e).slice(8, -1);
                     "Object" === n && e.constructor && (n = e.constructor.name);
                     if ("Map" === n || "Set" === n) return Array.from(n);
-                    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return y(e, t)
+                    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return g(e, t)
                 }(e, t) || function() {
                     throw new TypeError("Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
                 }()
             }
-            var v = function(e, t) {
+            var h = function(e, t) {
                 var n, r, o, i, u = {
                     label: 0,
                     sent: function() {
@@ -312,17 +313,17 @@
                 }
             };
 
-            function h(e) {
+            function m(e) {
                 var t, n, r = null != e ? e : {},
                     i = r.onError,
                     u = r.onSuccess,
-                    a = E(o.useState(!1), 2),
+                    a = v(o.useState(!1), 2),
                     l = a[0],
                     c = a[1],
                     s = l,
                     f = o.useCallback((n = (t = function(e, t, n, r) {
                         var o, a;
-                        return v(this, (function(l) {
+                        return h(this, (function(l) {
                             switch (l.label) {
                                 case 0:
                                     if (s) return [2];
@@ -330,14 +331,14 @@
                                     l.label = 1;
                                 case 1:
                                     l.trys.push([1, 3, 4, 5]);
-                                    return [4, (0, b.U)(e, t, n, r)];
+                                    return [4, (0, y.U)(e, t, n, r)];
                                 case 2:
                                     l.sent();
                                     null == u || u();
                                     return [3, 5];
                                 case 3:
                                     o = l.sent();
-                                    a = new O.Hx(o);
+                                    a = new b.Hx(o);
                                     null == i || i(a);
                                     return [3, 5];
                                 case 4:
@@ -354,11 +355,11 @@
                             var i = t.apply(e, n);
 
                             function u(e) {
-                                g(i, r, o, u, a, "next", e)
+                                E(i, r, o, u, a, "next", e)
                             }
 
                             function a(e) {
-                                g(i, r, o, u, a, "throw", e)
+                                E(i, r, o, u, a, "throw", e)
                             }
                             u(void 0)
                         }))
@@ -370,10 +371,9 @@
                     isReportFalsePositiveLoading: l
                 }
             }
-            var m = n(318715),
-                _ = n(352980),
-                S = new Set([a.h.IMAGE, a.h.VIDEO, a.h.GIFV]),
-                M = n(493254),
+            var _ = n(318715),
+                S = n(352980),
+                M = new Set([a.h.IMAGE, a.h.VIDEO, a.h.GIFV]),
                 j = n(473708),
                 A = n(124060),
                 I = n.n(A),
@@ -381,15 +381,14 @@
                     var t = e.attachment,
                         n = t.url,
                         o = t.description;
-                    return null == n ? null : (0,
-                        r.jsx)(T, {
+                    return null == n ? null : (0, r.jsx)(T, {
                         url: n,
                         description: o
                     })
                 },
                 P = function(e) {
                     var t, n, o, i = e.embed;
-                    if (!S.has(i.type)) return null;
+                    if (!M.has(i.type)) return null;
                     var u = void 0 !== i.video && i.type !== a.h.GIFV ? i.video.url : null !== (o = null === (t = i.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== o ? o : null === (n = i.image) || void 0 === n ? void 0 : n.url;
                     return null == u ? null : (0, r.jsx)(T, {
                         url: u
@@ -398,10 +397,10 @@
                 T = function(e) {
                     var t = e.url,
                         n = e.description,
-                        o = M.XH.test(t);
+                        o = (0, s.cb)(t);
                     return (0, r.jsx)("div", {
                         className: I().mediaContainer,
-                        children: o ? (0, r.jsx)(f.Z, {
+                        children: o ? (0, r.jsx)(d.Z, {
                             className: u()(I().video, I().media),
                             controls: !0,
                             src: t
@@ -419,65 +418,65 @@
                     i = e.attachmentId,
                     u = e.embedId,
                     a = e.transitionState,
-                    f = e.onClose,
-                    O = (0, s.Dt)(),
-                    b = (0, d.yh)(),
+                    s = e.onClose,
+                    d = (0, f.Dt)(),
+                    b = (0, p.yh)(),
                     y = function(e, t, n) {
-                        var r, o = (0, m.ZP)([_.Z], (function() {
-                                return _.Z.getMessage(e, t)
+                        var r, o = (0, _.ZP)([S.Z], (function() {
+                                return S.Z.getMessage(e, t)
                             })),
-                            i = (0, d.yh)();
+                            i = (0, p.yh)();
                         if (null == o) return [];
                         var u, a = void 0 !== n ? function(e) {
                             return e.id === n
                         } : function(e) {
-                            return (0, p.KP)({
-                                type: p.lJ.Attachment,
+                            return (0, O.KP)({
+                                type: O.lJ.Attachment,
                                 media: e
                             }, i)
                         };
                         return null !== (u = null == o || null === (r = o.attachments) || void 0 === r ? void 0 : r.filter(a)) && void 0 !== u ? u : []
                     }(t, n, i),
                     g = function(e, t, n) {
-                        var r, o = (0, m.ZP)([_.Z], (function() {
-                                return _.Z.getMessage(e, t)
+                        var r, o = (0, _.ZP)([S.Z], (function() {
+                                return S.Z.getMessage(e, t)
                             })),
-                            i = (0, d.yh)();
+                            i = (0, p.yh)();
                         if (null == o) return [];
                         var u, a = void 0 !== n ? function(e) {
                             return e.id === n
                         } : function(e) {
-                            return (0, p.KP)({
-                                type: p.lJ.Embed,
+                            return (0, O.KP)({
+                                type: O.lJ.Embed,
                                 media: e
                             }, i)
                         };
                         return null !== (u = null == o || null === (r = o.embeds) || void 0 === r ? void 0 : r.filter(a)) && void 0 !== u ? u : []
                     }(t, n, u),
-                    E = h({
+                    E = m({
                         onSuccess: o.useCallback((function() {
                             c.Z.pop();
                             (0, l.showToast)((0, l.createToast)(j.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS, l.ToastType.CUSTOM));
-                            f()
-                        }), [f]),
+                            s()
+                        }), [s]),
                         onError: function() {
                             (0, l.showToast)((0, l.createToast)(j.Z.Messages.ERROR_GENERIC_TITLE, l.ToastType.FAILURE))
                         }
                     }),
                     v = E.reportFalsePositive,
-                    S = E.isReportFalsePositiveLoading,
+                    h = E.isReportFalsePositiveLoading,
                     M = function() {
-                        (0, p.aP)({
-                            action: p.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
+                        (0, O.aP)({
+                            action: O.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                             channelId: t,
                             messageId: n
                         });
-                        f()
+                        s()
                     },
                     A = b && (y.length > 0 || g.length > 0);
                 o.useEffect((function() {
-                    A && (0, p.aP)({
-                        action: p.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
+                    A && (0, O.aP)({
+                        action: O.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
                         channelId: t,
                         messageId: n
                     })
@@ -485,14 +484,14 @@
                 A || M();
                 return (0, r.jsxs)(l.ModalRoot, {
                     transitionState: a,
-                    "aria-labelledby": O,
+                    "aria-labelledby": d,
                     size: l.ModalSize.SMALL,
                     children: [(0, r.jsxs)(l.ModalContent, {
                         children: [(0, r.jsx)(l.ModalCloseButton, {
                             onClick: M,
                             className: I().closeButton
                         }), (0, r.jsx)(l.Heading, {
-                            id: O,
+                            id: d,
                             variant: "heading-lg/semibold",
                             color: "header-primary",
                             className: I().header,
@@ -510,8 +509,8 @@
                     }), (0, r.jsxs)(l.ModalFooter, {
                         children: [(0, r.jsx)(l.Button, {
                             className: I().button,
-                            disabled: S,
-                            submitting: S,
+                            disabled: h,
+                            submitting: h,
                             size: l.Button.Sizes.MEDIUM,
                             color: l.Button.Colors.BRAND,
                             onClick: function() {
@@ -520,8 +519,8 @@
                                 })), g.map((function(e) {
                                     return e.id
                                 })));
-                                (0, p.aP)({
-                                    action: p.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
+                                (0, O.aP)({
+                                    action: O.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
                                     channelId: t,
                                     messageId: n
                                 })
@@ -529,7 +528,7 @@
                             children: j.Z.Messages.CONFIRM
                         }), (0, r.jsx)(l.Button, {
                             className: I().button,
-                            disabled: S,
+                            disabled: h,
                             color: l.Button.Colors.TRANSPARENT,
                             size: l.Button.Sizes.MEDIUM,
                             onClick: M,
@@ -876,12 +875,13 @@
                         ops: []
                     };
                     return i = {
-                        next: a(0),
-                        throw: a(1),
-                        return: a(2)
-                    }, "function" == typeof Symbol && (i[Symbol.iterator] = function() {
-                        return this
-                    }), i;
+                            next: a(0),
+                            throw: a(1),
+                            return: a(2)
+                        },
+                        "function" == typeof Symbol && (i[Symbol.iterator] = function() {
+                            return this
+                        }), i;
 
                     function a(i) {
                         return function(a) {
@@ -1008,7 +1008,8 @@
                                     case 2:
                                         r = f.sent();
                                         o = function(e) {
-                                            var t, n = (p(t = {}, c.fX.KEYWORD, []), p(t, c.fX.ML_SPAM, []), p(t, c.fX.DEFAULT_KEYWORD_LIST, []), p(t, c.fX.MENTION_SPAM, []), p(t, c.fX.USER_PROFILE, []), p(t, c.fX.SERVER_POLICY, []), t);
+                                            var t, n = (p(t = {}, c.fX.KEYWORD, []), p(t, c.fX.ML_SPAM, []),
+                                                p(t, c.fX.DEFAULT_KEYWORD_LIST, []), p(t, c.fX.MENTION_SPAM, []), p(t, c.fX.USER_PROFILE, []), p(t, c.fX.SERVER_POLICY, []), t);
                                             e.forEach((function(e) {
                                                 var t, r = e.triggerType;
                                                 null === (t = n[r]) || void 0 === t || t.push(e)
@@ -1212,8 +1213,7 @@
                 e.MEMBERS = "members";
                 e.CONTENT = "content"
             }(f || (f = {}));
-            var O = (s(d = {}, f.MEMBERS, [p[l.fX.USER_PROFILE]]),
-                    s(d, f.CONTENT, [p[l.fX.SERVER_POLICY], p[l.fX.MENTION_SPAM], p[l.fX.ML_SPAM], p[l.fX.DEFAULT_KEYWORD_LIST], p[l.fX.KEYWORD]]), d),
+            var O = (s(d = {}, f.MEMBERS, [p[l.fX.USER_PROFILE]]), s(d, f.CONTENT, [p[l.fX.SERVER_POLICY], p[l.fX.MENTION_SPAM], p[l.fX.ML_SPAM], p[l.fX.DEFAULT_KEYWORD_LIST], p[l.fX.KEYWORD]]), d),
                 b = function(e, t) {
                     return p[e].flags.has(t)
                 };
@@ -1242,7 +1242,8 @@
                     n = (0, a.oA)(e, t),
                     r = (0, u.mZ)(e);
                 return i.useMemo((function() {
-                    var e, t = (s(e = {}, f.MEMBERS, []), s(e, f.CONTENT, []), e);
+                    var e, t = (s(e = {}, f.MEMBERS, []),
+                        s(e, f.CONTENT, []), e);
                     return Object.keys(O).reduce((function(e, t) {
                         var o = O[t].filter((function(e) {
                             return !(e.type === l.fX.SERVER_POLICY && !r) && (!(e.type === l.fX.USER_PROFILE && !n) && e.perGuildMaxCount > 0)
@@ -1644,7 +1645,8 @@
                                         }
                                         try {
                                             if ((0, c.DO)(t)) {
-                                                t.triggerMetadata.keywordFilter = (0, d.cb)((0, d.Ze)(null !== (r = t.triggerMetadata.keywordFilter) && void 0 !== r ? r : []));
+                                                t.triggerMetadata.keywordFilter = (0, d.cb)((0,
+                                                    d.Ze)(null !== (r = t.triggerMetadata.keywordFilter) && void 0 !== r ? r : []));
                                                 t.triggerMetadata.allowList = (0, d.cb)((0, d.Ze)(null !== (o = t.triggerMetadata.allowList) && void 0 !== o ? o : []))
                                             }(0, c.Fn)(t) && (t.triggerMetadata.allowList = (0, d.cb)((0, d.Ze)(null !== (i = t.triggerMetadata.allowList) && void 0 !== i ? i : [])));
                                             (0, s.yU)(t, n);

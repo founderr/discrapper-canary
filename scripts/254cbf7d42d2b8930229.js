@@ -169,8 +169,8 @@
             var j = n(159689),
                 I = n(507488),
                 P = n(220496),
-                S = n(330484),
-                C = n(189865),
+                C = n(330484),
+                S = n(189865),
                 E = n(248691),
                 N = n(581373),
                 M = n(966334),
@@ -185,11 +185,11 @@
                 return r
             }
 
-            function H(e, t) {
+            function L(e, t) {
                 if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
             }
 
-            function L(e, t, n) {
+            function H(e, t, n) {
                 t in e ? Object.defineProperty(e, t, {
                     value: n,
                     enumerable: !0,
@@ -214,7 +214,7 @@
                         return Object.getOwnPropertyDescriptor(n, e).enumerable
                     }))));
                     r.forEach((function(t) {
-                        L(e, t, n[t])
+                        H(e, t, n[t])
                     }))
                 }
                 return e
@@ -334,18 +334,18 @@
                     O = void 0 === w || w,
                     j = e.autoPlay,
                     I = void 0 !== j && j,
-                    S = e.autoMute,
-                    C = e.volume,
+                    C = e.autoMute,
+                    S = e.volume,
                     N = e.onPlay,
                     M = e.onEnded,
                     T = e.onVolumeChange,
                     k = e.onMute,
                     _ = e.href,
                     D = e.messageId,
-                    H = e.channelId,
-                    L = G(i.useState(I), 2),
-                    R = L[0],
-                    B = L[1],
+                    L = e.channelId,
+                    H = G(i.useState(I), 2),
+                    R = H[0],
+                    B = H[1],
                     F = null != c && null == c.proxyURL,
                     U = i.useCallback((function() {
                         return B(!1)
@@ -394,8 +394,8 @@
                         naturalHeight: c.height,
                         onVolumeChange: T,
                         playable: O,
-                        autoMute: S,
-                        volume: C,
+                        autoMute: C,
+                        volume: S,
                         onPlay: N,
                         onMute: k
                     })
@@ -406,7 +406,7 @@
                         autoplay: "1",
                         auto_play: "1"
                     });
-                    (!0 === S || "function" == typeof S && S()) && (Y.query.mute = "1");
+                    (!0 === C || "function" == typeof C && C()) && (Y.query.mute = "1");
                     Y.search = null;
                     var z, $ = o.format(Y),
                         Q = {
@@ -483,7 +483,7 @@
                                 externalURL: _,
                                 renderLinkComponent: x,
                                 messageId: D,
-                                channelId: H
+                                channelId: L
                             }) : null
                         })
                     })]
@@ -575,7 +575,7 @@
                 var t = Z(n);
 
                 function n() {
-                    H(this, n);
+                    L(this, n);
                     var e;
                     (e = t.apply(this, arguments)).state = {
                         isVisible: null == e.props.obscureReason
@@ -597,8 +597,8 @@
                             o = i.className;
                         return (0, r.jsx)("div", {
                             "aria-hidden": n,
-                            className: a()(A().inlineMediaEmbed, o, (t = {}, L(t, A().spoilerAttachment, l === u.wk.SPOILER), L(t, A().hiddenExplicitAttachment, null != l && [u.wk.EXPLICIT_CONTENT, u.wk.POTENTIAL_EXPLICIT_CONTENT].includes(l)),
-                                L(t, A().isHidden, n), L(t, A().justifyAuto, e.usesJustifiedAutoStyle()), t)),
+                            className: a()(A().inlineMediaEmbed, o, (t = {}, H(t, A().spoilerAttachment, l === u.wk.SPOILER), H(t, A().hiddenExplicitAttachment, null != l && [u.wk.EXPLICIT_CONTENT, u.wk.POTENTIAL_EXPLICIT_CONTENT].includes(l)),
+                                H(t, A().isHidden, n), H(t, A().justifyAuto, e.usesJustifiedAutoStyle()), t)),
                             children: e.renderMedia(n)
                         })
                     };
@@ -618,7 +618,7 @@
                             y = c.media,
                             v = c.footer;
                         return (0, r.jsx)("article", {
-                            className: a()(o, A().embedFull, _().markup, (t = {}, L(t, A().isHidden, i), L(t, A().spoilerEmbed, d === u.wk.SPOILER), L(t, A().hiddenExplicitEmbed, null != d && [u.wk.EXPLICIT_CONTENT, u.wk.POTENTIAL_EXPLICIT_CONTENT].includes(d)), L(t, A().justifyAuto, e.usesJustifiedAutoStyle()), t)),
+                            className: a()(o, A().embedFull, _().markup, (t = {}, H(t, A().isHidden, i), H(t, A().spoilerEmbed, d === u.wk.SPOILER), H(t, A().hiddenExplicitEmbed, null != d && [u.wk.EXPLICIT_CONTENT, u.wk.POTENTIAL_EXPLICIT_CONTENT].includes(d)), H(t, A().justifyAuto, e.usesJustifiedAutoStyle()), t)),
                             "aria-hidden": i,
                             style: {
                                 borderColor: e.getEmbedColor(i),
@@ -627,7 +627,7 @@
                             children: (0, r.jsx)("div", {
                                 className: A().gridContainer,
                                 children: (0, r.jsxs)("div", {
-                                    className: a()((n = {}, L(n, A().grid, !0), L(n, A().hasThumbnail, null != g), n)),
+                                    className: a()((n = {}, H(n, A().grid, !0), H(n, A().hasThumbnail, null != g), n)),
                                     children: [null != s ? e.renderSuppressButton(s) : null, h, m, p, f, b, y, g, v]
                                 })
                             })
@@ -730,7 +730,7 @@
                         l = t.maxThumbnailHeight,
                         a = t.renderImageComponent,
                         o = t.autoPlayGif;
-                    return null == n ? null : (0, r.jsx)(S.G.Consumer, {
+                    return null == n ? null : (0, r.jsx)(C.G.Consumer, {
                         children: function(t) {
                             var r = t.disableAnimations;
                             return a({
@@ -855,13 +855,13 @@
                     if (null == o) return null;
                     var O, I = (0, E.q)(o),
                         P = null == m ? {} : (0, N.Cx)(m.map(N.nP)),
-                        C = j.Z.isAnimated({
+                        S = j.Z.isAnimated({
                             src: (0, E.q)(o),
                             original: o.url,
                             animated: !1
                         }),
                         M = {
-                            containerClassName: a()(x, (O = {}, L(O, A().embedMedia, !u), L(O, A().embedImage, !u), L(O, A().galleryImage, u), O)),
+                            containerClassName: a()(x, (O = {}, H(O, A().embedMedia, !u), H(O, A().embedImage, !u), H(O, A().galleryImage, u), O)),
                             imageContainerClassName: u ? A().galleryImageContainer : void 0,
                             imageClassName: u ? A().embedGalleryImageElement : void 0,
                             src: (0, E.q)(o),
@@ -881,12 +881,12 @@
                     return (0, r.jsx)(p.h.Consumer, {
                         children: function(e) {
                             return (0,
-                                r.jsx)(S.G.Consumer, {
+                                r.jsx)(C.G.Consumer, {
                                 children: function(t) {
                                     var r = t.disableAnimations;
                                     return v(W(V({}, M), {
                                         autoPlay: w && !r && !n,
-                                        renderAccessory: C ? e : null
+                                        renderAccessory: S ? e : null
                                     }))
                                 }
                             }, o.url)
@@ -916,7 +916,7 @@
                         x = s.messageId,
                         w = s.channelId,
                         O = s.obscureReason;
-                    return null == d || null == c ? null : n ? null == h ? null : (0, r.jsx)(S.G.Consumer, {
+                    return null == d || null == c ? null : n ? null == h ? null : (0, r.jsx)(C.G.Consumer, {
                         children: function(e) {
                             var t = e.disableAnimations;
                             return (0, r.jsx)(K, {
@@ -1076,7 +1076,7 @@
                         className: A().embedSuppressButton,
                         onClick: e,
                         "aria-label": g.Z.Messages.SUPPRESS_ALL_EMBEDS,
-                        children: (0, r.jsx)(C.Z, {
+                        children: (0, r.jsx)(S.Z, {
                             width: 16,
                             height: 16
                         })
@@ -1176,9 +1176,9 @@
         },
         581373: (e, t, n) => {
             n.d(t, {
-                j9: () => H,
+                j9: () => L,
                 nP: () => k,
-                Cx: () => L
+                Cx: () => H
             });
             var r = n(785893),
                 i = (n(667294), n(809784)),
@@ -1264,9 +1264,9 @@
                     }
                 }))
             }
-            var y = n(570738),
-                v = n(248691),
-                x = n(493254),
+            var y = n(957992),
+                v = n(570738),
+                x = n(248691),
                 w = n(466868),
                 O = n.n(w);
 
@@ -1306,7 +1306,7 @@
                 }
             }
 
-            function S(e, t, n) {
+            function C(e, t, n) {
                 t in e ? Object.defineProperty(e, t, {
                     value: n,
                     enumerable: !0,
@@ -1316,15 +1316,15 @@
                 return e
             }
 
-            function C() {
-                C = Object.assign || function(e) {
+            function S() {
+                S = Object.assign || function(e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = arguments[t];
                         for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r])
                     }
                     return e
                 };
-                return C.apply(this, arguments)
+                return S.apply(this, arguments)
             }
 
             function E(e) {
@@ -1335,7 +1335,7 @@
                         return Object.getOwnPropertyDescriptor(n, e).enumerable
                     }))));
                     r.forEach((function(t) {
-                        S(e, t, n[t])
+                        C(e, t, n[t])
                     }))
                 }
                 return e
@@ -1506,7 +1506,7 @@
                             case 1:
                                 e = l.sent(), i = e.default;
                                 return [2, function(e) {
-                                    var n = C({}, e);
+                                    var n = S({}, e);
                                     return (0, r.jsx)(i, N(E({}, n), {
                                         onIndexChange: null != o ? g : void 0,
                                         className: O().zoomedCarouselModalRoot,
@@ -1525,9 +1525,9 @@
             function k(e) {
                 var t = e.width,
                     n = e.height,
-                    i = (0, v.q)(e);
+                    i = (0, x.q)(e);
                 return {
-                    component: (0, r.jsx)(y.y, {
+                    component: (0, r.jsx)(v.y, {
                         width: t,
                         height: n,
                         original: e.url,
@@ -1545,15 +1545,15 @@
             function _(e) {
                 var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                if (x.IQ.test(e.filename)) {
+                if ((0, y.CO)(e.filename)) {
                     var i, l, s = null !== (i = e.width) && void 0 !== i ? i : 0,
                         u = null !== (l = e.height) && void 0 !== l ? l : 0,
-                        d = (0, v.q)({
+                        d = (0, x.q)({
                             proxyURL: e.proxy_url,
                             url: e.url
                         });
                     return {
-                        component: (0, r.jsx)(y.y, {
+                        component: (0, r.jsx)(v.y, {
                             width: s,
                             height: u,
                             original: e.url,
@@ -1578,17 +1578,17 @@
             function D(e) {
                 var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                if (x.XH.test(e.filename)) {
+                if ((0, y.NU)(e.filename)) {
                     var i, l, s = null !== (i = e.width) && void 0 !== i ? i : 0,
                         u = null !== (l = e.height) && void 0 !== l ? l : 0,
-                        d = (0, v.q)({
+                        d = (0, x.q)({
                             proxyURL: e.proxy_url,
                             url: e.url
                         }),
                         c = new URL(e.proxy_url);
                     c.searchParams.append("format", "jpeg");
                     return {
-                        component: (0, r.jsx)(y.K, {
+                        component: (0, r.jsx)(v.K, {
                             width: s,
                             height: u,
                             poster: c.toString(),
@@ -1614,7 +1614,7 @@
                 return null
             }
 
-            function H(e) {
+            function L(e) {
                 var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     r = _(e, t, n);
@@ -1623,7 +1623,7 @@
                 return null != i ? i : null
             }
 
-            function L(e, t) {
+            function H(e, t) {
                 var n = {},
                     r = !0,
                     i = !1,
