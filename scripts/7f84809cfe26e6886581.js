@@ -13894,7 +13894,7 @@
 
             function wl() {
                 var e, t, n, r, o = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    i = null === (e = "6857dba25c0954ba7b7dd573271acfea2274a20a") ? void 0 : e.substring(0, 7),
+                    i = null === (e = "c06004a6c7fa56153ca536b429e01bc978e24988") ? void 0 : e.substring(0, 7),
                     s = null === fe.Z || void 0 === fe.Z ? void 0 : fe.Z.remoteApp.getVersion(),
                     a = null === (t = null === fe.Z || void 0 === fe.Z ? void 0 : fe.Z.remoteApp.getBuildNumber) || void 0 === t ? void 0 : t(),
                     l = null === (n = null === fe.Z || void 0 === fe.Z ? void 0 : fe.Z.remoteApp.getAppArch) || void 0 === n ? void 0 : n(),
@@ -13907,7 +13907,7 @@
                         className: Zl().line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [o, " ", "239279", " ", (0, p.jsxs)("span", {
+                        children: [o, " ", "239281", " ", (0, p.jsxs)("span", {
                             className: Zl().versionHash,
                             children: ["(", i, ")"]
                         })]

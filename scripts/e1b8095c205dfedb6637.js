@@ -1128,12 +1128,13 @@
                     o = T.ZP.canUseCollectibles(t),
                     a = (0, A.Z)({
                         location: "CollectiblesShopHeader"
-                    }).shopForAllEnabled;
+                    }).shopForAllEnabled,
+                    s = a && !o;
                 return (0, n.jsxs)("div", {
-                    className: i()(We().heroBanner, Qe({}, We().shopForAllHeroBanner, a)),
+                    className: i()(We().heroBanner, Qe({}, We().shopForAllHeroBanner, s)),
                     children: [(0, n.jsxs)("div", {
                         className: i()(We().heroDescription, Qe({}, We().heroDescriptionWithSidebar, !r)),
-                        children: [!a && (0, n.jsxs)(f.Text, {
+                        children: [!s && (0, n.jsxs)(f.Text, {
                             color: "always-white",
                             variant: "eyebrow",
                             className: We().premiumBadgeWrapper,
@@ -1153,7 +1154,7 @@
                             color: "always-white",
                             variant: "text-lg/normal",
                             children: a ? Y.Z.Messages.COLLECTIBLES_SFA_HERO_BANNER_SUBTITLE : Y.Z.Messages.COLLECTIBLES_SHOP_HERO_BANNER_SUBTITLE
-                        }), o || a ? null : (0, n.jsx)(oe.Z, {
+                        }), a || o ? null : (0, n.jsx)(oe.Z, {
                             className: We().subscribeButton,
                             isTrialCTA: !0,
                             buttonText: Y.Z.Messages.COLLECTIBLES_NON_PREMIUM_SHOP_CTA,
