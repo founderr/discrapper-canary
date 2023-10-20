@@ -111,8 +111,8 @@
         283920: (e, t, n) => {
             e.exports = n.p + "cb1043c312ec65507573c06c37f6ee63.gif"
         },
-        277825: (e, t, n) => {
-            e.exports = n.p + "e1675e7dbfc9d3707b18f1570255d27f.png"
+        449452: (e, t, n) => {
+            e.exports = n.p + "373437d267ae21d194a7562bfe135404.png"
         },
         226867: (e, t, n) => {
             e.exports = n.p + "84b8a1a47627caf0b6d6dae9fc28f1c5.png"
@@ -49433,7 +49433,7 @@
                 RJ = n(613815),
                 wJ = n(35602),
                 xJ = n.n(wJ),
-                MJ = n(277825),
+                MJ = n(449452),
                 LJ = n.n(MJ);
             const ZJ = function() {
                 var e = (0, RI.Z)(Kc.Z.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP).analyticsLocations;
@@ -49448,12 +49448,12 @@
                             analyticsSource: Kc.Z.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP
                         })
                     },
-                    header: $.Z.Messages.COLLECTIBLES_SHOP_FOR_ALL_COACHMARK_HEADER,
-                    body: $.Z.Messages.COLLECTIBLES_SHOP_FOR_ALL_COACHMARK_DESCRIPTION,
-                    artClassName: xJ().art,
+                    header: $.Z.Messages.COLLECTIBLES_SFA_TITLE,
+                    body: $.Z.Messages.COLLECTIBLES_SFA_COACHMARK_DESCRIPTION,
                     art: (0, r.jsx)("img", {
-                        alt: "",
-                        src: LJ()
+                        className: xJ().art,
+                        src: LJ(),
+                        alt: ""
                     })
                 })
             };
@@ -49759,8 +49759,7 @@
                     n = e.onClose,
                     i = e.user,
                     a = a0(i).dismiss,
-                    l = (0,
-                        n0.ZP)(),
+                    l = (0, n0.ZP)(),
                     u = l.categories,
                     f = l.isFetching,
                     d = (0, e0.Z)({
@@ -49823,8 +49822,7 @@
                     style: v,
                     children: [(0, r.jsx)("div", {
                         className: c0().content,
-                        children: (0,
-                            r.jsx)(c.HeadingLevel, {
+                        children: (0, r.jsx)(c.HeadingLevel, {
                             component: (0, r.jsxs)(c.Heading, {
                                 variant: "heading-lg/semibold",
                                 className: c0().title,
@@ -49874,8 +49872,7 @@
                     }),
                     u = l.pendingAvatarDecoration,
                     f = l.setPendingAvatarDecoration;
-                return (0,
-                    r.jsx)(c.FocusRing, {
+                return (0, r.jsx)(c.FocusRing, {
                     children: (0, r.jsx)(c.Clickable, f0(u0({}, a), {
                         className: Bt()(c0().item, l0({}, c0().selectedItem, (null == u ? void 0 : u.skuId) === t.skuId)),
                         onClick: function() {
@@ -62970,7 +62967,7 @@
                         children: [(0, r.jsx)(tn, {
                             className: hoe().icon
                         }), $.Z.Messages.DEV_NOTICE_STAGING.format({
-                            buildNumber: "239080"
+                            buildNumber: "239087"
                         }), (0, r.jsx)(u, {})]
                     })
                 }

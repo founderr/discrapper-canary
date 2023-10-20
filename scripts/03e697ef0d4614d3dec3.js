@@ -1149,7 +1149,7 @@
                             className: We().heroSubtitle,
                             color: "always-white",
                             variant: "text-lg/normal",
-                            children: Y.Z.Messages.COLLECTIBLES_SHOP_HERO_BANNER_SUBTITLE
+                            children: a ? Y.Z.Messages.COLLECTIBLES_SFA_HERO_BANNER_SUBTITLE : Y.Z.Messages.COLLECTIBLES_SHOP_HERO_BANNER_SUBTITLE
                         }), o || a ? null : (0, n.jsx)(oe.Z, {
                             className: We().subscribeButton,
                             isTrialCTA: !0,
@@ -1348,7 +1348,8 @@
                             className: br().discordLogo,
                             children: [(0, n.jsx)(F.Z, {
                                 className: br().discordIcon
-                            }), (0, n.jsx)(H.Z, {
+                            }), (0,
+                                n.jsx)(H.Z, {
                                 className: br().discordWordmark
                             })]
                         }), (0, n.jsx)("img", {
@@ -1403,8 +1404,7 @@
                             })
                         }), (0, n.jsx)("div", {
                             className: br().greenSmoke,
-                            children: (0,
-                                n.jsx)(f.Avatar, {
+                            children: (0, n.jsx)(f.Avatar, {
                                 avatarDecoration: v,
                                 "aria-label": Y.Z.Messages.USER_SETTINGS_AVATAR,
                                 src: mr(),
