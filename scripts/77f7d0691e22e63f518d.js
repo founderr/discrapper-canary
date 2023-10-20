@@ -461,7 +461,7 @@
                                         })
                                     },
                                     children: ee ? D.Z.Messages.COLLECTIBLES_BUY_PROFILE_EFFECT : D.Z.Messages.COLLECTIBLES_BUY_DECORATION
-                                }) : re(D.Z.Messages.COLLECTIBLES_NON_PREMIUM_SHOP_CTA), !y || Y ? null : (0, r.jsx)(p.Z, {
+                                }) : re(D.Z.Messages.COLLECTIBLES_NON_PREMIUM_SHOP_CTA), !y || Y || null != _ ? null : (0, r.jsx)(p.Z, {
                                     subscriptionTier: K.Si.TIER_2,
                                     fullWidth: !0,
                                     color: i.Button.Colors.WHITE,
