@@ -313,43 +313,44 @@
                     T = e.guildScheduledEvent,
                     D = e.isActive,
                     N = e.rsvped,
-                    x = e.onActionTaken,
-                    G = function(e) {
-                        e.stopPropagation();
-                        N ? E.Z.deleteRsvpForGuildEvent(S, R) : E.Z.createRsvpForGuildEvent(S, R)
-                    },
+                    x = e.recurrenceId,
+                    G = e.onActionTaken,
                     k = function(e) {
                         e.stopPropagation();
-                        var n = p.ZP.getDefaultChannel(R);
-                        (0, o.closeAllModals)();
-                        (0, d.XU)(R, null == n ? void 0 : n.id)
+                        N ? E.Z.deleteRsvpForGuildEvent(A, V) : E.Z.createRsvpForGuildEvent(A, V)
                     },
-                    L = T.scheduled_start_time,
-                    S = T.id,
-                    A = T.entity_type,
-                    R = T.guild_id,
-                    V = (0, (0, s.XJ)(null != O ? O : n).canManageGuildEvent)(T),
-                    U = (0, b.ZP)(T),
-                    X = (0, Z.T)(null == O ? void 0 : O.id, T.id),
-                    W = (0, _.ub)(L).withinStartWindow,
-                    F = (0, i.e7)([v.Z], (function() {
+                    L = function(e) {
+                        e.stopPropagation();
+                        var n = p.ZP.getDefaultChannel(V);
+                        (0, o.closeAllModals)();
+                        (0, d.XU)(V, null == n ? void 0 : n.id)
+                    },
+                    S = T.scheduled_start_time,
+                    A = T.id,
+                    R = T.entity_type,
+                    V = T.guild_id,
+                    U = (0, (0, s.XJ)(null != O ? O : n).canManageGuildEvent)(T),
+                    X = (0, b.ZP)(T),
+                    W = (0, Z.T)(null == O ? void 0 : O.id, T.id),
+                    F = (0, _.ub)(S).withinStartWindow,
+                    J = (0, i.e7)([v.Z], (function() {
                         return !(null == O ? void 0 : O.isGuildVocal()) || v.Z.can(m.Plq.CONNECT, O)
                     }), [O]),
-                    J = (0, c.J)(R);
+                    q = (0, c.J)(V);
 
-                function q() {
-                    return (q = w((function(e) {
+                function B() {
+                    return (B = w((function(e) {
                         return M(this, (function(n) {
                             switch (n.label) {
                                 case 0:
                                     e.stopPropagation();
-                                    return [4, u.Z.joinGuild(R)];
+                                    return [4, u.Z.joinGuild(V)];
                                 case 1:
                                     n.sent();
                                     h.Z.addConditionalChangeListener((function() {
-                                        if (null == h.Z.getGuild(R)) return !0;
-                                        D || G(e);
-                                        k(e);
+                                        if (null == h.Z.getGuild(V)) return !0;
+                                        D || k(e);
+                                        L(e);
                                         return !1
                                     }));
                                     return [2]
@@ -358,16 +359,15 @@
                     }))).apply(this, arguments)
                 }
                 return {
-                    onDeleteClick: V ? function(e) {
+                    onDeleteClick: U ? function(e) {
                         e.stopPropagation();
-                        V && !D && (0,
-                            o.openModal)((function(e) {
+                        U && !D && (0, o.openModal)((function(e) {
                             return (0, r.jsx)(o.ConfirmModal, I(j({}, e), {
                                 header: C.Z.Messages.GUILD_EVENT_DELETE_CONFIRM_HEADER,
                                 confirmText: C.Z.Messages.DELETE,
                                 cancelText: C.Z.Messages.CANCEL,
                                 onConfirm: function() {
-                                    return E.Z.deleteGuildEvent(S, R)
+                                    return E.Z.deleteGuildEvent(A, V)
                                 },
                                 children: (0, r.jsx)(o.Text, {
                                     variant: "text-md/normal",
@@ -383,12 +383,13 @@
                             return M(this, (function(o) {
                                 switch (o.label) {
                                     case 0:
-                                        return [4, Promise.all([t.e(40532), t.e(71718), t.e(49518), t.e(71575), t.e(91406), t.e(43244), t.e(54368), t.e(65278), t.e(1441), t.e(45893)]).then(t.bind(t, 171037))];
+                                        return [4, Promise.all([t.e(40532), t.e(71718), t.e(49518), t.e(71575), t.e(91406), t.e(43244), t.e(54368), t.e(65278), t.e(1441), t.e(69127)]).then(t.bind(t, 808810))];
                                     case 1:
                                         e = o.sent(), i = e.default;
                                         return [2, function(e) {
                                             return (0, r.jsx)(i, j({
-                                                guildEventId: S,
+                                                guildEventId: A,
+                                                recurrenceId: x,
                                                 channel: O,
                                                 guild: n
                                             }, e))
@@ -397,21 +398,21 @@
                             }))
                         })))
                     },
-                    onJoinClick: F || J ? function(e) {
+                    onJoinClick: J || q ? function(e) {
                         e.stopPropagation();
-                        if (J) {
-                            null == x || x();
-                            (0, a.hk)(R)
+                        if (q) {
+                            null == G || G();
+                            (0, a.hk)(V)
                         } else if (null == O ? void 0 : O.isGuildStageVoice()) {
                             (0, f.Cq)(O);
-                            null == x || x()
+                            null == G || G()
                         } else if (null == O ? void 0 : O.isGuildVoice()) {
                             E.Z.joinVoiceEvent(O.guild_id, O.id);
-                            null == x || x()
+                            null == G || G()
                         }
                     } : void 0,
-                    onRsvpClick: G,
-                    onStartClick: V && W ? function(e) {
+                    onRsvpClick: k,
+                    onStartClick: U && F ? function(e) {
                         e.stopPropagation();
                         (0, o.openModalLazy)(w((function() {
                             var e, n;
@@ -424,7 +425,7 @@
                                         return [2, function(e) {
                                             return (0, r.jsx)(n, I(j({}, e), {
                                                 event: T,
-                                                onSuccess: x
+                                                onSuccess: G
                                             }))
                                         }]
                                 }
@@ -434,7 +435,7 @@
                     onInviteClick: function(e) {
                         e.stopPropagation();
                         if (null != n)
-                            if (U && X)(0, o.openModalLazy)(w((function() {
+                            if (X && W)(0, o.openModalLazy)(w((function() {
                                 var e, i;
                                 return M(this, (function(o) {
                                     switch (o.label) {
@@ -459,21 +460,21 @@
                                         t = e.guildEventId;
                                     return "https://discord.com/events/".concat(n, "/").concat(t)
                                 }({
-                                    guildId: R,
-                                    guildEventId: S
+                                    guildId: V,
+                                    guildEventId: A
                                 });
                                 (0, y.JG)(i);
                                 g.default.track(m.rMx.GUILD_SCHEDULED_EVENT_LINK_COPIED, {
-                                    guild_id: R,
-                                    guild_scheduled_event_id: S
+                                    guild_id: V,
+                                    guild_scheduled_event_id: A
                                 })
                             }
                     },
-                    onEndClick: V && A === P.WX.EXTERNAL && D ? function(e) {
+                    onEndClick: U && R === P.WX.EXTERNAL && D ? function(e) {
                         e.stopPropagation();
-                        if (V) {
+                        if (U) {
                             var n = function() {
-                                E.Z.endEvent(S, R);
+                                E.Z.endEvent(A, V);
                                 (0, o.closeAllModals)()
                             };
                             (0, o.openModal)((function(e) {
@@ -491,9 +492,9 @@
                         }
                     } : void 0,
                     onJoinGuildClick: function(e) {
-                        return q.apply(this, arguments)
+                        return B.apply(this, arguments)
                     },
-                    onGoToGuildClick: k
+                    onGoToGuildClick: L
                 }
             }
         }
