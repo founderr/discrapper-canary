@@ -71,7 +71,7 @@
                     },
                     "aria-label": "",
                     children: (0, l.jsx)(O.z, {
-                        startTime: n.toLocaleDateString(),
+                        startTime: n.toISOString(),
                         status: I.p1.SCHEDULED,
                         eventType: t.entity_type
                     })
@@ -94,7 +94,7 @@
                 return e
             }
 
-            function D(e) {
+            function G(e) {
                 for (var n = 1; n < arguments.length; n++) {
                     var i = null != arguments[n] ? arguments[n] : {},
                         l = Object.keys(i);
@@ -108,7 +108,7 @@
                 return e
             }
 
-            function G(e, n) {
+            function D(e, n) {
                 n = null != n ? n : {};
                 Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : function(e, n) {
                     var i = Object.keys(e);
@@ -147,14 +147,14 @@
                     shouldShow: !o && null != i,
                     children: function(e) {
                         var r;
-                        return (0, l.jsxs)(c.Clickable, G(D({}, e), {
+                        return (0, l.jsxs)(c.Clickable, D(G({}, e), {
                             className: a()(R().inline, R().channelContainer, (r = {}, M(r, R().channelContainerEnabled, o && null != i), M(r, R().channelContainerDisabled, !o && null != i), r)),
                             onClick: i,
                             children: [(0, l.jsx)(c.Tooltip, {
                                 text: _.Z.Messages.GUILD_EVENT_PRIVATE_CHANNEL_TOOLTIP,
                                 shouldShow: t && u && o && null != i,
                                 children: function(e) {
-                                    return null != g ? (0, l.jsx)(g, G(D({}, e), {
+                                    return null != g ? (0, l.jsx)(g, D(G({}, e), {
                                         width: 20,
                                         height: 20,
                                         className: R().icon
@@ -227,8 +227,8 @@
                     S = void 0 !== y && y,
                     Z = e.isHub,
                     w = void 0 !== Z && Z,
-                    D = e.speakers,
-                    G = e.speakerCount,
+                    G = e.speakers,
+                    D = e.speakerCount,
                     H = e.rsvped,
                     V = e.canInvite,
                     B = e.location,
@@ -286,10 +286,10 @@
                             isNew: ne,
                             guildEventId: ie,
                             eventPreview: le
-                        }), x && null != r && null != D && G > 0 && (0, l.jsx)(A.Z, {
+                        }), x && null != r && null != G && D > 0 && (0, l.jsx)(A.Z, {
                             guild: r,
-                            speakers: D,
-                            speakerCount: G,
+                            speakers: G,
+                            speakerCount: D,
                             className: R().spacing
                         }), (0, l.jsx)("hr", {
                             className: R().divider
