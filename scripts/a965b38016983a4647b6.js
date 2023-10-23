@@ -13894,7 +13894,7 @@
 
             function wl() {
                 var e, t, n, r, o = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    i = null === (e = "f15ec40b32485bfb2ebcb0ac1591e2c40bfc7f15") ? void 0 : e.substring(0, 7),
+                    i = null === (e = "349006036a0ac74f847d70e2b332b441bb8a9bfb") ? void 0 : e.substring(0, 7),
                     s = null === fe.Z || void 0 === fe.Z ? void 0 : fe.Z.remoteApp.getVersion(),
                     a = null === (t = null === fe.Z || void 0 === fe.Z ? void 0 : fe.Z.remoteApp.getBuildNumber) || void 0 === t ? void 0 : t(),
                     l = null === (n = null === fe.Z || void 0 === fe.Z ? void 0 : fe.Z.remoteApp.getAppArch) || void 0 === n ? void 0 : n(),
@@ -13907,7 +13907,7 @@
                         className: Zl().line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [o, " ", "239726", " ", (0, p.jsxs)("span", {
+                        children: [o, " ", "239733", " ", (0, p.jsxs)("span", {
                             className: Zl().versionHash,
                             children: ["(", i, ")"]
                         })]
@@ -14946,7 +14946,7 @@
                     })
                 })
             };
-            var Zc = n(264486);
+            var Zc = n(801501);
 
             function wc() {
                 var e = (0, r.e7)([no.default], (function() {
