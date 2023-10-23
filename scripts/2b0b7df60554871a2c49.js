@@ -20671,17 +20671,16 @@
                 yc = function(e) {
                     var t = e.attachmentsForLayout,
                         n = e.getAttachmentKind,
-                        o = e.isSingleImage;
+                        o = e.isSingleImage,
+                        i = t[0];
                     return (0, r.jsx)("div", {
                         className: a()(oc().oneByOneGrid, o ? oc().oneByOneGridSingle : oc().oneByOneGridMosaic),
-                        children: t.map((function(e) {
-                            return (0, r.jsx)(Ec, {
-                                props: e,
-                                attachmentKind: n(e.attachment.id),
-                                useFullWidth: !o,
-                                isSingleItem: !0
-                            }, e.attachment.id)
-                        }))
+                        children: (0, r.jsx)(Ec, {
+                            props: i,
+                            attachmentKind: n(i.attachment.id),
+                            useFullWidth: !o,
+                            isSingleItem: !0
+                        })
                     })
                 },
                 bc = function(e) {
@@ -20792,7 +20791,7 @@
                     return (0, r.jsx)(Cs.h.Provider, {
                         value: n.gifFavoriteButton,
                         children: (0, r.jsx)(nc, lc({}, h))
-                    }, n.attachment.id)
+                    })
                 };
             const _c = function(e) {
                 var t, n = e.attachments,
@@ -21137,7 +21136,8 @@
                 if (null != n) {
                     var c;
                     return (0, r.jsx)("div", {
-                        className: a()(Jc().channel, (c = {}, Xc(c, Jc().stacked, o), Xc(c, Jc().ended, i), c)),
+                        className: a()(Jc().channel, (c = {},
+                            Xc(c, Jc().stacked, o), Xc(c, Jc().ended, i), c)),
                         children: (0, r.jsx)(Ol.Z, {
                             children: (0, r.jsx)(f.Text, {
                                 variant: "text-xs/normal",
@@ -21185,8 +21185,7 @@
                 var v = (0, s.e7)([gr.Z], (function() {
                         return null != n.guild ? gr.Z.getGuild(n.guild.id) : null
                     }), [n]),
-                    E = (0,
-                        Zt.Z)([d.id])[0],
+                    E = (0, Zt.Z)([d.id])[0],
                     _ = (0, s.e7)([Kt.ZP], (function() {
                         var e;
                         return null != (null == n ? void 0 : n.channel) && (null === (e = Kt.ZP.getSelfEmbeddedActivityForChannel(n.channel.id)) || void 0 === e ? void 0 : e.application_id) === d.id
@@ -21244,8 +21243,7 @@
                         className: a()(Jc().content, (k = {}, Xc(k, Jc().large, m), Xc(k, Jc().stacked, O), k)),
                         children: [(0, r.jsxs)("div", {
                             className: Jc().info,
-                            children: [(0,
-                                r.jsx)(f.FormTitle, {
+                            children: [(0, r.jsx)(f.FormTitle, {
                                 children: N ? oe.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_TITLE_INVITED_TO_JOIN : oe.Z.Messages.INVITE_BUTTON_TITLE_INVITED
                             }), (0, r.jsx)(f.Heading, {
                                 className: Jc().heading,
