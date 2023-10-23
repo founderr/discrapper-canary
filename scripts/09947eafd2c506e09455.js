@@ -8972,7 +8972,7 @@
                 var f = n === Xr.WHATS_NEW;
                 o.useEffect((function() {
                     var e = c.current;
-                    if (null != e && u && !f) {
+                    if (null != e && u && f) {
                         var t = requestAnimationFrame((function() {
                             e.scrollIntoView({
                                 behavior: "smooth"
