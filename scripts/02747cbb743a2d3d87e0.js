@@ -1,10 +1,10 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
     [58820], {
         191505: (e, s, n) => {
-            e.exports = n.p + "fd394e078cb4a49bb746cd0badd68702.webm"
+            e.exports = n.p + "218dcd68427f85e856f226204ed2da0d.webm"
         },
         208535: (e, s, n) => {
-            e.exports = n.p + "85680f1b119d34559007f0d54abc8947.webm"
+            e.exports = n.p + "eeb5b4e8c72a4de5e1bfa2a1e613bd85.webm"
         },
         745920: (e, s, n) => {
             e.exports = n.p + "2d889bf9114df188325d15f9e517c325.mov"
@@ -93,7 +93,7 @@
                 },
                 getLoadingTips: function() {
                     var e = Date.now();
-                    if (!(e < c || e > u)) return "en-US" === t.Z.getLocale() || e >= 16982532e5 ? [t.Z.Messages.HALLOWEEN_LOADING_TEXT_1, t.Z.Messages.HALLOWEEN_LOADING_TEXT_2, t.Z.Messages.HALLOWEEN_LOADING_TEXT_3, t.Z.Messages.HALLOWEEN_LOADING_TEXT_4, t.Z.Messages.HALLOWEEN_LOADING_TEXT_5, t.Z.Messages.HALLOWEEN_LOADING_TEXT_6, t.Z.Messages.HALLOWEEN_LOADING_TEXT_7, t.Z.Messages.HALLOWEEN_LOADING_TEXT_8, t.Z.Messages.HALLOWEEN_LOADING_TEXT_9] : void 0
+                    if (!(e < c || e > u)) return [t.Z.Messages.HALLOWEEN_LOADING_TEXT_1, t.Z.Messages.HALLOWEEN_LOADING_TEXT_2, t.Z.Messages.HALLOWEEN_LOADING_TEXT_3, t.Z.Messages.HALLOWEEN_LOADING_TEXT_4, t.Z.Messages.HALLOWEEN_LOADING_TEXT_5, t.Z.Messages.HALLOWEEN_LOADING_TEXT_6, t.Z.Messages.HALLOWEEN_LOADING_TEXT_7, t.Z.Messages.HALLOWEEN_LOADING_TEXT_8, t.Z.Messages.HALLOWEEN_LOADING_TEXT_9]
                 }
             }
         },
@@ -109,8 +109,8 @@
                 MC: () => I,
                 Vj: () => A,
                 ZP: () => B,
-                gO: () => S,
-                i_: () => D,
+                gO: () => D,
+                i_: () => S,
                 jQ: () => Z,
                 qE: () => O,
                 v6: () => C,
@@ -128,10 +128,10 @@
                 m = n(646161),
                 p = n(348592),
                 f = n(463473),
-                v = n(2590),
-                N = n(473708),
-                b = n(385994),
-                x = n.n(b);
+                N = n(2590),
+                v = n(473708),
+                x = n(385994),
+                b = n.n(x);
 
             function g(e, s, n) {
                 s in e ? Object.defineProperty(e, s, {
@@ -175,7 +175,7 @@
                     return (0, a.jsx)(i.Heading, {
                         variant: "heading-xl/semibold",
                         color: "header-primary",
-                        className: r()(x().title, s),
+                        className: r()(b().title, s),
                         id: n,
                         children: t
                     })
@@ -196,7 +196,7 @@
                     return (0, a.jsx)("img", {
                         alt: "",
                         src: n,
-                        className: r()(x().image, s)
+                        className: r()(b().image, s)
                     })
                 },
                 T = function(e) {
@@ -218,7 +218,7 @@
                     }({
                         size: l ? i.Button.Sizes.MIN : i.Button.Sizes.LARGE,
                         fullWidth: !l,
-                        className: r()(n, (s = {}, g(s, x().button, !l), g(s, x().linkButton, l), s))
+                        className: r()(n, (s = {}, g(s, b().button, !l), g(s, b().linkButton, l), s))
                     }, t))
                 };
             T.Looks = i.Button.Looks;
@@ -231,7 +231,7 @@
                     return (0, a.jsx)(E, {
                         src: n,
                         size: t,
-                        className: r()(x().inviteLargeIcon, s),
+                        className: r()(b().inviteLargeIcon, s),
                         "aria-hidden": !0
                     })
                 },
@@ -257,7 +257,7 @@
                 return (0, a.jsx)(E, {
                     src: (0, l.x)(n),
                     size: t,
-                    className: r()(x().inviteIcon, s),
+                    className: r()(b().inviteIcon, s),
                     "aria-hidden": !0
                 })
             };
@@ -273,9 +273,9 @@
                         m = e.type,
                         p = void 0 === m ? "text" : m,
                         f = e.onChange,
-                        v = e.autoComplete,
-                        N = e.autoFocus,
-                        b = e.maxLength,
+                        N = e.autoComplete,
+                        v = e.autoFocus,
+                        x = e.maxLength,
                         h = e.spellCheck,
                         E = e.name,
                         L = e.description,
@@ -296,38 +296,38 @@
                             value: l,
                             inputRef: d,
                             placeholder: t,
-                            inputClassName: r()(c, g({}, x().inputError, null != n)),
+                            inputClassName: r()(c, g({}, b().inputError, null != n)),
                             "aria-label": s,
                             onChange: f,
-                            autoComplete: v,
-                            autoFocus: N,
-                            maxLength: b,
+                            autoComplete: N,
+                            autoFocus: v,
+                            maxLength: x,
                             spellCheck: h,
                             id: O,
                             onFocus: j,
                             onBlur: T
                         }), null != L ? (0, a.jsx)(i.FormText, {
                             type: i.FormText.Types.DESCRIPTION,
-                            className: x().description,
+                            className: b().description,
                             children: L
                         }) : null]
                     })
                 },
-                S = function(e) {
+                D = function(e) {
                     var s = e.className,
                         n = e.children;
                     return (0, a.jsx)("div", {
-                        className: r()(x().block, s),
+                        className: r()(b().block, s),
                         children: n
                     })
                 },
-                D = function(e) {
+                S = function(e) {
                     var s = e.className,
                         n = e.children,
                         t = e.isProminent;
                     return (0, a.jsx)(i.Text, {
                         variant: t ? "text-sm/normal" : "text-xs/normal",
-                        className: r()(x().subText, s),
+                        className: r()(b().subText, s),
                         children: n
                     })
                 },
@@ -338,7 +338,7 @@
                         align: o.Z.Align.CENTER,
                         className: s,
                         children: (0, a.jsx)(d.Z, {
-                            className: x().spinnerVideo
+                            className: b().spinnerVideo
                         })
                     })
                 },
@@ -350,14 +350,14 @@
                         u = e.textClassName;
                     if (null == t) return null;
                     null != n && n > 0 && (s = (0, a.jsxs)("div", {
-                        className: r()(x().pill, x().pillOnline, c && x().pillFlat),
+                        className: r()(b().pill, b().pillOnline, c && b().pillFlat),
                         children: [(0, a.jsx)("i", {
-                            className: x().pillIconOnline
+                            className: b().pillIconOnline
                         }), (0, a.jsx)(i.Text, {
                             tag: "span",
-                            className: r()(x().pillMessage, u),
+                            className: r()(b().pillMessage, u),
                             variant: "text-sm/normal",
-                            children: N.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                            children: v.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                                 membersOnline: n
                             })
                         })]
@@ -366,14 +366,14 @@
                         justify: o.Z.Justify.CENTER,
                         className: l,
                         children: [s, (0, a.jsxs)("div", {
-                            className: r()(x().pill, c && x().pillFlat),
+                            className: r()(b().pill, c && b().pillFlat),
                             children: [(0, a.jsx)("i", {
-                                className: x().pillIconTotal
+                                className: b().pillIconTotal
                             }), (0, a.jsx)(i.Text, {
                                 tag: "span",
-                                className: r()(x().pillMessage, u),
+                                className: r()(b().pillMessage, u),
                                 variant: "text-sm/normal",
-                                children: N.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                                children: v.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                                     count: t
                                 })
                             })]
@@ -383,19 +383,19 @@
                 Z = function(e) {
                     var s = e.user;
                     return null == s ? null : (0, a.jsxs)("div", {
-                        className: x().joiningAs,
+                        className: b().joiningAs,
                         children: [(0, a.jsx)(i.Text, {
                             tag: "span",
                             variant: "text-md/normal",
                             color: "header-secondary",
-                            children: N.Z.Messages.MULTI_ACCOUNT_SERVER_INVITE_JOINING_AS
+                            children: v.Z.Messages.MULTI_ACCOUNT_SERVER_INVITE_JOINING_AS
                         }), (0, a.jsx)(O, {
-                            className: x().joiningAsAvatar,
+                            className: b().joiningAsAvatar,
                             src: s.getAvatarURL(void 0, 24),
                             size: i.AvatarSizes.SIZE_24,
                             "aria-label": s.username
                         }), (0, a.jsx)(i.Text, {
-                            className: x().joiningAsUsername,
+                            className: b().joiningAsUsername,
                             tag: "span",
                             variant: "text-md/semibold",
                             color: "header-primary",
@@ -405,19 +405,19 @@
                 },
                 C = function(e) {
                     var s = e.className;
-                    return (0, a.jsxs)(S, {
+                    return (0, a.jsxs)(D, {
                         className: s,
                         children: [(0, a.jsx)(T, {
                             onClick: function() {
                                 return window.open((0, m.t3)())
                             },
-                            children: N.Z.Messages.NUF_DOWNLOAD_APP_BUTTON_PLATFORM.format({
+                            children: v.Z.Messages.NUF_DOWNLOAD_APP_BUTTON_PLATFORM.format({
                                 platform: (0, m.DW)()
                             })
-                        }), (0, a.jsx)(D, {
-                            className: x().downloadButtonSubtext,
-                            children: N.Z.Messages.INCOMPATIBLE_BROWSER.format({
-                                supportedBrowserURL: p.Z.getArticleURL(v.BhN.SUPPORTED_BROWSERS)
+                        }), (0, a.jsx)(S, {
+                            className: b().downloadButtonSubtext,
+                            children: v.Z.Messages.INCOMPATIBLE_BROWSER.format({
+                                supportedBrowserURL: p.Z.getArticleURL(N.BhN.SUPPORTED_BROWSERS)
                             })
                         })]
                     })
@@ -432,16 +432,16 @@
                     c = e.expanded,
                     u = void 0 !== c && c,
                     d = e.theme,
-                    m = void 0 === d ? v.BRd.DARK : d,
+                    m = void 0 === d ? N.BRd.DARK : d,
                     p = e.style;
                 return (0, a.jsxs)(i, {
                     onSubmit: l,
                     style: p,
-                    className: r()(u ? x().authBoxExpanded : x().authBox, (0, f.Q)(m), s),
+                    className: r()(u ? b().authBoxExpanded : b().authBox, (0, f.Q)(m), s),
                     children: [(0, a.jsx)("div", {
-                        className: x().discordLogo
+                        className: b().discordLogo
                     }), (0, a.jsx)("div", {
-                        className: r()(x().centeringWrapper, n),
+                        className: r()(b().centeringWrapper, n),
                         children: o
                     })]
                 })
@@ -463,11 +463,11 @@
                 m = n(894919),
                 p = n.n(m),
                 f = n(786170),
-                v = n(2590),
-                N = n(161693),
-                b = n.n(N),
-                x = n(28743),
-                g = n.n(x),
+                N = n(2590),
+                v = n(161693),
+                x = n.n(v),
+                b = n(28743),
+                g = n.n(b),
                 h = n(106632),
                 E = n.n(h),
                 L = n(858739),
@@ -493,24 +493,24 @@
                     r = e.movLight,
                     i = void 0 === r ? p() : r,
                     l = e.mp4Dark,
-                    o = void 0 === l ? b() : l,
+                    o = void 0 === l ? x() : l,
                     u = e.mp4Light,
                     m = void 0 === u ? _() : u,
                     f = e.pngDark,
-                    N = void 0 === f ? g() : f,
-                    x = e.pngLight,
-                    h = void 0 === x ? T() : x,
+                    v = void 0 === f ? g() : f,
+                    b = e.pngLight,
+                    h = void 0 === b ? T() : b,
                     L = e.webmDark,
                     j = void 0 === L ? E() : L,
                     O = e.webmLight,
                     y = void 0 === O ? A() : O,
-                    S = (0, c.vu)(),
-                    D = [(0, t.jsx)("source", {
+                    D = (0, c.vu)(),
+                    S = [(0, t.jsx)("source", {
                         src: o,
                         type: "video/mp4"
                     }, "mp4"), (0, t.jsx)("img", {
                         alt: "",
-                        src: N
+                        src: v
                     }, "png")],
                     w = [(0, t.jsx)("source", {
                         src: m,
@@ -519,8 +519,8 @@
                         alt: "",
                         src: h
                     }, "png")];
-                if (S > 52 || -1 === S) {
-                    D.unshift((0, t.jsx)("source", {
+                if (D > 52 || -1 === D) {
+                    S.unshift((0, t.jsx)("source", {
                         src: j,
                         type: "video/webm"
                     }, "webm"));
@@ -530,7 +530,7 @@
                     }, "webm"))
                 }
                 if ((0, c.rO)()) {
-                    D.unshift((0, t.jsx)("source", {
+                    S.unshift((0, t.jsx)("source", {
                         src: a,
                         type: "video/mp4"
                     }, "hevc"));
@@ -539,10 +539,10 @@
                         type: "video/mp4"
                     }, "hevc"))
                 }
-                return I(s = {}, v.BRd.DARK, D), I(s, v.BRd.LIGHT, w), s
+                return I(s = {}, N.BRd.DARK, S), I(s, N.BRd.LIGHT, w), s
             }
-            var S = null === (a = o.Z.getAppSpinnerSources) || void 0 === a ? void 0 : a.call(o.Z),
-                D = null != S ? y(S) : null,
+            var D = null === (a = o.Z.getAppSpinnerSources) || void 0 === a ? void 0 : a.call(o.Z),
+                S = null != D ? y(D) : null,
                 w = y({});
             const R = function(e) {
                 var s = e.loop,
@@ -554,9 +554,9 @@
                     d = e.onReady,
                     m = (0, l.useThemeContext)().theme,
                     p = r.useContext(l.AccessibilityPreferencesContext).reducedMotion,
-                    N = w;
-                null != D && (N = D);
-                var b, x = null !== (b = N[(0, i.wj)(m) ? v.BRd.DARK : v.BRd.LIGHT]) && void 0 !== b ? b : N[v.BRd.DARK];
+                    v = w;
+                null != S && (v = S);
+                var x, b = null !== (x = v[(0, i.wj)(m) ? N.BRd.DARK : N.BRd.LIGHT]) && void 0 !== x ? x : v[N.BRd.DARK];
                 return (0, t.jsx)(f.Z, {
                     ref: c,
                     onLoadedData: d,
@@ -565,7 +565,7 @@
                     autoPlay: !p.enabled && o,
                     playsInline: !0,
                     "data-testid": "app-spinner",
-                    children: x
+                    children: b
                 }, m)
             }
         }

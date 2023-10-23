@@ -4,10 +4,10 @@
             e.exports = t.p + "5656f17248cf747f56433a1d60c8c1bf.svg"
         },
         191505: (e, n, t) => {
-            e.exports = t.p + "fd394e078cb4a49bb746cd0badd68702.webm"
+            e.exports = t.p + "218dcd68427f85e856f226204ed2da0d.webm"
         },
         208535: (e, n, t) => {
-            e.exports = t.p + "85680f1b119d34559007f0d54abc8947.webm"
+            e.exports = t.p + "eeb5b4e8c72a4de5e1bfa2a1e613bd85.webm"
         },
         745920: (e, n, t) => {
             e.exports = t.p + "2d889bf9114df188325d15f9e517c325.mov"
@@ -379,7 +379,7 @@
                 },
                 getLoadingTips: function() {
                     var e = Date.now();
-                    if (!(e < c || e > u)) return "en-US" === a.Z.getLocale() || e >= 16982532e5 ? [a.Z.Messages.HALLOWEEN_LOADING_TEXT_1, a.Z.Messages.HALLOWEEN_LOADING_TEXT_2, a.Z.Messages.HALLOWEEN_LOADING_TEXT_3, a.Z.Messages.HALLOWEEN_LOADING_TEXT_4, a.Z.Messages.HALLOWEEN_LOADING_TEXT_5, a.Z.Messages.HALLOWEEN_LOADING_TEXT_6, a.Z.Messages.HALLOWEEN_LOADING_TEXT_7, a.Z.Messages.HALLOWEEN_LOADING_TEXT_8, a.Z.Messages.HALLOWEEN_LOADING_TEXT_9] : void 0
+                    if (!(e < c || e > u)) return [a.Z.Messages.HALLOWEEN_LOADING_TEXT_1, a.Z.Messages.HALLOWEEN_LOADING_TEXT_2, a.Z.Messages.HALLOWEEN_LOADING_TEXT_3, a.Z.Messages.HALLOWEEN_LOADING_TEXT_4, a.Z.Messages.HALLOWEEN_LOADING_TEXT_5, a.Z.Messages.HALLOWEEN_LOADING_TEXT_6, a.Z.Messages.HALLOWEEN_LOADING_TEXT_7, a.Z.Messages.HALLOWEEN_LOADING_TEXT_8, a.Z.Messages.HALLOWEEN_LOADING_TEXT_9]
                 }
             }
         },
@@ -388,7 +388,7 @@
             t.d(n, {
                 DK: () => _,
                 Dx: () => O,
-                EJ: () => Z,
+                EJ: () => w,
                 Ee: () => y,
                 Hh: () => S,
                 II: () => I,
@@ -397,7 +397,7 @@
                 ZP: () => C,
                 gO: () => R,
                 i_: () => D,
-                jQ: () => w,
+                jQ: () => Z,
                 qE: () => T,
                 v6: () => B,
                 zx: () => j
@@ -628,7 +628,7 @@
                         })
                     })
                 },
-                Z = function(e) {
+                w = function(e) {
                     var n, t = e.online,
                         a = e.total,
                         o = e.className,
@@ -666,7 +666,7 @@
                         })]
                     })
                 },
-                w = function(e) {
+                Z = function(e) {
                     var n = e.user;
                     return null == n ? null : (0, r.jsxs)("div", {
                         className: N().joiningAs,
@@ -736,7 +736,7 @@
         408481: (e, n, t) => {
             "use strict";
             t.d(n, {
-                Z: () => Z
+                Z: () => w
             });
             var r, a = t(785893),
                 s = t(667294),
@@ -830,7 +830,7 @@
             var R = null === (r = l.Z.getAppSpinnerSources) || void 0 === r ? void 0 : r.call(l.Z),
                 D = null != R ? I(R) : null,
                 S = I({});
-            const Z = function(e) {
+            const w = function(e) {
                 var n = e.loop,
                     t = void 0 === n || n,
                     r = e.autoPlay,

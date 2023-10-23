@@ -1,10 +1,10 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
     [76192, 58820], {
         191505: (e, n, t) => {
-            e.exports = t.p + "fd394e078cb4a49bb746cd0badd68702.webm"
+            e.exports = t.p + "218dcd68427f85e856f226204ed2da0d.webm"
         },
         208535: (e, n, t) => {
-            e.exports = t.p + "85680f1b119d34559007f0d54abc8947.webm"
+            e.exports = t.p + "eeb5b4e8c72a4de5e1bfa2a1e613bd85.webm"
         },
         745920: (e, n, t) => {
             e.exports = t.p + "2d889bf9114df188325d15f9e517c325.mov"
@@ -111,27 +111,27 @@
                             multiAccounts: i.Z.getUsers()
                         }
                     })),
-                    L = y.currentUser,
-                    j = y.multiAccounts;
+                    j = y.currentUser,
+                    L = y.multiAccounts;
                 if (null == t) return null;
                 var M, R, P, D = null != t.guild ? new c.Z(t.guild) : null,
                     Z = null != t.channel ? (0, u.jD)(t.channel) : null,
                     C = null != t.target_application ? new o.Z(t.target_application) : null,
                     w = m || null == t.inviter ? null : new d.Z(t.inviter),
-                    U = !(null != t.approximate_member_count && t.approximate_member_count > 100 || null != D && D.hasFeature(h.oNc.COMMUNITY)) && null != w,
-                    F = null,
+                    F = !(null != t.approximate_member_count && t.approximate_member_count > 100 || null != D && D.hasFeature(h.oNc.COMMUNITY)) && null != w,
+                    U = null,
                     H = !1;
                 if (null != D) {
-                    F = null == w ? I.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN : I.Z.Messages.AUTH_MESSAGE_INVITED_BY.format({
+                    U = null == w ? I.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN : I.Z.Messages.AUTH_MESSAGE_INVITED_BY.format({
                         username: N.ZP.getFormattedName(w)
                     });
-                    t.target_type === v.Iq.STREAM && null != t.target_user && (F = I.Z.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
+                    t.target_type === v.Iq.STREAM && null != t.target_user && (U = I.Z.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
                         username: N.ZP.getFormattedName(t.target_user)
                     }));
-                    t.target_type === v.Iq.EMBEDDED_APPLICATION && null != t.target_application && (F = null != w ? I.Z.Messages.AUTH_MESSAGE_INVITED_TO_PLAY_USERNAME.format({
+                    t.target_type === v.Iq.EMBEDDED_APPLICATION && null != t.target_application && (U = null != w ? I.Z.Messages.AUTH_MESSAGE_INVITED_TO_PLAY_USERNAME.format({
                         username: N.ZP.getFormattedName(w)
                     }) : I.Z.Messages.AUTH_MESSAGE_INVITED_TO_PLAY);
-                    U && null == C && (M = (0, r.jsx)(_.Vj, {
+                    F && null == C && (M = (0, r.jsx)(_.Vj, {
                         className: b().icon,
                         guild: D,
                         size: _.Vj.Sizes.SMALL
@@ -162,7 +162,7 @@
                     if (null == w) throw new Error("no inviter in group DM invite");
                     var V = N.ZP.getFormattedName(w);
                     if (null != Z.name && "" !== Z.name) {
-                        F = I.Z.Messages.AUTH_MESSAGE_INVITED_BY.format({
+                        U = I.Z.Messages.AUTH_MESSAGE_INVITED_BY.format({
                             username: V
                         });
                         R = Z.name;
@@ -171,7 +171,7 @@
                             size: l.AvatarSizes.SIZE_32
                         }))
                     } else {
-                        F = I.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM;
+                        U = I.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM;
                         R = V
                     }
                 } else if (null != w) {
@@ -194,7 +194,7 @@
                     children: [(0, r.jsx)(x, {
                         application: C,
                         guild: D,
-                        user: U ? w : null,
+                        user: F ? w : null,
                         compact: H
                     }), null != E ? (0, r.jsxs)(r.Fragment, {
                         children: [(0, r.jsx)(_.DK, {
@@ -204,7 +204,7 @@
                         })]
                     }) : (0, r.jsxs)(r.Fragment, {
                         children: [(0, r.jsx)(_.DK, {
-                            children: F
+                            children: U
                         }), (0, r.jsxs)(_.Dx, {
                             className: b().title,
                             children: [null != D ? (0, r.jsx)(f.Z, {
@@ -219,8 +219,8 @@
                         online: t.approximate_presence_count,
                         total: t.approximate_member_count,
                         flat: O
-                    }), j.length > 1 ? (0, r.jsx)(_.jQ, {
-                        user: L
+                    }), L.length > 1 ? (0, r.jsx)(_.jQ, {
+                        user: j
                     }) : null]
                 })
             }
@@ -484,7 +484,7 @@
                 },
                 getLoadingTips: function() {
                     var e = Date.now();
-                    if (!(e < u || e > c)) return "en-US" === a.Z.getLocale() || e >= 16982532e5 ? [a.Z.Messages.HALLOWEEN_LOADING_TEXT_1, a.Z.Messages.HALLOWEEN_LOADING_TEXT_2, a.Z.Messages.HALLOWEEN_LOADING_TEXT_3, a.Z.Messages.HALLOWEEN_LOADING_TEXT_4, a.Z.Messages.HALLOWEEN_LOADING_TEXT_5, a.Z.Messages.HALLOWEEN_LOADING_TEXT_6, a.Z.Messages.HALLOWEEN_LOADING_TEXT_7, a.Z.Messages.HALLOWEEN_LOADING_TEXT_8, a.Z.Messages.HALLOWEEN_LOADING_TEXT_9] : void 0
+                    if (!(e < u || e > c)) return [a.Z.Messages.HALLOWEEN_LOADING_TEXT_1, a.Z.Messages.HALLOWEEN_LOADING_TEXT_2, a.Z.Messages.HALLOWEEN_LOADING_TEXT_3, a.Z.Messages.HALLOWEEN_LOADING_TEXT_4, a.Z.Messages.HALLOWEEN_LOADING_TEXT_5, a.Z.Messages.HALLOWEEN_LOADING_TEXT_6, a.Z.Messages.HALLOWEEN_LOADING_TEXT_7, a.Z.Messages.HALLOWEEN_LOADING_TEXT_8, a.Z.Messages.HALLOWEEN_LOADING_TEXT_9]
                 }
             }
         },
@@ -840,11 +840,11 @@
                 EJ: () => P,
                 Ee: () => O,
                 Hh: () => R,
-                II: () => L,
+                II: () => j,
                 MC: () => y,
                 Vj: () => S,
                 ZP: () => C,
-                gO: () => j,
+                gO: () => L,
                 i_: () => M,
                 jQ: () => D,
                 qE: () => A,
@@ -997,7 +997,7 @@
                 })
             };
             y.Sizes = l.AvatarSizes;
-            var L = function(e) {
+            var j = function(e) {
                     var n = e.label,
                         t = e.error,
                         a = e.placeholder,
@@ -1048,7 +1048,7 @@
                         }) : null]
                     })
                 },
-                j = function(e) {
+                L = function(e) {
                     var n = e.className,
                         t = e.children;
                     return (0, r.jsx)("div", {
@@ -1140,7 +1140,7 @@
                 },
                 Z = function(e) {
                     var n = e.className;
-                    return (0, r.jsxs)(j, {
+                    return (0, r.jsxs)(L, {
                         className: n,
                         children: [(0, r.jsx)(x, {
                             onClick: function() {
@@ -1222,7 +1222,7 @@
                 return e
             }
 
-            function L(e) {
+            function j(e) {
                 var n, t = e.movDark,
                     r = void 0 === t ? d() : t,
                     s = e.movLight,
@@ -1238,8 +1238,8 @@
                     T = e.webmDark,
                     O = void 0 === T ? I() : T,
                     A = e.webmLight,
-                    L = void 0 === A ? S() : A,
-                    j = (0, u.vu)(),
+                    j = void 0 === A ? S() : A,
+                    L = (0, u.vu)(),
                     M = [(0, a.jsx)("source", {
                         src: o,
                         type: "video/mp4"
@@ -1254,13 +1254,13 @@
                         alt: "",
                         src: v
                     }, "png")];
-                if (j > 52 || -1 === j) {
+                if (L > 52 || -1 === L) {
                     M.unshift((0, a.jsx)("source", {
                         src: O,
                         type: "video/webm"
                     }, "webm"));
                     R.unshift((0, a.jsx)("source", {
-                        src: L,
+                        src: j,
                         type: "video/webm"
                     }, "webm"))
                 }
@@ -1276,9 +1276,9 @@
                 }
                 return y(n = {}, _.BRd.DARK, M), y(n, _.BRd.LIGHT, R), n
             }
-            var j = null === (r = o.Z.getAppSpinnerSources) || void 0 === r ? void 0 : r.call(o.Z),
-                M = null != j ? L(j) : null,
-                R = L({});
+            var L = null === (r = o.Z.getAppSpinnerSources) || void 0 === r ? void 0 : r.call(o.Z),
+                M = null != L ? j(L) : null,
+                R = j({});
             const P = function(e) {
                 var n = e.loop,
                     t = void 0 === n || n,
