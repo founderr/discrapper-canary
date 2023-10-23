@@ -62968,7 +62968,7 @@
                         children: [(0, r.jsx)(tn, {
                             className: yoe().icon
                         }), $.Z.Messages.DEV_NOTICE_STAGING.format({
-                            buildNumber: "239591"
+                            buildNumber: "239596"
                         }), (0, r.jsx)(u, {})]
                     })
                 }
