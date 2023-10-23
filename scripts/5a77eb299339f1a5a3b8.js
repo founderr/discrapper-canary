@@ -2,13 +2,13 @@
     "use strict";
     var e, n, t = {
             441143: e => {
-                e.exports = function(e, n, t, i, a, r, o, s) {
+                e.exports = function(e, n, t, i, r, a, o, s) {
                     0;
                     if (!e) {
                         var l;
                         if (void 0 === n) l = new Error("Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.");
                         else {
-                            var u = [t, i, a, r, o, s],
+                            var u = [t, i, r, a, o, s],
                                 c = 0;
                             (l = new Error(n.replace(/%s/g, (function() {
                                 return u[c++]
@@ -21,8 +21,8 @@
             },
             290657: (e, n, t) => {
                 var i = t(441143),
-                    a = t.n(i),
-                    r = t(624971);
+                    r = t.n(i),
+                    a = t(624971);
                 var o, s = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope,
                     l = function() {
                         function e(n) {
@@ -64,7 +64,7 @@
                                 d.scheduleOrCancelTick()
                             };
                             var m = t.getContext("2d");
-                            a()(null != m, "couldn't get canvas 2d context.");
+                            r()(null != m, "couldn't get canvas 2d context.");
                             this.canvas = t;
                             this.canvasContext = m;
                             this.animation = null;
@@ -79,9 +79,9 @@
                             this.onInitialDraw = h;
                             this.onError = f;
                             this.key = "".concat(i, ":").concat(t.width, ":").concat(t.height);
-                            r.Z.create(this.key, t.width, t.height, o, l).then((function(e) {
+                            a.Z.create(this.key, t.width, t.height, o, l).then((function(e) {
                                 if (null != e)
-                                    if (d.dropped) r.Z.drop(d.key);
+                                    if (d.dropped) a.Z.drop(d.key);
                                     else {
                                         d.animation = e;
                                         d.frameDuration = 1e3 / e.frameRate;
@@ -124,7 +124,7 @@
                         n.drop = function() {
                             this.animate = !1;
                             this.scheduleOrCancelTick();
-                            r.Z.drop(this.key);
+                            a.Z.drop(this.key);
                             this.animation = null;
                             this.dropped = !0
                         };
@@ -161,15 +161,15 @@
                                 var n = e.canvas,
                                     t = e.canvasId,
                                     i = e.animationId,
-                                    a = e.assetUrl,
-                                    r = e.assetData,
+                                    r = e.assetUrl,
+                                    a = e.assetData,
                                     s = e.isVisible,
                                     c = e.shouldAnimate,
                                     h = new l({
                                         canvas: n,
                                         id: i,
-                                        assetUrl: a,
-                                        assetData: r,
+                                        assetUrl: r,
+                                        assetData: a,
                                         isVisible: s,
                                         shouldAnimate: c,
                                         onInitialDraw: function() {
@@ -206,8 +206,8 @@
                             ! function(e) {
                                 var n, t = e.canvasId,
                                     i = e.shouldAnimate,
-                                    a = e.nextFrame;
-                                null === (n = u.get(t)) || void 0 === n || n.setState(i, a)
+                                    r = e.nextFrame;
+                                null === (n = u.get(t)) || void 0 === n || n.setState(i, r)
                             }(n)
                     }
                 }))
@@ -217,97 +217,97 @@
                     G: () => o
                 });
 
-                function i(e, n, t, i, a, r, o) {
+                function i(e, n, t, i, r, a, o) {
                     try {
-                        var s = e[r](o),
+                        var s = e[a](o),
                             l = s.value
                     } catch (e) {
                         t(e);
                         return
                     }
-                    s.done ? n(l) : Promise.resolve(l).then(i, a)
+                    s.done ? n(l) : Promise.resolve(l).then(i, r)
                 }
-                var a, r = function(e, n) {
-                    var t, i, a, r, o = {
+                var r, a = function(e, n) {
+                    var t, i, r, a, o = {
                         label: 0,
                         sent: function() {
-                            if (1 & a[0]) throw a[1];
-                            return a[1]
+                            if (1 & r[0]) throw r[1];
+                            return r[1]
                         },
                         trys: [],
                         ops: []
                     };
-                    return r = {
+                    return a = {
                         next: s(0),
                         throw: s(1),
                         return: s(2)
-                    }, "function" == typeof Symbol && (r[Symbol.iterator] = function() {
+                    }, "function" == typeof Symbol && (a[Symbol.iterator] = function() {
                         return this
-                    }), r;
+                    }), a;
 
-                    function s(r) {
+                    function s(a) {
                         return function(s) {
-                            return function(r) {
+                            return function(a) {
                                 if (t) throw new TypeError("Generator is already executing.");
                                 for (; o;) try {
                                     if (t = 1,
-                                        i && (a = 2 & r[0] ? i.return : r[0] ? i.throw || ((a = i.return) && a.call(i), 0) : i.next) && !(a = a.call(i, r[1])).done) return a;
-                                    (i = 0, a) && (r = [2 & r[0], a.value]);
-                                    switch (r[0]) {
+                                        i && (r = 2 & a[0] ? i.return : a[0] ? i.throw || ((r = i.return) && r.call(i), 0) : i.next) && !(r = r.call(i, a[1])).done) return r;
+                                    (i = 0, r) && (a = [2 & a[0], r.value]);
+                                    switch (a[0]) {
                                         case 0:
                                         case 1:
-                                            a = r;
+                                            r = a;
                                             break;
                                         case 4:
                                             o.label++;
                                             return {
-                                                value: r[1], done: !1
+                                                value: a[1], done: !1
                                             };
                                         case 5:
                                             o.label++;
-                                            i = r[1];
-                                            r = [0];
+                                            i = a[1];
+                                            a = [0];
                                             continue;
                                         case 7:
-                                            r = o.ops.pop();
+                                            a = o.ops.pop();
                                             o.trys.pop();
                                             continue;
                                         default:
-                                            if (!(a = o.trys, a = a.length > 0 && a[a.length - 1]) && (6 === r[0] || 2 === r[0])) {
+                                            if (!(r = o.trys, r = r.length > 0 && r[r.length - 1]) && (6 === a[0] || 2 === a[0])) {
                                                 o = 0;
                                                 continue
                                             }
-                                            if (3 === r[0] && (!a || r[1] > a[0] && r[1] < a[3])) {
-                                                o.label = r[1];
-                                                break
-                                            }
-                                            if (6 === r[0] && o.label < a[1]) {
+                                            if (3 === a[0] && (!r || a[1] > r[0] && a[1] < r[3])) {
                                                 o.label = a[1];
-                                                a = r;
                                                 break
                                             }
-                                            if (a && o.label < a[2]) {
-                                                o.label = a[2];
-                                                o.ops.push(r);
+                                            if (6 === a[0] && o.label < r[1]) {
+                                                o.label = r[1];
+                                                r = a;
                                                 break
                                             }
-                                            a[2] && o.ops.pop();
+                                            if (r && o.label < r[2]) {
+                                                o.label = r[2];
+                                                o.ops.push(a);
+                                                break
+                                            }
+                                            r[2] && o.ops.pop();
                                             o.trys.pop();
                                             continue
                                     }
-                                    r = n.call(e, o)
+                                    a = n.call(e, o)
                                 } catch (e) {
-                                    r = [6, e];
+                                    a = [6, e];
                                     i = 0
                                 } finally {
-                                    t = a = 0
+                                    t = r = 0
                                 }
-                                if (5 & r[0]) throw r[1];
+                                if (5 & a[0]) throw a[1];
                                 return {
-                                    value: r[0] ? r[1] : void 0,
+                                    value: a[0] ? a[1] : void 0,
                                     done: !0
                                 }
-                            }([r, s])
+                            }([a, s])
                         }
                     }
                 };
@@ -315,24 +315,24 @@
                     e[e.UNINITIALIZED = 0] = "UNINITIALIZED";
                     e[e.INITIALIZING = 1] = "INITIALIZING";
                     e[e.READY = 2] = "READY"
-                }(a || (a = {}));
+                }(r || (r = {}));
 
                 function o(e) {
-                    var n, t, o = a.UNINITIALIZED,
+                    var n, t, o = r.UNINITIALIZED,
                         s = [];
                     return t = (n = function() {
-                            return r(this, (function(n) {
+                            return a(this, (function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        if (o === a.READY) return [2];
-                                        if (o === a.INITIALIZING) return [2, new Promise((function(e) {
+                                        if (o === r.READY) return [2];
+                                        if (o === r.INITIALIZING) return [2, new Promise((function(e) {
                                             s.push(e)
                                         }))];
-                                        o = a.INITIALIZING;
+                                        o = r.INITIALIZING;
                                         return [4, e()];
                                     case 1:
                                         n.sent();
-                                        o = a.READY;
+                                        o = r.READY;
                                         for (; s.length > 0;) {
                                             var t;
                                             null === (t = s.shift()) || void 0 === t || t()
@@ -343,15 +343,15 @@
                         }, function() {
                             var e = this,
                                 t = arguments;
-                            return new Promise((function(a, r) {
+                            return new Promise((function(r, a) {
                                 var o = n.apply(e, t);
 
                                 function s(e) {
-                                    i(o, a, r, s, l, "next", e)
+                                    i(o, r, a, s, l, "next", e)
                                 }
 
                                 function l(e) {
-                                    i(o, a, r, s, l, "throw", e)
+                                    i(o, r, a, s, l, "throw", e)
                                 }
                                 s(void 0)
                             }))
@@ -364,29 +364,29 @@
         },
         i = {};
 
-    function a(e) {
+    function r(e) {
         var n = i[e];
         if (void 0 !== n) return n.exports;
-        var r = i[e] = {
+        var a = i[e] = {
             exports: {}
         };
-        t[e](r, r.exports, a);
-        return r.exports
+        t[e](a, a.exports, r);
+        return a.exports
     }
-    a.m = t;
-    a.x = () => {
-        var e = a.O(void 0, [24971], (() => a(290657)));
-        return e = a.O(e)
+    r.m = t;
+    r.x = () => {
+        var e = r.O(void 0, [24971], (() => r(290657)));
+        return e = r.O(e)
     };
-    e = [], a.O = (n, t, i, r) => {
+    e = [], r.O = (n, t, i, a) => {
         if (!t) {
             var o = 1 / 0;
             for (c = 0; c < e.length; c++) {
-                for (var [t, i, r] = e[c], s = !0, l = 0; l < t.length; l++)
-                    if ((!1 & r || o >= r) && Object.keys(a.O).every((e => a.O[e](t[l])))) t.splice(l--, 1);
+                for (var [t, i, a] = e[c], s = !0, l = 0; l < t.length; l++)
+                    if ((!1 & a || o >= a) && Object.keys(r.O).every((e => r.O[e](t[l])))) t.splice(l--, 1);
                     else {
                         s = !1;
-                        r < o && (o = r)
+                        a < o && (o = a)
                     } if (s) {
                     e.splice(c--, 1);
                     var u = i();
@@ -395,36 +395,36 @@
             }
             return n
         }
-        r = r || 0;
-        for (var c = e.length; c > 0 && e[c - 1][2] > r; c--) e[c] = e[c - 1];
-        e[c] = [t, i, r]
+        a = a || 0;
+        for (var c = e.length; c > 0 && e[c - 1][2] > a; c--) e[c] = e[c - 1];
+        e[c] = [t, i, a]
     };
-    a.n = e => {
+    r.n = e => {
         var n = e && e.__esModule ? () => e.default : () => e;
-        a.d(n, {
+        r.d(n, {
             a: n
         });
         return n
     };
-    a.d = (e, n) => {
-        for (var t in n) a.o(n, t) && !a.o(e, t) && Object.defineProperty(e, t, {
+    r.d = (e, n) => {
+        for (var t in n) r.o(n, t) && !r.o(e, t) && Object.defineProperty(e, t, {
             enumerable: !0,
             get: n[t]
         })
     };
     (() => {
-        a.f = {};
-        a.e = e => Promise.all(Object.keys(a.f).reduce(((n, t) => {
-            a.f[t](e, n);
+        r.f = {};
+        r.e = e => Promise.all(Object.keys(r.f).reduce(((n, t) => {
+            r.f[t](e, n);
             return n
         }), []))
     })();
-    a.u = e => ({
+    r.u = e => ({
         21819: "4dd3010dd911c6fd05d8",
-        24971: "3cacacde735456e8a448"
+        24971: "74fd042ce9911b251976"
     } [e] + ".js");
-    a.o = (e, n) => Object.prototype.hasOwnProperty.call(e, n);
-    a.r = e => {
+    r.o = (e, n) => Object.prototype.hasOwnProperty.call(e, n);
+    r.r = e => {
         "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
             value: "Module"
         });
@@ -432,24 +432,24 @@
             value: !0
         })
     };
-    a.p = "/assets/";
+    r.p = "/assets/";
     (() => {
         var e = {
             4782: 1
         };
-        a.f.i = (n, t) => {
-            e[n] || importScripts(a.p + a.u(n))
+        r.f.i = (n, t) => {
+            e[n] || importScripts(r.p + r.u(n))
         };
         var n = this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || [],
             t = n.push.bind(n);
         n.push = n => {
-            var [i, r, o] = n;
-            for (var s in r) a.o(r, s) && (a.m[s] = r[s]);
-            o && o(a);
+            var [i, a, o] = n;
+            for (var s in a) r.o(a, s) && (r.m[s] = a[s]);
+            o && o(r);
             for (; i.length;) e[i.pop()] = 1;
             t(n)
         }
     })();
-    n = a.x, a.x = () => a.e(24971).then(n);
-    a.x()
+    n = r.x, r.x = () => r.e(24971).then(n);
+    r.x()
 })();
