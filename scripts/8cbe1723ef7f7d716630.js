@@ -24,6 +24,9 @@
         413122: (e, t, n) => {
             e.exports = n.p + "1f57f1c100434d1ff6569a495ada213e.svg"
         },
+        708688: (e, t, n) => {
+            e.exports = n.p + "3c2f1986fde2af0e158e62af27bfa35c.svg"
+        },
         62388: (e, t, n) => {
             e.exports = n.p + "e4c6bb8de56c299978ec36136e53591a.svg"
         },
@@ -106,8 +109,7 @@
                                         a.trys.pop();
                                         continue;
                                     default:
-                                        if (!(o = a.trys,
-                                                o = o.length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
+                                        if (!(o = a.trys, o = o.length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
                                             a = 0;
                                             continue
                                         }
@@ -13082,12 +13084,12 @@
             }
             const L = o.memo(R)
         },
-        34680: (e, t, n) => {
+        103956: (e, t, n) => {
             "use strict";
             n.d(t, {
-                BB: () => uf,
-                $p: () => df,
-                ZP: () => ff
+                BB: () => mf,
+                $p: () => bf,
+                ZP: () => yf
             });
             var r = n(785893),
                 o = n(667294),
@@ -18384,20 +18386,21 @@
                     })]
                 })
             }
-            var wa = n(276611),
-                Na = n(536392),
-                xa = n(70145),
-                Ma = n(672798),
-                Ra = n(810648),
-                La = n(4572),
-                Da = n(98536),
-                Za = n.n(Da);
+            var wa = n(593166),
+                Na = n(276611),
+                xa = n(536392),
+                Ma = n(70145),
+                Ra = n(672798),
+                La = n(810648),
+                Da = n(4572),
+                Za = n(98536),
+                ka = n.n(Za);
 
-            function ka(e, t) {
+            function Ua(e, t) {
                 if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
             }
 
-            function Ua(e, t, n) {
+            function Ga(e, t, n) {
                 t in e ? Object.defineProperty(e, t, {
                     value: n,
                     enumerable: !0,
@@ -18407,14 +18410,14 @@
                 return e
             }
 
-            function Ga(e) {
-                Ga = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
+            function Ba(e) {
+                Ba = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
                     return e.__proto__ || Object.getPrototypeOf(e)
                 };
-                return Ga(e)
+                return Ba(e)
             }
 
-            function Ba(e) {
+            function Ha(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
@@ -18422,13 +18425,13 @@
                         return Object.getOwnPropertyDescriptor(n, e).enumerable
                     }))));
                     r.forEach((function(t) {
-                        Ua(e, t, n[t])
+                        Ga(e, t, n[t])
                     }))
                 }
                 return e
             }
 
-            function Ha(e, t) {
+            function Fa(e, t) {
                 t = null != t ? t : {};
                 Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : function(e, t) {
                     var n = Object.keys(e);
@@ -18446,25 +18449,25 @@
                 return e
             }
 
-            function Fa(e, t) {
-                return !t || "object" !== Ya(t) && "function" != typeof t ? function(e) {
+            function Va(e, t) {
+                return !t || "object" !== Wa(t) && "function" != typeof t ? function(e) {
                     if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
                     return e
                 }(e) : t
             }
 
-            function Va(e, t) {
-                Va = Object.setPrototypeOf || function(e, t) {
+            function Ya(e, t) {
+                Ya = Object.setPrototypeOf || function(e, t) {
                     e.__proto__ = t;
                     return e
                 };
-                return Va(e, t)
+                return Ya(e, t)
             }
-            var Ya = function(e) {
+            var Wa = function(e) {
                 return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e
             };
 
-            function Wa(e) {
+            function Ka(e) {
                 var t = function() {
                     if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
                     if (Reflect.construct.sham) return !1;
@@ -18477,15 +18480,15 @@
                     }
                 }();
                 return function() {
-                    var n, r = Ga(e);
+                    var n, r = Ba(e);
                     if (t) {
-                        var o = Ga(this).constructor;
+                        var o = Ba(this).constructor;
                         n = Reflect.construct(r, arguments, o)
                     } else n = r.apply(this, arguments);
-                    return Fa(this, n)
+                    return Va(this, n)
                 }
             }
-            var Ka = function(e) {
+            var za = function(e) {
                 ! function(e, t) {
                     if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function");
                     e.prototype = Object.create(t && t.prototype, {
@@ -18495,15 +18498,15 @@
                             configurable: !0
                         }
                     });
-                    t && Va(e, t)
+                    t && Ya(e, t)
                 }(n, e);
-                var t = Wa(n);
+                var t = Ka(n);
 
                 function n() {
-                    ka(this, n);
+                    Ua(this, n);
                     var e;
                     (e = t.apply(this, arguments)).handleStartTrial = function(e, t) {
-                        (0, wa.Z)({
+                        (0, Na.Z)({
                             initialPlanId: null,
                             subscriptionTier: dt.Si.TIER_2,
                             analyticsLocations: t,
@@ -18542,16 +18545,16 @@
                             },
                             color: f.Button.Colors.BRAND
                         },
-                        u = l.id !== a.user_id || (0, z.I5)(l) || !l.verified || (0, La.B)(a),
+                        u = l.id !== a.user_id || (0, z.I5)(l) || !l.verified || (0, Da.B)(a),
                         d = this.renderExpirationDate(e, t, n);
                     c.disabled = u;
                     return (0, r.jsxs)("div", {
-                        className: Za().buttonContainer,
+                        className: ka().buttonContainer,
                         children: [(0, r.jsx)("div", {
-                            children: (0, r.jsx)(f.Button, Ha(Ba({}, c), {
+                            children: (0, r.jsx)(f.Button, Fa(Ha({}, c), {
                                 size: f.Button.Sizes.SMALL,
                                 onClick: function() {
-                                    (0, wa.Z)({
+                                    (0, Na.Z)({
                                         initialPlanId: null,
                                         subscriptionTier: dt.Si.TIER_2,
                                         analyticsLocations: s,
@@ -18562,7 +18565,7 @@
                                 children: oe.Z.Messages.START_TRIAL
                             }))
                         }), (0, r.jsx)("div", {
-                            className: Za().metadata,
+                            className: ka().metadata,
                             children: d
                         })]
                     })
@@ -18572,12 +18575,12 @@
                         o = r.trialOffer,
                         i = r.trialEndsAt;
                     if (void 0 !== o.redeemed_at && !n && null !== i) return oe.Z.Messages.TRIAL_EXPIRES.format({
-                        date: (0, xa.vc)(h()(i), "LL")
+                        date: (0, Ma.vc)(h()(i), "LL")
                     });
                     if (e || void 0 === o.expires_at) return null;
                     var a = h()(o.expires_at);
                     if (t) return oe.Z.Messages.EXPIRED_DATE.format({
-                        date: (0, xa.vc)(h()(a), "LL")
+                        date: (0, Ma.vc)(h()(a), "LL")
                     });
                     var l = a.diff(h()(), "h");
                     if (l > 48) {
@@ -18598,7 +18601,7 @@
                     var t;
                     return (0, r.jsx)("div", {
                         className: a()((t = {},
-                            Ua(t, Za().referral, !e), Ua(t, Za().birthdayReferral, e), t))
+                            Ga(t, ka().referral, !e), Ga(t, ka().birthdayReferral, e), t))
                     })
                 };
                 o.render = function() {
@@ -18607,23 +18610,23 @@
                         n = e.currentUser,
                         o = e.recipientHasNitro,
                         i = e.shouldShowBirthdayUX,
-                        l = (0, La.B)(t),
+                        l = (0, Da.B)(t),
                         s = n.id === t.referrer_id;
                     return (0, r.jsxs)("div", {
-                        className: a()(Za().tile, Za().container),
+                        className: a()(ka().tile, ka().container),
                         children: [(0, r.jsx)("div", {
-                            className: Za().media,
+                            className: ka().media,
                             children: this.renderMedia(i)
                         }), (0, r.jsxs)("div", {
-                            className: Za().description,
+                            className: ka().description,
                             children: [(0, r.jsx)(f.H, {
-                                className: Za().title,
+                                className: ka().title,
                                 children: this.renderTitle(o, l)
                             }), (0, r.jsx)("div", {
-                                className: Za().tagline,
+                                className: ka().tagline,
                                 children: this.renderBody(o, l, s)
                             }), (0, r.jsx)("div", {
-                                className: Za().actions,
+                                className: ka().actions,
                                 children: this.renderActions(o, l, s)
                             })]
                         })]
@@ -18632,13 +18635,13 @@
                 return n
             }(o.Component);
 
-            function za(e) {
+            function Ja(e) {
                 var t = e.userTrialOfferId,
                     n = e.canRenderReferralEmbed,
-                    o = (0, s.cj)([Ma.Z], (function() {
+                    o = (0, s.cj)([Ra.Z], (function() {
                         return {
-                            trialOffer: n ? Ma.Z.getRelevantUserTrialOffer(t) : null,
-                            isResolving: !!n && Ma.Z.isResolving(t)
+                            trialOffer: n ? Ra.Z.getRelevantUserTrialOffer(t) : null,
+                            isResolving: !!n && Ra.Z.isResolving(t)
                         }
                     }), [n, t]),
                     i = o.trialOffer,
@@ -18648,19 +18651,19 @@
                         return null != i && (0,
                             z.I5)(void 0 !== l && i.user_id === l.id ? l : U.default.getUser(i.user_id))
                     })),
-                    u = (0, s.e7)([Na.Z], (function() {
+                    u = (0, s.e7)([xa.Z], (function() {
                         var e;
-                        return c ? null === (e = Na.Z.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt : null
+                        return c ? null === (e = xa.Z.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt : null
                     })),
                     f = (0, Dt.Z)(Lt.Z.SHARE_NITRO_EMBED).analyticsLocations,
-                    d = Ra.Z.useExperiment({
+                    d = La.Z.useExperiment({
                         location: "f4ff1d_1"
                     }, {
                         autoTrackExposure: !0
                     }).enabled;
                 return a ? (0, r.jsx)(T, {
                     isHorizontal: !de.tq
-                }) : n && null != i && void 0 !== l ? (0, r.jsx)(Ka, Ba({
+                }) : n && null != i && void 0 !== l ? (0, r.jsx)(za, Ha({
                     trialOffer: i,
                     currentUser: l,
                     recipientHasNitro: c,
@@ -18668,18 +18671,18 @@
                     analyticsLocations: f,
                     shouldShowBirthdayUX: d
                 }, e)) : (0, r.jsx)("div", {
-                    className: Za().invalidWrapper,
+                    className: ka().invalidWrapper,
                     children: (0, r.jsx)("div", {
-                        className: Za().invalid
+                        className: ka().invalid
                     })
                 })
             }
-            var Ja = n(155830),
-                Qa = n(507850),
-                Xa = n(574296),
-                qa = n.n(Xa);
+            var Qa = n(155830),
+                Xa = n(507850),
+                qa = n(574296),
+                $a = n.n(qa);
 
-            function $a(e, t, n, r, o, i, a) {
+            function el(e, t, n, r, o, i, a) {
                 try {
                     var l = e[i](a),
                         s = l.value
@@ -18690,7 +18693,7 @@
                 l.done ? t(s) : Promise.resolve(s).then(r, o)
             }
 
-            function el(e) {
+            function tl(e) {
                 return function() {
                     var t = this,
                         n = arguments;
@@ -18698,18 +18701,18 @@
                         var i = e.apply(t, n);
 
                         function a(e) {
-                            $a(i, r, o, a, l, "next", e)
+                            el(i, r, o, a, l, "next", e)
                         }
 
                         function l(e) {
-                            $a(i, r, o, a, l, "throw", e)
+                            el(i, r, o, a, l, "throw", e)
                         }
                         a(void 0)
                     }))
                 }
             }
 
-            function tl(e, t, n) {
+            function nl(e, t, n) {
                 t in e ? Object.defineProperty(e, t, {
                     value: n,
                     enumerable: !0,
@@ -18718,7 +18721,7 @@
                 }) : e[t] = n;
                 return e
             }
-            var nl = function(e, t) {
+            var rl = function(e, t) {
                 var n, r, o, i, a = {
                     label: 0,
                     sent: function() {
@@ -18802,25 +18805,25 @@
                 }
             };
 
-            function rl(e) {
+            function ol(e) {
                 var t, o;
                 if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
                 var i, a, l, s = e.message.embeds[0],
                     c = null !== (i = null === (t = s.fields) || void 0 === t ? void 0 : t.find((function(e) {
-                        return e.rawName === Qa.Cg.CLASSIFICATION_ID
+                        return e.rawName === Xa.Cg.CLASSIFICATION_ID
                     }))) && void 0 !== i ? i : void 0,
                     u = null !== (a = null == c ? void 0 : c.rawValue) && void 0 !== a ? a : void 0,
                     d = null !== (l = null === (o = s.fields) || void 0 === o ? void 0 : o.find((function(e) {
-                        return e.rawName === Qa.Cg.INCIDENT_TIMESTAMP
+                        return e.rawName === Xa.Cg.INCIDENT_TIMESTAMP
                     }))) && void 0 !== l ? l : void 0,
                     p = null == d || null == d.rawValue ? void 0 : parseFloat(d.rawValue);
                 if (null == u || null == p) return null;
                 var m;
                 return (0, r.jsxs)(f.Clickable, {
                     onClick: function() {
-                        (0, f.openModalLazy)(el((function() {
+                        (0, f.openModalLazy)(tl((function() {
                             var e, t;
-                            return nl(this, (function(o) {
+                            return rl(this, (function(o) {
                                 switch (o.label) {
                                     case 0:
                                         return [4, Promise.all([n.e(40532), n.e(21391)]).then(n.bind(n, 521391))];
@@ -18835,32 +18838,32 @@
                                                         return Object.getOwnPropertyDescriptor(n, e).enumerable
                                                     }))));
                                                     r.forEach((function(t) {
-                                                        tl(e, t, n[t])
+                                                        nl(e, t, n[t])
                                                     }))
                                                 }
                                                 return e
                                             }({
                                                 classificationId: u,
-                                                source: Qa.s.SystemDM
+                                                source: Xa.s.SystemDM
                                             }, e))
                                         }]
                                 }
                             }))
                         })))
                     },
-                    className: qa().safetyPolicyNoticeContainer,
+                    className: $a().safetyPolicyNoticeContainer,
                     children: [(0, r.jsxs)("div", {
-                        className: qa().noticeContent,
+                        className: $a().noticeContent,
                         children: [(0, r.jsxs)("div", {
-                            className: qa().headerRow,
-                            children: [(0, r.jsx)(Ja.Z, {
-                                className: qa().warningIcon
+                            className: $a().headerRow,
+                            children: [(0, r.jsx)(Qa.Z, {
+                                className: $a().warningIcon
                             }), (0, r.jsx)(f.Text, {
                                 variant: "text-md/semibold",
                                 children: oe.Z.Messages.SAFETY_POLICY_NOTICE_HEADER
                             })]
                         }), (0, r.jsx)("div", {
-                            className: qa().incidentTiming,
+                            className: $a().incidentTiming,
                             children: (0, r.jsx)(f.Text, {
                                 variant: "text-xs/medium",
                                 children: oe.Z.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
@@ -18868,7 +18871,7 @@
                                 })
                             })
                         }), (0, r.jsx)("div", {
-                            className: qa().noticeBody,
+                            className: $a().noticeBody,
                             children: (0,
                                 r.jsx)(f.Text, {
                                 variant: "text-md/normal",
@@ -18877,25 +18880,25 @@
                             })
                         })]
                     }), (0, r.jsx)("div", {
-                        className: qa().footerContainer,
+                        className: $a().footerContainer,
                         children: (0, r.jsx)(f.Button, {
                             look: f.Button.Looks.LINK,
-                            className: qa().detailsButton,
+                            className: $a().detailsButton,
                             color: f.Button.Colors.WHITE,
                             children: oe.Z.Messages.SAFETY_POLICY_NOTICE_BUTTON
                         })
                     })]
                 })
             }
-            var ol = n(513586),
-                il = n(386364),
-                al = n(674168),
-                ll = n(217544),
-                sl = n(514351),
-                cl = n(622902),
-                ul = n(327499),
-                fl = n(504366);
-            const dl = function(e) {
+            var il = n(513586),
+                al = n(386364),
+                ll = n(674168),
+                sl = n(217544),
+                cl = n(514351),
+                ul = n(622902),
+                fl = n(327499),
+                dl = n(504366);
+            const pl = function(e) {
                 return ki.ZP.get({
                     url: Re.ANM.STICKER_GUILD_DATA(e),
                     oldFormErrors: !0
@@ -18905,8 +18908,7 @@
                     return null
                 }))
             };
-            var pl = n(974595),
-                hl = n(593166),
+            var hl = n(974595),
                 ml = n(159895),
                 yl = n(799066),
                 bl = n(455706),
@@ -19155,7 +19157,7 @@
                     location_page: null != e.guild_id ? Re.ZY5.GUILD_CHANNEL : Re.ZY5.DM_CHANNEL,
                     location_section: Re.jXE.STICKER_POPOUT
                 });
-                (0, hl.z)()
+                (0, wa.z)()
             }
 
             function Gl(e) {
@@ -19163,7 +19165,7 @@
                     n = e.description;
                 return (0, r.jsxs)(H.Z, {
                     children: [(0,
-                        r.jsx)(cl.ZP, {
+                        r.jsx)(ul.ZP, {
                         sticker: t,
                         size: 48,
                         isInteracting: !0
@@ -19210,8 +19212,8 @@
                             sticker: n,
                             stickerPack: c
                         });
-                    (0, ll.Pq)(n.pack_id);
-                    var m = (0, ll.Sd)(i),
+                    (0, sl.Pq)(n.pack_id);
+                    var m = (0, sl.Sd)(i),
                         y = vl.Z.useExperiment({
                             location: "e882b8_1"
                         }, {
@@ -19228,12 +19230,12 @@
                             sticker_pack_id: n.pack_id
                         }, (0, yr.v_)(i)))
                     }), [n.pack_id]);
-                    if (u || null == c) return (0, r.jsx)(il.SE, {
+                    if (u || null == c) return (0, r.jsx)(al.SE, {
                         className: Pl().popoutLoader
                     });
                     var b = z.ZP.canUseStickersEverywhere(p),
                         O = d && (b || y);
-                    return (0, r.jsxs)(il.W_, {
+                    return (0, r.jsxs)(al.W_, {
                         className: Pl().popoutContent,
                         children: [(0, r.jsx)(f.Heading, {
                             variant: "heading-md/semibold",
@@ -19244,7 +19246,7 @@
                         }), (0, r.jsx)("ul", {
                             className: Pl().stickersList,
                             children: h.map((function(e) {
-                                return (0, r.jsx)(cl.ZP, {
+                                return (0, r.jsx)(ul.ZP, {
                                     isInteracting: !0,
                                     size: 80,
                                     sticker: e
@@ -19314,7 +19316,7 @@
                             return Zl(this, (function(n) {
                                 switch (n.label) {
                                     case 0:
-                                        return null == O || O.hasFeature(Re.oNc.DISCOVERABLE) ? [4, dl(t.id)] : [3, 2];
+                                        return null == O || O.hasFeature(Re.oNc.DISCOVERABLE) ? [4, pl(t.id)] : [3, 2];
                                     case 1:
                                         e = n.sent();
                                         d(e);
@@ -19367,7 +19369,7 @@
                         }, T))
                     }), []);
                     if (h) {
-                        return (0, r.jsxs)(il.W_, {
+                        return (0, r.jsxs)(al.W_, {
                             className: Cl().popoutContent,
                             children: [(R = (M = Nl((function() {
                                 var e;
@@ -19380,10 +19382,10 @@
                                             t.label = 1;
                                         case 1:
                                             t.trys.push([1, 3, , 4]);
-                                            return [4, ul.Z.joinGuild(e)];
+                                            return [4, fl.Z.joinGuild(e)];
                                         case 2:
                                             t.sent();
-                                            ul.Z.transitionToGuildSync(e);
+                                            fl.Z.transitionToGuildSync(e);
                                             return [3, 4];
                                         case 3:
                                             t.sent();
@@ -19422,13 +19424,13 @@
                                     var e, n = (null !== (e = null == u ? void 0 : u.stickers) && void 0 !== e ? e : []).slice(0, 13).filter((function(e) {
                                             return e.id !== t.id
                                         })).slice(0, 12),
-                                        o = null != u ? fl.Z.createFromDiscoverableGuild(u) : fl.Z.createFromGuildRecord(O);
+                                        o = null != u ? dl.Z.createFromDiscoverableGuild(u) : dl.Z.createFromGuildRecord(O);
                                     return (0, r.jsxs)("div", {
                                         className: Cl().guildSection,
                                         children: [(0, r.jsx)(f.FormTitle, {
                                             className: Cl().guildTitle,
                                             children: g ? oe.Z.Messages.STICKER_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : oe.Z.Messages.STICKER_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
-                                        }), (0, r.jsx)(pl.Oe, {
+                                        }), (0, r.jsx)(hl.Oe, {
                                             expressionSourceGuild: o,
                                             hasJoinedExpressionSourceGuild: g,
                                             isDisplayingJoinGuildButtonInPopout: L
@@ -19458,7 +19460,7 @@
                                                 children: n.map((function(e) {
                                                     return (0, r.jsx)(f.Tooltip, Rl(Ml({
                                                         text: e.name
-                                                    }, il.b_), {
+                                                    }, al.b_), {
                                                         children: function(t) {
                                                             var n = t.onMouseEnter,
                                                                 o = t.onMouseLeave,
@@ -19474,7 +19476,7 @@
                                                                     j(null)
                                                                 }
                                                             }, i), {
-                                                                children: (0, r.jsx)(cl.ZP, {
+                                                                children: (0, r.jsx)(ul.ZP, {
                                                                     size: 32,
                                                                     enlargeOnInteraction: !0,
                                                                     enlargeWithName: !1,
@@ -19493,7 +19495,7 @@
                             }()]
                         })
                     }
-                    return (0, r.jsx)(il.SE, {
+                    return (0, r.jsx)(al.SE, {
                         className: Pl().popoutLoader
                     })
                 };
@@ -19502,7 +19504,7 @@
                 var t = e.channel,
                     n = e.closePopout,
                     o = e.sticker;
-                return (0, r.jsx)(il.W_, {
+                return (0, r.jsx)(al.W_, {
                     className: Pl().popoutContent,
                     children: (0, r.jsx)(Gl, {
                         sticker: o,
@@ -19520,22 +19522,22 @@
                     n = e.channel,
                     o = e.closePopout,
                     i = e.refreshPositionKey,
-                    a = Dl((0, ll.XW)(t, !0), 2),
+                    a = Dl((0, sl.XW)(t, !0), 2),
                     l = a[0],
                     s = a[1];
-                if (null != l && (0, ol.jl)(l)) return (0, r.jsx)(Bl, {
+                if (null != l && (0, il.jl)(l)) return (0, r.jsx)(Bl, {
                     sticker: l,
                     closePopout: o,
                     channel: n,
                     refreshPositionKey: i
                 });
-                if (null != l && (0, ol.J8)(l)) return (0, r.jsx)(Hl, {
+                if (null != l && (0, il.J8)(l)) return (0, r.jsx)(Hl, {
                     sticker: l,
                     channel: n,
                     closePopout: o,
                     refreshPositionKey: i
                 });
-                if (!s) return (0, r.jsx)(il.SE, {});
+                if (!s) return (0, r.jsx)(al.SE, {});
                 if (s && null == l) return (0, r.jsx)(Fl, {
                     channel: n,
                     closePopout: o,
@@ -19638,8 +19640,8 @@
                         type: dt.cd.STICKER_IN_MESSAGE_HOVER,
                         expression_id: e.id,
                         expression_name: e.name,
-                        is_animated: (0, sl.aQ)(e.format_type),
-                        is_custom: (0, sl.z)(e.type)
+                        is_animated: (0, cl.aQ)(e.format_type),
+                        is_custom: (0, cl.z)(e.type)
                     })
                 };
             const es = function(e) {
@@ -19652,11 +19654,11 @@
                     c = Xl(o.useState(String(Date.now())), 2),
                     u = c[0],
                     d = c[1],
-                    p = Xl((0, ll.XW)(t, i), 1)[0],
+                    p = Xl((0, sl.XW)(t, i), 1)[0],
                     h = (0, Dt.Z)(Lt.Z.STICKER_MESSAGE).AnalyticsLocationProvider,
                     m = (0, r.jsxs)("span", {
                         className: Wl().stickerName,
-                        children: [(0, r.jsx)(al.Z, {
+                        children: [(0, r.jsx)(ll.Z, {
                             className: Wl().stickerIcon
                         }), (null != p ? p : t).name]
                     });
@@ -19679,9 +19681,9 @@
                         },
                         children: function(e) {
                             var n = e.onClick;
-                            return (0, r.jsx)(f.Tooltip, Ql(Jl({}, il.b_), {
+                            return (0, r.jsx)(f.Tooltip, Ql(Jl({}, al.b_), {
                                 shouldShow: l,
-                                text: (0, il.Y)(m),
+                                text: (0, al.Y)(m),
                                 "aria-label": !1,
                                 onTooltipShow: function() {
                                     $l(p)
@@ -19694,7 +19696,7 @@
                                             n(e)
                                         },
                                         tag: "span",
-                                        children: (0, r.jsx)(cl.ZP, {
+                                        children: (0, r.jsx)(ul.ZP, {
                                             isInteracting: i,
                                             size: ql,
                                             sticker: null != p ? p : t
@@ -20030,8 +20032,9 @@
                 As = n(248691),
                 ws = n(354788),
                 Ns = n(210643),
-                xs = n(401156);
-            const Ms = (0, n(260561).B)({
+                xs = n(401156),
+                Ms = n(260561);
+            const Rs = (0, Ms.B)({
                 kind: "user",
                 id: "2023-10_thumbhash_messages",
                 label: "Display thumbhash placeholders when loading message images",
@@ -20046,31 +20049,31 @@
                     }
                 }]
             });
-            var Rs;
+            var Ls;
             ! function(e) {
                 e.SENT = "sent";
                 e.CANCELLED_DURATION = "cancelled_duration";
                 e.CANCELLED_USER_REQUESTED = "cancelled_user_requested";
                 e.CANCELLED_GESTURE_CONFLICT = "cancelled_gesture_conflict";
                 e.CANCELLED_ON_BACKGROUND = "cancelled_on_background"
-            }(Rs || (Rs = {}));
-            var Ls = n(84977),
-                Ds = n(175231),
-                Zs = n(507488),
-                ks = n(149779),
-                Us = n(189865),
-                Gs = n(994655),
-                Bs = n(347117),
-                Hs = n(840010),
-                Fs = n.n(Hs);
+            }(Ls || (Ls = {}));
+            var Ds = n(84977),
+                Zs = n(175231),
+                ks = n(507488),
+                Us = n(149779),
+                Gs = n(189865),
+                Bs = n(994655),
+                Hs = n(347117),
+                Fs = n(840010),
+                Vs = n.n(Fs);
 
-            function Vs(e, t) {
+            function Ys(e, t) {
                 (null == t || t > e.length) && (t = e.length);
                 for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n];
                 return r
             }
 
-            function Ys(e, t, n) {
+            function Ws(e, t, n) {
                 t in e ? Object.defineProperty(e, t, {
                     value: n,
                     enumerable: !0,
@@ -20080,7 +20083,7 @@
                 return e
             }
 
-            function Ws(e) {
+            function Ks(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
@@ -20088,13 +20091,13 @@
                         return Object.getOwnPropertyDescriptor(n, e).enumerable
                     }))));
                     r.forEach((function(t) {
-                        Ys(e, t, n[t])
+                        Ws(e, t, n[t])
                     }))
                 }
                 return e
             }
 
-            function Ks(e, t) {
+            function zs(e, t) {
                 t = null != t ? t : {};
                 Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : function(e, t) {
                     var n = Object.keys(e);
@@ -20112,7 +20115,7 @@
                 return e
             }
 
-            function zs(e, t) {
+            function Js(e, t) {
                 if (null == e) return {};
                 var n, r, o = function(e, t) {
                     if (null == e) return {};
@@ -20134,7 +20137,7 @@
                 return o
             }
 
-            function Js(e, t) {
+            function Qs(e, t) {
                 return function(e) {
                     if (Array.isArray(e)) return e
                 }(e) || function(e, t) {
@@ -20162,27 +20165,27 @@
                     }
                 }(e, t) || function(e, t) {
                     if (!e) return;
-                    if ("string" == typeof e) return Vs(e, t);
+                    if ("string" == typeof e) return Ys(e, t);
                     var n = Object.prototype.toString.call(e).slice(8, -1);
                     "Object" === n && e.constructor && (n = e.constructor.name);
                     if ("Map" === n || "Set" === n) return Array.from(n);
-                    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Vs(e, t)
+                    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Ys(e, t)
                 }(e, t) || function() {
                     throw new TypeError("Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
                 }()
             }
-            var Qs = /\.(mp3|m4a|ogg|wav|flac)$/i;
-            var Xs = function(e) {
+            var Xs = /\.(mp3|m4a|ogg|wav|flac)$/i;
+            var qs = function(e) {
                 return "IMAGE" === e || "VIDEO" === e
             };
 
-            function qs(e, t) {
+            function $s(e, t) {
                 var n = e.filename,
                     r = e.width,
                     o = e.height;
-                return t && null != r && r > 0 && null != o && o > 0 ? (0, So.CO)(n) ? "IMAGE" : (0, So.NU)(n) && null != e.proxy_url ? "VIDEO" : "INVALID" : null != t && Qs.test(n) && null != e.url ? "AUDIO" : null != e.url && (0, xs.O)(n) ? "PLAINTEXT_PREVIEW" : "OTHER"
+                return t && null != r && r > 0 && null != o && o > 0 ? (0, So.CO)(n) ? "IMAGE" : (0, So.NU)(n) && null != e.proxy_url ? "VIDEO" : "INVALID" : null != t && Xs.test(n) && null != e.url ? "AUDIO" : null != e.url && (0, xs.O)(n) ? "PLAINTEXT_PREVIEW" : "OTHER"
             }
-            var $s = function(e) {
+            var ec = function(e) {
                     var t, n, o = e.downloadURL,
                         i = e.downloadMimeType,
                         l = e.onRemoveAttachment,
@@ -20190,11 +20193,11 @@
                     null != o && null != i && (t = (0, r.jsx)(f.Tooltip, {
                         text: oe.Z.Messages.DOWNLOAD,
                         children: function(e) {
-                            return (0, r.jsx)(Ds.Z, Ks(Ws({}, e), {
+                            return (0, r.jsx)(Zs.Z, zs(Ks({}, e), {
                                 target: "_blank",
                                 rel: "noreferrer noopener",
-                                className: Fs().hoverButton,
-                                iconClassName: Fs().downloadHoverButtonIcon,
+                                className: Vs().hoverButton,
+                                iconClassName: Vs().downloadHoverButtonIcon,
                                 focusProps: {
                                     offset: 2
                                 },
@@ -20206,14 +20209,14 @@
                     null != l && (n = (0, r.jsx)(f.Tooltip, {
                         text: oe.Z.Messages.REMOVE_ATTACHMENT_TOOLTIP_TEXT,
                         children: function(e) {
-                            return (0, r.jsx)(f.Clickable, Ks(Ws({}, e), {
-                                className: a()(Fs().hoverButton, Fs().removeAttachmentHoverButton),
+                            return (0, r.jsx)(f.Clickable, zs(Ks({}, e), {
+                                className: a()(Vs().hoverButton, Vs().removeAttachmentHoverButton),
                                 focusProps: {
                                     offset: 2
                                 },
                                 onClick: l,
                                 "aria-label": oe.Z.Messages.REMOVE_MESSAGE_ATTACHMENT,
-                                children: (0, r.jsx)(Gs.Z, {
+                                children: (0, r.jsx)(Bs.Z, {
                                     width: 20,
                                     height: 20
                                 })
@@ -20221,11 +20224,11 @@
                         }
                     }));
                     return null == n && null == t ? null : (0, r.jsxs)("div", {
-                        className: a()(Fs().hoverButtonGroup, Ys({}, Fs().nonMediaAttachment, !s)),
+                        className: a()(Vs().hoverButtonGroup, Ws({}, Vs().nonMediaAttachment, !s)),
                         children: [t, n]
                     })
                 },
-                ec = function(e) {
+                tc = function(e) {
                     var t = e.message,
                         n = e.attachment,
                         i = e.inlineMedia,
@@ -20253,12 +20256,12 @@
                         C = n.height,
                         A = n.description,
                         w = n.spoiler,
-                        N = qs(n, i),
-                        x = Js(o.useState(!1), 2),
+                        N = $s(n, i),
+                        x = Qs(o.useState(!1), 2),
                         M = x[0],
                         R = x[1],
                         L = (0, Oo.Z)(t.getChannelId()),
-                        D = Ms.useExperiment({
+                        D = Rs.useExperiment({
                             location: "MessageAttachment"
                         }, {
                             autoTrackExposure: !1
@@ -20310,7 +20313,7 @@
                                 var e = !L && "VIDEO" === N || !L && "AUDIO" === N || "OTHER" === N;
                                 if (P) {
                                     if (null == T || null == C) return null;
-                                    var t = (0, Bs.Dc)({
+                                    var t = (0, Hs.Dc)({
                                         width: T,
                                         height: C,
                                         maxWidth: ds.mT,
@@ -20318,7 +20321,7 @@
                                     });
                                     if (!j && (t * T < ds.OF || t * C < ds.OF)) return null
                                 }
-                                return !M && (0, r.jsx)($s, {
+                                return !M && (0, r.jsx)(ec, {
                                     downloadURL: e ? n.url : void 0,
                                     downloadMimeType: e ? Z : void 0,
                                     onRemoveAttachment: l ? k : void 0,
@@ -20326,7 +20329,7 @@
                                 })
                             }
                             return l && (0, r.jsx)(f.Clickable, {
-                                className: w ? Fs().spoilerRemoveAttachmentButton : Fs().removeAttachmentButton,
+                                className: w ? Vs().spoilerRemoveAttachmentButton : Vs().removeAttachmentButton,
                                 focusProps: {
                                     offset: {
                                         bottom: 4
@@ -20336,7 +20339,7 @@
                                     return s(n)
                                 },
                                 "aria-label": oe.Z.Messages.REMOVE_MESSAGE_ATTACHMENT,
-                                children: (0, r.jsx)(Us.Z, {
+                                children: (0, r.jsx)(Gs.Z, {
                                     width: 16,
                                     height: 16
                                 })
@@ -20346,8 +20349,8 @@
                             var e;
                             return (0, Ft.yE)(null !== (e = n.flags) && void 0 !== e ? e : 0, Re.J0y.IS_CLIP) ? (0, r.jsxs)(f.TooltipContainer, {
                                 text: oe.Z.Messages.CLIPS_BETA_TAG_HOVER,
-                                className: Fs().clipPill,
-                                children: [(0, r.jsx)(ks.Z, {}), (0, r.jsx)(f.Text, {
+                                className: Vs().clipPill,
+                                children: [(0, r.jsx)(Us.Z, {}), (0, r.jsx)(f.Text, {
                                     variant: "text-xs/semibold",
                                     color: "always-white",
                                     children: oe.Z.Messages.CLIP_TAG
@@ -20446,7 +20449,7 @@
                                 renderAdjacentContent: H
                             });
                         case "OTHER":
-                            return (0, r.jsx)(Ls.Z, {
+                            return (0, r.jsx)(Ds.Z, {
                                 url: n.url,
                                 filename: n.filename,
                                 size: n.size,
@@ -20460,18 +20463,18 @@
                     }
                 };
 
-            function tc(e, t, n) {
+            function nc(e, t, n) {
                 if (t) {
                     var r = e.width;
                     if (void 0 !== e.width && void 0 !== e.height) {
-                        r = (0, Bs.Tj)({
+                        r = (0, Hs.Tj)({
                             width: e.width,
                             height: e.height,
                             maxWidth: 400,
                             maxHeight: 300
                         }).width
                     }
-                    return Ks(Ws({}, n !== ds.hV.MOSAIC && {
+                    return zs(Ks({}, n !== ds.hV.MOSAIC && {
                         maxWidth: null != r ? r : "400px"
                     }), {
                         width: "100%",
@@ -20480,7 +20483,7 @@
                     })
                 }
             }
-            const nc = function(e) {
+            const rc = function(e) {
                 var t, n, i = e.className,
                     l = e.attachment,
                     s = e.message,
@@ -20489,27 +20492,27 @@
                     f = e.mediaLayoutType,
                     d = e.canRemoveAttachment,
                     p = e.isSingleMosaicItem,
-                    h = zs(e, ["className", "attachment", "message", "inlineMedia", "useFullWidth", "mediaLayoutType", "canRemoveAttachment", "isSingleMosaicItem"]),
+                    h = Js(e, ["className", "attachment", "message", "inlineMedia", "useFullWidth", "mediaLayoutType", "canRemoveAttachment", "isSingleMosaicItem"]),
                     m = l.width,
                     y = l.height,
                     b = (0, Ns.hR)(l, s),
-                    O = Js(o.useState(void 0 !== b), 2),
+                    O = Qs(o.useState(void 0 !== b), 2),
                     g = O[0],
                     v = O[1],
                     E = f === ds.hV.MOSAIC,
                     _ = !E && (null != m && m < 200 || null != y && y < 50),
-                    I = qs(l, c),
+                    I = $s(l, c),
                     S = "IMAGE" === (t = I) || "VIDEO" === t,
-                    j = Xs(qs(l, c)),
+                    j = qs($s(l, c)),
                     P = function() {
                         var e, t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                        return (0, r.jsx)(ec, Ks(Ws({}, h), {
+                        return (0, r.jsx)(tc, zs(Ks({}, h), {
                             attachment: l,
                             message: s,
                             inlineMedia: c,
                             hiddenSpoilers: t,
                             canRemoveAttachment: d,
-                            className: a()(i, Fs().attachmentContentItem, (e = {}, Ys(e, Fs().obscured, g && !_), Ys(e, Fs().hiddenSpoiler, g && b === Ns.wk.SPOILER), Ys(e, Fs().hiddenExplicit, g && null != b && [Ns.wk.EXPLICIT_CONTENT, Ns.wk.POTENTIAL_EXPLICIT_CONTENT].includes(b)), Ys(e, Fs().hiddenAttachment, g && t), Ys(e, Fs().inline, g && _), e)),
+                            className: a()(i, Vs().attachmentContentItem, (e = {}, Ws(e, Vs().obscured, g && !_), Ws(e, Vs().hiddenSpoiler, g && b === Ns.wk.SPOILER), Ws(e, Vs().hiddenExplicit, g && null != b && [Ns.wk.EXPLICIT_CONTENT, Ns.wk.POTENTIAL_EXPLICIT_CONTENT].includes(b)), Ws(e, Vs().hiddenAttachment, g && t), Ws(e, Vs().inline, g && _), e)),
                             focusable: !t,
                             mediaLayoutType: f,
                             useFullWidth: u,
@@ -20517,15 +20520,15 @@
                         }))
                     };
                 return (0, r.jsx)("div", {
-                    className: a()(Fs().messageAttachment, (n = {}, Ys(n, Fs().messageAttachmentNoJustify, S), Ys(n, Fs().messageAttachmentFullWidth, u), Ys(n, Fs().messageAttachmentMediaMosaic, E), Ys(n, Fs().hideOverflow, E && j), n)),
-                    children: null != b ? (0, r.jsx)(Zs.Z, {
-                        type: Zs.Z.Types.ATTACHMENT,
+                    className: a()(Vs().messageAttachment, (n = {}, Ws(n, Vs().messageAttachmentNoJustify, S), Ws(n, Vs().messageAttachmentFullWidth, u), Ws(n, Vs().messageAttachmentMediaMosaic, E), Ws(n, Vs().hideOverflow, E && j), n)),
+                    children: null != b ? (0, r.jsx)(ks.Z, {
+                        type: ks.Z.Types.ATTACHMENT,
                         inline: _,
                         reason: b,
                         isSingleMosaicItem: p,
                         obscured: g,
-                        containerStyles: tc(l, S, f),
-                        obscurityControlClassName: a()(Ys({}, Fs().obscureVideo, "VIDEO" === I && p && !g)),
+                        containerStyles: nc(l, S, f),
+                        obscurityControlClassName: a()(Ws({}, Vs().obscureVideo, "VIDEO" === I && p && !g)),
                         onToggleObscurity: function() {
                             return v((function(e) {
                                 return !e
@@ -20537,16 +20540,16 @@
                     }) : P()
                 })
             };
-            var rc = n(493526),
-                oc = n.n(rc);
+            var oc = n(493526),
+                ic = n.n(oc);
 
-            function ic(e, t) {
+            function ac(e, t) {
                 (null == t || t > e.length) && (t = e.length);
                 for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n];
                 return r
             }
 
-            function ac(e, t, n) {
+            function lc(e, t, n) {
                 t in e ? Object.defineProperty(e, t, {
                     value: n,
                     enumerable: !0,
@@ -20556,7 +20559,7 @@
                 return e
             }
 
-            function lc(e) {
+            function sc(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
@@ -20564,13 +20567,13 @@
                         return Object.getOwnPropertyDescriptor(n, e).enumerable
                     }))));
                     r.forEach((function(t) {
-                        ac(e, t, n[t])
+                        lc(e, t, n[t])
                     }))
                 }
                 return e
             }
 
-            function sc(e, t) {
+            function cc(e, t) {
                 t = null != t ? t : {};
                 Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : function(e, t) {
                     var n = Object.keys(e);
@@ -20588,7 +20591,7 @@
                 return e
             }
 
-            function cc(e, t) {
+            function uc(e, t) {
                 return function(e) {
                     if (Array.isArray(e)) return e
                 }(e) || function(e, t) {
@@ -20616,66 +20619,66 @@
                     }
                 }(e, t) || function(e, t) {
                     if (!e) return;
-                    if ("string" == typeof e) return ic(e, t);
+                    if ("string" == typeof e) return ac(e, t);
                     var n = Object.prototype.toString.call(e).slice(8, -1);
                     "Object" === n && e.constructor && (n = e.constructor.name);
                     if ("Map" === n || "Set" === n) return Array.from(n);
-                    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return ic(e, t)
+                    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return ac(e, t)
                 }(e, t) || function() {
                     throw new TypeError("Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
                 }()
             }
-            var uc = Math.round((ds.mT - 8) / 3),
-                fc = Math.round((ds.mT - 4) / 2),
-                dc = Math.round((ds.Jj - 4) / 2),
-                pc = Math.round(2 * (ds.mT - 4) / 3),
-                hc = pc / 2,
-                mc = function(e) {
+            var fc = Math.round((ds.mT - 8) / 3),
+                dc = Math.round((ds.mT - 4) / 2),
+                pc = Math.round((ds.Jj - 4) / 2),
+                hc = Math.round(2 * (ds.mT - 4) / 3),
+                mc = hc / 2,
+                yc = function(e) {
                     var t = e.mediaAttachments,
                         n = e.getAttachmentKind,
                         o = t.length;
-                    if (1 === o) return (0, r.jsx)(yc, {
+                    if (1 === o) return (0, r.jsx)(bc, {
                         attachmentsForLayout: t,
                         getAttachmentKind: n,
                         isSingleImage: !0
                     });
-                    if (2 === o) return (0, r.jsx)(bc, {
+                    if (2 === o) return (0, r.jsx)(Oc, {
                         attachmentsForLayout: t,
                         getAttachmentKind: n
                     });
-                    if (3 === o) return (0, r.jsx)(Oc, {
+                    if (3 === o) return (0, r.jsx)(gc, {
                         attachmentsForLayout: t,
                         getAttachmentKind: n
                     });
-                    if (4 === o) return (0, r.jsx)(gc, {
+                    if (4 === o) return (0, r.jsx)(vc, {
                         attachmentsForLayout: t,
                         getAttachmentKind: n
                     });
                     var i = o % 3;
                     return (0, r.jsxs)(r.Fragment, {
-                        children: [1 === i && (0, r.jsx)(yc, {
+                        children: [1 === i && (0, r.jsx)(bc, {
                             attachmentsForLayout: t.slice(0, i),
                             getAttachmentKind: n
-                        }), 2 === i && (0, r.jsx)(bc, {
+                        }), 2 === i && (0, r.jsx)(Oc, {
                             attachmentsForLayout: t.slice(0, i),
                             getAttachmentKind: n
-                        }), 0 === i ? (0, r.jsx)(vc, {
+                        }), 0 === i ? (0, r.jsx)(Ec, {
                             attachmentsForLayout: t,
                             getAttachmentKind: n
-                        }) : (0, r.jsx)(vc, {
+                        }) : (0, r.jsx)(Ec, {
                             attachmentsForLayout: t.slice(i),
                             getAttachmentKind: n
                         })]
                     })
                 },
-                yc = function(e) {
+                bc = function(e) {
                     var t = e.attachmentsForLayout,
                         n = e.getAttachmentKind,
                         o = e.isSingleImage,
                         i = t[0];
                     return (0, r.jsx)("div", {
-                        className: a()(oc().oneByOneGrid, o ? oc().oneByOneGridSingle : oc().oneByOneGridMosaic),
-                        children: (0, r.jsx)(Ec, {
+                        className: a()(ic().oneByOneGrid, o ? ic().oneByOneGridSingle : ic().oneByOneGridMosaic),
+                        children: (0, r.jsx)(_c, {
                             props: i,
                             attachmentKind: n(i.attachment.id),
                             useFullWidth: !o,
@@ -20683,48 +20686,48 @@
                         })
                     })
                 },
-                bc = function(e) {
+                Oc = function(e) {
                     var t = e.attachmentsForLayout,
                         n = e.getAttachmentKind;
                     return (0, r.jsx)("div", {
-                        className: oc().oneByTwoGrid,
+                        className: ic().oneByTwoGrid,
                         children: t.map((function(e) {
                             return (0, r.jsx)("div", {
-                                className: oc().oneByTwoGridItem,
-                                children: (0, r.jsx)(Ec, {
+                                className: ic().oneByTwoGridItem,
+                                children: (0, r.jsx)(_c, {
                                     props: e,
                                     attachmentKind: n(e.attachment.id),
-                                    maxWidth: fc,
-                                    maxHeight: fc
+                                    maxWidth: dc,
+                                    maxHeight: dc
                                 })
                             }, e.attachment.id)
                         }))
                     })
                 },
-                Oc = function(e) {
+                gc = function(e) {
                     var t = e.attachmentsForLayout,
                         n = e.getAttachmentKind;
                     return (0, r.jsxs)("div", {
-                        className: a()(oc().oneByTwoGrid, oc().oneByTwoLayoutThreeGrid),
+                        className: a()(ic().oneByTwoGrid, ic().oneByTwoLayoutThreeGrid),
                         children: [(0, r.jsx)("div", {
-                            className: oc().oneByTwoSoloItem,
-                            children: (0, r.jsx)(Ec, {
+                            className: ic().oneByTwoSoloItem,
+                            children: (0, r.jsx)(_c, {
                                 props: t[0],
                                 attachmentKind: n(t[0].attachment.id),
-                                maxWidth: pc
+                                maxWidth: hc
                             })
                         }), (0, r.jsx)("div", {
-                            className: oc().oneByTwoDuoItem,
+                            className: ic().oneByTwoDuoItem,
                             children: (0, r.jsx)("div", {
-                                className: oc().twoByOneGrid,
+                                className: ic().twoByOneGrid,
                                 children: t.splice(1).map((function(e) {
                                     return (0, r.jsx)("div", {
-                                        className: oc().twoByOneGridItem,
-                                        children: (0, r.jsx)(Ec, {
+                                        className: ic().twoByOneGridItem,
+                                        children: (0, r.jsx)(_c, {
                                             props: e,
                                             attachmentKind: n(e.attachment.id),
-                                            maxWidth: hc,
-                                            maxHeight: dc
+                                            maxWidth: mc,
+                                            maxHeight: pc
                                         })
                                     }, e.attachment.id)
                                 }))
@@ -20732,37 +20735,37 @@
                         })]
                     })
                 },
-                gc = function(e) {
-                    var t = e.attachmentsForLayout,
-                        n = e.getAttachmentKind;
-                    return (0, r.jsx)("div", {
-                        className: oc().twoByTwoGrid,
-                        children: t.map((function(e) {
-                            return (0, r.jsx)(Ec, {
-                                props: e,
-                                attachmentKind: n(e.attachment.id),
-                                maxWidth: fc,
-                                maxHeight: dc
-                            }, e.attachment.id)
-                        }))
-                    })
-                },
                 vc = function(e) {
                     var t = e.attachmentsForLayout,
                         n = e.getAttachmentKind;
                     return (0, r.jsx)("div", {
-                        className: oc().threeByThreeGrid,
+                        className: ic().twoByTwoGrid,
                         children: t.map((function(e) {
-                            return (0, r.jsx)(Ec, {
+                            return (0, r.jsx)(_c, {
                                 props: e,
                                 attachmentKind: n(e.attachment.id),
-                                maxWidth: uc,
-                                maxHeight: uc
+                                maxWidth: dc,
+                                maxHeight: pc
                             }, e.attachment.id)
                         }))
                     })
                 },
                 Ec = function(e) {
+                    var t = e.attachmentsForLayout,
+                        n = e.getAttachmentKind;
+                    return (0, r.jsx)("div", {
+                        className: ic().threeByThreeGrid,
+                        children: t.map((function(e) {
+                            return (0, r.jsx)(_c, {
+                                props: e,
+                                attachmentKind: n(e.attachment.id),
+                                maxWidth: fc,
+                                maxHeight: fc
+                            }, e.attachment.id)
+                        }))
+                    })
+                },
+                _c = function(e) {
                     var t, n = e.props,
                         o = e.attachmentKind,
                         i = e.maxWidth,
@@ -20773,13 +20776,13 @@
                         f = void 0 === u || u,
                         d = e.isSingleItem,
                         p = void 0 !== d && d,
-                        h = sc(lc({}, n, "IMAGE" === o && (t = n.className, {
-                            className: a()(t, oc().attachmentContentContainer),
-                            imgContainerClassName: oc().lazyImgContainer,
-                            imgClassName: oc().lazyImg
+                        h = cc(sc({}, n, "IMAGE" === o && (t = n.className, {
+                            className: a()(t, ic().attachmentContentContainer),
+                            imgContainerClassName: ic().lazyImgContainer,
+                            imgClassName: ic().lazyImg
                         }), "VIDEO" === o && function(e) {
                             return {
-                                className: a()(e, oc().lazyImg)
+                                className: a()(e, ic().lazyImg)
                             }
                         }(n.className)), {
                             mediaLayoutType: ds.hV.MOSAIC,
@@ -20790,39 +20793,39 @@
                         });
                     return (0, r.jsx)(Cs.h.Provider, {
                         value: n.gifFavoriteButton,
-                        children: (0, r.jsx)(nc, lc({}, h))
+                        children: (0, r.jsx)(rc, sc({}, h))
                     })
                 };
-            const _c = function(e) {
+            const Ic = function(e) {
                 var t, n = e.attachments,
                     i = o.useMemo((function() {
                         return new Map(n.map((function(e) {
-                            return [e.attachment.id, qs(e.attachment, e.inlineMedia)]
+                            return [e.attachment.id, $s(e.attachment, e.inlineMedia)]
                         })))
                     }), [n]),
                     a = o.useCallback((function(e) {
                         return null !== (t = i.get(e)) && void 0 !== t ? t : "INVALID"
                     }), [i]),
-                    l = cc(o.useMemo((function() {
+                    l = uc(o.useMemo((function() {
                         return Ai().partition(n, (function(e) {
-                            return Xs(a(e.attachment.id))
+                            return qs(a(e.attachment.id))
                         }))
                     }), [n, a]), 2),
                     s = l[0],
                     c = l[1];
                 return (0, r.jsxs)(r.Fragment, {
                     children: [s.length > 0 && (0, r.jsx)("div", {
-                        className: oc().mediaAttachmentsContainer,
-                        children: (0, r.jsx)(mc, {
+                        className: ic().mediaAttachmentsContainer,
+                        children: (0, r.jsx)(yc, {
                             mediaAttachments: s,
                             getAttachmentKind: a
                         })
                     }), c.length > 0 && (0, r.jsx)("div", {
-                        className: oc().nonMediaAttachmentsContainer,
+                        className: ic().nonMediaAttachmentsContainer,
                         children: c.map((function(e) {
                             return (0, r.jsx)("div", {
-                                className: oc().nonMediaAttachmentItem,
-                                children: (0, r.jsx)(Ec, {
+                                className: ic().nonMediaAttachmentItem,
+                                children: (0, r.jsx)(_c, {
                                     props: e,
                                     attachmentKind: a(e.attachment.id)
                                 })
@@ -20831,16 +20834,31 @@
                     })]
                 })
             };
-            var Ic = n(581373),
-                Sc = n(188775),
-                jc = n(102921),
-                Pc = n(585622),
-                Tc = n(728521),
-                Cc = n(116404),
-                Ac = n(535156),
-                wc = n(393299);
+            var Sc = n(581373),
+                jc = n(188775),
+                Pc = n(102921),
+                Tc = n(585622),
+                Cc = (0, Ms.B)({
+                    kind: "user",
+                    id: "2023-10_social_proofing_file_size",
+                    label: "Social Proofing File Size",
+                    defaultConfig: {
+                        enabled: !1
+                    },
+                    treatments: [{
+                        id: 1,
+                        label: "Should show nitro upsell for large files",
+                        config: {
+                            enabled: !0
+                        }
+                    }]
+                });
+            var Ac = n(728521),
+                wc = n(116404),
+                Nc = n(535156),
+                xc = n(393299);
 
-            function Nc(e) {
+            function Mc(e) {
                 var t, n = e.guild,
                     i = e.channel,
                     a = e.messageData,
@@ -20856,8 +20874,8 @@
                             guild_id: l,
                             channel_id: s
                         });
-                        (0, Ac.K)(n.id, i.id);
-                        Cc.default.selectVoiceChannel(i.id)
+                        (0, Nc.K)(n.id, i.id);
+                        wc.default.selectVoiceChannel(i.id)
                     }), [null === (t = a.author) || void 0 === t ? void 0 : t.id, n.id, i.id, i.type, l, s]),
                     u = (0, r.jsx)(yn.Z.Channel, {
                         channel: i
@@ -20877,7 +20895,7 @@
                                         guildName: n.name
                                     }), (0, r.jsx)("span", {
                                         className: lo().infoBadge,
-                                        children: (0, r.jsx)(wc.Z, {
+                                        children: (0, r.jsx)(xc.Z, {
                                             guild: n,
                                             isBannerVisible: !1
                                         })
@@ -20893,13 +20911,13 @@
                 })
             }
 
-            function xc(e, t) {
+            function Rc(e, t) {
                 (null == t || t > e.length) && (t = e.length);
                 for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n];
                 return r
             }
 
-            function Mc(e, t) {
+            function Lc(e, t) {
                 return function(e) {
                     if (Array.isArray(e)) return e
                 }(e) || function(e, t) {
@@ -20927,43 +20945,43 @@
                     }
                 }(e, t) || function(e, t) {
                     if (!e) return;
-                    if ("string" == typeof e) return xc(e, t);
+                    if ("string" == typeof e) return Rc(e, t);
                     var n = Object.prototype.toString.call(e).slice(8, -1);
                     "Object" === n && e.constructor && (n = e.constructor.name);
                     if ("Map" === n || "Set" === n) return Array.from(n);
-                    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return xc(e, t)
+                    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Rc(e, t)
                 }(e, t) || function() {
                     throw new TypeError("Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
                 }()
             }
 
-            function Rc(e) {
+            function Dc(e) {
                 var t = e.code,
                     n = e.messageData,
-                    o = Mc(t.split("/"), 2),
+                    o = Lc(t.split("/"), 2),
                     i = o[0],
                     a = o[1],
                     l = Gt.Z.getChannel(a),
                     s = gr.Z.getGuild(i);
-                return null != l && l.isGuildVocal() && null != s && Dn.Z.can(Re.Plq.VIEW_CHANNEL, l) && Dn.Z.can(Re.Plq.CONNECT, l) ? (0, r.jsx)(Nc, {
+                return null != l && l.isGuildVocal() && null != s && Dn.Z.can(Re.Plq.VIEW_CHANNEL, l) && Dn.Z.can(Re.Plq.CONNECT, l) ? (0, r.jsx)(Mc, {
                     guild: s,
                     channel: l,
                     messageData: n
                 }) : null
             }
-            var Lc = n(45761),
-                Dc = n(224813),
-                Zc = n(269300),
-                kc = n(605013),
-                Uc = n(665278),
-                Gc = n(288634),
-                Bc = n(549069),
-                Hc = n(757753),
-                Fc = n(650875),
-                Vc = n(344832),
-                Yc = n(848285);
+            var Zc = n(45761),
+                kc = n(224813),
+                Uc = n(269300),
+                Gc = n(605013),
+                Bc = n(665278),
+                Hc = n(288634),
+                Fc = n(549069),
+                Vc = n(757753),
+                Yc = n(650875),
+                Wc = n(344832),
+                Kc = n(848285);
 
-            function Wc() {
+            function zc() {
                 return (0, r.jsxs)(yn.Z, {
                     children: [(0, r.jsx)(yn.Z.Header, {
                         text: oe.Z.Messages.INVITE_BUTTON_RESOLVING
@@ -20972,17 +20990,17 @@
                     })]
                 })
             }
-            var Kc = n(718634),
-                zc = n(189369),
-                Jc = n.n(zc);
+            var Jc = n(718634),
+                Qc = n(189369),
+                Xc = n.n(Qc);
 
-            function Qc(e, t) {
+            function qc(e, t) {
                 (null == t || t > e.length) && (t = e.length);
                 for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n];
                 return r
             }
 
-            function Xc(e, t, n) {
+            function $c(e, t, n) {
                 t in e ? Object.defineProperty(e, t, {
                     value: n,
                     enumerable: !0,
@@ -20992,7 +21010,7 @@
                 return e
             }
 
-            function qc(e, t) {
+            function eu(e, t) {
                 t = null != t ? t : {};
                 Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : function(e, t) {
                     var n = Object.keys(e);
@@ -21010,7 +21028,7 @@
                 return e
             }
 
-            function $c(e, t) {
+            function tu(e, t) {
                 if (null == e) return {};
                 var n, r, o = function(e, t) {
                     if (null == e) return {};
@@ -21032,7 +21050,7 @@
                 return o
             }
 
-            function eu(e, t) {
+            function nu(e, t) {
                 return function(e) {
                     if (Array.isArray(e)) return e
                 }(e) || function(e, t) {
@@ -21060,66 +21078,66 @@
                     }
                 }(e, t) || function(e, t) {
                     if (!e) return;
-                    if ("string" == typeof e) return Qc(e, t);
+                    if ("string" == typeof e) return qc(e, t);
                     var n = Object.prototype.toString.call(e).slice(8, -1);
                     "Object" === n && e.constructor && (n = e.constructor.name);
                     if ("Map" === n || "Set" === n) return Array.from(n);
-                    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Qc(e, t)
+                    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return qc(e, t)
                 }(e, t) || function() {
                     throw new TypeError("Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
                 }()
             }
-            var tu = (0, Yt.Mg)(xt.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
-                nu = (0, Yt.Mg)(xt.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
-                ru = (0, Yt.Mg)(xt.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
+            var ru = (0, Yt.Mg)(xt.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
+                ou = (0, Yt.Mg)(xt.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
+                iu = (0, Yt.Mg)(xt.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 
-            function ou(e) {
+            function au(e) {
                 var t, n = e.members,
                     o = e.membersOnline,
                     i = e.isLarge,
                     l = e.isStacked,
                     s = [];
                 null != o && o > 0 && s.push((0, r.jsxs)("div", {
-                    className: Jc().statusWrapper,
+                    className: Xc().statusWrapper,
                     children: [(0, r.jsx)("i", {
-                        className: Jc().statusOnline
+                        className: Xc().statusOnline
                     }), (0, r.jsx)(f.Text, {
                         variant: "text-xs/normal",
-                        className: Jc().count,
+                        className: Xc().count,
                         children: oe.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                             membersOnline: o
                         })
                     })]
                 }, "onlineCount"));
                 null != n && s.push((0, r.jsxs)("div", {
-                    className: Jc().statusWrapper,
+                    className: Xc().statusWrapper,
                     children: [(0, r.jsx)("i", {
-                        className: Jc().statusOffline
+                        className: Xc().statusOffline
                     }), (0, r.jsx)(f.Text, {
                         variant: "text-xs/normal",
-                        className: Jc().count,
+                        className: Xc().count,
                         children: oe.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                             count: n
                         })
                     })]
                 }, "memberCount"));
                 return (0, r.jsx)("div", {
-                    className: a()(Jc().statusCounts, (t = {}, Xc(t, Jc().large, i), Xc(t, Jc().stacked, l), t)),
+                    className: a()(Xc().statusCounts, (t = {}, $c(t, Xc().large, i), $c(t, Xc().stacked, l), t)),
                     children: s
                 })
             }
 
-            function iu(e) {
+            function lu(e) {
                 var t = e.channel,
                     n = e.guild,
                     o = e.isStacked,
                     i = e.hasEnded;
                 if (null != t && null != n) {
-                    var l, s = (0, Vc.KS)(t, n);
+                    var l, s = (0, Wc.KS)(t, n);
                     return (0, r.jsxs)("div", {
-                        className: a()(Jc().channel, (l = {}, Xc(l, Jc().stacked, o), Xc(l, Jc().ended, i), l)),
+                        className: a()(Xc().channel, (l = {}, $c(l, Xc().stacked, o), $c(l, Xc().ended, i), l)),
                         children: [null != s ? (0, r.jsx)(s, {
-                            className: Jc().channelIcon,
+                            className: Xc().channelIcon,
                             width: 16,
                             height: 16
                         }) : null, (0, r.jsx)(Ol.Z, {
@@ -21136,8 +21154,7 @@
                 if (null != n) {
                     var c;
                     return (0, r.jsx)("div", {
-                        className: a()(Jc().channel, (c = {},
-                            Xc(c, Jc().stacked, o), Xc(c, Jc().ended, i), c)),
+                        className: a()(Xc().channel, (c = {}, $c(c, Xc().stacked, o), $c(c, Xc().ended, i), c)),
                         children: (0, r.jsx)(Ol.Z, {
                             children: (0, r.jsx)(f.Text, {
                                 variant: "text-xs/normal",
@@ -21151,19 +21168,19 @@
                 return null
             }
 
-            function au(e) {
+            function su(e) {
                 var t, n = e.invite,
                     i = e.getAcceptInviteContext,
                     l = n.approximate_member_count,
                     c = n.approximate_presence_count,
                     u = n.target_type,
                     d = n.target_application;
-                vo()(u === Kc.Iq.EMBEDDED_APPLICATION && null != d, "invalid application invite");
+                vo()(u === Jc.Iq.EMBEDDED_APPLICATION && null != d, "invalid application invite");
                 var p = o.useRef(null),
-                    h = eu(o.useState(!1), 2),
+                    h = nu(o.useState(!1), 2),
                     m = h[0],
                     y = h[1],
-                    b = eu(o.useState(!1), 2),
+                    b = nu(o.useState(!1), 2),
                     O = b[0],
                     g = b[1];
                 o.useEffect((function() {
@@ -21171,8 +21188,8 @@
                             return function() {
                                 var e, t = null === (e = p.current) || void 0 === e ? void 0 : e.offsetWidth;
                                 if (null != t) {
-                                    y(t < ru + nu);
-                                    g(t <= 2 * tu)
+                                    y(t < iu + ou);
+                                    g(t <= 2 * ru)
                                 }
                             }()
                         })),
@@ -21204,7 +21221,7 @@
                     P = (0, Dt.Z)(Lt.Z.INVITE_EMBED).analyticsLocations,
                     T = (0, qt.Z)({
                         applicationId: d.id,
-                        size: tu
+                        size: ru
                     }),
                     C = (0, s.Wu)([Kt.ZP], (function() {
                         return null != S ? Kt.ZP.getEmbeddedActivitiesForChannel(S.id).filter((function(e) {
@@ -21221,44 +21238,45 @@
                     w = n.state === Re.r2o.ACCEPTING,
                     N = null != v;
                 if (null == v) {
-                    if (null == n.guild) return (0, r.jsx)(Wc, {});
-                    v = new Yc.Z(n.guild)
+                    if (null == n.guild) return (0, r.jsx)(zc, {});
+                    v = new Kc.Z(n.guild)
                 }
                 var x, M, R, L, D, Z, k, G, B = N && !j || N && _;
                 N && _ && (x = oe.Z.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY);
                 j || (x = oe.Z.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS);
                 M = _ ? oe.Z.Messages.INVITE_EMBED_JOINED : I || !N ? oe.Z.Messages.JOIN : oe.Z.Messages.START;
                 return null == n.code || "" === n.code ? null : (0, r.jsxs)("div", {
-                    className: Jc().container,
+                    className: Xc().container,
                     ref: p,
                     children: [(0, r.jsx)("div", {
-                        className: a()(Jc().imgContainer, (L = {}, Xc(L, Jc().large, m), Xc(L, Jc().stacked, O), L)),
-                        children: (0, r.jsx)(Fc.Z, {
+                        className: a()(Xc().imgContainer, (L = {}, $c(L, Xc().large, m), $c(L, Xc().stacked, O), L)),
+                        children: (0, r.jsx)(Yc.Z, {
                             imageBackground: T,
                             applicationName: null !== (R = null == E ? void 0 : E.name) && void 0 !== R ? R : "",
-                            imageClassName: a()(Jc().img, (D = {}, Xc(D, Jc().large, m), Xc(D, Jc().stacked, O), D)),
-                            imageNotFoundClassName: a()(Jc().brokenImg, (Z = {}, Xc(Z, Jc().large, m), Xc(Z, Jc().stacked, O), Z))
+                            imageClassName: a()(Xc().img, (D = {},
+                                $c(D, Xc().large, m), $c(D, Xc().stacked, O), D)),
+                            imageNotFoundClassName: a()(Xc().brokenImg, (Z = {}, $c(Z, Xc().large, m), $c(Z, Xc().stacked, O), Z))
                         })
                     }), (0, r.jsxs)(yn.Z, {
-                        className: a()(Jc().content, (k = {}, Xc(k, Jc().large, m), Xc(k, Jc().stacked, O), k)),
+                        className: a()(Xc().content, (k = {}, $c(k, Xc().large, m), $c(k, Xc().stacked, O), k)),
                         children: [(0, r.jsxs)("div", {
-                            className: Jc().info,
+                            className: Xc().info,
                             children: [(0, r.jsx)(f.FormTitle, {
                                 children: N ? oe.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_TITLE_INVITED_TO_JOIN : oe.Z.Messages.INVITE_BUTTON_TITLE_INVITED
                             }), (0, r.jsx)(f.Heading, {
-                                className: Jc().heading,
+                                className: Xc().heading,
                                 variant: "heading-xl/semibold",
                                 children: null == E ? void 0 : E.name
-                            }), (0, r.jsx)(iu, {
+                            }), (0, r.jsx)(lu, {
                                 channel: S,
                                 guild: v,
                                 isStacked: O,
                                 hasEnded: !I
                             })]
                         }), (0, r.jsxs)("div", {
-                            className: a()(Jc().currentState, (G = {}, Xc(G, Jc().large, m), Xc(G, Jc().split, !I && O), G)),
+                            className: a()(Xc().currentState, (G = {}, $c(G, Xc().large, m), $c(G, Xc().split, !I && O), G)),
                             children: [!I && N ? (0, r.jsxs)("div", {
-                                className: a()(Jc().endedNote, Xc({}, Jc().large, m)),
+                                className: a()(Xc().endedNote, $c({}, Xc().large, m)),
                                 children: [(0, r.jsx)(f.Text, {
                                     variant: "text-xs/medium",
                                     children: oe.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED
@@ -21266,15 +21284,15 @@
                                     variant: "text-xs/medium",
                                     children: oe.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_START
                                 })]
-                            }) : null, N ? null : (0, r.jsx)(ou, {
+                            }) : null, N ? null : (0, r.jsx)(au, {
                                 members: l,
                                 membersOnline: c,
                                 isLarge: m,
                                 isStacked: O
                             }), (0, r.jsxs)("div", {
-                                className: Jc().cta,
+                                className: Xc().cta,
                                 children: [null != v && I ? (0, r.jsx)("div", {
-                                    className: Jc().avatars,
+                                    className: Xc().avatars,
                                     children: (0, r.jsx)(Ht.Z, {
                                         guildId: v.id,
                                         users: A,
@@ -21284,8 +21302,8 @@
                                     text: x,
                                     children: function(e) {
                                         var t = e.onClick,
-                                            o = $c(e, ["onClick"]);
-                                        return (0, r.jsx)(f.Button, qc(function(e) {
+                                            o = tu(e, ["onClick"]);
+                                        return (0, r.jsx)(f.Button, eu(function(e) {
                                             for (var t = 1; t < arguments.length; t++) {
                                                 var n = null != arguments[t] ? arguments[t] : {},
                                                     r = Object.keys(n);
@@ -21293,21 +21311,21 @@
                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable
                                                 }))));
                                                 r.forEach((function(t) {
-                                                    Xc(e, t, n[t])
+                                                    $c(e, t, n[t])
                                                 }))
                                             }
                                             return e
                                         }({
-                                            className: Jc().actionButton,
+                                            className: Xc().actionButton,
                                             onClick: function() {
-                                                Dc.Z.acceptInviteAndTransitionToInviteChannel({
+                                                kc.Z.acceptInviteAndTransitionToInviteChannel({
                                                     inviteKey: n.code,
                                                     context: i("Invite Button Embed"),
                                                     analyticsLocations: P
                                                 });
                                                 null == t || t()
                                             },
-                                            wrapperClassName: Jc().tooltipButtonWrapper
+                                            wrapperClassName: Xc().tooltipButtonWrapper
                                         }, o), {
                                             submitting: w,
                                             disabled: B,
@@ -21321,15 +21339,15 @@
                     })]
                 })
             }
-            var lu = n(308921);
+            var cu = n(308921);
 
-            function su(e) {
+            function uu(e) {
                 var t, n, o = e.author,
                     i = e.inviteError,
                     a = (0, s.e7)([D.default], (function() {
                         return D.default.getId()
                     })) === o.id ? oe.Z.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID : oe.Z.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID,
-                    l = (0, lu.l)(null == i ? void 0 : i.code);
+                    l = (0, cu.l)(null == i ? void 0 : i.code);
                 return (0, r.jsxs)(yn.Z, {
                     children: [(0, r.jsx)(yn.Z.Header, {
                         text: a
@@ -21344,10 +21362,10 @@
                     })]
                 })
             }
-            var cu = n(761953),
-                uu = n(722406);
+            var fu = n(761953),
+                du = n(722406);
 
-            function fu(e) {
+            function pu(e) {
                 var t, n = e.invite,
                     i = e.getAcceptInviteContext,
                     a = (0, s.e7)([D.default], (function() {
@@ -21361,12 +21379,12 @@
                     })),
                     f = o.useCallback((function() {
                         if (null != n.inviter) {
-                            null != Gt.Z.getDMFromUserId(n.inviter.id) && cu.Z.openPrivateChannel([n.inviter.id])
+                            null != Gt.Z.getDMFromUserId(n.inviter.id) && fu.Z.openPrivateChannel([n.inviter.id])
                         }
                     }), [n.inviter]),
                     d = o.useCallback((function() {
                         var e = i("Invite Button Embed");
-                        Dc.Z.acceptInviteAndTransitionToInviteChannel({
+                        kc.Z.acceptInviteAndTransitionToInviteChannel({
                             inviteKey: n.code,
                             context: e
                         })
@@ -21392,9 +21410,10 @@
                         children: [(0, r.jsxs)("div", {
                             className: lo().headerLine,
                             children: [(0, r.jsx)(yn.Z.Icon, {
-                                user: new uu.Z(n.inviter),
+                                user: new du.Z(n.inviter),
                                 onClick: u ? p : void 0
-                            }), (0, r.jsx)(yn.Z.Info, {
+                            }), (0,
+                                r.jsx)(yn.Z.Info, {
                                 title: b,
                                 onClick: u ? p : void 0,
                                 children: O
@@ -21409,9 +21428,9 @@
                     })]
                 })
             }
-            var du = n(382060);
+            var hu = n(382060);
 
-            function pu(e) {
+            function mu(e) {
                 var t = e.invite,
                     n = e.author,
                     o = e.currentUserId,
@@ -21425,8 +21444,8 @@
                 vo()(null == u || u.isPrivate(), "must be a private channel");
                 var f, d = null != u;
                 if (null == u) {
-                    if (null == t.channel) return (0, r.jsx)(Wc, {});
-                    u = (0, du.jD)(t.channel);
+                    if (null == t.channel) return (0, r.jsx)(zc, {});
+                    u = (0, hu.jD)(t.channel);
                     f = null != t.channel && null != t.channel.recipients ? t.channel.recipients : []
                 } else {
                     f = u.recipients.reduce((function(e, t) {
@@ -21476,11 +21495,11 @@
                     })]
                 })
             }
-            var hu = n(816810),
-                mu = n(930865),
-                yu = n(767954);
+            var yu = n(816810),
+                bu = n(930865),
+                Ou = n(767954);
 
-            function bu(e, t, n, r, o, i, a) {
+            function gu(e, t, n, r, o, i, a) {
                 try {
                     var l = e[i](a),
                         s = l.value
@@ -21491,7 +21510,7 @@
                 l.done ? t(s) : Promise.resolve(s).then(r, o)
             }
 
-            function Ou(e) {
+            function vu(e) {
                 return function() {
                     var t = this,
                         n = arguments;
@@ -21499,18 +21518,18 @@
                         var i = e.apply(t, n);
 
                         function a(e) {
-                            bu(i, r, o, a, l, "next", e)
+                            gu(i, r, o, a, l, "next", e)
                         }
 
                         function l(e) {
-                            bu(i, r, o, a, l, "throw", e)
+                            gu(i, r, o, a, l, "throw", e)
                         }
                         a(void 0)
                     }))
                 }
             }
 
-            function gu(e, t, n) {
+            function Eu(e, t, n) {
                 t in e ? Object.defineProperty(e, t, {
                     value: n,
                     enumerable: !0,
@@ -21519,7 +21538,7 @@
                 }) : e[t] = n;
                 return e
             }
-            var vu = function(e, t) {
+            var _u = function(e, t) {
                 var n, r, o, i, a = {
                     label: 0,
                     sent: function() {
@@ -21603,7 +21622,7 @@
                 }
             };
 
-            function Eu(e) {
+            function Iu(e) {
                 var t, o, i = e.onTransitionToInviteChannel,
                     a = e.onAcceptInstantInvite,
                     l = e.guild,
@@ -21614,17 +21633,17 @@
                     p = s.approximate_member_count,
                     h = s.approximate_presence_count,
                     m = s.state === Re.r2o.ACCEPTING,
-                    y = null != d ? (0, du.jD)(d) : null,
+                    y = null != d ? (0, hu.jD)(d) : null,
                     b = null != l,
                     O = null != y,
                     g = null != y && y.isGuildVocal(),
                     v = null != y && y.isGuildStageVoice(),
-                    E = (0, Ft.yE)(null !== (t = s.flags) && void 0 !== t ? t : 0, hu.$.IS_GUEST_INVITE),
+                    E = (0, Ft.yE)(null !== (t = s.flags) && void 0 !== t ? t : 0, yu.$.IS_GUEST_INVITE),
                     _ = null !== (o = null == l ? void 0 : l.hasFeature(Re.oNc.HUB)) && void 0 !== o && o;
                 if (null == l) {
-                    if (null == s.guild) return (0, r.jsx)(Wc, {});
-                    l = yu.Qs(s.guild);
-                    var I = (0, mu.rF)(s.guild.premium_subscription_count, s.guild.id);
+                    if (null == s.guild) return (0, r.jsx)(zc, {});
+                    l = Ou.Qs(s.guild);
+                    var I = (0, bu.rF)(s.guild.premium_subscription_count, s.guild.id);
                     l.premiumTier = I
                 }
                 var S, j, P, T = b ? i : a,
@@ -21650,7 +21669,7 @@
                         guild: l
                     }), (0, r.jsx)("span", {
                         className: lo().infoBadge,
-                        children: (0, r.jsx)(wc.Z, {
+                        children: (0, r.jsx)(xc.Z, {
                             guild: l,
                             isBannerVisible: !1,
                             disableBoostClick: !0
@@ -21674,7 +21693,7 @@
                             guildName: l.name
                         }), (0, r.jsx)("span", {
                             className: lo().infoBadge,
-                            children: (0, r.jsx)(wc.Z, {
+                            children: (0, r.jsx)(xc.Z, {
                                 guild: l,
                                 isBannerVisible: !1
                             })
@@ -21717,9 +21736,9 @@
                             color: "header-secondary",
                             children: oe.Z.Messages.HUB_INVITE_ANOTHER_SCHOOL_LINK.format({
                                 onClick: function() {
-                                    return (0, f.openModalLazy)(Ou((function() {
+                                    return (0, f.openModalLazy)(vu((function() {
                                         var e, t;
-                                        return vu(this, (function(o) {
+                                        return _u(this, (function(o) {
                                             switch (o.label) {
                                                 case 0:
                                                     return [4, Promise.all([n.e(40532), n.e(66658), n.e(47469)]).then(n.bind(n, 966658))];
@@ -21734,7 +21753,7 @@
                                                                     return Object.getOwnPropertyDescriptor(n, e).enumerable
                                                                 }))));
                                                                 r.forEach((function(t) {
-                                                                    gu(e, t, n[t])
+                                                                    Eu(e, t, n[t])
                                                                 }))
                                                             }
                                                             return e
@@ -21749,9 +21768,9 @@
                     })]
                 })
             }
-            var _u = n(224134);
+            var Su = n(224134);
 
-            function Iu(e) {
+            function ju(e) {
                 var t, n, o, i = e.author,
                     a = e.banned,
                     l = (0, s.e7)([D.default], (function() {
@@ -21782,7 +21801,7 @@
                                     plainText: t,
                                     rawText: n
                                 });
-                                null != c && _u.Z.startTyping(c)
+                                null != c && Su.Z.startTyping(c)
                             },
                             children: oe.Z.Messages.MENTION
                         })
@@ -21806,8 +21825,8 @@
                     })]
                 })
             }
-            var Su = n(607739);
-            const ju = function(e) {
+            var Pu = n(607739);
+            const Tu = function(e) {
                 var t = e.stageInstance,
                     n = e.guild,
                     o = e.isMember,
@@ -21815,7 +21834,7 @@
                     a = e.onAcceptInstantInvite,
                     l = o ? i : a;
                 return (0, r.jsx)(yn.Z, {
-                    children: (0, r.jsx)(Su.Z, {
+                    children: (0, r.jsx)(Pu.Z, {
                         isEmbed: !0,
                         stageInstance: t,
                         guild: n,
@@ -21823,9 +21842,9 @@
                     })
                 })
             };
-            var Pu = n(177570);
+            var Cu = n(177570);
 
-            function Tu(e) {
+            function Au(e) {
                 var t = e.invite,
                     n = e.currentUserId,
                     o = e.guild,
@@ -21835,26 +21854,26 @@
                     c = (0, s.e7)([mn.Z], (function() {
                         return mn.Z.getGuildId()
                     })),
-                    u = (0, s.e7)([Pu.Z], (function() {
-                        return null != t && null != t.target_user ? Pu.Z.getActiveStreamForUser(t.target_user.id, l) : null
+                    u = (0, s.e7)([Cu.Z], (function() {
+                        return null != t && null != t.target_user ? Cu.Z.getActiveStreamForUser(t.target_user.id, l) : null
                     }), [t, l]),
-                    f = (0, s.e7)([Pu.Z], (function() {
-                        return null != t && null != t.target_user ? Pu.Z.getStreamForUser(t.target_user.id, l) : null
+                    f = (0, s.e7)([Cu.Z], (function() {
+                        return null != t && null != t.target_user ? Cu.Z.getStreamForUser(t.target_user.id, l) : null
                     }), [t, l]),
-                    d = null != t && t.target_type === Kc.Iq.STREAM && null != t.target_user && null != u,
+                    d = null != t && t.target_type === Jc.Iq.STREAM && null != t.target_user && null != u,
                     p = null != t && null != f && null != t.channel && null != t.guild && f.channelId === t.channel.id && f.guildId === t.guild.id;
                 vo()(null != t, "Invite cannot be null");
                 var h = t.target_type,
                     m = t.target_user;
-                vo()(h === Kc.Iq.STREAM && null != m, "invalid streaming invite");
+                vo()(h === Jc.Iq.STREAM && null != m, "invalid streaming invite");
                 var y = n === m.id,
                     b = t.state === Re.r2o.ACCEPTING,
                     O = null != o;
                 if (null == o) {
-                    if (null == t.guild) return (0, r.jsx)(Wc, {});
-                    o = new Yc.Z(t.guild)
+                    if (null == t.guild) return (0, r.jsx)(zc, {});
+                    o = new Kc.Z(t.guild)
                 }
-                var g, v, E, _ = null != t.channel ? (0, du.jD)(t.channel) : null,
+                var g, v, E, _ = null != t.channel ? (0, hu.jD)(t.channel) : null,
                     I = d ? i : a;
                 if (O && !p) E = y ? oe.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : oe.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({
                     name: m.username
@@ -21901,20 +21920,20 @@
                 })
             }
 
-            function Cu(e) {
+            function wu(e) {
                 var t = e.code,
                     n = e.author,
                     i = e.getAcceptInviteContext,
-                    a = (0, s.cj)([Hc.Z], (function() {
+                    a = (0, s.cj)([Vc.Z], (function() {
                         return {
-                            invite: Hc.Z.getInvite(t),
-                            inviteError: Hc.Z.getInviteError(t)
+                            invite: Vc.Z.getInvite(t),
+                            inviteError: Vc.Z.getInviteError(t)
                         }
                     }), [t]),
                     l = a.invite,
                     c = a.inviteError;
                 o.useEffect((function() {
-                    null == l && Dc.Z.resolveInvite(t)
+                    null == l && kc.Z.resolveInvite(t)
                 }), [t]);
                 var u = null != l ? l : {
                         state: Re.r2o.RESOLVING,
@@ -21927,15 +21946,15 @@
                     p = (0, s.e7)([D.default], (function() {
                         return D.default.getId()
                     })),
-                    h = (0, s.e7)([Zc.ZP], (function() {
+                    h = (0, s.e7)([Uc.ZP], (function() {
                         var e;
-                        return Zc.ZP.getGuildScheduledEvent(null === (e = u.guild_scheduled_event) || void 0 === e ? void 0 : e.id)
+                        return Uc.ZP.getGuildScheduledEvent(null === (e = u.guild_scheduled_event) || void 0 === e ? void 0 : e.id)
                     }), [u]),
                     m = function() {
-                        null != u.channel && Dc.Z.transitionToInviteSync(u)
+                        null != u.channel && kc.Z.transitionToInviteSync(u)
                     },
                     y = function() {
-                        (0, Gc.yU)() ? (0, Bc.Z)({
+                        (0, Hc.yU)() ? (0, Fc.Z)({
                             analyticsSource: {
                                 page: Re.ZY5.INVITE_EMBED
                             },
@@ -21944,12 +21963,12 @@
                                 section: Re.jXE.GUILD_CAP_UPSELL_MODAL
                             },
                             analyticsLocations: f
-                        }) : Dc.Z.acceptInviteAndTransitionToInviteChannel({
+                        }) : kc.Z.acceptInviteAndTransitionToInviteChannel({
                             inviteKey: t,
                             context: i("Invite Button Embed")
                         })
                     },
-                    b = (0, r.jsx)(Eu, {
+                    b = (0, r.jsx)(Iu, {
                         onTransitionToInviteChannel: m,
                         onAcceptInstantInvite: y,
                         currentUserId: p,
@@ -21959,25 +21978,25 @@
                     });
                 switch (u.state) {
                     case Re.r2o.RESOLVING:
-                        b = (0, r.jsx)(Wc, {});
+                        b = (0, r.jsx)(zc, {});
                         break;
                     case Re.r2o.EXPIRED:
                     case Re.r2o.BANNED:
-                        b = (0, r.jsx)(Iu, {
+                        b = (0, r.jsx)(ju, {
                             banned: u.state === Re.r2o.BANNED,
                             author: n
                         });
                         break;
                     case Re.r2o.ERROR:
-                        b = (0, r.jsx)(su, {
+                        b = (0, r.jsx)(uu, {
                             author: n,
                             inviteError: c
                         });
                         break;
                     default:
-                        switch ((0, Uc.VR)(u)) {
-                            case Uc.wx.GROUP_DM:
-                                b = (0, r.jsx)(pu, {
+                        switch ((0, Bc.VR)(u)) {
+                            case Bc.wx.GROUP_DM:
+                                b = (0, r.jsx)(mu, {
                                     onTransitionToInviteChannel: m,
                                     onAcceptInstantInvite: y,
                                     currentUserId: p,
@@ -21985,16 +22004,16 @@
                                     author: n
                                 });
                                 break;
-                            case Uc.wx.FRIEND:
-                                b = (0, r.jsx)(fu, {
+                            case Bc.wx.FRIEND:
+                                b = (0, r.jsx)(pu, {
                                     invite: u,
                                     author: n,
                                     getAcceptInviteContext: i
                                 });
                                 break;
                             default:
-                                if ((0, Uc.TY)(u)) {
-                                    b = (0, r.jsx)(Tu, {
+                                if ((0, Bc.TY)(u)) {
+                                    b = (0, r.jsx)(Au, {
                                         onTransitionToInviteChannel: m,
                                         onAcceptInstantInvite: y,
                                         currentUserId: p,
@@ -22003,8 +22022,8 @@
                                     });
                                     break
                                 }
-                                if ((0, Uc.Tx)(u)) {
-                                    b = (0, r.jsx)(kc.ZP, {
+                                if ((0, Bc.Tx)(u)) {
+                                    b = (0, r.jsx)(Gc.ZP, {
                                         guildScheduledEvent: h,
                                         guild: u.guild,
                                         channel: u.channel,
@@ -22014,8 +22033,8 @@
                                     });
                                     break
                                 }
-                                if ((0, Uc.$P)(u)) {
-                                    b = (0, r.jsx)(ju, {
+                                if ((0, Bc.$P)(u)) {
+                                    b = (0, r.jsx)(Tu, {
                                         stageInstance: u.stage_instance,
                                         guild: u.guild,
                                         isMember: null != d,
@@ -22023,7 +22042,7 @@
                                         onAcceptInstantInvite: y
                                     });
                                     break
-                                }(0, Uc.P1)(u) && (b = (0, r.jsx)(au, {
+                                }(0, Bc.P1)(u) && (b = (0, r.jsx)(su, {
                                     invite: u,
                                     getAcceptInviteContext: i
                                 }))
@@ -22034,18 +22053,18 @@
                     children: b
                 })
             }
-            var Au = n(834876),
-                wu = n(679821),
-                Nu = n(402008),
-                xu = n(491260),
-                Mu = n(966334),
-                Ru = n(731194),
-                Lu = n.n(Ru);
+            var Nu = n(834876),
+                xu = n(679821),
+                Mu = n(402008),
+                Ru = n(491260),
+                Lu = n(966334),
+                Du = n(731194),
+                Zu = n.n(Du);
 
-            function Du(e) {
-                return null != e.application ? hn.Z.createFromServer(e.application) : null != e.activity && null != e.activity.party_id && (0, Mu.Ps)(e.activity.party_id) ? Nu.r9 : void 0
+            function ku(e) {
+                return null != e.application ? hn.Z.createFromServer(e.application) : null != e.activity && null != e.activity.party_id && (0, Lu.Ps)(e.activity.party_id) ? Mu.r9 : void 0
             }
-            const Zu = function(e) {
+            const Uu = function(e) {
                 var t = e.channel,
                     n = e.message,
                     o = e.hideParty,
@@ -22054,23 +22073,23 @@
                         s.e7)([D.default], (function() {
                         return D.default.getId()
                     })),
-                    l = (0, s.e7)([xu.Z], (function() {
+                    l = (0, s.e7)([Ru.Z], (function() {
                         if (null != n.application) {
                             var e, r = n.author.id;
                             (null === (e = n.activity) || void 0 === e ? void 0 : e.type) === Re.mFx.JOIN_REQUEST && (r = r === a && t.isPrivate() ? t.getRecipientId() : a);
-                            return xu.Z.getApplicationActivity(r, n.application.id)
+                            return Ru.Z.getApplicationActivity(r, n.application.id)
                         }
-                        return xu.Z.findActivity(n.author.id, (function(e) {
+                        return Ru.Z.findActivity(n.author.id, (function(e) {
                             return e.type === Re.IIU.LISTENING
                         }))
                     }), [n, t, a]);
-                return (0, r.jsx)(wu.Z, {
-                    className: Lu().container,
+                return (0, r.jsx)(xu.Z, {
+                    className: Zu().container,
                     activity: l,
                     activityActionType: null != n.activity ? n.activity.type : null,
                     partyId: null != n.activity ? n.activity.party_id : null,
                     userId: n.author.id,
-                    application: Du(n),
+                    application: ku(n),
                     message: n,
                     channelId: t.id,
                     guildId: t.getGuildId(),
@@ -22079,22 +22098,22 @@
                     analyticsLocations: i
                 })
             };
-            var ku = n(301443),
-                Uu = n(266909),
-                Gu = n(243763),
-                Bu = n(485084),
-                Hu = n(596771);
+            var Gu = n(301443),
+                Bu = n(266909),
+                Hu = n(243763),
+                Fu = n(485084),
+                Vu = n(596771);
 
-            function Fu(e) {
+            function Yu(e) {
                 var t = e.applicationId,
                     n = e.guildId,
-                    o = (0, ku.IX)(t),
-                    i = (0, ku.FE)(t, null == o ? void 0 : o.primarySkuId).listingsLoaded,
-                    a = (0, s.e7)([Uu.Z], (function() {
-                        return Uu.Z.getSubscriptionGroupListingForApplication(t)
+                    o = (0, Gu.IX)(t),
+                    i = (0, Gu.FE)(t, null == o ? void 0 : o.primarySkuId).listingsLoaded,
+                    a = (0, s.e7)([Bu.Z], (function() {
+                        return Bu.Z.getSubscriptionGroupListingForApplication(t)
                     }), [t]),
-                    l = null != a ? (0, Gu.Pw)(a) : null,
-                    c = (0, Hu.Z)({
+                    l = null != a ? (0, Hu.Pw)(a) : null,
+                    c = (0, Vu.Z)({
                         listing: l,
                         guildId: n,
                         groupListingId: null == a ? void 0 : a.id,
@@ -22103,7 +22122,7 @@
                     }),
                     u = c.openModal,
                     d = c.canOpenModal;
-                return (0, r.jsx)(Bu.Z, {
+                return (0, r.jsx)(Fu.Z, {
                     size: f.Button.Sizes.MEDIUM,
                     onClick: function() {
                         return u()
@@ -22112,21 +22131,23 @@
                     children: oe.Z.Messages.INTERACTION_PREMIUM_UPSELL_CTA
                 })
             }
-            var Vu = n(652900),
-                Yu = n(751942),
-                Wu = n.n(Yu);
+            var Wu = n(652900),
+                Ku = n(751942),
+                zu = n.n(Ku),
+                Ju = n(708688),
+                Qu = n.n(Ju);
 
-            function Ku(e, t) {
+            function Xu(e, t) {
                 (null == t || t > e.length) && (t = e.length);
                 for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n];
                 return r
             }
 
-            function zu(e, t) {
+            function qu(e, t) {
                 if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
             }
 
-            function Ju(e, t, n) {
+            function $u(e, t, n) {
                 t in e ? Object.defineProperty(e, t, {
                     value: n,
                     enumerable: !0,
@@ -22136,14 +22157,14 @@
                 return e
             }
 
-            function Qu(e) {
-                Qu = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
+            function ef(e) {
+                ef = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
                     return e.__proto__ || Object.getPrototypeOf(e)
                 };
-                return Qu(e)
+                return ef(e)
             }
 
-            function Xu(e) {
+            function tf(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
@@ -22151,13 +22172,13 @@
                         return Object.getOwnPropertyDescriptor(n, e).enumerable
                     }))));
                     r.forEach((function(t) {
-                        Ju(e, t, n[t])
+                        $u(e, t, n[t])
                     }))
                 }
                 return e
             }
 
-            function qu(e, t) {
+            function nf(e, t) {
                 t = null != t ? t : {};
                 Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : function(e, t) {
                     var n = Object.keys(e);
@@ -22175,7 +22196,7 @@
                 return e
             }
 
-            function $u(e, t) {
+            function rf(e, t) {
                 if (null == e) return {};
                 var n, r, o = function(e, t) {
                     if (null == e) return {};
@@ -22197,22 +22218,22 @@
                 return o
             }
 
-            function ef(e, t) {
-                return !t || "object" !== rf(t) && "function" != typeof t ? function(e) {
+            function of(e, t) {
+                return !t || "object" !== sf(t) && "function" != typeof t ? function(e) {
                     if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
                     return e
                 }(e) : t
             }
 
-            function tf(e, t) {
-                tf = Object.setPrototypeOf || function(e, t) {
+            function af(e, t) {
+                af = Object.setPrototypeOf || function(e, t) {
                     e.__proto__ = t;
                     return e
                 };
-                return tf(e, t)
+                return af(e, t)
             }
 
-            function nf(e, t) {
+            function lf(e, t) {
                 return function(e) {
                     if (Array.isArray(e)) return e
                 }(e) || function(e, t) {
@@ -22240,20 +22261,20 @@
                     }
                 }(e, t) || function(e, t) {
                     if (!e) return;
-                    if ("string" == typeof e) return Ku(e, t);
+                    if ("string" == typeof e) return Xu(e, t);
                     var n = Object.prototype.toString.call(e).slice(8, -1);
                     "Object" === n && e.constructor && (n = e.constructor.name);
                     if ("Map" === n || "Set" === n) return Array.from(n);
-                    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Ku(e, t)
+                    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Xu(e, t)
                 }(e, t) || function() {
                     throw new TypeError("Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
                 }()
             }
-            var rf = function(e) {
+            var sf = function(e) {
                 return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e
             };
 
-            function of(e) {
+            function cf(e) {
                 var t = function() {
                     if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
                     if (Reflect.construct.sham) return !1;
@@ -22266,17 +22287,37 @@
                     }
                 }();
                 return function() {
-                    var n, r = Qu(e);
+                    var n, r = ef(e);
                     if (t) {
-                        var o = Qu(this).constructor;
+                        var o = ef(this).constructor;
                         n = Reflect.construct(r, arguments, o)
                     } else n = r.apply(this, arguments);
-                    return ef(this, n)
+                    return of(this, n)
                 }
             }
-            var af = new Set([Re.hBH.AUTO_MODERATION_MESSAGE, Re.hBH.AUTO_MODERATION_NOTIFICATION, Re.hBH.APPLICATION_NEWS, Re.hBH.POST_PREVIEW, Re.hBH.SAFETY_POLICY_NOTICE]),
-                lf = new Set(["discord-developers", "discord-testers", "discord-townhall", "discordgameslab"]),
-                sf = function(e, t, n) {
+
+            function uf() {
+                return (0, r.jsxs)("div", {
+                    className: zu().nitroFileSizeUpsell,
+                    children: [(0, r.jsx)("img", {
+                        src: Qu(),
+                        className: zu().nitroBadgeSvg,
+                        alt: ""
+                    }), (0, r.jsx)(f.Text, {
+                        variant: "text-xs/normal",
+                        color: "text-muted",
+                        className: zu().nitroFileSizeUpsellText,
+                        children: oe.Z.Messages.LARGE_FILE_UPLOAD_POWERED_BY_NITRO.format({
+                            onClick: function() {
+                                return (0, wa.z)()
+                            }
+                        })
+                    })]
+                })
+            }
+            var ff = new Set([Re.hBH.AUTO_MODERATION_MESSAGE, Re.hBH.AUTO_MODERATION_NOTIFICATION, Re.hBH.APPLICATION_NEWS, Re.hBH.POST_PREVIEW, Re.hBH.SAFETY_POLICY_NOTICE]),
+                df = new Set(["discord-developers", "discord-testers", "discord-townhall", "discordgameslab"]),
+                pf = function(e, t, n) {
                     return function() {
                         var o = null != t ? t : n;
                         if (null == o) return null;
@@ -22284,32 +22325,32 @@
                             a = o.proxyURL,
                             l = o.width,
                             s = o.height;
-                        return (0, r.jsx)(Lc.Z, {
+                        return (0, r.jsx)(Zc.Z, {
                             width: l,
                             height: s,
                             src: null != a && "" !== a ? a : i,
                             url: null != e && "" !== e ? e : null != a && "" !== a ? a : i,
                             format: null != n ? c.EO.VIDEO : c.EO.IMAGE,
-                            className: Wu().gifFavoriteButton
+                            className: zu().gifFavoriteButton
                         })
                     }
                 },
-                cf = function(e) {
+                hf = function(e) {
                     return function() {
                         var t = e.proxy_url,
                             n = e.width,
                             o = e.height;
-                        return ta.u.test(e.filename) && null != n && null != o ? (0, r.jsx)(Lc.Z, {
+                        return ta.u.test(e.filename) && null != n && null != o ? (0, r.jsx)(Zc.Z, {
                             width: n,
                             height: o,
                             src: t,
                             url: t,
                             format: c.EO.IMAGE,
-                            className: Wu().gifFavoriteButton
+                            className: zu().gifFavoriteButton
                         }) : null
                     }
                 };
-            var uf = function(e) {
+            var mf = function(e) {
                 ! function(e, t) {
                     if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function");
                     e.prototype = Object.create(t && t.prototype, {
@@ -22319,12 +22360,12 @@
                             configurable: !0
                         }
                     });
-                    t && tf(e, t)
+                    t && af(e, t)
                 }(n, e);
-                var t = of(n);
+                var t = cf(n);
 
                 function n() {
-                    zu(this, n);
+                    qu(this, n);
                     var e;
                     (e = t.apply(this, arguments)).state = {
                         showSuppressModal: !1,
@@ -22351,9 +22392,9 @@
                             u = a.hasSpoilerEmbeds,
                             f = (0, Ns.BP)(t, i, o, u);
                         return t.type === Re.hBH.GIFT ? null : (0, r.jsx)(Cs.h.Provider, {
-                            value: sf(t.url, t.image, t.video),
-                            children: (0, r.jsx)(Ts.ZP, Xu({
-                                className: Wu().embedWrapper,
+                            value: pf(t.url, t.image, t.video),
+                            children: (0, r.jsx)(Ts.ZP, tf({
+                                className: zu().embedWrapper,
                                 embed: t,
                                 obscureReason: null != f ? f : void 0,
                                 autoPlayGif: l,
@@ -22400,7 +22441,7 @@
                 var o = n.prototype;
                 o.shouldRenderInvite = function(e) {
                     var t = this.props.channel;
-                    return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && lf.has(e))
+                    return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && df.has(e))
                 };
                 o.shouldComponentUpdate = function(e, t) {
                     var n, r, o = this.props,
@@ -22410,8 +22451,7 @@
                         s = e.channel,
                         c = e.message,
                         f = e.poll;
-                    return !(0, u.Z)(this.state, t) || !(0,
-                        u.Z)(this.props, e, ["message", "channel"]) || i.type !== s.type || f !== l || c.codedLinks !== a.codedLinks || c.flags !== a.flags || c.giftCodes !== a.giftCodes || c.attachments !== a.attachments || c.embeds !== a.embeds || c.components !== a.components || c.activity !== a.activity || !(n = c.reactions, r = a.reactions, n === r || n.length === r.length && !n.some((function(e, t) {
+                    return !(0, u.Z)(this.state, t) || !(0, u.Z)(this.props, e, ["message", "channel"]) || i.type !== s.type || f !== l || c.codedLinks !== a.codedLinks || c.flags !== a.flags || c.giftCodes !== a.giftCodes || c.attachments !== a.attachments || c.embeds !== a.embeds || c.components !== a.components || c.activity !== a.activity || !(n = c.reactions, r = a.reactions, n === r || n.length === r.length && !n.some((function(e, t) {
                         var n = e.emoji,
                             o = e.count,
                             i = e.burst_count,
@@ -22421,12 +22461,23 @@
                         return i !== a.burst_count || o !== s || n.id !== l.id || n.name !== l.name
                     })))
                 };
+                o.renderSocialProofingFileSizeNitroUpsell = function(e) {
+                    var t = e.attachments.some((function(e) {
+                        return e.size > dt.Lw
+                    }));
+                    return function(e) {
+                        return Cc.getCurrentConfig({
+                            location: e
+                        }).enabled
+                    }("attachment") && t ? (0, r.jsx)(uf, {}) : null
+                };
                 o.renderCodedLinks = function(e) {
                     var t = this;
                     return 0 === e.codedLinks.length ? null : e.codedLinks.map((function(n) {
                         var o = n.type,
                             i = n.code;
-                        if (o === hr.g.INVITE) return t.shouldRenderInvite(i) ? (0, r.jsx)(Cu, {
+                        if (o === hr.g.INVITE) return t.shouldRenderInvite(i) ? (0,
+                            r.jsx)(wu, {
                             code: i,
                             author: e.author,
                             getAcceptInviteContext: t.getAcceptInviteContext
@@ -22437,7 +22488,7 @@
                         if (o === hr.g.EVENT) return (0, r.jsx)(Qr.Z, {
                             code: i
                         }, i);
-                        if (o === hr.g.CHANNEL_LINK) return (0, r.jsx)(Rc, {
+                        if (o === hr.g.CHANNEL_LINK) return (0, r.jsx)(Dc, {
                             code: i,
                             messageData: e
                         }, i);
@@ -22470,7 +22521,7 @@
                         l = U.default.getCurrentUser();
                     return null != l && t.length > 0 ? t.map((function(e) {
                         return (0, r.jsx)("div", {
-                            className: Wu().giftCodeContainer,
+                            className: zu().giftCodeContainer,
                             children: (0, r.jsx)(Nt, {
                                 code: e,
                                 author: n,
@@ -22487,8 +22538,8 @@
                         n = e.type,
                         o = this.props.canRenderReferralEmbed;
                     return n !== l.u.PREMIUM_REFERRAL || null == t ? null : (0, r.jsx)("div", {
-                        className: Wu().referralContainer,
-                        children: (0, r.jsx)(za, {
+                        className: zu().referralContainer,
+                        children: (0, r.jsx)(Ja, {
                             userTrialOfferId: t,
                             canRenderReferralEmbed: null != o && o
                         })
@@ -22504,7 +22555,7 @@
                         s = t.isPendingMember,
                         c = t.channel,
                         u = t.forceAddReactions;
-                    return o ? null : (0, r.jsx)(Vu.Z, {
+                    return o ? null : (0, r.jsx)(Wu.Z, {
                         message: e,
                         channel: c,
                         disableReactionCreates: n,
@@ -22533,7 +22584,7 @@
                         d = l.shouldHideMediaOptions,
                         p = (0, Lr.HH)(e),
                         h = a.map((function(e) {
-                            return (0, Ic.j9)(e, d, p)
+                            return (0, Sc.j9)(e, d, p)
                         })).filter(Vt.lm),
                         m = {
                             source: "Media Mosaic",
@@ -22541,7 +22592,7 @@
                             channel_id: i.id,
                             channel_type: i.type
                         },
-                        y = h.length > 1 ? (0, Ic.Cx)(h, m) : {},
+                        y = h.length > 1 ? (0, Sc.Cx)(h, m) : {},
                         b = (0, Ft.yE)(o, Re.iLy.IS_VOICE_MESSAGE),
                         O = a.map((function(n) {
                             var r = {
@@ -22549,7 +22600,7 @@
                                     attachment: n,
                                     autoPlayGif: s,
                                     canRemoveAttachment: c && (a.length > 1 || "" !== e.content),
-                                    className: Wu().embedWrapper,
+                                    className: zu().embedWrapper,
                                     inlineMedia: u,
                                     onContextMenu: null != f ? function(e) {
                                         e.stopPropagation();
@@ -22557,10 +22608,10 @@
                                         f(e, n)
                                     } : void 0,
                                     onRemoveAttachment: t.handleRemoveAttachment,
-                                    renderAudioComponent: b ? il.wj : il.hX,
-                                    renderImageComponent: il.Yi,
-                                    renderPlaintextFilePreview: il.xi,
-                                    renderVideoComponent: il.lV,
+                                    renderAudioComponent: b ? al.wj : al.hX,
+                                    renderImageComponent: al.Yi,
+                                    renderPlaintextFilePreview: al.xi,
+                                    renderVideoComponent: al.lV,
                                     onPlay: function(e, t, r) {
                                         W.default.track(Re.rMx.MEDIA_ATTACHMENT_PLAYBACK_STARTED, {
                                             guild_id: i.guild_id,
@@ -22572,7 +22623,7 @@
                                             duration: r
                                         })
                                     },
-                                    gifFavoriteButton: cf(n)
+                                    gifFavoriteButton: hf(n)
                                 },
                                 o = (0, As.q)({
                                     proxyURL: n.proxy_url,
@@ -22581,7 +22632,7 @@
                             o in y && (r.onClick = y[o]);
                             return r
                         }));
-                    return (0, r.jsx)(_c, {
+                    return (0, r.jsx)(Ic, {
                         attachments: O
                     })
                 };
@@ -22591,16 +22642,16 @@
                         o = n.renderEmbeds,
                         i = n.showClydeAiEmbeds;
                     return 0 !== e.embeds.length && o ? e.embeds.map((function(n) {
-                        if (af.has(n.type)) return null;
-                        if (!i && (0, Sc.s$)(n)) return null;
-                        if ((0, Sc.l3)(n)) return null;
+                        if (ff.has(n.type)) return null;
+                        if (!i && (0, jc.s$)(n)) return null;
+                        if ((0, jc.l3)(n)) return null;
                         var o = {
-                            renderImageComponent: il.Yi,
-                            renderVideoComponent: il.lV,
-                            renderLinkComponent: il.iT
+                            renderImageComponent: al.Yi,
+                            renderVideoComponent: al.lV,
+                            renderLinkComponent: al.iT
                         };
                         if (n.type === Re.hBH.ARTICLE && null != n.url && /^https?:\/\/(?:canary|ptb|www)?\.discord(?:app)?\.com\/store\/skus\/(?:[0-9]+)/.test(n.url) && null != n.provider && "Discord" === n.provider.name) {
-                            var a = Pc.Z.safeParseWithQuery(n.url);
+                            var a = Tc.Z.safeParseWithQuery(n.url);
                             if (null != a && null != a.pathname) {
                                 var l = a.pathname.split("/")[3];
                                 if (null != l) return (0, r.jsx)(ut, {
@@ -22622,7 +22673,7 @@
                 o.renderActivityInvite = function(e) {
                     if (null == e.activity) return null;
                     var t = this.props.channel;
-                    return (0, r.jsx)(Zu, {
+                    return (0, r.jsx)(Uu, {
                         channel: t,
                         message: e,
                         hideParty: !1
@@ -22643,7 +22694,7 @@
                     }) : null
                 };
                 o.renderStickersAccessories = function(e) {
-                    var t = (0, ol.cv)(e),
+                    var t = (0, il.cv)(e),
                         n = this.props,
                         o = n.channel,
                         i = n.isInteracting;
@@ -22663,8 +22714,8 @@
                 };
                 o.renderThreadRoleMentionWarning = function(e) {
                     if (e.hasFlag(Re.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD) && this.props.isCurrentUser) {
-                        if (!(Date.now() - jc.Z.extractTimestamp(e.id) >= 9e5)) return (0, r.jsx)("div", {
-                            className: Wu().threadRoleMentionFailure,
+                        if (!(Date.now() - Pc.Z.extractTimestamp(e.id) >= 9e5)) return (0, r.jsx)("div", {
+                            className: zu().threadRoleMentionFailure,
                             children: oe.Z.Messages.THREAD_ROLE_MENTION_FAILURE
                         })
                     }
@@ -22674,8 +22725,7 @@
                         t = this.props,
                         n = t.channel,
                         o = t.message;
-                    return (0,
-                        r.jsxs)(f.DeclarativeConfirmModal, {
+                    return (0, r.jsxs)(f.DeclarativeConfirmModal, {
                         dismissable: !0,
                         header: oe.Z.Messages.SUPPRESS_EMBED_TITLE,
                         confirmText: oe.Z.Messages.SUPPRESS_EMBED_CONFIRM,
@@ -22694,7 +22744,7 @@
                         children: [(0, r.jsx)(f.Text, {
                             variant: "text-md/normal",
                             color: "text-normal",
-                            className: Wu().confirmText,
+                            className: zu().confirmText,
                             children: oe.Z.Messages.SUPPRESS_EMBED_BODY
                         }), (0, r.jsx)(f.Text, {
                             variant: "text-md/normal",
@@ -22733,7 +22783,7 @@
                         children: (0, r.jsx)(f.Text, {
                             variant: "text-md/normal",
                             color: "text-normal",
-                            className: Wu().confirmText,
+                            className: zu().confirmText,
                             children: oe.Z.Messages.REMOVE_ATTACHMENT_BODY
                         })
                     });
@@ -22743,7 +22793,7 @@
                 };
                 o.renderInteractionPremiumUpsell = function(e) {
                     var t = e.applicationId;
-                    return e.type !== l.u.INTERACTION_PREMIUM_UPSELL || null == t ? null : (0, r.jsx)(Fu, {
+                    return e.type !== l.u.INTERACTION_PREMIUM_UPSELL || null == t ? null : (0, r.jsx)(Yu, {
                         applicationId: t,
                         guildId: this.props.channel.guild_id
                     })
@@ -22759,7 +22809,7 @@
                     }))
                 };
                 o.renderSafetyPolicyNotice = function(e) {
-                    return 1 === e.embeds.length && e.embeds[0].type === Re.hBH.SAFETY_POLICY_NOTICE ? (0, r.jsx)(rl, {
+                    return 1 === e.embeds.length && e.embeds[0].type === Re.hBH.SAFETY_POLICY_NOTICE ? (0, r.jsx)(ol, {
                         message: e
                     }) : null
                 };
@@ -22790,34 +22840,35 @@
                         u = this.renderGiftCodes(n),
                         f = this.renderReferralTrial(n),
                         d = this.renderAttachments(n),
-                        p = this.renderEmbeds(n),
-                        h = this.renderActivityInvite(n),
-                        m = this.renderReactions(n),
-                        y = this.renderPublishBump(n),
-                        b = this.renderEphemeralAccessories(n),
-                        O = this.renderStickersAccessories(n),
-                        g = this.renderThreadAccessories(n),
-                        v = this.renderComponentAccessories(n),
-                        E = this.renderThreadRoleMentionWarning(n),
-                        _ = this.renderInteractionPremiumUpsell(n),
-                        I = this.renderMediaPostEmbeds(n),
-                        S = this.renderSafetyPolicyNotice(n),
-                        j = this.renderMediaObscureNotice(n),
-                        P = this.renderPoll(n, o);
-                    return null == c && null == d && null == p && null == h && null == m && null == u && null == f && null == y && null == b && null == O && null == g && null == v && null == E && null == I && null == S && null != _ && null == P ? null : (0, r.jsxs)("div", {
-                        id: (0, Au.bX)(n),
-                        className: a()(t, Wu().container),
-                        children: [E, P, c, u, f, I, d, p, j, h, O, v, _, m, y, b, l && this.renderSuppressConfirmModal(), s && this.renderRemoveAttachmentConfirmModal(), g, S]
+                        p = this.renderSocialProofingFileSizeNitroUpsell(n),
+                        h = this.renderEmbeds(n),
+                        m = this.renderActivityInvite(n),
+                        y = this.renderReactions(n),
+                        b = this.renderPublishBump(n),
+                        O = this.renderEphemeralAccessories(n),
+                        g = this.renderStickersAccessories(n),
+                        v = this.renderThreadAccessories(n),
+                        E = this.renderComponentAccessories(n),
+                        _ = this.renderThreadRoleMentionWarning(n),
+                        I = this.renderInteractionPremiumUpsell(n),
+                        S = this.renderMediaPostEmbeds(n),
+                        j = this.renderSafetyPolicyNotice(n),
+                        P = this.renderMediaObscureNotice(n),
+                        T = this.renderPoll(n, o);
+                    return null == c && null == d && null == h && null == m && null == y && null == u && null == f && null == b && null == O && null == g && null == v && null == E && null == _ && null == S && null == j && null != I && null == T ? null : (0, r.jsxs)("div", {
+                        id: (0, Nu.bX)(n),
+                        className: a()(t, zu().container),
+                        children: [_, T, c, u, f, S, d, h, P, m, g, E, I, p, y, b, O, l && this.renderSuppressConfirmModal(), s && this.renderRemoveAttachmentConfirmModal(), v, j]
                     })
                 };
                 return n
             }(o.Component);
-            uf.defaultProps = {
+            mf.defaultProps = {
                 renderEmbeds: !0,
                 compact: !1
             };
 
-            function ff(e) {
+            function yf(e) {
                 var t, n, o, i = e.channel,
                     a = e.message,
                     l = e.renderSuppressEmbeds,
@@ -22838,8 +22889,7 @@
                     b = (0, s.e7)([wo.ZP], (function() {
                         return wo.ZP.isCurrentUserGuest(i.guild_id)
                     }), [i]),
-                    O = (0,
-                        s.e7)([wo.ZP, U.default], (function() {
+                    O = (0, s.e7)([wo.ZP, U.default], (function() {
                         var e, t, n = U.default.getCurrentUser();
                         return null !== (t = null != i.guild_id && null != n ? null === (e = wo.ZP.getMember(i.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
                     })),
@@ -22851,13 +22901,13 @@
                     }), [m, i]),
                     v = g.canAddNewReactions,
                     E = g.canManageMessages,
-                    _ = nf((0, Vr.AB)(i.guild_id), 2)[1],
+                    _ = lf((0, Vr.AB)(i.guild_id), 2)[1],
                     I = (0, ts.$R)(i),
                     S = (c === a.author.id || E) && a.author.id !== Re.LAt && !a.author.isClyde() && !1 !== l && !(0, Ft.yE)(a.flags, Re.iLy.EPHEMERAL) && I,
                     j = c === a.author.id && I,
                     P = a.author.id === c,
                     T = a.isFirstMessageInForumPost(i),
-                    C = (0, Tc.Z)({
+                    C = (0, Ac.Z)({
                         channel: i,
                         canChat: m,
                         renderReactions: p,
@@ -22868,11 +22918,10 @@
                         isActiveChannelOrUnarchivableThread: I
                     }),
                     A = (0, Cn.dj)((null !== (t = a.editedTimestamp) && void 0 !== t ? t : a.timestamp).valueOf()),
-                    w = (0,
-                        Cn.tu)(null !== (n = i.guild_id) && void 0 !== n ? n : "", (null !== (o = a.editedTimestamp) && void 0 !== o ? o : a.timestamp).valueOf()),
+                    w = (0, Cn.tu)(null !== (n = i.guild_id) && void 0 !== n ? n : "", (null !== (o = a.editedTimestamp) && void 0 !== o ? o : a.timestamp).valueOf()),
                     N = (0, Oo.Z)(null == i ? void 0 : i.id),
                     x = Di(a);
-                return (0, r.jsx)(uf, qu(Xu(qu(Xu({
+                return (0, r.jsx)(mf, nf(tf(nf(tf({
                     canSuppressEmbeds: S,
                     canDeleteAttachments: j
                 }, C), {
@@ -22894,7 +22943,7 @@
                     showClydeAiEmbeds: !!(0, Vt.lm)(e.showClydeAiEmbeds) && e.showClydeAiEmbeds
                 }))
             }
-            var df = function(e) {
+            var bf = function(e) {
                 var t, n, o, i = e.message,
                     a = e.channel,
                     l = e.disableReactionReads,
@@ -22907,15 +22956,16 @@
                     h = void 0 === p || p,
                     m = e.disableReactionUpdates,
                     y = void 0 === m || m,
-                    b = $u(e, ["message", "channel", "disableReactionReads", "renderComponentAccessory", "renderThreadAccessory", "disableReactionCreates", "disableReactionUpdates"]),
+                    b = rf(e, ["message", "channel", "disableReactionReads", "renderComponentAccessory", "renderThreadAccessory", "disableReactionCreates", "disableReactionUpdates"]),
                     O = Ao.x4.useSetting(),
                     g = Ao.RS.useSetting(),
                     v = Ao.NA.useSetting() && !i.author.isClyde(),
                     E = Ao.QK.useSetting(),
                     _ = (0, Cn.dj)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()),
-                    I = (0, Cn.tu)(null !== (n = a.guild_id) && void 0 !== n ? n : "", (null !== (o = i.editedTimestamp) && void 0 !== o ? o : i.timestamp).valueOf()),
+                    I = (0,
+                        Cn.tu)(null !== (n = a.guild_id) && void 0 !== n ? n : "", (null !== (o = i.editedTimestamp) && void 0 !== o ? o : i.timestamp).valueOf()),
                     S = (0, Oo.Z)(null == a ? void 0 : a.id);
-                return (0, r.jsx)(uf, qu(Xu({}, b), {
+                return (0, r.jsx)(mf, nf(tf({}, b), {
                     message: i,
                     channel: a,
                     disableReactionReads: s,
@@ -23430,7 +23480,8 @@
                 Z: () => E
             });
             var r = n(785893),
-                o = (n(667294), n(441143)),
+                o = (n(667294),
+                    n(441143)),
                 i = n.n(o),
                 a = n(38836),
                 l = n(589591),
@@ -23473,8 +23524,7 @@
                     justify: c.Z.Justify.CENTER,
                     direction: c.Z.Direction.VERTICAL,
                     className: d().popout,
-                    children: [(0,
-                        r.jsx)("img", {
+                    children: [(0, r.jsx)("img", {
                         alt: "",
                         src: (0, l.QA)(),
                         className: d().avatar
@@ -23482,7 +23532,8 @@
                         align: c.Z.Align.CENTER,
                         justify: c.Z.Justify.CENTER,
                         className: d().nameWrapper,
-                        children: [(0, r.jsx)(s.Tooltip, {
+                        children: [(0,
+                            r.jsx)(s.Tooltip, {
                             text: u.Z.Messages.STAFF_BADGE_TOOLTIP,
                             children: function(e) {
                                 return (0, r.jsx)("div", h(function(e) {
@@ -23788,8 +23839,7 @@
                                         a.trys.pop();
                                         continue;
                                     default:
-                                        if (!(o = a.trys,
-                                                o = o.length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
+                                        if (!(o = a.trys, o = o.length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
                                             a = 0;
                                             continue
                                         }
@@ -24287,7 +24337,7 @@
                 Z: () => i
             });
             var r = n(785893),
-                o = (n(667294), n(34680));
+                o = (n(667294), n(103956));
 
             function i(e) {
                 var t = e.channelMessageProps,
