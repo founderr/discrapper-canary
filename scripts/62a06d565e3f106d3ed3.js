@@ -1,7 +1,7 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
     [65278], {
         559781: (e, t, n) => {
-            e.exports = n.p + "3cae94634a78e6f88f2efae5ad2d96a5.svg"
+            e.exports = n.p + "9818f59c4eb748086b66b513ec60560b.svg"
         },
         103468: (e, t, n) => {
             e.exports = n.p + "2b439d31cec19aa2bb1b48efeb30c9ab.png"
@@ -966,8 +966,8 @@
                 x = n(775173),
                 T = n(70145),
                 N = n(72580),
-                I = n(723876),
-                R = n(939198),
+                R = n(723876),
+                I = n(939198),
                 M = n(2590),
                 _ = n(473708),
                 D = n(927570),
@@ -1092,7 +1092,7 @@
                         height: u
                     })
                 } else l = (0,
-                    r.jsx)(I.ZP, {
+                    r.jsx)(R.ZP, {
                     message: e,
                     content: t,
                     className: o
@@ -1165,7 +1165,7 @@
                             case m.Y.LOADED:
                                 var l = U(n.message, t, o, k().repliedTextContent, {
                                         iconClass: k().repliedTextContentIcon,
-                                        iconSize: R.WW
+                                        iconSize: I.WW
                                     }),
                                     s = l.contentPlaceholder,
                                     u = l.renderedContent,
@@ -1371,7 +1371,7 @@
                 e[e.BADGES = 1] = "BADGES"
             }(p || (p = {}));
 
-            function I(e) {
+            function R(e) {
                 var t = e.compact;
                 return (0, r.jsx)(y.Z, {
                     className: t ? S().botTagCompact : S().botTagCozy,
@@ -1380,8 +1380,9 @@
                 })
             }
 
-            function R(e) {
-                var t = e.currentUserIsPremium;
+            function I(e) {
+                var t = e.currentUserIsPremium,
+                    n = e.isRepliedMessage;
                 return (0, r.jsx)(c.Tooltip, {
                     text: P.Z.Messages.MESSAGE_AUTHOR_NITRO_BADGE,
                     children: function(e) {
@@ -1395,7 +1396,7 @@
                             "aria-label": P.Z.Messages.MESSAGE_AUTHOR_NITRO_BADGE,
                             children: (0, r.jsx)("img", x({
                                 alt: "",
-                                className: S().nitroBadgeSvg,
+                                className: a()(S().nitroBadgeSvg, A({}, S().nitroBadgeSvgRepliedMessage, n)),
                                 src: C()
                             }, e))
                         })
@@ -1422,41 +1423,43 @@
                     B = e.renderRemixTag,
                     G = void 0 !== B && B,
                     U = e.decorations,
-                    V = o.useContext(d.Z),
-                    H = w ? "@" : "",
-                    Y = n.nick,
-                    F = n.colorString,
-                    q = n.colorRoleName,
-                    z = null != i.messageReference && null != i.webhookId,
-                    W = (0, s.e7)([u.Z], (function() {
+                    V = e.isRepliedMessage,
+                    H = void 0 !== V && V,
+                    Y = o.useContext(d.Z),
+                    F = w ? "@" : "",
+                    q = n.nick,
+                    z = n.colorString,
+                    W = n.colorRoleName,
+                    Q = null != i.messageReference && null != i.webhookId,
+                    X = (0, s.e7)([u.Z], (function() {
                         return u.Z.roleStyle
                     })),
-                    Q = "username" === W,
-                    X = "dot" === W,
-                    J = (0, b.X$)(),
-                    $ = (0, s.e7)([O.default], (function() {
+                    J = "username" === X,
+                    $ = "dot" === X,
+                    K = (0, b.X$)(),
+                    ee = (0, s.e7)([O.default], (function() {
                         return O.default.getCurrentUser()
                     })),
-                    K = {
+                    te = {
                         className: S().username,
-                        style: Q && null != F ? {
-                            color: F
+                        style: J && null != z ? {
+                            color: z
                         } : void 0,
                         onClick: D,
                         onContextMenu: k,
-                        children: H + Y
+                        children: F + q
                     };
                 if (null != Z && null != A) {
                     t = (0, r.jsx)(c.Popout, {
-                        preload: z ? void 0 : function() {
+                        preload: Q ? void 0 : function() {
                             var e = null != g ? g : i.author;
-                            return (0, h.Z)(e.id, null != n.guildMemberAvatar && null != V ? (0, v.JM)({
-                                guildId: V,
+                            return (0, h.Z)(e.id, null != n.guildMemberAvatar && null != Y ? (0, v.JM)({
+                                guildId: Y,
                                 userId: e.id,
                                 avatar: n.guildMemberAvatar,
                                 size: 80
-                            }) : e.getAvatarURL(V, 80), {
-                                guildId: V,
+                            }) : e.getAvatarURL(Y, 80), {
+                                guildId: Y,
                                 channelId: i.channel_id
                             })
                         },
@@ -1469,34 +1472,35 @@
                             var t = N(e, ["onClick"]);
                             return (0, r.jsx)(c.Clickable, T(x({
                                 tag: "span"
-                            }, t, K), {
-                                className: a()(K.className, S().clickable, _)
+                            }, t, te), {
+                                className: a()(te.className, S().clickable, _)
                             }))
                         }
                     })
-                } else t = (0, r.jsx)(c.Clickable, T(x({}, K), {
-                    className: a()(K.className, _)
+                } else t = (0, r.jsx)(c.Clickable, T(x({}, te), {
+                    className: a()(te.className, _)
                 }));
-                var ee, te, ne, re = null != U ? U[p.SYSTEM_TAG] : null,
-                    oe = null != U ? U[p.BADGES] : null,
-                    ie = j.ZP.isPremium(i.author),
-                    ae = j.ZP.isPremium($);
+                var ne, re, oe, ie = null != U ? U[p.SYSTEM_TAG] : null,
+                    ae = null != U ? U[p.BADGES] : null,
+                    le = j.ZP.isPremium(i.author),
+                    se = j.ZP.isPremium(ee);
                 return (0, r.jsxs)(r.Fragment, {
-                    children: [null != re && P ? (0, r.jsxs)(r.Fragment, {
-                        children: [" ", re, " "]
-                    }) : null, X ? (0, r.jsx)(c.RoleDot, {
-                        color: F,
-                        name: q,
+                    children: [null != ie && P ? (0, r.jsxs)(r.Fragment, {
+                        children: [" ", ie, " "]
+                    }) : null, $ ? (0, r.jsx)(c.RoleDot, {
+                        color: z,
+                        name: W,
                         className: S().roleDot
-                    }) : null, t, (ee = null != M, te = "Message Username", ne = f.getCurrentConfig({
-                        location: te
+                    }) : null, t, (ne = null != M, re = "Message Username", oe = f.getCurrentConfig({
+                        location: re
                     }, {
                         autoTrackExposure: !1
-                    }), ne.enabled && (!ne.hideNitroBadgeWhenRoleBadgePresent || ne.hideNitroBadgeWhenRoleBadgePresent && !ee)) && ie ? (0, r.jsx)(R, {
-                        currentUserIsPremium: ae
-                    }) : null, null != oe ? (0, r.jsx)(r.Fragment, {
-                        children: oe
-                    }) : null, null == re || P ? null : re, null != i && (0, m.Z)(i) && J && G ? (0, r.jsx)(I, {}) : null]
+                    }), oe.enabled && (!oe.hideNitroBadgeWhenRoleBadgePresent || oe.hideNitroBadgeWhenRoleBadgePresent && !ne)) && le ? (0, r.jsx)(I, {
+                        currentUserIsPremium: se,
+                        isRepliedMessage: H
+                    }) : null, null != ae ? (0, r.jsx)(r.Fragment, {
+                        children: ae
+                    }) : null, null == ie || P ? null : ie, null != i && (0, m.Z)(i) && K && G ? (0, r.jsx)(R, {}) : null]
                 })
             }
         }

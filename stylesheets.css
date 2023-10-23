@@ -52097,6 +52097,16 @@ input[type=checkbox]:focus-visible+.label-3ake0C {
     margin-left: .2rem
 }
 
+.nitroBadgeSvgRepliedMessage-2G2JyO {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-right: 4px
+}
+
 .nitroAuthorBadgeContainer-2LKf05 {
     display: inline-block
 }

@@ -3925,13 +3925,14 @@
                     D = (0, l.Qd)(n.getGuildId()),
                     C = D.enabled,
                     L = D.hasTwoButtonEntryPoint,
-                    Z = (0, p.Z)(i),
-                    U = (0,
+                    Z = D.hasBurstToggle,
+                    U = (0, p.Z)(i),
+                    x = (0,
                         y.Z)(i),
-                    x = xe(t, n),
-                    G = ge(t, n),
-                    k = ge(t, n, E.O.BURST, L),
-                    B = function(e, t) {
+                    G = xe(t, n),
+                    k = ge(t, n),
+                    B = ge(t, n, E.O.BURST, L),
+                    V = function(e, t) {
                         var n = (0, H.e7)([je.default], (function() {
                                 return je.default.getId()
                             })),
@@ -3946,13 +3947,13 @@
                             icon: Ae.Z
                         }) : null
                     }(t, n),
-                    V = (0, Te.Z)(t, n),
-                    X = (0, we.Z)({
+                    X = (0, Te.Z)(t, n),
+                    Y = (0, we.Z)({
                         type: a,
                         id: s,
                         name: d
                     }),
-                    Y = function(e, t) {
+                    W = function(e, t) {
                         return e.state !== A.yb.SEND_FAILED ? null : (0, r.jsx)(u.MenuItem, {
                             id: "resend",
                             label: w.Z.Messages.RESEND_MESSAGE,
@@ -3961,9 +3962,9 @@
                             }
                         })
                     }(t, n),
-                    W = (0, Pe.Z)(t, n),
-                    z = He(t),
-                    $ = function(e, t) {
+                    z = (0, Pe.Z)(t, n),
+                    $ = He(t),
+                    ee = function(e, t) {
                         var n = t.getGuildId();
                         return null == n || e.type !== A.uaV.USER_JOIN && e.type !== A.uaV.GUILD_INVITE_REMINDER || !Q.Z.canWithPartialContext(A.Plq.MANAGE_GUILD, {
                             guildId: n
@@ -3976,8 +3977,8 @@
                             }
                         })
                     }(t, n),
-                    ee = (0, he.Z)(t, n),
-                    te = function(e, t) {
+                    te = (0, he.Z)(t, n),
+                    ne = function(e, t) {
                         var n = (0, J.$R)(t);
                         return (0,
                             H.e7)([Q.Z], (function() {
@@ -3999,9 +4000,9 @@
                             color: "danger"
                         }) : null
                     }(t, n),
-                    ne = ze(t, n),
-                    re = (0, Se.Z)(t, n),
-                    oe = function(e) {
+                    re = ze(t, n),
+                    oe = (0, Se.Z)(t, n),
+                    ie = function(e) {
                         return (0, tt.a4)(e) ? (0, r.jsx)(u.MenuItem, {
                             id: "report",
                             label: w.Z.Messages.REPORT_MESSAGE_MENU_OPTION,
@@ -4012,7 +4013,7 @@
                             color: "danger"
                         }) : null
                     }(t),
-                    ie = function(e, t) {
+                    ue = function(e, t) {
                         var n = (0, H.e7)([it.Z], (function() {
                             return it.Z.isSpeakingMessage(t.id, e.id)
                         }), [t, e]);
@@ -4026,19 +4027,19 @@
                             }
                         })
                     }(t, n),
-                    ue = (0, b.Z)(null != v ? v : h, _, t, {
+                    ae = (0, b.Z)(null != v ? v : h, _, t, {
                         shouldHideMediaOptions: N
                     }),
-                    ae = (0, O.Z)(m, t, {
+                    le = (0, O.Z)(m, t, {
                         shouldHideMediaOptions: N
                     }),
-                    le = Et(t, o),
-                    ce = (0, f.Z)({
+                    ce = Et(t, o),
+                    se = (0, f.Z)({
                         id: t.id,
                         label: w.Z.Messages.COPY_ID_MESSAGE,
                         shiftId: "".concat(t.channel_id, "-").concat(t.id)
                     }),
-                    se = function(e, t) {
+                    fe = function(e, t) {
                         return (0, Je.U)(t, e) ? (0, r.jsx)(u.MenuItem, {
                             id: "reply",
                             label: w.Z.Messages.MESSAGE_ACTION_REPLY,
@@ -4048,7 +4049,7 @@
                             }
                         }) : null
                     }(t, n),
-                    fe = function(e, t) {
+                    de = function(e, t) {
                         return (0, J.NE)(t, e) ? (0, r.jsx)(u.MenuItem, {
                             id: "thread",
                             label: w.Z.Messages.CREATE_THREAD,
@@ -4058,12 +4059,12 @@
                             }
                         }) : null
                     }(t, n),
-                    de = (0, K.Z)(t, n, {
+                    pe = (0, K.Z)(t, n, {
                         hoist: !0
                     }),
-                    pe = F(i, n.getGuildId()),
-                    Oe = (0, Xe.Z)(t),
-                    be = function(e) {
+                    Oe = F(i, n.getGuildId()),
+                    be = (0, Xe.Z)(t),
+                    ye = function(e) {
                         return _e.wS ? (0, r.jsx)(u.MenuItem, {
                             id: "copy-text",
                             label: w.Z.Messages.COPY_TEXT,
@@ -4073,7 +4074,7 @@
                             }
                         }) : null
                     }(t),
-                    ye = (0, g.Z)({
+                    Re = (0, g.Z)({
                         commandType: c.yU.MESSAGE,
                         commandTargetId: t.id,
                         channel: n,
@@ -4088,19 +4089,19 @@
                     onSelect: j,
                     children: [(0,
                         r.jsx)(u.MenuGroup, {
-                        children: Z
-                    }), (0, r.jsx)(u.MenuGroup, {
                         children: U
-                    }), (0, r.jsxs)(u.MenuGroup, {
-                        children: ["" === i ? x : null, G, C && k, z, B, V, X, se, fe, be, ye, Y, W, Oe, $, ee, ie, de, ne, te, re, S && oe]
-                    }), null != pe && (0, r.jsx)(u.MenuGroup, {
-                        children: pe
-                    }), (0, r.jsxs)(u.MenuGroup, {
-                        children: [ae, le]
                     }), (0, r.jsx)(u.MenuGroup, {
-                        children: ue
+                        children: x
+                    }), (0, r.jsxs)(u.MenuGroup, {
+                        children: ["" === i ? G : null, k, C && !Z && B, $, V, X, Y, fe, de, ye, Re, W, z, be, ee, te, ue, pe, re, ne, oe, S && ie]
+                    }), null != Oe && (0, r.jsx)(u.MenuGroup, {
+                        children: Oe
+                    }), (0, r.jsxs)(u.MenuGroup, {
+                        children: [le, ce]
                     }), (0, r.jsx)(u.MenuGroup, {
-                        children: ce
+                        children: ae
+                    }), (0, r.jsx)(u.MenuGroup, {
+                        children: se
                     })]
                 })
             }
@@ -4205,13 +4206,12 @@
                     ops: []
                 };
                 return i = {
-                        next: a(0),
-                        throw: a(1),
-                        return: a(2)
-                    },
-                    "function" == typeof Symbol && (i[Symbol.iterator] = function() {
-                        return this
-                    }), i;
+                    next: a(0),
+                    throw: a(1),
+                    return: a(2)
+                }, "function" == typeof Symbol && (i[Symbol.iterator] = function() {
+                    return this
+                }), i;
 
                 function a(i) {
                     return function(a) {
