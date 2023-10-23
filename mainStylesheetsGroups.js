@@ -6090,7 +6090,8 @@
         },
         207069: e => {
             e.exports = {
-                priceWrapper: "priceWrapper-3XSWjw",
+                priceTagsContainer: "priceTagsContainer-31jRp2",
+                priceTag: "priceTag-2NzQ72",
                 price: "price-1Nd6eJ",
                 strikedPrice: "strikedPrice-3AIrSN",
                 fullPrice: "fullPrice-26UjNQ",
