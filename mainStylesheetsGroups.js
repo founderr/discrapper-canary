@@ -20953,6 +20953,9 @@
                 modalHeaderText: "modalHeaderText-1XCDbV",
                 closeButton: "closeButton-36t9Vn",
                 modalContent: "modalContent-1Avzh-",
+                moreHeading: "moreHeading-1l0_qD",
+                safetyAction: "safetyAction-negsKp",
+                safetyActionText: "safetyActionText-3flTm1",
                 tipsSection: "tipsSection-1h5_LK",
                 tipRow: "tipRow-3yztTZ",
                 tipNumber: "tipNumber-MasoFQ"
