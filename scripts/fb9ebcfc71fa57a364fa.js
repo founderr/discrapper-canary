@@ -7,8 +7,8 @@
                 e: () => m
             });
             var n = r(785893),
-                i = (r(667294), r(712861)),
-                o = r(142643),
+                o = (r(667294), r(712861)),
+                i = r(142643),
                 a = r(525044),
                 l = r(675728);
 
@@ -38,46 +38,46 @@
 
             function u(e, t) {
                 if (null == e) return {};
-                var r, n, i = function(e, t) {
+                var r, n, o = function(e, t) {
                     if (null == e) return {};
-                    var r, n, i = {},
-                        o = Object.keys(e);
-                    for (n = 0; n < o.length; n++) {
-                        r = o[n];
-                        t.indexOf(r) >= 0 || (i[r] = e[r])
+                    var r, n, o = {},
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) {
+                        r = i[n];
+                        t.indexOf(r) >= 0 || (o[r] = e[r])
                     }
-                    return i
+                    return o
                 }(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var o = Object.getOwnPropertySymbols(e);
-                    for (n = 0; n < o.length; n++) {
-                        r = o[n];
-                        t.indexOf(r) >= 0 || Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r])
+                    var i = Object.getOwnPropertySymbols(e);
+                    for (n = 0; n < i.length; n++) {
+                        r = i[n];
+                        t.indexOf(r) >= 0 || Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r])
                     }
                 }
-                return i
+                return o
             }
-            var d = (0, i.Mg)(o.Z.ASPECT_STABLE_IMAGE_CONTAINER_PADDING);
+            var d = (0, o.Mg)(i.Z.ASPECT_STABLE_IMAGE_CONTAINER_PADDING);
 
             function f(e) {
                 var t = e.listing,
                     r = e.imageSize,
-                    i = e.alt,
-                    o = u(e, ["listing", "imageSize", "alt"]),
+                    o = e.alt,
+                    i = u(e, ["listing", "imageSize", "alt"]),
                     l = (0, a.U)(t, r);
                 return (0, n.jsx)("img", c({
                     src: l,
-                    alt: i
-                }, o))
+                    alt: o
+                }, i))
             }
 
             function m(e) {
                 var t = e.listing,
                     r = e.aspectRatio,
-                    i = void 0 === r ? 16 / 9 : r,
-                    o = e.height,
+                    o = void 0 === r ? 16 / 9 : r,
+                    i = e.height,
                     s = u(e, ["listing", "aspectRatio", "height"]),
-                    f = (o - 2 * d) * i,
+                    f = (i - 2 * d) * o,
                     m = (0, a.U)(t, f),
                     O = (0, a.U)(t, f, {
                         shouldAnimate: !1
@@ -85,7 +85,7 @@
                 return (0, n.jsx)(l.Z, c({
                     src: m,
                     backgroundSrc: O,
-                    aspectRatio: i
+                    aspectRatio: o
                 }, s))
             }
         },
@@ -94,8 +94,8 @@
                 Z: () => c
             });
             var n = r(785893),
-                i = (r(667294), r(70418)),
-                o = r(223430),
+                o = (r(667294), r(70418)),
+                i = r(223430),
                 a = r(976334),
                 l = r(588313),
                 s = r.n(l);
@@ -110,23 +110,23 @@
                         width: 16,
                         height: 16,
                         className: s().fileIcon
-                    }), (0, n.jsx)(o.Z, {
+                    }), (0, n.jsx)(i.Z, {
                         size: 8,
                         horizontal: !0
-                    }), (0, n.jsx)(i.Text, {
+                    }), (0, n.jsx)(o.Text, {
                         variant: "text-sm/normal",
                         color: "text-normal",
                         className: s().fileName,
                         children: r.filename
-                    }), (0, n.jsx)(o.Z, {
+                    }), (0, n.jsx)(i.Z, {
                         size: 8,
                         horizontal: !0
                     }), (0, n.jsx)("div", {
                         className: s().dot
-                    }), (0, n.jsx)(o.Z, {
+                    }), (0, n.jsx)(i.Z, {
                         size: 8,
                         horizontal: !0
-                    }), (0, n.jsxs)(i.Text, {
+                    }), (0, n.jsxs)(o.Text, {
                         variant: "text-sm/normal",
                         color: "text-muted",
                         children: [c, "MB"]
@@ -139,8 +139,8 @@
                 Z: () => s
             });
             var n = r(785893),
-                i = (r(667294), r(70418)),
-                o = r(223430),
+                o = (r(667294), r(70418)),
+                i = r(223430),
                 a = r(349393),
                 l = r.n(a);
 
@@ -148,12 +148,12 @@
                 var t = e.children,
                     r = e.label;
                 return (0, n.jsxs)("li", {
-                    children: [(0, n.jsx)(i.Text, {
+                    children: [(0, n.jsx)(o.Text, {
                         variant: "text-xs/semibold",
                         color: "header-secondary",
                         className: l().benefitLabel,
                         children: r
-                    }), (0, n.jsx)(o.Z, {
+                    }), (0, n.jsx)(i.Z, {
                         size: 12
                     }), t]
                 })
@@ -165,9 +165,9 @@
                 default: () => M
             });
             var n = r(785893),
-                i = r(667294),
-                o = r(441143),
-                a = r.n(o),
+                o = r(667294),
+                i = r(441143),
+                a = r.n(i),
                 l = r(571657),
                 s = r(202351),
                 c = r(70418),
@@ -199,25 +199,25 @@
                 }(e) || function(e, t) {
                     var r = null == e ? null : "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"];
                     if (null != r) {
-                        var n, i, o = [],
+                        var n, o, i = [],
                             a = !0,
                             l = !1;
                         try {
                             for (r = r.call(e); !(a = (n = r.next()).done); a = !0) {
-                                o.push(n.value);
-                                if (t && o.length === t) break
+                                i.push(n.value);
+                                if (t && i.length === t) break
                             }
                         } catch (e) {
                             l = !0;
-                            i = e
+                            o = e
                         } finally {
                             try {
                                 a || null == r.return || r.return()
                             } finally {
-                                if (l) throw i
+                                if (l) throw o
                             }
                         }
-                        return o
+                        return i
                     }
                 }(e, t) || function(e, t) {
                     if (!e) return;
@@ -235,8 +235,8 @@
             function C(e) {
                 var t = e.attachments,
                     r = e.role,
-                    o = e.roleLocked,
-                    a = _(i.useState(!1), 2),
+                    i = e.roleLocked,
+                    a = _(o.useState(!1), 2),
                     l = a[0],
                     s = a[1];
                 return (0, n.jsxs)(n.Fragment, {
@@ -280,7 +280,7 @@
                                 children: (0, n.jsx)(v.Z, {
                                     role: r,
                                     textVariant: "text-md/medium",
-                                    locked: o
+                                    locked: i
                                 })
                             })]
                         })]
@@ -289,19 +289,19 @@
             }
 
             function N(e) {
-                var t, r, i = e.listing,
-                    o = null !== (t = i.attachments) && void 0 !== t ? t : [],
+                var t, r, o = e.listing,
+                    i = null !== (t = o.attachments) && void 0 !== t ? t : [],
                     a = (0, s.e7)([O.Z], (function() {
                         var e;
-                        return null === (e = O.Z.getGuild(i.guild_id)) || void 0 === e ? void 0 : e.roles[null !== (r = i.role_id) && void 0 !== r ? r : ""]
+                        return null === (e = O.Z.getGuild(o.guild_id)) || void 0 === e ? void 0 : e.roles[null !== (r = o.role_id) && void 0 !== r ? r : ""]
                     })),
-                    l = !i.has_entitlement;
-                return 0 === o.length && null == a ? null : 0 === o.length && null != a ? (0, n.jsx)(v.Z, {
+                    l = !o.has_entitlement;
+                return 0 === i.length && null == a ? null : 0 === i.length && null != a ? (0, n.jsx)(v.Z, {
                     role: a,
                     textVariant: "text-md/medium",
                     locked: l
                 }) : (0, n.jsx)(C, {
-                    attachments: o,
+                    attachments: i,
                     role: a,
                     roleLocked: l
                 })
@@ -312,41 +312,43 @@
 
             function M(e) {
                 var t, r = e.transitionState,
-                    i = e.guildProductListingId,
-                    o = e.guildId,
-                    b = e.onClose,
-                    j = (0, s.e7)([p.Z], (function() {
-                        return p.Z.getGuildProduct(i)
+                    o = e.guildProductListingId,
+                    i = e.analyticsLocation,
+                    b = e.guildId,
+                    j = e.onClose,
+                    y = (0, s.e7)([p.Z], (function() {
+                        return p.Z.getGuildProduct(o)
                     }));
-                a()(null != j, "guildProductListing cannot be null");
+                a()(null != y, "guildProductListing cannot be null");
                 (0, d.Z)({
                     type: l.nv.MODAL,
                     name: l.zs.GUILD_PRODUCT_LISTING_INFO_MODAL,
                     properties: {
-                        guild_product_listing_id: i,
-                        has_entitlement: !0 === j.has_entitlement
+                        guild_product_listing_id: o,
+                        has_entitlement: !0 === y.has_entitlement,
+                        location: i
                     }
                 });
-                var y, v = null !== (t = (0, g.C)(j)) && void 0 !== t ? t : "",
-                    P = (0, g.k)(j),
-                    Z = (0, s.e7)([O.Z], (function() {
-                        return O.Z.getGuild(o)
+                var v, P = null !== (t = (0, g.C)(y)) && void 0 !== t ? t : "",
+                    Z = (0, g.k)(y),
+                    w = (0, s.e7)([O.Z], (function() {
+                        return O.Z.getGuild(b)
                     }));
                 return (0, n.jsxs)(c.ModalRoot, {
                     className: S().modal,
                     size: c.ModalSize.MEDIUM,
                     transitionState: r,
-                    "aria-label": j.name,
+                    "aria-label": y.name,
                     children: [(0, n.jsxs)(c.ModalHeader, {
                         separator: !1,
                         children: [(0, n.jsx)(m.e, {
                             height: 267,
-                            listing: j,
+                            listing: y,
                             className: S().headerImage,
                             alt: ""
                         }), (0, n.jsx)(c.ModalCloseButton, {
                             className: S().closeButton,
-                            onClick: b,
+                            onClick: j,
                             withCircleBackground: !0
                         })]
                     }), (0, n.jsx)(c.ModalContent, {
@@ -355,20 +357,20 @@
                             children: [(0, n.jsx)(c.Heading, {
                                 variant: "heading-xl/medium",
                                 color: "header-primary",
-                                children: j.name
+                                children: y.name
                             }), (0, n.jsx)(h.Z, {
                                 size: 4
                             }), (0, n.jsx)(c.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
                                 children: x.Z.Messages.GUILD_PRODUCT_INFO_MODAL_PRODUCT_OFFER.format({
-                                    productType: v,
-                                    personName: null !== (y = null == Z ? void 0 : Z.name) && void 0 !== y ? y : ""
+                                    productType: P,
+                                    personName: null !== (v = null == w ? void 0 : w.name) && void 0 !== v ? v : ""
                                 })
                             }), (0, n.jsx)(h.Z, {
                                 size: 16
                             }), (0, n.jsx)(N, {
-                                listing: j
+                                listing: y
                             }), (0, n.jsx)(h.Z, {
                                 size: 16
                             }), (0, n.jsx)("div", {
@@ -385,20 +387,20 @@
                                 className: S().description,
                                 variant: "text-md/normal",
                                 color: "text-muted",
-                                text: j.description
+                                text: y.description
                             })]
                         })
                     }), (0, n.jsxs)(c.ModalFooter, {
                         className: S().footer,
                         children: [(0, n.jsx)(L.Z, {
-                            guildId: o,
-                            guildProductListingId: i,
+                            guildId: b,
+                            guildProductListingId: o,
                             sourceAnalyticsLocations: u.Z.GUILD_PRODUCT_INFO_MODAL
                         }), (0, n.jsx)(c.Text, {
                             tag: "div",
                             variant: "heading-xl/semibold",
                             color: "header-primary",
-                            children: P
+                            children: Z
                         })]
                     })]
                 })
@@ -409,8 +411,8 @@
                 Z: () => m
             });
             var n = r(785893),
-                i = (r(667294), r(168075)),
-                o = r(795308),
+                o = (r(667294), r(168075)),
+                i = r(795308),
                 a = r(633878);
 
             function l(e, t, r) {
@@ -443,24 +445,24 @@
 
             function c(e, t) {
                 if (null == e) return {};
-                var r, n, i = function(e, t) {
+                var r, n, o = function(e, t) {
                     if (null == e) return {};
-                    var r, n, i = {},
-                        o = Object.keys(e);
-                    for (n = 0; n < o.length; n++) {
-                        r = o[n];
-                        t.indexOf(r) >= 0 || (i[r] = e[r])
+                    var r, n, o = {},
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) {
+                        r = i[n];
+                        t.indexOf(r) >= 0 || (o[r] = e[r])
                     }
-                    return i
+                    return o
                 }(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var o = Object.getOwnPropertySymbols(e);
-                    for (n = 0; n < o.length; n++) {
-                        r = o[n];
-                        t.indexOf(r) >= 0 || Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r])
+                    var i = Object.getOwnPropertySymbols(e);
+                    for (n = 0; n < i.length; n++) {
+                        r = i[n];
+                        t.indexOf(r) >= 0 || Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r])
                     }
                 }
-                return i
+                return o
             }
 
             function u(e, t, r) {
@@ -493,30 +495,30 @@
 
             function f(e, t) {
                 if (null == e) return {};
-                var r, n, i = function(e, t) {
+                var r, n, o = function(e, t) {
                     if (null == e) return {};
-                    var r, n, i = {},
-                        o = Object.keys(e);
-                    for (n = 0; n < o.length; n++) {
-                        r = o[n];
-                        t.indexOf(r) >= 0 || (i[r] = e[r])
+                    var r, n, o = {},
+                        i = Object.keys(e);
+                    for (n = 0; n < i.length; n++) {
+                        r = i[n];
+                        t.indexOf(r) >= 0 || (o[r] = e[r])
                     }
-                    return i
+                    return o
                 }(e, t);
                 if (Object.getOwnPropertySymbols) {
-                    var o = Object.getOwnPropertySymbols(e);
-                    for (n = 0; n < o.length; n++) {
-                        r = o[n];
-                        t.indexOf(r) >= 0 || Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r])
+                    var i = Object.getOwnPropertySymbols(e);
+                    for (n = 0; n < i.length; n++) {
+                        r = i[n];
+                        t.indexOf(r) >= 0 || Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r])
                     }
                 }
-                return i
+                return o
             }
-            const m = (0, i.hN)((function(e) {
+            const m = (0, o.hN)((function(e) {
                 var t = e.width,
                     r = void 0 === t ? 16 : t,
-                    i = e.height,
-                    o = void 0 === i ? 16 : i,
+                    o = e.height,
+                    i = void 0 === o ? 16 : o,
                     l = e.color,
                     s = void 0 === l ? "currentColor" : l,
                     c = e.foreground,
@@ -535,7 +537,7 @@
                     return e
                 }({}, (0, a.Z)(m)), {
                     width: r,
-                    height: o,
+                    height: i,
                     viewBox: "0 0 16 16",
                     fill: "none",
                     children: (0, n.jsx)("path", {
@@ -547,10 +549,10 @@
             }), (function(e) {
                 var t = e.width,
                     r = void 0 === t ? 24 : t,
-                    i = e.height,
-                    u = void 0 === i ? 24 : i,
+                    o = e.height,
+                    u = void 0 === o ? 24 : o,
                     d = e.color,
-                    f = void 0 === d ? o.Z.colors.INTERACTIVE_NORMAL : d,
+                    f = void 0 === d ? i.Z.colors.INTERACTIVE_NORMAL : d,
                     m = e.colorClass,
                     O = void 0 === m ? "" : m,
                     h = c(e, ["width", "height", "color", "colorClass"]);

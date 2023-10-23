@@ -9832,7 +9832,8 @@
                 var G = function() {
                         return j({
                             guildId: a,
-                            guildProductListingId: n.id
+                            guildProductListingId: n.id,
+                            analyticsLocation: l
                         })
                     },
                     B = (0, r.jsx)(v.m, {
