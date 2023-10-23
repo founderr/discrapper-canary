@@ -500,64 +500,67 @@
                     n = e.initialPlanId,
                     i = e.handleStepChange,
                     o = e.referralTrialOfferId,
-                    s = (0,
+                    s = e.handleClose,
+                    l = (0,
                         I.usePaymentContext)(),
-                    l = s.activeSubscription,
-                    p = s.blockedPayments,
-                    S = s.hasFetchedSubscriptions,
-                    y = s.hasFetchedSubscriptionPlans,
-                    C = s.currencyLoading,
-                    L = s.selectedSkuId,
-                    v = s.setSelectedPlanId,
-                    g = s.isGift,
-                    E = s.defaultPlanId,
-                    O = s.startedPaymentFlowWithPaymentSourcesRef.current,
-                    T = (0, P.Z)({
-                        isGift: g,
-                        skuId: L,
+                    p = l.activeSubscription,
+                    S = l.blockedPayments,
+                    y = l.hasFetchedSubscriptions,
+                    C = l.hasFetchedSubscriptionPlans,
+                    L = l.currencyLoading,
+                    v = l.selectedSkuId,
+                    g = l.setSelectedPlanId,
+                    E = l.isGift,
+                    O = l.defaultPlanId,
+                    T = l.startedPaymentFlowWithPaymentSourcesRef.current,
+                    N = (0, P.Z)({
+                        isGift: E,
+                        skuId: v,
                         referralTrialOfferId: o
                     }),
-                    N = h.k.getCurrentConfig({
+                    M = h.k.getCurrentConfig({
                         location: "055ec5_1"
                     }, {
                         autoTrackExposure: !1
                     }).defaultToMonthlyPlan,
-                    M = $(a.useState(!0), 2),
-                    j = M[0],
-                    A = M[1],
-                    w = (0, u.ZP)([b.Z], (function() {
+                    j = $(a.useState(!0), 2),
+                    A = j[0],
+                    w = j[1],
+                    R = (0, u.ZP)([b.Z], (function() {
                         return b.Z.applicationIdsFetched.has(k.RQ)
                     }));
                 a.useEffect((function() {
-                    A(!S || !y || C)
-                }), [C, y, S]);
-                (0, f.Z)("Payment Modal", j, 5, {
-                    hasFetchedSubscriptions: S,
-                    hasFetchedSubscriptionPlans: y,
-                    currencyLoading: C
+                    w(!y || !C || L)
+                }), [L, C, y]);
+                (0, f.Z)("Payment Modal", A, 5, {
+                    hasFetchedSubscriptions: y,
+                    hasFetchedSubscriptionPlans: C,
+                    currencyLoading: L
                 }, {
                     tags: {
                         app_context: "billing"
                     }
                 });
                 a.useEffect((function() {
-                    w || (0, c.yD)(k.RQ);
-                    if (!j && !p) {
+                    R || (0, c.yD)(k.RQ);
+                    if (!A && !S) {
                         var e = (0, _.Kp)({
-                            isTrial: T,
-                            isGift: g,
-                            selectedSkuId: L,
-                            startedPaymentFlowWithPaymentSources: O
+                            isTrial: N,
+                            isGift: E,
+                            selectedSkuId: v,
+                            startedPaymentFlowWithPaymentSources: T
                         });
                         if (null != n) i(m.h8.REVIEW);
                         else if (e) {
-                            var r = (0, _.nA)(L, l, E);
-                            v(r);
+                            var r = (0, _.nA)(v, p, O);
+                            g(r);
                             i(m.h8.REVIEW)
                         } else i(null != t ? m.h8.PLAN_SELECT : m.h8.SKU_SELECT)
                     }
-                }), [l, p, w, n, j, i, t, L, v, N, T, E, g, O]);
-                return j ? (0, r.jsx)(H.Z, {}) : p ? (0, r.jsx)(d.Vq, {}) : null
+                }), [p, S, R, n, A, i, t, v, g, M, N, O, E, T]);
+                return A ? (0, r.jsx)(H.Z, {}) : S ? (0, r.jsx)(d.Vq, {
+                    onClose: s
+                }) : null
             }
         },
         28648: (e, t, n) => {

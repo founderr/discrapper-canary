@@ -6406,9 +6406,9 @@
         123435: (e, t, n) => {
             "use strict";
             n.d(t, {
-                Vq: () => m,
-                c8: () => g,
-                oQ: () => P
+                Vq: () => P,
+                c8: () => m,
+                oQ: () => A
             });
             var r = n(785893),
                 o = (n(667294),
@@ -6418,72 +6418,84 @@
                 a = n(575945),
                 c = n(70418),
                 l = n(74535),
-                u = n(818417),
-                f = n(348592),
-                p = n(387099),
-                d = n(2590),
-                _ = n(473708),
-                E = n(858903),
-                I = n.n(E),
-                O = n(495068),
-                T = n.n(O),
-                S = n(377236),
-                R = n.n(S);
+                u = n(107364),
+                f = n(818417),
+                p = n(348592),
+                d = n(387099),
+                _ = n(2590),
+                E = n(473708),
+                I = n(858903),
+                O = n.n(I),
+                T = n(495068),
+                S = n.n(T),
+                R = n(377236),
+                h = n.n(R);
 
-            function h(e) {
+            function g(e) {
                 var t = e.className,
                     n = (0, l.ZP)(),
-                    o = (0, a.wj)(n) ? T() : R();
+                    o = (0, a.wj)(n) ? S() : h();
                 return (0, r.jsxs)("div", {
-                    className: s()(I().container, t),
+                    className: s()(O().container, t),
                     children: [(0, r.jsx)(c.Heading, {
-                        className: I().header,
+                        className: O().header,
                         variant: "heading-xl/semibold",
-                        children: _.Z.Messages.REGION_BLOCKED_PAYMENTS_HEADER
+                        children: E.Z.Messages.REGION_BLOCKED_PAYMENTS_HEADER
                     }), (0, r.jsxs)(c.Text, {
-                        className: I().description,
+                        className: O().description,
                         variant: "text-md/normal",
                         color: "header-secondary",
                         children: [(0, r.jsx)("p", {
-                            children: _.Z.Messages.REGION_BLOCKED_PAYMENTS_BODY
+                            children: E.Z.Messages.REGION_BLOCKED_PAYMENTS_BODY
                         }), (0, r.jsx)("p", {
-                            children: _.Z.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
-                                helpdeskArticle: f.Z.getArticleURL(d.BhN.BLOCKED_PAYMENTS)
+                            children: E.Z.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
+                                helpdeskArticle: p.Z.getArticleURL(_.BhN.BLOCKED_PAYMENTS)
                             })
                         })]
                     }), (0, r.jsx)("img", {
                         src: o,
-                        className: I().splashImage,
+                        className: O().splashImage,
                         alt: "Blocked Payments"
                     })]
                 })
             }
 
-            function g() {
-                return (0, r.jsx)(h, {
-                    className: I().settings
-                })
-            }
-
             function m() {
-                return (0, r.jsx)(h, {
-                    className: I().modal
+                return (0, r.jsx)(g, {
+                    className: O().settings
                 })
             }
 
             function P(e) {
+                var t = e.onClose;
+                return (0, r.jsxs)(r.Fragment, {
+                    children: [(0, r.jsx)(c.ModalHeader, {
+                        className: O().blockedPaymentsModalHeader,
+                        justify: u.Z.Justify.END,
+                        children: (0, r.jsx)(c.ModalCloseButton, {
+                            onClick: t
+                        })
+                    }), (0, r.jsx)(c.ModalContent, {
+                        className: O().blockedPaymentsModalContent,
+                        children: (0, r.jsx)(g, {
+                            className: O().modal
+                        })
+                    })]
+                })
+            }
+
+            function A(e) {
                 var t = e.className;
-                return (0, p.Q)() ? (0,
-                    r.jsxs)(c.Card, {
-                    className: s()(I().blockedPaymentsWarning, t),
+                return (0, d.Q)() ? (0, r.jsxs)(c.Card, {
+                    className: s()(O().blockedPaymentsWarning, t),
                     type: c.Card.Types.CUSTOM,
-                    children: [(0, r.jsx)(u.Z, {
-                        className: I().blockedPaymentsWarningIcon,
+                    children: [(0, r.jsx)(f.Z, {
+                        className: O().blockedPaymentsWarningIcon,
                         color: i.Z.unsafe_rawColors.YELLOW_300.css
                     }), (0, r.jsx)(c.Text, {
                         variant: "text-sm/normal",
-                        children: _.Z.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
-                            helpdeskArticle: f.Z.getArticleURL(d.BhN.BLOCKED_PAYMENTS)
+                        children: E.Z.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
+                            helpdeskArticle: p.Z.getArticleURL(_.BhN.BLOCKED_PAYMENTS)
                         })
                     })]
                 }) : null
@@ -6570,7 +6582,8 @@
                                 className: m().art,
                                 alt: " "
                             })
-                        }), (0, o.jsxs)("div", {
+                        }), (0,
+                            o.jsxs)("div", {
                             className: m().mainColumn,
                             children: [(0, o.jsx)(l.Heading, {
                                 variant: "heading-lg/bold",
@@ -6808,8 +6821,7 @@
                         return l.Z.Messages.PAYMENT_SOURCE_PRZELEWY24
                     })), f(d, a.HeQ.PAYSAFE_CARD, (function() {
                         return l.Z.Messages.PAYMENT_SOURCE_PAYSAFE_CARD
-                    })),
-                    f(d, a.HeQ.GCASH, (function() {
+                    })), f(d, a.HeQ.GCASH, (function() {
                         return l.Z.Messages.PAYMENT_SOURCE_GCASH
                     })), f(d, a.HeQ.GRABPAY_MY, (function() {
                         return l.Z.Messages.PAYMENT_SOURCE_GRABPAY
@@ -6829,7 +6841,8 @@
                         return l.Z.Messages.PAYMENT_SOURCE_IDEAL
                     })), f(d, a.HeQ.CASH_APP, (function() {
                         return l.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY
-                    })), d),
+                    })),
+                    d),
                 O = [a.HeQ.EPS, a.HeQ.BANCONTACT, a.HeQ.IDEAL, a.HeQ.SOFORT, a.HeQ.GIROPAY, a.HeQ.SEPA_DEBIT, a.HeQ.PAYSAFE_CARD],
                 T = function(e, t, n, r) {
                     if (null == e) return "";
@@ -7092,12 +7105,13 @@
                     ops: []
                 };
                 return s = {
-                    next: a(0),
-                    throw: a(1),
-                    return: a(2)
-                }, "function" == typeof Symbol && (s[Symbol.iterator] = function() {
-                    return this
-                }), s;
+                        next: a(0),
+                        throw: a(1),
+                        return: a(2)
+                    },
+                    "function" == typeof Symbol && (s[Symbol.iterator] = function() {
+                        return this
+                    }), s;
 
                 function a(s) {
                     return function(a) {
@@ -7171,8 +7185,7 @@
                     return S(this, (function(S) {
                         switch (S.label) {
                             case 0:
-                                t = e.items, n = e.paymentSourceId, r = e.trialId, o = e.code, c = e.applyEntitlements, f = void 0 !== c && c,
-                                    p = e.currency, d = e.renewal, _ = e.metadata;
+                                t = e.items, n = e.paymentSourceId, r = e.trialId, o = e.code, c = e.applyEntitlements, f = void 0 !== c && c, p = e.currency, d = e.renewal, _ = e.metadata;
                                 t = (0, l.gB)(t);
                                 T = {
                                     items: t.map((function(e) {
@@ -7290,7 +7303,8 @@
                     _ = (0, o.e7)([c.Z], (function() {
                         return c.Z.getSubscriptions()
                     }));
-                (0, r.useEffect)((function() {
+                (0,
+                    r.useEffect)((function() {
                     var e = !1;
 
                     function n() {

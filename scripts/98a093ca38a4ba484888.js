@@ -112,9 +112,9 @@
         123435: (e, t, r) => {
             "use strict";
             r.d(t, {
-                Vq: () => g,
-                c8: () => P,
-                oQ: () => O
+                Vq: () => O,
+                c8: () => g,
+                oQ: () => _
             });
             var n = r(785893),
                 a = (r(667294),
@@ -124,72 +124,84 @@
                 s = r(575945),
                 l = r(70418),
                 c = r(74535),
-                u = r(818417),
-                f = r(348592),
-                d = r(387099),
-                p = r(2590),
-                h = r(473708),
-                y = r(858903),
-                m = r.n(y),
-                E = r(495068),
-                b = r.n(E),
-                v = r(377236),
-                S = r.n(v);
+                u = r(107364),
+                f = r(818417),
+                d = r(348592),
+                p = r(387099),
+                h = r(2590),
+                y = r(473708),
+                m = r(858903),
+                E = r.n(m),
+                b = r(495068),
+                v = r.n(b),
+                S = r(377236),
+                I = r.n(S);
 
-            function I(e) {
+            function P(e) {
                 var t = e.className,
                     r = (0, c.ZP)(),
-                    a = (0, s.wj)(r) ? b() : S();
+                    a = (0, s.wj)(r) ? v() : I();
                 return (0, n.jsxs)("div", {
-                    className: i()(m().container, t),
+                    className: i()(E().container, t),
                     children: [(0, n.jsx)(l.Heading, {
-                        className: m().header,
+                        className: E().header,
                         variant: "heading-xl/semibold",
-                        children: h.Z.Messages.REGION_BLOCKED_PAYMENTS_HEADER
+                        children: y.Z.Messages.REGION_BLOCKED_PAYMENTS_HEADER
                     }), (0, n.jsxs)(l.Text, {
-                        className: m().description,
+                        className: E().description,
                         variant: "text-md/normal",
                         color: "header-secondary",
                         children: [(0, n.jsx)("p", {
-                            children: h.Z.Messages.REGION_BLOCKED_PAYMENTS_BODY
+                            children: y.Z.Messages.REGION_BLOCKED_PAYMENTS_BODY
                         }), (0, n.jsx)("p", {
-                            children: h.Z.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
-                                helpdeskArticle: f.Z.getArticleURL(p.BhN.BLOCKED_PAYMENTS)
+                            children: y.Z.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
+                                helpdeskArticle: d.Z.getArticleURL(h.BhN.BLOCKED_PAYMENTS)
                             })
                         })]
                     }), (0, n.jsx)("img", {
                         src: a,
-                        className: m().splashImage,
+                        className: E().splashImage,
                         alt: "Blocked Payments"
                     })]
                 })
             }
 
-            function P() {
-                return (0, n.jsx)(I, {
-                    className: m().settings
-                })
-            }
-
             function g() {
-                return (0, n.jsx)(I, {
-                    className: m().modal
+                return (0, n.jsx)(P, {
+                    className: E().settings
                 })
             }
 
             function O(e) {
+                var t = e.onClose;
+                return (0, n.jsxs)(n.Fragment, {
+                    children: [(0, n.jsx)(l.ModalHeader, {
+                        className: E().blockedPaymentsModalHeader,
+                        justify: u.Z.Justify.END,
+                        children: (0, n.jsx)(l.ModalCloseButton, {
+                            onClick: t
+                        })
+                    }), (0, n.jsx)(l.ModalContent, {
+                        className: E().blockedPaymentsModalContent,
+                        children: (0, n.jsx)(P, {
+                            className: E().modal
+                        })
+                    })]
+                })
+            }
+
+            function _(e) {
                 var t = e.className;
-                return (0, d.Q)() ? (0,
-                    n.jsxs)(l.Card, {
-                    className: i()(m().blockedPaymentsWarning, t),
+                return (0, p.Q)() ? (0, n.jsxs)(l.Card, {
+                    className: i()(E().blockedPaymentsWarning, t),
                     type: l.Card.Types.CUSTOM,
-                    children: [(0, n.jsx)(u.Z, {
-                        className: m().blockedPaymentsWarningIcon,
+                    children: [(0, n.jsx)(f.Z, {
+                        className: E().blockedPaymentsWarningIcon,
                         color: o.Z.unsafe_rawColors.YELLOW_300.css
                     }), (0, n.jsx)(l.Text, {
                         variant: "text-sm/normal",
-                        children: h.Z.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
-                            helpdeskArticle: f.Z.getArticleURL(p.BhN.BLOCKED_PAYMENTS)
+                        children: y.Z.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
+                            helpdeskArticle: d.Z.getArticleURL(h.BhN.BLOCKED_PAYMENTS)
                         })
                     })]
                 }) : null
@@ -765,8 +777,7 @@
                         skuPricePreview: R
                     }), (0, n.jsxs)("div", {
                         className: se().paymentSourceWrapper,
-                        children: [(0,
-                            n.jsx)(y.FormTitle, {
+                        children: [(0, n.jsx)(y.FormTitle, {
                             tag: y.FormTitleTags.H5,
                             children: k.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE
                         }), (0, n.jsx)(b.Z, {
@@ -863,7 +874,8 @@
                     I = e.referralTrialOfferId,
                     g = e.initialPlanId,
                     _ = e.subscriptionTier,
-                    C = (0, P.usePaymentContext)(),
+                    C = (0,
+                        P.usePaymentContext)(),
                     A = C.activeSubscription,
                     T = C.setUpdatedSubscription,
                     j = C.contextMetadata,
@@ -895,8 +907,7 @@
                     oe = ae[1],
                     se = null !== (re = null != i ? i : I) && void 0 !== re ? re : null,
                     le = null == se || V && !pe.nG[se].skus.includes(U) ? null : se,
-                    ce = (0,
-                        u.N)(I),
+                    ce = (0, u.N)(I),
                     ye = (0, c.Ng)(),
                     Ee = {
                         user_trial_offer_id: null == ce ? void 0 : ce.id
@@ -1325,7 +1336,8 @@
                     s = e.renderPurchaseConfirmation,
                     l = e.postSuccessGuild,
                     c = e.followupSKUInfo,
-                    u = (0, h.usePaymentContext)(),
+                    u = (0,
+                        h.usePaymentContext)(),
                     f = u.activeSubscription,
                     d = u.isGift,
                     y = u.paymentSources,
@@ -1373,8 +1385,7 @@
                     }
                 }), [d, O, _, A, T, M, R, w, o]);
                 if (null != s) t = s(E, g, S);
-                else if (d) t = (0,
-                    n.jsx)(W.T, {
+                else if (d) t = (0, n.jsx)(W.T, {
                     planId: E.id,
                     selectedGiftStyle: I,
                     onClose: g,
@@ -1384,7 +1395,8 @@
                 });
                 else if (P.current === E.id) {
                     var Z;
-                    t = (0, n.jsx)(W.Z, {
+                    t = (0,
+                        n.jsx)(W.Z, {
                         planId: E.id,
                         postSuccessGuild: l,
                         onClose: g,
@@ -1621,7 +1633,8 @@
                         }), (0, n.jsx)(de, {
                             isGift: v,
                             plan: O
-                        }), (0, n.jsx)(V.Z, {}), Me ? (0, n.jsx)(g.FormErrorBlock, {
+                        }), (0,
+                            n.jsx)(V.Z, {}), Me ? (0, n.jsx)(g.FormErrorBlock, {
                             children: Re
                         }) : (0, n.jsx)(pe.O, {
                             isGift: v,
@@ -1730,7 +1743,8 @@
                 var t = e.handleStepChange,
                     r = e.handleClose,
                     a = e.referralTrialOfferId,
-                    i = (0, h.usePaymentContext)(),
+                    i = (0,
+                        h.usePaymentContext)(),
                     o = i.setSelectedSkuId,
                     s = i.activeSubscription,
                     l = i.isGift,
@@ -1961,8 +1975,7 @@
                     Z = e.referralTrialOfferId,
                     k = e.skuId,
                     D = e.returnRef,
-                    U = (0,
-                        c.Z)().analyticsLocations;
+                    U = (0, c.Z)().analyticsLocations;
                 a.useEffect((function() {
                     f.Z.isLoadedForPremiumSKUs() || o.Z.wait((function() {
                         return (0, s.Y2)()

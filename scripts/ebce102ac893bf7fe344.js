@@ -12,9 +12,9 @@
         123435: (e, t, n) => {
             "use strict";
             n.d(t, {
-                Vq: () => S,
-                c8: () => j,
-                oQ: () => P
+                Vq: () => P,
+                c8: () => S,
+                oQ: () => E
             });
             var r = n(785893),
                 o = (n(667294), n(294184)),
@@ -23,71 +23,84 @@
                 u = n(575945),
                 c = n(70418),
                 l = n(74535),
-                s = n(818417),
-                f = n(348592),
-                p = n(387099),
-                d = n(2590),
-                y = n(473708),
-                b = n(858903),
-                h = n.n(b),
-                m = n(495068),
-                v = n.n(m),
-                O = n(377236),
-                g = n.n(O);
+                s = n(107364),
+                f = n(818417),
+                p = n(348592),
+                d = n(387099),
+                y = n(2590),
+                b = n(473708),
+                h = n(858903),
+                m = n.n(h),
+                v = n(495068),
+                O = n.n(v),
+                g = n(377236),
+                w = n.n(g);
 
-            function w(e) {
+            function j(e) {
                 var t = e.className,
                     n = (0, l.ZP)(),
-                    o = (0, u.wj)(n) ? v() : g();
+                    o = (0, u.wj)(n) ? O() : w();
                 return (0, r.jsxs)("div", {
-                    className: i()(h().container, t),
+                    className: i()(m().container, t),
                     children: [(0, r.jsx)(c.Heading, {
-                        className: h().header,
+                        className: m().header,
                         variant: "heading-xl/semibold",
-                        children: y.Z.Messages.REGION_BLOCKED_PAYMENTS_HEADER
+                        children: b.Z.Messages.REGION_BLOCKED_PAYMENTS_HEADER
                     }), (0, r.jsxs)(c.Text, {
-                        className: h().description,
+                        className: m().description,
                         variant: "text-md/normal",
                         color: "header-secondary",
                         children: [(0, r.jsx)("p", {
-                            children: y.Z.Messages.REGION_BLOCKED_PAYMENTS_BODY
+                            children: b.Z.Messages.REGION_BLOCKED_PAYMENTS_BODY
                         }), (0, r.jsx)("p", {
-                            children: y.Z.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
-                                helpdeskArticle: f.Z.getArticleURL(d.BhN.BLOCKED_PAYMENTS)
+                            children: b.Z.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
+                                helpdeskArticle: p.Z.getArticleURL(y.BhN.BLOCKED_PAYMENTS)
                             })
                         })]
                     }), (0, r.jsx)("img", {
                         src: o,
-                        className: h().splashImage,
+                        className: m().splashImage,
                         alt: "Blocked Payments"
                     })]
                 })
             }
 
-            function j() {
-                return (0, r.jsx)(w, {
-                    className: h().settings
-                })
-            }
-
             function S() {
-                return (0, r.jsx)(w, {
-                    className: h().modal
+                return (0, r.jsx)(j, {
+                    className: m().settings
                 })
             }
 
             function P(e) {
+                var t = e.onClose;
+                return (0, r.jsxs)(r.Fragment, {
+                    children: [(0, r.jsx)(c.ModalHeader, {
+                        className: m().blockedPaymentsModalHeader,
+                        justify: s.Z.Justify.END,
+                        children: (0, r.jsx)(c.ModalCloseButton, {
+                            onClick: t
+                        })
+                    }), (0, r.jsx)(c.ModalContent, {
+                        className: m().blockedPaymentsModalContent,
+                        children: (0, r.jsx)(j, {
+                            className: m().modal
+                        })
+                    })]
+                })
+            }
+
+            function E(e) {
                 var t = e.className;
-                return (0, p.Q)() ? (0, r.jsxs)(c.Card, {
-                    className: i()(h().blockedPaymentsWarning, t),
+                return (0, d.Q)() ? (0, r.jsxs)(c.Card, {
+                    className: i()(m().blockedPaymentsWarning, t),
                     type: c.Card.Types.CUSTOM,
-                    children: [(0, r.jsx)(s.Z, {
-                        className: h().blockedPaymentsWarningIcon,
+                    children: [(0, r.jsx)(f.Z, {
+                        className: m().blockedPaymentsWarningIcon,
                         color: a.Z.unsafe_rawColors.YELLOW_300.css
                     }), (0, r.jsx)(c.Text, {
                         variant: "text-sm/normal",
-                        children: y.Z.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
-                            helpdeskArticle: f.Z.getArticleURL(d.BhN.BLOCKED_PAYMENTS)
+                        children: b.Z.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
+                            helpdeskArticle: p.Z.getArticleURL(y.BhN.BLOCKED_PAYMENTS)
                         })
                     })]
                 }) : null
@@ -262,8 +275,7 @@
                         return function(i) {
                             if (n) throw new TypeError("Generator is already executing.");
                             for (; a;) try {
-                                if (n = 1,
-                                    r && (o = 2 & i[0] ? r.return : i[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, i[1])).done) return o;
+                                if (n = 1, r && (o = 2 & i[0] ? r.return : i[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, i[1])).done) return o;
                                 (r = 0, o) && (i = [2 & i[0], o.value]);
                                 switch (i[0]) {
                                     case 0:
@@ -669,10 +681,10 @@
                     E = S[1],
                     x = f(o.useState(-1), 2),
                     C = x[0],
-                    A = x[1],
-                    k = function() {
+                    k = x[1],
+                    A = function() {
                         O.current = (0, c._G)(t, m);
-                        A((function(e) {
+                        k((function(e) {
                             return e + 1
                         }))
                     };
@@ -683,18 +695,18 @@
                     null != y && C >= 0 ? function() {
                         j(!1);
                         E(!0);
-                        A(-1);
+                        k(-1);
                         v(d)
-                    }() : k()
+                    }() : A()
                 }), [t, y]);
                 o.useEffect((function() {
-                    P && null != y || k()
+                    P && null != y || A()
                 }), [m]);
                 o.useEffect((function() {
                     if (P) {
                         j(null == y);
                         E(!1);
-                        k()
+                        A()
                     }
                 }), [P]);
                 if (!l.Cj.hasOwnProperty(t)) throw new Error("Unexpected giftStyle ".concat(t));
@@ -1112,7 +1124,8 @@
             const x = function(e) {
                 var t = e.componentRef,
                     n = v(e, ["componentRef"]),
-                    o = (0, u.e7)([l.Z], (function() {
+                    o = (0,
+                        u.e7)([l.Z], (function() {
                         return l.Z.isFocused()
                     })),
                     i = (0, u.e7)([c.Z], (function() {

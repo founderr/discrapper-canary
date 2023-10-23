@@ -270,9 +270,9 @@
         123435: (e, t, r) => {
             "use strict";
             r.d(t, {
-                Vq: () => E,
-                c8: () => g,
-                oQ: () => v
+                Vq: () => v,
+                c8: () => E,
+                oQ: () => C
             });
             var n = r(785893),
                 o = (r(667294), r(294184)),
@@ -281,71 +281,84 @@
                 c = r(575945),
                 u = r(70418),
                 s = r(74535),
-                l = r(818417),
-                f = r(348592),
-                p = r(387099),
-                d = r(2590),
-                O = r(473708),
-                b = r(858903),
-                I = r.n(b),
-                y = r(495068),
-                h = r.n(y),
-                _ = r(377236),
-                m = r.n(_);
+                l = r(107364),
+                f = r(818417),
+                p = r(348592),
+                d = r(387099),
+                O = r(2590),
+                b = r(473708),
+                I = r(858903),
+                y = r.n(I),
+                h = r(495068),
+                _ = r.n(h),
+                m = r(377236),
+                P = r.n(m);
 
-            function P(e) {
+            function g(e) {
                 var t = e.className,
                     r = (0, s.ZP)(),
-                    o = (0, c.wj)(r) ? h() : m();
+                    o = (0, c.wj)(r) ? _() : P();
                 return (0, n.jsxs)("div", {
-                    className: i()(I().container, t),
+                    className: i()(y().container, t),
                     children: [(0, n.jsx)(u.Heading, {
-                        className: I().header,
+                        className: y().header,
                         variant: "heading-xl/semibold",
-                        children: O.Z.Messages.REGION_BLOCKED_PAYMENTS_HEADER
+                        children: b.Z.Messages.REGION_BLOCKED_PAYMENTS_HEADER
                     }), (0, n.jsxs)(u.Text, {
-                        className: I().description,
+                        className: y().description,
                         variant: "text-md/normal",
                         color: "header-secondary",
                         children: [(0, n.jsx)("p", {
-                            children: O.Z.Messages.REGION_BLOCKED_PAYMENTS_BODY
+                            children: b.Z.Messages.REGION_BLOCKED_PAYMENTS_BODY
                         }), (0, n.jsx)("p", {
-                            children: O.Z.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
-                                helpdeskArticle: f.Z.getArticleURL(d.BhN.BLOCKED_PAYMENTS)
+                            children: b.Z.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
+                                helpdeskArticle: p.Z.getArticleURL(O.BhN.BLOCKED_PAYMENTS)
                             })
                         })]
                     }), (0, n.jsx)("img", {
                         src: o,
-                        className: I().splashImage,
+                        className: y().splashImage,
                         alt: "Blocked Payments"
                     })]
                 })
             }
 
-            function g() {
-                return (0, n.jsx)(P, {
-                    className: I().settings
-                })
-            }
-
             function E() {
-                return (0, n.jsx)(P, {
-                    className: I().modal
+                return (0, n.jsx)(g, {
+                    className: y().settings
                 })
             }
 
             function v(e) {
+                var t = e.onClose;
+                return (0, n.jsxs)(n.Fragment, {
+                    children: [(0, n.jsx)(u.ModalHeader, {
+                        className: y().blockedPaymentsModalHeader,
+                        justify: l.Z.Justify.END,
+                        children: (0, n.jsx)(u.ModalCloseButton, {
+                            onClick: t
+                        })
+                    }), (0, n.jsx)(u.ModalContent, {
+                        className: y().blockedPaymentsModalContent,
+                        children: (0, n.jsx)(g, {
+                            className: y().modal
+                        })
+                    })]
+                })
+            }
+
+            function C(e) {
                 var t = e.className;
-                return (0, p.Q)() ? (0, n.jsxs)(u.Card, {
-                    className: i()(I().blockedPaymentsWarning, t),
+                return (0, d.Q)() ? (0, n.jsxs)(u.Card, {
+                    className: i()(y().blockedPaymentsWarning, t),
                     type: u.Card.Types.CUSTOM,
-                    children: [(0, n.jsx)(l.Z, {
-                        className: I().blockedPaymentsWarningIcon,
+                    children: [(0, n.jsx)(f.Z, {
+                        className: y().blockedPaymentsWarningIcon,
                         color: a.Z.unsafe_rawColors.YELLOW_300.css
                     }), (0, n.jsx)(u.Text, {
                         variant: "text-sm/normal",
-                        children: O.Z.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
-                            helpdeskArticle: f.Z.getArticleURL(d.BhN.BLOCKED_PAYMENTS)
+                        children: b.Z.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
+                            helpdeskArticle: p.Z.getArticleURL(O.BhN.BLOCKED_PAYMENTS)
                         })
                     })]
                 }) : null
@@ -457,7 +470,7 @@
                 E = r(149096),
                 v = r(297283);
 
-            function S(e) {
+            function C(e) {
                 var t = e.application,
                     r = e.listing,
                     a = e.handleStepChange,
@@ -506,24 +519,25 @@
                     })]
                 })
             }
-            var C, N = r(441143),
+            var S, N = r(441143),
                 A = r.n(N);
             ! function(e) {
                 e[e.INTANGIBLE = 1] = "INTANGIBLE";
                 e[e.APPLICATION_PREMIUM_COMMAND = 2] = "APPLICATION_PREMIUM_COMMAND"
-            }(C || (C = {}));
+            }(S || (S = {}));
             new Set([1, 2]);
             var T = r(316878),
                 R = r(255875),
                 M = r(328535);
 
-            function L(e) {
+            function j(e) {
                 var t = e.showBenefits,
                     r = e.application,
                     a = e.listing,
                     c = e.handleClose,
                     u = e.onSubscriptionConfirmation,
-                    s = (0, P.usePaymentContext)(),
+                    s = (0,
+                        P.usePaymentContext)(),
                     d = s.selectedPlan,
                     O = s.selectedSkuId,
                     I = s.step,
@@ -532,8 +546,8 @@
                 A()(null != d, "Expected plan to selected");
                 A()(null != O, "Expected selectedSkuId");
                 A()(null != I, "Step should be set");
-                var S, N, L = (0, l.Z)(v.i),
-                    j = o.useContext(R.E).createMultipleConfettiAt,
+                var C, N, j = (0, l.Z)(v.i),
+                    L = o.useContext(R.E).createMultipleConfettiAt,
                     w = function() {
                         c();
                         null == u || u()
@@ -549,7 +563,7 @@
                         try {
                             for (var i, c = a.sku_benefits.benefits[Symbol.iterator](); !(r = (i = c.next()).done); r = !0) {
                                 var u = i.value;
-                                u.ref_type === C.APPLICATION_PREMIUM_COMMAND ? e += 1 : u.ref_type === C.INTANGIBLE && (t += 1)
+                                u.ref_type === S.APPLICATION_PREMIUM_COMMAND ? e += 1 : u.ref_type === S.INTANGIBLE && (t += 1)
                             }
                         } catch (e) {
                             n = !0;
@@ -571,7 +585,8 @@
                         return s
                     }), [a]);
                 if (t)
-                    if (L) S = (0, n.jsx)(h, {
+                    if (j) C = (0,
+                        n.jsx)(h, {
                         title: b.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE_V2.format({
                             tierName: a.name
                         }),
@@ -582,7 +597,7 @@
                         confirmCta: b.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
                     });
                     else {
-                        S = (0, n.jsx)(p.Oc, {
+                        C = (0, n.jsx)(p.Oc, {
                             listing: a,
                             application: r,
                             title: b.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE_V2.format({
@@ -601,7 +616,7 @@
                             primaryText: b.Z.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
                         })
                     }
-                else S = L ? (0, n.jsx)(_, {
+                else C = j ? (0, n.jsx)(_, {
                     listing: a,
                     onConfirm: w,
                     subscription: y
@@ -611,18 +626,17 @@
                     subscription: y
                 });
                 o.useEffect((function() {
-                    T.Z.useReducedMotion && x && j(window.innerWidth / 2, window.innerHeight / 2)
-                }), [j, x]);
+                    T.Z.useReducedMotion && x && L(window.innerWidth / 2, window.innerHeight / 2)
+                }), [L, x]);
                 return (0, n.jsxs)(n.Fragment, {
-                    children: [(0,
-                        n.jsxs)(E.C3, {
-                        children: [(0, n.jsx)(M.Z, {}), S]
+                    children: [(0, n.jsxs)(E.C3, {
+                        children: [(0, n.jsx)(M.Z, {}), C]
                     }), null != N && (0, n.jsx)(E.O3, {
                         children: N
                     })]
                 })
             }
-            var j = r(123435),
+            var L = r(123435),
                 w = r(551778),
                 x = r(652591),
                 Z = r(116094),
@@ -706,36 +720,36 @@
                     r = e.initialPlanId,
                     i = e.guildId,
                     a = e.setAnalyticsData,
-                    c = (0,
-                        P.usePaymentContext)(),
-                    u = c.blockedPayments,
-                    s = c.setStep,
-                    l = c.hasFetchedSubscriptions,
-                    f = c.hasFetchedSubscriptionPlans,
-                    p = c.currencyLoading,
-                    d = c.selectedSkuId,
-                    O = c.setSelectedSkuId,
-                    b = c.setSelectedPlanId,
-                    I = c.priceOptions,
-                    y = c.isGift,
-                    h = c.setSubscriptionMetadataRequest,
-                    _ = G(o.useState(!l || !f || p), 2),
-                    m = _[0],
-                    g = _[1];
+                    c = e.handleClose,
+                    u = (0, P.usePaymentContext)(),
+                    s = u.blockedPayments,
+                    l = u.setStep,
+                    f = u.hasFetchedSubscriptions,
+                    p = u.hasFetchedSubscriptionPlans,
+                    d = u.currencyLoading,
+                    O = u.selectedSkuId,
+                    b = u.setSelectedSkuId,
+                    I = u.setSelectedPlanId,
+                    y = u.priceOptions,
+                    h = u.isGift,
+                    _ = u.setSubscriptionMetadataRequest,
+                    m = G(o.useState(!f || !p || d), 2),
+                    g = m[0],
+                    E = m[1];
                 o.useEffect((function() {
-                    g(!l || !f || p)
-                }), [p, f, l]);
+                    E(!f || !p || d)
+                }), [d, p, f]);
                 o.useEffect((function() {
-                    null != i && h({
+                    null != i && _({
                         guild_id: i
                     })
-                }), [i, h]);
+                }), [i, _]);
                 o.useEffect((function() {
-                    b(r);
+                    I(r);
                     var e = null != r ? w.Z.get(r) : null;
-                    if (!m && !u) {
+                    if (!g && !s) {
                         a((function(t) {
-                            var r = null != e ? (0, Z.aS)(e.id, !1, y, I) : void 0,
+                            var r = null != e ? (0, Z.aS)(e.id, !1, h, y) : void 0,
                                 n = H(function(e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var r = null != arguments[t] ? arguments[t] : {},
@@ -752,18 +766,20 @@
                                     subscription_plan_id: null == e ? void 0 : e.id,
                                     price: null == r ? void 0 : r.amount,
                                     regular_price: null == e ? void 0 : e.price,
-                                    currency: I.currency
+                                    currency: y.currency
                                 });
                             x.default.track(U.rMx.PAYMENT_FLOW_STARTED, n);
                             return n
                         }));
                         if (null != e) {
-                            O(null == e ? void 0 : e.skuId);
-                            s(t)
+                            b(null == e ? void 0 : e.skuId);
+                            l(t)
                         }
                     }
-                }), [u, r, y, m, I, d, a, b, O, s, t]);
-                return m ? (0, n.jsx)(B.Z, {}) : u ? (0, n.jsx)(j.Vq, {}) : null
+                }), [s, r, h, g, y, O, a, I, b, l, t]);
+                return g ? (0, n.jsx)(B.Z, {}) : s ? (0, n.jsx)(L.Vq, {
+                    onClose: c
+                }) : null
             }
             var Y = r(898302),
                 W = r(16097),
@@ -886,13 +902,13 @@
                         P.usePaymentContext)(),
                     g = m.activeSubscription,
                     v = m.setUpdatedSubscription,
-                    S = m.contextMetadata,
-                    C = m.currencies,
+                    C = m.contextMetadata,
+                    S = m.currencies,
                     N = m.isGift,
                     T = m.paymentSources,
                     R = m.priceOptions,
-                    L = m.purchaseError,
-                    j = m.purchaseTokenAuthState,
+                    j = m.purchaseError,
+                    L = m.purchaseTokenAuthState,
                     w = m.selectedPlan,
                     x = m.setCurrency,
                     Z = m.setPaymentSourceId,
@@ -915,10 +931,10 @@
                     ue = ae[1],
                     se = (0, f.KW)(_.sku_flags);
                 o.useEffect((function() {
-                    null != L && null != J.current && J.current.scrollIntoView({
+                    null != j && null != J.current && J.current.scrollIntoView({
                         behavior: "smooth"
                     })
-                }), [L]);
+                }), [j]);
                 var le = o.useCallback((function(e) {
                         v(e);
                         u(i.h8.CONFIRM)
@@ -981,7 +997,7 @@
                                 return Z(null != e ? e.id : null)
                             },
                             priceOptions: R,
-                            currencies: C,
+                            currencies: S,
                             onCurrencyChange: function(e) {
                                 return x(e)
                             },
@@ -1014,11 +1030,11 @@
                             },
                             analyticsLocation: y,
                             baseAnalyticsData: I,
-                            flowStartTime: S.startTime,
+                            flowStartTime: C.startTime,
                             isGift: N,
                             giftStyle: z,
                             planGroup: p,
-                            purchaseTokenAuthState: j,
+                            purchaseTokenAuthState: L,
                             openInvoiceId: O,
                             metadata: se ? void 0 : G,
                             backButtonEligible: r,
@@ -1088,7 +1104,7 @@
                 }, {
                     key: i.h8.BENEFITS,
                     renderStep: function(e) {
-                        return (0, n.jsx)(S, ae({
+                        return (0, n.jsx)(C, ae({
                             application: o,
                             listing: s
                         }, e))
@@ -1141,7 +1157,7 @@
                 }, {
                     key: i.h8.CONFIRM,
                     renderStep: function(e) {
-                        return (0, n.jsx)(L, ae({
+                        return (0, n.jsx)(j, ae({
                             application: o,
                             listing: s,
                             showBenefits: !l
@@ -1318,25 +1334,25 @@
                             currencyDisplay: "symbol",
                             localeOverride: E
                         }),
-                        S = s.Z.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY.format({
+                        C = s.Z.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY.format({
                             helpCenterLink: i.Z.getArticleURL(c.BhN.LOCALIZED_PRICING),
                             currencyISOCode: _.toUpperCase(),
                             localizedPriceWithCurrencySymbol: v
                         });
-                    b.has(_) && (S = s.Z.Messages.LOCALIZED_PRICING_BANNER_BODY_EXISTING_CURRENCY.format({
+                    b.has(_) && (C = s.Z.Messages.LOCALIZED_PRICING_BANNER_BODY_EXISTING_CURRENCY.format({
                         helpCenterLink: i.Z.getArticleURL(c.BhN.LOCALIZED_PRICING),
                         localizedPriceWithCurrencySymbol: v
                     }));
-                    O.has(_) && (S = s.Z.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY_WITH_AMBIGUOUS_SYMBOL.format({
+                    O.has(_) && (C = s.Z.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY_WITH_AMBIGUOUS_SYMBOL.format({
                         helpCenterLink: i.Z.getArticleURL(c.BhN.LOCALIZED_PRICING),
                         currencyISOCode: _.toUpperCase(),
                         localizedPriceWithCurrencySymbol: v
                     }));
-                    null == r || r.hasPremiumNitroMonthly || (S = s.Z.Messages.LOCALIZED_PRICING_BANNER_BODY_WITHOUT_PRICE.format({
+                    null == r || r.hasPremiumNitroMonthly || (C = s.Z.Messages.LOCALIZED_PRICING_BANNER_BODY_WITHOUT_PRICE.format({
                         helpCenterLink: i.Z.getArticleURL(c.BhN.LOCALIZED_PRICING),
                         currencyISOCode: _.toUpperCase()
                     }));
-                    _ === u.pK.EUR && (S = l ? s.Z.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE_SINGLE_STRING.format({
+                    _ === u.pK.EUR && (C = l ? s.Z.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE_SINGLE_STRING.format({
                         country: (0, o.q9)(d),
                         currencyISOCode: _.toUpperCase(),
                         helpCenterLink: i.Z.getArticleURL(c.BhN.LOCALIZED_PRICING)
@@ -1345,13 +1361,13 @@
                         helpCenterLink: i.Z.getArticleURL(c.BhN.LOCALIZED_PRICING)
                     }));
                     if (g) {
-                        var C = y.filter((function(e) {
+                        var S = y.filter((function(e) {
                                 return P.includes(e)
                             })),
                             N = P.filter((function(e) {
                                 return !y.includes(e)
                             })),
-                            A = p(C).concat(p(N)).slice(0, 2).map((function(e) {
+                            A = p(S).concat(p(N)).slice(0, 2).map((function(e) {
                                 var t, r;
                                 return null !== (r = null === (t = I[e]) || void 0 === t ? void 0 : t.call(I)) && void 0 !== r ? r : s.Z.Messages.PAYMENT_SOURCE_UNKNOWN
                             }));
@@ -1360,7 +1376,7 @@
                             style: "short",
                             type: "conjunction"
                         });
-                        S = s.Z.Messages.LOCALIZED_PRICING_PAYMENT_METHODS_PROMO.format({
+                        C = s.Z.Messages.LOCALIZED_PRICING_PAYMENT_METHODS_PROMO.format({
                             helpCenterLink: i.Z.getArticleURL(c.BhN.LOCALIZED_PRICING),
                             paymentMethods: T.format(A)
                         })
@@ -1369,7 +1385,7 @@
                         localizedPricingBannerHeader: s.Z.Messages.LOCALIZED_PRICING_BANNER_HEADER.format({
                             country: (0, o.q9)(d)
                         }),
-                        localizedPricingBannerBody: S,
+                        localizedPricingBannerBody: C,
                         localizedPricingBannerLinkOnly: s.Z.Messages.LOCALIZED_PRICING_BANNER_LINK_ONLY.format({
                             helpCenterLink: i.Z.getArticleURL(c.BhN.LOCALIZED_PRICING)
                         }),
@@ -1386,8 +1402,8 @@
         100749: (e, t, r) => {
             "use strict";
             r.d(t, {
-                ED: () => S,
-                Ox: () => C,
+                ED: () => C,
+                Ox: () => S,
                 hz: () => P,
                 pV: () => N
             });
@@ -1784,7 +1800,7 @@
                 return [c, f]
             }
 
-            function S(e) {
+            function C(e) {
                 if ("subscriptionId" in e && null == e.subscriptionId) {
                     e.subscriptionId;
                     var t = y(e, ["subscriptionId"]);
@@ -1798,7 +1814,7 @@
                 return v(e, r)
             }
 
-            function C(e) {
+            function S(e) {
                 var t = (0, n.useCallback)((function() {
                     return function(e) {
                         return E.apply(this, arguments)
@@ -2218,7 +2234,7 @@
         737797: (e, t, r) => {
             "use strict";
             r.d(t, {
-                Z: () => S,
+                Z: () => C,
                 v: () => v
             });
             var n = r(785893),
@@ -2481,7 +2497,7 @@
                         })
                     }
                 },
-                S = function(e) {
+                C = function(e) {
                     ! function(e, t) {
                         if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function");
                         e.prototype = Object.create(t && t.prototype, {
@@ -2553,8 +2569,8 @@
                             P = e.clearable,
                             g = e.searchable,
                             E = e.styleOverrides,
-                            S = e.isMulti,
-                            C = e.placeholder,
+                            C = e.isMulti,
+                            S = e.placeholder,
                             N = e.filterOption,
                             A = e.closeMenuOnSelect,
                             T = void 0 === A || A,
@@ -2581,16 +2597,16 @@
                         null != f && (M.MultiValue = function(e) {
                             return f(e.data)
                         });
-                        var L, j = null != E ? E : v;
-                        if (S && Array.isArray(b)) {
+                        var j, L = null != E ? E : v;
+                        if (C && Array.isArray(b)) {
                             var w = {};
                             d.forEach((function(e) {
                                 w[String(e.value)] = e
                             }));
-                            L = b.map((function(e) {
+                            j = b.map((function(e) {
                                 return w[String(e)]
                             }))
-                        } else L = null != b ? d.find((function(e) {
+                        } else j = null != b ? d.find((function(e) {
                             return e.value === b
                         })) : null;
                         return (0, n.jsx)(u.FocusRing, {
@@ -2602,18 +2618,18 @@
                                 children: [(0, n.jsx)(c.ZP, y(I({}, R), {
                                     className: r,
                                     ref: this._selectRef,
-                                    isMulti: S,
+                                    isMulti: C,
                                     components: M,
                                     options: d,
-                                    styles: j,
+                                    styles: L,
                                     onFocus: this.handleFocus,
                                     onBlur: this.handleBlur,
                                     onMenuOpen: this.handleMenuOpen,
                                     onMenuClose: this.handleMenuClose,
                                     closeMenuOnSelect: T,
-                                    value: L,
+                                    value: j,
                                     onKeyDown: this.handleKeyDown,
-                                    placeholder: null != C ? C : l.Z.Messages.SELECT,
+                                    placeholder: null != S ? S : l.Z.Messages.SELECT,
                                     noOptionsMessage: function() {
                                         return l.Z.Messages.NO_RESULTS_FOUND
                                     },
@@ -2627,7 +2643,7 @@
                     };
                     return r
                 }(o.Component);
-            S.MenuPlacements = P
+            C.MenuPlacements = P
         },
         986979: (e, t, r) => {
             "use strict";

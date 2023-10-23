@@ -147,9 +147,9 @@
         123435: (e, n, t) => {
             "use strict";
             t.d(n, {
-                Vq: () => E,
-                c8: () => P,
-                oQ: () => g
+                Vq: () => g,
+                c8: () => E,
+                oQ: () => _
             });
             var r = t(785893),
                 o = (t(667294), t(294184)),
@@ -158,72 +158,84 @@
                 l = t(575945),
                 u = t(70418),
                 c = t(74535),
-                s = t(818417),
-                f = t(348592),
-                p = t(387099),
-                d = t(2590),
-                y = t(473708),
-                b = t(858903),
-                m = t.n(b),
-                h = t(495068),
-                O = t.n(h),
-                v = t(377236),
-                S = t.n(v);
+                s = t(107364),
+                f = t(818417),
+                p = t(348592),
+                d = t(387099),
+                y = t(2590),
+                b = t(473708),
+                m = t(858903),
+                h = t.n(m),
+                O = t(495068),
+                v = t.n(O),
+                S = t(377236),
+                I = t.n(S);
 
-            function I(e) {
+            function P(e) {
                 var n = e.className,
                     t = (0, c.ZP)(),
-                    o = (0, l.wj)(t) ? O() : S();
-                return (0,
-                    r.jsxs)("div", {
-                    className: i()(m().container, n),
+                    o = (0, l.wj)(t) ? v() : I();
+                return (0, r.jsxs)("div", {
+                    className: i()(h().container, n),
                     children: [(0, r.jsx)(u.Heading, {
-                        className: m().header,
+                        className: h().header,
                         variant: "heading-xl/semibold",
-                        children: y.Z.Messages.REGION_BLOCKED_PAYMENTS_HEADER
+                        children: b.Z.Messages.REGION_BLOCKED_PAYMENTS_HEADER
                     }), (0, r.jsxs)(u.Text, {
-                        className: m().description,
+                        className: h().description,
                         variant: "text-md/normal",
                         color: "header-secondary",
                         children: [(0, r.jsx)("p", {
-                            children: y.Z.Messages.REGION_BLOCKED_PAYMENTS_BODY
+                            children: b.Z.Messages.REGION_BLOCKED_PAYMENTS_BODY
                         }), (0, r.jsx)("p", {
-                            children: y.Z.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
-                                helpdeskArticle: f.Z.getArticleURL(d.BhN.BLOCKED_PAYMENTS)
+                            children: b.Z.Messages.REGION_BLOCKED_PAYMENTS_CTA.format({
+                                helpdeskArticle: p.Z.getArticleURL(y.BhN.BLOCKED_PAYMENTS)
                             })
                         })]
                     }), (0, r.jsx)("img", {
                         src: o,
-                        className: m().splashImage,
+                        className: h().splashImage,
                         alt: "Blocked Payments"
                     })]
                 })
             }
 
-            function P() {
-                return (0, r.jsx)(I, {
-                    className: m().settings
-                })
-            }
-
             function E() {
-                return (0, r.jsx)(I, {
-                    className: m().modal
+                return (0, r.jsx)(P, {
+                    className: h().settings
                 })
             }
 
             function g(e) {
+                var n = e.onClose;
+                return (0, r.jsxs)(r.Fragment, {
+                    children: [(0, r.jsx)(u.ModalHeader, {
+                        className: h().blockedPaymentsModalHeader,
+                        justify: s.Z.Justify.END,
+                        children: (0, r.jsx)(u.ModalCloseButton, {
+                            onClick: n
+                        })
+                    }), (0, r.jsx)(u.ModalContent, {
+                        className: h().blockedPaymentsModalContent,
+                        children: (0, r.jsx)(P, {
+                            className: h().modal
+                        })
+                    })]
+                })
+            }
+
+            function _(e) {
                 var n = e.className;
-                return (0, p.Q)() ? (0, r.jsxs)(u.Card, {
-                    className: i()(m().blockedPaymentsWarning, n),
+                return (0, d.Q)() ? (0, r.jsxs)(u.Card, {
+                    className: i()(h().blockedPaymentsWarning, n),
                     type: u.Card.Types.CUSTOM,
-                    children: [(0, r.jsx)(s.Z, {
-                        className: m().blockedPaymentsWarningIcon,
+                    children: [(0, r.jsx)(f.Z, {
+                        className: h().blockedPaymentsWarningIcon,
                         color: a.Z.unsafe_rawColors.YELLOW_300.css
                     }), (0, r.jsx)(u.Text, {
                         variant: "text-sm/normal",
-                        children: y.Z.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
-                            helpdeskArticle: f.Z.getArticleURL(d.BhN.BLOCKED_PAYMENTS)
+                        children: b.Z.Messages.REGION_BLOCKED_PAYMENTS_ONE_LINER.format({
+                            helpdeskArticle: p.Z.getArticleURL(y.BhN.BLOCKED_PAYMENTS)
                         })
                     })]
                 }) : null
@@ -382,8 +394,8 @@
                 X = t(688858),
                 q = t(384411),
                 z = t(781453),
-                $ = t(217674),
-                J = t(694554),
+                J = t(217674),
+                $ = t(694554),
                 ee = t(84670),
                 ne = t(575641),
                 te = t(2590),
@@ -442,13 +454,13 @@
                 return (0, r.jsxs)("div", {
                     className: ae().perksList,
                     children: [(0, r.jsx)(X.Z, {
-                        icon: $.Z,
+                        icon: J.Z,
                         iconClassName: ae().perkIconGuild,
                         description: oe.Z.Messages.PREMIUM_UPSELL_FEATURE_FREE_GUILD_SUBSCRIPTION.format({
                             numFreeGuildSubscriptions: re.cb
                         })
                     }), (0, r.jsx)(X.Z, {
-                        icon: $.Z,
+                        icon: J.Z,
                         iconClassName: ae().perkIconGuild,
                         description: oe.Z.Messages.PREMIUM_UPSELL_FEATURE_GUILD_SUBSCRIPTION_DISCOUNT.format({
                             percent: (0, ne.T3)(t, re.Rr / 100)
@@ -458,7 +470,7 @@
                         iconClassName: ae().perkIconChatPerks,
                         description: oe.Z.Messages.PREMIUM_UPSELL_FEATURE_CHAT_PERKS
                     }) : null, (0, r.jsx)(X.Z, {
-                        icon: J.Z,
+                        icon: $.Z,
                         iconClassName: ae().perkIconStream,
                         description: oe.Z.Messages.PREMIUM_UPSELL_FEATURE_STREAM
                     }), (0, r.jsx)(X.Z, {
@@ -802,8 +814,8 @@
                     X = e.totalNumberOfSlotsToAssign,
                     q = void 0 === X ? 1 : X,
                     z = e.disablePremiumUpsell,
-                    $ = void 0 !== z && z,
-                    J = e.onSubscriptionConfirmation,
+                    J = void 0 !== z && z,
+                    $ = e.onSubscriptionConfirmation,
                     ee = e.applicationId,
                     ne = (0, I.usePaymentContext)(),
                     ie = ne.activeSubscription,
@@ -862,8 +874,8 @@
                     })), 2),
                     qe = Xe[0],
                     ze = Xe[1],
-                    $e = (0, O.Z)(Y, h.Z.GUILD_BOOST_PURCHASE_MODAL).analyticsLocations,
-                    Je = o.useMemo((function() {
+                    Je = (0, O.Z)(Y, h.Z.GUILD_BOOST_PURCHASE_MODAL).analyticsLocations,
+                    $e = o.useMemo((function() {
                         var e;
                         return {
                             load_id: qe,
@@ -877,9 +889,9 @@
                             quantity: Ge,
                             location: W,
                             source: V,
-                            location_stack: $e
+                            location_stack: Je
                         }
-                    }), [qe, W, $e, V, Qe, Ge]);
+                    }), [qe, W, Je, V, Qe, Ge]);
                 o.useEffect((function() {
                     (0, B.i1)(je)
                 }), [je]);
@@ -909,7 +921,7 @@
                                     e = n.sent();
                                     cn(E.A.FAIL);
                                     Me(e);
-                                    D.default.track(te.rMx.PAYMENT_FLOW_FAILED, Se(ve({}, Je), {
+                                    D.default.track(te.rMx.PAYMENT_FLOW_FAILED, Se(ve({}, $e), {
                                         payment_gateway: te.gg$.STRIPE,
                                         payment_source_id: je,
                                         duration_ms: Date.now() - ze
@@ -930,7 +942,7 @@
                 }), [Ve]);
                 o.useEffect((function() {
                     x.Z.hasFetchedSubscriptions() || (0, d.jg)();
-                    D.default.track(te.rMx.PAYMENT_FLOW_STARTED, Se(ve({}, Je), {
+                    D.default.track(te.rMx.PAYMENT_FLOW_STARTED, Se(ve({}, $e), {
                         guild_id: K,
                         application_id: ee
                     }));
@@ -958,7 +970,7 @@
                         an(e);
                         Me(null);
                         var t = Date.now();
-                        D.default.track(te.rMx.PAYMENT_FLOW_STEP, Se(ve({}, Je), {
+                        D.default.track(te.rMx.PAYMENT_FLOW_STEP, Se(ve({}, $e), {
                             from_step: null != n ? n : on,
                             to_step: e === P.h8.ADD_PAYMENT_STEPS ? P.h8.PAYMENT_TYPE : e,
                             step_duration_ms: t - dn,
@@ -966,7 +978,7 @@
                             guild_id: K,
                             application_id: ee
                         }))
-                    }), [Me, Je, on, dn, ze, K, ee]),
+                    }), [Me, $e, on, dn, ze, K, ee]),
                     bn = function() {
                         i(un === E.A.COMPLETED)
                     },
@@ -1021,7 +1033,7 @@
                         var n = e.currentStep,
                             t = e.toStep,
                             r = Date.now();
-                        D.default.track(te.rMx.PAYMENT_FLOW_STEP, Se(ve({}, Je), {
+                        D.default.track(te.rMx.PAYMENT_FLOW_STEP, Se(ve({}, $e), {
                             from_step: n,
                             to_step: t,
                             step_duration_ms: r - dn,
@@ -1030,7 +1042,9 @@
                         }))
                     }
                 });
-                if (ae) Mn = (0, r.jsx)(S.Vq, {});
+                if (ae) Mn = (0, r.jsx)(S.Vq, {
+                    onClose: bn
+                });
                 else if (le && se && Ke && null != Pn && "" !== Pn)
                     if (null != ie && null != ie.renewalMutations) Mn = (0, r.jsx)(p.ModalContent, {
                         children: (0, r.jsx)("p", {
@@ -1058,7 +1072,7 @@
                         onSkip: function() {
                             return yn(null != ue || ke ? P.h8.REVIEW : P.h8.ADD_PAYMENT_STEPS)
                         },
-                        onSubscriptionConfirmation: J,
+                        onSubscriptionConfirmation: $,
                         priceOptions: Tn
                     })
                 } else {
@@ -1110,7 +1124,7 @@
                                 type: "submit",
                                 disabled: fn || 0 === Ge || mn,
                                 onClick: function() {
-                                    $ || null != ce && ce.premiumSubscriptionType === re.p9.TIER_2 ? yn(null != ue || ke ? P.h8.REVIEW : P.h8.ADD_PAYMENT_STEPS) : yn(P.h8.PREMIUM_UPSELL)
+                                    J || null != ce && ce.premiumSubscriptionType === re.p9.TIER_2 ? yn(null != ue || ke ? P.h8.REVIEW : P.h8.ADD_PAYMENT_STEPS) : yn(P.h8.PREMIUM_UPSELL)
                                 },
                                 children: oe.Z.Messages.CONTINUE
                             });
@@ -1161,7 +1175,7 @@
                                                 cn(E.A.PURCHASING);
                                                 Te(!0);
                                                 a()(null != je, "Missing paymentSourceId");
-                                                D.default.track(te.rMx.PAYMENT_FLOW_COMPLETED, Se(ve({}, Je), {
+                                                D.default.track(te.rMx.PAYMENT_FLOW_COMPLETED, Se(ve({}, $e), {
                                                     duration_ms: Date.now() - ze,
                                                     guild_id: K,
                                                     application_id: ee
@@ -1191,7 +1205,7 @@
                                                     t.paymentSource = e;
                                                     t.currency = Dn.currency
                                                 }
-                                                return [4, (0, d.Mg)(ie, t, $e)];
+                                                return [4, (0, d.Mg)(ie, t, Je)];
                                             case 4:
                                                 if ((r = i.sent()).redirectConfirmation) {
                                                     Rn(null != r.redirectURL);
@@ -1212,7 +1226,7 @@
                                                 o = i.sent();
                                                 cn(E.A.FAIL);
                                                 Me(o);
-                                                D.default.track(te.rMx.PAYMENT_FLOW_FAILED, Se(ve({}, Je), {
+                                                D.default.track(te.rMx.PAYMENT_FLOW_FAILED, Se(ve({}, $e), {
                                                     payment_gateway: null != e ? e.type === te.HeQ.CARD ? te.gg$.STRIPE : te.gg$.BRAINTREE : null,
                                                     payment_source_id: je,
                                                     duration_ms: Date.now() - ze
@@ -1401,8 +1415,8 @@
             });
             var q = t(2590),
                 z = t(203600),
-                $ = t(520453),
-                J = t(473708),
+                J = t(520453),
+                $ = t(473708),
                 ee = t(338250),
                 ne = t.n(ee);
 
@@ -1499,11 +1513,11 @@
                     o = e.intervalCount,
                     i = void 0 === o ? 1 : o,
                     a = (0, Q.T4)(n, t);
-                return r === z.rV.YEAR ? J.Z.Messages.BILLING_PRICE_PER_YEAR_EACH.format({
+                return r === z.rV.YEAR ? $.Z.Messages.BILLING_PRICE_PER_YEAR_EACH.format({
                     price: a
-                }) : r === z.rV.MONTH && 1 === i ? J.Z.Messages.BILLING_PRICE_PER_MONTH_EACH.format({
+                }) : r === z.rV.MONTH && 1 === i ? $.Z.Messages.BILLING_PRICE_PER_MONTH_EACH.format({
                     price: a
-                }) : r === z.rV.MONTH && i > 1 ? J.Z.Messages.BILLING_PRICE_PER_MULTI_MONTH_EACH.format({
+                }) : r === z.rV.MONTH && i > 1 ? $.Z.Messages.BILLING_PRICE_PER_MULTI_MONTH_EACH.format({
                     price: a
                 }) : null
             }
@@ -1512,7 +1526,7 @@
                 var n = e.intervalType,
                     t = e.intervalCount,
                     r = void 0 === t ? 1 : t;
-                return n === z.rV.YEAR ? J.Z.Messages.PREMIUM_GUILD_PLAN_SINGLE_YEAR : n === z.rV.MONTH && 1 === r ? J.Z.Messages.PREMIUM_GUILD_PLAN_SINGLE_MONTH : null
+                return n === z.rV.YEAR ? $.Z.Messages.PREMIUM_GUILD_PLAN_SINGLE_YEAR : n === z.rV.MONTH && 1 === r ? $.Z.Messages.PREMIUM_GUILD_PLAN_SINGLE_MONTH : null
             }
 
             function ce(e) {
@@ -1581,9 +1595,9 @@
                         currency: C.currency
                     } : K.ZP.getPrice(M.id, ye, !1, C),
                     he = l * me.amount,
-                    Oe = K.ZP.hasBoostDiscount(j) && null != b ? J.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_FOOTER_DISCOUNT.format({
+                    Oe = K.ZP.hasBoostDiscount(j) && null != b ? $.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_FOOTER_DISCOUNT.format({
                         planName: K.ZP.getDisplayPremiumType(b.planId)
-                    }) : (de ? J.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_FOOTER_UPSELL_TRIAL_VARIANT : J.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_FOOTER_UPSELL).format({
+                    }) : (de ? $.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_FOOTER_UPSELL_TRIAL_VARIANT : $.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_FOOTER_UPSELL).format({
                         onPremiumSubscriptionClick: m,
                         discountPercentage: (0, Q.T3)(L.default.locale, z.Rr / 100),
                         freeSubscriptionCount: z.cb
@@ -1592,23 +1606,23 @@
                         return (0, W.tl)(e)
                     })).length,
                     Se = (0, K.Ap)(C.paymentSourceId),
-                    Ie = "HR" === (0, I.Z)().ipCountryCode && me.currency === $.pK.EUR;
+                    Ie = "HR" === (0, I.Z)().ipCountryCode && me.currency === J.pK.EUR;
                 d(pe);
                 return (0, r.jsxs)("div", {
                     className: ne().planSelectStep,
                     children: [(0, r.jsx)("div", {
                         className: a()(ne().planSelectText, ne().bodyText),
-                        children: J.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_STEP_SELECT_DESCRIPTION
+                        children: $.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_STEP_SELECT_DESCRIPTION
                     }), g.length > 0 ? (0, r.jsxs)("div", {
                         className: ne().existingSlotNotice,
                         children: [(0, r.jsx)(F.Z, {
                             className: ne().existingSlotIcon,
                             color: f.Z.unsafe_rawColors.GUILD_BOOSTING_PINK.css
                         }), (0, r.jsxs)("div", {
-                            children: [J.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_UNUSED_SLOT_NOTICE.format({
+                            children: [$.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_UNUSED_SLOT_NOTICE.format({
                                 slotCount: g.length
                             }), ve > 0 && null != b ? (0, r.jsx)(p.Tooltip, {
-                                text: J.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_CANCEL_WARNING.format({
+                                text: $.Z.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_CANCEL_WARNING.format({
                                     canceledCount: ve,
                                     date: b.currentPeriodEnd
                                 }),
@@ -1637,7 +1651,7 @@
                                 children: Se ? ue({
                                     intervalType: A,
                                     intervalCount: R
-                                }) : J.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_COUNTER
+                                }) : $.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_COUNTER
                             })]
                         }), (0, r.jsx)("div", {
                             className: a()(ne().planSelectorPreviewPrice, re({}, ne().loadingSpinner, pe)),
@@ -1654,7 +1668,7 @@
                         className: ne().planSelectRow,
                         children: [(0, r.jsx)("div", {
                             className: ne().planSelectorSubtotal,
-                            children: J.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_SUBTOTAL
+                            children: $.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_SUBTOTAL
                         }), (0, r.jsx)("div", {
                             className: a()(ne().planSelectorSubtotalPrice, re({}, ne().loadingSpinner, pe)),
                             children: pe ? (0, r.jsx)(p.Spinner, {}) : (0, r.jsx)(_.Z, {
@@ -1666,11 +1680,11 @@
                             })
                         })]
                     }), Ie && (0, r.jsx)(y.Z, {
-                        message: J.Z.Messages.LOCALIZED_PRICING_HRK_EURO_WARNING.format({
-                            kunaPriceWithCurrency: (0, Q.T4)(7.5345 * he, $.pK.HRK)
+                        message: $.Z.Messages.LOCALIZED_PRICING_HRK_EURO_WARNING.format({
+                            kunaPriceWithCurrency: (0, Q.T4)(7.5345 * he, J.pK.HRK)
                         })
                     }), (0, r.jsx)(y.Z, {
-                        message: J.Z.Messages.BILLING_FINAL_PRICE_MAY_CHANGE.format({
+                        message: $.Z.Messages.BILLING_FINAL_PRICE_MAY_CHANGE.format({
                             documentationLink: V.Z.getArticleURL(q.BhN.LOCALIZED_PRICING)
                         })
                     }), (0, r.jsx)(T, {
@@ -1714,7 +1728,7 @@
                     O = (0, v.pV)(d) * b,
                     I = (0, Q.T4)(O, o.currency),
                     P = (0, Q.og)(I, l, c),
-                    E = (0, Q.T4)(o.total, o.currency) + (o.currency !== $.pK.USD ? "*" : ""),
+                    E = (0, Q.T4)(o.total, o.currency) + (o.currency !== J.pK.USD ? "*" : ""),
                     _ = o.total - O - h,
                     C = d.discounts.map((function(e) {
                         var n = e.amount / d.quantity;
@@ -1729,9 +1743,9 @@
                         renewalInvoice: i
                     }), (0, r.jsxs)(g.PO, {
                         children: [(0, r.jsx)(g.q9, {
-                            children: J.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_PURCHASE_DETAILS_HEADER
+                            children: $.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_PURCHASE_DETAILS_HEADER
                         }), (0, r.jsx)(g.i$, {
-                            label: J.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_INVOICE_ROW_CONTENT.format({
+                            label: $.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_INVOICE_ROW_CONTENT.format({
                                 numGuildSubscriptions: b,
                                 planName: (0, K.Gf)(f.id, !1, N)
                             }),
@@ -1743,20 +1757,20 @@
                             intervalCount: f.intervalCount
                         }), 0 !== h ? (0, r.jsx)(g.R$, {
                             label: (0, r.jsx)(A.As, {
-                                label: J.Z.Messages.PREMIUM_SUBSCRIPTION_PLAN_ADJUSTMENT.format({
+                                label: $.Z.Messages.PREMIUM_SUBSCRIPTION_PLAN_ADJUSTMENT.format({
                                     planName: (0, K.aq)(m[0].subscriptionPlanId)
                                 }),
-                                tooltipText: J.Z.Messages.PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP
+                                tooltipText: $.Z.Messages.PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP
                             }),
                             value: (0, Q.T4)(h, o.currency)
                         }) : null, 0 !== _ ? (0, r.jsx)(g.R$, {
                             label: (0, r.jsx)(A.As, {
-                                label: J.Z.Messages.PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT,
-                                tooltipText: J.Z.Messages.PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP
+                                label: $.Z.Messages.PREMIUM_SUBSCRIPTION_GUILD_SUBSCRIPTION_ADJUSTMENT,
+                                tooltipText: $.Z.Messages.PREMIUM_SUBSCRIPTION_ADJUSTMENT_TOOLTIP
                             }),
                             value: (0, Q.T4)(_, o.currency)
                         }) : null, (0, r.jsx)(g.KU, {}), (0, r.jsx)(g.Ji, {
-                            label: (o.taxInclusive ? N ? J.Z.Messages.BILLING_INVOICE_TOTAL_TAX_INCLUSIVE : J.Z.Messages.BILLING_INVOICE_TODAY_TOTAL_TAX_INCLUSIVE : J.Z.Messages.BILLING_INVOICE_TODAY_TOTAL).format(),
+                            label: (o.taxInclusive ? N ? $.Z.Messages.BILLING_INVOICE_TOTAL_TAX_INCLUSIVE : $.Z.Messages.BILLING_INVOICE_TODAY_TOTAL_TAX_INCLUSIVE : $.Z.Messages.BILLING_INVOICE_TODAY_TOTAL).format(),
                             value: E
                         }), null != n ? (0, r.jsx)(A.nd, {
                             premiumSubscription: n,
@@ -1832,9 +1846,9 @@
                         className: ne().paymentSourceWrapper,
                         children: [(0, r.jsx)(p.FormTitle, {
                             tag: p.FormTitleTags.H5,
-                            children: J.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE
+                            children: $.Z.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE
                         }), null != l ? null != _ ? (0, r.jsx)(p.TooltipContainer, {
-                            text: J.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_PAYMENT_SOURCE_TOOLTIP,
+                            text: $.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_PAYMENT_SOURCE_TOOLTIP,
                             children: (0, r.jsx)(b.Z, {
                                 paymentSources: [_],
                                 selectedPaymentSourceId: _.id,
@@ -1861,7 +1875,7 @@
                                 paymentSourceType: null === (n = o[null != g ? g : ""]) || void 0 === n ? void 0 : n.type,
                                 basePrice: A
                             }),
-                            showPricingLink: (null !== (T = null == M ? void 0 : M.currency) && void 0 !== T ? T : $.pK.USD) !== $.pK.USD,
+                            showPricingLink: (null !== (T = null == M ? void 0 : M.currency) && void 0 !== T ? T : J.pK.USD) !== J.pK.USD,
                             showWithdrawalWaiver: L,
                             subscriptionPlan: u
                         })
@@ -1885,11 +1899,11 @@
                     h = ae(o.useState(!1), 2),
                     O = h[0],
                     v = h[1];
-                n = u ? null == i ? J.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_TRANSFERRED_DESCRIPTION_GENERIC_GUILD.format() : J.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_TRANSFERRED_DESCRIPTION.format({
+                n = u ? null == i ? $.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_TRANSFERRED_DESCRIPTION_GENERIC_GUILD.format() : $.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_TRANSFERRED_DESCRIPTION.format({
                     guildName: i.name
-                }) : null == i ? J.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_ACTIVATED_DESCRIPTION_GENERIC_GUILD.format({
+                }) : null == i ? $.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_ACTIVATED_DESCRIPTION_GENERIC_GUILD.format({
                     guildSubscriptionQuantity: a
-                }) : J.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_ACTIVATED_DESCRIPTION.format({
+                }) : $.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_ACTIVATED_DESCRIPTION.format({
                     guildName: i.name,
                     guildSubscriptionQuantity: a
                 });
@@ -1914,13 +1928,13 @@
                         className: ne().confirmationUpgradedBanner,
                         theme: d,
                         premiumType: z.p9.TIER_2,
-                        type: $.X7.has(null != f ? f : $.He.UNKNOWN) ? C.C.Types.PREMIUM_PAYMENT_STARTED : C.C.Types.GUILD_BOOST_APPLIED
+                        type: J.X7.has(null != f ? f : J.He.UNKNOWN) ? C.C.Types.PREMIUM_PAYMENT_STARTED : C.C.Types.GUILD_BOOST_APPLIED
                     }), (0, r.jsx)("div", {
                         className: ne().confirmationText,
                         children: n
                     }), (0, r.jsx)(p.Button, {
                         onClick: t,
-                        children: J.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_ACTIVATED_CLOSE_BUTTON
+                        children: $.Z.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_ACTIVATED_CLOSE_BUTTON
                     })]
                 })
             }
