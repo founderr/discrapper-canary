@@ -15,7 +15,7 @@
         95189: (e, r, t) => {
             "use strict";
             t.d(r, {
-                Z: () => M
+                Z: () => y
             });
             var n = t(785893),
                 a = t(667294),
@@ -62,11 +62,11 @@
                 })
             };
             var b = t(2590),
-                g = t(458947),
-                E = t(408532),
-                h = t.n(E);
+                E = t(458947),
+                g = t(408532),
+                T = t.n(g);
 
-            function T(e, r, t) {
+            function h(e, r, t) {
                 r in e ? Object.defineProperty(e, r, {
                     value: t,
                     enumerable: !0,
@@ -76,7 +76,7 @@
                 return e
             }
 
-            function m(e, r) {
+            function C(e, r) {
                 r = null != r ? r : {};
                 Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r)) : function(e, r) {
                     var t = Object.keys(e);
@@ -93,34 +93,34 @@
                 }));
                 return e
             }
-            var C = function(e) {
+            var m = function(e) {
                     var r = e.tagText,
                         t = e.className;
                     return (0, n.jsx)(_.IG, {
-                        className: s()(h().tag, t),
+                        className: s()(T().tag, t),
                         text: r
                     })
                 },
-                y = function(e) {
+                M = function(e) {
                     var r = e.header,
                         t = e.subHeader,
                         a = e.imageSrc,
                         o = e.tagText,
                         l = e.wideStyle;
                     return (0, n.jsxs)("div", {
-                        className: s()(h().featureCard, T({}, h().wideStyle, l)),
-                        children: [null != o ? (0, n.jsx)(C, {
+                        className: s()(T().featureCard, h({}, T().wideStyle, l)),
+                        children: [null != o ? (0, n.jsx)(m, {
                             tagText: o,
-                            className: h().featureCardTag
+                            className: T().featureCardTag
                         }) : null, (0, n.jsx)("img", {
                             alt: "",
-                            className: s()(h().featureCardImg, T({}, h().wideStyle, l)),
+                            className: s()(T().featureCardImg, h({}, T().wideStyle, l)),
                             src: a
                         }), (0, n.jsxs)("div", {
-                            className: h().featureCardTextGroup,
+                            className: T().featureCardTextGroup,
                             children: [(0, n.jsx)(i.Heading, {
                                 variant: "heading-lg/extrabold",
-                                className: h().featureCardTextHeader,
+                                className: T().featureCardTextHeader,
                                 children: r
                             }), (0, n.jsx)(i.Text, {
                                 variant: "text-sm/normal",
@@ -130,56 +130,56 @@
                     })
                 };
 
-            function M(e) {
+            function y(e) {
                 var r = e.className,
                     t = e.renderModalProps,
                     o = e.videoHref,
                     _ = e.video,
                     p = e.videoThumbnail,
                     f = e.modalDismissibleContent,
-                    E = e.header,
-                    C = e.subHeader,
-                    M = e.subHeaderExtra,
+                    g = e.header,
+                    m = e.subHeader,
+                    y = e.subHeaderExtra,
                     P = e.featureCards,
-                    S = e.changeLogId,
+                    A = e.changeLogId,
                     j = e.button,
-                    v = t.onClose,
-                    A = t.transitionState,
-                    D = (0, d.Dt)(),
-                    x = P.length % 2 == 0;
+                    S = t.onClose,
+                    D = t.transitionState,
+                    v = (0, d.Dt)(),
+                    I = P.length % 2 == 0;
                 a.useEffect((function() {
                     (0, l.kk)(f);
                     var e = Date.now();
                     O.default.track(b.rMx.CHANGE_LOG_OPENED, {
-                        change_log_id: S
+                        change_log_id: A
                     });
                     return function() {
                         O.default.track(b.rMx.CHANGE_LOG_CLOSED, {
-                            change_log_id: S,
+                            change_log_id: A,
                             seconds_open: Math.round((Date.now() - e) / 1e3)
                         });
                         (0, l.EW)(f, {
-                            dismissAction: g.L.DISMISS
+                            dismissAction: E.L.DISMISS
                         })
                     }
-                }), [f, S]);
+                }), [f, A]);
                 return (0, n.jsxs)(i.ModalRoot, {
-                    className: s()(h().root, r),
-                    transitionState: A,
-                    "aria-labelledby": D,
+                    className: s()(T().root, r),
+                    transitionState: D,
+                    "aria-labelledby": v,
                     children: [(0, n.jsx)(i.ModalCloseButton, {
-                        className: h().closeButton,
-                        onClick: v
+                        className: T().closeButton,
+                        onClick: S
                     }), (0, n.jsx)(N, {
-                        className: h().splash
+                        className: T().splash
                     }), (0, n.jsxs)(i.ModalContent, {
-                        className: h().content,
+                        className: T().content,
                         children: [(0, n.jsx)(i.Heading, {
                             variant: "display-md",
-                            className: h().headerText,
-                            children: E
+                            className: T().headerText,
+                            children: g
                         }), (0, n.jsx)(u.BC, {
-                            className: h().video,
+                            className: T().video,
                             allowFullScreen: !1,
                             href: o,
                             thumbnail: p,
@@ -191,17 +191,17 @@
                             renderLinkComponent: c.iT,
                             onPlay: function() {
                                 O.default.track(b.rMx.CHANGE_LOG_VIDEO_INTERACTED, {
-                                    change_log_id: S
+                                    change_log_id: A
                                 })
                             }
                         }), (0, n.jsx)(i.Heading, {
                             variant: "heading-lg/extrabold",
-                            className: h().bodyText,
-                            children: C
-                        }), null == M ? void 0 : M(), (0, n.jsx)("div", {
-                            className: s()(h().featureCardGroup, T({}, h().wideStyle, x)),
+                            className: T().bodyText,
+                            children: m
+                        }), null == y ? void 0 : y(), (0, n.jsx)("div", {
+                            className: s()(T().featureCardGroup, h({}, T().wideStyle, I)),
                             children: P.map((function(e, r) {
-                                return (0, n.jsx)(y, m(function(e) {
+                                return (0, n.jsx)(M, C(function(e) {
                                     for (var r = 1; r < arguments.length; r++) {
                                         var t = null != arguments[r] ? arguments[r] : {},
                                             n = Object.keys(t);
@@ -209,12 +209,12 @@
                                             return Object.getOwnPropertyDescriptor(t, e).enumerable
                                         }))));
                                         n.forEach((function(r) {
-                                            T(e, r, t[r])
+                                            h(e, r, t[r])
                                         }))
                                     }
                                     return e
                                 }({}, e), {
-                                    wideStyle: x
+                                    wideStyle: I
                                 }), "".concat(e.header, "_").concat(r))
                             }))
                         }), j()]
@@ -243,9 +243,9 @@
                 f = t(116094),
                 N = t(536392),
                 b = t(717035),
-                g = t(203600);
+                E = t(203600);
 
-            function E(e) {
+            function g(e) {
                 var r = e.defaultResponse,
                     t = e.onNonSubscriber,
                     n = e.onTier0TrialOffer,
@@ -260,21 +260,21 @@
                         return N.Z.getPremiumTypeSubscription()
                     })),
                     O = f.ZP.getPremiumTypeFromSubscription(_);
-                return null != u ? u() : null != d && g.nG[d.trial_id].skus.includes(g.Si.TIER_0) ? null != n ? n : r : null != d && g.nG[d.trial_id].skus.includes(g.Si.TIER_2) ? null != o ? o : r : null != _ && null != _.trialId && O === g.p9.TIER_0 ? null != s ? s : r : null != _ && null != _.trialId && O === g.p9.TIER_2 ? null != i ? i : r : null == O ? null != t ? t : r : O === g.p9.TIER_0 || O === g.p9.TIER_1 ? null != l ? l : r : O === g.p9.TIER_2 && null != c ? c : r
+                return null != u ? u() : null != d && E.nG[d.trial_id].skus.includes(E.Si.TIER_0) ? null != n ? n : r : null != d && E.nG[d.trial_id].skus.includes(E.Si.TIER_2) ? null != o ? o : r : null != _ && null != _.trialId && O === E.p9.TIER_0 ? null != s ? s : r : null != _ && null != _.trialId && O === E.p9.TIER_2 ? null != i ? i : r : null == O ? null != t ? t : r : O === E.p9.TIER_0 || O === E.p9.TIER_1 ? null != l ? l : r : O === E.p9.TIER_2 && null != c ? c : r
             }
-            var h = t(95189),
-                T = t(2590),
-                m = t(473708),
-                C = t(586271),
-                y = t.n(C),
-                M = t(939992),
-                P = t.n(M),
-                S = t(518996),
-                j = t.n(S),
-                v = t(252635),
-                A = t.n(v),
-                D = t(497206),
-                x = t.n(D);
+            var T = t(95189),
+                h = t(2590),
+                C = t(473708),
+                m = t(586271),
+                M = t.n(m),
+                y = t(939992),
+                P = t.n(y),
+                A = t(518996),
+                j = t.n(A),
+                S = t(252635),
+                D = t.n(S),
+                v = t(497206),
+                I = t.n(v);
 
             function R(e, r, t) {
                 r in e ? Object.defineProperty(e, r, {
@@ -286,7 +286,7 @@
                 return e
             }
 
-            function I(e) {
+            function x(e) {
                 for (var r = 1; r < arguments.length; r++) {
                     var t = null != arguments[r] ? arguments[r] : {},
                         n = Object.keys(t);
@@ -300,7 +300,7 @@
                 return e
             }
 
-            function w(e, r) {
+            function L(e, r) {
                 r = null != r ? r : {};
                 Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r)) : function(e, r) {
                     var t = Object.keys(e);
@@ -317,7 +317,7 @@
                 }));
                 return e
             }
-            var L = "2023_q4_nitro_drop",
+            var w = "2023_q4_nitro_drop",
                 H = "DnkvLW5052Y";
 
             function U(e) {
@@ -326,15 +326,15 @@
                     N = (0, a.e7)([d.default], (function() {
                         return d.default.locale
                     })),
-                    C = N.split("-")[0],
-                    M = "en" === C ? "0" : "1",
-                    S = "zh-CN" === N ? "zh-Hans" : "zh-TW" === N ? "zh-Hant" : C,
-                    v = {
-                        url: "".concat((0, T.ivE)(H), "?vq=large&rel=0&controls=0&showinfo=0&cc_load_policy=").concat(M, "&cc_lang_pref=").concat(S),
+                    m = N.split("-")[0],
+                    y = "en" === m ? "0" : "1",
+                    A = "zh-CN" === N ? "zh-Hans" : "zh-TW" === N ? "zh-Hant" : m,
+                    S = {
+                        url: "".concat((0, h.ivE)(H), "?vq=large&rel=0&controls=0&showinfo=0&cc_load_policy=").concat(y, "&cc_lang_pref=").concat(A),
                         width: 498,
                         height: 280
                     },
-                    D = {
+                    v = {
                         url: "https://i.ytimg.com/vi/".concat(H, "/maxresdefault.jpg"),
                         width: 498,
                         height: 280
@@ -348,26 +348,26 @@
                         intervalType: null == G ? void 0 : G.interval,
                         intervalCount: null == G ? void 0 : G.interval_count
                     }),
-                    B = E({
-                        defaultResponse: m.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN,
+                    B = g({
+                        defaultResponse: C.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN,
                         onTier0TrialOffer: k,
                         onTier2TrialOffer: k,
-                        onNonTier2Subscriber: m.Z.Messages.INTERACTION_PREMIUM_UPSELL_CTA
+                        onNonTier2Subscriber: C.Z.Messages.INTERACTION_PREMIUM_UPSELL_CTA
                     }),
-                    Q = E({
+                    Q = g({
                         defaultResponse: "get_nitro_button",
                         onNonTier2Subscriber: "upgrade_plan_button",
                         onTier0TrialOffer: "trial_offer_button",
                         onTier2TrialOffer: "trial_offer_button"
                     }),
-                    z = E({
+                    z = g({
                         defaultResponse: function() {
                             return (0, u.Z)({
-                                subscriptionTier: g.Si.TIER_2,
+                                subscriptionTier: E.Si.TIER_2,
                                 analyticsLocations: U,
-                                analyticsObject: w(I({}, R), {
-                                    object: T.qAy.BUTTON_CTA,
-                                    objectType: T.Qqv.TIER_2
+                                analyticsObject: L(x({}, R), {
+                                    object: h.qAy.BUTTON_CTA,
+                                    objectType: h.Qqv.TIER_2
                                 }),
                                 onClose: function(e) {
                                     e && t()
@@ -375,53 +375,53 @@
                             })
                         }
                     });
-                return (0, n.jsx)(h.Z, {
+                return (0, n.jsx)(T.Z, {
                     renderModalProps: r,
                     videoHref: "https://youtu.be/".concat(H),
-                    video: v,
-                    videoThumbnail: D,
+                    video: S,
+                    videoThumbnail: v,
                     modalDismissibleContent: o.z$.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL,
-                    header: m.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_HEADER_NON_SUB,
-                    subHeader: m.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_SUB,
+                    header: C.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_HEADER,
+                    subHeader: null != G ? C.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_TRIAL_ELIGIBLE : C.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_TRIAL_ELIGIBLE,
                     subHeaderExtra: function() {
                         return (0, n.jsx)(s.Anchor, {
-                            className: y().termsApplyAnchor,
-                            href: p.Z.getArticleURL(T.BhN.SUMMER_2023_BOGO),
+                            className: M().termsApplyAnchor,
+                            href: p.Z.getArticleURL(h.BhN.SUMMER_2023_BOGO),
                             children: (0, n.jsx)(s.Heading, {
                                 variant: "heading-md/normal",
-                                className: y().termsApplyBodyText,
-                                children: m.Z.Messages.BOGO_TERMS_APPLY
+                                className: M().termsApplyBodyText,
+                                children: C.Z.Messages.BOGO_TERMS_APPLY
                             })
                         })
                     },
                     featureCards: [{
-                        header: m.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_HEADER,
-                        subHeader: m.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_DESCRIPTION,
+                        header: C.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_HEADER,
+                        subHeader: C.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_DESCRIPTION,
                         imageSrc: P()
                     }, {
-                        header: m.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_HEADER,
-                        subHeader: m.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_DESCRIPTION,
-                        imageSrc: A()
+                        header: C.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_HEADER,
+                        subHeader: C.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_DESCRIPTION,
+                        imageSrc: D()
                     }, {
-                        header: m.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_HEADER,
-                        subHeader: m.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_DESCRIPTION,
+                        header: C.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_HEADER,
+                        subHeader: C.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_DESCRIPTION,
                         imageSrc: j()
                     }, {
-                        header: m.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_HEADER,
-                        subHeader: m.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_DESCRIPTION,
+                        header: C.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_HEADER,
+                        subHeader: C.Z.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_DESCRIPTION,
                         imageSrc: j()
                     }],
-                    changeLogId: L,
+                    changeLogId: w,
                     button: function() {
                         var e = Date.now();
                         return (0, n.jsxs)(_.C, {
-                            className: y().buttonWide,
-                            innerClassName: y().innerButton,
+                            className: M().buttonWide,
+                            innerClassName: M().innerButton,
                             color: s.Button.Colors.GREEN,
                             size: s.Button.Sizes.SMALL,
                             onClick: function() {
-                                O.default.track(T.rMx.CHANGE_LOG_CTA_CLICKED, {
-                                    change_log_id: L,
+                                O.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
+                                    change_log_id: w,
                                     cta_type: Q,
                                     seconds_open: Math.round((Date.now() - e) / 1e3),
                                     target: "q4_drop_payment_modal"
@@ -430,8 +430,8 @@
                             },
                             children: [(0, n.jsx)("img", {
                                 alt: "",
-                                className: y().nitroIconSubHeader,
-                                src: x()
+                                className: M().nitroIconSubHeader,
+                                src: I()
                             }), B]
                         })
                     }
