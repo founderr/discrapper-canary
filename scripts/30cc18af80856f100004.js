@@ -1,0 +1,668 @@
+(this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
+    [86651], {
+        178598: function(e, t, n) {
+            var r, o = o || function(e) {
+                "use strict";
+                if ("undefined" == typeof navigator || !/MSIE [1-9]\./.test(navigator.userAgent)) {
+                    var t = e.document,
+                        n = function() {
+                            return e.URL || e.webkitURL || e
+                        },
+                        r = t.createElementNS("http://www.w3.org/1999/xhtml", "a"),
+                        o = "download" in r,
+                        i = /Version\/[\d\.]+.*Safari/.test(navigator.userAgent),
+                        a = e.webkitRequestFileSystem,
+                        s = e.requestFileSystem || a || e.mozRequestFileSystem,
+                        c = function(t) {
+                            (e.setImmediate || e.setTimeout)((function() {
+                                throw t
+                            }), 0)
+                        },
+                        l = "application/octet-stream",
+                        u = 0,
+                        f = function(e) {
+                            setTimeout((function() {
+                                "string" == typeof e ? n().revokeObjectURL(e) : e.remove()
+                            }), 4e4)
+                        },
+                        d = function(e, t, n) {
+                            for (var r = (t = [].concat(t)).length; r--;) {
+                                var o = e["on" + t[r]];
+                                if ("function" == typeof o) try {
+                                    o.call(e, n || e)
+                                } catch (e) {
+                                    c(e)
+                                }
+                            }
+                        },
+                        p = function(e) {
+                            return /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(e.type) ? new Blob(["ï»¿", e], {
+                                type: e.type
+                            }) : e
+                        },
+                        h = function(t, c, h) {
+                            h || (t = p(t));
+                            var S, y, O, _ = this,
+                                b = t.type,
+                                m = !1,
+                                M = function() {
+                                    d(_, "writestart progress write writeend".split(" "))
+                                },
+                                v = function() {
+                                    if (y && i && "undefined" != typeof FileReader) {
+                                        var r = new FileReader;
+                                        r.onloadend = function() {
+                                            var e = r.result;
+                                            y.location.href = "data:attachment/file" + e.slice(e.search(/[,;]/));
+                                            _.readyState = _.DONE;
+                                            M()
+                                        };
+                                        r.readAsDataURL(t);
+                                        _.readyState = _.INIT
+                                    } else {
+                                        !m && S || (S = n().createObjectURL(t));
+                                        if (y) y.location.href = S;
+                                        else {
+                                            void 0 === e.open(S, "_blank") && i && (e.location.href = S)
+                                        }
+                                        _.readyState = _.DONE;
+                                        M();
+                                        f(S)
+                                    }
+                                },
+                                g = function(e) {
+                                    return function() {
+                                        if (_.readyState !== _.DONE) return e.apply(this, arguments)
+                                    }
+                                },
+                                E = {
+                                    create: !0,
+                                    exclusive: !1
+                                };
+                            _.readyState = _.INIT;
+                            c || (c = "download");
+                            if (o) {
+                                S = n().createObjectURL(t);
+                                setTimeout((function() {
+                                    r.href = S;
+                                    r.download = c;
+                                    e = r, t = new MouseEvent("click"), e.dispatchEvent(t);
+                                    var e, t;
+                                    M();
+                                    f(S);
+                                    _.readyState = _.DONE
+                                }))
+                            } else {
+                                if (e.chrome && b && b !== l) {
+                                    O = t.slice || t.webkitSlice;
+                                    t = O.call(t, 0, t.size, l);
+                                    m = !0
+                                }
+                                a && "download" !== c && (c += ".download");
+                                (b === l || a) && (y = e);
+                                if (s) {
+                                    u += t.size;
+                                    s(e.TEMPORARY, u, g((function(e) {
+                                        e.root.getDirectory("saved", E, g((function(e) {
+                                            var n = function() {
+                                                e.getFile(c, E, g((function(e) {
+                                                    e.createWriter(g((function(n) {
+                                                        n.onwriteend = function(t) {
+                                                            y.location.href = e.toURL();
+                                                            _.readyState = _.DONE;
+                                                            d(_, "writeend", t);
+                                                            f(e)
+                                                        };
+                                                        n.onerror = function() {
+                                                            var e = n.error;
+                                                            e.code !== e.ABORT_ERR && v()
+                                                        };
+                                                        "writestart progress write abort".split(" ").forEach((function(e) {
+                                                            n["on" + e] = _["on" + e]
+                                                        }));
+                                                        n.write(t);
+                                                        _.abort = function() {
+                                                            n.abort();
+                                                            _.readyState = _.DONE
+                                                        };
+                                                        _.readyState = _.WRITING
+                                                    })), v)
+                                                })), v)
+                                            };
+                                            e.getFile(c, {
+                                                create: !1
+                                            }, g((function(e) {
+                                                e.remove();
+                                                n()
+                                            })), g((function(e) {
+                                                e.code === e.NOT_FOUND_ERR ? n() : v()
+                                            })))
+                                        })), v)
+                                    })), v)
+                                } else v()
+                            }
+                        },
+                        S = h.prototype;
+                    if ("undefined" != typeof navigator && navigator.msSaveOrOpenBlob) return function(e, t, n) {
+                        n || (e = p(e));
+                        return navigator.msSaveOrOpenBlob(e, t || "download")
+                    };
+                    S.abort = function() {
+                        var e = this;
+                        e.readyState = e.DONE;
+                        d(e, "abort")
+                    };
+                    S.readyState = S.INIT = 0;
+                    S.WRITING = 1;
+                    S.DONE = 2;
+                    S.error = S.onwritestart = S.onprogress = S.onwrite = S.onabort = S.onerror = S.onwriteend = null;
+                    return function(e, t, n) {
+                        return new h(e, t, n)
+                    }
+                }
+            }("undefined" != typeof self && self || "undefined" != typeof window && window || this.content);
+            e.exports ? e.exports.saveAs = o : null !== n.amdD && null !== n.amdO && void 0 !== (r = function() {
+                return o
+            }.apply(t, [])) && (e.exports = r)
+        },
+        322837: (e, t, n) => {
+            "use strict";
+            n.d(t, {
+                Z: () => p
+            });
+            var r = n(667294),
+                o = n(178598),
+                i = n(306472),
+                a = n(120415);
+
+            function s(e, t) {
+                if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+            }
+
+            function c(e) {
+                c = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
+                    return e.__proto__ || Object.getPrototypeOf(e)
+                };
+                return c(e)
+            }
+
+            function l(e, t) {
+                return !t || "object" !== f(t) && "function" != typeof t ? function(e) {
+                    if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                    return e
+                }(e) : t
+            }
+
+            function u(e, t) {
+                u = Object.setPrototypeOf || function(e, t) {
+                    e.__proto__ = t;
+                    return e
+                };
+                return u(e, t)
+            }
+            var f = function(e) {
+                return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e
+            };
+
+            function d(e) {
+                var t = function() {
+                    if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
+                    if (Reflect.construct.sham) return !1;
+                    if ("function" == typeof Proxy) return !0;
+                    try {
+                        Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {})));
+                        return !0
+                    } catch (e) {
+                        return !1
+                    }
+                }();
+                return function() {
+                    var n, r = c(e);
+                    if (t) {
+                        var o = c(this).constructor;
+                        n = Reflect.construct(r, arguments, o)
+                    } else n = r.apply(this, arguments);
+                    return l(this, n)
+                }
+            }
+            var p = function(e) {
+                ! function(e, t) {
+                    if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function");
+                    e.prototype = Object.create(t && t.prototype, {
+                        constructor: {
+                            value: e,
+                            writable: !0,
+                            configurable: !0
+                        }
+                    });
+                    t && u(e, t)
+                }(n, e);
+                var t = d(n);
+
+                function n() {
+                    s(this, n);
+                    var e;
+                    (e = t.apply(this, arguments)).handleFileDownload = function(t) {
+                        t.preventDefault();
+                        var n = e.getFileContents(),
+                            r = e.props,
+                            o = r.fileName,
+                            i = r.onDownload;
+                        a.FB ? e.downloadNative(n, o) : e.downloadHtml5(n, o);
+                        null == i || i()
+                    };
+                    return e
+                }
+                var c = n.prototype;
+                c.getFileContents = function() {
+                    var e = this.props.fileContents;
+                    "function" == typeof e && (e = e());
+                    return e
+                };
+                c.downloadNative = function(e, t) {
+                    i.Z.fileManager.saveWithDialog(e, t)
+                };
+                c.downloadHtml5 = function(e, t) {
+                    var n = new Blob([e], {
+                        type: this.props.contentType
+                    });
+                    (0, o.saveAs)(n, t)
+                };
+                c.render = function() {
+                    var e = this.props.children,
+                        t = r.Children.only(e);
+                    return r.cloneElement(t, {
+                        onClick: this.handleFileDownload
+                    })
+                };
+                return n
+            }(r.Component)
+        },
+        286651: (e, t, n) => {
+            "use strict";
+            n.r(t);
+            n.d(t, {
+                default: () => B
+            });
+            var r = n(785893),
+                o = n(667294),
+                i = n(441143),
+                a = n.n(i),
+                s = n(202351),
+                c = n(70418),
+                l = n(744564),
+                u = n(130671),
+                f = n(322837),
+                d = n(883064),
+                p = n(426797),
+                h = n(222199),
+                S = n(694444),
+                y = n(473903),
+                O = n(107364),
+                _ = n(975651),
+                b = n(2590),
+                m = n(58118),
+                M = n(473708),
+                v = n(748350),
+                g = n.n(v);
+
+            function E(e, t) {
+                if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
+            }
+
+            function w(e, t, n) {
+                t in e ? Object.defineProperty(e, t, {
+                    value: n,
+                    enumerable: !0,
+                    configurable: !0,
+                    writable: !0
+                }) : e[t] = n;
+                return e
+            }
+
+            function C(e) {
+                C = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
+                    return e.__proto__ || Object.getPrototypeOf(e)
+                };
+                return C(e)
+            }
+
+            function A(e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    "function" == typeof Object.getOwnPropertySymbols && (r = r.concat(Object.getOwnPropertySymbols(n).filter((function(e) {
+                        return Object.getOwnPropertyDescriptor(n, e).enumerable
+                    }))));
+                    r.forEach((function(t) {
+                        w(e, t, n[t])
+                    }))
+                }
+                return e
+            }
+
+            function N(e, t) {
+                t = null != t ? t : {};
+                Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : function(e, t) {
+                    var n = Object.keys(e);
+                    if (Object.getOwnPropertySymbols) {
+                        var r = Object.getOwnPropertySymbols(e);
+                        t && (r = r.filter((function(t) {
+                            return Object.getOwnPropertyDescriptor(e, t).enumerable
+                        })));
+                        n.push.apply(n, r)
+                    }
+                    return n
+                }(Object(t)).forEach((function(n) {
+                    Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n))
+                }));
+                return e
+            }
+
+            function x(e, t) {
+                if (null == e) return {};
+                var n, r, o = function(e, t) {
+                    if (null == e) return {};
+                    var n, r, o = {},
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) {
+                        n = i[r];
+                        t.indexOf(n) >= 0 || (o[n] = e[n])
+                    }
+                    return o
+                }(e, t);
+                if (Object.getOwnPropertySymbols) {
+                    var i = Object.getOwnPropertySymbols(e);
+                    for (r = 0; r < i.length; r++) {
+                        n = i[r];
+                        t.indexOf(n) >= 0 || Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n])
+                    }
+                }
+                return o
+            }
+
+            function j(e, t) {
+                return !t || "object" !== R(t) && "function" != typeof t ? function(e) {
+                    if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                    return e
+                }(e) : t
+            }
+
+            function D(e, t) {
+                D = Object.setPrototypeOf || function(e, t) {
+                    e.__proto__ = t;
+                    return e
+                };
+                return D(e, t)
+            }
+            var R = function(e) {
+                return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e
+            };
+
+            function T(e) {
+                var t = function() {
+                    if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
+                    if (Reflect.construct.sham) return !1;
+                    if ("function" == typeof Proxy) return !0;
+                    try {
+                        Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {})));
+                        return !0
+                    } catch (e) {
+                        return !1
+                    }
+                }();
+                return function() {
+                    var n, r = C(e);
+                    if (t) {
+                        var o = C(this).constructor;
+                        n = Reflect.construct(r, arguments, o)
+                    } else n = r.apply(this, arguments);
+                    return j(this, n)
+                }
+            }
+            var F = function(e) {
+                    var t = e.label,
+                        n = e.text,
+                        o = e.children,
+                        i = x(e, ["label", "text", "children"]);
+                    return (0, r.jsxs)(O.Z, N(A({
+                        direction: O.Z.Direction.VERTICAL
+                    }, i), {
+                        children: [(0, r.jsx)(c.FormTitle, {
+                            tag: "h2",
+                            children: t
+                        }), null != n ? (0, r.jsx)(c.Text, {
+                            variant: "text-md/normal",
+                            className: g().sectionBody,
+                            children: n
+                        }) : null, (0, r.jsx)(O.Z.Child, {
+                            wrap: !0,
+                            children: o
+                        })]
+                    }))
+                },
+                P = function(e) {
+                    ! function(e, t) {
+                        if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function");
+                        e.prototype = Object.create(t && t.prototype, {
+                            constructor: {
+                                value: e,
+                                writable: !0,
+                                configurable: !0
+                            }
+                        });
+                        t && D(e, t)
+                    }(n, e);
+                    var t = T(n);
+
+                    function n() {
+                        E(this, n);
+                        var e;
+                        (e = t.apply(this, arguments)).state = {
+                            showConfirmModal: !1
+                        };
+                        e.handleCloseModal = function() {
+                            var t = e.props,
+                                n = t.onClose;
+                            t.hasSeenBackupPrompt ? null == n || n() : e.setState({
+                                showConfirmModal: !0
+                            })
+                        };
+                        e.getDownloadFileContents = function() {
+                            var t = e.props.backupCodes.map((function(e) {
+                                    var t = e.consumed,
+                                        n = e.code;
+                                    return "* ".concat(n.substr(0, 4), "-").concat(n.substr(4), " ").concat(t ? "(".concat(M.Z.Messages.TWO_FA_BACKUP_CODE_USED, ")") : "")
+                                })).join("\r\n"),
+                                n = M.Z.Messages.TWO_FA_DISCORD_BACKUP_CODES.format({
+                                    email: e.props.currentUser.email
+                                });
+                            return "".concat(n, "\r\n\r\n").concat(t)
+                        };
+                        e.handleChangePhoneNumber = function() {
+                            e.openPhoneVerificationModal()
+                        };
+                        e.handleEnableSMS = function() {
+                            var t = function() {
+                                (0, c.openModal)((function(e) {
+                                    return (0, r.jsx)(_.default, N(A({}, e), {
+                                        handleSubmit: function(e) {
+                                            return u.Z.enableSMS(e)
+                                        },
+                                        title: M.Z.Messages.MFA_SMS_ENABLE
+                                    }))
+                                }))
+                            };
+                            null == e.props.currentUser.phone ? e.openPhoneVerificationModal({
+                                onAddedPhone: t
+                            }) : t()
+                        };
+                        return e
+                    }
+                    var o = n.prototype;
+                    o.renderSMSSection = function() {
+                        var e = this.props.currentUser,
+                            t = null != this.props.currentUser.phone,
+                            n = e.hasFlag(b.xW$.MFA_SMS),
+                            o = e.hasFlag(b.xW$.PARTNER) || e.hasFlag(b.xW$.STAFF);
+                        return t ? (0, r.jsxs)(F, {
+                            label: M.Z.Messages.MFA_SMS_ENABLE,
+                            text: M.Z.Messages.MFA_SMS_AUTH_SALES_PITCH,
+                            children: [(0, r.jsxs)(c.Text, {
+                                variant: "text-md/normal",
+                                className: g().sectionBody,
+                                children: [(0, r.jsx)("strong", {
+                                    className: g().phoneNumber,
+                                    children: M.Z.Messages.MFA_SMS_AUTH_CURRENT_PHONE.format({
+                                        phoneNumber: e.phone
+                                    })
+                                }), (0, r.jsx)(c.Button, {
+                                    look: c.Button.Looks.LINK,
+                                    color: c.Button.Colors.LINK,
+                                    size: c.Button.Sizes.MIN,
+                                    className: g().linkButton,
+                                    onClick: this.handleChangePhoneNumber,
+                                    children: M.Z.Messages.CHANGE_PHONE_NUMBER
+                                })]
+                            }), (0, r.jsx)(c.Button, {
+                                onClick: this.handleEnableSMS,
+                                disabled: n || o,
+                                color: c.Button.Colors.GREEN,
+                                size: c.Button.Sizes.SMALL,
+                                children: o ? M.Z.Messages.MFA_SMS_DISABLED_PARTNER : n ? M.Z.Messages.MFA_SMS_ALREADY_ENABLED : M.Z.Messages.MFA_SMS_ENABLE
+                            })]
+                        }) : (0, r.jsx)(F, {
+                            label: M.Z.Messages.MFA_SMS_ENABLE,
+                            text: M.Z.Messages.MFA_SMS_AUTH_SALES_PITCH,
+                            children: (0, r.jsx)(c.Button, {
+                                onClick: this.handleEnableSMS,
+                                color: c.Button.Colors.GREEN,
+                                size: c.Button.Sizes.SMALL,
+                                disabled: o,
+                                children: o ? M.Z.Messages.MFA_SMS_DISABLED_PARTNER : M.Z.Messages.MFA_SMS_ADD_PHONE
+                            })
+                        })
+                    };
+                    o.renderBackupCodesSection = function() {
+                        return (0, r.jsx)(F, {
+                            label: M.Z.Messages.TWO_FA_DOWNLOAD_CODES,
+                            text: M.Z.Messages.TWO_FA_BACKUP_CODES_WARNING.format(),
+                            children: (0, r.jsx)(f.Z, {
+                                fileContents: this.getDownloadFileContents,
+                                contentType: "text/plain",
+                                fileName: "discord_backup_codes.txt",
+                                onDownload: function() {
+                                    return l.Z.dispatch({
+                                        type: "MFA_SEEN_BACKUP_CODE_PROMPT"
+                                    })
+                                },
+                                children: (0, r.jsx)(c.Button, {
+                                    color: c.Button.Colors.GREEN,
+                                    size: c.Button.Sizes.SMALL,
+                                    children: M.Z.Messages.TWO_FA_DOWNLOAD_CODES
+                                })
+                            })
+                        })
+                    };
+                    o.renderHeader = function(e) {
+                        return (0, r.jsxs)(c.ModalHeader, {
+                            separator: !1,
+                            children: [(0, r.jsxs)(O.Z.Child, {
+                                grow: 1,
+                                shrink: 1,
+                                children: [(0, r.jsx)(c.Heading, {
+                                    variant: "heading-lg/semibold",
+                                    className: g().header,
+                                    children: d.Z.parse(M.Z.Messages.TWO_FA_SUCCESS_HEADER)
+                                }), (0, r.jsx)(c.Text, {
+                                    variant: "text-xs/normal",
+                                    className: g().subHeader,
+                                    children: e
+                                })]
+                            }), (0, r.jsx)(O.Z.Child, {
+                                grow: 0,
+                                children: (0, r.jsx)(c.ModalCloseButton, {
+                                    onClick: this.handleCloseModal
+                                })
+                            })]
+                        })
+                    };
+                    o.renderConfirmModal = function(e) {
+                        var t = this,
+                            n = this.props.onClose;
+                        return (0, r.jsx)(c.DeclarativeConfirmModal, {
+                            dismissable: !0,
+                            header: M.Z.Messages.TWO_FA_CONFIRM_TITLE,
+                            confirmText: M.Z.Messages.TWO_FA_CONFIRM_CONFIRM,
+                            cancelText: M.Z.Messages.CANCEL,
+                            onCancel: function() {
+                                return t.setState({
+                                    showConfirmModal: !1
+                                })
+                            },
+                            onConfirm: function() {
+                                l.Z.dispatch({
+                                    type: "MFA_SEEN_BACKUP_CODE_PROMPT"
+                                });
+                                n()
+                            },
+                            children: (0, r.jsx)(c.Text, {
+                                variant: "text-md/normal",
+                                color: "text-normal",
+                                children: e
+                            })
+                        })
+                    };
+                    o.render = function() {
+                        return this.props.isTotp ? this.renderTotp() : this.renderWebAuthn()
+                    };
+                    o.renderTotp = function() {
+                        var e = this.props.transitionState,
+                            t = this.state.showConfirmModal;
+                        return (0, r.jsxs)(c.ModalRoot, {
+                            transitionState: e,
+                            className: g().modal,
+                            children: [this.renderHeader(M.Z.Messages.MFA_SMS_ENABLE_SHOULD_DO.format()), (0, r.jsxs)(c.ModalContent, {
+                                className: g().modalInner,
+                                children: [this.renderSMSSection(), (0, r.jsx)(c.FormDivider, {
+                                    className: g().divider
+                                }), this.renderBackupCodesSection()]
+                            }), t && this.renderConfirmModal(M.Z.Messages.TWO_FA_CONFIRM_BODY)]
+                        })
+                    };
+                    o.renderWebAuthn = function() {
+                        var e = this.props.transitionState,
+                            t = this.state.showConfirmModal;
+                        return (0, r.jsxs)(c.ModalRoot, {
+                            transitionState: e,
+                            className: g().modal,
+                            children: [this.renderHeader(M.Z.Messages.TWO_FA_WEBAUTHN_SHOULD_DO.format()), (0, r.jsx)(c.ModalContent, {
+                                className: g().modalInner,
+                                children: this.renderBackupCodesSection()
+                            }), t && this.renderConfirmModal(M.Z.Messages.TWO_FA_CONFIRM_WEBAUTHN_BODY)]
+                        })
+                    };
+                    o.openPhoneVerificationModal = function() {
+                        var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+                        (0, c.openModal)((function(t) {
+                            return (0, r.jsx)(h.default, A({
+                                reason: p.L.MFA_PHONE_UPDATE
+                            }, t, e))
+                        }), {
+                            modalKey: m.M
+                        })
+                    };
+                    return n
+                }(o.PureComponent);
+            const B = s.ZP.connectStores([y.default, S.Z], (function() {
+                var e = y.default.getCurrentUser();
+                a()(null != e, "MFAEnableSuccess: currentUser cannot be undefined");
+                return {
+                    currentUser: e,
+                    backupCodes: S.Z.getBackupCodes(),
+                    hasSeenBackupPrompt: S.Z.hasSeenBackupPrompt
+                }
+            }))(P)
+        }
+    }
+]);
