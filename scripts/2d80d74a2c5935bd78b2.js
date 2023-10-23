@@ -3929,7 +3929,11 @@
                     return i
                 },
                 GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: U,
-                GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: U
+                GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: U,
+                UPDATE_CHANNEL_LIST_SUBTITLES: function(e) {
+                    var n = e.guildId;
+                    Z.updateSubtitles(n)
+                }
             })
         },
         627001: (e, n, t) => {
