@@ -24363,6 +24363,7 @@
                 t.CONTACT_INVITE_OVERLAY_DISMISSED = "contact_invite_overlay_dismissed";
                 t.FRIEND_SUGGESTION_ADDED = "friend_suggestion_added";
                 t.FRIEND_FINDER_SECTION_EXPANDED = "friend_finder_section_expanded";
+                t.FRIEND_FINDER_INITIAL_LOADED = "friend_finder_initial_loaded";
                 t.MESSAGE_REQUESTS_INITIALIZED = "message_requests_initialized";
                 t.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED = "guild_default_message_request_updated";
                 t.SPAM_MESSAGE_REQUESTS_VIEWED = "spam_message_requests_viewed";
@@ -37159,7 +37160,7 @@ return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sen
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-90146c209c4f6231531cdd38a0649a7f0a97b0f2",
+                    release: "discord_web-d0cf784ecae59233c2f84f1de391a3915f113a97",
                     beforeSend: function(t) {
                         return function(t) {
                             return null != t.exception && null != t.exception.values && t.exception.values.every((function(t) {
@@ -37186,8 +37187,8 @@ return`${C(t)}${t.projectId}/envelope/`}(t)}?${function(t,e){return(0,R._j)({sen
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
                 });
                 var t;
-                Bt.YA("buildNumber", null !== (t = "239761") ? t : "");
-                Bt.YA("builtAt", String("1698106760375"));
+                Bt.YA("buildNumber", null !== (t = "239766") ? t : "");
+                Bt.YA("builtAt", String("1698107317966"));
                 var e = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != e && "object" == typeof e)
                     for (var r in e) Bt.YA(r, e[r]);
