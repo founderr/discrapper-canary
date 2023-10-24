@@ -25487,18 +25487,20 @@
                 if (null != t) {
                     var i, l = null !== (i = r.get(t.id)) && void 0 !== i ? i : [],
                         a = me(l);
-                    (l.length < t.getMaxSoundboardSlots() && n || 0 === a.length) && !o && a.push({
-                        type: $.vB.ADD_SOUND,
-                        guild: t
-                    });
-                    e.push({
-                        categoryInfo: {
-                            type: $.bg.GUILD,
+                    if ((l.length < t.getMaxSoundboardSlots() && n || 0 === a.length) && !o) {
+                        a.push({
+                            type: $.vB.ADD_SOUND,
                             guild: t
-                        },
-                        key: t.id,
-                        items: a
-                    })
+                        });
+                        e.push({
+                            categoryInfo: {
+                                type: $.bg.GUILD,
+                                guild: t
+                            },
+                            key: t.id,
+                            items: a
+                        })
+                    }
                 }
             }
 
