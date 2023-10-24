@@ -4136,7 +4136,7 @@
             });
             var g = n(641656),
                 v = n(979197),
-                E = n(567834),
+                E = n(126757),
                 _ = n(473903),
                 I = n(711531),
                 S = n(536392),
@@ -29995,28 +29995,45 @@
                 })
             }
         },
-        567834: (e, t, n) => {
+        126757: (e, t, n) => {
             "use strict";
             n.d(t, {
-                Z: () => w
+                Z: () => R
             });
             var r = n(785893),
-                o = (n(667294), n(70418)),
-                i = n(744564),
-                a = n(301928),
-                l = n(153686),
-                s = n(276611),
-                c = n(473903),
-                u = n(732054),
-                f = n(116094),
-                d = n(672798),
-                p = n(522382),
-                h = n(636786),
-                m = n(402727),
-                y = n(456741),
-                b = n(203600);
+                o = (n(667294), n(418705)),
+                i = n(70418),
+                a = n(744564),
+                l = n(301928),
+                s = n(153686),
+                c = n(515169),
+                u = n(276611),
+                f = n(473903),
+                d = n(732054),
+                p = n(116094),
+                h = n(672798),
+                m = n(522382),
+                y = n(636786),
+                b = n(402727),
+                O = n(456741);
+            const g = (0, n(260561).B)({
+                kind: "user",
+                id: "2023-10_trial_for_everyone_trial_creation",
+                label: "Trial for everyone",
+                defaultConfig: {
+                    enabled: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "Enabled",
+                    config: {
+                        enabled: !0
+                    }
+                }]
+            });
+            var v = n(203600);
 
-            function O(e, t, n, r, o, i, a) {
+            function E(e, t, n, r, o, i, a) {
                 try {
                     var l = e[i](a),
                         s = l.value
@@ -30027,7 +30044,7 @@
                 l.done ? t(s) : Promise.resolve(s).then(r, o)
             }
 
-            function g(e) {
+            function _(e) {
                 return function() {
                     var t = this,
                         n = arguments;
@@ -30035,22 +30052,22 @@
                         var i = e.apply(t, n);
 
                         function a(e) {
-                            O(i, r, o, a, l, "next", e)
+                            E(i, r, o, a, l, "next", e)
                         }
 
                         function l(e) {
-                            O(i, r, o, a, l, "throw", e)
+                            E(i, r, o, a, l, "throw", e)
                         }
                         a(void 0)
                     }))
                 }
             }
 
-            function v(e, t) {
+            function I(e, t) {
                 if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function")
             }
 
-            function E(e, t, n) {
+            function S(e, t, n) {
                 t in e ? Object.defineProperty(e, t, {
                     value: n,
                     enumerable: !0,
@@ -30060,14 +30077,14 @@
                 return e
             }
 
-            function _(e) {
-                _ = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
+            function j(e) {
+                j = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
                     return e.__proto__ || Object.getPrototypeOf(e)
                 };
-                return _(e)
+                return j(e)
             }
 
-            function I(e) {
+            function P(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
@@ -30075,13 +30092,13 @@
                         return Object.getOwnPropertyDescriptor(n, e).enumerable
                     }))));
                     r.forEach((function(t) {
-                        E(e, t, n[t])
+                        S(e, t, n[t])
                     }))
                 }
                 return e
             }
 
-            function S(e, t) {
+            function T(e, t) {
                 t = null != t ? t : {};
                 Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : function(e, t) {
                     var n = Object.keys(e);
@@ -30099,25 +30116,25 @@
                 return e
             }
 
-            function j(e, t) {
-                return !t || "object" !== T(t) && "function" != typeof t ? function(e) {
+            function C(e, t) {
+                return !t || "object" !== w(t) && "function" != typeof t ? function(e) {
                     if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
                     return e
                 }(e) : t
             }
 
-            function P(e, t) {
-                P = Object.setPrototypeOf || function(e, t) {
+            function A(e, t) {
+                A = Object.setPrototypeOf || function(e, t) {
                     e.__proto__ = t;
                     return e
                 };
-                return P(e, t)
+                return A(e, t)
             }
-            var T = function(e) {
+            var w = function(e) {
                 return e && "undefined" != typeof Symbol && e.constructor === Symbol ? "symbol" : typeof e
             };
 
-            function C(e) {
+            function N(e) {
                 var t = function() {
                     if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
                     if (Reflect.construct.sham) return !1;
@@ -30130,224 +30147,233 @@
                     }
                 }();
                 return function() {
-                    var n, r = _(e);
+                    var n, r = j(e);
                     if (t) {
-                        var o = _(this).constructor;
+                        var o = j(this).constructor;
                         n = Reflect.construct(r, arguments, o)
                     } else n = r.apply(this, arguments);
-                    return j(this, n)
+                    return C(this, n)
                 }
             }
-            var A = function(e, t) {
-                var n, r, o, i, a = {
-                    label: 0,
-                    sent: function() {
-                        if (1 & o[0]) throw o[1];
-                        return o[1]
-                    },
-                    trys: [],
-                    ops: []
-                };
-                return i = {
-                    next: l(0),
-                    throw: l(1),
-                    return: l(2)
-                }, "function" == typeof Symbol && (i[Symbol.iterator] = function() {
-                    return this
-                }), i;
+            var x = function(e, t) {
+                    var n, r, o, i, a = {
+                        label: 0,
+                        sent: function() {
+                            if (1 & o[0]) throw o[1];
+                            return o[1]
+                        },
+                        trys: [],
+                        ops: []
+                    };
+                    return i = {
+                        next: l(0),
+                        throw: l(1),
+                        return: l(2)
+                    }, "function" == typeof Symbol && (i[Symbol.iterator] = function() {
+                        return this
+                    }), i;
 
-                function l(i) {
-                    return function(l) {
-                        return function(i) {
-                            if (n) throw new TypeError("Generator is already executing.");
-                            for (; a;) try {
-                                if (n = 1, r && (o = 2 & i[0] ? r.return : i[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, i[1])).done) return o;
-                                (r = 0, o) && (i = [2 & i[0], o.value]);
-                                switch (i[0]) {
-                                    case 0:
-                                    case 1:
-                                        o = i;
-                                        break;
-                                    case 4:
-                                        a.label++;
-                                        return {
-                                            value: i[1], done: !1
-                                        };
-                                    case 5:
-                                        a.label++;
-                                        r = i[1];
-                                        i = [0];
-                                        continue;
-                                    case 7:
-                                        i = a.ops.pop();
-                                        a.trys.pop();
-                                        continue;
-                                    default:
-                                        if (!(o = a.trys, o = o.length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
-                                            a = 0;
-                                            continue
-                                        }
-                                        if (3 === i[0] && (!o || i[1] > o[0] && i[1] < o[3])) {
-                                            a.label = i[1];
-                                            break
-                                        }
-                                        if (6 === i[0] && a.label < o[1]) {
-                                            a.label = o[1];
+                    function l(i) {
+                        return function(l) {
+                            return function(i) {
+                                if (n) throw new TypeError("Generator is already executing.");
+                                for (; a;) try {
+                                    if (n = 1, r && (o = 2 & i[0] ? r.return : i[0] ? r.throw || ((o = r.return) && o.call(r), 0) : r.next) && !(o = o.call(r, i[1])).done) return o;
+                                    (r = 0, o) && (i = [2 & i[0], o.value]);
+                                    switch (i[0]) {
+                                        case 0:
+                                        case 1:
                                             o = i;
-                                            break
-                                        }
-                                        if (o && a.label < o[2]) {
-                                            a.label = o[2];
-                                            a.ops.push(i);
-                                            break
-                                        }
-                                        o[2] && a.ops.pop();
-                                        a.trys.pop();
-                                        continue
+                                            break;
+                                        case 4:
+                                            a.label++;
+                                            return {
+                                                value: i[1], done: !1
+                                            };
+                                        case 5:
+                                            a.label++;
+                                            r = i[1];
+                                            i = [0];
+                                            continue;
+                                        case 7:
+                                            i = a.ops.pop();
+                                            a.trys.pop();
+                                            continue;
+                                        default:
+                                            if (!(o = a.trys, o = o.length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
+                                                a = 0;
+                                                continue
+                                            }
+                                            if (3 === i[0] && (!o || i[1] > o[0] && i[1] < o[3])) {
+                                                a.label = i[1];
+                                                break
+                                            }
+                                            if (6 === i[0] && a.label < o[1]) {
+                                                a.label = o[1];
+                                                o = i;
+                                                break
+                                            }
+                                            if (o && a.label < o[2]) {
+                                                a.label = o[2];
+                                                a.ops.push(i);
+                                                break
+                                            }
+                                            o[2] && a.ops.pop();
+                                            a.trys.pop();
+                                            continue
+                                    }
+                                    i = t.call(e, a)
+                                } catch (e) {
+                                    i = [6, e];
+                                    r = 0
+                                } finally {
+                                    n = o = 0
                                 }
-                                i = t.call(e, a)
-                            } catch (e) {
-                                i = [6, e];
-                                r = 0
-                            } finally {
-                                n = o = 0
-                            }
-                            if (5 & i[0]) throw i[1];
-                            return {
-                                value: i[0] ? i[1] : void 0,
-                                done: !0
-                            }
-                        }([i, l])
-                    }
-                }
-            };
-            const w = new(function(e) {
-                ! function(e, t) {
-                    if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function");
-                    e.prototype = Object.create(t && t.prototype, {
-                        constructor: {
-                            value: e,
-                            writable: !0,
-                            configurable: !0
+                                if (5 & i[0]) throw i[1];
+                                return {
+                                    value: i[0] ? i[1] : void 0,
+                                    done: !0
+                                }
+                            }([i, l])
                         }
-                    });
-                    t && P(e, t)
-                }(a, e);
-                var t = C(a);
+                    }
+                },
+                M = function(e) {
+                    ! function(e, t) {
+                        if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function");
+                        e.prototype = Object.create(t && t.prototype, {
+                            constructor: {
+                                value: e,
+                                writable: !0,
+                                configurable: !0
+                            }
+                        });
+                        t && A(e, t)
+                    }(l, e);
+                    var t = N(l);
 
-                function a() {
-                    v(this, a);
-                    var e;
-                    (e = t.apply(this, arguments))._premiumPaymentModalCloseResolve = null;
-                    e._premiumPaymentModalCloseReject = null;
-                    e._maybeFetchPremiumOffer = function() {
-                        var e = c.default.getCurrentUser();
-                        if (null != e && e.verified && !(0, f.I5)(e) && u.Z.shouldFetchOffer()) {
-                            m.Z.getCurrentConfig({
-                                location: "PremiumManager"
+                    function l() {
+                        I(this, l);
+                        var e;
+                        (e = t.apply(this, arguments))._premiumPaymentModalCloseResolve = null;
+                        e._premiumPaymentModalCloseReject = null;
+                        e._maybeFetchPremiumOffer = function() {
+                            var e = f.default.getCurrentUser(),
+                                t = g.getCurrentConfig({
+                                    location: "PremiumManager"
+                                }).enabled,
+                                n = (0, c.un)(o.z$.FORCE_USER_TRIAL_OFFER_FETCH),
+                                r = t && !n,
+                                i = d.Z.shouldFetchOffer() || r;
+                            if (null != e && e.verified && !(0, p.I5)(e) && i) {
+                                var a = b.Z.getCurrentConfig({
+                                    location: "PremiumManager"
+                                }, {
+                                    autoTrackExposure: !1
+                                }).enabled;
+                                r && (0, c.EW)(o.z$.FORCE_USER_TRIAL_OFFER_FETCH);
+                                a ? (0, m.T)() : y.Z.fetchUserTrialOffer()
+                            }
+                        };
+                        e._maybeFetchReferralsRemaining = function() {
+                            var e = f.default.getCurrentUser();
+                            O.Z.getCurrentConfig({
+                                location: "16261f_1"
                             }, {
                                 autoTrackExposure: !1
-                            }).enabled ? (0, p.T)() : h.Z.fetchUserTrialOffer()
+                            }).enabled && null != e && e.verified && (0, p.M5)(e, v.p9.TIER_2) && h.Z.checkAndFetchReferralsRemaining()
+                        };
+                        e._handlePremiumPaymentModalOpen = function(e) {
+                            (0, u.Z)(T(P({}, e), {
+                                analyticsLocations: [s.Z.OVERLAY],
+                                onClose: function(e) {
+                                    a.Z.dispatch({
+                                        type: "PREMIUM_PAYMENT_MODAL_CLOSE",
+                                        didSucceed: e
+                                    })
+                                }
+                            }))
+                        };
+                        e._handlePremiumPaymentModalClose = function(t) {
+                            t.didSucceed && null != e._premiumPaymentModalCloseResolve ? e._premiumPaymentModalCloseResolve() : null != e._premiumPaymentModalCloseReject && e._premiumPaymentModalCloseReject();
+                            e._premiumPaymentModalCloseResolve = null;
+                            e._premiumPaymentModalCloseReject = null
+                        };
+                        return e
+                    }
+                    var E = l.prototype;
+                    E._initialize = function() {
+                        if (__OVERLAY__) a.Z.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen);
+                        else {
+                            a.Z.subscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose);
+                            a.Z.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell);
+                            a.Z.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer);
+                            a.Z.subscribe("POST_CONNECTION_OPEN", this._maybeFetchReferralsRemaining)
                         }
                     };
-                    e._maybeFetchReferralsRemaining = function() {
-                        var e = c.default.getCurrentUser();
-                        y.Z.getCurrentConfig({
-                            location: "16261f_1"
-                        }, {
-                            autoTrackExposure: !1
-                        }).enabled && null != e && e.verified && (0, f.M5)(e, b.p9.TIER_2) && d.Z.checkAndFetchReferralsRemaining()
+                    E._terminate = function() {
+                        if (__OVERLAY__) a.Z.unsubscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen);
+                        else {
+                            a.Z.unsubscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose);
+                            a.Z.unsubscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell);
+                            a.Z.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer);
+                            a.Z.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchReferralsRemaining)
+                        }
                     };
-                    e._handlePremiumPaymentModalOpen = function(e) {
-                        (0, s.Z)(S(I({}, e), {
-                            analyticsLocations: [l.Z.OVERLAY],
-                            onClose: function(e) {
-                                i.Z.dispatch({
-                                    type: "PREMIUM_PAYMENT_MODAL_CLOSE",
-                                    didSucceed: e
-                                })
-                            }
+                    E.handleMessageLengthUpsell = function(e) {
+                        var t = e.channel,
+                            o = e.content;
+                        (0, i.openModalLazy)(_((function() {
+                            var e, i;
+                            return x(this, (function(a) {
+                                switch (a.label) {
+                                    case 0:
+                                        return [4, Promise.all([n.e(15084), n.e(74731)]).then(n.bind(n, 970925))];
+                                    case 1:
+                                        e = a.sent(), i = e.default;
+                                        return [2, function(e) {
+                                            return (0, r.jsx)(i, P({
+                                                channel: t,
+                                                content: o
+                                            }, e))
+                                        }]
+                                }
+                            }))
+                        })))
+                    };
+                    E.openPremiumPaymentModalInApp = function(e) {
+                        if (__OVERLAY__) throw new Error("Should not use this function from the overlay, use ModalAPI.openModal instead");
+                        return new Promise((function(t, n) {
+                            (0, u.Z)(T(P({}, e), {
+                                onClose: function(e) {
+                                    e ? t() : n()
+                                }
+                            }))
                         }))
                     };
-                    e._handlePremiumPaymentModalClose = function(t) {
-                        t.didSucceed && null != e._premiumPaymentModalCloseResolve ? e._premiumPaymentModalCloseResolve() : null != e._premiumPaymentModalCloseReject && e._premiumPaymentModalCloseReject();
-                        e._premiumPaymentModalCloseResolve = null;
-                        e._premiumPaymentModalCloseReject = null
+                    E.openPremiumPaymentModalInOverlay = function(e) {
+                        var t = this;
+                        if (__OVERLAY__) throw new Error("Should not use this function from the overlay, use ModalAPI.openModal instead");
+                        var n = null != e ? e : {},
+                            r = n.initialPlanId,
+                            o = n.subscriptionTier,
+                            i = n.followupSKUInfo,
+                            l = n.analyticsObject;
+                        return new Promise((function(e, n) {
+                            t._premiumPaymentModalCloseResolve = e;
+                            t._premiumPaymentModalCloseReject = n;
+                            a.Z.dispatch({
+                                type: "PREMIUM_PAYMENT_MODAL_OPEN",
+                                initialPlanId: r,
+                                subscriptionTier: o,
+                                followupSKUInfo: i,
+                                analyticsObject: l
+                            })
+                        }))
                     };
-                    return e
-                }
-                var O = a.prototype;
-                O._initialize = function() {
-                    if (__OVERLAY__) i.Z.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen);
-                    else {
-                        i.Z.subscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose);
-                        i.Z.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell);
-                        i.Z.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer);
-                        i.Z.subscribe("POST_CONNECTION_OPEN", this._maybeFetchReferralsRemaining)
-                    }
-                };
-                O._terminate = function() {
-                    if (__OVERLAY__) i.Z.unsubscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen);
-                    else {
-                        i.Z.unsubscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose);
-                        i.Z.unsubscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell);
-                        i.Z.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer);
-                        i.Z.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchReferralsRemaining)
-                    }
-                };
-                O.handleMessageLengthUpsell = function(e) {
-                    var t = e.channel,
-                        i = e.content;
-                    (0, o.openModalLazy)(g((function() {
-                        var e, o;
-                        return A(this, (function(a) {
-                            switch (a.label) {
-                                case 0:
-                                    return [4, Promise.all([n.e(15084), n.e(74731)]).then(n.bind(n, 970925))];
-                                case 1:
-                                    e = a.sent(), o = e.default;
-                                    return [2, function(e) {
-                                        return (0, r.jsx)(o, I({
-                                            channel: t,
-                                            content: i
-                                        }, e))
-                                    }]
-                            }
-                        }))
-                    })))
-                };
-                O.openPremiumPaymentModalInApp = function(e) {
-                    if (__OVERLAY__) throw new Error("Should not use this function from the overlay, use ModalAPI.openModal instead");
-                    return new Promise((function(t, n) {
-                        (0, s.Z)(S(I({}, e), {
-                            onClose: function(e) {
-                                e ? t() : n()
-                            }
-                        }))
-                    }))
-                };
-                O.openPremiumPaymentModalInOverlay = function(e) {
-                    var t = this;
-                    if (__OVERLAY__) throw new Error("Should not use this function from the overlay, use ModalAPI.openModal instead");
-                    var n = null != e ? e : {},
-                        r = n.initialPlanId,
-                        o = n.subscriptionTier,
-                        a = n.followupSKUInfo,
-                        l = n.analyticsObject;
-                    return new Promise((function(e, n) {
-                        t._premiumPaymentModalCloseResolve = e;
-                        t._premiumPaymentModalCloseReject = n;
-                        i.Z.dispatch({
-                            type: "PREMIUM_PAYMENT_MODAL_OPEN",
-                            initialPlanId: r,
-                            subscriptionTier: o,
-                            followupSKUInfo: a,
-                            analyticsObject: l
-                        })
-                    }))
-                };
-                return a
-            }(a.Z))
+                    return l
+                }(l.Z);
+            const R = new M
         },
         549069: (e, t, n) => {
             "use strict";
@@ -30482,7 +30508,8 @@
                                         a.trys.pop();
                                         continue;
                                     default:
-                                        if (!(o = a.trys, o = o.length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
+                                        if (!(o = a.trys,
+                                                o = o.length > 0 && o[o.length - 1]) && (6 === i[0] || 2 === i[0])) {
                                             a = 0;
                                             continue
                                         }
@@ -30802,8 +30829,7 @@
                         isBurstEmoji: C,
                         messageId: P
                     })]
-                }) : (0,
-                    o.jsx)(f.Z, {
+                }) : (0, o.jsx)(f.Z, {
                     closePopout: n,
                     channel: t,
                     onSelectEmoji: i,
@@ -31765,7 +31791,8 @@
                             onMouseLeave: this.handleResume,
                             onBlur: this.handleResume
                         };
-                    return (0, r.jsx)("div", c(function(e) {
+                    return (0,
+                        r.jsx)("div", c(function(e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
@@ -32194,7 +32221,8 @@
             const P = function(e) {
                 var t = e.componentRef,
                     n = O(e, ["componentRef"]),
-                    o = (0, l.e7)([c.Z], (function() {
+                    o = (0,
+                        l.e7)([c.Z], (function() {
                         return c.Z.isFocused()
                     })),
                     i = (0, l.e7)([s.Z], (function() {
