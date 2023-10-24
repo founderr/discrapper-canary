@@ -12556,7 +12556,8 @@
                 canceled: "canceled-2sYP_G",
                 timeStatus: "timeStatus-3KJkIm",
                 icon: "icon-2d25ku",
-                iconButton: "iconButton-3rzQjG"
+                iconButton: "iconButton-3rzQjG",
+                canceledStatus: "canceledStatus-255dT-"
             }
         },
         908453: e => {

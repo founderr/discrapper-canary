@@ -148265,6 +148265,10 @@ html .invoiceCancelRow-3s2UuC {
     color: var(--interactive-active)
 }
 
+.canceledStatus-255dT- {
+    margin-right: 8px
+}
+
 .card-8UsK4b {
     background-color: var(--background-secondary);
     border-radius: 8px;
