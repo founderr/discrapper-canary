@@ -466,7 +466,7 @@
                                     fullWidth: !0,
                                     color: i.Button.Colors.WHITE,
                                     look: i.Button.Looks.OUTLINED,
-                                    buttonText: x.ZP.isPremium(n) ? k.Z.Messages.COLLECTIBLES_UPGRADE_FOR_DISCOUNT : k.Z.Messages.COLLECTIBLES_UNLOCK_DISCOUNT,
+                                    buttonText: x.ZP.isPremium(n) ? k.Z.Messages.COLLECTIBLES_UPGRADE_FOR_DISCOUNT : k.Z.Messages.COLLECTIBLES_SFA_UNLOCK_DISCOUNT,
                                     className: q().unlockDiscountButton,
                                     onlyShineOnHover: !0,
                                     onClick: W.P,
