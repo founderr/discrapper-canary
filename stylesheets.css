@@ -78572,6 +78572,125 @@ button.button__4f306.disabled_dc5630 {
     stop-color: var(--premium-tier-0-header-gradient-5)
 }
 
+.descriptionContainer__342b3 {
+    margin-top: 24px
+}
+
+.descriptionText__0f081 {
+    margin-bottom: 16px
+}
+
+.descriptionTextChunk_e98ac8 {
+    display: inline-block;
+    opacity: 0;
+    animation: descriptionTextChunkFadeIn_b8a106 1s forwards
+}
+
+@keyframes descriptionTextChunkFadeIn_b8a106 {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: .5
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.countdownStatic_c58da5,
+.countdown_ed561e,
+.countdownWithAnimation_bf56f3 {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .1);
+    display: inline-block;
+    margin-bottom: 16px
+}
+
+.countdown_ed561e {
+    opacity: 0
+}
+
+.countdownWithAnimation_bf56f3 {
+    transform: scalex(0);
+    transform-origin: left;
+    animation: countdownExpandFromLeft__4e241 1s forwards
+}
+
+@keyframes countdownExpandFromLeft__4e241 {
+    0% {
+        transform: scalex(0)
+    }
+
+    to {
+        transform: scalex(1)
+    }
+}
+
+.countdownText_c71e5c {
+    color: #ffeaa0;
+    padding: 8px 16px;
+    text-transform: uppercase
+}
+
+.countdownTextContainer__3cb4f,
+.countdownTextContainerWithAnimation__1516a {
+    opacity: 0
+}
+
+.countdownTextContainerWithAnimation__1516a {
+    animation: countdownTextFadeIn__2a9bb.5s ease-in forwards;
+    animation-delay: .25s
+}
+
+@keyframes countdownTextFadeIn__2a9bb {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.termsApplyStatic__02539,
+.termsApply__01eef,
+.termsApplyWithAnimation__90c29 {
+    display: table;
+    margin: 0 auto
+}
+
+.termsApply__01eef,
+.termsApplyWithAnimation__90c29 {
+    opacity: 0
+}
+
+.termsApplyWithAnimation__90c29 {
+    animation: TermsApplyFadeIn_c522af.5s ease-in forwards;
+    animation-delay: .25s
+}
+
+.termsApplyLink_db423e {
+    color: var(--white-500)
+}
+
+.termsApplyLink_db423e:hover {
+    -webkit-text-decoration: underline var(--white-500);
+    text-decoration: underline var(--white-500)
+}
+
+@keyframes TermsApplyFadeIn_c522af {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 .container__1e26b {
     display: flex;
     align-items: center;
