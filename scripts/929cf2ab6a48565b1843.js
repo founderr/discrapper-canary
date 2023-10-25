@@ -206,23 +206,25 @@
                         guild: s,
                         channel: u,
                         isMember: d,
-                        onAcceptInstantInvite: r,
-                        onTransitionToInviteChannel: c
-                    } = e, m = (0, j.default)(t), v = a.useCallback(() => {
+                        recurrenceId: r,
+                        onAcceptInstantInvite: c,
+                        onTransitionToInviteChannel: m
+                    } = e, v = (0, j.default)(t), h = a.useCallback(() => {
                         d && null != t && (0, f.openGuildEventDetails)({
-                            eventId: t.id
+                            eventId: t.id,
+                            recurrenceId: r
                         })
-                    }, [d, t]);
+                    }, [d, t, r]);
                     if (null == t) return null;
-                    let h = (0, x.isGuildScheduledEventActive)(t),
-                        N = (0, x.isGuildEventEnded)(t),
-                        g = t.entity_type === T.GuildScheduledEventEntityTypes.EXTERNAL;
+                    let N = (0, x.isGuildScheduledEventActive)(t),
+                        g = (0, x.isGuildEventEnded)(t),
+                        C = t.entity_type === T.GuildScheduledEventEntityTypes.EXTERNAL;
                     return (0, n.jsx)(p.default, {
                         className: i({
                             [_.clickable]: d
                         }),
                         children: (0, n.jsxs)(o.Clickable, {
-                            onClick: v,
+                            onClick: h,
                             children: [null != t.image && (0, n.jsx)(S.default, {
                                 source: (0, L.default)(t),
                                 className: _.banner
@@ -231,9 +233,10 @@
                                 description: null !== (l = t.description) && void 0 !== l ? l : void 0,
                                 descriptionClassName: _.eventDescription,
                                 guildId: t.guild_id,
-                                creator: m,
+                                creator: v,
                                 guildEventId: t.id,
-                                eventPreview: t
+                                eventPreview: t,
+                                recurrenceId: r
                             }), (0, n.jsxs)("div", {
                                 className: _.footerContainer,
                                 children: [(0, n.jsx)(M, {
@@ -242,14 +245,14 @@
                                     guildScheduledEvent: t,
                                     isMember: d
                                 }), (0, n.jsx)(w, {
-                                    isActive: h,
-                                    isEnded: N,
+                                    isActive: N,
+                                    isEnded: g,
                                     isMember: d,
                                     guildId: t.guild_id,
                                     guildScheduledEventId: t.id,
-                                    onAcceptInstantInvite: r,
-                                    onTransitionToInviteChannel: c,
-                                    isExternal: g
+                                    onAcceptInstantInvite: c,
+                                    onTransitionToInviteChannel: m,
+                                    isExternal: C
                                 })]
                             })]
                         })

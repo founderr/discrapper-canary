@@ -1684,7 +1684,7 @@
                             e = null == E ? T : "".concat(T, "/").concat(E);
                         return "".concat(e).concat(null != I ? "?feature=".concat(I) : "")
                     },
-                    GUILD_EVENT_DETAILS: (_, E) => "/events/".concat(_, "/").concat(E),
+                    GUILD_EVENT_DETAILS: (_, E, I) => "/events/".concat(_, "/").concat(E) + (null != I ? "/".concat(I) : ""),
                     FEATURE: _ => "/feature/".concat(_),
                     GUILD_JOIN_REQUEST: (_, E) => "/guilds/".concat(_, "/requests/").concat(E),
                     MOBILE_WEB_HANDOFF: "/mweb-handoff",

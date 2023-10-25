@@ -983,7 +983,7 @@
                     case r.RRule.YEARLY:
                         return s.RecurrenceOptions.YEARLY;
                     case r.RRule.DAILY:
-                        if (!(0, l.isEqual)([...n.options.byweekday], h(e))) return s.RecurrenceOptions.NONE;
+                        if (!(0, l.isEqual)(n.options.byweekday, h(e))) return s.RecurrenceOptions.NONE;
                         return s.RecurrenceOptions.WEEKDAY_ONLY;
                     default:
                         return s.RecurrenceOptions.NONE

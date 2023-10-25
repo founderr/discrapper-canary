@@ -10,19 +10,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 IdIcon: function() {
-                    return r
+                    return i
                 }
             });
             var l = n("920040");
             n("773670");
             var a = n("912557"),
                 u = n("75196");
-            let r = e => {
+            let i = e => {
                 let {
                     width: t = 24,
                     height: n = 24,
-                    color: r = a.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: i = "",
+                    color: i = a.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: r = "",
                     ...d
                 } = e;
                 return (0, l.jsx)("svg", {
@@ -33,11 +33,11 @@
                     fill: "none",
                     viewBox: "0 0 24 24",
                     children: (0, l.jsx)("path", {
-                        fill: "string" == typeof r ? r : r.css,
+                        fill: "string" == typeof i ? i : i.css,
                         fillRule: "evenodd",
                         d: "M5 2a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V5a3 3 0 0 0-3-3H5Zm1 15h2.044V7.34H6V17Zm4.006-9.66V17h3.43c1.465 0 2.595-.415 3.388-1.246.802-.83 1.204-2.025 1.204-3.584 0-1.559-.401-2.753-1.204-3.584-.794-.83-1.923-1.246-3.388-1.246h-3.43Zm5.292 7.14c-.457.448-1.078.672-1.862.672H12.05V9.188h1.386c.784 0 1.405.224 1.862.672.457.448.686 1.218.686 2.31s-.229 1.862-.686 2.31Z",
                         clipRule: "evenodd",
-                        className: i
+                        className: r
                     })
                 })
             }
@@ -53,8 +53,8 @@
             n("773670");
             var a = n("77078"),
                 u = n("845579"),
-                r = n("662255"),
-                i = n("306160");
+                i = n("662255"),
+                r = n("306160");
 
             function d(e) {
                 let {
@@ -64,74 +64,32 @@
                     shiftId: s,
                     showIconFirst: o
                 } = e, c = u.DeveloperMode.useSetting();
-                if (__OVERLAY__ || !c || !i.SUPPORTS_COPY) return null;
+                if (__OVERLAY__ || !c || !r.SUPPORTS_COPY) return null;
                 let f = "devmode-copy-id-".concat(t);
                 return (0, l.jsx)(a.MenuItem, {
                     id: f,
                     label: n,
                     action: function(e) {
                         let n = null != s && e.shiftKey ? s : t;
-                        (0, i.copy)(n), null == d || d()
+                        (0, r.copy)(n), null == d || d()
                     },
-                    icon: r.default,
+                    icon: i.default,
                     showIconFirst: o
                 }, f)
-            }
-        },
-        397680: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return r
-                }
-            });
-            var l = n("773670"),
-                a = n("498225"),
-                u = n("398604");
-
-            function r(e, t) {
-                let n = (0, a.useStateFromStoresArray)([u.default], () => {
-                        var e, n;
-                        return null !== (n = null === (e = u.default.getGuildScheduledEvent(t)) || void 0 === e ? void 0 : e.guild_scheduled_event_exceptions) && void 0 !== n ? n : []
-                    }),
-                    r = l.useMemo(() => null == n ? void 0 : n.find(t => t.event_exception_id === e), [n, e]);
-                return r
-            }
-        },
-        538572: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return d
-                }
-            });
-            var l = n("498225"),
-                a = n("299039"),
-                u = n("398604"),
-                r = n("397680"),
-                i = n("822516");
-
-            function d(e, t) {
-                let n = (0, l.useStateFromStores)([u.default], () => u.default.getGuildScheduledEvent(e)),
-                    d = (0, r.default)(t, e);
-                if (null == n) return null;
-                if (null == t) return new Date(n.scheduled_start_time);
-                let s = null != n.recurrence_rule ? (0, i.getRRule)(n.recurrence_rule) : null;
-                return null == s ? null : (null == d ? void 0 : d.scheduled_start_time) == null ? new Date(a.default.extractTimestamp(t)) : new Date(d.scheduled_start_time)
             }
         },
         598639: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return i
                 }
             });
             var l = n("498225"),
                 a = n("962199"),
                 u = n("305961");
 
-            function r(e, t) {
+            function i(e, t) {
                 return (0, l.useStateFromStoresObject)([u.default, a.default], () => {
                     let n = u.default.getGuild(e),
                         l = null != n;
@@ -170,8 +128,8 @@
             n("773670");
             var a = n("77078"),
                 u = n("272030"),
-                r = n("901582"),
-                i = n("861370"),
+                i = n("901582"),
+                r = n("861370"),
                 d = n("455933"),
                 s = n("248900"),
                 o = n("385752"),
@@ -190,8 +148,8 @@
                     channel: g,
                     guild: M,
                     analyticsContext: v,
-                    onSelect: m
-                } = e, N = (0, _.default)({
+                    onSelect: N
+                } = e, m = (0, _.default)({
                     guildEventId: t,
                     recurrenceId: n,
                     guild: M,
@@ -201,23 +159,23 @@
                     recurrenceId: n,
                     guild: M,
                     channel: g
-                }), O = (0, c.default)(t, M, g, n), p = (0, f.default)(t, M, g), R = (0, T.default)(t, M, g), h = (0, s.default)(t, M.id), C = (0, E.default)(t), D = (0, i.default)({
-                    id: t,
+                }), O = (0, c.default)(t, M, g, n), p = (0, f.default)(t, M, g), R = (0, T.default)(t, M, g), h = (0, s.default)(t, M.id, n), C = (0, E.default)(t), D = (0, r.default)({
+                    id: null != n ? n : t,
                     label: S.default.Messages.COPY_ID_EVENT
                 }), L = (0, d.default)(t, M.id, g);
-                return (0, l.jsx)(r.default, {
+                return (0, l.jsx)(i.default, {
                     context: v,
                     object: I.AnalyticsObjects.CONTEXT_MENU,
                     children: (0, l.jsxs)(a.Menu, {
                         navId: "user-context",
                         onClose: u.closeContextMenu,
                         "aria-label": S.default.Messages.USER_ACTIONS_MENU_LABEL,
-                        onSelect: m,
+                        onSelect: N,
                         children: [(0, l.jsxs)(a.MenuGroup, {
-                            children: [null == n && L, null == n && R, O, null == n && p, A, N, null == n && h]
+                            children: [null == n && L, null == n && R, O, null == n && p, A, m, h]
                         }), null == n && (0, l.jsx)(a.MenuGroup, {
                             children: C
-                        }), null == n && (0, l.jsx)(a.MenuGroup, {
+                        }), (0, l.jsx)(a.MenuGroup, {
                             children: D
                         })]
                     })
@@ -235,8 +193,8 @@
             n("773670");
             var a = n("361062"),
                 u = n.n(a),
-                r = n("377849"),
-                i = n.n(r),
+                i = n("377849"),
+                r = n.n(i),
                 d = n("287377"),
                 s = n("498225"),
                 o = n("77078"),
@@ -252,26 +210,26 @@
 
             function v(e, t, n) {
                 var a;
-                let r;
+                let i;
                 let v = (0, s.useStateFromStores)([T.default], () => T.default.isActive(e)),
-                    m = (0, s.useStateFromStores)([T.default], () => T.default.getGuildScheduledEvent(e), [e]),
-                    N = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(t), [t]);
-                if (v || null == m) return null;
-                r = m.entity_type === I.GuildScheduledEventEntityTypes.EXTERNAL ? m.entity_metadata.location : null != n && null != N ? S.default.Messages.CALENDAR_CHANNEL_LOCATION.format({
+                    N = (0, s.useStateFromStores)([T.default], () => T.default.getGuildScheduledEvent(e), [e]),
+                    m = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(t), [t]);
+                if (v || null == N) return null;
+                i = N.entity_type === I.GuildScheduledEventEntityTypes.EXTERNAL ? N.entity_metadata.location : null != n && null != m ? S.default.Messages.CALENDAR_CHANNEL_LOCATION.format({
                     channelName: n.name,
-                    guildName: N.name
+                    guildName: m.name
                 }) : S.default.Messages.NOTIFICATION_TITLE_DISCORD;
-                let A = i(m.scheduled_start_time),
-                    O = null != m.scheduled_end_time ? i(m.scheduled_end_time) : A,
-                    p = null != m.description && "" !== m.description ? f.default.unparse(m.description, null !== (a = null == n ? void 0 : n.id) && void 0 !== a ? a : "", !0) : "",
+                let A = r(N.scheduled_start_time),
+                    O = null != N.scheduled_end_time ? r(N.scheduled_end_time) : A,
+                    p = null != N.description && "" !== N.description ? f.default.unparse(N.description, null !== (a = null == n ? void 0 : n.id) && void 0 !== a ? a : "", !0) : "",
                     R = () => {
                         let e = u();
                         e.createEvent({
                             start: A,
                             end: O,
-                            summary: m.name,
+                            summary: N.name,
                             description: p,
-                            location: r
+                            location: i
                         }), _.isPlatformEmbedded ? c.default.fileManager.saveWithDialog(e.toString(), "discord-event.ics") : window.open(e.toURL(), "_blank")
                     };
                 return (0, l.jsxs)(o.MenuItem, {
@@ -283,11 +241,11 @@
                         label: S.default.Messages.ADD_TO_GOOGLE_CALENDAR,
                         action: () => {
                             let e = {
-                                    text: m.name,
+                                    text: N.name,
                                     dates: "".concat(A.format(g), "/").concat(O.format(g)),
                                     details: p,
                                     action: "TEMPLATE",
-                                    location: r
+                                    location: i
                                 },
                                 t = "https://calendar.google.com/calendar/render?".concat((0, d.stringify)(e));
                             window.open(t, "_blank")
@@ -302,11 +260,11 @@
                         action: () => {
                             let e = {
                                     v: 60,
-                                    title: m.name,
+                                    title: N.name,
                                     st: A.format(g),
                                     et: O.format(g),
                                     desc: p,
-                                    in_loc: r
+                                    in_loc: i
                                 },
                                 t = "https://calendar.yahoo.com/?".concat((0, d.stringify)(e));
                             window.open(t, "_blank")
@@ -320,9 +278,9 @@
                                     rru: "addevent",
                                     startdt: A.format(M),
                                     enddt: O.format(M),
-                                    subject: m.name,
+                                    subject: N.name,
                                     body: p,
-                                    location: r,
+                                    location: i,
                                     allday: !1
                                 },
                                 t = "https://outlook.live.com/calendar/0/deeplink/compose?".concat((0, d.stringify)(e));
@@ -343,19 +301,19 @@
             n("773670");
             var a = n("77078"),
                 u = n("306160"),
-                r = n("598639"),
-                i = n("49111"),
+                i = n("598639"),
+                r = n("49111"),
                 d = n("782340");
 
-            function s(e, t) {
+            function s(e, t, n) {
                 let {
-                    isMember: n
-                } = (0, r.default)(t, e);
-                return n ? (0, l.jsx)(a.MenuItem, {
+                    isMember: s
+                } = (0, i.default)(t, e);
+                return s ? (0, l.jsx)(a.MenuItem, {
                     id: d.default.Messages.COPY_EVENT_LINK,
                     label: d.default.Messages.COPY_EVENT_LINK,
                     action: function() {
-                        (0, u.copy)("".concat(location.protocol, "//").concat(location.host).concat(i.Routes.GUILD_EVENT_DETAILS(t, e))), (0, a.showToast)((0, a.createToast)(d.default.Messages.COPIED_LINK, a.ToastType.SUCCESS))
+                        (0, u.copy)("".concat(location.protocol, "//").concat(location.host).concat(r.Routes.GUILD_EVENT_DETAILS(t, e, n))), (0, a.showToast)((0, a.createToast)(d.default.Messages.COPIED_LINK, a.ToastType.SUCCESS))
                     }
                 }) : null
             }
@@ -371,8 +329,8 @@
             n("773670");
             var a = n("498225"),
                 u = n("77078"),
-                r = n("817963"),
-                i = n("299039"),
+                i = n("817963"),
+                r = n("299039"),
                 d = n("398604"),
                 s = n("322224"),
                 o = n("397680"),
@@ -388,8 +346,8 @@
                     channel: T
                 } = e, I = null != E, {
                     canManageGuildEvent: S
-                } = (0, r.useManageResourcePermissions)(null != T ? T : _), [g, M] = (0, a.useStateFromStoresArray)([d.default], () => [d.default.isActive(n), d.default.getGuildScheduledEvent(n)]), v = (0, o.default)(E, null == M ? void 0 : M.id), m = null != M && S(M), N = (null == M ? void 0 : M.recurrence_rule) != null && !I, A = I && (null == v || !v.is_canceled), O = (0, c.default)(n, E);
-                if (!m || g && !N || I && !A || null == M) return null;
+                } = (0, i.useManageResourcePermissions)(null != T ? T : _), [g, M] = (0, a.useStateFromStoresArray)([d.default], () => [d.default.isActive(n), d.default.getGuildScheduledEvent(n)]), v = (0, o.default)(E, null == M ? void 0 : M.id), N = null != M && S(M), m = (null == M ? void 0 : M.recurrence_rule) != null && !I, A = I && (null == v || !v.is_canceled), O = (0, c.default)(n, E);
+                if (!N || g && !m || I && !A || null == M) return null;
                 if (g && I) {
                     if (null == O) return null;
                     let e = new Date(null !== (t = null == v ? void 0 : v.scheduled_start_time) && void 0 !== t ? t : O);
@@ -408,7 +366,7 @@
                                     is_canceled: !0
                                 }, _.id, n, E)
                             } else {
-                                let e = i.default.extractTimestamp(E);
+                                let e = r.default.extractTimestamp(E);
                                 s.default.createGuildEventException({
                                     original_scheduled_start_time: new Date(e).toISOString(),
                                     is_canceled: !0
@@ -420,13 +378,13 @@
                         (0, u.openModal)(t => (0, l.jsxs)(u.ConfirmModal, {
                             ...t,
                             header: f.default.Messages.GUILD_EVENT_DELETE_CONFIRM_HEADER,
-                            confirmText: N || e ? f.default.Messages.DELETE_ALL_EVENTS : f.default.Messages.DELETE_EVENT,
+                            confirmText: m || e ? f.default.Messages.DELETE_ALL_EVENTS : f.default.Messages.DELETE_EVENT,
                             cancelText: f.default.Messages.NEVERMIND,
                             onConfirm: () => I && !e ? p() : s.default.deleteGuildEvent(n, _.id),
                             children: [(0, l.jsx)(u.Text, {
                                 variant: "text-md/normal",
                                 children: f.default.Messages.GUILD_EVENT_DELETE_CONFIRM_BODY
-                            }), (0, l.jsx)("br", {}), (N || e) && (0, l.jsx)(u.Text, {
+                            }), (0, l.jsx)("br", {}), (m || e) && (0, l.jsx)(u.Text, {
                                 variant: "text-md/normal",
                                 children: f.default.Messages.GUILD_EVENT_DELETE_CONFIRM_BODY_IS_RECURRING.format()
                             })]
@@ -457,25 +415,26 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return c
                 }
             });
             var l = n("920040");
             n("773670");
             var a = n("498225"),
                 u = n("77078"),
-                r = n("817963"),
-                i = n("398604"),
-                d = n("842672"),
-                s = n("782340");
+                i = n("817963"),
+                r = n("398604"),
+                d = n("397680"),
+                s = n("842672"),
+                o = n("782340");
 
-            function o(e, t, o, c) {
+            function c(e, t, c, f) {
                 let {
-                    canManageGuildEvent: f
-                } = (0, r.useManageResourcePermissions)(null != o ? o : t), E = (0, a.useStateFromStores)([i.default], () => i.default.getGuildScheduledEvent(e)), _ = f(E), T = (0, d.default)();
-                if (!_ || null == E) return null;
-                let I = a => {
-                    null == c || a ? (0, u.openModalLazy)(async () => {
+                    canManageGuildEvent: E
+                } = (0, i.useManageResourcePermissions)(null != c ? c : t), _ = (0, a.useStateFromStores)([r.default], () => r.default.getGuildScheduledEvent(e)), T = E(_), I = (0, s.default)(), S = (0, d.default)(f, null == _ ? void 0 : _.id);
+                if (!T || null == _ || (null == S ? void 0 : S.is_canceled)) return null;
+                let g = a => {
+                    null == f || a ? (0, u.openModalLazy)(async () => {
                         let {
                             default: a
                         } = await n.el("590942").then(n.bind(n, "590942"));
@@ -484,30 +443,30 @@
                             guildScheduledEventId: e,
                             guildId: t.id
                         })
-                    }, T) : (0, u.openModalLazy)(async () => {
+                    }, I) : (0, u.openModalLazy)(async () => {
                         let {
                             default: e
                         } = await n.el("229798").then(n.bind(n, "229798"));
                         return t => (0, l.jsx)(e, {
                             ...t,
-                            guildEvent: E,
-                            recurrenceId: c
+                            guildEvent: _,
+                            recurrenceId: f
                         })
-                    }, T)
+                    }, I)
                 };
                 return (0, l.jsx)(u.MenuItem, {
-                    id: s.default.Messages.EDIT_EVENT,
-                    label: s.default.Messages.EDIT_EVENT,
-                    action: null == E.recurrence_rule ? () => I(!0) : void 0,
-                    children: null != c && (0, l.jsxs)(l.Fragment, {
+                    id: o.default.Messages.EDIT_EVENT,
+                    label: o.default.Messages.EDIT_EVENT,
+                    action: null == _.recurrence_rule ? () => g(!0) : void 0,
+                    children: null != f && (0, l.jsxs)(l.Fragment, {
                         children: [(0, l.jsx)(u.MenuItem, {
-                            id: s.default.Messages.EDIT_THIS_EVENT,
-                            label: s.default.Messages.EDIT_THIS_EVENT,
-                            action: () => I(!1)
+                            id: o.default.Messages.EDIT_THIS_EVENT,
+                            label: o.default.Messages.EDIT_THIS_EVENT,
+                            action: () => g(!1)
                         }), (0, l.jsx)(u.MenuItem, {
-                            id: s.default.Messages.EDIT_ALL_EVENTS,
-                            label: s.default.Messages.EDIT_ALL_EVENTS,
-                            action: () => I(!0)
+                            id: o.default.Messages.EDIT_ALL_EVENTS,
+                            label: o.default.Messages.EDIT_ALL_EVENTS,
+                            action: () => g(!0)
                         })]
                     })
                 })
@@ -524,8 +483,8 @@
             n("773670");
             var a = n("498225"),
                 u = n("77078"),
-                r = n("817963"),
-                i = n("244480"),
+                i = n("817963"),
+                r = n("244480"),
                 d = n("398604"),
                 s = n("322224"),
                 o = n("745049"),
@@ -534,11 +493,11 @@
             function f(e, t, n) {
                 let {
                     canManageGuildEvent: f
-                } = (0, r.useManageResourcePermissions)(null != n ? n : t), E = (0, a.useStateFromStores)([d.default], () => d.default.isActive(e)), _ = (0, a.useStateFromStores)([d.default], () => d.default.getGuildScheduledEvent(e), [e]), T = f(_);
+                } = (0, i.useManageResourcePermissions)(null != n ? n : t), E = (0, a.useStateFromStores)([d.default], () => d.default.isActive(e)), _ = (0, a.useStateFromStores)([d.default], () => d.default.getGuildScheduledEvent(e), [e]), T = f(_);
                 if (null == e || !T || !E || (null == _ ? void 0 : _.entity_type) === o.GuildScheduledEventEntityTypes.EXTERNAL) return null;
                 let I = () => {
                     if (null == n ? void 0 : n.isGuildStageVoice()) {
-                        (0, i.endStage)(n);
+                        (0, r.endStage)(n);
                         return
                     }
                     null != e && s.default.endEvent(e, t.id), (0, u.closeAllModals)()
@@ -574,8 +533,8 @@
             n("773670");
             var a = n("498225"),
                 u = n("77078"),
-                r = n("377114"),
-                i = n("907566"),
+                i = n("377114"),
+                r = n("907566"),
                 d = n("398604"),
                 s = n("782340");
 
@@ -584,8 +543,8 @@
                 return null == e || null == t ? null : (0, l.jsx)(u.MenuItem, {
                     id: "report-event",
                     label: s.default.Messages.REPORT_MODAL_REPORT_EVENT_MENU_ITEM,
-                    action: () => (0, r.showReportModalForGuildScheduledEvent)(t),
-                    icon: i.default,
+                    action: () => (0, i.showReportModalForGuildScheduledEvent)(t),
+                    icon: r.default,
                     color: "danger"
                 })
             }
@@ -601,8 +560,8 @@
             n("773670");
             var a = n("498225"),
                 u = n("77078"),
-                r = n("817963"),
-                i = n("398604"),
+                i = n("817963"),
+                r = n("398604"),
                 d = n("322224"),
                 s = n("397680"),
                 o = n("782340");
@@ -615,7 +574,7 @@
                     channel: f
                 } = e, E = null != n, {
                     canManageGuildEvent: _
-                } = (0, r.useManageResourcePermissions)(null != f ? f : c), [T, I] = (0, a.useStateFromStoresArray)([i.default], () => [i.default.isActive(t), i.default.getGuildScheduledEvent(t)]), S = (0, s.default)(n, null == I ? void 0 : I.id), g = null != I && _(I), M = E && (null == S ? void 0 : S.is_canceled) && g;
+                } = (0, i.useManageResourcePermissions)(null != f ? f : c), [T, I] = (0, a.useStateFromStoresArray)([r.default], () => [r.default.isActive(t), r.default.getGuildScheduledEvent(t)]), S = (0, s.default)(n, null == I ? void 0 : I.id), g = null != I && _(I), M = E && (null == S ? void 0 : S.is_canceled) && g;
                 return M && (!T || E) ? (0, l.jsx)(u.MenuItem, {
                     id: o.default.Messages.RESTORE_EVENT,
                     label: o.default.Messages.RESTORE_EVENT,
@@ -645,8 +604,8 @@
             n("773670");
             var a = n("498225"),
                 u = n("77078"),
-                r = n("817963"),
-                i = n("398604"),
+                i = n("817963"),
+                r = n("398604"),
                 d = n("534222"),
                 s = n("782340");
 
@@ -654,7 +613,7 @@
                 var c;
                 let {
                     canManageGuildEvent: f
-                } = (0, r.useManageResourcePermissions)(null != o ? o : t), E = (0, a.useStateFromStores)([i.default], () => i.default.getGuildScheduledEvent(e), [e]), _ = f(E), T = null != (0, d.useActiveEvent)(null !== (c = null == o ? void 0 : o.id) && void 0 !== c ? c : ""), I = null != E && (0, i.isGuildScheduledEventActive)(E);
+                } = (0, i.useManageResourcePermissions)(null != o ? o : t), E = (0, a.useStateFromStores)([r.default], () => r.default.getGuildScheduledEvent(e), [e]), _ = f(E), T = null != (0, d.useActiveEvent)(null !== (c = null == o ? void 0 : o.id) && void 0 !== c ? c : ""), I = null != E && (0, r.isGuildScheduledEventActive)(E);
                 return _ && !I && !T ? (0, l.jsx)(u.MenuItem, {
                     id: s.default.Messages.START_EVENT,
                     label: s.default.Messages.START_EVENT,
@@ -682,16 +641,16 @@
             var l = n("77078"),
                 a = n("244201"),
                 u = n("558286"),
-                r = n("49111");
-            let i = "guild-event-modal";
+                i = n("49111");
+            let r = "guild-event-modal";
             var d = () => {
                 let e = (0, a.useAppContext)(),
-                    t = e === r.AppContext.POPOUT ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT;
+                    t = e === i.AppContext.POPOUT ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT;
                 return {
-                    modalKey: i,
+                    modalKey: r,
                     contextKey: t,
                     onCloseRequest: () => {
-                        u.useGuildEventModalStore.getState().canCloseModal && (0, l.closeModal)(i, t)
+                        u.useGuildEventModalStore.getState().canCloseModal && (0, l.closeModal)(r, t)
                     }
                 }
             }
@@ -784,8 +743,8 @@
                 }
             });
             var u = n("498225"),
-                r = n("913144"),
-                i = n("798609"),
+                i = n("913144"),
+                r = n("798609"),
                 d = n("42203"),
                 s = n("3765");
             let o = {},
@@ -822,7 +781,7 @@
                 }
             }
             _.displayName = "InteractionStore";
-            var T = new _(r.default, {
+            var T = new _(i.default, {
                 LOGOUT: function() {
                     o = {}, c = {}, f = {}
                 },
@@ -833,16 +792,16 @@
                         data: l,
                         onCreate: a,
                         onCancel: u,
-                        onSuccess: r,
-                        onFailure: i
+                        onSuccess: i,
+                        onFailure: r
                     } = e;
                     null != n && (c[n] = t, f[t] = n), o[t] = {
                         state: s.InteractionState.QUEUED,
                         data: l,
                         onCreate: a,
                         onCancel: u,
-                        onSuccess: r,
-                        onFailure: i
+                        onSuccess: i,
+                        onFailure: r
                     }
                 },
                 INTERACTION_CREATE: function(e) {
@@ -876,7 +835,7 @@
                     if (null == n) return !1;
                     let u = o[n];
                     if (null == u) return !1;
-                    null === (t = u.onFailure) || void 0 === t || t.call(u, l, a), u.data.interactionType === i.InteractionTypes.APPLICATION_COMMAND ? E(n) : o[n] = {
+                    null === (t = u.onFailure) || void 0 === t || t.call(u, l, a), u.data.interactionType === r.InteractionTypes.APPLICATION_COMMAND ? E(n) : o[n] = {
                         ...u,
                         state: s.InteractionState.FAILED,
                         errorCode: l,
@@ -941,10 +900,10 @@
                     return v
                 },
                 moveSelfToAudience: function() {
-                    return m
+                    return N
                 },
                 setUserSuppress: function() {
-                    return N
+                    return m
                 },
                 moveUserToAudience: function() {
                     return A
@@ -965,8 +924,8 @@
             var l = n("161179"),
                 a = n.n(l),
                 u = n("754013"),
-                r = n("990746"),
-                i = n("450911");
+                i = n("990746"),
+                r = n("450911");
             n("851387");
             var d = n("798609"),
                 s = n("716241"),
@@ -983,7 +942,7 @@
                 let n = e.getGuildId();
                 return a(null != n, "This channel cannot be guildless."), t && (0, s.trackWithMetadata)(S.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED, {
                     ...(0, _.getStageChannelMetadata)(e)
-                }), r.default.patch({
+                }), i.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(n),
                     body: {
                         request_to_speak_timestamp: t ? new Date().toISOString() : null,
@@ -994,7 +953,7 @@
 
             function M(e, t) {
                 let n = e.getGuildId();
-                return a(null != n, "This channel cannot be guildless."), r.default.patch({
+                return a(null != n, "This channel cannot be guildless."), i.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(n, t),
                     body: {
                         suppress: !1,
@@ -1009,10 +968,10 @@
                     l = null == e ? void 0 : e.getGuildId();
                 a(null != l, "This channel cannot be guildless.");
                 let u = c.default.getVoiceStateForChannel(e.id),
-                    i = (0, I.getAudienceRequestToSpeakState)(u);
-                return i === I.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && !t && (0, s.trackWithMetadata)(S.AnalyticEvents.PROMOTED_TO_SPEAKER, {
+                    r = (0, I.getAudienceRequestToSpeakState)(u);
+                return r === I.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && !t && (0, s.trackWithMetadata)(S.AnalyticEvents.PROMOTED_TO_SPEAKER, {
                     ...(0, _.getStageChannelMetadata)(e)
-                }), r.default.patch({
+                }), i.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(l),
                     body: {
                         suppress: t,
@@ -1025,9 +984,9 @@
                 })
             }
 
-            function m(e) {
+            function N(e) {
                 let t = null == e ? void 0 : e.getGuildId();
-                return a(null != t, "This channel cannot be guildless."), r.default.patch({
+                return a(null != t, "This channel cannot be guildless."), i.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(t),
                     body: {
                         suppress: !0,
@@ -1038,9 +997,9 @@
                 })
             }
 
-            function N(e, t, n) {
+            function m(e, t, n) {
                 let l = e.getGuildId();
-                return a(null != l, "This channel cannot be guildless."), r.default.patch({
+                return a(null != l, "This channel cannot be guildless."), i.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(l, t),
                     body: {
                         suppress: n,
@@ -1052,7 +1011,7 @@
             function A(e, t) {
                 if (null == t || null == e) return;
                 let n = t.getGuildId();
-                return a(null != n, "This channel cannot be guildless."), N(t, e.id, !0), r.default.patch({
+                return a(null != n, "This channel cannot be guildless."), m(t, e.id, !0), i.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(n, e.id),
                     body: {
                         suppress: !0,
@@ -1066,15 +1025,15 @@
             function O(e, t, n) {
                 let l = e.getGuildId();
                 a(null != l, "Channel cannot be guildless");
-                let r = e.permissionOverwrites[l],
+                let i = e.permissionOverwrites[l],
                     s = {
                         id: l,
                         type: d.PermissionOverwriteType.ROLE,
                         allow: f.default.NONE,
                         deny: f.default.NONE,
-                        ...r
+                        ...i
                     };
-                n ? (s.allow = u.default.add(s.allow, t), s.deny = u.default.remove(s.deny, t)) : (s.allow = u.default.remove(s.allow, t), s.deny = u.default.add(s.deny, t)), i.default.updatePermissionOverwrite(e.id, s)
+                n ? (s.allow = u.default.add(s.allow, t), s.deny = u.default.remove(s.deny, t)) : (s.allow = u.default.remove(s.allow, t), s.deny = u.default.add(s.deny, t)), r.default.updatePermissionOverwrite(e.id, s)
             }
             async function p(e, t, n, l) {
                 if ("" === t) return;
@@ -1108,21 +1067,21 @@
             var l = n("945956"),
                 a = n("387111"),
                 u = n("991170"),
-                r = n("834052"),
-                i = n("837979"),
+                i = n("834052"),
+                r = n("837979"),
                 d = n("49111"),
                 s = n("606762"),
                 o = n("782340");
 
             function c(e, t, n, l) {
                 let u = t[0],
-                    r = a.default.getName(e, n, u),
-                    i = null != l ? l : t.length;
-                return 1 === i && null != u ? r : null == u ? o.default.Messages.SPEAKING_COUNT.format({
-                    count: i
+                    i = a.default.getName(e, n, u),
+                    r = null != l ? l : t.length;
+                return 1 === r && null != u ? i : null == u ? o.default.Messages.SPEAKING_COUNT.format({
+                    count: r
                 }) : o.default.Messages.USER_SUMMARY_WITH_OTHERS.format({
-                    name: r,
-                    count: i - 1
+                    name: i,
+                    count: r - 1
                 })
             }
 
@@ -1141,13 +1100,13 @@
             }
 
             function E(e) {
-                let t = r.default.getStageInstanceByChannel(e.id);
+                let t = i.default.getStageInstanceByChannel(e.id);
                 return {
                     channel_id: e.id,
                     guild_id: e.guild_id,
                     topic: null == t ? void 0 : t.topic,
                     media_session_id: l.default.getMediaSessionId(),
-                    request_to_speak_state: u.default.canEveryoneRole(d.Permissions.REQUEST_TO_SPEAK, e) ? i.RequestToSpeakPermissionStates.EVERYONE : i.RequestToSpeakPermissionStates.NO_ONE,
+                    request_to_speak_state: u.default.canEveryoneRole(d.Permissions.REQUEST_TO_SPEAK, e) ? r.RequestToSpeakPermissionStates.EVERYONE : r.RequestToSpeakPermissionStates.NO_ONE,
                     stage_instance_id: null == t ? void 0 : t.id
                 }
             }
@@ -1159,28 +1118,28 @@
                     return u
                 },
                 updateStageInstance: function() {
-                    return r
+                    return i
                 },
                 endStageInstance: function() {
-                    return i
+                    return r
                 }
             });
             var l = n("990746"),
                 a = n("49111");
-            async function u(e, t, n, u, r) {
-                let i = await l.default.post({
+            async function u(e, t, n, u, i) {
+                let r = await l.default.post({
                     url: a.Endpoints.STAGE_INSTANCES,
                     body: {
                         channel_id: e,
                         topic: t,
                         privacy_level: n,
-                        guild_scheduled_event_id: r,
+                        guild_scheduled_event_id: i,
                         send_start_notification: u
                     }
                 });
-                return i.body
+                return r.body
             }
-            async function r(e, t, n) {
+            async function i(e, t, n) {
                 let u = await l.default.patch({
                     url: a.Endpoints.STAGE_INSTANCE(e),
                     body: {
@@ -1191,7 +1150,7 @@
                 return u.body
             }
 
-            function i(e) {
+            function r(e) {
                 return l.default.delete(a.Endpoints.STAGE_INSTANCE(e))
             }
         },
@@ -1207,8 +1166,8 @@
             });
             var l, a, u = n("920040");
             n("773670");
-            var r = n("575482"),
-                i = n.n(r),
+            var i = n("575482"),
+                r = n.n(i),
                 d = n("77078"),
                 s = n("36694"),
                 o = n("381546"),
@@ -1221,7 +1180,7 @@
                     children: t,
                     messageType: n,
                     className: l,
-                    textColor: r = "text-normal",
+                    textColor: i = "text-normal",
                     textVariant: _ = "text-sm/medium"
                 } = e, T = function(e) {
                     switch (e) {
@@ -1247,7 +1206,7 @@
                     }
                 }(n);
                 return (0, u.jsxs)("div", {
-                    className: i(E.container, I, l),
+                    className: r(E.container, I, l),
                     children: [(0, u.jsx)("div", {
                         className: E.iconDiv,
                         children: (0, u.jsx)(T, {
@@ -1255,7 +1214,7 @@
                         })
                     }), (0, u.jsx)(d.Text, {
                         className: E.text,
-                        color: r,
+                        color: i,
                         variant: _,
                         children: t
                     })]
@@ -1266,24 +1225,24 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return r
                 }
             });
             var l = n("920040");
             n("773670");
             var a = n("469563"),
                 u = n("35647"),
-                r = n("75196"),
-                i = (0, a.replaceIcon)(function(e) {
+                i = n("75196"),
+                r = (0, a.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: n = 24,
                         color: a = "currentColor",
                         foreground: u,
-                        ...i
+                        ...r
                     } = e;
                     return (0, l.jsx)("svg", {
-                        ...(0, r.default)(i),
+                        ...(0, i.default)(r),
                         width: t,
                         height: n,
                         viewBox: "0 0 24 24",

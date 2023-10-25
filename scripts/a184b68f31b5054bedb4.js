@@ -5512,11 +5512,11 @@
             function p(e) {
                 let {
                     code: t
-                } = e, [n, p] = t.split("-"), {
-                    guildScheduledEvent: T,
-                    guild: g,
-                    channel: A,
-                    isMember: S
+                } = e, [n, p, T] = t.split("-"), {
+                    guildScheduledEvent: g,
+                    guild: A,
+                    channel: S,
+                    isMember: C
                 } = (0, l.useStateFromStoresObject)([m.default, c.default, o.default, d.default, f.default], () => {
                     var e, t;
                     let s = null !== (t = m.default.getGuildScheduledEvent(p)) && void 0 !== t ? t : void 0,
@@ -5533,17 +5533,18 @@
                 return a.useEffect(() => {
                     E.default.getGuildEventUserCounts(n), E.default.getGuildEventsForCurrentUser(n)
                 }, [n]), (0, s.jsx)(h.default, {
-                    guild: g,
-                    channel: A,
-                    guildScheduledEvent: T,
-                    isMember: S,
+                    guild: A,
+                    channel: S,
+                    guildScheduledEvent: g,
+                    isMember: C,
                     onAcceptInstantInvite: I.NOOP,
                     onTransitionToInviteChannel: function() {
                         if ((0, r.shouldShowMembershipVerificationGate)(n)) {
                             (0, i.openMemberVerificationModal)(n);
                             return
-                        }(null == A ? void 0 : A.isGuildStageVoice()) ? (0, u.connectAndOpen)(A) : (null == A ? void 0 : A.isGuildVoice()) && _.default.joinVoiceEvent(A.guild_id, A.id)
-                    }
+                        }(null == S ? void 0 : S.isGuildStageVoice()) ? (0, u.connectAndOpen)(S) : (null == S ? void 0 : S.isGuildVoice()) && _.default.joinVoiceEvent(S.guild_id, S.id)
+                    },
+                    recurrenceId: T
                 })
             }
         },

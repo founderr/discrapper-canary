@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["96634"], {
+    ["43708"], {
         569272: function(e, t, l) {
             "use strict";
             l.r(t), l.d(t, {
@@ -300,10 +300,10 @@
                 } = e, b = i.useMemo(() => null == s ? null : s instanceof u.default ? s : new u.default(s), [s]);
                 if (null == l || null == b) return null;
                 let {
-                    topic: O,
-                    speaker_count: v,
+                    topic: v,
+                    speaker_count: O,
                     participant_count: T
-                } = l, D = null !== (t = l.members) && void 0 !== t ? t : [], A = I ? D.slice(0, 3) : D, G = v - A.length;
+                } = l, D = null !== (t = l.members) && void 0 !== t ? t : [], A = I ? D.slice(0, 3) : D, G = O - A.length;
                 return I && (G += D.length - A.length), (0, n.jsxs)("div", {
                     children: [(0, n.jsxs)("div", {
                         className: m.flex,
@@ -354,7 +354,7 @@
                         className: r(m.header, {
                             [m.embed]: I
                         }),
-                        children: O
+                        children: v
                     }), (0, n.jsxs)("div", {
                         className: r(m.members, {
                             [m.embed]: I
@@ -391,6 +391,48 @@
                         })]
                     })]
                 })
+            }
+        },
+        397680: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var n = l("773670"),
+                i = l("498225"),
+                s = l("398604");
+
+            function r(e, t) {
+                let l = (0, i.useStateFromStoresArray)([s.default], () => {
+                        var e, l;
+                        return null !== (l = null === (e = s.default.getGuildScheduledEvent(t)) || void 0 === e ? void 0 : e.guild_scheduled_event_exceptions) && void 0 !== l ? l : []
+                    }),
+                    r = n.useMemo(() => null == l ? void 0 : l.find(t => t.event_exception_id === e), [l, e]);
+                return r
+            }
+        },
+        538572: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
+                    return u
+                }
+            });
+            var n = l("498225"),
+                i = l("299039"),
+                s = l("398604"),
+                r = l("397680"),
+                a = l("822516");
+
+            function u(e, t) {
+                let l = (0, n.useStateFromStores)([s.default], () => s.default.getGuildScheduledEvent(e)),
+                    u = (0, r.default)(t, e);
+                if (null == l) return null;
+                if (null == t) return new Date(l.scheduled_start_time);
+                let d = null != l.recurrence_rule ? (0, a.getRRule)(l.recurrence_rule) : null;
+                return null == d ? null : (null == u ? void 0 : u.scheduled_start_time) == null ? new Date(i.default.extractTimestamp(t)) : new Date(u.scheduled_start_time)
             }
         },
         210721: function(e, t, l) {
@@ -591,23 +633,23 @@
                     shouldAnimate: o = !0,
                     defaultAnimationState: c,
                     idleAnimationState: f
-                } = e, E = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), [_, h] = i.useState(c), S = i.useRef((0, u.getGiftAnimationData)(t, _)), [C, m] = i.useState(null == f), [p, I] = i.useState(!1), [g, b] = i.useState(-1), O = () => {
+                } = e, E = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), [_, h] = i.useState(c), S = i.useRef((0, u.getGiftAnimationData)(t, _)), [C, m] = i.useState(null == f), [p, I] = i.useState(!1), [g, b] = i.useState(-1), v = () => {
                     S.current = (0, u.getGiftAnimationData)(t, _), b(e => e + 1)
-                }, v = () => {
+                }, O = () => {
                     m(!1), I(!0), b(-1), h(c)
                 };
                 i.useEffect(() => {
                     null == f && h(c)
                 }, [f, c]), i.useEffect(() => {
                     if (null != f && g >= 0) {
-                        v();
+                        O();
                         return
                     }
-                    O()
+                    v()
                 }, [t, f]), i.useEffect(() => {
-                    (!p || null == f) && O()
+                    (!p || null == f) && v()
                 }, [_]), i.useEffect(() => {
-                    p && (m(null == f), I(!1), O())
+                    p && (m(null == f), I(!1), v())
                 }, [p]);
                 if (!d.PremiumGiftStyles.hasOwnProperty(t)) throw Error("Unexpected giftStyle ".concat(t));
                 return (0, n.jsx)(a.default, {
@@ -739,9 +781,9 @@
                 I = new Set,
                 g = {},
                 b = {},
-                O = new Set;
+                v = new Set;
 
-            function v(e) {
+            function O(e) {
                 let t = f.default.createFromServer(e),
                     l = t.code;
                 if (null != S[l]) S[l] = S[l].merge(t);
@@ -752,7 +794,7 @@
                             let l = S[t];
                             if (null == l || null == l.expiresAt) return;
                             let n = l.expiresAt.valueOf() - r().valueOf();
-                            if (n <= 0) delete S[t], delete h[t], x.emitChange();
+                            if (n <= 0) delete S[t], delete h[t], N.emitChange();
                             else {
                                 let l = h[t];
                                 if (null == l) return;
@@ -764,7 +806,7 @@
 
             function T(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                if (t && !O.has(e.channel_id)) return !1;
+                if (t && !v.has(e.channel_id)) return !1;
                 let l = (0, E.isGiftCodeEmbed)(e) ? (0, E.findGiftCodes)((null == e ? void 0 : e.embeds) != null ? null == e ? void 0 : e.embeds[0].url : void 0) : (0, E.findGiftCodes)(e.content);
                 return 0 !== l.length && (l.forEach(e => {
                     !C.includes(e) && !p.includes(e) && (D({
@@ -792,7 +834,7 @@
                     channelId: t,
                     messages: l
                 } = e;
-                O.add(t), l.forEach(e => T(e, !0))
+                v.add(t), l.forEach(e => T(e, !0))
             }
 
             function R(e) {
@@ -802,7 +844,7 @@
                 if (null == t) return !1;
                 null == t || t.forEach(e => T(e))
             }
-            class N extends a.default.Store {
+            class x extends a.default.Store {
                 get(e) {
                     let t = S[e];
                     return null == t || t.isExpired() ? null : t
@@ -838,23 +880,23 @@
                     return m
                 }
             }
-            N.displayName = "GiftCodeStore";
-            let x = new N(d.default, {
+            x.displayName = "GiftCodeStore";
+            let N = new x(d.default, {
                 CONNECTION_OPEN: function() {
-                    return O.clear(), !1
+                    return v.clear(), !1
                 },
                 CHANNEL_SELECT: function(e) {
                     let {
                         channelId: t
                     } = e;
-                    return null != t && O.add(t), !1
+                    return null != t && v.add(t), !1
                 },
                 GIFT_CODE_RESOLVE: D,
                 GIFT_CODE_RESOLVE_SUCCESS: function(e) {
                     let {
                         giftCode: t
                     } = e;
-                    return C = C.filter(e => e !== t.code), !p.includes(t.code) && (p = [...p, t.code]), v(t)
+                    return C = C.filter(e => e !== t.code), !p.includes(t.code) && (p = [...p, t.code]), O(t)
                 },
                 GIFT_CODE_RESOLVE_FAILURE: function(e) {
                     let {
@@ -906,7 +948,7 @@
                     let {
                         giftCode: t
                     } = e;
-                    v(t)
+                    O(t)
                 },
                 GIFT_CODES_FETCH: function(e) {
                     let {
@@ -921,7 +963,7 @@
                         skuId: l,
                         subscriptionPlanId: n
                     } = e;
-                    t.forEach(v);
+                    t.forEach(O);
                     let i = (0, E.makeComboId)(l, n);
                     g[i] = Date.now(), I.delete(i)
                 },
@@ -981,7 +1023,7 @@
                     })
                 }
             });
-            var F = x
+            var F = N
         },
         849467: function(e, t, l) {
             "use strict";

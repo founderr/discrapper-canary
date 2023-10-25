@@ -16,11 +16,11 @@
                     width: t = 24,
                     height: l = 24,
                     color: r = a.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: i = "",
-                    ...u
+                    colorClass: u = "",
+                    ...i
                 } = e;
                 return (0, n.jsx)("svg", {
-                    ...(0, s.default)(u),
+                    ...(0, s.default)(i),
                     xmlns: "http://www.w3.org/2000/svg",
                     width: t,
                     height: l,
@@ -31,7 +31,7 @@
                         fillRule: "evenodd",
                         d: "M9.693 2.889a.623.623 0 0 0 .381-.43 2 2 0 0 1 3.852 0c.054.195.19.363.38.43A7.003 7.003 0 0 1 19 9.5v2.086a.5.5 0 0 0 .128.334l1.102 1.224a3 3 0 0 1 .77 2.007v.279c0 .668-.336 1.29-.946 1.564-1.315.593-4 1.506-8.054 1.506-4.055 0-6.74-.913-8.054-1.506C3.336 16.72 3 16.098 3 15.43v-.279a3 3 0 0 1 .77-2.007l1.102-1.224A.5.5 0 0 0 5 11.586V9.5a7.003 7.003 0 0 1 4.693-6.611Zm-.512 16.955A.16.16 0 0 0 9 20a3 3 0 1 0 6 0 .16.16 0 0 0-.18-.156c-.852.097-1.792.156-2.82.156a24.86 24.86 0 0 1-2.82-.156Z",
                         clipRule: "evenodd",
-                        className: i
+                        className: u
                     })
                 })
             }
@@ -52,11 +52,11 @@
                     width: t = 24,
                     height: l = 24,
                     color: r = a.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: i = "",
-                    ...u
+                    colorClass: u = "",
+                    ...i
                 } = e;
                 return (0, n.jsx)("svg", {
-                    ...(0, s.default)(u),
+                    ...(0, s.default)(i),
                     xmlns: "http://www.w3.org/2000/svg",
                     width: t,
                     height: l,
@@ -67,7 +67,7 @@
                         fillRule: "evenodd",
                         d: "M12 23c3 0 9-8.03 9-13a9 9 0 1 0-18 0c0 4.97 6 13 9 13Zm0-10a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z",
                         clipRule: "evenodd",
-                        className: i
+                        className: u
                     })
                 })
             }
@@ -76,7 +76,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 guildEventDetailsParser: function() {
-                    return u
+                    return i
                 }
             });
             var n = l("367376"),
@@ -89,7 +89,7 @@
                         mustConfirmExternalLink: !0
                     }).react
                 },
-                i = {
+                u = {
                     ...n.default.guildEventRules.channelMention,
                     react: (0, a.default)({
                         enableBuildOverrides: !1,
@@ -97,10 +97,10 @@
                         shouldStopPropagation: !0
                     }).react
                 },
-                u = n.default.reactParserFor({
+                i = n.default.reactParserFor({
                     ...n.default.guildEventRules,
                     link: r,
-                    channelMention: i
+                    channelMention: u
                 })
         },
         93550: function(e, t, l) {
@@ -136,8 +136,8 @@
                 a = l("773670"),
                 s = l("575482"),
                 r = l.n(s),
-                i = l("1339"),
-                u = l("616348"),
+                u = l("1339"),
+                i = l("616348"),
                 c = l("422137");
 
             function d(e) {
@@ -146,12 +146,12 @@
                     className: l,
                     guildId: s,
                     truncate: d = !0
-                } = e, o = a.useMemo(() => (0, i.guildEventDetailsParser)(t, !0, {
+                } = e, o = a.useMemo(() => (0, u.guildEventDetailsParser)(t, !0, {
                     guildId: s
                 }), [t, s]);
                 return (0, n.jsx)("div", {
-                    className: r(u.descriptionText, l, c.markup, {
-                        [u.truncate]: d
+                    className: r(i.descriptionText, l, c.markup, {
+                        [i.truncate]: d
                     }),
                     children: o
                 })
@@ -161,7 +161,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return i
+                    return u
                 }
             });
             var n = l("920040");
@@ -170,7 +170,7 @@
                 s = l.n(a),
                 r = l("879634");
 
-            function i(e) {
+            function u(e) {
                 let {
                     source: t,
                     className: l
@@ -187,13 +187,13 @@
             "use strict";
             l.r(t), l.d(t, {
                 GuildEventStatus: function() {
-                    return N
+                    return S
                 },
                 GuildEventDetails: function() {
-                    return m
+                    return g
                 },
                 default: function() {
-                    return x
+                    return D
                 }
             });
             var n = l("920040");
@@ -201,149 +201,156 @@
             var a = l("575482"),
                 s = l.n(a),
                 r = l("498225"),
-                i = l("77078"),
-                u = l("26989"),
+                u = l("77078"),
+                i = l("26989"),
                 c = l("155207"),
                 d = l("158998"),
                 o = l("398604"),
-                E = l("909151"),
-                f = l("255050"),
-                v = l("393745"),
-                T = l("782340"),
-                h = l("468217");
+                E = l("397680"),
+                f = l("538572"),
+                v = l("189443"),
+                T = l("909151"),
+                h = l("255050"),
+                N = l("393745"),
+                m = l("745049"),
+                x = l("782340"),
+                C = l("468217");
 
-            function N(e) {
+            function S(e) {
                 let {
                     className: t,
                     creator: l,
                     guildId: a,
-                    isNew: E,
-                    isHub: f = !1,
-                    guildEventId: N,
-                    eventPreview: m
-                } = e, x = (0, r.useStateFromStores)([o.default], () => o.default.getGuildScheduledEvent(N)), C = null != x ? x : m, g = (0, r.useStateFromStores)([u.default], () => u.default.getNick(a, null == l ? void 0 : l.id), [a, l]);
-                if (null == C) return null;
+                    isNew: T,
+                    isHub: h = !1,
+                    guildEventId: S,
+                    eventPreview: g,
+                    recurrenceId: D
+                } = e, _ = (0, r.useStateFromStores)([o.default], () => o.default.getGuildScheduledEvent(S)), A = null != _ ? _ : g, R = (0, r.useStateFromStores)([i.default], () => i.default.getNick(a, null == l ? void 0 : l.id), [a, l]), p = (0, f.default)(S, D), I = (0, E.default)(D, S), L = null != D && null != p, j = null != I ? I.is_canceled ? m.GuildScheduledEventStatus.CANCELED : m.GuildScheduledEventStatus.SCHEDULED : null;
+                if (null == A) return null;
                 let {
-                    entity_type: S,
-                    status: D,
-                    scheduled_start_time: _,
-                    user_count: A = 1,
-                    recurrence_rule: R
-                } = C;
+                    entity_type: w,
+                    status: O,
+                    scheduled_start_time: G,
+                    user_count: M = 1,
+                    recurrence_rule: V
+                } = A;
                 return (0, n.jsxs)("div", {
-                    className: s(h.statusContainer, t),
-                    children: [(0, n.jsx)(v.GuildEventTimeStatus, {
-                        startTime: _,
-                        status: D,
-                        eventType: S,
-                        isNew: E,
-                        recurrenceRule: R
+                    className: s(C.statusContainer, t),
+                    children: [(0, n.jsx)(N.GuildEventTimeStatus, {
+                        startTime: L ? p.toISOString() : G,
+                        status: null != j ? j : O,
+                        eventType: w,
+                        isNew: T,
+                        recurrenceRule: (0, v.recurrenceRuleFromServer)(V)
                     }), (0, n.jsx)("div", {
-                        className: h.spacer
-                    }), !f && null != l && (0, n.jsx)(i.Tooltip, {
-                        text: T.default.Messages.GUILD_EVENT_CREATED_BY.format({
-                            username: null != g ? g : d.default.getName(l)
+                        className: C.spacer
+                    }), !h && null != l && (0, n.jsx)(u.Tooltip, {
+                        text: x.default.Messages.GUILD_EVENT_CREATED_BY.format({
+                            username: null != R ? R : d.default.getName(l)
                         }),
-                        children: e => (0, n.jsx)(i.Avatar, {
+                        children: e => (0, n.jsx)(u.Avatar, {
                             ...e,
                             src: l.getAvatarURL(a, 20),
-                            size: i.AvatarSizes.SIZE_20,
-                            "aria-label": null != g ? g : l.username,
-                            className: h.creator
+                            size: u.AvatarSizes.SIZE_20,
+                            "aria-label": null != R ? R : l.username,
+                            className: C.creator
                         })
-                    }), null != A && (0, n.jsx)(i.Tooltip, {
-                        text: T.default.Messages.GUILD_EVENT_INTERESTED_COUNT.format({
-                            count: A
+                    }), null != M && (0, n.jsx)(u.Tooltip, {
+                        text: x.default.Messages.GUILD_EVENT_INTERESTED_COUNT.format({
+                            count: M
                         }),
                         children: e => (0, n.jsxs)("div", {
-                            className: h.rsvpCount,
+                            className: C.rsvpCount,
                             ...e,
                             children: [(0, n.jsx)(c.default, {
                                 width: 12,
                                 height: 12,
-                                className: h.rsvpIcon
-                            }), (0, n.jsx)(i.Text, {
+                                className: C.rsvpIcon
+                            }), (0, n.jsx)(u.Text, {
                                 color: "header-secondary",
                                 variant: "text-sm/normal",
-                                children: A
+                                children: M
                             })]
                         })
                     })]
                 })
             }
 
-            function m(e) {
+            function g(e) {
                 let {
                     headerVariant: t = "heading-lg/medium",
                     descriptionClassName: l,
                     name: a,
                     description: r,
-                    truncate: u,
+                    truncate: i,
                     guildId: c,
                     imageSource: d
                 } = e;
                 return (0, n.jsxs)("div", {
                     className: s({
-                        [h.withThumbnail]: null != d
+                        [C.withThumbnail]: null != d
                     }),
                     children: [(0, n.jsxs)("div", {
                         className: s({
-                            [h.descriptionWithThumbnail]: null != d
+                            [C.descriptionWithThumbnail]: null != d
                         }),
-                        children: [(0, n.jsx)(i.Heading, {
+                        children: [(0, n.jsx)(u.Heading, {
                             variant: t,
                             selectable: !0,
-                            className: h.eventName,
+                            className: C.eventName,
                             children: a
-                        }), null != r && (0, n.jsx)(E.default, {
+                        }), null != r && (0, n.jsx)(T.default, {
                             description: r,
-                            className: s(l, h.description),
-                            truncate: u,
+                            className: s(l, C.description),
+                            truncate: i,
                             guildId: c
                         })]
                     }), null != d && (0, n.jsx)("div", {
-                        className: h.thumbnailContainer,
-                        children: (0, n.jsx)(f.default, {
+                        className: C.thumbnailContainer,
+                        children: (0, n.jsx)(h.default, {
                             source: d,
-                            className: h.thumbnail
+                            className: C.thumbnail
                         })
                     })]
                 })
             }
 
-            function x(e) {
+            function D(e) {
                 let {
                     headerVariant: t,
                     descriptionClassName: l,
                     creator: a,
                     name: s,
                     description: r,
-                    imageSource: i,
-                    isHub: u = !1,
+                    imageSource: u,
+                    isHub: i = !1,
                     truncate: c,
                     guildId: d,
                     isNew: o,
                     guildEventId: E,
-                    eventPreview: f
+                    eventPreview: f,
+                    recurrenceId: v
                 } = e;
                 return (0, n.jsxs)("div", {
-                    className: h.container,
-                    children: [(0, n.jsx)(N, {
-                        className: h.eventInfoStatusContainer,
+                    className: C.container,
+                    children: [(0, n.jsx)(S, {
+                        className: C.eventInfoStatusContainer,
                         creator: a,
                         guildId: d,
-                        isHub: u,
+                        isHub: i,
                         isNew: o,
                         guildEventId: E,
-                        eventPreview: f
-                    }), (0, n.jsx)(m, {
+                        eventPreview: f,
+                        recurrenceId: v
+                    }), (0, n.jsx)(g, {
                         name: s,
                         description: r,
                         headerVariant: t,
                         descriptionClassName: l,
                         truncate: c,
                         guildId: d,
-                        imageSource: i
+                        imageSource: u
                     })]
                 })
             }
@@ -352,107 +359,110 @@
             "use strict";
             l.r(t), l.d(t, {
                 GuildEventTimeStatus: function() {
-                    return S
+                    return A
                 }
             });
             var n, a, s = l("920040"),
                 r = l("773670"),
-                i = l("575482"),
-                u = l.n(i),
-                c = l("912557"),
-                d = l("77078"),
-                o = l("449918"),
-                E = l("943232"),
-                f = l("93393"),
-                v = l("956089"),
-                T = l("822516"),
-                h = l("745049"),
-                N = l("809924"),
-                m = l("782340"),
-                x = l("644501");
+                u = l("575482"),
+                i = l.n(u),
+                c = l("377849"),
+                d = l.n(c),
+                o = l("912557"),
+                E = l("77078"),
+                f = l("449918"),
+                v = l("943232"),
+                T = l("93393"),
+                h = l("956089"),
+                N = l("822516"),
+                m = l("757767"),
+                x = l("745049"),
+                C = l("809924"),
+                S = l("782340"),
+                g = l("644501");
             (n = a || (a = {}))[n.SCHEDULED = 0] = "SCHEDULED", n[n.STARTING_SOON = 1] = "STARTING_SOON", n[n.READY = 2] = "READY", n[n.STARTED = 3] = "STARTED", n[n.ENDED = 4] = "ENDED", n[n.CANCELED = 5] = "CANCELED";
 
-            function C() {
-                return (0, s.jsx)(v.TextBadge, {
-                    className: x.newBadge,
-                    color: c.default.unsafe_rawColors.BRAND_260.css,
-                    text: (0, s.jsx)(d.Text, {
-                        className: x.newBadgeText,
+            function D() {
+                return (0, s.jsx)(h.TextBadge, {
+                    className: g.newBadge,
+                    color: o.default.unsafe_rawColors.BRAND_260.css,
+                    text: (0, s.jsx)(E.Text, {
+                        className: g.newBadgeText,
                         variant: "text-xs/bold",
-                        children: m.default.Messages.NEW
+                        children: S.default.Messages.NEW
                     })
                 })
             }
 
-            function g(e) {
+            function _(e) {
                 let {
                     children: t,
                     className: l,
                     tooltipText: n
                 } = e;
                 return (0, s.jsx)("div", {
-                    className: u(x.eventStatusContainer, l),
-                    children: (0, s.jsx)(d.Tooltip, {
+                    className: i(g.eventStatusContainer, l),
+                    children: (0, s.jsx)(E.Tooltip, {
                         position: "right",
                         text: n,
                         shouldShow: null != n,
                         children: e => (0, s.jsx)("div", {
                             ...e,
-                            className: u(x.eventStatusContainer, l),
+                            className: i(g.eventStatusContainer, l),
                             children: t
                         })
                     })
                 })
             }
 
-            function S(e) {
+            function A(e) {
                 let {
                     startTime: t,
                     status: l,
                     eventType: n,
-                    className: i,
+                    className: u,
                     endTime: c,
-                    liveText: v,
-                    textVariant: S = "text-sm/semibold",
-                    isNew: D,
-                    recurrenceRule: _
-                } = e, A = (0, o.useThemedColorValue)(N.ThemeColor.TEXT_BRAND), R = (0, o.useThemedColorValue)(N.ThemeColor.TEXT_POSITIVE), p = (0, o.useThemedColorValue)(N.ThemeColor.TEXT_DANGER);
-                null == v && (v = n === h.GuildScheduledEventEntityTypes.EXTERNAL ? m.default.Messages.STAGE_CHANNEL_HAPPENING_NOW : m.default.Messages.STAGE_CHANNEL_LIVE_NOW);
+                    liveText: o,
+                    textVariant: h = "text-sm/semibold",
+                    isNew: A,
+                    recurrenceRule: R
+                } = e, p = (0, f.useThemedColorValue)(C.ThemeColor.TEXT_BRAND), I = (0, f.useThemedColorValue)(C.ThemeColor.TEXT_POSITIVE), L = (0, f.useThemedColorValue)(C.ThemeColor.TEXT_DANGER);
+                null == o && (o = n === x.GuildScheduledEventEntityTypes.EXTERNAL ? S.default.Messages.STAGE_CHANNEL_HAPPENING_NOW : S.default.Messages.STAGE_CHANNEL_LIVE_NOW);
                 let [{
-                    startDateTimeString: I,
-                    endDateTimeString: j,
-                    currentOrPastEvent: w,
-                    upcomingEvent: L,
-                    diffMinutes: O
-                }, G] = r.useState((0, T.getEventTimeData)(t, c));
+                    startDateTimeString: j,
+                    endDateTimeString: w,
+                    currentOrPastEvent: O,
+                    upcomingEvent: G,
+                    diffMinutes: M
+                }, V] = r.useState((0, N.getEventTimeData)(t, c));
                 r.useEffect(() => {
-                    G((0, T.getEventTimeData)(t, c));
-                    let e = setInterval(() => G((0, T.getEventTimeData)(t, c)), 1e3);
+                    V((0, N.getEventTimeData)(t, c));
+                    let e = setInterval(() => V((0, N.getEventTimeData)(t, c)), 1e3);
                     return () => {
                         clearInterval(e)
                     }
                 }, [t, c]);
-                let M = I;
-                null != j && "" !== j && (M = m.default.Messages.START_DATE_TO_END_DATE.format({
-                    start: I,
-                    end: j
+                let b = j;
+                null != w && "" !== w && (b = S.default.Messages.START_DATE_TO_END_DATE.format({
+                    start: j,
+                    end: w
                 }));
-                let V = r.useMemo(() => l === h.GuildScheduledEventStatus.CANCELED ? a.CANCELED : l === h.GuildScheduledEventStatus.ACTIVE ? a.STARTED : h.GuildScheduledEventStatusDone.has(l) ? a.ENDED : w ? a.READY : L ? a.STARTING_SOON : a.SCHEDULED, [l, w, L]),
-                    b = function(e, t, l, n, r) {
+                let U = r.useMemo(() => l === x.GuildScheduledEventStatus.CANCELED ? a.CANCELED : l === x.GuildScheduledEventStatus.ACTIVE ? a.STARTED : x.GuildScheduledEventStatusDone.has(l) ? a.ENDED : O ? a.READY : G ? a.STARTING_SOON : a.SCHEDULED, [l, O, G]),
+                    H = function(e, t, l, n, r) {
                         switch (e) {
                             case a.STARTING_SOON:
-                                return r > 0 ? m.default.Messages.STARTING_IN_MINUTES.format({
+                                return r > 0 ? S.default.Messages.STARTING_IN_MINUTES.format({
                                     minutes: r
-                                }) : m.default.Messages.STARTING_SOON;
+                                }) : S.default.Messages.STARTING_SOON;
                             case a.READY:
-                                return m.default.Messages.STARTING_SOON;
+                                return S.default.Messages.STARTING_SOON;
                             case a.STARTED:
-                                return null != n && "" !== n ? m.default.Messages.START_DATE_TO_END_DATE_WITH_COLOR.format({
+                                return null != n && "" !== n ? S.default.Messages.START_DATE_TO_END_DATE_WITH_COLOR.format({
                                     start: l,
-                                    startHook: e => (0, s.jsx)(d.Text, {
+                                    startHook: e => (0, s.jsx)(E.Text, {
                                         color: "text-positive",
                                         variant: "text-sm/semibold",
-                                        className: x.liveEventEndTime,
+                                        className: g.liveEventEndTime,
                                         children: e
                                     }),
                                     end: n
@@ -460,34 +470,34 @@
                             default:
                                 return t
                         }
-                    }(V, M, v, j, O),
+                    }(U, b, o, w, M),
                     {
                         Icon: B,
-                        iconColor: H,
-                        textColor: k,
-                        tooltipText: U
+                        iconColor: P,
+                        textColor: Y,
+                        tooltipText: k
                     } = r.useMemo(() => (function(e) {
                         let t, {
                                 timeStatus: l,
                                 textBrand: n,
                                 textPositive: s,
                                 textDanger: r,
-                                endDateTimeString: i,
-                                startDateTimeString: u
+                                endDateTimeString: u,
+                                startDateTimeString: i
                             } = e,
-                            c = E.default,
+                            c = v.default,
                             d = n,
                             o = "header-secondary";
                         switch (l) {
                             case a.STARTED:
-                                d = s, o = null != i ? void 0 : "text-positive";
+                                d = s, o = null != u ? void 0 : "text-positive";
                                 break;
                             case a.ENDED:
-                                c = f.default;
+                                c = T.default;
                                 break;
                             case a.READY:
                             case a.STARTING_SOON:
-                                o = "text-brand", t = u;
+                                o = "text-brand", t = i;
                                 break;
                             case a.CANCELED:
                                 d = r
@@ -499,36 +509,61 @@
                             tooltipText: t
                         }
                     })({
-                        timeStatus: V,
-                        textBrand: A,
-                        textPositive: R,
-                        textDanger: p,
-                        endDateTimeString: j,
-                        startDateTimeString: I
-                    }), [V, A, R, p, j, I]),
+                        timeStatus: U,
+                        textBrand: p,
+                        textPositive: I,
+                        textDanger: L,
+                        endDateTimeString: w,
+                        startDateTimeString: j
+                    }), [U, p, I, L, w, j]),
                     y = null;
-                if (null != _) {
-                    let e = (0, T.getRRule)(_);
-                    y = m.default.Messages.GUILD_SCHEDULED_EVENT_RECURRENCE_RULE.format({
+                if (null != R) {
+                    let e = (0, N.getRRule)(R);
+                    y = S.default.Messages.GUILD_SCHEDULED_EVENT_RECURRENCE_RULE.format({
                         recurrenceRule: e.toText()
-                    })
+                    });
+                    let l = d(t),
+                        n = (0, N.recurrenceRuleToOption)(l, R);
+                    y = function(e, t) {
+                        let l = t.toDate(),
+                            n = l.toLocaleString(S.default.getLocale(), {
+                                weekday: "long"
+                            });
+                        switch (e) {
+                            case m.RecurrenceOptions.WEEKLY:
+                                return S.default.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKLY.format({
+                                    weekday: n
+                                });
+                            case m.RecurrenceOptions.YEARLY:
+                                return S.default.Messages.GUILD_SCHEDULED_EVENT_REPEATS_YEARLY.format({
+                                    date: l.toLocaleString(S.default.getLocale(), {
+                                        month: "short",
+                                        day: "2-digit"
+                                    })
+                                });
+                            case m.RecurrenceOptions.WEEKDAY_ONLY:
+                                return S.default.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKDAYS;
+                            default:
+                                return null
+                        }
+                    }(n, l)
                 }
-                return (0, s.jsxs)(g, {
-                    className: u(i, {
-                        [x.isRecurring]: null != y
+                return (0, s.jsxs)(_, {
+                    className: i(u, {
+                        [g.isRecurring]: null != y
                     }),
-                    tooltipText: U,
-                    children: [D ? (0, s.jsx)(C, {}) : (0, s.jsx)(B, {
-                        color: H,
+                    tooltipText: k,
+                    children: [A ? (0, s.jsx)(D, {}) : (0, s.jsx)(B, {
+                        color: P,
                         width: 20,
                         height: 20
                     }), (0, s.jsxs)("div", {
-                        className: x.eventStatusLabel,
-                        children: [(0, s.jsx)(d.Text, {
-                            color: k,
-                            variant: S,
-                            children: b
-                        }), null != y && (0, s.jsx)(d.Text, {
+                        className: g.eventStatusLabel,
+                        children: [(0, s.jsx)(E.Text, {
+                            color: Y,
+                            variant: h,
+                            children: H
+                        }), null != y && (0, s.jsx)(E.Text, {
                             color: "header-secondary",
                             variant: "text-xs/normal",
                             children: y
@@ -541,7 +576,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return i
+                    return u
                 }
             });
             var n = l("920040");
@@ -549,16 +584,16 @@
             var a = l("469563"),
                 s = l("524173"),
                 r = l("75196"),
-                i = (0, a.replaceIcon)(function(e) {
+                u = (0, a.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: l = 24,
                         color: a = "currentColor",
                         foreground: s,
-                        ...i
+                        ...u
                     } = e;
                     return (0, n.jsx)("svg", {
-                        ...(0, r.default)(i),
+                        ...(0, r.default)(u),
                         width: t,
                         height: l,
                         viewBox: "0 0 24 24",
@@ -577,7 +612,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return i
+                    return u
                 }
             });
             var n = l("920040");
@@ -585,7 +620,7 @@
             var a = l("469563"),
                 s = l("576044"),
                 r = l("75196"),
-                i = (0, a.replaceIcon)(function(e) {
+                u = (0, a.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: l = 24,
