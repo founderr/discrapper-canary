@@ -64440,8 +64440,8 @@ strong {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -137111,18 +137111,18 @@ html .invoiceCancelRow_c1bfe7 {
 }
 
 .root_de5ec7 {
+    position: relative;
     width: 700px;
-    max-height: 880px;
-    border-radius: 8px;
-    overflow: hidden
+    max-height: 900px;
+    border-radius: 8px
 }
 
 .theme-dark .root_de5ec7 {
-    background: var(--background-primary)
+    background: linear-gradient(to bottom, hsl(var(--primary-530-hsl)/0)43%, hsl(var(--primary-530-hsl)/1)43.01%, hsl(var(--primary-530-hsl)/.2)100%), var(--background-primary)
 }
 
 .theme-light .root_de5ec7 {
-    background: linear-gradient(20.94deg, var(--white-530)56.05%, white 88.71%)
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0)43%, var(--white)43.01%), linear-gradient(20.94deg, var(--white-530)56.05%, white 88.71%)
 }
 
 .splash__6fca0 {
@@ -137297,6 +137297,13 @@ html .invoiceCancelRow_c1bfe7 {
 .innerButton__7d545 {
     align-items: center;
     display: flex
+}
+
+.trialPill_d04c59 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%)
 }
 
 .learnMoreLink__43492 {

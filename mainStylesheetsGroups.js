@@ -20287,7 +20287,8 @@
                 innerButton: "innerButton__7d545",
                 nitroIconSubHeader: "nitroIconSubHeader__04f30",
                 termsApplyAnchor: "termsApplyAnchor_fcdbe9",
-                termsApplyBodyText: "termsApplyBodyText_f45b74"
+                termsApplyBodyText: "termsApplyBodyText_f45b74",
+                trialPill: "trialPill_d04c59"
             }
         },
         723462: function(e, t, o) {

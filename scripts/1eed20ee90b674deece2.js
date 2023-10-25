@@ -1903,7 +1903,7 @@
                     children: [(0, a.jsx)(E.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "240517"
+                        buildNumber: "240531"
                     }), (0, a.jsx)(m, {})]
                 }) : null
             }
@@ -44287,43 +44287,30 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return o
                 }
             });
             var a = n("920040");
             n("773670");
-            var s = n("819855"),
-                l = n("841098"),
-                i = e => {
+            var s = n("912557"),
+                l = n("819855"),
+                i = n("77078"),
+                r = n("841098"),
+                o = e => {
                     let {
                         className: t
-                    } = e, n = (0, l.default)();
-                    return (0, a.jsxs)("svg", {
+                    } = e, n = (0, r.default)(), o = (0, i.useToken)(s.default.colors.BACKGROUND_ACCENT).hex();
+                    return (0, a.jsx)("svg", {
                         width: "700",
-                        height: "613",
-                        viewBox: "0 0 700 613",
+                        height: "120",
+                        viewBox: "0 0 700 120",
                         className: t,
                         xmlns: "http://www.w3.org/2000/svg",
-                        children: [(0, a.jsx)("path", {
-                            fill: (0, s.isThemeDark)(n) ? "url(#paint0_linear_127_14184)" : "white",
-                            opacity: (0, s.isThemeDark)(n) ? "0.5" : "1",
-                            d: "M351 41C185.4 -31.8 48 10.6667 0 41V605C0 609.418 3.58174 613 8.00002 613H692C696.418 613 700 609.418 700 605V41C653.333 71.3333 516.6 113.8 351 41Z"
-                        }), (0, a.jsx)("defs", {
-                            children: (0, a.jsxs)("linearGradient", {
-                                id: "paint0_linear_127_14184",
-                                x1: "349",
-                                y1: "0.803345",
-                                x2: "349",
-                                y2: "613",
-                                gradientUnits: "userSpaceOnUse",
-                                children: [(0, a.jsx)("stop", {
-                                    stopColor: "#606060"
-                                }), (0, a.jsx)("stop", {
-                                    offset: "1",
-                                    stopColor: "#313338"
-                                })]
-                            })
-                        })]
+                        children: (0, a.jsx)("path", {
+                            fill: (0, l.isThemeDark)(n) ? o : "white",
+                            opacity: "1",
+                            d: "M351 39.047C185.4 -31.2102 48 9.77319 0 39.047V583.068C0 587.486 3.58174 591.068 8.00002 591.068H692C696.418 591.068 700 587.486 700 583.068V39.047C653.333 68.3208 516.6 109.304 351 39.047Z"
+                        })
                     })
                 }
         },
@@ -44331,152 +44318,160 @@
             "use strict";
             n.r(t), n.d(t, {
                 isEligibleForQ4DropAnnouncementModal: function() {
-                    return P
+                    return U
                 },
                 default: function() {
-                    return y
+                    return j
                 }
             });
             var a = n("920040");
             n("773670");
             var s = n("498225"),
                 l = n("975162"),
-                i = n("77078"),
-                r = n("997289"),
-                o = n("812204"),
-                u = n("685665"),
-                d = n("10641"),
-                c = n("649844"),
-                f = n("915639"),
-                E = n("697218"),
-                _ = n("181114"),
-                h = n("599110"),
-                I = n("701909"),
-                C = n("719923"),
-                m = n("896630"),
-                T = n("837797"),
-                S = n("917247"),
-                N = n("702542"),
-                A = n("646718"),
-                p = n("49111"),
-                g = n("782340"),
-                R = n("254438"),
-                O = n("169903"),
-                L = n("389291"),
-                v = n("676084"),
-                M = n("121432");
-            let x = "2023_q4_nitro_drop",
-                D = "DnkvLW5052Y",
-                P = () => {
-                    let e = E.default.getCurrentUser();
-                    if ((0, C.isPremiumExactly)(e, A.PremiumTypes.TIER_2) || (0, d.isDismissibleContentDismissed)(l.DismissibleContent.Q4_2023_NITRO_DROP_ANNOUNCEMENT_MODAL)) return !1;
+                i = n("819855"),
+                r = n("77078"),
+                o = n("997289"),
+                u = n("841098"),
+                d = n("812204"),
+                c = n("685665"),
+                f = n("10641"),
+                E = n("649844"),
+                _ = n("915639"),
+                h = n("697218"),
+                I = n("181114"),
+                C = n("599110"),
+                m = n("701909"),
+                T = n("719923"),
+                S = n("896630"),
+                N = n("837797"),
+                A = n("917247"),
+                p = n("400307"),
+                g = n("702542"),
+                R = n("646718"),
+                O = n("49111"),
+                L = n("782340"),
+                v = n("254438"),
+                M = n("169903"),
+                x = n("389291"),
+                D = n("676084"),
+                P = n("121432");
+            let y = "2023_q4_nitro_drop",
+                b = "DnkvLW5052Y",
+                U = () => {
+                    let e = h.default.getCurrentUser();
+                    if ((0, T.isPremiumExactly)(e, R.PremiumTypes.TIER_2) || (0, f.isDismissibleContentDismissed)(l.DismissibleContent.Q4_2023_NITRO_DROP_ANNOUNCEMENT_MODAL)) return !1;
                     let {
                         enabled: t
-                    } = m.Q4DropExperiment.getCurrentConfig({
+                    } = S.Q4DropExperiment.getCurrentConfig({
                         location: "isEligibleForQ4DropAnnouncementModal"
                     });
                     return t
                 };
 
-            function y(e) {
+            function j(e) {
                 let {
                     renderModalProps: t
                 } = e, {
                     onClose: n
-                } = t, d = (0, s.useStateFromStores)([f.default], () => f.default.locale), E = d.split("-")[0], m = "en" === E ? "0" : "1", P = "zh-CN" === d ? "zh-Hans" : "zh-TW" === d ? "zh-Hant" : E, y = {
-                    url: "".concat((0, p.YOUTUBE_EMBED_URL)(D), "?vq=large&rel=0&controls=0&showinfo=0&cc_load_policy=").concat(m, "&cc_lang_pref=").concat(P),
+                } = t, f = (0, s.useStateFromStores)([_.default], () => _.default.locale), h = f.split("-")[0], S = "en" === h ? "0" : "1", U = "zh-CN" === f ? "zh-Hans" : "zh-TW" === f ? "zh-Hant" : h, j = {
+                    url: "".concat((0, O.YOUTUBE_EMBED_URL)(b), "?vq=large&rel=0&controls=0&showinfo=0&cc_load_policy=").concat(S, "&cc_lang_pref=").concat(U),
                     width: 498,
                     height: 280
                 }, {
-                    location: b
-                } = (0, r.useAnalyticsContext)(), {
-                    analyticsLocations: U
-                } = (0, u.default)(o.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), j = (0, S.usePremiumTrialOffer)(), G = null == j ? void 0 : j.subscription_trial, F = (0, C.formatTrialCtaIntervalDuration)({
-                    intervalType: null == G ? void 0 : G.interval,
-                    intervalCount: null == G ? void 0 : G.interval_count
-                }), k = (0, T.useResponseOnUserState)({
-                    defaultResponse: g.default.Messages.BILLING_SUBSCRIBE_TO_PLAN,
-                    onTier0TrialOffer: F,
-                    onTier2TrialOffer: F,
-                    onNonTier2Subscriber: g.default.Messages.INTERACTION_PREMIUM_UPSELL_CTA
-                }), w = (0, T.useResponseOnUserState)({
+                    location: G
+                } = (0, o.useAnalyticsContext)(), {
+                    analyticsLocations: F
+                } = (0, c.default)(d.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), k = (0, u.default)(), w = (0, A.usePremiumTrialOffer)(), B = null == w ? void 0 : w.subscription_trial, H = (0, T.formatTrialCtaIntervalDuration)({
+                    intervalType: null == B ? void 0 : B.interval,
+                    intervalCount: null == B ? void 0 : B.interval_count
+                }), V = (0, N.useResponseOnUserState)({
+                    defaultResponse: L.default.Messages.BILLING_SUBSCRIBE_TO_PLAN,
+                    onTier0TrialOffer: H,
+                    onTier2TrialOffer: H,
+                    onNonTier2Subscriber: L.default.Messages.INTERACTION_PREMIUM_UPSELL_CTA
+                }), Y = (0, N.useResponseOnUserState)({
                     defaultResponse: "get_nitro_button",
                     onNonTier2Subscriber: "upgrade_plan_button",
                     onTier0TrialOffer: "trial_offer_button",
                     onTier2TrialOffer: "trial_offer_button"
-                }), B = (0, T.useResponseOnUserState)({
-                    defaultResponse: () => (0, c.default)({
-                        subscriptionTier: A.PremiumSubscriptionSKUs.TIER_2,
-                        analyticsLocations: U,
+                }), W = (0, N.useResponseOnUserState)({
+                    defaultResponse: () => (0, E.default)({
+                        subscriptionTier: R.PremiumSubscriptionSKUs.TIER_2,
+                        analyticsLocations: F,
                         analyticsObject: {
-                            ...b,
-                            object: p.AnalyticsObjects.BUTTON_CTA,
-                            objectType: p.AnalyticsObjectTypes.TIER_2
+                            ...G,
+                            object: O.AnalyticsObjects.BUTTON_CTA,
+                            objectType: O.AnalyticsObjectTypes.TIER_2
                         },
                         onClose: e => {
                             e && n()
                         }
                     })
-                });
-                return (0, a.jsx)(N.default, {
+                }), K = (0, i.isThemeDark)(k) ? p.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : p.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL;
+                return (0, a.jsx)(g.default, {
                     renderModalProps: t,
-                    videoHref: "https://youtu.be/".concat(D),
-                    video: y,
+                    videoHref: "https://youtu.be/".concat(b),
+                    video: j,
                     videoThumbnail: {
-                        url: "https://i.ytimg.com/vi/".concat(D, "/maxresdefault.jpg"),
+                        url: "https://i.ytimg.com/vi/".concat(b, "/maxresdefault.jpg"),
                         width: 498,
                         height: 280
                     },
                     modalDismissibleContent: l.DismissibleContent.Q4_2023_NITRO_DROP_ANNOUNCEMENT_MODAL,
-                    header: g.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_HEADER,
-                    subHeader: null != G ? g.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_TRIAL_ELIGIBLE : g.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_TRIAL_ELIGIBLE,
-                    subHeaderExtra: () => (0, a.jsx)(i.Anchor, {
-                        className: R.termsApplyAnchor,
-                        href: I.default.getArticleURL(p.HelpdeskArticles.SUMMER_2023_BOGO),
-                        children: (0, a.jsx)(i.Heading, {
+                    modalTopExtra: () => null != B ? (0, a.jsx)(p.PremiumPillWithSparkles, {
+                        text: L.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT,
+                        className: v.trialPill,
+                        colorOptions: K
+                    }) : null,
+                    header: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_HEADER,
+                    subHeader: null != B ? L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_TRIAL_ELIGIBLE : L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_TRIAL_ELIGIBLE,
+                    subHeaderExtra: () => (0, a.jsx)(r.Anchor, {
+                        className: v.termsApplyAnchor,
+                        href: m.default.getArticleURL(O.HelpdeskArticles.SUMMER_2023_BOGO),
+                        children: (0, a.jsx)(r.Heading, {
                             variant: "heading-md/normal",
-                            className: R.termsApplyBodyText,
-                            children: g.default.Messages.BOGO_TERMS_APPLY
+                            className: v.termsApplyBodyText,
+                            children: L.default.Messages.BOGO_TERMS_APPLY
                         })
                     }),
                     featureCards: [{
-                        header: g.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_HEADER,
-                        subHeader: g.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_DESCRIPTION,
-                        imageSrc: O
+                        header: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_HEADER,
+                        subHeader: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_DESCRIPTION,
+                        imageSrc: M
                     }, {
-                        header: g.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_HEADER,
-                        subHeader: g.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_DESCRIPTION,
-                        imageSrc: v
+                        header: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_HEADER,
+                        subHeader: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_DESCRIPTION,
+                        imageSrc: D
                     }, {
-                        header: g.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_HEADER,
-                        subHeader: g.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_DESCRIPTION,
-                        imageSrc: L
+                        header: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_HEADER,
+                        subHeader: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_DESCRIPTION,
+                        imageSrc: x
                     }, {
-                        header: g.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_HEADER,
-                        subHeader: g.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_DESCRIPTION,
-                        imageSrc: L
+                        header: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_HEADER,
+                        subHeader: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_DESCRIPTION,
+                        imageSrc: x
                     }],
-                    changeLogId: x,
+                    changeLogId: y,
                     button: () => {
                         let e = Date.now();
-                        return (0, a.jsxs)(_.default, {
-                            className: R.buttonWide,
-                            innerClassName: R.innerButton,
-                            color: i.Button.Colors.GREEN,
-                            size: i.Button.Sizes.SMALL,
+                        return (0, a.jsxs)(I.default, {
+                            className: v.buttonWide,
+                            innerClassName: v.innerButton,
+                            color: r.Button.Colors.GREEN,
+                            size: r.Button.Sizes.SMALL,
                             onClick: () => {
-                                h.default.track(p.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
-                                    change_log_id: x,
-                                    cta_type: w,
+                                C.default.track(O.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+                                    change_log_id: y,
+                                    cta_type: Y,
                                     seconds_open: Math.round((Date.now() - e) / 1e3),
                                     target: "q4_drop_payment_modal"
-                                }), B()
+                                }), W()
                             },
                             children: [(0, a.jsx)("img", {
                                 alt: "",
-                                className: R.nitroIconSubHeader,
-                                src: M
-                            }), k]
+                                className: v.nitroIconSubHeader,
+                                src: P
+                            }), V]
                         })
                     }
                 })
@@ -45529,44 +45524,45 @@
                     video: f,
                     videoThumbnail: m,
                     modalDismissibleContent: S,
-                    header: N,
-                    subHeader: A,
-                    subHeaderExtra: p,
-                    featureCards: g,
-                    changeLogId: R,
-                    button: O
+                    modalTopExtra: N,
+                    header: A,
+                    subHeader: p,
+                    subHeaderExtra: g,
+                    featureCards: R,
+                    changeLogId: O,
+                    button: L
                 } = e, {
-                    onClose: L,
-                    transitionState: v
-                } = n, M = (0, c.useUID)(), x = g.length % 2 == 0;
+                    onClose: v,
+                    transitionState: M
+                } = n, x = (0, c.useUID)(), D = R.length % 2 == 0;
                 return s.useEffect(() => {
                     (0, o.requestMarkDismissibleContentAsShown)(S);
                     let e = Date.now();
                     return E.default.track(h.AnalyticEvents.CHANGE_LOG_OPENED, {
-                        change_log_id: R
+                        change_log_id: O
                     }), () => {
                         E.default.track(h.AnalyticEvents.CHANGE_LOG_CLOSED, {
-                            change_log_id: R,
+                            change_log_id: O,
                             seconds_open: Math.round((Date.now() - e) / 1e3)
                         }), (0, o.markDismissibleContentAsDismissed)(S, {
                             dismissAction: I.ContentDismissActionType.DISMISS
                         })
                     }
-                }, [S, R]), (0, a.jsxs)(r.ModalRoot, {
+                }, [S, O]), (0, a.jsxs)(r.ModalRoot, {
                     className: i(C.root, t),
-                    transitionState: v,
-                    "aria-labelledby": M,
+                    transitionState: M,
+                    "aria-labelledby": x,
                     children: [(0, a.jsx)(r.ModalCloseButton, {
                         className: C.closeButton,
-                        onClick: L
+                        onClick: v
                     }), (0, a.jsx)(_.default, {
                         className: C.splash
-                    }), (0, a.jsxs)(r.ModalContent, {
+                    }), null == N ? void 0 : N(), (0, a.jsxs)(r.ModalContent, {
                         className: C.content,
                         children: [(0, a.jsx)(r.Heading, {
                             variant: "display-md",
                             className: C.headerText,
-                            children: N
+                            children: A
                         }), (0, a.jsx)(d.EmbedVideo, {
                             className: C.video,
                             allowFullScreen: !1,
@@ -45580,22 +45576,22 @@
                             renderLinkComponent: u.renderMaskedLinkComponent,
                             onPlay: () => {
                                 E.default.track(h.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
-                                    change_log_id: R
+                                    change_log_id: O
                                 })
                             }
                         }), (0, a.jsx)(r.Heading, {
                             variant: "heading-lg/extrabold",
                             className: C.bodyText,
-                            children: A
-                        }), null == p ? void 0 : p(), (0, a.jsx)("div", {
+                            children: p
+                        }), null == g ? void 0 : g(), (0, a.jsx)("div", {
                             className: i(C.featureCardGroup, {
-                                [C.wideStyle]: x
+                                [C.wideStyle]: D
                             }),
-                            children: g.map((e, t) => (0, a.jsx)(T, {
+                            children: R.map((e, t) => (0, a.jsx)(T, {
                                 ...e,
-                                wideStyle: x
+                                wideStyle: D
                             }, "".concat(e.header, "_").concat(t)))
-                        }), O()]
+                        }), L()]
                     })]
                 })
             }
