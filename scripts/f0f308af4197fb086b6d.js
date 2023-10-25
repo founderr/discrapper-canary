@@ -2376,7 +2376,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return f
+                    return N
                 }
             });
             var a = s("920040"),
@@ -2385,31 +2385,48 @@
                 i = s("77078"),
                 r = s("685665"),
                 o = s("10641"),
-                d = s("311207"),
-                u = s("200273"),
-                c = s("653485"),
-                S = s("462491"),
-                E = s("782340"),
-                T = s("626240");
+                d = s("845579"),
+                u = s("803725"),
+                c = s("311207"),
+                S = s("200273"),
+                E = s("653485"),
+                T = s("462491"),
+                f = s("782340"),
+                _ = s("626240"),
+                m = s("104261"),
+                I = s("84811");
 
-            function f() {
-                let {
-                    AnalyticsLocationProvider: e
-                } = (0, r.default)();
+            function N() {
+                let e = d.ClipsAllowVoiceRecording.useSetting(),
+                    {
+                        AnalyticsLocationProvider: t
+                    } = (0, r.default)();
                 return n.useEffect(() => {
                     (0, o.markDismissibleContentAsDismissed)(l.DismissibleContent.CLIPS_SETTINGS_BETA_TAG)
-                }), (0, a.jsx)(e, {
-                    children: (0, a.jsx)(i.FormSection, {
+                }), (0, a.jsxs)(t, {
+                    children: [(0, a.jsx)(i.FormSection, {
                         tag: i.FormTitleTags.H1,
                         title: (0, a.jsxs)("div", {
-                            className: T.headerContainer,
-                            children: [E.default.Messages.CLIPS, (0, a.jsx)(d.default, {})]
+                            className: _.headerContainer,
+                            children: [f.default.Messages.CLIPS, (0, a.jsx)(c.default, {})]
                         }),
                         children: (0, a.jsxs)("form", {
                             onSubmit: e => e.preventDefault(),
-                            children: [(0, a.jsx)(c.default, {}), (0, a.jsx)(S.default, {}), (0, a.jsx)(u.default, {})]
+                            children: [(0, a.jsx)(E.default, {}), (0, a.jsx)(T.default, {}), (0, a.jsx)(S.default, {})]
                         })
-                    })
+                    }), (0, a.jsx)(i.FormDivider, {}), (0, a.jsx)(i.FormSection, {
+                        className: I.marginTop20,
+                        children: (0, a.jsx)(i.FormSwitch, {
+                            hideBorder: !0,
+                            className: m.formItem,
+                            value: e,
+                            note: f.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
+                            onChange: e => u.updateAllowVoiceRecording({
+                                allowVoiceRecording: e
+                            }),
+                            children: f.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
+                        })
+                    })]
                 })
             }
         },
@@ -9593,7 +9610,7 @@
             function d() {
                 var e, t, s, n, d, u, c, S, E;
                 let T = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    f = (e = "bcbf60957741a900efc8f85afcfba58dd5203d87", e.substring(0, 7)),
+                    f = (e = "0b02a9566dd568022fa5e7005c45319f6a88efa8", e.substring(0, 7)),
                     _ = null === (t = r.default) || void 0 === t ? void 0 : t.remoteApp.getVersion(),
                     m = null === (n = r.default) || void 0 === n ? void 0 : null === (s = (d = n.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(d),
                     I = null === (c = r.default) || void 0 === c ? void 0 : null === (u = (S = c.remoteApp).getAppArch) || void 0 === u ? void 0 : u.call(S),
@@ -9606,7 +9623,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [T, " ", "240552", " ", (0, a.jsxs)("span", {
+                        children: [T, " ", "240554", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", f, ")"]
                         })]
