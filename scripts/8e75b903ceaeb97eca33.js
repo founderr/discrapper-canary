@@ -5244,7 +5244,7 @@
                                 return (0, a.jsxs)("span", {
                                     className: I.descriptionTextChunk,
                                     style: {
-                                        animationDelay: "".concat(.25 * t + 1, "s")
+                                        animationDelay: "".concat(.125 * t + .5, "s")
                                     },
                                     onAnimationEnd: s ? () => N(!0) : () => null,
                                     children: [e, "\xa0"]
