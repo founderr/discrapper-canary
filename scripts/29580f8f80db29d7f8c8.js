@@ -161,7 +161,7 @@
                         configurable: !0
                     }), e
                 }(),
-                g = function(e) {
+                m = function(e) {
                     function t(t, n, i) {
                         var r = e.call(this, t, n) || this;
                         return r._z = i, r
@@ -184,7 +184,7 @@
                         configurable: !0
                     }), t
                 }(y),
-                m = function(e) {
+                g = function(e) {
                     function t() {
                         return null !== e && e.apply(this, arguments) || this
                     }
@@ -262,11 +262,11 @@
                     switch (e.type) {
                         case "static":
                             var t = b(e.value);
-                            return new y(new m(t.x), new m(t.y));
+                            return new y(new g(t.x), new g(t.y));
                         case "static-random":
                             var n = b(e.minValue),
                                 i = b(e.maxValue);
-                            return new y(new m(C(n.x, i.x)), new m(C(n.y, i.y)));
+                            return new y(new g(C(n.x, i.x)), new g(C(n.y, i.y)));
                         case "linear":
                             t = b(e.value);
                             var r = b(e.addValue);
@@ -290,10 +290,10 @@
                                 p = b(e.minFinal),
                                 h = b(e.maxFinal),
                                 v = b(e.minDuration),
-                                g = b(e.maxDuration),
+                                m = b(e.maxDuration),
                                 _ = b(e.minDirection),
                                 T = b(e.maxDirection);
-                            return new y(new w(C(n.x, i.x), C(d.x, f.x), C(p.x, h.x), C(v.x, g.x), S(_.x, T.x), E(e.easingFunctions)[0]), new w(C(n.y, i.y), C(d.y, f.y), C(p.y, h.y), C(v.y, g.y), S(_.y, T.y), E(e.easingFunctions)[0]))
+                            return new y(new w(C(n.x, i.x), C(d.x, f.x), C(p.x, h.x), C(v.x, m.x), S(_.x, T.x), E(e.easingFunctions)[0]), new w(C(n.y, i.y), C(d.y, f.y), C(p.y, h.y), C(v.y, m.y), S(_.y, T.y), E(e.easingFunctions)[0]))
                     }
                 }(h(h({}, e), {
                     valueType: "Vector2"
@@ -371,27 +371,27 @@
                                 switch (e.type) {
                                     case "static":
                                         var t = _(e.value);
-                                        return new g(new m(t.x), new m(t.y), new m(t.z));
+                                        return new m(new g(t.x), new g(t.y), new g(t.z));
                                     case "static-random":
                                         var n = _(e.minValue),
                                             i = _(e.maxValue);
-                                        return new g(new m(C(n.x, i.x)), new m(C(n.y, i.y)), new m(C(n.z, i.z)));
+                                        return new m(new g(C(n.x, i.x)), new g(C(n.y, i.y)), new g(C(n.z, i.z)));
                                     case "linear":
                                         t = _(e.value);
                                         var r = _(e.addValue);
-                                        return new g(new x(t.x, r.x), new x(t.y, r.y), new x(t.z, r.z));
+                                        return new m(new x(t.x, r.x), new x(t.y, r.y), new x(t.z, r.z));
                                     case "linear-random":
                                         n = _(e.minValue), i = _(e.maxValue);
                                         var a = _(e.minAddValue),
                                             u = _(e.maxAddValue);
-                                        return new g(new x(C(n.x, i.x), C(a.x, u.x)), new x(C(n.y, i.y), C(a.y, u.y)), new x(C(n.z, i.z), C(a.z, u.z)));
+                                        return new m(new x(C(n.x, i.x), C(a.x, u.x)), new x(C(n.y, i.y), C(a.y, u.y)), new x(C(n.z, i.z), C(a.z, u.z)));
                                     case "oscillating":
                                         t = _(e.value);
                                         var o = _(e.start),
                                             l = _(e.final),
                                             s = _(e.duration),
                                             c = _(e.direction);
-                                        return new g(new w(t.x, o.x, l.x, s.x, c.x, e.easingFunction), new w(t.y, o.y, l.y, s.z, c.y, e.easingFunction), new w(t.z, o.z, l.z, s.z, c.z, e.easingFunction));
+                                        return new m(new w(t.x, o.x, l.x, s.x, c.x, e.easingFunction), new w(t.y, o.y, l.y, s.z, c.y, e.easingFunction), new w(t.z, o.z, l.z, s.z, c.z, e.easingFunction));
                                     case "oscillating-random":
                                         n = _(e.minValue), i = _(e.maxValue);
                                         var d = _(e.minStart),
@@ -402,7 +402,7 @@
                                             y = _(e.maxDuration),
                                             b = _(e.minDirection),
                                             T = _(e.maxDirection);
-                                        return new g(new w(C(n.x, i.x), C(d.x, f.x), C(p.x, h.x), C(v.x, y.x), S(b.x, T.x), E(e.easingFunctions)[0]), new w(C(n.y, i.y), C(d.y, f.y), C(p.y, h.y), C(v.y, y.y), S(b.y, T.y), E(e.easingFunctions)[0]), new w(C(n.z, i.z), C(d.z, f.z), C(p.z, h.z), C(v.z, y.z), S(b.z, T.z), E(e.easingFunctions)[0]))
+                                        return new m(new w(C(n.x, i.x), C(d.x, f.x), C(p.x, h.x), C(v.x, y.x), S(b.x, T.x), E(e.easingFunctions)[0]), new w(C(n.y, i.y), C(d.y, f.y), C(p.y, h.y), C(v.y, y.y), S(b.y, T.y), E(e.easingFunctions)[0]), new w(C(n.z, i.z), C(d.z, f.z), C(p.z, h.z), C(v.z, y.z), S(b.z, T.z), E(e.easingFunctions)[0]))
                                 }
                             }(h(h({}, P), {
                                 valueType: "Vector3"
@@ -412,9 +412,9 @@
                             opacity: (F = v.opacity, function(e) {
                                 switch (e.type) {
                                     case "static":
-                                        return new m(e.value);
+                                        return new g(e.value);
                                     case "static-random":
-                                        return new m(C(e.minValue, e.maxValue));
+                                        return new g(C(e.minValue, e.maxValue));
                                     case "linear":
                                         return new x(e.value, e.addValue);
                                     case "linear-random":
@@ -590,7 +590,7 @@
                         isReady: v.current
                     }
                 }, [c, f, d]);
-                var g = i.useCallback(function() {
+                var m = i.useCallback(function() {
                         var e = p.current,
                             t = null == e ? void 0 : e.getContext("2d", {
                                 willReadFrequently: !0
@@ -613,7 +613,7 @@
                             }) : i(null, 0)
                         }))
                     }, [c, f, d]),
-                    m = i.useCallback(function() {
+                    g = i.useCallback(function() {
                         var e = s.map(function(e) {
                             var t = new Image,
                                 n = "string" == typeof e ? e : e.src,
@@ -724,9 +724,9 @@
                             }(this, function(e) {
                                 switch (e.label) {
                                     case 0:
-                                        return [4, m()];
+                                        return [4, g()];
                                     case 1:
-                                        return e.sent(), g(), v.current = !0, x(!0), [2]
+                                        return e.sent(), m(), v.current = !0, x(!0), [2]
                                 }
                             })
                         }, new(n || (n = Promise))(function(r, a) {
@@ -754,7 +754,7 @@
                             }
                             l((i = i.apply(e, t || [])).next())
                         })
-                    }, [x, m, g]);
+                    }, [x, g, m]);
                 return i.useEffect(function() {
                     w()
                 }, [w]), i.useEffect(function() {
@@ -888,12 +888,12 @@
                     overrideDiscriminator: s,
                     forcePomelo: f,
                     ...p
-                } = e, y = (0, u.useStateFromStores)([l.default], () => l.default.hidePersonalInformation), g = y || t || n.isNonUserBot(), m = n.toString(), x = d.default.getName(n), w = a ? m : null != r ? r : x, C = n.isPomelo() || f;
-                if (C || w !== m) {
-                    let e = w === m && C && a ? d.default.getUserTag(n, {
+                } = e, y = (0, u.useStateFromStores)([l.default], () => l.default.hidePersonalInformation), m = y || t || n.isNonUserBot(), g = n.toString(), x = d.default.getName(n), w = a ? g : null != r ? r : x, C = n.isPomelo() || f;
+                if (C || w !== g) {
+                    let e = w === g && C && a ? d.default.getUserTag(n, {
                             forcePomelo: f
                         }) : w,
-                        t = o && e !== "@".concat(m) ? d.default.getUserTag(n) : void 0;
+                        t = o && e !== "@".concat(g) ? d.default.getUserTag(n) : void 0;
                     return (0, i.jsx)(v, {
                         primary: e,
                         secondary: t,
@@ -907,7 +907,7 @@
                     name: w,
                     botType: h(n),
                     botVerified: n.isVerifiedBot(),
-                    discriminator: g || w !== m ? null : null != s ? s : n.discriminator,
+                    discriminator: m || w !== g ? null : null != s ? s : n.discriminator,
                     ...p
                 })
             }
@@ -1017,13 +1017,13 @@
                 } = e, p = (0, i.useStateFromStores)([l.default, o.default], () => {
                     var e;
                     return l.default.getGuild(null === (e = o.default.getChannel(t)) || void 0 === e ? void 0 : e.getGuildId())
-                }, [t]), h = (0, i.useStateFromStores)([u.default], () => u.default.getStageInstanceByChannel(t), [t]), v = (0, r.useStageParticipants)(t, a.StageChannelParticipantNamedIndex.SPEAKER), y = (0, r.useStageParticipantsCount)(t), g = null != h ? v : c, m = (null != h ? y : d) - g.length;
+                }, [t]), h = (0, i.useStateFromStores)([u.default], () => u.default.getStageInstanceByChannel(t), [t]), v = (0, r.useStageParticipants)(t, a.StageChannelParticipantNamedIndex.SPEAKER), y = (0, r.useStageParticipantsCount)(t), m = null != h ? v : c, g = (null != h ? y : d) - m.length;
                 return {
                     channelId: t,
                     guild: null != p ? p : n,
                     stage: null != h ? h : s,
-                    speakers: g,
-                    audienceCount: m,
+                    speakers: m,
+                    audienceCount: g,
                     context: f
                 }
             }
@@ -1032,107 +1032,110 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return b
+                    return _
                 }
             });
             var i = n("920040");
             n("773670");
-            var r = n("498225"),
-                a = n("922770"),
-                u = n("267567"),
-                o = n("998716"),
-                l = n("834052"),
-                s = n("42203"),
-                c = n("957255"),
-                d = n("945956"),
-                f = n("697218"),
-                p = n("189007"),
-                h = n("398604"),
-                v = n("152475"),
-                y = n("202358"),
+            var r = n("500947"),
+                a = n("498225"),
+                u = n("922770"),
+                o = n("267567"),
+                l = n("998716"),
+                s = n("834052"),
+                c = n("42203"),
+                d = n("957255"),
+                f = n("945956"),
+                p = n("697218"),
+                h = n("189007"),
+                v = n("398604"),
+                y = n("152475"),
+                m = n("202358"),
                 g = n("598639"),
-                m = n("189443"),
-                x = n("841363"),
-                w = n("93550"),
-                C = n("617347"),
-                E = n("369404"),
-                S = n("49111");
+                x = n("189443"),
+                w = n("841363"),
+                C = n("93550"),
+                E = n("617347"),
+                S = n("369404"),
+                b = n("49111");
 
-            function b(e) {
+            function _(e) {
                 var t;
                 let {
                     guildEvent: n,
-                    guildId: b,
-                    truncate: _,
-                    onActionTaken: T,
-                    className: M,
-                    isNew: R
+                    guildId: _,
+                    truncate: T,
+                    onActionTaken: M,
+                    className: R,
+                    isNew: N
                 } = e, {
-                    id: N,
-                    guild_id: P,
-                    channel_id: F,
-                    creator_id: D,
-                    name: I,
-                    description: z,
-                    entity_type: V,
-                    image: U,
-                    recurrence_rule: A
-                } = n, k = (0, r.useStateFromStores)([h.default], () => h.default.hasRsvp(N, P), [N, P]), L = (0, r.useStateFromStores)([u.default], () => u.default.isLurking(P), [P]), O = (0, r.useStateFromStores)([l.default], () => l.default.getStageInstanceByChannel(F), [F]), j = (0, r.useStateFromStores)([s.default], () => s.default.getChannel(F), [F]), H = (0, r.useStateFromStores)([f.default], () => f.default.getUser(D), [D]), {
-                    speakers: G
-                } = (0, y.default)({
-                    id: F,
+                    id: P,
+                    guild_id: F,
+                    channel_id: D,
+                    creator_id: I,
+                    name: z,
+                    description: V,
+                    entity_type: U,
+                    image: A,
+                    recurrence_rule: k
+                } = n, L = (0, a.useStateFromStores)([v.default], () => v.default.hasRsvp(P, F), [P, F]), O = (0, a.useStateFromStores)([o.default], () => o.default.isLurking(F), [F]), j = (0, a.useStateFromStores)([s.default], () => s.default.getStageInstanceByChannel(D), [D]), H = (0, a.useStateFromStores)([c.default], () => c.default.getChannel(D), [D]), G = (0, a.useStateFromStores)([p.default], () => p.default.getUser(I), [I]), {
+                    speakers: B
+                } = (0, m.default)({
+                    id: D,
                     data: {
                         guild: null,
-                        instance: O,
+                        instance: j,
                         speakers: [],
                         participantCount: 0
                     },
                     context: {
-                        guildId: P,
-                        instance: O
+                        guildId: F,
+                        instance: j
                     }
-                }), B = (0, r.useStateFromStores)([d.default], () => d.default.getChannelId()), Y = (0, h.isGuildScheduledEventActive)(n), q = B === F && null != B && Y, W = G.filter(e => e.type === o.StageChannelParticipantTypes.VOICE), X = W.length, K = (0, r.useStateFromStores)([c.default], () => c.default.can(S.Permissions.CONNECT, j), [j]), Q = (0, v.default)(n), {
-                    isMember: J,
-                    guild: Z
-                } = (0, g.default)(P, N), $ = (0, E.default)({
-                    guild: Z,
-                    channel: j,
+                }), Y = (0, a.useStateFromStores)([f.default], () => f.default.getChannelId()), q = (0, v.isGuildScheduledEventActive)(n), W = Y === D && null != Y && q, X = B.filter(e => e.type === l.StageChannelParticipantTypes.VOICE), K = X.length, Q = (0, a.useStateFromStores)([d.default], () => d.default.can(b.Permissions.CONNECT, H), [H]), J = (0, y.default)(n), {
+                    isMember: Z,
+                    guild: $
+                } = (0, g.default)(F, P), ee = null != n.recurrence_rule ? r.default.fromTimestamp(new Date(n.scheduled_start_time).getTime()) : void 0, et = (0, S.default)({
+                    guild: $,
+                    channel: H,
                     guildScheduledEvent: n,
-                    isActive: Y,
-                    rsvped: k,
-                    onActionTaken: T
-                }), ee = (0, a.default)(b), et = L ? void 0 : e => (0, p.openGuildEventDetails)({
-                    eventId: N,
-                    parentGuildId: b,
+                    isActive: q,
+                    rsvped: L,
+                    recurrenceId: ee,
+                    onActionTaken: M
+                }), en = (0, u.default)(_), ei = O ? void 0 : e => (0, h.openGuildEventDetails)({
+                    eventId: P,
+                    parentGuildId: _,
                     recurrenceId: e
                 });
-                return (0, i.jsx)(C.default, {
-                    guild: Z,
-                    channel: j,
-                    creator: H,
-                    name: I,
-                    entityType: V,
-                    description: null != z ? z : void 0,
-                    location: null !== (t = (0, x.getLocationFromEvent)(n)) && void 0 !== t ? t : void 0,
-                    imageSource: null != U ? (0, w.default)(n) : void 0,
-                    imageLocation: C.GuildEventBodyImageLocation.THUMBNAIL,
-                    isActive: Y,
-                    isUserLurking: L,
-                    isJoined: q,
-                    isMember: J,
-                    isHub: ee,
-                    speakers: W,
-                    canConnect: K,
-                    speakerCount: X,
-                    rsvped: k,
-                    canInvite: Q,
-                    ...$,
-                    className: M,
-                    onClick: et,
-                    truncate: _,
-                    isNew: R,
-                    guildEventId: N,
-                    recurrenceRule: (0, m.recurrenceRuleFromServer)(A)
+                return (0, i.jsx)(E.default, {
+                    guild: $,
+                    channel: H,
+                    creator: G,
+                    name: z,
+                    entityType: U,
+                    description: null != V ? V : void 0,
+                    location: null !== (t = (0, w.getLocationFromEvent)(n)) && void 0 !== t ? t : void 0,
+                    imageSource: null != A ? (0, C.default)(n) : void 0,
+                    imageLocation: E.GuildEventBodyImageLocation.THUMBNAIL,
+                    isActive: q,
+                    isUserLurking: O,
+                    isJoined: W,
+                    isMember: Z,
+                    isHub: en,
+                    speakers: X,
+                    canConnect: Q,
+                    speakerCount: K,
+                    rsvped: L,
+                    canInvite: J,
+                    ...et,
+                    className: R,
+                    onClick: ei,
+                    truncate: T,
+                    isNew: N,
+                    guildEventId: P,
+                    recurrenceRule: (0, x.recurrenceRuleFromServer)(k),
+                    recurrenceId: ee
                 })
             }
         },
@@ -1174,8 +1177,8 @@
                 h = n("124948"),
                 v = n("305961"),
                 y = n("660478"),
-                g = n("476765"),
-                m = n("943232"),
+                m = n("476765"),
+                g = n("943232"),
                 x = n("945330"),
                 w = n("599110"),
                 C = n("449008"),
@@ -1196,7 +1199,7 @@
                     transitionState: t,
                     onClose: a,
                     guildId: I
-                } = e, z = (0, g.useUID)(), V = (0, l.useStateFromStores)([v.default], () => v.default.getGuild(I)), U = (0, S.default)(null == V ? void 0 : V.id), A = (0, b.default)(I), k = r.useRef(y.default.ackMessageId(I, P.ReadStateTypes.GUILD_EVENT)), L = (0, M.default)();
+                } = e, z = (0, m.useUID)(), V = (0, l.useStateFromStores)([v.default], () => v.default.getGuild(I)), U = (0, S.default)(null == V ? void 0 : V.id), A = (0, b.default)(I), k = r.useRef(y.default.ackMessageId(I, P.ReadStateTypes.GUILD_EVENT)), L = (0, M.default)();
                 return r.useEffect(() => {
                     E.default.getGuildEventUserCounts(I), E.default.getGuildEventsForCurrentUser(I)
                 }, [I]), r.useEffect(() => {
@@ -1229,7 +1232,7 @@
                     "aria-labelledby": z,
                     children: [(0, i.jsxs)(s.ModalHeader, {
                         className: D.header,
-                        children: [(0, i.jsx)(m.default, {
+                        children: [(0, i.jsx)(g.default, {
                             className: D.icon
                         }), (0, i.jsx)(s.Heading, {
                             id: z,
@@ -1315,7 +1318,7 @@
                 }), y = (0, r.useStateFromStores)([s.default, c.default], () => {
                     let e = s.default.getGuild(t);
                     return c.default.can(f.Permissions.MANAGE_ROLES, e)
-                }, [t]), g = (0, r.useStateFromStores)([s.default], () => {
+                }, [t]), m = (0, r.useStateFromStores)([s.default], () => {
                     let e = s.default.getGuild(t);
                     return v && (null == e ? void 0 : e.hasFeature(f.GuildFeatures.HUB))
                 }, [t, v]);
@@ -1334,12 +1337,12 @@
                         color: "header-primary",
                         variant: "heading-xl/semibold",
                         className: h.title,
-                        children: g ? p.default.Messages.HUB_EVENTS_HEADER_TITLE : p.default.Messages.GUILD_EVENT_MODAL_EMPTY_TITLE
+                        children: m ? p.default.Messages.HUB_EVENTS_HEADER_TITLE : p.default.Messages.GUILD_EVENT_MODAL_EMPTY_TITLE
                     }), (0, i.jsx)(a.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
                         className: h.subtitle,
-                        children: g ? p.default.Messages.HUB_EVENTS_HEADER_DESCRIPTION : p.default.Messages.GUILD_EVENT_MODAL_EMPTY_SUBTITLE
+                        children: m ? p.default.Messages.HUB_EVENTS_HEADER_DESCRIPTION : p.default.Messages.GUILD_EVENT_MODAL_EMPTY_SUBTITLE
                     }), y && (0, i.jsx)(a.Text, {
                         color: "header-secondary",
                         variant: "text-sm/normal",
@@ -1467,8 +1470,8 @@
                     withMutualGuilds: h = !1,
                     withMutualFriendsCount: v = !1,
                     friendToken: y,
-                    preloadUserBanner: g = !0,
-                    dispatchWait: m = !1,
+                    preloadUserBanner: m = !0,
+                    dispatchWait: g = !1,
                     guildId: x,
                     channelId: w
                 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
@@ -1481,14 +1484,14 @@
                     S = s.default.getMutualFriendsCount(e),
                     b = s.default.isFetchingProfile(e),
                     _ = (null == C ? void 0 : C.profileFetchFailed) || !b && (!Array.isArray(E) && h || null == S && v),
-                    T = g ? c.default : void 0,
+                    T = m ? c.default : void 0,
                     M = !1;
                 if (null != x) {
                     let t = s.default.getGuildMemberProfile(e, x);
                     M = null == t
                 }
                 if (!_ && !M && (b || Date.now() - (null !== (f = null == C ? void 0 : C.lastFetched) && void 0 !== f ? f : 0) < 6e4)) return Promise.resolve();
-                m ? await i.default.wait(() => (0, r.fetchProfile)(e, {
+                g ? await i.default.wait(() => (0, r.fetchProfile)(e, {
                     withMutualGuilds: h,
                     withMutualFriendsCount: v,
                     friendToken: y,
@@ -1558,7 +1561,7 @@
                         botVerified: h = !1,
                         style: v,
                         useRemSizes: y = !1,
-                        usernameIcon: g
+                        usernameIcon: m
                     } = e;
                     return (0, i.jsxs)("div", {
                         className: a(s, l.nameTag),
@@ -1568,7 +1571,7 @@
                             style: null != o ? {
                                 color: o
                             } : void 0,
-                            children: [g, t]
+                            children: [m, t]
                         }), null != n ? (0, i.jsxs)("span", {
                             className: null != f ? f : void 0,
                             children: ["#", n]

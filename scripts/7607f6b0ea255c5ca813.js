@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["43708"], {
+    ["33107"], {
         569272: function(e, t, l) {
             "use strict";
             l.r(t), l.d(t, {
@@ -212,8 +212,8 @@
                 _ = l("713573"),
                 h = l("258078"),
                 S = l("587974"),
-                C = l("782340"),
-                m = l("993790");
+                m = l("782340"),
+                C = l("993790");
             let p = e => {
                     var t;
                     let {
@@ -222,16 +222,16 @@
                         isEmbed: s
                     } = e, r = new d.default(l.user);
                     return (0, n.jsxs)("div", {
-                        className: m.speaker,
+                        className: C.speaker,
                         children: [(0, n.jsx)(a.Avatar, {
                             src: r.getAvatarURL(i, s ? 16 : 24),
                             size: s ? a.AvatarSizes.SIZE_16 : a.AvatarSizes.SIZE_24,
                             "aria-label": "".concat(l.nick, "-avatar"),
-                            className: s ? null : m.avatar
+                            className: s ? null : C.avatar
                         }), (0, n.jsx)(h.default, {
                             size: s ? h.default.Sizes.SIZE_12 : h.default.Sizes.SIZE_14,
                             color: h.default.Colors.HEADER_SECONDARY,
-                            className: m.username,
+                            className: C.username,
                             children: null !== (t = l.nick) && void 0 !== t ? t : r.username
                         })]
                     })
@@ -251,10 +251,10 @@
                         children: [(0, n.jsx)(_.default, {
                             muted: !0,
                             uppercase: !0,
-                            className: m.alignStart,
-                            children: C.default.Messages.STAGE_INVITE_GUILD_HEADER
+                            className: C.alignStart,
+                            children: m.default.Messages.STAGE_INVITE_GUILD_HEADER
                         }), (0, n.jsxs)("div", {
-                            className: m.guild,
+                            className: C.guild,
                             children: [(0, n.jsx)(S.default, {
                                 mask: S.default.Masks.SQUIRCLE,
                                 width: 40,
@@ -265,17 +265,17 @@
                                     active: !0
                                 })
                             }), (0, n.jsxs)("div", {
-                                className: m.guildInfo,
+                                className: C.guildInfo,
                                 children: [(0, n.jsx)(a.Heading, {
                                     variant: "heading-sm/semibold",
                                     children: s
                                 }), (0, n.jsxs)("div", {
-                                    className: m.speaker,
+                                    className: C.speaker,
                                     children: [(0, n.jsx)("div", {
-                                        className: m.dot
+                                        className: C.dot
                                     }), null != l && l > 0 ? (0, n.jsx)(a.Text, {
                                         variant: "text-sm/normal",
-                                        children: C.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                                        children: m.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                                             membersOnline: l
                                         })
                                     }) : null]
@@ -283,7 +283,7 @@
                             })]
                         }), null != r && "" !== r && (0, n.jsx)(a.Text, {
                             color: "header-secondary",
-                            className: m.alignStart,
+                            className: C.alignStart,
                             variant: "text-sm/normal",
                             children: r
                         })]
@@ -297,88 +297,88 @@
                     isCard: d = !1,
                     isEmbed: I = !1,
                     onClick: g
-                } = e, b = i.useMemo(() => null == s ? null : s instanceof u.default ? s : new u.default(s), [s]);
-                if (null == l || null == b) return null;
+                } = e, v = i.useMemo(() => null == s ? null : s instanceof u.default ? s : new u.default(s), [s]);
+                if (null == l || null == v) return null;
                 let {
-                    topic: v,
+                    topic: b,
                     speaker_count: O,
                     participant_count: T
                 } = l, D = null !== (t = l.members) && void 0 !== t ? t : [], A = I ? D.slice(0, 3) : D, G = O - A.length;
                 return I && (G += D.length - A.length), (0, n.jsxs)("div", {
                     children: [(0, n.jsxs)("div", {
-                        className: m.flex,
+                        className: C.flex,
                         children: [(0, n.jsxs)("div", {
-                            className: m.flex,
+                            className: C.flex,
                             children: [(0, n.jsx)(E.default, {
                                 height: 24,
                                 width: 24,
-                                className: m.live
+                                className: C.live
                             }), (0, n.jsx)(a.Heading, {
                                 variant: "eyebrow",
-                                className: r(m.label, m.live),
-                                children: C.default.Messages.STAGE_CHANNEL_LIVE_NOW
+                                className: r(C.label, C.live),
+                                children: m.default.Messages.STAGE_CHANNEL_LIVE_NOW
                             })]
                         }), (0, n.jsxs)("div", {
-                            className: m.background,
+                            className: C.background,
                             children: [(0, n.jsx)(c.default, {
                                 height: 16,
                                 width: 16,
-                                className: m.listeners
+                                className: C.listeners
                             }), (0, n.jsx)(a.Heading, {
-                                className: r(m.label, m.listeners),
+                                className: r(C.label, C.listeners),
                                 variant: "heading-sm/semibold",
                                 children: T
                             })]
                         })]
                     }), I && (0, n.jsxs)("div", {
-                        className: r(m.guild, {
-                            [m.embed]: I
+                        className: r(C.guild, {
+                            [C.embed]: I
                         }),
                         children: [(0, n.jsx)(S.default, {
                             mask: S.default.Masks.SQUIRCLE,
                             width: 20,
                             height: 20,
                             children: (0, n.jsx)(o.default, {
-                                guild: b,
+                                guild: v,
                                 size: o.default.Sizes.MINI,
                                 active: !0
                             })
                         }), (0, n.jsx)(a.Text, {
                             color: "header-secondary",
-                            className: m.label,
+                            className: C.label,
                             variant: "text-sm/normal",
-                            children: b.name
+                            children: v.name
                         })]
                     }), (0, n.jsx)(_.default, {
                         size: d || I ? _.default.Sizes.SIZE_16 : _.default.Sizes.SIZE_20,
-                        className: r(m.header, {
-                            [m.embed]: I
+                        className: r(C.header, {
+                            [C.embed]: I
                         }),
-                        children: v
+                        children: b
                     }), (0, n.jsxs)("div", {
-                        className: r(m.members, {
-                            [m.embed]: I
+                        className: r(C.members, {
+                            [C.embed]: I
                         }),
                         children: [A.length > 0 && (0, n.jsxs)("div", {
-                            className: m.speakers,
+                            className: C.speakers,
                             children: [A.map(e => (0, n.jsx)(p, {
                                 speaker: e,
-                                guildId: b.id,
+                                guildId: v.id,
                                 isEmbed: I
                             }, e.user.id)), G > 0 ? (0, n.jsxs)("div", {
-                                className: m.speaker,
+                                className: C.speaker,
                                 children: [(0, n.jsx)("div", {
-                                    className: r(m.icon, {
-                                        [m.embed]: I
+                                    className: r(C.icon, {
+                                        [C.embed]: I
                                     }),
                                     children: (0, n.jsx)(f.default, {
                                         height: I ? 12 : 14,
-                                        className: m.listeners
+                                        className: C.listeners
                                     })
                                 }), (0, n.jsxs)(h.default, {
                                     size: I ? h.default.Sizes.SIZE_12 : h.default.Sizes.SIZE_14,
                                     color: h.default.Colors.HEADER_SECONDARY,
-                                    children: ["+", C.default.Messages.STAGE_INVITE_SPEAKER_COUNT.format({
+                                    children: ["+", m.default.Messages.STAGE_INVITE_SPEAKER_COUNT.format({
                                         count: G
                                     })]
                                 })]
@@ -386,8 +386,8 @@
                         }), I && (0, n.jsx)(a.Button, {
                             color: a.Button.Colors.GREEN,
                             onClick: g,
-                            className: m.joinButton,
-                            children: C.default.Messages.STAGE_CHANNEL_JOIN_BUTTON
+                            className: C.joinButton,
+                            children: m.default.Messages.STAGE_CHANNEL_JOIN_BUTTON
                         })]
                     })]
                 })
@@ -413,7 +413,7 @@
                 return r
             }
         },
-        538572: function(e, t, l) {
+        466148: function(e, t, l) {
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
@@ -427,12 +427,19 @@
                 a = l("822516");
 
             function u(e, t) {
-                let l = (0, n.useStateFromStores)([s.default], () => s.default.getGuildScheduledEvent(e)),
-                    u = (0, r.default)(t, e);
-                if (null == l) return null;
-                if (null == t) return new Date(l.scheduled_start_time);
-                let d = null != l.recurrence_rule ? (0, a.getRRule)(l.recurrence_rule) : null;
-                return null == d ? null : (null == u ? void 0 : u.scheduled_start_time) == null ? new Date(i.default.extractTimestamp(t)) : new Date(u.scheduled_start_time)
+                let l, u;
+                let d = (0, n.useStateFromStores)([s.default], () => s.default.getGuildScheduledEvent(e)),
+                    o = (0, r.default)(t, e);
+                if (null == d) return {};
+                if (null == t) return l = new Date(d.scheduled_start_time), {
+                    startTime: l,
+                    endTime: u = null != d.scheduled_end_time ? new Date(d.scheduled_end_time) : null
+                };
+                let c = null != d.recurrence_rule ? (0, a.getRRule)(d.recurrence_rule) : null;
+                return null == c ? {} : (l = new Date((null == o ? void 0 : o.scheduled_start_time) == null ? i.default.extractTimestamp(t) : o.scheduled_start_time), {
+                    startTime: l,
+                    endTime: u = (null == o ? void 0 : o.scheduled_end_time) == null ? null : new Date(o.scheduled_end_time)
+                })
             }
         },
         210721: function(e, t, l) {
@@ -633,10 +640,10 @@
                     shouldAnimate: o = !0,
                     defaultAnimationState: c,
                     idleAnimationState: f
-                } = e, E = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), [_, h] = i.useState(c), S = i.useRef((0, u.getGiftAnimationData)(t, _)), [C, m] = i.useState(null == f), [p, I] = i.useState(!1), [g, b] = i.useState(-1), v = () => {
-                    S.current = (0, u.getGiftAnimationData)(t, _), b(e => e + 1)
+                } = e, E = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), [_, h] = i.useState(c), S = i.useRef((0, u.getGiftAnimationData)(t, _)), [m, C] = i.useState(null == f), [p, I] = i.useState(!1), [g, v] = i.useState(-1), b = () => {
+                    S.current = (0, u.getGiftAnimationData)(t, _), v(e => e + 1)
                 }, O = () => {
-                    m(!1), I(!0), b(-1), h(c)
+                    C(!1), I(!0), v(-1), h(c)
                 };
                 i.useEffect(() => {
                     null == f && h(c)
@@ -645,11 +652,11 @@
                         O();
                         return
                     }
-                    v()
+                    b()
                 }, [t, f]), i.useEffect(() => {
-                    (!p || null == f) && v()
+                    (!p || null == f) && b()
                 }, [_]), i.useEffect(() => {
-                    p && (m(null == f), I(!1), v())
+                    p && (C(null == f), I(!1), b())
                 }, [p]);
                 if (!d.PremiumGiftStyles.hasOwnProperty(t)) throw Error("Unexpected giftStyle ".concat(t));
                 return (0, n.jsx)(a.default, {
@@ -658,9 +665,9 @@
                     className: l,
                     versionKey: g,
                     onComplete: null != f ? () => {
-                        null != f && (h(f), m(!0))
+                        null != f && (h(f), C(!0))
                     } : void 0,
-                    loop: C
+                    loop: m
                 })
             }
         },
@@ -775,13 +782,13 @@
                 _ = l("49111");
             let h = {},
                 S = {},
-                C = [],
                 m = [],
+                C = [],
                 p = [],
                 I = new Set,
                 g = {},
-                b = {},
-                v = new Set;
+                v = {},
+                b = new Set;
 
             function O(e) {
                 let t = f.default.createFromServer(e),
@@ -806,10 +813,10 @@
 
             function T(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                if (t && !v.has(e.channel_id)) return !1;
+                if (t && !b.has(e.channel_id)) return !1;
                 let l = (0, E.isGiftCodeEmbed)(e) ? (0, E.findGiftCodes)((null == e ? void 0 : e.embeds) != null ? null == e ? void 0 : e.embeds[0].url : void 0) : (0, E.findGiftCodes)(e.content);
                 return 0 !== l.length && (l.forEach(e => {
-                    !C.includes(e) && !p.includes(e) && (D({
+                    !m.includes(e) && !p.includes(e) && (D({
                         code: e
                     }), d.default.wait(() => o.default.resolveGiftCode(e, !1, !0).catch(_.NOOP_NULL)))
                 }), !1)
@@ -819,7 +826,7 @@
                 let {
                     code: t
                 } = e;
-                !C.includes(t) && (C = [...C, t])
+                !m.includes(t) && (m = [...m, t])
             }
 
             function A(e) {
@@ -834,7 +841,7 @@
                     channelId: t,
                     messages: l
                 } = e;
-                v.add(t), l.forEach(e => T(e, !0))
+                b.add(t), l.forEach(e => T(e, !0))
             }
 
             function R(e) {
@@ -850,19 +857,19 @@
                     return null == t || t.isExpired() ? null : t
                 }
                 getError(e) {
-                    return null != e ? b[e] : null
+                    return null != e ? v[e] : null
                 }
                 getForGifterSKUAndPlan(e, t, l) {
                     return i.values(S).filter(n => n.userId === e && n.skuId === t && (null == l || n.subscriptionPlanId === l) && !n.isExpired())
                 }
                 getIsResolving(e) {
-                    return C.includes(e)
+                    return m.includes(e)
                 }
                 getIsResolved(e) {
                     return p.includes(e)
                 }
                 getIsAccepting(e) {
-                    return m.includes(e)
+                    return C.includes(e)
                 }
                 getUserGiftCodesFetchingForSKUAndPlan(e, t) {
                     return I.has((0, E.makeComboId)(e, t))
@@ -871,50 +878,50 @@
                     return g[(0, E.makeComboId)(e, t)]
                 }
                 getResolvingCodes() {
-                    return C
+                    return m
                 }
                 getResolvedCodes() {
                     return p
                 }
                 getAcceptingCodes() {
-                    return m
+                    return C
                 }
             }
             x.displayName = "GiftCodeStore";
             let N = new x(d.default, {
                 CONNECTION_OPEN: function() {
-                    return v.clear(), !1
+                    return b.clear(), !1
                 },
                 CHANNEL_SELECT: function(e) {
                     let {
                         channelId: t
                     } = e;
-                    return null != t && v.add(t), !1
+                    return null != t && b.add(t), !1
                 },
                 GIFT_CODE_RESOLVE: D,
                 GIFT_CODE_RESOLVE_SUCCESS: function(e) {
                     let {
                         giftCode: t
                     } = e;
-                    return C = C.filter(e => e !== t.code), !p.includes(t.code) && (p = [...p, t.code]), O(t)
+                    return m = m.filter(e => e !== t.code), !p.includes(t.code) && (p = [...p, t.code]), O(t)
                 },
                 GIFT_CODE_RESOLVE_FAILURE: function(e) {
                     let {
                         code: t
                     } = e;
-                    C = C.filter(e => e !== t), !p.includes(t) && (p = [...p, t])
+                    m = m.filter(e => e !== t), !p.includes(t) && (p = [...p, t])
                 },
                 GIFT_CODE_REDEEM: function(e) {
                     let {
                         code: t
                     } = e;
-                    !m.includes(t) && (m = [...m, t])
+                    !C.includes(t) && (C = [...C, t])
                 },
                 GIFT_CODE_REDEEM_SUCCESS: function(e) {
                     let {
                         code: t
                     } = e;
-                    m = m.filter(e => e !== t);
+                    C = C.filter(e => e !== t);
                     let l = S[t];
                     null != l && (S[t] = l.merge({
                         redeemed: !0,
@@ -926,9 +933,9 @@
                         code: t,
                         error: l
                     } = e;
-                    m = m.filter(e => e !== t);
+                    C = C.filter(e => e !== t);
                     let n = S[t];
-                    if (b[t] = l, null != n) switch (l.code) {
+                    if (v[t] = l, null != n) switch (l.code) {
                         case _.AbortCodes.UNKNOWN_GIFT_CODE:
                             S[t] = n.set("revoked", !0);
                             break;

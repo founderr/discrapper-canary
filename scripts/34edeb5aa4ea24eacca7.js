@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["62669"], {
+    ["27047"], {
         284434: function(e, t, n) {
             "use strict";
             e.exports = n.p + "51063f34b3960c1d5da8.svg"
@@ -192,7 +192,7 @@
                 return s
             }
         },
-        538572: function(e, t, n) {
+        466148: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
@@ -206,12 +206,19 @@
                 o = n("822516");
 
             function r(e, t) {
-                let n = (0, l.useStateFromStores)([i.default], () => i.default.getGuildScheduledEvent(e)),
-                    r = (0, s.default)(t, e);
-                if (null == n) return null;
-                if (null == t) return new Date(n.scheduled_start_time);
-                let a = null != n.recurrence_rule ? (0, o.getRRule)(n.recurrence_rule) : null;
-                return null == a ? null : (null == r ? void 0 : r.scheduled_start_time) == null ? new Date(u.default.extractTimestamp(t)) : new Date(r.scheduled_start_time)
+                let n, r;
+                let a = (0, l.useStateFromStores)([i.default], () => i.default.getGuildScheduledEvent(e)),
+                    c = (0, s.default)(t, e);
+                if (null == a) return {};
+                if (null == t) return n = new Date(a.scheduled_start_time), {
+                    startTime: n,
+                    endTime: r = null != a.scheduled_end_time ? new Date(a.scheduled_end_time) : null
+                };
+                let d = null != a.recurrence_rule ? (0, o.getRRule)(a.recurrence_rule) : null;
+                return null == d ? {} : (n = new Date((null == c ? void 0 : c.scheduled_start_time) == null ? u.default.extractTimestamp(t) : c.scheduled_start_time), {
+                    startTime: n,
+                    endTime: r = (null == c ? void 0 : c.scheduled_end_time) == null ? null : new Date(c.scheduled_end_time)
+                })
             }
         },
         613767: function(e, t, n) {
@@ -301,7 +308,7 @@
                     null != t && t(e), h(!0), c.start(1e3, () => h(!1))
                 };
                 return null == t ? null : (0, l.jsx)(s.Tooltip, {
-                    text: S(n, o),
+                    text: m(n, o),
                     position: "top",
                     tooltipClassName: _.tooltips,
                     "aria-label": E.default.Messages.SHARE_LINK,
@@ -375,7 +382,7 @@
                 })
             }
             let R = e => null == e || e,
-                S = (e, t) => R(e) ? E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE : R(t) ? E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_WITHOUT_PERMISSION : E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_PRIVATE_CHANNEL;
+                m = (e, t) => R(e) ? E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE : R(t) ? E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_WITHOUT_PERMISSION : E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_PRIVATE_CHANNEL;
 
             function v(e) {
                 let {
@@ -388,10 +395,10 @@
                     onContextMenu: a,
                     onJoinClick: d,
                     onRsvpClick: R,
-                    onStartClick: S,
+                    onStartClick: m,
                     onInviteClick: v,
-                    onEndClick: p,
-                    isJoined: m = !1
+                    onEndClick: S,
+                    isJoined: p = !1
                 } = e, N = void 0 !== d;
                 return (0, l.jsxs)("div", {
                     className: _.container,
@@ -422,7 +429,7 @@
                             } = e;
                             return n ? t ? E.default.Messages.GO_TO_CHANNEL : l ? E.default.Messages.GUILD_EVENT_JOIN : E.default.Messages.STAGE_CHANNEL_JOIN_BUTTON : E.default.Messages.CHANNEL_LOCKED_SHORT
                         }({
-                            isJoined: m,
+                            isJoined: p,
                             canJoin: N,
                             isVoiceChannel: r === f.GuildScheduledEventEntityTypes.VOICE
                         }),
@@ -435,18 +442,18 @@
                         isUserRsvped: u,
                         isUserLurking: n,
                         onRsvpClick: R
-                    }), t || null == S ? null : (0, l.jsx)(s.Button, {
+                    }), t || null == m ? null : (0, l.jsx)(s.Button, {
+                        className: _.button,
+                        innerClassName: _.innerButton,
+                        size: s.Button.Sizes.SMALL,
+                        onClick: m,
+                        color: s.Button.Colors.GREEN,
+                        children: E.default.Messages.START
+                    }), t && null != S ? (0, l.jsx)(s.Button, {
                         className: _.button,
                         innerClassName: _.innerButton,
                         size: s.Button.Sizes.SMALL,
                         onClick: S,
-                        color: s.Button.Colors.GREEN,
-                        children: E.default.Messages.START
-                    }), t && null != p ? (0, l.jsx)(s.Button, {
-                        className: _.button,
-                        innerClassName: _.innerButton,
-                        size: s.Button.Sizes.SMALL,
-                        onClick: p,
                         color: s.Button.Colors.PRIMARY,
                         children: E.default.Messages.END_EVENT
                     }) : null]

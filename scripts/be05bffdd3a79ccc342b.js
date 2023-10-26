@@ -207,9 +207,9 @@
                 d = l("158998"),
                 o = l("398604"),
                 E = l("397680"),
-                f = l("538572"),
-                v = l("189443"),
-                T = l("909151"),
+                f = l("466148"),
+                T = l("189443"),
+                v = l("909151"),
                 h = l("255050"),
                 N = l("393745"),
                 m = l("745049"),
@@ -221,12 +221,14 @@
                     className: t,
                     creator: l,
                     guildId: a,
-                    isNew: T,
+                    isNew: v,
                     isHub: h = !1,
                     guildEventId: S,
                     eventPreview: g,
                     recurrenceId: D
-                } = e, _ = (0, r.useStateFromStores)([o.default], () => o.default.getGuildScheduledEvent(S)), A = null != _ ? _ : g, R = (0, r.useStateFromStores)([i.default], () => i.default.getNick(a, null == l ? void 0 : l.id), [a, l]), p = (0, f.default)(S, D), I = (0, E.default)(D, S), L = null != D && null != p, j = null != I ? I.is_canceled ? m.GuildScheduledEventStatus.CANCELED : m.GuildScheduledEventStatus.SCHEDULED : null;
+                } = e, _ = (0, r.useStateFromStores)([o.default], () => o.default.getGuildScheduledEvent(S)), A = null != _ ? _ : g, R = (0, r.useStateFromStores)([i.default], () => i.default.getNick(a, null == l ? void 0 : l.id), [a, l]), {
+                    startTime: p
+                } = (0, f.default)(S, D), I = (0, E.default)(D, S), L = null != D && null != p, j = null != I ? I.is_canceled ? m.GuildScheduledEventStatus.CANCELED : m.GuildScheduledEventStatus.SCHEDULED : null;
                 if (null == A) return null;
                 let {
                     entity_type: w,
@@ -241,8 +243,8 @@
                         startTime: L ? p.toISOString() : G,
                         status: null != j ? j : O,
                         eventType: w,
-                        isNew: T,
-                        recurrenceRule: (0, v.recurrenceRuleFromServer)(V)
+                        isNew: v,
+                        recurrenceRule: (0, T.recurrenceRuleFromServer)(V)
                     }), (0, n.jsx)("div", {
                         className: C.spacer
                     }), !h && null != l && (0, n.jsx)(u.Tooltip, {
@@ -300,7 +302,7 @@
                             selectable: !0,
                             className: C.eventName,
                             children: a
-                        }), null != r && (0, n.jsx)(T.default, {
+                        }), null != r && (0, n.jsx)(v.default, {
                             description: r,
                             className: s(l, C.description),
                             truncate: i,
@@ -330,7 +332,7 @@
                     isNew: o,
                     guildEventId: E,
                     eventPreview: f,
-                    recurrenceId: v
+                    recurrenceId: T
                 } = e;
                 return (0, n.jsxs)("div", {
                     className: C.container,
@@ -342,7 +344,7 @@
                         isNew: o,
                         guildEventId: E,
                         eventPreview: f,
-                        recurrenceId: v
+                        recurrenceId: T
                     }), (0, n.jsx)(g, {
                         name: s,
                         description: r,
@@ -371,8 +373,8 @@
                 o = l("912557"),
                 E = l("77078"),
                 f = l("449918"),
-                v = l("943232"),
-                T = l("93393"),
+                T = l("943232"),
+                v = l("93393"),
                 h = l("956089"),
                 N = l("822516"),
                 m = l("757767"),
@@ -485,7 +487,7 @@
                                 endDateTimeString: u,
                                 startDateTimeString: i
                             } = e,
-                            c = v.default,
+                            c = T.default,
                             d = n,
                             o = "header-secondary";
                         switch (l) {
@@ -493,7 +495,7 @@
                                 d = s, o = null != u ? void 0 : "text-positive";
                                 break;
                             case a.ENDED:
-                                c = T.default;
+                                c = v.default;
                                 break;
                             case a.READY:
                             case a.STARTING_SOON:
