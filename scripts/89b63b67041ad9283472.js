@@ -1903,7 +1903,7 @@
                     children: [(0, a.jsx)(E.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "240787"
+                        buildNumber: "240791"
                     }), (0, a.jsx)(m, {})]
                 }) : null
             }
@@ -52086,9 +52086,8 @@
             function o(e) {
                 let t = (0, a.useStateFromStores)([l.default], () => l.default.getGuild(e)),
                     n = i.default.can(r.Permissions.MANAGE_GUILD, t),
-                    o = !(null == t ? void 0 : t.hasFeature(r.GuildFeatures.SUMMARIES_PAUSED)),
-                    u = (0, s.useGuildEligibleForSummaries)(t, n && o);
-                return u && n && o
+                    o = (0, s.useGuildEligibleForSummaries)(t);
+                return o && n
             }
         },
         247030: function(e, t, n) {
@@ -52107,7 +52106,7 @@
             function o(e) {
                 let t = (0, a.useStateFromStores)([l.default], () => l.default.getGuild(e)),
                     n = (0, a.useStateFromStores)([i.default], () => i.default.can(r.Permissions.MANAGE_GUILD, t)),
-                    o = !(null == t ? void 0 : t.hasFeature(r.GuildFeatures.SUMMARIES_PAUSED)) && (null == t ? void 0 : t.hasFeature(r.GuildFeatures.SUMMARIES_ENABLED_BY_USER)) && (null == t ? void 0 : t.hasFeature(r.GuildFeatures.SUMMARIES_OPT_OUT_EXPERIENCE)),
+                    o = (null == t ? void 0 : t.hasFeature(r.GuildFeatures.SUMMARIES_ENABLED_BY_USER)) && (null == t ? void 0 : t.hasFeature(r.GuildFeatures.SUMMARIES_OPT_OUT_EXPERIENCE)),
                     u = (0, s.useGuildEligibleForSummaries)(t, n && o);
                 return u && n && o
             }
@@ -52128,9 +52127,8 @@
             function o(e) {
                 let t = (0, a.useStateFromStores)([l.default], () => l.default.getGuild(e)),
                     n = (0, a.useStateFromStores)([i.default], () => i.default.can(r.Permissions.MANAGE_GUILD, t)),
-                    o = null == t ? void 0 : t.hasFeature(r.GuildFeatures.SUMMARIES_PAUSED),
-                    u = (0, s.useGuildEligibleForSummaries)(t, n && o);
-                return u && n && o
+                    o = (0, s.useGuildEligibleForSummaries)(t);
+                return o && n
             }
         },
         269162: function(e, t, n) {
