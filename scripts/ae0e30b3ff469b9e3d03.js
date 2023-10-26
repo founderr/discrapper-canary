@@ -12701,7 +12701,7 @@
                     }),
                     n = (0, i.useStateFromStores)([m.default], () => m.default.getUserIdsToValidate()),
                     s = (0, i.useStateFromStores)([L.default], () => L.default.getPendingCount()),
-                    r = Object.keys(Y.SubscriptionTrials),
+                    r = Object.keys(Y.SubscriptionTrials).filter(e => e !== Y.PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID),
                     {
                         unviewedTrialCount: o,
                         unviewedDiscountCount: u
