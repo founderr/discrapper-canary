@@ -237,37 +237,34 @@
             "use strict";
             n.r(t), n.d(t, {
                 useExplicitMediaAttachmentsForMessage: function() {
-                    return u
+                    return l
                 },
                 useExplicitMediaEmbedsForMessage: function() {
-                    return r
+                    return u
                 }
             });
             var a = n("744196"),
                 i = n("377253"),
-                s = n("457971"),
-                l = n("793441");
-            let u = (e, t, n) => {
-                    var u, r;
-                    let d = (0, a.default)([i.default], () => i.default.getMessage(e, t)),
-                        o = (0, s.useIsEligibleForExplicitMediaRedaction)();
-                    if (null == d) return [];
-                    let c = void 0 !== n ? e => e.id === n : e => (0, l.isMediaObscured)({
-                        type: l.ObscuredMediaTypes.Attachment,
+                s = n("793441");
+            let l = (e, t, n) => {
+                    var l, u;
+                    let r = (0, a.default)([i.default], () => i.default.getMessage(e, t));
+                    if (null == r) return [];
+                    let d = void 0 !== n ? e => e.id === n : e => (0, s.isMediaObscured)({
+                        type: s.ObscuredMediaTypes.Attachment,
                         media: e
-                    }, o);
-                    return null !== (r = null == d ? void 0 : null === (u = d.attachments) || void 0 === u ? void 0 : u.filter(c)) && void 0 !== r ? r : []
+                    }, (0, s.shouldRedactExplicitContent)(r));
+                    return null !== (u = null == r ? void 0 : null === (l = r.attachments) || void 0 === l ? void 0 : l.filter(d)) && void 0 !== u ? u : []
                 },
-                r = (e, t, n) => {
-                    var u, r;
-                    let d = (0, a.default)([i.default], () => i.default.getMessage(e, t)),
-                        o = (0, s.useIsEligibleForExplicitMediaRedaction)();
-                    if (null == d) return [];
-                    let c = void 0 !== n ? e => e.id === n : e => (0, l.isMediaObscured)({
-                        type: l.ObscuredMediaTypes.Embed,
+                u = (e, t, n) => {
+                    var l, u;
+                    let r = (0, a.default)([i.default], () => i.default.getMessage(e, t));
+                    if (null == r) return [];
+                    let d = void 0 !== n ? e => e.id === n : e => (0, s.isMediaObscured)({
+                        type: s.ObscuredMediaTypes.Embed,
                         media: e
-                    }, o);
-                    return null !== (r = null == d ? void 0 : null === (u = d.embeds) || void 0 === u ? void 0 : u.filter(c)) && void 0 !== r ? r : []
+                    }, (0, s.shouldRedactExplicitContent)(r));
+                    return null !== (u = null == r ? void 0 : null === (l = r.embeds) || void 0 === l ? void 0 : l.filter(d)) && void 0 !== u ? u : []
                 }
         },
         723653: function(e, t, n) {

@@ -1205,15 +1205,18 @@
 
             function A(e) {
                 let t = S(e);
-                return {
+                return t ? {
                     obscuredAttachments: e.attachments.filter(e => T({
                         type: i.Attachment,
                         media: e
-                    }, t)),
+                    }, !0)),
                     obscuredEmbeds: e.embeds.filter(e => T({
                         type: i.Embed,
                         media: e
-                    }, t))
+                    }, !0))
+                } : {
+                    obscuredAttachments: [],
+                    obscuredEmbeds: []
                 }
             }
 

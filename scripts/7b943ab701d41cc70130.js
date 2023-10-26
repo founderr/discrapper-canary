@@ -8,30 +8,30 @@
             "use strict";
             a.r(t), a.d(t, {
                 reportFalsePositive: function() {
-                    return n
+                    return i
                 },
                 sendMessagesForScanning: function() {
                     return l
                 }
             });
             var s = a("990746"),
-                i = a("49111");
+                n = a("49111");
 
-            function n(e, t, a, n) {
+            function i(e, t, a, i) {
                 return s.default.post({
-                    url: i.Endpoints.EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE,
+                    url: n.Endpoints.EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE,
                     body: {
                         channel_id: e,
                         message_id: t,
                         attachment_ids: a,
-                        embed_ids: n
+                        embed_ids: i
                     }
                 })
             }
 
             function l(e, t) {
                 return s.default.put({
-                    url: i.Endpoints.EXPLICIT_MEDIA_SCAN_MESSAGES(e),
+                    url: n.Endpoints.EXPLICIT_MEDIA_SCAN_MESSAGES(e),
                     body: {
                         message_ids: t
                     }
@@ -42,11 +42,11 @@
             "use strict";
             a.r(t), a.d(t, {
                 SUPPORTED_EMBED_TYPES: function() {
-                    return i
+                    return n
                 }
             });
             var s = a("805119");
-            let i = new Set([s.MessageEmbedTypes.IMAGE, s.MessageEmbedTypes.VIDEO, s.MessageEmbedTypes.GIFV])
+            let n = new Set([s.MessageEmbedTypes.IMAGE, s.MessageEmbedTypes.VIDEO, s.MessageEmbedTypes.GIFV])
         },
         908480: function(e, t, a) {
             "use strict";
@@ -56,8 +56,8 @@
                 }
             });
             var s = a("773670"),
-                i = a("448993"),
-                n = a("695681");
+                n = a("448993"),
+                i = a("695681");
 
             function l(e) {
                 let {
@@ -67,9 +67,9 @@
                     if (!l) {
                         d(!0);
                         try {
-                            await (0, n.reportFalsePositive)(e, s, o, r), null == a || a()
+                            await (0, i.reportFalsePositive)(e, s, o, r), null == a || a()
                         } catch (a) {
-                            let e = new i.APIError(a);
+                            let e = new n.APIError(a);
                             null == t || t(e)
                         } finally {
                             d(!1)
@@ -86,37 +86,34 @@
             "use strict";
             a.r(t), a.d(t, {
                 useExplicitMediaAttachmentsForMessage: function() {
-                    return d
+                    return l
                 },
                 useExplicitMediaEmbedsForMessage: function() {
-                    return o
+                    return d
                 }
             });
             var s = a("744196"),
-                i = a("377253"),
-                n = a("457971"),
-                l = a("793441");
-            let d = (e, t, a) => {
-                    var d, o;
-                    let r = (0, s.default)([i.default], () => i.default.getMessage(e, t)),
-                        c = (0, n.useIsEligibleForExplicitMediaRedaction)();
-                    if (null == r) return [];
-                    let u = void 0 !== a ? e => e.id === a : e => (0, l.isMediaObscured)({
-                        type: l.ObscuredMediaTypes.Attachment,
+                n = a("377253"),
+                i = a("793441");
+            let l = (e, t, a) => {
+                    var l, d;
+                    let o = (0, s.default)([n.default], () => n.default.getMessage(e, t));
+                    if (null == o) return [];
+                    let r = void 0 !== a ? e => e.id === a : e => (0, i.isMediaObscured)({
+                        type: i.ObscuredMediaTypes.Attachment,
                         media: e
-                    }, c);
-                    return null !== (o = null == r ? void 0 : null === (d = r.attachments) || void 0 === d ? void 0 : d.filter(u)) && void 0 !== o ? o : []
+                    }, (0, i.shouldRedactExplicitContent)(o));
+                    return null !== (d = null == o ? void 0 : null === (l = o.attachments) || void 0 === l ? void 0 : l.filter(r)) && void 0 !== d ? d : []
                 },
-                o = (e, t, a) => {
-                    var d, o;
-                    let r = (0, s.default)([i.default], () => i.default.getMessage(e, t)),
-                        c = (0, n.useIsEligibleForExplicitMediaRedaction)();
-                    if (null == r) return [];
-                    let u = void 0 !== a ? e => e.id === a : e => (0, l.isMediaObscured)({
-                        type: l.ObscuredMediaTypes.Embed,
+                d = (e, t, a) => {
+                    var l, d;
+                    let o = (0, s.default)([n.default], () => n.default.getMessage(e, t));
+                    if (null == o) return [];
+                    let r = void 0 !== a ? e => e.id === a : e => (0, i.isMediaObscured)({
+                        type: i.ObscuredMediaTypes.Embed,
                         media: e
-                    }, c);
-                    return null !== (o = null == r ? void 0 : null === (d = r.embeds) || void 0 === d ? void 0 : d.filter(u)) && void 0 !== o ? o : []
+                    }, (0, i.shouldRedactExplicitContent)(o));
+                    return null !== (d = null == o ? void 0 : null === (l = o.embeds) || void 0 === l ? void 0 : l.filter(r)) && void 0 !== d ? d : []
                 }
         },
         723653: function(e, t, a) {
@@ -127,9 +124,9 @@
                 }
             });
             var s = a("920040"),
-                i = a("773670"),
-                n = a("575482"),
-                l = a.n(n),
+                n = a("773670"),
+                i = a("575482"),
+                l = a.n(i),
                 d = a("805119"),
                 o = a("77078"),
                 r = a("772017"),
@@ -141,27 +138,27 @@
                 T = a("908480"),
                 I = a("39393"),
                 A = a("612920"),
-                R = a("782340"),
-                C = a("875418");
+                C = a("782340"),
+                R = a("875418");
             let f = e => {
                     let {
                         attachment: t
                     } = e, {
                         url: a,
-                        description: i
+                        description: n
                     } = t;
                     return null == a ? null : (0, s.jsx)(N, {
                         url: a,
-                        description: i
+                        description: n
                     })
                 },
                 S = e => {
-                    var t, a, i;
+                    var t, a, n;
                     let {
-                        embed: n
+                        embed: i
                     } = e;
-                    if (!A.SUPPORTED_EMBED_TYPES.has(n.type)) return null;
-                    let l = void 0 !== n.video && n.type !== d.MessageEmbedTypes.GIFV ? n.video.url : null !== (i = null === (t = n.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== i ? i : null === (a = n.image) || void 0 === a ? void 0 : a.url;
+                    if (!A.SUPPORTED_EMBED_TYPES.has(i.type)) return null;
+                    let l = void 0 !== i.video && i.type !== d.MessageEmbedTypes.GIFV ? i.video.url : null !== (n = null === (t = i.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== n ? n : null === (a = i.image) || void 0 === a ? void 0 : a.url;
                     return null == l ? null : (0, s.jsx)(N, {
                         url: l
                     })
@@ -170,15 +167,15 @@
                     let {
                         url: t,
                         description: a
-                    } = e, i = (0, c.isVideoUrl)(t);
+                    } = e, n = (0, c.isVideoUrl)(t);
                     return (0, s.jsx)("div", {
-                        className: C.mediaContainer,
-                        children: i ? (0, s.jsx)(E.default, {
-                            className: l(C.video, C.media),
+                        className: R.mediaContainer,
+                        children: n ? (0, s.jsx)(E.default, {
+                            className: l(R.video, R.media),
                             controls: !0,
                             src: t
                         }) : (0, s.jsx)("img", {
-                            className: l(C.image, C.media),
+                            className: l(R.image, R.media),
                             src: t,
                             alt: a
                         })
@@ -189,19 +186,19 @@
                 let {
                     channelId: t,
                     messageId: a,
-                    attachmentId: n,
+                    attachmentId: i,
                     embedId: l,
                     transitionState: d,
                     onClose: c
-                } = e, E = (0, u.useUID)(), A = (0, _.useIsEligibleForExplicitMediaRedaction)(), N = (0, I.useExplicitMediaAttachmentsForMessage)(t, a, n), O = (0, I.useExplicitMediaEmbedsForMessage)(t, a, l), m = i.useCallback(() => {
-                    r.default.pop(), (0, o.showToast)((0, o.createToast)(R.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS, o.ToastType.CUSTOM)), c()
+                } = e, E = (0, u.useUID)(), A = (0, _.useIsEligibleForExplicitMediaRedaction)(), N = (0, I.useExplicitMediaAttachmentsForMessage)(t, a, i), O = (0, I.useExplicitMediaEmbedsForMessage)(t, a, l), m = n.useCallback(() => {
+                    r.default.pop(), (0, o.showToast)((0, o.createToast)(C.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS, o.ToastType.CUSTOM)), c()
                 }, [c]), {
-                    reportFalsePositive: g,
-                    isReportFalsePositiveLoading: h
+                    reportFalsePositive: h,
+                    isReportFalsePositiveLoading: g
                 } = (0, T.useExplicitMediaActions)({
                     onSuccess: m,
                     onError: () => {
-                        (0, o.showToast)((0, o.createToast)(R.default.Messages.ERROR_GENERIC_TITLE, o.ToastType.FAILURE))
+                        (0, o.showToast)((0, o.createToast)(C.default.Messages.ERROR_GENERIC_TITLE, o.ToastType.FAILURE))
                     }
                 }), p = () => {
                     (0, M.trackMediaRedactionAction)({
@@ -210,7 +207,7 @@
                         messageId: a
                     }), c()
                 }, L = A && (N.length > 0 || O.length > 0);
-                return i.useEffect(() => {
+                return n.useEffect(() => {
                     L && (0, M.trackMediaRedactionAction)({
                         action: M.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
                         channelId: t,
@@ -223,18 +220,18 @@
                     children: [(0, s.jsxs)(o.ModalContent, {
                         children: [(0, s.jsx)(o.ModalCloseButton, {
                             onClick: p,
-                            className: C.closeButton
+                            className: R.closeButton
                         }), (0, s.jsx)(o.Heading, {
                             id: E,
                             variant: "heading-lg/semibold",
                             color: "header-primary",
-                            className: C.header,
-                            children: R.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER
+                            className: R.header,
+                            children: C.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER
                         }), (0, s.jsx)(o.Text, {
                             variant: "text-sm/normal",
                             color: "header-secondary",
-                            className: C.subheader,
-                            children: R.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION
+                            className: R.subheader,
+                            children: C.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION
                         }), 1 === N.length && 0 === O.length ? (0, s.jsx)(f, {
                             attachment: N[0]
                         }) : null, 1 === O.length && 0 === N.length ? (0, s.jsx)(S, {
@@ -242,26 +239,26 @@
                         }) : null]
                     }), (0, s.jsxs)(o.ModalFooter, {
                         children: [(0, s.jsx)(o.Button, {
-                            className: C.button,
-                            disabled: h,
-                            submitting: h,
+                            className: R.button,
+                            disabled: g,
+                            submitting: g,
                             size: o.Button.Sizes.MEDIUM,
                             color: o.Button.Colors.BRAND,
                             onClick: () => {
-                                g(t, a, N.map(e => e.id), O.map(e => e.id)), (0, M.trackMediaRedactionAction)({
+                                h(t, a, N.map(e => e.id), O.map(e => e.id)), (0, M.trackMediaRedactionAction)({
                                     action: M.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
                                     channelId: t,
                                     messageId: a
                                 })
                             },
-                            children: R.default.Messages.CONFIRM
+                            children: C.default.Messages.CONFIRM
                         }), (0, s.jsx)(o.Button, {
-                            className: C.button,
-                            disabled: h,
+                            className: R.button,
+                            disabled: g,
                             color: o.Button.Colors.TRANSPARENT,
                             size: o.Button.Sizes.MEDIUM,
                             onClick: p,
-                            children: R.default.Messages.CANCEL
+                            children: C.default.Messages.CANCEL
                         })]
                     })]
                 })
@@ -275,8 +272,8 @@
                 }
             });
             var s = a("920040"),
-                i = a("773670"),
-                n = a("77078"),
+                n = a("773670"),
+                i = a("77078"),
                 l = a("79112"),
                 d = a("545158"),
                 o = a("775032"),
@@ -292,23 +289,23 @@
                         messageId: T,
                         transitionState: I,
                         onClose: A
-                    } = e, R = (0, o.default)(), C = i.useCallback(e => {
+                    } = e, C = (0, o.default)(), R = n.useCallback(e => {
                         (0, c.trackMediaRedactionAction)({
                             action: e,
                             channelId: t,
                             messageId: T
                         })
                     }, [t, T]);
-                    return i.useEffect(() => {
+                    return n.useEffect(() => {
                         (0, c.trackMediaRedactionAction)({
                             action: c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_VIEWED,
                             channelId: t,
                             messageId: T
                         })
-                    }, [t, T]), (0, s.jsxs)(n.ModalRoot, {
+                    }, [t, T]), (0, s.jsxs)(i.ModalRoot, {
                         transitionState: I,
                         "aria-label": E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_MODAL_LABEL,
-                        children: [(0, s.jsx)(n.ModalHeader, {
+                        children: [(0, s.jsx)(i.ModalHeader, {
                             separator: !1,
                             className: _.modalHeader,
                             children: (0, s.jsx)("img", {
@@ -316,45 +313,45 @@
                                 alt: E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_HEADER_IMAGE_ALT,
                                 className: _.headerImg
                             })
-                        }), (0, s.jsxs)(n.ModalContent, {
+                        }), (0, s.jsxs)(i.ModalContent, {
                             className: _.modalBody,
-                            children: [(0, s.jsx)(n.Heading, {
+                            children: [(0, s.jsx)(i.Heading, {
                                 variant: "heading-lg/bold",
                                 className: _.modalInteriorHeader,
                                 children: E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_HEADER
-                            }), (0, s.jsx)(n.Text, {
+                            }), (0, s.jsx)(i.Text, {
                                 variant: "text-md/normal",
                                 color: "header-secondary",
-                                children: R ? E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_ADULT : E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_TEEN
+                                children: C ? E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_ADULT : E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_DESCRIPTION_TEEN
                             }), (0, s.jsxs)("div", {
                                 className: _.buttonContainer,
-                                children: [R ? (0, s.jsx)(n.Button, {
-                                    color: n.Button.Colors.BRAND,
+                                children: [C ? (0, s.jsx)(i.Button, {
+                                    color: i.Button.Colors.BRAND,
                                     onClick: function() {
-                                        C(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), l.default.open(u.UserSettingsSections.PRIVACY_AND_SAFETY), A()
+                                        R(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), l.default.open(u.UserSettingsSections.PRIVACY_AND_SAFETY), A()
                                     },
                                     fullWidth: !0,
                                     children: E.default.Messages.OBSCURED_CONTENT_UPDATE_SETTINGS_CTA
-                                }) : (0, s.jsx)(n.Button, {
-                                    color: n.Button.Colors.BRAND,
+                                }) : (0, s.jsx)(i.Button, {
+                                    color: i.Button.Colors.BRAND,
                                     onClick: () => {
                                         (0, d.default)(r.default.getArticleURL(u.HelpdeskArticles.EXPLICIT_MEDIA_REDACTION))
                                     },
                                     fullWidth: !0,
                                     children: E.default.Messages.LEARN_MORE
-                                }), (0, s.jsx)(n.Button, {
-                                    color: n.Button.Colors.PRIMARY,
+                                }), (0, s.jsx)(i.Button, {
+                                    color: i.Button.Colors.PRIMARY,
                                     onClick: function() {
-                                        A(), C(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS)
+                                        A(), R(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS)
                                     },
                                     fullWidth: !0,
                                     children: E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_DISMISS
-                                }), (0, s.jsx)(n.Text, {
+                                }), (0, s.jsx)(i.Text, {
                                     variant: "text-sm/medium",
                                     color: "header-secondary",
                                     children: E.default.Messages.OBSCURED_CONTENT_LEARN_MORE_FALSE_POSITIVE.format({
                                         handleFalsePositiveHook: () => {
-                                            A(), C(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE), (0, n.openModalLazy)(async () => {
+                                            A(), R(c.TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE), (0, i.openModalLazy)(async () => {
                                                 let {
                                                     default: e
                                                 } = await a("723653");
@@ -376,16 +373,16 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return n
+                    return i
                 }
             });
             var s = a("498225"),
-                i = a("697218");
+                n = a("697218");
 
-            function n() {
-                let e = (0, s.useStateFromStores)([i.default], () => {
+            function i() {
+                let e = (0, s.useStateFromStores)([n.default], () => {
                     var e;
-                    return null === (e = i.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed
+                    return null === (e = n.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed
                 });
                 return e
             }
