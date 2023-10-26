@@ -10201,129 +10201,159 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return T
                 }
             });
             var s = n("505143"),
                 a = n("799271"),
-                l = n("42203"),
-                i = n("697218"),
-                r = n("641126"),
-                u = n("410328"),
-                o = n("868586"),
-                d = n("973799"),
-                c = n("782340");
-            let f = {
+                l = n("385976"),
+                i = n("867805"),
+                r = n("42203"),
+                u = n("697218"),
+                o = n("315102"),
+                d = n("402671"),
+                c = n("641126"),
+                f = n("410328"),
+                E = n("868586"),
+                m = n("973799"),
+                _ = n("782340");
+            let h = {
                     channelId: "",
                     selectedAnswerIds: new Set,
                     submitting: !1
                 },
-                E = e => (0, s.match)(e).with({
+                I = e => (0, s.match)(e).with({
                     isVictor: !0
                 }, () => "victor").with({
                     didSelfVote: !0
                 }, () => "voted").otherwise(() => "normal"),
-                m = {
+                p = {
                     [a.PollLayoutTypes.DEFAULT]: e => (0, s.match)(e).with({
                         isExpired: !1,
                         hasVoted: !0
-                    }, () => "voted").otherwise(() => E(e)),
-                    [a.PollLayoutTypes.IMAGE_ONLY_ANSWERS]: E,
-                    [a.PollLayoutTypes.UNKNOWN]: E
+                    }, () => "voted").otherwise(() => I(e)),
+                    [a.PollLayoutTypes.IMAGE_ONLY_ANSWERS]: I,
+                    [a.PollLayoutTypes.UNKNOWN]: I
                 };
 
-            function _(e, t) {
-                var n, E, _;
+            function T(e, t) {
+                var n, I, T;
                 let {
-                    theme: h = "dark",
-                    formattedExpirationLabel: I
+                    animateEmoji: g = !1,
+                    theme: A = "dark",
+                    formattedExpirationLabel: S
                 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, {
-                    poll: p
+                    poll: C
                 } = e;
-                if (null == p) return;
-                let T = i.default.getCurrentUser();
-                if (null == T) return;
-                let g = null === (E = l.default.getChannel(e.getChannelId())) || void 0 === E ? void 0 : null === (n = E.getGuildId) || void 0 === n ? void 0 : n.call(E),
-                    A = (0, u.getAvatarUrl)(T, g),
-                    S = null != I ? I : (0, d.formatExpirationLabel)(p.expiry),
-                    C = null == S,
+                if (null == C) return;
+                let N = u.default.getCurrentUser();
+                if (null == N) return;
+                let M = null === (I = r.default.getChannel(e.getChannelId())) || void 0 === I ? void 0 : null === (n = I.getGuildId) || void 0 === n ? void 0 : n.call(I),
+                    v = (0, f.getAvatarUrl)(N, M),
+                    O = null != S ? S : (0, m.formatExpirationLabel)(C.expiry),
+                    L = null == O,
                     {
-                        selectedAnswerIds: N,
-                        submitting: M
-                    } = null !== (_ = null != t ? t : (0, r.getPollState)(e.getChannelId(), e.id)) && void 0 !== _ ? _ : f,
-                    v = p.answers,
-                    O = p.layout_type,
-                    L = e.reactions.reduce((e, t) => {
+                        selectedAnswerIds: x,
+                        submitting: R
+                    } = null !== (T = null != t ? t : (0, c.getPollState)(e.getChannelId(), e.id)) && void 0 !== T ? T : h,
+                    P = C.answers,
+                    D = C.layout_type,
+                    y = e.reactions.reduce((e, t) => {
                         var n, s;
                         return e + (null !== (s = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== s ? s : 0)
                     }, 0),
-                    x = 1 / v.length,
-                    R = e.reactions.some(e => !0 === e.me_vote),
-                    P = v.map(t => {
-                        var n, l, i;
-                        let r = "".concat(t.answer_id),
-                            u = function(e, t) {
+                    j = 1 / P.length,
+                    U = e.reactions.some(e => !0 === e.me_vote),
+                    G = P.map(t => {
+                        var n, r, u;
+                        let c = "".concat(t.answer_id),
+                            f = function(e, t) {
                                 for (let n of e.reactions) {
                                     let e = "number" == typeof n.emoji.id ? "".concat(n.emoji.id) : n.emoji.id;
                                     if (e === t) return n
                                 }
-                            }(e, r),
-                            o = null !== (l = null == u ? void 0 : null === (n = u.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== l ? l : 0,
-                            d = o / L,
-                            f = C ? d >= x : void 0,
-                            E = null !== (i = null == u ? void 0 : u.me_vote) && void 0 !== i && i,
-                            _ = m[O]({
-                                didSelfVote: E,
-                                isVictor: f,
-                                isExpired: C,
-                                hasVoted: R
+                            }(e, c),
+                            E = null !== (r = null == f ? void 0 : null === (n = f.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== r ? r : 0,
+                            m = E / y,
+                            h = L ? m >= j : void 0,
+                            I = null !== (u = null == f ? void 0 : f.me_vote) && void 0 !== u && u,
+                            T = p[D]({
+                                didSelfVote: I,
+                                isVictor: h,
+                                isExpired: L,
+                                hasVoted: U
                             });
                         return {
-                            answerId: r,
+                            answerId: c,
                             pollMedia: {
                                 text: t.poll_media.text,
-                                emoji: t.poll_media.emoji,
+                                emoji: function(e) {
+                                    let {
+                                        animateEmoji: t = !1,
+                                        size: n = 48
+                                    } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                                    if (null == e) return;
+                                    let s = !1;
+                                    if (null != e.id) {
+                                        var a, r;
+                                        s = null !== (r = null === (a = l.default.getCustomEmojiById(e.id)) || void 0 === a ? void 0 : a.animated) && void 0 !== r && r
+                                    }
+                                    let u = s && t;
+                                    return {
+                                        id: null == e.id ? null : "".concat(e.id),
+                                        name: e.name,
+                                        displayName: null == e.id ? i.default.convertSurrogateToName(e.name) : e.name,
+                                        src: null == e.id ? d.default.getURL(e.name) : o.default.getEmojiURL({
+                                            id: e.id,
+                                            animated: u,
+                                            size: n
+                                        }),
+                                        animated: u
+                                    }
+                                }(t.poll_media.emoji, {
+                                    animateEmoji: g
+                                }),
                                 stickerId: t.poll_media.sticker_id,
                                 attachmentIds: t.poll_media.attachment_ids
                             },
-                            isSelected: N.has(r),
-                            isVictor: f,
-                            didSelfVote: E,
-                            style: _,
-                            votesPercentage: Math.round(100 * d),
-                            votes: (0, s.match)(O).with(a.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(o, ")")).otherwise(() => c.default.Messages.POLL_VOTES_COUNT.format({
-                                count: o
+                            isSelected: x.has(c),
+                            isVictor: h,
+                            didSelfVote: I,
+                            style: T,
+                            votesPercentage: Math.round(100 * m),
+                            votes: (0, s.match)(D).with(a.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(E, ")")).otherwise(() => _.default.Messages.POLL_VOTES_COUNT.format({
+                                count: E
                             }))
                         }
                     }),
-                    D = !R,
-                    y = !M && N.size > 0 && !R,
-                    j = (0, s.match)({
-                        canSubmitVote: y,
-                        hasVoted: R
+                    b = !U,
+                    B = !R && x.size > 0 && !U,
+                    k = (0, s.match)({
+                        canSubmitVote: B,
+                        hasVoted: U
                     }).with({
                         hasVoted: !0
-                    }, () => c.default.Messages.POLL_ALREADY_VOTED).with({
+                    }, () => _.default.Messages.POLL_ALREADY_VOTED).with({
                         canSubmitVote: !0
-                    }, () => c.default.Messages.POLL_SUBMIT_VOTE).otherwise(() => c.default.Messages.POLL_CHOOSE_SINGLE_ANSWER_PROMPT),
-                    U = "normal";
-                return C ? U = "victor" : R && (U = "voted"), {
-                    question: p.question,
-                    answers: P,
-                    layoutType: O,
-                    resources: (0, o.default)({
-                        theme: h,
-                        layoutType: O
+                    }, () => _.default.Messages.POLL_SUBMIT_VOTE).otherwise(() => _.default.Messages.POLL_CHOOSE_SINGLE_ANSWER_PROMPT),
+                    H = "normal";
+                return L ? H = "victor" : U && (H = "voted"), {
+                    question: C.question,
+                    answers: G,
+                    layoutType: D,
+                    resources: (0, E.default)({
+                        theme: A,
+                        layoutType: D
                     }),
-                    containerStyle: U,
-                    submitVoteLabel: j,
-                    canSubmitVote: y,
-                    canTapAnswers: D,
+                    containerStyle: H,
+                    submitVoteLabel: k,
+                    canSubmitVote: B,
+                    canTapAnswers: b,
                     canShowVoteCounts: !0,
-                    hasVoted: R,
-                    expirationLabel: null != S ? S : c.default.Messages.POLL_EXPIRED,
-                    isExpired: C,
-                    myAvatarUrl: A
+                    hasVoted: U,
+                    expirationLabel: null != O ? O : _.default.Messages.POLL_EXPIRED,
+                    isExpired: L,
+                    myAvatarUrl: v
                 }
             }
         },
@@ -10366,25 +10396,28 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return o
                 }
             });
             var s = n("773670"),
                 a = n("841098"),
-                l = n("641126"),
-                i = n("990986"),
-                r = n("973799");
+                l = n("845579"),
+                i = n("641126"),
+                r = n("990986"),
+                u = n("973799");
 
-            function u(e) {
+            function o(e) {
                 var t;
-                let n = (0, l.useChannelPollInteractions)(e.getChannelId()),
-                    u = n[e.id],
-                    o = (0, r.default)(null === (t = e.poll) || void 0 === t ? void 0 : t.expiry),
-                    d = (0, a.default)();
-                return s.useMemo(() => (0, i.default)(e, u, {
-                    theme: d,
-                    formattedExpirationLabel: o
-                }), [e, u, o, d])
+                let n = (0, i.useChannelPollInteractions)(e.getChannelId()),
+                    o = n[e.id],
+                    d = (0, u.default)(null === (t = e.poll) || void 0 === t ? void 0 : t.expiry),
+                    c = l.AnimateEmoji.useSetting(),
+                    f = (0, a.default)();
+                return s.useMemo(() => (0, r.default)(e, o, {
+                    animateEmoji: c,
+                    theme: f,
+                    formattedExpirationLabel: d
+                }), [c, e, o, d, f])
             }
         },
         426490: function(e, t, n) {
