@@ -5182,7 +5182,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return I
+                    return T
                 }
             });
             var a = s("920040"),
@@ -5193,83 +5193,83 @@
                 u = s("701909"),
                 o = s("719923"),
                 d = s("956597"),
-                c = s("49111"),
-                E = s("782340"),
-                _ = s("278537"),
-                I = e => {
+                c = s("646718"),
+                E = s("49111"),
+                _ = s("782340"),
+                I = s("278537"),
+                T = e => {
                     let {
                         subscriptionTrial: t,
-                        expiresAt: s,
-                        cheapestMonthlyPrice: I
-                    } = e, T = (0, o.formatIntervalDuration)({
+                        expiresAt: s
+                    } = e, T = (0, o.formatPriceString)((0, o.getDefaultPrice)(c.SubscriptionPlans.PREMIUM_MONTH_TIER_2), c.SubscriptionIntervalTypes.MONTH), f = (0, o.formatIntervalDuration)({
                         intervalType: null == t ? void 0 : t.interval,
                         intervalCount: null == t ? void 0 : t.interval_count
-                    }), f = E.default.Messages.Q4_DROP_TRY_NITRO_FOR_DURATION.format({
-                        duration: T,
-                        price: I
-                    }), S = f.split(" "), [R, A] = n.useState(!1), [N, p] = n.useState(!1), [m, P] = n.useState(!1), g = (0, r.default)([i.default], () => i.default.useReducedMotion);
-                    return g ? (0, a.jsxs)("div", {
-                        className: _.descriptionContainer,
+                    }), S = _.default.Messages.Q4_DROP_TRY_NITRO_FOR_DURATION.format({
+                        duration: f,
+                        price: T
+                    }), R = S.split(" "), [A, N] = n.useState(!1), [p, m] = n.useState(!1), [P, g] = n.useState(!1), C = (0, r.default)([i.default], () => i.default.useReducedMotion);
+                    return C ? (0, a.jsxs)("div", {
+                        className: I.descriptionContainer,
                         children: [(0, a.jsx)(l.Text, {
                             variant: "text-lg/normal",
                             color: "always-white",
-                            className: _.descriptionText,
-                            children: f
+                            className: I.descriptionText,
+                            children: S
                         }), (0, a.jsx)("div", {
-                            className: _.countdownStatic,
+                            className: I.countdownStatic,
                             children: (0, a.jsx)(l.Text, {
                                 variant: "text-sm/bold",
-                                className: _.countdownText,
+                                className: I.countdownText,
                                 children: (0, d.getOfferEndsText)(s)
                             })
                         }), (0, a.jsx)("div", {
-                            className: _.termsApplyStatic,
+                            className: I.termsApplyStatic,
                             children: (0, a.jsx)(l.Anchor, {
-                                href: u.default.getArticleURL(c.HelpdeskArticles.Q4_DROP),
+                                href: u.default.getArticleURL(E.HelpdeskArticles.Q4_DROP),
                                 children: (0, a.jsx)(l.Text, {
                                     variant: "text-sm/medium",
-                                    className: _.termsApplyLink,
-                                    children: E.default.Messages.BOGO_TERMS_APPLY
+                                    className: I.termsApplyLink,
+                                    children: _.default.Messages.BOGO_TERMS_APPLY
                                 })
                             })
                         })]
                     }) : (0, a.jsxs)("div", {
-                        className: _.descriptionContainer,
+                        className: I.descriptionContainer,
                         children: [(0, a.jsx)(l.Text, {
                             variant: "text-lg/semibold",
                             color: "always-white",
-                            className: _.descriptionText,
-                            children: S.map((e, t) => {
-                                let s = t === S.length - 1;
+                            className: I.descriptionText,
+                            children: R.map((e, t) => {
+                                let s = t === R.length - 1;
                                 return (0, a.jsxs)("span", {
-                                    className: _.descriptionTextChunk,
+                                    className: I.descriptionTextChunk,
                                     style: {
                                         animationDelay: "".concat(.25 * t + 1, "s")
                                     },
-                                    onAnimationEnd: s ? () => A(!0) : () => null,
+                                    onAnimationEnd: s ? () => N(!0) : () => null,
                                     children: [e, "\xa0"]
                                 }, t)
                             })
                         }), (0, a.jsx)("div", {
-                            className: R ? _.countdownWithAnimation : _.countdown,
-                            onAnimationEnd: () => p(!0),
+                            className: A ? I.countdownWithAnimation : I.countdown,
+                            onAnimationEnd: () => m(!0),
                             children: (0, a.jsx)("div", {
-                                className: N ? _.countdownTextContainerWithAnimation : _.countdownTextContainer,
-                                onAnimationEnd: () => P(!0),
+                                className: p ? I.countdownTextContainerWithAnimation : I.countdownTextContainer,
+                                onAnimationEnd: () => g(!0),
                                 children: (0, a.jsx)(l.Text, {
                                     variant: "text-sm/bold",
-                                    className: _.countdownText,
+                                    className: I.countdownText,
                                     children: (0, d.getOfferEndsText)(s)
                                 })
                             })
                         }), (0, a.jsx)("div", {
-                            className: m ? _.termsApplyWithAnimation : _.termsApply,
+                            className: P ? I.termsApplyWithAnimation : I.termsApply,
                             children: (0, a.jsx)(l.Anchor, {
-                                href: u.default.getArticleURL(c.HelpdeskArticles.Q4_DROP),
+                                href: u.default.getArticleURL(E.HelpdeskArticles.Q4_DROP),
                                 children: (0, a.jsx)(l.Text, {
                                     variant: "text-sm/medium",
-                                    className: _.termsApplyLink,
-                                    children: E.default.Messages.BOGO_TERMS_APPLY
+                                    className: I.termsApplyLink,
+                                    children: _.default.Messages.BOGO_TERMS_APPLY
                                 })
                             })
                         })]
@@ -5469,10 +5469,7 @@
                         enabled: M
                     } = E.Q4DropExperiment.useExperiment({
                         location: "HeroHeading"
-                    }, {
-                        autoTrackExposure: L,
-                        disable: !L
-                    });
+                    }), x = L && M;
                     return (0, a.jsx)(P, {
                         children: (0, a.jsxs)("div", {
                             className: r(p.container, s),
@@ -5483,17 +5480,16 @@
                                     variant: t ? "display-lg" : "display-md",
                                     color: "always-white",
                                     children: N.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
-                                }), !M && (0, a.jsx)(l.Text, {
+                                }), !x && (0, a.jsx)(l.Text, {
                                     variant: "text-lg/normal",
                                     color: "always-white",
                                     className: p.description,
                                     children: N.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
                                         cheapestMonthlyPrice: m
                                     })
-                                }), M && (0, a.jsx)(f.default, {
+                                }), x && (0, a.jsx)(f.default, {
                                     subscriptionTrial: null == h ? void 0 : h.subscription_trial,
-                                    expiresAt: null == h ? void 0 : h.expires_at,
-                                    cheapestMonthlyPrice: m
+                                    expiresAt: null == h ? void 0 : h.expires_at
                                 }), O ? (0, a.jsx)("div", {
                                     className: p.buttonContainer,
                                     children: (0, a.jsx)(S.default, {
