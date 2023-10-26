@@ -741,7 +741,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 ClydeEditProfileModalPersonalitySection: function() {
-                    return m
+                    return I
                 }
             });
             var l = n("920040"),
@@ -754,73 +754,74 @@
                 d = n("599110"),
                 c = n("335189"),
                 f = n("473591"),
-                E = n("49111"),
-                h = n("782340"),
-                p = n("29995");
+                E = n("680894"),
+                h = n("49111"),
+                p = n("782340"),
+                m = n("29995");
 
-            function m(e) {
+            function I(e) {
                 var t;
                 let {
                     settings: n
-                } = e, [m, I] = i.useState(!1), [C, _] = i.useState(), {
-                    pendingPersonality: g,
-                    errors: v
+                } = e, [I, C] = i.useState(!1), [_, g] = i.useState(), {
+                    pendingPersonality: v,
+                    errors: S
                 } = (0, r.useStateFromStoresObject)([f.default], () => ({
                     pendingPersonality: f.default.getPendingPersonality(),
                     errors: f.default.getErrors()
-                })), [S, T] = i.useState(), R = null != g && C === g, N = null != v && Number(v.code) === E.AbortCodes.CLYDE_UNSAFE_PERSONALITY ? v.message : void 0, A = R ? h.default.Messages.CLYDE_GENERATE_PERSONALITY_UNDO : h.default.Messages.CLYDE_GENERATE_PERSONALITY_HINT;
+                })), [T, R] = i.useState(), N = null != v && _ === v, A = null != S && Number(S.code) === h.AbortCodes.CLYDE_UNSAFE_PERSONALITY ? S.message : void 0, M = N ? p.default.Messages.CLYDE_GENERATE_PERSONALITY_UNDO : p.default.Messages.CLYDE_GENERATE_PERSONALITY_HINT;
                 return (0, l.jsxs)(s.default, {
-                    title: h.default.Messages.PERSONALITY_CLYDE_SECTION,
+                    title: p.default.Messages.PERSONALITY_CLYDE_SECTION,
                     children: [(0, l.jsxs)(a.FormText, {
                         type: a.FormText.Types.DESCRIPTION,
-                        className: p.description,
-                        children: [h.default.Messages.PERSONALITY_DESCRIPTION, " ", (0, l.jsx)(a.Anchor, {
-                            href: "https://forms.gle/T12GPi33Pt5ocg89A",
-                            children: h.default.Messages.PERSONALITY_FEEDBACK
+                        className: m.description,
+                        children: [p.default.Messages.PERSONALITY_DESCRIPTION, " ", (0, l.jsx)(a.Anchor, {
+                            href: E.CLYDE_PERSONALITY_FEEDBACK_URL,
+                            children: p.default.Messages.PERSONALITY_FEEDBACK
                         })]
                     }), (0, l.jsx)(a.TextArea, {
-                        value: null !== (t = null != g ? g : n.personality) && void 0 !== t ? t : "",
+                        value: null !== (t = null != v ? v : n.personality) && void 0 !== t ? t : "",
                         onChange: e => {
                             (0, c.setPendingPersonality)(e)
                         },
-                        placeholder: h.default.Messages.PERSONALITY_PLACEHOLDER,
-                        maxLength: 1e3,
-                        disabled: m,
+                        placeholder: p.default.Messages.PERSONALITY_PLACEHOLDER,
+                        maxLength: E.CLYDE_PERSONALITY_MAX_LENGTH,
+                        disabled: I,
                         autosize: !0
-                    }), null != N ? (0, l.jsx)(a.FormErrorBlock, {
-                        className: p.errorBlock,
-                        children: N
+                    }), null != A ? (0, l.jsx)(a.FormErrorBlock, {
+                        className: m.errorBlock,
+                        children: A
                     }) : null, (0, l.jsxs)("div", {
-                        className: p.generateButtonContainer,
+                        className: m.generateButtonContainer,
                         children: [(0, l.jsx)(a.Button, {
-                            color: R ? a.ButtonColors.PRIMARY : a.ButtonColors.BRAND,
-                            innerClassName: p.generateButton,
+                            color: N ? a.ButtonColors.PRIMARY : a.ButtonColors.BRAND,
+                            innerClassName: m.generateButton,
                             onClick: () => {
-                                if (R && null != S) {
-                                    (0, c.setPendingPersonality)(S), T(void 0);
+                                if (N && null != T) {
+                                    (0, c.setPendingPersonality)(T), R(void 0);
                                     return
                                 }
-                                null != g && "" !== g.trim() && (d.default.track(E.AnalyticEvents.CLYDE_AI_GENERATE_PERSONALITY_CLICKED, {
+                                null != v && "" !== v.trim() && (d.default.track(h.AnalyticEvents.CLYDE_AI_GENERATE_PERSONALITY_CLICKED, {
                                     guild_id: n.guild_id
-                                }), I(!0), (0, c.generatePersonality)(g).then(e => {
-                                    null != e && (T(g), _(e), (0, c.setPendingPersonality)(e, !0)), I(!1)
+                                }), C(!0), (0, c.generatePersonality)(v).then(e => {
+                                    null != e && (R(v), g(e), (0, c.setPendingPersonality)(e, !0)), C(!1)
                                 }))
                             },
-                            disabled: null == g || "" === g.trim(),
-                            submitting: m,
-                            children: R ? (0, l.jsxs)(l.Fragment, {
+                            disabled: null == v || "" === v.trim(),
+                            submitting: I,
+                            children: N ? (0, l.jsxs)(l.Fragment, {
                                 children: [(0, l.jsx)(u.default, {
-                                    className: p.buttonIcon
-                                }), h.default.Messages.UNDO]
+                                    className: m.buttonIcon
+                                }), p.default.Messages.UNDO]
                             }) : (0, l.jsxs)(l.Fragment, {
                                 children: [(0, l.jsx)(o.default, {
-                                    className: p.buttonIcon
-                                }), h.default.Messages.CLYDE_GENERATE_PERSONALITY]
+                                    className: m.buttonIcon
+                                }), p.default.Messages.CLYDE_GENERATE_PERSONALITY]
                             })
                         }), (0, l.jsx)(a.Text, {
                             color: "text-muted",
                             variant: "text-sm/medium",
-                            children: A
+                            children: M
                         })]
                     })]
                 }, "personality")

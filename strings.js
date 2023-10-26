@@ -2310,6 +2310,7 @@
                 CLYDE_GENERATE_PERSONALITY: "Generate",
                 CLYDE_GENERATE_PERSONALITY_HINT: "Generate a more detailed personality",
                 CLYDE_GENERATE_PERSONALITY_UNDO: "Undo generated personality",
+                CLYDE_EDIT_NAME_LABEL: "Name",
                 CLYDE_USER_RATING_THANKS_1: "Clyde's neurons are buzzing \uD83E\uDDE0",
                 CLYDE_USER_RATING_THANKS_2: "Your feedback is the secret sauce \uD83C\uDF1F",
                 CLYDE_USER_RATING_THANKS_3: "You're helping Clyde evolve one byte at a time \uD83D\uDE4C",
@@ -17775,7 +17776,7 @@
                 L = E("782340");
             (0, r.setUpdateRules)(i.default), (0, I.default)(L.default, n.default, s.default), a.default.Emitter.injectBatchEmitChanges(o.unstable_batchedUpdates), a.default.PersistedStore.disableWrites = __OVERLAY__, a.default.initialize();
             let u = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("240755", ", Version Hash: ").concat("7e12bf6778ce78198b865d5e4f8be643714a134b")), t.default.setTags({
+            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("240759", ", Version Hash: ").concat("56456dc6f9d91c377ecf6ce6e4c957f0efef0fc7")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), T.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
         },
@@ -20137,8 +20138,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "240755", "240755"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("240755")), _ = 0), _
+                let _ = parseInt((e = "240759", "240759"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("240759")), _ = 0), _
             }
         },
         990629: function(e, _, E) {
