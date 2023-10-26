@@ -42584,6 +42584,10 @@ html .progress__4ef76 {
     --poll-style-label: var(--polls-voted-label)
 }
 
+.enabled__75d0c {
+    cursor: pointer
+}
+
 .answersContainer_fd091b {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -42657,7 +42661,6 @@ html .progress__4ef76 {
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-low);
     color: var(--poll-style-label);
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -64448,8 +64451,8 @@ strong {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden

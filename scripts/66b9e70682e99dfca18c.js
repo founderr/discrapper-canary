@@ -10263,8 +10263,11 @@
                         return e + (null !== (s = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== s ? s : 0)
                     }, 0),
                     j = 1 / P.length,
-                    U = e.reactions.some(e => !0 === e.me_vote),
-                    G = P.map(t => {
+                    U = x.size > 0,
+                    G = e.reactions.some(e => !0 === e.me_vote),
+                    b = G && U,
+                    B = !b && G,
+                    k = P.map(t => {
                         var n, r, u;
                         let c = "".concat(t.answer_id),
                             f = function(e, t) {
@@ -10276,12 +10279,12 @@
                             E = null !== (r = null == f ? void 0 : null === (n = f.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== r ? r : 0,
                             m = E / y,
                             h = L ? m >= j : void 0,
-                            I = null !== (u = null == f ? void 0 : f.me_vote) && void 0 !== u && u,
+                            I = B && null !== (u = null == f ? void 0 : f.me_vote) && void 0 !== u && u,
                             T = p[D]({
                                 didSelfVote: I,
                                 isVictor: h,
                                 isExpired: L,
-                                hasVoted: U
+                                hasVoted: B
                             });
                         return {
                             answerId: c,
@@ -10326,31 +10329,35 @@
                             }))
                         }
                     }),
-                    b = !U,
-                    B = !R && x.size > 0 && !U,
-                    k = (0, s.match)({
-                        canSubmitVote: B,
-                        hasVoted: U
+                    H = !L,
+                    F = !R && U && !B,
+                    w = (0, s.match)({
+                        canSubmitVote: F,
+                        hasVoted: B,
+                        isEditingVote: b
                     }).with({
                         hasVoted: !0
                     }, () => _.default.Messages.POLL_ALREADY_VOTED).with({
+                        canSubmitVote: !0,
+                        isEditingVote: !0
+                    }, () => _.default.Messages.POLL_SUBMIT_VOTE_EDIT).with({
                         canSubmitVote: !0
                     }, () => _.default.Messages.POLL_SUBMIT_VOTE).otherwise(() => _.default.Messages.POLL_CHOOSE_SINGLE_ANSWER_PROMPT),
-                    H = "normal";
-                return L ? H = "victor" : U && (H = "voted"), {
+                    V = "normal";
+                return L ? V = "victor" : B && (V = "voted"), {
                     question: C.question,
-                    answers: G,
+                    answers: k,
                     layoutType: D,
                     resources: (0, E.default)({
                         theme: A,
                         layoutType: D
                     }),
-                    containerStyle: H,
-                    submitVoteLabel: k,
-                    canSubmitVote: B,
-                    canTapAnswers: b,
+                    containerStyle: V,
+                    submitVoteLabel: w,
+                    canSubmitVote: F,
+                    canTapAnswers: H,
                     canShowVoteCounts: !0,
-                    hasVoted: U,
+                    hasVoted: B,
                     expirationLabel: null != O ? O : _.default.Messages.POLL_EXPIRED,
                     isExpired: L,
                     myAvatarUrl: v
@@ -10424,10 +10431,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 PollAnswerClickable: function() {
-                    return m
+                    return _
                 },
                 PollMediaView: function() {
-                    return p
+                    return T
                 }
             });
             var s = n("920040"),
@@ -10440,34 +10447,37 @@
                 d = n("385976"),
                 c = n("952368"),
                 f = n("847511"),
-                E = n("74232");
+                E = n("74232"),
+                m = n("811387");
 
-            function m(e) {
+            function _(e) {
                 let {
                     className: t,
                     answer: n,
                     children: l,
-                    disabled: i
+                    disabled: r
                 } = e, {
-                    channelId: r,
-                    messageId: o
-                } = (0, E.useMessageIds)(), d = a.useCallback(() => {
+                    channelId: o,
+                    messageId: d
+                } = (0, E.useMessageIds)(), c = a.useCallback(() => {
                     f.default.handlePollAnswerTapped({
-                        channelId: r,
-                        messageId: o,
+                        channelId: o,
+                        messageId: d,
                         answerId: n.answerId
                     })
-                }, [r, o, n.answerId]);
+                }, [o, d, n.answerId]);
                 return (0, s.jsx)(u.Clickable, {
-                    className: t,
+                    className: i(t, {
+                        [m.enabled]: !0 !== r
+                    }),
                     tag: "li",
-                    onClick: !0 === i ? void 0 : d,
-                    "aria-disabled": i,
+                    onClick: !0 === r ? void 0 : c,
+                    "aria-disabled": r,
                     children: l
                 })
             }
 
-            function _(e) {
+            function h(e) {
                 var t, n;
                 let {
                     attachment: a,
@@ -10484,7 +10494,7 @@
                 })
             }
 
-            function h(e) {
+            function I(e) {
                 var t;
                 let {
                     alt: n,
@@ -10503,7 +10513,7 @@
                 })
             }
 
-            function I(e, t) {
+            function p(e, t) {
                 return null != e ? (0, s.jsx)("div", {
                     className: e,
                     children: t
@@ -10512,7 +10522,7 @@
                 })
             }
 
-            function p(e) {
+            function T(e) {
                 var t;
                 let {
                     media: n,
@@ -10526,13 +10536,13 @@
                 } = (0, E.usePollContext)(), c = null !== (t = null != o ? o : n.text) && void 0 !== t ? t : "";
                 if (n.attachmentIds.length > 0) {
                     let e = d.attachments.find(e => e.id === n.attachmentIds[0]);
-                    if (null != e) return I(l, (0, s.jsx)(_, {
+                    if (null != e) return p(l, (0, s.jsx)(h, {
                         className: a,
                         attachment: e,
                         alt: c
                     }))
                 }
-                return null != n.emoji ? I(l, (0, s.jsx)(h, {
+                return null != n.emoji ? p(l, (0, s.jsx)(I, {
                     className: i(a, r),
                     emoji: n.emoji,
                     alt: c
