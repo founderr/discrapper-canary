@@ -462,7 +462,7 @@
         },
         230724: function(e, t, s) {
             "use strict";
-            e.exports = s.p + "bc5f55dd0d8a25328b04.svg"
+            e.exports = s.p + "a9ecc81917a8184105af.svg"
         },
         905498: function(e, t, s) {
             "use strict";
@@ -1290,10 +1290,10 @@
             "use strict";
             s.r(t), s.d(t, {
                 getPageSize: function() {
-                    return h
+                    return L
                 },
                 default: function() {
-                    return M
+                    return h
                 }
             });
             var a = s("920040"),
@@ -1324,11 +1324,11 @@
                 webpackId: "972119"
             });
 
-            function h(e) {
+            function L(e) {
                 return e < m.PAGE_WIDTH_THRESHOLD ? m.PageSizes.SMALL : m.PageSizes.LARGE
             }
             i.default.initialize();
-            class L extends n.PureComponent {
+            class M extends n.PureComponent {
                 componentDidMount() {
                     (0, u.updateLocation)(this.props.location), this.stopListeningToHistory = (0, R.getHistory)().listen(e => {
                         e.pathname.startsWith(P.Routes.APPLICATION_STORE) && (0, u.updateLocation)(e)
@@ -1386,7 +1386,7 @@
                                 slug: n,
                                 location: l,
                                 storeListingId: u.store_listing_id,
-                                pageSize: h(i)
+                                pageSize: L(i)
                             })
                         })
                     }, this.renderContent = () => (0, a.jsxs)(l.Switch, {
@@ -1416,7 +1416,7 @@
                     })
                 }
             }
-            var M = (0, l.withRouter)((0, c.default)((0, E.default)(L)))
+            var h = (0, l.withRouter)((0, c.default)((0, E.default)(M)))
         },
         592433: function(e, t, s) {
             "use strict";
@@ -1547,9 +1547,9 @@
                 g = s("84460"),
                 C = s("69927"),
                 O = s("791160"),
-                h = s("661579"),
-                L = s("539938"),
-                M = s("393414"),
+                L = s("661579"),
+                M = s("539938"),
+                h = s("393414"),
                 x = s("915639"),
                 U = s("161778"),
                 v = s("546463"),
@@ -1557,8 +1557,8 @@
                 b = s("957255"),
                 j = s("71010"),
                 B = s("290877"),
-                y = s("437712"),
-                G = s("552712"),
+                G = s("437712"),
+                y = s("552712"),
                 k = s("698041"),
                 H = s("167726"),
                 F = s("471671"),
@@ -1655,10 +1655,10 @@
                         applicationId: n,
                         slug: r
                     } = this.props;
-                    null == s && (null != a && null != e && r !== e.slug && (0, M.replaceWith)({
+                    null == s && (null != a && null != e && r !== e.slug && (0, h.replaceWith)({
                         pathname: eI.Routes.APPLICATION_STORE_LISTING_SKU(e.id, e.slug),
                         search: location.search
-                    }), null != n && null != t && null != t.slug && r !== t.slug && (0, M.replaceWith)({
+                    }), null != n && null != t && null != t.slug && r !== t.slug && (0, h.replaceWith)({
                         pathname: eI.Routes.APPLICATION_STORE_LISTING_APPLICATION(t.id, t.slug),
                         search: location.search
                     }))
@@ -1692,28 +1692,28 @@
                         channel: s,
                         isAuthenticated: r
                     } = this.props;
-                    return (0, a.jsx)(L.default, {
+                    return (0, a.jsx)(M.default, {
                         isAuthenticated: r,
                         toolbar: this.renderHeaderToolbar(e, t),
                         children: null != s ? (0, a.jsxs)(n.Fragment, {
-                            children: [(0, a.jsx)(L.default.Icon, {
+                            children: [(0, a.jsx)(M.default.Icon, {
                                 icon: z.default,
                                 "aria-label": eT.default.Messages.STORE_CHANNEL
-                            }), (0, a.jsx)(L.default.Title, {
+                            }), (0, a.jsx)(M.default.Title, {
                                 children: s.name
                             })]
                         }) : null != t && t.premium ? (0, a.jsxs)(n.Fragment, {
-                            children: [(0, a.jsx)(L.default.Icon, {
+                            children: [(0, a.jsx)(M.default.Icon, {
                                 icon: V.default,
                                 "aria-label": eT.default.Messages.PREMIUM
                             }), (0, a.jsx)(eo.default, {
                                 sku: t
                             })]
                         }) : null != t ? (0, a.jsxs)(n.Fragment, {
-                            children: [(0, a.jsx)(L.default.Icon, {
+                            children: [(0, a.jsx)(M.default.Icon, {
                                 icon: z.default,
                                 "aria-label": eT.default.Messages.STORE_CHANNEL
-                            }), (0, a.jsx)(L.default.Title, {
+                            }), (0, a.jsx)(M.default.Title, {
                                 children: t.name
                             })]
                         }) : null
@@ -2096,7 +2096,7 @@
                                     className: l(ef.headerPurchase, {
                                         [ef.active]: o
                                     }),
-                                    children: [null != t ? (0, h.default)(t) : null, null != e && null != t ? (0, a.jsx)(N.default, {
+                                    children: [null != t ? (0, L.default)(t) : null, null != e && null != t ? (0, a.jsx)(N.default, {
                                         wrapperClassName: ef.headerActionButton,
                                         applicationId: e.id,
                                         skuId: t.id,
@@ -2154,7 +2154,7 @@
                     }
                 }
             }
-            var eR = (0, m.default)((0, P.default)(c.default.connectStores([B.default, U.default, x.default, H.default, g.default, F.default, k.default, G.default, v.default, j.default, D.default, y.default], e => {
+            var eR = (0, m.default)((0, P.default)(c.default.connectStores([B.default, U.default, x.default, H.default, g.default, F.default, k.default, y.default, v.default, j.default, D.default, G.default], e => {
                 var t;
                 let s, a, n, {
                     inputSkuId: r,
@@ -2165,17 +2165,17 @@
                 } = e;
                 if (null == l) {
                     if (null == r) throw Error("Needs applicationId or skuId");
-                    s = r, null != (l = null != (a = G.default.get(r)) ? a.applicationId : null) && (n = v.default.getGame(l))
+                    s = r, null != (l = null != (a = y.default.get(r)) ? a.applicationId : null) && (n = v.default.getGame(l))
                 } else if (null == r) {
                     if (null == l) throw Error("Needs applicationId or skuId");
-                    null != (n = v.default.getGame(l)) && (s = n.destinationSkuId), a = null != s ? G.default.get(s) : null
+                    null != (n = v.default.getGame(l)) && (s = n.destinationSkuId), a = null != s ? y.default.get(s) : null
                 }(null === (t = a) || void 0 === t ? void 0 : t.flags) != null && (0, Z.hasFlag)(a.flags, eI.SKUFlags.STICKER_PACK) && (a = null);
                 let d = null != l && (H.default.inTestModeForApplication(l) || g.default.inDevModeForApplication(l));
                 return {
                     skuId: s,
                     application: null != l ? v.default.getGame(l) : null,
-                    isFetchingEntitlements: null != l && y.default.applicationIdsFetching.has(l),
-                    didFetchEntitlements: null != l && y.default.applicationIdsFetched.has(l),
+                    isFetchingEntitlements: null != l && G.default.applicationIdsFetching.has(l),
+                    didFetchEntitlements: null != l && G.default.applicationIdsFetched.has(l),
                     shouldFetchStatistics: u && null != l && j.default.shouldFetchStatisticsForApplication(l),
                     sku: a,
                     isFocused: F.default.isFocused(),
@@ -2323,9 +2323,9 @@
                 g = s("719923"),
                 C = s("153160"),
                 O = s("882941"),
-                h = s("243041"),
-                L = s("767982"),
-                M = s("503278"),
+                L = s("243041"),
+                M = s("767982"),
+                h = s("503278"),
                 x = s("224860"),
                 U = s("206100"),
                 v = s("886680"),
@@ -2333,8 +2333,8 @@
                 b = s("646718"),
                 j = s("782340"),
                 B = s("354211"),
-                y = s("687480");
-            class G extends n.PureComponent {
+                G = s("687480");
+            class y extends n.PureComponent {
                 componentDidMount() {
                     let {
                         isEntitled: e,
@@ -2438,7 +2438,7 @@
                         children: [(0, a.jsx)("div", {
                             className: B.actionText,
                             children: j.default.Messages.APPLICATION_STORE_LISTING_SELECT_EDITION
-                        }), (0, a.jsx)(h.default, {
+                        }), (0, a.jsx)(L.default, {
                             storeListing: e,
                             selectedSkuId: t.id,
                             className: B.alternativeSkus,
@@ -2498,7 +2498,7 @@
                             hasEntitlementBranch: n
                         }), this.renderApproximatePreorderInfo()]
                     }) : !e.available && e.premium ? (0, a.jsx)("div", {
-                        className: l(B.price, y.listingPrice),
+                        className: l(B.price, G.listingPrice),
                         children: j.default.Messages.APPLICATION_STORE_FREE_WITH_PREMIUM
                     }) : (0, a.jsx)("div", {
                         className: B.price,
@@ -2555,7 +2555,7 @@
                             onStoreListing: !0,
                             color: !0 === r ? o.Button.Colors.GREEN : o.Button.Colors.PRIMARY,
                             hover: o.Button.Hovers.DEFAULT
-                        }) : null, (0, a.jsx)(M.default, {
+                        }) : null, (0, a.jsx)(h.default, {
                             className: B.purchaseError
                         }), (0, a.jsx)(x.default, {
                             className: B.warning,
@@ -2589,7 +2589,7 @@
                             })
                         }) : null, (0, a.jsx)("div", {
                             className: B.bodySection,
-                            children: (0, a.jsx)(L.default, {
+                            children: (0, a.jsx)(M.default, {
                                 game: e,
                                 sku: s
                             })
@@ -2614,7 +2614,7 @@
                     let e = f.default.getCurrentUser();
                     return [e, g.default.canInstallPremiumApplications(e), R.default.isEntitledToSku(e, r.id, n.id, l), R.default.applicationIdsFetching.has(r.applicationId)]
                 }), E = (0, u.useStateFromStores)([T.default], () => T.default.getLibraryApplication(n.id, l)), _ = b.SubscriptionPlanInfo[b.SubscriptionPlans.PREMIUM_MONTH_TIER_2].skuId, I = (0, u.useStateFromStores)([S.default], () => S.default.get(b.SubscriptionPlans.PREMIUM_MONTH_TIER_2));
-                return (0, a.jsx)(G, {
+                return (0, a.jsx)(y, {
                     ...e,
                     currentUser: i,
                     isUserPremium: o,
@@ -2631,7 +2631,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return L
+                    return M
                 }
             });
             var a, n, r = s("920040"),
@@ -2657,7 +2657,7 @@
             (a = n || (n = {}))[a.RESTRICTED_IN_REGION = 1] = "RESTRICTED_IN_REGION", a[a.REQUIRES_DESKTOP_APP = 2] = "REQUIRES_DESKTOP_APP", a[a.UNAVAILABLE_OPERATING_SYSTEM = 3] = "UNAVAILABLE_OPERATING_SYSTEM", a[a.DLC_REQUIRES_BASE_APPLICATION = 4] = "DLC_REQUIRES_BASE_APPLICATION", a[a.EARLY_ACCESS = 5] = "EARLY_ACCESS", a[a.UNAVAILABLE_IN_LANGUAGE = 6] = "UNAVAILABLE_IN_LANGUAGE";
             let C = A.default.getArticleURL(m.HelpdeskArticles.APPLICATION_STORE_OVERVIEW),
                 O = A.default.getArticleURL(m.HelpdeskArticles.APPLICATION_STORE_EARLY_ACCESS);
-            class h extends l.PureComponent {
+            class L extends l.PureComponent {
                 componentDidMount() {
                     let {
                         sku: e,
@@ -2775,7 +2775,7 @@
                     })
                 }
             }
-            var L = c.default.connectStores([T.default, R.default, S.default, f.default], e => {
+            var M = c.default.connectStores([T.default, R.default, S.default, f.default], e => {
                 let {
                     sku: t
                 } = e, s = null != t.dependentSkuId ? R.default.get(t.dependentSkuId) : null;
@@ -2784,7 +2784,7 @@
                     dependentSku: s,
                     isEntitledToDependentSku: null != t.dependentSkuId && !0 === S.default.isEntitledToSku(f.default.getCurrentUser(), t.dependentSkuId, t.applicationId)
                 }
-            })(h)
+            })(L)
         },
         23985: function(e, t, s) {
             "use strict";
@@ -3402,7 +3402,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return h
+                    return L
                 }
             });
             var a = s("920040"),
@@ -3535,7 +3535,7 @@
                     }
                 }
             }
-            var h = (0, E.default)(u.default.connectStores([S.default, _.default], e => {
+            var L = (0, E.default)(u.default.connectStores([S.default, _.default], e => {
                 let {
                     guild: t
                 } = e, s = _.default.isLurking(t.id);
@@ -3873,16 +3873,16 @@
                     shopForAllEnabled: O
                 } = (0, S.default)({
                     location: C
-                }), h = n.useRef(null), L = (0, i.default)([E.default], () => E.default.getCurrentUser()), M = O && !I.default.canUseCollectibles(L);
+                }), L = n.useRef(null), M = (0, i.default)([E.default], () => E.default.getCurrentUser()), h = O && !I.default.canUseCollectibles(M);
                 return n.useEffect(() => {
                     _.default.track(R.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                         type: t,
                         location_stack: A
                     })
                 }, [t, A]), (0, a.jsxs)("div", {
-                    ref: h,
-                    className: l(p.container, s ? p.marketingPage : p.containerDefaultMargin, M ? p.shopForAllBackgroundImage : p.falloweenBackgroundImage, r),
-                    children: [M ? (0, a.jsx)(g, {}) : (0, a.jsx)(P, {}), (0, a.jsx)(u.Button, {
+                    ref: L,
+                    className: l(p.container, s ? p.marketingPage : p.containerDefaultMargin, h ? p.shopForAllBackgroundImage : p.falloweenBackgroundImage, r),
+                    children: [h ? (0, a.jsx)(g, {}) : (0, a.jsx)(P, {}), (0, a.jsx)(u.Button, {
                         onClick: () => {
                             (0, T.openCollectiblesShop)({
                                 analyticsLocations: A,
@@ -4527,7 +4527,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 usePerkCards: function() {
-                    return G
+                    return y
                 }
             });
             var a = s("744196"),
@@ -4554,9 +4554,9 @@
                 g = s("663411"),
                 C = s("126304"),
                 O = s("674065"),
-                h = s("771116"),
-                L = s("309920"),
-                M = s("578770"),
+                L = s("771116"),
+                M = s("309920"),
+                h = s("578770"),
                 x = s("761708"),
                 U = s("224456"),
                 v = s("656564"),
@@ -4564,14 +4564,14 @@
                 b = s("14528"),
                 j = s("443817"),
                 B = s("759308");
-            let y = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
-                G = e => {
+            let G = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
+                y = e => {
                     let {
                         styles: t
                     } = e, s = (0, l.default)(), n = (0, a.default)([i.default], () => {
                         let e = i.default.getCurrentUser();
                         return u.default.canUsePremiumProfileCustomization(e)
-                    }), G = c.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, k = {
+                    }), y = c.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, k = {
                         badge: {
                             title: c.default.Messages.PREMIUM_MARKETING_BADGE_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_BADGE_PERK_DESCRIPTION,
@@ -4581,20 +4581,20 @@
                         badgeAlt: {
                             title: c.default.Messages.PREMIUM_MARKETING_PERK_GRID_ITEM_HEADING_PREMIUM_SUBSCRIPTION_BADGE,
                             description: c.default.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_BADGE_DESCRIPTION_VARIANT_1,
-                            imageSource: y(s, E, _),
+                            imageSource: G(s, E, _),
                             imageClassName: t.badgeNewImage
                         },
                         clientThemes: {
                             title: c.default.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION,
                             className: t.clientThemesCard,
-                            imageSource: L,
+                            imageSource: M,
                             imageClassName: t.clientThemesImage
                         },
                         customAppIcons: {
                             title: c.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION,
-                            imageSource: M,
+                            imageSource: h,
                             imageClassName: t.customAppIconImage
                         },
                         emoji: {
@@ -4624,50 +4624,50 @@
                         longerMessages: {
                             title: c.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_DESCRIPTION,
-                            imageSource: y(s, U, v),
+                            imageSource: G(s, U, v),
                             imageClassName: t.longerMessagesImage
                         },
                         moreGuilds: {
                             title: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                            imageSource: y(s, T, D),
+                            imageSource: G(s, T, D),
                             imageClassName: t.moreGuildsImage
                         },
                         moreGuildsAlt: {
                             title: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                            imageSource: y(s, A, N),
+                            imageSource: G(s, A, N),
                             imageClassName: t.moreGuildsAltImage
                         },
                         remix: {
                             title: c.default.Messages.REMIXING_PERKS_CARD_TITLE,
                             description: c.default.Messages.REMIXING_PERKS_CARD_DESCRIPTION,
-                            imageSource: y(s, S, R),
+                            imageSource: G(s, S, R),
                             imageClassName: t.remixingImage,
                             isEarlyAccess: !0
                         },
                         soundboard: {
                             title: c.default.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
                             description: c.default.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-                            imageSource: y(s, p, m),
+                            imageSource: G(s, p, m),
                             imageClassName: t.soundboardImage
                         },
                         stickers: {
                             title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
                             description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                            imageSource: y(s, P, b),
+                            imageSource: G(s, P, b),
                             imageClassName: t.stickersImage
                         },
                         stickersBurst: {
                             title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-                            imageSource: y(s, P, b),
+                            imageSource: G(s, P, b),
                             imageClassName: t.stickersImage
                         },
                         stickersPerkDiscoverability: {
                             title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-                            imageSource: y(s, P, b),
+                            imageSource: G(s, P, b),
                             imageClassName: t.stickersImage
                         },
                         streaming: {
@@ -4679,15 +4679,15 @@
                         superReactions: {
                             title: c.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION,
-                            imageSource: y(s, g, C),
+                            imageSource: G(s, g, C),
                             imageClassName: t.superReactionsImage
                         },
                         upload: {
                             title: c.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_TITLE.format({
-                                premiumMaxSize: G
+                                premiumMaxSize: y
                             }),
                             description: c.default.Messages.PREMIUM_MARKETING_UPLOADS_SMALL_PERK_DESCRIPTION.format({
-                                premiumMaxSize: G
+                                premiumMaxSize: y
                             }),
                             imageSource: B,
                             imageClassName: t.uploadImage
@@ -4695,7 +4695,7 @@
                         videoBackground: {
                             title: c.default.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_VIDEO_BACKGROUND_PERK_DESCRIPTION,
-                            imageSource: y(s, O, h),
+                            imageSource: G(s, O, L),
                             imageClassName: t.videoBackgroundImage
                         }
                     };
@@ -4887,9 +4887,9 @@
                 g = s("700684"),
                 C = s("479997"),
                 O = s("667466"),
-                h = s("884306"),
-                L = s("908173"),
-                M = s("930767"),
+                L = s("884306"),
+                M = s("908173"),
+                h = s("930767"),
                 x = s("398683"),
                 U = s("816571"),
                 v = s("114244"),
@@ -4913,8 +4913,8 @@
                 ["SI", v],
                 ["GR", T],
                 ["FI", _],
-                ["PT", M],
-                ["NO", h],
+                ["PT", h],
+                ["NO", L],
                 ["BE", r],
                 ["AT", n],
                 ["CH", i],
@@ -4923,7 +4923,7 @@
                 ["ES", E],
                 ["IT", N],
                 ["NL", O],
-                ["PL", L],
+                ["PL", M],
                 ["HR", f]
             ]);
 
@@ -5084,7 +5084,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return y
+                    return G
                 }
             });
             var a = s("920040"),
@@ -5111,9 +5111,9 @@
                 g = s("764364"),
                 C = s("456015"),
                 O = s("982457"),
-                h = s("781084"),
-                L = s("365918"),
-                M = s("959905"),
+                L = s("781084"),
+                M = s("365918"),
+                h = s("959905"),
                 x = s("154889"),
                 U = s("917247"),
                 v = s("254893"),
@@ -5121,16 +5121,16 @@
                 b = s("646718"),
                 j = s("49111"),
                 B = s("376548"),
-                y = function(e) {
+                G = function(e) {
                     let {
                         entrypoint: t = b.PremiumMarketingEntrypoints.UserSettings
                     } = e, s = (0, S.useBlockedPaymentsConfig)(), {
                         AnalyticsLocationProvider: r,
-                        sourceAnalyticsLocations: y,
-                        analyticsLocations: G
+                        sourceAnalyticsLocations: G,
+                        analyticsLocations: y
                     } = (0, f.default)(T.default.PREMIUM_MARKETING), k = (0, i.useStateFromStores)([m.default], () => m.default.hasFetchedSubscriptions()), H = (0, i.useStateFromStores)([p.default], () => p.default.getCurrentUser()), F = (0, U.usePremiumTrialOffer)(), K = (0, x.usePremiumDiscountOffer)(), W = (0, R.useSubscriptionPlansLoaded)(), [w, Y] = n.useState(!0), V = n.useRef(0), z = (0, g.isPremiumExactly)(H, b.PremiumTypes.TIER_2), {
                         enabled: X
-                    } = (0, L.default)(!0, !z), Q = (0, M.useLocalizedPromoQuery)(), Z = null == Q ? void 0 : Q.countryCode;
+                    } = (0, M.default)(!0, !z), Q = (0, h.useLocalizedPromoQuery)(), Z = null == Q ? void 0 : Q.countryCode;
                     n.useEffect(() => {
                         d.default.wait(async () => {
                             let e = Date.now();
@@ -5140,7 +5140,7 @@
                         if (s && (null != F || null != K)) {
                             let {
                                 enabled: e
-                            } = h.default.getCurrentConfig({
+                            } = L.default.getCurrentConfig({
                                 location: "PremiumMarketingPage"
                             }, {
                                 autoTrackExposure: !1
@@ -5149,10 +5149,10 @@
                         }
                     }, [s, F, K]), n.useEffect(() => {
                         !w && P.default.track(j.AnalyticEvents.PREMIUM_MARKETING_PAGE_VIEWED, {
-                            location_stack: y,
+                            location_stack: G,
                             load_duration_ms: V.current
                         })
-                    }, [y, w]);
+                    }, [G, w]);
                     let [J, q] = n.useState(!1), $ = (0, i.useStateFromStores)([N.default], () => N.default.enabled);
                     if ($) return (0, a.jsx)(I.default, {});
                     if (s) return (0, a.jsx)(A.BlockedPaymentsContentSettings, {});
@@ -5164,7 +5164,7 @@
                             }), (0, a.jsx)(u.default, {
                                 onChange: e => {
                                     e && !J && (P.default.track(j.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                                        location_stack: G
+                                        location_stack: y
                                     }), q(!0))
                                 },
                                 children: (0, a.jsx)("div", {
@@ -5465,11 +5465,11 @@
                         subscriptionTier: n
                     } = e, m = (0, T.useCheapestMonthlyPrice)(), {
                         AnalyticsLocationProvider: P
-                    } = (0, u.default)(i.default.PREMIUM_MARKETING_HERO_CTA), g = (0, c.useHasActiveTrial)(), C = (0, d.useIsInPremiumOfferExperience)(), O = (0, I.useIsEligibleForBogoPromotion)(), h = (0, _.usePremiumTrialOffer)(), L = (null == h ? void 0 : h.trial_id) === A.PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID, {
-                        enabled: M
+                    } = (0, u.default)(i.default.PREMIUM_MARKETING_HERO_CTA), g = (0, c.useHasActiveTrial)(), C = (0, d.useIsInPremiumOfferExperience)(), O = (0, I.useIsEligibleForBogoPromotion)(), L = (0, _.usePremiumTrialOffer)(), M = (null == L ? void 0 : L.trial_id) === A.PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID, {
+                        enabled: h
                     } = E.Q4DropExperiment.useExperiment({
                         location: "HeroHeading"
-                    }), x = L && M;
+                    }), x = M && h;
                     return (0, a.jsx)(P, {
                         children: (0, a.jsxs)("div", {
                             className: r(p.container, s),
@@ -5488,8 +5488,8 @@
                                         cheapestMonthlyPrice: m
                                     })
                                 }), x && (0, a.jsx)(f.default, {
-                                    subscriptionTrial: null == h ? void 0 : h.subscription_trial,
-                                    expiresAt: null == h ? void 0 : h.expires_at
+                                    subscriptionTrial: null == L ? void 0 : L.subscription_trial,
+                                    expiresAt: null == L ? void 0 : L.expires_at
                                 }), O ? (0, a.jsx)("div", {
                                     className: p.buttonContainer,
                                     children: (0, a.jsx)(S.default, {
@@ -5623,11 +5623,11 @@
                 }), I = (0, i.default)([d.default], () => d.default.useReducedMotion), {
                     analyticsLocations: S
                 } = (0, E.default)(), R = (0, o.useBurstReactionsUserExperiment)(), O = (0, T.useIsRemixANitroPerk)(), {
-                    showIconSetting: h
+                    showIconSetting: L
                 } = (0, f.useCanUseDesktopInAppIcons)({
                     location: "PerkCard",
                     autoTrackExposure: !1
-                }), L = [_.emoji, _.streaming, _.upload, h ? _.customAppIcons : null, _.soundboard, O ? _.remix : _.videoBackground, R ? _.superReactions : _.longerMessages, _.stickersPerkDiscoverability, _.badgeAlt, h ? null : _.moreGuilds];
+                }), M = [_.emoji, _.streaming, _.upload, L ? _.customAppIcons : null, _.soundboard, O ? _.remix : _.videoBackground, R ? _.superReactions : _.longerMessages, _.stickersPerkDiscoverability, _.badgeAlt, L ? null : _.moreGuilds];
                 return (0, a.jsxs)("div", {
                     className: l(P.perksContainer, t, {
                         [P.partiallyHidden]: s && !r,
@@ -5642,7 +5642,7 @@
                         className: l(P.perkCardContainer, {
                             [P.perkCardContainerExpanded]: r
                         }),
-                        children: L.map(e => null != e && (0, a.jsx)(C, {
+                        children: M.map(e => null != e && (0, a.jsx)(C, {
                             ...e
                         }, e.title))
                     }), s && (0, a.jsxs)(a.Fragment, {
@@ -5716,59 +5716,62 @@
             var m = e => {
                 let {
                     variant: t = n.PERKS_DISCOVERABILITY,
-                    noBackground: s = !1
-                } = e, a = l.useRef(null), i = (0, T.useShouldScrollToWhatsNew)();
+                    noBackground: s = !1,
+                    leftAlignHeaders: a = !1
+                } = e, i = l.useRef(null), o = (0, T.useShouldScrollToWhatsNew)();
                 (0, T.useClearNewBadge)();
-                let o = t === n.WHATS_NEW,
+                let E = t === n.WHATS_NEW,
                     {
-                        enabled: E
+                        enabled: _
                     } = (0, I.default)();
                 l.useEffect(() => {
-                    let e = a.current;
-                    if (null == e || !i || !o) return;
+                    let e = i.current;
+                    if (null == e || !o || !E) return;
                     let t = requestAnimationFrame(() => {
                         e.scrollIntoView({
                             behavior: "smooth"
                         })
                     });
                     return () => cancelAnimationFrame(t)
-                }, [a, i, o]);
-                let _ = (0, f.default)(),
-                    R = p(o),
-                    A = [];
+                }, [i, o, E]);
+                let R = (0, f.default)(),
+                    A = p(E),
+                    m = [];
                 switch (t) {
                     case n.PERKS_DISCOVERABILITY:
-                        A = [_.profiles, _.clientThemes, _.serverBoosts];
+                        m = [R.profiles, R.clientThemes, R.serverBoosts];
                         break;
                     case n.WHATS_NEW:
-                        A = [_.avatarDecorations, _.profileEffects, _.upcomingDropUntimed], E && (A = [_.earlyAccess, _.specialMemberPricing, _.unlimitedSuperReactions])
+                        m = [R.avatarDecorations, R.profileEffects, R.upcomingDropUntimed], _ && (m = [R.earlyAccess, R.specialMemberPricing, R.unlimitedSuperReactions])
                 }
-                let m = A.some(e => null != e.pillText);
+                let P = m.some(e => null != e.pillText);
                 return (0, r.jsx)(c.default, {
                     type: c.FeatureBorderTypes.PREMIUM,
                     className: N.featureBorder,
                     isShown: !s,
                     children: (0, r.jsxs)("div", {
-                        ref: a,
+                        ref: i,
                         className: u(N.section, {
-                            [N.noBackground]: s
+                            [N.noBackground]: s,
+                            [N.centerAlignSection]: !a,
+                            [N.leftAlignSection]: a
                         }),
                         children: [(0, r.jsx)(d.Heading, {
                             variant: "heading-xxl/extrabold",
                             color: "header-primary",
                             className: N.heading,
-                            children: R.title
+                            children: A.title
                         }), (0, r.jsx)(d.Text, {
                             variant: "text-lg/normal",
                             color: "header-primary",
                             className: u(N.subtitle, {
-                                [N.fullWidth]: o,
-                                [N.moreSubtitleMargin]: m
+                                [N.fullWidth]: E,
+                                [N.moreSubtitleMargin]: P
                             }),
-                            children: R.subtitle
+                            children: A.subtitle
                         }), (0, r.jsx)("div", {
                             className: N.cardContainer,
-                            children: A.map((e, t) => (0, r.jsx)(S.default, {
+                            children: m.map((e, t) => (0, r.jsx)(S.default, {
                                 ...e,
                                 forceShadow: s
                             }, "".concat(e.name, "_").concat(t)))
@@ -5808,8 +5811,8 @@
                         canReveal: s = !0,
                         dismissibleContentType: r,
                         forceShadow: f
-                    } = e, S = (0, u.default)([d.default], () => d.default.useReducedMotion), [P, g] = n.useState(!1), [C, O] = n.useState(!1), h = (0, T.default)(), [L] = (0, E.useDangerouslyPeekDismissibleContents)(null != r && s ? [r] : []), {
-                        easterEggLevel: M,
+                    } = e, S = (0, u.default)([d.default], () => d.default.useReducedMotion), [P, g] = n.useState(!1), [C, O] = n.useState(!1), L = (0, T.default)(), [M] = (0, E.useDangerouslyPeekDismissibleContents)(null != r && s ? [r] : []), {
+                        easterEggLevel: h,
                         isEasterEggTriggered: x,
                         onHover: U,
                         onUnhover: v
@@ -5822,7 +5825,7 @@
                         onMouseEnter: D,
                         ...e
                     };
-                    let b = L !== r || null == r || C;
+                    let b = M !== r || null == r || C;
                     return (n.useEffect(() => {
                         S && P && (O(!0), _.default.track(R.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
                             card_type: t
@@ -5839,7 +5842,7 @@
                             className: l(N.flipCard, {
                                 [N.partialFlipCard]: !x,
                                 [N.ultraFlipCard]: x,
-                                [N.rotateCard]: x && 3 === M,
+                                [N.rotateCard]: x && 3 === h,
                                 [N.reducedMotion]: S
                             }),
                             children: [(0, a.jsx)("div", {
@@ -5889,7 +5892,7 @@
                             }), (0, a.jsx)("div", {
                                 className: N.flipCardFront,
                                 children: (0, a.jsx)(m, {
-                                    ...h.upcomingDropUntimed,
+                                    ...L.upcomingDropUntimed,
                                     pillText: ""
                                 })
                             }), (0, a.jsx)("div", {
@@ -5907,7 +5910,7 @@
                             })]
                         })
                     }) : (0, a.jsx)(p, {
-                        ...h.upcomingDropUntimed,
+                        ...L.upcomingDropUntimed,
                         forceShadow: f
                     })
                 },
@@ -6071,9 +6074,9 @@
                 g = s("153160"),
                 C = s("324878"),
                 O = s("917247"),
-                h = s("641078"),
-                L = s("400307"),
-                M = s("218435"),
+                L = s("641078"),
+                M = s("400307"),
+                h = s("218435"),
                 x = s("881155"),
                 U = s("646718"),
                 v = s("49111"),
@@ -6081,16 +6084,16 @@
                 b = s("252890"),
                 j = s("640754"),
                 B = s("510407"),
-                y = s("657890"),
-                G = s("823986");
+                G = s("657890"),
+                y = s("823986");
             let k = e => {
                     let {
                         isLightTheme: t
-                    } = e, s = (0, h.getBOGOPillCopy)();
-                    return (0, a.jsx)(L.PremiumPillWithSparkles, {
+                    } = e, s = (0, L.getBOGOPillCopy)();
+                    return (0, a.jsx)(M.PremiumPillWithSparkles, {
                         text: s,
                         className: b.bogoPillWithSparkles,
-                        colorOptions: t ? L.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : L.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+                        colorOptions: t ? M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL
                     })
                 },
                 H = () => (0, a.jsx)("div", {
@@ -6106,7 +6109,7 @@
                             premiumType: s
                         } = e,
                         n = (0, E.default)();
-                    t = s === U.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(n) ? j : B : (0, u.isThemeDark)(n) ? y : G;
+                    t = s === U.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(n) ? j : B : (0, u.isThemeDark)(n) ? G : y;
                     let r = (0, P.getPremiumTypeDisplayName)(s);
                     return (0, a.jsx)("img", {
                         src: t,
@@ -6224,10 +6227,10 @@
                         headingOverride: m,
                         hidePill: j = !1,
                         selectedPlanColumnClassName: B,
-                        selectedPlanTier: y = U.PremiumTypes.TIER_2
+                        selectedPlanTier: G = U.PremiumTypes.TIER_2
                     } = e,
                     {
-                        AnalyticsLocationProvider: G
+                        AnalyticsLocationProvider: y
                     } = (0, I.default)(_.default.PREMIUM_MARKETING_PLAN_COMPARISON),
                     z = (0, i.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()),
                     X = (0, T.useSubscriptionPlansLoaded)(),
@@ -6247,7 +6250,7 @@
                     shopForAllEnabled: q
                 } = (0, f.default)({
                     location: J
-                }), $ = (0, E.default)(), ee = (0, u.isThemeLight)($), et = (0, i.useStateFromStores)([A.default], () => A.default.getCurrentUser()), es = (0, P.isPremiumExactly)(et, U.PremiumTypes.TIER_2), ea = (0, O.usePremiumTrialOffer)(), en = null == ea ? void 0 : null === (t = ea.subscription_trial) || void 0 === t ? void 0 : t.sku_id, er = (0, C.useCurrentPremiumTrialTier)(), el = (0, h.useIsEligibleForBogoPromotion)();
+                }), $ = (0, E.default)(), ee = (0, u.isThemeLight)($), et = (0, i.useStateFromStores)([A.default], () => A.default.getCurrentUser()), es = (0, P.isPremiumExactly)(et, U.PremiumTypes.TIER_2), ea = (0, O.usePremiumTrialOffer)(), en = null == ea ? void 0 : null === (t = ea.subscription_trial) || void 0 === t ? void 0 : t.sku_id, er = (0, C.useCurrentPremiumTrialTier)(), el = (0, L.useIsEligibleForBogoPromotion)();
                 if (!z || !X) return null;
                 let ei = P.default.getDefaultPrice(U.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
                     eu = P.default.getDefaultPrice(U.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
@@ -6474,7 +6477,7 @@
                             className: b.button,
                             subscriptionTier: U.PremiumSubscriptionSKUs.TIER_0,
                             showIcon: !1
-                        }), er === U.PremiumTypes.TIER_2 || null != en ? null : (0, a.jsx)(M.default, {
+                        }), er === U.PremiumTypes.TIER_2 || null != en ? null : (0, a.jsx)(h.default, {
                             className: b.button,
                             subscriptionTier: U.PremiumSubscriptionSKUs.TIER_0
                         })]
@@ -6492,7 +6495,7 @@
                             subscriptionTier: U.PremiumSubscriptionSKUs.TIER_2,
                             showIcon: !1,
                             isEligibleForBogoPromotion: el
-                        }), er === U.PremiumTypes.TIER_0 || null != en ? null : (0, a.jsx)(M.default, {
+                        }), er === U.PremiumTypes.TIER_0 || null != en ? null : (0, a.jsx)(h.default, {
                             className: b.button,
                             subscriptionTier: U.PremiumSubscriptionSKUs.TIER_2
                         })]
@@ -6500,13 +6503,13 @@
                     withBottomBorder: !1,
                     withBottomBorderRadius: !0,
                     buttonsRow: null == en
-                }), s = j ? null : null != en || null != er ? (0, a.jsx)(L.PremiumPillWithSparkles, {
+                }), s = j ? null : null != en || null != er ? (0, a.jsx)(M.PremiumPillWithSparkles, {
                     text: null != en ? D.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
                     className: b.freeTrialPillWithSparkles,
-                    colorOptions: en === U.PremiumSubscriptionSKUs.TIER_0 ? ee ? L.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : L.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : ee ? es ? L.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : L.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : L.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
+                    colorOptions: en === U.PremiumSubscriptionSKUs.TIER_0 ? ee ? M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : ee ? es ? M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
                 }) : el ? (0, a.jsx)(k, {
                     isLightTheme: ee
-                }) : (0, a.jsx)(H, {}), (0, a.jsx)(G, {
+                }) : (0, a.jsx)(H, {}), (0, a.jsx)(y, {
                     children: (0, a.jsxs)("div", {
                         className: l(b.root, r),
                         "data-testid": "v2-marketing-page-comparison-table",
@@ -6517,7 +6520,7 @@
                         }), (0, a.jsxs)("div", {
                             className: b.tableWrapper,
                             children: [(0, a.jsx)("div", {
-                                className: en === U.PremiumSubscriptionSKUs.TIER_0 || er === U.PremiumTypes.TIER_0 || y === U.PremiumTypes.TIER_0 ? l(B, b.tier0ColumnOuter) : l(B, b.tier2ColumnOuter),
+                                className: en === U.PremiumSubscriptionSKUs.TIER_0 || er === U.PremiumTypes.TIER_0 || G === U.PremiumTypes.TIER_0 ? l(B, b.tier0ColumnOuter) : l(B, b.tier2ColumnOuter),
                                 children: s
                             }), (0, a.jsxs)("table", {
                                 className: b.table,
@@ -6592,8 +6595,8 @@
                 } = (0, d.useBogoPromotionForMarketingPage)(), g = null === (t = (0, o.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, C = (0, i.formatTrialOfferIntervalDuration)({
                     intervalType: null == g ? void 0 : g.interval,
                     intervalCount: null == g ? void 0 : g.interval_count
-                }), O = (0, u.usePremiumDiscountOffer)(), h = null != g && E === g.sku_id, L = S ? _.default.Messages.BOGO_CLAIM_OFFER : null != O ? f(E, A, R, O.discount.amount) : T({
-                    showTrialCTA: h,
+                }), O = (0, u.usePremiumDiscountOffer)(), L = null != g && E === g.sku_id, M = S ? _.default.Messages.BOGO_CLAIM_OFFER : null != O ? f(E, A, R, O.discount.amount) : T({
+                    showTrialCTA: L,
                     subscriptionTier: E,
                     shouldShowUpsells: P,
                     trialDurationCopy: C,
@@ -6605,8 +6608,8 @@
                     look: m ? r.ButtonLooks.INVERTED : void 0,
                     buttonShineClassName: "buttonShineClassName" in N ? N.buttonShineClassName : m ? I.brandShine : void 0,
                     trialId: null == g ? void 0 : g.id,
-                    buttonText: L,
-                    buttonTextClassName: h ? I.freeTrialText : void 0,
+                    buttonText: M,
+                    buttonTextClassName: L ? I.freeTrialText : void 0,
                     onlyShineOnHover: !0,
                     subscriptionTier: E,
                     ...N
@@ -6665,7 +6668,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return f
+                    return T
                 }
             });
             var a = s("920040");
@@ -6675,59 +6678,47 @@
                 l = s("77078"),
                 i = s("812204"),
                 u = s("685665"),
-                o = s("441413"),
-                d = s("324878"),
+                o = s("324878"),
+                d = s("635956"),
                 c = s("400307"),
-                E = s("218435"),
-                _ = s("782340"),
-                I = s("985717"),
-                T = s("230724"),
-                f = e => {
+                E = s("782340"),
+                _ = s("985717"),
+                I = s("230724"),
+                T = e => {
                     let {
                         className: t
                     } = e, {
                         AnalyticsLocationProvider: s
-                    } = (0, u.default)(i.default.PREMIUM_MARKETING_HERO_CTA), n = (0, d.useHasActiveTrial)();
+                    } = (0, u.default)(i.default.PREMIUM_MARKETING_HERO_CTA), n = (0, o.useHasActiveTrial)();
                     return (0, a.jsx)(s, {
                         children: (0, a.jsxs)("div", {
-                            className: r(I.container, t),
+                            className: r(_.container, t),
                             "data-testid": "subscriber-nitro-home-hero-header",
-                            children: [n && (0, a.jsx)(c.PremiumPillWithSparkles, {
-                                text: _.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
-                                className: I.trialPill,
-                                colorOptions: c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
+                            children: [(0, a.jsx)("img", {
+                                src: I,
+                                alt: "",
+                                className: _.headerArt
                             }), (0, a.jsxs)("div", {
-                                className: I.textContainer,
-                                children: [(0, a.jsx)(l.Heading, {
+                                className: _.content,
+                                children: [(0, a.jsx)(c.PremiumPillWithSparkles, {
+                                    text: E.default.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
+                                    className: r(_.trialPill, {
+                                        [_.hidden]: !n
+                                    }),
+                                    colorOptions: c.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
+                                }), (0, a.jsx)(l.Heading, {
                                     variant: "display-lg",
                                     color: "always-white",
-                                    children: _.default.Messages.SUBSCRIBER_NITRO_HOME_TITLE.format()
-                                }), (0, a.jsx)(l.Text, {
-                                    variant: "text-lg/normal",
-                                    color: "always-white",
-                                    className: I.description,
-                                    children: _.default.Messages.SUBSCRIBER_NITRO_HOME_SUBTITLE
+                                    children: E.default.Messages.SUBSCRIBER_NITRO_HOME_TITLE_ONE_LINE
                                 }), (0, a.jsx)("div", {
-                                    className: I.buttonContainer,
-                                    children: (0, a.jsx)(E.default, {
-                                        className: I.button,
-                                        forceWhite: !0
+                                    className: _.buttonContainer,
+                                    children: (0, a.jsx)(d.default, {
+                                        color: l.ButtonColors.BRAND,
+                                        buttonText: E.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING,
+                                        className: _.button,
+                                        isGift: !0
                                     })
-                                }), (0, a.jsx)(o.StretchedSparkleStar, {
-                                    className: I.sparkleStar1
-                                }), (0, a.jsx)(o.StretchedSparkleStar, {
-                                    className: I.sparkleStar2
-                                }), (0, a.jsx)(o.StretchedSparkleStar, {
-                                    className: I.sparkleStar3
-                                }), (0, a.jsx)(o.StretchedSparkleStar, {
-                                    className: I.sparkleStar4
                                 })]
-                            }), (0, a.jsx)("div", {
-                                className: I.imageContainer,
-                                children: (0, a.jsx)("img", {
-                                    src: T,
-                                    alt: ""
-                                })
                             })]
                         })
                     })
@@ -6795,50 +6786,6 @@
                     })
                 }
         },
-        44647: function(e, t, s) {
-            "use strict";
-            s.r(t), s.d(t, {
-                default: function() {
-                    return i
-                }
-            });
-            var a = s("920040");
-            s("773670");
-            var n = s("575482"),
-                r = s.n(n),
-                l = s("396963"),
-                i = () => (0, a.jsxs)("svg", {
-                    width: "100%",
-                    height: "450px",
-                    viewBox: "0 0 1128 465",
-                    fill: "none",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    preserveAspectRatio: "none",
-                    className: r(l.root),
-                    children: [(0, a.jsx)("path", {
-                        d: "M566.905 381.644C361.963 471.489 216.886 465 0 465V0H1128V310.689C922.733 310.689 752 300.5 566.905 381.644Z",
-                        fill: "url(#linear-gradient-1)"
-                    }), (0, a.jsx)("defs", {
-                        children: (0, a.jsxs)("linearGradient", {
-                            id: "linear-gradient-1",
-                            x1: "0",
-                            y1: "0",
-                            x2: "1125.92",
-                            y2: "242.235",
-                            gradientUnits: "userSpaceOnUse",
-                            children: [(0, a.jsx)("stop", {
-                                className: l.stop1
-                            }), (0, a.jsx)("stop", {
-                                offset: "0.520833",
-                                className: l.stop2
-                            }), (0, a.jsx)("stop", {
-                                offset: "1",
-                                className: l.stop3
-                            })]
-                        })
-                    })]
-                })
-        },
         143476: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
@@ -6870,9 +6817,9 @@
                 g = s("934570"),
                 C = s("641078"),
                 O = s("400307"),
-                h = s("159646"),
-                L = s("379521"),
-                M = s("958966"),
+                L = s("159646"),
+                M = s("379521"),
+                h = s("958966"),
                 x = s("830648"),
                 U = s("627474"),
                 v = s("360776"),
@@ -6880,8 +6827,8 @@
                 b = s("881155"),
                 j = s("646718"),
                 B = s("964537"),
-                y = s("679324"),
-                G = s("905498"),
+                G = s("679324"),
+                y = s("905498"),
                 k = s("452637"),
                 H = e => {
                     var t;
@@ -6909,13 +6856,13 @@
                     }, []), (0, a.jsxs)("div", {
                         className: l(B.container, s ? B.containerPadding : null),
                         "data-cy": "tier-0-marketing-page",
-                        children: [(0, a.jsx)(h.default, {
+                        children: [(0, a.jsx)(L.default, {
                             premiumSubscription: Y,
                             className: l(s ? B.fullscreenExistingSubscriberSpacing : B.existingSubscriberSpacing, {
                                 [B.zIndex1]: ee
                             }),
                             isFullscreen: s
-                        }), s || ee ? (0, a.jsx)(L.default, {
+                        }), s || ee ? (0, a.jsx)(M.default, {
                             lifted: !s && ee
                         }) : null, !s && Z ? (0, a.jsx)(g.default, {
                             localizedPricingPromo: Q,
@@ -6924,7 +6871,7 @@
                             onChange: e => H(e),
                             threshold: 0,
                             active: !0,
-                            children: (0, a.jsx)(M.default, {
+                            children: (0, a.jsx)(h.default, {
                                 subscriptionTier: X,
                                 isFullscreen: s || ee,
                                 className: l(s ? B.fullscreenHero : ee ? B.settingsHeroNoBackground : B.settingsHero, {
@@ -6995,7 +6942,7 @@
                                 hideCTAs: !0
                             }), s ? (0, a.jsxs)(a.Fragment, {
                                 children: [(0, a.jsx)(I.default, {
-                                    src: G,
+                                    src: y,
                                     className: B.tableLeftSideDecoration,
                                     width: 197,
                                     height: 486,
@@ -7015,7 +6962,7 @@
                             isFullscreen: s,
                             subscriptionTier: X
                         }), (0, a.jsx)(I.default, {
-                            src: y,
+                            src: G,
                             className: B.bottomIllustration,
                             width: 112,
                             height: 85,
@@ -7028,7 +6975,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return f
+                    return T
                 }
             });
             var a = s("920040");
@@ -7042,37 +6989,38 @@
                 d = s("835618"),
                 c = s("554083"),
                 E = s("152657"),
-                _ = s("44647"),
-                I = s("504664"),
-                T = s("679324"),
-                f = () => {
+                _ = s("504664"),
+                I = s("679324"),
+                T = () => {
                     let {
                         AnalyticsLocationProvider: e
                     } = (0, r.default)(n.default.PREMIUM_SUBSCRIBER_NITRO_HOME), {
                         enabled: t
                     } = (0, i.default)();
                     return (0, a.jsx)("div", {
-                        className: I.container,
+                        className: _.container,
                         children: (0, a.jsxs)(e, {
-                            children: [(0, a.jsx)(_.default, {}), (0, a.jsx)(c.default, {
-                                className: I.heroHeading
+                            children: [(0, a.jsx)(c.default, {
+                                className: _.heroHeading
                             }), (0, a.jsx)(o.default, {
                                 variant: o.PerksDiscoverabilityVariants.WHATS_NEW,
-                                noBackground: !0
+                                noBackground: !0,
+                                leftAlignHeaders: !0
                             }), t ? (0, a.jsx)(o.default, {
-                                noBackground: !0
+                                noBackground: !0,
+                                leftAlignHeaders: !0
                             }) : null, (0, a.jsx)(u.default, {
-                                className: I.perksCards,
+                                className: _.perksCards,
                                 isSubscriberNitroHome: !0
                             }), (0, a.jsx)(E.default, {
-                                className: I.manageMembership
+                                className: _.manageMembership
                             }), (0, a.jsx)(d.default, {
-                                className: I.giftNitro
+                                className: _.giftNitro
                             }), (0, a.jsx)("div", {
-                                className: I.footerSpacing
+                                className: _.footerSpacing
                             }), (0, a.jsx)(l.default, {
-                                src: T,
-                                className: I.bottomIllustration,
+                                src: I,
+                                className: _.bottomIllustration,
                                 width: 112,
                                 height: 85,
                                 zoomable: !1
@@ -7223,9 +7171,9 @@
                 g = s("333078"),
                 C = s("156591"),
                 O = s("913204"),
-                h = s("174433"),
-                L = s("62414"),
-                M = s("613697"),
+                L = s("174433"),
+                M = s("62414"),
+                h = s("613697"),
                 x = s("907511"),
                 U = s("165870"),
                 v = s("443646");
@@ -7237,10 +7185,10 @@
                     flipped: b
                 } = (0, f.useWhatsNewAvatarDecoRollout)(), {
                     flipped: j
-                } = (0, f.useWhatsNewProfileFXRollout)(), B = (0, d.default)(), y = (0, E.default)({
+                } = (0, f.useWhatsNewProfileFXRollout)(), B = (0, d.default)(), G = (0, E.default)({
                     scrollPosition: A.ProfileCustomizationScrollPositions.TRY_IT_OUT,
                     analyticsLocations: e
-                }), G = () => {
+                }), y = () => {
                     (0, c.openCollectiblesShop)({
                         analyticsLocations: e,
                         analyticsSource: u.default.PREMIUM_MARKETING_PERK_CARD
@@ -7252,7 +7200,7 @@
                         subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_SUB,
                         description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_SUB,
                         descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
-                        onCtaClick: G,
+                        onCtaClick: y,
                         pillText: N.default.Messages.EARLY_ACCESS,
                         perkImage: g,
                         canReveal: b,
@@ -7331,13 +7279,13 @@
                                 analyticsLocations: e
                             })
                         },
-                        perkImage: h
+                        perkImage: L
                     } : {
                         name: n.ENTRANCE_SOUNDS,
                         title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
                         subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
                         description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
-                        perkImage: h
+                        perkImage: L
                     },
                     profileEffects: D ? {
                         name: n.PROFILE_EFFECTS,
@@ -7345,9 +7293,9 @@
                         subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
                         description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_SUB,
                         descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
-                        onCtaClick: G,
+                        onCtaClick: y,
                         pillText: N.default.Messages.EARLY_ACCESS,
-                        perkImage: M,
+                        perkImage: h,
                         canReveal: j,
                         dismissibleContentType: l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
                     } : {
@@ -7356,7 +7304,7 @@
                         subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
                         description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_NON_SUB,
                         pillText: N.default.Messages.EARLY_ACCESS,
-                        perkImage: M,
+                        perkImage: h,
                         canReveal: j,
                         dismissibleContentType: l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
                     },
@@ -7366,7 +7314,7 @@
                         subtitle: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_SUBTITLE,
                         description: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
                         descriptionCta: N.default.Messages.TAKE_ME_THERE,
-                        onCtaClick: y,
+                        onCtaClick: G,
                         perkImage: m
                     },
                     remixing: D ? {
@@ -7404,7 +7352,7 @@
                         subtitle: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE,
                         description: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
                         descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
-                        onCtaClick: G,
+                        onCtaClick: y,
                         perkImage: U
                     } : {
                         name: n.SPECIAL_MEMBER_PRICING,
@@ -7432,7 +7380,7 @@
                         name: n.UPCOMING_DROP_UNTIMED,
                         title: N.default.Messages.NEW_DROP,
                         pillText: N.default.Messages.COMING_SOON,
-                        backgroundImage: L
+                        backgroundImage: M
                     }
                 };
                 return k
