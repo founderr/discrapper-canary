@@ -10424,53 +10424,58 @@
             "use strict";
             n.r(t), n.d(t, {
                 PollAnswerClickable: function() {
-                    return o
+                    return m
                 },
                 PollMediaView: function() {
-                    return c
+                    return p
                 }
             });
             var s = n("920040"),
                 a = n("773670"),
-                l = n("77078"),
-                i = n("952368"),
-                r = n("847511"),
-                u = n("74232");
+                l = n("575482"),
+                i = n.n(l),
+                r = n("744196"),
+                u = n("77078"),
+                o = n("430568"),
+                d = n("385976"),
+                c = n("952368"),
+                f = n("847511"),
+                E = n("74232");
 
-            function o(e) {
+            function m(e) {
                 let {
                     className: t,
                     answer: n,
-                    children: i,
-                    disabled: o
+                    children: l,
+                    disabled: i
                 } = e, {
-                    channelId: d,
-                    messageId: c
-                } = (0, u.useMessageIds)(), f = a.useCallback(() => {
-                    r.default.handlePollAnswerTapped({
-                        channelId: d,
-                        messageId: c,
+                    channelId: r,
+                    messageId: o
+                } = (0, E.useMessageIds)(), d = a.useCallback(() => {
+                    f.default.handlePollAnswerTapped({
+                        channelId: r,
+                        messageId: o,
                         answerId: n.answerId
                     })
-                }, [d, c, n.answerId]);
-                return (0, s.jsx)(l.Clickable, {
+                }, [r, o, n.answerId]);
+                return (0, s.jsx)(u.Clickable, {
                     className: t,
                     tag: "li",
-                    onClick: !0 === o ? void 0 : f,
-                    "aria-disabled": o,
-                    children: i
+                    onClick: !0 === i ? void 0 : d,
+                    "aria-disabled": i,
+                    children: l
                 })
             }
 
-            function d(e) {
+            function _(e) {
                 var t, n;
                 let {
                     attachment: a,
                     alt: l,
-                    className: r
+                    className: i
                 } = e;
-                return (0, s.jsx)(i.default, {
-                    className: r,
+                return (0, s.jsx)(c.default, {
+                    className: i,
                     src: a.url,
                     alt: l,
                     responsive: !0,
@@ -10479,34 +10484,60 @@
                 })
             }
 
-            function c(e) {
+            function h(e) {
+                var t;
                 let {
-                    media: t,
-                    className: n,
-                    containerClassName: a,
-                    fallback: l,
-                    alt: i
+                    alt: n,
+                    className: a,
+                    emoji: l
+                } = e, i = (0, r.default)([d.default], () => {
+                    var e;
+                    return null === (e = d.default.getCustomEmojiById(null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.animated
+                }, [l.id]);
+                return (0, s.jsx)(o.default, {
+                    className: a,
+                    emojiId: null == l ? void 0 : l.id,
+                    emojiName: null == l ? void 0 : l.name,
+                    alt: n,
+                    animated: i
+                })
+            }
+
+            function I(e, t) {
+                return null != e ? (0, s.jsx)("div", {
+                    className: e,
+                    children: t
+                }) : (0, s.jsx)(s.Fragment, {
+                    children: t
+                })
+            }
+
+            function p(e) {
+                var t;
+                let {
+                    media: n,
+                    className: a,
+                    containerClassName: l,
+                    emojiClassName: r,
+                    fallback: u,
+                    alt: o
                 } = e, {
-                    message: r
-                } = (0, u.usePollContext)();
-                if (t.attachmentIds.length > 0) {
-                    let e = r.attachments.find(e => e.id === t.attachmentIds[0]);
-                    if (null != e) {
-                        var o, c, f;
-                        return c = a, f = (0, s.jsx)(d, {
-                            className: n,
-                            attachment: e,
-                            alt: null !== (o = null != i ? i : t.text) && void 0 !== o ? o : ""
-                        }), null != c ? (0, s.jsx)("div", {
-                            className: c,
-                            children: f
-                        }) : (0, s.jsx)(s.Fragment, {
-                            children: f
-                        })
-                    }
+                    message: d
+                } = (0, E.usePollContext)(), c = null !== (t = null != o ? o : n.text) && void 0 !== t ? t : "";
+                if (n.attachmentIds.length > 0) {
+                    let e = d.attachments.find(e => e.id === n.attachmentIds[0]);
+                    if (null != e) return I(l, (0, s.jsx)(_, {
+                        className: a,
+                        attachment: e,
+                        alt: c
+                    }))
                 }
-                return void 0 !== l ? (0, s.jsx)(s.Fragment, {
-                    children: l
+                return null != n.emoji ? I(l, (0, s.jsx)(h, {
+                    className: i(a, r),
+                    emoji: n.emoji,
+                    alt: c
+                })) : void 0 !== u ? (0, s.jsx)(s.Fragment, {
+                    children: u
                 }) : null
             }
         },
@@ -10573,6 +10604,7 @@
                     disabled: a,
                     children: [(0, s.jsx)(r.PollMediaView, {
                         className: d.media,
+                        emojiClassName: d.emoji,
                         media: t.pollMedia,
                         fallback: (0, s.jsx)("div", {
                             className: l(d.media, d.mediaMissing)
