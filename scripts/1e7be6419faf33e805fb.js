@@ -8281,6 +8281,7 @@
                     })
                 },
                 [eI.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE]: I.default,
+                [eI.MessageTypes.PURCHASE_NOTIFICATION]: void 0,
                 [eI.MessageTypes.INTERACTION_PREMIUM_UPSELL]: void 0,
                 [eI.MessageTypes.STAGE_START]: function(e) {
                     let {
