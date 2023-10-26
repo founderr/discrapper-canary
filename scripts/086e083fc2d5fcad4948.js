@@ -20,14 +20,14 @@
             var l = a("990746"),
                 n = a("913144"),
                 s = a("395724"),
-                r = a("599110"),
-                u = a("586391"),
+                u = a("599110"),
+                r = a("586391"),
                 o = a("49111");
 
             function i(e, t) {
-                return (0, s.default)(e, t), r.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
+                return (0, s.default)(e, t), u.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
                     source: t,
-                    action: u.AgeGateAnalyticAction.AGE_GATE_SUBMITTED
+                    action: r.AgeGateAnalyticAction.AGE_GATE_SUBMITTED
                 }), l.default.patch({
                     url: o.Endpoints.ME,
                     oldFormErrors: !0,
@@ -39,9 +39,9 @@
                     n.default.dispatch({
                         type: "CURRENT_USER_UPDATE",
                         user: a
-                    }), r.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
+                    }), u.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
                         source: t,
-                        action: u.AgeGateAnalyticAction.AGE_GATE_SUCCESS
+                        action: r.AgeGateAnalyticAction.AGE_GATE_SUCCESS
                     })
                 })
             }
@@ -49,18 +49,18 @@
             function c(e) {
                 n.default.dispatch({
                     type: "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION"
-                }), r.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
+                }), u.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
                     source: e,
-                    action: u.AgeGateAnalyticAction.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION
+                    action: r.AgeGateAnalyticAction.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION
                 })
             }
 
             function d(e) {
                 n.default.dispatch({
                     type: "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER"
-                }), r.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
+                }), u.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
                     source: e,
-                    action: u.AgeGateAnalyticAction.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER
+                    action: r.AgeGateAnalyticAction.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER
                 })
             }
         },
@@ -74,9 +74,9 @@
             var l = a("920040"),
                 n = a("773670"),
                 s = a("575482"),
-                r = a.n(s),
-                u = a("377849"),
-                o = a.n(u),
+                u = a.n(s),
+                r = a("377849"),
+                o = a.n(r),
                 i = a("77078"),
                 c = a("954419"),
                 d = a("782340"),
@@ -97,20 +97,20 @@
                     options: t,
                     selectOption: a,
                     children: s
-                } = e, [r, u] = n.useState("");
+                } = e, [u, r] = n.useState("");
                 n.useEffect(() => {
-                    if ("" !== r) {
-                        let e = setTimeout(() => u(""), 1e3);
+                    if ("" !== u) {
+                        let e = setTimeout(() => r(""), 1e3);
                         return () => clearTimeout(e)
                     }
-                }, [r, u]);
+                }, [u, r]);
                 let o = n.useCallback(e => {
                     if (G.test(e.key)) {
-                        let l = "".concat(r).concat(e.key.toLowerCase()),
+                        let l = "".concat(u).concat(e.key.toLowerCase()),
                             n = t.find(e => e.label.toLowerCase().startsWith(l));
-                        null != n && a(n.value), u(l)
+                        null != n && a(n.value), r(l)
                     }
-                }, [a, u, r, t]);
+                }, [a, r, u, t]);
                 return (0, l.jsx)("div", {
                     onKeyDown: o,
                     children: s
@@ -137,7 +137,7 @@
                 let {
                     value: a,
                     wrapperClassName: s,
-                    onChange: u,
+                    onChange: r,
                     onPopulated: E,
                     error: G,
                     autoFocus: m,
@@ -148,27 +148,27 @@
                     month: g,
                     setMonth: p,
                     year: N,
-                    setYear: x
+                    setYear: O
                 } = function(e) {
                     let t = null,
                         a = null,
                         l = null;
                     null != e && (t = e.date(), a = e.month() + 1, l = e.year());
-                    let [s, r] = n.useState(t), [u, o] = n.useState(a), [i, c] = n.useState(l);
+                    let [s, u] = n.useState(t), [r, o] = n.useState(a), [i, c] = n.useState(l);
                     return {
                         day: s,
-                        setDay: r,
-                        month: u,
+                        setDay: u,
+                        month: r,
                         setMonth: o,
                         year: i,
                         setYear: c
                     }
-                }(a), O = n.useMemo(() => null != y && null != g && null != N ? o("".concat(y, "/").concat(g, "/").concat(N), "DD/MM/YYYY") : null, [y, g, N]);
+                }(a), b = n.useMemo(() => null != y && null != g && null != N ? o("".concat(y, "/").concat(g, "/").concat(N), "DD/MM/YYYY") : null, [y, g, N]);
                 n.useEffect(() => {
-                    u((null == O ? void 0 : O.isValid()) ? O : null)
-                }, [O, u]);
-                let b = G;
-                null != O && !O.isValid() && (b = d.default.Messages.AGE_GATE_INVALID_BIRTHDAY);
+                    r((null == b ? void 0 : b.isValid()) ? b : null)
+                }, [b, r]);
+                let x = G;
+                null != b && !b.isValid() && (x = d.default.Messages.AGE_GATE_INVALID_BIRTHDAY);
                 let v = function() {
                         let e = new Date().getFullYear(),
                             t = n.useRef(Array.from(Array(150).keys()).map(t => ({
@@ -186,10 +186,10 @@
                     S = n.useRef(null),
                     I = n.useRef(null),
                     k = n.useRef(null),
-                    j = n.useMemo(h, []),
-                    B = n.useCallback(() => {
+                    B = n.useMemo(h, []),
+                    j = n.useCallback(() => {
                         var e, t, a, l;
-                        switch (null === (e = j[C]) || void 0 === e ? void 0 : e.type) {
+                        switch (null === (e = B[C]) || void 0 === e ? void 0 : e.type) {
                             case "day":
                                 null === (t = S.current) || void 0 === t || t.focus();
                                 break;
@@ -199,21 +199,21 @@
                             case "year":
                                 null === (l = k.current) || void 0 === l || l.focus()
                         }
-                    }, [C, S, I, k, j]);
+                    }, [C, S, I, k, B]);
                 n.useEffect(() => {
-                    setTimeout(B, 500)
+                    setTimeout(j, 500)
                 }, []), n.useEffect(() => {
-                    if (C >= j.length) {
+                    if (C >= B.length) {
                         null == E || E();
                         return
                     }
-                    B()
-                }, [C, B]);
+                    j()
+                }, [C, j]);
                 let Y = [];
                 for (let e = 0; e < 3; e++) {
                     let {
                         type: t
-                    } = j[e];
+                    } = B[e];
                     switch (t) {
                         case "day":
                             Y.push({
@@ -276,7 +276,7 @@
                                 key: "year",
                                 input: (0, l.jsx)(T, {
                                     options: v,
-                                    selectOption: x,
+                                    selectOption: O,
                                     children: (0, l.jsx)(c.default, {
                                         ref: k,
                                         className: A.inputYear,
@@ -292,7 +292,7 @@
                                             let {
                                                 value: a
                                             } = t;
-                                            x(a), D(e + 1)
+                                            O(a), D(e + 1)
                                         },
                                         maxMenuHeight: 215
                                     })
@@ -301,10 +301,11 @@
                     }
                 }
                 return (0, l.jsxs)("fieldset", {
-                    className: r(A.container, s),
+                    className: u(A.container, s),
                     children: [(0, l.jsx)(i.FormTitle, {
                         tag: "legend",
                         required: M,
+                        error: x,
                         children: d.default.Messages.AGE_GATE_DATE_OF_BIRTH
                     }), (0, l.jsx)("div", {
                         className: A.inputs,
@@ -319,10 +320,6 @@
                                 children: n
                             }, a)
                         })
-                    }), (0, l.jsx)(i.Text, {
-                        className: A.errors,
-                        variant: "text-sm/normal",
-                        children: b
                     })]
                 })
             });
@@ -332,13 +329,13 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return b
+                    return x
                 }
             });
             var l, n, s = a("920040"),
-                r = a("773670"),
-                u = a("161179"),
-                o = a.n(u),
+                u = a("773670"),
+                r = a("161179"),
+                o = a.n(r),
                 i = a("377849"),
                 c = a.n(i),
                 d = a("498225"),
@@ -356,75 +353,75 @@
                 g = a("208266"),
                 p = a("586391"),
                 N = a("49111"),
-                x = a("782340"),
-                O = a("857329");
+                O = a("782340"),
+                b = a("857329");
 
-            function b(e) {
+            function x(e) {
                 let {
                     transitionState: t,
                     source: l
-                } = e, u = (0, d.useStateFromStores)([G.default], () => G.default.getCurrentUser()), i = (0, d.useStateFromStores)([_.default, f.default], () => f.default.getChannel(_.default.getChannelId())), [b, v] = r.useState(null), [C, D] = r.useState(null), [S, I] = r.useState(!1), [k, j] = r.useState(n.AGE_GATE_FORM), B = r.createRef(), Y = r.createRef(), F = (0, h.useUID)(), U = null != b ? c().diff(b, "years") : null;
+                } = e, r = (0, d.useStateFromStores)([G.default], () => G.default.getCurrentUser()), i = (0, d.useStateFromStores)([_.default, f.default], () => f.default.getChannel(_.default.getChannelId())), [x, v] = u.useState(null), [C, D] = u.useState(null), [S, I] = u.useState(!1), [k, B] = u.useState(n.AGE_GATE_FORM), j = u.createRef(), Y = u.createRef(), F = (0, h.useUID)(), U = null != x ? c().diff(x, "years") : null;
 
                 function L() {
                     let e = null == i ? void 0 : i.getGuildId();
                     E.default.nsfwReturnToSafety(e), (0, R.closeAgeGateModal)(l)
                 }
                 async function P() {
-                    o(null != b, "Cannot submit null birthday.");
+                    o(null != x, "Cannot submit null birthday.");
                     try {
-                        return D(null), I(!0), await (0, y.submitDateOfBirth)(b, l)
+                        return D(null), I(!0), await (0, y.submitDateOfBirth)(x, l)
                     } catch (t) {
                         if (null != t.body && null != t.body.date_of_birth)(0, R.openFailureAgeGateModal)(l, t.body.date_of_birth);
                         else {
                             var e;
-                            (null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.username) != null ? D(x.default.Messages.USER_SETTINGS_UPDATE_FAILURE) : D(null == t ? void 0 : t.body.message), I(!1)
+                            (null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.username) != null ? D(O.default.Messages.USER_SETTINGS_UPDATE_FAILURE) : D(null == t ? void 0 : t.body.message), I(!1)
                         }
                     }
                 }
                 async function w() {
                     if (o(null != U, "Cannot submit if we haven't been able to calculate age."), U < 18) {
-                        j(n.CONFIRM);
+                        B(n.CONFIRM);
                         return
                     }
                     await P()
                 }
                 async function H(e) {
-                    e.preventDefault(), !S && null != b && await w()
+                    e.preventDefault(), !S && null != x && await w()
                 }
                 async function z() {
                     let e = await P();
-                    null == e && j(n.AGE_GATE_FORM)
+                    null == e && B(n.AGE_GATE_FORM)
                 }
-                r.useEffect(() => {
-                    null != u && null != u.nsfwAllowed && (0, R.openSuccessAgeGateModal)(l)
-                }), r.useEffect(() => {
+                u.useEffect(() => {
+                    null != r && null != r.nsfwAllowed && (0, R.openSuccessAgeGateModal)(l)
+                }), u.useEffect(() => {
                     m.default.track(N.AnalyticEvents.AGE_GATE_ACTION, {
                         source: l,
                         action: p.AgeGateAnalyticAction.AGE_GATE_OPEN
                     })
                 }, [l]);
-                let K = r.useCallback(e => {
+                let K = u.useCallback(e => {
                         v(e)
                     }, [v]),
-                    W = r.useCallback(() => {
+                    W = u.useCallback(() => {
                         var e;
                         null === (e = Y.current) || void 0 === e || e.focus()
                     }, [Y]);
                 return k === n.AGE_GATE_FORM ? function() {
                     let e = (() => {
-                            if (l === p.AgeGateSource.FAMILY_CENTER) return x.default.Messages.AGE_GATE_FAMILY_CENTER_HEADER;
-                            return x.default.Messages.AGE_GATE_EXISTING_HEADER
+                            if (l === p.AgeGateSource.FAMILY_CENTER) return O.default.Messages.AGE_GATE_FAMILY_CENTER_HEADER;
+                            return O.default.Messages.AGE_GATE_EXISTING_HEADER
                         })(),
                         n = (() => {
                             switch (l) {
                                 case p.AgeGateSource.FAMILY_CENTER:
-                                    return x.default.Messages.AGE_GATE_FAMILY_CENTER_BODY;
+                                    return O.default.Messages.AGE_GATE_FAMILY_CENTER_BODY;
                                 case p.AgeGateSource.DEEP_LINK_PROMPT:
-                                    return x.default.Messages.AGE_GATE_DEEP_LINK_BODY.format({
+                                    return O.default.Messages.AGE_GATE_DEEP_LINK_BODY.format({
                                         helpURL: M.default.getArticleURL(N.HelpdeskArticles.AGE_GATE)
                                     });
                                 default:
-                                    return x.default.Messages.AGE_GATE_NSFW_BODY.format({
+                                    return O.default.Messages.AGE_GATE_NSFW_BODY.format({
                                         helpURL: M.default.getArticleURL(N.HelpdeskArticles.AGE_GATE)
                                     })
                             }
@@ -435,14 +432,14 @@
                         "aria-labelledby": F,
                         children: [(0, s.jsxs)(A.ModalContent, {
                             children: [(0, s.jsxs)("div", {
-                                className: O.container,
+                                className: b.container,
                                 children: [(0, s.jsx)("img", {
                                     alt: "",
                                     src: a("986686"),
-                                    className: O.img
+                                    className: b.img
                                 }), (0, s.jsx)(A.Heading, {
                                     variant: "heading-xl/semibold",
-                                    className: O.title,
+                                    className: b.title,
                                     id: F,
                                     children: e
                                 }), (0, s.jsx)(A.Text, {
@@ -453,14 +450,14 @@
                             }), (0, s.jsx)("form", {
                                 onSubmit: H,
                                 children: (0, s.jsx)(g.default, {
-                                    label: x.default.Messages.AGE_GATE_YOUR_BIRTHDAY,
-                                    wrapperClassName: O.birthday,
+                                    label: O.default.Messages.AGE_GATE_YOUR_BIRTHDAY,
+                                    wrapperClassName: b.birthday,
                                     name: "date_of_birth",
                                     onChange: K,
                                     onPopulated: W,
                                     error: C,
-                                    value: b,
-                                    ref: B,
+                                    value: x,
+                                    ref: j,
                                     autoFocus: !0
                                 })
                             })]
@@ -469,16 +466,16 @@
                             children: [(0, s.jsx)(A.Button, {
                                 buttonRef: Y,
                                 submitting: S,
-                                disabled: null == b,
+                                disabled: null == x,
                                 size: A.ButtonSizes.SMALL,
                                 onClick: w,
-                                children: x.default.Messages.AGE_GATE_SUBMIT
+                                children: O.default.Messages.AGE_GATE_SUBMIT
                             }), (0, s.jsx)(A.Button, {
                                 look: A.Button.Looks.LINK,
                                 size: A.Button.Sizes.NONE,
                                 color: A.Button.Colors.PRIMARY,
                                 onClick: L,
-                                children: x.default.Messages.AGE_GATE_GO_BACK
+                                children: O.default.Messages.AGE_GATE_GO_BACK
                             })]
                         })]
                     })
@@ -488,34 +485,34 @@
                     "aria-labelledby": F,
                     children: [(0, s.jsx)(A.ModalContent, {
                         children: (0, s.jsxs)("div", {
-                            className: O.confirmContainer,
+                            className: b.confirmContainer,
                             children: [(0, s.jsx)(A.Heading, {
                                 variant: "heading-xl/semibold",
-                                className: O.confirmTitle,
+                                className: b.confirmTitle,
                                 id: F,
-                                children: x.default.Messages.AGE_GATE_CONFIRM_HEADER.format({
+                                children: O.default.Messages.AGE_GATE_CONFIRM_HEADER.format({
                                     age: U
                                 })
                             }), (0, s.jsx)(A.Text, {
                                 color: "header-secondary",
                                 variant: "text-sm/normal",
-                                children: x.default.Messages.AGE_GATE_NSFW_BODY.format({
+                                children: O.default.Messages.AGE_GATE_NSFW_BODY.format({
                                     helpURL: M.default.getArticleURL(N.HelpdeskArticles.AGE_GATE)
                                 })
                             })]
                         })
                     }), (0, s.jsxs)(A.ModalFooter, {
-                        className: O.confirmFooter,
+                        className: b.confirmFooter,
                         children: [(0, s.jsx)(A.Button, {
                             look: A.Button.Looks.LINK,
                             size: A.Button.Sizes.NONE,
                             color: A.Button.Colors.PRIMARY,
-                            onClick: () => j(n.AGE_GATE_FORM),
-                            children: x.default.Messages.AGE_GATE_CONFIRM_GO_BACK
+                            onClick: () => B(n.AGE_GATE_FORM),
+                            children: O.default.Messages.AGE_GATE_CONFIRM_GO_BACK
                         }), (0, s.jsx)(A.Button, {
                             color: A.Button.Colors.BRAND,
                             onClick: z,
-                            children: x.default.Messages.AGE_GATE_CONFIRM_BUTTON
+                            children: O.default.Messages.AGE_GATE_CONFIRM_BUTTON
                         })]
                     })]
                 })
@@ -525,16 +522,16 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return u
+                    return r
                 }
             });
             var l = a("377849"),
                 n = a.n(l),
                 s = a("599110"),
-                r = a("49111");
+                u = a("49111");
 
-            function u(e, t) {
-                s.default.track(r.AnalyticEvents.AGE_GATE_SUBMITTED, {
+            function r(e, t) {
+                s.default.track(u.AnalyticEvents.AGE_GATE_SUBMITTED, {
                     dob: 18 > n().diff(e, "years") ? e.format("YYYY-MM-DD") : null,
                     dob_day: e.date(),
                     dob_month: e.month() + 1,

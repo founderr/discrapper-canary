@@ -55,10 +55,10 @@
                     return u
                 },
                 preventUnderageRegistration: function() {
-                    return c
+                    return d
                 },
                 logoutUnderageNewUser: function() {
-                    return d
+                    return c
                 }
             });
             var a = s("990746"),
@@ -90,7 +90,7 @@
                 })
             }
 
-            function c(e) {
+            function d(e) {
                 l.default.dispatch({
                     type: "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION"
                 }), i.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
@@ -99,7 +99,7 @@
                 })
             }
 
-            function d(e) {
+            function c(e) {
                 l.default.dispatch({
                     type: "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER"
                 }), i.default.track(o.AnalyticEvents.AGE_GATE_ACTION, {
@@ -122,8 +122,8 @@
                 r = s("377849"),
                 o = s.n(r),
                 u = s("77078"),
-                c = s("954419"),
-                d = s("782340"),
+                d = s("954419"),
+                c = s("782340"),
                 f = s("733317");
             let E = o().localeData().months(),
                 N = Array.from(Array(31).keys()).map(e => ({
@@ -198,21 +198,21 @@
                         s = null,
                         a = null;
                     null != e && (t = e.date(), s = e.month() + 1, a = e.year());
-                    let [n, i] = l.useState(t), [r, o] = l.useState(s), [u, c] = l.useState(a);
+                    let [n, i] = l.useState(t), [r, o] = l.useState(s), [u, d] = l.useState(a);
                     return {
                         day: n,
                         setDay: i,
                         month: r,
                         setMonth: o,
                         year: u,
-                        setYear: c
+                        setYear: d
                     }
                 }(s), G = l.useMemo(() => null != I && null != x && null != U ? o("".concat(I, "/").concat(x, "/").concat(U), "DD/MM/YYYY") : null, [I, x, U]);
                 l.useEffect(() => {
                     r((null == G ? void 0 : G.isValid()) ? G : null)
                 }, [G, r]);
                 let O = _;
-                null != G && !G.isValid() && (O = d.default.Messages.AGE_GATE_INVALID_BIRTHDAY);
+                null != G && !G.isValid() && (O = c.default.Messages.AGE_GATE_INVALID_BIRTHDAY);
                 let M = function() {
                         let e = new Date().getFullYear(),
                             t = l.useRef(Array.from(Array(150).keys()).map(t => ({
@@ -226,8 +226,8 @@
                             }))
                         }, [e]), t.current
                     }(),
-                    [g, j] = l.useState(p ? 0 : -1),
-                    R = l.useRef(null),
+                    [g, R] = l.useState(p ? 0 : -1),
+                    j = l.useRef(null),
                     D = l.useRef(null),
                     y = l.useRef(null),
                     L = l.useMemo(A, []),
@@ -235,7 +235,7 @@
                         var e, t, s, a;
                         switch (null === (e = L[g]) || void 0 === e ? void 0 : e.type) {
                             case "day":
-                                null === (t = R.current) || void 0 === t || t.focus();
+                                null === (t = j.current) || void 0 === t || t.focus();
                                 break;
                             case "month":
                                 null === (s = D.current) || void 0 === s || s.focus();
@@ -243,7 +243,7 @@
                             case "year":
                                 null === (a = y.current) || void 0 === a || a.focus()
                         }
-                    }, [g, R, D, y, L]);
+                    }, [g, j, D, y, L]);
                 l.useEffect(() => {
                     setTimeout(b, 500)
                 }, []), l.useEffect(() => {
@@ -265,14 +265,14 @@
                                 input: (0, a.jsx)(T, {
                                     options: N,
                                     selectOption: S,
-                                    children: (0, a.jsx)(c.default, {
-                                        ref: R,
+                                    children: (0, a.jsx)(d.default, {
+                                        ref: j,
                                         className: f.inputDay,
-                                        "aria-label": d.default.Messages.AGE_GATE_DOB_DAY,
-                                        menuPlacement: c.default.MenuPlacements.TOP,
+                                        "aria-label": c.default.Messages.AGE_GATE_DOB_DAY,
+                                        menuPlacement: d.default.MenuPlacements.TOP,
                                         placeholder: (0, a.jsx)("span", {
                                             "aria-hidden": !0,
-                                            children: d.default.Messages.AGE_GATE_DOB_DAY
+                                            children: c.default.Messages.AGE_GATE_DOB_DAY
                                         }),
                                         options: N,
                                         value: I,
@@ -280,7 +280,7 @@
                                             let {
                                                 value: s
                                             } = t;
-                                            S(s), j(e + 1)
+                                            S(s), R(e + 1)
                                         },
                                         maxMenuHeight: 215
                                     })
@@ -293,14 +293,14 @@
                                 input: (0, a.jsx)(T, {
                                     options: m,
                                     selectOption: C,
-                                    children: (0, a.jsx)(c.default, {
+                                    children: (0, a.jsx)(d.default, {
                                         ref: D,
                                         className: f.inputMonth,
-                                        "aria-label": d.default.Messages.AGE_GATE_DOB_MONTH,
-                                        menuPlacement: c.default.MenuPlacements.TOP,
+                                        "aria-label": c.default.Messages.AGE_GATE_DOB_MONTH,
+                                        menuPlacement: d.default.MenuPlacements.TOP,
                                         placeholder: (0, a.jsx)("span", {
                                             "aria-hidden": !0,
-                                            children: d.default.Messages.AGE_GATE_DOB_MONTH
+                                            children: c.default.Messages.AGE_GATE_DOB_MONTH
                                         }),
                                         options: m,
                                         value: x,
@@ -308,7 +308,7 @@
                                             let {
                                                 value: s
                                             } = t;
-                                            C(s), j(e + 1)
+                                            C(s), R(e + 1)
                                         },
                                         maxMenuHeight: 215
                                     })
@@ -321,14 +321,14 @@
                                 input: (0, a.jsx)(T, {
                                     options: M,
                                     selectOption: v,
-                                    children: (0, a.jsx)(c.default, {
+                                    children: (0, a.jsx)(d.default, {
                                         ref: y,
                                         className: f.inputYear,
-                                        "aria-label": d.default.Messages.AGE_GATE_DOB_YEAR,
-                                        menuPlacement: c.default.MenuPlacements.TOP,
+                                        "aria-label": c.default.Messages.AGE_GATE_DOB_YEAR,
+                                        menuPlacement: d.default.MenuPlacements.TOP,
                                         placeholder: (0, a.jsx)("span", {
                                             "aria-hidden": !0,
-                                            children: d.default.Messages.AGE_GATE_DOB_YEAR
+                                            children: c.default.Messages.AGE_GATE_DOB_YEAR
                                         }),
                                         options: M,
                                         value: U,
@@ -336,7 +336,7 @@
                                             let {
                                                 value: s
                                             } = t;
-                                            v(s), j(e + 1)
+                                            v(s), R(e + 1)
                                         },
                                         maxMenuHeight: 215
                                     })
@@ -349,7 +349,8 @@
                     children: [(0, a.jsx)(u.FormTitle, {
                         tag: "legend",
                         required: h,
-                        children: d.default.Messages.AGE_GATE_DATE_OF_BIRTH
+                        error: O,
+                        children: c.default.Messages.AGE_GATE_DATE_OF_BIRTH
                     }), (0, a.jsx)("div", {
                         className: f.inputs,
                         children: F.map((e, t) => {
@@ -363,10 +364,6 @@
                                 children: l
                             }, s)
                         })
-                    }), (0, a.jsx)(u.Text, {
-                        className: f.errors,
-                        variant: "text-sm/normal",
-                        children: O
                     })]
                 })
             });
@@ -410,8 +407,8 @@
                 r = s("498225"),
                 o = s("912557"),
                 u = s("77078"),
-                c = s("731109"),
-                d = s("208266"),
+                d = s("731109"),
+                c = s("208266"),
                 f = s("697218"),
                 E = s("153769"),
                 N = s("701909"),
@@ -428,9 +425,9 @@
                 async function v(e) {
                     e.preventDefault(), i(null != n, "Cannot submit null birthday."), x(!0);
                     try {
-                        await c.submitDateOfBirth(n, _.AgeGateSource.NEW_USER_FLOW), t()
+                        await d.submitDateOfBirth(n, _.AgeGateSource.NEW_USER_FLOW), t()
                     } catch (e) {
-                        if (null != e.body && null != e.body.date_of_birth) c.preventUnderageRegistration(_.AgeGateSource.NEW_USER_FLOW), c.logoutUnderageNewUser(_.AgeGateSource.NEW_USER_FLOW), s();
+                        if (null != e.body && null != e.body.date_of_birth) d.preventUnderageRegistration(_.AgeGateSource.NEW_USER_FLOW), d.logoutUnderageNewUser(_.AgeGateSource.NEW_USER_FLOW), s();
                         else {
                             var a;
                             (null == e ? void 0 : null === (a = e.body) || void 0 === a ? void 0 : a.username) != null ? I(T.default.Messages.USER_SETTINGS_UPDATE_FAILURE) : I(null == e ? void 0 : e.body.message)
@@ -469,7 +466,7 @@
                         })
                     }), (0, a.jsx)(u.ThemeContextProvider, {
                         theme: m.ThemeTypes.LIGHT,
-                        children: (0, a.jsx)(d.default, {
+                        children: (0, a.jsx)(c.default, {
                             required: !0,
                             autoFocus: !0,
                             wrapperClassName: A.formItem,
@@ -502,7 +499,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return c
+                    return d
                 }
             });
             var a = s("920040");
@@ -514,7 +511,7 @@
                 o = s("782340"),
                 u = s("36348");
 
-            function c(e) {
+            function d(e) {
                 let {
                     onComplete: t
                 } = e;
@@ -550,8 +547,8 @@
                 r = s("575482"),
                 o = s.n(r),
                 u = s("77078"),
-                c = s("970728"),
-                d = s("79112"),
+                d = s("970728"),
+                c = s("79112"),
                 f = s("448993"),
                 E = s("145131"),
                 N = s("258078"),
@@ -582,7 +579,7 @@
                         C(null), S(!0);
                         let a = t.split("/"),
                             l = a[a.length - 1];
-                        c.default.resolveInvite(l, "Join Guild", {
+                        d.default.resolveInvite(l, "Join Guild", {
                             inputValue: t
                         }).then(e => {
                             let {
@@ -593,12 +590,12 @@
                                 return
                             }
                             if (null != t.channel) {
-                                let e = c.default.getInviteContext("Join Guild", t);
-                                c.default.acceptInvite({
+                                let e = d.default.getInviteContext("Join Guild", t);
+                                d.default.acceptInvite({
                                     inviteKey: t.code,
                                     context: e,
                                     callback: e => {
-                                        s(), c.default.transitionToInvite(e)
+                                        s(), d.default.transitionToInvite(e)
                                     }
                                 }).catch(e => {
                                     if (e instanceof f.V6OrEarlierAPIError || e instanceof f.APIError) {
@@ -659,7 +656,7 @@
                                 className: A.connectCTA,
                                 children: T.default.Messages.JOIN_GUILD_CONNECT.format({
                                     onClick: () => {
-                                        a(), d.default.open(_.UserSettingsSections.CONNECTIONS)
+                                        a(), c.default.open(_.UserSettingsSections.CONNECTIONS)
                                     }
                                 })
                             })]
@@ -690,7 +687,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return j
+                    return R
                 }
             });
             var a = s("920040"),
@@ -700,8 +697,8 @@
                 r = s("64379"),
                 o = s("498225"),
                 u = s("77078"),
-                c = s("731898"),
-                d = s("818351"),
+                d = s("731898"),
+                c = s("818351"),
                 f = s("21214"),
                 E = s("622210"),
                 N = s("72405"),
@@ -722,16 +719,16 @@
                 M = s("782340"),
                 g = s("427494");
 
-            function j(e) {
+            function R(e) {
                 let t;
                 let s = (0, T.useUID)(),
                     {
                         onSlideChange: n,
-                        ...j
+                        ...R
                     } = e,
                     {
-                        onClose: R
-                    } = j,
+                        onClose: j
+                    } = R,
                     [D, y] = l.useState(!1),
                     L = (0, o.useStateFromStores)([m.default], () => m.default.getCurrentUser()),
                     b = null != L && null == L.nsfwAllowed,
@@ -774,7 +771,7 @@
                 }), {
                     content: $,
                     footer: ee
-                } = (0, d.useChannelPromptSlide)({
+                } = (0, c.useChannelPromptSlide)({
                     createdGuildId: w,
                     hasFooter: !1,
                     onChannelPromptCompleted: () => {
@@ -787,9 +784,9 @@
                 } = (0, x.default)({
                     onBack: () => P(v.NUFSlides.CHOOSE_TEMPLATE),
                     onComplete: () => {
-                        R()
+                        j()
                     },
-                    onConnect: R,
+                    onConnect: j,
                     isSlideReady: k === v.NUFSlides.JOIN_GUILD
                 });
                 switch (F) {
@@ -808,21 +805,21 @@
                 let {
                     ref: ea,
                     width: el
-                } = (0, c.default)();
+                } = (0, d.default)();
                 if (D) return (0, a.jsx)(u.ModalRoot, {
-                    ...j,
+                    ...R,
                     size: u.ModalSize.MEDIUM,
                     className: i(g.modal, g.completed),
                     "aria-labelledby": s,
                     children: (0, a.jsx)(S.default, {
-                        onComplete: R
+                        onComplete: j
                     })
                 });
                 let en = {
                     impression_group: r.ImpressionGroups.GUILD_ADD_NUF
                 };
                 return (0, a.jsxs)(u.ModalRoot, {
-                    ...j,
+                    ...R,
                     size: u.ModalSize.MEDIUM,
                     className: g.modal,
                     "aria-labelledby": s,
@@ -847,9 +844,9 @@
                                         className: g.container,
                                         children: (0, a.jsx)(I.default, {
                                             onComplete: () => {
-                                                W ? R() : P(v.NUFSlides.CHOOSE_TEMPLATE)
+                                                W ? j() : P(v.NUFSlides.CHOOSE_TEMPLATE)
                                             },
-                                            onClose: R
+                                            onClose: j
                                         })
                                     })
                                 }), (0, a.jsx)(u.Slide, {
@@ -899,7 +896,7 @@
                                 })]
                             })
                         }), F !== v.NUFSlides.AGE_GATE ? (0, a.jsx)(u.ModalCloseButton, {
-                            onClick: R,
+                            onClick: j,
                             className: g.closeButton
                         }) : null, F === v.NUFSlides.CHOOSE_TEMPLATE ? (0, a.jsx)(u.ModalFooter, {
                             justify: _.default.Justify.BETWEEN,
@@ -941,7 +938,7 @@
             function o(e) {
                 let {
                     step: t
-                } = e, s = t === i.NUFSlides.AGE_GATE, l = t === i.NUFSlides.CHOOSE_TEMPLATE || t === i.NUFSlides.CREATION_INTENT, o = t === i.NUFSlides.CUSTOMIZE_GUILD, u = t === i.NUFSlides.CHANNEL_PROMPT || t === i.NUFSlides.JOIN_GUILD, c = o || u, d = l || c;
+                } = e, s = t === i.NUFSlides.AGE_GATE, l = t === i.NUFSlides.CHOOSE_TEMPLATE || t === i.NUFSlides.CREATION_INTENT, o = t === i.NUFSlides.CUSTOMIZE_GUILD, u = t === i.NUFSlides.CHANNEL_PROMPT || t === i.NUFSlides.JOIN_GUILD, d = o || u, c = l || d;
                 return (0, a.jsxs)("div", {
                     className: r.sidebar,
                     children: [(0, a.jsx)("div", {
@@ -950,19 +947,19 @@
                         })
                     }), (0, a.jsx)("div", {
                         className: n(r.step24Clouds, {
-                            [r.show]: d
-                        })
-                    }), (0, a.jsx)("div", {
-                        className: n(r.step34Flag, {
                             [r.show]: c
                         })
                     }), (0, a.jsx)("div", {
-                        className: n(r.step24Base, {
+                        className: n(r.step34Flag, {
                             [r.show]: d
                         })
                     }), (0, a.jsx)("div", {
+                        className: n(r.step24Base, {
+                            [r.show]: c
+                        })
+                    }), (0, a.jsx)("div", {
                         className: n(r.step24Ground, {
-                            [r.show]: d
+                            [r.show]: c
                         })
                     }), (0, a.jsx)("div", {
                         className: n(r.step2Base, {
@@ -974,7 +971,7 @@
                         })
                     }), (0, a.jsx)("div", {
                         className: n(r.step34Base, {
-                            [r.show]: c
+                            [r.show]: d
                         })
                     }), (0, a.jsx)("div", {
                         className: n(r.step3Character, {
@@ -986,7 +983,7 @@
                         })
                     }), (0, a.jsx)("div", {
                         className: n(r.step24Foreground, {
-                            [r.show]: d
+                            [r.show]: c
                         })
                     })]
                 })
