@@ -243,6 +243,9 @@
                 },
                 showInAppReportsFeedbackModal: function() {
                     return E
+                },
+                areRequiredElementsUnfilled: function() {
+                    return x
                 }
             });
             var a = n("990746"),
@@ -324,11 +327,15 @@
                     breadcrumbs: n.map(e => e.nodeRef),
                     elements: n.reduce((e, t) => {
                         let {
-                            multiSelect: n
+                            multiSelect: n,
+                            textInput: a
                         } = t;
-                        return null == n ? e : {
+                        return {
                             ...e,
-                            [n.name]: Object.keys(n.state)
+                            ...null != n && {
+                                [n.name]: Object.keys(n.state)
+                            },
+                            ...a
                         }
                     }, {})
                 };
@@ -462,6 +469,10 @@
                     reportType: e.name
                 })
             }
+
+            function x(e, t, n, a, l) {
+                return e.some(e => !0 === e.should_submit_data && ((null == a ? void 0 : a[e.name]) == null || (null == a ? void 0 : a[e.name]) === "")) || t.some(e => !0 === e.should_submit_data && ((null == a ? void 0 : a[e.name]) == null || (null == a ? void 0 : a[e.name]) === "")) || (null == n ? void 0 : n.should_submit_data) === !0 && (null == l || 0 === Object.keys(l).length)
+            }
         },
         399515: function(e, t, n) {
             "use strict";
@@ -493,7 +504,7 @@
                         root_node_id: g,
                         success_node_id: R,
                         fail_node_id: N
-                    } = n, [p, S] = l.useState(g), [I, T] = l.useState(void 0), [M, j] = l.useState(void 0), [C, b] = l.useState([]), [L, y] = l.useState(void 0), D = e => {
+                    } = n, [p, S] = l.useState(g), [I, T] = l.useState(void 0), [j, M] = l.useState(void 0), [C, b] = l.useState([]), [L, y] = l.useState(void 0), D = e => {
                         var n;
                         let {
                             destination: a
@@ -502,7 +513,7 @@
                             ...e,
                             destination: ["", r.button.target]
                         });
-                        if (b([...C, e]), null != r.key && (null == h || h(r.key)), T(void 0), j(void 0), t.name === d.ReportNames.MESSAGE || t.name === d.ReportNames.FIRST_DM) {
+                        if (b([...C, e]), null != r.key && (null == h || h(r.key)), T(void 0), M(void 0), t.name === d.ReportNames.MESSAGE || t.name === d.ReportNames.FIRST_DM) {
                             let e = t.record.id;
                             s.default.trackWithMetadata(c.AnalyticEvents.IAR_NAVIGATE, {
                                 message_id: e,
@@ -534,7 +545,7 @@
                                 next_node: x[r].id
                             })
                         }
-                        T(null == l ? void 0 : null === (e = l.multiSelect) || void 0 === e ? void 0 : e.state), j(null == l ? void 0 : l.textInput), S(r), b(a), null == h || h("..")
+                        T(null == l ? void 0 : null === (e = l.multiSelect) || void 0 === e ? void 0 : e.state), M(null == l ? void 0 : l.textInput), S(r), b(a), null == h || h("..")
                     }, U = [];
                     for (let e in x) {
                         var k, B;
@@ -564,7 +575,7 @@
                                         onSelectChild: D,
                                         onNavigateBack: O,
                                         multiSelect: I,
-                                        textInput: M,
+                                        textInput: j,
                                         successNodeId: R,
                                         failNodeId: N,
                                         onSubmit: A,
@@ -630,39 +641,40 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return A
+                    return O
                 }
             });
             var a = n("920040"),
                 l = n("773670"),
                 r = n("77078"),
                 s = n("145131"),
-                i = n("64573"),
-                d = n("191732"),
-                u = n("284787"),
-                o = n("859043"),
-                c = n("540227"),
-                m = n("755575"),
-                _ = n("552190"),
-                f = n("798016"),
-                h = n("918418"),
-                v = n("947319"),
-                E = n("420938"),
-                x = n("111181"),
-                g = n("677734"),
-                R = n("538418"),
-                N = n("584866"),
-                p = n("41877"),
-                S = n("71514"),
-                I = n("265104"),
-                T = n("345516"),
+                i = n("965153"),
+                d = n("64573"),
+                u = n("191732"),
+                o = n("284787"),
+                c = n("859043"),
+                m = n("540227"),
+                _ = n("755575"),
+                f = n("552190"),
+                h = n("798016"),
+                v = n("918418"),
+                E = n("947319"),
+                x = n("420938"),
+                g = n("111181"),
+                R = n("677734"),
+                N = n("538418"),
+                p = n("584866"),
+                S = n("41877"),
+                I = n("71514"),
+                T = n("265104"),
+                j = n("345516"),
                 M = n("244599"),
-                j = n("291028"),
-                C = n("821003"),
-                b = n("782340"),
-                L = n("887491");
+                C = n("291028"),
+                b = n("821003"),
+                L = n("782340"),
+                y = n("887491");
 
-            function y(e, t) {
+            function D(e, t) {
                 let {
                     elements: n
                 } = e;
@@ -674,7 +686,7 @@
                 })
             }
 
-            function D(e, t) {
+            function A(e, t) {
                 let {
                     elements: n
                 } = e;
@@ -685,67 +697,67 @@
                     return n === t
                 })
             }
-            var A = e => {
+            var O = e => {
                 let {
                     node: t,
                     reportType: n,
-                    history: A,
-                    onSelectChild: O,
-                    onModalClose: U,
-                    multiSelect: k,
-                    reportId: B,
-                    textInput: G
-                } = e, [P, w] = l.useState(!1), [F, V] = l.useState(!1), [H, z] = l.useState(() => ({})), [Y, W] = l.useState(() => ({})), K = y(t, "checkbox"), Z = y(t, "text_line_resource"), q = D(t, "external_link"), X = D(t, "free_text"), J = D(t, "dropdown"), Q = (e, t) => {
+                    history: O,
+                    onSelectChild: U,
+                    onModalClose: k,
+                    multiSelect: B,
+                    reportId: G,
+                    textInput: P
+                } = e, w = D(t, "checkbox"), F = D(t, "text_line_resource"), V = A(t, "external_link"), H = A(t, "free_text"), z = A(t, "dropdown"), [Y, W] = l.useState(!1), [K, q] = l.useState(!1), [Z, X] = l.useState(() => ({})), [J, Q] = l.useState(() => ({})), [$, ee] = l.useState((0, i.areRequiredElementsUnfilled)(H, z, w, P, B)), et = (e, t) => {
                     let n = {
-                        ...Y
+                        ...J
                     };
-                    n[e] = t, W(n)
-                }, $ = l.useMemo(() => e => {
-                    O({
+                    n[e] = t, Q(n), ee((0, i.areRequiredElementsUnfilled)(H, z, w, n, Z))
+                }, en = l.useMemo(() => e => {
+                    U({
                         nodeRef: t.id,
                         destination: e,
-                        textInput: null != X || null != J ? Y : void 0,
-                        multiSelect: null != K ? {
-                            name: K.name,
-                            state: H
+                        textInput: null != H || null != z ? J : void 0,
+                        multiSelect: null != w ? {
+                            name: w.name,
+                            state: Z
                         } : void 0
                     })
-                }, [t, O, K, H, Y, X, J]);
+                }, [t, U, w, Z, J, H, z]);
                 l.useEffect(() => {
-                    null != k && z(k), null != G && W(G)
-                }, [k, G]);
-                let ee = () => e.onSubmit({
+                    null != B && X(B), null != P && Q(P)
+                }, [B, P]);
+                let ea = () => e.onSubmit({
                     nodeRef: t.id,
                     destination: ["", e.successNodeId]
                 }).then(() => {
-                    V(!1), $(["", e.successNodeId])
+                    q(!1), en(["", e.successNodeId])
                 }).catch(() => {
-                    V(!0)
+                    q(!0)
                 }).finally(() => {
-                    w(!1)
+                    W(!1)
                 });
                 return (0, a.jsxs)("div", {
-                    className: L.container,
+                    className: y.container,
                     children: [(0, a.jsxs)(r.ModalHeader, {
                         separator: !1,
                         direction: s.default.Direction.VERTICAL,
-                        className: L.header,
-                        children: [(0, a.jsx)(T.default, {
-                            element: y(t, "success")
-                        }), (0, a.jsx)(g.default, {
-                            node: t
+                        className: y.header,
+                        children: [(0, a.jsx)(j.default, {
+                            element: D(t, "success")
                         }), (0, a.jsx)(R.default, {
+                            node: t
+                        }), (0, a.jsx)(N.default, {
                             node: t
                         })]
                     }), (0, a.jsxs)(r.ModalContent, {
-                        className: L.body,
-                        children: [null != Z ? (0, a.jsx)(M.default, {
-                            element: Z
-                        }) : null, null != y(t, "breadcrumbs") && (0, a.jsx)(u.default, {
-                            history: A
-                        }), null != y(t, "message_preview") && ("message" === n.name || "first_dm" === n.name) && (0, a.jsx)(p.default, {
+                        className: y.body,
+                        children: [null != F ? (0, a.jsx)(M.default, {
+                            element: F
+                        }) : null, null != D(t, "breadcrumbs") && (0, a.jsx)(o.default, {
+                            history: O
+                        }), null != D(t, "message_preview") && ("message" === n.name || "first_dm" === n.name) && (0, a.jsx)(S.default, {
                             message: n.record
-                        }), null != y(t, "user_preview") && "user" === n.name ? (0, a.jsx)(j.default, {
+                        }), null != D(t, "user_preview") && "user" === n.name ? (0, a.jsx)(C.default, {
                             user: n.record
                         }) : null, function(e) {
                             let {
@@ -755,79 +767,80 @@
                                 let {
                                     type: t
                                 } = e;
-                                return C.REMEDIATION_ELEMENT_TYPES.includes(t)
+                                return b.REMEDIATION_ELEMENT_TYPES.includes(t)
                             })
                         }(t) && (0, a.jsx)(r.Heading, {
-                            className: L.remediationElementsHeader,
+                            className: y.remediationElementsHeader,
                             variant: "heading-sm/semibold",
-                            children: b.default.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_HEADER
-                        }), null != y(t, "block_users") && ("message" === n.name || "first_dm" === n.name || "user" === n.name) && (0, a.jsx)(d.default, {
+                            children: L.default.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_HEADER
+                        }), null != D(t, "block_users") && ("message" === n.name || "first_dm" === n.name || "user" === n.name) && (0, a.jsx)(u.default, {
                             userId: "user" === n.name ? n.record.id : n.record.author.id,
-                            reportId: B,
+                            reportId: G,
                             reportName: n.name
-                        }), null != y(t, "delete_message") && "message" === n.name && (0, a.jsx)(c.default, {
+                        }), null != D(t, "delete_message") && "message" === n.name && (0, a.jsx)(m.default, {
                             message: n.record,
-                            reportId: B
-                        }), null != y(t, "leave_guild") && "guild" === n.name && (0, a.jsx)(N.default, {
+                            reportId: G
+                        }), null != D(t, "leave_guild") && "guild" === n.name && (0, a.jsx)(p.default, {
                             guildId: n.record.id,
-                            reportId: B
-                        }), null != y(t, "channel_preview") && "stage_channel" === n.name && (0, a.jsx)(I.default, {
+                            reportId: G
+                        }), null != D(t, "channel_preview") && "stage_channel" === n.name && (0, a.jsx)(T.default, {
                             stageInstance: n.record
-                        }), null != y(t, "guild_scheduled_event_preview") && "guild_scheduled_event" === n.name && (0, a.jsx)(x.default, {
+                        }), null != D(t, "guild_scheduled_event_preview") && "guild_scheduled_event" === n.name && (0, a.jsx)(g.default, {
                             event: n.record
-                        }), null != y(t, "guild_directory_entry_preview") && "guild_directory_entry" === n.name && (0, a.jsx)(v.default, {
+                        }), null != D(t, "guild_directory_entry_preview") && "guild_directory_entry" === n.name && (0, a.jsx)(E.default, {
                             entry: n.record
-                        }), null != y(t, "guild_discovery_preview") && "guild_discovery" === n.name && (0, a.jsx)(E.default, {
+                        }), null != D(t, "guild_discovery_preview") && "guild_discovery" === n.name && (0, a.jsx)(x.default, {
                             entry: n.record
-                        }), null != K && (0, a.jsx)(S.default, {
-                            element: K,
+                        }), null != w && (0, a.jsx)(I.default, {
+                            element: w,
                             onChange: (e, t) => {
                                 let n = {
-                                    ...H
+                                    ...Z
                                 };
-                                e in H ? delete n[e] : n[e] = t, z(n)
+                                e in Z ? delete n[e] : n[e] = t, X(n), ee((0, i.areRequiredElementsUnfilled)(H, z, w, J, n))
                             },
-                            state: H
-                        }), ("user_urf" === n.name || "message_urf" === n.name) && null != J && J.length > 0 && (0, a.jsx)(m.default, {
-                            elements: J,
-                            onChange: Q
-                        }), ("user_urf" === n.name || "message_urf" === n.name) && null != X && X.length > 0 && (0, a.jsx)(h.default, {
-                            elements: X,
-                            onChange: Q,
-                            state: Y
-                        }), (0, a.jsx)(o.default, {
+                            state: Z
+                        }), ("user_urf" === n.name || "message_urf" === n.name) && null != z && z.length > 0 && (0, a.jsx)(_.default, {
+                            elements: z,
+                            onChange: et,
+                            state: J
+                        }), ("user_urf" === n.name || "message_urf" === n.name) && null != H && H.length > 0 && (0, a.jsx)(v.default, {
+                            elements: H,
+                            onChange: et,
+                            state: J
+                        }), (0, a.jsx)(c.default, {
                             node: t,
-                            onSelectChild: $
-                        }), null != q && q.length > 0 ? (0, a.jsx)(f.default, {
-                            elements: q
-                        }) : null, (0, a.jsx)(_.default, {
-                            hasError: F,
+                            onSelectChild: en
+                        }), null != V && V.length > 0 ? (0, a.jsx)(h.default, {
+                            elements: V
+                        }) : null, (0, a.jsx)(f.default, {
+                            hasError: K,
                             onClose: () => {
-                                V(!1)
+                                q(!1)
                             }
                         })]
-                    }), (0, a.jsx)(i.default, {
+                    }), (0, a.jsx)(d.default, {
                         button: t.button,
-                        submitting: P,
-                        disableNext: !0 === t.is_multi_select_required && 0 === Object.keys(H).length,
+                        submitting: Y,
+                        disableNext: $,
                         onClick: e => {
                             switch (e.type) {
                                 case "done":
                                 case "cancel":
-                                    U();
+                                    k();
                                     break;
                                 case "next":
-                                    $(["", e.target]);
+                                    en(["", e.target]);
                                     break;
                                 case "submit":
-                                    w(!0), ee()
+                                    W(!0), ea()
                             }
                         },
                         onBackClicked: e.onNavigateBack,
-                        canNavigateBack: A.length > 0
+                        canNavigateBack: O.length > 0
                     }), (0, a.jsx)(r.ModalCloseButton, {
-                        className: L.closeButton,
-                        onClick: U
+                        className: y.closeButton,
+                        onClick: k
                     })]
                 })
             }
@@ -1061,51 +1074,65 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return u
                 }
             });
             var a = n("920040"),
                 l = n("773670"),
                 r = n("77078"),
-                s = n("84811");
-            let i = e => {
+                s = n("64618"),
+                i = n("84811");
+            let d = e => {
                 let {
                     element: t,
-                    onChange: n
-                } = e, [i, d] = l.useState(""), u = t.name, {
-                    title: o,
-                    options: c
-                } = t.data, m = l.useCallback(e => {
-                    null != e && (d(e), n(e))
-                }, [n]);
+                    onChange: n,
+                    initialOption: d
+                } = e, [u, o] = l.useState("");
+                l.useEffect(() => {
+                    o(null != d ? d : "")
+                }, [d]);
+                let c = t.name,
+                    {
+                        title: m,
+                        options: _
+                    } = t.data,
+                    f = l.useCallback(e => {
+                        null != e && (o(e), n(e))
+                    }, [n]);
                 return (0, a.jsxs)("div", {
-                    className: s.marginBottom8,
-                    children: [null != o && (0, a.jsx)("div", {
-                        className: s.marginBottom8,
-                        children: (0, a.jsx)(r.Text, {
+                    className: i.marginBottom8,
+                    children: [null != m && (0, a.jsx)("div", {
+                        className: i.marginBottom8,
+                        children: (0, a.jsxs)(r.Text, {
                             variant: "text-sm/bold",
-                            children: o
+                            children: [m, t.should_submit_data && (0, a.jsx)("span", {
+                                className: s.required,
+                                children: "*"
+                            })]
                         })
                     }), (0, a.jsx)(r.SingleSelect, {
-                        value: i,
-                        onChange: m,
-                        options: c
+                        value: u,
+                        onChange: f,
+                        options: _
                     })]
-                }, u)
+                }, c)
             };
-            var d = e => {
+            var u = e => {
                 let {
                     elements: t,
-                    onChange: n
-                } = e, l = t.map(e => {
-                    let t = e.name;
-                    return (0, a.jsx)(i, {
+                    onChange: n,
+                    state: l
+                } = e, r = t.map(e => {
+                    var t;
+                    let r = e.name;
+                    return (0, a.jsx)(d, {
                         element: e,
-                        onChange: e => n(t, e)
-                    }, t)
+                        initialOption: null !== (t = null == l ? void 0 : l[r]) && void 0 !== t ? t : void 0,
+                        onChange: e => n(r, e)
+                    }, r)
                 });
                 return (0, a.jsx)("div", {
-                    children: l
+                    children: r
                 })
             }
         },
@@ -1232,49 +1259,54 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return o
                 }
             });
             var a = n("920040"),
                 l = n("773670"),
                 r = n("77078"),
                 s = n("782340"),
-                i = n("84811");
-            let d = e => {
+                i = n("794585"),
+                d = n("84811");
+            let u = e => {
                 let {
                     data: {
                         title: t,
                         subtitle: n,
-                        placeholder: d,
-                        rows: u,
-                        character_limit: o,
-                        pattern: c
+                        placeholder: u,
+                        rows: o,
+                        character_limit: c,
+                        pattern: m
                     },
-                    onChange: m,
-                    initialText: _
-                } = e, [f, h] = l.useState(""), [v, E] = l.useState("");
+                    onChange: _,
+                    initialText: f,
+                    isRequired: h
+                } = e, [v, E] = l.useState(""), [x, g] = l.useState("");
                 l.useEffect(() => {
-                    h(null != _ ? _ : "")
-                }, [_]);
-                let x = l.useCallback(e => {
-                    let t = null != c ? new RegExp(c) : null;
-                    null != t && null == t.exec(e) ? E(s.default.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR) : E(""), null != e && (h(e), m(e))
-                }, [m, c]);
+                    E(null != f ? f : "")
+                }, [f]);
+                let R = l.useCallback(e => {
+                    let t = null != m ? new RegExp(m) : null;
+                    null != t && null == t.exec(e) ? (g(s.default.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR), E(""), _("")) : null != e && (g(""), E(e), _(e))
+                }, [_, m]);
                 return (0, a.jsxs)("div", {
-                    className: i.marginBottom8,
+                    className: d.marginBottom8,
                     children: [null != t && (0, a.jsx)("div", {
-                        className: i.marginBottom8,
-                        children: (0, a.jsx)(r.Text, {
+                        className: d.marginBottom8,
+                        children: (0, a.jsxs)(r.Text, {
                             variant: "text-sm/bold",
-                            children: t
+                            children: [t, h && (0, a.jsx)("span", {
+                                className: i.required,
+                                children: "*"
+                            })]
                         })
                     }), (0, a.jsx)(r.TextArea, {
-                        maxLength: o,
-                        onChange: x,
-                        value: f,
-                        error: v,
-                        rows: u,
-                        placeholder: d,
+                        maxLength: c,
+                        onChange: R,
+                        value: v,
+                        error: x,
+                        rows: o,
+                        placeholder: u,
                         autoFocus: !0
                     }), null != n && (0, a.jsx)("div", {
                         children: (0, a.jsx)(r.Text, {
@@ -1284,7 +1316,7 @@
                     })]
                 })
             };
-            var u = e => {
+            var o = e => {
                 let {
                     elements: t,
                     onChange: n,
@@ -1292,10 +1324,11 @@
                 } = e, r = t.map(e => {
                     var t;
                     let r = e.name;
-                    return (0, a.jsx)(d, {
+                    return (0, a.jsx)(u, {
                         data: e.data,
                         onChange: e => n(r, e),
-                        initialText: null !== (t = null == l ? void 0 : l[r]) && void 0 !== t ? t : void 0
+                        initialText: null !== (t = null == l ? void 0 : l[r]) && void 0 !== t ? t : void 0,
+                        isRequired: e.should_submit_data
                     }, r)
                 });
                 return (0, a.jsx)("div", {
