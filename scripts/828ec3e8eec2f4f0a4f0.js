@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["98727"], {
+    ["67217"], {
         820542: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -408,6 +408,42 @@
                         fill: "string" == typeof r ? r : r.css,
                         fillRule: "evenodd",
                         d: "M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12c0 1.97.57 3.808 1.554 5.357a.517.517 0 0 1-.04.617l-2.067 2.369C.882 20.989 1.34 22 2.2 22H12Z",
+                        clipRule: "evenodd",
+                        className: u
+                    })
+                })
+            }
+        },
+        31745: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                CirclePlusIcon: function() {
+                    return r
+                }
+            });
+            var i = n("920040");
+            n("773670");
+            var l = n("912557"),
+                a = n("75196");
+            let r = e => {
+                let {
+                    width: t = 24,
+                    height: n = 24,
+                    color: r = l.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: u = "",
+                    ...o
+                } = e;
+                return (0, i.jsx)("svg", {
+                    ...(0, a.default)(o),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: n,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: (0, i.jsx)("path", {
+                        fill: "string" == typeof r ? r : r.css,
+                        fillRule: "evenodd",
+                        d: "M12 23c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11Zm0-17a1 1 0 0 1 1 1v4h4a1 1 0 1 1 0 2h-4v4a1 1 0 1 1-2 0v-4H7a1 1 0 1 1 0-2h4V7a1 1 0 0 1 1-1Z",
                         clipRule: "evenodd",
                         className: u
                     })
@@ -4785,6 +4821,38 @@
                         })
                     })
                 }, a.PlusSmallIcon)
+        },
+        351825: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var i = n("920040");
+            n("773670");
+            var l = n("469563"),
+                a = n("31745"),
+                r = (0, l.replaceIcon)(function(e) {
+                    let {
+                        width: t = 16,
+                        height: n = 16,
+                        color: l = "currentColor",
+                        className: a,
+                        foreground: r
+                    } = e;
+                    return (0, i.jsx)("svg", {
+                        className: a,
+                        width: t,
+                        height: n,
+                        viewBox: "0 0 24 24",
+                        children: (0, i.jsx)("path", {
+                            className: r,
+                            fill: l,
+                            d: "M12 2.00098C6.486 2.00098 2 6.48698 2 12.001C2 17.515 6.486 22.001 12 22.001C17.514 22.001 22 17.515 22 12.001C22 6.48698 17.514 2.00098 12 2.00098ZM17 13.001H13V17.001H11V13.001H7V11.001H11V7.00098H13V11.001H17V13.001Z"
+                        })
+                    })
+                }, a.CirclePlusIcon)
         },
         368121: function(e, t, n) {
             "use strict";

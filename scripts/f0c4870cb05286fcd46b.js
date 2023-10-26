@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["59529"], {
+    ["96121"], {
         861435: function(e, t, n) {
             "use strict";
             var l = {
@@ -338,8 +338,8 @@
                     } = this.props, {
                         code: N,
                         errorMessage: C,
-                        retrySuccess: A
-                    } = this.state, f = a.Children.count(i) > 0 ? (0, l.jsx)(s.Card, {
+                        retrySuccess: f
+                    } = this.state, A = a.Children.count(i) > 0 ? (0, l.jsx)(s.Card, {
                         type: s.Card.Types.WARNING,
                         className: u.card,
                         children: (0, l.jsx)(s.Text, {
@@ -356,7 +356,7 @@
                                 children: T
                             })
                         })]
-                    }) : null, L = A ? (0, l.jsx)(s.Card, {
+                    }) : null, L = f ? (0, l.jsx)(s.Card, {
                         type: s.Card.Types.SUCCESS,
                         className: u.card,
                         children: (0, l.jsx)(s.Text, {
@@ -380,7 +380,7 @@
                                     variant: "text-md/normal",
                                     className: u.spacing,
                                     children: I
-                                }) : null, f, L, (0, l.jsxs)(s.FormItem, {
+                                }) : null, A, L, (0, l.jsxs)(s.FormItem, {
                                     title: this.getLabelText(),
                                     className: u.spacing,
                                     children: [(0, l.jsx)(s.TextInput, {
@@ -497,6 +497,42 @@
                         fill: "string" == typeof r ? r : r.css,
                         fillRule: "evenodd",
                         d: "M18.707 7.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L10 14.586l7.293-7.293a1 1 0 0 1 1.414 0Z",
+                        clipRule: "evenodd",
+                        className: s
+                    })
+                })
+            }
+        },
+        31745: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                CirclePlusIcon: function() {
+                    return r
+                }
+            });
+            var l = n("920040");
+            n("773670");
+            var a = n("912557"),
+                i = n("75196");
+            let r = e => {
+                let {
+                    width: t = 24,
+                    height: n = 24,
+                    color: r = a.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: s = "",
+                    ...o
+                } = e;
+                return (0, l.jsx)("svg", {
+                    ...(0, i.default)(o),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: n,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: (0, l.jsx)("path", {
+                        fill: "string" == typeof r ? r : r.css,
+                        fillRule: "evenodd",
+                        d: "M12 23c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11Zm0-17a1 1 0 0 1 1 1v4h4a1 1 0 1 1 0 2h-4v4a1 1 0 1 1-2 0v-4H7a1 1 0 1 1 0-2h4V7a1 1 0 0 1 1-1Z",
                         clipRule: "evenodd",
                         className: s
                     })
@@ -817,10 +853,10 @@
                     return N
                 },
                 getScheduleFromEventData: function() {
-                    return A
+                    return f
                 },
                 getScheduleFromEvent: function() {
-                    return f
+                    return A
                 },
                 getRRule: function() {
                     return R
@@ -881,11 +917,11 @@
                 }, null != t && (n.endDate = i(t))), n
             }
 
-            function A(e) {
+            function f(e) {
                 return C(e.scheduledStartTime, e.scheduledEndTime)
             }
 
-            function f(e) {
+            function A(e) {
                 return C(e.scheduled_start_time, e.scheduled_end_time)
             }
 
@@ -1288,8 +1324,8 @@
                     handleGuildNameClick: S,
                     source: N,
                     speakers: C,
-                    speakerCount: A,
-                    audienceCount: f,
+                    speakerCount: f,
+                    audienceCount: A,
                     channelName: R
                 } = e, L = t.id;
                 return (0, i.jsx)("div", {
@@ -1333,7 +1369,7 @@
                                         children: "Featured"
                                     })
                                 }), (0, i.jsx)(I.default, {
-                                    count: f,
+                                    count: A,
                                     className: T.audienceCount
                                 })]
                             })]
@@ -1350,7 +1386,7 @@
                         }), (0, i.jsx)(c.default, {
                             guild: t,
                             speakers: C,
-                            speakerCount: A,
+                            speakerCount: f,
                             className: T.speakers
                         }), null != R && (0, i.jsxs)(i.Fragment, {
                             children: [(0, i.jsx)("hr", {
@@ -1397,14 +1433,14 @@
                 S = n("49111"),
                 N = n("745049"),
                 C = n("782340"),
-                A = n("468263");
+                f = n("468263");
 
-            function f(e) {
+            function A(e) {
                 let {
                     icon: t
                 } = e;
                 return (0, l.jsx)("div", {
-                    className: A.iconContainer,
+                    className: f.iconContainer,
                     children: (0, l.jsx)(t, {
                         width: 24,
                         height: 24
@@ -1418,12 +1454,12 @@
                     text: n
                 } = e;
                 return (0, l.jsxs)("div", {
-                    className: A.listItemContainer,
+                    className: f.listItemContainer,
                     children: [(0, l.jsx)("div", {
-                        className: A.listItemIconContainer,
+                        className: f.listItemIconContainer,
                         children: t
                     }), (0, l.jsx)(i.Text, {
-                        className: A.listItemText,
+                        className: f.listItemText,
                         variant: "text-md/normal",
                         color: "header-secondary",
                         children: n
@@ -1452,9 +1488,9 @@
                     user: o,
                     userNick: E.default.getName(n.id, i.id, o)
                 }), (0, l.jsx)("div", {
-                    className: A.previewCardContainer,
+                    className: f.previewCardContainer,
                     children: (0, l.jsx)("div", {
-                        className: A.previewCard,
+                        className: f.previewCard,
                         children: (0, l.jsx)(T.default, {
                             guild: n,
                             stageInstance: u,
@@ -1487,41 +1523,41 @@
                         channel: n,
                         stageData: a
                     }), (0, l.jsxs)(i.ModalContent, {
-                        className: A.container,
+                        className: f.container,
                         children: [(0, l.jsxs)("div", {
-                            className: A.header,
+                            className: f.header,
                             children: [(0, l.jsx)(i.Heading, {
                                 id: r,
-                                className: A.title,
+                                className: f.title,
                                 variant: "heading-xl/semibold",
                                 children: C.default.Messages.START_STAGE_PUBLIC_PREVIEW_TITLE
                             }), (0, l.jsx)(i.Text, {
-                                className: A.subtitle,
+                                className: f.subtitle,
                                 color: "header-secondary",
                                 variant: "text-sm/normal",
                                 children: C.default.Messages.START_STAGE_PUBLIC_PREVIEW_SUBTITLE
                             })]
                         }), (0, l.jsxs)("div", {
-                            className: A.list,
+                            className: f.list,
                             children: [(0, l.jsx)(R, {
-                                icon: (0, l.jsx)(f, {
+                                icon: (0, l.jsx)(A, {
                                     icon: s.default
                                 }),
                                 text: C.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_ONE
                             }), (0, l.jsx)(R, {
-                                icon: (0, l.jsx)(f, {
+                                icon: (0, l.jsx)(A, {
                                     icon: u.default
                                 }),
                                 text: C.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_TWO
                             }), (0, l.jsx)(R, {
-                                icon: (0, l.jsx)(f, {
+                                icon: (0, l.jsx)(A, {
                                     icon: o.default
                                 }),
                                 text: C.default.Messages.START_STAGE_PUBLIC_PREVIEW_SECTION_THREE
                             }), (0, l.jsx)(R, {
                                 icon: (0, l.jsx)(c.default, {
-                                    className: A.badgeIconBackground,
-                                    foreground: A.badgeIconForeground,
+                                    className: f.badgeIconBackground,
+                                    foreground: f.badgeIconForeground,
                                     width: 40,
                                     height: 40
                                 }),
@@ -1538,13 +1574,13 @@
                             children: C.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_BUTTON
                         }), (0, l.jsx)(i.Button, {
                             color: i.Button.Colors.PRIMARY,
-                            className: A.cancelButton,
+                            className: f.cancelButton,
                             onClick: I,
                             children: C.default.Messages.CANCEL
                         }), (0, l.jsx)(i.Button, {
                             look: i.Button.Looks.LINK,
                             color: i.Button.Colors.LINK,
-                            className: A.backButton,
+                            className: f.backButton,
                             onClick: T,
                             size: i.Button.Sizes.MIN,
                             children: C.default.Messages.BACK
@@ -1576,8 +1612,8 @@
                 S = n("697218"),
                 N = n("228427"),
                 C = n("599110"),
-                A = n("887143"),
-                f = n("834052"),
+                f = n("887143"),
+                A = n("834052"),
                 R = n("151642"),
                 L = n("29846"),
                 h = n("837979"),
@@ -1585,9 +1621,9 @@
                 p = n("745049"),
                 O = n("533613"),
                 g = n("782340"),
-                M = n("465128");
+                v = n("465128");
 
-            function v(e) {
+            function M(e) {
                 let {
                     stageChannelsInGuild: t,
                     channel: n,
@@ -1596,7 +1632,7 @@
                 return null == a ? null : (0, l.jsx)(l.Fragment, {
                     children: (0, l.jsx)(o.FormItem, {
                         title: g.default.Messages.START_STAGE_MODAL_SET_TOPIC_SELECT_LABEL + " asdf",
-                        className: M.channelSelectionFormItem,
+                        className: v.channelSelectionFormItem,
                         required: !0,
                         children: (0, l.jsx)(o.SearchableSelect, {
                             value: n.id,
@@ -1626,14 +1662,14 @@
                     loading: G,
                     onSave: y,
                     onEventSave: b,
-                    onClose: B,
-                    onSelectChannel: w,
+                    onClose: w,
+                    onSelectChannel: B,
                     isEvent: j = !1,
-                    defaultOptions: k,
-                    isSlideReady: V = !0
-                } = e, H = a.useMemo(() => f.default.getStageInstanceByChannel(U.id), [U.id]), [F, Y] = a.useState(null !== (n = null !== (t = null == k ? void 0 : k.topic) && void 0 !== t ? t : null == H ? void 0 : H.topic) && void 0 !== n ? n : ""), [W, K] = a.useState(null !== (i = null == k ? void 0 : k.description) && void 0 !== i ? i : ""), [Z] = a.useState(j), [q, X] = a.useState(null !== (T = null == k ? void 0 : k.schedule) && void 0 !== T ? T : {
+                    defaultOptions: V,
+                    isSlideReady: k = !0
+                } = e, H = a.useMemo(() => A.default.getStageInstanceByChannel(U.id), [U.id]), [F, Y] = a.useState(null !== (n = null !== (t = null == V ? void 0 : V.topic) && void 0 !== t ? t : null == H ? void 0 : H.topic) && void 0 !== n ? n : ""), [W, K] = a.useState(null !== (i = null == V ? void 0 : V.description) && void 0 !== i ? i : ""), [Z] = a.useState(j), [q, X] = a.useState(null !== (T = null == V ? void 0 : V.schedule) && void 0 !== T ? T : {
                     startDate: (0, d.getInitialEventStartDate)()
-                }), [z, J] = a.useState(Z && (null == k ? void 0 : k.schedule) != null), Q = (0, A.useCanSendStageStartNotification)(U), $ = (0, A.useDefaultSendStartStageNotificationToggle)(U), ee = null == H && Q && !Z, [et, en] = a.useState(ee && $), el = (0, s.useStateFromStores)([I.default], () => I.default.hasHotspot(O.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), ea = p.GuildScheduledEventPrivacyLevel.GUILD_ONLY, [ei] = a.useState(null !== (N = null !== (S = null == k ? void 0 : k.privacyLevel) && void 0 !== S ? S : null == H ? void 0 : H.privacy_level) && void 0 !== N ? N : ea), [er, es] = a.useState(null == k ? void 0 : k.recurrenceRule), eo = (0, R.useStageBlockedUsersCount)(U.id), [eu, ec] = a.useState(!1), ed = (0, u.default)(U), eE = (0, c.useChannelsUserCanStartStageIn)(D), e_ = null != w, eI = eE.length > 1;
+                }), [z, J] = a.useState(Z && (null == V ? void 0 : V.schedule) != null), Q = (0, f.useCanSendStageStartNotification)(U), $ = (0, f.useDefaultSendStartStageNotificationToggle)(U), ee = null == H && Q && !Z, [et, en] = a.useState(ee && $), el = (0, s.useStateFromStores)([I.default], () => I.default.hasHotspot(O.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), ea = p.GuildScheduledEventPrivacyLevel.GUILD_ONLY, [ei] = a.useState(null !== (N = null !== (S = null == V ? void 0 : V.privacyLevel) && void 0 !== S ? S : null == H ? void 0 : H.privacy_level) && void 0 !== N ? N : ea), [er, es] = a.useState(null == V ? void 0 : V.recurrenceRule), eo = (0, R.useStageBlockedUsersCount)(U.id), [eu, ec] = a.useState(!1), ed = (0, u.default)(U), eE = (0, c.useChannelsUserCanStartStageIn)(D), e_ = null != B, eI = eE.length > 1;
                 a.useEffect(() => {
                     C.default.track(m.AnalyticEvents.START_STAGE_OPENED, {
                         stage_instance_id: null == H ? void 0 : H.id,
@@ -1688,26 +1724,26 @@
                     eC = a.useRef(null);
                 a.useEffect(() => {
                     var e;
-                    V && (null === (e = eC.current) || void 0 === e || e.focus())
-                }, [V]);
-                let eA = z && null != q.startDate && q.startDate >= r();
+                    k && (null === (e = eC.current) || void 0 === e || e.focus())
+                }, [k]);
+                let ef = z && null != q.startDate && q.startDate >= r();
                 return (0, l.jsxs)(l.Fragment, {
                     children: [(0, l.jsxs)(o.ModalContent, {
-                        className: M.modalContent,
+                        className: v.modalContent,
                         children: [P, (0, l.jsx)("div", {
-                            className: M.blockedUsersContainer,
+                            className: v.blockedUsersContainer,
                             children: null == H && eo > 0 && (0, l.jsx)(L.BlockedUsersNotice, {
                                 channelId: U.id
                             })
                         }), (0, l.jsxs)("form", {
                             onSubmit: eT,
-                            className: M.form,
+                            className: v.form,
                             children: [(0, l.jsxs)(o.FormItem, {
                                 title: j ? g.default.Messages.GUILD_EVENT_CREATE_TOPIC_LABEL : g.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TOPIC_LABEL,
-                                className: M.topicFormItem,
+                                className: v.topicFormItem,
                                 required: !0,
                                 children: [(0, l.jsx)(o.TextInput, {
-                                    className: M.textInput,
+                                    className: v.textInput,
                                     onChange: e => Y(e),
                                     placeholder: g.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TOPIC_PLACEHOLDER,
                                     maxLength: h.MAX_STAGE_TOPIC_LENGTH,
@@ -1717,21 +1753,21 @@
                                 }), eu && (0, l.jsx)(o.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-warning",
-                                    className: M.warning,
+                                    className: v.warning,
                                     children: g.default.Messages.START_STAGE_PUBLIC_SHORT_TOPIC_WARNING
                                 }), null != x ? (0, l.jsx)(o.Text, {
                                     color: "text-danger",
                                     variant: "text-xs/normal",
-                                    className: M.warning,
+                                    className: v.warning,
                                     children: x.getAnyErrorMessage()
                                 }) : null]
-                            }), e_ && eI ? (0, l.jsx)(v, {
+                            }), e_ && eI ? (0, l.jsx)(M, {
                                 stageChannelsInGuild: eE,
                                 channel: U,
-                                onSelectChannel: w
+                                onSelectChannel: B
                             }) : null, Z && (0, l.jsxs)(l.Fragment, {
                                 children: [(0, l.jsx)(_.default, {
-                                    className: M.formItem,
+                                    className: v.formItem,
                                     onScheduleChange: X,
                                     onRecurrenceChange: e => {
                                         let t = q.startDate;
@@ -1746,12 +1782,12 @@
                                 }), null != q.startDate && q.startDate < r() ? (0, l.jsx)(o.Text, {
                                     color: "text-danger",
                                     variant: "text-xs/normal",
-                                    className: M.warning,
+                                    className: v.warning,
                                     children: g.default.Messages.GUILD_EVENT_PAST_START_DATE
                                 }) : null]
                             }), j && (0, l.jsx)(o.FormItem, {
                                 title: g.default.Messages.CREATE_STAGE_INSTANCE_DESCRIPTION_INPUT_LABEL,
-                                className: M.formItem,
+                                className: v.formItem,
                                 children: (0, l.jsx)(o.TextArea, {
                                     placeholder: g.default.Messages.GUILD_EVENT_CREATE_DESCRIPTION_PLACEHOLDER,
                                     value: W,
@@ -1765,11 +1801,11 @@
                             }) : null, e_ && !eI ? (0, l.jsx)(o.Text, {
                                 color: "header-secondary",
                                 variant: "text-xs/normal",
-                                className: M.channelSelection,
+                                className: v.channelSelection,
                                 children: g.default.Messages.START_STAGE_MODAL_SET_TOPIC_HELP_TEXT.format({
                                     stageName: ed,
                                     stageHook: (e, t) => (0, l.jsx)("span", {
-                                        className: M.channelName,
+                                        className: v.channelName,
                                         children: U.name
                                     }, t)
                                 })
@@ -1779,13 +1815,13 @@
                         children: [(0, l.jsx)(o.Button, {
                             color: eS,
                             onClick: eT,
-                            disabled: "" === F || null == ei || j && !eA,
+                            disabled: "" === F || null == ei || j && !ef,
                             submitting: G,
                             children: eN
                         }), (0, l.jsx)(o.Button, {
                             color: o.Button.Colors.PRIMARY,
-                            className: M.cancelButton,
-                            onClick: B,
+                            className: v.cancelButton,
+                            onClick: w,
                             children: g.default.Messages.CANCEL
                         })]
                     })]
@@ -1796,7 +1832,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return A
                 }
             });
             var l = n("920040"),
@@ -1816,7 +1852,7 @@
                 N = n("782340"),
                 C = n("519939");
 
-            function A(e) {
+            function f(e) {
                 let {
                     guild: t,
                     channel: n,
@@ -1866,13 +1902,13 @@
                 })
             }
 
-            function f(e) {
+            function A(e) {
                 let {
                     channel: t,
                     onClose: n,
                     transitionState: u,
                     ...d
-                } = e, _ = (0, o.useUID)(), N = (0, i.useStateFromStores)([s.default], () => s.default.getGuild(t.guild_id)), f = a.useMemo(() => c.default.getStageInstanceByChannel(t.id), [t.id]), {
+                } = e, _ = (0, o.useUID)(), N = (0, i.useStateFromStores)([s.default], () => s.default.getGuild(t.guild_id)), A = a.useMemo(() => c.default.getStageInstanceByChannel(t.id), [t.id]), {
                     loading: R,
                     error: L,
                     onSave: h
@@ -1881,11 +1917,11 @@
                     setModalStep: p,
                     readySlide: O,
                     handleSlideReady: g,
-                    savedOptions: M,
-                    handleSettingsSave: v,
+                    savedOptions: v,
+                    handleSettingsSave: M,
                     handleDelayedSave: U
                 } = (0, T.default)({
-                    stageInstance: f,
+                    stageInstance: A,
                     defaultStep: S.StartStageSteps.STAGE_CHANNEL_SETTINGS,
                     error: L,
                     onSave: h
@@ -1905,16 +1941,16 @@
                             id: S.StartStageSteps.STAGE_CHANNEL_SETTINGS,
                             children: (0, l.jsx)("div", {
                                 className: C.slideContainer,
-                                children: (0, l.jsx)(A, {
+                                children: (0, l.jsx)(f, {
                                     guild: N,
                                     channel: t,
-                                    stageInstance: f,
+                                    stageInstance: A,
                                     headerId: _,
                                     onClose: n,
                                     loading: R,
                                     error: L,
-                                    onSave: v,
-                                    defaultOptions: M,
+                                    onSave: M,
+                                    defaultOptions: v,
                                     isSlideReady: O === S.StartStageSteps.STAGE_CHANNEL_SETTINGS
                                 })
                             })
@@ -1926,7 +1962,7 @@
                                     headerId: _,
                                     guild: N,
                                     channel: t,
-                                    stageData: M,
+                                    stageData: v,
                                     loading: R,
                                     onNext: U,
                                     onCancel: n,
@@ -2059,7 +2095,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return v
+                    return M
                 }
             });
             var l = n("427964"),
@@ -2078,8 +2114,8 @@
                 S = null,
                 N = !1,
                 C = !1,
-                A = null,
                 f = null,
+                A = null,
                 R = null,
                 L = [],
                 h = null,
@@ -2102,22 +2138,22 @@
                             claimed: c.isClaimed()
                         }
                     }
-                }, f = null !== (l = e.onClose) && void 0 !== l ? l : null, R = null !== (a = e.analyticsLocation) && void 0 !== a ? a : null, L = null !== (i = e.analyticsLocations) && void 0 !== i ? i : [], m = null !== (r = e.impressionSource) && void 0 !== r ? r : null
+                }, A = null !== (l = e.onClose) && void 0 !== l ? l : null, R = null !== (a = e.analyticsLocation) && void 0 !== a ? a : null, L = null !== (i = e.analyticsLocations) && void 0 !== i ? i : [], m = null !== (r = e.impressionSource) && void 0 !== r ? r : null
             }
 
             function O() {
-                u = o.FormStates.CLOSED, N = !1, T = null, h = null, S = null, c = null, d = null, E = {}, _ = {}, f = null, R = null, L = [], m = null
+                u = o.FormStates.CLOSED, N = !1, T = null, h = null, S = null, c = null, d = null, E = {}, _ = {}, A = null, R = null, L = [], m = null
             }
 
             function g() {
                 u = o.FormStates.OPEN, I = {}
             }
-            class M extends i.default.Store {
+            class v extends i.default.Store {
                 initialize() {
                     this.waitFor(s.default)
                 }
                 hasChanges() {
-                    return null != S && null != T && (!!this.isOpen() || A === o.DrawerTabTypes.USER_SETTINGS) && !a.isEqual(S, T)
+                    return null != S && null != T && (!!this.isOpen() || f === o.DrawerTabTypes.USER_SETTINGS) && !a.isEqual(S, T)
                 }
                 isOpen() {
                     return N
@@ -2154,11 +2190,11 @@
                     }
                 }
                 get onClose() {
-                    return f
+                    return A
                 }
             }
-            M.displayName = "UserSettingsModalStore";
-            var v = new M(r.default, {
+            v.displayName = "UserSettingsModalStore";
+            var M = new v(r.default, {
                 USER_SETTINGS_MODAL_OPEN: function(e) {
                     N = !0, p(e)
                 },
@@ -2219,7 +2255,7 @@
                     })
                 },
                 DRAWER_SELECT_TAB: function(e) {
-                    return A = e.tab, null == d && A === o.DrawerTabTypes.USER_SETTINGS && p({
+                    return f = e.tab, null == d && f === o.DrawerTabTypes.USER_SETTINGS && p({
                         type: "USER_SETTINGS_MODAL_INIT",
                         section: null,
                         subsection: null,
@@ -2559,6 +2595,38 @@
                     })
                 }, i.FriendsIcon)
         },
+        351825: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var l = n("920040");
+            n("773670");
+            var a = n("469563"),
+                i = n("31745"),
+                r = (0, a.replaceIcon)(function(e) {
+                    let {
+                        width: t = 16,
+                        height: n = 16,
+                        color: a = "currentColor",
+                        className: i,
+                        foreground: r
+                    } = e;
+                    return (0, l.jsx)("svg", {
+                        className: i,
+                        width: t,
+                        height: n,
+                        viewBox: "0 0 24 24",
+                        children: (0, l.jsx)("path", {
+                            className: r,
+                            fill: a,
+                            d: "M12 2.00098C6.486 2.00098 2 6.48698 2 12.001C2 17.515 6.486 22.001 12 22.001C17.514 22.001 22 17.515 22 12.001C22 6.48698 17.514 2.00098 12 2.00098ZM17 13.001H13V17.001H11V13.001H7V11.001H11V7.00098H13V11.001H17V13.001Z"
+                        })
+                    })
+                }, i.CirclePlusIcon)
+        },
         228427: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -2679,10 +2747,10 @@
                     return C
                 },
                 trackDiscoveryViewed: function() {
-                    return A
+                    return f
                 },
                 trackDiscoveryExited: function() {
-                    return f
+                    return A
                 },
                 trackSearchClosed: function() {
                     return R
@@ -2812,7 +2880,7 @@
                 }
             }
 
-            function A(e) {
+            function f(e) {
                 let {
                     loadId: t,
                     gamesYouPlayGuilds: n,
@@ -2831,7 +2899,7 @@
                 })
             }
 
-            function f(e, t) {
+            function A(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
                 _.default.track(I.AnalyticEvents.GUILD_DISCOVERY_EXITED, {
                     load_id: e,

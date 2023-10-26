@@ -1,46 +1,10 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
     ["11048"], {
-        31745: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
-                CirclePlusIcon: function() {
-                    return r
-                }
-            });
-            var n = l("920040");
-            l("773670");
-            var a = l("912557"),
-                s = l("75196");
-            let r = e => {
-                let {
-                    width: t = 24,
-                    height: l = 24,
-                    color: r = a.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: d = "",
-                    ...i
-                } = e;
-                return (0, n.jsx)("svg", {
-                    ...(0, s.default)(i),
-                    xmlns: "http://www.w3.org/2000/svg",
-                    width: t,
-                    height: l,
-                    fill: "none",
-                    viewBox: "0 0 24 24",
-                    children: (0, n.jsx)("path", {
-                        fill: "string" == typeof r ? r : r.css,
-                        fillRule: "evenodd",
-                        d: "M12 23c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11Zm0-17a1 1 0 0 1 1 1v4h4a1 1 0 1 1 0 2h-4v4a1 1 0 1 1-2 0v-4H7a1 1 0 1 1 0-2h4V7a1 1 0 0 1 1-1Z",
-                        clipRule: "evenodd",
-                        className: d
-                    })
-                })
-            }
-        },
         651072: function(e, t, l) {
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return s
+                    return d
                 }
             });
             var n = l("862205");
@@ -59,78 +23,78 @@
                     }
                 }]
             });
-            var s = a
+            var d = a
         },
         229798: function(e, t, l) {
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return g
+                    return h
                 }
             });
             var n = l("920040"),
                 a = l("773670"),
-                s = l("377849"),
-                r = l.n(s),
-                d = l("500947"),
-                i = l("77078"),
-                u = l("686904"),
+                d = l("377849"),
+                s = l.n(d),
+                r = l("500947"),
+                u = l("77078"),
+                i = l("686904"),
                 o = l("322224"),
                 c = l("397680"),
                 E = l("822516"),
                 _ = l("953143"),
                 f = l("782340"),
-                h = l("972071");
+                g = l("972071");
 
-            function g(e) {
+            function h(e) {
                 let {
                     guildEvent: t,
                     recurrenceId: l,
-                    transitionState: s,
-                    onClose: g
-                } = e, m = (0, c.default)(l, t.id), v = (0, E.getScheduleFromEvent)(t), [x, T] = a.useState((() => {
+                    transitionState: d,
+                    onClose: h
+                } = e, m = (0, c.default)(l, t.id), T = (0, E.getScheduleFromEvent)(t), [x, A] = a.useState((() => {
                     if (null != m) return {
-                        startDate: r(m.scheduled_start_time),
-                        endDate: null != m.scheduled_end_time ? r(m.scheduled_end_time) : void 0
+                        startDate: s(m.scheduled_start_time),
+                        endDate: null != m.scheduled_end_time ? s(m.scheduled_end_time) : void 0
                     };
                     {
-                        let e = r(d.default.extractTimestamp(l)),
-                            t = (null == v ? void 0 : v.endDate) != null ? e.clone().add(v.endDate.diff(v.startDate)) : void 0;
+                        let e = s(r.default.extractTimestamp(l)),
+                            t = (null == T ? void 0 : T.endDate) != null ? e.clone().add(T.endDate.diff(T.startDate)) : void 0;
                         return {
                             startDate: e,
                             endDate: t
                         }
                     }
                 })()), [N, {
-                    loading: A,
+                    loading: v,
                     error: D
-                }] = (0, u.default)(async () => {
-                    var e, n, a, s;
+                }] = (0, i.default)(async () => {
+                    var e, n, a, d;
                     if (null != m) await o.default.updateGuildEventException({
                         scheduled_start_time: null === (e = x.startDate) || void 0 === e ? void 0 : e.toISOString(),
                         scheduled_end_time: null === (n = x.endDate) || void 0 === n ? void 0 : n.toISOString(),
                         is_canceled: m.is_canceled
                     }, t.guild_id, t.id, l);
                     else {
-                        let e = d.default.extractTimestamp(l);
+                        let e = r.default.extractTimestamp(l);
                         await o.default.createGuildEventException({
                             original_scheduled_start_time: new Date(e).toISOString(),
                             scheduled_start_time: null === (a = x.startDate) || void 0 === a ? void 0 : a.toISOString(),
-                            scheduled_end_time: null === (s = x.endDate) || void 0 === s ? void 0 : s.toISOString(),
+                            scheduled_end_time: null === (d = x.endDate) || void 0 === d ? void 0 : d.toISOString(),
                             is_canceled: !1
                         }, t.guild_id, t.id)
                     }
-                    null == D && g()
+                    null == D && h()
                 });
-                return (0, n.jsxs)(i.ModalRoot, {
-                    transitionState: s,
-                    children: [(0, n.jsx)(i.ModalHeader, {
-                        children: (0, n.jsx)(i.Heading, {
+                return (0, n.jsxs)(u.ModalRoot, {
+                    transitionState: d,
+                    children: [(0, n.jsx)(u.ModalHeader, {
+                        children: (0, n.jsx)(u.Heading, {
                             variant: "heading-lg/semibold",
                             children: f.default.Messages.EDIT_THIS_EVENT
                         })
-                    }), (0, n.jsxs)(i.ModalContent, {
-                        className: h.content,
+                    }), (0, n.jsxs)(u.ModalContent, {
+                        className: g.content,
                         children: [(0, n.jsx)(_.default, {
                             onScheduleChange: e => {
                                 var t;
@@ -138,7 +102,7 @@
                                     startDate: l,
                                     endDate: n
                                 } = e;
-                                null != l && null != n && (null === (t = n) || void 0 === t ? void 0 : t.isBefore(l)) && (n = l.add(1, "hour")), T({
+                                null != l && null != n && (null === (t = n) || void 0 === t ? void 0 : t.isBefore(l)) && (n = l.add(1, "hour")), A({
                                     startDate: l,
                                     endDate: n
                                 })
@@ -146,23 +110,23 @@
                             schedule: x,
                             showEndDate: null != x.endDate,
                             guildId: t.guild_id
-                        }), null != D ? (0, n.jsx)(i.Text, {
+                        }), null != D ? (0, n.jsx)(u.Text, {
                             color: "text-danger",
                             variant: "text-xs/normal",
-                            className: h.warning,
+                            className: g.warning,
                             children: D.getAnyErrorMessage()
                         }) : null]
-                    }), (0, n.jsxs)(i.ModalFooter, {
-                        className: h.footer,
-                        children: [(0, n.jsx)(i.Button, {
-                            color: i.Button.Colors.BRAND,
+                    }), (0, n.jsxs)(u.ModalFooter, {
+                        className: g.footer,
+                        children: [(0, n.jsx)(u.Button, {
+                            color: u.Button.Colors.BRAND,
                             onClick: N,
-                            className: h.button,
-                            submitting: A,
+                            className: g.button,
+                            submitting: v,
                             children: f.default.Messages.SAVE_EVENT
-                        }), (0, n.jsx)(i.Button, {
-                            color: i.Button.Colors.PRIMARY,
-                            onClick: g,
+                        }), (0, n.jsx)(u.Button, {
+                            color: u.Button.Colors.PRIMARY,
+                            onClick: h,
                             children: f.default.Messages.CANCEL
                         })]
                     })]
@@ -173,54 +137,54 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return u
+                    return i
                 }
             });
             var n = l("920040"),
                 a = l("773670"),
-                s = l("77078"),
-                r = l("822516"),
-                d = l("757767"),
-                i = l("782340");
+                d = l("77078"),
+                s = l("822516"),
+                r = l("757767"),
+                u = l("782340");
 
-            function u(e) {
+            function i(e) {
                 let {
                     startDate: t,
                     recurrenceRule: l,
-                    onRecurrenceChange: u
-                } = e, o = a.useMemo(() => (0, r.recurrenceRuleToOption)(t, l), [l, t]), c = function(e) {
+                    onRecurrenceChange: i
+                } = e, o = a.useMemo(() => (0, s.recurrenceRuleToOption)(t, l), [l, t]), c = function(e) {
                     let t = e.toDate(),
-                        l = t.toLocaleString(i.default.getLocale(), {
+                        l = t.toLocaleString(u.default.getLocale(), {
                             weekday: "long"
                         });
                     return [{
-                        value: d.RecurrenceOptions.NONE,
-                        label: i.default.Messages.CREATE_EVENT_RECUR_NONE
+                        value: r.RecurrenceOptions.NONE,
+                        label: u.default.Messages.CREATE_EVENT_RECUR_NONE
                     }, {
-                        value: d.RecurrenceOptions.WEEKLY,
-                        label: i.default.Messages.CREATE_EVENT_RECUR_WEEKLY.format({
+                        value: r.RecurrenceOptions.WEEKLY,
+                        label: u.default.Messages.CREATE_EVENT_RECUR_WEEKLY.format({
                             weekday: l
                         })
                     }, {
-                        value: d.RecurrenceOptions.YEARLY,
-                        label: i.default.Messages.CREATE_EVENT_RECUR_YEARLY.format({
-                            date: t.toLocaleString(i.default.getLocale(), {
+                        value: r.RecurrenceOptions.YEARLY,
+                        label: u.default.Messages.CREATE_EVENT_RECUR_YEARLY.format({
+                            date: t.toLocaleString(u.default.getLocale(), {
                                 month: "short",
                                 day: "2-digit"
                             })
                         })
                     }, {
-                        value: d.RecurrenceOptions.WEEKDAY_ONLY,
-                        label: i.default.Messages.CREATE_EVENT_RECUR_WEEKDAYS
+                        value: r.RecurrenceOptions.WEEKDAY_ONLY,
+                        label: u.default.Messages.CREATE_EVENT_RECUR_WEEKDAYS
                     }]
                 }(t), E = e => e.toString();
-                return (0, n.jsx)(s.FormItem, {
-                    title: i.default.Messages.CREATE_EVENT_RECUR_LABEL,
+                return (0, n.jsx)(d.FormItem, {
+                    title: u.default.Messages.CREATE_EVENT_RECUR_LABEL,
                     required: !0,
-                    children: (0, n.jsx)(s.Select, {
+                    children: (0, n.jsx)(d.Select, {
                         placeholder: "gaming",
                         options: c,
-                        select: u,
+                        select: i,
                         serialize: E,
                         isSelected: e => null != o && E(e) === E(o)
                     })
@@ -231,41 +195,41 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return g
+                    return h
                 }
             });
             var n = l("920040");
             l("773670");
             var a = l("377849"),
-                s = l.n(a),
-                r = l("77078"),
-                d = l("812204"),
-                i = l("685665"),
-                u = l("381546"),
+                d = l.n(a),
+                s = l("77078"),
+                r = l("812204"),
+                u = l("685665"),
+                i = l("381546"),
                 o = l("351825"),
                 c = l("651072"),
                 E = l("822516"),
                 _ = l("844808"),
                 f = l("782340"),
-                h = l("856599");
+                g = l("856599");
 
-            function g(e) {
+            function h(e) {
                 let {
                     className: t,
                     guildId: l,
                     onScheduleChange: a,
-                    onRecurrenceChange: g,
+                    onRecurrenceChange: h,
                     onTimeChange: m,
-                    timeSelected: v = !0,
+                    timeSelected: T = !0,
                     schedule: x,
-                    recurrenceRule: T,
+                    recurrenceRule: A,
                     showEndDate: N = !1,
-                    requireEndDate: A = !1,
+                    requireEndDate: v = !1,
                     disableStartDateTime: D = !1
                 } = e, {
                     analyticsLocations: R
-                } = (0, i.default)(d.default.EVENT_SETTINGS), {
-                    enabled: C
+                } = (0, u.default)(r.default.EVENT_SETTINGS), {
+                    enabled: S
                 } = c.default.useExperiment({
                     guildId: null != l ? l : "",
                     location: R[0]
@@ -273,11 +237,11 @@
                     autoTrackExposure: !1
                 });
                 if (null == x) return null;
-                let I = null,
+                let C = null,
                     j = x.startDate,
-                    S = s(),
-                    p = s().add(E.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
-                    M = s().add(E.MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days"),
+                    I = d(),
+                    M = d().add(E.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
+                    p = d().add(E.MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days"),
                     L = e => {
                         a({
                             ...x,
@@ -287,57 +251,57 @@
                 return null != j && c.default.trackExposure({
                     guildId: null != l ? l : "",
                     location: R[0]
-                }), N && (I = null != x.endDate || A ? (0, n.jsxs)(n.Fragment, {
+                }), N && (C = null != x.endDate || v ? (0, n.jsxs)(n.Fragment, {
                     children: [(0, n.jsxs)("div", {
-                        className: h.doubleInput,
-                        children: [(0, n.jsx)(r.FormItem, {
+                        className: g.doubleInput,
+                        children: [(0, n.jsx)(s.FormItem, {
                             title: f.default.Messages.CREATE_EVENT_END_DATE_LABEL,
-                            required: A,
-                            children: (0, n.jsx)(r.DateInput, {
+                            required: v,
+                            children: (0, n.jsx)(s.DateInput, {
                                 value: x.endDate,
                                 onSelect: L,
                                 minDate: x.startDate,
-                                maxDate: M
+                                maxDate: p
                             })
-                        }), (0, n.jsx)(r.FormItem, {
+                        }), (0, n.jsx)(s.FormItem, {
                             title: f.default.Messages.CREATE_EVENT_END_TIME_LABEL,
-                            required: A,
-                            children: (0, n.jsx)(r.TimeInput, {
+                            required: v,
+                            children: (0, n.jsx)(s.TimeInput, {
                                 value: x.endDate,
                                 onChange: L
                             })
                         })]
-                    }), A ? null : (0, n.jsx)(r.Button, {
+                    }), v ? null : (0, n.jsx)(s.Button, {
                         onClick: () => {
                             L(void 0)
                         },
-                        look: r.Button.Looks.BLANK,
-                        size: r.Button.Sizes.MIN,
+                        look: s.Button.Looks.BLANK,
+                        size: s.Button.Sizes.MIN,
                         children: (0, n.jsxs)("div", {
-                            className: h.link,
-                            children: [(0, n.jsx)(u.default, {
+                            className: g.link,
+                            children: [(0, n.jsx)(i.default, {
                                 width: 17,
                                 height: 17,
-                                className: h.removeIcon
-                            }), (0, n.jsx)(r.Text, {
+                                className: g.removeIcon
+                            }), (0, n.jsx)(s.Text, {
                                 variant: "text-sm/normal",
                                 children: f.default.Messages.CREATE_EVENT_REMOVE_END_TIME_LABEL
                             })]
                         })
                     })]
-                }) : (0, n.jsx)(r.Button, {
-                    look: r.Button.Looks.BLANK,
-                    size: r.Button.Sizes.MIN,
+                }) : (0, n.jsx)(s.Button, {
+                    look: s.Button.Looks.BLANK,
+                    size: s.Button.Sizes.MIN,
                     onClick: () => {
-                        L(s(x.startDate).add(1, "hour"))
+                        L(d(x.startDate).add(1, "hour"))
                     },
                     children: (0, n.jsxs)("div", {
-                        className: h.link,
+                        className: g.link,
                         children: [(0, n.jsx)(o.default, {
                             width: 20,
                             height: 20,
-                            className: h.addIcon
-                        }), (0, n.jsx)(r.Text, {
+                            className: g.addIcon
+                        }), (0, n.jsx)(s.Text, {
                             variant: "text-sm/normal",
                             children: f.default.Messages.CREATE_EVENT_ADD_END_TIME_LABEL
                         })]
@@ -345,11 +309,11 @@
                 })), (0, n.jsxs)("div", {
                     className: t,
                     children: [(0, n.jsxs)("div", {
-                        className: h.doubleInput,
-                        children: [(0, n.jsx)(r.FormItem, {
+                        className: g.doubleInput,
+                        children: [(0, n.jsx)(s.FormItem, {
                             title: f.default.Messages.CREATE_EVENT_START_DATE_LABEL,
                             required: !0,
-                            children: (0, n.jsx)(r.DateInput, {
+                            children: (0, n.jsx)(s.DateInput, {
                                 value: x.startDate,
                                 onSelect: e => {
                                     a({
@@ -357,14 +321,14 @@
                                         startDate: e
                                     })
                                 },
-                                minDate: S,
-                                maxDate: p,
+                                minDate: I,
+                                maxDate: M,
                                 disabled: D
                             })
-                        }), (0, n.jsx)(r.FormItem, {
+                        }), (0, n.jsx)(s.FormItem, {
                             title: f.default.Messages.CREATE_EVENT_START_TIME_LABEL,
                             required: !0,
-                            children: (0, n.jsx)(r.TimeInput, {
+                            children: (0, n.jsx)(s.TimeInput, {
                                 value: x.startDate,
                                 onChange: e => {
                                     e.isValid() && (null == m || m(!0), a({
@@ -372,74 +336,42 @@
                                         startDate: e
                                     }))
                                 },
-                                hideValue: !v,
+                                hideValue: !T,
                                 disabled: D
                             })
                         })]
-                    }), I, C && null != j && null != g && (0, n.jsx)(_.default, {
-                        onRecurrenceChange: g,
+                    }), C, S && null != j && null != h && (0, n.jsx)(_.default, {
+                        onRecurrenceChange: h,
                         startDate: j,
-                        recurrenceRule: T
+                        recurrenceRule: A
                     })]
                 })
             }
-        },
-        351825: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
-                default: function() {
-                    return r
-                }
-            });
-            var n = l("920040");
-            l("773670");
-            var a = l("469563"),
-                s = l("31745"),
-                r = (0, a.replaceIcon)(function(e) {
-                    let {
-                        width: t = 16,
-                        height: l = 16,
-                        color: a = "currentColor",
-                        className: s,
-                        foreground: r
-                    } = e;
-                    return (0, n.jsx)("svg", {
-                        className: s,
-                        width: t,
-                        height: l,
-                        viewBox: "0 0 24 24",
-                        children: (0, n.jsx)("path", {
-                            className: r,
-                            fill: a,
-                            d: "M12 2.00098C6.486 2.00098 2 6.48698 2 12.001C2 17.515 6.486 22.001 12 22.001C17.514 22.001 22 17.515 22 12.001C22 6.48698 17.514 2.00098 12 2.00098ZM17 13.001H13V17.001H11V13.001H7V11.001H11V7.00098H13V11.001H17V13.001Z"
-                        })
-                    })
-                }, s.CirclePlusIcon)
         },
         686904: function(e, t, l) {
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return s
+                    return d
                 }
             });
             var n = l("773670"),
                 a = l("448993");
 
-            function s(e, t) {
-                let [l, s] = n.useState(!1), [r, d] = n.useState(null), i = async () => {
-                    s(!0), d(null);
+            function d(e, t) {
+                let [l, d] = n.useState(!1), [s, r] = n.useState(null), u = async () => {
+                    d(!0), r(null);
                     try {
                         let t = await e();
-                        return s(!1), d(null), t
+                        return d(!1), r(null), t
                     } catch (l) {
                         let e = new a.APIError(l);
-                        return null == t || t(e), d(e), s(!1), null
+                        return null == t || t(e), r(e), d(!1), null
                     }
                 };
-                return [i, {
+                return [u, {
                     loading: l,
-                    error: r
+                    error: s
                 }]
             }
         }

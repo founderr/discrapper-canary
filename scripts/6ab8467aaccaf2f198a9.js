@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["69786"], {
+    ["30992"], {
         13399: function(e, t, n) {
             "use strict";
             e.exports.parse = function(e) {
@@ -371,7 +371,7 @@
                     U = i.useRef(null),
                     M = i.useRef(0),
                     D = i.useRef(0),
-                    y = i.useCallback(function() {
+                    P = i.useCallback(function() {
                         var e = m.current;
                         if (null != e) {
                             var t = e.getContext("2d");
@@ -380,23 +380,23 @@
                                     var r = n.confetti,
                                         l = n.spriteCanvas;
                                     r.update(a), r.draw(l, t), r.shouldDestroy(e, a) && L.current.delete(i)
-                                }), null == T || T(t), L.current.size > 0 ? U.current = window.requestAnimationFrame(y) : (t.clearRect(0, 0, e.width, e.height), U.current = null);
+                                }), null == T || T(t), L.current.size > 0 ? U.current = window.requestAnimationFrame(P) : (t.clearRect(0, 0, e.width, e.height), U.current = null);
                                 var n = Date.now();
                                 0 !== M.current && (D.current = 1e3 / (n - M.current)), M.current = n
                             }
                         }
                     }, [a, T, I]);
                 i.useEffect(function() {
-                    null != U.current && (window.cancelAnimationFrame(U.current), U.current = window.requestAnimationFrame(y))
-                }, [y]);
-                var P = i.useCallback(function(e, t) {
+                    null != U.current && (window.cancelAnimationFrame(U.current), U.current = window.requestAnimationFrame(P))
+                }, [P]);
+                var y = i.useCallback(function(e, t) {
                         L.current.set(e.id, {
                             confetti: e,
                             spriteCanvas: t
-                        }), null == U.current && y()
-                    }, [y]),
+                        }), null == U.current && P()
+                    }, [P]),
                     G = i.useCallback(function(e, t, n, i, l) {
-                        var a, o, u, d, E, _, I, T, O, m, L, U, M, D, y, G = (a = null !== (y = e.id) && void 0 !== y ? y : (0, r.v4)(), o = e, u = n, d = i, E = l, T = v((I = (_ = o, f(f({
+                        var a, o, u, d, E, _, I, T, O, m, L, U, M, D, P, G = (a = null !== (P = e.id) && void 0 !== P ? P : (0, r.v4)(), o = e, u = n, d = i, E = l, T = v((I = (_ = o, f(f({
                             id: a
                         }, c), _))).size), m = (O = function(e, t) {
                             if (null != e) {
@@ -481,8 +481,8 @@
                             spriteWidth: u.spriteWidth,
                             spriteHeight: u.spriteHeight
                         }));
-                        return P(G, t), G
-                    }, [P]),
+                        return y(G, t), G
+                    }, [y]),
                     b = i.useCallback(function(e) {
                         L.current.delete(e)
                     }, []),
@@ -495,12 +495,12 @@
                 i.useImperativeHandle(t, function() {
                     return {
                         createConfetti: G,
-                        addConfetti: P,
+                        addConfetti: y,
                         deleteConfetti: b,
                         clearConfetti: w,
                         getCanvas: B
                     }
-                }, [G, P, b, w, B]);
+                }, [G, y, b, w, B]);
                 var x = i.useCallback(function(e, t) {
                         var n, i, r = t.clickHandler,
                             l = t.mouseHandler;
@@ -1559,8 +1559,8 @@
                 U = e => p(t => S(t) && t >= e),
                 M = () => p(e => S(e) && Number.isInteger(e)),
                 D = () => p(e => S(e) && Number.isFinite(e)),
-                y = () => p(e => S(e) && e > 0),
-                P = () => p(e => S(e) && e < 0),
+                P = () => p(e => S(e) && e > 0),
+                y = () => p(e => S(e) && e < 0),
                 G = e => Object.assign(d(e), {
                     between: (t, n) => G(I(e, R(t, n))),
                     lt: t => G(I(e, v(t))),
@@ -1569,8 +1569,8 @@
                     gte: t => G(I(e, U(t))),
                     int: () => G(I(e, M())),
                     finite: () => G(I(e, D())),
-                    positive: () => G(I(e, y())),
-                    negative: () => G(I(e, P()))
+                    positive: () => G(I(e, P())),
+                    negative: () => G(I(e, y()))
                 }),
                 b = G(p(S)),
                 w = (e, t) => p(n => C(n) && e <= n && t >= n),
@@ -1735,8 +1735,8 @@
                 gte: U,
                 int: M,
                 finite: D,
-                positive: y,
-                negative: P,
+                positive: P,
+                negative: y,
                 number: b,
                 betweenBigInt: w,
                 ltBigInt: B,
@@ -3321,6 +3321,42 @@
                         fill: "string" == typeof a ? a : a.css,
                         fillRule: "evenodd",
                         d: "M18.707 7.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L10 14.586l7.293-7.293a1 1 0 0 1 1.414 0Z",
+                        clipRule: "evenodd",
+                        className: o
+                    })
+                })
+            }
+        },
+        31745: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                CirclePlusIcon: function() {
+                    return a
+                }
+            });
+            var i = n("920040");
+            n("773670");
+            var r = n("912557"),
+                l = n("75196");
+            let a = e => {
+                let {
+                    width: t = 24,
+                    height: n = 24,
+                    color: a = r.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: o = "",
+                    ...u
+                } = e;
+                return (0, i.jsx)("svg", {
+                    ...(0, l.default)(u),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: n,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: (0, i.jsx)("path", {
+                        fill: "string" == typeof a ? a : a.css,
+                        fillRule: "evenodd",
+                        d: "M12 23c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11Zm0-17a1 1 0 0 1 1 1v4h4a1 1 0 1 1 0 2h-4v4a1 1 0 1 1-2 0v-4H7a1 1 0 1 1 0-2h4V7a1 1 0 0 1 1-1Z",
                         clipRule: "evenodd",
                         className: o
                     })
@@ -5788,7 +5824,7 @@
                     referralTrialOfferId: L,
                     giftRecipient: U,
                     returnRef: M
-                } = null != e ? e : {}, D = !1, y = (0, r.v4)();
+                } = null != e ? e : {}, D = !1, P = (0, r.v4)();
                 (0, l.openModalLazy)(async () => {
                     let {
                         default: e
@@ -5800,7 +5836,7 @@
                         } = n;
                         return (0, i.jsx)(e, {
                             ...l,
-                            loadId: y,
+                            loadId: P,
                             subscriptionTier: g,
                             skuId: g,
                             isGift: C,
@@ -5832,7 +5868,7 @@
                     modalKey: "payment-modal",
                     onCloseCallback: () => {
                         !D && s.default.track(d.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                            load_id: y,
+                            load_id: P,
                             payment_type: d.PurchaseTypeToAnalyticsPaymentType[d.PurchaseTypes.SUBSCRIPTION],
                             location: null != S ? S : h,
                             source: N,
@@ -6808,14 +6844,14 @@
                         })), A.set(e.id, a)
                     }
                 },
-                y = (e, t, n) => {
+                P = (e, t, n) => {
                     N.set(e.id, e);
                     let i = [...g];
                     if (t) {
                         let t = i.findIndex(t => t.id === e.id); - 1 !== t ? i[t] = e : i.push(e), g = i
                     }(t || n) && e.stickers.forEach(e => M(e))
                 },
-                P = () => {
+                y = () => {
                     v.forEach((e, t) => {
                         let n = I.default.getGuild(t);
                         null != n && e.forEach(e => D(e, n))
@@ -6835,7 +6871,7 @@
                     return 0 !== S
                 }
                 get stickerMetadata() {
-                    return U(), null == A && (A = new Map, P()), A
+                    return U(), null == A && (A = new Map, y()), A
                 }
                 get hasLoadedStickerPacks() {
                     return null != O && O + L > Date.now()
@@ -6904,14 +6940,14 @@
                     let {
                         packs: t
                     } = e;
-                    t.forEach(e => y(e, !0)), O = Date.now(), R = !1
+                    t.forEach(e => P(e, !0)), O = Date.now(), R = !1
                 },
                 STICKER_PACK_FETCH_SUCCESS: e => {
                     let {
                         pack: t,
                         ingestStickers: n
                     } = e;
-                    y(t, !1, n)
+                    P(t, !1, n)
                 },
                 GUILD_STICKERS_FETCH_SUCCESS: e => {
                     let {
@@ -8997,6 +9033,38 @@
                         })
                     })
                 }, l.PlusSmallIcon)
+        },
+        351825: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return a
+                }
+            });
+            var i = n("920040");
+            n("773670");
+            var r = n("469563"),
+                l = n("31745"),
+                a = (0, r.replaceIcon)(function(e) {
+                    let {
+                        width: t = 16,
+                        height: n = 16,
+                        color: r = "currentColor",
+                        className: l,
+                        foreground: a
+                    } = e;
+                    return (0, i.jsx)("svg", {
+                        className: l,
+                        width: t,
+                        height: n,
+                        viewBox: "0 0 24 24",
+                        children: (0, i.jsx)("path", {
+                            className: a,
+                            fill: r,
+                            d: "M12 2.00098C6.486 2.00098 2 6.48698 2 12.001C2 17.515 6.486 22.001 12 22.001C17.514 22.001 22 17.515 22 12.001C22 6.48698 17.514 2.00098 12 2.00098ZM17 13.001H13V17.001H11V13.001H7V11.001H11V7.00098H13V11.001H17V13.001Z"
+                        })
+                    })
+                }, l.CirclePlusIcon)
         },
         368121: function(e, t, n) {
             "use strict";
