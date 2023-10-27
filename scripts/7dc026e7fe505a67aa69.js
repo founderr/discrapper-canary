@@ -1903,7 +1903,7 @@
                     children: [(0, a.jsx)(E.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "241442"
+                        buildNumber: "241445"
                     }), (0, a.jsx)(m, {})]
                 }) : null
             }
@@ -16977,33 +16977,34 @@
             "use strict";
             n.r(t), n.d(t, {
                 isEligibleForFriendFinder: function() {
-                    return E
+                    return _
                 }
             });
             var a = n("227385");
             n("744196");
             var s = n("862205"),
-                l = n("21121"),
+                l = n("47319"),
                 i = n("697218");
             n("773336");
-            let r = [276, 434, 540, 826, 571, 703, 757, 948, 804],
-                o = [270, 502, 606, 859, 364, 812, 219, 260, 317, 463, 574, 765, 812, 930, 423, 615, 629, 731, 865, 901, 931, 304, 681],
-                u = (0, s.createExperiment)({
+            var r = n("49111");
+            let o = [276, 434, 540, 826, 571, 703, 757, 948, 804],
+                u = [270, 502, 606, 859, 364, 812, 219, 260, 317, 463, 574, 765, 812, 930, 423, 615, 629, 731, 865, 901, 931, 304, 681],
+                d = (0, s.createExperiment)({
                     kind: "user",
-                    id: "2023-10_friend_finder_redesign",
-                    label: "Friend Finder Redesign User Experiment",
+                    id: "2023-10_friend_finder_launch",
+                    label: "Friend Finder Launch Experiment",
                     defaultConfig: {
                         enabled: !1
                     },
                     treatments: [{
                         id: 1,
-                        label: "Enable Friend Finder on Redesign",
+                        label: "Enable Friend Finder",
                         config: {
                             enabled: !0
                         }
                     }]
                 }),
-                d = (0, s.createExperiment)({
+                c = (0, s.createExperiment)({
                     kind: "user",
                     id: "2023-03_friend_finder",
                     label: "Friend Finder User Experiment",
@@ -17018,7 +17019,7 @@
                         }
                     }]
                 }),
-                c = (0, s.createExperiment)({
+                f = (0, s.createExperiment)({
                     kind: "user",
                     id: "2023-10_friend_finder_virginia",
                     label: "Friend Finder User Experiment for Virginia",
@@ -17033,7 +17034,7 @@
                         }
                     }]
                 }),
-                f = (0, s.createExperiment)({
+                E = (0, s.createExperiment)({
                     kind: "user",
                     id: "2023-03_friend_finder_employees",
                     label: "Friend Finder Employees User Experiment",
@@ -17134,54 +17135,54 @@
                 }]
             });
 
-            function E(e) {
-                let t = i.default.getCurrentUser();
-                if (null == t) return !1;
-                if (t.isStaff()) {
+            function _(e) {
+                var t;
+                let n = i.default.getCurrentUser();
+                if (null == n) return !1;
+                if (n.isStaff()) {
                     let {
                         enabled: t
-                    } = f.getCurrentConfig({
+                    } = E.getCurrentConfig({
                         location: null != e ? e : "ad46c9_4"
                     }, {
                         autoTrackExposure: !0
                     });
                     return t
                 }
+                let s = null != (t = l.default.getLocalAccount(r.PlatformTypes.CONTACTS)) && t.friendSync && t.type === r.PlatformTypes.CONTACTS;
                 return function(e, t, n) {
                     let {
-                        inMainTabsExperiment: s,
-                        inFriendFinderRedesignExperiment: l,
+                        contactSyncEnabled: s,
+                        inFriendFinderLaunchExperiment: l,
                         inFriendFinderVirginiaExperiment: i,
-                        inFriendFinderExperiment: f
+                        inFriendFinderExperiment: r
                     } = t;
                     if (null == e) return !1;
-                    if (s) return u.trackExposure({
-                        location: null != n ? n : "friend_finder_experiment"
-                    }), l;
-                    let E = (0, a.parsePhoneNumber)(e);
-                    if ("US" !== E.country) return !1;
-                    let _ = Number(E.number.substring(2, 5));
-                    if (r.includes(_)) return c.trackExposure({
+                    if (s && l) return !0;
+                    let d = (0, a.parsePhoneNumber)(e);
+                    if ("US" !== d.country) return !1;
+                    let E = Number(d.number.substring(2, 5));
+                    if (o.includes(E)) return f.trackExposure({
                         location: null != n ? n : "friend_finder_experiment"
                     }), i;
-                    let h = o.includes(_),
-                        I = /^\+1\d\d\d55501\d\d$/.test(E.number);
-                    return (!!h || !!I) && (d.trackExposure({
+                    let _ = u.includes(E),
+                        h = /^\+1\d\d\d55501\d\d$/.test(d.number);
+                    return (!!_ || !!h) && (c.trackExposure({
                         location: null != n ? n : "friend_finder_experiment"
-                    }), f)
-                }(t.phone, {
-                    inMainTabsExperiment: (0, l.isInMainTabsExperiment)(),
-                    inFriendFinderRedesignExperiment: u.getCurrentConfig({
+                    }), r)
+                }(n.phone, {
+                    contactSyncEnabled: s,
+                    inFriendFinderLaunchExperiment: d.getCurrentConfig({
                         location: null != e ? e : "friend_finder_experiment"
                     }, {
-                        autoTrackExposure: !0
+                        autoTrackExposure: s
                     }).enabled,
-                    inFriendFinderExperiment: d.getCurrentConfig({
+                    inFriendFinderExperiment: c.getCurrentConfig({
                         location: null != e ? e : "ad46c9_5"
                     }, {
                         autoTrackExposure: !1
                     }).enabled,
-                    inFriendFinderVirginiaExperiment: c.getCurrentConfig({
+                    inFriendFinderVirginiaExperiment: f.getCurrentConfig({
                         location: null != e ? e : "friend_finder_experiment"
                     }, {
                         autoTrackExposure: !1
