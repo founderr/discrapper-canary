@@ -132,10 +132,6 @@
             "use strict";
             e.exports = n.p + "9d860163581f23579619.svg"
         },
-        121432: function(e, t, n) {
-            "use strict";
-            e.exports = n.p + "21351b92881882ca8597.svg"
-        },
         991015: function(e, t, n) {
             "use strict";
             e.exports = n.p + "128943d22370771f543f.svg"
@@ -419,18 +415,6 @@
         371997: function(e, t, n) {
             "use strict";
             e.exports = n.p + "452cd32e3c30e1c83f90.svg"
-        },
-        169903: function(e, t, n) {
-            "use strict";
-            e.exports = n.p + "867436a0aaf9edda9601.svg"
-        },
-        389291: function(e, t, n) {
-            "use strict";
-            e.exports = n.p + "bb95de121233bf246961.svg"
-        },
-        676084: function(e, t, n) {
-            "use strict";
-            e.exports = n.p + "2b2bc7e0b5e6dc0c2182.svg"
         },
         240542: function(e, t, n) {
             "use strict";
@@ -1903,7 +1887,7 @@
                     children: [(0, a.jsx)(E.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "241314"
+                        buildNumber: "241319"
                     }), (0, a.jsx)(m, {})]
                 }) : null
             }
@@ -44459,200 +44443,6 @@
                 })
             }
         },
-        215429: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return o
-                }
-            });
-            var a = n("920040");
-            n("773670");
-            var s = n("912557"),
-                l = n("819855"),
-                i = n("77078"),
-                r = n("841098"),
-                o = e => {
-                    let {
-                        className: t
-                    } = e, n = (0, r.default)(), o = (0, i.useToken)(s.default.colors.BACKGROUND_ACCENT).hex();
-                    return (0, a.jsx)("svg", {
-                        width: "700",
-                        height: "120",
-                        viewBox: "0 0 700 120",
-                        className: t,
-                        xmlns: "http://www.w3.org/2000/svg",
-                        children: (0, a.jsx)("path", {
-                            fill: (0, l.isThemeDark)(n) ? o : "white",
-                            opacity: "1",
-                            d: "M351 39.047C185.4 -31.2102 48 9.77319 0 39.047V583.068C0 587.486 3.58174 591.068 8.00002 591.068H692C696.418 591.068 700 587.486 700 583.068V39.047C653.333 68.3208 516.6 109.304 351 39.047Z"
-                        })
-                    })
-                }
-        },
-        986675: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                isEligibleForQ4DropAnnouncementModal: function() {
-                    return U
-                },
-                default: function() {
-                    return j
-                }
-            });
-            var a = n("920040");
-            n("773670");
-            var s = n("498225"),
-                l = n("975162"),
-                i = n("819855"),
-                r = n("77078"),
-                o = n("997289"),
-                u = n("841098"),
-                d = n("812204"),
-                c = n("685665"),
-                f = n("10641"),
-                E = n("649844"),
-                _ = n("915639"),
-                h = n("697218"),
-                I = n("181114"),
-                C = n("599110"),
-                m = n("701909"),
-                T = n("719923"),
-                S = n("896630"),
-                N = n("837797"),
-                p = n("917247"),
-                A = n("400307"),
-                g = n("702542"),
-                R = n("646718"),
-                O = n("49111"),
-                L = n("782340"),
-                v = n("254438"),
-                M = n("169903"),
-                x = n("389291"),
-                D = n("676084"),
-                P = n("121432");
-            let y = "2023_q4_nitro_drop",
-                b = "DnkvLW5052Y",
-                U = () => {
-                    let e = h.default.getCurrentUser();
-                    if ((0, T.isPremiumExactly)(e, R.PremiumTypes.TIER_2) || (0, f.isDismissibleContentDismissed)(l.DismissibleContent.Q4_2023_NITRO_DROP_ANNOUNCEMENT_MODAL)) return !1;
-                    let {
-                        enabled: t
-                    } = S.Q4DropExperiment.getCurrentConfig({
-                        location: "isEligibleForQ4DropAnnouncementModal"
-                    });
-                    return t
-                };
-
-            function j(e) {
-                let {
-                    renderModalProps: t
-                } = e, {
-                    onClose: n
-                } = t, f = (0, s.useStateFromStores)([_.default], () => _.default.locale), h = f.split("-")[0], S = "en" === h ? "0" : "1", U = "zh-CN" === f ? "zh-Hans" : "zh-TW" === f ? "zh-Hant" : h, j = {
-                    url: "".concat((0, O.YOUTUBE_EMBED_URL)(b), "?vq=large&rel=0&controls=0&showinfo=0&cc_load_policy=").concat(S, "&cc_lang_pref=").concat(U),
-                    width: 498,
-                    height: 280
-                }, {
-                    location: G
-                } = (0, o.useAnalyticsContext)(), {
-                    analyticsLocations: F
-                } = (0, c.default)(d.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), k = (0, u.default)(), w = (0, p.usePremiumTrialOffer)(), B = null == w ? void 0 : w.subscription_trial, H = (0, T.formatTrialCtaIntervalDuration)({
-                    intervalType: null == B ? void 0 : B.interval,
-                    intervalCount: null == B ? void 0 : B.interval_count
-                }), V = (0, N.useResponseOnUserState)({
-                    defaultResponse: L.default.Messages.BILLING_SUBSCRIBE_TO_PLAN,
-                    onTier0TrialOffer: H,
-                    onTier2TrialOffer: H,
-                    onNonTier2Subscriber: L.default.Messages.INTERACTION_PREMIUM_UPSELL_CTA
-                }), Y = (0, N.useResponseOnUserState)({
-                    defaultResponse: "get_nitro_button",
-                    onNonTier2Subscriber: "upgrade_plan_button",
-                    onTier0TrialOffer: "trial_offer_button",
-                    onTier2TrialOffer: "trial_offer_button"
-                }), W = (0, N.useResponseOnUserState)({
-                    defaultResponse: () => (0, E.default)({
-                        subscriptionTier: R.PremiumSubscriptionSKUs.TIER_2,
-                        analyticsLocations: F,
-                        analyticsObject: {
-                            ...G,
-                            object: O.AnalyticsObjects.BUTTON_CTA,
-                            objectType: O.AnalyticsObjectTypes.TIER_2
-                        },
-                        onClose: e => {
-                            e && n()
-                        }
-                    })
-                }), K = (0, i.isThemeDark)(k) ? A.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : A.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL;
-                return (0, a.jsx)(g.default, {
-                    renderModalProps: t,
-                    videoHref: "https://youtu.be/".concat(b),
-                    video: j,
-                    videoThumbnail: {
-                        url: "https://i.ytimg.com/vi/".concat(b, "/maxresdefault.jpg"),
-                        width: 498,
-                        height: 280
-                    },
-                    modalDismissibleContent: l.DismissibleContent.Q4_2023_NITRO_DROP_ANNOUNCEMENT_MODAL,
-                    modalTopExtra: () => null != B ? (0, a.jsx)(A.PremiumPillWithSparkles, {
-                        text: L.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT,
-                        className: v.trialPill,
-                        colorOptions: K
-                    }) : null,
-                    header: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_HEADER,
-                    subHeader: null != B ? L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_TRIAL_ELIGIBLE : L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_TRIAL_ELIGIBLE,
-                    subHeaderExtra: () => (0, a.jsx)(r.Anchor, {
-                        className: v.termsApplyAnchor,
-                        href: m.default.getArticleURL(O.HelpdeskArticles.SUMMER_2023_BOGO),
-                        children: (0, a.jsx)(r.Heading, {
-                            variant: "heading-md/normal",
-                            className: v.termsApplyBodyText,
-                            children: L.default.Messages.BOGO_TERMS_APPLY
-                        })
-                    }),
-                    featureCards: [{
-                        header: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_HEADER,
-                        subHeader: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_DESCRIPTION,
-                        imageSrc: M
-                    }, {
-                        header: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_HEADER,
-                        subHeader: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_DESCRIPTION,
-                        imageSrc: D
-                    }, {
-                        header: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_HEADER,
-                        subHeader: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_DESCRIPTION,
-                        imageSrc: x
-                    }, {
-                        header: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_HEADER,
-                        subHeader: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_DESCRIPTION,
-                        imageSrc: x
-                    }],
-                    changeLogId: y,
-                    button: () => {
-                        let e = Date.now();
-                        return (0, a.jsxs)(I.default, {
-                            className: v.buttonWide,
-                            innerClassName: v.innerButton,
-                            color: r.Button.Colors.GREEN,
-                            size: r.Button.Sizes.SMALL,
-                            onClick: () => {
-                                C.default.track(O.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
-                                    change_log_id: y,
-                                    cta_type: Y,
-                                    seconds_open: Math.round((Date.now() - e) / 1e3),
-                                    target: "q4_drop_payment_modal"
-                                }), W()
-                            },
-                            children: [(0, a.jsx)("img", {
-                                alt: "",
-                                className: v.nitroIconSubHeader,
-                                src: P
-                            }), V]
-                        })
-                    }
-                })
-            }
-        },
         106457: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -44701,34 +44491,6 @@
                 }]
             });
             var l = s
-        },
-        837797: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                useResponseOnUserState: function() {
-                    return o
-                }
-            });
-            var a = n("498225"),
-                s = n("521012"),
-                l = n("719923"),
-                i = n("917247"),
-                r = n("646718");
-
-            function o(e) {
-                let {
-                    defaultResponse: t,
-                    onNonSubscriber: n,
-                    onTier0TrialOffer: o,
-                    onTier2TrialOffer: u,
-                    onTier0TrialPeriod: d,
-                    onTier2TrialPeriod: c,
-                    onNonTier2Subscriber: f,
-                    onTier2Subscriber: E,
-                    onCustomCriteria: _
-                } = e, h = (0, i.usePremiumTrialOffer)(), I = (0, a.useStateFromStores)([s.default], () => s.default.getPremiumTypeSubscription()), C = l.default.getPremiumTypeFromSubscription(I);
-                return null != _ ? _() : null != h && (0, r.SubscriptionTrials)[h.trial_id].skus.includes(r.PremiumSubscriptionSKUs.TIER_0) ? null != o ? o : t : null != h && (0, r.SubscriptionTrials)[h.trial_id].skus.includes(r.PremiumSubscriptionSKUs.TIER_2) ? null != u ? u : t : null != I && null != I.trialId && C === r.PremiumTypes.TIER_0 ? null != d ? d : t : null != I && null != I.trialId && C === r.PremiumTypes.TIER_2 ? null != c ? c : t : null == C ? null != n ? n : t : C === r.PremiumTypes.TIER_0 || C === r.PremiumTypes.TIER_1 ? null != f ? f : t : C === r.PremiumTypes.TIER_2 ? null != E ? E : t : t
-            }
         },
         695827: function(e, t, n) {
             "use strict";
@@ -45624,153 +45386,6 @@
                 i = () => (0, a.jsx)(s.default, {
                     copy: l.default.Messages.NEW
                 })
-        },
-        702542: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return S
-                }
-            });
-            var a = n("920040"),
-                s = n("773670"),
-                l = n("575482"),
-                i = n.n(l),
-                r = n("77078"),
-                o = n("10641"),
-                u = n("933629"),
-                d = n("560176"),
-                c = n("476765"),
-                f = n("956089"),
-                E = n("599110"),
-                _ = n("215429"),
-                h = n("49111"),
-                I = n("994428"),
-                C = n("792076");
-            let m = e => {
-                    let {
-                        tagText: t,
-                        className: n
-                    } = e;
-                    return (0, a.jsx)(f.TextBadge, {
-                        className: i(C.tag, n),
-                        text: t
-                    })
-                },
-                T = e => {
-                    let {
-                        header: t,
-                        subHeader: n,
-                        imageSrc: s,
-                        tagText: l,
-                        wideStyle: o
-                    } = e;
-                    return (0, a.jsxs)("div", {
-                        className: i(C.featureCard, {
-                            [C.wideStyle]: o
-                        }),
-                        children: [null != l ? (0, a.jsx)(m, {
-                            tagText: l,
-                            className: C.featureCardTag
-                        }) : null, (0, a.jsx)("img", {
-                            alt: "",
-                            className: i(C.featureCardImg, {
-                                [C.wideStyle]: o
-                            }),
-                            src: s
-                        }), (0, a.jsxs)("div", {
-                            className: C.featureCardTextGroup,
-                            children: [(0, a.jsx)(r.Heading, {
-                                variant: "heading-lg/extrabold",
-                                className: C.featureCardTextHeader,
-                                children: t
-                            }), (0, a.jsx)(r.Text, {
-                                variant: "text-sm/normal",
-                                children: n
-                            })]
-                        })]
-                    })
-                };
-
-            function S(e) {
-                let {
-                    className: t,
-                    renderModalProps: n,
-                    videoHref: l,
-                    video: f,
-                    videoThumbnail: m,
-                    modalDismissibleContent: S,
-                    modalTopExtra: N,
-                    header: p,
-                    subHeader: A,
-                    subHeaderExtra: g,
-                    featureCards: R,
-                    changeLogId: O,
-                    button: L
-                } = e, {
-                    onClose: v,
-                    transitionState: M
-                } = n, x = (0, c.useUID)(), D = R.length % 2 == 0;
-                return s.useEffect(() => {
-                    (0, o.requestMarkDismissibleContentAsShown)(S);
-                    let e = Date.now();
-                    return E.default.track(h.AnalyticEvents.CHANGE_LOG_OPENED, {
-                        change_log_id: O
-                    }), () => {
-                        E.default.track(h.AnalyticEvents.CHANGE_LOG_CLOSED, {
-                            change_log_id: O,
-                            seconds_open: Math.round((Date.now() - e) / 1e3)
-                        }), (0, o.markDismissibleContentAsDismissed)(S, {
-                            dismissAction: I.ContentDismissActionType.DISMISS
-                        })
-                    }
-                }, [S, O]), (0, a.jsxs)(r.ModalRoot, {
-                    className: i(C.root, t),
-                    transitionState: M,
-                    "aria-labelledby": x,
-                    children: [(0, a.jsx)(r.ModalCloseButton, {
-                        className: C.closeButton,
-                        onClick: v
-                    }), (0, a.jsx)(_.default, {
-                        className: C.splash
-                    }), null == N ? void 0 : N(), (0, a.jsxs)(r.ModalContent, {
-                        className: C.content,
-                        children: [(0, a.jsx)(r.Heading, {
-                            variant: "display-md",
-                            className: C.headerText,
-                            children: p
-                        }), (0, a.jsx)(d.EmbedVideo, {
-                            className: C.video,
-                            allowFullScreen: !1,
-                            href: l,
-                            thumbnail: m,
-                            video: f,
-                            maxWidth: f.width,
-                            maxHeight: f.height,
-                            renderVideoComponent: u.renderVideoComponent,
-                            renderImageComponent: u.renderImageComponent,
-                            renderLinkComponent: u.renderMaskedLinkComponent,
-                            onPlay: () => {
-                                E.default.track(h.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
-                                    change_log_id: O
-                                })
-                            }
-                        }), (0, a.jsx)(r.Heading, {
-                            variant: "heading-lg/extrabold",
-                            className: C.bodyText,
-                            children: A
-                        }), null == g ? void 0 : g(), (0, a.jsx)("div", {
-                            className: i(C.featureCardGroup, {
-                                [C.wideStyle]: D
-                            }),
-                            children: R.map((e, t) => (0, a.jsx)(T, {
-                                ...e,
-                                wideStyle: D
-                            }, "".concat(e.header, "_").concat(t)))
-                        }), L()]
-                    })]
-                })
-            }
         },
         630140: function(e, t, n) {
             "use strict";
