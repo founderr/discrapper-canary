@@ -17056,7 +17056,7 @@
                 } = t;
                 s.default.track(e, {
                     channel_id: n,
-                    warning_id: a,
+                    warning_id: parseInt(a),
                     warning_type: i.SafetyWarningTypes.STRANGER_DANGER,
                     other_user_id: l
                 })
@@ -17069,9 +17069,9 @@
                     senderId: a,
                     cta: l
                 } = e;
-                s.default.track(r.AnalyticEvents.CHANNEL_SAFETY_WARNING_CTA_CLICKED, {
+                s.default.track(r.AnalyticEvents.SAFETY_WARNING_CTA_CLICKED, {
                     channel_id: t,
-                    warning_id: n,
+                    warning_id: parseInt(n),
                     warning_type: i.SafetyWarningTypes.STRANGER_DANGER,
                     other_user_id: a,
                     cta: l
@@ -17160,7 +17160,7 @@
                     })
                 }, [g, t, p, C]);
                 l.useEffect(() => {
-                    (0, d.trackViewedEvent)(f.AnalyticEvents.CHANNEL_SAFETY_WARNING_VIEWED, {
+                    (0, d.trackViewedEvent)(f.AnalyticEvents.SAFETY_WARNING_VIEWED, {
                         channelId: t,
                         warningId: p,
                         senderId: C

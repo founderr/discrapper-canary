@@ -43,7 +43,7 @@
                     a()
                 }, m = (0, r.getSafetyTips)();
                 return n.useEffect(() => {
-                    (0, i.trackViewedEvent)(o.AnalyticEvents.CHANNEL_SAFETY_WARNING_MODAL_VIEWED, {
+                    (0, i.trackViewedEvent)(o.AnalyticEvents.SAFETY_WARNING_MODAL_VIEWED, {
                         channelId: x,
                         warningId: T,
                         senderId: _
