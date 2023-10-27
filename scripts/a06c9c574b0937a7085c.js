@@ -1903,7 +1903,7 @@
                     children: [(0, a.jsx)(E.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "241096"
+                        buildNumber: "241097"
                     }), (0, a.jsx)(m, {})]
                 }) : null
             }
@@ -49534,7 +49534,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return P
+                    return j
                 }
             });
             var a = n("920040");
@@ -49548,35 +49548,39 @@
                 d = n("599417"),
                 c = n("244201"),
                 f = n("550766"),
-                E = n("299803"),
-                _ = n("587984"),
-                h = n("292687"),
-                I = n("42203"),
-                C = n("52028"),
-                m = n("101125"),
-                T = n("471671"),
-                S = n("568734"),
-                N = n("449008"),
-                p = n("253981"),
-                A = n("563680"),
-                g = n("861309"),
-                R = n("578287"),
-                O = n("716724"),
-                L = n("613652"),
-                v = n("207873"),
-                M = n("56245"),
-                x = n("49111");
-            async function D(e, t, n, a) {
+                E = n("191225"),
+                _ = n("299803"),
+                h = n("587984"),
+                I = n("292687"),
+                C = n("42203"),
+                m = n("52028"),
+                T = n("101125"),
+                S = n("697218"),
+                N = n("471671"),
+                p = n("568734"),
+                A = n("449008"),
+                g = n("387111"),
+                R = n("253981"),
+                O = n("563680"),
+                L = n("861309"),
+                v = n("578287"),
+                M = n("716724"),
+                x = n("613652"),
+                D = n("694352"),
+                P = n("207873"),
+                y = n("56245"),
+                b = n("49111");
+            async function U(e, t, n, a) {
                 let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-                    l = C.default.getApplicationActivity(t);
-                if (null == l || null == l.secrets || !(0, R.validateActivityInvite)(a, l.party, l.secrets)) throw new g.default(x.RPCErrors.NO_ELIGIBLE_ACTIVITY, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
-                let o = (0, E.default)(l, m.default);
+                    l = m.default.getApplicationActivity(t);
+                if (null == l || null == l.secrets || !(0, v.validateActivityInvite)(a, l.party, l.secrets)) throw new L.default(b.RPCErrors.NO_ELIGIBLE_ACTIVITY, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
+                let o = (0, _.default)(l, T.default);
                 if (o) {
                     let {
                         lock: t
-                    } = (0, M.unlockOverlay)(e);
+                    } = (0, y.unlockOverlay)(e);
                     return (0, r.openModal)(l, o).then(() => {
-                        throw t(), new g.default(x.RPCErrors.NO_ELIGIBLE_ACTIVITY, "No eligible activity for application. Ensure user does have have privacy enabled.")
+                        throw t(), new L.default(b.RPCErrors.NO_ELIGIBLE_ACTIVITY, "No eligible activity for application. Ensure user does have have privacy enabled.")
                     })
                 }
                 await i.default.sendActivityInviteUser({
@@ -49587,10 +49591,10 @@
                     location: "In-Game Invite"
                 })
             }
-            var P = {
-                [x.RPCCommands.SEND_ACTIVITY_JOIN_INVITE]: {
+            var j = {
+                [b.RPCCommands.SEND_ACTIVITY_JOIN_INVITE]: {
                     scope: {
-                        [x.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, x.RPC_LOCAL_SCOPE]
+                        [b.RPC_SCOPE_CONFIG.ANY]: [b.OAuth2Scopes.RPC, b.RPC_LOCAL_SCOPE]
                     },
                     handler(e) {
                         let {
@@ -49600,30 +49604,30 @@
                                 pid: a
                             }
                         } = e, s = t.application.id;
-                        if (null == s) throw new g.default(x.RPCErrors.INVALID_COMMAND, "No application.");
-                        return D(a, s, n, x.ActivityActionTypes.JOIN)
+                        if (null == s) throw new L.default(b.RPCErrors.INVALID_COMMAND, "No application.");
+                        return U(a, s, n, b.ActivityActionTypes.JOIN)
                     }
                 },
-                [x.RPCCommands.CLOSE_ACTIVITY_JOIN_REQUEST]: {
+                [b.RPCCommands.CLOSE_ACTIVITY_JOIN_REQUEST]: {
                     scope: {
-                        [x.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, x.RPC_LOCAL_SCOPE]
+                        [b.RPC_SCOPE_CONFIG.ANY]: [b.OAuth2Scopes.RPC, b.RPC_LOCAL_SCOPE]
                     },
                     handler(e) {
                         let {
                             args: {
                                 user_id: t
                             }
-                        } = e, n = I.default.getDMFromUserId(t);
+                        } = e, n = C.default.getDMFromUserId(t);
                         null != n && (0, u.ack)(n, !0, !0)
                     }
                 },
-                [x.RPCCommands.ACTIVITY_INVITE_USER]: {
+                [b.RPCCommands.ACTIVITY_INVITE_USER]: {
                     scope: {
-                        [x.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, x.RPC_LOCAL_SCOPE]
+                        [b.RPC_SCOPE_CONFIG.ANY]: [b.OAuth2Scopes.RPC, b.RPC_LOCAL_SCOPE]
                     },
-                    validation: e => (0, O.default)(e).required().keys({
+                    validation: e => (0, M.default)(e).required().keys({
                         user_id: e.string().required(),
-                        type: e.number().required().valid([x.ActivityActionTypes.JOIN]),
+                        type: e.number().required().valid([b.ActivityActionTypes.JOIN]),
                         content: e.string().min(0).max(1024),
                         pid: e.number().min(0).required()
                     }),
@@ -49637,16 +49641,16 @@
                                 pid: l
                             }
                         } = e, i = t.application.id;
-                        if (null == i) throw new g.default(x.RPCErrors.INVALID_COMMAND, "No application.");
-                        return D(l, i, a, n, s)
+                        if (null == i) throw new L.default(b.RPCErrors.INVALID_COMMAND, "No application.");
+                        return U(l, i, a, n, s)
                     }
                 },
-                [x.RPCCommands.ACCEPT_ACTIVITY_INVITE]: {
+                [b.RPCCommands.ACCEPT_ACTIVITY_INVITE]: {
                     scope: {
-                        [x.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, x.RPC_LOCAL_SCOPE]
+                        [b.RPC_SCOPE_CONFIG.ANY]: [b.OAuth2Scopes.RPC, b.RPC_LOCAL_SCOPE]
                     },
-                    validation: e => (0, O.default)(e).required().keys({
-                        type: e.number().required().valid([x.ActivityActionTypes.JOIN]),
+                    validation: e => (0, M.default)(e).required().keys({
+                        type: e.number().required().valid([b.ActivityActionTypes.JOIN]),
                         user_id: e.string().required(),
                         session_id: e.string().required(),
                         channel_id: e.string().required(),
@@ -49663,9 +49667,9 @@
                                 message_id: i
                             }
                         } = e, r = t.application.id;
-                        if (null == r) throw new g.default(x.RPCErrors.INVALID_COMMAND, "No application.");
+                        if (null == r) throw new L.default(b.RPCErrors.INVALID_COMMAND, "No application.");
                         let u = Promise.resolve(!1);
-                        if (n === x.ActivityActionTypes.JOIN) u = o.default.join({
+                        if (n === b.ActivityActionTypes.JOIN) u = o.default.join({
                             userId: a,
                             sessionId: s,
                             applicationId: r,
@@ -49673,13 +49677,13 @@
                             messageId: i
                         });
                         return u.then(e => {
-                            if (!e) throw new g.default(x.RPCErrors.INVALID_INVITE, "Invite is expired or invalid.")
+                            if (!e) throw new L.default(b.RPCErrors.INVALID_INVITE, "Invite is expired or invalid.")
                         })
                     }
                 },
-                [x.RPCCommands.OPEN_INVITE_DIALOG]: {
+                [b.RPCCommands.OPEN_INVITE_DIALOG]: {
                     scope: {
-                        [x.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, x.RPC_LOCAL_SCOPE, x.RPC_AUTHENTICATED_SCOPE]
+                        [b.RPC_SCOPE_CONFIG.ANY]: [b.OAuth2Scopes.RPC, b.RPC_LOCAL_SCOPE, b.RPC_AUTHENTICATED_SCOPE]
                     },
                     handler(e) {
                         var t, s;
@@ -49688,10 +49692,10 @@
                         } = e, {
                             channel: r,
                             guild: o
-                        } = (0, v.validateOpenInviteDialog)(), u = h.default.getWindow(x.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+                        } = (0, P.validateOpenInviteDialog)(), u = I.default.getWindow(b.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
                         (null === (t = u) || void 0 === t ? void 0 : t.closed) && (u = null);
-                        let d = null != u ? x.AppContext.POPOUT : x.AppContext.APP;
-                        (0, A.exitFullScreen)({}, null === (s = u) || void 0 === s ? void 0 : s.document), (0, l.openModalLazy)(async () => {
+                        let d = null != u ? b.AppContext.POPOUT : b.AppContext.APP;
+                        (0, O.exitFullScreen)({}, null === (s = u) || void 0 === s ? void 0 : s.document), (0, l.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await n.el("310688").then(n.bind(n, "310688"));
@@ -49700,32 +49704,32 @@
                                 guild: o,
                                 channel: r,
                                 applicationId: i.application.id,
-                                analyticsLocation: x.AnalyticsLocations.ACTIVITY_RPC,
-                                source: x.InstantInviteSources.ACTIVITY_INVITE
+                                analyticsLocation: b.AnalyticsLocations.ACTIVITY_RPC,
+                                source: b.InstantInviteSources.ACTIVITY_INVITE
                             })
                         }, {
-                            contextKey: d === x.AppContext.POPOUT ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT
+                            contextKey: d === b.AppContext.POPOUT ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT
                         })
                     }
                 },
-                [x.RPCCommands.INITIATE_IMAGE_UPLOAD]: (0, s.createRPCCommand)(x.RPCCommands.INITIATE_IMAGE_UPLOAD, {
+                [b.RPCCommands.INITIATE_IMAGE_UPLOAD]: (0, s.createRPCCommand)(b.RPCCommands.INITIATE_IMAGE_UPLOAD, {
                     scope: {
-                        [x.RPC_SCOPE_CONFIG.ANY]: [x.OAuth2Scopes.RPC, x.RPC_LOCAL_SCOPE, x.RPC_AUTHENTICATED_SCOPE]
+                        [b.RPC_SCOPE_CONFIG.ANY]: [b.OAuth2Scopes.RPC, b.RPC_LOCAL_SCOPE, b.RPC_AUTHENTICATED_SCOPE]
                     },
                     handler(e) {
                         var t;
                         let {
                             socket: n
                         } = e, a = n.application.id;
-                        if (null == a) throw new g.default(x.RPCErrors.INVALID_COMMAND, "No application.");
-                        let s = null === (t = (0, L.default)()) || void 0 === t ? void 0 : t.id;
-                        if (null == s) throw new g.default(x.RPCErrors.UNKNOWN_ERROR, "Unable to find selected channel");
+                        if (null == a) throw new L.default(b.RPCErrors.INVALID_COMMAND, "No application.");
+                        let s = null === (t = (0, x.default)()) || void 0 === t ? void 0 : t.id;
+                        if (null == s) throw new L.default(b.RPCErrors.UNKNOWN_ERROR, "Unable to find selected channel");
                         return new Promise((e, t) => {
                             ! function(e, t) {
                                 var n;
-                                let a = T.default.getFocusedWindowId(),
+                                let a = N.default.getFocusedWindowId(),
                                     s = null == a ? null : null === (n = (0, c.getAppWindowContextValue)(a)) || void 0 === n ? void 0 : n.renderWindow;
-                                if (null == s) throw new g.default(x.RPCErrors.UNKNOWN_ERROR, "No valid window found");
+                                if (null == s) throw new L.default(b.RPCErrors.UNKNOWN_ERROR, "No valid window found");
                                 let l = s.document.createElement("input");
                                 l.style.display = "none", l.type = "file", l.accept = "image/jpeg, image/jpg, image/png, image/gif";
                                 let i = () => {
@@ -49734,24 +49738,24 @@
                                     }, 1e3)
                                 };
                                 l.addEventListener("change", () => {
-                                    (0, N.isNotNullish)(l.files) && e(l.files[0]), i()
+                                    (0, A.isNotNullish)(l.files) && e(l.files[0]), i()
                                 }), l.addEventListener("cancel", () => {
                                     i()
                                 }), s.document.body.addEventListener("focus", i, !0), s.document.body.appendChild(l), l.click()
                             }(async n => {
                                 let l = await (0, f.uploadImageAttachment)(a, s, n);
-                                (0, N.isNotNullish)(l) && (0, N.isNotNullish)(l.url) && !(l instanceof d.default) ? e({
+                                (0, A.isNotNullish)(l) && (0, A.isNotNullish)(l.url) && !(l instanceof d.default) ? e({
                                     image_url: l.url
                                 }): t(l)
                             }, () => t())
                         }).catch(e => {
-                            throw new g.default(x.RPCErrors.UNKNOWN_ERROR, "Failed to upload image")
+                            throw new L.default(b.RPCErrors.UNKNOWN_ERROR, "Failed to upload image")
                         })
                     }
                 }),
-                [x.RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: (0, s.createRPCCommand)(x.RPCCommands.OPEN_SHARE_MOMENT_DIALOG, {
+                [b.RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: (0, s.createRPCCommand)(b.RPCCommands.OPEN_SHARE_MOMENT_DIALOG, {
                     scope: {
-                        [x.RPC_SCOPE_CONFIG.ANY]: [x.RPC_AUTHENTICATED_SCOPE]
+                        [b.RPC_SCOPE_CONFIG.ANY]: [b.RPC_AUTHENTICATED_SCOPE]
                     },
                     handler(e) {
                         var t;
@@ -49761,19 +49765,51 @@
                                 mediaUrl: a
                             }
                         } = e;
-                        (0, R.validatePostMessageTransport)(n.transport);
+                        (0, v.validatePostMessageTransport)(n.transport);
                         let s = n.application.id;
-                        if (null == s) throw new g.default(x.RPCErrors.INVALID_COMMAND, "No application.");
-                        let l = (0, S.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, x.ApplicationFlags.EMBEDDED);
-                        if (!l) throw new g.default(x.RPCErrors.INVALID_COMMAND, "This application cannot access this API");
-                        let i = (0, L.default)();
-                        if (null == i) throw new g.default(x.RPCErrors.INVALID_COMMAND, "No channel found");
-                        if (!p.default.isDiscordCdnUrl(a)) throw new g.default(x.RPCErrors.INVALID_PAYLOAD, "mediaUrl must be a Discord CDN url");
-                        (0, _.openActivityShareMomentModal)({
+                        if (null == s) throw new L.default(b.RPCErrors.INVALID_COMMAND, "No application.");
+                        let l = (0, p.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, b.ApplicationFlags.EMBEDDED);
+                        if (!l) throw new L.default(b.RPCErrors.INVALID_COMMAND, "This application cannot access this API");
+                        let i = (0, x.default)();
+                        if (null == i) throw new L.default(b.RPCErrors.INVALID_COMMAND, "No channel found");
+                        if (!R.default.isDiscordCdnUrl(a)) throw new L.default(b.RPCErrors.INVALID_PAYLOAD, "mediaUrl must be a Discord CDN url");
+                        (0, h.openActivityShareMomentModal)({
                             applicationId: s,
                             channelId: i.id,
                             mediaUrl: a
                         })
+                    }
+                }),
+                [b.RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: (0, s.createRPCCommand)(b.RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
+                    scope: {
+                        [b.RPC_SCOPE_CONFIG.ANY]: [b.RPC_AUTHENTICATED_SCOPE]
+                    },
+                    handler(e) {
+                        let {
+                            socket: t
+                        } = e;
+                        (0, v.validatePostMessageTransport)(t.transport);
+                        let n = E.default.getCurrentEmbeddedActivity();
+                        if (null == n) return {
+                            participants: []
+                        };
+                        let {
+                            guildId: a,
+                            channelId: s
+                        } = n, l = Array.from(n.connections.values(), e => {
+                            let {
+                                user_id: t
+                            } = e, n = S.default.getUser(t);
+                            if (null == n) return;
+                            let l = (0, g.getNickname)(a, s, n);
+                            return {
+                                ...(0, D.default)(n),
+                                nickname: null != l ? l : void 0
+                            }
+                        }).filter(A.isNotNullish);
+                        return {
+                            participants: l
+                        }
                     }
                 })
             }

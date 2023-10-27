@@ -7461,6 +7461,9 @@
         387111: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
+                getNickname: function() {
+                    return d
+                },
                 default: function() {
                     return E
                 }

@@ -28,32 +28,32 @@
                 u = _("58608"),
                 s = _("387111"),
                 T = _("49111"),
-                A = _("782340"),
-                c = _("611522");
+                c = _("782340"),
+                A = _("611522");
             (E = i || (i = {}))[E.INITIAL = 0] = "INITIAL", E[E.OTHER_REASON = 1] = "OTHER_REASON";
 
             function O() {
                 return [{
                     value: 0,
-                    label: A.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_NONE
+                    label: c.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_NONE
                 }, {
                     value: 1 * T.Durations.HOUR,
-                    label: A.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_1HR
+                    label: c.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_1HR
                 }, {
                     value: 6 * T.Durations.HOUR,
-                    label: A.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_6HR
+                    label: c.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_6HR
                 }, {
                     value: 12 * T.Durations.HOUR,
-                    label: A.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_12HR
+                    label: c.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_12HR
                 }, {
                     value: 1 * T.Durations.DAY,
-                    label: A.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_24HR
+                    label: c.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_24HR
                 }, {
                     value: 3 * T.Durations.DAY,
-                    label: A.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_3D
+                    label: c.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_3D
                 }, {
                     value: 7 * T.Durations.DAY,
-                    label: A.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_7D
+                    label: c.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_7D
                 }]
             }
             let N = O()[1].value;
@@ -100,19 +100,19 @@
                 }, []), V = n.useCallback(() => {
                     D(i.INITIAL)
                 }, []), y = [{
-                    name: A.default.Messages.BAN_REASON_OPTION_SPAM_ACCOUNT,
-                    value: A.default.Messages.BAN_REASON_OPTION_SPAM_ACCOUNT
+                    name: c.default.Messages.BAN_REASON_OPTION_SPAM_ACCOUNT,
+                    value: c.default.Messages.BAN_REASON_OPTION_SPAM_ACCOUNT
                 }, {
-                    name: A.default.Messages.BAN_REASON_OPTION_HACKED_ACCOUNT,
-                    value: A.default.Messages.BAN_REASON_OPTION_HACKED_ACCOUNT
+                    name: c.default.Messages.BAN_REASON_OPTION_HACKED_ACCOUNT,
+                    value: c.default.Messages.BAN_REASON_OPTION_HACKED_ACCOUNT
                 }, {
-                    name: A.default.Messages.BAN_REASON_OPTION_BREAKING_RULES,
-                    value: A.default.Messages.BAN_REASON_OPTION_BREAKING_RULES
+                    name: c.default.Messages.BAN_REASON_OPTION_BREAKING_RULES,
+                    value: c.default.Messages.BAN_REASON_OPTION_BREAKING_RULES
                 }], F = (() => {
-                    if (null != M && null != L) return A.default.Messages.BAN_MULTIPLE_CONFIRM_TITLE.format({
+                    if (null != M && null != L) return c.default.Messages.BAN_MULTIPLE_CONFIRM_TITLE.format({
                         count: null == L ? void 0 : L.size
                     });
-                    return null == E ? "" : A.default.Messages.BAN_CONFIRM_TITLE.format({
+                    return null == E ? "" : c.default.Messages.BAN_CONFIRM_TITLE.format({
                         username: "@".concat(s.default.getName(t, null, E))
                     })
                 })();
@@ -125,11 +125,11 @@
                             children: F
                         })
                     }), (0, a.jsxs)(l.ModalContent, {
-                        className: c.modalContent,
+                        className: A.modalContent,
                         children: [(0, a.jsxs)(u.default, {
                             autoPlay: !0,
                             loop: !0,
-                            className: c.spacing,
+                            className: A.spacing,
                             width: 400,
                             children: [(0, a.jsx)("source", {
                                 src: _("430857"),
@@ -142,11 +142,11 @@
                                 src: _("429777")
                             })]
                         }), (0, a.jsxs)(l.FormItem, {
-                            title: A.default.Messages.FORM_LABEL_REASON_BAN,
-                            className: c.spacing,
+                            title: c.default.Messages.FORM_LABEL_REASON_BAN,
+                            className: A.spacing,
                             children: [f && (0, a.jsx)(l.FormErrorBlock, {
-                                className: c.error,
-                                children: A.default.Messages.BAN_REASON_REQUIRED_ERROR
+                                className: A.error,
+                                children: c.default.Messages.BAN_REASON_REQUIRED_ERROR
                             }), (0, a.jsx)(l.Sequencer, {
                                 steps: [i.INITIAL, i.OTHER_REASON],
                                 step: g,
@@ -158,14 +158,14 @@
                                                     value: U,
                                                     options: e,
                                                     onChange: b,
-                                                    radioItemClassName: c.radioItemStyles
+                                                    radioItemClassName: A.radioItemStyles
                                                 }), (0, a.jsxs)(l.Clickable, {
                                                     onClick: k,
-                                                    className: c.banReasonOtherClickable,
+                                                    className: A.banReasonOtherClickable,
                                                     children: [(0, a.jsx)(l.Text, {
                                                         variant: "text-md/medium",
                                                         color: "none",
-                                                        children: A.default.Messages.OTHER
+                                                        children: c.default.Messages.OTHER
                                                     }), (0, a.jsx)(I.default, {
                                                         width: "16",
                                                         height: "16"
@@ -184,8 +184,8 @@
                                 })(y)
                             })]
                         }), (0, a.jsx)(l.FormItem, {
-                            title: A.default.Messages.FORM_LABEL_DELETE_MESSAGE_HISTORY,
-                            className: c.spacing,
+                            title: c.default.Messages.FORM_LABEL_DELETE_MESSAGE_HISTORY,
+                            className: A.spacing,
                             children: (0, a.jsx)(l.SingleSelect, {
                                 options: O(),
                                 value: m,
@@ -196,39 +196,39 @@
                         switch (g) {
                             case i.INITIAL:
                                 return (0, a.jsxs)(l.ModalFooter, {
-                                    className: c.footer,
+                                    className: A.footer,
                                     children: [(0, a.jsx)(l.Button, {
                                         type: "button",
                                         look: l.Button.Looks.LINK,
                                         color: l.Button.Colors.PRIMARY,
                                         onClick: d,
-                                        children: A.default.Messages.CANCEL
+                                        children: c.default.Messages.CANCEL
                                     }), (0, a.jsx)(l.Button, {
                                         type: "submit",
                                         color: l.Button.Colors.RED,
                                         size: l.Button.Sizes.SMALL,
                                         onClick: v,
-                                        children: A.default.Messages.BAN
+                                        children: c.default.Messages.BAN
                                     })]
                                 });
                             case i.OTHER_REASON:
                                 return (0, a.jsxs)(l.ModalFooter, {
-                                    className: c.footerStepped,
+                                    className: A.footerStepped,
                                     children: [(0, a.jsx)(l.Button, {
-                                        className: c.cancel,
-                                        innerClassName: c.cancel,
+                                        className: A.cancel,
+                                        innerClassName: A.cancel,
                                         type: "button",
                                         look: l.Button.Looks.LINK,
                                         color: l.Button.Colors.PRIMARY,
                                         size: l.Button.Sizes.SMALL,
                                         onClick: V,
-                                        children: A.default.Messages.BACK
+                                        children: c.default.Messages.BACK
                                     }), (0, a.jsx)(l.Button, {
                                         type: "submit",
                                         color: l.Button.Colors.RED,
                                         size: l.Button.Sizes.SMALL,
                                         onClick: v,
-                                        children: A.default.Messages.BAN
+                                        children: c.default.Messages.BAN
                                     })]
                                 })
                         }
@@ -270,10 +270,10 @@
             "use strict";
             _.r(t), _.d(t, {
                 useTrackMemberSearchUsed: function() {
-                    return A
+                    return c
                 },
                 useTrackMemberFilterRolesUsed: function() {
-                    return c
+                    return A
                 },
                 MemberSafetyFlagType: function() {
                     return a
@@ -304,7 +304,7 @@
                 u.default.track(e, i)
             }
 
-            function A(e) {
+            function c(e) {
                 let t = l.useCallback(t => {
                     ! function(e) {
                         let t = {
@@ -317,7 +317,7 @@
                 return t
             }
 
-            function c(e) {
+            function A(e) {
                 let t = l.useCallback(t => {
                     ! function(e, t) {
                         let _ = {
@@ -411,21 +411,21 @@
                     responsive: I,
                     mediaLayoutType: u,
                     ...s
-                } = e, T = (0, n.useStateFromStores)([l.default], () => l.default.useReducedMotion), A = i.useRef(null);
+                } = e, T = (0, n.useStateFromStores)([l.default], () => l.default.useReducedMotion), c = i.useRef(null);
 
-                function c() {
+                function A() {
                     var e;
-                    o && (null == A || null === (e = A.current) || void 0 === e || e.play())
+                    o && (null == c || null === (e = c.current) || void 0 === e || e.play())
                 }
 
                 function O() {
                     var e;
-                    o && (null == A || null === (e = A.current) || void 0 === e || e.pause())
+                    o && (null == c || null === (e = c.current) || void 0 === e || e.pause())
                 }
                 return i.useLayoutEffect(() => () => {
                     let {
                         current: e
-                    } = A;
+                    } = c;
                     null != e && function(e) {
                         e.removeAttribute("src"), Array.from(e.children).forEach(e => {
                             (0, a.isElement)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")), (0, a.isElement)(e, HTMLImageElement) && e.removeAttribute("src")
@@ -434,14 +434,14 @@
                             e.load()
                         } catch (e) {}
                     }(e)
-                }, []), i.useLayoutEffect(() => ("function" == typeof t ? (t(null), t(A.current)) : null != t && (t.current = A.current), () => {
+                }, []), i.useLayoutEffect(() => ("function" == typeof t ? (t(null), t(c.current)) : null != t && (t.current = c.current), () => {
                     "function" == typeof t ? t(null) : null != t && (t.current = null)
-                }), [t, A]), (0, E.jsx)("video", {
-                    ref: A,
+                }), [t, c]), (0, E.jsx)("video", {
+                    ref: c,
                     autoPlay: !T && !o && _,
-                    onMouseEnter: c,
+                    onMouseEnter: A,
                     onMouseLeave: O,
-                    onFocus: c,
+                    onFocus: A,
                     onBlur: O,
                     style: u === r.MediaLayoutType.MOSAIC ? {
                         width: "100%",
@@ -467,6 +467,9 @@
         387111: function(e, t, _) {
             "use strict";
             _.r(t), _.d(t, {
+                getNickname: function() {
+                    return o
+                },
                 default: function() {
                     return u
                 }
