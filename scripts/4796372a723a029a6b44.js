@@ -10358,7 +10358,7 @@
                     submitVoteLabel: w,
                     canSubmitVote: F,
                     canTapAnswers: H,
-                    canShowVoteCounts: !0,
+                    canShowVoteCounts: B,
                     hasVoted: B,
                     expirationLabel: null != O ? O : _.default.Messages.POLL_EXPIRED,
                     isExpired: L,
