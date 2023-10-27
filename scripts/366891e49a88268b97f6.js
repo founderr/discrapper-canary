@@ -10279,7 +10279,7 @@
                                 }
                             }(e, c),
                             E = null !== (r = null == f ? void 0 : null === (n = f.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== r ? r : 0,
-                            m = E / y,
+                            m = 0 === y ? 0 : E / y,
                             h = L ? m >= j : void 0,
                             I = B && null !== (u = null == f ? void 0 : f.me_vote) && void 0 !== u && u,
                             T = p[D]({

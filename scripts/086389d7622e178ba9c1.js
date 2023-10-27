@@ -17107,68 +17107,58 @@
             "use strict";
             n.r(t), n.d(t, {
                 StrangerDangerWarningBanner: function() {
-                    return p
+                    return E
                 }
             });
             var a = n("920040"),
                 l = n("773670"),
                 s = n("77078"),
-                i = n("519705"),
-                r = n("736964"),
-                o = n("945330"),
-                u = n("277734"),
-                d = n("844911"),
-                c = n("964974"),
-                f = n("49111"),
-                h = n("782340"),
-                m = n("839777"),
-                E = n("145680");
+                i = n("736964"),
+                r = n("945330"),
+                o = n("277734"),
+                u = n("844911"),
+                d = n("964974"),
+                c = n("49111"),
+                f = n("782340"),
+                h = n("839777"),
+                m = n("145680");
 
-            function p(e) {
+            function E(e) {
                 let {
                     channelId: t,
-                    warningId: p,
-                    senderId: C
-                } = e, g = l.useCallback(() => {
-                    (0, u.dismissChannelSafetyWarnings)(t, [p])
-                }, [t, p]), S = l.useCallback(() => {
-                    g(), (0, d.trackCtaEvent)({
+                    warningId: E,
+                    senderId: p
+                } = e, C = l.useCallback(() => {
+                    (0, o.dismissChannelSafetyWarnings)(t, [E])
+                }, [t, E]), g = l.useCallback(() => {
+                    C(), (0, u.trackCtaEvent)({
                         channelId: t,
-                        warningId: p,
-                        senderId: C,
-                        cta: d.CtaEventTypes.DISMISS
+                        warningId: E,
+                        senderId: p,
+                        cta: u.CtaEventTypes.DISMISS
                     })
-                }, [g, t, p, C]), _ = l.useCallback(() => {
-                    i.default.updateChannelOverrideSettings(null, t, {
-                        muted: !0
-                    }), g(), (0, s.showToast)((0, s.createToast)(h.default.Messages.STRANGER_DANGER_MUTE_CONFIRM, s.ToastType.SUCCESS)), (0, d.trackCtaEvent)({
-                        channelId: t,
-                        warningId: p,
-                        senderId: C,
-                        cta: d.CtaEventTypes.USER_MODAL_MUTE
-                    })
-                }, [g, t, p, C]), T = l.useCallback(e => () => {
-                    r.default.addRelationship({
-                        userId: C,
+                }, [C, t, E, p]), S = l.useCallback(e => () => {
+                    i.default.addRelationship({
+                        userId: p,
                         context: {
-                            location: c.LOCATION_CONTEXT_WEB
+                            location: d.LOCATION_CONTEXT_WEB
                         },
-                        type: f.RelationshipTypes.BLOCKED
-                    }), g(), (0, s.showToast)((0, s.createToast)(h.default.Messages.STRANGER_DANGER_BLOCK_CONFIRM, s.ToastType.SUCCESS)), (0, d.trackCtaEvent)({
+                        type: c.RelationshipTypes.BLOCKED
+                    }), C(), (0, s.showToast)((0, s.createToast)(f.default.Messages.STRANGER_DANGER_BLOCK_CONFIRM, s.ToastType.SUCCESS)), (0, u.trackCtaEvent)({
                         channelId: t,
-                        warningId: p,
-                        senderId: C,
+                        warningId: E,
+                        senderId: p,
                         cta: e
                     })
-                }, [g, t, p, C]);
+                }, [C, t, E, p]);
                 l.useEffect(() => {
-                    (0, d.trackViewedEvent)(f.AnalyticEvents.SAFETY_WARNING_VIEWED, {
+                    (0, u.trackViewedEvent)(c.AnalyticEvents.SAFETY_WARNING_VIEWED, {
                         channelId: t,
-                        warningId: p,
-                        senderId: C
+                        warningId: E,
+                        senderId: p
                     })
-                }, [t, p, C]);
-                let A = () => {
+                }, [t, E, p]);
+                let _ = () => {
                         (0, s.openModalLazy)(async () => {
                             let {
                                 default: e
@@ -17182,30 +17172,29 @@
                                     transitionState: l,
                                     onClose: s,
                                     channelId: t,
-                                    warningId: p,
-                                    senderId: C,
+                                    warningId: E,
+                                    senderId: p,
                                     handleBlock: () => {
-                                        I(d.CtaEventTypes.USER_MODAL_BLOCK_CONFIRM, d.CtaEventTypes.USER_MODAL_BLOCK_CANCEL, A)
-                                    },
-                                    handleMute: _
+                                        T(u.CtaEventTypes.USER_MODAL_BLOCK_CONFIRM, u.CtaEventTypes.USER_MODAL_BLOCK_CANCEL, _)
+                                    }
                                 })
                             }
                         })
                     },
-                    I = (e, l, i) => {
+                    T = (e, l, i) => {
                         (0, s.openModalLazy)(async () => {
                             let {
                                 default: s
                             } = await n.el("968710").then(n.bind(n, "968710"));
                             return n => (0, a.jsx)(s, {
                                 ...n,
-                                userId: C,
-                                confirmBlock: T(e),
+                                userId: p,
+                                confirmBlock: S(e),
                                 onCancel: () => {
-                                    null == i || i(), (0, d.trackCtaEvent)({
+                                    null == i || i(), (0, u.trackCtaEvent)({
                                         channelId: t,
-                                        warningId: p,
-                                        senderId: C,
+                                        warningId: E,
+                                        senderId: p,
                                         cta: l
                                     })
                                 }
@@ -17213,55 +17202,55 @@
                         })
                     };
                 return (0, a.jsxs)("div", {
-                    className: m.strangerDangerBanner,
+                    className: h.strangerDangerBanner,
                     children: [(0, a.jsxs)("div", {
-                        className: m.shieldAndHeading,
+                        className: h.shieldAndHeading,
                         children: [(0, a.jsx)("img", {
-                            className: m.safetyShieldIcon,
-                            src: E,
+                            className: h.safetyShieldIcon,
+                            src: m,
                             alt: ""
                         }), (0, a.jsxs)("div", {
                             children: [(0, a.jsx)(s.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "text-primary",
-                                children: h.default.Messages.STRANGER_DANGER_BANNER_HEADER
+                                children: f.default.Messages.STRANGER_DANGER_BANNER_HEADER
                             }), (0, a.jsx)(s.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-primary",
-                                children: h.default.Messages.STRANGER_DANGER_BANNER_DESCRIPTION
+                                children: f.default.Messages.STRANGER_DANGER_BANNER_DESCRIPTION
                             })]
                         })]
                     }), (0, a.jsxs)("div", {
-                        className: m.buttons,
+                        className: h.buttons,
                         children: [(0, a.jsx)(s.Button, {
                             size: s.Button.Sizes.SMALL,
                             color: s.Button.Colors.BRAND,
-                            "aria-label": h.default.Messages.STRANGER_DANGER_BANNER_MORE_TIPS,
+                            "aria-label": f.default.Messages.STRANGER_DANGER_BANNER_MORE_TIPS,
                             onClick: () => {
-                                A(), (0, d.trackCtaEvent)({
+                                _(), (0, u.trackCtaEvent)({
                                     channelId: t,
-                                    warningId: p,
-                                    senderId: C,
-                                    cta: d.CtaEventTypes.OPEN_MORE_TIPS
+                                    warningId: E,
+                                    senderId: p,
+                                    cta: u.CtaEventTypes.OPEN_MORE_TIPS
                                 })
                             },
-                            children: h.default.Messages.STRANGER_DANGER_BANNER_MORE_TIPS
+                            children: f.default.Messages.STRANGER_DANGER_BANNER_MORE_TIPS
                         }), (0, a.jsx)(s.Button, {
                             size: s.Button.Sizes.SMALL,
                             color: s.Button.Colors.RED,
-                            "aria-label": h.default.Messages.STRANGER_DANGER_BANNER_BLOCK,
-                            onClick: () => I(d.CtaEventTypes.USER_BANNER_BLOCK_CONFIRM, d.CtaEventTypes.USER_BANNER_BLOCK_CANCEL),
-                            children: h.default.Messages.STRANGER_DANGER_BANNER_BLOCK
+                            "aria-label": f.default.Messages.STRANGER_DANGER_BANNER_BLOCK,
+                            onClick: () => T(u.CtaEventTypes.USER_BANNER_BLOCK_CONFIRM, u.CtaEventTypes.USER_BANNER_BLOCK_CANCEL),
+                            children: f.default.Messages.STRANGER_DANGER_BANNER_BLOCK
                         })]
                     }), (0, a.jsx)(s.Clickable, {
-                        className: m.closeButton,
-                        onClick: S,
+                        className: h.closeButton,
+                        onClick: g,
                         role: "button",
-                        "aria-label": h.default.Messages.DISMISS,
-                        children: (0, a.jsx)(o.default, {
+                        "aria-label": f.default.Messages.DISMISS,
+                        children: (0, a.jsx)(r.default, {
                             width: 24,
                             height: 24,
-                            className: m.closeButton
+                            className: h.closeButton
                         })
                     })]
                 })
