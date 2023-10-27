@@ -12046,24 +12046,26 @@
             "use strict";
             n.r(t), n.d(t, {
                 useShowConvoStarterInDM: function() {
-                    return o
+                    return u
                 }
             });
             var a = n("498225"),
                 l = n("288518"),
-                s = n("377253"),
-                i = n("27618"),
-                r = n("49111");
+                s = n("933152"),
+                i = n("377253"),
+                r = n("27618"),
+                o = n("49111");
 
-            function o(e) {
+            function u(e) {
                 let t = e.isDM() && !e.isSystemDM() && !e.rawRecipients.some(e => e.bot),
-                    n = t ? e.getRecipientId() : null;
-                return (0, a.useStateFromStores)([s.default, l.default, i.default], () => {
-                    if (!t || l.default.isMessageRequest(e.id) || null != n && i.default.getRelationshipType(n) === r.RelationshipTypes.BLOCKED) return !1;
-                    let a = s.default.getMessages(e.id),
-                        o = a.ready && !a.hasMoreBefore && !a.hasMoreAfter && a.length < 25;
-                    return o && !s.default.hasCurrentUserSentMessage(e.id)
-                }, [e.id, n, t])
+                    n = t ? e.getRecipientId() : null,
+                    u = (0, s.useStrangerDangerWarning)(e.id, "dm_convo_starter");
+                return (0, a.useStateFromStores)([i.default, l.default, r.default], () => {
+                    if (null != u || !t || l.default.isMessageRequest(e.id) || null != n && r.default.getRelationshipType(n) === o.RelationshipTypes.BLOCKED) return !1;
+                    let a = i.default.getMessages(e.id),
+                        s = a.ready && !a.hasMoreBefore && !a.hasMoreAfter && a.length < 25;
+                    return s && !i.default.hasCurrentUserSentMessage(e.id)
+                }, [u, t, e.id, n])
             }
         },
         738352: function(e, t, n) {
