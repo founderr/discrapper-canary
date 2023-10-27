@@ -14548,19 +14548,18 @@
                 var t;
                 let {
                     filterOutEmptyCurrentGuild: n = !1
-                } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, i = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), [C, S, g] = (0, r.useStateFromStoresArray)([c.default], () => [c.default.getSounds(), c.default.getFavorites(), null !== (t = c.default.getDefaultSounds()) && void 0 !== t ? t : m.EMPTY_SOUND_LIST]), T = (0, p.useSortedGuildIdsForSoundboard)(e, !1), v = (0, r.useStateFromStoresArray)([s.default], () => {
+                } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, i = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), [C, S, g, T] = (0, r.useStateFromStoresArray)([c.default], () => [c.default.getSounds(), c.default.getFavorites(), null !== (t = c.default.getDefaultSounds()) && void 0 !== t ? t : m.EMPTY_SOUND_LIST, c.default.isFetching()]), v = (0, p.useSortedGuildIdsForSoundboard)(e, !1), y = (0, r.useStateFromStoresArray)([s.default], () => {
                     let e = [];
-                    return T.forEach(t => {
+                    return v.forEach(t => {
                         let n = s.default.getGuild(t);
                         null != n && e.push(n)
                     }), e
-                }), y = d.default.canUseSoundboardEverywhere(i), x = (0, r.useStateFromStores)([s.default], () => s.default.getGuild(null == e ? void 0 : e.guild_id)), I = (0, r.useStateFromStores)([a.default], () => {
+                }), x = d.default.canUseSoundboardEverywhere(i), I = (0, r.useStateFromStores)([s.default], () => s.default.getGuild(null == e ? void 0 : e.guild_id)), _ = (0, r.useStateFromStores)([a.default], () => {
                     let {
                         canCreateExpressions: e
-                    } = (0, o.getManageResourcePermissions)(x);
+                    } = (0, o.getManageResourcePermissions)(I);
                     return e
-                }, [x]);
-                return l.useMemo(() => {
+                }, [I]), N = l.useMemo(() => {
                     let e = [];
                     return ! function(e, t, n, l) {
                         let i = [],
@@ -14578,7 +14577,7 @@
                             },
                             items: s
                         })
-                    }(e, T, C, S), ! function(e, t, n, l, i) {
+                    }(e, v, C, S), ! function(e, t, n, l, i) {
                         var r;
                         if (null == t) return;
                         let o = null !== (r = l.get(t.id)) && void 0 !== r ? r : [],
@@ -14597,7 +14596,7 @@
                             key: t.id,
                             items: s
                         })
-                    }(e, x, I, C, n), !y && E(e, g), ! function(e, t, n, l) {
+                    }(e, I, _, C, n), !x && E(e, g), ! function(e, t, n, l) {
                         for (let r of t) {
                             var i;
                             if (r.id === n) continue;
@@ -14612,8 +14611,12 @@
                                 items: o
                             })
                         }
-                    }(e, v, null == x ? void 0 : x.id, C), y && E(e, g), e
-                }, [T, C, S, x, I, n, y, v, g])
+                    }(e, y, null == I ? void 0 : I.id, C), x && E(e, g), e
+                }, [v, C, S, I, _, n, x, y, g]);
+                return {
+                    categories: N,
+                    isFetching: T
+                }
             }
 
             function S(e, t, n) {
@@ -15400,7 +15403,9 @@
                     gridNotice: x
                 } = e, {
                     analyticsLocations: M
-                } = (0, c.default)(), [b, K] = i.useState(!1), V = (0, s.useStateFromStores)([C.default], () => C.default.getCurrentUser()), W = (0, s.useStateFromStores)([S.default], () => S.default.getVoiceState(r, null !== (t = null == V ? void 0 : V.id) && void 0 !== t ? t : "")), q = (null == W ? void 0 : W.selfDeaf) || (null == W ? void 0 : W.mute) || (null == W ? void 0 : W.suppress), Y = (0, m.useExpressionPickerStore)(e => e.searchQuery), z = (0, g.useUID)(), Q = (0, O.default)(o), [X, Z] = i.useState([]), J = (0, O.useSearchCategories)(Q, X, Y), $ = E.SoundboardPickerCollapsedSections.useSetting(), ee = i.useMemo(() => new Set($), [$]), et = null == o, en = _.default.canUseCustomCallSounds(V), el = i.useCallback(e => {
+                } = (0, c.default)(), [b, K] = i.useState(!1), V = (0, s.useStateFromStores)([C.default], () => C.default.getCurrentUser()), W = (0, s.useStateFromStores)([S.default], () => S.default.getVoiceState(r, null !== (t = null == V ? void 0 : V.id) && void 0 !== t ? t : "")), q = (null == W ? void 0 : W.selfDeaf) || (null == W ? void 0 : W.mute) || (null == W ? void 0 : W.suppress), Y = (0, m.useExpressionPickerStore)(e => e.searchQuery), z = (0, g.useUID)(), {
+                    categories: Q
+                } = (0, O.default)(o), [X, Z] = i.useState([]), J = (0, O.useSearchCategories)(Q, X, Y), $ = E.SoundboardPickerCollapsedSections.useSetting(), ee = i.useMemo(() => new Set($), [$]), et = null == o, en = _.default.canUseCustomCallSounds(V), el = i.useCallback(e => {
                     let t = !ee.has(e);
                     t ? ee.add(e) : ee.delete(e), E.SoundboardPickerCollapsedSections.updateSetting(Array.from(ee))
                 }, [ee]), ei = i.useCallback((e, t, n) => {

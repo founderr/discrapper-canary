@@ -1021,6 +1021,9 @@
                 isFetchingDefaultSounds() {
                     return L === i.FETCHING
                 }
+                isFetching() {
+                    return this.isFetchingSounds() || this.isFetchingDefaultSounds()
+                }
                 shouldFetchDefaultSounds() {
                     return L === i.NOT_FETCHED
                 }

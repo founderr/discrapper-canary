@@ -3580,6 +3580,9 @@
                 isFetchingDefaultSounds() {
                     return g === l.FETCHING
                 }
+                isFetching() {
+                    return this.isFetchingSounds() || this.isFetchingDefaultSounds()
+                }
                 shouldFetchDefaultSounds() {
                     return g === l.NOT_FETCHED
                 }

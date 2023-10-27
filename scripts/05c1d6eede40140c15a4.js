@@ -2637,6 +2637,9 @@
                 isFetchingDefaultSounds() {
                     return O === r.FETCHING
                 }
+                isFetching() {
+                    return this.isFetchingSounds() || this.isFetchingDefaultSounds()
+                }
                 shouldFetchDefaultSounds() {
                     return O === r.NOT_FETCHED
                 }

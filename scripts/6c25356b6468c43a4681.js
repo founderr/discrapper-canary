@@ -399,7 +399,7 @@
                             variant: "text-md/normal",
                             children: r
                         })
-                    }) : null, m = null != S ? (0, i.jsxs)(a.Text, {
+                    }) : null, g = null != S ? (0, i.jsxs)(a.Text, {
                         className: u(s.submitText, s.spacing),
                         variant: "text-sm/normal",
                         children: [(0, i.jsx)("br", {}), (0, i.jsx)(a.Clickable, {
@@ -409,7 +409,7 @@
                                 children: S
                             })
                         })]
-                    }) : null, g = I ? (0, i.jsx)(a.Card, {
+                    }) : null, m = I ? (0, i.jsx)(a.Card, {
                         type: a.Card.Types.SUCCESS,
                         className: s.card,
                         children: (0, i.jsx)(a.Text, {
@@ -433,7 +433,7 @@
                                     variant: "text-md/normal",
                                     className: s.spacing,
                                     children: _
-                                }) : null, C, g, (0, i.jsxs)(a.FormItem, {
+                                }) : null, C, m, (0, i.jsxs)(a.FormItem, {
                                     title: this.getLabelText(),
                                     className: s.spacing,
                                     children: [(0, i.jsx)(a.TextInput, {
@@ -449,7 +449,7 @@
                                         variant: "text-xs/normal",
                                         className: s.error,
                                         children: null != d ? d : h
-                                    }) : null, m]
+                                    }) : null, g]
                                 })]
                             }), (0, i.jsxs)(a.ModalFooter, {
                                 children: [(0, i.jsx)(a.Button, {
@@ -1003,10 +1003,10 @@
                     return C
                 },
                 REACTION_PICKER_TAB_ID: function() {
-                    return m
+                    return g
                 },
                 SUPER_REACTION_PICKER_TAB_ID: function() {
-                    return g
+                    return m
                 },
                 SuperReactionBalanceLocations: function() {
                     return o
@@ -1033,8 +1033,8 @@
                 h = "soundboard-picker-tab-panel",
                 I = "soundboard-picker-tab",
                 C = "reaction-picker-tab-panel",
-                m = "reaction-picker-tab",
-                g = "super-reaction-picker-tab";
+                g = "reaction-picker-tab",
+                m = "super-reaction-picker-tab";
             (o || (o = {})).TOOLTIP = "tooltip";
             let v = "gif-picker-tab-panel",
                 N = "gif-picker-tab",
@@ -1321,16 +1321,16 @@
                     analyticsObject: h,
                     analyticsLocation: I,
                     analyticsSourceLocation: C,
-                    isGift: m = !1,
-                    giftMessage: g,
+                    isGift: g = !1,
+                    giftMessage: m,
                     subscriptionTier: v,
                     trialId: N,
                     postSuccessGuild: A,
                     openInvoiceId: O,
                     applicationId: U,
                     referralTrialOfferId: R,
-                    giftRecipient: L,
-                    returnRef: D
+                    giftRecipient: D,
+                    returnRef: L
                 } = null != e ? e : {}, y = !1, P = (0, l.v4)();
                 (0, r.openModalLazy)(async () => {
                     let {
@@ -1346,16 +1346,16 @@
                             loadId: P,
                             subscriptionTier: v,
                             skuId: v,
-                            isGift: m,
-                            giftMessage: g,
-                            giftRecipient: L,
+                            isGift: g,
+                            giftMessage: m,
+                            giftRecipient: D,
                             initialPlanId: t,
                             followupSKUInfo: f,
                             onClose: e => {
                                 l(), null == _ || _(e), e && (null == p || p())
                             },
                             onComplete: () => {
-                                y = !0, null == S || S(), !m && ((0, o.setIsPersistentHelperHidden)(!0), (0, o.setCanPlayWowMoment)(!0))
+                                y = !0, null == S || S(), !g && ((0, o.setIsPersistentHelperHidden)(!0), (0, o.setCanPlayWowMoment)(!0))
                             },
                             onSubscriptionConfirmation: p,
                             analyticsLocations: T,
@@ -1368,7 +1368,7 @@
                             openInvoiceId: O,
                             applicationId: U,
                             referralTrialOfferId: R,
-                            returnRef: D
+                            returnRef: L
                         })
                     }
                 }, {
@@ -1380,11 +1380,11 @@
                             location: null != I ? I : h,
                             source: C,
                             subscription_type: c.SubscriptionTypes.PREMIUM,
-                            is_gift: m,
+                            is_gift: g,
                             eligible_for_trial: null != N,
                             application_id: U,
                             location_stack: T
-                        }), (0, u.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == _ || _(y), y && (!m && d.ComponentDispatch.dispatch(c.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED), null == p || p())
+                        }), (0, u.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == _ || _(y), y && (!g && d.ComponentDispatch.dispatch(c.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED), null == p || p())
                     },
                     onCloseRequest: c.NOOP
                 })
@@ -1526,14 +1526,14 @@
                     autoTrackExposure: !p && !S && t
                 }), {
                     premiumLikelihood: C,
-                    fetched: m
+                    fetched: g
                 } = (0, i.useStateFromStoresObject)([o.default], () => {
                     let e = o.default.getState();
                     return {
                         fetched: e.fetched,
                         premiumLikelihood: e.premiumLikelihood
                     }
-                }), g = (0, i.useStateFromStores)([r.default], () => r.default.isLoadedForSKUs([c.PremiumSubscriptionSKUs.TIER_0, c.PremiumSubscriptionSKUs.TIER_2])), v = !p && T && !S && (h ? !m || !g : !m), N = c.PremiumTypes.TIER_2;
+                }), m = (0, i.useStateFromStores)([r.default], () => r.default.isLoadedForSKUs([c.PremiumSubscriptionSKUs.TIER_0, c.PremiumSubscriptionSKUs.TIER_2])), v = !p && T && !S && (h ? !g || !m : !g), N = c.PremiumTypes.TIER_2;
                 if (S) {
                     let e = _.subscription_trial;
                     (null == e ? void 0 : e.sku_id) === c.PremiumSubscriptionSKUs.TIER_0 ? N = c.PremiumTypes.TIER_0 : (null == e ? void 0 : e.sku_id) === c.PremiumSubscriptionSKUs.TIER_2 && (N = c.PremiumTypes.TIER_2)
@@ -1588,7 +1588,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return m
                 }
             });
             var i = n("920040"),
@@ -1609,20 +1609,20 @@
                 h = n("49111"),
                 I = n("782340"),
                 C = n("503731"),
-                m = n("393828");
+                g = n("393828");
 
-            function g(e) {
+            function m(e) {
                 var t, n, r;
                 let {
-                    title: g,
+                    title: m,
                     type: v,
                     guildBoostProps: N,
                     analyticsSource: A,
                     analyticsLocation: O,
                     body: U,
                     context: R,
-                    glowUp: L,
-                    modalClassName: D,
+                    glowUp: D,
+                    modalClassName: L,
                     artContainerClassName: y,
                     bodyClassName: P,
                     transitionState: M,
@@ -1662,15 +1662,15 @@
                     alt: "",
                     src: W.artURL
                 }) : W.artElement, (0, i.jsxs)(a.ModalRoot, {
-                    className: u(C.root, D),
-                    "aria-label": g,
+                    className: u(C.root, L),
+                    "aria-label": m,
                     transitionState: M,
                     children: [(0, i.jsxs)("div", {
                         className: q,
                         children: [Q, x ? (0, i.jsx)("img", {
                             className: C.sparkleBadge,
                             alt: "",
-                            src: m
+                            src: g
                         }) : null]
                     }), (0, i.jsx)(a.ModalContent, {
                         className: C.content,
@@ -1680,18 +1680,18 @@
                                     onClose: b,
                                     type: v,
                                     subscriptionTier: null !== (r = null == z ? void 0 : null === (n = z.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== r ? r : T.PremiumSubscriptionSKUs.TIER_2,
-                                    headingText: g,
+                                    headingText: m,
                                     context: R,
                                     analyticsLocationObject: O,
                                     discountOffer: J,
                                     trialOffer: z,
-                                    children: L
+                                    children: D
                                 })
                             }) : (0, i.jsxs)(i.Fragment, {
                                 children: [(0, i.jsx)(a.Heading, {
                                     className: C.header,
                                     variant: "heading-xl/semibold",
-                                    children: g
+                                    children: m
                                 }), (0, i.jsx)(a.Text, {
                                     variant: "text-md/normal",
                                     className: u(P),
@@ -1872,7 +1872,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return L
+                    return D
                 }
             });
             var i, l, r = n("427964"),
@@ -1892,8 +1892,8 @@
                 h = new Map,
                 I = new Set,
                 C = l.NOT_FETCHED,
-                m = l.NOT_FETCHED,
-                g = new Set,
+                g = l.NOT_FETCHED,
+                m = new Set,
                 v = new Map,
                 N = !1;
 
@@ -1924,7 +1924,7 @@
                 getOverlaySerializedState() {
                     return {
                         soundboardSounds: Object.fromEntries(T),
-                        favoritedSoundIds: Array.from(g),
+                        favoritedSoundIds: Array.from(m),
                         localSoundboardMutes: Array.from(I)
                     }
                 }
@@ -1947,10 +1947,13 @@
                     return t.find(t => t.soundId === e)
                 }
                 isFetchingSounds() {
-                    return m === l.FETCHING
+                    return g === l.FETCHING
                 }
                 isFetchingDefaultSounds() {
                     return C === l.FETCHING
+                }
+                isFetching() {
+                    return this.isFetchingSounds() || this.isFetchingDefaultSounds()
                 }
                 shouldFetchDefaultSounds() {
                     return C === l.NOT_FETCHED
@@ -1966,10 +1969,10 @@
                     return null != h.get(e)
                 }
                 isFavoriteSound(e) {
-                    return g.has(e)
+                    return m.has(e)
                 }
                 getFavorites() {
-                    return g
+                    return m
                 }
                 isLocalSoundboardMuted(e) {
                     return I.has(e)
@@ -1978,16 +1981,16 @@
                     return N
                 }
                 hasFetchedAllSounds() {
-                    return m === l.FETCHED && C === l.FETCHED
+                    return g === l.FETCHED && C === l.FETCHED
                 }
             }
             R.displayName = "SoundboardStore";
-            var L = new R(o.default, {
+            var D = new R(o.default, {
                 LOGOUT: function() {
-                    T.clear(), h.clear(), v.clear(), N = !1, m = l.NOT_FETCHED, C = l.NOT_FETCHED
+                    T.clear(), h.clear(), v.clear(), N = !1, g = l.NOT_FETCHED, C = l.NOT_FETCHED
                 },
                 GUILD_SOUNDBOARD_FETCH: function() {
-                    m = l.FETCHING
+                    g = l.FETCHING
                 },
                 GUILD_SOUNDBOARD_SOUND_CREATE: A,
                 GUILD_SOUNDBOARD_SOUND_UPDATE: A,
@@ -2035,7 +2038,7 @@
                     } = t;
                     if (n === p.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
                         var l, r;
-                        g = new Set(null !== (r = null == i ? void 0 : null === (l = i.favoriteSoundboardSounds) || void 0 === l ? void 0 : l.soundIds) && void 0 !== r ? r : [])
+                        m = new Set(null !== (r = null == i ? void 0 : null === (l = i.favoriteSoundboardSounds) || void 0 === l ? void 0 : l.soundIds) && void 0 !== r ? r : [])
                     } else n === p.UserSettingsTypes.PRELOADED_USER_SETTINGS && U(i)
                 },
                 SOUNDBOARD_FETCH_DEFAULT_SOUNDS: function() {
@@ -2057,7 +2060,7 @@
                             sounds: n
                         } = e;
                         T.set(t, n)
-                    }), m = l.FETCHED
+                    }), g = l.FETCHED
                 },
                 GUILD_DELETE: function(e) {
                     let {
@@ -2075,7 +2078,7 @@
                     let {
                         soundboardStoreState: t
                     } = e;
-                    T = new Map(Object.entries(t.soundboardSounds)), g = new Set(t.favoritedSoundIds), I = new Set(t.localSoundboardMutes)
+                    T = new Map(Object.entries(t.soundboardSounds)), m = new Set(t.favoritedSoundIds), I = new Set(t.localSoundboardMutes)
                 },
                 GUILD_SOUNDBOARD_SOUNDS_UPDATE: function(e) {
                     let {
@@ -2110,8 +2113,8 @@
             (i = l || (l = {}))[i.Unloaded = 0] = "Unloaded", i[i.MaybeLoaded = 1] = "MaybeLoaded", i[i.Loaded = 2] = "Loaded";
             let I = 2,
                 C = new Map,
-                m = new Map,
-                g = null,
+                g = new Map,
+                m = null,
                 v = [],
                 N = null,
                 A = !1,
@@ -2120,7 +2123,7 @@
                     O = new Map(O.set(e, t))
                 },
                 R = 1e3 * h.Durations.HOUR,
-                L = () => {
+                D = () => {
                     if (0 !== I) return;
                     let e = o.default.database();
                     if (null == e) return;
@@ -2129,19 +2132,19 @@
                     if (null != t) {
                         for (let [e, n] of t)
                             if (_.default.isMember(e) && !O.has(e)) {
-                                for (let t of n) D(t, !0, S.default.getGuild(e));
+                                for (let t of n) L(t, !0, S.default.getGuild(e));
                                 U(e, n)
                             }
                     }
                 },
-                D = function(e) {
+                L = function(e) {
                     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-                    m.set(e.id, e), t && y(e, n)
+                    g.set(e.id, e), t && y(e, n)
                 },
                 y = function(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-                    if (null == g) return;
+                    if (null == m) return;
                     let {
                         tags: n
                     } = e, i = {
@@ -2157,7 +2160,7 @@
                         null != t && l.push({
                             type: p.StickerMetadataTypes.PACK_NAME,
                             value: t.name
-                        }), g.set(e.id, l)
+                        }), m.set(e.id, l)
                     } else if ((0, T.isGuildSticker)(e) && null != n) {
                         let l = c.default.getByName(n),
                             r = {
@@ -2173,7 +2176,7 @@
                             })
                         }
                         if (null == l) {
-                            g.set(e.id, u);
+                            m.set(e.id, u);
                             return
                         }
                         u.push({
@@ -2182,7 +2185,7 @@
                         }), l.forEachDiversity(e => u.push({
                             type: p.StickerMetadataTypes.CORRELATED_EMOJI,
                             value: e.surrogates
-                        })), g.set(e.id, u)
+                        })), m.set(e.id, u)
                     }
                 },
                 P = (e, t, n) => {
@@ -2190,7 +2193,7 @@
                     let i = [...v];
                     if (t) {
                         let t = i.findIndex(t => t.id === e.id); - 1 !== t ? i[t] = e : i.push(e), v = i
-                    }(t || n) && e.stickers.forEach(e => D(e))
+                    }(t || n) && e.stickers.forEach(e => L(e))
                 },
                 M = () => {
                     O.forEach((e, t) => {
@@ -2202,7 +2205,7 @@
                 };
 
             function b(e) {
-                null != e.stickers && (e.stickers.forEach(t => D(t, !0, e)), U(e.id, e.stickers))
+                null != e.stickers && (e.stickers.forEach(t => L(t, !0, e)), U(e.id, e.stickers))
             }
             class w extends u.default.Store {
                 initialize() {
@@ -2212,7 +2215,7 @@
                     return 0 !== I
                 }
                 get stickerMetadata() {
-                    return L(), null == g && (g = new Map, M()), g
+                    return D(), null == m && (m = new Map, M()), m
                 }
                 get hasLoadedStickerPacks() {
                     return null != N && N + R > Date.now()
@@ -2221,7 +2224,7 @@
                     return A
                 }
                 getStickerById(e) {
-                    return !m.has(e) && L(), m.get(e)
+                    return !g.has(e) && D(), g.get(e)
                 }
                 getStickerPack(e) {
                     return C.get(e)
@@ -2236,25 +2239,25 @@
                     return O
                 }
                 getAllStickersIterator() {
-                    return L(), m.values()
+                    return D(), g.values()
                 }
                 getAllGuildStickers() {
-                    return L(), O
+                    return D(), O
                 }
                 getStickersByGuildId(e) {
-                    return L(), O.get(e)
+                    return D(), O.get(e)
                 }
             }
             w.displayName = "StickersStore";
             var k = new w(a.default, {
                 BACKGROUND_SYNC: () => {
-                    g = null, m = new Map, O = new Map, I = 0
+                    m = null, g = new Map, O = new Map, I = 0
                 },
                 CONNECTION_OPEN: e => {
                     let {
                         guilds: t
                     } = e;
-                    g = null, m = new Map, O = new Map, t.forEach(b), I = t.every(e => null != e.stickers) ? 1 : 0
+                    m = null, g = new Map, O = new Map, t.forEach(b), I = t.every(e => null != e.stickers) ? 1 : 0
                 },
                 GUILD_CREATE: function(e) {
                     let {
@@ -2268,11 +2271,11 @@
                         guild: n
                     } = e, i = null !== (t = O.get(n.id)) && void 0 !== t ? t : [];
                     i.forEach(e => {
-                        null != g && g.delete(e.id), m.delete(e.id)
+                        null != m && m.delete(e.id), g.delete(e.id)
                     }), O.delete(n.id), O = new Map(O)
                 },
                 LOGOUT: () => {
-                    I = 0, v = [], m.clear(), C.clear(), g = null, O.clear(), O = new Map(O), A = !1, N = null
+                    I = 0, v = [], g.clear(), C.clear(), m = null, O.clear(), O = new Map(O), A = !1, N = null
                 },
                 STICKER_PACKS_FETCH_START: () => {
                     A = !0
@@ -2295,7 +2298,7 @@
                         guildId: t,
                         stickers: n
                     } = e;
-                    n.forEach(e => D(e)), U(t, n)
+                    n.forEach(e => L(e)), U(t, n)
                 },
                 GUILD_STICKERS_CREATE_SUCCESS: e => {
                     var t, n;
@@ -2303,13 +2306,13 @@
                         guildId: i,
                         sticker: l
                     } = e, r = null !== (t = O.get(i)) && void 0 !== t ? t : [];
-                    U(i, [...null !== (n = r.filter(e => e.id !== l.id)) && void 0 !== n ? n : [], l]), D(l)
+                    U(i, [...null !== (n = r.filter(e => e.id !== l.id)) && void 0 !== n ? n : [], l]), L(l)
                 },
                 STICKER_FETCH_SUCCESS: e => {
                     let {
                         sticker: t
                     } = e;
-                    D(t, !1)
+                    L(t, !1)
                 },
                 GUILD_STICKERS_UPDATE: e => {
                     var t;
@@ -2318,17 +2321,17 @@
                         stickers: i
                     } = e, l = e => {
                         let t;
-                        let n = m.get(e.id);
+                        let n = g.get(e.id);
                         return null != n && (0, T.isGuildSticker)(n) && (t = null != n.user ? n.user : void 0), {
                             ...e,
                             user: t
                         }
                     }, r = null !== (t = O.get(n)) && void 0 !== t ? t : [], u = r.filter(e => null == i.find(t => t.id === e.id));
                     u.forEach(e => {
-                        m.delete(e.id), null != g && g.delete(e.id)
+                        g.delete(e.id), null != m && m.delete(e.id)
                     });
                     let a = i.map(e => l(e));
-                    a.forEach(e => D(e)), U(n, a)
+                    a.forEach(e => L(e)), U(n, a)
                 }
             })
         },
@@ -2713,7 +2716,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return L
+                    return D
                 }
             });
             var i = n("427964"),
@@ -2734,8 +2737,8 @@
                 h = !1,
                 I = null,
                 C = null,
-                m = null,
-                g = [],
+                g = null,
+                m = [],
                 v = null,
                 N = null;
 
@@ -2756,11 +2759,11 @@
                             claimed: d.isClaimed()
                         }
                     }
-                }, C = null !== (i = e.onClose) && void 0 !== i ? i : null, m = null !== (l = e.analyticsLocation) && void 0 !== l ? l : null, g = null !== (r = e.analyticsLocations) && void 0 !== r ? r : [], N = null !== (u = e.impressionSource) && void 0 !== u ? u : null
+                }, C = null !== (i = e.onClose) && void 0 !== i ? i : null, g = null !== (l = e.analyticsLocation) && void 0 !== l ? l : null, m = null !== (r = e.analyticsLocations) && void 0 !== r ? r : [], N = null !== (u = e.impressionSource) && void 0 !== u ? u : null
             }
 
             function O() {
-                s = o.FormStates.CLOSED, T = !1, S = null, v = null, p = null, d = null, c = null, E = {}, f = {}, C = null, m = null, g = [], N = null
+                s = o.FormStates.CLOSED, T = !1, S = null, v = null, p = null, d = null, c = null, E = {}, f = {}, C = null, g = null, m = [], N = null
             }
 
             function U() {
@@ -2801,8 +2804,8 @@
                         errors: _,
                         hasChanges: this.hasChanges(),
                         openWithoutBackstack: h,
-                        analyticsLocation: m,
-                        analyticsLocations: g,
+                        analyticsLocation: g,
+                        analyticsLocations: m,
                         initialSection: v,
                         impressionSource: N
                     }
@@ -2812,7 +2815,7 @@
                 }
             }
             R.displayName = "UserSettingsModalStore";
-            var L = new R(u.default, {
+            var D = new R(u.default, {
                 USER_SETTINGS_MODAL_OPEN: function(e) {
                     T = !0, A(e)
                 },
@@ -2829,7 +2832,7 @@
                 },
                 USER_SETTINGS_MODAL_SET_SECTION: function(e) {
                     var t;
-                    d = c, c = e.section, m = null, g = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (E[c] = e.subsection)
+                    d = c, c = e.section, g = null, m = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (E[c] = e.subsection)
                 },
                 USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function(e) {
                     let {
@@ -3052,14 +3055,14 @@
                     buttonShineClassName: S,
                     onlyShineOnHover: T,
                     ...h
-                } = e, I = u.createRef(), C = (0, c.default)(I), m = !i && !a && !0 !== s && (!T || C);
+                } = e, I = u.createRef(), C = (0, c.default)(I), g = !i && !a && !0 !== s && (!T || C);
                 return (0, r.jsxs)(d.Button, {
                     buttonRef: I,
                     ...h,
                     className: o(f.shinyButton, n),
                     disabled: i,
                     submitting: a,
-                    children: [t, m ? (0, r.jsx)(p, {
+                    children: [t, g ? (0, r.jsx)(p, {
                         shinePaused: _,
                         className: o(f.buttonShine, T ? f.onlyShineOnHover : void 0, S),
                         shineSize: E
@@ -3138,7 +3141,7 @@
                     return C
                 },
                 isPNGAnimated: function() {
-                    return m
+                    return g
                 }
             });
             var i = n("161179"),
@@ -3264,7 +3267,7 @@
                     type: n
                 })
             }
-            async function m(e) {
+            async function g(e) {
                 var t;
                 let n = null === (t = e.type) || void 0 === t ? void 0 : t.split(";")[0];
                 if ("image/png" !== n) throw Error("File is not a PNG");

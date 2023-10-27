@@ -143,16 +143,16 @@
                 }, {
                     quantize: function(l, o) {
                         if (!l.length || o < 2 || o > 256) return !1;
-                        var a, _, s, d, E, c, f, I, N, T, g, h, O, A, S, D, C = (a = l, E = Array(32768), a.forEach(function(n) {
-                                s = n[0] >> t, d = n[1] >> t, E[_ = e(s, d, n[2] >> t)] = (E[_] || 0) + 1
-                            }), E),
+                        var a, _, s, d, c, E, f, I, N, g, T, h, O, A, S, D, C = (a = l, c = Array(32768), a.forEach(function(n) {
+                                s = n[0] >> t, d = n[1] >> t, c[_ = e(s, d, n[2] >> t)] = (c[_] || 0) + 1
+                            }), c),
                             v = 0;
                         C.forEach(function() {
                             v++
                         });
-                        var p = (c = l, f = C, g = 1e6, h = 0, O = 1e6, A = 0, S = 1e6, D = 0, c.forEach(function(e) {
-                                I = e[0] >> t, N = e[1] >> t, T = e[2] >> t, I < g ? g = I : I > h && (h = I), N < O ? O = N : N > A && (A = N), T < S ? S = T : T > D && (D = T)
-                            }), new u(g, h, O, A, S, D, f)),
+                        var p = (E = l, f = C, T = 1e6, h = 0, O = 1e6, A = 0, S = 1e6, D = 0, E.forEach(function(e) {
+                                I = e[0] >> t, N = e[1] >> t, g = e[2] >> t, I < T ? T = I : I > h && (h = I), N < O ? O = N : N > A && (A = N), g < S ? S = g : g > D && (D = g)
+                            }), new u(T, h, O, A, S, D, f)),
                             L = new n(function(t, e) {
                                 return i.naturalOrder(t.count(), e.count())
                             });
@@ -170,27 +170,27 @@
                                                 l = n.b2 - n.b1 + 1,
                                                 o = i.max([u, r, l]);
                                             if (1 == n.count()) return [n.copy()];
-                                            var a, _, s, d, E, c = 0,
+                                            var a, _, s, d, c, E = 0,
                                                 f = [],
                                                 I = [];
                                             if (o == u)
                                                 for (a = n.r1; a <= n.r2; a++) {
                                                     for (d = 0, _ = n.g1; _ <= n.g2; _++)
-                                                        for (s = n.b1; s <= n.b2; s++) d += t[E = e(a, _, s)] || 0;
-                                                    c += d, f[a] = c
+                                                        for (s = n.b1; s <= n.b2; s++) d += t[c = e(a, _, s)] || 0;
+                                                    E += d, f[a] = E
                                                 } else if (o == r)
                                                     for (a = n.g1; a <= n.g2; a++) {
                                                         for (d = 0, _ = n.r1; _ <= n.r2; _++)
-                                                            for (s = n.b1; s <= n.b2; s++) d += t[E = e(_, a, s)] || 0;
-                                                        c += d, f[a] = c
+                                                            for (s = n.b1; s <= n.b2; s++) d += t[c = e(_, a, s)] || 0;
+                                                        E += d, f[a] = E
                                                     } else
                                                         for (a = n.b1; a <= n.b2; a++) {
                                                             for (d = 0, _ = n.r1; _ <= n.r2; _++)
-                                                                for (s = n.g1; s <= n.g2; s++) d += t[E = e(_, s, a)] || 0;
-                                                            c += d, f[a] = c
+                                                                for (s = n.g1; s <= n.g2; s++) d += t[c = e(_, s, a)] || 0;
+                                                            E += d, f[a] = E
                                                         }
                                             return f.forEach(function(t, e) {
-                                                I[e] = c - t
+                                                I[e] = E - t
                                             }), N(o == u ? "r" : o == r ? "g" : "b")
                                         }
 
@@ -199,7 +199,7 @@
                                                 _ = t + "2",
                                                 s = 0;
                                             for (a = n[o]; a <= n[_]; a++)
-                                                if (f[a] > c / 2) {
+                                                if (f[a] > E / 2) {
                                                     for (u = n.copy(), r = n.copy(), e = a - n[o], l = e <= (i = n[_] - a) ? Math.min(n[_] - 1, ~~(a + i / 2)) : Math.max(n[o], ~~(a - 1 - e / 2)); !f[l];) l++;
                                                     for (s = I[l]; !s && f[l - 1];) s = I[--l];
                                                     return u[_] = l, r[o] = u[_] + 1, [u, r]
@@ -231,10 +231,10 @@
                     return d
                 },
                 ackChannel: function() {
-                    return E
+                    return c
                 },
                 bulkAck: function() {
-                    return c
+                    return E
                 },
                 localAck: function() {
                     return f
@@ -246,10 +246,10 @@
                     return N
                 },
                 ackGuildFeature: function() {
-                    return T
+                    return g
                 },
                 ackUserFeature: function() {
-                    return g
+                    return T
                 }
             });
             var i = n("500947"),
@@ -277,7 +277,7 @@
                 })
             }
 
-            function E(t) {
+            function c(t) {
                 t.isCategory() ? ! function(t) {
                     let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -304,7 +304,7 @@
                 }(t.id, !0, !0) : t.isForumLikeChannel() ? d(t.id, !0, !0, i.default.fromTimestamp(Date.now())) : d(t.id, !0, !0)
             }
 
-            function c(t) {
+            function E(t) {
                 u.default.dispatch({
                     type: "BULK_ACK",
                     channels: t,
@@ -335,7 +335,7 @@
                 })
             }
 
-            function T(t, e, n) {
+            function g(t, e, n) {
                 u.default.dispatch({
                     type: "GUILD_FEATURE_ACK",
                     id: t,
@@ -345,7 +345,7 @@
                 })
             }
 
-            function g(t, e) {
+            function T(t, e) {
                 var n;
                 let i = null === (n = _.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
                 null != i && u.default.dispatch({
@@ -458,7 +458,7 @@
             "use strict";
             n.r(e), n.d(e, {
                 startImpersonating: function() {
-                    return g
+                    return T
                 },
                 updateImpersonating: function() {
                     return h
@@ -485,15 +485,15 @@
                 _ = n("305961"),
                 s = n("957255"),
                 d = n("18494"),
-                E = n("282109"),
-                c = n("599110"),
+                c = n("282109"),
+                E = n("599110"),
                 f = n("38654"),
                 I = n("507950"),
                 N = n("49111"),
-                T = n("724210");
+                g = n("724210");
 
-            function g(t, e) {
-                c.default.track(N.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
+            function T(t, e) {
+                E.default.track(N.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
                     num_roles: Object.keys(e.roles).length,
                     ...(0, u.collectGuildAnalyticsMetadata)(t),
                     is_viewing_as_member: e.type === I.ImpersonateType.NEW_MEMBER
@@ -506,7 +506,7 @@
 
             function h(t, e) {
                 let n = f.default.getData(t);
-                null != n && n.type === e.type && (c.default.track(N.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
+                null != n && n.type === e.type && (E.default.track(N.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
                     num_roles: Object.keys(n.roles).length,
                     ...(0, u.collectGuildAnalyticsMetadata)(t),
                     is_viewing_as_member: n.type === I.ImpersonateType.NEW_MEMBER
@@ -530,7 +530,7 @@
             function A(t) {
                 let e = d.default.getChannelId(t),
                     n = l.default.getChannel(e),
-                    i = null != e && (0, T.isStaticChannelRoute)(e);
+                    i = null != e && (0, g.isStaticChannelRoute)(e);
                 if (!i && !s.default.can(N.Permissions.VIEW_CHANNEL, n)) {
                     let e = o.default.getDefaultChannel(t);
                     null != e && (0, r.transitionTo)(N.Routes.CHANNEL(t, e.id))
@@ -538,7 +538,7 @@
             }
 
             function S(t, e, n) {
-                let i = new Set(E.default.getOptedInChannels(t));
+                let i = new Set(c.default.getOptedInChannels(t));
                 e.forEach(t => i.add(t)), n.forEach(t => i.delete(t)), h(t, {
                     type: I.ImpersonateType.NEW_MEMBER,
                     optInChannels: i
@@ -690,14 +690,14 @@
                 _ = n("845579"),
                 s = n("374363"),
                 d = n("697218"),
-                E = n("599110"),
-                c = n("829536"),
+                c = n("599110"),
+                E = n("829536"),
                 f = n("846325"),
                 I = n("49111"),
                 N = n("397336");
             (i = u || (u = {}))[i.NOT_FETCHED = 0] = "NOT_FETCHED", i[i.FETCHING = 1] = "FETCHING", i[i.FETCHED = 2] = "FETCHED";
-            let T = new Map,
-                g = new Map,
+            let g = new Map,
+                T = new Map,
                 h = new Set,
                 O = u.NOT_FETCHED,
                 A = u.NOT_FETCHED,
@@ -708,12 +708,12 @@
             function v(t) {
                 let {
                     sound: e
-                } = t, n = T.get(e.guildId), i = null == n ? void 0 : n.findIndex(t => t.soundId === e.soundId);
-                null != n && null != i && -1 !== i ? (n[i] = e, T.set(e.guildId, [...n])) : null != n && (null == n || n.push(e), T.set(e.guildId, [...n]))
+                } = t, n = g.get(e.guildId), i = null == n ? void 0 : n.findIndex(t => t.soundId === e.soundId);
+                null != n && null != i && -1 !== i ? (n[i] = e, g.set(e.guildId, [...n])) : null != n && (null == n || n.push(e), g.set(e.guildId, [...n]))
             }
             let p = l.debounce(t => {
-                E.default.track(I.AnalyticEvents.UPDATE_SOUNDBOARD_SETTINGS, {
-                    volume: Math.round((0, c.amplitudeToPerceptual)(t))
+                c.default.track(I.AnalyticEvents.UPDATE_SOUNDBOARD_SETTINGS, {
+                    volume: Math.round((0, E.amplitudeToPerceptual)(t))
                 }), _.SoundboardSettings.updateSetting({
                     volume: t
                 })
@@ -731,27 +731,27 @@
                 }
                 getOverlaySerializedState() {
                     return {
-                        soundboardSounds: Object.fromEntries(T),
+                        soundboardSounds: Object.fromEntries(g),
                         favoritedSoundIds: Array.from(S),
                         localSoundboardMutes: Array.from(h)
                     }
                 }
                 getSounds() {
-                    return T
+                    return g
                 }
                 getSoundsForGuild(t) {
-                    return T.get(t)
+                    return g.get(t)
                 }
                 getDefaultSounds() {
                     return this.getSoundsForGuild(f.DEFAULT_SOUND_GUILD_ID)
                 }
                 getSound(t, e) {
                     var n;
-                    let i = null !== (n = T.get(t)) && void 0 !== n ? n : [];
+                    let i = null !== (n = g.get(t)) && void 0 !== n ? n : [];
                     return i.find(t => t.soundId === e)
                 }
                 getSoundById(t) {
-                    let e = Array.from(T.values()).flat();
+                    let e = Array.from(g.values()).flat();
                     return e.find(e => e.soundId === t)
                 }
                 isFetchingSounds() {
@@ -759,6 +759,9 @@
                 }
                 isFetchingDefaultSounds() {
                     return O === u.FETCHING
+                }
+                isFetching() {
+                    return this.isFetchingSounds() || this.isFetchingDefaultSounds()
                 }
                 shouldFetchDefaultSounds() {
                     return O === u.NOT_FETCHED
@@ -771,7 +774,7 @@
                     return null != e && e > 0
                 }
                 isPlayingSound(t) {
-                    return null != g.get(t)
+                    return null != T.get(t)
                 }
                 isFavoriteSound(t) {
                     return S.has(t)
@@ -792,7 +795,7 @@
             U.displayName = "SoundboardStore";
             var m = new U(a.default, {
                 LOGOUT: function() {
-                    T.clear(), g.clear(), D.clear(), C = !1, A = u.NOT_FETCHED, O = u.NOT_FETCHED
+                    g.clear(), T.clear(), D.clear(), C = !1, A = u.NOT_FETCHED, O = u.NOT_FETCHED
                 },
                 GUILD_SOUNDBOARD_FETCH: function() {
                     A = u.FETCHING
@@ -804,26 +807,26 @@
                         soundId: e,
                         guildId: n
                     } = t;
-                    T.delete(e);
-                    let i = T.get(n),
+                    g.delete(e);
+                    let i = g.get(n),
                         u = null == i ? void 0 : i.findIndex(t => t.soundId === e);
-                    null != i && null != u && !(u < 0) && (i.splice(u, 1), T.set(n, [...i]))
+                    null != i && null != u && !(u < 0) && (i.splice(u, 1), g.set(n, [...i]))
                 },
                 GUILD_SOUNDBOARD_SOUND_PLAY_START: function(t) {
                     var e, n, i;
                     let {
                         soundId: u,
                         userId: r
-                    } = t, l = (null !== (n = g.get(u)) && void 0 !== n ? n : 0) + 1, o = (null !== (i = D.get(r)) && void 0 !== i ? i : 0) + 1;
-                    g.set(u, l), D.set(r, o), r !== (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) && (C = !0)
+                    } = t, l = (null !== (n = T.get(u)) && void 0 !== n ? n : 0) + 1, o = (null !== (i = D.get(r)) && void 0 !== i ? i : 0) + 1;
+                    T.set(u, l), D.set(r, o), r !== (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) && (C = !0)
                 },
                 GUILD_SOUNDBOARD_SOUND_PLAY_END: function(t) {
                     var e, n;
                     let {
                         soundId: i,
                         userId: u
-                    } = t, r = (null !== (e = g.get(i)) && void 0 !== e ? e : 0) - 1, l = (null !== (n = D.get(u)) && void 0 !== n ? n : 0) - 1;
-                    r <= 0 ? g.delete(i) : g.set(i, r), l <= 0 ? D.delete(u) : D.set(u, l)
+                    } = t, r = (null !== (e = T.get(i)) && void 0 !== e ? e : 0) - 1, l = (null !== (n = D.get(u)) && void 0 !== n ? n : 0) - 1;
+                    r <= 0 ? T.delete(i) : T.set(i, r), l <= 0 ? D.delete(u) : D.set(u, l)
                 },
                 USER_SOUNDBOARD_SET_VOLUME: function(t) {
                     let {
@@ -832,7 +835,7 @@
                     p(e)
                 },
                 VOICE_CHANNEL_SELECT: function() {
-                    g.clear(), D.clear()
+                    T.clear(), D.clear()
                 },
                 USER_SETTINGS_PROTO_UPDATE: function(t) {
                     let {
@@ -853,7 +856,7 @@
                     let {
                         soundboardSounds: e
                     } = t;
-                    T.set(f.DEFAULT_SOUND_GUILD_ID, e), O = u.FETCHED
+                    g.set(f.DEFAULT_SOUND_GUILD_ID, e), O = u.FETCHED
                 },
                 SOUNDBOARD_SOUNDS_RECEIVED: function(t) {
                     let {
@@ -864,14 +867,14 @@
                             guildId: e,
                             sounds: n
                         } = t;
-                        T.set(e, n)
+                        g.set(e, n)
                     }), A = u.FETCHED
                 },
                 GUILD_DELETE: function(t) {
                     let {
                         guild: e
                     } = t;
-                    T.delete(e.id)
+                    g.delete(e.id)
                 },
                 AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: function(t) {
                     let {
@@ -883,14 +886,14 @@
                     let {
                         soundboardStoreState: e
                     } = t;
-                    T = new Map(Object.entries(e.soundboardSounds)), S = new Set(e.favoritedSoundIds), h = new Set(e.localSoundboardMutes)
+                    g = new Map(Object.entries(e.soundboardSounds)), S = new Set(e.favoritedSoundIds), h = new Set(e.localSoundboardMutes)
                 },
                 GUILD_SOUNDBOARD_SOUNDS_UPDATE: function(t) {
                     let {
                         guildId: e,
                         soundboardSounds: n
                     } = t;
-                    T.set(e, n)
+                    g.set(e, n)
                 }
             })
         },
@@ -957,8 +960,8 @@
                 _ = n("923959"),
                 s = n("305961"),
                 d = n("49111");
-            let E = null,
-                c = {},
+            let c = null,
+                E = {},
                 f = null;
 
             function I() {
@@ -969,11 +972,11 @@
             }
             let N = I();
 
-            function T(t, e) {
+            function g(t, e) {
                 t.index = e
             }
 
-            function g(t) {
+            function T(t) {
                 let e = _.default.getChannels(t),
                     n = I(),
                     i = t => {
@@ -994,11 +997,11 @@
                         channel: e,
                         index: -1
                     }), n[e.id] = []
-                }), e[0, _.GUILD_SELECTABLE_CHANNELS_KEY].forEach(i), e[0, _.GUILD_VOCAL_CHANNELS_KEY].forEach(i), (0, r.default)(n._categories, n).forEach(T), c[t] = n, n
+                }), e[0, _.GUILD_SELECTABLE_CHANNELS_KEY].forEach(i), e[0, _.GUILD_VOCAL_CHANNELS_KEY].forEach(i), (0, r.default)(n._categories, n).forEach(g), E[t] = n, n
             }
 
             function h() {
-                c = {}, null != E && g(E)
+                E = {}, null != c && T(c)
             }
 
             function O(t) {
@@ -1007,7 +1010,7 @@
                         id: e
                     }
                 } = t;
-                c[e] = void 0, E === e && g(e)
+                E[e] = void 0, c === e && T(e)
             }
 
             function A(t) {
@@ -1017,24 +1020,24 @@
                     }
                 } = t;
                 if (null == e) return !1;
-                c[e] = void 0, E === e && g(e)
+                E[e] = void 0, c === e && T(e)
             }
 
             function S(t) {
                 let {
                     guildId: e
                 } = t;
-                c[e] = void 0, e === E && g(e)
+                E[e] = void 0, e === c && T(e)
             }
 
             function D(t, e) {
                 if (f = e, null == t || null == t.getGuildId()) return !1;
                 let n = t.getGuildId();
-                return null != n && (c[n] = void 0, n === E && g(n), !0)
+                return null != n && (E[n] = void 0, n === c && T(n), !0)
             }
 
             function C() {
-                g(d.FAVORITES)
+                T(d.FAVORITES)
             }
             class v extends i.default.Store {
                 initialize() {
@@ -1042,8 +1045,8 @@
                 }
                 getCategories(t) {
                     return null != t ? function(t) {
-                        let e = c[t];
-                        return null != e ? e : g(t)
+                        let e = E[t];
+                        return null != e ? e : T(t)
                     }(t) : N
                 }
             }
@@ -1053,8 +1056,8 @@
                     let {
                         guildId: e
                     } = t;
-                    if (E = null != e ? e : null, null == e || null != c[e]) return !1;
-                    g(e)
+                    if (c = null != e ? e : null, null == e || null != E[e]) return !1;
+                    T(e)
                 },
                 CONNECTION_OPEN: h,
                 OVERLAY_INITIALIZE: h,
@@ -1067,7 +1070,7 @@
                             id: e
                         }
                     } = t;
-                    delete c[e]
+                    delete E[e]
                 },
                 CHANNEL_CREATE: A,
                 CHANNEL_DELETE: A,
@@ -1078,7 +1081,7 @@
                     for (let {
                             guild_id: t
                         }
-                        of e) null != t && (c[t] = void 0, n = !0, E === t && g(t));
+                        of e) null != t && (E[t] = void 0, n = !0, c === t && T(t));
                     return n
                 },
                 GUILD_MEMBER_UPDATE: function(t) {
@@ -1087,11 +1090,11 @@
                         user: n
                     } = t;
                     if (o.default.getId() !== n.id) return !1;
-                    c[e] = void 0, e === E && g(e)
+                    E[e] = void 0, e === c && T(e)
                 },
                 CURRENT_USER_UPDATE: function() {
-                    if (null == E) return !1;
-                    g(E)
+                    if (null == c) return !1;
+                    T(c)
                 },
                 GUILD_ROLE_CREATE: S,
                 GUILD_ROLE_UPDATE: S,
@@ -1122,7 +1125,7 @@
             "use strict";
             n.r(e), n.d(e, {
                 default: function() {
-                    return c
+                    return E
                 }
             });
             var i = n("498225"),
@@ -1159,7 +1162,7 @@
                     e.state = "banned" in t && t.banned ? l.InviteStates.BANNED : l.InviteStates.EXPIRED
                 })
             }
-            class E extends i.default.Store {
+            class c extends i.default.Store {
                 getInvite(t) {
                     return o[t]
                 }
@@ -1173,8 +1176,8 @@
                     return _[t]
                 }
             }
-            E.displayName = "InviteStore";
-            var c = new E(u.default, {
+            c.displayName = "InviteStore";
+            var E = new c(u.default, {
                 INVITE_RESOLVE: function(t) {
                     let {
                         code: e
@@ -1250,7 +1253,7 @@
             "use strict";
             n.r(e), n.d(e, {
                 default: function() {
-                    return E
+                    return c
                 }
             });
             var i = n("161179"),
@@ -1346,7 +1349,7 @@
                     t.client_app_state = d.isFocused() ? "focused" : "unfocused"
                 })
             });
-            var E = d
+            var c = d
         },
         103603: function(t, e, n) {
             "use strict";
@@ -1361,10 +1364,10 @@
                     return d
                 },
                 getCoverRatio: function() {
-                    return E
+                    return c
                 },
                 makeCssUrlString: function() {
-                    return c
+                    return E
                 },
                 getPalette: function() {
                     return I
@@ -1373,7 +1376,7 @@
                     return N
                 },
                 readFileAsBase64: function() {
-                    return g
+                    return T
                 },
                 dataUriFileSize: function() {
                     return h
@@ -1436,7 +1439,7 @@
                 return (n = Math.round(n * r)) > u && (l = u / n), Math.min(r * l, 1)
             }
 
-            function E(t) {
+            function c(t) {
                 let {
                     width: e,
                     height: n,
@@ -1446,7 +1449,7 @@
                 return e === n ? 1 : Math.min(Math.max(i / e, u / n), 1)
             }
 
-            function c(t) {
+            function E(t) {
                 return null == t || "" === t ? "none" : "url(".concat(t, ")")
             }
             let f = [
@@ -1469,8 +1472,8 @@
                     s = a(_, e);
                 return "boolean" == typeof s ? f : s.palette()
             }
-            let N = t => T(t),
-                T = l.memoize(t => new Promise((e, n) => {
+            let N = t => g(t),
+                g = l.memoize(t => new Promise((e, n) => {
                     let i = new Image;
                     i.crossOrigin = "Anonymous", i.onerror = t => {
                         n(t), i.onerror = i.onload = null, i = null
@@ -1479,7 +1482,7 @@
                     }, i.src = t
                 }));
 
-            function g(t) {
+            function T(t) {
                 return new Promise((e, n) => {
                     let i = new FileReader;
                     i.readAsDataURL(t), i.onload = () => {
@@ -1524,7 +1527,7 @@
                     return d
                 },
                 trackGuildNotificationSettingsUpdate: function() {
-                    return E
+                    return c
                 },
                 muteConfigToTimestamp: function() {
                     return f
@@ -1536,10 +1539,10 @@
                     return N
                 },
                 getManyCurrentGuildSettings: function() {
-                    return T
+                    return g
                 },
                 getCurrentChannelSettings: function() {
-                    return g
+                    return T
                 },
                 getManyCurrentChannelSettings: function() {
                     return h
@@ -1559,9 +1562,9 @@
                 [_.UserNotificationSettings.NULL]: null
             });
 
-            function E(t, e, n, i) {
+            function c(t, e, n, i) {
                 var l, o;
-                let E = function(t) {
+                let c = function(t) {
                         var e, n, i, u, r, l, o;
                         let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                             _ = null != a.mute_config && null != a.mute_config.end_time ? new Date(a.mute_config.end_time).getTime() : t.guild_muted_until,
@@ -1578,30 +1581,30 @@
                             guild_scheduled_events_muted: null !== (o = a.mute_scheduled_events) && void 0 !== o ? o : t.guild_scheduled_events_muted
                         }
                     },
-                    f = E(n),
-                    I = E(N(t), e),
-                    T = c(f, I, "RETURN_PREVIOUS_WHEN_CHANGED"),
-                    g = null !== (l = T("guild_flags")) && void 0 !== l ? l : 0,
-                    h = (null !== (o = I.guild_flags) && void 0 !== o ? o : 0) ^ g,
+                    f = c(n),
+                    I = c(N(t), e),
+                    g = E(f, I, "RETURN_PREVIOUS_WHEN_CHANGED"),
+                    T = null !== (l = g("guild_flags")) && void 0 !== l ? l : 0,
+                    h = (null !== (o = I.guild_flags) && void 0 !== o ? o : 0) ^ T,
                     O = 0 === (0, a.removeFlags)(h, s.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_OFF, s.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON);
                 r.default.trackWithMetadata(_.AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
                     ...I,
                     location: i,
                     guild_id: t,
                     update_type: u.GUILD,
-                    guild_flags_old: T("guild_flags"),
-                    guild_is_muted_old: T("guild_is_muted"),
-                    guild_suppress_roles_old: T("guild_suppress_roles"),
-                    guild_notify_highlights_old: T("guild_notify_highlights"),
-                    guild_suppress_everyone_old: T("guild_suppress_everyone"),
-                    guild_receive_mobile_push_old: T("guild_receive_mobile_push"),
-                    guild_scheduled_events_muted_old: T("guild_scheduled_events_muted"),
-                    guild_message_notification_settings_old: T("guild_message_notification_settings"),
+                    guild_flags_old: g("guild_flags"),
+                    guild_is_muted_old: g("guild_is_muted"),
+                    guild_suppress_roles_old: g("guild_suppress_roles"),
+                    guild_notify_highlights_old: g("guild_notify_highlights"),
+                    guild_suppress_everyone_old: g("guild_suppress_everyone"),
+                    guild_receive_mobile_push_old: g("guild_receive_mobile_push"),
+                    guild_scheduled_events_muted_old: g("guild_scheduled_events_muted"),
+                    guild_message_notification_settings_old: g("guild_message_notification_settings"),
                     is_opt_in_only_change: O
                 })
             }
 
-            function c(t, e, n) {
+            function E(t, e, n) {
                 return i => {
                     if ("RETURN_PREVIOUS_WHEN_CHANGED" === n) return t[i] !== e[i] ? t[i] : void 0
                 }
@@ -1612,7 +1615,7 @@
             }
 
             function I(t, e, n, i, o) {
-                var E, I;
+                var c, I;
                 let N = function(e) {
                         var n, i;
                         let u = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -1627,11 +1630,11 @@
                             channel_muted_until: f(u.mute_config)
                         }
                     },
-                    T = N(i),
-                    h = N(g(t, e), n),
-                    O = c(T, h, "RETURN_PREVIOUS_WHEN_CHANGED"),
+                    g = N(i),
+                    h = N(T(t, e), n),
+                    O = E(g, h, "RETURN_PREVIOUS_WHEN_CHANGED"),
                     A = l.default.getChannel(e),
-                    S = null !== (E = O("channel_flags")) && void 0 !== E ? E : 0,
+                    S = null !== (c = O("channel_flags")) && void 0 !== c ? c : 0,
                     D = (null !== (I = h.channel_flags) && void 0 !== I ? I : 0) ^ S,
                     C = 0 === (0, a.removeFlags)(D, s.ChannelNotificationSettingsFlags.FAVORITED, s.ChannelNotificationSettingsFlags.OPT_IN_ENABLED);
                 r.default.trackWithMetadata(_.AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
@@ -1666,12 +1669,12 @@
                 }
             }
 
-            function T(t) {
+            function g(t) {
                 let e = new Map;
                 return t.forEach(t => e.set(t, N(t))), e
             }
 
-            function g(t, e) {
+            function T(t, e) {
                 let n = o.default.isChannelMuted(t, e),
                     i = o.default.getChannelMuteConfig(t, e);
                 return {
@@ -1684,7 +1687,7 @@
 
             function h(t, e) {
                 let n = new Map;
-                return e.forEach(e => n.set(e, g(t, e))), n
+                return e.forEach(e => n.set(e, T(t, e))), n
             }
         },
         829536: function(t, e, n) {

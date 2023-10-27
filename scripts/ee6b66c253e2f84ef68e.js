@@ -2823,6 +2823,9 @@
                 isFetchingDefaultSounds() {
                     return O === i.FETCHING
                 }
+                isFetching() {
+                    return this.isFetchingSounds() || this.isFetchingDefaultSounds()
+                }
                 shouldFetchDefaultSounds() {
                     return O === i.NOT_FETCHED
                 }
@@ -2961,7 +2964,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return w
+                    return F
                 }
             });
             var r, i, a = n("379279"),
@@ -3117,7 +3120,7 @@
                 }
             }
             G.displayName = "StickersStore";
-            var w = new G(l.default, {
+            var F = new G(l.default, {
                 BACKGROUND_SYNC: () => {
                     N = null, A = new Map, v = new Map, S = 0
                 },

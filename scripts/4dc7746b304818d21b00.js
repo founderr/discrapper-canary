@@ -364,7 +364,7 @@
                     onClose: O,
                     onSlideChange: p,
                     hasJoinButton: C
-                } = e, [D, L] = r.useState(n), h = (0, s.default)(D), [m, R] = r.useState(null), [g, U] = r.useState(null), [M, v] = r.useState(null), [G, P] = r.useState(!1);
+                } = e, [D, L] = r.useState(n), h = (0, s.default)(D), [m, g] = r.useState(null), [R, U] = r.useState(null), [M, v] = r.useState(null), [G, P] = r.useState(!1);
                 r.useEffect(() => {
                     L(n)
                 }, [L, n]), r.useEffect(() => {
@@ -406,7 +406,7 @@
                             children: (0, i.jsxs)(o.Slides, {
                                 activeSlide: D,
                                 width: 440,
-                                onSlideReady: e => R(e),
+                                onSlideReady: e => g(e),
                                 children: [(0, i.jsx)(o.Slide, {
                                     id: S.CreateGuildSlideTypes.GUILD_TEMPLATES,
                                     impressionName: u.ImpressionNames.GUILD_ADD_LANDING,
@@ -431,7 +431,7 @@
                                     impressionName: u.ImpressionNames.GUILD_ADD_CUSTOMIZE,
                                     impressionProperties: k,
                                     children: (0, i.jsx)(I.default, {
-                                        guildTemplate: g,
+                                        guildTemplate: R,
                                         onGuildCreated: B,
                                         onClose: O,
                                         onBack: b,
@@ -1514,15 +1514,15 @@
                 })
             }, 1e3);
 
-            function R(e) {
+            function g(e) {
                 var t, n;
                 let i = null !== (n = null == e ? void 0 : null === (t = e.audioContextSettings) || void 0 === t ? void 0 : t.user) && void 0 !== n ? n : {};
                 for (let [e, t] of Object.entries(i)) t.soundboardMuted ? A.add(e) : A.delete(e);
                 for (let e of A.keys()) null == i[e] && A.delete(e)
             }
-            class g extends u.default.Store {
+            class R extends u.default.Store {
                 initialize() {
-                    this.waitFor(d.default), R(d.default.settings)
+                    this.waitFor(d.default), g(d.default.settings)
                 }
                 getOverlaySerializedState() {
                     return {
@@ -1555,6 +1555,9 @@
                 isFetchingDefaultSounds() {
                     return O === r.FETCHING
                 }
+                isFetching() {
+                    return this.isFetchingSounds() || this.isFetchingDefaultSounds()
+                }
                 shouldFetchDefaultSounds() {
                     return O === r.NOT_FETCHED
                 }
@@ -1584,8 +1587,8 @@
                     return p === r.FETCHED && O === r.FETCHED
                 }
             }
-            g.displayName = "SoundboardStore";
-            var U = new g(o.default, {
+            R.displayName = "SoundboardStore";
+            var U = new R(o.default, {
                 LOGOUT: function() {
                     S.clear(), N.clear(), D.clear(), L = !1, p = r.NOT_FETCHED, O = r.NOT_FETCHED
                 },
@@ -1639,7 +1642,7 @@
                     if (n === T.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
                         var r, l;
                         C = new Set(null !== (l = null == i ? void 0 : null === (r = i.favoriteSoundboardSounds) || void 0 === r ? void 0 : r.soundIds) && void 0 !== l ? l : [])
-                    } else n === T.UserSettingsTypes.PRELOADED_USER_SETTINGS && R(i)
+                    } else n === T.UserSettingsTypes.PRELOADED_USER_SETTINGS && g(i)
                 },
                 SOUNDBOARD_FETCH_DEFAULT_SOUNDS: function() {
                     O = r.FETCHING
@@ -1719,10 +1722,10 @@
                 L = null,
                 h = !1,
                 m = new Map,
-                R = (e, t) => {
+                g = (e, t) => {
                     m = new Map(m.set(e, t))
                 },
-                g = 1e3 * N.Durations.HOUR,
+                R = 1e3 * N.Durations.HOUR,
                 U = () => {
                     if (0 !== A) return;
                     let e = o.default.database();
@@ -1733,7 +1736,7 @@
                         for (let [e, n] of t)
                             if (I.default.isMember(e) && !m.has(e)) {
                                 for (let t of n) M(t, !0, f.default.getGuild(e));
-                                R(e, n)
+                                g(e, n)
                             }
                     }
                 },
@@ -1805,7 +1808,7 @@
                 };
 
             function y(e) {
-                null != e.stickers && (e.stickers.forEach(t => M(t, !0, e)), R(e.id, e.stickers))
+                null != e.stickers && (e.stickers.forEach(t => M(t, !0, e)), g(e.id, e.stickers))
             }
             class w extends a.default.Store {
                 initialize() {
@@ -1818,7 +1821,7 @@
                     return U(), null == C && (C = new Map, P()), C
                 }
                 get hasLoadedStickerPacks() {
-                    return null != L && L + g > Date.now()
+                    return null != L && L + R > Date.now()
                 }
                 get isFetchingStickerPacks() {
                     return h
@@ -1898,7 +1901,7 @@
                         guildId: t,
                         stickers: n
                     } = e;
-                    n.forEach(e => M(e)), R(t, n)
+                    n.forEach(e => M(e)), g(t, n)
                 },
                 GUILD_STICKERS_CREATE_SUCCESS: e => {
                     var t, n;
@@ -1906,7 +1909,7 @@
                         guildId: i,
                         sticker: r
                     } = e, l = null !== (t = m.get(i)) && void 0 !== t ? t : [];
-                    R(i, [...null !== (n = l.filter(e => e.id !== r.id)) && void 0 !== n ? n : [], r]), M(r)
+                    g(i, [...null !== (n = l.filter(e => e.id !== r.id)) && void 0 !== n ? n : [], r]), M(r)
                 },
                 STICKER_FETCH_SUCCESS: e => {
                     let {
@@ -1931,7 +1934,7 @@
                         p.delete(e.id), null != C && C.delete(e.id)
                     });
                     let u = i.map(e => r(e));
-                    u.forEach(e => M(e)), R(n, u)
+                    u.forEach(e => M(e)), g(n, u)
                 }
             })
         },

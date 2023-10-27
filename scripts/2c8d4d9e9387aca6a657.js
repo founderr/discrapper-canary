@@ -4175,6 +4175,9 @@
                 isFetchingDefaultSounds() {
                     return A === r.FETCHING
                 }
+                isFetching() {
+                    return this.isFetchingSounds() || this.isFetchingDefaultSounds()
+                }
                 shouldFetchDefaultSounds() {
                     return A === r.NOT_FETCHED
                 }
