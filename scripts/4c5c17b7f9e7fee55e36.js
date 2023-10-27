@@ -287,7 +287,8 @@
                 })) : i = (0, a.jsx)(x.default, {
                     message: e,
                     content: s,
-                    className: l
+                    className: l,
+                    asPartialPreview: !0
                 }), g ? c = (0, a.jsx)(_.default, {
                     className: u,
                     width: d,
