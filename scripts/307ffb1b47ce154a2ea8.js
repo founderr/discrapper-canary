@@ -5157,7 +5157,20 @@
                     if ($) return (0, a.jsx)(I.default, {});
                     if (s) return (0, a.jsx)(A.BlockedPaymentsContentSettings, {});
                     let ee = t === b.PremiumMarketingEntrypoints.ApplicationStoreHome;
-                    return ee && z && X ? (0, a.jsx)(D.default, {}) : k && W && !w ? (0, a.jsx)(r, {
+                    return ee && z && X ? (0, a.jsx)(r, {
+                        children: (0, a.jsxs)(a.Fragment, {
+                            children: [(0, a.jsx)(D.default, {}), (0, a.jsx)(u.default, {
+                                onChange: e => {
+                                    e && !J && (P.default.track(j.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                                        location_stack: y
+                                    }), q(!0))
+                                },
+                                children: (0, a.jsx)("div", {
+                                    className: B.bottomOfPageVisibilitySensor
+                                })
+                            })]
+                        })
+                    }) : k && W && !w ? (0, a.jsx)(r, {
                         children: (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsx)(v.default, {
                                 entrypoint: t
