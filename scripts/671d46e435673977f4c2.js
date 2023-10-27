@@ -1903,7 +1903,7 @@
                     children: [(0, a.jsx)(E.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "241274"
+                        buildNumber: "241278"
                     }), (0, a.jsx)(m, {})]
                 }) : null
             }
@@ -13490,7 +13490,7 @@
                     productId: n,
                     initialTab: s
                 } = e;
-                return (0, a.jsx)(S.default, {
+                return null == s && null != n && (s = N.GuildShopTab.GUILD_PRODUCTS), (0, a.jsx)(S.default, {
                     initialTab: s,
                     guildId: t,
                     children: (0, a.jsx)(U, {
