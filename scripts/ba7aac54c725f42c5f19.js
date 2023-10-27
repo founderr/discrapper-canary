@@ -691,7 +691,7 @@
                     return r && ! function(e) {
                         if (null == n || n.channelId !== e) return;
                         null != n.timeout && clearTimeout(n.timeout), n = null
-                    }(t), S({
+                    }(t), null != u && S({
                         channelId: t,
                         userId: u.id
                     })

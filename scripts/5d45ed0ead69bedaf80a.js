@@ -5025,7 +5025,7 @@
                     return l && ! function(e) {
                         if (null == i || i.channelId !== e) return;
                         null != i.timeout && clearTimeout(i.timeout), i = null
-                    }(t), T({
+                    }(t), null != n && T({
                         channelId: t,
                         userId: n.id
                     })

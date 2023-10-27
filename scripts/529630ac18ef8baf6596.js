@@ -3398,17 +3398,18 @@
             _.displayName = "ChannelFollowingPublishBumpStore";
             var h = new _(l.default, {
                 MESSAGE_CREATE: function(e) {
+                    var t;
                     let {
-                        channelId: t,
-                        message: n,
-                        optimistic: s
+                        channelId: n,
+                        message: s,
+                        optimistic: a
                     } = e;
-                    if (s || E.has(t)) return !1;
-                    let a = r.default.getChannel(t),
-                        l = o.default.getCurrentUser(),
-                        i = null != a && a.type === c.ChannelTypes.GUILD_ANNOUNCEMENT && n.type === c.MessageTypes.DEFAULT && (null != l && n.author.id === l.id ? u.default.can(c.Permissions.SEND_MESSAGES, a) : u.default.can(c.Permissions.MANAGE_MESSAGES, a)) && !d.hasFlag(Number(n.flags), c.MessageFlags.CROSSPOSTED);
-                    if (!i) return !1;
-                    m.add(n.id)
+                    if (a || E.has(n)) return !1;
+                    let l = r.default.getChannel(n),
+                        i = o.default.getCurrentUser(),
+                        f = null != l && l.type === c.ChannelTypes.GUILD_ANNOUNCEMENT && s.type === c.MessageTypes.DEFAULT && (null != i && (null === (t = s.author) || void 0 === t ? void 0 : t.id) === i.id ? u.default.can(c.Permissions.SEND_MESSAGES, l) : u.default.can(c.Permissions.MANAGE_MESSAGES, l)) && !d.hasFlag(Number(s.flags), c.MessageFlags.CROSSPOSTED);
+                    if (!f) return !1;
+                    m.add(s.id)
                 },
                 MESSAGE_UPDATE: function(e) {
                     let {
@@ -18918,7 +18919,7 @@
                         case h.MessageTypes.RECIPIENT_REMOVE:
                             if (null == T) return;
                             let M = e.author;
-                            if (M.id === T.id) return (0, s.astToString)(I.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF.astFormat({
+                            if (null == M || M.id === T.id) return (0, s.astToString)(I.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF.astFormat({
                                 username: N,
                                 usernameOnClick: h.NOOP
                             }));

@@ -1256,7 +1256,7 @@
                             },
                             oldFormErrors: !0
                         }).then(e => {
-                            if (null == e.body || "e679da6284f50f15868cf42e8823cd89991bad76" === e.body.hash) return this._handleUpdateNotAvailable();
+                            if (null == e.body || "5f79e807f66c71a240d8a702cc4e417fcdb852c7" === e.body.hash) return this._handleUpdateNotAvailable();
                             if (e.body.required || (0, i.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
                             let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? 6048e5 : 864e5;
                             if (Date.now() - c > t) return a.default.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
@@ -4115,27 +4115,28 @@
             }
 
             function U(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+                var t;
+                let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
                 if ((0, c.default)(e)) return null;
-                null == t && (t = e.channel_id);
-                let n = S.default.getChannel(t);
-                if (null == n || n.type === A.ChannelTypes.DM || L.guildFilter === A.RecentMentionsFilters.THIS_SERVER && n.getGuildId() !== N.default.getGuildId()) return null;
-                let l = e.author.id,
-                    a = h.default.getId();
-                if (p.default.isBlocked(l) || l === a) return null;
+                null == n && (n = e.channel_id);
+                let l = S.default.getChannel(n);
+                if (null == l || l.type === A.ChannelTypes.DM || L.guildFilter === A.RecentMentionsFilters.THIS_SERVER && l.getGuildId() !== N.default.getGuildId()) return null;
+                let a = null === (t = e.author) || void 0 === t ? void 0 : t.id,
+                    s = h.default.getId();
+                if (null != a && p.default.isBlocked(a) || a === s) return null;
                 e = x(e);
-                let s = !L.everyoneFilter,
-                    i = !L.roleFilter;
+                let i = !L.everyoneFilter,
+                    r = !L.roleFilter;
                 return (0, d.default)({
                     message: e,
-                    userId: a,
-                    suppressEveryone: s,
-                    suppressRoles: i
-                }) ? (P && T.default.ackMessageId(n.id) !== e.id && (0, d.default)({
+                    userId: s,
+                    suppressEveryone: i,
+                    suppressRoles: r
+                }) ? (P && T.default.ackMessageId(l.id) !== e.id && (0, d.default)({
                     message: e,
-                    userId: a,
-                    suppressEveryone: I.default.isSuppressEveryoneEnabled(n.getGuildId()),
-                    suppressRoles: I.default.isSuppressRolesEnabled(n.getGuildId())
+                    userId: s,
+                    suppressEveryone: I.default.isSuppressEveryoneEnabled(l.getGuildId()),
+                    suppressRoles: I.default.isSuppressRolesEnabled(l.getGuildId())
                 }) && (P = !1), e) : null
             }
 

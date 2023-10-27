@@ -16690,55 +16690,56 @@
                     }
                 },
                 MESSAGE_CREATE: function(e) {
+                    var t, l;
                     let {
-                        channelId: t,
-                        message: l,
-                        optimistic: a
+                        channelId: a,
+                        message: s,
+                        optimistic: r
                     } = e;
-                    if (a) return !1;
-                    let s = A.default.getChannel(t),
-                        r = b.default.getUser(l.author.id);
-                    if (null == s || null == r || s.isBroadcastChannel()) return !1;
-                    let u = (0, P.shouldNotify)(l, t, !z),
-                        c = R.default.getNotifyMessagesInSelectedChannel(),
-                        f = c && (0, P.shouldNotifyForSelectedChannel)(l, t);
-                    if (!u && !f) return !1;
-                    let h = !R.default.isSoundDisabled(K);
-                    if (f && (h && B.playSound("message3", .4), !z) || !u) return !1;
-                    let C = n("860957").default,
-                        m = n("901165").default;
-                    if (null != C.getFocusedPID() && m.getTextChatNotificationMode() === H.OverlayNotificationTextChatTypes.ENABLED && !y.default.disableNotifications) return !1;
+                    if (r) return !1;
+                    let u = A.default.getChannel(a),
+                        c = b.default.getUser(null === (t = s.author) || void 0 === t ? void 0 : t.id);
+                    if (null == u || null == c || u.isBroadcastChannel()) return !1;
+                    let f = (0, P.shouldNotify)(s, a, !z),
+                        h = R.default.getNotifyMessagesInSelectedChannel(),
+                        C = h && (0, P.shouldNotifyForSelectedChannel)(s, a);
+                    if (!f && !C) return !1;
+                    let m = !R.default.isSoundDisabled(K);
+                    if (C && (m && B.playSound("message3", .4), !z) || !f) return !1;
+                    let p = n("860957").default,
+                        E = n("901165").default;
+                    if (null != p.getFocusedPID() && E.getTextChatNotificationMode() === H.OverlayNotificationTextChatTypes.ENABLED && !y.default.disableNotifications) return !1;
                     let {
-                        icon: p,
-                        title: E,
-                        body: g
-                    } = (0, P.makeTextChatNotification)(s, l, r);
+                        icon: g,
+                        title: I,
+                        body: _
+                    } = (0, P.makeTextChatNotification)(u, s, c);
                     if (i.default.dispatch({
                             type: "RPC_NOTIFICATION_CREATE",
-                            channelId: s.id,
-                            message: l,
-                            icon: p,
-                            title: E,
-                            body: g
-                        }), R.default.getDesktopType() === H.DesktopNotificationTypes.NEVER) return h && B.playSound(K, W), !1;
-                    let I = w.default.showNotification(p, E, g, {
+                            channelId: u.id,
+                            message: s,
+                            icon: g,
+                            title: I,
+                            body: _
+                        }), R.default.getDesktopType() === H.DesktopNotificationTypes.NEVER) return m && B.playSound(K, W), !1;
+                    let N = w.default.showNotification(g, I, _, {
                         notif_type: "MESSAGE_CREATE",
-                        notif_user_id: l.author.id,
-                        message_id: l.id,
-                        message_type: l.type,
-                        channel_id: s.id,
-                        channel_type: s.type,
-                        guild_id: s.guild_id
+                        notif_user_id: null === (l = s.author) || void 0 === l ? void 0 : l.id,
+                        message_id: s.id,
+                        message_type: s.type,
+                        channel_id: u.id,
+                        channel_type: u.type,
+                        guild_id: u.guild_id
                     }, {
                         omitViewTracking: !0,
-                        tag: l.id,
-                        sound: h ? K : void 0,
+                        tag: s.id,
+                        sound: m ? K : void 0,
                         volume: W,
                         onClick() {
-                            (0, S.transitionToChannel)(s.id), (s.type === H.ChannelTypes.GUILD_VOICE || s.type === H.ChannelTypes.GUILD_STAGE_VOICE) && o.default.updateChatOpen(s.id, !0), d.default.clickedNotification()
+                            (0, S.transitionToChannel)(u.id), (u.type === H.ChannelTypes.GUILD_VOICE || u.type === H.ChannelTypes.GUILD_STAGE_VOICE) && o.default.updateChatOpen(u.id, !0), d.default.clickedNotification()
                         }
                     });
-                    null != I && q.track(s.id, I)
+                    null != N && q.track(u.id, N)
                 },
                 CHANNEL_SELECT: function(e) {
                     let {
@@ -18697,38 +18698,36 @@
             }
 
             function y(e, t) {
-                let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                    l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+                var n, l;
+                let a = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+                    s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
                 if (null != e.flags && (0, T.hasFlag)(e.flags, x.MessageFlags.SUPPRESS_NOTIFICATIONS)) return !1;
-                let a = C.default.getChannel(t);
-                if (e.type === x.MessageTypes.THREAD_STARTER_MESSAGE) {
-                    var s;
-                    a = C.default.getChannel(null === (s = a) || void 0 === s ? void 0 : s.parent_id)
-                }
-                let r = N.default.getCurrentUser(),
-                    u = N.default.getUser(e.author.id);
-                if (null == a || null == r || null == u || a.type === x.ChannelTypes.GROUP_DM && e.type === x.MessageTypes.RECIPIENT_REMOVE || !O(r, u, a, l) || i.default.isMessageRequest(t)) return !1;
-                if (!n) {
+                let r = C.default.getChannel(t);
+                e.type === x.MessageTypes.THREAD_STARTER_MESSAGE && (r = C.default.getChannel(null === (l = r) || void 0 === l ? void 0 : l.parent_id));
+                let u = N.default.getCurrentUser(),
+                    m = N.default.getUser(null === (n = e.author) || void 0 === n ? void 0 : n.id);
+                if (null == r || null == u || null == m || r.type === x.ChannelTypes.GROUP_DM && e.type === x.MessageTypes.RECIPIENT_REMOVE || !O(u, m, r, s) || i.default.isMessageRequest(t)) return !1;
+                if (!a) {
                     let e = g.default.getChannelId(S.default.getGuildId());
-                    if (e === a.id || h.default.getCurrentSidebarChannelId(e) === a.id) return !1
+                    if (e === r.id || h.default.getCurrentSidebarChannelId(e) === r.id) return !1
                 }
-                if (f.THREAD_CHANNEL_TYPES.has(a.type)) {
-                    if (d.default.isMuted(a.id)) return !1;
-                    let t = (0, c.computeThreadNotificationSetting)(a);
+                if (f.THREAD_CHANNEL_TYPES.has(r.type)) {
+                    if (d.default.isMuted(r.id)) return !1;
+                    let t = (0, c.computeThreadNotificationSetting)(r);
                     return t !== v.ThreadMemberFlags.NO_MESSAGES && (t === v.ThreadMemberFlags.ALL_MESSAGES || (0, o.isRawMessageMentioned)({
                         rawMessage: e,
-                        userId: r.id,
+                        userId: u.id,
                         suppressEveryone: !1,
                         suppressRoles: !1
                     }))
                 } {
-                    let t = !f.GUILD_VOCAL_CHANNEL_TYPES.has(a.type) || p.default.getChannelId() === a.id;
-                    if (_.default.allowAllMessages(a) && t) return !0;
-                    let n = _.default.isSuppressEveryoneEnabled(a.getGuildId()),
-                        l = _.default.isSuppressRolesEnabled(a.getGuildId());
+                    let t = !f.GUILD_VOCAL_CHANNEL_TYPES.has(r.type) || p.default.getChannelId() === r.id;
+                    if (_.default.allowAllMessages(r) && t) return !0;
+                    let n = _.default.isSuppressEveryoneEnabled(r.getGuildId()),
+                        l = _.default.isSuppressRolesEnabled(r.getGuildId());
                     return (0, o.isRawMessageMentioned)({
                         rawMessage: e,
-                        userId: r.id,
+                        userId: u.id,
                         suppressEveryone: n,
                         suppressRoles: l
                     })
@@ -18736,16 +18735,14 @@
             }
 
             function D(e, t) {
-                let n = g.default.getChannelId(S.default.getGuildId());
-                if (n !== t) return !1;
-                let l = C.default.getChannel(t);
-                if (e.type === x.MessageTypes.THREAD_STARTER_MESSAGE) {
-                    var a;
-                    l = C.default.getChannel(null === (a = l) || void 0 === a ? void 0 : a.parent_id)
-                }
-                let s = N.default.getCurrentUser(),
-                    i = N.default.getUser(e.author.id);
-                return !(null == l || null == s || null == i || l.isManaged() || i.hasFlag(x.UserFlags.SPAMMER) || E.default.isBlocked(i.id) || i.id === s.id || I.default.getStatus() === x.StatusTypes.DND || _.default.allowNoMessages(l)) && !0
+                var n, l;
+                let a = g.default.getChannelId(S.default.getGuildId());
+                if (a !== t) return !1;
+                let s = C.default.getChannel(t);
+                e.type === x.MessageTypes.THREAD_STARTER_MESSAGE && (s = C.default.getChannel(null === (l = s) || void 0 === l ? void 0 : l.parent_id));
+                let i = N.default.getCurrentUser(),
+                    r = N.default.getUser(null === (n = e.author) || void 0 === n ? void 0 : n.id);
+                return !(null == s || null == i || null == r || s.isManaged() || r.hasFlag(x.UserFlags.SPAMMER) || E.default.isBlocked(r.id) || r.id === i.id || I.default.getStatus() === x.StatusTypes.DND || _.default.allowNoMessages(s)) && !0
             }
 
             function b(e, t) {

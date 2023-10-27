@@ -659,16 +659,17 @@
                 p = n("782340");
 
             function E(e, t, n, E) {
+                var g;
                 let {
-                    icon: g,
-                    title: m,
-                    body: S
+                    icon: m,
+                    title: S,
+                    body: v
                 } = (0, d.makeTextChatNotification)(e, t, n), {
-                    trackView: v,
-                    trackClick: T
+                    trackView: T,
+                    trackClick: N
                 } = (0, c.makeAnalyticsTrackers)(h.OverlayNotificationType.TextChat, {
                     notif_type: h.OverlayNotificationType.TextChat,
-                    notif_user_id: t.author.id,
+                    notif_user_id: null === (g = t.author) || void 0 === g ? void 0 : g.id,
                     message_id: t.id,
                     message_type: t.type,
                     guild_id: e.guild_id,
@@ -677,9 +678,9 @@
                 });
                 return {
                     colorScheme: o.ColorSchemes.PRIMARY,
-                    icon: g,
-                    title: m,
-                    body: S,
+                    icon: m,
+                    title: S,
+                    body: v,
                     renderFooter: e => e ? (0, a.jsx)("div", {
                         style: {
                             textAlign: "center"
@@ -688,13 +689,13 @@
                     }) : null,
                     maxBodyLines: 2,
                     onNotificationShow: () => {
-                        E && (0, u.playSound)(s.MESSAGE_SOUND, s.MESSAGE_SOUND_VOLUME), v()
+                        E && (0, u.playSound)(s.MESSAGE_SOUND, s.MESSAGE_SOUND_VOLUME), T()
                     },
                     onNotificationClick: () => {
-                        (0, l.transitionTo)(f.Routes.CHANNEL(e.guild_id, e.id)), T("jump"), r.default.isInstanceUILocked() && i.default.setInstanceLocked(!1)
+                        (0, l.transitionTo)(f.Routes.CHANNEL(e.guild_id, e.id)), N("jump"), r.default.isInstanceUILocked() && i.default.setInstanceLocked(!1)
                     },
                     onDismissClick: () => {
-                        T("dismiss")
+                        N("dismiss")
                     }
                 }
             }
@@ -4867,14 +4868,14 @@
                     }) : e)
                 },
                 MESSAGE_CREATE: function(e) {
-                    var t, n;
+                    var t, n, a;
                     let {
-                        channelId: a,
-                        message: i
-                    } = e, r = C.default.getChannel(a), d = R.default.getUser(i.author.id);
-                    if (null == r || null == d) return !1;
-                    if ((null === (t = i.activity) || void 0 === t ? void 0 : t.type) === b.ActivityActionTypes.JOIN || (null === (n = i.activity) || void 0 === n ? void 0 : n.type) === b.ActivityActionTypes.JOIN_REQUEST) {
-                        if (!(0, j.shouldNotify)(i, a, !0, !0)) return !1;
+                        channelId: i,
+                        message: r
+                    } = e, d = C.default.getChannel(i), u = R.default.getUser(null === (t = r.author) || void 0 === t ? void 0 : t.id);
+                    if (null == d || null == u) return !1;
+                    if ((null === (n = r.activity) || void 0 === n ? void 0 : n.type) === b.ActivityActionTypes.JOIN || (null === (a = r.activity) || void 0 === a ? void 0 : a.type) === b.ActivityActionTypes.JOIN_REQUEST) {
+                        if (!(0, j.shouldNotify)(r, i, !0, !0)) return !1;
                         let e = function(e, t, n) {
                             let a, i;
                             if (o(null != t.activity, "received null message activity"), n.id === y.default.getId()) return !1;
@@ -4896,15 +4897,15 @@
                                 channelId: e.id
                             });
                             return null != r && F(r, !1, 3e4), !0
-                        }(r, i, d);
+                        }(d, r, u);
                         if (!1 !== e) return e
                     }
-                    if ((!D.default.isInstanceUILocked() || D.default.isPinned(b.OverlayWidgets.TEXT)) && a === A.default.getChannelId() || D.default.getTextChatNotificationMode() === b.OverlayNotificationTextChatTypes.DISABLED || L.default.disableNotifications || !(0, j.shouldNotify)(i, a)) return !1;
-                    let u = !_.default.isSoundDisabled(M.MESSAGE_SOUND);
-                    z((0, S.default)(r, i, d, u), {
+                    if ((!D.default.isInstanceUILocked() || D.default.isPinned(b.OverlayWidgets.TEXT)) && i === A.default.getChannelId() || D.default.getTextChatNotificationMode() === b.OverlayNotificationTextChatTypes.DISABLED || L.default.disableNotifications || !(0, j.shouldNotify)(r, i)) return !1;
+                    let c = !_.default.isSoundDisabled(M.MESSAGE_SOUND);
+                    z((0, S.default)(d, r, u, c), {
                         type: l.TEXT,
-                        channelId: r.id,
-                        messageType: i.type
+                        channelId: d.id,
+                        messageType: r.type
                     })
                 },
                 CHANNEL_SELECT: function(e) {

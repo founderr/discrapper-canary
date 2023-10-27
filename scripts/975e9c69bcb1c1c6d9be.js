@@ -10741,13 +10741,14 @@
                     u = new Set
                 },
                 MESSAGE_CREATE: function(e) {
+                    var t;
                     if (e.isPushNotification) return;
-                    let t = e.message;
-                    if (i.default.getId() !== t.author.id || !(0, o.isFirstMessageIdInMediaPost)(t.id, t.channel_id)) return;
-                    let n = r.default.getChannel(t.channel_id);
-                    if (null == n || null == n.parent_id) return;
-                    let a = s.default.isChannelGated(n.guild_id, n.parent_id);
-                    a && u.add(e.message.id)
+                    let n = e.message;
+                    if (i.default.getId() !== (null === (t = n.author) || void 0 === t ? void 0 : t.id) || !(0, o.isFirstMessageIdInMediaPost)(n.id, n.channel_id)) return;
+                    let a = r.default.getChannel(n.channel_id);
+                    if (null == a || null == a.parent_id) return;
+                    let l = s.default.isChannelGated(a.guild_id, a.parent_id);
+                    l && u.add(e.message.id)
                 },
                 DISMISS_MEDIA_POST_SHARE_PROMPT: function(e) {
                     let {

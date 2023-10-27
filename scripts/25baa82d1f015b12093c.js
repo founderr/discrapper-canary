@@ -1903,7 +1903,7 @@
                     children: [(0, a.jsx)(E.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "241024"
+                        buildNumber: "241044"
                     }), (0, a.jsx)(m, {})]
                 }) : null
             }
@@ -27976,11 +27976,12 @@
                     return null != t && null != t.id && null != u[t.id] && null != t.icon && d(t.id, o.Steps.AVATAR)
                 },
                 MESSAGE_CREATE: function(e) {
+                    var t;
                     let {
-                        channelId: t,
-                        message: n
-                    } = e, a = i.default.getChannel(t);
-                    return n.author.id === l.default.getId() && null != a && null != u[a.guild_id] && d(a.guild_id, o.Steps.MESSAGE)
+                        channelId: n,
+                        message: a
+                    } = e, s = i.default.getChannel(n);
+                    return (null === (t = a.author) || void 0 === t ? void 0 : t.id) === l.default.getId() && null != s && null != u[s.guild_id] && d(s.guild_id, o.Steps.MESSAGE)
                 },
                 GUILD_MEMBER_LIST_UPDATE: function(e) {
                     let {
@@ -43539,7 +43540,7 @@
                         } = e;
                         if (!u.default.isEnabled()) return !1;
                         let E = l.default.getId();
-                        if ((null == f ? void 0 : f.find(e => e.id === E)) != null ? (0, i.unlockAchievement)(o.PoggermodeAchievementId.PING_ME) : (null !== (t = null == f ? void 0 : f.length) && void 0 !== t ? t : 0) > 0 && (null == a ? void 0 : a.id) === E && (0, i.unlockAchievement)(o.PoggermodeAchievementId.PING_SOMEONE), !(0, d.shouldTrackMessage)(a.id, E, s, c)) return !1;
+                        if ((null == f ? void 0 : f.find(e => e.id === E)) != null ? (0, i.unlockAchievement)(o.PoggermodeAchievementId.PING_ME) : (null !== (t = null == f ? void 0 : f.length) && void 0 !== t ? t : 0) > 0 && (null == a ? void 0 : a.id) === E && (0, i.unlockAchievement)(o.PoggermodeAchievementId.PING_SOMEONE), !(0, d.shouldTrackMessage)(null == a ? void 0 : a.id, E, s, c)) return !1;
                         let _ = d.default.getMostRecentMessageCombo(n),
                             {
                                 combo: h
@@ -46780,36 +46781,37 @@
                     })
                 }
                 handleActivityMessage(e) {
+                    var t;
                     let {
-                        channelId: t,
-                        message: n
+                        channelId: n,
+                        message: a
                     } = e;
                     if (0 === this.rpcServer.subscriptions.length) return;
                     let {
-                        application: a,
-                        activity: s
-                    } = n;
-                    if (null == a || null == s || null == s.party_id) return;
-                    let l = T.default.getUser(n.author.id);
-                    if (null == l) return;
-                    let i = T.default.getCurrentUser();
-                    if (null == i || l.id === i.id) return;
-                    let r = s.type === O.ActivityActionTypes.JOIN_REQUEST ? _.default.getApplicationActivity(i.id, a.id) : _.default.getApplicationActivity(l.id, a.id);
-                    if (null == r || null == r.party || r.party.id !== s.party_id) return;
-                    let o = r.application_id;
-                    switch (s.type) {
+                        application: s,
+                        activity: l
+                    } = a;
+                    if (null == s || null == l || null == l.party_id) return;
+                    let i = T.default.getUser(null === (t = a.author) || void 0 === t ? void 0 : t.id);
+                    if (null == i) return;
+                    let r = T.default.getCurrentUser();
+                    if (null == r || i.id === r.id) return;
+                    let o = l.type === O.ActivityActionTypes.JOIN_REQUEST ? _.default.getApplicationActivity(r.id, s.id) : _.default.getApplicationActivity(i.id, s.id);
+                    if (null == o || null == o.party || o.party.id !== l.party_id) return;
+                    let u = o.application_id;
+                    switch (l.type) {
                         case O.ActivityActionTypes.JOIN:
-                            this.rpcServer.dispatchToSubscriptions(O.RPCEvents.ACTIVITY_INVITE, e => e.socket.application.id === o, {
-                                user: (0, R.default)(l),
-                                activity: r,
-                                type: s.type,
-                                channel_id: t,
-                                message_id: n.id
+                            this.rpcServer.dispatchToSubscriptions(O.RPCEvents.ACTIVITY_INVITE, e => e.socket.application.id === u, {
+                                user: (0, R.default)(i),
+                                activity: o,
+                                type: l.type,
+                                channel_id: n,
+                                message_id: a.id
                             });
                             break;
                         case O.ActivityActionTypes.JOIN_REQUEST:
-                            this.rpcServer.dispatchToSubscriptions(O.RPCEvents.ACTIVITY_JOIN_REQUEST, e => e.socket.application.id === o, {
-                                user: (0, R.default)(l)
+                            this.rpcServer.dispatchToSubscriptions(O.RPCEvents.ACTIVITY_JOIN_REQUEST, e => e.socket.application.id === u, {
+                                user: (0, R.default)(i)
                             })
                     }
                 }
@@ -52419,31 +52421,31 @@
             }
 
             function F(e) {
+                var t, n, a, s, l, i, r;
                 let {
-                    channelId: t,
-                    message: n,
-                    optimistic: a
+                    channelId: E,
+                    message: T,
+                    optimistic: N
                 } = e;
-                if (a || _.default.isSelfDeaf()) return !1;
-                let s = c.default.getChannel(t);
-                if (null == s) return !1;
-                let l = C.default.getChannelId(),
-                    i = d.default.getCurrentSidebarChannelId(l),
-                    r = t === l || t === i,
-                    E = o.EnableTTSCommand.getSetting() && n.tts && r,
-                    T = h.default.getTTSType(),
-                    N = n.author.id !== u.default.getId() && (T === g.TTSNotificationTypes.ALL_CHANNELS || T === g.TTSNotificationTypes.SELECTED_CHANNEL && r);
-                if ((E || N) && !I.default.isBlocked(n.author.id)) {
-                    var p, R, L;
-                    if (O.indexOf(n.id) >= 0) return !1;
-                    O.unshift(n.id) > 10 && O.pop();
-                    let e = s.getGuildId();
-                    if (null != e && m.default.getMutedChannels(e).has(t)) return !1;
-                    let a = null !== (R = f.default.getNick(e, n.author.id)) && void 0 !== R ? R : S.default.getName(n.author),
-                        l = n.type === g.MessageTypes.REPLY ? null === (p = n.referenced_message) || void 0 === p ? void 0 : p.author : null,
-                        i = null != l ? null !== (L = f.default.getNick(e, null == l ? void 0 : l.id)) && void 0 !== L ? L : S.default.getName(l) : null,
-                        r = D(n.content, a, e, i);
-                    b(r, !1, s.id, n.id, A.MAX_TTS_LENGTH)
+                if (N || _.default.isSelfDeaf()) return !1;
+                let p = c.default.getChannel(E);
+                if (null == p) return !1;
+                let R = C.default.getChannelId(),
+                    L = d.default.getCurrentSidebarChannelId(R),
+                    v = E === R || E === L,
+                    M = o.EnableTTSCommand.getSetting() && T.tts && v,
+                    x = h.default.getTTSType(),
+                    P = (null === (t = T.author) || void 0 === t ? void 0 : t.id) !== u.default.getId() && (x === g.TTSNotificationTypes.ALL_CHANNELS || x === g.TTSNotificationTypes.SELECTED_CHANNEL && v);
+                if ((M || P) && ((null === (n = T.author) || void 0 === n ? void 0 : n.id) == null || !I.default.isBlocked(T.author.id))) {
+                    if (O.indexOf(T.id) >= 0) return !1;
+                    O.unshift(T.id) > 10 && O.pop();
+                    let e = p.getGuildId();
+                    if (null != e && m.default.getMutedChannels(e).has(E)) return !1;
+                    let t = null !== (i = null !== (l = f.default.getNick(e, null === (a = T.author) || void 0 === a ? void 0 : a.id)) && void 0 !== l ? l : S.default.getName(T.author)) && void 0 !== i ? i : "",
+                        n = T.type === g.MessageTypes.REPLY ? null === (s = T.referenced_message) || void 0 === s ? void 0 : s.author : null,
+                        o = null != n ? null !== (r = f.default.getNick(e, null == n ? void 0 : n.id)) && void 0 !== r ? r : S.default.getName(n) : null,
+                        u = D(T.content, t, e, o);
+                    b(u, !1, p.id, T.id, A.MAX_TTS_LENGTH)
                 }
                 return !1
             }
