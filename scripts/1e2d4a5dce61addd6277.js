@@ -8050,7 +8050,7 @@
                     },
                     codeBlockSyntax: {
                         order: s.defaultRules.inlineCode.order - .1,
-                        match: e => /^(```)([a-z0-9_+\-.]+$)?/.exec(e),
+                        match: e => /^(```)([a-z0-9_+\-.#]+$)?/.exec(e),
                         parse: e => null != e[2] && "" !== e[2] && h.isKnownLang(e[2]) ? [{
                             type: "codeBlockSyntax",
                             content: e[1],
