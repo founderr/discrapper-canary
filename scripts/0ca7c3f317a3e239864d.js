@@ -30,7 +30,7 @@
             }
 
             function l(e, t) {
-                return s.default.put({
+                return s.default.patch({
                     url: n.Endpoints.EXPLICIT_MEDIA_SCAN_MESSAGES(e),
                     body: {
                         message_ids: t
