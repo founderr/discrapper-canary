@@ -526,7 +526,7 @@
             let o = "hasClickedGuildShopProductPreviewTab",
                 s = "hasClickedGuildShopChannelRow",
                 a = "https://discord.com/servershop",
-                d = "500 MB"
+                d = "1 GB"
         },
         955735: function(e, t, n) {
             "use strict";
