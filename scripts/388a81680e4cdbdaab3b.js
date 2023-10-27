@@ -603,8 +603,8 @@
                     required: q,
                     value: N,
                     enableThemedBackground: O = !1,
-                    parentModalKey: L
-                } = e, R = (0, o.useFormContext)(), [P, V] = l.useState(() => (0, i.toRichValue)(N)), D = l.useRef(!0 === u), x = null != t ? t : null == R ? void 0 : R.titleId, S = null !== (A = null == R ? void 0 : R.errorId) && void 0 !== A ? A : U, F = l.useMemo(() => ({
+                    parentModalKey: R
+                } = e, L = (0, o.useFormContext)(), [D, P] = l.useState(() => (0, i.toRichValue)(N)), V = l.useRef(!0 === u), x = null != t ? t : null == L ? void 0 : L.titleId, S = null !== (A = null == L ? void 0 : L.errorId) && void 0 !== A ? A : U, M = l.useMemo(() => ({
                     analyticsName: "simple",
                     autocomplete: {
                         alwaysUseLayer: !0,
@@ -632,27 +632,27 @@
                     id: r,
                     maxCharacterCount: C,
                     onChange: function(e, A, t) {
-                        g(A), V(t)
+                        g(A), P(t)
                     },
                     placeholder: v,
                     required: q,
                     channel: I,
                     textValue: N,
-                    richValue: P,
-                    type: F,
+                    richValue: D,
+                    type: M,
                     onBlur: () => {
-                        D.current = !1
+                        V.current = !1
                     },
                     onFocus: () => {
-                        D.current = !0
+                        V.current = !0
                     },
-                    focused: D.current,
+                    focused: V.current,
                     onSubmit: null != p ? p : h,
                     disableThemedBackground: !O,
-                    parentModalKey: L,
+                    parentModalKey: R,
                     emojiPickerCloseOnModalOuterClick: !0,
                     children: [!0 === E && (0, a.jsx)(m, {
-                        hasError: null != R.error || null != C && N.length > C,
+                        hasError: null != L.error || null != C && N.length > C,
                         text: N,
                         maxLength: C
                     }), null != C && (0, a.jsx)(o.HiddenVisually, {
@@ -912,7 +912,7 @@
                 }, [u]);
                 let {
                     uploads: O
-                } = u, L = !O.every(e => u.existingAttachmentIds.has(e.id)) || O.length !== u.existingAttachmentIds.size;
+                } = u, R = !O.every(e => u.existingAttachmentIds.has(e.id)) || O.length !== u.existingAttachmentIds.size;
                 return {
                     addAttachment: v,
                     cancelUnusedUploads: N,
@@ -923,7 +923,7 @@
                     isSaving: null != g,
                     changesSaving: g,
                     saveError: h,
-                    hasUnsavedAttachmentChanges: L,
+                    hasUnsavedAttachmentChanges: R,
                     canAttachFiles: O.length < u.target.getMaxAttachmentsCount(),
                     canAttachArchives: null !== (t = null == o ? void 0 : o.hasFeature(U.GuildFeatures.GUILD_PRODUCTS_ALLOW_ARCHIVED_FILE)) && void 0 !== t && t
                 }
@@ -1203,28 +1203,25 @@
                 })
             }
         },
-        836312: function(e, A, t) {
+        669297: function(e, A, t) {
             "use strict";
             t.r(A), t.d(A, {
-                showPublishErrorDialog: function() {
-                    return u
+                openErrorDialog: function() {
+                    return r
                 }
             });
             var a = t("920040");
             t("773670");
-            var l = t("551042"),
-                n = t("77078"),
-                s = t("83501"),
-                r = t("959875"),
-                o = t("49111"),
-                i = t("782340");
+            var l = t("77078"),
+                n = t("959875"),
+                s = t("782340");
 
-            function d(e, A, t) {
-                let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-                (0, r.default)({
+            function r(e, A, t) {
+                let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+                (0, n.default)({
                     title: e,
                     body: "string" == typeof A ? A : A.format({
-                        highlightHook: e => (0, a.jsx)(n.Text, {
+                        highlightHook: e => (0, a.jsx)(l.Text, {
                             variant: "text-md/normal",
                             color: "text-normal",
                             style: {
@@ -1232,51 +1229,66 @@
                             },
                             children: e
                         }),
-                        ...l
+                        ...r
                     }),
-                    cta: i.default.Messages.GOT_IT,
+                    cta: s.default.Messages.GOT_IT,
                     onConfirm: () => {},
                     iconVariant: t
                 })
             }
+        },
+        836312: function(e, A, t) {
+            "use strict";
+            t.r(A), t.d(A, {
+                showPublishErrorDialog: function() {
+                    return i
+                }
+            });
+            var a = t("920040");
+            t("773670");
+            var l = t("551042"),
+                n = t("83501"),
+                s = t("669297"),
+                r = t("49111"),
+                o = t("782340");
 
-            function u(e, A, n) {
-                var r, u, c;
+            function i(e, A, i) {
+                var d, u, c;
                 switch (e.code) {
-                    case o.AbortCodes.TOO_MANY_PUBLISHED_PRODUCT_LISTINGS:
-                        d(i.default.Messages.GUILD_PRODUCT_TOO_MANY_PUBLISHED_PRODUCT_ERROR_TITLE, i.default.Messages.GUILD_PRODUCT_TOO_MANY_PUBLISHED_PRODUCT_ERROR_BODY, s.IconVariant.DANGER);
+                    case r.AbortCodes.TOO_MANY_PUBLISHED_PRODUCT_LISTINGS:
+                        (0, s.openErrorDialog)(o.default.Messages.GUILD_PRODUCT_TOO_MANY_PUBLISHED_PRODUCT_ERROR_TITLE, o.default.Messages.GUILD_PRODUCT_TOO_MANY_PUBLISHED_PRODUCT_ERROR_BODY, n.IconVariant.DANGER);
                         break;
-                    case o.AbortCodes.TWO_FA_NOT_ENABLED:
-                        d(i.default.Messages.GUILD_PRODUCT_TWO_FA_NOT_ENABLED_ERROR_TITLE, i.default.Messages.GUILD_PRODUCT_TWO_FA_NOT_ENABLED_ERROR_BODY, s.IconVariant.WARNING);
+                    case r.AbortCodes.TWO_FA_NOT_ENABLED:
+                        (0, s.openErrorDialog)(o.default.Messages.GUILD_PRODUCT_TWO_FA_NOT_ENABLED_ERROR_TITLE, o.default.Messages.GUILD_PRODUCT_TWO_FA_NOT_ENABLED_ERROR_BODY, n.IconVariant.WARNING);
                         break;
-                    case o.AbortCodes.GUILD_PRODUCT_LISTING_CANNOT_PUBLISH_WITHOUT_BENEFIT:
-                        d(i.default.Messages.GUILD_PRODUCT_MISSING_BENEFITS_ERROR_TITLE, i.default.Messages.GUILD_PRODUCT_MISSING_BENEFITS_ERROR_BODY, s.IconVariant.WARNING);
+                    case r.AbortCodes.GUILD_PRODUCT_LISTING_CANNOT_PUBLISH_WITHOUT_BENEFIT:
+                        (0, s.openErrorDialog)(o.default.Messages.GUILD_PRODUCT_MISSING_BENEFITS_ERROR_TITLE, o.default.Messages.GUILD_PRODUCT_MISSING_BENEFITS_ERROR_BODY, n.IconVariant.WARNING);
                         break;
-                    case o.AbortCodes.MONETIZATION_TERMS_NOT_ACCEPTED:
+                    case r.AbortCodes.MONETIZATION_TERMS_NOT_ACCEPTED:
                         ;
-                        r = A, (0, l.openModalLazy)(async () => {
+                        d = A, (0, l.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await t.el("300770").then(t.bind(t, "300770"));
                             return A => (0, a.jsx)(e, {
-                                guildId: r,
+                                guildId: d,
                                 ...A
                             })
                         });
                         break;
-                    case o.AbortCodes.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED:
-                        d(i.default.Messages.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED_TITLE, i.default.Messages.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED_BODY, s.IconVariant.WARNING);
+                    case r.AbortCodes.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED:
+                        (0, s.openErrorDialog)(o.default.Messages.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED_TITLE, o.default.Messages.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED_BODY, n.IconVariant.WARNING);
                         break;
-                    case o.AbortCodes.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED:
+                    case r.AbortCodes.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED:
                         let C, f;
-                        null != n ? (C = i.default.Messages.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_BODY_WITH_LINK, f = {
-                            url: o.MarketingURLs.DEVELOPER_PORTAL_PAYOUT_SETTINGS(n)
-                        }) : C = i.default.Messages.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_BODY, d(i.default.Messages.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_TITLE, C, s.IconVariant.WARNING, f);
+                        null != i ? (C = o.default.Messages.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_BODY_WITH_LINK, f = {
+                            url: r.MarketingURLs.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i)
+                        }) : C = o.default.Messages.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_BODY, (0, s.openErrorDialog)(o.default.Messages.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_TITLE, C, n.IconVariant.WARNING, f);
                         break;
                     default:
                         ;
                         let T = null !== (c = e.getFirstFieldErrorMessage(["published"])) && void 0 !== c ? c : (null === (u = e.hasFieldErrors) || void 0 === u ? void 0 : u.call(e)) ? void 0 : e.message;
-                        if (null != T) d(i.default.Messages.GUILD_PRODUCT_GENERIC_ERROR_TITLE, T, s.IconVariant.WARNING)
+                        if (null != T)(0, s.openErrorDialog)(o.default.Messages.GUILD_PRODUCT_GENERIC_ERROR_TITLE, T, n.IconVariant.WARNING)
                 }
             }
         },
@@ -1340,28 +1352,28 @@
                     uploadButtonLabel: I = c.default.Messages.UPLOAD_IMAGE,
                     radioGroupAriaLabel: h = c.default.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL,
                     disabled: m = !1
-                } = e, p = n === f, [E, v] = l.useState(p ? t : null), [q, N] = l.useState(null), O = l.useRef(null), L = l.useRef(null);
+                } = e, p = n === f, [E, v] = l.useState(p ? t : null), [q, N] = l.useState(null), O = l.useRef(null), R = l.useRef(null);
                 l.useEffect(() => {
                     g !== f && (v(null), N(null))
                 }, [g]);
-                let R = null != q ? c.default.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE_WITH_FILENAME.format({
+                let L = null != q ? c.default.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE_WITH_FILENAME.format({
                         filename: q
                     }) : c.default.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE,
-                    P = (0, r.useRadioGroup)({
+                    D = (0, r.useRadioGroup)({
                         orientation: "horizontal",
                         isDisabled: m
                     }),
-                    V = () => {
+                    P = () => {
                         var e;
                         return null === (e = O.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
                     },
-                    D = () => {
+                    V = () => {
                         n === f && U(A[0].data, A[0].name), v(null), N(null)
                     };
                 return l.useEffect(() => {
                     if (p && null != q) {
                         var e, A;
-                        null === (A = L.current) || void 0 === A || null === (e = A.ref) || void 0 === e || e.focus()
+                        null === (A = R.current) || void 0 === A || null === (e = A.ref) || void 0 === e || e.focus()
                     }
                 }, [p, q]), (0, a.jsxs)("div", {
                     className: C.imageSelectionContainer,
@@ -1400,7 +1412,7 @@
                             children: e => (0, a.jsx)(r.Clickable, {
                                 ...e,
                                 className: C.customImageAction,
-                                onClick: V,
+                                onClick: P,
                                 "aria-label": c.default.Messages.CUSTOM_IMAGE_SELECTOR_EDIT_CUSTOM_IMAGE_ARIA_LABEL.format({
                                     filename: q
                                 }),
@@ -1414,7 +1426,7 @@
                             children: e => (0, a.jsx)(r.Clickable, {
                                 ...e,
                                 className: C.customImageAction,
-                                onClick: D,
+                                onClick: V,
                                 "aria-label": c.default.Messages.CUSTOM_IMAGE_SELECTOR_DELETE_CUSTOM_IMAGE_ARIA_LABEL.format({
                                     filename: q
                                 }),
@@ -1425,15 +1437,15 @@
                         })]
                     }), (0, a.jsxs)("div", {
                         "aria-label": h,
-                        ...P,
+                        ...D,
                         className: C.radioGroup,
                         children: [null != E && (0, a.jsx)(T, {
-                            ref: L,
+                            ref: R,
                             selectedImageName: n,
                             onChange: U,
                             disabled: m,
                             name: f,
-                            alt: R,
+                            alt: L,
                             data: E
                         }), A.map(e => (0, a.jsx)(T, {
                             selectedImageName: n,
@@ -1449,10 +1461,10 @@
             "use strict";
             t.r(A), t.d(A, {
                 GuildProductEditModalContent: function() {
-                    return ee
+                    return et
                 },
                 default: function() {
-                    return eA
+                    return ea
                 }
             });
             var a, l, n = t("920040"),
@@ -1471,38 +1483,40 @@
                 I = t("228100"),
                 h = t("741515"),
                 m = t("435032"),
-                p = t("424960"),
-                E = t("845579"),
-                v = t("305961"),
-                q = t("181114"),
-                N = t("965397"),
-                O = t("191814"),
+                p = t("465869"),
+                E = t("424960"),
+                v = t("845579"),
+                q = t("305961"),
+                N = t("181114"),
+                O = t("965397"),
+                R = t("191814"),
                 L = t("476765"),
-                R = t("578706"),
+                D = t("578706"),
                 P = t("153160"),
                 V = t("271560"),
-                D = t("866190"),
-                x = t("949435"),
-                S = t("565559"),
+                x = t("866190"),
+                S = t("949435"),
+                M = t("565559"),
                 F = t("757515"),
-                M = t("740259"),
-                b = t("492724"),
-                j = t("155539"),
-                G = t("959875"),
-                _ = t("836312"),
-                K = t("795785"),
-                W = t("850861"),
-                X = t("570114"),
-                B = t("307785"),
-                Q = t("49111"),
-                z = t("988268"),
-                Z = t("782340"),
-                H = t("533647");
-            let y = (0, L.uid)(),
-                w = (0, L.uid)(),
-                Y = (0, L.uid)();
+                b = t("740259"),
+                j = t("492724"),
+                G = t("155539"),
+                _ = t("959875"),
+                K = t("669297"),
+                W = t("836312"),
+                X = t("795785"),
+                B = t("850861"),
+                Q = t("570114"),
+                z = t("307785"),
+                Z = t("49111"),
+                H = t("988268"),
+                y = t("782340"),
+                w = t("533647");
+            let Y = (0, L.uid)(),
+                k = (0, L.uid)(),
+                J = (0, L.uid)();
 
-            function k(e) {
+            function $(e) {
                 let {
                     text: A,
                     onChange: t,
@@ -1511,8 +1525,8 @@
                     warning: s
                 } = e, r = (0, L.useUID)();
                 return (0, n.jsxs)("label", {
-                    className: o(H.benefitToggleContainer, {
-                        [H.disabled]: l
+                    className: o(w.benefitToggleContainer, {
+                        [w.disabled]: l
                     }),
                     htmlFor: r,
                     children: [(0, n.jsx)(f.Text, {
@@ -1520,11 +1534,11 @@
                         color: l ? "text-muted" : "text-normal",
                         children: A
                     }), null != s && (0, n.jsxs)(n.Fragment, {
-                        children: [(0, n.jsx)(O.default, {
+                        children: [(0, n.jsx)(R.default, {
                             size: 4,
                             horizontal: !0
                         }), s]
-                    }), (0, n.jsx)(O.default, {
+                    }), (0, n.jsx)(R.default, {
                         size: 16,
                         horizontal: !0
                     }), (0, n.jsx)(f.Switch, {
@@ -1536,7 +1550,7 @@
                 })
             }
 
-            function J(e, A) {
+            function ee(e, A) {
                 return e.filter(e => {
                     let {
                         value: t,
@@ -1546,296 +1560,302 @@
                 })
             }
 
-            function $(e) {
+            function eA(e) {
                 let {
                     guildId: A,
                     selectedPriceTier: t,
                     setPriceTier: a
                 } = e, {
                     priceTiers: l
-                } = (0, h.usePriceTiers)(A, Q.PriceTierTypes.GUILD_PRODUCTS), r = s.useMemo(() => (null != l ? l : null != t ? [t] : []).map(e => ({
+                } = (0, h.usePriceTiers)(A, Z.PriceTierTypes.GUILD_PRODUCTS), r = s.useMemo(() => (null != l ? l : null != t ? [t] : []).map(e => ({
                     value: e,
-                    label: (0, P.formatPrice)(e, Q.CurrencyCodes.USD)
+                    label: (0, P.formatPrice)(e, Z.CurrencyCodes.USD)
                 })), [l, t]);
                 return (0, n.jsx)(f.SearchableSelect, {
                     value: t,
-                    placeholder: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_PRICE_PLACEHOLDER,
+                    placeholder: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_PRICE_PLACEHOLDER,
                     maxVisibleItems: 5,
                     options: r,
                     onChange: a,
-                    filter: J,
+                    filter: ee,
                     "aria-required": !0
                 })
             }
 
-            function ee(e) {
-                var A, a, r, o, i, h, p, L;
+            function et(e) {
+                var A, a, r, o, i, h, E, L;
                 let {
-                    guildId: J,
-                    productId: ee,
-                    transitionState: et,
-                    onClose: ea
-                } = e, [el, en] = s.useState(ee), es = (0, c.default)([S.default], () => null == el ? null : S.default.getGuildProduct(el), [el]), er = (null == es ? void 0 : es.published) === !0, {
-                    application: eo
-                } = (0, I.default)(J, z.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), ei = M.PRODUCT_IMAGE_PRESETS[0], ed = (0, c.default)([U.default], () => U.default.useReducedMotion), eu = E.GifAutoPlay.useSetting(), ec = (0, D.useIsWindowFocused)(), eC = s.useCallback(() => {
+                    guildId: ee,
+                    productId: et,
+                    transitionState: el,
+                    onClose: en
+                } = e, [es, er] = s.useState(et), eo = (0, c.default)([M.default], () => null == es ? null : M.default.getGuildProduct(es), [es]), ei = (null == eo ? void 0 : eo.published) === !0, {
+                    application: ed
+                } = (0, I.default)(ee, H.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), eu = b.PRODUCT_IMAGE_PRESETS[0], ec = (0, c.default)([U.default], () => U.default.useReducedMotion), eC = v.GifAutoPlay.useSetting(), ef = (0, x.useIsWindowFocused)(), eT = s.useCallback(() => {
                     var e;
-                    return (null == es ? void 0 : null === (e = es.image_asset) || void 0 === e ? void 0 : e.application_id) == null ? ei.data : (0, V.getAssetURL)(es.image_asset.application_id, es.image_asset, 600, ec && eu ? void 0 : "webp")
-                }, [ei, es, ec, eu]), [ef, eT] = s.useState(null !== (r = null == es ? void 0 : es.name) && void 0 !== r ? r : ""), [eg, eU] = s.useState(null !== (o = null == es ? void 0 : es.description) && void 0 !== o ? o : ""), [eI, eh] = s.useState(null !== (i = null == es ? void 0 : es.price_tier) && void 0 !== i ? i : void 0), [em, ep] = s.useState(eC), [eE, ev] = s.useState(null !== (h = null == es ? void 0 : null === (A = es.image_asset) || void 0 === A ? void 0 : A.filename) && void 0 !== h ? h : ei.name), [eq, eN] = s.useState(!1), [eO, eL] = s.useState(), eR = s.useMemo(() => null != eI ? (0, P.formatPrice)(eI, Q.CurrencyCodes.USD) : void 0, [eI]), [eP, eV] = s.useState(!0), {
-                    changesSaving: eD,
-                    saveError: ex,
-                    saveProductWithAttachments: eS,
-                    hasUnsavedAttachmentChanges: eF,
-                    cancelUnusedUploads: eM
-                } = (0, x.useGuildProductAttachmentManagerContext)(), eb = (null == es ? void 0 : es.attachments) != null && (null == es ? void 0 : es.attachments.length) > 0, ej = null != ex ? ex : eO, eG = null != eD && "published" in eD, e_ = null != eD && !eG, eK = null !== (p = null == es ? void 0 : es.role_id) && void 0 !== p ? p : null, [eW, eX] = s.useState(), eB = null != eW || null != eK, eQ = (0, c.default)([v.default], () => {
-                    if (null != eK && null !== eW) {
-                        let e = v.default.getGuild(J);
-                        return null == e ? void 0 : e.roles[eK]
+                    return (null == eo ? void 0 : null === (e = eo.image_asset) || void 0 === e ? void 0 : e.application_id) == null ? eu.data : (0, V.getAssetURL)(eo.image_asset.application_id, eo.image_asset, 600, ef && eC ? void 0 : "webp")
+                }, [eu, eo, ef, eC]), {
+                    shouldRestrictUpdatingCreatorMonetizationSettings: eg
+                } = (0, p.useShouldRestrictUpdatingCreatorMonetizationSettings)(ee);
+                s.useEffect(() => {
+                    eg && (en(), (0, K.openErrorDialog)(y.default.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_TITLE, y.default.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_BODY))
+                }, [eg, en]);
+                let [eU, eI] = s.useState(null !== (r = null == eo ? void 0 : eo.name) && void 0 !== r ? r : ""), [eh, em] = s.useState(null !== (o = null == eo ? void 0 : eo.description) && void 0 !== o ? o : ""), [ep, eE] = s.useState(null !== (i = null == eo ? void 0 : eo.price_tier) && void 0 !== i ? i : void 0), [ev, eq] = s.useState(eT), [eN, eO] = s.useState(null !== (h = null == eo ? void 0 : null === (A = eo.image_asset) || void 0 === A ? void 0 : A.filename) && void 0 !== h ? h : eu.name), [eR, eL] = s.useState(!1), [eD, eP] = s.useState(), eV = s.useMemo(() => null != ep ? (0, P.formatPrice)(ep, Z.CurrencyCodes.USD) : void 0, [ep]), [ex, eS] = s.useState(!0), {
+                    changesSaving: eM,
+                    saveError: eF,
+                    saveProductWithAttachments: eb,
+                    hasUnsavedAttachmentChanges: ej,
+                    cancelUnusedUploads: eG
+                } = (0, S.useGuildProductAttachmentManagerContext)(), e_ = (null == eo ? void 0 : eo.attachments) != null && (null == eo ? void 0 : eo.attachments.length) > 0, eK = null != eF ? eF : eD, eW = null != eM && "published" in eM, eX = null != eM && !eW, eB = null !== (E = null == eo ? void 0 : eo.role_id) && void 0 !== E ? E : null, [eQ, ez] = s.useState(), eZ = null != eQ || null != eB, eH = (0, c.default)([q.default], () => {
+                    if (null != eB && null !== eQ) {
+                        let e = q.default.getGuild(ee);
+                        return null == e ? void 0 : e.roles[eB]
                     }
-                    return null != eW ? eW : void 0
-                }, [eW, eK, J]), ez = "";
-                eB && eP ? ez = Z.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE : eB ? ez = Z.default.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE : eP && (ez = Z.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE);
-                let eZ = () => {
-                        eV(!1), eM()
+                    return null != eQ ? eQ : void 0
+                }, [eQ, eB, ee]), ey = "";
+                eZ && ex ? ey = y.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE : eZ ? ey = y.default.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE : ex && (ey = y.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE);
+                let ew = () => {
+                        eS(!1), eG()
                     },
-                    [eH, ey] = s.useState(),
+                    [eY, ek] = s.useState(),
                     {
-                        changes: ew,
-                        hasUnsavedChanges: eY,
-                        canSaveForDraft: ek,
-                        canSaveForPublished: eJ,
-                        canPublishOrUnpublish: e$
+                        changes: eJ,
+                        hasUnsavedChanges: e$,
+                        canSaveForDraft: e0,
+                        canSaveForPublished: e1,
+                        canPublishOrUnpublish: e6
                     } = s.useMemo(() => (0, F.computeProductChanges)({
-                        guildProductListing: es,
-                        name: ef,
-                        priceTier: eI,
-                        description: eg,
-                        image: em,
-                        imageName: eE,
-                        isImageChanged: eq,
-                        newRoleParams: eW,
-                        hasSavedAttachments: eb,
-                        hasUnsavedAttachmentChanges: eF
-                    }), [es, ef, eI, eg, em, eE, eq, eW, eb, eF]),
-                    e0 = s.useMemo(() => eY || null == eH || eH === l.PUBLISH || null != ej ? null : (0, n.jsx)(N.default, {
-                        className: H.successNotice,
+                        guildProductListing: eo,
+                        name: eU,
+                        priceTier: ep,
+                        description: eh,
+                        image: ev,
+                        imageName: eN,
+                        isImageChanged: eR,
+                        newRoleParams: eQ,
+                        hasSavedAttachments: e_,
+                        hasUnsavedAttachmentChanges: ej
+                    }), [eo, eU, ep, eh, ev, eN, eR, eQ, e_, ej]),
+                    e3 = s.useMemo(() => e$ || null == eY || eY === l.PUBLISH || null != eK ? null : (0, n.jsx)(O.default, {
+                        className: w.successNotice,
                         children: (0, n.jsx)(g.default, {
                             message: (0, n.jsxs)("div", {
-                                className: H.successNoticeMessage,
-                                children: [(0, n.jsx)(R.default, {
+                                className: w.successNoticeMessage,
+                                children: [(0, n.jsx)(D.default, {
                                     color: u.default.BUTTON_POSITIVE_BACKGROUND,
                                     backgroundColor: u.default.WHITE
                                 }), (0, n.jsx)(f.Text, {
                                     variant: "text-md/medium",
-                                    children: eH === l.DRAFT ? Z.default.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_SAVE_DRAFT_SUCCESS : eH === l.UPDATE_PUBLISH ? Z.default.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_MODAL_UPDATE_PUBLISH_SUCCESS : Z.default.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_MODAL_UNPUBLISH_SUCCESS
+                                    children: eY === l.DRAFT ? y.default.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_SAVE_DRAFT_SUCCESS : eY === l.UPDATE_PUBLISH ? y.default.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_MODAL_UPDATE_PUBLISH_SUCCESS : y.default.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_MODAL_UNPUBLISH_SUCCESS
                                 })]
                             }),
-                            onReset: () => ey(void 0),
-                            onResetText: Z.default.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_DISMISS
+                            onReset: () => ek(void 0),
+                            onResetText: y.default.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_DISMISS
                         })
-                    }), [ej, eY, eH]),
-                    e1 = s.useCallback(() => {
-                        eY ? (0, G.default)({
-                            title: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_WARNING_UNSAVED_CHANGES_TITLE,
-                            body: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_WARNING_UNSAVED_CHANGES_BODY,
-                            cta: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_WARNING_UNSAVED_CHANGES_CTA_EXIT,
-                            closeLabel: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_WARNING_UNSAVED_CHANGES_BACK_TO_EDITING,
+                    }), [eK, e$, eY]),
+                    e9 = s.useCallback(() => {
+                        e$ ? (0, _.default)({
+                            title: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_WARNING_UNSAVED_CHANGES_TITLE,
+                            body: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_WARNING_UNSAVED_CHANGES_BODY,
+                            cta: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_WARNING_UNSAVED_CHANGES_CTA_EXIT,
+                            closeLabel: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_WARNING_UNSAVED_CHANGES_BACK_TO_EDITING,
                             onConfirm: () => {
-                                ea()
+                                en()
                             }
-                        }) : ea()
-                    }, [ea, eY]);
+                        }) : en()
+                    }, [en, e$]);
                 s.useEffect(() => {
-                    (0, f.updateModal)(B.GUILD_PRODUCT_EDIT_MODAL_KEY, e => (0, n.jsx)(eA, {
-                        guildId: J,
-                        productId: el,
+                    (0, f.updateModal)(z.GUILD_PRODUCT_EDIT_MODAL_KEY, e => (0, n.jsx)(ea, {
+                        guildId: ee,
+                        productId: es,
                         ...e
-                    }), e1)
-                }, [J, e1, el]);
-                let e3 = async e => {
+                    }), e9)
+                }, [ee, e9, es]);
+                let e2 = async e => {
                     let A = (0, F.describeProductChangeValidation)({
-                        newRoleParams: eW
+                        newRoleParams: eQ
                     });
-                    if (eL(A), null != A) return;
-                    let t = await eS(e);
-                    if (eN(!1), null != t) {
-                        if (null != e.name && eT(t.name), null != e.description && eU(t.description), null != eW) {
+                    if (eP(A), null != A) return;
+                    let t = await eb(e);
+                    if (eL(!1), null != t) {
+                        if (null != e.name && eI(t.name), null != e.description && em(t.description), null != eQ) {
                             let e = t.role_id;
-                            d(null != e, "Cannot update role without role ID"), await T.default.updateRole(J, e, eW)
+                            d(null != e, "Cannot update role without role ID"), await T.default.updateRole(ee, e, eQ)
                         }
-                        eX(void 0), en(t.id), "published" in e && !0 === e.published && ea()
+                        ez(void 0), er(t.id), "published" in e && !0 === e.published && en()
                     }
                 };
                 s.useEffect(() => {
-                    if (null != ej) {
+                    if (null != eK) {
                         var e;
-                        (0, _.showPublishErrorDialog)(ej, J, null == eo ? void 0 : null === (e = eo.team) || void 0 === e ? void 0 : e.id)
+                        (0, W.showPublishErrorDialog)(eK, ee, null == ed ? void 0 : null === (e = ed.team) || void 0 === e ? void 0 : e.id)
                     }
-                }, [ej, J, eo]), s.useEffect(() => {
-                    eY && ey(void 0)
-                }, [eY]);
-                let e6 = s.useRef(null);
+                }, [eK, ee, ed]), s.useEffect(() => {
+                    e$ && ek(void 0)
+                }, [e$]);
+                let e7 = s.useRef(null);
                 return (0, n.jsxs)(f.ModalRoot, {
-                    transitionState: et,
+                    transitionState: el,
                     size: f.ModalSize.DYNAMIC,
-                    className: H.modalRoot,
-                    "aria-labelledby": y,
+                    className: w.modalRoot,
+                    "aria-labelledby": Y,
                     children: [(0, n.jsxs)(f.ModalHeader, {
-                        className: H.modalHeader,
+                        className: w.modalHeader,
                         separator: !1,
                         children: [(0, n.jsxs)("div", {
-                            className: H.headerText,
+                            className: w.headerText,
                             children: [(0, n.jsx)(f.Heading, {
-                                id: y,
+                                id: Y,
                                 variant: "heading-xl/semibold",
                                 color: "header-primary",
-                                children: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_HEADING
+                                children: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_HEADING
                             }), (0, n.jsx)(f.Text, {
                                 variant: "text-sm/normal",
                                 color: "header-secondary",
-                                children: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_DESCRIPTION
+                                children: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_DESCRIPTION
                             })]
                         }), (0, n.jsx)(f.ModalCloseButton, {
-                            onClick: e1,
-                            className: H.modalCloseButton
+                            onClick: e9,
+                            className: w.modalCloseButton
                         })]
                     }), (0, n.jsxs)(f.ModalContent, {
-                        className: H.modalContent,
+                        className: w.modalContent,
                         scrollbarType: "none",
                         children: [(0, n.jsx)(f.ScrollerThin, {
                             children: (0, n.jsxs)("div", {
-                                className: H.productFieldsSection,
-                                ref: e6,
+                                className: w.productFieldsSection,
+                                ref: e7,
                                 children: [(0, n.jsx)(f.FormItem, {
-                                    title: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_NAME_LABEL,
+                                    title: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_NAME_LABEL,
                                     tag: "label",
-                                    htmlFor: w,
-                                    error: null == ej ? void 0 : ej.getFirstFieldErrorMessage("name"),
+                                    htmlFor: k,
+                                    error: null == eK ? void 0 : eK.getFirstFieldErrorMessage("name"),
                                     children: (0, n.jsx)(f.TextArea, {
-                                        value: ef,
-                                        onChange: eT,
-                                        id: w,
+                                        value: eU,
+                                        onChange: eI,
+                                        id: k,
                                         maxLength: 100,
-                                        placeholder: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_NAME_PLACEHOLDER,
+                                        placeholder: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_NAME_PLACEHOLDER,
                                         rows: 1,
                                         autosize: !0,
-                                        showCharacterCount: ef.length > 0,
-                                        showRemainingCharacterCount: ef.length > 0,
+                                        showCharacterCount: eU.length > 0,
+                                        showRemainingCharacterCount: eU.length > 0,
                                         required: !0,
-                                        className: ef.length > 0 ? H.nameArea : void 0
+                                        className: eU.length > 0 ? w.nameArea : void 0
                                     })
                                 }), (0, n.jsx)(f.FormItem, {
-                                    title: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_DESCRIPTION_LABEL,
+                                    title: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_DESCRIPTION_LABEL,
                                     tag: "label",
-                                    error: null == ej ? void 0 : ej.getFirstFieldErrorMessage("description"),
-                                    htmlFor: Y,
+                                    error: null == eK ? void 0 : eK.getFirstFieldErrorMessage("description"),
+                                    htmlFor: J,
                                     children: (0, n.jsx)(m.default, {
-                                        id: Y,
-                                        className: H.descriptionArea,
-                                        value: eg,
-                                        onChange: eU,
+                                        id: J,
+                                        className: w.descriptionArea,
+                                        value: eh,
+                                        onChange: em,
                                         maxLength: 1500,
-                                        placeholder: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_DESCRIPTION_PLACEHOLDER,
-                                        showCharacterCount: eg.length > 0,
-                                        parentModalKey: B.GUILD_PRODUCT_EDIT_MODAL_KEY,
+                                        placeholder: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_DESCRIPTION_PLACEHOLDER,
+                                        showCharacterCount: eh.length > 0,
+                                        parentModalKey: z.GUILD_PRODUCT_EDIT_MODAL_KEY,
                                         required: !0
                                     })
                                 }), (0, n.jsx)(f.FormItem, {
-                                    title: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_PRICE_LABEL,
+                                    title: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_PRICE_LABEL,
                                     tag: "label",
-                                    error: null == ej ? void 0 : ej.getFirstFieldErrorMessage("price_tier"),
-                                    children: (0, n.jsx)($, {
-                                        guildId: J,
-                                        selectedPriceTier: eI,
-                                        setPriceTier: eh
+                                    error: null == eK ? void 0 : eK.getFirstFieldErrorMessage("price_tier"),
+                                    children: (0, n.jsx)(eA, {
+                                        guildId: ee,
+                                        selectedPriceTier: ep,
+                                        setPriceTier: eE
                                     })
                                 }), (0, n.jsxs)(f.FormItem, {
-                                    title: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_THUMBNAIL_LABEL,
+                                    title: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_THUMBNAIL_LABEL,
                                     tag: "label",
-                                    error: null == ej ? void 0 : ej.getFirstFieldErrorMessage("image"),
-                                    titleClassName: H.thumbnailLabel,
+                                    error: null == eK ? void 0 : eK.getFirstFieldErrorMessage("image"),
+                                    titleClassName: w.thumbnailLabel,
                                     children: [(0, n.jsx)(f.Text, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
-                                        children: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_THUMBNAIL_DESCRIPTION
-                                    }), (0, n.jsx)(O.default, {
+                                        children: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_THUMBNAIL_DESCRIPTION
+                                    }), (0, n.jsx)(R.default, {
                                         size: 10
-                                    }), (0, n.jsx)(K.default, {
-                                        presetImages: M.PRODUCT_IMAGE_PRESETS,
-                                        radioGroupAriaLabel: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_THUMBNAIL_RADIO_GROUP_ARIA_LABEL,
-                                        image: em,
-                                        imageName: eE,
-                                        savedImageName: null == es ? void 0 : null === (a = es.image_asset) || void 0 === a ? void 0 : a.filename,
+                                    }), (0, n.jsx)(X.default, {
+                                        presetImages: b.PRODUCT_IMAGE_PRESETS,
+                                        radioGroupAriaLabel: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_THUMBNAIL_RADIO_GROUP_ARIA_LABEL,
+                                        image: ev,
+                                        imageName: eN,
+                                        savedImageName: null == eo ? void 0 : null === (a = eo.image_asset) || void 0 === a ? void 0 : a.filename,
                                         onChange: (e, A) => {
                                             if (null != e) {
                                                 var t;
-                                                ep(e), ev(A), eN(e.startsWith("data:") || A !== (null == es ? void 0 : null === (t = es.image_asset) || void 0 === t ? void 0 : t.filename))
+                                                eq(e), eO(A), eL(e.startsWith("data:") || A !== (null == eo ? void 0 : null === (t = eo.image_asset) || void 0 === t ? void 0 : t.filename))
                                             }
                                         }
                                     })]
-                                }), eP ? (0, n.jsx)(f.FormItem, {
-                                    title: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_ATTACHMENTS_LABEL,
-                                    error: null == ej ? void 0 : ej.getFirstFieldErrorMessage("attachments"),
-                                    children: (0, n.jsx)(j.AttachmentsUploadComponent, {
+                                }), ex ? (0, n.jsx)(f.FormItem, {
+                                    title: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_ATTACHMENTS_LABEL,
+                                    error: null == eK ? void 0 : eK.getFirstFieldErrorMessage("attachments"),
+                                    children: (0, n.jsx)(G.AttachmentsUploadComponent, {
                                         onFileAdded: () => {
                                             var e;
-                                            null === (e = e6.current) || void 0 === e || e.scrollIntoView({
+                                            null === (e = e7.current) || void 0 === e || e.scrollIntoView({
                                                 behavior: "smooth",
                                                 block: "end"
                                             })
                                         }
                                     })
-                                }) : null, eB ? (0, n.jsx)(X.default, {
-                                    error: null !== (L = null == ej ? void 0 : ej.getFirstFieldErrorMessage(F.ROLE_FIELD_NAME)) && void 0 !== L ? L : void 0,
-                                    newRoleParams: eW,
-                                    setNewRoleParams: eX,
-                                    guildId: J,
-                                    listingRoleId: eK,
-                                    productId: el
+                                }) : null, eZ ? (0, n.jsx)(Q.default, {
+                                    error: null !== (L = null == eK ? void 0 : eK.getFirstFieldErrorMessage(F.ROLE_FIELD_NAME)) && void 0 !== L ? L : void 0,
+                                    newRoleParams: eQ,
+                                    setNewRoleParams: ez,
+                                    guildId: ee,
+                                    listingRoleId: eB,
+                                    productId: es
                                 }) : null]
                             })
                         }), (0, n.jsx)("div", {
-                            className: H.horizontalSeparator
+                            className: w.horizontalSeparator
                         }), (0, n.jsx)(f.ScrollerThin, {
                             children: (0, n.jsxs)("div", {
-                                className: H.productPreview,
-                                children: [(0, n.jsx)(W.default, {
-                                    disabled: !e$,
-                                    disabledTooltip: er ? Z.default.Messages.GUILD_PRODUCT_UNPUBLISH_REQUIRES_SAVE : Z.default.Messages.GUILD_PRODUCT_PUBLISH_REQUIRES_SAVE,
-                                    published: er,
+                                className: w.productPreview,
+                                children: [(0, n.jsx)(B.default, {
+                                    disabled: !e6,
+                                    disabledTooltip: ei ? y.default.Messages.GUILD_PRODUCT_UNPUBLISH_REQUIRES_SAVE : y.default.Messages.GUILD_PRODUCT_PUBLISH_REQUIRES_SAVE,
+                                    published: ei,
                                     onClick: () => {
-                                        d(e$, "Attempting to publish/unpublish when not allowed"), ey(er ? l.UNPUBLISH : l.PUBLISH), e3({
-                                            ...ew,
-                                            published: !er
+                                        d(e6, "Attempting to publish/unpublish when not allowed"), ek(ei ? l.UNPUBLISH : l.PUBLISH), e2({
+                                            ...eJ,
+                                            published: !ei
                                         })
                                     },
-                                    submitting: eG
+                                    submitting: eW
                                 }), (0, n.jsx)("div", {
-                                    className: H.verticalSeparator
+                                    className: w.verticalSeparator
                                 }), (0, n.jsx)(f.Heading, {
                                     variant: "text-xs/bold",
                                     color: "header-secondary",
-                                    className: H.previewHeading,
-                                    children: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_CARD_PREVIEW_HEADING
-                                }), (0, n.jsx)(O.default, {
+                                    className: w.previewHeading,
+                                    children: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_CARD_PREVIEW_HEADING
+                                }), (0, n.jsx)(R.default, {
                                     size: 4
                                 }), (0, n.jsx)(f.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_CARD_PREVIEW_DESCRIPTION
-                                }), (0, n.jsx)(O.default, {
+                                    children: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_CARD_PREVIEW_DESCRIPTION
+                                }), (0, n.jsx)(R.default, {
                                     size: 16
-                                }), (0, n.jsx)(b.default, {
-                                    imageUrl: em,
-                                    name: "" === ef ? Z.default.Messages.GUILD_PRODUCT_CARD_EMPTY_NAME : ef,
-                                    description: "" === eg ? Z.default.Messages.GUILD_PRODUCT_CARD_EMPTY_DESCRIPTION : eg,
-                                    formattedPrice: eR,
-                                    role: eQ,
-                                    productType: ez,
-                                    ctaComponent: (0, n.jsx)(q.default, {
-                                        shineSize: q.default.ShineSizes.SMALL,
-                                        pauseAnimation: ed || !ec,
-                                        className: H.productPreviewCtaButton,
-                                        children: Z.default.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
+                                }), (0, n.jsx)(j.default, {
+                                    imageUrl: ev,
+                                    name: "" === eU ? y.default.Messages.GUILD_PRODUCT_CARD_EMPTY_NAME : eU,
+                                    description: "" === eh ? y.default.Messages.GUILD_PRODUCT_CARD_EMPTY_DESCRIPTION : eh,
+                                    formattedPrice: eV,
+                                    role: eH,
+                                    productType: ey,
+                                    ctaComponent: (0, n.jsx)(N.default, {
+                                        shineSize: N.default.ShineSizes.SMALL,
+                                        pauseAnimation: ec || !ef,
+                                        className: w.productPreviewCtaButton,
+                                        children: y.default.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
                                     }),
                                     cardWidth: 340,
                                     thumbnailHeight: 190
@@ -1844,78 +1864,78 @@
                         })]
                     }), (0, n.jsx)(f.ModalFooter, {
                         children: (0, n.jsxs)("div", {
-                            className: H.footerActionButtons,
+                            className: w.footerActionButtons,
                             children: [(0, n.jsxs)("div", {
-                                className: H.footerActionLeftButtons,
-                                children: [(0, n.jsx)(k, {
-                                    text: Z.default.Messages.GUILD_PRODUCT_SETTINGS_INCLUDE_ROLE_TOGGLE_LABEL,
-                                    value: eB,
+                                className: w.footerActionLeftButtons,
+                                children: [(0, n.jsx)($, {
+                                    text: y.default.Messages.GUILD_PRODUCT_SETTINGS_INCLUDE_ROLE_TOGGLE_LABEL,
+                                    value: eZ,
                                     onChange: e => {
-                                        e ? eX((0, X.getInitialNewRoleParams)()) : eX(void 0)
+                                        e ? ez((0, Q.getInitialNewRoleParams)()) : ez(void 0)
                                     },
-                                    warning: null === eW ? (0, n.jsx)(X.WarningIcon, {}) : void 0,
-                                    disabled: null != eK
-                                }), (0, n.jsx)(k, {
-                                    text: Z.default.Messages.GUILD_PRODUCT_SETTINGS_INCLUDE_ATTACHMENTS_TOGGLE_LABEL,
-                                    value: eP,
+                                    warning: null === eQ ? (0, n.jsx)(Q.WarningIcon, {}) : void 0,
+                                    disabled: null != eB
+                                }), (0, n.jsx)($, {
+                                    text: y.default.Messages.GUILD_PRODUCT_SETTINGS_INCLUDE_ATTACHMENTS_TOGGLE_LABEL,
+                                    value: ex,
                                     onChange: e => {
-                                        e ? eV(!0) : eF ? (0, f.openModalLazy)(async () => {
+                                        e ? eS(!0) : ej ? (0, f.openModalLazy)(async () => {
                                             let {
                                                 ConfirmModal: e
                                             } = await t.el("77078").then(t.bind(t, "77078"));
                                             return A => (0, n.jsx)(e, {
                                                 ...A,
-                                                header: Z.default.Messages.GUILD_PRODUCT_CANCEL_ATTACHMENTS_CONFIRMATION_HEADER,
-                                                confirmText: Z.default.Messages.REMOVE,
-                                                cancelText: Z.default.Messages.CANCEL,
-                                                onConfirm: eZ,
+                                                header: y.default.Messages.GUILD_PRODUCT_CANCEL_ATTACHMENTS_CONFIRMATION_HEADER,
+                                                confirmText: y.default.Messages.REMOVE,
+                                                cancelText: y.default.Messages.CANCEL,
+                                                onConfirm: ew,
                                                 children: (0, n.jsx)(f.Text, {
                                                     variant: "text-md/normal",
-                                                    children: Z.default.Messages.GUILD_PRODUCT_CANCEL_ATTACHMENTS_CONFIRMATION_BODY
+                                                    children: y.default.Messages.GUILD_PRODUCT_CANCEL_ATTACHMENTS_CONFIRMATION_BODY
                                                 })
                                             })
-                                        }) : eZ()
+                                        }) : ew()
                                     },
-                                    disabled: eb
+                                    disabled: e_
                                 })]
                             }), (0, n.jsx)("div", {
-                                className: H.footerActionRightButtons,
-                                children: er ? (0, n.jsx)(f.Button, {
+                                className: w.footerActionRightButtons,
+                                children: ei ? (0, n.jsx)(f.Button, {
                                     color: f.Button.Colors.PRIMARY,
-                                    disabled: !eJ,
-                                    submitting: e_,
+                                    disabled: !e1,
+                                    submitting: eX,
                                     onClick: () => {
-                                        d(eJ, "cannot save changes for published product without adding all fields"), ey(l.UPDATE_PUBLISH), e3(ew)
+                                        d(e1, "cannot save changes for published product without adding all fields"), ek(l.UPDATE_PUBLISH), e2(eJ)
                                     },
-                                    children: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_SAVE_CHANGES_BUTTON
+                                    children: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_SAVE_CHANGES_BUTTON
                                 }) : (0, n.jsx)(n.Fragment, {
                                     children: (0, n.jsx)(f.Button, {
                                         color: f.Button.Colors.PRIMARY,
-                                        disabled: !ek,
-                                        submitting: e_,
+                                        disabled: !e0,
+                                        submitting: eX,
                                         onClick: () => {
-                                            d(ek, "cannot save changes without name or price tier"), ey(l.DRAFT), e3(ew)
+                                            d(e0, "cannot save changes without name or price tier"), ek(l.DRAFT), e2(eJ)
                                         },
-                                        children: Z.default.Messages.GUILD_PRODUCT_EDIT_MODAL_SAVE_DRAFT_BUTTON
+                                        children: y.default.Messages.GUILD_PRODUCT_EDIT_MODAL_SAVE_DRAFT_BUTTON
                                     })
                                 })
                             })]
                         })
                     }), (0, n.jsx)(C.default, {
                         component: "div",
-                        className: H.successNoticeContainer,
-                        children: e0
+                        className: w.successNoticeContainer,
+                        children: e3
                     })]
                 })
             }
 
-            function eA(e) {
+            function ea(e) {
                 var A;
-                return (0, n.jsx)(x.GuildProductAttachmentManagerContextProvider, {
+                return (0, n.jsx)(S.GuildProductAttachmentManagerContextProvider, {
                     guildId: e.guildId,
                     editSkuId: null !== (A = e.productId) && void 0 !== A ? A : void 0,
-                    onFileSizeError: () => (0, p.default)(B.MAX_ATTACHMENT_UPLOAD_FILESIZE_BYTES),
-                    children: (0, n.jsx)(ee, {
+                    onFileSizeError: () => (0, E.default)(z.MAX_ATTACHMENT_UPLOAD_FILESIZE_BYTES),
+                    children: (0, n.jsx)(et, {
                         ...e
                     })
                 })
