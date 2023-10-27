@@ -9607,7 +9607,7 @@
             function d() {
                 var e, t, s, n, d, u, c, S, E;
                 let T = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    f = (e = "07b5a85b6cb3c146c14dbe454249b50ea168772e", e.substring(0, 7)),
+                    f = (e = "8a078715654709242fe2b63afce5b48bf71d07be", e.substring(0, 7)),
                     m = null === (t = r.default) || void 0 === t ? void 0 : t.remoteApp.getVersion(),
                     _ = null === (n = r.default) || void 0 === n ? void 0 : null === (s = (d = n.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(d),
                     I = null === (c = r.default) || void 0 === c ? void 0 : null === (u = (S = c.remoteApp).getAppArch) || void 0 === u ? void 0 : u.call(S),
@@ -9620,7 +9620,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [T, " ", "241310", " ", (0, a.jsxs)("span", {
+                        children: [T, " ", "241314", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", f, ")"]
                         })]
@@ -21616,8 +21616,7 @@
                     }) : (0, a.jsx)(T.default, {
                         user: k
                     }, "decoration"), et && (0, a.jsx)(N.default, {
-                        user: k,
-                        showBorder: !0
+                        user: k
                     }, "effect"), X && (0, a.jsx)(c.PremiumTutorialSubstep, {
                         substeps: [L.PremiumTutorialSubsteps.PROFILE_CUSTOMIZATION_BANNER],
                         children: e => (0, a.jsx)(I.default, {
