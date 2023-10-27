@@ -1903,7 +1903,7 @@
                     children: [(0, a.jsx)(E.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "241263"
+                        buildNumber: "241269"
                     }), (0, a.jsx)(m, {})]
                 }) : null
             }
@@ -52130,44 +52130,27 @@
         },
         247030: function(e, t, n) {
             "use strict";
+
+            function a(e) {
+                return !1
+            }
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return a
                 }
-            });
-            var a = n("498225"),
-                s = n("734575"),
-                l = n("305961"),
-                i = n("957255"),
-                r = n("49111");
-
-            function o(e) {
-                let t = (0, a.useStateFromStores)([l.default], () => l.default.getGuild(e)),
-                    n = (0, a.useStateFromStores)([i.default], () => i.default.can(r.Permissions.MANAGE_GUILD, t)),
-                    o = (null == t ? void 0 : t.hasFeature(r.GuildFeatures.SUMMARIES_ENABLED_BY_USER)) && (null == t ? void 0 : t.hasFeature(r.GuildFeatures.SUMMARIES_OPT_OUT_EXPERIENCE)),
-                    u = (0, s.useGuildEligibleForSummaries)(t, n && o);
-                return u && n && o
-            }
+            })
         },
         762887: function(e, t, n) {
             "use strict";
+
+            function a(e) {
+                return !1
+            }
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return a
                 }
-            });
-            var a = n("498225"),
-                s = n("734575"),
-                l = n("305961"),
-                i = n("957255"),
-                r = n("49111");
-
-            function o(e) {
-                let t = (0, a.useStateFromStores)([l.default], () => l.default.getGuild(e)),
-                    n = (0, a.useStateFromStores)([i.default], () => i.default.can(r.Permissions.MANAGE_GUILD, t)),
-                    o = (0, s.useGuildEligibleForSummaries)(t);
-                return o && n
-            }
+            })
         },
         269162: function(e, t, n) {
             "use strict";
