@@ -138234,6 +138234,10 @@ html .invoiceCancelRow_c1bfe7 {
     cursor: pointer
 }
 
+.buttonsBackground__0addb.disabled__42201 {
+    cursor: default
+}
+
 .buttonsBackgroundActive__5341f {
     border: 1px solid var(--brand-500);
     background: hsl(var(--brand-500-hsl)/.15)
