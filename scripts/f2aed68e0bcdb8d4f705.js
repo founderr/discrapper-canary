@@ -1966,7 +1966,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return _
                 }
             });
             var l = n("920040"),
@@ -1986,54 +1986,54 @@
                 C = n("49111"),
                 g = n("782340"),
                 S = n("868022");
-            let _ = 16 / 9;
 
-            function I(e) {
+            function _(e) {
                 var t;
                 let {
                     maxHeight: n,
-                    connectedChannelId: I
-                } = e, T = (0, h.default)(), x = a.useCallback(() => {
+                    connectedChannelId: _
+                } = e, I = (0, h.default)(), T = a.useCallback(() => {
                     (0, f.updateActivityPanelMode)(E.ActivityPanelModes.PIP)
-                }, []), N = a.useRef(null), [v, A] = a.useState(null), M = a.useCallback(e => {
+                }, []), x = a.useRef(null), [N, v] = a.useState(null), A = a.useCallback(e => {
                     i.default.updatedUnsyncedSettings({
                         activityPanelHeight: e
                     })
-                }, []), R = a.useRef(null), [L, j] = a.useState({
+                }, []), M = a.useRef(null), [R, L] = a.useState({
                     width: 0,
                     height: 0
                 });
                 a.useLayoutEffect(() => {
-                    if (null == R.current) return;
+                    if (null == M.current) return;
                     let e = new ResizeObserver(() => {
                         var e, t, n, l;
-                        let a = null !== (n = null === (e = R.current) || void 0 === e ? void 0 : e.clientWidth) && void 0 !== n ? n : 0;
-                        j({
+                        let a = null !== (n = null === (e = M.current) || void 0 === e ? void 0 : e.clientWidth) && void 0 !== n ? n : 0;
+                        L({
                             width: a,
-                            height: null !== (l = null === (t = R.current) || void 0 === t ? void 0 : t.clientHeight) && void 0 !== l ? l : 0
+                            height: null !== (l = null === (t = M.current) || void 0 === t ? void 0 : t.clientHeight) && void 0 !== l ? l : 0
                         })
                     });
-                    return e.observe(R.current), () => e.disconnect()
+                    return e.observe(M.current), () => e.disconnect()
                 }, []);
-                let O = L.width / Math.max(L.height, 1),
+                let j = R.width / Math.max(R.height, 1),
+                    O = j < E.LANDSCAPE_ACTIVITY_ASPECT_RATIO,
                     y = 0,
                     P = 0,
-                    D = L.width,
-                    b = L.height;
-                if (O < _ ? ((b = L.width / _) > L.height && (D = (b = L.height) * _), P = (L.height - b) / 2) : ((D = Math.min(L.height * _)) > L.width && (b = (D = L.width) / _), y = (L.width - D) / 2), null == T) return null;
+                    D = R.width,
+                    b = R.height;
+                if (O ? ((b = R.width / E.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > R.height && (D = (b = R.height) * E.LANDSCAPE_ACTIVITY_ASPECT_RATIO), P = (R.height - b) / 2) : ((D = Math.min(R.height * E.LANDSCAPE_ACTIVITY_ASPECT_RATIO)) > R.width && (b = (D = R.width) / E.LANDSCAPE_ACTIVITY_ASPECT_RATIO), y = (R.width - D) / 2), null == I) return null;
                 let U = null !== (t = u.default.activityPanelHeight) && void 0 !== t ? t : .6 * n;
                 return (0, l.jsxs)("div", {
                     className: S.wrapper,
-                    style: null != v ? {
+                    style: null != N ? {
                         minHeight: 252,
                         maxHeight: n,
-                        height: v
+                        height: N
                     } : {
                         minHeight: 252,
                         maxHeight: n,
                         height: U
                     },
-                    ref: N,
+                    ref: x,
                     children: [(0, l.jsxs)("div", {
                         className: S.header,
                         children: [(0, l.jsx)("div", {
@@ -2041,7 +2041,7 @@
                             children: (0, l.jsx)(o.default, {
                                 label: g.default.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
                                 direction: o.default.Directions.UP,
-                                onClick: x,
+                                onClick: T,
                                 className: S.arrowButton,
                                 themeable: !0
                             })
@@ -2049,12 +2049,12 @@
                             color: "header-primary",
                             variant: "text-md/semibold",
                             className: S.headerTitle,
-                            children: null == T ? void 0 : T.name
+                            children: null == I ? void 0 : I.name
                         }), (0, l.jsx)("div", {
                             className: S.leaveButtonContainer,
                             children: (0, l.jsx)(d.default, {
-                                applicationId: T.id,
-                                channelId: I,
+                                applicationId: I.id,
+                                channelId: _,
                                 className: S.leaveActivityButton,
                                 iconClassName: S.leaveActivityIcon,
                                 centerButton: !0,
@@ -2069,24 +2069,24 @@
                             paddingTop: P,
                             paddingBottom: P
                         },
-                        ref: R,
+                        ref: M,
                         children: (0, l.jsx)(p.default, {
                             className: S.iframe,
-                            embedId: (0, m.default)(I, T.id)
+                            embedId: (0, m.default)(_, I.id)
                         })
                     }), (0, l.jsx)(r.default, {
                         minHeight: 252,
                         maxHeight: n,
-                        resizableNode: N,
+                        resizableNode: x,
                         onResize: e => {
                             c.ComponentDispatch.dispatch(C.ComponentActions.MANUAL_IFRAME_RESIZING, {
                                 resizing: !0
-                            }), A(e)
+                            }), v(e)
                         },
                         onResizeEnd: e => {
                             c.ComponentDispatch.dispatch(C.ComponentActions.MANUAL_IFRAME_RESIZING, {
                                 resizing: !1
-                            }), M(e)
+                            }), A(e)
                         }
                     })]
                 })
