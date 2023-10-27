@@ -916,6 +916,7 @@
                     [ez.MessageTypes.CONTEXT_MENU_COMMAND]: !0,
                     [ez.MessageTypes.AUTO_MODERATION_ACTION]: !0,
                     [ez.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE]: !0,
+                    [ez.MessageTypes.PURCHASE_NOTIFICATION]: !0,
                     [ez.MessageTypes.INTERACTION_PREMIUM_UPSELL]: !0,
                     [ez.MessageTypes.STAGE_START]: !0,
                     [ez.MessageTypes.STAGE_END]: !0,
