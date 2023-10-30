@@ -7167,18 +7167,18 @@
                                     })
                                 })
                             })]
-                        }), (0, a.jsxs)("div", {
+                        }), s ? (0, a.jsxs)("div", {
                             className: y.whatsNewSection,
-                            children: [s ? (0, a.jsx)(U.default, {
+                            children: [(0, a.jsx)(U.default, {
                                 variant: U.PerksDiscoverabilityVariants.WHATS_NEW
-                            }) : null, ea && s ? (0, a.jsx)(U.default, {}) : null, et ? (0, a.jsx)(v.default, {
+                            }), ea ? (0, a.jsx)(U.default, {}) : null, et ? (0, a.jsx)(v.default, {
                                 className: y.pdSparklesTop,
                                 variant: v.SparkleVariants.TOP
                             }) : null, et ? (0, a.jsx)(v.default, {
                                 className: y.pdSparklesBottom,
                                 variant: v.SparkleVariants.BOTTOM
                             }) : null]
-                        }), (0, a.jsx)(x.default, {
+                        }) : null, (0, a.jsx)(x.default, {
                             className: s ? y.perkCardsContainerSpacingFullscreen : y.perkCardsContainerSpacingSettings
                         }), (0, a.jsxs)("div", {
                             className: y.planComparisonTableContainer,
