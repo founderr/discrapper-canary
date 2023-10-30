@@ -1241,8 +1241,11 @@
                             });
                             return
                         }
-                        d.default.sendRequest(n, {
-                            location: "Add Friend"
+                        d.default.sendRequest({
+                            discordTag: n,
+                            context: {
+                                location: "Add Friend"
+                            }
                         }).then(() => l({
                             type: "SUCCESS",
                             text: h.default.Messages.ADD_FRIEND_SUCCESS.format({
@@ -1903,7 +1906,7 @@
                     children: [(0, a.jsx)(E.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "241862"
+                        buildNumber: "241874"
                     }), (0, a.jsx)(m, {})]
                 }) : null
             }

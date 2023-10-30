@@ -12878,10 +12878,13 @@
                     })
                 }
                 handleAddFriend(e) {
-                    this.props.onClose(), I.default.sendRequest(X.default.getUserTag(e, {
-                        identifiable: "always"
-                    }), {
-                        location: "Group DM"
+                    this.props.onClose(), I.default.sendRequest({
+                        discordTag: X.default.getUserTag(e, {
+                            identifiable: "always"
+                        }),
+                        context: {
+                            location: "Group DM"
+                        }
                     })
                 }
                 constructor(...e) {
