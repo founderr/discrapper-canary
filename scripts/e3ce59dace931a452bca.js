@@ -1903,7 +1903,7 @@
                     children: [(0, a.jsx)(E.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "241664"
+                        buildNumber: "241667"
                     }), (0, a.jsx)(m, {})]
                 }) : null
             }
@@ -44571,6 +44571,19 @@
                     onTier2TrialOffer: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_TRIAL_ELIGIBLE,
                     onNonTier2Subscriber: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_UPGRADE_ELIGIBLE
                 }), K = (0, N.useResponseOnUserState)({
+                    defaultResponse: () => null,
+                    onCustomCriteria: () => {
+                        if ((null == H ? void 0 : H.id) === O.PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID) return () => (0, a.jsx)(r.Anchor, {
+                            className: M.termsApplyAnchor,
+                            href: m.default.getArticleURL(L.HelpdeskArticles.Q4_DROP),
+                            children: (0, a.jsx)(r.Heading, {
+                                variant: "heading-md/normal",
+                                className: M.termsApplyBodyText,
+                                children: v.default.Messages.BOGO_TERMS_APPLY
+                            })
+                        })
+                    }
+                }), z = (0, N.useResponseOnUserState)({
                     defaultResponse: v.default.Messages.BILLING_SUBSCRIBE_TO_PLAN,
                     onDiscountOffer: v.default.Messages.PREMIUM_DISCOUNT_CTA.format({
                         percent: null == V ? void 0 : V.discount.amount
@@ -44578,13 +44591,13 @@
                     onTier0TrialOffer: Y,
                     onTier2TrialOffer: Y,
                     onNonTier2Subscriber: v.default.Messages.INTERACTION_PREMIUM_UPSELL_CTA
-                }), z = (0, N.useResponseOnUserState)({
+                }), q = (0, N.useResponseOnUserState)({
                     defaultResponse: "get_nitro_button",
                     onNonTier2Subscriber: "upgrade_plan_button",
                     onDiscountOffer: "discount_offer_button",
                     onTier0TrialOffer: "trial_offer_button",
                     onTier2TrialOffer: "trial_offer_button"
-                }), q = (0, N.useResponseOnUserState)({
+                }), Q = (0, N.useResponseOnUserState)({
                     defaultResponse: () => (0, E.default)({
                         subscriptionTier: O.PremiumSubscriptionSKUs.TIER_2,
                         analyticsLocations: k,
@@ -44597,7 +44610,7 @@
                             e && n()
                         }
                     })
-                }), Q = (0, i.isThemeDark)(w) ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL;
+                }), Z = (0, i.isThemeDark)(w) ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL;
                 return (0, a.jsx)(R.default, {
                     renderModalProps: t,
                     videoHref: "https://youtu.be/".concat(U),
@@ -44611,19 +44624,11 @@
                     modalTopExtra: () => null != H ? (0, a.jsx)(g.PremiumPillWithSparkles, {
                         text: v.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT,
                         className: M.trialPill,
-                        colorOptions: Q
+                        colorOptions: Z
                     }) : null,
                     header: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_HEADER,
                     subHeader: W,
-                    subHeaderExtra: () => (0, a.jsx)(r.Anchor, {
-                        className: M.termsApplyAnchor,
-                        href: m.default.getArticleURL(L.HelpdeskArticles.SUMMER_2023_BOGO),
-                        children: (0, a.jsx)(r.Heading, {
-                            variant: "heading-md/normal",
-                            className: M.termsApplyBodyText,
-                            children: v.default.Messages.BOGO_TERMS_APPLY
-                        })
-                    }),
+                    subHeaderExtra: K,
                     featureCards: [{
                         header: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_HEADER,
                         subHeader: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_DESCRIPTION,
@@ -44652,16 +44657,16 @@
                             onClick: () => {
                                 C.default.track(L.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
                                     change_log_id: b,
-                                    cta_type: z,
+                                    cta_type: q,
                                     seconds_open: Math.round((Date.now() - e) / 1e3),
                                     target: "q4_drop_payment_modal"
-                                }), q()
+                                }), Q()
                             },
                             children: [(0, a.jsx)("img", {
                                 alt: "",
                                 className: M.nitroIconSubHeader,
                                 src: y
-                            }), K]
+                            }), z]
                         })
                     }
                 })
