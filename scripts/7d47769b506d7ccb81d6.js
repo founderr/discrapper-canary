@@ -354,7 +354,9 @@
                     referralCode: H,
                     loadId: Y,
                     giftRecipient: W,
-                    customMessage: Z
+                    customMessage: Z,
+                    emojiConfetti: K,
+                    soundEffect: V
                 } = e;
                 n(I.PurchaseState.PURCHASING), r(!0), S(!0), a.default.wait(i.clearError), P(null);
                 try {
@@ -391,7 +393,9 @@
                             giftStyle: O,
                             loadId: Y,
                             recipientId: i ? null == W ? void 0 : W.id : void 0,
-                            customMessage: i ? Z : void 0
+                            customMessage: i ? Z : void 0,
+                            emojiConfetti: i ? K : void 0,
+                            soundEffect: i ? V : void 0
                         })
                     } else e = j && null != G && null != b && null != D ? E.PREPAID_PAYMENT_SOURCES.has(b.type) ? await (0, l.payInvoiceManually)(D, G, b, x.currency) : await (0, l.updateSubscription)(D, {
                         paymentSource: b,
@@ -1366,16 +1370,20 @@
                 C = e => {
                     let {
                         selectedGiftStyle: t,
-                        setSelectedGiftStyle: n
+                        setSelectedGiftStyle: n,
+                        emojiConfetti: u,
+                        soundEffect: d,
+                        setEmojiConfetti: C,
+                        setSoundEffect: A
                     } = e, {
-                        giftRecipient: u
-                    } = (0, l.usePaymentContext)(), [d, C] = s.useState(!1), A = s.useRef(null), O = (0, a.useRadioGroup)({
+                        giftRecipient: O
+                    } = (0, l.usePaymentContext)(), [R, h] = s.useState(!1), g = s.useRef(null), M = (0, a.useRadioGroup)({
                         orientation: "horizontal"
-                    }), [R, h] = s.useState(), [g, M] = s.useState(), {
+                    }), {
                         enabled: L
                     } = f.default.getCurrentConfig({
                         location: "premiumGiftSelect_GiftAnimationOptions"
-                    }), y = (0, o.isCustomGiftEnabled)(u), v = null;
+                    }), y = (0, o.isCustomGiftEnabled)(O), v = null;
                     L ? v = S : y && (v = P);
                     let x = !1;
                     return y && (x = m.CustomGiftSoundboardEmojiExperiment.getCurrentConfig({
@@ -1396,35 +1404,35 @@
                                 children: [(0, r.jsx)("div", {
                                     className: N.sound,
                                     children: (0, r.jsx)(i.default, {
-                                        sound: g,
+                                        sound: d,
                                         onSelect: e => {
-                                            M(null == e ? void 0 : e)
+                                            null != A && A(null == e ? void 0 : e)
                                         }
                                     })
                                 }), (0, r.jsx)("div", {
                                     className: N.emoji,
                                     children: (0, r.jsx)(I.default, {
-                                        setEmojiConfetti: h,
-                                        emojiConfetti: null == R ? void 0 : R
+                                        setEmojiConfetti: C,
+                                        emojiConfetti: null == u ? void 0 : u
                                     })
                                 })]
                             })]
                         }), (0, r.jsx)("div", {
-                            tabIndex: null != t || d ? void 0 : 0,
+                            tabIndex: null != t || R ? void 0 : 0,
                             onFocus: e => {
                                 var t;
-                                e.target === e.currentTarget && (null === (t = A.current) || void 0 === t || t.focus())
+                                e.target === e.currentTarget && (null === (t = g.current) || void 0 === t || t.focus())
                             },
                             className: N.giftBoxOptionContainer,
                             "aria-label": p.default.Messages.SEASONAL_GIFTING_CUSTOMIZE_YOUR_GIFT_BOX,
-                            ...O,
+                            ...M,
                             children: null != v && v.map((e, s) => (0, r.jsx)(E.GiftStaticOption, {
                                 isSelected: t === e,
                                 giftStyle: e,
                                 setSelectedGiftStyle: n,
-                                ref: 0 === s ? A : null,
-                                onFocus: () => C(!0),
-                                onBlur: () => C(!1)
+                                ref: 0 === s ? g : null,
+                                onFocus: () => h(!0),
+                                onBlur: () => h(!1)
                             }, e))
                         }), (0, r.jsx)("div", {
                             className: N.selectPlanDivider
@@ -1668,74 +1676,82 @@
                     subscriptionPeriodEnd: z,
                     showTotal: J = !0,
                     customGiftMessage: X,
-                    setCustomGiftMessage: q,
-                    discountInvoiceItems: Q
+                    emojiConfetti: q,
+                    soundEffect: Q,
+                    setCustomGiftMessage: $,
+                    setEmojiConfetti: ee,
+                    setSoundEffect: et,
+                    discountInvoiceItems: en
                 } = e, {
-                    activeSubscription: $,
-                    setSelectedPlanId: ee,
-                    selectedSkuId: et,
-                    giftRecipient: en,
-                    selectedPlan: er,
-                    priceOptions: es
-                } = (0, d.usePaymentContext)(), ea = (0, E.isCustomGiftEnabled)(en);
-                C = null != C ? C : et, l(void 0 !== (N = null != N ? N : $), "should not be undefined");
-                let [el, ei] = (0, i.useStateFromStoresArray)([_.default], () => [null != N ? _.default.get(N.planId) : null, null != v ? _.default.get(v) : null]), eu = (0, R.usePremiumTrialOffer)(V), eo = null == eu ? void 0 : eu.subscription_trial, ec = (0, O.usePremiumDiscountOffer)(), ed = null == ec ? void 0 : null === (t = ec.discount) || void 0 === t ? void 0 : t.plan_ids, ef = null != ei ? ei : er, em = s.useCallback(e => {
-                    null != x ? x(e) : ee(e)
-                }, [x, ee]), e_ = null != W ? W : es;
-                l(null != e_, "Price option has to be set");
-                let eI = null != eu && (0, G.SubscriptionTrials)[eu.trial_id].skus.includes(C),
-                    eE = null != ec && Z.some(e => null == ed ? void 0 : ed.includes(e)),
-                    ep = (0, S.getPrice)(G.SubscriptionPlans.PREMIUM_MONTH_TIER_2, !1, k, e_);
+                    activeSubscription: er,
+                    setSelectedPlanId: es,
+                    selectedSkuId: ea,
+                    giftRecipient: el,
+                    selectedPlan: ei,
+                    priceOptions: eu
+                } = (0, d.usePaymentContext)(), eo = (0, E.isCustomGiftEnabled)(el);
+                C = null != C ? C : ea, l(void 0 !== (N = null != N ? N : er), "should not be undefined");
+                let [ec, ed] = (0, i.useStateFromStoresArray)([_.default], () => [null != N ? _.default.get(N.planId) : null, null != v ? _.default.get(v) : null]), ef = (0, R.usePremiumTrialOffer)(V), em = null == ef ? void 0 : ef.subscription_trial, e_ = (0, O.usePremiumDiscountOffer)(), eI = null == e_ ? void 0 : null === (t = e_.discount) || void 0 === t ? void 0 : t.plan_ids, eE = null != ed ? ed : ei, ep = s.useCallback(e => {
+                    null != x ? x(e) : es(e)
+                }, [x, es]), eN = null != W ? W : eu;
+                l(null != eN, "Price option has to be set");
+                let eS = null != ef && (0, G.SubscriptionTrials)[ef.trial_id].skus.includes(C),
+                    eP = null != e_ && Z.some(e => null == eI ? void 0 : eI.includes(e)),
+                    eT = (0, S.getPrice)(G.SubscriptionPlans.PREMIUM_MONTH_TIER_2, !1, k, eN);
                 s.useEffect(() => {
                     K && T.default.trackExposure({
                         location: "5f89bb_1"
                     })
                 }, [K]);
-                let eN = (null == ef ? void 0 : ef.id) != null && Z.includes(ef.id);
+                let eC = (null == eE ? void 0 : eE.id) != null && Z.includes(eE.id);
                 s.useEffect(() => {
-                    if (!eN) {
-                        if (null == el || k) em(Z[0]);
-                        else if (null != el) {
-                            let e = Z.find(e => e !== el.id);
-                            null != e && em(e)
+                    if (!eC) {
+                        if (null == ec || k) ep(Z[0]);
+                        else if (null != ec) {
+                            let e = Z.find(e => e !== ec.id);
+                            null != e && ep(e)
                         }
                     }
-                }, [eN, k, Z, el, em]);
-                let eS = !ea && (k || !eI && !eE) && eN && J,
-                    eP = (0, u.useRadioGroup)(),
-                    eT = (null == ef ? void 0 : ef.id) != null ? (0, S.getPrice)(ef.id, !1, k, e_) : void 0,
+                }, [eC, k, Z, ec, ep]);
+                let eA = !eo && (k || !eS && !eP) && eC && J,
+                    eO = (0, u.useRadioGroup)(),
+                    eR = (null == eE ? void 0 : eE.id) != null ? (0, S.getPrice)(eE.id, !1, k, eN) : void 0,
                     {
-                        ipCountryCode: eC
+                        ipCountryCode: eh
                     } = (0, A.default)(),
-                    eA = "HR" === eC && null != eT && eT.currency === U.CurrencyCodes.EUR,
-                    eO = (0, S.isPrepaidPaymentSource)(e_.paymentSourceId),
-                    eR = (null == eo ? void 0 : eo.interval) === G.SubscriptionIntervalTypes.DAY ? B.default.Messages.BILLING_TRIAL_2_WEEK_PERIOD : B.default.Messages.BILLING_TRIAL_30_DAY_PERIOD,
-                    eh = !k && (eE || null != eo && eI && null != z),
-                    eg = null == Q ? void 0 : null === (f = Q.find(e => e.subscriptionPlanId === G.SubscriptionPlans.PREMIUM_MONTH_TIER_2)) || void 0 === f ? void 0 : null === (a = f.discounts) || void 0 === a ? void 0 : null === (n = a.find(e => e.type === c.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount;
+                    eg = "HR" === eh && null != eR && eR.currency === U.CurrencyCodes.EUR,
+                    eM = (0, S.isPrepaidPaymentSource)(eN.paymentSourceId),
+                    eL = (null == em ? void 0 : em.interval) === G.SubscriptionIntervalTypes.DAY ? B.default.Messages.BILLING_TRIAL_2_WEEK_PERIOD : B.default.Messages.BILLING_TRIAL_30_DAY_PERIOD,
+                    ey = !k && (eP || null != em && eS && null != z),
+                    ev = null == en ? void 0 : null === (f = en.find(e => e.subscriptionPlanId === G.SubscriptionPlans.PREMIUM_MONTH_TIER_2)) || void 0 === f ? void 0 : null === (a = f.discounts) || void 0 === a ? void 0 : null === (n = a.find(e => e.type === c.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount;
                 return (0, r.jsx)(r.Fragment, {
                     children: (0, r.jsxs)("div", {
-                        className: ea ? F.stepBodyCustomGift : F.stepBody,
+                        className: eo ? F.stepBodyCustomGift : F.stepBody,
                         children: [(0, r.jsxs)("div", {
-                            className: ea ? F.bodyColumnMiddle : void 0,
+                            className: eo ? F.bodyColumnMiddle : void 0,
                             children: [(0, r.jsx)(h.default, {
                                 fromBoostCancelModal: !1,
                                 className: F.legacyPricingNotice
-                            }), (w || ea) && null != H && (0, r.jsx)(y.GiftAnimationOptions, {
+                            }), (w || eo) && null != H && (0, r.jsx)(y.GiftAnimationOptions, {
+                                emojiConfetti: q,
+                                setEmojiConfetti: ee,
+                                setSoundEffect: et,
+                                soundEffect: Q,
                                 selectedGiftStyle: H,
                                 setSelectedGiftStyle: Y
                             })]
                         }), (0, r.jsxs)("div", {
-                            className: ea ? F.bodyColumnRight : void 0,
-                            children: [ea && (0, r.jsx)(j.SendGiftToUser, {
-                                giftRecipient: en
+                            className: eo ? F.bodyColumnRight : void 0,
+                            children: [eo && (0, r.jsx)(j.SendGiftToUser, {
+                                giftRecipient: el
                             }), (() => {
-                                if (ea && null != q) return (0, r.jsx)(L.default, {
+                                if (eo && null != $) return (0, r.jsx)(L.default, {
                                     sectionTitle: B.default.Messages.GIFT_OPTIONAL_MESSAGE,
-                                    onTextChange: e => q(e),
+                                    onTextChange: e => $(e),
                                     pendingText: X,
                                     currentText: X
                                 })
-                            })(), null != el && !k && (0, r.jsx)("div", {
+                            })(), null != ec && !k && (0, r.jsx)("div", {
                                 className: F.bodyText,
                                 children: function(e, t) {
                                     let n = B.default.Messages.BILLING_SWITCH_PLAN_DOWNGRADE_BODY_MONTH,
@@ -1784,27 +1800,27 @@
                                         default:
                                             return s
                                     }
-                                }(el, C)
-                            }), (m = eI, I = eE, ea ? (0, r.jsx)(u.FormTitle, {
+                                }(ec, C)
+                            }), (m = eS, I = eP, eo ? (0, r.jsx)(u.FormTitle, {
                                 children: B.default.Messages.GIFT_SUBSCRIPTION_SELECTION
-                            }) : eh ? m ? (0, r.jsxs)("div", {
+                            }) : ey ? m ? (0, r.jsxs)("div", {
                                 children: [(0, r.jsx)(u.Text, {
                                     variant: "text-sm/normal",
                                     className: F.trialPlanSelectHeader,
                                     children: B.default.Messages.BILLING_TRIAL_PAYMENT_MODAL_INFO.format({
                                         trialEnd: z,
-                                        trialPeriod: eR
+                                        trialPeriod: eL
                                     })
                                 }), (0, r.jsx)("hr", {
                                     className: F.planSelectSeparator
                                 })]
-                            }) : I && null != eg && null != ep ? (0, r.jsxs)("div", {
+                            }) : I && null != ev && null != eT ? (0, r.jsxs)("div", {
                                 children: [(0, r.jsx)(u.Text, {
                                     variant: "text-sm/normal",
                                     className: F.trialPlanSelectHeader,
                                     children: B.default.Messages.BILLING_DISCOUNT_PAYMENT_MODAL_INFO.format({
-                                        discountedPrice: (0, P.formatPrice)(ep.amount - eg, ep.currency),
-                                        regularPrice: (0, P.formatPrice)(ep.amount, ep.currency)
+                                        discountedPrice: (0, P.formatPrice)(eT.amount - ev, eT.currency),
+                                        regularPrice: (0, P.formatPrice)(eT.amount, eT.currency)
                                     })
                                 }), (0, r.jsx)("hr", {
                                     className: F.planSelectSeparator
@@ -1813,39 +1829,39 @@
                                 className: F.selectPlanChooseTitle,
                                 children: B.default.Messages.BILLING_SWITCH_PLAN_CHOOSE_ONE
                             })), (0, r.jsx)("div", {
-                                ...eP,
+                                ...eO,
                                 children: Z.map(e => (0, r.jsx)(b.default, {
                                     planId: e,
                                     isGift: k,
                                     premiumSubscription: k ? null : null != N ? N : null,
-                                    selectPlan: em,
-                                    selected: (null == ef ? void 0 : ef.id) === e,
-                                    priceOptions: e_,
-                                    shouldShowUpdatedPaymentModal: eh,
-                                    isEligibleForDiscount: eE,
-                                    discountAmountOff: eg
+                                    selectPlan: ep,
+                                    selected: (null == eE ? void 0 : eE.id) === e,
+                                    priceOptions: eN,
+                                    shouldShowUpdatedPaymentModal: ey,
+                                    isEligibleForDiscount: eP,
+                                    discountAmountOff: ev
                                 }, e))
                             }), (0, r.jsx)("div", {
-                                children: eS && null != ef && null != eT ? (0, r.jsxs)("div", {
+                                children: eA && null != eE && null != eR ? (0, r.jsxs)("div", {
                                     children: [(0, r.jsx)("div", {
                                         className: F.selectPlanDivider
                                     }), (0, r.jsx)(g.PremiumInvoiceTableTotalRow, {
                                         label: B.default.Messages.BILLING_PAYMENT_BREAKDOWN_TOTAL,
                                         value: (0, r.jsx)(M.default, {
-                                            price: eT.amount,
-                                            currency: eT.currency,
-                                            intervalType: k ? null : ef.interval,
-                                            intervalCount: ef.intervalCount,
-                                            isPrepaidPaymentSource: eO
+                                            price: eR.amount,
+                                            currency: eR.currency,
+                                            intervalType: k ? null : eE.interval,
+                                            intervalCount: eE.intervalCount,
+                                            isPrepaidPaymentSource: eM
                                         }),
                                         className: F.selectPlanTotalRow
                                     })]
                                 }) : null
-                            }), eA && (0, r.jsx)(o.default, {
+                            }), eg && (0, r.jsx)(o.default, {
                                 message: B.default.Messages.LOCALIZED_PRICING_HRK_EURO_WARNING.format({
-                                    kunaPriceWithCurrency: (0, P.formatPrice)(7.5345 * eT.amount, U.CurrencyCodes.HRK)
+                                    kunaPriceWithCurrency: (0, P.formatPrice)(7.5345 * eR.amount, U.CurrencyCodes.HRK)
                                 })
-                            }), !k && !eh && J && (0, r.jsx)(o.default, {
+                            }), !k && !ey && J && (0, r.jsx)(o.default, {
                                 message: B.default.Messages.BILLING_FINAL_PRICE_MAY_CHANGE.format({
                                     documentationLink: p.default.getArticleURL(D.HelpdeskArticles.LOCALIZED_PRICING)
                                 })
@@ -2519,115 +2535,119 @@
                     isGift: U = !1,
                     giftStyle: B,
                     customGiftMessage: F,
-                    trialId: k,
-                    planGroup: w,
-                    analyticsLocation: H,
-                    purchaseTokenAuthState: Y,
-                    openInvoiceId: W,
-                    metadata: Z,
-                    backButtonEligible: K,
-                    disablePurchase: V,
-                    isTrial: z = !1
+                    emojiConfetti: k,
+                    soundEffect: w,
+                    trialId: H,
+                    planGroup: Y,
+                    analyticsLocation: W,
+                    purchaseTokenAuthState: Z,
+                    openInvoiceId: K,
+                    metadata: V,
+                    backButtonEligible: z,
+                    disablePurchase: J,
+                    isTrial: X = !1
                 } = e, {
-                    selectedPlan: J,
-                    priceOptions: X,
-                    setHasAcceptedTerms: q,
-                    setPurchaseError: Q,
-                    purchaseType: $,
-                    paymentSourceId: ee,
-                    paymentSources: et,
-                    selectedSkuId: en,
-                    skusById: er,
-                    skuPricePreviewsById: es,
-                    referralCode: ea,
-                    contextMetadata: el,
-                    giftRecipient: ei
-                } = (0, d.usePaymentContext)(), eu = null == J ? void 0 : J.id, eo = (0, I.checkNoPaymentTrialEnabled)(k, X.paymentSourceId, eu), ec = (0, i.useStateFromStores)([E.default], () => E.default.popupCallbackCalled), {
-                    analyticsLocations: ed
-                } = (0, c.default)(), ef = null != ee ? et[ee] : null, [em, e_] = s.useState(eo), [eI, eE] = s.useState(!1), {
-                    hasEntitlements: ep
-                } = (0, O.useSubscriptionEntitlements)(eu, U), eN = (0, T.isPrepaidPaymentSource)(X.paymentSourceId), eS = ep || eo, eP = (0, C.useIsPrepaidPaymentPastDue)(), eT = null, eC = null;
-                if ($ === h.PurchaseTypes.ONE_TIME) {
-                    l(null != en, "SKU must be selected for one-time purchases"), l(null != (eT = null !== (t = er[en]) && void 0 !== t ? t : null), "SKU must exist and be fetched.");
-                    let e = es[en],
-                        n = null != ee ? ee : N.NO_PAYMENT_SOURCE;
-                    eC = null != e ? e[n] : null
+                    selectedPlan: q,
+                    priceOptions: Q,
+                    setHasAcceptedTerms: $,
+                    setPurchaseError: ee,
+                    purchaseType: et,
+                    paymentSourceId: en,
+                    paymentSources: er,
+                    selectedSkuId: es,
+                    skusById: ea,
+                    skuPricePreviewsById: el,
+                    referralCode: ei,
+                    contextMetadata: eu,
+                    giftRecipient: eo
+                } = (0, d.usePaymentContext)(), ec = null == q ? void 0 : q.id, ed = (0, I.checkNoPaymentTrialEnabled)(H, Q.paymentSourceId, ec), ef = (0, i.useStateFromStores)([E.default], () => E.default.popupCallbackCalled), {
+                    analyticsLocations: em
+                } = (0, c.default)(), e_ = null != en ? er[en] : null, [eI, eE] = s.useState(ed), [ep, eN] = s.useState(!1), {
+                    hasEntitlements: eS
+                } = (0, O.useSubscriptionEntitlements)(ec, U), eP = (0, T.isPrepaidPaymentSource)(Q.paymentSourceId), eT = eS || ed, eC = (0, C.useIsPrepaidPaymentPastDue)(), eA = null, eO = null;
+                if (et === h.PurchaseTypes.ONE_TIME) {
+                    l(null != es, "SKU must be selected for one-time purchases"), l(null != (eA = null !== (t = ea[es]) && void 0 !== t ? t : null), "SKU must exist and be fetched.");
+                    let e = el[es],
+                        n = null != en ? en : N.NO_PAYMENT_SOURCE;
+                    eO = null != e ? e[n] : null
                 }
-                let eA = async () => {
+                let eR = async () => {
                     await (0, f.purchaseProduct)({
                         setPurchaseState: a,
-                        setHasAcceptedTerms: q,
-                        setIsSubmitting: e_,
-                        setPurchaseError: Q,
-                        hasRedirectURL: eI,
-                        setHasRedirectURL: eE,
+                        setHasAcceptedTerms: $,
+                        setIsSubmitting: eE,
+                        setPurchaseError: ee,
+                        hasRedirectURL: ep,
+                        setHasRedirectURL: eN,
                         isGift: U,
                         giftStyle: B,
                         baseAnalyticsData: G,
-                        analyticsLocation: H,
-                        analyticsLocations: ed,
+                        analyticsLocation: W,
+                        analyticsLocations: em,
                         flowStartTime: D,
-                        subscriptionPlan: J,
-                        planGroup: w,
-                        trialId: k,
-                        priceOptions: X,
-                        paymentSource: ef,
-                        isPrepaidPaymentPastDue: eP,
-                        openInvoiceId: W,
+                        subscriptionPlan: q,
+                        planGroup: Y,
+                        trialId: H,
+                        priceOptions: Q,
+                        paymentSource: e_,
+                        isPrepaidPaymentPastDue: eC,
+                        openInvoiceId: K,
                         premiumSubscription: n,
                         onNext: L,
-                        metadata: Z,
-                        sku: eT,
-                        skuPricePreview: eC,
-                        purchaseType: $,
-                        referralCode: ea,
-                        loadId: el.loadId,
-                        giftRecipient: ei,
-                        customMessage: F
+                        metadata: V,
+                        sku: eA,
+                        skuPricePreview: eO,
+                        purchaseType: et,
+                        referralCode: ei,
+                        loadId: eu.loadId,
+                        giftRecipient: eo,
+                        customMessage: F,
+                        emojiConfetti: k,
+                        soundEffect: w
                     })
                 };
                 s.useEffect(() => {
                     let e = async () => {
-                        if (!0 === ec) try {
+                        if (!0 === ef) try {
                             if (null == E.default.redirectedPaymentId) return;
                             await (0, o.redirectedPaymentSucceeded)(E.default.redirectedPaymentId), P.default.track(h.AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, {
                                 ...G,
                                 duration_ms: Date.now() - D,
-                                payment_source_type: null == ef ? void 0 : ef.type
+                                payment_source_type: null == e_ ? void 0 : e_.type
                             }), a(m.PurchaseState.COMPLETED), L()
                         } catch (e) {
                             a(m.PurchaseState.FAIL), j(e), P.default.track(h.AnalyticEvents.PAYMENT_FLOW_FAILED, {
                                 ...G,
-                                payment_source_id: ee,
-                                payment_source_type: null == ef ? void 0 : ef.type,
+                                payment_source_id: en,
+                                payment_source_type: null == e_ ? void 0 : e_.type,
                                 duration_ms: Date.now() - D
                             })
                         } finally {
-                            e_(!1), (0, o.resetPaymentIntentId)()
-                        } else Y === p.PurchaseTokenAuthState.SUCCESS && await eA()
+                            eE(!1), (0, o.resetPaymentIntentId)()
+                        } else Z === p.PurchaseTokenAuthState.SUCCESS && await eR()
                     };
                     e()
-                }, [ec]), s.useEffect(() => {
-                    eo && !U && null == n && eA()
-                }, [eo, U, n]);
-                let eO = null != W || $ === h.PurchaseTypes.ONE_TIME;
-                return eo ? null : (0, r.jsxs)(u.ModalFooter, {
+                }, [ef]), s.useEffect(() => {
+                    ed && !U && null == n && eR()
+                }, [ed, U, n]);
+                let eh = null != K || et === h.PurchaseTypes.ONE_TIME;
+                return ed ? null : (0, r.jsxs)(u.ModalFooter, {
                     align: S.default.Align.CENTER,
                     children: [(0, r.jsx)(R.default, {
                         legalTermsNodeRef: y,
                         invoiceError: x,
                         planError: b,
-                        disablePurchase: V,
+                        disablePurchase: J,
                         flashLegalTerms: v,
-                        isSubmitting: em,
+                        isSubmitting: eI,
                         premiumSubscription: n,
                         isGift: U,
-                        planGroup: w,
-                        isPrepaid: eN,
-                        isTrial: z,
-                        makePurchase: eA,
-                        needsPaymentSource: null == ef && !eS
-                    }), (0, r.jsx)(_.default, {}), K && !eO ? (0, r.jsx)("div", {
+                        planGroup: Y,
+                        isPrepaid: eP,
+                        isTrial: X,
+                        makePurchase: eR,
+                        needsPaymentSource: null == e_ && !eT
+                    }), (0, r.jsx)(_.default, {}), z && !eh ? (0, r.jsx)("div", {
                         className: g.back,
                         children: (0, r.jsx)(A.default, {
                             onClick: M

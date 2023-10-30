@@ -2078,7 +2078,8 @@
                             channelId: t,
                             code: n,
                             content: s,
-                            type: a
+                            type: a,
+                            giftInfo: l
                         } = this.props;
                         e.preventDefault(), e.stopPropagation(), P.default.track(b.AnalyticEvents.OPEN_MODAL, {
                             type: "gift_accept",
@@ -2087,11 +2088,12 @@
                                 object: b.AnalyticsObjects.BUTTON_CTA
                             }
                         });
-                        let l = a !== b.MessageTypes.CUSTOM_GIFT ? void 0 : s;
+                        let i = a !== b.MessageTypes.CUSTOM_GIFT ? void 0 : s;
                         (0, p.openGiftCodeAcceptModal)({
                             processedCode: n,
                             channelContext: t,
-                            customGiftMessage: l
+                            customGiftMessage: i,
+                            giftInfo: l
                         })
                     }, this.handleEmbedClick = e => {
                         let {
@@ -7226,17 +7228,19 @@
                         author: n,
                         channel_id: a,
                         type: l,
-                        content: i
-                    } = e, r = z.default.getCurrentUser();
-                    return null != r && t.length > 0 ? t.map(e => (0, s.jsx)("div", {
+                        content: i,
+                        giftInfo: r
+                    } = e, u = z.default.getCurrentUser();
+                    return null != u && t.length > 0 ? t.map(e => (0, s.jsx)("div", {
                         className: eS.giftCodeContainer,
                         children: (0, s.jsx)(E.default, {
                             code: e,
                             author: n,
                             channelId: a,
-                            currentUser: r,
+                            currentUser: u,
                             type: l,
-                            content: i
+                            content: i,
+                            giftInfo: r
                         })
                     }, e)) : null
                 }
@@ -11506,24 +11510,30 @@
                 let {
                     processedCode: t,
                     channelContext: o,
-                    customGiftMessage: d
-                } = e, c = !1, f = null;
+                    customGiftMessage: d,
+                    giftInfo: c
+                } = e, f = !1, E = null;
                 (0, a.openModalLazy)(async () => {
                     let {
                         default: e
                     } = await n.el("669146").then(n.bind(n, "669146"));
-                    return n => (0, s.jsx)(e, {
-                        code: t,
-                        channelContext: o,
-                        customGiftMessage: d,
-                        onComplete: (e, t) => {
-                            f = e, t && (c = t, e.isSubscription && null == l.default.getPremiumSubscription(!1) && ((0, r.setCanPlayWowMoment)(!0), (0, r.setIsPersistentHelperHidden)(!0)))
-                        },
-                        ...n
-                    })
+                    return n => {
+                        var a, i;
+                        return (0, s.jsx)(e, {
+                            code: t,
+                            channelContext: o,
+                            customGiftMessage: d,
+                            emojiName: null == c ? void 0 : null === (a = c.emoji) || void 0 === a ? void 0 : a.name,
+                            soundId: null == c ? void 0 : null === (i = c.sound) || void 0 === i ? void 0 : i.id,
+                            onComplete: (e, t) => {
+                                E = e, t && (f = t, e.isSubscription && null == l.default.getPremiumSubscription(!1) && ((0, r.setCanPlayWowMoment)(!0), (0, r.setIsPersistentHelperHidden)(!0)))
+                            },
+                            ...n
+                        })
+                    }
                 }, {
                     onCloseCallback: () => {
-                        c && null != f && f.isSubscription && i.ComponentDispatch.dispatch(u.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED)
+                        f && null != E && E.isSubscription && i.ComponentDispatch.dispatch(u.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED)
                     }
                 })
             }

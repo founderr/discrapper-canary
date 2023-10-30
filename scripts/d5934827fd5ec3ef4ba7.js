@@ -240,7 +240,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return b
+                    return L
                 }
             });
             var a = n("37983"),
@@ -270,8 +270,8 @@
                 value: e
             }));
 
-            function b(e) {
-                var t, b, L, N, O, y;
+            function L(e) {
+                var t, L, b, N, O, y;
                 let {
                     transitionState: j,
                     onClose: B
@@ -450,10 +450,10 @@
                                             className: x.formInput,
                                             children: (0, a.jsx)(s.SearchableSelect, {
                                                 value: z,
-                                                options: null !== (y = null == (t = W) ? void 0 : null === (N = t.features) || void 0 === N ? void 0 : null === (L = N.filter(e => "" !== (0, E.getFeatureId)(e))) || void 0 === L ? void 0 : null === (b = L.map(e => ({
+                                                options: null !== (y = null == (t = W) ? void 0 : null === (N = t.features) || void 0 === N ? void 0 : null === (b = N.filter(e => "" !== (0, E.getFeatureId)(e))) || void 0 === b ? void 0 : null === (L = b.map(e => ({
                                                     label: null !== (O = e.name) && void 0 !== O ? O : "",
                                                     value: (0, E.getFeatureId)(e)
-                                                }))) || void 0 === b ? void 0 : b.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== y ? y : [],
+                                                }))) || void 0 === L ? void 0 : L.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== y ? y : [],
                                                 isDisabled: null == W,
                                                 onChange: e => J(e)
                                             })
@@ -773,8 +773,8 @@
                 return {
                     logsUploaded: new Date().toISOString(),
                     releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    buildNumber: "241858",
-                    versionHash: "d7bd3e837c87bd0fb93c63a1a31f4bb8cd93753e"
+                    buildNumber: "241862",
+                    versionHash: "095354fc4be8ec4f5f7277d07fb95565b2554ce1"
                 }
             }
             n.r(t), n.d(t, {
