@@ -1233,12 +1233,12 @@
                 null == f && null != eM && (f = eM);
                 let eG = null !== (a = null !== (l = null === (i = f) || void 0 === i ? void 0 : i.getGuildId()) && void 0 !== l ? l : m) && void 0 !== a ? a : null,
                     {
-                        enabled: eF,
-                        hasTabUI: eV,
-                        hasBurstToggle: eH,
-                        hasFreeBursts: eB
+                        hasTabUI: eF,
+                        hasBurstToggle: eV,
+                        hasFreeBursts: eH
                     } = (0, p.useBurstReactionsExperiment)(eG),
-                    [eK, eJ] = s.useState(!eH && eF && ev),
+                    [eB, eK] = s.useState(!1),
+                    eJ = eV ? eB : ev,
                     eZ = w.default.getCurrentUser(),
                     ez = (0, G.isPremium)(eZ),
                     eW = (0, c.useStateFromStores)([M.default], () => M.default.hasAvailableBurstCurrency);
@@ -1290,7 +1290,7 @@
                     trackOnPickerOpen: tr
                 } = (0, V.useTrackEmojiPickerOpened)({
                     intention: u,
-                    isBurstReaction: ev,
+                    isBurstReaction: eJ,
                     analyticsObject: eq
                 });
                 (0, P.useMaybeFetchPremiumLikelihood)(L.default);
@@ -1323,7 +1323,7 @@
                                 position: e.columnIndex + 1,
                                 backfillEmoji: ts.map(e => e.id).includes(e.emoji.id),
                                 newlyAddedHighlight: e.subCategory === ee.EmojiSubCategory.NEWLY_ADDED_EMOJI && T.default.isNewerThanLastSeen(eG, e.emoji.id),
-                                isBurstReaction: eK
+                                isBurstReaction: eJ
                             })
                         },
                         trackEmojiFavorited: e => {
@@ -1353,7 +1353,7 @@
                         emojiGrid: ti,
                         emojiList: ew,
                         channelGuildId: eG,
-                        isBurstReaction: eK
+                        isBurstReaction: eJ
                     });
                 ec(eI, ew), ed(eI, e2, ek, eO), s.useEffect(() => {
                     !eg && (0, j.setSearchQuery)("")
@@ -1392,8 +1392,8 @@
                     onClose: () => eL(null),
                     guildId: eP.guildId,
                     emojiId: eP.emojiId
-                }) : eK && (ez || eB && eW ? !eW && (o = (0, n.jsx)(X.default, {})) : o = (0, n.jsx)(K.default, {
-                    onDismiss: () => eJ(!1)
+                }) : eJ && (ez || eH && eW ? !eW && (o = (0, n.jsx)(X.default, {})) : o = (0, n.jsx)(K.default, {
+                    onDismiss: () => eK(!1)
                 }));
                 let t_ = (0, n.jsx)(z.default, {
                         pickerIntention: u,
@@ -1408,9 +1408,9 @@
                         headerClassName: eh,
                         hasTabWrapper: F,
                         diversitySurrogate: e2,
-                        showBurstOption: eH || eK && !eV,
-                        isBurstReaction: eK,
-                        onBurstReactionToggle: () => eJ(!eK)
+                        showBurstOption: eV || eJ && !eF,
+                        isBurstReaction: eJ,
+                        onBurstReactionToggle: () => eK(!eJ)
                     }),
                     th = [];
                 u === ei.EmojiIntention.REACTION && th.push(d.DismissibleContent.SUPER_REACTIONS_NITRO_MARKETING), !S.default.hasFavoriteEmojis(eG) && th.push(d.DismissibleContent.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
@@ -1422,8 +1422,8 @@
                         role: F ? "tabpanel" : void 0,
                         className: r(es.wrapper, {
                             [es.emojiPickerHasTabWrapper]: F,
-                            [es.isBurstReactionPicker]: eK && !eV && ez,
-                            [es.isBurstReactionUnlimited]: eK && eH && ez
+                            [es.isBurstReactionPicker]: eJ && !eF && ez,
+                            [es.isBurstReactionUnlimited]: eJ && eV && ez
                         }),
                         children: [F ? null : t_, (0, n.jsxs)("div", {
                             className: r(es.emojiPicker, e_),
@@ -1444,7 +1444,7 @@
                                         switch (t) {
                                             case d.DismissibleContent.SUPER_REACTIONS_NITRO_MARKETING:
                                                 return (0, n.jsx)(B.default, {
-                                                    isBurstReaction: eK,
+                                                    isBurstReaction: eJ,
                                                     markAsDismissed: i
                                                 });
                                             case d.DismissibleContent.EMOJI_PICKER_FAVORITE_EMOJIS_TIP:
@@ -1470,7 +1470,7 @@
                                         onEmojiSelect: (e, t) => {
                                             to(e, {
                                                 ...t,
-                                                isBurst: eK
+                                                isBurst: eJ
                                             })
                                         },
                                         rowCount: ti.length,
@@ -1480,7 +1480,7 @@
                                         channelGuildId: eG,
                                         disableEmojiTutorialFlow: tI,
                                         messageId: eR,
-                                        isBurstReaction: eK
+                                        isBurstReaction: eJ
                                     }) : null
                                 })]
                             }), (0, n.jsx)(Y.EmojiPickerInspector, {
