@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["66719"], {
+    ["15049"], {
         393828: function(e, t, n) {
             "use strict";
             e.exports = n.p + "714405524ef39906bd06.png"
@@ -779,192 +779,6 @@
             }
             var o = r
         },
-        772051: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                ClydeExperimentState: function() {
-                    return l
-                },
-                default: function() {
-                    return a
-                }
-            });
-            var i, l, r = n("862205");
-            (i = l || (l = {}))[i.None = 0] = "None", i[i.DefaultOn = 1] = "DefaultOn", i[i.DefaultOff = 2] = "DefaultOff", i[i.ComingSoon = 3] = "ComingSoon", i[i.ClydeProfiles = 4] = "ClydeProfiles";
-            let u = (0, r.createExperiment)({
-                kind: "guild",
-                id: "2023-03_clyde_ai",
-                label: "ClydeAI",
-                defaultConfig: {
-                    experimentState: l.None
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enabled (Default Off)",
-                    config: {
-                        experimentState: l.DefaultOff
-                    }
-                }, {
-                    id: 3,
-                    label: "Enabled (Default On)",
-                    config: {
-                        experimentState: l.DefaultOn
-                    }
-                }, {
-                    id: 4,
-                    label: "Coming Soon",
-                    config: {
-                        experimentState: l.ComingSoon
-                    }
-                }, {
-                    id: 5,
-                    label: "Clyde Profiles",
-                    config: {
-                        experimentState: l.ClydeProfiles
-                    }
-                }]
-            });
-            var a = u
-        },
-        254927: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                isClydeEnabledinGdms: function() {
-                    return r
-                }
-            });
-            var i = n("862205");
-            let l = (0, i.createExperiment)({
-                kind: "user",
-                id: "2023-06_clyde_ai_gdm",
-                label: "Clyde in DMs/GDMs",
-                defaultConfig: {
-                    isClydeEnabledinGdms: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "enable clyde in gdms",
-                    config: {
-                        isClydeEnabledinGdms: !0
-                    }
-                }]
-            });
-
-            function r() {
-                let {
-                    isClydeEnabledinGdms: e
-                } = l.getCurrentConfig({
-                    location: "38acdb_1"
-                }, {
-                    autoTrackExposure: !1
-                });
-                return e
-            }
-        },
-        980215: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                useClydeExperiment: function() {
-                    return s
-                },
-                useClydeProfilesEnabled: function() {
-                    return d
-                },
-                useClydeEnabled: function() {
-                    return c
-                },
-                getClydeEnabled: function() {
-                    return f
-                },
-                getClydeExperimentEnabled: function() {
-                    return _
-                },
-                canUseCustomClydeProfiles: function() {
-                    return S
-                }
-            }), n("884691"), n("446674");
-            var i = n("305961"),
-                l = n("957255"),
-                r = n("772051"),
-                u = n("254927"),
-                a = n("49111"),
-                o = n("724210");
-
-            function s(e) {
-                var t;
-                let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    i = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
-                    l = r.default.useExperiment({
-                        guildId: i,
-                        location: "1e9ccc_1"
-                    }, {
-                        autoTrackExposure: n
-                    }).experimentState;
-                return l
-            }
-
-            function d(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    n = s(e, t);
-                return n === r.ClydeExperimentState.ClydeProfiles
-            }
-
-            function c(e, t) {
-                let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    i = s(e, n);
-                return E(i, e, t)
-            }
-
-            function E(e, t, n) {
-                if (null == t) {
-                    if (null != n && n.isPrivate()) {
-                        if (n.hasFlag(o.ChannelFlags.CLYDE_AI)) return !0;
-                        let e = (0, u.isClydeEnabledinGdms)();
-                        if (!e) return !1;
-                        let t = i.default.getGuildIds().some(e => _(i.default.getGuild(e)));
-                        return t
-                    }
-                    return !1
-                }
-                return null != e && e !== r.ClydeExperimentState.None && l.default.can(a.Permissions.USE_CLYDE_AI, n)
-            }
-
-            function f(e, t) {
-                var n;
-                let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    l = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : "",
-                    u = r.default.getCurrentConfig({
-                        guildId: l,
-                        location: "1e9ccc_2"
-                    }, {
-                        autoTrackExposure: i
-                    }).experimentState;
-                return E(u, e, t)
-            }
-
-            function _(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    n = p(e, t);
-                return n !== r.ClydeExperimentState.None
-            }
-
-            function S(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                return p(e, t) === r.ClydeExperimentState.ClydeProfiles
-            }
-
-            function p(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                if (null == e) return !1;
-                let n = e.id;
-                return r.default.getCurrentConfig({
-                    guildId: n,
-                    location: "1e9ccc_4"
-                }, {
-                    autoTrackExposure: t
-                }).experimentState
-            }
-        },
         115279: function(e, t, n) {
             "use strict";
             var i, l, r, u, a, o, s, d, c, E, f;
@@ -1012,13 +826,13 @@
                     return o
                 },
                 GIF_PICKER_TAB_PANEL_ID: function() {
-                    return v
-                },
-                GIF_PICKER_TAB_ID: function() {
                     return N
                 },
-                EMOJI_SIZE_MAP: function() {
+                GIF_PICKER_TAB_ID: function() {
                     return A
+                },
+                EMOJI_SIZE_MAP: function() {
+                    return v
                 },
                 EMOJI_ROW_SIZE: function() {
                     return O
@@ -1036,9 +850,9 @@
                 g = "reaction-picker-tab",
                 m = "super-reaction-picker-tab";
             (o || (o = {})).TOOLTIP = "tooltip";
-            let v = "gif-picker-tab-panel",
-                N = "gif-picker-tab",
-                A = {
+            let N = "gif-picker-tab-panel",
+                A = "gif-picker-tab",
+                v = {
                     reaction: 32,
                     default: 44,
                     jumbo: 96
@@ -1323,15 +1137,15 @@
                     analyticsSourceLocation: C,
                     isGift: g = !1,
                     giftMessage: m,
-                    subscriptionTier: v,
-                    trialId: N,
-                    postSuccessGuild: A,
+                    subscriptionTier: N,
+                    trialId: A,
+                    postSuccessGuild: v,
                     openInvoiceId: O,
                     applicationId: U,
                     referralTrialOfferId: R,
-                    giftRecipient: D,
-                    returnRef: L
-                } = null != e ? e : {}, y = !1, P = (0, l.v4)();
+                    giftRecipient: L,
+                    returnRef: D
+                } = null != e ? e : {}, P = !1, y = (0, l.v4)();
                 (0, r.openModalLazy)(async () => {
                     let {
                         default: e
@@ -1343,48 +1157,48 @@
                         } = n;
                         return (0, i.jsx)(e, {
                             ...r,
-                            loadId: P,
-                            subscriptionTier: v,
-                            skuId: v,
+                            loadId: y,
+                            subscriptionTier: N,
+                            skuId: N,
                             isGift: g,
                             giftMessage: m,
-                            giftRecipient: D,
+                            giftRecipient: L,
                             initialPlanId: t,
                             followupSKUInfo: f,
                             onClose: e => {
                                 l(), null == _ || _(e), e && (null == p || p())
                             },
                             onComplete: () => {
-                                y = !0, null == S || S(), !g && ((0, o.setIsPersistentHelperHidden)(!0), (0, o.setCanPlayWowMoment)(!0))
+                                P = !0, null == S || S(), !g && ((0, o.setIsPersistentHelperHidden)(!0), (0, o.setCanPlayWowMoment)(!0))
                             },
                             onSubscriptionConfirmation: p,
                             analyticsLocations: T,
                             analyticsObject: h,
                             analyticsLocation: I,
                             analyticsSourceLocation: C,
-                            trialId: N,
-                            postSuccessGuild: A,
+                            trialId: A,
+                            postSuccessGuild: v,
                             planGroup: E.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
                             openInvoiceId: O,
                             applicationId: U,
                             referralTrialOfferId: R,
-                            returnRef: L
+                            returnRef: D
                         })
                     }
                 }, {
                     modalKey: "payment-modal",
                     onCloseCallback: () => {
-                        !y && s.default.track(c.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                            load_id: P,
+                        !P && s.default.track(c.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+                            load_id: y,
                             payment_type: c.PurchaseTypeToAnalyticsPaymentType[c.PurchaseTypes.SUBSCRIPTION],
                             location: null != I ? I : h,
                             source: C,
                             subscription_type: c.SubscriptionTypes.PREMIUM,
                             is_gift: g,
-                            eligible_for_trial: null != N,
+                            eligible_for_trial: null != A,
                             application_id: U,
                             location_stack: T
-                        }), (0, u.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == _ || _(y), y && (!g && d.ComponentDispatch.dispatch(c.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED), null == p || p())
+                        }), (0, u.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == _ || _(P), P && (!g && d.ComponentDispatch.dispatch(c.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED), null == p || p())
                     },
                     onCloseRequest: c.NOOP
                 })
@@ -1533,23 +1347,23 @@
                         fetched: e.fetched,
                         premiumLikelihood: e.premiumLikelihood
                     }
-                }), m = (0, i.useStateFromStores)([r.default], () => r.default.isLoadedForSKUs([c.PremiumSubscriptionSKUs.TIER_0, c.PremiumSubscriptionSKUs.TIER_2])), v = !p && T && !S && (h ? !g || !m : !g), N = c.PremiumTypes.TIER_2;
+                }), m = (0, i.useStateFromStores)([r.default], () => r.default.isLoadedForSKUs([c.PremiumSubscriptionSKUs.TIER_0, c.PremiumSubscriptionSKUs.TIER_2])), N = !p && T && !S && (h ? !g || !m : !g), A = c.PremiumTypes.TIER_2;
                 if (S) {
                     let e = _.subscription_trial;
-                    (null == e ? void 0 : e.sku_id) === c.PremiumSubscriptionSKUs.TIER_0 ? N = c.PremiumTypes.TIER_0 : (null == e ? void 0 : e.sku_id) === c.PremiumSubscriptionSKUs.TIER_2 && (N = c.PremiumTypes.TIER_2)
-                } else if (!p && !v && T) {
+                    (null == e ? void 0 : e.sku_id) === c.PremiumSubscriptionSKUs.TIER_0 ? A = c.PremiumTypes.TIER_0 : (null == e ? void 0 : e.sku_id) === c.PremiumSubscriptionSKUs.TIER_2 && (A = c.PremiumTypes.TIER_2)
+                } else if (!p && !N && T) {
                     if (h) {
                         let {
                             amount: e
                         } = (0, u.getPrice)(c.SubscriptionPlans.PREMIUM_MONTH_TIER_0), {
                             amount: t
                         } = (0, u.getPrice)(c.SubscriptionPlans.PREMIUM_MONTH_TIER_2);
-                        N = (0, s.getHigherExpectedValue)(C, e, t)
-                    } else I && (N = (0, s.getHighestLikelihood)(C))
+                        A = (0, s.getHigherExpectedValue)(C, e, t)
+                    } else I && (A = (0, s.getHighestLikelihood)(C))
                 }
                 return {
-                    isLoading: v,
-                    suggestedPremiumType: N
+                    isLoading: N,
+                    suggestedPremiumType: A
                 }
             }
         },
@@ -1615,16 +1429,16 @@
                 var t, n, r;
                 let {
                     title: m,
-                    type: v,
-                    guildBoostProps: N,
-                    analyticsSource: A,
+                    type: N,
+                    guildBoostProps: A,
+                    analyticsSource: v,
                     analyticsLocation: O,
                     body: U,
                     context: R,
-                    glowUp: D,
-                    modalClassName: L,
-                    artContainerClassName: y,
-                    bodyClassName: P,
+                    glowUp: L,
+                    modalClassName: D,
+                    artContainerClassName: P,
+                    bodyClassName: y,
                     transitionState: M,
                     onClose: b,
                     onSubscribeClick: w,
@@ -1638,31 +1452,31 @@
                     hideBackButton: j,
                     backButtonText: K,
                     ...W
-                } = e, Y = null != N, z = (0, _.usePremiumTrialOffer)(), J = (0, f.usePremiumDiscountOffer)(), Z = ((null == z ? void 0 : null === (t = z.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === H || (0, f.discountOfferHasTier)(J, H)) && !Y, {
+                } = e, z = null != A, Y = (0, _.usePremiumTrialOffer)(), J = (0, f.usePremiumDiscountOffer)(), Z = ((null == Y ? void 0 : null === (t = Y.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === H || (0, f.discountOfferHasTier)(J, H)) && !z, {
                     analyticsLocations: X
                 } = (0, s.default)(o.default.PREMIUM_UPSELL_MODAL);
                 l.useEffect(() => {
-                    !V && (Y ? c.default.track(h.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
-                        type: "".concat(v, " - Tier ").concat(N.boostedGuildTier),
-                        guild_id: N.guild.id,
-                        channel_id: N.channelId,
+                    !V && (z ? c.default.track(h.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+                        type: "".concat(N, " - Tier ").concat(A.boostedGuildTier),
+                        guild_id: A.guild.id,
+                        channel_id: A.channelId,
                         location: O,
                         location_stack: X
                     }) : c.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-                        type: v,
-                        source: A,
+                        type: N,
+                        source: v,
                         location_stack: X,
                         sku_id: H
                     }))
-                }, [Y, H, V]);
-                let q = B ? u(C.artContainer, C.artContainerBoxShadow, y) : u(C.artContainer, y),
+                }, [z, H, V]);
+                let q = B ? u(C.artContainer, C.artContainerBoxShadow, P) : u(C.artContainer, P),
                     Q = null;
                 return Q = "artURL" in W ? (0, i.jsx)("img", {
                     className: C.art,
                     alt: "",
                     src: W.artURL
                 }) : W.artElement, (0, i.jsxs)(a.ModalRoot, {
-                    className: u(C.root, L),
+                    className: u(C.root, D),
                     "aria-label": m,
                     transitionState: M,
                     children: [(0, i.jsxs)("div", {
@@ -1678,14 +1492,14 @@
                             children: Z ? (0, i.jsx)(i.Fragment, {
                                 children: (0, i.jsx)(S.default, {
                                     onClose: b,
-                                    type: v,
-                                    subscriptionTier: null !== (r = null == z ? void 0 : null === (n = z.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== r ? r : T.PremiumSubscriptionSKUs.TIER_2,
+                                    type: N,
+                                    subscriptionTier: null !== (r = null == Y ? void 0 : null === (n = Y.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== r ? r : T.PremiumSubscriptionSKUs.TIER_2,
                                     headingText: m,
                                     context: R,
                                     analyticsLocationObject: O,
                                     discountOffer: J,
-                                    trialOffer: z,
-                                    children: D
+                                    trialOffer: Y,
+                                    children: L
                                 })
                             }) : (0, i.jsxs)(i.Fragment, {
                                 children: [(0, i.jsx)(a.Heading, {
@@ -1694,7 +1508,7 @@
                                     children: m
                                 }), (0, i.jsx)(a.Text, {
                                     variant: "text-md/normal",
-                                    className: u(P),
+                                    className: u(y),
                                     children: U
                                 })]
                             })
@@ -1712,18 +1526,18 @@
                                 children: F
                             }) : null, (() => {
                                 let e, t;
-                                if (Y) return (0, i.jsx)(d.default, {
+                                if (z) return (0, i.jsx)(d.default, {
                                     analyticsLocation: O,
-                                    guild: N.guild,
+                                    guild: A.guild,
                                     onClose: b
                                 });
                                 if (Z) {
-                                    if (null != z) {
+                                    if (null != Y) {
                                         var n, l;
                                         e = (0, E.formatTrialCtaIntervalDuration)({
-                                            intervalType: null == z ? void 0 : null === (n = z.subscription_trial) || void 0 === n ? void 0 : n.interval,
-                                            intervalCount: null == z ? void 0 : null === (l = z.subscription_trial) || void 0 === l ? void 0 : l.interval_count
-                                        }), t = null == z ? void 0 : z.trial_id
+                                            intervalType: null == Y ? void 0 : null === (n = Y.subscription_trial) || void 0 === n ? void 0 : n.interval,
+                                            intervalCount: null == Y ? void 0 : null === (l = Y.subscription_trial) || void 0 === l ? void 0 : l.interval_count
+                                        }), t = null == Y ? void 0 : Y.trial_id
                                     } else null != J && (e = I.default.Messages.PREMIUM_DISCOUNT_CTA.format({
                                         percent: J.discount.amount
                                     }))
@@ -1872,7 +1686,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return D
+                    return L
                 }
             });
             var i, l, r = n("917351"),
@@ -1894,10 +1708,10 @@
                 C = l.NOT_FETCHED,
                 g = l.NOT_FETCHED,
                 m = new Set,
-                v = new Map,
-                N = !1;
+                N = new Map,
+                A = !1;
 
-            function A(e) {
+            function v(e) {
                 let {
                     sound: t
                 } = e, n = T.get(t.guildId), i = null == n ? void 0 : n.findIndex(e => e.soundId === t.soundId);
@@ -1962,7 +1776,7 @@
                     return C === l.FETCHED
                 }
                 isUserPlayingSounds(e) {
-                    let t = v.get(e);
+                    let t = N.get(e);
                     return null != t && t > 0
                 }
                 isPlayingSound(e) {
@@ -1978,22 +1792,22 @@
                     return I.has(e)
                 }
                 hasHadOtherUserPlaySoundInSession() {
-                    return N
+                    return A
                 }
                 hasFetchedAllSounds() {
                     return g === l.FETCHED && C === l.FETCHED
                 }
             }
             R.displayName = "SoundboardStore";
-            var D = new R(o.default, {
+            var L = new R(o.default, {
                 LOGOUT: function() {
-                    T.clear(), h.clear(), v.clear(), N = !1, g = l.NOT_FETCHED, C = l.NOT_FETCHED
+                    T.clear(), h.clear(), N.clear(), A = !1, g = l.NOT_FETCHED, C = l.NOT_FETCHED
                 },
                 GUILD_SOUNDBOARD_FETCH: function() {
                     g = l.FETCHING
                 },
-                GUILD_SOUNDBOARD_SOUND_CREATE: A,
-                GUILD_SOUNDBOARD_SOUND_UPDATE: A,
+                GUILD_SOUNDBOARD_SOUND_CREATE: v,
+                GUILD_SOUNDBOARD_SOUND_UPDATE: v,
                 GUILD_SOUNDBOARD_SOUND_DELETE: function(e) {
                     let {
                         soundId: t,
@@ -2009,16 +1823,16 @@
                     let {
                         soundId: l,
                         userId: r
-                    } = e, u = (null !== (n = h.get(l)) && void 0 !== n ? n : 0) + 1, a = (null !== (i = v.get(r)) && void 0 !== i ? i : 0) + 1;
-                    h.set(l, u), v.set(r, a), r !== (null === (t = c.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (N = !0)
+                    } = e, u = (null !== (n = h.get(l)) && void 0 !== n ? n : 0) + 1, a = (null !== (i = N.get(r)) && void 0 !== i ? i : 0) + 1;
+                    h.set(l, u), N.set(r, a), r !== (null === (t = c.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (A = !0)
                 },
                 GUILD_SOUNDBOARD_SOUND_PLAY_END: function(e) {
                     var t, n;
                     let {
                         soundId: i,
                         userId: l
-                    } = e, r = (null !== (t = h.get(i)) && void 0 !== t ? t : 0) - 1, u = (null !== (n = v.get(l)) && void 0 !== n ? n : 0) - 1;
-                    r <= 0 ? h.delete(i) : h.set(i, r), u <= 0 ? v.delete(l) : v.set(l, u)
+                    } = e, r = (null !== (t = h.get(i)) && void 0 !== t ? t : 0) - 1, u = (null !== (n = N.get(l)) && void 0 !== n ? n : 0) - 1;
+                    r <= 0 ? h.delete(i) : h.set(i, r), u <= 0 ? N.delete(l) : N.set(l, u)
                 },
                 USER_SOUNDBOARD_SET_VOLUME: function(e) {
                     let {
@@ -2027,7 +1841,7 @@
                     O(t)
                 },
                 VOICE_CHANNEL_SELECT: function() {
-                    h.clear(), v.clear()
+                    h.clear(), N.clear()
                 },
                 USER_SETTINGS_PROTO_UPDATE: function(e) {
                     let {
@@ -2115,15 +1929,15 @@
                 C = new Map,
                 g = new Map,
                 m = null,
-                v = [],
-                N = null,
-                A = !1,
+                N = [],
+                A = null,
+                v = !1,
                 O = new Map,
                 U = (e, t) => {
                     O = new Map(O.set(e, t))
                 },
                 R = 1e3 * h.Durations.HOUR,
-                D = () => {
+                L = () => {
                     if (0 !== I) return;
                     let e = o.default.database();
                     if (null == e) return;
@@ -2132,17 +1946,17 @@
                     if (null != t) {
                         for (let [e, n] of t)
                             if (_.default.isMember(e) && !O.has(e)) {
-                                for (let t of n) L(t, !0, S.default.getGuild(e));
+                                for (let t of n) D(t, !0, S.default.getGuild(e));
                                 U(e, n)
                             }
                     }
                 },
-                L = function(e) {
+                D = function(e) {
                     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-                    g.set(e.id, e), t && y(e, n)
+                    g.set(e.id, e), t && P(e, n)
                 },
-                y = function(e) {
+                P = function(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
                     if (null == m) return;
                     let {
@@ -2152,7 +1966,7 @@
                         value: e.name.trim().toLocaleLowerCase()
                     };
                     if ((0, T.isStandardSticker)(e)) {
-                        let t = v.find(t => t.id === e.pack_id),
+                        let t = N.find(t => t.id === e.pack_id),
                             l = [i, ...(null != n ? n : "").split(",").map(e => ({
                                 type: p.StickerMetadataTypes.TAG,
                                 value: e.trim().toLocaleLowerCase()
@@ -2188,24 +2002,24 @@
                         })), m.set(e.id, u)
                     }
                 },
-                P = (e, t, n) => {
+                y = (e, t, n) => {
                     C.set(e.id, e);
-                    let i = [...v];
+                    let i = [...N];
                     if (t) {
-                        let t = i.findIndex(t => t.id === e.id); - 1 !== t ? i[t] = e : i.push(e), v = i
-                    }(t || n) && e.stickers.forEach(e => L(e))
+                        let t = i.findIndex(t => t.id === e.id); - 1 !== t ? i[t] = e : i.push(e), N = i
+                    }(t || n) && e.stickers.forEach(e => D(e))
                 },
                 M = () => {
                     O.forEach((e, t) => {
                         let n = S.default.getGuild(t);
-                        null != n && e.forEach(e => y(e, n))
-                    }), v.forEach(e => {
-                        e.stickers.forEach(e => y(e))
+                        null != n && e.forEach(e => P(e, n))
+                    }), N.forEach(e => {
+                        e.stickers.forEach(e => P(e))
                     })
                 };
 
             function b(e) {
-                null != e.stickers && (e.stickers.forEach(t => L(t, !0, e)), U(e.id, e.stickers))
+                null != e.stickers && (e.stickers.forEach(t => D(t, !0, e)), U(e.id, e.stickers))
             }
             class w extends u.default.Store {
                 initialize() {
@@ -2215,37 +2029,37 @@
                     return 0 !== I
                 }
                 get stickerMetadata() {
-                    return D(), null == m && (m = new Map, M()), m
+                    return L(), null == m && (m = new Map, M()), m
                 }
                 get hasLoadedStickerPacks() {
-                    return null != N && N + R > Date.now()
+                    return null != A && A + R > Date.now()
                 }
                 get isFetchingStickerPacks() {
-                    return A
+                    return v
                 }
                 getStickerById(e) {
-                    return !g.has(e) && D(), g.get(e)
+                    return !g.has(e) && L(), g.get(e)
                 }
                 getStickerPack(e) {
                     return C.get(e)
                 }
                 getPremiumPacks() {
-                    return v
+                    return N
                 }
                 isPremiumPack(e) {
-                    return v.some(t => t.id === e)
+                    return N.some(t => t.id === e)
                 }
                 getRawStickersByGuild() {
                     return O
                 }
                 getAllStickersIterator() {
-                    return D(), g.values()
+                    return L(), g.values()
                 }
                 getAllGuildStickers() {
-                    return D(), O
+                    return L(), O
                 }
                 getStickersByGuildId(e) {
-                    return D(), O.get(e)
+                    return L(), O.get(e)
                 }
             }
             w.displayName = "StickersStore";
@@ -2275,30 +2089,30 @@
                     }), O.delete(n.id), O = new Map(O)
                 },
                 LOGOUT: () => {
-                    I = 0, v = [], g.clear(), C.clear(), m = null, O.clear(), O = new Map(O), A = !1, N = null
+                    I = 0, N = [], g.clear(), C.clear(), m = null, O.clear(), O = new Map(O), v = !1, A = null
                 },
                 STICKER_PACKS_FETCH_START: () => {
-                    A = !0
+                    v = !0
                 },
                 STICKER_PACKS_FETCH_SUCCESS: e => {
                     let {
                         packs: t
                     } = e;
-                    t.forEach(e => P(e, !0)), N = Date.now(), A = !1
+                    t.forEach(e => y(e, !0)), A = Date.now(), v = !1
                 },
                 STICKER_PACK_FETCH_SUCCESS: e => {
                     let {
                         pack: t,
                         ingestStickers: n
                     } = e;
-                    P(t, !1, n)
+                    y(t, !1, n)
                 },
                 GUILD_STICKERS_FETCH_SUCCESS: e => {
                     let {
                         guildId: t,
                         stickers: n
                     } = e;
-                    n.forEach(e => L(e)), U(t, n)
+                    n.forEach(e => D(e)), U(t, n)
                 },
                 GUILD_STICKERS_CREATE_SUCCESS: e => {
                     var t, n;
@@ -2306,13 +2120,13 @@
                         guildId: i,
                         sticker: l
                     } = e, r = null !== (t = O.get(i)) && void 0 !== t ? t : [];
-                    U(i, [...null !== (n = r.filter(e => e.id !== l.id)) && void 0 !== n ? n : [], l]), L(l)
+                    U(i, [...null !== (n = r.filter(e => e.id !== l.id)) && void 0 !== n ? n : [], l]), D(l)
                 },
                 STICKER_FETCH_SUCCESS: e => {
                     let {
                         sticker: t
                     } = e;
-                    L(t, !1)
+                    D(t, !1)
                 },
                 GUILD_STICKERS_UPDATE: e => {
                     var t;
@@ -2331,7 +2145,7 @@
                         g.delete(e.id), null != m && m.delete(e.id)
                     });
                     let a = i.map(e => l(e));
-                    a.forEach(e => L(e)), U(n, a)
+                    a.forEach(e => D(e)), U(n, a)
                 }
             })
         },
@@ -2716,7 +2530,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return D
+                    return L
                 }
             });
             var i = n("917351"),
@@ -2739,14 +2553,14 @@
                 C = null,
                 g = null,
                 m = [],
-                v = null,
-                N = null;
+                N = null,
+                A = null;
 
-            function A(e) {
+            function v(e) {
                 var t, n, i, l, r, u;
                 let d = a.default.getCurrentUser();
                 if (null == d) return O();
-                c = null !== (t = e.section) && void 0 !== t ? t : c, v = null !== (n = e.section) && void 0 !== n ? n : c, null != e.subsection && null != c && (E[c] = e.subsection), null != e.scrollPosition && null != c && (f[c] = e.scrollPosition), h = !!e.openWithoutBackstack, s = o.FormStates.OPEN, _ = {}, p = {
+                c = null !== (t = e.section) && void 0 !== t ? t : c, N = null !== (n = e.section) && void 0 !== n ? n : c, null != e.subsection && null != c && (E[c] = e.subsection), null != e.scrollPosition && null != c && (f[c] = e.scrollPosition), h = !!e.openWithoutBackstack, s = o.FormStates.OPEN, _ = {}, p = {
                     ...S = {
                         [o.UserSettingsSections.ACCOUNT]: {
                             userId: d.id,
@@ -2759,11 +2573,11 @@
                             claimed: d.isClaimed()
                         }
                     }
-                }, C = null !== (i = e.onClose) && void 0 !== i ? i : null, g = null !== (l = e.analyticsLocation) && void 0 !== l ? l : null, m = null !== (r = e.analyticsLocations) && void 0 !== r ? r : [], N = null !== (u = e.impressionSource) && void 0 !== u ? u : null
+                }, C = null !== (i = e.onClose) && void 0 !== i ? i : null, g = null !== (l = e.analyticsLocation) && void 0 !== l ? l : null, m = null !== (r = e.analyticsLocations) && void 0 !== r ? r : [], A = null !== (u = e.impressionSource) && void 0 !== u ? u : null
             }
 
             function O() {
-                s = o.FormStates.CLOSED, T = !1, S = null, v = null, p = null, d = null, c = null, E = {}, f = {}, C = null, g = null, m = [], N = null
+                s = o.FormStates.CLOSED, T = !1, S = null, N = null, p = null, d = null, c = null, E = {}, f = {}, C = null, g = null, m = [], A = null
             }
 
             function U() {
@@ -2806,8 +2620,8 @@
                         openWithoutBackstack: h,
                         analyticsLocation: g,
                         analyticsLocations: m,
-                        initialSection: v,
-                        impressionSource: N
+                        initialSection: N,
+                        impressionSource: A
                     }
                 }
                 get onClose() {
@@ -2815,11 +2629,11 @@
                 }
             }
             R.displayName = "UserSettingsModalStore";
-            var D = new R(u.default, {
+            var L = new R(u.default, {
                 USER_SETTINGS_MODAL_OPEN: function(e) {
-                    T = !0, A(e)
+                    T = !0, v(e)
                 },
-                USER_SETTINGS_MODAL_INIT: A,
+                USER_SETTINGS_MODAL_INIT: v,
                 USER_SETTINGS_MODAL_CLOSE: O,
                 LOGOUT: O,
                 USER_SETTINGS_MODAL_SUBMIT: function() {
@@ -2876,7 +2690,7 @@
                     })
                 },
                 DRAWER_SELECT_TAB: function(e) {
-                    return I = e.tab, null == c && I === o.DrawerTabTypes.USER_SETTINGS && A({
+                    return I = e.tab, null == c && I === o.DrawerTabTypes.USER_SETTINGS && v({
                         type: "USER_SETTINGS_MODAL_INIT",
                         section: null,
                         subsection: null,

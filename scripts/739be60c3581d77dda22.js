@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["62262"], {
+    ["90010"], {
         190389: function(e, t, n) {
             "use strict";
             e.exports = n.p + "10edc9054f6bb1a7de74.svg"
@@ -207,7 +207,7 @@
                             newPassword: S,
                             discriminator: C
                         } = e, {
-                            close: p
+                            close: R
                         } = t;
                         return (0, _.default)(e => {
                             let t = {
@@ -259,7 +259,7 @@
                             }), null != I && null != S && r.default.dispatch({
                                 type: "PASSWORD_UPDATED",
                                 userId: t.id
-                            }), p ? this.close() : this.submitComplete(), e
+                            }), R ? this.close() : this.submitComplete(), e
                         }, e => (r.default.dispatch({
                             type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE",
                             errors: e.body
@@ -346,16 +346,16 @@
                         retrySuccessMessage: S
                     } = this.props, {
                         code: C,
-                        errorMessage: p,
-                        retrySuccess: R
-                    } = this.state, m = l.Children.count(r) > 0 ? (0, i.jsx)(s.Card, {
+                        errorMessage: R,
+                        retrySuccess: p
+                    } = this.state, A = l.Children.count(r) > 0 ? (0, i.jsx)(s.Card, {
                         type: s.Card.Types.WARNING,
                         className: u.card,
                         children: (0, i.jsx)(s.Text, {
                             variant: "text-md/normal",
                             children: r
                         })
-                    }) : null, A = null != T ? (0, i.jsxs)(s.Text, {
+                    }) : null, N = null != T ? (0, i.jsxs)(s.Text, {
                         className: a(u.submitText, u.spacing),
                         variant: "text-sm/normal",
                         children: [(0, i.jsx)("br", {}), (0, i.jsx)(s.Clickable, {
@@ -365,7 +365,7 @@
                                 children: T
                             })
                         })]
-                    }) : null, N = R ? (0, i.jsx)(s.Card, {
+                    }) : null, L = p ? (0, i.jsx)(s.Card, {
                         type: s.Card.Types.SUCCESS,
                         className: u.card,
                         children: (0, i.jsx)(s.Text, {
@@ -389,7 +389,7 @@
                                     variant: "text-md/normal",
                                     className: u.spacing,
                                     children: I
-                                }) : null, m, N, (0, i.jsxs)(s.FormItem, {
+                                }) : null, A, L, (0, i.jsxs)(s.FormItem, {
                                     title: this.getLabelText(),
                                     className: u.spacing,
                                     children: [(0, i.jsx)(s.TextInput, {
@@ -404,8 +404,8 @@
                                         color: "text-danger",
                                         variant: "text-xs/normal",
                                         className: u.error,
-                                        children: null != _ ? _ : p
-                                    }) : null, A]
+                                        children: null != _ ? _ : R
+                                    }) : null, N]
                                 })]
                             }), (0, i.jsxs)(s.ModalFooter, {
                                 children: [(0, i.jsx)(s.Button, {
@@ -623,192 +623,6 @@
             }), (i = l || (l = {})).POPOUT_WINDOW = "popout window", i.OVERLAY = "overlay", i.NOTICE = "notice", i.PREMIUM_UPSELL_TOOLTIP = "premium upsell tooltip", i.BADGE = "badge", i.USER_SETTINGS = "user settings", i.USER_SETTINGS_MENU = "user settings menu", i.ACCOUNT = "account", i.TEXT_AND_IMAGES = "text and images", i.GUILD_SETTINGS = "guild settings", i.OVERVIEW = "overview", i.STICKERS = "stickers", i.VANITY_URL = "vanity url", i.PREMIUM_MARKETING = "premium marketing", i.PREMIUM_MARKETING_PLAN_COMPARISON = "premium marketing plan comparison", i.PREMIUM_PAYMENT_MODAL = "premium payment modal", i.PREMIUM_UPSELL_ALERT = "premium upsell alert", i.PREMIUM_UPSELL_MODAL = "premium upsell modal", i.PREMIUM_SETTINGS = "premium settings", i.PAYMENT_FLOW_TEST_PAGE = "payment flow test page", i.PREMIUM_PAYMENT_ACTION_SHEET = "premium payment action sheet", i.CHANNEL_CALL = "channel call", i.CHANNEL_CALL_CONNECTING_SCREEN = "channel call connecting screen", i.RTC_PANEL = "rtc panel", i.SOUNDBOARD_BUTTON = "soundboard button", i.SOUNDBOARD_POPOUT = "soundboard popout", i.SOUNDBOARD_WHEEL = "soundboard wheel", i.SOUNDBOARD_ACTION_SHEET = "soundboard action sheet", i.GIFT_BUTTON = "gift button", i.EXPRESSION_SUGGESTIONS = "expression suggestions", i.EMOJI_PICKER = "emoji picker", i.STICKER_PICKER = "sticker picker", i.STICKER_POPOUT = "sticker popout", i.PREMIUM_UPSELL = "premium upsell", i.EMPTY_STATE = "empty state", i.SUBSCRIPTION_DETAILS = "subscription details", i.SUBSCRIPTION_HEADER = "subscription header", i.ACCOUNT_CREDIT_BANNER = "account credit banner", i.PREMIUM_UNCANCEL_MODAL = "premium uncancel modal", i.PAST_DUE_ONE_TIME_PAYMENT_METHOD_BANNER = "past due one time payment method banner", i.STREAM_QUALITY_INDICATOR = "stream quality indicator", i.PREMIUM_TIER_0_TRIAL_ENDING_NOTICE = "premium tier 0 trial ending notice", i.PREMIUM_TIER_2_TRIAL_ENDING_NOTICE = "premium tier 2 trial ending notice", i.BOOSTED_GUILD_PERKS_MODAL = "boosted guild perks modal", i.GUILD_BOOSTING_PREMIUM_UPSELL = "guild boosting premium upsell", i.RPC = "rpc", i.BILLING_STANDALONE = "billing standalone", i.GUILD_CHANNEL_LIST = "guild channel list", i.GUILD_CHANNEL_LIST_FOOTER = "guild channel list footer", i.STICKER_MESSAGE = "sticker message", i.CHANNEL_TEXT_AREA = "channel text area", i.HEADER_BAR = "header bar", i.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL = "guild role subscription cancellation modal", i.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE = "guild role subscription purchase system message", i.GUILD_ROLE_SUBSCRIPTION_EMOJI_PICKER_UPSELL = "guild role subscription emoji picker upsell", i.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL = "guild role subscription emoji text popover upsell", i.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL = "premium subscription cancellation modal", i.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL = "application subscription cancellation modal", i.PENDING_PLAN_CHANGE_NOTICE = "pending plan change notice", i.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL = "subscription cancel downgrade modal", i.GUILD_HEADER = "guild header", i.GUILD_BANNER = "guild banner", i.GUILD_BANNER_NOTICE = "guild banner notice", i.GUILD_BOOST_PURCHASE_MODAL = "guild boost purchase modal", i.GUILD_BOOST_CANCELLATION_MODAL = "guild boost cancellation modal", i.GUILD_BOOST_UNCANCELLATION_MODAL = "guild boost uncancellation modal", i.GUILD_BOOSTING_PROGRESS_BAR = "guild boosting progress bar", i.GUILD_BOOSTING_TIER_NONE = "guild boosting tier none", i.GUILD_BOOSTING_TIER_1 = "guild boosting tier 1", i.GUILD_BOOSTING_TIER_2 = "guild boosting tier 2", i.GUILD_BOOSTING_TIER_3 = "guild boosting tier 3", i.GUILD_BOOSTING_UPSELL_BANNER = "guild boosting upsell banner", i.GUILD_BOOSTING_SIDEBAR_DISPLAY = "guild boosting sidebar display", i.GUILDS_LIST = "guilds list", i.ACTIVITY_CHANNEL_SELECTOR = "activity channel selector", i.ACTIVITY_DIRECTORY = "activity directory", i.ACTIVITY_TILE = "activity tile", i.ACTIVITY_UPSELL = "activity upsell", i.ACTIVITY_VOICE_CONTROLS_TOGGLE = "activity voice controls toggle", i.INSTANT_INVITE_MODAL = "instant invite modal", i.IMAGE_CROPPING_MODAL = "image cropping modal", i.GIF_PICKER = "gif picker", i.EXTERNAL_INVITE_LINK_MODAL = "external invite link modal", i.INVITE_MODAL = "invite modal", i.INVITE_EMBED = "invite embed", i.NEW_GUILD_BUTTON = "new guild button", i.CHARACTER_COUNT = "character count", i.DM_CHANNEL = "dm channel", i.GUILD_CHANNEL = "guild channel", i.FORUM_CHANNEL = "forum channel", i.FILE_UPLOAD_POPOUT = "file upload popout", i.EMOJI = "emoji", i.PROFILE = "profile", i.PROFILE_MODAL = "profile modal", i.PROFILE_POPOUT = "profile popout", i.GUILD_PROFILE = "guild profile", i.EDIT_AVATAR = "edit avatar", i.EDIT_BANNER = "edit banner", i.CHAT_INPUT = "chat input", i.CREATE_THREAD = "create thread", i.PREMIUM_PREVIEW_UPSELL_HEADER = "premium preview upsell header", i.PREMIUM_UPSELL_OVERLAY = "premium upsell overlay", i.SELECT_IMAGE_MODAL = "select image modal", i.VIDEO_BACKGROUND_OPTIONS = "video background options", i.VIDEO_BACKGROUND_IMAGE_OPTION = "video background image option", i.VIDEO_BACKGROUND_CUSTOM_UPSELL = "video background custom upsell", i.CAMERA_PREVIEW = "camera preview", i.HOME_PAGE_PREMIUM_TAB = "home page premium tab", i.HOME_PAGE_SHOP_TAB = "home page shop tab", i.PREMIUM_MARKETING_SURFACE = "premium marketing surface", i.PREMIUM_MARKETING_HERO_CTA = "premium marketing hero cta", i.PREMIUM_MARKETING_TIER_1_CTA = "premium marketing tier 1 cta", i.PREMIUM_MARKETING_TIER_2_CTA = "premium marketing tier 2 cta", i.PREMIUM_MARKETING_LOCALIZED_PRICING_TIER_2_CTA = "premium marketing localized pricing tier 2 cta", i.PREMIUM_MARKETING_SURFACE_HERO_CTA = "premium marketing surface hero cta", i.PREMIUM_MARKETING_SURFACE_TIER_2_CTA = "premium marketing surface tier 2 cta", i.PREMIUM_MARKETING_SURFACE_TIER_1_CTA = "premium marketing surface tier 1 cta", i.PREMIUM_MARKETING_TIER_CARD = "premium marketing tier card", i.PREMIUM_MARKETING_PERK_CARD = "premium marketing perk card", i.PREMIUM_MARKETING_FEATURE = "premium marketing feature", i.PREMIUM_MARKETING_COMPARISON_TABLE = "premium marketing comparison table", i.PREMIUM_MARKETING_FOOTER = "premium marketing footer", i.PREMIUM_MARKETING_GIFT_SECTION = "premium marketing gift section", i.CHANNEL_CALL_ACTION_BAR = "channel call action bar", i.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI = "aggregate premium upsell modal emoji", i.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_PROFILE_CUSTOMIZATION = "aggregate premium upsell modal profile customization", i.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_HD_STREAMING = "aggregate premium upsell modal hd streaming", i.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_LARGER_FILE_UPLOADS = "aggregate premium upsell modal larger file uploads", i.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_BOGO = "aggregate premium upsell modal bogo", i.CHANNEL_EXPANDED_CONTROLS = "channel expanded controls", i.VOICE_CONTROL_TRAY = "voice control tray", i.ACTIVE_NOW_COLUMN = "active now column", i.CONTEXT_MENU = "context menu", i.CHANNEL_ACTIVITY_FEED_VOICE_MENU = "channel activity feed voice menu", i.CHANNEL_AUDIT_LOG_MENU = "channel audit log menu", i.CHANNEL_CATEGORY_MENU = "channel category menu", i.CHANNEL_LIST_DIRECTORY_CHANNEL_MENU = "channel list menu", i.CHANNEL_LIST_STORE_CHANNEL_MENU = "channel list store channel menu", i.CHANNEL_LIST_TEXT_CHANNEL_MENU = "channel list text channel menu", i.CHANNEL_LIST_THREAD_MENU = "channel list thread menu", i.CHANNEL_LIST_VOICE_CHANNEL_MENU = "channel list voice channel menu", i.CHANNEL_TITLE_MENU = "channel title menu", i.GROUP_DM_MENU = "group dm menu", i.AUDIT_LOG_USER_MENU = "audit log user menu", i.BANNED_USER_MENU = "banned user menu", i.DM_USER_MENU = "dm user menu", i.GROUP_DM_USER_MENU = "group dm user menu", i.GUILD_CHANNEL_USER_MENU = "guild channel user menu", i.GUILD_MODERATION_USER_MENU = "guild moderation user menu", i.GUILD_MODERATION_RAID_MENU = "guild moderation raid menu", i.GUILD_SETTINGS_USER_MENU = "guild settings user menu", i.GUILD_USER_MENU = "guild user menu", i.THREAD_USER_MENU = "thread user menu", i.USER_GENERIC_MENU = "user generic menu", i.USER_PROFILE_ACTIONS_MENU = "user profile actions menu", i.VOICE_ACTION_SHEET = "voice action sheet", i.FOCUSED_VOICE_CONTROLS = "focused voice controls", i.MASKED_LINK = "masked link", i.LAST_NITRO_HOST_ACTION_SHEET = "last nitro host action sheet", i.LAST_NITRO_HOST_LEFT_ACTION_SHEET = "last nitro host left action sheet", i.PREMIUM_TIER_0_ANNOUNCEMENT_ACTION_SHEET = "premium tier 0 announcement action sheet", i.PS_VOICE_CONNECT_UPSELL = "ps voice connect upsell", i.PROFILE_THEME_UPSELL_MODAL = "profile theme upsell modal", i.EDIT_AVATAR_DECORATION_MODAL = "edit avatar decoration modal", i.EDIT_AVATAR_DECORATION_SHEET = "edit avatar decoration sheet", i.EDIT_PROFILE_EFFECT_MODAL = "edit profile effect modal", i.EDIT_PROFILE_EFFECT_ACTION_SHEET = "edit profile effect action sheet", i.ACCOUNT_PROFILE_POPOUT = "account profile popout", i.CHANNEL_CALL_OVERFLOW_ACTION_SHEET = "channel_call_overflow_action_sheet", i.USER_SETTINGS_TRY_OUT_PREMIUM = "user settings try out premium", i.ACTIVITY_COACH_MARK_NITRO = "activity coach mark nitro", i.ACTIVITY_COACH_MARK_BOOSTING = "activity coach mark boosting", i.ACTIVITY_COACH_MARK_HALLOWEEN_2022 = "activity coach mark halloween 2022", i.PREMIUM_TRIAL_TUTORIAL_COACHMARK = "premium trial tutorial coachmark", i.PREMIUM_TRIAL_TUTORIAL_TOOLTIP = "premium trial tutorial tooltip", i.ACTIVITY_COACH_MARK_BASH_OUT = "activity coach mark bash out", i.ACTIVITY_COACH_MARK_POKER = "activity coach mark poker", i.ACTIVITY_COACH_MARK_GARTIC_PHONE = "activity coach mark gartic phone", i.ACTIVITIES_COACH_MARK_GAME_NIGHT = "activities coach mark game night", i.STAGE_VIDEO_LIMIT = "stage video limit", i.ACTIVITIES_MINI_SHELF = "activities mini shelf", i.ACTIVITIES_MINI_SHELF_BANNER = "activities mini shelf banner", i.VC_TILE_ACTIVITY_INVITE = "vc tile activity invite", i.VC_TILE_ACTIVITY_SUGGESTION = "vc tile activity suggestion", i.VC_TILE_ACTIVITY_SHELF_BUTTON = "vc tile activity shelf button", i.BURST_REACTION_TUTORIAL_COACHMARK = "super reaction tutorial coachmark", i.APP_ICON_EDITOR = "app icon editor", i.CLIENT_THEMES_EDITOR = "client themes editor", i.CLIENT_THEMES_THEME_SELECTOR = "client themes theme selector", i.AUTOMOD_PROFILE_QUARANTINE_ALERT = "automod profile quarantine alert", i.SHARE_NITRO_EMBED = "share nitro embed", i.EMBEDDED_ACTIVITY_MESSAGE = "embedded activity message", i.REFERRAL_TRIALS_COMPOSER_BUTTON = "referral trials composer button", i.REFERRAL_TRIALS_POPOUT = "referral trials popout", i.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL = "premium marketing announcement modal", i.PREMIUM_MARKETING_PAGE_BANNER = "premium marketing page banner", i.ACTIVITY_BOOKMARK = "activity bookmark", i.ACTIVITY_BOOKMARK_LAUNCHER = "activity bookmark launcher", i.ACTIVITY_DETAIL_PAGE = "activity detail page", i.ACTIVITIES_PAGE = "activities page", i.ACTIVITIES_PAGE_NOTIFICATION_DOT = "activities page cta", i.ACTIVITIES_PAGE_WHATS_NEW_TILE = "activities page whats new tile", i.VOICE_PANEL_PRE_JOIN = "voice panel pre-join content", i.ACTIVITIES_IM_FEELING_LUCKY = "activities im feeling lucky", i.ACTIVITIES_HAPPENING_NOW = "activities happening now", i.MEDIA_VIEWER = "media viewer", i.MESSAGE_LONG_PRESS_MENU = "message long press menu", i.COLLECTIBLES_SHOP = "collectibles shop", i.COLLECTIBLES_SHOP_CARD = "collectibles shop card", i.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON = "collectibles shop card preview button", i.COLLECTIBLES_SHOP_DETAILS_MODAL = "collectibles shop details modal", i.COLLECTIBLES_PROFILE_SETTINGS_UPSELL = "collectibles profile settings upsell", i.COLLECTIBLES_PREMIUM_MARKETING_PAGE_UPSELL = "collectibles premium marketing page upsell", i.COLLECTIBLES_PAYMENT_MODAL = "collectibles payment modal", i.COLLECTIBLES_COLLECTED_MODAL = "collectibles collected modal", i.COLLECTIBLES_USER_POPOUT_UPSELL = "collectibles user popout upsell", i.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL = "collectibles account switch upsell", i.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP = "collectibles feature education tooltip", i.PREMIUM_BILLING_INFO = "premium billing info", i.PREMIUM_SUBSCRIPTION_DETAILS = "premium subscription details", i.APP_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE = "application subscription payment source with invoice", i.GUILD_BOOST_SLOT_CANCELLATION_MODAL_CURRENT_INVOICE_PREVIEW = "guild boost slot cancellation modal current invoice preview", i.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW = "guild boost slot cancellation modal renewal invoice preview", i.GUILD_BOOSTING_REVIEW_PRORATED = "guild boosting review prorated", i.GUILD_BOOSTING_REVIEW_RENEWAL = "guild boosting review renewal", i.GUILD_ROLE_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE = "guild role subscription payment source with invoice", i.PREMIUM_PLAN_SELECT = "premium_plan_select", i.CANCEL_INVOICE_PREVIEW = "cancel_invoice_preview", i.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT = "premium subscription fine print content", i.SUBSCRIPTION_INVOICE_FOOTER = "subscription invoice footer", i.BILLING_SWITCH_PLAN_IMMEDIATE_PRORATED_INVOICE_PREVIEW = "billing switch plan immediate prorated invoice preview", i.BILLING_SWITCH_PLAN_IMMEDIATE_RENEWAL_INVOICE_PREVIEW = "billing switch plan immediate renewal invoice preview", i.GUILD_BOOSTING_PLAN_SELECT = "GUILD_BOOSTING_PLAN_SELECT", i.MEMBER_SAFETY_PAGE = "member safety page", i.GUILD_SETTINGS_MEMBERS_PAGE = "guild settings members page", i.GUILD_MEMBER_MOD_VIEW = "guild member mod view", i.GUILD_PRODUCT_EMBED_CARD = "guild product embed card", i.GUILD_PRODUCT_INFO_MODAL = "guild product info modal", i.GUILD_PRODUCT_PAYMENT_MODAL = "guild product payment modal", i.GUILD_SHOP_PAGE = "guild shop page", i.ACTIVITY_SHELF_ACTIVITY_DETAILS = "activity shelf activty details", i.MESSAGE_REMIX_TAG = "message remix tag", i.MESSAGE_REMIX_BUTTON = "message remix button", i.HAPPENING_NOW_EMBEDDED_ACTIVITY = "happening now embedded activity", i.CLIPS_SETTINGS = "clips settings", i.CLIPS_GALLERY = "clips gallery", i.CLIPS_GALLERY_ITEM = "clips gallery item", i.CLIPS_EDITOR = "clips editor", i.CLIPS_SHARE_MODAL = "clips share modal", i.CHANNEL_ATTACH_BUTTON = "channel attach button", i.PREMIUM_TRIAL_OFFER_ACTION_SHEET = "premium trial offer action sheet", i.PREMIUM_SUBSCRIBER_NITRO_HOME = "premium subscriber nitro home", i.CLYDE_PROFILE_SHARE_MODAL = "clyde profile share modal", i.PROFILE_EFFECT_SHOP_COACHMARK = "profile effect shop coachmark", i.ACTIVITY_IN_TEXT_ACTIONBAR = "activity in text actionbar", i.GUILD_EVENT_CARD = "guild event card", i.EVENT_SETTINGS = "event settings";
             var i, l, r = l
         },
-        772051: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                ClydeExperimentState: function() {
-                    return l
-                },
-                default: function() {
-                    return s
-                }
-            });
-            var i, l, r = n("862205");
-            (i = l || (l = {}))[i.None = 0] = "None", i[i.DefaultOn = 1] = "DefaultOn", i[i.DefaultOff = 2] = "DefaultOff", i[i.ComingSoon = 3] = "ComingSoon", i[i.ClydeProfiles = 4] = "ClydeProfiles";
-            let a = (0, r.createExperiment)({
-                kind: "guild",
-                id: "2023-03_clyde_ai",
-                label: "ClydeAI",
-                defaultConfig: {
-                    experimentState: l.None
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enabled (Default Off)",
-                    config: {
-                        experimentState: l.DefaultOff
-                    }
-                }, {
-                    id: 3,
-                    label: "Enabled (Default On)",
-                    config: {
-                        experimentState: l.DefaultOn
-                    }
-                }, {
-                    id: 4,
-                    label: "Coming Soon",
-                    config: {
-                        experimentState: l.ComingSoon
-                    }
-                }, {
-                    id: 5,
-                    label: "Clyde Profiles",
-                    config: {
-                        experimentState: l.ClydeProfiles
-                    }
-                }]
-            });
-            var s = a
-        },
-        254927: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                isClydeEnabledinGdms: function() {
-                    return r
-                }
-            });
-            var i = n("862205");
-            let l = (0, i.createExperiment)({
-                kind: "user",
-                id: "2023-06_clyde_ai_gdm",
-                label: "Clyde in DMs/GDMs",
-                defaultConfig: {
-                    isClydeEnabledinGdms: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "enable clyde in gdms",
-                    config: {
-                        isClydeEnabledinGdms: !0
-                    }
-                }]
-            });
-
-            function r() {
-                let {
-                    isClydeEnabledinGdms: e
-                } = l.getCurrentConfig({
-                    location: "38acdb_1"
-                }, {
-                    autoTrackExposure: !1
-                });
-                return e
-            }
-        },
-        980215: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                useClydeExperiment: function() {
-                    return u
-                },
-                useClydeProfilesEnabled: function() {
-                    return _
-                },
-                useClydeEnabled: function() {
-                    return E
-                },
-                getClydeEnabled: function() {
-                    return d
-                },
-                getClydeExperimentEnabled: function() {
-                    return I
-                },
-                canUseCustomClydeProfiles: function() {
-                    return T
-                }
-            }), n("884691"), n("446674");
-            var i = n("305961"),
-                l = n("957255"),
-                r = n("772051"),
-                a = n("254927"),
-                s = n("49111"),
-                o = n("724210");
-
-            function u(e) {
-                var t;
-                let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    i = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
-                    l = r.default.useExperiment({
-                        guildId: i,
-                        location: "1e9ccc_1"
-                    }, {
-                        autoTrackExposure: n
-                    }).experimentState;
-                return l
-            }
-
-            function _(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    n = u(e, t);
-                return n === r.ClydeExperimentState.ClydeProfiles
-            }
-
-            function E(e, t) {
-                let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    i = u(e, n);
-                return c(i, e, t)
-            }
-
-            function c(e, t, n) {
-                if (null == t) {
-                    if (null != n && n.isPrivate()) {
-                        if (n.hasFlag(o.ChannelFlags.CLYDE_AI)) return !0;
-                        let e = (0, a.isClydeEnabledinGdms)();
-                        if (!e) return !1;
-                        let t = i.default.getGuildIds().some(e => I(i.default.getGuild(e)));
-                        return t
-                    }
-                    return !1
-                }
-                return null != e && e !== r.ClydeExperimentState.None && l.default.can(s.Permissions.USE_CLYDE_AI, n)
-            }
-
-            function d(e, t) {
-                var n;
-                let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    l = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : "",
-                    a = r.default.getCurrentConfig({
-                        guildId: l,
-                        location: "1e9ccc_2"
-                    }, {
-                        autoTrackExposure: i
-                    }).experimentState;
-                return c(a, e, t)
-            }
-
-            function I(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    n = S(e, t);
-                return n !== r.ClydeExperimentState.None
-            }
-
-            function T(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                return S(e, t) === r.ClydeExperimentState.ClydeProfiles
-            }
-
-            function S(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                if (null == e) return !1;
-                let n = e.id;
-                return r.default.getCurrentConfig({
-                    guildId: n,
-                    location: "1e9ccc_4"
-                }, {
-                    autoTrackExposure: t
-                }).experimentState
-            }
-        },
         441413: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -979,15 +793,15 @@
                     onComplete: T,
                     onSubscriptionConfirmation: S,
                     analyticsLocations: C,
-                    analyticsObject: p,
-                    analyticsLocation: R,
-                    analyticsSourceLocation: m,
-                    isGift: A = !1,
-                    giftMessage: N,
-                    subscriptionTier: L,
+                    analyticsObject: R,
+                    analyticsLocation: p,
+                    analyticsSourceLocation: A,
+                    isGift: N = !1,
+                    giftMessage: L,
+                    subscriptionTier: m,
                     trialId: O,
-                    postSuccessGuild: f,
-                    openInvoiceId: M,
+                    postSuccessGuild: M,
+                    openInvoiceId: f,
                     applicationId: P,
                     referralTrialOfferId: U,
                     giftRecipient: h,
@@ -1005,10 +819,10 @@
                         return (0, i.jsx)(e, {
                             ...r,
                             loadId: v,
-                            subscriptionTier: L,
-                            skuId: L,
-                            isGift: A,
-                            giftMessage: N,
+                            subscriptionTier: m,
+                            skuId: m,
+                            isGift: N,
+                            giftMessage: L,
                             giftRecipient: h,
                             initialPlanId: t,
                             followupSKUInfo: d,
@@ -1016,17 +830,17 @@
                                 l(), null == I || I(e), e && (null == S || S())
                             },
                             onComplete: () => {
-                                D = !0, null == T || T(), !A && ((0, o.setIsPersistentHelperHidden)(!0), (0, o.setCanPlayWowMoment)(!0))
+                                D = !0, null == T || T(), !N && ((0, o.setIsPersistentHelperHidden)(!0), (0, o.setCanPlayWowMoment)(!0))
                             },
                             onSubscriptionConfirmation: S,
                             analyticsLocations: C,
-                            analyticsObject: p,
-                            analyticsLocation: R,
-                            analyticsSourceLocation: m,
+                            analyticsObject: R,
+                            analyticsLocation: p,
+                            analyticsSourceLocation: A,
                             trialId: O,
-                            postSuccessGuild: f,
+                            postSuccessGuild: M,
                             planGroup: c.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
-                            openInvoiceId: M,
+                            openInvoiceId: f,
                             applicationId: P,
                             referralTrialOfferId: U,
                             returnRef: g
@@ -1038,14 +852,14 @@
                         !D && u.default.track(E.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
                             load_id: v,
                             payment_type: E.PurchaseTypeToAnalyticsPaymentType[E.PurchaseTypes.SUBSCRIPTION],
-                            location: null != R ? R : p,
-                            source: m,
+                            location: null != p ? p : R,
+                            source: A,
                             subscription_type: E.SubscriptionTypes.PREMIUM,
-                            is_gift: A,
+                            is_gift: N,
                             eligible_for_trial: null != O,
                             application_id: P,
                             location_stack: C
-                        }), (0, a.clearError)(), (0, s.clearPurchaseTokenAuthState)(), null == I || I(D), D && (!A && _.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED), null == S || S())
+                        }), (0, a.clearError)(), (0, s.clearPurchaseTokenAuthState)(), null == I || I(D), D && (!N && _.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED), null == S || S())
                     },
                     onCloseRequest: E.NOOP
                 })
@@ -1195,37 +1009,37 @@
                 (0, s.useMaybeFetchPremiumLikelihood)(n);
                 let {
                     enabled: C,
-                    useExpectedValue: p,
-                    useLikelihood: R
+                    useExpectedValue: R,
+                    useLikelihood: p
                 } = n.useExperiment({
                     location: null != c ? c : "1"
                 }, {
                     autoTrackExposure: !S && !T && t
                 }), {
-                    premiumLikelihood: m,
-                    fetched: A
+                    premiumLikelihood: A,
+                    fetched: N
                 } = (0, i.useStateFromStoresObject)([o.default], () => {
                     let e = o.default.getState();
                     return {
                         fetched: e.fetched,
                         premiumLikelihood: e.premiumLikelihood
                     }
-                }), N = (0, i.useStateFromStores)([r.default], () => r.default.isLoadedForSKUs([E.PremiumSubscriptionSKUs.TIER_0, E.PremiumSubscriptionSKUs.TIER_2])), L = !S && C && !T && (p ? !A || !N : !A), O = E.PremiumTypes.TIER_2;
+                }), L = (0, i.useStateFromStores)([r.default], () => r.default.isLoadedForSKUs([E.PremiumSubscriptionSKUs.TIER_0, E.PremiumSubscriptionSKUs.TIER_2])), m = !S && C && !T && (R ? !N || !L : !N), O = E.PremiumTypes.TIER_2;
                 if (T) {
                     let e = I.subscription_trial;
                     (null == e ? void 0 : e.sku_id) === E.PremiumSubscriptionSKUs.TIER_0 ? O = E.PremiumTypes.TIER_0 : (null == e ? void 0 : e.sku_id) === E.PremiumSubscriptionSKUs.TIER_2 && (O = E.PremiumTypes.TIER_2)
-                } else if (!S && !L && C) {
-                    if (p) {
+                } else if (!S && !m && C) {
+                    if (R) {
                         let {
                             amount: e
                         } = (0, a.getPrice)(E.SubscriptionPlans.PREMIUM_MONTH_TIER_0), {
                             amount: t
                         } = (0, a.getPrice)(E.SubscriptionPlans.PREMIUM_MONTH_TIER_2);
-                        O = (0, u.getHigherExpectedValue)(m, e, t)
-                    } else R && (O = (0, u.getHighestLikelihood)(m))
+                        O = (0, u.getHigherExpectedValue)(A, e, t)
+                    } else p && (O = (0, u.getHighestLikelihood)(A))
                 }
                 return {
-                    isLoading: L,
+                    isLoading: m,
                     suggestedPremiumType: O
                 }
             }
@@ -1234,7 +1048,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return N
+                    return L
                 }
             });
             var i = n("37983"),
@@ -1253,21 +1067,21 @@
             var T = n("454589"),
                 S = n("978679"),
                 C = n("745279"),
-                p = n("49111"),
-                R = n("782340"),
-                m = n("129429");
-            let A = new Set([I.Step.SKU_SELECT, I.Step.AWAITING_AUTHENTICATION, I.Step.AWAITING_PURCHASE_TOKEN_AUTH, I.Step.CONFIRM]);
+                R = n("49111"),
+                p = n("782340"),
+                A = n("129429");
+            let N = new Set([I.Step.SKU_SELECT, I.Step.AWAITING_AUTHENTICATION, I.Step.AWAITING_PURCHASE_TOKEN_AUTH, I.Step.CONFIRM]);
 
-            function N(e) {
+            function L(e) {
                 let {
                     steps: t,
                     currentStep: n,
                     body: a,
-                    paymentError: N,
-                    header: L,
+                    paymentError: L,
+                    header: m,
                     footer: O,
-                    isGift: f = !1,
-                    giftMessage: M = R.default.Messages.PREMIUM_PAYMENT_IS_GIFT,
+                    isGift: M = !1,
+                    giftMessage: f = p.default.Messages.PREMIUM_PAYMENT_IS_GIFT,
                     isSeasonalGift: P = !1,
                     hideBreadcrumbs: U = !1,
                     isLoading: h = !1,
@@ -1277,17 +1091,17 @@
                     onScroll: G,
                     scrollerClassName: b,
                     hasCurrencies: y = !1
-                } = e, x = null;
-                null != N && null == (0, I.errorToStep)(N) ? x = N : null != g ? x = g : null != v && (x = v);
-                let B = null != x ? x.message : "";
-                null != x && x instanceof E.BillingError && (x.code === c.ErrorCodes.CARD_DECLINED && y && (B += " ".concat(R.default.Messages.BILLING_ERROR_TRY_ANOTHER)), x.code === c.ErrorCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (B = R.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT), x.code === p.AbortCodes.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (B = R.default.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID));
+                } = e, B = null;
+                null != L && null == (0, I.errorToStep)(L) ? B = L : null != g ? B = g : null != v && (B = v);
+                let x = null != B ? B.message : "";
+                null != B && B instanceof E.BillingError && (B.code === c.ErrorCodes.CARD_DECLINED && y && (x += " ".concat(p.default.Messages.BILLING_ERROR_TRY_ANOTHER)), B.code === c.ErrorCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (x = p.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT), B.code === R.AbortCodes.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (x = p.default.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID));
                 let {
                     stripe: H
                 } = (0, d.usePaymentContext)();
                 h = h || null == H;
-                let k = l.useRef(new o.Timeout);
+                let V = l.useRef(new o.Timeout);
                 l.useEffect(() => {
-                    let e = k.current;
+                    let e = V.current;
                     return null != H || e.isStarted() ? null != H && e.stop() : e.start(1e4, () => {
                         let e = Error("Stripe took too long to load");
                         (0, C.captureBillingException)(e)
@@ -1295,48 +1109,48 @@
                         e.stop()
                     }
                 }, [H]);
-                let V = t.includes(I.Step.PAYMENT_TYPE) ? I.Step.PAYMENT_TYPE : I.Step.ADD_PAYMENT_STEPS;
+                let k = t.includes(I.Step.PAYMENT_TYPE) ? I.Step.PAYMENT_TYPE : I.Step.ADD_PAYMENT_STEPS;
                 return (0, i.jsxs)(r.Elements, {
-                    options: p.StripeElementsOptions,
+                    options: R.StripeElementsOptions,
                     stripe: H,
-                    children: [L, (0, i.jsxs)("div", {
-                        className: s("paymentModalContent", m.content),
-                        children: [f && !P && n !== I.Step.CONFIRM ? (0, i.jsx)(_.default, {
-                            className: m.paymentNote,
+                    children: [m, (0, i.jsxs)("div", {
+                        className: s("paymentModalContent", A.content),
+                        children: [M && !P && n !== I.Step.CONFIRM ? (0, i.jsx)(_.default, {
+                            className: A.paymentNote,
                             iconSize: _.default.Sizes.SMALL,
                             icon: S.default,
-                            color: null == M ? _.default.Colors.PRIMARY : _.default.Colors.SECONDARY,
-                            children: M
+                            color: null == f ? _.default.Colors.PRIMARY : _.default.Colors.SECONDARY,
+                            children: f
                         }) : null, U ? null : (0, i.jsx)("div", {
-                            className: m.breadcrumbsWrapper,
+                            className: A.breadcrumbsWrapper,
                             children: (0, i.jsx)(T.default, {
-                                activeId: I.COLLAPSED_PAYMENT_BREADCRUMB_STEPS.has(n) ? V : n,
-                                breadcrumbs: t.filter(e => !I.COLLAPSED_PAYMENT_BREADCRUMB_STEPS.has(e) && !A.has(e)).map(e => ({
+                                activeId: I.COLLAPSED_PAYMENT_BREADCRUMB_STEPS.has(n) ? k : n,
+                                breadcrumbs: t.filter(e => !I.COLLAPSED_PAYMENT_BREADCRUMB_STEPS.has(e) && !N.has(e)).map(e => ({
                                     id: e,
                                     label: (0, I.getLabelForStep)(e)
                                 }))
                             })
                         }), (0, i.jsxs)("div", {
-                            className: m.bodyWrapper,
-                            children: [null == x ? null : (0, i.jsx)("div", {
-                                className: m.errorBlockWrapper,
+                            className: A.bodyWrapper,
+                            children: [null == B ? null : (0, i.jsx)("div", {
+                                className: A.errorBlockWrapper,
                                 children: (0, i.jsx)(u.FormErrorBlock, {
                                     ref: D,
-                                    children: B
+                                    children: x
                                 })
                             }), h ? (0, i.jsx)(u.Spinner, {
-                                className: m.loadingBlock
+                                className: A.loadingBlock
                             }) : (0, i.jsx)(u.Sequencer, {
-                                className: m.sequencer,
-                                staticClassName: m.sequencerStatic,
-                                animatedNodeClassName: m.sequencerAnimatedNode,
+                                className: A.sequencer,
+                                staticClassName: A.sequencerStatic,
+                                animatedNodeClassName: A.sequencerAnimatedNode,
                                 fillParent: !0,
                                 step: n,
                                 steps: t,
                                 sideMargin: 20,
                                 children: (0, i.jsx)(u.AdvancedScrollerThin, {
                                     onScroll: G,
-                                    className: s(m.scroller, b),
+                                    className: s(A.scroller, b),
                                     children: a
                                 })
                             })]
@@ -1419,15 +1233,15 @@
                 T = n("552917"),
                 S = n("843647"),
                 C = n("154889"),
-                p = n("917247"),
-                R = n("956597"),
-                m = n("635956"),
-                A = n("273619"),
-                N = n("674158"),
-                L = n("915639"),
+                R = n("917247"),
+                p = n("956597"),
+                A = n("635956"),
+                N = n("273619"),
+                L = n("674158"),
+                m = n("915639"),
                 O = n("357957"),
-                f = n("326880"),
-                M = n("46829"),
+                M = n("326880"),
+                f = n("46829"),
                 P = n("595086"),
                 U = n("719923"),
                 h = n("153160"),
@@ -1440,19 +1254,19 @@
                     locale: t
                 } = e;
                 return (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(N.default, {
+                    children: [(0, i.jsx)(L.default, {
                         icon: P.default,
                         iconClassName: G.iconColorPurple,
                         description: v.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_CUSTOM
-                    }), (0, i.jsx)(N.default, {
-                        icon: f.default,
+                    }), (0, i.jsx)(L.default, {
+                        icon: M.default,
                         iconClassName: G.iconColorPink,
                         description: v.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_GUILD_SUBSCRIPTION.format({
                             numGuildSubscriptions: D.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
                             discountPercent: (0, h.formatPercent)(t, D.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
                         })
-                    }), (0, i.jsx)(N.default, {
-                        icon: M.default,
+                    }), (0, i.jsx)(L.default, {
+                        icon: f.default,
                         iconClassName: G.iconColorYellow,
                         description: v.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_PREMIUM_SUBSCRIPTION
                     })]
@@ -1461,18 +1275,18 @@
 
             function y() {
                 return (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(N.default, {
+                    children: [(0, i.jsx)(L.default, {
                         icon: P.default,
                         iconClassName: G.iconColorPurple,
                         description: v.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_CUSTOM
-                    }), (0, i.jsx)(N.default, {
-                        icon: M.default,
+                    }), (0, i.jsx)(L.default, {
+                        icon: f.default,
                         iconClassName: G.iconColorYellow,
                         description: v.default.Messages.STICKER_PREMIUM_TIER_0_UPSELL_PERK_PREMIUM_SUBSCRIPTION
                     })]
                 })
             }
-            let x = e => {
+            let B = e => {
                     let {
                         trialOffer: t,
                         discountOffer: l,
@@ -1480,13 +1294,13 @@
                         isLoading: u,
                         price: _,
                         onClose: E
-                    } = e, c = (0, s.useStateFromStores)([L.default], () => L.default.locale), d = null != t || null != l;
+                    } = e, c = (0, s.useStateFromStores)([m.default], () => m.default.locale), d = null != t || null != l;
                     return (0, i.jsxs)("div", {
                         className: G.wrapper,
                         children: [(0, i.jsx)(o.ModalCloseButton, {
                             onClick: E,
                             className: G.closeButton
-                        }), d && (0, i.jsx)(R.PremiumTrialGradientBadge, {
+                        }), d && (0, i.jsx)(p.PremiumTrialGradientBadge, {
                             className: G.premiumTrialBadge
                         }), (0, i.jsx)("img", {
                             className: a(G.heroImage, {
@@ -1515,7 +1329,7 @@
                         })]
                     })
                 },
-                B = e => {
+                x = e => {
                     let {
                         trialOffer: t,
                         discountOffer: n,
@@ -1532,7 +1346,7 @@
                             color: o.Button.Colors.PRIMARY,
                             look: o.Button.Looks.LINK,
                             children: v.default.Messages.CLOSE
-                        }), (0, i.jsx)(m.default, {
+                        }), (0, i.jsx)(A.default, {
                             buttonText: null != t || null != n ? l ? v.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : v.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0,
                             premiumModalAnalyticsLocation: a,
                             subscriptionTier: l ? D.PremiumSubscriptionSKUs.TIER_0 : D.PremiumSubscriptionSKUs.TIER_2,
@@ -1549,11 +1363,11 @@
                 let {
                     onClose: t,
                     ...n
-                } = e, r = (0, c.useSubscriptionPlansLoaded)(), a = (0, s.useStateFromStores)([O.default], () => O.default.hasFetchedPaymentSources), R = r && a, m = (0, p.usePremiumTrialOffer)(), N = (0, C.usePremiumDiscountOffer)(), {
-                    isLoading: L,
-                    suggestedPremiumType: f
+                } = e, r = (0, c.useSubscriptionPlansLoaded)(), a = (0, s.useStateFromStores)([O.default], () => O.default.hasFetchedPaymentSources), p = r && a, A = (0, R.usePremiumTrialOffer)(), L = (0, C.usePremiumDiscountOffer)(), {
+                    isLoading: m,
+                    suggestedPremiumType: M
                 } = (0, S.default)({
-                    autoTrackExposure: R,
+                    autoTrackExposure: p,
                     experiment: T.default,
                     location: "stickers_upsell"
                 });
@@ -1562,8 +1376,8 @@
                         (0, _.fetchPaymentSources)(), (0, E.fetchPremiumSubscriptionPlans)(null, null, g.RevenueSurfaces.DISCOVERY)
                     })
                 }, []);
-                let M = f === D.PremiumTypes.TIER_0 && null == N,
-                    P = R ? U.default.getDefaultPrice(M ? D.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : D.SubscriptionPlans.PREMIUM_MONTH_TIER_2) : null;
+                let f = M === D.PremiumTypes.TIER_0 && null == L,
+                    P = p ? U.default.getDefaultPrice(f ? D.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : D.SubscriptionPlans.PREMIUM_MONTH_TIER_2) : null;
                 return (0, i.jsx)(d.PaymentContextProvider, {
                     activeSubscription: null,
                     stepConfigs: [],
@@ -1571,20 +1385,20 @@
                     children: (0, i.jsx)(o.ModalRoot, {
                         ...n,
                         "aria-labelledby": "sticker-pack-premium-upsell-modal-header",
-                        children: (0, i.jsx)(A.default, {
+                        children: (0, i.jsx)(N.default, {
                             hideBreadcrumbs: !0,
-                            body: (0, i.jsx)(x, {
-                                trialOffer: m,
-                                discountOffer: N,
-                                isTier0Upsell: M,
-                                isLoading: !R || L,
+                            body: (0, i.jsx)(B, {
+                                trialOffer: A,
+                                discountOffer: L,
+                                isTier0Upsell: f,
+                                isLoading: !p || m,
                                 price: P,
                                 onClose: t
                             }),
-                            footer: (0, i.jsx)(B, {
-                                trialOffer: m,
-                                discountOffer: N,
-                                isTier0Upsell: M,
+                            footer: (0, i.jsx)(x, {
+                                trialOffer: A,
+                                discountOffer: L,
+                                isTier0Upsell: f,
                                 onClose: t
                             }),
                             steps: [I.Step.PREMIUM_UPSELL],
@@ -1695,19 +1509,19 @@
                 T = null,
                 S = null,
                 C = !1,
-                p = !1,
-                R = null,
-                m = null,
+                R = !1,
+                p = null,
                 A = null,
-                N = [],
-                L = null,
+                N = null,
+                L = [],
+                m = null,
                 O = null;
 
-            function f(e) {
+            function M(e) {
                 var t, n, i, l, r, a;
                 let _ = s.default.getCurrentUser();
-                if (null == _) return M();
-                E = null !== (t = e.section) && void 0 !== t ? t : E, L = null !== (n = e.section) && void 0 !== n ? n : E, null != e.subsection && null != E && (c[E] = e.subsection), null != e.scrollPosition && null != E && (d[E] = e.scrollPosition), p = !!e.openWithoutBackstack, u = o.FormStates.OPEN, I = {}, S = {
+                if (null == _) return f();
+                E = null !== (t = e.section) && void 0 !== t ? t : E, m = null !== (n = e.section) && void 0 !== n ? n : E, null != e.subsection && null != E && (c[E] = e.subsection), null != e.scrollPosition && null != E && (d[E] = e.scrollPosition), R = !!e.openWithoutBackstack, u = o.FormStates.OPEN, I = {}, S = {
                     ...T = {
                         [o.UserSettingsSections.ACCOUNT]: {
                             userId: _.id,
@@ -1720,11 +1534,11 @@
                             claimed: _.isClaimed()
                         }
                     }
-                }, m = null !== (i = e.onClose) && void 0 !== i ? i : null, A = null !== (l = e.analyticsLocation) && void 0 !== l ? l : null, N = null !== (r = e.analyticsLocations) && void 0 !== r ? r : [], O = null !== (a = e.impressionSource) && void 0 !== a ? a : null
+                }, A = null !== (i = e.onClose) && void 0 !== i ? i : null, N = null !== (l = e.analyticsLocation) && void 0 !== l ? l : null, L = null !== (r = e.analyticsLocations) && void 0 !== r ? r : [], O = null !== (a = e.impressionSource) && void 0 !== a ? a : null
             }
 
-            function M() {
-                u = o.FormStates.CLOSED, C = !1, T = null, L = null, S = null, _ = null, E = null, c = {}, d = {}, m = null, A = null, N = [], O = null
+            function f() {
+                u = o.FormStates.CLOSED, C = !1, T = null, m = null, S = null, _ = null, E = null, c = {}, d = {}, A = null, N = null, L = [], O = null
             }
 
             function P() {
@@ -1735,7 +1549,7 @@
                     this.waitFor(s.default)
                 }
                 hasChanges() {
-                    return null != S && null != T && (!!this.isOpen() || R === o.DrawerTabTypes.USER_SETTINGS) && !l.isEqual(S, T)
+                    return null != S && null != T && (!!this.isOpen() || p === o.DrawerTabTypes.USER_SETTINGS) && !l.isEqual(S, T)
                 }
                 isOpen() {
                     return C
@@ -1753,7 +1567,7 @@
                     return null != E ? d[E] : null
                 }
                 shouldOpenWithoutBackstack() {
-                    return p
+                    return R
                 }
                 getProps() {
                     return {
@@ -1764,25 +1578,25 @@
                         settings: S,
                         errors: I,
                         hasChanges: this.hasChanges(),
-                        openWithoutBackstack: p,
-                        analyticsLocation: A,
-                        analyticsLocations: N,
-                        initialSection: L,
+                        openWithoutBackstack: R,
+                        analyticsLocation: N,
+                        analyticsLocations: L,
+                        initialSection: m,
                         impressionSource: O
                     }
                 }
                 get onClose() {
-                    return m
+                    return A
                 }
             }
             U.displayName = "UserSettingsModalStore";
             var h = new U(a.default, {
                 USER_SETTINGS_MODAL_OPEN: function(e) {
-                    C = !0, f(e)
+                    C = !0, M(e)
                 },
-                USER_SETTINGS_MODAL_INIT: f,
-                USER_SETTINGS_MODAL_CLOSE: M,
-                LOGOUT: M,
+                USER_SETTINGS_MODAL_INIT: M,
+                USER_SETTINGS_MODAL_CLOSE: f,
+                LOGOUT: f,
                 USER_SETTINGS_MODAL_SUBMIT: function() {
                     u = o.FormStates.SUBMITTING
                 },
@@ -1793,7 +1607,7 @@
                 },
                 USER_SETTINGS_MODAL_SET_SECTION: function(e) {
                     var t;
-                    _ = E, E = e.section, A = null, N = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (c[E] = e.subsection)
+                    _ = E, E = e.section, N = null, L = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (c[E] = e.subsection)
                 },
                 USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function(e) {
                     let {
@@ -1837,7 +1651,7 @@
                     })
                 },
                 DRAWER_SELECT_TAB: function(e) {
-                    return R = e.tab, null == E && R === o.DrawerTabTypes.USER_SETTINGS && f({
+                    return p = e.tab, null == E && p === o.DrawerTabTypes.USER_SETTINGS && M({
                         type: "USER_SETTINGS_MODAL_INIT",
                         section: null,
                         subsection: null,
