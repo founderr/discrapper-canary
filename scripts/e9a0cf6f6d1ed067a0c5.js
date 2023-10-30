@@ -1903,7 +1903,7 @@
                     children: [(0, a.jsx)(E.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "241796"
+                        buildNumber: "241804"
                     }), (0, a.jsx)(m, {})]
                 }) : null
             }
@@ -46468,6 +46468,77 @@
                 if (null == e.id) throw new g.default(O.RPCErrors.INVALID_COMMAND, "Invalid application")
             }
         },
+        65810: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                activityInstanceConnectedParticipants: function() {
+                    return f
+                },
+                activityInstanceConnectedParticipantsScope: function() {
+                    return E
+                },
+                activityInstanceConnectedParticipantsUpdateEvent: function() {
+                    return _
+                },
+                subscribeToActivityInstanceConnectedParticipants: function() {
+                    return h
+                }
+            });
+            var a = n("917351"),
+                s = n.n(a),
+                l = n("913144"),
+                i = n("191225"),
+                r = n("697218"),
+                o = n("449008"),
+                u = n("387111"),
+                d = n("694352"),
+                c = n("49111");
+
+            function f() {
+                let e = i.default.getCurrentEmbeddedActivity();
+                if (null == e) return {
+                    participants: []
+                };
+                let {
+                    guildId: t,
+                    channelId: n
+                } = e, a = Array.from(e.connections.values(), e => {
+                    let {
+                        user_id: a
+                    } = e, s = r.default.getUser(a);
+                    if (null == s) return;
+                    let l = (0, u.getNickname)(t, n, s);
+                    return {
+                        ...(0, d.default)(s),
+                        nickname: null != l ? l : void 0
+                    }
+                }).filter(o.isNotNullish);
+                return {
+                    participants: a
+                }
+            }
+            let E = {
+                    [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE]
+                },
+                _ = {
+                    scope: E,
+                    handler: () => e => {
+                        let {
+                            prevState: t,
+                            dispatch: n
+                        } = e, a = f();
+                        return !s.isEqual(a, t) && n(a), a
+                    }
+                };
+
+            function h(e) {
+                let t = "EMBEDDED_ACTIVITY_INBOUND_UPDATE",
+                    n = () => {
+                        e(f())
+                    };
+                return l.default.subscribe(t, n), () => l.default.unsubscribe(t, n)
+            }
+        },
         716724: function(e, t, n) {
             "use strict";
 
@@ -46599,7 +46670,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return M
+                    return x
                 }
             });
             var a = n("917351"),
@@ -46624,11 +46695,12 @@
                 p = n("449008"),
                 A = n("773336"),
                 g = n("578287"),
-                R = n("694352"),
-                O = n("49111"),
-                L = n("954016"),
-                v = n("353927");
-            class M {
+                R = n("65810"),
+                O = n("694352"),
+                L = n("49111"),
+                v = n("954016"),
+                M = n("353927");
+            class x {
                 loadServer() {
                     for (let e of (A.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
                     let e = this.rpcCommandHandlers;
@@ -46642,7 +46714,7 @@
                             type: "RPC_APP_CONNECTED",
                             socketId: e.id,
                             application: e.application
-                        }), N.default.track(O.AnalyticEvents.AUTHORIZED_APP_CONNECTED, {
+                        }), N.default.track(L.AnalyticEvents.AUTHORIZED_APP_CONNECTED, {
                             app_id: e.application.id,
                             transport: e.transport
                         })
@@ -46656,7 +46728,7 @@
                     };
                     let e = [o.default, u.default, _.default, S.default, E.default, h.default],
                         t = new l.BatchedStoreListener(e.concat(this.stores), () => this.rpcServer.updateSubscriptions());
-                    t.attach("RPCServerManager"), i.default.subscribe("MESSAGE_CREATE", e => this.handleMessage(e)), i.default.subscribe("MESSAGE_UPDATE", e => this.handleMessage(e)), i.default.subscribe("MESSAGE_DELETE", e => this.handleMessage(e)), i.default.subscribe("SPEAKING", e => this.handleSpeaking(e)), i.default.subscribe("OAUTH2_TOKEN_REVOKE", e => this.handleOAuth2TokenRevoke(e)), i.default.subscribe("GUILD_CREATE", e => this.handleGuildCreate(e)), i.default.subscribe("CHANNEL_CREATE", e => this.handleChannelCreate(e)), i.default.subscribe("LOGOUT", () => this.handleLogout()), i.default.subscribe("VOICE_CHANNEL_SELECT", e => this.handleVoiceChannelSelect(e)), i.default.subscribe("RPC_NOTIFICATION_CREATE", e => this.handleNotificationCreate(e)), i.default.subscribe("ACTIVITY_JOIN", e => this.handleActivityJoin(e)), i.default.subscribe("ACTIVITY_LAYOUT_MODE_UPDATE", e => this.handleActivityLayoutModeUpdate(e)), i.default.subscribe("THERMAL_STATE_CHANGE", e => this.handleThermalStateChange(e)), i.default.subscribe("ACTIVITY_SCREEN_ORIENTATION_UPDATE", e => this.handleScreenOrientationUpdate(e)), i.default.subscribe("RELATIONSHIP_ADD", e => this.handleRelationshipAdd(e)), i.default.subscribe("RELATIONSHIP_REMOVE", e => this.handleRelationshipRemove(e)), i.default.subscribe("PRESENCE_UPDATES", e => this.handlePresenceUpdate(e)), i.default.subscribe("PRESENCES_REPLACE", () => this.handlePresencesReplace()), i.default.subscribe("LOBBY_UPDATE", e => this.handleLobbyUpdate(e)), i.default.subscribe("LOBBY_DELETE", e => this.handleLobbyDelete(e)), i.default.subscribe("LOBBY_MEMBER_CONNECT", e => this.handleLobbyMemberConnect(e)), i.default.subscribe("LOBBY_MEMBER_UPDATE", e => this.handleLobbyMemberUpdate(e)), i.default.subscribe("LOBBY_MEMBER_DISCONNECT", e => this.handleLobbyMemberDisconnect(e)), i.default.subscribe("LOBBY_MESSAGE", e => this.handleLobbyMessage(e)), i.default.subscribe("ENTITLEMENT_CREATE", e => this.handleEntitlementCreate(e)), i.default.subscribe("ENTITLEMENT_DELETE", e => this.handleEntitlementDelete(e)), i.default.subscribe("USER_ACHIEVEMENT_UPDATE", e => this.handleUserAchievementUpdate(e))
+                    t.attach("RPCServerManager"), i.default.subscribe("MESSAGE_CREATE", e => this.handleMessage(e)), i.default.subscribe("MESSAGE_UPDATE", e => this.handleMessage(e)), i.default.subscribe("MESSAGE_DELETE", e => this.handleMessage(e)), i.default.subscribe("SPEAKING", e => this.handleSpeaking(e)), i.default.subscribe("OAUTH2_TOKEN_REVOKE", e => this.handleOAuth2TokenRevoke(e)), i.default.subscribe("GUILD_CREATE", e => this.handleGuildCreate(e)), i.default.subscribe("CHANNEL_CREATE", e => this.handleChannelCreate(e)), i.default.subscribe("LOGOUT", () => this.handleLogout()), i.default.subscribe("VOICE_CHANNEL_SELECT", e => this.handleVoiceChannelSelect(e)), i.default.subscribe("RPC_NOTIFICATION_CREATE", e => this.handleNotificationCreate(e)), i.default.subscribe("ACTIVITY_JOIN", e => this.handleActivityJoin(e)), i.default.subscribe("ACTIVITY_LAYOUT_MODE_UPDATE", e => this.handleActivityLayoutModeUpdate(e)), i.default.subscribe("THERMAL_STATE_CHANGE", e => this.handleThermalStateChange(e)), i.default.subscribe("ACTIVITY_SCREEN_ORIENTATION_UPDATE", e => this.handleScreenOrientationUpdate(e)), (0, R.subscribeToActivityInstanceConnectedParticipants)(e => this.rpcServer.dispatchToSubscriptions(L.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), i.default.subscribe("RELATIONSHIP_ADD", e => this.handleRelationshipAdd(e)), i.default.subscribe("RELATIONSHIP_REMOVE", e => this.handleRelationshipRemove(e)), i.default.subscribe("PRESENCE_UPDATES", e => this.handlePresenceUpdate(e)), i.default.subscribe("PRESENCES_REPLACE", () => this.handlePresencesReplace()), i.default.subscribe("LOBBY_UPDATE", e => this.handleLobbyUpdate(e)), i.default.subscribe("LOBBY_DELETE", e => this.handleLobbyDelete(e)), i.default.subscribe("LOBBY_MEMBER_CONNECT", e => this.handleLobbyMemberConnect(e)), i.default.subscribe("LOBBY_MEMBER_UPDATE", e => this.handleLobbyMemberUpdate(e)), i.default.subscribe("LOBBY_MEMBER_DISCONNECT", e => this.handleLobbyMemberDisconnect(e)), i.default.subscribe("LOBBY_MESSAGE", e => this.handleLobbyMessage(e)), i.default.subscribe("ENTITLEMENT_CREATE", e => this.handleEntitlementCreate(e)), i.default.subscribe("ENTITLEMENT_DELETE", e => this.handleEntitlementDelete(e)), i.default.subscribe("USER_ACHIEVEMENT_UPDATE", e => this.handleUserAchievementUpdate(e))
                 }
                 handleMessage(e) {
                     let t, n, a;
@@ -46666,13 +46738,13 @@
                     switch (e.type) {
                         case "MESSAGE_CREATE":
                             if ("SENDING" === e.message.state) return;
-                            t = O.RPCEvents.MESSAGE_CREATE, n = e.channelId, a = e.message, s = "".concat(t).concat(e.message.id);
+                            t = L.RPCEvents.MESSAGE_CREATE, n = e.channelId, a = e.message, s = "".concat(t).concat(e.message.id);
                             break;
                         case "MESSAGE_UPDATE":
-                            t = O.RPCEvents.MESSAGE_UPDATE, n = e.message.channel_id, a = e.message;
+                            t = L.RPCEvents.MESSAGE_UPDATE, n = e.message.channel_id, a = e.message;
                             break;
                         case "MESSAGE_DELETE":
-                            t = O.RPCEvents.MESSAGE_DELETE, n = e.channelId, a = {
+                            t = L.RPCEvents.MESSAGE_DELETE, n = e.channelId, a = {
                                 id: e.id
                             }, s = "".concat(t).concat(e.id);
                             break;
@@ -46688,8 +46760,8 @@
                 }
                 handleSpeaking(e) {
                     if (0 === this.rpcServer.subscriptions.length) return;
-                    let t = 0 !== e.speakingFlags ? O.RPCEvents.SPEAKING_START : O.RPCEvents.SPEAKING_STOP;
-                    if (e.context === v.MediaEngineContextTypes.DEFAULT) {
+                    let t = 0 !== e.speakingFlags ? L.RPCEvents.SPEAKING_START : L.RPCEvents.SPEAKING_STOP;
+                    if (e.context === M.MediaEngineContextTypes.DEFAULT) {
                         let n = C.default.getVoiceChannelId();
                         if (null != n) {
                             let a = o.default.getChannel(n);
@@ -46716,7 +46788,7 @@
                         guildId: t,
                         channelId: n
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(O.RPCEvents.VOICE_CHANNEL_SELECT, {}, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(L.RPCEvents.VOICE_CHANNEL_SELECT, {}, {
                         channel_id: n,
                         guild_id: t
                     })
@@ -46729,7 +46801,7 @@
                         title: s,
                         body: l
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(O.RPCEvents.NOTIFICATION_CREATE, {}, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(L.RPCEvents.NOTIFICATION_CREATE, {}, {
                         channel_id: t,
                         message: (0, g.transformInternalTextMessage)(n),
                         icon_url: null != a ? (0, g.getRemoteIconURL)(a) : null,
@@ -46748,7 +46820,7 @@
                     let l = {
                         secret: n
                     };
-                    s && (l.intent = a), this.rpcServer.dispatchToSubscriptions(O.RPCEvents.ACTIVITY_JOIN, e => e.socket.application.id === t, l), this.rpcServer.dispatchToSubscriptions(O.RPCEvents.GAME_JOIN, e => e.socket.application.id === t, l)
+                    s && (l.intent = a), this.rpcServer.dispatchToSubscriptions(L.RPCEvents.ACTIVITY_JOIN, e => e.socket.application.id === t, l), this.rpcServer.dispatchToSubscriptions(L.RPCEvents.GAME_JOIN, e => e.socket.application.id === t, l)
                 }
                 handleActivityLayoutModeUpdate(e) {
                     let {
@@ -46756,11 +46828,11 @@
                         layoutMode: n
                     } = e;
                     if (0 === this.rpcServer.subscriptions.length) return;
-                    let a = n !== L.ActivityLayoutMode.FOCUSED;
-                    this.rpcServer.dispatchToSubscriptions(O.RPCEvents.ACTIVITY_PIP_MODE_UPDATE, e => e.socket.application.id === t, {
+                    let a = n !== v.ActivityLayoutMode.FOCUSED;
+                    this.rpcServer.dispatchToSubscriptions(L.RPCEvents.ACTIVITY_PIP_MODE_UPDATE, e => e.socket.application.id === t, {
                         is_pip_mode: a
                     });
-                    this.rpcServer.dispatchToSubscriptions(O.RPCEvents.ACTIVITY_LAYOUT_MODE_UPDATE, e => e.socket.application.id === t, {
+                    this.rpcServer.dispatchToSubscriptions(L.RPCEvents.ACTIVITY_LAYOUT_MODE_UPDATE, e => e.socket.application.id === t, {
                         layout_mode: n
                     })
                 }
@@ -46773,15 +46845,15 @@
                     let a = {
                         thermal_state: (0, r.default)(n)
                     };
-                    this.rpcServer.dispatchToSubscriptions(O.RPCEvents.THERMAL_STATE_UPDATE, e => e.socket.application.id === t, a)
+                    this.rpcServer.dispatchToSubscriptions(L.RPCEvents.THERMAL_STATE_UPDATE, e => e.socket.application.id === t, a)
                 }
                 handleScreenOrientationUpdate(e) {
                     let {
                         screenOrientation: t
                     } = e;
                     if (0 === this.rpcServer.subscriptions.length) return;
-                    let n = t === L.ActivityScreenOrientation.PORTRAIT ? "portrait" : "landscape";
-                    this.rpcServer.dispatchToSubscriptions(O.RPCEvents.ORIENTATION_UPDATE, {}, {
+                    let n = t === v.ActivityScreenOrientation.PORTRAIT ? "portrait" : "landscape";
+                    this.rpcServer.dispatchToSubscriptions(L.RPCEvents.ORIENTATION_UPDATE, {}, {
                         screen_orientation: t,
                         orientation: n
                     })
@@ -46802,22 +46874,22 @@
                     if (null == i) return;
                     let r = T.default.getCurrentUser();
                     if (null == r || i.id === r.id) return;
-                    let o = l.type === O.ActivityActionTypes.JOIN_REQUEST ? _.default.getApplicationActivity(r.id, s.id) : _.default.getApplicationActivity(i.id, s.id);
+                    let o = l.type === L.ActivityActionTypes.JOIN_REQUEST ? _.default.getApplicationActivity(r.id, s.id) : _.default.getApplicationActivity(i.id, s.id);
                     if (null == o || null == o.party || o.party.id !== l.party_id) return;
                     let u = o.application_id;
                     switch (l.type) {
-                        case O.ActivityActionTypes.JOIN:
-                            this.rpcServer.dispatchToSubscriptions(O.RPCEvents.ACTIVITY_INVITE, e => e.socket.application.id === u, {
-                                user: (0, R.default)(i),
+                        case L.ActivityActionTypes.JOIN:
+                            this.rpcServer.dispatchToSubscriptions(L.RPCEvents.ACTIVITY_INVITE, e => e.socket.application.id === u, {
+                                user: (0, O.default)(i),
                                 activity: o,
                                 type: l.type,
                                 channel_id: n,
                                 message_id: a.id
                             });
                             break;
-                        case O.ActivityActionTypes.JOIN_REQUEST:
-                            this.rpcServer.dispatchToSubscriptions(O.RPCEvents.ACTIVITY_JOIN_REQUEST, e => e.socket.application.id === u, {
-                                user: (0, R.default)(i)
+                        case L.ActivityActionTypes.JOIN_REQUEST:
+                            this.rpcServer.dispatchToSubscriptions(L.RPCEvents.ACTIVITY_JOIN_REQUEST, e => e.socket.application.id === u, {
+                                user: (0, O.default)(i)
                             })
                     }
                 }
@@ -46826,7 +46898,7 @@
                         accessToken: t
                     } = e;
                     this.rpcServer.sockets.forEach(e => {
-                        e.authorization.accessToken === t && e.close(O.RPCCloseCodes.TOKEN_REVOKED, "Token revoked")
+                        e.authorization.accessToken === t && e.close(L.RPCCloseCodes.TOKEN_REVOKED, "Token revoked")
                     })
                 }
                 handleGuildCreate(e) {
@@ -46835,7 +46907,7 @@
                             id: t
                         }
                     } = e, n = d.default.getGuild(t);
-                    0 !== this.rpcServer.subscriptions.length && null != n && this.rpcServer.dispatchToSubscriptions(O.RPCEvents.GUILD_CREATE, {}, {
+                    0 !== this.rpcServer.subscriptions.length && null != n && this.rpcServer.dispatchToSubscriptions(L.RPCEvents.GUILD_CREATE, {}, {
                         id: t,
                         name: n.name
                     })
@@ -46848,14 +46920,14 @@
                             type: a
                         }
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(O.RPCEvents.CHANNEL_CREATE, {}, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(L.RPCEvents.CHANNEL_CREATE, {}, {
                         id: t,
                         name: n,
                         type: a
                     })
                 }
                 handleLogout() {
-                    this.rpcServer.sockets.forEach(e => e.close(O.RPCCloseCodes.CLOSE_NORMAL, "User logout"))
+                    this.rpcServer.sockets.forEach(e => e.close(L.RPCCloseCodes.CLOSE_NORMAL, "User logout"))
                 }
                 handleRelationshipAdd(e) {
                     let {
@@ -46864,7 +46936,7 @@
                             type: n
                         }
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(O.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, g.transformRelationship)(n, t))
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(L.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, g.transformRelationship)(n, t))
                 }
                 handleRelationshipRemove(e) {
                     let {
@@ -46872,7 +46944,7 @@
                             id: t
                         }
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(O.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, g.transformRelationship)(O.RelationshipTypes.NONE, t))
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(L.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, g.transformRelationship)(L.RelationshipTypes.NONE, t))
                 }
                 handlePresenceUpdate(e) {
                     let {
@@ -46887,25 +46959,25 @@
                         } = e;
                         if (null != t) return;
                         let a = I.default.getRelationshipType(n);
-                        a === O.RelationshipTypes.NONE && m.default.getUserAffinitiesUserIds().has(n) && (a = O.RelationshipTypes.IMPLICIT), a !== O.RelationshipTypes.NONE && this.rpcServer.dispatchToSubscriptions(O.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, g.transformRelationship)(a, n))
+                        a === L.RelationshipTypes.NONE && m.default.getUserAffinitiesUserIds().has(n) && (a = L.RelationshipTypes.IMPLICIT), a !== L.RelationshipTypes.NONE && this.rpcServer.dispatchToSubscriptions(L.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, g.transformRelationship)(a, n))
                     })
                 }
                 handlePresencesReplace() {
                     0 !== this.rpcServer.subscriptions.length && s.forEach(I.default.getRelationships(), (e, t) => {
-                        this.rpcServer.dispatchToSubscriptions(O.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, g.transformRelationship)(e, t))
+                        this.rpcServer.dispatchToSubscriptions(L.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, g.transformRelationship)(e, t))
                     })
                 }
                 handleLobbyUpdate(e) {
                     let {
                         lobby: t
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(O.RPCEvents.LOBBY_UPDATE, {}, t)
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(L.RPCEvents.LOBBY_UPDATE, {}, t)
                 }
                 handleLobbyDelete(e) {
                     let {
                         lobbyId: t
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(O.RPCEvents.LOBBY_DELETE, {}, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(L.RPCEvents.LOBBY_DELETE, {}, {
                         id: t
                     })
                 }
@@ -46914,7 +46986,7 @@
                         lobbyId: t,
                         member: n
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(O.RPCEvents.LOBBY_MEMBER_CONNECT, {}, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(L.RPCEvents.LOBBY_MEMBER_CONNECT, {}, {
                         lobby_id: t,
                         member: n
                     })
@@ -46924,7 +46996,7 @@
                         lobbyId: t,
                         member: n
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(O.RPCEvents.LOBBY_MEMBER_UPDATE, {}, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(L.RPCEvents.LOBBY_MEMBER_UPDATE, {}, {
                         lobby_id: t,
                         member: n
                     })
@@ -46934,7 +47006,7 @@
                         lobbyId: t,
                         member: n
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(O.RPCEvents.LOBBY_MEMBER_DISCONNECT, {}, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(L.RPCEvents.LOBBY_MEMBER_DISCONNECT, {}, {
                         lobby_id: t,
                         member: n
                     })
@@ -46945,7 +47017,7 @@
                         senderId: n,
                         data: a
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(O.RPCEvents.LOBBY_MESSAGE, {}, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(L.RPCEvents.LOBBY_MESSAGE, {}, {
                         lobby_id: t,
                         sender_id: n,
                         data: a
@@ -46955,7 +47027,7 @@
                     let {
                         entitlement: t
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(O.RPCEvents.ENTITLEMENT_CREATE, e => e.socket.application.id === t.application_id, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(L.RPCEvents.ENTITLEMENT_CREATE, e => e.socket.application.id === t.application_id, {
                         entitlement: t
                     })
                 }
@@ -46963,7 +47035,7 @@
                     let {
                         entitlement: t
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(O.RPCEvents.ENTITLEMENT_DELETE, e => e.socket.application.id === t.application_id, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(L.RPCEvents.ENTITLEMENT_DELETE, e => e.socket.application.id === t.application_id, {
                         entitlement: t
                     })
                 }
@@ -46975,7 +47047,7 @@
                     let {
                         application_id: n
                     } = t;
-                    this.rpcServer.dispatchToSubscriptions(O.RPCEvents.USER_ACHIEVEMENT_UPDATE, e => e.socket.application.id === n, {
+                    this.rpcServer.dispatchToSubscriptions(L.RPCEvents.USER_ACHIEVEMENT_UPDATE, e => e.socket.application.id === n, {
                         user_achievement: t
                     })
                 }
@@ -48682,7 +48754,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return R
                 }
             });
             var a = n("917351"),
@@ -48700,11 +48772,12 @@
                 h = n("800762"),
                 I = n("861309"),
                 C = n("578287"),
-                m = n("961400"),
-                T = n("694352"),
-                S = n("49111");
+                m = n("65810"),
+                T = n("961400"),
+                S = n("694352"),
+                N = n("49111");
 
-            function N(e) {
+            function p(e) {
                 var t;
                 let {
                     args: {
@@ -48712,11 +48785,11 @@
                     },
                     socket: a
                 } = e, s = r.default.getChannel(n);
-                if (null == s || !(0, C.hasMessageReadPermission)(s, a.application.id, a.authorization.scopes)) throw new I.default(S.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(n));
-                if (s.isNSFW() && (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new I.default(S.RPCErrors.INVALID_CHANNEL, "Invalid nsfw channel id: ".concat(s.id))
+                if (null == s || !(0, C.hasMessageReadPermission)(s, a.application.id, a.authorization.scopes)) throw new I.default(N.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(n));
+                if (s.isNSFW() && (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new I.default(N.RPCErrors.INVALID_CHANNEL, "Invalid nsfw channel id: ".concat(s.id))
             }
 
-            function p(e) {
+            function A(e) {
                 let {
                     args: {
                         lobby_id: t,
@@ -48725,23 +48798,23 @@
                 } = e;
                 if (null != n) {
                     let e = r.default.getChannel(n);
-                    if (null == e) throw new I.default(S.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(n))
+                    if (null == e) throw new I.default(N.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(n))
                 }
                 if (null != t) {
                     let e = d.default.getLobby(t);
-                    if (null == e) throw new I.default(S.RPCErrors.INVALID_LOBBY, "Invalid lobby id: ".concat(t))
+                    if (null == e) throw new I.default(N.RPCErrors.INVALID_LOBBY, "Invalid lobby id: ".concat(t))
                 }
             }
-            let A = {
-                [S.RPCEvents.GUILD_STATUS]: {
-                    scope: S.OAuth2Scopes.RPC,
+            let g = {
+                [N.RPCEvents.GUILD_STATUS]: {
+                    scope: N.OAuth2Scopes.RPC,
                     handler(e) {
                         let {
                             args: {
                                 guild_id: t
                             }
                         } = e;
-                        if (null == u.default.getGuild(t)) throw new I.default(S.RPCErrors.INVALID_GUILD, "Invalid guild id: ".concat(t));
+                        if (null == u.default.getGuild(t)) throw new I.default(N.RPCErrors.INVALID_GUILD, "Invalid guild id: ".concat(t));
                         return e => {
                             var n;
                             let {
@@ -48761,9 +48834,9 @@
                         }
                     }
                 },
-                [S.RPCEvents.VOICE_STATE_CREATE]: {
+                [N.RPCEvents.VOICE_STATE_CREATE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.OAuth2Scopes.RPC, S.OAuth2Scopes.RPC_VOICE_READ]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.OAuth2Scopes.RPC, N.OAuth2Scopes.RPC_VOICE_READ]
                     },
                     handler(e) {
                         let {
@@ -48771,7 +48844,7 @@
                                 channel_id: t
                             }
                         } = e;
-                        if (null == r.default.getChannel(t)) throw new I.default(S.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(t));
+                        if (null == r.default.getChannel(t)) throw new I.default(N.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(t));
                         return e => {
                             let {
                                 prevState: n,
@@ -48793,9 +48866,9 @@
                         }
                     }
                 },
-                [S.RPCEvents.VOICE_STATE_DELETE]: {
+                [N.RPCEvents.VOICE_STATE_DELETE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.OAuth2Scopes.RPC, S.OAuth2Scopes.RPC_VOICE_READ]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.OAuth2Scopes.RPC, N.OAuth2Scopes.RPC_VOICE_READ]
                     },
                     handler(e) {
                         let {
@@ -48803,7 +48876,7 @@
                                 channel_id: t
                             }
                         } = e;
-                        if (null == r.default.getChannel(t)) throw new I.default(S.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(t));
+                        if (null == r.default.getChannel(t)) throw new I.default(N.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(t));
                         return e => {
                             let {
                                 prevState: n,
@@ -48822,9 +48895,9 @@
                         }
                     }
                 },
-                [S.RPCEvents.VOICE_STATE_UPDATE]: {
+                [N.RPCEvents.VOICE_STATE_UPDATE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.OAuth2Scopes.RPC, S.OAuth2Scopes.RPC_VOICE_READ]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.OAuth2Scopes.RPC, N.OAuth2Scopes.RPC_VOICE_READ]
                     },
                     handler(e) {
                         let {
@@ -48832,7 +48905,7 @@
                                 channel_id: t
                             }
                         } = e;
-                        if (null == r.default.getChannel(t)) throw new I.default(S.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(t));
+                        if (null == r.default.getChannel(t)) throw new I.default(N.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(t));
                         return e => {
                             let {
                                 prevState: n,
@@ -48846,9 +48919,9 @@
                         }
                     }
                 },
-                [S.RPCEvents.VOICE_CONNECTION_STATUS]: {
+                [N.RPCEvents.VOICE_CONNECTION_STATUS]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.OAuth2Scopes.RPC, S.OAuth2Scopes.RPC_VOICE_READ]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.OAuth2Scopes.RPC, N.OAuth2Scopes.RPC_VOICE_READ]
                     },
                     handler: () => e => {
                         let {
@@ -48864,111 +48937,112 @@
                         return !s.isEqual(a, t) && n(a), a
                     }
                 },
-                [S.RPCEvents.MESSAGE_CREATE]: {
-                    scope: S.OAuth2Scopes.RPC,
-                    handler: N
-                },
-                [S.RPCEvents.MESSAGE_UPDATE]: {
-                    scope: S.OAuth2Scopes.RPC,
-                    handler: N
-                },
-                [S.RPCEvents.MESSAGE_DELETE]: {
-                    scope: S.OAuth2Scopes.RPC,
-                    handler: N
-                },
-                [S.RPCEvents.SPEAKING_START]: {
-                    [S.RPC_SCOPE_CONFIG.ANY]: [S.OAuth2Scopes.RPC, S.OAuth2Scopes.RPC_VOICE_READ, S.RPC_LOCAL_SCOPE],
+                [N.RPCEvents.MESSAGE_CREATE]: {
+                    scope: N.OAuth2Scopes.RPC,
                     handler: p
                 },
-                [S.RPCEvents.SPEAKING_STOP]: {
-                    [S.RPC_SCOPE_CONFIG.ANY]: [S.OAuth2Scopes.RPC, S.OAuth2Scopes.RPC_VOICE_READ, S.RPC_LOCAL_SCOPE],
+                [N.RPCEvents.MESSAGE_UPDATE]: {
+                    scope: N.OAuth2Scopes.RPC,
                     handler: p
                 },
-                [S.RPCEvents.GUILD_CREATE]: {
-                    scope: S.OAuth2Scopes.RPC,
+                [N.RPCEvents.MESSAGE_DELETE]: {
+                    scope: N.OAuth2Scopes.RPC,
+                    handler: p
+                },
+                [N.RPCEvents.SPEAKING_START]: {
+                    [N.RPC_SCOPE_CONFIG.ANY]: [N.OAuth2Scopes.RPC, N.OAuth2Scopes.RPC_VOICE_READ, N.RPC_LOCAL_SCOPE],
+                    handler: A
+                },
+                [N.RPCEvents.SPEAKING_STOP]: {
+                    [N.RPC_SCOPE_CONFIG.ANY]: [N.OAuth2Scopes.RPC, N.OAuth2Scopes.RPC_VOICE_READ, N.RPC_LOCAL_SCOPE],
+                    handler: A
+                },
+                [N.RPCEvents.GUILD_CREATE]: {
+                    scope: N.OAuth2Scopes.RPC,
                     handler() {}
                 },
-                [S.RPCEvents.CHANNEL_CREATE]: {
-                    scope: S.OAuth2Scopes.RPC,
+                [N.RPCEvents.CHANNEL_CREATE]: {
+                    scope: N.OAuth2Scopes.RPC,
                     handler() {}
                 },
-                [S.RPCEvents.GAME_JOIN]: {
+                [N.RPCEvents.GAME_JOIN]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.OAuth2Scopes.RPC, S.RPC_LOCAL_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.OAuth2Scopes.RPC, N.RPC_LOCAL_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.GAME_SPECTATE]: {
+                [N.RPCEvents.GAME_SPECTATE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.OAuth2Scopes.RPC, S.RPC_LOCAL_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.OAuth2Scopes.RPC, N.RPC_LOCAL_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.ACTIVITY_JOIN]: {
+                [N.RPCEvents.ACTIVITY_JOIN]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.OAuth2Scopes.RPC, S.RPC_AUTHENTICATED_SCOPE, S.RPC_LOCAL_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.OAuth2Scopes.RPC, N.RPC_AUTHENTICATED_SCOPE, N.RPC_LOCAL_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.ACTIVITY_JOIN_REQUEST]: {
+                [N.RPCEvents.ACTIVITY_JOIN_REQUEST]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.OAuth2Scopes.RPC, S.RPC_LOCAL_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.OAuth2Scopes.RPC, N.RPC_LOCAL_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.ACTIVITY_SPECTATE]: {
+                [N.RPCEvents.ACTIVITY_SPECTATE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.OAuth2Scopes.RPC, S.RPC_AUTHENTICATED_SCOPE, S.RPC_LOCAL_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.OAuth2Scopes.RPC, N.RPC_AUTHENTICATED_SCOPE, N.RPC_LOCAL_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.ACTIVITY_INVITE]: {
+                [N.RPCEvents.ACTIVITY_INVITE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.OAuth2Scopes.RPC, S.RPC_LOCAL_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.OAuth2Scopes.RPC, N.RPC_LOCAL_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.ACTIVITY_PIP_MODE_UPDATE]: {
+                [N.RPCEvents.ACTIVITY_PIP_MODE_UPDATE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.OAuth2Scopes.RPC, S.RPC_AUTHENTICATED_SCOPE, S.RPC_LOCAL_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.OAuth2Scopes.RPC, N.RPC_AUTHENTICATED_SCOPE, N.RPC_LOCAL_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.ACTIVITY_LAYOUT_MODE_UPDATE]: {
+                [N.RPCEvents.ACTIVITY_LAYOUT_MODE_UPDATE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.OAuth2Scopes.RPC, S.RPC_AUTHENTICATED_SCOPE, S.RPC_LOCAL_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.OAuth2Scopes.RPC, N.RPC_AUTHENTICATED_SCOPE, N.RPC_LOCAL_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.THERMAL_STATE_UPDATE]: {
+                [N.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: m.activityInstanceConnectedParticipantsUpdateEvent,
+                [N.RPCEvents.THERMAL_STATE_UPDATE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.RPC_AUTHENTICATED_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.RPC_AUTHENTICATED_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.ORIENTATION_UPDATE]: {
+                [N.RPCEvents.ORIENTATION_UPDATE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.RPC_AUTHENTICATED_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.RPC_AUTHENTICATED_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.VOICE_CHANNEL_SELECT]: {
-                    scope: S.OAuth2Scopes.RPC,
+                [N.RPCEvents.VOICE_CHANNEL_SELECT]: {
+                    scope: N.OAuth2Scopes.RPC,
                     handler() {}
                 },
-                [S.RPCEvents.NOTIFICATION_CREATE]: {
+                [N.RPCEvents.NOTIFICATION_CREATE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ALL]: [S.OAuth2Scopes.RPC, S.OAuth2Scopes.RPC_NOTIFICATIONS_READ]
+                        [N.RPC_SCOPE_CONFIG.ALL]: [N.OAuth2Scopes.RPC, N.OAuth2Scopes.RPC_NOTIFICATIONS_READ]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.RELATIONSHIP_UPDATE]: {
-                    scope: S.RPC_LOCAL_SCOPE,
+                [N.RPCEvents.RELATIONSHIP_UPDATE]: {
+                    scope: N.RPC_LOCAL_SCOPE,
                     handler() {}
                 },
-                [S.RPCEvents.CURRENT_USER_UPDATE]: {
+                [N.RPCEvents.CURRENT_USER_UPDATE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.RPC_LOCAL_SCOPE, S.OAuth2Scopes.IDENTIFY]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.RPC_LOCAL_SCOPE, N.OAuth2Scopes.IDENTIFY]
                     },
                     handler: () => e => {
                         let {
@@ -48977,71 +49051,71 @@
                         } = e, a = {
                             currentUser: _.default.getCurrentUser()
                         };
-                        return null != a.currentUser && (null == t || !(0, l.default)(a, t)) && n((0, T.default)(a.currentUser)), a
+                        return null != a.currentUser && (null == t || !(0, l.default)(a, t)) && n((0, S.default)(a.currentUser)), a
                     }
                 },
-                [S.RPCEvents.LOBBY_UPDATE]: {
+                [N.RPCEvents.LOBBY_UPDATE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.RPC_AUTHENTICATED_SCOPE, S.RPC_LOCAL_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.RPC_AUTHENTICATED_SCOPE, N.RPC_LOCAL_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.LOBBY_DELETE]: {
+                [N.RPCEvents.LOBBY_DELETE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.RPC_AUTHENTICATED_SCOPE, S.RPC_LOCAL_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.RPC_AUTHENTICATED_SCOPE, N.RPC_LOCAL_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.LOBBY_MEMBER_CONNECT]: {
+                [N.RPCEvents.LOBBY_MEMBER_CONNECT]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.RPC_AUTHENTICATED_SCOPE, S.RPC_LOCAL_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.RPC_AUTHENTICATED_SCOPE, N.RPC_LOCAL_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.LOBBY_MEMBER_UPDATE]: {
+                [N.RPCEvents.LOBBY_MEMBER_UPDATE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.RPC_AUTHENTICATED_SCOPE, S.RPC_LOCAL_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.RPC_AUTHENTICATED_SCOPE, N.RPC_LOCAL_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.LOBBY_MEMBER_DISCONNECT]: {
+                [N.RPCEvents.LOBBY_MEMBER_DISCONNECT]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.RPC_AUTHENTICATED_SCOPE, S.RPC_LOCAL_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.RPC_AUTHENTICATED_SCOPE, N.RPC_LOCAL_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.LOBBY_MESSAGE]: {
+                [N.RPCEvents.LOBBY_MESSAGE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.RPC_AUTHENTICATED_SCOPE, S.RPC_LOCAL_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.RPC_AUTHENTICATED_SCOPE, N.RPC_LOCAL_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.ENTITLEMENT_CREATE]: {
+                [N.RPCEvents.ENTITLEMENT_CREATE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.RPC_LOCAL_SCOPE, S.RPC_AUTHENTICATED_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.RPC_LOCAL_SCOPE, N.RPC_AUTHENTICATED_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.ENTITLEMENT_DELETE]: {
+                [N.RPCEvents.ENTITLEMENT_DELETE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ANY]: [S.RPC_LOCAL_SCOPE, S.RPC_AUTHENTICATED_SCOPE]
+                        [N.RPC_SCOPE_CONFIG.ANY]: [N.RPC_LOCAL_SCOPE, N.RPC_AUTHENTICATED_SCOPE]
                     },
                     handler() {}
                 },
-                [S.RPCEvents.USER_ACHIEVEMENT_UPDATE]: {
-                    scope: S.RPC_LOCAL_SCOPE,
+                [N.RPCEvents.USER_ACHIEVEMENT_UPDATE]: {
+                    scope: N.RPC_LOCAL_SCOPE,
                     handler() {}
                 },
-                [S.RPCEvents.SCREENSHARE_STATE_UPDATE]: {
+                [N.RPCEvents.SCREENSHARE_STATE_UPDATE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ALL]: [S.RPC_LOCAL_SCOPE, S.OAuth2Scopes.RPC_SCREENSHARE_READ]
+                        [N.RPC_SCOPE_CONFIG.ALL]: [N.RPC_LOCAL_SCOPE, N.OAuth2Scopes.RPC_SCREENSHARE_READ]
                     },
                     handler: () => e => {
                         var t, n;
                         let {
                             prevState: a,
                             dispatch: l
-                        } = e, r = i.default.getStreamerActiveStreamMetadata(), u = (null == r ? void 0 : r.pid) != null ? E.default.getGameForPID(r.pid) : null, d = (null == u ? void 0 : u.id) != null ? o.default.getGame(u.id) : null, c = null != d ? (0, m.default)(d) : null, f = null == r ? void 0 : r.sourceName, _ = {
+                        } = e, r = i.default.getStreamerActiveStreamMetadata(), u = (null == r ? void 0 : r.pid) != null ? E.default.getGameForPID(r.pid) : null, d = (null == u ? void 0 : u.id) != null ? o.default.getGame(u.id) : null, c = null != d ? (0, T.default)(d) : null, f = null == r ? void 0 : r.sourceName, _ = {
                             active: null != r,
                             pid: null !== (t = null == r ? void 0 : r.pid) && void 0 !== t ? t : null,
                             application: (n = null != c, n) ? {
@@ -49051,9 +49125,9 @@
                         return !s.isEqual(_, a) && l(_), _
                     }
                 },
-                [S.RPCEvents.VIDEO_STATE_UPDATE]: {
+                [N.RPCEvents.VIDEO_STATE_UPDATE]: {
                     scope: {
-                        [S.RPC_SCOPE_CONFIG.ALL]: [S.RPC_LOCAL_SCOPE, S.OAuth2Scopes.RPC_VIDEO_READ]
+                        [N.RPC_SCOPE_CONFIG.ALL]: [N.RPC_LOCAL_SCOPE, N.OAuth2Scopes.RPC_VIDEO_READ]
                     },
                     handler: () => e => {
                         let {
@@ -49066,58 +49140,61 @@
                     }
                 }
             };
-            var g = A
+            var R = g
         },
         842897: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 getInitialSubscriptionPayload: function() {
-                    return u
+                    return d
                 }
             });
             var a = n("191225"),
                 s = n("499031"),
                 l = n("601222"),
                 i = n("710768"),
-                r = n("49111"),
-                o = n("954016");
-            async function u(e, t, n) {
-                var u, d;
+                r = n("65810"),
+                o = n("49111"),
+                u = n("954016");
+            async function d(e, t, n) {
+                var d, c;
                 switch (t) {
-                    case r.RPCEvents.ACTIVITY_PIP_MODE_UPDATE: {
-                        let t = null === (u = e.application) || void 0 === u ? void 0 : u.id,
-                            n = null != t ? a.default.getLayoutModeForApp(t) : null;
-                        return Promise.resolve(null != n ? {
-                            is_pip_mode: n !== o.ActivityLayoutMode.FOCUSED
-                        } : null)
-                    }
-                    case r.RPCEvents.ACTIVITY_LAYOUT_MODE_UPDATE: {
+                    case o.RPCEvents.ACTIVITY_PIP_MODE_UPDATE: {
                         let t = null === (d = e.application) || void 0 === d ? void 0 : d.id,
                             n = null != t ? a.default.getLayoutModeForApp(t) : null;
-                        return Promise.resolve(null != n ? {
+                        return null != n ? {
+                            is_pip_mode: n !== u.ActivityLayoutMode.FOCUSED
+                        } : null
+                    }
+                    case o.RPCEvents.ACTIVITY_LAYOUT_MODE_UPDATE: {
+                        let t = null === (c = e.application) || void 0 === c ? void 0 : c.id,
+                            n = null != t ? a.default.getLayoutModeForApp(t) : null;
+                        return null != n ? {
                             layout_mode: n
-                        } : null)
+                        } : null
                     }
-                    case r.RPCEvents.THERMAL_STATE_UPDATE: {
+                    case o.RPCEvents.THERMAL_STATE_UPDATE: {
                         let e = await (0, l.default)();
-                        if (null == e) return Promise.resolve(null);
+                        if (null == e) return null;
                         let t = (0, s.default)(e);
-                        return Promise.resolve({
+                        return {
                             thermal_state: t
-                        })
-                    }
-                    case r.RPCEvents.ORIENTATION_UPDATE: {
-                        let e = i.default.isScreenLandscape();
-                        if (null == e) return Promise.resolve(null);
-                        {
-                            let t = e ? o.ActivityScreenOrientation.LANDSCAPE : o.ActivityScreenOrientation.PORTRAIT,
-                                n = t === o.ActivityScreenOrientation.PORTRAIT ? "portrait" : "landscape";
-                            return Promise.resolve({
-                                screen_orientation: t,
-                                orientation: n
-                            })
                         }
                     }
+                    case o.RPCEvents.ORIENTATION_UPDATE: {
+                        let e = i.default.isScreenLandscape();
+                        if (null == e) return null;
+                        {
+                            let t = e ? u.ActivityScreenOrientation.LANDSCAPE : u.ActivityScreenOrientation.PORTRAIT,
+                                n = t === u.ActivityScreenOrientation.PORTRAIT ? "portrait" : "landscape";
+                            return {
+                                screen_orientation: t,
+                                orientation: n
+                            }
+                        }
+                    }
+                    case o.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE:
+                        return (0, r.activityInstanceConnectedParticipants)();
                     default:
                         return null
                 }
@@ -49540,7 +49617,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return j
+                    return y
                 }
             });
             var a = n("37983");
@@ -49554,39 +49631,36 @@
                 d = n("599417"),
                 c = n("244201"),
                 f = n("550766"),
-                E = n("191225"),
-                _ = n("299803"),
-                h = n("587984"),
-                I = n("292687"),
-                C = n("42203"),
-                m = n("52028"),
-                T = n("101125"),
-                S = n("697218"),
-                N = n("471671"),
-                p = n("568734"),
-                A = n("449008"),
-                g = n("387111"),
-                R = n("253981"),
-                O = n("563680"),
-                L = n("861309"),
-                v = n("578287"),
-                M = n("716724"),
-                x = n("613652"),
-                D = n("694352"),
-                P = n("207873"),
-                y = n("56245"),
-                b = n("49111");
-            async function U(e, t, n, a) {
+                E = n("299803"),
+                _ = n("587984"),
+                h = n("292687"),
+                I = n("42203"),
+                C = n("52028"),
+                m = n("101125"),
+                T = n("471671"),
+                S = n("568734"),
+                N = n("449008"),
+                p = n("253981"),
+                A = n("563680"),
+                g = n("861309"),
+                R = n("578287"),
+                O = n("65810"),
+                L = n("716724"),
+                v = n("613652"),
+                M = n("207873"),
+                x = n("56245"),
+                D = n("49111");
+            async function P(e, t, n, a) {
                 let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-                    l = m.default.getApplicationActivity(t);
-                if (null == l || null == l.secrets || !(0, v.validateActivityInvite)(a, l.party, l.secrets)) throw new L.default(b.RPCErrors.NO_ELIGIBLE_ACTIVITY, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
-                let o = (0, _.default)(l, T.default);
+                    l = C.default.getApplicationActivity(t);
+                if (null == l || null == l.secrets || !(0, R.validateActivityInvite)(a, l.party, l.secrets)) throw new g.default(D.RPCErrors.NO_ELIGIBLE_ACTIVITY, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
+                let o = (0, E.default)(l, m.default);
                 if (o) {
                     let {
                         lock: t
-                    } = (0, y.unlockOverlay)(e);
+                    } = (0, x.unlockOverlay)(e);
                     return (0, r.openModal)(l, o).then(() => {
-                        throw t(), new L.default(b.RPCErrors.NO_ELIGIBLE_ACTIVITY, "No eligible activity for application. Ensure user does have have privacy enabled.")
+                        throw t(), new g.default(D.RPCErrors.NO_ELIGIBLE_ACTIVITY, "No eligible activity for application. Ensure user does have have privacy enabled.")
                     })
                 }
                 await i.default.sendActivityInviteUser({
@@ -49597,10 +49671,10 @@
                     location: "In-Game Invite"
                 })
             }
-            var j = {
-                [b.RPCCommands.SEND_ACTIVITY_JOIN_INVITE]: {
+            var y = {
+                [D.RPCCommands.SEND_ACTIVITY_JOIN_INVITE]: {
                     scope: {
-                        [b.RPC_SCOPE_CONFIG.ANY]: [b.OAuth2Scopes.RPC, b.RPC_LOCAL_SCOPE]
+                        [D.RPC_SCOPE_CONFIG.ANY]: [D.OAuth2Scopes.RPC, D.RPC_LOCAL_SCOPE]
                     },
                     handler(e) {
                         let {
@@ -49610,30 +49684,30 @@
                                 pid: a
                             }
                         } = e, s = t.application.id;
-                        if (null == s) throw new L.default(b.RPCErrors.INVALID_COMMAND, "No application.");
-                        return U(a, s, n, b.ActivityActionTypes.JOIN)
+                        if (null == s) throw new g.default(D.RPCErrors.INVALID_COMMAND, "No application.");
+                        return P(a, s, n, D.ActivityActionTypes.JOIN)
                     }
                 },
-                [b.RPCCommands.CLOSE_ACTIVITY_JOIN_REQUEST]: {
+                [D.RPCCommands.CLOSE_ACTIVITY_JOIN_REQUEST]: {
                     scope: {
-                        [b.RPC_SCOPE_CONFIG.ANY]: [b.OAuth2Scopes.RPC, b.RPC_LOCAL_SCOPE]
+                        [D.RPC_SCOPE_CONFIG.ANY]: [D.OAuth2Scopes.RPC, D.RPC_LOCAL_SCOPE]
                     },
                     handler(e) {
                         let {
                             args: {
                                 user_id: t
                             }
-                        } = e, n = C.default.getDMFromUserId(t);
+                        } = e, n = I.default.getDMFromUserId(t);
                         null != n && (0, u.ack)(n, !0, !0)
                     }
                 },
-                [b.RPCCommands.ACTIVITY_INVITE_USER]: {
+                [D.RPCCommands.ACTIVITY_INVITE_USER]: {
                     scope: {
-                        [b.RPC_SCOPE_CONFIG.ANY]: [b.OAuth2Scopes.RPC, b.RPC_LOCAL_SCOPE]
+                        [D.RPC_SCOPE_CONFIG.ANY]: [D.OAuth2Scopes.RPC, D.RPC_LOCAL_SCOPE]
                     },
-                    validation: e => (0, M.default)(e).required().keys({
+                    validation: e => (0, L.default)(e).required().keys({
                         user_id: e.string().required(),
-                        type: e.number().required().valid([b.ActivityActionTypes.JOIN]),
+                        type: e.number().required().valid([D.ActivityActionTypes.JOIN]),
                         content: e.string().min(0).max(1024),
                         pid: e.number().min(0).required()
                     }),
@@ -49647,16 +49721,16 @@
                                 pid: l
                             }
                         } = e, i = t.application.id;
-                        if (null == i) throw new L.default(b.RPCErrors.INVALID_COMMAND, "No application.");
-                        return U(l, i, a, n, s)
+                        if (null == i) throw new g.default(D.RPCErrors.INVALID_COMMAND, "No application.");
+                        return P(l, i, a, n, s)
                     }
                 },
-                [b.RPCCommands.ACCEPT_ACTIVITY_INVITE]: {
+                [D.RPCCommands.ACCEPT_ACTIVITY_INVITE]: {
                     scope: {
-                        [b.RPC_SCOPE_CONFIG.ANY]: [b.OAuth2Scopes.RPC, b.RPC_LOCAL_SCOPE]
+                        [D.RPC_SCOPE_CONFIG.ANY]: [D.OAuth2Scopes.RPC, D.RPC_LOCAL_SCOPE]
                     },
-                    validation: e => (0, M.default)(e).required().keys({
-                        type: e.number().required().valid([b.ActivityActionTypes.JOIN]),
+                    validation: e => (0, L.default)(e).required().keys({
+                        type: e.number().required().valid([D.ActivityActionTypes.JOIN]),
                         user_id: e.string().required(),
                         session_id: e.string().required(),
                         channel_id: e.string().required(),
@@ -49673,9 +49747,9 @@
                                 message_id: i
                             }
                         } = e, r = t.application.id;
-                        if (null == r) throw new L.default(b.RPCErrors.INVALID_COMMAND, "No application.");
+                        if (null == r) throw new g.default(D.RPCErrors.INVALID_COMMAND, "No application.");
                         let u = Promise.resolve(!1);
-                        if (n === b.ActivityActionTypes.JOIN) u = o.default.join({
+                        if (n === D.ActivityActionTypes.JOIN) u = o.default.join({
                             userId: a,
                             sessionId: s,
                             applicationId: r,
@@ -49683,13 +49757,13 @@
                             messageId: i
                         });
                         return u.then(e => {
-                            if (!e) throw new L.default(b.RPCErrors.INVALID_INVITE, "Invite is expired or invalid.")
+                            if (!e) throw new g.default(D.RPCErrors.INVALID_INVITE, "Invite is expired or invalid.")
                         })
                     }
                 },
-                [b.RPCCommands.OPEN_INVITE_DIALOG]: {
+                [D.RPCCommands.OPEN_INVITE_DIALOG]: {
                     scope: {
-                        [b.RPC_SCOPE_CONFIG.ANY]: [b.OAuth2Scopes.RPC, b.RPC_LOCAL_SCOPE, b.RPC_AUTHENTICATED_SCOPE]
+                        [D.RPC_SCOPE_CONFIG.ANY]: [D.OAuth2Scopes.RPC, D.RPC_LOCAL_SCOPE, D.RPC_AUTHENTICATED_SCOPE]
                     },
                     handler(e) {
                         var t, s;
@@ -49698,10 +49772,10 @@
                         } = e, {
                             channel: r,
                             guild: o
-                        } = (0, P.validateOpenInviteDialog)(), u = I.default.getWindow(b.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+                        } = (0, M.validateOpenInviteDialog)(), u = h.default.getWindow(D.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
                         (null === (t = u) || void 0 === t ? void 0 : t.closed) && (u = null);
-                        let d = null != u ? b.AppContext.POPOUT : b.AppContext.APP;
-                        (0, O.exitFullScreen)({}, null === (s = u) || void 0 === s ? void 0 : s.document), (0, l.openModalLazy)(async () => {
+                        let d = null != u ? D.AppContext.POPOUT : D.AppContext.APP;
+                        (0, A.exitFullScreen)({}, null === (s = u) || void 0 === s ? void 0 : s.document), (0, l.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await n.el("310688").then(n.bind(n, "310688"));
@@ -49710,32 +49784,32 @@
                                 guild: o,
                                 channel: r,
                                 applicationId: i.application.id,
-                                analyticsLocation: b.AnalyticsLocations.ACTIVITY_RPC,
-                                source: b.InstantInviteSources.ACTIVITY_INVITE
+                                analyticsLocation: D.AnalyticsLocations.ACTIVITY_RPC,
+                                source: D.InstantInviteSources.ACTIVITY_INVITE
                             })
                         }, {
-                            contextKey: d === b.AppContext.POPOUT ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT
+                            contextKey: d === D.AppContext.POPOUT ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT
                         })
                     }
                 },
-                [b.RPCCommands.INITIATE_IMAGE_UPLOAD]: (0, s.createRPCCommand)(b.RPCCommands.INITIATE_IMAGE_UPLOAD, {
+                [D.RPCCommands.INITIATE_IMAGE_UPLOAD]: (0, s.createRPCCommand)(D.RPCCommands.INITIATE_IMAGE_UPLOAD, {
                     scope: {
-                        [b.RPC_SCOPE_CONFIG.ANY]: [b.OAuth2Scopes.RPC, b.RPC_LOCAL_SCOPE, b.RPC_AUTHENTICATED_SCOPE]
+                        [D.RPC_SCOPE_CONFIG.ANY]: [D.OAuth2Scopes.RPC, D.RPC_LOCAL_SCOPE, D.RPC_AUTHENTICATED_SCOPE]
                     },
                     handler(e) {
                         var t;
                         let {
                             socket: n
                         } = e, a = n.application.id;
-                        if (null == a) throw new L.default(b.RPCErrors.INVALID_COMMAND, "No application.");
-                        let s = null === (t = (0, x.default)()) || void 0 === t ? void 0 : t.id;
-                        if (null == s) throw new L.default(b.RPCErrors.UNKNOWN_ERROR, "Unable to find selected channel");
+                        if (null == a) throw new g.default(D.RPCErrors.INVALID_COMMAND, "No application.");
+                        let s = null === (t = (0, v.default)()) || void 0 === t ? void 0 : t.id;
+                        if (null == s) throw new g.default(D.RPCErrors.UNKNOWN_ERROR, "Unable to find selected channel");
                         return new Promise((e, t) => {
                             ! function(e, t) {
                                 var n;
-                                let a = N.default.getFocusedWindowId(),
+                                let a = T.default.getFocusedWindowId(),
                                     s = null == a ? null : null === (n = (0, c.getAppWindowContextValue)(a)) || void 0 === n ? void 0 : n.renderWindow;
-                                if (null == s) throw new L.default(b.RPCErrors.UNKNOWN_ERROR, "No valid window found");
+                                if (null == s) throw new g.default(D.RPCErrors.UNKNOWN_ERROR, "No valid window found");
                                 let l = s.document.createElement("input");
                                 l.style.display = "none", l.type = "file", l.accept = "image/jpeg, image/jpg, image/png, image/gif";
                                 let i = () => {
@@ -49744,24 +49818,24 @@
                                     }, 1e3)
                                 };
                                 l.addEventListener("change", () => {
-                                    (0, A.isNotNullish)(l.files) && e(l.files[0]), i()
+                                    (0, N.isNotNullish)(l.files) && e(l.files[0]), i()
                                 }), l.addEventListener("cancel", () => {
                                     i()
                                 }), s.document.body.addEventListener("focus", i, !0), s.document.body.appendChild(l), l.click()
                             }(async n => {
                                 let l = await (0, f.uploadImageAttachment)(a, s, n);
-                                (0, A.isNotNullish)(l) && (0, A.isNotNullish)(l.url) && !(l instanceof d.default) ? e({
+                                (0, N.isNotNullish)(l) && (0, N.isNotNullish)(l.url) && !(l instanceof d.default) ? e({
                                     image_url: l.url
                                 }): t(l)
                             }, () => t())
                         }).catch(e => {
-                            throw new L.default(b.RPCErrors.UNKNOWN_ERROR, "Failed to upload image")
+                            throw new g.default(D.RPCErrors.UNKNOWN_ERROR, "Failed to upload image")
                         })
                     }
                 }),
-                [b.RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: (0, s.createRPCCommand)(b.RPCCommands.OPEN_SHARE_MOMENT_DIALOG, {
+                [D.RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: (0, s.createRPCCommand)(D.RPCCommands.OPEN_SHARE_MOMENT_DIALOG, {
                     scope: {
-                        [b.RPC_SCOPE_CONFIG.ANY]: [b.RPC_AUTHENTICATED_SCOPE]
+                        [D.RPC_SCOPE_CONFIG.ANY]: [D.RPC_AUTHENTICATED_SCOPE]
                     },
                     handler(e) {
                         var t;
@@ -49771,51 +49845,28 @@
                                 mediaUrl: a
                             }
                         } = e;
-                        (0, v.validatePostMessageTransport)(n.transport);
+                        (0, R.validatePostMessageTransport)(n.transport);
                         let s = n.application.id;
-                        if (null == s) throw new L.default(b.RPCErrors.INVALID_COMMAND, "No application.");
-                        let l = (0, p.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, b.ApplicationFlags.EMBEDDED);
-                        if (!l) throw new L.default(b.RPCErrors.INVALID_COMMAND, "This application cannot access this API");
-                        let i = (0, x.default)();
-                        if (null == i) throw new L.default(b.RPCErrors.INVALID_COMMAND, "No channel found");
-                        if (!R.default.isDiscordCdnUrl(a)) throw new L.default(b.RPCErrors.INVALID_PAYLOAD, "mediaUrl must be a Discord CDN url");
-                        (0, h.openActivityShareMomentModal)({
+                        if (null == s) throw new g.default(D.RPCErrors.INVALID_COMMAND, "No application.");
+                        let l = (0, S.hasFlag)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, D.ApplicationFlags.EMBEDDED);
+                        if (!l) throw new g.default(D.RPCErrors.INVALID_COMMAND, "This application cannot access this API");
+                        let i = (0, v.default)();
+                        if (null == i) throw new g.default(D.RPCErrors.INVALID_COMMAND, "No channel found");
+                        if (!p.default.isDiscordCdnUrl(a)) throw new g.default(D.RPCErrors.INVALID_PAYLOAD, "mediaUrl must be a Discord CDN url");
+                        (0, _.openActivityShareMomentModal)({
                             applicationId: s,
                             channelId: i.id,
                             mediaUrl: a
                         })
                     }
                 }),
-                [b.RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: (0, s.createRPCCommand)(b.RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
-                    scope: {
-                        [b.RPC_SCOPE_CONFIG.ANY]: [b.RPC_AUTHENTICATED_SCOPE]
-                    },
+                [D.RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: (0, s.createRPCCommand)(D.RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, {
+                    scope: O.activityInstanceConnectedParticipantsScope,
                     handler(e) {
                         let {
                             socket: t
                         } = e;
-                        (0, v.validatePostMessageTransport)(t.transport);
-                        let n = E.default.getCurrentEmbeddedActivity();
-                        if (null == n) return {
-                            participants: []
-                        };
-                        let {
-                            guildId: a,
-                            channelId: s
-                        } = n, l = Array.from(n.connections.values(), e => {
-                            let {
-                                user_id: t
-                            } = e, n = S.default.getUser(t);
-                            if (null == n) return;
-                            let l = (0, g.getNickname)(a, s, n);
-                            return {
-                                ...(0, D.default)(n),
-                                nickname: null != l ? l : void 0
-                            }
-                        }).filter(A.isNotNullish);
-                        return {
-                            participants: l
-                        }
+                        return (0, R.validatePostMessageTransport)(t.transport), (0, O.activityInstanceConnectedParticipants)()
                     }
                 })
             }
