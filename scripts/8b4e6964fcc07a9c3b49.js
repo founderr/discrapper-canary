@@ -1906,7 +1906,7 @@
                     children: [(0, a.jsx)(E.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "242283"
+                        buildNumber: "242290"
                     }), (0, a.jsx)(m, {})]
                 }) : null
             }
@@ -47473,7 +47473,9 @@
                 T = n("49111"),
                 S = {
                     [T.RPCCommands.GET_CHANNEL]: {
-                        scope: T.OAuth2Scopes.RPC,
+                        scope: {
+                            [T.RPC_SCOPE_CONFIG.ANY]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.GUILDS]
+                        },
                         handler(e) {
                             let {
                                 args: {
@@ -47482,6 +47484,10 @@
                                 socket: n
                             } = e, a = u.default.getChannel(t);
                             if (null == a) throw new h.default(T.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(t));
+                            if (a.isPrivate()) {
+                                let e = n.authorization.scopes;
+                                if (!e.includes(T.OAuth2Scopes.RPC) && !e.includes(T.OAuth2Scopes.DM_CHANNELS_READ)) throw new h.default(T.RPCErrors.INVALID_PERMISSIONS, "Invalid scope")
+                            }
                             return (0, I.transformChannel)(a, (0, I.hasMessageReadPermission)(a, n.application.id, n.authorization.scopes))
                         }
                     },
