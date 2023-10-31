@@ -92,8 +92,8 @@
                 T = l("412707"),
                 N = l("838093"),
                 P = l("49111"),
-                j = l("894282"),
-                y = l("782340"),
+                y = l("894282"),
+                j = l("782340"),
                 O = l("751788");
             let S = E.default.getArticleURL(P.HelpdeskArticles.APP_DIRECTORY_HEADER_LEARN_MORE);
 
@@ -125,7 +125,7 @@
                     guildId: n
                 } = e, r = (0, i.jsxs)(a.Fragment, {
                     children: [(0, i.jsx)(g.default, {
-                        title: y.default.Messages.APP_DIRECTORY
+                        title: j.default.Messages.APP_DIRECTORY
                     }), l && (0, i.jsx)(d.Anchor, {
                         onClick: function() {
                             A.default.track(P.AnalyticEvents.APP_DIRECTORY_CTA_CLICKED, {
@@ -134,7 +134,7 @@
                                 guild_id: n
                             }), (0, _.default)(S)
                         },
-                        children: y.default.Messages.LEARN_MORE
+                        children: j.default.Messages.LEARN_MORE
                     })]
                 });
                 return (0, i.jsx)("div", {
@@ -161,17 +161,17 @@
                 if (null == l) return null;
                 switch (l.type) {
                     case T.ApplicationDirectoryViews.HOME:
-                        t = y.default.Messages.HOME;
+                        t = j.default.Messages.HOME;
                         break;
                     case T.ApplicationDirectoryViews.SEARCH:
-                        t = y.default.Messages.SEARCH;
+                        t = j.default.Messages.SEARCH;
                         break;
                     case T.ApplicationDirectoryViews.APPLICATION:
                         var n;
-                        t = null !== (n = null == l ? void 0 : l.applicationName) && void 0 !== n ? n : y.default.Messages.BACK;
+                        t = null !== (n = null == l ? void 0 : l.applicationName) && void 0 !== n ? n : j.default.Messages.BACK;
                         break;
                     default:
-                        t = y.default.Messages.BACK
+                        t = j.default.Messages.BACK
                 }
                 return (0, i.jsxs)(d.Clickable, {
                     className: O.back,
@@ -208,7 +208,7 @@
                     children: t
                 } = e, l = a.useRef(null), n = (0, R.default)(), r = (0, T.useApplicationDirectoryHistory)(e => e.guildId), u = (0, T.useApplicationDirectoryHistory)(e => e.entrypoint), _ = (0, T.useApplicationDirectoryHistory)(e => e.trackedOpenedFromExternalEntrypoint), g = (0, T.getCurrentView)(), I = (0, T.getPreviousView)(), E = a.useRef(), x = (null == g ? void 0 : g.type) !== T.ApplicationDirectoryViews.HOME, S = (null == g ? void 0 : g.type) === T.ApplicationDirectoryViews.APPLICATION ? null == g ? void 0 : g.applicationId : void 0;
                 (0, f.usePageTitle)({
-                    location: y.default.Messages.APP_DIRECTORY
+                    location: j.default.Messages.APP_DIRECTORY
                 });
                 let Y = (null == g ? void 0 : g.type) !== T.ApplicationDirectoryViews.HOME && null != I;
                 a.useEffect(() => {
@@ -230,7 +230,7 @@
                 }, [u, r]);
                 return a.useEffect(() => {
                     let e = e => {
-                        e.key === j.KeyboardKeysUpdated.ESCAPE && (e.stopPropagation(), k())
+                        e.key === y.KeyboardKeysUpdated.ESCAPE && (e.stopPropagation(), k())
                     };
                     return document.addEventListener("keydown", e), () => {
                         document.removeEventListener("keydown", e)
@@ -248,7 +248,7 @@
                             var e, t, i;
                             return b({
                                 scrollTop: null === (e = l.current) || void 0 === e ? void 0 : e.getScrollerState().scrollTop,
-                                offsetHeight: null === (t = l.current) || void 0 === t ? void 0 : t.getScrollerState().offsetHeight,
+                                scrollOffset: null === (t = l.current) || void 0 === t ? void 0 : t.getScrollerState().offsetHeight,
                                 scrollHeight: null === (i = l.current) || void 0 === i ? void 0 : i.getScrollerState().scrollHeight,
                                 location: null == g ? void 0 : g.type,
                                 guildId: r,
@@ -335,8 +335,8 @@
                     onView: T,
                     guildCountPosition: N = "top",
                     subheaderTextVariant: P = "text-sm/normal",
-                    mutualGuildShownMax: j,
-                    guildIconSize: y,
+                    mutualGuildShownMax: y,
+                    guildIconSize: j,
                     source: O
                 } = e, S = (0, _.useApplicationDirectoryHistory)(e => e.guildId), L = (0, r.useListItem)(g.id), D = u.default.getApplicationIconURL({
                     id: g.id,
@@ -354,8 +354,8 @@
                     application: g,
                     textVariant: P,
                     mutualGuilds: Y,
-                    mutualGuildShownMax: j,
-                    guildIconSize: y,
+                    mutualGuildShownMax: y,
+                    guildIconSize: j,
                     compact: !0
                 }), w = x && null != H, U = G && "top" === N, {
                     applicationSubscriptionListingsShown: B
@@ -762,7 +762,7 @@
                     guildIconSize: v = a.LARGE
                 } = e, x = new Intl.ListFormat("en-US"), R = null !== (l = null === (t = r.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== l ? l : 0, T = null !== (i = null == o ? void 0 : o.length) && void 0 !== i ? i : 0, N = Math.max(0, R - T), {
                     shownMutualGuilds: P,
-                    hiddenMutualGuilds: j
+                    hiddenMutualGuilds: y
                 } = s.useMemo(() => {
                     let e = [],
                         t = [];
@@ -772,7 +772,7 @@
                         shownMutualGuilds: e,
                         hiddenMutualGuilds: t
                     }
-                }, [o, _]), y = j.length, O = function(e, t, l, i) {
+                }, [o, _]), j = y.length, O = function(e, t, l, i) {
                     if (0 === t && 0 === e) return null;
                     if (t > 0 && 0 === l) return f.default.Messages.APP_DIRECTORY_MUTUAL_GUILD_COUNT.format({
                         mutualGuildCount: t
@@ -794,7 +794,7 @@
                         className: h.icons,
                         children: P.length > 0 ? (0, n.jsxs)(n.Fragment, {
                             children: [P.map((e, t) => {
-                                let l = t === P.length - 1 && 0 === y,
+                                let l = t === P.length - 1 && 0 === j,
                                     i = m.default.getGuildIconURL({
                                         id: e.id,
                                         icon: e.icon,
@@ -820,15 +820,15 @@
                                     mask: p.default.Masks.VOICE_USER_SUMMARY_ITEM,
                                     children: a
                                 }, e.id)
-                            }), y > 0 ? (0, n.jsx)(d.Tooltip, {
+                            }), j > 0 ? (0, n.jsx)(d.Tooltip, {
                                 text: f.default.Messages.APP_DIRECTORY_GUILD_COUNT_PLUS_MUTUALS_TOOLTIP.format({
-                                    appNames: x.format(j.map(e => e.name))
+                                    appNames: x.format(y.map(e => e.name))
                                 }),
                                 position: "top",
                                 children: e => (0, n.jsxs)("div", {
                                     ...e,
                                     className: c(h.moreGuilds, C[v]),
-                                    children: ["+", y]
+                                    children: ["+", j]
                                 })
                             }) : null]
                         }) : (0, n.jsx)(u.default, {
@@ -1120,7 +1120,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return E
+                    return v
                 }
             });
             var i = l("37983"),
@@ -1137,11 +1137,12 @@
                 _ = l("412707"),
                 f = l("838093"),
                 h = l("331793"),
-                C = l("49111"),
-                g = l("782340"),
-                I = l("626783");
+                C = l("417152"),
+                g = l("49111"),
+                I = l("782340"),
+                A = l("626783");
 
-            function A(e) {
+            function E(e) {
                 let {
                     collectionTitle: t,
                     title: l,
@@ -1152,35 +1153,35 @@
                     ctaLink: d,
                     applicationId: u
                 } = e, m = "936929561302675456" === u, _ = null == u ? (0, i.jsx)(o.Button, {
-                    className: I.applicationCta,
+                    className: A.applicationCta,
                     onClick: n,
                     children: c
                 }) : (0, i.jsx)(p.default, {
-                    href: C.Routes.APPLICATION_DIRECTORY_PROFILE(u),
+                    href: g.Routes.APPLICATION_DIRECTORY_PROFILE(u),
                     children: (0, i.jsx)(o.Button, {
-                        className: I.applicationCta,
+                        className: A.applicationCta,
                         onClick: n,
                         children: c
                     })
                 });
                 return (0, i.jsxs)("div", {
-                    className: I.card,
+                    className: A.card,
                     children: [(0, i.jsx)("div", {
-                        className: I.textContainer,
+                        className: A.textContainer,
                         children: (0, i.jsxs)("div", {
-                            className: I.verticallyCenter,
+                            className: A.verticallyCenter,
                             children: [(0, i.jsx)(o.Text, {
-                                className: I.collectionTitle,
+                                className: A.collectionTitle,
                                 tag: "span",
                                 color: "header-secondary",
                                 variant: "heading-deprecated-12/semibold",
                                 children: t
                             }), (0, i.jsxs)(o.Heading, {
-                                className: I.applicationName,
+                                className: A.applicationName,
                                 variant: "heading-xxl/medium",
                                 children: [l, " ", m && (0, i.jsx)(h.default, {})]
                             }), (0, i.jsx)(o.Text, {
-                                className: I.applicationDescription,
+                                className: A.applicationDescription,
                                 variant: "text-md/normal",
                                 lineClamp: 3,
                                 children: a
@@ -1189,65 +1190,68 @@
                                 href: d,
                                 className: s((0, o.getButtonStyle)({
                                     grow: !1
-                                }), I.applicationCta),
+                                }), A.applicationCta),
                                 children: c
                             })]
                         })
                     }), (0, i.jsx)("div", {
-                        className: I.imageContainer,
+                        className: A.imageContainer,
                         children: (0, i.jsx)("img", {
                             alt: l,
-                            className: I.image,
+                            className: A.image,
                             src: r
                         })
                     })]
                 })
             }
 
-            function E(e) {
+            function v(e) {
                 let {
+                    collection: t,
                     collection: {
-                        id: t,
-                        title: l,
-                        application_directory_collection_items: n
+                        id: l,
+                        title: n,
+                        application_directory_collection_items: o
                     }
-                } = e, o = a.useRef(null), [p, h] = a.useState(), E = (0, _.useApplicationDirectoryHistory)(e => e.guildId);
+                } = e, p = (0, C.default)({
+                    collection: t
+                }), [h, v] = a.useState(), x = (0, _.useApplicationDirectoryHistory)(e => e.guildId);
                 return a.useEffect(() => {
-                    let e = null == o ? void 0 : o.current;
+                    let e = null == p ? void 0 : p.current;
                     if (null == e) return;
                     let t = new ResizeObserver(() => {
                         let t = document.body.offsetWidth < parseFloat(c.default.COLLECTION_GALLERY_MEDIA_BREAKPOINT) ? parseFloat(c.default.COLLECTION_GALLERY_COLUMN_CARD_HEIGHT) : parseFloat(c.default.COLLECTION_GALLERY_ROW_CARD_HEIGHT);
-                        h(e.offsetWidth / t)
+                        v(e.offsetWidth / t)
                     });
                     return t.observe(document.body), () => {
                         t.disconnect()
                     }
-                }, []), (0, i.jsx)("article", {
-                    ref: o,
+                }, [p]), (0, i.jsx)("article", {
+                    ref: p,
                     className: s({
-                        [I.collectionBottomMargin]: n.length <= 1
+                        [A.collectionBottomMargin]: o.length <= 1
                     }),
                     children: (0, i.jsx)(d.default, {
-                        aspectRatio: p,
+                        aspectRatio: h,
                         themedPagination: !0,
-                        paginationClassName: I.paginationControls,
-                        paginationArrowClassName: I.paginationArrow,
-                        items: n,
-                        onChangeItem: (e, l, i) => {
+                        paginationClassName: A.paginationControls,
+                        paginationArrowClassName: A.paginationArrow,
+                        items: o,
+                        onChangeItem: (e, t, i) => {
                             let {
                                 application: a
                             } = e;
-                            null != a && u.default.track(C.AnalyticEvents.APP_DIRECTORY_COLLECTION_SCROLLED, {
-                                collection_id: t,
+                            null != a && u.default.track(g.AnalyticEvents.APP_DIRECTORY_COLLECTION_SCROLLED, {
+                                collection_id: l,
                                 offset: i,
                                 results: [a.id],
-                                guild_id: E
+                                guild_id: x
                             })
                         },
                         renderItem: e => {
                             let {
-                                id: a,
-                                image_hash: n,
+                                id: t,
+                                image_hash: a,
                                 application: s,
                                 type: c,
                                 description: o,
@@ -1255,41 +1259,41 @@
                                 call_to_action_label: p,
                                 call_to_action_url: _
                             } = e;
-                            if (null == n) return;
+                            if (null == a) return;
                             let h = (0, m.getCollectionItemAssetUrl)({
-                                itemId: a,
-                                hash: n
+                                itemId: t,
+                                hash: a
                             });
                             if (c === r.ApplicationDirectoryCollectionItemType.APPLICATION && null != s) {
-                                var I, v;
-                                return (0, i.jsx)(A, {
-                                    collectionTitle: l,
+                                var C, A;
+                                return (0, i.jsx)(E, {
+                                    collectionTitle: n,
                                     title: s.name,
-                                    description: null !== (v = null === (I = s.directory_entry) || void 0 === I ? void 0 : I.short_description) && void 0 !== v ? v : s.description,
+                                    description: null !== (A = null === (C = s.directory_entry) || void 0 === C ? void 0 : C.short_description) && void 0 !== A ? A : s.description,
                                     handleClick: () => {
-                                        u.default.track(C.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
-                                            collection_id: t,
+                                        u.default.track(g.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                                            collection_id: l,
                                             application_id: s.id,
-                                            guild_id: E,
+                                            guild_id: x,
                                             shown_mutual_guilds_count: void 0
                                         }), (0, f.goToApplication)({
                                             applicationId: s.id
                                         })
                                     },
                                     imageSrc: h,
-                                    ctaLabel: g.default.Messages.APP_DIRECTORY_GALLERY_COLLECTION_VIEW_APP_CTA,
+                                    ctaLabel: I.default.Messages.APP_DIRECTORY_GALLERY_COLLECTION_VIEW_APP_CTA,
                                     applicationId: s.id
                                 })
                             }
-                            if (c === r.ApplicationDirectoryCollectionItemType.LINK && null != d && null != _ && null != p) return (0, i.jsx)(A, {
-                                collectionTitle: l,
+                            if (c === r.ApplicationDirectoryCollectionItemType.LINK && null != d && null != _ && null != p) return (0, i.jsx)(E, {
+                                collectionTitle: n,
                                 title: d,
                                 description: o,
                                 handleClick: () => {
-                                    u.default.track(C.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
-                                        collection_id: t,
+                                    u.default.track(g.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                                        collection_id: l,
                                         link: _,
-                                        guild_id: E,
+                                        guild_id: x,
                                         shown_mutual_guilds_count: void 0
                                     })
                                 },
@@ -1306,7 +1310,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return h
+                    return C
                 }
             });
             var i = l("37983"),
@@ -1320,88 +1324,92 @@
                 u = l("412707"),
                 p = l("838093"),
                 m = l("121631"),
-                _ = l("49111"),
-                f = l("859546");
+                _ = l("417152"),
+                f = l("49111"),
+                h = l("859546");
 
-            function h(e) {
+            function C(e) {
                 let {
+                    collection: t,
                     collection: {
-                        id: t,
-                        title: l,
-                        application_directory_collection_items: h
+                        id: l,
+                        title: C,
+                        application_directory_collection_items: g
                     }
-                } = e, C = a.useRef(null), [g, I] = a.useState(300), [A, E] = a.useState(4), v = parseFloat(s.default.COLLECTION_LIST_CARD_GAP), x = (0, u.useApplicationDirectoryHistory)(e => e.guildId);
+                } = e, [I, A] = a.useState(300), [E, v] = a.useState(4), x = parseFloat(s.default.COLLECTION_LIST_CARD_GAP), R = (0, u.useApplicationDirectoryHistory)(e => e.guildId), T = (0, _.default)({
+                    collection: t
+                });
                 a.useEffect(() => {
                     function e() {
                         var e;
-                        let t = null === (e = C.current) || void 0 === e ? void 0 : e.offsetWidth,
+                        let t = null === (e = T.current) || void 0 === e ? void 0 : e.offsetWidth,
                             l = 1;
                         if (null == t) return 300;
-                        t >= 500 && (l = 2), t >= 700 && (l = 3), t >= 1e3 && (l = 4), E(l);
-                        let i = (l - 1) * v;
+                        t >= 500 && (l = 2), t >= 700 && (l = 3), t >= 1e3 && (l = 4), v(l);
+                        let i = (l - 1) * x;
                         return (t - i) / l
                     }
-                    let t = C.current;
+                    let t = T.current;
                     if (null == t) return;
                     let l = new ResizeObserver(() => {
-                        I(e())
+                        A(e())
                     });
-                    return I(e()), l.observe(t), () => {
+                    return A(e()), l.observe(t), () => {
                         l.disconnect()
                     }
-                }, [v]);
-                let R = (0, r.useUID)();
+                }, [x, T]);
+                let N = (0, r.useUID)();
                 return (0, i.jsx)("div", {
-                    ref: C,
+                    ref: T,
                     children: (0, i.jsx)(m.default, {
-                        header: l,
-                        headerId: R,
-                        tileWidth: g,
-                        tileMargin: v,
+                        header: C,
+                        headerId: N,
+                        tileWidth: I,
+                        tileMargin: x,
                         onScroll: e => {
                             let {
-                                tileIndex: l
-                            } = e, i = h.slice(l, l + A).reduce((e, t) => {
+                                tileIndex: t
+                            } = e, i = g.slice(t, t + E).reduce((e, t) => {
                                 let {
                                     type: l,
                                     application: i
                                 } = t;
                                 return l === n.ApplicationDirectoryCollectionItemType.APPLICATION && null != i && e.push(i.id), e
                             }, []);
-                            c.default.track(_.AnalyticEvents.APP_DIRECTORY_COLLECTION_SCROLLED, {
-                                collection_id: t,
-                                offset: l,
+                            c.default.track(f.AnalyticEvents.APP_DIRECTORY_COLLECTION_SCROLLED, {
+                                collection_id: l,
+                                offset: t,
                                 results: i,
-                                guild_id: x
+                                guild_id: R
                             })
                         },
                         children: (0, i.jsx)("ul", {
-                            "aria-labelledby": R,
-                            className: f.itemsContainer,
-                            children: h.map(e => {
+                            "aria-labelledby": N,
+                            className: h.itemsContainer,
+                            children: g.map(e => {
                                 let {
-                                    id: l,
+                                    id: t,
                                     type: a,
                                     application: s
                                 } = e;
                                 if (a === n.ApplicationDirectoryCollectionItemType.APPLICATION && null != s) return (0, i.jsx)("li", {
                                     style: {
-                                        width: g
+                                        width: I
                                     },
-                                    className: f.itemContainer,
+                                    className: h.itemContainer,
                                     children: (0, i.jsx)(o.default, {
-                                        href: _.Routes.APPLICATION_DIRECTORY_PROFILE(s.id),
+                                        href: f.Routes.APPLICATION_DIRECTORY_PROFILE(s.id),
                                         children: (0, i.jsx)(d.default, {
                                             application: s,
                                             onClick: e => {
                                                 let {
-                                                    mutualGuilds: l
+                                                    mutualGuilds: t
                                                 } = e;
-                                                c.default.track(_.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
-                                                    collection_id: t,
+                                                c.default.track(f.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                                                    collection_id: l,
                                                     application_id: s.id,
-                                                    guild_id: x,
-                                                    shown_mutual_guilds_count: l.length
+                                                    guild_id: R,
+                                                    shown_mutual_guilds_count: t.length
                                                 }), (0, p.goToApplication)({
                                                     applicationId: s.id
                                                 })
@@ -1409,7 +1417,7 @@
                                             animatesOnHover: !0
                                         })
                                     })
-                                }, l)
+                                }, t)
                             })
                         })
                     })
@@ -1420,7 +1428,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return C
+                    return g
                 }
             });
             var i = l("37983");
@@ -1436,84 +1444,89 @@
                 p = l("288914"),
                 m = l("412707"),
                 _ = l("838093"),
-                f = l("49111"),
-                h = l("332119");
+                f = l("417152"),
+                h = l("49111"),
+                C = l("332119");
 
-            function C(e) {
+            function g(e) {
                 let {
+                    collection: t,
                     collection: {
-                        id: t,
-                        title: l,
-                        application_directory_collection_items: a
+                        id: l,
+                        title: a,
+                        application_directory_collection_items: g
                     }
-                } = e, C = (0, m.useApplicationDirectoryHistory)(e => e.guildId);
+                } = e, I = (0, f.default)({
+                    collection: t
+                }), A = (0, m.useApplicationDirectoryHistory)(e => e.guildId);
                 return (0, i.jsxs)("div", {
+                    ref: I,
                     children: [(0, i.jsx)(r.Heading, {
                         variant: "heading-lg/semibold",
-                        className: h.header,
-                        children: l
+                        className: C.header,
+                        children: a
                     }), (0, i.jsx)("div", {
-                        className: h.list,
-                        children: a.map(e => {
+                        className: C.list,
+                        children: g.map(e => {
                             let {
-                                id: l,
+                                id: t,
                                 type: a,
                                 application: m,
-                                image_hash: g,
-                                title: I,
-                                description: A,
+                                image_hash: f,
+                                title: g,
+                                description: I,
                                 call_to_action_label: E,
                                 call_to_action_url: v
                             } = e;
-                            if (null == g) return;
+                            if (null == f) return;
                             let x = (0, d.getCollectionItemAssetUrl)({
-                                itemId: l,
-                                hash: g
+                                itemId: t,
+                                hash: f
                             });
                             return a === s.ApplicationDirectoryCollectionItemType.APPLICATION && null != m ? (0, i.jsx)(o.default, {
-                                href: f.Routes.APPLICATION_DIRECTORY_PROFILE(m.id),
-                                className: h.item,
+                                href: h.Routes.APPLICATION_DIRECTORY_PROFILE(m.id),
+                                className: C.item,
                                 children: (0, i.jsx)(u.default, {
                                     imageSrc: x,
                                     application: m,
                                     onClick: e => {
                                         let {
-                                            mutualGuilds: l
+                                            mutualGuilds: t
                                         } = e;
-                                        c.default.track(f.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
-                                            collection_id: t,
+                                        c.default.track(h.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                                            collection_id: l,
                                             application_id: m.id,
-                                            guild_id: C,
-                                            shown_mutual_guilds_count: l.length
+                                            guild_id: A,
+                                            shown_mutual_guilds_count: t.length
                                         }), (0, _.goToApplication)({
                                             applicationId: m.id
                                         })
                                     },
                                     animatesOnHover: !0
                                 })
-                            }, l) : a === s.ApplicationDirectoryCollectionItemType.LINK && null != I ? (0, i.jsxs)(p.default, {
-                                className: n(h.item, h.linkCard),
+                            }, t) : a === s.ApplicationDirectoryCollectionItemType.LINK && null != g ? (0, i.jsxs)(p.default, {
+                                className: n(C.item, C.linkCard),
                                 imageSrc: x,
-                                header: I,
-                                headerClassName: h.cardHeader,
+                                header: g,
+                                headerClassName: C.cardHeader,
                                 children: [(0, i.jsx)(r.Text, {
                                     variant: "text-sm/normal",
-                                    className: h.linkDescription,
-                                    children: A
+                                    className: C.linkDescription,
+                                    children: I
                                 }), (0, i.jsx)(r.Anchor, {
                                     onClick: () => {
-                                        c.default.track(f.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
-                                            collection_id: t,
+                                        c.default.track(h.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                                            collection_id: l,
                                             link: v,
-                                            guild_id: C,
+                                            guild_id: A,
                                             shown_mutual_guilds_count: void 0
                                         })
                                     },
                                     href: v,
-                                    className: n((0, r.getButtonStyle)(), h.linkCta),
+                                    className: n((0, r.getButtonStyle)(), C.linkCta),
                                     children: E
                                 })]
-                            }, l) : void 0
+                            }, t) : void 0
                         })
                     })]
                 })
@@ -1899,6 +1912,33 @@
             }
             var C = (0, p.default)(h)
         },
+        417152: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
+                    return c
+                }
+            });
+            var i = l("884691"),
+                a = l("811425"),
+                n = l("599110"),
+                s = l("412707"),
+                r = l("49111");
+
+            function c(e) {
+                let {
+                    collection: t
+                } = e, [l, c] = i.useState(!1), o = (0, s.useApplicationDirectoryHistory)(e => e.guildId), d = (0, a.useIsVisible)(e => {
+                    e && c(!0)
+                });
+                return i.useEffect(() => {
+                    l && n.default.track(r.AnalyticEvents.APP_DIRECTORY_COLLECTION_VIEWED, {
+                        collection_id: t.id,
+                        guild_id: o
+                    })
+                }, [l, t, o]), d
+            }
+        },
         413989: function(e, t, l) {
             "use strict";
             l.r(t), l.d(t, {
@@ -2245,8 +2285,8 @@
                 T = l("650509"),
                 N = l("913678"),
                 P = l("462274"),
-                j = l("69927"),
-                y = l("861370"),
+                y = l("69927"),
+                j = l("861370"),
                 O = l("978970"),
                 S = l("393414"),
                 L = l("485422"),
@@ -2332,8 +2372,8 @@
                         }
                     }),
                     eP = a.useMemo(() => null == eT ? void 0 : eT.slice(0, 3), [eT]),
-                    ej = (0, _.useStateFromStores)([K.default], () => K.default.getApplicationFetchState(m)),
-                    [ey, eO] = a.useState(void 0),
+                    ey = (0, _.useStateFromStores)([K.default], () => K.default.getApplicationFetchState(m)),
+                    [ej, eO] = a.useState(void 0),
                     [eS, eL] = a.useState(null != h ? h : ed.ApplicationDirectoryProfileSections.GENERAL),
                     eD = (0, _.useStateFromStores)([b.default], () => b.default.isFocused()),
                     eM = (0, _.useStateFromStores)([D.default], () => D.default.locale),
@@ -2346,7 +2386,7 @@
                         application: eY
                     }),
                     eH = (0, _.useStateFromStores)([M.default], () => M.default.getSessionId());
-                (0, j.usePageTitle)({
+                (0, y.usePageTitle)({
                     location: null == eY ? void 0 : eY.name
                 });
                 let eG = a.useCallback(async () => {
@@ -2409,7 +2449,7 @@
                         size: eC
                     }),
                     eU = (0, P.default)(ew, f.default.unsafe_rawColors.PRIMARY_800.css),
-                    eB = (0, y.default)({
+                    eB = (0, j.default)({
                         id: null !== (o = null == eY ? void 0 : eY.id) && void 0 !== o ? o : "",
                         label: ep.default.Messages.COPY_ID_APPLICATION
                     }),
@@ -2436,9 +2476,9 @@
                         eL(e), er.current = !0, (null == eY ? void 0 : eY.id) != null && F.default.track(eu.AnalyticEvents.APP_DIRECTORY_PROFILE_TAB_CLICKED, {
                             application_id: eY.id,
                             guild_id: E,
-                            tab_name: eS
+                            tab_name: e
                         })
-                    }, [null == eY ? void 0 : eY.id, E, eS]),
+                    }, [null == eY ? void 0 : eY.id, E]),
                     eq = a.useMemo(() => {
                         var e, t, l;
                         return null !== (l = (null !== (t = null == eY ? void 0 : null === (e = eY.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== t ? t : []).map(ex).filter(B.isNotNullish)) && void 0 !== l ? l : []
@@ -2528,7 +2568,7 @@
                         }) : null]
                     }), [eB, e$]),
                     [e1, e8] = (0, v.default)(!1, 1e3),
-                    e7 = a.useCallback(() => {
+                    e4 = a.useCallback(() => {
                         null != eY && (F.default.track(eu.AnalyticEvents.APP_SHARE_BUTTON_CLICKED, {
                             source: "product_page",
                             application_id: eY.id,
@@ -2543,7 +2583,7 @@
                         (0, S.replaceWith)(t), eW("product_page")
                     }
                 }, [k, eW]);
-                let e4 = a.useCallback(() => {
+                let e7 = a.useCallback(() => {
                         null != eY && (k ? eW("product_page") : (F.default.track(eu.AnalyticEvents.APPLICATION_ADD_TO_SERVER_CLICKED, {
                             application_id: m,
                             guild_id: E,
@@ -2611,14 +2651,14 @@
                                 })) : (null == eY ? void 0 : eY.description) != null && l.push((0, i.jsx)(L.default, {
                                     className: em.description,
                                     userBio: eY.description
-                                })), null != ey && ey.length > 0 && (l.push((0, i.jsxs)(i.Fragment, {
+                                })), null != ej && ej.length > 0 && (l.push((0, i.jsxs)(i.Fragment, {
                                     children: [(0, i.jsx)(C.Heading, {
                                         className: em.sectionHeader,
                                         variant: "heading-md/semibold",
                                         children: ep.default.Messages.APP_DIRECTORY_PROFILE_COMMANDS_HEADING
                                     }), (0, i.jsx)(en.default, {
                                         className: em.commandList,
-                                        commands: ey
+                                        commands: ej
                                     })]
                                 })), a = !0);
                                 break
@@ -2697,7 +2737,7 @@
                             className: em.section,
                             children: e
                         }, t))
-                    }, [eY, e9, eq, ey, ez, eX, eD, eS, e2, e5, ta, tn]),
+                    }, [eY, e9, eq, ej, ez, eX, eD, eS, e2, e5, ta, tn]),
                     tr = a.useMemo(() => {
                         let e = H.current === m,
                             t = e && !er.current,
@@ -2716,8 +2756,8 @@
                             sectionText: ep.default.Messages.APP_DIRECTORY_PROFILE_TAB_PRIVACY
                         }), t && h === ed.ApplicationDirectoryProfileSections.PRIVACY && eL(h)), l
                     }, [eq.length, e9, ta, tn, h, m]);
-                return d = null == eY ? null == ej || ej === K.FetchState.FETCHING ? (0, i.jsx)(ee.default, {
-                    loading: ej === K.FetchState.FETCHING
+                return d = null == eY ? null == ey || ey === K.FetchState.FETCHING ? (0, i.jsx)(ee.default, {
+                    loading: ey === K.FetchState.FETCHING
                 }) : (0, i.jsx)("div", {
                     className: em.page,
                     children: (0, i.jsxs)("div", {
@@ -2732,7 +2772,7 @@
                         })]
                     })
                 }) : (0, i.jsxs)(ee.default, {
-                    loading: ej === K.FetchState.FETCHING,
+                    loading: ey === K.FetchState.FETCHING,
                     children: [(0, i.jsx)("div", {
                         style: {
                             backgroundColor: eU
@@ -2782,12 +2822,12 @@
                                     }), (0, i.jsxs)("div", {
                                         className: s(em.buttons),
                                         children: [(0, i.jsx)(C.Button, {
-                                            onClick: e7,
+                                            onClick: e4,
                                             color: C.Button.Colors.PRIMARY,
                                             children: e1 ? ep.default.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL : ep.default.Messages.APP_DIRECTORY_PROFILE_SHARE_BUTTON
                                         }), (0, i.jsx)(C.Button, {
                                             color: C.Button.Colors.BRAND,
-                                            onClick: e4,
+                                            onClick: e7,
                                             disabled: !eV,
                                             children: ep.default.Messages.APP_DIRECTORY_PROFILE_ADD_BUTTON
                                         }), (0, i.jsx)(C.Popout, {
@@ -3344,7 +3384,7 @@
                     className: d,
                     onViewCategory: u,
                     onClickGuildWidget: h
-                } = e, [T, N] = a.useState(null), P = [], j = null !== (l = null == r ? void 0 : null === (t = r.directory_entry) || void 0 === t ? void 0 : t.external_urls) && void 0 !== l ? l : [];
+                } = e, [T, N] = a.useState(null), P = [], y = null !== (l = null == r ? void 0 : null === (t = r.directory_entry) || void 0 === t ? void 0 : t.external_urls) && void 0 !== l ? l : [];
                 a.useEffect(() => {
                     var e;
                     if ((null === (e = r.directory_entry) || void 0 === e ? void 0 : e.supported_locales) !== void 0) {
@@ -3353,7 +3393,7 @@
                         N(t.map(e => e.localizedName))
                     }
                 }, [r.directory_entry]);
-                let y = (e, t) => {
+                let j = (e, t) => {
                     _.default.track(I.AnalyticEvents.APP_DIRECTORY_APPLICATION_EXTERNAL_LINK_CLICKED, {
                         application_id: r.id,
                         guild_id: o,
@@ -3392,24 +3432,24 @@
                     }), (0, i.jsx)(g.default, {
                         supportedLanguages: T
                     })]
-                })), (null != r.terms_of_service_url || null != r.privacy_policy_url || j.length > 0) && P.push((0, i.jsxs)(i.Fragment, {
+                })), (null != r.terms_of_service_url || null != r.privacy_policy_url || y.length > 0) && P.push((0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)(c.Heading, {
                         className: E.sectionHeader,
                         variant: "eyebrow",
                         children: A.default.Messages.APP_DIRECTORY_PROFILE_LINKS_HEADING
-                    }), j.map((e, t) => (0, i.jsx)(x, {
+                    }), y.map((e, t) => (0, i.jsx)(x, {
                         url: e.url,
-                        onClick: y,
+                        onClick: j,
                         children: e.name
                     }, t)), null != r.terms_of_service_url ? (0, i.jsx)(R, {
                         icon: p.default,
-                        onClick: y,
+                        onClick: j,
                         url: r.terms_of_service_url,
                         type: "tos",
                         children: A.default.Messages.APP_DIRECTORY_PROFILE_TERMS_LINK
                     }) : null, null != r.privacy_policy_url ? (0, i.jsx)(R, {
                         icon: m.default,
-                        onClick: y,
+                        onClick: j,
                         url: r.privacy_policy_url,
                         type: "policy",
                         children: A.default.Messages.APP_DIRECTORY_PROFILE_PRIVACY_LINK
@@ -3527,8 +3567,8 @@
                 T = l("915267"),
                 N = l("436846"),
                 P = l("46425"),
-                j = l("412707"),
-                y = l("838093"),
+                y = l("412707"),
+                j = l("838093"),
                 O = l("718765"),
                 S = l("49111"),
                 L = l("658072"),
@@ -3537,7 +3577,7 @@
             function M() {
                 var e;
                 let t;
-                let l = (0, j.useApplicationDirectoryHistory)(e => e.guildId),
+                let l = (0, y.useApplicationDirectoryHistory)(e => e.guildId),
                     n = (0, m.default)([I.default], () => I.default.getCategories()),
                     r = (0, o.useLocation)(),
                     {
@@ -3569,7 +3609,7 @@
                             categoryId: a,
                             page: n
                         } = e, s = new URLSearchParams(r.search);
-                        "" === i ? s.delete("q") : s.set("q", i), a === v.ALL_CATEGORY_ID ? s.delete("category_id") : s.set("category_id", null !== (t = null == a ? void 0 : a.toString()) && void 0 !== t ? t : ""), 1 === n ? s.delete("page") : s.set("page", null !== (l = null == n ? void 0 : n.toString()) && void 0 !== l ? l : ""), (0, y.replaceAppDirectoryURLWith)("".concat(S.Routes.APPLICATION_DIRECTORY_SEARCH, "?").concat(s.toString()))
+                        "" === i ? s.delete("q") : s.set("q", i), a === v.ALL_CATEGORY_ID ? s.delete("category_id") : s.set("category_id", null !== (t = null == a ? void 0 : a.toString()) && void 0 !== t ? t : ""), 1 === n ? s.delete("page") : s.set("page", null !== (l = null == n ? void 0 : n.toString()) && void 0 !== l ? l : ""), (0, j.replaceAppDirectoryURLWith)("".concat(S.Routes.APPLICATION_DIRECTORY_SEARCH, "?").concat(s.toString()))
                     }, [r.search]),
                     U = a.useMemo(() => s.debounce(w, 400), [w]);
                 a.useEffect(() => {
@@ -3624,7 +3664,7 @@
                     }),
                     X = a.useMemo(() => null == K ? void 0 : K.filter(e => !(Z === p.ApplicationDirectorySearchType.SEARCH_RESULTS && e.type !== u.ApplicationDirectorySearchResultType.APPLICATION)), [K, Z]),
                     J = a.useRef(null),
-                    Q = (0, j.getCurrentView)(),
+                    Q = (0, y.getCurrentView)(),
                     $ = a.useCallback(e => {
                         h.default.track(S.AnalyticEvents.APP_DIRECTORY_SEARCHED, {
                             search_term: x,
@@ -3671,13 +3711,13 @@
                             mutualGuilds: i
                         } = e;
                         h.default.track(S.AnalyticEvents.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
-                            current_page: j.ApplicationDirectoryViews.SEARCH,
+                            current_page: y.ApplicationDirectoryViews.SEARCH,
                             application_id: t.id,
                             load_id: q,
                             search_term: x,
                             guild_id: l,
                             shown_mutual_guilds_count: i.length
-                        }), (0, y.goToApplication)({
+                        }), (0, j.goToApplication)({
                             applicationId: t.id
                         })
                     }, [q, x, l]);
