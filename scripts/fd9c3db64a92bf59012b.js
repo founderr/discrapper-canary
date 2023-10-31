@@ -462,7 +462,7 @@
         },
         230724: function(e, t, s) {
             "use strict";
-            e.exports = s.p + "a9ecc81917a8184105af.svg"
+            e.exports = s.p + "0df9607705088b07029e.svg"
         },
         905498: function(e, t, s) {
             "use strict";
@@ -5810,7 +5810,9 @@
                         color: "header-primary",
                         className: u(A.subtitle, {
                             [A.fullWidth]: E || i,
-                            [A.moreSubtitleMargin]: P
+                            [A.moreSubtitleMargin]: P,
+                            [A.leftAlignSubtitle]: i,
+                            [A.centerAlignSubtitle]: !i
                         }),
                         children: N.subtitle
                     }), (0, r.jsx)("div", {
