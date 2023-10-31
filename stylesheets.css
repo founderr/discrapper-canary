@@ -120782,7 +120782,8 @@ input::-webkit-inner-spin-button {
     top: 16px;
     right: 16px;
     padding: 0 4px;
-    background: var(--custom-premium-colors-premium-gradient-tier-2-diagonal)
+    background: var(--custom-premium-colors-premium-gradient-tier-2-diagonal);
+    z-index: 2
 }
 
 .premiumWheel_a23f0e {
