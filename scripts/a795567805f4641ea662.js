@@ -1906,7 +1906,7 @@
                     children: [(0, a.jsx)(E.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "242171"
+                        buildNumber: "242187"
                     }), (0, a.jsx)(m, {})]
                 }) : null
             }
@@ -17133,20 +17133,6 @@
                 treatments: [{
                     id: 1,
                     label: "Enable PYMK",
-                    config: {
-                        enabled: !0
-                    }
-                }]
-            }), (0, s.createExperiment)({
-                kind: "user",
-                id: "2023-08_friend_finder_contact_sync_landing_page",
-                label: "Contact Sync landing page rework with friend finder.",
-                defaultConfig: {
-                    enabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enable contact sync landing page that has ",
                     config: {
                         enabled: !0
                     }
