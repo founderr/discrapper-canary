@@ -205,10 +205,10 @@
             "use strict";
             t.r(s), t.d(s, {
                 renderSingleLineMessage: function() {
-                    return j
+                    return w
                 },
                 default: function() {
-                    return w
+                    return y
                 }
             });
             var a = t("37983"),
@@ -222,24 +222,25 @@
                 o = t("865343"),
                 h = t("14526"),
                 g = t("38600"),
-                f = t("256572"),
-                p = t("862846"),
-                E = t("24373"),
-                M = t("83910"),
-                C = t("95689"),
-                m = t("943409"),
-                _ = t("437472"),
-                T = t("8161"),
-                v = t("315102"),
-                N = t("888400"),
-                x = t("449008"),
-                S = t("497880"),
+                f = t("119001"),
+                p = t("256572"),
+                E = t("862846"),
+                M = t("24373"),
+                C = t("83910"),
+                m = t("95689"),
+                _ = t("943409"),
+                T = t("437472"),
+                v = t("8161"),
+                N = t("315102"),
+                x = t("888400"),
+                S = t("449008"),
+                R = t("497880"),
                 I = t("719347"),
-                R = t("49111"),
-                A = t("782340"),
-                L = t("741566");
+                A = t("49111"),
+                L = t("782340"),
+                P = t("741566");
 
-            function P(e) {
+            function j(e) {
                 let {
                     width: s = 12,
                     height: t = 8,
@@ -280,34 +281,34 @@
                 })
             }
 
-            function j(e, s, t, l, n) {
+            function w(e, s, t, l, n) {
                 let r, i, c;
                 let {
                     iconClass: u,
                     iconSize: d
-                } = n, o = null == s || "" === s || Array.isArray(s) && 0 === s.length, h = (0, E.getMessageStickers)(e), g = h.length > 0, f = null != e.interaction, p = e.hasFlag(R.MessageFlags.IS_VOICE_MESSAGE);
-                return t ? r = A.default.Messages.REPLY_QUOTE_MESSAGE_BLOCKED : e.type === R.MessageTypes.CHANNEL_PINNED_MESSAGE ? r = A.default.Messages.MESSAGE_PINNED : o ? g ? r = A.default.Messages.REPLY_QUOTE_STICKER : f ? r = A.default.Messages.REPLY_QUOTE_COMMAND : p ? r = A.default.Messages.REPLY_QUOTE_VOICE_MESSAGE : (r = A.default.Messages.REPLY_QUOTE_NO_TEXT_CONTENT, c = (0, a.jsx)(C.default, {
+                } = n, o = null == s || "" === s || Array.isArray(s) && 0 === s.length, h = (0, M.getMessageStickers)(e), g = h.length > 0, f = null != e.interaction, p = e.hasFlag(A.MessageFlags.IS_VOICE_MESSAGE);
+                return t ? r = L.default.Messages.REPLY_QUOTE_MESSAGE_BLOCKED : e.type === A.MessageTypes.CHANNEL_PINNED_MESSAGE ? r = L.default.Messages.MESSAGE_PINNED : o ? g ? r = L.default.Messages.REPLY_QUOTE_STICKER : f ? r = L.default.Messages.REPLY_QUOTE_COMMAND : p ? r = L.default.Messages.REPLY_QUOTE_VOICE_MESSAGE : (r = L.default.Messages.REPLY_QUOTE_NO_TEXT_CONTENT, c = (0, a.jsx)(m.default, {
                     className: u,
                     width: d,
                     height: d
-                })) : i = (0, a.jsx)(S.default, {
+                })) : i = (0, a.jsx)(R.default, {
                     message: e,
                     content: s,
                     className: l,
                     asPartialPreview: !0
-                }), g ? c = (0, a.jsx)(_.default, {
+                }), g ? c = (0, a.jsx)(T.default, {
                     className: u,
                     width: d,
                     height: d
-                }) : f ? c = (0, a.jsx)(M.default, {
+                }) : f ? c = (0, a.jsx)(C.default, {
                     className: u,
                     width: d,
                     height: d
-                }) : p ? c = (0, a.jsx)(m.default, {
+                }) : p ? c = (0, a.jsx)(_.default, {
                     className: u,
                     width: d * (19 / 24),
                     height: d
-                }) : (e.attachments.length > 0 || e.embeds.length > 0) && (c = (0, a.jsx)(C.default, {
+                }) : (e.attachments.length > 0 || e.embeds.length > 0) && (c = (0, a.jsx)(m.default, {
                     className: u,
                     width: d,
                     height: d
@@ -318,15 +319,15 @@
                 }
             }
 
-            function w(e) {
+            function y(e) {
                 let s;
                 let {
                     repliedAuthor: t,
                     baseAuthor: n,
                     baseMessage: i,
-                    referencedMessage: E,
-                    renderPopout: M
-                } = e, C = l.useMemo(() => null != M && E.state === f.ReferencedMessageState.LOADED ? e => M(e, E.message) : void 0, [E, M]), m = l.useContext(d.default), _ = function(e, s, t) {
+                    referencedMessage: M,
+                    renderPopout: C
+                } = e, m = l.useMemo(() => null != C && M.state === p.ReferencedMessageState.LOADED ? e => C(e, M.message) : void 0, [M, C]), _ = l.useContext(d.default), T = function(e, s, t) {
                     let {
                         referencedMessage: l,
                         compact: n,
@@ -337,22 +338,22 @@
                         onContextMenu: h,
                         onPopoutRequestClose: g
                     } = e;
-                    if (n || l.state !== f.ReferencedMessageState.LOADED || i) return (0, a.jsx)("div", {
-                        className: L.replyBadge,
-                        children: (0, a.jsx)(P, {
-                            className: L.replyIcon
+                    if (n || l.state !== p.ReferencedMessageState.LOADED || i) return (0, a.jsx)("div", {
+                        className: P.replyBadge,
+                        children: (0, a.jsx)(j, {
+                            className: P.replyIcon
                         })
                     });
-                    if (l.message.type === R.MessageTypes.USER_JOIN || l.message.type === R.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE || l.message.type === R.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT || l.message.type === R.MessageTypes.GUILD_GAMING_STATS_PROMPT) return (0, a.jsx)(O, {
-                        className: L.userJoinSystemMessageIcon
+                    if (l.message.type === A.MessageTypes.USER_JOIN || l.message.type === A.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE || l.message.type === A.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT || l.message.type === A.MessageTypes.GUILD_GAMING_STATS_PROMPT) return (0, a.jsx)(O, {
+                        className: P.userJoinSystemMessageIcon
                     });
-                    if (l.message.type === R.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, a.jsx)(T.default, {
-                        className: L.ticketIcon
+                    if (l.message.type === A.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, a.jsx)(v.default, {
+                        className: P.ticketIcon
                     });
-                    let p = () => (function(e, s, t, l, n) {
+                    let f = () => (function(e, s, t, l, n) {
                         return (0, a.jsx)("img", {
                             alt: "",
-                            src: (null == s ? void 0 : s.guildMemberAvatar) != null && null != t ? (0, v.getGuildMemberAvatarURLSimple)({
+                            src: (null == s ? void 0 : s.guildMemberAvatar) != null && null != t ? (0, N.getGuildMemberAvatarURLSimple)({
                                 guildId: t,
                                 userId: e.id,
                                 avatar: s.guildMemberAvatar
@@ -360,8 +361,8 @@
                             onClick: l,
                             onContextMenu: n,
                             className: r({
-                                [L.replyAvatar]: !0,
-                                [L.clickable]: null != l
+                                [P.replyAvatar]: !0,
+                                [P.clickable]: null != l
                             })
                         })
                     })(l.message.author, c, s, o, h);
@@ -370,9 +371,9 @@
                         shouldShow: d,
                         position: "right",
                         onRequestClose: g,
-                        children: p
-                    }) : p()
-                }(e, m, C), S = function(e, s) {
+                        children: f
+                    }) : f()
+                }(e, _, m), R = function(e, s) {
                     let {
                         baseMessage: t,
                         channel: l,
@@ -381,12 +382,12 @@
                         onClickUsername: i,
                         onContextMenu: c,
                         onPopoutRequestClose: u
-                    } = e, d = (null == n ? void 0 : n.state) === f.ReferencedMessageState.LOADED ? n.message : void 0;
-                    return null == d || d.type === R.MessageTypes.USER_JOIN || d.type === R.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE || d.type === R.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || d.type === R.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT || d.type === R.MessageTypes.GUILD_GAMING_STATS_PROMPT ? null : (0, a.jsx)(h.default, {
+                    } = e, d = (null == n ? void 0 : n.state) === p.ReferencedMessageState.LOADED ? n.message : void 0;
+                    return null == d || d.type === A.MessageTypes.USER_JOIN || d.type === A.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE || d.type === A.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || d.type === A.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT || d.type === A.MessageTypes.GUILD_GAMING_STATS_PROMPT ? null : (0, a.jsx)(h.default, {
                         message: d,
                         channel: l,
                         compact: !0,
-                        withMentionPrefix: (0, p.default)(t, d),
+                        withMentionPrefix: (0, E.default)(t, d),
                         showPopout: r,
                         renderPopout: s,
                         onClick: i,
@@ -394,65 +395,68 @@
                         onPopoutRequestClose: u,
                         isRepliedMessage: !0
                     })
-                }(e, C), w = function(e) {
+                }(e, m), y = function(e) {
                     let {
                         content: s,
                         referencedMessage: t,
                         isReplyAuthorBlocked: l
-                    } = e, n = t.state !== f.ReferencedMessageState.DELETED ? e.onClickReply : void 0;
+                    } = e, n = t.state !== p.ReferencedMessageState.DELETED ? e.onClickReply : void 0;
                     switch (t.state) {
-                        case f.ReferencedMessageState.LOADED: {
+                        case p.ReferencedMessageState.LOADED: {
                             let {
                                 contentPlaceholder: e,
                                 renderedContent: i,
                                 icon: c
-                            } = j(t.message, s, l, L.repliedTextContent, {
-                                iconClass: L.repliedTextContentIcon,
+                            } = w(t.message, s, l, P.repliedTextContent, {
+                                iconClass: P.repliedTextContentIcon,
                                 iconSize: I.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
-                            });
+                            }), d = t.message.isPoll() ? (0, a.jsx)(f.default, {
+                                isRepliedPoll: !0,
+                                className: P.pollBadgeReplied
+                            }) : null;
                             return (0, a.jsxs)(a.Fragment, {
                                 children: [(0, a.jsx)(u.Clickable, {
-                                    className: r(L.repliedTextPreview, L.clickable),
+                                    className: r(P.repliedTextPreview, P.clickable),
                                     onClick: n,
                                     children: (0, a.jsx)(u.BlockInteractions, {
                                         children: null != i ? i : (0, a.jsx)("span", {
-                                            className: L.repliedTextPlaceholder,
+                                            className: P.repliedTextPlaceholder,
                                             children: e
                                         })
                                     })
-                                }), c]
+                                }), c, d]
                             })
                         }
-                        case f.ReferencedMessageState.NOT_LOADED:
+                        case p.ReferencedMessageState.NOT_LOADED:
                             return (0, a.jsx)(u.Clickable, {
-                                className: r(L.repliedTextPreview, L.clickable),
+                                className: r(P.repliedTextPreview, P.clickable),
                                 onClick: n,
                                 children: (0, a.jsx)("span", {
-                                    className: L.repliedTextPlaceholder,
-                                    children: A.default.Messages.REPLY_QUOTE_MESSAGE_NOT_LOADED
+                                    className: P.repliedTextPlaceholder,
+                                    children: L.default.Messages.REPLY_QUOTE_MESSAGE_NOT_LOADED
                                 })
                             });
-                        case f.ReferencedMessageState.DELETED:
+                        case p.ReferencedMessageState.DELETED:
                             return (0, a.jsx)("div", {
-                                className: L.repliedTextPreview,
+                                className: P.repliedTextPreview,
                                 children: (0, a.jsx)("span", {
-                                    className: L.repliedTextPlaceholder,
-                                    children: A.default.Messages.REPLY_QUOTE_MESSAGE_DELETED
+                                    className: P.repliedTextPlaceholder,
+                                    children: L.default.Messages.REPLY_QUOTE_MESSAGE_DELETED
                                 })
                             });
                         default:
-                            (0, x.assertNever)(t)
+                            (0, S.assertNever)(t)
                     }
-                }(e), y = l.useMemo(() => e.compact ? (0, g.default)((0, N.dateFormat)(c(), "LT")) : null, [e.compact]);
-                if (null != t && null != n) s = A.default.Messages.CHANNEL_MESSAGE_REPLY_A11Y_LABEL.format({
+                }(e), D = l.useMemo(() => e.compact ? (0, g.default)((0, x.dateFormat)(c(), "LT")) : null, [e.compact]);
+                if (null != t && null != n) s = L.default.Messages.CHANNEL_MESSAGE_REPLY_A11Y_LABEL.format({
                     author: null == n ? void 0 : n.nick,
                     repliedAuthor: null == t ? void 0 : t.nick
                 });
                 return (0, a.jsxs)("div", {
                     id: (0, o.getMessageReplyId)(i),
-                    className: r(L.repliedMessage, y),
+                    className: r(P.repliedMessage, D),
                     "aria-label": s,
-                    children: [_, S, w]
+                    children: [T, R, y]
                 })
             }
         }
