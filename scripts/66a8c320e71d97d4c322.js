@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["31825"], {
+    ["8842"], {
         54239: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -2083,7 +2083,7 @@
                 } = e, S = (0, a.useStateFromStores)([I.default], () => I.default.getGuildScheduledEvent(n), [n]), R = null == S ? void 0 : S.id, D = null == S ? void 0 : S.guild_id, {
                     guild: P,
                     isMember: G
-                } = (0, f.default)(D, R), y = (0, o.default)(u), b = null == S ? void 0 : S.channel_id, x = (0, a.useStateFromStores)([d.default], () => d.default.getChannel(b), [b]), w = (0, c.useUID)(), [V, B] = i.useState(M.EventDetailSections.EVENT_INFO), H = (0, a.useStateFromStoresArray)([I.default], () => Object.values(I.default.getUsersForGuildEvent(R)), [R]), [j, {
+                } = (0, f.default)(D, R), y = (0, o.default)(u), b = null == S ? void 0 : S.channel_id, x = (0, a.useStateFromStores)([d.default], () => d.default.getChannel(b), [b]), w = (0, c.useUID)(), [B, V] = i.useState(M.EventDetailSections.EVENT_INFO), H = (0, a.useStateFromStoresArray)([I.default], () => Object.values(I.default.getUsersForGuildEvent(R)), [R]), [j, {
                     loading: k,
                     error: F
                 }] = (0, E.default)(() => T.default.getGuildEventUsers(null == S ? void 0 : S.id, D));
@@ -2100,7 +2100,7 @@
                         Z(null !== (t = null == Y ? void 0 : null === (e = Y.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 0)
                     }, [Y]), null == S || null == P || !G && !y) return null;
                 let K = e => {
-                        e !== V && (e === M.EventDetailSections.RSVP_LIST && j(), B(e))
+                        e !== B && (e === M.EventDetailSections.RSVP_LIST && j(), V(e))
                     },
                     X = null !== (t = null == S ? void 0 : S.user_count) && void 0 !== t ? t : 0,
                     z = null == p && null != S.recurrence_rule ? s.default.fromTimestamp(Math.floor(new Date(S.scheduled_start_time).getTime() / U.Durations.SECOND)) : p;
@@ -2114,7 +2114,7 @@
                         className: g.banner
                     }), (0, l.jsx)(L.default, {
                         onClose: h,
-                        selectedTab: V,
+                        selectedTab: B,
                         onTabSelected: K,
                         rsvpCount: X,
                         hasBanner: (null == S ? void 0 : S.image) != null,
@@ -2127,7 +2127,7 @@
                                 height: W
                             },
                             children: (0, l.jsxs)(r.Slides, {
-                                activeSlide: V,
+                                activeSlide: B,
                                 width: 600,
                                 centered: !1,
                                 children: [(0, l.jsx)(r.Slide, {
@@ -3258,6 +3258,23 @@
             function r() {
                 return (0, s.isAndroid)(), null
             }(l = i || (i = {})).REMINDER = "reminder", l.TOP_MESSAGE_PUSH = "top_messages_push", l.TRENDING_CONTENT_PUSH = "trending_content_push"
+        },
+        520497: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return i
+                }
+            });
+            var l = n("49111");
+
+            function i(e) {
+                let {
+                    CDN_HOST: t,
+                    PROJECT_ENV: n
+                } = window.GLOBAL_ENV;
+                return "development" !== n ? "".concat(location.protocol, "//").concat(t).concat(l.Endpoints.SOUNDBOARD_SOUND(e)) : "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(l.Endpoints.SOUNDBOARD_SOUND(e))
+            }
         },
         4233: function(e, t, n) {
             "use strict";

@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["98695"], {
+    ["54200"], {
         48174: function(e, t, n) {
             "use strict";
 
@@ -186,7 +186,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return v
+                    return I
                 }
             });
             var s = n("37983"),
@@ -205,12 +205,12 @@
                 g = n("49111"),
                 E = n("353927"),
                 R = n("782340"),
-                T = n("686084"),
-                _ = n("926622");
+                _ = n("686084"),
+                T = n("926622");
             let C = (0, m.uid)(),
-                M = (0, m.uid)(),
-                O = (0, m.uid)();
-            class D extends l.PureComponent {
+                O = (0, m.uid)(),
+                D = (0, m.uid)();
+            class M extends l.PureComponent {
                 handleValueRender(e) {
                     return "".concat((-((100 - e) * 1)).toFixed(0), "dB")
                 }
@@ -220,7 +220,7 @@
                     } = this.props;
                     return (0, s.jsx)(m.UID, {
                         children: t => (0, s.jsxs)(f.default, {
-                            className: _.marginBottom4,
+                            className: T.marginBottom4,
                             children: [(0, s.jsx)(u.FormTitle, {
                                 tag: u.FormTitleTags.H3,
                                 children: (0, s.jsx)("label", {
@@ -250,7 +250,7 @@
                 render() {
                     return (0, s.jsxs)(u.FormItem, {
                         title: R.default.Messages.FORM_LABEL_INPUT_SENSITIVTY,
-                        className: _.marginBottom8,
+                        className: T.marginBottom8,
                         children: [this.renderAutomaticVADToggle(), this.renderSlider()]
                     })
                 }
@@ -270,7 +270,7 @@
                     }
                 }
             }
-            let I = a.default.connectStores([h.default], e => {
+            let v = a.default.connectStores([h.default], e => {
                 let {
                     mediaEngineContext: t
                 } = e;
@@ -297,17 +297,17 @@
                         vadAutoThreshold: f,
                         inputDevices: m,
                         inputDeviceId: E,
-                        inputVolume: T,
-                        outputDeviceId: I,
-                        outputDevices: v,
-                        outputVolume: x,
-                        speaking: N = !1
+                        inputVolume: _,
+                        outputDeviceId: v,
+                        outputDevices: I,
+                        outputVolume: N,
+                        speaking: x = !1
                     } = e,
-                    b = i.first(m),
-                    S = null != b && b.disabled,
-                    U = i.first(v),
-                    j = null != U && U.disabled,
-                    A = [{
+                    S = i.first(m),
+                    U = null != S && S.disabled,
+                    b = i.first(I),
+                    A = null != b && b.disabled,
+                    V = [{
                         value: g.InputModes.VOICE_ACTIVITY,
                         name: R.default.Messages.INPUT_MODE_VAD
                     }, {
@@ -317,7 +317,7 @@
                 return t = r === g.InputModes.PUSH_TO_TALK ? (0, s.jsxs)(l.Fragment, {
                     children: [(0, s.jsx)(u.FormItem, {
                         title: R.default.Messages.FORM_LABEL_SHORTCUT,
-                        className: _.marginBottom20,
+                        className: T.marginBottom20,
                         children: (0, s.jsx)(d.default, {
                             defaultValue: a,
                             onChange: e => o.default.setMode(r, {
@@ -325,7 +325,7 @@
                             }, n)
                         })
                     }), (0, s.jsxs)(u.FormItem, {
-                        className: _.marginBottom8,
+                        className: T.marginBottom8,
                         children: [(0, s.jsx)(u.FormTitle, {
                             id: C,
                             children: R.default.Messages.INPUT_MODE_PTT_RELEASE_DELAY
@@ -339,8 +339,8 @@
                             "aria-labelledby": C
                         })]
                     })]
-                }) : (0, s.jsx)(D, {
-                    speaking: N,
+                }) : (0, s.jsx)(M, {
+                    speaking: x,
                     inputMode: r,
                     threshold: h,
                     autoThreshold: f,
@@ -351,7 +351,7 @@
                 }), (0, s.jsxs)(l.Fragment, {
                     children: [(0, s.jsx)(u.FormItem, {
                         title: R.default.Messages.FORM_LABEL_INPUT_DEVICE,
-                        className: _.marginBottom20,
+                        className: T.marginBottom20,
                         children: (0, s.jsx)(u.SingleSelect, {
                             value: E,
                             onChange: e => o.default.setInputDevice(e, "Voice Settings"),
@@ -365,25 +365,25 @@
                                     label: n
                                 }
                             }),
-                            isDisabled: S
+                            isDisabled: U
                         })
                     }), (0, s.jsxs)(u.FormItem, {
-                        className: _.marginBottom20,
+                        className: T.marginBottom20,
                         children: [(0, s.jsx)(u.FormTitle, {
-                            id: M,
+                            id: O,
                             children: R.default.Messages.FORM_LABEL_INPUT_VOLUME
                         }), (0, s.jsx)(u.Slider, {
-                            initialValue: (0, p.amplitudeToPerceptual)(T),
+                            initialValue: (0, p.amplitudeToPerceptual)(_),
                             asValueChanges: e => o.default.setInputVolume((0, p.perceptualToAmplitude)(e)),
-                            "aria-labelledby": M
+                            "aria-labelledby": O
                         })]
                     }), (0, s.jsx)(u.FormItem, {
                         title: R.default.Messages.FORM_LABEL_OUTPUT_DEVICE,
-                        className: _.marginBottom20,
+                        className: T.marginBottom20,
                         children: (0, s.jsx)(u.SingleSelect, {
-                            value: I,
+                            value: v,
                             onChange: e => o.default.setOutputDevice(e, "Voice Settings"),
-                            options: i.map(v, e => {
+                            options: i.map(I, e => {
                                 let {
                                     id: t,
                                     name: n
@@ -393,22 +393,22 @@
                                     label: n
                                 }
                             }),
-                            isDisabled: j
+                            isDisabled: A
                         })
                     }), (0, s.jsxs)(u.FormItem, {
-                        className: _.marginBottom20,
+                        className: T.marginBottom20,
                         children: [(0, s.jsx)(u.FormTitle, {
-                            id: O,
+                            id: D,
                             children: R.default.Messages.FORM_LABEL_OUTPUT_VOLUME
                         }), (0, s.jsx)(u.Slider, {
-                            initialValue: (0, p.amplitudeToPerceptual)(x),
+                            initialValue: (0, p.amplitudeToPerceptual)(N),
                             maxValue: 200,
                             asValueChanges: e => o.default.setOutputVolume((0, p.perceptualToAmplitude)(e)),
-                            "aria-labelledby": O
+                            "aria-labelledby": D
                         })]
                     }), (0, s.jsx)(u.FormItem, {
                         title: R.default.Messages.FORM_LABEL_INPUT_MODE,
-                        className: _.marginBottom20,
+                        className: T.marginBottom20,
                         children: (0, s.jsx)(u.RadioGroup, {
                             onChange: e => {
                                 let {
@@ -416,14 +416,14 @@
                                 } = e;
                                 return o.default.setMode(t, {}, n)
                             },
-                            options: A,
+                            options: V,
                             value: r
                         })
                     }), t]
                 })
             });
 
-            function v(e) {
+            function I(e) {
                 var t;
                 return (0, c.default)(() => {
                     null != g.CURRENT_APP_CONTEXT && e.onClose()
@@ -434,11 +434,11 @@
                         children: [(0, s.jsxs)(f.default.Child, {
                             children: [(0, s.jsx)(u.FormTitle, {
                                 tag: "h1",
-                                className: _.marginReset,
+                                className: T.marginReset,
                                 children: R.default.Messages.VOICE_SETTINGS
                             }), (0, s.jsx)(u.Text, {
                                 variant: "text-xs/normal",
-                                className: T.title,
+                                className: _.title,
                                 children: e.title
                             })]
                         }), (0, s.jsx)(f.default.Child, {
@@ -448,7 +448,7 @@
                             })
                         })]
                     }), (0, s.jsx)(u.ModalContent, {
-                        children: (0, s.jsx)(I, {
+                        children: (0, s.jsx)(v, {
                             mediaEngineContext: null !== (t = e.mediaEngineContext) && void 0 !== t ? t : E.MediaEngineContextTypes.DEFAULT
                         })
                     })]
@@ -516,6 +516,44 @@
                 }, [])
             }
         },
+        520497: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return l
+                }
+            });
+            var s = n("49111");
+
+            function l(e) {
+                let {
+                    CDN_HOST: t,
+                    PROJECT_ENV: n
+                } = window.GLOBAL_ENV;
+                return "development" !== n ? "".concat(location.protocol, "//").concat(t).concat(s.Endpoints.SOUNDBOARD_SOUND(e)) : "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(s.Endpoints.SOUNDBOARD_SOUND(e))
+            }
+        },
+        812809: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return i
+                }
+            });
+            var s = n("845579"),
+                l = n("42887"),
+                r = n("829536");
+
+            function i(e) {
+                let t = function() {
+                        var e;
+                        let t = s.SoundboardSettings.getSetting();
+                        return (0, r.amplitudeToPerceptual)(null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 100) / 100
+                    }(),
+                    n = Math.min(l.default.getOutputVolume() / 100, 1);
+                return Math.min(e * t * n, 1)
+            }
+        },
         3958: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -523,7 +561,7 @@
                     return l
                 },
                 default: function() {
-                    return _
+                    return T
                 }
             });
             var s, l, r = n("37983"),
@@ -544,7 +582,7 @@
                 [l.DEFAULT]: E.default,
                 [l.RECORDING]: E.recording
             };
-            class T extends i.PureComponent {
+            class _ extends i.PureComponent {
                 componentWillUnmount() {
                     null != this._unregisterNativeRecorder && this._unregisterNativeRecorder()
                 }
@@ -649,7 +687,7 @@
                     }
                 }
             }
-            var _ = T
+            var T = _
         },
         476765: function(e, t, n) {
             "use strict";

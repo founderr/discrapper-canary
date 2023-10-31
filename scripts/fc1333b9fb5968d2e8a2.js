@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["54714"], {
+    ["77857"], {
         458389: function(e, t, n) {
             var i = n("594140"),
                 r = n("564414"),
@@ -2106,8 +2106,8 @@
                         className: T,
                         imageClassName: S,
                         iconClassName: A,
-                        iconWrapperClassName: L,
-                        icon: N,
+                        iconWrapperClassName: N,
+                        icon: L,
                         hideSize: R,
                         imageStyle: y,
                         showRemoveButton: M,
@@ -2129,7 +2129,7 @@
                             },
                             children: [r, v && (0, i.jsx)("div", {
                                 className: s(p.imageUploaderIcon, p.imageUploaderIconDisabled, A),
-                                children: N
+                                children: L
                             })]
                         })
                     });
@@ -2149,7 +2149,7 @@
                         children: [(0, i.jsx)(u.FocusRing, {
                             within: !0,
                             children: (0, i.jsxs)("div", {
-                                className: g ? s(p.imageUploaderIconWrapper, L) : void 0,
+                                className: g ? s(p.imageUploaderIconWrapper, N) : void 0,
                                 children: [(0, i.jsxs)("div", {
                                     className: s(p.imageUploaderInner, S),
                                     style: {
@@ -2178,7 +2178,7 @@
                                     children: o
                                 }), g && (0, i.jsx)(E, {
                                     className: A,
-                                    icon: N
+                                    icon: L
                                 })]
                             })
                         }), M ? l : null]
@@ -2356,8 +2356,8 @@
                     giftMessage: T,
                     subscriptionTier: S,
                     trialId: A,
-                    postSuccessGuild: L,
-                    openInvoiceId: N,
+                    postSuccessGuild: N,
+                    openInvoiceId: L,
                     applicationId: R,
                     referralTrialOfferId: y,
                     giftRecipient: M,
@@ -2394,9 +2394,9 @@
                             analyticsLocation: _,
                             analyticsSourceLocation: g,
                             trialId: A,
-                            postSuccessGuild: L,
+                            postSuccessGuild: N,
                             planGroup: f.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
-                            openInvoiceId: N,
+                            openInvoiceId: L,
                             applicationId: R,
                             referralTrialOfferId: y,
                             returnRef: O
@@ -2840,7 +2840,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return N
+                    return L
                 }
             });
             var i = n("37983"),
@@ -2896,7 +2896,7 @@
                 })
             }
 
-            function L(e) {
+            function N(e) {
                 let {
                     user: t,
                     purchasedProfileEffects: n,
@@ -2910,7 +2910,7 @@
                         i = null != t || null === f,
                         r = null !== (e = null != t ? t : l.find(e => (null == e ? void 0 : e.id) === f)) && void 0 !== e ? e : null;
                     return [r, i]
-                }, [f, n, l]), I = r.useRef(null), v = f === (void 0 === d ? null != c ? c : null : d), L = r.useCallback(e => {
+                }, [f, n, l]), I = r.useRef(null), v = f === (void 0 === d ? null != c ? c : null : d), N = r.useCallback(e => {
                     h(e)
                 }, [h]);
                 return (0, i.jsxs)(i.Fragment, {
@@ -2938,7 +2938,7 @@
                             selectedProfileEffectRef: I,
                             purchasedProfileEffects: n,
                             previewEffects: l,
-                            onSelect: L,
+                            onSelect: N,
                             onClose: o
                         }), (0, i.jsx)(_.default, {
                             user: t,
@@ -2956,7 +2956,7 @@
                 })
             }
 
-            function N(e) {
+            function L(e) {
                 var t;
                 let {
                     transitionState: n,
@@ -2968,7 +2968,7 @@
                     categories: g,
                     purchases: T
                 } = (0, h.default)(), A = (0, s.useStateFromStores)([m.default], () => m.default.getCurrentUser()), {
-                    AnalyticsLocationProvider: N,
+                    AnalyticsLocationProvider: L,
                     analyticsLocations: R
                 } = (0, c.default)(o, u.default.EDIT_PROFILE_EFFECT_MODAL), [y, M] = r.useMemo(() => {
                     let e = (0, f.groupProfileEffects)(g, T);
@@ -2984,7 +2984,7 @@
                         categories: [...g.values()],
                         itemTypes: [l.CollectiblesItemType.PROFILE_EFFECT]
                     })
-                }, [g]), null == A ? null : (0, i.jsx)(N, {
+                }, [g]), null == A ? null : (0, i.jsx)(L, {
                     children: (0, i.jsx)(a.ModalRoot, {
                         transitionState: n,
                         size: a.ModalSize.DYNAMIC,
@@ -2992,7 +2992,7 @@
                         children: _ ? (0, i.jsx)(a.Spinner, {
                             className: S.spinner,
                             type: a.Spinner.Type.SPINNING_CIRCLE
-                        }) : (0, i.jsx)(L, {
+                        }) : (0, i.jsx)(N, {
                             user: A,
                             purchasedProfileEffects: y,
                             previewEffects: M,
@@ -3084,7 +3084,7 @@
                     pendingGlobalName: T,
                     pendingAccentColor: S,
                     pendingAvatarDecoration: A,
-                    pendingThemeColors: L
+                    pendingThemeColors: N
                 } = (0, r.useStateFromStoresObject)([m.default], () => {
                     let e = m.default.getAllPending(),
                         t = m.default.getErrors();
@@ -3092,7 +3092,7 @@
                         ...e,
                         errors: t
                     }
-                }), N = I.default.isPremium(n), R = (0, h.default)(n.id), y = !!(null == R ? void 0 : R.getPreviewBio(p).value), M = E.UseLegacyChatInput.useSetting(), O = M && null != p ? c.default.parse(void 0, p).content : p, x = I.default.canUsePremiumProfileCustomization(n), P = (null == R ? void 0 : R.canUsePremiumProfileCustomization) || x, b = {
+                }), L = I.default.isPremium(n), R = (0, h.default)(n.id), y = !!(null == R ? void 0 : R.getPreviewBio(p).value), M = E.UseLegacyChatInput.useSetting(), O = M && null != p ? c.default.parse(void 0, p).content : p, x = I.default.canUsePremiumProfileCustomization(n), P = (null == R ? void 0 : R.canUsePremiumProfileCustomization) || x, b = {
                     user: n,
                     canUsePremiumCustomization: x,
                     onUpsellClick: C.default,
@@ -3104,7 +3104,7 @@
                     pendingAvatar: o,
                     pendingGlobalName: T,
                     pendingAvatarDecoration: A,
-                    pendingThemeColors: L,
+                    pendingThemeColors: N,
                     pendingAccentColor: S,
                     pendingProfileEffectID: null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : null,
                     hideFakeActivity: y
@@ -3118,7 +3118,7 @@
                     }), !1, (0, i.jsx)(v, {
                         effectIsOwned: a,
                         pendingProfileEffectRecord: l,
-                        userIsPremium: N
+                        userIsPremium: L
                     })]
                 })
             }
@@ -3150,9 +3150,9 @@
                 T = n("49111"),
                 S = n("782340"),
                 A = n("361451"),
-                L = n("513002");
+                N = n("513002");
             (i = r || (r = {}))[i.PURCHASED = 0] = "PURCHASED", i[i.PREVIEW = 1] = "PREVIEW";
-            let N = () => 80,
+            let L = () => 80,
                 R = e => {
                     let {
                         children: t,
@@ -3180,15 +3180,15 @@
                         accessibilityLabel: C,
                         thumbnailPreviewSrc: m,
                         title: g
-                    } = null !== (t = null == f ? void 0 : f.config) && void 0 !== t ? t : {}, [T, N] = s.useState(o);
+                    } = null !== (t = null == f ? void 0 : f.config) && void 0 !== t ? t : {}, [T, L] = s.useState(o);
                     return s.useEffect(() => {
-                        o && N(!0)
+                        o && L(!0)
                     }, [o]), (0, l.jsxs)(R, {
                         innerRef: null != i ? i : E,
                         isSelected: o,
                         ...u,
                         children: [(0, l.jsx)("img", {
-                            src: L,
+                            src: N,
                             alt: C,
                             className: A.presetEffectBackground
                         }), (0, l.jsx)("img", {
@@ -3238,7 +3238,7 @@
                 } = e, I = () => {
                     p(), (0, h.pushLayer)(T.Layers.COLLECTIBLES_SHOP)
                 }, _ = g.default.canUsePremiumProfileCustomization(n), v = o.length > 0, {
-                    shopForAllEnabled: L
+                    shopForAllEnabled: N
                 } = (0, E.default)({
                     location: "ProfileEffectSelection"
                 }), x = 0 === c.length, P = s.useMemo(() => {
@@ -3252,9 +3252,9 @@
                             items: c,
                             header: S.default.Messages.PROFILE_EFFECT_MODAL_SHOP_PREVIEW_HEADER
                         },
-                        n = !!v || _ || L;
+                        n = !!v || _ || N;
                     return x ? [e] : n ? [e, t] : [t]
-                }, [o, c, _, v, x, L]), b = null != i;
+                }, [o, c, _, v, x, N]), b = null != i;
                 return (0, l.jsx)("section", {
                     children: (0, l.jsx)(f.MasonryList, {
                         fade: !0,
@@ -3330,10 +3330,27 @@
                             var i;
                             return null !== (t = null === (i = P[e].items[n]) || void 0 === i ? void 0 : i.id) && void 0 !== t ? t : null
                         },
-                        getItemHeight: N,
+                        getItemHeight: L,
                         removeEdgeItemGutters: !0
                     })
                 })
+            }
+        },
+        520497: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var i = n("49111");
+
+            function r(e) {
+                let {
+                    CDN_HOST: t,
+                    PROJECT_ENV: n
+                } = window.GLOBAL_ENV;
+                return "development" !== n ? "".concat(location.protocol, "//").concat(t).concat(i.Endpoints.SOUNDBOARD_SOUND(e)) : "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(i.Endpoints.SOUNDBOARD_SOUND(e))
             }
         },
         590456: function(e, t, n) {

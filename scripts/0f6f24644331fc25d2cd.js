@@ -9810,7 +9810,7 @@
             function d() {
                 var e, t, s, n, d, u, c, S, E;
                 let T = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    f = (e = "6aa6af341c3a145bd232447d64b255a8efcb4dbe", e.substring(0, 7)),
+                    f = (e = "2d70a9381a17672a8ae476abf76a198cfa4111b1", e.substring(0, 7)),
                     m = null === (t = r.default) || void 0 === t ? void 0 : t.remoteApp.getVersion(),
                     _ = null === (n = r.default) || void 0 === n ? void 0 : null === (s = (d = n.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(d),
                     I = null === (c = r.default) || void 0 === c ? void 0 : null === (u = (S = c.remoteApp).getAppArch) || void 0 === u ? void 0 : u.call(S),
@@ -9823,7 +9823,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [T, " ", "242235", " ", (0, a.jsxs)("span", {
+                        children: [T, " ", "242243", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", f, ")"]
                         })]
@@ -17997,19 +17997,24 @@
                     }, {
                         value: S.ExplicitContentRedaction.BLOCK,
                         label: H.default.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLOCK
-                    }], i = [{
+                    }], r = [{
                         value: S.ExplicitContentRedaction.BLUR,
                         label: H.default.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
-                    }], r = {
+                    }], o = {
                         value: S.ExplicitContentRedaction.SHOW,
                         label: H.default.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_SHOW
                     };
-                    return n && (l.unshift(r), i.unshift(r)), (0, a.jsxs)(a.Fragment, {
+                    return n && (l.unshift(o), r.unshift(o)), (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(E.FormTitle, {
                             tag: E.FormTitleTags.H5,
                             faded: !0,
                             className: V.marginBottom8,
-                            children: H.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER
+                            children: (0, a.jsxs)("div", {
+                                className: i(w.betaTagContainer),
+                                children: [H.default.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, (0, a.jsx)(N.default, {
+                                    className: w.betaTagIcon
+                                })]
+                            })
                         }), (0, a.jsx)(E.FormText, {
                             type: E.FormTextTypes.DESCRIPTION,
                             className: V.marginBottom8,
@@ -18043,7 +18048,7 @@
                             className: V.marginBottom20,
                             title: H.default.Messages.OBSCURED_CONTENT_SETTING_GUILDS,
                             children: (0, a.jsx)(E.SingleSelect, {
-                                options: i,
+                                options: r,
                                 value: e,
                                 onChange: e => (0, h.updateExplicitContentSetting)({
                                     explicitContentGuilds: e

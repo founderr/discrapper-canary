@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["85242"], {
+    ["869"], {
         458389: function(e, t, n) {
             var i = n("594140"),
                 r = n("564414"),
@@ -1531,6 +1531,44 @@
                 return (0, a.isAndroid)(), null
             }(i = r || (r = {})).REMINDER = "reminder", i.TOP_MESSAGE_PUSH = "top_messages_push", i.TRENDING_CONTENT_PUSH = "trending_content_push"
         },
+        520497: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var i = n("49111");
+
+            function r(e) {
+                let {
+                    CDN_HOST: t,
+                    PROJECT_ENV: n
+                } = window.GLOBAL_ENV;
+                return "development" !== n ? "".concat(location.protocol, "//").concat(t).concat(i.Endpoints.SOUNDBOARD_SOUND(e)) : "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(i.Endpoints.SOUNDBOARD_SOUND(e))
+            }
+        },
+        812809: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return l
+                }
+            });
+            var i = n("845579"),
+                r = n("42887"),
+                a = n("829536");
+
+            function l(e) {
+                let t = function() {
+                        var e;
+                        let t = i.SoundboardSettings.getSetting();
+                        return (0, a.amplitudeToPerceptual)(null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 100) / 100
+                    }(),
+                    n = Math.min(r.default.getOutputVolume() / 100, 1);
+                return Math.min(e * t * n, 1)
+            }
+        },
         244480: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -1924,7 +1962,7 @@
                         onSelect: o
                     } = e, s = (0, N.default)(t.id), C = (0, S.default)(t.id), M = (0, A.default)(t), U = (0, T.default)({
                         user: t
-                    }), L = (0, c.default)(t), g = (0, R.default)(t.id), h = (0, O.default)(t.id), P = (0, p.default)(t.id, l), D = (0, f.default)(t), v = (0, u.default)(null, t), y = (0, d.default)(t), b = (0, I.default)(t), G = (0, E.default)({
+                    }), L = (0, c.default)(t), g = (0, R.default)(t.id), h = (0, O.default)(t.id), P = (0, p.default)(t.id, l), D = (0, f.default)(t), v = (0, u.default)(null, t), y = (0, d.default)(t), G = (0, I.default)(t), b = (0, E.default)({
                         id: t.id,
                         label: m.default.Messages.COPY_ID_USER
                     }), V = (0, _.default)(t), F = t.isNonUserBot();
@@ -1943,10 +1981,10 @@
                             }), (0, i.jsx)(r.MenuGroup, {
                                 children: v
                             }), (0, i.jsxs)(r.MenuGroup, {
-                                children: [n && P, D, y, b]
+                                children: [n && P, D, y, G]
                             })]
                         }), (0, i.jsx)(r.MenuGroup, {
-                            children: G
+                            children: b
                         })]
                     })
                 }, {
