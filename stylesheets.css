@@ -9300,7 +9300,8 @@ html.decorate-links .lowSaturationUnderline__95e71 {
 
 .listItemText_d903ca {
     overflow: hidden;
-    text-overflow: ellipsis
+    text-overflow: ellipsis;
+    margin-left: 8px
 }
 
 .listItemArrow__8205e {
