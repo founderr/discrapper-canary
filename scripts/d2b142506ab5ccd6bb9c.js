@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["74221"], {
+    ["31364"], {
         856670: function(e, t, n) {
             "use strict";
             e.exports = n.p + "018197f71e03e53562e7.svg"
@@ -267,10 +267,10 @@
                     return N
                 },
                 saveAccountChanges: function() {
-                    return O
+                    return p
                 },
                 getHarvestStatus: function() {
-                    return p
+                    return O
                 },
                 requestHarvest: function() {
                     return C
@@ -279,10 +279,10 @@
                     return A
                 },
                 setPendingGlobalNameName: function() {
-                    return R
+                    return h
                 },
                 setPendingAvatarDecoration: function() {
-                    return h
+                    return R
                 },
                 setPendingProfileEffectID: function() {
                     return L
@@ -371,7 +371,7 @@
                 }), t
             }
 
-            function O(e) {
+            function p(e) {
                 let {
                     username: t,
                     discriminator: n,
@@ -427,7 +427,7 @@
                 }), e))
             }
 
-            function p() {
+            function O() {
                 return i.default.get({
                     url: E.Endpoints.USER_HARVEST,
                     oldFormErrors: !0
@@ -448,14 +448,14 @@
                 }), null == e ? l.AccessibilityAnnouncer.announce(I.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : l.AccessibilityAnnouncer.announce(I.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
             }
 
-            function R(e) {
+            function h(e) {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME",
                     globalName: e
                 })
             }
 
-            function h(e) {
+            function R(e) {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION",
                     avatarDecoration: e
@@ -719,8 +719,8 @@
                     } = this.props, {
                         code: S,
                         errorMessage: N,
-                        retrySuccess: O
-                    } = this.state, p = r.Children.count(l) > 0 ? (0, i.jsx)(a.Card, {
+                        retrySuccess: p
+                    } = this.state, O = r.Children.count(l) > 0 ? (0, i.jsx)(a.Card, {
                         type: a.Card.Types.WARNING,
                         className: u.card,
                         children: (0, i.jsx)(a.Text, {
@@ -737,7 +737,7 @@
                                 children: T
                             })
                         })]
-                    }) : null, A = O ? (0, i.jsx)(a.Card, {
+                    }) : null, A = p ? (0, i.jsx)(a.Card, {
                         type: a.Card.Types.SUCCESS,
                         className: u.card,
                         children: (0, i.jsx)(a.Text, {
@@ -761,7 +761,7 @@
                                     variant: "text-md/normal",
                                     className: u.spacing,
                                     children: I
-                                }) : null, p, A, (0, i.jsxs)(a.FormItem, {
+                                }) : null, O, A, (0, i.jsxs)(a.FormItem, {
                                     title: this.getLabelText(),
                                     className: u.spacing,
                                     children: [(0, i.jsx)(a.TextInput, {
@@ -1798,10 +1798,10 @@
                     return N
                 },
                 SOUNDBOARD_PICKER_TAB_ID: function() {
-                    return O
+                    return p
                 },
                 REACTION_PICKER_TAB_PANEL_ID: function() {
-                    return p
+                    return O
                 },
                 REACTION_PICKER_TAB_ID: function() {
                     return C
@@ -1813,10 +1813,10 @@
                     return s
                 },
                 GIF_PICKER_TAB_PANEL_ID: function() {
-                    return R
+                    return h
                 },
                 GIF_PICKER_TAB_ID: function() {
-                    return h
+                    return R
                 },
                 EMOJI_SIZE_MAP: function() {
                     return L
@@ -1832,13 +1832,13 @@
             let f = "emoji-picker-tab-panel",
                 S = "emoji-picker-tab",
                 N = "soundboard-picker-tab-panel",
-                O = "soundboard-picker-tab",
-                p = "reaction-picker-tab-panel",
+                p = "soundboard-picker-tab",
+                O = "reaction-picker-tab-panel",
                 C = "reaction-picker-tab",
                 A = "super-reaction-picker-tab";
             (s || (s = {})).TOOLTIP = "tooltip";
-            let R = "gif-picker-tab-panel",
-                h = "gif-picker-tab",
+            let h = "gif-picker-tab-panel",
+                R = "gif-picker-tab",
                 L = {
                     reaction: 32,
                     default: 44,
@@ -1926,7 +1926,7 @@
                     return N
                 },
                 ApplicationStreamResolutionButtonsWithSuffixLabel: function() {
-                    return p
+                    return O
                 },
                 ApplicationStreamFPSButtons: function() {
                     return C
@@ -2077,8 +2077,8 @@
             }
             let S = [f(o.RESOLUTION_720), f(o.RESOLUTION_1080), f(o.RESOLUTION_1440), f(o.RESOLUTION_SOURCE, () => d.default.Messages.SCREENSHARE_SOURCE)],
                 N = [f(o.RESOLUTION_720), f(o.RESOLUTION_1080), f(o.RESOLUTION_1440)],
-                O = e => "".concat(e, "p"),
-                p = [f(o.RESOLUTION_480, () => O(o.RESOLUTION_480)), f(o.RESOLUTION_720, () => O(o.RESOLUTION_720)), f(o.RESOLUTION_1080, () => O(o.RESOLUTION_1080)), f(o.RESOLUTION_1440, () => O(o.RESOLUTION_1440)), f(o.RESOLUTION_SOURCE, () => d.default.Messages.SCREENSHARE_SOURCE)],
+                p = e => "".concat(e, "p"),
+                O = [f(o.RESOLUTION_480, () => p(o.RESOLUTION_480)), f(o.RESOLUTION_720, () => p(o.RESOLUTION_720)), f(o.RESOLUTION_1080, () => p(o.RESOLUTION_1080)), f(o.RESOLUTION_1440, () => p(o.RESOLUTION_1440)), f(o.RESOLUTION_SOURCE, () => d.default.Messages.SCREENSHARE_SOURCE)],
                 C = [f(a.FPS_15), f(a.FPS_30), f(a.FPS_60)],
                 A = [f(a.FPS_15, () => d.default.Messages.STREAM_FPS_OPTION.format({
                     value: a.FPS_15
@@ -2386,10 +2386,10 @@
                     return N
                 },
                 resetPendingProfileChanges: function() {
-                    return O
+                    return p
                 },
                 resetAllPending: function() {
-                    return p
+                    return O
                 },
                 clearErrors: function() {
                     return C
@@ -2511,13 +2511,13 @@
                 })
             }
 
-            function O() {
+            function p() {
                 r.default.dispatch({
                     type: "GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES"
                 })
             }
 
-            function p() {
+            function O() {
                 r.default.dispatch({
                     type: "GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING"
                 })
@@ -2541,7 +2541,7 @@
             let i, r, l, o, a, s, u, c, d;
             n.r(t), n.d(t, {
                 default: function() {
-                    return R
+                    return h
                 }
             });
             var E = n("446674"),
@@ -2555,11 +2555,11 @@
                 T = I.FormStates.CLOSED, f = {}, u = null, c = void 0, d = []
             }
 
-            function O() {
-                p(), C(), f = {}, T = I.FormStates.OPEN
+            function p() {
+                O(), C(), f = {}, T = I.FormStates.OPEN
             }
 
-            function p() {
+            function O() {
                 i = void 0, a = void 0
             }
 
@@ -2621,13 +2621,13 @@
                 }
             }
             A.displayName = "GuildIdentitySettingsStore";
-            var R = new A(_.default, {
+            var h = new A(_.default, {
                 GUILD_IDENTITY_SETTINGS_INIT: function(e) {
                     u = e.guild, T = I.FormStates.OPEN, f = {}, c = e.source, d = e.analyticsLocations
                 },
                 GUILD_IDENTITY_SETTINGS_CLOSE: N,
                 GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function() {
-                    O(), N()
+                    p(), N()
                 },
                 GUILD_IDENTITY_SETTINGS_SET_GUILD: function(e) {
                     u = e.guild, f = {}
@@ -2679,10 +2679,10 @@
                     } = e;
                     s = t
                 },
-                GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: p,
+                GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: O,
                 GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: C,
-                GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: O,
-                GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: O,
+                GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: p,
+                GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: p,
                 GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function() {
                     f = {}
                 },
@@ -3158,19 +3158,19 @@
                     return N
                 },
                 updateImpersonating: function() {
-                    return O
+                    return p
                 },
                 stopImpersonating: function() {
-                    return p
+                    return O
                 },
                 updateImpersonatedChannels: function() {
                     return A
                 },
                 updateImpersonatedRoles: function() {
-                    return R
+                    return h
                 },
                 updateImpersonatedData: function() {
-                    return h
+                    return R
                 }
             });
             var i = n("913144"),
@@ -3201,7 +3201,7 @@
                 }), C(e)
             }
 
-            function O(e, t) {
+            function p(e, t) {
                 let n = I.default.getData(e);
                 null != n && n.type === t.type && (_.default.track(f.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
                     num_roles: Object.keys(n.roles).length,
@@ -3217,7 +3217,7 @@
                 }), C(e))
             }
 
-            function p(e) {
+            function O(e) {
                 i.default.dispatch({
                     type: "IMPERSONATE_STOP",
                     guildId: e
@@ -3236,13 +3236,13 @@
 
             function A(e, t, n) {
                 let i = new Set(E.default.getOptedInChannels(e));
-                t.forEach(e => i.add(e)), n.forEach(e => i.delete(e)), O(e, {
+                t.forEach(e => i.add(e)), n.forEach(e => i.delete(e)), p(e, {
                     type: T.ImpersonateType.NEW_MEMBER,
                     optInChannels: i
                 })
             }
 
-            function R(e, t) {
+            function h(e, t) {
                 let n = u.default.getGuild(e);
                 if (null == n) return;
                 ! function(e, t) {
@@ -3258,14 +3258,14 @@
                     })
                 }(e, t);
                 let i = {};
-                t.forEach(e => i[e] = n.roles[e]), O(e, {
+                t.forEach(e => i[e] = n.roles[e]), p(e, {
                     type: T.ImpersonateType.NEW_MEMBER,
                     roles: i
                 })
             }
 
-            function h(e, t) {
-                O(e, {
+            function R(e, t) {
+                p(e, {
                     type: T.ImpersonateType.NEW_MEMBER,
                     ...t
                 })
@@ -3562,19 +3562,19 @@
                 }(e), {
                     step: S,
                     stepConfigs: N,
-                    setBodyNode: O,
-                    setFooterNode: p,
+                    setBodyNode: p,
+                    setFooterNode: O,
                     setModalOverlayNode: C,
                     setReadySlideId: A
-                } = (0, E.usePaymentContext)(), R = N.find(e => e.key === S);
+                } = (0, E.usePaymentContext)(), h = N.find(e => e.key === S);
                 r.useEffect(() => {
                     C(null)
-                }, [S, C]), s(null != R, "Unknown step for current payment flow.");
-                let h = null !== (u = null == R ? void 0 : null === (t = R.options) || void 0 === t ? void 0 : t.hideSlider) && void 0 !== u && u,
-                    L = null == R ? void 0 : null === (n = R.options) || void 0 === n ? void 0 : n.bodyClassName,
-                    m = void 0 !== T && T ? _.sliderBodyLarge : null == R ? void 0 : null === (l = R.options) || void 0 === l ? void 0 : l.sliderBodyClassName;
+                }, [S, C]), s(null != h, "Unknown step for current payment flow.");
+                let R = null !== (u = null == h ? void 0 : null === (t = h.options) || void 0 === t ? void 0 : t.hideSlider) && void 0 !== u && u,
+                    L = null == h ? void 0 : null === (n = h.options) || void 0 === n ? void 0 : n.bodyClassName,
+                    m = void 0 !== T && T ? _.sliderBodyLarge : null == h ? void 0 : null === (l = h.options) || void 0 === l ? void 0 : l.sliderBodyClassName;
                 return (0, i.jsxs)(i.Fragment, {
-                    children: [null === (c = null == R ? void 0 : null === (a = R.options) || void 0 === a ? void 0 : a.renderHeader) || void 0 === c || c ? I : null, R.renderStep(f), null == S || h ? null : (0, i.jsxs)(i.Fragment, {
+                    children: [null === (c = null == h ? void 0 : null === (a = h.options) || void 0 === a ? void 0 : a.renderHeader) || void 0 === c || c ? I : null, h.renderStep(f), null == S || R ? null : (0, i.jsxs)(i.Fragment, {
                         children: [(0, i.jsx)(d.ModalContent, {
                             className: o(_.body, L),
                             children: (0, i.jsx)(d.Slides, {
@@ -3585,13 +3585,13 @@
                                     id: e.key,
                                     children: (0, i.jsx)("form", {
                                         className: o(_.sliderBody, m),
-                                        ref: e => O(e),
+                                        ref: e => p(e),
                                         onSubmit: e => e.preventDefault()
                                     })
                                 }, e.key))
                             })
                         }), (0, i.jsx)("div", {
-                            ref: e => p(e)
+                            ref: e => O(e)
                         }), (0, i.jsx)("div", {
                             ref: e => C(e)
                         })]
@@ -3645,12 +3645,12 @@
                     onSubscriptionConfirmation: f,
                     analyticsLocations: S,
                     analyticsObject: N,
-                    analyticsLocation: O,
-                    analyticsSourceLocation: p,
+                    analyticsLocation: p,
+                    analyticsSourceLocation: O,
                     isGift: C = !1,
                     giftMessage: A,
-                    subscriptionTier: R,
-                    trialId: h,
+                    subscriptionTier: h,
+                    trialId: R,
                     postSuccessGuild: L,
                     openInvoiceId: m,
                     applicationId: g,
@@ -3670,8 +3670,8 @@
                         return (0, i.jsx)(e, {
                             ...l,
                             loadId: D,
-                            subscriptionTier: R,
-                            skuId: R,
+                            subscriptionTier: h,
+                            skuId: h,
                             isGift: C,
                             giftMessage: A,
                             giftRecipient: P,
@@ -3686,9 +3686,9 @@
                             onSubscriptionConfirmation: f,
                             analyticsLocations: S,
                             analyticsObject: N,
-                            analyticsLocation: O,
-                            analyticsSourceLocation: p,
-                            trialId: h,
+                            analyticsLocation: p,
+                            analyticsSourceLocation: O,
+                            trialId: R,
                             postSuccessGuild: L,
                             planGroup: E.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
                             openInvoiceId: m,
@@ -3703,11 +3703,11 @@
                         !v && u.default.track(d.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
                             load_id: D,
                             payment_type: d.PurchaseTypeToAnalyticsPaymentType[d.PurchaseTypes.SUBSCRIPTION],
-                            location: null != O ? O : N,
-                            source: p,
+                            location: null != p ? p : N,
+                            source: O,
                             subscription_type: d.SubscriptionTypes.PREMIUM,
                             is_gift: C,
-                            eligible_for_trial: null != h,
+                            eligible_for_trial: null != R,
                             application_id: g,
                             location_stack: S
                         }), (0, o.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == I || I(v), v && (!C && c.ComponentDispatch.dispatch(d.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED), null == f || f())
@@ -4233,12 +4233,12 @@
             (i = r || (r = {}))[i.NOT_FETCHED = 0] = "NOT_FETCHED", i[i.FETCHING = 1] = "FETCHING", i[i.FETCHED = 2] = "FETCHED";
             let S = new Map,
                 N = new Map,
-                O = new Set,
-                p = r.NOT_FETCHED,
+                p = new Set,
+                O = r.NOT_FETCHED,
                 C = r.NOT_FETCHED,
                 A = new Set,
-                R = new Map,
-                h = !1;
+                h = new Map,
+                R = !1;
 
             function L(e) {
                 let {
@@ -4257,8 +4257,8 @@
             function g(e) {
                 var t, n;
                 let i = null !== (n = null == e ? void 0 : null === (t = e.audioContextSettings) || void 0 === t ? void 0 : t.user) && void 0 !== n ? n : {};
-                for (let [e, t] of Object.entries(i)) t.soundboardMuted ? O.add(e) : O.delete(e);
-                for (let e of O.keys()) null == i[e] && O.delete(e)
+                for (let [e, t] of Object.entries(i)) t.soundboardMuted ? p.add(e) : p.delete(e);
+                for (let e of p.keys()) null == i[e] && p.delete(e)
             }
             class U extends a.default.Store {
                 initialize() {
@@ -4268,7 +4268,7 @@
                     return {
                         soundboardSounds: Object.fromEntries(S),
                         favoritedSoundIds: Array.from(A),
-                        localSoundboardMutes: Array.from(O)
+                        localSoundboardMutes: Array.from(p)
                     }
                 }
                 getSounds() {
@@ -4293,19 +4293,19 @@
                     return C === r.FETCHING
                 }
                 isFetchingDefaultSounds() {
-                    return p === r.FETCHING
+                    return O === r.FETCHING
                 }
                 isFetching() {
                     return this.isFetchingSounds() || this.isFetchingDefaultSounds()
                 }
                 shouldFetchDefaultSounds() {
-                    return p === r.NOT_FETCHED
+                    return O === r.NOT_FETCHED
                 }
                 hasFetchedDefaultSounds() {
-                    return p === r.FETCHED
+                    return O === r.FETCHED
                 }
                 isUserPlayingSounds(e) {
-                    let t = R.get(e);
+                    let t = h.get(e);
                     return null != t && t > 0
                 }
                 isPlayingSound(e) {
@@ -4318,19 +4318,19 @@
                     return A
                 }
                 isLocalSoundboardMuted(e) {
-                    return O.has(e)
+                    return p.has(e)
                 }
                 hasHadOtherUserPlaySoundInSession() {
-                    return h
+                    return R
                 }
                 hasFetchedAllSounds() {
-                    return C === r.FETCHED && p === r.FETCHED
+                    return C === r.FETCHED && O === r.FETCHED
                 }
             }
             U.displayName = "SoundboardStore";
             var P = new U(s.default, {
                 LOGOUT: function() {
-                    S.clear(), N.clear(), R.clear(), h = !1, C = r.NOT_FETCHED, p = r.NOT_FETCHED
+                    S.clear(), N.clear(), h.clear(), R = !1, C = r.NOT_FETCHED, O = r.NOT_FETCHED
                 },
                 GUILD_SOUNDBOARD_FETCH: function() {
                     C = r.FETCHING
@@ -4352,16 +4352,16 @@
                     let {
                         soundId: r,
                         userId: l
-                    } = e, o = (null !== (n = N.get(r)) && void 0 !== n ? n : 0) + 1, a = (null !== (i = R.get(l)) && void 0 !== i ? i : 0) + 1;
-                    N.set(r, o), R.set(l, a), l !== (null === (t = d.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (h = !0)
+                    } = e, o = (null !== (n = N.get(r)) && void 0 !== n ? n : 0) + 1, a = (null !== (i = h.get(l)) && void 0 !== i ? i : 0) + 1;
+                    N.set(r, o), h.set(l, a), l !== (null === (t = d.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (R = !0)
                 },
                 GUILD_SOUNDBOARD_SOUND_PLAY_END: function(e) {
                     var t, n;
                     let {
                         soundId: i,
                         userId: r
-                    } = e, l = (null !== (t = N.get(i)) && void 0 !== t ? t : 0) - 1, o = (null !== (n = R.get(r)) && void 0 !== n ? n : 0) - 1;
-                    l <= 0 ? N.delete(i) : N.set(i, l), o <= 0 ? R.delete(r) : R.set(r, o)
+                    } = e, l = (null !== (t = N.get(i)) && void 0 !== t ? t : 0) - 1, o = (null !== (n = h.get(r)) && void 0 !== n ? n : 0) - 1;
+                    l <= 0 ? N.delete(i) : N.set(i, l), o <= 0 ? h.delete(r) : h.set(r, o)
                 },
                 USER_SOUNDBOARD_SET_VOLUME: function(e) {
                     let {
@@ -4370,7 +4370,7 @@
                     m(t)
                 },
                 VOICE_CHANNEL_SELECT: function() {
-                    N.clear(), R.clear()
+                    N.clear(), h.clear()
                 },
                 USER_SETTINGS_PROTO_UPDATE: function(e) {
                     let {
@@ -4385,13 +4385,13 @@
                     } else n === f.UserSettingsTypes.PRELOADED_USER_SETTINGS && g(i)
                 },
                 SOUNDBOARD_FETCH_DEFAULT_SOUNDS: function() {
-                    p = r.FETCHING
+                    O = r.FETCHING
                 },
                 SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: function(e) {
                     let {
                         soundboardSounds: t
                     } = e;
-                    S.set(I.DEFAULT_SOUND_GUILD_ID, t), p = r.FETCHED
+                    S.set(I.DEFAULT_SOUND_GUILD_ID, t), O = r.FETCHED
                 },
                 SOUNDBOARD_SOUNDS_RECEIVED: function(e) {
                     let {
@@ -4415,13 +4415,13 @@
                     let {
                         userId: t
                     } = e;
-                    O.has(t) ? O.delete(t) : O.add(t)
+                    p.has(t) ? p.delete(t) : p.add(t)
                 },
                 OVERLAY_INITIALIZE: function(e) {
                     let {
                         soundboardStoreState: t
                     } = e;
-                    S = new Map(Object.entries(t.soundboardSounds)), A = new Set(t.favoritedSoundIds), O = new Set(t.localSoundboardMutes)
+                    S = new Map(Object.entries(t.soundboardSounds)), A = new Set(t.favoritedSoundIds), p = new Set(t.localSoundboardMutes)
                 },
                 GUILD_SOUNDBOARD_SOUNDS_UPDATE: function(e) {
                     let {
@@ -4605,12 +4605,12 @@
                 S = n("24373"),
                 N = n("49111");
             (i = r || (r = {}))[i.Unloaded = 0] = "Unloaded", i[i.MaybeLoaded = 1] = "MaybeLoaded", i[i.Loaded = 2] = "Loaded";
-            let O = 2,
-                p = new Map,
+            let p = 2,
+                O = new Map,
                 C = new Map,
                 A = null,
-                R = [],
-                h = null,
+                h = [],
+                R = null,
                 L = !1,
                 m = new Map,
                 g = (e, t) => {
@@ -4618,10 +4618,10 @@
                 },
                 U = 1e3 * N.Durations.HOUR,
                 P = () => {
-                    if (0 !== O) return;
+                    if (0 !== p) return;
                     let e = s.default.database();
                     if (null == e) return;
-                    O = 2;
+                    p = 2;
                     let t = (0, u.tryLoadOrResetCacheGateway)("StickerStore.loadSavedGuildStickers", () => l.default.time("\uD83D\uDCBE", "loadSavedGuildStickers", () => c.default.getSync(e)));
                     if (null != t) {
                         for (let [e, n] of t)
@@ -4646,7 +4646,7 @@
                         value: e.name.trim().toLocaleLowerCase()
                     };
                     if ((0, S.isStandardSticker)(e)) {
-                        let t = R.find(t => t.id === e.pack_id),
+                        let t = h.find(t => t.id === e.pack_id),
                             r = [i, ...(null != n ? n : "").split(",").map(e => ({
                                 type: f.StickerMetadataTypes.TAG,
                                 value: e.trim().toLocaleLowerCase()
@@ -4683,17 +4683,17 @@
                     }
                 },
                 D = (e, t, n) => {
-                    p.set(e.id, e);
-                    let i = [...R];
+                    O.set(e.id, e);
+                    let i = [...h];
                     if (t) {
-                        let t = i.findIndex(t => t.id === e.id); - 1 !== t ? i[t] = e : i.push(e), R = i
+                        let t = i.findIndex(t => t.id === e.id); - 1 !== t ? i[t] = e : i.push(e), h = i
                     }(t || n) && e.stickers.forEach(e => M(e))
                 },
                 G = () => {
                     m.forEach((e, t) => {
                         let n = T.default.getGuild(t);
                         null != n && e.forEach(e => v(e, n))
-                    }), R.forEach(e => {
+                    }), h.forEach(e => {
                         e.stickers.forEach(e => v(e))
                     })
                 };
@@ -4706,13 +4706,13 @@
                     this.waitFor(s.default, I.default, T.default)
                 }
                 get isLoaded() {
-                    return 0 !== O
+                    return 0 !== p
                 }
                 get stickerMetadata() {
                     return P(), null == A && (A = new Map, G()), A
                 }
                 get hasLoadedStickerPacks() {
-                    return null != h && h + U > Date.now()
+                    return null != R && R + U > Date.now()
                 }
                 get isFetchingStickerPacks() {
                     return L
@@ -4721,13 +4721,13 @@
                     return !C.has(e) && P(), C.get(e)
                 }
                 getStickerPack(e) {
-                    return p.get(e)
+                    return O.get(e)
                 }
                 getPremiumPacks() {
-                    return R
+                    return h
                 }
                 isPremiumPack(e) {
-                    return R.some(t => t.id === e)
+                    return h.some(t => t.id === e)
                 }
                 getRawStickersByGuild() {
                     return m
@@ -4745,19 +4745,19 @@
             b.displayName = "StickersStore";
             var w = new b(a.default, {
                 BACKGROUND_SYNC: () => {
-                    A = null, C = new Map, m = new Map, O = 0
+                    A = null, C = new Map, m = new Map, p = 0
                 },
                 CONNECTION_OPEN: e => {
                     let {
                         guilds: t
                     } = e;
-                    A = null, C = new Map, m = new Map, t.forEach(y), O = t.every(e => null != e.stickers) ? 1 : 0
+                    A = null, C = new Map, m = new Map, t.forEach(y), p = t.every(e => null != e.stickers) ? 1 : 0
                 },
                 GUILD_CREATE: function(e) {
                     let {
                         guild: t
                     } = e;
-                    !E.default.isLurking(t.id) && (y(t), 1 === O && null == t.stickers && null != t.stickerUpdates && (O = 0))
+                    !E.default.isLurking(t.id) && (y(t), 1 === p && null == t.stickers && null != t.stickerUpdates && (p = 0))
                 },
                 GUILD_DELETE: function(e) {
                     var t;
@@ -4769,7 +4769,7 @@
                     }), m.delete(n.id), m = new Map(m)
                 },
                 LOGOUT: () => {
-                    O = 0, R = [], C.clear(), p.clear(), A = null, m.clear(), m = new Map(m), L = !1, h = null
+                    p = 0, h = [], C.clear(), O.clear(), A = null, m.clear(), m = new Map(m), L = !1, R = null
                 },
                 STICKER_PACKS_FETCH_START: () => {
                     L = !0
@@ -4778,7 +4778,7 @@
                     let {
                         packs: t
                     } = e;
-                    t.forEach(e => D(e, !0)), h = Date.now(), L = !1
+                    t.forEach(e => D(e, !0)), R = Date.now(), L = !1
                 },
                 STICKER_PACK_FETCH_SUCCESS: e => {
                     let {
@@ -4851,10 +4851,10 @@
                     return N
                 },
                 setPendingAccentColor: function() {
-                    return O
+                    return p
                 },
                 setPendingThemeColors: function() {
-                    return p
+                    return O
                 },
                 setTryItOutAvatar: function() {
                     return C
@@ -4863,10 +4863,10 @@
                     return A
                 },
                 setTryItOutBanner: function() {
-                    return R
+                    return h
                 },
                 setTryItOutThemeColors: function() {
-                    return h
+                    return R
                 }
             });
             var i = n("872717"),
@@ -4960,14 +4960,14 @@
                 })
             }
 
-            function O(e) {
+            function p(e) {
                 r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR",
                     color: e
                 })
             }
 
-            function p(e) {
+            function O(e) {
                 r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS",
                     themeColors: e
@@ -4988,14 +4988,14 @@
                 }), E(d.AnalyticsPremiumFeatureNames.AVATAR_DECORATION)
             }
 
-            function R(e) {
+            function h(e) {
                 r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER",
                     banner: e
                 }), E(d.AnalyticsPremiumFeatureNames.PROFILE_BANNER)
             }
 
-            function h(e) {
+            function R(e) {
                 r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
                     themeColors: e
@@ -5101,12 +5101,12 @@
                 f = n("923959"),
                 S = n("27618"),
                 N = n("697218"),
-                O = n("882641"),
-                p = n("145131"),
+                p = n("882641"),
+                O = n("145131"),
                 C = n("476765"),
                 A = n("593195"),
-                R = n("991170"),
-                h = n("59811"),
+                h = n("991170"),
+                R = n("59811"),
                 L = n("310457"),
                 m = n("805828"),
                 g = n("49111"),
@@ -5121,19 +5121,19 @@
                         transitionState: G,
                         onSave: y,
                         onClose: b
-                    } = e, w = (0, C.useUID)(), [F, B] = r.useState(null != D ? D.channel_id : null), [V, x] = r.useState(null != D ? D.description : ""), [H, k] = r.useState(null != D ? {
+                    } = e, w = (0, C.useUID)(), [F, B] = r.useState(null != D ? D.channel_id : null), [x, V] = r.useState(null != D ? D.description : ""), [H, k] = r.useState(null != D ? {
                         id: D.emoji_id,
                         name: D.emoji_name
-                    } : null), [j, K] = r.useState(!1), W = (0, l.useStateFromStores)([I.default], () => (null == H ? void 0 : H.id) != null ? I.default.getUsableCustomEmojiById(H.id) : null), Y = (0, l.useStateFromStores)([f.default], () => f.default.getChannels(v)[f.GUILD_SELECTABLE_CHANNELS_KEY], [v]), Z = (0, l.useStateFromStores)([h.default], () => h.default.get(v)), z = null !== (n = null == Z ? void 0 : null === (t = Z.welcome_channels) || void 0 === t ? void 0 : t.map(e => e.channel_id)) && void 0 !== n ? n : [], [X, J] = r.useState(!1);
+                    } : null), [j, K] = r.useState(!1), Y = (0, l.useStateFromStores)([I.default], () => (null == H ? void 0 : H.id) != null ? I.default.getUsableCustomEmojiById(H.id) : null), W = (0, l.useStateFromStores)([f.default], () => f.default.getChannels(v)[f.GUILD_SELECTABLE_CHANNELS_KEY], [v]), Z = (0, l.useStateFromStores)([R.default], () => R.default.get(v)), z = null !== (n = null == Z ? void 0 : null === (t = Z.welcome_channels) || void 0 === t ? void 0 : t.map(e => e.channel_id)) && void 0 !== n ? n : [], [X, J] = r.useState(!1);
                     r.useEffect(() => {
                         !o.default.get(m.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY) && setTimeout(() => J(!0), 300)
                     }, []);
                     let Q = [];
-                    Y.forEach(e => {
+                    W.forEach(e => {
                         let {
                             channel: t
                         } = e;
-                        R.default.canEveryoneRole(g.Permissions.VIEW_CHANNEL, t) && ((null == D ? void 0 : D.channel_id) === t.id || !z.includes(t.id)) && Q.push({
+                        h.default.canEveryoneRole(g.Permissions.VIEW_CHANNEL, t) && ((null == D ? void 0 : D.channel_id) === t.id || !z.includes(t.id)) && Q.push({
                             value: t.id,
                             label: (0, c.computeChannelName)(t, N.default, S.default)
                         })
@@ -5141,7 +5141,7 @@
                     let q = () => {
                             J(!1), b()
                         },
-                        $ = r.useCallback(e => x(e), []),
+                        $ = r.useCallback(e => V(e), []),
                         ee = e => {
                             var t, n, i;
                             if (null == e) {
@@ -5206,7 +5206,7 @@
                                     className: M.formGroup,
                                     children: (0, i.jsx)(a.TextInput, {
                                         maxLength: 42,
-                                        value: V,
+                                        value: x,
                                         inputClassName: M.input,
                                         placeholder: P.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_CHANNEL_DESCRIPTION_PLACEHOLDER,
                                         onChange: $
@@ -5257,7 +5257,7 @@
                                                         position: "left",
                                                         text: X ? P.default.Messages.WELCOME_CHANNEL_EMOJI_PICKER_TOOLTIP : null,
                                                         forceOpen: X,
-                                                        children: (0, i.jsx)(O.default, {
+                                                        children: (0, i.jsx)(p.default, {
                                                             ...e,
                                                             onClick: t => {
                                                                 var n;
@@ -5270,7 +5270,7 @@
                                                                 className: M.emoji,
                                                                 emojiId: H.id,
                                                                 emojiName: H.name,
-                                                                animated: !!(null == W ? void 0 : W.animated)
+                                                                animated: !!(null == Y ? void 0 : Y.animated)
                                                             }) : null
                                                         })
                                                     })
@@ -5281,10 +5281,10 @@
                                 })]
                             }), (0, i.jsxs)(a.ModalFooter, {
                                 className: M.footer,
-                                justify: p.default.Justify.BETWEEN,
-                                children: [(0, i.jsxs)(p.default, {
+                                justify: O.default.Justify.BETWEEN,
+                                children: [(0, i.jsxs)(O.default, {
                                     grow: 0,
-                                    align: p.default.Align.CENTER,
+                                    align: O.default.Align.CENTER,
                                     children: [(0, i.jsx)(a.Button, {
                                         onClick: q,
                                         size: a.Button.Sizes.SMALL,
@@ -5293,15 +5293,15 @@
                                         children: P.default.Messages.CANCEL
                                     }), (0, i.jsx)(a.Button, {
                                         onClick: () => {
-                                            if (null != F && V.length > 0) y({
+                                            if (null != F && x.length > 0) y({
                                                 channel_id: F,
-                                                description: V,
+                                                description: x,
                                                 emoji_id: null == H ? void 0 : H.id,
                                                 emoji_name: null == H ? void 0 : H.name
                                             });
                                             q()
                                         },
-                                        disabled: null == F || 0 === V.length,
+                                        disabled: null == F || 0 === x.length,
                                         children: P.default.Messages.SAVE
                                     })]
                                 }), null != D && (0, i.jsx)(a.Button, {
@@ -5728,18 +5728,18 @@
                 f = null,
                 S = !1,
                 N = !1,
-                O = null,
                 p = null,
+                O = null,
                 C = null,
                 A = [],
-                R = null,
-                h = null;
+                h = null,
+                R = null;
 
             function L(e) {
                 var t, n, i, r, l, o;
                 let c = a.default.getCurrentUser();
                 if (null == c) return m();
-                d = null !== (t = e.section) && void 0 !== t ? t : d, R = null !== (n = e.section) && void 0 !== n ? n : d, null != e.subsection && null != d && (E[d] = e.subsection), null != e.scrollPosition && null != d && (_[d] = e.scrollPosition), N = !!e.openWithoutBackstack, u = s.FormStates.OPEN, I = {}, f = {
+                d = null !== (t = e.section) && void 0 !== t ? t : d, h = null !== (n = e.section) && void 0 !== n ? n : d, null != e.subsection && null != d && (E[d] = e.subsection), null != e.scrollPosition && null != d && (_[d] = e.scrollPosition), N = !!e.openWithoutBackstack, u = s.FormStates.OPEN, I = {}, f = {
                     ...T = {
                         [s.UserSettingsSections.ACCOUNT]: {
                             userId: c.id,
@@ -5752,11 +5752,11 @@
                             claimed: c.isClaimed()
                         }
                     }
-                }, p = null !== (i = e.onClose) && void 0 !== i ? i : null, C = null !== (r = e.analyticsLocation) && void 0 !== r ? r : null, A = null !== (l = e.analyticsLocations) && void 0 !== l ? l : [], h = null !== (o = e.impressionSource) && void 0 !== o ? o : null
+                }, O = null !== (i = e.onClose) && void 0 !== i ? i : null, C = null !== (r = e.analyticsLocation) && void 0 !== r ? r : null, A = null !== (l = e.analyticsLocations) && void 0 !== l ? l : [], R = null !== (o = e.impressionSource) && void 0 !== o ? o : null
             }
 
             function m() {
-                u = s.FormStates.CLOSED, S = !1, T = null, R = null, f = null, c = null, d = null, E = {}, _ = {}, p = null, C = null, A = [], h = null
+                u = s.FormStates.CLOSED, S = !1, T = null, h = null, f = null, c = null, d = null, E = {}, _ = {}, O = null, C = null, A = [], R = null
             }
 
             function g() {
@@ -5767,7 +5767,7 @@
                     this.waitFor(a.default)
                 }
                 hasChanges() {
-                    return null != f && null != T && (!!this.isOpen() || O === s.DrawerTabTypes.USER_SETTINGS) && !r.isEqual(f, T)
+                    return null != f && null != T && (!!this.isOpen() || p === s.DrawerTabTypes.USER_SETTINGS) && !r.isEqual(f, T)
                 }
                 isOpen() {
                     return S
@@ -5799,12 +5799,12 @@
                         openWithoutBackstack: N,
                         analyticsLocation: C,
                         analyticsLocations: A,
-                        initialSection: R,
-                        impressionSource: h
+                        initialSection: h,
+                        impressionSource: R
                     }
                 }
                 get onClose() {
-                    return p
+                    return O
                 }
             }
             U.displayName = "UserSettingsModalStore";
@@ -5869,7 +5869,7 @@
                     })
                 },
                 DRAWER_SELECT_TAB: function(e) {
-                    return O = e.tab, null == d && O === s.DrawerTabTypes.USER_SETTINGS && L({
+                    return p = e.tab, null == d && p === s.DrawerTabTypes.USER_SETTINGS && L({
                         type: "USER_SETTINGS_MODAL_INIT",
                         section: null,
                         subsection: null,
@@ -6034,9 +6034,9 @@
                         f = u.default.Messages.BOT_TAG_BOT
                 }
                 let N = r === s.BotTagTypes.ORIGINAL_POSTER,
-                    O = r === s.BotTagTypes.REMIX,
-                    p = null;
-                E && (p = (0, i.jsx)(o.Tooltip, {
+                    p = r === s.BotTagTypes.REMIX,
+                    O = null;
+                E && (O = (0, i.jsx)(o.Tooltip, {
                     text: S,
                     align: "center",
                     position: "top",
@@ -6049,9 +6049,9 @@
                     ...e,
                     className: l(d, t, I ? c.rem : c.px, {
                         [c.botTagOP]: N,
-                        [c.botTagRemix]: O
+                        [c.botTagRemix]: p
                     }),
-                    children: [_ ? null : p, T, (0, i.jsx)("span", {
+                    children: [_ ? null : O, T, (0, i.jsx)("span", {
                         className: c.botText,
                         children: f
                     })]
@@ -6083,7 +6083,7 @@
                     return N
                 },
                 default: function() {
-                    return O
+                    return p
                 }
             });
             var i = n("37983"),
@@ -6105,16 +6105,16 @@
                 tension: 800,
                 friction: 24
             };
-            var O = function(e) {
+            var p = function(e) {
                 let {
                     tabIndex: t,
                     className: n,
                     renderButtonContents: l,
-                    active: O,
-                    onClick: p,
+                    active: p,
+                    onClick: O,
                     "aria-controls": C,
                     focusProps: A
-                } = e, [R, h] = r.useState(!1), [L, m] = r.useState(0), g = (0, s.useStateFromStores)([_.default], () => _.default.getGuildId()), U = R || O, P = (0, I.getClass)(S, "emojiButton", U ? "Hovered" : "Normal"), M = function(e) {
+                } = e, [h, R] = r.useState(!1), [L, m] = r.useState(0), g = (0, s.useStateFromStores)([_.default], () => _.default.getGuildId()), U = h || p, P = (0, I.getClass)(S, "emojiButton", U ? "Hovered" : "Normal"), M = function(e) {
                     let t = -e % T.EmojiSprites.PickerPerRow * 22,
                         n = -(22 * Math.floor(e / T.EmojiSprites.PickerPerRow));
                     return {
@@ -6124,10 +6124,10 @@
                 }(L), v = r.useCallback(() => {
                     if (U) return;
                     let e = Math.floor(Math.random() * T.EmojiSprites.PickerCount);
-                    h(!0), m(e), (0, d.maybeFetchTopEmojisByGuild)(g), (0, E.maybeGetPacksForUser)("emoji button - mouse enter"), (0, c.maybeGetEmojiCaptionsForUser)("emoji button - mouse enter")
-                }, [U, h, m, g]), D = r.useCallback(() => {
-                    h(!1)
-                }, [h]), G = r.useCallback(() => {
+                    R(!0), m(e), (0, d.maybeFetchTopEmojisByGuild)(g), (0, E.maybeGetPacksForUser)("emoji button - mouse enter"), (0, c.maybeGetEmojiCaptionsForUser)("emoji button - mouse enter")
+                }, [U, R, m, g]), D = r.useCallback(() => {
+                    R(!1)
+                }, [R]), G = r.useCallback(() => {
                     (0, d.maybeFetchTopEmojisByGuild)(g)
                 }, [g]);
                 return (0, i.jsx)(u.Button, {
@@ -6139,10 +6139,10 @@
                     onMouseOver: v,
                     onMouseLeave: D,
                     onFocus: G,
-                    onClick: p,
+                    onClick: O,
                     "aria-label": f.default.Messages.SELECT_EMOJI,
                     "aria-controls": C,
-                    "aria-expanded": O,
+                    "aria-expanded": p,
                     "aria-haspopup": "dialog",
                     focusProps: A,
                     children: null != l ? l() : (0, i.jsx)(a.Spring, {
@@ -6313,9 +6313,9 @@
                     buttonShineClassName: T,
                     onlyShineOnHover: S,
                     ...N
-                } = e, O = o.createRef(), p = (0, d.default)(O), C = !i && !a && !0 !== u && (!S || p);
+                } = e, p = o.createRef(), O = (0, d.default)(p), C = !i && !a && !0 !== u && (!S || O);
                 return (0, l.jsxs)(c.Button, {
-                    buttonRef: O,
+                    buttonRef: p,
                     ...N,
                     className: s(_.shinyButton, n),
                     disabled: i,
@@ -6418,11 +6418,11 @@
                         className: f,
                         foreground: S,
                         expanded: N,
-                        ...O
+                        ...p
                     } = e, {
-                        enabled: p
+                        enabled: O
                     } = (0, c.useRedesignIconContext)(), C = t;
-                    if (!0 === N ? C = _.DOWN : !1 === N && (C = _.RIGHT), p) {
+                    if (!0 === N ? C = _.DOWN : !1 === N && (C = _.RIGHT), O) {
                         let e = {
                             [_.UP]: u.ChevronSmallUpIcon,
                             [_.DOWN]: o.ChevronSmallDownIcon,
@@ -6430,7 +6430,7 @@
                             [_.RIGHT]: s.ChevronSmallRightIcon
                         } [C];
                         return (0, i.jsx)(e, {
-                            ...O,
+                            ...p,
                             className: f,
                             width: n,
                             height: r,
@@ -6443,7 +6443,7 @@
                         width: n,
                         height: r,
                         viewBox: "0 0 24 24",
-                        ...(0, d.default)(O),
+                        ...(0, d.default)(p),
                         children: (0, i.jsx)("path", {
                             className: S,
                             fill: "none",
@@ -6991,6 +6991,208 @@
                     })
                 }, l.CheckmarkSmallIcon)
         },
+        811305: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                Sizes: function() {
+                    return N
+                },
+                default: function() {
+                    return A
+                }
+            });
+            var i = n("37983"),
+                r = n("884691"),
+                l = n("414456"),
+                o = n.n(l),
+                a = n("627445"),
+                s = n.n(a),
+                u = n("77078"),
+                c = n("506885"),
+                d = n("981601"),
+                E = n("766274"),
+                _ = n("697218"),
+                I = n("368121"),
+                T = n("523096"),
+                f = n("587974"),
+                S = n("494101");
+            let N = {
+                SIZE_16: 16,
+                SIZE_24: 24,
+                SIZE_32: 32,
+                SIZE_56: 56
+            };
+
+            function p(e, t) {
+                let n = e instanceof E.default ? e : null != e ? e.user : null;
+                return null != n ? n.id : "user-".concat(t)
+            }
+
+            function O(e) {
+                return (0, i.jsx)("div", {
+                    className: S.moreUsers,
+                    children: e
+                })
+            }
+            class C extends r.PureComponent {
+                renderUsers() {
+                    let {
+                        users: e,
+                        max: t,
+                        renderUser: n = this.defaultRenderUser,
+                        size: r,
+                        extraDetail: l
+                    } = this.props, o = [], a = e.length === t ? e.length : t - 1, s = this.renderMoreUsers(a), u = 0;
+                    for (; u < a && u < e.length;) {
+                        var c;
+                        let t = null == s && null == l && u === e.length - 1,
+                            a = n(e[u], t, u);
+                        o.push(t ? (0, i.jsx)("div", {
+                            className: S.avatarContainer,
+                            children: a
+                        }, p(null !== (c = e[u]) && void 0 !== c ? c : null, u)) : (0, i.jsx)(f.default, {
+                            className: S.avatarContainerMasked,
+                            height: r,
+                            width: r,
+                            mask: f.default.Masks.VOICE_USER_SUMMARY_ITEM,
+                            children: a
+                        }, p(e[u], u))), u++
+                    }
+                    return null != l ? o.push(l) : null != s && o.push(s), o
+                }
+                renderMoreUsers(e) {
+                    let {
+                        max: t,
+                        count: n,
+                        hideMoreUsers: l,
+                        renderMoreUsers: o,
+                        users: a
+                    } = this.props, s = Math.min(e, a.length);
+                    if (!l) {
+                        if (null != n) {
+                            if (n >= t) return (0, i.jsx)(r.Fragment, {
+                                children: o("".concat(t, "+"), t)
+                            }, "more-users");
+                            if (n > a.length) {
+                                let e = n - a.length;
+                                return (0, i.jsx)(r.Fragment, {
+                                    children: o("+".concat(e), e)
+                                }, "more-users")
+                            }
+                        } else if (s < a.length) {
+                            let e = Math.min(a.length - s, 99);
+                            return (0, i.jsx)(r.Fragment, {
+                                children: o("+".concat(e), e)
+                            }, "more-users")
+                        }
+                    }
+                }
+                renderIcon() {
+                    return this.props.renderIcon ? (0, i.jsx)(I.default, {
+                        foreground: S.foreground,
+                        className: S.icon
+                    }) : null
+                }
+                render() {
+                    let {
+                        className: e,
+                        size: t,
+                        users: n,
+                        guildId: r,
+                        showUserPopout: l,
+                        useFallbackUserForPopout: a
+                    } = this.props, {
+                        popoutUserId: E
+                    } = this.state, I = n.find(e => null != e && e.id === E), T = a && null == _.default.getUser(E);
+                    return (0, i.jsx)(u.Popout, {
+                        position: "right",
+                        preload: null == I ? void 0 : () => (0, c.default)(I.id, I.getAvatarURL(r, 80), {
+                            guildId: r
+                        }),
+                        shouldShow: !0 === l && null != E,
+                        fixed: !0,
+                        renderPopout: e => (s(null != E, "UserSummaryItem.render - renderPopout: popoutUserId cannot be null"), (0, i.jsx)(d.default, {
+                            ...this.props,
+                            user: T && null != I ? I : void 0,
+                            ...e,
+                            userId: E,
+                            guildId: this.props.guildId
+                        })),
+                        onRequestClose: () => this.setState({
+                            popoutUserId: null
+                        }),
+                        children: n => (0, i.jsxs)("div", {
+                            className: o(e, S.container, function() {
+                                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : N.SIZE_24;
+                                switch (e) {
+                                    case N.SIZE_16:
+                                        return S.size16;
+                                    case N.SIZE_24:
+                                        return S.size24;
+                                    case N.SIZE_32:
+                                        return S.size32;
+                                    case N.SIZE_56:
+                                        return S.size56;
+                                    default:
+                                        return S.size24
+                                }
+                            }(t)),
+                            ref: this._ref,
+                            ...n,
+                            children: [this.renderIcon(), this.renderUsers()]
+                        })
+                    })
+                }
+                constructor(...e) {
+                    super(...e), this.state = {
+                        popoutUserId: null
+                    }, this._ref = r.createRef(), this.defaultRenderUser = (e, t, n) => {
+                        let {
+                            showUserPopout: r,
+                            guildId: l,
+                            size: o
+                        } = this.props;
+                        if (null == e) {
+                            if (!this.props.showDefaultAvatarsForNullUsers) return (0, i.jsx)("div", {
+                                className: S.emptyUser
+                            });
+                            {
+                                let e = (null != n ? n : 0) % T.default.DEFAULT_AVATARS.length,
+                                    t = T.default.DEFAULT_AVATARS[e];
+                                return (0, i.jsx)("img", {
+                                    src: t,
+                                    alt: "",
+                                    className: S.avatar
+                                })
+                            }
+                        }
+                        let a = (0, i.jsx)("img", {
+                            src: e.getAvatarURL(l, o),
+                            alt: e.username,
+                            className: S.avatar
+                        }, e.id);
+                        return r ? (0, i.jsx)(u.Clickable, {
+                            className: S.clickableAvatar,
+                            onClick: () => {
+                                null != this._ref.current && null != e && this.setState({
+                                    popoutUserId: e.id
+                                })
+                            },
+                            tabIndex: -1,
+                            children: a
+                        }, e.id) : a
+                    }
+                }
+            }
+            C.defaultProps = {
+                max: 10,
+                renderMoreUsers: O,
+                renderIcon: !1,
+                showDefaultAvatarsForNullUsers: !1,
+                size: N.SIZE_24
+            };
+            var A = C
+        },
         103603: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -7019,10 +7221,10 @@
                     return N
                 },
                 dataUriFileSize: function() {
-                    return O
+                    return p
                 },
                 dataUrlToFile: function() {
-                    return p
+                    return O
                 },
                 isPNGAnimated: function() {
                     return C
@@ -7131,11 +7333,11 @@
                 })
             }
 
-            function O(e) {
+            function p(e) {
                 let t = e.split(";base64,");
                 return r(2 === t.length, "Input data is not a valid image."), atob(t[1]).length
             }
-            async function p(e, t, n) {
+            async function O(e, t, n) {
                 let i = function(e) {
                         let t;
                         t = e.split(",")[0].indexOf("base64") >= 0 ? atob(e.split(",")[1]) : btoa(e.split(",")[1]);
