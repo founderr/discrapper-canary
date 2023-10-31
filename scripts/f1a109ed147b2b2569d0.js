@@ -27,12 +27,12 @@
             s("884691");
             var r = s("669491"),
                 a = s("819855"),
-                l = s("77078"),
-                i = s("841098"),
+                i = s("77078"),
+                l = s("841098"),
                 o = e => {
                     let {
                         className: t
-                    } = e, s = (0, i.default)(), o = (0, l.useToken)(r.default.colors.BACKGROUND_ACCENT).hex();
+                    } = e, s = (0, l.default)(), o = (0, i.useToken)(r.default.colors.BACKGROUND_ACCENT).hex();
                     return (0, n.jsx)("svg", {
                         width: "700",
                         height: "120",
@@ -61,8 +61,8 @@
             s("884691");
             var r = s("446674"),
                 a = s("151426"),
-                l = s("819855"),
-                i = s("77078"),
+                i = s("819855"),
+                l = s("77078"),
                 o = s("997289"),
                 u = s("841098"),
                 _ = s("812204"),
@@ -129,10 +129,10 @@
                 }), Y = (0, C.useResponseOnUserState)({
                     defaultResponse: () => null,
                     onCustomCriteria: () => {
-                        if ((null == Q ? void 0 : Q.id) === g.PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID) return () => (0, n.jsx)(i.Anchor, {
+                        if ((null == Q ? void 0 : Q.id) === g.PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID) return () => (0, n.jsx)(l.Anchor, {
                             className: S.termsApplyAnchor,
                             href: O.default.getArticleURL(h.HelpdeskArticles.Q4_DROP),
-                            children: (0, n.jsx)(i.Heading, {
+                            children: (0, n.jsx)(l.Heading, {
                                 variant: "heading-md/normal",
                                 className: S.termsApplyBodyText,
                                 children: L.default.Messages.BOGO_TERMS_APPLY
@@ -166,7 +166,7 @@
                             e && s()
                         }
                     })
-                }), X = (0, l.isThemeDark)(G) ? D.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : D.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL;
+                }), X = (0, i.isThemeDark)(G) ? D.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : D.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL;
                 return (0, n.jsx)(M.default, {
                     renderModalProps: t,
                     videoHref: "https://youtu.be/".concat(y),
@@ -208,8 +208,8 @@
                         return (0, n.jsxs)(m.default, {
                             className: S.buttonWide,
                             innerClassName: S.innerButton,
-                            color: i.Button.Colors.GREEN,
-                            size: i.Button.Sizes.SMALL,
+                            color: l.Button.Colors.GREEN,
+                            size: l.Button.Sizes.SMALL,
                             onClick: () => {
                                 T.default.track(h.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
                                     change_log_id: v,
@@ -234,36 +234,40 @@
                 Q4DropExperiment: function() {
                     return r
                 },
-                default: function() {
+                useQ4DropExperiment: function() {
                     return a
+                },
+                default: function() {
+                    return i
                 }
             });
             var n = s("862205");
             let r = (0, n.createExperiment)({
-                kind: "user",
-                id: "2023-10_q4_drop",
-                label: "Q4 Drop",
-                defaultConfig: {
-                    enabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enabled",
-                    config: {
-                        enabled: !0
-                    }
-                }]
-            });
-            var a = function() {
-                let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-                    t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                return r.useExperiment({
-                    location: "experiment_hook"
-                }, {
-                    autoTrackExposure: e,
-                    disable: t
-                })
-            }
+                    kind: "user",
+                    id: "2023-10_q4_drop",
+                    label: "Q4 Drop",
+                    defaultConfig: {
+                        enabled: !1
+                    },
+                    treatments: [{
+                        id: 1,
+                        label: "Enabled",
+                        config: {
+                            enabled: !0
+                        }
+                    }]
+                }),
+                a = function() {
+                    let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
+                        t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                    return r.useExperiment({
+                        location: "experiment_hook"
+                    }, {
+                        autoTrackExposure: e,
+                        disable: t
+                    })
+                };
+            var i = a
         },
         837797: function(e, t, s) {
             "use strict";
@@ -275,8 +279,8 @@
             var n = s("446674"),
                 r = s("521012"),
                 a = s("719923"),
-                l = s("154889"),
-                i = s("917247"),
+                i = s("154889"),
+                l = s("917247"),
                 o = s("646718");
 
             function u(e) {
@@ -291,7 +295,7 @@
                     onNonTier2Subscriber: N,
                     onTier2Subscriber: f,
                     onCustomCriteria: m
-                } = e, T = (0, i.usePremiumTrialOffer)(), O = (0, l.usePremiumDiscountOffer)(), A = (0, n.useStateFromStores)([r.default], () => r.default.getPremiumTypeSubscription()), p = a.default.getPremiumTypeFromSubscription(A);
+                } = e, T = (0, l.usePremiumTrialOffer)(), O = (0, i.usePremiumDiscountOffer)(), A = (0, n.useStateFromStores)([r.default], () => r.default.getPremiumTypeSubscription()), p = a.default.getPremiumTypeFromSubscription(A);
                 if (null != m) {
                     let e = m();
                     if (null != e) return e
@@ -309,8 +313,8 @@
             var n = s("37983"),
                 r = s("884691"),
                 a = s("414456"),
-                l = s.n(a),
-                i = s("77078"),
+                i = s.n(a),
+                l = s("77078"),
                 o = s("10641"),
                 u = s("933629"),
                 _ = s("560176"),
@@ -327,7 +331,7 @@
                         className: s
                     } = e;
                     return (0, n.jsx)(c.TextBadge, {
-                        className: l(T.tag, s),
+                        className: i(T.tag, s),
                         text: t
                     })
                 },
@@ -340,7 +344,7 @@
                         wideStyle: o
                     } = e;
                     return (0, n.jsxs)("div", {
-                        className: l(T.featureCard, {
+                        className: i(T.featureCard, {
                             [T.wideStyle]: o
                         }),
                         children: [null != a ? (0, n.jsx)(O, {
@@ -348,17 +352,17 @@
                             className: T.featureCardTag
                         }) : null, (0, n.jsx)("img", {
                             alt: "",
-                            className: l(T.featureCardImg, {
+                            className: i(T.featureCardImg, {
                                 [T.wideStyle]: o
                             }),
                             src: r
                         }), (0, n.jsxs)("div", {
                             className: T.featureCardTextGroup,
-                            children: [(0, n.jsx)(i.Heading, {
+                            children: [(0, n.jsx)(l.Heading, {
                                 variant: "heading-lg/extrabold",
                                 className: T.featureCardTextHeader,
                                 children: t
-                            }), (0, n.jsx)(i.Text, {
+                            }), (0, n.jsx)(l.Text, {
                                 variant: "text-sm/normal",
                                 children: s
                             })]
@@ -398,18 +402,18 @@
                             dismissAction: m.ContentDismissActionType.DISMISS
                         })
                     }
-                }, [p, g]), (0, n.jsxs)(i.ModalRoot, {
-                    className: l(T.root, t),
+                }, [p, g]), (0, n.jsxs)(l.ModalRoot, {
+                    className: i(T.root, t),
                     transitionState: S,
                     "aria-labelledby": P,
-                    children: [(0, n.jsx)(i.ModalCloseButton, {
+                    children: [(0, n.jsx)(l.ModalCloseButton, {
                         className: T.closeButton,
                         onClick: L
                     }), (0, n.jsx)(N.default, {
                         className: T.splash
-                    }), null == C ? void 0 : C(), (0, n.jsxs)(i.ModalContent, {
+                    }), null == C ? void 0 : C(), (0, n.jsxs)(l.ModalContent, {
                         className: T.content,
-                        children: [(0, n.jsx)(i.Heading, {
+                        children: [(0, n.jsx)(l.Heading, {
                             variant: "display-md",
                             className: T.headerText,
                             children: R
@@ -429,12 +433,12 @@
                                     change_log_id: g
                                 })
                             }
-                        }), (0, n.jsx)(i.Heading, {
+                        }), (0, n.jsx)(l.Heading, {
                             variant: "heading-lg/extrabold",
                             className: T.bodyText,
                             children: I
                         }), null == D ? void 0 : D(), (0, n.jsx)("div", {
-                            className: l(T.featureCardGroup, {
+                            className: i(T.featureCardGroup, {
                                 [T.wideStyle]: b
                             }),
                             children: M.map((e, t) => (0, n.jsx)(A, {
