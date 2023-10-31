@@ -1872,7 +1872,7 @@
                         subscribedSinceDate: Y,
                         currentPeriodEndDate: W,
                         currentPeriodEndLabel: K
-                    } = I, z = (0, M.isApplicationUserSubscription)(l.sku_flags), Q = (0, M.isApplicationGuildSubscription)(l.sku_flags), Z = l.soft_deleted || null == g || (!Q || null == u) && !z, q = () => H ? (0, a.jsx)(R.TextBadge, {
+                    } = I, z = (0, M.isApplicationUserSubscription)(l.sku_flags), Q = (0, M.isApplicationGuildSubscription)(l.sku_flags), q = l.soft_deleted || null == g || (!Q || null == u) && !z, Z = () => H ? (0, a.jsx)(R.TextBadge, {
                         text: P.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CANCELED
                     }) : w ? (0, a.jsx)(c.Tooltip, {
                         text: P.default.Messages.APPLICATION_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING,
@@ -1927,7 +1927,7 @@
                                         children: null != g ? g.name : P.default.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CARD_APPLICATION_NAME_UNAVAILABLE
                                     }), (0, a.jsxs)("div", {
                                         className: j.headerSubtitleContainer,
-                                        children: [X, q()]
+                                        children: [X, Z()]
                                     })]
                                 }), (0, a.jsx)(c.Clickable, {
                                     onClick: s(_),
@@ -1973,7 +1973,7 @@
                             size: 16
                         }), t.status === L.SubscriptionStatusTypes.ACTIVE && (0, a.jsx)(b, {
                             subscription: t
-                        }), !Z && (0, a.jsx)(B, {
+                        }), !q && (0, a.jsx)(B, {
                             isCancelled: H,
                             onCancelSubscriptionClick: G,
                             isResubscribing: x,
@@ -3731,8 +3731,8 @@
                     K = (0, d.showRemoveBanner)(U, null == V ? void 0 : V.banner),
                     z = (0, p.canResetThemeColors)(y, null == V ? void 0 : V.themeColors),
                     Q = null !== (t = null == V ? void 0 : V.bio) && void 0 !== t ? t : "",
-                    Z = null !== (s = null == V ? void 0 : V.pronouns) && void 0 !== s ? s : "",
-                    q = (e, t, s) => {
+                    q = null !== (s = null == V ? void 0 : V.pronouns) && void 0 !== s ? s : "",
+                    Z = (e, t, s) => {
                         s(null != e ? e : null != t ? null : void 0)
                     };
                 return (0, a.jsxs)("div", {
@@ -3747,10 +3747,10 @@
                         sectionTitle: R.default.Messages.USER_SETTINGS_PRONOUNS,
                         errors: null == F ? void 0 : F.pronouns,
                         onPronounsChange: e => {
-                            (0, p.setNewPendingGuildIdentityPronouns)(e, Z)
+                            (0, p.setNewPendingGuildIdentityPronouns)(e, q)
                         },
                         pendingPronouns: B,
-                        currentPronouns: Z
+                        currentPronouns: q
                     }, "pronouns"), (0, a.jsxs)(O.default, {
                         user: L,
                         showOverlay: !Y,
@@ -3765,14 +3765,14 @@
                                 })]
                             }),
                             showRemoveAvatarButton: W,
-                            onAvatarChange: e => q(e, null == w ? void 0 : w.avatar, N.setPendingAvatar),
+                            onAvatarChange: e => Z(e, null == w ? void 0 : w.avatar, N.setPendingAvatar),
                             errors: null == F ? void 0 : F.avatar,
                             guildId: k.id,
                             disabled: !Y
                         }, "avatar"), (0, a.jsx)(S.default, {
                             showRemoveBannerButton: K,
                             errors: null == F ? void 0 : F.banner,
-                            onBannerChange: e => q(e, null == V ? void 0 : V.banner, N.setPendingBanner),
+                            onBannerChange: e => Z(e, null == V ? void 0 : V.banner, N.setPendingBanner),
                             guildId: null == k ? void 0 : k.id,
                             disabled: !Y
                         }, "banner"), (0, a.jsx)(E.default, {
@@ -4662,8 +4662,8 @@
                         }
                     }, {
                         isCancelled: Q,
-                        isPastDue: Z,
-                        subscriptionPrice: q,
+                        isPastDue: q,
+                        subscriptionPrice: Z,
                         memberSince: X,
                         nextRenewalDate: J,
                         nextRenewalLabel: $,
@@ -4676,7 +4676,7 @@
                             text: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FREE_TRIAL_TITLE,
                             color: r.default.BRAND_500
                         });
-                        if (Z) return (0, a.jsx)(d.Tooltip, {
+                        if (q) return (0, a.jsx)(d.Tooltip, {
                             text: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_USER_SUBSCRIPTION_PAST_DUE_WARNING,
                             children: e => (0, a.jsx)("div", {
                                 ...e,
@@ -4758,7 +4758,7 @@
                                 value: J
                             }), (0, a.jsx)(G, {
                                 label: y.default.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_INFO_PRICE,
-                                value: q,
+                                value: Z,
                                 showInfoIcon: ee,
                                 infoIconTooltipText: ee ? y.default.Messages.GUILD_ROLE_SUBSCRIPTION_MANAGE_SUBSCRIPTION_PAGE_TRIAL_PRICE_INFO : void 0
                             }), (0, a.jsx)(G, {
@@ -5251,7 +5251,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return q
+                    return Z
                 }
             });
             var a, n, l, i, r = s("37983"),
@@ -5717,13 +5717,13 @@
                             return null
                     }
                 },
-                Z = e => e === i.USER_SETTINGS ? m.SlideDirection.LEFT : m.SlideDirection.RIGHT;
+                q = e => e === i.USER_SETTINGS ? m.SlideDirection.LEFT : m.SlideDirection.RIGHT;
 
-            function q() {
-                let [e, t] = o.useState(i.USER_SETTINGS), [s, a] = o.useState(Z(e)), [n, l] = o.useState(!1), d = (0, u.useStateFromStores)([T.default], () => T.default.useReducedMotion), c = n && !d;
+            function Z() {
+                let [e, t] = o.useState(i.USER_SETTINGS), [s, a] = o.useState(q(e)), [n, l] = o.useState(!1), d = (0, u.useStateFromStores)([T.default], () => T.default.useReducedMotion), c = n && !d;
                 return o.useEffect(() => {
                     let t = setTimeout(() => {
-                        a(Z(e))
+                        a(q(e))
                     }, 500);
                     return () => clearTimeout(t)
                 }, [e]), o.useEffect(() => {
@@ -6039,7 +6039,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return Z
+                    return q
                 }
             });
             var a = s("37983"),
@@ -6202,7 +6202,7 @@
                     })]
                 })
             }
-            var Z = function() {
+            var q = function() {
                 let e = (0, p.useBlockedPaymentsConfig)(),
                     {
                         AnalyticsLocationProvider: t,
@@ -7609,8 +7609,8 @@
                     pendingPronouns: K,
                     pendingBio: z,
                     tryItOutThemeColors: Q,
-                    tryItOutAvatar: Z,
-                    tryItOutBanner: q,
+                    tryItOutAvatar: q,
+                    tryItOutBanner: Z,
                     tryItOutAvatarDecoration: X,
                     tryItOutProfileEffectID: J
                 } = (0, l.useStateFromStoresObject)([N.default], () => {
@@ -7678,12 +7678,12 @@
                                 onBannerChange: I.setTryItOutBanner,
                                 pendingPronouns: K,
                                 pendingBio: z,
-                                pendingBanner: null !== (G = null != q ? q : Y) && void 0 !== G ? G : s("901979"),
-                                pendingAvatar: null != Z ? Z : V,
+                                pendingBanner: null !== (G = null != Z ? Z : Y) && void 0 !== G ? G : s("901979"),
+                                pendingAvatar: null != q ? q : V,
                                 pendingThemeColors: null != Q ? Q : W,
                                 pendingAvatarDecoration: $,
                                 pendingProfileEffectID: J,
-                                avatarClassName: null != Z || null != V || H.enabled ? void 0 : y.spinningAvatar,
+                                avatarClassName: null != q || null != V || H.enabled ? void 0 : y.spinningAvatar,
                                 canUsePremiumCustomization: !0,
                                 isTryItOutFlow: !0,
                                 hideExampleButton: !0,
@@ -7703,7 +7703,7 @@
                                 }), (0, a.jsx)(P.default, {
                                     className: y.customizationSection,
                                     user: k,
-                                    pendingAvatar: null != Z ? Z : V,
+                                    pendingAvatar: null != q ? q : V,
                                     pendingColors: null != Q ? Q : W,
                                     onThemeColorsChange: I.setTryItOutThemeColors,
                                     showPremiumIcon: !1,
@@ -7711,7 +7711,7 @@
                                 }), (0, a.jsx)(v.default, {
                                     className: y.customizationSection,
                                     isTryItOutFlow: !0,
-                                    showRemoveBannerButton: null != q,
+                                    showRemoveBannerButton: null != Z,
                                     onBannerChange: I.setTryItOutBanner,
                                     showPremiumIcon: !1
                                 }), (0, a.jsx)(M.default, {
@@ -7735,7 +7735,7 @@
                                         children: B.default.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
                                     }), (0, a.jsx)(m.default, {
                                         onSubscribeModalClose: e => {
-                                            e && ((0, r.setPendingAvatar)(Z), (0, I.setPendingBanner)(q), (0, I.setPendingThemeColors)(Q))
+                                            e && ((0, r.setPendingAvatar)(q), (0, I.setPendingBanner)(Z), (0, I.setPendingThemeColors)(Q))
                                         },
                                         subscriptionTier: U.PremiumSubscriptionSKUs.TIER_2,
                                         className: y.premiumSubscribeButton,
@@ -8477,6 +8477,9 @@
             s.r(t), s.d(t, {
                 getSafetyHubData: function() {
                     return i
+                },
+                getSafetyHubDataForClassification: function() {
+                    return r
                 }
             });
             var a = s("872717"),
@@ -8504,6 +8507,37 @@
                     n.default.dispatch({
                         type: "SAFETY_HUB_FETCH_FAILURE",
                         error: null !== (s = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== s ? s : "Unknown error"
+                    })
+                })
+            }
+            async function r(e) {
+                n.default.dispatch({
+                    type: "SAFETY_HUB_FETCH_CLASSIFICATION_START",
+                    classificationId: e
+                }), await a.default.get({
+                    url: l.Endpoints.SAFETY_HUB
+                }).then(t => {
+                    let {
+                        body: s
+                    } = t, {
+                        classifications: a,
+                        account_standing: l
+                    } = s, i = a.find(t => t.id === e);
+                    null != i ? n.default.dispatch({
+                        type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
+                        classification: i,
+                        accountStanding: l
+                    }) : n.default.dispatch({
+                        type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
+                        error: "Classification not found.",
+                        classificationId: e
+                    })
+                }).catch(t => {
+                    var s, a;
+                    n.default.dispatch({
+                        type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
+                        error: null !== (a = null == t ? void 0 : null === (s = t.body) || void 0 === s ? void 0 : s.message) && void 0 !== a ? a : "Unknown error",
+                        classificationId: e
                     })
                 })
             }
@@ -8542,21 +8576,24 @@
         },
         908539: function(e, t, s) {
             "use strict";
-            var a, n, l, i, r, o;
+            var a, n, l, i, r, o, d, u;
             s.r(t), s.d(t, {
                 ActionType: function() {
                     return n
                 },
                 AccountStandingState: function() {
                     return l
+                },
+                ClassificationRequestState: function() {
+                    return i
                 }
-            }), (i = a || (a = {}))[i.UNSPECIFIED = 0] = "UNSPECIFIED", i[i.UNKNOWN = 1] = "UNKNOWN", i[i.UNSOLICITED_PORNOGRAPHY = 100] = "UNSOLICITED_PORNOGRAPHY", i[i.NONCONSENSUAL_PORNOGRAPHY = 200] = "NONCONSENSUAL_PORNOGRAPHY", i[i.GLORIFYING_VIOLENCE = 210] = "GLORIFYING_VIOLENCE", i[i.HATE_SPEECH = 220] = "HATE_SPEECH", i[i.CRACKED_ACCOUNTS = 230] = "CRACKED_ACCOUNTS", i[i.ILLICIT_GOODS = 240] = "ILLICIT_GOODS", i[i.SOCIAL_ENGINEERING = 250] = "SOCIAL_ENGINEERING", i[i.TEST_CLASSIFICATION = 9e3] = "TEST_CLASSIFICATION", i[i.TEST_CLASSIFICATION_LOW = 9001] = "TEST_CLASSIFICATION_LOW", i[i.TEST_CLASSIFICATION_SEVERE = 9002] = "TEST_CLASSIFICATION_SEVERE", (r = n || (n = {}))[r.BAN = 0] = "BAN", r[r.TEMP_BAN = 1] = "TEMP_BAN", r[r.GLOBAL_QUARANTINE = 2] = "GLOBAL_QUARANTINE", r[r.REQUIRE_VERIFICATION = 3] = "REQUIRE_VERIFICATION", r[r.USER_WARNING = 4] = "USER_WARNING", r[r.USER_SPAMMER = 5] = "USER_SPAMMER", r[r.CHANNEL_SPAM = 6] = "CHANNEL_SPAM", r[r.MESSAGE_SPAM = 7] = "MESSAGE_SPAM", r[r.DISABLE_SUSPICIOUS_ACTIVITY = 8] = "DISABLE_SUSPICIOUS_ACTIVITY", r[r.LIMITED_ACCESS = 9] = "LIMITED_ACCESS", r[r.CHANNEL_SCHEDULE_DELETE = 10] = "CHANNEL_SCHEDULE_DELETE", r[r.MESSAGE_CONTENT_REMOVAL = 11] = "MESSAGE_CONTENT_REMOVAL", r[r.GUILD_DISABLE_INVITE = 12] = "GUILD_DISABLE_INVITE", r[r.USER_CONTENT_REMOVAL = 13] = "USER_CONTENT_REMOVAL", r[r.USER_USERNAME_MANGLE = 14] = "USER_USERNAME_MANGLE", r[r.GUILD_LIMITED_ACCESS = 15] = "GUILD_LIMITED_ACCESS", r[r.USER_MESSAGE_REMOVAL = 16] = "USER_MESSAGE_REMOVAL", (o = l || (l = {}))[o.ALL_GOOD = 100] = "ALL_GOOD", o[o.LIMITED = 200] = "LIMITED", o[o.VERY_LIMITED = 300] = "VERY_LIMITED", o[o.AT_RISK = 400] = "AT_RISK", o[o.SUSPENDED = 500] = "SUSPENDED"
+            }), (r = a || (a = {}))[r.UNSPECIFIED = 0] = "UNSPECIFIED", r[r.UNKNOWN = 1] = "UNKNOWN", r[r.UNSOLICITED_PORNOGRAPHY = 100] = "UNSOLICITED_PORNOGRAPHY", r[r.NONCONSENSUAL_PORNOGRAPHY = 200] = "NONCONSENSUAL_PORNOGRAPHY", r[r.GLORIFYING_VIOLENCE = 210] = "GLORIFYING_VIOLENCE", r[r.HATE_SPEECH = 220] = "HATE_SPEECH", r[r.CRACKED_ACCOUNTS = 230] = "CRACKED_ACCOUNTS", r[r.ILLICIT_GOODS = 240] = "ILLICIT_GOODS", r[r.SOCIAL_ENGINEERING = 250] = "SOCIAL_ENGINEERING", r[r.TEST_CLASSIFICATION = 9e3] = "TEST_CLASSIFICATION", r[r.TEST_CLASSIFICATION_LOW = 9001] = "TEST_CLASSIFICATION_LOW", r[r.TEST_CLASSIFICATION_SEVERE = 9002] = "TEST_CLASSIFICATION_SEVERE", (o = n || (n = {}))[o.BAN = 0] = "BAN", o[o.TEMP_BAN = 1] = "TEMP_BAN", o[o.GLOBAL_QUARANTINE = 2] = "GLOBAL_QUARANTINE", o[o.REQUIRE_VERIFICATION = 3] = "REQUIRE_VERIFICATION", o[o.USER_WARNING = 4] = "USER_WARNING", o[o.USER_SPAMMER = 5] = "USER_SPAMMER", o[o.CHANNEL_SPAM = 6] = "CHANNEL_SPAM", o[o.MESSAGE_SPAM = 7] = "MESSAGE_SPAM", o[o.DISABLE_SUSPICIOUS_ACTIVITY = 8] = "DISABLE_SUSPICIOUS_ACTIVITY", o[o.LIMITED_ACCESS = 9] = "LIMITED_ACCESS", o[o.CHANNEL_SCHEDULE_DELETE = 10] = "CHANNEL_SCHEDULE_DELETE", o[o.MESSAGE_CONTENT_REMOVAL = 11] = "MESSAGE_CONTENT_REMOVAL", o[o.GUILD_DISABLE_INVITE = 12] = "GUILD_DISABLE_INVITE", o[o.USER_CONTENT_REMOVAL = 13] = "USER_CONTENT_REMOVAL", o[o.USER_USERNAME_MANGLE = 14] = "USER_USERNAME_MANGLE", o[o.GUILD_LIMITED_ACCESS = 15] = "GUILD_LIMITED_ACCESS", o[o.USER_MESSAGE_REMOVAL = 16] = "USER_MESSAGE_REMOVAL", (d = l || (l = {}))[d.ALL_GOOD = 100] = "ALL_GOOD", d[d.LIMITED = 200] = "LIMITED", d[d.VERY_LIMITED = 300] = "VERY_LIMITED", d[d.AT_RISK = 400] = "AT_RISK", d[d.SUSPENDED = 500] = "SUSPENDED", (u = i || (i = {}))[u.PENDING = 0] = "PENDING", u[u.SUCCESS = 1] = "SUCCESS", u[u.FAILED = 2] = "FAILED"
         },
         646356: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return T
+                    return f
                 }
             });
             var a = s("816494"),
@@ -8565,15 +8602,16 @@
                 i = s("913144"),
                 r = s("908539");
             let o = {},
-                d = {
+                d = {},
+                u = {
                     state: r.AccountStandingState.ALL_GOOD
                 },
-                u = !1,
                 c = !1,
-                S = null;
-            class E extends l.default.Store {
+                S = !1,
+                E = null;
+            class T extends l.default.Store {
                 isFetching() {
-                    return u
+                    return c
                 }
                 getClassifications() {
                     return Object.values(o)
@@ -8582,35 +8620,55 @@
                     return o[e]
                 }
                 getAccountStanding() {
-                    return d
+                    return u
                 }
                 getFetchError() {
-                    return S
+                    return E
                 }
                 isInitialized() {
-                    return c
+                    return S
+                }
+                getClassificationRequestState(e) {
+                    return d[e]
                 }
             }
-            E.displayName = "SafetyHubStore";
-            var T = new E(i.default, {
+            T.displayName = "SafetyHubStore";
+            var f = new T(i.default, {
                 SAFETY_HUB_FETCH_START: function(e) {
-                    u = !0
+                    c = !0
                 },
                 SAFETY_HUB_FETCH_SUCCESS: function(e) {
                     let {
                         classifications: t,
                         accountStanding: s
                     } = e;
-                    o = n(t, "id"), d = s, u = !1, c = !0, S = null
+                    o = n(t, "id"), u = s, c = !1, S = !0, E = null
                 },
                 SAFETY_HUB_FETCH_FAILURE: function(e) {
                     let {
                         error: t
                     } = e;
-                    u = !1, c = !1, S = t
+                    c = !1, S = !1, E = t
+                },
+                SAFETY_HUB_FETCH_CLASSIFICATION_START: function(e) {
+                    d[e.classificationId] = r.ClassificationRequestState.PENDING, c = !0
+                },
+                SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: function(e) {
+                    let {
+                        classification: t,
+                        accountStanding: s
+                    } = e;
+                    o[t.id] = t, d[t.id] = r.ClassificationRequestState.SUCCESS, u = s, c = !1, E = null
+                },
+                SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function(e) {
+                    let {
+                        error: t,
+                        classificationId: s
+                    } = e;
+                    c = !1, E = t, d[s] = r.ClassificationRequestState.FAILED
                 },
                 LOGOUT: function() {
-                    u = !1, o = {}, d = {
+                    c = !1, o = {}, u = {
                         state: r.AccountStandingState.ALL_GOOD
                     }
                 }
@@ -8688,10 +8746,14 @@
             }
 
             function d(e) {
-                let [t, s] = a.useState(!1), l = (0, n.useStateFromStores)([r.default], () => r.default.getClassification(e));
+                let t = (0, n.useStateFromStores)([r.default], () => r.default.getClassification(e)),
+                    s = (0, n.useStateFromStores)([r.default], () => r.default.getClassificationRequestState(e));
                 return a.useEffect(() => {
-                    void 0 === l && !t && (s(!0), i.getSafetyHubData())
-                }, [e, l, t]), l
+                    void 0 === t && null == s && i.getSafetyHubDataForClassification(e)
+                }, [e, t, s]), {
+                    classification: t,
+                    classificationRequestState: s
+                }
             }
 
             function u() {
@@ -9748,7 +9810,7 @@
             function d() {
                 var e, t, s, n, d, u, c, S, E;
                 let T = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    f = (e = "229c9af951132ec6f2cb346ad921c106901a8017", e.substring(0, 7)),
+                    f = (e = "ca36a34c85549543fc4033a4e587447150ecaf1e", e.substring(0, 7)),
                     m = null === (t = r.default) || void 0 === t ? void 0 : t.remoteApp.getVersion(),
                     _ = null === (n = r.default) || void 0 === n ? void 0 : null === (s = (d = n.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(d),
                     I = null === (c = r.default) || void 0 === c ? void 0 : null === (u = (S = c.remoteApp).getAppArch) || void 0 === u ? void 0 : u.call(S),
@@ -9761,7 +9823,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [T, " ", "241991", " ", (0, a.jsxs)("span", {
+                        children: [T, " ", "241994", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", f, ")"]
                         })]
@@ -10801,7 +10863,7 @@
                 }), w = "true" !== k.gift && null != U, [V, Y] = n.useState(b.length > 0 ? b[0].value : null), {
                     AnalyticsLocationProvider: W,
                     analyticsLocations: K
-                } = (0, T.default)(E.default.PAYMENT_FLOW_TEST_PAGE), [z, Q] = n.useState(""), [Z, q] = n.useState(""), [X, J] = n.useState(""), [$, ee] = n.useState(""), [et, es] = n.useState("");
+                } = (0, T.default)(E.default.PAYMENT_FLOW_TEST_PAGE), [z, Q] = n.useState(""), [q, Z] = n.useState(""), [X, J] = n.useState(""), [$, ee] = n.useState(""), [et, es] = n.useState("");
                 return (0, a.jsx)(W, {
                     children: (0, a.jsxs)(o.FormSection, {
                         title: "Payment Flow Modals",
@@ -10998,12 +11060,12 @@
                                 onChange: Q
                             }), (0, a.jsx)(o.TextInput, {
                                 placeholder: "Sku Id",
-                                value: Z,
-                                onChange: q
+                                value: q,
+                                onChange: Z
                             }), (0, a.jsx)(o.Button, {
                                 onClick: () => (0, S.openIAPPurchaseModal)({
                                     applicationId: z,
-                                    skuId: Z,
+                                    skuId: q,
                                     openPremiumPaymentModal: () => !0,
                                     analyticsLocations: [],
                                     analyticsLocation: {
@@ -12317,7 +12379,7 @@
                 return (0, a.jsxs)(u.FormSection, {
                     tag: u.FormTitleTags.H1,
                     title: B.default.Messages.ACCESSIBILITY,
-                    children: [(0, a.jsx)(K, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(Z, {}), (0, a.jsx)(q, {}), (0, f.canEnableForcedColors)() ? (0, a.jsx)(X, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
+                    children: [(0, a.jsx)(K, {}), (0, a.jsx)(z, {}), (0, a.jsx)(u.FormDivider, {}), (0, a.jsx)(Q, {}), (0, a.jsx)(q, {}), (0, a.jsx)(Z, {}), (0, f.canEnableForcedColors)() ? (0, a.jsx)(X, {}) : null, (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(u.FormDivider, {
                         className: F.marginBottom20
                     }), (0, a.jsx)(u.Text, {
                         variant: "text-md/normal",
@@ -12435,7 +12497,7 @@
                 })
             }
 
-            function Z() {
+            function q() {
                 let e = (0, d.useStateFromStores)([T.default], () => T.default.roleStyle);
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsxs)(u.FormItem, {
@@ -12467,7 +12529,7 @@
                 })
             }
 
-            function q() {
+            function Z() {
                 let e = (0, d.useStateFromStores)([T.default], () => T.default.syncProfileThemeWithUserTheme),
                     t = n.useRef(null);
                 return (0, L.default)(t, P.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME), (0, a.jsx)(u.FormItem, {
@@ -13278,7 +13340,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return Z
+                    return q
                 }
             });
             var a = s("37983"),
@@ -13618,7 +13680,7 @@
                 }
             }
 
-            function Z() {
+            function q() {
                 var e;
                 let t = P.MessageDisplayCompact.useSetting(),
                     s = P.InlineEmbedMedia.useSetting(),
@@ -14232,7 +14294,7 @@
                 })
             };
 
-            function Z(e) {
+            function q(e) {
                 var t, s, l;
                 let i, r, o, {
                         onDisconnect: S,
@@ -14246,7 +14308,7 @@
                     [v, P] = n.useState(T.showActivity),
                     [b, y] = n.useState(null),
                     [Y, z] = n.useState(null),
-                    [Z, q] = n.useState(!1),
+                    [q, Z] = n.useState(!1),
                     [X, J] = n.useState([]),
                     $ = (0, h.useLegacyPlatformType)(T.type),
                     ee = I.default.get($);
@@ -14425,12 +14487,12 @@
                             className: K.metadataRefreshButton,
                             color: r ? c.Button.Colors.GREEN : c.Button.Colors.BRAND,
                             size: c.Button.Sizes.SMALL,
-                            submitting: Z,
+                            submitting: q,
                             disabled: r,
                             onClick: r ? void 0 : () => {
-                                q(!0), E.default.refresh(e.type, e.id).finally(() => {
+                                Z(!0), E.default.refresh(e.type, e.id).finally(() => {
                                     setTimeout(() => {
-                                        X.push(e.id), J(X), q(!1)
+                                        X.push(e.id), J(X), Z(!1)
                                     }, 2e3)
                                 })
                             },
@@ -14513,7 +14575,7 @@
                 })
             }
 
-            function q() {
+            function Z() {
                 return n.useEffect(() => () => {
                     (0, p.markDismissibleContentAsDismissed)(o.DismissibleContent.NEW_CRUNCHYROLL_CONNECTION, {
                         dismissAction: Y.ContentDismissActionType.AUTO
@@ -14610,7 +14672,7 @@
                         note: W.default.Messages.CONNECTED_ACCOUNTS_NONE,
                         children: W.default.Messages.CONNECTED_ACCOUNTS_NONE_TITLE
                     })]
-                }) : l.filter(e => I.default.isSupported(e.type)).map((e, t) => (0, a.jsx)(Z, {
+                }) : l.filter(e => I.default.isSupported(e.type)).map((e, t) => (0, a.jsx)(q, {
                     theme: i,
                     account: e,
                     locale: r,
@@ -14639,7 +14701,7 @@
                     className: K.connections,
                     tag: c.FormTitleTags.H1,
                     title: W.default.Messages.CONNECTIONS,
-                    children: [(0, a.jsx)(q, {}), (0, a.jsx)(J, {
+                    children: [(0, a.jsx)(Z, {}), (0, a.jsx)(J, {
                         fetching: t,
                         accounts: s,
                         theme: l,
@@ -14785,7 +14847,7 @@
                     }
                 }
             }
-            class Z extends n.Component {
+            class q extends n.Component {
                 async refreshBuildOverrides() {
                     this.setState({
                         loading: !0
@@ -15065,14 +15127,14 @@
                         let {
                             buildOverrides: e
                         } = this.state;
-                        (0, S.openModal)(t => (0, a.jsx)(q, {
+                        (0, S.openModal)(t => (0, a.jsx)(Z, {
                             ...t,
                             buildOverrides: e
                         }))
                     }
                 }
             }
-            class q extends n.Component {
+            class Z extends n.Component {
                 isMobile() {
                     var e;
                     return z(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {})
@@ -15663,7 +15725,7 @@
             class es extends n.PureComponent {
                 render() {
                     return (0, a.jsxs)(n.Fragment, {
-                        children: [(0, a.jsx)($, {}), (0, a.jsx)(J, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(Z, {})]
+                        children: [(0, a.jsx)($, {}), (0, a.jsx)(J, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(q, {})]
                     })
                 }
             }
@@ -17505,7 +17567,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return q
+                    return Z
                 }
             });
             var a = s("37983"),
@@ -17636,7 +17698,7 @@
                 })
             }
 
-            function Z() {
+            function q() {
                 let e = (0, r.useStateFromStores)([C.default], () => C.default.getFlattenedGuildIds()),
                     t = e.slice(0, V.NUMBER_OF_GUILDS_TO_RECOMMEND_BOOSTING),
                     s = (0, T.useSubscriptionPlansLoaded)();
@@ -17720,7 +17782,7 @@
                 })
             }
 
-            function q() {
+            function Z() {
                 n.useEffect(() => {
                     d.default.wait(() => {
                         u.fetchSubscriptions(), u.fetchPaymentSources(), (0, c.fetchGuildBoostSlots)(), (0, E.fetchPremiumSubscriptionPlans)(null, null, V.RevenueSurfaces.DISCOVERY)
@@ -17757,7 +17819,7 @@
                                     children: Y.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TITLE
                                 }), (0, a.jsx)(f.BlockedPaymentsWarning, {}), (0, a.jsx)(I.default, {})]
                             }) : null,
-                            children: (0, a.jsx)(Z, {})
+                            children: (0, a.jsx)(q, {})
                         })
                     })]
                 })
@@ -21699,7 +21761,7 @@
                         pendingPronouns: K,
                         pendingAccentColor: z,
                         pendingThemeColors: Q,
-                        errors: Z
+                        errors: q
                     } = (0, i.useStateFromStoresObject)([R.default], () => {
                         let e = R.default.getAllPending(),
                             t = R.default.getErrors();
@@ -21708,7 +21770,7 @@
                             errors: t
                         }
                     }),
-                    q = (0, d.useGuildAutomodProfileQuarantineErrors)(),
+                    Z = (0, d.useGuildAutomodProfileQuarantineErrors)(),
                     X = D.default.canUsePremiumProfileCustomization(k),
                     J = (0, S.showRemoveAvatar)(w, k.avatar),
                     $ = (0, S.showRemoveBanner)(Y, null == H ? void 0 : H.banner),
@@ -21726,8 +21788,8 @@
                     es = (0, u.useIsPremiumTutorialEnabled)("DefaultCustomizationSections"),
                     ea = (0, x.default)(k.id),
                     en = null == ea ? void 0 : ea.getLegacyUsername(),
-                    el = (null !== (n = null === (t = Z.global_name) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0) > 0 ? Z.global_name : null !== (b = null == q ? void 0 : q.nick) && void 0 !== b ? b : [],
-                    ei = (null !== (B = null === (s = Z.bio) || void 0 === s ? void 0 : s.length) && void 0 !== B ? B : 0) > 0 ? Z.bio : null !== (y = null == q ? void 0 : q.bio) && void 0 !== y ? y : [];
+                    el = (null !== (n = null === (t = q.global_name) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0) > 0 ? q.global_name : null !== (b = null == Z ? void 0 : Z.nick) && void 0 !== b ? b : [],
+                    ei = (null !== (B = null === (s = q.bio) || void 0 === s ? void 0 : s.length) && void 0 !== B ? B : 0) > 0 ? q.bio : null !== (y = null == Z ? void 0 : Z.bio) && void 0 !== y ? y : [];
                 return (0, a.jsxs)("div", {
                     className: j.sectionsContainer,
                     children: [(0, a.jsx)(m.default, {
@@ -21738,7 +21800,7 @@
                         onGlobalNameChange: r.setPendingGlobalNameName
                     }), (0, a.jsx)(C.default, {
                         sectionTitle: P.default.Messages.USER_SETTINGS_PRONOUNS,
-                        errors: Z.pronouns,
+                        errors: q.pronouns,
                         onPronounsChange: A.setPendingPronouns,
                         pendingPronouns: K,
                         currentPronouns: null !== (F = null == H ? void 0 : H.pronouns) && void 0 !== F ? F : ""
@@ -21747,7 +21809,7 @@
                         children: e => (0, a.jsx)(f.default, {
                             onAvatarChange: r.setPendingAvatar,
                             showRemoveAvatarButton: J,
-                            errors: Z.avatar,
+                            errors: q.avatar,
                             sectionTitle: P.default.Messages.USER_SETTINGS_AVATAR,
                             forcedDivider: !0,
                             withHighlight: e
@@ -21762,7 +21824,7 @@
                         substeps: [L.PremiumTutorialSubsteps.PROFILE_CUSTOMIZATION_BANNER],
                         children: e => (0, a.jsx)(I.default, {
                             showRemoveBannerButton: $,
-                            errors: Z.banner,
+                            errors: q.banner,
                             onBannerChange: A.setPendingBanner,
                             forcedDivider: !0,
                             withHighlight: e
@@ -23566,8 +23628,8 @@
                 K = s("625393"),
                 z = s("152891"),
                 Q = s("921600"),
-                Z = s("250972"),
-                q = s("89563"),
+                q = s("250972"),
+                Z = s("89563"),
                 X = s("41525"),
                 J = s("59574"),
                 $ = s("602806"),
@@ -23613,7 +23675,7 @@
                     section: eN.UserSettingsSections.ACCOUNT,
                     label: eC.default.Messages.USER_SETTINGS_MY_ACCOUNT,
                     ariaLabel: eC.default.Messages.USER_SETTINGS_MY_ACCOUNT,
-                    element: Z.default
+                    element: q.default
                 }, {
                     section: eN.UserSettingsSections.PROFILE_CUSTOMIZATION,
                     type: S.ContentTypes.WIDE,
@@ -23804,7 +23866,7 @@
                 }, {
                     section: eN.UserSettingsSections.ACTIVITY_PRIVACY,
                     label: eC.default.Messages.ACTIVITY_PRIVACY,
-                    element: q.default
+                    element: Z.default
                 }, {
                     section: eN.UserSettingsSections.REGISTERED_GAMES,
                     label: eC.default.Messages.REGISTERED_GAMES,

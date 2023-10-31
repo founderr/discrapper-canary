@@ -12203,7 +12203,8 @@
                             return t => (0, s.jsx)(e, {
                                 classificationId: h,
                                 source: u.SafetyHubAnalyticsActionSource.SystemDM,
-                                ...t
+                                transitionState: t.transitionState,
+                                onClose: t.onClose
                             })
                         })
                     },
