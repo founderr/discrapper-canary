@@ -3463,7 +3463,7 @@
                         let e = c.default.getCurrentUser();
                         await (0, o.submitReport)({
                             name: "Issue from ".concat(null == e ? void 0 : e.username, "#").concat(null == e ? void 0 : e.discriminator),
-                            priority: 1,
+                            priority: 2,
                             description: t,
                             feature: {
                                 asana_inbox_id: "1204198429044032"
