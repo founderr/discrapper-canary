@@ -882,21 +882,21 @@
                 T = r("245515"),
                 N = r("172248"),
                 w = r("719086"),
-                A = r("811199"),
-                L = r("175768"),
-                E = r("358344"),
-                R = r("34971"),
-                _ = r("134034"),
+                E = r("811199"),
+                A = r("175768"),
+                L = r("358344"),
+                _ = r("34971"),
+                R = r("134034"),
                 P = r("79953"),
                 M = r("388557"),
-                I = r("238161"),
-                O = r("20950"),
+                O = r("238161"),
+                I = r("20950"),
                 B = r("724209"),
                 D = r("782340"),
                 H = r("978482"),
-                G = r("694735");
+                F = r("694735");
 
-            function F(e) {
+            function G(e) {
                 let {
                     resizableNode: t,
                     onResize: r,
@@ -926,7 +926,7 @@
                             }, {
                                 id: "triggers",
                                 name: "Triggers",
-                                render: () => (0, a.jsx)(O.default, {})
+                                render: () => (0, a.jsx)(I.default, {})
                             }, {
                                 id: "stores",
                                 name: "Stores",
@@ -939,7 +939,7 @@
                             return h.default.isDeveloper && t.push({
                                 id: "quick_actions",
                                 name: "Quick Actions",
-                                render: () => (0, a.jsx)(_.default, {})
+                                render: () => (0, a.jsx)(R.default, {})
                             }), e && t.push({
                                 id: "highlights",
                                 name: "Highlights",
@@ -967,19 +967,19 @@
                             }), t.push({
                                 id: "permissions",
                                 name: "Permissions",
-                                render: () => (0, a.jsx)(R.default, {})
+                                render: () => (0, a.jsx)(_.default, {})
                             }), t.push({
                                 id: "modals",
                                 name: "Modals",
-                                render: () => (0, a.jsx)(L.default, {})
+                                render: () => (0, a.jsx)(A.default, {})
                             }), window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith("staging") && (t.push({
                                 id: "trials",
                                 name: "Trials",
-                                render: () => (0, a.jsx)(I.default, {})
+                                render: () => (0, a.jsx)(O.default, {})
                             }), t.push({
                                 id: "payments",
                                 name: "Payments",
-                                render: () => (0, a.jsx)(E.default, {})
+                                render: () => (0, a.jsx)(L.default, {})
                             }), t.push({
                                 id: "subscriptions",
                                 name: "Subscriptions",
@@ -1010,9 +1010,9 @@
                     properties: {
                         panel: i
                     }
-                }), (0, a.jsxs)(A.DevToolsLayerProvider, {
+                }), (0, a.jsxs)(E.DevToolsLayerProvider, {
                     children: [(0, a.jsxs)(b.default, {
-                        className: G.headerBar,
+                        className: F.headerBar,
                         toolbar: (0, a.jsx)(b.default.Icon, {
                             icon: p.default,
                             tooltip: D.default.Messages.CLOSE,
@@ -1024,7 +1024,7 @@
                         }), (0, a.jsx)(b.default.Title, {
                             children: "DevTools"
                         })]
-                    }), (0, a.jsx)(r, {}), l(), (0, a.jsx)(A.DevToolsLayerContainer, {
+                    }), (0, a.jsx)(r, {}), l(), (0, a.jsx)(E.DevToolsLayerContainer, {
                         className: H.layerContainer
                     })]
                 })
@@ -1046,7 +1046,7 @@
                         minWidth: x.DEVTOOLS_SIDEBAR_MIN_WIDTH,
                         width: r
                     },
-                    children: [(0, a.jsx)(F, {
+                    children: [(0, a.jsx)(G, {
                         resizableNode: e,
                         onResize: l,
                         onResizeEnd: o
@@ -1070,7 +1070,7 @@
                     children: (0, a.jsx)(d.Clickable, {
                         onClick: y.toggleDisplayDevTools,
                         children: (0, a.jsxs)(b.default, {
-                            className: i(G.headerBar, H.mobileHeaderCollapsed),
+                            className: i(F.headerBar, H.mobileHeaderCollapsed),
                             toolbar: (0, a.jsx)(m.default, {
                                 direction: m.default.Directions.UP
                             }),
@@ -1100,7 +1100,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return R
+                    return _
                 }
             });
             var a = r("37983"),
@@ -1158,7 +1158,7 @@
                 })
             }
 
-            function A(e) {
+            function E(e) {
                 let {
                     name: t,
                     children: r
@@ -1173,7 +1173,7 @@
                     })]
                 })
             }
-            let L = [{
+            let A = [{
                     id: "details",
                     name: "Details",
                     render: e => {
@@ -1217,7 +1217,7 @@
                             }), (0, a.jsx)(w, {
                                 children: Object.entries(r).map(e => {
                                     let [t, r] = e;
-                                    return (0, a.jsx)(A, {
+                                    return (0, a.jsx)(E, {
                                         name: "".concat(t, ":"),
                                         children: null != r ? (0, a.jsx)("code", {
                                             children: JSON.stringify(r)
@@ -1231,10 +1231,10 @@
                         })
                     }
                 }],
-                E = {
+                L = {
                     events: {
                         label: "Events",
-                        filter: e => Object.entries(E).filter(e => {
+                        filter: e => Object.entries(L).filter(e => {
                             let [t] = e;
                             return "events" !== t
                         }).map(t => {
@@ -1258,13 +1258,13 @@
                     }
                 };
 
-            function R() {
+            function _() {
                 let e = n.useRef(null),
                     t = (0, d.useStateFromStores)([b.default], () => b.default.loggedEvents),
-                    [r, l] = n.useState(Object.keys(E)),
+                    [r, l] = n.useState(Object.keys(L)),
                     o = t.filter(e => {
                         for (let t of r)
-                            if (E[t].filter(e)) return !0;
+                            if (L[t].filter(e)) return !0;
                         return !1
                     }),
                     [s, u] = n.useState(void 0),
@@ -1273,7 +1273,7 @@
                         TabBar: h,
                         renderSelectedTab: p
                     } = (0, C.default)({
-                        tabs: L
+                        tabs: A
                     }, []);
                 return (0, a.jsxs)("div", {
                     ref: e,
@@ -1295,7 +1295,7 @@
                             className: S.toolbarDivider
                         }), (0, a.jsx)("div", {
                             className: S.filters,
-                            children: Object.entries(E).map(e => {
+                            children: Object.entries(L).map(e => {
                                 let [t, n] = e;
                                 return (0, a.jsx)(c.Clickable, {
                                     className: i(S.filter, r.includes(t) && S.activeFilter),
@@ -1348,7 +1348,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return I
+                    return O
                 }
             });
             var a = r("926607"),
@@ -1388,17 +1388,17 @@
                     return e
                 }, e
             }
-            let A = {
+            let E = {
                     ...g.semanticColorTokens,
                     ...m.componentColorTokens
                 },
-                L = {
+                A = {
                     ...P(g.semanticColorTokens),
                     ...P(m.componentColorTokens)
                 },
-                E = ["100", "130", "160", "200", "230", "260", "300", "330", "345", "360", "400", "430", "460", "500", "530", "560", "600", "630", "645", "660", "700", "730", "760", "800", "830", "860", "900"];
+                L = ["100", "130", "160", "200", "230", "260", "300", "330", "345", "360", "400", "430", "460", "500", "530", "560", "600", "630", "645", "660", "700", "730", "760", "800", "830", "860", "900"];
 
-            function R(e) {
+            function _(e) {
                 var t;
                 let r = "string" == typeof e ? 1 : null !== (t = e.opacity) && void 0 !== t ? t : 1,
                     a = "string" == typeof e ? e : e.color;
@@ -1408,7 +1408,7 @@
                 }
             }
 
-            function _(e) {
+            function R(e) {
                 return "name" in e
             }
 
@@ -1417,14 +1417,14 @@
                 return Object.keys(e).forEach(r => {
                     let a = e[r];
                     if ("name" in a) a = function e(t) {
-                        let r = A[t.name];
+                        let r = E[t.name];
                         return "name" in r ? e(r) : r
                     }(a);
                     t[r] = {
-                        light: R(a.light),
-                        dark: R(a.dark),
-                        darker: R(null != a.darker ? a.darker : a.dark),
-                        amoled: R(null != a.amoled ? a.amoled : a.dark)
+                        light: _(a.light),
+                        dark: _(a.dark),
+                        darker: _(null != a.darker ? a.darker : a.dark),
+                        amoled: _(null != a.amoled ? a.amoled : a.dark)
                     }
                 }), t
             }
@@ -1439,7 +1439,7 @@
                 }, [e, r]), [r, a]
             }
 
-            function I() {
+            function O() {
                 let e = (0, y.useTheme)(),
                     t = (0, f.default)([k.default], () => k.default.useAMOLEDTheme),
                     r = x.default.useExperiment({
@@ -1451,7 +1451,7 @@
                 let [{
                     rawPalette: a,
                     semanticTokens: i
-                }, d, h, m, g, A] = function(e, t) {
+                }, d, h, m, g, E] = function(e, t) {
                     let [r, a] = M("".concat(e, "-states"), [t]), [n, i] = M("".concat(e, "-index"), 0), o = r[n], s = l.useCallback(e => {
                         let t = [e, ...r].slice(0, 20);
                         a(t), i(0)
@@ -1463,8 +1463,8 @@
                     return [o, s, d, c, u, f]
                 }("color-override-03-03-23", {
                     rawPalette: p.rawPalette,
-                    semanticTokens: L
-                }), [R, _] = l.useState(""), [P, I] = l.useState({}), [O, B] = l.useState({}), D = l.useMemo(() => {
+                    semanticTokens: A
+                }), [_, R] = l.useState(""), [P, O] = l.useState({}), [I, B] = l.useState({}), D = l.useMemo(() => {
                     let e = Object.keys(a);
                     return e.reduce((e, t) => [...e, {
                         value: t,
@@ -1479,7 +1479,7 @@
                         rawPalette: a,
                         semanticTokens: l
                     })
-                }, [i, a, d]), G = l.useMemo(() => {
+                }, [i, a, d]), F = l.useMemo(() => {
                     let t = Object.keys(i).map(t => {
                             let r = i[t],
                                 {
@@ -1505,8 +1505,8 @@
                             }(t), i = c.kebabCase(e);
                             return ["--".concat(i, "-hsl: ").concat(r, " calc(var(--saturation-factor, 1) * ").concat(n, "%) ").concat(l, "% !important;"), "--".concat(i, ": hsl(var(--").concat(i, "-hsl)) !important;")]
                         });
-                    return "\n      .theme-".concat(e, " {\n        ").concat(t.join("\n"), "\n\n        ").concat(Object.keys(P).filter(e => P[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(O).filter(e => O[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(r.join("\n"), "\n      }\n    ")
-                }, [e, i, a, P, O]), F = l.useCallback(e => {
+                    return "\n      .theme-".concat(e, " {\n        ").concat(t.join("\n"), "\n\n        ").concat(Object.keys(P).filter(e => P[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(I).filter(e => I[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(r.join("\n"), "\n      }\n    ")
+                }, [e, i, a, P, I]), G = l.useCallback(e => {
                     let t = "",
                         r = "",
                         a = !1;
@@ -1535,7 +1535,7 @@
                     let t = {};
                     Object.keys(e).forEach(r => {
                         Object.keys(e[r]).map(a => {
-                            let n = [...E];
+                            let n = [...L];
                             "primary" !== r && (n = n.filter(e => "645" !== e)), t["".concat(r, ".").concat(n[+a])] = {
                                 hex: e[r][a]
                             }
@@ -1566,7 +1566,7 @@
                                 children: "Undo"
                             }), (0, n.jsx)(b.Button, {
                                 onClick: m,
-                                disabled: !A,
+                                disabled: !E,
                                 size: b.Button.Sizes.MIN,
                                 children: "Redo"
                             })]
@@ -1602,7 +1602,7 @@
                             }), (0, n.jsx)(b.Button, {
                                 size: b.Button.Sizes.MIN,
                                 onClick: () => {
-                                    navigator.clipboard.writeText(F(i))
+                                    navigator.clipboard.writeText(G(i))
                                 },
                                 children: "Export"
                             })]
@@ -1617,7 +1617,7 @@
                                 onClick: () => {
                                     d({
                                         rawPalette: p.rawPalette,
-                                        semanticTokens: L
+                                        semanticTokens: A
                                     })
                                 },
                                 children: "Reset all"
@@ -1631,9 +1631,9 @@
                             },
                             children: [(0, n.jsx)(v.default, {
                                 size: v.default.Sizes.SMALL,
-                                query: R,
-                                onChange: _,
-                                onClear: () => _(""),
+                                query: _,
+                                onChange: R,
+                                onClear: () => R(""),
                                 placeholder: "Search tokens",
                                 "aria-label": "Search tokens"
                             }), " "]
@@ -1647,9 +1647,9 @@
                                 margin: 8,
                                 alignItems: "center"
                             },
-                            children: Object.keys(L).filter(e => "" === R || e.toLowerCase().includes(R)).map(t => {
+                            children: Object.keys(A).filter(e => "" === _ || e.toLowerCase().includes(_)).map(t => {
                                 var r;
-                                let a = L[t][e],
+                                let a = A[t][e],
                                     o = null == i[t] ? {
                                         ...a
                                     } : i[t][e],
@@ -1671,7 +1671,7 @@
                                         children: (0, n.jsx)(b.Checkbox, {
                                             value: P[t],
                                             onChange: () => {
-                                                I(e => ({
+                                                O(e => ({
                                                     ...e,
                                                     [t]: !e[t]
                                                 }))
@@ -1724,7 +1724,7 @@
                     }), (0, n.jsx)(u.Helmet, {
                         children: (0, n.jsx)("style", {
                             id: "devtools-color-overrides",
-                            children: G
+                            children: F
                         })
                     })]
                 })
@@ -1777,7 +1777,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return A
+                    return E
                 }
             });
             var a = r("37983"),
@@ -1962,7 +1962,7 @@
                 }
             }];
 
-            function A() {
+            function E() {
                 let e = n.useRef(null),
                     t = function(e) {
                         let [t, r] = n.useState([...e.logs]), a = n.useCallback(() => r([...e.logs]), [e]);
@@ -2037,7 +2037,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return L
+                    return A
                 }
             });
             var a = r("37983"),
@@ -2101,7 +2101,7 @@
                 })
             }
 
-            function A(e) {
+            function E(e) {
                 let {
                     guildId: t
                 } = e, r = (0, u.useStateFromStores)([y.default], () => y.default.getChannels(t)[y.GUILD_SELECTABLE_CHANNELS_KEY], [t]), n = (0, u.useStateFromStoresObject)([m.default], () => s(r).keyBy("channel.id").mapValues(e => {
@@ -2128,7 +2128,7 @@
                 })
             }
 
-            function L() {
+            function A() {
                 let e = (0, u.useStateFromStores)([x.default], () => x.default.getGuildId()),
                     t = (0, u.useStateFromStores)([m.default], () => null == e ? 0 : m.default.getLastFetchedMillis(e), [e]),
                     r = n.useCallback(() => {
@@ -2147,7 +2147,7 @@
                             children: (0, a.jsx)(C.default, {})
                         })]
                     }), null != e && (0, a.jsx)(a.Fragment, {
-                        children: (0, a.jsx)(A, {
+                        children: (0, a.jsx)(E, {
                             guildId: e
                         })
                     })]
@@ -3111,7 +3111,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return A
+                    return _
                 }
             });
             var a = r("37983"),
@@ -3121,168 +3121,196 @@
                 o = r("872717"),
                 s = r("151426"),
                 d = r("77078"),
-                c = r("982457"),
+                c = r("456015"),
                 u = r("872173"),
                 f = r("340412"),
                 h = r("413709"),
                 m = r("830031"),
                 p = r("228220"),
                 g = r("306160"),
-                b = r("811199"),
-                y = r("49111"),
-                x = r("646718"),
-                k = r("694735"),
-                v = r("186720");
-            let C = async e => {
-                try {
-                    await o.default.post({
-                        url: y.Endpoints.CREATE_USER_TRIAL_OFFER(e)
-                    })
-                } catch {} finally {
-                    await c.default.fetchUserTrialOffer()
-                }
-            }, j = async e => {
-                try {
-                    await o.default.delete({
-                        url: y.Endpoints.DELETE_USER_TRIAL_OFFER(e)
-                    })
-                } catch {} finally {
-                    await c.default.fetchUserTrialOffer()
-                }
-            }, S = async e => {
-                try {
-                    await o.default.post({
-                        url: y.Endpoints.UNACK_USER_TRIAL_OFFER(e)
-                    })
-                } catch {} finally {
-                    await c.default.fetchUserTrialOffer()
-                }
-            }, T = async () => {
+                b = r("719923"),
+                y = r("811199"),
+                x = r("49111"),
+                k = r("646718"),
+                v = r("694735"),
+                C = r("186720");
+            let j = async () => {
                 try {
                     let {
                         body: e
                     } = await o.default.get({
-                        url: y.Endpoints.USER_TRIAL_OFFERS
+                        url: x.Endpoints.USER_OFFER_IDS
                     });
                     return e
                 } catch (e) {
                     return []
                 }
-            }, N = async () => {
+            }, S = async (e, t) => {
                 try {
-                    await o.default.delete({
-                        url: y.Endpoints.USER_TRIAL_OFFERS
+                    await o.default.post({
+                        url: x.Endpoints.CREATE_USER_OFFER(e, t)
                     })
                 } catch {} finally {
-                    await c.default.fetchUserTrialOffer()
+                    await (0, c.fetchUserOffer)()
+                }
+            }, T = async (e, t) => {
+                try {
+                    await o.default.delete({
+                        url: x.Endpoints.DELETE_USER_OFFER(e, t)
+                    })
+                } catch {} finally {
+                    await (0, c.fetchUserOffer)()
+                }
+            }, N = async (e, t) => {
+                try {
+                    await o.default.post({
+                        url: x.Endpoints.UNACK_USER_OFFER(e, t)
+                    })
+                } catch {} finally {
+                    await (0, c.fetchUserOffer)()
+                }
+            }, w = async () => {
+                try {
+                    let {
+                        body: e
+                    } = await o.default.get({
+                        url: x.Endpoints.USER_OFFERS
+                    });
+                    return e
+                } catch (e) {
+                    return {
+                        trial: [],
+                        discount: []
+                    }
+                }
+            }, E = async () => {
+                try {
+                    await o.default.delete({
+                        url: x.Endpoints.USER_OFFERS
+                    })
+                } catch {} finally {
+                    await f.default.forceReset(), await (0, c.fetchUserOffer)()
                 }
             };
 
-            function w(e) {
-                var t, r;
+            function A(e) {
+                var t, r, l, o;
                 let {
-                    offer: l,
-                    forceRefetch: o
-                } = e, [s, u] = n.useState(!1), [f, b] = n.useState(!1), [y, k] = n.useState(!1), [C, T] = n.useState(!1);
+                    offer: s,
+                    offerOptions: u,
+                    forceRefetch: f
+                } = e, [y, x] = n.useState(!1), [v, j] = n.useState(!1), [S, w] = n.useState(!1), [E, A] = n.useState(!1);
                 n.useEffect(() => {
-                    y && T(!0);
+                    S && A(!0);
                     let e = setTimeout(() => {
-                        T(!1)
+                        A(!1)
                     }, 500);
                     return () => {
                         clearTimeout(e)
                     }
-                }, [y]);
+                }, [S]);
                 let {
-                    id: N,
-                    expires_at: w,
-                    redeemed_at: A,
-                    trial_id: L,
-                    subscription_trial: E
-                } = l, R = null !== (r = null === (t = x.DEVTOOLS_TRIAL_IDS.find(e => {
-                    let [, t] = e;
-                    return t === L
-                })) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : "Unknown", _ = null != w, P = null != w && new Date(w).getTime() < Date.now(), M = (null == E ? void 0 : E.sku_id) === x.PremiumSubscriptionSKUs.TIER_0, I = async () => {
-                    k(!0), _ ? await S(N) : await c.default.acknowledgeUserTrialOffer(l), o(), k(!1)
+                    id: L,
+                    expires_at: _,
+                    redeemed_at: R,
+                    trial_id: P,
+                    subscription_trial: M
+                } = s, O = null !== (r = null === (t = u.find(e => {
+                    let {
+                        value: t
+                    } = e;
+                    return t === P
+                })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", I = null != _, B = null != _ && new Date(_).getTime() < Date.now(), D = (null == M ? void 0 : M.sku_id) === k.PremiumSubscriptionSKUs.TIER_0, H = async () => {
+                    w(!0), I ? await N(L, "trial") : await (0, c.acknowledgeUserOffer)(s), f(), w(!1)
                 };
                 n.useEffect(() => {
-                    if (s) {
+                    if (y) {
                         let e = setTimeout(() => {
-                            u(!1)
+                            x(!1)
                         }, 3e3);
                         return () => {
                             clearTimeout(e)
                         }
                     }
-                    if (f) {
+                    if (v) {
                         let e = setTimeout(() => {
-                            b(!1)
+                            j(!1)
                         }, 3e3);
                         return () => {
                             clearTimeout(e)
                         }
                     }
-                }, [s, f]);
-                let O = "Active";
-                return _ && (O = "Acknowledged"), P && (O = "Expired"), (0, a.jsxs)("div", {
-                    className: i(v.card, M ? v.gradientWrapperTier0 : v.gradientWrapperTier2),
+                }, [y, v]);
+                let F = "Active";
+                return I && (F = "Acknowledged"), B && (F = "Expired"), (0, a.jsxs)("div", {
+                    className: i(C.card, D ? C.gradientWrapperTier0 : C.gradientWrapperTier2),
                     children: [(0, a.jsxs)("div", {
-                        className: i(v.row, v.nameRow),
+                        className: i(C.row, C.nameRow),
                         children: [(0, a.jsx)(d.Heading, {
                             variant: "heading-lg/semibold",
                             color: "always-white",
-                            children: R
+                            children: O
                         }), (0, a.jsx)(d.Clickable, {
                             onClick: async () => {
-                                k(!0), await j(N), o(), k(!1)
+                                w(!0), await T(L, "trial"), f(), w(!1)
                             },
                             children: (0, a.jsx)(p.default, {
-                                className: i(v.icon, v.trashIcon)
+                                className: i(C.icon, C.trashIcon)
                             })
                         })]
                     }), (0, a.jsxs)(d.Clickable, {
-                        className: i(v.row, v.idRow),
+                        className: i(C.row, C.idRow),
                         onClick: () => {
-                            (0, g.copy)(N), u(!0)
+                            (0, g.copy)(L), x(!0)
                         },
                         children: [(0, a.jsxs)(d.Text, {
                             variant: "eyebrow",
                             color: "always-white",
-                            children: ["Offer: ", N]
-                        }), s ? (0, a.jsx)(m.default, {
-                            className: i(v.icon, v.noMargin)
+                            children: ["Offer: ", L]
+                        }), y ? (0, a.jsx)(m.default, {
+                            className: i(C.icon, C.noMargin)
                         }) : (0, a.jsx)(h.default, {
-                            className: v.icon
+                            className: C.icon
                         })]
                     }), (0, a.jsxs)(d.Clickable, {
-                        className: i(v.row, v.idRow),
+                        className: i(C.row, C.idRow),
                         onClick: () => {
-                            (0, g.copy)(L), b(!0)
+                            (0, g.copy)(P), j(!0)
                         },
                         children: [(0, a.jsxs)(d.Text, {
                             variant: "eyebrow",
                             color: "always-white",
-                            children: ["Trial: ", L]
-                        }), f ? (0, a.jsx)(m.default, {
-                            className: i(v.icon, v.noMargin)
+                            children: ["Trial: ", P]
+                        }), v ? (0, a.jsx)(m.default, {
+                            className: i(C.icon, C.noMargin)
                         }) : (0, a.jsx)(h.default, {
-                            className: v.icon
+                            className: C.icon
                         })]
+                    }), (0, a.jsx)("div", {
+                        children: (0, a.jsxs)(d.Text, {
+                            variant: "eyebrow",
+                            color: "always-white",
+                            children: ["Trial Length:", " ", (0, b.formatIntervalDuration)({
+                                intervalType: null !== (l = null == M ? void 0 : M.interval) && void 0 !== l ? l : k.SubscriptionIntervalTypes.MONTH,
+                                intervalCount: null !== (o = null == M ? void 0 : M.interval_count) && void 0 !== o ? o : 1,
+                                capitalize: !1
+                            })]
+                        })
                     }), (0, a.jsxs)("div", {
-                        className: v.badgeContainer,
+                        className: C.badgeContainer,
                         children: [(0, a.jsx)(d.Clickable, {
-                            onClick: I,
-                            className: i(v.badge, v.clickable, {
-                                [v.acked]: _,
-                                [v.expired]: P
+                            onClick: H,
+                            className: i(C.badge, C.clickable, {
+                                [C.acked]: I,
+                                [C.expired]: B
                             }),
                             children: (0, a.jsx)(d.Text, {
                                 variant: "eyebrow",
-                                color: "Acknowledged" === O ? void 0 : "always-white",
-                                children: O
+                                color: "Acknowledged" === F ? void 0 : "always-white",
+                                children: F
                             })
-                        }), null != A && (0, a.jsx)("div", {
-                            className: i(v.badge, v.badgeBottom, v.redeemed),
+                        }), null != R && (0, a.jsx)("div", {
+                            className: i(C.badge, C.badgeBottom, C.redeemed),
                             children: (0, a.jsx)(d.Text, {
                                 variant: "eyebrow",
                                 color: "always-white",
@@ -3290,86 +3318,256 @@
                             })
                         })]
                     }), (0, a.jsx)("div", {
-                        className: i(v.loadingContainer, {
-                            [v.isLoading]: y || C
+                        className: i(C.loadingContainer, {
+                            [C.isLoading]: S || E
                         }),
                         children: (0, a.jsx)(d.Spinner, {})
                     })]
                 })
             }
 
-            function A() {
-                let [e, t] = n.useState(x.DEVTOOLS_TRIAL_IDS[0][1]), [r, l] = n.useState([]), [o, c] = n.useState(!0);
+            function L(e) {
+                var t, r;
+                let {
+                    offer: l,
+                    offerOptions: o,
+                    forceRefetch: s
+                } = e, [u, f] = n.useState(!1), [b, y] = n.useState(!1), [x, k] = n.useState(!1), [v, j] = n.useState(!1);
                 n.useEffect(() => {
-                    o && (c(!1), f.default.forceReset(), T().then(e => {
-                        let t = e.sort((e, t) => e.id.localeCompare(t.id));
-                        l(t)
-                    }))
-                }, [o]);
-                let h = async () => {
-                    await C(e), c(!0)
-                }, m = async () => {
-                    await N(), c(!0)
-                }, p = x.DEVTOOLS_TRIAL_IDS.map(e => {
-                    let [t, r] = e;
-                    return {
-                        label: t,
-                        value: r
+                    x && j(!0);
+                    let e = setTimeout(() => {
+                        j(!1)
+                    }, 500);
+                    return () => {
+                        clearTimeout(e)
                     }
-                });
+                }, [x]);
+                let {
+                    id: S,
+                    expires_at: w,
+                    applied_at: E,
+                    discount_id: A,
+                    discount: L
+                } = l, _ = null !== (r = null === (t = o.find(e => {
+                    let {
+                        value: t
+                    } = e;
+                    return t === A
+                })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", R = null != w, P = null != w && new Date(w).getTime() < Date.now(), M = async () => {
+                    k(!0), R ? await N(S, "discount") : await (0, c.acknowledgeUserOffer)(void 0, l), s(), k(!1)
+                };
+                n.useEffect(() => {
+                    if (u) {
+                        let e = setTimeout(() => {
+                            f(!1)
+                        }, 3e3);
+                        return () => {
+                            clearTimeout(e)
+                        }
+                    }
+                    if (b) {
+                        let e = setTimeout(() => {
+                            y(!1)
+                        }, 3e3);
+                        return () => {
+                            clearTimeout(e)
+                        }
+                    }
+                }, [u, b]);
+                let O = "Active";
+                return P && (O = "Expired"), R && (O = "Acknowledged"), (0, a.jsxs)("div", {
+                    className: i(C.card, C.discount),
+                    children: [(0, a.jsxs)("div", {
+                        className: i(C.row, C.nameRow),
+                        children: [(0, a.jsx)(d.Heading, {
+                            variant: "heading-lg/semibold",
+                            color: "text-normal",
+                            children: _
+                        }), (0, a.jsx)(d.Clickable, {
+                            onClick: async () => {
+                                k(!0), await T(S, "discount"), s(), k(!1)
+                            },
+                            children: (0, a.jsx)(p.default, {
+                                className: i(C.icon, C.trashIcon)
+                            })
+                        })]
+                    }), (0, a.jsxs)(d.Clickable, {
+                        className: i(C.row, C.idRow),
+                        onClick: () => {
+                            (0, g.copy)(S), f(!0)
+                        },
+                        children: [(0, a.jsxs)(d.Text, {
+                            variant: "eyebrow",
+                            color: "text-normal",
+                            children: ["Offer: ", S]
+                        }), u ? (0, a.jsx)(m.default, {
+                            className: i(C.icon, C.noMargin)
+                        }) : (0, a.jsx)(h.default, {
+                            className: C.icon
+                        })]
+                    }), (0, a.jsxs)(d.Clickable, {
+                        className: i(C.row, C.idRow),
+                        onClick: () => {
+                            (0, g.copy)(A), y(!0)
+                        },
+                        children: [(0, a.jsxs)(d.Text, {
+                            variant: "eyebrow",
+                            color: "text-normal",
+                            children: ["Discount: ", A]
+                        }), b ? (0, a.jsx)(m.default, {
+                            className: i(C.icon, C.noMargin)
+                        }) : (0, a.jsx)(h.default, {
+                            className: C.icon
+                        })]
+                    }), (0, a.jsx)("div", {
+                        children: (0, a.jsxs)(d.Text, {
+                            variant: "eyebrow",
+                            color: "text-normal",
+                            children: [L.amount, "% off"]
+                        })
+                    }), (0, a.jsxs)("div", {
+                        className: C.badgeContainer,
+                        children: [(0, a.jsx)(d.Clickable, {
+                            onClick: M,
+                            className: i(C.badge, C.clickable, {
+                                [C.acked]: R,
+                                [C.expired]: P
+                            }),
+                            children: (0, a.jsx)(d.Text, {
+                                variant: "eyebrow",
+                                color: "Acknowledged" === O ? void 0 : "always-white",
+                                children: O
+                            })
+                        }), null != E && (0, a.jsx)("div", {
+                            className: i(C.badge, C.badgeBottom, C.redeemed),
+                            children: (0, a.jsx)(d.Text, {
+                                variant: "eyebrow",
+                                color: "always-white",
+                                children: "Applied"
+                            })
+                        })]
+                    }), (0, a.jsx)("div", {
+                        className: i(C.loadingContainer, {
+                            [C.isLoading]: x || v
+                        }),
+                        children: (0, a.jsx)(d.Spinner, {})
+                    })]
+                })
+            }
+
+            function _() {
+                let [e, t] = n.useState([]), [r, l] = n.useState([]), [o, h] = n.useState(), [m, p] = n.useState(), [g, b] = n.useState([]), [x, k] = n.useState([]), [T, N] = n.useState(!0);
+                n.useEffect(() => {
+                    (0 === e.length || 0 === r.length || T) && j().then(e => {
+                        let r = Object.keys(e.trial).map(t => ({
+                                label: t,
+                                value: e.trial[t]
+                            })),
+                            a = Object.keys(e.discount).map(t => ({
+                                label: t,
+                                value: e.discount[t]
+                            }));
+                        t(r), l(a), null == o && h(r[0].value), null == m && p(a[0].value)
+                    })
+                }, [e, r, o, m, T]), n.useEffect(() => {
+                    T && (N(!1), f.default.forceReset(), (0, c.fetchUserOffer)(), w().then(e => {
+                        let t = e.trial.sort((e, t) => e.id.localeCompare(t.id));
+                        b(t);
+                        let r = e.discount.sort((e, t) => e.id.localeCompare(t.id));
+                        k(r)
+                    }))
+                }, [T]);
+                let _ = async () => {
+                    null != o && (await S(o, "trial"), N(!0))
+                }, R = async () => {
+                    null != m && (await S(m, "discount"), N(!0))
+                }, P = async () => {
+                    await E(), N(!0)
+                };
                 return (0, a.jsx)(d.ScrollerThin, {
-                    className: i(k.panel),
+                    className: i(v.panel),
                     children: (0, a.jsxs)("div", {
-                        className: v.panelInner,
+                        className: C.panelInner,
                         children: [(0, a.jsxs)("section", {
-                            className: v.section,
+                            className: C.section,
                             children: [(0, a.jsx)(d.Heading, {
                                 variant: "heading-md/semibold",
                                 children: "Utils"
                             }), (0, a.jsxs)("div", {
-                                className: v.buttons,
+                                className: C.buttons,
                                 children: [(0, a.jsx)(d.Button, {
                                     size: d.Button.Sizes.SMALL,
-                                    onClick: m,
-                                    children: "Clear all UserTrialOffers"
+                                    onClick: P,
+                                    children: "Clear all User Offers"
                                 }), (0, a.jsx)(d.Button, {
                                     size: d.Button.Sizes.SMALL,
                                     onClick: () => (0, u.removeDismissedContent)(s.DismissibleContent.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE),
                                     children: "Clear Mobile Trials DismissibleContent"
                                 }), (0, a.jsx)(d.Button, {
                                     size: d.Button.Sizes.SMALL,
-                                    onClick: () => c(!0),
+                                    onClick: () => N(!0),
                                     children: "Refresh DevTools"
                                 })]
                             })]
                         }), (0, a.jsxs)("section", {
-                            className: v.section,
+                            className: C.section,
                             children: [(0, a.jsx)(d.Heading, {
                                 variant: "heading-md/semibold",
-                                children: "Create a UserTrialOffer"
+                                children: "Create a Trial Offer"
                             }), (0, a.jsxs)("div", {
-                                className: v.inputRow,
+                                className: C.inputRow,
                                 children: [(0, a.jsx)(d.Select, {
-                                    className: v.input,
-                                    options: p,
-                                    isSelected: t => e === t,
-                                    placeholder: "Trial ID",
+                                    className: C.input,
+                                    options: e,
+                                    isSelected: e => o === e,
+                                    placeholder: "Trial Type",
                                     serialize: e => String(e),
-                                    select: e => t(e),
-                                    popoutLayerContext: b.devToolsLayerContext
+                                    select: e => h(e),
+                                    popoutLayerContext: y.devToolsLayerContext
                                 }), (0, a.jsx)(d.Button, {
-                                    onClick: h,
+                                    onClick: _,
                                     children: "Create"
                                 })]
                             })]
-                        }), r.length > 0 && (0, a.jsxs)("section", {
-                            className: v.section,
+                        }), (0, a.jsxs)("section", {
+                            className: C.section,
                             children: [(0, a.jsx)(d.Heading, {
                                 variant: "heading-md/semibold",
-                                children: "Existing UserTrialOffers"
-                            }), r.map(e => (0, a.jsx)(w, {
+                                children: "Create a Discount Offer"
+                            }), (0, a.jsxs)("div", {
+                                className: C.inputRow,
+                                children: [(0, a.jsx)(d.Select, {
+                                    className: C.input,
+                                    options: r,
+                                    isSelected: e => m === e,
+                                    placeholder: "Discount Type",
+                                    serialize: e => String(e),
+                                    select: e => p(e),
+                                    popoutLayerContext: y.devToolsLayerContext
+                                }), (0, a.jsx)(d.Button, {
+                                    onClick: R,
+                                    children: "Create"
+                                })]
+                            })]
+                        }), g.length > 0 && (0, a.jsxs)("section", {
+                            className: C.section,
+                            children: [(0, a.jsx)(d.Heading, {
+                                variant: "heading-md/semibold",
+                                children: "Existing Trial Offers"
+                            }), g.map(t => (0, a.jsx)(A, {
+                                offer: t,
+                                offerOptions: e,
+                                forceRefetch: () => N(!0)
+                            }, t.id))]
+                        }), x.length > 0 && (0, a.jsxs)("section", {
+                            className: C.section,
+                            children: [(0, a.jsx)(d.Heading, {
+                                variant: "heading-md/semibold",
+                                children: "Existing Discount Offers"
+                            }), x.map(e => (0, a.jsx)(L, {
                                 offer: e,
-                                forceRefetch: () => c(!0)
+                                offerOptions: r,
+                                forceRefetch: () => N(!0)
                             }, e.id))]
                         })]
                     })
@@ -3380,7 +3578,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return E
+                    return L
                 }
             });
             var a = r("37983"),
@@ -3408,7 +3606,7 @@
                 T = r("782340"),
                 N = r("185187"),
                 w = r("694735");
-            let A = [{
+            let E = [{
                     key: "id",
                     cellClassName: N.eventColumn,
                     render(e) {
@@ -3436,7 +3634,7 @@
                         return t.toLocaleString()
                     }
                 }],
-                L = [{
+                A = [{
                     id: "details",
                     name: "Details",
                     render: e => {
@@ -3515,13 +3713,13 @@
                     }
                 }];
 
-            function E() {
+            function L() {
                 let [e, t] = n.useState(""), r = n.useRef(null), l = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = n.useMemo(() => l.filter(t => 0 === e.length || s(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]), [d, c] = n.useState(void 0), p = o.find(e => e.key === d), {
                     TabBar: b,
                     renderSelectedTab: y
                 } = (0, S.default)({
-                    tabs: L
-                }, []), v = (0, u.useStateFromStores)([x.default], () => x.default.trackTriggers), E = n.useCallback(e => {
+                    tabs: A
+                }, []), v = (0, u.useStateFromStores)([x.default], () => x.default.trackTriggers), L = n.useCallback(e => {
                     h.default.dispatch({
                         type: "SET_TRACK_TRIGGERS",
                         enabled: e
@@ -3537,7 +3735,7 @@
                             className: N.triggersEnable,
                             children: (0, a.jsx)(f.Switch, {
                                 checked: v,
-                                onChange: E,
+                                onChange: L,
                                 className: N.toolbarSwitch
                             })
                         }), (0, a.jsx)(f.Button, {
@@ -3561,7 +3759,7 @@
                     }), (0, a.jsx)(f.ScrollerThin, {
                         className: N.tableContainer,
                         children: (0, a.jsx)(j.default, {
-                            columns: A,
+                            columns: E,
                             data: o,
                             selectedRowKey: d,
                             onClickRow: c
@@ -4278,6 +4476,65 @@
                 })
             }
         },
+        456015: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                fetchUserOffer: function() {
+                    return i
+                },
+                acknowledgeUserOffer: function() {
+                    return o
+                }
+            });
+            var a = r("872717"),
+                n = r("913144"),
+                l = r("49111");
+            async function i() {
+                n.default.dispatch({
+                    type: "BILLING_USER_OFFER_FETCH_START"
+                });
+                try {
+                    var e, t;
+                    let r = await a.default.post({
+                            url: l.Endpoints.USER_OFFER
+                        }),
+                        i = null !== (e = r.body.user_trial_offer) && void 0 !== e ? e : null,
+                        o = null !== (t = r.body.user_discount) && void 0 !== t ? t : null;
+                    return n.default.dispatch({
+                        type: "BILLING_USER_OFFER_FETCH_SUCCESS",
+                        userTrialOffer: i,
+                        userDiscount: o
+                    }), {
+                        userTrialOffer: i,
+                        userDiscount: o
+                    }
+                } catch (e) {
+                    n.default.dispatch({
+                        type: "BILLING_USER_OFFER_FETCH_FAIL"
+                    })
+                }
+            }
+
+            function o(e, t) {
+                let r = null != e && null == e.expires_at ? e.id : void 0,
+                    i = null != t && null == t.expires_at ? t.id : void 0;
+                if (void 0 !== r || void 0 !== i) return a.default.post({
+                    url: l.Endpoints.USER_OFFER_ACKNOWLEDGED,
+                    body: {
+                        user_trial_offer_id: r,
+                        user_discount_id: i
+                    },
+                    oldFormErrors: !0
+                }).then(e => {
+                    var t, r;
+                    n.default.dispatch({
+                        type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
+                        userTrialOffer: null !== (t = e.body.user_trial_offer) && void 0 !== t ? t : null,
+                        userDiscount: null !== (r = e.body.user_discount) && void 0 !== r ? r : null
+                    })
+                })
+            }
+        },
         484894: function(e, t, r) {
             "use strict";
             r.r(t), r.d(t, {
@@ -4854,7 +5111,7 @@
                         "aria-checked": T,
                         "aria-expanded": N,
                         "aria-haspopup": w
-                    } = e, A = (0, a.jsx)(p, {
+                    } = e, E = (0, a.jsx)(p, {
                         x: 0,
                         y: 0,
                         width: 24,
@@ -4863,8 +5120,8 @@
                         foreground: null != u ? u : void 0,
                         background: null != f ? f : void 0,
                         color: c
-                    }), L = j;
-                    return null == L && "string" == typeof y && (L = y), (0, a.jsx)(d.Tooltip, {
+                    }), A = j;
+                    return null == A && "string" == typeof y && (A = y), (0, a.jsx)(d.Tooltip, {
                         text: y,
                         color: x,
                         position: k,
@@ -4907,7 +5164,7 @@
                                     [m.selected]: l
                                 }),
                                 role: C,
-                                "aria-label": L,
+                                "aria-label": A,
                                 "aria-hidden": S,
                                 "aria-checked": T,
                                 "aria-haspopup": w,
@@ -4915,8 +5172,8 @@
                                 tabIndex: o || null == g ? -1 : 0,
                                 children: [s ? (0, a.jsx)(h.default, {
                                     mask: h.default.Masks.HEADER_BAR_BADGE,
-                                    children: A
-                                }) : A, s ? (0, a.jsx)("span", {
+                                    children: E
+                                }) : E, s ? (0, a.jsx)("span", {
                                     className: m.iconBadge
                                 }) : null, n]
                             })
