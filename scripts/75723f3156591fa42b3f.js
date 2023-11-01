@@ -31,8 +31,8 @@
             });
             var s = a("308503"),
                 n = a("599110"),
-                i = a("49111");
-            let r = {
+                r = a("49111");
+            let i = {
                     guildId: void 0,
                     channelId: void 0,
                     channelType: void 0,
@@ -41,11 +41,11 @@
                     selectedItemChanges: 0,
                     numMediaItems: 0
                 },
-                l = (0, s.default)(() => r);
+                l = (0, s.default)(() => i);
 
             function d(e, t, a, s) {
                 l.setState({
-                    ...r,
+                    ...i,
                     guildId: e,
                     channelId: t,
                     channelType: a,
@@ -55,7 +55,7 @@
 
             function o() {
                 let e = l.getState();
-                n.default.track(i.AnalyticEvents.MEDIA_VIEWER_SESSION_COMPLETED, {
+                n.default.track(r.AnalyticEvents.MEDIA_VIEWER_SESSION_COMPLETED, {
                     guild_id: e.guildId,
                     channel_id: e.channelId,
                     channel_type: e.channelType,
@@ -64,7 +64,7 @@
                     number_selected_item_changes: e.selectedItemChanges,
                     number_media_items: e.numMediaItems
                 }), l.setState({
-                    ...r
+                    ...i
                 })
             }
 
@@ -84,8 +84,8 @@
             var s = a("37983");
             a("884691");
             var n = a("446674"),
-                i = a("151426"),
-                r = a("77078"),
+                r = a("151426"),
+                i = a("77078"),
                 l = a("997289"),
                 d = a("812204"),
                 o = a("685665"),
@@ -100,8 +100,8 @@
                 f = a("646718"),
                 C = a("49111"),
                 A = a("782340"),
-                O = a("444552"),
-                p = a("169903"),
+                p = a("444552"),
+                O = a("169903"),
                 M = a("389291"),
                 b = a("676084"),
                 D = a("121432");
@@ -134,15 +134,15 @@
                         },
                         href: "https://youtu.be/".concat(x)
                     },
-                    modalDismissibleContent: i.DismissibleContent.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL,
+                    modalDismissibleContent: r.DismissibleContent.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL,
                     header: A.default.Messages.BOGO_ANNOUNCEMENT_MODAL_HEADER,
                     subHeader: A.default.Messages.BOGO_ANNOUNCEMENT_MODAL_SUBHEADER,
-                    subHeaderExtra: () => (0, s.jsx)(r.Anchor, {
-                        className: O.termsApplyAnchor,
+                    subHeaderExtra: () => (0, s.jsx)(i.Anchor, {
+                        className: p.termsApplyAnchor,
                         href: E.default.getArticleURL(C.HelpdeskArticles.SUMMER_2023_BOGO),
-                        children: (0, s.jsx)(r.Heading, {
+                        children: (0, s.jsx)(i.Heading, {
                             variant: "heading-md/normal",
-                            className: O.termsApplyBodyText,
+                            className: p.termsApplyBodyText,
                             children: A.default.Messages.BOGO_TERMS_APPLY
                         })
                     }),
@@ -151,7 +151,7 @@
                         subHeader: A.default.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_BODY_FORMATTED.format({
                             helpCenterLink: E.default.getArticleURL(C.HelpdeskArticles.REMIXING)
                         }),
-                        imageSrc: p,
+                        imageSrc: O,
                         tagText: A.default.Messages.EARLY_ACCESS
                     }, {
                         header: A.default.Messages.BOGO_ANNOUNCEMENT_MODAL_THEMES_CARD_HEADER,
@@ -167,10 +167,10 @@
                         let e = G ? "upgrade_plan_button" : "get_nitro_button",
                             t = Date.now();
                         return (0, s.jsxs)(m.default, {
-                            className: O.buttonWide,
-                            innerClassName: O.innerButton,
-                            color: r.Button.Colors.GREEN,
-                            size: r.Button.Sizes.SMALL,
+                            className: p.buttonWide,
+                            innerClassName: p.innerButton,
+                            color: i.Button.Colors.GREEN,
+                            size: i.Button.Sizes.SMALL,
                             onClick: () => {
                                 h.default.track(C.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
                                     change_log_id: T,
@@ -192,7 +192,7 @@
                             },
                             children: [(0, s.jsx)("img", {
                                 alt: "",
-                                className: O.nitroIconSubHeader,
+                                className: p.nitroIconSubHeader,
                                 src: D
                             }), A.default.Messages.BOGO_CLAIM_OFFER]
                         })
@@ -210,13 +210,13 @@
             var s = a("37983");
             a("884691");
             var n = a("669491"),
-                i = a("819855"),
-                r = a("77078"),
+                r = a("819855"),
+                i = a("77078"),
                 l = a("841098"),
                 d = e => {
                     let {
                         className: t
-                    } = e, a = (0, l.default)(), d = (0, r.useToken)(n.default.colors.BACKGROUND_ACCENT).hex();
+                    } = e, a = (0, l.default)(), d = (0, i.useToken)(n.default.colors.BACKGROUND_ACCENT).hex();
                     return (0, s.jsx)("svg", {
                         width: "700",
                         height: "120",
@@ -224,7 +224,7 @@
                         className: t,
                         xmlns: "http://www.w3.org/2000/svg",
                         children: (0, s.jsx)("path", {
-                            fill: (0, i.isThemeDark)(a) ? d : "white",
+                            fill: (0, r.isThemeDark)(a) ? d : "white",
                             opacity: "1",
                             d: "M351 39.047C185.4 -31.2102 48 9.77319 0 39.047V583.068C0 587.486 3.58174 591.068 8.00002 591.068H692C696.418 591.068 700 587.486 700 583.068V39.047C653.333 68.3208 516.6 109.304 351 39.047Z"
                         })
@@ -240,8 +240,8 @@
             });
             var s = a("37983"),
                 n = a("884691"),
-                i = a("414456"),
-                r = a.n(i),
+                r = a("414456"),
+                i = a.n(r),
                 l = a("446674"),
                 d = a("77078"),
                 o = a("206230"),
@@ -256,14 +256,14 @@
                 f = a("215429"),
                 C = a("49111"),
                 A = a("994428"),
-                O = a("236998");
-            let p = e => {
+                p = a("236998");
+            let O = e => {
                     let {
                         tagText: t,
                         className: a
                     } = e;
                     return (0, s.jsx)(E.TextBadge, {
-                        className: r(O.tag, a),
+                        className: i(p.tag, a),
                         text: t
                     })
                 },
@@ -272,27 +272,27 @@
                         header: t,
                         subHeader: a,
                         imageSrc: n,
-                        tagText: i,
+                        tagText: r,
                         wideStyle: l
                     } = e;
                     return (0, s.jsxs)("div", {
-                        className: r(O.featureCard, {
-                            [O.wideStyle]: l
+                        className: i(p.featureCard, {
+                            [p.wideStyle]: l
                         }),
-                        children: [null != i ? (0, s.jsx)(p, {
-                            tagText: i,
-                            className: O.featureCardTag
+                        children: [null != r ? (0, s.jsx)(O, {
+                            tagText: r,
+                            className: p.featureCardTag
                         }) : null, (0, s.jsx)("img", {
                             alt: "",
-                            className: r(O.featureCardImg, {
-                                [O.wideStyle]: l
+                            className: i(p.featureCardImg, {
+                                [p.wideStyle]: l
                             }),
                             src: n
                         }), (0, s.jsxs)("div", {
-                            className: O.featureCardTextGroup,
+                            className: p.featureCardTextGroup,
                             children: [(0, s.jsx)(d.Heading, {
                                 variant: "heading-lg/extrabold",
-                                className: O.featureCardTextHeader,
+                                className: p.featureCardTextHeader,
                                 children: t
                             }), (0, s.jsx)(d.Text, {
                                 variant: "text-sm/normal",
@@ -306,9 +306,9 @@
                 let {
                     className: t,
                     renderModalProps: a,
-                    video: i,
+                    video: r,
                     videoClassName: E,
-                    modalDismissibleContent: p,
+                    modalDismissibleContent: O,
                     modalTopExtra: b,
                     header: D,
                     headerClassName: T,
@@ -322,7 +322,7 @@
                     transitionState: w
                 } = a, L = (0, h.useUID)(), B = v.length % 2 == 0, j = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion);
                 return n.useEffect(() => {
-                    (0, c.requestMarkDismissibleContentAsShown)(p);
+                    (0, c.requestMarkDismissibleContentAsShown)(O);
                     let e = Date.now();
                     return g.default.track(C.AnalyticEvents.CHANGE_LOG_OPENED, {
                         change_log_id: y
@@ -330,46 +330,47 @@
                         g.default.track(C.AnalyticEvents.CHANGE_LOG_CLOSED, {
                             change_log_id: y,
                             seconds_open: Math.round((Date.now() - e) / 1e3)
-                        }), (0, c.markDismissibleContentAsDismissed)(p, {
+                        }), (0, c.markDismissibleContentAsDismissed)(O, {
                             dismissAction: A.ContentDismissActionType.DISMISS
                         })
                     }
-                }, [p, y]), (0, s.jsxs)(d.ModalRoot, {
-                    className: r(O.root, t),
+                }, [O, y]), (0, s.jsxs)(d.ModalRoot, {
+                    className: i(p.root, t),
                     transitionState: w,
                     "aria-labelledby": L,
                     children: [(0, s.jsx)(d.ModalCloseButton, {
-                        className: O.closeButton,
+                        className: p.closeButton,
                         onClick: R
                     }), (0, s.jsx)(f.default, {
-                        className: O.splash
+                        className: p.splash
                     }), null == b ? void 0 : b(), (0, s.jsxs)(d.ModalContent, {
-                        className: O.content,
+                        className: p.content,
                         children: [(0, s.jsx)(d.Heading, {
                             variant: "display-md",
-                            className: r(O.headerText, T),
+                            className: i(p.headerText, T),
                             children: D
-                        }), "video" === i.type ? (0, s.jsx)(N.default, {
-                            className: r(O.video, E),
+                        }), "video" === r.type ? (0, s.jsx)(N.default, {
+                            className: i(p.video, E),
                             autoPlay: !j,
                             loop: !0,
                             muted: !0,
                             controls: !0,
-                            src: i.src,
+                            src: r.src,
+                            poster: r.poster,
                             onPlay: () => {
                                 g.default.track(C.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
                                     change_log_id: y
                                 })
                             }
                         }) : (0, s.jsx)(_.EmbedVideo, {
-                            className: r(O.video, E),
+                            className: i(p.video, E),
                             allowFullScreen: !1,
-                            href: i.href,
-                            thumbnail: i.thumbnail,
-                            video: i.embed,
+                            href: r.href,
+                            thumbnail: r.thumbnail,
+                            video: r.embed,
                             provider: m.SupportedEmbedIFrame.YOUTUBE,
-                            maxWidth: i.embed.width,
-                            maxHeight: i.embed.height,
+                            maxWidth: r.embed.width,
+                            maxHeight: r.embed.height,
                             renderVideoComponent: u.renderVideoComponent,
                             renderImageComponent: u.renderImageComponent,
                             renderLinkComponent: u.renderMaskedLinkComponent,
@@ -380,11 +381,11 @@
                             }
                         }), (0, s.jsx)(d.Heading, {
                             variant: "heading-lg/extrabold",
-                            className: O.bodyText,
+                            className: p.bodyText,
                             children: x
                         }), null == S ? void 0 : S(), (0, s.jsx)("div", {
-                            className: r(O.featureCardGroup, {
-                                [O.wideStyle]: B
+                            className: i(p.featureCardGroup, {
+                                [p.wideStyle]: B
                             }),
                             children: v.map((e, t) => (0, s.jsx)(M, {
                                 ...e,

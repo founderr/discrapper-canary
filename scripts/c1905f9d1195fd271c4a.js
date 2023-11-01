@@ -314,19 +314,23 @@
         },
         83064: function(e, t, n) {
             "use strict";
-            e.exports = n.p + "879f78418b71810fff04.png"
+            e.exports = n.p + "97503fbbef4268888d40.png"
         },
         438313: function(e, t, n) {
             "use strict";
-            e.exports = n.p + "b8c9744a2e79f721f571.png"
+            e.exports = n.p + "464a6c12601ada4d81ff.png"
         },
         227809: function(e, t, n) {
             "use strict";
-            e.exports = n.p + "f6639fb72dedc6107f99.png"
+            e.exports = n.p + "9791fbd5137dfa9b14c1.png"
         },
         352074: function(e, t, n) {
             "use strict";
-            e.exports = n.p + "326615ab385a83dc772a.png"
+            e.exports = n.p + "1e5b144b43dfe2ae40b5.png"
+        },
+        585590: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "001a1b6fb841a191c966.png"
         },
         240542: function(e, t, n) {
             "use strict";
@@ -1838,7 +1842,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: I.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "242815"
+                        buildNumber: "242819"
                     }), (0, a.jsx)(h, {})]
                 }) : null
             }
@@ -32881,10 +32885,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 isEligibleForQ4DropAnnouncementModal: function() {
-                    return U
+                    return G
                 },
                 default: function() {
-                    return b
+                    return j
                 }
             });
             var a = n("37983");
@@ -32901,151 +32905,154 @@
                 f = n("697218"),
                 _ = n("181114"),
                 I = n("599110"),
-                T = n("701909"),
-                C = n("719923"),
-                h = n("896630"),
-                S = n("837797"),
-                A = n("154889"),
-                N = n("917247"),
-                m = n("400307"),
-                p = n("702542"),
-                g = n("646718"),
-                R = n("49111"),
-                O = n("782340"),
-                L = n("454275"),
-                M = n("83064"),
-                v = n("438313"),
-                P = n("227809"),
-                D = n("352074"),
-                y = n("121432");
-            let x = "2023_q4_nitro_drop",
-                U = () => {
+                T = n("560528"),
+                C = n("701909"),
+                h = n("719923"),
+                S = n("896630"),
+                A = n("837797"),
+                N = n("154889"),
+                m = n("917247"),
+                p = n("400307"),
+                g = n("702542"),
+                R = n("646718"),
+                O = n("49111"),
+                L = n("782340"),
+                M = n("454275"),
+                v = n("83064"),
+                P = n("438313"),
+                D = n("227809"),
+                y = n("352074"),
+                x = n("585590"),
+                U = n("121432");
+            let b = "2023_q4_nitro_drop",
+                G = () => {
                     let e = f.default.getCurrentUser();
-                    if ((0, C.isPremiumExactly)(e, g.PremiumTypes.TIER_2) || (0, c.isDismissibleContentDismissed)(s.DismissibleContent.Q4_2023_NITRO_DROP_ANNOUNCEMENT_MODAL)) return !1;
+                    if ((0, h.isPremiumExactly)(e, R.PremiumTypes.TIER_2) || (0, c.isDismissibleContentDismissed)(s.DismissibleContent.Q4_2023_NITRO_DROP_ANNOUNCEMENT_MODAL)) return !1;
                     let {
                         enabled: t
-                    } = h.Q4DropExperiment.getCurrentConfig({
+                    } = S.Q4DropExperiment.getCurrentConfig({
                         location: "isEligibleForQ4DropAnnouncementModal"
                     });
                     return t
                 };
 
-            function b(e) {
+            function j(e) {
                 let {
                     renderModalProps: t
                 } = e, {
                     onClose: n
-                } = t, {
-                    location: c
+                } = t, c = (0, T.supportsHEVCAlpha)() ? "https://cdn.discordapp.com/assets/q4-2023-drop/announcement-modal-dark.webm" : "https://cdn.discordapp.com/assets/q4-2023-drop/announcement-modal-dark-transparent.webm", {
+                    location: f
                 } = (0, r.useAnalyticsContext)(), {
-                    analyticsLocations: f
-                } = (0, d.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), h = (0, o.default)(), U = (0, N.usePremiumTrialOffer)(), b = null == U ? void 0 : U.subscription_trial, G = (0, A.usePremiumDiscountOffer)(), j = (0, C.formatTrialCtaIntervalDuration)({
-                    intervalType: null == b ? void 0 : b.interval,
-                    intervalCount: null == b ? void 0 : b.interval_count
-                }), F = (0, S.useResponseOnUserState)({
+                    analyticsLocations: S
+                } = (0, d.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), G = (0, o.default)(), j = (0, m.usePremiumTrialOffer)(), F = null == j ? void 0 : j.subscription_trial, k = (0, N.usePremiumDiscountOffer)(), w = (0, h.formatTrialCtaIntervalDuration)({
+                    intervalType: null == F ? void 0 : F.interval,
+                    intervalCount: null == F ? void 0 : F.interval_count
+                }), B = (0, A.useResponseOnUserState)({
                     onCustomCriteria: () => {
-                        if ((null == b ? void 0 : b.id) === g.PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID) return O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_TRIAL_ELIGIBLE
+                        if ((null == F ? void 0 : F.id) === R.PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID) return L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_TRIAL_ELIGIBLE
                     },
-                    defaultResponse: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_TRIAL_ELIGIBLE,
-                    onTier0TrialOffer: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_TRIAL_ELIGIBLE,
-                    onTier2TrialOffer: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_TRIAL_ELIGIBLE,
-                    onNonTier2Subscriber: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_UPGRADE_ELIGIBLE
-                }), k = (0, S.useResponseOnUserState)({
+                    defaultResponse: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_TRIAL_ELIGIBLE,
+                    onTier0TrialOffer: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_TRIAL_ELIGIBLE,
+                    onTier2TrialOffer: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_TRIAL_ELIGIBLE,
+                    onNonTier2Subscriber: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_UPGRADE_ELIGIBLE
+                }), H = (0, A.useResponseOnUserState)({
                     defaultResponse: () => null,
                     onCustomCriteria: () => {
-                        if ((null == b ? void 0 : b.id) === g.PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID) return () => (0, a.jsx)(i.Anchor, {
-                            className: L.termsApplyAnchor,
-                            href: T.default.getArticleURL(R.HelpdeskArticles.Q4_DROP),
+                        if ((null == F ? void 0 : F.id) === R.PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID) return () => (0, a.jsx)(i.Anchor, {
+                            className: M.termsApplyAnchor,
+                            href: C.default.getArticleURL(O.HelpdeskArticles.Q4_DROP),
                             children: (0, a.jsx)(i.Heading, {
                                 variant: "heading-md/normal",
-                                className: L.termsApplyBodyText,
-                                children: O.default.Messages.BOGO_TERMS_APPLY
+                                className: M.termsApplyBodyText,
+                                children: L.default.Messages.BOGO_TERMS_APPLY
                             })
                         })
                     }
-                }), w = (0, S.useResponseOnUserState)({
-                    defaultResponse: O.default.Messages.BILLING_SUBSCRIBE_TO_PLAN,
-                    onDiscountOffer: O.default.Messages.PREMIUM_DISCOUNT_CTA.format({
-                        percent: null == G ? void 0 : G.discount.amount
+                }), V = (0, A.useResponseOnUserState)({
+                    defaultResponse: L.default.Messages.BILLING_SUBSCRIBE_TO_PLAN,
+                    onDiscountOffer: L.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+                        percent: null == k ? void 0 : k.discount.amount
                     }),
-                    onTier0TrialOffer: j,
-                    onTier2TrialOffer: j,
-                    onNonTier2Subscriber: O.default.Messages.INTERACTION_PREMIUM_UPSELL_CTA
-                }), B = (0, S.useResponseOnUserState)({
+                    onTier0TrialOffer: w,
+                    onTier2TrialOffer: w,
+                    onNonTier2Subscriber: L.default.Messages.INTERACTION_PREMIUM_UPSELL_CTA
+                }), Y = (0, A.useResponseOnUserState)({
                     defaultResponse: "get_nitro_button",
                     onNonTier2Subscriber: "upgrade_plan_button",
                     onDiscountOffer: "discount_offer_button",
                     onTier0TrialOffer: "trial_offer_button",
                     onTier2TrialOffer: "trial_offer_button"
-                }), H = (0, S.useResponseOnUserState)({
+                }), W = (0, A.useResponseOnUserState)({
                     defaultResponse: () => (0, E.default)({
-                        subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
-                        analyticsLocations: f,
+                        subscriptionTier: R.PremiumSubscriptionSKUs.TIER_2,
+                        analyticsLocations: S,
                         analyticsObject: {
-                            ...c,
-                            object: R.AnalyticsObjects.BUTTON_CTA,
-                            objectType: R.AnalyticsObjectTypes.TIER_2
+                            ...f,
+                            object: O.AnalyticsObjects.BUTTON_CTA,
+                            objectType: O.AnalyticsObjectTypes.TIER_2
                         },
                         onClose: e => {
                             e && n()
                         }
                     })
-                }), V = (0, l.isThemeDark)(h) ? m.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : m.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL;
-                return (0, a.jsx)(p.default, {
+                }), K = (0, l.isThemeDark)(G) ? p.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : p.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL;
+                return (0, a.jsx)(g.default, {
                     renderModalProps: t,
                     video: {
                         type: "video",
-                        src: "https://cdn.discordapp.com/attachments/986110506119069696/1168984935332319262/04_DIS_Nitro_Drop_In_Product_2X_With_Audio.webm"
+                        src: c,
+                        poster: "https://cdn.discordapp.com/assets/q4-2023-drop/announcement-modal-dark.png"
                     },
-                    videoClassName: L.video,
+                    videoClassName: M.video,
                     modalDismissibleContent: s.DismissibleContent.Q4_2023_NITRO_DROP_ANNOUNCEMENT_MODAL,
-                    modalTopExtra: () => null != b ? (0, a.jsx)(m.PremiumPillWithSparkles, {
-                        text: O.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT,
-                        className: L.trialPill,
-                        colorOptions: V
+                    modalTopExtra: () => null != F ? (0, a.jsx)(p.PremiumPillWithSparkles, {
+                        text: L.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT,
+                        className: M.trialPill,
+                        colorOptions: K
                     }) : null,
-                    header: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_HEADER,
-                    headerClassName: L.header,
-                    subHeader: F,
-                    subHeaderExtra: k,
+                    header: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_HEADER,
+                    headerClassName: M.header,
+                    subHeader: B,
+                    subHeaderExtra: H,
                     featureCards: [{
-                        header: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_HEADER,
-                        subHeader: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_DESCRIPTION,
-                        imageSrc: v
-                    }, {
-                        header: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_HEADER,
-                        subHeader: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_DESCRIPTION,
+                        header: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_HEADER,
+                        subHeader: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_DESCRIPTION,
                         imageSrc: P
                     }, {
-                        header: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_HEADER,
-                        subHeader: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_DESCRIPTION,
-                        imageSrc: M
-                    }, {
-                        header: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_HEADER,
-                        subHeader: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_DESCRIPTION,
+                        header: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_HEADER,
+                        subHeader: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_DESCRIPTION,
                         imageSrc: D
+                    }, {
+                        header: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_HEADER,
+                        subHeader: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_DESCRIPTION,
+                        imageSrc: v
+                    }, {
+                        header: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_HEADER,
+                        subHeader: L.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_DESCRIPTION,
+                        imageSrc: (0, l.isThemeDark)(G) ? y : x
                     }],
-                    changeLogId: x,
+                    changeLogId: b,
                     button: () => {
                         let e = Date.now();
                         return (0, a.jsxs)(_.default, {
-                            className: L.buttonWide,
-                            innerClassName: L.innerButton,
+                            className: M.buttonWide,
+                            innerClassName: M.innerButton,
                             color: i.Button.Colors.GREEN,
                             size: i.Button.Sizes.SMALL,
                             onClick: () => {
-                                I.default.track(R.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
-                                    change_log_id: x,
-                                    cta_type: B,
+                                I.default.track(O.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+                                    change_log_id: b,
+                                    cta_type: Y,
                                     seconds_open: Math.round((Date.now() - e) / 1e3),
                                     target: "q4_drop_payment_modal"
-                                }), H()
+                                }), W()
                             },
                             children: [(0, a.jsx)("img", {
                                 alt: "",
-                                className: L.nitroIconSubHeader,
-                                src: y
-                            }), w]
+                                className: M.nitroIconSubHeader,
+                                src: U
+                            }), V]
                         })
                     }
                 })
@@ -34120,6 +34127,7 @@
                             muted: !0,
                             controls: !0,
                             src: l.src,
+                            poster: l.poster,
                             onPlay: () => {
                                 C.default.track(S.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
                                     change_log_id: P
