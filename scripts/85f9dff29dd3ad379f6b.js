@@ -310,8 +310,8 @@
                 o = n("315102"),
                 d = n("730622"),
                 c = n("49111"),
-                f = n("191349"),
-                E = n("782340"),
+                E = n("191349"),
+                f = n("782340"),
                 _ = {
                     open() {
                         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
@@ -402,10 +402,10 @@
                                     discriminator: null != T && "" !== T ? T : void 0
                                 },
                                 r = l.default.get(c.DEVICE_TOKEN),
-                                a = (0, f.getDevicePushProvider)();
+                                a = (0, E.getDevicePushProvider)();
                             null != a && null != r && (t.push_provider = a, t.push_token = r);
                             let o = l.default.get(c.DEVICE_VOIP_TOKEN);
-                            return null != f.DEVICE_PUSH_VOIP_PROVIDER && null != o && (t.push_voip_provider = f.DEVICE_PUSH_VOIP_PROVIDER, t.push_voip_token = o), i.default.patch({
+                            return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != o && (t.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, t.push_voip_token = o), i.default.patch({
                                 url: c.Endpoints.ME,
                                 oldFormErrors: !0,
                                 body: t
@@ -413,7 +413,7 @@
                         }, {
                             checkEnabled: !1,
                             modalProps: {
-                                title: E.default.Messages.TWO_FA_CHANGE_ACCOUNT
+                                title: f.default.Messages.TWO_FA_CHANGE_ACCOUNT
                             },
                             hooks: {
                                 onEarlyClose: () => r.default.dispatch({
@@ -471,8 +471,8 @@
                         children: r,
                         error: d,
                         isLoading: c,
-                        maxLength: f,
-                        transitionState: E,
+                        maxLength: E,
+                        transitionState: f,
                         helpMessage: _,
                         retryPrompt: S,
                         retrySuccessMessage: p
@@ -487,7 +487,7 @@
                             variant: "text-md/normal",
                             children: r
                         })
-                    }) : null, C = null != S ? (0, i.jsxs)(u.Text, {
+                    }) : null, m = null != S ? (0, i.jsxs)(u.Text, {
                         className: s(o.submitText, o.spacing),
                         variant: "text-sm/normal",
                         children: [(0, i.jsx)("br", {}), (0, i.jsx)(u.Clickable, {
@@ -497,7 +497,7 @@
                                 children: S
                             })
                         })]
-                    }) : null, m = h ? (0, i.jsx)(u.Card, {
+                    }) : null, C = h ? (0, i.jsx)(u.Card, {
                         type: u.Card.Types.SUCCESS,
                         className: o.card,
                         children: (0, i.jsx)(u.Text, {
@@ -506,7 +506,7 @@
                         })
                     }) : null;
                     return (0, i.jsx)(u.ModalRoot, {
-                        transitionState: E,
+                        transitionState: f,
                         children: (0, i.jsxs)("form", {
                             onSubmit: this.handleSubmit,
                             children: [(0, i.jsx)(u.ModalHeader, {
@@ -521,14 +521,14 @@
                                     variant: "text-md/normal",
                                     className: o.spacing,
                                     children: _
-                                }) : null, g, m, (0, i.jsxs)(u.FormItem, {
+                                }) : null, g, C, (0, i.jsxs)(u.FormItem, {
                                     title: this.getLabelText(),
                                     className: o.spacing,
                                     children: [(0, i.jsx)(u.TextInput, {
                                         inputRef: this.setRef,
                                         onChange: this.handleCodeChange,
                                         placeholder: null !== (e = this.getPlaceholder()) && void 0 !== e ? e : void 0,
-                                        maxLength: null != f ? f : 10,
+                                        maxLength: null != E ? E : 10,
                                         value: T,
                                         autoComplete: "one-time-code",
                                         autoFocus: !0
@@ -537,7 +537,7 @@
                                         variant: "text-xs/normal",
                                         className: o.error,
                                         children: null != d ? d : I
-                                    }) : null, C]
+                                    }) : null, m]
                                 })]
                             }), (0, i.jsxs)(u.ModalFooter, {
                                 children: [(0, i.jsx)(u.Button, {
@@ -890,15 +890,15 @@
             var o = n("446674"),
                 d = n("913144");
             let c = !1,
-                f = !1,
-                E = null,
+                E = !1,
+                f = null,
                 _ = {},
                 S = {},
                 p = {},
                 T = {};
 
             function I() {
-                i = void 0, l = void 0, r = void 0, s = void 0, u = void 0, E = null
+                i = void 0, l = void 0, r = void 0, s = void 0, u = void 0, f = null
             }
             class h extends o.default.Store {
                 getSettings(e) {
@@ -917,7 +917,7 @@
                     return l
                 }
                 getErrors() {
-                    return E
+                    return f
                 }
                 hasPendingChanges() {
                     return void 0 !== i || void 0 !== l || void 0 !== r || void 0 !== s || void 0 !== u
@@ -952,7 +952,7 @@
                     return null === (t = S[e]) || void 0 === t ? void 0 : t.isFetching
                 }
                 isEditingClydeProfile() {
-                    return f
+                    return E
                 }
             }
             h.displayName = "ClydeStore";
@@ -1017,7 +1017,7 @@
                     u = t
                 },
                 CLYDE_GUILD_SETTINGS_SAVE_START: function() {
-                    E = null, c = !0
+                    f = null, c = !0
                 },
                 CLYDE_GUILD_SETTINGS_SAVE_SUCCESS: function(e) {
                     let {
@@ -1026,7 +1026,7 @@
                     c = !1, p[t.guild_id] = t, I()
                 },
                 CLYDE_GUILD_SETTINGS_SAVE_FAIL: function(e) {
-                    c = !1, E = e.errors
+                    c = !1, f = e.errors
                 },
                 CLYDE_RESET_PENDING_CHANGES: I,
                 CLYDE_PROFILE_FETCH_START: function(e) {
@@ -1063,16 +1063,16 @@
                     _[t.clyde_profile_id] = t
                 },
                 CLYDE_PROFILE_EDITING_START: function() {
-                    f = !0
+                    E = !0
                 },
                 CLYDE_PROFILE_EDITING_END: function() {
-                    f = !1
+                    E = !1
                 }
             })
         },
         115279: function(e, t, n) {
             "use strict";
-            var i, l, r, s, u, a, o, d, c, f, E;
+            var i, l, r, s, u, a, o, d, c, E, f;
             n.r(t), n.d(t, {
                 EmojiCategoryTypes: function() {
                     return i
@@ -1108,10 +1108,10 @@
                     return g
                 },
                 REACTION_PICKER_TAB_ID: function() {
-                    return C
+                    return m
                 },
                 SUPER_REACTION_PICKER_TAB_ID: function() {
-                    return m
+                    return C
                 },
                 SuperReactionBalanceLocations: function() {
                     return a
@@ -1130,16 +1130,16 @@
                 }
             }), (o = i || (i = {})).GUILD = "GUILD", o.PACK = "PACK", o.UNICODE = "UNICODE", o.RECENT = "RECENT", o.CUSTOM = "CUSTOM", o.SEARCH_RESULTS = "SEARCH_RESULTS", o.FAVORITES = "FAVORITES", o.TOP_GUILD_EMOJI = "TOP_GUILD_EMOJI", o.PREMIUM_UPSELL = "PREMIUM_UPSELL";
             let _ = "emoji-picker-grid";
-            (d = l || (l = {})).RECENT = "recent", d.FAVORITES = "favorites", d.TOP_GUILD_EMOJI = "top guild emoji", d.CUSTOM = "custom", d.PEOPLE = "people", d.NATURE = "nature", d.FOOD = "food", d.ACTIVITY = "activity", d.TRAVEL = "travel", d.OBJECTS = "objects", d.SYMBOLS = "symbols", d.FLAGS = "flags", d.PREMIUM_UPSELL = "premium emoji", (c = r || (r = {})).NONE = "", c.TOP_GUILD_EMOJI = "top_server", c.NEWLY_ADDED_EMOJI = "newly_added", (f = s || (s = {}))[f.EMOJI = 0] = "EMOJI", f[f.NSFW = 1] = "NSFW";
+            (d = l || (l = {})).RECENT = "recent", d.FAVORITES = "favorites", d.TOP_GUILD_EMOJI = "top guild emoji", d.CUSTOM = "custom", d.PEOPLE = "people", d.NATURE = "nature", d.FOOD = "food", d.ACTIVITY = "activity", d.TRAVEL = "travel", d.OBJECTS = "objects", d.SYMBOLS = "symbols", d.FLAGS = "flags", d.PREMIUM_UPSELL = "premium emoji", (c = r || (r = {})).NONE = "", c.TOP_GUILD_EMOJI = "top_server", c.NEWLY_ADDED_EMOJI = "newly_added", (E = s || (s = {}))[E.EMOJI = 0] = "EMOJI", E[E.NSFW = 1] = "NSFW";
             let S = -1;
-            (E = u || (u = {}))[E.MEDIUM = 40] = "MEDIUM", E[E.LARGE = 48] = "LARGE";
+            (f = u || (u = {}))[f.MEDIUM = 40] = "MEDIUM", f[f.LARGE = 48] = "LARGE";
             let p = "emoji-picker-tab-panel",
                 T = "emoji-picker-tab",
                 I = "soundboard-picker-tab-panel",
                 h = "soundboard-picker-tab",
                 g = "reaction-picker-tab-panel",
-                C = "reaction-picker-tab",
-                m = "super-reaction-picker-tab";
+                m = "reaction-picker-tab",
+                C = "super-reaction-picker-tab";
             (a || (a = {})).TOOLTIP = "tooltip";
             let N = "gif-picker-tab-panel",
                 A = "gif-picker-tab",
@@ -1169,13 +1169,13 @@
                 c = e => {
                     let t, n, l, {
                             guildFeature: c,
-                            guild: f,
-                            className: E,
+                            guild: E,
+                            className: f,
                             hideTooltip: _ = !1,
                             tooltipPosition: S = "left",
                             onClick: p
                         } = e,
-                        T = f.hasFeature(c),
+                        T = E.hasFeature(c),
                         I = (0, a.minimumRequiredTierForGuildFeature)(c);
                     return (T ? (null != I && (l = o.default.Messages.PREMIUM_GUILD_INCLUDED), t = (0, i.jsxs)(i.Fragment, {
                         children: [(0, i.jsx)(u.default, {
@@ -1194,14 +1194,14 @@
                             children: null != I && (0, a.getShortenedTierName)(I)
                         })]
                     })), n = _ || null == l ? (0, i.jsx)("div", {
-                        className: r(d.availabilityIndicator, E),
+                        className: r(d.availabilityIndicator, f),
                         children: t
                     }) : (0, i.jsx)(s.Tooltip, {
                         position: S,
                         text: l,
                         children: e => (0, i.jsx)("div", {
                             ...e,
-                            className: r(d.availabilityIndicator, E),
+                            className: r(d.availabilityIndicator, f),
                             children: t
                         })
                     }), null == p || T) ? n : (0, i.jsx)(s.Clickable, {
@@ -1251,8 +1251,8 @@
                 o = n("473591"),
                 d = n("634544"),
                 c = n("694187"),
-                f = n("305961"),
-                E = n("162771"),
+                E = n("305961"),
+                f = n("162771"),
                 _ = n("697218"),
                 S = n("471671"),
                 p = n("887718"),
@@ -1260,8 +1260,8 @@
                 I = n("216422"),
                 h = n("599110"),
                 g = n("719923"),
-                C = n("354460"),
-                m = n("424960"),
+                m = n("354460"),
+                C = n("424960"),
                 N = n("49111"),
                 A = n("75015"),
                 O = n("991207"),
@@ -1281,7 +1281,7 @@
                 png: n("122574")
             }];
 
-            function D(e) {
+            function R(e) {
                 let {
                     shouldAnimate: t = !0
                 } = e, [n, r] = l.useState(!1);
@@ -1298,7 +1298,7 @@
                 })
             }
 
-            function R(e) {
+            function D(e) {
                 let {
                     guildFeature: t,
                     guild: n
@@ -1321,14 +1321,14 @@
                 } = e;
                 return (0, i.jsxs)("div", {
                     className: U.optionBoxText,
-                    children: [(0, i.jsx)(R, {
+                    children: [(0, i.jsx)(D, {
                         guild: n,
-                        guildFeature: (0, C.getGuildFeatureFromUploadType)(t, {
+                        guildFeature: (0, m.getGuildFeatureFromUploadType)(t, {
                             isGIF: !0
                         })
                     }), (0, i.jsxs)("div", {
                         className: U.optionBoxDescription,
-                        children: [(0, C.shouldShowPremiumIconForGIFPickerOption)(t) && (0, i.jsx)(s.TooltipContainer, {
+                        children: [(0, m.shouldShowPremiumIconForGIFPickerOption)(t) && (0, i.jsx)(s.TooltipContainer, {
                             className: U.nitroWheelFlairContainer,
                             text: v.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
                             children: l && (0, i.jsx)(I.default, {
@@ -1347,8 +1347,8 @@
                 } = e;
                 return (0, i.jsxs)("div", {
                     className: U.optionBoxText,
-                    children: [(0, i.jsx)(R, {
-                        guildFeature: (0, C.getGuildFeatureFromUploadType)(n, {
+                    children: [(0, i.jsx)(D, {
+                        guildFeature: (0, m.getGuildFeatureFromUploadType)(n, {
                             isGIF: !1
                         }),
                         guild: l
@@ -1364,9 +1364,9 @@
                     transitionState: t,
                     onClose: d,
                     onComplete: I,
-                    uploadType: C,
+                    uploadType: m,
                     maxFileSizeBytes: L,
-                    showUpsellHeader: R,
+                    showUpsellHeader: D,
                     filters: M,
                     analyticsLocation: b,
                     analyticsLocations: F = [],
@@ -1374,9 +1374,9 @@
                     imageSpecifications: G,
                     modalTitle: x = v.default.Messages.SELECT_IMAGE_MODAL_TITLE,
                     uploadOptionTitle: k = v.default.Messages.UPLOAD_IMAGE
-                } = e, B = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), j = (0, r.useStateFromStores)([_.default], () => _.default.getCurrentUser()), H = (0, r.useStateFromStores)([E.default], () => E.default.getGuildId()), V = (0, r.useStateFromStores)([f.default], () => f.default.getGuild(H)), W = (0, r.useStateFromStores)([o.default], () => o.default.isEditingClydeProfile()), {
+                } = e, B = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), j = (0, r.useStateFromStores)([_.default], () => _.default.getCurrentUser()), H = (0, r.useStateFromStores)([f.default], () => f.default.getGuildId()), V = (0, r.useStateFromStores)([E.default], () => E.default.getGuild(H)), W = (0, r.useStateFromStores)([o.default], () => o.default.isEditingClydeProfile()), {
                     reducedMotion: K
-                } = l.useContext(s.AccessibilityPreferencesContext), Y = (0, s.useModalContext)(), z = !g.default.canUseAnimatedAvatar(j) && C === A.UploadTypes.AVATAR && !W, {
+                } = l.useContext(s.AccessibilityPreferencesContext), Y = (0, s.useModalContext)(), z = !g.default.canUseAnimatedAvatar(j) && m === A.UploadTypes.AVATAR && !W, {
                     analyticsLocations: J
                 } = (0, a.default)(F, u.default.SELECT_IMAGE_MODAL);
 
@@ -1427,7 +1427,7 @@
                                     color: "interactive-normal",
                                     children: (0, i.jsx)(y, {
                                         title: k,
-                                        uploadType: C,
+                                        uploadType: m,
                                         guild: V
                                     })
                                 }), (0, i.jsx)(c.default, {
@@ -1441,8 +1441,8 @@
                                                 imgURI: e,
                                                 file: t,
                                                 onCrop: X,
-                                                uploadType: C,
-                                                showUpsellHeader: R,
+                                                uploadType: m,
+                                                showUpsellHeader: D,
                                                 allowSkip: !0,
                                                 analyticsPage: null == b ? void 0 : b.page,
                                                 ...n
@@ -1453,7 +1453,7 @@
                                     },
                                     maxFileSizeBytes: L,
                                     onFileSizeError: function() {
-                                        d(), (0, m.default)(L)
+                                        d(), (0, C.default)(L)
                                     },
                                     filters: M
                                 })]
@@ -1465,9 +1465,9 @@
                                             default: e
                                         } = await n.el("646077").then(n.bind(n, "646077"));
                                         return t => (0, i.jsx)(e, {
-                                            uploadType: C,
+                                            uploadType: m,
                                             onComplete: (e, t) => X(e, t, !0),
-                                            showUpsellHeader: R,
+                                            showUpsellHeader: D,
                                             analyticsPage: null == b ? void 0 : b.page,
                                             ...t
                                         })
@@ -1477,7 +1477,7 @@
                                 },
                                 children: [(0, i.jsxs)("div", {
                                     className: U.contentCircle,
-                                    children: [(0, i.jsx)(D, {
+                                    children: [(0, i.jsx)(R, {
                                         shouldAnimate: B && !K.enabled
                                     }), (0, i.jsx)("div", {
                                         className: U.gifIconContainer,
@@ -1489,7 +1489,7 @@
                                     variant: "text-sm/semibold",
                                     color: "interactive-normal",
                                     children: (0, i.jsx)(P, {
-                                        uploadType: C,
+                                        uploadType: m,
                                         guild: V,
                                         showNitroWheel: !W
                                     })
@@ -1597,7 +1597,7 @@
                     return c
                 },
                 useInventoryGuildSettingsExperiment: function() {
-                    return E
+                    return f
                 }
             });
             var i = n("65597"),
@@ -1708,14 +1708,14 @@
                     } = o({
                         user: l,
                         config: s
-                    }), f = u && c && null != t && (null == t ? void 0 : null === (e = t.inventorySettings) || void 0 === e ? void 0 : e.isEmojiPackCollectible) !== !1;
+                    }), E = u && c && null != t && (null == t ? void 0 : null === (e = t.inventorySettings) || void 0 === e ? void 0 : e.isEmojiPackCollectible) !== !1;
                     return {
                         viewAndUseEnabled: u,
-                        collectEnabled: f,
+                        collectEnabled: E,
                         showTryPacksModalAndV2Copy: d
                     }
                 },
-                f = (0, l.createExperiment)({
+                E = (0, l.createExperiment)({
                     kind: "guild",
                     id: "2023-06_inventory_guild_setting",
                     label: "Inventory Guild Settings Experiment",
@@ -1750,14 +1750,14 @@
                         }
                     }]
                 }),
-                E = function() {
+                f = function() {
                     let {
                         guildId: e,
                         autoTrackExposure: t = !0
                     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
                         guildId: void 0,
                         autoTrackExposure: !0
-                    }, n = f.useExperiment({
+                    }, n = E.useExperiment({
                         guildId: null != e ? e : "",
                         location: "482926_3"
                     }, {
@@ -1774,7 +1774,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return f
                 }
             });
             var i = n("37983");
@@ -1787,12 +1787,12 @@
                 o = n("599110"),
                 d = n("659500"),
                 c = n("49111"),
-                f = n("646718");
+                E = n("646718");
 
-            function E(e) {
+            function f(e) {
                 let {
                     initialPlanId: t,
-                    followupSKUInfo: E,
+                    followupSKUInfo: f,
                     onClose: _,
                     onComplete: S,
                     onSubscriptionConfirmation: p,
@@ -1800,16 +1800,16 @@
                     analyticsObject: I,
                     analyticsLocation: h,
                     analyticsSourceLocation: g,
-                    isGift: C = !1,
-                    giftMessage: m,
+                    isGift: m = !1,
+                    giftMessage: C,
                     subscriptionTier: N,
                     trialId: A,
                     postSuccessGuild: O,
                     openInvoiceId: v,
                     applicationId: U,
                     referralTrialOfferId: L,
-                    giftRecipient: D,
-                    returnRef: R
+                    giftRecipient: R,
+                    returnRef: D
                 } = null != e ? e : {}, P = !1, y = (0, l.v4)();
                 (0, r.openModalLazy)(async () => {
                     let {
@@ -1825,16 +1825,16 @@
                             loadId: y,
                             subscriptionTier: N,
                             skuId: N,
-                            isGift: C,
-                            giftMessage: m,
-                            giftRecipient: D,
+                            isGift: m,
+                            giftMessage: C,
+                            giftRecipient: R,
                             initialPlanId: t,
-                            followupSKUInfo: E,
+                            followupSKUInfo: f,
                             onClose: e => {
                                 l(), null == _ || _(e), e && (null == p || p())
                             },
                             onComplete: () => {
-                                P = !0, null == S || S(), !C && ((0, a.setIsPersistentHelperHidden)(!0), (0, a.setCanPlayWowMoment)(!0))
+                                P = !0, null == S || S(), !m && ((0, a.setIsPersistentHelperHidden)(!0), (0, a.setCanPlayWowMoment)(!0))
                             },
                             onSubscriptionConfirmation: p,
                             analyticsLocations: T,
@@ -1843,11 +1843,11 @@
                             analyticsSourceLocation: g,
                             trialId: A,
                             postSuccessGuild: O,
-                            planGroup: f.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
+                            planGroup: E.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
                             openInvoiceId: v,
                             applicationId: U,
                             referralTrialOfferId: L,
-                            returnRef: R
+                            returnRef: D
                         })
                     }
                 }, {
@@ -1859,11 +1859,11 @@
                             location: null != h ? h : I,
                             source: g,
                             subscription_type: c.SubscriptionTypes.PREMIUM,
-                            is_gift: C,
+                            is_gift: m,
                             eligible_for_trial: null != A,
                             application_id: U,
                             location_stack: T
-                        }), (0, s.clearError)(), (0, u.clearPurchaseTokenAuthState)(), null == _ || _(P), P && (!C && d.ComponentDispatch.dispatch(c.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED), null == p || p())
+                        }), (0, s.clearError)(), (0, u.clearPurchaseTokenAuthState)(), null == _ || _(P), P && (!m && d.ComponentDispatch.dispatch(c.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED), null == p || p())
                     },
                     onCloseRequest: c.NOOP
                 })
@@ -2000,7 +2000,7 @@
                     return c
                 },
                 usePremiumDiscountOffer: function() {
-                    return f
+                    return E
                 }
             });
             var i = n("884691"),
@@ -2022,7 +2022,7 @@
                 return i.has(t)
             }
 
-            function f() {
+            function E() {
                 let e = (0, l.useStateFromStores)([u.default], () => u.default.getUserDiscount(o.PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID)),
                     [t, n] = i.useState(d(e)),
                     c = (0, l.useStateFromStores)([s.default], () => (0, a.isPremium)(s.default.getCurrentUser()));
@@ -2056,8 +2056,8 @@
                 o = n("685665"),
                 d = n("788506"),
                 c = n("649844"),
-                f = n("393414"),
-                E = n("797647"),
+                E = n("393414"),
+                f = n("797647"),
                 _ = n("697218"),
                 S = n("521012"),
                 p = n("471671"),
@@ -2065,8 +2065,8 @@
                 I = n("978679"),
                 h = n("216422"),
                 g = n("719923"),
-                C = n("646718"),
-                m = n("49111"),
+                m = n("646718"),
+                C = n("49111"),
                 N = n("782340"),
                 A = n("683437"),
                 O = function(e) {
@@ -2077,8 +2077,8 @@
                         size: v,
                         className: U,
                         trialId: L,
-                        isTrialCTA: D,
-                        buttonText: R,
+                        isTrialCTA: R,
+                        buttonText: D,
                         buttonTextClassName: P,
                         postSuccessGuild: y,
                         onSubscribeModalClose: M,
@@ -2094,11 +2094,11 @@
                         analyticsLocations: K
                     } = (0, o.default)(), Y = e => {
                         if (e.preventDefault(), null == H) {
-                            (0, f.transitionTo)(m.Routes.LOGIN);
+                            (0, E.transitionTo)(C.Routes.LOGIN);
                             return
                         }
-                        if (null == O || O(e), (null == W ? void 0 : W.status) === m.SubscriptionStatusTypes.ACCOUNT_HOLD) {
-                            (0, d.trackPremiumSettingsPaneOpened)(), a.default.open(m.UserSettingsSections.PREMIUM), null == M || M(!1);
+                        if (null == O || O(e), (null == W ? void 0 : W.status) === C.SubscriptionStatusTypes.ACCOUNT_HOLD) {
+                            (0, d.trackPremiumSettingsPaneOpened)(), a.default.open(C.UserSettingsSections.PREMIUM), null == M || M(!1);
                             return
                         }! function(e) {
                             let {
@@ -2109,8 +2109,8 @@
                                 trialId: a,
                                 postSuccessGuild: o,
                                 onSubscribeModalClose: d,
-                                analyticsLocations: f,
-                                premiumModalAnalyticsLocation: E,
+                                analyticsLocations: E,
+                                premiumModalAnalyticsLocation: f,
                                 applicationId: _,
                                 giftMessage: S
                             } = e;
@@ -2150,16 +2150,16 @@
                                 });
                                 return
                             }
-                            let p = m.AnalyticsObjectTypes.BUY;
-                            null != a ? p = m.AnalyticsObjectTypes.TRIAL : r && (p = m.AnalyticsObjectTypes.GIFT), (0, c.default)({
+                            let p = C.AnalyticsObjectTypes.BUY;
+                            null != a ? p = C.AnalyticsObjectTypes.TRIAL : r && (p = C.AnalyticsObjectTypes.GIFT), (0, c.default)({
                                 isGift: r,
                                 initialPlanId: null,
                                 subscriptionTier: s,
-                                analyticsLocations: f,
+                                analyticsLocations: E,
                                 analyticsObject: {
-                                    object: m.AnalyticsObjects.BUTTON_CTA,
+                                    object: C.AnalyticsObjects.BUTTON_CTA,
                                     objectType: p,
-                                    ...E
+                                    ...f
                                 },
                                 trialId: a,
                                 postSuccessGuild: o,
@@ -2181,7 +2181,7 @@
                             giftMessage: x
                         })
                     };
-                    if (D) return (0, i.jsxs)(u.Button, {
+                    if (R) return (0, i.jsxs)(u.Button, {
                         size: v,
                         className: U,
                         innerClassName: A.premiumSubscribeButton,
@@ -2192,7 +2192,7 @@
                             className: A.premiumIcon
                         }), (0, i.jsx)("span", {
                             className: r(A.buttonText, P),
-                            children: null != R ? R : N.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT
+                            children: null != D ? D : N.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT
                         })]
                     });
                     if (t) return (0, i.jsxs)(u.Button, {
@@ -2206,28 +2206,28 @@
                             className: A.giftIcon
                         }), (0, i.jsx)("span", {
                             className: r(A.buttonText, P),
-                            children: null != R ? R : N.default.Messages.PREMIUM_GIFTING_BUTTON
+                            children: null != D ? D : N.default.Messages.PREMIUM_GIFTING_BUTTON
                         })]
                     });
                     let z = N.default.Messages.APPLICATION_STORE_GET_PREMIUM,
                         J = null != W ? (0, g.getPremiumPlanItem)(W) : null,
                         X = null != J ? g.default.getPremiumType(J.planId) : null == H ? void 0 : H.premiumType,
-                        q = l === C.PremiumSubscriptionSKUs.TIER_2 && null != X && [C.PremiumTypes.TIER_0, C.PremiumTypes.TIER_1].includes(X);
+                        q = l === m.PremiumSubscriptionSKUs.TIER_2 && null != X && [m.PremiumTypes.TIER_0, m.PremiumTypes.TIER_1].includes(X);
                     q && (z = N.default.Messages.BILLING_SWITCH_PLAN_UPGRADE);
-                    let Q = null != W && W.status !== m.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, E.isNoneSubscription)(W.planId) && !q,
+                    let Q = null != W && W.status !== C.SubscriptionStatusTypes.ACCOUNT_HOLD && !(0, f.isNoneSubscription)(W.planId) && !q,
                         Z = Q ? null != k ? k : function(e) {
                             let {
                                 ctaSubscriptionSkuId: t,
                                 currentPremiumType: n
                             } = e, i = null, l = null;
-                            if (null != t && t !== C.PremiumSubscriptionSKUs.LEGACY && t !== C.PremiumSubscriptionSKUs.TIER_0 && t !== C.PremiumSubscriptionSKUs.TIER_1 && t !== C.PremiumSubscriptionSKUs.TIER_2) return {
+                            if (null != t && t !== m.PremiumSubscriptionSKUs.LEGACY && t !== m.PremiumSubscriptionSKUs.TIER_0 && t !== m.PremiumSubscriptionSKUs.TIER_1 && t !== m.PremiumSubscriptionSKUs.TIER_2) return {
                                 disabledButtonText: i,
                                 disabledButtonTooltipText: l
                             };
-                            let r = null != t ? C.PremiumSubscriptionSKUToPremiumType[t] : null,
-                                s = null != r ? C.PremiumTypeOrder[r] : null,
-                                u = null != n ? C.PremiumTypeOrder[n] : null;
-                            return null != u && null != s && s < u ? (i = N.default.Messages.APPLICATION_STORE_GET_PREMIUM, l = N.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null != r && null != n && r === n ? (i = N.default.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, l = N.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null == r && null != n && n === C.PremiumTypes.TIER_2 && (l = N.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP), {
+                            let r = null != t ? m.PremiumSubscriptionSKUToPremiumType[t] : null,
+                                s = null != r ? m.PremiumTypeOrder[r] : null,
+                                u = null != n ? m.PremiumTypeOrder[n] : null;
+                            return null != u && null != s && s < u ? (i = N.default.Messages.APPLICATION_STORE_GET_PREMIUM, l = N.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null != r && null != n && r === n ? (i = N.default.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, l = N.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP) : null == r && null != n && n === m.PremiumTypes.TIER_2 && (l = N.default.Messages.PREMIUM_SUBSCRIPTION_BUTTON_DISABLED_MANAGE_PLAN_TOOLTIP), {
                                 disabledButtonText: i,
                                 disabledButtonTooltipText: l
                             }
@@ -2242,7 +2242,7 @@
                             disabled: Q,
                             onClick: Y,
                             innerClassName: A.premiumSubscribeButton,
-                            color: l === C.PremiumSubscriptionSKUs.TIER_1 ? u.Button.Colors.PRIMARY : u.Button.Colors.GREEN,
+                            color: l === m.PremiumSubscriptionSKUs.TIER_1 ? u.Button.Colors.PRIMARY : u.Button.Colors.GREEN,
                             size: v,
                             className: B,
                             wrapperClassName: U,
@@ -2253,7 +2253,7 @@
                                 className: A.premiumIcon
                             }), (0, i.jsx)("span", {
                                 className: r(A.buttonText, P),
-                                children: null !== (n = null !== (t = null == Z ? void 0 : Z.disabledButtonText) && void 0 !== t ? t : R) && void 0 !== n ? n : z
+                                children: null !== (n = null !== (t = null == Z ? void 0 : Z.disabledButtonText) && void 0 !== t ? t : D) && void 0 !== n ? n : z
                             })]
                         })
                     }
@@ -2323,7 +2323,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return D
+                    return R
                 }
             });
             var i, l, r = n("917351"),
@@ -2333,8 +2333,8 @@
                 o = n("845579"),
                 d = n("374363"),
                 c = n("697218"),
-                f = n("599110"),
-                E = n("829536"),
+                E = n("599110"),
+                f = n("829536"),
                 _ = n("846325"),
                 S = n("49111"),
                 p = n("397336");
@@ -2343,8 +2343,8 @@
                 I = new Map,
                 h = new Set,
                 g = l.NOT_FETCHED,
-                C = l.NOT_FETCHED,
-                m = new Set,
+                m = l.NOT_FETCHED,
+                C = new Set,
                 N = new Map,
                 A = !1;
 
@@ -2355,8 +2355,8 @@
                 null != n && null != i && -1 !== i ? (n[i] = t, T.set(t.guildId, [...n])) : null != n && (null == n || n.push(t), T.set(t.guildId, [...n]))
             }
             let v = s.debounce(e => {
-                f.default.track(S.AnalyticEvents.UPDATE_SOUNDBOARD_SETTINGS, {
-                    volume: Math.round((0, E.amplitudeToPerceptual)(e))
+                E.default.track(S.AnalyticEvents.UPDATE_SOUNDBOARD_SETTINGS, {
+                    volume: Math.round((0, f.amplitudeToPerceptual)(e))
                 }), o.SoundboardSettings.updateSetting({
                     volume: e
                 })
@@ -2375,7 +2375,7 @@
                 getOverlaySerializedState() {
                     return {
                         soundboardSounds: Object.fromEntries(T),
-                        favoritedSoundIds: Array.from(m),
+                        favoritedSoundIds: Array.from(C),
                         localSoundboardMutes: Array.from(h)
                     }
                 }
@@ -2395,7 +2395,7 @@
                     return t.find(t => t.soundId === e)
                 }
                 isFetchingSounds() {
-                    return C === l.FETCHING
+                    return m === l.FETCHING
                 }
                 isFetchingDefaultSounds() {
                     return g === l.FETCHING
@@ -2417,10 +2417,10 @@
                     return null != I.get(e)
                 }
                 isFavoriteSound(e) {
-                    return m.has(e)
+                    return C.has(e)
                 }
                 getFavorites() {
-                    return m
+                    return C
                 }
                 isLocalSoundboardMuted(e) {
                     return h.has(e)
@@ -2429,16 +2429,16 @@
                     return A
                 }
                 hasFetchedAllSounds() {
-                    return C === l.FETCHED && g === l.FETCHED
+                    return m === l.FETCHED && g === l.FETCHED
                 }
             }
             L.displayName = "SoundboardStore";
-            var D = new L(a.default, {
+            var R = new L(a.default, {
                 LOGOUT: function() {
-                    T.clear(), I.clear(), N.clear(), A = !1, C = l.NOT_FETCHED, g = l.NOT_FETCHED
+                    T.clear(), I.clear(), N.clear(), A = !1, m = l.NOT_FETCHED, g = l.NOT_FETCHED
                 },
                 GUILD_SOUNDBOARD_FETCH: function() {
-                    C = l.FETCHING
+                    m = l.FETCHING
                 },
                 GUILD_SOUNDBOARD_SOUND_CREATE: O,
                 GUILD_SOUNDBOARD_SOUND_UPDATE: O,
@@ -2486,7 +2486,7 @@
                     } = t;
                     if (n === p.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
                         var l, r;
-                        m = new Set(null !== (r = null == i ? void 0 : null === (l = i.favoriteSoundboardSounds) || void 0 === l ? void 0 : l.soundIds) && void 0 !== r ? r : [])
+                        C = new Set(null !== (r = null == i ? void 0 : null === (l = i.favoriteSoundboardSounds) || void 0 === l ? void 0 : l.soundIds) && void 0 !== r ? r : [])
                     } else n === p.UserSettingsTypes.PRELOADED_USER_SETTINGS && U(i)
                 },
                 SOUNDBOARD_FETCH_DEFAULT_SOUNDS: function() {
@@ -2508,7 +2508,7 @@
                             sounds: n
                         } = e;
                         T.set(t, n)
-                    }), C = l.FETCHED
+                    }), m = l.FETCHED
                 },
                 GUILD_DELETE: function(e) {
                     let {
@@ -2526,7 +2526,7 @@
                     let {
                         soundboardStoreState: t
                     } = e;
-                    T = new Map(Object.entries(t.soundboardSounds)), m = new Set(t.favoritedSoundIds), h = new Set(t.localSoundboardMutes)
+                    T = new Map(Object.entries(t.soundboardSounds)), C = new Set(t.favoritedSoundIds), h = new Set(t.localSoundboardMutes)
                 },
                 GUILD_SOUNDBOARD_SOUNDS_UPDATE: function(e) {
                     let {
@@ -2551,8 +2551,8 @@
                 o = n("595525"),
                 d = n("212084"),
                 c = n("867805"),
-                f = n("267567"),
-                E = n("813006"),
+                E = n("267567"),
+                f = n("813006"),
                 _ = n("778689"),
                 S = n("305961"),
                 p = n("161585"),
@@ -2561,8 +2561,8 @@
             (i = l || (l = {}))[i.Unloaded = 0] = "Unloaded", i[i.MaybeLoaded = 1] = "MaybeLoaded", i[i.Loaded = 2] = "Loaded";
             let h = 2,
                 g = new Map,
-                C = new Map,
-                m = null,
+                m = new Map,
+                C = null,
                 N = [],
                 A = null,
                 O = !1,
@@ -2571,7 +2571,7 @@
                     v = new Map(v.set(e, t))
                 },
                 L = 1e3 * I.Durations.HOUR,
-                D = () => {
+                R = () => {
                     if (0 !== h) return;
                     let e = a.default.database();
                     if (null == e) return;
@@ -2580,19 +2580,19 @@
                     if (null != t) {
                         for (let [e, n] of t)
                             if (_.default.isMember(e) && !v.has(e)) {
-                                for (let t of n) R(t, !0, S.default.getGuild(e));
+                                for (let t of n) D(t, !0, S.default.getGuild(e));
                                 U(e, n)
                             }
                     }
                 },
-                R = function(e) {
+                D = function(e) {
                     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-                    C.set(e.id, e), t && P(e, n)
+                    m.set(e.id, e), t && P(e, n)
                 },
                 P = function(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-                    if (null == m) return;
+                    if (null == C) return;
                     let {
                         tags: n
                     } = e, i = {
@@ -2608,7 +2608,7 @@
                         null != t && l.push({
                             type: p.StickerMetadataTypes.PACK_NAME,
                             value: t.name
-                        }), m.set(e.id, l)
+                        }), C.set(e.id, l)
                     } else if ((0, T.isGuildSticker)(e) && null != n) {
                         let l = c.default.getByName(n),
                             r = {
@@ -2617,14 +2617,14 @@
                             },
                             s = [i, r];
                         if (null != t) {
-                            let e = (t instanceof(0, E.default) ? t.name : t.properties.name).trim().toLocaleLowerCase();
+                            let e = (t instanceof(0, f.default) ? t.name : t.properties.name).trim().toLocaleLowerCase();
                             null != e && "" !== e && s.push({
                                 type: p.StickerMetadataTypes.GUILD_NAME,
                                 value: e
                             })
                         }
                         if (null == l) {
-                            m.set(e.id, s);
+                            C.set(e.id, s);
                             return
                         }
                         s.push({
@@ -2633,7 +2633,7 @@
                         }), l.forEachDiversity(e => s.push({
                             type: p.StickerMetadataTypes.CORRELATED_EMOJI,
                             value: e.surrogates
-                        })), m.set(e.id, s)
+                        })), C.set(e.id, s)
                     }
                 },
                 y = (e, t, n) => {
@@ -2641,7 +2641,7 @@
                     let i = [...N];
                     if (t) {
                         let t = i.findIndex(t => t.id === e.id); - 1 !== t ? i[t] = e : i.push(e), N = i
-                    }(t || n) && e.stickers.forEach(e => R(e))
+                    }(t || n) && e.stickers.forEach(e => D(e))
                 },
                 M = () => {
                     v.forEach((e, t) => {
@@ -2653,7 +2653,7 @@
                 };
 
             function b(e) {
-                null != e.stickers && (e.stickers.forEach(t => R(t, !0, e)), U(e.id, e.stickers))
+                null != e.stickers && (e.stickers.forEach(t => D(t, !0, e)), U(e.id, e.stickers))
             }
             class F extends s.default.Store {
                 initialize() {
@@ -2663,7 +2663,7 @@
                     return 0 !== h
                 }
                 get stickerMetadata() {
-                    return D(), null == m && (m = new Map, M()), m
+                    return R(), null == C && (C = new Map, M()), C
                 }
                 get hasLoadedStickerPacks() {
                     return null != A && A + L > Date.now()
@@ -2672,7 +2672,7 @@
                     return O
                 }
                 getStickerById(e) {
-                    return !C.has(e) && D(), C.get(e)
+                    return !m.has(e) && R(), m.get(e)
                 }
                 getStickerPack(e) {
                     return g.get(e)
@@ -2687,31 +2687,31 @@
                     return v
                 }
                 getAllStickersIterator() {
-                    return D(), C.values()
+                    return R(), m.values()
                 }
                 getAllGuildStickers() {
-                    return D(), v
+                    return R(), v
                 }
                 getStickersByGuildId(e) {
-                    return D(), v.get(e)
+                    return R(), v.get(e)
                 }
             }
             F.displayName = "StickersStore";
             var w = new F(u.default, {
                 BACKGROUND_SYNC: () => {
-                    m = null, C = new Map, v = new Map, h = 0
+                    C = null, m = new Map, v = new Map, h = 0
                 },
                 CONNECTION_OPEN: e => {
                     let {
                         guilds: t
                     } = e;
-                    m = null, C = new Map, v = new Map, t.forEach(b), h = t.every(e => null != e.stickers) ? 1 : 0
+                    C = null, m = new Map, v = new Map, t.forEach(b), h = t.every(e => null != e.stickers) ? 1 : 0
                 },
                 GUILD_CREATE: function(e) {
                     let {
                         guild: t
                     } = e;
-                    !f.default.isLurking(t.id) && (b(t), 1 === h && null == t.stickers && null != t.stickerUpdates && (h = 0))
+                    !E.default.isLurking(t.id) && (b(t), 1 === h && null == t.stickers && null != t.stickerUpdates && (h = 0))
                 },
                 GUILD_DELETE: function(e) {
                     var t;
@@ -2719,11 +2719,11 @@
                         guild: n
                     } = e, i = null !== (t = v.get(n.id)) && void 0 !== t ? t : [];
                     i.forEach(e => {
-                        null != m && m.delete(e.id), C.delete(e.id)
+                        null != C && C.delete(e.id), m.delete(e.id)
                     }), v.delete(n.id), v = new Map(v)
                 },
                 LOGOUT: () => {
-                    h = 0, N = [], C.clear(), g.clear(), m = null, v.clear(), v = new Map(v), O = !1, A = null
+                    h = 0, N = [], m.clear(), g.clear(), C = null, v.clear(), v = new Map(v), O = !1, A = null
                 },
                 STICKER_PACKS_FETCH_START: () => {
                     O = !0
@@ -2746,7 +2746,7 @@
                         guildId: t,
                         stickers: n
                     } = e;
-                    n.forEach(e => R(e)), U(t, n)
+                    n.forEach(e => D(e)), U(t, n)
                 },
                 GUILD_STICKERS_CREATE_SUCCESS: e => {
                     var t, n;
@@ -2754,13 +2754,13 @@
                         guildId: i,
                         sticker: l
                     } = e, r = null !== (t = v.get(i)) && void 0 !== t ? t : [];
-                    U(i, [...null !== (n = r.filter(e => e.id !== l.id)) && void 0 !== n ? n : [], l]), R(l)
+                    U(i, [...null !== (n = r.filter(e => e.id !== l.id)) && void 0 !== n ? n : [], l]), D(l)
                 },
                 STICKER_FETCH_SUCCESS: e => {
                     let {
                         sticker: t
                     } = e;
-                    R(t, !1)
+                    D(t, !1)
                 },
                 GUILD_STICKERS_UPDATE: e => {
                     var t;
@@ -2769,17 +2769,17 @@
                         stickers: i
                     } = e, l = e => {
                         let t;
-                        let n = C.get(e.id);
+                        let n = m.get(e.id);
                         return null != n && (0, T.isGuildSticker)(n) && (t = null != n.user ? n.user : void 0), {
                             ...e,
                             user: t
                         }
                     }, r = null !== (t = v.get(n)) && void 0 !== t ? t : [], s = r.filter(e => null == i.find(t => t.id === e.id));
                     s.forEach(e => {
-                        C.delete(e.id), null != m && m.delete(e.id)
+                        m.delete(e.id), null != C && C.delete(e.id)
                     });
                     let u = i.map(e => l(e));
-                    u.forEach(e => R(e)), U(n, u)
+                    u.forEach(e => D(e)), U(n, u)
                 }
             })
         },
@@ -2856,19 +2856,19 @@
                     max: s,
                     cos: u,
                     round: a
-                } = Math, o = e[0] | e[1] << 8 | e[2] << 16, d = e[3] | e[4] << 8, c = (63 & o) / 63, f = (o >> 6 & 63) / 31.5 - 1, E = (o >> 12 & 63) / 31.5 - 1, _ = o >> 23, S = (d >> 3 & 63) / 63, p = (d >> 9 & 63) / 63, T = d >> 15, I = s(3, T ? _ ? 5 : 7 : 7 & d), h = s(3, T ? 7 & d : _ ? 5 : 7), g = _ ? (15 & e[5]) / 15 : 1, C = (e[5] >> 4) / 15, m = _ ? 6 : 5, N = 0, A = (t, n, i) => {
+                } = Math, o = e[0] | e[1] << 8 | e[2] << 16, d = e[3] | e[4] << 8, c = (63 & o) / 63, E = (o >> 6 & 63) / 31.5 - 1, f = (o >> 12 & 63) / 31.5 - 1, _ = o >> 23, S = (d >> 3 & 63) / 63, p = (d >> 9 & 63) / 63, T = d >> 15, I = s(3, T ? _ ? 5 : 7 : 7 & d), h = s(3, T ? 7 & d : _ ? 5 : 7), g = _ ? (15 & e[5]) / 15 : 1, m = (e[5] >> 4) / 15, C = _ ? 6 : 5, N = 0, A = (t, n, i) => {
                     let l = [];
                     for (let r = 0; r < n; r++)
-                        for (let s = r ? 0 : 1; s * n < t * (n - r); s++) l.push(((e[m + (N >> 1)] >> ((1 & N++) << 2) & 15) / 7.5 - 1) * i);
+                        for (let s = r ? 0 : 1; s * n < t * (n - r); s++) l.push(((e[C + (N >> 1)] >> ((1 & N++) << 2) & 15) / 7.5 - 1) * i);
                     return l
-                }, O = A(I, h, (o >> 18 & 31) / 31 / 2), v = A(3, 3, S * n), U = A(3, 3, p * n), L = _ ? A(5, 5, C) : [], D = (0, i.thumbHashToApproximateAspectRatio)(e), R = a(D > 1 ? 32 : 32 * D), P = a(D > 1 ? 32 / D : 32), y = new Uint8Array(R * P * 4), M = [], b = [];
+                }, O = A(I, h, (o >> 18 & 31) / 31 / 2), v = A(3, 3, S * n), U = A(3, 3, p * n), L = _ ? A(5, 5, m) : [], R = (0, i.thumbHashToApproximateAspectRatio)(e), D = a(R > 1 ? 32 : 32 * R), P = a(R > 1 ? 32 / R : 32), y = new Uint8Array(D * P * 4), M = [], b = [];
                 for (let e = 0, n = 0; e < P; e++)
-                    for (let i = 0; i < R; i++, n += 4) {
+                    for (let i = 0; i < D; i++, n += 4) {
                         let a = c,
-                            o = f,
-                            d = E,
+                            o = E,
+                            d = f,
                             S = g;
-                        for (let e = 0, t = s(I, _ ? 5 : 3); e < t; e++) M[e] = u(l / R * (i + .5) * e);
+                        for (let e = 0, t = s(I, _ ? 5 : 3); e < t; e++) M[e] = u(l / D * (i + .5) * e);
                         for (let t = 0, n = s(h, _ ? 5 : 3); t < n; t++) b[t] = u(l / P * (e + .5) * t);
                         for (let e = 0, n = 0; e < h; e++)
                             for (let i = e ? 0 : 1, l = 2 * b[e]; i * h < I * (h - e); i++, n++) !(i > t) && !(e > t) && (a += O[n] * M[i] * l);
@@ -2882,11 +2882,11 @@
                                 for (let n = e ? 0 : 1, i = 2 * b[e]; n < 5 - e; n++, t++) S += L[t] * M[n] * i;
                         let p = a - 2 / 3 * o,
                             T = (3 * a - p + d) / 2,
-                            C = T - d;
-                        y[n] = s(0, 255 * r(1, T)), y[n + 1] = s(0, 255 * r(1, C)), y[n + 2] = s(0, 255 * r(1, p)), y[n + 3] = s(0, 255 * r(1, S))
+                            m = T - d;
+                        y[n] = s(0, 255 * r(1, T)), y[n + 1] = s(0, 255 * r(1, m)), y[n + 2] = s(0, 255 * r(1, p)), y[n + 3] = s(0, 255 * r(1, S))
                     }
                 return {
-                    w: R,
+                    w: D,
                     h: P,
                     rgba: y
                 }
@@ -2984,12 +2984,12 @@
                 o = n("49111");
             let d = new Set([o.PlatformTypes.CONTACTS]),
                 c = !0,
-                f = [],
                 E = [],
+                f = [],
                 _ = {},
                 S = {},
                 p = e => {
-                    f = e.filter(e => !d.has(e.type) && s.default.isSupported(e.type)), E = e.filter(e => d.has(e.type)), c = !1
+                    E = e.filter(e => !d.has(e.type) && s.default.isSupported(e.type)), f = e.filter(e => d.has(e.type)), c = !1
                 };
             class T extends i.default.Store {
                 isJoining(e) {
@@ -2999,16 +2999,16 @@
                     return c
                 }
                 getAccounts() {
-                    return f
-                }
-                getLocalAccounts() {
                     return E
                 }
+                getLocalAccounts() {
+                    return f
+                }
                 getAccount(e, t) {
-                    return f.find(n => (null == e || n.id === e) && n.type === t)
+                    return E.find(n => (null == e || n.id === e) && n.type === t)
                 }
                 getLocalAccount(e) {
-                    return E.find(t => t.type === e)
+                    return f.find(t => t.type === e)
                 }
                 isSuggestedAccountType(e) {
                     return S[e] || !1
@@ -3041,7 +3041,7 @@
                         id: n,
                         revoked: i,
                         accessToken: l
-                    } = e, r = f.find(e => e.id === n && e.type === t);
+                    } = e, r = E.find(e => e.id === n && e.type === t);
                     if (null == r) return !1;
                     null != i && (r.revoked = i), null != l && (r.accessToken = l)
                 }
@@ -3051,7 +3051,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return f
                 }
             });
             var i = n("446674"),
@@ -3088,7 +3088,7 @@
                     t.state = "banned" in e && e.banned ? s.InviteStates.BANNED : s.InviteStates.EXPIRED
                 })
             }
-            class f extends i.default.Store {
+            class E extends i.default.Store {
                 getInvite(e) {
                     return u[e]
                 }
@@ -3102,8 +3102,8 @@
                     return o[e]
                 }
             }
-            f.displayName = "InviteStore";
-            var E = new f(l.default, {
+            E.displayName = "InviteStore";
+            var f = new E(l.default, {
                 INVITE_RESOLVE: function(e) {
                     let {
                         code: t
@@ -3219,7 +3219,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return D
+                    return R
                 }
             });
             var i = n("917351"),
@@ -3231,8 +3231,8 @@
             let o = a.FormStates.CLOSED,
                 d = null,
                 c = null,
-                f = {},
                 E = {},
+                f = {},
                 _ = {},
                 S = null,
                 p = null,
@@ -3240,8 +3240,8 @@
                 I = !1,
                 h = null,
                 g = null,
-                C = null,
-                m = [],
+                m = null,
+                C = [],
                 N = null,
                 A = null;
 
@@ -3249,7 +3249,7 @@
                 var t, n, i, l, r, s;
                 let d = u.default.getCurrentUser();
                 if (null == d) return v();
-                c = null !== (t = e.section) && void 0 !== t ? t : c, N = null !== (n = e.section) && void 0 !== n ? n : c, null != e.subsection && null != c && (f[c] = e.subsection), null != e.scrollPosition && null != c && (E[c] = e.scrollPosition), I = !!e.openWithoutBackstack, o = a.FormStates.OPEN, _ = {}, p = {
+                c = null !== (t = e.section) && void 0 !== t ? t : c, N = null !== (n = e.section) && void 0 !== n ? n : c, null != e.subsection && null != c && (E[c] = e.subsection), null != e.scrollPosition && null != c && (f[c] = e.scrollPosition), I = !!e.openWithoutBackstack, o = a.FormStates.OPEN, _ = {}, p = {
                     ...S = {
                         [a.UserSettingsSections.ACCOUNT]: {
                             userId: d.id,
@@ -3262,11 +3262,11 @@
                             claimed: d.isClaimed()
                         }
                     }
-                }, g = null !== (i = e.onClose) && void 0 !== i ? i : null, C = null !== (l = e.analyticsLocation) && void 0 !== l ? l : null, m = null !== (r = e.analyticsLocations) && void 0 !== r ? r : [], A = null !== (s = e.impressionSource) && void 0 !== s ? s : null
+                }, g = null !== (i = e.onClose) && void 0 !== i ? i : null, m = null !== (l = e.analyticsLocation) && void 0 !== l ? l : null, C = null !== (r = e.analyticsLocations) && void 0 !== r ? r : [], A = null !== (s = e.impressionSource) && void 0 !== s ? s : null
             }
 
             function v() {
-                o = a.FormStates.CLOSED, T = !1, S = null, N = null, p = null, d = null, c = null, f = {}, E = {}, g = null, C = null, m = [], A = null
+                o = a.FormStates.CLOSED, T = !1, S = null, N = null, p = null, d = null, c = null, E = {}, f = {}, g = null, m = null, C = [], A = null
             }
 
             function U() {
@@ -3289,10 +3289,10 @@
                     return c
                 }
                 getSubsection() {
-                    return null != c ? f[c] : null
+                    return null != c ? E[c] : null
                 }
                 getScrollPosition() {
-                    return null != c ? E[c] : null
+                    return null != c ? f[c] : null
                 }
                 shouldOpenWithoutBackstack() {
                     return I
@@ -3301,14 +3301,14 @@
                     return {
                         submitting: o === a.FormStates.SUBMITTING,
                         section: c,
-                        subsection: null != c ? f[c] : null,
-                        scrollPosition: null != c ? E[c] : null,
+                        subsection: null != c ? E[c] : null,
+                        scrollPosition: null != c ? f[c] : null,
                         settings: p,
                         errors: _,
                         hasChanges: this.hasChanges(),
                         openWithoutBackstack: I,
-                        analyticsLocation: C,
-                        analyticsLocations: m,
+                        analyticsLocation: m,
+                        analyticsLocations: C,
                         initialSection: N,
                         impressionSource: A
                     }
@@ -3318,7 +3318,7 @@
                 }
             }
             L.displayName = "UserSettingsModalStore";
-            var D = new L(s.default, {
+            var R = new L(s.default, {
                 USER_SETTINGS_MODAL_OPEN: function(e) {
                     T = !0, O(e)
                 },
@@ -3335,19 +3335,19 @@
                 },
                 USER_SETTINGS_MODAL_SET_SECTION: function(e) {
                     var t;
-                    d = c, c = e.section, C = null, m = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (f[c] = e.subsection)
+                    d = c, c = e.section, m = null, C = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (E[c] = e.subsection)
                 },
                 USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function(e) {
                     let {
                         forSection: t
                     } = e;
-                    null != t ? delete f[t] : null != c && delete f[c]
+                    null != t ? delete E[t] : null != c && delete E[c]
                 },
                 USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: function(e) {
                     let {
                         forSection: t
                     } = e;
-                    null != t ? delete E[t] : null != c && delete E[c]
+                    null != t ? delete f[t] : null != c && delete f[c]
                 },
                 USER_SETTINGS_MODAL_UPDATE_ACCOUNT: function(e) {
                     let {
@@ -3389,114 +3389,11 @@
                 }
             })
         },
-        340412: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return _
-                }
-            });
-            var i = n("446674"),
-                l = n("913144"),
-                r = n("697218"),
-                s = n("719923"),
-                u = n("521012");
-            let a = {
-                    userOffersLastFetchedAtDate: void 0,
-                    userTrialOffers: {},
-                    userDiscounts: {}
-                },
-                o = a;
-
-            function d() {
-                o.userTrialOffers = {}, o.userDiscounts = {}, o.userOffersLastFetchedAtDate = void 0
-            }
-            let c = () => !0;
-
-            function f() {
-                let e = u.default.getPremiumTypeSubscription();
-                return null != e && (o.userTrialOffers = {}, o.userDiscounts = {}, !0)
-            }
-            class E extends i.default.PersistedStore {
-                initialize(e) {
-                    o = null != e ? e : a, this.waitFor(r.default), this.syncWith([r.default], c), this.syncWith([u.default], f)
-                }
-                getUserTrialOffer(e) {
-                    if (null !== e) return o.userTrialOffers[e]
-                }
-                getUserDiscount(e) {
-                    if (null !== e) return o.userDiscounts[e]
-                }
-                getAnyOfUserTrialOfferId(e) {
-                    for (let t of e)
-                        if (null != o.userTrialOffers[t]) return t;
-                    return null
-                }
-                hasFetchedOffer() {
-                    return null != o.userOffersLastFetchedAtDate
-                }
-                shouldFetchOffer() {
-                    let e = o.userOffersLastFetchedAtDate;
-                    return null == e || Date.now() - 1728e5 > e
-                }
-                getAcknowledgedOffers(e) {
-                    let t = r.default.getCurrentUser();
-                    return (0, s.isPremium)(t) ? [] : Object.values(o.userTrialOffers).filter(t => e.includes(t.trial_id) && null != t.expires_at)
-                }
-                getUnacknowledgedDiscountOffers() {
-                    let e = r.default.getCurrentUser();
-                    return (0, s.isPremium)(e) ? [] : Object.values(o.userDiscounts).filter(e => null == e.expires_at)
-                }
-                getUnacknowledgedOffers(e) {
-                    let t = r.default.getCurrentUser();
-                    return (0, s.isPremium)(t) ? [] : Object.values(o.userTrialOffers).filter(t => e.includes(t.trial_id) && null == t.expires_at)
-                }
-                hasAnyUnexpiredOffer() {
-                    return Object.values(o.userTrialOffers).some(e => null == e.expires_at || Date.parse(e.expires_at) > Date.now())
-                }
-                getState() {
-                    return o
-                }
-                forceReset() {
-                    d()
-                }
-            }
-            E.displayName = "UserOfferStore", E.persistKey = "UserOfferStore";
-            var _ = new E(l.default, {
-                BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS: function(e) {
-                    let {
-                        userTrialOffer: t
-                    } = e;
-                    null != t ? o.userTrialOffers[t.trial_id] = t : d(), o.userOffersLastFetchedAtDate = Date.now()
-                },
-                BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: function(e) {
-                    let {
-                        userTrialOffer: t
-                    } = e;
-                    o.userTrialOffers[t.trial_id] = t, o.userOffersLastFetchedAtDate = Date.now()
-                },
-                BILLING_USER_OFFER_FETCH_SUCCESS: function(e) {
-                    let {
-                        userTrialOffer: t,
-                        userDiscount: n
-                    } = e;
-                    null == t && null == n && d(), null != t ? (o.userTrialOffers[t.trial_id] = t, o.userDiscounts = {}) : null != n && (o.userDiscounts[n.discount_id] = n, o.userTrialOffers = {}), o.userOffersLastFetchedAtDate = Date.now()
-                },
-                BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS: function(e) {
-                    let {
-                        userTrialOffer: t,
-                        userDiscount: n
-                    } = e;
-                    (null != t || null != n) && (null != t && (o.userTrialOffers[t.trial_id] = t), null != n && (o.userDiscounts[n.discount_id] = n), o.userOffersLastFetchedAtDate = Date.now())
-                },
-                LOGOUT: d
-            })
-        },
         471671: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return E
                 }
             });
             var i = n("627445"),
@@ -3592,7 +3489,7 @@
                     e.client_app_state = c.isFocused() ? "focused" : "unfocused"
                 })
             });
-            var f = c
+            var E = c
         },
         103603: function(e, t, n) {
             "use strict";
@@ -3607,10 +3504,10 @@
                     return c
                 },
                 getCoverRatio: function() {
-                    return f
+                    return E
                 },
                 makeCssUrlString: function() {
-                    return E
+                    return f
                 },
                 getPalette: function() {
                     return S
@@ -3628,7 +3525,7 @@
                     return g
                 },
                 isPNGAnimated: function() {
-                    return C
+                    return m
                 }
             });
             var i = n("627445"),
@@ -3682,7 +3579,7 @@
                 return (n = Math.round(n * r)) > l && (s = l / n), Math.min(r * s, 1)
             }
 
-            function f(e) {
+            function E(e) {
                 let {
                     width: t,
                     height: n,
@@ -3692,7 +3589,7 @@
                 return t === n ? 1 : Math.min(Math.max(i / t, l / n), 1)
             }
 
-            function E(e) {
+            function f(e) {
                 return null == e || "" === e ? "none" : "url(".concat(e, ")")
             }
             let _ = [
@@ -3754,7 +3651,7 @@
                     type: n
                 })
             }
-            async function C(e) {
+            async function m(e) {
                 var t;
                 let n = null === (t = e.type) || void 0 === t ? void 0 : t.split(";")[0];
                 if ("image/png" !== n) throw Error("File is not a PNG");
@@ -3813,11 +3710,11 @@
                     null == a || a()
                 }
 
-                function f(e) {
+                function E(e) {
                     l(d), n(e)
                 }
 
-                function E(e) {
+                function f(e) {
                     l(d), r(e)
                 }
 
@@ -3827,8 +3724,8 @@
                         isLoading: !0
                     }), o({
                         promiseFn: t,
-                        resolve: f,
-                        reject: E,
+                        resolve: E,
+                        reject: f,
                         code: e,
                         mfaCodeHandler: S,
                         isModalOpen: !0
