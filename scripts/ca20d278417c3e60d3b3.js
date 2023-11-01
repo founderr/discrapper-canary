@@ -447,156 +447,138 @@
             "use strict";
             n.r(t), n.d(t, {
                 configureJoin: function() {
-                    return h
+                    return T
                 },
                 copyId: function() {
-                    return v
+                    return A
                 },
                 copyLink: function() {
-                    return R
+                    return h
                 },
                 deleteMessage: function() {
-                    return C
+                    return v
                 },
                 editMessage: function() {
-                    return O
+                    return R
                 },
                 markMessageUnread: function() {
-                    return y
+                    return C
                 },
                 pinMessage: function() {
-                    return N
+                    return O
                 },
                 publishMessage: function() {
-                    return b
+                    return y
                 },
                 retrySendMessage: function() {
-                    return x
-                },
-                showReactionsModal: function() {
-                    return D
+                    return N
                 },
                 replyToMessage: function() {
-                    return j
+                    return b
                 },
                 createThread: function() {
-                    return G
+                    return x
                 },
                 goToThread: function() {
-                    return P
+                    return D
                 },
                 markMessageAsReminder: function() {
-                    return U
+                    return j
                 },
                 markMessageRemindersAsComplete: function() {
-                    return F
+                    return G
                 }
-            });
-            var a = n("37983");
-            n("884691");
-            var i = n("77078"),
-                s = n("828986"),
-                l = n("819689"),
-                u = n("249561"),
-                r = n("550762"),
-                d = n("592407");
+            }), n("37983"), n("884691"), n("77078");
+            var a = n("828986"),
+                i = n("819689"),
+                s = n("249561"),
+                l = n("550762"),
+                u = n("592407");
             n("377114");
-            var o = n("931318"),
-                c = n("529805"),
-                f = n("967241"),
-                E = n("271938"),
-                M = n("42203"),
-                m = n("599110"),
-                g = n("404008"),
-                S = n("306160"),
-                I = n("659500"),
-                _ = n("613387"),
-                p = n("456936"),
-                T = n("409058"),
-                A = n("49111");
+            var r = n("931318"),
+                d = n("529805"),
+                o = n("967241"),
+                c = n("271938"),
+                f = n("42203"),
+                E = n("599110"),
+                M = n("404008"),
+                m = n("306160"),
+                g = n("659500"),
+                S = n("613387"),
+                I = n("456936"),
+                _ = n("409058"),
+                p = n("49111");
 
-            function h(e) {
+            function T(e) {
                 let t = e.getGuildId();
-                null != t && d.default.open(t, A.GuildSettingsSections.OVERVIEW)
+                null != t && u.default.open(t, p.GuildSettingsSections.OVERVIEW)
+            }
+
+            function A(e, t, n) {
+                (0, m.copy)(n.shiftKey ? "".concat(t.channel_id, "-").concat(t.id) : t.id)
+            }
+
+            function h(e, t) {
+                E.default.track(p.AnalyticEvents.MESSAGE_LINK_COPIED, {
+                    message_id: t.id,
+                    channel: t.channel_id
+                }), (0, m.copy)((0, M.getChannelPermalink)(e.guild_id, e.id, t.id))
             }
 
             function v(e, t, n) {
-                (0, S.copy)(n.shiftKey ? "".concat(t.channel_id, "-").concat(t.id) : t.id)
+                t.state === p.MessageStates.SEND_FAILED || n.shiftKey ? i.default.deleteMessage(e.id, t.id, t.state === p.MessageStates.SEND_FAILED) : s.default.confirmDelete(e, t)
             }
 
             function R(e, t) {
-                m.default.track(A.AnalyticEvents.MESSAGE_LINK_COPIED, {
-                    message_id: t.id,
-                    channel: t.channel_id
-                }), (0, S.copy)((0, g.getChannelPermalink)(e.guild_id, e.id, t.id))
+                i.default.startEditMessage(e.id, t.id, t.content)
             }
 
-            function C(e, t, n) {
-                t.state === A.MessageStates.SEND_FAILED || n.shiftKey ? l.default.deleteMessage(e.id, t.id, t.state === A.MessageStates.SEND_FAILED) : u.default.confirmDelete(e, t)
+            function C(e, t) {
+                (0, I.default)(e.id, t.id)
             }
 
-            function O(e, t) {
-                l.default.startEditMessage(e.id, t.id, t.content)
+            function O(e, t, n) {
+                if (!1 === t.pinned) {
+                    n.shiftKey ? a.default.pinMessage(e, t.id) : s.default.confirmPin(e, t);
+                    return
+                }
+                n.shiftKey ? a.default.unpinMessage(e, t.id) : s.default.confirmUnpin(e, t)
             }
 
             function y(e, t) {
-                (0, p.default)(e.id, t.id)
+                (0, l.default)(e.id, t.id)
             }
 
-            function N(e, t, n) {
-                if (!1 === t.pinned) {
-                    n.shiftKey ? s.default.pinMessage(e, t.id) : u.default.confirmPin(e, t);
-                    return
-                }
-                n.shiftKey ? s.default.unpinMessage(e, t.id) : u.default.confirmUnpin(e, t)
+            function N(e, t) {
+                (0, _.default)(e, t, void 0, S.default.getOptions(t.id))
             }
 
-            function b(e, t) {
-                (0, r.default)(e.id, t.id)
-            }
-
-            function x(e, t) {
-                (0, T.default)(e, t, void 0, _.default.getOptions(t.id))
-            }
-
-            function D(e, t) {
-                (0, i.openModalLazy)(async () => {
-                    let {
-                        default: e
-                    } = await n.el("57155").then(n.bind(n, "57155"));
-                    return n => (0, a.jsx)(e, {
-                        ...n,
-                        message: t
-                    })
-                })
-            }
-
-            function j(e, t, n) {
+            function b(e, t, n) {
                 let a = e.isPrivate(),
-                    i = t.author.id === E.default.getId();
-                (0, c.createPendingReply)({
+                    i = t.author.id === c.default.getId();
+                (0, d.createPendingReply)({
                     channel: e,
                     message: t,
                     shouldMention: !n.shiftKey && !i,
                     showMentionToggle: !a && !i
-                }), I.ComponentDispatch.dispatchToLastSubscribed(A.ComponentActions.TEXTAREA_FOCUS)
+                }), g.ComponentDispatch.dispatchToLastSubscribed(p.ComponentActions.TEXTAREA_FOCUS)
+            }
+
+            function x(e, t) {
+                (0, o.openThreadSidebarForCreating)(e, t, "Message")
+            }
+
+            function D(e, t) {
+                let n = f.default.getChannel(t.id);
+                null != n && (0, o.openThreadSidebarForViewing)(n)
+            }
+
+            function j(e, t) {
+                (0, r.addMessageReminders)(t)
             }
 
             function G(e, t) {
-                (0, f.openThreadSidebarForCreating)(e, t, "Message")
-            }
-
-            function P(e, t) {
-                let n = M.default.getChannel(t.id);
-                null != n && (0, f.openThreadSidebarForViewing)(n)
-            }
-
-            function U(e, t) {
-                (0, o.addMessageReminders)(t)
-            }
-
-            function F(e, t) {
-                (0, o.completeMessageReminders)(t.id)
+                (0, r.completeMessageReminders)(t.id)
             }
         },
         261649: function(e, t, n) {
