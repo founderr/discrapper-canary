@@ -10927,7 +10927,8 @@
                 p = e => (0, s.match)(e).with({
                     isVictor: !0
                 }, () => "victor").with({
-                    didSelfVote: !0
+                    didSelfVote: !0,
+                    isExpired: !1
                 }, () => "voted").otherwise(() => "normal"),
                 h = {
                     [a.PollLayoutTypes.DEFAULT]: e => (0, s.match)(e).with({
