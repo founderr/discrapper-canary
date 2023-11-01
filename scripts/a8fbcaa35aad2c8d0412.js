@@ -1906,7 +1906,7 @@
                     children: [(0, a.jsx)(E.default, {
                         className: h.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "242349"
+                        buildNumber: "242351"
                     }), (0, a.jsx)(m, {})]
                 }) : null
             }
@@ -44292,178 +44292,169 @@
             "use strict";
             n.r(t), n.d(t, {
                 isEligibleForQ4DropAnnouncementModal: function() {
-                    return j
+                    return y
                 },
                 default: function() {
-                    return G
+                    return b
                 }
             });
             var a = n("37983");
             n("884691");
-            var s = n("446674"),
-                l = n("151426"),
-                i = n("819855"),
-                r = n("77078"),
-                o = n("997289"),
-                u = n("841098"),
-                d = n("812204"),
-                c = n("685665"),
-                f = n("10641"),
-                E = n("649844"),
-                _ = n("915639"),
-                h = n("697218"),
-                I = n("181114"),
-                C = n("599110"),
-                m = n("701909"),
-                T = n("719923"),
-                S = n("896630"),
-                N = n("837797"),
-                A = n("154889"),
-                p = n("917247"),
-                g = n("400307"),
-                R = n("702542"),
-                O = n("646718"),
-                L = n("49111"),
-                v = n("782340"),
-                M = n("454275"),
-                x = n("169903"),
-                D = n("389291"),
-                P = n("676084"),
-                y = n("121432");
-            let b = "2023_q4_nitro_drop",
-                U = "DnkvLW5052Y",
-                j = () => {
-                    let e = h.default.getCurrentUser();
-                    if ((0, T.isPremiumExactly)(e, O.PremiumTypes.TIER_2) || (0, f.isDismissibleContentDismissed)(l.DismissibleContent.Q4_2023_NITRO_DROP_ANNOUNCEMENT_MODAL)) return !1;
+            var s = n("151426"),
+                l = n("819855"),
+                i = n("77078"),
+                r = n("997289"),
+                o = n("841098"),
+                u = n("812204"),
+                d = n("685665"),
+                c = n("10641"),
+                f = n("649844"),
+                E = n("697218"),
+                _ = n("181114"),
+                h = n("599110"),
+                I = n("701909"),
+                C = n("719923"),
+                m = n("896630"),
+                T = n("837797"),
+                S = n("154889"),
+                N = n("917247"),
+                A = n("400307"),
+                p = n("702542"),
+                g = n("646718"),
+                R = n("49111"),
+                O = n("782340"),
+                L = n("454275"),
+                v = n("169903"),
+                M = n("389291"),
+                x = n("676084"),
+                D = n("121432");
+            let P = "2023_q4_nitro_drop",
+                y = () => {
+                    let e = E.default.getCurrentUser();
+                    if ((0, C.isPremiumExactly)(e, g.PremiumTypes.TIER_2) || (0, c.isDismissibleContentDismissed)(s.DismissibleContent.Q4_2023_NITRO_DROP_ANNOUNCEMENT_MODAL)) return !1;
                     let {
                         enabled: t
-                    } = S.Q4DropExperiment.getCurrentConfig({
+                    } = m.Q4DropExperiment.getCurrentConfig({
                         location: "isEligibleForQ4DropAnnouncementModal"
                     });
                     return t
                 };
 
-            function G(e) {
+            function b(e) {
                 let {
                     renderModalProps: t
                 } = e, {
                     onClose: n
-                } = t, f = (0, s.useStateFromStores)([_.default], () => _.default.locale), h = f.split("-")[0], S = "en" === h ? "0" : "1", j = "zh-CN" === f ? "zh-Hans" : "zh-TW" === f ? "zh-Hant" : h, G = {
-                    url: "".concat((0, L.YOUTUBE_EMBED_URL)(U), "?vq=large&rel=0&controls=0&showinfo=0&cc_load_policy=").concat(S, "&cc_lang_pref=").concat(j),
-                    width: 498,
-                    height: 280
-                }, {
-                    location: F
-                } = (0, o.useAnalyticsContext)(), {
-                    analyticsLocations: k
-                } = (0, c.default)(d.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), w = (0, u.default)(), B = (0, p.usePremiumTrialOffer)(), H = null == B ? void 0 : B.subscription_trial, V = (0, A.usePremiumDiscountOffer)(), Y = (0, T.formatTrialCtaIntervalDuration)({
-                    intervalType: null == H ? void 0 : H.interval,
-                    intervalCount: null == H ? void 0 : H.interval_count
-                }), W = (0, N.useResponseOnUserState)({
+                } = t, {
+                    location: c
+                } = (0, r.useAnalyticsContext)(), {
+                    analyticsLocations: E
+                } = (0, d.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), m = (0, o.default)(), y = (0, N.usePremiumTrialOffer)(), b = null == y ? void 0 : y.subscription_trial, U = (0, S.usePremiumDiscountOffer)(), j = (0, C.formatTrialCtaIntervalDuration)({
+                    intervalType: null == b ? void 0 : b.interval,
+                    intervalCount: null == b ? void 0 : b.interval_count
+                }), G = (0, T.useResponseOnUserState)({
                     onCustomCriteria: () => {
-                        if ((null == H ? void 0 : H.id) === O.PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID) return v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_TRIAL_ELIGIBLE
+                        if ((null == b ? void 0 : b.id) === g.PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID) return O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_TRIAL_ELIGIBLE
                     },
-                    defaultResponse: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_TRIAL_ELIGIBLE,
-                    onTier0TrialOffer: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_TRIAL_ELIGIBLE,
-                    onTier2TrialOffer: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_TRIAL_ELIGIBLE,
-                    onNonTier2Subscriber: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_UPGRADE_ELIGIBLE
-                }), K = (0, N.useResponseOnUserState)({
+                    defaultResponse: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_TRIAL_ELIGIBLE,
+                    onTier0TrialOffer: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_TRIAL_ELIGIBLE,
+                    onTier2TrialOffer: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_NON_TRIAL_ELIGIBLE,
+                    onNonTier2Subscriber: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SUBHEADER_UPGRADE_ELIGIBLE
+                }), F = (0, T.useResponseOnUserState)({
                     defaultResponse: () => null,
                     onCustomCriteria: () => {
-                        if ((null == H ? void 0 : H.id) === O.PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID) return () => (0, a.jsx)(r.Anchor, {
-                            className: M.termsApplyAnchor,
-                            href: m.default.getArticleURL(L.HelpdeskArticles.Q4_DROP),
-                            children: (0, a.jsx)(r.Heading, {
+                        if ((null == b ? void 0 : b.id) === g.PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID) return () => (0, a.jsx)(i.Anchor, {
+                            className: L.termsApplyAnchor,
+                            href: I.default.getArticleURL(R.HelpdeskArticles.Q4_DROP),
+                            children: (0, a.jsx)(i.Heading, {
                                 variant: "heading-md/normal",
-                                className: M.termsApplyBodyText,
-                                children: v.default.Messages.BOGO_TERMS_APPLY
+                                className: L.termsApplyBodyText,
+                                children: O.default.Messages.BOGO_TERMS_APPLY
                             })
                         })
                     }
-                }), z = (0, N.useResponseOnUserState)({
-                    defaultResponse: v.default.Messages.BILLING_SUBSCRIBE_TO_PLAN,
-                    onDiscountOffer: v.default.Messages.PREMIUM_DISCOUNT_CTA.format({
-                        percent: null == V ? void 0 : V.discount.amount
+                }), k = (0, T.useResponseOnUserState)({
+                    defaultResponse: O.default.Messages.BILLING_SUBSCRIBE_TO_PLAN,
+                    onDiscountOffer: O.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+                        percent: null == U ? void 0 : U.discount.amount
                     }),
-                    onTier0TrialOffer: Y,
-                    onTier2TrialOffer: Y,
-                    onNonTier2Subscriber: v.default.Messages.INTERACTION_PREMIUM_UPSELL_CTA
-                }), q = (0, N.useResponseOnUserState)({
+                    onTier0TrialOffer: j,
+                    onTier2TrialOffer: j,
+                    onNonTier2Subscriber: O.default.Messages.INTERACTION_PREMIUM_UPSELL_CTA
+                }), w = (0, T.useResponseOnUserState)({
                     defaultResponse: "get_nitro_button",
                     onNonTier2Subscriber: "upgrade_plan_button",
                     onDiscountOffer: "discount_offer_button",
                     onTier0TrialOffer: "trial_offer_button",
                     onTier2TrialOffer: "trial_offer_button"
-                }), Q = (0, N.useResponseOnUserState)({
-                    defaultResponse: () => (0, E.default)({
-                        subscriptionTier: O.PremiumSubscriptionSKUs.TIER_2,
-                        analyticsLocations: k,
+                }), B = (0, T.useResponseOnUserState)({
+                    defaultResponse: () => (0, f.default)({
+                        subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
+                        analyticsLocations: E,
                         analyticsObject: {
-                            ...F,
-                            object: L.AnalyticsObjects.BUTTON_CTA,
-                            objectType: L.AnalyticsObjectTypes.TIER_2
+                            ...c,
+                            object: R.AnalyticsObjects.BUTTON_CTA,
+                            objectType: R.AnalyticsObjectTypes.TIER_2
                         },
                         onClose: e => {
                             e && n()
                         }
                     })
-                }), Z = (0, i.isThemeDark)(w) ? g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : g.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL;
-                return (0, a.jsx)(R.default, {
+                }), H = (0, l.isThemeDark)(m) ? A.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL : A.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL;
+                return (0, a.jsx)(p.default, {
                     renderModalProps: t,
-                    videoHref: "https://youtu.be/".concat(U),
-                    video: G,
-                    videoThumbnail: {
-                        url: "https://i.ytimg.com/vi/".concat(U, "/maxresdefault.jpg"),
-                        width: 498,
-                        height: 280
+                    video: {
+                        type: "video",
+                        src: "https://cdn.discordapp.com/attachments/986110506119069696/1168984935332319262/04_DIS_Nitro_Drop_In_Product_2X_With_Audio.webm"
                     },
-                    modalDismissibleContent: l.DismissibleContent.Q4_2023_NITRO_DROP_ANNOUNCEMENT_MODAL,
-                    modalTopExtra: () => null != H ? (0, a.jsx)(g.PremiumPillWithSparkles, {
-                        text: v.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT,
-                        className: M.trialPill,
-                        colorOptions: Z
+                    videoClassname: L.video,
+                    modalDismissibleContent: s.DismissibleContent.Q4_2023_NITRO_DROP_ANNOUNCEMENT_MODAL,
+                    modalTopExtra: () => null != b ? (0, a.jsx)(A.PremiumPillWithSparkles, {
+                        text: O.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT,
+                        className: L.trialPill,
+                        colorOptions: H
                     }) : null,
-                    header: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_HEADER,
-                    subHeader: W,
-                    subHeaderExtra: K,
+                    header: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_HEADER,
+                    subHeader: G,
+                    subHeaderExtra: F,
                     featureCards: [{
-                        header: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_HEADER,
-                        subHeader: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_DESCRIPTION,
+                        header: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_HEADER,
+                        subHeader: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_DESCRIPTION,
+                        imageSrc: v
+                    }, {
+                        header: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_HEADER,
+                        subHeader: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_DESCRIPTION,
                         imageSrc: x
                     }, {
-                        header: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_HEADER,
-                        subHeader: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_DESCRIPTION,
-                        imageSrc: P
+                        header: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_HEADER,
+                        subHeader: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_DESCRIPTION,
+                        imageSrc: M
                     }, {
-                        header: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_HEADER,
-                        subHeader: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_DESCRIPTION,
-                        imageSrc: D
-                    }, {
-                        header: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_HEADER,
-                        subHeader: v.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_DESCRIPTION,
-                        imageSrc: D
+                        header: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_HEADER,
+                        subHeader: O.default.Messages.Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_DESCRIPTION,
+                        imageSrc: M
                     }],
-                    changeLogId: b,
+                    changeLogId: P,
                     button: () => {
                         let e = Date.now();
-                        return (0, a.jsxs)(I.default, {
-                            className: M.buttonWide,
-                            innerClassName: M.innerButton,
-                            color: r.Button.Colors.GREEN,
-                            size: r.Button.Sizes.SMALL,
+                        return (0, a.jsxs)(_.default, {
+                            className: L.buttonWide,
+                            innerClassName: L.innerButton,
+                            color: i.Button.Colors.GREEN,
+                            size: i.Button.Sizes.SMALL,
                             onClick: () => {
-                                C.default.track(L.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
-                                    change_log_id: b,
-                                    cta_type: q,
+                                h.default.track(R.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+                                    change_log_id: P,
+                                    cta_type: w,
                                     seconds_open: Math.round((Date.now() - e) / 1e3),
                                     target: "q4_drop_payment_modal"
-                                }), Q()
+                                }), B()
                             },
                             children: [(0, a.jsx)("img", {
                                 alt: "",
-                                className: M.nitroIconSubHeader,
-                                src: y
-                            }), z]
+                                className: L.nitroIconSubHeader,
+                                src: D
+                            }), k]
                         })
                     }
                 })
@@ -45417,62 +45408,65 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return p
                 }
             });
             var a = n("37983"),
                 s = n("884691"),
                 l = n("414456"),
                 i = n.n(l),
-                r = n("77078"),
-                o = n("10641"),
-                u = n("933629"),
-                d = n("560176"),
-                c = n("476765"),
-                f = n("956089"),
-                E = n("599110"),
-                _ = n("215429"),
-                h = n("49111"),
-                I = n("994428"),
-                C = n("236998");
-            let m = e => {
+                r = n("446674"),
+                o = n("77078"),
+                u = n("206230"),
+                d = n("10641"),
+                c = n("933629"),
+                f = n("560176"),
+                E = n("476765"),
+                _ = n("956089"),
+                h = n("58608"),
+                I = n("599110"),
+                C = n("215429"),
+                m = n("49111"),
+                T = n("994428"),
+                S = n("236998");
+            let N = e => {
                     let {
                         tagText: t,
                         className: n
                     } = e;
-                    return (0, a.jsx)(f.TextBadge, {
-                        className: i(C.tag, n),
+                    return (0, a.jsx)(_.TextBadge, {
+                        className: i(S.tag, n),
                         text: t
                     })
                 },
-                T = e => {
+                A = e => {
                     let {
                         header: t,
                         subHeader: n,
                         imageSrc: s,
                         tagText: l,
-                        wideStyle: o
+                        wideStyle: r
                     } = e;
                     return (0, a.jsxs)("div", {
-                        className: i(C.featureCard, {
-                            [C.wideStyle]: o
+                        className: i(S.featureCard, {
+                            [S.wideStyle]: r
                         }),
-                        children: [null != l ? (0, a.jsx)(m, {
+                        children: [null != l ? (0, a.jsx)(N, {
                             tagText: l,
-                            className: C.featureCardTag
+                            className: S.featureCardTag
                         }) : null, (0, a.jsx)("img", {
                             alt: "",
-                            className: i(C.featureCardImg, {
-                                [C.wideStyle]: o
+                            className: i(S.featureCardImg, {
+                                [S.wideStyle]: r
                             }),
                             src: s
                         }), (0, a.jsxs)("div", {
-                            className: C.featureCardTextGroup,
-                            children: [(0, a.jsx)(r.Heading, {
+                            className: S.featureCardTextGroup,
+                            children: [(0, a.jsx)(o.Heading, {
                                 variant: "heading-lg/extrabold",
-                                className: C.featureCardTextHeader,
+                                className: S.featureCardTextHeader,
                                 children: t
-                            }), (0, a.jsx)(r.Text, {
+                            }), (0, a.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 children: n
                             })]
@@ -45480,82 +45474,93 @@
                     })
                 };
 
-            function S(e) {
+            function p(e) {
                 let {
                     className: t,
                     renderModalProps: n,
-                    videoHref: l,
-                    video: f,
-                    videoThumbnail: m,
-                    modalDismissibleContent: S,
-                    modalTopExtra: N,
-                    header: A,
-                    subHeader: p,
-                    subHeaderExtra: g,
-                    featureCards: R,
-                    changeLogId: O,
-                    button: L
+                    video: l,
+                    videoClassname: _,
+                    modalDismissibleContent: N,
+                    modalTopExtra: p,
+                    header: g,
+                    subHeader: R,
+                    subHeaderExtra: O,
+                    featureCards: L,
+                    changeLogId: v,
+                    button: M
                 } = e, {
-                    onClose: v,
-                    transitionState: M
-                } = n, x = (0, c.useUID)(), D = R.length % 2 == 0;
+                    onClose: x,
+                    transitionState: D
+                } = n, P = (0, E.useUID)(), y = L.length % 2 == 0, b = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion);
                 return s.useEffect(() => {
-                    (0, o.requestMarkDismissibleContentAsShown)(S);
+                    (0, d.requestMarkDismissibleContentAsShown)(N);
                     let e = Date.now();
-                    return E.default.track(h.AnalyticEvents.CHANGE_LOG_OPENED, {
-                        change_log_id: O
+                    return I.default.track(m.AnalyticEvents.CHANGE_LOG_OPENED, {
+                        change_log_id: v
                     }), () => {
-                        E.default.track(h.AnalyticEvents.CHANGE_LOG_CLOSED, {
-                            change_log_id: O,
+                        I.default.track(m.AnalyticEvents.CHANGE_LOG_CLOSED, {
+                            change_log_id: v,
                             seconds_open: Math.round((Date.now() - e) / 1e3)
-                        }), (0, o.markDismissibleContentAsDismissed)(S, {
-                            dismissAction: I.ContentDismissActionType.DISMISS
+                        }), (0, d.markDismissibleContentAsDismissed)(N, {
+                            dismissAction: T.ContentDismissActionType.DISMISS
                         })
                     }
-                }, [S, O]), (0, a.jsxs)(r.ModalRoot, {
-                    className: i(C.root, t),
-                    transitionState: M,
-                    "aria-labelledby": x,
-                    children: [(0, a.jsx)(r.ModalCloseButton, {
-                        className: C.closeButton,
-                        onClick: v
-                    }), (0, a.jsx)(_.default, {
-                        className: C.splash
-                    }), null == N ? void 0 : N(), (0, a.jsxs)(r.ModalContent, {
-                        className: C.content,
-                        children: [(0, a.jsx)(r.Heading, {
+                }, [N, v]), (0, a.jsxs)(o.ModalRoot, {
+                    className: i(S.root, t),
+                    transitionState: D,
+                    "aria-labelledby": P,
+                    children: [(0, a.jsx)(o.ModalCloseButton, {
+                        className: S.closeButton,
+                        onClick: x
+                    }), (0, a.jsx)(C.default, {
+                        className: S.splash
+                    }), null == p ? void 0 : p(), (0, a.jsxs)(o.ModalContent, {
+                        className: S.content,
+                        children: [(0, a.jsx)(o.Heading, {
                             variant: "display-md",
-                            className: C.headerText,
-                            children: A
-                        }), (0, a.jsx)(d.EmbedVideo, {
-                            className: C.video,
-                            allowFullScreen: !1,
-                            href: l,
-                            thumbnail: m,
-                            video: f,
-                            maxWidth: f.width,
-                            maxHeight: f.height,
-                            renderVideoComponent: u.renderVideoComponent,
-                            renderImageComponent: u.renderImageComponent,
-                            renderLinkComponent: u.renderMaskedLinkComponent,
+                            className: S.headerText,
+                            children: g
+                        }), "video" === l.type ? (0, a.jsx)(h.default, {
+                            className: i(S.video, _),
+                            autoPlay: !b,
+                            loop: !0,
+                            muted: !0,
+                            controls: !0,
+                            src: l.src,
                             onPlay: () => {
-                                E.default.track(h.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
-                                    change_log_id: O
+                                I.default.track(m.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
+                                    change_log_id: v
                                 })
                             }
-                        }), (0, a.jsx)(r.Heading, {
+                        }) : (0, a.jsx)(f.EmbedVideo, {
+                            className: i(S.video, _),
+                            allowFullScreen: !1,
+                            href: l.href,
+                            thumbnail: l.thumbnail,
+                            video: l.embed,
+                            maxWidth: l.embed.width,
+                            maxHeight: l.embed.height,
+                            renderVideoComponent: c.renderVideoComponent,
+                            renderImageComponent: c.renderImageComponent,
+                            renderLinkComponent: c.renderMaskedLinkComponent,
+                            onPlay: () => {
+                                I.default.track(m.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
+                                    change_log_id: v
+                                })
+                            }
+                        }), (0, a.jsx)(o.Heading, {
                             variant: "heading-lg/extrabold",
-                            className: C.bodyText,
-                            children: p
-                        }), null == g ? void 0 : g(), (0, a.jsx)("div", {
-                            className: i(C.featureCardGroup, {
-                                [C.wideStyle]: D
+                            className: S.bodyText,
+                            children: R
+                        }), null == O ? void 0 : O(), (0, a.jsx)("div", {
+                            className: i(S.featureCardGroup, {
+                                [S.wideStyle]: y
                             }),
-                            children: R.map((e, t) => (0, a.jsx)(T, {
+                            children: L.map((e, t) => (0, a.jsx)(A, {
                                 ...e,
-                                wideStyle: D
+                                wideStyle: y
                             }, "".concat(e.header, "_").concat(t)))
-                        }), L()]
+                        }), M()]
                     })]
                 })
             }

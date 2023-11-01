@@ -20334,7 +20334,8 @@
                 nitroIconSubHeader: "nitroIconSubHeader__04f30",
                 termsApplyAnchor: "termsApplyAnchor_fcdbe9",
                 termsApplyBodyText: "termsApplyBodyText_f45b74",
-                trialPill: "trialPill_d04c59"
+                trialPill: "trialPill_d04c59",
+                video: "video__47ab5"
             }
         },
         212942: function(e, t, o) {
