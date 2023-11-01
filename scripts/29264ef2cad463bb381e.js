@@ -12791,7 +12791,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return eN
+                    return eA
                 }
             });
             var a = n("37983"),
@@ -12805,71 +12805,68 @@
                 c = n("77078"),
                 f = n("225664"),
                 h = n("206230"),
-                E = n("582844"),
-                m = n("563143"),
-                p = n("189318"),
-                C = n("449918"),
-                g = n("998667"),
-                S = n("619259"),
-                _ = n("752598"),
-                T = n("267567"),
-                A = n("979268"),
-                I = n("520899"),
-                M = n("166257"),
-                N = n("432173"),
-                v = n("219013"),
-                x = n("625149"),
-                L = n("300322"),
-                R = n("845579"),
-                y = n("271938"),
-                O = n("836417"),
-                D = n("26989"),
-                b = n("305961"),
-                j = n("88093"),
-                P = n("957255"),
-                F = n("886074"),
-                U = n("36562"),
-                k = n("662255"),
-                H = n("85175"),
-                B = n("68238"),
-                w = n("83900"),
-                G = n("993477"),
-                V = n("733160"),
-                W = n("259687"),
-                K = n("100300"),
-                Y = n("433487"),
-                z = n("987772"),
-                Z = n("566998"),
-                q = n("516358"),
-                X = n("550515"),
-                J = n("959097"),
-                Q = n("251144"),
-                $ = n("20662"),
-                ee = n("228220"),
-                et = n("149279"),
-                en = n("599110"),
-                ea = n("306160"),
-                el = n("240873"),
-                es = n("870190"),
-                ei = n("875978"),
-                er = n("61400"),
-                eo = n("327054"),
-                eu = n("583022"),
-                ed = n("363396"),
-                ec = n("891405"),
-                ef = n("261649"),
-                eh = n("739034"),
-                eE = n("49111"),
-                em = n("680894"),
-                ep = n("848601"),
-                eC = n("782340"),
-                eg = n("346762");
+                E = n("563143"),
+                m = n("189318"),
+                p = n("449918"),
+                C = n("619259"),
+                g = n("752598"),
+                S = n("267567"),
+                _ = n("979268"),
+                T = n("520899"),
+                A = n("166257"),
+                I = n("432173"),
+                M = n("219013"),
+                N = n("625149"),
+                v = n("300322"),
+                x = n("845579"),
+                L = n("271938"),
+                R = n("836417"),
+                y = n("26989"),
+                O = n("305961"),
+                D = n("88093"),
+                b = n("957255"),
+                j = n("886074"),
+                P = n("36562"),
+                F = n("662255"),
+                U = n("85175"),
+                k = n("68238"),
+                H = n("83900"),
+                B = n("993477"),
+                w = n("733160"),
+                G = n("259687"),
+                V = n("100300"),
+                W = n("433487"),
+                K = n("987772"),
+                Y = n("566998"),
+                z = n("516358"),
+                Z = n("550515"),
+                q = n("959097"),
+                X = n("251144"),
+                J = n("20662"),
+                Q = n("228220"),
+                $ = n("149279"),
+                ee = n("599110"),
+                et = n("306160"),
+                en = n("240873"),
+                ea = n("870190"),
+                el = n("875978"),
+                es = n("61400"),
+                ei = n("327054"),
+                er = n("583022"),
+                eo = n("363396"),
+                eu = n("891405"),
+                ed = n("261649"),
+                ec = n("739034"),
+                ef = n("49111"),
+                eh = n("680894"),
+                eE = n("782340"),
+                em = n("346762");
 
-            function eS(e) {
+            function ep(e) {
                 e.stopPropagation()
             }
 
-            function e_(e) {
+            function eC(e) {
                 let {
                     message: t,
                     channel: n,
@@ -12877,7 +12874,7 @@
                     onClose: l,
                     updatePosition: s
                 } = e;
-                return (0, ef.useMessageMenu)({
+                return (0, ed.useMessageMenu)({
                     message: t,
                     channel: n,
                     textSelection: "",
@@ -12892,11 +12889,11 @@
                     onHeightUpdate: s,
                     onClose: l,
                     navId: "message-actions",
-                    ariaLabel: eC.default.Messages.MESSAGE_UTILITIES_A11Y_LABEL
+                    ariaLabel: eE.default.Messages.MESSAGE_UTILITIES_A11Y_LABEL
                 })
             }
 
-            function eT(e) {
+            function eg(e) {
                 let {
                     label: t,
                     ariaLabel: n,
@@ -12919,7 +12916,7 @@
                     color: null != s ? s : c.TooltipColors.PRIMARY,
                     "aria-label": t,
                     hideOnClick: !0,
-                    tooltipClassName: eg.tooltip,
+                    tooltipClassName: em.tooltip,
                     children: e => {
                         let {
                             onMouseEnter: l,
@@ -12927,7 +12924,7 @@
                             onClick: c
                         } = e;
                         return (0, a.jsxs)(a.Fragment, {
-                            children: [(0, a.jsxs)(et.Button, {
+                            children: [(0, a.jsxs)($.Button, {
                                 onMouseEnter: l,
                                 onMouseLeave: s,
                                 onClick: e => {
@@ -12938,16 +12935,16 @@
                                 dangerous: E,
                                 ...C,
                                 children: [(0, a.jsx)(i, {
-                                    className: eg.icon,
+                                    className: em.icon,
                                     ...r
-                                }), p && (0, a.jsx)(F.default, {})]
-                            }), m && (0, a.jsx)(et.Separator, {})]
+                                }), p && (0, a.jsx)(j.default, {})]
+                            }), m && (0, a.jsx)($.Separator, {})]
                         })
                     }
                 }, f)
             }
 
-            function eA(e) {
+            function eS(e) {
                 let {
                     channel: t,
                     message: n,
@@ -12955,27 +12952,27 @@
                     canPin: i,
                     canDelete: r,
                     canReport: o,
-                    canEdit: S,
-                    canPublish: _,
-                    hasReactions: M,
-                    canReact: N,
-                    canConfigureJoin: v,
-                    canReply: O,
-                    canStartThread: F,
-                    canViewThread: X,
-                    isExpanded: et,
-                    showMoreUtilities: ef,
-                    showEmojiPicker: eg,
-                    showEmojiBurstPicker: eS,
-                    showMessageRemindersActions: eA,
-                    isMessageReminder: eI,
-                    setPopout: eN,
-                    showClydeAiEmbeds: ev,
-                    setShowClydeAiEmbeds: ex,
-                    isClydePersonalityModified: eL,
-                    hasDeveloperMode: eR,
-                    isGuildInviteReminder: ey,
-                    isFocused: eO
+                    canEdit: C,
+                    canPublish: g,
+                    hasReactions: A,
+                    canReact: I,
+                    canConfigureJoin: M,
+                    canReply: R,
+                    canStartThread: j,
+                    canViewThread: Z,
+                    isExpanded: $,
+                    showMoreUtilities: ed,
+                    showEmojiPicker: em,
+                    showEmojiBurstPicker: ep,
+                    showMessageRemindersActions: eS,
+                    isMessageReminder: e_,
+                    setPopout: eA,
+                    showClydeAiEmbeds: eI,
+                    setShowClydeAiEmbeds: eM,
+                    isClydePersonalityModified: eN,
+                    hasDeveloperMode: ev,
+                    isGuildInviteReminder: ex,
+                    isFocused: eL
                 } = function(e) {
                     let {
                         channel: t,
@@ -12989,259 +12986,259 @@
                         isFocused: d
                     } = e, {
                         author: c
-                    } = n, f = (0, u.useStateFromStores)([b.default], () => b.default.getGuild(t.guild_id), [t.guild_id]), p = (0, u.useStateFromStores)([y.default], () => y.default.getId()), C = (0, g.default)(E.ExperimentInAppReporting), S = (0, L.useIsActiveChannelOrUnarchivableThread)(t), _ = (0, L.useIsNonModInLockedThread)(t), M = R.RenderReactions.useSetting(), N = R.DeveloperMode.useSetting(), v = (0, u.useStateFromStores)([j.default], () => null == t.guild_id || j.default.canChatInGuild(t.guild_id), [t]), {
-                        canManageMessages: O,
-                        canAddNewReactions: F
-                    } = (0, u.useStateFromStoresObject)([P.default], () => ({
-                        canAddNewReactions: v && P.default.can(eE.Permissions.ADD_REACTIONS, t),
-                        canManageMessages: P.default.can(eE.Permissions.MANAGE_MESSAGES, t)
-                    }), [t, v]), U = (0, x.useCanReplyToMessage)(t, n), k = (0, L.useCanStartPublicThread)(t, n), H = (0, L.useCanViewThreadForMessage)(n), B = (0, u.useStateFromStores)([T.default], () => null != t.guild_id && T.default.isLurking(t.guild_id), [t]), w = (0, u.useStateFromStores)([D.default], () => null != t.guild_id && D.default.isCurrentUserGuest(t.guild_id), [t]), G = c.id === p, V = (O || G) && S && n.type in eE.MessageTypesDeletable;
-                    n.type === eE.MessageTypes.AUTO_MODERATION_ACTION && (V = V && O);
-                    let W = (0, es.canReportMessage)(n) && null != C && C === ep.ExperimentBuckets.TREATMENT_1,
-                        K = (0, eo.default)(n, t, O),
-                        Y = !t.isSystemDM() && (0, er.default)(n, p) && S && !_,
+                    } = n, f = (0, u.useStateFromStores)([O.default], () => O.default.getGuild(t.guild_id), [t.guild_id]), m = (0, u.useStateFromStores)([L.default], () => L.default.getId()), p = (0, v.useIsActiveChannelOrUnarchivableThread)(t), C = (0, v.useIsNonModInLockedThread)(t), g = x.RenderReactions.useSetting(), A = x.DeveloperMode.useSetting(), I = (0, u.useStateFromStores)([D.default], () => null == t.guild_id || D.default.canChatInGuild(t.guild_id), [t]), {
+                        canManageMessages: M,
+                        canAddNewReactions: R
+                    } = (0, u.useStateFromStoresObject)([b.default], () => ({
+                        canAddNewReactions: I && b.default.can(ef.Permissions.ADD_REACTIONS, t),
+                        canManageMessages: b.default.can(ef.Permissions.MANAGE_MESSAGES, t)
+                    }), [t, I]), j = (0, N.useCanReplyToMessage)(t, n), P = (0, v.useCanStartPublicThread)(t, n), F = (0, v.useCanViewThreadForMessage)(n), U = (0, u.useStateFromStores)([S.default], () => null != t.guild_id && S.default.isLurking(t.guild_id), [t]), k = (0, u.useStateFromStores)([y.default], () => null != t.guild_id && y.default.isCurrentUserGuest(t.guild_id), [t]), H = c.id === m, B = (M || H) && p && n.type in ef.MessageTypesDeletable;
+                    n.type === ef.MessageTypes.AUTO_MODERATION_ACTION && (B = B && M);
+                    let w = (0, ea.canReportMessage)(n),
+                        G = (0, ei.default)(n, t, M),
+                        V = !t.isSystemDM() && (0, es.default)(n, m) && p && !C,
                         {
-                            disableReactionCreates: z
-                        } = (0, eu.default)({
+                            disableReactionCreates: W
+                        } = (0, er.default)({
                             channel: t,
-                            canChat: v,
-                            renderReactions: M,
-                            canAddNewReactions: F,
-                            isLurking: B,
-                            isGuest: w,
-                            isActiveChannelOrUnarchivableThread: S
+                            canChat: I,
+                            renderReactions: g,
+                            canAddNewReactions: R,
+                            isLurking: U,
+                            isGuest: k,
+                            isActiveChannelOrUnarchivableThread: p
                         }),
-                        Z = t.type === eE.ChannelTypes.GUILD_ANNOUNCEMENT && null != f && f.hasFeature(eE.GuildFeatures.NEWS) && (G || O) && n.type === eE.MessageTypes.DEFAULT,
-                        q = t.getGuildId(),
-                        X = null != q && (n.type === eE.MessageTypes.USER_JOIN || n.type === eE.MessageTypes.GUILD_INVITE_REMINDER) && P.default.canWithPartialContext(eE.Permissions.MANAGE_GUILD, {
-                            guildId: q
+                        K = t.type === ef.ChannelTypes.GUILD_ANNOUNCEMENT && null != f && f.hasFeature(ef.GuildFeatures.NEWS) && (H || M) && n.type === ef.MessageTypes.DEFAULT,
+                        Y = t.getGuildId(),
+                        z = null != Y && (n.type === ef.MessageTypes.USER_JOIN || n.type === ef.MessageTypes.GUILD_INVITE_REMINDER) && b.default.canWithPartialContext(ef.Permissions.MANAGE_GUILD, {
+                            guildId: Y
                         }),
                         {
-                            showReminders: J
-                        } = A.default.useExperiment({
+                            showReminders: Z
+                        } = _.default.useExperiment({
                             location: "9bfedc_1"
                         }, {
                             autoTrackExposure: !1
                         }),
-                        Q = (0, u.useStateFromStores)([I.default], () => null != I.default.getMessageReminders().find(e => e.messageId === n.id)),
-                        $ = (0, eh.default)(),
-                        ee = (0, u.useStateFromStores)([h.default], () => h.default.keyboardModeEnabled),
-                        et = (0, m.useIsClydePersonalityModified)(t.getGuildId(), n.author.isClyde());
+                        q = (0, u.useStateFromStores)([T.default], () => null != T.default.getMessageReminders().find(e => e.messageId === n.id)),
+                        X = (0, ec.default)(),
+                        J = (0, u.useStateFromStores)([h.default], () => h.default.keyboardModeEnabled),
+                        Q = (0, E.useIsClydePersonalityModified)(t.getGuildId(), n.author.isClyde());
                     return {
                         channel: t,
                         message: n,
-                        canPin: K,
-                        canEdit: Y,
-                        canDelete: V,
-                        canReport: W,
-                        canReply: U,
-                        canStartThread: k,
-                        canViewThread: H,
-                        canCopy: ea.SUPPORTS_COPY,
-                        hasDeveloperMode: N,
-                        canReact: !z && M,
+                        canPin: G,
+                        canEdit: V,
+                        canDelete: B,
+                        canReport: w,
+                        canReply: j,
+                        canStartThread: P,
+                        canViewThread: F,
+                        canCopy: et.SUPPORTS_COPY,
+                        hasDeveloperMode: A,
+                        canReact: !W && g,
                         hasReactions: n.reactions.length > 0,
-                        canPublish: Z,
-                        canConfigureJoin: X,
-                        isExpanded: $ && !ee && !a && !l && !s,
+                        canPublish: K,
+                        canConfigureJoin: z,
+                        isExpanded: X && !J && !a && !l && !s,
                         showEmojiPicker: a,
                         showEmojiBurstPicker: l,
                         showMoreUtilities: s,
-                        showMessageRemindersActions: J,
-                        isMessageReminder: Q,
+                        showMessageRemindersActions: Z,
+                        isMessageReminder: q,
                         setPopout: i,
                         showClydeAiEmbeds: r,
                         setShowClydeAiEmbeds: o,
-                        isClydePersonalityModified: et,
+                        isClydePersonalityModified: Q,
                         isFocused: d,
-                        isGuildInviteReminder: n.type === eE.MessageTypes.GUILD_INVITE_REMINDER
+                        isGuildInviteReminder: n.type === ef.MessageTypes.GUILD_INVITE_REMINDER
                     }
-                }(e), [eD, eb] = l.useState(!1), [ej, eP] = l.useState(!1), eF = l.useCallback(() => {
-                    !ef && en.default.track(eE.AnalyticEvents.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
+                }(e), [eR, ey] = l.useState(!1), [eO, eD] = l.useState(!1), eb = l.useCallback(() => {
+                    !ed && ee.default.track(ef.AnalyticEvents.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                         message_id: n.id,
                         channel: n.channel_id
-                    }), eN({
-                        moreUtilities: !ef
+                    }), eA({
+                        moreUtilities: !ed
                     })
-                }, [ef, eN, n]), eU = l.useCallback(() => {
-                    eN({
-                        emojiPicker: !eg
+                }, [ed, eA, n]), ej = l.useCallback(() => {
+                    eA({
+                        emojiPicker: !em
                     })
-                }, [eg, eN]), ek = l.useCallback(() => {
-                    eN({
-                        emojiBurstPicker: !eS
+                }, [em, eA]), eP = l.useCallback(() => {
+                    eA({
+                        emojiBurstPicker: !ep
                     })
-                }, [eS, eN]), {
-                    enabled: eH,
-                    hasTwoButtonEntryPoint: eB
-                } = (0, f.useBurstReactionsExperiment)(t.getGuildId()), ew = (0, L.useIsActiveChannelOrUnarchivableThread)(t), eG = n.hasFlag(eE.MessageFlags.CROSSPOSTED);
-                return eH && !eB && [].push(d.DismissibleContent.BURST_REACTION_BUTTON_SPARKLE), (0, a.jsxs)(a.Fragment, {
-                    children: [et ? (0, a.jsxs)(a.Fragment, {
-                        children: [s && eR ? eT({
+                }, [ep, eA]), {
+                    enabled: eF,
+                    hasTwoButtonEntryPoint: eU
+                } = (0, f.useBurstReactionsExperiment)(t.getGuildId()), ek = (0, v.useIsActiveChannelOrUnarchivableThread)(t), eH = n.hasFlag(ef.MessageFlags.CROSSPOSTED);
+                return eF && !eU && [].push(d.DismissibleContent.BURST_REACTION_BUTTON_SPARKLE), (0, a.jsxs)(a.Fragment, {
+                    children: [$ ? (0, a.jsxs)(a.Fragment, {
+                        children: [s && ev ? eg({
                             key: "copy-id",
                             channel: t,
                             message: n,
-                            label: eC.default.Messages.COPY_ID_MESSAGE,
-                            icon: k.default,
-                            onClick: ed.copyId
-                        }) : null, s && !ey ? eT({
+                            label: eE.default.Messages.COPY_ID_MESSAGE,
+                            icon: F.default,
+                            onClick: eo.copyId
+                        }) : null, s && !ex ? eg({
                             key: "copy-link",
                             channel: t,
                             message: n,
-                            label: eC.default.Messages.COPY_LINK,
-                            icon: w.default,
-                            onClick: ed.copyLink
-                        }) : null, v ? eT({
+                            label: eE.default.Messages.COPY_LINK,
+                            icon: H.default,
+                            onClick: eo.copyLink
+                        }) : null, M ? eg({
                             key: "configure",
                             channel: t,
                             message: n,
-                            label: eC.default.Messages.CONFIGURE,
-                            icon: H.default,
-                            onClick: ed.configureJoin
-                        }) : null, eA ? eT({
+                            label: eE.default.Messages.CONFIGURE,
+                            icon: U.default,
+                            onClick: eo.configureJoin
+                        }) : null, eS ? eg({
                             key: "mark-reminder",
                             channel: t,
                             message: n,
-                            label: eI ? eC.default.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : eC.default.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
-                            icon: eI ? U.default : K.default,
-                            onClick: eI ? ed.markMessageRemindersAsComplete : ed.markMessageAsReminder
-                        }) : null, ew ? eT({
+                            label: e_ ? eE.default.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : eE.default.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
+                            icon: e_ ? P.default : V.default,
+                            onClick: e_ ? eo.markMessageRemindersAsComplete : eo.markMessageAsReminder
+                        }) : null, ek ? eg({
                             key: "mark-unread",
                             channel: t,
                             message: n,
-                            label: eC.default.Messages.MARK_UNREAD,
-                            icon: G.default,
-                            onClick: ed.markMessageUnread
-                        }) : null, i ? eT({
+                            label: eE.default.Messages.MARK_UNREAD,
+                            icon: B.default,
+                            onClick: eo.markMessageUnread
+                        }) : null, i ? eg({
                             key: "pin",
                             channel: t,
                             message: n,
-                            label: n.pinned ? eC.default.Messages.UNPIN_MESSAGE : eC.default.Messages.PIN_MESSAGE,
-                            icon: Z.default,
-                            onClick: ed.pinMessage
-                        }) : null, O && S ? eT({
+                            label: n.pinned ? eE.default.Messages.UNPIN_MESSAGE : eE.default.Messages.PIN_MESSAGE,
+                            icon: Y.default,
+                            onClick: eo.pinMessage
+                        }) : null, R && C ? eg({
                             key: "reply-self",
                             channel: t,
                             message: n,
-                            label: eC.default.Messages.MESSAGE_ACTION_REPLY,
-                            icon: q.default,
-                            onClick: ed.replyToMessage
-                        }) : null, M ? eT({
+                            label: eE.default.Messages.MESSAGE_ACTION_REPLY,
+                            icon: z.default,
+                            onClick: eo.replyToMessage
+                        }) : null, A ? eg({
                             key: "reactions",
                             channel: t,
                             message: n,
-                            label: eC.default.Messages.VIEW_REACTIONS,
-                            icon: W.default,
-                            onClick: (e, t) => (0, ed.showReactionsModal)(e, t)
+                            label: eE.default.Messages.VIEW_REACTIONS,
+                            icon: G.default,
+                            onClick: (e, t) => (0, eo.showReactionsModal)(e, t)
                         }) : null]
-                    }) : null, (0, el.hasClydeAiThoughtsEmbed)(n) ? eT({
+                    }) : null, (0, en.hasClydeAiThoughtsEmbed)(n) ? eg({
                         key: "clyde-view-source",
                         channel: t,
                         message: n,
-                        label: ev ? eC.default.Messages.CLYDE_VIEW_SOURCE_HIDE_TOOLTIP : eC.default.Messages.CLYDE_VIEW_SOURCE_SHOW_TOOLTIP,
-                        icon: B.default,
+                        label: eI ? eE.default.Messages.CLYDE_VIEW_SOURCE_HIDE_TOOLTIP : eE.default.Messages.CLYDE_VIEW_SOURCE_SHOW_TOOLTIP,
+                        icon: k.default,
                         onClick: () => {
-                            ex(!ev), en.default.track(eE.AnalyticEvents.CLYDE_AI_THOUGHTS_VIEWED, {
+                            eM(!eI), ee.default.track(ef.AnalyticEvents.CLYDE_AI_THOUGHTS_VIEWED, {
                                 message_id: n.id
                             })
                         }
-                    }) : null, n.author.isClyde() ? eT({
+                    }) : null, n.author.isClyde() ? eg({
                         key: "clyde-good",
                         channel: t,
                         message: n,
-                        label: eC.default.Messages.CLYDE_USER_RATING_TOOLTIP_GOOD,
-                        icon: $.default,
+                        label: eE.default.Messages.CLYDE_USER_RATING_TOOLTIP_GOOD,
+                        icon: J.default,
                         iconProps: {
-                            color: eD ? (0, C.getColor)(eE.Color.GREEN_360) : void 0
+                            color: eR ? (0, p.getColor)(ef.Color.GREEN_360) : void 0
                         },
                         onClick: () => {
-                            let e = !eD;
-                            eb(e), eP(!1), e && (en.default.track(eE.AnalyticEvents.CLYDE_AI_MESSAGE_RATED, {
+                            let e = !eR;
+                            ey(e), eD(!1), e && (ee.default.track(ef.AnalyticEvents.CLYDE_AI_MESSAGE_RATED, {
                                 message_id: n.id,
                                 rating: 1,
-                                has_custom_personality: eL
-                            }), (0, c.showToast)((0, c.createToast)((0, em.randomClydeThanks)(), c.ToastType.SUCCESS)))
+                                has_custom_personality: eN
+                            }), (0, c.showToast)((0, c.createToast)((0, eh.randomClydeThanks)(), c.ToastType.SUCCESS)))
                         }
-                    }) : null, n.author.isClyde() ? eT({
+                    }) : null, n.author.isClyde() ? eg({
                         key: "clyde-bad",
                         channel: t,
                         message: n,
-                        label: eC.default.Messages.CLYDE_USER_RATING_TOOLTIP_BAD,
-                        icon: Q.default,
+                        label: eE.default.Messages.CLYDE_USER_RATING_TOOLTIP_BAD,
+                        icon: X.default,
                         iconProps: {
-                            color: ej ? (0, C.getColor)(eE.Color.RED_360) : void 0
+                            color: eO ? (0, p.getColor)(ef.Color.RED_360) : void 0
                         },
                         onClick: () => {
-                            let e = !ej;
-                            eP(e), eb(!1), e && (0, p.openClydeFeedbackModal)(n.id, eL, eb, eP)
+                            let e = !eO;
+                            eD(e), ey(!1), e && (0, m.openClydeFeedbackModal)(n.id, eN, ey, eD)
                         }
-                    }) : null, N && !ey ? (0, a.jsx)(ec.default, {
+                    }) : null, I && !ex ? (0, a.jsx)(eu.default, {
                         channel: t,
                         message: n,
-                        togglePopout: eU,
-                        renderEmojiPicker: eM,
-                        shouldShow: eg,
-                        isFocused: eO
-                    }) : null, N && !ey && eH && eB ? (0, a.jsx)(ec.default, {
+                        togglePopout: ej,
+                        renderEmojiPicker: eT,
+                        shouldShow: em,
+                        isFocused: eL
+                    }) : null, I && !ex && eF && eU ? (0, a.jsx)(eu.default, {
                         channel: t,
                         message: n,
-                        togglePopout: ek,
-                        renderEmojiPicker: eM,
-                        shouldShow: eS,
-                        isFocused: eO,
-                        type: ei.ReactionTypes.BURST
-                    }) : null, O && !S ? eT({
+                        togglePopout: eP,
+                        renderEmojiPicker: eT,
+                        shouldShow: ep,
+                        isFocused: eL,
+                        type: el.ReactionTypes.BURST
+                    }) : null, R && !C ? eg({
                         key: "reply-other",
                         channel: t,
                         message: n,
-                        label: eC.default.Messages.MESSAGE_ACTION_REPLY,
-                        icon: q.default,
-                        onClick: ed.replyToMessage
-                    }) : null, S ? eT({
+                        label: eE.default.Messages.MESSAGE_ACTION_REPLY,
+                        icon: z.default,
+                        onClick: eo.replyToMessage
+                    }) : null, C ? eg({
                         key: "edit",
                         channel: t,
                         message: n,
-                        label: eC.default.Messages.EDIT,
-                        icon: z.default,
-                        onClick: ed.editMessage
-                    }) : null, F ? eT({
+                        label: eE.default.Messages.EDIT,
+                        icon: K.default,
+                        onClick: eo.editMessage
+                    }) : null, j ? eg({
                         key: "thread",
                         channel: t,
                         message: n,
-                        label: eC.default.Messages.CREATE_THREAD,
-                        icon: J.default,
-                        onClick: ed.createThread
-                    }) : null, !F && X ? eT({
+                        label: eE.default.Messages.CREATE_THREAD,
+                        icon: q.default,
+                        onClick: eo.createThread
+                    }) : null, !j && Z ? eg({
                         key: "view-thread",
                         channel: t,
                         message: n,
-                        label: eC.default.Messages.VIEW_THREAD,
-                        icon: J.default,
-                        onClick: ed.goToThread
-                    }) : null, _ ? eT({
+                        label: eE.default.Messages.VIEW_THREAD,
+                        icon: q.default,
+                        onClick: eo.goToThread
+                    }) : null, g ? eg({
                         key: "publish",
                         channel: t,
                         message: n,
-                        label: eG ? eC.default.Messages.NEWS_CHANNEL_PUBLISHED : eC.default.Messages.NEWS_CHANNEL_PUBLISH,
-                        icon: V.default,
-                        onClick: ed.publishMessage,
-                        disabled: eG
-                    }) : null, r && (ey || et) ? eT({
+                        label: eH ? eE.default.Messages.NEWS_CHANNEL_PUBLISHED : eE.default.Messages.NEWS_CHANNEL_PUBLISH,
+                        icon: w.default,
+                        onClick: eo.publishMessage,
+                        disabled: eH
+                    }) : null, r && (ex || $) ? eg({
                         key: "delete",
                         channel: t,
                         message: n,
-                        label: eC.default.Messages.DELETE,
-                        icon: ee.default,
-                        onClick: ed.deleteMessage,
+                        label: eE.default.Messages.DELETE,
+                        icon: Q.default,
+                        onClick: eo.deleteMessage,
                         dangerous: !0,
-                        separator: !et
-                    }) : null, et && r ? null : (0, a.jsx)(c.Popout, {
+                        separator: !$
+                    }) : null, $ && r ? null : (0, a.jsx)(c.Popout, {
                         renderPopout: e => {
                             let {
                                 updatePosition: l,
                                 closePopout: s
                             } = e;
-                            return (0, a.jsx)(e_, {
+                            return (0, a.jsx)(eC, {
                                 channel: t,
                                 message: n,
                                 canReport: o,
@@ -13249,8 +13246,8 @@
                                 updatePosition: l
                             })
                         },
-                        shouldShow: ef,
-                        onRequestClose: eF,
+                        shouldShow: ed,
+                        onRequestClose: eb,
                         position: "left",
                         align: "top",
                         animation: c.Popout.Animation.NONE,
@@ -13261,14 +13258,14 @@
                             } = e, {
                                 isShown: i
                             } = a;
-                            return eT({
+                            return eg({
                                 key: "more",
-                                label: eC.default.Messages.MORE,
-                                icon: Y.default,
+                                label: eE.default.Messages.MORE,
+                                icon: W.default,
                                 channel: t,
                                 message: n,
                                 selected: i,
-                                onClick: eF,
+                                onClick: eb,
                                 ...s
                             })
                         }
@@ -13276,48 +13273,48 @@
                 })
             }
 
-            function eI(e) {
+            function e_(e) {
                 let {
                     channel: t,
                     message: n
-                } = e, l = (0, u.useStateFromStores)([S.default], () => null != S.default.getMessage(n.id), [n.id]), s = null == n.interaction || null != n.interactionData && (0, _.canRetryInteractionData)(n.interactionData);
+                } = e, l = (0, u.useStateFromStores)([C.default], () => null != C.default.getMessage(n.id), [n.id]), s = null == n.interaction || null != n.interactionData && (0, g.canRetryInteractionData)(n.interactionData);
                 return (0, a.jsxs)(a.Fragment, {
-                    children: [!l && s && eT({
+                    children: [!l && s && eg({
                         key: "retry",
-                        label: eC.default.Messages.RETRY,
-                        icon: X.default,
+                        label: eE.default.Messages.RETRY,
+                        icon: Z.default,
                         channel: t,
                         message: n,
-                        onClick: ed.retrySendMessage
-                    }), eT({
+                        onClick: eo.retrySendMessage
+                    }), eg({
                         key: "delete-usent",
-                        label: eC.default.Messages.DELETE,
-                        icon: ee.default,
+                        label: eE.default.Messages.DELETE,
+                        icon: Q.default,
                         channel: t,
                         message: n,
-                        onClick: ed.deleteMessage
+                        onClick: eo.deleteMessage
                     })]
                 })
             }
 
-            function eM(e, t, n) {
+            function eT(e, t, n) {
                 let l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
                     s = {
                         openPopoutType: "message_reaction_emoji_picker",
                         ...l && {
                             openPopoutType: "message_super_reaction_emoji_picker",
-                            page: null != e.getGuildId() ? eE.AnalyticsPages.GUILD_CHANNEL : eE.AnalyticsPages.DM_CHANNEL,
-                            section: (0, N.getBurstAnalyticsSection)(e),
-                            object: eE.AnalyticsObjects.EMOJI_REACTION_PICKER_POPOUT
+                            page: null != e.getGuildId() ? ef.AnalyticsPages.GUILD_CHANNEL : ef.AnalyticsPages.DM_CHANNEL,
+                            section: (0, I.getBurstAnalyticsSection)(e),
+                            object: ef.AnalyticsObjects.EMOJI_REACTION_PICKER_POPOUT
                         }
                     };
-                return (0, a.jsx)(v.ReactionPicker, {
+                return (0, a.jsx)(M.ReactionPicker, {
                     channel: e,
                     closePopout: n,
                     onSelectEmoji: (a, l, s) => {
                         ! function(e, t, n) {
                             let a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-                            null != e && (0, M.addReaction)(t.id, n.id, (0, N.toReactionEmoji)(e), void 0, {
+                            null != e && (0, A.addReaction)(t.id, n.id, (0, I.toReactionEmoji)(e), void 0, {
                                 burst: a
                             })
                         }(a, e, t, s), l && (s ? o(n, 150)() : n())
@@ -13327,17 +13324,17 @@
                     messageId: t.id
                 })
             }
-            var eN = l.memo(function(e) {
+            var eA = l.memo(function(e) {
                 let {
                     channel: t,
                     message: n,
                     isHeader: l
-                } = e, s = (0, u.useStateFromStores)([O.default], () => O.default.isEditing(t.id, n.id), [t.id, n.id]), r = function(e) {
+                } = e, s = (0, u.useStateFromStores)([R.default], () => R.default.isEditing(t.id, n.id), [t.id, n.id]), r = function(e) {
                     let {
                         channel: t,
                         message: n
                     } = e;
-                    return n.state === eE.MessageStates.SEND_FAILED ? (0, a.jsx)(eI, {
+                    return n.state === ef.MessageStates.SEND_FAILED ? (0, a.jsx)(e_, {
                         channel: t,
                         message: n
                     }) : null
@@ -13345,20 +13342,20 @@
                     let {
                         message: t
                     } = e;
-                    return t.state !== eE.MessageStates.SEND_FAILED ? (0, a.jsx)(eA, {
+                    return t.state !== ef.MessageStates.SEND_FAILED ? (0, a.jsx)(eS, {
                         ...e
                     }) : null
                 }(e);
                 return s || null == r && null == o ? null : (0, a.jsx)("div", {
                     className: i(e.className, {
-                        [eg.container]: !0,
-                        [eg.isHeader]: l
+                        [em.container]: !0,
+                        [em.isHeader]: l
                     }),
-                    onClick: eS,
-                    onContextMenu: eS,
+                    onClick: ep,
+                    onContextMenu: ep,
                     role: "group",
-                    "aria-label": eC.default.Messages.MESSAGE_UTILITIES_A11Y_LABEL,
-                    children: (0, a.jsxs)(et.default, {
+                    "aria-label": eE.default.Messages.MESSAGE_UTILITIES_A11Y_LABEL,
+                    children: (0, a.jsxs)($.default, {
                         className: e.innerClassName,
                         children: [r, o]
                     })

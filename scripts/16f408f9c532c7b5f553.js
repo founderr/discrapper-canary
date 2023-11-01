@@ -1906,7 +1906,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: I.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "242434"
+                        buildNumber: "242439"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -2119,7 +2119,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return eS
+                    return eN
                 }
             });
             var a = n("37983"),
@@ -2148,365 +2148,366 @@
                 O = n("774146"),
                 L = n("10641"),
                 M = n("935246"),
-                v = n("20394"),
-                D = n("381065"),
-                x = n("702873"),
-                P = n("840968"),
-                y = n("233322"),
-                b = n("157186"),
-                U = n("747554"),
-                G = n("740316"),
-                j = n("592407"),
-                F = n("977169"),
-                k = n("363691"),
-                B = n("649844"),
-                w = n("983424"),
-                H = n("538620"),
-                V = n("425538"),
-                Y = n("703537"),
-                W = n("55282"),
-                K = n("42203"),
-                z = n("546463"),
-                q = n("305961"),
-                Q = n("42887"),
-                X = n("945956"),
-                J = n("162771"),
-                Z = n("697218"),
-                $ = n("552712"),
-                ee = n("167726"),
-                et = n("600133"),
-                en = n("145131"),
-                ea = n("216422"),
-                es = n("489622"),
-                el = n("599110"),
-                ei = n("701909"),
-                er = n("308757"),
-                eo = n("389696"),
-                eu = n("650044"),
-                ed = n("49111"),
-                ec = n("646718"),
-                eE = n("586269"),
-                ef = n("353927"),
-                e_ = n("782340"),
-                eI = n("185401");
-            let eh = () => (0, a.jsxs)(es.default, {
-                    color: es.NoticeColors.DANGER,
-                    children: [(0, a.jsx)(es.NoticeCloseButton, {
+                v = n("211470"),
+                D = n("789563"),
+                x = n("381065"),
+                P = n("702873"),
+                y = n("840968"),
+                b = n("233322"),
+                U = n("157186"),
+                G = n("747554"),
+                j = n("740316"),
+                F = n("592407"),
+                k = n("977169"),
+                B = n("363691"),
+                w = n("649844"),
+                H = n("983424"),
+                V = n("538620"),
+                Y = n("425538"),
+                W = n("703537"),
+                K = n("55282"),
+                z = n("42203"),
+                q = n("546463"),
+                Q = n("305961"),
+                X = n("42887"),
+                J = n("945956"),
+                Z = n("162771"),
+                $ = n("697218"),
+                ee = n("552712"),
+                et = n("167726"),
+                en = n("600133"),
+                ea = n("145131"),
+                es = n("216422"),
+                el = n("489622"),
+                ei = n("599110"),
+                er = n("701909"),
+                eo = n("308757"),
+                eu = n("389696"),
+                ed = n("650044"),
+                ec = n("49111"),
+                eE = n("646718"),
+                ef = n("586269"),
+                e_ = n("353927"),
+                eI = n("782340"),
+                eh = n("185401");
+            let eC = () => (0, a.jsxs)(el.default, {
+                    color: el.NoticeColors.DANGER,
+                    children: [(0, a.jsx)(el.NoticeCloseButton, {
                         onClick: () => {
-                            eT(), (0, eu.open)()
+                            em(), (0, ed.open)()
                         }
-                    }), e_.default.Messages.NOTICE_NO_INPUT_DETECTED, (0, a.jsx)(es.NoticeButtonAnchor, {
-                        href: ei.default.getArticleURL(ed.HelpdeskArticles.NO_INPUT_DETECTED),
-                        children: e_.default.Messages.NOTICE_NO_INPUT_DETECTED_HELP_LINK_TEXT
+                    }), eI.default.Messages.NOTICE_NO_INPUT_DETECTED, (0, a.jsx)(el.NoticeButtonAnchor, {
+                        href: er.default.getArticleURL(ec.HelpdeskArticles.NO_INPUT_DETECTED),
+                        children: eI.default.Messages.NOTICE_NO_INPUT_DETECTED_HELP_LINK_TEXT
                     })]
                 }),
-                eC = () => (0, a.jsxs)(es.default, {
-                    color: es.NoticeColors.DANGER,
-                    children: [(0, a.jsx)(es.NoticeCloseButton, {
+                eT = () => (0, a.jsxs)(el.default, {
+                    color: el.NoticeColors.DANGER,
+                    children: [(0, a.jsx)(el.NoticeCloseButton, {
                         onClick: () => {
-                            eT(), (0, eu.open)()
+                            em(), (0, ed.open)()
                         }
-                    }), e_.default.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS, (0, a.jsx)(es.NoticeButton, {
+                    }), eI.default.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS, (0, a.jsx)(el.NoticeButton, {
                         onClick: () => {
-                            (0, f.pushLayer)(ed.Layers.USER_SETTINGS), A.default.setSection(ed.UserSettingsSections.VOICE)
+                            (0, f.pushLayer)(ec.Layers.USER_SETTINGS), A.default.setSection(ec.UserSettingsSections.VOICE)
                         },
-                        children: e_.default.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS_LINK_TEXT
+                        children: eI.default.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS_LINK_TEXT
                     })]
                 });
 
-            function eT(e) {
+            function em(e) {
                 _.default.dismiss(null != e ? {
                     untilAtLeast: i(e)
                 } : void 0)
             }
-            let em = s.memo(function() {
+            let eS = s.memo(function() {
                 var e, t, l;
-                let _ = (0, o.useStateFromStores)([Z.default], () => Z.default.getCurrentUser()),
-                    g = (0, o.useStateFromStores)([J.default], () => J.default.getGuildId()),
-                    eu = (0, o.useStateFromStores)([et.default], () => et.default.getNotice()),
-                    em = (0, o.useStateFromStores)([q.default], () => q.default.getGuild(g)),
+                let _ = (0, o.useStateFromStores)([$.default], () => $.default.getCurrentUser()),
+                    g = (0, o.useStateFromStores)([Z.default], () => Z.default.getGuildId()),
+                    ed = (0, o.useStateFromStores)([en.default], () => en.default.getNotice()),
+                    eS = (0, o.useStateFromStores)([Q.default], () => Q.default.getGuild(g)),
                     {
-                        analyticsLocations: eS
+                        analyticsLocations: eN
                     } = (0, R.default)(),
-                    eN = null == eu ? void 0 : eu.type,
-                    eA = (0, b.useShowMemberVerificationGate)(g);
+                    eA = null == ed ? void 0 : ed.type,
+                    ep = (0, U.useShowMemberVerificationGate)(g);
                 s.useEffect(() => {
-                    null != eN && ! function(e, t) {
+                    null != eA && ! function(e, t) {
                         let n = {
                             notice_type: e
                         };
-                        null != t && (n.guild_id = t), el.default.track(ed.AnalyticEvents.APP_NOTICE_VIEWED, n)
-                    }(eN, g)
-                }, [eN, g]), s.useEffect(() => {
-                    if (null != eu && eu.type === ed.NoticeTypes.SURVEY && null != eu.metadata) {
+                        null != t && (n.guild_id = t), ei.default.track(ec.AnalyticEvents.APP_NOTICE_VIEWED, n)
+                    }(eA, g)
+                }, [eA, g]), s.useEffect(() => {
+                    if (null != ed && ed.type === ec.NoticeTypes.SURVEY && null != ed.metadata) {
                         let {
                             metadata: e
-                        } = eu, t = v.ExperimentStore.getUserExperimentDescriptor(e.id);
+                        } = ed, t = D.default.getUserExperimentDescriptor(e.id);
                         null != t && (0, v.trackExposureToExperiment)(e.id, t)
                     }
-                }, [eu]);
-                let ep = function(e) {
+                }, [ed]);
+                let eg = function(e) {
                     let {
                         enabled: t
-                    } = (0, w.default)(!0, e !== ed.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING);
-                    return t || null == e ? null : et.typeToDismissibleContent[e]
-                }(eN);
-                if (null == eu) return null;
-                if (null != ep) return (0, a.jsx)(M.DismissibleContentNotices, {
-                    dismissibleContent: ep,
-                    noticeType: eu.type
+                    } = (0, H.default)(!0, e !== ec.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING);
+                    return t || null == e ? null : en.typeToDismissibleContent[e]
+                }(eA);
+                if (null == ed) return null;
+                if (null != eg) return (0, a.jsx)(M.DismissibleContentNotices, {
+                    dismissibleContent: eg,
+                    noticeType: ed.type
                 });
-                let eg = null === (e = eu.metadata) || void 0 === e ? void 0 : e.premiumType;
-                switch (eu.type) {
-                    case ed.NoticeTypes.LURKING_GUILD:
-                        return (0, a.jsx)(k.default, {});
-                    case ed.NoticeTypes.PENDING_MEMBER:
-                        return (0, a.jsx)(U.default, {});
-                    case ed.NoticeTypes.INVITED_TO_SPEAK:
-                        return (0, a.jsx)(W.default, {});
-                    case ed.NoticeTypes.GUILD_RAID_NOTIFICATION:
-                        let {
-                            dismissUntil: eR
-                        } = eu.metadata;
-                        return (0, a.jsx)(D.default, {
-                            onDismiss: () => eT(eR)
-                        });
-                    case ed.NoticeTypes.WIN32_DEPRECATED_MESSAGE:
+                let eR = null === (e = ed.metadata) || void 0 === e ? void 0 : e.premiumType;
+                switch (ed.type) {
+                    case ec.NoticeTypes.LURKING_GUILD:
+                        return (0, a.jsx)(B.default, {});
+                    case ec.NoticeTypes.PENDING_MEMBER:
+                        return (0, a.jsx)(G.default, {});
+                    case ec.NoticeTypes.INVITED_TO_SPEAK:
+                        return (0, a.jsx)(K.default, {});
+                    case ec.NoticeTypes.GUILD_RAID_NOTIFICATION:
                         let {
                             dismissUntil: eO
-                        } = eu.metadata;
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.WARNING,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                onClick: () => eT(eO),
-                                noticeType: ed.NoticeTypes.WIN32_DEPRECATED_MESSAGE
-                            }), e_.default.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({
-                                helpCenterLink: ei.default.getArticleURL(ed.HelpdeskArticles.WIN32_DEPRECATE)
+                        } = ed.metadata;
+                        return (0, a.jsx)(x.default, {
+                            onDismiss: () => em(eO)
+                        });
+                    case ec.NoticeTypes.WIN32_DEPRECATED_MESSAGE:
+                        let {
+                            dismissUntil: eL
+                        } = ed.metadata;
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.WARNING,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                onClick: () => em(eL),
+                                noticeType: ec.NoticeTypes.WIN32_DEPRECATED_MESSAGE
+                            }), eI.default.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({
+                                helpCenterLink: er.default.getArticleURL(ec.HelpdeskArticles.WIN32_DEPRECATE)
                             })]
                         });
-                    case ed.NoticeTypes.GENERIC:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.DEFAULT,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                onClick: () => eT(),
-                                noticeType: ed.NoticeTypes.GENERIC
-                            }), eu.message, null != eu.buttonText ? (0, a.jsx)(es.PrimaryCTANoticeButton, {
-                                onClick: eu.callback,
-                                noticeType: ed.NoticeTypes.GENERIC,
-                                children: eu.buttonText
+                    case ec.NoticeTypes.GENERIC:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.DEFAULT,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                onClick: () => em(),
+                                noticeType: ec.NoticeTypes.GENERIC
+                            }), ed.message, null != ed.buttonText ? (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                onClick: ed.callback,
+                                noticeType: ec.NoticeTypes.GENERIC,
+                                children: ed.buttonText
                             }) : null]
                         });
-                    case ed.NoticeTypes.LAUNCH_GAME_FAILURE:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.DANGER,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                onClick: () => eT(),
-                                noticeType: ed.NoticeTypes.LAUNCH_GAME_FAILURE
-                            }), eu.message, null != eu.buttonText ? (0, a.jsx)(es.PrimaryCTANoticeButton, {
-                                onClick: eu.callback,
-                                noticeType: ed.NoticeTypes.LAUNCH_GAME_FAILURE,
-                                children: eu.buttonText
+                    case ec.NoticeTypes.LAUNCH_GAME_FAILURE:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.DANGER,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                onClick: () => em(),
+                                noticeType: ec.NoticeTypes.LAUNCH_GAME_FAILURE
+                            }), ed.message, null != ed.buttonText ? (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                onClick: ed.callback,
+                                noticeType: ec.NoticeTypes.LAUNCH_GAME_FAILURE,
+                                children: ed.buttonText
                             }) : null]
                         });
-                    case ed.NoticeTypes.VOICE_DISABLED:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.WARNING,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
+                    case ec.NoticeTypes.VOICE_DISABLED:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.WARNING,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
                                 onClick: () => {
-                                    I.default.clearRemoteDisconnectVoiceChannelId(), eT()
+                                    I.default.clearRemoteDisconnectVoiceChannelId(), em()
                                 },
-                                noticeType: ed.NoticeTypes.VOICE_DISABLED
-                            }), e_.default.Messages.NOTICE_CONNECTION_CONFLICT, (0, a.jsx)(es.PrimaryCTANoticeButton, {
+                                noticeType: ec.NoticeTypes.VOICE_DISABLED
+                            }), eI.default.Messages.NOTICE_CONNECTION_CONFLICT, (0, a.jsx)(el.PrimaryCTANoticeButton, {
                                 onClick: () => {
-                                    let e = X.default.getRemoteDisconnectVoiceChannelId();
+                                    let e = J.default.getRemoteDisconnectVoiceChannelId();
                                     if (null != e) {
-                                        let t = K.default.getChannel(e);
+                                        let t = z.default.getChannel(e);
                                         null != t && h.default.selectVoiceChannel(e)
                                     }
                                 },
-                                noticeType: ed.NoticeTypes.VOICE_DISABLED,
-                                children: e_.default.Messages.RECONNECT
+                                noticeType: ec.NoticeTypes.VOICE_DISABLED,
+                                children: eI.default.Messages.RECONNECT
                             })]
                         });
-                    case ed.NoticeTypes.SPOTIFY_AUTO_PAUSED:
-                        let eL = p.default.get(ed.PlatformTypes.SPOTIFY);
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.DANGER,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                onClick: () => eT(),
-                                noticeType: ed.NoticeTypes.SPOTIFY_AUTO_PAUSED
+                    case ec.NoticeTypes.SPOTIFY_AUTO_PAUSED:
+                        let eM = p.default.get(ec.PlatformTypes.SPOTIFY);
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.DANGER,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                onClick: () => em(),
+                                noticeType: ec.NoticeTypes.SPOTIFY_AUTO_PAUSED
                             }), (0, a.jsx)("img", {
                                 alt: "",
-                                className: eI.platformIcon,
-                                src: eL.icon.whiteSVG
-                            }), e_.default.Messages.NOTICE_SPOTIFY_AUTO_PAUSED, (0, a.jsx)(es.PrimaryCTANoticeButton, {
-                                onClick: () => A.default.open(ed.UserSettingsSections.VOICE),
-                                noticeType: ed.NoticeTypes.SPOTIFY_AUTO_PAUSED,
-                                children: e_.default.Messages.VOICE_SETTINGS
+                                className: eh.platformIcon,
+                                src: eM.icon.whiteSVG
+                            }), eI.default.Messages.NOTICE_SPOTIFY_AUTO_PAUSED, (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                onClick: () => A.default.open(ec.UserSettingsSections.VOICE),
+                                noticeType: ec.NoticeTypes.SPOTIFY_AUTO_PAUSED,
+                                children: eI.default.Messages.VOICE_SETTINGS
                             }), (0, a.jsx)(u.Anchor, {
-                                className: eI.textLinkSmall,
-                                href: ei.default.getArticleURL(ed.HelpdeskArticles.SPOTIFY_AUTO_PAUSED),
+                                className: eh.textLinkSmall,
+                                href: er.default.getArticleURL(ec.HelpdeskArticles.SPOTIFY_AUTO_PAUSED),
                                 target: "_blank",
-                                children: e_.default.Messages.NOTICE_WHATS_THIS
+                                children: eI.default.Messages.NOTICE_WHATS_THIS
                             })]
                         });
-                    case ed.NoticeTypes.UNCLAIMED_ACCOUNT:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.DEFAULT,
-                            children: [e_.default.Messages.NOTICE_UNCLAIMED_ACCOUNT, (0, a.jsx)(es.PrimaryCTANoticeButton, {
-                                noticeType: ed.NoticeTypes.UNCLAIMED_ACCOUNT,
-                                onClick: () => eA && null != g ? (0, y.openMemberVerificationModal)(g) : O.openClaimAccountModal(),
-                                children: e_.default.Messages.CLAIM_ACCOUNT
+                    case ec.NoticeTypes.UNCLAIMED_ACCOUNT:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.DEFAULT,
+                            children: [eI.default.Messages.NOTICE_UNCLAIMED_ACCOUNT, (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                noticeType: ec.NoticeTypes.UNCLAIMED_ACCOUNT,
+                                onClick: () => ep && null != g ? (0, b.openMemberVerificationModal)(g) : O.openClaimAccountModal(),
+                                children: eI.default.Messages.CLAIM_ACCOUNT
                             })]
                         });
-                    case ed.NoticeTypes.UNVERIFIED_ACCOUNT:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.DEFAULT,
-                            children: [e_.default.Messages.NOTICE_UNVERIFIED_ACCOUNT, (0, a.jsx)(es.PrimaryCTANoticeButton, {
-                                noticeType: ed.NoticeTypes.UNVERIFIED_ACCOUNT,
+                    case ec.NoticeTypes.UNVERIFIED_ACCOUNT:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.DEFAULT,
+                            children: [eI.default.Messages.NOTICE_UNVERIFIED_ACCOUNT, (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                noticeType: ec.NoticeTypes.UNVERIFIED_ACCOUNT,
                                 onClick: () => {
                                     c.default.verifyResend(), d.default.show({
-                                        title: e_.default.Messages.VERIFICATION_EMAIL_TITLE,
-                                        body: e_.default.Messages.VERIFICATION_EMAIL_BODY.format({
+                                        title: eI.default.Messages.VERIFICATION_EMAIL_TITLE,
+                                        body: eI.default.Messages.VERIFICATION_EMAIL_BODY.format({
                                             email: null == _ ? void 0 : _.email
                                         }),
-                                        secondaryConfirmText: e_.default.Messages.CHANGE_EMAIL,
+                                        secondaryConfirmText: eI.default.Messages.CHANGE_EMAIL,
                                         onConfirmSecondary: O.openClaimAccountModal
                                     })
                                 },
-                                children: e_.default.Messages.RESEND
+                                children: eI.default.Messages.RESEND
                             })]
                         });
-                    case ed.NoticeTypes.SCHEDULED_MAINTENANCE:
-                        if (null == eu.metadata) return null;
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.DEFAULT,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
+                    case ec.NoticeTypes.SCHEDULED_MAINTENANCE:
+                        if (null == ed.metadata) return null;
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.DEFAULT,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
                                 onClick: () => C.default.ackScheduledMaintenance(),
-                                noticeType: ed.NoticeTypes.SCHEDULED_MAINTENANCE
-                            }), e_.default.Messages.NOTICE_SCHEDULED_MAINTENANCE.format(eu.metadata), (0, a.jsx)(es.NoticeButtonAnchor, {
-                                href: "".concat(ed.Links.STATUS, "/incidents/").concat(eu.metadata.id),
-                                children: e_.default.Messages.LEARN_MORE
+                                noticeType: ec.NoticeTypes.SCHEDULED_MAINTENANCE
+                            }), eI.default.Messages.NOTICE_SCHEDULED_MAINTENANCE.format(ed.metadata), (0, a.jsx)(el.NoticeButtonAnchor, {
+                                href: "".concat(ec.Links.STATUS, "/incidents/").concat(ed.metadata.id),
+                                children: eI.default.Messages.LEARN_MORE
                             })]
                         });
-                    case ed.NoticeTypes.NO_INPUT_DETECTED:
-                        if (!Q.default.supports(ef.Features.LOOPBACK)) return (0, a.jsx)(eh, {});
-                        return (0, a.jsx)(eC, {});
-                    case ed.NoticeTypes.HARDWARE_MUTE:
-                        if (null == eu.metadata) return null;
+                    case ec.NoticeTypes.NO_INPUT_DETECTED:
+                        if (!X.default.supports(e_.Features.LOOPBACK)) return (0, a.jsx)(eC, {});
+                        return (0, a.jsx)(eT, {});
+                    case ec.NoticeTypes.HARDWARE_MUTE:
+                        if (null == ed.metadata) return null;
                         let {
-                            vendor: eM, model: ev
-                        } = eu.metadata;
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.DANGER,
-                            children: [e_.default.Messages.NOTICE_HARDWARE_MUTE.format({
-                                vendorName: eM.name,
-                                modelName: ev.name
-                            }), (0, a.jsx)(es.NoticeButtonAnchor, {
-                                href: ev.url,
+                            vendor: ev, model: eD
+                        } = ed.metadata;
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.DANGER,
+                            children: [eI.default.Messages.NOTICE_HARDWARE_MUTE.format({
+                                vendorName: ev.name,
+                                modelName: eD.name
+                            }), (0, a.jsx)(el.NoticeButtonAnchor, {
+                                href: eD.url,
                                 target: "_blank",
                                 rel: "noreferrer noopener",
-                                children: e_.default.Messages.SUPPORT
+                                children: eI.default.Messages.SUPPORT
                             })]
                         });
-                    case ed.NoticeTypes.STREAMER_MODE:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.STREAMER_MODE,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                onClick: () => eT(),
-                                noticeType: ed.NoticeTypes.STREAMER_MODE
-                            }), e_.default.Messages.NOTICE_STREAMER_MODE_TEXT, (0, a.jsx)(es.PrimaryCTANoticeButton, {
+                    case ec.NoticeTypes.STREAMER_MODE:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.STREAMER_MODE,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                onClick: () => em(),
+                                noticeType: ec.NoticeTypes.STREAMER_MODE
+                            }), eI.default.Messages.NOTICE_STREAMER_MODE_TEXT, (0, a.jsx)(el.PrimaryCTANoticeButton, {
                                 onClick: () => m.default.setEnabled(!1),
-                                noticeType: ed.NoticeTypes.STREAMER_MODE,
-                                children: e_.default.Messages.DISABLE
+                                noticeType: ec.NoticeTypes.STREAMER_MODE,
+                                children: eI.default.Messages.DISABLE
                             })]
                         });
-                    case ed.NoticeTypes.H264_DISABLED:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.DANGER,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
+                    case ec.NoticeTypes.H264_DISABLED:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.DANGER,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
                                 onClick: () => {
-                                    eT()
+                                    em()
                                 }
-                            }), e_.default.Messages.NOTICE_H264_DISABLED_SETTINGS, (0, a.jsx)(es.NoticeButton, {
+                            }), eI.default.Messages.NOTICE_H264_DISABLED_SETTINGS, (0, a.jsx)(el.NoticeButton, {
                                 onClick: () => {
-                                    (0, f.pushLayer)(ed.Layers.USER_SETTINGS), A.default.setSection(ed.UserSettingsSections.VOICE)
+                                    (0, f.pushLayer)(ec.Layers.USER_SETTINGS), A.default.setSection(ec.UserSettingsSections.VOICE)
                                 },
-                                children: e_.default.Messages.NOTICE_H264_DISABLED_SETTINGS_LINK_TEXT
+                                children: eI.default.Messages.NOTICE_H264_DISABLED_SETTINGS_LINK_TEXT
                             })]
                         });
-                    case ed.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
-                        if (null == eu.metadata) return null;
+                    case ec.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK:
+                        if (null == ed.metadata) return null;
                         let {
-                            skuId: eD, applicationId: ex
-                        } = eu.metadata, eP = $.default.get(eD), ey = z.default.getGame(ex);
-                        if (null == eP || null == ey) return null;
-                        let eb = {
-                            page: ed.AnalyticsPages.IN_APP
+                            skuId: ex, applicationId: eP
+                        } = ed.metadata, ey = ee.default.get(ex), eb = q.default.getGame(eP);
+                        if (null == ey || null == eb) return null;
+                        let eU = {
+                            page: ec.AnalyticsPages.IN_APP
                         };
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.PREMIUM_TIER_1,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                onClick: () => E.dismiss(eP.id),
-                                noticeType: ed.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK
-                            }), (0, a.jsx)(ea.default, {
-                                className: eI.premiumIcon
-                            }), e_.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_MESSAGE.format({
-                                applicationName: ey.name,
-                                skuName: eP.name
-                            }), (0, a.jsx)(es.PrimaryCTANoticeButton, {
-                                noticeType: ed.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK,
-                                onClick: () => (0, er.openIAPPurchaseModal)({
-                                    applicationId: ey.id,
-                                    skuId: eP.id,
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.PREMIUM_TIER_1,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                onClick: () => E.dismiss(ey.id),
+                                noticeType: ec.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK
+                            }), (0, a.jsx)(es.default, {
+                                className: eh.premiumIcon
+                            }), eI.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_MESSAGE.format({
+                                applicationName: eb.name,
+                                skuName: ey.name
+                            }), (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                noticeType: ec.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK,
+                                onClick: () => (0, eo.openIAPPurchaseModal)({
+                                    applicationId: eb.id,
+                                    skuId: ey.id,
                                     openPremiumPaymentModal: () => {
-                                        (0, B.default)({
+                                        (0, w.default)({
                                             initialPlanId: null,
-                                            subscriptionTier: ec.PremiumSubscriptionSKUs.TIER_2,
-                                            analyticsLocations: eS,
-                                            analyticsObject: eb
+                                            subscriptionTier: eE.PremiumSubscriptionSKUs.TIER_2,
+                                            analyticsLocations: eN,
+                                            analyticsObject: eU
                                         })
                                     },
-                                    analyticsLocations: eS,
-                                    analyticsLocation: eb,
-                                    context: __OVERLAY__ ? ed.AppContext.OVERLAY : ed.AppContext.APP
-                                }).then(() => E.dismiss(eP.id)),
-                                children: e_.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_BUTTON
+                                    analyticsLocations: eN,
+                                    analyticsLocation: eU,
+                                    context: __OVERLAY__ ? ec.AppContext.OVERLAY : ec.AppContext.APP
+                                }).then(() => E.dismiss(ey.id)),
+                                children: eI.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_BUTTON
                             })]
                         });
-                    case ed.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL: {
-                        if (null == eu.metadata) return null;
+                    case ec.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL: {
+                        if (null == ed.metadata) return null;
                         let {
                             skuId: e,
                             applicationId: t
-                        } = eu.metadata, n = $.default.get(e), s = z.default.getGame(t);
+                        } = ed.metadata, n = ee.default.get(e), s = q.default.getGame(t);
                         if (null == n || null == s) return null;
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.PREMIUM_TIER_1,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                onClick: () => eT(),
-                                noticeType: ed.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL
-                            }), (0, a.jsx)(ea.default, {
-                                className: eI.premiumIcon
-                            }), e_.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_NO_PREMIUM_PERK_MESSAGE.format({
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.PREMIUM_TIER_1,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                onClick: () => em(),
+                                noticeType: ec.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL
+                            }), (0, a.jsx)(es.default, {
+                                className: eh.premiumIcon
+                            }), eI.default.Messages.NOTICE_DETECTED_OFF_PLATFORM_NO_PREMIUM_PERK_MESSAGE.format({
                                 applicationName: s.name,
                                 skuName: n.name
-                            }), (0, a.jsx)(es.NoticeButton, {
+                            }), (0, a.jsx)(el.NoticeButton, {
                                 children: (0, a.jsx)(r.Link, {
-                                    onClick: () => eT(),
+                                    onClick: () => em(),
                                     to: {
-                                        pathname: ed.Routes.APPLICATION_STORE_LISTING_SKU(n.id),
+                                        pathname: ec.Routes.APPLICATION_STORE_LISTING_SKU(n.id),
                                         state: {
                                             scrollRestoration: !1
                                         }
                                     },
-                                    children: e_.default.Messages.LEARN_MORE
+                                    children: eI.default.Messages.LEARN_MORE
                                 })
                             })]
                         })
                     }
-                    case ed.NoticeTypes.SURVEY: {
-                        let e = eu.metadata;
+                    case ec.NoticeTypes.SURVEY: {
+                        let e = ed.metadata;
                         if (null == e) return null;
                         let {
                             key: t,
@@ -2514,15 +2515,15 @@
                             cta: s,
                             url: l
                         } = e;
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.CUSTOM,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                noticeType: ed.NoticeTypes.SURVEY,
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.CUSTOM,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                noticeType: ec.NoticeTypes.SURVEY,
                                 onClick: () => {
                                     (0, S.surveyHide)(t, !0)
                                 }
-                            }), n, (0, a.jsx)(es.PrimaryCTANoticeButton, {
-                                noticeType: ed.NoticeTypes.SURVEY,
+                            }), n, (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                noticeType: ec.NoticeTypes.SURVEY,
                                 onClick: () => {
                                     window.open(l, "_blank"), (0, S.surveyHide)(t, !1)
                                 },
@@ -2530,44 +2531,44 @@
                             })]
                         })
                     }
-                    case ed.NoticeTypes.SERVER_USAGE_SURVEY:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.CUSTOM,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                noticeType: ed.NoticeTypes.SERVER_USAGE_SURVEY,
+                    case ec.NoticeTypes.SERVER_USAGE_SURVEY:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.CUSTOM,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                noticeType: ec.NoticeTypes.SERVER_USAGE_SURVEY,
                                 onClick: () => {
-                                    eT()
+                                    em()
                                 }
-                            }), e_.default.Messages.SERVER_USAGE_SURVEY_BODY.format({
-                                guildName: null !== (t = null == em ? void 0 : em.name) && void 0 !== t ? t : "this server"
-                            }), (0, a.jsx)(es.PrimaryCTANoticeButton, {
-                                noticeType: ed.NoticeTypes.SERVER_USAGE_SURVEY,
+                            }), eI.default.Messages.SERVER_USAGE_SURVEY_BODY.format({
+                                guildName: null !== (t = null == eS ? void 0 : eS.name) && void 0 !== t ? t : "this server"
+                            }), (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                noticeType: ec.NoticeTypes.SERVER_USAGE_SURVEY,
                                 onClick: () => {
-                                    window.open("https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id=".concat(null == _ ? void 0 : _.id, "&guild_id=").concat(null == em ? void 0 : em.id), "_blank"), eT()
+                                    window.open("https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id=".concat(null == _ ? void 0 : _.id, "&guild_id=").concat(null == eS ? void 0 : eS.id), "_blank"), em()
                                 },
                                 additionalTrackingProps: {
-                                    guild_id: null == em ? void 0 : em.id
+                                    guild_id: null == eS ? void 0 : eS.id
                                 },
-                                children: e_.default.Messages.SERVER_USAGE_SURVEY_CTA
+                                children: eI.default.Messages.SERVER_USAGE_SURVEY_CTA
                             })]
                         });
-                    case ed.NoticeTypes.CORRUPT_INSTALLATION:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.DANGER,
-                            children: [e_.default.Messages.NOTICE_CORRUPT_INSTALLATION, (0, a.jsx)(es.NoticeButtonAnchor, {
-                                href: ei.default.getArticleURL(ed.HelpdeskArticles.CORRUPT_INSTALLATION),
+                    case ec.NoticeTypes.CORRUPT_INSTALLATION:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.DANGER,
+                            children: [eI.default.Messages.NOTICE_CORRUPT_INSTALLATION, (0, a.jsx)(el.NoticeButtonAnchor, {
+                                href: er.default.getArticleURL(ec.HelpdeskArticles.CORRUPT_INSTALLATION),
                                 target: "_blank",
-                                children: e_.default.Messages.NOTICE_CORRUPT_INSTALLATION_HELP_LINK_TEXT
+                                children: eI.default.Messages.NOTICE_CORRUPT_INSTALLATION_HELP_LINK_TEXT
                             })]
                         });
-                    case ed.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.WARNING,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                onClick: () => eT(),
-                                noticeType: ed.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER
-                            }), e_.default.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY, (0, a.jsx)(es.PrimaryCTANoticeButton, {
-                                noticeType: ed.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER,
+                    case ec.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.WARNING,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                onClick: () => em(),
+                                noticeType: ec.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER
+                            }), eI.default.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY, (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                noticeType: ec.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER,
                                 onClick: () => {
                                     (0, u.openModalLazy)(async () => {
                                         let {
@@ -2579,21 +2580,21 @@
                                         })
                                     })
                                 },
-                                children: e_.default.Messages.DOWNLOAD
+                                children: eI.default.Messages.DOWNLOAD
                             })]
                         });
-                    case ed.NoticeTypes.DISPATCH_ERROR:
-                        if (null == eu.metadata) return null;
+                    case ec.NoticeTypes.DISPATCH_ERROR:
+                        if (null == ed.metadata) return null;
                         let {
-                            error: eU
-                        } = eu.metadata;
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.DANGER,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                onClick: () => eT(),
-                                noticeType: ed.NoticeTypes.DISPATCH_ERROR
-                            }), null == eU ? void 0 : eU.displayMessage, (0, a.jsx)(es.PrimaryCTANoticeButton, {
-                                noticeType: ed.NoticeTypes.DISPATCH_ERROR,
+                            error: eG
+                        } = ed.metadata;
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.DANGER,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                onClick: () => em(),
+                                noticeType: ec.NoticeTypes.DISPATCH_ERROR
+                            }), null == eG ? void 0 : eG.displayMessage, (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                noticeType: ec.NoticeTypes.DISPATCH_ERROR,
                                 onClick: () => (0, u.openModalLazy)(async () => {
                                     let {
                                         default: e
@@ -2602,305 +2603,305 @@
                                         ...t
                                     })
                                 }),
-                                children: e_.default.Messages.LEARN_MORE
+                                children: eI.default.Messages.LEARN_MORE
                             })]
                         });
-                    case ed.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS:
-                        if (null == eu.metadata) return null;
+                    case ec.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS:
+                        if (null == ed.metadata) return null;
                         let {
-                            progress: eG, total: ej, name: eF
-                        } = eu.metadata;
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.DEFAULT,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                onClick: () => eT(),
-                                noticeType: ed.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS
-                            }), (0, a.jsxs)(en.default, {
-                                justify: en.default.Justify.CENTER,
-                                children: [null != eF ? e_.default.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
-                                    name: "".concat(eF),
-                                    progress: "".concat(eG),
-                                    total: "".concat(ej)
-                                }) : e_.default.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS.format({
-                                    progress: "".concat(eG),
-                                    total: "".concat(ej)
+                            progress: ej, total: eF, name: ek
+                        } = ed.metadata;
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.DEFAULT,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                onClick: () => em(),
+                                noticeType: ec.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS
+                            }), (0, a.jsxs)(ea.default, {
+                                justify: ea.default.Justify.CENTER,
+                                children: [null != ek ? eI.default.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS_WITH_NAME.format({
+                                    name: "".concat(ek),
+                                    progress: "".concat(ej),
+                                    total: "".concat(eF)
+                                }) : eI.default.Messages.NOTICE_DISPATCH_INSTALL_SCRIPT_PROGRESS.format({
+                                    progress: "".concat(ej),
+                                    total: "".concat(eF)
                                 }), (0, a.jsx)(u.Spinner, {
                                     type: u.Spinner.Type.PULSING_ELLIPSIS,
-                                    className: eI.ellipsis
+                                    className: eh.ellipsis
                                 })]
                             })]
                         });
-                    case ed.NoticeTypes.APPLICATION_TEST_MODE:
-                        if (null == eu.metadata) return null;
-                        if (null != ee.default.testModeEmbeddedApplicationId) return (0, a.jsx)(es.default, {
-                            color: es.NoticeColors.WARNING,
-                            children: (0, a.jsxs)(en.default, {
-                                justify: en.default.Justify.CENTER,
-                                align: en.default.Align.CENTER,
+                    case ec.NoticeTypes.APPLICATION_TEST_MODE:
+                        if (null == ed.metadata) return null;
+                        if (null != et.default.testModeEmbeddedApplicationId) return (0, a.jsx)(el.default, {
+                            color: el.NoticeColors.WARNING,
+                            children: (0, a.jsxs)(ea.default, {
+                                justify: ea.default.Justify.CENTER,
+                                align: ea.default.Align.CENTER,
                                 children: [(0, a.jsx)("div", {
-                                    children: e_.default.Messages.NOTICE_EMBEDDED_APPLICATION_TEST_MODE.format({
-                                        applicationName: eu.metadata.applicationName
+                                    children: eI.default.Messages.NOTICE_EMBEDDED_APPLICATION_TEST_MODE.format({
+                                        applicationName: ed.metadata.applicationName
                                     })
-                                }), (0, a.jsx)(es.NoticeCloseButton, {
+                                }), (0, a.jsx)(el.NoticeCloseButton, {
                                     onClick: N.reset,
-                                    noticeType: ed.NoticeTypes.APPLICATION_TEST_MODE
+                                    noticeType: ec.NoticeTypes.APPLICATION_TEST_MODE
                                 })]
                             })
                         });
-                        return (0, a.jsx)(es.default, {
-                            color: es.NoticeColors.WARNING,
-                            children: (0, a.jsxs)(en.default, {
-                                justify: en.default.Justify.CENTER,
-                                align: en.default.Align.CENTER,
+                        return (0, a.jsx)(el.default, {
+                            color: el.NoticeColors.WARNING,
+                            children: (0, a.jsxs)(ea.default, {
+                                justify: ea.default.Justify.CENTER,
+                                align: ea.default.Align.CENTER,
                                 children: [(0, a.jsx)("div", {
-                                    children: e_.default.Messages.NOTICE_APPLICATION_TEST_MODE.format({
-                                        applicationName: eu.metadata.applicationName
+                                    children: eI.default.Messages.NOTICE_APPLICATION_TEST_MODE.format({
+                                        applicationName: ed.metadata.applicationName
                                     })
-                                }), (0, a.jsx)(eo.default, {
-                                    dropdownSize: eo.TestModeSKUButtonEnums.DropdownSizes.SMALL,
-                                    className: eI.testModeSKUSelector,
-                                    color: eo.TestModeSKUButtonEnums.Colors.WHITE,
-                                    look: eo.TestModeSKUButtonEnums.Looks.OUTLINED,
-                                    size: eo.TestModeSKUButtonEnums.Sizes.MIN,
+                                }), (0, a.jsx)(eu.default, {
+                                    dropdownSize: eu.TestModeSKUButtonEnums.DropdownSizes.SMALL,
+                                    className: eh.testModeSKUSelector,
+                                    color: eu.TestModeSKUButtonEnums.Colors.WHITE,
+                                    look: eu.TestModeSKUButtonEnums.Looks.OUTLINED,
+                                    size: eu.TestModeSKUButtonEnums.Sizes.MIN,
                                     onSKUSelect: e => T.goToSKUStoreListing(e.id, {
                                         analyticsSource: {
                                             page: null,
-                                            section: ed.AnalyticsSections.NOTIFICATION_BAR,
-                                            object: ed.AnalyticsObjects.NAVIGATION_LINK
+                                            section: ec.AnalyticsSections.NOTIFICATION_BAR,
+                                            object: ec.AnalyticsObjects.NAVIGATION_LINK
                                         }
                                     }),
-                                    applicationId: eu.metadata.applicationId,
-                                    children: e_.default.Messages.NOTICE_APPLICATION_TEST_MODE_GO_TO_LISTING
-                                }), (0, a.jsx)(es.NoticeCloseButton, {
+                                    applicationId: ed.metadata.applicationId,
+                                    children: eI.default.Messages.NOTICE_APPLICATION_TEST_MODE_GO_TO_LISTING
+                                }), (0, a.jsx)(el.NoticeCloseButton, {
                                     onClick: N.reset,
-                                    noticeType: ed.NoticeTypes.APPLICATION_TEST_MODE
+                                    noticeType: ec.NoticeTypes.APPLICATION_TEST_MODE
                                 })]
                             })
                         });
-                    case ed.NoticeTypes.OUTBOUND_PROMOTION:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.PREMIUM_TIER_2,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                noticeType: ed.NoticeTypes.OUTBOUND_PROMOTION,
+                    case ec.NoticeTypes.OUTBOUND_PROMOTION:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.PREMIUM_TIER_2,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                noticeType: ec.NoticeTypes.OUTBOUND_PROMOTION,
                                 onClick: () => {
-                                    H.default.dismissOutboundPromotionNotice()
+                                    V.default.dismissOutboundPromotionNotice()
                                 }
-                            }), (0, a.jsx)(ea.default, {
-                                className: eI.premiumIcon
-                            }), e_.default.Messages.OUTBOUND_PROMOTION_NOTICE, (0, a.jsx)(es.PrimaryCTANoticeButton, {
-                                noticeType: ed.NoticeTypes.OUTBOUND_PROMOTION,
+                            }), (0, a.jsx)(es.default, {
+                                className: eh.premiumIcon
+                            }), eI.default.Messages.OUTBOUND_PROMOTION_NOTICE, (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                noticeType: ec.NoticeTypes.OUTBOUND_PROMOTION,
                                 onClick: () => {
-                                    el.default.track(ed.AnalyticEvents.OUTBOUND_PROMOTION_NOTICE_CLICKED), A.default.open(ed.UserSettingsSections.INVENTORY), H.default.dismissOutboundPromotionNotice()
+                                    ei.default.track(ec.AnalyticEvents.OUTBOUND_PROMOTION_NOTICE_CLICKED), A.default.open(ec.UserSettingsSections.INVENTORY), V.default.dismissOutboundPromotionNotice()
                                 },
-                                children: e_.default.Messages.TAKE_ME_THERE
+                                children: eI.default.Messages.TAKE_ME_THERE
                             })]
                         });
-                    case ed.NoticeTypes.VIEWING_ROLES:
-                        return (0, a.jsx)(F.default, {});
-                    case ed.NoticeTypes.PREMIUM_UNCANCEL:
-                        return (0, a.jsxs)(es.default, {
-                            color: eg === ec.PremiumTypes.TIER_1 ? es.NoticeColors.PREMIUM_TIER_1 : eg === ec.PremiumTypes.TIER_0 ? es.NoticeColors.PREMIUM_TIER_0 : es.NoticeColors.PREMIUM_TIER_2,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                noticeType: ed.NoticeTypes.PREMIUM_UNCANCEL,
+                    case ec.NoticeTypes.VIEWING_ROLES:
+                        return (0, a.jsx)(k.default, {});
+                    case ec.NoticeTypes.PREMIUM_UNCANCEL:
+                        return (0, a.jsxs)(el.default, {
+                            color: eR === eE.PremiumTypes.TIER_1 ? el.NoticeColors.PREMIUM_TIER_1 : eR === eE.PremiumTypes.TIER_0 ? el.NoticeColors.PREMIUM_TIER_0 : el.NoticeColors.PREMIUM_TIER_2,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                noticeType: ec.NoticeTypes.PREMIUM_UNCANCEL,
                                 onClick: () => {
                                     var e, t;
-                                    eT(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
+                                    em(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
                                 }
-                            }), (0, a.jsx)(ea.default, {
-                                className: eI.premiumIcon
-                            }), eg === ec.PremiumTypes.TIER_1 ? e_.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({
-                                daysLeft: eu.metadata.daysLeft
-                            }) : eg === ec.PremiumTypes.TIER_0 ? e_.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({
-                                daysLeft: eu.metadata.daysLeft
-                            }) : e_.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_TEXT.format({
-                                daysLeft: eu.metadata.daysLeft
-                            }), (0, a.jsx)(es.PrimaryCTANoticeButton, {
-                                noticeType: ed.NoticeTypes.PREMIUM_UNCANCEL,
+                            }), (0, a.jsx)(es.default, {
+                                className: eh.premiumIcon
+                            }), eR === eE.PremiumTypes.TIER_1 ? eI.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({
+                                daysLeft: ed.metadata.daysLeft
+                            }) : eR === eE.PremiumTypes.TIER_0 ? eI.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({
+                                daysLeft: ed.metadata.daysLeft
+                            }) : eI.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_TEXT.format({
+                                daysLeft: ed.metadata.daysLeft
+                            }), (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                noticeType: ec.NoticeTypes.PREMIUM_UNCANCEL,
                                 onClick: () => {
                                     var e, t;
-                                    eT(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), (0, u.openModalLazy)(async () => {
+                                    em(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), (0, u.openModalLazy)(async () => {
                                         let {
                                             default: e
                                         } = await n.el("67323").then(n.bind(n, "67323"));
                                         return t => (0, a.jsx)(e, {
                                             ...t,
-                                            daysLeft: eu.metadata.daysLeft,
-                                            premiumType: eg,
+                                            daysLeft: ed.metadata.daysLeft,
+                                            premiumType: eR,
                                             analyticsSource: "Nag Bar",
-                                            premiumSubscription: eu.metadata.premiumSubscription
+                                            premiumSubscription: ed.metadata.premiumSubscription
                                         })
                                     })
                                 },
-                                children: eg === ec.PremiumTypes.TIER_1 ? e_.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_BUTTON_TEXT : eg === ec.PremiumTypes.TIER_0 ? e_.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_BUTTON_TEXT : e_.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_BUTTON_TEXT
+                                children: eR === eE.PremiumTypes.TIER_1 ? eI.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_BUTTON_TEXT : eR === eE.PremiumTypes.TIER_0 ? eI.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_BUTTON_TEXT : eI.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_BUTTON_TEXT
                             })]
                         });
-                    case ed.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT:
+                    case ec.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT:
                         let {
-                            daysPastDue: ek, dismissUntil: eB
-                        } = eu.metadata;
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.WARNING,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                noticeType: eN,
+                            daysPastDue: eB, dismissUntil: ew
+                        } = ed.metadata;
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.WARNING,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                noticeType: eA,
                                 onClick: () => {
-                                    eT(eB)
+                                    em(ew)
                                 }
-                            }), e_.default.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT_NO_ACTION.format({
-                                daysPastDue: ek
-                            }), (0, a.jsx)(es.PrimaryCTANoticeButton, {
-                                noticeType: ed.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
+                            }), eI.default.Messages.PREMIUM_SUBSCRIPTION_ONE_TIME_PAYMENT_PAST_DUE_SUBSCRIPTION_TEXT_NO_ACTION.format({
+                                daysPastDue: eB
+                            }), (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                noticeType: ec.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
                                 onClick: () => {
-                                    eT(eB), A.default.open(ed.UserSettingsSections.SUBSCRIPTIONS)
+                                    em(ew), A.default.open(ec.UserSettingsSections.SUBSCRIPTIONS)
                                 },
-                                children: e_.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_RENEW_NOW_BUTTON_TEXT
+                                children: eI.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_RENEW_NOW_BUTTON_TEXT
                             })]
                         });
-                    case ed.NoticeTypes.PREMIUM_PAST_DUE_INVALID_PAYMENT:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.DANGER,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                noticeType: ed.NoticeTypes.PREMIUM_PAST_DUE_INVALID_PAYMENT,
+                    case ec.NoticeTypes.PREMIUM_PAST_DUE_INVALID_PAYMENT:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.DANGER,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                noticeType: ec.NoticeTypes.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                                 onClick: () => {
                                     var e, t;
-                                    eT(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
+                                    em(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
                                 }
-                            }), e_.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_TEXT, (0, a.jsx)(es.PrimaryCTANoticeButton, {
-                                noticeType: ed.NoticeTypes.PREMIUM_PAST_DUE_INVALID_PAYMENT,
+                            }), eI.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_TEXT, (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                noticeType: ec.NoticeTypes.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                                 onClick: () => {
                                     var e, t;
-                                    eT(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), A.default.open(ed.UserSettingsSections.SUBSCRIPTIONS)
+                                    em(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), A.default.open(ec.UserSettingsSections.SUBSCRIPTIONS)
                                 },
-                                children: e_.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT
+                                children: eI.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT
                             })]
                         });
-                    case ed.NoticeTypes.PREMIUM_PAST_DUE_MISSING_PAYMENT:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.WARNING,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                noticeType: ed.NoticeTypes.PREMIUM_PAST_DUE_MISSING_PAYMENT,
+                    case ec.NoticeTypes.PREMIUM_PAST_DUE_MISSING_PAYMENT:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.WARNING,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                noticeType: ec.NoticeTypes.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                                 onClick: () => {
                                     var e, t;
-                                    eT(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
+                                    em(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
                                 }
-                            }), e_.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_TEXT, (0, a.jsx)(es.PrimaryCTANoticeButton, {
-                                noticeType: ed.NoticeTypes.PREMIUM_PAST_DUE_MISSING_PAYMENT,
+                            }), eI.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_TEXT, (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                noticeType: ec.NoticeTypes.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                                 onClick: () => {
                                     var e, t;
-                                    eT(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), A.default.open(ed.UserSettingsSections.SUBSCRIPTIONS)
+                                    em(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), A.default.open(ec.UserSettingsSections.SUBSCRIPTIONS)
                                 },
-                                children: e_.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
+                                children: eI.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
                             })]
                         });
-                    case ed.NoticeTypes.PREMIUM_MISSING_PAYMENT:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.WARNING,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                noticeType: ed.NoticeTypes.PREMIUM_MISSING_PAYMENT,
+                    case ec.NoticeTypes.PREMIUM_MISSING_PAYMENT:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.WARNING,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                noticeType: ec.NoticeTypes.PREMIUM_MISSING_PAYMENT,
                                 onClick: () => {
                                     var e, t;
-                                    eT(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
+                                    em(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
                                 }
-                            }), eg === ec.PremiumTypes.TIER_1 ? e_.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_TEXT.format({
-                                daysLeft: eu.metadata.daysLeft
-                            }) : eg === ec.PremiumTypes.TIER_0 ? e_.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_TEXT.format({
-                                daysLeft: eu.metadata.daysLeft
-                            }) : e_.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_TEXT.format({
-                                daysLeft: eu.metadata.daysLeft
-                            }), (0, a.jsx)(es.PrimaryCTANoticeButton, {
-                                noticeType: ed.NoticeTypes.PREMIUM_MISSING_PAYMENT,
+                            }), eR === eE.PremiumTypes.TIER_1 ? eI.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_TEXT.format({
+                                daysLeft: ed.metadata.daysLeft
+                            }) : eR === eE.PremiumTypes.TIER_0 ? eI.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_TEXT.format({
+                                daysLeft: ed.metadata.daysLeft
+                            }) : eI.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_TEXT.format({
+                                daysLeft: ed.metadata.daysLeft
+                            }), (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                noticeType: ec.NoticeTypes.PREMIUM_MISSING_PAYMENT,
                                 onClick: () => {
                                     var e, t;
-                                    eT(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), A.default.open(ed.UserSettingsSections.SUBSCRIPTIONS)
+                                    em(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), A.default.open(ec.UserSettingsSections.SUBSCRIPTIONS)
                                 },
-                                children: eg === ec.PremiumTypes.TIER_1 ? e_.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT : eg === ec.PremiumTypes.TIER_0 ? e_.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT : e_.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
+                                children: eR === eE.PremiumTypes.TIER_1 ? eI.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT : eR === eE.PremiumTypes.TIER_0 ? eI.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT : eI.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
                             })]
                         });
-                    case ed.NoticeTypes.BACK_TO_PREVIOUS_SCREEN:
-                        return (0, a.jsx)(G.BackToPreviousScreenNotice, {
-                            buttonText: null !== (l = eu.buttonText) && void 0 !== l ? l : e_.default.Messages.GO_BACK,
-                            onGoBack: eu.callback,
-                            onDismiss: () => eT(),
+                    case ec.NoticeTypes.BACK_TO_PREVIOUS_SCREEN:
+                        return (0, a.jsx)(j.BackToPreviousScreenNotice, {
+                            buttonText: null !== (l = ed.buttonText) && void 0 !== l ? l : eI.default.Messages.GO_BACK,
+                            onGoBack: ed.callback,
+                            onDismiss: () => em(),
                             showCloseButton: !0
                         });
-                    case ed.NoticeTypes.AUTOMOD_QUARANTINED_USER_PROFILE: {
+                    case ec.NoticeTypes.AUTOMOD_QUARANTINED_USER_PROFILE: {
                         let e = {
-                            page: ed.AnalyticsPages.IN_APP
+                            page: ec.AnalyticsPages.IN_APP
                         };
-                        return (0, a.jsx)(P.default, {
+                        return (0, a.jsx)(y.default, {
                             guildId: g,
-                            analyticsLocations: eS,
+                            analyticsLocations: eN,
                             analyticsLocation: e
                         })
                     }
-                    case ed.NoticeTypes.QUARANTINED:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.CUSTOM,
-                            className: eI.quarantineNotice,
-                            children: [e_.default.Messages.LIMITED_ACCESS_NAG_BAR_NOTICE, (0, a.jsx)(es.NoticeButtonAnchor, {
-                                href: eE.QUARANTINE_APPEAL_LINK,
+                    case ec.NoticeTypes.QUARANTINED:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.CUSTOM,
+                            className: eh.quarantineNotice,
+                            children: [eI.default.Messages.LIMITED_ACCESS_NAG_BAR_NOTICE, (0, a.jsx)(el.NoticeButtonAnchor, {
+                                href: ef.QUARANTINE_APPEAL_LINK,
                                 target: "_blank",
-                                children: e_.default.Messages.LIMITED_ACCESS_NAG_BAR_APPEAL
+                                children: eI.default.Messages.LIMITED_ACCESS_NAG_BAR_APPEAL
                             }), (0, a.jsx)(u.Anchor, {
-                                href: ei.default.getArticleURL(ed.HelpdeskArticles.QUARANTINE),
+                                href: er.default.getArticleURL(ec.HelpdeskArticles.QUARANTINE),
                                 target: "_blank",
-                                className: eI.quarantineLearnMoreLink,
-                                children: e_.default.Messages.LEARN_MORE
+                                className: eh.quarantineLearnMoreLink,
+                                children: eI.default.Messages.LEARN_MORE
                             })]
                         });
-                    case ed.NoticeTypes.BLOCKED_BY_PROXY:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.WARNING,
-                            children: [e_.default.Messages.BLOCKED_BY_PROXY_NOTICE, (0, a.jsx)(es.NoticeButtonAnchor, {
-                                href: "".concat(ed.Links.STATUS),
-                                children: e_.default.Messages.LEARN_MORE
-                            }), (0, a.jsx)(es.NoticeCloseButton, {
-                                onClick: () => eT(),
-                                noticeType: ed.NoticeTypes.BLOCKED_BY_PROXY
+                    case ec.NoticeTypes.BLOCKED_BY_PROXY:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.WARNING,
+                            children: [eI.default.Messages.BLOCKED_BY_PROXY_NOTICE, (0, a.jsx)(el.NoticeButtonAnchor, {
+                                href: "".concat(ec.Links.STATUS),
+                                children: eI.default.Messages.LEARN_MORE
+                            }), (0, a.jsx)(el.NoticeCloseButton, {
+                                onClick: () => em(),
+                                noticeType: ec.NoticeTypes.BLOCKED_BY_PROXY
                             })]
                         });
-                    case ed.NoticeTypes.DROPS_PROGRESS_INTERRUPTION:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.DANGER,
-                            children: [e_.default.Messages.DROPS_PROGRESS_INTERRUPTION_WARNING.format({
-                                gameTitle: eu.metadata.gameTitle
-                            }), (0, a.jsx)(es.NoticeButton, {
-                                onClick: eu.metadata.reloadCallback,
-                                children: e_.default.Messages.ERRORS_RESTART_APP
+                    case ec.NoticeTypes.DROPS_PROGRESS_INTERRUPTION:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.DANGER,
+                            children: [eI.default.Messages.DROPS_PROGRESS_INTERRUPTION_WARNING.format({
+                                gameTitle: ed.metadata.gameTitle
+                            }), (0, a.jsx)(el.NoticeButton, {
+                                onClick: ed.metadata.reloadCallback,
+                                children: eI.default.Messages.ERRORS_RESTART_APP
                             })]
                         });
-                    case ed.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION:
+                    case ec.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION:
                         let {
-                            dismissUntil: ew, decisionId: eH
-                        } = eu.metadata;
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.WARNING,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                noticeType: ed.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION,
+                            dismissUntil: eH, decisionId: eV
+                        } = ed.metadata;
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.WARNING,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                noticeType: ec.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION,
                                 onClick: () => {
-                                    null != g && (0, x.clearMentionRaidDetected)(g), eT(ew)
+                                    null != g && (0, P.clearMentionRaidDetected)(g), em(eH)
                                 }
-                            }), e_.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_MESSAGE, (0, a.jsx)(es.NoticeButton, {
+                            }), eI.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_MESSAGE, (0, a.jsx)(el.NoticeButton, {
                                 onClick: () => {
-                                    null != g && (0, x.removeMentionRaidRestrictionWithFeedback)(g, eH, () => {
-                                        eT(ew), (0, x.clearMentionRaidDetected)(g)
+                                    null != g && (0, P.removeMentionRaidRestrictionWithFeedback)(g, eV, () => {
+                                        em(eH), (0, P.clearMentionRaidDetected)(g)
                                     })
                                 },
-                                children: e_.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
-                            }), null != g ? (0, a.jsx)(es.NoticeButton, {
-                                onClick: () => j.default.open(g, ed.GuildSettingsSections.GUILD_AUTOMOD, void 0, ed.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM),
-                                children: e_.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
+                                children: eI.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
+                            }), null != g ? (0, a.jsx)(el.NoticeButton, {
+                                onClick: () => F.default.open(g, ec.GuildSettingsSections.GUILD_AUTOMOD, void 0, ec.GuildSettingsSubsections.AUTOMOD_MENTION_SPAM),
+                                children: eI.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
                             }) : null]
                         });
-                    case ed.NoticeTypes.SAFETY_USER_SENTIMENT_NAGBAR:
-                        return (0, a.jsxs)(es.default, {
-                            color: es.NoticeColors.BRAND,
-                            children: [(0, a.jsx)(es.NoticeCloseButton, {
-                                noticeType: ed.NoticeTypes.SAFETY_USER_SENTIMENT_NAGBAR,
+                    case ec.NoticeTypes.SAFETY_USER_SENTIMENT_NAGBAR:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.BRAND,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                noticeType: ec.NoticeTypes.SAFETY_USER_SENTIMENT_NAGBAR,
                                 onClick: () => {
-                                    Y.markNoticeDismissed(), eT()
+                                    W.markNoticeDismissed(), em()
                                 }
-                            }), e_.default.Messages.SAFETY_USER_SENTIMENT_NOTICE, (0, a.jsx)(es.PrimaryCTANoticeButton, {
-                                noticeType: ed.NoticeTypes.SAFETY_USER_SENTIMENT_NAGBAR,
+                            }), eI.default.Messages.SAFETY_USER_SENTIMENT_NOTICE, (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                noticeType: ec.NoticeTypes.SAFETY_USER_SENTIMENT_NAGBAR,
                                 onClick: () => {
                                     (0, u.openModalLazy)(async () => {
                                         let {
@@ -2909,30 +2910,30 @@
                                         return t => (0, a.jsx)(e, {
                                             ...t
                                         })
-                                    }), Y.markNoticeDismissed(), eT()
+                                    }), W.markNoticeDismissed(), em()
                                 },
-                                children: e_.default.Messages.SAFETY_USER_SENTIMENT_NOTICE_CTA
+                                children: eI.default.Messages.SAFETY_USER_SENTIMENT_NOTICE_CTA
                             })]
                         });
-                    case ed.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING:
-                        let eV = i().add(5, "days").toDate();
-                        return (0, a.jsx)(V.default, {
+                    case ec.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING:
+                        let eY = i().add(5, "days").toDate();
+                        return (0, a.jsx)(Y.default, {
                             dismissCurrentNotice: () => {
-                                (0, L.markDismissibleContentAsDismissed)(et.typeToDismissibleContent[ed.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING]), eT(eV)
+                                (0, L.markDismissibleContentAsDismissed)(en.typeToDismissibleContent[ec.NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING]), em(eY)
                             },
-                            subscriptionTier: ec.PremiumSubscriptionSKUs.TIER_2
+                            subscriptionTier: eE.PremiumSubscriptionSKUs.TIER_2
                         });
                     default:
                         return null
                 }
             });
 
-            function eS() {
+            function eN() {
                 let {
                     AnalyticsLocationProvider: e
                 } = (0, R.default)(g.default.NOTICE);
                 return (0, a.jsx)(e, {
-                    children: (0, a.jsx)(em, {})
+                    children: (0, a.jsx)(eS, {})
                 })
             }
         },
@@ -8761,11 +8762,11 @@
         },
         799286: function(e, t, n) {
             "use strict";
-            n.r(t), n("794897"), n("203288"), n("996777"), n("178406"), n("123561"), n("288518"), n("486503"), n("822825"), n("256572"), n("713135"), n("42203"), n("760190"), n("245997"), n("923959"), n("26989"), n("778689"), n("952451"), n("305961"), n("377253"), n("957255"), n("660478"), n("677099"), n("697218"), n("607620"), n("287850")
+            n.r(t), n("794897"), n("203288"), n("789563"), n("178406"), n("123561"), n("288518"), n("486503"), n("822825"), n("256572"), n("713135"), n("42203"), n("760190"), n("245997"), n("923959"), n("26989"), n("778689"), n("952451"), n("305961"), n("377253"), n("957255"), n("660478"), n("677099"), n("697218"), n("607620"), n("287850")
         },
         684442: function(e, t, n) {
             "use strict";
-            n.r(t), n("218484"), n("191225"), n("794897"), n("846527"), n("8001"), n("246598"), n("988721"), n("166004"), n("383018"), n("299285"), n("56676"), n("194051"), n("809310"), n("288206"), n("191145"), n("203288"), n("670535"), n("385976"), n("802461"), n("996777"), n("670902"), n("430475"), n("324261"), n("419501"), n("994810"), n("449004"), n("954732"), n("612365"), n("263901"), n("54346"), n("619259"), n("558130"), n("887446"), n("720102"), n("982527"), n("178406"), n("863636"), n("471706"), n("565559"), n("665274"), n("648825"), n("256941"), n("398604"), n("123561"), n("62948"), n("166465"), n("267567"), n("921387"), n("275318"), n("94372"), n("83722"), n("288518"), n("486503"), n("692171"), n("770032"), n("136511"), n("25033"), n("400205"), n("140596"), n("116460"), n("138217"), n("685841"), n("256572"), n("764828"), n("662285"), n("488464"), n("325861"), n("77173"), n("834052"), n("364685"), n("347738"), n("401690"), n("689275"), n("821343"), n("755624"), n("593752"), n("800843"), n("610730"), n("612246"), n("521128"), n("915639"), n("161778"), n("374363"), n("453515"), n("407117"), n("410348"), n("373469"), n("271938"), n("950104"), n("870691"), n("935692"), n("19766"), n("508229"), n("2105"), n("42203"), n("816092"), n("47319"), n("350522"), n("368694"), n("313915"), n("474643"), n("760190"), n("319781"), n("925758"), n("55411"), n("555826"), n("341542"), n("245997"), n("923959"), n("525065"), n("124948"), n("26989"), n("778689"), n("952451"), n("305961"), n("10802"), n("88093"), n("353802"), n("330154"), n("216391"), n("260320"), n("169602"), n("42887"), n("486996"), n("377253"), n("555179"), n("1017"), n("130473"), n("957255"), n("669280"), n("824563"), n("336376"), n("501090"), n("945956"), n("660478"), n("27618"), n("744983"), n("18494"), n("162771"), n("101125"), n("235660"), n("677099"), n("280168"), n("262768"), n("336727"), n("381684"), n("191542"), n("462495"), n("282109"), n("330387"), n("697218"), n("555035"), n("800762"), n("160299"), n("572182"), n("150057"), n("607620"), n("677225"), n("287850"), n("316133"), n("545429"), n("535974"), n("352326"), n("227602"), n("189857"), n("860957"), n("901165")
+            n.r(t), n("218484"), n("191225"), n("794897"), n("846527"), n("8001"), n("246598"), n("988721"), n("166004"), n("383018"), n("299285"), n("56676"), n("194051"), n("809310"), n("288206"), n("191145"), n("203288"), n("670535"), n("385976"), n("802461"), n("789563"), n("670902"), n("430475"), n("324261"), n("419501"), n("994810"), n("449004"), n("954732"), n("612365"), n("263901"), n("54346"), n("619259"), n("558130"), n("887446"), n("720102"), n("982527"), n("178406"), n("863636"), n("471706"), n("565559"), n("665274"), n("648825"), n("256941"), n("398604"), n("123561"), n("62948"), n("166465"), n("267567"), n("921387"), n("275318"), n("94372"), n("83722"), n("288518"), n("486503"), n("692171"), n("770032"), n("136511"), n("25033"), n("400205"), n("140596"), n("116460"), n("138217"), n("685841"), n("256572"), n("764828"), n("662285"), n("488464"), n("325861"), n("77173"), n("834052"), n("364685"), n("347738"), n("401690"), n("689275"), n("821343"), n("755624"), n("593752"), n("800843"), n("610730"), n("612246"), n("521128"), n("915639"), n("161778"), n("374363"), n("453515"), n("407117"), n("410348"), n("373469"), n("271938"), n("950104"), n("870691"), n("935692"), n("19766"), n("508229"), n("2105"), n("42203"), n("816092"), n("47319"), n("350522"), n("368694"), n("313915"), n("474643"), n("760190"), n("319781"), n("925758"), n("55411"), n("555826"), n("341542"), n("245997"), n("923959"), n("525065"), n("124948"), n("26989"), n("778689"), n("952451"), n("305961"), n("10802"), n("88093"), n("353802"), n("330154"), n("216391"), n("260320"), n("169602"), n("42887"), n("486996"), n("377253"), n("555179"), n("1017"), n("130473"), n("957255"), n("669280"), n("824563"), n("336376"), n("501090"), n("945956"), n("660478"), n("27618"), n("744983"), n("18494"), n("162771"), n("101125"), n("235660"), n("677099"), n("280168"), n("262768"), n("336727"), n("381684"), n("191542"), n("462495"), n("282109"), n("330387"), n("697218"), n("555035"), n("800762"), n("160299"), n("572182"), n("150057"), n("607620"), n("677225"), n("287850"), n("316133"), n("545429"), n("535974"), n("352326"), n("227602"), n("189857"), n("860957"), n("901165")
         },
         489560: function(e, t, n) {
             "use strict";
@@ -16177,23 +16178,6 @@
                     })]
                 })
             }
-        },
-        20394: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                ExperimentStore: function() {
-                    return l.default
-                }
-            });
-            var a = n("848601");
-            n.es(a, t);
-            var s = n("442437");
-            n.es(s, t), n("366648"), n("555901"), n("998667");
-            var l = n("996777")
-        },
-        555901: function(e, t, n) {
-            "use strict";
-            n.r(t), n("884691"), n("446674"), n("286235"), n("442437"), n("996777"), n("848601")
         },
         587233: function(e, t, n) {
             "use strict";

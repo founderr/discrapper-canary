@@ -9727,7 +9727,7 @@
             function d() {
                 var e, t, s, n, d, u, c, S, E;
                 let T = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    f = (e = "822ce3c5d9f6f924d6fa429f4e032d9c3593a67a", e.substring(0, 7)),
+                    f = (e = "b2565baecf488cd7bf86e04a258f2c715629f065", e.substring(0, 7)),
                     m = null === (t = r.default) || void 0 === t ? void 0 : t.remoteApp.getVersion(),
                     _ = null === (n = r.default) || void 0 === n ? void 0 : null === (s = (d = n.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(d),
                     I = null === (c = r.default) || void 0 === c ? void 0 : null === (u = (S = c.remoteApp).getAppArch) || void 0 === u ? void 0 : u.call(S),
@@ -9740,7 +9740,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [T, " ", "242434", " ", (0, a.jsxs)("span", {
+                        children: [T, " ", "242439", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", f, ")"]
                         })]
@@ -19234,13 +19234,13 @@
                 i = s.n(l),
                 r = s("446674"),
                 o = s("77078"),
-                d = s("442437"),
-                u = s("996777"),
+                d = s("211470"),
+                u = s("789563"),
                 c = s("305961"),
                 S = s("810567"),
                 E = s("843039"),
                 T = s("327350"),
-                f = s("848601"),
+                f = s("565034"),
                 m = s("477774");
 
             function _(e, t) {
@@ -24742,9 +24742,9 @@
             });
             var a = s("917351"),
                 n = s.n(a),
-                l = s("442437"),
+                l = s("211470"),
                 i = s("760190"),
-                r = s("848601");
+                r = s("565034");
 
             function o(e) {
                 for (let t of e) {
