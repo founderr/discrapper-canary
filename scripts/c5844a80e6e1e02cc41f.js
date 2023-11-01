@@ -16413,32 +16413,34 @@
                         children: (0, a.jsx)(A.default, {
                             children: (0, a.jsx)(c.ThemeContextProvider, {
                                 theme: e,
-                                children: (0, a.jsx)("div", {
-                                    "data-popout-root": !0,
-                                    ref: this.rootRef,
-                                    className: i((0, b.getThemeClass)(e), (0, I.default)(), M, g),
-                                    children: (0, a.jsx)(c.FocusRingScope, {
-                                        containerRef: this.rootRef,
-                                        children: (0, a.jsx)(m.default, {
-                                            children: (0, a.jsxs)(T.default, {
-                                                children: [(0, a.jsx)(j.MaskLibrary, {}), (0, a.jsx)(h.AppWindowContextProvider, {
-                                                    appContext: w.AppContext.POPOUT,
-                                                    renderWindow: C,
-                                                    children: (0, a.jsxs)(y.AppLayerProvider, {
-                                                        children: [(0, a.jsxs)("div", {
-                                                            className: G.popout,
-                                                            children: [S && null != v ? (0, a.jsx)(x.default, {
-                                                                focused: n,
-                                                                type: v,
-                                                                windowKey: r,
-                                                                macOSFrame: !0
-                                                            }) : null, (0, a.jsx)("div", {
-                                                                className: i(G.content, N),
-                                                                children: s
-                                                            })]
-                                                        }), (0, a.jsx)(c.Modals, {}), (0, a.jsx)(f.default, {}), (0, a.jsx)(y.AppLayerContainer, {})]
-                                                    })
-                                                })]
+                                children: (0, a.jsx)(c.RedesignIconContextProvider, {
+                                    children: (0, a.jsx)("div", {
+                                        "data-popout-root": !0,
+                                        ref: this.rootRef,
+                                        className: i((0, b.getThemeClass)(e), (0, I.default)(), M, g),
+                                        children: (0, a.jsx)(c.FocusRingScope, {
+                                            containerRef: this.rootRef,
+                                            children: (0, a.jsx)(m.default, {
+                                                children: (0, a.jsxs)(T.default, {
+                                                    children: [(0, a.jsx)(j.MaskLibrary, {}), (0, a.jsx)(h.AppWindowContextProvider, {
+                                                        appContext: w.AppContext.POPOUT,
+                                                        renderWindow: C,
+                                                        children: (0, a.jsxs)(y.AppLayerProvider, {
+                                                            children: [(0, a.jsxs)("div", {
+                                                                className: G.popout,
+                                                                children: [S && null != v ? (0, a.jsx)(x.default, {
+                                                                    focused: n,
+                                                                    type: v,
+                                                                    windowKey: r,
+                                                                    macOSFrame: !0
+                                                                }) : null, (0, a.jsx)("div", {
+                                                                    className: i(G.content, N),
+                                                                    children: s
+                                                                })]
+                                                            }), (0, a.jsx)(c.Modals, {}), (0, a.jsx)(f.default, {}), (0, a.jsx)(y.AppLayerContainer, {})]
+                                                        })
+                                                    })]
+                                                })
                                             })
                                         })
                                     })
