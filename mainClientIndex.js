@@ -59,7 +59,7 @@
                 "use strict";
                 t.r(a), t.d(a, {
                     default: function() {
-                        return f
+                        return u
                     }
                 });
                 var s = t("37983"),
@@ -77,7 +77,7 @@
                         })
                     }
                 }
-                var f = l
+                var u = l
             },
             474557: function(e, a, t) {
                 "use strict";
@@ -109,8 +109,8 @@
                     r = t("817792"),
                     o = t("815157"),
                     l = t("391679"),
-                    f = t("446674"),
-                    u = t("95410"),
+                    u = t("446674"),
+                    f = t("95410"),
                     p = t("795137"),
                     b = t("837319"),
                     h = t("73749"),
@@ -362,11 +362,11 @@
                             })
                         }), (0, s.jsxs)(m.default, {
                             skipsSettingDefaultPageTitle: d,
-                            children: [e, R.isPlatformEmbedded && (t === _.MigrationStatus.NOT_STARTED || t === _.MigrationStatus.IN_PROGRESS) && !0 !== u.default.get(r.DOMAIN_MIGRATION_SUCCESS_KEY) ? (0, s.jsx)(E.default, {}) : null]
+                            children: [e, R.isPlatformEmbedded && (t === _.MigrationStatus.NOT_STARTED || t === _.MigrationStatus.IN_PROGRESS) && !0 !== f.default.get(r.DOMAIN_MIGRATION_SUCCESS_KEY) ? (0, s.jsx)(E.default, {}) : null]
                         })
                     }
                 }
-                var q = f.default.connectStores([I.default, _.default], () => ({
+                var q = u.default.connectStores([I.default, _.default], () => ({
                     isAuthenticated: I.default.isAuthenticated(),
                     migrationStatus: _.default.getMigrationStatus()
                 }), {
@@ -392,8 +392,8 @@
                 var s, d, n, i, c, r, o = t("37983");
                 t("320777"), t("884691");
                 var l = t("288661"),
-                    f = t("627445"),
-                    u = t.n(f),
+                    u = t("627445"),
+                    f = t.n(u),
                     p = t("521143"),
                     b = t("938460"),
                     h = t("156820"),
@@ -419,7 +419,7 @@
                     P = t("117041"),
                     y = t("605250");
                 let k = document.getElementById("app-mount");
-                u(null != k, "Could not find app-mount"), k.className = __OVERLAY__ ? "" : M.appMount;
+                f(null != k, "Could not find app-mount"), k.className = __OVERLAY__ ? "" : M.appMount;
                 let x = (0, l.createRoot)(k),
                     U = e => x.render((0, o.jsx)(L.default, {
                         children: (0, o.jsx)(D.default, {
@@ -647,7 +647,7 @@
                 "use strict";
                 t.r(a), t.d(a, {
                     default: function() {
-                        return u
+                        return f
                     }
                 });
                 var s = t("884691"),
@@ -659,12 +659,12 @@
                     o = t("50361"),
                     l = t("49111");
 
-                function f(e) {
+                function u(e) {
                     var a;
                     return null == e ? void 0 : null === (a = e._state) || void 0 === a ? void 0 : a.lastTestTimestamp
                 }
 
-                function u() {
+                function f() {
                     return s.useEffect(() => {
                         window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN && !0 !== n.default.get(d.DOMAIN_MIGRATION_SUCCESS_KEY) && r.default.supportsFeature(l.NativeFeatures.USER_DATA_CACHE) && (o.migrate(), i.default.userDataCache.getCached().then(e => {
                             if (null == e) {
@@ -680,15 +680,15 @@
                                 t = 0 !== a.length,
                                 s = null != e.token,
                                 r = null == e.RTCRegionStore ? null : JSON.parse(e.RTCRegionStore),
-                                u = null == r || null == f(r) || f(r) <= f(n.default.get("RTCRegionStore"));
-                            t && s && !u && (n.default.clear(), a.forEach(a => {
+                                f = null == r || null == u(r) || u(r) <= u(n.default.get("RTCRegionStore"));
+                            t && s && !f && (n.default.clear(), a.forEach(a => {
                                 let t = e[a];
                                 try {
                                     n.default.set(a, JSON.parse(t))
                                 } catch (e) {}
                             })), c.default.track(l.AnalyticEvents.DOMAIN_MIGRATED, {
                                 success: !0,
-                                current_is_newer: u,
+                                current_is_newer: f,
                                 has_data: t
                             }, {
                                 flush: !0
@@ -712,8 +712,8 @@
                     r = t("872717"),
                     o = t("784063"),
                     l = t("625454"),
-                    f = t("441822"),
-                    u = t("862337"),
+                    u = t("441822"),
+                    f = t("862337"),
                     p = t("913144"),
                     b = t("605250"),
                     h = t("271938"),
@@ -724,7 +724,7 @@
                     g = t("49111"),
                     I = t("353927");
                 let T = {},
-                    O = new u.Timeout,
+                    O = new f.Timeout,
                     v = !1,
                     R = window.document.createElement("canvas");
                 R.width = 512, R.height = 288;
@@ -766,7 +766,7 @@
                                     !d && l.default.removeSink(e, T)
                                 })
                             } : function(e, a) {
-                                let t = (0, f.getVideoStream)(e);
+                                let t = (0, u.getVideoStream)(e);
                                 if (null == t) return Promise.resolve(new ImageData(0, 0));
                                 let {
                                     width: s,
@@ -870,8 +870,8 @@
                     r = t("268491"),
                     o = t("373469"),
                     l = t("271938"),
-                    f = t("374014"),
-                    u = t("16916"),
+                    u = t("374014"),
+                    f = t("16916"),
                     p = t("49111"),
                     b = t("353927");
                 class h {
@@ -961,7 +961,7 @@
                                 null != a && (0, n.setStreamPaused)(a, !0);
                                 break;
                             case c.StreamDirectorActionType.STOP:
-                                null != a && (0, u.default)(a);
+                                null != a && (0, f.default)(a);
                                 break;
                             default:
                                 throw Error("unhandled stream action: ".concat(e.type))
@@ -993,7 +993,7 @@
                                 pid: d,
                                 sourceId: n,
                                 audioSourceId: c
-                            } = e, r = l.default.getId(), o = (0, f.encodeStreamKey)({
+                            } = e, r = l.default.getId(), o = (0, u.encodeStreamKey)({
                                 streamType: a,
                                 guildId: t,
                                 channelId: s,
@@ -1099,8 +1099,8 @@
                     r = t("135230"),
                     o = t("316272"),
                     l = t("701909"),
-                    f = t("49111"),
-                    u = t("782340");
+                    u = t("49111"),
+                    f = t("782340");
                 class p extends o.default {
                     _initialize() {
                         c.default.subscribe("MEDIA_ENGINE_PERMISSION", this.handlePermission)
@@ -1113,14 +1113,14 @@
                             let {
                                 kind: a,
                                 granted: t
-                            } = e, d = "Firefox" === n.name ? f.HelpdeskArticles.ENABLE_MIC_FIREFOX : f.HelpdeskArticles.ENABLE_MIC_CHROME;
+                            } = e, d = "Firefox" === n.name ? u.HelpdeskArticles.ENABLE_MIC_FIREFOX : u.HelpdeskArticles.ENABLE_MIC_CHROME;
                             if (!t) {
                                 let e = "audio" !== a;
                                 (0, i.openModal)(a => (0, s.jsx)(r.default, {
-                                    title: e ? u.default.Messages.NO_CAMERA_TITLE : u.default.Messages.NO_MIC_TITLE,
-                                    body: e ? u.default.Messages.NO_CAMERA_BODY : u.default.Messages.NO_MIC_BODY,
+                                    title: e ? f.default.Messages.NO_CAMERA_TITLE : f.default.Messages.NO_MIC_TITLE,
+                                    body: e ? f.default.Messages.NO_CAMERA_BODY : f.default.Messages.NO_MIC_BODY,
                                     onConfirm: () => window.open(l.default.getArticleURL(d), "_blank"),
-                                    confirmText: u.default.Messages.HELP_DESK,
+                                    confirmText: f.default.Messages.HELP_DESK,
                                     ...a
                                 }))
                             }
@@ -1242,8 +1242,8 @@
                     r = t("693051"),
                     o = t("153498"),
                     l = t("446411"),
-                    f = t("934306"),
-                    u = t("742171"),
+                    u = t("934306"),
+                    f = t("742171"),
                     p = t("393027"),
                     b = t("393414"),
                     h = t("49111"),
@@ -1260,7 +1260,7 @@
                                 pathname: t
                             } = e, s = (0, r.getRootNavigationRef)(), n = (0, i.isInMainTabsExperiment)();
                             if (null != s && s.isReady()) {
-                                if (n && (0, f.isSplitMessagesTab)() && t === h.Routes.ME) {
+                                if (n && (0, u.isSplitMessagesTab)() && t === h.Routes.ME) {
                                     (0, o.navigateToRootTab)({
                                         screen: "messages",
                                         resetRoot: e.navigationReplace
@@ -1306,7 +1306,7 @@
                                             voiceChannelId: t,
                                             voiceMessageId: s
                                         } = i.params;
-                                        !(0, u.isVoicePanelEnabled)() && (0, o.navigateToChannel)({
+                                        !(0, f.isVoicePanelEnabled)() && (0, o.navigateToChannel)({
                                             channelId: t,
                                             guildId: a,
                                             messageId: s,
@@ -1320,7 +1320,7 @@
                                             guildId: s,
                                             messageId: d
                                         } = a.params;
-                                        if (!(0, f.isSplitMessagesTab)()) {
+                                        if (!(0, u.isSplitMessagesTab)()) {
                                             (0, o.navigateToRootTab)({
                                                 screen: "guilds",
                                                 guildId: s,
@@ -1328,7 +1328,7 @@
                                             });
                                             return
                                         }
-                                        null == t || (0, f.shouldHandleNewPanelsRoute)(s) || (0, l.isOnGlobalPanels)() && !1 !== e.navigationReplace ? s === h.ME ? (0, o.navigateToRootTab)({
+                                        null == t || (0, u.shouldHandleNewPanelsRoute)(s) || (0, l.isOnGlobalPanels)() && !1 !== e.navigationReplace ? s === h.ME ? (0, o.navigateToRootTab)({
                                             screen: "messages",
                                             resetRoot: e.navigationReplace
                                         }) : (0, o.navigateToRootTab)({
@@ -1585,8 +1585,8 @@
                     r = t("629109"),
                     o = t("987317"),
                     l = t("316272"),
-                    f = t("830210"),
-                    u = t("289180"),
+                    u = t("830210"),
+                    f = t("289180"),
                     p = t("289656"),
                     b = t("727284"),
                     h = t("42203"),
@@ -1631,11 +1631,11 @@
                                 s = j.default.isVideoEnabled(),
                                 d = j.default.isVideoAvailable(),
                                 n = h.default.getChannel(e),
-                                i = null == n || (0, u.getVideoPermission)(n),
+                                i = null == n || (0, f.getVideoPermission)(n),
                                 {
                                     reachedLimit: c,
                                     limit: r
-                                } = null != n ? (0, f.getChannelVideoLimit)(n) : {
+                                } = null != n ? (0, u.getChannelVideoLimit)(n) : {
                                     reachedLimit: void 0,
                                     limit: void 0
                                 },
@@ -1909,10 +1909,10 @@
                         return o
                     },
                     getPlatformReadableName: function() {
-                        return f
+                        return u
                     },
                     getCurrentPlatformDownloadURL: function() {
-                        return u
+                        return f
                     },
                     getMobileDownloadLink: function() {
                         return p
@@ -1938,7 +1938,7 @@
                     return null == a ? "win" : -1 !== a.indexOf("Ubuntu") || -1 !== a.indexOf("Debian") || -1 !== a.indexOf("Fedora") || -1 !== a.indexOf("Red Hat") || -1 !== a.indexOf("SuSE") || -1 !== a.indexOf("Linux") ? r : -1 !== a.indexOf("OS X") ? "osx" : "win"
                 }
 
-                function f(e) {
+                function u(e) {
                     return ({
                         win: "Windows",
                         osx: "Mac",
@@ -1946,7 +1946,7 @@
                     })[l(e)]
                 }
 
-                function u() {
+                function f() {
                     let e = l(),
                         a = e === r ? "tar.gz" : null;
                     return o(e, !1, a)
@@ -2052,19 +2052,19 @@
                 }
             }
         },
-        f = {};
+        u = {};
 
-    function u(e) {
-        var a = f[e];
+    function f(e) {
+        var a = u[e];
         if (void 0 !== a) return a.exports;
-        var t = f[e] = {
+        var t = u[e] = {
             id: e,
             loaded: !1,
             exports: {}
         };
-        return l[e](t, t.exports, u), t.loaded = !0, t.exports
+        return l[e](t, t.exports, f), t.loaded = !0, t.exports
     }
-    u.m = l, u.c = f, u.es = function(e, a) {
+    f.m = l, f.c = u, f.es = function(e, a) {
         return Object.keys(e).forEach(function(t) {
             "default" !== t && !Object.prototype.hasOwnProperty.call(a, t) && Object.defineProperty(a, t, {
                 enumerable: !0,
@@ -2644,20 +2644,20 @@
         997510: ["47362", "app"],
         998730: ["50183", "app", "shared"],
         999391: ["88934", "app"]
-    }, u.el = function(a) {
+    }, f.el = function(a) {
         var t = e[a];
-        return void 0 === t ? Promise.resolve() : t.length > 1 ? Promise.all(t.map(u.e)) : u.e(t[0])
-    }, u.f = {}, u.e = function(e) {
-        return Promise.all(Object.keys(u.f).reduce(function(a, t) {
-            return u.f[t](e, a), a
+        return void 0 === t ? Promise.resolve() : t.length > 1 ? Promise.all(t.map(f.e)) : f.e(t[0])
+    }, f.f = {}, f.e = function(e) {
+        return Promise.all(Object.keys(f.f).reduce(function(a, t) {
+            return f.f[t](e, a), a
         }, []))
-    }, u.p = "/assets/", u.u = function(e) {
+    }, f.p = "/assets/", f.u = function(e) {
         return ({
             10093: "cba4461b2d698193e845.js",
             10094: "a78d3168ab6e1d6765e1.js",
             10478: "5237a82724487319b66b.js",
             10656: "35871a4a23b004a3af97.js",
-            10821: "0b5bb1847523870f85b6.js",
+            10821: "8e4d567877bfbbdba027.js",
             11020: "b747b8d3b15cc6562922.js",
             11047: "bb4330a79322396e4040.js",
             11048: "cec923330960ea33550a.js",
@@ -2697,7 +2697,7 @@
             1639: "d274fb78f11f177df360.js",
             1640: "4a4b6c8e702bff84e2bb.js",
             16567: "3a802f235a01c3b4b3f5.js",
-            16959: "17a82fb464d76b923b20.js",
+            16959: "7dcb535ca20a56681189.js",
             17005: "62c74751447c1dc9692c.js",
             17369: "db46273fd4d788e15d96.js",
             17523: "1c3b381ddc3e0b2f2c90.js",
@@ -2776,7 +2776,7 @@
             27119: "40dc67421ab5d6850277.js",
             2712: "cae7a4ee7ddb48f0c137.js",
             27470: "29a7f4a3c1a2f900f86d.js",
-            27545: "763ef2f43f8e2b6414b1.js",
+            27545: "3f3d9da94a6bfbb5caa5.js",
             27665: "a0e371393c3d3b212d2d.js",
             27949: "afee2c2f3f15a981af84.js",
             28085: "83a58239409aaf78d7f0.js",
@@ -2798,7 +2798,7 @@
             29473: "0ed2ed5a9dbab0c6f893.js",
             29867: "3e561d55915df7fa40ad.js",
             29910: "76ead373a29342892463.js",
-            29967: "ebeea2698fddebe911e9.js",
+            29967: "bd9f409ad4240daa7a8f.js",
             30055: "f360f5c72a3f6b678d32.js",
             30243: "4339b0e7388a5037860f.js",
             30408: "757b8f602d381c8d781b.js",
@@ -2833,7 +2833,7 @@
             34290: "51913b2ab9ece855e5b8.js",
             34345: "a1ec1783c308241095d2.js",
             34667: "bee3474ed10b832f6c17.js",
-            34911: "87e4d0ede71e571fac77.js",
+            34911: "57e1338428b664ab7f9e.js",
             34982: "bce00166914e7f22c6ef.js",
             35196: "c79b0561b8ed2a15bc76.js",
             35354: "d2182a38def334be6dda.js",
@@ -2902,7 +2902,7 @@
             44504: "81cfcfb8b97edd481db9.js",
             44893: "b5d1f6f0264c44d91dbb.js",
             45164: "987a822379d67c990875.js",
-            45343: "710280ce1997ce383eb8.js",
+            45343: "a691636a3d5fe3c349ac.js",
             45490: "c283747bde868a72a805.js",
             45549: "2e6b6a6f7e401f299051.js",
             45891: "e44e8361be3b9c9cca4b.js",
@@ -2945,7 +2945,7 @@
             50997: "156d750f2d16bbd76d59.js",
             51146: "8fb89efbdecd7b54ce58.js",
             51152: "c256312c5b57c814697f.js",
-            51307: "ec020b5b238d20b9cfaa.js",
+            51307: "6a884f4ab84da4c7c569.js",
             51374: "3c4de2f17d5bde3a9e9b.js",
             51572: "191bc232050ff3c27c2d.js",
             51635: "01d26d9ca832e47a1295.js",
@@ -2970,7 +2970,7 @@
             53937: "9a63519f8f7547920858.js",
             54057: "22f71196d743b60a36ba.js",
             54231: "e1a41290920b783692f0.js",
-            54319: "a2fdd1b340e97a4464f1.js",
+            54319: "40621d8fc336ba600f29.js",
             54344: "8f320b11b9ecc1ef1092.js",
             54387: "c89ad4dc754eec13dbdd.js",
             5456: "46a08c104146128406e3.js",
@@ -3020,11 +3020,11 @@
             60894: "1632e74db307f06782a3.js",
             61232: "95dde634f0599eace63b.js",
             61248: "54d957ee3c9d4e7fa225.js",
-            61387: "68d2eee28555e1dcd209.js",
+            61387: "c099d49a15b000f57cc5.js",
             61564: "9b54e129ffd37c5455f2.js",
             61864: "65c778423f5fbfe13ef5.js",
             61946: "20bdca113b283f5d39bc.js",
-            62073: "dd28e0bd4f3676836fb3.js",
+            62073: "ff3c3f4964208c0a6a11.js",
             62231: "e8bf910e1ee234f6e166.js",
             62687: "f39ebffedeed486caba6.js",
             62941: "8eb3bcf5acd196e4f675.js",
@@ -3098,7 +3098,7 @@
             6986: "bba6d85f44bef067d912.js",
             70016: "950fe3ec743ac349adc6.js",
             70201: "8323db6af5052218f985.js",
-            70235: "69e112014000b98f4aac.js",
+            70235: "a97ecc2578a6afc1655d.js",
             70287: "f61c5998f19f681386d3.js",
             70555: "d24d0674c7c7233e3206.js",
             7059: "1c4fe79eb642b89a64fa.js",
@@ -3108,7 +3108,7 @@
             70897: "4d07f8a041ee25396886.js",
             71238: "24ff40b146aa04099484.js",
             71314: "cfc01d489dc9a833dea3.js",
-            71529: "a721d36a36fae7eab8be.js",
+            71529: "1613bf78d6e2eca7e868.js",
             72142: "e0a687e4ad5e1613a87f.js",
             7236: "bd9ca6de7cfa85952510.js",
             72435: "d8d8bb7602e34b57bbef.js",
@@ -3118,7 +3118,7 @@
             72960: "bac12ce32c236b10a7f2.js",
             73140: "c6e6d95668e08702c74a.js",
             73393: "c558b089f0d12bbf75dd.js",
-            73471: "05545eb65bf2e8d7e567.js",
+            73471: "c2f4184dcb7c72102ced.js",
             73579: "f1ceb070e85d16f8b1b4.js",
             73850: "ab77d5f17adfe63f350b.js",
             73864: "da95628b6446d8e4ce63.js",
@@ -3144,7 +3144,7 @@
             76536: "9989d9681bff2cf7314d.js",
             76546: "18c74daee62b84813cc6.js",
             76609: "00ebd11016cadd597237.js",
-            76770: "7dfef8760a73a643190a.js",
+            76770: "5a2db072e844b7ca6465.js",
             76951: "b5e5d74e9cf89fd8bcdb.js",
             77118: "bec0ad48e89dfd363934.js",
             77326: "36f5ac531e6286cbce63.js",
@@ -3157,7 +3157,7 @@
             77988: "4faefa451b325d02238c.js",
             78062: "fac5e23f0835bb804357.js",
             78075: "cc54782af81ec6ae71f0.js",
-            78148: "c6f619b5fd2f79648692.js",
+            78148: "0504548d72a671605580.js",
             7846: "216669433ef468dc8077.js",
             78794: "c7a502d98fba20135bf8.js",
             78836: "6ba6285918a50bb58620.js",
@@ -3179,8 +3179,8 @@
             80803: "41bff583d2b036080642.js",
             80833: "d506a23e6d905c64845f.js",
             81121: "29311636537a734a99a9.js",
-            81141: "4c1403b7b197f2b183dc.js",
-            81188: "8941163fc300d91d2600.js",
+            81141: "635fb981dac75ad52792.js",
+            81188: "8b2a5b5b135210eb7297.js",
             81239: "2ed8da25fe6b275b678c.js",
             81264: "102130bf3abafe50c609.js",
             81360: "7e8e3d886364f8a26f92.js",
@@ -3202,7 +3202,7 @@
             83032: "fd8d0462586dd280c201.js",
             83063: "3fa223a98b0911ed07e0.js",
             83125: "96509180e3146598138d.js",
-            83812: "d13ffadec8da24d80f50.js",
+            83812: "9c4c54d04e21fd84ea41.js",
             83949: "c62e009070cbeae19639.js",
             84166: "8806adabcfc5408e123e.js",
             84300: "956f88aa7829d72967c2.js",
@@ -3272,7 +3272,7 @@
             91771: "b95c7c3f4afffae628fe.js",
             91908: "055c4b6f157c45d95f3d.js",
             91918: "608a2943124eb7595306.js",
-            92214: "400171b2ad13b1b4f790.js",
+            92214: "f729b3a947740da56a32.js",
             92453: "692c81deb80c949ada06.js",
             92536: "cbeac99142b8081112cd.js",
             92750: "742b7f40bad7217b2749.js",
@@ -3319,9 +3319,9 @@
             98106: "f65449fd311bf8302ff3.js",
             98538: "b20046615a04cd4fce94.js",
             98599: "1da7c19d61cbc4b41040.js",
-            987: "102d6d16250f1bf662c3.js",
+            987: "be538f9b7016026e5bea.js",
             98738: "274b5e461845b9aabaf7.js",
-            98904: "a0e0bcb8b991d70c8e14.js",
+            98904: "b0aab634c6cd155fc923.js",
             99277: "a03a150fb3b4018cabee.js",
             99541: "2c2908f4d37965de09c1.js",
             99569: "db4aedf99513c3ab76a5.js",
@@ -3332,9 +3332,9 @@
             99931: "088034dfbb0fb5dc6625.js",
             "krisp-sdk": "050f44a200a3176e39fc.js"
         })[e]
-    }, u.k = function(e) {
+    }, f.k = function(e) {
         return "" + e + ".css"
-    }, a = {}, u.l = function(e, t, s, d) {
+    }, a = {}, f.l = function(e, t, s, d) {
         if (a[e]) {
             a[e].push(t);
             return
@@ -3349,20 +3349,20 @@
             }
         }!n && (i = !0, (n = document.createElement("script")).charset = "utf-8", n.timeout = 120, n.src = e), a[e] = [t];
         var l = function(t, s) {
-                n.onerror = n.onload = null, clearTimeout(f);
+                n.onerror = n.onload = null, clearTimeout(u);
                 var d = a[e];
                 if (delete a[e], n.parentNode && n.parentNode.removeChild(n), d && d.forEach(function(e) {
                         return e(s)
                     }), t) return t(s)
             },
-            f = setTimeout(l.bind(null, void 0, {
+            u = setTimeout(l.bind(null, void 0, {
                 type: "timeout",
                 target: n
             }), 12e4);
         n.onerror = l.bind(null, n.onerror), n.onload = l.bind(null, n.onload), i && document.head.appendChild(n)
-    }, u.o = function(e, a) {
+    }, f.o = function(e, a) {
         return Object.prototype.hasOwnProperty.call(e, a)
-    }, t = [], u.O = function(e, a, s, d) {
+    }, t = [], f.O = function(e, a, s, d) {
         if (a) {
             d = d || 0;
             for (var n = t.length; n > 0 && t[n - 1][2] > d; n--) t[n] = t[n - 1];
@@ -3370,8 +3370,8 @@
             return
         }
         for (var i = 1 / 0, n = 0; n < t.length; n++) {
-            for (var a = t[n][0], s = t[n][1], d = t[n][2], c = !0, r = 0; r < a.length; r++) i >= d && Object.keys(u.O).every(function(e) {
-                return u.O[e](a[r])
+            for (var a = t[n][0], s = t[n][1], d = t[n][2], c = !0, r = 0; r < a.length; r++) i >= d && Object.keys(f.O).every(function(e) {
+                return f.O[e](a[r])
             }) ? a.splice(r--, 1) : (c = !1, d < i && (i = d));
             if (c) {
                 t.splice(n--, 1);
@@ -3380,7 +3380,7 @@
             }
         }
         return e
-    }, u.g = function() {
+    }, f.g = function() {
         if ("object" == typeof globalThis) return globalThis;
         try {
             return this || Function("return this")()
@@ -3405,14 +3405,14 @@
         }
         var c = {};
         return c[s] = e => {}, c[d] = e, c
-    }), u.a = (e, a, t) => {
+    }), f.a = (e, a, t) => {
         t && ((r = []).d = 1);
-        var r, o, l, f, u = new Set,
+        var r, o, l, u, f = new Set,
             p = e.exports,
             b = new Promise((e, a) => {
-                f = a, l = e
+                u = a, l = e
             });
-        b[d] = p, b[s] = e => (r && e(r), u.forEach(e), b.catch(e => {})), e.exports = b, a(e => {
+        b[d] = p, b[s] = e => (r && e(r), f.forEach(e), b.catch(e => {})), e.exports = b, a(e => {
             o = c(e);
             var a, t = () => o.map(e => {
                     if (e[n]) throw e[n];
@@ -3420,32 +3420,32 @@
                 }),
                 i = new Promise(e => {
                     (a = () => e(t)).r = 0;
-                    var d = e => e !== r && !u.has(e) && (u.add(e), e && !e.d && (a.r++, e.push(a)));
+                    var d = e => e !== r && !f.has(e) && (f.add(e), e && !e.d && (a.r++, e.push(a)));
                     o.map(e => e[s](d))
                 });
             return a.r ? i : t()
-        }, e => (e ? f(b[n] = e) : l(p), i(r))), r && (r.d = 0)
-    }, u.d = function(e, a) {
-        for (var t in a) u.o(a, t) && !u.o(e, t) && Object.defineProperty(e, t, {
+        }, e => (e ? u(b[n] = e) : l(p), i(r))), r && (r.d = 0)
+    }, f.d = function(e, a) {
+        for (var t in a) f.o(a, t) && !f.o(e, t) && Object.defineProperty(e, t, {
             enumerable: !0,
             get: a[t]
         })
-    }, u.r = function(e) {
+    }, f.r = function(e) {
         "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
             value: "Module"
         }), Object.defineProperty(e, "__esModule", {
             value: !0
         })
-    }, u.n = function(e) {
+    }, f.n = function(e) {
         return e && e.__esModule ? e.default : e
     }, o = Object.getPrototypeOf ? function(e) {
         return Object.getPrototypeOf(e)
     } : function(e) {
         return e.__proto__
-    }, u.t = function(e, a) {
+    }, f.t = function(e, a) {
         if (1 & a && (e = this(e)), 8 & a || "object" == typeof e && e && (4 & a && e.__esModule || 16 & a && "function" == typeof e.then)) return e;
         var t = Object.create(null);
-        u.r(t);
+        f.r(t);
         var s = {};
         r = r || [null, o({}), o([]), o(o)];
         for (var d = 2 & a && e;
@@ -3456,10 +3456,10 @@
         });
         return s.default = function() {
             return e
-        }, u.d(t, s), t
-    }, u.nmd = function(e) {
+        }, f.d(t, s), t
+    }, f.nmd = function(e) {
         return e.paths = [], !e.children && (e.children = []), e
-    }, u.hmd = function(e) {
+    }, f.hmd = function(e) {
         return !(e = Object.create(e)).children && (e.children = []), Object.defineProperty(e, "exports", {
             enumerable: !0,
             set: function() {
@@ -3567,10 +3567,10 @@
                 var i, c, r = "chunk-" + e;
                 if (!n) {
                     for (var o = document.getElementsByTagName("link"), l = 0; l < o.length; l++) {
-                        var f = o[l],
-                            p = f.getAttribute("href") || f.href;
-                        if (p && !p.startsWith(u.p) && (p = u.p + (p.startsWith("/") ? p.slice(1) : p)), "stylesheet" == f.rel && (p && p.startsWith(s) || f.getAttribute("data-webpack") == a + ":" + r)) {
-                            i = f;
+                        var u = o[l],
+                            p = u.getAttribute("href") || u.href;
+                        if (p && !p.startsWith(f.p) && (p = f.p + (p.startsWith("/") ? p.slice(1) : p)), "stylesheet" == u.rel && (p && p.startsWith(s) || u.getAttribute("data-webpack") == a + ":" + r)) {
+                            i = u;
                             break
                         }
                     }
@@ -3591,8 +3591,8 @@
                 });
                 return n ? n.parentNode.insertBefore(i, n) : c && document.head.appendChild(i), i
             };
-        u.f.css = function(a, t) {
-            var d = u.o(e, a) ? e[a] : void 0;
+        f.f.css = function(a, t) {
+            var d = f.o(e, a) ? e[a] : void 0;
             if (0 !== d) {
                 if (d) t.push(d[2]);
                 else if (["app", "shared"].indexOf(a) > -1) {
@@ -3600,10 +3600,10 @@
                         d = e[a] = [t, s]
                     });
                     t.push(d[2] = n);
-                    var i = u.p + u.k(a),
+                    var i = f.p + f.k(a),
                         c = Error();
                     s(a, i, function(t) {
-                        if (u.o(e, a) && (0 !== (d = e[a]) && (e[a] = void 0), d)) {
+                        if (f.o(e, a) && (0 !== (d = e[a]) && (e[a] = void 0), d)) {
                             if ("load" !== t.type) {
                                 var s = t && t.type,
                                     n = t && t.target && t.target.src;
@@ -3622,12 +3622,12 @@
             n = this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || [];
         n.forEach(d.bind(null, 0)), n.push = d.bind(null, n.push.bind(n))
     }(), ! function() {
-        u.b = document.baseURI || self.location.href;
+        f.b = document.baseURI || self.location.href;
         var e = {
             web: 0
         };
-        u.f.j = function(a, t) {
-            var s = u.o(e, a) ? e[a] : void 0;
+        f.f.j = function(a, t) {
+            var s = f.o(e, a) ? e[a] : void 0;
             if (0 !== s) {
                 if (s) t.push(s[2]);
                 else {
@@ -3635,10 +3635,10 @@
                         s = e[a] = [t, d]
                     });
                     t.push(s[2] = d);
-                    var n = u.p + u.u(a),
+                    var n = f.p + f.u(a),
                         i = Error();
-                    u.l(n, function(t) {
-                        if (u.o(e, a) && (0 !== (s = e[a]) && (e[a] = void 0), s)) {
+                    f.l(n, function(t) {
+                        if (f.o(e, a) && (0 !== (s = e[a]) && (e[a] = void 0), s)) {
                             var d = t && ("load" === t.type ? "missing" : t.type),
                                 n = t && t.target && t.target.src;
                             i.message = "Loading chunk " + a + " failed.\n(" + d + ": " + n + ")", i.name = "ChunkLoadError", i.type = d, i.request = n, s[1](i)
@@ -3646,7 +3646,7 @@
                     }, "chunk-" + a, a)
                 }
             }
-        }, u.O.j = function(a) {
+        }, f.O.j = function(a) {
             return 0 === e[a]
         };
         var a = function(a, t) {
@@ -3657,20 +3657,20 @@
                 if (s.some(function(a) {
                         return 0 !== e[a]
                     })) {
-                    for (i in d) u.o(d, i) && (u.m[i] = d[i]);
-                    if (n) var o = n(u)
+                    for (i in d) f.o(d, i) && (f.m[i] = d[i]);
+                    if (n) var o = n(f)
                 }
-                for (a && a(t); r < s.length; r++) c = s[r], u.o(e, c) && e[c] && e[c][0](), e[c] = 0;
-                return u.O(o)
+                for (a && a(t); r < s.length; r++) c = s[r], f.o(e, c) && e[c] && e[c][0](), e[c] = 0;
+                return f.O(o)
             },
             t = this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || [];
         t.forEach(a.bind(null, 0)), t.push = a.bind(null, t.push.bind(t))
-    }(), u.v = (e, a, t, s) => {
-        var d = fetch(u.p + t);
+    }(), f.v = (e, a, t, s) => {
+        var d = fetch(f.p + t);
         return "function" == typeof WebAssembly.instantiateStreaming ? WebAssembly.instantiateStreaming(d, s).then(a => Object.assign(e, a.instance.exports)) : d.then(e => e.arrayBuffer()).then(e => WebAssembly.instantiate(e, s)).then(a => Object.assign(e, a.instance.exports))
     };
-    var p = u.O(void 0, ["shared", "app", "77471", "36859", "42984", "61925", "21396", "13798", "45532", "99346", "63550", "482", "10991", "20117", "31897", "94932", "93411", "47470", "88321", "29181", "80365", "3754", "72927", "18814", "9976", "31717", "95121", "34426", "62010", "40235", "67079", "21494", "37580", "80574", "20639", "10357", "8240", "86960", "28651", "4468", "12925", "47146", "40894", "69039", "74836", "40861", "48590", "13508", "96865", "43870", "70264", "74970", "56680", "23777", "94816", "62093", "37102", "9743", "60499", "22198", "49191", "7039", "75971", "7875", "64970", "26230", "36973", "89735", "35306", "39377", "3397", "38081", "77015", "7704", "71827", "81161", "26737", "93191", "53984", "47498", "64612", "91849", "2153", "29870", "6086", "62597", "96041", "15643", "27148", "65800", "85005", "7273", "97463"], function() {
-        return u("20423")
+    var p = f.O(void 0, ["shared", "app", "77471", "36859", "42984", "61925", "21396", "13798", "45532", "99346", "63550", "482", "10991", "20117", "31897", "94932", "93411", "47470", "88321", "29181", "80365", "3754", "72927", "18814", "9976", "31717", "95121", "34426", "62010", "40235", "67079", "21494", "37580", "80574", "20639", "10357", "8240", "86960", "28651", "4468", "12925", "47146", "40894", "69039", "74836", "40861", "48590", "13508", "96865", "43870", "70264", "74970", "56680", "23777", "94816", "62093", "37102", "9743", "60499", "22198", "49191", "7039", "75971", "7875", "64970", "26230", "36973", "89735", "35306", "39377", "3397", "38081", "77015", "7704", "71827", "81161", "26737", "93191", "53984", "47498", "64612", "91849", "2153", "29870", "6086", "62597", "96041", "15643", "27148", "65800", "85005", "7273", "97463"], function() {
+        return f("20423")
     });
-    u.O(p)
+    f.O(p)
 }();
