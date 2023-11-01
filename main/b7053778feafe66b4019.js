@@ -152,14 +152,17 @@
                 getProductsFromCategories: function() {
                     return S
                 },
-                getAvatarDecorationsFromCategories: function() {
+                getAvatarDecorationsFromPurchases: function() {
                     return f
                 },
-                getCollectiblesAssetURL: function() {
+                getAvatarDecorationsFromCategories: function() {
                     return A
                 },
+                getCollectiblesAssetURL: function() {
+                    return N
+                },
                 groupProfileEffects: function() {
-                    return O
+                    return R
                 }
             });
             var n = r("917351"),
@@ -206,8 +209,9 @@
                         return (0, n.uniqBy)(t, "id")
                     }
                 },
-                f = t => C(t, i.CollectiblesItemType.AVATAR_DECORATION),
-                A = (t, e) => {
+                f = t => I(t, i.CollectiblesItemType.AVATAR_DECORATION),
+                A = t => C(t, i.CollectiblesItemType.AVATAR_DECORATION),
+                N = (t, e) => {
                     var r;
                     let {
                         CDN_HOST: n,
@@ -217,11 +221,11 @@
                     let l = s.Endpoints.APPLICATION_ASSET(s.COLLECTIBLES_APPLICATION_ID, t, a);
                     return "".concat(location.protocol).concat(o).concat(l, "?size=").concat(i)
                 },
-                N = t => I(t, i.CollectiblesItemType.PROFILE_EFFECT),
-                v = t => C(t, i.CollectiblesItemType.PROFILE_EFFECT),
-                O = (t, e) => {
-                    let r = N(e),
-                        n = v(t).filter(t => {
+                v = t => I(t, i.CollectiblesItemType.PROFILE_EFFECT),
+                O = t => C(t, i.CollectiblesItemType.PROFILE_EFFECT),
+                R = (t, e) => {
+                    let r = v(e),
+                        n = O(t).filter(t => {
                             let {
                                 id: e
                             } = t;
