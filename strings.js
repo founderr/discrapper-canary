@@ -2598,6 +2598,7 @@
                 _LOGIN_STAGE: "Listen In",
                 REGISTER: "Register",
                 ENTER_PHONE_OR_EMAIL: "Enter phone or email",
+                ENTER_EMAIL: "Enter email",
                 REGISTER_USERNAME_HINT: "You can always change this later!",
                 REGISTER_LOGIN_PRIVACY_NOTICE: "[View our Privacy Policy]({privacyURL})",
                 FORGOT_PASSWORD: "Forgot your password?",
@@ -17950,7 +17951,7 @@
                 L = E("782340");
             (0, i.setUpdateRules)(s.default), (0, r.default)(L.default, n.default, T.default), a.default.Emitter.injectBatchEmitChanges(o.unstable_batchedUpdates), a.default.PersistedStore.disableWrites = __OVERLAY__, a.default.initialize();
             let u = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("242636", ", Version Hash: ").concat("38fe699aaed8895fdfc01fd8bd477f7d1a93b52c")), t.default.setTags({
+            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("242641", ", Version Hash: ").concat("0a9689f758df836cb307c9b6f2d44ff55ded883e")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), I.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
         },
@@ -20320,8 +20321,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "242636", "242636"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("242636")), _ = 0), _
+                let _ = parseInt((e = "242641", "242641"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("242641")), _ = 0), _
             }
         },
         990629: function(e, _, E) {
