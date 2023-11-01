@@ -459,14 +459,16 @@
             async function s(t) {
                 let {
                     authorId: e,
-                    packId: n
+                    packId: n,
+                    expressionName: o
                 } = t;
                 try {
                     let t = await r.default.put({
                         url: u.Endpoints.INVENTORY_ADD_PACK,
                         body: {
                             author_id: e,
-                            pack_id: n
+                            pack_id: n,
+                            name_override: o
                         }
                     });
                     i.default.dispatch({
