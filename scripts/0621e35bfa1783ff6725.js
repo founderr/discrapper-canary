@@ -14419,7 +14419,10 @@
                 }, [I]);
                 return l.useMemo(() => {
                     let e = [];
-                    return ! function(e, t, n, l) {
+                    return n ? (E(e, S), {
+                        categories: e,
+                        isFetching: T
+                    }) : (! function(e, t, n, l) {
                         let i = [],
                             r = [...t, m.DEFAULT_SOUND_GUILD_ID];
                         for (let e of r) {
@@ -14454,7 +14457,7 @@
                             key: t.id,
                             items: s
                         })
-                    }(e, I, N, S, t), !y && E(e, S), !n && ! function(e, t, n, l) {
+                    }(e, I, N, S, t), !y && E(e, S), ! function(e, t, n, l) {
                         for (let r of t) {
                             var i;
                             if (r.id === n) continue;
@@ -14472,7 +14475,7 @@
                     }(e, C, null == I ? void 0 : I.id, S), y && E(e, S), {
                         categories: e,
                         isFetching: T
-                    }
+                    })
                 }, [v, S, g, I, N, t, y, C, n, T])
             }
 
