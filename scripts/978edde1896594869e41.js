@@ -2388,92 +2388,95 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return h
                 }
             });
             var s = n("37983");
             n("884691");
-            var l = n("77078"),
-                a = n("143618"),
-                i = n("377114"),
-                r = n("965153"),
-                u = n("98352"),
-                o = n("124969"),
-                d = n("701909"),
-                c = n("49111"),
-                f = n("782340"),
-                E = n("939564"),
-                I = n("926622");
-            let _ = e => {
+            var l = n("759843"),
+                a = n("77078"),
+                i = n("143618"),
+                r = n("377114"),
+                u = n("965153"),
+                o = n("98352"),
+                d = n("124969"),
+                c = n("701909"),
+                f = n("49111"),
+                E = n("782340"),
+                I = n("939564"),
+                _ = n("926622");
+            let p = e => {
                 let {
                     title: t,
-                    menuType: u
-                } = e, o = () => {
-                    (0, l.openModalLazy)(async () => {
+                    menuType: o
+                } = e, d = () => {
+                    (0, a.openModalLazy)(async () => {
                         let {
                             default: e
                         } = await n.el("650672").then(n.bind(n, "650672"));
                         return t => (0, s.jsx)(e, {
                             ...t,
-                            onSuccess: d,
-                            headerText: f.default.Messages.ENTER_EMAIL,
-                            confirmButtonText: f.default.Messages.NEXT,
-                            confirmButtonColor: l.Button.Colors.BRAND_NEW
+                            onSuccess: c,
+                            headerText: E.default.Messages.ENTER_EMAIL,
+                            confirmButtonText: E.default.Messages.NEXT,
+                            confirmButtonColor: a.Button.Colors.BRAND_NEW,
+                            impressionName: l.ImpressionNames.URF_ENTER_EMAIL
                         })
                     })
-                }, d = e => {
+                }, c = e => {
                     let t = async () => {
-                        await (0, r.sendUnauthenticatedReportPincode)(u, e)
-                    }, o = async t => await (0, r.verifyUnauthenticatedReport)(u, e, t), d = e => {
+                        await (0, u.sendUnauthenticatedReportPincode)(o, e)
+                    }, d = async t => await (0, u.verifyUnauthenticatedReport)(o, e, t), c = e => {
                         let t = null == e ? void 0 : e.token;
-                        u === a.UnauthenticatedReportNames.MESSAGE ? (0, i.showUnauthenticatedReportModalForMessage)(t) : u === a.UnauthenticatedReportNames.USER && (0, i.showUnauthenticatedReportModalForUser)(t)
+                        o === i.UnauthenticatedReportNames.MESSAGE ? (0, r.showUnauthenticatedReportModalForMessage)(t) : o === i.UnauthenticatedReportNames.USER && (0, r.showUnauthenticatedReportModalForUser)(t)
                     };
-                    t(), (0, l.openModalLazy)(async () => {
+                    t(), (0, a.openModalLazy)(async () => {
                         let {
                             default: e
                         } = await n.el("644512").then(n.bind(n, "644512"));
                         return n => (0, s.jsx)(e, {
                             ...n,
-                            onFormSubmit: o,
+                            onFormSubmit: d,
                             onResend: t,
-                            onSuccess: d,
-                            headerText: f.default.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
-                            confirmButtonText: f.default.Messages.VERIFY,
-                            confirmButtonColor: l.Button.Colors.BRAND_NEW
+                            onSuccess: c,
+                            headerText: E.default.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
+                            confirmButtonText: E.default.Messages.VERIFY,
+                            confirmButtonColor: a.Button.Colors.BRAND_NEW,
+                            impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE
                         })
                     })
                 };
                 return (0, s.jsx)("div", {
-                    className: E.buttonColumn,
-                    children: (0, s.jsx)(l.Button, {
-                        className: I.reportButton,
+                    className: I.buttonColumn,
+                    children: (0, s.jsx)(a.Button, {
+                        className: _.reportButton,
                         fullWidth: !0,
-                        color: l.Button.Colors.BRAND_NEW,
-                        hover: l.Button.Colors.BRAND_NEW,
-                        onClick: () => o(),
+                        color: a.Button.Colors.BRAND_NEW,
+                        hover: a.Button.Colors.BRAND_NEW,
+                        onClick: () => d(),
                         children: t
                     })
                 })
             };
-            var p = () => {
-                let e = (0, u.useIsUnauthenticatedReportFormEnabled)("URF - Landing Page");
-                return e && (0, s.jsxs)(o.default, {
-                    children: [(0, s.jsx)(o.Title, {
-                        className: I.marginBottom8,
-                        children: f.default.Messages.URF_LANDING_PAGE_TITLE
-                    }), (0, s.jsx)(o.SubTitle, {
-                        className: I.marginBottom8,
-                        children: f.default.Messages.URF_LANDING_PAGE_SUBTITLE.format({
-                            supportURL: d.default.getArticleURL(c.HelpdeskArticles.COPYRIGHT_AND_IP_POLICY)
+            var h = () => {
+                let e = (0, o.useIsUnauthenticatedReportFormEnabled)("URF - Landing Page");
+                return e && (0, s.jsxs)(d.default, {
+                    children: [(0, s.jsx)(d.Title, {
+                        className: _.marginBottom8,
+                        children: E.default.Messages.URF_LANDING_PAGE_TITLE
+                    }), (0, s.jsx)(d.SubTitle, {
+                        className: _.marginBottom8,
+                        children: E.default.Messages.URF_LANDING_PAGE_SUBTITLE.format({
+                            supportURL: c.default.getArticleURL(f.HelpdeskArticles.COPYRIGHT_AND_IP_POLICY)
                         })
                     }), (0, s.jsxs)("div", {
-                        className: E.container,
-                        children: [(0, s.jsx)(_, {
-                            title: f.default.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
-                            menuType: a.UnauthenticatedReportNames.MESSAGE
-                        }), (0, s.jsx)(_, {
-                            title: f.default.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
-                            menuType: a.UnauthenticatedReportNames.USER
+                        className: I.container,
+                        children: [(0, s.jsx)(p, {
+                            title: E.default.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
+                            menuType: i.UnauthenticatedReportNames.MESSAGE
+                        }), (0, s.jsx)(p, {
+                            title: E.default.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
+                            menuType: i.UnauthenticatedReportNames.USER
                         })]
                     })]
                 })
