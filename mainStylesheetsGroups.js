@@ -19023,6 +19023,9 @@
         944313: function(e, t, o) {
             "use strict";
             e.exports = {
+                defaultNotVotedMixinStyles: "defaultNotVotedMixinStyles__762b9",
+                imageVotedAndVictorMixinStyles: "imageVotedAndVictorMixinStyles_ae3068",
+                loserMixinStyles: "loserMixinStyles__72af9",
                 normalStylesDefault: "normalStylesDefault_b8063d",
                 normalStylesImageOnlyAnswers: "normalStylesImageOnlyAnswers__10b2a",
                 selectedMixinStyles: "selectedMixinStyles__6dfd9",
@@ -19050,9 +19053,7 @@
             e.exports = {
                 answer: "answer_be6c2e",
                 answersContainer: "answersContainer_fd091b",
-                didSelfVote: "didSelfVote__6dd05",
                 emoji: "emoji__27dab",
-                hasVoted: "hasVoted__13743",
                 media: "media_c99808",
                 mediaMissing: "mediaMissing__2a6d1",
                 selectedIcon: "selectedIcon__1a872",
@@ -19073,8 +19074,6 @@
                 answerContent: "answerContent_f678a4",
                 answersContainer: "answersContainer__97393",
                 avatarForSelected: "avatarForSelected_db7f86",
-                didSelfVote: "didSelfVote_b93c2f",
-                hasVoted: "hasVoted__551ee",
                 label: "label_f6dfd2",
                 media: "media_a7fe08",
                 mediaContainer: "mediaContainer__32ff8",
@@ -20939,6 +20938,7 @@
         361451: function(e, t, o) {
             "use strict";
             e.exports = {
+                decorationGridItemChurned: "decorationGridItemChurned__26f26",
                 effectGridItem: "effectGridItem__957b0",
                 icon: "icon__1f52f",
                 list: "list_a2972d",
@@ -21549,6 +21549,8 @@
             "use strict";
             e.exports = {
                 closeButton: "closeButton__644a2",
+                closeButtonInner: "closeButtonInner__7c66c",
+                closeIcon: "closeIcon__1ff17",
                 modalContent: "modalContent_b9c5e8",
                 modalHeader: "modalHeader_f08afe",
                 modalHeaderText: "modalHeaderText_b9bbba",
