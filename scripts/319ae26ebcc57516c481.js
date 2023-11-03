@@ -271,7 +271,7 @@
             }));
 
             function L(e) {
-                var t, L, b, N, O, y;
+                var t, L, N, b, O, y;
                 let {
                     transitionState: j,
                     onClose: B
@@ -450,7 +450,7 @@
                                             className: x.formInput,
                                             children: (0, a.jsx)(s.SearchableSelect, {
                                                 value: z,
-                                                options: null !== (y = null == (t = W) ? void 0 : null === (N = t.features) || void 0 === N ? void 0 : null === (b = N.filter(e => "" !== (0, E.getFeatureId)(e))) || void 0 === b ? void 0 : null === (L = b.map(e => ({
+                                                options: null !== (y = null == (t = W) ? void 0 : null === (b = t.features) || void 0 === b ? void 0 : null === (N = b.filter(e => "" !== (0, E.getFeatureId)(e))) || void 0 === N ? void 0 : null === (L = N.map(e => ({
                                                     label: null !== (O = e.name) && void 0 !== O ? O : "",
                                                     value: (0, E.getFeatureId)(e)
                                                 }))) || void 0 === L ? void 0 : L.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== y ? y : [],
@@ -773,8 +773,8 @@
                 return {
                     logsUploaded: new Date().toISOString(),
                     releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    buildNumber: "243540",
-                    versionHash: "9235e2dc874b1ed355e83a78a5b876470da192bf"
+                    buildNumber: "243552",
+                    versionHash: "4683b13a94c93f67c3fc1c392b1d99a2a81261c6"
                 }
             }
             n.r(t), n.d(t, {
