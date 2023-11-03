@@ -20873,7 +20873,10 @@ html.disable-forced-colors * {
 
 .pictureInPictureWindow_dc49a8 {
     position: absolute;
-    z-index: 1000;
+    z-index: 1000
+}
+
+.pictureInPictureWindowOverflow__3abe4 {
     overflow: hidden
 }
 

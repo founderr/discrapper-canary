@@ -25415,55 +25415,58 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return c
+                    return p
                 }
             });
             var a = n("37983"),
                 l = n("884691"),
-                s = n("95410"),
-                i = n("457112"),
-                r = n("679243"),
-                u = n("49111"),
-                o = n("204050");
-            let d = "CameraPreviewPosition";
+                s = n("414456"),
+                i = n.n(s),
+                r = n("95410"),
+                u = n("457112"),
+                o = n("679243"),
+                d = n("49111"),
+                c = n("204050"),
+                f = n("212029");
+            let h = "CameraPreviewPosition";
 
-            function c(e) {
+            function p(e) {
                 let {
                     width: t,
                     onContextMenuParticipant: n,
-                    height: c,
-                    channel: f,
-                    participants: h
-                } = e, [p, m] = function() {
-                    let [e, t] = l.useState(() => s.default.get(d, u.PictureInPicturePositions.BOTTOM_RIGHT));
+                    height: s,
+                    channel: p,
+                    participants: m
+                } = e, [E, C] = function() {
+                    let [e, t] = l.useState(() => r.default.get(h, d.PictureInPicturePositions.BOTTOM_RIGHT));
                     return [e, l.useCallback(e => {
-                        s.default.set(d, e), t(e)
+                        r.default.set(h, e), t(e)
                     }, [])]
-                }(), E = l.useRef(null), C = null == f.getGuildId() ? 70 : 50;
+                }(), S = l.useRef(null), _ = null == p.getGuildId() ? 70 : 50;
                 return l.useLayoutEffect(() => {
                     var e;
-                    null === (e = E.current) || void 0 === e || e.ensureIsInPosition()
-                }, [h.length]), (0, a.jsx)("div", {
-                    className: o.container,
-                    children: (0, a.jsx)(i.PictureInPictureWindow, {
-                        position: p,
+                    null === (e = S.current) || void 0 === e || e.ensureIsInPosition()
+                }, [m.length]), (0, a.jsx)("div", {
+                    className: c.container,
+                    children: (0, a.jsx)(u.PictureInPictureWindow, {
+                        position: E,
                         id: 0,
-                        ref: E,
-                        onMove: (e, t) => m(t),
+                        ref: S,
+                        onMove: (e, t) => C(t),
                         maxX: t,
-                        maxY: c,
-                        edgeOffsetTop: C,
+                        maxY: s,
+                        edgeOffsetTop: _,
                         edgeOffsetBottom: 70,
                         edgeOffsetLeft: 16,
                         edgeOffsetRight: 16,
                         children: (0, a.jsx)("div", {
-                            className: o.tileContainer,
-                            children: h.map(e => (0, a.jsx)(r.default, {
+                            className: c.tileContainer,
+                            children: m.map(e => (0, a.jsx)(o.default, {
                                 participant: e,
-                                channel: f,
+                                channel: p,
                                 onContextMenu: n,
-                                className: o.tile,
-                                fit: r.CallTileFit.COVER,
+                                className: i(c.tile, f.elevationHigh),
+                                fit: o.CallTileFit.COVER,
                                 inCall: !0,
                                 inPopout: !1,
                                 width: 160
