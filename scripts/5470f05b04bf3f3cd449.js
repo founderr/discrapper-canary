@@ -10739,6 +10739,7 @@
                 } = e;
                 return (0, s.jsx)(c.default, {
                     className: i,
+                    imageClassName: m.attachmentImage,
                     src: a.url,
                     alt: l,
                     responsive: !0,
