@@ -240,7 +240,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return L
                 }
             });
             var a = n("37983"),
@@ -264,14 +264,14 @@
                 R = n("782340"),
                 x = n("301410"),
                 T = n("741161"),
-                b = n("687444");
-            let C = ["Android", "iOS", "Windows Mobile", "Windows", "Linux", "Mac OS X"].map(e => ({
+                C = n("687444");
+            let S = ["Android", "iOS", "Windows Mobile", "Windows", "Linux", "Mac OS X"].map(e => ({
                 label: e,
                 value: e
             }));
 
-            function S(e) {
-                var t, S, L, N, O, y;
+            function L(e) {
+                var t, L, N, b, O, y;
                 let {
                     transitionState: j,
                     onClose: B
@@ -347,7 +347,7 @@
                     }
                 }, [H]);
                 let ev = (0, i.useStateFromStores)([g.default], () => g.default.theme),
-                    eE = (0, r.isThemeDark)(ev) ? T : b;
+                    eE = (0, r.isThemeDark)(ev) ? T : C;
                 return (0, a.jsx)(s.ModalRoot, {
                     className: x.modalRoot,
                     transitionState: j,
@@ -450,10 +450,10 @@
                                             className: x.formInput,
                                             children: (0, a.jsx)(s.SearchableSelect, {
                                                 value: z,
-                                                options: null !== (y = null == (t = W) ? void 0 : null === (N = t.features) || void 0 === N ? void 0 : null === (L = N.filter(e => "" !== (0, E.getFeatureId)(e))) || void 0 === L ? void 0 : null === (S = L.map(e => ({
+                                                options: null !== (y = null == (t = W) ? void 0 : null === (b = t.features) || void 0 === b ? void 0 : null === (N = b.filter(e => "" !== (0, E.getFeatureId)(e))) || void 0 === N ? void 0 : null === (L = N.map(e => ({
                                                     label: null !== (O = e.name) && void 0 !== O ? O : "",
                                                     value: (0, E.getFeatureId)(e)
-                                                }))) || void 0 === S ? void 0 : S.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== y ? y : [],
+                                                }))) || void 0 === L ? void 0 : L.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== y ? y : [],
                                                 isDisabled: null == W,
                                                 onChange: e => J(e)
                                             })
@@ -492,7 +492,7 @@
                                                 className: x.formInput,
                                                 children: (0, a.jsx)(s.SingleSelect, {
                                                     value: Z,
-                                                    options: C,
+                                                    options: S,
                                                     onChange: e => ee(e)
                                                 })
                                             }), (0, a.jsx)(s.FormItem, {
@@ -773,8 +773,8 @@
                 return {
                     logsUploaded: new Date().toISOString(),
                     releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    buildNumber: "243623",
-                    versionHash: "5d6b5b2e1a624cfa1469f1ecb428db1db7bb0464"
+                    buildNumber: "243628",
+                    versionHash: "5e8c84b21fc5fdce09f4a39ffdf2dd9a774adbaf"
                 }
             }
             n.r(t), n.d(t, {
