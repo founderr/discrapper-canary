@@ -4834,6 +4834,7 @@
                         return s.default.Messages.COMMAND_VALIDATION_GENERAL_ERROR
                 }
             }
+            Object.freeze([]), Object.freeze([])
         },
         14090: function(e, t, n) {
             "use strict";
