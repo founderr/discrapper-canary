@@ -98,8 +98,8 @@
                 s = e("434978"),
                 a = e("125359"),
                 c = e("499460"),
-                l = e("33270"),
-                f = e("484784"),
+                f = e("33270"),
+                l = e("484784"),
                 d = u && u.prototype;
             if (n({
                     target: "Promise",
@@ -115,18 +115,18 @@
                         var r = c(this, s("Promise")),
                             e = a(t);
                         return this.then(e ? function(e) {
-                            return l(r, t()).then(function() {
+                            return f(r, t()).then(function() {
                                 return e
                             })
                         } : t, e ? function(e) {
-                            return l(r, t()).then(function() {
+                            return f(r, t()).then(function() {
                                 throw e
                             })
                         } : t)
                     }
                 }), !i && a(u)) {
-                var p = s("Promise").prototype.finally;
-                d.finally !== p && f(d, "finally", p, {
+                var h = s("Promise").prototype.finally;
+                d.finally !== h && l(d, "finally", h, {
                     unsafe: !0
                 })
             }
@@ -209,30 +209,20 @@
                 return o.current === u ? (e.current = t(), o.current = r) : !(0, i.default)(r, o.current) && (e.current = t(), o.current = r), e.current
             }
         },
-        586269: function(t, r, e) {
-            "use strict";
-            e.r(r), e.d(r, {
-                QUARANTINE_APPEAL_LINK: function() {
-                    return n
-                }
-            });
-            let n = "https://dis.gd/appeal"
-        },
         826269: function(t, r, e) {
             "use strict";
             e.r(r), e.d(r, {
                 default: function() {
-                    return c
+                    return a
                 }
             });
             var n = e("37983");
             e("884691");
             var i = e("77078"),
                 u = e("476765"),
-                o = e("586269"),
-                s = e("782340"),
-                a = e("677029"),
-                c = t => {
+                o = e("782340"),
+                s = e("677029"),
+                a = t => {
                     let {
                         onClose: r
                     } = t, e = (0, u.useUID)();
@@ -241,34 +231,28 @@
                         "aria-labelledby": e,
                         children: [(0, n.jsxs)(i.ModalHeader, {
                             separator: !1,
-                            className: a.modalHeader,
+                            className: s.modalHeader,
                             children: [(0, n.jsx)(i.Heading, {
                                 id: e,
                                 variant: "heading-xl/extrabold",
-                                children: s.default.Messages.LIMITED_ACCESS_INFO_MODAL_HEADING
+                                children: o.default.Messages.LIMITED_ACCESS_INFO_MODAL_HEADING
                             }), (0, n.jsx)(i.ModalCloseButton, {
-                                className: a.closeButton,
+                                className: s.closeButton,
                                 onClick: r
                             })]
-                        }), (0, n.jsxs)(i.ModalContent, {
-                            className: a.modalContent,
-                            children: [(0, n.jsx)(i.Text, {
+                        }), (0, n.jsx)(i.ModalContent, {
+                            className: s.modalContent,
+                            children: (0, n.jsx)(i.Text, {
                                 variant: "text-md/normal",
-                                className: a.contentText,
-                                children: s.default.Messages.LIMITED_ACCESS_INFO_MODAL_DESCRIPTION
-                            }), (0, n.jsx)(i.Text, {
-                                variant: "text-md/normal",
-                                className: a.contentText,
-                                children: s.default.Messages.LIMITED_ACCESS_INFO_MODAL_APPEAL.format({
-                                    appealLink: o.QUARANTINE_APPEAL_LINK
-                                })
-                            })]
+                                className: s.contentText,
+                                children: o.default.Messages.LIMITED_ACCESS_INFO_MODAL_DESCRIPTION_V2
+                            })
                         }), (0, n.jsx)(i.ModalFooter, {
                             children: (0, n.jsx)(i.Button, {
-                                className: a.button,
+                                className: s.button,
                                 size: i.Button.Sizes.MIN,
                                 onClick: r,
-                                children: s.default.Messages.OKAY
+                                children: o.default.Messages.OKAY
                             })
                         })]
                     })
