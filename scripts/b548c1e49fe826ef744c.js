@@ -29,7 +29,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return V
+                    return b
                 }
             });
             var l = n("37983");
@@ -44,100 +44,102 @@
                 c = n("243288"),
                 f = n("769928"),
                 S = n("976074"),
-                M = n("18346"),
-                E = n("803725"),
-                g = n("76393"),
-                m = n("103979"),
+                M = n("386045"),
+                g = n("18346"),
+                m = n("803725"),
+                E = n("76393"),
+                p = n("103979"),
                 h = n("816106"),
-                p = n("373469"),
-                C = n("42203"),
-                I = n("42887"),
-                T = n("697218"),
-                x = n("374014"),
-                A = n("49111"),
-                _ = n("353927"),
-                v = n("782340");
+                C = n("373469"),
+                I = n("42203"),
+                T = n("42887"),
+                x = n("697218"),
+                A = n("374014"),
+                _ = n("49111"),
+                v = n("353927"),
+                U = n("782340");
 
-            function U(e) {
-                return (0, a.useStateFromStores)([p.default], () => {
-                    let t = p.default.getActiveStreamForApplicationStream(e);
-                    return null != t && (0, x.encodeStreamKey)(t) === (0, x.encodeStreamKey)(e)
+            function V(e) {
+                return (0, a.useStateFromStores)([C.default], () => {
+                    let t = C.default.getActiveStreamForApplicationStream(e);
+                    return null != t && (0, A.encodeStreamKey)(t) === (0, A.encodeStreamKey)(e)
                 })
             }
 
-            function V(e) {
+            function b(e) {
                 let {
                     stream: t,
                     analyticsContext: n,
-                    appContext: p,
-                    exitFullscreen: V,
-                    onSelect: b
+                    appContext: C,
+                    exitFullscreen: b,
+                    onSelect: w
                 } = e, R = function(e) {
-                    let t = U(e),
-                        n = T.default.getCurrentUser(),
-                        a = null != n && e.ownerId === n.id,
-                        d = (0, M.default)(),
+                    let t = V(e),
+                        n = x.default.getCurrentUser(),
+                        d = null != n && e.ownerId === n.id,
+                        r = (0, g.default)(),
                         {
-                            enableEndEncoderViewerClipping: r,
-                            enableSideEncoderViewerClipping: o
-                        } = m.default.useExperiment({
+                            enableViewerClipping: o
+                        } = p.default.useExperiment({
                             location: "StreamContextMenu"
                         }, {
                             autoTrackExposure: !1
-                        });
-                    return d && (r || o) && t && !a ? (0, l.jsx)(u.MenuItem, {
+                        }),
+                        s = (0, a.useStateFromStores)([M.default], () => M.default.isViewerClippingAllowedForUser(e.ownerId));
+                    return r && o && t && !d ? (0, l.jsx)(u.MenuItem, {
                         id: "clip-stream",
-                        label: v.default.Messages.CLIPS_VIEWERSIDE_SAVE,
-                        action: () => (0, E.saveClip)((0, x.encodeStreamKey)(e))
+                        disabled: !s,
+                        label: U.default.Messages.CLIPS_VIEWERSIDE_SAVE,
+                        action: () => (0, m.saveClip)((0, A.encodeStreamKey)(e))
                     }) : null
-                }(t), j = U(t), O = function(e) {
-                    let t = U(e),
-                        n = (0, h.default)(e.ownerId, _.MediaEngineContextTypes.STREAM);
+                }(t), j = V(t), O = function(e) {
+                    let t = V(e),
+                        n = (0, h.default)(e.ownerId, v.MediaEngineContextTypes.STREAM);
                     return t ? n : null
                 }(t), L = function(e) {
                     let t;
-                    let n = (0, a.useStateFromStores)([g.default], () => null != g.default.getRemoteSessionId()),
-                        d = (0, a.useStateFromStores)([C.default], () => C.default.getChannel(e.channelId), [e.channelId]),
-                        r = U(e),
-                        i = T.default.getCurrentUser(),
+                    let n = (0, a.useStateFromStores)([E.default], () => null != E.default.getRemoteSessionId()),
+                        d = (0, a.useStateFromStores)([I.default], () => I.default.getChannel(e.channelId), [e.channelId]),
+                        r = V(e),
+                        i = x.default.getCurrentUser(),
                         c = null != i && e.ownerId === i.id;
-                    return (t = c ? v.default.Messages.STOP_STREAMING : r ? v.default.Messages.STOP_WATCHING : v.default.Messages.WATCH_STREAM, n || !c && r && (null == d ? void 0 : d.isGuildStageVoice())) ? null : (0, l.jsx)(u.MenuItem, {
+                    return (t = c ? U.default.Messages.STOP_STREAMING : r ? U.default.Messages.STOP_WATCHING : U.default.Messages.WATCH_STREAM, n || !c && r && (null == d ? void 0 : d.isGuildStageVoice())) ? null : (0, l.jsx)(u.MenuItem, {
                         id: "watch",
                         label: t,
                         action: r ? function() {
-                            (0, s.stopStream)((0, x.encodeStreamKey)(e))
+                            (0, s.stopStream)((0, A.encodeStreamKey)(e))
                         } : function() {
                             o.default.selectVoiceChannel(e.channelId), (0, s.watchStream)(e)
                         }
                     })
-                }(t), w = function(e) {
-                    let t = U(e),
-                        n = (0, a.useStateFromStores)([I.default], () => I.default.isLocalMute(e.ownerId, _.MediaEngineContextTypes.STREAM)),
-                        r = T.default.getCurrentUser(),
+                }(t), F = function(e) {
+                    let t = V(e),
+                        n = (0, a.useStateFromStores)([T.default], () => T.default.isLocalMute(e.ownerId, v.MediaEngineContextTypes.STREAM)),
+                        r = x.default.getCurrentUser(),
                         o = null != r && e.ownerId === r.id;
                     return !t || o ? null : (0, l.jsx)(u.MenuCheckboxItem, {
                         id: "mute",
-                        label: v.default.Messages.SOUND_MUTE,
+                        label: U.default.Messages.SOUND_MUTE,
                         action: function() {
-                            d.default.toggleLocalMute(e.ownerId, _.MediaEngineContextTypes.STREAM)
+                            d.default.toggleLocalMute(e.ownerId, v.MediaEngineContextTypes.STREAM)
                         },
                         checked: n
                     })
-                }(t), y = (0, S.default)(t, p, V), k = (0, f.default)(t.channelId, t.ownerId), F = (0, c.default)(t.channelId), N = (0, a.useStateFromStores)([C.default], () => C.default.getChannel(t.channelId), [t.channelId]);
+                }(t), y = (0, S.default)(t, C, b), k = (0, f.default)(t.channelId, t.ownerId), N = (0, c.default)(t.channelId), G = (0, a.useStateFromStores)([I.default], () => I.default.getChannel(t.channelId), [t.channelId]);
                 return (0, l.jsx)(i.default, {
                     context: n,
-                    object: A.AnalyticsObjects.CONTEXT_MENU,
+                    object: _.AnalyticsObjects.CONTEXT_MENU,
                     children: (0, l.jsxs)(u.Menu, {
                         navId: "stream-context",
                         onClose: r.closeContextMenu,
-                        "aria-label": v.default.Messages.STREAM_ACTIONS_MENU_LABEL,
-                        onSelect: b,
+                        "aria-label": U.default.Messages.STREAM_ACTIONS_MENU_LABEL,
+                        onSelect: w,
                         children: [(0, l.jsxs)(u.MenuGroup, {
-                            children: [L, R, w]
+                            children: [L, R, F]
                         }), (0, l.jsx)(u.MenuGroup, {
                             children: O
                         }), (0, l.jsxs)(u.MenuGroup, {
-                            children: [(null == N ? void 0 : N.isGuildStageVoice()) ? null : F, k, j && y]
+                            children: [(null == G ? void 0 : G.isGuildStageVoice()) ? null : N, k, j && y]
                         })]
                     })
                 })
@@ -167,17 +169,17 @@
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.MediaEngineContextTypes.DEFAULT,
                     S = (0, a.useStateFromStores)([r.default], () => r.default.getLocalVolume(e, n), [e, n]),
                     M = e === (null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
-                    E = n === c.MediaEngineContextTypes.STREAM;
+                    g = n === c.MediaEngineContextTypes.STREAM;
                 return M ? null : (0, l.jsx)(u.MenuControlItem, {
                     id: "user-volume",
-                    label: E ? f.default.Messages.STREAM_VOLUME : f.default.Messages.USER_VOLUME,
+                    label: g ? f.default.Messages.STREAM_VOLUME : f.default.Messages.USER_VOLUME,
                     control: (t, a) => (0, l.jsx)(u.MenuSliderControl, {
                         ...t,
                         ref: a,
                         value: (0, s.amplitudeToPerceptual)(S),
                         maxValue: i.isPlatformEmbedded ? 200 : 100,
                         onChange: t => d.default.setLocalVolume(e, (0, s.perceptualToAmplitude)(t), n),
-                        "aria-label": E ? f.default.Messages.STREAM_VOLUME : f.default.Messages.USER_VOLUME
+                        "aria-label": g ? f.default.Messages.STREAM_VOLUME : f.default.Messages.USER_VOLUME
                     })
                 })
             }
