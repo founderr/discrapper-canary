@@ -531,7 +531,7 @@
                 default: function() {
                     return _
                 }
-            });
+            }), n("222007");
             var a = n("37983"),
                 r = n("884691"),
                 l = n("817736"),
@@ -776,7 +776,7 @@
                 BlindID: function() {
                     return i
                 }
-            });
+            }), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341");
             var a = n("605250"),
                 r = n("446825").Buffer;
             let l = new a.default("BlindID");
@@ -806,7 +806,7 @@
                 uploadRtcLogFiles: function() {
                     return c
                 }
-            });
+            }), n("222007");
             var a = n("811022"),
                 r = n("872717"),
                 l = n("448993"),
@@ -1174,7 +1174,7 @@
                 default: function() {
                     return v
                 }
-            });
+            }), n("222007");
             var a, r, l = n("917351"),
                 i = n("446674"),
                 s = n("407846"),
@@ -1183,7 +1183,7 @@
                 d = n("271938"),
                 c = n("9759"),
                 f = n("837374");
-            (a = r || (r = {}))[a.INVALID = 0] = "INVALID", a[a.VALID_USER_ONLY = 1] = "VALID_USER_ONLY", a[a.VALID = 2] = "VALID";
+            (r = a || (a = {}))[r.INVALID = 0] = "INVALID", r[r.VALID_USER_ONLY = 1] = "VALID_USER_ONLY", r[r.VALID = 2] = "VALID";
             let p = new Set,
                 E = new Set,
                 h = new Set,
@@ -1194,8 +1194,8 @@
                     BROADCASTS_BY_VALIDITY: e => "validity:".concat(e)
                 },
                 S = new s.default(function(e) {
-                    let t = p.has(e.userId) ? r.VALID_USER_ONLY : r.INVALID;
-                    return null != e.viewers && (t = r.VALID), [m.BROADCASTS_BY_USER_ID(e.userId), m.BROADCASTS_BY_CHANNEL_ID(e.channelId), m.BROADCASTS_BY_VALIDITY(t)]
+                    let t = p.has(e.userId) ? a.VALID_USER_ONLY : a.INVALID;
+                    return null != e.viewers && (t = a.VALID), [m.BROADCASTS_BY_USER_ID(e.userId), m.BROADCASTS_BY_CHANNEL_ID(e.channelId), m.BROADCASTS_BY_VALIDITY(t)]
                 }, e => e.channelId);
 
             function C(e, t, n) {
@@ -1218,10 +1218,10 @@
             }
             class T extends i.default.Store {
                 getBroadcasts() {
-                    return S.values(m.BROADCASTS_BY_VALIDITY(r.VALID))
+                    return S.values(m.BROADCASTS_BY_VALIDITY(a.VALID))
                 }
                 getBroadcastsToValidateChannels() {
-                    return S.values(m.BROADCASTS_BY_VALIDITY(r.VALID_USER_ONLY))
+                    return S.values(m.BROADCASTS_BY_VALIDITY(a.VALID_USER_ONLY))
                 }
                 getBroadcastByChannel(e) {
                     return S.values(m.BROADCASTS_BY_CHANNEL_ID(e))[0]
@@ -1631,7 +1631,7 @@
                 default: function() {
                     return N
                 }
-            });
+            }), n("70102"), n("222007");
             var a = n("37983"),
                 r = n("884691"),
                 l = n("414456"),
@@ -2054,7 +2054,7 @@
                 default: function() {
                     return N
                 }
-            });
+            }), n("222007");
             var a = n("37983"),
                 r = n("884691"),
                 l = n("917351"),
@@ -2399,7 +2399,7 @@
                 default: function() {
                     return s
                 }
-            });
+            }), n("222007");
             var a = n("884691"),
                 r = n("244201"),
                 l = n("49111");
@@ -2442,7 +2442,7 @@
                 uploadCallscopeLogFiles: function() {
                     return C
                 }
-            });
+            }), n("222007");
             var a = n("872717"),
                 r = n("869586"),
                 l = n("49671"),
@@ -2594,8 +2594,8 @@
                 return {
                     logsUploaded: new Date().toISOString(),
                     releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    buildNumber: "243817",
-                    versionHash: "cf81c5226ce750801d5955ecabcdb2b3d3f4ee4a"
+                    buildNumber: "243824",
+                    versionHash: "c977f41094f080ecf66c3f5e4a21287dcff03828"
                 }
             }
             n.r(t), n.d(t, {
@@ -2610,7 +2610,7 @@
                 default: function() {
                     return s
                 }
-            });
+            }), n("781738"), n("424973"), n("222007");
             var a = n("917351"),
                 r = n.n(a),
                 l = n("102053"),
@@ -2711,7 +2711,7 @@
                 initSentry: function() {
                     return o
                 }
-            });
+            }), n("222007");
             var a = n("245123"),
                 r = n("316217");
             let l = ["oppobrowser", "realmebrowser", "heytapbrowser"];
@@ -2732,7 +2732,7 @@
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-cf81c5226ce750801d5955ecabcdb2b3d3f4ee4a",
+                    release: "discord_web-c977f41094f080ecf66c3f5e4a21287dcff03828",
                     beforeSend: e => {
                         var t, n;
                         return !(null != (t = e).exception && null != t.exception.values && t.exception.values.every(e => null == e.stacktrace || null != e.stacktrace.frames && 1 === e.stacktrace.frames.length) && "canary" !== window.GLOBAL_ENV.RELEASE_CHANNEL || l.some(e => window.navigator.appVersion.toLowerCase().indexOf(e) >= 0)) && !i() && !("Aborted" === (n = e).message || "cancel captcha" === n.message) && s() ? e : null
@@ -2750,7 +2750,7 @@
                     })],
                     ignoreErrors: ["EADDRINUSE", "BetterDiscord", "EnhancedDiscord", "Powercord", "RecipeWebview", "jQuery", "localStorage", "has already been declared", "Cannot call hover while not dragging.", "Cannot call beginDrag while dragging.", "getHostNode", "setupCSS", "on missing remote object", "ChunkLoadError", "Cannot find module 'discord_utils'", "Failed to setup Krisp module", "Error invoking remote method 'DISCORD_NATIVE_MODULES_INSTALL': Error: Module updater is not available!", "Non-Error promise rejection captured with keys:", "Request has been terminated", "Cannot resolve a Slate point from DOM point", "Failed to fetch", "no suitable image found", "ResizeObserver loop limit exceeded", "The play() request was interrupted", "could not play audio", "notosans-400-normalitalic"],
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
-                }), a.setTag("buildNumber", (e = "243817", "243817")), a.setTag("builtAt", String("1699288007150"));
+                }), a.setTag("buildNumber", (e = "243824", "243824")), a.setTag("builtAt", String("1699290751875"));
                 let t = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != t && "object" == typeof t)
                     for (let e in t) a.setTag(e, t[e]);
@@ -2776,7 +2776,7 @@
                 default: function() {
                     return l
                 }
-            });
+            }), n("222007");
             var a = n("294707"),
                 r = n("686298");
 
@@ -2883,7 +2883,7 @@
                 HIGH_FIVE_EMOJIS: function() {
                     return a
                 }
-            });
+            }), n("222007");
             let a = new Set(["\uD83D\uDD90", "✋"])
         },
         170152: function(e, t, n) {
@@ -2982,7 +2982,7 @@
                 default: function() {
                     return l
                 }
-            });
+            }), n("781738");
             var a = n("984519");
             let r = /🏻|🏼|🏽|🏾|🏿|\uFE0F/g;
 
@@ -3037,7 +3037,7 @@
                 useActualStageSpeakerCount: function() {
                     return d
                 }
-            });
+            }), n("222007");
             var a = n("446674"),
                 r = n("334572"),
                 l = n("488464"),
@@ -3080,7 +3080,7 @@
                 default: function() {
                     return v
                 }
-            });
+            }), n("222007");
             var a = n("446674"),
                 r = n("689988"),
                 l = n("42203"),
@@ -4459,7 +4459,7 @@
                 default: function() {
                     return h
                 }
-            });
+            }), n("222007");
             var a = n("37983"),
                 r = n("884691"),
                 l = n("414456"),
@@ -5122,7 +5122,7 @@
                 setupWindow: function() {
                     return s
                 }
-            });
+            }), n("222007");
             var a = n("741148"),
                 r = n("563680"),
                 l = n("816454"),
@@ -5162,7 +5162,7 @@
                 AppCrashedReasons: function() {
                     return a
                 }
-            }), (r = a || (a = {})).UNHANDLED_NATIVE_ERROR = "unhandled_native_error", r.UNHANDLED_JS_ERROR = "unhandled_js_error", r.SOCKET_CRASHED = "socket_crashed"
+            }), n("222007"), (r = a || (a = {})).UNHANDLED_NATIVE_ERROR = "unhandled_native_error", r.UNHANDLED_JS_ERROR = "unhandled_js_error", r.SOCKET_CRASHED = "socket_crashed"
         },
         721998: function(e, t, n) {
             "use strict";
@@ -5171,7 +5171,7 @@
                 ErrorLevels: function() {
                     return a
                 }
-            }), (r = a || (a = {})).FATAL = "fatal", r.ERROR = "error", r.WARNING = "warning", r.LOG = "log", r.INFO = "info", r.DEBUG = "debug"
+            }), n("222007"), (r = a || (a = {})).FATAL = "fatal", r.ERROR = "error", r.WARNING = "warning", r.LOG = "log", r.INFO = "info", r.DEBUG = "debug"
         }
     }
 ]);
