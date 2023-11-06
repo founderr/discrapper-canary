@@ -18070,7 +18070,7 @@
                 u = E("782340");
             (0, i.setUpdateRules)(s.default), (0, r.default)(u.default, n.default, T.default), a.default.Emitter.injectBatchEmitChanges(o.unstable_batchedUpdates), a.default.PersistedStore.disableWrites = __OVERLAY__, a.default.initialize();
             let L = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("243895", ", Version Hash: ").concat("0bfd45f8eaefe73b59cbe479ef85f0525eed2d03")), t.default.setTags({
+            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("243897", ", Version Hash: ").concat("61db70378e26b8355ed46c9357fa6c207794579c")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), I.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
         },
@@ -20454,8 +20454,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "243895", "243895"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("243895")), _ = 0), _
+                let _ = parseInt((e = "243897", "243897"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("243897")), _ = 0), _
             }
         },
         990629: function(e, _, E) {
@@ -22005,7 +22005,11 @@
                 let E = (0, n.getEmojiCaptionsExperimentConfig)({
                     location: e
                 });
-                if (!E.isEnabled || r.default.getIsFetching()) return;
+                if (!E.isEnabled) {
+                    r.default.hasPersistedState() && r.default.clear();
+                    return
+                }
+                if (r.default.getIsFetching()) return;
                 let a = r.default.getEmojiCaptionsTTL();
                 !(null != a && Date.now() < a) && await (0, o.getEmojiCaptionsForUser)()
             }

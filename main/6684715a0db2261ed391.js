@@ -23968,6 +23968,9 @@
                 getEmojiCaptionsTTL() {
                     return f
                 }
+                hasPersistedState() {
+                    return t.captionsById.size > 0
+                }
                 clear() {
                     t = o, a = !1, f = null
                 }
