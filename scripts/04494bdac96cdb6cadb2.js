@@ -604,14 +604,14 @@
                     return r
                 }
             });
-            var i = n("819855"),
-                a = n("446674"),
+            var i = n("446674"),
+                a = n("819855"),
                 s = n("206230"),
                 o = n("161778"),
                 l = n("584375");
             let r = e => {
-                let t = (0, a.useStateFromStores)([s.default], () => s.default.saturation),
-                    n = (0, a.useStateFromStores)([o.default], () => (0, i.isThemeDark)(o.default.theme));
+                let t = (0, i.useStateFromStores)([s.default], () => s.default.saturation),
+                    n = (0, i.useStateFromStores)([o.default], () => (0, a.isThemeDark)(o.default.theme));
                 return (0, l.buildEmojiColorPalette)(e, t, n)
             }
         },

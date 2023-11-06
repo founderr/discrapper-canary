@@ -1935,47 +1935,48 @@
                     highlightAddPaymentMethodButton: l,
                     dropdownClassName: g,
                     analyticsLocation: x,
-                    currentInvoicePreview: D
-                } = e, U = (0, o.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), [v, O] = (0, o.useStateFromStoresArray)([N.default], () => [N.default.paymentSources, N.default.hasFetchedPaymentSources]), B = (0, _.useSubscriptionPlansLoaded)((0, T.getSubscriptionSKUs)(t)), {
-                    analyticsLocations: j
-                } = (0, p.default)(), b = n.useMemo(() => Object.values(v).filter(e => !e.invalid), [v]), [G, F] = n.useState(!1), [k, w] = n.useState(t.currency), Y = async (e, s) => {
+                    currentInvoicePreview: D,
+                    disabled: U = !1
+                } = e, v = (0, o.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), [O, B] = (0, o.useStateFromStoresArray)([N.default], () => [N.default.paymentSources, N.default.hasFetchedPaymentSources]), j = (0, _.useSubscriptionPlansLoaded)((0, T.getSubscriptionSKUs)(t)), {
+                    analyticsLocations: b
+                } = (0, p.default)(), G = n.useMemo(() => Object.values(O).filter(e => !e.invalid), [O]), [F, k] = n.useState(!1), [w, Y] = n.useState(t.currency), H = async (e, s) => {
                     if (null == t) throw Error("missing subscription and paymentSource");
-                    null == e ? await f.changeSubscriptionCurrency(t, s, j, x) : await f.changePaymentSource(t, e, s, j, x), F(!1), w(s)
-                }, H = async (e, s, a) => {
-                    F(!0);
+                    null == e ? await f.changeSubscriptionCurrency(t, s, b, x) : await f.changePaymentSource(t, e, s, b, x), k(!1), Y(s)
+                }, V = async (e, s, a) => {
+                    k(!0);
                     let n = await (0, C.updateSubscriptionInvoicePreview)({
                         subscriptionId: t.id,
                         paymentSourceId: null == e ? void 0 : e.id,
                         renewal: !0,
                         currency: s,
-                        analyticsLocations: j,
+                        analyticsLocations: b,
                         analyticsLocation: x
                     });
                     D.currency !== n.currency || D.currency === n.currency && D.total !== n.total ? await y(n, () => {
                         a(e, s)
                     }, () => {
-                        F(!1)
+                        k(!1)
                     }) : a(e, s)
-                }, V = e => {
+                }, K = e => {
                     let s = P.default.get(t.planIdForCurrencies);
                     u(null != e, "paymentSource not specified for change"), u(null != s, "Unable to fetch plan");
                     let a = (0, R.getCurrencies)(s.id, e.id, !1),
                         n = a.length > 0 ? a[0] : A.CurrencyCodes.USD;
                     return n
-                }, K = e => {
-                    null != e && H(e, V(e), Y)
                 }, W = e => {
+                    null != e && V(e, K(e), H)
+                }, z = e => {
                     (0, R.fetchSubscriptionPlansOnNewPaymentSource)(e.id, (0, T.getSubscriptionSKUs)(t)).then(() => {
-                        H(e, V(e), Y)
+                        V(e, K(e), H)
                     }), "function" == typeof i && i(e.id)
-                }, z = () => {
+                }, Z = () => {
                     (0, d.openModalLazy)(async () => {
                         let {
                             default: e
                         } = await s.el("960391").then(s.bind(s, "960391"));
                         return t => (0, a.jsx)(e, {
                             ...t,
-                            onAddPaymentSource: W,
+                            onAddPaymentSource: z,
                             analyticsLocation: x
                         })
                     }, {
@@ -2000,12 +2001,12 @@
                         })
                     })
                 })(t);
-                if (!O || !B) return (0, a.jsx)(d.Spinner, {});
-                if (!(b.length > 0)) return (0, a.jsx)(d.Button, {
+                if (!B || !j) return (0, a.jsx)(d.Spinner, {});
+                if (!(G.length > 0)) return (0, a.jsx)(d.Button, {
                     fullWidth: !0,
                     look: d.Button.Looks.FILLED,
                     color: l ? d.Button.Colors.BRAND : d.Button.Colors.PRIMARY,
-                    onClick: z,
+                    onClick: Z,
                     children: h.default.Messages.BILLING_ADD_PAYMENT_METHOD
                 });
                 else {
@@ -2021,12 +2022,13 @@
                                     value: null
                                 } : null,
                                 className: g,
-                                paymentSources: b,
-                                hidePersonalInformation: U,
+                                paymentSources: G,
+                                hidePersonalInformation: v,
                                 selectedPaymentSourceId: e,
-                                onChange: K,
-                                onPaymentSourceAdd: z,
-                                dropdownLoading: G
+                                onChange: W,
+                                onPaymentSourceAdd: Z,
+                                dropdownLoading: F,
+                                disabled: U
                             })
                         })(), null != t.paymentSourceId ? (0, a.jsx)(E.CurrencyWrapper, {
                             currencies: s,
@@ -2036,10 +2038,10 @@
                                     children: h.default.Messages.PAYMENT_CURRENCY_PAYING_IN
                                 }), (0, a.jsx)(E.default, {
                                     className: L.currencyDropdown,
-                                    selectedCurrency: k,
+                                    selectedCurrency: w,
                                     currencies: s,
                                     onChange: e => {
-                                        H(void 0, e, Y)
+                                        V(void 0, e, H)
                                     }
                                 })]
                             })
