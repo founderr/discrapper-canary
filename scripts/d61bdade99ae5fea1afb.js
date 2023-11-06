@@ -338,8 +338,8 @@
                     baseAnalyticsData: g,
                     analyticsLocation: h,
                     analyticsLocations: M,
-                    flowStartTime: L,
-                    subscriptionPlan: v,
+                    flowStartTime: v,
+                    subscriptionPlan: L,
                     planGroup: y,
                     trialId: x,
                     priceOptions: b,
@@ -364,7 +364,7 @@
                     let e, r, a;
                     if (f.default.track(p.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
                             ...g,
-                            duration_ms: Date.now() - L
+                            duration_ms: Date.now() - v
                         }), C) return;
                     let l = (0, _.isCustomGiftEnabled)(Z),
                         P = !1;
@@ -378,23 +378,23 @@
                         paymentSource: j,
                         loadId: W
                     });
-                    else if (s(null != v, "Missing subscriptionPlan"), O) {
-                        let n = (0, I.getPrice)(v.id, !1, !0, b);
+                    else if (s(null != L, "Missing subscriptionPlan"), O) {
+                        let n = (0, I.getPrice)(L.id, !1, !0, b);
                         if ("usd" === n.currency && (null == j ? void 0 : j.type) === p.PaymentSourceTypes.GCASH) {
                             let e = Error("Invalid USD currency for GCash");
                             (0, m.captureBillingException)(e, {
                                 tags: {
                                     paymentSourceId: null !== (t = null == j ? void 0 : j.id) && void 0 !== t ? t : "",
-                                    subscriptionPlanId: v.id,
+                                    subscriptionPlanId: L.id,
                                     priceOptions: JSON.stringify(b)
                                 }
                             })
                         }
-                        e = await (0, o.purchaseSKU)(N.PREMIUM_SUBSCRIPTION_APPLICATION, v.skuId, {
+                        e = await (0, o.purchaseSKU)(N.PREMIUM_SUBSCRIPTION_APPLICATION, L.skuId, {
                             expectedAmount: n.amount,
                             expectedCurrency: n.currency,
                             paymentSource: j,
-                            subscriptionPlanId: v.id,
+                            subscriptionPlanId: L.id,
                             isGift: !0,
                             giftStyle: R,
                             loadId: W,
@@ -407,11 +407,11 @@
                         paymentSource: j,
                         currency: b.currency
                     }, M, h) : null != U ? await (0, i.updateSubscription)(U, {
-                        items: (0, I.getItemsWithUpsertedPlanIdForGroup)(U, v.id, 1, new Set(y)),
+                        items: (0, I.getItemsWithUpsertedPlanIdForGroup)(U, L.id, 1, new Set(y)),
                         paymentSource: j,
                         currency: b.currency
                     }, M, h) : await (0, u.subscribe)({
-                        planId: v.id,
+                        planId: L.id,
                         currency: b.currency,
                         paymentSource: j,
                         trialId: x,
@@ -425,7 +425,7 @@
                     }
                     let T = {
                         ...g,
-                        duration_ms: Date.now() - L,
+                        duration_ms: Date.now() - v,
                         payment_source_type: null == j ? void 0 : j.type
                     };
                     l && (T.is_custom_message_edited = K !== S.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE), P && (T.is_custom_emoji_sound_available = !0, null != V && (T.emoji_name = V.surrogates), null != z && (T.sound_id = z.soundId)), f.default.track(p.AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, T), n(E.PurchaseState.COMPLETED), "subscription" in e ? r = null != e.subscription ? d.default.createFromServer(e.subscription) : null : "entitlements" in e && (a = null != e.entitlements ? e.entitlements : void 0), B(r, a)
@@ -434,7 +434,7 @@
                         ...g,
                         payment_source_id: null == j ? void 0 : j.id,
                         payment_source_type: null == j ? void 0 : j.type,
-                        duration_ms: Date.now() - L
+                        duration_ms: Date.now() - v
                     })
                 } finally {
                     !C && P(!1)
@@ -488,7 +488,7 @@
                     setPurchaseError: C,
                     purchaseErrorBlockRef: A,
                     paymentAuthenticationState: O
-                }, M = (0, i.usePremiumTrialOffer)(_), L = !R && null != M && null != g && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(g), v = null != I ? I : () => {
+                }, M = (0, i.usePremiumTrialOffer)(_), v = !R && null != M && null != g && (0, f.SubscriptionTrials)[M.trial_id].skus.includes(g), L = null != I ? I : () => {
                     let e = Object.values(N).length < 1 && null == n ? c.Step.PLAN_SELECT : c.Step.REVIEW;
                     m(e, {
                         trackedFromStep: c.Step.PAYMENT_TYPE
@@ -504,7 +504,7 @@
                     breadcrumpSteps: r,
                     currentBreadcrumpStep: p,
                     usePaymentModalStep: !0,
-                    onReturn: v,
+                    onReturn: L,
                     onComplete: e => {
                         m(c.Step.REVIEW, {
                             trackedFromStep: e
@@ -523,7 +523,7 @@
                             flow_duration_ms: s - E.startTime
                         })
                     },
-                    isEligibleForTrial: L
+                    isEligibleForTrial: v
                 })
             }
         },
@@ -1386,16 +1386,16 @@
                     } = (0, i.usePaymentContext)(), [R, g] = s.useState(!1), h = s.useRef(null), M = (0, a.useRadioGroup)({
                         orientation: "horizontal"
                     }), {
-                        enabled: L
+                        enabled: v
                     } = f.default.getCurrentConfig({
                         location: "premiumGiftSelect_GiftAnimationOptions"
-                    }), v = (0, o.isCustomGiftEnabled)(O), y = null;
-                    L ? y = S : v && (y = P);
+                    }), L = (0, o.isCustomGiftEnabled)(O), y = null;
+                    v ? y = S : L && (y = P);
                     let x = !1;
-                    return v && (x = m.CustomGiftSoundboardEmojiExperiment.getCurrentConfig({
+                    return L && (x = m.CustomGiftSoundboardEmojiExperiment.getCurrentConfig({
                         location: "premiumGiftSelect_GiftAnimationOptions"
                     }).enabled), (0, r.jsxs)("div", {
-                        children: [L && (0, r.jsx)(T, {}), v && (0, r.jsxs)("div", {
+                        children: [v && (0, r.jsx)(T, {}), L && (0, r.jsxs)("div", {
                             className: N.giftMainAnimation,
                             children: [null != t ? (0, r.jsx)(_.default, {
                                 giftStyle: t,
@@ -1489,7 +1489,9 @@
                 };
                 return (0, r.jsx)(a.Popout, {
                     shouldShow: u,
-                    position: "top",
+                    position: "bottom",
+                    align: "left",
+                    autoInvert: !1,
                     onRequestClose: () => o(!1),
                     renderPopout: e => {
                         let {
@@ -1652,8 +1654,8 @@
                 g = n("279171"),
                 h = n("883662"),
                 M = n("824734"),
-                L = n("705820"),
-                v = n("208559"),
+                v = n("705820"),
+                L = n("208559"),
                 y = n("177998"),
                 x = n("661128"),
                 b = n("26785"),
@@ -1727,8 +1729,8 @@
                     } = (0, A.default)(),
                     eh = "HR" === eg && null != eR && eR.currency === U.CurrencyCodes.EUR,
                     eM = (0, S.isPrepaidPaymentSource)(eN.paymentSourceId),
-                    eL = (null == em ? void 0 : em.interval) === G.SubscriptionIntervalTypes.DAY ? B.default.Messages.BILLING_TRIAL_2_WEEK_PERIOD : B.default.Messages.BILLING_TRIAL_30_DAY_PERIOD,
-                    ev = !k && (eP || null != em && eS && null != z),
+                    ev = (null == em ? void 0 : em.interval) === G.SubscriptionIntervalTypes.DAY ? B.default.Messages.BILLING_TRIAL_2_WEEK_PERIOD : B.default.Messages.BILLING_TRIAL_30_DAY_PERIOD,
+                    eL = !k && (eP || null != em && eS && null != z),
                     ey = null == en ? void 0 : null === (f = en.find(e => e.subscriptionPlanId === G.SubscriptionPlans.PREMIUM_MONTH_TIER_2)) || void 0 === f ? void 0 : null === (a = f.discounts) || void 0 === a ? void 0 : null === (n = a.find(e => e.type === c.InvoiceDiscountTypes.SUBSCRIPTION_PLAN)) || void 0 === n ? void 0 : n.amount;
                 return (0, r.jsx)(r.Fragment, {
                     children: (0, r.jsxs)("div", {
@@ -1738,7 +1740,7 @@
                             children: [(0, r.jsx)(g.default, {
                                 fromBoostCancelModal: !1,
                                 className: F.legacyPricingNotice
-                            }), (w || eo) && null != H && (0, r.jsx)(v.GiftAnimationOptions, {
+                            }), (w || eo) && null != H && (0, r.jsx)(L.GiftAnimationOptions, {
                                 emojiConfetti: q,
                                 setEmojiConfetti: ee,
                                 setSoundEffect: et,
@@ -1751,7 +1753,7 @@
                             children: [eo && (0, r.jsx)(j.SendGiftToUser, {
                                 giftRecipient: ei
                             }), (() => {
-                                if (eo && null != $) return (0, r.jsx)(L.default, {
+                                if (eo && null != $) return (0, r.jsx)(v.default, {
                                     sectionTitle: B.default.Messages.GIFT_OPTIONAL_MESSAGE,
                                     onTextChange: e => $(e),
                                     pendingText: X,
@@ -1809,13 +1811,13 @@
                                 }(ec, C)
                             }), (m = eS, I = eP, eo ? (0, r.jsx)(u.FormTitle, {
                                 children: B.default.Messages.GIFT_SUBSCRIPTION_SELECTION
-                            }) : ev ? m ? (0, r.jsxs)("div", {
+                            }) : eL ? m ? (0, r.jsxs)("div", {
                                 children: [(0, r.jsx)(u.Text, {
                                     variant: "text-sm/normal",
                                     className: F.trialPlanSelectHeader,
                                     children: B.default.Messages.BILLING_TRIAL_PAYMENT_MODAL_INFO.format({
                                         trialEnd: z,
-                                        trialPeriod: eL
+                                        trialPeriod: ev
                                     })
                                 }), (0, r.jsx)("hr", {
                                     className: F.planSelectSeparator
@@ -1843,7 +1845,7 @@
                                     selectPlan: ep,
                                     selected: (null == eE ? void 0 : eE.id) === e,
                                     priceOptions: eN,
-                                    shouldShowUpdatedPaymentModal: ev,
+                                    shouldShowUpdatedPaymentModal: eL,
                                     isEligibleForDiscount: eP,
                                     discountAmountOff: ey
                                 }, e))
@@ -1867,7 +1869,7 @@
                                 message: B.default.Messages.LOCALIZED_PRICING_HRK_EURO_WARNING.format({
                                     kunaPriceWithCurrency: (0, P.formatPrice)(7.5345 * eR.amount, U.CurrencyCodes.HRK)
                                 })
-                            }), !k && !ev && J && (0, r.jsx)(o.default, {
+                            }), !k && !eL && J && (0, r.jsx)(o.default, {
                                 message: B.default.Messages.BILLING_FINAL_PRICE_MAY_CHANGE.format({
                                     documentationLink: p.default.getArticleURL(D.HelpdeskArticles.LOCALIZED_PRICING)
                                 })
@@ -1986,8 +1988,8 @@
                     giftRecipient: h
                 } = (0, d.usePaymentContext)(), M = (0, _.isCustomGiftEnabled)(h);
                 l(null != g, "Missing subscriptionPlan");
-                let L = null != t && t.planId === n,
-                    v = L || n === p.SubscriptionPlans.PREMIUM_MONTH_TIER_2 && null != t && [p.SubscriptionPlans.PREMIUM_YEAR_TIER_0, p.SubscriptionPlans.PREMIUM_YEAR_TIER_1].includes(t.planId),
+                let v = null != t && t.planId === n,
+                    L = v || n === p.SubscriptionPlans.PREMIUM_MONTH_TIER_2 && null != t && [p.SubscriptionPlans.PREMIUM_YEAR_TIER_0, p.SubscriptionPlans.PREMIUM_YEAR_TIER_1].includes(t.planId),
                     y = p.DISCOUNTS[n],
                     x = (0, I.getPrice)(n, !1, P, T),
                     b = (0, I.isPrepaidPaymentSource)(T.paymentSourceId),
@@ -2002,10 +2004,10 @@
                             discount: (0, E.formatPercent)(R, y / 100)
                         })
                     }),
-                    U = () => g.interval === p.SubscriptionIntervalTypes.YEAR && null != t || j && !L ? g.interval === p.SubscriptionIntervalTypes.YEAR && null != t ? (0, r.jsxs)("span", {
+                    U = () => g.interval === p.SubscriptionIntervalTypes.YEAR && null != t || j && !v ? g.interval === p.SubscriptionIntervalTypes.YEAR && null != t ? (0, r.jsxs)("span", {
                         className: S.planOptionMonthsFree,
                         children: ["(", N.default.Messages.BILLING_SWITCH_PLAN_YEARLY_FREE_MONTHS, ")"]
-                    }) : j && !L ? D() : void 0 : null;
+                    }) : j && !v ? D() : void 0 : null;
                 return (0, r.jsxs)(c.Clickable, {
                     role: M ? "menuitem" : "radio",
                     "aria-checked": i,
@@ -2018,14 +2020,14 @@
                             bottom: 0
                         }
                     },
-                    onClick: v ? void 0 : () => s(n),
+                    onClick: L ? void 0 : () => s(n),
                     className: a(S.planOptionClickableContainer, {
                         [S.selectedPlan]: M && i,
                         [S.selectionBox]: M
                     }),
                     children: [(0, r.jsxs)("div", {
                         className: a(S.planOption, {
-                            [S.planOptionDisabled]: v
+                            [S.planOptionDisabled]: L
                         }),
                         children: [(0, r.jsxs)("div", {
                             className: S.planOptionClickable,
@@ -2050,7 +2052,7 @@
                                         currencyAmount: (0, E.formatPrice)(x.amount, x.currency)
                                     })
                                 })]
-                            }), L && (0, r.jsxs)("span", {
+                            }), v && (0, r.jsxs)("span", {
                                 className: S.planOptionCurrentPlan,
                                 children: ["(", N.default.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, ")"]
                             }), !M && U()]
@@ -2167,8 +2169,8 @@
                 g = n("153160"),
                 h = n("210721"),
                 M = n("809071"),
-                L = n("154889"),
-                v = n("883662"),
+                v = n("154889"),
+                L = n("883662"),
                 y = n("623003"),
                 x = n("65324"),
                 b = n("570727"),
@@ -2216,7 +2218,7 @@
                         giftRecipient: ep,
                         startedPaymentFlowWithPaymentSourcesRef: eN
                     } = (0, E.usePaymentContext)(),
-                    eS = (0, L.usePremiumDiscountOffer)(),
+                    eS = (0, v.usePremiumDiscountOffer)(),
                     eP = null == eS ? void 0 : null === (t = eS.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => U.SubscriptionPlanInfo[e].skuId === ef),
                     eT = !J && null != eS && null != ef && eP,
                     eC = (0, u.useStateFromStores)([C.default], () => C.default.get(W));
@@ -2237,7 +2239,7 @@
                         trialId: et,
                         metadata: es
                     }),
-                    [eM, eL] = (0, M.useSubscriptionInvoicePreview)({
+                    [eM, ev] = (0, M.useSubscriptionInvoicePreview)({
                         items: eA,
                         renewal: !0,
                         preventFetch: eR,
@@ -2246,7 +2248,7 @@
                         currency: K.currency,
                         metadata: es
                     }),
-                    [ev, ey] = (0, M.useSubscriptionInvoicePreview)({
+                    [eL, ey] = (0, M.useSubscriptionInvoicePreview)({
                         items: [{
                             planId: U.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
                             quantity: 1
@@ -2259,7 +2261,7 @@
                         metadata: es
                     }),
                     ex = (0, O.isCustomGiftEnabled)(ep),
-                    eb = null !== (a = null != eh ? eh : eL) && void 0 !== a ? a : ey,
+                    eb = null !== (a = null != eh ? eh : ev) && void 0 !== a ? a : ey,
                     ej = (0, u.useStateFromStores)([P.default], () => P.default.enabled),
                     eG = K.paymentSourceId,
                     {
@@ -2303,9 +2305,9 @@
                     isCustomGift: ex
                 });
                 else if (eu && null != eg) Y = (0, r.jsxs)("div", {
-                    children: [(0, r.jsx)(v.PremiumInvoiceTableDivider, {
+                    children: [(0, r.jsx)(L.PremiumInvoiceTableDivider, {
                         negativeMarginTop: !0
-                    }), (0, r.jsxs)(v.PremiumInvoiceTable, {
+                    }), (0, r.jsxs)(L.PremiumInvoiceTable, {
                         className: w.invoice,
                         children: [(0, r.jsxs)("div", {
                             className: w.trialPriceLine,
@@ -2334,9 +2336,9 @@
                         className: w.spinnerWrapper,
                         children: (0, r.jsx)(c.Spinner, {})
                     });
-                    eu && eg.subscriptionPeriodEnd !== eM.subscriptionPeriodEnd && (H = eg.subscriptionPeriodEnd), Y = (0, r.jsxs)(v.PremiumInvoiceTable, {
+                    eu && eg.subscriptionPeriodEnd !== eM.subscriptionPeriodEnd && (H = eg.subscriptionPeriodEnd), Y = (0, r.jsxs)(L.PremiumInvoiceTable, {
                         className: w.invoice,
-                        children: [(0, r.jsx)(v.PremiumInvoiceTableHeader, {
+                        children: [(0, r.jsx)(L.PremiumInvoiceTableHeader, {
                             children: k.default.Messages.BILLING_SWITCH_PLAN_PURCHASE_DETAILS
                         }), (0, r.jsx)(j.PremiumSubscriptionChangePlanInvoiceRows, {
                             invoice: eg,
@@ -2397,7 +2399,7 @@
                             children: er
                         })]
                     }), ek && (0, r.jsxs)("div", {
-                        children: [(0, r.jsx)(v.PremiumInvoiceTableDivider, {
+                        children: [(0, r.jsx)(L.PremiumInvoiceTableDivider, {
                             negativeMarginTop: !0
                         }), (0, r.jsx)(b.PremiumSwitchPlanSelectBody, {
                             isGift: J,
@@ -2410,8 +2412,8 @@
                             selectedPlanId: W,
                             subscriptionPeriodEnd: ew,
                             showTotal: !1,
-                            discountInvoiceItems: eT ? null == ev ? void 0 : ev.invoiceItems : void 0
-                        }), (0, r.jsx)(v.PremiumInvoiceTableDivider, {})]
+                            discountInvoiceItems: eT ? null == eL ? void 0 : eL.invoiceItems : void 0
+                        }), (0, r.jsx)(L.PremiumInvoiceTableDivider, {})]
                     }), !eu && (0, r.jsx)(c.FormTitle, {
                         tag: c.FormTitleTags.H5,
                         children: eJ
@@ -2530,8 +2532,8 @@
                     premiumSubscription: n,
                     setPurchaseState: a,
                     onBack: M,
-                    onNext: L,
-                    legalTermsNodeRef: v,
+                    onNext: v,
+                    legalTermsNodeRef: L,
                     flashLegalTerms: y,
                     invoiceError: x,
                     planError: b,
@@ -2599,7 +2601,7 @@
                         isPrepaidPaymentPastDue: eC,
                         openInvoiceId: K,
                         premiumSubscription: n,
-                        onNext: L,
+                        onNext: v,
                         metadata: V,
                         sku: eA,
                         skuPricePreview: eO,
@@ -2620,7 +2622,7 @@
                                 ...G,
                                 duration_ms: Date.now() - D,
                                 payment_source_type: null == e_ ? void 0 : e_.type
-                            }), a(m.PurchaseState.COMPLETED), L()
+                            }), a(m.PurchaseState.COMPLETED), v()
                         } catch (e) {
                             a(m.PurchaseState.FAIL), j(e), P.default.track(g.AnalyticEvents.PAYMENT_FLOW_FAILED, {
                                 ...G,
@@ -2640,7 +2642,7 @@
                 return ed ? null : (0, r.jsxs)(u.ModalFooter, {
                     align: S.default.Align.CENTER,
                     children: [(0, r.jsx)(R.default, {
-                        legalTermsNodeRef: v,
+                        legalTermsNodeRef: L,
                         invoiceError: x,
                         planError: b,
                         disablePurchase: J,
@@ -2875,7 +2877,8 @@
                 });
                 return (0, r.jsx)(i.Popout, {
                     shouldShow: f,
-                    position: "left",
+                    position: "bottom",
+                    align: "left",
                     onRequestClose: () => m(!1),
                     renderPopout: e => {
                         let {
