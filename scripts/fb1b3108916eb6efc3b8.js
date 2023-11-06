@@ -3400,11 +3400,8 @@
                     return null === (n = c[e]) || void 0 === n ? void 0 : n.find(e => e.id === t)
                 }
                 getChannelSafetyWarnings(e) {
-                    return c[e]
-                }
-                getSafetyWarningForType(e, t) {
-                    var n;
-                    return null === (n = c[e]) || void 0 === n ? void 0 : n.find(e => e.type === t && null == e.dismiss_timestamp)
+                    var t;
+                    return null !== (t = c[e]) && void 0 !== t ? t : []
                 }
             }
             var _ = new E(s.default, {

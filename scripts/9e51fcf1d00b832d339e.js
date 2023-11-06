@@ -13024,11 +13024,8 @@
                     return null === (n = d[e]) || void 0 === n ? void 0 : n.find(e => e.id === t)
                 }
                 getChannelSafetyWarnings(e) {
-                    return d[e]
-                }
-                getSafetyWarningForType(e, t) {
-                    var n;
-                    return null === (n = d[e]) || void 0 === n ? void 0 : n.find(e => e.type === t && null == e.dismiss_timestamp)
+                    var t;
+                    return null !== (t = d[e]) && void 0 !== t ? t : []
                 }
             }
             var C = new h(o.default, {
@@ -13115,14 +13112,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 useChannelSafetyWarning: function() {
-                    return l
+                    return i
                 }
             });
             var a = n("446674"),
-                s = n("764828");
+                s = n("764828"),
+                l = n("13427");
 
-            function l(e, t) {
-                return (0, a.useStateFromStores)([s.default], () => s.default.getSafetyWarningForType(e, t), [e, t])
+            function i(e, t, n) {
+                let i = (0, a.useStateFromStores)([s.default], () => s.default.getChannelSafetyWarnings(e), [e]),
+                    r = i.filter(e => e.type === t);
+                return t === s.SafetyWarningTypes.STRANGER_DANGER && r.length > 0 && l.StrangerDangerTeensExperiment.trackExposure({
+                    location: n
+                }), r.find(e => null == e.dismiss_timestamp)
             }
         },
         908041: function(e, t, n) {
@@ -13162,6 +13164,9 @@
         13427: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
+                StrangerDangerTeensExperiment: function() {
+                    return s
+                },
                 useIsEligibleForStrangerDangerTeens: function() {
                     return l
                 }
@@ -13187,7 +13192,7 @@
                 return s.useExperiment({
                     location: e
                 }, {
-                    autoTrackExposure: !0
+                    autoTrackExposure: !1
                 }).enabled
             }
         },
@@ -13255,7 +13260,7 @@
             function u(e, t) {
                 let n = (0, s.useIsSpamMessageRequest)(e),
                     u = (0, a.useIsMessageRequest)(e),
-                    d = (0, i.useChannelSafetyWarning)(e, l.SafetyWarningTypes.STRANGER_DANGER),
+                    d = (0, i.useChannelSafetyWarning)(e, l.SafetyWarningTypes.STRANGER_DANGER, t),
                     c = (0, r.useUserIsTeen)(t),
                     f = (0, o.useIsEligibleForStrangerDangerTeens)(t);
                 if (f && c && !n && !u) return d
