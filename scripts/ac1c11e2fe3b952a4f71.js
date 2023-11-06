@@ -237,13 +237,16 @@
                         files: n,
                         draftType: l,
                         isThumbnail: a = !1,
-                        isClip: s = !1
-                    } = e, i = Array.from(n).map(e => new d.CloudUpload({
-                        file: e,
-                        platform: c.UploadPlatform.WEB,
-                        isThumbnail: a,
-                        isClip: s
-                    }, t));
+                        filesMetadata: s = []
+                    } = e, i = Array.from(n).map((e, n) => {
+                        let l = null != s ? s[n] : {};
+                        return new d.CloudUpload({
+                            file: e,
+                            platform: c.UploadPlatform.WEB,
+                            isThumbnail: a,
+                            ...l
+                        }, t)
+                    });
                     R({
                         channelId: t,
                         uploads: i,
@@ -747,14 +750,14 @@
                 a.useEffect(() => {
                     null != b && (0, d.processImage)(b.file, (e, t) => N(e), S.NOOP)
                 }, [b]);
-                let j = null != b && null != F ? {
+                let w = null != b && null != F ? {
                         src: F,
                         width: M.MAX_THUMBNAIL_WIDTH,
                         height: M.MAX_THUMBNAIL_HEIGHT,
                         spoiler: C[0].spoiler,
                         alt: C[0].description
                     } : null,
-                    [w, G] = a.useState(!1),
+                    [j, G] = a.useState(!1),
                     z = a.useCallback(() => {
                         (0, A.trackForumAddMediaToOriginalPostClicked)({
                             added: !1
@@ -824,7 +827,7 @@
                                 children: (0, l.jsx)(M.default, {
                                     threadId: n,
                                     goToThread: S.NOOP,
-                                    overrideMedia: j
+                                    overrideMedia: w
                                 })
                             })
                         })]
@@ -833,19 +836,19 @@
                         children: [(0, l.jsx)(i.Button, {
                             look: i.Button.Looks.BLANK,
                             className: R.cancelButton,
-                            disabled: w,
+                            disabled: j,
                             onClick: x,
                             children: O.default.Messages.CANCEL
                         }), (0, l.jsx)(i.Button, {
                             color: i.Button.Colors.PRIMARY,
                             className: R.dontAddButton,
-                            disabled: w,
+                            disabled: j,
                             onClick: z,
                             children: O.default.Messages.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_DONT_ADD
                         }), (0, l.jsx)(i.Button, {
                             color: i.Button.Colors.BRAND,
                             className: R.button,
-                            submitting: w,
+                            submitting: j,
                             onClick: B,
                             autoFocus: !0,
                             children: O.default.Messages.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_ADD
@@ -1389,7 +1392,7 @@
                 promptToUpload: function() {
                     return T
                 }
-            }), n("424973"), n("222007");
+            }), n("424973"), n("222007"), n("70102");
             var l = n("255397"),
                 a = n("81594"),
                 s = n("783480"),
@@ -1445,12 +1448,13 @@
 
             function T(e, t, n) {
                 let {
-                    requireConfirm: u = !0,
-                    showLargeMessageDialog: c = !1,
-                    isThumbnail: _ = !1,
-                    isClip: m = !1
+                    filesMetadata: u,
+                    requireConfirm: c = !0,
+                    showLargeMessageDialog: _ = !1,
+                    isThumbnail: m = !1
                 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
                 if (e.length < 1) return;
+                if (null != u && u.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
                 let h = t.getGuildId();
                 if ((0, E.filesExceedUploadLimits)(e, h)) {
                     M(t, e);
@@ -1468,25 +1472,25 @@
                     });
                     return
                 }
-                if ((t.type === g.ChannelTypes.GUILD_VOICE || t.type === g.ChannelTypes.GUILD_STAGE_VOICE) && !o.default.getChatOpen(t.id) && l.default.updateChatOpen(t.id, !0), u) {
-                    let l = Array.from(e).map(e => ({
+                if ((t.type === g.ChannelTypes.GUILD_VOICE || t.type === g.ChannelTypes.GUILD_STAGE_VOICE) && !o.default.getChatOpen(t.id) && l.default.updateChatOpen(t.id, !0), c) {
+                    let l = Array.from(e).map((e, t) => ({
                         file: e,
                         platform: r.UploadPlatform.WEB,
-                        isThumbnail: _,
-                        isClip: m
+                        isThumbnail: m,
+                        ...null == u ? void 0 : u[t]
                     }));
                     a.default.addFiles({
                         files: l,
                         channelId: t.id,
-                        showLargeMessageDialog: c,
+                        showLargeMessageDialog: _,
                         draftType: n
                     })
                 } else s.default.instantBatchUpload({
                     channelId: t.id,
                     files: e,
                     draftType: n,
-                    isThumbnail: _,
-                    isClip: m
+                    isThumbnail: m,
+                    filesMetadata: u
                 })
             }
         },

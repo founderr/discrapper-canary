@@ -621,7 +621,9 @@
                     (0, r.promptToUpload)([new File([t], s, {
                         type: "video/mp4"
                     })], v, i.DraftType.ChannelMessage, {
-                        isClip: !0
+                        filesMetadata: [{
+                            clip: e
+                        }]
                     }), o.default.track(p.AnalyticEvents.CLIP_SHARED, {
                         location_stack: C,
                         guild_id: v.guild_id,

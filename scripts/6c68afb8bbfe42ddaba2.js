@@ -295,13 +295,16 @@
                         files: n,
                         draftType: a,
                         isThumbnail: s = !1,
-                        isClip: l = !1
-                    } = e, i = Array.from(n).map(e => new d.CloudUpload({
-                        file: e,
-                        platform: c.UploadPlatform.WEB,
-                        isThumbnail: s,
-                        isClip: l
-                    }, t));
+                        filesMetadata: l = []
+                    } = e, i = Array.from(n).map((e, n) => {
+                        let a = null != l ? l[n] : {};
+                        return new d.CloudUpload({
+                            file: e,
+                            platform: c.UploadPlatform.WEB,
+                            isThumbnail: s,
+                            ...a
+                        }, t)
+                    });
                     N({
                         channelId: t,
                         uploads: i,
@@ -16044,7 +16047,7 @@
                 promptToUpload: function() {
                     return A
                 }
-            }), n("424973"), n("222007");
+            }), n("424973"), n("222007"), n("70102");
             var a = n("255397"),
                 s = n("81594"),
                 l = n("783480"),
@@ -16100,12 +16103,13 @@
 
             function A(e, t, n) {
                 let {
-                    requireConfirm: o = !0,
-                    showLargeMessageDialog: c = !1,
-                    isThumbnail: h = !1,
-                    isClip: C = !1
+                    filesMetadata: o,
+                    requireConfirm: c = !0,
+                    showLargeMessageDialog: h = !1,
+                    isThumbnail: C = !1
                 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
                 if (e.length < 1) return;
+                if (null != o && o.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
                 let E = t.getGuildId();
                 if ((0, p.filesExceedUploadLimits)(e, E)) {
                     S(t, e);
@@ -16123,25 +16127,25 @@
                     });
                     return
                 }
-                if ((t.type === m.ChannelTypes.GUILD_VOICE || t.type === m.ChannelTypes.GUILD_STAGE_VOICE) && !u.default.getChatOpen(t.id) && a.default.updateChatOpen(t.id, !0), o) {
-                    let a = Array.from(e).map(e => ({
+                if ((t.type === m.ChannelTypes.GUILD_VOICE || t.type === m.ChannelTypes.GUILD_STAGE_VOICE) && !u.default.getChatOpen(t.id) && a.default.updateChatOpen(t.id, !0), c) {
+                    let a = Array.from(e).map((e, t) => ({
                         file: e,
                         platform: r.UploadPlatform.WEB,
-                        isThumbnail: h,
-                        isClip: C
+                        isThumbnail: C,
+                        ...null == o ? void 0 : o[t]
                     }));
                     s.default.addFiles({
                         files: a,
                         channelId: t.id,
-                        showLargeMessageDialog: c,
+                        showLargeMessageDialog: h,
                         draftType: n
                     })
                 } else l.default.instantBatchUpload({
                     channelId: t.id,
                     files: e,
                     draftType: n,
-                    isThumbnail: h,
-                    isClip: C
+                    isThumbnail: C,
+                    filesMetadata: o
                 })
             }
         },
