@@ -8698,38 +8698,19 @@
                 }
             })
         },
-        954368: function(e, t, s) {
+        736393: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
-                useClassificationRelativeIncidentTime: function() {
-                    return c
+                getClassificationRelativeIncidentTime: function() {
+                    return l
                 }
             });
-            var a = s("65597"),
-                n = s("915639");
-            let l = 36e5,
-                i = 24 * l,
-                r = 7 * i,
-                o = 30 * i,
-                d = 365 * i,
-                u = {
-                    minute: 6e4,
-                    hour: l,
-                    day: i,
-                    week: r,
-                    month: o,
-                    year: d
-                },
-                c = e => {
-                    let t;
-                    let s = (0, a.default)([n.default], () => n.default.locale),
-                        c = new Intl.RelativeTimeFormat(s, {
-                            style: "short"
-                        }),
-                        S = new Date,
-                        E = e - S.getTime();
-                    return t = Math.abs(E) < l ? "minute" : Math.abs(E) < i ? "hour" : Math.abs(E) < r ? "day" : Math.abs(E) < o ? "week" : Math.abs(E) < d ? "month" : "year", c.format(Math.floor(E / u[t]), t)
-                }
+            var a = s("866227"),
+                n = s.n(a);
+
+            function l(e) {
+                return n().to(n(e))
+            }
         },
         310888: function(e, t, s) {
             "use strict";
@@ -9124,7 +9105,7 @@
                 d = s("300113"),
                 u = s("599110"),
                 c = s("299039"),
-                S = s("954368"),
+                S = s("736393"),
                 E = s("310888"),
                 T = s("132206"),
                 f = s("698609"),
@@ -9207,11 +9188,11 @@
                 p = e => {
                     let {
                         timestamp: t
-                    } = e, s = (0, S.useClassificationRelativeIncidentTime)(t);
+                    } = e;
                     return (0, a.jsx)(i.Text, {
                         variant: "text-xs/normal",
                         className: h.timestamp,
-                        children: s
+                        children: (0, S.getClassificationRelativeIncidentTime)(t)
                     })
                 },
                 A = () => (0, a.jsx)(i.Text, {
@@ -9858,7 +9839,7 @@
             function d() {
                 var e, t, s, n, d, u, c, S, E;
                 let T = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    f = (e = "d9c8459796a9e426f168ea4eb1d1a81fcb2fa052", e.substring(0, 7)),
+                    f = (e = "0bfd45f8eaefe73b59cbe479ef85f0525eed2d03", e.substring(0, 7)),
                     m = null === (t = r.default) || void 0 === t ? void 0 : t.remoteApp.getVersion(),
                     _ = null === (n = r.default) || void 0 === n ? void 0 : null === (s = (d = n.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(d),
                     I = null === (c = r.default) || void 0 === c ? void 0 : null === (u = (S = c.remoteApp).getAppArch) || void 0 === u ? void 0 : u.call(S),
@@ -9871,7 +9852,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [T, " ", "243890", " ", (0, a.jsxs)("span", {
+                        children: [T, " ", "243895", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", f, ")"]
                         })]
