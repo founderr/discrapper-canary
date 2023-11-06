@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["15518"], {
+    ["47726"], {
         969176: function(e, t, n) {
             var a = n("354069");
             e.exports = function(e, t) {
@@ -59,6 +59,53 @@
                 }]
             })
         },
+        207273: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return f
+                }
+            }), n("222007");
+            var a = n("298386"),
+                l = n("446674"),
+                i = n("913144"),
+                u = n("619443");
+            let d = new Set,
+                s = {};
+
+            function r() {
+                d.clear()
+            }
+
+            function o(e) {
+                d.delete(e.guild.id)
+            }
+            class c extends l.default.Store {
+                getChannelStatus(e) {
+                    var t;
+                    if (null != e && null != e.guild_id) {
+                        if (e.type === a.ChannelTypes.GUILD_VOICE) return !d.has(e.guild_id) && (d.add(e.guild_id), u.default.getSocket().requestChannelStatuses(e.guild_id)), null === (t = s[e.guild_id]) || void 0 === t ? void 0 : t[e.id]
+                    }
+                }
+            }
+            c.displayName = "ChannelStatusStore";
+            var f = new c(i.default, {
+                GUILD_CREATE: o,
+                GUILD_DELETE: o,
+                CONNECTION_RESUMED: r,
+                CONNECTION_OPEN: r,
+                VOICE_CHANNEL_STATUS_UPDATE: function(e) {
+                    null == s[e.guildId] && (s[e.guildId] = {}), s[e.guildId][e.id] = e.status
+                },
+                CHANNEL_STATUSES: function(e) {
+                    for (let {
+                            id: t,
+                            status: n
+                        }
+                        of(s[e.guildId] = {}, e.channels)) s[e.guildId][t] = n
+                }
+            })
+        },
         913452: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -95,7 +142,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return g
                 }
             });
             var a = n("37983");
@@ -111,41 +158,41 @@
                 f = n("308798"),
                 E = n("47006"),
                 _ = n("878526"),
-                p = n("531674"),
-                C = n("619436"),
-                h = n("731390"),
+                C = n("531674"),
+                h = n("619436"),
+                p = n("731390"),
                 I = n("339876"),
-                T = n("49111"),
-                N = n("782340"),
-                m = (0, u.default)(function(e) {
+                N = n("49111"),
+                T = n("782340"),
+                g = (0, u.default)(function(e) {
                     let {
                         channel: t,
                         guild: n,
                         includeTopic: u = !1,
                         onSelect: d
-                    } = e, m = (0, I.default)(t), M = (0, p.default)(t), g = (0, C.default)(t), O = (0, o.default)(t), A = (0, E.default)(t), x = (0, _.default)(t, n), L = (0, r.default)(t, n), v = (0, c.default)(t, n, T.ChannelTypes.GUILD_TEXT), S = (0, c.default)(t, n, T.ChannelTypes.GUILD_VOICE), b = (0, f.default)(t), y = (0, s.default)({
+                    } = e, g = (0, I.default)(t), O = (0, C.default)(t), m = (0, h.default)(t), A = (0, o.default)(t), M = (0, E.default)(t), L = (0, _.default)(t, n), S = (0, r.default)(t, n), x = (0, c.default)(t, n, N.ChannelTypes.GUILD_TEXT), v = (0, c.default)(t, n, N.ChannelTypes.GUILD_VOICE), U = (0, f.default)(t), b = (0, s.default)({
                         id: t.id,
-                        label: N.default.Messages.COPY_ID_CHANNEL
-                    }), U = (0, h.default)(t, "title_context_menu");
+                        label: T.default.Messages.COPY_ID_CHANNEL
+                    }), y = (0, p.default)(t, "title_context_menu");
                     return (0, a.jsxs)(l.Menu, {
                         navId: "channel-context",
                         onClose: i.closeContextMenu,
-                        "aria-label": N.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+                        "aria-label": T.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                         onSelect: d,
                         children: [(0, a.jsx)(l.MenuGroup, {
-                            children: m
+                            children: g
                         }), (0, a.jsx)(l.MenuGroup, {
-                            children: M
+                            children: O
                         }), (0, a.jsxs)(l.MenuGroup, {
-                            children: [u ? O : g, A]
+                            children: [u ? A : m, M]
                         }), (0, a.jsxs)(l.MenuGroup, {
-                            children: [x, L, v, S]
+                            children: [L, S, x, v]
+                        }), (0, a.jsx)(l.MenuGroup, {
+                            children: y
                         }), (0, a.jsx)(l.MenuGroup, {
                             children: U
                         }), (0, a.jsx)(l.MenuGroup, {
                             children: b
-                        }), (0, a.jsx)(l.MenuGroup, {
-                            children: y
                         })]
                     })
                 }, [d.default.CONTEXT_MENU, d.default.CHANNEL_TITLE_MENU])
@@ -451,8 +498,8 @@
                     var e;
                     let t = d.default.getChannels(n.id);
                     return null === (e = t[0, d.GUILD_SELECTABLE_CHANNELS_KEY].find(e => s.default.can(o.Permissions.CREATE_INSTANT_INVITE, e.channel))) || void 0 === e ? void 0 : e.channel
-                }), c = (0, l.useStateFromStores)([s.default], () => (0, u.canViewInviteModal)(s.default, n, a, i)), f = E(t, n, c && null != a ? a : r), p = _(t);
-                return null == a && t === o.InstantInviteSources.GUILD_CONTEXT_MENU ? null : c || null != r ? f : p
+                }), c = (0, l.useStateFromStores)([s.default], () => (0, u.canViewInviteModal)(s.default, n, a, i)), f = E(t, n, c && null != a ? a : r), C = _(t);
+                return null == a && t === o.InstantInviteSources.GUILD_CONTEXT_MENU ? null : c || null != r ? f : C
             }
             let E = (e, t, l) => (0, a.jsx)(i.MenuItem, {
                     id: "invite-people",

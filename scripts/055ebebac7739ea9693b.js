@@ -4793,7 +4793,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return G
+                    return H
                 }
             }), n("222007");
             var a = n("37983");
@@ -4808,64 +4808,65 @@
                 c = n("244201"),
                 f = n("204947"),
                 h = n("442939"),
-                p = n("679653"),
-                m = n("619335"),
-                E = n("534222"),
-                C = n("941298"),
-                S = n("539938"),
-                _ = n("557809"),
-                g = n("367376"),
-                I = n("616718"),
-                T = n("550410"),
-                x = n("957255"),
-                v = n("953109"),
-                N = n("832132"),
-                A = n("664336"),
-                M = n("439932"),
-                R = n("191145"),
-                j = n("598785"),
-                L = n("2830"),
-                O = n("836087"),
-                y = n("843624"),
-                D = n("99795"),
-                P = n("49111"),
-                b = n("843455"),
-                U = n("782340"),
-                w = n("125738"),
-                F = n("632215");
+                p = n("207273"),
+                m = n("679653"),
+                E = n("619335"),
+                C = n("534222"),
+                S = n("941298"),
+                _ = n("539938"),
+                g = n("557809"),
+                I = n("367376"),
+                T = n("616718"),
+                x = n("550410"),
+                v = n("957255"),
+                N = n("953109"),
+                A = n("832132"),
+                M = n("664336"),
+                R = n("439932"),
+                j = n("191145"),
+                L = n("598785"),
+                O = n("2830"),
+                y = n("836087"),
+                D = n("843624"),
+                P = n("99795"),
+                b = n("49111"),
+                U = n("843455"),
+                w = n("782340"),
+                F = n("125738"),
+                k = n("632215");
 
-            function k(e) {
+            function V(e) {
                 let {
                     focusedParticipant: t,
                     channel: n
-                } = e, l = (0, c.useAppContext)(), s = (0, i.useStateFromStores)([R.default], () => R.default.getLayout(n.id, l));
-                return (0, a.jsx)(T.default, {
-                    children: (0, a.jsx)(O.default, {
-                        className: w.participants,
+                } = e, l = (0, c.useAppContext)(), s = (0, i.useStateFromStores)([j.default], () => j.default.getLayout(n.id, l));
+                return (0, a.jsx)(x.default, {
+                    children: (0, a.jsx)(y.default, {
+                        className: F.participants,
                         participant: t,
                         maxVisibleUsers: 5,
                         guildId: n.getGuildId(),
                         channelId: n.id,
-                        disableInteraction: l === P.AppContext.POPOUT || s === P.ChannelLayouts.FULL_SCREEN
+                        disableInteraction: l === b.AppContext.POPOUT || s === b.ChannelLayouts.FULL_SCREEN
                     })
                 })
             }
 
-            function V(e) {
+            function B(e) {
                 let {
                     user: t,
                     channel: n,
                     stream: l,
                     color: s
-                } = e, i = (0, I.default)(n, t, l);
+                } = e, i = (0, T.default)(n, t, l);
                 return null == t || null == l ? null : (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(u.default, {
-                        className: w.avatar,
+                        className: F.avatar,
                         size: r.AvatarSizes.SIZE_24,
                         user: t,
                         animate: !1
                     }), (0, a.jsx)(r.Text, {
-                        className: w.playingText,
+                        className: F.playingText,
                         variant: "text-md/medium",
                         color: s,
                         children: i
@@ -4873,113 +4874,113 @@
                 })
             }
 
-            function B(e) {
+            function G(e) {
                 let t, {
                         focusedApplication: n,
                         focusedParticipant: l,
                         channel: s
                     } = e,
-                    i = (0, j.default)(s, !0),
-                    u = (0, E.useActiveEvent)(s.id);
-                if ((null == l ? void 0 : l.type) === D.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsx)(A.default.Divider, {
-                        className: w.divider
-                    }), (0, a.jsx)(v.default, {
+                    i = (0, L.default)(s, !0),
+                    u = (0, C.useActiveEvent)(s.id);
+                if ((null == l ? void 0 : l.type) === P.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
+                    children: [(0, a.jsx)(M.default.Divider, {
+                        className: F.divider
+                    }), (0, a.jsx)(N.default, {
                         game: n,
-                        className: w.activityIcon
+                        className: F.activityIcon
                     }), (0, a.jsx)(r.Text, {
-                        className: w.playingText,
+                        className: F.playingText,
                         variant: "text-md/normal",
                         color: "none",
                         children: (0, f.default)(n.name)
-                    }), i && (0, a.jsx)(k, {
+                    }), i && (0, a.jsx)(V, {
                         channel: s,
                         focusedParticipant: l
                     })]
                 }));
-                else if ((null == l ? void 0 : l.type) === D.ParticipantTypes.STREAM) {
+                else if ((null == l ? void 0 : l.type) === P.ParticipantTypes.STREAM) {
                     let e = l.user,
                         n = l.stream;
                     t = (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsx)(A.default.Divider, {
-                            className: w.divider
-                        }), (0, a.jsx)(V, {
+                        children: [(0, a.jsx)(M.default.Divider, {
+                            className: F.divider
+                        }), (0, a.jsx)(B, {
                             user: e,
                             channel: s,
                             stream: n,
                             color: i ? "header-primary" : "none"
-                        }), i && (0, a.jsx)(k, {
+                        }), i && (0, a.jsx)(V, {
                             channel: s,
                             focusedParticipant: l
                         })]
                     })
-                } else null != u && (t = (0, a.jsx)(C.default, {
+                } else null != u && (t = (0, a.jsx)(S.default, {
                     guildEvent: u
                 }));
                 return (0, a.jsx)("div", {
-                    className: w.container,
+                    className: F.container,
                     children: t
                 })
             }
 
-            function G(e) {
+            function H(e) {
                 var t;
                 let {
                     channel: l,
                     guild: u,
                     appContext: c,
                     inCall: f,
-                    isChatOpen: E,
-                    exitFullScreen: C
+                    isChatOpen: C,
+                    exitFullScreen: S
                 } = e, {
-                    focusedParticipant: I
-                } = (0, i.useStateFromStoresObject)([R.default], () => ({
-                    focusedParticipant: R.default.getSelectedParticipant(l.id),
-                    participantsOpen: R.default.getParticipantsOpen(l.id)
-                }), [l.id]), T = (0, p.default)(l), v = (0, m.default)(l), j = d.default.useExperiment({
+                    focusedParticipant: T
+                } = (0, i.useStateFromStoresObject)([j.default], () => ({
+                    focusedParticipant: j.default.getSelectedParticipant(l.id),
+                    participantsOpen: j.default.getParticipantsOpen(l.id)
+                }), [l.id]), x = (0, m.default)(l), N = (0, E.default)(l), L = d.default.useExperiment({
                     guildId: null !== (t = null == u ? void 0 : u.id) && void 0 !== t ? t : "",
                     location: "7b48cc_1"
                 }, {
                     autoTrackExposure: !1
-                }).enabled && f, [O] = (0, h.default)((null == I ? void 0 : I.type) === D.ParticipantTypes.ACTIVITY ? [I.id] : []), k = U.default.Messages.VOICE_CHANNEL;
-                l.isDM() ? k = U.default.Messages.DM : l.isGroupDM() && (k = U.default.Messages.GROUP_DM);
+                }).enabled && f, [y] = (0, h.default)((null == T ? void 0 : T.type) === P.ParticipantTypes.ACTIVITY ? [T.id] : []), V = w.default.Messages.VOICE_CHANNEL;
+                l.isDM() ? V = w.default.Messages.DM : l.isGroupDM() && (V = w.default.Messages.GROUP_DM);
                 let {
-                    enabled: V,
-                    left: G
+                    enabled: B,
+                    left: H
                 } = o.ChannelEmojisExperiment.useExperiment({
                     location: "7b48cc_2"
                 }, {
                     autoTrackExposure: !1
-                }), H = V && (0, a.jsx)(_.ChannelEmoji, {
+                }), W = B && (0, a.jsx)(g.ChannelEmoji, {
                     channel: l
-                }), W = l.isGuildVoice() && j && null != l.status && l.status.length > 0, Y = (0, i.useStateFromStores)([x.default], () => x.default.can(P.Permissions.SET_VOICE_CHANNEL_STATUS, l)), z = W ? (0, a.jsx)(r.Tooltip, {
-                    text: U.default.Messages.VOICE_CHANNEL_SET_STATUS,
+                }), Y = (0, i.useStateFromStores)([p.default], () => p.default.getChannelStatus(l)), z = l.isGuildVoice() && L && null != Y && Y.length > 0, K = (0, i.useStateFromStores)([v.default], () => v.default.can(b.Permissions.SET_VOICE_CHANNEL_STATUS, l)), Z = z ? (0, a.jsx)(r.Tooltip, {
+                    text: w.default.Messages.VOICE_CHANNEL_SET_STATUS,
                     delay: 500,
                     position: "bottom",
-                    shouldShow: Y,
+                    shouldShow: K,
                     children: e => (0, a.jsxs)(r.Clickable, {
                         ...e,
-                        className: s(w.channelStatusClickable, {
-                            [w.hoverable]: Y
+                        className: s(F.channelStatusClickable, {
+                            [F.hoverable]: K
                         }),
-                        onClick: Y ? K : void 0,
+                        onClick: K ? X : void 0,
                         children: [(0, a.jsx)(r.Text, {
                             variant: "text-xs/normal",
-                            className: s(w.channelStatus, F.markup, {
-                                [w.hoverable]: Y
+                            className: s(F.channelStatus, k.markup, {
+                                [F.hoverable]: K
                             }),
-                            children: g.default.parseVoiceChannelStatus(l.status, !0, {
+                            children: I.default.parseVoiceChannelStatus(Y, !0, {
                                 channelId: l.id
                             })
-                        }), Y && (0, a.jsx)(N.default, {
-                            className: s(w.pencilIcon, w.hoverable),
+                        }), K && (0, a.jsx)(A.default, {
+                            className: s(F.pencilIcon, F.hoverable),
                             width: 14,
                             height: 14
                         })]
                     })
                 }) : null;
 
-                function K() {
+                function X() {
                     (0, r.openModalLazy)(async () => {
                         let {
                             default: e
@@ -4989,35 +4990,35 @@
                             ...t
                         })
                     }, {
-                        modalKey: y.VOICE_CHANNEL_STATUS_MODAL_KEY
+                        modalKey: D.VOICE_CHANNEL_STATUS_MODAL_KEY
                     })
                 }
                 return (0, a.jsx)("div", {
-                    className: w.subtitleContainer,
-                    children: (0, a.jsxs)(A.default, {
-                        onDoubleClick: S.handleDoubleClick,
+                    className: F.subtitleContainer,
+                    children: (0, a.jsxs)(M.default, {
+                        onDoubleClick: _.handleDoubleClick,
                         transparent: !0,
-                        className: (0, M.getThemeClass)(b.ThemeTypes.DARK),
-                        childrenBottom: z,
-                        toolbar: (0, a.jsx)(L.default, {
+                        className: (0, R.getThemeClass)(U.ThemeTypes.DARK),
+                        childrenBottom: Z,
+                        toolbar: (0, a.jsx)(O.default, {
                             channel: l,
                             appContext: c,
                             inCall: f,
-                            isChatOpen: E,
-                            exitFullScreen: C
+                            isChatOpen: C,
+                            exitFullScreen: S
                         }),
-                        children: [G && H, null != v ? (0, a.jsx)(A.default.Icon, {
-                            icon: v,
+                        children: [H && W, null != N ? (0, a.jsx)(M.default.Icon, {
+                            icon: N,
                             disabled: !0,
-                            "aria-label": k
-                        }) : null, !G && H, (0, a.jsx)(A.default.Title, {
-                            children: T
-                        }), (0, a.jsx)(_.HeaderGuildBreadcrumb, {
+                            "aria-label": V
+                        }) : null, !H && W, (0, a.jsx)(M.default.Title, {
+                            children: x
+                        }), (0, a.jsx)(g.HeaderGuildBreadcrumb, {
                             channel: l,
                             guild: u
-                        }), (0, a.jsx)(B, {
-                            focusedApplication: O,
-                            focusedParticipant: I,
+                        }), (0, a.jsx)(G, {
+                            focusedApplication: y,
+                            focusedParticipant: T,
                             channel: l
                         })]
                     })
@@ -5673,121 +5674,122 @@
             "use strict";
             n.r(t), n.d(t, {
                 VOICE_CHANNEL_STATUS_MODAL_KEY: function() {
-                    return E
+                    return S
                 },
                 default: function() {
-                    return C
+                    return _
                 }
             }), n("222007");
             var a = n("37983"),
                 l = n("884691"),
-                s = n("77078"),
-                i = n("18054"),
-                r = n("850391"),
-                u = n("149022"),
-                o = n("681060"),
-                d = n("298878"),
-                c = n("145131"),
-                f = n("599110"),
-                h = n("49111"),
-                p = n("782340"),
-                m = n("447365");
-            let E = "VoiceChannelStatusModal";
+                s = n("65597"),
+                i = n("77078"),
+                r = n("18054"),
+                u = n("207273"),
+                o = n("850391"),
+                d = n("149022"),
+                c = n("681060"),
+                f = n("298878"),
+                h = n("145131"),
+                p = n("599110"),
+                m = n("49111"),
+                E = n("782340"),
+                C = n("447365");
+            let S = "VoiceChannelStatusModal";
 
-            function C(e) {
-                var t;
+            function _(e) {
                 let {
-                    channel: n,
-                    transitionState: C,
-                    onClose: S
-                } = e, [_, g] = l.useState(null !== (t = n.status) && void 0 !== t ? t : ""), [I, T] = l.useState(!1), [x, v] = l.useState(null);
+                    channel: t,
+                    transitionState: n,
+                    onClose: _
+                } = e, g = (0, s.default)([u.default], () => u.default.getChannelStatus(t)), [I, T] = l.useState(null != g ? g : ""), [x, v] = l.useState(!1), [N, A] = l.useState(null);
                 l.useEffect(() => {
-                    f.default.track(h.AnalyticEvents.OPEN_MODAL, {
+                    p.default.track(m.AnalyticEvents.OPEN_MODAL, {
                         type: "Voice Channel Topic Modal",
-                        guild_id: n.guild_id
+                        guild_id: t.guild_id
                     })
-                }, [n.guild_id]);
-                let N = async e => {
-                    _ === n.status && S(), null == e || e.preventDefault(), v(null), T(!0), await i.default.updateVoiceChannelStatus(n.id, _).then(e => {
-                        204 === e.status ? (f.default.track(h.AnalyticEvents.VOICE_CHANNEL_TOPIC_SET, {
-                            guild_id: n.guild_id,
-                            channel_id: n.id
-                        }), S()) : v(e.body.message)
+                }, [t.guild_id]);
+                let M = async e => {
+                    I === g && _(), null == e || e.preventDefault(), A(null), v(!0), await r.default.updateVoiceChannelStatus(t.id, I).then(e => {
+                        204 === e.status ? (p.default.track(m.AnalyticEvents.VOICE_CHANNEL_TOPIC_SET, {
+                            guild_id: t.guild_id,
+                            channel_id: t.id
+                        }), _()) : A(e.body.message)
                     }, e => {
-                        v(e.body.message)
-                    }), T(!1)
-                }, [A, M] = l.useState((0, u.toRichValue)(_));
+                        A(e.body.message)
+                    }), v(!1)
+                }, [R, j] = l.useState((0, d.toRichValue)(I));
                 return (0, a.jsx)("form", {
-                    onSubmit: N,
-                    className: m.form,
-                    children: (0, a.jsxs)(s.ModalRoot, {
-                        transitionState: C,
-                        size: s.ModalSize.SMALL,
-                        children: [(0, a.jsxs)(s.ModalContent, {
-                            children: [(0, a.jsxs)(s.ModalHeader, {
-                                align: c.default.Align.CENTER,
-                                className: m.modalHeader,
+                    onSubmit: M,
+                    className: C.form,
+                    children: (0, a.jsxs)(i.ModalRoot, {
+                        transitionState: n,
+                        size: i.ModalSize.SMALL,
+                        children: [(0, a.jsxs)(i.ModalContent, {
+                            children: [(0, a.jsxs)(i.ModalHeader, {
+                                align: h.default.Align.CENTER,
+                                className: C.modalHeader,
                                 separator: !1,
-                                children: [(0, a.jsx)(s.ModalCloseButton, {
-                                    className: m.closeButton,
-                                    onClick: S
+                                children: [(0, a.jsx)(i.ModalCloseButton, {
+                                    className: C.closeButton,
+                                    onClick: _
                                 }), (0, a.jsx)("div", {
-                                    className: m.headerImage
+                                    className: C.headerImage
                                 }), (0, a.jsxs)("div", {
-                                    className: m.titleRow,
-                                    children: [(0, a.jsx)(s.FormTitle, {
+                                    className: C.titleRow,
+                                    children: [(0, a.jsx)(i.FormTitle, {
                                         tag: "h1",
-                                        className: m.title,
-                                        children: p.default.Messages.VOICE_CHANNEL_STATUS_MODAL_TITLE
-                                    }), (0, a.jsx)(d.default, {
-                                        className: m.betaTag
+                                        className: C.title,
+                                        children: E.default.Messages.VOICE_CHANNEL_STATUS_MODAL_TITLE
+                                    }), (0, a.jsx)(f.default, {
+                                        className: C.betaTag
                                     })]
-                                }), (0, a.jsx)(s.Text, {
+                                }), (0, a.jsx)(i.Text, {
                                     color: "header-secondary",
                                     variant: "text-sm/normal",
-                                    children: p.default.Messages.VOICE_CHANNEL_STATUS_MODAL_SUBTITLE
+                                    children: E.default.Messages.VOICE_CHANNEL_STATUS_MODAL_SUBTITLE
                                 })]
-                            }), (0, a.jsxs)(s.FormSection, {
-                                className: m.inputSection,
-                                title: p.default.Messages.VOICE_CHANNEL_STATUS,
-                                children: [(0, a.jsx)(o.default, {
-                                    innerClassName: m.textArea,
-                                    textValue: _,
-                                    richValue: A,
-                                    placeholder: p.default.Messages.VOICE_CHANNEL_STATUS_MODAL_PREFILL_CHANNEL.format({
-                                        channelName: n.name
+                            }), (0, a.jsxs)(i.FormSection, {
+                                className: C.inputSection,
+                                title: E.default.Messages.VOICE_CHANNEL_STATUS,
+                                children: [(0, a.jsx)(c.default, {
+                                    innerClassName: C.textArea,
+                                    textValue: I,
+                                    richValue: R,
+                                    placeholder: E.default.Messages.VOICE_CHANNEL_STATUS_MODAL_PREFILL_CHANNEL.format({
+                                        channelName: t.name
                                     }),
                                     focused: !0,
-                                    channel: n,
+                                    channel: t,
                                     onChange: (e, t, n) => {
-                                        g(t), M(n)
+                                        T(t), j(n)
                                     },
-                                    onSubmit: () => (N(), Promise.resolve({
+                                    onSubmit: () => (M(), Promise.resolve({
                                         shouldClear: !1,
                                         shouldRefocus: !0
                                     })),
-                                    type: r.ChatInputTypes.VOICE_CHANNEL_STATUS,
+                                    type: o.ChatInputTypes.VOICE_CHANNEL_STATUS,
                                     canMentionRoles: !1,
                                     canMentionChannels: !1,
                                     allowNewLines: !1,
-                                    parentModalKey: E
-                                }), null != x ? (0, a.jsx)(s.FormErrorBlock, {
-                                    className: m.error,
-                                    children: x
+                                    parentModalKey: S
+                                }), null != N ? (0, a.jsx)(i.FormErrorBlock, {
+                                    className: C.error,
+                                    children: N
                                 }) : null]
                             })]
-                        }), (0, a.jsxs)(s.ModalFooter, {
-                            justify: c.default.Justify.BETWEEN,
-                            direction: c.default.Direction.HORIZONTAL,
-                            children: [(0, a.jsx)(s.Button, {
-                                color: s.Button.Colors.PRIMARY,
-                                onClick: S,
-                                children: p.default.Messages.CANCEL
-                            }), (0, a.jsx)(s.Button, {
-                                onClick: N,
-                                submitting: I,
-                                className: m.button,
-                                children: p.default.Messages.VOICE_CHANNEL_STATUS_MODAL_SET_STATUS
+                        }), (0, a.jsxs)(i.ModalFooter, {
+                            justify: h.default.Justify.BETWEEN,
+                            direction: h.default.Direction.HORIZONTAL,
+                            children: [(0, a.jsx)(i.Button, {
+                                color: i.Button.Colors.PRIMARY,
+                                onClick: _,
+                                children: E.default.Messages.CANCEL
+                            }), (0, a.jsx)(i.Button, {
+                                onClick: M,
+                                submitting: x,
+                                className: C.button,
+                                children: E.default.Messages.VOICE_CHANNEL_STATUS_MODAL_SET_STATUS
                             })]
                         })]
                     })

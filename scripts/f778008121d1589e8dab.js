@@ -237,15 +237,15 @@
                         a = C.default.getSection(n, null == l ? void 0 : l.isDM()),
                         s = a === h.ChannelSections.SIDEBAR_CHAT ? C.default.getSidebarState(n) : null,
                         r = (null == s ? void 0 : s.type) === _.SidebarType.VIEW_THREAD || (null == s ? void 0 : s.type) === _.SidebarType.VIEW_CHANNEL ? s.channelId : null;
-                    if (!1 === g(n) || !1 === g(r)) return !1;
+                    if (!1 === G(n) || !1 === G(r)) return !1;
                     if (null != n && (null == s ? void 0 : s.type) === _.SidebarType.CREATE_THREAD) return E.default.closeChannelSidebar(n), !1;
-                    let c = G(n),
-                        A = G(r);
+                    let c = g(n),
+                        A = g(r);
                     return null == n || c || A || null == s ? null != n && !c && d.default.getChatOpen(n) ? (o.default.updateChatOpen(n, !1), !1) : (p.ComponentDispatch.dispatch(h.ComponentActions.SCROLLTO_PRESENT), !1) : (E.default.closeChannelSidebar(n), !1)
                 }
             };
 
-            function g(e) {
+            function G(e) {
                 if (null != e) {
                     if (I.default.isEditingAny(e)) return l.default.endEditMessage(e), !1;
                     if (null != r.default.getPendingReply(e)) return (0, s.deletePendingReply)(e), !1;
@@ -253,7 +253,7 @@
                 }
             }
 
-            function G(e) {
+            function g(e) {
                 if (null == e) return !1;
                 let t = !1,
                     n = f.default.getMessages(e);
@@ -869,8 +869,8 @@
                 p = n("945924"),
                 h = n("648900"),
                 b = n("838021"),
-                g = n("745991"),
-                G = n("640968"),
+                G = n("745991"),
+                g = n("640968"),
                 M = n("347445"),
                 P = n("992642"),
                 U = n("200431"),
@@ -933,11 +933,11 @@
                 [H.KeybindActions.TEXTAREA_FOCUS]: p.TEXTAREA_FOCUS,
                 [H.KeybindActions.MARK_CHANNEL_READ]: c.MARK_CHANNEL_READ,
                 [H.KeybindActions.MARK_SERVER_READ]: A.MARK_SERVER_READ,
-                [H.KeybindActions.TOGGLE_CHANNEL_PINS]: g.TOGGLE_CHANNEL_PINS,
+                [H.KeybindActions.TOGGLE_CHANNEL_PINS]: G.TOGGLE_CHANNEL_PINS,
                 [H.KeybindActions.TOGGLE_INBOX_UNREADS_TAB]: P.TOGGLE_INBOX_UNREADS_TAB,
                 [H.KeybindActions.MARK_TOP_INBOX_CHANNEL_READ]: P.MARK_TOP_INBOX_CHANNEL_READ,
                 [H.KeybindActions.TOGGLE_USERS]: U.TOGGLE_USERS,
-                [H.KeybindActions.TOGGLE_HELP]: G.TOGGLE_HELP,
+                [H.KeybindActions.TOGGLE_HELP]: g.TOGGLE_HELP,
                 [H.KeybindActions.TOGGLE_MUTE]: h.TOGGLE_MUTE,
                 [H.KeybindActions.TOGGLE_DEAFEN]: h.TOGGLE_DEAFEN,
                 [H.KeybindActions.TOGGLE_CATEGORY_COLLAPSED]: b.TOGGLE_CATEGORY_COLLAPSED,
@@ -1482,13 +1482,13 @@
                 h = null,
                 b = new D.default;
 
-            function g() {
+            function G() {
                 let e = O.default.getChannelId(),
                     t = O.default.getVoiceChannelId();
                 return p = e, h = t, b.clear()
             }
 
-            function G(e) {
+            function g(e) {
                 let {
                     guild: {
                         id: t
@@ -1604,7 +1604,7 @@
                 APPLICATIONS_FETCH_FAIL: v,
                 APPLICATIONS_FETCH_SUCCESS: v,
                 APPLICATIONS_FETCH: v,
-                BACKGROUND_SYNC: g,
+                BACKGROUND_SYNC: G,
                 BULK_ACK: function(e) {
                     let {
                         channels: t
@@ -1616,13 +1616,13 @@
                         b.clearGuildId(e) && (n = !0)
                     }), n
                 },
-                CACHE_LOADED_LAZY: g,
+                BULK_CLEAR_RECENTS: P,
+                CACHE_LOADED_LAZY: G,
                 CATEGORY_COLLAPSE_ALL: P,
                 CATEGORY_COLLAPSE: B,
                 CATEGORY_EXPAND_ALL: P,
                 CATEGORY_EXPAND: B,
                 CHANNEL_ACK: U,
-                CHANNEL_CREATE: M,
                 CHANNEL_COLLAPSE: function(e) {
                     var t;
                     let {
@@ -1630,13 +1630,13 @@
                     } = e;
                     return b.clearGuildId(null === (t = C.default.getChannel(n)) || void 0 === t ? void 0 : t.guild_id)
                 },
+                CHANNEL_CREATE: M,
                 CHANNEL_DELETE: M,
                 CHANNEL_LOCAL_ACK: U,
                 CHANNEL_RTC_UPDATE_CHAT_OPEN: U,
                 CHANNEL_SELECT: H,
-                VOICE_CHANNEL_STATUS_UPDATE: function(e) {
-                    let t = C.default.getBasicChannel(e.id);
-                    if (null != t && null != t.guild_id) return b.clearGuildId(t.guild_id)
+                CHANNEL_STATUSES: function(e) {
+                    return b.clearGuildId(e.guildId)
                 },
                 CHANNEL_UPDATES: function(e) {
                     let {
@@ -1647,11 +1647,17 @@
                     }), n
                 },
                 CONNECTION_OPEN_SUPPLEMENTAL: v,
-                CONNECTION_OPEN: g,
-                CURRENT_USER_UPDATE: g,
-                DECAY_READ_STATES: g,
-                DEV_TOOLS_DESIGN_TOGGLE_SET: g,
+                CONNECTION_OPEN: G,
+                CURRENT_USER_UPDATE: G,
+                DECAY_READ_STATES: G,
+                DEV_TOOLS_DESIGN_TOGGLE_SET: G,
                 DISABLE_AUTOMATIC_ACK: U,
+                DISMISS_FAVORITE_SUGGESTION: function(e) {
+                    let {
+                        channelId: t
+                    } = e;
+                    return b.nonPositionalChannelIdUpdate(t)
+                },
                 DRAWER_CLOSE: m,
                 DRAWER_OPEN: m,
                 EMBEDDED_ACTIVITY_INBOUND_UPDATE: function(e) {
@@ -1661,10 +1667,10 @@
                     } = e;
                     return b.updateSubtitles(t, n)
                 },
-                EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: v,
                 EMBEDDED_ACTIVITY_LAUNCH_START: function(e) {
                     v()
                 },
+                EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: v,
                 ENABLE_AUTOMATIC_ACK: U,
                 FETCH_GUILD_EVENTS_FOR_GUILD: function(e) {
                     let {
@@ -1676,8 +1682,9 @@
                 GAMES_DATABASE_FETCH: v,
                 GAMES_DATABASE_UPDATE: v,
                 GUILD_APPLICATIONS_FETCH_SUCCESS: v,
-                GUILD_CREATE: G,
-                GUILD_DELETE: G,
+                GUILD_CREATE: g,
+                GUILD_DELETE: g,
+                GUILD_FEED_FETCH_SUCCESS: v,
                 GUILD_MEMBER_UPDATE: function(e) {
                     let {
                         guildId: t,
@@ -1687,13 +1694,16 @@
                 },
                 GUILD_ROLE_CREATE: P,
                 GUILD_ROLE_DELETE: P,
+                GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: P,
+                GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: P,
                 GUILD_ROLE_UPDATE: P,
                 GUILD_SCHEDULED_EVENT_CREATE: F,
                 GUILD_SCHEDULED_EVENT_DELETE: F,
                 GUILD_SCHEDULED_EVENT_UPDATE: F,
                 GUILD_TOGGLE_COLLAPSE_MUTED: P,
-                GUILD_UPDATE: G,
-                GUILD_FEED_FETCH_SUCCESS: v,
+                GUILD_UPDATE: g,
+                IMPERSONATE_STOP: P,
+                IMPERSONATE_UPDATE: P,
                 LOAD_MESSAGES_SUCCESS: U,
                 MESSAGE_ACK: U,
                 MESSAGE_CREATE: function(e) {
@@ -1704,11 +1714,12 @@
                 },
                 MESSAGE_DELETE_BULK: U,
                 MESSAGE_DELETE: U,
-                OVERLAY_INITIALIZE: g,
+                OVERLAY_INITIALIZE: G,
                 PASSIVE_UPDATE_V1: function(e) {
                     return null != e.channels && (b.clearGuildId(e.guildId), !0)
                 },
                 RESORT_THREADS: U,
+                SET_RECENTLY_ACTIVE_COLLAPSED: G,
                 THREAD_CREATE: K,
                 THREAD_DELETE: function(e) {
                     let {
@@ -1721,8 +1732,14 @@
                 THREAD_MEMBERS_UPDATE: y,
                 THREAD_UPDATE: K,
                 UPDATE_CHANNEL_DIMENSIONS: U,
-                USER_GUILD_SETTINGS_CHANNEL_UPDATE: P,
+                UPDATE_CHANNEL_LIST_SUBTITLES: function(e) {
+                    let {
+                        guildId: t
+                    } = e;
+                    b.updateSubtitles(t)
+                },
                 USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: P,
+                USER_GUILD_SETTINGS_CHANNEL_UPDATE: P,
                 USER_GUILD_SETTINGS_FULL_UPDATE: function(e) {
                     let {
                         userGuildSettings: t
@@ -1734,33 +1751,8 @@
                         return b.clearGuildId(t)
                     })
                 },
-                USER_GUILD_SETTINGS_GUILD_UPDATE: P,
                 USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: P,
-                IMPERSONATE_STOP: P,
-                IMPERSONATE_UPDATE: P,
-                VOICE_CATEGORY_COLLAPSE: V,
-                VOICE_CATEGORY_EXPAND: V,
-                VOICE_CHANNEL_SELECT: H,
-                VOICE_STATE_UPDATES: function(e) {
-                    let {
-                        voiceStates: t
-                    } = e, n = H(), i = new Set;
-                    for (let {
-                            channelId: e,
-                            oldChannelId: o
-                        }
-                        of t) null != o && !i.has(o) && (b.nonPositionalChannelIdUpdate(o) && (n = !0), i.add(o)), null != e && !i.has(e) && (b.nonPositionalChannelIdUpdate(e) && (n = !0), i.add(e));
-                    return n
-                },
-                WINDOW_FOCUS: m,
-                DISMISS_FAVORITE_SUGGESTION: function(e) {
-                    let {
-                        channelId: t
-                    } = e;
-                    return b.nonPositionalChannelIdUpdate(t)
-                },
-                SET_RECENTLY_ACTIVE_COLLAPSED: g,
-                BULK_CLEAR_RECENTS: P,
+                USER_GUILD_SETTINGS_GUILD_UPDATE: P,
                 USER_SETTINGS_PROTO_UPDATE: function(e) {
                     var t;
                     let {
@@ -1774,14 +1766,24 @@
                         null != t && (o = b.updateRecentsCategory(e) || o)
                     }), o
                 },
-                GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: P,
-                GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: P,
-                UPDATE_CHANNEL_LIST_SUBTITLES: function(e) {
+                VOICE_CATEGORY_COLLAPSE: V,
+                VOICE_CATEGORY_EXPAND: V,
+                VOICE_CHANNEL_SELECT: H,
+                VOICE_CHANNEL_STATUS_UPDATE: function(e) {
+                    return b.nonPositionalChannelIdUpdate(e.id)
+                },
+                VOICE_STATE_UPDATES: function(e) {
                     let {
-                        guildId: t
-                    } = e;
-                    b.updateSubtitles(t)
-                }
+                        voiceStates: t
+                    } = e, n = H(), i = new Set;
+                    for (let {
+                            channelId: e,
+                            oldChannelId: o
+                        }
+                        of t) null != o && !i.has(o) && (b.nonPositionalChannelIdUpdate(o) && (n = !0), i.add(o)), null != e && !i.has(e) && (b.nonPositionalChannelIdUpdate(e) && (n = !0), i.add(e));
+                    return n
+                },
+                WINDOW_FOCUS: m
             })
         },
         829072: function(e, t, n) {
@@ -1791,7 +1793,7 @@
                     return b
                 },
                 computeFavoritesState: function() {
-                    return g
+                    return G
                 }
             }), n("222007"), n("424973");
             var i = n("884691"),
@@ -1820,14 +1822,14 @@
             let h = [u.default, d.default, r.default, E.default, _.default, A.default, C.default, S.default, I.default, f.default, O.default, N.default];
 
             function b() {
-                let [e, t] = i.useState(() => g());
+                let [e, t] = i.useState(() => G());
                 return i.useEffect(() => {
-                    let e = l.throttle(() => t(g()), 100);
+                    let e = l.throttle(() => t(G()), 100);
                     return h.forEach(t => t.addChangeListener(e)), () => h.forEach(t => t.removeChangeListener(e))
                 }, []), e
             }
 
-            function g() {
+            function G() {
                 let e = d.default.getFavoriteChannels(),
                     t = N.default.isGuildCollapsed(R.FAVORITES_RAW_GUILD_ID),
                     n = O.default.getChannelId(),
@@ -1914,12 +1916,12 @@
                             }
                         }
                     }).value(),
-                    g = {
+                    G = {
                         isEmpty: () => !0,
                         getRows: () => [],
                         getRow: () => null
                     },
-                    G = {
+                    g = {
                         id: R.FAVORITES_RAW_GUILD_ID,
                         hideMutedChannels: t,
                         favoritesSectionNumber: 1,
@@ -1940,7 +1942,7 @@
                                 channel: n.channelList[t]
                             }
                         },
-                        getCommunitySection: () => g,
+                        getCommunitySection: () => G,
                         getFirstVoiceChannel: () => null,
                         getSectionRowsFromChannel(e) {
                             let t = [h, ...b];
@@ -1971,7 +1973,7 @@
                         ],
                         getChannels: () => []
                     };
-                return G
+                return g
             }
         },
         244030: function(e, t, n) {

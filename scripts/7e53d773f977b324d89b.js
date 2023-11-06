@@ -9691,7 +9691,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return J
+                    return $
                 }
             }), n("222007"), n("70102");
             var l = n("37983");
@@ -9708,41 +9708,42 @@
                 h = n("746164"),
                 C = n("575136"),
                 m = n("843624"),
-                p = n("139375"),
-                E = n("481699"),
-                g = n("679653"),
-                S = n("242740"),
-                I = n("557661"),
-                _ = n("261552"),
-                N = n("233322"),
-                T = n("157186"),
-                A = n("848848"),
-                L = n("534222"),
-                R = n("106346"),
-                v = n("144491"),
-                x = n("12896"),
-                M = n("845579"),
-                O = n("42203"),
-                y = n("305961"),
-                D = n("88093"),
-                b = n("957255"),
-                j = n("660478"),
-                G = n("282109"),
-                U = n("800762"),
-                P = n("98292"),
-                w = n("109264"),
-                F = n("404008"),
-                B = n("783735"),
-                V = n("39347"),
-                H = n("41594"),
-                k = n("744925"),
-                Y = n("199334"),
-                K = n("884155"),
-                W = n("49111"),
-                Z = n("695838"),
-                z = n("782340"),
-                Q = n("708995");
-            class X extends B.default {
+                p = n("207273"),
+                E = n("139375"),
+                g = n("481699"),
+                S = n("679653"),
+                I = n("242740"),
+                _ = n("557661"),
+                N = n("261552"),
+                T = n("233322"),
+                A = n("157186"),
+                L = n("848848"),
+                R = n("534222"),
+                v = n("106346"),
+                x = n("144491"),
+                M = n("12896"),
+                O = n("845579"),
+                y = n("42203"),
+                D = n("305961"),
+                b = n("88093"),
+                j = n("957255"),
+                G = n("660478"),
+                U = n("282109"),
+                P = n("800762"),
+                w = n("98292"),
+                F = n("109264"),
+                B = n("404008"),
+                V = n("783735"),
+                H = n("39347"),
+                k = n("41594"),
+                Y = n("744925"),
+                K = n("199334"),
+                W = n("884155"),
+                Z = n("49111"),
+                z = n("695838"),
+                Q = n("782340"),
+                X = n("708995");
+            class q extends V.default {
                 componentWillUnmount() {
                     this.activitiesHideTimeout.stop()
                 }
@@ -9757,7 +9758,7 @@
                     let {
                         channel: e
                     } = this.props;
-                    return (0, F.isChannelFull)(e, U.default, y.default)
+                    return (0, B.isChannelFull)(e, P.default, D.default)
                 }
                 getModeClass() {
                     let {
@@ -9765,22 +9766,23 @@
                         sortingPosition: t,
                         isUserOver: n
                     } = this.props;
-                    if (n) return Q.containerUserOver;
-                    if (null != t) return e > t ? Q.containerDragAfter : Q.containerDragBefore;
-                    return Q.containerDefault
+                    if (n) return X.containerUserOver;
+                    if (null != t) return e > t ? X.containerDragAfter : X.containerDragBefore;
+                    return X.containerDefault
                 }
                 renderSubtitle() {
                     var e;
                     let {
                         channel: t,
-                        connected: n
-                    } = this.props, a = null === (e = (0, I.getChannelSubtitle)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle, s = null != t.status && t.status.length > 0;
-                    return s || null == a ? s || n ? (0, l.jsx)(Y.default, {
+                        connected: n,
+                        hasChannelStatus: a
+                    } = this.props, s = null === (e = (0, _.getChannelSubtitle)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle;
+                    return a || null == s ? a || n ? (0, l.jsx)(K.default, {
                         onClick: this.handleVoiceStatusClick,
                         channel: t,
                         connected: n
-                    }) : null : (0, l.jsx)(P.default, {
-                        children: a
+                    }) : null : (0, l.jsx)(w.default, {
+                        children: s
                     })
                 }
                 renderVoiceUsers() {
@@ -9790,13 +9792,13 @@
                         collapsed: n,
                         tabIndex: a
                     } = this.props;
-                    return (0, l.jsx)(K.default, {
+                    return (0, l.jsx)(W.default, {
                         channel: e,
                         collapsed: n,
                         collapsedMax: 6,
                         voiceStates: t,
                         tabIndex: a,
-                        location: W.AnalyticsLocations.GUILD_CHANNEL_LIST
+                        location: Z.AnalyticsLocations.GUILD_CHANNEL_LIST
                     })
                 }
                 renderChannelInfo() {
@@ -9804,7 +9806,7 @@
                         channelInfo: e
                     } = this.props;
                     return null == e ? null : (0, l.jsx)("div", {
-                        className: Q.channelInfo,
+                        className: X.channelInfo,
                         children: e
                     })
                 }
@@ -9823,7 +9825,7 @@
                         connectUserDropTarget: h,
                         connectDragPreview: C,
                         canReorderChannel: m,
-                        canMoveMembers: g,
+                        canMoveMembers: p,
                         showTutorial: S,
                         hasActiveEvent: I,
                         embeddedApps: _,
@@ -9834,7 +9836,7 @@
                         shouldShowGuildVerificationPopout: L
                     } = this.state, R = this.getVoiceStatesCount(), v = (0, l.jsxs)("li", {
                         className: s(this.getModeClass(), {
-                            [Q.disabled]: this.isDisabled()
+                            [X.disabled]: this.isDisabled()
                         }),
                         "data-dnd-name": e.name,
                         children: [(0, l.jsx)("div", {
@@ -9854,10 +9856,10 @@
                                             onContextMenu: d,
                                             ...c
                                         } = o;
-                                        return (0, l.jsxs)(H.default, {
-                                            className: Q.iconVisibility,
+                                        return (0, l.jsxs)(k.default, {
+                                            className: X.iconVisibility,
                                             iconClassName: s({
-                                                [Q.iconLive]: I
+                                                [X.iconLive]: I
                                             }),
                                             channel: e,
                                             selected: !T && t,
@@ -9874,7 +9876,7 @@
                                             },
                                             connectDragPreview: C,
                                             isFavoriteSuggestion: T,
-                                            "aria-label": (0, p.default)({
+                                            "aria-label": (0, E.default)({
                                                 channel: e,
                                                 unread: a,
                                                 mentionCount: i,
@@ -9882,7 +9884,7 @@
                                                 embeddedActivitiesCount: _.length,
                                                 isSubscriptionGated: N
                                             }),
-                                            "aria-describedby": (0, E.default)({
+                                            "aria-describedby": (0, g.default)({
                                                 channel: e,
                                                 embeddedApps: _
                                             }),
@@ -9894,7 +9896,7 @@
                             })
                         }), this.renderVoiceUsers()]
                     });
-                    return g && (v = h(v)), m && (v = c(f(v))), S && (v = (0, l.jsx)(x.default, {
+                    return p && (v = h(v)), m && (v = c(f(v))), S && (v = (0, l.jsx)(M.default, {
                         tutorialId: "voice-conversations",
                         position: "right",
                         offsetX: -20,
@@ -9919,7 +9921,7 @@
                         } = this.props;
                         l && this.setState({
                             shouldShowGuildVerificationPopout: !0
-                        }), S.default.handleVoiceConnect({
+                        }), I.default.handleVoiceConnect({
                             channel: n,
                             connected: t,
                             needSubscriptionToAccess: a,
@@ -9928,7 +9930,7 @@
                     }, this.handleContextMenu = e => {
                         let {
                             channel: t
-                        } = this.props, a = y.default.getGuild(t.getGuildId());
+                        } = this.props, a = D.default.getGuild(t.getGuildId());
                         null != a && (0, d.openContextMenuLazy)(e, async () => {
                             let {
                                 default: e
@@ -9955,7 +9957,7 @@
                         let {
                             channel: e
                         } = this.props, t = e.getGuildId();
-                        null != t && (0, T.shouldShowMembershipVerificationGate)(t) && (0, N.openMemberVerificationModal)(t), this.handleVoiceConnect()
+                        null != t && (0, A.shouldShowMembershipVerificationGate)(t) && (0, T.openMemberVerificationModal)(t), this.handleVoiceConnect()
                     }, this.handleVoiceStatusClick = e => {
                         let {
                             allowSetStatus: t,
@@ -9986,8 +9988,8 @@
                             shouldShowGuildVerificationPopout: o
                         } = this.state;
                         if (r && !n && !a && !o) {
-                            let n = M.ActivityRestrictedGuilds.getSetting().includes(i.id);
-                            return (0, l.jsx)(k.default, {
+                            let n = O.ActivityRestrictedGuilds.getSetting().includes(i.id);
+                            return (0, l.jsx)(Y.default, {
                                 onAction: this.closePopout,
                                 guild: i,
                                 channel: e,
@@ -9996,8 +9998,8 @@
                                 shouldShowSettingNudge: n
                             })
                         }
-                        if (o) return (0, l.jsx)(R.default, {
-                            type: R.GuildVerificationPopoutTypes.VOICE,
+                        if (o) return (0, l.jsx)(v.default, {
+                            type: v.GuildVerificationPopoutTypes.VOICE,
                             guildId: e.guild_id,
                             closePopout: this.closeGuildVerificationPopout
                         });
@@ -10009,7 +10011,7 @@
                             forceShowButtons: n
                         } = this.props;
                         if (!t) return (0, l.jsx)(o.Tooltip, {
-                            text: z.default.Messages.OPEN_CHAT,
+                            text: Q.default.Messages.OPEN_CHAT,
                             children: t => {
                                 let {
                                     onMouseEnter: a,
@@ -10018,19 +10020,19 @@
                                     onBlur: d
                                 } = t;
                                 return (0, l.jsx)(o.Clickable, {
-                                    className: s(Q.iconItem, n ? Q.alwaysShown : null),
+                                    className: s(X.iconItem, n ? X.alwaysShown : null),
                                     onClick: () => {
-                                        u.default.updateChatOpen(e.id, !0), (0, v.transitionToChannel)(e.id)
+                                        u.default.updateChatOpen(e.id, !0), (0, x.transitionToChannel)(e.id)
                                     },
-                                    "aria-label": z.default.Messages.OPEN_CHAT,
+                                    "aria-label": Q.default.Messages.OPEN_CHAT,
                                     onMouseEnter: a,
                                     onMouseLeave: i,
                                     onFocus: r,
                                     onBlur: d,
-                                    children: (0, l.jsx)(w.default, {
+                                    children: (0, l.jsx)(F.default, {
                                         width: 16,
                                         height: 16,
-                                        className: Q.actionIcon
+                                        className: X.actionIcon
                                     })
                                 })
                             }
@@ -10039,13 +10041,13 @@
                         let {
                             connected: e
                         } = this.props;
-                        return this.isFull() && !e ? z.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL : null
+                        return this.isFull() && !e ? Q.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL : null
                     }
                 }
             }
-            let q = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(X));
+            let J = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(q));
 
-            function J(e) {
+            function $(e) {
                 var t, n, a;
                 let {
                     guild: s,
@@ -10055,55 +10057,56 @@
                     selected: d,
                     collapsed: c,
                     voiceStates: f
-                } = e, m = (0, i.useStateFromStoresObject)([j.default], () => ({
-                    unread: j.default.hasUnread(r.id),
-                    mentionCount: j.default.getMentionCount(r.id)
-                })), p = (0, i.useStateFromStoresObject)([O.default, D.default, b.default], () => {
-                    let e = O.default.getChannel(r.parent_id),
-                        t = D.default.getCheck(r.guild_id);
+                } = e, m = (0, i.useStateFromStoresObject)([G.default], () => ({
+                    unread: G.default.hasUnread(r.id),
+                    mentionCount: G.default.getMentionCount(r.id)
+                })), E = (0, i.useStateFromStoresObject)([y.default, b.default, j.default], () => {
+                    let e = y.default.getChannel(r.parent_id),
+                        t = b.default.getCheck(r.guild_id);
                     return {
-                        canManageChannel: b.default.can(W.Permissions.MANAGE_CHANNELS, r),
-                        canReorderChannel: !0 !== o && (s.id === Z.FAVORITES_RAW_GUILD_ID || (null != e ? b.default.can(W.Permissions.MANAGE_CHANNELS, e) : b.default.can(W.Permissions.MANAGE_CHANNELS, s))),
-                        canMoveMembers: b.default.can(W.Permissions.MOVE_MEMBERS, r),
-                        locked: !b.default.can(W.Permissions.CONNECT, r),
-                        bypassLimit: b.default.can(W.Permissions.MOVE_MEMBERS, r),
+                        canManageChannel: j.default.can(Z.Permissions.MANAGE_CHANNELS, r),
+                        canReorderChannel: !0 !== o && (s.id === z.FAVORITES_RAW_GUILD_ID || (null != e ? j.default.can(Z.Permissions.MANAGE_CHANNELS, e) : j.default.can(Z.Permissions.MANAGE_CHANNELS, s))),
+                        canMoveMembers: j.default.can(Z.Permissions.MOVE_MEMBERS, r),
+                        locked: !j.default.can(Z.Permissions.CONNECT, r),
+                        bypassLimit: j.default.can(Z.Permissions.MOVE_MEMBERS, r),
                         unverifiedAccount: !t.canChat
                     }
-                }), E = (0, i.useStateFromStores)([U.default], () => U.default.hasVideo(r.id)), S = (0, C.default)(r), I = (0, g.default)(r), N = (0, L.useActiveEvent)(r.id), {
-                    isSubscriptionGated: T,
-                    needSubscriptionToAccess: R
-                } = (0, A.default)(r.id), v = (0, _.default)(), x = (0, i.useStateFromStores)([G.default], () => G.default.isFavorite(s.id, r.id)), M = e.connected || (null == v ? void 0 : v.channelId) === r.id, y = h.default.useExperiment({
+                }), g = (0, i.useStateFromStores)([P.default], () => P.default.hasVideo(r.id)), I = (0, C.default)(r), _ = (0, S.default)(r), T = (0, R.useActiveEvent)(r.id), {
+                    isSubscriptionGated: A,
+                    needSubscriptionToAccess: v
+                } = (0, L.default)(r.id), x = (0, N.default)(), M = (0, i.useStateFromStores)([U.default], () => U.default.isFavorite(s.id, r.id)), O = e.connected || (null == x ? void 0 : x.channelId) === r.id, D = (0, i.useStateFromStores)([p.default], () => p.default.getChannelStatus(r)), w = null != D && D.length > 0, F = h.default.useExperiment({
                     guildId: null !== (a = s.id) && void 0 !== a ? a : "",
                     location: "c3f8c7_1"
                 }, {
                     autoTrackExposure: !1
-                }).enabled, P = (0, V.default)({
+                }).enabled, B = (0, H.default)({
                     channel: r,
                     highlighted: !1,
                     isChannelSelected: d,
                     isChannelCollapsed: c,
                     voiceStates: f,
-                    isSubscriptionGated: T,
-                    needSubscriptionToAccess: R,
+                    isSubscriptionGated: A,
+                    needSubscriptionToAccess: v,
                     enableConnectedUserLimit: !0,
                     enableActivities: !0
                 });
-                return (0, l.jsx)(q, {
-                    channelName: I,
-                    embeddedApps: S,
-                    embeddedActivityType: null === (n = S[0]) || void 0 === n ? void 0 : null === (t = n.embeddedActivity) || void 0 === t ? void 0 : t.type,
-                    video: E,
-                    hasActiveEvent: null != N,
-                    isSubscriptionGated: T,
-                    needSubscriptionToAccess: R,
+                return (0, l.jsx)(J, {
+                    channelName: _,
+                    embeddedApps: I,
+                    embeddedActivityType: null === (n = I[0]) || void 0 === n ? void 0 : null === (t = n.embeddedActivity) || void 0 === t ? void 0 : t.type,
+                    video: g,
+                    hasActiveEvent: null != T,
+                    isSubscriptionGated: A,
+                    needSubscriptionToAccess: v,
                     ...m,
-                    ...p,
+                    ...E,
                     ...e,
-                    connected: M,
-                    isFavoriteSuggestion: u && !x,
-                    forceShowButtons: M && null == P,
-                    channelInfo: P,
-                    allowSetStatus: y
+                    connected: O,
+                    isFavoriteSuggestion: u && !M,
+                    forceShowButtons: O && null == B,
+                    channelInfo: B,
+                    allowSetStatus: F,
+                    hasChannelStatus: w
                 })
             }
         },
@@ -10397,7 +10400,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return I
                 }
             });
             var l = n("37983"),
@@ -10407,60 +10410,61 @@
                 r = n("446674"),
                 o = n("77078"),
                 u = n("746164"),
-                d = n("367376"),
-                c = n("957255"),
-                f = n("98292"),
-                h = n("832132"),
-                C = n("599110"),
-                m = n("49111"),
-                p = n("782340"),
-                E = n("781691"),
-                g = n("632215");
+                d = n("207273"),
+                c = n("367376"),
+                f = n("957255"),
+                h = n("98292"),
+                C = n("832132"),
+                m = n("599110"),
+                p = n("49111"),
+                E = n("782340"),
+                g = n("781691"),
+                S = n("632215");
 
-            function S(e) {
+            function I(e) {
                 let {
                     channel: t,
                     connected: n,
                     onClick: s
-                } = e, S = u.default.useExperiment({
+                } = e, I = u.default.useExperiment({
                     guildId: t.guild_id,
                     location: "118493_1"
                 }, {
                     autoTrackExposure: !1
-                }).enabled, I = null != t.status && t.status.length > 0, _ = (0, r.useStateFromStores)([c.default], () => c.default.can(m.Permissions.SET_VOICE_CHANNEL_STATUS, t));
+                }).enabled, _ = (0, r.useStateFromStores)([d.default], () => d.default.getChannelStatus(t)), N = null != _ && _.length > 0, T = (0, r.useStateFromStores)([f.default], () => f.default.can(p.Permissions.SET_VOICE_CHANNEL_STATUS, t));
                 if (a.useEffect(() => {
                         n && null != t.guild_id && u.default.trackExposure({
                             guildId: t.guild_id,
                             location: "118493_2"
                         })
                     }, [n, t.guild_id]), a.useEffect(() => {
-                        S && I && C.default.track(m.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
+                        I && N && m.default.track(p.AnalyticEvents.VOICE_CHANNEL_TOPIC_VIEWED, {
                             guild_id: t.guild_id,
                             channel_id: t.id
                         })
-                    }, [t.id, I, S, t.guild_id]), !S || null == t.guild_id) return null;
-                let N = i(E.statusDiv, n && _ ? E.hoverable : null);
-                return I ? (0, l.jsx)(o.Clickable, {
-                    className: N,
-                    onClick: _ ? s : void 0,
+                    }, [t.id, N, I, t.guild_id]), !I || null == t.guild_id) return null;
+                let A = i(g.statusDiv, n && T ? g.hoverable : null);
+                return N ? (0, l.jsx)(o.Clickable, {
+                    className: A,
+                    onClick: T ? s : void 0,
                     children: (0, l.jsx)(o.Text, {
                         variant: "text-xs/medium",
-                        className: i(E.statusText, g.markup),
-                        children: (0, l.jsx)(f.default, {
-                            children: d.default.parseVoiceChannelStatus(t.status, !0, {
+                        className: i(g.statusText, S.markup),
+                        children: (0, l.jsx)(h.default, {
+                            children: c.default.parseVoiceChannelStatus(_, !0, {
                                 channelId: t.id
                             })
                         })
                     })
-                }) : n && _ ? (0, l.jsxs)(o.Clickable, {
-                    className: N,
+                }) : n && T ? (0, l.jsxs)(o.Clickable, {
+                    className: A,
                     onClick: s,
                     children: [(0, l.jsx)(o.Text, {
                         variant: "text-xs/medium",
-                        className: E.statusText,
-                        children: p.default.Messages.VOICE_CHANNEL_SET_STATUS
-                    }), (0, l.jsx)(h.default, {
-                        className: E.pencilIcon,
+                        className: g.statusText,
+                        children: E.default.Messages.VOICE_CHANNEL_SET_STATUS
+                    }), (0, l.jsx)(C.default, {
+                        className: g.pencilIcon,
                         width: 14,
                         height: 14
                     })]

@@ -857,8 +857,8 @@
                 N = n("834052"),
                 T = n("715243"),
                 A = n("458574"),
-                v = n("963150"),
-                h = n("308798"),
+                h = n("963150"),
+                v = n("308798"),
                 I = n("47006"),
                 M = n("809259"),
                 O = n("878526"),
@@ -880,7 +880,7 @@
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, d = t.isGuildStageVoice(), r = (0, s.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, A.default)(t), m = (0, S.useActiveEvent)(t.id), T = (0, g.default)(null == m ? void 0 : m.id, n, t), v = (0, x.default)(t, r), h = (0, p.default)(t), O = (0, _.default)(t), C = (0, E.default)(t), U = (0, M.default)(t), D = (0, L.default)(t), y = (0, I.default)(t), R = (0, P.default)(t, n), G = (0, c.default)({
+                } = e, d = t.isGuildStageVoice(), r = (0, s.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, A.default)(t), m = (0, S.useActiveEvent)(t.id), T = (0, g.default)(null == m ? void 0 : m.id, n, t), h = (0, x.default)(t, r), v = (0, p.default)(t), O = (0, _.default)(t), C = (0, E.default)(t), U = (0, M.default)(t), D = (0, L.default)(t), y = (0, I.default)(t), R = (0, P.default)(t, n), G = (0, c.default)({
                     id: t.id,
                     label: V.default.Messages.COPY_ID_CHANNEL
                 }), F = (0, b.default)(t), k = (0, o.default)(t);
@@ -890,9 +890,9 @@
                     "aria-label": V.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                     onSelect: l,
                     children: [(0, a.jsx)(i.MenuGroup, {
-                        children: null != m ? T : v
+                        children: null != m ? T : h
                     }), (0, a.jsxs)(i.MenuGroup, {
-                        children: [C, O, h]
+                        children: [C, O, v]
                     }), (0, a.jsxs)(i.MenuGroup, {
                         children: [U, D, y]
                     }), (0, a.jsx)(i.MenuGroup, {
@@ -912,7 +912,7 @@
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, d = t.isGuildStageVoice(), r = (0, s.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, C.default)(t), _ = (0, A.default)(t), E = (0, S.useActiveEvent)(t.id), F = (0, g.default)(null == E ? void 0 : E.id, n, t), k = (0, x.default)(t, r), j = (0, p.default)(t), w = (0, M.default)(t), H = (0, L.default)(t), B = (0, I.default)(t), Y = (0, O.default)(t, n, r), W = (0, P.default)(t, n), q = (0, R.default)(t, n), K = (0, G.default)(t, n.id), Q = (0, T.default)(t, n), Z = (0, v.default)(t, n), X = (0, h.default)(t), J = (0, c.default)({
+                } = e, d = t.isGuildStageVoice(), r = (0, s.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, C.default)(t), _ = (0, A.default)(t), E = (0, S.useActiveEvent)(t.id), F = (0, g.default)(null == E ? void 0 : E.id, n, t), k = (0, x.default)(t, r), j = (0, p.default)(t), w = (0, M.default)(t), H = (0, L.default)(t), B = (0, I.default)(t), Y = (0, O.default)(t, n, r), W = (0, P.default)(t, n), q = (0, R.default)(t, n), K = (0, G.default)(t, n.id), Q = (0, T.default)(t, n), Z = (0, h.default)(t, n), X = (0, v.default)(t), J = (0, c.default)({
                     id: t.id,
                     label: V.default.Messages.COPY_ID_CHANNEL
                 }), z = (0, b.default)(t), $ = (0, o.default)(t), ee = (0, D.default)(t), et = (0, m.default)(t), en = (0, U.default)(t), ea = (0, y.default)(t);
@@ -1287,7 +1287,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return p
                 }
             });
             var a = n("37983");
@@ -1298,24 +1298,26 @@
                 l = n("746164"),
                 d = n("261552"),
                 o = n("957255"),
-                r = n("49111"),
-                c = n("782340");
+                r = n("207273"),
+                c = n("49111"),
+                f = n("782340");
 
-            function f(e, t) {
+            function p(e, t) {
                 var n;
-                let f = (0, s.useStateFromStores)([o.default], () => o.default.can(r.Permissions.MANAGE_CHANNELS, t)),
-                    p = l.default.useExperiment({
+                let p = (0, s.useStateFromStores)([o.default], () => o.default.can(c.Permissions.MANAGE_CHANNELS, t)),
+                    _ = l.default.useExperiment({
                         guildId: null !== (n = t.id) && void 0 !== n ? n : "",
                         location: "0f77e2_1"
                     }, {
                         autoTrackExposure: !1
                     }).enabled,
-                    _ = (0, d.default)(),
-                    E = (null == _ ? void 0 : _.channelId) === e.id,
-                    m = null != e.status && e.status.length > 0;
-                return e.isGuildVoice() && m && p && (f || E) ? (0, a.jsx)(i.MenuItem, {
+                    E = (0, d.default)(),
+                    m = (null == E ? void 0 : E.channelId) === e.id,
+                    S = (0, s.useStateFromStores)([r.default], () => r.default.getChannelStatus(e)),
+                    g = null != S && S.length > 0;
+                return e.isGuildVoice() && g && _ && (p || m) ? (0, a.jsx)(i.MenuItem, {
                     id: "clear-status",
-                    label: c.default.Messages.VOICE_CHANNEL_CLEAR_STATUS,
+                    label: f.default.Messages.VOICE_CHANNEL_CLEAR_STATUS,
                     action: () => {
                         u.default.updateVoiceChannelStatus(e.id, "")
                     }
@@ -1773,10 +1775,10 @@
                     return A
                 },
                 setUserSuppress: function() {
-                    return v
+                    return h
                 },
                 moveUserToAudience: function() {
-                    return h
+                    return v
                 },
                 setEveryoneRolePermissionAllowed: function() {
                     return I
@@ -1867,7 +1869,7 @@
                 })
             }
 
-            function v(e, t, n) {
+            function h(e, t, n) {
                 let a = e.getGuildId();
                 return s(null != a, "This channel cannot be guildless."), u.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(a, t),
@@ -1878,10 +1880,10 @@
                 })
             }
 
-            function h(e, t) {
+            function v(e, t) {
                 if (null == t || null == e) return;
                 let n = t.getGuildId();
-                return s(null != n, "This channel cannot be guildless."), v(t, e.id, !0), u.default.patch({
+                return s(null != n, "This channel cannot be guildless."), h(t, e.id, !0), u.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(n, e.id),
                     body: {
                         suppress: !0,
