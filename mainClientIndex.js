@@ -1,5 +1,5 @@
 ! function() {
-    var e, a, t, s, d, n, c, i, r, o, f = {
+    var e, a, t, s, d, n, c, i, r, o, l = {
             386177: function(e, a, t) {
                 "use strict";
                 e.exports = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNyIgaGVpZ2h0PSIxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtMCAwIDUgMiAxLjUgNEg3VjBIMFptMCAxMyA1LTIgMS41LTRIN3Y2SDBaIiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTYuNDIzIDYuNUM2LjQyMyAzLjMxMiAzLjc4My43NTYuNS41MThjMy4zODYuMjM2IDYgMi44NTUgNiA1Ljk4MiAwIDMuMTI3LTIuNjE0IDUuNzQ2LTYgNS45ODN2LS4wMDFjMy4yODQtLjIzNyA1LjkyMy0yLjc5NCA1LjkyMy01Ljk4MloiIHN0cm9rZT0iI0Q0RDlEQiIvPjxwYXRoIGZpbGw9IiNENEQ5REIiIGQ9Ik0wIDBoMXYxSDB6TTAgMTJoMXYxSDB6Ii8+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0iYSI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgMGg3djEzSDB6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+"
@@ -59,7 +59,7 @@
                 "use strict";
                 t.r(a), t.d(a, {
                     default: function() {
-                        return l
+                        return f
                     }
                 });
                 var s = t("37983"),
@@ -69,7 +69,7 @@
                     i = t("474557"),
                     r = t("507812"),
                     o = t("173791");
-                class f extends d.Component {
+                class l extends d.Component {
                     render() {
                         return (0, s.jsx)("div", {
                             className: c(r.app, o.vertical),
@@ -77,7 +77,7 @@
                         })
                     }
                 }
-                var l = f
+                var f = l
             },
             474557: function(e, a, t) {
                 "use strict";
@@ -108,8 +108,8 @@
                     i = t("90915"),
                     r = t("817792"),
                     o = t("815157"),
-                    f = t("391679"),
-                    l = t("446674"),
+                    l = t("391679"),
+                    f = t("446674"),
                     u = t("95410"),
                     b = t("795137"),
                     p = t("837319"),
@@ -331,7 +331,7 @@
                                         let e = (0, O.getMobileDownloadLink)("app_open_from_email", t, d.mobile),
                                             a = (0, o.parseDynamicLink)(e);
                                         null != a && T.default.track(A.AnalyticEvents.DEEP_LINK_CLICKED, {
-                                            fingerprint: (0, f.maybeExtractId)(a.fingerprint),
+                                            fingerprint: (0, l.maybeExtractId)(a.fingerprint),
                                             attempt_id: a.attemptId,
                                             source: a.utmSource,
                                             destination: null != d.mobile ? d.mobile.toString() : null
@@ -366,7 +366,7 @@
                         })
                     }
                 }
-                var q = l.default.connectStores([I.default, _.default], () => ({
+                var q = f.default.connectStores([I.default, _.default], () => ({
                     isAuthenticated: I.default.isAuthenticated(),
                     migrationStatus: _.default.getMigrationStatus()
                 }), {
@@ -391,9 +391,9 @@
                 t.r(a), t("860677");
                 var s, d, n, c, i, r, o = t("37983");
                 t("320777"), t("884691");
-                var f = t("288661"),
-                    l = t("627445"),
-                    u = t.n(l),
+                var l = t("288661"),
+                    f = t("627445"),
+                    u = t.n(f),
                     b = t("521143"),
                     p = t("938460"),
                     h = t("156820"),
@@ -420,7 +420,7 @@
                     y = t("605250");
                 let k = document.getElementById("app-mount");
                 u(null != k, "Could not find app-mount"), k.className = __OVERLAY__ ? "" : P.appMount;
-                let x = (0, f.createRoot)(k),
+                let x = (0, l.createRoot)(k),
                     U = e => x.render((0, o.jsx)(L.default, {
                         children: (0, o.jsx)(D.default, {
                             children: (0, o.jsx)(e, {})
@@ -559,8 +559,8 @@
                     i = t("703809"),
                     r = t("446674"),
                     o = t("247015"),
-                    f = t("77078"),
-                    l = t("430568"),
+                    l = t("77078"),
+                    f = t("430568"),
                     u = t("471671"),
                     b = t("90404"),
                     p = t("402671"),
@@ -592,15 +592,15 @@
                     render() {
                         let e = (0, s.jsx)("div", {
                                 children: (0, s.jsxs)("p", {
-                                    children: [I.default.Messages.VERY_OUT_OF_DATE_DESCRIPTION, " ", (0, s.jsx)(l.default, {
+                                    children: [I.default.Messages.VERY_OUT_OF_DATE_DESCRIPTION, " ", (0, s.jsx)(f.default, {
                                         src: p.default.getURL(o.default.convert.fromCodePoint("1f44c")),
                                         emojiName: ":ok_hand:",
                                         animated: !1
                                     })]
                                 })
                             }),
-                            a = (0, s.jsx)(f.Button, {
-                                size: f.ButtonSizes.LARGE,
+                            a = (0, s.jsx)(l.Button, {
+                                size: l.ButtonSizes.LARGE,
                                 onClick: this.handleDownload,
                                 children: I.default.Messages.DOWNLOAD
                             });
@@ -737,18 +737,18 @@
                     i = t("599110"),
                     r = t("50885"),
                     o = t("50361"),
-                    f = t("49111");
+                    l = t("49111");
 
-                function l(e) {
+                function f(e) {
                     var a;
                     return null == e ? void 0 : null === (a = e._state) || void 0 === a ? void 0 : a.lastTestTimestamp
                 }
 
                 function u() {
                     return s.useEffect(() => {
-                        window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN && !0 !== n.default.get(d.DOMAIN_MIGRATION_SUCCESS_KEY) && r.default.supportsFeature(f.NativeFeatures.USER_DATA_CACHE) && (o.migrate(), c.default.userDataCache.getCached().then(e => {
+                        window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN && !0 !== n.default.get(d.DOMAIN_MIGRATION_SUCCESS_KEY) && r.default.supportsFeature(l.NativeFeatures.USER_DATA_CACHE) && (o.migrate(), c.default.userDataCache.getCached().then(e => {
                             if (null == e) {
-                                o.failMigration(), i.default.track(f.AnalyticEvents.DOMAIN_MIGRATED, {
+                                o.failMigration(), i.default.track(l.AnalyticEvents.DOMAIN_MIGRATED, {
                                     success: !1,
                                     has_data: !1
                                 }, {
@@ -760,13 +760,13 @@
                                 t = 0 !== a.length,
                                 s = null != e.token,
                                 r = null == e.RTCRegionStore ? null : JSON.parse(e.RTCRegionStore),
-                                u = null == r || null == l(r) || l(r) <= l(n.default.get("RTCRegionStore"));
+                                u = null == r || null == f(r) || f(r) <= f(n.default.get("RTCRegionStore"));
                             t && s && !u && (n.default.clear(), a.forEach(a => {
                                 let t = e[a];
                                 try {
                                     n.default.set(a, JSON.parse(t))
                                 } catch (e) {}
-                            })), i.default.track(f.AnalyticEvents.DOMAIN_MIGRATED, {
+                            })), i.default.track(l.AnalyticEvents.DOMAIN_MIGRATED, {
                                 success: !0,
                                 current_is_newer: u,
                                 has_data: t
@@ -791,8 +791,8 @@
                     i = t.n(c),
                     r = t("872717"),
                     o = t("784063"),
-                    f = t("625454"),
-                    l = t("441822"),
+                    l = t("625454"),
+                    f = t("441822"),
                     u = t("862337"),
                     b = t("913144"),
                     p = t("605250"),
@@ -811,7 +811,7 @@
                 let w = S.getContext("2d");
 
                 function A() {
-                    O.stop(), null != s && (f.default.removeSink(s, T), s = null)
+                    O.stop(), null != s && (l.default.removeSink(s, T), s = null)
                 }
                 let v = i.debounce((e, a, t, s) => {
                     N(e, (0, _.encodeStreamKey)({
@@ -841,12 +841,12 @@
                                     };
                                     d ? t.getNextVideoOutputFrame(e).then(i, a => {
                                         if (s === e) throw a
-                                    }) : f.default.addSink(e, T, i)
+                                    }) : l.default.addSink(e, T, i)
                                 }).finally(() => {
-                                    !d && f.default.removeSink(e, T)
+                                    !d && l.default.removeSink(e, T)
                                 })
                             } : function(e, a) {
-                                let t = (0, l.getVideoStream)(e);
+                                let t = (0, f.getVideoStream)(e);
                                 if (null == t) return Promise.resolve(new ImageData(0, 0));
                                 let {
                                     width: s,
@@ -949,8 +949,8 @@
                     i = t("660078"),
                     r = t("268491"),
                     o = t("373469"),
-                    f = t("271938"),
-                    l = t("374014"),
+                    l = t("271938"),
+                    f = t("374014"),
                     u = t("16916"),
                     b = t("49111"),
                     p = t("353927");
@@ -1073,7 +1073,7 @@
                                 pid: d,
                                 sourceId: n,
                                 audioSourceId: i
-                            } = e, r = f.default.getId(), o = (0, l.encodeStreamKey)({
+                            } = e, r = l.default.getId(), o = (0, f.encodeStreamKey)({
                                 streamType: a,
                                 guildId: t,
                                 channelId: s,
@@ -1157,8 +1157,8 @@
                     i = t("913144"),
                     r = t("135230"),
                     o = t("316272"),
-                    f = t("701909"),
-                    l = t("49111"),
+                    l = t("701909"),
+                    f = t("49111"),
                     u = t("782340");
                 class b extends o.default {
                     _initialize() {
@@ -1172,13 +1172,13 @@
                             let {
                                 kind: a,
                                 granted: t
-                            } = e, d = "Firefox" === n.name ? l.HelpdeskArticles.ENABLE_MIC_FIREFOX : l.HelpdeskArticles.ENABLE_MIC_CHROME;
+                            } = e, d = "Firefox" === n.name ? f.HelpdeskArticles.ENABLE_MIC_FIREFOX : f.HelpdeskArticles.ENABLE_MIC_CHROME;
                             if (!t) {
                                 let e = "audio" !== a;
                                 (0, c.openModal)(a => (0, s.jsx)(r.default, {
                                     title: e ? u.default.Messages.NO_CAMERA_TITLE : u.default.Messages.NO_MIC_TITLE,
                                     body: e ? u.default.Messages.NO_CAMERA_BODY : u.default.Messages.NO_MIC_BODY,
-                                    onConfirm: () => window.open(f.default.getArticleURL(d), "_blank"),
+                                    onConfirm: () => window.open(l.default.getArticleURL(d), "_blank"),
                                     confirmText: u.default.Messages.HELP_DESK,
                                     ...a
                                 }))
@@ -1192,7 +1192,7 @@
                 "use strict";
                 t.r(a), t.d(a, {
                     default: function() {
-                        return f
+                        return l
                     }
                 });
                 var s = t("37983");
@@ -1204,7 +1204,7 @@
                     r = t("782340"),
                     o = t("881609");
 
-                function f(e) {
+                function l(e) {
                     let {
                         text: a = r.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
                         className: t
@@ -1300,8 +1300,8 @@
                     i = t("693051"),
                     r = t("153498"),
                     o = t("446411"),
-                    f = t("934306"),
-                    l = t("742171"),
+                    l = t("934306"),
+                    f = t("742171"),
                     u = t("393027"),
                     b = t("393414"),
                     p = t("49111"),
@@ -1318,7 +1318,7 @@
                                 pathname: t
                             } = e, s = (0, i.getRootNavigationRef)(), n = (0, c.isInMainTabsExperiment)();
                             if (null != s && s.isReady()) {
-                                if (n && (0, f.isSplitMessagesTab)() && t === p.Routes.ME) {
+                                if (n && (0, l.isSplitMessagesTab)() && t === p.Routes.ME) {
                                     (0, r.navigateToRootTab)({
                                         screen: "messages",
                                         resetRoot: e.navigationReplace
@@ -1351,7 +1351,7 @@
                                             voiceChannelId: t,
                                             voiceMessageId: s
                                         } = c.params;
-                                        !(0, l.isVoicePanelEnabled)() && (0, r.navigateToChannel)({
+                                        !(0, f.isVoicePanelEnabled)() && (0, r.navigateToChannel)({
                                             channelId: t,
                                             guildId: a,
                                             messageId: s,
@@ -1365,7 +1365,7 @@
                                             guildId: s,
                                             messageId: d
                                         } = a.params;
-                                        if (!(0, f.isSplitMessagesTab)()) {
+                                        if (!(0, l.isSplitMessagesTab)()) {
                                             (0, r.navigateToRootTab)({
                                                 screen: "guilds",
                                                 guildId: s,
@@ -1373,7 +1373,7 @@
                                             });
                                             return
                                         }
-                                        null == t || (0, f.shouldHandleNewPanelsRoute)(s) || (0, o.isOnGlobalPanels)() && !1 !== e.navigationReplace ? s === p.ME ? (0, r.navigateToRootTab)({
+                                        null == t || (0, l.shouldHandleNewPanelsRoute)(s) || (0, o.isOnGlobalPanels)() && !1 !== e.navigationReplace ? s === p.ME ? (0, r.navigateToRootTab)({
                                             screen: "messages",
                                             resetRoot: e.navigationReplace
                                         }) : (0, r.navigateToRootTab)({
@@ -1629,8 +1629,8 @@
                     i = t("913144"),
                     r = t("629109"),
                     o = t("987317"),
-                    f = t("316272"),
-                    l = t("830210"),
+                    l = t("316272"),
+                    f = t("830210"),
                     u = t("289180"),
                     b = t("289656"),
                     p = t("727284"),
@@ -1641,7 +1641,7 @@
                     E = t("50885"),
                     g = t("49111"),
                     I = t("782340");
-                class T extends f.default {
+                class T extends l.default {
                     _initialize() {
                         this.isSupported && (i.default.subscribe("AUDIO_SET_MODE", this.handleViewUpdate), i.default.subscribe("VOICE_CHANNEL_SELECT", this.handleViewUpdate), i.default.subscribe("START_SESSION", this.handleViewUpdate), i.default.subscribe("CONNECTION_OPEN", this.handleViewUpdate), i.default.subscribe("CONNECTION_CLOSED", this.handleViewUpdate), i.default.subscribe("CALL_CREATE", this.handleViewUpdate), i.default.subscribe("CALL_UPDATE", this.handleViewUpdate), i.default.subscribe("CALL_DELETE", this.handleViewUpdate), i.default.subscribe("CHANNEL_DELETE", this.handleViewUpdate), i.default.subscribe("VOICE_STATE_UPDATES", this.handleViewUpdate), i.default.subscribe("AUDIO_TOGGLE_SELF_MUTE", this.handleViewUpdate), i.default.subscribe("AUDIO_TOGGLE_SELF_DEAF", this.handleViewUpdate), i.default.subscribe("AUDIO_TOGGLE_LOCAL_MUTE", this.handleViewUpdate), i.default.subscribe("AUDIO_SET_LOCAL_VIDEO_DISABLED", this.handleViewUpdate), E.default.on("THUMBAR_BUTTONS_CLICKED", (e, a) => this.buttonClicked(a)))
                     }
@@ -1680,7 +1680,7 @@
                                 {
                                     reachedLimit: i,
                                     limit: r
-                                } = null != n ? (0, l.getChannelVideoLimit)(n) : {
+                                } = null != n ? (0, f.getChannelVideoLimit)(n) : {
                                     reachedLimit: void 0,
                                     limit: void 0
                                 },
@@ -1840,7 +1840,7 @@
                 "use strict";
                 t.r(a), t.d(a, {
                     default: function() {
-                        return f
+                        return l
                     }
                 }), t("222007");
                 var s = t("316272"),
@@ -1868,7 +1868,7 @@
                         super(...e), this._tracker = new i.default
                     }
                 }
-                var f = new o
+                var l = new o
             },
             830210: function(e, a, t) {
                 "use strict";
@@ -1954,7 +1954,7 @@
                         return o
                     },
                     getPlatformReadableName: function() {
-                        return l
+                        return f
                     },
                     getCurrentPlatformDownloadURL: function() {
                         return u
@@ -1977,22 +1977,22 @@
                     return "".concat(i.DownloadLinks.DESKTOP).concat(a ? "/ptb" : "", "?platform=").concat(e).concat(s)
                 }
 
-                function f() {
+                function l() {
                     var e;
                     let a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = d.os) || void 0 === e ? void 0 : e.family;
                     return null == a ? "win" : -1 !== a.indexOf("Ubuntu") || -1 !== a.indexOf("Debian") || -1 !== a.indexOf("Fedora") || -1 !== a.indexOf("Red Hat") || -1 !== a.indexOf("SuSE") || -1 !== a.indexOf("Linux") ? r : -1 !== a.indexOf("OS X") ? "osx" : "win"
                 }
 
-                function l(e) {
+                function f(e) {
                     return ({
                         win: "Windows",
                         osx: "Mac",
                         [r]: "Linux"
-                    })[f(e)]
+                    })[l(e)]
                 }
 
                 function u() {
-                    let e = f(),
+                    let e = l(),
                         a = e === r ? "tar.gz" : null;
                     return o(e, !1, a)
                 }
@@ -2097,19 +2097,19 @@
                 }
             }
         },
-        l = {};
+        f = {};
 
     function u(e) {
-        var a = l[e];
+        var a = f[e];
         if (void 0 !== a) return a.exports;
-        var t = l[e] = {
+        var t = f[e] = {
             id: e,
             loaded: !1,
             exports: {}
         };
-        return f[e](t, t.exports, u), t.loaded = !0, t.exports
+        return l[e](t, t.exports, u), t.loaded = !0, t.exports
     }
-    u.m = f, u.c = l, u.es = function(e, a) {
+    u.m = l, u.c = f, u.es = function(e, a) {
         return Object.keys(e).forEach(function(t) {
             "default" !== t && !Object.prototype.hasOwnProperty.call(a, t) && Object.defineProperty(a, t, {
                 enumerable: !0,
@@ -2803,7 +2803,7 @@
             20092: "6f1970358d9326eed158.js",
             20132: "90dbf71a50fc2eb7f126.js",
             20153: "ad849afad20375084c6d.js",
-            20208: "9a0234254cc2689a4f54.js",
+            20208: "3f39594df39a9561c78a.js",
             20833: "f122c6a677887b4479c1.js",
             20883: "c4c57c5f6020429b9b91.js",
             20940: "96c8b8536c4551c15770.js",
@@ -2872,7 +2872,7 @@
             2712: "22fba3252e11921f49e8.js",
             27408: "d56e55c48003bcf18006.js",
             27470: "541ae41b245dec5b94bf.js",
-            27545: "fd88b7fc286916fed6d2.js",
+            27545: "433683ed404a862ceca2.js",
             27665: "a0e371393c3d3b212d2d.js",
             27949: "afee2c2f3f15a981af84.js",
             28145: "cfffe3cffcfb3d193961.js",
@@ -3406,7 +3406,7 @@
             91918: "608a2943124eb7595306.js",
             92336: "e4014c60f1f73a7437f4.js",
             92536: "cbeac99142b8081112cd.js",
-            92544: "9ef80fc028157bbdf97c.js",
+            92544: "79b45fc64b7ec5f28bd2.js",
             92683: "a5c9bf93a4f42b95fdd7.js",
             92870: "7a6f29f84de47992e5a2.js",
             92932: "3b275a8962bc1e3cd827.js",
@@ -3457,7 +3457,7 @@
             98538: "b20046615a04cd4fce94.js",
             98695: "ab5fedecbf0bd60847d3.js",
             98738: "f72690d383b00b068744.js",
-            98904: "d21387a631fe300547a4.js",
+            98904: "751d45d540aacb3c8392.js",
             98999: "9a67780f5f36475430fe.js",
             99425: "306d6e7a8dc1593da1ad.js",
             99517: "69dc3d71552cf29e8be0.js",
@@ -3487,18 +3487,18 @@
                 }
             }
         }!n && (c = !0, (n = document.createElement("script")).charset = "utf-8", n.timeout = 120, n.src = e), a[e] = [t];
-        var f = function(t, s) {
-                n.onerror = n.onload = null, clearTimeout(l);
+        var l = function(t, s) {
+                n.onerror = n.onload = null, clearTimeout(f);
                 var d = a[e];
                 if (delete a[e], n.parentNode && n.parentNode.removeChild(n), d && d.forEach(function(e) {
                         return e(s)
                     }), t) return t(s)
             },
-            l = setTimeout(f.bind(null, void 0, {
+            f = setTimeout(l.bind(null, void 0, {
                 type: "timeout",
                 target: n
             }), 12e4);
-        n.onerror = f.bind(null, n.onerror), n.onload = f.bind(null, n.onload), c && document.head.appendChild(n)
+        n.onerror = l.bind(null, n.onerror), n.onload = l.bind(null, n.onload), c && document.head.appendChild(n)
     }, u.o = function(e, a) {
         return Object.prototype.hasOwnProperty.call(e, a)
     }, t = [], u.O = function(e, a, s, d) {
@@ -3546,10 +3546,10 @@
         return i[s] = e => {}, i[d] = e, i
     }), u.a = (e, a, t) => {
         t && ((r = []).d = -1);
-        var r, o, f, l, u = new Set,
+        var r, o, l, f, u = new Set,
             b = e.exports,
             p = new Promise((e, a) => {
-                l = a, f = e
+                f = a, l = e
             });
         p[d] = b, p[s] = e => (r && e(r), u.forEach(e), p.catch(e => {})), e.exports = p, a(e => {
             o = i(e);
@@ -3563,7 +3563,7 @@
                     o.map(e => e[s](d))
                 });
             return a.r ? c : t()
-        }, e => (e ? l(p[n] = e) : f(b), c(r))), r && r.d < 0 && (r.d = 0)
+        }, e => (e ? f(p[n] = e) : l(b), c(r))), r && r.d < 0 && (r.d = 0)
     }, u.d = function(e, a) {
         for (var t in a) u.o(a, t) && !u.o(e, t) && Object.defineProperty(e, t, {
             enumerable: !0,
@@ -3706,11 +3706,11 @@
             s = function(e, s, d, n) {
                 var c, i, r = "chunk-" + e;
                 if (!n) {
-                    for (var o = document.getElementsByTagName("link"), f = 0; f < o.length; f++) {
-                        var l = o[f],
-                            b = l.getAttribute("href") || l.href;
-                        if (b && !b.startsWith(u.p) && (b = u.p + (b.startsWith("/") ? b.slice(1) : b)), "stylesheet" == l.rel && (b && b.startsWith(s) || l.getAttribute("data-webpack") == a + ":" + r)) {
-                            c = l;
+                    for (var o = document.getElementsByTagName("link"), l = 0; l < o.length; l++) {
+                        var f = o[l],
+                            b = f.getAttribute("href") || f.href;
+                        if (b && !b.startsWith(u.p) && (b = u.p + (b.startsWith("/") ? b.slice(1) : b)), "stylesheet" == f.rel && (b && b.startsWith(s) || f.getAttribute("data-webpack") == a + ":" + r)) {
+                            c = f;
                             break
                         }
                     }
