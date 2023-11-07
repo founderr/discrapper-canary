@@ -500,7 +500,8 @@
                             action_type: T.ModerationActionType.BAN,
                             target_user_ids: [...A],
                             mod_user_id: E.default.getId(),
-                            successful_user_ids: n.body.banned_users
+                            successful_user_ids: n.body.banned_users,
+                            location: I
                         })
                     } catch (e) {
                         (0, d.showToast)((0, d.createToast)(L.default.Messages.BAN_MULTIPLE_FAILED_TOAST, d.ToastType.FAILURE))
@@ -547,7 +548,8 @@
                                     ...(0, u.collectGuildAnalyticsMetadata)(g),
                                     action_type: T.ModerationActionType.BAN,
                                     target_user_ids: [...A],
-                                    mod_user_id: E.default.getId()
+                                    mod_user_id: E.default.getId(),
+                                    location: I
                                 }), (0, d.openModalLazy)(async () => {
                                     let {
                                         default: e
