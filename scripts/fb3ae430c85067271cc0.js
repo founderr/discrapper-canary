@@ -175,68 +175,6 @@
                     }
                 }
         },
-        568131: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                fetchLibrary: function() {
-                    return u
-                },
-                createTestModeLibraryApplications: function() {
-                    return o
-                },
-                setActiveLaunchOptionId: function() {
-                    return d
-                }
-            });
-            var s = n("872717"),
-                a = n("913144"),
-                l = n("370999"),
-                i = n("271560"),
-                r = n("49111");
-            async function u() {
-                try {
-                    let e = await (0, i.httpGetWithCountryCodeQuery)({
-                        url: r.Endpoints.LIBRARY,
-                        oldFormErrors: !0
-                    }, !1);
-                    a.default.dispatch({
-                        type: "LIBRARY_FETCH_SUCCESS",
-                        libraryApplications: e.body
-                    })
-                } catch (e) {
-                    a.default.dispatch({
-                        type: "LIBRARY_FETCH_FAIL",
-                        error: e
-                    })
-                }
-            }
-            async function o(e) {
-                let t = e.primarySkuId;
-                if (null == t) return;
-                let n = await s.default.get({
-                        url: r.Endpoints.APPLICATION_BRANCH_LIST(e.id),
-                        oldFormErrors: !0
-                    }).then(e => e.body),
-                    i = n.map(n => l.default.createForTestMode({
-                        id: e.id,
-                        skuId: t,
-                        branch: n
-                    }));
-                a.default.dispatch({
-                    type: "LIBRARY_APPLICATIONS_TEST_MODE_ENABLED",
-                    libraryApplications: i
-                })
-            }
-
-            function d(e, t, n) {
-                a.default.dispatch({
-                    type: "LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE",
-                    applicationId: e,
-                    branchId: t,
-                    launchOptionId: n
-                })
-            }
-        },
         549869: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
