@@ -39,7 +39,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return C
                 }
             });
             var a = n("37983");
@@ -60,32 +60,32 @@
                 f = n("78345"),
                 I = n("154889"),
                 h = n("646718"),
-                A = n("782340"),
-                N = n("9180");
-            let C = e => {
+                N = n("782340"),
+                A = n("9180");
+            let p = e => {
                 let {
                     isTier0: t,
                     discountAmount: n
                 } = e;
                 return (0, a.jsx)("div", {
-                    className: N.trialBadgeContainer,
+                    className: A.trialBadgeContainer,
                     children: (0, a.jsx)(o.Text, {
                         variant: "text-xs/bold",
-                        className: r(N.trialOfferText, {
-                            [N.tier0TrialOffer]: t
+                        className: r(A.trialOfferText, {
+                            [A.tier0TrialOffer]: t
                         }),
-                        children: void 0 !== n ? A.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
+                        children: void 0 !== n ? N.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
                             percent: n
-                        }) : A.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT
+                        }) : N.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT
                     })
                 })
             };
-            var p = function(e) {
+            var C = function(e) {
                 var t;
                 let n;
                 let {
                     hideCloseButton: i = !1,
-                    hideCloseOnFullScreen: p,
+                    hideCloseOnFullScreen: C,
                     shouldShowPrice: P,
                     plan: O,
                     renderAnimation: _,
@@ -98,40 +98,40 @@
                     showDiscountBadge: B = !1
                 } = e, j = g === h.PremiumTypes.TIER_2;
                 n = g === h.PremiumTypes.TIER_0 ? d.default : g === h.PremiumTypes.TIER_1 ? m.default : c.default;
-                let v = (0, s.useStateFromStores)([u.default], () => u.default.useReducedMotion),
-                    F = (0, I.usePremiumDiscountOffer)(),
-                    H = null == F ? void 0 : null === (t = F.discount) || void 0 === t ? void 0 : t.amount;
+                let F = (0, s.useStateFromStores)([u.default], () => u.default.useReducedMotion),
+                    v = (0, I.usePremiumDiscountOffer)(),
+                    H = null == v ? void 0 : null === (t = v.discount) || void 0 === t ? void 0 : t.amount;
                 return (0, a.jsxs)("div", {
                     "aria-hidden": !0,
                     className: r({
-                        [N.headerBackground]: !j,
-                        [x === f.PremiumHeaderThemes.WINTER ? N.tier2HeaderBackgroundWinterTheme : N.tier2HeaderBackground]: j
+                        [A.headerBackground]: !j,
+                        [x === f.PremiumHeaderThemes.WINTER ? A.tier2HeaderBackgroundWinterTheme : A.tier2HeaderBackground]: j
                     }, y),
-                    children: [v || x !== f.PremiumHeaderThemes.WINTER ? null : (0, a.jsx)(L.default, {
-                        className: N.snow,
+                    children: [F || x !== f.PremiumHeaderThemes.WINTER ? null : (0, a.jsx)(L.default, {
+                        className: A.snow,
                         wind: 5
                     }), (M || B) && (0, a.jsx)(E.default, {
-                        className: N.trialBadgeSparkles
+                        className: A.trialBadgeSparkles
                     }), _(), (0, a.jsxs)(l.default, {
                         align: l.default.Align.START,
                         justify: l.default.Justify.BETWEEN,
-                        className: N.headerTop,
+                        className: A.headerTop,
                         children: [(0, a.jsxs)("div", {
                             children: [(0, a.jsx)(n, {
-                                className: r(N.headerIcon, {
-                                    [N.nonTier2]: !j
+                                className: r(A.headerIcon, {
+                                    [A.nonTier2]: !j
                                 })
-                            }), (M || B) && (0, a.jsx)(C, {
+                            }), (M || B) && (0, a.jsx)(p, {
                                 isTier0: g === h.PremiumTypes.TIER_0,
                                 discountAmount: B ? H : void 0
                             })]
                         }), !i && (0, a.jsx)(o.ModalCloseButton, {
-                            hideOnFullscreen: p,
+                            hideOnFullscreen: C,
                             onClick: D,
-                            className: N.closeButton
+                            className: A.closeButton
                         })]
                     }), P && null != O ? (0, a.jsx)("div", {
-                        className: N.price,
+                        className: A.price,
                         children: function(e, t) {
                             let n = S.default.getDefaultPrice(e),
                                 {
@@ -141,11 +141,11 @@
                             if (t) return i;
                             switch (a) {
                                 case h.SubscriptionIntervalTypes.MONTH:
-                                    return A.default.Messages.BILLING_PRICE_PER_MONTH.format({
+                                    return N.default.Messages.BILLING_PRICE_PER_MONTH.format({
                                         price: i
                                     });
                                 case h.SubscriptionIntervalTypes.YEAR:
-                                    return A.default.Messages.BILLING_PRICE_PER_YEAR.format({
+                                    return N.default.Messages.BILLING_PRICE_PER_YEAR.format({
                                         price: i
                                     })
                             }
@@ -272,13 +272,13 @@
                     premiumType: f,
                     useWinterTheme: I = !1,
                     onClose: h,
-                    hideCloseButton: A,
-                    showTrialBadge: N,
-                    showDiscountBadge: C,
-                    isGift: p,
+                    hideCloseButton: N,
+                    showTrialBadge: A,
+                    showDiscountBadge: p,
+                    isGift: C,
                     giftRecipient: P
                 } = e, O = (0, s.useStateFromStores)([u.default], () => u.default.useReducedMotion), _ = I ? d.PremiumHeaderThemes.WINTER : d.PremiumHeaderThemes.DEFAULT;
-                return p && (0, c.shouldShowCustomGiftExperience)(P, !0, "PremiumSubscriptionModalHeader") && t !== l.Step.CONFIRM ? (0, a.jsxs)(o.ModalHeader, {
+                return C && (0, c.shouldShowCustomGiftExperience)(P, !0, "PremiumSubscriptionModalHeader") && t !== l.Step.CONFIRM ? (0, a.jsxs)(o.ModalHeader, {
                     className: T.modalHeaderCustomGift,
                     separator: !1,
                     children: [(0, a.jsx)("div", {
@@ -288,7 +288,7 @@
                             children: (() => {
                                 switch (t) {
                                     case l.Step.PLAN_SELECT:
-                                        return S.default.Messages.GIFT_NITRO_ACTION;
+                                        return f === L.PremiumTypes.TIER_0 ? S.default.Messages.GIFT_NITRO_TIER_0 : S.default.Messages.GIFT_NITRO_ACTION;
                                     case l.Step.ADD_PAYMENT_STEPS:
                                         return S.default.Messages.PAYMENT_METHOD_SELECTION;
                                     case l.Step.REVIEW:
@@ -307,7 +307,7 @@
                     separator: !1,
                     children: (0, a.jsx)(m.default, {
                         hideCloseOnFullScreen: !0,
-                        hideCloseButton: A,
+                        hideCloseButton: N,
                         shouldShowPrice: !0,
                         upgradeToPremiumType: f,
                         renderAnimation: () => f === L.PremiumTypes.TIER_0 ? (0, a.jsx)(E.PremiumModalHeaderAnimationTier0, {
@@ -331,8 +331,8 @@
                         className: T.header,
                         onClose: h,
                         headerTheme: _,
-                        showTrialBadge: N,
-                        showDiscountBadge: C
+                        showTrialBadge: A,
+                        showDiscountBadge: p
                     })
                 })
             }
@@ -341,10 +341,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 PremiumPaymentAnimationTier0: function() {
-                    return A
+                    return N
                 },
                 PremiumPaymentAnimationTier1: function() {
-                    return C
+                    return p
                 },
                 PremiumPaymentAnimationTier2: function() {
                     return _
@@ -385,13 +385,13 @@
                     END: 878
                 }
             };
-            class A extends m.PureComponent {
+            class N extends m.PureComponent {
                 static getNextScene(e) {
                     switch (e) {
-                        case A.Scenes.SPEED_START:
-                            return A.Scenes.SPEED_LOOP;
-                        case A.Scenes.FINISH:
-                            return A.Scenes.IDLE;
+                        case N.Scenes.SPEED_START:
+                            return N.Scenes.SPEED_LOOP;
+                        case N.Scenes.FINISH:
+                            return N.Scenes.IDLE;
                         default:
                             return e
                     }
@@ -425,8 +425,8 @@
                     })
                 }
             }
-            A.Scenes = a, (u = i || (i = {})).NORMAL = "normal", u.SPEED_START = "speed_start", u.SPEED_LOOP = "speed_loop", u.FINISH = "finish", u.IDLE = "idle";
-            let N = {
+            N.Scenes = a, (u = i || (i = {})).NORMAL = "normal", u.SPEED_START = "speed_start", u.SPEED_LOOP = "speed_loop", u.FINISH = "finish", u.IDLE = "idle";
+            let A = {
                 [i.NORMAL]: {
                     BEG: 0,
                     END: 600,
@@ -449,13 +449,13 @@
                     END: 878
                 }
             };
-            class C extends m.PureComponent {
+            class p extends m.PureComponent {
                 static getNextScene(e) {
                     switch (e) {
-                        case C.Scenes.SPEED_START:
-                            return C.Scenes.SPEED_LOOP;
-                        case C.Scenes.FINISH:
-                            return C.Scenes.IDLE;
+                        case p.Scenes.SPEED_START:
+                            return p.Scenes.SPEED_LOOP;
+                        case p.Scenes.FINISH:
+                            return p.Scenes.IDLE;
                         default:
                             return e
                     }
@@ -481,7 +481,7 @@
                         className: L(I.sequencedAnimation, e),
                         importData: this.importDefault,
                         nextScene: r ? i.IDLE : t,
-                        sceneSegments: N,
+                        sceneSegments: A,
                         onScenePlay: n,
                         onSceneComplete: a,
                         pauseWhileUnfocused: s,
@@ -489,8 +489,8 @@
                     })
                 }
             }
-            C.Scenes = i, (l = r || (r = {})).IDLE_ENTRY = "idle_entry", l.IDLE_LOOP = "idle_loop", l.BOOST_START = "boost_start", l.BOOST_LOOP = "boost_loop", l.BOOST_END = "boost_end", l.VICTORY = "victory", l.ERROR = "error";
-            let p = {
+            p.Scenes = i, (l = r || (r = {})).IDLE_ENTRY = "idle_entry", l.IDLE_LOOP = "idle_loop", l.BOOST_START = "boost_start", l.BOOST_LOOP = "boost_loop", l.BOOST_END = "boost_end", l.VICTORY = "victory", l.ERROR = "error";
+            let C = {
                 [r.IDLE_ENTRY]: {
                     BEG: 0,
                     END: 50
@@ -666,7 +666,7 @@
                             className: I.sequencedAnimation,
                             importData: this.importData,
                             nextScene: n ? r.IDLE_LOOP : t,
-                            sceneSegments: p,
+                            sceneSegments: C,
                             onScenePlay: this.handleScenePlay,
                             onSceneComplete: a,
                             pauseWhileUnfocused: !1,

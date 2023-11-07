@@ -2012,7 +2012,7 @@
                                         [S.optionSelected]: i || g,
                                         [S.updatedOptionSelected]: C && (i || g)
                                     }),
-                                    children: [(0, I.getIntervalString)(h.interval, P, b, h.intervalCount, g), g && U()]
+                                    children: [(0, I.getIntervalString)(h.interval, P, b, h.intervalCount, g, (0, I.getPremiumType)(h.id)), g && U()]
                                 }), g && (0, r.jsx)("div", {
                                     className: S.planOneTimeCost,
                                     children: N.default.Messages.ONE_TIME_CHARGE.format({
