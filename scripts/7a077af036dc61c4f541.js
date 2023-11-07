@@ -7381,7 +7381,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return x
+                    return O
                 }
             });
             var a = s("37983"),
@@ -7397,84 +7397,79 @@
                 E = s("217513"),
                 T = s("790618"),
                 f = s("181114"),
-                m = s("956089"),
-                _ = s("599110"),
-                I = s("719923"),
-                g = s("906932"),
-                h = s("570697"),
-                N = s("632892"),
-                C = s("49111"),
-                p = s("646718"),
-                A = s("782340"),
-                O = s("273072");
+                m = s("599110"),
+                _ = s("719923"),
+                I = s("906932"),
+                g = s("570697"),
+                h = s("632892"),
+                N = s("49111"),
+                C = s("646718"),
+                p = s("782340"),
+                A = s("273072");
 
-            function x(e) {
+            function O(e) {
                 let {
                     user: t,
                     guild: s,
                     className: l,
-                    forcedDivider: x = !1,
-                    withTutorial: R = !1,
-                    showBorder: M = !1,
-                    isTryItOutFlow: D = !1,
-                    initialSelectedEffectID: v
-                } = e, L = (0, E.default)(t.id, null == s ? void 0 : s.id), P = I.default.canUsePremiumProfileCustomization(t), {
-                    analyticsLocations: j
-                } = (0, d.default)(), U = (0, c.useCanUseProfileEffects)({
+                    forcedDivider: O = !1,
+                    withTutorial: x = !1,
+                    showBorder: R = !1,
+                    isTryItOutFlow: M = !1,
+                    initialSelectedEffectID: D
+                } = e, v = (0, E.default)(t.id, null == s ? void 0 : s.id), L = _.default.canUsePremiumProfileCustomization(t), {
+                    analyticsLocations: P
+                } = (0, d.default)(), j = (0, c.useCanUseProfileEffects)({
                     location: "ProfileEffectSection"
                 }), {
-                    shopForAllEnabled: b
+                    shopForAllEnabled: U
                 } = (0, u.default)({
                     location: "ProfileEffectSection"
                 }), {
-                    pendingProfileEffectID: B,
-                    errors: y
+                    pendingProfileEffectID: b,
+                    errors: B
                 } = (0, r.useStateFromStoresObject)([T.default], () => ({
                     pendingProfileEffectID: T.default.getPendingProfileEffectID(),
                     errors: T.default.getErrors().profileEffect
-                })), F = n.useCallback(() => (0, S.openProfileEffectModal)({
-                    analyticsLocations: j,
-                    initialSelectedEffectID: v
-                }), [j, v]);
+                })), y = n.useCallback(() => (0, S.openProfileEffectModal)({
+                    analyticsLocations: P,
+                    initialSelectedEffectID: D
+                }), [P, D]);
                 if (n.useEffect(() => {
-                        P && U && _.default.track(C.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-                            type: p.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
-                            location_stack: j
+                        L && j && m.default.track(N.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+                            type: C.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
+                            location_stack: P
                         })
-                    }, [U, P, j]), !U) return null;
-                let G = D || void 0 !== B ? null != B : (null == L ? void 0 : L.profileEffectID) != null,
-                    k = R ? f.default : o.Button;
-                return (0, a.jsx)(h.default, {
-                    forcedDivider: x,
-                    borderType: N.FeatureBorderTypes.PREMIUM,
+                    }, [j, L, P]), !j) return null;
+                let F = M || void 0 !== b ? null != b : (null == v ? void 0 : v.profileEffectID) != null,
+                    G = x ? f.default : o.Button;
+                return (0, a.jsx)(g.default, {
+                    forcedDivider: O,
+                    borderType: h.FeatureBorderTypes.PREMIUM,
                     hasBackground: !0,
-                    title: A.default.Messages.USER_SETTINGS_PROFILE_EFFECT,
-                    showPremiumIcon: !b,
-                    showBorder: M,
-                    titleIcon: (0, a.jsx)(m.PremiumBadge, {
-                        className: O.newBadge,
-                        text: A.default.Messages.NEW
-                    }),
-                    errors: y,
+                    title: p.default.Messages.USER_SETTINGS_PROFILE_EFFECT,
+                    showPremiumIcon: !U,
+                    showBorder: R,
+                    errors: B,
                     className: l,
                     children: (0, a.jsxs)("div", {
-                        className: O.buttonsContainer,
-                        children: [(0, a.jsx)(k, {
+                        className: A.buttonsContainer,
+                        children: [(0, a.jsx)(G, {
                             size: o.Button.Sizes.SMALL,
-                            onClick: F,
+                            onClick: y,
                             className: i({
-                                [O.buttonHighlighted]: R
+                                [A.buttonHighlighted]: x
                             }),
-                            children: A.default.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
-                        }), G && (0, a.jsx)(o.Button, {
-                            className: O.removeButton,
+                            children: p.default.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
+                        }), F && (0, a.jsx)(o.Button, {
+                            className: A.removeButton,
                             color: o.Button.Colors.PRIMARY,
                             look: o.Button.Looks.LINK,
                             size: o.Button.Sizes.SMALL,
                             onClick: function() {
-                                (0, g.setNewPendingProfileEffectID)(null, null == L ? void 0 : L.profileEffectID)
+                                (0, I.setNewPendingProfileEffectID)(null, null == v ? void 0 : v.profileEffectID)
                             },
-                            children: A.default.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
+                            children: p.default.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
                         })]
                     })
                 })
@@ -9869,7 +9864,7 @@
             function d() {
                 var e, t, s, n, d, u, c, S, E;
                 let T = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    f = (e = "58c67a0eb37a1d540b4050b8493b85ca2d735c28", e.substring(0, 7)),
+                    f = (e = "0f5e7c36d527edd791edbdea49ba55afd5ac528c", e.substring(0, 7)),
                     m = null === (t = r.default) || void 0 === t ? void 0 : t.remoteApp.getVersion(),
                     _ = null === (n = r.default) || void 0 === n ? void 0 : null === (s = (d = n.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(d),
                     I = null === (c = r.default) || void 0 === c ? void 0 : null === (u = (S = c.remoteApp).getAppArch) || void 0 === u ? void 0 : u.call(S),
@@ -9882,7 +9877,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [T, " ", "244116", " ", (0, a.jsxs)("span", {
+                        children: [T, " ", "244126", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", f, ")"]
                         })]
