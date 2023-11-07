@@ -21157,8 +21157,11 @@
                 CLIPS_THUMBNAIL_MAX_HEIGHT: function() {
                     return N
                 },
-                CLIP_NAME_TEMPLATE: function() {
+                CLIPS_MAX_PARTICIPANTS: function() {
                     return O
+                },
+                CLIP_NAME_TEMPLATE: function() {
+                    return D
                 }
             });
             var i, r, s, a, o, l, u = n("605250"),
@@ -21180,7 +21183,8 @@
                 v = "clips-gallery",
                 R = 640,
                 N = 360,
-                O = e => "Clip - ".concat(new Date(e).toLocaleString())
+                O = 100,
+                D = e => "Clip - ".concat(new Date(e).toLocaleString())
         },
         386045: function(e, t, n) {
             "use strict";
@@ -21458,6 +21462,27 @@
                     return i
                 }
             }), (r = i || (i = {})).UNKNOWN = "unknown", r.BELOW_MINIMUM = "below_minimum", r.MEETS_MINIMUM = "meets_minimum", r.MEETS_AUTO_ENABLE = "meets_auto_enable"
+        },
+        66175: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                getClipCreatedAt: function() {
+                    return s
+                },
+                getClipParticipantIds: function() {
+                    return a
+                }
+            });
+            var i = n("299039"),
+                r = n("80028");
+
+            function s(e) {
+                return new Date(i.default.extractTimestamp(e)).toISOString()
+            }
+
+            function a(e) {
+                return e.slice(0, r.CLIPS_MAX_PARTICIPANTS)
+            }
         },
         680894: function(e, t, n) {
             "use strict";
@@ -49042,7 +49067,7 @@
                         var i;
                         let d = {
                                 environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                                build_number: "244330"
+                                build_number: "244332"
                             },
                             E = l.default.getCurrentUser();
                         null != E && (d.user_id = E.id, d.user_name = E.tag, null != E.email && (d.email = E.email));
@@ -51347,7 +51372,7 @@
                     return u
                 }
             });
-            var i = n("299039"),
+            var i = n("66175"),
                 r = n("894488");
             let s = [{
                     reName: /\.jpe?g$/i,
@@ -51412,7 +51437,7 @@
                 }({
                     spoiler: e.spoiler
                 });
-                return a.filename = "".concat(o).concat(null != s ? s : e.filename), a.uploaded_filename = e.uploadedFilename, "durationSecs" in e && null != e.durationSecs && (a.duration_secs = e.durationSecs), "waveform" in e && null != e.waveform && (a.waveform = e.waveform), "isThumbnail" in e && !0 === e.isThumbnail && (a.is_thumbnail = e.isThumbnail), "isRemix" in e && !0 === e.isRemix && (a.is_remix = e.isRemix), "clip" in e && null != e.clip && (a.is_clip = !0, a.title = e.clip.name, a.application_id = e.clip.applicationId, a.clip_created_at = new Date(i.default.extractTimestamp(e.clip.id)).toISOString(), a.clip_participant_ids = e.clip.users), a
+                return a.filename = "".concat(o).concat(null != s ? s : e.filename), a.uploaded_filename = e.uploadedFilename, "durationSecs" in e && null != e.durationSecs && (a.duration_secs = e.durationSecs), "waveform" in e && null != e.waveform && (a.waveform = e.waveform), "isThumbnail" in e && !0 === e.isThumbnail && (a.is_thumbnail = e.isThumbnail), "isRemix" in e && !0 === e.isRemix && (a.is_remix = e.isRemix), "clip" in e && null != e.clip && (a.is_clip = !0, a.title = e.clip.name, a.application_id = e.clip.applicationId, a.clip_created_at = (0, i.getClipCreatedAt)(e.clip.id), a.clip_participant_ids = (0, i.getClipParticipantIds)(e.clip.users)), a
             }
 
             function l(e) {
