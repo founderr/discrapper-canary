@@ -1818,7 +1818,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "244068"
+                        buildNumber: "244085"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -16557,7 +16557,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return p
                 }
             });
             var a = n("37983"),
@@ -16572,88 +16572,94 @@
                 E = n("476263"),
                 f = n("45029"),
                 _ = n("489622"),
-                C = n("398654"),
-                I = n("712125"),
-                h = n("311161"),
-                T = n("49111"),
-                S = n("724210"),
-                N = n("782340"),
-                A = n("17629");
+                C = n("599110"),
+                I = n("398654"),
+                h = n("712125"),
+                T = n("311161"),
+                S = n("49111"),
+                N = n("724210"),
+                A = n("782340"),
+                m = n("17629");
 
-            function m(e) {
-                var t, m;
+            function p(e) {
+                var t, p;
                 let {
-                    onDismiss: p
-                } = e, g = (0, l.useStateFromStores)([c.default], () => c.default.getGuildId()), R = (0, l.useStateFromStores)([d.default], () => null != g ? d.default.getChannelId(g) : null, [g]), O = (0, C.useFirstGuildIncidentId)(), L = (0, l.useStateFromStores)([u.default], () => null != O ? u.default.getGuild(O) : null, [O]), {
-                    shouldShowIncidentActions: M,
-                    incidentData: v,
-                    isUnderLockdown: P
-                } = (0, C.useGuildIncidentsState)(O), D = (0, r.useCanAccessMemberSafetyPage)(null !== (t = null == L ? void 0 : L.id) && void 0 !== t ? t : ""), y = s.useCallback(() => null != L && (0, o.goToMemberSafetyDashboard)(L.id), [L]);
-                if (null == L || null == v || !M) return null;
-                let x = e => {
-                        if (!(e && D && R !== S.StaticChannelRoute.MEMBER_SAFETY && y()))(0, i.openModalLazy)(async () => {
+                    onDismiss: g
+                } = e, R = (0, l.useStateFromStores)([c.default], () => c.default.getGuildId()), O = (0, l.useStateFromStores)([d.default], () => null != R ? d.default.getChannelId(R) : null, [R]), L = (0, I.useFirstGuildIncidentId)(), M = (0, l.useStateFromStores)([u.default], () => null != L ? u.default.getGuild(L) : null, [L]), {
+                    shouldShowIncidentActions: v,
+                    incidentData: P,
+                    isUnderLockdown: D
+                } = (0, I.useGuildIncidentsState)(L), y = (0, r.useCanAccessMemberSafetyPage)(null !== (t = null == M ? void 0 : M.id) && void 0 !== t ? t : ""), x = s.useCallback(() => null != M && (0, o.goToMemberSafetyDashboard)(M.id), [M]);
+                if (null == M || null == P || !v) return null;
+                let U = e => {
+                        if (e && y && O !== N.StaticChannelRoute.MEMBER_SAFETY && x()) {
+                            C.default.track(S.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
+                                notice_type: S.NoticeTypes.GUILD_RAID_NOTIFICATION
+                            });
+                            return
+                        }(0, i.openModalLazy)(async () => {
                             let e = {
-                                    source: I.GuildIncidentActionSources.NAGBAR,
-                                    alertType: (0, h.getIncidentAlertType)(v)
+                                    source: h.GuildIncidentActionSources.NAGBAR,
+                                    alertType: (0, T.getIncidentAlertType)(P)
                                 },
                                 {
                                     default: t
                                 } = await n.el("186638").then(n.bind(n, "186638"));
                             return n => (0, a.jsx)(t, {
                                 ...n,
-                                guildId: L.id,
+                                guildId: M.id,
                                 analyticsData: e
                             })
                         })
                     },
-                    U = (0, a.jsx)(E.default, {
-                        className: A.guildIcon,
-                        guild: L,
+                    b = (0, a.jsx)(E.default, {
+                        className: m.guildIcon,
+                        guild: M,
                         size: E.default.Sizes.MINI
                     }),
-                    b = (0, h.getSecurityActionDetailsString)(v, L.name),
-                    G = null !== (m = v.dmsDisabledUntil) && void 0 !== m ? m : v.invitesDisabledUntil;
-                if (null != G && P) return (0, a.jsxs)(_.default, {
-                    className: A.notice,
+                    G = (0, T.getSecurityActionDetailsString)(P, M.name),
+                    j = null !== (p = P.dmsDisabledUntil) && void 0 !== p ? p : P.invitesDisabledUntil;
+                if (null != j && D) return (0, a.jsxs)(_.default, {
+                    className: m.notice,
                     color: _.NoticeColors.NEUTRAL,
                     children: [(0, a.jsx)(_.NoticeCloseButton, {
-                        onClick: p,
-                        noticeType: T.NoticeTypes.GUILD_RAID_NOTIFICATION
-                    }), U, b, (0, a.jsx)(_.NoticeButton, {
-                        className: A.actionButton,
-                        onClick: () => x(!1),
+                        onClick: g,
+                        noticeType: S.NoticeTypes.GUILD_RAID_NOTIFICATION
+                    }), b, G, (0, a.jsx)(_.NoticeButton, {
+                        className: m.actionButton,
+                        onClick: () => U(!1),
                         children: (0, a.jsxs)("div", {
-                            className: A.actionButtonInner,
+                            className: m.actionButtonInner,
                             children: [(0, a.jsx)(f.default, {
                                 width: 16,
                                 height: 16
                             }), (0, a.jsx)("span", {
-                                children: N.default.Messages.GUILD_ANTIRAID_LOCKDOWN_NAGBAR_ACTION
+                                children: A.default.Messages.GUILD_ANTIRAID_LOCKDOWN_NAGBAR_ACTION
                             })]
                         })
                     })]
                 });
-                let j = (0, h.hasDetectedRaid)(v) ? N.default.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({
-                        guildName: L.name
-                    }) : (0, h.hasDetectedDMRaid)(v) ? N.default.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({
-                        guildName: L.name
-                    }) : N.default.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({
-                        guildName: L.name
+                let w = (0, T.hasDetectedRaid)(P) ? A.default.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({
+                        guildName: M.name
+                    }) : (0, T.hasDetectedDMRaid)(P) ? A.default.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({
+                        guildName: M.name
+                    }) : A.default.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({
+                        guildName: M.name
                     }),
-                    w = D && R === S.StaticChannelRoute.MEMBER_SAFETY;
+                    k = y && O === N.StaticChannelRoute.MEMBER_SAFETY;
                 return (0, a.jsxs)(_.default, {
-                    className: A.notice,
+                    className: m.notice,
                     color: _.NoticeColors.WARNING,
                     children: [(0, a.jsx)(_.NoticeCloseButton, {
-                        onClick: p,
-                        noticeType: T.NoticeTypes.GUILD_RAID_NOTIFICATION
-                    }), U, j, !w && (0, a.jsx)(_.NoticeButton, {
-                        className: A.actionButton,
-                        onClick: () => x(!0),
+                        onClick: g,
+                        noticeType: S.NoticeTypes.GUILD_RAID_NOTIFICATION
+                    }), b, w, !k && (0, a.jsx)(_.NoticeButton, {
+                        className: m.actionButton,
+                        onClick: () => U(!0),
                         children: (0, a.jsx)("div", {
-                            className: A.actionButtonInner,
+                            className: m.actionButtonInner,
                             children: (0, a.jsx)("span", {
-                                children: N.default.Messages.GUILD_ANTIRAID_NAGBAR_ACTION_VIEW
+                                children: A.default.Messages.GUILD_ANTIRAID_NAGBAR_ACTION_VIEW
                             })
                         })
                     })]
