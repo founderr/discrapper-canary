@@ -88,10 +88,10 @@
                     return A
                 },
                 saveAccountRequest: function() {
-                    return f
+                    return N
                 },
                 saveAccountChanges: function() {
-                    return N
+                    return f
                 },
                 getHarvestStatus: function() {
                     return p
@@ -171,7 +171,7 @@
                     E.default.logoutInternal(), (0, r.transitionTo)(d.Routes.DEFAULT_LOGGED_OUT)
                 })
             }
-            async function f(e) {
+            async function N(e) {
                 let t = await i.default.patch({
                         url: d.Endpoints.ME,
                         oldFormErrors: !0,
@@ -195,7 +195,7 @@
                 }), t
             }
 
-            function N(e) {
+            function f(e) {
                 let {
                     username: t,
                     discriminator: n,
@@ -226,7 +226,7 @@
                         u = (0, c.getDevicePushProvider)();
                     null != u && null != o && (s.push_provider = u, s.push_token = o);
                     let _ = l.default.get(d.DEVICE_VOIP_TOKEN);
-                    return null != c.DEVICE_PUSH_VOIP_PROVIDER && null != _ && (s.push_voip_provider = c.DEVICE_PUSH_VOIP_PROVIDER, s.push_voip_token = _), f(s)
+                    return null != c.DEVICE_PUSH_VOIP_PROVIDER && null != _ && (s.push_voip_provider = c.DEVICE_PUSH_VOIP_PROVIDER, s.push_voip_token = _), N(s)
                 }, {
                     checkEnabled: !1,
                     modalProps: {
@@ -1304,8 +1304,8 @@
                 I = n("398604"),
                 C = n("152475"),
                 A = n("598639"),
-                f = n("613767"),
-                N = n("93550"),
+                N = n("613767"),
+                f = n("93550"),
                 p = n("707916"),
                 L = n("255050"),
                 O = n("644189"),
@@ -1326,7 +1326,7 @@
                     isHub: r,
                     isMember: o,
                     recurrenceId: _
-                } = e, E = (0, I.isGuildScheduledEventActive)(t), d = (0, s.useStateFromStores)([I.default], () => I.default.hasRsvp(t.id, n.id), [n.id, t]), c = (0, C.default)(t), T = (0, s.useStateFromStores)([u.default], () => u.default.isLurking(n.id), [n.id]), A = (0, f.useIsChannelPublic)(null == l ? void 0 : l.id, t.id), N = (0, U.default)({
+                } = e, E = (0, I.isGuildScheduledEventActive)(t), d = (0, s.useStateFromStores)([I.default], () => I.default.hasRsvp(t.id, n.id), [n.id, t]), c = (0, C.default)(t), T = (0, s.useStateFromStores)([u.default], () => u.default.isLurking(n.id), [n.id]), A = (0, N.useIsChannelPublic)(null == l ? void 0 : l.id, t.id), f = (0, U.default)({
                     guild: n,
                     channel: l,
                     guildScheduledEvent: t,
@@ -1346,7 +1346,7 @@
                     guildName: null == n ? void 0 : n.name,
                     isChannelPublic: A,
                     canInvite: c,
-                    ...N
+                    ...f
                 }) : (0, i.jsx)(p.default, {
                     isActive: E,
                     isUserLurking: T,
@@ -1354,7 +1354,7 @@
                     isChannelPublic: A,
                     canInvite: c,
                     entityType: L,
-                    ...N
+                    ...f
                 })
             }
             var v = e => {
@@ -1363,12 +1363,12 @@
                     guildScheduledEventId: n,
                     parentGuildId: u,
                     transitionState: C,
-                    recurrenceId: f,
+                    recurrenceId: N,
                     onClose: p
                 } = e, O = (0, s.useStateFromStores)([I.default], () => I.default.getGuildScheduledEvent(n), [n]), U = null == O ? void 0 : O.id, v = null == O ? void 0 : O.guild_id, {
                     guild: P,
                     isMember: G
-                } = (0, A.default)(v, U), y = (0, o.default)(u), b = null == O ? void 0 : O.channel_id, V = (0, s.useStateFromStores)([_.default], () => _.default.getChannel(b), [b]), x = (0, E.useUID)(), [H, w] = l.useState(M.EventDetailSections.EVENT_INFO), B = (0, s.useStateFromStoresArray)([I.default], () => Object.values(I.default.getUsersForGuildEvent(U)), [U]), [F, {
+                } = (0, A.default)(v, U), y = (0, o.default)(u), b = null == O ? void 0 : O.channel_id, V = (0, s.useStateFromStores)([_.default], () => _.default.getChannel(b), [b]), H = (0, E.useUID)(), [x, w] = l.useState(M.EventDetailSections.EVENT_INFO), B = (0, s.useStateFromStoresArray)([I.default], () => Object.values(I.default.getUsersForGuildEvent(U)), [U]), [F, {
                     loading: k,
                     error: j
                 }] = (0, c.default)(() => T.default.getGuildEventUsers(null == O ? void 0 : O.id, v));
@@ -1385,21 +1385,21 @@
                         K(null !== (t = null == Y ? void 0 : null === (e = Y.current) || void 0 === e ? void 0 : e.offsetHeight) && void 0 !== t ? t : 0)
                     }, [Y]), null == O || null == P || !G && !y) return null;
                 let Z = e => {
-                        e !== H && (e === M.EventDetailSections.RSVP_LIST && F(), w(e))
+                        e !== x && (e === M.EventDetailSections.RSVP_LIST && F(), w(e))
                     },
                     X = null !== (t = null == O ? void 0 : O.user_count) && void 0 !== t ? t : 0,
-                    z = null == f && null != O.recurrence_rule ? a.default.fromTimestamp(Math.floor(new Date(O.scheduled_start_time).getTime() / h.Durations.SECOND)) : f;
+                    z = null == N && null != O.recurrence_rule ? a.default.fromTimestamp(Math.floor(new Date(O.scheduled_start_time).getTime() / h.Durations.SECOND)) : N;
                 return (0, i.jsxs)(r.ModalRoot, {
                     size: r.ModalSize.MEDIUM,
                     transitionState: C,
-                    "aria-labelledby": x,
+                    "aria-labelledby": H,
                     className: g.root,
                     children: [(null == O ? void 0 : O.image) != null && (0, i.jsx)(L.default, {
-                        source: (0, N.default)(O),
+                        source: (0, f.default)(O),
                         className: g.banner
                     }), (0, i.jsx)(S.default, {
                         onClose: p,
-                        selectedTab: H,
+                        selectedTab: x,
                         onTabSelected: Z,
                         rsvpCount: X,
                         hasBanner: (null == O ? void 0 : O.image) != null,
@@ -1412,7 +1412,7 @@
                                 height: W
                             },
                             children: (0, i.jsxs)(r.Slides, {
-                                activeSlide: H,
+                                activeSlide: x,
                                 width: 600,
                                 centered: !1,
                                 children: [(0, i.jsx)(r.Slide, {
@@ -1421,7 +1421,7 @@
                                         guildEvent: O,
                                         guild: P,
                                         channel: V,
-                                        headerId: x,
+                                        headerId: H,
                                         onClose: p,
                                         onClickInterestedCount: () => Z(M.EventDetailSections.RSVP_LIST),
                                         isHub: y,
@@ -1540,8 +1540,8 @@
                 I = n("155207"),
                 C = n("158998"),
                 A = n("933326"),
-                f = n("882550"),
-                N = n("466148"),
+                N = n("882550"),
+                f = n("466148"),
                 p = n("909151"),
                 L = n("393745"),
                 O = n("586403"),
@@ -1670,9 +1670,9 @@
                 } = a, D = (0, r.useStateFromStores)([d.default], () => null != d.default.getGuild(s.id), [s.id]), {
                     startTime: v,
                     endTime: P
-                } = (0, N.default)(a.id, S), G = l.useCallback(e => {
+                } = (0, f.default)(a.id, S), G = l.useCallback(e => {
                     e.stopPropagation(), null != a && (0, u.transitionToGuildFromEventInvite)(a)
-                }, [a]), y = (0, f.default)(a);
+                }, [a]), y = (0, N.default)(a);
                 return l.useEffect(() => {
                     A.default.getGuildEventUserCounts(s.id), A.default.getGuildEventsForCurrentUser(s.id)
                 }, [s.id]), (0, i.jsxs)("div", {
@@ -1790,22 +1790,22 @@
                 I = n("101125"),
                 C = n("155207"),
                 A = n("745049"),
-                f = n("782340"),
-                N = n("758024");
+                N = n("782340"),
+                f = n("758024");
 
             function p(e) {
                 let {
                     children: t
                 } = e;
                 return (0, i.jsxs)("div", {
-                    className: N.emptyContainer,
+                    className: f.emptyContainer,
                     children: [(0, i.jsx)(_.default, {
                         children: (0, i.jsx)("div", {
-                            className: N.circle,
+                            className: f.circle,
                             children: (0, i.jsx)(C.default, {
                                 height: 40,
                                 width: 40,
-                                className: N.icon
+                                className: f.icon
                             })
                         })
                     }), t]
@@ -1817,8 +1817,8 @@
                     children: (0, i.jsx)(r.Heading, {
                         color: "header-primary",
                         variant: "heading-xl/semibold",
-                        className: N.title,
-                        children: f.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_EMPTY_TITLE
+                        className: f.title,
+                        children: N.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_EMPTY_TITLE
                     })
                 })
             }
@@ -1828,8 +1828,8 @@
                     children: (0, i.jsx)(r.Heading, {
                         color: "header-secondary",
                         variant: "heading-md/semibold",
-                        className: N.errorTitle,
-                        children: f.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_FETCH_ERROR
+                        className: f.errorTitle,
+                        children: N.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_FETCH_ERROR
                     })
                 })
             }
@@ -1840,18 +1840,18 @@
                 } = e;
                 return (0, i.jsx)(i.Fragment, {
                     children: (0, i.jsxs)("div", {
-                        className: N.listRow,
+                        className: f.listRow,
                         children: [(0, i.jsx)("div", {
-                            className: a(N.listRowCircle, N.listAvatar),
+                            className: a(f.listRowCircle, f.listAvatar),
                             children: (0, i.jsx)(C.default, {
                                 height: 14,
                                 width: 14,
-                                className: N.icon
+                                className: f.icon
                             })
                         }), (0, i.jsx)(r.Text, {
                             color: "text-normal",
                             variant: "text-md/normal",
-                            children: f.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_REMAINING.format({
+                            children: N.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_REMAINING.format({
                                 userRemainCount: t
                             })
                         })]
@@ -1884,8 +1884,8 @@
                             isShown: E
                         } = t;
                         return (0, i.jsxs)(r.Clickable, {
-                            className: a(N.listRow, N.interactiveRow, {
-                                [N.selected]: E
+                            className: a(f.listRow, f.interactiveRow, {
+                                [f.selected]: E
                             }),
                             onContextMenu: e => l(e, o),
                             ...e,
@@ -1893,12 +1893,12 @@
                                 src: o.getAvatarURL(null === (s = n.guild_member) || void 0 === s ? void 0 : s.guildId, 24),
                                 "aria-label": o.username,
                                 size: r.AvatarSizes.SIZE_24,
-                                className: N.listAvatar,
+                                className: f.listAvatar,
                                 status: C
                             }), (0, i.jsx)(u.default, {
                                 user: o,
-                                className: N.listName,
-                                discriminatorClass: N.listDiscriminator,
+                                className: f.listName,
+                                discriminatorClass: f.listDiscriminator,
                                 nick: null === (_ = n.guild_member) || void 0 === _ ? void 0 : _.nick
                             })]
                         })
@@ -1913,7 +1913,7 @@
                     onContextMenu: l
                 } = e;
                 return (0, i.jsxs)(r.ScrollerThin, {
-                    className: N.listScroller,
+                    className: f.listScroller,
                     children: [t.map(e => (0, i.jsx)(R, {
                         rsvpUser: e,
                         onContextMenu: l
@@ -1929,7 +1929,7 @@
                     style: n
                 } = e;
                 return (0, i.jsx)("div", {
-                    className: N.container,
+                    className: f.container,
                     style: null != n ? n : {},
                     children: t
                 })
@@ -1961,7 +1961,7 @@
                     height: _,
                     children: (0, i.jsx)(r.Spinner, {
                         type: r.Spinner.Type.SPINNING_CIRCLE,
-                        className: N.spinner
+                        className: f.spinner
                     })
                 });
                 if (null != u && 0 === a.length) return (0, i.jsx)(M, {
@@ -2248,12 +2248,12 @@
                     }
                 }(e), {
                     step: A,
-                    stepConfigs: f,
-                    setBodyNode: N,
+                    stepConfigs: N,
+                    setBodyNode: f,
                     setFooterNode: p,
                     setModalOverlayNode: L,
                     setReadySlideId: O
-                } = (0, d.usePaymentContext)(), S = f.find(e => e.key === A);
+                } = (0, d.usePaymentContext)(), S = N.find(e => e.key === A);
                 l.useEffect(() => {
                     L(null)
                 }, [A, L]), o(null != S, "Unknown step for current payment flow.");
@@ -2268,11 +2268,11 @@
                                 activeSlide: A,
                                 centered: !1,
                                 onSlideReady: e => O(e),
-                                children: f.filter(e => null != e.key).map(e => (0, i.jsx)(E.Slide, {
+                                children: N.filter(e => null != e.key).map(e => (0, i.jsx)(E.Slide, {
                                     id: e.key,
                                     children: (0, i.jsx)("form", {
                                         className: s(c.sliderBody, U),
-                                        ref: e => N(e),
+                                        ref: e => f(e),
                                         onSubmit: e => e.preventDefault()
                                     })
                                 }, e.key))
@@ -2331,8 +2331,8 @@
                     onComplete: I,
                     onSubscriptionConfirmation: C,
                     analyticsLocations: A,
-                    analyticsObject: f,
-                    analyticsLocation: N,
+                    analyticsObject: N,
+                    analyticsLocation: f,
                     analyticsSourceLocation: p,
                     isGift: L = !1,
                     giftMessage: O,
@@ -2372,8 +2372,8 @@
                             },
                             onSubscriptionConfirmation: C,
                             analyticsLocations: A,
-                            analyticsObject: f,
-                            analyticsLocation: N,
+                            analyticsObject: N,
+                            analyticsLocation: f,
                             analyticsSourceLocation: p,
                             trialId: R,
                             postSuccessGuild: m,
@@ -2390,7 +2390,7 @@
                         !v && u.default.track(E.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
                             load_id: P,
                             payment_type: E.PurchaseTypeToAnalyticsPaymentType[E.PurchaseTypes.SUBSCRIPTION],
-                            location: null != N ? N : f,
+                            location: null != f ? f : N,
                             source: p,
                             subscription_type: E.SubscriptionTypes.PREMIUM,
                             is_gift: L,
@@ -2573,31 +2573,6 @@
                 return "development" !== n ? "".concat(location.protocol, "//").concat(t).concat(i.Endpoints.SOUNDBOARD_SOUND(e)) : "".concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(i.Endpoints.SOUNDBOARD_SOUND(e))
             }
         },
-        4233: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return a
-                }
-            });
-            var i = n("862205");
-            let l = (0, i.createExperiment)({
-                kind: "user",
-                id: "2023-03_free_discord_stickers",
-                label: "Free Default Stickers",
-                defaultConfig: {
-                    freeStickersEnabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enabled",
-                    config: {
-                        freeStickersEnabled: !0
-                    }
-                }]
-            });
-            var a = l
-        },
         866353: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -2605,45 +2580,35 @@
                     return l
                 },
                 getStickerSendability: function() {
-                    return _
+                    return u
                 },
                 isSendableSticker: function() {
-                    return E
+                    return _
                 }
             });
             var i, l, a = n("991170"),
                 s = n("719923"),
-                r = n("4233"),
-                o = n("24373"),
-                u = n("49111");
+                r = n("24373"),
+                o = n("49111");
             (i = l || (l = {}))[i.SENDABLE = 0] = "SENDABLE", i[i.SENDABLE_WITH_PREMIUM = 1] = "SENDABLE_WITH_PREMIUM", i[i.NONSENDABLE = 2] = "NONSENDABLE", i[i.SENDABLE_WITH_BOOSTED_GUILD = 3] = "SENDABLE_WITH_BOOSTED_GUILD";
-            let _ = (e, t, n) => {
+            let u = (e, t, n) => {
                     if (null == t) return l.NONSENDABLE;
-                    let i = s.default.canUseStickersEverywhere(t);
-                    if ((0, o.isStandardSticker)(e)) {
-                        let {
-                            freeStickersEnabled: e
-                        } = r.default.getCurrentConfig({
-                            location: "c036ff_1"
-                        }, {
-                            autoTrackExposure: !1
-                        });
-                        return i || e ? l.SENDABLE : l.SENDABLE_WITH_PREMIUM
-                    }
-                    if ((0, o.isGuildSticker)(e) && null != n) return e.available ? null != n.guild_id && "" !== n.guild_id && n.guild_id === e.guild_id ? l.SENDABLE : null == n.guild_id || a.default.can({
-                        permission: u.Permissions.USE_EXTERNAL_STICKERS,
+                    let i = s.default.canUseCustomStickersEverywhere(t);
+                    if ((0, r.isStandardSticker)(e)) return l.SENDABLE;
+                    if ((0, r.isGuildSticker)(e) && null != n) return e.available ? null != n.guild_id && "" !== n.guild_id && n.guild_id === e.guild_id ? l.SENDABLE : null == n.guild_id || a.default.can({
+                        permission: o.Permissions.USE_EXTERNAL_STICKERS,
                         user: t,
                         context: n
                     }) ? i ? l.SENDABLE : l.SENDABLE_WITH_PREMIUM : l.NONSENDABLE : l.SENDABLE_WITH_BOOSTED_GUILD;
                     return l.NONSENDABLE
                 },
-                E = (e, t, n) => _(e, t, n) === l.SENDABLE
+                _ = (e, t, n) => u(e, t, n) === l.SENDABLE
         },
         865372: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return N
                 }
             }), n("424973");
             var i = n("917351"),
@@ -2700,7 +2665,7 @@
                 }
             }
             A.displayName = "StickersPersistedStore", A.persistKey = "StickersPersistedStoreV2";
-            var f = new A(s.default, {
+            var N = new A(s.default, {
                 STICKER_TRACK_USAGE: e => {
                     let {
                         stickerIds: t
@@ -2743,10 +2708,10 @@
                     return A
                 },
                 setPendingPronouns: function() {
-                    return f
+                    return N
                 },
                 setPendingAccentColor: function() {
-                    return N
+                    return f
                 },
                 setPendingThemeColors: function() {
                     return p
@@ -2848,14 +2813,14 @@
                 })
             }
 
-            function f(e) {
+            function N(e) {
                 l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS",
                     pronouns: e
                 })
             }
 
-            function N(e) {
+            function f(e) {
                 l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR",
                     color: e
@@ -2945,7 +2910,7 @@
                     return C
                 },
                 default: function() {
-                    return f
+                    return N
                 }
             });
             var i, l, a = n("37983"),
@@ -3004,11 +2969,11 @@
                     shinePaused: T,
                     buttonShineClassName: I,
                     onlyShineOnHover: A,
-                    ...f
-                } = e, N = s.createRef(), p = (0, E.default)(N), L = !i && !r && !0 !== u && (!A || p);
+                    ...N
+                } = e, f = s.createRef(), p = (0, E.default)(f), L = !i && !r && !0 !== u && (!A || p);
                 return (0, a.jsxs)(_.Button, {
-                    buttonRef: N,
-                    ...f,
+                    buttonRef: f,
+                    ...N,
                     className: o(c.shinyButton, n),
                     disabled: i,
                     submitting: r,
@@ -3020,7 +2985,7 @@
                 })
             };
             A.ShineSizes = l;
-            var f = A
+            var N = A
         },
         476765: function(e, t, n) {
             "use strict";
@@ -3083,12 +3048,12 @@
                         transition: I = d.transition,
                         className: C,
                         foreground: A,
-                        expanded: f,
-                        ...N
+                        expanded: N,
+                        ...f
                     } = e, {
                         enabled: p
                     } = (0, _.useRedesignIconContext)(), L = t;
-                    if (!0 === f ? L = c.DOWN : !1 === f && (L = c.RIGHT), p) {
+                    if (!0 === N ? L = c.DOWN : !1 === N && (L = c.RIGHT), p) {
                         let e = {
                             [c.UP]: u.ChevronSmallUpIcon,
                             [c.DOWN]: s.ChevronSmallDownIcon,
@@ -3096,7 +3061,7 @@
                             [c.RIGHT]: o.ChevronSmallRightIcon
                         } [L];
                         return (0, i.jsx)(e, {
-                            ...N,
+                            ...f,
                             className: C,
                             width: n,
                             height: l,
@@ -3109,7 +3074,7 @@
                         width: n,
                         height: l,
                         viewBox: "0 0 24 24",
-                        ...(0, E.default)(N),
+                        ...(0, E.default)(f),
                         children: (0, i.jsx)("path", {
                             className: A,
                             fill: "none",

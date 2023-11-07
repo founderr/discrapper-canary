@@ -3582,31 +3582,6 @@
                 }
             })
         },
-        4233: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return r
-                }
-            });
-            var i = n("862205");
-            let l = (0, i.createExperiment)({
-                kind: "user",
-                id: "2023-03_free_discord_stickers",
-                label: "Free Default Stickers",
-                defaultConfig: {
-                    freeStickersEnabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enabled",
-                    config: {
-                        freeStickersEnabled: !0
-                    }
-                }]
-            });
-            var r = l
-        },
         866353: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -3614,39 +3589,29 @@
                     return l
                 },
                 getStickerSendability: function() {
-                    return d
+                    return u
                 },
                 isSendableSticker: function() {
-                    return c
+                    return d
                 }
             });
             var i, l, r = n("991170"),
                 a = n("719923"),
-                s = n("4233"),
-                o = n("24373"),
-                u = n("49111");
+                s = n("24373"),
+                o = n("49111");
             (i = l || (l = {}))[i.SENDABLE = 0] = "SENDABLE", i[i.SENDABLE_WITH_PREMIUM = 1] = "SENDABLE_WITH_PREMIUM", i[i.NONSENDABLE = 2] = "NONSENDABLE", i[i.SENDABLE_WITH_BOOSTED_GUILD = 3] = "SENDABLE_WITH_BOOSTED_GUILD";
-            let d = (e, t, n) => {
+            let u = (e, t, n) => {
                     if (null == t) return l.NONSENDABLE;
-                    let i = a.default.canUseStickersEverywhere(t);
-                    if ((0, o.isStandardSticker)(e)) {
-                        let {
-                            freeStickersEnabled: e
-                        } = s.default.getCurrentConfig({
-                            location: "c036ff_1"
-                        }, {
-                            autoTrackExposure: !1
-                        });
-                        return i || e ? l.SENDABLE : l.SENDABLE_WITH_PREMIUM
-                    }
-                    if ((0, o.isGuildSticker)(e) && null != n) return e.available ? null != n.guild_id && "" !== n.guild_id && n.guild_id === e.guild_id ? l.SENDABLE : null == n.guild_id || r.default.can({
-                        permission: u.Permissions.USE_EXTERNAL_STICKERS,
+                    let i = a.default.canUseCustomStickersEverywhere(t);
+                    if ((0, s.isStandardSticker)(e)) return l.SENDABLE;
+                    if ((0, s.isGuildSticker)(e) && null != n) return e.available ? null != n.guild_id && "" !== n.guild_id && n.guild_id === e.guild_id ? l.SENDABLE : null == n.guild_id || r.default.can({
+                        permission: o.Permissions.USE_EXTERNAL_STICKERS,
                         user: t,
                         context: n
                     }) ? i ? l.SENDABLE : l.SENDABLE_WITH_PREMIUM : l.NONSENDABLE : l.SENDABLE_WITH_BOOSTED_GUILD;
                     return l.NONSENDABLE
                 },
-                c = (e, t, n) => d(e, t, n) === l.SENDABLE
+                d = (e, t, n) => u(e, t, n) === l.SENDABLE
         },
         865372: function(e, t, n) {
             "use strict";

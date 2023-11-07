@@ -1980,7 +1980,7 @@
                     let e = 1e3 * I.duration;
                     v(0), C(0), L(e), x(e)
                 }, [I]);
-                let B = s.useCallback((e, t) => {
+                let G = s.useCallback((e, t) => {
                         if (n(), 0 === e.button) switch (t) {
                             case i.START:
                                 R(!0);
@@ -1992,7 +1992,7 @@
                                 y(!0)
                         }
                     }, [n]),
-                    G = s.useCallback(e => {
+                    B = s.useCallback(e => {
                         switch (e) {
                             case i.START:
                                 R(!1);
@@ -2059,8 +2059,8 @@
                                 max: (0, d.getMaxValue)(w, V, P),
                                 value: A,
                                 onChange: j,
-                                onMouseDown: e => B(e, i.START),
-                                onMouseUp: () => G(i.START),
+                                onMouseDown: e => G(e, i.START),
+                                onMouseUp: () => B(i.START),
                                 disabled: !p || h
                             }), (0, l.jsx)("input", {
                                 ref: S,
@@ -2070,8 +2070,8 @@
                                 max: (0, d.getMaxValue)(w, V, P),
                                 value: O,
                                 onChange: H,
-                                onMouseDown: e => B(e, i.END),
-                                onMouseUp: () => G(i.END),
+                                onMouseDown: e => G(e, i.END),
+                                onMouseUp: () => B(i.END),
                                 disabled: !p || h
                             })]
                         }), (0, l.jsx)("div", {
@@ -2084,8 +2084,8 @@
                                 max: (0, d.getMaxValue)(w, V, P),
                                 value: T,
                                 onChange: k,
-                                onMouseDown: e => B(e, i.PLAYHEAD),
-                                onMouseUp: () => G(i.PLAYHEAD),
+                                onMouseDown: e => G(e, i.PLAYHEAD),
+                                onMouseUp: () => B(i.PLAYHEAD),
                                 disabled: !p || h
                             })
                         })]
@@ -2744,14 +2744,14 @@
                     transitionState: R,
                     showGuildPicker: M = !1
                 } = e, [b, U] = s.useState(null !== (n = null !== (t = null == O ? void 0 : O.name) && void 0 !== t ? t : null == L ? void 0 : L.name) && void 0 !== n ? n : ""), [y, P] = s.useState(null !== (r = null == L ? void 0 : L.volume) && void 0 !== r ? r : 1), [x, w] = s.useState(null == L ? void 0 : L.emojiId), [F, V] = s.useState(null == L ? void 0 : L.emojiName), {
-                    file: B,
-                    loadAudioFromFile: G,
+                    file: G,
+                    loadAudioFromFile: B,
                     maxVolume: j,
                     setMaxVolume: k
                 } = (0, p.useAudioTrimmerStore)(), [H, W] = s.useState(!1), [K, Y] = s.useState(null), [z, q] = s.useState(null), [Z, X] = s.useState(i.READY), [J, Q] = s.useState(u);
                 async function $(e) {
                     try {
-                        await G(null != e ? e : null), X(i.READY), Y(null)
+                        await B(null != e ? e : null), X(i.READY), Y(null)
                     } catch (e) {
                         ee(e)
                     }
@@ -2772,12 +2772,12 @@
                 s.useEffect(() => {
                     async function e(e) {
                         try {
-                            await G(e), X(i.READY), Y(null)
+                            await B(e), X(i.READY), Y(null)
                         } catch (e) {
                             ee(e)
                         }
                     }(null == O ? void 0 : O.file) != null && e(O.file)
-                }, [null == O ? void 0 : O.file, G]);
+                }, [null == O ? void 0 : O.file, B]);
                 let et = function(e) {
                         switch (e) {
                             case i.ENCODING:
@@ -2791,7 +2791,7 @@
                     }(Z),
                     en = Z === i.UPLOADING || Z === i.ENCODING,
                     ei = null != L,
-                    er = b.length >= 2 && (ei || null != B) && null != J && function(e) {
+                    er = b.length >= 2 && (ei || null != G) && null != J && function(e) {
                         if (null == e) return !0;
                         let t = (e.endMs - e.startMs) / 1e3;
                         return t > 0 && t <= S.MAX_SOUND_LENGTH_SECONDS
@@ -2806,11 +2806,11 @@
                         }
                     }, []),
                     es = s.useCallback(async () => {
-                        if (null == B) return;
+                        if (null == G) return;
                         c(null != J, "Cannot submit soundboard sound with no guildId");
-                        let e = B;
+                        let e = G;
                         if (null != z) {
-                            let t = await el(B, z);
+                            let t = await el(G, z);
                             if (null == t) return;
                             e = t
                         }
@@ -2828,7 +2828,7 @@
                         } catch (e) {
                             throw new f.default(e)
                         }
-                    }, [B, J, b, el, z, y, x, F]),
+                    }, [G, J, b, el, z, y, x, F]),
                     ea = s.useCallback(async () => {
                         c(null != J, "Cannot submit soundboard sound with no guildId"), W(!0), Y(null);
                         try {
@@ -2847,7 +2847,7 @@
                         }
                     }, [ei, D, J, L, b, y, x, F, es, k]);
                 s.useEffect(() => {
-                    G(null), h.default.track(A.AnalyticEvents.OPEN_MODAL, {
+                    B(null), h.default.track(A.AnalyticEvents.OPEN_MODAL, {
                         type: "Soundboard Upload Sound",
                         guild_id: J
                     })
@@ -2889,7 +2889,7 @@
                                 value: J,
                                 onChange: Q
                             })
-                        }) : null, (ei || null != B) && (0, l.jsx)(I.default, {
+                        }) : null, (ei || null != G) && (0, l.jsx)(I.default, {
                             sound: L,
                             volume: y,
                             disabled: en,
@@ -2900,7 +2900,7 @@
                             className: T.section,
                             title: v.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_FILE,
                             children: (0, l.jsx)(_.default, {
-                                filename: null !== (a = null == B ? void 0 : B.name) && void 0 !== a ? a : "",
+                                filename: null !== (a = null == G ? void 0 : G.name) && void 0 !== a ? a : "",
                                 buttonText: v.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_BROWSE,
                                 placeholder: v.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_INPUT_PLACEHOLDER,
                                 onFileSelect: $,
@@ -3081,31 +3081,6 @@
                 })
             }
         },
-        4233: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return l
-                }
-            });
-            var i = n("862205");
-            let r = (0, i.createExperiment)({
-                kind: "user",
-                id: "2023-03_free_discord_stickers",
-                label: "Free Default Stickers",
-                defaultConfig: {
-                    freeStickersEnabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enabled",
-                    config: {
-                        freeStickersEnabled: !0
-                    }
-                }]
-            });
-            var l = r
-        },
         866353: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -3113,39 +3088,29 @@
                     return r
                 },
                 getStickerSendability: function() {
-                    return c
+                    return u
                 },
                 isSendableSticker: function() {
-                    return d
+                    return c
                 }
             });
             var i, r, l = n("991170"),
                 s = n("719923"),
-                a = n("4233"),
-                o = n("24373"),
-                u = n("49111");
+                a = n("24373"),
+                o = n("49111");
             (i = r || (r = {}))[i.SENDABLE = 0] = "SENDABLE", i[i.SENDABLE_WITH_PREMIUM = 1] = "SENDABLE_WITH_PREMIUM", i[i.NONSENDABLE = 2] = "NONSENDABLE", i[i.SENDABLE_WITH_BOOSTED_GUILD = 3] = "SENDABLE_WITH_BOOSTED_GUILD";
-            let c = (e, t, n) => {
+            let u = (e, t, n) => {
                     if (null == t) return r.NONSENDABLE;
-                    let i = s.default.canUseStickersEverywhere(t);
-                    if ((0, o.isStandardSticker)(e)) {
-                        let {
-                            freeStickersEnabled: e
-                        } = a.default.getCurrentConfig({
-                            location: "c036ff_1"
-                        }, {
-                            autoTrackExposure: !1
-                        });
-                        return i || e ? r.SENDABLE : r.SENDABLE_WITH_PREMIUM
-                    }
-                    if ((0, o.isGuildSticker)(e) && null != n) return e.available ? null != n.guild_id && "" !== n.guild_id && n.guild_id === e.guild_id ? r.SENDABLE : null == n.guild_id || l.default.can({
-                        permission: u.Permissions.USE_EXTERNAL_STICKERS,
+                    let i = s.default.canUseCustomStickersEverywhere(t);
+                    if ((0, a.isStandardSticker)(e)) return r.SENDABLE;
+                    if ((0, a.isGuildSticker)(e) && null != n) return e.available ? null != n.guild_id && "" !== n.guild_id && n.guild_id === e.guild_id ? r.SENDABLE : null == n.guild_id || l.default.can({
+                        permission: o.Permissions.USE_EXTERNAL_STICKERS,
                         user: t,
                         context: n
                     }) ? i ? r.SENDABLE : r.SENDABLE_WITH_PREMIUM : r.NONSENDABLE : r.SENDABLE_WITH_BOOSTED_GUILD;
                     return r.NONSENDABLE
                 },
-                d = (e, t, n) => c(e, t, n) === r.SENDABLE
+                c = (e, t, n) => u(e, t, n) === r.SENDABLE
         },
         865372: function(e, t, n) {
             "use strict";

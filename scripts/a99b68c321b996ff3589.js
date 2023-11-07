@@ -99,7 +99,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return I
+                    return h
                 }
             }), r("222007"), r("70102");
             var s = r("37983"),
@@ -119,23 +119,23 @@
                 N = r("978679"),
                 f = r("745279"),
                 C = r("49111"),
-                _ = r("782340"),
-                h = r("129429");
-            let A = new Set([m.Step.SKU_SELECT, m.Step.AWAITING_AUTHENTICATION, m.Step.AWAITING_PURCHASE_TOKEN_AUTH, m.Step.CONFIRM]);
+                A = r("782340"),
+                I = r("129429");
+            let _ = new Set([m.Step.SKU_SELECT, m.Step.AWAITING_AUTHENTICATION, m.Step.AWAITING_PURCHASE_TOKEN_AUTH, m.Step.CONFIRM]);
 
-            function I(e) {
+            function h(e) {
                 let {
                     steps: t,
                     currentStep: r,
                     body: a,
-                    paymentError: I,
+                    paymentError: h,
                     header: P,
                     footer: T,
-                    isGift: k = !1,
-                    giftMessage: R = _.default.Messages.PREMIUM_PAYMENT_IS_GIFT,
+                    isGift: R = !1,
+                    giftMessage: k = A.default.Messages.PREMIUM_PAYMENT_IS_GIFT,
                     isSeasonalGift: x = !1,
-                    hideBreadcrumbs: b = !1,
-                    isLoading: M = !1,
+                    hideBreadcrumbs: M = !1,
+                    isLoading: b = !1,
                     purchaseError: j,
                     purchaseErrorBlockRef: g,
                     planError: v,
@@ -143,65 +143,65 @@
                     scrollerClassName: O,
                     hasCurrencies: L = !1
                 } = e, B = null;
-                null != I && null == (0, m.errorToStep)(I) ? B = I : null != j ? B = j : null != v && (B = v);
+                null != h && null == (0, m.errorToStep)(h) ? B = h : null != j ? B = j : null != v && (B = v);
                 let W = null != B ? B.message : "";
-                null != B && B instanceof d.BillingError && (B.code === S.ErrorCodes.CARD_DECLINED && L && (W += " ".concat(_.default.Messages.BILLING_ERROR_TRY_ANOTHER)), B.code === S.ErrorCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (W = _.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT), B.code === C.AbortCodes.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (W = _.default.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID));
+                null != B && B instanceof d.BillingError && (B.code === S.ErrorCodes.CARD_DECLINED && L && (W += " ".concat(A.default.Messages.BILLING_ERROR_TRY_ANOTHER)), B.code === S.ErrorCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (W = A.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT), B.code === C.AbortCodes.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (W = A.default.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID));
                 let {
-                    stripe: y
+                    stripe: K
                 } = (0, E.usePaymentContext)();
-                M = M || null == y;
-                let K = l.useRef(new c.Timeout);
+                b = b || null == K;
+                let y = l.useRef(new c.Timeout);
                 l.useEffect(() => {
-                    let e = K.current;
-                    return null != y || e.isStarted() ? null != y && e.stop() : e.start(1e4, () => {
+                    let e = y.current;
+                    return null != K || e.isStarted() ? null != K && e.stop() : e.start(1e4, () => {
                         let e = Error("Stripe took too long to load");
                         (0, f.captureBillingException)(e)
                     }), () => {
                         e.stop()
                     }
-                }, [y]);
+                }, [K]);
                 let U = t.includes(m.Step.PAYMENT_TYPE) ? m.Step.PAYMENT_TYPE : m.Step.ADD_PAYMENT_STEPS;
                 return (0, s.jsxs)(n.Elements, {
                     options: C.StripeElementsOptions,
-                    stripe: y,
+                    stripe: K,
                     children: [P, (0, s.jsxs)("div", {
-                        className: i("paymentModalContent", h.content),
-                        children: [k && !x && r !== m.Step.CONFIRM ? (0, s.jsx)(u.default, {
-                            className: h.paymentNote,
+                        className: i("paymentModalContent", I.content),
+                        children: [R && !x && r !== m.Step.CONFIRM ? (0, s.jsx)(u.default, {
+                            className: I.paymentNote,
                             iconSize: u.default.Sizes.SMALL,
                             icon: N.default,
-                            color: null == R ? u.default.Colors.PRIMARY : u.default.Colors.SECONDARY,
-                            children: R
-                        }) : null, b ? null : (0, s.jsx)("div", {
-                            className: h.breadcrumbsWrapper,
+                            color: null == k ? u.default.Colors.PRIMARY : u.default.Colors.SECONDARY,
+                            children: k
+                        }) : null, M ? null : (0, s.jsx)("div", {
+                            className: I.breadcrumbsWrapper,
                             children: (0, s.jsx)(p.default, {
                                 activeId: m.COLLAPSED_PAYMENT_BREADCRUMB_STEPS.has(r) ? U : r,
-                                breadcrumbs: t.filter(e => !m.COLLAPSED_PAYMENT_BREADCRUMB_STEPS.has(e) && !A.has(e)).map(e => ({
+                                breadcrumbs: t.filter(e => !m.COLLAPSED_PAYMENT_BREADCRUMB_STEPS.has(e) && !_.has(e)).map(e => ({
                                     id: e,
                                     label: (0, m.getLabelForStep)(e)
                                 }))
                             })
                         }), (0, s.jsxs)("div", {
-                            className: h.bodyWrapper,
+                            className: I.bodyWrapper,
                             children: [null == B ? null : (0, s.jsx)("div", {
-                                className: h.errorBlockWrapper,
+                                className: I.errorBlockWrapper,
                                 children: (0, s.jsx)(o.FormErrorBlock, {
                                     ref: g,
                                     children: W
                                 })
-                            }), M ? (0, s.jsx)(o.Spinner, {
-                                className: h.loadingBlock
+                            }), b ? (0, s.jsx)(o.Spinner, {
+                                className: I.loadingBlock
                             }) : (0, s.jsx)(o.Sequencer, {
-                                className: h.sequencer,
-                                staticClassName: h.sequencerStatic,
-                                animatedNodeClassName: h.sequencerAnimatedNode,
+                                className: I.sequencer,
+                                staticClassName: I.sequencerStatic,
+                                animatedNodeClassName: I.sequencerAnimatedNode,
                                 fillParent: !0,
                                 step: r,
                                 steps: t,
                                 sideMargin: 20,
                                 children: (0, s.jsx)(o.AdvancedScrollerThin, {
                                     onScroll: D,
-                                    className: i(h.scroller, O),
+                                    className: i(I.scroller, O),
                                     children: a
                                 })
                             })]
@@ -249,10 +249,10 @@
             "use strict";
             r.r(t), r.d(t, {
                 StickerPackViewAllModalFooter: function() {
-                    return Y
+                    return y
                 },
                 default: function() {
-                    return G
+                    return Y
                 }
             }), r("424973"), r("222007");
             var s = r("37983"),
@@ -270,71 +270,68 @@
                 p = r("716849"),
                 N = r("552917"),
                 f = r("273619"),
-                C = r("697218"),
-                _ = r("181114"),
-                h = r("216422"),
-                A = r("719923"),
+                C = r("181114"),
+                A = r("216422"),
                 I = r("159885"),
-                P = r("4233"),
-                T = r("706189"),
-                k = r("256860"),
-                R = r("364685"),
-                x = r("24373"),
-                b = r("77162"),
-                M = r("770366"),
-                j = r("113270"),
-                g = r("49111"),
-                v = r("782340"),
-                D = r("687133");
-            let O = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS),
-                L = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_PADDING),
-                B = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN),
-                W = O + 2 * L,
-                y = c(T.resetInspectedStickerPosition, 250),
-                K = () => {
-                    y.cancel()
+                _ = r("706189"),
+                h = r("256860"),
+                P = r("364685"),
+                T = r("24373"),
+                R = r("77162"),
+                k = r("770366"),
+                x = r("113270"),
+                M = r("49111"),
+                b = r("782340"),
+                j = r("687133");
+            let g = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS),
+                v = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_PADDING),
+                D = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN),
+                O = g + 2 * v,
+                L = c(_.resetInspectedStickerPosition, 250),
+                B = () => {
+                    L.cancel()
                 },
-                U = e => {
+                W = e => {
                     let {
                         visibleRowIndex: t,
                         columnIndex: r
                     } = e;
-                    y.cancel(), (0, T.setInspectedStickerPosition)(r, t, S.InspectedExpressionChangeSource.MOUSE_EVENT)
+                    L.cancel(), (0, _.setInspectedStickerPosition)(r, t, S.InspectedExpressionChangeSource.MOUSE_EVENT)
                 },
-                F = e => {
+                K = e => {
                     let {
                         stickerPack: t,
                         width: r,
                         hasHeaderImage: n,
                         isScrolling: i,
                         onInspect: c
-                    } = e, o = l.useMemo(() => [(0, x.createStickerPackCategory)(t)], [t]), u = (0, T.useStickerViewAllStore)(e => e.inspectedStickerPosition), {
+                    } = e, o = l.useMemo(() => [(0, T.createStickerPackCategory)(t)], [t]), u = (0, _.useStickerViewAllStore)(e => e.inspectedStickerPosition), {
                         rowCountBySection: d,
                         stickersGrid: S,
                         gutterWidth: E
-                    } = (0, k.useStickersGrid)({
+                    } = (0, h.useStickersGrid)({
                         stickersCategories: o,
-                        stickerNodeMargin: B,
-                        stickerNodeWidth: W,
+                        stickerNodeMargin: D,
+                        stickerNodeWidth: O,
                         listWidth: r
                     });
                     return (0, s.jsxs)("div", {
-                        className: a(D.container, {
-                            [D.containerWithHeader]: n
+                        className: a(j.container, {
+                            [j.containerWithHeader]: n
                         }),
-                        children: [(0, s.jsx)(M.default, {
-                            className: D.header,
+                        children: [(0, s.jsx)(k.default, {
+                            className: j.header,
                             stickerPack: t,
                             withDescription: !0
                         }, t.id), (0, s.jsx)("div", {
-                            onFocus: K,
-                            onBlur: y,
-                            onMouseOver: K,
-                            onMouseOut: y,
+                            onFocus: B,
+                            onBlur: L,
+                            onMouseOver: B,
+                            onMouseOut: L,
                             children: (() => {
                                 if (0 === d.length) return null;
                                 let e = [];
-                                for (let t = 0; t < d[0]; t++) e.push((0, s.jsx)(b.default, {
+                                for (let t = 0; t < d[0]; t++) e.push((0, s.jsx)(R.default, {
                                     enlargeOnInteraction: !0,
                                     preferAnimation: !0,
                                     gutterWidth: E,
@@ -343,8 +340,8 @@
                                     onInspect: c,
                                     rowIndex: t,
                                     stickerDescriptors: S[t],
-                                    stickerPadding: L,
-                                    stickerSize: O,
+                                    stickerPadding: v,
+                                    stickerSize: g,
                                     isDisplayingIndividualStickers: !0,
                                     checkSendability: !1
                                 }, t));
@@ -353,63 +350,55 @@
                         })]
                     })
                 },
-                Y = e => {
+                y = e => {
                     let {
                         onClose: t,
                         stickerPack: r
                     } = e;
-                    (0, k.useFetchStickerPacks)(), (0, p.useMaybeFetchPremiumLikelihood)(N.default);
-                    let l = (0, o.useStateFromStores)([C.default], () => C.default.getCurrentUser()),
-                        n = (0, o.useStateFromStores)([R.default], () => R.default.isPremiumPack(r.id)),
-                        {
-                            freeStickersEnabled: a
-                        } = P.default.useExperiment({
-                            location: "a3b7dd_1"
-                        }, {
-                            autoTrackExposure: !1
-                        });
+                    (0, h.useFetchStickerPacks)(), (0, p.useMaybeFetchPremiumLikelihood)(N.default);
+                    let l = (0, o.useStateFromStores)([P.default], () => P.default.isPremiumPack(r.id));
                     return (0, s.jsxs)(d.ModalFooter, {
-                        className: D.footer,
+                        className: j.footer,
                         children: [(0, s.jsx)(d.Anchor, {
                             onClick: t,
-                            className: D.skuPreviewFooterCloseButton,
-                            children: v.default.Messages.CLOSE
-                        }), n && !(A.default.canUseStickersEverywhere(l) || a) && (0, s.jsxs)(_.default, {
+                            className: j.skuPreviewFooterCloseButton,
+                            children: b.default.Messages.CLOSE
+                        }), l && (0, s.jsxs)(C.default, {
                             color: d.Button.Colors.GREEN,
                             type: "submit",
-                            innerClassName: D.premiumButtonInner,
+                            innerClassName: j.premiumButtonInner,
                             onClick: () => {
-                                t(), (0, j.default)({
-                                    section: g.AnalyticsSections.STICKER_PACK_VIEW_ALL
+                                t(), (0, x.default)({
+                                    section: M.AnalyticsSections.STICKER_PACK_VIEW_ALL
                                 })
                             },
-                            children: [(0, s.jsx)(h.default, {
-                                className: D.premiumButtonNitroWheel
-                            }), v.default.Messages.STICKER_PACK_AVAILABLE_WITH_PREMIUM]
+                            children: [(0, s.jsx)(A.default, {
+                                className: j.premiumButtonNitroWheel
+                            }), b.default.Messages.STICKER_PACK_AVAILABLE_WITH_PREMIUM]
                         })]
                     })
                 },
-                w = e => {
+                U = e => {
                     let {
                         stickerPack: t,
                         onClose: r
-                    } = e, l = (0, x.getStickerPackBannerAssetUrl)(t, 1024);
+                    } = e, l = (0, T.getStickerPackBannerAssetUrl)(t, 1024);
                     return null == l ? null : (0, s.jsxs)(d.ModalHeader, {
-                        className: D.headerWithImage,
+                        className: j.headerWithImage,
                         children: [(0, s.jsx)("div", {
                             role: "image",
                             style: {
                                 backgroundImage: "url(".concat(l, ")")
                             },
-                            className: D.backgroundImage
+                            className: j.backgroundImage
                         }), (0, s.jsx)(d.ModalCloseButton, {
-                            className: D.closeButton,
+                            className: j.closeButton,
                             onClick: r
                         })]
                     })
                 };
 
-            function G(e) {
+            function Y(e) {
                 let {
                     onClose: t,
                     stickerPack: r,
@@ -418,7 +407,7 @@
                     null !== e && i(e.offsetWidth)
                 }, []);
                 return l.useLayoutEffect(() => {
-                    (0, T.resetInspectedStickerPosition)()
+                    (0, _.resetInspectedStickerPosition)()
                 }, []), (0, s.jsx)(E.PaymentContextProvider, {
                     activeSubscription: null,
                     stepConfigs: [],
@@ -430,22 +419,22 @@
                             hideBreadcrumbs: !0,
                             body: (0, s.jsx)("div", {
                                 ref: c,
-                                children: null != a && (0, s.jsx)(F, {
+                                children: null != a && (0, s.jsx)(K, {
                                     stickerPack: r,
                                     hasHeaderImage: !0,
-                                    onInspect: U,
+                                    onInspect: W,
                                     width: a
                                 })
                             }),
-                            footer: (0, s.jsx)(Y, {
+                            footer: (0, s.jsx)(y, {
                                 onClose: t,
                                 stickerPack: r
                             }),
-                            header: (0, s.jsx)(w, {
+                            header: (0, s.jsx)(U, {
                                 onClose: t,
                                 stickerPack: r
                             }),
-                            onScroll: y,
+                            onScroll: L,
                             steps: [m.Step.SKU_PREVIEW],
                             currentStep: m.Step.SKU_PREVIEW
                         })
