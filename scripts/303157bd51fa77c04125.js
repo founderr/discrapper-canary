@@ -871,6 +871,11 @@
                         a.default.dispatch({
                             type: "CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID"
                         })
+                    },
+                    clearLastSessionVoiceChannelId() {
+                        a.default.dispatch({
+                            type: "CLEAR_LAST_SESSION_VOICE_CHANNEL_ID"
+                        })
                     }
                 }
         },
@@ -1818,7 +1823,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "244295"
+                        buildNumber: "244307"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -2238,6 +2243,26 @@
                                     }
                                 },
                                 noticeType: ec.NoticeTypes.VOICE_DISABLED,
+                                children: eC.default.Messages.RECONNECT
+                            })]
+                        });
+                    case ec.NoticeTypes.VOICE_CONNECTED_LAST_SESSION:
+                        return (0, a.jsxs)(el.default, {
+                            color: el.NoticeColors.DEFAULT,
+                            children: [(0, a.jsx)(el.NoticeCloseButton, {
+                                onClick: () => {
+                                    C.default.clearLastSessionVoiceChannelId(), eS()
+                                },
+                                noticeType: ec.NoticeTypes.VOICE_CONNECTED_LAST_SESSION
+                            }), eC.default.Messages.NOTICE_VOICE_CONNECTED_LAST_SESSION, (0, a.jsx)(el.PrimaryCTANoticeButton, {
+                                onClick: () => {
+                                    let e = Z.default.getLastSessionVoiceChannelId();
+                                    if (null != e) {
+                                        let t = q.default.getChannel(e);
+                                        null != t && I.default.selectVoiceChannel(e)
+                                    }
+                                },
+                                noticeType: ec.NoticeTypes.VOICE_CONNECTED_LAST_SESSION,
                                 children: eC.default.Messages.RECONNECT
                             })]
                         });
