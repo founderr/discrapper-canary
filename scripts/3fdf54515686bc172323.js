@@ -17215,8 +17215,7 @@
                             let t = s.default.getMessage(e.id, e.channel_id),
                                 n = (0, i.createMessageRecord)(e);
                             return null != t && (n = n.merge({
-                                attachments: t.attachments,
-                                embeds: t.embeds
+                                attachments: t.attachments
                             })), n.isSearchHit ? n.set("customRenderedContent", (0, r.default)(n, {
                                 postProcessor: u,
                                 allowHeading: !0,
