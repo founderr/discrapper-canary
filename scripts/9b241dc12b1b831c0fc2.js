@@ -1761,7 +1761,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "244467"
+                        buildNumber: "244468"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -33260,7 +33260,7 @@
                             children: (0, a.jsx)(r.Text, {
                                 color: "always-white",
                                 variant: "text-sm/normal",
-                                children: A.default.Messages.INVENTORY_REMOVE_PACK
+                                children: R ? A.default.Messages.INVENTORY_REMOVE_PACK : A.default.Messages.INVENTORY_REMOVE_FREE_PACK
                             })
                         }) : (0, a.jsx)(r.Button, {
                             autoFocus: p,
@@ -33274,7 +33274,7 @@
                             children: (0, a.jsx)(r.Text, {
                                 color: "always-white",
                                 variant: "text-sm/normal",
-                                children: A.default.Messages.INVENTORY_ADD_PACK
+                                children: R ? A.default.Messages.INVENTORY_ADD_PACK : A.default.Messages.INVENTORY_ADD_FREE_PACK
                             })
                         })
                     })]
@@ -33285,10 +33285,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 isEligibleForTryPacksModal: function() {
-                    return b
+                    return G
                 },
                 default: function() {
-                    return G
+                    return j
                 }
             }), n("222007"), n("424973");
             var a = n("37983"),
@@ -33313,16 +33313,17 @@
                 m = n("216422"),
                 p = n("642032"),
                 g = n("599110"),
-                R = n("719923"),
-                O = n("78291"),
-                L = n("646718"),
-                M = n("49111"),
-                v = n("994428"),
-                P = n("365058"),
-                D = n("782340"),
-                y = n("466701");
-            let x = "2023_fall_try_packs_modal",
-                U = [{
+                R = n("701909"),
+                O = n("719923"),
+                L = n("78291"),
+                M = n("646718"),
+                v = n("49111"),
+                P = n("994428"),
+                D = n("365058"),
+                y = n("782340"),
+                x = n("466701");
+            let U = "2023_fall_try_packs_modal",
+                b = [{
                     humanReadableName: "ooblets",
                     guildId: "255509377614610433",
                     featuredEmojiIds: ["893216643759620178", "431916066835529728", "431888257849098240", "431887978084696074", "481491021570637825", "893216644376191006"]
@@ -33340,25 +33341,25 @@
                     featuredEmojiIds: ["1143953689409769562", "1143284729790070875", "1143273217457410141", "1143956675766796360", "1143957933122662441", "1143287122862809118"]
                 }];
 
-            function b(e) {
+            function G(e) {
                 if (C.default.getIsFetching() || null == C.default.getPackEmojisTTL() || (0, c.isDismissibleContentDismissed)(i.DismissibleContent.INVENTORY_TRY_PACKS_MODAL)) return !1;
                 let t = 0,
                     n = 0,
                     a = new Set(C.default.getSortedPackIds());
-                for (let e of U) {
+                for (let e of b) {
                     let s = e.featuredEmojiIds[0],
                         l = (0, _.getJoinedEmojiSourceGuildData)(E.default, T.default, s);
                     null != l.joinedEmojiSourceGuildRecord ? t++ : a.has(e.guildId) && n++
                 }
-                return !!(t < U.length / 2 && n + t < U.length && a.size < (0, I.getMaxPacksForUserType)(e)) || (!(0, c.isDismissibleContentDismissed)(i.DismissibleContent.INVENTORY_TRY_PACKS_MODAL) && (g.default.track(M.AnalyticEvents.CHANGE_LOG_CLOSED, {
-                    change_log_id: x,
+                return !!(t < b.length / 2 && n + t < b.length && a.size < (0, I.getMaxPacksForUserType)(e)) || (!(0, c.isDismissibleContentDismissed)(i.DismissibleContent.INVENTORY_TRY_PACKS_MODAL) && (g.default.track(v.AnalyticEvents.CHANGE_LOG_CLOSED, {
+                    change_log_id: U,
                     seconds_open: 0
                 }), (0, c.markDismissibleContentAsDismissed)(i.DismissibleContent.INVENTORY_TRY_PACKS_MODAL, {
-                    dismissAction: v.ContentDismissActionType.DISMISS
+                    dismissAction: P.ContentDismissActionType.DISMISS
                 })), !1)
             }
 
-            function G(e) {
+            function j(e) {
                 let {
                     renderModalProps: t
                 } = e, {
@@ -33368,9 +33369,9 @@
                     location: I
                 } = (0, o.useAnalyticsContext)(), {
                     analyticsLocations: T
-                } = (0, d.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), b = (0, l.default)([S.default], () => (0, R.isPremium)(S.default.getCurrentUser())), G = (0, l.useStateFromStoresArray)([C.default], () => {
+                } = (0, d.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), G = (0, l.default)([S.default], () => (0, O.isPremium)(S.default.getCurrentUser())), j = (0, l.useStateFromStoresArray)([C.default], () => {
                     let e = [];
-                    return U.map(e => e.guildId).map(e => C.default.getPackByPackId({
+                    return b.map(e => e.guildId).map(e => C.default.getPackByPackId({
                         packId: e
                     })).forEach(t => {
                         (null == t ? void 0 : t.id) != null && e.push(t.id)
@@ -33379,98 +33380,98 @@
                 return s.useEffect(() => {
                     (0, c.requestMarkDismissibleContentAsShown)(i.DismissibleContent.INVENTORY_TRY_PACKS_MODAL);
                     let e = Date.now();
-                    return g.default.track(M.AnalyticEvents.CHANGE_LOG_OPENED, {
-                        change_log_id: x
+                    return g.default.track(v.AnalyticEvents.CHANGE_LOG_OPENED, {
+                        change_log_id: U
                     }), () => {
-                        g.default.track(M.AnalyticEvents.CHANGE_LOG_CLOSED, {
-                            change_log_id: x,
+                        g.default.track(v.AnalyticEvents.CHANGE_LOG_CLOSED, {
+                            change_log_id: U,
                             seconds_open: Math.round((Date.now() - e) / 1e3)
                         }), (0, c.markDismissibleContentAsDismissed)(i.DismissibleContent.INVENTORY_TRY_PACKS_MODAL, {
-                            dismissAction: v.ContentDismissActionType.DISMISS
+                            dismissAction: P.ContentDismissActionType.DISMISS
                         })
                     }
                 }, []), (0, a.jsxs)(r.ModalRoot, {
-                    className: y.root,
+                    className: x.root,
                     transitionState: E,
                     "aria-labelledby": _,
                     children: [(0, a.jsx)(r.ModalCloseButton, {
-                        className: y.closeButton,
+                        className: x.closeButton,
                         onClick: n
                     }), (0, a.jsxs)("span", {
                         children: [(0, a.jsx)(p.default, {
-                            foreground: y.star1
+                            foreground: x.star1
                         }), (0, a.jsx)(p.default, {
-                            foreground: y.star2
+                            foreground: x.star2
                         }), (0, a.jsx)(p.default, {
-                            foreground: y.star3
+                            foreground: x.star3
                         }), (0, a.jsx)(f.default, {
-                            className: y.betaTag,
+                            className: x.betaTag,
                             color: "white"
                         }), (0, a.jsx)(p.default, {
-                            foreground: y.star4
+                            foreground: x.star4
                         }), (0, a.jsx)(p.default, {
-                            foreground: y.star5
+                            foreground: x.star5
                         })]
                     }), (0, a.jsxs)(r.ModalContent, {
-                        className: y.content,
+                        className: x.content,
                         scrollbarType: "none",
                         children: [(0, a.jsxs)(r.Heading, {
                             color: "always-white",
                             variant: "heading-xl/extrabold",
-                            className: y.headerText,
+                            className: x.headerText,
                             children: [(0, a.jsx)(m.default, {
-                                className: y.nitroWheelHeader
-                            }), D.default.Messages.INVENTORY_TRY_PACKS_TITLE]
+                                className: x.nitroWheelHeader
+                            }), G ? y.default.Messages.INVENTORY_TRY_PACKS_TITLE_NITRO : y.default.Messages.INVENTORY_TRY_PACKS_TITLE_FREEMIUM]
                         }), (0, a.jsx)(r.Text, {
                             color: "always-white",
                             variant: "text-md/normal",
-                            className: y.subHeaderText,
-                            children: b ? D.default.Messages.INVENTORY_TRY_PACKS_DESCRIPTION.format({
-                                maxPacks: P.INVENTORY_MAX_PACKS
-                            }) : D.default.Messages.INVENTORY_TRY_PACKS_DESCRIPTION_FREEMIUM.format({
-                                maxFreePacks: P.INVENTORY_MAX_FREE_PACKS
+                            className: x.subHeaderText,
+                            children: y.default.Messages.INVENTORY_TRY_PACKS_DESCRIPTION_V2.format({
+                                helpCenterLink: R.default.getArticleURL(v.HelpdeskArticles.INVENTORY_PACKS)
                             })
                         }), (0, a.jsx)(r.Text, {
                             color: "always-white",
                             variant: "text-md/normal",
-                            className: y.subHeaderText,
-                            children: b ? D.default.Messages.INVENTORY_TRY_PACKS_DESCRIPTION_2 : D.default.Messages.INVENTORY_TRY_PACKS_DESCRIPTION_FREEMIUM_2
+                            className: x.subHeaderText,
+                            children: G ? y.default.Messages.INVENTORY_TRY_PACKS_SECONDARY_DESCRIPTION_V2_NITRO.format({
+                                maxPacks: D.INVENTORY_MAX_PACKS
+                            }) : y.default.Messages.INVENTORY_TRY_PACKS_SECONDARY_DESCRIPTION_V2_FREEMIUM
                         }), (0, a.jsx)("div", {
-                            className: y.featuredPacks,
-                            children: U.map((e, t) => (0, a.jsx)(O.InventoryTryPacksFeaturedPack, {
+                            className: x.featuredPacks,
+                            children: b.map((e, t) => (0, a.jsx)(L.InventoryTryPacksFeaturedPack, {
                                 autoFocused: 0 === t,
                                 featuredPack: e,
-                                alreadyAddedPackIds: G,
+                                alreadyAddedPackIds: j,
                                 headerId: _
                             }, e.guildId))
-                        }), !b && (() => {
+                        }), !G && (() => {
                             let e = Date.now();
                             return (0, a.jsxs)("div", {
-                                className: y.footerUpsell,
+                                className: x.footerUpsell,
                                 children: [(0, a.jsx)(r.Text, {
-                                    className: y.upsellText,
+                                    className: x.upsellText,
                                     variant: "text-sm/normal",
-                                    children: D.default.Messages.INVENTORY_TRY_PACKS_UPSELL.format({
-                                        maxPacks: P.INVENTORY_MAX_PACKS
+                                    children: y.default.Messages.INVENTORY_TRY_PACKS_UPSELL.format({
+                                        maxPacks: D.INVENTORY_MAX_PACKS
                                     })
                                 }), (0, a.jsx)(N.default, {
                                     onlyShineOnHover: !0,
-                                    className: y.getNitroButton,
+                                    className: x.getNitroButton,
                                     color: r.Button.Colors.GREEN,
                                     size: r.Button.Sizes.SMALL,
                                     onClick: () => {
-                                        g.default.track(M.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
-                                            change_log_id: x,
+                                        g.default.track(v.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+                                            change_log_id: U,
                                             cta_type: "get_nitro_button",
                                             seconds_open: Math.round((Date.now() - e) / 1e3),
                                             target: "inventory_try_packs_payment_modal"
                                         }), (0, h.default)({
-                                            subscriptionTier: L.PremiumSubscriptionSKUs.TIER_2,
+                                            subscriptionTier: M.PremiumSubscriptionSKUs.TIER_2,
                                             analyticsLocations: T,
                                             analyticsObject: {
                                                 ...I,
-                                                object: M.AnalyticsObjects.BUTTON_CTA,
-                                                objectType: M.AnalyticsObjectTypes.TIER_2
+                                                object: v.AnalyticsObjects.BUTTON_CTA,
+                                                objectType: v.AnalyticsObjectTypes.TIER_2
                                             },
                                             onClose: e => {
                                                 e && n()
@@ -33480,10 +33481,10 @@
                                     children: (0, a.jsxs)(r.Text, {
                                         color: "always-white",
                                         variant: "text-sm/semibold",
-                                        className: y.getNitroButtonContents,
+                                        className: x.getNitroButtonContents,
                                         children: [(0, a.jsx)(m.default, {
-                                            className: y.nitroWheelButton
-                                        }), D.default.Messages.PREMIUM_UPSELL_GET_NITRO]
+                                            className: x.nitroWheelButton
+                                        }), y.default.Messages.PREMIUM_UPSELL_GET_NITRO]
                                     })
                                 })]
                             })

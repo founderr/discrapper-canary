@@ -4,13 +4,13 @@
             "use strict";
             a.r(t), a.d(t, {
                 InventoryTryPacksFeaturedPack: function() {
-                    return P
+                    return j
                 }
             }), a("222007");
             var s = a("37983");
             a("884691");
-            var i = a("414456"),
-                l = a.n(i),
+            var l = a("414456"),
+                i = a.n(l),
                 d = a("65597"),
                 n = a("77078"),
                 o = a("430568"),
@@ -20,64 +20,64 @@
                 m = a("557562"),
                 _ = a("412745"),
                 f = a("697218"),
-                N = a("580357"),
-                E = a("476263"),
+                E = a("580357"),
+                N = a("476263"),
                 T = a("587974"),
                 I = a("599110"),
                 h = a("719923"),
-                x = a("49111"),
-                j = a("782340"),
-                C = a("367969");
+                C = a("49111"),
+                x = a("782340"),
+                A = a("367969");
 
-            function P(e) {
+            function j(e) {
                 let {
                     featuredPack: t,
                     alreadyAddedPackIds: a,
-                    headerId: i,
-                    autoFocused: P
-                } = e, g = (0, u.useEmojiAndSourceGuild)({
+                    headerId: l,
+                    autoFocused: j
+                } = e, P = (0, u.useEmojiAndSourceGuild)({
                     emojiId: t.featuredEmojiIds[0]
-                }), A = (0, d.default)([f.default], () => (0, h.isPremium)(f.default.getCurrentUser())), R = (0, d.default)([c.default], () => c.default.getSortedPackIds().length >= (0, m.getMaxPacksForUserType)(A)), k = e => new Set(a).has(e), S = (e, t, a) => {
-                    I.default.track(x.AnalyticEvents.INVENTORY_PACK_ACTION_COMPLETED, {
+                }), R = (0, d.default)([f.default], () => (0, h.isPremium)(f.default.getCurrentUser())), g = (0, d.default)([c.default], () => c.default.getSortedPackIds().length >= (0, m.getMaxPacksForUserType)(R)), k = e => new Set(a).has(e), O = (e, t, a) => {
+                    I.default.track(C.AnalyticEvents.INVENTORY_PACK_ACTION_COMPLETED, {
                         type: e,
                         inventory_pack_id: t,
                         nonce: a
                     })
                 };
-                if (g.isFetching || null == g.expressionSourceGuild || null == g.expressionSourceGuild.emojis || g.hasJoinedEmojiSourceGuild) return null;
-                let O = new Set(t.featuredEmojiIds),
-                    M = g.expressionSourceGuild.emojis.filter(e => O.has(e.id)),
+                if (P.isFetching || null == P.expressionSourceGuild || null == P.expressionSourceGuild.emojis || P.hasJoinedEmojiSourceGuild) return null;
+                let S = new Set(t.featuredEmojiIds),
+                    M = P.expressionSourceGuild.emojis.filter(e => S.has(e.id)),
                     {
                         expressionSourceGuild: p
-                    } = g;
+                    } = P;
                 return (0, s.jsxs)("div", {
-                    className: l(C.featuredPack, {
-                        [C.dimmed]: R && !k(p.id)
+                    className: i(A.featuredPack, {
+                        [A.dimmed]: g && !k(p.id)
                     }),
                     children: [(0, s.jsx)("div", {
-                        className: C.featuredPackGuildIcon,
+                        className: A.featuredPackGuildIcon,
                         children: (0, s.jsx)(T.default, {
                             mask: T.default.Masks.SQUIRCLE,
                             width: 62,
                             height: 62,
-                            className: C.guildIconContainer,
-                            children: (0, s.jsx)(E.default, {
-                                className: C.featuredPackGuildIconImage,
-                                size: E.default.Sizes.LARGER,
+                            className: A.guildIconContainer,
+                            children: (0, s.jsx)(N.default, {
+                                className: A.featuredPackGuildIconImage,
+                                size: N.default.Sizes.LARGER,
                                 guild: p
                             })
                         })
                     }), (0, s.jsxs)(n.Text, {
-                        className: C.featuredPackTitle,
+                        className: A.featuredPackTitle,
                         variant: "text-sm/semibold",
-                        children: [(0, s.jsx)(N.default, {
+                        children: [(0, s.jsx)(E.default, {
                             guild: p,
-                            className: C.featuredPackGuildBadge
+                            className: A.featuredPackGuildBadge
                         }), p.name]
                     }), (0, s.jsx)("div", {
-                        className: C.featuredPackEmojiGrid,
+                        className: A.featuredPackEmojiGrid,
                         children: M.map(e => (0, s.jsx)("div", {
-                            className: C.featuredPackEmojiWrapper,
+                            className: A.featuredPackEmojiWrapper,
                             children: (0, s.jsx)(o.default, {
                                 emojiId: e.id,
                                 emojiName: e.name,
@@ -86,38 +86,38 @@
                         }, e.id))
                     }), (0, s.jsx)(n.Text, {
                         variant: "text-sm/normal",
-                        children: j.default.Messages.INVENTORY_TRY_PACKS_MORE_EMOJI.format({
-                            numberOfEmoji: g.expressionSourceGuild.emojis.length - M.length
+                        children: x.default.Messages.INVENTORY_TRY_PACKS_MORE_EMOJI.format({
+                            numberOfEmoji: P.expressionSourceGuild.emojis.length - M.length
                         })
                     }), (0, s.jsx)("div", {
-                        className: C.featuredPackFooter,
+                        className: A.featuredPackFooter,
                         children: k(p.id) ? (0, s.jsx)(n.Button, {
-                            autoFocus: P,
+                            autoFocus: j,
                             color: n.ButtonColors.PRIMARY,
-                            className: C.featuredPackFooterButton,
+                            className: A.featuredPackFooterButton,
                             onClick: () => {
                                 (0, r.uncollectPack)({
                                     packId: p.id
-                                }), S(_.EmojiPopoutType.REMOVE_PACK, p.id, i)
+                                }), O(_.EmojiPopoutType.REMOVE_PACK, p.id, l)
                             },
                             children: (0, s.jsx)(n.Text, {
                                 color: "always-white",
                                 variant: "text-sm/normal",
-                                children: j.default.Messages.INVENTORY_REMOVE_PACK
+                                children: R ? x.default.Messages.INVENTORY_REMOVE_PACK : x.default.Messages.INVENTORY_REMOVE_FREE_PACK
                             })
                         }) : (0, s.jsx)(n.Button, {
-                            autoFocus: P,
-                            className: C.featuredPackFooterButton,
-                            disabled: R && !k(p.id),
+                            autoFocus: j,
+                            className: A.featuredPackFooterButton,
+                            disabled: g && !k(p.id),
                             onClick: () => {
                                 (0, r.collectPack)({
                                     packId: p.id
-                                }), S(_.EmojiPopoutType.ADD_PACK, p.id, i)
+                                }), O(_.EmojiPopoutType.ADD_PACK, p.id, l)
                             },
                             children: (0, s.jsx)(n.Text, {
                                 color: "always-white",
                                 variant: "text-sm/normal",
-                                children: j.default.Messages.INVENTORY_ADD_PACK
+                                children: R ? x.default.Messages.INVENTORY_ADD_PACK : x.default.Messages.INVENTORY_ADD_FREE_PACK
                             })
                         })
                     })]
@@ -128,15 +128,15 @@
             "use strict";
             a.r(t), a.d(t, {
                 isEligibleForTryPacksModal: function() {
-                    return Y
+                    return v
                 },
                 default: function() {
-                    return v
+                    return L
                 }
             }), a("222007"), a("424973");
             var s = a("37983"),
-                i = a("884691"),
-                l = a("65597"),
+                l = a("884691"),
+                i = a("65597"),
                 d = a("151426"),
                 n = a("77078"),
                 o = a("997289"),
@@ -146,26 +146,27 @@
                 m = a("385976"),
                 _ = a("298878"),
                 f = a("529932"),
-                N = a("166465"),
-                E = a("557562"),
+                E = a("166465"),
+                N = a("557562"),
                 T = a("649844"),
                 I = a("305961"),
                 h = a("697218"),
-                x = a("181114"),
-                j = a("476765"),
-                C = a("216422"),
-                P = a("642032"),
-                g = a("599110"),
-                A = a("719923"),
-                R = a("78291"),
-                k = a("646718"),
+                C = a("181114"),
+                x = a("476765"),
+                A = a("216422"),
+                j = a("642032"),
+                P = a("599110"),
+                R = a("701909"),
+                g = a("719923"),
+                k = a("78291"),
+                O = a("646718"),
                 S = a("49111"),
-                O = a("994428"),
-                M = a("365058"),
-                p = a("782340"),
+                M = a("994428"),
+                p = a("365058"),
+                D = a("782340"),
                 y = a("466701");
-            let D = "2023_fall_try_packs_modal",
-                b = [{
+            let b = "2023_fall_try_packs_modal",
+                Y = [{
                     humanReadableName: "ooblets",
                     guildId: "255509377614610433",
                     featuredEmojiIds: ["893216643759620178", "431916066835529728", "431888257849098240", "431887978084696074", "481491021570637825", "893216644376191006"]
@@ -183,53 +184,53 @@
                     featuredEmojiIds: ["1143953689409769562", "1143284729790070875", "1143273217457410141", "1143956675766796360", "1143957933122662441", "1143287122862809118"]
                 }];
 
-            function Y(e) {
-                if (N.default.getIsFetching() || null == N.default.getPackEmojisTTL() || (0, c.isDismissibleContentDismissed)(d.DismissibleContent.INVENTORY_TRY_PACKS_MODAL)) return !1;
+            function v(e) {
+                if (E.default.getIsFetching() || null == E.default.getPackEmojisTTL() || (0, c.isDismissibleContentDismissed)(d.DismissibleContent.INVENTORY_TRY_PACKS_MODAL)) return !1;
                 let t = 0,
                     a = 0,
-                    s = new Set(N.default.getSortedPackIds());
-                for (let e of b) {
-                    let i = e.featuredEmojiIds[0],
-                        l = (0, f.getJoinedEmojiSourceGuildData)(m.default, I.default, i);
-                    null != l.joinedEmojiSourceGuildRecord ? t++ : s.has(e.guildId) && a++
+                    s = new Set(E.default.getSortedPackIds());
+                for (let e of Y) {
+                    let l = e.featuredEmojiIds[0],
+                        i = (0, f.getJoinedEmojiSourceGuildData)(m.default, I.default, l);
+                    null != i.joinedEmojiSourceGuildRecord ? t++ : s.has(e.guildId) && a++
                 }
-                return !!(t < b.length / 2 && a + t < b.length && s.size < (0, E.getMaxPacksForUserType)(e)) || (!(0, c.isDismissibleContentDismissed)(d.DismissibleContent.INVENTORY_TRY_PACKS_MODAL) && (g.default.track(S.AnalyticEvents.CHANGE_LOG_CLOSED, {
-                    change_log_id: D,
+                return !!(t < Y.length / 2 && a + t < Y.length && s.size < (0, N.getMaxPacksForUserType)(e)) || (!(0, c.isDismissibleContentDismissed)(d.DismissibleContent.INVENTORY_TRY_PACKS_MODAL) && (P.default.track(S.AnalyticEvents.CHANGE_LOG_CLOSED, {
+                    change_log_id: b,
                     seconds_open: 0
                 }), (0, c.markDismissibleContentAsDismissed)(d.DismissibleContent.INVENTORY_TRY_PACKS_MODAL, {
-                    dismissAction: O.ContentDismissActionType.DISMISS
+                    dismissAction: M.ContentDismissActionType.DISMISS
                 })), !1)
             }
 
-            function v(e) {
+            function L(e) {
                 let {
                     renderModalProps: t
                 } = e, {
                     onClose: a,
                     transitionState: m
-                } = t, f = (0, j.useUID)(), {
-                    location: E
+                } = t, f = (0, x.useUID)(), {
+                    location: N
                 } = (0, o.useAnalyticsContext)(), {
                     analyticsLocations: I
-                } = (0, u.default)(r.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), Y = (0, l.default)([h.default], () => (0, A.isPremium)(h.default.getCurrentUser())), v = (0, l.useStateFromStoresArray)([N.default], () => {
+                } = (0, u.default)(r.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), v = (0, i.default)([h.default], () => (0, g.isPremium)(h.default.getCurrentUser())), L = (0, i.useStateFromStoresArray)([E.default], () => {
                     let e = [];
-                    return b.map(e => e.guildId).map(e => N.default.getPackByPackId({
+                    return Y.map(e => e.guildId).map(e => E.default.getPackByPackId({
                         packId: e
                     })).forEach(t => {
                         (null == t ? void 0 : t.id) != null && e.push(t.id)
                     }), e
                 });
-                return i.useEffect(() => {
+                return l.useEffect(() => {
                     (0, c.requestMarkDismissibleContentAsShown)(d.DismissibleContent.INVENTORY_TRY_PACKS_MODAL);
                     let e = Date.now();
-                    return g.default.track(S.AnalyticEvents.CHANGE_LOG_OPENED, {
-                        change_log_id: D
+                    return P.default.track(S.AnalyticEvents.CHANGE_LOG_OPENED, {
+                        change_log_id: b
                     }), () => {
-                        g.default.track(S.AnalyticEvents.CHANGE_LOG_CLOSED, {
-                            change_log_id: D,
+                        P.default.track(S.AnalyticEvents.CHANGE_LOG_CLOSED, {
+                            change_log_id: b,
                             seconds_open: Math.round((Date.now() - e) / 1e3)
                         }), (0, c.markDismissibleContentAsDismissed)(d.DismissibleContent.INVENTORY_TRY_PACKS_MODAL, {
-                            dismissAction: O.ContentDismissActionType.DISMISS
+                            dismissAction: M.ContentDismissActionType.DISMISS
                         })
                     }
                 }, []), (0, s.jsxs)(n.ModalRoot, {
@@ -240,18 +241,18 @@
                         className: y.closeButton,
                         onClick: a
                     }), (0, s.jsxs)("span", {
-                        children: [(0, s.jsx)(P.default, {
+                        children: [(0, s.jsx)(j.default, {
                             foreground: y.star1
-                        }), (0, s.jsx)(P.default, {
+                        }), (0, s.jsx)(j.default, {
                             foreground: y.star2
-                        }), (0, s.jsx)(P.default, {
+                        }), (0, s.jsx)(j.default, {
                             foreground: y.star3
                         }), (0, s.jsx)(_.default, {
                             className: y.betaTag,
                             color: "white"
-                        }), (0, s.jsx)(P.default, {
+                        }), (0, s.jsx)(j.default, {
                             foreground: y.star4
-                        }), (0, s.jsx)(P.default, {
+                        }), (0, s.jsx)(j.default, {
                             foreground: y.star5
                         })]
                     }), (0, s.jsxs)(n.ModalContent, {
@@ -261,57 +262,57 @@
                             color: "always-white",
                             variant: "heading-xl/extrabold",
                             className: y.headerText,
-                            children: [(0, s.jsx)(C.default, {
+                            children: [(0, s.jsx)(A.default, {
                                 className: y.nitroWheelHeader
-                            }), p.default.Messages.INVENTORY_TRY_PACKS_TITLE]
+                            }), v ? D.default.Messages.INVENTORY_TRY_PACKS_TITLE_NITRO : D.default.Messages.INVENTORY_TRY_PACKS_TITLE_FREEMIUM]
                         }), (0, s.jsx)(n.Text, {
                             color: "always-white",
                             variant: "text-md/normal",
                             className: y.subHeaderText,
-                            children: Y ? p.default.Messages.INVENTORY_TRY_PACKS_DESCRIPTION.format({
-                                maxPacks: M.INVENTORY_MAX_PACKS
-                            }) : p.default.Messages.INVENTORY_TRY_PACKS_DESCRIPTION_FREEMIUM.format({
-                                maxFreePacks: M.INVENTORY_MAX_FREE_PACKS
+                            children: D.default.Messages.INVENTORY_TRY_PACKS_DESCRIPTION_V2.format({
+                                helpCenterLink: R.default.getArticleURL(S.HelpdeskArticles.INVENTORY_PACKS)
                             })
                         }), (0, s.jsx)(n.Text, {
                             color: "always-white",
                             variant: "text-md/normal",
                             className: y.subHeaderText,
-                            children: Y ? p.default.Messages.INVENTORY_TRY_PACKS_DESCRIPTION_2 : p.default.Messages.INVENTORY_TRY_PACKS_DESCRIPTION_FREEMIUM_2
+                            children: v ? D.default.Messages.INVENTORY_TRY_PACKS_SECONDARY_DESCRIPTION_V2_NITRO.format({
+                                maxPacks: p.INVENTORY_MAX_PACKS
+                            }) : D.default.Messages.INVENTORY_TRY_PACKS_SECONDARY_DESCRIPTION_V2_FREEMIUM
                         }), (0, s.jsx)("div", {
                             className: y.featuredPacks,
-                            children: b.map((e, t) => (0, s.jsx)(R.InventoryTryPacksFeaturedPack, {
+                            children: Y.map((e, t) => (0, s.jsx)(k.InventoryTryPacksFeaturedPack, {
                                 autoFocused: 0 === t,
                                 featuredPack: e,
-                                alreadyAddedPackIds: v,
+                                alreadyAddedPackIds: L,
                                 headerId: f
                             }, e.guildId))
-                        }), !Y && (() => {
+                        }), !v && (() => {
                             let e = Date.now();
                             return (0, s.jsxs)("div", {
                                 className: y.footerUpsell,
                                 children: [(0, s.jsx)(n.Text, {
                                     className: y.upsellText,
                                     variant: "text-sm/normal",
-                                    children: p.default.Messages.INVENTORY_TRY_PACKS_UPSELL.format({
-                                        maxPacks: M.INVENTORY_MAX_PACKS
+                                    children: D.default.Messages.INVENTORY_TRY_PACKS_UPSELL.format({
+                                        maxPacks: p.INVENTORY_MAX_PACKS
                                     })
-                                }), (0, s.jsx)(x.default, {
+                                }), (0, s.jsx)(C.default, {
                                     onlyShineOnHover: !0,
                                     className: y.getNitroButton,
                                     color: n.Button.Colors.GREEN,
                                     size: n.Button.Sizes.SMALL,
                                     onClick: () => {
-                                        g.default.track(S.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
-                                            change_log_id: D,
+                                        P.default.track(S.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+                                            change_log_id: b,
                                             cta_type: "get_nitro_button",
                                             seconds_open: Math.round((Date.now() - e) / 1e3),
                                             target: "inventory_try_packs_payment_modal"
                                         }), (0, T.default)({
-                                            subscriptionTier: k.PremiumSubscriptionSKUs.TIER_2,
+                                            subscriptionTier: O.PremiumSubscriptionSKUs.TIER_2,
                                             analyticsLocations: I,
                                             analyticsObject: {
-                                                ...E,
+                                                ...N,
                                                 object: S.AnalyticsObjects.BUTTON_CTA,
                                                 objectType: S.AnalyticsObjectTypes.TIER_2
                                             },
@@ -324,9 +325,9 @@
                                         color: "always-white",
                                         variant: "text-sm/semibold",
                                         className: y.getNitroButtonContents,
-                                        children: [(0, s.jsx)(C.default, {
+                                        children: [(0, s.jsx)(A.default, {
                                             className: y.nitroWheelButton
-                                        }), p.default.Messages.PREMIUM_UPSELL_GET_NITRO]
+                                        }), D.default.Messages.PREMIUM_UPSELL_GET_NITRO]
                                     })
                                 })]
                             })
