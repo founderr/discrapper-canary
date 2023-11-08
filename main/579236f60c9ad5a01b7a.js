@@ -23071,7 +23071,7 @@
                     return this.type === c.MessageTypes.CHAT_INPUT_COMMAND || this.type === c.MessageTypes.CONTEXT_MENU_COMMAND
                 }
                 isPoll() {
-                    return null != this.poll || this.type === c.MessageTypes.POLL
+                    return null != this.poll
                 }
                 toJS() {
                     return {

@@ -8626,8 +8626,7 @@
                         channel: n,
                         compact: a
                     })
-                },
-                [eT.MessageTypes.POLL]: void 0
+                }
             });
             var ev = a.memo(function(e) {
                 let {
