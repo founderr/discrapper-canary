@@ -34403,12 +34403,12 @@
                             } else h()
                         },
                         hideBorder: !0,
-                        children: I.default.Messages.INVENTORY_ALLOW_USE_SETTING
+                        children: I.default.Messages.INVENTORY_ALLOW_USE_SETTING_V2
                     }), (0, a.jsx)(i.FormText, {
                         className: S.marginBottom4,
                         children: I.default.Messages.INVENTORY_EMOJI_VISIBLE_DESCRIPTION
                     }), void 0 !== C && (0, a.jsx)(i.FormText, {
-                        children: I.default.Messages.INVENTORY_EMOJI_COLLECTED_DESCRIPTION.format({
+                        children: I.default.Messages.INVENTORY_EMOJI_COLLECTED_DESCRIPTION_V2.format({
                             number: (0, _.humanizeValue)(C, O)
                         })
                     }), (0, a.jsx)(i.FormDivider, {
@@ -39112,7 +39112,7 @@
                         children: [(0, a.jsx)(l.Text, {
                             id: c,
                             variant: "text-md/semibold",
-                            children: r.default.Messages.INVENTORY_DISABLE_SETTING_TITLE
+                            children: r.default.Messages.INVENTORY_DISABLE_SETTING_TITLE_V2
                         }), (0, a.jsx)(i.ModalCloseButton, {
                             className: o.closeButton,
                             onClick: d

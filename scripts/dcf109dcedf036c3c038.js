@@ -2103,7 +2103,7 @@
                         config: {
                             showSettingsToggle: !0,
                             allowCollection: !1,
-                            getNewSettingsDescription: () => a.default.Messages.INVENTORY_NEW_SETTING_DESCRIPTION_SOON
+                            getNewSettingsDescription: () => a.default.Messages.INVENTORY_NEW_SETTING_DESCRIPTION_SOON_V2
                         }
                     }, {
                         id: 2,
@@ -2111,7 +2111,7 @@
                         config: {
                             showSettingsToggle: !0,
                             allowCollection: !0,
-                            getNewSettingsDescription: () => a.default.Messages.INVENTORY_NEW_SETTING_DESCRIPTION_SOON
+                            getNewSettingsDescription: () => a.default.Messages.INVENTORY_NEW_SETTING_DESCRIPTION_SOON_V2
                         }
                     }, {
                         id: 3,
@@ -2119,7 +2119,7 @@
                         config: {
                             showSettingsToggle: !0,
                             allowCollection: !0,
-                            getNewSettingsDescription: () => a.default.Messages.INVENTORY_NEW_SETTING_DESCRIPTION_SOON
+                            getNewSettingsDescription: () => a.default.Messages.INVENTORY_NEW_SETTING_DESCRIPTION_SOON_V2
                         }
                     }]
                 }),

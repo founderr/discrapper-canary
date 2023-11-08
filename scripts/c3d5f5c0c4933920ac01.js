@@ -1286,7 +1286,7 @@
                         config: {
                             showSettingsToggle: !0,
                             allowCollection: !1,
-                            getNewSettingsDescription: () => a.default.Messages.INVENTORY_NEW_SETTING_DESCRIPTION_SOON
+                            getNewSettingsDescription: () => a.default.Messages.INVENTORY_NEW_SETTING_DESCRIPTION_SOON_V2
                         }
                     }, {
                         id: 2,
@@ -1294,7 +1294,7 @@
                         config: {
                             showSettingsToggle: !0,
                             allowCollection: !0,
-                            getNewSettingsDescription: () => a.default.Messages.INVENTORY_NEW_SETTING_DESCRIPTION_SOON
+                            getNewSettingsDescription: () => a.default.Messages.INVENTORY_NEW_SETTING_DESCRIPTION_SOON_V2
                         }
                     }, {
                         id: 3,
@@ -1302,7 +1302,7 @@
                         config: {
                             showSettingsToggle: !0,
                             allowCollection: !0,
-                            getNewSettingsDescription: () => a.default.Messages.INVENTORY_NEW_SETTING_DESCRIPTION_SOON
+                            getNewSettingsDescription: () => a.default.Messages.INVENTORY_NEW_SETTING_DESCRIPTION_SOON_V2
                         }
                     }]
                 }),
@@ -1712,8 +1712,8 @@
                     onSecondaryClick: F,
                     secondaryCTA: x,
                     subscribeButtonText: H,
-                    showNewBadge: k = !1,
-                    enableArtBoxShadow: V = !0,
+                    showNewBadge: V = !1,
+                    enableArtBoxShadow: k = !0,
                     subscriptionTier: B = h.PremiumSubscriptionSKUs.TIER_2,
                     isLoading: G = !1,
                     hideBackButton: j,
@@ -1736,7 +1736,7 @@
                         sku_id: B
                     }))
                 }, [z, B, G]);
-                let q = V ? o(T.artContainer, T.artContainerBoxShadow, U) : o(T.artContainer, U),
+                let q = k ? o(T.artContainer, T.artContainerBoxShadow, U) : o(T.artContainer, U),
                     J = null;
                 return J = "artURL" in K ? (0, i.jsx)("img", {
                     className: T.art,
@@ -1748,7 +1748,7 @@
                     transitionState: D,
                     children: [(0, i.jsxs)("div", {
                         className: q,
-                        children: [J, k ? (0, i.jsx)("img", {
+                        children: [J, V ? (0, i.jsx)("img", {
                             className: T.sparkleBadge,
                             alt: "",
                             src: m
