@@ -237,15 +237,15 @@
                         a = C.default.getSection(n, null == l ? void 0 : l.isDM()),
                         s = a === h.ChannelSections.SIDEBAR_CHAT ? C.default.getSidebarState(n) : null,
                         r = (null == s ? void 0 : s.type) === _.SidebarType.VIEW_THREAD || (null == s ? void 0 : s.type) === _.SidebarType.VIEW_CHANNEL ? s.channelId : null;
-                    if (!1 === G(n) || !1 === G(r)) return !1;
+                    if (!1 === g(n) || !1 === g(r)) return !1;
                     if (null != n && (null == s ? void 0 : s.type) === _.SidebarType.CREATE_THREAD) return E.default.closeChannelSidebar(n), !1;
-                    let c = g(n),
-                        A = g(r);
+                    let c = G(n),
+                        A = G(r);
                     return null == n || c || A || null == s ? null != n && !c && d.default.getChatOpen(n) ? (o.default.updateChatOpen(n, !1), !1) : (p.ComponentDispatch.dispatch(h.ComponentActions.SCROLLTO_PRESENT), !1) : (E.default.closeChannelSidebar(n), !1)
                 }
             };
 
-            function G(e) {
+            function g(e) {
                 if (null != e) {
                     if (I.default.isEditingAny(e)) return l.default.endEditMessage(e), !1;
                     if (null != r.default.getPendingReply(e)) return (0, s.deletePendingReply)(e), !1;
@@ -253,7 +253,7 @@
                 }
             }
 
-            function g(e) {
+            function G(e) {
                 if (null == e) return !1;
                 let t = !1,
                     n = f.default.getMessages(e);
@@ -869,8 +869,8 @@
                 p = n("945924"),
                 h = n("648900"),
                 b = n("838021"),
-                G = n("745991"),
-                g = n("640968"),
+                g = n("745991"),
+                G = n("640968"),
                 M = n("347445"),
                 P = n("992642"),
                 U = n("200431"),
@@ -933,11 +933,11 @@
                 [H.KeybindActions.TEXTAREA_FOCUS]: p.TEXTAREA_FOCUS,
                 [H.KeybindActions.MARK_CHANNEL_READ]: c.MARK_CHANNEL_READ,
                 [H.KeybindActions.MARK_SERVER_READ]: A.MARK_SERVER_READ,
-                [H.KeybindActions.TOGGLE_CHANNEL_PINS]: G.TOGGLE_CHANNEL_PINS,
+                [H.KeybindActions.TOGGLE_CHANNEL_PINS]: g.TOGGLE_CHANNEL_PINS,
                 [H.KeybindActions.TOGGLE_INBOX_UNREADS_TAB]: P.TOGGLE_INBOX_UNREADS_TAB,
                 [H.KeybindActions.MARK_TOP_INBOX_CHANNEL_READ]: P.MARK_TOP_INBOX_CHANNEL_READ,
                 [H.KeybindActions.TOGGLE_USERS]: U.TOGGLE_USERS,
-                [H.KeybindActions.TOGGLE_HELP]: g.TOGGLE_HELP,
+                [H.KeybindActions.TOGGLE_HELP]: G.TOGGLE_HELP,
                 [H.KeybindActions.TOGGLE_MUTE]: h.TOGGLE_MUTE,
                 [H.KeybindActions.TOGGLE_DEAFEN]: h.TOGGLE_DEAFEN,
                 [H.KeybindActions.TOGGLE_CATEGORY_COLLAPSED]: b.TOGGLE_CATEGORY_COLLAPSED,
@@ -1453,7 +1453,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return w
+                    return X
                 }
             }), n("222007");
             var i = n("917351"),
@@ -1461,129 +1461,130 @@
                 l = n("446674"),
                 a = n("913144"),
                 u = n("191225"),
-                d = n("203288"),
-                s = n("398604"),
-                r = n("401690"),
-                E = n("755624"),
-                _ = n("374363"),
-                c = n("271938"),
-                A = n("870691"),
-                C = n("42203"),
-                T = n("816092"),
-                S = n("546463"),
-                I = n("957255"),
-                f = n("660478"),
-                O = n("18494"),
-                N = n("282109"),
-                L = n("449008"),
-                D = n("319839"),
-                R = n("397336");
-            let p = null,
-                h = null,
-                b = new D.default;
+                d = n("848415"),
+                s = n("203288"),
+                r = n("398604"),
+                E = n("401690"),
+                _ = n("755624"),
+                c = n("374363"),
+                A = n("271938"),
+                C = n("870691"),
+                T = n("42203"),
+                S = n("816092"),
+                I = n("546463"),
+                f = n("957255"),
+                O = n("660478"),
+                N = n("18494"),
+                L = n("282109"),
+                D = n("449008"),
+                R = n("319839"),
+                p = n("397336");
+            let h = null,
+                b = null,
+                g = new R.default;
 
             function G() {
-                let e = O.default.getChannelId(),
-                    t = O.default.getVoiceChannelId();
-                return p = e, h = t, b.clear()
+                let e = N.default.getChannelId(),
+                    t = N.default.getVoiceChannelId();
+                return h = e, b = t, g.clear()
             }
 
-            function g(e) {
+            function M(e) {
                 let {
                     guild: {
                         id: t
                     }
                 } = e;
-                return b.clearGuildId(t)
+                return g.clearGuildId(t)
             }
 
-            function M(e) {
+            function P(e) {
                 let {
                     channel: {
                         guild_id: t
                     }
                 } = e;
-                return b.clearGuildId(t)
-            }
-
-            function P(e) {
-                let {
-                    guildId: t
-                } = e;
-                return b.clearGuildId(t)
+                return g.clearGuildId(t)
             }
 
             function U(e) {
                 let {
+                    guildId: t
+                } = e;
+                return g.clearGuildId(t)
+            }
+
+            function m(e) {
+                let {
                     channelId: t
                 } = e;
-                return b.nonPositionalChannelIdUpdate(t)
+                return g.nonPositionalChannelIdUpdate(t)
             }
 
-            function m() {
-                return null != p && b.nonPositionalChannelIdUpdate(p)
-            }
-
-            function K(e) {
-                let {
-                    channel: t
-                } = e;
-                return b.nonPositionalChannelIdUpdate(t.id)
+            function K() {
+                return null != h && g.nonPositionalChannelIdUpdate(h)
             }
 
             function y(e) {
                 let {
-                    id: t
+                    channel: t
                 } = e;
-                return b.nonPositionalChannelIdUpdate(t)
+                return g.nonPositionalChannelIdUpdate(t.id)
             }
 
-            function H() {
-                let e = O.default.getChannelId(),
-                    t = O.default.getVoiceChannelId(),
-                    n = p !== e || h !== t;
-                return !!n && (o([p, h, e, t]).uniq().forEach(e => {
-                    null != e && b.nonPositionalChannelIdUpdate(e) && (n = !0)
-                }), p = e, h = t, !0)
-            }
-
-            function B(e) {
+            function H(e) {
                 let {
                     id: t
-                } = e, n = C.default.getChannel(t);
-                return null == n ? b.clearGuildId(t) : b.clearGuildId(n.guild_id)
+                } = e;
+                return g.nonPositionalChannelIdUpdate(t)
+            }
+
+            function B() {
+                let e = N.default.getChannelId(),
+                    t = N.default.getVoiceChannelId(),
+                    n = h !== e || b !== t;
+                return !!n && (o([h, b, e, t]).uniq().forEach(e => {
+                    null != e && g.nonPositionalChannelIdUpdate(e) && (n = !0)
+                }), h = e, b = t, !0)
             }
 
             function V(e) {
                 let {
+                    id: t
+                } = e, n = T.default.getChannel(t);
+                return null == n ? g.clearGuildId(t) : g.clearGuildId(n.guild_id)
+            }
+
+            function v(e) {
+                let {
                     guildId: t
                 } = e;
-                return b.clearGuildId(t)
+                return g.clearGuildId(t)
             }
 
-            function v() {
-                return b.updateSubtitles()
+            function F() {
+                return g.updateSubtitles()
             }
 
-            function F(e) {
+            function Y(e) {
                 let {
                     guildScheduledEvent: t
                 } = e;
-                return b.updateSubtitles(t.guild_id)
+                return g.updateSubtitles(t.guild_id)
             }
-            class Y extends l.default.Store {
+            class w extends l.default.Store {
                 initialize() {
-                    this.waitFor(r.default, c.default, A.default, C.default, T.default, u.default, S.default, d.default, s.default, E.default, I.default, f.default, O.default, N.default, _.default)
+                    this.waitFor(E.default, A.default, C.default, T.default, S.default, u.default, I.default, s.default, r.default, _.default, f.default, O.default, N.default, L.default, c.default, d.default)
                 }
                 getGuild(e, t) {
-                    let n = b.getGuild(e, t);
+                    let n = g.getGuild(e, t);
                     return {
                         guildChannelsVersion: n.version,
                         guildChannels: n
                     }
                 }
                 getGuildWithoutChangingCommunityRows(e) {
-                    let t = b.getGuildWithoutCommunityRows(e);
+                    let t = g.getGuildWithoutCommunityRows(e);
                     return {
                         guildChannelsVersion: t.version,
                         guildChannels: t
@@ -1591,19 +1592,32 @@
                 }
                 recentsChannelCount(e) {
                     if (null == e) return 0;
-                    let t = b.getGuildWithoutCommunityRows(e),
+                    let t = g.getGuildWithoutCommunityRows(e),
                         n = t.getCategoryFromSection(t.recentsSectionNumber);
                     return n.getShownChannelIds().length
                 }
             }
-            Y.displayName = "ChannelListStore";
-            var w = new Y(a.default, {
-                APPLICATION_FETCH_FAIL: v,
-                APPLICATION_FETCH_SUCCESS: v,
-                APPLICATION_FETCH: v,
-                APPLICATIONS_FETCH_FAIL: v,
-                APPLICATIONS_FETCH_SUCCESS: v,
-                APPLICATIONS_FETCH: v,
+            w.displayName = "ChannelListStore";
+            var X = new w(a.default, {
+                APPLICATION_FETCH_FAIL: F,
+                APPLICATION_FETCH_SUCCESS: F,
+                APPLICATION_FETCH: F,
+                APPLICATIONS_FETCH_FAIL: F,
+                APPLICATIONS_FETCH_SUCCESS: F,
+                APPLICATIONS_FETCH: F,
+                ASSISTANT_REBUILD_ACTION_STACK: G,
+                ASSISTANT_COMPLETE_ACTION: function(e) {
+                    let {
+                        kind: t,
+                        targetId: n
+                    } = e;
+                    if ("openTextChannel" === t || "joinVoiceChannel" === t) {
+                        let e = T.default.getChannel(n);
+                        return null != e && g.clearGuildId(e.guild_id)
+                    }
+                    return ("splashScreen" === t || "joinVoiceChannelMultitask" === t) && g.clear()
+                },
+                ASSISTANT_DISMISS: G,
                 BACKGROUND_SYNC: G,
                 BULK_ACK: function(e) {
                     let {
@@ -1611,135 +1625,135 @@
                     } = e, n = !1;
                     return o(t).map(e => {
                         var t;
-                        return null === (t = C.default.getChannel(e.channelId)) || void 0 === t ? void 0 : t.guild_id
-                    }).filter(L.isNotNullish).uniq().forEach(e => {
-                        b.clearGuildId(e) && (n = !0)
+                        return null === (t = T.default.getChannel(e.channelId)) || void 0 === t ? void 0 : t.guild_id
+                    }).filter(D.isNotNullish).uniq().forEach(e => {
+                        g.clearGuildId(e) && (n = !0)
                     }), n
                 },
-                BULK_CLEAR_RECENTS: P,
+                BULK_CLEAR_RECENTS: U,
                 CACHE_LOADED_LAZY: G,
-                CATEGORY_COLLAPSE_ALL: P,
-                CATEGORY_COLLAPSE: B,
-                CATEGORY_EXPAND_ALL: P,
-                CATEGORY_EXPAND: B,
-                CHANNEL_ACK: U,
+                CATEGORY_COLLAPSE_ALL: U,
+                CATEGORY_COLLAPSE: V,
+                CATEGORY_EXPAND_ALL: U,
+                CATEGORY_EXPAND: V,
+                CHANNEL_ACK: m,
                 CHANNEL_COLLAPSE: function(e) {
                     var t;
                     let {
                         channelId: n
                     } = e;
-                    return b.clearGuildId(null === (t = C.default.getChannel(n)) || void 0 === t ? void 0 : t.guild_id)
+                    return g.clearGuildId(null === (t = T.default.getChannel(n)) || void 0 === t ? void 0 : t.guild_id)
                 },
-                CHANNEL_CREATE: M,
-                CHANNEL_DELETE: M,
-                CHANNEL_LOCAL_ACK: U,
-                CHANNEL_RTC_UPDATE_CHAT_OPEN: U,
-                CHANNEL_SELECT: H,
+                CHANNEL_CREATE: P,
+                CHANNEL_DELETE: P,
+                CHANNEL_LOCAL_ACK: m,
+                CHANNEL_RTC_UPDATE_CHAT_OPEN: m,
+                CHANNEL_SELECT: B,
                 CHANNEL_STATUSES: function(e) {
-                    return b.clearGuildId(e.guildId)
+                    return g.clearGuildId(e.guildId)
                 },
                 CHANNEL_UPDATES: function(e) {
                     let {
                         channels: t
                     } = e, n = !1;
                     return o(t).map(e => e.guild_id).uniq().forEach(e => {
-                        b.clearGuildId(e) && (n = !0)
+                        g.clearGuildId(e) && (n = !0)
                     }), n
                 },
-                CONNECTION_OPEN_SUPPLEMENTAL: v,
+                CONNECTION_OPEN_SUPPLEMENTAL: F,
                 CONNECTION_OPEN: G,
                 CURRENT_USER_UPDATE: G,
                 DECAY_READ_STATES: G,
                 DEV_TOOLS_DESIGN_TOGGLE_SET: G,
-                DISABLE_AUTOMATIC_ACK: U,
+                DISABLE_AUTOMATIC_ACK: m,
                 DISMISS_FAVORITE_SUGGESTION: function(e) {
                     let {
                         channelId: t
                     } = e;
-                    return b.nonPositionalChannelIdUpdate(t)
+                    return g.nonPositionalChannelIdUpdate(t)
                 },
-                DRAWER_CLOSE: m,
-                DRAWER_OPEN: m,
+                DRAWER_CLOSE: K,
+                DRAWER_OPEN: K,
                 EMBEDDED_ACTIVITY_INBOUND_UPDATE: function(e) {
                     let {
                         guildId: t,
                         channelId: n
                     } = e;
-                    return b.updateSubtitles(t, n)
+                    return g.updateSubtitles(t, n)
                 },
                 EMBEDDED_ACTIVITY_LAUNCH_START: function(e) {
-                    v()
+                    F()
                 },
-                EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: v,
-                ENABLE_AUTOMATIC_ACK: U,
+                EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: F,
+                ENABLE_AUTOMATIC_ACK: m,
                 FETCH_GUILD_EVENTS_FOR_GUILD: function(e) {
                     let {
                         guildId: t
                     } = e;
-                    return b.updateSubtitles(t)
+                    return g.updateSubtitles(t)
                 },
-                GAMES_DATABASE_FETCH_FAIL: v,
-                GAMES_DATABASE_FETCH: v,
-                GAMES_DATABASE_UPDATE: v,
-                GUILD_APPLICATIONS_FETCH_SUCCESS: v,
-                GUILD_CREATE: g,
-                GUILD_DELETE: g,
-                GUILD_FEED_FETCH_SUCCESS: v,
+                GAMES_DATABASE_FETCH_FAIL: F,
+                GAMES_DATABASE_FETCH: F,
+                GAMES_DATABASE_UPDATE: F,
+                GUILD_APPLICATIONS_FETCH_SUCCESS: F,
+                GUILD_CREATE: M,
+                GUILD_DELETE: M,
+                GUILD_FEED_FETCH_SUCCESS: F,
                 GUILD_MEMBER_UPDATE: function(e) {
                     let {
                         guildId: t,
                         user: n
                     } = e;
-                    return c.default.getId() === n.id && b.clearGuildId(t)
+                    return A.default.getId() === n.id && g.clearGuildId(t)
                 },
-                GUILD_ROLE_CREATE: P,
-                GUILD_ROLE_DELETE: P,
-                GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: P,
-                GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: P,
-                GUILD_ROLE_UPDATE: P,
-                GUILD_SCHEDULED_EVENT_CREATE: F,
-                GUILD_SCHEDULED_EVENT_DELETE: F,
-                GUILD_SCHEDULED_EVENT_UPDATE: F,
-                GUILD_TOGGLE_COLLAPSE_MUTED: P,
-                GUILD_UPDATE: g,
-                IMPERSONATE_STOP: P,
-                IMPERSONATE_UPDATE: P,
-                LOAD_MESSAGES_SUCCESS: U,
-                MESSAGE_ACK: U,
+                GUILD_ROLE_CREATE: U,
+                GUILD_ROLE_DELETE: U,
+                GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: U,
+                GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: U,
+                GUILD_ROLE_UPDATE: U,
+                GUILD_SCHEDULED_EVENT_CREATE: Y,
+                GUILD_SCHEDULED_EVENT_DELETE: Y,
+                GUILD_SCHEDULED_EVENT_UPDATE: Y,
+                GUILD_TOGGLE_COLLAPSE_MUTED: U,
+                GUILD_UPDATE: M,
+                IMPERSONATE_STOP: U,
+                IMPERSONATE_UPDATE: U,
+                LOAD_MESSAGES_SUCCESS: m,
+                MESSAGE_ACK: m,
                 MESSAGE_CREATE: function(e) {
                     let {
                         channelId: t
                     } = e;
-                    return b.nonPositionalChannelIdUpdate(t)
+                    return g.nonPositionalChannelIdUpdate(t)
                 },
-                MESSAGE_DELETE_BULK: U,
-                MESSAGE_DELETE: U,
+                MESSAGE_DELETE_BULK: m,
+                MESSAGE_DELETE: m,
                 OVERLAY_INITIALIZE: G,
                 PASSIVE_UPDATE_V1: function(e) {
-                    return null != e.channels && (b.clearGuildId(e.guildId), !0)
+                    return null != e.channels && (g.clearGuildId(e.guildId), !0)
                 },
-                RESORT_THREADS: U,
+                RESORT_THREADS: m,
                 SET_RECENTLY_ACTIVE_COLLAPSED: G,
-                THREAD_CREATE: K,
+                THREAD_CREATE: y,
                 THREAD_DELETE: function(e) {
                     let {
                         channel: t
                     } = e;
-                    return b.nonPositionalChannelUpdate(t)
+                    return g.nonPositionalChannelUpdate(t)
                 },
-                THREAD_LIST_SYNC: P,
-                THREAD_MEMBER_UPDATE: y,
-                THREAD_MEMBERS_UPDATE: y,
-                THREAD_UPDATE: K,
-                UPDATE_CHANNEL_DIMENSIONS: U,
+                THREAD_LIST_SYNC: U,
+                THREAD_MEMBER_UPDATE: H,
+                THREAD_MEMBERS_UPDATE: H,
+                THREAD_UPDATE: y,
+                UPDATE_CHANNEL_DIMENSIONS: m,
                 UPDATE_CHANNEL_LIST_SUBTITLES: function(e) {
                     let {
                         guildId: t
                     } = e;
-                    b.updateSubtitles(t)
+                    g.updateSubtitles(t)
                 },
-                USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: P,
-                USER_GUILD_SETTINGS_CHANNEL_UPDATE: P,
+                USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: U,
+                USER_GUILD_SETTINGS_CHANNEL_UPDATE: U,
                 USER_GUILD_SETTINGS_FULL_UPDATE: function(e) {
                     let {
                         userGuildSettings: t
@@ -1748,42 +1762,42 @@
                         let {
                             guild_id: t
                         } = e;
-                        return b.clearGuildId(t)
+                        return g.clearGuildId(t)
                     })
                 },
-                USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: P,
-                USER_GUILD_SETTINGS_GUILD_UPDATE: P,
+                USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: U,
+                USER_GUILD_SETTINGS_GUILD_UPDATE: U,
                 USER_SETTINGS_PROTO_UPDATE: function(e) {
                     var t;
                     let {
                         settings: n
                     } = e;
-                    if (n.type !== R.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
+                    if (n.type !== p.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
                     let i = null === (t = n.proto.guilds) || void 0 === t ? void 0 : t.guilds,
                         o = !1;
                     return null != i && Object.keys(i).forEach(e => {
                         let t = i[e].guildRecentsDismissedAt;
-                        null != t && (o = b.updateRecentsCategory(e) || o)
+                        null != t && (o = g.updateRecentsCategory(e) || o)
                     }), o
                 },
-                VOICE_CATEGORY_COLLAPSE: V,
-                VOICE_CATEGORY_EXPAND: V,
-                VOICE_CHANNEL_SELECT: H,
+                VOICE_CATEGORY_COLLAPSE: v,
+                VOICE_CATEGORY_EXPAND: v,
+                VOICE_CHANNEL_SELECT: B,
                 VOICE_CHANNEL_STATUS_UPDATE: function(e) {
-                    return b.nonPositionalChannelIdUpdate(e.id)
+                    return g.nonPositionalChannelIdUpdate(e.id)
                 },
                 VOICE_STATE_UPDATES: function(e) {
                     let {
                         voiceStates: t
-                    } = e, n = H(), i = new Set;
+                    } = e, n = B(), i = new Set;
                     for (let {
                             channelId: e,
                             oldChannelId: o
                         }
-                        of t) null != o && !i.has(o) && (b.nonPositionalChannelIdUpdate(o) && (n = !0), i.add(o)), null != e && !i.has(e) && (b.nonPositionalChannelIdUpdate(e) && (n = !0), i.add(e));
+                        of t) null != o && !i.has(o) && (g.nonPositionalChannelIdUpdate(o) && (n = !0), i.add(o)), null != e && !i.has(e) && (g.nonPositionalChannelIdUpdate(e) && (n = !0), i.add(e));
                     return n
                 },
-                WINDOW_FOCUS: m
+                WINDOW_FOCUS: K
             })
         },
         829072: function(e, t, n) {
@@ -1793,7 +1807,7 @@
                     return b
                 },
                 computeFavoritesState: function() {
-                    return G
+                    return g
                 }
             }), n("222007"), n("424973");
             var i = n("884691"),
@@ -1822,14 +1836,14 @@
             let h = [u.default, d.default, r.default, E.default, _.default, A.default, C.default, S.default, I.default, f.default, O.default, N.default];
 
             function b() {
-                let [e, t] = i.useState(() => G());
+                let [e, t] = i.useState(() => g());
                 return i.useEffect(() => {
-                    let e = l.throttle(() => t(G()), 100);
+                    let e = l.throttle(() => t(g()), 100);
                     return h.forEach(t => t.addChangeListener(e)), () => h.forEach(t => t.removeChangeListener(e))
                 }, []), e
             }
 
-            function G() {
+            function g() {
                 let e = d.default.getFavoriteChannels(),
                     t = N.default.isGuildCollapsed(R.FAVORITES_RAW_GUILD_ID),
                     n = O.default.getChannelId(),
@@ -1872,7 +1886,8 @@
                                 isCollapsed: S,
                                 isMuted: O,
                                 isFirstVoiceChannel: !1,
-                                subtitle: (0, D.computeSubtitle)(n, S, !1)
+                                subtitle: (0, D.computeSubtitle)(n, S, !1),
+                                isAssistantCallout: !1
                             };
                         return r || _ || f.default.getMentionCount(n.id) > 0 ? L : t && O || u && (O || d || (0, c.isGuildReadableType)(n.type) && !1 === f.default.hasRelevantUnread(n)) ? null : L
                     }).filter(L.isNotNullish).sortBy(e => {
@@ -1916,12 +1931,12 @@
                             }
                         }
                     }).value(),
-                    G = {
+                    g = {
                         isEmpty: () => !0,
                         getRows: () => [],
                         getRow: () => null
                     },
-                    g = {
+                    G = {
                         id: R.FAVORITES_RAW_GUILD_ID,
                         hideMutedChannels: t,
                         favoritesSectionNumber: 1,
@@ -1942,7 +1957,7 @@
                                 channel: n.channelList[t]
                             }
                         },
-                        getCommunitySection: () => G,
+                        getCommunitySection: () => g,
                         getFirstVoiceChannel: () => null,
                         getSectionRowsFromChannel(e) {
                             let t = [h, ...b];
@@ -1973,7 +1988,7 @@
                         ],
                         getChannels: () => []
                     };
-                return g
+                return G
             }
         },
         244030: function(e, t, n) {
