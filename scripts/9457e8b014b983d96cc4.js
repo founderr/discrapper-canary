@@ -280,7 +280,7 @@
                             onAvatarChange: Y.NOOP,
                             onBannerChange: Y.NOOP,
                             bodyClassName: X.profileCustomizationBody,
-                            pendingAvatarDecoration: c,
+                            pendingAvatarDecoration: null != c ? c : void 0,
                             pendingProfileEffectID: null == f ? void 0 : f.id,
                             forProfileEffectModal: null != f,
                             disabledInputs: !0,
