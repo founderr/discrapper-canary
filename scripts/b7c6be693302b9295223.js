@@ -10573,6 +10573,65 @@
                     })
                 }
         },
+        574933: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return c
+                }
+            }), n("808653");
+            var a = n("446674"),
+                l = n("913144"),
+                s = n("692038"),
+                i = n("457971");
+            let r = {};
+
+            function u(e) {
+                return "".concat(e.channel_id, ":").concat(e.id)
+            }
+
+            function o() {
+                r = {}
+            }
+            class d extends a.default.Store {
+                getMessage(e, t) {
+                    return r[u({
+                        id: e,
+                        channel_id: t
+                    })]
+                }
+            }
+            d.displayName = "SearchMessageStore";
+            var c = new d(l.default, {
+                SEARCH_FINISH: function(e) {
+                    return !!(0, i.isEligibleForExplicitMediaRedaction)() && null != e.messages && (r = e.messages.reduce((e, t) => (t.forEach(t => {
+                        e[u(t)] = (0, s.createMessageRecord)(t)
+                    }), e), {}), !0)
+                },
+                MESSAGE_UPDATE: function(e) {
+                    let {
+                        message: t
+                    } = e;
+                    if (!(0, i.isEligibleForExplicitMediaRedaction)() || null == t.id || null == t.channel_id) return !1;
+                    let n = u(t),
+                        a = r[n];
+                    return null != a && (r[n] = a.merge({
+                        attachments: t.attachments,
+                        embeds: t.embeds
+                    }), !0)
+                },
+                LOGOUT: function() {
+                    (function() {
+                        r = {}
+                    })()
+                },
+                CONNECTION_OPEN: function() {
+                    (function() {
+                        r = {}
+                    })()
+                }
+            })
+        },
         526812: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -17134,43 +17193,48 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return d
                 }
             }), n("222007");
             var a = n("446674"),
                 l = n("419135"),
-                s = n("692038"),
-                i = n("95045"),
-                r = n("27618"),
-                u = n("744983");
+                s = n("574933"),
+                i = n("692038"),
+                r = n("95045"),
+                u = n("27618"),
+                o = n("744983");
 
-            function o(e) {
-                let t = (0, a.useStateFromStores)([u.default], () => {
+            function d(e) {
+                let t = (0, a.useStateFromStores)([o.default, s.default], () => {
                         var t;
-                        let n = u.default.getQuery(e),
-                            a = u.default.getRawResults(e);
+                        let n = o.default.getQuery(e),
+                            a = o.default.getRawResults(e);
                         if (null == n || null == a) return [];
-                        let r = (0, l.createASTHighlighter)(null !== (t = n.content) && void 0 !== t ? t : "");
+                        let u = (0, l.createASTHighlighter)(null !== (t = n.content) && void 0 !== t ? t : "");
                         return a.map(e => e.map(e => {
-                            let t = (0, s.createMessageRecord)(e);
-                            return t.isSearchHit ? t.set("customRenderedContent", (0, i.default)(t, {
-                                postProcessor: r,
+                            let t = s.default.getMessage(e.id, e.channel_id),
+                                n = (0, i.createMessageRecord)(e);
+                            return null != t && (n = n.merge({
+                                attachments: t.attachments,
+                                embeds: t.embeds
+                            })), n.isSearchHit ? n.set("customRenderedContent", (0, r.default)(n, {
+                                postProcessor: u,
                                 allowHeading: !0,
                                 allowList: !0
-                            })) : t
+                            })) : n
                         }))
                     }, [e], a.statesWillNeverBeEqual),
-                    [n, o] = (0, a.useStateFromStores)([r.default], () => {
+                    [n, d] = (0, a.useStateFromStores)([u.default], () => {
                         let e = 0,
                             n = t.map(t => t.filter(t => {
-                                let n = r.default.isBlocked(t.author.id);
+                                let n = u.default.isBlocked(t.author.id);
                                 return n && t.isSearchHit && e++, !n || t.isSearchHit
                             }));
                         return [n, e]
                     }, [t], a.statesWillNeverBeEqual);
                 return {
                     searchResults: n,
-                    blockCount: o
+                    blockCount: d
                 }
             }
         },
