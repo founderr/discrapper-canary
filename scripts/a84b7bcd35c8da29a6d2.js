@@ -1761,7 +1761,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "244655"
+                        buildNumber: "244686"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -3486,7 +3486,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return ti
+                    return tl
                 }
             }), n("222007");
             var a = n("37983"),
@@ -3540,83 +3540,82 @@
                 X = n("353983"),
                 J = n("940035"),
                 $ = n("831773"),
-                ee = n("283896"),
-                et = n("397039"),
-                en = n("628805"),
-                ea = n("165926"),
-                es = n("946522"),
-                el = n("880185"),
-                ei = n("624043"),
-                er = n("263065"),
-                eo = n("204025"),
-                eu = n("684641"),
-                ed = n("176372"),
-                ec = n("929479"),
-                eE = n("630140"),
-                ef = n("91990"),
-                e_ = n("359477"),
-                eC = n("1501"),
-                eh = n("838857"),
-                eI = n("393414"),
-                eT = n("828309"),
-                eS = n("29322"),
-                eA = n("208021"),
-                eN = n("582713"),
-                em = n("949000"),
-                ep = n("987285"),
-                eg = n("686551"),
-                eR = n("793237"),
-                eO = n("120252"),
-                eL = n("481395"),
-                ev = n("401642"),
-                eM = n("542789"),
-                eP = n("84124"),
-                eD = n("392011"),
-                ey = n("777523"),
-                ex = n("470885"),
-                eU = n("868558"),
-                eb = n("271938"),
-                eG = n("982108"),
-                ej = n("42203"),
-                ew = n("476108"),
-                ek = n("305961"),
-                eF = n("778588"),
-                eB = n("686470"),
-                eH = n("18494"),
-                eV = n("162771"),
-                eY = n("167726"),
-                eW = n("552067"),
-                eK = n("866681"),
-                ez = n("428773"),
-                eq = n("535974"),
-                eQ = n("43093"),
-                eZ = n("773336"),
-                eX = n("50885"),
-                eJ = n("780009"),
-                e$ = n("49111"),
-                e0 = n("750947"),
-                e1 = n("724210"),
-                e2 = n("56235");
+                ee = n("397039"),
+                et = n("628805"),
+                en = n("165926"),
+                ea = n("946522"),
+                es = n("880185"),
+                el = n("624043"),
+                ei = n("263065"),
+                er = n("204025"),
+                eo = n("684641"),
+                eu = n("176372"),
+                ed = n("929479"),
+                ec = n("630140"),
+                eE = n("91990"),
+                ef = n("359477"),
+                e_ = n("1501"),
+                eC = n("838857"),
+                eh = n("393414"),
+                eI = n("828309"),
+                eT = n("29322"),
+                eS = n("208021"),
+                eA = n("582713"),
+                eN = n("949000"),
+                em = n("987285"),
+                ep = n("686551"),
+                eg = n("793237"),
+                eR = n("120252"),
+                eO = n("481395"),
+                eL = n("401642"),
+                ev = n("542789"),
+                eM = n("84124"),
+                eP = n("392011"),
+                eD = n("777523"),
+                ey = n("470885"),
+                ex = n("868558"),
+                eU = n("271938"),
+                eb = n("982108"),
+                eG = n("42203"),
+                ej = n("476108"),
+                ew = n("305961"),
+                ek = n("778588"),
+                eF = n("686470"),
+                eB = n("18494"),
+                eH = n("162771"),
+                eV = n("167726"),
+                eY = n("552067"),
+                eW = n("866681"),
+                eK = n("428773"),
+                ez = n("535974"),
+                eq = n("43093"),
+                eQ = n("773336"),
+                eZ = n("50885"),
+                eX = n("780009"),
+                eJ = n("49111"),
+                e$ = n("750947"),
+                e0 = n("724210"),
+                e1 = n("56235");
             n("72177"), n("392453"), n("366679"), n("848872"), n("189857"), n("144747"), n("698041"), n("552712"), n("367530"), n("429464"), n("205817"), n("767960"), n("26092"), n("790618"), n("424562"), n("900938"), n("492114"), n("161810"), n("901998"), n("684442"), n("799286"), n("470055"), n("140596");
-            let e4 = !1;
-            (0, p.initSessionHeartbeatScheduler)(), o.default.initialize(), eT.default.loadServer(), eZ.isPlatformEmbedded && (eX.default.on("USER_SETTINGS_OPEN", () => {
-                !eF.default.getLayers().includes(e$.Layers.USER_SETTINGS) && C.default.open(e$.UserSettingsSections.ACCOUNT)
-            }), eX.default.on("LAUNCH_APPLICATION", (e, t) => {
-                let n = eB.default.getActiveLibraryApplication(t);
-                eJ.playApplication(t, n, {
+            let e2 = !1;
+            (0, p.initSessionHeartbeatScheduler)(), o.default.initialize(), eI.default.loadServer(), eQ.isPlatformEmbedded && (eZ.default.on("USER_SETTINGS_OPEN", () => {
+                !ek.default.getLayers().includes(eJ.Layers.USER_SETTINGS) && C.default.open(eJ.UserSettingsSections.ACCOUNT)
+            }), eZ.default.on("LAUNCH_APPLICATION", (e, t) => {
+                let n = eF.default.getActiveLibraryApplication(t);
+                eX.playApplication(t, n, {
                     analyticsParams: {
                         location: {
-                            page: e$.AnalyticsPages.DIRECT,
-                            object: e$.AnalyticsObjects.WEB_URL
+                            page: eJ.AnalyticsPages.DIRECT,
+                            object: eJ.AnalyticsObjects.WEB_URL
                         }
                     }
                 })
             }));
-            let e9 = o.default.connectStores([H.default, ew.default, eb.default], () => ({
+            let e4 = o.default.connectStores([H.default, ej.default, eU.default], () => ({
                     isConnected: H.default.isConnected(),
-                    defaultRoute: ew.default.defaultRoute,
-                    defaultRouteFallback: ew.default.fallbackRoute,
-                    token: eb.default.getToken()
+                    defaultRoute: ej.default.defaultRoute,
+                    defaultRouteFallback: ej.default.fallbackRoute,
+                    token: eU.default.getToken()
                 }))(class extends s.Component {
                     componentDidMount() {
                         let {
@@ -3634,11 +3633,11 @@
                             defaultRouteFallback: s
                         } = this.props;
                         if (null == n) return (0, a.jsx)(r.Redirect, {
-                            to: e$.Routes.DEFAULT_LOGGED_OUT
+                            to: eJ.Routes.DEFAULT_LOGGED_OUT
                         });
                         if (e) {
-                            let e = ta(t);
-                            return null == e || (e.params.guildId === e$.ME || null != ek.default.getGuild(e.params.guildId)) && null != ej.default.getChannel(e.params.channelId) ? (0, a.jsx)(r.Redirect, {
+                            let e = tn(t);
+                            return null == e || (e.params.guildId === eJ.ME || null != ew.default.getGuild(e.params.guildId)) && null != eG.default.getChannel(e.params.channelId) ? (0, a.jsx)(r.Redirect, {
                                 to: t
                             }) : (0, a.jsx)(r.Redirect, {
                                 to: s
@@ -3647,30 +3646,30 @@
                         return null
                     }
                 }),
-                e7 = (0, L.makeAuthenticated)(M.default, null, {
+                e9 = (0, L.makeAuthenticated)(M.default, null, {
                     passProps: !1
                 }),
-                e8 = (0, L.makeAuthenticated)(function() {
+                e7 = (0, L.makeAuthenticated)(function() {
                     return (0, a.jsx)(g.default, {})
                 }),
-                e3 = (0, L.makeAuthenticated)(function(e) {
+                e8 = (0, L.makeAuthenticated)(function(e) {
                     let {
                         match: t
                     } = e, {
                         applicationId: n,
                         section: s
-                    } = t.params, l = (0, q.default)(e0.ApplicationDirectoryProfileSections, s);
+                    } = t.params, l = (0, q.default)(e$.ApplicationDirectoryProfileSections, s);
                     return (0, a.jsx)(R.default, {
                         applicationId: n,
                         initialSection: l
                     })
                 }),
-                e6 = (0, L.makeAuthenticated)(function() {
+                e3 = (0, L.makeAuthenticated)(function() {
                     return (0, a.jsx)(O.default, {})
                 }),
-                e5 = [e$.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(e1.StaticChannelRoutes).map(e => e$.Routes.CHANNEL(":guildId", e))];
+                e6 = [eJ.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(e0.StaticChannelRoutes).map(e => eJ.Routes.CHANNEL(":guildId", e))];
 
-            function te(e) {
+            function e5(e) {
                 let {
                     guildId: t,
                     channelId: n = null,
@@ -3678,42 +3677,42 @@
                     threadId: s = null
                 } = e.params;
                 return {
-                    guildId: null != t ? t : e$.ME,
+                    guildId: null != t ? t : eJ.ME,
                     channelId: n,
                     messageId: a,
                     threadId: s
                 }
             }
-            let tt = [{
-                    path: [e$.Routes.APPLICATION_DIRECTORY_SEARCH],
-                    render: e6,
-                    isSessionRequired: !0
-                }, {
-                    path: [e$.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId", ":section?")],
+            let te = [{
+                    path: [eJ.Routes.APPLICATION_DIRECTORY_SEARCH],
                     render: e3,
                     isSessionRequired: !0
                 }, {
-                    path: [e$.Routes.APPLICATION_DIRECTORY],
+                    path: [eJ.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId", ":section?")],
                     render: e8,
                     isSessionRequired: !0
+                }, {
+                    path: [eJ.Routes.APPLICATION_DIRECTORY],
+                    render: e7,
+                    isSessionRequired: !0
                 }],
-                tn = [{
-                    path: [e$.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode")],
+                tt = [{
+                    path: [eJ.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode")],
                     render(e) {
                         let {
                             match: t
                         } = e;
-                        return (0, a.jsx)(e9, {
+                        return (0, a.jsx)(e4, {
                             match: t
                         })
                     },
                     isSessionRequired: !0
                 }, {
-                    path: [e$.Routes.APP],
-                    render: () => (0, a.jsx)(e9, {}),
+                    path: [eJ.Routes.APP],
+                    render: () => (0, a.jsx)(e4, {}),
                     isSessionRequired: !0
                 }, {
-                    path: [e$.Routes.USERS(":id")],
+                    path: [eJ.Routes.USERS(":id")],
                     render: function(e) {
                         let {
                             match: t,
@@ -3723,19 +3722,19 @@
                         } = (0, l.parse)(n.search), {
                             id: i
                         } = t.params;
-                        return (0, V.addPostConnectionCallback)(() => (0, ev.openUserProfileModal)({
+                        return (0, V.addPostConnectionCallback)(() => (0, eL.openUserProfileModal)({
                             userId: i,
-                            guildId: e$.ME,
+                            guildId: eJ.ME,
                             friendToken: s,
                             analyticsLocation: {
-                                section: e$.AnalyticsSections.DIRECT_ROUTE_ACCESS
+                                section: eJ.AnalyticsSections.DIRECT_ROUTE_ACCESS
                             }
                         })), (0, a.jsx)(r.Redirect, {
-                            to: ew.default.defaultRoute
+                            to: ej.default.defaultRoute
                         })
                     }
                 }, {
-                    path: [e$.Routes.APPLICATION_LIBRARY_ACTION(":gameId", ":action")],
+                    path: [eJ.Routes.APPLICATION_LIBRARY_ACTION(":gameId", ":action")],
                     render: function(e) {
                         let {
                             match: t
@@ -3743,47 +3742,47 @@
                             gameId: n,
                             action: s
                         } = t.params;
-                        return eq.default.whenInitialized(() => {
-                            eB.default.whenInitialized(() => {
+                        return ez.default.whenInitialized(() => {
+                            eF.default.whenInitialized(() => {
                                 switch (s) {
                                     case "launch": {
-                                        let e = eB.default.getActiveLibraryApplication(n);
+                                        let e = eF.default.getActiveLibraryApplication(n);
                                         if (null == e) return;
-                                        eJ.playApplication(e.id, e, {
+                                        eX.playApplication(e.id, e, {
                                             analyticsParams: {
                                                 location: {
-                                                    page: e$.AnalyticsPages.DIRECT,
-                                                    object: e$.AnalyticsObjects.WEB_URL
+                                                    page: eJ.AnalyticsPages.DIRECT,
+                                                    object: eJ.AnalyticsObjects.WEB_URL
                                                 }
                                             }
                                         });
                                         break
                                     }
                                     case "test-mode":
-                                        eY.default.whenInitialized(() => _.authorizeAndSetTestModeApplication(n));
+                                        eV.default.whenInitialized(() => _.authorizeAndSetTestModeApplication(n));
                                         break;
                                     case "uninstall": {
-                                        let e = eB.default.getActiveLibraryApplication(n);
+                                        let e = eF.default.getActiveLibraryApplication(n);
                                         if (null == e) return;
-                                        (0, c.uninstallBranchPrompt)(e.id, e.branchId, e$.AnalyticsLocations.URI_SCHEME)
+                                        (0, c.uninstallBranchPrompt)(e.id, e.branchId, eJ.AnalyticsLocations.URI_SCHEME)
                                     }
                                 }
                             })
                         }), (0, a.jsx)(r.Redirect, {
-                            to: e$.Routes.APPLICATION_LIBRARY
+                            to: eJ.Routes.APPLICATION_LIBRARY
                         })
                     }
                 }, {
-                    path: [e$.Routes.GUILD_CREATE],
+                    path: [eJ.Routes.GUILD_CREATE],
                     render: function() {
                         return (0, V.addPostConnectionCallback)(() => x.default.openCreateGuildModal({
                             location: "External link"
                         })), (0, a.jsx)(r.Redirect, {
-                            to: ew.default.defaultRoute
+                            to: ej.default.defaultRoute
                         })
                     }
                 }, {
-                    path: [e$.Routes.PICK_GUILD_SETTINGS(":section?", ":subsection?")],
+                    path: [eJ.Routes.PICK_GUILD_SETTINGS(":section?", ":subsection?")],
                     render: function(e) {
                         let {
                             match: t
@@ -3792,30 +3791,30 @@
                             subsection: s
                         } = t.params, i = (0, l.parse)(location.search), o = i.feature;
                         return (0, V.addPostConnectionCallback)(() => Q.openGuildSettingsPickerModal({
-                            section: (0, q.default)(e$.GuildSettingsSections, n),
-                            subsection: (0, q.default)(e$.GuildSettingsSubsections, s),
+                            section: (0, q.default)(eJ.GuildSettingsSections, n),
+                            subsection: (0, q.default)(eJ.GuildSettingsSubsections, s),
                             feature: o
                         })), (0, a.jsx)(r.Redirect, {
-                            to: ew.default.defaultRoute
+                            to: ej.default.defaultRoute
                         })
                     },
                     isSessionRequired: !0
                 }, {
-                    path: [e$.Routes.SETTINGS(":section", ":subsection?")],
+                    path: [eJ.Routes.SETTINGS(":section", ":subsection?")],
                     render: function(e) {
                         let {
                             location: t
-                        } = e, n = (0, ey.default)(t.pathname);
+                        } = e, n = (0, eD.default)(t.pathname);
                         return null != n && (0, V.addPostConnectionCallback)(() => C.default.open(n.section, n.subsection, {
                             openWithoutBackstack: !1,
                             impressionSource: n.source
                         })), (0, a.jsx)(r.Redirect, {
-                            to: ew.default.defaultRoute
+                            to: ej.default.defaultRoute
                         })
                     },
                     isSessionRequired: !0
                 }, {
-                    path: [e$.Routes.USER_GUILD_NOTIFICATION_SETTINGS(":guildId")],
+                    path: [eJ.Routes.USER_GUILD_NOTIFICATION_SETTINGS(":guildId")],
                     render: function(e) {
                         let {
                             match: t
@@ -3833,20 +3832,20 @@
                                 })
                             })
                         }), (0, a.jsx)(r.Redirect, {
-                            to: e$.Routes.CHANNEL(s)
+                            to: eJ.Routes.CHANNEL(s)
                         })
                     },
                     isSessionRequired: !0
                 }, {
-                    path: [e$.Routes.APPLICATION_LIBRARY_INVENTORY],
+                    path: [eJ.Routes.APPLICATION_LIBRARY_INVENTORY],
                     render: function() {
-                        return (0, V.addPostConnectionCallback)(() => C.default.open(e$.UserSettingsSections.INVENTORY)), (0, a.jsx)(r.Redirect, {
-                            to: ew.default.defaultRoute
+                        return (0, V.addPostConnectionCallback)(() => C.default.open(eJ.UserSettingsSections.INVENTORY)), (0, a.jsx)(r.Redirect, {
+                            to: ej.default.defaultRoute
                         })
                     },
                     isSessionRequired: !0
                 }, {
-                    path: [e$.Routes.WELCOME(":guildId?", ":channelId?")],
+                    path: [eJ.Routes.WELCOME(":guildId?", ":channelId?")],
                     render: function(e) {
                         let {
                             match: t
@@ -3854,15 +3853,15 @@
                             guildId: n,
                             channelId: s
                         } = t.params;
-                        (0, ea.setNewUser)(e2.NewUserTypes.MARKETING_UNCLAIMED);
-                        let l = e$.Routes.CHANNEL(n, s);
+                        (0, en.setNewUser)(e1.NewUserTypes.MARKETING_UNCLAIMED);
+                        let l = eJ.Routes.CHANNEL(n, s);
                         return (0, a.jsx)(r.Redirect, {
                             to: l
                         })
                     },
                     isSessionRequired: !0
                 }, {
-                    path: [e$.Routes.GUILD_EVENT_DETAILS(":guildId?", ":guildEventId")],
+                    path: [eJ.Routes.GUILD_EVENT_DETAILS(":guildId?", ":guildEventId")],
                     render: function(e) {
                         let {
                             match: t
@@ -3875,12 +3874,12 @@
                                 eventId: s
                             })
                         }), (0, a.jsx)(r.Redirect, {
-                            to: e$.Routes.CHANNEL(n)
+                            to: eJ.Routes.CHANNEL(n)
                         })
                     },
                     isSessionRequired: !0
                 }, {
-                    path: [e$.Routes.GUILD_SETTINGS(":guildId", ":section?", ":subsection?")],
+                    path: [eJ.Routes.GUILD_SETTINGS(":guildId", ":section?", ":subsection?")],
                     render: function(e) {
                         let {
                             match: t
@@ -3890,26 +3889,26 @@
                             subsection: l
                         } = t.params;
                         return (0, V.addPostConnectionCallback)(() => {
-                            z.default.open(n, (0, q.default)(e$.GuildSettingsSections, s), void 0, (0, q.default)(e$.GuildSettingsSubsections, l))
+                            z.default.open(n, (0, q.default)(eJ.GuildSettingsSections, s), void 0, (0, q.default)(eJ.GuildSettingsSubsections, l))
                         }), (0, a.jsx)(r.Redirect, {
-                            to: e$.Routes.CHANNEL(n)
+                            to: eJ.Routes.CHANNEL(n)
                         })
                     },
                     isSessionRequired: !0,
                     isChatRoute: !0
                 }, {
-                    path: [e$.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), e$.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"), e$.Routes.ACTIVITY, e$.Routes.ACTIVITIES, e$.Routes.ACTIVITIES_HAPPENING_NOW, e$.Routes.ACTIVITY_DETAILS(":applicationId"), e$.Routes.APPLICATION_LIBRARY, e$.Routes.APPLICATION_STORE, e$.Routes.MESSAGE_REQUESTS, e$.Routes.COLLECTIBLES_SHOP, e$.Routes.COLLECTIBLES_SHOP_FULLSCREEN, e$.Routes.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"), e$.Routes.GUILD_DISCOVERY, e$.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"), e$.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"), e$.Routes.GUILD_BOOSTING_MARKETING(":guildId"), e$.Routes.FEATURE(":feature"), e$.Routes.FAMILY_CENTER],
-                    render: e7,
+                    path: [eJ.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), eJ.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"), eJ.Routes.ACTIVITY, eJ.Routes.ACTIVITIES, eJ.Routes.ACTIVITIES_HAPPENING_NOW, eJ.Routes.ACTIVITY_DETAILS(":applicationId"), eJ.Routes.APPLICATION_LIBRARY, eJ.Routes.APPLICATION_STORE, eJ.Routes.MESSAGE_REQUESTS, eJ.Routes.COLLECTIBLES_SHOP, eJ.Routes.COLLECTIBLES_SHOP_FULLSCREEN, eJ.Routes.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"), eJ.Routes.GUILD_DISCOVERY, eJ.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"), eJ.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"), eJ.Routes.GUILD_BOOSTING_MARKETING(":guildId"), eJ.Routes.FEATURE(":feature"), eJ.Routes.FAMILY_CENTER],
+                    render: e9,
                     isSessionRequired: !0,
                     isChatRoute: !0
-                }, ...tt];
+                }, ...te];
 
-            function ta(e) {
+            function tn(e) {
                 for (let {
                         path: t,
                         isChatRoute: n
                     }
-                    of tn) {
+                    of tt) {
                     if (!n) continue;
                     let a = (0, i.matchPath)(e, {
                         path: t
@@ -3919,7 +3918,7 @@
                 return null
             }
 
-            function ts(e) {
+            function ta(e) {
                 let {
                     channelId: t,
                     guildId: n,
@@ -3928,12 +3927,12 @@
                 if (!H.default.isConnected()) return;
                 let {
                     location: s
-                } = (0, eI.getHistory)();
-                s.pathname === a && (null == ej.default.getChannel(t) ? (0, eI.replaceWith)(e$.Routes.CHANNEL(n)) : (0, eI.replaceWith)(a))
+                } = (0, eh.getHistory)();
+                s.pathname === a && (null == eG.default.getChannel(t) ? (0, eh.replaceWith)(eJ.Routes.CHANNEL(n)) : (0, eh.replaceWith)(a))
             }
-            class tl extends s.PureComponent {
+            class ts extends s.PureComponent {
                 componentDidMount() {
-                    P.default.initialize(), eX.default.setZoomFactor(h.default.zoom), eT.default.init(), v.default.initialize(), eu.default.initialize(), w.default.initialize(), eU.default.initialize(), k.default.initialize(), ec.default.initialize(), J.default.initialize(), I.default.init(), B.default.init(), F.default.init(), es.default.initialize(), m.default.initialize(), j.default.initialize(), eE.default.initialize(), N.default.initialize(), ex.default.initialize(), eo.default.initialize(), A.default.initialize(), Y.default.init(), Z.default.init(), ez.default.init(), eQ.default.init(), S.default.initialize(), eL.default.init(), eK.default.init(), eW.default.init(), eP.default.init(), ep.default.initialize(), eg.default.initialize(), eM.default.initialize(), eD.default.init(), G.default.initialize(), T.default.initialize(), eS.default.initialize(), em.default.initialize(), ei.default.initialize(), el.default.initialize(), er.default.initialize(), D.default.initialize(), ee.default.initialize(), ef.default.initialize(), X.default.init({
+                    P.default.initialize(), eZ.default.setZoomFactor(h.default.zoom), eI.default.init(), v.default.initialize(), eo.default.initialize(), w.default.initialize(), ex.default.initialize(), k.default.initialize(), ed.default.initialize(), J.default.initialize(), I.default.init(), B.default.init(), F.default.init(), ea.default.initialize(), m.default.initialize(), j.default.initialize(), ec.default.initialize(), N.default.initialize(), ey.default.initialize(), er.default.initialize(), A.default.initialize(), Y.default.init(), Z.default.init(), eK.default.init(), eq.default.init(), S.default.initialize(), eO.default.init(), eW.default.init(), eY.default.init(), eM.default.init(), em.default.initialize(), ep.default.initialize(), ev.default.initialize(), eP.default.init(), G.default.initialize(), T.default.initialize(), eT.default.initialize(), eN.default.initialize(), el.default.initialize(), es.default.initialize(), ei.default.initialize(), D.default.initialize(), eE.default.initialize(), X.default.init({
                         hasModalOpen: u.hasAnyModalOpen,
                         openModal: () => (0, u.openModalLazy)(async () => {
                             let {
@@ -3943,10 +3942,10 @@
                                 ...t
                             })
                         })
-                    }), b.default.init(), $.default.initialize(), e_.default.initialize(), ed.default.initialize(), U.default.initialize(), this.rewriterUnlisten = eC.default.addRouteRewriter(this.ensureChannelMatchesGuild), this.historyUnlisten = eC.default.addRouteChangeListener(this.handleHistoryChange)
+                    }), b.default.init(), $.default.initialize(), ef.default.initialize(), eu.default.initialize(), U.default.initialize(), this.rewriterUnlisten = e_.default.addRouteRewriter(this.ensureChannelMatchesGuild), this.historyUnlisten = e_.default.addRouteChangeListener(this.handleHistoryChange)
                 }
                 componentWillUnmount() {
-                    P.default.terminate(), eU.default.terminate(), ec.default.terminate(), eu.default.terminate(), v.default.terminate(), N.default.terminate(), ex.default.terminate(), A.default.terminate(), eE.default.terminate(), eo.default.terminate(), eM.default.terminate(), S.default.terminate(), G.default.terminate(), $.default.terminate(), T.default.terminate(), e_.default.terminate(), eS.default.terminate(), em.default.terminate(), ei.default.terminate(), el.default.terminate(), er.default.terminate(), D.default.terminate(), ed.default.terminate(), U.default.terminate(), ee.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
+                    P.default.terminate(), ex.default.terminate(), ed.default.terminate(), eo.default.terminate(), v.default.terminate(), N.default.terminate(), ey.default.terminate(), A.default.terminate(), ec.default.terminate(), er.default.terminate(), ev.default.terminate(), S.default.terminate(), G.default.terminate(), $.default.terminate(), T.default.terminate(), ef.default.terminate(), eT.default.terminate(), eN.default.terminate(), el.default.terminate(), es.default.terminate(), ei.default.terminate(), D.default.terminate(), eu.default.terminate(), U.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
                 }
                 handleHistoryChange(e) {
                     let {
@@ -3955,14 +3954,14 @@
                     } = e;
                     ! function(e) {
                         if (H.default.isConnected() || H.default.isTryingToConnect()) return;
-                        let t = eb.default.getToken();
+                        let t = eU.default.getToken();
                         if (null == t) return;
                         let n = function(e) {
                             for (let {
                                     path: t,
                                     isSessionRequired: n
                                 }
-                                of tn) {
+                                of tt) {
                                 if (!n) continue;
                                 let a = (0, i.matchPath)(e, {
                                     path: t
@@ -3973,19 +3972,19 @@
                         }(e);
                         null != n && d.default.startSession(t)
                     }(t), ! function(e, t) {
-                        let n = ta(e);
+                        let n = tn(e);
                         if (null == n) return;
                         let {
                             guildId: a,
                             channelId: s,
                             messageId: r,
                             threadId: o
-                        } = te(n), u = (0, eh.isValidGuildId)(a), d = (0, eh.isValidChannelId)(s), c = (0, eh.isValidChannelId)(o), _ = eV.default.getGuildId(), C = _ !== a;
+                        } = e5(n), u = (0, eC.isValidGuildId)(a), d = (0, eC.isValidChannelId)(s), c = (0, eC.isValidChannelId)(o), _ = eH.default.getGuildId(), C = _ !== a;
                         if (u && C && E.default.selectGuild(a), u && d) {
-                            let n = eH.default.getChannelId(_),
+                            let n = eB.default.getChannelId(_),
                                 i = n !== s;
-                            if (!e4 || C || i || null != r) {
-                                e4 = !0, f.default.selectChannel({
+                            if (!e2 || C || i || null != r) {
+                                e2 = !0, f.default.selectChannel({
                                     guildId: a,
                                     channelId: s,
                                     messageId: r
@@ -3993,19 +3992,19 @@
                                 let {
                                     summaryId: e
                                 } = (0, l.parse)(t);
-                                null != e && eR.default.setSelectedSummary(s, e)
+                                null != e && eg.default.setSelectedSummary(s, e)
                             }
                             if (null != o && c) {
-                                let e = eG.default.getCurrentSidebarChannelId(n),
+                                let e = eb.default.getCurrentSidebarChannelId(n),
                                     t = e !== o,
-                                    l = null != eG.default.getGuildSidebarState(a);
+                                    l = null != eb.default.getGuildSidebarState(a);
                                 if (null != s && null != o && t) {
-                                    if (l)(0, eI.replaceWith)(e$.Routes.CHANNEL(a, o, r));
+                                    if (l)(0, eh.replaceWith)(eJ.Routes.CHANNEL(a, o, r));
                                     else {
                                         let e = {
-                                            type: eN.SidebarOpenDetailsType.THREAD
+                                            type: eA.SidebarOpenDetailsType.THREAD
                                         };
-                                        null != r && (e.initialMessageId = r), eA.default.openThreadAsSidebar({
+                                        null != r && (e.initialMessageId = r), eS.default.openThreadAsSidebar({
                                             guildId: a,
                                             baseChannelId: s,
                                             channelId: o,
@@ -4013,20 +4012,20 @@
                                         })
                                     }
                                 }
-                            } else null != s && !i && eA.default.closeChannelSidebar(s);
-                            let u = en.default.getIsOpen();
-                            if (s === e1.StaticChannelRoute.ROLE_SUBSCRIPTIONS) et.default.closeSidebar();
+                            } else null != s && !i && eS.default.closeChannelSidebar(s);
+                            let u = et.default.getIsOpen();
+                            if (s === e0.StaticChannelRoute.ROLE_SUBSCRIPTIONS) ee.default.closeSidebar();
                             else if (C && u) {
-                                let t = null == _ && a === e$.ME,
-                                    n = e === e$.Routes.GUILD_DISCOVERY;
-                                t || n ? et.default.closeSidebar() : et.default.openSidebar()
-                            } else(i && u || !C && !i) && et.default.closeSidebar()
+                                let t = null == _ && a === eJ.ME,
+                                    n = e === eJ.Routes.GUILD_DISCOVERY;
+                                t || n ? ee.default.closeSidebar() : ee.default.openSidebar()
+                            } else(i && u || !C && !i) && ee.default.closeSidebar()
                         } else {
                             var h;
-                            if (h = e, !e5.some(e => {
+                            if (h = e, !e6.some(e => {
                                     var t;
                                     return (null === (t = (0, i.matchPath)(h, e)) || void 0 === t ? void 0 : t.isExact) === !0
-                                }))(0, eI.replaceWith)(ew.default.fallbackRoute)
+                                }))(0, eh.replaceWith)(ej.default.fallbackRoute)
                         }
                     }(t, n)
                 }
@@ -4034,35 +4033,35 @@
                     if (!H.default.isConnected()) return null;
                     let {
                         pathname: t
-                    } = e, n = ta(t);
+                    } = e, n = tn(t);
                     if (null == n) return null;
                     let {
                         guildId: a,
                         channelId: s,
                         threadId: l
-                    } = te(n), i = (0, eh.isValidGuildId)(a) && a !== e$.ME && a !== e$.FAVORITES, r = null != s && (0, eh.isValidChannelId)(s) && !(0, e1.isStaticChannelRoute)(s);
+                    } = e5(n), i = (0, eC.isValidGuildId)(a) && a !== eJ.ME && a !== eJ.FAVORITES, r = null != s && (0, eC.isValidChannelId)(s) && !(0, e0.isStaticChannelRoute)(s);
                     if (r && i) {
-                        let n = ej.default.getChannel(s);
-                        if (null == n) eO.default.loadThread(s).then(() => ts({
+                        let n = eG.default.getChannel(s);
+                        if (null == n) eR.default.loadThread(s).then(() => ta({
                             channelId: s,
                             guildId: a,
                             pathname: t
                         }));
                         else if (n.guild_id !== a) return {
-                            path: e$.Routes.CHANNEL(a),
+                            path: eJ.Routes.CHANNEL(a),
                             state: e.state
                         };
                         if (null != l) {
-                            let n = (0, eh.isValidChannelId)(l) && !(0, e1.isStaticChannelRoute)(s);
+                            let n = (0, eC.isValidChannelId)(l) && !(0, e0.isStaticChannelRoute)(s);
                             if (!n) return null;
-                            let i = ej.default.getChannel(l);
-                            if (null == i) eO.default.loadThread(l).then(() => ts({
+                            let i = eG.default.getChannel(l);
+                            if (null == i) eR.default.loadThread(l).then(() => ta({
                                 channelId: l,
                                 guildId: a,
                                 pathname: t
                             }));
-                            else if ((null == i ? void 0 : i.parent_id) !== s) return eA.default.closeChannelSidebar(s), {
-                                path: e$.Routes.CHANNEL(a, s),
+                            else if ((null == i ? void 0 : i.parent_id) !== s) return eS.default.closeChannelSidebar(s), {
+                                path: eJ.Routes.CHANNEL(a, s),
                                 state: e.state
                             }
                         }
@@ -4076,7 +4075,7 @@
                                 exact: !0,
                                 from: "/channels",
                                 to: "/"
-                            }), tn.map(e => {
+                            }), tt.map(e => {
                                 let {
                                     path: t,
                                     render: n
@@ -4095,7 +4094,7 @@
                     super(...e), this.historyUnlisten = () => {}, this.rewriterUnlisten = () => {}
                 }
             }
-            var ti = tl
+            var tl = ts
         },
         543155: function(e, t, n) {
             "use strict";
@@ -21488,30 +21487,6 @@
                     markAsDismissed: f
                 })
             }
-        },
-        283896: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return r
-                }
-            });
-            var a = n("913144"),
-                s = n("987317"),
-                l = n("316272");
-            class i extends l.default {
-                _initialize() {
-                    a.default.subscribe("RTC_CONNECTION_FORCED_SF_DISCONNECT", this.handleForcedDisconnect)
-                }
-                _terminate() {
-                    a.default.unsubscribe("RTC_CONNECTION_FORCED_SF_DISCONNECT", this.handleForcedDisconnect)
-                }
-                handleForcedDisconnect(e) {
-                    let {} = e;
-                    s.default.disconnect()
-                }
-            }
-            var r = new i
         },
         94372: function(e, t, n) {
             "use strict";
