@@ -363,8 +363,8 @@
             var i = s("37983"),
                 n = s("884691"),
                 a = s("414456"),
-                o = s.n(a),
-                u = s("446674"),
+                u = s.n(a),
+                o = s("446674"),
                 r = s("77078"),
                 c = s("823411"),
                 p = s("569272"),
@@ -380,8 +380,8 @@
                 S = s("953109"),
                 C = s("476765"),
                 I = s("599110"),
-                T = s("402671"),
-                v = s("659632"),
+                v = s("402671"),
+                T = s("659632"),
                 y = s("380186"),
                 M = s("158998"),
                 N = s("895737"),
@@ -422,10 +422,10 @@
                     } = this.props;
                     null == t && null != e && c.default.fetchApplication(e.applicationId);
                     let a = null != s || null != i.giftStyle,
-                        o = null != n ? T.default.getURL(n) : void 0;
+                        u = null != n ? v.default.getURL(n) : void 0;
                     this.setState({
                         isCustomGift: a,
-                        emojiURL: o
+                        emojiURL: u
                     }), this.trackStepAnalytics()
                 }
                 get step() {
@@ -437,12 +437,12 @@
                         error: i,
                         accepted: n,
                         opened: a,
-                        isCustomGift: o
+                        isCustomGift: u
                     } = this.state;
-                    return (0, v.getStep)(t, s, i, n, e, a, o)
+                    return (0, T.getStep)(t, s, i, n, e, a, u)
                 }
                 get buttonText() {
-                    return (0, v.getButtonText)(this.step, this.props.giftCode, this.state.isCustomGift)
+                    return (0, T.getButtonText)(this.step, this.props.giftCode, this.state.isCustomGift)
                 }
                 get firstHeaderText() {
                     let {
@@ -465,7 +465,7 @@
                             })
                         }
                     }
-                    return null == this.props.sku ? null : (0, v.getHeaderText)(this.step, this.props.giftCode, this.props.sku)
+                    return null == this.props.sku ? null : (0, T.getHeaderText)(this.step, this.props.giftCode, this.props.sku)
                 }
                 get secondHeaderText() {
                     if (!this.state.isCustomGift || this.state.opened || this.state.accepted) return null;
@@ -485,10 +485,10 @@
                     let {
                         error: n,
                         accepted: a,
-                        isCustomGift: o,
-                        opened: u
+                        isCustomGift: u,
+                        opened: o
                     } = this.state;
-                    return !u && o ? null : (0, v.getBodyText)({
+                    return !o && u ? null : (0, T.getBodyText)({
                         step: this.step,
                         sku: t,
                         libraryApplication: s,
@@ -507,7 +507,7 @@
                         error: s,
                         accepted: i
                     } = this.state;
-                    return (0, v.getErrorMessage)(t, s, i, e, this.handleGoToLibrary)
+                    return (0, T.getErrorMessage)(t, s, i, e, this.handleGoToLibrary)
                 }
                 get handleClick() {
                     let {
@@ -553,7 +553,7 @@
                         onClose: s,
                         giftCode: n,
                         headerId: a,
-                        transitionState: u,
+                        transitionState: o,
                         useReducedMotion: c,
                         onComplete: p,
                         customGiftMessage: d,
@@ -575,7 +575,7 @@
                     return (0, i.jsxs)("div", {
                         ref: this.modalRef,
                         children: [(0, i.jsxs)(r.ModalRoot, {
-                            transitionState: u,
+                            transitionState: o,
                             size: r.ModalSize.SMALL,
                             className: P.modal,
                             "aria-labelledby": a,
@@ -587,7 +587,7 @@
                             }), (0, i.jsx)("div", {
                                 className: h ? void 0 : P.backSplash
                             }), (0, i.jsxs)(r.ModalContent, {
-                                className: o({
+                                className: u({
                                     [P.content]: !h,
                                     [P.contentCustomGift]: h
                                 }),
@@ -600,13 +600,13 @@
                                     skuId: n.skuId
                                 }), (0, i.jsxs)(r.Heading, {
                                     id: a,
-                                    className: o({
+                                    className: u({
                                         [P.customGiftHeader]: h && !_,
                                         [P.header]: !h || _
                                     }),
                                     variant: "heading-sm/semibold",
                                     children: [(0, i.jsx)("div", {
-                                        className: o({
+                                        className: u({
                                             [P.customGiftHeaderText]: h
                                         }),
                                         children: this.firstHeaderText
@@ -701,13 +701,13 @@
                     }
                 }
             }
-            let w = u.default.connectStores([_.default, b.default, l.default, h.default, g.default, d.default], t => {
+            let w = o.default.connectStores([_.default, b.default, l.default, h.default, g.default, d.default], t => {
                 let {
                     giftCode: e
                 } = t, s = b.default.get(e.skuId), i = null != s ? l.default.getApplication(s.applicationId) : null, n = d.default.useReducedMotion;
                 return {
                     sku: s,
-                    libraryApplication: null != s ? (0, v.firstLibraryApplicationForGiftCode)(e, s, _.default) : null,
+                    libraryApplication: null != s && (null == e ? void 0 : e.entitlementBranches) != null ? (0, T.firstLibraryApplicationForGiftCode)(e.entitlementBranches, s, _.default) : null,
                     application: i,
                     subscriptionPlan: null != e.subscriptionPlanId ? (0, y.getOrFetchSubscriptionPlan)(e.subscriptionPlanId) : null,
                     accepting: h.default.getIsAccepting(e.code),
@@ -720,9 +720,9 @@
                     code: s,
                     customGiftMessage: n,
                     emojiName: a,
-                    soundId: o,
+                    soundId: u,
                     ...r
-                } = t, c = (0, C.useUID)(), p = (0, u.useStateFromStores)([h.default], () => h.default.get(s));
+                } = t, c = (0, C.useUID)(), p = (0, o.useStateFromStores)([h.default], () => h.default.get(s));
                 return null == p ? null : (0, i.jsx)(w, {
                     ...r,
                     customGiftMessage: n,
@@ -730,7 +730,7 @@
                     giftCode: p,
                     headerId: c,
                     emojiName: a,
-                    soundId: o
+                    soundId: u
                 })
             }
         },
@@ -744,8 +744,8 @@
             var i = s("37983"),
                 n = s("884691"),
                 a = s("516555"),
-                o = s("526887"),
-                u = s("172858"),
+                u = s("526887"),
+                o = s("172858"),
                 r = function(t) {
                     let {
                         confettiTarget: e,
@@ -753,7 +753,7 @@
                         emojiURL: r
                     } = t, [c, p] = n.useState(null), {
                         confettiCanvas: d
-                    } = n.useContext(o.ConfettiCannonContext), l = (0, a.useConfettiCannon)(d, c), f = n.useMemo(() => [{
+                    } = n.useContext(u.ConfettiCannonContext), l = (0, a.useConfettiCannon)(d, c), f = n.useMemo(() => [{
                         src: r,
                         colorize: !1
                     }], [r]);
@@ -762,7 +762,7 @@
                         return null != e && (t = t.map((t, s) => setTimeout(() => {
                             var t;
                             l.createMultipleConfetti((t = e.getBoundingClientRect(), {
-                                ...u.COMMON_CONFETTI_BASE_CONFIG,
+                                ...o.COMMON_CONFETTI_BASE_CONFIG,
                                 position: {
                                     type: "static-random",
                                     minValue: {
@@ -787,8 +787,8 @@
                                 },
                                 size: {
                                     type: "static-random",
-                                    minValue: u.COMMON_CONFETTI_MAX_SPRITE_SIZE,
-                                    maxValue: u.COMMON_CONFETTI_MAX_SPRITE_SIZE
+                                    minValue: o.COMMON_CONFETTI_MAX_SPRITE_SIZE,
+                                    maxValue: o.COMMON_CONFETTI_MAX_SPRITE_SIZE
                                 },
                                 dragCoefficient: {
                                     type: "static",
@@ -800,10 +800,10 @@
                         }
                     }, [l, e]), (0, i.jsx)(a.SpriteCanvas, {
                         ref: p,
-                        sprites: null != f ? f : u.COMMON_CONFETTI_SPRITES,
-                        colors: null != s ? s : u.COMMON_CONFETTI_COLORS,
-                        spriteWidth: u.COMMON_CONFETTI_MAX_SPRITE_SIZE,
-                        spriteHeight: u.COMMON_CONFETTI_MAX_SPRITE_SIZE
+                        sprites: null != f ? f : o.COMMON_CONFETTI_SPRITES,
+                        colors: null != s ? s : o.COMMON_CONFETTI_COLORS,
+                        spriteWidth: o.COMMON_CONFETTI_MAX_SPRITE_SIZE,
+                        spriteHeight: o.COMMON_CONFETTI_MAX_SPRITE_SIZE
                     })
                 }
         },
@@ -820,30 +820,30 @@
             var i = s("917351"),
                 n = s.n(i),
                 a = s("520497"),
-                o = s("812809"),
-                u = s("42887"),
+                u = s("812809"),
+                o = s("42887"),
                 r = s("773336");
             let c = "default",
                 p = c;
 
             function d(t, e) {
                 let s = new Audio((0, a.default)(t));
-                s.volume = (0, o.default)(e), s.play()
+                s.volume = (0, u.default)(e), s.play()
             }
 
             function l() {
                 null != window.navigator.mediaDevices && window.navigator.mediaDevices.enumerateDevices().then(t => {
-                    let e = u.default.getOutputDevices(),
-                        s = n(e).sortBy(t => t.index).findIndex(t => t.id === u.default.getOutputDeviceId()),
-                        i = e[u.default.getOutputDeviceId()],
+                    let e = o.default.getOutputDevices(),
+                        s = n(e).sortBy(t => t.index).findIndex(t => t.id === o.default.getOutputDeviceId()),
+                        i = e[o.default.getOutputDeviceId()],
                         a = t.filter(t => "audiooutput" === t.kind && "communications" !== t.deviceId),
-                        o = a[s];
-                    null != i && (null == o || o.label !== i.name) && (o = a.find(t => t.label === i.name)), p = null != o ? o.deviceId : c
+                        u = a[s];
+                    null != i && (null == u || u.label !== i.name) && (u = a.find(t => t.label === i.name)), p = null != u ? u.deviceId : c
                 }).catch(() => {
                     p = c
                 })
             }
-            r.isPlatformEmbedded && (u.default.addChangeListener(l), l());
+            r.isPlatformEmbedded && (o.default.addChangeListener(l), l());
             class f {
                 get volume() {
                     return this._volume
@@ -886,7 +886,7 @@
                     return this._audio = null !== (t = this._audio) && void 0 !== t ? t : new Promise((t, e) => {
                         let i = new Audio;
                         i.src = s("89400")("../../sounds/".concat(this.name, ".mp3").replace("../../sounds/", "./")), i.onloadeddata = () => {
-                            i.volume = Math.min(u.default.getOutputVolume() / 100 * this._volume, 1), r.isPlatformEmbedded && i.setSinkId(p), t(i)
+                            i.volume = Math.min(o.default.getOutputVolume() / 100 * this._volume, 1), r.isPlatformEmbedded && i.setSinkId(p), t(i)
                         }, i.onerror = () => e(Error("could not play audio")), i.onended = () => this._destroyAudio(), i.load()
                     }), this._audio
                 }

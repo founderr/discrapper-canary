@@ -1230,7 +1230,7 @@
                 return {
                     giftCode: n,
                     sku: s,
-                    libraryApplication: null != s && null != n ? S.firstLibraryApplicationForGiftCode(n, s, T.default) : null,
+                    libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? S.firstLibraryApplicationForGiftCode(n.entitlementBranches, s, T.default) : null,
                     authenticated: p.default.isAuthenticated(),
                     defaultRoute: m.default.defaultRoute,
                     isResolved: N.default.getIsResolved(t),

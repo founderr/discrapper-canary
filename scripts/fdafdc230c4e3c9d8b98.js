@@ -2148,7 +2148,7 @@
                     subscriptionPlan: null != s && null != s.subscriptionPlanId ? (0, j.getOrFetchSubscriptionPlan)(s.subscriptionPlanId) : null,
                     isSelfGift: null != s ? C.default.getId() === s.userId : C.default.getId() === n.id,
                     resolved: A.default.getIsResolved(t),
-                    libraryApplication: null != l && null != s ? D.firstLibraryApplicationForGiftCode(s, l, S.default) : null,
+                    libraryApplication: null != l && (null == s ? void 0 : s.entitlementBranches) != null ? D.firstLibraryApplicationForGiftCode(s.entitlementBranches, l, S.default) : null,
                     useReducedMotion: r
                 }
             })(Y)

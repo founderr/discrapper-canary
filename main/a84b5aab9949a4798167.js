@@ -30641,7 +30641,7 @@
 
             function J(e, t, n) {
                 let i = t.applicationId,
-                    a = null != e.entitlementBranches && e.entitlementBranches.length > 0 ? e.entitlementBranches : [i],
+                    a = e.length > 0 ? e : [i],
                     l = a.map(e => n.getLibraryApplication(i, e, !0)).filter(E.isNotNullish);
                 return l.length === a.length ? l[0] : null
             }
