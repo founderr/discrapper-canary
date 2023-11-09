@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["12718"], {
+    ["86484"], {
         89400: function(e, t, n) {
             var a = {
                 "./activities-rocket-time.mp3": "329160",
@@ -70,7 +70,7 @@
                 "./user_moved.mp3": "455307"
             };
 
-            function u(e) {
+            function i(e) {
                 return n(s(e))
             }
 
@@ -81,9 +81,9 @@
                 }
                 return a[e]
             }
-            u.id = '"89400"', u.keys = function() {
+            i.id = '"89400"', i.keys = function() {
                 return Object.keys(a)
-            }, u.resolve = s, e.exports = u
+            }, i.resolve = s, e.exports = i
         },
         329160: function(e, t, n) {
             "use strict";
@@ -357,30 +357,30 @@
                 }
             });
             var a = n("913144"),
-                u = n("504385"),
+                i = n("504385"),
                 s = n("439141"),
-                i = n("533222"),
+                u = n("533222"),
                 d = n("42887"),
-                o = n("599110"),
-                l = n("709681"),
+                l = n("599110"),
+                o = n("709681"),
                 r = n("12307"),
                 c = n("49111"),
                 f = n("353927");
 
             function p() {
-                (0, l.playSound)("mention3")
+                (0, o.playSound)("mention3")
             }
 
-            function _(e, t, n, a, u) {
+            function _(e, t, n, a, i) {
                 if (t === n) return;
                 let s = e[t],
                     d = e[n];
-                o.default.track(c.AnalyticEvents.MEDIA_DEVICE_CHANGED, {
-                    device_from_name: i.default.getCertifiedDeviceName(t, null != s ? s.name : ""),
-                    device_to_name: i.default.getCertifiedDeviceName(n, null != d ? d.name : ""),
+                l.default.track(c.AnalyticEvents.MEDIA_DEVICE_CHANGED, {
+                    device_from_name: u.default.getCertifiedDeviceName(t, null != s ? s.name : ""),
+                    device_to_name: u.default.getCertifiedDeviceName(n, null != d ? d.name : ""),
                     device_type: a,
-                    device_is_certified: i.default.isCertified(n),
-                    location: u
+                    device_is_certified: u.default.isCertified(n),
+                    location: i
                 })
             }
             let E = {
@@ -440,14 +440,14 @@
                 },
                 setDisableLocalVideo(e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f.MediaEngineContextTypes.DEFAULT,
-                        u = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
+                        i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
                         s = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
                     !S() && a.default.dispatch({
                         type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
                         context: n,
                         userId: e,
                         videoToggleState: t,
-                        persist: u,
+                        persist: i,
                         isAutomatic: s
                     })
                 },
@@ -457,14 +457,14 @@
                         type: "AUDIO_SET_LOCAL_VOLUME",
                         context: n,
                         userId: e,
-                        volume: (0, u.snapVolumeToDefault)(t, n)
+                        volume: (0, i.snapVolumeToDefault)(t, n)
                     })
                 },
                 setLocalPan(e, t, n) {
-                    let u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : f.MediaEngineContextTypes.DEFAULT;
+                    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : f.MediaEngineContextTypes.DEFAULT;
                     a.default.dispatch({
                         type: "AUDIO_SET_LOCAL_PAN",
-                        context: u,
+                        context: i,
                         userId: e,
                         left: t,
                         right: n
@@ -686,13 +686,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return u
                 }
             });
             var a = n("913144"),
-                u = n("679428"),
+                i = n("679428"),
                 s = n("282109"),
-                i = {
+                u = {
                     update(e) {
                         a.default.dispatch({
                             type: "CHANNEL_COLLAPSE",
@@ -700,7 +700,7 @@
                         })
                     },
                     toggleCollapseGuild(e) {
-                        u.default.saveUserGuildSettings(e, {
+                        i.default.saveUserGuildSettings(e, {
                             hide_muted_channels: !s.default.isGuildCollapsed(e)
                         }), a.default.dispatch({
                             type: "GUILD_TOGGLE_COLLAPSE_MUTED",
@@ -721,18 +721,18 @@
             });
             var a = n("37983");
             n("884691");
-            var u = n("77078"),
+            var i = n("77078"),
                 s = n("913144"),
-                i = n("605250"),
+                u = n("605250"),
                 d = n("42887"),
-                o = n("599110"),
-                l = n("49111"),
+                l = n("599110"),
+                o = n("49111"),
                 r = n("180524"),
                 c = n("782340");
-            let f = new i.default("AudioActionCreators");
+            let f = new u.default("AudioActionCreators");
 
             function p() {
-                (0, u.openModalLazy)(async () => {
+                (0, i.openModalLazy)(async () => {
                     let {
                         default: e
                     } = await n.el("649486").then(n.bind(n, "649486"));
@@ -744,14 +744,14 @@
             }
 
             function _() {
-                return !d.default.isSupported() && ((0, u.openModal)(e => (0, a.jsx)(u.ConfirmModal, {
+                return !d.default.isSupported() && ((0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
                     header: c.default.Messages.UNSUPPORTED_BROWSER,
                     confirmText: c.default.Messages.DOWNLOAD_APP,
                     cancelText: c.default.Messages.CANCEL,
                     onConfirm: p,
-                    confirmButtonColor: u.Button.Colors.BRAND,
+                    confirmButtonColor: i.Button.Colors.BRAND,
                     ...e,
-                    children: (0, a.jsx)(u.Text, {
+                    children: (0, a.jsx)(i.Text, {
                         variant: "text-md/normal",
                         children: c.default.Messages.UNSUPPORTED_BROWSER_DETAILS
                     })
@@ -759,7 +759,7 @@
             }
 
             function E(e) {
-                o.default.track(l.AnalyticEvents.PERMISSIONS_ACKED, {
+                l.default.track(o.AnalyticEvents.PERMISSIONS_ACKED, {
                     type: "audio",
                     action: e
                 })
@@ -767,7 +767,7 @@
 
             function m() {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-                return _() ? Promise.resolve(!1) : (o.default.track(l.AnalyticEvents.PERMISSIONS_REQUESTED, {
+                return _() ? Promise.resolve(!1) : (l.default.track(o.AnalyticEvents.PERMISSIONS_REQUESTED, {
                     type: "audio"
                 }), d.default.getMediaEngine().enable().then(() => {
                     s.default.dispatch({
@@ -777,13 +777,13 @@
                     }), E(r.NativePermissionStates.ACCEPTED)
                 }, e => {
                     switch (e) {
-                        case l.UserMediaErrors.NO_DEVICES_FOUND:
+                        case o.UserMediaErrors.NO_DEVICES_FOUND:
                             E(r.NativePermissionStates.NO_DEVICES);
                             break;
-                        case l.UserMediaErrors.PERMISSION_DENIED:
+                        case o.UserMediaErrors.PERMISSION_DENIED:
                             E(r.NativePermissionStates.DENIED);
                             break;
-                        case l.UserMediaErrors.PERMISSION_DISMISSED:
+                        case o.UserMediaErrors.PERMISSION_DISMISSED:
                             E(r.NativePermissionStates.DISMISSED);
                             break;
                         default:
@@ -801,12 +801,12 @@
             });
             var a = n("37983");
             n("884691");
-            var u = n("446674"),
+            var i = n("446674"),
                 s = n("77078"),
-                i = n("272030"),
+                u = n("272030"),
                 d = n("838446"),
-                o = n("158534"),
-                l = n("846883"),
+                l = n("158534"),
+                o = n("846883"),
                 r = n("812204"),
                 c = n("861370"),
                 f = n("20209"),
@@ -816,53 +816,53 @@
                 m = n("379304"),
                 S = n("534222"),
                 g = n("601131"),
-                A = n("834052"),
-                N = n("715243"),
-                T = n("458574"),
+                N = n("834052"),
+                T = n("715243"),
+                A = n("458574"),
                 I = n("963150"),
                 O = n("308798"),
-                h = n("47006"),
-                M = n("809259"),
-                v = n("878526"),
-                L = n("44141"),
-                C = n("531674"),
-                D = n("619436"),
-                b = n("339876"),
-                U = n("702741"),
-                x = n("809937"),
-                y = n("782000"),
-                R = n("45593"),
+                M = n("47006"),
+                v = n("809259"),
+                h = n("878526"),
+                C = n("44141"),
+                U = n("531674"),
+                L = n("619436"),
+                D = n("339876"),
+                b = n("702741"),
+                y = n("809937"),
+                R = n("782000"),
+                x = n("45593"),
                 G = n("604887"),
                 P = n("958936"),
-                k = n("49111"),
-                F = n("782340");
+                F = n("49111"),
+                k = n("782340");
 
             function V(e) {
                 let {
                     channel: t,
                     guild: n,
                     onSelect: d
-                } = e, o = t.isGuildStageVoice(), r = (0, u.useStateFromStores)([A.default], () => o ? A.default.getStageInstanceByChannel(t.id) : void 0, [o, t.id]), f = (0, T.default)(t), m = (0, S.useActiveEvent)(t.id), N = (0, g.default)(null == m ? void 0 : m.id, n, t), I = (0, y.default)(t, r), O = (0, p.default)(t), v = (0, _.default)(t), L = (0, E.default)(t), C = (0, M.default)(t), b = (0, D.default)(t), x = (0, h.default)(t), R = (0, P.default)(t, n), G = (0, c.default)({
+                } = e, l = t.isGuildStageVoice(), r = (0, i.useStateFromStores)([N.default], () => l ? N.default.getStageInstanceByChannel(t.id) : void 0, [l, t.id]), f = (0, A.default)(t), m = (0, S.useActiveEvent)(t.id), T = (0, g.default)(null == m ? void 0 : m.id, n, t), I = (0, R.default)(t, r), O = (0, p.default)(t), h = (0, _.default)(t), C = (0, E.default)(t), U = (0, v.default)(t), D = (0, L.default)(t), y = (0, M.default)(t), x = (0, P.default)(t, n), G = (0, c.default)({
                     id: t.id,
-                    label: F.default.Messages.COPY_ID_CHANNEL
-                }), k = (0, U.default)(t), V = (0, l.default)(t);
+                    label: k.default.Messages.COPY_ID_CHANNEL
+                }), F = (0, b.default)(t), V = (0, o.default)(t);
                 return (0, a.jsxs)(s.Menu, {
                     navId: "channel-context",
-                    onClose: i.closeContextMenu,
-                    "aria-label": F.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+                    onClose: u.closeContextMenu,
+                    "aria-label": k.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                     onSelect: d,
                     children: [(0, a.jsx)(s.MenuGroup, {
-                        children: null != m ? N : I
+                        children: null != m ? T : I
                     }), (0, a.jsxs)(s.MenuGroup, {
-                        children: [L, v, O]
+                        children: [C, h, O]
                     }), (0, a.jsxs)(s.MenuGroup, {
-                        children: [C, b, x]
+                        children: [U, D, y]
                     }), (0, a.jsx)(s.MenuGroup, {
                         children: V
                     }), (0, a.jsxs)(s.MenuGroup, {
-                        children: [R, f]
+                        children: [x, f]
                     }), (0, a.jsx)(s.MenuGroup, {
-                        children: k
+                        children: F
                     }), (0, a.jsx)(s.MenuGroup, {
                         children: G
                     })]
@@ -874,17 +874,17 @@
                     channel: t,
                     guild: n,
                     onSelect: d
-                } = e, o = t.isGuildStageVoice(), r = (0, u.useStateFromStores)([A.default], () => o ? A.default.getStageInstanceByChannel(t.id) : void 0, [o, t.id]), f = (0, L.default)(t), _ = (0, T.default)(t), E = (0, S.useActiveEvent)(t.id), k = (0, g.default)(null == E ? void 0 : E.id, n, t), V = (0, y.default)(t, r), j = (0, p.default)(t), w = (0, M.default)(t), B = (0, D.default)(t), H = (0, h.default)(t), Y = (0, v.default)(t, n, r), W = (0, P.default)(t, n), q = (0, R.default)(t, n), K = (0, G.default)(t, n.id), Q = (0, N.default)(t, n), X = (0, I.default)(t, n), J = (0, O.default)(t), z = (0, c.default)({
+                } = e, l = t.isGuildStageVoice(), r = (0, i.useStateFromStores)([N.default], () => l ? N.default.getStageInstanceByChannel(t.id) : void 0, [l, t.id]), f = (0, C.default)(t), _ = (0, A.default)(t), E = (0, S.useActiveEvent)(t.id), F = (0, g.default)(null == E ? void 0 : E.id, n, t), V = (0, R.default)(t, r), j = (0, p.default)(t), w = (0, v.default)(t), H = (0, L.default)(t), B = (0, M.default)(t), Y = (0, h.default)(t, n, r), W = (0, P.default)(t, n), q = (0, x.default)(t, n), K = (0, G.default)(t, n.id), Q = (0, T.default)(t, n), X = (0, I.default)(t, n), J = (0, O.default)(t), z = (0, c.default)({
                     id: t.id,
-                    label: F.default.Messages.COPY_ID_CHANNEL
-                }), Z = (0, U.default)(t), $ = (0, l.default)(t), ee = (0, b.default)(t), et = (0, m.default)(t), en = (0, C.default)(t), ea = (0, x.default)(t);
+                    label: k.default.Messages.COPY_ID_CHANNEL
+                }), Z = (0, b.default)(t), $ = (0, o.default)(t), ee = (0, D.default)(t), et = (0, m.default)(t), en = (0, U.default)(t), ea = (0, y.default)(t);
                 return (0, a.jsxs)(s.Menu, {
                     navId: "channel-context",
-                    onClose: i.closeContextMenu,
-                    "aria-label": F.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+                    onClose: u.closeContextMenu,
+                    "aria-label": k.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                     onSelect: d,
                     children: [(0, a.jsx)(s.MenuGroup, {
-                        children: null != E ? k : V
+                        children: null != E ? F : V
                     }), (0, a.jsx)(s.MenuGroup, {
                         children: f
                     }, "mark-as-read"), (0, a.jsxs)(s.MenuGroup, {
@@ -892,15 +892,15 @@
                     }, "channel-actions"), (0, a.jsxs)(s.MenuGroup, {
                         children: [K, W, q, w, et, Z]
                     }, "voice-actions"), (0, a.jsxs)(s.MenuGroup, {
-                        children: [en, B, ea]
+                        children: [en, H, ea]
                     }, "notifications"), (0, a.jsxs)(s.MenuGroup, {
-                        children: [H, Q, X, J]
+                        children: [B, Q, X, J]
                     }, "admin-actions"), (0, a.jsx)(s.MenuGroup, {
                         children: z
                     }, "developer-actions")]
                 })
             }
-            var w = (0, o.default)((0, d.default)(function(e) {
+            var w = (0, l.default)((0, d.default)(function(e) {
                 let t = (0, f.default)();
                 return t ? (0, a.jsx)(V, {
                     ...e
@@ -908,31 +908,139 @@
                     ...e
                 })
             }, {
-                object: k.AnalyticsObjects.CONTEXT_MENU
+                object: F.AnalyticsObjects.CONTEXT_MENU
             }), [r.default.CONTEXT_MENU, r.default.CHANNEL_LIST_VOICE_CHANNEL_MENU])
         },
         809259: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return o
                 }
             });
             var a = n("37983");
             n("884691");
-            var u = n("446674"),
+            var i = n("446674"),
                 s = n("77078"),
-                i = n("126501"),
+                u = n("126501"),
                 d = n("816092"),
-                o = n("782340");
+                l = n("782340");
 
-            function l(e) {
-                let t = (0, u.useStateFromStores)([d.default], () => d.default.isCollapsed(e.id), [e.id]);
+            function o(e) {
+                let t = (0, i.useStateFromStores)([d.default], () => d.default.isCollapsed(e.id), [e.id]);
                 return __OVERLAY__ ? null : (0, a.jsx)(s.MenuCheckboxItem, {
                     id: "hide-voice-names",
-                    label: o.default.Messages.VOICE_CHANNEL_HIDE_NAMES,
-                    action: () => i.default.update(e.id),
+                    label: l.default.Messages.VOICE_CHANNEL_HIDE_NAMES,
+                    action: () => u.default.update(e.id),
                     checked: t
+                })
+            }
+        },
+        531674: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                getMuteTimes: function() {
+                    return m
+                },
+                default: function() {
+                    return g
+                }
+            }), n("222007");
+            var a = n("37983");
+            n("884691");
+            var i = n("866227"),
+                s = n.n(i),
+                u = n("446674"),
+                d = n("77078"),
+                l = n("820542"),
+                o = n("519705"),
+                r = n("319165"),
+                c = n("282109"),
+                f = n("679653"),
+                p = n("49111"),
+                _ = n("468200"),
+                E = n("782340");
+            let m = () => [{
+                    value: _.MuteUntilSeconds.MINUTES_15,
+                    label: E.default.Messages.MUTE_DURATION_15_MINUTES
+                }, {
+                    value: _.MuteUntilSeconds.HOURS_1,
+                    label: E.default.Messages.MUTE_DURATION_1_HOUR
+                }, {
+                    value: _.MuteUntilSeconds.HOURS_3,
+                    label: E.default.Messages.MUTE_DURATION_3_HOURS
+                }, {
+                    value: _.MuteUntilSeconds.HOURS_8,
+                    label: E.default.Messages.MUTE_DURATION_8_HOURS
+                }, {
+                    value: _.MuteUntilSeconds.HOURS_24,
+                    label: E.default.Messages.MUTE_DURATION_24_HOURS
+                }, {
+                    value: _.MuteUntilSeconds.ALWAYS,
+                    label: E.default.Messages.MUTE_DURATION_ALWAYS
+                }],
+                S = e => {
+                    let t = e > 0 ? s().add(e, "second").toISOString() : null;
+                    return {
+                        muted: !0,
+                        mute_config: {
+                            selected_time_window: e,
+                            end_time: t
+                        }
+                    }
+                };
+
+            function g(e, t) {
+                let [n, i] = (0, u.useStateFromStoresArray)([c.default], () => [c.default.isChannelMuted(e.guild_id, e.id), c.default.getChannelMuteConfig(e.guild_id, e.id)]), s = (0, r.useMutedUntilText)(i), _ = (0, f.default)(e, !0);
+
+                function g(t) {
+                    t && e.type === p.ChannelTypes.GUILD_CATEGORY && (0, l.categoryCollapse)(e.id), o.default.updateChannelOverrideSettings(e.guild_id, e.id, {
+                        muted: t
+                    })
+                }
+                let N = E.default.Messages.MUTE_CHANNEL_GENERIC,
+                    T = E.default.Messages.UNMUTE_CHANNEL_GENERIC;
+                switch (e.type) {
+                    case p.ChannelTypes.GUILD_CATEGORY:
+                        N = E.default.Messages.MUTE_CATEGORY, T = E.default.Messages.UNMUTE_CATEGORY;
+                        break;
+                    case p.ChannelTypes.GROUP_DM:
+                        N = E.default.Messages.MUTE_CONVERSATION, T = E.default.Messages.UNMUTE_CONVERSATION;
+                        break;
+                    case p.ChannelTypes.DM:
+                        N = E.default.Messages.MUTE_CHANNEL.format({
+                            name: _
+                        }), T = E.default.Messages.UNMUTE_CHANNEL.format({
+                            name: _
+                        });
+                        break;
+                    default:
+                        N = E.default.Messages.MUTE_CHANNEL_GENERIC, T = E.default.Messages.UNMUTE_CHANNEL_GENERIC
+                }
+                return n ? (0, a.jsx)(d.MenuItem, {
+                    id: "unmute-channel",
+                    label: T,
+                    subtext: s,
+                    action: () => g(!1)
+                }) : (0, a.jsx)(d.MenuItem, {
+                    id: "mute-channel",
+                    label: N,
+                    action: () => g(!0),
+                    children: m().map(n => {
+                        let {
+                            value: i,
+                            label: s
+                        } = n;
+                        return (0, a.jsx)(d.MenuItem, {
+                            id: "".concat(i),
+                            label: s,
+                            action: () => (function(n) {
+                                e.type === p.ChannelTypes.GUILD_CATEGORY && (0, l.categoryCollapse)(e.id);
+                                let a = S(n);
+                                o.default.updateChannelOverrideSettings(e.guild_id, e.id, a, t)
+                            })(i)
+                        }, i)
+                    })
                 })
             }
         },
@@ -948,44 +1056,44 @@
             });
             var a = n("37983");
             n("884691");
-            var u = n("446674"),
+            var i = n("446674"),
                 s = n("77078"),
-                i = n("519705"),
+                u = n("519705"),
                 d = n("282109"),
-                o = n("49111"),
-                l = n("782340");
+                l = n("49111"),
+                o = n("782340");
 
             function r(e) {
                 var t, n;
                 switch (e.type) {
-                    case o.ChannelTypes.GUILD_VOICE:
+                    case l.ChannelTypes.GUILD_VOICE:
                         return null;
-                    case o.ChannelTypes.GUILD_STAGE_VOICE:
+                    case l.ChannelTypes.GUILD_STAGE_VOICE:
                         ;
                         return t = e, [{
-                            setting: o.UserNotificationSettings.NULL,
-                            label: null != t.parent_id ? l.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : l.default.Messages.FORM_LABEL_DEFAULT
+                            setting: l.UserNotificationSettings.NULL,
+                            label: null != t.parent_id ? o.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : o.default.Messages.FORM_LABEL_DEFAULT
                         }, {
-                            setting: o.UserNotificationSettings.ONLY_MENTIONS,
-                            label: l.default.Messages.FORM_LABEL_LIVE_STAGES_ONLY
+                            setting: l.UserNotificationSettings.ONLY_MENTIONS,
+                            label: o.default.Messages.FORM_LABEL_LIVE_STAGES_ONLY
                         }, {
-                            setting: o.UserNotificationSettings.NO_MESSAGES,
-                            label: l.default.Messages.FORM_LABEL_NOTHING
+                            setting: l.UserNotificationSettings.NO_MESSAGES,
+                            label: o.default.Messages.FORM_LABEL_NOTHING
                         }];
                     default:
                         ;
                         return n = e, [{
-                            setting: o.UserNotificationSettings.NULL,
-                            label: null != n.parent_id ? l.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : l.default.Messages.FORM_LABEL_DEFAULT
+                            setting: l.UserNotificationSettings.NULL,
+                            label: null != n.parent_id ? o.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : o.default.Messages.FORM_LABEL_DEFAULT
                         }, {
-                            setting: o.UserNotificationSettings.ALL_MESSAGES,
-                            label: l.default.Messages.FORM_LABEL_ALL_MESSAGES
+                            setting: l.UserNotificationSettings.ALL_MESSAGES,
+                            label: o.default.Messages.FORM_LABEL_ALL_MESSAGES
                         }, {
-                            setting: o.UserNotificationSettings.ONLY_MENTIONS,
-                            label: l.default.Messages.FORM_LABEL_ONLY_MENTIONS.format()
+                            setting: l.UserNotificationSettings.ONLY_MENTIONS,
+                            label: o.default.Messages.FORM_LABEL_ONLY_MENTIONS.format()
                         }, {
-                            setting: o.UserNotificationSettings.NO_MESSAGES,
-                            label: l.default.Messages.FORM_LABEL_NOTHING
+                            setting: l.UserNotificationSettings.NO_MESSAGES,
+                            label: o.default.Messages.FORM_LABEL_NOTHING
                         }]
                 }
             }
@@ -993,73 +1101,73 @@
             function c(e) {
                 let t = e.getGuildId(),
                     n = e.id,
-                    c = (0, u.useStateFromStores)([d.default], () => d.default.getChannelOverrides(t)[n], [t, n]),
-                    f = (0, u.useStateFromStores)([d.default], () => {
-                        let n = o.UserNotificationSettings.NULL;
-                        return null != e.parent_id && (n = d.default.getChannelMessageNotifications(t, e.parent_id)), n !== o.UserNotificationSettings.NULL ? n : d.default.getMessageNotifications(t)
+                    c = (0, i.useStateFromStores)([d.default], () => d.default.getChannelOverrides(t)[n], [t, n]),
+                    f = (0, i.useStateFromStores)([d.default], () => {
+                        let n = l.UserNotificationSettings.NULL;
+                        return null != e.parent_id && (n = d.default.getChannelMessageNotifications(t, e.parent_id)), n !== l.UserNotificationSettings.NULL ? n : d.default.getMessageNotifications(t)
                     }, [t, e.parent_id]),
-                    p = (0, u.useStateFromStores)([d.default], () => d.default.getNewForumThreadsCreated(e)),
-                    _ = null == c ? o.UserNotificationSettings.NULL : c.message_notifications,
+                    p = (0, i.useStateFromStores)([d.default], () => d.default.getNewForumThreadsCreated(e)),
+                    _ = null == c ? l.UserNotificationSettings.NULL : c.message_notifications,
                     E = r(e);
                 return null == E ? null : (0, a.jsxs)(a.Fragment, {
                     children: [e.isForumLikeChannel() ? (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(s.MenuCheckboxItem, {
                             id: "new-forum-threads-created",
-                            label: l.default.Messages.FORUM_NEW_POSTS_CREATED,
+                            label: o.default.Messages.FORUM_NEW_POSTS_CREATED,
                             checked: p,
-                            action: () => i.default.setForumThreadsCreated(e, !p)
+                            action: () => u.default.setForumThreadsCreated(e, !p)
                         }), (0, a.jsx)(s.MenuSeparator, {})]
                     }) : null, E.map(e => {
                         let {
-                            setting: u,
+                            setting: i,
                             label: d
                         } = e;
                         return (0, a.jsx)(s.MenuRadioItem, {
                             group: "channel-notifications",
-                            id: "".concat(u),
+                            id: "".concat(i),
                             label: d,
-                            subtext: u === o.UserNotificationSettings.NULL ? function(e) {
+                            subtext: i === l.UserNotificationSettings.NULL ? function(e) {
                                 switch (e) {
-                                    case o.UserNotificationSettings.ALL_MESSAGES:
-                                        return l.default.Messages.FORM_LABEL_ALL_MESSAGES;
-                                    case o.UserNotificationSettings.ONLY_MENTIONS:
-                                        return l.default.Messages.FORM_LABEL_ONLY_MENTIONS.format();
-                                    case o.UserNotificationSettings.NO_MESSAGES:
-                                        return l.default.Messages.FORM_LABEL_NOTHING;
-                                    case o.UserNotificationSettings.NULL:
+                                    case l.UserNotificationSettings.ALL_MESSAGES:
+                                        return o.default.Messages.FORM_LABEL_ALL_MESSAGES;
+                                    case l.UserNotificationSettings.ONLY_MENTIONS:
+                                        return o.default.Messages.FORM_LABEL_ONLY_MENTIONS.format();
+                                    case l.UserNotificationSettings.NO_MESSAGES:
+                                        return o.default.Messages.FORM_LABEL_NOTHING;
+                                    case l.UserNotificationSettings.NULL:
                                     default:
                                         return
                                 }
                             }(f) : void 0,
                             action: () => {
                                 var e;
-                                return e = u, void(null != t && i.default.updateChannelOverrideSettings(t, n, {
+                                return e = i, void(null != t && u.default.updateChannelOverrideSettings(t, n, {
                                     message_notifications: e
                                 }))
                             },
-                            checked: u === _
-                        }, u)
+                            checked: i === _
+                        }, i)
                     })]
                 })
             }
 
             function f(e) {
                 var t, n;
-                let i = c(e),
-                    f = (0, u.useStateFromStores)([d.default], () => d.default.resolvedMessageNotifications(e), [e]),
-                    p = (0, u.useStateFromStores)([d.default], () => d.default.getChannelOverrides(e.guild_id)[e.id], [e.guild_id, e.id]),
-                    _ = null == p ? o.UserNotificationSettings.NULL : p.message_notifications,
-                    E = _ === o.UserNotificationSettings.NULL && e.isGuildStageVoice() ? l.default.Messages.FORM_LABEL_ONLY_MENTIONS.format() : null === (n = r(e)) || void 0 === n ? void 0 : null === (t = n.find(e => {
+                let u = c(e),
+                    f = (0, i.useStateFromStores)([d.default], () => d.default.resolvedMessageNotifications(e), [e]),
+                    p = (0, i.useStateFromStores)([d.default], () => d.default.getChannelOverrides(e.guild_id)[e.id], [e.guild_id, e.id]),
+                    _ = null == p ? l.UserNotificationSettings.NULL : p.message_notifications,
+                    E = _ === l.UserNotificationSettings.NULL && e.isGuildStageVoice() ? o.default.Messages.FORM_LABEL_ONLY_MENTIONS.format() : null === (n = r(e)) || void 0 === n ? void 0 : null === (t = n.find(e => {
                         let {
                             setting: t
                         } = e;
                         return t === f
                     })) || void 0 === t ? void 0 : t.label;
-                return null != i ? (0, a.jsx)(s.MenuItem, {
+                return null != u ? (0, a.jsx)(s.MenuItem, {
                     id: "channel-notifications",
-                    label: l.default.Messages.NOTIFICATION_SETTINGS,
+                    label: o.default.Messages.NOTIFICATION_SETTINGS,
                     subtext: E,
-                    children: i
+                    children: u
                 }) : null
             }
         },
@@ -1072,12 +1180,12 @@
             });
             var a = n("37983");
             n("884691");
-            var u = n("77078"),
+            var i = n("77078"),
                 s = n("377114"),
-                i = n("834052"),
+                u = n("834052"),
                 d = n("644224"),
-                o = n("907566"),
-                l = n("782340");
+                l = n("907566"),
+                o = n("782340");
 
             function r(e) {
                 d.default.trackExposure({
@@ -1088,12 +1196,12 @@
                     }, {
                         autoTrackExposure: !1
                     }),
-                    n = i.default.isLive(e.id);
-                return e.isGuildStageVoice() && n && t.reportModal ? (0, a.jsx)(u.MenuItem, {
+                    n = u.default.isLive(e.id);
+                return e.isGuildStageVoice() && n && t.reportModal ? (0, a.jsx)(i.MenuItem, {
                     id: "report-stage",
-                    label: l.default.Messages.REPORT_MODAL_REPORT_STAGE_MENU_ITEM,
+                    label: o.default.Messages.REPORT_MODAL_REPORT_STAGE_MENU_ITEM,
                     action: () => (0, s.showReportModalForStageChannel)(e),
-                    icon: o.default,
+                    icon: l.default,
                     color: "danger"
                 }) : null
             }
@@ -1107,30 +1215,30 @@
             });
             var a = n("37983");
             n("884691");
-            var u = n("446674"),
+            var i = n("446674"),
                 s = n("77078"),
-                i = n("244480"),
+                u = n("244480"),
                 d = n("923510"),
-                o = n("957255"),
-                l = n("782340");
+                l = n("957255"),
+                o = n("782340");
 
             function r(e, t) {
-                let n = (0, u.useStateFromStores)([o.default], () => o.default.can(d.MODERATE_STAGE_CHANNEL_PERMISSIONS, e), [e]);
+                let n = (0, i.useStateFromStores)([l.default], () => l.default.can(d.MODERATE_STAGE_CHANNEL_PERMISSIONS, e), [e]);
                 return null != t && n ? (0, a.jsx)(s.MenuItem, {
                     id: "end-stage",
-                    label: l.default.Messages.END_STAGE,
+                    label: o.default.Messages.END_STAGE,
                     color: "danger",
                     action: function() {
                         (0, s.openModal)(t => (0, a.jsx)(s.ConfirmModal, {
                             ...t,
-                            header: l.default.Messages.END_STAGE_TITLE,
-                            confirmText: l.default.Messages.END_STAGE,
-                            cancelText: l.default.Messages.CANCEL,
-                            onConfirm: () => (0, i.endStage)(e),
+                            header: o.default.Messages.END_STAGE_TITLE,
+                            confirmText: o.default.Messages.END_STAGE,
+                            cancelText: o.default.Messages.CANCEL,
+                            onConfirm: () => (0, u.endStage)(e),
                             children: (0, a.jsx)(s.Text, {
                                 variant: "text-md/normal",
                                 color: "header-secondary",
-                                children: l.default.Messages.EXPLICIT_END_STAGE_SUBTITLE
+                                children: o.default.Messages.EXPLICIT_END_STAGE_SUBTITLE
                             })
                         }))
                     }
@@ -1146,34 +1254,34 @@
             });
             var a = n("37983");
             n("884691");
-            var u = n("446674"),
+            var i = n("446674"),
                 s = n("77078"),
-                i = n("18054"),
+                u = n("18054"),
                 d = n("746164"),
-                o = n("261552"),
-                l = n("957255"),
+                l = n("261552"),
+                o = n("957255"),
                 r = n("207273"),
                 c = n("49111"),
                 f = n("782340");
 
             function p(e, t) {
                 var n;
-                let p = (0, u.useStateFromStores)([l.default], () => l.default.can(c.Permissions.MANAGE_CHANNELS, t)),
+                let p = (0, i.useStateFromStores)([o.default], () => o.default.can(c.Permissions.MANAGE_CHANNELS, t)),
                     _ = d.default.useExperiment({
                         guildId: null !== (n = t.id) && void 0 !== n ? n : "",
                         location: "0f77e2_1"
                     }, {
                         autoTrackExposure: !1
                     }).enabled,
-                    E = (0, o.default)(),
+                    E = (0, l.default)(),
                     m = (null == E ? void 0 : E.channelId) === e.id,
-                    S = (0, u.useStateFromStores)([r.default], () => r.default.getChannelStatus(e)),
+                    S = (0, i.useStateFromStores)([r.default], () => r.default.getChannelStatus(e)),
                     g = null != S && S.length > 0;
                 return e.isGuildVoice() && g && _ && (p || m) ? (0, a.jsx)(s.MenuItem, {
                     id: "clear-status",
                     label: f.default.Messages.VOICE_CHANNEL_CLEAR_STATUS,
                     action: () => {
-                        i.default.updateVoiceChannelStatus(e.id, "")
+                        u.default.updateVoiceChannelStatus(e.id, "")
                     }
                 }) : null
             }
@@ -1187,26 +1295,26 @@
             });
             var a = n("37983");
             n("884691");
-            var u = n("446674"),
+            var i = n("446674"),
                 s = n("155823"),
-                i = n("987317"),
+                u = n("987317"),
                 d = n("305122"),
-                o = n("675961"),
-                l = n("957255"),
+                l = n("675961"),
+                o = n("957255"),
                 r = n("18494"),
                 c = n("49111"),
                 f = n("782340");
 
             function p(e, t) {
-                let n = (0, u.useStateFromStores)([l.default], () => l.default.can(c.Permissions.CONNECT, e), [e]),
-                    p = (0, u.useStateFromStores)([r.default], () => r.default.getVoiceChannelId()),
-                    _ = (0, o.useCustomJoinSound)(t),
+                let n = (0, i.useStateFromStores)([o.default], () => o.default.can(c.Permissions.CONNECT, e), [e]),
+                    p = (0, i.useStateFromStores)([r.default], () => r.default.getVoiceChannelId()),
+                    _ = (0, l.useCustomJoinSound)(t),
                     E = p === e.id;
                 return e.isGuildVocal() && n && null != _ && !E ? (0, a.jsx)(s.MenuItem, {
                     id: "join-muted-custom-join-sound",
                     label: f.default.Messages.VOICE_CHANNEL_MUTED_CUSTOM_JOIN_SOUND,
                     action: () => {
-                        (0, d.muteCustomJoinSound)(e.id), i.default.selectVoiceChannel(e.id)
+                        (0, d.muteCustomJoinSound)(e.id), u.default.selectVoiceChannel(e.id)
                     }
                 }) : null
             }
@@ -1220,23 +1328,139 @@
             });
             var a = n("37983");
             n("884691");
-            var u = n("446674"),
+            var i = n("446674"),
                 s = n("77078"),
-                i = n("255397"),
+                u = n("255397"),
                 d = n("393414"),
-                o = n("957255"),
-                l = n("49111"),
+                l = n("957255"),
+                o = n("49111"),
                 r = n("782340");
 
             function c(e, t) {
-                let n = (0, u.useStateFromStores)([o.default], () => o.default.can(l.Permissions.CONNECT, e), [e]);
+                let n = (0, i.useStateFromStores)([l.default], () => l.default.can(o.Permissions.CONNECT, e), [e]);
                 return n && e.isGuildVocal() ? (0, a.jsx)(s.MenuItem, {
                     id: "open-chat",
                     label: r.default.Messages.OPEN_CHAT,
                     action: () => {
-                        i.default.updateChatOpen(e.id, !0), (0, d.transitionToGuild)(t.id, e.id)
+                        u.default.updateChatOpen(e.id, !0), (0, d.transitionToGuild)(t.id, e.id)
                     }
                 }) : null
+            }
+        },
+        200008: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                addFavoriteChannel: function() {
+                    return f
+                },
+                removeFavoriteChannel: function() {
+                    return p
+                },
+                setFavoriteChannelNickname: function() {
+                    return _
+                },
+                addFavoriteCategory: function() {
+                    return E
+                },
+                removeFavoriteCategory: function() {
+                    return m
+                },
+                updateFavoriteChannels: function() {
+                    return S
+                },
+                toggleFavoriteServerMuted: function() {
+                    return g
+                }
+            }), n("222007");
+            var a = n("249654"),
+                i = n("151426"),
+                s = n("872173"),
+                u = n("42203"),
+                d = n("957255"),
+                l = n("379881"),
+                o = n("843455");
+
+            function r() {
+                let e = l.default.getFavoriteChannels(),
+                    t = 1;
+                for (let n in e) t = Math.max(t, e[n].order);
+                return t + 1
+            }
+
+            function c(e) {
+                for (let t in e) {
+                    let n = e[t];
+                    if (null == n) {
+                        delete e[t];
+                        continue
+                    }
+                    if (n.type === i.FavoriteChannelType.CATEGORY) continue;
+                    let a = u.default.getChannel(t);
+                    if (null == a || !a.isPrivate() && !d.default.can(o.Permissions.VIEW_CHANNEL, a)) {
+                        delete e[t];
+                        continue
+                    }
+                }
+            }
+
+            function f(e, t) {
+                let n = l.default.isFavorite(e);
+                !n && s.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+                    n.favoriteChannels[e] = i.FavoriteChannel.create({
+                        nickname: "",
+                        type: i.FavoriteChannelType.REFERENCE_ORIGINAL,
+                        position: r(),
+                        parentId: null != t ? t : "0"
+                    }), c(n.favoriteChannels)
+                }, s.UserSettingsDelay.FREQUENT_USER_ACTION)
+            }
+
+            function p(e) {
+                let t = l.default.getFavorite(e);
+                null != t && s.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+                    if (delete n.favoriteChannels[e], t.type === i.FavoriteChannelType.CATEGORY)
+                        for (let t in n.favoriteChannels) n.favoriteChannels[t].parentId === e && (n.favoriteChannels[t].parentId = "0");
+                    c(n.favoriteChannels)
+                }, s.UserSettingsDelay.FREQUENT_USER_ACTION)
+            }
+
+            function _(e, t) {
+                let n = l.default.isFavorite(e);
+                n && s.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+                    n.favoriteChannels[e].nickname = null != t ? t : ""
+                }, s.UserSettingsDelay.FREQUENT_USER_ACTION)
+            }
+
+            function E(e) {
+                let t = a.default.fromTimestamp(Date.now());
+                s.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+                    n.favoriteChannels[t] = i.FavoriteChannel.create({
+                        nickname: e,
+                        type: i.FavoriteChannelType.CATEGORY,
+                        position: r(),
+                        parentId: "0"
+                    })
+                }, s.UserSettingsDelay.FREQUENT_USER_ACTION)
+            }
+
+            function m(e) {
+                p(e)
+            }
+
+            function S(e) {
+                s.PreloadedUserSettingsActionCreators.updateAsync("favorites", t => {
+                    for (let a of e)
+                        if (null != a.position && (t.favoriteChannels[a.id].position = a.position), void 0 !== a.parent_id) {
+                            var n;
+                            t.favoriteChannels[a.id].parentId = null !== (n = a.parent_id) && void 0 !== n ? n : "0"
+                        }
+                }, s.UserSettingsDelay.FREQUENT_USER_ACTION)
+            }
+
+            function g() {
+                s.PreloadedUserSettingsActionCreators.updateAsync("favorites", e => {
+                    e.muted = !e.muted
+                }, s.UserSettingsDelay.INFREQUENT_USER_ACTION)
             }
         },
         601131: function(e, t, n) {
@@ -1248,26 +1472,26 @@
             });
             var a = n("37983");
             n("884691");
-            var u = n("446674"),
+            var i = n("446674"),
                 s = n("77078"),
-                i = n("817963"),
+                u = n("817963"),
                 d = n("244480"),
-                o = n("398604"),
-                l = n("322224"),
+                l = n("398604"),
+                o = n("322224"),
                 r = n("745049"),
                 c = n("782340");
 
             function f(e, t, n) {
                 let {
                     canManageGuildEvent: f
-                } = (0, i.useManageResourcePermissions)(null != n ? n : t), p = (0, u.useStateFromStores)([o.default], () => o.default.isActive(e)), _ = (0, u.useStateFromStores)([o.default], () => o.default.getGuildScheduledEvent(e), [e]), E = f(_);
+                } = (0, u.useManageResourcePermissions)(null != n ? n : t), p = (0, i.useStateFromStores)([l.default], () => l.default.isActive(e)), _ = (0, i.useStateFromStores)([l.default], () => l.default.getGuildScheduledEvent(e), [e]), E = f(_);
                 if (null == e || !E || !p || (null == _ ? void 0 : _.entity_type) === r.GuildScheduledEventEntityTypes.EXTERNAL) return null;
                 let m = () => {
                     if (null == n ? void 0 : n.isGuildStageVoice()) {
                         (0, d.endStage)(n);
                         return
                     }
-                    null != e && l.default.endEvent(e, t.id), (0, s.closeAllModals)()
+                    null != e && o.default.endEvent(e, t.id), (0, s.closeAllModals)()
                 };
                 return (0, a.jsx)(s.MenuItem, {
                     id: c.default.Messages.END_EVENT,
@@ -1293,43 +1517,43 @@
             "use strict";
             n.r(t), n.d(t, {
                 CustomSoundType: function() {
-                    return u
+                    return i
                 },
                 useCustomJoinSound: function() {
-                    return o
+                    return l
                 },
                 getCustomJoinSound: function() {
-                    return l
+                    return o
                 }
             });
-            var a, u, s = n("446674"),
-                i = n("374363"),
+            var a, i, s = n("446674"),
+                u = n("374363"),
                 d = n("846325");
 
-            function o(e) {
-                return (0, s.useStateFromStores)([i.default], () => {
+            function l(e) {
+                return (0, s.useStateFromStores)([u.default], () => {
                     var t, n;
-                    let a = null !== (n = null === (t = i.default.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== n ? n : {};
+                    let a = null !== (n = null === (t = u.default.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== n ? n : {};
                     return r(e, a)
                 })
             }
 
-            function l(e) {
+            function o(e) {
                 var t, n;
-                let a = null !== (n = null === (t = i.default.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== n ? n : {};
+                let a = null !== (n = null === (t = u.default.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== n ? n : {};
                 return r(e, a)
             }
 
             function r(e, t) {
                 var n, a;
-                let u = null === (n = t[e]) || void 0 === n ? void 0 : n.joinSound,
+                let i = null === (n = t[e]) || void 0 === n ? void 0 : n.joinSound,
                     s = null === (a = t[d.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID]) || void 0 === a ? void 0 : a.joinSound,
-                    i = null != u ? u : s;
-                return null != i ? {
-                    ...i,
-                    type: null != u ? 1 : 0
+                    u = null != i ? i : s;
+                return null != u ? {
+                    ...u,
+                    type: null != i ? 1 : 0
                 } : void 0
-            }(a = u || (u = {}))[a.GLOBAL = 0] = "GLOBAL", a[a.GUILD = 1] = "GUILD"
+            }(a = i || (i = {}))[a.GLOBAL = 0] = "GLOBAL", a[a.GUILD = 1] = "GUILD"
         },
         168067: function(e, t, n) {
             "use strict";
@@ -1358,15 +1582,15 @@
             "use strict";
             n.r(t), n.d(t, {
                 Soundpacks: function() {
-                    return u
+                    return i
                 },
                 getSoundpackOptionsAprilFools2023: function() {
-                    return i
+                    return u
                 }
             });
-            var a, u, s = n("782340");
+            var a, i, s = n("782340");
 
-            function i() {
+            function u() {
                 return [{
                     value: "classic",
                     label: s.default.Messages.SOUNDPACK_CLASSIC_LABEL
@@ -1374,23 +1598,23 @@
                     value: "detune",
                     label: s.default.Messages.SOUNDPACK_DETUNE_LABEL
                 }]
-            }(a = u || (u = {})).CLASSIC = "classic", a.DETUNE = "detune"
+            }(a = i || (i = {})).CLASSIC = "classic", a.DETUNE = "detune"
         },
         870696: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return o
                 }
             });
             var a = n("446674"),
-                u = n("913144"),
+                i = n("913144"),
                 s = n("168067"),
-                i = n("157246");
+                u = n("157246");
             let d = {
-                soundpack: i.Soundpacks.CLASSIC
+                soundpack: u.Soundpacks.CLASSIC
             };
-            class o extends a.default.PersistedStore {
+            class l extends a.default.PersistedStore {
                 initialize(e) {
                     s.default.subscribe({
                         location: "1"
@@ -1408,11 +1632,11 @@
                     }, {
                         autoTrackExposure: !1
                     });
-                    return t && (e = d.soundpack, Object.values(i.Soundpacks).includes(e)) ? d.soundpack : i.Soundpacks.CLASSIC
+                    return t && (e = d.soundpack, Object.values(u.Soundpacks).includes(e)) ? d.soundpack : u.Soundpacks.CLASSIC
                 }
             }
-            o.displayName = "SoundpackStore", o.persistKey = "SoundpackStore";
-            var l = new o(u.default, {
+            l.displayName = "SoundpackStore", l.persistKey = "SoundpackStore";
+            var o = new l(i.default, {
                 SET_SOUNDPACK: function(e) {
                     let {
                         soundpack: t
@@ -1431,7 +1655,7 @@
                 }
             });
             var a = n("157246");
-            let u = {
+            let i = {
                 [a.Soundpacks.CLASSIC]: {
                     discodo: "discodo",
                     message1: "message1",
@@ -1479,7 +1703,7 @@
             };
 
             function s(e) {
-                return u[e]
+                return i[e]
             }
         },
         244480: function(e, t, n) {
@@ -1489,13 +1713,13 @@
                     return g
                 },
                 inviteUserToStage: function() {
-                    return A
-                },
-                audienceAckRequestToSpeak: function() {
                     return N
                 },
-                moveSelfToAudience: function() {
+                audienceAckRequestToSpeak: function() {
                     return T
+                },
+                moveSelfToAudience: function() {
+                    return A
                 },
                 setUserSuppress: function() {
                     return I
@@ -1504,26 +1728,26 @@
                     return O
                 },
                 setEveryoneRolePermissionAllowed: function() {
-                    return h
-                },
-                startStage: function() {
                     return M
                 },
-                editStage: function() {
+                startStage: function() {
                     return v
                 },
+                editStage: function() {
+                    return h
+                },
                 endStage: function() {
-                    return L
+                    return C
                 }
             });
             var a = n("627445"),
-                u = n.n(a),
+                i = n.n(a),
                 s = n("316693"),
-                i = n("872717"),
+                u = n("872717"),
                 d = n("450911");
             n("851387");
-            var o = n("798609"),
-                l = n("716241"),
+            var l = n("798609"),
+                o = n("716241"),
                 r = n("18494"),
                 c = n("800762"),
                 f = n("991170"),
@@ -1535,9 +1759,9 @@
 
             function g(e, t) {
                 let n = e.getGuildId();
-                return u(null != n, "This channel cannot be guildless."), t && (0, l.trackWithMetadata)(S.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED, {
+                return i(null != n, "This channel cannot be guildless."), t && (0, o.trackWithMetadata)(S.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED, {
                     ...(0, _.getStageChannelMetadata)(e)
-                }), i.default.patch({
+                }), u.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(n),
                     body: {
                         request_to_speak_timestamp: t ? new Date().toISOString() : null,
@@ -1546,9 +1770,9 @@
                 })
             }
 
-            function A(e, t) {
+            function N(e, t) {
                 let n = e.getGuildId();
-                return u(null != n, "This channel cannot be guildless."), i.default.patch({
+                return i(null != n, "This channel cannot be guildless."), u.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(n, t),
                     body: {
                         suppress: !1,
@@ -1558,15 +1782,15 @@
                 })
             }
 
-            function N(e, t) {
+            function T(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     a = null == e ? void 0 : e.getGuildId();
-                u(null != a, "This channel cannot be guildless.");
+                i(null != a, "This channel cannot be guildless.");
                 let s = c.default.getVoiceStateForChannel(e.id),
                     d = (0, m.getAudienceRequestToSpeakState)(s);
-                return d === m.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && !t && (0, l.trackWithMetadata)(S.AnalyticEvents.PROMOTED_TO_SPEAKER, {
+                return d === m.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && !t && (0, o.trackWithMetadata)(S.AnalyticEvents.PROMOTED_TO_SPEAKER, {
                     ...(0, _.getStageChannelMetadata)(e)
-                }), i.default.patch({
+                }), u.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(a),
                     body: {
                         suppress: t,
@@ -1579,9 +1803,9 @@
                 })
             }
 
-            function T(e) {
+            function A(e) {
                 let t = null == e ? void 0 : e.getGuildId();
-                return u(null != t, "This channel cannot be guildless."), i.default.patch({
+                return i(null != t, "This channel cannot be guildless."), u.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(t),
                     body: {
                         suppress: !0,
@@ -1594,7 +1818,7 @@
 
             function I(e, t, n) {
                 let a = e.getGuildId();
-                return u(null != a, "This channel cannot be guildless."), i.default.patch({
+                return i(null != a, "This channel cannot be guildless."), u.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(a, t),
                     body: {
                         suppress: n,
@@ -1606,7 +1830,7 @@
             function O(e, t) {
                 if (null == t || null == e) return;
                 let n = t.getGuildId();
-                return u(null != n, "This channel cannot be guildless."), I(t, e.id, !0), i.default.patch({
+                return i(null != n, "This channel cannot be guildless."), I(t, e.id, !0), u.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(n, e.id),
                     body: {
                         suppress: !0,
@@ -1617,32 +1841,32 @@
                 })
             }
 
-            function h(e, t, n) {
+            function M(e, t, n) {
                 let a = e.getGuildId();
-                u(null != a, "Channel cannot be guildless");
-                let i = e.permissionOverwrites[a],
-                    l = {
+                i(null != a, "Channel cannot be guildless");
+                let u = e.permissionOverwrites[a],
+                    o = {
                         id: a,
-                        type: o.PermissionOverwriteType.ROLE,
+                        type: l.PermissionOverwriteType.ROLE,
                         allow: f.default.NONE,
                         deny: f.default.NONE,
-                        ...i
+                        ...u
                     };
-                n ? (l.allow = s.default.add(l.allow, t), l.deny = s.default.remove(l.deny, t)) : (l.allow = s.default.remove(l.allow, t), l.deny = s.default.add(l.deny, t)), d.default.updatePermissionOverwrite(e.id, l)
+                n ? (o.allow = s.default.add(o.allow, t), o.deny = s.default.remove(o.deny, t)) : (o.allow = s.default.remove(o.allow, t), o.deny = s.default.add(o.deny, t)), d.default.updatePermissionOverwrite(e.id, o)
             }
-            async function M(e, t, n, a) {
+            async function v(e, t, n, a) {
                 if ("" === t) return;
-                let u = r.default.getVoiceChannelId() === e.id;
-                !u && (0, p.connectToStage)(e);
+                let i = r.default.getVoiceChannelId() === e.id;
+                !i && (0, p.connectToStage)(e);
                 let s = await (0, E.startStageInstance)(e.id, t, n, a);
-                return N(e, !1, !0), s
+                return T(e, !1, !0), s
             }
-            async function v(e, t, n) {
+            async function h(e, t, n) {
                 if ("" === t) return;
                 let a = await (0, E.updateStageInstance)(e.id, t, n);
                 return a
             }
-            async function L(e) {
+            async function C(e) {
                 await (0, E.endStageInstance)(e.id)
             }
         },
@@ -1660,48 +1884,48 @@
                 }
             }), n("808653"), n("222007"), n("917351");
             var a = n("945956"),
-                u = n("387111"),
+                i = n("387111"),
                 s = n("991170"),
-                i = n("834052"),
+                u = n("834052"),
                 d = n("837979"),
-                o = n("49111"),
-                l = n("606762"),
+                l = n("49111"),
+                o = n("606762"),
                 r = n("782340");
 
             function c(e, t, n, a) {
                 let s = t[0],
-                    i = u.default.getName(e, n, s),
+                    u = i.default.getName(e, n, s),
                     d = null != a ? a : t.length;
-                return 1 === d && null != s ? i : null == s ? r.default.Messages.SPEAKING_COUNT.format({
+                return 1 === d && null != s ? u : null == s ? r.default.Messages.SPEAKING_COUNT.format({
                     count: d
                 }) : r.default.Messages.USER_SUMMARY_WITH_OTHERS.format({
-                    name: i,
+                    name: u,
                     count: d - 1
                 })
             }
 
             function f(e, t) {
                 switch (e) {
-                    case l.RowType.OWNER:
+                    case o.RowType.OWNER:
                         return r.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_OWNER;
-                    case l.RowType.ADMINISTRATOR:
+                    case o.RowType.ADMINISTRATOR:
                         return r.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TOOLTIP_ADMINISTRATOR;
-                    case l.RowType.MEMBER:
-                    case l.RowType.ROLE:
+                    case o.RowType.MEMBER:
+                    case o.RowType.ROLE:
                         return t ? r.default.Messages.CHANNEL_PERMISSIONS_CANNOT_REMOVE_PERMISSIONS : r.default.Messages.CHANNEL_PERMISSIONS_REMOVE_MODERATOR_TOOLTIP;
-                    case l.RowType.EMPTY_STATE:
+                    case o.RowType.EMPTY_STATE:
                 }
                 return null
             }
 
             function p(e) {
-                let t = i.default.getStageInstanceByChannel(e.id);
+                let t = u.default.getStageInstanceByChannel(e.id);
                 return {
                     channel_id: e.id,
                     guild_id: e.guild_id,
                     topic: null == t ? void 0 : t.topic,
                     media_session_id: a.default.getMediaSessionId(),
-                    request_to_speak_state: s.default.canEveryoneRole(o.Permissions.REQUEST_TO_SPEAK, e) ? d.RequestToSpeakPermissionStates.EVERYONE : d.RequestToSpeakPermissionStates.NO_ONE,
+                    request_to_speak_state: s.default.canEveryoneRole(l.Permissions.REQUEST_TO_SPEAK, e) ? d.RequestToSpeakPermissionStates.EVERYONE : d.RequestToSpeakPermissionStates.NO_ONE,
                     stage_instance_id: null == t ? void 0 : t.id
                 }
             }
@@ -1713,30 +1937,30 @@
                     return s
                 },
                 updateStageInstance: function() {
-                    return i
+                    return u
                 },
                 endStageInstance: function() {
                     return d
                 }
             });
             var a = n("872717"),
-                u = n("49111");
-            async function s(e, t, n, s, i) {
+                i = n("49111");
+            async function s(e, t, n, s, u) {
                 let d = await a.default.post({
-                    url: u.Endpoints.STAGE_INSTANCES,
+                    url: i.Endpoints.STAGE_INSTANCES,
                     body: {
                         channel_id: e,
                         topic: t,
                         privacy_level: n,
-                        guild_scheduled_event_id: i,
+                        guild_scheduled_event_id: u,
                         send_start_notification: s
                     }
                 });
                 return d.body
             }
-            async function i(e, t, n) {
+            async function u(e, t, n) {
                 let s = await a.default.patch({
-                    url: u.Endpoints.STAGE_INSTANCE(e),
+                    url: i.Endpoints.STAGE_INSTANCE(e),
                     body: {
                         topic: t,
                         privacy_level: n
@@ -1746,7 +1970,7 @@
             }
 
             function d(e) {
-                return a.default.delete(u.Endpoints.STAGE_INSTANCE(e))
+                return a.default.delete(i.Endpoints.STAGE_INSTANCE(e))
             }
         },
         644224: function(e, t, n) {
@@ -1780,38 +2004,38 @@
                     return d
                 },
                 createSound: function() {
-                    return o
+                    return l
                 },
                 playSound: function() {
-                    return l
+                    return o
                 }
             });
-            var u = n("870696"),
+            var i = n("870696"),
                 s = n("319291"),
-                i = n("102985");
+                u = n("102985");
 
             function d(e, t) {
                 var n;
                 let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-                    u = (0, s.default)(t);
-                return o(null !== (n = u[e]) && void 0 !== n ? n : e, e, a)
+                    i = (0, s.default)(t);
+                return l(null !== (n = i[e]) && void 0 !== n ? n : e, e, a)
             }
 
-            function o(e, t) {
+            function l(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
                 return new a(e, t, n)
             }
 
-            function l(e) {
+            function o(e) {
                 var t;
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                     a = arguments.length > 2 ? arguments[2] : void 0;
-                if (i.default.disableSounds) return;
-                let d = (0, s.default)(u.default.getSoundpack()),
-                    l = o(null !== (t = d[e]) && void 0 !== t ? t : e, e, n);
-                return null != a ? l.playWithListener().then(e => {
+                if (u.default.disableSounds) return;
+                let d = (0, s.default)(i.default.getSoundpack()),
+                    o = l(null !== (t = d[e]) && void 0 !== t ? t : e, e, n);
+                return null != a ? o.playWithListener().then(e => {
                     e && a()
-                }) : l.play(), l
+                }) : o.play(), o
             }
             a = n("895737").WebAudioSound
         },
@@ -1826,32 +2050,32 @@
                 }
             }), n("70102");
             var a = n("917351"),
-                u = n.n(a),
+                i = n.n(a),
                 s = n("520497"),
-                i = n("812809"),
+                u = n("812809"),
                 d = n("42887"),
-                o = n("773336");
-            let l = "default",
-                r = l;
+                l = n("773336");
+            let o = "default",
+                r = o;
 
             function c(e, t) {
                 let n = new Audio((0, s.default)(e));
-                n.volume = (0, i.default)(t), n.play()
+                n.volume = (0, u.default)(t), n.play()
             }
 
             function f() {
                 null != window.navigator.mediaDevices && window.navigator.mediaDevices.enumerateDevices().then(e => {
                     let t = d.default.getOutputDevices(),
-                        n = u(t).sortBy(e => e.index).findIndex(e => e.id === d.default.getOutputDeviceId()),
+                        n = i(t).sortBy(e => e.index).findIndex(e => e.id === d.default.getOutputDeviceId()),
                         a = t[d.default.getOutputDeviceId()],
                         s = e.filter(e => "audiooutput" === e.kind && "communications" !== e.deviceId),
-                        i = s[n];
-                    null != a && (null == i || i.label !== a.name) && (i = s.find(e => e.label === a.name)), r = null != i ? i.deviceId : l
+                        u = s[n];
+                    null != a && (null == u || u.label !== a.name) && (u = s.find(e => e.label === a.name)), r = null != u ? u.deviceId : o
                 }).catch(() => {
-                    r = l
+                    r = o
                 })
             }
-            o.isPlatformEmbedded && (d.default.addChangeListener(f), f());
+            l.isPlatformEmbedded && (d.default.addChangeListener(f), f());
             class p {
                 get volume() {
                     return this._volume
@@ -1894,7 +2118,7 @@
                     return this._audio = null !== (e = this._audio) && void 0 !== e ? e : new Promise((e, t) => {
                         let a = new Audio;
                         a.src = n("89400")("../../sounds/".concat(this.name, ".mp3").replace("../../sounds/", "./")), a.onloadeddata = () => {
-                            a.volume = Math.min(d.default.getOutputVolume() / 100 * this._volume, 1), o.isPlatformEmbedded && a.setSinkId(r), e(a)
+                            a.volume = Math.min(d.default.getOutputVolume() / 100 * this._volume, 1), l.isPlatformEmbedded && a.setSinkId(r), e(a)
                         }, a.onerror = () => t(Error("could not play audio")), a.onended = () => this._destroyAudio(), a.load()
                     }), this._audio
                 }
