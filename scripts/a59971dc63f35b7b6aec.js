@@ -44,26 +44,26 @@
                 m = a("161778"),
                 f = a("42203"),
                 p = a("26989"),
-                h = a("945956"),
-                g = a("661919"),
-                S = a("697218"),
-                C = a("145131"),
+                g = a("945956"),
+                h = a("661919"),
+                C = a("697218"),
+                S = a("145131"),
                 v = a("158998"),
                 R = a("701964"),
-                y = a("831963"),
-                E = a("129324"),
-                D = a("48445"),
+                D = a("831963"),
+                y = a("129324"),
+                E = a("48445"),
                 T = a("990455"),
                 F = a("252260"),
                 x = a("49111"),
                 N = a("353927"),
                 b = a("782340"),
                 P = a("361430");
-            let j = (e, t, a) => (0, r.jsx)(C.default, {
-                    align: C.default.Align.CENTER,
-                    children: (0, r.jsx)(C.default.Child, {
-                        children: (0, r.jsxs)(C.default, {
-                            align: C.default.Align.CENTER,
+            let j = (e, t, a) => (0, r.jsx)(S.default, {
+                    align: S.default.Align.CENTER,
+                    children: (0, r.jsx)(S.default.Child, {
+                        children: (0, r.jsxs)(S.default, {
+                            align: S.default.Align.CENTER,
                             children: [(0, r.jsx)(o.Avatar, {
                                 size: o.AvatarSizes.SIZE_24,
                                 src: e.getAvatarURL(a, 24),
@@ -76,11 +76,11 @@
                         })
                     })
                 }),
-                I = e => (0, r.jsx)(C.default, {
-                    align: C.default.Align.CENTER,
-                    children: (0, r.jsx)(C.default.Child, {
-                        children: (0, r.jsx)(C.default, {
-                            align: C.default.Align.CENTER,
+                I = e => (0, r.jsx)(S.default, {
+                    align: S.default.Align.CENTER,
+                    children: (0, r.jsx)(S.default.Child, {
+                        children: (0, r.jsx)(S.default, {
+                            align: S.default.Align.CENTER,
                             children: (0, r.jsx)("span", {
                                 className: P.username,
                                 children: e
@@ -106,7 +106,7 @@
                         context: e
                     })
                 }), null != s && i.push({
-                    section: (0, g.keySection)(e, x.RTCDebugSections.TRANSPORT, a),
+                    section: (0, h.keySection)(e, x.RTCDebugSections.TRANSPORT, a),
                     label: b.default.Messages.RTC_DEBUG_TRANSPORT,
                     element: F.default,
                     elementProps: {
@@ -114,15 +114,15 @@
                         index: a
                     }
                 }), null != u && i.push({
-                    section: (0, g.keySection)(e, x.RTCDebugSections.OUTBOUND, a),
+                    section: (0, h.keySection)(e, x.RTCDebugSections.OUTBOUND, a),
                     label: b.default.Messages.RTC_DEBUG_RTP_OUTBOUND,
-                    element: D.default,
+                    element: E.default,
                     elementProps: {
                         context: e,
                         index: a
                     }
                 }), null != m && i.push({
-                    section: (0, g.keySection)(e, x.RTCDebugSections.CAMERA, a),
+                    section: (0, h.keySection)(e, x.RTCDebugSections.CAMERA, a),
                     label: b.default.Messages.RTC_DEBUG_CAMERA,
                     element: R.default,
                     elementProps: {
@@ -134,9 +134,9 @@
                     section: c.SectionTypes.HEADER,
                     label: b.default.Messages.RTC_DEBUG_RTP_INBOUND
                 }), Object.keys(o).forEach(t => {
-                    let l = S.default.getUser(t),
+                    let l = C.default.getUser(t),
                         s = p.default.getNick(n, t),
-                        o = (0, g.keySection)(e, t, a);
+                        o = (0, h.keySection)(e, t, a);
                     i.push({
                         section: o,
                         label: null != l ? j(l, s, n) : I(null != s ? s : t),
@@ -144,7 +144,7 @@
                         onClick: () => {
                             d.setSection(o)
                         },
-                        element: E.default,
+                        element: y.default,
                         elementProps: {
                             context: e,
                             index: a,
@@ -159,10 +159,10 @@
                 let {
                     defaultStats: a,
                     streamStats: i
-                } = (0, s.useStateFromStores)([g.default], () => ({
-                    defaultStats: g.default.getAllStats(N.MediaEngineContextTypes.DEFAULT),
-                    streamStats: g.default.getAllStats(N.MediaEngineContextTypes.STREAM)
-                }), [], s.statesWillNeverBeEqual), l = (0, s.useStateFromStores)([h.default, f.default], () => f.default.getChannel(h.default.getChannelId())), p = null === (e = a.concat(i).find(e => null != e.screenshare)) || void 0 === e ? void 0 : e.screenshare, S = null === (t = i.find(e => null != e.clips)) || void 0 === t ? void 0 : t.clips, C = (0, s.useStateFromStores)([m.default], () => m.default.theme), v = (0, s.useStateFromStores)([m.default], () => m.default.darkSidebar ? x.ThemeTypes.DARK : void 0), R = (0, s.useStateFromStores)([g.default], () => g.default.getSection()), E = (0, s.useStateFromStores)([g.default], () => g.default.getVideoStreams()), D = function(e) {
+                } = (0, s.useStateFromStores)([h.default], () => ({
+                    defaultStats: h.default.getAllStats(N.MediaEngineContextTypes.DEFAULT),
+                    streamStats: h.default.getAllStats(N.MediaEngineContextTypes.STREAM)
+                }), [], s.statesWillNeverBeEqual), l = (0, s.useStateFromStores)([g.default, f.default], () => f.default.getChannel(g.default.getChannelId())), p = null === (e = a.concat(i).find(e => null != e.screenshare)) || void 0 === e ? void 0 : e.screenshare, C = null === (t = i.find(e => null != e.clips)) || void 0 === t ? void 0 : t.clips, S = (0, s.useStateFromStores)([m.default], () => m.default.theme), v = (0, s.useStateFromStores)([m.default], () => m.default.darkSidebar ? x.ThemeTypes.DARK : void 0), R = (0, s.useStateFromStores)([h.default], () => h.default.getSection()), y = (0, s.useStateFromStores)([h.default], () => h.default.getVideoStreams()), E = function(e) {
                     let {
                         defaultStats: t,
                         streamStats: a,
@@ -183,12 +183,12 @@
                     })), null != l && (f.push(p), f.push({
                         section: x.RTCDebugSections.CLIPS,
                         label: b.default.Messages.RTC_DEBUG_CLIPS,
-                        element: y.default,
+                        element: D.default,
                         elementProps: {
                             clips: l
                         }
                     })), u.length > 0 && u.unshift(p);
-                    let h = null != s ? [{
+                    let g = null != s ? [{
                         section: c.SectionTypes.CUSTOM,
                         label: "Channel Name",
                         element: () => (0, r.jsx)(o.Heading, {
@@ -197,23 +197,23 @@
                             children: s.name
                         })
                     }] : [];
-                    return [...h, ...d, ...u, ...m, ...f]
+                    return [...g, ...d, ...u, ...m, ...f]
                 }({
                     defaultStats: a,
                     streamStats: i,
-                    videoStreams: E,
+                    videoStreams: y,
                     screenshare: p,
-                    clips: S,
+                    clips: C,
                     channel: l
                 });
                 return n.useEffect(() => () => {
                     d.close()
                 }, []), (0, r.jsx)(u.default, {
-                    theme: C,
+                    theme: S,
                     sidebarTheme: v,
                     section: R,
                     onSetSection: d.setSection,
-                    sections: D
+                    sections: E
                 })
             }
         },
@@ -296,10 +296,10 @@
             "use strict";
             a.r(t), a.d(t, {
                 renderTwoColumns: function() {
-                    return h
+                    return g
                 },
                 renderStreams: function() {
-                    return S
+                    return C
                 }
             }), a("424973"), a("222007");
             var r = a("37983");
@@ -316,7 +316,7 @@
                 f = a("361430"),
                 p = a("926622");
 
-            function h(e) {
+            function g(e) {
                 let t = [],
                     a = 0;
                 for (e.length % 2 != 0 && e.push((0, r.jsx)(u.default, {
@@ -329,17 +329,17 @@
                 }, a++));
                 return t
             }
-            let g = {
+            let h = {
                 ssrc: 1,
                 codec: 2
             };
 
-            function S(e, t, a, n) {
+            function C(e, t, a, n) {
                 return e.map(e => {
                     let u = [];
                     for (let t of Object.keys(e).sort((e, t) => {
-                            let a = g[e],
-                                r = g[t];
+                            let a = h[e],
+                                r = h[t];
                             if (a !== r) return void 0 === a ? 1 : void 0 === r ? -1 : a - r;
                             return d.graphs[e] !== d.graphs[t] ? d.graphs[e] ? 1 : -1 : e > t ? 1 : -1
                         })) {
@@ -366,7 +366,7 @@
                                     userId: a
                                 })
                             }) : null
-                        }(e, t, a, n), h(u)]
+                        }(e, t, a, n), g(u)]
                     }, "".concat(e.type, " + ").concat(e.ssrc))
                 })
             }
@@ -375,7 +375,7 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return h
+                    return g
                 }
             }), a("70102");
             var r = a("37983"),
@@ -403,15 +403,15 @@
                     let i = o.default.getGuildId(),
                         d = u.default.getUser(t),
                         p = s.default.getNick(i, t),
-                        h = null == d ? f.default.Messages.RTC_DEBUG_RTP_INBOUND : "".concat(f.default.Messages.RTC_DEBUG_RTP_INBOUND, " — ").concat(null != p ? p : c.default.getName(d));
+                        g = null == d ? f.default.Messages.RTC_DEBUG_RTP_INBOUND : "".concat(f.default.Messages.RTC_DEBUG_RTP_INBOUND, " — ").concat(null != p ? p : c.default.getName(d));
                     return (0, r.jsx)(l.FormSection, {
                         tag: l.FormTitleTags.H2,
-                        title: h,
+                        title: g,
                         children: (0, m.renderStreams)(e, a, t, n)
                     })
                 }
             }
-            var h = i.default.connectStores([d.default], e => {
+            var g = i.default.connectStores([d.default], e => {
                 let {
                     context: t,
                     index: a,
@@ -513,7 +513,7 @@
                     return v
                 },
                 Item: function() {
-                    return D
+                    return E
                 }
             }), a("222007"), a("424973"), a("106442"), a("175143");
             var r = a("37983"),
@@ -564,7 +564,11 @@
                 frameRateNetwork: "Frame Rate (Network)",
                 frameRateRender: "Frame Rate (Render)",
                 framesDecoded: "Frames Decoded",
+                framesDecodeErrors: "Decoder Error Count",
                 framesDropped: "Frames Dropped",
+                framesDroppedRateLimiter: "Frames Dropped by Bitrate Limiter",
+                framesDroppedEncoderQueue: "Frames Dropped by Encoder Queue",
+                framesDroppedCongestionWindow: "Frames Dropped by Congestion Window",
                 framesEncoded: "Frames Encoded",
                 framesReceived: "Frames Received",
                 framesSent: "Frames Sent",
@@ -643,19 +647,19 @@
                 return "".concat(e, " ms")
             }
 
-            function h(e) {
+            function g(e) {
                 return "".concat(e.toFixed(0), "%")
             }
 
-            function g(e) {
+            function h(e) {
                 return e ? "Yes" : "No"
             }
 
-            function S(e) {
+            function C(e) {
                 return "".concat(Math.max(e, 0).toFixed(2), " dB")
             }
 
-            function C(e) {
+            function S(e) {
                 let {
                     last: t
                 } = e;
@@ -679,13 +683,13 @@
                     voiceActivityDetectorProcessTime: !0
                 },
                 R = {
-                    accelerateRate: h,
-                    audioDetected: g,
-                    audioLevel: S,
+                    accelerateRate: g,
+                    audioDetected: h,
+                    audioLevel: C,
                     availableOutgoingBitrate: c,
                     averageDecodeTime: p,
                     averageEncodeTime: p,
-                    bandwidthLimitedResolution: g,
+                    bandwidthLimitedResolution: h,
                     bitrate: c,
                     bitrateTarget: c,
                     bytesReceived: m,
@@ -697,17 +701,17 @@
                         } = e;
                         return a = null != (a = "" === a ? "unknown" : a) ? a : "unknown", "".concat(a[0].toUpperCase()).concat(a.slice(1), " (").concat(t, ")")
                     },
-                    cpuLimitedResolution: g,
+                    cpuLimitedResolution: h,
                     currentDelay: p,
                     decoderImplementationName: f,
                     delayEstimate: p,
                     encoderImplementationName: f,
-                    encoderQualityPsnr: S,
+                    encoderQualityPsnr: C,
                     encoderQualityVmaf: e => "".concat(e.toFixed(2)),
-                    encodeUsage: h,
-                    expandRate: h,
+                    encodeUsage: g,
+                    expandRate: g,
                     filter: f,
-                    fractionLost: h,
+                    fractionLost: g,
                     inboundBitrateEstimate: c,
                     jitter: p,
                     jitterBuffer: p,
@@ -717,10 +721,10 @@
                     outboundBitrateEstimate: c,
                     pacerDelay: p,
                     ping: p,
-                    preemptiveExpandRate: h,
+                    preemptiveExpandRate: g,
                     receiverBitrateEstimate: c,
-                    relativePlayoutDelay: C,
-                    relativeReceptionDelay: C,
+                    relativePlayoutDelay: S,
+                    relativeReceptionDelay: S,
                     renderDelay: p,
                     resolution: e => {
                         let {
@@ -732,16 +736,16 @@
                     secureFramesProtocolVersion: function(e) {
                         return e > 0 ? "Static Key Test (".concat(e, ")") : "Disabled"
                     },
-                    secondaryDecodedRate: h,
-                    speechExpandRate: h,
+                    secondaryDecodedRate: g,
+                    speechExpandRate: g,
                     targetDelay: p,
                     videohookBackend: function(e) {
                         let t = ["N/A", "Direct3D 9", "Direct3D 10", "Direct3D 11", "Direct3D 12", "OpenGL", "Vulkan"];
                         return e < t.length ? t[e] : "Unknown"
                     }
                 },
-                y = e => e,
-                E = e => {
+                D = e => e,
+                y = e => {
                     let [t] = n.useState([]);
                     return t.push({
                         value: e.value,
@@ -753,26 +757,26 @@
                     })
                 };
 
-            function D(e) {
+            function E(e) {
                 var t, a, n, i;
                 let {
                     label: l,
                     value: c,
                     section: m
-                } = e, f = null !== (a = R[l]) && void 0 !== a ? a : y;
+                } = e, f = null !== (a = R[l]) && void 0 !== a ? a : D;
                 let p = s.graphs[l] && (Array.isArray(i = c) && i.length > 0 && "number" == typeof i[0].value ? (0, r.jsx)(o.default, {
                         dataPoints: i,
                         width: 300,
                         height: 100
-                    }) : "number" == typeof i ? (0, r.jsx)(E, {
+                    }) : "number" == typeof i ? (0, r.jsx)(y, {
                         value: i,
                         width: 300,
                         height: 100
                     }) : void 0),
-                    h = Array.isArray(c) ? null === (t = c.at(-1)) || void 0 === t ? void 0 : t.value : c;
+                    g = Array.isArray(c) ? null === (t = c.at(-1)) || void 0 === t ? void 0 : t.value : c;
                 return (0, r.jsx)(d.default, {
                     label: l,
-                    valueRendered: f(h),
+                    valueRendered: f(g),
                     section: m,
                     renderGraph: p,
                     children: null !== (n = u[l]) && void 0 !== n ? n : l
@@ -874,15 +878,15 @@
                 m = a("205817"),
                 f = a("102985"),
                 p = a("697218"),
-                h = a("145131"),
-                g = a("387111"),
-                S = a("687609"),
-                C = a("245622"),
+                g = a("145131"),
+                h = a("387111"),
+                C = a("687609"),
+                S = a("245622"),
                 v = a("601615"),
                 R = a("266331"),
-                y = a("353927"),
-                E = a("782340"),
-                D = a("361430"),
+                D = a("353927"),
+                y = a("782340"),
+                E = a("361430"),
                 T = a("926622");
             class F extends n.PureComponent {
                 render() {
@@ -906,18 +910,18 @@
                             }, t)
                         }),
                         d = l.map(i.receiverReports, e => {
-                            let t = (0, r.jsxs)(h.default, {
+                            let t = (0, r.jsxs)(g.default, {
                                     id: "bitrate-".concat(e.id),
-                                    justify: h.default.Justify.BETWEEN,
+                                    justify: g.default.Justify.BETWEEN,
                                     children: [(0, r.jsx)("span", {
                                         children: "Bitrate:"
                                     }), (0, r.jsxs)("span", {
                                         children: [(e.bitrate / 1e3).toFixed(2), " Kbps"]
                                     })]
                                 }),
-                                a = (0, r.jsxs)(h.default, {
+                                a = (0, r.jsxs)(g.default, {
                                     id: "lost-".concat(e.id),
-                                    justify: h.default.Justify.BETWEEN,
+                                    justify: g.default.Justify.BETWEEN,
                                     children: [(0, r.jsx)("span", {
                                         children: "Packet Loss:"
                                     }), (0, r.jsxs)("span", {
@@ -925,7 +929,7 @@
                                     })]
                                 }),
                                 n = p.default.getUser(e.id);
-                            var i = g.default.getNickname(c.default.getGuildId(), void 0, n);
+                            var i = h.default.getNickname(c.default.getGuildId(), void 0, n);
                             return null == i && (i = null != n ? n.username : e.id), (0, r.jsx)(v.default, {
                                 label: e.id,
                                 valueRendered: [t, a],
@@ -934,11 +938,11 @@
                         });
                     return (0, r.jsxs)(o.FormSection, {
                         tag: o.FormTitleTags.H2,
-                        title: E.default.Messages.RTC_DEBUG_TRANSPORT + (null != t ? " - " + t : ""),
-                        className: D.allowSelection,
-                        children: [(0, C.renderTwoColumns)(s), 0 === d.length ? null : (0, r.jsx)(o.FormDivider, {
+                        title: y.default.Messages.RTC_DEBUG_TRANSPORT + (null != t ? " - " + t : ""),
+                        className: E.allowSelection,
+                        children: [(0, S.renderTwoColumns)(s), 0 === d.length ? null : (0, r.jsx)(o.FormDivider, {
                             className: T.marginBottom20
-                        }), (0, C.renderTwoColumns)(d)]
+                        }), (0, S.renderTwoColumns)(d)]
                     })
                 }
             }
@@ -946,12 +950,12 @@
                 let {
                     context: t,
                     index: a
-                } = e, r = u.default.getAllStats(t)[a], n = t === y.MediaEngineContextTypes.STREAM ? m.default.getHostname(m.default.getActiveStreamKey()) : d.default.getHostname();
+                } = e, r = u.default.getAllStats(t)[a], n = t === D.MediaEngineContextTypes.STREAM ? m.default.getHostname(m.default.getActiveStreamKey()) : d.default.getHostname();
                 return {
                     hidePersonalInformation: f.default.hidePersonalInformation,
                     transport: null != r ? r.transport : null,
                     mediaSessionId: d.default.getMediaSessionId(),
-                    hostname: S.default.getShortHostname(n)
+                    hostname: C.default.getShortHostname(n)
                 }
             })(F)
         },
