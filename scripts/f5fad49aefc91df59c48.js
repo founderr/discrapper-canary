@@ -729,11 +729,8 @@
                         } = e;
                         return "".concat(t, "x").concat(a)
                     },
-                    secureFramesProtocolVersion: e => {
-                        let {
-                            protocolVersion: t
-                        } = e;
-                        return t > 0 ? "Static Key Test (".concat(t, ")") : "Disabled"
+                    secureFramesProtocolVersion: function(e) {
+                        return e > 0 ? "Static Key Test (".concat(e, ")") : "Disabled"
                     },
                     secondaryDecodedRate: h,
                     speechExpandRate: h,
