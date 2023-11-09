@@ -1297,6 +1297,7 @@
                             onClick: g.navigateToPremiumMarketingPage
                         })
                     }), (0, n.jsx)(y, {
+                        trialOffer: i,
                         className: A.subscribeButtonWide,
                         subscriptionTier: L.PremiumSubscriptionSKUs.TIER_2,
                         analyticsLocationObject: r,
