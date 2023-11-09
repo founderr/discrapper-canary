@@ -251,17 +251,17 @@
                 }, {
                     quantize: function(a, u) {
                         if (!a.length || u < 2 || u > 256) return !1;
-                        var l, s, c, d, f, E, p, h, _, g, I, m, v, S, T, C, R = (l = a, f = Array(32768), l.forEach(function(n) {
+                        var l, s, c, d, f, E, p, h, _, g, I, m, v, S, C, T, A = (l = a, f = Array(32768), l.forEach(function(n) {
                                 c = n[0] >> e, d = n[1] >> e, f[s = t(c, d, n[2] >> e)] = (f[s] || 0) + 1
                             }), f),
-                            A = 0;
-                        R.forEach(function() {
-                            A++
+                            R = 0;
+                        A.forEach(function() {
+                            R++
                         });
-                        var M = (E = a, p = R, I = 1e6, m = 0, v = 1e6, S = 0, T = 1e6, C = 0, E.forEach(function(t) {
-                                h = t[0] >> e, _ = t[1] >> e, g = t[2] >> e, h < I ? I = h : h > m && (m = h), _ < v ? v = _ : _ > S && (S = _), g < T ? T = g : g > C && (C = g)
-                            }), new r(I, m, v, S, T, C, p)),
-                            N = new n(function(e, t) {
+                        var N = (E = a, p = A, I = 1e6, m = 0, v = 1e6, S = 0, C = 1e6, T = 0, E.forEach(function(t) {
+                                h = t[0] >> e, _ = t[1] >> e, g = t[2] >> e, h < I ? I = h : h > m && (m = h), _ < v ? v = _ : _ > S && (S = _), g < C ? C = g : g > T && (T = g)
+                            }), new r(I, m, v, S, C, T, p)),
+                            M = new n(function(e, t) {
                                 return i.naturalOrder(e.count(), t.count())
                             });
 
@@ -313,17 +313,17 @@
                                                     return r[s] = a, o[u] = r[s] + 1, [r, o]
                                                 }
                                         }
-                                    }(R, r),
+                                    }(A, r),
                                     l = u[0],
                                     s = u[1];
                                 if (!l) return;
                                 if (e.push(l), s && (e.push(s), o++), o >= n || a++ > 1e3) return
                             }
                         }
-                        N.push(M), b(N, .75 * u);
+                        M.push(N), b(M, .75 * u);
                         for (var y = new n(function(e, t) {
                                 return i.naturalOrder(e.count() * e.volume(), t.count() * t.volume())
-                            }); N.size();) y.push(N.pop());
+                            }); M.size();) y.push(M.pop());
                         b(y, u - y.size());
                         for (var O = new o; y.size();) O.push(y.pop());
                         return O
@@ -523,33 +523,33 @@
                         for (let o = 0; o < n; o++)
                             for (let a = o ? 0 : 1; a * n < t * (n - o); a++) r.push(((e[I + (m >> 1)] >> ((1 & m++) << 2) & 15) / 7.5 - 1) * i);
                         return r
-                    }, S = v(p, h, (u >> 18 & 31) / 31), T = v(3, 3, 1.25 * ((l >> 3 & 63) / 63)), C = v(3, 3, 1.25 * ((l >> 9 & 63) / 63)), R = f && v(5, 5, g), A = i(e), M = a(A > 1 ? 32 : 32 * A), N = a(A > 1 ? 32 / A : 32), b = new Uint8Array(M * N * 4), y = [], O = [];
-                    for (let e = 0, i = 0; e < N; e++)
-                        for (let a = 0; a < M; a++, i += 4) {
+                    }, S = v(p, h, (u >> 18 & 31) / 31), C = v(3, 3, 1.25 * ((l >> 3 & 63) / 63)), T = v(3, 3, 1.25 * ((l >> 9 & 63) / 63)), A = f && v(5, 5, g), R = i(e), N = a(R > 1 ? 32 : 32 * R), M = a(R > 1 ? 32 / R : 32), b = new Uint8Array(N * M * 4), y = [], O = [];
+                    for (let e = 0, i = 0; e < M; e++)
+                        for (let a = 0; a < N; a++, i += 4) {
                             let u = s,
                                 l = c,
                                 E = d,
                                 g = _;
-                            for (let e = 0, n = r(p, f ? 5 : 3); e < n; e++) y[e] = o(t / M * (a + .5) * e);
-                            for (let n = 0, i = r(h, f ? 5 : 3); n < i; n++) O[n] = o(t / N * (e + .5) * n);
+                            for (let e = 0, n = r(p, f ? 5 : 3); e < n; e++) y[e] = o(t / N * (a + .5) * e);
+                            for (let n = 0, i = r(h, f ? 5 : 3); n < i; n++) O[n] = o(t / M * (e + .5) * n);
                             for (let e = 0, t = 0; e < h; e++)
                                 for (let n = e ? 0 : 1, i = 2 * O[e]; n * h < p * (h - e); n++, t++) u += S[t] * y[n] * i;
                             for (let e = 0, t = 0; e < 3; e++)
                                 for (let n = e ? 0 : 1, i = 2 * O[e]; n < 3 - e; n++, t++) {
                                     let e = y[n] * i;
-                                    l += T[t] * e, E += C[t] * e
+                                    l += C[t] * e, E += T[t] * e
                                 }
                             if (f)
                                 for (let e = 0, t = 0; e < 5; e++)
-                                    for (let n = e ? 0 : 1, i = 2 * O[e]; n < 5 - e; n++, t++) g += R[t] * y[n] * i;
+                                    for (let n = e ? 0 : 1, i = 2 * O[e]; n < 5 - e; n++, t++) g += A[t] * y[n] * i;
                             let I = u - 2 / 3 * l,
                                 m = (3 * u - I + E) / 2,
                                 v = m - E;
                             b[i] = r(0, 255 * n(1, m)), b[i + 1] = r(0, 255 * n(1, v)), b[i + 2] = r(0, 255 * n(1, I)), b[i + 3] = r(0, 255 * n(1, g))
                         }
                     return {
-                        w: M,
-                        h: N,
+                        w: N,
+                        h: M,
                         rgba: b
                     }
                 }(e);
@@ -803,7 +803,7 @@
                                 children: h
                             })
                         })]
-                    }) : null, T = m ? (0, i.jsx)(u.Card, {
+                    }) : null, C = m ? (0, i.jsx)(u.Card, {
                         type: u.Card.Types.SUCCESS,
                         className: s.card,
                         children: (0, i.jsx)(u.Text, {
@@ -827,7 +827,7 @@
                                     variant: "text-md/normal",
                                     className: s.spacing,
                                     children: p
-                                }) : null, v, T, (0, i.jsxs)(u.FormItem, {
+                                }) : null, v, C, (0, i.jsxs)(u.FormItem, {
                                     title: this.getLabelText(),
                                     className: s.spacing,
                                     children: [(0, i.jsx)(u.TextInput, {
@@ -1578,13 +1578,13 @@
                     return v
                 },
                 updateImpersonatedChannels: function() {
-                    return T
-                },
-                updateImpersonatedRoles: function() {
                     return C
                 },
+                updateImpersonatedRoles: function() {
+                    return T
+                },
                 updateImpersonatedData: function() {
-                    return R
+                    return A
                 }
             }), n("222007");
             var i = n("913144"),
@@ -1648,7 +1648,7 @@
                 }
             }
 
-            function T(e, t, n) {
+            function C(e, t, n) {
                 let i = new Set(f.default.getOptedInChannels(e));
                 t.forEach(e => i.add(e)), n.forEach(e => i.delete(e)), m(e, {
                     type: h.ImpersonateType.NEW_MEMBER,
@@ -1656,7 +1656,7 @@
                 })
             }
 
-            function C(e, t) {
+            function T(e, t) {
                 let n = s.default.getGuild(e);
                 if (null == n) return;
                 ! function(e, t) {
@@ -1668,7 +1668,7 @@
                         if (i.some(e => !t.roles.includes(e))) return !0;
                         let r = [...u.default.getSelectableChannelIds(e), ...u.default.getVocalChannelIds(e)],
                             o = r.filter(e => !n.includes(e));
-                        return o.length > 0 && T(e, o, []), !1
+                        return o.length > 0 && C(e, o, []), !1
                     })
                 }(e, t);
                 let i = {};
@@ -1678,7 +1678,7 @@
                 })
             }
 
-            function R(e, t) {
+            function A(e, t) {
                 m(e, {
                     type: h.ImpersonateType.NEW_MEMBER,
                     ...t
@@ -1991,12 +1991,12 @@
                     analyticsLocation: m,
                     analyticsSourceLocation: v,
                     isGift: S = !1,
-                    giftMessage: T,
-                    subscriptionTier: C,
-                    trialId: R,
-                    postSuccessGuild: A,
-                    openInvoiceId: M,
-                    applicationId: N,
+                    giftMessage: C,
+                    subscriptionTier: T,
+                    trialId: A,
+                    postSuccessGuild: R,
+                    openInvoiceId: N,
+                    applicationId: M,
                     referralTrialOfferId: b,
                     giftRecipient: y,
                     returnRef: O
@@ -2013,10 +2013,10 @@
                         return (0, i.jsx)(e, {
                             ...o,
                             loadId: w,
-                            subscriptionTier: C,
-                            skuId: C,
+                            subscriptionTier: T,
+                            skuId: T,
                             isGift: S,
-                            giftMessage: T,
+                            giftMessage: C,
                             giftRecipient: y,
                             initialPlanId: t,
                             followupSKUInfo: E,
@@ -2031,11 +2031,11 @@
                             analyticsObject: I,
                             analyticsLocation: m,
                             analyticsSourceLocation: v,
-                            trialId: R,
-                            postSuccessGuild: A,
+                            trialId: A,
+                            postSuccessGuild: R,
                             planGroup: f.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
-                            openInvoiceId: M,
-                            applicationId: N,
+                            openInvoiceId: N,
+                            applicationId: M,
                             referralTrialOfferId: b,
                             returnRef: O
                         })
@@ -2050,8 +2050,8 @@
                             source: v,
                             subscription_type: d.SubscriptionTypes.PREMIUM,
                             is_gift: S,
-                            eligible_for_trial: null != R,
-                            application_id: N,
+                            eligible_for_trial: null != A,
+                            application_id: M,
                             location_stack: g
                         }), (0, a.clearError)(), (0, u.clearPurchaseTokenAuthState)(), null == p || p(L), L && (!S && c.ComponentDispatch.dispatch(d.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED), null == _ || _())
                     },
@@ -2129,7 +2129,7 @@
                 PromotionFlags: function() {
                     return u
                 }
-            }), (o = i || (i = {}))[o.DEFAULT = 0] = "DEFAULT", o[o.WINTER = 1] = "WINTER", (a = r || (r = {}))[a.SNOWGLOBE = 1] = "SNOWGLOBE", a[a.BOX = 2] = "BOX", a[a.CUP = 3] = "CUP", a[a.STANDARD_BOX = 4] = "STANDARD_BOX", a[a.CAKE = 5] = "CAKE", a[a.CHEST = 6] = "CHEST", a[a.COFFEE = 7] = "COFFEE";
+            }), (o = i || (i = {}))[o.DEFAULT = 0] = "DEFAULT", o[o.WINTER = 1] = "WINTER", (a = r || (r = {}))[a.SNOWGLOBE = 1] = "SNOWGLOBE", a[a.BOX = 2] = "BOX", a[a.CUP = 3] = "CUP", a[a.STANDARD_BOX = 4] = "STANDARD_BOX", a[a.CAKE = 5] = "CAKE", a[a.CHEST = 6] = "CHEST", a[a.COFFEE = 7] = "COFFEE", a[a.SEASONAL_STANDARD_BOX = 8] = "SEASONAL_STANDARD_BOX", a[a.SEASONAL_CAKE = 9] = "SEASONAL_CAKE", a[a.SEASONAL_CHEST = 10] = "SEASONAL_CHEST", a[a.SEASONAL_COFFEE = 11] = "SEASONAL_COFFEE";
             let u = Object.freeze({
                 IS_BLOCKED_IOS: 32,
                 IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
