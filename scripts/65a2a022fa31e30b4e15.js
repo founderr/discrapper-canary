@@ -1757,7 +1757,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "244971"
+                        buildNumber: "244974"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -12339,29 +12339,28 @@
             function D(e) {
                 let {
                     height: t,
-                    onClose: n,
-                    user: l
+                    onClose: n
                 } = e, {
-                    dismiss: i
-                } = (0, p.default)(l), {
-                    categories: r,
-                    isFetching: f
+                    dismiss: l
+                } = (0, p.default)(), {
+                    categories: i,
+                    isFetching: r
                 } = (0, m.default)(), {
-                    pendingAvatarDecoration: C,
-                    setPendingAvatarDecoration: h
+                    pendingAvatarDecoration: f,
+                    setPendingAvatarDecoration: C
                 } = (0, I.default)({
                     isTryItOut: !0
                 }), {
-                    analyticsLocations: T
-                } = (0, _.default)(P), L = s.useCallback(() => {
-                    i(g.ContentDismissActionType.PRIMARY), n(), (0, A.openCollectiblesShop)({
-                        analyticsLocations: T,
+                    analyticsLocations: h
+                } = (0, _.default)(P), T = s.useCallback(() => {
+                    l(g.ContentDismissActionType.PRIMARY), n(), (0, A.openCollectiblesShop)({
+                        analyticsLocations: h,
                         analyticsSource: P
                     })
-                }, [i, n, T]), v = s.useCallback(() => {
-                    i(g.ContentDismissActionType.DISMISS), n()
-                }, [i, n]), D = (0, d.useStateFromStores)([E.default], () => E.default.useReducedMotion), y = (0, u.useSpring)({
-                    immediate: D,
+                }, [l, n, h]), L = s.useCallback(() => {
+                    l(g.ContentDismissActionType.DISMISS), n()
+                }, [l, n]), v = (0, d.useStateFromStores)([E.default], () => E.default.useReducedMotion), D = (0, u.useSpring)({
+                    immediate: v,
                     from: {
                         transform: "translate3d(-110%, 0, 0)",
                         height: t
@@ -12375,18 +12374,18 @@
                         stiffness: 100,
                         damping: 15
                     }
-                }), U = s.useMemo(() => (0, N.getAvatarDecorationsFromCategories)(r), [r]);
+                }), y = s.useMemo(() => (0, N.getAvatarDecorationsFromCategories)(i), [i]);
                 return (s.useEffect(() => () => {
-                    h(null)
-                }, [h]), s.useEffect(() => {
-                    if (null == C) {
+                    C(null)
+                }, [C]), s.useEffect(() => {
+                    if (null == f) {
                         let e = 3 * M(null == t ? 0 : t),
-                            n = o(0, Math.min(e, U.length) - 1);
-                        h(U[n])
+                            n = o(0, Math.min(e, y.length) - 1);
+                        C(y[n])
                     }
-                }, [U, h, t, C]), null == t) ? null : (0, a.jsxs)(u.animated.div, {
+                }, [y, C, t, f]), null == t) ? null : (0, a.jsxs)(u.animated.div, {
                     className: O.container,
-                    style: y,
+                    style: D,
                     children: [(0, a.jsx)("div", {
                         className: O.content,
                         children: (0, a.jsx)(c.HeadingLevel, {
@@ -12395,7 +12394,7 @@
                                 className: O.title,
                                 children: [R.default.Messages.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL_TITLE, (0, a.jsx)(c.Clickable, {
                                     className: O.close,
-                                    onClick: v,
+                                    onClick: L,
                                     children: (0, a.jsx)(S.default, {
                                         className: O.closeIcon
                                     })
@@ -12407,15 +12406,15 @@
                             })
                         })
                     }), (0, a.jsx)(x, {
-                        avatarDecorations: U,
-                        isFetching: f
+                        avatarDecorations: y,
+                        isFetching: r
                     }), (0, a.jsx)("div", {
                         className: O.ctaContainer,
                         children: (0, a.jsx)(c.Button, {
                             className: O.cta,
                             size: c.Button.Sizes.LARGE,
                             color: c.Button.Colors.BRAND_NEW,
-                            onClick: L,
+                            onClick: T,
                             children: R.default.Messages.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL_CTA
                         })
                     })]
@@ -12536,28 +12535,24 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return l
                 }
             }), n("222007");
-            var a = n("151426"),
-                s = n("875212"),
-                l = n("509802"),
-                i = e => {
-                    var t;
-                    let n = "useShouldShowAccountProfilePopoutCollectiblesUpsell";
-                    (0, s.useTriggerDebuggingAA)({
-                        location: n + " auto on",
+            var a = n("875212"),
+                s = n("509802"),
+                l = () => {
+                    let e = "useShouldShowAccountProfilePopoutCollectiblesUpsell";
+                    (0, a.useTriggerDebuggingAA)({
+                        location: e + " auto on",
                         autoTrackExposure: !0
-                    }), (0, s.useTriggerDebuggingAA)({
-                        location: n + " auto off",
+                    }), (0, a.useTriggerDebuggingAA)({
+                        location: e + " auto off",
                         autoTrackExposure: !1
                     });
-                    let i = (null === (t = e.avatarDecoration) || void 0 === t ? void 0 : t.skuId) != null,
-                        [r, o] = (0, l.useDismissibleContentGroup)(i ? [] : [a.DismissibleContent.COLLECTIBLES_STATUS_POPOUT_UPSELL], void 0, !0),
-                        u = r === a.DismissibleContent.COLLECTIBLES_STATUS_POPOUT_UPSELL;
+                    let [t, n] = (0, s.useDismissibleContentGroup)([], void 0, !0);
                     return {
-                        shouldShow: u,
-                        dismiss: o
+                        shouldShow: !1,
+                        dismiss: n
                     }
                 }
         },
@@ -22959,7 +22954,7 @@
                     })),
                     {
                         shouldShow: Z
-                    } = (0, A.default)(l),
+                    } = (0, A.default)(),
                     {
                         ref: X,
                         height: J
@@ -22991,8 +22986,7 @@
                         ref: X,
                         children: [Z && (0, a.jsx)(S.default, {
                             height: J,
-                            onClose: v,
-                            user: l
+                            onClose: v
                         }), (0, a.jsxs)(g.default, {
                             user: l,
                             profileType: k.UserProfileTypes.POPOUT,
