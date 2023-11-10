@@ -6981,21 +6981,6 @@
                     return !!n && i
                 }
         },
-        18346: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return s
-                }
-            });
-            var i = n("42887"),
-                a = n("773336"),
-                l = n("353927");
-
-            function s() {
-                return a.isDesktop() && i.default.getMediaEngine().supports(l.Features.CLIPS)
-            }
-        },
         139514: function(e, t, n) {
             "use strict";
             var i, a;
