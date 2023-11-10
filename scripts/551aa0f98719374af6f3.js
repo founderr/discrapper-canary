@@ -7603,26 +7603,26 @@
                             })
                         }
                     })
-                }, [y, x, t]), b = a.useCallback((e, t) => {
-                    let n = (n, a) => {
-                            a && d.NonSpamRetrainingOptIn.updateSetting(n), n && null != t && (0, r.submitHamReportForFirstDM)(t), y(e.id), c.default.track(p.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
+                }, [y, x, t]), b = a.useCallback((e, t, n) => {
+                    let a = (a, s) => {
+                            s && d.NonSpamRetrainingOptIn.updateSetting(a), a && null != t && (0, r.submitHamReportForFirstDM)(t), y(e.id), c.default.track(p.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
                                 action: m.MessageRequestAnalyticsAction.ACCEPT_HAM_CONFIRMATION_PROMPT,
                                 channel_id: e.id,
-                                is_dont_show_again_checked: a,
-                                non_spam_retraining_opt_in: n
-                            })
+                                is_dont_show_again_checked: s,
+                                non_spam_retraining_opt_in: a
+                            }), null != n && n()
                         },
-                        a = d.NonSpamRetrainingOptIn.getSetting();
-                    null == a ? (0, h.onMarkAsNotSpamConfirmationModal)({
+                        s = d.NonSpamRetrainingOptIn.getSetting();
+                    null == s ? (0, h.onMarkAsNotSpamConfirmationModal)({
                         channel: e,
-                        onConfirm: n,
+                        onConfirm: a,
                         onCancel: () => {
                             c.default.track(p.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
                                 action: m.MessageRequestAnalyticsAction.DISMISS_HAM_CONFIRMATION_PROMPT,
                                 channel_id: e.id
                             })
                         }
-                    }) : n(a)
+                    }) : a(s)
                 }, [y]);
                 return {
                     acceptMessageRequest: g ? j : y,
