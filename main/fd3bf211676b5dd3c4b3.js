@@ -2502,6 +2502,9 @@
                 some(e, t) {
                     return this._array.some(e, t)
                 }
+                filter(e, t) {
+                    return this._array.filter(e, t)
+                }
                 forAll(e, t) {
                     this._before.forEach(e, t), this._array.forEach(e, t), this._after.forEach(e, t)
                 }
