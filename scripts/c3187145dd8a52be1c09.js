@@ -164,17 +164,17 @@
                     isAnimationDone: l,
                     guildId: s,
                     children: r
-                } = e, m = (0, i.useStateFromStores)([C.default], () => C.default.getHardwareClassification()), E = m === h.ClipsHardwareClassification.MEETS_MINIMUM || m === h.ClipsHardwareClassification.UNKNOWN, I = m === h.ClipsHardwareClassification.BELOW_MINIMUM, x = l && (E || I) && !t, [A, R] = (0, c.useGetDismissibleContent)(x ? [u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), v = A === u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
+                } = e, m = (0, i.useStateFromStores)([C.default], () => C.default.getHardwareClassification()), E = m === h.ClipsHardwareClassification.MEETS_MINIMUM || m === h.ClipsHardwareClassification.UNKNOWN, I = m === h.ClipsHardwareClassification.BELOW_MINIMUM, x = l && (E || I) && !t, [A, v] = (0, c.useGetDismissibleContent)(x ? [u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), R = A === u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
                 n.useEffect(() => {
                     t && (0, d.markDismissibleContentAsDismissed)(u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK, {
                         forceTrack: !0
                     })
                 }, [t]);
                 let T = (e, t) => {
-                    e.stopPropagation(), e.preventDefault(), null == t || t(), R()
+                    e.stopPropagation(), e.preventDefault(), null == t || t(), v()
                 };
                 return (0, a.jsx)(o.Popout, {
-                    shouldShow: v,
+                    shouldShow: R,
                     position: "right",
                     align: "center",
                     renderPopout: e => {
@@ -299,8 +299,8 @@
                         inlineArt: I = !1,
                         isPremiumFeature: x = !1,
                         shouldUseHorizontalButtons: A = !1,
-                        showGIFTag: R = !1,
-                        dismissibleContent: v,
+                        showGIFTag: v = !1,
+                        dismissibleContent: R,
                         position: T = "top",
                         art: L,
                         isPremiumEarlyAccess: O = !1,
@@ -311,7 +311,7 @@
                     } = (0, u.default)();
 
                     function U(e) {
-                        (0, o.markDismissibleContentAsDismissed)(v, {
+                        (0, o.markDismissibleContentAsDismissed)(R, {
                             dismissAction: e
                         })
                     }
@@ -320,8 +320,8 @@
                         let l = (null !== (t = null === (e = b.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
                         !D && l > j && P(!0)
                     }, [D, G, b, j]), n.useEffect(() => {
-                        (0, o.requestMarkDismissibleContentAsShown)(v)
-                    }, [v]), (0, a.jsx)("div", {
+                        (0, o.requestMarkDismissibleContentAsShown)(R)
+                    }, [R]), (0, a.jsx)("div", {
                         className: p,
                         ref: t,
                         children: (0, a.jsxs)("div", {
@@ -331,7 +331,7 @@
                             }),
                             children: [(0, a.jsxs)("div", {
                                 className: r(E, I ? S.artInline : S.artAbsolute),
-                                children: [R && (0, a.jsx)(d.default, {
+                                children: [v && (0, a.jsx)(d.default, {
                                     className: S.gifTag
                                 }), L]
                             }), (0, a.jsxs)("div", {
@@ -560,6 +560,40 @@
                 }
             })
         },
+        375202: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
+                    return n
+                }
+            });
+            var a = l("819068");
+
+            function n(e, t) {
+                if (__OVERLAY__) {
+                    let e = t.getGame(),
+                        l = (0, a.getPID)();
+                    return null == e || null == l ? null : {
+                        id: e.id,
+                        pid: l,
+                        pidPath: [],
+                        nativeProcessObserverId: 0,
+                        hidden: !1,
+                        elevated: !1,
+                        name: e.name,
+                        lastFocused: 0,
+                        exePath: "",
+                        exeName: "",
+                        cmdLine: "",
+                        processName: "",
+                        distributor: null,
+                        windowHandle: null,
+                        fullscreenType: 0
+                    }
+                }
+                return e.getVisibleGame()
+            }
+        },
         916262: function(e, t, l) {
             "use strict";
             l.r(t), l.d(t, {
@@ -757,8 +791,8 @@
                 I = l("697218"),
                 x = l("703370"),
                 A = l("145131"),
-                R = l("953109"),
-                v = l("476263"),
+                v = l("953109"),
+                R = l("476263"),
                 T = l("267675"),
                 L = l("423487"),
                 O = l("233437"),
@@ -769,8 +803,8 @@
                 b = l("375202"),
                 G = l("916262"),
                 U = l("75974"),
-                k = l("359812"),
-                y = l("273405"),
+                y = l("359812"),
+                k = l("273405"),
                 F = l("326620"),
                 w = l("985997"),
                 B = l("16750"),
@@ -801,9 +835,9 @@
                     className: K.modalContent,
                     titleClassName: K.formItemTitleVerySlim,
                     children: (0, a.jsxs)(F.default, {
-                        children: [null != E ? (0, a.jsx)(R.default, {
+                        children: [null != E ? (0, a.jsx)(v.default, {
                             game: E,
-                            size: R.default.Sizes.XSMALL,
+                            size: v.default.Sizes.XSMALL,
                             className: z.selectedIcon
                         }) : (0, a.jsx)(C, {
                             className: z.selectedIcon
@@ -831,9 +865,9 @@
                     className: K.modalContent,
                     titleClassName: K.formItemTitle,
                     children: (0, a.jsxs)(F.default, {
-                        children: [(0, a.jsx)(v.default, {
+                        children: [(0, a.jsx)(R.default, {
                             guild: n,
-                            size: v.default.Sizes.SMALLER,
+                            size: R.default.Sizes.SMALLER,
                             className: z.selectedIcon
                         }), (0, a.jsx)("span", {
                             className: z.ellipsisText,
@@ -905,8 +939,8 @@
                     onClose: N,
                     onChangeSelectedFPS: x,
                     onChangeSelectedResolution: A,
-                    onChangeSelectedPreset: R,
-                    onChangeSelectedChannelId: v,
+                    onChangeSelectedPreset: v,
+                    onChangeSelectedChannelId: R,
                     onChangeSource: T,
                     onChangeAudioDevice: L,
                     onChangeGuild: O,
@@ -943,12 +977,12 @@
                     }), g && null != E ? (0, a.jsx)(Z, {
                         guildId: E,
                         onChange: O
-                    }) : null, null != M ? (0, a.jsx)(y.default, {
+                    }) : null, null != M ? (0, a.jsx)(k.default, {
                         channel: M
-                    }) : (0, a.jsx)(k.default, {
+                    }) : (0, a.jsx)(y.default, {
                         guildId: E,
                         selectedChannelId: s,
-                        onChangeSelectedChannelId: v
+                        onChangeSelectedChannelId: R
                     }), null != E && q && $ ? (0, a.jsx)(X, {
                         guildId: E
                     }) : null, D ? (0, a.jsx)(J, {
@@ -961,7 +995,7 @@
                         onClose: N,
                         onFPSChange: x,
                         onResolutionChange: A,
-                        onPresetChange: R,
+                        onPresetChange: v,
                         captureDeviceSelected: Q
                     }), K]
                 })
@@ -1063,8 +1097,8 @@
                 I = l("568307"),
                 x = l("18494"),
                 A = l("697218"),
-                R = l("703370"),
-                v = l("145131"),
+                v = l("703370"),
+                R = l("145131"),
                 T = l("476765"),
                 L = l("599110"),
                 O = l("773336"),
@@ -1075,8 +1109,8 @@
                 b = l("636909"),
                 G = l("934054"),
                 U = l("23922"),
-                k = l("16750"),
-                y = l("686298"),
+                y = l("16750"),
+                k = l("686298"),
                 F = l("49111"),
                 w = l("180524"),
                 B = l("782340"),
@@ -1096,18 +1130,18 @@
                     preset: J,
                     resolution: X,
                     fps: Q
-                } = (0, d.useStateFromStoresObject)([g.default], () => g.default.getState()), q = (0, d.useStateFromStores)([x.default, _.default], () => _.default.getChannel(x.default.getVoiceChannelId())), $ = (0, d.useStateFromStores)([I.default, R.default], () => (0, O.isWindows)() ? (0, P.default)(I.default, R.default) : null), ee = (0, d.useStateFromStores)([A.default], () => {
+                } = (0, d.useStateFromStoresObject)([g.default], () => g.default.getState()), q = (0, d.useStateFromStores)([x.default, _.default], () => _.default.getChannel(x.default.getVoiceChannelId())), $ = (0, d.useStateFromStores)([I.default, v.default], () => (0, O.isWindows)() ? (0, P.default)(I.default, v.default) : null), ee = (0, d.useStateFromStores)([A.default], () => {
                     let e = A.default.getCurrentUser();
                     return u(null != e, "GoLiveModal: user cannot be undefined"), e
                 }), et = (0, d.useStateFromStores)([N.default], () => {
                     var e;
                     return null === (e = N.default.getGuild(z)) || void 0 === e ? void 0 : e.premiumTier
-                }), [el, ea] = null !== (t = (0, D.default)(J, ee, et)) && void 0 !== t ? t : [y.ApplicationStreamResolutions.RESOLUTION_720, y.ApplicationStreamFPS.FPS_30];
-                J !== y.ApplicationStreamPresets.PRESET_CUSTOM && (X = el, Q = ea);
+                }), [el, ea] = null !== (t = (0, D.default)(J, ee, et)) && void 0 !== t ? t : [k.ApplicationStreamResolutions.RESOLUTION_720, k.ApplicationStreamFPS.FPS_30];
+                J !== k.ApplicationStreamPresets.PRESET_CUSTOM && (X = el, Q = ea);
                 let en = (0, T.useUID)();
-                let [es, er] = r.useState((n = H, i = W, n ? 0 : i ? 1 : 2)), [ei, eu] = r.useState(null), [eo, ed] = r.useState(!1), [ec, ef] = r.useState(null), [em, eS] = r.useState(null), [eE, eC] = r.useState(null), [eh, eg] = r.useState(J), [e_, eN] = r.useState(X), [ep, eI] = r.useState(Q), [ex, eA] = r.useState(null != z ? z : null), eR = null !== (a = null == q ? void 0 : q.id) && void 0 !== a ? a : ec;
+                let [es, er] = r.useState((n = H, i = W, n ? 0 : i ? 1 : 2)), [ei, eu] = r.useState(null), [eo, ed] = r.useState(!1), [ec, ef] = r.useState(null), [em, eS] = r.useState(null), [eE, eC] = r.useState(null), [eh, eg] = r.useState(J), [e_, eN] = r.useState(X), [ep, eI] = r.useState(Q), [ex, eA] = r.useState(null != z ? z : null), ev = null !== (a = null == q ? void 0 : q.id) && void 0 !== a ? a : ec;
                 r.useEffect(() => {
-                    let e = (0, O.isWindows)() ? (0, P.default)(I.default, R.default) : null,
+                    let e = (0, O.isWindows)() ? (0, P.default)(I.default, v.default) : null,
                         t = (null == e ? void 0 : e.id) != null ? C.default.getApplication(e.id) : null;
                     L.default.track(F.AnalyticEvents.OPEN_MODAL, {
                         type: "Go Live Modal",
@@ -1118,7 +1152,7 @@
                     })
                 }, [K]);
 
-                function ev() {
+                function eR() {
                     ! function() {
                         var e, t;
                         u(null != $ || null != em, "got nothing to stream");
@@ -1130,12 +1164,12 @@
                         let s = eh,
                             r = e_,
                             i = ep;
-                        !(0, M.default)(s, r, i, ee, et) && (s = y.ApplicationStreamPresets.PRESET_VIDEO, r = y.ApplicationStreamResolutions.RESOLUTION_720, i = y.ApplicationStreamFPS.FPS_30), (0, S.updateStreamSettings)({
+                        !(0, M.default)(s, r, i, ee, et) && (s = k.ApplicationStreamPresets.PRESET_VIDEO, r = k.ApplicationStreamResolutions.RESOLUTION_720, i = k.ApplicationStreamFPS.FPS_30), (0, S.updateStreamSettings)({
                             preset: s,
                             resolution: r,
                             frameRate: i
                         });
-                        let o = (0, k.default)($, em, I.default.getRunningGames()),
+                        let o = (0, y.default)($, em, I.default.getRunningGames()),
                             d = !(0, O.isWindows)() || null == o || (null == em ? void 0 : em.id.startsWith("camera:")),
                             c = d || null == o ? null : o.pid;
                         (0, S.startStream)(n, l, {
@@ -1158,14 +1192,14 @@
                     let a = (0, D.default)(e, ee, et),
                         [n, s] = null != a ? a : [t, l];
                     if (e !== eh && (t = n, l = s), !(0, M.default)(e, t, l, ee, et)) {
-                        let [e, a] = (0, D.default)(y.ApplicationStreamPresets.PRESET_VIDEO, ee, et);
+                        let [e, a] = (0, D.default)(k.ApplicationStreamPresets.PRESET_VIDEO, ee, et);
                         t = e, l = a
                     }
-                    l !== ep && eI(l), t !== e_ && eN(t), n !== t || s !== l ? eg(y.ApplicationStreamPresets.PRESET_CUSTOM) : e !== eh && eg(e)
+                    l !== ep && eI(l), t !== e_ && eN(t), n !== t || s !== l ? eg(k.ApplicationStreamPresets.PRESET_CUSTOM) : e !== eh && eg(e)
                 }, [ee, et, ep, e_, eh]);
                 async function eL(e) {
                     if (e.preventDefault(), 1 === es) return er(2);
-                    let t = (0, k.default)($, em, I.default.getRunningGames()),
+                    let t = (0, y.default)($, em, I.default.getRunningGames()),
                         a = j.default.supportsFeature(F.NativeFeatures.ELEVATED_HOOK) && (null == t ? void 0 : t.elevated);
                     if ((0, O.isMac)() && null != em) {
                         let e = await p.default.getMediaEngine().getDesktopSources(),
@@ -1198,11 +1232,11 @@
                             } = await l.el("426319").then(l.bind(l, "426319"));
                             return l => (0, s.jsx)(e, {
                                 ...l,
-                                handleStream: ev,
+                                handleStream: eR,
                                 pid: t
                             })
                         })
-                    }() : ev()
+                    }() : eR()
                 }
                 let eO = r.useCallback(e => {
                         eS(e), null != e && (er(2), ed(!0))
@@ -1223,9 +1257,9 @@
                     eD = (0, s.jsx)(c.ModalHeader, {
                         className: V.modalHeader,
                         separator: !1,
-                        children: (0, s.jsxs)(v.default, {
-                            direction: v.default.Direction.VERTICAL,
-                            align: v.default.Align.CENTER,
+                        children: (0, s.jsxs)(R.default, {
+                            direction: R.default.Direction.VERTICAL,
+                            align: R.default.Align.CENTER,
                             className: V.header,
                             children: [(0, s.jsx)(c.Heading, {
                                 variant: "heading-xl/semibold",
@@ -1305,9 +1339,9 @@
                                 return null
                         }
                     }(es, H, W, eo),
-                    eG = 2 !== es || null == em && null == $ || null == eR,
+                    eG = 2 !== es || null == em && null == $ || null == ev,
                     eU = (0, s.jsxs)(c.ModalFooter, {
-                        justify: null == eb ? v.default.Justify.START : v.default.Justify.BETWEEN,
+                        justify: null == eb ? R.default.Justify.START : R.default.Justify.BETWEEN,
                         children: [(0, s.jsx)(c.Button, {
                             type: "submit",
                             size: c.Button.Sizes.SMALL,
@@ -1611,8 +1645,8 @@
                 I = l("321443"),
                 x = l("444276"),
                 A = l("353927"),
-                R = l("782340"),
-                v = l("45122");
+                v = l("782340"),
+                R = l("45122");
             async function T() {
                 let e = m.default.getVideoDevices(),
                     t = (0, o.default)(m.default.getMediaEngine(), [u.DesktopSources.WINDOW, u.DesktopSources.SCREEN], {
@@ -1723,7 +1757,7 @@
                         }
                     }(L);
                 if (null == G) return (0, a.jsx)(C.default, {
-                    className: v.spinner,
+                    className: R.spinner,
                     justify: C.default.Justify.CENTER,
                     align: C.default.Align.CENTER,
                     children: (0, a.jsx)(c.Spinner, {})
@@ -1733,8 +1767,8 @@
                         id: n
                     } = e, s = (null == t ? void 0 : t.id) === n;
                     return (0, a.jsx)(c.Clickable, {
-                        className: r(v.tile, {
-                            [v.selected]: s
+                        className: r(R.tile, {
+                            [R.selected]: s
                         }),
                         onClick: () => l(e, null),
                         children: (0, a.jsx)(x.default, {
@@ -1744,26 +1778,26 @@
                     }, n)
                 });
 
-                function k() {
+                function y() {
                     let e = D.current;
                     null != e && M(!e.isScrolledToTop())
                 }
                 return (0, a.jsxs)(n.Fragment, {
                     children: [(0, a.jsxs)("div", {
-                        className: v.segmentContainer,
+                        className: R.segmentContainer,
                         children: [(0, a.jsx)(I.default, {
                             separator: j
                         }), (0, a.jsx)(c.SegmentedControl, {
                             options: function() {
                                 let e = [{
-                                    name: R.default.Messages.GO_LIVE_MODAL_APPLICATIONS,
+                                    name: v.default.Messages.GO_LIVE_MODAL_APPLICATIONS,
                                     value: u.DesktopSources.WINDOW
                                 }, {
-                                    name: R.default.Messages.GO_LIVE_MODAL_SCREENS,
+                                    name: v.default.Messages.GO_LIVE_MODAL_SCREENS,
                                     value: u.DesktopSources.SCREEN
                                 }];
                                 return s && i && p && e.push({
-                                    name: R.default.Messages.GO_LIVE_MODAL_CAPTURE,
+                                    name: v.default.Messages.GO_LIVE_MODAL_CAPTURE,
                                     value: u.DesktopSources.CAMERA
                                 }), e
                             }(),
@@ -1774,30 +1808,30 @@
                                 } = e;
                                 return O(t)
                             },
-                            className: v.segmentControl,
-                            optionClassName: v.segmentControlOption
+                            className: R.segmentControl,
+                            optionClassName: R.segmentControlOption
                         })]
                     }), L === u.DesktopSources.CAMERA ? (0, a.jsx)("div", {
-                        className: v.sourceContainer,
+                        className: R.sourceContainer,
                         children: (0, a.jsx)(c.AdvancedScroller, {
                             ref: b,
-                            className: v.sourceScroller,
-                            onScroll: k,
+                            className: R.sourceScroller,
+                            onScroll: y,
                             children: (0, a.jsx)(h.default, {
                                 layout: h.default.Layout.WRAP,
                                 columns: 2,
-                                className: v.sourceContainer,
+                                className: R.sourceContainer,
                                 children: U
                             })
                         })
                     }) : (0, a.jsx)(c.AdvancedScroller, {
                         ref: b,
-                        className: v.sourceScroller,
-                        onScroll: k,
+                        className: R.sourceScroller,
+                        onScroll: y,
                         children: (0, a.jsx)(h.default, {
                             layout: h.default.Layout.WRAP,
                             columns: 2,
-                            className: v.sourceContainer,
+                            className: R.sourceContainer,
                             children: U
                         })
                     })]
@@ -1885,8 +1919,8 @@
                 I = l("686298"),
                 x = l("49111"),
                 A = l("646718"),
-                R = l("782340"),
-                v = l("770420"),
+                v = l("782340"),
+                R = l("770420"),
                 T = l("986916"),
                 L = l("926622");
 
@@ -1915,7 +1949,7 @@
                     }), (0, a.jsx)(o.Text, {
                         className: T.upsellText,
                         variant: "text-sm/medium",
-                        children: R.default.Messages.STREAM_QUALITY_DISCORD_NITRO_UNLOCK
+                        children: v.default.Messages.STREAM_QUALITY_DISCORD_NITRO_UNLOCK
                     })]
                 })
             }
@@ -1936,7 +1970,7 @@
                 return i ? (t = (0, a.jsx)(o.TooltipContainer, {
                     tooltipClassName: T.tooltip,
                     spacing: 12,
-                    "aria-label": R.default.Messages.STREAM_QUALITY_DISCORD_NITRO_UNLOCK,
+                    "aria-label": v.default.Messages.STREAM_QUALITY_DISCORD_NITRO_UNLOCK,
                     text: (0, a.jsx)(j, {}),
                     children: (0, a.jsx)(h.default, {
                         align: h.default.Align.CENTER,
@@ -1976,11 +2010,11 @@
                 } = e, b = (0, u.useStateFromStores)([E.default], () => {
                     let e = E.default.getCurrentUser();
                     return i(null != e, "StreamSettings: user cannot be undefined"), e
-                }), G = _.default.isPremiumExactly(b, A.PremiumTypes.TIER_0), U = _.default.isPremium(b), k = (0, u.useStateFromStores)([S.default], () => {
+                }), G = _.default.isPremiumExactly(b, A.PremiumTypes.TIER_0), U = _.default.isPremium(b), y = (0, u.useStateFromStores)([S.default], () => {
                     var e;
                     return null === (e = S.default.getGuild(D)) || void 0 === e ? void 0 : e.premiumTier
                 }), {
-                    location: y
+                    location: k
                 } = (0, c.useAnalyticsContext)(), {
                     enabled: F
                 } = m.NitroBasicHDStreamingUpsellExperiment.useExperiment({
@@ -1991,13 +2025,13 @@
                 }), w = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
                     autoTrackExposure: !1
                 }), B = (F || !U) && !w, V = P ? I.GoLiveDeviceResolutionButtons : I.ApplicationStreamResolutionButtons, H = {
-                    ...y,
+                    ...k,
                     section: x.AnalyticsSections.STREAM_SETTINGS
                 }, W = (0, a.jsx)(C.default, {
                     buttons: V.map(e => M({
                         type: e,
                         selected: e.value === n,
-                        needsPremium: !(0, N.default)(l, e.value, s, b, k),
+                        needsPremium: !(0, N.default)(l, e.value, s, b, y),
                         analyticsLocation: H,
                         onClick: () => r(e.value),
                         onClose: t
@@ -2006,49 +2040,49 @@
                     buttons: I.ApplicationStreamFPSButtons.map(e => M({
                         type: e,
                         selected: e.value === s,
-                        needsPremium: !(0, N.default)(l, n, e.value, b, k),
+                        needsPremium: !(0, N.default)(l, n, e.value, b, y),
                         analyticsLocation: H,
                         onClick: () => g(e.value),
                         onClose: t
                     }))
                 }), K = [{
                     value: I.ApplicationStreamPresets.PRESET_VIDEO,
-                    label: R.default.Messages.STREAM_PRESET_VIDEO
+                    label: v.default.Messages.STREAM_PRESET_VIDEO
                 }, ...P ? [] : [{
                     value: I.ApplicationStreamPresets.PRESET_DOCUMENTS,
-                    label: R.default.Messages.STREAM_PRESET_DOCUMENTS
+                    label: v.default.Messages.STREAM_PRESET_DOCUMENTS
                 }], {
                     value: I.ApplicationStreamPresets.PRESET_CUSTOM,
-                    label: R.default.Messages.STREAM_PRESET_CUSTOM
+                    label: v.default.Messages.STREAM_PRESET_CUSTOM
                 }], Y = l === I.ApplicationStreamPresets.PRESET_DOCUMENTS ? (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(h.default, {
                         children: (0, a.jsx)(o.FormItem, {
-                            title: R.default.Messages.STREAM_RESOLUTION,
-                            titleClassName: v.formItemTitleSlim,
+                            title: v.default.Messages.STREAM_RESOLUTION,
+                            titleClassName: R.formItemTitleSlim,
                             className: T.documentModeGroup,
                             children: (0, a.jsx)(o.Text, {
                                 variant: "text-xs/normal",
-                                children: R.default.Messages.STREAM_PRESET_DOCUMENTS_DESCRIPTION_NITRO.format({
+                                children: v.default.Messages.STREAM_PRESET_DOCUMENTS_DESCRIPTION_NITRO.format({
                                     fps: s
                                 })
                             })
                         })
                     }), B ? (0, a.jsx)(p.default, {
-                        message: R.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_PRESET_DOCUMENTS,
+                        message: v.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_PRESET_DOCUMENTS,
                         onClose: t,
                         openStreamUpsellModal: O
                     }) : null]
                 }) : (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsxs)(h.default, {
                         children: [(0, a.jsx)(o.FormItem, {
-                            title: R.default.Messages.STREAM_RESOLUTION,
+                            title: v.default.Messages.STREAM_RESOLUTION,
                             className: T.settingsGroup,
-                            titleClassName: v.formItemTitleSlim,
+                            titleClassName: R.formItemTitleSlim,
                             children: W
                         }), (0, a.jsx)(o.FormItem, {
-                            title: R.default.Messages.SCREENSHARE_FRAME_RATE,
+                            title: v.default.Messages.SCREENSHARE_FRAME_RATE,
                             className: T.settingsGroup,
-                            titleClassName: v.formItemTitleSlim,
+                            titleClassName: R.formItemTitleSlim,
                             children: z
                         })]
                     }), B ? (0, a.jsx)(p.default, {
@@ -2059,9 +2093,9 @@
                 return (0, a.jsx)(d.default, {
                     ...H,
                     children: (0, a.jsx)(o.FormItem, {
-                        title: R.default.Messages.STREAM_QUALITY,
-                        titleClassName: v.formItemTitle,
-                        className: v.modalContent,
+                        title: v.default.Messages.STREAM_QUALITY,
+                        titleClassName: R.formItemTitle,
+                        className: R.modalContent,
                         children: (0, a.jsxs)("div", {
                             className: T.qualitySettingsContainer,
                             children: [(0, a.jsx)(o.SingleSelect, {
@@ -2305,6 +2339,41 @@
                 columns: 4
             };
             var f = c
+        },
+        267675: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
+                    return i
+                }
+            });
+            var a = l("37983");
+            l("884691");
+            var n = l("469563"),
+                s = l("265614"),
+                r = l("75196"),
+                i = (0, n.replaceIcon)(function(e) {
+                    let {
+                        width: t = 24,
+                        height: l = 24,
+                        color: n = "currentColor",
+                        foreground: s,
+                        ...i
+                    } = e;
+                    return (0, a.jsx)("svg", {
+                        ...(0, r.default)(i),
+                        width: t,
+                        height: l,
+                        viewBox: "0 0 24 24",
+                        children: (0, a.jsx)("path", {
+                            className: s,
+                            fill: n,
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                            d: "M4 2.5C2.897 2.5 2 3.397 2 4.5V15.5C2 16.604 2.897 17.5 4 17.5H11V19.5H7V21.5H17V19.5H13V17.5H20C21.103 17.5 22 16.604 22 15.5V4.5C22 3.397 21.103 2.5 20 2.5H4ZM20 4.5V13.5H4V4.5H20Z"
+                        })
+                    })
+                }, s.ScreenIcon)
         },
         233437: function(e, t, l) {
             "use strict";

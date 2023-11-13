@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["55157"], {
+    ["58343"], {
         16873: function(e, t, n) {
             "use strict";
             e.exports = n.p + "86c8b17e10af5906ce4b.svg"
@@ -87,6 +87,14 @@
         606778: function(e, t, n) {
             "use strict";
             e.exports = n.p + "75081bdaad2d359c1469.svg"
+        },
+        665718: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "5420f8fd9d89897c6448.svg"
+        },
+        897327: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "d8197d45ef3e7289594d.svg"
         },
         234997: function(e, t, n) {
             "use strict";
@@ -219,6 +227,32 @@
         833345: function(e, t, n) {
             "use strict";
             e.exports = n.p + "30c5d0b920e7f142a6c6.svg"
+        },
+        289867: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return l
+                }
+            });
+            var a = n("913144"),
+                l = {
+                    toggleMembersSection() {
+                        a.default.dispatch({
+                            type: "CHANNEL_TOGGLE_MEMBERS_SECTION"
+                        })
+                    },
+                    toggleProfilePanelSection() {
+                        a.default.dispatch({
+                            type: "PROFILE_PANEL_TOGGLE_SECTION"
+                        })
+                    },
+                    toggleSummariesSection() {
+                        a.default.dispatch({
+                            type: "CHANNEL_TOGGLE_SUMMARIES_SECTION"
+                        })
+                    }
+                }
         },
         629803: function(e, t, n) {
             "use strict";
@@ -3699,6 +3733,15 @@
                     }
                 }
         },
+        219352: function(e, t, n) {
+            "use strict";
+            var a, l;
+            n.r(t), n.d(t, {
+                SelfStreamAndVideoAlertType: function() {
+                    return a
+                }
+            }), (l = a || (a = {}))[l.STREAM = 0] = "STREAM", l[l.VIDEO = 1] = "VIDEO"
+        },
         14124: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -3733,6 +3776,32 @@
                     u = (0, a.useStateFromStores)([s.default], () => s.default.isSelfStreamHidden(e), [e]);
                 return [(null == t || t === n) && r, u, t => {
                     (0, l.toggleSelfStreamHidden)(e, t)
+                }]
+            }
+        },
+        301603: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return o
+                }
+            });
+            var a = n("446674"),
+                l = n("629109"),
+                s = n("271938"),
+                i = n("42887"),
+                r = n("49111"),
+                u = n("353927");
+
+            function o(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.MediaEngineContextTypes.DEFAULT,
+                    n = (0, a.useStateFromStores)([s.default], () => s.default.getId()),
+                    o = (0, a.useStateFromStores)([i.default], () => i.default.supports(u.Features.DISABLE_VIDEO) && i.default.isVideoEnabled()),
+                    d = (0, a.useStateFromStores)([i.default], () => i.default.isLocalVideoDisabled(n, t), [n, t]),
+                    c = null == e || e === n;
+                return [c && (o || d), d, e => {
+                    let a = e ? r.VideoToggleState.DISABLED : r.VideoToggleState.MANUAL_ENABLED;
+                    l.default.setDisableLocalVideo(n, a, t)
                 }]
             }
         },
@@ -5743,6 +5812,67 @@
                 s.default.toggleSelfMute()
             }
         },
+        632616: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return u
+                }
+            });
+            var a = n("37983");
+            n("884691");
+            var l = n("452804"),
+                s = n("135230"),
+                i = n("219352"),
+                r = n("782340");
+
+            function u(e) {
+                let {
+                    type: t,
+                    onConfirm: n,
+                    ...u
+                } = e, o = t === i.SelfStreamAndVideoAlertType.STREAM ? r.default.Messages.HIDE_SELF_STREAM_CONFIRMATION_HEADER : r.default.Messages.HIDE_SELF_VIDEO_CONFIRMATION_HEADER, d = t === i.SelfStreamAndVideoAlertType.STREAM ? r.default.Messages.HIDE_SELF_STREAM_CONFIRMATION_BODY : r.default.Messages.HIDE_SELF_VIDEO_CONFIRMATION_BODY;
+                return (0, a.jsx)(s.default, {
+                    confirmText: r.default.Messages.CONFIRM,
+                    secondaryConfirmText: r.default.Messages.DONT_ASK_AGAIN,
+                    title: o,
+                    cancelText: r.default.Messages.CANCEL,
+                    onConfirm: n,
+                    onConfirmSecondary: () => {
+                        l.default.updatedUnsyncedSettings({
+                            disableHideSelfStreamAndVideoConfirmationAlert: !0
+                        }), n()
+                    },
+                    body: d,
+                    ...u
+                })
+            }
+        },
+        243288: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return o
+                }
+            });
+            var a = n("37983");
+            n("884691");
+            var l = n("446674"),
+                s = n("77078"),
+                i = n("255397"),
+                r = n("191145"),
+                u = n("782340");
+
+            function o(e) {
+                let t = (0, l.useStateFromStores)([r.default], () => r.default.getVoiceParticipantsHidden(e));
+                return (0, a.jsx)(s.MenuCheckboxItem, {
+                    id: "no-video-hide",
+                    label: u.default.Messages.STREAM_SHOW_NON_VIDEO,
+                    checked: !t,
+                    action: () => i.default.toggleVoiceParticipantsHidden(e, !t)
+                })
+            }
+        },
         769928: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -5772,6 +5902,43 @@
                             ...e,
                             type: o.SelfStreamAndVideoAlertType.STREAM,
                             onConfirm: () => f(!c)
+                        }))
+                    }
+                }) : null
+            }
+        },
+        321135: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return f
+                }
+            }), n("222007");
+            var a = n("37983");
+            n("884691");
+            var l = n("446674"),
+                s = n("77078"),
+                i = n("168973"),
+                r = n("301603"),
+                u = n("632616"),
+                o = n("219352"),
+                d = n("353927"),
+                c = n("782340");
+
+            function f(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.MediaEngineContextTypes.DEFAULT,
+                    [n, f, h] = (0, r.default)(e, t),
+                    p = (0, l.useStateFromStores)([i.default], () => i.default.disableHideSelfStreamAndVideoConfirmationAlert);
+                return n ? (0, a.jsx)(s.MenuCheckboxItem, {
+                    id: "self-video-hide",
+                    label: c.default.Messages.SHOW_SELF_VIDEO,
+                    checked: !f,
+                    action: () => {
+                        if (p || f) return h(!f);
+                        (0, s.openModal)(e => (0, a.jsx)(u.default, {
+                            ...e,
+                            type: o.SelfStreamAndVideoAlertType.VIDEO,
+                            onConfirm: () => h(!f)
                         }))
                     }
                 }) : null
@@ -5877,6 +6044,51 @@
                         action: () => i.default.setOutputDevice(n)
                     }, "output-".concat(n))
                 })
+            }
+        },
+        873254: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return c
+                }
+            });
+            var a = n("37983");
+            n("884691");
+            var l = n("446674"),
+                s = n("77078"),
+                i = n("648911"),
+                r = n("271938"),
+                u = n("42887"),
+                o = n("782340"),
+                d = n("431024");
+
+            function c(e) {
+                let t = (0, s.useModalContext)(),
+                    c = (0, l.useStateFromStores)([u.default], () => u.default.isVideoEnabled()),
+                    f = (0, l.useStateFromStores)([r.default], () => r.default.getId() === e),
+                    h = (0, i.default)();
+                return (!c || h) && f ? (0, a.jsx)(s.MenuItem, {
+                    id: "change-video-background",
+                    label: (0, a.jsx)("div", {
+                        className: d.item,
+                        children: c ? o.default.Messages.CAMERA_CHANGE_VIDEO_BACKGROUND_MENU_ITEM : o.default.Messages.CAMERA_PREVIEW_MENU_ITEM
+                    }),
+                    action: function() {
+                        (0, s.openModalLazy)(async () => {
+                            let {
+                                default: e
+                            } = await n.el("381736").then(n.bind(n, "381736"));
+                            return t => (0, a.jsx)(e, {
+                                ...t,
+                                videoEnabled: c
+                            })
+                        }, {
+                            modalKey: "camera-preview",
+                            contextKey: t
+                        })
+                    }
+                }) : null
             }
         },
         639537: function(e, t, n) {
@@ -11249,6 +11461,40 @@
                 })({
                     className: o
                 })
+            }
+        },
+        375202: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return l
+                }
+            });
+            var a = n("819068");
+
+            function l(e, t) {
+                if (__OVERLAY__) {
+                    let e = t.getGame(),
+                        n = (0, a.getPID)();
+                    return null == e || null == n ? null : {
+                        id: e.id,
+                        pid: n,
+                        pidPath: [],
+                        nativeProcessObserverId: 0,
+                        hidden: !1,
+                        elevated: !1,
+                        name: e.name,
+                        lastFocused: 0,
+                        exePath: "",
+                        exeName: "",
+                        cmdLine: "",
+                        processName: "",
+                        distributor: null,
+                        windowHandle: null,
+                        fullscreenType: 0
+                    }
+                }
+                return e.getVisibleGame()
             }
         },
         237542: function(e, t, n) {
@@ -23160,6 +23406,70 @@
                 })
             }
         },
+        893980: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                trackProfilePanelViewed: function() {
+                    return u
+                },
+                trackProfilePanelToggled: function() {
+                    return o
+                }
+            });
+            var a = n("373469"),
+                l = n("824563"),
+                s = n("27618"),
+                i = n("599110"),
+                r = n("49111");
+            let u = e => {
+                    let {
+                        displayProfile: t,
+                        isMobile: n,
+                        loadDurationMs: a,
+                        activity: l,
+                        customStatusActivity: s,
+                        status: u
+                    } = e;
+                    i.default.track(r.AnalyticEvents.DM_PROFILE_VIEWED, {
+                        has_mobile_indicator: n,
+                        has_activity: null != l && (null == l ? void 0 : l.type) !== r.ActivityTypes.CUSTOM_STATUS,
+                        has_game_activity: (null == l ? void 0 : l.type) === r.ActivityTypes.PLAYING,
+                        load_duration_ms: a,
+                        profile_user_status: u,
+                        has_custom_status: null != s,
+                        has_profile_effect: null != t.profileEffectID,
+                        ...d(t)
+                    })
+                },
+                o = (e, t) => {
+                    i.default.track(r.AnalyticEvents.DM_PROFILE_TOGGLED, {
+                        is_profile_open: t,
+                        ...d(e)
+                    })
+                },
+                d = e => {
+                    var t;
+                    if (null == e) return {};
+                    let n = e.userId,
+                        i = null != a.default.getAnyStreamForUser(n),
+                        u = l.default.findActivity(n, e => {
+                            let {
+                                type: t
+                            } = e;
+                            return i ? t === r.ActivityTypes.PLAYING : t !== r.ActivityTypes.CUSTOM_STATUS
+                        }),
+                        o = null == u ? void 0 : u.assets,
+                        d = s.default.isFriend(n);
+                    return {
+                        has_images: !!(null !== (t = null == o ? void 0 : o.large_image) && void 0 !== t ? t : null == o ? void 0 : o.small_image),
+                        is_friend: d,
+                        viewed_profile_user_id: n,
+                        profile_has_nitro_customization: e.hasPremiumCustomization(),
+                        profile_has_theme_color_customized: e.hasThemeColors(),
+                        profile_has_theme_animation: null != e.popoutAnimationParticleType
+                    }
+                }
+        },
         69682: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -24053,6 +24363,21 @@
                         "aria-label": d.default.Messages.FORM_LABEL_OUTPUT_VOLUME
                     })
                 })
+            }
+        },
+        648911: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return i
+                }
+            });
+            var a = n("446674"),
+                l = n("42887"),
+                s = n("512244");
+
+            function i() {
+                return (0, a.useStateFromStores)([l.default], () => (0, s.default)(l.default))
             }
         },
         491519: function(e, t, n) {
@@ -29700,6 +30025,68 @@
                 }
             })
         },
+        440351: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return f
+                }
+            });
+            var a = n("37983"),
+                l = n("884691"),
+                s = n("414456"),
+                i = n.n(s),
+                r = n("77078"),
+                u = n("145131"),
+                o = n("296165"),
+                d = n("926622");
+            class c extends l.PureComponent {
+                render() {
+                    let {
+                        title: e,
+                        description: t,
+                        agreement: n,
+                        disagreement: l,
+                        onAgree: s,
+                        onDisagree: c,
+                        imageClassName: f
+                    } = this.props;
+                    return (0, a.jsxs)(u.default, {
+                        className: o.gatedContent,
+                        justify: u.default.Justify.CENTER,
+                        align: u.default.Align.CENTER,
+                        direction: u.default.Direction.VERTICAL,
+                        children: [(0, a.jsx)("div", {
+                            className: i(o.image, f)
+                        }), (0, a.jsx)("div", {
+                            className: i(o.title, d.marginBottom8),
+                            children: e
+                        }), (0, a.jsx)("div", {
+                            className: i(o.description, d.marginBottom20),
+                            children: t
+                        }), (0, a.jsxs)(u.default, {
+                            justify: u.default.Justify.CENTER,
+                            align: u.default.Align.CENTER,
+                            grow: 0,
+                            children: [null != l ? (0, a.jsx)(r.Button, {
+                                className: o.action,
+                                size: r.ButtonSizes.LARGE,
+                                color: r.ButtonColors.PRIMARY,
+                                onClick: c,
+                                children: l
+                            }) : null, null != n ? (0, a.jsx)(r.Button, {
+                                className: o.action,
+                                color: r.Button.Colors.RED,
+                                size: r.ButtonSizes.LARGE,
+                                onClick: s,
+                                children: n
+                            }) : null]
+                        })]
+                    })
+                }
+            }
+            var f = c
+        },
         646240: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -30430,6 +30817,41 @@
                         })]
                     })
                 }, s.MicrophoneSlashIcon)
+        },
+        267675: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var a = n("37983");
+            n("884691");
+            var l = n("469563"),
+                s = n("265614"),
+                i = n("75196"),
+                r = (0, l.replaceIcon)(function(e) {
+                    let {
+                        width: t = 24,
+                        height: n = 24,
+                        color: l = "currentColor",
+                        foreground: s,
+                        ...r
+                    } = e;
+                    return (0, a.jsx)("svg", {
+                        ...(0, i.default)(r),
+                        width: t,
+                        height: n,
+                        viewBox: "0 0 24 24",
+                        children: (0, a.jsx)("path", {
+                            className: s,
+                            fill: l,
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                            d: "M4 2.5C2.897 2.5 2 3.397 2 4.5V15.5C2 16.604 2.897 17.5 4 17.5H11V19.5H7V21.5H17V19.5H13V17.5H20C21.103 17.5 22 16.604 22 15.5V4.5C22 3.397 21.103 2.5 20 2.5H4ZM20 4.5V13.5H4V4.5H20Z"
+                        })
+                    })
+                }, s.ScreenIcon)
         },
         821391: function(e, t, n) {
             "use strict";
