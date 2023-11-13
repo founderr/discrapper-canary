@@ -236,6 +236,41 @@
                     }
                 }
         },
+        763245: function(e, t, a) {
+            "use strict";
+            a.r(t), a.d(t, {
+                useIsForumPostPreviewEnabled: function() {
+                    return l
+                }
+            });
+            var s = a("862205");
+            let n = (0, s.createExperiment)({
+                kind: "user",
+                id: "2023-10_forum_post_preview",
+                label: "Enable preview of Forum post content before creation",
+                defaultConfig: {
+                    isEnabled: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "Enabled",
+                    config: {
+                        isEnabled: !0
+                    }
+                }]
+            });
+
+            function l() {
+                let {
+                    isEnabled: e
+                } = n.useExperiment({
+                    location: "forum_post_1"
+                }, {
+                    autoTrackExposure: !0
+                });
+                return e
+            }
+        },
         43836: function(e, t, a) {
             "use strict";
             a.r(t), a.d(t, {
@@ -352,31 +387,31 @@
                 _ = a("206230"),
                 T = a("679653"),
                 S = a("509802"),
-                N = a("406043"),
-                p = a("87635"),
+                p = a("406043"),
+                N = a("87635"),
                 E = a("396856"),
                 M = a("549077"),
-                A = a("144491"),
-                v = a("689275"),
+                v = a("144491"),
+                A = a("689275"),
                 I = a("707443"),
                 j = a("300322"),
                 R = a("967241"),
                 O = a("982108"),
-                L = a("42203"),
-                F = a("474643"),
+                F = a("42203"),
+                L = a("474643"),
                 b = a("88093"),
-                y = a("585722"),
-                P = a("471671"),
+                P = a("585722"),
+                y = a("471671"),
                 D = a("837899"),
-                U = a("425190"),
-                w = a("891152"),
-                H = a("423487"),
-                k = a("378765"),
+                w = a("425190"),
+                U = a("891152"),
+                k = a("423487"),
+                H = a("378765"),
                 B = a("526812"),
                 G = a("404607"),
                 V = a("670902"),
-                z = a("339792"),
-                W = a("680986"),
+                W = a("339792"),
+                z = a("680986"),
                 K = a("146290"),
                 Y = a("250850"),
                 Z = a("867965"),
@@ -450,7 +485,7 @@
                 }, "section-divider")
             }
 
-            function eN(e) {
+            function ep(e) {
                 let {
                     section: t,
                     coords: a,
@@ -468,7 +503,7 @@
                 }, n) : null
             }
 
-            function ep(e, t) {
+            function eN(e, t) {
                 return "card-".concat(e, "-").concat(t)
             }
 
@@ -509,23 +544,23 @@
                     archivedThreadIds: C,
                     searchResults: T,
                     canLoadMore: S,
-                    loadMore: N,
-                    activeThreadsLoading: p,
+                    loadMore: p,
+                    activeThreadsLoading: N,
                     archivedThreadsLoading: j,
                     loading: b,
-                    isSearchLoading: y,
-                    layoutType: P
+                    isSearchLoading: P,
+                    layoutType: y
                 } = function(e) {
                     let {
                         sortOrder: t,
                         tagFilter: a,
                         layoutType: s
-                    } = (0, z.useForumChannelStore)(e.id), n = (0, W.useForumActiveThreadIds)({
+                    } = (0, W.useForumChannelStore)(e.id), n = (0, z.useForumActiveThreadIds)({
                         channel: e,
                         sortOrder: t,
                         tagFilter: a,
                         shouldAutomaticallyAck: !0
-                    }), l = (0, h.useStateFromStores)([v.default], () => !v.default.hasLoaded(e.guild_id)), {
+                    }), l = (0, h.useStateFromStores)([A.default], () => !A.default.hasLoaded(e.guild_id)), {
                         threadIds: r,
                         canLoadMore: i,
                         loadMore: o,
@@ -533,10 +568,10 @@
                     } = (0, I.useArchivedThreads)(e, t, a), {
                         searchResults: d,
                         isSearchLoading: c
-                    } = (0, W.useForumSearchState)({
+                    } = (0, z.useForumSearchState)({
                         channelId: e.id
                     });
-                    return (0, W.useLoadForumUnreadCounts)(e, t, a), {
+                    return (0, z.useLoadForumUnreadCounts)(e, t, a), {
                         activeThreadIds: n,
                         archivedThreadIds: r,
                         searchResults: d,
@@ -548,12 +583,12 @@
                         isSearchLoading: c,
                         layoutType: s
                     }
-                }(t), D = f.length > 0, U = D || C.length > 0, w = (0, E.default)(t), {
-                    tagFilter: H
-                } = (0, z.useForumChannelStore)(t.id);
-                (0, W.useAutomaticForumSearch)(t, H, c);
-                let k = (0, W.useCanSearchForumPosts)(t),
-                    V = (0, W.useCanViewArchivedPosts)(t),
+                }(t), D = f.length > 0, w = D || C.length > 0, U = (0, E.default)(t), {
+                    tagFilter: k
+                } = (0, W.useForumChannelStore)(t.id);
+                (0, z.useAutomaticForumSearch)(t, k, c);
+                let H = (0, z.useCanSearchForumPosts)(t),
+                    V = (0, z.useCanViewArchivedPosts)(t),
                     Q = n.useRef(null),
                     {
                         observePostVisibilityAnalytics: J
@@ -604,7 +639,7 @@
                         channelId: t.id,
                         guildId: t.guild_id
                     }),
-                    et = P === m.ForumLayout.GRID,
+                    et = y === m.ForumLayout.GRID,
                     en = null != T,
                     el = n.useRef(null),
                     {
@@ -619,28 +654,28 @@
                 } = n.useMemo(() => et ? eC.getRenderOptions(ex) : er.ForumListLayoutRenderOptions, [et, ex]), eM = n.useMemo(() => b ? Math.round((window.innerHeight - 200) / 118) : 0, [b]), ej = n.useMemo(() => {
                     let e = window.innerHeight,
                         t = Math.ceil(e / (0, er.getGridPostHeight)(eC.getWidth(ex))) * eS;
-                    return p ? t : 0
-                }, [ex, eS, p]), eO = n.useMemo(() => {
+                    return N ? t : 0
+                }, [ex, eS, N]), eO = n.useMemo(() => {
                     let e = window.innerHeight,
                         t = Math.ceil(e / (0, er.getGridPostHeight)(eC.getWidth(ex))) * eS;
                     return j ? t : 0
-                }, [ex, eS, j]), eL = n.useMemo(() => {
+                }, [ex, eS, j]), eF = n.useMemo(() => {
                     let e = window.innerHeight,
                         t = Math.ceil(e / (0, er.getGridPostHeight)(eC.getWidth(ex))) * eS;
-                    return y && en ? t : 0
-                }, [ex, eS, y, en]), eF = n.useMemo(() => {
+                    return P && en ? t : 0
+                }, [ex, eS, P, en]), eL = n.useMemo(() => {
                     if (et) {
-                        if (!k && en) return [1, 0];
+                        if (!H && en) return [1, 0];
                         if (!V) return [1, f.length + ej, 0];
-                        else if (en) return [1, T.length + eL, 0];
+                        else if (en) return [1, T.length + eF, 0];
                         else return [1, f.length + ej, C.length + eO]
                     }
-                    if (!k && en) return [1, 1];
+                    if (!H && en) return [1, 1];
                     if (!V) return [1, f.length, 1];
                     else if (en) return [1, T.length, 0, eM];
                     else return [1, f.length, C.length, eM]
-                }, [et, en, f.length, C.length, k, V, eM, T, ej, eO, eL]), eb = n.useMemo(() => {
-                    if (!k && en) return [
+                }, [et, en, f.length, C.length, H, V, eM, T, ej, eO, eF]), eb = n.useMemo(() => {
+                    if (!H && en) return [
                         [],
                         []
                     ];
@@ -654,7 +689,7 @@
                     else return [
                         [], f, C, []
                     ]
-                }, [en, k, V, T, f, C]), ey = n.useCallback((e, a) => {
+                }, [en, H, V, T, f, C]), eP = n.useCallback((e, a) => {
                     (0, Z.trackForumPostClicked)({
                         guildId: t.guild_id,
                         channelId: t.id,
@@ -663,40 +698,40 @@
                             page: em.AnalyticsPages.GUILD_CHANNEL,
                             section: em.AnalyticsSections.FORUM_CHANNEL_POST
                         }
-                    }), a ? (0, A.transitionToThread)(e, eh.OpenThreadAnalyticsLocations.BROWSER) : (el.current = e.id, (0, R.openThreadSidebarForViewing)(e))
-                }, [t.guild_id, t.id, el]), [eP, eD] = n.useState(l + i - 24), eU = n.useCallback((e, a, n) => 0 === e ? (0, s.jsx)(eR, {
+                    }), a ? (0, v.transitionToThread)(e, eh.OpenThreadAnalyticsLocations.BROWSER) : (el.current = e.id, (0, R.openThreadSidebarForViewing)(e))
+                }, [t.guild_id, t.id, el]), [ey, eD] = n.useState(l + i - 24), ew = n.useCallback((e, a, n) => 0 === e ? (0, s.jsx)(eR, {
                     channel: t,
                     isEmpty: !D,
-                    isSearchLoading: y,
+                    isSearchLoading: P,
                     numResults: null == T ? void 0 : T.length,
                     coords: a,
                     onHeightChange: eD,
                     children: !b && (0, s.jsx)(q.default, {
                         channel: t,
-                        hasAnyThread: U
+                        hasAnyThread: w
                     }, t.id)
-                }, "forum-channel-header") : 2 !== e || V ? 1 === e && en && !k ? (0, s.jsx)(ev, {
+                }, "forum-channel-header") : 2 !== e || V ? 1 === e && en && !H ? (0, s.jsx)(eA, {
                     channel: t,
                     coords: a
-                }, "archive-or-search-result") : n() : (0, s.jsx)(eA, {
+                }, "archive-or-search-result") : n() : (0, s.jsx)(ev, {
                     channel: t,
                     coords: a
-                }, "archived-missing-reading-history-perm"), [en, V, T, k, t, D, y, b, U]), ew = (0, h.useStateFromStores)([B.default], () => B.default.hasHidden(t.id));
+                }, "archived-missing-reading-history-perm"), [en, V, T, H, t, D, P, b, w]), eU = (0, h.useStateFromStores)([B.default], () => B.default.hasHidden(t.id));
                 n.useEffect(() => {
                     var e, t;
-                    let a = et ? eW : Q,
+                    let a = et ? ez : Q,
                         s = null === (e = a.current) || void 0 === e ? void 0 : e.getScrollerState();
-                    null != s && !ew && s.scrollTop > l && (null === (t = a.current) || void 0 === t || t.scrollTo({
+                    null != s && !eU && s.scrollTop > l && (null === (t = a.current) || void 0 === t || t.scrollTo({
                         to: 0
                     }))
-                }, [ew]);
-                let eH = (0, X.useForumActivityExperiment)(t.guild_id),
+                }, [eU]);
+                let ek = (0, X.useForumActivityExperiment)(t.guild_id),
                     {
-                        updateListScrollerRef: ek,
+                        updateListScrollerRef: eH,
                         renderListSection: eB,
                         renderListItem: eG,
                         getListSectionHeight: eV,
-                        getListItemHeight: ez
+                        getListItemHeight: eW
                     } = function(e) {
                         let {
                             listRef: t,
@@ -713,7 +748,7 @@
                         } = e, x = n.useCallback(e => a => {
                             var s;
                             t.current = a, e.current = null !== (s = null == a ? void 0 : a.getScrollerNode()) && void 0 !== s ? s : null
-                        }, [t]), C = n.useCallback(e => eN({
+                        }, [t]), C = n.useCallback(e => ep({
                             section: e.section,
                             isShowingSearchResult: f,
                             hasActiveThreads: l
@@ -766,13 +801,13 @@
                         listViewCardHeights: o,
                         editorHeight: l,
                         editorAdditionRowHeight: i,
-                        renderSectionOrItem: eU,
-                        goToThread: ey,
+                        renderSectionOrItem: ew,
+                        goToThread: eP,
                         observePostVisibilityAnalytics: J,
                         isShowingSearchResult: en,
-                        isIncreasedActivityView: eH
+                        isIncreasedActivityView: ek
                     }),
-                    eW = n.useRef(null),
+                    ez = n.useRef(null),
                     {
                         updateMasonryListScrollerRef: eK,
                         getItemKey: eY,
@@ -820,7 +855,7 @@
                         }, [t, h]), _ = n.useCallback(e => {
                             let t = eE(e);
                             if (null == t) return;
-                            let a = L.default.getChannel(t);
+                            let a = F.default.getChannel(t);
                             null != a && l(a, !0)
                         }, [l]), T = n.useCallback(function(e) {
                             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
@@ -828,18 +863,18 @@
                             if (0 === s.length) return "section-".concat(e, "-").concat(t);
                             {
                                 let s = a[e][t];
-                                return null == s ? ep(e, t) : ep(e, s)
+                                return null == s ? eN(e, t) : eN(e, s)
                             }
-                        }, [a]), S = n.useCallback((e, t, a) => i(e, t, eN({
+                        }, [a]), S = n.useCallback((e, t, a) => i(e, t, ep({
                             section: e,
                             coords: t,
                             key: a,
                             isShowingSearchResult: u,
                             hasActiveThreads: o
-                        })), [i, o, u]), N = n.useCallback(e => 0 === e ? {} : {
+                        })), [i, o, u]), p = n.useCallback(e => 0 === e ? {} : {
                             role: "grid",
                             "aria-labelledby": "#".concat(e_(e))
-                        }, []), p = n.useCallback((e, t, n, i, o) => {
+                        }, []), N = n.useCallback((e, t, n, i, o) => {
                             if (0 === e) return null;
                             let u = a[e][t];
                             return null != u ? (0, s.jsx)(ea.default, {
@@ -867,22 +902,22 @@
                             handleGridSelect: _,
                             getItemKey: T,
                             renderGridSection: S,
-                            renderGridItem: p,
-                            getSectionProps: N,
+                            renderGridItem: N,
+                            getSectionProps: p,
                             getGridSectionHeight: E
                         }
                     }({
-                        masonryListScrollerRef: eW,
+                        masonryListScrollerRef: ez,
                         threadIdsBySection: eb,
-                        goToThread: ey,
-                        renderSectionOrItem: eU,
+                        goToThread: eP,
+                        renderSectionOrItem: ew,
                         hasActiveThreads: D,
                         isShowingSearchResult: en,
-                        canSearchForumPosts: k,
+                        canSearchForumPosts: H,
                         canViewArchivedPosts: V,
                         observePostVisibilityAnalytics: J,
                         focusedThreadId: el,
-                        headerHeight: eP
+                        headerHeight: ey
                     });
                 ! function(e) {
                     let {
@@ -908,7 +943,7 @@
                                     n = t.current.getCoordsMap(),
                                     o = "__section__".concat(s),
                                     u = n[o],
-                                    d = n[ep(s, e)];
+                                    d = n[eN(s, e)];
                                 null != u && null != d && t.current.scrollIntoViewRect({
                                     start: u.top + d.top - 100,
                                     end: u.top + d.top + d.height + 50
@@ -918,7 +953,7 @@
                         }
                     }, [i, a, s, l, r, t])
                 }({
-                    masonryListScrollerRef: eW,
+                    masonryListScrollerRef: ez,
                     containerWidth: ex,
                     isGridLayout: et,
                     threadIdsBySection: eb,
@@ -928,7 +963,7 @@
                 let e$ = n.useCallback(() => {
                         var e, a;
                         if (en) return;
-                        let s = et ? null === (e = eW.current) || void 0 === e ? void 0 : e.getScrollerState() : null === (a = Q.current) || void 0 === a ? void 0 : a.getScrollerState();
+                        let s = et ? null === (e = ez.current) || void 0 === e ? void 0 : e.getScrollerState() : null === (a = Q.current) || void 0 === a ? void 0 : a.getScrollerState();
                         if (null == s) return;
                         (0, Z.trackForumScrolled)({
                             guildId: t.guild_id,
@@ -937,8 +972,8 @@
                         let n = s.scrollTop + s.offsetHeight,
                             l = s.scrollHeight - n,
                             r = et ? Math.max(200, (0, er.getGridPostHeight)(ex)) : 200;
-                        l < r && N()
-                    }, [en, et, t.guild_id, t.id, ex, N]),
+                        l < r && p()
+                    }, [en, et, t.guild_id, t.id, ex, p]),
                     e0 = (0, h.useStateFromStores)([_.default], () => _.default.keyboardModeEnabled),
                     e1 = (0, ed.default)({
                         id: "forum-grid-view",
@@ -964,7 +999,7 @@
                         children: e => (0, s.jsxs)(s.Fragment, {
                             children: [c && (0, s.jsx)(x.default, {
                                 channel: t,
-                                draftType: F.DraftType.FirstThreadMessage,
+                                draftType: L.DraftType.FirstThreadMessage,
                                 className: eg.uploadArea,
                                 style: {
                                     right: e3 && (null == a ? void 0 : a.isThreadSidebarFloating) ? a.threadSidebarWidth : 0
@@ -975,7 +1010,7 @@
                                 children: (0, s.jsx)(g.H, {
                                     children: ef.default.Messages.THREADS
                                 })
-                            }), w ? (0, s.jsx)("div", {
+                            }), U ? (0, s.jsx)("div", {
                                 className: eg.optInNotice,
                                 children: (0, s.jsx)(M.default, {
                                     channel: t
@@ -991,7 +1026,7 @@
                                     padding: 24,
                                     className: eg.grid,
                                     columns: eS,
-                                    sections: eF,
+                                    sections: eL,
                                     getItemKey: eY,
                                     getSectionHeight: eq,
                                     getItemHeight: eT,
@@ -1002,7 +1037,7 @@
                                     chunkSize: 350,
                                     ...e2,
                                     ...e
-                                }, P)
+                                }, y)
                             }) : (0, s.jsx)(d.ListNavigatorProvider, {
                                 navigator: e6,
                                 children: (0, s.jsx)(d.ListNavigatorContainer, {
@@ -1012,11 +1047,11 @@
                                             ...n
                                         } = t;
                                         return (0, s.jsx)(g.ListAuto, {
-                                            ref: ek(a),
+                                            ref: eH(a),
                                             className: eg.list,
-                                            sections: eF,
+                                            sections: eL,
                                             sectionHeight: eV,
-                                            rowHeight: ez,
+                                            rowHeight: eW,
                                             renderRow: eG,
                                             renderSection: eB,
                                             chunkSize: 150,
@@ -1025,7 +1060,7 @@
                                             ...n,
                                             ...e,
                                             innerRole: "list"
-                                        }, P)
+                                        }, y)
                                     }
                                 })
                             })]
@@ -1034,7 +1069,7 @@
                 })
             }
 
-            function eA(e) {
+            function ev(e) {
                 let {
                     channel: t,
                     coords: a
@@ -1052,7 +1087,7 @@
                 })
             }
 
-            function ev(e) {
+            function eA(e) {
                 let {
                     channel: t,
                     coords: a
@@ -1101,14 +1136,14 @@
                     isSearchLoading: T,
                     numResults: E,
                     children: M,
-                    coords: A,
-                    onHeightChange: v
+                    coords: v,
+                    onHeightChange: A
                 } = e, {
                     name: I,
                     formOpen: R,
                     titleFocused: O,
-                    hasClickedForm: L,
-                    textAreaState: w,
+                    hasClickedForm: F,
+                    textAreaState: U,
                     onboardingExpanded: B,
                     setEditorAdditionRowHeight: V
                 } = (0, ee.useForumPostComposerStore)(e => {
@@ -1133,7 +1168,7 @@
                 }, u.default), {
                     tagFilter: K,
                     layoutType: Y
-                } = (0, z.useForumChannelStore)(i.id), X = (0, ee.useForumPostComposerStoreApi)(), q = (0, z.useForumChannelStoreApi)(), $ = (0, h.useStateFromStores)([b.default], () => b.default.canChatInGuild(i.guild_id)), ea = (0, W.useCanManageChannel)(i), es = (0, j.useCanStartThread)(i), [en, er] = n.useState(es), [, ei] = (0, N.useCurrentUserCommunicationDisabled)(null !== (l = i.getGuildId()) && void 0 !== l ? l : void 0), eu = $ && (es || en && ei), ed = i.isMediaChannel();
+                } = (0, W.useForumChannelStore)(i.id), X = (0, ee.useForumPostComposerStoreApi)(), q = (0, W.useForumChannelStoreApi)(), $ = (0, h.useStateFromStores)([b.default], () => b.default.canChatInGuild(i.guild_id)), ea = (0, z.useCanManageChannel)(i), es = (0, j.useCanStartThread)(i), [en, er] = n.useState(es), [, ei] = (0, p.useCurrentUserCommunicationDisabled)(null !== (l = i.getGuildId()) && void 0 !== l ? l : void 0), eu = $ && (es || en && ei), ed = i.isMediaChannel();
                 n.useEffect(() => {
                     es && er(!0)
                 }, [es]);
@@ -1142,27 +1177,27 @@
                     height: eh
                 } = (0, C.default)();
                 n.useEffect(() => {
-                    null != eh && v(eh)
-                }, [v, eh]);
+                    null != eh && A(eh)
+                }, [A, eh]);
                 let ex = n.useCallback(() => {
                     o(() => {
                         null != ec.current && X.getState().setEditorHeight(ec.current.offsetHeight)
                     })
                 }, [ec, X]);
-                n.useLayoutEffect(ex, [ex, x, eu, B]), (0, k.useComponentAction)({
+                n.useLayoutEffect(ex, [ex, x, eu, B]), (0, H.useComponentAction)({
                     event: em.ComponentActions.REMEASURE_TARGET,
                     handler: ex
                 });
-                let eC = (0, h.useStateFromStores)([y.default], () => y.default.getUploads(i.id, F.DraftType.FirstThreadMessage)),
-                    e_ = (0, W.useChannelTemplate)(i),
+                let eC = (0, h.useStateFromStores)([P.default], () => P.default.getUploads(i.id, L.DraftType.FirstThreadMessage)),
+                    e_ = (0, z.useChannelTemplate)(i),
                     eT = n.useRef(null),
                     eS = n.useRef(null),
-                    [eN, ep] = n.useState(0),
+                    [ep, eN] = n.useState(0),
                     {
                         width: eE
-                    } = (0, h.useStateFromStores)([P.default], () => P.default.windowSize()),
+                    } = (0, h.useStateFromStores)([y.default], () => y.default.windowSize()),
                     eM = null === (a = eT.current) || void 0 === a ? void 0 : null === (t = a.getBoundingClientRect()) || void 0 === t ? void 0 : t.width,
-                    eA = n.useRef(null);
+                    ev = n.useRef(null);
                 n.useLayoutEffect(() => {
                     var e;
                     let t = eS.current,
@@ -1181,16 +1216,16 @@
                             if (l - t > r) break;
                             a - e > s && (s = a - e)
                         }
-                        ep(s)
+                        eN(s)
                     }
                 }, [i.availableTags, eE, eM, K]);
-                let ev = I.length > 0 && !R && (T || null != E),
-                    eI = !__OVERLAY__ && !L && !R && O && (0 === w.textValue.trim().length || w.textValue.trim() === e_) && 0 === eC.length;
+                let eA = I.length > 0 && !R && (T || null != E),
+                    eI = !__OVERLAY__ && !F && !R && O && (0 === U.textValue.trim().length || U.textValue.trim() === e_) && 0 === eC.length;
                 n.useLayoutEffect(() => {
-                    let e = ev || eI;
+                    let e = eA || eI;
                     if (!e) return V(0);
-                    null != eA.current && V(e ? eA.current.clientHeight : 0)
-                }, [V, ev, eI, eA]);
+                    null != ev.current && V(e ? ev.current.clientHeight : 0)
+                }, [V, eA, eI, ev]);
                 let eR = e => {
                         (0, Z.trackForumTagFilterClicked)({
                             guildId: i.guild_id,
@@ -1205,7 +1240,7 @@
                             }
                         }), q.getState().toggleTagFilter(i.id, e)
                     },
-                    eL = (0, d.default)({
+                    eF = (0, d.default)({
                         id: "".concat(i.id, "-tags-navigator"),
                         isEnabled: !0,
                         wrap: !0,
@@ -1214,11 +1249,11 @@
                         orientation: c.Orientations.HORIZONTAL
                     }),
                     {
-                        role: eF,
+                        role: eL,
                         onFocus: eb,
-                        ...ey
+                        ...eP
                     } = (0, d.useListItem)("forum-channel-header"),
-                    eP = n.useRef(null),
+                    ey = n.useRef(null),
                     eD = function() {
                         let e = n.useRef(!1),
                             t = (0, h.useStateFromStores)([_.default], () => _.default.keyboardModeEnabled),
@@ -1227,24 +1262,24 @@
                             }, [e]);
                         return n.useLayoutEffect(() => (t ? window.addEventListener("keydown", a) : window.removeEventListener("keydown", a), () => window.removeEventListener("keydown", a)), [t, a]), e
                     }(),
-                    eU = n.useCallback(e => {
+                    ew = n.useCallback(e => {
                         if (eb(e), e.target === ec.current && !eD.current) {
                             var t;
-                            null === (t = eP.current) || void 0 === t || t.focus()
+                            null === (t = ey.current) || void 0 === t || t.focus()
                         }
                     }, [eb, ec, eD]);
                 return (0, s.jsx)("div", {
                     className: r(eg.card, eg.headerRow, eg.columnsSpan),
                     ref: ec,
-                    onFocus: eU,
-                    ...ey,
+                    onFocus: ew,
+                    ...eP,
                     style: {
-                        ...A,
+                        ...v,
                         position: "static",
                         height: "auto"
                     },
-                    children: (0, s.jsxs)(k.ComponentDispatchGroupProvider, {
-                        children: [null != i.guild_id ? (0, s.jsx)(p.default, {
+                    children: (0, s.jsxs)(H.ComponentDispatchGroupProvider, {
+                        children: [null != i.guild_id ? (0, s.jsx)(N.default, {
                             className: r(eg.newMemberBanner, {
                                 [eg.gridViewBanner]: Y === m.ForumLayout.GRID
                             }),
@@ -1252,19 +1287,19 @@
                             channel: i
                         }) : null, (0, s.jsx)("div", {
                             className: r(eg.mainCard, eg.header, {
-                                [eg.headerWithMatchingPosts]: ev || eI
+                                [eg.headerWithMatchingPosts]: eA || eI
                             }),
                             children: (0, s.jsx)(et.default, {
                                 parentChannel: i,
                                 onChange: ex,
                                 isSearchLoading: T,
                                 canCreatePost: eu,
-                                inputRef: eP
+                                inputRef: ey
                             })
-                        }), (ev || eI) && (0, s.jsxs)("div", {
+                        }), (eA || eI) && (0, s.jsxs)("div", {
                             className: eg.matchingPostsRow,
-                            ref: eA,
-                            children: [ev && (0, s.jsxs)("div", {
+                            ref: ev,
+                            children: [eA && (0, s.jsxs)("div", {
                                 className: eg.matchingPosts,
                                 children: [(0, s.jsx)(g.Heading, {
                                     variant: "text-xs/normal",
@@ -1308,7 +1343,7 @@
                                 })]
                             }) : (0, s.jsxs)("div", {
                                 className: eg.startPostHelp,
-                                children: [(0, s.jsx)(H.default, {
+                                children: [(0, s.jsx)(k.default, {
                                     height: 14,
                                     width: 14,
                                     className: eg.warnIcon
@@ -1333,7 +1368,7 @@
                                     className: eg.tagList,
                                     ref: eS,
                                     children: (0, s.jsx)(d.ListNavigatorProvider, {
-                                        navigator: eL,
+                                        navigator: eF,
                                         children: (0, s.jsx)(d.ListNavigatorContainer, {
                                             children: e => {
                                                 let {
@@ -1380,7 +1415,7 @@
                                                 [eg.tagsButtonWithCount]: K.size > 0
                                             }),
                                             style: {
-                                                left: eN
+                                                left: ep
                                             },
                                             innerClassName: eg.tagsButtonInner,
                                             "aria-label": K.size > 0 ? ef.default.Messages.FORUM_TAG_SEE_MORE_A11Y_LABEL : ef.default.Messages.FORUM_TAG_ALL_A11Y_LABEL,
@@ -1392,7 +1427,7 @@
                                                     variant: "text-xs/medium",
                                                     children: K.size
                                                 })
-                                            }) : ef.default.Messages.FORUM_TAG_ALL, a ? (0, s.jsx)(U.default, {
+                                            }) : ef.default.Messages.FORUM_TAG_ALL, a ? (0, s.jsx)(w.default, {
                                                 width: 20
                                             }) : (0, s.jsx)(D.default, {
                                                 width: 20
@@ -1413,7 +1448,7 @@
                                             variant: "text-xs/medium",
                                             children: K.size
                                         })
-                                    }) : null, (0, s.jsx)(U.default, {
+                                    }) : null, (0, s.jsx)(w.default, {
                                         width: 24
                                     })]
                                 })]
@@ -1461,12 +1496,12 @@
                             className: eg.sortDropdown,
                             innerClassName: eg.sortDropdownInner,
                             "aria-label": a ? ef.default.Messages.MEDIA_CHANNEL_SORT : ef.default.Messages.FORUM_CHANNEL_SORT_AND_VIEW,
-                            children: [(0, s.jsx)(w.default, {}), (0, s.jsx)(g.Text, {
+                            children: [(0, s.jsx)(U.default, {}), (0, s.jsx)(g.Text, {
                                 className: eg.sortDropdownText,
                                 variant: "text-sm/medium",
                                 color: "interactive-normal",
                                 children: a ? ef.default.Messages.MEDIA_CHANNEL_SORT : ef.default.Messages.FORUM_CHANNEL_SORT_AND_VIEW
-                            }), n ? (0, s.jsx)(U.default, {
+                            }), n ? (0, s.jsx)(w.default, {
                                 width: 20
                             }) : (0, s.jsx)(D.default, {
                                 width: 20
@@ -1501,31 +1536,31 @@
                 _ = a("656038"),
                 T = a("454273"),
                 S = a("781555"),
-                N = a("305961"),
-                p = a("36694"),
+                p = a("305961"),
+                N = a("36694"),
                 E = a("945330"),
                 M = a("717018"),
-                A = a("673078"),
-                v = a("68238"),
+                v = a("673078"),
+                A = a("68238"),
                 I = a("904276"),
                 j = a("772280"),
                 R = a("423487"),
                 O = a("956089"),
-                L = a("659500"),
-                F = a("526812"),
+                F = a("659500"),
+                L = a("526812"),
                 b = a("404607"),
-                y = a("713955"),
-                P = a("339792"),
+                P = a("713955"),
+                y = a("339792"),
                 D = a("680986"),
-                U = a("867965"),
-                w = a("258039"),
-                H = a("729608"),
-                k = a("578198"),
+                w = a("867965"),
+                U = a("258039"),
+                k = a("729608"),
+                H = a("578198"),
                 B = a("953371"),
                 G = a("49111"),
                 V = a("782340"),
-                z = a("358040");
-            let W = {
+                W = a("358040");
+            let z = {
                     width: 28,
                     height: 28
                 },
@@ -1535,7 +1570,7 @@
                     borderRadius: 10
                 },
                 Y = e => {
-                    (0, U.trackForumOnboardingClicked)({
+                    (0, w.trackForumOnboardingClicked)({
                         onboardingCTA: e
                     })
                 };
@@ -1558,7 +1593,7 @@
             }
             let X = (e, t, n) => {
                     let l = (0, _.default)(t) ? c.default.combine(G.Permissions.VIEW_CHANNEL, G.Permissions.SEND_MESSAGES) : G.Permissions.SEND_MESSAGES,
-                        r = null != e ? (0, y.getAllExistingRolesWithPermission)(e, t, l).filter(a => t.permissionOverwrites.hasOwnProperty(a.id) || (0, T.isEveryoneRoleId)(e.id, a.id)) : [],
+                        r = null != e ? (0, P.getAllExistingRolesWithPermission)(e, t, l).filter(a => t.permissionOverwrites.hasOwnProperty(a.id) || (0, T.isEveryoneRoleId)(e.id, a.id)) : [],
                         i = r.length > 0,
                         o = r.some(t => (0, T.isEveryoneRoleId)(e.id, t.id));
                     return {
@@ -1644,7 +1679,7 @@
                     name: V.default.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_FIRST_POST_TITLE,
                     description: t ? V.default.Messages.MEDIA_CHANNEL_ONBOARDING_CHECKLIST_FIRST_POST_DESCRIPTION : V.default.Messages.FORUM_CHANNEL_ONBOARDING_CHECKLIST_FIRST_POST_DESCRIPTION.format({
                         onClick: e => {
-                            null != n && (e.preventDefault(), e.stopPropagation(), (0, U.trackForumUpsellModalViewed)(), (0, f.openModalLazy)(async () => {
+                            null != n && (e.preventDefault(), e.stopPropagation(), (0, w.trackForumUpsellModalViewed)(), (0, f.openModalLazy)(async () => {
                                 let {
                                     default: e
                                 } = await a.el("135430").then(a.bind(a, "135430"));
@@ -1656,7 +1691,7 @@
                         }
                     }),
                     clickHandler: () => {
-                        Y(B.ForumOnboardingCTAs.CREATE_POST), L.ComponentDispatch.dispatch(G.ComponentActions.FOCUS_COMPOSER_TITLE)
+                        Y(B.ForumOnboardingCTAs.CREATE_POST), F.ComponentDispatch.dispatch(G.ComponentActions.FOCUS_COMPOSER_TITLE)
                     },
                     isDone: e
                 }),
@@ -1695,7 +1730,7 @@
                         guild: l,
                         channel: r
                     } = e, i = n.useCallback(() => {
-                        L.ComponentDispatch.dispatch(G.ComponentActions.REMEASURE_TARGET)
+                        F.ComponentDispatch.dispatch(G.ComponentActions.REMEASURE_TARGET)
                     }, []);
                     n.useEffect(() => {
                         i()
@@ -1746,7 +1781,7 @@
                         roles: a
                     } = e;
                     return (0, s.jsx)("div", {
-                        className: z.rolesList,
+                        className: W.rolesList,
                         "aria-label": V.default.Messages.ROLES_LIST.format({
                             numRoles: a.length
                         }),
@@ -1755,7 +1790,7 @@
                             canRemove: !1,
                             onRemove: G.NOOP_NULL,
                             guildId: t.id,
-                            className: z.rolePill
+                            className: W.rolePill
                         }, e.id))
                     })
                 },
@@ -1771,7 +1806,7 @@
                         channel: a,
                         hasAnyThread: s,
                         handleHide: l
-                    } = e, [r, i] = n.useState(!1), o = (0, w.isOnboardingDismissed)(a.id), u = (0, h.useStateFromStores)([F.default], () => F.default.hasHidden(a.id)), d = ee(t, a, s, i), c = d.isAllDone(), m = o || u || !ea(a.id);
+                    } = e, [r, i] = n.useState(!1), o = (0, U.isOnboardingDismissed)(a.id), u = (0, h.useStateFromStores)([L.default], () => L.default.hasHidden(a.id)), d = ee(t, a, s, i), c = d.isAllDone(), m = o || u || !ea(a.id);
                     return en(c, m, r, l), {
                         onboardingSteps: d,
                         isHidden: u,
@@ -1789,10 +1824,10 @@
                     } = e;
                     return (0, s.jsx)(f.Clickable, {
                         onClick: t,
-                        className: z.closeButton,
+                        className: W.closeButton,
                         "aria-label": V.default.Messages.DISMISS,
                         children: (0, s.jsx)(E.default, {
-                            className: z.closeIcon
+                            className: W.closeIcon
                         })
                     })
                 },
@@ -1803,12 +1838,12 @@
                     } = e;
                     return (0, s.jsx)(f.Clickable, {
                         onClick: a,
-                        className: z.closeButton,
+                        className: W.closeButton,
                         "aria-label": t ? V.default.Messages.COLLAPSE : V.default.Messages.EXPAND,
                         children: t ? (0, s.jsx)(M.default, {
-                            className: z.closeIcon
-                        }) : (0, s.jsx)(A.default, {
-                            className: z.closeIcon
+                            className: W.closeIcon
+                        }) : (0, s.jsx)(v.default, {
+                            className: W.closeIcon
                         })
                     })
                 };
@@ -1818,7 +1853,7 @@
                     channel: a
                 } = e, {
                     onboardingExpanded: l
-                } = (0, k.useForumPostComposerStore)(e => {
+                } = (0, H.useForumPostComposerStore)(e => {
                     let {
                         onboardingExpanded: t
                     } = e;
@@ -1827,38 +1862,38 @@
                     }
                 }), {
                     tagFilter: i
-                } = (0, P.useForumChannelStore)(a.id), o = (0, h.useStateFromStores)([N.default], () => N.default.getGuild(a.getGuildId())), c = (0, D.useCanManageChannel)(a), {
+                } = (0, y.useForumChannelStore)(a.id), o = (0, h.useStateFromStores)([p.default], () => p.default.getGuild(a.getGuildId())), c = (0, D.useCanManageChannel)(a), {
                     transitions: m,
                     setVisible: g
                 } = ei(), x = eo(l), C = em(), _ = et(a.id, g), {
                     onboardingSteps: T,
                     isDismissed: E,
                     isHidden: M,
-                    isAllDone: A
+                    isAllDone: v
                 } = ec({
                     guild: o,
                     channel: a,
                     hasAnyThread: t,
                     handleHide: _
-                }), L = !M && !E, F = (0, k.useForumPostComposerStoreApi)(), b = a.isMediaChannel(), y = e => F.getState().setOnboardingExpanded(e);
-                return (el(A, L, _), er({
-                    isAllDone: A,
-                    isVisible: L,
+                }), F = !M && !E, L = (0, H.useForumPostComposerStoreApi)(), b = a.isMediaChannel(), P = e => L.getState().setOnboardingExpanded(e);
+                return (el(v, F, _), er({
+                    isAllDone: v,
+                    isVisible: F,
                     canManageChannel: c,
                     guild: o,
                     channel: a
                 }), es(E, M, g), n.useEffect(() => {
-                    (!t || !L) && y(!0)
-                }, []), null == o) ? null : L && c ? b ? t ? null : (0, s.jsx)(S.default, {
+                    (!t || !F) && P(!0)
+                }, []), null == o) ? null : F && c ? b ? t ? null : (0, s.jsx)(S.default, {
                     channel: a
                 }) : (0, s.jsx)(s.Fragment, {
                     children: m((e, t) => t ? (0, s.jsx)(u.animated.div, {
                         style: e,
-                        className: z.container,
+                        className: W.container,
                         children: (0, s.jsxs)("div", {
-                            className: z.wrapper,
+                            className: W.wrapper,
                             children: [(0, s.jsx)("div", {
-                                className: z.headerRow,
+                                className: W.headerRow,
                                 children: (0, s.jsxs)(f.HeadingLevel, {
                                     component: (0, s.jsx)(f.Heading, {
                                         variant: "heading-md/semibold",
@@ -1866,74 +1901,74 @@
                                     }),
                                     children: [(0, s.jsx)(f.Heading, {
                                         variant: "heading-md/medium",
-                                        className: z.header,
+                                        className: W.header,
                                         children: V.default.Messages.FORUM_CHANNEL_ONBOARDING_COMPLETED_COUNT.format({
                                             numCompleted: T.completedSteps.toString(),
                                             numSteps: T.steps.length.toString()
                                         })
                                     }), (0, s.jsxs)(f.Text, {
                                         variant: "text-xs/normal",
-                                        className: z.visibilityInfo,
-                                        children: [(0, s.jsx)(v.default, {
+                                        className: W.visibilityInfo,
+                                        children: [(0, s.jsx)(A.default, {
                                             width: 12,
                                             height: 12,
-                                            className: z.icon
+                                            className: W.icon
                                         }), V.default.Messages.FORUM_CHANNEL_ONBOARDING_VISIBILITY]
                                     }), (0, s.jsx)(ef, {
                                         expanded: l,
-                                        onClick: () => y(!l)
+                                        onClick: () => P(!l)
                                     }), (0, s.jsx)(eh, {
                                         handleHide: _
                                     })]
                                 })
                             }), x((e, t) => t ? (0, s.jsx)(u.animated.div, {
                                 style: e,
-                                className: z.listContainer,
+                                className: W.listContainer,
                                 children: (0, s.jsx)("ol", {
-                                    className: z.checklist,
+                                    className: W.checklist,
                                     children: T.getSteps().map(e => (0, s.jsxs)(f.Clickable, {
                                         tag: "li",
                                         "aria-label": e.name,
                                         onClick: () => C(e),
-                                        className: r(z.stepContainer, {
-                                            [z.completed]: e.isDone
+                                        className: r(W.stepContainer, {
+                                            [W.completed]: e.isDone
                                         }),
                                         children: [e.shouldWarn ? (0, s.jsx)(R.default, {
                                             color: d.default.STATUS_DANGER,
-                                            className: z.stepStatus
+                                            className: W.stepStatus
                                         }) : e.isDone ? (0, s.jsx)(O.IconBadge, {
                                             color: d.default.STATUS_POSITIVE_BACKGROUND,
-                                            icon: p.default,
+                                            icon: N.default,
                                             style: K,
-                                            className: z.stepStatus
+                                            className: W.stepStatus
                                         }) : (0, s.jsx)(O.IconBadge, {
                                             disableColor: !0,
                                             icon: I.default,
-                                            style: W,
-                                            className: r(z.stepStatus, z.completed)
+                                            style: z,
+                                            className: r(W.stepStatus, W.completed)
                                         }), (0, s.jsxs)("div", {
-                                            className: z.step,
+                                            className: W.step,
                                             children: [(0, s.jsx)(f.Text, {
                                                 variant: "text-md/medium",
                                                 color: e.isDone ? "header-secondary" : "header-primary",
-                                                className: z.stepName,
+                                                className: W.stepName,
                                                 children: e.name
                                             }), (0, s.jsx)(f.Text, {
                                                 variant: "text-sm/normal",
                                                 color: "header-secondary",
-                                                className: z.stepDescription,
+                                                className: W.stepDescription,
                                                 children: e.description
                                             }), e.children]
                                         }), (0, s.jsx)(j.default, {
                                             width: 12,
-                                            className: z.stepStatus
+                                            className: W.stepStatus
                                         })]
                                     }, "onboard-step-".concat(e.index)))
                                 })
                             }) : null)]
                         })
                     }) : null)
-                }) : t ? null : (0, s.jsx)(H.default, {
+                }) : t ? null : (0, s.jsx)(k.default, {
                     channelName: a.name,
                     guildId: a.guild_id,
                     tagFilter: i,
@@ -1968,7 +2003,7 @@
                     guildId: x,
                     tagFilter: C,
                     channel: _
-                } = e, T = (0, c.useCanManageChannel)(_), S = (0, r.useCanStartThread)(_), N = _.isMediaChannel(), p = n.useCallback(() => {
+                } = e, T = (0, c.useCanManageChannel)(_), S = (0, r.useCanStartThread)(_), p = _.isMediaChannel(), N = n.useCallback(() => {
                     (0, m.trackForumUpsellModalViewed)(), (0, l.openModalLazy)(async () => {
                         let {
                             default: e
@@ -1978,7 +2013,7 @@
                             guildId: x
                         })
                     })
-                }, [x]), E = C.size > 0, M = S || T, A = !E && T && !N, v = n.useCallback(() => A ? p() : S ? void d.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_COMPOSER_TITLE) : (0, h.NOOP_NULL)(), [p, A, S]);
+                }, [x]), E = C.size > 0, M = S || T, v = !E && T && !p, A = n.useCallback(() => v ? N() : S ? void d.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_COMPOSER_TITLE) : (0, h.NOOP_NULL)(), [N, v, S]);
                 return (0, s.jsxs)("div", {
                     className: g.container,
                     children: [(0, s.jsxs)("div", {
@@ -2010,10 +2045,10 @@
                         look: l.Button.Looks.BLANK,
                         size: l.Button.Sizes.MIN,
                         color: l.Button.Colors.GREEN,
-                        onClick: v,
+                        onClick: A,
                         className: g.cta,
                         innerClassName: g.button,
-                        children: [A ? f.default.Messages.FORUM_EMPTY_STATE_CTA : f.default.Messages.FORUM_EMPTY_STATE_CREATE_POST_CTA, (0, s.jsx)(u.default, {
+                        children: [v ? f.default.Messages.FORUM_EMPTY_STATE_CTA : f.default.Messages.FORUM_EMPTY_STATE_CREATE_POST_CTA, (0, s.jsx)(u.default, {
                             width: 12
                         })]
                     })]
@@ -2045,8 +2080,8 @@
                 _ = a("578198"),
                 T = a("49111"),
                 S = a("782340"),
-                N = a("743344"),
-                p = a("632215"),
+                p = a("743344"),
+                N = a("632215"),
                 E = n.memo(function(e) {
                     let {
                         channel: t,
@@ -2060,45 +2095,45 @@
                         return {
                             guidelinesOpen: t
                         }
-                    }), A = (0, C.useCanManageChannel)(t), [v, I] = n.useState(!1), j = n.useCallback(e => {
+                    }), v = (0, C.useCanManageChannel)(t), [A, I] = n.useState(!1), j = n.useCallback(e => {
                         if (null == e) return;
                         let t = e.clientHeight >= 220;
-                        t !== v && I(t)
-                    }, [v]);
+                        t !== A && I(t)
+                    }, [A]);
                     n.useLayoutEffect(() => {
                         setTimeout(l, 350)
                     }, [M, l]);
                     let R = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion),
-                        [O, L] = n.useState(!M),
-                        F = (0, i.useSpring)({
+                        [O, F] = n.useState(!M),
+                        L = (0, i.useSpring)({
                             opacity: M ? 1 : 0,
                             maxHeight: M ? 500 : 0,
                             config: {
                                 duration: 300
                             },
                             immediate: R,
-                            onRest: () => L(!M)
+                            onRest: () => F(!M)
                         }),
                         b = null != t.topic && t.topic.length > 0;
                     return b ? (0, s.jsx)(i.animated.div, {
-                        style: F,
-                        className: O ? N.hiddenVisually : void 0,
+                        style: L,
+                        className: O ? p.hiddenVisually : void 0,
                         children: (0, s.jsxs)("div", {
-                            className: N.container,
+                            className: p.container,
                             children: [(0, s.jsxs)("div", {
-                                className: N.headerContainer,
+                                className: p.headerContainer,
                                 children: [(0, s.jsxs)(u.Heading, {
                                     variant: "heading-lg/semibold",
-                                    className: N.guidelinesHeader,
+                                    className: p.guidelinesHeader,
                                     children: [(0, s.jsx)(h.default, {
                                         width: 20,
                                         height: 20
-                                    }), S.default.Messages.FORUM_POST_GUIDELINES_TITLE, A && (0, s.jsx)(u.Clickable, {
+                                    }), S.default.Messages.FORUM_POST_GUIDELINES_TITLE, v && (0, s.jsx)(u.Clickable, {
                                         onClick: () => {
                                             d.default.open(t.id, void 0, T.ChannelSettingsSubsections.TOPIC)
                                         },
                                         tag: "span",
-                                        className: N.clickable,
+                                        className: p.clickable,
                                         children: (0, s.jsx)(x.default, {
                                             width: 16,
                                             height: 16
@@ -2106,7 +2141,7 @@
                                     })]
                                 }), (0, s.jsx)(u.Clickable, {
                                     "aria-label": S.default.Messages.CLOSE,
-                                    className: N.clickable,
+                                    className: p.clickable,
                                     onClick: () => {
                                         E.getState().setGuidelinesOpen(!1)
                                     },
@@ -2116,7 +2151,7 @@
                                     })
                                 })]
                             }), (0, s.jsxs)("div", {
-                                className: N.descriptionContainer,
+                                className: p.descriptionContainer,
                                 children: [(0, s.jsx)(u.Text, {
                                     selectable: !0,
                                     variant: "text-sm/normal",
@@ -2124,7 +2159,7 @@
                                     style: {
                                         maxHeight: 220
                                     },
-                                    className: r(N.guidelines, p.markup),
+                                    className: r(p.guidelines, N.markup),
                                     children: (0, s.jsx)("div", {
                                         ref: j,
                                         children: m.default.parseForumPostGuidelines(t.topic, !0, {
@@ -2133,14 +2168,14 @@
                                             allowList: !0
                                         })
                                     })
-                                }), v && (0, s.jsxs)("div", {
-                                    className: N.showMore,
+                                }), A && (0, s.jsxs)("div", {
+                                    className: p.showMore,
                                     children: [(0, s.jsx)("div", {
-                                        className: N.gradient
+                                        className: p.gradient
                                     }), (0, s.jsx)("div", {
-                                        className: N.linkContainer,
+                                        className: p.linkContainer,
                                         children: (0, s.jsx)(u.Clickable, {
-                                            className: N.showMoreLink,
+                                            className: p.showMoreLink,
                                             onClick: () => {
                                                 (0, u.openModalLazy)(async () => {
                                                     let {
@@ -2155,9 +2190,9 @@
                                             children: (0, s.jsxs)(u.Text, {
                                                 variant: "text-sm/semibold",
                                                 color: "text-brand",
-                                                className: N.showMoreText,
+                                                className: p.showMoreText,
                                                 children: [S.default.Messages.FORUM_CHANNEL_TOPIC_VIEW_ALL, (0, s.jsx)(g.default, {
-                                                    className: N.showMoreIcon
+                                                    className: p.showMoreIcon
                                                 })]
                                             })
                                         })
@@ -2289,18 +2324,18 @@
                 _ = a("840817"),
                 T = a("659500"),
                 S = a("412861"),
-                N = a("867965"),
-                p = a("49111"),
+                p = a("867965"),
+                N = a("49111"),
                 E = a("572228");
             let M = {
                     scale: .95,
                     opacity: 0
                 },
-                A = {
+                v = {
                     scale: 1,
                     opacity: 1
                 },
-                v = {
+                A = {
                     scale: 1,
                     opacity: 1
                 },
@@ -2320,14 +2355,14 @@
                     className: E.uploadInput,
                     onMouseEnter: i,
                     onClick: () => {
-                        (0, N.trackForumChannelMediaUploaderClicked)({
+                        (0, p.trackForumChannelMediaUploaderClicked)({
                             isMobile: !1
                         }), null == a || a()
                     },
                     onKeyPress: e => {
                         if ("Enter" === e.key) {
                             var t;
-                            null === (t = c.current) || void 0 === t || t.activateUploadDialogue(), (0, N.trackForumChannelMediaUploaderClicked)({
+                            null === (t = c.current) || void 0 === t || t.activateUploadDialogue(), (0, p.trackForumChannelMediaUploaderClicked)({
                                 isMobile: !1
                             })
                         }
@@ -2338,7 +2373,7 @@
                         onChange: e => {
                             null == l || l(), (0, S.promptToUpload)(e.currentTarget.files, m, x.DraftType.FirstThreadMessage, {
                                 requireConfirm: !0
-                            }), T.ComponentDispatch.dispatch(p.ComponentActions.TEXTAREA_FOCUS), e.currentTarget.value = null
+                            }), T.ComponentDispatch.dispatch(N.ComponentActions.TEXTAREA_FOCUS), e.currentTarget.value = null
                         },
                         multiple: m.rateLimitPerUser <= 0,
                         tabIndex: -1,
@@ -2358,8 +2393,8 @@
                 } = e, [l, r] = n.useState(!1), {
                     reducedMotion: d
                 } = n.useContext(u.AccessibilityPreferencesContext), g = (0, i.useSpring)({
-                    from: d.enabled ? A : M,
-                    to: v,
+                    from: d.enabled ? v : M,
+                    to: A,
                     config: I
                 }), x = (0, o.useStateFromStores)([c.default], () => c.default.keyboardModeEnabled), _ = (0, o.useStateFromStores)([C.default], () => C.default.getUploads(t, m.ChatInputTypes.CREATE_FORUM_POST.drafts.type));
                 return (0, s.jsx)(i.animated.div, {
@@ -2433,7 +2468,7 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return ei
+                    return ef
                 }
             }), a("222007"), a("843762");
             var s = a("37983"),
@@ -2449,53 +2484,60 @@
                 h = a("77078"),
                 f = a("295426"),
                 g = a("81594"),
-                x = a("850391"),
-                C = a("740483"),
-                _ = a("681060"),
-                T = a("830618"),
-                S = a("939563"),
+                x = a("193865"),
+                C = a("850391"),
+                _ = a("740483"),
+                T = a("681060"),
+                S = a("830618"),
+                p = a("939563"),
                 N = a("236003"),
-                p = a("549558"),
-                E = a("884351"),
-                M = a("328511"),
-                A = a("467094"),
-                v = a("24337"),
-                I = a("967241"),
-                j = a("517141"),
-                R = a("474643"),
-                O = a("957255"),
-                L = a("401848"),
-                F = a("585722"),
-                b = a("697218"),
-                y = a("837899"),
-                P = a("213523"),
-                D = a("381546"),
-                U = a("660074"),
-                w = a("987772"),
-                H = a("229915"),
-                k = a("547896"),
-                B = a("378765"),
-                G = a("718422"),
-                V = a("412861"),
-                z = a("119161"),
-                W = a("404607"),
-                K = a("706065"),
-                Y = a("680986"),
-                Z = a("867965"),
-                X = a("532308"),
-                q = a("1999"),
-                Q = a("578198"),
-                J = a("90625"),
-                $ = a("337113"),
-                ee = a("589455"),
-                et = a("953371"),
-                ea = a("49111"),
-                es = a("724210"),
-                en = a("782340"),
-                el = a("842875");
-            let er = x.ChatInputTypes.CREATE_FORUM_POST;
+                E = a("549558"),
+                M = a("884351"),
+                v = a("39331"),
+                A = a("82080"),
+                I = a("328511"),
+                j = a("467094"),
+                R = a("24337"),
+                O = a("967241"),
+                F = a("517141"),
+                L = a("719926"),
+                b = a("474643"),
+                P = a("957255"),
+                y = a("401848"),
+                D = a("585722"),
+                w = a("697218"),
+                U = a("837899"),
+                k = a("213523"),
+                H = a("381546"),
+                B = a("462579"),
+                G = a("867544"),
+                V = a("660074"),
+                W = a("987772"),
+                z = a("229915"),
+                K = a("547896"),
+                Y = a("378765"),
+                Z = a("718422"),
+                X = a("412861"),
+                q = a("119161"),
+                Q = a("404607"),
+                J = a("706065"),
+                $ = a("680986"),
+                ee = a("763245"),
+                et = a("867965"),
+                ea = a("532308"),
+                es = a("1999"),
+                en = a("578198"),
+                el = a("90625"),
+                er = a("337113"),
+                ei = a("589455"),
+                eo = a("953371"),
+                eu = a("49111"),
+                ed = a("724210"),
+                ec = a("782340"),
+                em = a("842875");
+            let eh = C.ChatInputTypes.CREATE_FORUM_POST;
 
-            function ei(e) {
+            function ef(e) {
                 let {
                     parentChannel: t,
                     isSearchLoading: a,
@@ -2504,21 +2546,24 @@
                     inputRef: o
                 } = e, {
                     textAreaState: d,
-                    formOpen: c
-                } = (0, Q.useForumPostComposerStore)(e => {
+                    formOpen: c,
+                    previewing: f
+                } = (0, en.useForumPostComposerStore)(e => {
                     let {
                         textAreaState: t,
-                        formOpen: a
+                        formOpen: a,
+                        previewing: s
                     } = e;
                     return {
                         textAreaState: t,
-                        formOpen: a
+                        formOpen: a,
+                        previewing: s
                     }
-                }, u.default), [f, g] = n.useState(null), x = n.useContext(B.ComponentDispatchGroupContext), C = n.useCallback(() => {
-                    x.bumpDispatchPriority()
-                }, [x]), _ = (0, m.useStateFromStores)([O.default], () => O.default.can(ea.Permissions.ATTACH_FILES, t)), T = (0, m.useStateFromStoresArray)([F.default], () => F.default.getUploads(t.id, R.DraftType.FirstThreadMessage)), S = c && _ && i, v = (null == t ? void 0 : t.isMediaChannel()) === !0, L = function(e, t) {
-                    let a = (0, Q.useForumPostComposerStoreApi)(),
-                        s = (0, Y.useChannelTemplate)(e),
+                }, u.default), [g, x] = n.useState(null), C = n.useContext(Y.ComponentDispatchGroupContext), _ = n.useCallback(() => {
+                    C.bumpDispatchPriority()
+                }, [C]), T = (0, m.useStateFromStores)([P.default], () => P.default.can(eu.Permissions.ATTACH_FILES, t)), S = (0, m.useStateFromStoresArray)([D.default], () => D.default.getUploads(t.id, b.DraftType.FirstThreadMessage)), p = c && T && i, v = (null == t ? void 0 : t.isMediaChannel()) === !0, A = function(e, t) {
+                    let a = (0, en.useForumPostComposerStoreApi)(),
+                        s = (0, $.useChannelTemplate)(e),
                         l = n.useCallback(() => {
                             let {
                                 formOpen: n,
@@ -2532,20 +2577,20 @@
                                     var e, a, s, n;
                                     null === (a = t.current) || void 0 === a || null === (e = a._textArea) || void 0 === e || e.setSelectionRange(r.length, r.length), null === (n = t.current) || void 0 === n || null === (s = n._textArea) || void 0 === s || s.focus()
                                 }
-                            }, 0), (o && r.length > 0 || i.textValue.trim().length > 0 && i.textValue.trim() !== s || F.default.getUploads(e.id, R.DraftType.FirstThreadMessage).length > 0) && l())
+                            }, 0), (o && r.length > 0 || i.textValue.trim().length > 0 && i.textValue.trim() !== s || D.default.getUploads(e.id, b.DraftType.FirstThreadMessage).length > 0) && l())
                         }, [a, e.id, s, t]);
                     return l
-                }(t, o), b = function(e) {
+                }(t, o), R = function(e) {
                     let {
                         formOpen: t
-                    } = (0, Q.useForumPostComposerStore)(e => {
+                    } = (0, en.useForumPostComposerStore)(e => {
                         let {
                             formOpen: t
                         } = e;
                         return {
                             formOpen: t
                         }
-                    }, u.default), a = (0, Q.useForumPostComposerStoreApi)(), s = (0, j.useCreateForumPost)({
+                    }, u.default), a = (0, en.useForumPostComposerStoreApi)(), s = (0, F.useCreateForumPost)({
                         parentChannel: e
                     });
                     n.useEffect(() => {
@@ -2563,12 +2608,12 @@
                         null == t && (t = r.textValue), t = t.trim();
                         let {
                             content: i
-                        } = E.default.parse(e, t);
+                        } = M.default.parse(e, t);
                         if (t = i, null == s || 0 === s.length) {
                             var o;
-                            s = null === (o = M.default.getStickerPreview(e.id, er.drafts.type)) || void 0 === o ? void 0 : o.map(e => e.id)
+                            s = null === (o = I.default.getStickerPreview(e.id, eh.drafts.type)) || void 0 === o ? void 0 : o.map(e => e.id)
                         }
-                        if ((null == n || 0 === n.length) && (n = F.default.getUploads(e.id, R.DraftType.FirstThreadMessage)), null != n && n.length > 0 && e.isMediaChannel()) {
+                        if ((null == n || 0 === n.length) && (n = D.default.getUploads(e.id, b.DraftType.FirstThreadMessage)), null != n && n.length > 0 && e.isMediaChannel()) {
                             let e = n.findIndex(e => !0 === e.isThumbnail);
                             if (e > -1) {
                                 let t = n[e];
@@ -2593,24 +2638,25 @@
                             resetFormState: d,
                             formOpen: c,
                             setFormOpen: m,
-                            setFormOpenFromUserAction: h,
-                            setGuidelinesOpen: f
-                        } = a.getState(), g = K.default.hasSeen(e.id);
-                        if (!c) return (0, Z.trackForumCreateNewPostClick)({
+                            setPreviewing: h,
+                            setFormOpenFromUserAction: f,
+                            setGuidelinesOpen: g
+                        } = a.getState(), x = J.default.hasSeen(e.id);
+                        if (!c) return (0, et.trackForumCreateNewPostClick)({
                             guildId: e.guild_id,
                             channelId: e.id
-                        }), !g && a.getState().setGuidelinesOpen(!0), h(), {
+                        }), !x && a.getState().setGuidelinesOpen(!0), f(), {
                             shouldClear: !1,
                             shouldRefocus: !1
                         };
                         let {
-                            content: x,
-                            stickers: C,
-                            uploads: _,
-                            hasNameError: T,
-                            hasMessageError: S
+                            content: C,
+                            stickers: _,
+                            uploads: T,
+                            hasNameError: S,
+                            hasMessageError: p
                         } = l(t, n, r);
-                        if (i(T ? (0, z.makeEmptyTitleError)() : null), o(S ? (0, z.makeEmptyMessageError)() : null), T || S) return {
+                        if (i(S ? (0, q.makeEmptyTitleError)() : null), o(p ? (0, q.makeEmptyMessageError)() : null), S || p) return {
                             shouldClear: !1,
                             shouldRefocus: !0
                         };
@@ -2618,25 +2664,25 @@
                             u(!0);
                             let {
                                 valid: t
-                            } = await (0, G.applyChatRestrictions)({
-                                content: x,
-                                stickers: C,
-                                uploads: _,
-                                type: er,
+                            } = await (0, Z.applyChatRestrictions)({
+                                content: C,
+                                stickers: _,
+                                uploads: T,
+                                type: eh,
                                 channel: e
                             });
                             if (!t) return {
                                 shouldClear: !1,
                                 shouldRefocus: !0
                             };
-                            let a = await s(x, C, _);
-                            return (0, I.openThreadSidebarForViewing)(a), W.default.resort(e.id), (0, A.clearStickerPreview)(e.id, er.drafts.type), d(), m(!1), K.default.markAsSeen(e.id), f(!1), {
+                            let a = await s(C, _, T);
+                            return (0, O.openThreadSidebarForViewing)(a), Q.default.resort(e.id), (0, j.clearStickerPreview)(e.id, eh.drafts.type), d(), m(!1), h(!1), J.default.markAsSeen(e.id), g(!1), {
                                 shouldClear: !0,
                                 shouldRefocus: !1
                             }
                         } catch (t) {
-                            var N, p;
-                            return (null === (N = t.body) || void 0 === N ? void 0 : N.code) === ea.AbortCodes.AUTOMOD_TITLE_BLOCKED ? i((0, z.makeAutomodViolationError)(t.body, e)) : (null === (p = t.body) || void 0 === p ? void 0 : p.code) === ea.AbortCodes.AUTOMOD_MESSAGE_BLOCKED && o((0, z.makeAutomodViolationError)(t.body, e)), {
+                            var N, E;
+                            return (null === (N = t.body) || void 0 === N ? void 0 : N.code) === eu.AbortCodes.AUTOMOD_TITLE_BLOCKED ? i((0, q.makeAutomodViolationError)(t.body, e)) : (null === (E = t.body) || void 0 === E ? void 0 : E.code) === eu.AbortCodes.AUTOMOD_MESSAGE_BLOCKED && o((0, q.makeAutomodViolationError)(t.body, e)), {
                                 shouldClear: !1,
                                 shouldRefocus: !0
                             }
@@ -2645,47 +2691,51 @@
                         }
                     }, [s, l, e, a])
                 }(t);
-                return n.useLayoutEffect(l, [c, d, T, l]), (0, s.jsx)(s.Fragment, {
+                return n.useLayoutEffect(l, [c, d, S, l]), (0, s.jsx)(s.Fragment, {
                     children: (0, s.jsx)("div", {
-                        "aria-label": i ? en.default.Messages.NEW_FORUM_POST : en.default.Messages.SEARCH,
-                        className: r(el.container, {
-                            [el.collapsed]: !c
+                        "aria-label": i ? ec.default.Messages.NEW_FORUM_POST : ec.default.Messages.SEARCH,
+                        className: r(em.container, {
+                            [em.collapsed]: !c
                         }),
-                        onClick: !c && i ? L : void 0,
+                        onClick: !c && i ? A : void 0,
                         children: (0, s.jsxs)("form", {
-                            onMouseDown: C,
-                            onFocus: C,
+                            onMouseDown: _,
+                            onFocus: _,
                             onSubmit: e => {
-                                e.preventDefault(), i && b()
+                                e.preventDefault(), i && R()
                             },
                             children: [(0, s.jsxs)("div", {
-                                className: el.formContainer,
-                                children: [(0, s.jsxs)("div", {
-                                    className: el.form,
-                                    children: [(0, s.jsx)(eo, {
-                                        editorRef: f,
+                                className: em.formContainer,
+                                children: [(0, s.jsx)(eg, {
+                                    parentChannel: t,
+                                    isSearchLoading: a,
+                                    inputRef: o
+                                }), (0, s.jsxs)("div", {
+                                    className: f ? em.previewForm : em.form,
+                                    children: [(0, s.jsx)(ex, {
+                                        editorRef: g,
                                         parentChannel: t,
                                         isSearchLoading: a,
                                         inputRef: o,
                                         canCreatePost: i
-                                    }), c && (0, s.jsx)(ed, {
-                                        editorRef: f,
-                                        setEditorRef: g,
+                                    }), c && (0, s.jsx)(eT, {
+                                        editorRef: g,
+                                        setEditorRef: x,
                                         parentChannel: t,
-                                        submit: b,
+                                        submit: R,
                                         disabled: !i
-                                    })]
-                                }), S && (v ? (0, s.jsx)(p.MediaPostThumbnail, {
+                                    }), f && (0, s.jsx)(eS, {})]
+                                }), p && (v ? (0, s.jsx)(E.MediaPostThumbnail, {
                                     parentChannel: t
-                                }) : (0, s.jsx)(q.default, {
+                                }) : (0, s.jsx)(es.default, {
                                     channelId: t.id
                                 }))]
                             }), (0, s.jsxs)("div", {
-                                className: el.form,
-                                children: [S && v && (0, s.jsx)(N.default, {
+                                className: em.form,
+                                children: [p && v && (0, s.jsx)(N.default, {
                                     parentChannel: t
-                                }), c && (0, s.jsx)(ec, {
-                                    className: el.horizontalPadding,
+                                }), c && (0, s.jsx)(eN, {
+                                    className: em.horizontalPadding,
                                     parentChannel: t,
                                     canCreatePost: i
                                 })]
@@ -2694,171 +2744,206 @@
                     })
                 })
             }
-            let eo = n.memo(function(e) {
-                let {
-                    parentChannel: t,
-                    isSearchLoading: a,
-                    inputRef: l,
-                    canCreatePost: r,
-                    editorRef: i
-                } = e, {
-                    formOpen: d,
-                    nameError: c,
-                    name: x,
-                    textAreaState: C,
-                    hasClickedForm: _,
-                    submitting: T
-                } = (0, Q.useForumPostComposerStore)(e => {
+            let eg = n.memo(function(e) {
                     let {
-                        formOpen: t,
-                        nameError: a,
-                        name: s,
-                        textAreaState: n,
-                        hasClickedForm: l,
-                        submitting: r
-                    } = e;
-                    return {
-                        formOpen: t,
-                        nameError: a,
-                        name: s,
-                        textAreaState: n,
-                        hasClickedForm: l,
-                        submitting: r
-                    }
-                }, u.default), S = (0, Q.useForumPostComposerStoreApi)(), N = null != t.topic && 0 !== t.topic.length, p = K.default.hasSeen(t.id), E = (0, Y.useChannelTemplate)(t), M = (0, m.useStateFromStores)([b.default], () => b.default.getCurrentUser());
-                o(null != M, "current user cannot be null");
-                (0, B.useComponentAction)({
-                    event: ea.ComponentActions.FOCUS_COMPOSER_TITLE,
-                    handler: () => {
+                        parentChannel: t,
+                        isSearchLoading: a,
+                        inputRef: l
+                    } = e, {
+                        formOpen: r,
+                        name: i,
+                        textAreaState: o,
+                        hasClickedForm: d,
+                        submitting: c
+                    } = (0, en.useForumPostComposerStore)(e => {
+                        let {
+                            formOpen: t,
+                            nameError: a,
+                            name: s,
+                            previewing: n,
+                            textAreaState: l,
+                            hasClickedForm: r,
+                            submitting: i
+                        } = e;
+                        return {
+                            formOpen: t,
+                            nameError: a,
+                            name: s,
+                            textAreaState: l,
+                            previewing: n,
+                            hasClickedForm: r,
+                            submitting: i
+                        }
+                    }, u.default), m = (0, en.useForumPostComposerStoreApi)(), x = (0, $.useChannelTemplate)(t), C = n.useCallback(() => {
                         var e;
-                        let t = l.current instanceof h.TextAreaAutosize ? null === (e = l.current) || void 0 === e ? void 0 : e._textArea : l.current;
-                        null == t || t.focus(), S.getState().setTitleFocused(!0), S.getState().setFormOpen(!0), S.getState().setHasClickedForm(!0)
-                    }
-                });
-                let A = n.useCallback(() => {
-                        var e;
-                        S.getState().resetFormState(), f.default.clearDraft(t.id, R.DraftType.ThreadSettings), f.default.clearDraft(t.id, R.DraftType.FirstThreadMessage), g.default.clearAll(t.id, R.DraftType.FirstThreadMessage), S.getState().setFormOpen(!1), S.getState().setBodyFocused(!1), S.getState().setTitleFocused(!1), S.getState().setHasClickedForm(!1), null === (e = l.current) || void 0 === e || e.blur(), (0, Z.trackForumNewPostCleared)({
+                        m.getState().resetFormState(), f.default.clearDraft(t.id, b.DraftType.ThreadSettings), f.default.clearDraft(t.id, b.DraftType.FirstThreadMessage), g.default.clearAll(t.id, b.DraftType.FirstThreadMessage), m.getState().setFormOpen(!1), m.getState().setBodyFocused(!1), m.getState().setTitleFocused(!1), m.getState().setHasClickedForm(!1), m.getState().setPreviewing(!1), null === (e = l.current) || void 0 === e || e.blur(), (0, et.trackForumNewPostCleared)({
                             guildId: t.guild_id,
                             channelId: t.id
                         })
-                    }, [S, t.id, t.guild_id, l]),
-                    I = n.useMemo(() => a && !d ? (0, s.jsx)(eg, {}) : a || d || 0 !== C.textValue.trim().length && C.textValue.trim() !== E ? !d && (x.trim().length > 0 || C.textValue.trim().length > 0 && C.textValue.trim() !== E || F.default.getUploads(t.id, R.DraftType.FirstThreadMessage).length > 0) && _ ? (0, s.jsx)(w.default, {
-                        className: el.pencilIcon,
+                    }, [m, t.id, t.guild_id, l]), _ = n.useMemo(() => a && !r ? (0, s.jsx)(eA, {}) : a || r || 0 !== o.textValue.trim().length && o.textValue.trim() !== x ? !r && (i.trim().length > 0 || o.textValue.trim().length > 0 && o.textValue.trim() !== x || D.default.getUploads(t.id, b.DraftType.FirstThreadMessage).length > 0) && d ? (0, s.jsx)(W.default, {
+                        className: em.pencilIcon,
                         width: 24,
                         height: 24
-                    }) : T ? (0, s.jsx)(D.default, {
-                        className: el.closeIconDisabled,
+                    }) : c ? (0, s.jsx)(H.default, {
+                        className: em.closeIconDisabled,
                         width: 24,
                         height: 24
                     }) : (0, s.jsx)(h.Tooltip, {
-                        text: en.default.Messages.FORUM_CLEAR_ALL,
+                        text: ec.default.Messages.FORUM_CLEAR_ALL,
                         children: e => (0, s.jsx)(h.Clickable, {
                             ...e,
-                            onClick: A,
-                            children: (0, s.jsx)(D.default, {
-                                className: el.closeIcon,
+                            onClick: C,
+                            children: (0, s.jsx)(H.default, {
+                                className: em.closeIcon,
                                 width: 24,
                                 height: 24
                             })
                         })
-                    }) : (0, s.jsx)(H.default, {
-                        className: el.searchIcon,
+                    }) : (0, s.jsx)(z.default, {
+                        className: em.searchIcon,
                         width: 24,
                         height: 24
-                    }), [a, d, _, x, C.textValue, A, t.id, E, T]),
-                    j = n.useCallback(e => {
-                        let a = e.clipboardData.files[0];
-                        null != a && a.type.startsWith("image/") && (e.preventDefault(), (0, V.promptToUpload)([a], t, R.DraftType.FirstThreadMessage), S.getState().setFormOpenFromUserAction())
-                    }, [t, S]),
-                    O = (0, z.renderError)(c, {
-                        content: x
+                    }), [a, r, d, i, o.textValue, C, t.id, x, c]);
+                    return (0, s.jsx)("div", {
+                        className: em.prefixElement,
+                        children: _
+                    })
+                }),
+                ex = n.memo(function(e) {
+                    let {
+                        parentChannel: t,
+                        inputRef: a,
+                        canCreatePost: l,
+                        editorRef: r
+                    } = e, {
+                        formOpen: i,
+                        nameError: d,
+                        name: c,
+                        textAreaState: f,
+                        previewing: g
+                    } = (0, en.useForumPostComposerStore)(e => {
+                        let {
+                            formOpen: t,
+                            nameError: a,
+                            name: s,
+                            previewing: n,
+                            textAreaState: l,
+                            hasClickedForm: r,
+                            submitting: i
+                        } = e;
+                        return {
+                            formOpen: t,
+                            nameError: a,
+                            name: s,
+                            textAreaState: l,
+                            previewing: n,
+                            hasClickedForm: r,
+                            submitting: i
+                        }
+                    }, u.default), x = (0, en.useForumPostComposerStoreApi)(), C = null != t.topic && 0 !== t.topic.length, _ = J.default.hasSeen(t.id), T = (0, $.useChannelTemplate)(t), S = (0, m.useStateFromStores)([w.default], () => w.default.getCurrentUser());
+                    o(null != S, "current user cannot be null");
+                    (0, Y.useComponentAction)({
+                        event: eu.ComponentActions.FOCUS_COMPOSER_TITLE,
+                        handler: () => {
+                            var e;
+                            let t = a.current instanceof h.TextAreaAutosize ? null === (e = a.current) || void 0 === e ? void 0 : e._textArea : a.current;
+                            null == t || t.focus(), x.getState().setTitleFocused(!0), x.getState().setFormOpen(!0), x.getState().setHasClickedForm(!0)
+                        }
                     });
-                return (0, s.jsxs)("div", {
-                    className: el.titleContainer,
-                    onPaste: j,
-                    children: [(0, s.jsx)("div", {
-                        className: el.prefixElement,
-                        children: I
-                    }), (0, s.jsx)(h.TextArea, {
-                        value: x,
-                        placeholder: r ? d || C.textValue.length > 0 && C.textValue.trim() !== E ? en.default.Messages.FORUM_POST_TITLE_PLACEHOLDER_FOCUSED : en.default.Messages.FORUM_POST_TITLE_PLACEHOLDER_SEARCH : en.default.Messages.SEARCH,
-                        flex: !0,
-                        autosize: d,
-                        rows: 1,
-                        showCharacterCount: !1,
-                        showRemainingCharacterCount: !1,
-                        maxLength: ea.MAX_CHANNEL_NAME_LENGTH,
-                        onChange: e => {
-                            let a = (0, v.default)(e, !1);
-                            S.getState().setName(a);
-                            let s = 0 === a.trim().length,
-                                n = 0 === C.textValue.trim().length,
-                                l = C.textValue.trim() === E;
-                            s && (n || l) && S.getState().setHasClickedForm(!1), !d && W.default.updateForumSearchQuery(t.id, a)
-                        },
-                        onFocus: () => {
-                            S.getState().setTitleFocused(!0), S.getState().setBodyFocused(!1)
-                        },
-                        onBlur: () => {
-                            S.getState().setTitleFocused(!1);
-                            let e = (0, v.default)(x, !0);
-                            e !== x && (S.getState().setName(e), !d && W.default.updateForumSearchQuery(t.id, e))
-                        },
-                        onKeyDown: e => {
-                            var a, s;
-                            "Enter" === e.key && (e.preventDefault(), e.stopPropagation(), d && x.length > 0 ? null == i || i.focus() : r && e.shiftKey && ((0, Z.trackForumCreateNewPostKeybindUsed)({
-                                guildId: t.guild_id,
-                                channelId: t.id
-                            }), N && !p && S.getState().setGuidelinesOpen(!0), S.getState().setFormOpenFromUserAction(), x.trim().length > 0 && (S.getState().setBodyFocused(!0), null == i || i.focus())));
-                            let n = l.current instanceof h.TextAreaAutosize ? null === (a = l.current) || void 0 === a ? void 0 : a._textArea : l.current;
-                            if ("Home" === e.key || "End" === e.key) {
-                                if (null == n) return;
-                                if (e.preventDefault(), e.stopPropagation(), "Home" === e.key) n.setSelectionRange(0, 0);
-                                else {
-                                    let e = x.length;
-                                    n.setSelectionRange(e, e)
+                    let p = n.useCallback(e => {
+                            let a = e.clipboardData.files[0];
+                            null != a && a.type.startsWith("image/") && (e.preventDefault(), (0, X.promptToUpload)([a], t, b.DraftType.FirstThreadMessage), x.getState().setFormOpenFromUserAction())
+                        }, [t, x]),
+                        N = (0, q.renderError)(d, {
+                            content: c
+                        });
+                    return (0, s.jsxs)("div", {
+                        className: em.titleContainer,
+                        onPaste: p,
+                        children: [i && g ? (0, s.jsx)(h.Heading, {
+                            variant: "heading-md/semibold",
+                            className: em.title,
+                            children: c
+                        }) : (0, s.jsx)(h.TextArea, {
+                            value: c,
+                            placeholder: l ? i || f.textValue.length > 0 && f.textValue.trim() !== T ? ec.default.Messages.FORUM_POST_TITLE_PLACEHOLDER_FOCUSED : ec.default.Messages.FORUM_POST_TITLE_PLACEHOLDER_SEARCH : ec.default.Messages.SEARCH,
+                            flex: !0,
+                            autosize: i,
+                            rows: 1,
+                            showCharacterCount: !1,
+                            showRemainingCharacterCount: !1,
+                            maxLength: eu.MAX_CHANNEL_NAME_LENGTH,
+                            onChange: e => {
+                                let a = (0, R.default)(e, !1);
+                                x.getState().setName(a);
+                                let s = 0 === a.trim().length,
+                                    n = 0 === f.textValue.trim().length,
+                                    l = f.textValue.trim() === T;
+                                s && (n || l) && x.getState().setHasClickedForm(!1), !i && Q.default.updateForumSearchQuery(t.id, a)
+                            },
+                            onFocus: () => {
+                                x.getState().setTitleFocused(!0), x.getState().setBodyFocused(!1)
+                            },
+                            onBlur: () => {
+                                x.getState().setTitleFocused(!1);
+                                let e = (0, R.default)(c, !0);
+                                e !== c && (x.getState().setName(e), !i && Q.default.updateForumSearchQuery(t.id, e))
+                            },
+                            onKeyDown: e => {
+                                var s, n;
+                                "Enter" === e.key && (e.preventDefault(), e.stopPropagation(), i && c.length > 0 ? null == r || r.focus() : l && e.shiftKey && ((0, et.trackForumCreateNewPostKeybindUsed)({
+                                    guildId: t.guild_id,
+                                    channelId: t.id
+                                }), C && !_ && x.getState().setGuidelinesOpen(!0), x.getState().setFormOpenFromUserAction(), c.trim().length > 0 && (x.getState().setBodyFocused(!0), null == r || r.focus())));
+                                let o = a.current instanceof h.TextAreaAutosize ? null === (s = a.current) || void 0 === s ? void 0 : s._textArea : a.current;
+                                if ("Home" === e.key || "End" === e.key) {
+                                    if (null == o) return;
+                                    if (e.preventDefault(), e.stopPropagation(), "Home" === e.key) o.setSelectionRange(0, 0);
+                                    else {
+                                        let e = c.length;
+                                        o.setSelectionRange(e, e)
+                                    }
                                 }
-                            }
-                            "Escape" === e.key && !S.getState().submitting && (null === (s = l.current) || void 0 === s || s.blur(), S.getState().setFormOpen(!1), S.getState().setTitleFocused(!1), S.getState().setBodyFocused(!1))
-                        },
-                        error: O,
-                        className: el.title,
-                        inputRef: l
-                    }), d ? null : (0, s.jsxs)(s.Fragment, {
-                        children: [(0, s.jsx)(eu, {
-                            parentChannel: t
-                        }), (0, s.jsx)(em, {
-                            parentChannel: t,
-                            canCreatePost: r
+                                "Escape" === e.key && !x.getState().submitting && (null === (n = a.current) || void 0 === n || n.blur(), x.getState().setFormOpen(!1), x.getState().setTitleFocused(!1), x.getState().setBodyFocused(!1), x.getState().setPreviewing(!1))
+                            },
+                            error: N,
+                            className: em.title,
+                            inputRef: a
+                        }), i ? null : (0, s.jsxs)(s.Fragment, {
+                            children: [(0, s.jsx)(eC, {
+                                parentChannel: t
+                            }), (0, s.jsx)(eE, {
+                                parentChannel: t,
+                                canCreatePost: l
+                            })]
                         })]
-                    })]
-                })
-            });
+                    })
+                });
 
-            function eu(e) {
+            function eC(e) {
                 let {
                     parentChannel: t
                 } = e, {
                     guidelinesOpen: a
-                } = (0, Q.useForumPostComposerStore)(e => {
+                } = (0, en.useForumPostComposerStore)(e => {
                     let {
                         guidelinesOpen: t
                     } = e;
                     return {
                         guidelinesOpen: t
                     }
-                }), n = (0, Q.useForumPostComposerStoreApi)(), l = null != t.topic && 0 !== t.topic.length, i = () => {
+                }), n = (0, en.useForumPostComposerStoreApi)(), l = null != t.topic && 0 !== t.topic.length, i = () => {
                     n.getState().setGuidelinesOpen(!a)
                 };
                 return l ? (0, s.jsx)(h.Tooltip, {
-                    text: en.default.Messages.FORUM_POST_GUIDELINES_TITLE,
+                    text: ec.default.Messages.FORUM_POST_GUIDELINES_TITLE,
                     children: e => (0, s.jsx)(h.Clickable, {
                         ...e,
                         onClick: i,
-                        className: r(el.guidelinesButton, {
-                            [el.guidelinesOpen]: a
+                        className: r(em.forumPostFormButton, {
+                            [em.forumPostFormButtonActive]: a
                         }),
-                        children: (0, s.jsx)(P.default, {
+                        children: (0, s.jsx)(k.default, {
                             ...e,
                             width: 24,
                             height: 24
@@ -2866,54 +2951,83 @@
                     })
                 }) : null
             }
-            let ed = n.memo(function(e) {
+            let e_ = n.memo(function(e) {
+                    let {
+                        parentChannel: t,
+                        textValue: a
+                    } = e, n = new L.default({
+                        channelId: t.id,
+                        content: a
+                    }), l = (0, x.useShowImprovedMarkdownUserExperimentConfig)(new Date().valueOf()), r = (0, x.useShowImprovedMarkdownGuildExperimentConfig)(t.guild_id, new Date().valueOf()), {
+                        content: i
+                    } = (0, v.default)(n, {
+                        hideSimpleEmbedContent: !0,
+                        isInteracting: !1,
+                        formatInline: !1,
+                        allowList: !0,
+                        allowHeading: !0,
+                        allowLinks: l.showMaskedLinks || r.showMaskedLinks,
+                        previewLinkTarget: l.showMaskedLinks || r.showMaskedLinks
+                    }), o = (0, A.default)({
+                        message: n,
+                        channel: t
+                    }, i, !1);
+                    return (0, s.jsx)("div", {
+                        className: em.channelTextAreaInner,
+                        children: o
+                    })
+                }),
+                eT = n.memo(function(e) {
                     let {
                         parentChannel: t,
                         submit: a,
                         disabled: l = !1,
                         editorRef: i,
                         setEditorRef: d
-                    } = e, c = (0, m.useStateFromStores)([b.default], () => b.default.getCurrentUser());
+                    } = e, c = (0, m.useStateFromStores)([w.default], () => w.default.getCurrentUser());
                     o(null != c, "current user cannot be null");
                     let {
                         messageError: f,
-                        textAreaState: g,
-                        bodyFocused: x,
-                        formOpen: C
-                    } = (0, Q.useForumPostComposerStore)(e => {
+                        previewing: g,
+                        textAreaState: x,
+                        bodyFocused: C,
+                        formOpen: _
+                    } = (0, en.useForumPostComposerStore)(e => {
                         let {
                             messageError: t,
                             textAreaState: a,
-                            bodyFocused: s,
-                            formOpen: n
+                            previewing: s,
+                            bodyFocused: n,
+                            formOpen: l
                         } = e;
                         return {
                             messageError: t,
                             textAreaState: a,
-                            bodyFocused: s,
-                            formOpen: n
+                            previewing: s,
+                            bodyFocused: n,
+                            formOpen: l
                         }
-                    }, u.default), T = (0, Q.useForumPostComposerStoreApi)();
-                    n.useEffect(() => () => (0, Z.maybeTrackForumNewPostDraftCreated)({
+                    }, u.default), S = (0, en.useForumPostComposerStoreApi)();
+                    n.useEffect(() => () => (0, et.maybeTrackForumNewPostDraftCreated)({
                         guildId: t.guild_id,
                         channelId: t.id
                     }), [t.guild_id, t.id]);
                     let N = n.useCallback(() => {
-                            T.getState().setBodyFocused(!0)
-                        }, [T]),
-                        p = n.useCallback(() => {
-                            T.getState().setBodyFocused(!1)
-                        }, [T]),
-                        E = n.useCallback((e, t, a) => {
+                            S.getState().setBodyFocused(!0)
+                        }, [S]),
+                        E = n.useCallback(() => {
+                            S.getState().setBodyFocused(!1)
+                        }, [S]),
+                        M = n.useCallback((e, t, a) => {
                             let {
                                 setTextAreaState: s
-                            } = T.getState();
+                            } = S.getState();
                             s({
                                 textValue: t,
                                 richValue: a
                             })
-                        }, [T]),
-                        M = n.useCallback(e => {
+                        }, [S]),
+                        v = n.useCallback(e => {
                             let {
                                 value: t,
                                 uploads: s,
@@ -2921,37 +3035,40 @@
                             } = e;
                             return a(t, n, s)
                         }, [a]);
-                    (0, B.useComponentAction)({
-                        event: ea.ComponentActions.TEXTAREA_FOCUS,
+                    (0, Y.useComponentAction)({
+                        event: eu.ComponentActions.TEXTAREA_FOCUS,
                         handler: N
-                    }), (0, B.useComponentAction)({
-                        event: ea.ComponentActions.TEXTAREA_BLUR,
-                        handler: p
+                    }), (0, Y.useComponentAction)({
+                        event: eu.ComponentActions.TEXTAREA_BLUR,
+                        handler: E
                     });
-                    let A = (0, z.renderError)(f, {
-                        content: g.textValue
+                    let A = (0, q.renderError)(f, {
+                        content: x.textValue
                     });
                     return (0, s.jsx)("div", {
-                        className: el.bodyContainer,
+                        className: em.bodyContainer,
                         children: (0, s.jsxs)("div", {
-                            className: el.contentContainer,
-                            children: [(0, s.jsx)("div", {
+                            className: em.contentContainer,
+                            children: [g ? (0, s.jsx)(e_, {
+                                parentChannel: t,
+                                textValue: x.textValue
+                            }) : (0, s.jsx)("div", {
                                 onClick: N,
-                                children: (0, s.jsx)(_.default, {
-                                    type: er,
+                                children: (0, s.jsx)(T.default, {
+                                    type: eh,
                                     setEditorRef: d,
                                     channel: t,
-                                    placeholder: en.default.Messages.FORUM_POST_MESSAGE_PLACEHOLDER,
-                                    textValue: g.textValue,
-                                    richValue: g.richValue,
-                                    focused: x,
-                                    className: el.channelTextArea,
-                                    innerClassName: r(el.channelTextAreaInner, {
-                                        [el.channelTextAreaInnerError]: null != A
+                                    placeholder: ec.default.Messages.FORUM_POST_MESSAGE_PLACEHOLDER,
+                                    textValue: x.textValue,
+                                    richValue: x.richValue,
+                                    focused: C,
+                                    className: em.channelTextArea,
+                                    innerClassName: r(em.channelTextAreaInner, {
+                                        [em.channelTextAreaInnerError]: null != A
                                     }),
-                                    onChange: E,
-                                    onSubmit: M,
-                                    promptToUpload: V.promptToUpload,
+                                    onChange: M,
+                                    onSubmit: v,
+                                    promptToUpload: X.promptToUpload,
                                     disabled: l,
                                     onKeyDown: e => {
                                         if (("ArrowUp" === e.key || "ArrowDown" === e.key) && e.stopPropagation(), "Home" === e.key || "End" === e.key) {
@@ -2959,9 +3076,9 @@
                                             e.preventDefault(), e.stopPropagation();
                                             let t = i.getSlateEditor();
                                             if (null == t) return;
-                                            "Home" === e.key ? S.SlateTransforms.resetSelectionToStart(t) : S.SlateTransforms.resetSelectionToEnd(t)
+                                            "Home" === e.key ? p.SlateTransforms.resetSelectionToStart(t) : p.SlateTransforms.resetSelectionToEnd(t)
                                         }
-                                        C && "Escape" === e.key && !T.getState().submitting && (null == i || i.blur(), T.getState().setFormOpen(!1), T.getState().setTitleFocused(!1), T.getState().setBodyFocused(!1))
+                                        _ && "Escape" === e.key && !S.getState().submitting && (null == i || i.blur(), S.getState().setFormOpen(!1), S.getState().setTitleFocused(!1), S.getState().setBodyFocused(!1), S.getState().setPreviewing(!1))
                                     },
                                     autoCompletePosition: "bottom"
                                 })
@@ -2970,76 +3087,126 @@
                             })]
                         })
                     })
-                }),
-                ec = n.memo(function(e) {
-                    let {
-                        parentChannel: t,
-                        canCreatePost: a,
-                        className: l
-                    } = e, {
-                        textAreaState: r,
-                        appliedTags: i,
-                        name: o
-                    } = (0, Q.useForumPostComposerStore)(e => {
-                        let {
-                            textAreaState: t,
-                            appliedTags: a,
-                            name: s
-                        } = e;
-                        return {
-                            textAreaState: t,
-                            appliedTags: a,
-                            name: s
-                        }
-                    }), {
-                        rateLimitPerUser: u
-                    } = t, d = u > 0, c = (0, m.useStateFromStores)([L.default], () => L.default.getSlowmodeCooldownGuess(t.id, L.SlowmodeType.CreateThread)), f = (0, m.useStateFromStores)([O.default], () => O.default.can(ea.Permissions.MANAGE_THREADS, t) || O.default.can(ea.Permissions.MANAGE_CHANNELS, t)), g = t.hasFlag(es.ChannelFlags.REQUIRE_TAG) && 0 === i.size && o.length > 0 && r.textValue.length > 0, x = (0, Q.useForumPostComposerStoreApi)(), _ = n.useCallback(() => {
-                        x.getState().setBodyFocused(!1)
-                    }, [x]);
-                    return (0, s.jsxs)("div", {
-                        className: l,
-                        children: [(0, s.jsx)(ef, {
-                            parentChannel: t
-                        }), (0, s.jsx)("div", {
-                            className: el.tagsDivider
-                        }), (0, s.jsxs)("div", {
-                            className: el.controlsContainer,
-                            children: [(0, s.jsxs)("div", {
-                                className: el.controls,
-                                children: [(0, s.jsxs)("div", {
-                                    className: el.wrappedControls,
-                                    children: [g && (0, s.jsx)(h.Text, {
-                                        variant: "text-sm/normal",
-                                        color: "text-danger",
-                                        children: en.default.Messages.FORUM_POST_TAG_REQUIRED_ERROR
-                                    }), (0, s.jsx)(T.default, {
-                                        type: er,
-                                        textValue: r.textValue,
-                                        className: el.characterCount
-                                    }), d && (0, s.jsx)($.default, {
-                                        rateLimitPerUser: u,
-                                        slowmodeCooldownGuess: c,
-                                        isBypassSlowmode: f,
-                                        leadingIcon: !0
-                                    })]
-                                }), (0, s.jsx)(eu, {
-                                    parentChannel: t
-                                }), (0, s.jsx)(em, {
-                                    parentChannel: t,
-                                    disableIfInvalid: !0,
-                                    canCreatePost: a,
-                                    disabled: d && !f && c > 0
-                                })]
-                            }), (0, s.jsx)(C.default, {
-                                type: er,
-                                className: el.expressionPicker,
-                                onClick: _
-                            }, "expression")]
-                        })]
-                    })
                 });
 
-            function em(e) {
+            function eS() {
+                return (0, s.jsx)("div", {
+                    className: em.previewModeIndicator,
+                    children: (0, s.jsx)(h.Text, {
+                        variant: "text-sm/normal",
+                        color: "interactive-normal",
+                        children: ec.default.Messages.PREVIEW_MODE
+                    })
+                })
+            }
+
+            function ep() {
+                let e = (0, ee.useIsForumPostPreviewEnabled)(),
+                    {
+                        previewing: t
+                    } = (0, en.useForumPostComposerStore)(e => {
+                        let {
+                            previewing: t
+                        } = e;
+                        return {
+                            previewing: t
+                        }
+                    }),
+                    a = (0, en.useForumPostComposerStoreApi)(),
+                    l = n.useCallback(() => {
+                        a.getState().setPreviewing(!t), (0, et.trackForumPreviewPostClicked)()
+                    }, [t, a]);
+                return e ? (0, s.jsx)(h.Tooltip, {
+                    text: t ? ec.default.Messages.EXIT_PREVIEW : ec.default.Messages.PREVIEW,
+                    children: e => (0, s.jsx)(h.Clickable, {
+                        ...e,
+                        onClick: l,
+                        className: r(em.forumPostFormButton, {
+                            [em.forumPostFormButtonActive]: t
+                        }),
+                        children: t ? (0, s.jsx)(G.default, {
+                            ...e,
+                            width: 24,
+                            height: 24
+                        }) : (0, s.jsx)(B.default, {
+                            ...e,
+                            width: 24,
+                            height: 24
+                        })
+                    })
+                }) : null
+            }
+            let eN = n.memo(function(e) {
+                let {
+                    parentChannel: t,
+                    canCreatePost: a,
+                    className: l
+                } = e, {
+                    textAreaState: r,
+                    appliedTags: i,
+                    name: o
+                } = (0, en.useForumPostComposerStore)(e => {
+                    let {
+                        textAreaState: t,
+                        appliedTags: a,
+                        name: s
+                    } = e;
+                    return {
+                        textAreaState: t,
+                        appliedTags: a,
+                        name: s
+                    }
+                }), {
+                    rateLimitPerUser: u
+                } = t, d = u > 0, c = (0, m.useStateFromStores)([y.default], () => y.default.getSlowmodeCooldownGuess(t.id, y.SlowmodeType.CreateThread)), f = (0, m.useStateFromStores)([P.default], () => P.default.can(eu.Permissions.MANAGE_THREADS, t) || P.default.can(eu.Permissions.MANAGE_CHANNELS, t)), g = t.hasFlag(ed.ChannelFlags.REQUIRE_TAG) && 0 === i.size && o.length > 0 && r.textValue.length > 0, x = (0, en.useForumPostComposerStoreApi)(), C = n.useCallback(() => {
+                    x.getState().setBodyFocused(!1)
+                }, [x]), T = n.useMemo(() => "" !== o.trim() && "" !== r.textValue.trim(), [o, r.textValue]);
+                return n.useEffect(() => {
+                    !T && x.getState().setPreviewing(!1)
+                }, [T, x]), (0, s.jsxs)("div", {
+                    className: l,
+                    children: [(0, s.jsx)(ev, {
+                        parentChannel: t
+                    }), (0, s.jsx)("div", {
+                        className: em.tagsDivider
+                    }), (0, s.jsxs)("div", {
+                        className: em.controlsContainer,
+                        children: [(0, s.jsxs)("div", {
+                            className: em.controls,
+                            children: [(0, s.jsxs)("div", {
+                                className: em.wrappedControls,
+                                children: [g && (0, s.jsx)(h.Text, {
+                                    variant: "text-sm/normal",
+                                    color: "text-danger",
+                                    children: ec.default.Messages.FORUM_POST_TAG_REQUIRED_ERROR
+                                }), (0, s.jsx)(S.default, {
+                                    type: eh,
+                                    textValue: r.textValue,
+                                    className: em.characterCount
+                                }), d && (0, s.jsx)(er.default, {
+                                    rateLimitPerUser: u,
+                                    slowmodeCooldownGuess: c,
+                                    isBypassSlowmode: f,
+                                    leadingIcon: !0
+                                })]
+                            }), (0, s.jsx)(eC, {
+                                parentChannel: t
+                            }), T && (0, s.jsx)(ep, {}), (0, s.jsx)(eE, {
+                                parentChannel: t,
+                                disableIfInvalid: !0,
+                                canCreatePost: a,
+                                disabled: d && !f && c > 0
+                            })]
+                        }), (0, s.jsx)(_.default, {
+                            type: eh,
+                            className: em.expressionPicker,
+                            onClick: C
+                        }, "expression")]
+                    })]
+                })
+            });
+
+            function eE(e) {
                 let {
                     parentChannel: t,
                     canCreatePost: a,
@@ -3051,7 +3218,7 @@
                     name: o,
                     appliedTags: u,
                     formOpen: d
-                } = (0, Q.useForumPostComposerStore)(e => {
+                } = (0, en.useForumPostComposerStore)(e => {
                     let {
                         submitting: t,
                         textAreaState: a,
@@ -3066,47 +3233,47 @@
                         appliedTags: n,
                         formOpen: l
                     }
-                }), c = t.hasFlag(es.ChannelFlags.REQUIRE_TAG) && 0 === u.size && o.length > 0 && i.textValue.length > 0, f = (0, m.useStateFromStoresArray)([F.default], () => F.default.getUploads(t.id, R.DraftType.FirstThreadMessage)), g = i.textValue.trim().length > 0 || f.length > 0, x = !c && g && o.trim().length > 0;
+                }), c = t.hasFlag(ed.ChannelFlags.REQUIRE_TAG) && 0 === u.size && o.length > 0 && i.textValue.length > 0, f = (0, m.useStateFromStoresArray)([D.default], () => D.default.getUploads(t.id, b.DraftType.FirstThreadMessage)), g = i.textValue.trim().length > 0 || f.length > 0, x = !c && g && o.trim().length > 0;
                 if (__OVERLAY__) return null;
                 let C = function() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                     return (0, s.jsxs)(h.Button, {
                         ...e,
                         size: h.Button.Sizes.SMALL,
-                        className: el.submitButton,
-                        innerClassName: el.submitButtonInner,
+                        className: em.submitButton,
+                        innerClassName: em.submitButtonInner,
                         type: "submit",
                         submitting: r,
                         disabled: l && !x || n || !a,
-                        children: [(0, s.jsx)(U.default, {
-                            className: el.submitIcon,
+                        children: [(0, s.jsx)(V.default, {
+                            className: em.submitIcon,
                             width: 16,
                             height: 16
                         }), (0, s.jsx)(h.Text, {
                             variant: "text-md/semibold",
                             color: "none",
-                            children: d ? en.default.Messages.SUBMIT_POST : en.default.Messages.NEW_FORUM_POST_NEW
+                            children: d ? ec.default.Messages.SUBMIT_POST : ec.default.Messages.NEW_FORUM_POST_NEW
                         })]
                     })
                 };
                 return a ? C() : (0, s.jsx)(h.Tooltip, {
-                    text: en.default.Messages.FORUM_NO_POST_PERMISSION_HELP,
+                    text: ec.default.Messages.FORUM_NO_POST_PERMISSION_HELP,
                     children: e => C(e)
                 })
             }
 
-            function eh() {
+            function eM() {
                 return Promise.resolve()
             }
 
-            function ef(e) {
+            function ev(e) {
                 let {
                     parentChannel: t
                 } = e, {
                     appliedTags: a,
                     toggleAppliedTag: l,
                     setPopoutOpen: i
-                } = (0, Q.useForumPostComposerStore)(e => {
+                } = (0, en.useForumPostComposerStore)(e => {
                     let {
                         appliedTags: t,
                         toggleAppliedTag: a,
@@ -3117,17 +3284,17 @@
                         toggleAppliedTag: a,
                         setPopoutOpen: s
                     }
-                }, u.default), o = a.size >= et.MAX_FORUM_POST_TAGS, m = (0, d.default)({
+                }, u.default), o = a.size >= eo.MAX_FORUM_POST_TAGS, m = (0, d.default)({
                     id: "".concat(t.id, "-post-form-tags-navigator"),
                     isEnabled: !0,
                     wrap: !0,
-                    scrollToStart: eh,
-                    scrollToEnd: eh,
+                    scrollToStart: eM,
+                    scrollToEnd: eM,
                     orientation: c.Orientations.HORIZONTAL
                 }), {
                     containerRef: f,
                     containerWidth: g
-                } = (0, ee.default)(), x = n.useRef(null), [C, _] = n.useState(!0), T = (0, Y.useVisibleForumTags)(t), [S, N] = n.useState(0);
+                } = (0, ei.default)(), x = n.useRef(null), [C, _] = n.useState(!0), T = (0, $.useVisibleForumTags)(t), [S, p] = n.useState(0);
                 return (n.useLayoutEffect(() => {
                     var e;
                     let t = x.current,
@@ -3147,18 +3314,18 @@
                             if (l - t > r) break;
                             a - e > s && (s = a - e)
                         }
-                        N(s)
+                        p(s)
                     }
                 }, [T, C, f, g]), 0 === T.length) ? null : (0, s.jsx)(s.Fragment, {
                     children: (0, s.jsxs)("div", {
-                        className: el.tagsContainer,
+                        className: em.tagsContainer,
                         ref: f,
-                        children: [(0, s.jsx)(k.default, {
-                            className: el.tagsIcon,
+                        children: [(0, s.jsx)(K.default, {
+                            className: em.tagsIcon,
                             width: 16,
                             height: 16
                         }), (0, s.jsx)("div", {
-                            className: el.tagList,
+                            className: em.tagList,
                             ref: x,
                             children: (0, s.jsx)(d.ListNavigatorProvider, {
                                 navigator: m,
@@ -3169,18 +3336,18 @@
                                             ...n
                                         } = e;
                                         return (0, s.jsx)("div", {
-                                            className: el.tagListInner,
+                                            className: em.tagListInner,
                                             ref: t,
                                             ...n,
-                                            children: T.map(e => (0, s.jsx)(J.default, {
-                                                ariaLabel: en.default.Messages.FORUM_TAG_A11Y_ADD_TAG.format({
+                                            children: T.map(e => (0, s.jsx)(el.default, {
+                                                ariaLabel: ec.default.Messages.FORUM_TAG_A11Y_ADD_TAG.format({
                                                     tagName: e.name
                                                 }),
                                                 tag: e,
                                                 onClick: o && !a.has(e.id) ? void 0 : () => l(e.id),
-                                                disabled: !a.has(e.id) && a.size >= et.MAX_FORUM_POST_TAGS,
+                                                disabled: !a.has(e.id) && a.size >= eo.MAX_FORUM_POST_TAGS,
                                                 selected: a.has(e.id),
-                                                size: J.default.Sizes.SMALL
+                                                size: el.default.Sizes.SMALL
                                             }, e.id))
                                         })
                                     }
@@ -3193,7 +3360,7 @@
                                 let {
                                     closePopout: n
                                 } = e;
-                                return (0, s.jsx)(X.default, {
+                                return (0, s.jsx)(ea.default, {
                                     parentChannel: t,
                                     appliedTags: a,
                                     maxTagsApplied: o,
@@ -3206,24 +3373,24 @@
                             children: e => (0, s.jsxs)(h.Button, {
                                 ...e,
                                 size: h.Button.Sizes.TINY,
-                                className: el.tagsButton,
-                                innerClassName: el.tagsButtonInner,
+                                className: em.tagsButton,
+                                innerClassName: em.tagsButtonInner,
                                 style: {
                                     left: S
                                 },
                                 look: h.Button.Looks.LINK,
-                                "aria-label": en.default.Messages.ADD_TAG_FORUM_POST,
-                                children: [en.default.Messages.FORUM_TAG_SEE_MORE_A11Y_LABEL, (0, s.jsx)(y.default, {
+                                "aria-label": ec.default.Messages.ADD_TAG_FORUM_POST,
+                                children: [ec.default.Messages.FORUM_TAG_SEE_MORE_A11Y_LABEL, (0, s.jsx)(U.default, {
                                     width: 16
                                 })]
                             })
                         }), (0, s.jsxs)(h.Button, {
                             size: h.Button.Sizes.TINY,
-                            className: r(el.tagsButton, el.tagsButtonPlaceholder),
-                            innerClassName: el.tagsButtonInner,
+                            className: r(em.tagsButton, em.tagsButtonPlaceholder),
+                            innerClassName: em.tagsButtonInner,
                             look: h.Button.Looks.LINK,
-                            "aria-label": en.default.Messages.ADD_TAG_FORUM_POST,
-                            children: [en.default.Messages.FORUM_TAG_SEE_MORE_A11Y_LABEL, (0, s.jsx)(y.default, {
+                            "aria-label": ec.default.Messages.ADD_TAG_FORUM_POST,
+                            children: [ec.default.Messages.FORUM_TAG_SEE_MORE_A11Y_LABEL, (0, s.jsx)(U.default, {
                                 width: 16
                             })]
                         })]
@@ -3231,7 +3398,7 @@
                 })
             }
 
-            function eg(e) {
+            function eA(e) {
                 let {
                     style: t,
                     className: a
@@ -3240,7 +3407,7 @@
                     className: a,
                     style: t,
                     children: (0, s.jsx)("div", {
-                        className: el.loader
+                        className: em.loader
                     })
                 })
             }
@@ -3270,26 +3437,26 @@
                 _ = a("982108"),
                 T = a("42203"),
                 S = a("957255"),
-                N = a("594098"),
-                p = a("887718"),
+                p = a("594098"),
+                N = a("887718"),
                 E = a("95689"),
                 M = a("132755"),
-                A = a("497880"),
-                v = a("956089"),
+                v = a("497880"),
+                A = a("956089"),
                 I = a("680986"),
                 j = a("612278"),
                 R = a("791234"),
                 O = a("512630"),
-                L = a("152637"),
-                F = a("363622"),
+                F = a("152637"),
+                L = a("363622"),
                 b = a("855455"),
-                y = a("136460"),
-                P = a("601016"),
+                P = a("136460"),
+                y = a("601016"),
                 D = a("485055"),
-                U = a("390083"),
-                w = a("953371"),
-                H = a("49111"),
-                k = a("782340"),
+                w = a("390083"),
+                U = a("953371"),
+                k = a("49111"),
+                H = a("782340"),
                 B = a("507134"),
                 G = n.memo(function(e) {
                     let {
@@ -3326,8 +3493,8 @@
                     coords: h,
                     gridCoords: f,
                     gridSectionBoundaries: x,
-                    observePostVisibilityAnalytics: N
-                } = e, p = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(a.parent_id)), E = a.id, M = n.useRef(null), A = (0, o.useStateFromStores)([_.default], () => _.default.getCurrentSidebarChannelId(a.parent_id) === a.id), {
+                    observePostVisibilityAnalytics: p
+                } = e, N = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(a.parent_id)), E = a.id, M = n.useRef(null), v = (0, o.useStateFromStores)([_.default], () => _.default.getCurrentSidebarChannelId(a.parent_id) === a.id), {
                     firstMessage: O,
                     loaded: b
                 } = (0, j.useFirstForumPostMessage)(a), {
@@ -3339,27 +3506,27 @@
                 }), {
                     messageCountText: V
                 } = (0, I.useMessageCount)(a), {
-                    isNew: W,
+                    isNew: z,
                     hasUnreads: K
                 } = (0, I.useForumPostReadStates)(a), Z = n.useRef(null), {
                     handleLeftClick: q,
                     handleRightClick: Q
-                } = (0, U.default)({
+                } = (0, w.default)({
                     facepileRef: Z,
                     goToThread: l,
                     channel: a
                 });
                 n.useEffect(() => {
-                    null == N || N(M.current, E)
-                }, [N, E]);
-                let J = (0, o.useStateFromStores)([S.default], () => S.default.can(H.Permissions.MANAGE_MESSAGES, a)),
+                    null == p || p(M.current, E)
+                }, [p, E]);
+                let J = (0, o.useStateFromStores)([S.default], () => S.default.can(k.Permissions.MANAGE_MESSAGES, a)),
                     $ = C.GifAutoPlay.useSetting(),
                     ee = C.RenderSpoilers.useSetting(),
                     et = (0, g.default)(ee, J),
-                    ea = (0, R.useForumPostMediaThumbnail)(O, p, !1),
-                    [es, en] = (0, F.getFrameDimensions)(h.width - 2 * F.IMAGE_PADDING),
-                    el = (0, I.useLastActiveTimestamp)(a, i.ThreadSortOrder.CREATION_DATE, w.ForumTimestampFormats.POSTED_DURATION_AGO),
-                    er = (0, L.useHighlightedChannelName)(a),
+                    ea = (0, R.useForumPostMediaThumbnail)(O, N, !1),
+                    [es, en] = (0, L.getFrameDimensions)(h.width - 2 * L.IMAGE_PADDING),
+                    el = (0, I.useLastActiveTimestamp)(a, i.ThreadSortOrder.CREATION_DATE, U.ForumTimestampFormats.POSTED_DURATION_AGO),
+                    er = (0, F.useHighlightedChannelName)(a),
                     ei = (null == O ? void 0 : O.blocked) || null == (null != c ? c : G),
                     {
                         onFocus: eo,
@@ -3378,7 +3545,7 @@
                     onFocus: eo,
                     onContextMenu: Q,
                     className: r(B.container, m, {
-                        [B.isOpen]: A
+                        [B.isOpen]: v
                     }),
                     style: {
                         ...h
@@ -3389,7 +3556,7 @@
                             ringTarget: M
                         },
                         onContextMenu: Q,
-                        "aria-label": k.default.Messages.FORUM_POST_ARIA_LABEL.format({
+                        "aria-label": H.default.Messages.FORUM_POST_ARIA_LABEL.format({
                             title: a.name,
                             count: V
                         }),
@@ -3401,7 +3568,7 @@
                             className: B.authorRow,
                             children: [(0, s.jsxs)("div", {
                                 className: B.rowGroup,
-                                children: [(0, s.jsx)(y.default, {
+                                children: [(0, s.jsx)(P.default, {
                                     channel: a,
                                     message: O
                                 }), (0, s.jsx)(d.Text, {
@@ -3410,10 +3577,10 @@
                                     className: B.postCreationTimestamp,
                                     children: el
                                 })]
-                            }), W ? (0, s.jsx)(v.TextBadge, {
+                            }), z ? (0, s.jsx)(A.TextBadge, {
                                 className: r(B.newBadge),
                                 color: u.default.unsafe_rawColors.BRAND_260.css,
-                                text: k.default.Messages.NEW
+                                text: H.default.Messages.NEW
                             }) : null]
                         }), (0, s.jsx)(d.HeadingLevel, {
                             children: (0, s.jsx)(d.Heading, {
@@ -3421,7 +3588,7 @@
                                 className: B.title,
                                 color: K ? "header-primary" : "text-muted",
                                 style: {
-                                    width: "".concat(h.width - 2 * F.GRID_POST_CONTROLS_MARGIN, "px")
+                                    width: "".concat(h.width - 2 * L.GRID_POST_CONTROLS_MARGIN, "px")
                                 },
                                 children: er
                             })
@@ -3445,7 +3612,7 @@
                                     shouldMaintainAspectRatio: ed
                                 }), (0, s.jsx)("div", {
                                     className: B.tagsRow,
-                                    children: (0, s.jsx)(P.default, {
+                                    children: (0, s.jsx)(y.default, {
                                         channel: a,
                                         tagsClassName: B.tagPill
                                     })
@@ -3455,7 +3622,7 @@
                     }), (0, s.jsx)("div", {
                         className: B.footer,
                         children: (0, s.jsx)(d.FocusBlock, {
-                            children: (0, s.jsx)(z, {
+                            children: (0, s.jsx)(W, {
                                 channel: a,
                                 firstMessage: O,
                                 facepileRef: Z
@@ -3465,7 +3632,7 @@
                 })
             }
 
-            function z(e) {
+            function W(e) {
                 let {
                     channel: t,
                     facepileRef: a,
@@ -3477,7 +3644,7 @@
                         className: B.controlsGroup,
                         children: [(0, s.jsx)("div", {
                             className: B.messageCountContainer,
-                            children: (0, s.jsx)(L.MessageCount, {
+                            children: (0, s.jsx)(F.MessageCount, {
                                 channel: t,
                                 iconSize: 16,
                                 showReadState: !0
@@ -3488,7 +3655,7 @@
                                 children: "•"
                             }), (0, s.jsxs)("div", {
                                 className: B.typing,
-                                children: [(0, s.jsx)(L.Facepile, {
+                                children: [(0, s.jsx)(F.Facepile, {
                                     channel: t,
                                     userIds: l,
                                     facepileRef: a
@@ -3507,17 +3674,17 @@
                         }) : null]
                     }), (0, s.jsxs)("div", {
                         className: B.controlsGroup,
-                        children: [r || null == n ? null : (0, s.jsx)(L.DefaultReaction, {
+                        children: [r || null == n ? null : (0, s.jsx)(F.DefaultReaction, {
                             firstMessage: n,
                             channel: t
-                        }), null == n ? null : (0, s.jsx)(L.MostUsedReaction, {
+                        }), null == n ? null : (0, s.jsx)(F.MostUsedReaction, {
                             firstMessage: n,
                             channel: t
                         })]
                     })]
                 })
             }
-            let W = e => e.preventDefault(),
+            let z = e => e.preventDefault(),
                 K = n.memo(function(e) {
                     return (0, s.jsx)(s.Fragment, {
                         children: (0, x.renderImageComponent)(e)
@@ -3550,7 +3717,7 @@
                             width: e.width,
                             height: e.height,
                             alt: null != e.alt && l ? g : e.alt,
-                            onClick: W,
+                            onClick: z,
                             shouldRenderAccessory: !c && !d
                         }, T = (0, h.isAnimatedImageUrl)(e.src) ? "".concat(e.src, "?format=png") : e.src, S = o && !l ? e.src : T;
                         return (0, s.jsxs)("div", {
@@ -3566,7 +3733,7 @@
                                     [B.obscured]: l
                                 }),
                                 imageChildClassName: B.mediaPostThumbnail
-                            }) : e.src.startsWith("data:") ? (0, s.jsx)(N.default, {
+                            }) : e.src.startsWith("data:") ? (0, s.jsx)(p.default, {
                                 ..._,
                                 className: B.mediaContainer,
                                 imageClassName: r(B.thumbnailOverride, {
@@ -3603,7 +3770,7 @@
                                 width: "22px",
                                 height: "22px",
                                 className: B.mediaIcon
-                            }), c && (0, s.jsx)(p.default, {
+                            }), c && (0, s.jsx)(N.default, {
                                 className: B.mediaIcon
                             })]
                         }), t.length > b.MOSAIC_MAX_IMAGE_COUNT && (0, s.jsx)(Z, {
@@ -3643,7 +3810,7 @@
                     isFirstMessageLoaded: l,
                     containerWidth: i,
                     hasUnreads: o
-                } = e, [u, c] = (0, F.getFrameDimensions)(i - 2 * F.IMAGE_PADDING), {
+                } = e, [u, c] = (0, L.getFrameDimensions)(i - 2 * L.IMAGE_PADDING), {
                     content: m
                 } = (0, I.useForumPostFirstMessageMarkup)({
                     firstMessage: a,
@@ -3651,7 +3818,7 @@
                     noStyleAndInteraction: !0
                 }), {
                     shouldRenderTagsRow: h
-                } = (0, P.useTagsRowHooks)({
+                } = (0, y.useTagsRowHooks)({
                     channel: t,
                     isNew: !1
                 }), f = n.useMemo(() => ({
@@ -3667,8 +3834,8 @@
                             children: [l && null == a && (0, s.jsx)(d.Text, {
                                 variant: "text-sm/normal",
                                 color: o ? "header-secondary" : "text-muted",
-                                children: k.default.Messages.REPLY_QUOTE_MESSAGE_DELETED
-                            }), l && null != a && (0, s.jsx)(A.default, {
+                                children: H.default.Messages.REPLY_QUOTE_MESSAGE_DELETED
+                            }), l && null != a && (0, s.jsx)(v.default, {
                                 message: a,
                                 content: m,
                                 className: g
@@ -3677,7 +3844,7 @@
                             className: r(B.textContentFooter, {
                                 [B.noTags]: !h
                             }),
-                            children: h ? (0, s.jsx)(P.default, {
+                            children: h ? (0, s.jsx)(y.default, {
                                 channel: t,
                                 tagsClassName: B.tagPill,
                                 className: B.row
@@ -3920,7 +4087,7 @@
                     return ej
                 },
                 default: function() {
-                    return eL
+                    return eF
                 }
             }), a("222007");
             var s = a("37983"),
@@ -3941,31 +4108,31 @@
                 _ = a("225664"),
                 T = a("731898"),
                 S = a("419135"),
-                N = a("206230"),
-                p = a("692171"),
+                p = a("206230"),
+                N = a("692171"),
                 E = a("651693"),
                 M = a("605160"),
-                A = a("875978"),
-                v = a("70845"),
+                v = a("875978"),
+                A = a("70845"),
                 I = a("913491"),
                 j = a("95045"),
                 R = a("574073"),
                 O = a("359132"),
-                L = a("836943"),
-                F = a("933629"),
+                F = a("836943"),
+                L = a("933629"),
                 b = a("592707"),
-                y = a("350134"),
-                P = a("232259"),
+                P = a("350134"),
+                y = a("232259"),
                 D = a("144491"),
-                U = a("208021"),
-                w = a("582713"),
-                H = a("300322"),
-                k = a("845579"),
+                w = a("208021"),
+                U = a("582713"),
+                k = a("300322"),
+                H = a("845579"),
                 B = a("982108"),
                 G = a("42203"),
                 V = a("957255"),
-                z = a("660478"),
-                W = a("27618"),
+                W = a("660478"),
+                z = a("27618"),
                 K = a("471671"),
                 Y = a("738107"),
                 Z = a("952368"),
@@ -3995,12 +4162,12 @@
                 e_ = a("390083"),
                 eT = a("49111"),
                 eS = a("724210"),
-                eN = a("648564"),
-                ep = a("719347"),
+                ep = a("648564"),
+                eN = a("719347"),
                 eE = a("782340"),
                 eM = a("552175"),
-                eA = a("590787"),
-                ev = a("632215");
+                ev = a("590787"),
+                eA = a("632215");
             let eI = 26,
                 ej = 162 + eI,
                 eR = async () => {
@@ -4013,7 +4180,7 @@
             function eO(e) {
                 let {
                     shouldAnimate: t = !1
-                } = e, a = (0, f.useStateFromStores)([N.default], () => N.default.useReducedMotion);
+                } = e, a = (0, f.useStateFromStores)([p.default], () => p.default.useReducedMotion);
                 return (0, s.jsxs)("div", {
                     className: eM.startTheConversation,
                     children: [(0, s.jsx)(X.default, {
@@ -4027,7 +4194,7 @@
                     })]
                 })
             }
-            var eL = n.memo(function(e) {
+            var eF = n.memo(function(e) {
                 let {
                     className: t,
                     threadId: a,
@@ -4041,7 +4208,7 @@
                     firstMessage: C,
                     firstMessageLoaded: _,
                     firstMedia: S,
-                    firstMediaIsEmbed: N
+                    firstMediaIsEmbed: p
                 } = function(e) {
                     let {
                         threadId: t
@@ -4076,13 +4243,13 @@
                     }
                 }({
                     threadId: a
-                }), p = (0, f.useStateFromStores)([G.default], () => G.default.getChannel(d.parent_id)), {
+                }), N = (0, f.useStateFromStores)([G.default], () => G.default.getChannel(d.parent_id)), {
                     ref: E,
                     height: M
-                } = (0, T.default)(), A = (0, eh.useForumPostComposerStore)(e => e.setCardHeight), [v, I] = n.useState(162);
+                } = (0, T.default)(), v = (0, eh.useForumPostComposerStore)(e => e.setCardHeight), [A, I] = n.useState(162);
                 n.useEffect(() => {
-                    null != M && (A(a, M + eI), I(M))
-                }, [E, M, A, a, I, _]), n.useEffect(() => {
+                    null != M && (v(a, M + eI), I(M))
+                }, [E, M, v, a, I, _]), n.useEffect(() => {
                     null == i || i(u.current, a)
                 }, [i, a, _]);
                 let j = n.useRef(null),
@@ -4095,14 +4262,14 @@
                         channel: d
                     }),
                     {
-                        role: L,
-                        onFocus: F,
+                        role: F,
+                        onFocus: L,
                         ...b
                     } = (0, c.useListItem)(a),
                     {
-                        handleFocus: y,
-                        handleBlur: P
-                    } = (0, eC.default)(F);
+                        handleFocus: P,
+                        handleBlur: y
+                    } = (0, eC.default)(L);
                 return (0, s.jsxs)("div", {
                     ref: u,
                     "data-item-id": a,
@@ -4122,16 +4289,16 @@
                             count: h
                         }),
                         className: eM.focusTarget,
-                        onFocus: y,
-                        onBlur: P,
+                        onFocus: P,
+                        onBlur: y,
                         ...b
                     }), (0, s.jsxs)("div", {
                         className: eM.body,
                         children: [(0, s.jsx)("div", {
                             ref: E,
                             className: eM.contentContainer,
-                            children: _ ? (0, s.jsx)(eF, {
-                                parentChannel: p,
+                            children: _ ? (0, s.jsx)(eL, {
+                                parentChannel: N,
                                 channel: d,
                                 firstMessage: C,
                                 messageCount: h,
@@ -4143,14 +4310,14 @@
                             channel: d,
                             firstMedia: S,
                             firstMessage: C,
-                            isEmbed: N,
-                            contentHeight: v
+                            isEmbed: p,
+                            contentHeight: A
                         }) : (0, s.jsx)(ef.ForumPostMediaPreviewPlaceholder, {})]
                     })]
                 })
             });
 
-            function eF(e) {
+            function eL(e) {
                 let {
                     parentChannel: t,
                     channel: a,
@@ -4192,10 +4359,10 @@
                         })]
                     }), (0, s.jsxs)("div", {
                         className: eM.engagement,
-                        children: [null != n && (0, s.jsx)(ew, {
+                        children: [null != n && (0, s.jsx)(eU, {
                             channel: a,
                             firstMessage: n
-                        }), (0, s.jsx)(ey, {
+                        }), (0, s.jsx)(eP, {
                             parentChannel: t,
                             channel: a,
                             messageCount: l,
@@ -4209,7 +4376,7 @@
             function eb(e) {
                 let {
                     firstMessage: t
-                } = e, a = (0, f.useStateFromStores)([W.default], () => null != t && W.default.isBlocked(t.author.id)), {
+                } = e, a = (0, f.useStateFromStores)([z.default], () => null != t && z.default.isBlocked(t.author.id)), {
                     content: l
                 } = n.useMemo(() => (null == t ? void 0 : t.content) != null && "" !== t.content ? (0, j.default)(t, {
                     formatInline: !0,
@@ -4226,7 +4393,7 @@
                 })
             }
 
-            function ey(e) {
+            function eP(e) {
                 let {
                     parentChannel: t,
                     channel: a,
@@ -4237,7 +4404,7 @@
                     mostRecentMessage: u
                 } = (0, er.useMostRecentForumMessage)(t, a), d = (0, f.useStateFromStores)([V.default], () => V.default.can(eT.Permissions.SEND_MESSAGES_IN_THREADS, a)), {
                     hasUnreads: c
-                } = (0, el.useForumPostReadStates)(a), m = (0, f.useStateFromStores)([es.default], () => es.default.getFirstNoReplyThreadId()), h = (0, H.useIsNonModInLockedThread)(a), g = (0, R.useNullableMessageAuthor)(u);
+                } = (0, el.useForumPostReadStates)(a), m = (0, f.useStateFromStores)([es.default], () => es.default.getFirstNoReplyThreadId()), h = (0, k.useIsNonModInLockedThread)(a), g = (0, R.useNullableMessageAuthor)(u);
                 if (n > 0) {
                     var C, _;
                     return (0, s.jsxs)(x.Clickable, {
@@ -4250,13 +4417,13 @@
                                     page: eT.AnalyticsPages.GUILD_CHANNEL,
                                     section: eT.AnalyticsSections.FORUM_CHANNEL_POST
                                 }
-                            }), e.shiftKey ? (0, D.transitionToThreadMessage)(a, u.id, eN.OpenThreadAnalyticsLocations.BROWSER) : U.default.openThreadAsSidebar({
+                            }), e.shiftKey ? (0, D.transitionToThreadMessage)(a, u.id, ep.OpenThreadAnalyticsLocations.BROWSER) : w.default.openThreadAsSidebar({
                                 guildId: a.guild_id,
                                 channelId: a.id,
                                 baseChannelId: a.parent_id,
                                 flash: !0,
                                 details: {
-                                    type: w.SidebarOpenDetailsType.THREAD,
+                                    type: U.SidebarOpenDetailsType.THREAD,
                                     initialMessageId: u.id
                                 }
                             }))
@@ -4265,15 +4432,15 @@
                             children: ["Latest message:", null != g ? null !== (C = g.nick) && void 0 !== C ? C : eE.default.Messages.UNKNOWN_USER : null, " ", null == (_ = null == u ? void 0 : u.content) ? "" : _.length > 120 ? "".concat(_.substring(0, 120), "...") : _]
                         }), (0, s.jsxs)(x.FocusBlock, {
                             className: eM.replies,
-                            children: [(0, s.jsx)(eH, {
+                            children: [(0, s.jsx)(ek, {
                                 messageCount: n,
                                 unreadCount: l,
                                 iconSize: 16
-                            }), o.length > 0 ? (0, s.jsx)(eP, {
+                            }), o.length > 0 ? (0, s.jsx)(ey, {
                                 channel: a,
                                 typingUserIds: o,
                                 facepileRef: i
-                            }) : (0, s.jsx)(eU, {
+                            }) : (0, s.jsx)(ew, {
                                 channel: a,
                                 mostRecentMessage: u,
                                 hasUnreads: c
@@ -4292,7 +4459,7 @@
                 }) : d && 0 === n ? (0, s.jsx)(x.FocusBlock, {
                     "aria-hidden": !0,
                     className: eM.replies,
-                    children: o.length > 0 ? (0, s.jsx)(eP, {
+                    children: o.length > 0 ? (0, s.jsx)(ey, {
                         channel: a,
                         typingUserIds: o,
                         facepileRef: i
@@ -4302,7 +4469,7 @@
                 }) : null
             }
 
-            function eP(e) {
+            function ey(e) {
                 let {
                     channel: t,
                     typingUserIds: a,
@@ -4356,13 +4523,13 @@
                     })
                 })
             }
-            let eU = n.memo(function(e) {
+            let ew = n.memo(function(e) {
                 var t;
                 let {
                     channel: a,
                     mostRecentMessage: l,
                     hasUnreads: i
-                } = e, o = (0, R.useNullableMessageAuthor)(l), u = (0, f.useStateFromStores)([W.default], () => null != l && W.default.isBlocked(l.author.id)), d = (0, f.useStateFromStores)([V.default], () => V.default.can(eT.Permissions.MANAGE_MESSAGES, a)), c = k.RenderSpoilers.useSetting(), m = (0, ed.useIsRecentMessageDeleted)(a), {
+                } = e, o = (0, R.useNullableMessageAuthor)(l), u = (0, f.useStateFromStores)([z.default], () => null != l && z.default.isBlocked(l.author.id)), d = (0, f.useStateFromStores)([V.default], () => V.default.can(eT.Permissions.MANAGE_MESSAGES, a)), c = H.RenderSpoilers.useSetting(), m = (0, ed.useIsRecentMessageDeleted)(a), {
                     content: h
                 } = n.useMemo(() => (null == l ? void 0 : l.content) != null && "" !== l.content ? (0, j.default)(l, {
                     formatInline: !0,
@@ -4386,9 +4553,9 @@
                     } : g ? {
                         contentPlaceholder: null,
                         renderedContent: ea.default.stringify(l, a)
-                    } : (0, $.renderSingleLineMessage)(l, h, u, r(eM.mostRecentMessageContent, ev.inlineFormat, ev.smallFontSize), {
+                    } : (0, $.renderSingleLineMessage)(l, h, u, r(eM.mostRecentMessageContent, eA.inlineFormat, eA.smallFontSize), {
                         iconClass: eM.messageContentIcon,
-                        iconSize: ep.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
+                        iconSize: eN.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
                     });
                     C = null != t ? (0, s.jsx)(x.Text, {
                         variant: "text-sm/semibold",
@@ -4408,11 +4575,11 @@
                     }) : null
                 }
                 let _ = null != o ? null !== (t = o.nick) && void 0 !== t ? t : eE.default.Messages.UNKNOWN_USER : null,
-                    T = (0, P.useUsernameHook)(null == l ? void 0 : l.author, a.id, a.guild_id, !0)(null != o ? o : void 0)((0, s.jsxs)(s.Fragment, {
+                    T = (0, y.useUsernameHook)(null == l ? void 0 : l.author, a.id, a.guild_id, !0)(null != o ? o : void 0)((0, s.jsxs)(s.Fragment, {
                         children: [null != _ ? _ : "", null != l ? ":" : ""]
                     }), a.id);
                 return (0, s.jsx)(q.ObscuredDisplayContext.Provider, {
-                    value: (0, v.default)(c, d),
+                    value: (0, A.default)(c, d),
                     children: (0, s.jsxs)("div", {
                         className: eM.mostRecentMessage,
                         children: [null == _ || g ? null : (0, s.jsx)("div", {
@@ -4429,7 +4596,7 @@
                 })
             });
 
-            function ew(e) {
+            function eU(e) {
                 let {
                     channel: t,
                     firstMessage: a
@@ -4441,18 +4608,18 @@
                 } = (0, O.default)(t), m = (0, b.findReactionIndex)(a.reactions, i) >= 0, h = !m && !u, {
                     enabled: g,
                     hasTwoButtonEntryPoint: x
-                } = (0, _.useBurstReactionsExperiment)(t.guild_id), C = (0, f.useStateFromStores)([p.default], () => p.default.remainingBurstCurrency), {
+                } = (0, _.useBurstReactionsExperiment)(t.guild_id), C = (0, f.useStateFromStores)([N.default], () => N.default.remainingBurstCurrency), {
                     ref: S,
-                    width: N
-                } = (0, T.default)(), [E, M] = n.useState(10), [v, I] = n.useState(!0);
+                    width: p
+                } = (0, T.default)(), [E, M] = n.useState(10), [A, I] = n.useState(!0);
                 return n.useEffect(() => {
-                    if (null != N) M(Math.floor((N - 78) / 66)), I(!1)
-                }, [N, a.reactions, i]), (0, s.jsxs)("div", {
+                    if (null != p) M(Math.floor((p - 78) / 66)), I(!1)
+                }, [p, a.reactions, i]), (0, s.jsxs)("div", {
                     className: r(eM.reactionRow, {
-                        [eM.loading]: v
+                        [eM.loading]: A
                     }),
                     ref: S,
-                    children: [h && null != i ? (0, s.jsx)(y.Reaction, {
+                    children: [h && null != i ? (0, s.jsx)(P.Reaction, {
                         className: eM.defaultReaction,
                         message: a,
                         readOnly: !1,
@@ -4460,7 +4627,7 @@
                         isLurking: d,
                         isPendingMember: c,
                         emoji: i,
-                        type: A.ReactionTypes.NORMAL,
+                        type: v.ReactionTypes.NORMAL,
                         hideCount: !0,
                         count: 0,
                         me: !1,
@@ -4479,15 +4646,15 @@
                         maxReactions: E
                     }), (0, s.jsxs)("div", {
                         className: eM.addReactionContainer,
-                        children: [!u && (0, s.jsx)(L.ButtonAddReaction, {
-                            type: A.ReactionTypes.NORMAL,
+                        children: [!u && (0, s.jsx)(F.ButtonAddReaction, {
+                            type: v.ReactionTypes.NORMAL,
                             message: a,
                             channel: t,
                             useChatFontScaling: !0,
                             className: eM.addReactButton,
                             isForumToolbar: !1
-                        }), !u && g && x && (0, s.jsx)(L.ButtonAddReaction, {
-                            type: A.ReactionTypes.BURST,
+                        }), !u && g && x && (0, s.jsx)(F.ButtonAddReaction, {
+                            type: v.ReactionTypes.BURST,
                             remainingBurstCurrency: C,
                             message: a,
                             channel: t,
@@ -4499,7 +4666,7 @@
                 })
             }
 
-            function eH(e) {
+            function ek(e) {
                 let {
                     messageCount: t,
                     unreadCount: a,
@@ -4530,13 +4697,13 @@
                 })
             }
 
-            function ek(e) {
+            function eH(e) {
                 var t;
                 let {
                     channel: a
                 } = e, {
                     sortOrder: n
-                } = (0, en.useForumChannelStore)(a.parent_id), l = (0, el.useLastActiveTimestamp)(a, n), r = (0, f.useStateFromStores)([z.default], () => z.default.lastMessageId(a.id)), i = null != r ? h.default.extractTimestamp(r) : null, o = null === (t = a.threadMetadata) || void 0 === t ? void 0 : t.createTimestamp, u = null == l ? null : n === m.ThreadSortOrder.CREATION_DATE ? eE.default.Messages.FORUM_POST_CREATED_AT_TOOLTIP.format({
+                } = (0, en.useForumChannelStore)(a.parent_id), l = (0, el.useLastActiveTimestamp)(a, n), r = (0, f.useStateFromStores)([W.default], () => W.default.lastMessageId(a.id)), i = null != r ? h.default.extractTimestamp(r) : null, o = null === (t = a.threadMetadata) || void 0 === t ? void 0 : t.createTimestamp, u = null == l ? null : n === m.ThreadSortOrder.CREATION_DATE ? eE.default.Messages.FORUM_POST_CREATED_AT_TOOLTIP.format({
                     timestamp: l
                 }) : l, c = n === m.ThreadSortOrder.CREATION_DATE && null != o ? eE.default.Messages.FORUM_POST_CREATED_AT_TOOLTIP.format({
                     timestamp: (0, et.dateFormat)(d(o), "LLLL")
@@ -4560,7 +4727,7 @@
                     firstMessage: a,
                     isNew: n,
                     containsTags: l
-                } = e, r = t.hasFlag(eS.ChannelFlags.PINNED), i = (0, f.useStateFromStores)([W.default], () => null != a && W.default.isBlocked(a.author.id));
+                } = e, r = t.hasFlag(eS.ChannelFlags.PINNED), i = (0, f.useStateFromStores)([z.default], () => null != a && z.default.isBlocked(a.author.id));
                 return (0, s.jsxs)("div", {
                     className: eM.header,
                     children: [!l && r && (0, s.jsx)("div", {
@@ -4577,7 +4744,7 @@
                     }), !i && (0, s.jsx)(eg.default, {
                         channel: t,
                         message: a
-                    }), (0, s.jsx)(ek, {
+                    }), (0, s.jsx)(eH, {
                         channel: t
                     }), n && (0, s.jsx)(ee.TextBadge, {
                         className: eM.newBadge,
@@ -4594,7 +4761,7 @@
                     firstMessage: n,
                     isEmbed: l,
                     contentHeight: i
-                } = e, o = (0, f.useStateFromStores)([K.default], () => K.default.isFocused()), u = (0, E.isAnimatedImageUrl)(a.src), d = k.GifAutoPlay.useSetting(), {
+                } = e, o = (0, f.useStateFromStores)([K.default], () => K.default.isFocused()), u = (0, E.isAnimatedImageUrl)(a.src), d = H.GifAutoPlay.useSetting(), {
                     src: c,
                     width: m,
                     height: h,
@@ -4607,7 +4774,7 @@
                     enabled: !0,
                     children: (0, s.jsxs)("div", {
                         className: r(eM.bodyMedia, {
-                            [eA.embedFull]: l
+                            [ev.embedFull]: l
                         }),
                         style: {
                             height: i,
@@ -4625,7 +4792,7 @@
                             imageClassName: r({
                                 [eM.obscured]: C
                             })
-                        }) : (0, F.renderImageComponent)({
+                        }) : (0, L.renderImageComponent)({
                             src: c,
                             width: m,
                             height: h,
@@ -4908,7 +5075,7 @@
                     setPopoutRef: C
                 } = e, _ = (0, d.useVisibleForumTags)(t), {
                     tagFilter: T
-                } = (0, u.useForumChannelStore)(t.id), S = (0, u.useForumChannelStoreApi)(), N = (0, i.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), p = n.useCallback(e => {
+                } = (0, u.useForumChannelStore)(t.id), S = (0, u.useForumChannelStoreApi)(), p = (0, i.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), N = n.useCallback(e => {
                     (0, c.trackForumTagFilterClicked)({
                         guildId: t.guild_id,
                         channelId: t.id,
@@ -4922,18 +5089,18 @@
                         }
                     }), S.getState().toggleTagFilter(t.id, e)
                 }, [t, T, S]), E = n.useCallback(() => {
-                    S.getState().setTagFilter(t.id, new Set), !N && a()
-                }, [S, t.id, N, a]), M = (0, l.default)({
+                    S.getState().setTagFilter(t.id, new Set), !p && a()
+                }, [S, t.id, p, a]), M = (0, l.default)({
                     id: "".concat(t.id, "-all-tags-dropdown-navigator"),
                     isEnabled: !0,
                     wrap: !0,
                     scrollToStart: x,
                     scrollToEnd: x
-                }), A = n.useRef(null);
+                }), v = n.useRef(null);
                 return n.useEffect(() => {
                     requestAnimationFrame(() => {
-                        if (null != A.current) {
-                            let e = A.current.querySelector(".".concat(g.tag));
+                        if (null != v.current) {
+                            let e = v.current.querySelector(".".concat(g.tag));
                             null != e && e.focus()
                         }
                     })
@@ -4970,7 +5137,7 @@
                                 } = e;
                                 return (0, s.jsx)("div", {
                                     ref: e => {
-                                        t.current = e, A.current = e
+                                        t.current = e, v.current = e
                                     },
                                     ...a,
                                     className: g.tagContainer,
@@ -4978,7 +5145,7 @@
                                         className: g.tag,
                                         tag: e,
                                         selected: T.has(e.id),
-                                        onClick: () => p(e.id)
+                                        onClick: () => N(e.id)
                                     }, e.id))
                                 })
                             }
@@ -5100,10 +5267,10 @@
                             s = (0, i.getItemId)(e);
                         C(a, s), (0, l.notifyFocusSubscribers)(t, s, !0)
                     }, [t, C]),
-                    [S, N] = n.useState(!1),
-                    p = n.useRef(S);
+                    [S, p] = n.useState(!1),
+                    N = n.useRef(S);
                 n.useLayoutEffect(() => {
-                    p.current = S
+                    N.current = S
                 }, [S]), n.useLayoutEffect(() => {
                     let e = f.current;
                     if (null != e) return e.addEventListener("focusin", a), e.addEventListener("focusout", s), e.addEventListener("focus", n), e.addEventListener("scroll", l, {
@@ -5113,11 +5280,11 @@
                     };
 
                     function a() {
-                        N(!0)
+                        p(!0)
                     }
 
                     function s(e) {
-                        !e.currentTarget.contains(e.relatedTarget) && (N(!1), requestAnimationFrame(() => {
+                        !e.currentTarget.contains(e.relatedTarget) && (p(!1), requestAnimationFrame(() => {
                             let e = u.current;
                             if (null !== e) {
                                 let a = (0, i.createSelector)(e, o);
@@ -5128,7 +5295,7 @@
 
                     function n() {
                         let e = f.current,
-                            t = p.current;
+                            t = N.current;
                         if (t || null == e) return
                     }
 
@@ -5420,7 +5587,7 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return U
+                    return w
                 }
             });
             var s = a("37983"),
@@ -5441,22 +5608,22 @@
                 _ = a("305961"),
                 T = a("181114"),
                 S = a("191814"),
-                N = a("109264"),
-                p = a("945330"),
+                p = a("109264"),
+                N = a("945330"),
                 E = a("68238"),
                 M = a("758710"),
-                A = a("58608"),
-                v = a("701909"),
+                v = a("58608"),
+                A = a("701909"),
                 I = a("753582"),
                 j = a("49111"),
                 R = a("782340"),
                 O = a("528639"),
-                L = a("112545"),
-                F = a("600310"),
+                F = a("112545"),
+                L = a("600310"),
                 b = a("129185"),
-                y = a("338283");
+                P = a("338283");
 
-            function P(e) {
+            function y(e) {
                 let {
                     handleHide: t
                 } = e;
@@ -5464,7 +5631,7 @@
                     onClick: t,
                     className: O.closeButton,
                     "aria-label": R.default.Messages.DISMISS,
-                    children: (0, s.jsx)(p.default, {
+                    children: (0, s.jsx)(N.default, {
                         className: O.closeIcon
                     })
                 })
@@ -5506,7 +5673,7 @@
                         children: a
                     }), (0, s.jsx)(S.default, {
                         size: 10
-                    }), (0, s.jsx)(A.default, {
+                    }), (0, s.jsx)(v.default, {
                         className: O.video,
                         src: n,
                         autoPlay: !0,
@@ -5522,7 +5689,7 @@
                                 className: O.messageCountBox,
                                 children: [(0, s.jsx)("span", {
                                     className: O.messageCountIcon,
-                                    children: (0, s.jsx)(N.default, {
+                                    children: (0, s.jsx)(p.default, {
                                         width: 16,
                                         height: 16
                                     })
@@ -5547,35 +5714,35 @@
                     })]
                 })
             }
-            var U = e => {
+            var w = e => {
                 var t, a;
                 let {
                     channel: l
-                } = e, N = (0, c.default)(), p = (0, u.isThemeDark)(N), A = (0, o.useStateFromStores)([_.default], () => _.default.getGuild(l.guild_id)), U = (0, o.useStateFromStores)([m.default], () => m.default.useReducedMotion), w = (0, o.useStateFromStores)([h.default], () => h.default.hasHidden(l.id)), H = (0, x.useSubscriptionListingsForChannel)({
+                } = e, p = (0, c.default)(), N = (0, u.isThemeDark)(p), v = (0, o.useStateFromStores)([_.default], () => _.default.getGuild(l.guild_id)), w = (0, o.useStateFromStores)([m.default], () => m.default.useReducedMotion), U = (0, o.useStateFromStores)([h.default], () => h.default.hasHidden(l.id)), k = (0, x.useSubscriptionListingsForChannel)({
                     guildId: l.guild_id,
                     channelId: l.id
                 }), {
-                    transitions: k,
+                    transitions: H,
                     setVisible: B
-                } = (0, I.useShowAnimation)(U), G = n.useCallback(() => {
+                } = (0, I.useShowAnimation)(w), G = n.useCallback(() => {
                     B(!1), f.default.hideAdminOnboarding(l.id, !0)
                 }, [l, B]);
                 n.useEffect(() => {
                     let e = (0, g.isOnboardingDismissed)(l.id);
-                    !e && B(!w)
-                }, [l, B, w]);
+                    !e && B(!U)
+                }, [l, B, U]);
                 let V = n.useMemo(() => [R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_FAN_ART_TAG, R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_DESK_SETUP_TAG, R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_PETS_TAG, R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_HOUSEPLANTS_TAG], []),
-                    z = n.useMemo(() => [R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_BEHIND_THE_SCENES_TAG, R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_EXCLUSIVE_ART_TAG, R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_PRERELEASES_TAG, R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_TUTORIALS_TAG], []),
-                    W = () => {
+                    W = n.useMemo(() => [R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_BEHIND_THE_SCENES_TAG, R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_EXCLUSIVE_ART_TAG, R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_PRERELEASES_TAG, R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_TUTORIALS_TAG], []),
+                    z = () => {
                         C.default.open(l.guild_id, j.GuildSettingsSections.ROLE_SUBSCRIPTIONS)
                     },
-                    K = null !== (t = null == A ? void 0 : A.hasFeature(j.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && void 0 !== t && t,
+                    K = null !== (t = null == v ? void 0 : v.hasFeature(j.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && void 0 !== t && t,
                     Y = K ? R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_HAS_TIERS_CTA : R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_NO_TIERS_CTA,
-                    Z = null !== (a = (null == A ? void 0 : A.hasFeature(j.GuildFeatures.CREATOR_MONETIZABLE)) || (null == A ? void 0 : A.hasFeature(j.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL))) && void 0 !== a && a,
+                    Z = null !== (a = (null == v ? void 0 : v.hasFeature(j.GuildFeatures.CREATOR_MONETIZABLE)) || (null == v ? void 0 : v.hasFeature(j.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL))) && void 0 !== a && a,
                     X = Z ? R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_MONETIZING_TITLE : R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_NON_MONETIZING_TITLE,
                     q = Z ? R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_MONETIZING_SUBTITLE : R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_ABOUT_NON_MONETIZING_SUBTITLE;
                 return (0, s.jsx)(s.Fragment, {
-                    children: k((e, t) => t ? (0, s.jsxs)(i.animated.div, {
+                    children: H((e, t) => t ? (0, s.jsxs)(i.animated.div, {
                         style: e,
                         className: O.container,
                         children: [(0, s.jsxs)("div", {
@@ -5588,7 +5755,7 @@
                                     height: 12,
                                     className: O.icon
                                 }), R.default.Messages.FORUM_CHANNEL_ONBOARDING_VISIBILITY]
-                            }), (0, s.jsx)(P, {
+                            }), (0, s.jsx)(y, {
                                 handleHide: G
                             })]
                         }), (0, s.jsxs)("div", {
@@ -5640,7 +5807,7 @@
                                     }), (0, s.jsx)(S.default, {
                                         size: 16
                                     }), (0, s.jsxs)(d.Clickable, {
-                                        onClick: () => open(v.default.getCreatorSupportArticleURL(j.HelpdeskArticles.MEDIA_CHANNEL)),
+                                        onClick: () => open(A.default.getCreatorSupportArticleURL(j.HelpdeskArticles.MEDIA_CHANNEL)),
                                         className: O.helpCenterLink,
                                         children: [(0, s.jsx)(d.Text, {
                                             variant: "text-sm/medium",
@@ -5671,11 +5838,11 @@
                                     children: (0, s.jsxs)("div", {
                                         className: O.contentImageContainer,
                                         children: [(0, s.jsx)("img", {
-                                            src: p ? b : y,
+                                            src: N ? b : P,
                                             alt: "",
                                             className: r(O.previewEmbedImage, O.secondaryImage)
                                         }), (0, s.jsx)("img", {
-                                            src: p ? L : F,
+                                            src: N ? F : L,
                                             alt: "",
                                             className: O.previewEmbedImage
                                         })]
@@ -5706,7 +5873,7 @@
                                         size: 16
                                     }), (0, s.jsx)("div", {
                                         className: O.mediaChannelTagsContainer,
-                                        children: z.map(e => (0, s.jsx)(d.Text, {
+                                        children: W.map(e => (0, s.jsx)(d.Text, {
                                             variant: "text-sm/medium",
                                             color: "text-normal",
                                             className: O.mediaChannelTag,
@@ -5714,10 +5881,10 @@
                                         }, e))
                                     }), (0, s.jsx)(S.default, {
                                         size: 16
-                                    }), 0 === H.length && (0, s.jsx)(T.default, {
+                                    }), 0 === k.length && (0, s.jsx)(T.default, {
                                         size: d.Button.Sizes.MEDIUM,
-                                        pauseAnimation: U,
-                                        onClick: W,
+                                        pauseAnimation: w,
+                                        onClick: z,
                                         className: O.addChannelButton,
                                         color: d.Button.Colors.CUSTOM,
                                         children: Y
@@ -5793,7 +5960,7 @@
             "use strict";
             a.r(t), a.d(t, {
                 MediaPostThumbnail: function() {
-                    return F
+                    return L
                 }
             });
             var s = a("37983"),
@@ -5814,12 +5981,12 @@
                 _ = a("476765"),
                 T = a("857171"),
                 S = a("832132"),
-                N = a("808404"),
-                p = a("987772"),
+                p = a("808404"),
+                N = a("987772"),
                 E = a("228220"),
                 M = a("58608"),
-                A = a("412861"),
-                v = a("489898"),
+                v = a("412861"),
+                A = a("489898"),
                 I = a("782340"),
                 j = a("73386");
             let R = [{
@@ -5828,7 +5995,7 @@
                 }],
                 O = (0, _.uid)();
 
-            function L(e) {
+            function F(e) {
                 let {
                     mediaAttachments: t,
                     containerWidth: a,
@@ -5857,7 +6024,7 @@
                     })
                 })
             }
-            let F = e => {
+            let L = e => {
                 var t;
                 let {
                     parentChannel: l
@@ -5870,18 +6037,18 @@
                     return {
                         textAreaState: t
                     }
-                }), C = (0, u.default)([m.default], () => m.default.keyboardModeEnabled), _ = (0, v.default)(l, null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()), M = n.useMemo(() => _.find(e => e.isThumbnail), [_]), F = null != _ && _.length > 0, b = n.useMemo(() => {
+                }), C = (0, u.default)([m.default], () => m.default.keyboardModeEnabled), _ = (0, A.default)(l, null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()), M = n.useMemo(() => _.find(e => e.isThumbnail), [_]), L = null != _ && _.length > 0, b = n.useMemo(() => {
                     let e = (null == _ ? void 0 : _.length) > 1 ? 1.15 : 1;
                     return {
                         width: 153 * e,
                         height: 86 * e
                     }
-                }, [_]), y = n.useCallback(e => {
-                    null != M && c.default.remove(l.id, M.id, h.ChatInputTypes.CREATE_FORUM_POST.drafts.type), (0, A.promptToUpload)(e.currentTarget.files, l, h.ChatInputTypes.CREATE_FORUM_POST.drafts.type, {
+                }, [_]), P = n.useCallback(e => {
+                    null != M && c.default.remove(l.id, M.id, h.ChatInputTypes.CREATE_FORUM_POST.drafts.type), (0, v.promptToUpload)(e.currentTarget.files, l, h.ChatInputTypes.CREATE_FORUM_POST.drafts.type, {
                         requireConfirm: !0,
                         isThumbnail: !0
                     }), e.currentTarget.value = null
-                }, [l, M]), P = e => {
+                }, [l, M]), y = e => {
                     e.stopPropagation(), (null == M ? void 0 : M.upload) != null && (0, d.openModalLazy)(async () => {
                         let e = M.upload;
                         o(null != e, "upload should not be null");
@@ -5912,14 +6079,14 @@
                     color: d.ButtonColors.CUSTOM,
                     className: r(j.uploadFileInputContainer),
                     innerClassName: j.uploadThumbnailContainer,
-                    onChange: y,
+                    onChange: P,
                     multiple: !1,
                     "aria-hidden": !0,
                     filters: R,
                     "aria-describedby": O,
-                    "aria-label": F ? I.default.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL : I.default.Messages.MEDIA_CHANNEL_UPLOAD_THUMBNAIL_LABEL,
-                    children: F ? (0, s.jsxs)(s.Fragment, {
-                        children: [(0, s.jsx)(L, {
+                    "aria-label": L ? I.default.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL : I.default.Messages.MEDIA_CHANNEL_UPLOAD_THUMBNAIL_LABEL,
+                    children: L ? (0, s.jsxs)(s.Fragment, {
+                        children: [(0, s.jsx)(F, {
                             mediaAttachments: _,
                             containerWidth: b.width,
                             containerHeight: b.height
@@ -5938,7 +6105,7 @@
                             })]
                         })]
                     }) : (0, s.jsxs)(s.Fragment, {
-                        children: [(0, s.jsx)(N.default, {
+                        children: [(0, s.jsx)(p.default, {
                             className: j.uploadIcon
                         }), (0, s.jsx)(d.Text, {
                             variant: "text-xs/normal",
@@ -5955,8 +6122,8 @@
                             children: [(0, s.jsx)(f.default, {
                                 className: j.action,
                                 tooltip: I.default.Messages.ATTACHMENT_UTILITIES_MODIFY,
-                                onClick: P,
-                                children: (0, s.jsx)(p.default, {})
+                                onClick: y,
+                                children: (0, s.jsx)(N.default, {})
                             }), (0, s.jsx)(f.default, {
                                 className: j.action,
                                 tooltip: I.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
@@ -5968,7 +6135,7 @@
                         draftType: h.ChatInputTypes.CREATE_FORUM_POST.drafts.type,
                         id: M.id,
                         channelId: l.id,
-                        handleEditModal: P,
+                        handleEditModal: y,
                         keyboardModeEnabled: C,
                         size: g.AttachmentListItemSizes.SMALL,
                         className: j.attachmentListItem,

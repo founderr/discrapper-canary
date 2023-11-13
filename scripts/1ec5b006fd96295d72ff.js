@@ -1124,7 +1124,7 @@
             class c {
                 constructor(e, t, s) {
                     var n, a, c;
-                    this.channelId = e, this.set = t, this.get = s, this.editorHeight = 64, this.editorAdditionRowHeight = 0, this.listViewCardHeights = {}, this.cardHeightVersion = 0, this.nameError = null, this.messageError = null, this.appliedTags = new Set, this.popoutOpen = !1, this.guidelinesOpen = !1, this.onboardingExpanded = !1, this.submitting = !1, this.formOpen = !1, this.name = "", this.textAreaState = (0, i.createState)(""), this.hasClickedForm = !1, this.titleFocused = !1, this.bodyFocused = !1, this.setEditorHeight = e => {
+                    this.channelId = e, this.set = t, this.get = s, this.editorHeight = 64, this.editorAdditionRowHeight = 0, this.listViewCardHeights = {}, this.cardHeightVersion = 0, this.nameError = null, this.messageError = null, this.appliedTags = new Set, this.popoutOpen = !1, this.guidelinesOpen = !1, this.previewing = !1, this.onboardingExpanded = !1, this.submitting = !1, this.formOpen = !1, this.name = "", this.textAreaState = (0, i.createState)(""), this.hasClickedForm = !1, this.titleFocused = !1, this.bodyFocused = !1, this.setEditorHeight = e => {
                         this.set({
                             editorHeight: e
                         })
@@ -1164,6 +1164,10 @@
                     }, this.setGuidelinesOpen = e => {
                         this.set({
                             guidelinesOpen: e
+                        })
+                    }, this.setPreviewing = e => {
+                        this.set({
+                            previewing: e
                         })
                     }, this.setSubmitting = e => {
                         this.set({
