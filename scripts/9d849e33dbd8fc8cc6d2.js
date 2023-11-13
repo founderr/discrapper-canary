@@ -6150,7 +6150,7 @@
                                 className: l(g.cardHeading, s),
                                 children: t
                             }), 0 !== n.length ? (0, a.jsxs)(o.Text, {
-                                variant: "text-sm/medium",
+                                variant: "text-sm/normal",
                                 className: g.cardDescriptionText,
                                 children: [n, (0, a.jsx)("br", {}), " ", (0, a.jsx)("br", {}), r]
                             }) : null, u ? (0, a.jsx)(A.default, {
