@@ -8,8 +8,8 @@
                 }
             });
             var i = n("274870"),
-                a = n("116320"),
-                l = n("617559"),
+                l = n("116320"),
+                a = n("617559"),
                 r = n("213523"),
                 d = n("593195"),
                 u = n("361777"),
@@ -32,49 +32,49 @@
                 A = n("944633"),
                 D = n("228427"),
                 L = n("959097"),
-                b = n("656038"),
-                w = n("49111");
+                w = n("656038"),
+                b = n("49111");
 
             function N(e, t) {
                 switch (e.type) {
-                    case w.ChannelTypes.DM:
-                        return a.default;
-                    case w.ChannelTypes.GROUP_DM:
+                    case b.ChannelTypes.DM:
+                        return l.default;
+                    case b.ChannelTypes.GROUP_DM:
                         let n = (0, i.getIsBroadcastingGDM)(e.id);
                         return n ? s.default : I.default;
-                    case w.ChannelTypes.GUILD_ANNOUNCEMENT:
+                    case b.ChannelTypes.GUILD_ANNOUNCEMENT:
                         if (e.isNSFW()) return h.default;
-                        if ((0, b.default)(e)) return v.default;
+                        if ((0, w.default)(e)) return v.default;
                         else return m.default;
-                    case w.ChannelTypes.GUILD_TEXT:
+                    case b.ChannelTypes.GUILD_TEXT:
                         if (e.id === (null == t ? void 0 : t.rulesChannelId)) return r.default;
                         if (e.isNSFW()) return o.default;
-                        else if ((0, b.default)(e)) return u.default;
+                        else if ((0, w.default)(e)) return u.default;
                         else return d.default;
-                    case w.ChannelTypes.GUILD_FORUM:
+                    case b.ChannelTypes.GUILD_FORUM:
                         let N = e.isMediaChannel();
                         if (e.isNSFW()) return N ? E.default : p.default;
-                        if ((0, b.default)(e)) return N ? C.default : f.default;
+                        if ((0, w.default)(e)) return N ? C.default : f.default;
                         else return N ? g.default : c.default;
-                    case w.ChannelTypes.GUILD_MEDIA:
+                    case b.ChannelTypes.GUILD_MEDIA:
                         if (e.isNSFW()) return E.default;
-                        if ((0, b.default)(e)) return C.default;
+                        if ((0, w.default)(e)) return C.default;
                         else return g.default;
-                    case w.ChannelTypes.GUILD_STAGE_VOICE:
+                    case b.ChannelTypes.GUILD_STAGE_VOICE:
                         return D.default;
-                    case w.ChannelTypes.GUILD_VOICE:
-                        if ((0, b.default)(e)) return A.default;
+                    case b.ChannelTypes.GUILD_VOICE:
+                        if ((0, w.default)(e)) return A.default;
                         return y.default;
-                    case w.ChannelTypes.ANNOUNCEMENT_THREAD:
-                    case w.ChannelTypes.PUBLIC_THREAD:
+                    case b.ChannelTypes.ANNOUNCEMENT_THREAD:
+                    case b.ChannelTypes.PUBLIC_THREAD:
                         if (e.isNSFW()) return S.default;
                         if (e.isForumPost()) return _.default;
                         else return L.default;
-                    case w.ChannelTypes.PRIVATE_THREAD:
+                    case b.ChannelTypes.PRIVATE_THREAD:
                         if (e.isNSFW()) return S.default;
                         return T.default;
-                    case w.ChannelTypes.GUILD_DIRECTORY:
-                        return l.default;
+                    case b.ChannelTypes.GUILD_DIRECTORY:
+                        return a.default;
                     default:
                         return null
                 }
@@ -84,11 +84,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return l
                 }
             }), n("686130"), n("781738");
             let i = /[<>:"/\\|?*\.]/g;
-            var a = function(e) {
+            var l = function(e) {
                 return e.replaceAll(i, "").trim().replaceAll(" ", "_")
             }
         },
@@ -100,8 +100,8 @@
                 }
             });
             var i = n("373469"),
-                a = n("945956"),
-                l = n("568307"),
+                l = n("945956"),
+                a = n("568307"),
                 r = n("800762"),
                 d = n("299039"),
                 u = n("80028");
@@ -110,10 +110,10 @@
                 var e, t, n, o, s;
                 let c = i.default.getStreamerActiveStreamMetadata(),
                     f = null == c ? void 0 : c.pid,
-                    p = null != c ? null != f ? l.default.getGameForPID(f) : null : l.default.getVisibleGame(),
+                    p = null != c ? null != f ? a.default.getGameForPID(f) : null : a.default.getVisibleGame(),
                     _ = null !== (t = null !== (e = null == c ? void 0 : c.sourceName) && void 0 !== e ? e : null == p ? void 0 : p.name) && void 0 !== t ? t : "Unknown",
                     g = null !== (o = null !== (n = null == c ? void 0 : c.id) && void 0 !== n ? n : null == p ? void 0 : p.id) && void 0 !== o ? o : void 0,
-                    C = Object.keys(r.default.getVoiceStatesForChannel(null !== (s = a.default.getChannelId()) && void 0 !== s ? s : ""));
+                    C = Object.keys(r.default.getVoiceStatesForChannel(null !== (s = l.default.getChannelId()) && void 0 !== s ? s : ""));
                 return {
                     id: d.default.fromTimestamp(Date.now()),
                     version: u.CURRENT_CLIP_METADATA_VERSION,
@@ -134,7 +134,7 @@
                 }
             }), n("222007"), n("808653");
             var i = n("80028");
-            let a = [e => {
+            let l = [e => {
                     let t = {
                         ...e,
                         version: 1,
@@ -150,11 +150,11 @@
                     };
                     return t
                 }],
-                l = null;
+                a = null;
             async function r(e) {
                 var t;
                 let r = (await n.el("990599").then(n.t.bind(n, "990599", 23))).default;
-                let d = (t = r, null != l ? l : l = t.object({
+                let d = (t = r, null != a ? a : a = t.object({
                     id: t.string().required(),
                     version: t.number().positive().integer().min(0).max(i.CURRENT_CLIP_METADATA_VERSION).optional(),
                     name: t.string(),
@@ -183,7 +183,7 @@
                 }).required());
                 try {
                     r.assert(e, d);
-                    return null == e.version && (e.version = 0), a.slice(e.version).reduce((e, t) => t(e), e)
+                    return null == e.version && (e.version = 0), l.slice(e.version).reduce((e, t) => t(e), e)
                 } catch (e) {
                     return null
                 }
@@ -193,10 +193,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 updateAllowVoiceRecording: function() {
-                    return b
+                    return w
                 },
                 updateClipsEnabled: function() {
-                    return w
+                    return b
                 },
                 updateDecoupledClipsEnabled: function() {
                     return N
@@ -236,8 +236,8 @@
                 }
             }), n("222007"), n("70102"), n("424973");
             var i = n("750028"),
-                a = n("913144"),
-                l = n("49671"),
+                l = n("913144"),
+                a = n("49671"),
                 r = n("44642"),
                 d = n("374014"),
                 u = n("584687"),
@@ -261,7 +261,7 @@
                 D = n("80028"),
                 L = n("49111");
 
-            function b(e) {
+            function w(e) {
                 let {
                     allowVoiceRecording: t
                 } = e;
@@ -273,13 +273,13 @@
                     allow_voice_recording: t
                 })
             }
-            async function w(e) {
+            async function b(e) {
                 let {
                     clipsEnabled: t,
                     guildId: n,
                     trackAnalytics: i = !1
                 } = e;
-                await a.default.dispatch({
+                await l.default.dispatch({
                     type: "CLIPS_SETTINGS_UPDATE",
                     settings: {
                         clipsEnabled: t,
@@ -301,7 +301,7 @@
                     enabled: t,
                     trackAnalytics: n = !1
                 } = e;
-                a.default.dispatch({
+                l.default.dispatch({
                     type: "CLIPS_SETTINGS_UPDATE",
                     settings: {
                         ...t && {
@@ -318,7 +318,7 @@
             }
 
             function P(e) {
-                a.default.dispatch({
+                l.default.dispatch({
                     type: "CLIPS_SETTINGS_UPDATE",
                     settings: {
                         storageLocation: e
@@ -327,7 +327,7 @@
             }
 
             function R(e) {
-                a.default.dispatch({
+                l.default.dispatch({
                     type: "CLIPS_SETTINGS_UPDATE",
                     settings: {
                         clipsLength: e
@@ -336,7 +336,7 @@
             }
 
             function U(e) {
-                a.default.dispatch({
+                l.default.dispatch({
                     type: "CLIPS_SETTINGS_UPDATE",
                     settings: {
                         viewerClipsEnabled: e
@@ -345,19 +345,19 @@
             }
 
             function M(e, t) {
-                var n, i, a, l, d, u, o, s, f, p;
+                var n, i, l, a, d, u, o, s, f, p;
                 let g = new Map;
                 for (let e in t.framesEncodedByEncoder) {
                     let i = t.framesEncodedByEncoder[e],
-                        a = (0, r.parseEncoder)(e),
-                        l = null !== (n = g.get(a)) && void 0 !== n ? n : 0;
-                    g.set(a, l + i)
+                        l = (0, r.parseEncoder)(e),
+                        a = null !== (n = g.get(l)) && void 0 !== n ? n : 0;
+                    g.set(l, a + i)
                 }
                 return {
                     ...e,
                     frames_encoded_nvidia_cuda: null !== (i = g.get(r.Encoders.NVIDIA_CUDA)) && void 0 !== i ? i : 0,
-                    frames_encoded_nvidia_direct3d: null !== (a = g.get(r.Encoders.NVIDIA_DIRECT_3D)) && void 0 !== a ? a : 0,
-                    frames_encoded_openh264: null !== (l = g.get(r.Encoders.OPENH264)) && void 0 !== l ? l : 0,
+                    frames_encoded_nvidia_direct3d: null !== (l = g.get(r.Encoders.NVIDIA_DIRECT_3D)) && void 0 !== l ? l : 0,
+                    frames_encoded_openh264: null !== (a = g.get(r.Encoders.OPENH264)) && void 0 !== a ? a : 0,
                     frames_encoded_videotoolbox: null !== (d = g.get(r.Encoders.VIDEOTOOLBOX)) && void 0 !== d ? d : 0,
                     frames_encoded_amd_direct3d: null !== (u = g.get(r.Encoders.AMD_DIRECT_3D)) && void 0 !== u ? u : 0,
                     frames_encoded_intel: null !== (o = g.get(r.Encoders.INTEL)) && void 0 !== o ? o : 0,
@@ -386,47 +386,54 @@
             async function F(e) {
                 var t, n;
                 let i;
-                let a = h.default.getSettings(),
-                    r = a.storageLocation,
+                let l = h.default.getSettings(),
+                    r = l.storageLocation,
                     u = (0, I.default)(),
                     o = "".concat((0, S.default)(u.applicationName.substring(0, 20)), "_").concat(u.id, ".mp4"),
-                    s = l.default.fileManager.join(r, o),
+                    s = a.default.fileManager.join(r, o),
                     c = _.default.getMediaEngine(),
                     g = JSON.stringify(u);
                 if (null != e) {
                     let n = C.default.getRTCConnection(e);
                     if (null == n) throw Error("could not find RTC connection");
                     let {
-                        ownerId: a
-                    } = (0, d.decodeStreamKey)(e), [l, r] = null !== (t = n.getSSRCsForUser(a)) && void 0 !== t ? t : [];
-                    if (null == l || null == r) throw Error("Could not find target SSRCs");
-                    let u = l[0];
+                        ownerId: l
+                    } = (0, d.decodeStreamKey)(e), [a, r] = null !== (t = n.getSSRCsForUser(l)) && void 0 !== t ? t : [];
+                    if (null == a || null == r) throw Error("Could not find target SSRCs");
+                    let u = a[0];
                     i = c.saveClipForSSRC.bind(c, u, r, s, g)
                 } else i = c.saveClip.bind(c, s, g);
-                let m = function() {
-                    var e;
-                    let t = p.default.getId(),
-                        n = f.default.getActiveStreamForUser(t, null),
-                        i = null != n ? C.default.getRTCConnection((0, d.encodeStreamKey)(n)) : null,
-                        a = null == i ? void 0 : null === (e = i.analyticsContext) || void 0 === e ? void 0 : e.streamApplication;
+                let m = function(e) {
+                    var t;
+                    let n, i, l;
+                    if (null != e) {
+                        n = null != e ? C.default.getRTCConnection(e) : null;
+                        let t = (0, d.decodeStreamKey)(e);
+                        i = t.guildId, l = t.channelId
+                    } else {
+                        let e = p.default.getId(),
+                            t = f.default.getActiveStreamForUser(e, null);
+                        n = null != t ? C.default.getRTCConnection((0, d.encodeStreamKey)(t)) : null, i = null == t ? void 0 : t.guildId, l = null == t ? void 0 : t.channelId
+                    }
+                    let a = null == n ? void 0 : null === (t = n.analyticsContext) || void 0 === t ? void 0 : t.streamApplication;
                     return {
-                        rtc_connection_id: null == i ? void 0 : i.getRTCConnectionId(),
-                        media_session_id: null == i ? void 0 : i.getMediaSessionId(),
-                        parent_media_session_id: null == i ? void 0 : i.parentMediaSessionId,
-                        guild_id: null == n ? void 0 : n.guildId,
-                        channel_id: null == n ? void 0 : n.channelId,
+                        rtc_connection_id: null == n ? void 0 : n.getRTCConnectionId(),
+                        media_session_id: null == n ? void 0 : n.getMediaSessionId(),
+                        parent_media_session_id: null == n ? void 0 : n.parentMediaSessionId,
+                        guild_id: i,
+                        channel_id: l,
                         application_id: null == a ? void 0 : a.id,
                         application_name: null == a ? void 0 : a.name
                     }
-                }();
+                }(e);
                 try {
                     let {
                         duration: e,
                         thumbnail: t,
-                        clipStats: a
-                    } = await i(), r = M(m, a);
-                    r.clip_save_time_ms = a.clipSaveTimeMs, r.clip_size_bytes = a.clipSizeBytes, E.default.track(L.AnalyticEvents.CLIP_SAVED, r);
-                    let d = await (null != l.default.clips.getClipProtocolURLFromPath ? (0, A.createThumbnailFromVideo)(l.default.clips.getClipProtocolURLFromPath(s), 0) : (0, A.createThumbnail)(t));
+                        clipStats: l
+                    } = await i(), r = M(m, l);
+                    r.clip_save_time_ms = l.clipSaveTimeMs, r.clip_size_bytes = l.clipSizeBytes, null != l.viewerDecodeFps && (r.decode_fps_during_clip = l.viewerDecodeFps, r.encode_fps_during_clip = l.viewerEncodeFps, r.target_fps = null), E.default.track(L.AnalyticEvents.CLIP_SAVED, r);
+                    let d = await (null != a.default.clips.getClipProtocolURLFromPath ? (0, A.createThumbnailFromVideo)(a.default.clips.getClipProtocolURLFromPath(s), 0) : (0, A.createThumbnail)(t));
                     return u.thumbnail = d, u.length = e, D.ClipsLogger.info("Clip save succeeded with ".concat(e, "ms and thumbnail ").concat(null !== (n = null == d ? void 0 : d.length) && void 0 !== n ? n : 0, " bytes thumbnail.")), await c.updateClipMetadata(s, JSON.stringify(u)), {
                         ...u,
                         filepath: s
@@ -453,23 +460,23 @@
                     autoTrackExposure: !1
                 });
                 if (h.default.getIsSavingClip()) return;
-                let l = h.default.getSettings().clipsEnabled && null != f.default.getCurrentUserActiveStream(),
+                let a = h.default.getSettings().clipsEnabled && null != f.default.getCurrentUserActiveStream(),
                     r = n && h.default.getSettings().decoupledClipsEnabled && (null === (t = g.default.getVisibleGame()) || void 0 === t ? void 0 : t.windowHandle) != null,
                     d = null != e && null != f.default.getActiveStreamForStreamKey(e) && i;
-                if (!l && !r && !d) return;
-                a.default.dispatch({
+                if (!a && !r && !d) return;
+                l.default.dispatch({
                     type: "CLIPS_SAVE_CLIP_START"
                 });
                 let s = (0, v.playSound)("clip_save", .5),
                     c = performance.now();
                 try {
                     let t = await F(e);
-                    a.default.dispatch({
+                    l.default.dispatch({
                         type: "CLIPS_SAVE_CLIP",
                         clip: t
                     })
                 } catch (e) {
-                    D.ClipsLogger.error("Clip Failed to Save", e), null == s || s.stop(), (0, v.playSound)("clip_error", .5), a.default.dispatch({
+                    D.ClipsLogger.error("Clip Failed to Save", e), null == s || s.stop(), (0, v.playSound)("clip_error", .5), l.default.dispatch({
                         type: "CLIPS_SAVE_CLIP_ERROR"
                     })
                 }
@@ -482,27 +489,27 @@
                     ...n,
                     ...t
                 };
-                await _.default.getMediaEngine().updateClipMetadata(i.filepath, JSON.stringify(i)), E.default.track(L.AnalyticEvents.CLIP_EDITED), a.default.dispatch({
+                await _.default.getMediaEngine().updateClipMetadata(i.filepath, JSON.stringify(i)), E.default.track(L.AnalyticEvents.CLIP_EDITED), l.default.dispatch({
                     type: "CLIPS_UPDATE_METADATA",
                     clip: i
                 })
             }
 
             function k() {
-                a.default.dispatch({
+                l.default.dispatch({
                     type: "CLIPS_CLEAR_CLIPS_SESSION"
                 })
             }
 
             function V() {
-                a.default.dispatch({
+                l.default.dispatch({
                     type: "CLIPS_CLEAR_NEW_CLIP_IDS"
                 })
             }
             async function H(e) {
                 var t;
-                if (!(0, m.isDesktop)() || (null === (t = l.default.clips) || void 0 === t ? void 0 : t.loadClipsDirectory) == null) return;
-                let n = await l.default.clips.loadClipsDirectory(e),
+                if (!(0, m.isDesktop)() || (null === (t = a.default.clips) || void 0 === t ? void 0 : t.loadClipsDirectory) == null) return;
+                let n = await a.default.clips.loadClipsDirectory(e),
                     i = [];
                 for (let e of n) {
                     let t = await (0, T.validateClipMetadata)({
@@ -511,20 +518,20 @@
                     });
                     null != t && i.push(t)
                 }
-                a.default.dispatch({
+                l.default.dispatch({
                     type: "CLIPS_LOAD_DIRECTORY_SUCCESS",
                     clips: i
                 })
             }
             async function W(e) {
                 var t;
-                (0, m.isDesktop)() && (null === (t = l.default.clips) || void 0 === t ? void 0 : t.deleteClip) != null && (await l.default.clips.deleteClip(e), a.default.dispatch({
+                (0, m.isDesktop)() && (null === (t = a.default.clips) || void 0 === t ? void 0 : t.deleteClip) != null && (await a.default.clips.deleteClip(e), l.default.dispatch({
                     type: "CLIPS_DELETE_CLIP",
                     filepath: e
                 }))
             }
             async function x(e) {
-                await a.default.dispatch({
+                await l.default.dispatch({
                     type: "MEDIA_ENGINE_SET_HARDWARE_CLIP_ENCODE",
                     enabled: e
                 })
@@ -543,17 +550,17 @@
                 }
             }), n("222007"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341");
             var i = n("627445"),
-                a = n.n(i),
-                l = n("547757"),
-                r = n.n(l);
+                l = n.n(i),
+                a = n("547757"),
+                r = n.n(a);
             async function d(e) {
                 let t;
                 let n = r.createFile(!1),
                     i = new Promise(e => {
                         n.onReady = e
                     }),
-                    l = await e.arrayBuffer();
-                for (let e of (l.fileStart = 0, n.appendBuffer(l), n.flush(), await i, a(null != n.boxes, "mp4boxInputFile.boxes should not be null after parsing"), n.boxes)) "uuid" === e.type && (t = e.start);
+                    a = await e.arrayBuffer();
+                for (let e of (a.fileStart = 0, n.appendBuffer(a), n.flush(), await i, l(null != n.boxes, "mp4boxInputFile.boxes should not be null after parsing"), n.boxes)) "uuid" === e.type && (t = e.start);
                 let d = e.slice(0, t, e.type),
                     u = e.slice(t + 4, t + 8 + 16, e.type);
                 return new Blob([d, new Uint8Array([0, 0, 0, 24]), u], {
@@ -565,14 +572,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 createThumbnail: function() {
-                    return a
+                    return l
                 },
                 createThumbnailFromVideo: function() {
-                    return l
+                    return a
                 }
             }), n("70102");
             var i = n("80028");
-            async function a(e) {
+            async function l(e) {
                 if (null == e) return "";
                 let t = new Blob([e], {
                         type: "image/jpeg"
@@ -587,19 +594,19 @@
                 return n
             }
 
-            function l(e, t) {
+            function a(e, t) {
                 return new Promise(async n => {
-                    let a = document.createElement("video");
-                    a.muted = !0, a.src = e, a.currentTime = t, await a.play();
-                    let l = i.CLIPS_THUMBNAIL_MAX_WIDTH / a.videoWidth,
-                        r = i.CLIPS_THUMBNAIL_MAX_HEIGHT / a.videoHeight,
-                        d = Math.min(l, r),
-                        u = a.videoWidth * d,
-                        o = a.videoHeight * d,
+                    let l = document.createElement("video");
+                    l.muted = !0, l.src = e, l.currentTime = t, await l.play();
+                    let a = i.CLIPS_THUMBNAIL_MAX_WIDTH / l.videoWidth,
+                        r = i.CLIPS_THUMBNAIL_MAX_HEIGHT / l.videoHeight,
+                        d = Math.min(a, r),
+                        u = l.videoWidth * d,
+                        o = l.videoHeight * d,
                         s = document.createElement("canvas");
                     s.width = u, s.height = o;
                     let c = s.getContext("2d");
-                    null != c && (c.drawImage(a, 0, 0, a.videoWidth, a.videoHeight, 0, 0, u, o), n(s.toDataURL("image/jpeg", .9)))
+                    null != c && (c.drawImage(l, 0, 0, l.videoWidth, l.videoHeight, 0, 0, u, o), n(s.toDataURL("image/jpeg", .9)))
                 })
             }
         }
