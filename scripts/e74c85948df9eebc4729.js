@@ -1757,7 +1757,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "245139"
+                        buildNumber: "245143"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -16223,6 +16223,38 @@
                 return !1
             }
         },
+        439792: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return r
+                }
+            }), n("222007");
+            var a = n("570277"),
+                s = n.n(a),
+                l = n("773336");
+            let i = {
+                [l.PlatformTypes.WINDOWS]: {
+                    nvidia: "<=537.58.0"
+                }
+            };
+
+            function r(e) {
+                let t = i[(0, l.getPlatform)()];
+                if (null == t) return !1;
+                for (let n of Object.keys(e)) {
+                    let a = e[n],
+                        l = t[n];
+                    if (null == a || null == l || null != a.error) continue;
+                    let i = function(e) {
+                        var t, n;
+                        return "".concat(null !== (t = e.major) && void 0 !== t ? t : 0, ".").concat(null !== (n = e.minor) && void 0 !== n ? n : 0, ".0")
+                    }(a);
+                    if (!s.satisfies(i, l)) return !0
+                }
+                return !1
+            }
+        },
         709496: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -16259,7 +16291,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return _
                 }
             });
             var a = n("446674"),
@@ -16267,35 +16299,41 @@
                 l = n("773336"),
                 i = n("50885"),
                 r = n("288207"),
-                o = n("709496");
-            let u = !1,
-                d = !0;
-            class c extends a.default.Store {
+                o = n("439792"),
+                u = n("709496");
+            let d = !1,
+                c = !0,
+                E = !1;
+            class f extends a.default.Store {
                 initialize() {
                     !(!l.isPlatformEmbedded || __OVERLAY__) && i.default.getGPUDriverVersions().then(e => {
-                        u = (0, o.default)(e), d = (0, r.default)(e), this.emitChange()
+                        d = (0, u.default)(e), c = (0, r.default)(e), E = (0, o.default)(e), this.emitChange()
                     })
                 }
                 get GPUDriversOutdated() {
-                    return u
+                    return d
                 }
                 get canUseHardwareAcceleration() {
-                    return d
+                    return c
+                }
+                get problematicGPUDriver() {
+                    return E
                 }
                 getState() {
                     return {
-                        GPUDriversOutdated: u,
-                        canUseHardwareAcceleration: d
+                        GPUDriversOutdated: d,
+                        canUseHardwareAcceleration: c,
+                        problematicGPUDriver: E
                     }
                 }
             }
-            c.displayName = "StreamingCapabilitiesStore";
-            var E = new c(s.default, {
+            f.displayName = "StreamingCapabilitiesStore";
+            var _ = new f(s.default, {
                 OVERLAY_INITIALIZE: function(e) {
                     let {
                         streamingCapabilitiesStoreState: t
                     } = e;
-                    u = t.GPUDriversOutdated, d = t.canUseHardwareAcceleration
+                    d = t.GPUDriversOutdated, c = t.canUseHardwareAcceleration
                 }
             })
         },

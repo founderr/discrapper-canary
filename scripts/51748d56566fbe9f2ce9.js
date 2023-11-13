@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["82802"], {
+    ["63796"], {
         445356: function(e, t, n) {
             "use strict";
             e.exports = n.p + "c8718df1382ba878f1fc.svg"
@@ -12,33 +12,71 @@
             "use strict";
             n.r(t), n.d(t, {
                 ListBulletsIcon: function() {
-                    return u
+                    return r
                 }
             });
             var l = n("37983");
             n("884691");
             var a = n("669491"),
-                r = n("75196");
-            let u = e => {
+                s = n("75196");
+            let r = e => {
                 let {
                     width: t = 24,
                     height: n = 24,
-                    color: u = a.default.colors.INTERACTIVE_NORMAL,
+                    color: r = a.default.colors.INTERACTIVE_NORMAL,
                     colorClass: i = "",
-                    ...s
+                    ...u
                 } = e;
                 return (0, l.jsx)("svg", {
-                    ...(0, r.default)(s),
+                    ...(0, s.default)(u),
                     xmlns: "http://www.w3.org/2000/svg",
                     width: t,
                     height: n,
                     fill: "none",
                     viewBox: "0 0 24 24",
                     children: (0, l.jsx)("path", {
-                        fill: "string" == typeof u ? u : u.css,
+                        fill: "string" == typeof r ? r : r.css,
                         d: "M4 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM4 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM2 20a2 2 0 1 1 4 0 2 2 0 0 1-4 0ZM9 3a1 1 0 0 0 0 2h12a1 1 0 1 0 0-2H9ZM8 12a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1ZM9 19a1 1 0 1 0 0 2h5a1 1 0 1 0 0-2H9Z",
                         className: i
                     })
+                })
+            }
+        },
+        715072: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                UserPlusIcon: function() {
+                    return r
+                }
+            });
+            var l = n("37983");
+            n("884691");
+            var a = n("669491"),
+                s = n("75196");
+            let r = e => {
+                let {
+                    width: t = 24,
+                    height: n = 24,
+                    color: r = a.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: i = "",
+                    ...u
+                } = e;
+                return (0, l.jsxs)("svg", {
+                    ...(0, s.default)(u),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: n,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: [(0, l.jsx)("path", {
+                        fill: "string" == typeof r ? r : r.css,
+                        d: "M19 14a1 1 0 0 1 1 1v3h3a1 1 0 0 1 0 2h-3v3a1 1 0 0 1-2 0v-3h-3a1 1 0 1 1 0-2h3v-3a1 1 0 0 1 1-1Z",
+                        className: i
+                    }), (0, l.jsx)("path", {
+                        fill: "string" == typeof r ? r : r.css,
+                        d: "M16.828 12.93c.259-.271.259-.746-.077-.915A9.493 9.493 0 0 0 12.467 11h-.934A9.533 9.533 0 0 0 2 20.533C2 21.343 2.657 22 3.467 22h.22c.24 0 .445-.17.504-.403.285-1.113.84-2.17 1.32-2.91.134-.208.43-.094.405.154l-.261 2.61a.5.5 0 0 0 .497.549h7.64c.123 0 .17-.31.06-.363C12.819 21.14 12 20.224 12 19a3 3 0 0 1 3-3h.5a.5.5 0 0 0 .5-.5V15c0-.802.315-1.53.828-2.07ZM12 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z",
+                        className: i
+                    })]
                 })
             }
         },
@@ -46,19 +84,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return r
                 }
             });
             var l = n("65597"),
                 a = n("385976"),
-                r = n("867805");
+                s = n("867805");
 
-            function u(e, t) {
+            function r(e, t) {
                 let n = (0, l.default)([a.default], () => null != e ? a.default.getCustomEmojiById(e) : null, [e]),
-                    u = null != t ? r.default.getByName(r.default.convertSurrogateToName(t, !1)) : null;
+                    r = null != t ? s.default.getByName(s.default.convertSurrogateToName(t, !1)) : null;
                 return {
                     customEmoji: n,
-                    unicodeEmoji: u
+                    unicodeEmoji: r
                 }
             }
         },
@@ -69,38 +107,38 @@
                     return i
                 },
                 default: function() {
-                    return s
+                    return u
                 }
             });
             var l = n("37983");
             n("884691");
             var a = n("430568"),
-                r = n("569912"),
-                u = n("286667");
+                s = n("569912"),
+                r = n("286667");
             let i = {
-                SMALL: u.small,
-                MEDIUM: u.medium,
-                LARGE: u.large
+                SMALL: r.small,
+                MEDIUM: r.medium,
+                LARGE: r.large
             };
 
-            function s(e) {
+            function u(e) {
                 let {
                     emojiId: t,
                     emojiName: n,
-                    defaultComponent: u,
-                    size: s = i.MEDIUM
+                    defaultComponent: r,
+                    size: u = i.MEDIUM
                 } = e, {
                     customEmoji: o,
-                    unicodeEmoji: d
-                } = (0, r.default)(t, n);
-                return null == o && null == d ? (0, l.jsx)(l.Fragment, {
-                    children: u
+                    unicodeEmoji: c
+                } = (0, s.default)(t, n);
+                return null == o && null == c ? (0, l.jsx)(l.Fragment, {
+                    children: r
                 }) : (0, l.jsx)(a.default, {
                     emojiName: null != o ? null == o ? void 0 : o.name : n,
                     animated: null != o && o.animated,
                     emojiId: null == o ? void 0 : o.id,
                     autoplay: !0,
-                    className: s
+                    className: u
                 })
             }
         },
@@ -108,42 +146,42 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return c
                 }
             }), n("222007");
             var l = n("884691"),
                 a = n("446674"),
-                r = n("817963"),
-                u = n("923959"),
+                s = n("817963"),
+                r = n("923959"),
                 i = n("305961"),
-                s = n("957255"),
+                u = n("957255"),
                 o = n("49111"),
-                d = (e, t) => {
+                c = (e, t) => {
                     let n = (0, a.useStateFromStores)([i.default], () => i.default.getGuild(e), [e]),
                         {
-                            canCreateGuildEvent: d
-                        } = (0, r.useManageResourcePermissions)(n),
-                        c = (0, a.useStateFromStores)([u.default], () => u.default.getChannels(e)[u.GUILD_VOCAL_CHANNELS_KEY], [e]),
-                        f = l.useMemo(() => null != t ? c.filter(e => {
+                            canCreateGuildEvent: c
+                        } = (0, s.useManageResourcePermissions)(n),
+                        d = (0, a.useStateFromStores)([r.default], () => r.default.getChannels(e)[r.GUILD_VOCAL_CHANNELS_KEY], [e]),
+                        f = l.useMemo(() => null != t ? d.filter(e => {
                             let {
                                 channel: n
                             } = e;
                             return n.type === t
-                        }) : c, [c, t]),
-                        C = (0, a.useStateFromStores)([s.default], () => {
-                            if (s.default.can(o.Permissions.ADMINISTRATOR, n) || d) return !0;
+                        }) : d, [d, t]),
+                        h = (0, a.useStateFromStores)([u.default], () => {
+                            if (u.default.can(o.Permissions.ADMINISTRATOR, n) || c) return !0;
                             for (let {
                                     channel: e
                                 }
                                 of f) {
                                 let {
                                     canCreateGuildEvent: t
-                                } = (0, r.getManageResourcePermissions)(e);
+                                } = (0, s.getManageResourcePermissions)(e);
                                 if (t) return !0
                             }
                             return !1
-                        }, [f, n, d]);
-                    return C
+                        }, [f, n, c]);
+                    return h
                 }
         },
         507453: function(e, t, n) {
@@ -156,96 +194,111 @@
             var l = n("37983");
             n("884691");
             var a = n("414456"),
-                r = n.n(a),
-                u = n("598532");
+                s = n.n(a),
+                r = n("598532");
 
             function i(e) {
                 let {
                     className: t
                 } = e;
                 return (0, l.jsx)("div", {
-                    className: r(u.image, t)
+                    className: s(r.image, t)
                 })
+            }
+        },
+        242757: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                canViewInviteModal: function() {
+                    return a
+                }
+            });
+            var l = n("49111");
+
+            function a(e, t, n, a) {
+                let s = null != n ? n : t,
+                    r = null != s && e.can(l.Permissions.CREATE_INSTANT_INVITE, s);
+                return r || null != t && null != t.vanityURLCode || (null == a ? void 0 : a.invite_code) != null
             }
         },
         676143: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 useFilterCategoriesByQuery: function() {
-                    return L
+                    return H
                 },
                 getFirstRouteFor: function() {
-                    return w
+                    return T
                 },
                 clearRecentChannels: function() {
                     return A
                 },
                 useChannelBrowserSections: function() {
-                    return U
+                    return x
                 },
                 useChannelBrowserChannelCount: function() {
-                    return D
+                    return L
                 },
                 getActiveAgoTimestamp: function() {
-                    return H
+                    return V
                 }
             }), n("843762");
             var l = n("884691"),
                 a = n("448105"),
-                r = n.n(a),
-                u = n("866227"),
-                i = n.n(u),
-                s = n("249654"),
+                s = n.n(a),
+                r = n("866227"),
+                i = n.n(r),
+                u = n("249654"),
                 o = n("446674"),
-                d = n("151426"),
-                c = n("267363"),
+                c = n("151426"),
+                d = n("267363"),
                 f = n("320954"),
-                C = n("10641"),
-                h = n("290886"),
+                h = n("10641"),
+                C = n("290886"),
                 g = n("319839"),
-                m = n("194704"),
-                p = n("393414"),
-                v = n("42203"),
+                v = n("194704"),
+                m = n("393414"),
+                p = n("42203"),
                 N = n("245997"),
                 _ = n("660478"),
-                S = n("49111"),
+                I = n("49111"),
                 E = n("724210"),
-                I = n("796618"),
+                M = n("796618"),
                 R = n("133335"),
-                M = n("782340");
+                S = n("782340");
 
-            function T(e, t) {
+            function w(e, t) {
                 e.index = t
             }
 
-            function L(e, t, n, a) {
+            function H(e, t, n, a) {
                 a = a.toLowerCase();
-                let u = (0, h.useCanSeeOnboardingHome)(e),
-                    i = l.useCallback((e, t) => !(u && e.channel.hasFlag(E.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== S.ChannelTypes.GUILD_DIRECTORY && (0 === t.length || r(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [u]);
+                let r = (0, C.useCanSeeOnboardingHome)(e),
+                    i = l.useCallback((e, t) => !(r && e.channel.hasFlag(E.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== I.ChannelTypes.GUILD_DIRECTORY && (0 === t.length || s(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [r]);
                 return l.useMemo(() => {
                     let e = {
                         null: [],
                         _categories: []
                     };
-                    return n[S.ChannelTypes.GUILD_CATEGORY].forEach(n => {
+                    return n[I.ChannelTypes.GUILD_CATEGORY].forEach(n => {
                         let {
                             channel: l
                         } = n;
                         "null" === l.id && (e.null = t.null.filter(e => i(e, a))), e[l.id] = t[l.id].filter(e => i(e, a))
-                    }), e._categories = t._categories.filter(t => "null" === t.channel.id || 0 === a.length || e[t.channel.id].length > 0), (0, f.default)(e._categories, e).forEach(T), e
+                    }), e._categories = t._categories.filter(t => "null" === t.channel.id || 0 === a.length || e[t.channel.id].length > 0), (0, f.default)(e._categories, e).forEach(w), e
                 }, [t, n, i, a])
             }
 
-            function w(e) {
+            function T(e) {
                 let t = e.getSections();
                 if (t[g.SECTION_INDEX_COMMUNITY] > 0) {
                     let t = e.getCommunitySection().getRow(0);
                     switch (t) {
-                        case I.ChannelListCommunityRow.GUILD_HOME:
+                        case M.ChannelListCommunityRow.GUILD_HOME:
                             return E.StaticChannelRoute.GUILD_HOME;
-                        case I.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS:
+                        case M.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS:
                             return E.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
-                        case I.ChannelListCommunityRow.GUILD_MEMBER_APPLICATIONS:
+                        case M.ChannelListCommunityRow.GUILD_MEMBER_APPLICATIONS:
                             return E.StaticChannelRoute.MEMBER_APPLICATIONS
                     }
                 }
@@ -259,18 +312,18 @@
 
             function A(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-                (0, m.bulkClearRecents)(e, t), (0, c.bulkAck)(t.map(e => ({
+                (0, v.bulkClearRecents)(e, t), (0, d.bulkAck)(t.map(e => ({
                     channelId: e,
                     readStateType: R.ReadStateTypes.CHANNEL,
                     messageId: _.default.lastMessageId(e)
-                }))), null != n && (0, p.transitionTo)(S.Routes.CHANNEL(e, n))
+                }))), null != n && (0, m.transitionTo)(I.Routes.CHANNEL(e, n))
             }
 
-            function U(e, t, n, l) {
-                let a = (0, C.useIsDismissibleContentDismissed)(d.DismissibleContent.CHANNEL_BROWSER_NUX),
-                    r = (0, o.useStateFromStoresObject)([v.default], () => {
+            function x(e, t, n, l) {
+                let a = (0, h.useIsDismissibleContentDismissed)(c.DismissibleContent.CHANNEL_BROWSER_NUX),
+                    s = (0, o.useStateFromStoresObject)([p.default], () => {
                         let t = {},
-                            n = v.default.getMutableGuildChannelsForGuild(e);
+                            n = p.default.getMutableGuildChannelsForGuild(e);
                         for (let e in n) {
                             let {
                                 parent_id: a
@@ -282,34 +335,34 @@
                         }
                         return t
                     }, [e]),
-                    u = t._categories.map(e => {
+                    r = t._categories.map(e => {
                         let l = t[e.channel.id];
                         return {
-                            rowCount: "null" !== e.channel.id && 0 === r[e.channel.id] ? 1 : l.length,
+                            rowCount: "null" !== e.channel.id && 0 === s[e.channel.id] ? 1 : l.length,
                             rowHeight: 0 === l.length ? 0 : n
                         }
                     });
-                return !a && null != l && u.unshift({
+                return !a && null != l && r.unshift({
                     rowCount: 1,
                     rowHeight: l
-                }), u
+                }), r
             }
 
-            function D(e) {
+            function L(e) {
                 var t, n;
                 let l = (0, o.useStateFromStores)([N.default], () => N.default.getCategories(e)),
                     a = l._categories.length,
-                    r = l._categories[l._categories.length - 1];
-                if (null == r) return 0;
-                let u = null !== (n = null === (t = r.channel) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : "null",
-                    i = l[u];
-                return null == i ? 0 : 0 === i.length ? r.index + 2 - a : i[i.length - 1].index + 2 - a
+                    s = l._categories[l._categories.length - 1];
+                if (null == s) return 0;
+                let r = null !== (n = null === (t = s.channel) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : "null",
+                    i = l[r];
+                return null == i ? 0 : 0 === i.length ? s.index + 2 - a : i[i.length - 1].index + 2 - a
             }
 
-            function H(e) {
+            function V(e) {
                 var t;
-                return M.default.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({
-                    timeAgo: i(s.default.extractTimestamp(null !== (t = _.default.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow()
+                return S.default.Messages.CHANNEL_BROWSER_ACTIVE_TEXT.format({
+                    timeAgo: i(u.default.extractTimestamp(null !== (t = _.default.lastMessageId(e)) && void 0 !== t ? t : e)).fromNow()
                 })
             }
         },
@@ -317,20 +370,20 @@
             "use strict";
             n.r(t), n.d(t, {
                 bulkClearRecents: function() {
-                    return s
+                    return u
                 }
             });
             var l = n("801340"),
                 a = n("913144"),
-                r = n("872173"),
-                u = n("599110"),
+                s = n("872173"),
+                r = n("599110"),
                 i = n("49111");
-            async function s(e, t) {
-                await (0, r.updateUserGuildSettings)(e, e => (e.guildRecentsDismissedAt = l.Timestamp.fromDate(new Date), !0), r.UserSettingsDelay.INFREQUENT_USER_ACTION), a.default.dispatch({
+            async function u(e, t) {
+                await (0, s.updateUserGuildSettings)(e, e => (e.guildRecentsDismissedAt = l.Timestamp.fromDate(new Date), !0), s.UserSettingsDelay.INFREQUENT_USER_ACTION), a.default.dispatch({
                     type: "BULK_CLEAR_RECENTS",
                     guildId: e,
                     channelIds: t
-                }), u.default.track(i.AnalyticEvents.CHANNEL_LIST_UPDATED, {
+                }), r.default.track(i.AnalyticEvents.CHANNEL_LIST_UPDATED, {
                     action_type: "recents_dismissed"
                 })
             }
@@ -339,17 +392,17 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return c
+                    return d
                 }
             });
             var l = n("37983"),
                 a = n("884691"),
-                r = n("917351"),
-                u = n.n(r),
+                s = n("917351"),
+                r = n.n(s),
                 i = n("888400"),
-                s = n("782340");
-            let o = () => [s.default.Messages.COUNTDOWN_UNITS_SECONDS, s.default.Messages.COUNTDOWN_UNITS_MINUTES, s.default.Messages.COUNTDOWN_UNITS_HOURS, s.default.Messages.COUNTDOWN_UNITS_DAYS];
-            class d extends a.PureComponent {
+                u = n("782340");
+            let o = () => [u.default.Messages.COUNTDOWN_UNITS_SECONDS, u.default.Messages.COUNTDOWN_UNITS_MINUTES, u.default.Messages.COUNTDOWN_UNITS_HOURS, u.default.Messages.COUNTDOWN_UNITS_DAYS];
+            class c extends a.PureComponent {
                 componentDidMount() {
                     let {
                         intervalDuration: e,
@@ -367,18 +420,18 @@
                         showDays: t,
                         showUnits: n,
                         className: a
-                    } = this.props, r = [e.days, e.hours, e.minutes, e.seconds], i = o();
-                    if (0 === e.days) r.shift();
+                    } = this.props, s = [e.days, e.hours, e.minutes, e.seconds], i = o();
+                    if (0 === e.days) s.shift();
                     else if (!t) {
-                        let e = r.shift();
-                        r[0] += 24 * e
+                        let e = s.shift();
+                        s[0] += 24 * e
                     }
-                    let s = u(r).map(e => e < 10 ? "0".concat(e) : e).map((e, t) => [t > 0 && !n ? ":" : " ", (0, l.jsxs)("span", {
-                        children: [e, n ? i[r.length - t - 1] : null]
+                    let u = r(s).map(e => e < 10 ? "0".concat(e) : e).map((e, t) => [t > 0 && !n ? ":" : " ", (0, l.jsxs)("span", {
+                        children: [e, n ? i[s.length - t - 1] : null]
                     }, t)]).flatten().value();
                     return (0, l.jsx)("span", {
                         className: a,
-                        children: s
+                        children: u
                     })
                 }
                 render() {
@@ -390,20 +443,20 @@
                     } = this.props;
                     if (e === 1 / 0) return (0, l.jsx)("span", {
                         className: n,
-                        "aria-label": s.default.Messages.MAX_AGE_NEVER,
+                        "aria-label": u.default.Messages.MAX_AGE_NEVER,
                         children: "∞"
                     });
-                    let r = (0, i.diffAsUnits)(Date.now(), e, a);
-                    return null != t ? t(r, this.defaultRender.bind(this, r)) : this.defaultRender(r)
+                    let s = (0, i.diffAsUnits)(Date.now(), e, a);
+                    return null != t ? t(s, this.defaultRender.bind(this, s)) : this.defaultRender(s)
                 }
             }
-            d.defaultProps = {
+            c.defaultProps = {
                 showDays: !0,
                 showUnits: !1,
                 stopAtOneSec: !1,
                 intervalDuration: 1e3
             };
-            var c = d
+            var d = c
         },
         745633: function(e, t, n) {
             "use strict";
@@ -415,17 +468,17 @@
             var l = n("37983");
             n("884691");
             var a = n("469563"),
-                r = n("586880"),
-                u = n("75196"),
+                s = n("586880"),
+                r = n("75196"),
                 i = (0, a.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: n = 24,
                         color: a = "currentColor",
-                        ...r
+                        ...s
                     } = e;
                     return (0, l.jsxs)("svg", {
-                        ...(0, u.default)(r),
+                        ...(0, r.default)(s),
                         width: t,
                         height: n,
                         viewBox: "0 0 24 24",
@@ -454,7 +507,7 @@
                             fill: a
                         })]
                     })
-                }, r.HubIcon)
+                }, s.HubIcon)
         },
         100300: function(e, t, n) {
             "use strict";
@@ -466,17 +519,17 @@
             var l = n("37983");
             n("884691");
             var a = n("469563"),
-                r = n("85941"),
-                u = n("75196"),
+                s = n("85941"),
+                r = n("75196"),
                 i = (0, a.replaceIcon)(function(e) {
                     let {
                         width: t = 16,
                         height: n = 16,
                         color: a = "currentColor",
-                        ...r
+                        ...s
                     } = e;
                     return (0, l.jsx)("svg", {
-                        ...(0, u.default)(r),
+                        ...(0, r.default)(s),
                         width: t,
                         height: n,
                         viewBox: "0 0 16 16",
@@ -488,7 +541,60 @@
                             fill: a
                         })
                     })
-                }, r.ListBulletsIcon)
+                }, s.ListBulletsIcon)
+        },
+        76539: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return i
+                }
+            });
+            var l = n("37983");
+            n("884691");
+            var a = n("469563"),
+                s = n("715072"),
+                r = n("75196"),
+                i = (0, a.replaceIcon)(function(e) {
+                    let {
+                        width: t = 24,
+                        height: n = 24,
+                        color: a = "currentColor",
+                        foreground: s,
+                        ...i
+                    } = e;
+                    return 16 === t || 16 === n ? (0, l.jsxs)("svg", {
+                        ...(0, r.default)(i),
+                        width: t,
+                        height: n,
+                        viewBox: "0 0 16 16",
+                        children: [(0, l.jsx)("path", {
+                            className: s,
+                            fill: a,
+                            d: "M14 2H16V3H14V5H13V3H11V2H13V0H14V2Z"
+                        }), (0, l.jsx)("path", {
+                            className: s,
+                            fill: a,
+                            d: "M6.5 8.00667C7.88 8.00667 9 6.88667 9 5.50667C9 4.12667 7.88 3.00667 6.5 3.00667C5.12 3.00667 4 4.12667 4 5.50667C4 6.88667 5.12 8.00667 6.5 8.00667Z"
+                        }), (0, l.jsx)("path", {
+                            className: s,
+                            fill: a,
+                            d: "M6.5 8.34C3.26 8.34 1 9.98666 1 12.34V13.0067H12V12.34C12 9.98 9.74 8.34 6.5 8.34Z"
+                        })]
+                    }) : (0, l.jsx)("svg", {
+                        ...(0, r.default)(i),
+                        width: t,
+                        height: n,
+                        viewBox: "0 0 24 24",
+                        children: (0, l.jsx)("path", {
+                            className: s,
+                            fill: a,
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                            d: "M21 3H24V5H21V8H19V5H16V3H19V0H21V3ZM10 12C12.205 12 14 10.205 14 8C14 5.795 12.205 4 10 4C7.795 4 6 5.795 6 8C6 10.205 7.795 12 10 12ZM10 13C5.289 13 2 15.467 2 19V20H18V19C18 15.467 14.711 13 10 13Z"
+                        })
+                    })
+                }, s.UserPlusIcon)
         }
     }
 ]);
