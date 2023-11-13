@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["99211"], {
+    ["92932"], {
         506264: function(e, A, t) {
             var Symbol = t("626849").Symbol;
             e.exports = Symbol
@@ -841,7 +841,7 @@
                     value: N,
                     enableThemedBackground: O = !1,
                     parentModalKey: x
-                } = e, L = (0, o.useFormContext)(), [R, D] = l.useState(() => (0, i.toRichValue)(N)), P = l.useRef(!0 === d), V = null != t ? t : null == L ? void 0 : L.titleId, b = null !== (A = null == L ? void 0 : L.errorId) && void 0 !== A ? A : h, S = l.useMemo(() => ({
+                } = e, L = (0, o.useFormContext)(), [R, D] = l.useState(() => (0, i.toRichValue)(N)), P = l.useRef(!0 === d), V = null != t ? t : null == L ? void 0 : L.titleId, b = null !== (A = null == L ? void 0 : L.errorId) && void 0 !== A ? A : h, j = l.useMemo(() => ({
                     analyticsName: "simple",
                     autocomplete: {
                         alwaysUseLayer: !0,
@@ -876,7 +876,7 @@
                     channel: I,
                     textValue: N,
                     richValue: R,
-                    type: S,
+                    type: j,
                     onBlur: () => {
                         P.current = !1
                     },
@@ -1733,8 +1733,8 @@
                 P = t("271560"),
                 V = t("866190"),
                 b = t("949435"),
-                S = t("565559"),
-                j = t("757515"),
+                j = t("565559"),
+                S = t("757515"),
                 M = t("740259"),
                 F = t("492724"),
                 G = t("155539"),
@@ -1826,7 +1826,7 @@
                     productId: ee,
                     transitionState: et,
                     onClose: el
-                } = e, [en, er] = r.useState(ee), es = (0, c.default)([S.default], () => null == en ? null : S.default.getGuildProduct(en), [en]), eo = (null == es ? void 0 : es.published) === !0, {
+                } = e, [en, er] = r.useState(ee), es = (0, c.default)([j.default], () => null == en ? null : j.default.getGuildProduct(en), [en]), eo = (null == es ? void 0 : es.published) === !0, {
                     application: ei
                 } = (0, I.default)(L, Z.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), eu = M.PRODUCT_IMAGE_PRESETS[0], ed = (0, c.default)([h.default], () => h.default.useReducedMotion), ec = E.GifAutoPlay.useSetting(), ef = (0, V.useIsWindowFocused)(), eC = r.useCallback(() => {
                     var e;
@@ -1839,11 +1839,11 @@
                 }, [eg, el]);
                 let [eT, eh] = r.useState(null !== (l = null == es ? void 0 : es.name) && void 0 !== l ? l : ""), [eI, ep] = r.useState(null !== (s = null == es ? void 0 : es.description) && void 0 !== s ? s : ""), [em, eU] = r.useState(null !== (o = null == es ? void 0 : es.price_tier) && void 0 !== o ? o : void 0), [ev, eE] = r.useState(eC), [eq, eN] = r.useState(null !== (i = null == es ? void 0 : null === (A = es.image_asset) || void 0 === A ? void 0 : A.filename) && void 0 !== i ? i : eu.name), [eO, ex] = r.useState(!1), [eL, eR] = r.useState(), eD = r.useMemo(() => null != em ? (0, D.formatPrice)(em, Q.CurrencyCodes.USD) : void 0, [em]), [eP, eV] = r.useState(!0), {
                     changesSaving: eb,
-                    saveError: eS,
-                    saveProductWithAttachments: ej,
+                    saveError: ej,
+                    saveProductWithAttachments: eS,
                     hasUnsavedAttachmentChanges: eM,
                     cancelUnusedUploads: eF
-                } = (0, b.useGuildProductAttachmentManagerContext)(), eG = (null == es ? void 0 : es.attachments) != null && (null == es ? void 0 : es.attachments.length) > 0, e_ = null != eS ? eS : eL, eK = null != eb && "published" in eb, eW = null != eb && !eK, eX = null !== (p = null == es ? void 0 : es.role_id) && void 0 !== p ? p : null, [eB, ey] = r.useState(), ez = null != eB || null != eX, eQ = (0, c.default)([q.default], () => {
+                } = (0, b.useGuildProductAttachmentManagerContext)(), eG = (null == es ? void 0 : es.attachments) != null && (null == es ? void 0 : es.attachments.length) > 0, e_ = null != ej ? ej : eL, eK = null != eb && "published" in eb, eW = null != eb && !eK, eX = null !== (p = null == es ? void 0 : es.role_id) && void 0 !== p ? p : null, [eB, ey] = r.useState(), ez = null != eB || null != eX, eQ = (0, c.default)([q.default], () => {
                     if (null != eX && null !== eB) {
                         let e = q.default.getGuild(L);
                         return null == e ? void 0 : e.roles[eX]
@@ -1861,7 +1861,7 @@
                         canSaveForDraft: e$,
                         canSaveForPublished: e0,
                         canPublishOrUnpublish: e1
-                    } = r.useMemo(() => (0, j.computeProductChanges)({
+                    } = r.useMemo(() => (0, S.computeProductChanges)({
                         guildProductListing: es,
                         name: eT,
                         priceTier: em,
@@ -1909,11 +1909,11 @@
                     }), e6)
                 }, [L, e6, en]);
                 let e3 = async e => {
-                    let A = (0, j.describeProductChangeValidation)({
+                    let A = (0, S.describeProductChangeValidation)({
                         newRoleParams: eB
                     });
                     if (eR(A), null != A) return;
-                    let t = await ej(e);
+                    let t = await eS(e);
                     if (ex(!1), null != t) {
                         if (null != e.name && eh(t.name), null != e.description && ep(t.description), null != eB) {
                             let e = t.role_id;
@@ -2042,7 +2042,7 @@
                                         }
                                     })
                                 }) : null, ez ? (0, n.jsx)(y.default, {
-                                    error: null !== (v = null == e_ ? void 0 : e_.getFirstFieldErrorMessage(j.ROLE_FIELD_NAME)) && void 0 !== v ? v : void 0,
+                                    error: null !== (v = null == e_ ? void 0 : e_.getFirstFieldErrorMessage(S.ROLE_FIELD_NAME)) && void 0 !== v ? v : void 0,
                                     newRoleParams: eB,
                                     setNewRoleParams: ey,
                                     guildId: L,
@@ -3165,6 +3165,39 @@
                         })]
                     })
                 }, n.ImageFileUpIcon)
+        },
+        346955: function(e, A, t) {
+            "use strict";
+            t.r(A), t.d(A, {
+                default: function() {
+                    return s
+                }
+            });
+            var a = t("37983");
+            t("884691");
+            var l = t("469563"),
+                n = t("509317"),
+                r = t("75196"),
+                s = (0, l.replaceIcon)(function(e) {
+                    let {
+                        width: A = 24,
+                        height: t = 24,
+                        color: l = "currentColor",
+                        foreground: n,
+                        ...s
+                    } = e;
+                    return (0, a.jsx)("svg", {
+                        ...(0, r.default)(s),
+                        width: A,
+                        height: t,
+                        viewBox: "0 0 24 24",
+                        children: (0, a.jsx)("path", {
+                            fill: l,
+                            className: n,
+                            d: "M20 7H12L10.553 5.106C10.214 4.428 9.521 4 8.764 4H3C2.447 4 2 4.447 2 5V19C2 20.104 2.895 21 4 21H20C21.104 21 22 20.104 22 19V9C22 7.896 21.104 7 20 7Z"
+                        })
+                    })
+                }, n.FolderIcon)
         },
         818643: function(e, A, t) {
             "use strict";
