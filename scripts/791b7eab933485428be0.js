@@ -8003,6 +8003,25 @@
                         amoled: "plum.22",
                         meta: a
                     },
+                    "chat-swipe-to-reply-gradient-background": {
+                        dark: {
+                            color: "black.500",
+                            opacity: .1
+                        },
+                        light: {
+                            color: "white.500",
+                            opacity: .4
+                        },
+                        darker: {
+                            color: "black.500",
+                            opacity: .1
+                        },
+                        amoled: {
+                            color: "black.500",
+                            opacity: .1
+                        },
+                        meta: a
+                    },
                     "control-brand-foreground": {
                         dark: "brand.360",
                         light: "brand.500",
