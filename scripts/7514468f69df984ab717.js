@@ -721,7 +721,7 @@
                 } = (0, i.useManageResourcePermissions)(null != _ ? _ : f), [v, I] = (0, u.useStateFromStoresArray)([r.default], () => [r.default.isActive(t), r.default.getGuildScheduledEvent(t)]), g = (0, o.default)(n, null == I ? void 0 : I.id), N = null != I && S(I), m = (null == I ? void 0 : I.recurrence_rule) != null && !T, h = T && (null == g || !g.is_canceled), {
                     startTime: M
                 } = (0, c.default)(t, n);
-                if (!N || v && !m || T && !h || null == I) return null;
+                if (!N || v && !m && !T || T && !h || null == I) return null;
                 if (v && T) {
                     var A;
                     if (null == M) return null;
