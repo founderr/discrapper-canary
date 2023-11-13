@@ -1700,6 +1700,40 @@
                 })
             }
         },
+        594881: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                MinimizeIcon: function() {
+                    return i
+                }
+            });
+            var a = n("37983");
+            n("884691");
+            var l = n("669491"),
+                s = n("75196");
+            let i = e => {
+                let {
+                    width: t = 24,
+                    height: n = 24,
+                    color: i = l.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: r = "",
+                    ...u
+                } = e;
+                return (0, a.jsx)("svg", {
+                    ...(0, s.default)(u),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: n,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: (0, a.jsx)("path", {
+                        fill: "string" == typeof i ? i : i.css,
+                        d: "M15 4v3.586l5.293-5.293a1 1 0 1 1 1.414 1.414L16.414 9H20a1 1 0 1 1 0 2h-6a1 1 0 0 1-1-1V4a1 1 0 1 1 2 0ZM9 16.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L7.586 15H4a1 1 0 1 1 0-2h6a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-3.586Z",
+                        className: r
+                    })
+                })
+            }
+        },
         283322: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -2456,129 +2490,142 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return R
                 }
             }), n("222007");
             var a = n("37983"),
                 l = n("884691"),
-                s = n("577776"),
-                i = n("452804"),
-                r = n("579408"),
-                u = n("168973"),
-                o = n("172131"),
-                d = n("576242"),
-                c = n("659500"),
-                f = n("550766"),
-                h = n("698372"),
-                p = n("401207"),
-                m = n("320817"),
-                E = n("272505"),
-                C = n("49111"),
-                S = n("782340"),
-                g = n("355255");
+                s = n("414456"),
+                i = n.n(s),
+                r = n("446674"),
+                u = n("577776"),
+                o = n("452804"),
+                d = n("579408"),
+                c = n("168973"),
+                f = n("981913"),
+                h = n("576242"),
+                p = n("18494"),
+                m = n("717018"),
+                E = n("659500"),
+                C = n("550766"),
+                S = n("191225"),
+                g = n("698372"),
+                _ = n("401207"),
+                I = n("320817"),
+                T = n("803997"),
+                x = n("272505"),
+                v = n("49111"),
+                N = n("782340"),
+                A = n("355255");
+            let M = {
+                [x.FocusedActivityLayouts.NO_CHAT]: A.noChat,
+                [x.FocusedActivityLayouts.RESIZABLE]: A.resizable
+            };
 
-            function _(e) {
+            function R(e) {
                 var t;
                 let {
                     maxHeight: n,
-                    connectedChannelId: _
-                } = e, I = (0, h.default)(), T = l.useCallback(() => {
-                    (0, f.updateActivityPanelMode)(E.ActivityPanelModes.PIP)
-                }, []), x = l.useRef(null), [v, N] = l.useState(null), A = l.useCallback(e => {
-                    i.default.updatedUnsyncedSettings({
+                    connectedChannelId: s
+                } = e, R = (0, g.default)(), j = l.useCallback(() => {
+                    (0, C.updateActivityPanelMode)(x.ActivityPanelModes.PIP)
+                }, []), L = l.useRef(null), O = (0, r.useStateFromStores)([S.default], () => S.default.getFocusedLayout()), y = O !== x.FocusedActivityLayouts.NO_CHAT, [D, b] = l.useState(null !== (t = c.default.activityPanelHeight) && void 0 !== t ? t : n), P = l.useCallback(e => {
+                    o.default.updatedUnsyncedSettings({
                         activityPanelHeight: e
                     })
-                }, []), M = l.useRef(null), [R, j] = l.useState({
+                }, []), U = l.useRef(null), [w, F] = l.useState({
                     width: 0,
                     height: 0
                 });
                 l.useLayoutEffect(() => {
-                    if (null == M.current) return;
+                    if (null == U.current) return;
                     let e = new ResizeObserver(() => {
                         var e, t, n, a;
-                        let l = null !== (n = null === (e = M.current) || void 0 === e ? void 0 : e.clientWidth) && void 0 !== n ? n : 0;
-                        j({
+                        let l = null !== (n = null === (e = U.current) || void 0 === e ? void 0 : e.clientWidth) && void 0 !== n ? n : 0;
+                        F({
                             width: l,
-                            height: null !== (a = null === (t = M.current) || void 0 === t ? void 0 : t.clientHeight) && void 0 !== a ? a : 0
+                            height: null !== (a = null === (t = U.current) || void 0 === t ? void 0 : t.clientHeight) && void 0 !== a ? a : 0
                         })
                     });
-                    return e.observe(M.current), () => e.disconnect()
+                    return e.observe(U.current), () => e.disconnect()
                 }, []);
-                let L = R.width / Math.max(R.height, 1),
-                    O = L < E.LANDSCAPE_ACTIVITY_ASPECT_RATIO,
-                    y = 0,
-                    D = 0,
-                    b = R.width,
-                    P = R.height;
-                if (O ? ((P = R.width / E.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > R.height && (b = (P = R.height) * E.LANDSCAPE_ACTIVITY_ASPECT_RATIO), D = (R.height - P) / 2) : ((b = Math.min(R.height * E.LANDSCAPE_ACTIVITY_ASPECT_RATIO)) > R.width && (P = (b = R.width) / E.LANDSCAPE_ACTIVITY_ASPECT_RATIO), y = (R.width - b) / 2), null == I) return null;
-                let U = null !== (t = u.default.activityPanelHeight) && void 0 !== t ? t : .6 * n;
-                return (0, a.jsxs)("div", {
-                    className: g.wrapper,
-                    style: null != v ? {
-                        minHeight: 252,
+                let k = w.width / Math.max(w.height, 1),
+                    V = k < x.LANDSCAPE_ACTIVITY_ASPECT_RATIO,
+                    B = 0,
+                    H = 0,
+                    G = w.width,
+                    W = w.height;
+                V ? ((W = w.width / x.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > w.height && (G = (W = w.height) * x.LANDSCAPE_ACTIVITY_ASPECT_RATIO), H = (w.height - W) / 2) : ((G = Math.min(w.height * x.LANDSCAPE_ACTIVITY_ASPECT_RATIO)) > w.width && (W = (G = w.width) / x.LANDSCAPE_ACTIVITY_ASPECT_RATIO), B = (w.width - G) / 2);
+                let Y = (0, r.useStateFromStores)([p.default], () => p.default.getChannelId());
+                return null == R ? null : (0, a.jsxs)("div", {
+                    className: i(A.wrapper, M[O]),
+                    ref: L,
+                    style: y && null != D ? {
+                        minHeight: 200,
                         maxHeight: n,
-                        height: v
-                    } : {
-                        minHeight: 252,
-                        maxHeight: n,
-                        height: U
-                    },
-                    ref: x,
+                        height: D
+                    } : void 0,
                     children: [(0, a.jsxs)("div", {
-                        className: g.header,
+                        className: A.header,
                         children: [(0, a.jsx)("div", {
-                            className: g.arrowContainer,
-                            children: (0, a.jsx)(o.default, {
-                                label: S.default.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
-                                direction: o.default.Directions.UP,
-                                onClick: T,
-                                className: g.arrowButton,
+                            className: A.arrowContainer,
+                            children: (0, a.jsx)(f.default, {
+                                label: N.default.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
+                                onClick: j,
+                                className: A.circularButton,
+                                iconComponent: m.default,
+                                iconClassName: A.minimizeIcon,
                                 themeable: !0
                             })
-                        }), (0, a.jsx)(s.Text, {
+                        }), (0, a.jsx)(u.Text, {
                             color: "header-primary",
                             variant: "text-md/semibold",
-                            className: g.headerTitle,
-                            children: null == I ? void 0 : I.name
+                            className: A.headerTitle,
+                            children: null == R ? void 0 : R.name
                         }), (0, a.jsx)("div", {
-                            className: g.leaveButtonContainer,
-                            children: (0, a.jsx)(d.default, {
-                                applicationId: I.id,
-                                channelId: _,
-                                className: g.leaveActivityButton,
-                                iconClassName: g.leaveActivityIcon,
+                            className: A.leaveButtonContainer,
+                            children: (0, a.jsx)(h.default, {
+                                applicationId: R.id,
+                                channelId: s,
+                                className: A.leaveActivityButton,
+                                iconClassName: A.leaveActivityIcon,
                                 centerButton: !0,
                                 color: "red"
                             })
                         })]
                     }), (0, a.jsx)("div", {
-                        className: g.activityContainer,
+                        className: A.activityContainer,
                         style: {
-                            paddingLeft: y,
-                            paddingRight: y,
-                            paddingTop: D,
-                            paddingBottom: D
+                            paddingLeft: B,
+                            paddingRight: B,
+                            paddingTop: H,
+                            paddingBottom: H
                         },
-                        ref: M,
-                        children: (0, a.jsx)(p.default, {
-                            className: g.iframe,
-                            embedId: (0, m.default)(_, I.id)
+                        ref: U,
+                        children: (0, a.jsx)(_.default, {
+                            className: A.iframe,
+                            embedId: (0, I.default)(s, R.id)
                         })
-                    }), (0, a.jsx)(r.default, {
-                        minHeight: 252,
+                    }), null != Y ? (0, a.jsx)("div", {
+                        className: A.footer,
+                        children: (0, a.jsx)(T.default, {
+                            channelId: Y
+                        })
+                    }) : null, y ? (0, a.jsx)(d.default, {
+                        minHeight: 480,
                         maxHeight: n,
-                        resizableNode: x,
+                        resizableNode: L,
                         onResize: e => {
-                            c.ComponentDispatch.dispatch(C.ComponentActions.MANUAL_IFRAME_RESIZING, {
+                            E.ComponentDispatch.dispatch(v.ComponentActions.MANUAL_IFRAME_RESIZING, {
                                 resizing: !0
-                            }), N(e)
+                            }), b(e)
                         },
                         onResizeEnd: e => {
-                            c.ComponentDispatch.dispatch(C.ComponentActions.MANUAL_IFRAME_RESIZING, {
+                            E.ComponentDispatch.dispatch(v.ComponentActions.MANUAL_IFRAME_RESIZING, {
                                 resizing: !1
-                            }), A(e)
+                            }), P(e)
                         }
-                    })]
+                    }) : null]
                 })
             }
         },
@@ -2623,12 +2670,97 @@
                     autoTrackExposure: !1
                 }), E = (0, i.default)(n);
                 if (l.useEffect(() => {
-                        null == n && null != E && (0, u.updateActivityPanelMode)(f.ActivityPanelModes.ACTION_BAR)
+                        null == n && null != E ? (0, u.updateActivityPanelMode)(f.ActivityPanelModes.ACTION_BAR) : null != n && null == E && (0, u.updateFocusedActivityLayout)(f.FocusedActivityLayouts.NO_CHAT)
                     }, [n, E]), !m) return null;
                 let C = null == h ? void 0 : h.application_id;
                 return p !== f.ActivityPanelModes.PANEL || null == C ? null : null == n || null == h || (0, d.default)(n) || null == C ? null : (0, a.jsx)(c.default, {
                     maxHeight: t,
                     connectedChannelId: n
+                })
+            }
+        },
+        803997: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return I
+                }
+            }), n("424973");
+            var a = n("37983"),
+                l = n("884691"),
+                s = n("414456"),
+                i = n.n(s),
+                r = n("917351"),
+                u = n("446674"),
+                o = n("996496"),
+                d = n("981913"),
+                c = n("660478"),
+                f = n("191542"),
+                h = n("256170"),
+                p = n("378765"),
+                m = n("550766"),
+                E = n("191225"),
+                C = n("272505"),
+                S = n("49111"),
+                g = n("782340"),
+                _ = n("369026");
+
+            function I(e) {
+                let {
+                    channelId: t,
+                    ...n
+                } = e, s = l.useRef(null), I = (0, u.useStateFromStores)([E.default], () => E.default.getFocusedLayout() === C.FocusedActivityLayouts.RESIZABLE), T = l.useCallback(() => {
+                    let e = I ? C.FocusedActivityLayouts.NO_CHAT : C.FocusedActivityLayouts.RESIZABLE;
+                    (0, m.updateFocusedActivityLayout)(e)
+                }, [I]), {
+                    unreadCount: x,
+                    mentionCount: v
+                } = function(e) {
+                    let t = (0, u.useStateFromStores)([f.default], () => !(0, r.isEmpty)(f.default.getTypingUsers(e)), [e]),
+                        {
+                            unreadCount: n,
+                            mentionCount: a
+                        } = (0, u.useStateFromStoresObject)([c.default], () => ({
+                            unreadCount: c.default.getUnreadCount(e),
+                            mentionCount: c.default.getMentionCount(e)
+                        }), [e]);
+                    return {
+                        unreadCount: n,
+                        mentionCount: a,
+                        isTyping: t
+                    }
+                }(t), N = l.useCallback(() => {
+                    var e;
+                    null === (e = s.current) || void 0 === e || e.focus()
+                }, []);
+                (0, p.useComponentAction)({
+                    event: S.ComponentActions.FOCUS_CHAT_BUTTON,
+                    handler: N
+                });
+                let A = I ? g.default.Messages.HIDE_CHAT : g.default.Messages.SHOW_CHAT,
+                    M = [A];
+                v > 0 && M.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+                    mentionCount: v
+                })), x > 0 && M.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
+                let R = (0, u.useStateFromStores)([E.default], () => E.default.getFocusedLayout()),
+                    j = x > 0;
+                return (0, a.jsxs)("div", {
+                    className: _.wrapper,
+                    children: [(0, a.jsx)(d.default, {
+                        buttonRef: s,
+                        onClick: T,
+                        label: A,
+                        "aria-label": M.join(", "),
+                        tooltipPosition: "bottom",
+                        iconComponent: h.default,
+                        themeable: !0,
+                        className: i(_.circularButton, R === C.FocusedActivityLayouts.NO_CHAT ? _.upArrow : _.downArrow),
+                        ...n
+                    }), j ? (0, a.jsx)(o.default, {
+                        hasMentions: v > 0,
+                        truncatedCount: x > 99 ? "99+" : x,
+                        className: _.badge
+                    }) : null]
                 })
             }
         },
@@ -7632,7 +7764,7 @@
                     return A.default.getSelfEmbeddedActivityForChannel(null !== (e = null == o ? void 0 : o.id) && void 0 !== e ? e : "")
                 }), M = (0, f.useStateFromStores)([A.default], () => A.default.getActivityPanelMode()), L = null != I && !(0, R.default)(null == o ? void 0 : o.id) && M === eY.ActivityPanelModes.PANEL, O = (0, f.useStateFromStores)([eb.default], () => null != o && o.isVocalThread() && !d.isEmpty(eb.default.getVoiceStatesForChannel(o.id)), [o]), y = (null == o ? void 0 : o.isGuildVocal()) || L || _ || O, {
                     welcomeModalChannelId: D
-                } = (0, c.useLocation)(), b = (0, f.useStateFromStores)([es.default], () => null != o && es.default.isLurking(o.guild_id), [o]), P = (0, f.useStateFromStores)([eT.default], () => eT.default.hasSeen(null == o ? void 0 : o.guild_id, b), [o, b]), w = (0, f.useStateFromStores)([j.default], () => null != r ? j.default.getLayout(r) : eW.ChannelLayouts.NORMAL, [r]), F = (0, f.useStateFromStores)([j.default], () => null != o ? j.default.getSelectedParticipant(o.id) : null), k = (0, f.useStateFromStores)([eD.default], () => eD.default.getCurrentUser()), V = (0, ea.default)(S), B = (0, ex.default)(D, null == S ? void 0 : S.id), {
+                } = (0, c.useLocation)(), b = (0, f.useStateFromStores)([es.default], () => null != o && es.default.isLurking(o.guild_id), [o]), P = (0, f.useStateFromStores)([eT.default], () => eT.default.hasSeen(null == o ? void 0 : o.guild_id, b), [o, b]), w = (0, f.useStateFromStores)([j.default, A.default], () => null != A.default.getConnectedActivityChannelId() && A.default.getActivityPanelMode() === eY.ActivityPanelModes.PANEL ? A.default.getFocusedLayout() === eY.FocusedActivityLayouts.NO_CHAT ? eW.ChannelLayouts.NO_CHAT : eW.ChannelLayouts.NORMAL : null != r ? j.default.getLayout(r) : eW.ChannelLayouts.NORMAL, [r]), F = (0, f.useStateFromStores)([j.default], () => null != o ? j.default.getSelectedParticipant(o.id) : null), k = (0, f.useStateFromStores)([eD.default], () => eD.default.getCurrentUser()), V = (0, ea.default)(S), B = (0, ex.default)(D, null == S ? void 0 : S.id), {
                     section: G,
                     channelSidebarState: W
                 } = (0, f.useStateFromStoresObject)([ev.default], () => ({
@@ -28094,7 +28226,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 ChatButton: function() {
-                    return M
+                    return T
                 }
             }), n("222007"), n("424973");
             var a = n("37983"),
@@ -28102,32 +28234,28 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("917351"),
-                u = n("748820"),
-                o = n("446674"),
-                d = n("469563"),
-                c = n("733154"),
-                f = n("77078"),
-                h = n("255397"),
-                p = n("191145"),
-                m = n("660478"),
-                E = n("18494"),
-                C = n("191542"),
-                S = n("378765"),
-                g = n("115531"),
-                _ = n("981913"),
-                I = n("49111"),
-                T = n("782340"),
-                x = n("117264");
+                u = n("446674"),
+                o = n("255397"),
+                d = n("191145"),
+                c = n("660478"),
+                f = n("18494"),
+                h = n("191542"),
+                p = n("378765"),
+                m = n("115531"),
+                E = n("585513"),
+                C = n("981913"),
+                S = n("49111"),
+                g = n("782340");
 
-            function v(e) {
-                let t = (0, o.useStateFromStores)([C.default], () => !(0, r.isEmpty)(C.default.getTypingUsers(e)), [e]),
-                    n = (0, o.useStateFromStores)([E.default], () => E.default.getVoiceChannelId() === e, [e]),
+            function _(e) {
+                let t = (0, u.useStateFromStores)([h.default], () => !(0, r.isEmpty)(h.default.getTypingUsers(e)), [e]),
+                    n = (0, u.useStateFromStores)([f.default], () => f.default.getVoiceChannelId() === e, [e]),
                     {
                         unreadCount: a,
                         mentionCount: l
-                    } = (0, o.useStateFromStoresObject)([m.default], () => ({
-                        unreadCount: m.default.getUnreadCount(e),
-                        mentionCount: m.default.getMentionCount(e)
+                    } = (0, u.useStateFromStoresObject)([c.default], () => ({
+                        unreadCount: c.default.getUnreadCount(e),
+                        mentionCount: c.default.getMentionCount(e)
                     }), [e]);
                 return {
                     unreadCount: a,
@@ -28137,98 +28265,43 @@
                 }
             }
 
-            function N(e) {
+            function I(e) {
                 let {
-                    width: t = 24,
-                    height: n = 24,
-                    isBadged: s = !1,
-                    isTyping: i = !1
-                } = e, [r] = l.useState(() => (0, u.v4)()), o = (0, d.useRedesignIconContext)().enabled;
-                return (0, a.jsxs)("svg", {
-                    width: t,
-                    height: n,
-                    viewBox: "0 0 24 24",
-                    children: [(0, a.jsx)("defs", {
-                        children: (0, a.jsxs)("mask", {
-                            id: r,
-                            children: [(0, a.jsx)("rect", {
-                                fill: "white",
-                                width: "100%",
-                                height: "100%"
-                            }), i && (0, a.jsx)("g", {
-                                fill: "black",
-                                transform: "translate(5.5, ".concat(o ? 10.5 : 8.5, ") scale(").concat(11 / 24, ")"),
-                                children: (0, a.jsx)(f.AnimatedDots, {
-                                    dotRadius: 3.5,
-                                    spacing: 3,
-                                    fill: "black"
-                                })
-                            }), s && (0, a.jsx)("circle", {
-                                cx: "20",
-                                cy: "19",
-                                r: "10",
-                                fill: "black"
-                            })]
-                        })
-                    }), o ? (0, a.jsx)("g", {
-                        mask: "url(#".concat(r, ")"),
-                        children: (0, a.jsx)(c.ChatIcon, {
-                            width: t,
-                            height: n,
-                            color: "currentColor"
-                        })
-                    }) : (0, a.jsx)("path", {
-                        fill: "currentColor",
-                        d: "M4.79805 3C3.80445 3 2.99805 3.8055 2.99805 4.8V15.6C2.99805 16.5936 3.80445 17.4 4.79805 17.4H7.49805V21L11.098 17.4H19.198C20.1925 17.4 20.998 16.5936 20.998 15.6V4.8C20.998 3.8055 20.1925 3 19.198 3H4.79805Z",
-                        mask: "url(#".concat(r, ")")
-                    })]
-                })
-            }
-
-            function A(e) {
-                var t;
-                let {
-                    className: n,
-                    channelId: l
+                    className: t,
+                    channelId: n
                 } = e, {
-                    unreadCount: s,
-                    mentionCount: r,
-                    isTyping: u,
-                    voiceChannelIsSelected: o
-                } = v(l), d = null != r && r > 0, c = null !== (t = d ? r : s) && void 0 !== t ? t : 0, h = o && null != s && s > 0;
-                return (0, a.jsxs)("div", {
-                    className: i(x.chatIcon, n),
-                    children: [(0, a.jsx)(N, {
-                        isBadged: h,
-                        isTyping: u
-                    }), h && (0, a.jsx)(f.Text, {
-                        className: i(x.unreadCount, {
-                            [x.mention]: d
-                        }),
-                        variant: "text-xs/normal",
-                        children: c > 99 ? "99+" : c
-                    })]
+                    unreadCount: l,
+                    mentionCount: s,
+                    isTyping: i,
+                    voiceChannelIsSelected: r
+                } = _(n);
+                return (0, a.jsx)(E.default, {
+                    className: t,
+                    unreadCount: l,
+                    mentionCount: s,
+                    isTyping: i,
+                    canBadge: r
                 })
             }
 
-            function M(e) {
+            function T(e) {
                 let t, {
                         channelId: n,
                         className: s,
                         showingClassName: r,
-                        onClick: u,
-                        inPopout: d,
-                        showRequestToSpeakSidebar: c,
-                        toggleRequestToSpeakSidebar: f,
-                        ...m
+                        onClick: c,
+                        inPopout: f,
+                        showRequestToSpeakSidebar: h,
+                        toggleRequestToSpeakSidebar: E,
+                        ...T
                     } = e,
                     {
-                        disabled: E
-                    } = m,
-                    C = l.useRef(null),
-                    x = (0, o.useStateFromStores)([p.default], () => p.default.getChatOpen(n), [n]),
+                        disabled: x
+                    } = T,
+                    v = l.useRef(null),
+                    N = (0, u.useStateFromStores)([d.default], () => d.default.getChatOpen(n), [n]),
                     {
-                        isShowing: N,
+                        isShowing: A,
                         unreadCount: M,
                         mentionCount: R
                     } = function(e) {
@@ -28236,12 +28309,12 @@
                             unreadCount: t,
                             mentionCount: n,
                             isTyping: a
-                        } = v(e), [s, i] = l.useState(!1);
+                        } = _(e), [s, i] = l.useState(!1);
                         return l.useEffect(() => {
                             i(t > 0);
                             let e = setTimeout(() => {
                                 i(!1)
-                            }, g.TOAST_LINGER_MS);
+                            }, m.TOAST_LINGER_MS);
                             return () => {
                                 clearTimeout(e), i(!1)
                             }
@@ -28252,30 +28325,30 @@
                         }
                     }(n),
                     j = l.useCallback(() => {
-                        null == u || u(), !x && c && (null == f || f()), h.default.updateChatOpen(n, !x)
-                    }, [n, x, u, c, f]),
+                        null == c || c(), !N && h && (null == E || E()), o.default.updateChatOpen(n, !N)
+                    }, [n, N, c, h, E]),
                     L = l.useCallback(e => {
                         let {
                             className: t
                         } = e;
-                        return (0, a.jsx)(A, {
+                        return (0, a.jsx)(I, {
                             className: t,
                             channelId: n
                         })
                     }, [n]),
                     O = l.useCallback(() => {
                         var e;
-                        null === (e = C.current) || void 0 === e || e.focus()
+                        null === (e = v.current) || void 0 === e || e.focus()
                     }, []);
-                (0, S.useComponentAction)({
-                    event: I.ComponentActions.FOCUS_CHAT_BUTTON,
-                    handler: E ? null : O
+                (0, p.useComponentAction)({
+                    event: S.ComponentActions.FOCUS_CHAT_BUTTON,
+                    handler: x ? null : O
                 });
                 let [y, D] = l.useState(!1), b = l.useCallback(() => {
-                    d && D(!0)
-                }, [d]);
-                (0, S.useComponentAction)({
-                    event: I.ComponentActions.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
+                    f && D(!0)
+                }, [f]);
+                (0, p.useComponentAction)({
+                    event: S.ComponentActions.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
                     handler: b
                 }), l.useEffect(() => {
                     let e;
@@ -28284,22 +28357,139 @@
                     }, 3e3)), () => {
                         clearTimeout(e)
                     }
-                }, [y]), t = d && E ? T.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : x ? T.default.Messages.VIDEO_CALL_HIDE_CHAT : T.default.Messages.VIDEO_CALL_SHOW_CHAT;
+                }, [y]), t = f && x ? g.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : N ? g.default.Messages.VIDEO_CALL_HIDE_CHAT : g.default.Messages.VIDEO_CALL_SHOW_CHAT;
                 let P = [t];
-                return R > 0 && P.push(T.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+                return R > 0 && P.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
                     mentionCount: R
-                })), M > 0 && P.push(T.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, a.jsx)(_.default, {
-                    buttonRef: C,
+                })), M > 0 && P.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, a.jsx)(C.default, {
+                    buttonRef: v,
                     onClick: j,
                     label: t,
                     "aria-label": P.join(", "),
                     iconComponent: L,
                     tooltipPosition: "bottom",
                     wrapperClassName: i(s, null != r && {
-                        [r]: N
+                        [r]: A
                     }),
                     forceTooltipOpen: y,
-                    ...m
+                    ...T
+                })
+            }
+        },
+        996496: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return u
+                }
+            });
+            var a = n("37983");
+            n("884691");
+            var l = n("414456"),
+                s = n.n(l),
+                i = n("77078"),
+                r = n("887326");
+
+            function u(e) {
+                let {
+                    hasMentions: t,
+                    truncatedCount: n,
+                    className: l
+                } = e;
+                return (0, a.jsx)(i.Text, {
+                    className: s(r.unreadCount, l, {
+                        [r.mention]: t
+                    }),
+                    variant: "text-xs/normal",
+                    children: n
+                })
+            }
+        },
+        585513: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return p
+                }
+            }), n("222007");
+            var a = n("37983"),
+                l = n("884691"),
+                s = n("414456"),
+                i = n.n(s),
+                r = n("748820"),
+                u = n("469563"),
+                o = n("733154"),
+                d = n("77078"),
+                c = n("996496"),
+                f = n("574586");
+
+            function h(e) {
+                let {
+                    width: t = 24,
+                    height: n = 24,
+                    isBadged: s = !1,
+                    isTyping: i = !1
+                } = e, [c] = l.useState(() => (0, r.v4)()), f = (0, u.useRedesignIconContext)().enabled;
+                return (0, a.jsxs)("svg", {
+                    width: t,
+                    height: n,
+                    viewBox: "0 0 24 24",
+                    children: [(0, a.jsx)("defs", {
+                        children: (0, a.jsxs)("mask", {
+                            id: c,
+                            children: [(0, a.jsx)("rect", {
+                                fill: "white",
+                                width: "100%",
+                                height: "100%"
+                            }), i && (0, a.jsx)("g", {
+                                fill: "black",
+                                transform: "translate(5.5, ".concat(f ? 10.5 : 8.5, ") scale(").concat(11 / 24, ")"),
+                                children: (0, a.jsx)(d.AnimatedDots, {
+                                    dotRadius: 3.5,
+                                    spacing: 3,
+                                    fill: "black"
+                                })
+                            }), s && (0, a.jsx)("circle", {
+                                cx: "20",
+                                cy: "19",
+                                r: "10",
+                                fill: "red"
+                            })]
+                        })
+                    }), f ? (0, a.jsx)("g", {
+                        mask: "url(#".concat(c, ")"),
+                        children: (0, a.jsx)(o.ChatIcon, {
+                            width: t,
+                            height: n,
+                            color: "currentColor"
+                        })
+                    }) : (0, a.jsx)("path", {
+                        fill: "currentColor",
+                        d: "M4.79805 3C3.80445 3 2.99805 3.8055 2.99805 4.8V15.6C2.99805 16.5936 3.80445 17.4 4.79805 17.4H7.49805V21L11.098 17.4H19.198C20.1925 17.4 20.998 16.5936 20.998 15.6V4.8C20.998 3.8055 20.1925 3 19.198 3H4.79805Z",
+                        mask: "url(#".concat(c, ")")
+                    })]
+                })
+            }
+
+            function p(e) {
+                var t;
+                let {
+                    className: n,
+                    unreadCount: l,
+                    mentionCount: s,
+                    isTyping: r,
+                    canBadge: u
+                } = e, o = null != s && s > 0, d = null !== (t = o ? s : l) && void 0 !== t ? t : 0, p = u && null != l && l > 0;
+                return (0, a.jsxs)("div", {
+                    className: i(f.chatIcon, n),
+                    children: [(0, a.jsx)(h, {
+                        isBadged: p,
+                        isTyping: r
+                    }), p && (0, a.jsx)(c.default, {
+                        hasMentions: o,
+                        truncatedCount: d > 99 ? "99+" : d,
+                        className: f.badge
+                    })]
                 })
             }
         },
@@ -30532,6 +30722,43 @@
                         })
                     })
                 }, s.ChatPlusIcon)
+        },
+        717018: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var a = n("37983");
+            n("884691");
+            var l = n("469563"),
+                s = n("594881"),
+                i = n("75196"),
+                r = (0, l.replaceIcon)(function(e) {
+                    let {
+                        width: t = 16,
+                        height: n = 16,
+                        color: l = "currentColor",
+                        foreground: s,
+                        ...r
+                    } = e;
+                    return (0, a.jsxs)("svg", {
+                        ...(0, i.default)(r),
+                        width: t,
+                        height: n,
+                        viewBox: "0 0 16 16",
+                        children: [(0, a.jsx)("path", {
+                            className: s,
+                            fill: l,
+                            d: "M6.78802 8.60547H2.54555C2.211 8.60547 1.93949 8.87699 1.93949 9.21154C1.93949 9.54608 2.211 9.8176 2.54555 9.8176H5.32498L1.511 13.6316C1.27433 13.8682 1.27433 14.2519 1.511 14.4886C1.62918 14.607 1.78433 14.6661 1.93949 14.6661C2.09464 14.6661 2.24979 14.607 2.36798 14.4886L6.18195 10.6746V13.454C6.18195 13.7886 6.45347 14.0601 6.78802 14.0601C7.12257 14.0601 7.39409 13.7886 7.39409 13.454V9.21154C7.39409 8.87699 7.12257 8.60547 6.78802 8.60547Z"
+                        }), (0, a.jsx)("path", {
+                            className: s,
+                            fill: l,
+                            d: "M14.4891 1.50953C14.2524 1.27286 13.8687 1.27286 13.6321 1.50953L9.81809 5.32351V2.54409C9.81809 2.20954 9.54657 1.93802 9.21202 1.93802C8.87748 1.93802 8.60596 2.20954 8.60596 2.54409V6.78655C8.60596 7.1211 8.87748 7.39262 9.21202 7.39262H13.4545C13.789 7.39262 14.0606 7.1211 14.0606 6.78655C14.0606 6.45201 13.789 6.18049 13.4545 6.18049H10.6751L14.4891 2.36651C14.7257 2.12984 14.7257 1.7462 14.4891 1.50953Z"
+                        })]
+                    })
+                }, s.MinimizeIcon)
         },
         293499: function(e, t, n) {
             "use strict";
