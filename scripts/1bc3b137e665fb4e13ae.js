@@ -968,7 +968,7 @@
                     emojiName: h
                 }), g = (0, o.useStateFromStores)([E.default], () => null != n ? E.default.getDefaultChannel(n) : null), U = i.createRef(), L = (0, d.default)(U), O = t => (e, n) => {
                     let r = (null == e ? void 0 : e.id) == null;
-                    r ? A(null == e ? void 0 : e.optionallyDiverseSequence) : (v && A(null == e ? void 0 : e.name), R(null == e ? void 0 : e.id)), n && t()
+                    r ? A(null == e ? void 0 : e.optionallyDiverseSequence) : (v ? A(null == e ? void 0 : e.name) : A(void 0), R(null == e ? void 0 : e.id)), n && t()
                 }, m = t => {
                     t.stopPropagation(), A(void 0), R(void 0)
                 };
