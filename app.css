@@ -13587,10 +13587,6 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
     justify-content: flex-end
 }
 
-.formItem_cc475e {
-    margin-bottom: 32px
-}
-
 .container_e4c233 {
     box-sizing: border-box;
     display: flex;
@@ -14841,6 +14837,10 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
 
 .keyRecorder__37fd0 {
     flex: 1 1 33%
+}
+
+.formItem_cc475e {
+    margin-bottom: 32px
 }
 
 .subHeader_a96070 {
