@@ -331,19 +331,19 @@
                 m = n("149022"),
                 p = n("681060"),
                 R = n("449918"),
-                I = n("900938"),
-                M = n("42203"),
+                M = n("900938"),
+                I = n("42203"),
                 T = n("923959"),
-                x = n("381546"),
-                g = n("673220"),
+                g = n("381546"),
+                x = n("673220"),
                 L = n("351825"),
                 v = n("567054"),
                 A = n("583789"),
                 N = n("394294"),
                 S = n("49111"),
                 O = n("782340"),
-                F = n("876197");
-            let b = "RULE";
+                b = n("876197");
+            let F = "RULE";
 
             function y(e) {
                 let {
@@ -358,11 +358,11 @@
                     focused: h,
                     onFocus: _,
                     previewEnabled: R
-                } = e, I = l.useRef(null), M = l.useRef(null), [{
+                } = e, M = l.useRef(null), I = l.useRef(null), [{
                     textValue: T,
                     richValue: L
                 }, v] = l.useState((0, m.createState)(t.value)), [, A, S] = (0, o.useDrag)({
-                    type: b,
+                    type: F,
                     item: {
                         rule: t,
                         index: r
@@ -371,12 +371,12 @@
                         null != e && !t.didDrop() && c(e.rule, null, !0)
                     }
                 }), [, y] = (0, o.useDrop)({
-                    accept: b,
+                    accept: F,
                     hover: (e, t) => {
                         var n;
                         let {
                             index: a
-                        } = e, l = null === (n = I.current) || void 0 === n ? void 0 : n.getBoundingClientRect(), i = t.getClientOffset();
+                        } = e, l = null === (n = M.current) || void 0 === n ? void 0 : n.getBoundingClientRect(), i = t.getClientOffset();
                         if (null == l || null == i) return;
                         let s = (l.bottom - l.top) / 2,
                             u = i.y - l.top;
@@ -386,7 +386,7 @@
                         c(e.rule, r, !0)
                     }
                 });
-                l.useLayoutEffect(() => (A(M), S(y(I)), () => {
+                l.useLayoutEffect(() => (A(I), S(y(M)), () => {
                     A(null), y(null)
                 }), [A, y, S]);
                 if (l.useEffect(() => {
@@ -394,17 +394,17 @@
                     }, [t.value, T]), null == n) return null;
                 let j = "" !== t.value ? t.value : t.id;
                 return (0, a.jsxs)("div", {
-                    ref: I,
-                    className: i(F.draggableInputContainer, {
-                        [F.dragging]: E
+                    ref: M,
+                    className: i(b.draggableInputContainer, {
+                        [b.dragging]: E
                     }),
                     "data-dnd-name": j,
                     children: [(0, a.jsxs)("div", {
-                        className: F.inputWrapper,
+                        className: b.inputWrapper,
                         children: [(0, a.jsx)(f.Clickable, {
                             onMouseDown: () => _(r),
                             children: (0, a.jsx)(p.default, {
-                                innerClassName: F.rulesTextAreaInput,
+                                innerClassName: b.rulesTextAreaInput,
                                 type: C.ChatInputTypes.RULES_INPUT,
                                 textValue: T,
                                 richValue: L,
@@ -422,32 +422,32 @@
                                 canMentionChannels: R,
                                 canMentionRoles: R,
                                 maxCharacterCount: N.MAX_RULE_LENGTH,
-                                characterCountClassName: F.characterCount,
+                                characterCountClassName: b.characterCount,
                                 onSubmit: () => Promise.resolve({
                                     shouldClear: !1,
                                     shouldRefocus: !0
                                 })
                             })
                         }), (0, a.jsx)(f.Button, {
-                            className: F.clearButton,
+                            className: b.clearButton,
                             onClick: d,
                             look: f.Button.Looks.BLANK,
                             size: f.Button.Sizes.NONE,
-                            children: (0, a.jsx)(x.default, {
-                                className: F.clearIcon
+                            children: (0, a.jsx)(g.default, {
+                                className: b.clearIcon
                             })
                         }), (0, a.jsx)(f.Text, {
-                            className: F.rulesInputNumber,
+                            className: b.rulesInputNumber,
                             variant: "text-md/normal",
                             color: "text-muted",
                             children: "".concat(r + 1, ".")
                         })]
                     }), (0, a.jsx)("div", {
-                        ref: M,
-                        className: F.dragContainer,
+                        ref: I,
+                        className: b.dragContainer,
                         "data-dnd-name": j,
-                        children: (0, a.jsx)(g.default, {
-                            className: F.dragIcon
+                        children: (0, a.jsx)(x.default, {
+                            className: b.dragIcon
                         })
                     })]
                 })
@@ -466,8 +466,8 @@
                     }),
                     children: e => (0, a.jsx)("div", {
                         ...e,
-                        className: i(F.exampleRule, {
-                            [F.disabled]: l
+                        className: i(b.exampleRule, {
+                            [b.disabled]: l
                         }),
                         children: (0, a.jsx)(f.Text, {
                             variant: "text-sm/normal",
@@ -476,8 +476,8 @@
                         })
                     })
                 }) : (0, a.jsx)(f.Clickable, {
-                    className: i(F.exampleRule, {
-                        [F.disabled]: l
+                    className: i(b.exampleRule, {
+                        [b.disabled]: l
                     }),
                     onClick: () => r(n),
                     children: (0, a.jsx)(f.Text, {
@@ -492,42 +492,42 @@
                     field: t,
                     onSave: n,
                     onClose: r
-                } = e, i = (0, _.default)(), s = (0, d.useStateFromStores)([I.default], () => I.default.getProps().guild), o = null == s ? void 0 : s.rulesChannelId, C = null == s ? void 0 : s.hasFeature(S.GuildFeatures.PREVIEW_ENABLED), m = (0, d.useStateFromStores)([M.default], () => null != o ? M.default.getChannel(o) : null), p = (0, d.useStateFromStores)([T.default], () => (null == s ? void 0 : s.id) != null ? T.default.getDefaultChannel(s.id) : null), [x, g] = l.useState((null == t ? void 0 : t.values) != null ? null == t ? void 0 : t.values.map(e => ({
+                } = e, i = (0, _.default)(), s = (0, d.useStateFromStores)([M.default], () => M.default.getProps().guild), o = null == s ? void 0 : s.rulesChannelId, C = null == s ? void 0 : s.hasFeature(S.GuildFeatures.PREVIEW_ENABLED), m = (0, d.useStateFromStores)([I.default], () => null != o ? I.default.getChannel(o) : null), p = (0, d.useStateFromStores)([T.default], () => (null == s ? void 0 : s.id) != null ? T.default.getDefaultChannel(s.id) : null), [g, x] = l.useState((null == t ? void 0 : t.values) != null ? null == t ? void 0 : t.values.map(e => ({
                     id: u(),
                     value: e
                 })) : [{
                     id: u(),
                     value: ""
-                }]), [b, D] = l.useState(null), [U, B] = l.useState(null), [V, k] = l.useState(0), P = e => {
-                    if (x.length !== N.MAX_NUM_RULES) {
-                        if (null != e && "" === x[x.length - 1].value) {
-                            let t = [...x];
-                            t[x.length - 1].value = e, g(t), k(t.length - 1)
-                        } else g([...x, {
+                }]), [F, D] = l.useState(null), [U, B] = l.useState(null), [V, k] = l.useState(0), P = e => {
+                    if (g.length !== N.MAX_NUM_RULES) {
+                        if (null != e && "" === g[g.length - 1].value) {
+                            let t = [...g];
+                            t[g.length - 1].value = e, x(t), k(t.length - 1)
+                        } else x([...g, {
                             id: u(),
                             value: null != e ? e : ""
-                        }]), k(x.length)
+                        }]), k(g.length)
                     }
                 }, w = (e, t) => {
-                    let n = [...x];
-                    n[t].value = e, g(n)
+                    let n = [...g];
+                    n[t].value = e, x(n)
                 }, H = e => {
-                    let t = [...x.slice(0, e), ...x.slice(e + 1)];
-                    g(0 === t.length ? [{
+                    let t = [...g.slice(0, e), ...g.slice(e + 1)];
+                    x(0 === t.length ? [{
                         id: u(),
                         value: ""
                     }] : t)
-                }, z = l.useCallback((e, t, n) => {
-                    if (null == x) return;
-                    let a = x.indexOf(e);
+                }, G = l.useCallback((e, t, n) => {
+                    if (null == g) return;
+                    let a = g.indexOf(e);
                     if (null != t && t !== a) {
-                        let n = [...x];
-                        n.splice(a, 1), n.splice(t, 0, e), g(n)
+                        let n = [...g];
+                        n.splice(a, 1), n.splice(t, 0, e), x(n)
                     }
                     n ? null !== U && B(null) : t !== U && B(t)
-                }, [U, x]), G = async () => {
-                    null != b && D(null);
-                    let e = x.map(e => e.value.trim()).filter(e => "" !== e);
+                }, [U, g]), z = async () => {
+                    null != F && D(null);
+                    let e = g.map(e => e.value.trim()).filter(e => "" !== e);
                     if (0 === e.length) {
                         D(O.default.Messages.MEMBER_VERIFICATION_RULES_REQUIRED_ERROR);
                         return
@@ -546,34 +546,34 @@
                     }
                 };
                 if (null == s) return null;
-                let X = x.length === N.MAX_NUM_RULES;
+                let X = g.length === N.MAX_NUM_RULES;
                 return (0, a.jsx)(E.default, {
                     page: S.AnalyticsPages.GUILD_RULES_CREATE_MODAL,
                     children: (0, a.jsxs)(A.default, {
                         ...e,
-                        errorText: b,
+                        errorText: F,
                         title: O.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_RULES,
                         onCancel: r,
-                        onConfirm: G,
-                        children: [x.map((e, t) => (0, a.jsx)(y, {
+                        onConfirm: z,
+                        children: [g.map((e, t) => (0, a.jsx)(y, {
                             rulesChannel: null != m ? m : p,
                             rule: e,
                             index: t,
                             onChange: e => w(e, t),
                             onClear: () => H(t),
-                            onRuleReorder: z,
+                            onRuleReorder: G,
                             isDropHovered: t === U,
                             focused: t === V,
                             onFocus: k,
                             previewEnabled: null == C || C
                         }, e.id)), !X && (0, a.jsxs)("div", {
-                            className: F.addItemContainer,
+                            className: b.addItemContainer,
                             children: [(0, a.jsx)(L.default, {
                                 height: 17,
                                 width: 17,
                                 color: (0, R.getColor)((0, c.isThemeDark)(i) ? S.Color.BLUE_345 : S.Color.BLUE_430)
                             }), (0, a.jsx)(f.Clickable, {
-                                className: F.addItemButton,
+                                className: b.addItemButton,
                                 onClick: () => P(),
                                 children: (0, a.jsx)(f.Text, {
                                     color: "text-link",
@@ -582,13 +582,13 @@
                                 })
                             })]
                         }), (0, a.jsx)("div", {
-                            className: F.divider
+                            className: b.divider
                         }), (0, a.jsx)(f.FormTitle, {
                             children: O.default.Messages.MEMBER_VERIFICATION_EXAMPLE_RULES_SUBTITLE
                         }), (0, a.jsxs)("div", {
-                            className: F.termsExampleRulesContainer,
+                            className: b.termsExampleRulesContainer,
                             children: [(0, a.jsxs)("div", {
-                                className: F.termsExampleRulePairContainer,
+                                className: b.termsExampleRulePairContainer,
                                 children: [(0, a.jsx)(j, {
                                     shortRule: O.default.Messages.MEMBER_VERIFICATION_RULE_BE_RESPECTFUL,
                                     fullRule: O.default.Messages.MEMBER_VERIFICATION_RULE_BE_RESPECTFUL_FULL,
@@ -601,7 +601,7 @@
                                     onClick: P
                                 })]
                             }), (0, a.jsxs)("div", {
-                                className: F.termsExampleRulePairContainer,
+                                className: b.termsExampleRulePairContainer,
                                 children: [(0, a.jsx)(j, {
                                     shortRule: O.default.Messages.MEMBER_VERIFICATION_RULE_NO_NSFW,
                                     fullRule: O.default.Messages.MEMBER_VERIFICATION_RULE_NO_NSFW_FULL,
@@ -622,11 +622,14 @@
         53253: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                useIsSeasonalGiftingActive: function() {
+                SeasonalGiftingMarketingExperiment: function() {
                     return c
                 },
-                default: function() {
+                useIsSeasonalGiftingActive: function() {
                     return f
+                },
+                default: function() {
+                    return E
                 }
             }), n("222007");
             var a = n("884691"),
@@ -634,7 +637,7 @@
                 r = n.n(l),
                 i = n("862337"),
                 s = n("296892");
-            let u = new Date("2023-01-01T07:59:59.000Z"),
+            let u = new Date("2024-01-01T07:59:59.000Z"),
                 o = r(u),
                 d = (0, s.default)({
                     id: "2022-12_seasonal_gifting",
@@ -650,9 +653,24 @@
                             enabled: !0
                         }
                     }]
+                }),
+                c = (0, s.default)({
+                    id: "2023-11_seasonal_gifting_marketing_2023",
+                    label: "Seasonal Gifting Marketing 2023",
+                    kind: "user",
+                    defaultConfig: {
+                        enabled: !1
+                    },
+                    treatments: [{
+                        id: 1,
+                        label: "Enabled",
+                        config: {
+                            enabled: !0
+                        }
+                    }]
                 });
 
-            function c() {
+            function f() {
                 let [e, t] = a.useState(() => o.isAfter(Date.now()));
                 return a.useEffect(() => {
                     let n = new i.Timeout,
@@ -665,7 +683,7 @@
                     return e && a(), () => n.stop()
                 }), e
             }
-            var f = d
+            var E = d
         },
         166960: function(e, t, n) {
             "use strict";
@@ -724,10 +742,10 @@
                     return T
                 },
                 openThreadSidebarForCreating: function() {
-                    return x
+                    return g
                 },
                 closeThreadSidebar: function() {
-                    return g
+                    return x
                 },
                 closeAndClearThreadSidebar: function() {
                     return L
@@ -750,11 +768,11 @@
                 m = n("800762"),
                 p = n("659500"),
                 R = n("648564"),
-                I = n("49111"),
-                M = n("724210");
+                M = n("49111"),
+                I = n("724210");
 
             function T(e, t, n) {
-                o.MainWindowDispatch.dispatch(I.ComponentActions.POPOUT_CLOSE);
+                o.MainWindowDispatch.dispatch(M.ComponentActions.POPOUT_CLOSE);
                 let a = !i.isEmpty(m.default.getVoiceStatesForChannel(e.id));
                 if (t || !h.UseThreadSidebar.getSetting() || __OVERLAY__ || a) {
                     s.default.dispatch({
@@ -765,19 +783,19 @@
                 }
                 l(null != e.parent_id, "all threads must have parents");
                 let r = C.default.getChannelId();
-                e.parent_id !== r && !(0, M.isGuildHomeChannel)(r) && (0, E.transitionToChannel)(e.parent_id), (0, f.transitionTo)(I.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, M.isGuildHomeChannel)(r) ? M.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? R.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
-                    p.ComponentDispatch.dispatch(I.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+                e.parent_id !== r && !(0, I.isGuildHomeChannel)(r) && (0, E.transitionToChannel)(e.parent_id), (0, f.transitionTo)(M.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, I.isGuildHomeChannel)(r) ? I.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? R.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
+                    p.ComponentDispatch.dispatch(M.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                         channelId: e.id
                     })
                 }, 0)
             }
 
-            function x(e, t, n) {
-                l(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), l(!__OVERLAY__, "Cannot create threads in the overlay."), (0, d.trackWithMetadata)(I.AnalyticEvents.THREAD_CREATION_STARTED, {
+            function g(e, t, n) {
+                l(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), l(!__OVERLAY__, "Cannot create threads in the overlay."), (0, d.trackWithMetadata)(M.AnalyticEvents.THREAD_CREATION_STARTED, {
                     location: n,
                     channel_id: e.id,
                     guild_id: e.guild_id
-                }), o.MainWindowDispatch.dispatch(I.ComponentActions.POPOUT_CLOSE), C.default.getChannelId() !== e.id && (0, E.transitionToChannel)(e.id);
+                }), o.MainWindowDispatch.dispatch(M.ComponentActions.POPOUT_CLOSE), C.default.getChannelId() !== e.id && (0, E.transitionToChannel)(e.id);
                 let a = _.default.getDraft(e.id, _.DraftType.FirstThreadMessage);
                 if ("" === a) {
                     let t = _.default.getDraft(e.id, _.DraftType.ChannelMessage);
@@ -793,8 +811,8 @@
                 }, 0)
             }
 
-            function g(e, t) {
-                (0, f.transitionTo)(I.Routes.CHANNEL(e, (0, M.isGuildHomeChannel)(t) ? M.StaticChannelRoute.GUILD_HOME : t)), s.default.dispatch({
+            function x(e, t) {
+                (0, f.transitionTo)(M.Routes.CHANNEL(e, (0, I.isGuildHomeChannel)(t) ? I.StaticChannelRoute.GUILD_HOME : t)), s.default.dispatch({
                     type: "SIDEBAR_CLOSE",
                     baseChannelId: t
                 })

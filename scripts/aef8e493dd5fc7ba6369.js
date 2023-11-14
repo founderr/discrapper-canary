@@ -361,10 +361,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 CollectiblesCollectedModalInner: function() {
-                    return L
+                    return b
                 },
                 default: function() {
-                    return b
+                    return L
                 }
             }), n("222007");
             var r = n("37983"),
@@ -385,9 +385,9 @@
                 _ = n("38766"),
                 S = n("601095"),
                 I = n("493390"),
-                T = n("697218"),
-                v = n("730297"),
-                g = n("806410"),
+                g = n("697218"),
+                T = n("730297"),
+                v = n("806410"),
                 A = n("923702"),
                 O = n("716120"),
                 x = n("408381"),
@@ -395,33 +395,33 @@
                 N = n("782340"),
                 M = n("99242"),
                 R = n("53708");
-            let L = e => {
+            let b = e => {
                 var t, n;
                 let {
                     product: o,
                     onClose: l,
                     confettiTarget: i,
                     confettiCanvas: s,
-                    category: L,
-                    analyticsLocations: b
+                    category: b,
+                    analyticsLocations: L
                 } = e, {
                     confettiColors: D,
                     confettiSprites: P,
                     backgroundColors: F,
                     buttonColors: j
-                } = (0, y.default)(L), H = (0, d.default)([T.default], () => {
-                    let e = T.default.getCurrentUser();
+                } = (0, y.default)(b), k = (0, d.default)([g.default], () => {
+                    let e = g.default.getCurrentUser();
                     return u(null != e, "User cannot be undefined"), e
-                }), k = (0, d.default)([p.default], () => p.default.useReducedMotion), B = null !== (t = o.items.find(v.isAvatarDecorationRecord)) && void 0 !== t ? t : null, w = null !== (n = o.items.find(g.isProfileEffectRecord)) && void 0 !== n ? n : null, {
+                }), H = (0, d.default)([p.default], () => p.default.useReducedMotion), B = null !== (t = o.items.find(T.isAvatarDecorationRecord)) && void 0 !== t ? t : null, w = null !== (n = o.items.find(v.isProfileEffectRecord)) && void 0 !== n ? n : null, {
                     avatarDecorationSrc: U
                 } = (0, m.default)({
-                    user: H,
+                    user: k,
                     avatarDecorationOverride: B,
                     size: (0, h.getDecorationSizeForAvatarSize)(c.AvatarSizes.SIZE_120)
                 }), V = a.useRef(null), {
                     analyticsLocations: G,
                     AnalyticsLocationProvider: z
-                } = (0, E.default)([...b, C.default.COLLECTIBLES_COLLECTED_MODAL]), Z = (0, _.default)({
+                } = (0, E.default)([...L, C.default.COLLECTIBLES_COLLECTED_MODAL]), Z = (0, _.default)({
                     analyticsLocations: G
                 });
                 return null == B && null == w ? null : (0, r.jsxs)(z, {
@@ -434,7 +434,7 @@
                         children: [(0, r.jsxs)("div", {
                             className: M.bannerContainer,
                             children: [(0, r.jsx)(O.default, {
-                                asset: L.banner,
+                                asset: b.banner,
                                 size: 440,
                                 className: M.decorationBanner
                             }), null != B && (0, r.jsx)(c.Avatar, {
@@ -468,7 +468,7 @@
                             }), (0, r.jsx)(c.Button, {
                                 onClick: () => {
                                     l(), (0, f.popLayer)(), Z(), null != B ? (0, h.openAvatarDecorationModal)({
-                                        initialSelectedDecoration: o.items.find(v.isAvatarDecorationRecord),
+                                        initialSelectedDecoration: o.items.find(T.isAvatarDecorationRecord),
                                         analyticsLocations: G
                                     }) : null != w && (0, I.openProfileEffectModal)({
                                         analyticsLocations: G,
@@ -485,7 +485,7 @@
                             className: M.modalCloseButton,
                             withCircleBackground: !0
                         })]
-                    }), !k && (0, r.jsx)(A.default, {
+                    }), !H && (0, r.jsx)(A.default, {
                         confettiTarget: null != i ? i : V.current,
                         confettiCanvas: s,
                         sprites: P,
@@ -493,7 +493,7 @@
                     })]
                 })
             };
-            var b = e => {
+            var L = e => {
                 let {
                     transitionState: t,
                     product: n,
@@ -511,7 +511,7 @@
                         size: c.ModalSize.DYNAMIC,
                         children: (0, r.jsx)(c.ModalContent, {
                             className: l(M.modalInner, M.modalContentOverrides),
-                            children: (0, r.jsx)(L, {
+                            children: (0, r.jsx)(b, {
                                 product: n,
                                 category: o,
                                 onClose: s,
@@ -831,23 +831,23 @@
                     loadId: _,
                     skuId: S,
                     analyticsLocations: I,
-                    returnRef: T
+                    returnRef: g
                 } = e, {
-                    analyticsLocations: v,
-                    AnalyticsLocationProvider: g
+                    analyticsLocations: T,
+                    AnalyticsLocationProvider: v
                 } = (0, i.default)([...I, l.default.COLLECTIBLES_PAYMENT_MODAL]), A = a.useRef(new o.Environment), [O, x] = a.useState(null), y = [c.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, c.ONE_TIME_PAYMENT_ADD_PAYMENT_STEP_CONFIG, ...c.SHARED_STEP_CONFIGS, c.REVIEW_STEP_CONFIG, {
                     key: u.Step.CONFIRM,
                     renderStep: e => (0, r.jsx)(f.CollectiblesPaymentModalConfirmStep, {
                         ...e,
                         confettiCanvas: O,
-                        analyticsLocations: v
+                        analyticsLocations: T
                     }),
                     options: {
                         bodyClassName: h.modalOverrideBody,
                         sliderBodyClassName: h.modalOverrideSliderBody
                     }
                 }];
-                return (0, r.jsxs)(g, {
+                return (0, r.jsxs)(v, {
                     children: [(0, r.jsx)(o.ConfettiCanvas, {
                         ref: x,
                         className: h.confettiCanvas,
@@ -865,10 +865,10 @@
                             applicationId: C.COLLECTIBLES_APPLICATION_ID,
                             skuId: S,
                             initialPlanId: null,
-                            analyticsLocations: v,
+                            analyticsLocations: T,
                             transitionState: p,
                             renderHeader: m,
-                            returnRef: T,
+                            returnRef: g,
                             hideShadow: !0
                         })
                     })]
@@ -1127,11 +1127,14 @@
         53253: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                useIsSeasonalGiftingActive: function() {
+                SeasonalGiftingMarketingExperiment: function() {
                     return c
                 },
-                default: function() {
+                useIsSeasonalGiftingActive: function() {
                     return f
+                },
+                default: function() {
+                    return p
                 }
             }), n("222007");
             var r = n("884691"),
@@ -1139,7 +1142,7 @@
                 o = n.n(a),
                 l = n("862337"),
                 i = n("296892");
-            let s = new Date("2023-01-01T07:59:59.000Z"),
+            let s = new Date("2024-01-01T07:59:59.000Z"),
                 u = o(s),
                 d = (0, i.default)({
                     id: "2022-12_seasonal_gifting",
@@ -1155,9 +1158,24 @@
                             enabled: !0
                         }
                     }]
+                }),
+                c = (0, i.default)({
+                    id: "2023-11_seasonal_gifting_marketing_2023",
+                    label: "Seasonal Gifting Marketing 2023",
+                    kind: "user",
+                    defaultConfig: {
+                        enabled: !1
+                    },
+                    treatments: [{
+                        id: 1,
+                        label: "Enabled",
+                        config: {
+                            enabled: !0
+                        }
+                    }]
                 });
 
-            function c() {
+            function f() {
                 let [e, t] = r.useState(() => u.isAfter(Date.now()));
                 return r.useEffect(() => {
                     let n = new l.Timeout,
@@ -1170,7 +1188,7 @@
                     return e && r(), () => n.stop()
                 }), e
             }
-            var f = d
+            var p = d
         },
         166960: function(e, t, n) {
             "use strict";
@@ -1283,10 +1301,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 openThreadSidebarForViewing: function() {
-                    return v
+                    return T
                 },
                 openThreadSidebarForCreating: function() {
-                    return g
+                    return v
                 },
                 closeThreadSidebar: function() {
                     return A
@@ -1313,9 +1331,9 @@
                 _ = n("659500"),
                 S = n("648564"),
                 I = n("49111"),
-                T = n("724210");
+                g = n("724210");
 
-            function v(e, t, n) {
+            function T(e, t, n) {
                 u.MainWindowDispatch.dispatch(I.ComponentActions.POPOUT_CLOSE);
                 let r = !l.isEmpty(m.default.getVoiceStatesForChannel(e.id));
                 if (t || !C.UseThreadSidebar.getSetting() || __OVERLAY__ || r) {
@@ -1327,14 +1345,14 @@
                 }
                 a(null != e.parent_id, "all threads must have parents");
                 let o = h.default.getChannelId();
-                e.parent_id !== o && !(0, T.isGuildHomeChannel)(o) && (0, p.transitionToChannel)(e.parent_id), (0, f.transitionTo)(I.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, T.isGuildHomeChannel)(o) ? T.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? S.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
+                e.parent_id !== o && !(0, g.isGuildHomeChannel)(o) && (0, p.transitionToChannel)(e.parent_id), (0, f.transitionTo)(I.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, g.isGuildHomeChannel)(o) ? g.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? S.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
                     _.ComponentDispatch.dispatch(I.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                         channelId: e.id
                     })
                 }, 0)
             }
 
-            function g(e, t, n) {
+            function v(e, t, n) {
                 a(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), a(!__OVERLAY__, "Cannot create threads in the overlay."), (0, d.trackWithMetadata)(I.AnalyticEvents.THREAD_CREATION_STARTED, {
                     location: n,
                     channel_id: e.id,
@@ -1356,7 +1374,7 @@
             }
 
             function A(e, t) {
-                (0, f.transitionTo)(I.Routes.CHANNEL(e, (0, T.isGuildHomeChannel)(t) ? T.StaticChannelRoute.GUILD_HOME : t)), i.default.dispatch({
+                (0, f.transitionTo)(I.Routes.CHANNEL(e, (0, g.isGuildHomeChannel)(t) ? g.StaticChannelRoute.GUILD_HOME : t)), i.default.dispatch({
                     type: "SIDEBAR_CLOSE",
                     baseChannelId: t
                 })
@@ -1508,7 +1526,7 @@
                     return _
                 },
                 default: function() {
-                    return T
+                    return g
                 }
             }), n("424973"), n("222007");
             var r = n("37983"),
@@ -1699,7 +1717,7 @@
                 showDefaultAvatarsForNullUsers: !1,
                 size: _.SIZE_24
             };
-            var T = I
+            var g = I
         }
     }
 ]);

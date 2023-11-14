@@ -550,7 +550,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return A
                 }
             });
             var r = n("37983");
@@ -570,7 +570,7 @@
                 I = n("273093"),
                 T = n("880531"),
                 C = n("843455");
-            let A = [{
+            let _ = [{
                 key: null,
                 renderStep: e => (0, r.jsx)(p.OneTimePaymentPredicateStep, {
                     ...e
@@ -604,7 +604,7 @@
                 })
             }];
 
-            function _(e) {
+            function A(e) {
                 let {
                     guildProductContext: t,
                     sourceAnalyticsLocations: n,
@@ -618,7 +618,7 @@
                     ...t,
                     children: (0, r.jsx)(d, {
                         children: (0, r.jsx)(u.PaymentContextProvider, {
-                            stepConfigs: A,
+                            stepConfigs: _,
                             applicationId: l,
                             skuIDs: [s.skuId],
                             activeSubscription: null,
@@ -995,7 +995,7 @@
                     return C
                 },
                 handleInteractionResponse: function() {
-                    return _
+                    return A
                 },
                 InteractionStatusViewState: function() {
                     return r
@@ -1043,7 +1043,7 @@
                         customId: a,
                         indices: l
                     },
-                    onFailure: (e, t) => A(E, e, t)
+                    onFailure: (e, t) => _(E, e, t)
                 }), null != T && (0, f.queueInteractionComponentState)(n, C, T, l);
                 let m = {
                     type: s.InteractionTypes.MESSAGE_COMPONENT,
@@ -1073,11 +1073,11 @@
                     body: m,
                     timeout: 3e3
                 }, e => {
-                    _(C, E, h, e)
+                    A(C, E, h, e)
                 })
-            }, A = (e, t, n) => {
+            }, _ = (e, t, n) => {
                 null == n && null != t && o.default.sendClydeError(e, t)
-            }, _ = (e, t, n, r) => {
+            }, A = (e, t, n, r) => {
                 if (!r.ok) {
                     if (!r.hasErr) {
                         var a;
@@ -1178,11 +1178,14 @@
         53253: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                useIsSeasonalGiftingActive: function() {
+                SeasonalGiftingMarketingExperiment: function() {
                     return c
                 },
-                default: function() {
+                useIsSeasonalGiftingActive: function() {
                     return f
+                },
+                default: function() {
+                    return p
                 }
             }), n("222007");
             var r = n("884691"),
@@ -1190,7 +1193,7 @@
                 i = n.n(a),
                 u = n("862337"),
                 l = n("296892");
-            let o = new Date("2023-01-01T07:59:59.000Z"),
+            let o = new Date("2024-01-01T07:59:59.000Z"),
                 s = i(o),
                 d = (0, l.default)({
                     id: "2022-12_seasonal_gifting",
@@ -1206,9 +1209,24 @@
                             enabled: !0
                         }
                     }]
+                }),
+                c = (0, l.default)({
+                    id: "2023-11_seasonal_gifting_marketing_2023",
+                    label: "Seasonal Gifting Marketing 2023",
+                    kind: "user",
+                    defaultConfig: {
+                        enabled: !1
+                    },
+                    treatments: [{
+                        id: 1,
+                        label: "Enabled",
+                        config: {
+                            enabled: !0
+                        }
+                    }]
                 });
 
-            function c() {
+            function f() {
                 let [e, t] = r.useState(() => s.isAfter(Date.now()));
                 return r.useEffect(() => {
                     let n = new u.Timeout,
@@ -1221,7 +1239,7 @@
                     return e && r(), () => n.stop()
                 }), e
             }
-            var f = d
+            var p = d
         },
         166960: function(e, t, n) {
             "use strict";
@@ -1286,7 +1304,7 @@
                     return N
                 },
                 closeAndClearThreadSidebar: function() {
-                    return O
+                    return g
                 }
             });
             var r = n("627445"),
@@ -1305,12 +1323,12 @@
                 I = n("18494"),
                 T = n("800762"),
                 C = n("659500"),
-                A = n("648564"),
-                _ = n("49111"),
+                _ = n("648564"),
+                A = n("49111"),
                 m = n("724210");
 
             function S(e, t, n) {
-                s.MainWindowDispatch.dispatch(_.ComponentActions.POPOUT_CLOSE);
+                s.MainWindowDispatch.dispatch(A.ComponentActions.POPOUT_CLOSE);
                 let r = !u.isEmpty(T.default.getVoiceStatesForChannel(e.id));
                 if (t || !E.UseThreadSidebar.getSetting() || __OVERLAY__ || r) {
                     l.default.dispatch({
@@ -1321,19 +1339,19 @@
                 }
                 a(null != e.parent_id, "all threads must have parents");
                 let i = I.default.getChannelId();
-                e.parent_id !== i && !(0, m.isGuildHomeChannel)(i) && (0, p.transitionToChannel)(e.parent_id), (0, f.transitionTo)(_.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, m.isGuildHomeChannel)(i) ? m.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? A.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
-                    C.ComponentDispatch.dispatch(_.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+                e.parent_id !== i && !(0, m.isGuildHomeChannel)(i) && (0, p.transitionToChannel)(e.parent_id), (0, f.transitionTo)(A.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, m.isGuildHomeChannel)(i) ? m.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? _.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
+                    C.ComponentDispatch.dispatch(A.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                         channelId: e.id
                     })
                 }, 0)
             }
 
             function v(e, t, n) {
-                a(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), a(!__OVERLAY__, "Cannot create threads in the overlay."), (0, d.trackWithMetadata)(_.AnalyticEvents.THREAD_CREATION_STARTED, {
+                a(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), a(!__OVERLAY__, "Cannot create threads in the overlay."), (0, d.trackWithMetadata)(A.AnalyticEvents.THREAD_CREATION_STARTED, {
                     location: n,
                     channel_id: e.id,
                     guild_id: e.guild_id
-                }), s.MainWindowDispatch.dispatch(_.ComponentActions.POPOUT_CLOSE), I.default.getChannelId() !== e.id && (0, p.transitionToChannel)(e.id);
+                }), s.MainWindowDispatch.dispatch(A.ComponentActions.POPOUT_CLOSE), I.default.getChannelId() !== e.id && (0, p.transitionToChannel)(e.id);
                 let r = h.default.getDraft(e.id, h.DraftType.FirstThreadMessage);
                 if ("" === r) {
                     let t = h.default.getDraft(e.id, h.DraftType.ChannelMessage);
@@ -1350,13 +1368,13 @@
             }
 
             function N(e, t) {
-                (0, f.transitionTo)(_.Routes.CHANNEL(e, (0, m.isGuildHomeChannel)(t) ? m.StaticChannelRoute.GUILD_HOME : t)), l.default.dispatch({
+                (0, f.transitionTo)(A.Routes.CHANNEL(e, (0, m.isGuildHomeChannel)(t) ? m.StaticChannelRoute.GUILD_HOME : t)), l.default.dispatch({
                     type: "SIDEBAR_CLOSE",
                     baseChannelId: t
                 })
             }
 
-            function O(e) {
+            function g(e) {
                 l.default.dispatch({
                     type: "SIDEBAR_CLOSE",
                     baseChannelId: e
@@ -1527,11 +1545,11 @@
                 SIZE_56: 56
             };
 
-            function A(e, t) {
+            function _(e, t) {
                 let n = e instanceof f.default ? e : null != e ? e.user : null;
                 return null != n ? n.id : "user-".concat(t)
             }
-            class _ extends a.PureComponent {
+            class A extends a.PureComponent {
                 renderUsers() {
                     let {
                         users: e,
@@ -1547,13 +1565,13 @@
                         u.push(t ? (0, r.jsx)("div", {
                             className: T.avatarContainer,
                             children: l
-                        }, A(null !== (d = e[s]) && void 0 !== d ? d : null, s)) : (0, r.jsx)(I.default, {
+                        }, _(null !== (d = e[s]) && void 0 !== d ? d : null, s)) : (0, r.jsx)(I.default, {
                             className: T.avatarContainerMasked,
                             height: a,
                             width: a,
                             mask: I.default.Masks.VOICE_USER_SUMMARY_ITEM,
                             children: l
-                        }, A(e[s], s))), s++
+                        }, _(e[s], s))), s++
                     }
                     return null != i ? u.push(i) : null != o && u.push(o), u
                 }
@@ -1681,7 +1699,7 @@
                     }
                 }
             }
-            _.defaultProps = {
+            A.defaultProps = {
                 max: 10,
                 renderMoreUsers: function(e) {
                     return (0, r.jsx)("div", {
@@ -1693,7 +1711,7 @@
                 showDefaultAvatarsForNullUsers: !1,
                 size: C.SIZE_24
             };
-            var m = _
+            var m = A
         }
     }
 ]);

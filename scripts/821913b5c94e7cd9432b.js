@@ -1482,49 +1482,48 @@
                     footer: h,
                     isGift: M = !1,
                     giftMessage: I = P.default.Messages.PREMIUM_PAYMENT_IS_GIFT,
-                    isSeasonalGift: g = !1,
-                    hideBreadcrumbs: b = !1,
-                    isLoading: R = !1,
-                    purchaseError: O,
-                    purchaseErrorBlockRef: v,
-                    planError: x,
-                    onScroll: D,
-                    scrollerClassName: Y,
-                    hasCurrencies: k = !1
-                } = e, j = null;
-                null != _ && null == (0, E.errorToStep)(_) ? j = _ : null != O ? j = O : null != x && (j = x);
-                let L = null != j ? j.message : "";
-                null != j && j instanceof d.BillingError && (j.code === p.ErrorCodes.CARD_DECLINED && k && (L += " ".concat(P.default.Messages.BILLING_ERROR_TRY_ANOTHER)), j.code === p.ErrorCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (L = P.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT), j.code === y.AbortCodes.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (L = P.default.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID));
+                    hideBreadcrumbs: g = !1,
+                    isLoading: b = !1,
+                    purchaseError: R,
+                    purchaseErrorBlockRef: O,
+                    planError: v,
+                    onScroll: x,
+                    scrollerClassName: D,
+                    hasCurrencies: Y = !1
+                } = e, k = null;
+                null != _ && null == (0, E.errorToStep)(_) ? k = _ : null != R ? k = R : null != v && (k = v);
+                let j = null != k ? k.message : "";
+                null != k && k instanceof d.BillingError && (k.code === p.ErrorCodes.CARD_DECLINED && Y && (j += " ".concat(P.default.Messages.BILLING_ERROR_TRY_ANOTHER)), k.code === p.ErrorCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (j = P.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT), k.code === y.AbortCodes.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (j = P.default.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID));
                 let {
-                    stripe: w
+                    stripe: L
                 } = (0, S.usePaymentContext)();
-                R = R || null == w;
-                let F = r.useRef(new i.Timeout);
+                b = b || null == L;
+                let w = r.useRef(new i.Timeout);
                 r.useEffect(() => {
-                    let e = F.current;
-                    return null != w || e.isStarted() ? null != w && e.stop() : e.start(1e4, () => {
+                    let e = w.current;
+                    return null != L || e.isStarted() ? null != L && e.stop() : e.start(1e4, () => {
                         let e = Error("Stripe took too long to load");
                         (0, T.captureBillingException)(e)
                     }), () => {
                         e.stop()
                     }
-                }, [w]);
-                let B = t.includes(E.Step.PAYMENT_TYPE) ? E.Step.PAYMENT_TYPE : E.Step.ADD_PAYMENT_STEPS;
+                }, [L]);
+                let F = t.includes(E.Step.PAYMENT_TYPE) ? E.Step.PAYMENT_TYPE : E.Step.ADD_PAYMENT_STEPS;
                 return (0, n.jsxs)(s.Elements, {
                     options: y.StripeElementsOptions,
-                    stripe: w,
+                    stripe: L,
                     children: [C, (0, n.jsxs)("div", {
                         className: o("paymentModalContent", f.content),
-                        children: [M && !g && a !== E.Step.CONFIRM ? (0, n.jsx)(c.default, {
+                        children: [M && a !== E.Step.CONFIRM ? (0, n.jsx)(c.default, {
                             className: f.paymentNote,
                             iconSize: c.default.Sizes.SMALL,
                             icon: A.default,
                             color: null == I ? c.default.Colors.PRIMARY : c.default.Colors.SECONDARY,
                             children: I
-                        }) : null, b ? null : (0, n.jsx)("div", {
+                        }) : null, g ? null : (0, n.jsx)("div", {
                             className: f.breadcrumbsWrapper,
                             children: (0, n.jsx)(m.default, {
-                                activeId: E.COLLAPSED_PAYMENT_BREADCRUMB_STEPS.has(a) ? B : a,
+                                activeId: E.COLLAPSED_PAYMENT_BREADCRUMB_STEPS.has(a) ? F : a,
                                 breadcrumbs: t.filter(e => !E.COLLAPSED_PAYMENT_BREADCRUMB_STEPS.has(e) && !N.has(e)).map(e => ({
                                     id: e,
                                     label: (0, E.getLabelForStep)(e)
@@ -1532,13 +1531,13 @@
                             })
                         }), (0, n.jsxs)("div", {
                             className: f.bodyWrapper,
-                            children: [null == j ? null : (0, n.jsx)("div", {
+                            children: [null == k ? null : (0, n.jsx)("div", {
                                 className: f.errorBlockWrapper,
                                 children: (0, n.jsx)(u.FormErrorBlock, {
-                                    ref: v,
-                                    children: L
+                                    ref: O,
+                                    children: j
                                 })
-                            }), R ? (0, n.jsx)(u.Spinner, {
+                            }), b ? (0, n.jsx)(u.Spinner, {
                                 className: f.loadingBlock
                             }) : (0, n.jsx)(u.Sequencer, {
                                 className: f.sequencer,
@@ -1549,8 +1548,8 @@
                                 steps: t,
                                 sideMargin: 20,
                                 children: (0, n.jsx)(u.AdvancedScrollerThin, {
-                                    onScroll: D,
-                                    className: o(f.scroller, Y),
+                                    onScroll: x,
+                                    className: o(f.scroller, D),
                                     children: l
                                 })
                             })]

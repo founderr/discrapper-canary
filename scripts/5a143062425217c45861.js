@@ -2061,12 +2061,12 @@
                     } = e,
                     {
                         selectedPlan: L,
-                        selectedSkuId: P,
-                        step: g,
+                        selectedSkuId: g,
+                        step: P,
                         updatedSubscription: R,
                         readySlideId: v
                     } = (0, E.usePaymentContext)();
-                l(null != L, "Expected plan to selected"), l(null != P, "Expected selectedSkuId"), l(null != g, "Step should be set");
+                l(null != L, "Expected plan to selected"), l(null != g, "Expected selectedSkuId"), l(null != P, "Step should be set");
                 let M = (0, s.default)(p.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY),
                     {
                         createMultipleConfettiAt: D
@@ -2254,9 +2254,9 @@
                     priceOptions: A,
                     isGift: O,
                     setSubscriptionMetadataRequest: L
-                } = (0, o.usePaymentContext)(), [P, g] = i.useState(!S || !N || p);
+                } = (0, o.usePaymentContext)(), [g, P] = i.useState(!S || !N || p);
                 return (i.useEffect(() => {
-                    g(!S || !N || p)
+                    P(!S || !N || p)
                 }, [p, N, S]), i.useEffect(() => {
                     null != f && L({
                         guild_id: f
@@ -2264,7 +2264,7 @@
                 }, [f, L]), i.useEffect(() => {
                     m(n);
                     let e = null != n ? l.default.get(n) : null;
-                    !P && !_ && (I(t => {
+                    !g && !_ && (I(t => {
                         let n = null != e ? (0, s.getPrice)(e.id, !1, O, A) : void 0,
                             r = {
                                 ...t,
@@ -2275,7 +2275,7 @@
                             };
                         return u.default.track(d.AnalyticEvents.PAYMENT_FLOW_STARTED, r), r
                     }), null != e && (h(null == e ? void 0 : e.skuId), T(t)))
-                }, [_, n, O, P, A, C, I, m, h, T, t]), P) ? (0, r.jsx)(c.default, {}) : _ ? (0, r.jsx)(a.BlockedPaymentsContentModal, {
+                }, [_, n, O, g, A, C, I, m, h, T, t]), g) ? (0, r.jsx)(c.default, {}) : _ ? (0, r.jsx)(a.BlockedPaymentsContentModal, {
                     onClose: E
                 }) : null
             }
@@ -2316,8 +2316,8 @@
                     handleStepChange: A,
                     trialFooterMessageOverride: O,
                     reviewWarningMessage: L,
-                    planGroup: P,
-                    openInvoiceId: g,
+                    planGroup: g,
+                    openInvoiceId: P,
                     analyticsData: R,
                     analyticsLocation: v,
                     eligibleApplicationSubscriptionGuilds: M,
@@ -2333,8 +2333,8 @@
                     purchaseError: w,
                     purchaseTokenAuthState: H,
                     selectedPlan: j,
-                    setCurrency: V,
-                    setPaymentSourceId: k,
+                    setCurrency: k,
+                    setPaymentSourceId: V,
                     setPurchaseState: Y,
                     setPurchaseError: K,
                     step: Z,
@@ -2399,10 +2399,10 @@
                             selectedPlanId: j.id,
                             isGift: G,
                             paymentSources: B,
-                            onPaymentSourceChange: e => k(null != e ? e.id : null),
+                            onPaymentSourceChange: e => V(null != e ? e.id : null),
                             priceOptions: F,
                             currencies: b,
-                            onCurrencyChange: e => V(e),
+                            onCurrencyChange: e => k(e),
                             handlePaymentSourceAdd: () => A(I.Step.ADD_PAYMENT_STEPS),
                             setHasAcceptedTerms: q,
                             legalTermsNodeRef: el,
@@ -2427,9 +2427,9 @@
                             flowStartTime: x.startTime,
                             isGift: G,
                             giftStyle: X,
-                            planGroup: P,
+                            planGroup: g,
                             purchaseTokenAuthState: H,
-                            openInvoiceId: g,
+                            openInvoiceId: P,
                             metadata: er ? void 0 : z,
                             backButtonEligible: n,
                             invoiceError: null,
@@ -2773,11 +2773,14 @@
         53253: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                useIsSeasonalGiftingActive: function() {
+                SeasonalGiftingMarketingExperiment: function() {
                     return d
                 },
-                default: function() {
+                useIsSeasonalGiftingActive: function() {
                     return f
+                },
+                default: function() {
+                    return I
                 }
             }), n("222007");
             var r = n("884691"),
@@ -2785,7 +2788,7 @@
                 a = n.n(i),
                 l = n("862337"),
                 u = n("296892");
-            let s = new Date("2023-01-01T07:59:59.000Z"),
+            let s = new Date("2024-01-01T07:59:59.000Z"),
                 o = a(s),
                 c = (0, u.default)({
                     id: "2022-12_seasonal_gifting",
@@ -2801,9 +2804,24 @@
                             enabled: !0
                         }
                     }]
+                }),
+                d = (0, u.default)({
+                    id: "2023-11_seasonal_gifting_marketing_2023",
+                    label: "Seasonal Gifting Marketing 2023",
+                    kind: "user",
+                    defaultConfig: {
+                        enabled: !1
+                    },
+                    treatments: [{
+                        id: 1,
+                        label: "Enabled",
+                        config: {
+                            enabled: !0
+                        }
+                    }]
                 });
 
-            function d() {
+            function f() {
                 let [e, t] = r.useState(() => o.isAfter(Date.now()));
                 return r.useEffect(() => {
                     let n = new l.Timeout,
@@ -2816,7 +2834,7 @@
                     return e && r(), () => n.stop()
                 }), e
             }
-            var f = c
+            var I = c
         },
         716849: function(e, t, n) {
             "use strict";
@@ -3308,26 +3326,26 @@
                     A = o.default.getMutualFriendsCount(e),
                     O = o.default.isFetchingProfile(e),
                     L = (null == h ? void 0 : h.profileFetchFailed) || !O && (!Array.isArray(m) && E || null == A && _),
-                    P = S ? c.default : void 0,
-                    g = !1;
+                    g = S ? c.default : void 0,
+                    P = !1;
                 if (null != p) {
                     let t = o.default.getGuildMemberProfile(e, p);
-                    g = null == t
+                    P = null == t
                 }
-                if (!L && !g && (O || Date.now() - (null !== (f = null == h ? void 0 : h.lastFetched) && void 0 !== f ? f : 0) < 6e4)) return Promise.resolve();
+                if (!L && !P && (O || Date.now() - (null !== (f = null == h ? void 0 : h.lastFetched) && void 0 !== f ? f : 0) < 6e4)) return Promise.resolve();
                 N ? await r.default.wait(() => (0, i.fetchProfile)(e, {
                     withMutualGuilds: E,
                     withMutualFriendsCount: _,
                     friendToken: T,
                     guildId: p,
                     connectionsRoleId: I
-                }, P)) : await (0, i.fetchProfile)(e, {
+                }, g)) : await (0, i.fetchProfile)(e, {
                     withMutualGuilds: E,
                     withMutualFriendsCount: _,
                     friendToken: T,
                     guildId: p,
                     connectionsRoleId: I
-                }, P)
+                }, g)
             }
         },
         386714: function(e, t, n) {

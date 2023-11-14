@@ -215,7 +215,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return _
                 }
             });
             var a = n("37983");
@@ -286,18 +286,18 @@
                 })
             }
 
-            function T(e) {
+            function _(e) {
                 let {
                     imageUrl: t,
                     name: n,
                     description: r,
                     formattedPrice: u,
                     role: c,
-                    ctaComponent: T,
-                    shouldShowFullDescriptionButton: _ = !0,
+                    ctaComponent: _,
+                    shouldShowFullDescriptionButton: T = !0,
                     onShowFullDescription: x,
-                    productType: v,
-                    onTapCard: g,
+                    productType: g,
+                    onTapCard: v,
                     actionMenu: E,
                     showOpaqueBackground: j = !1,
                     hideRoleTag: D = !1,
@@ -305,8 +305,8 @@
                     cardWidth: R = 332,
                     cardHeight: y,
                     thumbnailHeight: A = 187,
-                    descriptionTextVariant: L = "text-sm/normal"
-                } = e, b = (0, d.uid)(), N = (0, a.jsxs)(a.Fragment, {
+                    descriptionTextVariant: b = "text-sm/normal"
+                } = e, L = (0, d.uid)(), N = (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(p, {
                         hidePurchaseToUnlockBadge: !0,
                         children: (0, a.jsx)("img", {
@@ -325,18 +325,18 @@
                                 variant: "text-md/medium",
                                 color: "header-primary",
                                 className: m.productName,
-                                id: b,
+                                id: L,
                                 children: n
                             }), (0, a.jsx)(l.FocusBlock, {
                                 children: (0, a.jsx)(o.default, {
-                                    variant: L,
+                                    variant: b,
                                     color: "text-muted",
                                     lineClamp: I,
                                     text: r
                                 })
-                            }), _ && (0, a.jsx)(C, {
+                            }), T && (0, a.jsx)(C, {
                                 onShowFullDescription: x,
-                                variant: L
+                                variant: b
                             }), D || null == c || "" === c.name ? null : (0, a.jsxs)(a.Fragment, {
                                 children: [(0, a.jsx)(s.default, {
                                     size: 16
@@ -356,19 +356,19 @@
                             variant: "text-xxs/normal",
                             color: "text-normal",
                             className: m.productType,
-                            children: v
+                            children: g
                         }), (0, a.jsx)("div", {
                             className: m.productActionButton,
                             onClick: e => {
                                 e.stopPropagation()
                             },
-                            children: T
+                            children: _
                         })]
                     })]
                 });
-                return null == g ? (0, a.jsx)("article", {
+                return null == v ? (0, a.jsx)("article", {
                     className: i(m.productCard, j ? m.opaqueBackground : m.solidBackground),
-                    "aria-labelledby": b,
+                    "aria-labelledby": L,
                     children: N
                 }) : (0, a.jsx)("div", {
                     style: {
@@ -381,7 +381,7 @@
                             productName: n
                         }),
                         className: i(m.productCard, j ? m.opaqueBackground : m.solidBackground, m.cardClickableContainer),
-                        onClick: g,
+                        onClick: v,
                         children: N
                     })
                 })
@@ -442,11 +442,14 @@
         53253: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                useIsSeasonalGiftingActive: function() {
+                SeasonalGiftingMarketingExperiment: function() {
                     return c
                 },
-                default: function() {
+                useIsSeasonalGiftingActive: function() {
                     return f
+                },
+                default: function() {
+                    return h
                 }
             }), n("222007");
             var a = n("884691"),
@@ -454,7 +457,7 @@
                 i = n.n(r),
                 l = n("862337"),
                 o = n("296892");
-            let s = new Date("2023-01-01T07:59:59.000Z"),
+            let s = new Date("2024-01-01T07:59:59.000Z"),
                 d = i(s),
                 u = (0, o.default)({
                     id: "2022-12_seasonal_gifting",
@@ -470,9 +473,24 @@
                             enabled: !0
                         }
                     }]
+                }),
+                c = (0, o.default)({
+                    id: "2023-11_seasonal_gifting_marketing_2023",
+                    label: "Seasonal Gifting Marketing 2023",
+                    kind: "user",
+                    defaultConfig: {
+                        enabled: !1
+                    },
+                    treatments: [{
+                        id: 1,
+                        label: "Enabled",
+                        config: {
+                            enabled: !0
+                        }
+                    }]
                 });
 
-            function c() {
+            function f() {
                 let [e, t] = a.useState(() => d.isAfter(Date.now()));
                 return a.useEffect(() => {
                     let n = new l.Timeout,
@@ -485,7 +503,7 @@
                     return e && a(), () => n.stop()
                 }), e
             }
-            var f = u
+            var h = u
         },
         166960: function(e, t, n) {
             "use strict";
@@ -567,15 +585,15 @@
                 m = n("845579"),
                 p = n("474643"),
                 C = n("18494"),
-                T = n("800762"),
-                _ = n("659500"),
+                _ = n("800762"),
+                T = n("659500"),
                 x = n("648564"),
-                v = n("49111"),
-                g = n("724210");
+                g = n("49111"),
+                v = n("724210");
 
             function E(e, t, n) {
-                d.MainWindowDispatch.dispatch(v.ComponentActions.POPOUT_CLOSE);
-                let a = !l.isEmpty(T.default.getVoiceStatesForChannel(e.id));
+                d.MainWindowDispatch.dispatch(g.ComponentActions.POPOUT_CLOSE);
+                let a = !l.isEmpty(_.default.getVoiceStatesForChannel(e.id));
                 if (t || !m.UseThreadSidebar.getSetting() || __OVERLAY__ || a) {
                     o.default.dispatch({
                         type: "SIDEBAR_CLOSE",
@@ -585,19 +603,19 @@
                 }
                 r(null != e.parent_id, "all threads must have parents");
                 let i = C.default.getChannelId();
-                e.parent_id !== i && !(0, g.isGuildHomeChannel)(i) && (0, h.transitionToChannel)(e.parent_id), (0, f.transitionTo)(v.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, g.isGuildHomeChannel)(i) ? g.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? x.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
-                    _.ComponentDispatch.dispatch(v.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+                e.parent_id !== i && !(0, v.isGuildHomeChannel)(i) && (0, h.transitionToChannel)(e.parent_id), (0, f.transitionTo)(g.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, v.isGuildHomeChannel)(i) ? v.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? x.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
+                    T.ComponentDispatch.dispatch(g.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                         channelId: e.id
                     })
                 }, 0)
             }
 
             function j(e, t, n) {
-                r(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), r(!__OVERLAY__, "Cannot create threads in the overlay."), (0, u.trackWithMetadata)(v.AnalyticEvents.THREAD_CREATION_STARTED, {
+                r(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), r(!__OVERLAY__, "Cannot create threads in the overlay."), (0, u.trackWithMetadata)(g.AnalyticEvents.THREAD_CREATION_STARTED, {
                     location: n,
                     channel_id: e.id,
                     guild_id: e.guild_id
-                }), d.MainWindowDispatch.dispatch(v.ComponentActions.POPOUT_CLOSE), C.default.getChannelId() !== e.id && (0, h.transitionToChannel)(e.id);
+                }), d.MainWindowDispatch.dispatch(g.ComponentActions.POPOUT_CLOSE), C.default.getChannelId() !== e.id && (0, h.transitionToChannel)(e.id);
                 let a = p.default.getDraft(e.id, p.DraftType.FirstThreadMessage);
                 if ("" === a) {
                     let t = p.default.getDraft(e.id, p.DraftType.ChannelMessage);
@@ -614,7 +632,7 @@
             }
 
             function D(e, t) {
-                (0, f.transitionTo)(v.Routes.CHANNEL(e, (0, g.isGuildHomeChannel)(t) ? g.StaticChannelRoute.GUILD_HOME : t)), o.default.dispatch({
+                (0, f.transitionTo)(g.Routes.CHANNEL(e, (0, v.isGuildHomeChannel)(t) ? v.StaticChannelRoute.GUILD_HOME : t)), o.default.dispatch({
                     type: "SIDEBAR_CLOSE",
                     baseChannelId: t
                 })
