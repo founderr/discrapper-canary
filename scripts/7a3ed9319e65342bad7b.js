@@ -226,10 +226,10 @@
                     return H
                 },
                 deleteClip: function() {
-                    return W
+                    return x
                 },
                 setHardwareClipEncode: function() {
-                    return x
+                    return W
                 },
                 exportClip: function() {
                     return B
@@ -459,7 +459,7 @@
                 }, {
                     autoTrackExposure: !1
                 });
-                if (h.default.getIsSavingClip()) return;
+                if (h.default.getIsAtMaxSaveClipOperations()) return;
                 let a = h.default.getSettings().clipsEnabled && null != f.default.getCurrentUserActiveStream(),
                     r = n && h.default.getSettings().decoupledClipsEnabled && (null === (t = g.default.getVisibleGame()) || void 0 === t ? void 0 : t.windowHandle) != null,
                     d = null != e && null != f.default.getActiveStreamForStreamKey(e) && i;
@@ -523,14 +523,14 @@
                     clips: i
                 })
             }
-            async function W(e) {
+            async function x(e) {
                 var t;
                 (0, m.isDesktop)() && (null === (t = a.default.clips) || void 0 === t ? void 0 : t.deleteClip) != null && (await a.default.clips.deleteClip(e), l.default.dispatch({
                     type: "CLIPS_DELETE_CLIP",
                     filepath: e
                 }))
             }
-            async function x(e) {
+            async function W(e) {
                 await l.default.dispatch({
                     type: "MEDIA_ENGINE_SET_HARDWARE_CLIP_ENCODE",
                     enabled: e
