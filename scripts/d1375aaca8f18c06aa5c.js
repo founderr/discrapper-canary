@@ -4520,9 +4520,6 @@
                 },
                 useQ4DropExperiment: function() {
                     return r
-                },
-                default: function() {
-                    return l
                 }
             });
             var a = s("862205");
@@ -4550,8 +4547,7 @@
                         autoTrackExposure: e,
                         disable: t
                     })
-                };
-            var l = r
+                }
         },
         184684: function(e, t, s) {
             "use strict";
@@ -5851,7 +5847,7 @@
                     return n
                 },
                 default: function() {
-                    return m
+                    return A
                 }
             });
             var a, n, r = s("37983"),
@@ -5862,43 +5858,39 @@
                 d = s("77078"),
                 c = s("521012"),
                 _ = s("719923"),
-                E = s("896630"),
-                I = s("367226"),
-                f = s("628550"),
-                T = s("558566"),
-                S = s("646718"),
-                R = s("782340"),
-                p = s("650734");
+                E = s("367226"),
+                I = s("628550"),
+                f = s("558566"),
+                T = s("646718"),
+                S = s("782340"),
+                R = s("650734");
             (a = n || (n = {})).PERKS_DISCOVERABILITY = "perks_discoverability", a.WHATS_NEW = "whats_new";
-            let A = e => {
+            let p = e => {
                 let t = (0, o.default)([c.default], () => c.default.getPremiumTypeSubscription()),
                     s = null != t ? _.default.getPremiumPlanItem(t) : null,
                     a = null != s ? _.default.getSkuIdForPlan(s.planId) : null,
-                    n = a === S.PremiumSubscriptionSKUs.TIER_2;
+                    n = a === T.PremiumSubscriptionSKUs.TIER_2;
                 if (e) return n ? {
-                    title: R.default.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_SUB,
-                    subtitle: R.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_SUB
+                    title: S.default.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_SUB,
+                    subtitle: S.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_SUB
                 } : {
-                    title: R.default.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_NON_SUB,
-                    subtitle: R.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_NON_SUB
+                    title: S.default.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_NON_SUB,
+                    subtitle: S.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_NON_SUB
                 };
                 return {
-                    title: R.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_TITLE,
-                    subtitle: R.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_SUBTITLE
+                    title: S.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_TITLE,
+                    subtitle: S.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_SUBTITLE
                 }
             };
-            var m = e => {
+            var A = e => {
                 let {
                     className: t,
                     variant: s = "perks_discoverability",
                     noBackground: a = !1,
                     leftAlignHeaders: n = !1
-                } = e, i = l.useRef(null), o = (0, I.useShouldScrollToWhatsNew)();
-                (0, I.useClearNewBadge)();
-                let c = "whats_new" === s,
-                    {
-                        enabled: _
-                    } = (0, E.default)();
+                } = e, i = l.useRef(null), o = (0, E.useShouldScrollToWhatsNew)();
+                (0, E.useClearNewBadge)();
+                let c = "whats_new" === s;
                 l.useEffect(() => {
                     let e = i.current;
                     if (null == e || !o || !c) return;
@@ -5909,41 +5901,41 @@
                     });
                     return () => cancelAnimationFrame(t)
                 }, [i, o, c]);
-                let S = (0, f.default)(),
-                    R = A(c),
-                    m = [];
+                let _ = (0, I.default)(),
+                    T = p(c),
+                    S = [];
                 switch (s) {
                     case "perks_discoverability":
-                        m = [S.profiles, S.clientThemes, S.serverBoosts];
+                        S = [_.profiles, _.clientThemes, _.serverBoosts];
                         break;
                     case "whats_new":
-                        m = [S.avatarDecorations, S.profileEffects, S.upcomingDropUntimed], _ && (m = [S.earlyAccess, S.specialMemberPricing, S.unlimitedSuperReactions])
+                        S = [_.earlyAccess, _.specialMemberPricing, _.unlimitedSuperReactions]
                 }
-                let N = m.some(e => null != e.pillText);
+                let A = S.some(e => null != e.pillText);
                 return (0, r.jsxs)("div", {
                     ref: i,
-                    className: u(p.section, {
-                        [p.centerAlignSection]: !n,
-                        [p.leftAlignSection]: n
+                    className: u(R.section, {
+                        [R.centerAlignSection]: !n,
+                        [R.leftAlignSection]: n
                     }, t),
                     children: [(0, r.jsx)(d.Heading, {
                         variant: "heading-xxl/extrabold",
                         color: "header-primary",
-                        className: p.heading,
-                        children: R.title
+                        className: R.heading,
+                        children: T.title
                     }), (0, r.jsx)(d.Text, {
                         variant: "text-lg/normal",
                         color: "header-primary",
-                        className: u(p.subtitle, {
-                            [p.fullWidth]: c || n,
-                            [p.moreSubtitleMargin]: N,
-                            [p.leftAlignSubtitle]: n,
-                            [p.centerAlignSubtitle]: !n
+                        className: u(R.subtitle, {
+                            [R.fullWidth]: c || n,
+                            [R.moreSubtitleMargin]: A,
+                            [R.leftAlignSubtitle]: n,
+                            [R.centerAlignSubtitle]: !n
                         }),
-                        children: R.subtitle
+                        children: T.subtitle
                     }), (0, r.jsx)("div", {
-                        className: p.cardContainer,
-                        children: m.map((e, t) => (0, r.jsx)(T.default, {
+                        className: R.cardContainer,
+                        children: S.map((e, t) => (0, r.jsx)(f.default, {
                             ...e,
                             forceShadow: a
                         }, "".concat(e.name, "_").concat(t)))

@@ -4,17 +4,14 @@
             "use strict";
             n.r(u), n.d(u, {
                 Q4DropExperiment: function() {
-                    return i
-                },
-                useQ4DropExperiment: function() {
                     return l
                 },
-                default: function() {
-                    return t
+                useQ4DropExperiment: function() {
+                    return r
                 }
             });
-            var r = n("862205");
-            let i = (0, r.createExperiment)({
+            var i = n("862205");
+            let l = (0, i.createExperiment)({
                     kind: "user",
                     id: "2023-10_q4_drop",
                     label: "Q4 Drop",
@@ -29,17 +26,16 @@
                         }
                     }]
                 }),
-                l = function() {
+                r = function() {
                     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                         u = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                    return i.useExperiment({
+                    return l.useExperiment({
                         location: "experiment_hook"
                     }, {
                         autoTrackExposure: e,
                         disable: u
                     })
-                };
-            var t = l
+                }
         },
         837797: function(e, u, n) {
             "use strict";
@@ -48,9 +44,9 @@
                     return m
                 }
             });
-            var r = n("446674"),
-                i = n("521012"),
-                l = n("719923"),
+            var i = n("446674"),
+                l = n("521012"),
+                r = n("719923"),
                 t = n("154889"),
                 s = n("917247"),
                 o = n("646718");
@@ -67,7 +63,7 @@
                     onNonTier2Subscriber: f,
                     onTier2Subscriber: T,
                     onCustomCriteria: _
-                } = e, b = (0, s.usePremiumTrialOffer)(), E = (0, t.usePremiumDiscountOffer)(), P = (0, r.useStateFromStores)([i.default], () => i.default.getPremiumTypeSubscription()), S = l.default.getPremiumTypeFromSubscription(P);
+                } = e, b = (0, s.usePremiumTrialOffer)(), E = (0, t.usePremiumDiscountOffer)(), P = (0, i.useStateFromStores)([l.default], () => l.default.getPremiumTypeSubscription()), S = r.default.getPremiumTypeFromSubscription(P);
                 if (null != _) {
                     let e = _();
                     if (null != e) return e
