@@ -16,11 +16,11 @@
                     width: t = 24,
                     height: n = 24,
                     color: i = u.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: a = "",
-                    ...r
+                    colorClass: r = "",
+                    ...a
                 } = e;
                 return (0, l.jsxs)("svg", {
-                    ...(0, d.default)(r),
+                    ...(0, d.default)(a),
                     xmlns: "http://www.w3.org/2000/svg",
                     width: t,
                     height: n,
@@ -31,11 +31,11 @@
                         fillRule: "evenodd",
                         d: "M6 1a3 3 0 0 0-3 3v16a3 3 0 0 0 3 3h2.95c.384 0 .633-.424.516-.792a3.983 3.983 0 0 1-.154-1.704l.5-4A4 4 0 0 1 13.782 13H16.5a.5.5 0 0 0 .5-.5V4a3 3 0 0 0-3-3H6Zm2 2a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H8Z",
                         clipRule: "evenodd",
-                        className: a
+                        className: r
                     }), (0, l.jsx)("path", {
                         fill: "string" == typeof i ? i : i.css,
                         d: "M14.018 15a2.287 2.287 0 0 0-2.268 2.003l-.462 3.694a2.049 2.049 0 0 0 4.041.656l.171-.853h3l.17.853a2.049 2.049 0 0 0 4.042-.656l-.462-3.694A2.287 2.287 0 0 0 19.982 15h-5.963Z",
-                        className: a
+                        className: r
                     })]
                 })
             }
@@ -52,19 +52,19 @@
             var u = n("281071"),
                 d = n("65597"),
                 i = n("77078"),
-                a = n("867965"),
-                r = n("42203"),
+                r = n("867965"),
+                a = n("42203"),
                 s = n("404008"),
                 o = n("49111"),
                 f = n("782340");
 
             function c(e, t, n) {
-                let c = (0, d.default)([r.default], () => r.default.getChannel(e.parent_id));
+                let c = (0, d.default)([a.default], () => a.default.getChannel(e.parent_id));
                 return (0, l.jsx)(i.MenuItem, {
                     id: "channel-copy-link",
                     label: f.default.Messages.COPY_LINK,
                     action: () => {
-                        e.isForumPost() && (0, a.trackForumPostLinkCopied)({
+                        e.isForumPost() && (0, r.trackForumPostLinkCopied)({
                             postId: e.id,
                             location: {
                                 section: o.AnalyticsSections.CONTEXT_MENU
@@ -86,8 +86,8 @@
             var u = n("446674"),
                 d = n("77078"),
                 i = n("18054"),
-                a = n("819689"),
-                r = n("430475"),
+                r = n("819689"),
+                a = n("430475"),
                 s = n("610730"),
                 o = n("271938"),
                 f = n("957255"),
@@ -99,21 +99,21 @@
                     C = (0, u.useStateFromStores)([o.default], () => e.isOwner(o.default.getId()), [e]),
                     {
                         canManageChannel: S,
-                        canAccessChannel: h
+                        canAccessChannel: v
                     } = (0, u.useStateFromStoresObject)([f.default], () => ({
                         canAccessChannel: f.default.can(e.accessPermissions, e),
                         canManageChannel: f.default.can(e.isThread() ? c.Permissions.MANAGE_THREADS : c.Permissions.MANAGE_CHANNELS, e)
                     }), [e]),
-                    v = (0, u.useStateFromStores)([s.default], () => {
+                    h = (0, u.useStateFromStores)([s.default], () => {
                         var t;
                         return null !== (t = s.default.getCount(e.id)) && void 0 !== t ? t : 0
                     }, [e.id]),
                     {
                         firstMessage: _
-                    } = (0, u.useStateFromStores)([r.default], () => r.default.getMessage(e.id), [e.id]),
-                    N = t && (S || C && v < 1),
-                    T = t && C && !S && v > 0 && null != _;
-                return h && (S || N || T) ? (0, l.jsx)(d.MenuItem, {
+                    } = (0, u.useStateFromStores)([a.default], () => a.default.getMessage(e.id), [e.id]),
+                    N = t && (S || C && h < 1),
+                    T = t && C && !S && h > 0 && null != _;
+                return v && (S || N || T) ? (0, l.jsx)(d.MenuItem, {
                     id: "delete-channel",
                     label: (() => {
                         if (e.type === c.ChannelTypes.GUILD_CATEGORY) return E.default.Messages.DELETE_CATEGORY;
@@ -129,7 +129,7 @@
                         return n => (0, l.jsx)(t, {
                             ...n,
                             onConfirm: () => {
-                                n.onClose(), T ? a.default.deleteMessage(e.id, e.id) : i.default.deleteChannel(e.id)
+                                n.onClose(), T ? r.default.deleteMessage(e.id, e.id) : i.default.deleteChannel(e.id)
                             },
                             channel: e
                         })
@@ -141,21 +141,21 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return v
                 }
             }), n("222007");
             var l = n("917351"),
                 u = n.n(l),
                 d = n("446674"),
                 i = n("913144"),
-                a = n("398604"),
-                r = n("813006"),
+                r = n("398604"),
+                a = n("813006"),
                 s = n("730647");
             let o = !1,
                 f = {},
                 c = {},
                 E = {},
-                C = e => (E[e.guild_scheduled_event.id] = new r.default(e.guild_scheduled_event.guild), c[e.guild_scheduled_event.id] = e.guild_scheduled_event, {
+                C = e => (E[e.guild_scheduled_event.id] = new a.default(e.guild_scheduled_event.guild), c[e.guild_scheduled_event.id] = e.guild_scheduled_event, {
                     channelId: e.directory_channel_id,
                     scheduledEventId: e.entity_id,
                     type: s.DirectoryEntryTypes.GUILD_SCHEDULED_EVENT,
@@ -179,7 +179,7 @@
                 }
             }
             S.displayName = "EventDirectoryStore";
-            var h = new S(i.default, {
+            var v = new S(i.default, {
                 EVENT_DIRECTORY_FETCH_START: function() {
                     o = !0
                 },
@@ -190,7 +190,7 @@
                     } = e;
                     o = !1;
                     let l = u.sortBy([...n], [function(e) {
-                            return (0, a.scheduledEventSort)(e.guild_scheduled_event)
+                            return (0, r.scheduledEventSort)(e.guild_scheduled_event)
                         }]),
                         d = u.map(l, C);
                     f[t] = d
@@ -211,23 +211,23 @@
                 u = n.n(l),
                 d = n("629109"),
                 i = n("987317"),
-                a = n("42887"),
-                r = n("700507"),
+                r = n("42887"),
+                a = n("700507"),
                 s = n("780338");
 
             function o(e, t) {
                 var n;
                 let l = null !== (n = e.sessionId) && void 0 !== n ? n : "";
-                (0, r.remoteDisconnect)(l), (0, r.disconnectRemote)();
+                (0, a.remoteDisconnect)(l), (0, a.disconnectRemote)();
                 let o = null != t ? t : e.channelId;
-                u(null != o, "attempted to transfer to unknown channel"), e.selfMute !== a.default.isSelfMute() && d.default.toggleSelfMute(), e.selfDeaf !== a.default.isSelfDeaf() && d.default.toggleSelfDeaf(), (0, s.default)(o, "discord_client", l), i.default.selectVoiceChannel(o, !1)
+                u(null != o, "attempted to transfer to unknown channel"), e.selfMute !== r.default.isSelfMute() && d.default.toggleSelfMute(), e.selfDeaf !== r.default.isSelfDeaf() && d.default.toggleSelfDeaf(), (0, s.default)(o, "discord_client", l), i.default.selectVoiceChannel(o, !1)
             }
         },
         261552: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return r
                 }
             });
             var l = n("446674"),
@@ -235,7 +235,7 @@
                 d = n("800762"),
                 i = n("76393");
 
-            function a() {
+            function r() {
                 let e = (0, l.useStateFromStores)([u.default], () => u.default.getId()),
                     t = (0, l.useStateFromStores)([i.default], () => i.default.getRemoteSessionId());
                 return (0, l.useStateFromStores)([d.default], () => {
@@ -248,7 +248,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return r
                 }
             });
             var l = n("446674"),
@@ -256,7 +256,7 @@
                 d = n("449008"),
                 i = n("49111");
 
-            function a() {
+            function r() {
                 return (0, l.useStateFromStoresArray)([u.default], () => [u.default.getAccount(null, i.PlatformTypes.XBOX), u.default.getAccount(null, i.PlatformTypes.PLAYSTATION), u.default.getAccount(null, i.PlatformTypes.PLAYSTATION_STAGING)].filter(d.isNotNullish))
             }
         },
@@ -264,7 +264,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return r
                 }
             });
             var l = n("303800"),
@@ -272,7 +272,7 @@
                 d = n("420145"),
                 i = n("171644");
 
-            function a(e) {
+            function r(e) {
                 return null != e ? e === i.GameConsoleTypes.XBOX ? d.default : u.default : l.default
             }
         },
@@ -280,7 +280,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return v
                 }
             });
             var l = n("37983");
@@ -288,8 +288,8 @@
             var u = n("65597"),
                 d = n("77078"),
                 i = n("926994"),
-                a = n("495194"),
-                r = n("945956"),
+                r = n("495194"),
+                a = n("945956"),
                 s = n("800762"),
                 o = n("889486"),
                 f = n("261552"),
@@ -298,16 +298,16 @@
                 C = n("49111"),
                 S = n("782340");
 
-            function h(e) {
-                let t = (0, u.default)([r.default], () => r.default.getChannelId() === e.id),
-                    h = (0, f.default)(),
-                    v = (null == h ? void 0 : h.channelId) === e.id,
-                    _ = (0, a.useIsVoiceChannelLocked)(e) && !e.isPrivate(),
-                    N = (0, a.default)(e),
+            function v(e) {
+                let t = (0, u.default)([a.default], () => a.default.getChannelId() === e.id),
+                    v = (0, f.default)(),
+                    h = (null == v ? void 0 : v.channelId) === e.id,
+                    _ = (0, r.useIsVoiceChannelLocked)(e) && !e.isPrivate(),
+                    N = (0, r.default)(e),
                     T = (0, u.default)([s.default], () => s.default.isInChannel(e.id)),
                     I = !T && N || _,
                     g = (0, c.default)();
-                if (!v && 0 === g.length) return null;
+                if (!h && 0 === g.length) return null;
                 let m = t => {
                     if (!t.twoWayLink || t.revoked) {
                         (0, i.default)(t.type, "Console Transfer Item");
@@ -333,11 +333,11 @@
                     })
                 };
                 return (0, l.jsx)(l.Fragment, {
-                    children: v ? (0, l.jsx)(d.MenuItem, {
+                    children: h ? (0, l.jsx)(d.MenuItem, {
                         label: S.default.Messages.TRANSFER_VOICE_TO_DEVICE,
                         id: "handoff",
                         action: () => {
-                            (0, o.handoffRemote)(h)
+                            (0, o.handoffRemote)(v)
                         },
                         icon: (0, E.default)(void 0),
                         disabled: I
@@ -359,7 +359,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 getNextShownUpcomingEventNoticeType: function() {
-                    return a
+                    return r
                 }
             });
             var l = n("866227"),
@@ -367,25 +367,25 @@
                 d = n("249654"),
                 i = n("745049");
 
-            function a(e, t, n, l) {
-                let a = u(),
-                    r = new Date(e.scheduled_start_time).getTime(),
+            function r(e, t, n, l) {
+                let r = u(),
+                    a = new Date(e.scheduled_start_time).getTime(),
                     s = {
-                        start: r - i.EVENT_STARTING_SOON_WINDOW_MILLISECONDS,
-                        end: r
+                        start: a - i.EVENT_STARTING_SOON_WINDOW_MILLISECONDS,
+                        end: a
                     };
-                if (a.isBetween(s.start, s.end)) {
+                if (r.isBetween(s.start, s.end)) {
                     if (null != t) {
                         let e = u(t),
                             n = e.isBetween(s.start, s.end),
-                            d = e.isBetween(u(r).subtract(i.ACKED_RECENTLY_WINDOW_DAYS, "days"), r);
+                            d = e.isBetween(u(a).subtract(i.ACKED_RECENTLY_WINDOW_DAYS, "days"), a);
                         return n || d && !l ? void 0 : i.UpcomingGuildEventNoticeTypes.EVENT_STARTING_SOON
                     }
                     return i.UpcomingGuildEventNoticeTypes.EVENT_STARTING_SOON
                 }
                 let o = d.default.extractTimestamp(e.id),
-                    f = Math.min((null != n ? n : o) + i.NEW_EVENT_WINDOW_MILLISECONDS, r),
-                    c = a.isBetween(o, f);
+                    f = Math.min((null != n ? n : o) + i.NEW_EVENT_WINDOW_MILLISECONDS, a),
+                    c = r.isBetween(o, f);
                 if (c && null == t && !l) return i.UpcomingGuildEventNoticeTypes.NEW_EVENT
             }
         },
@@ -400,8 +400,8 @@
                 u = n("913144"),
                 d = n("271938"),
                 i = n("398604"),
-                a = n("49129"),
-                r = n("745049");
+                r = n("49129"),
+                a = n("745049");
             let s = {},
                 o = {};
 
@@ -455,7 +455,7 @@
                     let {
                         guildScheduledEvent: t
                     } = e;
-                    (t.status === r.GuildScheduledEventStatus.CANCELED || t.status === r.GuildScheduledEventStatus.COMPLETED) && f(t.id)
+                    (t.status === a.GuildScheduledEventStatus.CANCELED || t.status === a.GuildScheduledEventStatus.COMPLETED) && f(t.id)
                 },
                 GUILD_SCHEDULED_EVENT_DELETE: function(e) {
                     let {
@@ -470,12 +470,12 @@
                     } = e, l = d.default.getId();
                     if (t !== l) return;
                     let u = i.default.getGuildScheduledEvent(n);
-                    if (null == u || u.status !== r.GuildScheduledEventStatus.SCHEDULED) return;
+                    if (null == u || u.status !== a.GuildScheduledEventStatus.SCHEDULED) return;
                     let f = s[n];
                     if (null != f) return;
                     let c = o[n],
-                        E = (0, a.getNextShownUpcomingEventNoticeType)(u, void 0, c, !1);
-                    if (E === r.UpcomingGuildEventNoticeTypes.NEW_EVENT) {
+                        E = (0, r.getNextShownUpcomingEventNoticeType)(u, void 0, c, !1);
+                    if (E === a.UpcomingGuildEventNoticeTypes.NEW_EVENT) {
                         let e = {
                             ...s
                         };
@@ -524,8 +524,8 @@
                 u = n("446674"),
                 d = n("962199"),
                 i = n("42203"),
-                a = n("923959"),
-                r = n("305961"),
+                r = n("923959"),
+                a = n("305961"),
                 s = n("957255"),
                 o = n("449008"),
                 f = n("398604"),
@@ -533,17 +533,17 @@
                 E = n("431934"),
                 C = n("822516"),
                 S = n("745049"),
-                h = n("49111");
-            let v = [];
+                v = n("49111");
+            let h = [];
 
             function _(e, t) {
-                return (0, u.useStateFromStoresArray)([r.default, d.default, f.default, s.default, i.default, a.default], () => {
-                    let n = r.default.getGuild(e);
-                    if (null == n) return v;
-                    let l = n.hasFeature(h.GuildFeatures.HUB);
+                return (0, u.useStateFromStoresArray)([a.default, d.default, f.default, s.default, i.default, r.default], () => {
+                    let n = a.default.getGuild(e);
+                    if (null == n) return h;
+                    let l = n.hasFeature(v.GuildFeatures.HUB);
                     if (l) {
                         var u, c;
-                        let e = null === (u = a.default.getDefaultChannel(n.id)) || void 0 === u ? void 0 : u.id,
+                        let e = null === (u = r.default.getDefaultChannel(n.id)) || void 0 === u ? void 0 : u.id,
                             t = null !== (c = d.default.getEventDirectoryEntries(e)) && void 0 !== c ? c : [];
                         return t.map(e => {
                             let t = e.scheduledEventId,
@@ -556,7 +556,7 @@
                         let t = e.channel_id;
                         if (null == t) return !0;
                         let n = i.default.getChannel(t);
-                        return s.default.can(h.Permissions.VIEW_CHANNEL, n)
+                        return s.default.can(v.Permissions.VIEW_CHANNEL, n)
                     })
                 }, [t, e])
             }
@@ -564,7 +564,7 @@
             function N(e) {
                 return (0, u.useStateFromStores)([f.default, i.default, s.default], () => {
                     let t = i.default.getChannel(e);
-                    if (!s.default.can(h.Permissions.VIEW_CHANNEL, t)) return null;
+                    if (!s.default.can(v.Permissions.VIEW_CHANNEL, t)) return null;
                     let n = null == t ? void 0 : t.guild_id;
                     if (null == n) return null;
                     let l = f.default.getGuildScheduledEventsByIndex(f.StaticGuildEventIndexes.CHANNEL_EVENT_ACTIVE(e));
@@ -592,22 +592,25 @@
                             if (e.entity_type === S.GuildScheduledEventEntityTypes.NONE || e.status !== S.GuildScheduledEventStatus.SCHEDULED) return !1;
                             if (null == e.channel_id) return !0;
                             let t = i.default.getChannel(e.channel_id);
-                            return s.default.can(h.Permissions.VIEW_CHANNEL, t)
+                            return s.default.can(v.Permissions.VIEW_CHANNEL, t)
                         })
                     }, [t])),
                     d = (0, u.useStateFromStoresObject)([E.default], () => E.default.getAllEventDismissals()),
-                    a = (0, u.useStateFromStoresObject)([E.default], () => E.default.getAllUpcomingNoticeSeenTimes()),
-                    r = (0, u.useStateFromStoresObject)([f.default], () => null == l ? {} : l.reduce((e, t) => ({
-                        ...e,
-                        [t.id]: f.default.hasRsvp(t.id, null)
-                    }), {}), [l]);
-                if (null != l && null != r)
+                    r = (0, u.useStateFromStoresObject)([E.default], () => E.default.getAllUpcomingNoticeSeenTimes()),
+                    a = (0, u.useStateFromStoresObject)([f.default], () => null == l ? {} : l.reduce((e, t) => {
+                        let n = (0, C.getNextRecurrenceIdInEvent)(t);
+                        return {
+                            ...e,
+                            [t.id]: f.default.isInterestedInEventRecurrence(t.id, n)
+                        }
+                    }, {}), [l]);
+                if (null != l && null != a)
                     for (let e = 0; e < l.length; e++) {
                         ;
                         let t = l[e],
                             u = d[t.id],
-                            i = a[t.id],
-                            s = null !== (n = r[t.id]) && void 0 !== n && n,
+                            i = r[t.id],
+                            s = null !== (n = a[t.id]) && void 0 !== n && n,
                             o = (0, c.getNextShownUpcomingEventNoticeType)(t, u, i, s);
                         if (null != o) return {
                             upcomingEvent: t,
@@ -623,7 +626,7 @@
                         if (e.entity_type === S.GuildScheduledEventEntityTypes.NONE || !(0, f.isGuildScheduledEventActive)(e)) return !1;
                         if (null == e.channel_id) return !0;
                         let t = i.default.getChannel(e.channel_id);
-                        return s.default.can(h.Permissions.VIEW_CHANNEL, t)
+                        return s.default.can(v.Permissions.VIEW_CHANNEL, t)
                     })
                 }, [e])
             }
@@ -675,15 +678,15 @@
                 u = n("305961"),
                 d = n("957255"),
                 i = n("800762"),
-                a = n("404008"),
-                r = n("843455");
+                r = n("404008"),
+                a = n("843455");
 
             function s(e) {
-                return (0, l.useStateFromStores)([d.default], () => null == e || !d.default.can(r.Permissions.CONNECT, e), [e])
+                return (0, l.useStateFromStores)([d.default], () => null == e || !d.default.can(a.Permissions.CONNECT, e), [e])
             }
 
             function o(e) {
-                return (0, l.useStateFromStores)([i.default, u.default], () => (0, a.isChannelFull)(e, i.default, u.default))
+                return (0, l.useStateFromStores)([i.default, u.default], () => (0, r.isChannelFull)(e, i.default, u.default))
             }
         },
         303800: function(e, t, n) {
@@ -697,25 +700,25 @@
                 u = n("884691"),
                 d = n("748820"),
                 i = n("469563"),
-                a = n("917798"),
-                r = n("75196"),
+                r = n("917798"),
+                a = n("75196"),
                 s = (0, i.replaceIcon)(function(e) {
                     let {
                         width: t = 16,
                         height: n = 16,
                         color: i = "currentColor",
-                        foreground: a,
+                        foreground: r,
                         ...s
                     } = e, [o] = u.useState(() => (0, d.v4)());
                     return (0, l.jsxs)("svg", {
-                        ...(0, r.default)(s),
+                        ...(0, a.default)(s),
                         width: t,
                         height: n,
                         viewBox: "0 0 24 24",
                         children: [(0, l.jsx)("g", {
                             clipPath: "url(".concat(o, ")"),
                             children: (0, l.jsx)("path", {
-                                className: a,
+                                className: r,
                                 fillRule: "evenodd",
                                 clipRule: "evenodd",
                                 d: "M4.83075 2H13.2444C14.817 2 16.0751 3.13475 15.9965 4.55319V11H14.5025V4.69504H3.57264V18.8085H6V22H4.83075C3.25811 22 2 20.8652 2 19.4468V4.55319C2 3.13475 3.25811 2 4.83075 2Z",
@@ -723,7 +726,7 @@
                             })
                         }), (0, l.jsx)("path", {
                             d: "M10.5646 13H19.4354C20.5365 13 21.4507 13.7808 21.5303 14.7893L21.9965 20.6997C22.0492 21.3677 21.5021 21.9485 20.7746 21.9968C20.7429 21.9989 20.7111 22 20.6792 22C19.8442 22 19.1157 21.4795 18.9105 20.7363L18.5495 19.4286H11.4504L11.0894 20.7363C10.8842 21.4795 10.1557 22 9.3207 22C8.5913 22 8 21.4571 8 20.7873C8 20.7581 8.00115 20.7289 8.00345 20.6997L8.46966 14.7893C8.5492 13.7808 9.46342 13 10.5646 13Z",
-                            className: a,
+                            className: r,
                             fill: i
                         }), (0, l.jsx)("defs", {
                             children: (0, l.jsx)("clipPath", {
@@ -737,7 +740,7 @@
                             })
                         })]
                     })
-                }, a.MobilePhoneControllerIcon)
+                }, r.MobilePhoneControllerIcon)
         },
         998564: function(e, t, n) {
             "use strict";
@@ -756,10 +759,10 @@
                     height: n = 18,
                     color: d = "currentColor",
                     foreground: i,
-                    ...a
+                    ...r
                 } = e;
                 return (0, l.jsx)("svg", {
-                    ...(0, u.default)(a),
+                    ...(0, u.default)(r),
                     width: t,
                     height: n,
                     viewBox: "0 0 18 18",
@@ -790,10 +793,10 @@
                     height: n = 16,
                     color: d = "currentColor",
                     foreground: i,
-                    ...a
+                    ...r
                 } = e;
                 return (0, l.jsx)("svg", {
-                    ...(0, u.default)(a),
+                    ...(0, u.default)(r),
                     width: t,
                     height: n,
                     viewBox: "0 0 60 60",

@@ -188,10 +188,10 @@
                     return C
                 },
                 GuildEventDetails: function() {
-                    return _
+                    return S
                 },
                 default: function() {
-                    return S
+                    return _
                 }
             });
             var n = l("37983");
@@ -222,29 +222,29 @@
                     isNew: h,
                     isHub: T = !1,
                     guildEventId: C,
-                    eventPreview: _,
-                    recurrenceId: S
+                    eventPreview: S,
+                    recurrenceId: _
                 } = e, {
                     storedEvent: D,
                     userCount: p
                 } = (0, r.useStateFromStoresObject)([o.default], () => ({
                     storedEvent: o.default.getGuildScheduledEvent(C),
-                    userCount: o.default.getUserCount(C, null)
-                })), A = null != D ? D : _, R = (0, r.useStateFromStores)([i.default], () => i.default.getNick(a, null == l ? void 0 : l.id), [a, l]), {
+                    userCount: o.default.getUserCount(C, _)
+                })), A = null != D ? D : S, R = (0, r.useStateFromStores)([i.default], () => i.default.getNick(a, null == l ? void 0 : l.id), [a, l]), {
                     startTime: I
-                } = (0, f.default)(C, S), L = (0, E.default)(S, C), j = null != S && null != I, w = null != L ? L.is_canceled ? N.GuildScheduledEventStatus.CANCELED : N.GuildScheduledEventStatus.SCHEDULED : null;
+                } = (0, f.default)(C, _), L = (0, E.default)(_, C), j = null != _ && null != I, w = null != L ? L.is_canceled ? N.GuildScheduledEventStatus.CANCELED : N.GuildScheduledEventStatus.SCHEDULED : null;
                 if (null == A) return null;
                 let {
                     entity_type: M,
-                    status: O,
-                    scheduled_start_time: G,
+                    status: G,
+                    scheduled_start_time: O,
                     recurrence_rule: V
                 } = A;
                 return (0, n.jsxs)("div", {
                     className: s(g.statusContainer, t),
                     children: [(0, n.jsx)(m.GuildEventTimeStatus, {
-                        startTime: j ? I.toISOString() : G,
-                        status: null != w ? w : O,
+                        startTime: j ? I.toISOString() : O,
+                        status: null != w ? w : G,
                         eventType: M,
                         isNew: h,
                         recurrenceRule: (0, v.recurrenceRuleFromServer)(V)
@@ -282,7 +282,7 @@
                 })
             }
 
-            function _(e) {
+            function S(e) {
                 let {
                     headerVariant: t = "heading-lg/medium",
                     descriptionClassName: l,
@@ -321,7 +321,7 @@
                 })
             }
 
-            function S(e) {
+            function _(e) {
                 let {
                     headerVariant: t,
                     descriptionClassName: l,
@@ -348,7 +348,7 @@
                         guildEventId: E,
                         eventPreview: f,
                         recurrenceId: v
-                    }), (0, n.jsx)(_, {
+                    }), (0, n.jsx)(S, {
                         name: s,
                         description: r,
                         headerVariant: t,
@@ -384,15 +384,15 @@
                 x = l("745049"),
                 g = l("843455"),
                 C = l("782340"),
-                _ = l("675644");
+                S = l("675644");
             (a = n || (n = {}))[a.SCHEDULED = 0] = "SCHEDULED", a[a.STARTING_SOON = 1] = "STARTING_SOON", a[a.READY = 2] = "READY", a[a.STARTED = 3] = "STARTED", a[a.ENDED = 4] = "ENDED", a[a.CANCELED = 5] = "CANCELED";
 
-            function S() {
+            function _() {
                 return (0, s.jsx)(T.TextBadge, {
-                    className: _.newBadge,
+                    className: S.newBadge,
                     color: o.default.unsafe_rawColors.BRAND_260.css,
                     text: (0, s.jsx)(E.Text, {
-                        className: _.newBadgeText,
+                        className: S.newBadgeText,
                         variant: "text-xs/bold",
                         children: C.default.Messages.NEW
                     })
@@ -406,14 +406,14 @@
                     tooltipText: n
                 } = e;
                 return (0, s.jsx)("div", {
-                    className: i(_.eventStatusContainer, l),
+                    className: i(S.eventStatusContainer, l),
                     children: (0, s.jsx)(E.Tooltip, {
                         position: "right",
                         text: n,
                         shouldShow: null != n,
                         children: e => (0, s.jsx)("div", {
                             ...e,
-                            className: i(_.eventStatusContainer, l),
+                            className: i(S.eventStatusContainer, l),
                             children: t
                         })
                     })
@@ -438,11 +438,11 @@
                     endDateTimeString: j,
                     currentOrPastEvent: w,
                     upcomingEvent: M,
-                    diffMinutes: O
-                }, G] = r.useState((0, m.getEventTimeData)(t, u));
+                    diffMinutes: G
+                }, O] = r.useState((0, m.getEventTimeData)(t, u));
                 r.useEffect(() => {
-                    G((0, m.getEventTimeData)(t, u));
-                    let e = setInterval(() => G((0, m.getEventTimeData)(t, u)), 1e3);
+                    O((0, m.getEventTimeData)(t, u));
+                    let e = setInterval(() => O((0, m.getEventTimeData)(t, u)), 1e3);
                     return () => {
                         clearInterval(e)
                     }
@@ -467,7 +467,7 @@
                                     startHook: e => (0, s.jsx)(E.Text, {
                                         color: "text-positive",
                                         variant: "text-sm/semibold",
-                                        className: _.liveEventEndTime,
+                                        className: S.liveEventEndTime,
                                         children: e
                                     }),
                                     end: n
@@ -475,10 +475,10 @@
                             default:
                                 return t
                         }
-                    }(b, V, c, j, O),
+                    }(b, V, c, j, G),
                     {
-                        Icon: B,
-                        iconColor: H,
+                        Icon: H,
+                        iconColor: B,
                         textColor: P,
                         tooltipText: k
                     } = r.useMemo(() => (function(e) {
@@ -555,15 +555,15 @@
                 }
                 return (0, s.jsxs)(D, {
                     className: i(a, {
-                        [_.isRecurring]: null != y
+                        [S.isRecurring]: null != y
                     }),
                     tooltipText: k,
-                    children: [T ? (0, s.jsx)(S, {}) : (0, s.jsx)(B, {
-                        color: H,
+                    children: [T && l === x.GuildScheduledEventStatus.SCHEDULED ? (0, s.jsx)(_, {}) : (0, s.jsx)(H, {
+                        color: B,
                         width: 20,
                         height: 20
                     }), (0, s.jsxs)("div", {
-                        className: _.eventStatusLabel,
+                        className: S.eventStatusLabel,
                         children: [(0, s.jsx)(E.Text, {
                             color: P,
                             variant: o,

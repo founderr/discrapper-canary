@@ -382,70 +382,75 @@
             "use strict";
             n.r(t), n.d(t, {
                 MAX_DAYS_AHEAD_AN_EVENT_CAN_START: function() {
-                    return u
-                },
-                MAX_DAYS_AHEAD_AN_EVENT_CAN_END: function() {
-                    return o
-                },
-                MAX_YEARS_AHEAD_RECURRING_EVENT: function() {
                     return c
                 },
+                MAX_DAYS_AHEAD_AN_EVENT_CAN_END: function() {
+                    return d
+                },
+                MAX_YEARS_AHEAD_RECURRING_EVENT: function() {
+                    return f
+                },
                 getInitialEventStartDate: function() {
-                    return h
+                    return g
                 },
                 getEventTimeData: function() {
-                    return S
-                },
-                getScheduleFromEventData: function() {
                     return N
                 },
-                getScheduleFromEvent: function() {
-                    return C
-                },
-                getRRule: function() {
+                getScheduleFromEventData: function() {
                     return T
                 },
-                generateNextRecurrences: function() {
+                getScheduleFromEvent: function() {
                     return m
                 },
-                recurrenceOptionToRecurrenceRule: function() {
+                getRRule: function() {
+                    return x
+                },
+                generateNextRecurrences: function() {
                     return I
                 },
-                recurrenceRuleToOption: function() {
+                getNextRecurrenceIdInEvent: function() {
                     return R
+                },
+                recurrenceOptionToRecurrenceRule: function() {
+                    return A
+                },
+                recurrenceRuleToOption: function() {
+                    return L
                 }
             }), n("222007"), n("424973");
             var l = n("917351"),
                 a = n("866227"),
                 r = n.n(a),
                 s = n("614137"),
-                i = n("757767");
+                i = n("249654"),
+                u = n("718517"),
+                o = n("757767");
             n("745049");
-            let u = 365,
-                o = u + 1,
-                c = 4,
-                d = [s.RRule.MO.weekday, s.RRule.TU.weekday, s.RRule.WE.weekday, s.RRule.TH.weekday, s.RRule.FR.weekday],
-                f = [s.RRule.SU.weekday, s.RRule.MO.weekday, s.RRule.TU.weekday, s.RRule.WE.weekday, s.RRule.TH.weekday],
-                E = [s.RRule.TU.weekday, s.RRule.WE.weekday, s.RRule.TH.weekday, s.RRule.FR.weekday, s.RRule.SA.weekday],
-                h = () => {
+            let c = 365,
+                d = c + 1,
+                f = 4,
+                E = [s.RRule.MO.weekday, s.RRule.TU.weekday, s.RRule.WE.weekday, s.RRule.TH.weekday, s.RRule.FR.weekday],
+                h = [s.RRule.SU.weekday, s.RRule.MO.weekday, s.RRule.TU.weekday, s.RRule.WE.weekday, s.RRule.TH.weekday],
+                _ = [s.RRule.TU.weekday, s.RRule.WE.weekday, s.RRule.TH.weekday, s.RRule.FR.weekday, s.RRule.SA.weekday],
+                g = () => {
                     let e = r().add(1, "hour"),
                         t = e.hour();
                     return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0)
                 },
-                _ = (e, t) => e.format(e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT"),
-                g = (e, t) => {
+                S = (e, t) => e.format(e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT"),
+                v = (e, t) => {
                     let n = e.diff(t, "days");
-                    return n > 1 ? _(e, t) : e.calendar(t)
+                    return n > 1 ? S(e, t) : e.calendar(t)
                 };
 
-            function S(e, t, n) {
+            function N(e, t, n) {
                 null == n && (n = r());
                 let l = r(e),
                     a = null != t && "" !== t ? r(t) : void 0,
                     s = null != t && l.isSame(a, "day");
                 return {
-                    startDateTimeString: g(l, n),
-                    endDateTimeString: null != a ? s ? a.format("LT") : _(a, n) : void 0,
+                    startDateTimeString: v(l, n),
+                    endDateTimeString: null != a ? s ? a.format("LT") : S(a, n) : void 0,
                     currentOrPastEvent: l <= n,
                     upcomingEvent: l <= r().add(1, "hour"),
                     withinStartWindow: l <= r().add(15, "minute"),
@@ -453,7 +458,7 @@
                 }
             }
 
-            function v(e, t) {
+            function C(e, t) {
                 let n;
                 return null != e && (n = {
                     startDate: r(e),
@@ -461,15 +466,15 @@
                 }, null != t && (n.endDate = r(t))), n
             }
 
-            function N(e) {
-                return v(e.scheduledStartTime, e.scheduledEndTime)
-            }
-
-            function C(e) {
-                return v(e.scheduled_start_time, e.scheduled_end_time)
-            }
-
             function T(e) {
+                return C(e.scheduledStartTime, e.scheduledEndTime)
+            }
+
+            function m(e) {
+                return C(e.scheduled_start_time, e.scheduled_end_time)
+            }
+
+            function x(e) {
                 return new s.RRule({
                     dtstart: new Date(e.start),
                     until: null != e.end ? new Date(e.end) : null,
@@ -483,12 +488,12 @@
                 })
             }
 
-            function m(e, t, n) {
+            function I(e, t, n) {
                 let l = [],
                     a = null == n,
                     r = null != n ? n : new Date,
                     s = new Date;
-                s.setFullYear(s.getFullYear() + c);
+                s.setFullYear(s.getFullYear() + f);
                 let i = a ? e + 1 : e;
                 for (let e = 0; e < i && r < s; e++) {
                     let n = t.after(r);
@@ -498,30 +503,40 @@
                 return l
             }
 
-            function x(e) {
-                let t = new s.Weekday(e.toDate().getDay()),
-                    n = new s.Weekday(e.toDate().getUTCDay());
-                return n.weekday - t.weekday > 0 ? E : n.weekday - t.weekday < 0 ? f : d
+            function R(e) {
+                let t = function(e) {
+                    var t;
+                    if (null == e.recurrence_rule) return null;
+                    let n = x(e.recurrence_rule);
+                    return null !== (t = I(1, n, new Date)[0]) && void 0 !== t ? t : null
+                }(e);
+                return null != t ? i.default.fromTimestamp(Math.floor(t.getTime() / u.default.Millis.SECOND) * u.default.Millis.SECOND) : null
             }
 
-            function I(e, t) {
+            function p(e) {
+                let t = new s.Weekday(e.toDate().getDay()),
+                    n = new s.Weekday(e.toDate().getUTCDay());
+                return n.weekday - t.weekday > 0 ? _ : n.weekday - t.weekday < 0 ? h : E
+            }
+
+            function A(e, t) {
                 let n = function(e, t) {
-                    let n = x(t),
+                    let n = p(t),
                         l = t.toDate();
                     switch (l.setMilliseconds(0), e) {
-                        case i.RecurrenceOptions.NONE:
+                        case o.RecurrenceOptions.NONE:
                             return null;
-                        case i.RecurrenceOptions.WEEKLY:
+                        case o.RecurrenceOptions.WEEKLY:
                             return new s.RRule({
                                 dtstart: l,
                                 freq: s.RRule.WEEKLY
                             });
-                        case i.RecurrenceOptions.YEARLY:
+                        case o.RecurrenceOptions.YEARLY:
                             return new s.RRule({
                                 dtstart: l,
                                 freq: s.RRule.YEARLY
                             });
-                        case i.RecurrenceOptions.WEEKDAY_ONLY:
+                        case o.RecurrenceOptions.WEEKDAY_ONLY:
                             return new s.RRule({
                                 dtstart: l,
                                 freq: s.RRule.DAILY,
@@ -534,8 +549,8 @@
                     dtstart: l,
                     until: a,
                     freq: r,
-                    interval: u,
-                    byweekday: o,
+                    interval: i,
+                    byweekday: u,
                     bymonth: c,
                     bymonthday: d,
                     byyearday: f,
@@ -545,8 +560,8 @@
                     start: l.toISOString(),
                     end: null == a ? void 0 : a.toISOString(),
                     frequency: r,
-                    interval: u,
-                    byWeekday: null != o ? new Set(o) : null,
+                    interval: i,
+                    byWeekday: null != u ? new Set(u) : null,
                     byMonth: null != c ? new Set(c) : null,
                     byMonthDay: null != d ? new Set(d) : null,
                     byYearDay: null != f ? new Set(f) : null,
@@ -554,19 +569,19 @@
                 }
             }
 
-            function R(e, t) {
-                if (null == t) return i.RecurrenceOptions.NONE;
-                let n = T(t);
+            function L(e, t) {
+                if (null == t) return o.RecurrenceOptions.NONE;
+                let n = x(t);
                 switch (n.options.freq) {
                     case s.RRule.WEEKLY:
-                        return i.RecurrenceOptions.WEEKLY;
+                        return o.RecurrenceOptions.WEEKLY;
                     case s.RRule.YEARLY:
-                        return i.RecurrenceOptions.YEARLY;
+                        return o.RecurrenceOptions.YEARLY;
                     case s.RRule.DAILY:
-                        if (!(0, l.isEqual)(n.options.byweekday, x(e))) return i.RecurrenceOptions.NONE;
-                        return i.RecurrenceOptions.WEEKDAY_ONLY;
+                        if (!(0, l.isEqual)(n.options.byweekday, p(e))) return o.RecurrenceOptions.NONE;
+                        return o.RecurrenceOptions.WEEKDAY_ONLY;
                     default:
-                        return i.RecurrenceOptions.NONE
+                        return o.RecurrenceOptions.NONE
                 }
             }
         },

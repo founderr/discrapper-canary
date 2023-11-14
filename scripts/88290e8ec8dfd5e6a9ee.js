@@ -829,7 +829,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return M
                 }
             });
             var i = n("37983");
@@ -853,17 +853,17 @@
                 v = n("613767"),
                 G = n("822516"),
                 L = n("669195"),
-                h = n("745049"),
-                D = n("49111"),
-                g = n("782340");
+                h = n("936965"),
+                D = n("745049"),
+                g = n("49111"),
+                p = n("782340");
 
-            function p(e) {
+            function M(e) {
                 let {
                     guild: t,
-                    channel: p,
-                    guildScheduledEvent: M,
-                    isActive: R,
-                    rsvped: P,
+                    channel: M,
+                    guildScheduledEvent: R,
+                    isActive: P,
                     recurrenceId: A,
                     onActionTaken: m
                 } = e, {
@@ -871,19 +871,19 @@
                     id: y,
                     entity_type: O,
                     guild_id: V
-                } = M, {
+                } = R, {
                     canManageGuildEvent: x
-                } = (0, d.useManageResourcePermissions)(null != p ? p : t), w = x(M), H = (0, C.default)(M), b = (0, v.useIsChannelPublic)(null == p ? void 0 : p.id, M.id), {
+                } = (0, d.useManageResourcePermissions)(null != M ? M : t), w = x(R), H = (0, C.default)(R), b = (0, v.useIsChannelPublic)(null == M ? void 0 : M.id, R.id), {
                     withinStartWindow: B
-                } = (0, G.getEventTimeData)(U), F = (0, r.useStateFromStores)([_.default], () => (null == p ? !void 0 : !p.isGuildVocal()) || _.default.can(D.Permissions.CONNECT, p), [p]), Y = (0, s.useShowMemberVerificationGate)(V);
+                } = (0, G.getEventTimeData)(U), Y = (0, r.useStateFromStores)([_.default], () => (null == M ? !void 0 : !M.isGuildVocal()) || _.default.can(g.Permissions.CONNECT, M), [M]), F = (0, s.useShowMemberVerificationGate)(V);
 
                 function j(e) {
-                    e.stopPropagation(), P ? N.default.deleteRsvpForGuildEvent(y, A, V) : N.default.createRsvpForGuildEvent(y, A, V, h.GuildScheduledEventUserResponses.INTERESTED)
+                    e.stopPropagation(), (0, h.default)(y, A, V)
                 }
                 async function k(e) {
                     e.stopPropagation(), await o.default.joinGuild(V), f.default.addConditionalChangeListener(() => {
                         let t = f.default.getGuild(V);
-                        return null == t || (!R && j(e), Z(e), !1)
+                        return null == t || (!P && j(e), Z(e), !1)
                     })
                 }
 
@@ -894,15 +894,15 @@
                 }
                 return {
                     onDeleteClick: w ? function(e) {
-                        e.stopPropagation(), w && !R && (0, u.openModal)(e => (0, i.jsx)(u.ConfirmModal, {
+                        e.stopPropagation(), w && !P && (0, u.openModal)(e => (0, i.jsx)(u.ConfirmModal, {
                             ...e,
-                            header: g.default.Messages.GUILD_EVENT_DELETE_CONFIRM_HEADER,
-                            confirmText: g.default.Messages.DELETE,
-                            cancelText: g.default.Messages.CANCEL,
+                            header: p.default.Messages.GUILD_EVENT_DELETE_CONFIRM_HEADER,
+                            confirmText: p.default.Messages.DELETE,
+                            cancelText: p.default.Messages.CANCEL,
                             onConfirm: () => N.default.deleteGuildEvent(y, V),
                             children: (0, i.jsx)(u.Text, {
                                 variant: "text-md/normal",
-                                children: g.default.Messages.GUILD_EVENT_DELETE_CONFIRM_BODY
+                                children: p.default.Messages.GUILD_EVENT_DELETE_CONFIRM_BODY
                             })
                         }))
                     } : void 0,
@@ -914,17 +914,17 @@
                             return n => (0, i.jsx)(e, {
                                 guildEventId: y,
                                 recurrenceId: A,
-                                channel: p,
+                                channel: M,
                                 guild: t,
                                 ...n
                             })
                         })
                     },
-                    onJoinClick: F || Y ? function(e) {
-                        if (e.stopPropagation(), Y) {
+                    onJoinClick: Y || F ? function(e) {
+                        if (e.stopPropagation(), F) {
                             null == m || m(), (0, a.openMemberVerificationModal)(V);
                             return
-                        }(null == p ? void 0 : p.isGuildStageVoice()) ? ((0, E.connectAndOpen)(p), null == m || m()) : (null == p ? void 0 : p.isGuildVoice()) && (N.default.joinVoiceEvent(p.guild_id, p.id), null == m || m())
+                        }(null == M ? void 0 : M.isGuildStageVoice()) ? ((0, E.connectAndOpen)(M), null == m || m()) : (null == M ? void 0 : M.isGuildVoice()) && (N.default.joinVoiceEvent(M.guild_id, M.id), null == m || m())
                     } : void 0,
                     onRsvpClick: j,
                     onStartClick: w && B ? function(e) {
@@ -934,7 +934,7 @@
                             } = await n.el("298843").then(n.bind(n, "298843"));
                             return t => (0, i.jsx)(e, {
                                 ...t,
-                                event: M,
+                                event: R,
                                 onSuccess: m
                             })
                         })
@@ -946,7 +946,7 @@
                                     guildId: V,
                                     guildEventId: y
                                 });
-                                (0, S.copy)(e), T.default.track(D.AnalyticEvents.GUILD_SCHEDULED_EVENT_LINK_COPIED, {
+                                (0, S.copy)(e), T.default.track(g.AnalyticEvents.GUILD_SCHEDULED_EVENT_LINK_COPIED, {
                                     guild_id: V,
                                     guild_scheduled_event_id: y
                                 });
@@ -958,27 +958,27 @@
                                 return n => (0, i.jsx)(e, {
                                     ...n,
                                     guild: t,
-                                    channel: p,
-                                    guildScheduledEvent: M,
-                                    source: D.InstantInviteSources.GUILD_EVENTS
+                                    channel: M,
+                                    guildScheduledEvent: R,
+                                    source: g.InstantInviteSources.GUILD_EVENTS
                                 })
                             })
                         }
                     },
-                    onEndClick: w && O === h.GuildScheduledEventEntityTypes.EXTERNAL && R ? function(e) {
+                    onEndClick: w && O === D.GuildScheduledEventEntityTypes.EXTERNAL && P ? function(e) {
                         if (e.stopPropagation(), !w) return;
                         let t = () => {
                             N.default.endEvent(y, V), (0, u.closeAllModals)()
                         };
                         (0, u.openModal)(e => (0, i.jsx)(u.ConfirmModal, {
                             ...e,
-                            header: g.default.Messages.END_EVENT,
-                            confirmText: g.default.Messages.GUILD_EVENT_END_PROMPT_CONFIRM,
-                            cancelText: g.default.Messages.CANCEL,
+                            header: p.default.Messages.END_EVENT,
+                            confirmText: p.default.Messages.GUILD_EVENT_END_PROMPT_CONFIRM,
+                            cancelText: p.default.Messages.CANCEL,
                             onConfirm: t,
                             children: (0, i.jsx)(u.Text, {
                                 variant: "text-md/normal",
-                                children: g.default.Messages.GUILD_EVENT_EXTERNAL_END_PROMPT_TITLE
+                                children: p.default.Messages.GUILD_EVENT_EXTERNAL_END_PROMPT_TITLE
                             })
                         }))
                     } : void 0,

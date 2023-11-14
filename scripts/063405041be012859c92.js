@@ -31,12 +31,12 @@
                         onClose: n,
                         onConfirm: v,
                         transitionState: g
-                    } = e, D = (0, a.default)(t, !0), A = t.id, I = t.isForumPost(), R = (0, i.useStateFromStores)([h.default], () => h.default.getGuild(t.getGuildId())), M = (0, c.useGuildChannelScheduledEvents)(A), {
+                    } = e, D = (0, a.default)(t, !0), A = t.id, I = t.isForumPost(), M = (0, i.useStateFromStores)([h.default], () => h.default.getGuild(t.getGuildId())), R = (0, c.useGuildChannelScheduledEvents)(A), {
                         isSubscriptionGated: L
-                    } = (0, o.default)(t.id), y = (0, E.default)(R, t), [O, p] = u.useState(null), G = (0, i.useStateFromStores)([N.default], () => t.isOwner(N.default.getId()), [t]), U = (0, i.useStateFromStores)([T.default], () => T.default.can(t.isThread() ? S.Permissions.MANAGE_THREADS : S.Permissions.MANAGE_CHANNELS, t), [t]), w = (0, i.useStateFromStores)([_.default], () => {
+                    } = (0, o.default)(t.id), y = (0, E.default)(M, t), [O, p] = u.useState(null), G = (0, i.useStateFromStores)([N.default], () => t.isOwner(N.default.getId()), [t]), U = (0, i.useStateFromStores)([T.default], () => T.default.can(t.isThread() ? S.Permissions.MANAGE_THREADS : S.Permissions.MANAGE_CHANNELS, t), [t]), w = (0, i.useStateFromStores)([_.default], () => {
                         var e;
                         return null !== (e = _.default.getCount(t.id)) && void 0 !== e ? e : 0
-                    }, [t.id]), H = I && (U || G && w < 1), F = M.length > 0 && (t.type === S.ChannelTypes.GUILD_VOICE || t.type === S.ChannelTypes.GUILD_STAGE_VOICE);
+                    }, [t.id]), H = I && (U || G && w < 1), F = R.length > 0 && (t.type === S.ChannelTypes.GUILD_VOICE || t.type === S.ChannelTypes.GUILD_STAGE_VOICE);
                     if (u.useEffect(() => {
                             (async () => {
                                 let e = await (0, d.isDefaultChannelThresholdMetAfterDelete)(t.getGuildId(), A);
@@ -71,7 +71,7 @@
                                     variant: "text-md/normal",
                                     children: e.format({
                                         onClick: () => {
-                                            null != R && (f.default.open(R.id, S.GuildSettingsSections.ONBOARDING), null == n || n())
+                                            null != M && (f.default.open(M.id, S.GuildSettingsSections.ONBOARDING), null == n || n())
                                         }
                                     })
                                 })]
@@ -83,9 +83,9 @@
                             })]
                         })
                     }
-                    if (null == R) return null;
-                    if (R.hasFeature(S.GuildFeatures.COMMUNITY) && (R.rulesChannelId === A || R.publicUpdatesChannelId === A)) {
-                        let e = R.rulesChannelId === A,
+                    if (null == M) return null;
+                    if (M.hasFeature(S.GuildFeatures.COMMUNITY) && (M.rulesChannelId === A || M.publicUpdatesChannelId === A)) {
+                        let e = M.rulesChannelId === A,
                             t = e ? m.default.Messages.DELETE_RULES_CHANNEL_BODY : m.default.Messages.DELETE_UPDATES_CHANNEL_BODY;
                         return (0, l.jsxs)(r.ModalRoot, {
                             transitionState: g,
@@ -106,7 +106,7 @@
                                     className: C.modalText,
                                     children: m.default.Messages.DESIGNATE_OTHER_CHANNEL.format({
                                         onClick: () => {
-                                            f.default.open(R.id, S.GuildSettingsSections.COMMUNITY), null == n || n()
+                                            f.default.open(M.id, S.GuildSettingsSections.COMMUNITY), null == n || n()
                                         }
                                     })
                                 })]
@@ -176,7 +176,7 @@
                                     color: "header-secondary",
                                     className: C.warningText,
                                     children: m.default.Messages.GUILD_EVENT_CHANNEL_DELETE_GUILD_EVENTS.format({
-                                        count: M.length
+                                        count: R.length
                                     })
                                 }) : null]
                             }), (0, l.jsxs)(r.ModalFooter, {
@@ -525,10 +525,10 @@
                     return I
                 },
                 isChannelValidForResourceChannel: function() {
-                    return R
+                    return M
                 },
                 isChannelValidForNewMemberAction: function() {
-                    return M
+                    return R
                 }
             });
             var l, u, i = n("42203"),
@@ -662,11 +662,11 @@
                 return null != e && (!!A(e) || (null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < s) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0)
             }
 
-            function R(e) {
+            function M(e) {
                 return e.type === d.ChannelTypes.GUILD_TEXT && !a.default.canEveryoneRole(d.Permissions.SEND_MESSAGES, e) && a.default.canEveryoneRole(d.Permissions.VIEW_CHANNEL, e)
             }
 
-            function M(e) {
+            function R(e) {
                 switch (e.type) {
                     case d.ChannelTypes.GUILD_TEXT:
                     case d.ChannelTypes.GUILD_ANNOUNCEMENT:
@@ -1118,10 +1118,13 @@
                     }, [t])),
                     i = (0, u.useStateFromStoresObject)([f.default], () => f.default.getAllEventDismissals()),
                     a = (0, u.useStateFromStoresObject)([f.default], () => f.default.getAllUpcomingNoticeSeenTimes()),
-                    d = (0, u.useStateFromStoresObject)([E.default], () => null == l ? {} : l.reduce((e, t) => ({
-                        ...e,
-                        [t.id]: E.default.hasRsvp(t.id, null)
-                    }), {}), [l]);
+                    d = (0, u.useStateFromStoresObject)([E.default], () => null == l ? {} : l.reduce((e, t) => {
+                        let n = (0, _.getNextRecurrenceIdInEvent)(t);
+                        return {
+                            ...e,
+                            [t.id]: E.default.isInterestedInEventRecurrence(t.id, n)
+                        }
+                    }, {}), [l]);
                 if (null != l && null != d)
                     for (let e = 0; e < l.length; e++) {
                         ;
@@ -1186,70 +1189,75 @@
             "use strict";
             n.r(t), n.d(t, {
                 MAX_DAYS_AHEAD_AN_EVENT_CAN_START: function() {
-                    return d
-                },
-                MAX_DAYS_AHEAD_AN_EVENT_CAN_END: function() {
-                    return s
-                },
-                MAX_YEARS_AHEAD_RECURRING_EVENT: function() {
                     return o
                 },
+                MAX_DAYS_AHEAD_AN_EVENT_CAN_END: function() {
+                    return E
+                },
+                MAX_YEARS_AHEAD_RECURRING_EVENT: function() {
+                    return c
+                },
                 getInitialEventStartDate: function() {
-                    return _
+                    return h
                 },
                 getEventTimeData: function() {
-                    return T
-                },
-                getScheduleFromEventData: function() {
                     return m
                 },
-                getScheduleFromEvent: function() {
-                    return C
-                },
-                getRRule: function() {
+                getScheduleFromEventData: function() {
                     return v
                 },
-                generateNextRecurrences: function() {
+                getScheduleFromEvent: function() {
                     return g
                 },
-                recurrenceOptionToRecurrenceRule: function() {
+                getRRule: function() {
+                    return D
+                },
+                generateNextRecurrences: function() {
                     return A
                 },
-                recurrenceRuleToOption: function() {
+                getNextRecurrenceIdInEvent: function() {
                     return I
+                },
+                recurrenceOptionToRecurrenceRule: function() {
+                    return R
+                },
+                recurrenceRuleToOption: function() {
+                    return L
                 }
             }), n("222007"), n("424973");
             var l = n("917351"),
                 u = n("866227"),
                 i = n.n(u),
                 r = n("614137"),
-                a = n("757767");
+                a = n("249654"),
+                d = n("718517"),
+                s = n("757767");
             n("745049");
-            let d = 365,
-                s = d + 1,
-                o = 4,
-                E = [r.RRule.MO.weekday, r.RRule.TU.weekday, r.RRule.WE.weekday, r.RRule.TH.weekday, r.RRule.FR.weekday],
-                c = [r.RRule.SU.weekday, r.RRule.MO.weekday, r.RRule.TU.weekday, r.RRule.WE.weekday, r.RRule.TH.weekday],
-                f = [r.RRule.TU.weekday, r.RRule.WE.weekday, r.RRule.TH.weekday, r.RRule.FR.weekday, r.RRule.SA.weekday],
-                _ = () => {
+            let o = 365,
+                E = o + 1,
+                c = 4,
+                f = [r.RRule.MO.weekday, r.RRule.TU.weekday, r.RRule.WE.weekday, r.RRule.TH.weekday, r.RRule.FR.weekday],
+                _ = [r.RRule.SU.weekday, r.RRule.MO.weekday, r.RRule.TU.weekday, r.RRule.WE.weekday, r.RRule.TH.weekday],
+                N = [r.RRule.TU.weekday, r.RRule.WE.weekday, r.RRule.TH.weekday, r.RRule.FR.weekday, r.RRule.SA.weekday],
+                h = () => {
                     let e = i().add(1, "hour"),
                         t = e.hour();
                     return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0)
                 },
-                N = (e, t) => e.format(e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT"),
-                h = (e, t) => {
+                T = (e, t) => e.format(e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT"),
+                S = (e, t) => {
                     let n = e.diff(t, "days");
-                    return n > 1 ? N(e, t) : e.calendar(t)
+                    return n > 1 ? T(e, t) : e.calendar(t)
                 };
 
-            function T(e, t, n) {
+            function m(e, t, n) {
                 null == n && (n = i());
                 let l = i(e),
                     u = null != t && "" !== t ? i(t) : void 0,
                     r = null != t && l.isSame(u, "day");
                 return {
-                    startDateTimeString: h(l, n),
-                    endDateTimeString: null != u ? r ? u.format("LT") : N(u, n) : void 0,
+                    startDateTimeString: S(l, n),
+                    endDateTimeString: null != u ? r ? u.format("LT") : T(u, n) : void 0,
                     currentOrPastEvent: l <= n,
                     upcomingEvent: l <= i().add(1, "hour"),
                     withinStartWindow: l <= i().add(15, "minute"),
@@ -1257,7 +1265,7 @@
                 }
             }
 
-            function S(e, t) {
+            function C(e, t) {
                 let n;
                 return null != e && (n = {
                     startDate: i(e),
@@ -1265,15 +1273,15 @@
                 }, null != t && (n.endDate = i(t))), n
             }
 
-            function m(e) {
-                return S(e.scheduledStartTime, e.scheduledEndTime)
-            }
-
-            function C(e) {
-                return S(e.scheduled_start_time, e.scheduled_end_time)
-            }
-
             function v(e) {
+                return C(e.scheduledStartTime, e.scheduledEndTime)
+            }
+
+            function g(e) {
+                return C(e.scheduled_start_time, e.scheduled_end_time)
+            }
+
+            function D(e) {
                 return new r.RRule({
                     dtstart: new Date(e.start),
                     until: null != e.end ? new Date(e.end) : null,
@@ -1287,12 +1295,12 @@
                 })
             }
 
-            function g(e, t, n) {
+            function A(e, t, n) {
                 let l = [],
                     u = null == n,
                     i = null != n ? n : new Date,
                     r = new Date;
-                r.setFullYear(r.getFullYear() + o);
+                r.setFullYear(r.getFullYear() + c);
                 let a = u ? e + 1 : e;
                 for (let e = 0; e < a && i < r; e++) {
                     let n = t.after(i);
@@ -1302,30 +1310,40 @@
                 return l
             }
 
-            function D(e) {
-                let t = new r.Weekday(e.toDate().getDay()),
-                    n = new r.Weekday(e.toDate().getUTCDay());
-                return n.weekday - t.weekday > 0 ? f : n.weekday - t.weekday < 0 ? c : E
+            function I(e) {
+                let t = function(e) {
+                    var t;
+                    if (null == e.recurrence_rule) return null;
+                    let n = D(e.recurrence_rule);
+                    return null !== (t = A(1, n, new Date)[0]) && void 0 !== t ? t : null
+                }(e);
+                return null != t ? a.default.fromTimestamp(Math.floor(t.getTime() / d.default.Millis.SECOND) * d.default.Millis.SECOND) : null
             }
 
-            function A(e, t) {
+            function M(e) {
+                let t = new r.Weekday(e.toDate().getDay()),
+                    n = new r.Weekday(e.toDate().getUTCDay());
+                return n.weekday - t.weekday > 0 ? N : n.weekday - t.weekday < 0 ? _ : f
+            }
+
+            function R(e, t) {
                 let n = function(e, t) {
-                    let n = D(t),
+                    let n = M(t),
                         l = t.toDate();
                     switch (l.setMilliseconds(0), e) {
-                        case a.RecurrenceOptions.NONE:
+                        case s.RecurrenceOptions.NONE:
                             return null;
-                        case a.RecurrenceOptions.WEEKLY:
+                        case s.RecurrenceOptions.WEEKLY:
                             return new r.RRule({
                                 dtstart: l,
                                 freq: r.RRule.WEEKLY
                             });
-                        case a.RecurrenceOptions.YEARLY:
+                        case s.RecurrenceOptions.YEARLY:
                             return new r.RRule({
                                 dtstart: l,
                                 freq: r.RRule.YEARLY
                             });
-                        case a.RecurrenceOptions.WEEKDAY_ONLY:
+                        case s.RecurrenceOptions.WEEKDAY_ONLY:
                             return new r.RRule({
                                 dtstart: l,
                                 freq: r.RRule.DAILY,
@@ -1338,8 +1356,8 @@
                     dtstart: l,
                     until: u,
                     freq: i,
-                    interval: d,
-                    byweekday: s,
+                    interval: a,
+                    byweekday: d,
                     bymonth: o,
                     bymonthday: E,
                     byyearday: c,
@@ -1349,8 +1367,8 @@
                     start: l.toISOString(),
                     end: null == u ? void 0 : u.toISOString(),
                     frequency: i,
-                    interval: d,
-                    byWeekday: null != s ? new Set(s) : null,
+                    interval: a,
+                    byWeekday: null != d ? new Set(d) : null,
                     byMonth: null != o ? new Set(o) : null,
                     byMonthDay: null != E ? new Set(E) : null,
                     byYearDay: null != c ? new Set(c) : null,
@@ -1358,19 +1376,19 @@
                 }
             }
 
-            function I(e, t) {
-                if (null == t) return a.RecurrenceOptions.NONE;
-                let n = v(t);
+            function L(e, t) {
+                if (null == t) return s.RecurrenceOptions.NONE;
+                let n = D(t);
                 switch (n.options.freq) {
                     case r.RRule.WEEKLY:
-                        return a.RecurrenceOptions.WEEKLY;
+                        return s.RecurrenceOptions.WEEKLY;
                     case r.RRule.YEARLY:
-                        return a.RecurrenceOptions.YEARLY;
+                        return s.RecurrenceOptions.YEARLY;
                     case r.RRule.DAILY:
-                        if (!(0, l.isEqual)(n.options.byweekday, D(e))) return a.RecurrenceOptions.NONE;
-                        return a.RecurrenceOptions.WEEKDAY_ONLY;
+                        if (!(0, l.isEqual)(n.options.byweekday, M(e))) return s.RecurrenceOptions.NONE;
+                        return s.RecurrenceOptions.WEEKDAY_ONLY;
                     default:
-                        return a.RecurrenceOptions.NONE
+                        return s.RecurrenceOptions.NONE
                 }
             }
         },

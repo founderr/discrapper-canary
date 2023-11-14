@@ -308,7 +308,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return v
                 },
                 useActiveEvent: function() {
                     return g
@@ -346,12 +346,12 @@
                 _ = n("822516"),
                 T = n("745049"),
                 S = n("49111");
-            let v = [];
+            let I = [];
 
-            function I(e, t) {
+            function v(e, t) {
                 return (0, u.useStateFromStoresArray)([r.default, a.default, c.default, s.default, i.default, d.default], () => {
                     let n = r.default.getGuild(e);
-                    if (null == n) return v;
+                    if (null == n) return I;
                     let l = n.hasFeature(S.GuildFeatures.HUB);
                     if (l) {
                         var u, E;
@@ -409,10 +409,13 @@
                     }, [t])),
                     a = (0, u.useStateFromStoresObject)([f.default], () => f.default.getAllEventDismissals()),
                     d = (0, u.useStateFromStoresObject)([f.default], () => f.default.getAllUpcomingNoticeSeenTimes()),
-                    r = (0, u.useStateFromStoresObject)([c.default], () => null == l ? {} : l.reduce((e, t) => ({
-                        ...e,
-                        [t.id]: c.default.hasRsvp(t.id, null)
-                    }), {}), [l]);
+                    r = (0, u.useStateFromStoresObject)([c.default], () => null == l ? {} : l.reduce((e, t) => {
+                        let n = (0, _.getNextRecurrenceIdInEvent)(t);
+                        return {
+                            ...e,
+                            [t.id]: c.default.isInterestedInEventRecurrence(t.id, n)
+                        }
+                    }, {}), [l]);
                 if (null != l && null != r)
                     for (let e = 0; e < l.length; e++) {
                         ;
@@ -494,7 +497,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return v
                 }
             });
             var l = n("37983");
@@ -512,13 +515,13 @@
                 _ = n("367989"),
                 T = n("510692"),
                 S = n("49111"),
-                v = n("782340");
+                I = n("782340");
 
-            function I(e) {
+            function v(e) {
                 let {
                     guildEventId: t,
                     recurrenceId: n,
-                    channel: I,
+                    channel: v,
                     guild: g,
                     analyticsContext: N,
                     onSelect: m
@@ -526,23 +529,23 @@
                     guildEventId: t,
                     recurrenceId: n,
                     guild: g,
-                    channel: I
+                    channel: v
                 }), M = (0, o.default)({
                     guildEventId: t,
                     recurrenceId: n,
                     guild: g,
-                    channel: I
-                }), A = (0, c.default)(t, g, I, n), p = (0, E.default)(t, g, I), C = (0, T.default)(t, g, I), D = (0, s.default)(t, g.id, n), O = (0, f.default)(t), R = (0, d.default)({
+                    channel: v
+                }), A = (0, c.default)(t, g, v, n), p = (0, E.default)(t, g, v), C = (0, T.default)(t, g, v), D = (0, s.default)(t, g.id, n), O = (0, f.default)(t), R = (0, d.default)({
                     id: null != n ? n : t,
-                    label: v.default.Messages.COPY_ID_EVENT
-                }), L = (0, r.default)(t, g.id, I);
+                    label: I.default.Messages.COPY_ID_EVENT
+                }), L = (0, r.default)(t, g.id, v);
                 return (0, l.jsx)(i.default, {
                     context: N,
                     object: S.AnalyticsObjects.CONTEXT_MENU,
                     children: (0, l.jsxs)(u.Menu, {
                         navId: "user-context",
                         onClose: a.closeContextMenu,
-                        "aria-label": v.default.Messages.USER_ACTIONS_MENU_LABEL,
+                        "aria-label": I.default.Messages.USER_ACTIONS_MENU_LABEL,
                         onSelect: m,
                         children: [(0, l.jsxs)(u.MenuGroup, {
                             children: [null == n && L, null == n && C, A, null == n && p, M, h, D]
@@ -577,8 +580,8 @@
                 _ = n("773336"),
                 T = n("398604"),
                 S = n("745049"),
-                v = n("782340");
-            let I = "YYYYMMDDTHHmmss",
+                I = n("782340");
+            let v = "YYYYMMDDTHHmmss",
                 g = "YYYY-MM-DDTHH:mm:ss";
 
             function N(e, t, n) {
@@ -588,10 +591,10 @@
                     m = (0, s.useStateFromStores)([T.default], () => T.default.getGuildScheduledEvent(e), [e]),
                     h = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]);
                 if (N || null == m) return null;
-                i = m.entity_type === S.GuildScheduledEventEntityTypes.EXTERNAL ? m.entity_metadata.location : null != n && null != h ? v.default.Messages.CALENDAR_CHANNEL_LOCATION.format({
+                i = m.entity_type === S.GuildScheduledEventEntityTypes.EXTERNAL ? m.entity_metadata.location : null != n && null != h ? I.default.Messages.CALENDAR_CHANNEL_LOCATION.format({
                     channelName: n.name,
                     guildName: h.name
-                }) : v.default.Messages.NOTIFICATION_TITLE_DISCORD;
+                }) : I.default.Messages.NOTIFICATION_TITLE_DISCORD;
                 let M = d(m.scheduled_start_time),
                     A = null != m.scheduled_end_time ? d(m.scheduled_end_time) : M,
                     p = null != m.description && "" !== m.description ? E.default.unparse(m.description, null !== (u = null == n ? void 0 : n.id) && void 0 !== u ? u : "", !0) : "",
@@ -606,16 +609,16 @@
                         }), _.isPlatformEmbedded ? c.default.fileManager.saveWithDialog(e.toString(), "discord-event.ics") : window.open(e.toURL(), "_blank")
                     };
                 return (0, l.jsxs)(o.MenuItem, {
-                    id: v.default.Messages.ADD_TO_CALENDAR,
-                    label: v.default.Messages.ADD_TO_CALENDAR,
+                    id: I.default.Messages.ADD_TO_CALENDAR,
+                    label: I.default.Messages.ADD_TO_CALENDAR,
                     action: C,
                     children: [(0, l.jsx)(o.MenuItem, {
-                        id: v.default.Messages.ADD_TO_GOOGLE_CALENDAR,
-                        label: v.default.Messages.ADD_TO_GOOGLE_CALENDAR,
+                        id: I.default.Messages.ADD_TO_GOOGLE_CALENDAR,
+                        label: I.default.Messages.ADD_TO_GOOGLE_CALENDAR,
                         action: () => {
                             let e = {
                                     text: m.name,
-                                    dates: "".concat(M.format(I), "/").concat(A.format(I)),
+                                    dates: "".concat(M.format(v), "/").concat(A.format(v)),
                                     details: p,
                                     action: "TEMPLATE",
                                     location: i
@@ -624,18 +627,18 @@
                             window.open(t, "_blank")
                         }
                     }), (0, l.jsx)(o.MenuItem, {
-                        id: v.default.Messages.DOWNLOAD_ICS,
-                        label: v.default.Messages.DOWNLOAD_ICS,
+                        id: I.default.Messages.DOWNLOAD_ICS,
+                        label: I.default.Messages.DOWNLOAD_ICS,
                         action: C
                     }), (0, l.jsx)(o.MenuItem, {
-                        id: v.default.Messages.ADD_TO_YAHOO,
-                        label: v.default.Messages.ADD_TO_YAHOO,
+                        id: I.default.Messages.ADD_TO_YAHOO,
+                        label: I.default.Messages.ADD_TO_YAHOO,
                         action: () => {
                             let e = {
                                     v: 60,
                                     title: m.name,
-                                    st: M.format(I),
-                                    et: A.format(I),
+                                    st: M.format(v),
+                                    et: A.format(v),
                                     desc: p,
                                     in_loc: i
                                 },
@@ -643,8 +646,8 @@
                             window.open(t, "_blank")
                         }
                     }), (0, l.jsx)(o.MenuItem, {
-                        id: v.default.Messages.ADD_TO_OUTLOOK,
-                        label: v.default.Messages.ADD_TO_OUTLOOK,
+                        id: I.default.Messages.ADD_TO_OUTLOOK,
+                        label: I.default.Messages.ADD_TO_OUTLOOK,
                         action: () => {
                             let e = {
                                     path: "/calendar/action/compose",
@@ -718,11 +721,11 @@
                     channel: _
                 } = e, T = null != n, {
                     canManageGuildEvent: S
-                } = (0, i.useManageResourcePermissions)(null != _ ? _ : f), [v, I] = (0, u.useStateFromStoresArray)([r.default], () => [r.default.isActive(t), r.default.getGuildScheduledEvent(t)]), g = (0, o.default)(n, null == I ? void 0 : I.id), N = null != I && S(I), m = (null == I ? void 0 : I.recurrence_rule) != null && !T, h = T && (null == g || !g.is_canceled), {
+                } = (0, i.useManageResourcePermissions)(null != _ ? _ : f), [I, v] = (0, u.useStateFromStoresArray)([r.default], () => [r.default.isActive(t), r.default.getGuildScheduledEvent(t)]), g = (0, o.default)(n, null == v ? void 0 : v.id), N = null != v && S(v), m = (null == v ? void 0 : v.recurrence_rule) != null && !T, h = T && (null == g || !g.is_canceled), {
                     startTime: M
                 } = (0, c.default)(t, n);
-                if (!N || v && !m && !T || T && !h || null == I) return null;
-                if (v && T) {
+                if (!N || I && !m && !T || T && !h || null == v) return null;
+                if (I && T) {
                     var A;
                     if (null == M) return null;
                     let e = new Date(null !== (A = null == g ? void 0 : g.scheduled_start_time) && void 0 !== A ? A : M);
@@ -806,9 +809,9 @@
             function c(e, t, c, E) {
                 let {
                     canManageGuildEvent: f
-                } = (0, i.useManageResourcePermissions)(null != c ? c : t), _ = (0, u.useStateFromStores)([d.default], () => d.default.getGuildScheduledEvent(e)), T = f(_), S = (0, s.default)(), v = (0, r.default)(E, null == _ ? void 0 : _.id);
-                if (!T || null == _ || (null == v ? void 0 : v.is_canceled)) return null;
-                let I = u => {
+                } = (0, i.useManageResourcePermissions)(null != c ? c : t), _ = (0, u.useStateFromStores)([d.default], () => d.default.getGuildScheduledEvent(e)), T = f(_), S = (0, s.default)(), I = (0, r.default)(E, null == _ ? void 0 : _.id);
+                if (!T || null == _ || (null == I ? void 0 : I.is_canceled)) return null;
+                let v = u => {
                     null == E || u ? (0, a.openModalLazy)(async () => {
                         let {
                             default: u
@@ -832,16 +835,16 @@
                 return (0, l.jsx)(a.MenuItem, {
                     id: o.default.Messages.EDIT_EVENT,
                     label: o.default.Messages.EDIT_EVENT,
-                    action: null == _.recurrence_rule ? () => I(!0) : void 0,
+                    action: null == _.recurrence_rule ? () => v(!0) : void 0,
                     children: null != E && (0, l.jsxs)(l.Fragment, {
                         children: [(0, l.jsx)(a.MenuItem, {
                             id: o.default.Messages.EDIT_THIS_EVENT,
                             label: o.default.Messages.EDIT_THIS_EVENT,
-                            action: () => I(!1)
+                            action: () => v(!1)
                         }), (0, l.jsx)(a.MenuItem, {
                             id: o.default.Messages.EDIT_ALL_EVENTS,
                             label: o.default.Messages.EDIT_ALL_EVENTS,
-                            action: () => I(!0)
+                            action: () => v(!0)
                         })]
                     })
                 })
@@ -949,16 +952,16 @@
                     channel: E
                 } = e, f = null != n, {
                     canManageGuildEvent: _
-                } = (0, i.useManageResourcePermissions)(null != E ? E : c), [T, S] = (0, u.useStateFromStoresArray)([d.default], () => [d.default.isActive(t), d.default.getGuildScheduledEvent(t)]), v = (0, s.default)(n, null == S ? void 0 : S.id), I = null != S && _(S), g = f && (null == v ? void 0 : v.is_canceled) && I;
+                } = (0, i.useManageResourcePermissions)(null != E ? E : c), [T, S] = (0, u.useStateFromStoresArray)([d.default], () => [d.default.isActive(t), d.default.getGuildScheduledEvent(t)]), I = (0, s.default)(n, null == S ? void 0 : S.id), v = null != S && _(S), g = f && (null == I ? void 0 : I.is_canceled) && v;
                 return g && (!T || f) ? (0, l.jsx)(a.MenuItem, {
                     id: o.default.Messages.RESTORE_EVENT,
                     label: o.default.Messages.RESTORE_EVENT,
                     action: () => {
-                        if (null == n || null == v) return;
+                        if (null == n || null == I) return;
                         let {
                             scheduled_start_time: e,
                             scheduled_end_time: l
-                        } = v;
+                        } = I;
                         null == e && null == l ? r.default.deleteGuildEventException(c.id, t, n) : r.default.updateGuildEventException({
                             scheduled_start_time: e,
                             scheduled_end_time: l,
@@ -1266,7 +1269,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 toggleRequestToSpeak: function() {
-                    return I
+                    return v
                 },
                 inviteUserToStage: function() {
                     return g
@@ -1311,14 +1314,14 @@
                 _ = n("230324"),
                 T = n("738983"),
                 S = n("808422"),
-                v = n("49111");
+                I = n("49111");
 
-            function I(e, t) {
+            function v(e, t) {
                 let n = e.getGuildId();
-                return u(null != n, "This channel cannot be guildless."), t && (0, s.trackWithMetadata)(v.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED, {
+                return u(null != n, "This channel cannot be guildless."), t && (0, s.trackWithMetadata)(I.AnalyticEvents.REQUEST_TO_SPEAK_INITIATED, {
                     ...(0, _.getStageChannelMetadata)(e)
                 }), i.default.patch({
-                    url: v.Endpoints.UPDATE_VOICE_STATE(n),
+                    url: I.Endpoints.UPDATE_VOICE_STATE(n),
                     body: {
                         request_to_speak_timestamp: t ? new Date().toISOString() : null,
                         channel_id: e.id
@@ -1329,7 +1332,7 @@
             function g(e, t) {
                 let n = e.getGuildId();
                 return u(null != n, "This channel cannot be guildless."), i.default.patch({
-                    url: v.Endpoints.UPDATE_VOICE_STATE(n, t),
+                    url: I.Endpoints.UPDATE_VOICE_STATE(n, t),
                     body: {
                         suppress: !1,
                         request_to_speak_timestamp: new Date().toISOString(),
@@ -1344,10 +1347,10 @@
                 u(null != l, "This channel cannot be guildless.");
                 let a = c.default.getVoiceStateForChannel(e.id),
                     d = (0, S.getAudienceRequestToSpeakState)(a);
-                return d === S.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && !t && (0, s.trackWithMetadata)(v.AnalyticEvents.PROMOTED_TO_SPEAKER, {
+                return d === S.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && !t && (0, s.trackWithMetadata)(I.AnalyticEvents.PROMOTED_TO_SPEAKER, {
                     ...(0, _.getStageChannelMetadata)(e)
                 }), i.default.patch({
-                    url: v.Endpoints.UPDATE_VOICE_STATE(l),
+                    url: I.Endpoints.UPDATE_VOICE_STATE(l),
                     body: {
                         suppress: t,
                         request_to_speak_timestamp: null,
@@ -1362,7 +1365,7 @@
             function m(e) {
                 let t = null == e ? void 0 : e.getGuildId();
                 return u(null != t, "This channel cannot be guildless."), i.default.patch({
-                    url: v.Endpoints.UPDATE_VOICE_STATE(t),
+                    url: I.Endpoints.UPDATE_VOICE_STATE(t),
                     body: {
                         suppress: !0,
                         channel_id: e.id,
@@ -1375,7 +1378,7 @@
             function h(e, t, n) {
                 let l = e.getGuildId();
                 return u(null != l, "This channel cannot be guildless."), i.default.patch({
-                    url: v.Endpoints.UPDATE_VOICE_STATE(l, t),
+                    url: I.Endpoints.UPDATE_VOICE_STATE(l, t),
                     body: {
                         suppress: n,
                         channel_id: e.id
@@ -1387,7 +1390,7 @@
                 if (null == t || null == e) return;
                 let n = t.getGuildId();
                 return u(null != n, "This channel cannot be guildless."), h(t, e.id, !0), i.default.patch({
-                    url: v.Endpoints.UPDATE_VOICE_STATE(n, e.id),
+                    url: I.Endpoints.UPDATE_VOICE_STATE(n, e.id),
                     body: {
                         suppress: !0,
                         channel_id: t.id,
