@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["6105"], {
+    ["43888"], {
         478272: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -296,17 +296,17 @@
                     ctaComponent: T,
                     shouldShowFullDescriptionButton: _ = !0,
                     onShowFullDescription: x,
-                    productType: g,
-                    onTapCard: v,
+                    productType: v,
+                    onTapCard: g,
                     actionMenu: E,
                     showOpaqueBackground: j = !1,
                     hideRoleTag: D = !1,
-                    lineClamp: R = 1,
-                    cardWidth: y = 332,
-                    cardHeight: A,
-                    thumbnailHeight: I = 187,
+                    lineClamp: I = 1,
+                    cardWidth: R = 332,
+                    cardHeight: y,
+                    thumbnailHeight: A = 187,
                     descriptionTextVariant: L = "text-sm/normal"
-                } = e, b = (0, d.uid)(), O = (0, a.jsxs)(a.Fragment, {
+                } = e, b = (0, d.uid)(), N = (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(p, {
                         hidePurchaseToUnlockBadge: !0,
                         children: (0, a.jsx)("img", {
@@ -314,7 +314,7 @@
                             src: t,
                             className: m.productThumbnail,
                             style: {
-                                height: I
+                                height: A
                             }
                         })
                     }), (0, a.jsxs)("div", {
@@ -331,7 +331,7 @@
                                 children: (0, a.jsx)(o.default, {
                                     variant: L,
                                     color: "text-muted",
-                                    lineClamp: R,
+                                    lineClamp: I,
                                     text: r
                                 })
                             }), _ && (0, a.jsx)(C, {
@@ -356,7 +356,7 @@
                             variant: "text-xxs/normal",
                             color: "text-normal",
                             className: m.productType,
-                            children: g
+                            children: v
                         }), (0, a.jsx)("div", {
                             className: m.productActionButton,
                             onClick: e => {
@@ -366,14 +366,14 @@
                         })]
                     })]
                 });
-                return null == v ? (0, a.jsx)("article", {
+                return null == g ? (0, a.jsx)("article", {
                     className: i(m.productCard, j ? m.opaqueBackground : m.solidBackground),
                     "aria-labelledby": b,
-                    children: O
+                    children: N
                 }) : (0, a.jsx)("div", {
                     style: {
-                        width: y,
-                        height: A
+                        width: R,
+                        height: y
                     },
                     children: (0, a.jsx)(l.ClickableContainer, {
                         tag: "article",
@@ -381,8 +381,8 @@
                             productName: n
                         }),
                         className: i(m.productCard, j ? m.opaqueBackground : m.solidBackground, m.cardClickableContainer),
-                        onClick: v,
-                        children: O
+                        onClick: g,
+                        children: N
                     })
                 })
             }
@@ -550,7 +550,7 @@
                     return D
                 },
                 closeAndClearThreadSidebar: function() {
-                    return R
+                    return I
                 }
             });
             var a = n("627445"),
@@ -570,11 +570,11 @@
                 T = n("800762"),
                 _ = n("659500"),
                 x = n("648564"),
-                g = n("49111"),
-                v = n("724210");
+                v = n("49111"),
+                g = n("724210");
 
             function E(e, t, n) {
-                d.MainWindowDispatch.dispatch(g.ComponentActions.POPOUT_CLOSE);
+                d.MainWindowDispatch.dispatch(v.ComponentActions.POPOUT_CLOSE);
                 let a = !l.isEmpty(T.default.getVoiceStatesForChannel(e.id));
                 if (t || !m.UseThreadSidebar.getSetting() || __OVERLAY__ || a) {
                     o.default.dispatch({
@@ -585,19 +585,19 @@
                 }
                 r(null != e.parent_id, "all threads must have parents");
                 let i = C.default.getChannelId();
-                e.parent_id !== i && !(0, v.isGuildHomeChannel)(i) && (0, h.transitionToChannel)(e.parent_id), (0, f.transitionTo)(g.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, v.isGuildHomeChannel)(i) ? v.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? x.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
-                    _.ComponentDispatch.dispatch(g.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+                e.parent_id !== i && !(0, g.isGuildHomeChannel)(i) && (0, h.transitionToChannel)(e.parent_id), (0, f.transitionTo)(v.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, g.isGuildHomeChannel)(i) ? g.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? x.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
+                    _.ComponentDispatch.dispatch(v.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                         channelId: e.id
                     })
                 }, 0)
             }
 
             function j(e, t, n) {
-                r(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), r(!__OVERLAY__, "Cannot create threads in the overlay."), (0, u.trackWithMetadata)(g.AnalyticEvents.THREAD_CREATION_STARTED, {
+                r(!e.isForumLikeChannel(), "cannot open thread creation sidebar in forums"), r(!__OVERLAY__, "Cannot create threads in the overlay."), (0, u.trackWithMetadata)(v.AnalyticEvents.THREAD_CREATION_STARTED, {
                     location: n,
                     channel_id: e.id,
                     guild_id: e.guild_id
-                }), d.MainWindowDispatch.dispatch(g.ComponentActions.POPOUT_CLOSE), C.default.getChannelId() !== e.id && (0, h.transitionToChannel)(e.id);
+                }), d.MainWindowDispatch.dispatch(v.ComponentActions.POPOUT_CLOSE), C.default.getChannelId() !== e.id && (0, h.transitionToChannel)(e.id);
                 let a = p.default.getDraft(e.id, p.DraftType.FirstThreadMessage);
                 if ("" === a) {
                     let t = p.default.getDraft(e.id, p.DraftType.ChannelMessage);
@@ -614,13 +614,13 @@
             }
 
             function D(e, t) {
-                (0, f.transitionTo)(g.Routes.CHANNEL(e, (0, v.isGuildHomeChannel)(t) ? v.StaticChannelRoute.GUILD_HOME : t)), o.default.dispatch({
+                (0, f.transitionTo)(v.Routes.CHANNEL(e, (0, g.isGuildHomeChannel)(t) ? g.StaticChannelRoute.GUILD_HOME : t)), o.default.dispatch({
                     type: "SIDEBAR_CLOSE",
                     baseChannelId: t
                 })
             }
 
-            function R(e) {
+            function I(e) {
                 o.default.dispatch({
                     type: "SIDEBAR_CLOSE",
                     baseChannelId: e
@@ -634,6 +634,39 @@
                     draftType: p.DraftType.ThreadSettings
                 })
             }
+        },
+        346955: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return o
+                }
+            });
+            var a = n("37983");
+            n("884691");
+            var r = n("469563"),
+                i = n("509317"),
+                l = n("75196"),
+                o = (0, r.replaceIcon)(function(e) {
+                    let {
+                        width: t = 24,
+                        height: n = 24,
+                        color: r = "currentColor",
+                        foreground: i,
+                        ...o
+                    } = e;
+                    return (0, a.jsx)("svg", {
+                        ...(0, l.default)(o),
+                        width: t,
+                        height: n,
+                        viewBox: "0 0 24 24",
+                        children: (0, a.jsx)("path", {
+                            fill: r,
+                            className: i,
+                            d: "M20 7H12L10.553 5.106C10.214 4.428 9.521 4 8.764 4H3C2.447 4 2 4.447 2 5V19C2 20.104 2.895 21 4 21H20C21.104 21 22 20.104 22 19V9C22 7.896 21.104 7 20 7Z"
+                        })
+                    })
+                }, i.FolderIcon)
         },
         659186: function(e, t, n) {
             "use strict";
