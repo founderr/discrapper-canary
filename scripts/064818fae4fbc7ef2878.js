@@ -14786,16 +14786,18 @@
                         let {
                             hidePreview: e,
                             isStreaming: t,
-                            user: n
+                            user: n,
+                            hangStatus: a
                         } = this.props;
-                        t && (null == e || e(n.id))
+                        (t || null != a) && (null == e || e(n.id))
                     }, this.handleMouseEnter = () => {
                         let {
                             user: e,
                             showPreview: t,
-                            isStreaming: n
+                            isStreaming: n,
+                            hangStatus: a
                         } = this.props;
-                        n && (null == t || t(e.id))
+                        (n || null != a) && (null == t || t(e.id))
                     }, this.handleWatchStream = () => {
                         let {
                             user: e,
@@ -14876,10 +14878,11 @@
                             serverDeaf: T,
                             tabIndex: x,
                             embeddedApplication: v,
-                            channel: N
+                            channel: N,
+                            hangStatus: R
                         } = this.props, {
-                            userPopoutOpen: R
-                        } = this.state, O = M.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), y = {
+                            userPopoutOpen: O
+                        } = this.state, y = M.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), D = {
                             user: f,
                             speaking: c,
                             mute: u,
@@ -14902,17 +14905,18 @@
                             avatarContainerClass: i({
                                 [L.userAvatar]: !0
                             }),
-                            disabled: t && !O,
-                            selected: R,
-                            onClick: O ? void 0 : this.handleClickUser,
+                            disabled: t && !y,
+                            selected: O,
+                            onClick: y ? void 0 : this.handleClickUser,
                             onDoubleClick: this.handleWatchStream,
                             onContextMenu: this.handleUserContextMenu,
-                            guildId: N.guild_id
+                            guildId: N.guild_id,
+                            hangStatus: R
                         };
                         if (t) {
-                            var D;
+                            var b;
                             return (0, a.jsx)(r.Tooltip, {
-                                text: null !== (D = (0, p.default)(n)) && void 0 !== D ? D : j.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
+                                text: null !== (b = (0, p.default)(n)) && void 0 !== b ? b : j.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
                                 children: e => {
                                     let {
                                         onClick: t,
@@ -14920,7 +14924,7 @@
                                         ...l
                                     } = e;
                                     return (0, a.jsx)(A.default, {
-                                        ...y,
+                                        ...D,
                                         ...l
                                     })
                                 }
@@ -14929,11 +14933,11 @@
                         return (0, a.jsx)(r.Popout, {
                             position: "right",
                             renderPopout: this.renderStreamPopout,
-                            shouldShow: s && !R,
+                            shouldShow: s && !O,
                             onRequestClose: this.handleHidePreview,
                             spacing: 0,
                             children: () => (0, a.jsx)(A.default, {
-                                ...y,
+                                ...D,
                                 onMouseDown: e.onMouseDown,
                                 onKeyDown: e.onKeyDown
                             })
@@ -14950,7 +14954,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return j
+                    return O
                 }
             }), n("222007"), n("424973");
             var a = n("37983"),
@@ -14962,22 +14966,24 @@
                 o = n("899633"),
                 d = n("191225"),
                 c = n("442939"),
-                f = n("835040"),
-                h = n("373469"),
-                p = n("271938"),
-                m = n("26989"),
-                E = n("42887"),
-                C = n("957255"),
-                S = n("235660"),
-                g = n("280168"),
-                _ = n("800762"),
-                I = n("68148"),
-                T = n("158998"),
-                x = n("201380"),
-                v = n("49111"),
-                N = n("39141"),
-                A = n("707155");
-            let M = l.memo(e => {
+                f = n("925749"),
+                h = n("835040"),
+                p = n("373469"),
+                m = n("271938"),
+                E = n("26989"),
+                C = n("42887"),
+                S = n("957255"),
+                g = n("824563"),
+                _ = n("235660"),
+                I = n("280168"),
+                T = n("800762"),
+                x = n("68148"),
+                v = n("158998"),
+                N = n("201380"),
+                A = n("49111"),
+                M = n("39141"),
+                R = n("707155");
+            let j = l.memo(e => {
                 var t;
                 let {
                     mute: n,
@@ -14985,40 +14991,41 @@
                     user: s,
                     channel: i,
                     sessionId: u,
-                    nick: C
-                } = e, I = s.id, A = (0, r.useStateFromStores)([p.default], () => p.default.getId() === I, [I]), [M, R, j] = (0, r.useStateFromStoresArray)([E.default], () => A ? [!E.default.isSupported() || E.default.isSelfMute() || E.default.isSelfMutedTemporarily(), E.default.isSelfDeaf(), !1] : [!E.default.isSupported() || E.default.isLocalMute(I), !1, E.default.isLocalVideoDisabled(I)], [A, I]), L = (0, r.useStateFromStores)([g.default], () => g.default.isPrioritySpeaker(I)), O = (0, o.default)({
-                    userId: I,
+                    nick: S
+                } = e, x = s.id, R = (0, r.useStateFromStores)([m.default], () => m.default.getId() === x, [x]), [j, L, O] = (0, r.useStateFromStoresArray)([C.default], () => R ? [!C.default.isSupported() || C.default.isSelfMute() || C.default.isSelfMutedTemporarily(), C.default.isSelfDeaf(), !1] : [!C.default.isSupported() || C.default.isLocalMute(x), !1, C.default.isLocalVideoDisabled(x)], [R, x]), y = (0, r.useStateFromStores)([I.default], () => I.default.isPrioritySpeaker(x)), D = (0, o.default)({
+                    userId: x,
                     checkSoundSharing: !0
-                }), y = (0, r.useStateFromStores)([m.default], () => m.default.isGuestOrLurker(i.guild_id, I)), D = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
+                }), b = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(i.guild_id, x)), P = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
                     let {
                         connections: t
                     } = e;
-                    return t.has(I)
-                }), [I, i.id]), b = (0, c.default)(null != D ? [D.application_id] : []), [P, U] = (0, r.useStateFromStoresArray)([h.default], () => [h.default.getStreamForUser(I, i.getGuildId()), h.default.getActiveStreamForUser(I, i.getGuildId())], [i, I]), w = (0, r.useStateFromStores)([S.default], () => S.default.getSessionById(u)), F = T.default.useName(s), k = (0, r.useStateFromStores)([_.default], () => _.default.getVoicePlatformForChannel(i.id, I), [i.id, I]);
-                return (0, a.jsx)(f.default, {
-                    shakeLocation: N.ShakeLocation.VOICE_USER,
-                    isShaking: O,
-                    children: (0, a.jsx)(x.default, {
+                    return t.has(x)
+                }), [x, i.id]), U = (0, c.default)(null != P ? [P.application_id] : []), [w, F] = (0, r.useStateFromStoresArray)([p.default], () => [p.default.getStreamForUser(x, i.getGuildId()), p.default.getActiveStreamForUser(x, i.getGuildId())], [i, x]), k = (0, r.useStateFromStores)([_.default], () => _.default.getSessionById(u)), V = v.default.useName(s), B = (0, r.useStateFromStores)([T.default], () => T.default.getVoicePlatformForChannel(i.id, x), [i.id, x]), H = (0, r.useStateFromStores)([g.default], () => (0, f.getHangStatus)(g.default.findActivity(s.id, e => e.type === A.ActivityTypes.HANG_STATUS)));
+                return (0, a.jsx)(h.default, {
+                    shakeLocation: M.ShakeLocation.VOICE_USER,
+                    isShaking: D,
+                    children: (0, a.jsx)(N.default, {
                         ...e,
-                        nick: null != C ? C : F,
-                        canDrag: e.canDrag && !y,
-                        otherClientSessionType: null == w ? void 0 : null === (t = w.clientInfo) || void 0 === t ? void 0 : t.os,
-                        voicePlatform: k,
-                        localMute: M && !A,
-                        localVideoDisabled: j,
-                        mute: n || M,
-                        deaf: l || R,
-                        speaking: O,
-                        priority: L,
-                        embeddedApplication: b[0],
-                        isStreaming: null != P && P.channelId === i.id,
-                        isWatching: null != U && U.state !== v.ApplicationStreamStates.ENDED,
-                        isGuest: y
+                        nick: null != S ? S : V,
+                        canDrag: e.canDrag && !b,
+                        otherClientSessionType: null == k ? void 0 : null === (t = k.clientInfo) || void 0 === t ? void 0 : t.os,
+                        voicePlatform: B,
+                        localMute: j && !R,
+                        localVideoDisabled: O,
+                        mute: n || j,
+                        deaf: l || L,
+                        speaking: D,
+                        priority: y,
+                        embeddedApplication: U[0],
+                        isStreaming: null != w && w.channelId === i.id,
+                        isWatching: null != F && F.state !== A.ApplicationStreamStates.ENDED,
+                        isGuest: b,
+                        hangStatus: H
                     })
                 })
             });
-            M.displayName = "ConnectedVoiceUser";
-            class R extends l.Component {
+            j.displayName = "ConnectedVoiceUser";
+            class L extends l.Component {
                 renderVoiceUsers() {
                     let {
                         channel: e,
@@ -15042,10 +15049,10 @@
                                 nick: c,
                                 voiceState: f
                             } = n;
-                            return (0, a.jsx)(M, {
+                            return (0, a.jsx)(j, {
                                 user: u,
                                 nick: c,
-                                isSelfOnOtherClient: p.default.getId() === u.id && f.sessionId !== p.default.getSessionId(),
+                                isSelfOnOtherClient: m.default.getId() === u.id && f.sessionId !== m.default.getSessionId(),
                                 mute: f.isVoiceMuted(),
                                 deaf: f.isVoiceDeafened(),
                                 video: f.selfVideo,
@@ -15054,7 +15061,7 @@
                                 sessionId: null !== (s = f.sessionId) && void 0 !== s ? s : "",
                                 channel: e,
                                 collapsed: l,
-                                canDrag: t && C.default.can(v.Permissions.MOVE_MEMBERS, e),
+                                canDrag: t && S.default.can(A.Permissions.MOVE_MEMBERS, e),
                                 showPreview: this.handleShowPreview,
                                 hidePreview: this.handleHidePreview,
                                 previewIsOpen: d,
@@ -15063,10 +15070,10 @@
                                 location: r
                             }, u.id)
                         });
-                    return null != u && u > 0 ? f.push((0, a.jsx)(x.AudienceVoiceUser, {
+                    return null != u && u > 0 ? f.push((0, a.jsx)(N.AudienceVoiceUser, {
                         collapsed: l,
                         numAudience: u
-                    })) : l && n.length > s + 1 && f.push((0, a.jsx)(x.MoreVoiceUser, {
+                    })) : l && n.length > s + 1 && f.push((0, a.jsx)(N.MoreVoiceUser, {
                         numUsers: n.length - s
                     })), f
                 }
@@ -15077,9 +15084,9 @@
                             className: n,
                             children: l
                         } = this.props;
-                    return null == e && null == l ? null : (0, a.jsxs)(I.VoiceUserList, {
-                        className: i(n, A.list, {
-                            [A.collapsed]: t
+                    return null == e && null == l ? null : (0, a.jsxs)(x.VoiceUserList, {
+                        className: i(n, R.list, {
+                            [R.collapsed]: t
                         }),
                         collapsed: t,
                         children: [e, l]
@@ -15112,11 +15119,11 @@
                     }
                 }
             }
-            R.defaultProps = {
+            L.defaultProps = {
                 allowPreviews: !0,
                 allowDragging: !0
             };
-            var j = R
+            var O = L
         },
         230035: function(e, t, n) {
             "use strict";
@@ -31652,10 +31659,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 VoiceUserList: function() {
-                    return R
+                    return j
                 },
                 default: function() {
-                    return L
+                    return O
                 }
             }), n("424973"), n("222007");
             var a = n("37983"),
@@ -31668,34 +31675,35 @@
                 d = n("780624"),
                 c = n("77078"),
                 f = n("204947"),
-                h = n("437825"),
-                p = n("142303"),
-                m = n("462579"),
-                E = n("200639"),
-                C = n("97347"),
-                S = n("998564"),
-                g = n("420145"),
-                _ = n("82636"),
-                I = n("980423"),
-                T = n("158998"),
-                x = n("49111"),
-                v = n("99795"),
-                N = n("171644"),
-                A = n("782340"),
-                M = n("593596");
-            let R = e => {
+                h = n("925749"),
+                p = n("437825"),
+                m = n("142303"),
+                E = n("462579"),
+                C = n("200639"),
+                S = n("97347"),
+                g = n("998564"),
+                _ = n("420145"),
+                I = n("82636"),
+                T = n("980423"),
+                x = n("158998"),
+                v = n("49111"),
+                N = n("99795"),
+                A = n("171644"),
+                M = n("782340"),
+                R = n("593596");
+            let j = e => {
                 let {
                     children: t,
                     collapsed: n = !1,
                     className: l
                 } = e;
                 return (0, a.jsx)("div", {
-                    className: i(l, M.list, n ? M.listCollapse : M.listDefault),
+                    className: i(l, R.list, n ? R.listCollapse : R.listDefault),
                     role: "group",
                     children: t
                 })
             };
-            class j extends l.Component {
+            class L extends l.Component {
                 renderPrioritySpeaker() {
                     let {
                         speaking: e,
@@ -31705,10 +31713,10 @@
                         serverMute: s
                     } = this.props;
                     return t && !n ? (0, a.jsx)(c.Tooltip, {
-                        text: A.default.Messages.PRIORITY_SPEAKER,
+                        text: M.default.Messages.PRIORITY_SPEAKER,
                         children: t => (0, a.jsx)("div", {
-                            className: i(M.iconPriortySpeaker, {
-                                [M.iconPriortySpeakerSpeaking]: !l && !s && e
+                            className: i(R.iconPriortySpeaker, {
+                                [R.iconPriortySpeakerSpeaking]: !l && !s && e
                             }),
                             ...t
                         })
@@ -31723,13 +31731,13 @@
                         guildId: s
                     } = this.props;
                     return (0, a.jsx)("div", {
-                        className: i(l, M.avatar, {
-                            [M.avatarLarge]: n === x.OverlayAvatarSizes.LARGE,
-                            [M.avatarSmall]: n === x.OverlayAvatarSizes.SMALL,
-                            [M.avatarSpeaking]: e
+                        className: i(l, R.avatar, {
+                            [R.avatarLarge]: n === v.OverlayAvatarSizes.LARGE,
+                            [R.avatarSmall]: n === v.OverlayAvatarSizes.SMALL,
+                            [R.avatarSpeaking]: e
                         }),
                         style: {
-                            backgroundImage: "url(".concat(t.getAvatarURL(s, n === x.OverlayAvatarSizes.LARGE ? 38 : 24), ")")
+                            backgroundImage: "url(".concat(t.getAvatarURL(s, n === v.OverlayAvatarSizes.LARGE ? 38 : 24), ")")
                         }
                     })
                 }
@@ -31746,12 +31754,12 @@
                     } = this.props;
                     return n ? null : (0, a.jsxs)("div", {
                         className: i(s, {
-                            [M.username]: !0,
-                            [M.usernameSpeaking]: !r && !u && l
+                            [R.username]: !0,
+                            [R.usernameSpeaking]: !r && !u && l
                         }),
-                        children: [null != e ? e : T.default.getName(t), o ? (0, a.jsxs)("span", {
-                            className: M.guestSuffix,
-                            children: ["\xa0", A.default.Messages.GUEST_NAME_SUFFIX]
+                        children: [null != e ? e : x.default.getName(t), o ? (0, a.jsxs)("span", {
+                            className: R.guestSuffix,
+                            children: ["\xa0", M.default.Messages.GUEST_NAME_SUFFIX]
                         }) : ""]
                     })
                 }
@@ -31766,66 +31774,74 @@
                         collapsed: u,
                         video: o,
                         isStreaming: d,
-                        disabled: E,
-                        isWatching: C,
-                        iconClassName: T,
-                        embeddedApplication: x,
-                        otherClientSessionType: R,
-                        voicePlatform: j
+                        disabled: C,
+                        isWatching: S,
+                        iconClassName: x,
+                        embeddedApplication: v,
+                        otherClientSessionType: j,
+                        voicePlatform: L,
+                        hangStatus: O
                     } = this.props;
-                    if (u || E) return null;
-                    let L = [],
-                        y = (0, a.jsx)(O, {
-                            iconClassName: T,
+                    if (u || C) return null;
+                    let D = [],
+                        b = (0, h.getHangStatusIcon)(O),
+                        P = (0, a.jsx)(y, {
+                            iconClassName: x,
                             mute: e,
                             localMute: t,
                             serverMute: l,
                             deaf: s,
                             serverDeaf: r
                         });
-                    return (o && (n ? L.push((0, a.jsx)(c.TooltipContainer, {
-                        className: M.iconSpacing,
-                        text: A.default.Messages.LOCAL_VIDEO_DISABLED,
-                        children: (0, a.jsx)(p.default, {
-                            className: i(M.icon, T),
-                            foreground: M.strikethrough
-                        })
-                    }, "video")) : L.push((0, a.jsx)(c.TooltipContainer, {
-                        className: M.iconSpacing,
-                        text: A.default.Messages.VIDEO,
-                        children: (0, a.jsx)(h.default, {
-                            className: i(M.icon, T)
-                        })
-                    }, "video"))), null != x && L.push((0, a.jsx)(c.TooltipContainer, {
-                        text: (0, f.default)(x.name),
-                        className: M.iconSpacing,
-                        children: (0, a.jsx)(_.default, {
-                            className: i(M.icon, T)
-                        })
-                    }, "activity")), R === N.GameConsoleTypes.XBOX || j === v.VoicePlatforms.XBOX ? L.push((0, a.jsx)("div", {
-                        className: i(M.iconSpacing),
-                        children: (0, a.jsx)(g.default, {
-                            className: i(M.icon, T)
-                        })
-                    }, "xbox")) : (R === N.GameConsoleTypes.PLAYSTATION || j === v.VoicePlatforms.PLAYSTATION) && L.push((0, a.jsx)("div", {
-                        className: i(M.iconSpacing),
-                        children: (0, a.jsx)(S.default, {
-                            className: i(M.icon, T)
-                        })
-                    }, "playstation")), d ? L.push((0, a.jsx)("div", {
-                        className: i(M.iconSpacing, M.liveIconSpacing),
-                        children: (0, a.jsx)(I.default, {
-                            size: I.default.Sizes.SMALL
-                        })
-                    }, "stream")) : C && L.push((0, a.jsx)(c.TooltipContainer, {
-                        className: M.iconSpacing,
-                        text: A.default.Messages.WATCH_STREAM_WATCHING,
+                    return (o && (n ? D.push((0, a.jsx)(c.TooltipContainer, {
+                        className: R.iconSpacing,
+                        text: M.default.Messages.LOCAL_VIDEO_DISABLED,
                         children: (0, a.jsx)(m.default, {
-                            className: i(M.icon, T)
+                            className: i(R.icon, x),
+                            foreground: R.strikethrough
                         })
-                    }, "watch")), 0 === L.length && null == y) ? null : (0, a.jsxs)("div", {
-                        className: M.icons,
-                        children: [y, L]
+                    }, "video")) : D.push((0, a.jsx)(c.TooltipContainer, {
+                        className: R.iconSpacing,
+                        text: M.default.Messages.VIDEO,
+                        children: (0, a.jsx)(p.default, {
+                            className: i(R.icon, x)
+                        })
+                    }, "video"))), null != v && D.push((0, a.jsx)(c.TooltipContainer, {
+                        text: (0, f.default)(v.name),
+                        className: R.iconSpacing,
+                        children: (0, a.jsx)(I.default, {
+                            className: i(R.icon, x)
+                        })
+                    }, "activity")), j === A.GameConsoleTypes.XBOX || L === N.VoicePlatforms.XBOX ? D.push((0, a.jsx)("div", {
+                        className: i(R.iconSpacing),
+                        children: (0, a.jsx)(_.default, {
+                            className: i(R.icon, x)
+                        })
+                    }, "xbox")) : (j === A.GameConsoleTypes.PLAYSTATION || L === N.VoicePlatforms.PLAYSTATION) && D.push((0, a.jsx)("div", {
+                        className: i(R.iconSpacing),
+                        children: (0, a.jsx)(g.default, {
+                            className: i(R.icon, x)
+                        })
+                    }, "playstation")), d ? D.push((0, a.jsx)("div", {
+                        className: i(R.iconSpacing, R.liveIconSpacing),
+                        children: (0, a.jsx)(T.default, {
+                            size: T.default.Sizes.SMALL
+                        })
+                    }, "stream")) : S && D.push((0, a.jsx)(c.TooltipContainer, {
+                        className: R.iconSpacing,
+                        text: M.default.Messages.WATCH_STREAM_WATCHING,
+                        children: (0, a.jsx)(E.default, {
+                            className: i(R.icon, x)
+                        })
+                    }, "watch")), 0 === D.length && null == P && null == b) ? null : (0, a.jsxs)("div", {
+                        className: R.icons,
+                        children: [P, D, null != b && (0, a.jsx)(c.TooltipContainer, {
+                            className: R.iconSpacing,
+                            text: (0, h.humanizeHangStatus)(O),
+                            children: (0, a.jsx)(b, {
+                                className: i(R.icon, x)
+                            })
+                        }, "hang-status")]
                     })
                 }
                 render() {
@@ -31843,13 +31859,13 @@
                     } = this.props;
                     return (0, a.jsx)(c.Clickable, {
                         className: i(s, {
-                            [M.voiceUser]: !0,
-                            [M.overlap]: o,
-                            [M.selected]: r,
-                            [M.clickable]: null != e,
-                            [M.userSmall]: l === x.OverlayAvatarSizes.SMALL,
-                            [M.userLarge]: l === x.OverlayAvatarSizes.LARGE,
-                            [M.disabled]: !r && u
+                            [R.voiceUser]: !0,
+                            [R.overlap]: o,
+                            [R.selected]: r,
+                            [R.clickable]: null != e,
+                            [R.userSmall]: l === v.OverlayAvatarSizes.SMALL,
+                            [R.userLarge]: l === v.OverlayAvatarSizes.LARGE,
+                            [R.disabled]: !r && u
                         }),
                         onClick: this.handleClick,
                         onDoubleClick: this.handleDoubleClick,
@@ -31861,8 +31877,8 @@
                         "aria-label": d,
                         tabIndex: f,
                         children: (0, a.jsxs)("div", {
-                            className: i(M.content, {
-                                [M.flipped]: n
+                            className: i(R.content, {
+                                [R.flipped]: n
                             }),
                             children: [this.renderPrioritySpeaker(), this.renderAvatar(), this.renderName(), this.renderIcons()]
                         })
@@ -31908,16 +31924,16 @@
                     }
                 }
             }
-            j.defaultProps = {
-                avatarContainerClass: M.avatarContainer,
-                userNameClassName: M.usernameFont,
-                size: x.OverlayAvatarSizes.SMALL,
+            L.defaultProps = {
+                avatarContainerClass: R.avatarContainer,
+                userNameClassName: R.usernameFont,
+                size: v.OverlayAvatarSizes.SMALL,
                 selected: !1,
                 disabled: !1
             };
-            var L = j;
+            var O = L;
 
-            function O(e) {
+            function y(e) {
                 let {
                     iconClassName: t,
                     mute: n,
@@ -31931,18 +31947,18 @@
                     if (p) {
                         let n, r;
                         s ? (n = o.MicrophoneDenyIcon, r = c.tokens.colors.STATUS_DANGER) : n = l ? o.MicrophoneDenyIcon : d.MicrophoneSlashIcon, e = (0, a.jsx)(n, {
-                            className: i(M.icon, t),
+                            className: i(R.icon, t),
                             color: null != r ? r : "currentColor"
                         })
-                    } else e = (0, a.jsx)(C.default, {
-                        className: i(M.icon, t, {
-                            [M.iconServer]: s
+                    } else e = (0, a.jsx)(S.default, {
+                        className: i(R.icon, t, {
+                            [R.iconServer]: s
                         }),
-                        foreground: l ? M.strikethrough : void 0
+                        foreground: l ? R.strikethrough : void 0
                     });
                     m.push((0, a.jsx)(c.TooltipContainer, {
-                        text: l ? A.default.Messages.LOCAL_MUTED : s ? A.default.Messages.SERVER_MUTED : A.default.Messages.VOICE_CHANNEL_MUTED,
-                        className: M.iconSpacing,
+                        text: l ? M.default.Messages.LOCAL_MUTED : s ? M.default.Messages.SERVER_MUTED : M.default.Messages.VOICE_CHANNEL_MUTED,
+                        className: R.iconSpacing,
                         children: e
                     }, "mute"))
                 }
@@ -31951,17 +31967,17 @@
                     if (p) {
                         let n = h ? r.HeadphonesDenyIcon : u.HeadphonesSlashIcon;
                         e = (0, a.jsx)(n, {
-                            className: i(M.icon, t),
+                            className: i(R.icon, t),
                             color: h ? c.tokens.colors.STATUS_DANGER : "currentColor"
                         })
-                    } else e = (0, a.jsx)(E.default, {
-                        className: i(M.icon, t, {
-                            [M.iconServer]: h
+                    } else e = (0, a.jsx)(C.default, {
+                        className: i(R.icon, t, {
+                            [R.iconServer]: h
                         })
                     });
                     m.push((0, a.jsx)(c.TooltipContainer, {
-                        className: M.iconSpacing,
-                        text: h ? A.default.Messages.SERVER_DEAFENED : A.default.Messages.VOICE_CHANNEL_DEAFENED,
+                        className: R.iconSpacing,
+                        text: h ? M.default.Messages.SERVER_DEAFENED : M.default.Messages.VOICE_CHANNEL_DEAFENED,
                         children: e
                     }, "deaf"))
                 }
