@@ -1,967 +1,459 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["40894"], {
-        875212: function(e, t, r) {
+    ["9975"], {
+        713876: function(e, l, t) {
             "use strict";
-            r.r(t), r.d(t, {
-                useTriggerDebuggingAA: function() {
-                    return u
-                }
-            });
-            var n = r("862205");
-            let i = (0, n.createExperiment)({
-                kind: "user",
-                id: "2023-09_trigger_debugging_aa",
-                label: "trigger debugging aa mobile",
-                defaultConfig: {
-                    inUse: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "On",
-                    config: {
-                        inUse: !0
-                    }
-                }]
-            });
-
-            function u(e) {
-                let {
-                    autoTrackExposure: t = !1,
-                    location: r
-                } = e;
-                return i.useExperiment({
-                    location: r
-                }, {
-                    autoTrackExposure: t
-                })
-            }
-        },
-        473591: function(e, t, r) {
-            "use strict";
-            let n, i, u, l, s, a;
-            r.r(t), r.d(t, {
-                default: function() {
-                    return L
-                }
-            });
-            var E = r("446674"),
-                o = r("913144");
-            let c = !1,
-                _ = !1,
-                d = null,
-                C = {},
-                S = {},
-                A = {},
-                I = {};
-
-            function f() {
-                n = void 0, i = void 0, u = void 0, l = void 0, s = void 0, d = null
-            }
-            class T extends E.default.Store {
-                getSettings(e) {
-                    if (null != e) return A[e]
-                }
-                getProfile(e) {
-                    return null == e ? null : C[e]
-                }
-                getGeneratedPersonality() {
-                    return a
-                }
-                getPendingPersonality() {
-                    return n
-                }
-                getPendingNick() {
-                    return i
-                }
-                getErrors() {
-                    return d
-                }
-                hasPendingChanges() {
-                    return void 0 !== n || void 0 !== i || void 0 !== u || void 0 !== l || void 0 !== s
-                }
-                getPendingUpdates() {
-                    return {
-                        pendingAvatar: u,
-                        pendingNick: i,
-                        pendingPersonality: n,
-                        pendingBanner: l,
-                        pendingThemeColors: s
-                    }
-                }
-                isSavingSettings() {
-                    return c
-                }
-                isFetchingSettings(e) {
-                    var t;
-                    return null === (t = I[e]) || void 0 === t ? void 0 : t.isFetching
-                }
-                shouldFetchSettings(e) {
-                    var t, r;
-                    let n = null !== (t = I[e]) && void 0 !== t ? t : {
-                            isFetching: !1
-                        },
-                        i = Date.now(),
-                        u = i - (null !== (r = n.lastFetchTimestampMs) && void 0 !== r ? r : 0) > 36e5;
-                    return !(null == n ? void 0 : n.isFetching) && u
-                }
-                isFetchingProfile(e) {
-                    var t;
-                    return null === (t = S[e]) || void 0 === t ? void 0 : t.isFetching
-                }
-                isEditingClydeProfile() {
-                    return _
-                }
-            }
-            T.displayName = "ClydeStore";
-            var L = new T(o.default, {
-                CLYDE_GUILD_SETTINGS_FETCH_START: function(e) {
-                    let {
-                        guildId: t
-                    } = e, r = I[t];
-                    I[t] = {
-                        isFetching: !0,
-                        lastFetchTimestampMs: null == r ? void 0 : r.lastFetchTimestampMs
-                    }
-                },
-                CLYDE_GUILD_SETTINGS_FETCH_SUCCESS: function(e) {
-                    let {
-                        guildId: t,
-                        settings: r
-                    } = e;
-                    I[t] = {
-                        isFetching: !1,
-                        lastFetchTimestampMs: Date.now()
-                    }, A[t] = r
-                },
-                CLYDE_GUILD_SETTINGS_FETCH_FAIL: function(e) {
-                    let {
-                        guildId: t
-                    } = e, r = I[t];
-                    I[t] = {
-                        isFetching: !1,
-                        lastFetchTimestampMs: null == r ? void 0 : r.lastFetchTimestampMs
-                    }
-                },
-                CLYDE_SET_PENDING_PERSONALITY: function(e) {
-                    let {
-                        personality: t,
-                        isGenerated: r
-                    } = e;
-                    n = t, r && (a = t)
-                },
-                CLYDE_SET_PENDING_NICK: function(e) {
-                    let {
-                        nick: t
-                    } = e;
-                    i = t
-                },
-                CLYDE_SET_PENDING_AVATAR: function(e) {
-                    let {
-                        avatar: t
-                    } = e;
-                    u = t
-                },
-                CLYDE_SET_PENDING_BANNER: function(e) {
-                    let {
-                        banner: t
-                    } = e;
-                    l = t
-                },
-                CLYDE_SET_PENDING_THEME_COLORS: function(e) {
-                    let {
-                        themeColors: t
-                    } = e;
-                    s = t
-                },
-                CLYDE_GUILD_SETTINGS_SAVE_START: function() {
-                    d = null, c = !0
-                },
-                CLYDE_GUILD_SETTINGS_SAVE_SUCCESS: function(e) {
-                    let {
-                        settings: t
-                    } = e;
-                    c = !1, A[t.guild_id] = t, f()
-                },
-                CLYDE_GUILD_SETTINGS_SAVE_FAIL: function(e) {
-                    c = !1, d = e.errors
-                },
-                CLYDE_RESET_PENDING_CHANGES: f,
-                CLYDE_PROFILE_FETCH_START: function(e) {
-                    let {
-                        clydeProfileId: t
-                    } = e, r = S[t];
-                    S[t] = {
-                        isFetching: !0,
-                        lastFetchTimestampMs: null == r ? void 0 : r.lastFetchTimestampMs
-                    }
-                },
-                CLYDE_PROFILE_FETCH_SUCCESS: function(e) {
-                    let {
-                        profile: t
-                    } = e;
-                    S[t.clyde_profile_id] = {
-                        isFetching: !1,
-                        lastFetchTimestampMs: Date.now()
-                    }, C[t.clyde_profile_id] = t
-                },
-                CLYDE_PROFILE_FETCH_FAIL: function(e) {
-                    let {
-                        clydeProfileId: t
-                    } = e, r = S[t];
-                    S[t] = {
-                        isFetching: !1,
-                        lastFetchTimestampMs: null == r ? void 0 : r.lastFetchTimestampMs
-                    }
-                },
-                CLYDE_PROFILE_CREATE_SUCCESS: function(e) {
-                    let {
-                        profile: t
-                    } = e;
-                    C[t.clyde_profile_id] = t
-                },
-                CLYDE_PROFILE_EDITING_START: function() {
-                    _ = !0
-                },
-                CLYDE_PROFILE_EDITING_END: function() {
-                    _ = !1
-                }
-            })
-        },
-        21526: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                trackCollectiblesShopOpened: function() {
-                    return o
-                },
-                openCollectiblesShop: function() {
-                    return c
-                },
-                closeCollectiblesShop: function() {
-                    return _
-                },
-                fetchCollectiblesCategories: function() {
-                    return d
-                },
-                fetchCollectiblesPurchases: function() {
-                    return C
-                },
-                claimPremiumCollectiblesProduct: function() {
-                    return S
-                },
-                setCollectiblesCategoryItemsViewed: function() {
-                    return A
-                }
-            });
-            var n = r("872717"),
-                i = r("913144"),
-                u = r("54239"),
-                l = r("448993"),
-                s = r("514296");
-            r("407788");
-            var a = r("489134"),
-                E = r("49111");
-            r("853987"), r("426497"), r("775416"), r("216719");
-            let o = e => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_SHOP_OPEN",
-                        ...e
-                    })
-                },
-                c = e => {
-                    o(e), (0, u.pushLayer)(E.Layers.COLLECTIBLES_SHOP)
-                },
-                _ = () => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_SHOP_CLOSE"
-                    }), (0, u.popLayer)()
-                },
-                d = async () => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_CATEGORIES_FETCH"
-                    });
-                    try {
-                        let e = await n.default.get(E.Endpoints.COLLECTIBLES_CATEGORIES);
-                        i.default.dispatch({
-                            type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS",
-                            categories: e.body.map(s.default.fromServer)
-                        })
-                    } catch (e) {
-                        throw i.default.dispatch({
-                            type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE",
-                            error: e
-                        }), new l.APIError(e)
-                    }
-                }, C = async () => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_PURCHASES_FETCH"
-                    });
-                    try {
-                        let e = await n.default.get(E.Endpoints.COLLECTIBLES_PURCHASES);
-                        i.default.dispatch({
-                            type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS",
-                            purchases: e.body.map(a.default.fromServer)
-                        })
-                    } catch (e) {
-                        throw i.default.dispatch({
-                            type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE",
-                            error: e
-                        }), new l.APIError(e)
-                    }
-                }, S = async e => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_CLAIM",
-                        skuId: e
-                    });
-                    try {
-                        var t;
-                        let r = await n.default.put({
-                            url: E.Endpoints.COLLECTIBLES_CLAIM,
-                            body: {
-                                sku_id: e
-                            }
-                        });
-                        i.default.dispatch({
-                            type: "COLLECTIBLES_CLAIM_SUCCESS",
-                            skuId: e,
-                            purchases: null === (t = r.body) || void 0 === t ? void 0 : t.map(a.default.fromServer)
-                        })
-                    } catch (t) {
-                        throw i.default.dispatch({
-                            type: "COLLECTIBLES_CLAIM_FAILURE",
-                            skuId: e,
-                            error: t
-                        }), new l.APIError(t)
-                    }
-                }, A = e => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_CATEGORY_ITEMS_VIEWED",
-                        ...e
-                    })
-                }
-        },
-        426497: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                default: function() {
-                    return d
-                }
-            }), r("808653");
-            var n = r("635058"),
-                i = r("265586"),
-                u = r("446674"),
-                l = r("913144"),
-                s = r("853987");
-            let a = new Date(2023, 8, 25),
-                E = new Date(2023, 9, 5),
-                o = () => ({
-                    categoryItemViews: {
-                        [n.CollectiblesCategorySkuId.FANTASY]: {
-                            [i.CollectiblesItemType.AVATAR_DECORATION]: a,
-                            [i.CollectiblesItemType.PROFILE_EFFECT]: E
-                        },
-                        [n.CollectiblesCategorySkuId.ANIME]: {
-                            [i.CollectiblesItemType.AVATAR_DECORATION]: a,
-                            [i.CollectiblesItemType.PROFILE_EFFECT]: E
-                        },
-                        [n.CollectiblesCategorySkuId.BREAKFAST]: {
-                            [i.CollectiblesItemType.AVATAR_DECORATION]: a,
-                            [i.CollectiblesItemType.PROFILE_EFFECT]: E
-                        },
-                        [n.CollectiblesCategorySkuId.DISXCORE]: {
-                            [i.CollectiblesItemType.AVATAR_DECORATION]: a
-                        }
-                    }
-                }),
-                c = o();
-            class _ extends u.default.PersistedStore {
-                initialize(e) {
-                    null != e && (c = e)
-                }
-                getState() {
-                    return c
-                }
-                isItemViewed(e) {
-                    var t;
-                    let r = s.default.getCategoryForProduct(e.skuId);
-                    return null != r && (null === (t = c.categoryItemViews[r.skuId]) || void 0 === t ? void 0 : t[e.type]) != null
-                }
-                reset() {
-                    c = o()
-                }
-            }
-            _.displayName = "CollectiblesPersistedStore", _.persistKey = "CollectiblesPersistedStoreV2";
-            var d = new _(l.default, {
-                COLLECTIBLES_CATEGORY_ITEMS_VIEWED: e => {
-                    let {
-                        categories: t,
-                        itemTypes: r
-                    } = e, n = new Date;
-                    return t.reduce((e, t) => {
-                        let {
-                            skuId: i
-                        } = t, u = r.reduce((e, t) => {
-                            var r;
-                            return (null === (r = c.categoryItemViews[i]) || void 0 === r ? void 0 : r[t]) != null ? e : (null == c.categoryItemViews[i] && (c.categoryItemViews[i] = {}), c.categoryItemViews[i][t] = n, !0)
-                        }, !1);
-                        return e || u
-                    }, !1)
-                }
-            })
-        },
-        775416: function(e, t, r) {
-            "use strict";
-            let n, i, u;
-            r.r(t), r.d(t, {
-                default: function() {
-                    return d
-                }
-            }), r("222007");
-            var l = r("917351"),
-                s = r("446674"),
-                a = r("913144");
-            let E = new Map,
-                o = E,
-                c = !1;
-            class _ extends s.default.Store {
-                get isFetching() {
-                    return c
-                }
-                get isClaiming() {
-                    return n
-                }
-                get purchases() {
-                    return o
-                }
-                get fetchError() {
-                    return i
-                }
-                get claimError() {
-                    return u
-                }
-                getPurchase(e) {
-                    return null != e ? o.get(e) : void 0
-                }
-            }
-            _.displayName = "CollectiblesPurchaseStore";
-            var d = new _(a.default, {
-                COLLECTIBLES_PURCHASES_FETCH: e => {
-                    c = !0, i = void 0
-                },
-                COLLECTIBLES_PURCHASES_FETCH_SUCCESS: e => {
-                    0 === e.purchases.length ? o = E : !(0, l.isEqual)([...o.values()], e.purchases) && (o = new Map(e.purchases.map(e => [e.skuId, e]))), c = !1, i = void 0
-                },
-                COLLECTIBLES_PURCHASES_FETCH_FAILURE: e => {
-                    let {
-                        error: t
-                    } = e;
-                    o = E, c = !1, i = t
-                },
-                COLLECTIBLES_CLAIM: e => {
-                    n = e.skuId, u = void 0
-                },
-                COLLECTIBLES_CLAIM_SUCCESS: e => {
-                    null == e.purchases || 0 === e.purchases.length ? o = E : !(0, l.isEqual)([...o.values()], e.purchases) && (o = new Map(e.purchases.map(e => [e.skuId, e]))), n = void 0, u = void 0
-                },
-                COLLECTIBLES_CLAIM_FAILURE: e => {
-                    let {
-                        error: t,
-                        skuId: r
-                    } = e;
-                    n = r, u = t
-                },
-                LOGOUT: e => {
-                    o = E, c = !1, n = void 0, i = void 0, u = void 0
-                }
-            })
-        },
-        216719: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                default: function() {
-                    return o
-                }
-            });
-            var n = r("446674"),
-                i = r("913144");
-            let u = [],
-                l = u,
-                s = null,
-                a = e => {
-                    l = u, s = null
-                };
-            class E extends n.default.Store {
-                get analyticsLocations() {
-                    return l
-                }
-                get analyticsSource() {
+            t.r(l), t.d(l, {
+                ChannelListMagnifyingGlassIcon: function() {
                     return s
                 }
-                getAnalytics() {
-                    return {
-                        analyticsLocations: l,
-                        analyticsSource: s
-                    }
-                }
-            }
-            E.displayName = "CollectiblesShopStore";
-            var o = new E(i.default, {
-                COLLECTIBLES_SHOP_OPEN: e => {
-                    var t, r;
-                    l = null !== (t = e.analyticsLocations) && void 0 !== t ? t : u, s = null !== (r = e.analyticsSource) && void 0 !== r ? r : null
-                },
-                COLLECTIBLES_SHOP_CLOSE: a,
-                LOGOUT: a
-            })
-        },
-        514296: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                default: function() {
-                    return n
-                }
-            }), r("808653"), r("424973");
-            var n, i = r("407788"),
-                u = r("792382");
-            n = class e extends u.default {
-                static fromServer(t) {
-                    let {
-                        products: r,
-                        logo: n,
-                        ...u
-                    } = t;
-                    return new e({
-                        ...super.fromServer(u),
-                        products: r.reduce((e, t) => {
-                            let r = i.default.fromServer(t);
-                            return 0 === r.items.length ? e : (e.push(r), e)
-                        }, []),
-                        logo: n
-                    })
-                }
-                constructor(e) {
-                    super(e), this.products = e.products, this.logo = e.logo
-                }
+            });
+            var n = t("37983");
+            t("884691");
+            var a = t("669491"),
+                r = t("75196");
+            let s = e => {
+                let {
+                    width: l = 24,
+                    height: t = 24,
+                    color: s = a.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: i = "",
+                    ...c
+                } = e;
+                return (0, n.jsxs)("svg", {
+                    ...(0, r.default)(c),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: l,
+                    height: t,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: [(0, n.jsx)("path", {
+                        fillRule: "evenodd",
+                        d: "M18.5 23a4.48 4.48 0 0 0 2.396-.69l1.397 1.397a1 1 0 0 0 1.414-1.414l-1.397-1.397A4.5 4.5 0 1 0 18.5 23Zm0-2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z",
+                        clipRule: "evenodd",
+                        fill: "string" == typeof s ? s : s.css,
+                        className: i
+                    }), (0, n.jsx)("path", {
+                        d: "M3 3a1 1 0 0 0 0 2h18a1 1 0 1 0 0-2H3ZM2 8a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1ZM3 11a1 1 0 1 0 0 2h11a1 1 0 1 0 0-2H3ZM2 16a1 1 0 0 1 1-1h8a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1ZM3 19a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2H3Z",
+                        fill: "string" == typeof s ? s : s.css,
+                        className: i
+                    })]
+                })
             }
         },
-        407788: function(e, t, r) {
+        841563: function(e, l, t) {
             "use strict";
-            r.r(t), r.d(t, {
-                default: function() {
-                    return n
-                }
-            }), r("808653"), r("794252"), r("424973");
-            var n, i = r("506838"),
-                u = r("265586"),
-                l = r("797647"),
-                s = r("730297"),
-                a = r("792382"),
-                E = r("806410");
-            n = class e extends a.default {
-                static fromServer(t) {
-                    var r;
-                    let {
-                        currency: n,
-                        price: a,
-                        prices: o,
-                        ...c
-                    } = t;
-                    return new e({
-                        ...super.fromServer(c),
-                        currency: n,
-                        price: a,
-                        prices: null == (r = o) ? {} : Object.keys(r).reduce((e, t) => {
-                            if (null == r) return e;
-                            let n = r[t];
-                            return e[t] = {
-                                countryPrices: {
-                                    countryCode: n.country_prices.country_code,
-                                    prices: n.country_prices.prices.map(e => (0, l.getPriceFromServer)(e, !0))
-                                },
-                                paymentSourcePrices: {}
-                            }, e
-                        }, {}),
-                        items: c.items.reduce((e, t) => (0, i.match)(t).with({
-                            type: u.CollectiblesItemType.AVATAR_DECORATION
-                        }, t => (e.push(s.default.fromServer(t)), e)).with({
-                            type: u.CollectiblesItemType.PROFILE_EFFECT
-                        }, t => (e.push(E.default.fromServer(t)), e)).otherwise(() => e), [])
-                    })
-                }
-                constructor(e) {
-                    super(e), this.currency = e.currency, this.price = e.price, this.prices = e.prices, this.summary = e.summary, this.items = e.items
-                }
-            }
-        },
-        489134: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                default: function() {
-                    return n
+            t.r(l), t.d(l, {
+                ForumIcon: function() {
+                    return s
                 }
             });
-            var n, i = r("407788");
-            n = class e extends i.default {
-                static fromServer(t) {
-                    let {
-                        purchased_at: r,
-                        purchase_type: n,
-                        ...i
-                    } = t;
-                    return new e({
-                        ...super.fromServer(i),
-                        purchaseType: n,
-                        purchasedAt: null != r ? new Date(r) : r
-                    })
-                }
-                constructor(e) {
-                    super(e), this.purchasedAt = e.purchasedAt, this.purchaseType = e.purchaseType
-                }
+            var n = t("37983");
+            t("884691");
+            var a = t("669491"),
+                r = t("75196");
+            let s = e => {
+                let {
+                    width: l = 24,
+                    height: t = 24,
+                    color: s = a.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: i = "",
+                    ...c
+                } = e;
+                return (0, n.jsxs)("svg", {
+                    ...(0, r.default)(c),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: l,
+                    height: t,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: [(0, n.jsx)("path", {
+                        fill: "string" == typeof s ? s : s.css,
+                        d: "M18.913 12.977c1.482.993 2.454 2.65 2.454 4.523 0 .575-.094 1.145-.275 1.688-.106.32-.087.673.093.957l.839 1.319A1 1 0 0 1 21.18 23h-5.497C12.55 23 10 20.533 10 17.5s2.55-5.5 5.683-5.5c1.2 0 2.313.361 3.23.977Z",
+                        className: i
+                    }), (0, n.jsx)("path", {
+                        fill: "string" == typeof s ? s : s.css,
+                        d: "M19.242 10.855c.318.163.718-.015.742-.372.01-.16.016-.32.016-.483 0-4.418-4.03-8-9-8s-9 3.582-9 8a7.31 7.31 0 0 0 1.279 4.113.523.523 0 0 1-.055.663l-1.517 1.517c-.63.63-.184 1.707.707 1.707h5.102c.271 0 .484-.23.484-.5 0-4.2 3.508-7.5 7.683-7.5a7.8 7.8 0 0 1 3.559.855Z",
+                        className: i
+                    })]
+                })
             }
         },
-        792382: function(e, t, r) {
+        578478: function(e, l, t) {
             "use strict";
-            r.r(t), r.d(t, {
+            t.r(l), t.d(l, {
+                ImageIcon: function() {
+                    return s
+                }
+            });
+            var n = t("37983");
+            t("884691");
+            var a = t("669491"),
+                r = t("75196");
+            let s = e => {
+                let {
+                    width: l = 24,
+                    height: t = 24,
+                    color: s = a.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: i = "",
+                    ...c
+                } = e;
+                return (0, n.jsx)("svg", {
+                    ...(0, r.default)(c),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: l,
+                    height: t,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: (0, n.jsx)("path", {
+                        fill: "string" == typeof s ? s : s.css,
+                        fillRule: "evenodd",
+                        d: "M2 5a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5Zm13.35 8.133 3.5 4.667a.75.75 0 0 1-.6 1.2H5.81a.75.75 0 0 1-.585-1.218l1.854-2.318a1.5 1.5 0 0 1 2.342 0l.506.633 2.223-2.964a2 2 0 0 1 3.2 0Zm-5.146-7.156c.229-.91-.88-1.55-1.555-.898a.934.934 0 0 1-1.298 0c-.675-.653-1.784-.013-1.556.898a.934.934 0 0 1-.649 1.125c-.903.258-.903 1.538 0 1.796a.934.934 0 0 1 .65 1.125c-.229.91.88 1.55 1.555.898a.934.934 0 0 1 1.298 0c.675.653 1.784.013 1.556-.898a.934.934 0 0 1 .649-1.125c.903-.258.903-1.538 0-1.796a.934.934 0 0 1-.65-1.125Z",
+                        clipRule: "evenodd",
+                        className: i
+                    })
+                })
+            }
+        },
+        681187: function(e, l, t) {
+            "use strict";
+            t.r(l), t.d(l, {
+                ImageWarningIcon: function() {
+                    return s
+                }
+            });
+            var n = t("37983");
+            t("884691");
+            var a = t("669491"),
+                r = t("75196");
+            let s = e => {
+                let {
+                    width: l = 24,
+                    height: t = 24,
+                    color: s = a.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: i = "",
+                    ...c
+                } = e;
+                return (0, n.jsxs)("svg", {
+                    ...(0, r.default)(c),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: l,
+                    height: t,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: [(0, n.jsx)("path", {
+                        fill: "string" == typeof s ? s : s.css,
+                        fillRule: "evenodd",
+                        d: "M5 2a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h6.986c.002-.481.129-.982.41-1.472L13.273 19H5.81a.75.75 0 0 1-.585-1.218l1.854-2.318a1.5 1.5 0 0 1 2.342 0l.506.633 2.223-2.964a2 2 0 0 1 3.2 0l.731.975.274-.477c1.163-2.027 4.127-2.027 5.29 0l.355.618V5a3 3 0 0 0-3-3H5Zm3.65 3.08c.674-.654 1.783-.014 1.554.897a.934.934 0 0 0 .65 1.125c.903.258.903 1.538 0 1.796a.934.934 0 0 0-.65 1.125c.229.91-.88 1.55-1.555.898a.934.934 0 0 0-1.298 0c-.675.653-1.784.013-1.556-.898a.934.934 0 0 0-.649-1.125c-.903-.258-.903-1.538 0-1.796a.934.934 0 0 0 .65-1.125c-.229-.91.88-1.55 1.555-.898.362.351.936.351 1.298 0Z",
+                        clipRule: "evenodd",
+                        className: i
+                    }), (0, n.jsx)("path", {
+                        fill: "string" == typeof s ? s : s.css,
+                        fillRule: "evenodd",
+                        d: "M19.91 14.627c-.394-.688-1.426-.688-1.82 0l-3.96 6.897c-.38.664.12 1.476.91 1.476h7.919c.79 0 1.292-.812.91-1.476l-3.958-6.897Zm-.464 1.873h-.892a.5.5 0 0 0-.497.551l.208 2.017c.017.16.177.262.334.228.127-.027.264-.046.401-.046s.274.019.4.046c.158.034.318-.068.335-.228l.208-2.017a.5.5 0 0 0-.497-.551ZM20 21a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z",
+                        clipRule: "evenodd",
+                        className: i
+                    })]
+                })
+            }
+        },
+        346800: function(e, l, t) {
+            "use strict";
+            t.r(l), t.d(l, {
+                TextIcon: function() {
+                    return s
+                }
+            });
+            var n = t("37983");
+            t("884691");
+            var a = t("669491"),
+                r = t("75196");
+            let s = e => {
+                let {
+                    width: l = 24,
+                    height: t = 24,
+                    color: s = a.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: i = "",
+                    ...c
+                } = e;
+                return (0, n.jsx)("svg", {
+                    ...(0, r.default)(c),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: l,
+                    height: t,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: (0, n.jsx)("path", {
+                        fill: "string" == typeof s ? s : s.css,
+                        fillRule: "evenodd",
+                        d: "M10.986 3.164a1 1 0 1 0-1.972-.328L8.153 8H4a1 1 0 0 0 0 2h3.82l-.667 4H3a1 1 0 1 0 0 2h3.82l-.806 4.836a1 1 0 0 0 1.972.328L8.847 16h4.973l-.806 4.836a1 1 0 0 0 1.972.328L15.847 16H20a1 1 0 1 0 0-2h-3.82l.667-4H21a1 1 0 1 0 0-2h-3.82l.806-4.836a1 1 0 1 0-1.972-.328L15.153 8H10.18l.806-4.836ZM14.153 14l.666-4H9.848l-.667 4h4.973Z",
+                        clipRule: "evenodd",
+                        className: i
+                    })
+                })
+            }
+        },
+        446685: function(e, l, t) {
+            "use strict";
+            t.r(l), t.d(l, {
                 default: function() {
-                    return n
-                }
-            });
-            var n, i = r("666038");
-            n = class e extends i.default {
-                static fromServer(t) {
-                    let {
-                        store_listing_id: r,
-                        sku_id: n,
-                        unpublished_at: i,
-                        ...u
-                    } = t, l = null != i ? new Date(i) : null;
-                    return new e({
-                        ...u,
-                        storeListingId: r,
-                        skuId: n,
-                        unpublishedAt: l
-                    })
-                }
-                constructor(e) {
-                    super(), this.storeListingId = e.storeListingId, this.skuId = e.skuId, this.name = e.name, this.summary = e.summary, this.banner = e.banner, this.unpublishedAt = e.unpublishedAt
-                }
-            }
-        },
-        75015: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                UploadTypes: function() {
-                    return u
-                },
-                EDITING_CONTAINER_WIDTH: function() {
-                    return a
-                },
-                USER_BANNER_MAX_WIDTH: function() {
-                    return E
-                },
-                USER_BANNER_MAX_HEIGHT: function() {
-                    return o
-                },
-                GUILD_BANNER_MAX_WIDTH: function() {
-                    return c
-                },
-                GUILD_BANNER_MAX_HEIGHT: function() {
-                    return _
-                },
-                SCHEDULED_EVENT_IMAGE_MAX_WIDTH: function() {
-                    return d
-                },
-                SCHEDULED_EVENT_IMAGE_MAX_HEIGHT: function() {
-                    return C
-                },
-                HOME_HEADER_MAX_WIDTH: function() {
-                    return S
-                },
-                HOME_HEADER_MAX_HEIGHT: function() {
-                    return A
-                },
-                BANNER_ASPECT_RATIO: function() {
-                    return I
-                },
-                GUILD_BANNER_ASPECT_RATIO: function() {
-                    return f
-                },
-                SCHEDULED_EVENT_IMAGE_ASPECT_RATIO: function() {
-                    return T
-                },
-                HOME_HEADER_ASPECT_RATIO: function() {
-                    return L
-                },
-                MAX_BANNER_OVERLAY_HEIGHT: function() {
-                    return p
-                },
-                MAX_GUILD_BANNER_OVERLAY_HEIGHT: function() {
-                    return O
-                },
-                MAX_SCHEDULED_EVENT_IMAGE_OVERLAY_HEIGHT: function() {
-                    return R
-                },
-                MAX_HOME_HEADER_OVERLAY_HEIGHT: function() {
-                    return h
-                },
-                VIDEO_BACKGROUND_ASPECT_RATIO: function() {
-                    return v
-                },
-                MAX_VIDEO_OVERLAY_HEIGHT: function() {
-                    return g
-                },
-                MessageTypes: function() {
-                    return l
-                }
-            });
-            var n, i, u, l, s = r("917219");
-            (n = u || (u = {}))[n.AVATAR = 0] = "AVATAR", n[n.BANNER = 1] = "BANNER", n[n.GUILD_BANNER = 2] = "GUILD_BANNER", n[n.VIDEO_BACKGROUND = 3] = "VIDEO_BACKGROUND", n[n.SCHEDULED_EVENT_IMAGE = 4] = "SCHEDULED_EVENT_IMAGE", n[n.HOME_HEADER = 5] = "HOME_HEADER", n[n.AVATAR_DECORATION = 6] = "AVATAR_DECORATION";
-            let a = 568,
-                E = 2400,
-                o = 848,
-                c = 2400,
-                _ = 1350,
-                d = 2400,
-                C = 960,
-                S = 2400,
-                A = 600,
-                I = 17 / 6,
-                f = 16 / 9,
-                T = 2.5,
-                L = 4,
-                p = a / I,
-                O = a / f,
-                R = a / T,
-                h = a / L,
-                v = s.BACKGROUND_REPLACEMENT_SIZE.width / s.BACKGROUND_REPLACEMENT_SIZE.height,
-                g = a / v;
-            (i = l || (l = {}))[i.CROP_GIF_START = 0] = "CROP_GIF_START", i[i.CROP_GIF_COMPLETE = 1] = "CROP_GIF_COMPLETE", i[i.CROP_GIF_ERROR = 2] = "CROP_GIF_ERROR"
-        },
-        737403: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                maybeOpenProfilePreviewModal: function() {
                     return i
                 }
             });
-            var n = r("913144");
-
-            function i(e) {
-                let {
-                    imageSrc: t,
-                    file: r,
-                    uploadType: i,
-                    guildId: u,
-                    isTryItOutFlow: l = !1
-                } = e;
-                n.default.dispatch({
-                    type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL",
-                    imageSrc: t,
-                    file: r,
-                    uploadType: i,
-                    guildId: u,
-                    isTryItOutFlow: l
-                })
-            }
-        },
-        453252: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                MAX_IMAGE_UPLOAD_FILESIZE_BYTES: function() {
-                    return n
-                }
-            });
-            let n = 10485760
-        },
-        771325: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                handleOpenSelectImageModal: function() {
-                    return C
-                },
-                showFileSizeErrorModal: function() {
-                    return S
-                },
-                getPreviewAvatar: function() {
-                    return A
-                },
-                getPreviewNickname: function() {
-                    return I
-                },
-                getPreviewDisplayName: function() {
-                    return f
-                },
-                isColorDark: function() {
-                    return T
-                }
-            });
-            var n = r("37983");
-            r("884691");
-            var i = r("509043"),
-                u = r("77078"),
-                l = r("336522"),
-                s = r("473591"),
-                a = r("315102"),
-                E = r("254490"),
-                o = r("737403"),
-                c = r("453252"),
-                _ = r("75015"),
-                d = r("782340");
-
-            function C(e, t, i, l) {
-                (0, u.openModalLazy)(async () => {
+            var n = t("37983");
+            t("884691");
+            var a = t("469563"),
+                r = t("713876"),
+                s = t("75196"),
+                i = (0, a.replaceIcon)(function(e) {
                     let {
-                        default: u
-                    } = await r.el("420333").then(r.bind(r, "420333")), a = s.default.isEditingClydeProfile();
-                    return r => (0, n.jsx)(u, {
-                        filters: l,
-                        maxFileSizeBytes: c.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
-                        imageSpecifications: e === _.UploadTypes.BANNER && d.default.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
-                        onComplete: (r, n) => (0, o.maybeOpenProfilePreviewModal)({
-                            imageSrc: r,
-                            file: n,
-                            uploadType: e,
-                            guildId: t,
-                            isTryItOutFlow: i
-                        }),
-                        uploadType: e,
-                        showUpsellHeader: !a,
+                        width: l = 24,
+                        height: t = 24,
+                        color: a = "currentColor",
                         ...r
+                    } = e;
+                    return (0, n.jsxs)("svg", {
+                        ...(0, s.default)(r),
+                        width: l,
+                        height: t,
+                        viewBox: "0 0 20 20",
+                        fill: "none",
+                        xmlns: "http://www.w3.org/2000/svg",
+                        children: [(0, n.jsx)("path", {
+                            d: "M5.00328 17.5C4.69218 17.5 4.4566 17.2189 4.51097 16.9126L4.99838 14.1667H2.26014C1.94953 14.1667 1.71409 13.8864 1.76763 13.5805L1.8843 12.9138C1.92617 12.6746 2.13392 12.5 2.37681 12.5H5.29005L6.17338 7.5H3.43514C3.12453 7.5 2.88909 7.21977 2.94263 6.91381L3.0593 6.24714C3.10117 6.00789 3.30892 5.83333 3.55181 5.83333H6.46505L6.98347 2.91262C7.02584 2.67391 7.23335 2.5 7.47578 2.5H8.12681C8.43792 2.5 8.67349 2.78107 8.61912 3.08738L8.13171 5.83333H13.1317L13.6501 2.91262C13.6925 2.67391 13.9 2.5 14.1424 2.5H14.7935C15.1046 2.5 15.3402 2.78107 15.2858 3.08738L14.7984 5.83333H17.5366C17.8472 5.83333 18.0827 6.11356 18.0291 6.41952L17.9125 7.08619C17.8706 7.32544 17.6628 7.5 17.4199 7.5H14.5067L14.2417 9H12.5754L12.8404 7.5H7.84041L6.95708 12.5H8.99835V14.1667H6.66505L6.14662 17.0874C6.10425 17.3261 5.89675 17.5 5.65431 17.5H5.00328Z",
+                            fill: a
+                        }), (0, n.jsx)("path", {
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                            d: "M10.4 14C10.4 12.0118 12.0118 10.4 14 10.4C15.9883 10.4 17.6 12.0118 17.6 14C17.6 14.7775 17.3536 15.4975 16.9345 16.0859L18.9243 18.0758C19.1586 18.3101 19.1586 18.69 18.9243 18.9243C18.69 19.1586 18.3101 19.1586 18.0758 18.9243L16.0859 16.9345C15.4975 17.3536 14.7775 17.6 14 17.6C12.0118 17.6 10.4 15.9883 10.4 14ZM14 11.6C12.6745 11.6 11.6 12.6745 11.6 14C11.6 15.3255 12.6745 16.4 14 16.4C15.3255 16.4 16.4 15.3255 16.4 14C16.4 12.6745 15.3255 11.6 14 11.6Z",
+                            fill: a
+                        })]
                     })
-                })
-            }
-
-            function S() {
-                (0, l.openUploadError)({
-                    title: d.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-                    help: d.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-                        maxSize: (0, E.sizeString)(c.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
-                    })
-                })
-            }
-
-            function A(e, t, r) {
-                let n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-                if (null != e) return e;
-                let {
-                    size: i = 80,
-                    canAnimate: u = !0
-                } = n, l = null === e;
-                return l && null == t ? a.default.getDefaultAvatarURL(r.id, r.discriminator) : l || (null == t ? void 0 : t.avatar) == null ? r.getAvatarURL(void 0, i, u) : r.getAvatarURL(null == t ? void 0 : t.guildId, i, u)
-            }
-
-            function I(e, t) {
-                return "" === e ? null : null != e ? e : t
-            }
-
-            function f(e, t) {
-                return "" === e ? null : null != e ? e : t
-            }
-
-            function T(e) {
-                let t = null != e ? (0, i.getDarkness)(e) : 1;
-                return t > .25
-            }
+                }, r.ChannelListMagnifyingGlassIcon)
         },
-        106435: function(e, t, r) {
+        593195: function(e, l, t) {
             "use strict";
-            r.r(t), r.d(t, {
+            t.r(l), t.d(l, {
                 default: function() {
-                    return a
+                    return i
                 }
             });
-            var n = r("884691"),
-                i = r("77078"),
-                u = r("606292"),
-                l = r("688318"),
-                s = r("19287");
-
-            function a(e) {
-                let {
-                    user: t,
-                    guildId: r,
-                    size: a,
-                    showPending: E = !1,
-                    showTryItOut: o = !1,
-                    animateOnHover: c = !1,
-                    avatarDecorationOverride: _,
-                    avatarOverride: d
-                } = e, {
-                    avatarSrc: C,
-                    isAvatarAnimating: S,
-                    eventHandlers: A
-                } = (0, s.useAnimatedAvatarSrc)({
-                    user: t,
-                    guildId: r,
-                    size: (0, i.getAvatarSize)(a),
-                    showPending: E,
-                    animateOnHover: c,
-                    avatarOverride: d
-                }), {
-                    avatarPlaceholderSrc: I,
-                    avatarDecorationSrc: f,
-                    eventHandlers: T
-                } = (0, l.default)({
-                    user: t,
-                    size: (0, u.getDecorationSizeForAvatarSize)(a),
-                    showPending: E,
-                    animateOnHover: c,
-                    avatarDecorationOverride: _,
-                    showTryItOut: o
-                }), L = n.useCallback(() => {
-                    A.onMouseEnter(), T.onMouseEnter()
-                }, [A, T]), p = n.useCallback(() => {
-                    A.onMouseLeave(), T.onMouseLeave()
-                }, [A, T]);
-                return {
-                    avatarPlaceholderSrc: I,
-                    avatarDecorationSrc: f,
-                    avatarSrc: C,
-                    isAnimating: S,
-                    eventHandlers: {
-                        onMouseEnter: L,
-                        onMouseLeave: p
-                    }
+            var n = t("37983");
+            t("884691");
+            var a = t("469563"),
+                r = t("346800"),
+                s = t("75196"),
+                i = (0, a.replaceIcon)(function(e) {
+                    let {
+                        width: l = 24,
+                        height: t = 24,
+                        color: a = "currentColor",
+                        className: r,
+                        foreground: i,
+                        ...c
+                    } = e;
+                    return (0, n.jsx)("svg", {
+                        width: l,
+                        height: t,
+                        viewBox: "0 0 24 24",
+                        className: r,
+                        ...(0, s.default)(c),
+                        children: (0, n.jsx)("path", {
+                            className: i,
+                            fill: a,
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                            d: "M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z"
+                        })
+                    })
+                }, r.TextIcon)
+        },
+        991497: function(e, l, t) {
+            "use strict";
+            t.r(l), t.d(l, {
+                default: function() {
+                    return i
                 }
+            });
+            var n = t("37983");
+            t("884691");
+            var a = t("469563"),
+                r = t("841563"),
+                s = t("75196"),
+                i = (0, a.replaceIcon)(function(e) {
+                    let {
+                        width: l = 24,
+                        height: t = 24,
+                        color: a = "currentColor",
+                        foreground: r,
+                        ...i
+                    } = e;
+                    return (0, n.jsx)("svg", {
+                        ...(0, s.default)(i),
+                        width: l,
+                        height: t,
+                        viewBox: "0 0 20 20",
+                        fill: "none",
+                        children: (0, n.jsx)("path", {
+                            className: r,
+                            fill: a,
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                            d: "M6.56929 14.6869H2.34375C1.97079 14.6869 1.61311 14.5387 1.34938 14.275C1.08566 14.0113 0.9375 13.6536 0.9375 13.2806V8.12437C0.9375 6.38389 1.6289 4.7147 2.85961 3.484C4.09032 2.25329 5.75951 1.56189 7.49999 1.56189C9.24047 1.56189 10.9097 2.25329 12.1404 3.484C12.6953 4.03895 13.1406 4.68307 13.4623 5.38267C14.9101 5.5973 16.2513 6.29124 17.2655 7.36251C18.4194 8.58133 19.0625 10.1959 19.0625 11.8744V17.0306C19.0625 17.4036 18.9144 17.7613 18.6506 18.025C18.3869 18.2887 18.0292 18.4369 17.6563 18.4369H12.5C11.1428 18.4369 9.81899 18.0162 8.71072 17.2328C7.7871 16.58 7.05103 15.7019 6.56929 14.6869ZM4.18544 4.80982C5.06451 3.93075 6.25679 3.43689 7.49999 3.43689C8.74319 3.43689 9.93549 3.93075 10.8146 4.80983C11.6936 5.6889 12.1875 6.88119 12.1875 8.12439C12.1875 9.36759 11.6936 10.5599 10.8146 11.439C9.93549 12.318 8.74321 12.8119 7.50001 12.8119H7.20268C7.19767 12.8118 7.19266 12.8118 7.18764 12.8119H2.8125V8.12438C2.8125 6.88118 3.30636 5.6889 4.18544 4.80982ZM8.672 14.5814C8.97763 15.0132 9.35591 15.3928 9.79299 15.7017C10.5847 16.2614 11.5305 16.5619 12.5 16.5619H17.1875V11.8744C17.1875 10.6755 16.7281 9.52219 15.9039 8.65159C15.3804 8.09865 14.735 7.68644 14.027 7.44246C14.0506 7.66798 14.0625 7.89557 14.0625 8.12439C14.0625 9.86487 13.3711 11.5341 12.1404 12.7648C11.1896 13.7156 9.97697 14.3445 8.672 14.5814Z"
+                        })
+                    })
+                }, r.ForumIcon)
+        },
+        660074: function(e, l, t) {
+            "use strict";
+            t.r(l), t.d(l, {
+                default: function() {
+                    return i
+                }
+            });
+            var n = t("37983");
+            t("884691");
+            var a = t("469563"),
+                r = t("733154"),
+                s = t("75196"),
+                i = (0, a.replaceIcon)(function(e) {
+                    let {
+                        width: l = 24,
+                        height: t = 24,
+                        color: a = "currentColor",
+                        strokeWidth: r = "2.5",
+                        foreground: i,
+                        ...c
+                    } = e;
+                    return (0, n.jsx)("svg", {
+                        ...(0, s.default)(c),
+                        width: l,
+                        height: t,
+                        viewBox: "0 0 24 24",
+                        fill: "none",
+                        children: (0, n.jsx)("path", {
+                            className: i,
+                            stroke: a,
+                            strokeWidth: r,
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round",
+                            d: "M4.25892 16.5936C3.14073 14.7086 2.74913 12.4802 3.15765 10.3269C3.56618 8.17362 4.74672 6.24353 6.47761 4.89906C8.2085 3.55459 10.3707 2.88823 12.5581 3.02511C14.7455 3.16199 16.8077 4.0927 18.3575 5.64247C19.9073 7.19223 20.838 9.25445 20.9749 11.4419C21.1118 13.6293 20.4454 15.7915 19.101 17.5224C17.7565 19.2532 15.8264 20.4338 13.6731 20.8423C11.5198 21.2509 9.29146 20.8593 7.40646 19.7411L7.40648 19.741L4.29805 20.6291C4.16944 20.6659 4.03335 20.6676 3.90387 20.634C3.7744 20.6005 3.65625 20.5329 3.56167 20.4383C3.4671 20.3437 3.39953 20.2256 3.36598 20.0961C3.33243 19.9666 3.33412 19.8306 3.37086 19.7019L4.25898 16.5935L4.25892 16.5936Z"
+                        })
+                    })
+                }, r.ChatIcon)
+        },
+        990745: function(e, l, t) {
+            "use strict";
+            t.r(l), t.d(l, {
+                default: function() {
+                    return i
+                }
+            });
+            var n = t("37983");
+            t("884691");
+            var a = t("469563"),
+                r = t("578478"),
+                s = t("75196"),
+                i = (0, a.replaceIcon)(function(e) {
+                    let {
+                        width: l = 24,
+                        height: t = 24,
+                        color: a = "currentColor",
+                        foreground: r,
+                        ...i
+                    } = e;
+                    return (0, n.jsx)("svg", {
+                        ...(0, s.default)(i),
+                        width: l,
+                        height: t,
+                        viewBox: "0 0 20 20",
+                        fill: "none",
+                        children: (0, n.jsx)("path", {
+                            transform: "translate(2, 1.5)",
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                            d: "M3.2 0C1.43269 0 0 1.43269 0 3.2V12.8C0 14.5673 1.43269 16 3.2 16H12.8C14.5673 16 16 14.5673 16 12.8V3.2C16 1.43269 14.5673 0 12.8 0H3.2ZM6.4 4.8C6.4 3.91616 5.68256 3.2 4.8 3.2C3.91552 3.2 3.2 3.91616 3.2 4.8C3.2 5.68448 3.91552 6.4 4.8 6.4C5.68256 6.4 6.4 5.68448 6.4 4.8ZM5.6 9.6L3.2 12.8H12.8L10.4 7.2L7.2 11.2L5.6 9.6Z",
+                            className: r,
+                            fill: a
+                        })
+                    })
+                }, r.ImageIcon)
+        },
+        620193: function(e, l, t) {
+            "use strict";
+            t.r(l), t.d(l, {
+                default: function() {
+                    return r
+                }
+            });
+            var n = t("37983");
+            t("884691");
+            var a = t("75196");
+
+            function r(e) {
+                let {
+                    width: l = 24,
+                    height: t = 24,
+                    color: r = "currentColor",
+                    foreground: s,
+                    ...i
+                } = e;
+                return (0, n.jsxs)("svg", {
+                    ...(0, a.default)(i),
+                    width: l,
+                    height: t,
+                    viewBox: "0 0 16 16",
+                    fill: "none",
+                    children: [(0, n.jsx)("path", {
+                        className: s,
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        d: "M7 15H9V8H12.5L15 5.5L12.5 3H9V1H7V3H1L3.5 5.5L1 8H7V15Z",
+                        fill: r
+                    }), (0, n.jsx)("path", {
+                        className: s,
+                        d: "M5 14C5 12.8954 5.89543 12 7 12H9C10.1046 12 11 12.8954 11 14V15H5V14Z",
+                        fill: r
+                    })]
+                })
             }
         },
-        19287: function(e, t, r) {
+        959097: function(e, l, t) {
             "use strict";
-            r.r(t), r.d(t, {
-                useAnimatedAvatarSrc: function() {
-                    return o
+            t.r(l), t.d(l, {
+                default: function() {
+                    return i
                 }
-            }), r("222007");
-            var n = r("884691"),
-                i = r("446674"),
-                u = r("206230"),
-                l = r("771325"),
-                s = r("26989"),
-                a = r("471671"),
-                E = r("91653");
-
-            function o(e) {
-                let {
-                    user: t,
-                    guildId: r,
-                    size: o,
-                    showPending: c = !1,
-                    animateOnHover: _ = !1,
-                    avatarOverride: d
-                } = e, [C, S] = n.useState(!1), A = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion), I = (0, i.useStateFromStores)([a.default], () => a.default.isFocused()), f = I && (C || !A && !_), {
-                    pendingAvatar: T
-                } = (0, E.default)({}), L = (0, i.useStateFromStores)([s.default], () => null != r && null != t ? s.default.getMember(r, t.id) : null), p = n.useMemo(() => null != t ? (0, l.getPreviewAvatar)(c ? null != d ? d : T : void 0, L, t, {
-                    canAnimate: f,
-                    size: o
-                }) : void 0, [c, T, L, t, f, o, d]), O = n.useCallback(() => S(!0), []), R = n.useCallback(() => S(!1), []);
-                return {
-                    avatarSrc: p,
-                    isAvatarAnimating: f,
-                    eventHandlers: {
-                        onMouseEnter: O,
-                        onMouseLeave: R
-                    }
-                }
-            }
+            });
+            var n = t("37983");
+            t("884691");
+            var a = t("469563"),
+                r = t("346800"),
+                s = t("75196"),
+                i = (0, a.replaceIcon)(function(e) {
+                    let {
+                        width: l = 24,
+                        height: t = 24,
+                        color: a = "currentColor",
+                        foreground: r,
+                        ...i
+                    } = e;
+                    return (0, n.jsxs)("svg", {
+                        ...(0, s.default)(i),
+                        width: l,
+                        height: t,
+                        viewBox: "0 0 24 24",
+                        fill: "none",
+                        children: [(0, n.jsx)("path", {
+                            className: r,
+                            fill: a,
+                            d: "M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z"
+                        }), (0, n.jsx)("path", {
+                            className: r,
+                            fill: a,
+                            d: "M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z"
+                        })]
+                    })
+                }, r.TextIcon)
         }
     }
 ]);
