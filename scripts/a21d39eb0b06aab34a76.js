@@ -33,7 +33,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return y
                 }
             }), n("424973");
             var i = n("627445"),
@@ -49,8 +49,14 @@
                 C = n("677099"),
                 g = n("49111");
             let f = null,
-                p = [];
-            class I extends s.default.Store {
+                p = [],
+                I = null,
+                S = null;
+
+            function E(e) {
+                return null == e ? 0 : new Date().getTime() - e.getTime()
+            }
+            class v extends s.default.Store {
                 initialize() {
                     this.waitFor(C.default, u.default, h.default)
                 }
@@ -66,9 +72,18 @@
                 isActive(e) {
                     return null != f && f === e && p.length > 0
                 }
+                getAnalyticsProperties() {
+                    let e = this.getCurrentAction();
+                    return {
+                        step: null == e ? void 0 : e.kind,
+                        is_final_step: 1 === p.length,
+                        step_duration: E(S),
+                        total_duration: E(I)
+                    }
+                }
             }
-            I.displayName = "AssistantStore";
-            var S = new I(r.default, {
+            v.displayName = "AssistantStore";
+            var y = new v(r.default, {
                 ASSISTANT_REBUILD_ACTION_STACK: function(e) {
                     let {
                         guildId: t
@@ -131,16 +146,16 @@
                         kind: "startActivity",
                         targetKey: void 0,
                         targetId: void 0
-                    })
+                    }), I = new Date, S = new Date
                 },
                 ASSISTANT_COMPLETE_ACTION: function(e) {
                     let {
                         kind: t
                     } = e;
-                    return 0 === p.length ? (l("AssistantStore: no actions to complete"), !1) : p[0].kind === t && void p.shift()
+                    return 0 === p.length ? (l("AssistantStore: no actions to complete"), !1) : p[0].kind === t && void(p.shift(), S = new Date)
                 },
                 ASSISTANT_DISMISS: function() {
-                    p = []
+                    p = [], S = null, I = null
                 }
             })
         },
@@ -247,8 +262,8 @@
                 A = n("233069"),
                 R = n("870691"),
                 O = n("42203"),
-                b = n("816092"),
-                D = n("305961"),
+                D = n("816092"),
+                b = n("305961"),
                 G = n("957255"),
                 U = n("660478"),
                 V = n("18494"),
@@ -509,7 +524,7 @@
                     var n, i;
                     this.id = e, this.sortedNamedCategories = null, this.sections = null, this.rows = null, this.firstVoiceChannel = void 0, this.allChannelsById = null, this.version = 0, this.hideMutedChannels = M.default.isGuildCollapsed(this.id), this.mutedChannelIds = M.default.getMutedChannels(this.id), this.optedInChannels = null !== (n = M.default.getOptedInChannelsWithPendingUpdates(this.id)) && void 0 !== n ? n : M.default.getOptedInChannels(this.id), this.optInEnabled = (0, w.isOptInEnabledForGuild)(this.id), this.hideResourceChannels = (0, I.canSeeOnboardingHome)(this.id), this.favoriteChannelIds = new Set(null !== (i = M.default.getGuildFavorites(this.id)) && void 0 !== i ? i : []), this.suggestedFavoriteChannelId = _.default.getSuggestedChannelId(this.id), this.collapsedCategoryIds = R.default.getCollapsedCategories();
                     let l = O.default.getMutableGuildChannelsForGuild(this.id),
-                        s = D.default.getGuild(this.id),
+                        s = b.default.getGuild(this.id),
                         a = {},
                         d = [],
                         u = {};
@@ -793,7 +808,7 @@
                     return this.category.guild.mutedChannelIds.has(this.id)
                 }
                 get isCollapsed() {
-                    return b.default.isCollapsed(this.id)
+                    return D.default.isCollapsed(this.id)
                 }
                 get isFirstVoiceChannel() {
                     return this.category.getFirstVoiceChannel() === this
