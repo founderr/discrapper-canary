@@ -247,7 +247,7 @@
                         }
                     }),
                     Y = t.useMemo(() => g.find(e => e.id === S), [g, S]);
-                let L = (a = k, n = Y, s = null, a && null != n && y.IRREDEEMABLE_PAYMENT_SOURCES.has(n.type) ? s = A.default.Messages.PAYMENT_SOURCE_REDEMPTION_INVALID : a && null != n && n.hasFlag(b.PaymentSourceFlags.NEW) && (s = A.default.Messages.BILLING_PAYMENT_AUTHORIZATION_CHARGE.format({
+                let L = (a = k, n = Y, s = null, a && null != n && !n.canRedeemTrial() ? s = A.default.Messages.PAYMENT_SOURCE_REDEMPTION_INVALID : a && null != n && n.hasFlag(b.PaymentSourceFlags.NEW) && (s = A.default.Messages.BILLING_PAYMENT_AUTHORIZATION_CHARGE.format({
                     helpDeskArticle: p.default.getArticleURL(y.HelpdeskArticles.PAYMENT_AUTHORIZATION_CHARGE)
                 })), s);
                 return (0, r.jsxs)(r.Fragment, {
