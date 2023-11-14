@@ -1135,7 +1135,7 @@
                     }
                 }), m = (0, p.useStateFromStores)([S.default], () => null != c ? S.default.getApplication(c) : null);
                 r.useEffect(() => {
-                    f && null != c && (0, P.getApplication)(c)
+                    f && null != c && (0, P.fetchApplication)(c)
                 }, [c, f]);
                 let N = (0, p.useStateFromStores)([U.default], () => U.default.getGuild(null == I ? void 0 : I.guildId));
                 return (0, i.jsx)(eI, {
