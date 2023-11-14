@@ -49049,7 +49049,7 @@
                         var i;
                         let d = {
                                 environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                                build_number: "245482"
+                                build_number: "245486"
                             },
                             h = l.default.getCurrentUser();
                         null != h && (d.user_id = h.id, d.user_name = h.tag, null != h.email && (d.email = h.email));
@@ -61910,7 +61910,7 @@
                 DesignIds: function() {
                     return i
                 }
-            }), n("222007"), (r = i || (i = {}))[r.CLASSIC_IA = 0] = "CLASSIC_IA", r[r.DESIGN_IA = 1] = "DESIGN_IA", r[r.DESIGN_TABS_IA = 2] = "DESIGN_TABS_IA"
+            }), (r = i || (i = {}))[r.CLASSIC_IA = 0] = "CLASSIC_IA", r[r.DESIGN_IA = 1] = "DESIGN_IA", r[r.DESIGN_TABS_IA = 2] = "DESIGN_TABS_IA"
         },
         482402: function(e, t, n) {
             "use strict";
