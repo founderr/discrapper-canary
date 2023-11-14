@@ -4,10 +4,10 @@
             "use strict";
             r.r(t), r.d(t, {
                 fetchStickerPack: function() {
-                    return p
+                    return g
                 },
                 fetchStickerPacks: function() {
-                    return g
+                    return p
                 },
                 fetchSticker: function() {
                     return T
@@ -34,7 +34,7 @@
                     return P
                 },
                 unfavoriteSticker: function() {
-                    return G
+                    return U
                 }
             }), r("424973");
             var i = r("917351"),
@@ -53,7 +53,7 @@
                 y = r("49111"),
                 C = r("397336"),
                 I = r("782340");
-            let p = async (e, t) => {
+            let g = async (e, t) => {
                 let {
                     body: r
                 } = await (0, k.httpGetWithCountryCodeQuery)(y.Endpoints.STICKER_PACK(e));
@@ -63,7 +63,7 @@
                     pack: r,
                     ingestStickers: t
                 }), r
-            }, g = async function() {
+            }, p = async function() {
                 let {
                     locale: e = c.default.locale
                 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -77,7 +77,7 @@
                     body: {
                         sticker_packs: t
                     }
-                } = await (0, k.httpGetWithCountryCodeQuery)({
+                } = await n.default.get({
                     url: y.Endpoints.STICKER_PACKS,
                     query: {
                         locale: e
@@ -166,7 +166,7 @@
                 }), !1) : !t.stickerIds.includes(e) && void t.stickerIds.push(e), C.UserSettingsDelay.INFREQUENT_USER_ACTION)
             }
 
-            function G(e) {
+            function U(e) {
                 d.FrecencyUserSettingsActionCreators.updateAsync("favoriteStickers", t => {
                     t.stickerIds = t.stickerIds.filter(t => t !== e), t.stickerIds = v(t.stickerIds)
                 }, C.UserSettingsDelay.INFREQUENT_USER_ACTION)
@@ -194,10 +194,10 @@
                     return P
                 },
                 useFavoriteStickers: function() {
-                    return G
+                    return U
                 },
                 useLatestFrecentStickers: function() {
-                    return U
+                    return G
                 },
                 useStickerForRenderableSticker: function() {
                     return K
@@ -222,8 +222,8 @@
                 y = r("865372"),
                 C = r("364685"),
                 I = r("161585"),
-                p = r("24373"),
-                g = r("49111"),
+                g = r("24373"),
+                p = r("49111"),
                 T = r("782340");
             let _ = e => {
                     F();
@@ -234,7 +234,7 @@
                 },
                 h = e => {
                     let t = s.AnimateStickers.useSetting();
-                    return (0, p.shouldAnimateSticker)(t, e)
+                    return (0, g.shouldAnimateSticker)(t, e)
                 },
                 R = e => {
                     let {
@@ -254,11 +254,11 @@
                             E = [],
                             y = 0,
                             C = 0,
-                            g = 0;
+                            p = 0;
                         if (0 !== s) {
                             let i = function(t, r) {
                                 let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                                    u = (0, p.isGuildSticker)(t[0]) ? a.default.getGuild(t[0].guild_id) : void 0,
+                                    u = (0, g.isGuildSticker)(t[0]) ? a.default.getGuild(t[0].guild_id) : void 0,
                                     {
                                         canCreateExpressions: s
                                     } = (0, n.getManageResourcePermissions)(u),
@@ -275,11 +275,11 @@
                                         a = t.slice(s, l).map((e, t) => ({
                                             type: I.StickerGridItemTypes.STICKER,
                                             sticker: e,
-                                            packId: (0, p.isStandardSticker)(e) ? e.pack_id : "TODO - fix",
+                                            packId: (0, g.isStandardSticker)(e) ? e.pack_id : "TODO - fix",
                                             gridSectionIndex: C,
                                             rowIndex: y,
                                             columnIndex: t,
-                                            visibleRowIndex: g,
+                                            visibleRowIndex: p,
                                             category: r
                                         }));
                                     C > _ && C > d && null != u && h > t.length && a.push({
@@ -289,8 +289,8 @@
                                         gridSectionIndex: C,
                                         rowIndex: y,
                                         columnIndex: a.length,
-                                        visibleRowIndex: g
-                                    }), !i && (g++, E.push(a), f.push(a.length)), y++
+                                        visibleRowIndex: p
+                                    }), !i && (p++, E.push(a), f.push(a.length)), y++
                                 }
                                 C++
                             };
@@ -359,7 +359,7 @@
                                 name: t.name,
                                 stickers: []
                             }), null != s && !f.default.can({
-                                permission: g.Permissions.USE_EXTERNAL_EMOJIS,
+                                permission: p.Permissions.USE_EXTERNAL_EMOJIS,
                                 user: s,
                                 context: e
                             }) && (i = i.filter(t => t.id === e.getGuildId()))
@@ -375,13 +375,13 @@
                 return null !== (t = null === (e = r.favoriteStickers) || void 0 === e ? void 0 : e.stickerIds) && void 0 !== t ? t : v
             }
 
-            function G() {
+            function U() {
                 let e = P(),
                     t = (0, u.useStateFromStoresArray)([C.default], () => e.map(e => C.default.getStickerById(e)).filter(e => void 0 !== e), [e]);
                 return t
             }
 
-            function U() {
+            function G() {
                 let e = function() {
                         var e, t;
                         let r = (0, l.useFrecencySettings)(),
@@ -392,7 +392,7 @@
                 return t
             }
             let L = e => {
-                    let t = G(),
+                    let t = U(),
                         {
                             packs: r,
                             frequentlyUsedStickers: n
@@ -404,7 +404,7 @@
                         l = A(e);
                     return i.useMemo(() => {
                         var i;
-                        let u = r.map(p.createStickerPackCategory),
+                        let u = r.map(g.createStickerPackCategory),
                             a = {
                                 type: I.StickerCategoryTypes.FAVORITE,
                                 id: I.StickerCategoryTypes.FAVORITE,
@@ -416,11 +416,11 @@
                                 id: I.StickerCategoryTypes.RECENT,
                                 name: T.default.Messages.STICKER_CATEGORY_RECENT,
                                 stickers: null !== (i = null == n ? void 0 : n.filter(t => {
-                                    if ((0, p.isGuildSticker)(t)) {
+                                    if ((0, g.isGuildSticker)(t)) {
                                         var i, u;
                                         return null !== (u = null === (i = C.default.getStickersByGuildId(t.guild_id)) || void 0 === i ? void 0 : i.some(e => e.id === t.id)) && void 0 !== u && u && (0, k.getStickerSendability)(t, s, e) !== k.StickerSendability.NONSENDABLE
                                     }
-                                    if ((0, p.isStandardSticker)(t)) return r.some(e => e.id === t.pack_id)
+                                    if ((0, g.isStandardSticker)(t)) return r.some(e => e.id === t.pack_id)
                                 })) && void 0 !== i ? i : []
                             };
                         return [a, c, ...l, ...u]
@@ -431,7 +431,7 @@
                         r = (0, u.useStateFromStores)([C.default], () => C.default.getStickerById(e.id)),
                         [n, s] = i.useState(!0),
                         [l, a] = i.useState(!1),
-                        c = (0, p.isGuildSticker)(e) || (0, p.isStandardSticker)(e);
+                        c = (0, g.isGuildSticker)(e) || (0, g.isStandardSticker)(e);
                     return (i.useEffect(() => {
                         let i = async () => {
                             if (t && !c && null == r && n && !l) {

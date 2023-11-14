@@ -970,7 +970,7 @@
                     body: {
                         sticker_packs: t
                     }
-                } = await (0, p.httpGetWithCountryCodeQuery)({
+                } = await s.default.get({
                     url: v.Endpoints.STICKER_PACKS,
                     query: {
                         locale: e
