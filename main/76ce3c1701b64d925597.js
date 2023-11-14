@@ -1,1066 +1,495 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["37580"], {
-        260365: function(t, e, i) {
+    ["80574"], {
+        393828: function(e, t, i) {
             "use strict";
-            i.r(e), i.d(e, {
-                default: function() {
-                    return s
-                }
-            });
-            var n = i("872717"),
-                a = i("913144"),
-                l = i("716241"),
-                d = i("884351"),
-                r = i("42203"),
-                u = i("450911"),
-                c = i("819689"),
-                o = i("49111"),
-                s = {
-                    updateActivity(t) {
-                        let {
-                            applicationId: e,
-                            distributor: i,
-                            shareActivity: l,
-                            token: d = null,
-                            duration: r = 0,
-                            closed: u = !1
-                        } = t;
-                        a.default.wait(() => a.default.dispatch({
-                            type: "ACTIVITY_UPDATE_START",
-                            applicationId: e,
-                            duration: r,
-                            distributor: i
-                        })), n.default.post({
-                            url: o.Endpoints.ACTIVITIES,
-                            body: {
-                                application_id: e,
-                                token: d,
-                                duration: r,
-                                share_activity: l,
-                                distributor: i,
-                                closed: u
-                            },
-                            retries: 1,
-                            oldFormErrors: !0
-                        }).then(t => {
-                            let {
-                                body: {
-                                    token: n
-                                }
-                            } = t;
-                            a.default.dispatch({
-                                type: "ACTIVITY_UPDATE_SUCCESS",
-                                applicationId: e,
-                                token: n,
-                                duration: r,
-                                distributor: i
-                            })
-                        }).catch(() => {
-                            a.default.dispatch({
-                                type: "ACTIVITY_UPDATE_FAIL",
-                                applicationId: e
-                            })
-                        })
-                    },
-                    sendActivityInvite(t) {
-                        let {
-                            channelId: e,
-                            type: i,
-                            activity: n,
-                            content: a,
-                            location: u
-                        } = t, s = r.default.getChannel(e);
-                        if (null == s) return Promise.resolve(null);
-                        let p = d.default.parse(s, null != a ? a : "");
-                        return c.default.sendMessage(s.id, p, !1, {
-                            activityAction: {
-                                type: i,
-                                activity: n
-                            }
-                        }).then(t => (l.default.trackWithMetadata(o.AnalyticEvents.INVITE_SENT, {
-                            location: u,
-                            invite_type: n.type === o.ActivityTypes.LISTENING ? o.LoggingInviteTypes.SPOTIFY : o.LoggingInviteTypes.APPLICATION,
-                            application_id: n.application_id,
-                            guild_id: s.getGuildId(),
-                            channel_id: s.id,
-                            message_id: null != t ? t.body.id : null
-                        }), Promise.resolve(s)), t => Promise.reject(t))
-                    },
-                    sendActivityInviteUser(t) {
-                        let {
-                            userId: e,
-                            type: i,
-                            activity: n,
-                            content: a,
-                            location: l
-                        } = t;
-                        return u.default.ensurePrivateChannel(e).then(t => this.sendActivityInvite({
-                            channelId: t,
-                            type: i,
-                            activity: n,
-                            content: a,
-                            location: l
-                        }))
-                    },
-                    async getJoinSecret(t, e, i, a, l) {
-                        let d = {};
-                        null != a && (d.channel_id = a), null != l && (d.message_id = l);
-                        let r = await n.default.get({
-                            url: o.Endpoints.USER_ACTIVITY_JOIN(t, e, i),
-                            retries: 3,
-                            query: d
-                        });
-                        return r.body.secret
-                    }
-                }
+            e.exports = i.p + "714405524ef39906bd06.png"
         },
-        823411: function(t, e, i) {
+        527382: function(e, t, i) {
             "use strict";
-            i.r(e), i.d(e, {
-                default: function() {
-                    return m
-                }
-            }), i("222007"), i("70102"), i("702976");
-            var n = i("522632"),
-                a = i("872717"),
-                l = i("913144"),
-                d = i("550766"),
-                r = i("299285"),
-                u = i("760850"),
-                c = i("915639"),
-                o = i("86878"),
-                s = i("546463"),
-                p = i("686470"),
-                E = i("535974"),
-                A = i("568734"),
-                f = i("269180"),
-                _ = i("773336"),
-                I = i("260365"),
-                T = i("438931"),
-                h = i("215082"),
-                C = i("49111"),
-                y = i("954016"),
-                v = i("782340");
-
-            function g(t) {
-                let {
-                    applicationId: e,
-                    secret: i,
-                    channelId: n,
-                    intent: a = y.ActivityIntent.PLAY,
-                    embedded: d = !1,
-                    analyticsLocations: r = []
-                } = t;
-                D(e, null, n, d, r).then(() => f.default.waitConnected(e)).then(() => Promise.race([f.default.waitSubscribed(e, C.RPCEvents.ACTIVITY_JOIN)])).then(() => {
-                    l.default.dispatch({
-                        type: "ACTIVITY_JOIN",
-                        applicationId: e,
-                        secret: i,
-                        intent: a,
-                        embedded: d
-                    })
-                }).catch(() => l.default.dispatch({
-                    type: "ACTIVITY_JOIN_FAILED",
-                    applicationId: e
-                }))
-            }
-
-            function D(t, e, i) {
-                let u = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-                    s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
-                if (u) return null == i ? Promise.reject(Error("Invalid channel ID")) : ((0, d.startEmbeddedActivity)(i, {
-                    application_id: t
-                }, s), Promise.resolve());
-                if (o.default.isConnected(t)) return Promise.resolve();
-                let A = null;
-                if (null == e) {
-                    let i = p.default.getActiveLibraryApplication(t);
-                    e = null != i ? i.branchId : t
-                }
-                if (E.default.isLaunchable(t, e)) {
-                    var _;
-                    let i = E.default.getState(t, e),
-                        l = p.default.getActiveLaunchOptionId(t, e);
-                    if (null == i) throw Error("Missing dispatch game when launching");
-                    let d = p.default.getLibraryApplication(t, e);
-                    if (null == d) throw Error("Missing library application when launching");
-                    A = (_ = t, a.default.post({
-                        url: C.Endpoints.OAUTH2_AUTHORIZE,
-                        query: {
-                            client_id: _,
-                            response_type: "token",
-                            scope: [C.OAuth2Scopes.IDENTIFY].join(" ")
-                        },
-                        retries: 3,
-                        body: {
-                            authorize: !0
-                        },
-                        oldFormErrors: !0
-                    }).then(t => {
-                        let e = t.body.location.split(/#|\?/),
-                            i = n.parse(e[e.length - 1]);
-                        if ("invalid_request" === i.error) return null;
-                        if (null != i.error) {
-                            var a;
-                            throw Error("OAuth2 Error: ".concat(i.error, ": ").concat(null !== (a = i.error_description) && void 0 !== a ? a : "unknown error"))
-                        }
-                        return i.access_token
-                    }, t => {
-                        if (404 === t.status) return null;
-                        throw t
-                    })).then(t => f.default.launchDispatchApplication(i, t, c.default.locale, d.getBranchName(), l))
-                } else {
-                    let e = r.default.getApplication(t);
-                    A = null != e ? f.default.launch(e) : f.default.launchGame(t)
-                }
-                let I = Error("game not found");
-                return null != A ? (l.default.dispatch({
-                    type: "LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE",
-                    applicationId: t,
-                    branchId: e
-                }), l.default.dispatch({
-                    type: "GAME_LAUNCH_START",
-                    applicationId: t
-                }), A.then(e => {
-                    l.default.dispatch({
-                        type: "GAME_LAUNCH_SUCCESS",
-                        applicationId: t,
-                        pids: e
-                    })
-                }).catch(e => {
-                    h.default.show(C.NoticeTypes.LAUNCH_GAME_FAILURE, v.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), l.default.dispatch({
-                        type: "GAME_LAUNCH_FAIL",
-                        applicationId: t,
-                        error: I
-                    })
-                })) : (l.default.dispatch({
-                    type: "GAME_LAUNCH_FAIL",
-                    applicationId: t,
-                    error: I
-                }), Promise.reject(I))
-            }
-            var m = {
-                addGame(t) {
-                    l.default.dispatch({
-                        type: "RUNNING_GAME_ADD_OVERRIDE",
-                        pid: t
-                    })
-                },
-                fetchApplication(t) {
-                    let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                    return l.default.dispatch({
-                        type: "APPLICATION_FETCH",
-                        applicationId: t
-                    }), a.default.get({
-                        url: C.Endpoints.APPLICATION_PUBLIC(t),
-                        query: {
-                            with_guild: e
-                        },
-                        oldFormErrors: !0
-                    }).then(t => (l.default.dispatch({
-                        type: "APPLICATION_FETCH_SUCCESS",
-                        application: t.body
-                    }), t.body)).catch(e => (l.default.dispatch({
-                        type: "APPLICATION_FETCH_FAIL",
-                        applicationId: t
-                    }), Promise.reject(e)))
-                },
-                async fetchApplications(t) {
-                    let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                        i = t;
-                    if (!e && (i = t.filter(t => {
-                            var e, i;
-                            let n = r.default.getApplication(t),
-                                a = (0, A.hasFlag)(null !== (i = null == n ? void 0 : n.flags) && void 0 !== i ? i : 0, C.ApplicationFlags.EMBEDDED),
-                                l = a && (null == n ? void 0 : null === (e = n.embeddedActivityConfig) || void 0 === e ? void 0 : e.supported_platforms) == null;
-                            return !(null != n && !l) && !r.default.isFetchingApplication(t) && !r.default.didFetchingApplicationFail(t) && t.length > 0
-                        })), i.length > 0) {
-                        let t;
-                        l.default.dispatch({
-                            type: "APPLICATIONS_FETCH",
-                            applicationIds: i
-                        });
-                        try {
-                            t = await a.default.get({
-                                url: C.Endpoints.APPLICATIONS_PUBLIC,
-                                query: n.stringify({
-                                    application_ids: i
-                                }),
-                                oldFormErrors: !0
-                            })
-                        } catch (t) {
-                            throw l.default.dispatch({
-                                type: "APPLICATIONS_FETCH_FAIL",
-                                applicationIds: i
-                            }), t
-                        }
-                        l.default.dispatch({
-                            type: "APPLICATIONS_FETCH_SUCCESS",
-                            applications: t.body
-                        })
-                    }
-                },
-                toggleOverlay(t) {
-                    let e = s.default.getGameByName(t.name);
-                    if (null != e) {
-                        let t = p.default.getActiveLibraryApplication(e.id);
-                        if (null != t) {
-                            let e = A.toggleFlag(t.getFlags(), C.LibraryApplicationFlags.OVERLAY_DISABLED);
-                            T.updateFlags(t.id, t.branchId, e);
-                            return
-                        }
-                    }
-                    l.default.dispatch({
-                        type: "RUNNING_GAME_TOGGLE_OVERLAY",
-                        game: t
-                    })
-                },
-                toggleDetection(t) {
-                    l.default.dispatch({
-                        type: "RUNNING_GAME_TOGGLE_DETECTION",
-                        game: t
-                    })
-                },
-                editName(t, e) {
-                    l.default.dispatch({
-                        type: "RUNNING_GAME_EDIT_NAME",
-                        game: t,
-                        newName: e
-                    })
-                },
-                identifyGame: (t, e) => (0, u.default)().then(e => new Promise((i, n) => {
-                    if (null == e) {
-                        n(Error("Game utils module not loaded"));
-                        return
-                    }
-                    e.identifyGame(t, (e, a) => {
-                        if (0 !== e) {
-                            n(Error("Error ".concat(e, " when fetching info on ").concat(t)));
-                            return
-                        }
-                        if (null == a.icon || "" === a.icon || null == a.name || "" === a.name) {
-                            n(Error("Did not find data on ".concat(t)));
-                            return
-                        }
-                        l.default.dispatch({
-                            type: "GAME_ICON_UPDATE",
-                            gameName: a.name,
-                            icon: "data:image/png;base64,".concat(a.icon)
-                        }), i(a)
-                    })
-                })),
-                getDetectableGames() {
-                    !s.default.fetching && null == s.default.lastFetched && l.default.wait(() => {
-                        l.default.dispatch({
-                            type: "GAMES_DATABASE_FETCH"
-                        }), a.default.get({
-                            url: C.Endpoints.APPLICATIONS_DETECTABLE,
-                            headers: {
-                                "If-None-Match": s.default.detectableGamesEtag
-                            },
-                            retries: 1,
-                            oldFormErrors: !0
-                        }).then(t => {
-                            let {
-                                body: e,
-                                headers: {
-                                    etag: i
-                                }
-                            } = t;
-                            l.default.dispatch({
-                                type: "GAMES_DATABASE_UPDATE",
-                                games: e,
-                                etag: i
-                            })
-                        }, t => {
-                            let {
-                                status: e
-                            } = t;
-                            304 === e ? l.default.dispatch({
-                                type: "GAMES_DATABASE_UPDATE",
-                                games: [],
-                                etag: s.default.detectableGamesEtag
-                            }) : l.default.dispatch({
-                                type: "GAMES_DATABASE_FETCH_FAIL"
-                            })
-                        })
-                    })
-                },
-                reportUnverifiedGame(t) {
-                    let {
-                        name: e,
-                        iconHash: i,
-                        publisher: n,
-                        distributor: d,
-                        sku: r,
-                        executableName: c
-                    } = t, o = (0, u.cleanExecutablePath)(c);
-                    if (null != o) {
-                        var s, p;
-                        a.default.post({
-                            url: C.Endpoints.UNVERIFIED_APPLICATIONS,
-                            body: {
-                                name: e,
-                                os: (0, _.getPlatformName)(),
-                                icon: i,
-                                distributor_application: (s = d, p = r, null == s || "" === s ? null : {
-                                    distributor: s,
-                                    sku: p
-                                }),
-                                executable: o,
-                                publisher: n,
-                                report_version: 3
-                            },
-                            retries: 1,
-                            oldFormErrors: !0
-                        }).then(t => {
-                            let {
-                                body: {
-                                    name: e,
-                                    hash: i,
-                                    missing_data: n
-                                }
-                            } = t;
-                            l.default.dispatch({
-                                type: "UNVERIFIED_GAME_UPDATE",
-                                name: e,
-                                hash: i,
-                                missingData: n
-                            })
-                        })
-                    }
-                },
-                uploadIcon(t, e, i) {
-                    a.default.post({
-                        url: C.Endpoints.UNVERIFIED_APPLICATIONS_ICONS,
-                        body: {
-                            application_name: t,
-                            application_hash: e,
-                            icon: i
-                        },
-                        retries: 1,
-                        oldFormErrors: !0
-                    })
-                },
-                deleteEntry(t) {
-                    l.default.dispatch({
-                        type: "RUNNING_GAME_DELETE_ENTRY",
-                        game: t
-                    })
-                },
-                launch: D,
-                async join(t) {
-                    let {
-                        userId: e,
-                        sessionId: i,
-                        applicationId: n,
-                        channelId: a,
-                        messageId: d,
-                        intent: r = y.ActivityIntent.PLAY,
-                        embedded: u = !1
-                    } = t;
-                    if (__OVERLAY__) return l.default.dispatch({
-                        type: "OVERLAY_JOIN_GAME",
-                        userId: e,
-                        sessionId: i,
-                        applicationId: n,
-                        channelId: a,
-                        messageId: d
-                    }), Promise.resolve(!0);
-                    l.default.dispatch({
-                        type: "ACTIVITY_JOIN_LOADING",
-                        applicationId: n
-                    });
-                    try {
-                        let t = await I.default.getJoinSecret(e, i, n, a, d);
-                        return g({
-                            applicationId: n,
-                            secret: t,
-                            channelId: a,
-                            intent: r,
-                            embedded: u
-                        }), !0
-                    } catch (t) {
-                        return l.default.dispatch({
-                            type: "ACTIVITY_JOIN_FAILED",
-                            applicationId: n
-                        }), !1
-                    }
-                },
-                joinWithSecret: g
-            }
-        },
-        438931: function(t, e, i) {
-            "use strict";
-            i.r(e), i.d(e, {
-                updateFlags: function() {
-                    return d
-                }
-            });
-            var n = i("872717"),
-                a = i("913144"),
-                l = i("49111");
-
-            function d(t, e, i) {
-                return a.default.dispatch({
-                    type: "LIBRARY_APPLICATION_FLAGS_UPDATE_START",
-                    applicationId: t,
-                    branchId: e,
-                    flags: i
-                }), n.default.patch({
-                    url: l.Endpoints.LIBRARY_APPLICATION_BRANCH(t, e),
-                    body: {
-                        flags: i
-                    },
-                    oldFormErrors: !0
-                }).then(t => {
-                    a.default.dispatch({
-                        type: "LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS",
-                        libraryApplication: t.body
-                    })
-                })
-            }
-        },
-        215082: function(t, e, i) {
-            "use strict";
-            i.r(e), i.d(e, {
-                default: function() {
-                    return a
-                }
-            });
-            var n = i("913144"),
-                a = {
-                    show(t, e, i, a, l) {
-                        n.default.dispatch({
-                            type: "NOTICE_SHOW",
-                            notice: {
-                                id: l,
-                                type: t,
-                                message: e,
-                                buttonText: i,
-                                callback: a
-                            }
-                        })
-                    },
-                    dismiss(t) {
-                        n.default.dispatch({
-                            type: "NOTICE_DISMISS",
-                            ...t
-                        })
-                    }
-                }
-        },
-        447789: function(t, e, i) {
-            "use strict";
-            i.r(e), i.d(e, {
-                ActivitiesInGdmExperiment: function() {
+            i.r(t), i.d(t, {
+                FileUploadIconClassNames: function() {
                     return a
                 },
-                useIsActivitiesInGdmEnabled: function() {
+                DEFAULT_FILE_UPLOAD_ICONS: function() {
                     return l
                 },
-                isActivitiesInGdmEnabled: function() {
-                    return d
+                EMOJI_FILE_UPLOAD_ICONS: function() {
+                    return o
                 }
             });
-            var n = i("862205");
-            let a = (0, n.createExperiment)({
-                kind: "user",
-                id: "2023-01_activities_in_gdm",
-                label: "Activities in GDM",
-                defaultConfig: {
-                    isActivitiesInGdmEnabled: !1
+            var s, n, r = i("831839");
+            (s = n || (n = {}))[s.IMAGE = 0] = "IMAGE", s[s.DOCUMENT = 1] = "DOCUMENT", s[s.CODE = 2] = "CODE";
+            let a = {
+                    0: r.image,
+                    1: r.document,
+                    2: r.code
                 },
-                treatments: [{
-                    id: 1,
-                    label: "enable Activities in GDMs",
-                    config: {
-                        isActivitiesInGdmEnabled: !0
-                    }
-                }]
-            });
-
-            function l() {
-                let {
-                    isActivitiesInGdmEnabled: t
-                } = a.useExperiment({
-                    location: "c7edd6_1"
-                }, {
-                    autoTrackExposure: !1
-                });
-                return t
-            }
-
-            function d() {
-                let {
-                    isActivitiesInGdmEnabled: t
-                } = a.getCurrentConfig({
-                    location: "c7edd6_2"
-                }, {
-                    autoTrackExposure: !1
-                });
-                return t
-            }
+                l = [1, 0, 2],
+                o = [0, 0, 0]
         },
-        427953: function(t, e, i) {
+        109036: function(e, t, i) {
             "use strict";
-            i.r(e), i.d(e, {
-                ActivitiesInTextExperiment: function() {
-                    return u
-                },
+            i.r(t), i.d(t, {
                 default: function() {
-                    return c
+                    return o
                 }
             });
-            var n = i("446674"),
-                a = i("862205"),
-                l = i("42203"),
-                d = i("954016"),
-                r = i("49111");
-            let u = (0, a.createExperiment)({
-                kind: "user",
-                id: "2023-08_activities_in_text",
-                label: "Activities in Text",
-                defaultConfig: {
-                    isActivitiesInTextEnabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "enable Activities in text channels",
-                    config: {
-                        isActivitiesInTextEnabled: !0
-                    }
-                }]
-            });
-
-            function c(t) {
-                var e;
-                let i = (0, n.useStateFromStores)([l.default], () => l.default.getChannel(t)),
-                    {
-                        isActivitiesInTextEnabled: a
-                    } = u.useExperiment({
-                        location: "useIsActivitiesInTextEnabled"
-                    }, {
-                        autoTrackExposure: !1
-                    });
-                return a && d.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(null !== (e = null == i ? void 0 : i.type) && void 0 !== e ? e : r.ChannelTypes.UNKNOWN)
-            }
+            var s = i("37983");
+            i("884691");
+            var n = i("414456"),
+                r = i.n(n),
+                a = i("527382"),
+                l = i("831839"),
+                o = function(e) {
+                    let {
+                        icons: t,
+                        className: i
+                    } = e;
+                    return (0, s.jsxs)("div", {
+                        className: r(l.icons, i),
+                        children: [(0, s.jsx)("div", {
+                            className: l.wrapOne,
+                            children: (0, s.jsx)("div", {
+                                className: r(l.icon, l.one, a.FileUploadIconClassNames[t[0]])
+                            })
+                        }), (0, s.jsx)("div", {
+                            className: l.wrapThree,
+                            children: (0, s.jsx)("div", {
+                                className: r(l.icon, l.three, a.FileUploadIconClassNames[t[2]])
+                            })
+                        }), (0, s.jsx)("div", {
+                            className: l.wrapTwo,
+                            children: (0, s.jsx)("div", {
+                                className: r(l.icon, l.two, a.FileUploadIconClassNames[t[1]])
+                            })
+                        })]
+                    })
+                }
         },
-        550766: function(t, e, i) {
+        336522: function(e, t, i) {
             "use strict";
-            i.r(e), i.d(e, {
-                startEmbeddedActivity: function() {
+            i.r(t), i.d(t, {
+                default: function() {
                     return m
                 },
-                launchEmbeddedActivity: function() {
-                    return S
-                },
-                stopEmbeddedActivity: function() {
-                    return L
-                },
-                disconnectEmbeddedActivity: function() {
-                    return N
-                },
-                fetchDeveloperApplications: function() {
-                    return P
-                },
-                uploadImageAttachment: function() {
-                    return F
-                },
-                fetchShelf: function() {
-                    return O
-                },
-                sendEmbeddedActivityInvite: function() {
-                    return M
-                },
-                sendEmbeddedActivityInviteUser: function() {
-                    return U
-                },
-                dismissNewActivityIndicator: function() {
-                    return G
-                },
-                validateTestMode: function() {
-                    return H
-                },
-                updateActivityPanelMode: function() {
-                    return V
-                },
-                updateFocusedActivityLayout: function() {
-                    return w
-                }
-            }), i("222007");
-            var n = i("759843"),
-                a = i("872717"),
-                l = i("913144"),
-                d = i("450911"),
-                r = i("255397"),
-                u = i("970728"),
-                c = i("819689"),
-                o = i("599417"),
-                s = i("299285"),
-                p = i("191145"),
-                E = i("653047"),
-                A = i("271938"),
-                f = i("42203"),
-                _ = i("697218"),
-                I = i("449008"),
-                T = i("840707"),
-                h = i("447789"),
-                C = i("191225"),
-                y = i("458184"),
-                v = i("420444"),
-                g = i("49111"),
-                D = i("91366");
-
-            function m(t, e, i) {
-                let n = C.default.getSelfEmbeddedActivityForChannel(t);
-                null != n && L({
-                    channelId: t,
-                    applicationId: n.application_id
-                }), l.default.dispatch({
-                    type: "EMBEDDED_ACTIVITY_OPEN",
-                    channelId: t,
-                    embeddedActivity: e,
-                    analyticsLocations: i
-                });
-                let {
-                    application_id: a
-                } = e, d = (0, v.default)(t);
-                d ? (r.default.selectParticipant(t, a), r.default.updateLayout(t, g.ChannelLayouts.NO_CHAT)) : (0, y.default)(t)
-            }
-            async function S(t) {
-                var e, i;
-                let a = f.default.getChannel(t),
-                    d = null !== (e = null == a ? void 0 : a.getGuildId()) && void 0 !== e ? e : null;
-                if (null == d && !(null !== (i = null == a ? void 0 : a.isPrivate()) && void 0 !== i && i)) return;
-                let r = C.default.getSelfEmbeddedActivityForChannel(t);
-                if (null === r) return;
-                let u = A.default.getSessionId();
-                try {
-                    l.default.dispatch({
-                        type: "EMBEDDED_ACTIVITY_LAUNCH_START",
-                        embeddedActivity: r
-                    }), await T.default.post({
-                        url: g.Endpoints.ACTIVITY_CHANNEL_LAUNCH(t, r.application_id),
-                        body: {
-                            session_id: u,
-                            guild_id: null != d ? d : void 0
-                        },
-                        trackedActionData: {
-                            event: n.NetworkActionNames.EMBEDDED_ACTIVITIES_LAUNCH,
-                            properties: {
-                                guild_id: d,
-                                channel_id: t,
-                                application_id: r.application_id,
-                                session_id: u
-                            }
-                        },
-                        retries: 3,
-                        oldFormErrors: !0
-                    }), l.default.dispatch({
-                        type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS"
-                    })
-                } catch (e) {
-                    l.default.dispatch({
-                        type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
-                        guildId: d,
-                        applicationId: r.application_id,
-                        error: new o.default(e)
-                    }), L({
-                        channelId: t,
-                        applicationId: r.application_id,
-                        showFeedback: !1
-                    })
-                }
-            }
-
-            function L(t) {
-                var e;
-                let {
-                    channelId: i,
-                    applicationId: n,
-                    showFeedback: a = !0
-                } = t;
-                l.default.dispatch({
-                    type: "EMBEDDED_ACTIVITY_CLOSE",
-                    channelId: i,
-                    applicationId: n,
-                    showFeedback: a
-                });
-                let d = p.default.getSelectedParticipantId(i),
-                    u = null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id,
-                    c = C.default.getEmbeddedActivitiesForChannel(i).find(t => t.application_id === n);
-                null != c && null != u && "" !== u && d === n && r.default.selectParticipant(i, null)
-            }
-
-            function N(t, e) {
-                l.default.dispatch({
-                    type: "EMBEDDED_ACTIVITY_DISCONNECT",
-                    channelId: t,
-                    applicationId: e
-                })
-            }
-            async function P() {
-                try {
-                    l.default.dispatch({
-                        type: "DEVELOPER_ACTIVITY_SHELF_FETCH_START"
-                    });
-                    let t = await a.default.get({
-                            url: g.Endpoints.APPLICATIONS,
-                            query: {
-                                with_team_applications: !0
-                            },
-                            oldFormErrors: !0
-                        }),
-                        e = t.body.map(t => E.default.createFromServer(t));
-                    l.default.dispatch({
-                        type: "DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS",
-                        items: e
-                    })
-                } catch (t) {
-                    l.default.dispatch({
-                        type: "DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL"
-                    })
-                }
-            }
-            async function F(t, e, i) {
-                try {
-                    l.default.dispatch({
-                        type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START"
-                    });
-                    let n = await a.default.post({
-                        url: g.Endpoints.ACTIVITY_UPLOAD_ATTACHMENT(t),
-                        query: {
-                            channel_id: e
-                        },
-                        attachments: [{
-                            name: "file",
-                            file: i
-                        }]
-                    });
-                    return l.default.dispatch({
-                        type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_SUCCESS",
-                        attachment: n.body.attachment
-                    }), n.body.attachment
-                } catch (t) {
-                    return l.default.dispatch({
-                        type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL"
-                    }), new o.default(t)
-                }
-            }
-            let b = (t, e, i) => {
-                let {
-                    guildId: n
-                } = i;
-                (n === t || null == n && null == t) && e()
-            };
-            async function O(t) {
-                var e, i, a;
-                let {
-                    guildId: d,
-                    force: r = !1
-                } = t, u = C.default.getShelfActivities(d), c = u.map(t => s.default.getApplication(t.application_id)).filter(I.isNotNullish);
-                if (!r && !C.default.shouldFetchShelf(d)) {
-                    if (null === (e = C.default.getShelfFetchStatus(d)) || void 0 === e ? void 0 : e.isFetching) {
-                        let t, e;
-                        let i = new Promise(e => {
-                                t = b.bind(null, d, e), l.default.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", t)
-                            }),
-                            n = new Promise(t => {
-                                e = b.bind(null, d, t), l.default.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", e)
-                            });
-                        await Promise.race([i, n]), null != t && (l.default.unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", t), t = null), null != e && (l.default.unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", e), e = null)
-                    }
-                    return {
-                        activityConfigs: u,
-                        applications: c
-                    }
-                }
-                try {
-                    l.default.dispatch({
-                        type: "EMBEDDED_ACTIVITY_FETCH_SHELF",
-                        guildId: d
-                    });
-                    let t = void 0 !== d && "" !== d;
-                    if (!t && !(0, h.isActivitiesInGdmEnabled)()) return {
-                        activityConfigs: [],
-                        applications: []
-                    };
-                    let e = t ? {
-                            guild_id: d
-                        } : void 0,
-                        r = await T.default.get({
-                            url: g.Endpoints.ACTIVITY_SHELF,
-                            query: e,
-                            trackedActionData: {
-                                event: n.NetworkActionNames.EMBEDDED_ACTIVITIES_FETCH_SHELF,
-                                properties: {
-                                    guild_id: d
-                                }
-                            },
-                            retries: 3,
-                            oldFormErrors: !0
-                        }),
-                        u = null !== (i = r.body.activities) && void 0 !== i ? i : [],
-                        c = null !== (a = r.body.applications) && void 0 !== a ? a : [];
-                    return l.default.dispatch({
-                        type: "EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS",
-                        guildId: d,
-                        activities: u,
-                        applications: c
-                    }), c.length > 0 && l.default.dispatch({
-                        type: "APPLICATIONS_FETCH_SUCCESS",
-                        applications: c
-                    }), {
-                        activityConfigs: u,
-                        applications: c.map(t => E.default.createFromServer(t))
-                    }
-                } catch (t) {
-                    return l.default.dispatch({
-                        type: "EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL",
-                        guildId: d
-                    }), {
-                        activityConfigs: u,
-                        applications: c
-                    }
-                }
-            }
-            async function M(t) {
-                let {
-                    activityChannelId: e,
-                    invitedChannelId: i,
-                    applicationId: n,
-                    location: a
-                } = t, l = await u.default.createInvite(e, {
-                    target_type: D.InviteTargetTypes.EMBEDDED_APPLICATION,
-                    target_application_id: n
-                }, a);
-                null != f.default.getChannel(i) && c.default.sendInvite(i, l.code, a, null)
-            }
-            async function U(t) {
-                let {
-                    channelId: e,
-                    applicationId: i,
-                    userId: n,
-                    location: a
-                } = t, l = await u.default.createInvite(e, {
-                    target_type: D.InviteTargetTypes.EMBEDDED_APPLICATION,
-                    target_application_id: i
-                }, a);
-                d.default.ensurePrivateChannel(n).then(t => {
-                    null != f.default.getChannel(t) && c.default.sendInvite(t, l.code, a, null)
-                })
-            }
-
-            function G() {
-                l.default.dispatch({
-                    type: "EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR"
-                })
-            }
-            async function H(t) {
-                let e = g.Endpoints.ACTIVITY_TEST_MODE(t);
-                try {
-                    return await a.default.get({
-                        url: e,
-                        oldFormErrors: !0
-                    }), !0
-                } catch (t) {
-                    return !1
-                }
-            }
-
-            function V(t) {
-                l.default.dispatch({
-                    type: "EMBEDDED_ACTIVITY_SET_PANEL_MODE",
-                    activityPanelMode: t
-                })
-            }
-
-            function w(t) {
-                l.default.dispatch({
-                    type: "EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT",
-                    focusedActivityLayout: t
-                })
-            }
-        },
-        458184: function(t, e, i) {
-            "use strict";
-
-            function n(t) {}
-            i.r(e), i.d(e, {
-                default: function() {
-                    return n
-                }
-            })
-        },
-        420444: function(t, e, i) {
-            "use strict";
-            i.r(e), i.d(e, {
-                default: function() {
-                    return d
-                }
-            });
-            var n = i("298386"),
-                a = i("42203"),
-                l = i("427953");
-
-            function d(t) {
-                let e = a.default.getChannel(t),
-                    i = l.ActivitiesInTextExperiment.getCurrentConfig({
-                        location: "isVoiceActivityChannel"
-                    }, {
-                        autoTrackExposure: !1
-                    }).isActivitiesInTextEnabled;
-                return null != e && (e.type === n.ChannelTypes.GUILD_VOICE || e.isPrivate() && !i)
-            }
-        },
-        760850: function(t, e, i) {
-            "use strict";
-            let n;
-            i.r(e), i.d(e, {
-                cleanExecutablePath: function() {
+                UPLOAD_ERROR_MODAL_KEY: function() {
                     return E
                 },
+                openUploadError: function() {
+                    return f
+                }
+            });
+            var s = i("37983");
+            i("884691");
+            var n = i("414456"),
+                r = i.n(n),
+                a = i("551042"),
+                l = i("516256"),
+                o = i("202664"),
+                u = i("476765"),
+                c = i("109036"),
+                d = i("527382"),
+                _ = i("831839");
+
+            function m(e) {
+                let {
+                    title: t,
+                    help: i,
+                    showPremiumUpsell: n,
+                    transitionState: a,
+                    icons: m,
+                    fileSize: E,
+                    onClose: f
+                } = e, I = (0, u.useUID)(), L = null != m ? m : d.DEFAULT_FILE_UPLOAD_ICONS;
+                return n ? (0, s.jsx)(o.default, {
+                    transitionState: a,
+                    onClose: f,
+                    fileSize: E
+                }) : (0, s.jsx)(l.ModalRoot, {
+                    size: l.ModalSize.DYNAMIC,
+                    "aria-labelledby": I,
+                    transitionState: a,
+                    children: (0, s.jsx)("div", {
+                        className: r(_.uploadDropModal, _.error),
+                        children: (0, s.jsxs)("div", {
+                            className: _.inner,
+                            children: [(0, s.jsx)(c.default, {
+                                icons: L
+                            }), (0, s.jsx)("div", {
+                                id: I,
+                                className: _.title,
+                                children: t
+                            }), (0, s.jsx)("div", {
+                                className: _.instructions,
+                                children: i
+                            })]
+                        })
+                    })
+                })
+            }
+            let E = "UPLOAD_ERROR_MODAL_KEY";
+
+            function f(e) {
+                (0, a.openModal)(t => (0, s.jsx)(m, {
+                    ...t,
+                    ...e
+                }), {
+                    modalKey: E
+                })
+            }
+        },
+        942377: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                getHigherExpectedValue: function() {
+                    return r
+                },
+                getHighestLikelihood: function() {
+                    return a
+                }
+            });
+            var s = i("716849"),
+                n = i("646718");
+
+            function r(e, t, i) {
+                return null == e ? n.PremiumTypes.TIER_2 : e[n.PremiumSubscriptionSKUs.TIER_0] * t > e[n.PremiumSubscriptionSKUs.TIER_2] * i ? n.PremiumTypes.TIER_0 : n.PremiumTypes.TIER_2
+            }
+
+            function a(e) {
+                if (null == e) return n.PremiumTypes.TIER_0;
+                let t = e[s.NON_SUBSCRIBER_SENTINEL],
+                    i = e[n.PremiumSubscriptionSKUs.TIER_0],
+                    r = e[n.PremiumSubscriptionSKUs.TIER_2];
+                return r > i && r > t ? n.PremiumTypes.TIER_2 : n.PremiumTypes.TIER_0
+            }
+        },
+        843647: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
                 default: function() {
-                    return A
+                    return _
                 }
-            }), i("781738"), i("424973");
-            var a = i("917351"),
-                l = i.n(a),
-                d = i("49671"),
-                r = i("605250"),
-                u = i("773336"),
-                c = i("50885");
-            let o = [];
+            });
+            var s = i("446674"),
+                n = i("697218"),
+                r = i("10514"),
+                a = i("719923"),
+                l = i("716849"),
+                o = i("676572"),
+                u = i("942377"),
+                c = i("917247"),
+                d = i("646718");
 
-            function s(t) {
-                return t = t.toLowerCase(), (0, u.isWindows)() && (t = (t = t.replace(/^[a-z]:/, "")).replace(/\\/g, "/")), t
-            }
-
-            function p(t) {
-                null != t && "" !== t && (!(t = s(t)).endsWith("/") && (t += "/"), o.push(t))
-            }
-
-            function E(t) {
-                t = s(t);
-                let e = !1;
-                return (o.forEach(i => {
-                    !e && t.startsWith(i) && (t = t.substr(i.length), e = !0)
-                }), e) ? t = t.includes("dosbox.exe") ? t.split("/").slice(-3).join("/") : t.split("/").slice(-2).join("/") : null
-            }
-            async function A() {
-                if (null != n) return n;
-                try {
-                    await c.default.ensureModule("discord_game_utils"), n = await c.default.requireModule("discord_game_utils")
-                } catch (t) {
-                    new(0, r.default)("GamesActionCreators").error("could not load discord_game_utils", t)
+            function _(e) {
+                let {
+                    autoTrackExposure: t,
+                    experiment: i,
+                    location: _
+                } = e, m = (0, s.useStateFromStores)([n.default], () => n.default.getCurrentUser()), E = (0, c.usePremiumTrialOffer)(), f = null != E, I = null != m && (0, a.isPremium)(m);
+                (0, l.useMaybeFetchPremiumLikelihood)(i);
+                let {
+                    enabled: L,
+                    useExpectedValue: T,
+                    useLikelihood: P
+                } = i.useExperiment({
+                    location: null != _ ? _ : "1"
+                }, {
+                    autoTrackExposure: !I && !f && t
+                }), {
+                    premiumLikelihood: p,
+                    fetched: R
+                } = (0, s.useStateFromStoresObject)([o.default], () => {
+                    let e = o.default.getState();
+                    return {
+                        fetched: e.fetched,
+                        premiumLikelihood: e.premiumLikelihood
+                    }
+                }), U = (0, s.useStateFromStores)([r.default], () => r.default.isLoadedForSKUs([d.PremiumSubscriptionSKUs.TIER_0, d.PremiumSubscriptionSKUs.TIER_2])), S = !I && L && !f && (T ? !R || !U : !R), M = d.PremiumTypes.TIER_2;
+                if (f) {
+                    let e = E.subscription_trial;
+                    (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_0 ? M = d.PremiumTypes.TIER_0 : (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_2 && (M = d.PremiumTypes.TIER_2)
+                } else if (!I && !S && L) {
+                    if (T) {
+                        let {
+                            amount: e
+                        } = (0, a.getPrice)(d.SubscriptionPlans.PREMIUM_MONTH_TIER_0), {
+                            amount: t
+                        } = (0, a.getPrice)(d.SubscriptionPlans.PREMIUM_MONTH_TIER_2);
+                        M = (0, u.getHigherExpectedValue)(p, e, t)
+                    } else P && (M = (0, u.getHighestLikelihood)(p))
                 }
-                if ((0, u.isWindows)()) {
-                    let t = d.default.process.env;
-                    p(t.LOCALAPPDATA), p(t["PROGRAMFILES(X86)"]), p(t.PROGRAMFILES), p(t.PROGRAMW6432), p(t.PROGRAMDATA), p("/games/"), p("/steamlibrary/steamapps/common/")
+                return {
+                    isLoading: S,
+                    suggestedPremiumType: M
                 }
-                let t = d.default.remoteApp.getPath;
-                return p(await t("home")), p(await t("appData")), p(await t("desktop")), p(await t("documents")), p(await t("downloads")), (o = l.uniq(o)).sort((t, e) => e.length - t.length), n
+            }
+        },
+        202664: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                default: function() {
+                    return R
+                }
+            });
+            var s = i("37983"),
+                n = i("884691"),
+                r = i("414456"),
+                a = i.n(r),
+                l = i("446674"),
+                o = i("77078"),
+                u = i("109036"),
+                c = i("697218"),
+                d = i("993105"),
+                _ = i("719923"),
+                m = i("552917"),
+                E = i("843647"),
+                f = i("789946"),
+                I = i("646718"),
+                L = i("49111"),
+                T = i("527382"),
+                P = i("782340"),
+                p = i("74230");
+
+            function R(e) {
+                let t, {
+                        onClose: i,
+                        fileSize: r,
+                        ...R
+                    } = e,
+                    U = null != r && I.MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE < r,
+                    {
+                        isLoading: S,
+                        suggestedPremiumType: M
+                    } = (0, E.default)({
+                        autoTrackExposure: !U,
+                        experiment: m.default,
+                        location: I.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL
+                    }),
+                    x = !U && M === I.PremiumTypes.TIER_0,
+                    A = (0, l.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
+                    O = (0, s.jsx)(u.default, {
+                        icons: T.DEFAULT_FILE_UPLOAD_ICONS
+                    });
+                t = x ? P.default.Messages.UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2.format({
+                    premiumPlan: (0, _.getPremiumTypeDisplayName)(I.PremiumTypes.TIER_0),
+                    premiumMaxSize: P.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED
+                }) : P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE;
+                let N = n.useMemo(() => {
+                        let e = _.default.getUserMaxFileSize(A),
+                            t = (0, d.formatSize)(e / 1024, {
+                                useKibibytes: !0
+                            }),
+                            i = P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
+                                maxSize: t
+                            });
+                        switch (null == A ? void 0 : A.premiumType) {
+                            case I.PremiumTypes.TIER_0:
+                                i = P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({
+                                    maxSize: t
+                                });
+                                break;
+                            case I.PremiumTypes.TIER_1:
+                                i = P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({
+                                    maxSize: t
+                                })
+                        }
+                        return i
+                    }, [A]),
+                    h = (0, s.jsxs)("div", {
+                        className: p.body,
+                        children: [(0, s.jsx)("span", {
+                            children: N
+                        }), (0, s.jsx)(o.Text, {
+                            variant: "text-md/medium",
+                            children: t
+                        })]
+                    });
+                return (0, s.jsx)(f.default, {
+                    artElement: O,
+                    artContainerClassName: a(p.artContainer),
+                    enableArtBoxShadow: !1,
+                    type: I.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
+                    title: P.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+                    body: h,
+                    context: P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
+                        maxSize: P.default.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD
+                    }),
+                    glowUp: t,
+                    analyticsLocation: {
+                        section: L.AnalyticsSections.FILE_UPLOAD_POPOUT
+                    },
+                    onClose: i,
+                    subscriptionTier: x ? I.PremiumSubscriptionSKUs.TIER_0 : I.PremiumSubscriptionSKUs.TIER_2,
+                    isLoading: S,
+                    ...R
+                })
+            }
+        },
+        789946: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                default: function() {
+                    return U
+                }
+            });
+            var s = i("37983"),
+                n = i("884691"),
+                r = i("414456"),
+                a = i.n(r),
+                l = i("77078"),
+                o = i("812204"),
+                u = i("685665"),
+                c = i("617917"),
+                d = i("599110"),
+                _ = i("719923"),
+                m = i("154889"),
+                E = i("917247"),
+                f = i("956597"),
+                I = i("635956"),
+                L = i("646718"),
+                T = i("49111"),
+                P = i("782340"),
+                p = i("857513"),
+                R = i("393828");
+
+            function U(e) {
+                var t, i, r;
+                let {
+                    title: U,
+                    type: S,
+                    guildBoostProps: M,
+                    analyticsSource: x,
+                    analyticsLocation: A,
+                    body: O,
+                    context: N,
+                    glowUp: h,
+                    modalClassName: v,
+                    artContainerClassName: D,
+                    bodyClassName: C,
+                    transitionState: b,
+                    onClose: g,
+                    onSubscribeClick: j,
+                    onSecondaryClick: y,
+                    secondaryCTA: k,
+                    subscribeButtonText: F,
+                    showNewBadge: B = !1,
+                    enableArtBoxShadow: K = !0,
+                    subscriptionTier: z = L.PremiumSubscriptionSKUs.TIER_2,
+                    isLoading: w = !1,
+                    hideBackButton: Y,
+                    backButtonText: H,
+                    ...G
+                } = e, V = null != M, W = (0, E.usePremiumTrialOffer)(), J = (0, m.usePremiumDiscountOffer)(), X = ((null == W ? void 0 : null === (t = W.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === z || (0, m.discountOfferHasTier)(J, z)) && !V, {
+                    analyticsLocations: Z
+                } = (0, u.default)(o.default.PREMIUM_UPSELL_MODAL);
+                n.useEffect(() => {
+                    !w && (V ? d.default.track(T.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+                        type: "".concat(S, " - Tier ").concat(M.boostedGuildTier),
+                        guild_id: M.guild.id,
+                        channel_id: M.channelId,
+                        location: A,
+                        location_stack: Z
+                    }) : d.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+                        type: S,
+                        source: x,
+                        location_stack: Z,
+                        sku_id: z
+                    }))
+                }, [V, z, w]);
+                let q = K ? a(p.artContainer, p.artContainerBoxShadow, D) : a(p.artContainer, D),
+                    Q = null;
+                return Q = "artURL" in G ? (0, s.jsx)("img", {
+                    className: p.art,
+                    alt: "",
+                    src: G.artURL
+                }) : G.artElement, (0, s.jsxs)(l.ModalRoot, {
+                    className: a(p.root, v),
+                    "aria-label": U,
+                    transitionState: b,
+                    children: [(0, s.jsxs)("div", {
+                        className: q,
+                        children: [Q, B ? (0, s.jsx)("img", {
+                            className: p.sparkleBadge,
+                            alt: "",
+                            src: R
+                        }) : null]
+                    }), (0, s.jsx)(l.ModalContent, {
+                        className: p.content,
+                        children: w ? (0, s.jsx)(l.Spinner, {}) : (0, s.jsx)(s.Fragment, {
+                            children: X ? (0, s.jsx)(s.Fragment, {
+                                children: (0, s.jsx)(f.default, {
+                                    onClose: g,
+                                    type: S,
+                                    subscriptionTier: null !== (r = null == W ? void 0 : null === (i = W.subscription_trial) || void 0 === i ? void 0 : i.sku_id) && void 0 !== r ? r : L.PremiumSubscriptionSKUs.TIER_2,
+                                    headingText: U,
+                                    context: N,
+                                    analyticsLocationObject: A,
+                                    discountOffer: J,
+                                    trialOffer: W,
+                                    children: h
+                                })
+                            }) : (0, s.jsxs)(s.Fragment, {
+                                children: [(0, s.jsx)(l.Heading, {
+                                    className: p.header,
+                                    variant: "heading-xl/semibold",
+                                    children: U
+                                }), (0, s.jsx)(l.Text, {
+                                    variant: "text-md/normal",
+                                    className: a(C),
+                                    children: O
+                                })]
+                            })
+                        })
+                    }), (0, s.jsxs)(l.ModalFooter, {
+                        className: p.footer,
+                        children: [(0, s.jsxs)("div", {
+                            className: p.primaryActions,
+                            children: [null != k ? (0, s.jsx)(l.Button, {
+                                className: p.secondaryAction,
+                                onClick: y,
+                                size: l.Button.Sizes.SMALL,
+                                color: l.Button.Colors.PRIMARY,
+                                look: l.Button.Looks.LINK,
+                                children: k
+                            }) : null, (() => {
+                                let e, t;
+                                if (V) return (0, s.jsx)(c.default, {
+                                    analyticsLocation: A,
+                                    guild: M.guild,
+                                    onClose: g
+                                });
+                                if (X) {
+                                    if (null != W) {
+                                        var i, n;
+                                        e = (0, _.formatTrialCtaIntervalDuration)({
+                                            intervalType: null == W ? void 0 : null === (i = W.subscription_trial) || void 0 === i ? void 0 : i.interval,
+                                            intervalCount: null == W ? void 0 : null === (n = W.subscription_trial) || void 0 === n ? void 0 : n.interval_count
+                                        }), t = null == W ? void 0 : W.trial_id
+                                    } else null != J && (e = P.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+                                        percent: J.discount.amount
+                                    }))
+                                }
+                                return (0, s.jsx)(I.default, {
+                                    premiumModalAnalyticsLocation: A,
+                                    subscriptionTier: z,
+                                    trialId: t,
+                                    size: l.Button.Sizes.SMALL,
+                                    color: l.Button.Colors.GREEN,
+                                    onClick: () => {
+                                        null == j || j(), g()
+                                    },
+                                    buttonText: null != F ? F : e
+                                })
+                            })()]
+                        }), !Y && (0, s.jsx)(l.Button, {
+                            onClick: g,
+                            size: l.Button.Sizes.SMALL,
+                            color: l.Button.Colors.PRIMARY,
+                            look: l.Button.Looks.LINK,
+                            children: null != H ? H : P.default.Messages.BACK
+                        })]
+                    })]
+                })
             }
         }
     }

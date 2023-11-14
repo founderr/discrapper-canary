@@ -12,7 +12,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return h
                 }
             }), n("222007");
             var s = n("37983"),
@@ -25,7 +25,7 @@
                 o = n("49111"),
                 c = n("782340"),
                 f = n("519409");
-            class h extends a.Component {
+            class E extends a.Component {
                 render() {
                     return (0, s.jsxs)("div", {
                         className: f.streamerModeEnabled,
@@ -46,10 +46,10 @@
                     }
                 }
             }
-            h.defaultProps = {
+            E.defaultProps = {
                 disableButton: !1
             };
-            var p = h
+            var h = E
         },
         7037: function(e, t, n) {
             "use strict";
@@ -214,6 +214,114 @@
                 }, [n, t]), n
             }
         },
+        531674: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                getMuteTimes: function() {
+                    return _
+                },
+                default: function() {
+                    return M
+                }
+            }), n("222007");
+            var s = n("37983");
+            n("884691");
+            var a = n("866227"),
+                l = n.n(a),
+                r = n("446674"),
+                i = n("77078"),
+                u = n("820542"),
+                d = n("519705"),
+                o = n("319165"),
+                c = n("282109"),
+                f = n("679653"),
+                E = n("49111"),
+                h = n("468200"),
+                p = n("782340");
+            let _ = () => [{
+                    value: h.MuteUntilSeconds.MINUTES_15,
+                    label: p.default.Messages.MUTE_DURATION_15_MINUTES
+                }, {
+                    value: h.MuteUntilSeconds.HOURS_1,
+                    label: p.default.Messages.MUTE_DURATION_1_HOUR
+                }, {
+                    value: h.MuteUntilSeconds.HOURS_3,
+                    label: p.default.Messages.MUTE_DURATION_3_HOURS
+                }, {
+                    value: h.MuteUntilSeconds.HOURS_8,
+                    label: p.default.Messages.MUTE_DURATION_8_HOURS
+                }, {
+                    value: h.MuteUntilSeconds.HOURS_24,
+                    label: p.default.Messages.MUTE_DURATION_24_HOURS
+                }, {
+                    value: h.MuteUntilSeconds.ALWAYS,
+                    label: p.default.Messages.MUTE_DURATION_ALWAYS
+                }],
+                g = e => {
+                    let t = e > 0 ? l().add(e, "second").toISOString() : null;
+                    return {
+                        muted: !0,
+                        mute_config: {
+                            selected_time_window: e,
+                            end_time: t
+                        }
+                    }
+                };
+
+            function M(e, t) {
+                let [n, a] = (0, r.useStateFromStoresArray)([c.default], () => [c.default.isChannelMuted(e.guild_id, e.id), c.default.getChannelMuteConfig(e.guild_id, e.id)]), l = (0, o.useMutedUntilText)(a), h = (0, f.default)(e, !0);
+
+                function M(t) {
+                    t && e.type === E.ChannelTypes.GUILD_CATEGORY && (0, u.categoryCollapse)(e.id), d.default.updateChannelOverrideSettings(e.guild_id, e.id, {
+                        muted: t
+                    })
+                }
+                let S = p.default.Messages.MUTE_CHANNEL_GENERIC,
+                    m = p.default.Messages.UNMUTE_CHANNEL_GENERIC;
+                switch (e.type) {
+                    case E.ChannelTypes.GUILD_CATEGORY:
+                        S = p.default.Messages.MUTE_CATEGORY, m = p.default.Messages.UNMUTE_CATEGORY;
+                        break;
+                    case E.ChannelTypes.GROUP_DM:
+                        S = p.default.Messages.MUTE_CONVERSATION, m = p.default.Messages.UNMUTE_CONVERSATION;
+                        break;
+                    case E.ChannelTypes.DM:
+                        S = p.default.Messages.MUTE_CHANNEL.format({
+                            name: h
+                        }), m = p.default.Messages.UNMUTE_CHANNEL.format({
+                            name: h
+                        });
+                        break;
+                    default:
+                        S = p.default.Messages.MUTE_CHANNEL_GENERIC, m = p.default.Messages.UNMUTE_CHANNEL_GENERIC
+                }
+                return n ? (0, s.jsx)(i.MenuItem, {
+                    id: "unmute-channel",
+                    label: m,
+                    subtext: l,
+                    action: () => M(!1)
+                }) : (0, s.jsx)(i.MenuItem, {
+                    id: "mute-channel",
+                    label: S,
+                    action: () => M(!0),
+                    children: _().map(n => {
+                        let {
+                            value: a,
+                            label: l
+                        } = n;
+                        return (0, s.jsx)(i.MenuItem, {
+                            id: "".concat(a),
+                            label: l,
+                            action: () => (function(n) {
+                                e.type === E.ChannelTypes.GUILD_CATEGORY && (0, u.categoryCollapse)(e.id);
+                                let s = g(n);
+                                d.default.updateChannelOverrideSettings(e.guild_id, e.id, s, t)
+                            })(a)
+                        }, a)
+                    })
+                })
+            }
+        },
         884422: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -273,7 +381,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return R
+                    return L
                 }
             });
             var s = n("37983");
@@ -287,67 +395,67 @@
                 o = n("685665"),
                 c = n("861370"),
                 f = n("255812"),
-                h = n("529932"),
-                p = n("724026"),
-                E = n("271938"),
-                g = n("923959"),
-                _ = n("697218"),
-                S = n("578411"),
-                I = n("230947"),
-                M = n("544955"),
-                m = n("747867"),
-                v = n("555914"),
-                x = n("513472"),
-                N = n("527660"),
+                E = n("529932"),
+                h = n("724026"),
+                p = n("271938"),
+                _ = n("923959"),
+                g = n("697218"),
+                M = n("578411"),
+                S = n("230947"),
+                m = n("544955"),
+                I = n("747867"),
+                N = n("555914"),
+                v = n("513472"),
+                C = n("527660"),
                 A = n("177508"),
-                C = n("263673"),
-                T = n("58622"),
-                L = n("49111"),
-                b = n("782340");
+                T = n("263673"),
+                x = n("58622"),
+                U = n("49111"),
+                R = n("782340");
 
-            function j(e) {
+            function b(e) {
                 let {
                     guild: t,
                     onSelect: a,
                     hideSettings: d
-                } = e, o = t.id, j = g.default.getDefaultChannel(o), R = (0, h.useExpressionSourceGuildDataForGuildLeaveModal)(t), O = (0, r.useStateFromStores)([_.default], () => {
-                    let e = _.default.getCurrentUser();
+                } = e, o = t.id, b = _.default.getDefaultChannel(o), L = (0, E.useExpressionSourceGuildDataForGuildLeaveModal)(t), O = (0, r.useStateFromStores)([g.default], () => {
+                    let e = g.default.getCurrentUser();
                     return l(null != e, "GuildContextMenu: user cannot be undefined"), t.isOwner(e)
-                }, [t]), H = (0, T.default)({
+                }, [t]), j = (0, x.default)({
                     guild: t,
-                    source: L.InstantInviteSources.GUILD_CONTEXT_MENU,
-                    channel: j
-                }), G = (0, C.default)(o), U = (0, x.default)(t), y = (0, N.default)(t), w = (0, A.default)(t), P = (0, I.default)({
+                    source: U.InstantInviteSources.GUILD_CONTEXT_MENU,
+                    channel: b
+                }), H = (0, T.default)(o), G = (0, v.default)(t), y = (0, C.default)(t), D = (0, A.default)(t), w = (0, S.default)({
                     guildId: t.id,
-                    userId: E.default.getId(),
+                    userId: p.default.getId(),
                     analyticsLocation: {
-                        page: L.AnalyticsPages.GUILD_CHANNEL,
-                        section: L.AnalyticsSections.CHAT_USERNAME,
-                        object: L.AnalyticsObjects.CONTEXT_MENU_ITEM
+                        page: U.AnalyticsPages.GUILD_CHANNEL,
+                        section: U.AnalyticsSections.CHAT_USERNAME,
+                        object: U.AnalyticsObjects.CONTEXT_MENU_ITEM
                     }
-                }), D = (0, M.default)(t), V = (0, f.default)(t.id), k = (0, c.default)({
+                }), P = (0, m.default)(t), V = (0, f.default)(t.id), k = (0, c.default)({
                     id: t.id,
-                    label: b.default.Messages.COPY_ID_GUILD
-                }), B = (0, v.default)(t, {
-                    section: L.AnalyticsSections.GUILD_LIST
-                }), F = (0, p.default)(t.id), Z = (0, m.default)(t), z = t.hasFeature(L.GuildFeatures.HUB);
+                    label: R.default.Messages.COPY_ID_GUILD
+                }), B = (0, N.default)(t, {
+                    section: U.AnalyticsSections.GUILD_LIST
+                }), F = (0, h.default)(t.id), Z = (0, I.default)(t), z = t.hasFeature(U.GuildFeatures.HUB);
 
                 function Y() {
-                    (0, i.openModal)(e => (0, s.jsx)(S.GuildLeaveConfirmModalContents, {
+                    (0, i.openModal)(e => (0, s.jsx)(M.GuildLeaveConfirmModalContents, {
                         ...e,
                         guild: t,
-                        discoverableGuildData: R
+                        discoverableGuildData: L
                     }))
                 }
                 return z ? (0, s.jsxs)(i.Menu, {
                     navId: "guild-context",
                     onClose: u.closeContextMenu,
-                    "aria-label": b.default.Messages.GUILD_ACTIONS_MENU_LABEL,
+                    "aria-label": R.default.Messages.GUILD_ACTIONS_MENU_LABEL,
                     onSelect: a,
                     children: [(0, s.jsxs)(i.MenuGroup, {
-                        children: [H, (0, s.jsx)(i.MenuItem, {
+                        children: [j, (0, s.jsx)(i.MenuItem, {
                             id: "privacy",
-                            label: b.default.Messages.HUB_PRIVACY_SETTINGS,
+                            label: R.default.Messages.HUB_PRIVACY_SETTINGS,
                             action: () => (0, i.openModalLazy)(async () => {
                                 let {
                                     default: e
@@ -357,11 +465,11 @@
                                     guild: t
                                 })
                             })
-                        }), P]
+                        }), w]
                     }), O ? null : (0, s.jsx)(i.MenuGroup, {
                         children: (0, s.jsx)(i.MenuItem, {
                             id: "leave-guild",
-                            label: b.default.Messages.LEAVE_HUB,
+                            label: R.default.Messages.LEAVE_HUB,
                             action: Y,
                             color: "danger"
                         })
@@ -371,18 +479,18 @@
                 }) : (0, s.jsxs)(i.Menu, {
                     navId: "guild-context",
                     onClose: u.closeContextMenu,
-                    "aria-label": b.default.Messages.GUILD_ACTIONS_MENU_LABEL,
+                    "aria-label": R.default.Messages.GUILD_ACTIONS_MENU_LABEL,
                     onSelect: a,
                     children: [(0, s.jsx)(i.MenuGroup, {
                         children: B
                     }), (0, s.jsx)(i.MenuGroup, {
-                        children: H
+                        children: j
                     }), (0, s.jsxs)(i.MenuGroup, {
-                        children: [U, __OVERLAY__ ? null : y, G, F]
+                        children: [G, __OVERLAY__ ? null : y, H, F]
                     }), (0, s.jsxs)(i.MenuGroup, {
-                        children: [d ? null : w, __OVERLAY__ ? null : (0, s.jsx)(i.MenuItem, {
+                        children: [d ? null : D, __OVERLAY__ ? null : (0, s.jsx)(i.MenuItem, {
                             id: "privacy",
-                            label: b.default.Messages.PRIVACY_SETTINGS,
+                            label: R.default.Messages.PRIVACY_SETTINGS,
                             action: () => (0, i.openModalLazy)(async () => {
                                 let {
                                     default: e
@@ -392,13 +500,13 @@
                                     guild: t
                                 })
                             })
-                        }), P]
+                        }), w]
                     }), (0, s.jsxs)(i.MenuGroup, {
-                        children: [D, V]
+                        children: [P, V]
                     }), (0, s.jsxs)(i.MenuGroup, {
                         children: [Z, !O && (0, s.jsx)(i.MenuItem, {
                             id: "leave-guild",
-                            label: b.default.Messages.LEAVE_SERVER,
+                            label: R.default.Messages.LEAVE_SERVER,
                             action: Y,
                             color: "danger"
                         })]
@@ -408,12 +516,12 @@
                 })
             }
 
-            function R(e) {
+            function L(e) {
                 let {
                     AnalyticsLocationProvider: t
                 } = (0, o.default)(d.default.CONTEXT_MENU);
                 return (0, s.jsx)(t, {
-                    children: (0, s.jsx)(j, {
+                    children: (0, s.jsx)(b, {
                         ...e
                     })
                 })
@@ -506,11 +614,77 @@
                 })
             }
         },
+        513472: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return E
+                }
+            });
+            var s = n("37983");
+            n("884691");
+            var a = n("866227"),
+                l = n.n(a),
+                r = n("446674"),
+                i = n("77078"),
+                u = n("519705"),
+                d = n("531674"),
+                o = n("319165"),
+                c = n("282109"),
+                f = n("782340");
+
+            function E(e, t) {
+                let n = null == e ? void 0 : e.id,
+                    {
+                        muted: a,
+                        muteConfig: E
+                    } = (0, r.useStateFromStoresObject)([c.default], () => ({
+                        muted: null != n ? c.default.isMuted(n) : void 0,
+                        muteConfig: null != n ? c.default.getMuteConfig(n) : void 0
+                    }), [n]),
+                    h = (0, o.useMutedUntilText)(E);
+                return null == n ? null : a ? (0, s.jsx)(i.MenuItem, {
+                    id: "unmute-guild",
+                    label: f.default.Messages.UNMUTE_SERVER,
+                    subtext: h,
+                    action: () => u.default.updateGuildNotificationSettings(n, {
+                        muted: !1
+                    })
+                }) : (0, s.jsx)(i.MenuItem, {
+                    id: "mute-guild",
+                    label: f.default.Messages.MUTE_SERVER,
+                    action: () => u.default.updateGuildNotificationSettings(n, {
+                        muted: !0
+                    }),
+                    children: (0, d.getMuteTimes)().map(e => {
+                        let {
+                            value: a,
+                            label: r
+                        } = e;
+                        return (0, s.jsx)(i.MenuItem, {
+                            id: "".concat(a),
+                            label: r,
+                            action: () => (function(e) {
+                                if (null == n) return;
+                                let s = e > 0 ? l().add(e, "second").toISOString() : null;
+                                u.default.updateGuildNotificationSettings(n, {
+                                    muted: !0,
+                                    mute_config: {
+                                        selected_time_window: e,
+                                        end_time: s
+                                    }
+                                }, t)
+                            })(a)
+                        }, a)
+                    })
+                })
+            }
+        },
         527660: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return g
                 }
             });
             var s = n("37983");
@@ -524,33 +698,33 @@
                 o = n("44574"),
                 c = n("282109"),
                 f = n("956089"),
-                h = n("49111"),
-                p = n("782340"),
-                E = n("460856");
+                E = n("49111"),
+                h = n("782340"),
+                p = n("460856");
 
-            function g() {
+            function _() {
                 return [{
-                    setting: h.UserNotificationSettings.ALL_MESSAGES,
-                    label: p.default.Messages.FORM_LABEL_ALL_MESSAGES
+                    setting: E.UserNotificationSettings.ALL_MESSAGES,
+                    label: h.default.Messages.FORM_LABEL_ALL_MESSAGES
                 }, {
-                    setting: h.UserNotificationSettings.ONLY_MENTIONS,
-                    label: p.default.Messages.FORM_LABEL_ONLY_MENTIONS.format()
+                    setting: E.UserNotificationSettings.ONLY_MENTIONS,
+                    label: h.default.Messages.FORM_LABEL_ONLY_MENTIONS.format()
                 }, {
-                    setting: h.UserNotificationSettings.NO_MESSAGES,
-                    label: p.default.Messages.FORM_LABEL_NOTHING
+                    setting: E.UserNotificationSettings.NO_MESSAGES,
+                    label: h.default.Messages.FORM_LABEL_NOTHING
                 }]
             }
 
-            function _(e) {
-                var t, _;
-                let S = function(e) {
+            function g(e) {
+                var t, g;
+                let M = function(e) {
                         let {
                             suppressEveryone: t,
                             suppressRoles: n,
-                            mobilePush: _,
-                            messageNotifications: S,
-                            notifyHighlights: I,
-                            isGuildUnreadsEnabled: M
+                            mobilePush: g,
+                            messageNotifications: M,
+                            notifyHighlights: S,
+                            isGuildUnreadsEnabled: m
                         } = (0, a.useStateFromStoresObject)([c.default], () => ({
                             suppressEveryone: c.default.isSuppressEveryoneEnabled(e.id),
                             suppressRoles: c.default.isSuppressRolesEnabled(e.id),
@@ -558,14 +732,14 @@
                             messageNotifications: c.default.getMessageNotifications(e.id),
                             notifyHighlights: c.default.getNotifyHighlights(e.id),
                             isGuildUnreadsEnabled: c.default.isGuildUnreadSettingEnabled(e.id)
-                        }), [e.id]), m = I === h.HighlightSettings.DISABLED, v = (0, u.default)(e.id), x = (0, o.useGuildUnreadsExperiment)();
+                        }), [e.id]), I = S === E.HighlightSettings.DISABLED, N = (0, u.default)(e.id), v = (0, o.useGuildUnreadsExperiment)();
 
-                        function N(t) {
+                        function C(t) {
                             i.default.updateGuildNotificationSettings(e.id, t)
                         }
                         return (0, s.jsxs)(s.Fragment, {
                             children: [(0, s.jsx)(r.MenuGroup, {
-                                children: g().map(e => {
+                                children: _().map(e => {
                                     let {
                                         setting: t,
                                         label: n
@@ -574,73 +748,73 @@
                                         group: "guild-notifications",
                                         id: "".concat(t),
                                         label: n,
-                                        action: () => N({
+                                        action: () => C({
                                             message_notifications: t
                                         }),
-                                        checked: t === S
+                                        checked: t === M
                                     }, t)
                                 })
                             }), (0, s.jsxs)(r.MenuGroup, {
-                                children: [x && (0, s.jsx)(r.MenuCheckboxItem, {
+                                children: [v && (0, s.jsx)(r.MenuCheckboxItem, {
                                     id: "enable-unread-settings",
                                     label: (0, s.jsxs)(s.Fragment, {
-                                        children: [p.default.Messages.FORM_LABEL_UNREAD_SETTINGS_OPT_IN, (0, s.jsx)(f.TextBadge, {
-                                            text: p.default.Messages.BETA,
+                                        children: [h.default.Messages.FORM_LABEL_UNREAD_SETTINGS_OPT_IN, (0, s.jsx)(f.TextBadge, {
+                                            text: h.default.Messages.BETA,
                                             color: l.default.unsafe_rawColors.BRAND_500.css,
-                                            className: E.betaBadge
+                                            className: p.betaBadge
                                         })]
                                     }),
                                     action: () => {
-                                        (0, d.setGuildUnreadSetting)(e.id, !M)
+                                        (0, d.setGuildUnreadSetting)(e.id, !m)
                                     },
-                                    checked: M
+                                    checked: m
                                 }), (0, s.jsx)(r.MenuCheckboxItem, {
                                     id: "suppress-everyone",
-                                    label: p.default.Messages.FORM_LABEL_SUPPRESS_EVERYONE.format(),
-                                    action: () => N({
+                                    label: h.default.Messages.FORM_LABEL_SUPPRESS_EVERYONE.format(),
+                                    action: () => C({
                                         suppress_everyone: !t
                                     }),
                                     checked: t
                                 }), (0, s.jsx)(r.MenuCheckboxItem, {
                                     id: "suppress-roles",
-                                    label: p.default.Messages.FORM_LABEL_SUPPRESS_ROLES,
-                                    action: () => N({
+                                    label: h.default.Messages.FORM_LABEL_SUPPRESS_ROLES,
+                                    action: () => C({
                                         suppress_roles: !n
                                     }),
                                     checked: n
                                 }), (0, s.jsx)(r.MenuCheckboxItem, {
                                     id: "suppress-highlights",
-                                    label: p.default.Messages.FORM_LABEL_SUPPRESS_HIGHLIGHTS,
+                                    label: h.default.Messages.FORM_LABEL_SUPPRESS_HIGHLIGHTS,
                                     action: () => {
-                                        N({
-                                            notify_highlights: m ? h.HighlightSettings.ENABLED : h.HighlightSettings.DISABLED
+                                        C({
+                                            notify_highlights: I ? E.HighlightSettings.ENABLED : E.HighlightSettings.DISABLED
                                         })
                                     },
-                                    checked: m
-                                }), v]
+                                    checked: I
+                                }), N]
                             }), (0, s.jsx)(r.MenuGroup, {
                                 children: (0, s.jsx)(r.MenuCheckboxItem, {
                                     id: "mobile-push",
-                                    label: p.default.Messages.FORM_LABEL_MOBILE_PUSH_NOTIFICATIONS,
-                                    action: () => N({
-                                        mobile_push: !_
+                                    label: h.default.Messages.FORM_LABEL_MOBILE_PUSH_NOTIFICATIONS,
+                                    action: () => C({
+                                        mobile_push: !g
                                     }),
-                                    checked: _
+                                    checked: g
                                 })
                             })]
                         })
                     }(e),
-                    I = (0, a.useStateFromStores)([c.default], () => c.default.getMessageNotifications(e.id), [e.id]),
-                    M = null === (_ = g()) || void 0 === _ ? void 0 : null === (t = _.find(e => {
+                    S = (0, a.useStateFromStores)([c.default], () => c.default.getMessageNotifications(e.id), [e.id]),
+                    m = null === (g = _()) || void 0 === g ? void 0 : null === (t = g.find(e => {
                         let {
                             setting: t
                         } = e;
-                        return t === I
+                        return t === S
                     })) || void 0 === t ? void 0 : t.label;
-                return null != S ? (0, s.jsx)(r.MenuItem, {
+                return null != M ? (0, s.jsx)(r.MenuItem, {
                     id: "guild-notifications",
-                    label: p.default.Messages.NOTIFICATION_SETTINGS,
-                    subtext: M,
+                    label: h.default.Messages.NOTIFICATION_SETTINGS,
+                    subtext: m,
                     action: () => (0, r.openModalLazy)(async () => {
                         let {
                             default: t
@@ -650,7 +824,7 @@
                             guildId: e.id
                         })
                     }),
-                    children: S
+                    children: M
                 }) : null
             }
         },
@@ -658,7 +832,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return h
                 }
             });
             var s = n("37983");
@@ -672,17 +846,17 @@
                 o = n("725621"),
                 c = n("923959"),
                 f = n("49111"),
-                h = n("782340");
+                E = n("782340");
 
-            function p(e) {
+            function h(e) {
                 function t(t) {
                     u.default.open(e.id, t)
                 }
                 let n = (0, a.useStateFromStoresArray)([c.default], () => c.default.getChannels(e.id).SELECTABLE, [e]),
-                    p = (0, d.default)(e);
-                return __OVERLAY__ || !p ? null : (0, s.jsx)(l.MenuItem, {
+                    h = (0, d.default)(e);
+                return __OVERLAY__ || !h ? null : (0, s.jsx)(l.MenuItem, {
                     id: "guild-settings",
-                    label: h.default.Messages.SERVER_SETTINGS,
+                    label: E.default.Messages.SERVER_SETTINGS,
                     action: () => t(),
                     children: (0, o.getGuildSettingsSections)(e, n).map(n => {
                         let {
@@ -697,7 +871,7 @@
                                 return (0, s.jsx)(l.MenuItem, {
                                     id: a,
                                     action: () => t(a),
-                                    label: h.default.Messages.GUILD_SETTINGS_COMMUNITY
+                                    label: E.default.Messages.GUILD_SETTINGS_COMMUNITY
                                 }, a);
                             case f.GuildSettingsSections.APP_DIRECTORY:
                                 return (0, s.jsx)(l.MenuItem, {
@@ -1076,7 +1250,7 @@
                             breadcrumbs: l,
                             renderCustomBreadcrumb: u,
                             separatorClassName: c
-                        } = this.props, f = e.id === n, h = t === l.length - 1, p = null != u ? u(e, f) : (0, s.jsx)("span", {
+                        } = this.props, f = e.id === n, E = t === l.length - 1, h = null != u ? u(e, f) : (0, s.jsx)("span", {
                             className: r(o.breadcrumb, {
                                 [o.activeBreadcrumb]: f,
                                 [o.interactiveBreadcrumb]: null != a
@@ -1085,14 +1259,14 @@
                         });
                         return (0, s.jsxs)("div", {
                             className: r(o.breadcrumbWrapper, {
-                                [o.breadcrumbFinalWrapper]: h
+                                [o.breadcrumbFinalWrapper]: E
                             }),
                             children: [null != a ? (0, s.jsx)(i.Clickable, {
                                 tag: "span",
                                 onClick: () => this.handleClick(e),
                                 className: o.breadcrumbClickWrapper,
-                                children: p
-                            }) : p, h ? null : (0, s.jsx)(d.default, {
+                                children: h
+                            }) : h, E ? null : (0, s.jsx)(d.default, {
                                 className: r(o.breadcrumbArrow, c),
                                 direction: d.default.Directions.RIGHT
                             })]
@@ -1255,29 +1429,29 @@
                         selectable: o = !1,
                         children: c,
                         color: f,
-                        onClick: h,
-                        onContextMenu: p,
-                        style: E,
-                        title: g,
-                        uppercase: _
+                        onClick: E,
+                        onContextMenu: h,
+                        style: p,
+                        title: _,
+                        uppercase: g
                     } = e;
                     return (0, s.jsx)(r.H, {
-                        role: null != h ? "button" : void 0,
-                        onClick: h,
-                        onContextMenu: p,
+                        role: null != E ? "button" : void 0,
+                        onClick: E,
+                        onContextMenu: h,
                         id: t,
                         className: l(a, {
                             [i.base]: !0,
                             [u]: !0,
                             [i.selectable]: o,
                             [i.muted]: n,
-                            [i.uppercase]: _
+                            [i.uppercase]: g
                         }),
-                        title: g,
+                        title: _,
                         style: null != f ? {
-                            ...E,
+                            ...p,
                             color: f
-                        } : E,
+                        } : p,
                         children: c
                     })
                 };
@@ -1288,10 +1462,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 Sizes: function() {
-                    return S
+                    return M
                 },
                 default: function() {
-                    return m
+                    return I
                 }
             }), n("424973"), n("222007");
             var s = n("37983"),
@@ -1304,23 +1478,23 @@
                 o = n("506885"),
                 c = n("981601"),
                 f = n("766274"),
-                h = n("697218"),
-                p = n("368121"),
-                E = n("523096"),
-                g = n("587974"),
-                _ = n("494101");
-            let S = {
+                E = n("697218"),
+                h = n("368121"),
+                p = n("523096"),
+                _ = n("587974"),
+                g = n("494101");
+            let M = {
                 SIZE_16: 16,
                 SIZE_24: 24,
                 SIZE_32: 32,
                 SIZE_56: 56
             };
 
-            function I(e, t) {
+            function S(e, t) {
                 let n = e instanceof f.default ? e : null != e ? e.user : null;
                 return null != n ? n.id : "user-".concat(t)
             }
-            class M extends a.PureComponent {
+            class m extends a.PureComponent {
                 renderUsers() {
                     let {
                         users: e,
@@ -1334,15 +1508,15 @@
                         let t = null == u && null == l && d === e.length - 1,
                             i = n(e[d], t, d);
                         r.push(t ? (0, s.jsx)("div", {
-                            className: _.avatarContainer,
+                            className: g.avatarContainer,
                             children: i
-                        }, I(null !== (o = e[d]) && void 0 !== o ? o : null, d)) : (0, s.jsx)(g.default, {
-                            className: _.avatarContainerMasked,
+                        }, S(null !== (o = e[d]) && void 0 !== o ? o : null, d)) : (0, s.jsx)(_.default, {
+                            className: g.avatarContainerMasked,
                             height: a,
                             width: a,
-                            mask: g.default.Masks.VOICE_USER_SUMMARY_ITEM,
+                            mask: _.default.Masks.VOICE_USER_SUMMARY_ITEM,
                             children: i
-                        }, I(e[d], d))), d++
+                        }, S(e[d], d))), d++
                     }
                     return null != l ? r.push(l) : null != u && r.push(u), r
                 }
@@ -1374,9 +1548,9 @@
                     }
                 }
                 renderIcon() {
-                    return this.props.renderIcon ? (0, s.jsx)(p.default, {
-                        foreground: _.foreground,
-                        className: _.icon
+                    return this.props.renderIcon ? (0, s.jsx)(h.default, {
+                        foreground: g.foreground,
+                        className: g.icon
                     }) : null
                 }
                 render() {
@@ -1389,17 +1563,17 @@
                         useFallbackUserForPopout: i
                     } = this.props, {
                         popoutUserId: f
-                    } = this.state, p = n.find(e => null != e && e.id === f), E = i && null == h.default.getUser(f);
+                    } = this.state, h = n.find(e => null != e && e.id === f), p = i && null == E.default.getUser(f);
                     return (0, s.jsx)(d.Popout, {
                         position: "right",
-                        preload: null == p ? void 0 : () => (0, o.default)(p.id, p.getAvatarURL(a, 80), {
+                        preload: null == h ? void 0 : () => (0, o.default)(h.id, h.getAvatarURL(a, 80), {
                             guildId: a
                         }),
                         shouldShow: !0 === l && null != f,
                         fixed: !0,
                         renderPopout: e => (u(null != f, "UserSummaryItem.render - renderPopout: popoutUserId cannot be null"), (0, s.jsx)(c.default, {
                             ...this.props,
-                            user: E && null != p ? p : void 0,
+                            user: p && null != h ? h : void 0,
                             ...e,
                             userId: f,
                             guildId: this.props.guildId
@@ -1408,19 +1582,19 @@
                             popoutUserId: null
                         }),
                         children: n => (0, s.jsxs)("div", {
-                            className: r(e, _.container, function() {
-                                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.SIZE_24;
+                            className: r(e, g.container, function() {
+                                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : M.SIZE_24;
                                 switch (e) {
-                                    case S.SIZE_16:
-                                        return _.size16;
-                                    case S.SIZE_24:
-                                        return _.size24;
-                                    case S.SIZE_32:
-                                        return _.size32;
-                                    case S.SIZE_56:
-                                        return _.size56;
+                                    case M.SIZE_16:
+                                        return g.size16;
+                                    case M.SIZE_24:
+                                        return g.size24;
+                                    case M.SIZE_32:
+                                        return g.size32;
+                                    case M.SIZE_56:
+                                        return g.size56;
                                     default:
-                                        return _.size24
+                                        return g.size24
                                 }
                             }(t)),
                             ref: this._ref,
@@ -1440,25 +1614,25 @@
                         } = this.props;
                         if (null == e) {
                             if (!this.props.showDefaultAvatarsForNullUsers) return (0, s.jsx)("div", {
-                                className: _.emptyUser
+                                className: g.emptyUser
                             });
                             {
-                                let e = (null != n ? n : 0) % E.default.DEFAULT_AVATARS.length,
-                                    t = E.default.DEFAULT_AVATARS[e];
+                                let e = (null != n ? n : 0) % p.default.DEFAULT_AVATARS.length,
+                                    t = p.default.DEFAULT_AVATARS[e];
                                 return (0, s.jsx)("img", {
                                     src: t,
                                     alt: "",
-                                    className: _.avatar
+                                    className: g.avatar
                                 })
                             }
                         }
                         let i = (0, s.jsx)("img", {
                             src: e.getAvatarURL(l, r),
                             alt: e.username,
-                            className: _.avatar
+                            className: g.avatar
                         }, e.id);
                         return a ? (0, s.jsx)(d.Clickable, {
-                            className: _.clickableAvatar,
+                            className: g.clickableAvatar,
                             onClick: () => {
                                 null != this._ref.current && null != e && this.setState({
                                     popoutUserId: e.id
@@ -1470,19 +1644,19 @@
                     }
                 }
             }
-            M.defaultProps = {
+            m.defaultProps = {
                 max: 10,
                 renderMoreUsers: function(e) {
                     return (0, s.jsx)("div", {
-                        className: _.moreUsers,
+                        className: g.moreUsers,
                         children: e
                     })
                 },
                 renderIcon: !1,
                 showDefaultAvatarsForNullUsers: !1,
-                size: S.SIZE_24
+                size: M.SIZE_24
             };
-            var m = M
+            var I = m
         }
     }
 ]);
