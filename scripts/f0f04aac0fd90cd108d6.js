@@ -382,110 +382,111 @@
                     iconClassName: R,
                     subtitle: x,
                     subtitleColor: b,
+                    hangStatus: w,
                     channel: {
-                        type: w
+                        type: k
                     },
-                    onMouseEnter: k,
-                    onMouseLeave: P,
-                    "aria-label": V,
-                    children: J,
-                    guild: K,
-                    channelTypeOverride: z,
-                    forceInteractable: W,
-                    isFavoriteSuggestion: Y
+                    onMouseEnter: P,
+                    onMouseLeave: V,
+                    "aria-label": J,
+                    children: K,
+                    guild: z,
+                    channelTypeOverride: W,
+                    forceInteractable: Y,
+                    isFavoriteSuggestion: Q
                 } = B, {
-                    enabled: Q,
-                    left: X
+                    enabled: X,
+                    left: Z
                 } = o.ChannelEmojisExperiment.useExperiment({
                     location: "337985_1"
                 }, {
                     autoTrackExposure: !1
                 }), {
-                    role: Z,
-                    ...q
-                } = (0, F.useListItem)(E.id), $ = n.useRef(null), BB = n.useRef(null), Be = (0, s.default)(E), BE = h.Routes.CHANNEL(Be, E.id), BC = (0, D.default)(E), Bn = E.isGuildVocal(), {
-                    reducedMotion: Bl
-                } = n.useContext(u.AccessibilityPreferencesContext), Bt = Bl.enabled, [BF, Bi] = n.useState([]);
-                S(BF.length, 500, () => {
-                    Bi([])
+                    role: q,
+                    ...$
+                } = (0, F.useListItem)(E.id), BB = n.useRef(null), Be = n.useRef(null), BE = (0, s.default)(E), BC = h.Routes.CHANNEL(BE, E.id), Bn = (0, D.default)(E), Bl = E.isGuildVocal(), {
+                    reducedMotion: Bt
+                } = n.useContext(u.AccessibilityPreferencesContext), BF = Bt.enabled, [Bi, Bu] = n.useState([]);
+                S(Bi.length, 500, () => {
+                    Bu([])
                 });
-                let Bu = B => {
-                        if (Bt) return;
+                let Ba = B => {
+                        if (BF) return;
                         let e = B.currentTarget.getBoundingClientRect(),
                             E = e.width > e.height ? e.width : e.height,
                             C = B.pageX - e.x - E / 2,
                             n = B.pageY - e.y - E / 2;
-                        Bi([...BF, {
+                        Bu([...Bi, {
                             x: C,
                             y: n,
                             size: E
                         }])
                     },
                     {
-                        emoji: Ba,
-                        color: Bo
+                        emoji: Bo,
+                        color: Br
                     } = (0, A.useChannelEmojiAndColor)(E),
-                    Br = Q ? (0, C.jsx)(a.default, {
-                        emojiName: Ba.name,
-                        emojiId: Ba.id,
-                        src: Ba.url,
+                    BD = X ? (0, C.jsx)(a.default, {
+                        emojiName: Bo.name,
+                        emojiId: Bo.id,
+                        src: Bo.url,
                         className: v.twemoji
                     }) : null,
-                    BD = (0, C.jsx)("div", {
+                    Bd = (0, C.jsx)("div", {
                         className: t({
-                            [v.favoritesSuggestion]: Y
+                            [v.favoritesSuggestion]: Q
                         }),
                         children: (0, C.jsxs)(_.default, {
-                            role: Bn && !d ? "button" : "link",
-                            href: Bn ? void 0 : BE,
+                            role: Bl && !d ? "button" : "link",
+                            href: Bl ? void 0 : BC,
                             target: "_blank",
-                            ref: $,
+                            ref: BB,
                             className: t(v.link, {
-                                [v.linkWithChannelEmoji]: null != Br
+                                [v.linkWithChannelEmoji]: null != BD
                             }),
                             onMouseDown: B => {
-                                Q && 0 === B.button && Bu(B)
+                                X && 0 === B.button && Ba(B)
                             },
                             onClick: () => null == O ? void 0 : O(E),
-                            ...q,
-                            "aria-label": V,
+                            ...$,
+                            "aria-label": J,
                             focusProps: {
                                 enabled: !1
                             },
-                            children: [Q && (0, C.jsx)("div", {
+                            children: [X && (0, C.jsx)("div", {
                                 className: v.emojiColorFill,
                                 style: {
-                                    backgroundColor: Bo,
+                                    backgroundColor: Br,
                                     opacity: r ? 1 : 0
                                 }
                             }), (0, C.jsxs)("div", {
                                 className: v.linkTop,
-                                children: [null != Br && X && (0, C.jsx)("div", {
+                                children: [null != BD && Z && (0, C.jsx)("div", {
                                     className: t(v.channelEmoji, v.channelEmojiLeftOfIcon),
                                     style: {
-                                        backgroundColor: Bo
+                                        backgroundColor: Br
                                     },
-                                    children: Br
+                                    children: BD
                                 }), (0, C.jsx)(y, {
                                     className: R,
                                     channel: E,
-                                    guild: K,
+                                    guild: z,
                                     hasActiveThreads: g,
                                     locked: L
-                                }), null != Br && !X && (0, C.jsx)("div", {
+                                }), null != BD && !Z && (0, C.jsx)("div", {
                                     className: t(v.channelEmoji, v.channelEmojiRightOfIcon),
                                     style: {
-                                        backgroundColor: Bo
+                                        backgroundColor: Br
                                     },
-                                    children: Br
+                                    children: BD
                                 }), (0, C.jsx)(m.default, {
                                     className: t(v.name),
                                     "aria-hidden": !0,
-                                    children: null == l ? BC : l
-                                }), n.Children.count(J) > 0 ? (0, C.jsx)("div", {
+                                    children: null == l ? Bn : l
+                                }), n.Children.count(K) > 0 ? (0, C.jsx)("div", {
                                     onClick: p,
                                     className: v.children,
-                                    children: J
+                                    children: K
                                 }) : null]
                             }), null != x ? (0, C.jsx)("div", {
                                 className: v.linkBottom,
@@ -495,14 +496,14 @@
                                     className: v.subtitle,
                                     children: x
                                 })
-                            }) : null, Q && BF.length > 0 && BF.map((B, e) => (0, C.jsx)("span", {
+                            }) : null, null != w ? w : null, X && Bi.length > 0 && Bi.map((B, e) => (0, C.jsx)("span", {
                                 className: v.ripple,
                                 style: {
                                     top: B.y,
                                     left: B.x,
                                     width: B.size,
                                     height: B.size,
-                                    backgroundColor: Bo,
+                                    backgroundColor: Br,
                                     animationDuration: "".concat(500, "ms"),
                                     opacity: .36
                                 }
@@ -510,16 +511,16 @@
                         })
                     });
                 return (0, C.jsx)(u.FocusRing, {
-                    focusTarget: $,
-                    ringTarget: BB,
+                    focusTarget: BB,
+                    ringTarget: Be,
                     offset: {
                         top: 2,
                         bottom: 2,
                         right: 4
                     },
                     children: (0, C.jsxs)("div", {
-                        className: t(H, null != O || null != j || null != U || W ? v.wrapper : v.notInteractive, (() => {
-                            if (r && !Q) return I.SELECTED;
+                        className: t(H, null != O || null != j || null != U || Y ? v.wrapper : v.notInteractive, (() => {
+                            if (r && !X) return I.SELECTED;
                             if (d) return I.CONNECTED;
                             if (L) return I.LOCKED;
                             if (i) return I.MUTED;
@@ -542,15 +543,15 @@
                                 default:
                                     return v.typeDefault
                             }
-                        }(null != z ? z : w)),
+                        }(null != W ? W : k)),
                         onMouseUp: B => null == j ? void 0 : j(B, E),
                         onMouseDown: B => null == U ? void 0 : U(B, E),
                         onContextMenu: B => null == G ? void 0 : G(B, E),
-                        onMouseEnter: k,
-                        onMouseLeave: P,
-                        children: [!i && f && c && (!r || Bn) ? (0, C.jsx)("div", {
+                        onMouseEnter: P,
+                        onMouseLeave: V,
+                        children: [!i && f && c && (!r || Bl) ? (0, C.jsx)("div", {
                             className: t(v.unread, (T || (null != N ? N : 0) > 0) && v.unreadRelevant)
-                        }) : null, null !== (e = null == M ? void 0 : M(BD)) && void 0 !== e ? e : BD]
+                        }) : null, null !== (e = null == M ? void 0 : M(Bd)) && void 0 !== e ? e : Bd]
                     })
                 })
             }

@@ -1,6 +1,6 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
     ["72059"], {
-        492013: function(i, x, a) {
+        801926: function(i, x, a) {
             "use strict";
             i.exports = {
                 v: "5.7.4",
