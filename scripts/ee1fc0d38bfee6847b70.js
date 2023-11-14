@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["4075"], {
+    ["63301"], {
         619335: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -21,18 +21,18 @@
                 _ = n("660074"),
                 g = n("990745"),
                 C = n("190986"),
-                m = n("721618"),
-                E = n("733160"),
+                E = n("721618"),
+                m = n("733160"),
                 v = n("990864"),
                 h = n("274652"),
-                I = n("922744"),
-                S = n("155207"),
+                S = n("922744"),
+                I = n("155207"),
                 T = n("745183"),
                 y = n("368121"),
                 A = n("944633"),
                 D = n("228427"),
-                w = n("959097"),
-                L = n("656038"),
+                L = n("959097"),
+                w = n("656038"),
                 b = n("49111");
 
             function N(e, t) {
@@ -41,37 +41,37 @@
                         return l.default;
                     case b.ChannelTypes.GROUP_DM:
                         let n = (0, i.getIsBroadcastingGDM)(e.id);
-                        return n ? s.default : S.default;
+                        return n ? s.default : I.default;
                     case b.ChannelTypes.GUILD_ANNOUNCEMENT:
                         if (e.isNSFW()) return h.default;
-                        if ((0, L.default)(e)) return v.default;
-                        else return E.default;
+                        if ((0, w.default)(e)) return v.default;
+                        else return m.default;
                     case b.ChannelTypes.GUILD_TEXT:
                         if (e.id === (null == t ? void 0 : t.rulesChannelId)) return r.default;
                         if (e.isNSFW()) return o.default;
-                        else if ((0, L.default)(e)) return u.default;
+                        else if ((0, w.default)(e)) return u.default;
                         else return d.default;
                     case b.ChannelTypes.GUILD_FORUM:
                         let N = e.isMediaChannel();
-                        if (e.isNSFW()) return N ? m.default : p.default;
-                        if ((0, L.default)(e)) return N ? C.default : f.default;
+                        if (e.isNSFW()) return N ? E.default : p.default;
+                        if ((0, w.default)(e)) return N ? C.default : f.default;
                         else return N ? g.default : c.default;
                     case b.ChannelTypes.GUILD_MEDIA:
-                        if (e.isNSFW()) return m.default;
-                        if ((0, L.default)(e)) return C.default;
+                        if (e.isNSFW()) return E.default;
+                        if ((0, w.default)(e)) return C.default;
                         else return g.default;
                     case b.ChannelTypes.GUILD_STAGE_VOICE:
                         return D.default;
                     case b.ChannelTypes.GUILD_VOICE:
-                        if ((0, L.default)(e)) return A.default;
+                        if ((0, w.default)(e)) return A.default;
                         return y.default;
                     case b.ChannelTypes.ANNOUNCEMENT_THREAD:
                     case b.ChannelTypes.PUBLIC_THREAD:
-                        if (e.isNSFW()) return I.default;
+                        if (e.isNSFW()) return S.default;
                         if (e.isForumPost()) return _.default;
-                        else return w.default;
+                        else return L.default;
                     case b.ChannelTypes.PRIVATE_THREAD:
-                        if (e.isNSFW()) return I.default;
+                        if (e.isNSFW()) return S.default;
                         return T.default;
                     case b.ChannelTypes.GUILD_DIRECTORY:
                         return a.default;
@@ -193,7 +193,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 updateAllowVoiceRecording: function() {
-                    return L
+                    return w
                 },
                 updateClipsEnabled: function() {
                     return b
@@ -211,25 +211,25 @@
                     return U
                 },
                 saveClip: function() {
-                    return F
-                },
-                updateClipMetadata: function() {
                     return O
                 },
-                clearClipsSession: function() {
+                updateClipMetadata: function() {
                     return G
                 },
-                clearNewClipIds: function() {
-                    return H
-                },
-                loadClipsDirectory: function() {
+                clearClipsSession: function() {
                     return k
                 },
+                clearNewClipIds: function() {
+                    return V
+                },
+                loadClipsDirectory: function() {
+                    return H
+                },
                 deleteClip: function() {
-                    return x
+                    return W
                 },
                 setHardwareClipEncode: function() {
-                    return W
+                    return x
                 },
                 exportClip: function() {
                     return B
@@ -249,19 +249,19 @@
                 _ = n("42887"),
                 g = n("568307"),
                 C = n("205817"),
-                m = n("599110"),
-                E = n("773336"),
+                E = n("599110"),
+                m = n("773336"),
                 v = n("709681"),
                 h = n("386045"),
-                I = n("13136"),
-                S = n("881095"),
+                S = n("13136"),
+                I = n("881095"),
                 T = n("997942"),
                 y = n("310238"),
                 A = n("99366"),
                 D = n("80028"),
-                w = n("49111");
+                L = n("49111");
 
-            function L(e) {
+            function w(e) {
                 let {
                     allowVoiceRecording: t
                 } = e;
@@ -269,7 +269,7 @@
                     e.allowVoiceRecording = i.BoolValue.create({
                         value: t
                     })
-                }, s.UserSettingsDelay.INFREQUENT_USER_ACTION), m.default.track(w.AnalyticEvents.CLIPS_SETTINGS_UPDATED, {
+                }, s.UserSettingsDelay.INFREQUENT_USER_ACTION), E.default.track(L.AnalyticEvents.CLIPS_SETTINGS_UPDATED, {
                     allow_voice_recording: t
                 })
             }
@@ -287,7 +287,7 @@
                             decoupledClipsEnabled: !1
                         }
                     }
-                }), i && m.default.track(w.AnalyticEvents.CLIPS_SETTINGS_UPDATED, {
+                }), i && E.default.track(L.AnalyticEvents.CLIPS_SETTINGS_UPDATED, {
                     clips_enabled: t,
                     guild_id: n,
                     ...!t && {
@@ -309,7 +309,7 @@
                         },
                         decoupledClipsEnabled: t
                     }
-                }), n && m.default.track(w.AnalyticEvents.CLIPS_SETTINGS_UPDATED, {
+                }), n && E.default.track(L.AnalyticEvents.CLIPS_SETTINGS_UPDATED, {
                     ...t && {
                         clips_enabled: !0
                     },
@@ -383,13 +383,13 @@
                     saved_at: t.savedAt
                 }
             }
-            async function V(e) {
+            async function F(e) {
                 var t, n;
                 let i;
                 let l = h.default.getSettings(),
                     r = l.storageLocation,
-                    u = (0, S.default)(),
-                    o = "".concat((0, I.default)(u.applicationName.substring(0, 20)), "_").concat(u.id, ".mp4"),
+                    u = (0, I.default)(),
+                    o = "".concat((0, S.default)(u.applicationName.substring(0, 20)), "_").concat(u.id, ".mp4"),
                     s = a.default.fileManager.join(r, o),
                     c = _.default.getMediaEngine(),
                     g = JSON.stringify(u);
@@ -403,7 +403,7 @@
                     let u = a[0];
                     i = c.saveClipForSSRC.bind(c, u, r, s, g)
                 } else i = c.saveClip.bind(c, s, g);
-                let E = function(e) {
+                let m = function(e) {
                     var t;
                     let n, i, l;
                     if (null != e) {
@@ -431,20 +431,20 @@
                         duration: e,
                         thumbnail: t,
                         clipStats: l
-                    } = await i(), r = M(E, l);
-                    r.clip_save_time_ms = l.clipSaveTimeMs, r.clip_size_bytes = l.clipSizeBytes, null != l.viewerDecodeFps && (r.decode_fps_during_clip = l.viewerDecodeFps, r.encode_fps_during_clip = l.viewerEncodeFps, r.target_fps = null), m.default.track(w.AnalyticEvents.CLIP_SAVED, r);
+                    } = await i(), r = M(m, l);
+                    r.clip_save_time_ms = l.clipSaveTimeMs, r.clip_size_bytes = l.clipSizeBytes, null != l.viewerDecodeFps && (r.decode_fps_during_clip = l.viewerDecodeFps, r.encode_fps_during_clip = l.viewerEncodeFps, r.target_fps = null), E.default.track(L.AnalyticEvents.CLIP_SAVED, r);
                     let d = await (null != a.default.clips.getClipProtocolURLFromPath ? (0, A.createThumbnailFromVideo)(a.default.clips.getClipProtocolURLFromPath(s), 0) : (0, A.createThumbnail)(t));
                     return u.thumbnail = d, u.length = e, D.ClipsLogger.info("Clip save succeeded with ".concat(e, "ms and thumbnail ").concat(null !== (n = null == d ? void 0 : d.length) && void 0 !== n ? n : 0, " bytes thumbnail.")), await c.updateClipMetadata(s, JSON.stringify(u)), {
                         ...u,
                         filepath: s
                     }
                 } catch (t) {
-                    if (!("errorMessage" in t)) throw m.default.track(w.AnalyticEvents.CLIP_SAVE_FAILURE, E), t;
-                    let e = M(E, t);
-                    throw e.error_at = t.errorAt, e.error_message = t.errorMessage, m.default.track(w.AnalyticEvents.CLIP_SAVE_FAILURE, e), t.errorMessage
+                    if (!("errorMessage" in t)) throw E.default.track(L.AnalyticEvents.CLIP_SAVE_FAILURE, m), t;
+                    let e = M(m, t);
+                    throw e.error_at = t.errorAt, e.error_message = t.errorMessage, E.default.track(L.AnalyticEvents.CLIP_SAVE_FAILURE, e), t.errorMessage
                 }
             }
-            async function F(e) {
+            async function O(e) {
                 var t;
                 let {
                     enableDecoupledGameClipping: n
@@ -470,7 +470,7 @@
                 let s = (0, v.playSound)("clip_save", .5),
                     c = performance.now();
                 try {
-                    let t = await V(e);
+                    let t = await F(e);
                     l.default.dispatch({
                         type: "CLIPS_SAVE_CLIP",
                         clip: t
@@ -482,33 +482,33 @@
                 }
                 D.ClipsLogger.info("".concat(h.default.getSettings().clipsLength / 1e3, "s clip save took ").concat(Math.round(performance.now() - c), "ms"))
             }
-            async function O(e, t) {
+            async function G(e, t) {
                 let n = h.default.getClips().find(t => t.id === e);
                 if (null == n) return;
                 let i = {
                     ...n,
                     ...t
                 };
-                await _.default.getMediaEngine().updateClipMetadata(i.filepath, JSON.stringify(i)), m.default.track(w.AnalyticEvents.CLIP_EDITED), l.default.dispatch({
+                await _.default.getMediaEngine().updateClipMetadata(i.filepath, JSON.stringify(i)), E.default.track(L.AnalyticEvents.CLIP_EDITED), l.default.dispatch({
                     type: "CLIPS_UPDATE_METADATA",
                     clip: i
                 })
             }
 
-            function G() {
+            function k() {
                 l.default.dispatch({
                     type: "CLIPS_CLEAR_CLIPS_SESSION"
                 })
             }
 
-            function H() {
+            function V() {
                 l.default.dispatch({
                     type: "CLIPS_CLEAR_NEW_CLIP_IDS"
                 })
             }
-            async function k(e) {
+            async function H(e) {
                 var t;
-                if (!(0, E.isDesktop)() || (null === (t = a.default.clips) || void 0 === t ? void 0 : t.loadClipsDirectory) == null) return;
+                if (!(0, m.isDesktop)() || (null === (t = a.default.clips) || void 0 === t ? void 0 : t.loadClipsDirectory) == null) return;
                 let n = await a.default.clips.loadClipsDirectory(e),
                     i = [];
                 for (let e of n) {
@@ -523,14 +523,14 @@
                     clips: i
                 })
             }
-            async function x(e) {
+            async function W(e) {
                 var t;
-                (0, E.isDesktop)() && (null === (t = a.default.clips) || void 0 === t ? void 0 : t.deleteClip) != null && (await a.default.clips.deleteClip(e), l.default.dispatch({
+                (0, m.isDesktop)() && (null === (t = a.default.clips) || void 0 === t ? void 0 : t.deleteClip) != null && (await a.default.clips.deleteClip(e), l.default.dispatch({
                     type: "CLIPS_DELETE_CLIP",
                     filepath: e
                 }))
             }
-            async function W(e) {
+            async function x(e) {
                 await l.default.dispatch({
                     type: "MEDIA_ENGINE_SET_HARDWARE_CLIP_ENCODE",
                     enabled: e
@@ -609,75 +609,6 @@
                     null != c && (c.drawImage(l, 0, 0, l.videoWidth, l.videoHeight, 0, 0, u, o), n(s.toDataURL("image/jpeg", .9)))
                 })
             }
-        },
-        375202: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return l
-                }
-            });
-            var i = n("819068");
-
-            function l(e, t) {
-                if (__OVERLAY__) {
-                    let e = t.getGame(),
-                        n = (0, i.getPID)();
-                    return null == e || null == n ? null : {
-                        id: e.id,
-                        pid: n,
-                        pidPath: [],
-                        nativeProcessObserverId: 0,
-                        hidden: !1,
-                        elevated: !1,
-                        name: e.name,
-                        lastFocused: 0,
-                        exePath: "",
-                        exeName: "",
-                        cmdLine: "",
-                        processName: "",
-                        distributor: null,
-                        windowHandle: null,
-                        fullscreenType: 0
-                    }
-                }
-                return e.getVisibleGame()
-            }
-        },
-        267675: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return d
-                }
-            });
-            var i = n("37983");
-            n("884691");
-            var l = n("469563"),
-                a = n("265614"),
-                r = n("75196"),
-                d = (0, l.replaceIcon)(function(e) {
-                    let {
-                        width: t = 24,
-                        height: n = 24,
-                        color: l = "currentColor",
-                        foreground: a,
-                        ...d
-                    } = e;
-                    return (0, i.jsx)("svg", {
-                        ...(0, r.default)(d),
-                        width: t,
-                        height: n,
-                        viewBox: "0 0 24 24",
-                        children: (0, i.jsx)("path", {
-                            className: a,
-                            fill: l,
-                            fillRule: "evenodd",
-                            clipRule: "evenodd",
-                            d: "M4 2.5C2.897 2.5 2 3.397 2 4.5V15.5C2 16.604 2.897 17.5 4 17.5H11V19.5H7V21.5H17V19.5H13V17.5H20C21.103 17.5 22 16.604 22 15.5V4.5C22 3.397 21.103 2.5 20 2.5H4ZM20 4.5V13.5H4V4.5H20Z"
-                        })
-                    })
-                }, a.ScreenIcon)
         }
     }
 ]);
