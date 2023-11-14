@@ -1257,7 +1257,7 @@
                             },
                             oldFormErrors: !0
                         }).then(e => {
-                            if (null == e.body || "682a09e9e91bd4db4c7e663cee56e8e4ca57687e" === e.body.hash) return this._handleUpdateNotAvailable();
+                            if (null == e.body || "df9d479f5209d93184e5e6690c7f052271b2a83a" === e.body.hash) return this._handleUpdateNotAvailable();
                             if (e.body.required || (0, i.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
                             let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? 6048e5 : 864e5;
                             if (Date.now() - f > t) return s.default.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
@@ -6737,7 +6737,7 @@
                         }
                     }(n, l, i)
                 };
-                a.isNSFW() && L.default.didAgree(a.guild_id) ? t.push({
+                a.isNSFW() && !L.default.didAgree(a.guild_id) ? t.push({
                     ...c,
                     type: "nsfw"
                 }) : a.isForumLikeChannel() ? t.push({
