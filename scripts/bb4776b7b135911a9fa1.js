@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["43888"], {
+    ["6105"], {
         478272: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -297,16 +297,16 @@
                     shouldShowFullDescriptionButton: T = !0,
                     onShowFullDescription: x,
                     productType: g,
-                    onTapCard: v,
-                    actionMenu: E,
+                    onTapCard: E,
+                    actionMenu: v,
                     showOpaqueBackground: j = !1,
                     hideRoleTag: D = !1,
-                    lineClamp: I = 1,
-                    cardWidth: R = 332,
-                    cardHeight: y,
-                    thumbnailHeight: A = 187,
+                    lineClamp: R = 1,
+                    cardWidth: y = 332,
+                    cardHeight: A,
+                    thumbnailHeight: I = 187,
                     descriptionTextVariant: b = "text-sm/normal"
-                } = e, L = (0, d.uid)(), N = (0, a.jsxs)(a.Fragment, {
+                } = e, L = (0, d.uid)(), O = (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(p, {
                         hidePurchaseToUnlockBadge: !0,
                         children: (0, a.jsx)("img", {
@@ -314,7 +314,7 @@
                             src: t,
                             className: m.productThumbnail,
                             style: {
-                                height: A
+                                height: I
                             }
                         })
                     }), (0, a.jsxs)("div", {
@@ -331,7 +331,7 @@
                                 children: (0, a.jsx)(o.default, {
                                     variant: b,
                                     color: "text-muted",
-                                    lineClamp: I,
+                                    lineClamp: R,
                                     text: r
                                 })
                             }), T && (0, a.jsx)(C, {
@@ -344,7 +344,7 @@
                                     role: c
                                 })]
                             })]
-                        }), E]
+                        }), v]
                     }), (0, a.jsxs)("div", {
                         className: m.purchaseDetails,
                         children: [(0, a.jsx)(l.Text, {
@@ -366,14 +366,14 @@
                         })]
                     })]
                 });
-                return null == v ? (0, a.jsx)("article", {
+                return null == E ? (0, a.jsx)("article", {
                     className: i(m.productCard, j ? m.opaqueBackground : m.solidBackground),
                     "aria-labelledby": L,
-                    children: N
+                    children: O
                 }) : (0, a.jsx)("div", {
                     style: {
-                        width: R,
-                        height: y
+                        width: y,
+                        height: A
                     },
                     children: (0, a.jsx)(l.ClickableContainer, {
                         tag: "article",
@@ -381,8 +381,8 @@
                             productName: n
                         }),
                         className: i(m.productCard, j ? m.opaqueBackground : m.solidBackground, m.cardClickableContainer),
-                        onClick: v,
-                        children: N
+                        onClick: E,
+                        children: O
                     })
                 })
             }
@@ -559,7 +559,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 openThreadSidebarForViewing: function() {
-                    return E
+                    return v
                 },
                 openThreadSidebarForCreating: function() {
                     return j
@@ -568,7 +568,7 @@
                     return D
                 },
                 closeAndClearThreadSidebar: function() {
-                    return I
+                    return R
                 }
             });
             var a = n("627445"),
@@ -589,9 +589,9 @@
                 T = n("659500"),
                 x = n("648564"),
                 g = n("49111"),
-                v = n("724210");
+                E = n("724210");
 
-            function E(e, t, n) {
+            function v(e, t, n) {
                 d.MainWindowDispatch.dispatch(g.ComponentActions.POPOUT_CLOSE);
                 let a = !l.isEmpty(_.default.getVoiceStatesForChannel(e.id));
                 if (t || !m.UseThreadSidebar.getSetting() || __OVERLAY__ || a) {
@@ -603,7 +603,7 @@
                 }
                 r(null != e.parent_id, "all threads must have parents");
                 let i = C.default.getChannelId();
-                e.parent_id !== i && !(0, v.isGuildHomeChannel)(i) && (0, h.transitionToChannel)(e.parent_id), (0, f.transitionTo)(g.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, v.isGuildHomeChannel)(i) ? v.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? x.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
+                e.parent_id !== i && !(0, E.isGuildHomeChannel)(i) && (0, h.transitionToChannel)(e.parent_id), (0, f.transitionTo)(g.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, E.isGuildHomeChannel)(i) ? E.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? x.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
                     T.ComponentDispatch.dispatch(g.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                         channelId: e.id
                     })
@@ -632,13 +632,13 @@
             }
 
             function D(e, t) {
-                (0, f.transitionTo)(g.Routes.CHANNEL(e, (0, v.isGuildHomeChannel)(t) ? v.StaticChannelRoute.GUILD_HOME : t)), o.default.dispatch({
+                (0, f.transitionTo)(g.Routes.CHANNEL(e, (0, E.isGuildHomeChannel)(t) ? E.StaticChannelRoute.GUILD_HOME : t)), o.default.dispatch({
                     type: "SIDEBAR_CLOSE",
                     baseChannelId: t
                 })
             }
 
-            function I(e) {
+            function R(e) {
                 o.default.dispatch({
                     type: "SIDEBAR_CLOSE",
                     baseChannelId: e
@@ -652,39 +652,6 @@
                     draftType: p.DraftType.ThreadSettings
                 })
             }
-        },
-        346955: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return o
-                }
-            });
-            var a = n("37983");
-            n("884691");
-            var r = n("469563"),
-                i = n("509317"),
-                l = n("75196"),
-                o = (0, r.replaceIcon)(function(e) {
-                    let {
-                        width: t = 24,
-                        height: n = 24,
-                        color: r = "currentColor",
-                        foreground: i,
-                        ...o
-                    } = e;
-                    return (0, a.jsx)("svg", {
-                        ...(0, l.default)(o),
-                        width: t,
-                        height: n,
-                        viewBox: "0 0 24 24",
-                        children: (0, a.jsx)("path", {
-                            fill: r,
-                            className: i,
-                            d: "M20 7H12L10.553 5.106C10.214 4.428 9.521 4 8.764 4H3C2.447 4 2 4.447 2 5V19C2 20.104 2.895 21 4 21H20C21.104 21 22 20.104 22 19V9C22 7.896 21.104 7 20 7Z"
-                        })
-                    })
-                }, i.FolderIcon)
         },
         659186: function(e, t, n) {
             "use strict";
