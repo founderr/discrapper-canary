@@ -1717,63 +1717,62 @@
             }
 
             function x(e) {
-                var t, n;
                 let {
-                    guildEvent: r,
-                    guild: s,
-                    channel: c,
-                    headerId: d,
-                    onClose: h,
-                    onClickInterestedCount: p,
-                    isHub: E = !1,
-                    containerRef: v,
-                    recurrenceId: N
-                } = e, A = (0, a.useStateFromStores)([f.default], () => null != f.default.getGuild(s.id), [s.id]), {
-                    startTime: x,
-                    endTime: P
-                } = (0, m.default)(r.id, N), w = (0, a.useStateFromStores)([_.default], () => _.default.getUserCount(r.id, N)), O = l.useCallback(e => {
-                    e.stopPropagation(), null != r && (0, u.transitionToGuildFromEventInvite)(r)
-                }, [r]), L = (0, C.default)(r);
+                    guildEvent: t,
+                    guild: n,
+                    channel: r,
+                    headerId: s,
+                    onClose: c,
+                    onClickInterestedCount: d,
+                    isHub: h = !1,
+                    containerRef: p,
+                    recurrenceId: E
+                } = e, v = (0, a.useStateFromStores)([f.default], () => null != f.default.getGuild(n.id), [n.id]), {
+                    startTime: N,
+                    endTime: A
+                } = (0, m.default)(t.id, E), x = (0, a.useStateFromStores)([_.default], () => _.default.getUserCount(t.id, E)), P = l.useCallback(e => {
+                    e.stopPropagation(), null != t && (0, u.transitionToGuildFromEventInvite)(t)
+                }, [t]), w = (0, C.default)(t);
                 return l.useEffect(() => {
-                    g.default.getGuildEventUserCounts(s.id, r.id, null != N ? [N] : []), g.default.getGuildEventsForCurrentUser(s.id)
-                }, [s.id, r.id, N]), (0, i.jsxs)("div", {
-                    ref: v,
+                    g.default.getGuildEventUserCounts(n.id, t.id, null != E ? [E] : []), g.default.getGuildEventsForCurrentUser(n.id)
+                }, [n.id, t.id, E]), (0, i.jsxs)("div", {
+                    ref: p,
                     children: [(0, i.jsxs)("div", {
                         className: y.header,
                         children: [(0, i.jsx)(T.GuildEventTimeStatus, {
-                            startTime: null !== (t = null == x ? void 0 : x.toISOString()) && void 0 !== t ? t : r.scheduled_start_time,
-                            endTime: null !== (n = null == P ? void 0 : P.toISOString()) && void 0 !== n ? n : r.scheduled_end_time,
-                            status: r.status,
-                            eventType: r.entity_type
+                            startTime: N.toISOString(),
+                            endTime: null == A ? void 0 : A.toISOString(),
+                            status: t.status,
+                            eventType: t.entity_type
                         }), (0, i.jsx)(o.Heading, {
-                            id: d,
+                            id: s,
                             variant: "heading-lg/semibold",
                             color: "header-primary",
                             className: y.title,
-                            children: r.name
+                            children: t.name
                         })]
                     }), (0, i.jsxs)("div", {
                         className: y.body,
                         children: [(0, i.jsx)(U, {
-                            guild: s,
-                            onClick: A ? O : void 0,
-                            onClose: h
+                            guild: n,
+                            onClick: v ? P : void 0,
+                            onClose: c
                         }), (0, i.jsx)(I.default, {
-                            guildScheduledEvent: r,
-                            channel: c,
-                            onClose: h
-                        }), null != w && (0, i.jsx)(b, {
-                            userCount: w,
-                            onClick: p
-                        }), !E && null != L && (0, i.jsx)(R, {
-                            creator: L,
-                            guildId: s.id
-                        }, L.id), null != r.description && (0, i.jsx)("div", {
+                            guildScheduledEvent: t,
+                            channel: r,
+                            onClose: c
+                        }), null != x && (0, i.jsx)(b, {
+                            userCount: x,
+                            onClick: d
+                        }), !h && null != w && (0, i.jsx)(R, {
+                            creator: w,
+                            guildId: n.id
+                        }, w.id), null != t.description && (0, i.jsx)("div", {
                             className: y.description,
                             children: (0, i.jsx)(S.default, {
-                                description: r.description,
+                                description: t.description,
                                 truncate: !1,
-                                guildId: s.id
+                                guildId: n.id
                             })
                         })]
                     })]

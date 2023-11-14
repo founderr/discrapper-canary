@@ -904,49 +904,77 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
+                    return s
+                },
+                getEventException: function() {
                     return r
                 }
             });
-            var l = n("884691"),
-                a = n("446674"),
-                s = n("398604");
+            var l = n("446674"),
+                a = n("398604");
+
+            function s(e, t) {
+                let n = (0, l.useStateFromStoresArray)([a.default], () => {
+                    var e, n;
+                    return null !== (n = null === (e = a.default.getGuildScheduledEvent(t)) || void 0 === e ? void 0 : e.guild_scheduled_event_exceptions) && void 0 !== n ? n : []
+                });
+                return i(n, e)
+            }
 
             function r(e, t) {
-                let n = (0, a.useStateFromStoresArray)([s.default], () => {
-                        var e, n;
-                        return null !== (n = null === (e = s.default.getGuildScheduledEvent(t)) || void 0 === e ? void 0 : e.guild_scheduled_event_exceptions) && void 0 !== n ? n : []
-                    }),
-                    r = l.useMemo(() => null == n ? void 0 : n.find(t => t.event_exception_id === e), [n, e]);
-                return r
+                var n, l;
+                let s = null !== (l = null === (n = a.default.getGuildScheduledEvent(t)) || void 0 === n ? void 0 : n.guild_scheduled_event_exceptions) && void 0 !== l ? l : [];
+                return i(s, e)
+            }
+
+            function i(e, t) {
+                let n = null == e ? void 0 : e.find(e => e.event_exception_id === t);
+                return n
             }
         },
         466148: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return d
+                },
+                getEventSchedule: function() {
+                    return c
                 }
             });
-            var l = n("446674"),
-                a = n("299039"),
-                s = n("398604"),
-                r = n("397680"),
-                i = n("822516");
+            var l = n("627445"),
+                a = n.n(l),
+                s = n("446674"),
+                r = n("299039"),
+                i = n("398604"),
+                u = n("397680"),
+                o = n("822516");
 
-            function u(e, t) {
-                let n, u;
-                let o = (0, l.useStateFromStores)([s.default], () => s.default.getGuildScheduledEvent(e)),
-                    d = (0, r.default)(t, e);
-                if (null == o) return {};
-                if (null == t) return n = new Date(o.scheduled_start_time), {
-                    startTime: n,
-                    endTime: u = null != o.scheduled_end_time ? new Date(o.scheduled_end_time) : null
+            function d(e, t, n) {
+                var l;
+                let r = null !== (l = (0, s.useStateFromStores)([i.default], () => i.default.getGuildScheduledEvent(e))) && void 0 !== l ? l : n;
+                a(null != r, "Event must be defined"), t = null != t ? t : (0, o.getNextRecurrenceIdInEvent)(r);
+                let d = (0, u.default)(t, e);
+                return E(r, d, t)
+            }
+
+            function c(e, t) {
+                let n = (0, u.getEventException)(t, e.id);
+                return E(e, n, t)
+            }
+
+            function E(e, t, n) {
+                let l = null != e.recurrence_rule ? (0, o.getRRule)(e.recurrence_rule) : null;
+                if (null == l || null == n) return {
+                    startTime: new Date(e.scheduled_start_time),
+                    endTime: null != e.scheduled_end_time ? new Date(e.scheduled_end_time) : null
                 };
-                let c = null != o.recurrence_rule ? (0, i.getRRule)(o.recurrence_rule) : null;
-                return null == c ? {} : (n = new Date((null == d ? void 0 : d.scheduled_start_time) == null ? a.default.extractTimestamp(t) : d.scheduled_start_time), {
-                    startTime: n,
-                    endTime: u = (null == d ? void 0 : d.scheduled_end_time) == null ? null : new Date(d.scheduled_end_time)
-                })
+                let a = new Date((null == t ? void 0 : t.scheduled_start_time) == null ? r.default.extractTimestamp(n) : t.scheduled_start_time),
+                    s = (null == t ? void 0 : t.scheduled_end_time) == null ? null : new Date(t.scheduled_end_time);
+                return {
+                    startTime: a,
+                    endTime: s
+                }
             }
         },
         799547: function(e, t, n) {
