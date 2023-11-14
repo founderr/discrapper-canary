@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["39608"], {
+    ["99471"], {
         704426: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -69,46 +69,6 @@
                         fillRule: "evenodd",
                         d: "M23 12c0 6.075-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1s11 4.925 11 11ZM7.739 9.307A2 2 0 0 1 9.307 7.74l7.222-1.445a1 1 0 0 1 1.177 1.177l-1.444 7.222a2 2 0 0 1-1.57 1.569l-7.221 1.444a1 1 0 0 1-1.177-1.177L7.74 9.307Z",
                         clipRule: "evenodd",
-                        className: o
-                    })]
-                })
-            }
-        },
-        851298: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                ImagePlusIcon: function() {
-                    return l
-                }
-            });
-            var r = n("37983");
-            n("884691");
-            var i = n("669491"),
-                u = n("75196");
-            let l = e => {
-                let {
-                    width: t = 24,
-                    height: n = 24,
-                    color: l = i.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: o = "",
-                    ...s
-                } = e;
-                return (0, r.jsxs)("svg", {
-                    ...(0, u.default)(s),
-                    xmlns: "http://www.w3.org/2000/svg",
-                    width: t,
-                    height: n,
-                    fill: "none",
-                    viewBox: "0 0 24 24",
-                    children: [(0, r.jsx)("path", {
-                        fill: "string" == typeof l ? l : l.css,
-                        fillRule: "evenodd",
-                        d: "M2 5a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v8.667c0 .123-.335.174-.39.063C21.11 12.708 20.203 12 19 12a3 3 0 0 0-2.701 1.693c-.09.185-.356.23-.48.066l-.469-.626a2 2 0 0 0-3.2 0l-2.223 2.964-.506-.633a1.5 1.5 0 0 0-2.342 0l-1.854 2.318A.75.75 0 0 0 5.81 19h5.69c.276 0 .495.226.542.498.167.956.812 1.683 1.688 2.113.111.054.06.389-.063.389H5a3 3 0 0 1-3-3V5Zm8.204.977c.229-.91-.88-1.55-1.555-.898a.934.934 0 0 1-1.298 0c-.675-.653-1.784-.013-1.556.898a.934.934 0 0 1-.649 1.125c-.903.258-.903 1.538 0 1.796a.934.934 0 0 1 .65 1.125c-.229.91.88 1.55 1.555.898a.934.934 0 0 1 1.298 0c.675.653 1.784.013 1.556-.898a.934.934 0 0 1 .649-1.125c.903-.258.903-1.538 0-1.796a.934.934 0 0 1-.65-1.125Z",
-                        clipRule: "evenodd",
-                        className: o
-                    }), (0, r.jsx)("path", {
-                        fill: "string" == typeof l ? l : l.css,
-                        d: "M19 14a1 1 0 0 1 1 1v3h3a1 1 0 0 1 0 2h-3v3a1 1 0 0 1-2 0v-3h-3a1 1 0 1 1 0-2h3v-3a1 1 0 0 1 1-1Z",
                         className: o
                     })]
                 })
@@ -1318,10 +1278,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 GuildProductListingPopout: function() {
-                    return I
+                    return T
                 },
                 default: function() {
-                    return T
+                    return I
                 }
             });
             var r = n("37983");
@@ -1357,7 +1317,7 @@
                     onTestDownload: C,
                     onReportProduct: p,
                     closePopout: S,
-                    onSelect: I
+                    onSelect: T
                 } = e;
                 return (0, r.jsx)("div", {
                     className: E.menuContainer,
@@ -1365,7 +1325,7 @@
                         navId: "guild-product-context",
                         onClose: S,
                         "aria-label": g.default.Messages.GUILD_PRODUCTS_ACTION_MENU_LABEL,
-                        onSelect: I,
+                        onSelect: T,
                         children: [(0, r.jsxs)(l.MenuGroup, {
                             children: [t && (0, r.jsx)(l.MenuItem, {
                                 id: "guild-product-edit",
@@ -1405,7 +1365,7 @@
                 })
             }
 
-            function I(e) {
+            function T(e) {
                 let {
                     product: t,
                     guildId: n,
@@ -1420,7 +1380,7 @@
                     onDeleteProduct: _,
                     onCopyProductLink: C,
                     onTestDownload: p,
-                    onReportProduct: I
+                    onReportProduct: T
                 } = e;
                 return (0, r.jsx)("div", {
                     onClick: e => {
@@ -1446,7 +1406,7 @@
                             onDeleteProduct: _,
                             onCopyLink: C,
                             onTestDownload: p,
-                            onReportProduct: I
+                            onReportProduct: T
                         }),
                         children: (e, n) => {
                             let {
@@ -1470,7 +1430,7 @@
                 })
             }
 
-            function T(e) {
+            function I(e) {
                 let {
                     product: t,
                     guildId: n,
@@ -1478,7 +1438,7 @@
                     onUnpublishProduct: d,
                     onDeleteProduct: c,
                     onCopyProductLink: f,
-                    onTestDownload: T,
+                    onTestDownload: I,
                     disabled: m = !1
                 } = e, L = (0, s.useListingThumbnailUrl)(t, 600), R = null !== t.price_tier ? (0, h.formatPrice)(t.price_tier, p.CurrencyCodes.USD) : void 0, v = (0, _.useProductType)(t);
                 return (0, r.jsxs)(l.ClickableContainer, {
@@ -1503,7 +1463,7 @@
                             onUnpublishProduct: d,
                             onDeleteProduct: c,
                             onCopyLink: f,
-                            onTestDownload: T,
+                            onTestDownload: I,
                             onReportProduct: () => {}
                         })))
                     },
@@ -1543,7 +1503,7 @@
                             }), (0, r.jsx)(a.default, {
                                 size: 16
                             }), t.published ? (0, r.jsx)(C.PublishedBadge, {}) : (0, r.jsx)(C.DraftBadge, {})]
-                        }), !m && (0, r.jsx)(I, {
+                        }), !m && (0, r.jsx)(T, {
                             product: t,
                             guildId: n,
                             showEditProduct: !0,
@@ -1556,7 +1516,7 @@
                             onUnpublishProduct: d,
                             onDeleteProduct: c,
                             onCopyProductLink: f,
-                            onTestDownload: T,
+                            onTestDownload: I,
                             onReportProduct: () => {}
                         })]
                     })]
@@ -1915,10 +1875,10 @@
                     return S
                 },
                 usePublishSubscriptionListing: function() {
-                    return I
+                    return T
                 },
                 useSubscriptionsSettings: function() {
-                    return T
+                    return I
                 },
                 useUpdateSubscriptionsSettings: function() {
                     return m
@@ -2033,7 +1993,7 @@
                         archiveSubscriptionListing: e
                     }
                 },
-                I = () => {
+                T = () => {
                     let [e, t] = r.useState(!1), [n, i] = r.useState(null), u = async e => {
                         let {
                             guildId: n,
@@ -2062,7 +2022,7 @@
                         clearError: () => i(null)
                     }
                 },
-                T = e => (0, i.useStateFromStores)([a.default], () => null != e ? a.default.getSubscriptionSettings(e) : void 0),
+                I = e => (0, i.useStateFromStores)([a.default], () => null != e ? a.default.getSubscriptionSettings(e) : void 0),
                 m = () => {
                     let [e, t] = r.useState(!1), [n, i] = r.useState(null), u = r.useCallback(async (e, n) => {
                         t(!0), i(null);
@@ -2151,7 +2111,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return I
                 }
             });
             var r = n("37983");
@@ -2195,7 +2155,7 @@
                         })
                     },
                     S = s === p.BoostedGuildTiers.NONE ? g.default.Messages.PREMIUM_GUILD_HEADER_BADGE_NO_TIER : C.getTierName(s),
-                    I = (0, r.jsxs)(r.Fragment, {
+                    T = (0, r.jsxs)(r.Fragment, {
                         children: [(0, r.jsx)("div", {
                             className: E.tierTooltipTitle,
                             children: S
@@ -2208,7 +2168,7 @@
                 return (0, r.jsx)("div", {
                     className: E.guildIconContainer,
                     children: (0, r.jsx)(o.Tooltip, {
-                        text: I,
+                        text: T,
                         position: "bottom",
                         "aria-label": null != S ? S : "",
                         children: e => (0, r.jsx)(o.Clickable, {
@@ -2225,7 +2185,7 @@
                 })
             }
 
-            function I(e) {
+            function T(e) {
                 let {
                     guild: t,
                     disableColor: n,
@@ -2255,19 +2215,19 @@
                 })
             }
 
-            function T(e) {
+            function I(e) {
                 let {
                     guild: t,
                     isBannerVisible: n,
                     disableBoostClick: i
                 } = e, u = (0, s.default)(t);
-                if (u) return (0, r.jsx)(I, {
+                if (u) return (0, r.jsx)(T, {
                     guild: t,
                     disableColor: !1,
                     disableBoostClick: i
                 });
                 let l = t.hasFeature(p.GuildFeatures.VERIFIED) || t.hasFeature(p.GuildFeatures.PARTNERED);
-                return l ? (0, r.jsx)(I, {
+                return l ? (0, r.jsx)(T, {
                     guild: t,
                     disableColor: !n
                 }) : (0, r.jsx)(S, {
@@ -2693,8 +2653,8 @@
                     channel: t,
                     onClick: n,
                     beforeTransition: S,
-                    className: I,
-                    openChatWithoutConnecting: T
+                    className: T,
+                    openChatWithoutConnecting: I
                 } = e, m = (0, i.useStateFromStores)([_.default, h.default], () => null == t ? "" : (0, s.computeChannelName)(t, _.default, h.default), [t]);
                 return (0, r.jsx)(u.Tooltip, {
                     text: m,
@@ -2706,7 +2666,7 @@
                         } = e;
                         return (0, r.jsx)(C.default, {
                             role: "link",
-                            className: I,
+                            className: T,
                             onClick: e => {
                                 e.stopPropagation(), null != n ? n() : (null != S && S(), (0, u.closeAllModals)(), ! function(e, t) {
                                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -2727,7 +2687,7 @@
                                         o.default.selectVoiceChannel(i.id);
                                         return
                                     }(0, a.transitionTo)(E.Routes.CHANNEL(e, t))
-                                }(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, T))
+                                }(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, I))
                             },
                             onMouseEnter: i,
                             onMouseLeave: s,

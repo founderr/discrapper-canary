@@ -1971,8 +1971,8 @@
                 V = A("866190"),
                 j = A("949435"),
                 b = A("565559"),
-                M = A("757515"),
-                S = A("740259"),
+                S = A("757515"),
+                M = A("740259"),
                 F = A("492724"),
                 _ = A("155539"),
                 G = A("959875"),
@@ -2065,7 +2065,7 @@
                     onClose: el
                 } = e, [en, er] = r.useState(ee), es = (0, c.default)([b.default], () => null == en ? null : b.default.getGuildProduct(en), [en]), eo = (null == es ? void 0 : es.published) === !0, {
                     application: ei
-                } = (0, m.default)(R, Z.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), eu = S.PRODUCT_IMAGE_PRESETS[0], ed = (0, c.default)([T.default], () => T.default.useReducedMotion), ec = E.GifAutoPlay.useSetting(), ef = (0, V.useIsWindowFocused)(), eC = r.useCallback(() => {
+                } = (0, m.default)(R, Z.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), eu = M.PRODUCT_IMAGE_PRESETS[0], ed = (0, c.default)([T.default], () => T.default.useReducedMotion), ec = E.GifAutoPlay.useSetting(), ef = (0, V.useIsWindowFocused)(), eC = r.useCallback(() => {
                     var e;
                     return (null == es ? void 0 : null === (e = es.image_asset) || void 0 === e ? void 0 : e.application_id) == null ? eu.data : (0, P.getAssetURL)(es.image_asset.application_id, es.image_asset, 600, ef && ec ? void 0 : "webp")
                 }, [eu, es, ef, ec]), {
@@ -2077,8 +2077,8 @@
                 let [eh, eT] = r.useState(null !== (l = null == es ? void 0 : es.name) && void 0 !== l ? l : ""), [em, ep] = r.useState(null !== (s = null == es ? void 0 : es.description) && void 0 !== s ? s : ""), [eU, eI] = r.useState(null !== (o = null == es ? void 0 : es.price_tier) && void 0 !== o ? o : void 0), [ev, eE] = r.useState(eC), [ex, eN] = r.useState(null !== (i = null == es ? void 0 : null === (t = es.image_asset) || void 0 === t ? void 0 : t.filename) && void 0 !== i ? i : eu.name), [eq, eO] = r.useState(!1), [eR, eL] = r.useState(), eD = r.useMemo(() => null != eU ? (0, D.formatPrice)(eU, y.CurrencyCodes.USD) : void 0, [eU]), [eP, eV] = r.useState(!0), {
                     changesSaving: ej,
                     saveError: eb,
-                    saveProductWithAttachments: eM,
-                    hasUnsavedAttachmentChanges: eS,
+                    saveProductWithAttachments: eS,
+                    hasUnsavedAttachmentChanges: eM,
                     cancelUnusedUploads: eF
                 } = (0, j.useGuildProductAttachmentManagerContext)(), e_ = (null == es ? void 0 : es.attachments) != null && (null == es ? void 0 : es.attachments.length) > 0, eG = null != eb ? eb : eR, eK = null != ej && "published" in ej, eB = null != ej && !eK, eW = null !== (p = null == es ? void 0 : es.role_id) && void 0 !== p ? p : null, [eX, ez] = r.useState(), eQ = null != eX || null != eW, ey = (0, c.default)([x.default], () => {
                     if (null != eW && null !== eX) {
@@ -2098,7 +2098,7 @@
                         canSaveForDraft: e$,
                         canSaveForPublished: e0,
                         canPublishOrUnpublish: e1
-                    } = r.useMemo(() => (0, M.computeProductChanges)({
+                    } = r.useMemo(() => (0, S.computeProductChanges)({
                         guildProductListing: es,
                         name: eh,
                         priceTier: eU,
@@ -2108,8 +2108,8 @@
                         isImageChanged: eq,
                         newRoleParams: eX,
                         hasSavedAttachments: e_,
-                        hasUnsavedAttachmentChanges: eS
-                    }), [es, eh, eU, em, ev, ex, eq, eX, e_, eS]),
+                        hasUnsavedAttachmentChanges: eM
+                    }), [es, eh, eU, em, ev, ex, eq, eX, e_, eM]),
                     e9 = r.useMemo(() => eJ || null == ew || "publish" === ew || null != eG ? null : (0, n.jsx)(q.default, {
                         className: w.successNotice,
                         children: (0, n.jsx)(h.default, {
@@ -2146,11 +2146,11 @@
                     }), e6)
                 }, [R, e6, en]);
                 let e3 = async e => {
-                    let t = (0, M.describeProductChangeValidation)({
+                    let t = (0, S.describeProductChangeValidation)({
                         newRoleParams: eX
                     });
                     if (eL(t), null != t) return;
-                    let A = await eM(e);
+                    let A = await eS(e);
                     if (eO(!1), null != A) {
                         if (null != e.name && eT(A.name), null != e.description && ep(A.description), null != eX) {
                             let e = A.role_id;
@@ -2254,7 +2254,7 @@
                                     }), (0, n.jsx)(O.default, {
                                         size: 10
                                     }), (0, n.jsx)(W.default, {
-                                        presetImages: S.PRODUCT_IMAGE_PRESETS,
+                                        presetImages: M.PRODUCT_IMAGE_PRESETS,
                                         radioGroupAriaLabel: H.default.Messages.GUILD_PRODUCT_EDIT_MODAL_THUMBNAIL_RADIO_GROUP_ARIA_LABEL,
                                         image: ev,
                                         imageName: ex,
@@ -2279,7 +2279,7 @@
                                         }
                                     })
                                 }) : null, eQ ? (0, n.jsx)(z.default, {
-                                    error: null !== (v = null == eG ? void 0 : eG.getFirstFieldErrorMessage(M.ROLE_FIELD_NAME)) && void 0 !== v ? v : void 0,
+                                    error: null !== (v = null == eG ? void 0 : eG.getFirstFieldErrorMessage(S.ROLE_FIELD_NAME)) && void 0 !== v ? v : void 0,
                                     newRoleParams: eX,
                                     setNewRoleParams: ez,
                                     guildId: R,
@@ -2353,7 +2353,7 @@
                                     text: H.default.Messages.GUILD_PRODUCT_SETTINGS_INCLUDE_ATTACHMENTS_TOGGLE_LABEL,
                                     value: eP,
                                     onChange: e => {
-                                        e ? eV(!0) : eS ? (0, C.openModalLazy)(async () => {
+                                        e ? eV(!0) : eM ? (0, C.openModalLazy)(async () => {
                                             let {
                                                 ConfirmModal: e
                                             } = await A.el("77078").then(A.bind(A, "77078"));
@@ -3402,43 +3402,6 @@
                         })]
                     })
                 }, n.ImageFileUpIcon)
-        },
-        818643: function(e, t, A) {
-            "use strict";
-            A.r(t), A.d(t, {
-                default: function() {
-                    return s
-                }
-            });
-            var a = A("37983");
-            A("884691");
-            var l = A("469563"),
-                n = A("851298"),
-                r = A("75196"),
-                s = (0, l.replaceIcon)(function(e) {
-                    let {
-                        width: t = 24,
-                        height: A = 24,
-                        color: l = "currentColor",
-                        ...n
-                    } = e;
-                    return (0, a.jsxs)("svg", {
-                        ...(0, r.default)(n),
-                        width: t,
-                        height: A,
-                        viewBox: "0 0 24 24",
-                        fill: "none",
-                        children: [(0, a.jsx)("path", {
-                            fillRule: "evenodd",
-                            clipRule: "evenodd",
-                            d: "M13.2899 2L6 2C3.79086 2 2 3.79086 2 6V18C2 20.2091 3.79086 22 6 22H18C20.2091 22 22 20.2091 22 18V10.7101C21.3663 10.8987 20.695 11 20 11C16.134 11 13 7.86599 13 4C13 3.30503 13.1013 2.63371 13.2899 2ZM8 6C9.1032 6 10 6.8952 10 8C10 9.1056 9.1032 10 8 10C6.8944 10 6 9.1056 6 8C6 6.8952 6.8944 6 8 6ZM6 18L9 14L11 16L15 11L18 18H6Z",
-                            fill: l
-                        }), (0, a.jsx)("path", {
-                            d: "M21 0V3H24V5H21V8H19V5H16V3H19V0H21Z",
-                            fill: l
-                        })]
-                    })
-                }, n.ImagePlusIcon)
         },
         152224: function(e, t, A) {
             "use strict";

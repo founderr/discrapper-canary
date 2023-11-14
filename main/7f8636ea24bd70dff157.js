@@ -1,824 +1,615 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["41611"], {
-        618017: function(e, r, l) {
+    ["49191"], {
+        462274: function(e, i, l) {
             "use strict";
-            l.r(r), l.d(r, {
-                canEditClydeAIProfile: function() {
-                    return i
-                }
-            });
-            var t = l("957255"),
-                o = l("49111");
-
-            function i(e) {
-                return null != e && t.default.can(o.Permissions.USE_CLYDE_AI, e)
-            }
-        },
-        190045: function(e, r, l) {
-            "use strict";
-            l.r(r), l.d(r, {
-                default: function() {
-                    return a
-                }
-            });
-            var t = l("37983");
-            l("884691");
-            var o = l("77078"),
-                i = l("599110"),
-                n = l("49111");
-
-            function a(e) {
-                i.default.track(n.AnalyticEvents.OPEN_MODAL, {
-                    type: "Edit Clyde Profile",
-                    location_page: "Profile Popout",
-                    guild_id: e
-                }), (0, o.openModalLazy)(async () => {
-                    let {
-                        default: r
-                    } = await l.el("485261").then(l.bind(l, "485261"));
-                    return l => (0, t.jsx)(r, {
-                        ...l,
-                        guildId: e
-                    })
-                })
-            }
-        },
-        335031: function(e, r, l) {
-            "use strict";
-            l.r(r), l.d(r, {
-                default: function() {
-                    return u
-                }
-            });
-            var t = l("884691"),
-                o = l("656280"),
-                i = l.n(o),
-                n = l("509043"),
-                a = l("446674"),
-                s = l("206230"),
-                u = e => {
-                    let r = (0, a.useStateFromStores)([s.default], () => s.default.desaturateUserColors ? s.default.saturation : 1),
-                        l = (0, t.useMemo)(() => {
-                            let {
-                                h: l,
-                                s: t,
-                                l: o
-                            } = i((0, n.int2hex)(e)).toHsl(), a = i({
-                                h: l,
-                                s: t * r,
-                                l: o
-                            });
-                            return {
-                                hex: a.toHexString(),
-                                hsl: a.toHslString()
-                            }
-                        }, [e, r]);
-                    return l
-                }
-        },
-        528438: function(e, r, l) {
-            "use strict";
-            l.r(r), l.d(r, {
-                default: function() {
-                    return a
-                }
-            }), l("222007");
-            var t = l("509043"),
-                o = l("462274"),
-                i = l("449918"),
-                n = l("49111");
-
-            function a(e, r) {
-                var l, a;
-                let {
-                    pendingThemeColors: s,
-                    isPreview: u
-                } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, f = null == e ? void 0 : e.getAvatarURL(null == r ? void 0 : r.guildId, 80), d = (0, i.useColorValue)(n.Color.PRIMARY_530).hex, [c, P] = (0, o.useAvatarColors)(f, d, !1);
-                if (!(null == r ? void 0 : r.canEditThemes) && !u) return [null, null];
-                let E = null == r ? void 0 : r.getPreviewThemeColors(s),
-                    T = null !== (l = null == E ? void 0 : E[0]) && void 0 !== l ? l : (0, t.hex2int)(c),
-                    p = null !== (a = null == E ? void 0 : E[1]) && void 0 !== a ? a : (0, t.hex2int)(P);
-                return [T, p]
-            }
-        },
-        289918: function(e, r, l) {
-            "use strict";
-            l.r(r), l.d(r, {
-                default: function() {
-                    return J
-                }
-            }), l("222007");
-            var t, o, i = l("37983"),
-                n = l("884691"),
-                a = l("414456"),
-                s = l.n(a),
-                u = l("509043"),
-                f = l("446674"),
-                d = l("669491"),
-                c = l("77078"),
-                P = l("79112"),
-                E = l("812204"),
-                T = l("685665"),
-                p = l("462274"),
-                O = l("618017"),
-                U = l("190045"),
-                _ = l("335031"),
-                h = l("252063"),
-                y = l("38766"),
-                m = l("845579"),
-                v = l("271938"),
-                S = l("42203"),
-                I = l("305961"),
-                N = l("18494"),
-                A = l("697218"),
-                L = l("471671"),
-                g = l("275623"),
-                R = l("945330"),
-                C = l("474571"),
-                M = l("216422"),
-                B = l("987772"),
-                b = l("956089"),
-                D = l("599110"),
-                x = l("315102"),
-                H = l("719923"),
-                w = l("713135"),
-                k = l("581295"),
-                F = l("878569"),
-                G = l("236100"),
-                j = l("590456"),
-                W = l("49111"),
-                z = l("646718"),
-                Y = l("782340"),
-                X = l("220817");
-            (o = t || (t = {}))[o.SHOULD_LOAD = 0] = "SHOULD_LOAD", o[o.LOADING = 1] = "LOADING", o[o.COMPLETE = 2] = "COMPLETE";
-            let V = {
-                    [j.UserProfileTypes.POPOUT]: 18,
-                    [j.UserProfileTypes.MODAL]: 24,
-                    [j.UserProfileTypes.SETTINGS]: 0,
-                    [j.UserProfileTypes.PANEL]: 18,
-                    [j.UserProfileTypes.POMELO_POPOUT]: 18,
-                    [j.UserProfileTypes.CANCEL_MODAL]: 0
+            l.r(i), l.d(i, {
+                useColorStore: function() {
+                    return c
                 },
-                Z = {
-                    [j.UserProfileTypes.MODAL]: W.AnalyticsPages.USER_PROFILE,
-                    [j.UserProfileTypes.POPOUT]: W.AnalyticsPages.USER_POPOUT,
-                    [j.UserProfileTypes.SETTINGS]: W.AnalyticsPages.USER_POPOUT,
-                    [j.UserProfileTypes.PANEL]: W.AnalyticsPages.DM_CHANNEL,
-                    [j.UserProfileTypes.POMELO_POPOUT]: W.AnalyticsPages.POMELO_POPOUT,
-                    [j.UserProfileTypes.CANCEL_MODAL]: W.AnalyticsPages.USER_POPOUT
-                };
-
-            function K(e) {
-                let {
-                    type: r,
-                    shown: t,
-                    onClick: o
-                } = e, a = (0, f.useStateFromStores)([A.default], () => {
-                    let e = A.default.getCurrentUser();
-                    return H.default.canUsePremiumProfileCustomization(e)
-                }), u = n.useRef(!1), {
-                    analyticsLocations: d
-                } = (0, T.default)(E.default.BADGE);
-                return n.useEffect(() => {
-                    t && !u.current && (u.current = !0, D.default.track(W.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-                        type: z.PremiumUpsellTypes.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL,
-                        location: {
-                            page: Z[r],
-                            section: W.AnalyticsSections.NITRO_BANNER,
-                            object: W.AnalyticsObjects.NITRO_BADGE
-                        },
-                        location_stack: d
-                    }))
-                }, [d, t, r]), (0, i.jsx)(c.Tooltip, {
-                    tooltipContentClassName: X.premiumIconTooltipContent,
-                    text: a ? Y.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP : Y.default.Messages.USER_SETTINGS_PROFILE_THEMES_USER_PROFILE_ICON_TOOLTIP_UPSELL,
-                    children: e => (0, i.jsx)(c.Clickable, {
-                        ...e,
-                        onClick: a ? void 0 : () => {
-                            var e;
-                            e = d, (0, c.openModalLazy)(async () => {
-                                let {
-                                    default: r
-                                } = await l.el("292890").then(l.bind(l, "292890"));
-                                return l => {
-                                    let {
-                                        onClose: t,
-                                        ...o
-                                    } = l;
-                                    return (0, i.jsx)(r, {
-                                        analyticsLocations: e,
-                                        title: Y.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_TITLE,
-                                        description: Y.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
-                                            onAndMoreWithPremiumClick: () => {
-                                                t(), P.default.open(W.UserSettingsSections.PREMIUM, null, {
-                                                    analyticsLocations: e
-                                                })
-                                            }
-                                        }),
-                                        onClose: t,
-                                        ...o
-                                    })
-                                }
-                            }), null == o || o()
-                        },
-                        className: s(X.premiumIconWrapper, {
-                            [X.visible]: t,
-                            [X.clickable]: !a
-                        }),
-                        children: (0, i.jsx)(b.TextBadge, {
-                            color: "rgba(32, 34, 37, 0.8)",
-                            text: (0, i.jsx)(M.default, {
-                                width: 16,
-                                height: 16,
-                                className: X.premiumIcon
-                            })
-                        })
-                    })
-                })
-            }
-
-            function q(e) {
-                let {
-                    darkenOnHover: r,
-                    profileType: l,
-                    profileLabel: t,
-                    icon: o,
-                    ...n
-                } = e, a = V[l], s = "pencil" === o ? B.default : C.default;
-                return (0, i.jsx)(c.Clickable, {
-                    ...n,
-                    "aria-label": t,
-                    className: r ? X.pencilContainerDark : X.pencilContainer,
-                    children: (0, i.jsx)(c.Tooltip, {
-                        text: t,
-                        children: e => (0, i.jsx)(s, {
-                            ...e,
-                            width: a,
-                            height: a,
-                            className: X.editIcon
-                        })
-                    })
-                })
-            }
-
-            function J(e) {
-                var r, l, t;
-                let {
-                    user: o,
-                    displayProfile: a,
-                    bannerSrc: P,
-                    onClose: E,
-                    guildId: T,
-                    profileType: A = j.UserProfileTypes.POPOUT,
-                    allowEdit: C = !0,
-                    showPremiumBadgeUpsell: M = !0,
-                    isHovering: B,
-                    animateOnHover: b
-                } = e, [D, V] = n.useState((null == a ? void 0 : a.banner) == null ? 2 : 0), Z = (0, f.useStateFromStores)([I.default], () => I.default.getGuild(T)), J = (0, f.useStateFromStores)([v.default], () => v.default.getId()), Q = J === o.id && C || o.isClyde() && null != Z && (0, O.canEditClydeAIProfile)(Z), $ = H.default.isPremiumAtLeast(null == a ? void 0 : a.premiumType, z.PremiumTypes.TIER_2), [ee, er] = n.useState(!1), el = (0, f.useStateFromStores)([L.default], () => L.default.isFocused()), et = m.GifAutoPlay.getSetting(), eo = (0, c.useToken)(d.default.unsafe_rawColors.PRIMARY_800).hex(), ei = (0, c.getAvatarSize)(c.AvatarSizes.SIZE_80), en = (0, u.hex2int)((0, p.default)(o.getAvatarURL(T, ei), eo, !1)), ea = (0, _.default)(null !== (r = null == a ? void 0 : a.primaryColor) && void 0 !== r ? r : en).hsl, es = (0, F.getUserBannerSize)(A), eu = null != P ? P : null == a ? void 0 : a.getBannerURL({
-                    size: es,
-                    canAnimate: b || !et ? ee : el
-                }), ef = null != eu, ed = (0, f.useStateFromStores)([w.default], () => w.default.getUserProfile(o.id)), ec = S.default.getChannel(N.default.getChannelId()), {
-                    appsInGDMEnabled: eP,
-                    availableApplications: eE
-                } = (0, h.usePrivateChannelIntegrationState)({
-                    channelId: null !== (l = null == ec ? void 0 : ec.id) && void 0 !== l ? l : ""
-                }), eT = null == ed ? void 0 : ed.application, ep = eP && null != eE.find(e => e.id === (null == eT ? void 0 : eT.id));
-                if (ef && ($ || o.isClyde()) && 0 === D) {
-                    V(1);
-                    let e = new Image;
-                    e.src = eu, e.onload = () => V(2)
-                }
-                n.useEffect(() => {
-                    if (et || !$) return;
-                    let e = null != P ? P : null == a ? void 0 : a.getBannerURL({
-                        size: es,
-                        canAnimate: !0
-                    });
-                    if (null == e) return;
-                    let r = new Image;
-                    r.src = e
-                }, [et, $, P, a, es]);
-                let eO = (0, y.default)({
-                        analyticsLocation: {
-                            page: W.AnalyticsPages.USER_POPOUT,
-                            section: W.AnalyticsSections.PROFILE_POPOUT
-                        }
-                    }),
-                    eU = (null == a ? void 0 : a.profileEffectID) != null;
-                return (0, i.jsx)(k.default, {
-                    isPremium: $,
-                    hasThemeColors: null !== (t = null == a ? void 0 : a.canEditThemes) && void 0 !== t && t,
-                    profileType: A,
-                    hasBanner: ef,
-                    hasProfileEffect: eU,
-                    children: (0, i.jsxs)("div", {
-                        className: s(X.banner, (0, F.getUserBannerStyles)({
-                            profileType: A,
-                            user: {
-                                hasBanner: ef,
-                                isPremium: $,
-                                hasProfileEffect: eU
-                            }
-                        }), {
-                            [X.reducedMotion]: !et
-                        }),
-                        onMouseMove: () => er(!0),
-                        onMouseLeave: () => er(!1),
-                        style: {
-                            backgroundImage: ef && $ ? "url(".concat(eu, ")") : void 0,
-                            backgroundColor: 2 !== D ? d.default.unsafe_rawColors.PRIMARY_800.css : ea
-                        },
-                        children: [Q ? null != Z || o.isClyde() ? null != Z && o.isClyde() && (0, O.canEditClydeAIProfile)(Z) ? (0, i.jsx)(q, {
-                            profileType: A,
-                            profileLabel: Y.default.Messages.CLYDE_SETTINGS,
-                            icon: "gear",
-                            onClick: () => {
-                                null == E || E(), (0, U.default)(Z.id)
-                            }
-                        }) : null == Z ? null : (0, i.jsx)(c.Popout, {
-                            spacing: 6,
-                            position: "bottom",
-                            renderPopout: e => {
-                                let {
-                                    closePopout: r
-                                } = e;
-                                return (0, i.jsx)(G.default, {
-                                    onClose: r,
-                                    onSelect: E,
-                                    guild: Z
-                                })
-                            },
-                            children: e => (0, i.jsx)(q, {
-                                darkenOnHover: eU && B,
-                                profileLabel: Y.default.Messages.EDIT_PROFILE,
-                                icon: "pencil",
-                                ...e,
-                                profileType: A
-                            })
-                        }) : (0, i.jsx)(q, {
-                            darkenOnHover: eU && B,
-                            profileType: A,
-                            profileLabel: Y.default.Messages.EDIT_PROFILE,
-                            icon: "pencil",
-                            onClick: () => {
-                                null == E || E(), eO()
-                            }
-                        }) : (() => {
-                            let e = M && ef && A !== j.UserProfileTypes.SETTINGS;
-                            return e ? (0, i.jsx)(K, {
-                                type: A,
-                                shown: void 0 === B ? ee : B,
-                                onClick: E
-                            }) : null
-                        })(), ep ? A !== j.UserProfileTypes.MODAL ? null : (0, i.jsx)(c.Clickable, {
-                            onClick: E,
-                            "aria-label": Y.default.Messages.BACK,
-                            className: X.pencilContainer,
-                            children: (0, i.jsx)(c.Tooltip, {
-                                text: Y.default.Messages.BACK,
-                                children: e => (0, i.jsx)(R.default, {
-                                    ...e,
-                                    className: X.closeIcon,
-                                    color: "white"
-                                })
-                            })
-                        }) : null, !et && (0, x.isAnimatedImageURL)(eu) && (0, i.jsx)(g.default, {
-                            className: X.gifTag
-                        })]
-                    })
-                })
-            }
-        },
-        581295: function(e, r, l) {
-            "use strict";
-            l.r(r), l.d(r, {
-                default: function() {
-                    return T
-                }
-            }), l("70102"), l("794252");
-            var t = l("37983");
-            l("884691");
-            var o = l("506838"),
-                i = l("769846"),
-                n = l("77078"),
-                a = l("606292"),
-                s = l("476765"),
-                u = l("159885"),
-                f = l("878569"),
-                d = l("590456"),
-                c = l("573135"),
-                P = l("423713");
-            let E = {
-                [d.UserProfileTypes.POPOUT]: n.AvatarSizes.SIZE_80,
-                [d.UserProfileTypes.MODAL]: n.AvatarSizes.SIZE_120,
-                [d.UserProfileTypes.SETTINGS]: n.AvatarSizes.SIZE_80,
-                [d.UserProfileTypes.PANEL]: n.AvatarSizes.SIZE_80,
-                [d.UserProfileTypes.POMELO_POPOUT]: n.AvatarSizes.SIZE_80,
-                [d.UserProfileTypes.CANCEL_MODAL]: n.AvatarSizes.SIZE_56
-            };
-
-            function T(e) {
-                let {
-                    children: r,
-                    profileType: l,
-                    isPremium: T,
-                    hasThemeColors: p,
-                    hasBanner: O,
-                    forProfileEffectModal: U,
-                    hasProfileEffect: _ = !1
-                } = e, h = E[l], y = (0, s.useUID)(), m = function(e) {
-                    let {
-                        profileType: r,
-                        avatarSize: l,
-                        hasBanner: t,
-                        isPremium: s,
-                        hasThemeColors: P,
-                        hasProfileEffect: E
-                    } = e, T = c.AvatarDecorationBorderSizes[l];
-                    if (null == T) throw Error("Unsupported avatar size for banner mask");
-                    let p = (0, a.getDecorationSizeForAvatarSize)(l),
-                        {
-                            size: O,
-                            stroke: U
-                        } = (0, n.getAvatarSpecs)(l),
-                        _ = {
-                            avatarSize: O,
-                            avatarBorderSize: U,
-                            avatarDecorationSize: p,
-                            avatarDecorationBorderSize: T,
-                            avatarDecorationOffsetY: -(p + 2 * T) / 2,
-                            bannerHeight: (0, f.getUserBannerHeight)({
-                                profileType: r,
-                                user: {
-                                    hasBanner: t,
-                                    isPremium: s,
-                                    hasProfileEffect: E
-                                }
-                            })
-                        };
-                    return (0, o.match)(r).with(d.UserProfileTypes.POPOUT, () => {
-                        let e = P ? (0, u.cssValueToNumber)(i.default.USER_PROFILE_THEMED_CONTAINER_USER_PROFILE_THEMED_PADDING) : 0;
-                        return {
-                            ..._,
-                            bannerWidth: (0, u.cssValueToNumber)(i.default.USER_PROFILE_THEMED_CONTAINER_USER_POPOUT_WIDTH),
-                            offsetX: 16 - e,
-                            offsetY: 4 + e,
-                            avatarDecorationOffsetX: 4
-                        }
-                    }).with(d.UserProfileTypes.MODAL, () => ({
-                        ..._,
-                        bannerWidth: (0, f.getUserBannerSize)(d.UserProfileTypes.MODAL),
-                        offsetX: 14,
-                        offsetY: 5,
-                        avatarDecorationOffsetX: 2
-                    })).with(d.UserProfileTypes.SETTINGS, () => ({
-                        ..._,
-                        bannerWidth: 660,
-                        offsetX: 16,
-                        offsetY: -22,
-                        avatarDecorationOffsetX: 8
-                    })).with(d.UserProfileTypes.PANEL, () => {
-                        let e = (0, u.cssValueToNumber)(i.default.USER_PROFILE_THEMED_CONTAINER_USER_PROFILE_THEMED_PADDING);
-                        return {
-                            ..._,
-                            bannerWidth: (0, u.cssValueToNumber)(i.default.USER_PROFILE_THEMED_CONTAINER_USER_POPOUT_WIDTH),
-                            offsetX: 16 - e,
-                            offsetY: 4 + e,
-                            avatarDecorationOffsetX: 4
-                        }
-                    }).with(d.UserProfileTypes.POMELO_POPOUT, () => ({
-                        ..._,
-                        bannerWidth: (0, f.getUserBannerSize)(d.UserProfileTypes.POMELO_POPOUT),
-                        offsetX: 20,
-                        offsetY: -20,
-                        avatarDecorationOffsetX: 10
-                    })).with(d.UserProfileTypes.CANCEL_MODAL, () => ({
-                        ..._,
-                        bannerWidth: (0, f.getUserBannerSize)(d.UserProfileTypes.CANCEL_MODAL),
-                        offsetX: 8,
-                        offsetY: 2,
-                        avatarDecorationOffsetX: 8
-                    })).exhaustive()
-                }({
-                    profileType: l,
-                    avatarSize: h,
-                    hasBanner: O,
-                    isPremium: T,
-                    hasThemeColors: p,
-                    hasProfileEffect: _
-                });
-                U && (m.bannerWidth = (0, u.cssValueToNumber)(i.default.USER_PROFILE_THEMED_CONTAINER_PROFILE_EFFECTS_USER_POPOUT_WIDTH));
-                let v = m.avatarSize / 2 + m.avatarBorderSize,
-                    S = m.bannerHeight - m.offsetY;
-                return (0, t.jsxs)("svg", {
-                    className: P.bannerSVGWrapper,
-                    viewBox: "0 0 ".concat(m.bannerWidth, " ").concat(m.bannerHeight),
-                    style: {
-                        minWidth: m.bannerWidth,
-                        minHeight: m.bannerHeight
-                    },
-                    children: [(0, t.jsxs)("mask", {
-                        id: y,
-                        children: [(0, t.jsx)("rect", {
-                            fill: "white",
-                            x: "0",
-                            y: "0",
-                            width: "100%",
-                            height: "100%"
-                        }), (0, t.jsx)("circle", {
-                            fill: "black",
-                            cx: m.offsetX + v,
-                            cy: S,
-                            r: v
-                        })]
-                    }), (0, t.jsx)("foreignObject", {
-                        x: "0",
-                        y: "0",
-                        width: "100%",
-                        height: "100%",
-                        overflow: "visible",
-                        mask: "url(#".concat(y, ")"),
-                        children: r
-                    })]
-                })
-            }
-        },
-        878569: function(e, r, l) {
-            "use strict";
-            l.r(r), l.d(r, {
-                buildGetPremiumUserBannerStyles: function() {
-                    return s
-                },
-                getUserBannerStyles: function() {
-                    return u
-                },
-                getUserBannerHeight: function() {
+                maybeFetchColors: function() {
                     return f
                 },
-                getUserBannerSize: function() {
-                    return c
-                }
-            }), l("794252");
-            var t = l("506838"),
-                o = l("617258"),
-                i = l("769846"),
-                n = l("590456"),
-                a = l("220817");
-            let s = e => r => {
-                    if (r.hasBanner && r.isPremium || r.hasProfileEffect) return e.premiumUserWithBanner;
-                    if (r.isPremium) {
-                        var l;
-                        return null !== (l = e.premiumUserWithoutBanner) && void 0 !== l ? l : e.default
-                    }
-                    return e.default
-                },
-                u = e => {
-                    let {
-                        profileType: r,
-                        user: l
-                    } = e;
-                    return (0, t.match)(r).with(n.UserProfileTypes.POPOUT, n.UserProfileTypes.POMELO_POPOUT, () => {
-                        let e = s({
-                            premiumUserWithBanner: a.popoutBannerPremium,
-                            premiumUserWithoutBanner: a.popoutNoBannerPremium,
-                            default: a.popoutBanner
-                        });
-                        return e(l)
-                    }).with(n.UserProfileTypes.MODAL, () => {
-                        let e = s({
-                            premiumUserWithBanner: a.profileBannerPremium,
-                            premiumUserWithoutBanner: a.profileBanner,
-                            default: a.profileBanner
-                        });
-                        return e(l)
-                    }).with(n.UserProfileTypes.SETTINGS, () => a.settingsBanner).with(n.UserProfileTypes.PANEL, () => a.panelBanner).with(n.UserProfileTypes.CANCEL_MODAL, () => a.cancelModalBanner).exhaustive()
-                },
-                f = e => {
-                    let {
-                        profileType: r,
-                        user: l
-                    } = e, a = (0, t.match)(r).with(n.UserProfileTypes.POPOUT, () => {
-                        let e = s({
-                            premiumUserWithBanner: i.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_POPOUT,
-                            premiumUserWithoutBanner: i.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_NO_BANNER_IMAGE_POPOUT,
-                            default: i.default.USER_BANNER_BANNER_HEIGHT_POPOUT
-                        });
-                        return e(l)
-                    }).with(n.UserProfileTypes.MODAL, () => {
-                        let e = s({
-                            premiumUserWithBanner: i.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_PROFILE,
-                            premiumUserWithoutBanner: i.default.USER_BANNER_BANNER_HEIGHT_PROFILE,
-                            default: i.default.USER_BANNER_BANNER_HEIGHT_PROFILE
-                        });
-                        return e(l)
-                    }).with(n.UserProfileTypes.POMELO_POPOUT, () => i.default.USER_BANNER_BANNER_HEIGHT_POMELO).with(n.UserProfileTypes.SETTINGS, () => i.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_SETTINGS).with(n.UserProfileTypes.PANEL, () => i.default.USER_BANNER_BANNER_HEIGHT_PANEL).with(n.UserProfileTypes.CANCEL_MODAL, () => i.default.USER_BANNER_CANCEL_MODAL_HEIGHT).exhaustive();
-                    return (0, o.cssValueToNumber)(a)
-                },
-                d = Object.freeze({
-                    [n.UserProfileTypes.POPOUT]: 480,
-                    [n.UserProfileTypes.PANEL]: 480,
-                    [n.UserProfileTypes.MODAL]: 600,
-                    [n.UserProfileTypes.SETTINGS]: 600,
-                    [n.UserProfileTypes.POMELO_POPOUT]: 432,
-                    [n.UserProfileTypes.CANCEL_MODAL]: 172
-                }),
-                c = e => d[e]
-        },
-        430312: function(e, r, l) {
-            "use strict";
-            l.r(r), l.d(r, {
-                UserProfileContext: function() {
-                    return P
-                },
                 default: function() {
-                    return T
-                }
-            }), l("794252");
-            var t = l("37983"),
-                o = l("884691"),
-                i = l("414456"),
-                n = l.n(i),
-                a = l("506838"),
-                s = l("217513"),
-                u = l("906889"),
-                f = l("590456"),
-                d = l("200932"),
-                c = l("677055");
-            let P = o.createContext({
-                profileType: null,
-                profileTheme: null
-            });
-
-            function E(e) {
-                var r, l;
-                let {
-                    user: i,
-                    guildId: E,
-                    profileType: T,
-                    className: p,
-                    pendingThemeColors: O,
-                    useDefaultClientTheme: U,
-                    children: _,
-                    forceShowPremium: h = !1,
-                    showOutOfBoundaryComponents: y = !1
-                } = e, m = o.useRef(null), v = (0, s.default)(i.id, E), {
-                    profileTheme: S
-                } = (0, u.default)(i, v, {
-                    themeElementRef: m,
-                    pendingThemeColors: O,
-                    isPreview: h,
-                    useDefaultClientTheme: U
-                }), I = (null == v ? void 0 : v.canEditThemes) || h, N = o.useMemo(() => ({
-                    profileType: T,
-                    profileTheme: S
-                }), [T, S]);
-                return (0, t.jsx)("div", {
-                    ref: m,
-                    className: n((r = T, (0, a.match)(r).with(f.UserProfileTypes.POPOUT, f.UserProfileTypes.SETTINGS, f.UserProfileTypes.CANCEL_MODAL, () => c.userPopoutOuter).with(f.UserProfileTypes.MODAL, () => c.userProfileModalOuter).with(f.UserProfileTypes.PANEL, () => c.userPanelOuter).with(f.UserProfileTypes.CARD, () => c.userCardOuter).exhaustive()), I ? c.userProfileOuterThemed : c.userProfileOuterUnthemed, d.profileColors, y ? c.showOutOfBoundaryComponents : void 0, "theme-".concat(S), p),
-                    children: (0, t.jsx)("div", {
-                        className: n((l = T, (0, a.match)(l).with(f.UserProfileTypes.POPOUT, f.UserProfileTypes.SETTINGS, f.UserProfileTypes.CANCEL_MODAL, () => c.userPopoutInner).with(f.UserProfileTypes.MODAL, () => c.userProfileModalInner).with(f.UserProfileTypes.PANEL, () => c.userPanelInner).with(f.UserProfileTypes.CARD, () => c.userCardInner).exhaustive()), function() {
-                            let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                                r = arguments.length > 1 ? arguments[1] : void 0,
-                                l = arguments.length > 2 ? arguments[2] : void 0;
-                            return (0, a.match)({
-                                profileType: l,
-                                canUsePremiumProfileCustomization: e,
-                                hasBanner: r
-                            }).with({
-                                profileType: f.UserProfileTypes.PANEL
-                            }, () => c.userPanelInnerThemed).with({
-                                canUsePremiumProfileCustomization: !0,
-                                hasBanner: !0
-                            }, () => c.userProfileInnerThemedWithBanner).with({
-                                canUsePremiumProfileCustomization: !0
-                            }, () => c.userProfileInnerThemedPremiumWithoutBanner).otherwise(() => c.userProfileInnerThemedNonPremium)
-                        }((null == v ? void 0 : v.canUsePremiumProfileCustomization) || h, (null == v ? void 0 : v.banner) != null, T)),
-                        children: (0, t.jsx)(P.Provider, {
-                            value: N,
-                            children: _
-                        })
-                    })
-                })
-            }
-            E.Inner = function(e) {
-                var r;
-                let {
-                    className: l,
-                    children: i
-                } = e, {
-                    profileType: s
-                } = o.useContext(P);
-                return (0, t.jsx)("div", {
-                    className: n((r = s, (0, a.match)(r).with(f.UserProfileTypes.POPOUT, f.UserProfileTypes.SETTINGS, () => c.userPopoutOverlayBackground).with(f.UserProfileTypes.MODAL, () => c.userProfileModalOverlayBackground).with(f.UserProfileTypes.PANEL, () => c.userPanelOverlayBackground).otherwise(() => c.overlayBackground)), l),
-                    children: i
-                })
-            };
-            var T = E
-        },
-        236100: function(e, r, l) {
-            "use strict";
-            l.r(r), l.d(r, {
-                default: function() {
-                    return d
-                }
-            });
-            var t = l("37983");
-            l("884691");
-            var o = l("77078"),
-                i = l("38766"),
-                n = l("49111"),
-                a = l("782340"),
-                s = l("364547");
-            let u = {
-                    page: n.AnalyticsPages.GUILD_CHANNEL,
-                    section: n.AnalyticsSections.PROFILE_POPOUT,
-                    object: n.AnalyticsObjects.EDIT_PER_SERVER_IDENTITY
+                    return p
                 },
-                f = {
-                    page: n.AnalyticsPages.USER_POPOUT,
-                    section: n.AnalyticsSections.PROFILE_POPOUT
-                };
-
-            function d(e) {
-                let {
-                    onSelect: r,
-                    onClose: l,
-                    guild: n
-                } = e, d = (0, i.default)({
-                    guild: n,
-                    analyticsLocation: u
-                }), c = (0, i.default)({
-                    analyticsLocation: f
-                });
-                return (0, t.jsxs)(o.Menu, {
-                    className: s.popoutMenu,
-                    onSelect: r,
-                    navId: "edit-profile-popout",
-                    onClose: l,
-                    "aria-label": a.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
-                    children: [(0, t.jsx)(o.MenuItem, {
-                        id: "edit-server-profile",
-                        label: a.default.Messages.CHANGE_IDENTITY,
-                        subtext: a.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE_MENU_HELP,
-                        action: () => d()
-                    }), (0, t.jsx)(o.MenuItem, {
-                        id: "edit-default-profile",
-                        label: a.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE,
-                        subtext: a.default.Messages.USER_PROFILE_MENU_HELP,
-                        action: () => c()
-                    })]
-                })
-            }
-        },
-        906889: function(e, r, l) {
-            "use strict";
-            l.r(r), l.d(r, {
-                default: function() {
-                    return c
+                useAvatarColors: function() {
+                    return _
                 }
             }), l("222007");
             var t = l("884691"),
-                o = l("509043"),
-                i = l("446674"),
-                n = l("841098"),
-                a = l("206230"),
-                s = l("388491"),
-                u = l("528438");
-            let f = ["--profile-gradient-primary-color", "--profile-gradient-secondary-color", "--profile-gradient-button-color", "--profile-gradient-overlay-color", "--profile-body-background-color", "--profile-body-divider-color", "--profile-avatar-border-color", "--profile-message-input-border-color", "--profile-note-background-color", "--profile-body-background-hover", "--account-profile-modal-list-item-hover", "--profile-role-pill-background-color", "--profile-role-pill-border-color"];
-
-            function d(e, r, l) {
-                var t;
-                null == e || null === (t = e.current) || void 0 === t || t.style.setProperty(r, null != l ? l : null)
+                n = l("656280"),
+                r = l.n(n),
+                u = l("308503"),
+                o = l("446674"),
+                d = l("206230"),
+                s = l("284679"),
+                a = l("103603");
+            let c = (0, u.default)(() => ({
+                palette: {},
+                fetching: {}
+            }));
+            async function f(e) {
+                null == c.getState().palette[e] && await m(e)
+            }
+            async function m(e) {
+                if (!c.getState().fetching[e]) {
+                    c.setState(i => ({
+                        fetching: {
+                            ...i.fetching,
+                            [e]: !0
+                        }
+                    }));
+                    try {
+                        let i = await (0, a.getPaletteForAvatar)(e),
+                            l = (0, s.getComplimentaryPaletteForColor)(i[0]);
+                        c.setState(t => ({
+                            fetching: {
+                                ...t.fetching,
+                                [e]: !1
+                            },
+                            palette: {
+                                ...t.palette,
+                                [e]: [...i.slice(0, 2), ...l]
+                            }
+                        }))
+                    } catch (i) {
+                        c.setState(i => ({
+                            fetching: {
+                                ...i.fetching,
+                                [e]: !1
+                            }
+                        }))
+                    }
+                }
             }
 
-            function c(e, r) {
-                let {
-                    themeElementRef: l,
-                    pendingThemeColors: c,
-                    isPreview: P,
-                    useDefaultClientTheme: E
-                } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, [T, p] = (0, u.default)(e, r, {
-                    pendingThemeColors: c,
-                    isPreview: P
-                }), [O, U, _] = (0, i.useStateFromStoresArray)([a.default], () => [a.default.desaturateUserColors, a.default.saturation, a.default.syncProfileThemeWithUserTheme]), h = (0, n.default)(), y = t.useCallback(() => _ || E ? h : (0, s.getProfileTheme)(T), [E, _, h, T]), [m, v] = t.useState(y()), S = (0, s.useProfileThemeValues)(m), I = (0, s.useDividerColor)(m, T), N = (0, s.useMessageInputBorderColor)(m, p), A = t.useCallback((e, r) => (0, o.int2hsl)(e, O, null, r), [O]);
+            function p(e, i) {
+                let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+                    [t] = _(e, i, l);
+                return t
+            }
+
+            function _(e, i) {
+                let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+                    n = c(i => null == e ? void 0 : i.palette[e]),
+                    u = (0, o.useStateFromStores)([d.default], () => l && d.default.desaturateUserColors ? d.default.saturation : 1);
                 t.useEffect(() => {
-                    v(y())
-                }, [T, _, h, E, y]);
-                let L = (0, s.useAvatarBorderColor)(m, T, _),
-                    g = null != L ? (0, o.int2hsl)(L, !1, O ? U : null) : null,
-                    R = e => f.forEach(r => {
-                        e.style.removeProperty(r)
-                    });
-                return t.useEffect(() => {
-                    if (null != T && null != p && null != m && null != L && null != I && null != N) {
-                        let e = _ && m !== h ? null == S ? void 0 : S.overlaySyncedWithUserTheme : null == S ? void 0 : S.overlay;
-                        d(l, "--profile-gradient-primary-color", A(T)), d(l, "--profile-gradient-secondary-color", A(p)), d(l, "--profile-gradient-button-color", A((0, s.calculateButtonColor)(T))), d(l, "--profile-gradient-overlay-color", e), d(l, "--profile-body-background-color", null == S ? void 0 : S.sectionBox), d(l, "--profile-body-background-hover", null == S ? void 0 : S.profileBodyBackgroundHover), d(l, "--profile-body-divider-color", A(I, null == S ? void 0 : S.dividerOpacity)), d(l, "--profile-avatar-border-color", A(L)), d(l, "--profile-message-input-border-color", A(N)), d(l, "--profile-note-background-color", null == S ? void 0 : S.noteBackgroundColor), d(l, "--profile-role-pill-background-color", null == S ? void 0 : S.rolePillBackgroundColor), d(l, "--profile-role-pill-border-color", null == S ? void 0 : S.rolePillBorderColor)
-                    } else(null == l ? void 0 : l.current) != null && R(null == l ? void 0 : l.current)
-                }, [T, p, L, m, h, l, A, _, I, null == S ? void 0 : S.overlaySyncedWithUserTheme, null == S ? void 0 : S.overlay, null == S ? void 0 : S.sectionBox, null == S ? void 0 : S.profileBodyBackgroundHover, null == S ? void 0 : S.dividerOpacity, null == S ? void 0 : S.noteBackgroundColor, null == S ? void 0 : S.rolePillBackgroundColor, null == S ? void 0 : S.rolePillBorderColor, N]), {
-                    profileTheme: null != m ? m : h,
-                    primaryProfileColor: T,
-                    avatarBorderColor: g
+                    null != e && null == n && m(e)
+                }, [e, n]);
+                let s = t.useMemo(() => null == n ? void 0 : n.map(e => {
+                    let [i, l, t] = e, {
+                        h: n,
+                        s: o,
+                        l: d
+                    } = r({
+                        r: i,
+                        g: l,
+                        b: t
+                    }).toHsl();
+                    return r({
+                        h: n,
+                        s: o * u,
+                        l: d
+                    }).toHexString()
+                }), [n, u]);
+                return null != s ? s : [i, i]
+            }
+        },
+        811907: function(e, i, l) {
+            "use strict";
+            l.r(i), l.d(i, {
+                default: function() {
+                    return t
                 }
+            }), l("222007");
+            var t, n = l("906932"),
+                r = l("315102"),
+                u = l("719923"),
+                o = l("646718");
+
+            function d(e, i) {
+                return null == i || "" === i ? e : i
+            }
+            t = class {
+                get premiumSince() {
+                    return this._userProfile.premiumSince
+                }
+                get premiumGuildSince() {
+                    return this._userProfile.premiumGuildSince
+                }
+                get premiumType() {
+                    return this._userProfile.premiumType
+                }
+                get primaryColor() {
+                    var e, i;
+                    return null !== (i = null === (e = this.themeColors) || void 0 === e ? void 0 : e[0]) && void 0 !== i ? i : this.accentColor
+                }
+                get canUsePremiumProfileCustomization() {
+                    return u.default.isPremiumAtLeast(this.premiumType, o.PremiumTypes.TIER_2)
+                }
+                get canEditThemes() {
+                    return this.canUsePremiumProfileCustomization
+                }
+                get application() {
+                    return this._userProfile.application
+                }
+                hasThemeColors() {
+                    var e, i;
+                    return (null === (e = this.themeColors) || void 0 === e ? void 0 : e[0]) != null || (null === (i = this.themeColors) || void 0 === i ? void 0 : i[1]) != null
+                }
+                hasPremiumCustomization() {
+                    return this.isUsingGuildMemberBanner() || this.isUsingGuildMemberBio() || null != this.banner || this.hasThemeColors() || null != this.popoutAnimationParticleType
+                }
+                hasFullProfile() {
+                    return void 0 !== this._userProfile && (null == this.guildId || void 0 !== this._guildMemberProfile)
+                }
+                isUsingGuildMemberBanner() {
+                    var e;
+                    return (null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.banner) != null
+                }
+                isUsingGuildMemberBio() {
+                    var e, i;
+                    return (null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.bio) != null && (null === (i = this._guildMemberProfile) || void 0 === i ? void 0 : i.bio) !== ""
+                }
+                isUsingGuildMemberPronouns() {
+                    var e, i;
+                    return (null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.pronouns) != null && (null === (i = this._guildMemberProfile) || void 0 === i ? void 0 : i.pronouns) !== ""
+                }
+                getBannerURL(e) {
+                    let {
+                        canAnimate: i,
+                        size: l
+                    } = e;
+                    return null != this.guildId && this.isUsingGuildMemberBanner() ? (0, r.getGuildMemberBannerURL)({
+                        id: this.userId,
+                        guildId: this.guildId,
+                        banner: this.banner,
+                        canAnimate: i,
+                        size: l
+                    }) : (0, r.getUserBannerURL)({
+                        id: this.userId,
+                        banner: this.banner,
+                        canAnimate: i,
+                        size: l
+                    })
+                }
+                getPreviewBanner(e, i) {
+                    let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 480;
+                    return null != e ? e : null === e ? this.isUsingGuildMemberBanner() ? (0, r.getUserBannerURL)({
+                        id: this.userId,
+                        banner: this._userProfile.banner,
+                        canAnimate: i,
+                        size: l
+                    }) : null : this.getBannerURL({
+                        canAnimate: i,
+                        size: 480
+                    })
+                }
+                getPreviewBio(e) {
+                    var i;
+                    return (0, n.getProfilePreviewField)(e, null === (i = this._guildMemberProfile) || void 0 === i ? void 0 : i.bio, this._userProfile.bio, null != this.guildId)
+                }
+                getPreviewThemeColors(e) {
+                    return (null == e ? void 0 : e[0]) != null && (null == e ? void 0 : e[1]) != null ? e : void 0 !== e ? this._userProfile.themeColors : this.themeColors
+                }
+                getBadges() {
+                    var e, i, l;
+                    return [...null !== (i = this._userProfile.badges) && void 0 !== i ? i : [], ...null !== (l = null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.badges) && void 0 !== l ? l : []]
+                }
+                getLegacyUsername() {
+                    return this._userProfile.legacyUsername
+                }
+                constructor(e, i) {
+                    var l, t, n, r;
+                    this.userId = e.userId, this.guildId = null == i ? void 0 : i.guildId, this.banner = null !== (l = null == i ? void 0 : i.banner) && void 0 !== l ? l : e.banner, this.bio = d(e.bio, null == i ? void 0 : i.bio), this.pronouns = d(e.pronouns, null == i ? void 0 : i.pronouns), this.accentColor = e.accentColor, this.themeColors = null !== (t = null == i ? void 0 : i.themeColors) && void 0 !== t ? t : e.themeColors, this.popoutAnimationParticleType = null !== (n = null == i ? void 0 : i.popoutAnimationParticleType) && void 0 !== n ? n : e.popoutAnimationParticleType, this.profileEffectID = null !== (r = null == i ? void 0 : i.profileEffectID) && void 0 !== r ? r : e.profileEffectID, this._userProfile = e, this._guildMemberProfile = i
+                }
+            }
+        },
+        713135: function(e, i, l) {
+            "use strict";
+            l.r(i), l.d(i, {
+                default: function() {
+                    return w
+                }
+            }), l("222007"), l("702976");
+            var t = l("917351"),
+                n = l.n(t),
+                r = l("376556"),
+                u = l("915639"),
+                o = l("766274"),
+                d = l("271938"),
+                s = l("305961"),
+                a = l("824563"),
+                c = l("455079"),
+                f = l("677099");
+            let m = new Set,
+                p = new Set,
+                _ = {},
+                g = {},
+                h = {},
+                v = {},
+                b = {},
+                P = !1;
+
+            function S() {
+                m.clear(), p.clear(), _ = {}, g = {}, h = {}, v = {}, b = {}
+            }
+
+            function E(e) {
+                let {
+                    userId: i
+                } = e;
+                p.add(i)
+            }
+
+            function C(e) {
+                let {
+                    userId: i
+                } = e;
+                p.delete(i)
+            }
+
+            function I(e) {
+                p.delete(e.userId), h[e.userId] = n(e.mutualFriends).map(e => ({
+                    key: e.id,
+                    user: new o.default(e),
+                    status: a.default.getStatus(e.id)
+                })).sortBy(e => {
+                    let {
+                        user: i
+                    } = e;
+                    return i.username.toLowerCase()
+                }).value(), v[e.userId] = e.mutualFriends.length
+            }
+
+            function U() {
+                if (0 === Object.keys(b).length) return !1;
+                b = {}
+            }
+
+            function T(e) {
+                if (null == b[e.user.id]) return !1;
+                delete b[e.user.id]
+            }
+
+            function F(e) {
+                var i, l, t, n, u, o, d, a, c, p, h, P, S, E, C, I, U;
+                if (m.delete(e.user.id), null != e.mutual_guilds) {
+                    let i = {};
+                    e.mutual_guilds.forEach(e => {
+                        let {
+                            id: l,
+                            nick: t
+                        } = e, n = s.default.getGuild(l);
+                        null != n && (i[l] = {
+                            guild: n,
+                            nick: t
+                        })
+                    }), b[e.user.id] = f.default.getFlattenedGuildIds().filter(e => null != i[e]).map(e => ({
+                        guild: i[e].guild,
+                        nick: i[e].nick
+                    }))
+                }
+                if (null != e.mutual_friends_count) {
+                    let i = e.mutual_friends_count;
+                    v[e.user.id] = i
+                }
+                let T = null !== (c = e.premium_since) && void 0 !== c ? c : null,
+                    F = e.application;
+                if (_[e.user.id] = {
+                        userId: e.user.id,
+                        banner: null === (i = e.user_profile) || void 0 === i ? void 0 : i.banner,
+                        accentColor: null === (l = e.user_profile) || void 0 === l ? void 0 : l.accent_color,
+                        themeColors: null === (t = e.user_profile) || void 0 === t ? void 0 : t.theme_colors,
+                        popoutAnimationParticleType: null === (n = e.user_profile) || void 0 === n ? void 0 : n.popout_animation_particle_type,
+                        bio: null !== (p = null === (u = e.user_profile) || void 0 === u ? void 0 : u.bio) && void 0 !== p ? p : "",
+                        profileEffectID: null === (d = e.user_profile) || void 0 === d ? void 0 : null === (o = d.profile_effect) || void 0 === o ? void 0 : o.id,
+                        pronouns: null !== (h = null === (a = e.user_profile) || void 0 === a ? void 0 : a.pronouns) && void 0 !== h ? h : "",
+                        connectedAccounts: null !== (P = e.connected_accounts.filter(e => r.default.isSupported(e.type))) && void 0 !== P ? P : [],
+                        applicationRoleConnections: null !== (S = e.application_role_connections) && void 0 !== S ? S : [],
+                        premiumSince: null != T ? new Date(T) : null,
+                        premiumType: e.premium_type,
+                        premiumGuildSince: null != e.premium_guild_since ? new Date(e.premium_guild_since) : null,
+                        lastFetched: Date.now(),
+                        legacyUsername: e.legacy_username,
+                        profileFetchFailed: !1,
+                        application: null != F ? {
+                            id: F.id,
+                            primarySkuId: F.primary_sku_id,
+                            customInstallUrl: F.custom_install_url,
+                            installParams: F.install_params,
+                            flags: F.flags,
+                            popularApplicationCommandIds: F.popular_application_command_ids
+                        } : null,
+                        badges: e.badges
+                    }, null != e.guild_member_profile) {
+                    let i = {
+                        userId: e.user.id,
+                        guildId: e.guild_member_profile.guild_id,
+                        banner: e.guild_member_profile.banner,
+                        accentColor: e.guild_member_profile.accent_color,
+                        themeColors: null === (E = e.guild_member_profile) || void 0 === E ? void 0 : E.theme_colors,
+                        popoutAnimationParticleType: null === (C = e.guild_member_profile) || void 0 === C ? void 0 : C.popout_animation_particle_type,
+                        profileEffectID: null === (U = e.guild_member_profile) || void 0 === U ? void 0 : null === (I = U.profile_effect) || void 0 === I ? void 0 : I.id,
+                        bio: e.guild_member_profile.bio,
+                        pronouns: e.guild_member_profile.pronouns,
+                        badges: e.guild_badges
+                    };
+                    null != g[e.user.id] ? g[e.user.id][e.guild_member_profile.guild_id] = i : g[e.user.id] = {
+                        [e.guild_member_profile.guild_id]: i
+                    }
+                }
+            }
+
+            function y(e) {
+                let {
+                    userId: i
+                } = e;
+                m.add(i)
+            }
+
+            function A(e) {
+                var i;
+                let {
+                    userId: l
+                } = e;
+                _[l] = null !== (i = _[l]) && void 0 !== i ? i : {
+                    connectedAccounts: [],
+                    applicationRoleConnections: [],
+                    premiumSince: null,
+                    premiumGuildSince: null,
+                    lastFetched: Date.now(),
+                    profileFetchFailed: !0,
+                    application: null,
+                    legacyUsername: null,
+                    userId: l,
+                    banner: null,
+                    accentColor: null,
+                    bio: "",
+                    pronouns: ""
+                }, m.delete(l)
+            }
+
+            function M(e) {
+                return null != e.guild_id ? function(e) {
+                    let {
+                        userId: i,
+                        guild_id: l,
+                        accent_color: t,
+                        banner: n,
+                        bio: r,
+                        pronouns: u,
+                        popout_animation_particle_type: o,
+                        theme_colors: d,
+                        profileEffectID: s
+                    } = e;
+                    if (null == l || null == g[i]) return !1;
+                    let a = g[i][l];
+                    if (null == a) return !1;
+                    g[i][l] = {
+                        ...a,
+                        accentColor: t,
+                        banner: n,
+                        bio: r,
+                        pronouns: u,
+                        popoutAnimationParticleType: o,
+                        themeColors: d,
+                        profileEffectID: s
+                    }
+                }(e) : function(e) {
+                    let {
+                        userId: i,
+                        accent_color: l,
+                        banner: t,
+                        bio: n,
+                        pronouns: r,
+                        popout_animation_particle_type: u,
+                        theme_colors: o,
+                        profileEffectID: d
+                    } = e, s = _[i];
+                    if (null == s) return !1;
+                    _[i] = {
+                        ...s,
+                        accentColor: l,
+                        banner: t,
+                        bio: n,
+                        pronouns: r,
+                        popoutAnimationParticleType: u,
+                        themeColors: o,
+                        profileEffectID: d
+                    }
+                }(e)
+            }
+
+            function R(e) {
+                P = !0
+            }
+
+            function L(e) {
+                let {
+                    user: i
+                } = e;
+                if (m.has(i.id) || null == _[i.id]) return !1;
+                _[i.id].lastFetched = 0
+            }
+
+            function D() {
+                m.clear(), _ = {}, g = {}
+            }
+            class G extends c.default {
+                isFetchingProfile(e) {
+                    return m.has(e)
+                }
+                isFetchingFriends(e) {
+                    return p.has(e)
+                }
+                getUserProfile(e) {
+                    return _[e]
+                }
+                getGuildMemberProfile(e, i) {
+                    var l;
+                    return null == i ? null : null === (l = g[e]) || void 0 === l ? void 0 : l[i]
+                }
+                getMutualFriends(e) {
+                    return h[e]
+                }
+                getMutualFriendsCount(e) {
+                    return v[e]
+                }
+                getMutualGuilds(e) {
+                    return b[e]
+                }
+                getIsAccessibilityTooltipViewed() {
+                    return P
+                }
+                takeSnapshot() {
+                    let e = d.default.getId();
+                    return {
+                        version: G.LATEST_SNAPSHOT_VERSION,
+                        data: [{
+                            userId: e,
+                            profile: _[e]
+                        }]
+                    }
+                }
+                constructor() {
+                    super(), this.loadCache = () => {
+                        let e = this.readSnapshot(G.LATEST_SNAPSHOT_VERSION);
+                        null != e && e.forEach(e => {
+                            let {
+                                userId: i,
+                                profile: l
+                            } = e;
+                            _[i] = l
+                        })
+                    }, this.registerActionHandlers({
+                        CACHE_LOADED_LAZY: this.loadCache,
+                        USER_PROFILE_FETCH_START: y,
+                        USER_PROFILE_FETCH_FAILURE: A,
+                        USER_PROFILE_FETCH_SUCCESS: F,
+                        USER_PROFILE_UPDATE_SUCCESS: M,
+                        USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED: R,
+                        MUTUAL_FRIENDS_FETCH_START: E,
+                        MUTUAL_FRIENDS_FETCH_SUCCESS: I,
+                        MUTUAL_FRIENDS_FETCH_FAILURE: C,
+                        GUILD_JOIN: U,
+                        GUILD_DELETE: U,
+                        GUILD_MEMBER_ADD: T,
+                        GUILD_MEMBER_REMOVE: T,
+                        GUILD_MEMBER_UPDATE: L,
+                        USER_UPDATE: L,
+                        LOGOUT: S
+                    }), this.waitFor(f.default), this.syncWith([u.default], D)
+                }
+            }
+            G.displayName = "UserProfileStore", G.LATEST_SNAPSHOT_VERSION = 1;
+            var w = new G
+        },
+        506885: function(e, i, l) {
+            "use strict";
+            l.r(i), l.d(i, {
+                default: function() {
+                    return c
+                }
+            });
+            var t = l("913144"),
+                n = l("327037"),
+                r = l("462274"),
+                u = l("535013"),
+                o = l("42203"),
+                d = l("26989"),
+                s = l("713135"),
+                a = l("386714");
+            async function c(e, i) {
+                var l, c, f;
+                let m, {
+                    withMutualGuilds: p = !1,
+                    withMutualFriendsCount: _ = !1,
+                    friendToken: g,
+                    preloadUserBanner: h = !0,
+                    dispatchWait: v = !1,
+                    guildId: b,
+                    channelId: P
+                } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+                null != i && (0, r.maybeFetchColors)(i), null != b && !p && (p = !0), null != b && (m = null !== (c = null === (l = (0, u.getVisibleConnectionsRole)({
+                    guildMember: d.default.getMember(b, e),
+                    channel: o.default.getChannel(P)
+                })) || void 0 === l ? void 0 : l.id) && void 0 !== c ? c : void 0);
+                let S = s.default.getUserProfile(e),
+                    E = s.default.getMutualGuilds(e),
+                    C = s.default.getMutualFriendsCount(e),
+                    I = s.default.isFetchingProfile(e),
+                    U = (null == S ? void 0 : S.profileFetchFailed) || !I && (!Array.isArray(E) && p || null == C && _),
+                    T = h ? a.default : void 0,
+                    F = !1;
+                if (null != b) {
+                    let i = s.default.getGuildMemberProfile(e, b);
+                    F = null == i
+                }
+                if (!U && !F && (I || Date.now() - (null !== (f = null == S ? void 0 : S.lastFetched) && void 0 !== f ? f : 0) < 6e4)) return Promise.resolve();
+                v ? await t.default.wait(() => (0, n.fetchProfile)(e, {
+                    withMutualGuilds: p,
+                    withMutualFriendsCount: _,
+                    friendToken: g,
+                    guildId: b,
+                    connectionsRoleId: m
+                }, T)) : await (0, n.fetchProfile)(e, {
+                    withMutualGuilds: p,
+                    withMutualFriendsCount: _,
+                    friendToken: g,
+                    guildId: b,
+                    connectionsRoleId: m
+                }, T)
+            }
+        },
+        386714: function(e, i, l) {
+            "use strict";
+            l.r(i), l.d(i, {
+                default: function() {
+                    return r
+                }
+            });
+            var t = l("845579"),
+                n = l("217513");
+
+            function r(e, i) {
+                if ("undefined" == typeof Image) return;
+                let l = (0, n.getDisplayProfile)(e.user.id, i);
+                if (null == l) return;
+                let r = t.GifAutoPlay.getSetting(),
+                    u = l.getBannerURL({
+                        canAnimate: r,
+                        size: 480
+                    });
+                if (null == u) return;
+                let o = new Image;
+                o.src = u
+            }
+        },
+        217513: function(e, i, l) {
+            "use strict";
+            l.r(i), l.d(i, {
+                default: function() {
+                    return d
+                },
+                getDisplayProfile: function() {
+                    return a
+                }
+            }), l("222007");
+            var t = l("446674"),
+                n = l("697218"),
+                r = l("117362"),
+                u = l("811907"),
+                o = l("713135");
+
+            function d(e, i) {
+                return (0, t.useStateFromStores)([n.default, o.default], () => a(e, i, [n.default, o.default]))
+            }
+            let s = (0, r.cachedFunction)((e, i) => new u.default(e, i));
+
+            function a(e, i) {
+                let [l, t] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [n.default, o.default], r = l.getUser(e), u = t.getUserProfile(e), d = t.getGuildMemberProfile(e, i);
+                return null == r || null == u ? null : s(u, d)
             }
         }
     }
