@@ -24227,7 +24227,6 @@
                             profileType: B.UserProfileTypes.PANEL,
                             useDefaultClientTheme: !0,
                             children: [eS && (0, a.jsx)(M.default, {
-                                user: X,
                                 onDismiss: eg,
                                 isInSidebar: !0
                             }, X.id), (0, a.jsxs)(d.ScrollerNone, {
