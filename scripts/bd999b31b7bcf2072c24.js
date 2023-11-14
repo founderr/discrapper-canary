@@ -1991,7 +1991,7 @@
                 GUILD_SECURITY_REQ_MFA_GUILD_ENABLE: "เปิดข้อบังคับใช้ 2FA",
                 GUILD_SECURITY_REQ_MFA_GUILD_DISABLE: "ปิดใช้งาน 2FA",
                 GUILD_SECURITY_REQ_OWNER_ONLY: "การดำเนินการดังกล่าวสามารถทำได้โดยเจ้าของเซิร์ฟเวอร์เท่านั้น",
-                INTEGRATIONS: "การรวม",
+                INTEGRATIONS: "การบูรณาการ",
                 INTEGRATION_SETTINGS: "ตั้งค่าการรวบรวม",
                 MANAGE_INTEGRATION: "จัดการการผสาน",
                 SYNC: "ซิงค์",

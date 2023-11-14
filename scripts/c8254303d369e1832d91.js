@@ -2677,6 +2677,7 @@
                 DELETE_MESSAGE_CONTEXT_MENU_HINT: "Puedes mantener pulsado M\xe1yus cuando hagas clic en **eliminar mensaje** para ignorar esta confirmaci\xf3n por completo.",
                 EDIT: "Editar",
                 PREVIEW: "Vista previa",
+                EXIT_PREVIEW: "Salir de vista previa",
                 DELETE: "Eliminar",
                 DELETED: "Eliminado",
                 RETRY: "Reintentar",
