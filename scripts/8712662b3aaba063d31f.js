@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["99211"], {
+    ["92932"], {
         506264: function(e, A, t) {
             var Symbol = t("626849").Symbol;
             e.exports = Symbol
@@ -83,16 +83,16 @@
                 }
                 A = n(A) || 0, a(t) && (g = !!t.leading, u = (T = "maxWait" in t) ? r(n(t.maxWait) || 0, A) : u, h = "trailing" in t ? !!t.trailing : h);
 
-                function U(e) {
+                function I(e) {
                     var t = e - f,
                         a = e - C;
                     return void 0 === f || t >= A || t < 0 || T && a >= u
                 }
 
-                function I() {
+                function U() {
                     var e, t, a, n, r = l();
-                    if (U(r)) return p(r);
-                    c = setTimeout(I, (t = (e = r) - f, a = e - C, n = A - t, T ? s(n, u - a) : n))
+                    if (I(r)) return p(r);
+                    c = setTimeout(U, (t = (e = r) - f, a = e - C, n = A - t, T ? s(n, u - a) : n))
                 }
 
                 function p(e) {
@@ -101,15 +101,15 @@
 
                 function v() {
                     var e, t = l(),
-                        a = U(t);
+                        a = I(t);
                     if (o = arguments, i = this, f = t, a) {
                         if (void 0 === c) {
                             ;
-                            return C = e = f, c = setTimeout(I, A), g ? m(e) : d
+                            return C = e = f, c = setTimeout(U, A), g ? m(e) : d
                         }
-                        if (T) return clearTimeout(c), c = setTimeout(I, A), m(f)
+                        if (T) return clearTimeout(c), c = setTimeout(U, A), m(f)
                     }
-                    return void 0 === c && (c = setTimeout(I, A)), d
+                    return void 0 === c && (c = setTimeout(U, A)), d
                 }
                 return v.cancel = function() {
                     void 0 !== c && clearTimeout(c), C = 0, o = f = i = c = void 0
@@ -238,8 +238,8 @@
                         onSaveText: T,
                         onResetText: h,
                         onSaveButtonColor: m,
-                        disabled: U,
-                        saveButtonTooltip: I
+                        disabled: I,
+                        saveButtonTooltip: U
                     } = e, p = l.useRef(null), [{
                         spring: v
                     }, E] = (0, n.useSpring)(() => ({
@@ -303,12 +303,12 @@
                                             children: null != h ? h : u.default.Messages.RESET
                                         })
                                     }), null != g ? (0, a.jsx)(s.Tooltip, {
-                                        text: I,
+                                        text: U,
                                         children: e => (0, a.jsx)(s.Button, {
                                             size: s.Button.Sizes.SMALL,
                                             color: null != m ? m : s.Button.Colors.GREEN,
                                             submitting: f,
-                                            disabled: U,
+                                            disabled: I,
                                             onClick: g,
                                             ...e,
                                             children: null != T ? T : u.default.Messages.SAVE_CHANGES
@@ -736,7 +736,7 @@
                     type: f.ChannelTypes.DM
                 });
 
-            function U() {
+            function I() {
                 return new Promise(e => {
                     e({
                         shouldClear: !1,
@@ -745,7 +745,7 @@
                 })
             }
 
-            function I(e) {
+            function U(e) {
                 var A;
                 let {
                     hasError: t,
@@ -777,7 +777,7 @@
                     value: N,
                     enableThemedBackground: O = !1,
                     parentModalKey: x
-                } = e, R = (0, o.useFormContext)(), [L, D] = l.useState(() => (0, i.toRichValue)(N)), P = l.useRef(!0 === d), V = null != t ? t : null == R ? void 0 : R.titleId, b = null !== (A = null == R ? void 0 : R.errorId) && void 0 !== A ? A : h, j = l.useMemo(() => ({
+                } = e, R = (0, o.useFormContext)(), [L, D] = l.useState(() => (0, i.toRichValue)(N)), V = l.useRef(!0 === d), P = null != t ? t : null == R ? void 0 : R.titleId, b = null !== (A = null == R ? void 0 : R.errorId) && void 0 !== A ? A : h, j = l.useMemo(() => ({
                     analyticsName: "simple",
                     autocomplete: {
                         alwaysUseLayer: !0,
@@ -800,7 +800,7 @@
                 }), [d]);
                 return (0, a.jsxs)(u.default, {
                     "aria-describedby": b,
-                    "aria-labelledby": V,
+                    "aria-labelledby": P,
                     innerClassName: r(n, g.textArea),
                     id: s,
                     maxCharacterCount: f,
@@ -814,17 +814,17 @@
                     richValue: L,
                     type: j,
                     onBlur: () => {
-                        P.current = !1
+                        V.current = !1
                     },
                     onFocus: () => {
-                        P.current = !0
+                        V.current = !0
                     },
-                    focused: P.current,
-                    onSubmit: null != p ? p : U,
+                    focused: V.current,
+                    onSubmit: null != p ? p : I,
                     disableThemedBackground: !O,
                     parentModalKey: x,
                     emojiPickerCloseOnModalOuterClick: !0,
-                    children: [!0 === v && (0, a.jsx)(I, {
+                    children: [!0 === v && (0, a.jsx)(U, {
                         hasError: null != R.error || null != f && N.length > f,
                         text: N,
                         maxLength: f
@@ -930,8 +930,8 @@
                 T = t("757515"),
                 h = t("49111"),
                 m = t("782340");
-            let U = new c.default("ProductAttachmentManager");
-            class I {
+            let I = new c.default("ProductAttachmentManager");
+            class U {
                 addAttachment(e, A) {
                     let t = this.target.getMaxAttachmentsCount();
                     if (this.uploads.length >= t) throw n.AccessibilityAnnouncer.announce(m.default.Messages.GUILD_PRODUCT_A11Y_TOO_MANY_ATTACHMENTS.format({
@@ -1000,7 +1000,7 @@
                         }, {
                             addFilesTo: "attachments"
                         });
-                    return U.log("Created/updated product:", d), null != d && (this.isEdit ? await r.default.dispatch({
+                    return I.log("Created/updated product:", d), null != d && (this.isEdit ? await r.default.dispatch({
                         type: "GUILD_PRODUCT_UPDATE",
                         product: d
                     }) : await r.default.dispatch({
@@ -1048,14 +1048,14 @@
                 } = A, o = (0, l.default)([f.default], () => f.default.getGuild(e)), [i, u] = a.useState({
                     editSkuId: n,
                     onFileSizeError: r
-                }), d = a.useMemo(() => new I({
+                }), d = a.useMemo(() => new U({
                     guildId: e,
                     ...i
                 }), [e, i]), [c, C] = a.useState(d.generateInitialProgresses), [, g] = a.useState(null);
                 a.useLayoutEffect(() => {
                     C(d.generateInitialProgresses())
                 }, [d]);
-                let [T, m] = a.useState(), [U, p] = a.useState(), v = a.useCallback(e => {
+                let [T, m] = a.useState(), [I, p] = a.useState(), v = a.useCallback(e => {
                     d.deleteAttachment(e) && g({})
                 }, [d]), E = a.useCallback(e => {
                     d.addAttachment(e, C), g({})
@@ -1095,7 +1095,7 @@
                     saveProductWithAttachments: q,
                     isSaving: null != T,
                     changesSaving: T,
-                    saveError: U,
+                    saveError: I,
                     hasUnsavedAttachmentChanges: x,
                     canAttachFiles: O.length < d.target.getMaxAttachmentsCount(),
                     canAttachArchives: null !== (t = null == o ? void 0 : o.hasFeature(h.GuildFeatures.GUILD_PRODUCTS_ALLOW_ARCHIVED_FILE)) && void 0 !== t && t
@@ -1125,8 +1125,8 @@
                 T = t("696104"),
                 h = t("949435"),
                 m = t("757515"),
-                U = t("527382"),
-                I = t("500307"),
+                I = t("527382"),
+                U = t("500307"),
                 p = t("782340"),
                 v = t("616945");
             let E = (0, c.uid)();
@@ -1139,9 +1139,9 @@
                     onDeleteAttachment: o
                 } = e, i = l.useCallback(() => {
                     null == o || o(t.id)
-                }, [o, t.id]), c = n >= 1, f = n < 0, T = c || f, h = null !== (A = t.filename) && void 0 !== A ? A : t.id, U = (0, m.describeUploadProgressError)(n);
+                }, [o, t.id]), c = n >= 1, f = n < 0, T = c || f, h = null !== (A = t.filename) && void 0 !== A ? A : t.id, I = (0, m.describeUploadProgressError)(n);
                 return (0, a.jsx)(s.TooltipContainer, {
-                    text: U,
+                    text: I,
                     children: (0, a.jsxs)("div", {
                         className: r(v.attachedFileCard, {
                             [v.attachedFileCardError]: f,
@@ -1208,7 +1208,7 @@
                         className: v.uploadArea,
                         title: p.default.Messages.GUILD_PRODUCT_UPLOAD_AREA_TITLE,
                         description: p.default.Messages.GUILD_PRODUCT_UPLOAD_AREA_INSTRUCTIONS,
-                        icons: U.DEFAULT_FILE_UPLOAD_ICONS,
+                        icons: I.DEFAULT_FILE_UPLOAD_ICONS,
                         onDrop: m
                     }), (0, a.jsxs)(f.default, {
                         className: v.addFileButtonLook,
@@ -1239,9 +1239,9 @@
                         color: "text-muted",
                         variant: "text-xs/normal",
                         children: r ? p.default.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS_ARCHIVES_ALLOWED.format({
-                            fileUploadLimit: I.GUILD_PRODUCT_MAX_TOTAL_ATTACHMENT_SIZE
+                            fileUploadLimit: U.GUILD_PRODUCT_MAX_TOTAL_ATTACHMENT_SIZE
                         }) : p.default.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS.format({
-                            fileUploadLimit: I.GUILD_PRODUCT_MAX_TOTAL_ATTACHMENT_SIZE
+                            fileUploadLimit: U.GUILD_PRODUCT_MAX_TOTAL_ATTACHMENT_SIZE
                         })
                     }), t.length > 0 && (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)("div", {
@@ -1297,12 +1297,12 @@
                     } finally {
                         h(!1)
                     }
-                }, U = null != a ? a : u.default.Messages.GUILD_PRODUCT_SETTINGS_WARNING_MODAL_TITLE;
+                }, I = null != a ? a : u.default.Messages.GUILD_PRODUCT_SETTINGS_WARNING_MODAL_TITLE;
                 return (0, n.jsxs)(s.ModalRoot, {
                     className: d.container,
                     size: s.ModalSize.DYNAMIC,
                     transitionState: A,
-                    "aria-label": U,
+                    "aria-label": I,
                     children: [(0, n.jsxs)(s.ModalContent, {
                         className: d.content,
                         children: [(0, n.jsxs)("div", {
@@ -1324,7 +1324,7 @@
                             }), (0, n.jsx)(s.Heading, {
                                 variant: "heading-xl/semibold",
                                 color: "header-primary",
-                                children: U
+                                children: I
                             })]
                         }), (0, n.jsx)(o.default, {
                             size: 12
@@ -1523,8 +1523,8 @@
                     savedImageName: T,
                     onChange: h,
                     uploadButtonLabel: m = c.default.Messages.UPLOAD_IMAGE,
-                    radioGroupAriaLabel: U = c.default.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL,
-                    disabled: I = !1
+                    radioGroupAriaLabel: I = c.default.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL,
+                    disabled: U = !1
                 } = e, p = n === C, [v, E] = l.useState(p ? t : null), [q, N] = l.useState(null), O = l.useRef(null), x = l.useRef(null);
                 l.useEffect(() => {
                     T !== C && (E(null), N(null))
@@ -1534,13 +1534,13 @@
                     }) : c.default.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE,
                     L = (0, s.useRadioGroup)({
                         orientation: "horizontal",
-                        isDisabled: I
+                        isDisabled: U
                     }),
                     D = () => {
                         var e;
                         return null === (e = O.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
                     },
-                    P = () => {
+                    V = () => {
                         n === C && h(A[0].data, A[0].name), E(null), N(null)
                     };
                 return l.useEffect(() => {
@@ -1554,10 +1554,10 @@
                         within: !0,
                         children: (0, a.jsxs)("div", {
                             className: r(f.uploadButton, {
-                                [f.disabled]: I,
+                                [f.disabled]: U,
                                 [f.hidden]: null != v
                             }),
-                            "aria-disabled": I,
+                            "aria-disabled": U,
                             children: [(0, a.jsx)(i.default, {
                                 width: 16,
                                 height: 16,
@@ -1599,7 +1599,7 @@
                             children: e => (0, a.jsx)(s.Clickable, {
                                 ...e,
                                 className: f.customImageAction,
-                                onClick: P,
+                                onClick: V,
                                 "aria-label": c.default.Messages.CUSTOM_IMAGE_SELECTOR_DELETE_CUSTOM_IMAGE_ARIA_LABEL.format({
                                     filename: q
                                 }),
@@ -1609,21 +1609,21 @@
                             })
                         })]
                     }), (0, a.jsxs)("div", {
-                        "aria-label": U,
+                        "aria-label": I,
                         ...L,
                         className: f.radioGroup,
                         children: [null != v && (0, a.jsx)(g, {
                             ref: x,
                             selectedImageName: n,
                             onChange: h,
-                            disabled: I,
+                            disabled: U,
                             name: C,
                             alt: R,
                             data: v
                         }), A.map(e => (0, a.jsx)(g, {
                             selectedImageName: n,
                             onChange: h,
-                            disabled: I,
+                            disabled: U,
                             ...e
                         }, e.name))]
                     })]
@@ -1654,8 +1654,8 @@
                 T = t("45299"),
                 h = t("206230"),
                 m = t("228100"),
-                U = t("741515"),
-                I = t("435032"),
+                I = t("741515"),
+                U = t("435032"),
                 p = t("465869"),
                 v = t("424960"),
                 E = t("845579"),
@@ -1666,8 +1666,8 @@
                 R = t("476765"),
                 L = t("578706"),
                 D = t("153160"),
-                P = t("271560"),
-                V = t("866190"),
+                V = t("271560"),
+                P = t("866190"),
                 b = t("949435"),
                 j = t("565559"),
                 S = t("757515"),
@@ -1740,7 +1740,7 @@
                     setPriceTier: a
                 } = e, {
                     priceTiers: l
-                } = (0, U.usePriceTiers)(A, Z.PriceTierTypes.GUILD_PRODUCTS), s = r.useMemo(() => (null != l ? l : null != t ? [t] : []).map(e => ({
+                } = (0, I.usePriceTiers)(A, Z.PriceTierTypes.GUILD_PRODUCTS), s = r.useMemo(() => (null != l ? l : null != t ? [t] : []).map(e => ({
                     value: e,
                     label: (0, D.formatPrice)(e, Z.CurrencyCodes.USD)
                 })), [l, t]);
@@ -1756,7 +1756,7 @@
             }
 
             function et(e) {
-                var A, a, l, s, o, i, U, v;
+                var A, a, l, s, o, i, I, v;
                 let {
                     guildId: R,
                     productId: ee,
@@ -1764,31 +1764,31 @@
                     onClose: el
                 } = e, [en, er] = r.useState(ee), es = (0, c.default)([j.default], () => null == en ? null : j.default.getGuildProduct(en), [en]), eo = (null == es ? void 0 : es.published) === !0, {
                     application: ei
-                } = (0, m.default)(R, y.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), eu = M.PRODUCT_IMAGE_PRESETS[0], ed = (0, c.default)([h.default], () => h.default.useReducedMotion), ec = E.GifAutoPlay.useSetting(), ef = (0, V.useIsWindowFocused)(), eC = r.useCallback(() => {
+                } = (0, m.default)(R, y.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), eu = M.PRODUCT_IMAGE_PRESETS[0], ed = (0, c.default)([h.default], () => h.default.useReducedMotion), ec = E.GifAutoPlay.useSetting(), ef = (0, P.useIsWindowFocused)(), eC = r.useCallback(() => {
                     var e;
-                    return (null == es ? void 0 : null === (e = es.image_asset) || void 0 === e ? void 0 : e.application_id) == null ? eu.data : (0, P.getAssetURL)(es.image_asset.application_id, es.image_asset, 600, ef && ec ? void 0 : "webp")
+                    return (null == es ? void 0 : null === (e = es.image_asset) || void 0 === e ? void 0 : e.application_id) == null ? eu.data : (0, V.getAssetURL)(es.image_asset.application_id, es.image_asset, 600, ef && ec ? void 0 : "webp")
                 }, [eu, es, ef, ec]), {
                     shouldRestrictUpdatingCreatorMonetizationSettings: eg
                 } = (0, p.useShouldRestrictUpdatingCreatorMonetizationSettings)(R);
                 r.useEffect(() => {
                     eg && (el(), (0, K.openErrorDialog)(H.default.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_TITLE, H.default.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_BODY))
                 }, [eg, el]);
-                let [eT, eh] = r.useState(null !== (l = null == es ? void 0 : es.name) && void 0 !== l ? l : ""), [em, eU] = r.useState(null !== (s = null == es ? void 0 : es.description) && void 0 !== s ? s : ""), [eI, ep] = r.useState(null !== (o = null == es ? void 0 : es.price_tier) && void 0 !== o ? o : void 0), [ev, eE] = r.useState(eC), [eq, eN] = r.useState(null !== (i = null == es ? void 0 : null === (A = es.image_asset) || void 0 === A ? void 0 : A.filename) && void 0 !== i ? i : eu.name), [eO, ex] = r.useState(!1), [eR, eL] = r.useState(), eD = r.useMemo(() => null != eI ? (0, D.formatPrice)(eI, Z.CurrencyCodes.USD) : void 0, [eI]), [eP, eV] = r.useState(!0), {
+                let [eT, eh] = r.useState(null !== (l = null == es ? void 0 : es.name) && void 0 !== l ? l : ""), [em, eI] = r.useState(null !== (s = null == es ? void 0 : es.description) && void 0 !== s ? s : ""), [eU, ep] = r.useState(null !== (o = null == es ? void 0 : es.price_tier) && void 0 !== o ? o : void 0), [ev, eE] = r.useState(eC), [eq, eN] = r.useState(null !== (i = null == es ? void 0 : null === (A = es.image_asset) || void 0 === A ? void 0 : A.filename) && void 0 !== i ? i : eu.name), [eO, ex] = r.useState(!1), [eR, eL] = r.useState(), eD = r.useMemo(() => null != eU ? (0, D.formatPrice)(eU, Z.CurrencyCodes.USD) : void 0, [eU]), [eV, eP] = r.useState(!0), {
                     changesSaving: eb,
                     saveError: ej,
                     saveProductWithAttachments: eS,
                     hasUnsavedAttachmentChanges: eM,
                     cancelUnusedUploads: eF
-                } = (0, b.useGuildProductAttachmentManagerContext)(), eG = (null == es ? void 0 : es.attachments) != null && (null == es ? void 0 : es.attachments.length) > 0, e_ = null != ej ? ej : eR, eK = null != eb && "published" in eb, eW = null != eb && !eK, eX = null !== (U = null == es ? void 0 : es.role_id) && void 0 !== U ? U : null, [eB, ez] = r.useState(), eQ = null != eB || null != eX, eZ = (0, c.default)([q.default], () => {
+                } = (0, b.useGuildProductAttachmentManagerContext)(), eG = (null == es ? void 0 : es.attachments) != null && (null == es ? void 0 : es.attachments.length) > 0, e_ = null != ej ? ej : eR, eK = null != eb && "published" in eb, eW = null != eb && !eK, eX = null !== (I = null == es ? void 0 : es.role_id) && void 0 !== I ? I : null, [eB, ez] = r.useState(), eQ = null != eB || null != eX, eZ = (0, c.default)([q.default], () => {
                     if (null != eX && null !== eB) {
                         let e = q.default.getGuild(R);
                         return null == e ? void 0 : e.roles[eX]
                     }
                     return null != eB ? eB : void 0
                 }, [eB, eX, R]), ey = "";
-                eQ && eP ? ey = H.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE : eQ ? ey = H.default.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE : eP && (ey = H.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE);
+                eQ && eV ? ey = H.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE : eQ ? ey = H.default.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE : eV && (ey = H.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE);
                 let eH = () => {
-                        eV(!1), eF()
+                        eP(!1), eF()
                     },
                     [ew, ek] = r.useState(),
                     {
@@ -1800,7 +1800,7 @@
                     } = r.useMemo(() => (0, S.computeProductChanges)({
                         guildProductListing: es,
                         name: eT,
-                        priceTier: eI,
+                        priceTier: eU,
                         description: em,
                         image: ev,
                         imageName: eq,
@@ -1808,7 +1808,7 @@
                         newRoleParams: eB,
                         hasSavedAttachments: eG,
                         hasUnsavedAttachmentChanges: eM
-                    }), [es, eT, eI, em, ev, eq, eO, eB, eG, eM]),
+                    }), [es, eT, eU, em, ev, eq, eO, eB, eG, eM]),
                     e9 = r.useMemo(() => eJ || null == ew || "publish" === ew || null != e_ ? null : (0, n.jsx)(O.default, {
                         className: w.successNotice,
                         children: (0, n.jsx)(T.default, {
@@ -1851,7 +1851,7 @@
                     if (eL(A), null != A) return;
                     let t = await eS(e);
                     if (ex(!1), null != t) {
-                        if (null != e.name && eh(t.name), null != e.description && eU(t.description), null != eB) {
+                        if (null != e.name && eh(t.name), null != e.description && eI(t.description), null != eB) {
                             let e = t.role_id;
                             u(null != e, "Cannot update role without role ID"), await g.default.updateRole(R, e, eB)
                         }
@@ -1921,11 +1921,11 @@
                                     tag: "label",
                                     error: null == e_ ? void 0 : e_.getFirstFieldErrorMessage("description"),
                                     htmlFor: J,
-                                    children: (0, n.jsx)(I.default, {
+                                    children: (0, n.jsx)(U.default, {
                                         id: J,
                                         className: w.descriptionArea,
                                         value: em,
-                                        onChange: eU,
+                                        onChange: eI,
                                         maxLength: 1500,
                                         placeholder: H.default.Messages.GUILD_PRODUCT_EDIT_MODAL_DESCRIPTION_PLACEHOLDER,
                                         showCharacterCount: em.length > 0,
@@ -1938,7 +1938,7 @@
                                     error: null == e_ ? void 0 : e_.getFirstFieldErrorMessage("price_tier"),
                                     children: (0, n.jsx)(eA, {
                                         guildId: R,
-                                        selectedPriceTier: eI,
+                                        selectedPriceTier: eU,
                                         setPriceTier: ep
                                     })
                                 }), (0, n.jsxs)(C.FormItem, {
@@ -1965,7 +1965,7 @@
                                             }
                                         }
                                     })]
-                                }), eP ? (0, n.jsx)(C.FormItem, {
+                                }), eV ? (0, n.jsx)(C.FormItem, {
                                     title: H.default.Messages.GUILD_PRODUCT_EDIT_MODAL_ATTACHMENTS_LABEL,
                                     error: null == e_ ? void 0 : e_.getFirstFieldErrorMessage("attachments"),
                                     children: (0, n.jsx)(G.AttachmentsUploadComponent, {
@@ -2050,9 +2050,9 @@
                                     disabled: null != eX
                                 }), (0, n.jsx)($, {
                                     text: H.default.Messages.GUILD_PRODUCT_SETTINGS_INCLUDE_ATTACHMENTS_TOGGLE_LABEL,
-                                    value: eP,
+                                    value: eV,
                                     onChange: e => {
-                                        e ? eV(!0) : eM ? (0, C.openModalLazy)(async () => {
+                                        e ? eP(!0) : eM ? (0, C.openModalLazy)(async () => {
                                             let {
                                                 ConfirmModal: e
                                             } = await t.el("77078").then(t.bind(t, "77078"));
@@ -2191,7 +2191,7 @@
             "use strict";
             t.r(A), t.d(A, {
                 getInitialNewRoleParams: function() {
-                    return I
+                    return U
                 },
                 WarningIcon: function() {
                     return v
@@ -2217,9 +2217,9 @@
                 T = t("373996"),
                 h = t("49111"),
                 m = t("782340"),
-                U = t("60957");
+                I = t("60957");
 
-            function I() {
+            function U() {
                 return {
                     name: "",
                     color: h.DEFAULT_ROLE_COLOR
@@ -2237,7 +2237,7 @@
                             color: (0, r.int2hex)(l.color)
                         })
                     }), (0, a.jsx)("div", {
-                        className: U.attachedRoleColor,
+                        className: I.attachedRoleColor,
                         style: {
                             backgroundColor: (0, r.int2hex)(l.color)
                         }
@@ -2255,25 +2255,25 @@
                         }), (0, a.jsx)(o.Clickable, {
                             "aria-label": m.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ATTACHED_ROLE_ARIA,
                             onClick: t,
-                            className: U.attachedRoleClose,
+                            className: I.attachedRoleClose,
                             children: (0, a.jsx)(d.default, {
                                 width: 16,
                                 height: 16,
-                                className: U.attachedRoleCloseIcon
+                                className: I.attachedRoleCloseIcon
                             })
                         })]
                     })]
                 }) : (0, a.jsx)(o.Spinner, {
                     type: o.Spinner.Type.PULSING_ELLIPSIS
                 }), (0, a.jsx)("div", {
-                    className: U.attachedRoleContainer,
+                    className: I.attachedRoleContainer,
                     children: A
                 })
             }
 
             function v() {
                 return (0, a.jsx)(g.default, {
-                    className: U.warningIcon,
+                    className: I.warningIcon,
                     width: 16,
                     height: 16
                 })
@@ -2297,7 +2297,7 @@
                             })
                         })
                     }), (0, a.jsxs)(o.Heading, {
-                        className: U.detachWarningHeading,
+                        className: I.detachWarningHeading,
                         variant: "text-md/medium",
                         color: "text-normal",
                         children: [(0, a.jsx)(c.default, {
@@ -2312,7 +2312,7 @@
                         color: "text-muted",
                         children: m.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_SECTION_1_DETAIL
                     }), (0, a.jsxs)(o.Heading, {
-                        className: U.detachWarningHeading,
+                        className: I.detachWarningHeading,
                         variant: "text-md/medium",
                         color: "text-normal",
                         children: [(0, a.jsx)(f.default, {
@@ -2346,7 +2346,7 @@
                 }, [c, r]);
                 return null === A ? (0, a.jsxs)(o.FormItem, {
                     title: (0, a.jsxs)("div", {
-                        className: U.warningTitle,
+                        className: I.warningTitle,
                         children: [(0, a.jsx)(v, {}), (0, a.jsx)(u.default, {
                             horizontal: !0,
                             size: 4
@@ -2354,7 +2354,7 @@
                     }),
                     tag: "label",
                     error: f,
-                    titleClassName: U.roleHeader,
+                    titleClassName: I.roleHeader,
                     children: [(0, a.jsx)(o.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
@@ -2362,7 +2362,7 @@
                     }), (0, a.jsx)(u.default, {
                         size: 8
                     }), (0, a.jsxs)("div", {
-                        className: U.reattachRoleRow,
+                        className: I.reattachRoleRow,
                         children: [(0, a.jsx)(p, {
                             role: g,
                             onRemove: void 0
@@ -2370,7 +2370,7 @@
                             horizontal: !0,
                             size: 8
                         }), (0, a.jsxs)(o.Button, {
-                            innerClassName: U.restoreDetachedRoleButtonInner,
+                            innerClassName: I.restoreDetachedRoleButtonInner,
                             color: o.Button.Colors.PRIMARY,
                             onClick: () => {
                                 l(void 0)
@@ -2392,7 +2392,7 @@
                     title: m.default.Messages.GUILD_PRODUCT_SETTINGS_ATTACHED_ROLE_HEADER,
                     tag: "label",
                     error: f,
-                    titleClassName: U.roleHeader,
+                    titleClassName: I.roleHeader,
                     children: [(0, a.jsx)(o.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
@@ -2433,7 +2433,7 @@
                     title: m.default.Messages.GUILD_PRODUCT_SETTINGS_ADD_ROLE_HEADER,
                     tag: "label",
                     error: f,
-                    titleClassName: U.roleHeader,
+                    titleClassName: I.roleHeader,
                     children: [(0, a.jsx)(o.Text, {
                         variant: "text-xs/normal",
                         color: "text-muted",
@@ -2581,9 +2581,9 @@
                 T = t("49111"),
                 h = t("782340"),
                 m = t("169225");
-            let U = () => Promise.resolve();
+            let I = () => Promise.resolve();
 
-            function I(e) {
+            function U(e) {
                 let {
                     color: A,
                     isDefault: t = !1,
@@ -2593,7 +2593,7 @@
                     style: c = {},
                     onClick: g,
                     "aria-label": h
-                } = e, U = (0, s.useListItem)("color-".concat(A)), I = null != A ? (0, o.int2hex)(A) : c.backgroundColor, p = !1;
+                } = e, I = (0, s.useListItem)("color-".concat(A)), U = null != A ? (0, o.int2hex)(A) : c.backgroundColor, p = !1;
                 return l && !n ? p = !0 : (l || n) && (p = (0, o.getDarkness)(A) > .1), (0, a.jsx)(i.FocusRing, {
                     offset: -2,
                     children: (0, a.jsxs)("button", {
@@ -2608,10 +2608,10 @@
                         onClick: () => null == g ? void 0 : g(A),
                         style: {
                             ...c,
-                            backgroundColor: I
+                            backgroundColor: U
                         },
-                        "aria-label": null != h ? h : I,
-                        ...U,
+                        "aria-label": null != h ? h : U,
+                        ...I,
                         children: [l ? (0, a.jsx)(C.default, {
                             className: m.colorPickerDropper,
                             foreground: m.colorPickerDropperFg,
@@ -2638,7 +2638,7 @@
                         value: t,
                         disabled: l
                     } = this.props;
-                    return (0, a.jsx)(I, {
+                    return (0, a.jsx)(U, {
                         isDefault: !0,
                         color: e,
                         isSelected: e === t || 0 === t,
@@ -2655,7 +2655,7 @@
                         disabled: t,
                         "aria-label": l
                     } = this.props;
-                    return (0, a.jsx)(I, {
+                    return (0, a.jsx)(U, {
                         isCustom: !0,
                         color: e,
                         isSelected: A === e,
@@ -2673,7 +2673,7 @@
                     middle: s,
                     footer: d,
                     showEyeDropper: f
-                } = e, T = (0, u.default)(), [U, I] = l.useState(() => {
+                } = e, T = (0, u.default)(), [I, U] = l.useState(() => {
                     let e = null != A ? A : 0,
                         t = (0, o.int2hex)(e);
                     return {
@@ -2683,25 +2683,25 @@
                     }
                 });
                 l.useEffect(() => {
-                    if (null == A || A === U.current) return;
+                    if (null == A || A === I.current) return;
                     let e = (0, o.int2hex)(A);
-                    I({
+                    U({
                         current: A,
                         pending: e,
                         input: e
                     })
-                }, [A, U]), l.useEffect(() => n, [n]);
+                }, [A, I]), l.useEffect(() => n, [n]);
                 let p = e => {
                         let A = "#" === e[0] ? e : "#".concat(e);
                         if (!(0, o.isValidHex)(A)) {
-                            I(e => ({
+                            U(e => ({
                                 ...e,
                                 input: A
                             }));
                             return
                         }
                         let a = (0, o.hex2int)(A);
-                        I({
+                        U({
                             current: a,
                             pending: A,
                             input: A
@@ -2715,7 +2715,7 @@
                             p(e)
                         } catch {}
                     }, E = e => {
-                        I(A => ({
+                        U(A => ({
                             ...A,
                             pending: e,
                             input: e
@@ -2739,7 +2739,7 @@
                             } = e;
                             return q(A)
                         },
-                        color: U.pending
+                        color: I.pending
                     }), s, (0, a.jsxs)("div", {
                         className: m.customColorPickerInputContainer,
                         children: [f && null != T && (0, a.jsx)(g.Icon, {
@@ -2750,7 +2750,7 @@
                             icon: C.default
                         }), (0, a.jsx)(i.TextInput, {
                             className: m.customColorPickerInput,
-                            value: U.input,
+                            value: I.input,
                             onChange: p,
                             maxLength: 7
                         })]
@@ -2782,7 +2782,7 @@
                     colorContainerClassName: f
                 } = e, C = e => (0, a.jsx)("div", {
                     className: m.colorPickerRow,
-                    children: e.map(e => (0, a.jsx)(I, {
+                    children: e.map(e => (0, a.jsx)(U, {
                         color: e,
                         isSelected: e === o,
                         onClick: u,
@@ -2791,8 +2791,8 @@
                 }), g = n.slice(0, n.length / 2), T = n.slice(n.length / 2, n.length), h = (0, s.default)({
                     id: "color-picker",
                     isEnabled: !0,
-                    scrollToStart: U,
-                    scrollToEnd: U
+                    scrollToStart: I,
+                    scrollToEnd: I
                 });
                 return (0, a.jsx)(s.ListNavigatorProvider, {
                     navigator: h,
@@ -3101,6 +3101,39 @@
                         })]
                     })
                 }, n.ImageFileUpIcon)
+        },
+        346955: function(e, A, t) {
+            "use strict";
+            t.r(A), t.d(A, {
+                default: function() {
+                    return s
+                }
+            });
+            var a = t("37983");
+            t("884691");
+            var l = t("469563"),
+                n = t("509317"),
+                r = t("75196"),
+                s = (0, l.replaceIcon)(function(e) {
+                    let {
+                        width: A = 24,
+                        height: t = 24,
+                        color: l = "currentColor",
+                        foreground: n,
+                        ...s
+                    } = e;
+                    return (0, a.jsx)("svg", {
+                        ...(0, r.default)(s),
+                        width: A,
+                        height: t,
+                        viewBox: "0 0 24 24",
+                        children: (0, a.jsx)("path", {
+                            fill: l,
+                            className: n,
+                            d: "M20 7H12L10.553 5.106C10.214 4.428 9.521 4 8.764 4H3C2.447 4 2 4.447 2 5V19C2 20.104 2.895 21 4 21H20C21.104 21 22 20.104 22 19V9C22 7.896 21.104 7 20 7Z"
+                        })
+                    })
+                }, n.FolderIcon)
         },
         818643: function(e, A, t) {
             "use strict";
