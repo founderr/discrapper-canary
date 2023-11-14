@@ -10759,7 +10759,7 @@
                     if (!(0, i.isEligibleForExplicitMediaRedaction)() || null == t.id || null == t.channel_id) return !1;
                     let n = u(t),
                         a = r[n];
-                    return null != a && (r[n] = a.merge({
+                    return null != a && (r[n] = (0, s.updateMessageRecord)(a, {
                         attachments: t.attachments,
                         embeds: t.embeds
                     }), !0)
@@ -17362,7 +17362,8 @@
                             let t = s.default.getMessage(e.id, e.channel_id),
                                 n = (0, i.createMessageRecord)(e);
                             return null != t && (n = n.merge({
-                                attachments: t.attachments
+                                attachments: t.attachments,
+                                embeds: t.embeds
                             })), n.isSearchHit ? n.set("customRenderedContent", (0, r.default)(n, {
                                 postProcessor: u,
                                 allowHeading: !0,
