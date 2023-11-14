@@ -1,428 +1,1086 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["35306"], {
-        401690: function(e, n, t) {
+    ["73810"], {
+        267363: function(e, t, n) {
             "use strict";
-            t.r(n), t.d(n, {
-                default: function() {
-                    return Q
-                }
-            }), t("222007"), t("424973");
-            var l = t("917351"),
-                i = t.n(l),
-                d = t("249654"),
-                u = t("446674"),
-                r = t("913144"),
-                a = t("208127"),
-                o = t("233069"),
-                f = t("42203"),
-                s = t("305961"),
-                _ = t("660478"),
-                c = t("18494"),
-                E = t("689275"),
-                h = t("755624"),
-                A = t("984674"),
-                T = t("724210");
-            let v = {},
-                g = {},
-                p = {},
-                C = {},
-                S = {},
-                D = {},
-                m = null,
-                N = {};
-
-            function U() {
-                for (let e in v = {}, S = {}, g = {}, p = {}, C = {}, m = c.default.getChannelId(), N) clearTimeout(N[e]);
-                N = {}, E.default.forEachGuild(e => {
-                    F(e)
-                }), L()
-            }
-
-            function R(e) {
-                for (let n in delete v[e], delete S[e], delete g[e], delete p[e], delete C[e], F(e), p[e]) H(e, n)
-            }
-
-            function F(e) {
-                let n = E.default.getThreadsForGuild(e);
-                for (let e in n)
-                    for (let t in n[e]) {
-                        k(t);
-                        let e = f.default.getChannel(t);
-                        if (null == e) continue;
-                        let n = h.default.joinTimestamp(t);
-                        if (null != n) {
-                            let t = {
-                                    channel: e,
-                                    joinTimestamp: n.getTime()
-                                },
-                                {
-                                    isUnread: l,
-                                    isRelevant: i,
-                                    isTimedRelevant: d
-                                } = J(e);
-                            W(v, e, t, !1), W(S, e, i ? t : null, !1), W(g, e, l ? t : null, !1), d && y(e, !0)
-                        } else {
-                            W(p, e, e, !1);
-                            let n = _.default.isForumPostUnread(e.id);
-                            W(C, e, n ? e : null, !1)
-                        }
-                    }
-            }
-
-            function L() {
-                for (let e in D = {}, p)
-                    for (let n in p[e]) H(e, n)
-            }
-
-            function P(e) {
-                let n = f.default.getBasicChannel(e);
-                null != n && o.THREADED_CHANNEL_TYPES.has(n.type) && H(n.guild_id, n.id)
-            }
-
-            function H(e, n) {
-                let t = f.default.getChannel(n);
-                if (null == t || !t.isForumLikeChannel()) return;
-                if (null == D[e] && (D[e] = {}), D[e][n] = 0, null == p[e] || null == p[e][n]) return;
-                let l = s.default.getGuild(e);
-                if (null == l) return;
-                let i = _.default.getTrackedAckMessageId(n);
-                if (null == i) {
-                    let e = Date.now();
-                    null != l.joinedAt && (l.joinedAt instanceof Date ? e = l.joinedAt.getTime() : "string" == typeof l.joinedAt && (e = new Date(l.joinedAt).getTime())), i = d.default.fromTimestamp(e)
-                }
-                for (let t in p[e][n]) n === m ? _.default.isNewForumThread(t, n, l) && D[e][n]++ : d.default.compare(t, i) > 0 && !_.default.hasOpenedThread(t) && D[e][n]++
-            }
-
-            function I(e, n, t) {
-                if (null == n) return !1;
-                let l = f.default.getChannel(t),
-                    i = h.default.joinTimestamp(t);
-                if (null != l && E.default.isActive(e, n, t)) {
-                    if (null != i) {
-                        let e = {
-                                channel: l,
-                                joinTimestamp: i.getTime()
-                            },
-                            {
-                                isUnread: n,
-                                isRelevant: t,
-                                isTimedRelevant: d
-                            } = J(l);
-                        W(v, l, e, !0), W(S, l, t ? e : null, !0), W(g, l, n ? e : null, !0), W(p, l, null, !0), W(C, l, null, !0), y(l, d)
-                    } else {
-                        let e = _.default.isForumPostUnread(l.id);
-                        W(v, l, null, !0), W(g, l, null, !0), W(S, l, null, !0), W(p, l, l, !0), W(C, l, e ? l : null, !0), k(l.id)
-                    }
-                    H(e, n)
-                } else K(v, e, n, t), K(S, e, n, t), K(g, e, n, t), K(p, e, n, t), K(C, e, n, t), k(t), H(e, n)
-            }
-
-            function M(e) {
-                return I(e.channel.guild_id, e.channel.parent_id, e.channel.id)
-            }
-
-            function G(e) {
-                let n = f.default.getChannel(e.id);
-                return !!(null != n && E.default.isActive(e.guildId, n.parent_id, e.id)) && I(n.guild_id, n.parent_id, n.id)
-            }
-
-            function j(e) {
-                let n = f.default.getChannel(e.channelId);
-                if (null == n) O();
-                else {
-                    let {
-                        guild_id: e,
-                        parent_id: l
-                    } = n;
-                    if (!o.THREAD_CHANNEL_TYPES.has(n.type)) {
-                        var t;
-                        return !!(Number(null === (t = D[e]) || void 0 === t ? void 0 : t[n.id]) > 0) && (H(e, n.id), !0)
-                    }
-                    if (null == l) return !1;
-                    if (b(v, n)) {
-                        let {
-                            isUnread: t,
-                            isRelevant: i,
-                            isTimedRelevant: d
-                        } = J(n);
-                        y(n, d);
-                        let u = b(g, n),
-                            r = b(S, n);
-                        if (t === u && i === r) return !1;
-                        let a = v[e][l][n.id],
-                            o = t ? a : null,
-                            f = i ? a : null;
-                        W(g, n, o, !0), W(S, n, f, !0), H(e, l)
-                    } else {
-                        let e = b(C, n),
-                            t = _.default.isForumPostUnread(n.id);
-                        if (t === e) return !1;
-                        W(C, n, t ? n : null, !0)
-                    }
-                }
-            }
-
-            function O() {
-                for (let e in g = {}, S = {}, v)
-                    for (let n in v[e])
-                        for (let t in v[e][n]) {
-                            let l = v[e][n][t],
-                                {
-                                    isUnread: i,
-                                    isRelevant: d,
-                                    isTimedRelevant: u
-                                } = J(l.channel);
-                            i && W(g, l.channel, l, !1), d && W(S, l.channel, l, !1), y(l.channel, u)
-                        }
-                for (let e in C = {}, p)
-                    for (let n in p[e])
-                        for (let t in p[e][n]) {
-                            let l = p[e][n][t],
-                                i = _.default.isForumPostUnread(t);
-                            i && W(C, l, l, !1)
-                        }
-                L()
-            }
-
-            function w() {
-                let e = m;
-                if ((m = c.default.getChannelId()) === e) return !1;
-                P(e), P(m)
-            }
-
-            function J(e) {
-                let n = _.default.getMentionCount(e.id) > 0,
-                    t = _.default.hasRelevantUnread(e) && (!h.default.isMuted(e.id) || n) || (0, a.isReadStateStaffExperimentEnabled)() && n,
-                    l = e.hasFlag(T.ChannelFlags.PINNED),
-                    i = e.isActiveThread(),
-                    d = i && (0, A.default)(e) > Date.now();
-                return {
-                    isUnread: (i || l) && t,
-                    isRelevant: d || l || t,
-                    isTimedRelevant: d
-                }
-            }
-
-            function y(e, n) {
-                k(e.id), n && function(e) {
-                    N[e.id] = setTimeout(() => {
-                        let n = f.default.getChannel(e.id);
-                        null != n && r.default.dispatch({
-                            type: "THREAD_UPDATE",
-                            channel: n
-                        })
-                    }, (0, A.default)(e) - Date.now() + 1)
-                }(e)
-            }
-
-            function k(e) {
-                e in N && (clearTimeout(N[e]), delete N[e])
-            }
-
-            function W(e, n, t, l) {
-                let {
-                    guild_id: d,
-                    parent_id: u,
-                    id: r
-                } = n;
-                null != d && null != u && null != r && (!(d in e) && (e[d] = {}), !(u in e[d]) && (e[d][u] = {}), l && (e[d] = {
-                    ...e[d],
-                    [u]: {
-                        ...e[d][u]
-                    }
-                }), null === t ? (delete e[d][u][r], i.isEmpty(e[d][u]) && delete e[d][u]) : e[d][u][r] = t)
-            }
-
-            function K(e, n, t, l) {
-                if (null != n && null != t && null != l) B(e, n, t, l) && (e[n] = {
-                    ...e[n],
-                    [t]: {
-                        ...e[n][t]
-                    }
-                }, delete e[n][t][l], i.isEmpty(e[n][t]) && delete e[n][t])
-            }
-
-            function b(e, n) {
-                return B(e, n.guild_id, n.parent_id, n.id)
-            }
-
-            function B(e, n, t, l) {
-                return n in e && t in e[n] && l in e[n][t]
-            }
-            let x = {},
-                V = {},
-                Y = {},
-                z = {},
-                Z = {};
-            class q extends u.default.Store {
-                initialize() {
-                    this.waitFor(E.default, f.default, h.default, _.default), this.syncWith([c.default], w)
-                }
-                hasActiveJoinedUnreadThreads(e, n) {
-                    return e in g && n in g[e]
-                }
-                getActiveUnjoinedThreadsForParent(e, n) {
-                    var t;
-                    return e in p && null !== (t = p[e][n]) && void 0 !== t ? t : z
-                }
-                getActiveJoinedThreadsForParent(e, n) {
-                    var t;
-                    return e in v && null !== (t = v[e][n]) && void 0 !== t ? t : Y
-                }
-                getActiveJoinedThreadsForGuild(e) {
-                    var n;
-                    return null !== (n = v[e]) && void 0 !== n ? n : x
-                }
-                getActiveJoinedUnreadThreadsForGuild(e) {
-                    var n;
-                    return null !== (n = g[e]) && void 0 !== n ? n : x
-                }
-                getActiveJoinedUnreadThreadsForParent(e, n) {
-                    var t;
-                    return null !== (t = this.getActiveJoinedUnreadThreadsForGuild(e)[n]) && void 0 !== t ? t : Y
-                }
-                getActiveJoinedRelevantThreadsForGuild(e) {
-                    var n;
-                    return null !== (n = S[e]) && void 0 !== n ? n : x
-                }
-                getActiveJoinedRelevantThreadsForParent(e, n) {
-                    var t;
-                    return null !== (t = this.getActiveJoinedRelevantThreadsForGuild(e)[n]) && void 0 !== t ? t : Y
-                }
-                getActiveUnjoinedThreadsForGuild(e) {
-                    var n;
-                    return null !== (n = p[e]) && void 0 !== n ? n : V
-                }
-                getActiveUnjoinedUnreadThreadsForGuild(e) {
-                    var n;
-                    return null !== (n = C[e]) && void 0 !== n ? n : x
-                }
-                getActiveUnjoinedUnreadThreadsForParent(e, n) {
-                    var t;
-                    return null !== (t = this.getActiveUnjoinedUnreadThreadsForGuild(e)[n]) && void 0 !== t ? t : Y
-                }
-                getNewThreadCountsForGuild(e) {
-                    var n;
-                    return null !== (n = D[e]) && void 0 !== n ? n : Z
-                }
-                computeAllActiveJoinedThreads(e) {
-                    let n = [];
-                    for (let t in v)
-                        if (t === e || null == e)
-                            for (let e in v[t])
-                                for (let l in v[t][e]) n.push(v[t][e][l].channel);
-                    return n
-                }
-                getNewThreadCount(e, n) {
-                    var t, l;
-                    return null !== (l = null === (t = D[e]) || void 0 === t ? void 0 : t[n]) && void 0 !== l ? l : 0
-                }
-                getActiveThreadCount(e, n) {
-                    var t, l, d, u;
-                    let r = i.size(null !== (d = null === (t = v[e]) || void 0 === t ? void 0 : t[n]) && void 0 !== d ? d : {}),
-                        a = i.size(null !== (u = null === (l = p[e]) || void 0 === l ? void 0 : l[n]) && void 0 !== u ? u : {});
-                    return r + a
-                }
-            }
-            q.displayName = "ActiveJoinedThreadsStore";
-            var Q = new q(r.default, {
-                CONNECTION_OPEN: U,
-                OVERLAY_INITIALIZE: U,
-                THREAD_LIST_SYNC: function(e) {
-                    let {
-                        guildId: n
-                    } = e;
-                    return R(n)
+            n.r(t), n.d(t, {
+                ack: function() {
+                    return c
                 },
-                LOAD_THREADS_SUCCESS: U,
-                LOAD_ARCHIVED_THREADS_SUCCESS: U,
-                SEARCH_FINISH: U,
-                GUILD_CREATE: function(e) {
-                    let {
-                        guild: n
-                    } = e;
-                    return R(n.id)
+                ackChannel: function() {
+                    return E
                 },
-                GUILD_DELETE: U,
-                CURRENT_USER_UPDATE: U,
-                THREAD_CREATE: M,
-                THREAD_UPDATE: M,
-                THREAD_DELETE: M,
-                CHANNEL_UPDATES: function(e) {
-                    let {
-                        channels: n
-                    } = e;
-                    for (let e of n)
-                        if (e.isNSFW() !== function(e, n) {
-                                if (null == n) return !1;
-                                let t = v[e],
-                                    l = null == t ? null : t[n];
-                                if (null != l) {
-                                    for (let e in l)
-                                        if (l[e].channel.isNSFW()) return !0
-                                }
-                                let i = p[e],
-                                    d = null == i ? null : i[n];
-                                if (null != d) {
-                                    for (let e in d)
-                                        if (d[e].isNSFW()) return !0
-                                }
-                                return !1
-                            }(e.guild_id, e.parent_id)) {
-                            U();
-                            return
-                        } return !1
+                bulkAck: function() {
+                    return _
                 },
-                CHANNEL_DELETE: function(e) {
-                    let {
-                        channel: n
-                    } = e, t = !1;
-                    return null != n.guild_id && null != n.parent_id && (n.guild_id in v && n.parent_id in v[n.guild_id] && (delete v[n.guild_id][n.parent_id], t = !0), n.guild_id in g && n.parent_id in g[n.guild_id] && (delete g[n.guild_id][n.parent_id], t = !0), n.guild_id in S && n.parent_id in S[n.guild_id] && (Object.keys(S[n.guild_id][n.parent_id]).forEach(k), delete S[n.guild_id][n.parent_id], t = !0), n.guild_id in p && n.parent_id in p[n.guild_id] && (delete p[n.guild_id][n.parent_id], t = !0), n.guild_id in C && n.parent_id in C[n.guild_id] && (delete C[n.guild_id][n.parent_id], t = !0), t && H(n.guild_id, n.parent_id)), t
+                localAck: function() {
+                    return f
                 },
-                THREAD_MEMBER_UPDATE: G,
-                THREAD_MEMBERS_UPDATE: G,
-                LOAD_MESSAGES_SUCCESS: j,
-                MESSAGE_CREATE: j,
-                MESSAGE_DELETE: j,
-                MESSAGE_DELETE_BULK: j,
-                MESSAGE_ACK: j,
-                CHANNEL_ACK: j,
-                CHANNEL_LOCAL_ACK: j,
-                CHANNEL_SELECT: function(e) {
-                    j(e), w()
+                enableAutomaticAck: function() {
+                    return I
                 },
-                PASSIVE_UPDATE_V1: function(e) {
-                    null != e.channels && O()
+                disableAutomaticAck: function() {
+                    return C
                 },
-                WINDOW_FOCUS: O,
-                UPDATE_CHANNEL_DIMENSIONS: O,
-                DRAWER_OPEN: O,
-                DRAWER_CLOSE: O,
-                BULK_ACK: O
-            })
+                ackGuildFeature: function() {
+                    return O
+                },
+                ackUserFeature: function() {
+                    return N
+                }
+            }), n("222007"), n("424973");
+            var u = n("249654"),
+                l = n("913144"),
+                r = n("401690"),
+                i = n("233069"),
+                o = n("42203"),
+                a = n("245997"),
+                s = n("697218"),
+                d = n("49111");
+
+            function c(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                    n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                    u = arguments.length > 3 ? arguments[3] : void 0,
+                    r = arguments.length > 4 ? arguments[4] : void 0;
+                l.default.dispatch({
+                    type: "CHANNEL_ACK",
+                    channelId: e,
+                    messageId: u,
+                    immediate: t,
+                    force: n,
+                    context: d.CURRENT_APP_CONTEXT,
+                    location: r
+                })
+            }
+
+            function E(e) {
+                e.isCategory() ? ! function(e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                        u = o.default.getChannel(e);
+                    if (null == u || null == u.guild_id) return;
+                    let l = a.default.getCategories(u.guild_id);
+                    if (null == l[e]) return;
+                    let s = l[e].filter(e => {
+                            let {
+                                channel: t
+                            } = e;
+                            return (0, i.isGuildReadableType)(t.type)
+                        }).map(e => {
+                            let {
+                                channel: t
+                            } = e;
+                            return t.id
+                        }),
+                        d = [...s];
+                    for (let e of (s.forEach(e => {
+                            let t = r.default.getActiveJoinedThreadsForParent(u.guild_id, e);
+                            for (let e in t) d.push(e)
+                        }), d)) c(e, t, n)
+                }(e.id, !0, !0) : e.isForumLikeChannel() ? c(e.id, !0, !0, u.default.fromTimestamp(Date.now())) : c(e.id, !0, !0)
+            }
+
+            function _(e) {
+                l.default.dispatch({
+                    type: "BULK_ACK",
+                    channels: e,
+                    context: d.CURRENT_APP_CONTEXT
+                })
+            }
+
+            function f(e) {
+                l.default.dispatch({
+                    type: "CHANNEL_LOCAL_ACK",
+                    channelId: e
+                })
+            }
+
+            function I(e, t) {
+                l.default.dispatch({
+                    type: "ENABLE_AUTOMATIC_ACK",
+                    channelId: e,
+                    windowId: t
+                })
+            }
+
+            function C(e, t) {
+                l.default.dispatch({
+                    type: "DISABLE_AUTOMATIC_ACK",
+                    channelId: e,
+                    windowId: t
+                })
+            }
+
+            function O(e, t, n) {
+                l.default.dispatch({
+                    type: "GUILD_FEATURE_ACK",
+                    id: e,
+                    ackType: t,
+                    ackedId: n,
+                    local: !1
+                })
+            }
+
+            function N(e, t) {
+                var n;
+                let u = null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
+                null != u && l.default.dispatch({
+                    type: "USER_NON_CHANNEL_ACK",
+                    ackType: e,
+                    ackedId: t,
+                    local: !1
+                })
+            }
         },
-        984674: function(e, n, t) {
+        304580: function(e, t, n) {
             "use strict";
-            t.r(n), t.d(n, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return I
                 }
             });
-            var l = t("660478"),
-                i = t("299039");
-
-            function d(e) {
-                if (null == e.threadMetadata) return 0;
-                let n = 6e4 * e.threadMetadata.autoArchiveDuration;
-                return function(e) {
-                    var n;
-                    if (null == e.threadMetadata) return 0;
-                    let t = null !== (n = l.default.lastMessageId(e.id)) && void 0 !== n ? n : e.id,
-                        d = i.default.extractTimestamp(t),
-                        u = null != e.threadMetadata.archiveTimestamp ? new Date(e.threadMetadata.archiveTimestamp).getTime() : 0;
-                    return Math.max(d, u)
-                }(e) + n
+            var u, l, r = n("37983");
+            n("884691");
+            var i = n("414456"),
+                o = n.n(i),
+                a = n("394846"),
+                s = n("77078"),
+                d = n("945330"),
+                c = n("381546"),
+                E = n("782340"),
+                _ = n("955892");
+            (u = l || (l = {})).DEFAULT = "", u.BOLD = "Bold", u.SOLID = "Solid";
+            let f = e => {
+                let {
+                    closeAction: t,
+                    variant: n,
+                    keybind: u,
+                    className: l
+                } = e;
+                return (0, r.jsxs)("div", {
+                    className: o(_.container, l),
+                    children: [(0, r.jsx)(s.Clickable, {
+                        className: o(_.closeButton, {
+                            [_.closeButtonBold]: "Bold" === n,
+                            [_.closeButtonSolid]: "Solid" === n
+                        }),
+                        onClick: t,
+                        "aria-label": E.default.Messages.CLOSE,
+                        children: "Solid" === n ? (0, r.jsx)(c.default, {
+                            width: 24,
+                            height: 24,
+                            "aria-hidden": !0
+                        }) : (0, r.jsx)(d.default, {
+                            width: 18,
+                            height: 18,
+                            "aria-hidden": !0
+                        })
+                    }), a.isMobile ? null : (0, r.jsx)("div", {
+                        className: o(_.keybind),
+                        "aria-hidden": !0,
+                        children: u
+                    })]
+                })
+            };
+            f.defaultProps = {
+                variant: ""
+            }, f.Variants = l;
+            var I = f
+        },
+        253980: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                ChatCheckIcon: function() {
+                    return i
+                }
+            });
+            var u = n("37983");
+            n("884691");
+            var l = n("669491"),
+                r = n("75196");
+            let i = e => {
+                let {
+                    width: t = 24,
+                    height: n = 24,
+                    color: i = l.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: o = "",
+                    ...a
+                } = e;
+                return (0, u.jsxs)("svg", {
+                    ...(0, r.default)(a),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: n,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: [(0, u.jsx)("path", {
+                        fill: "string" == typeof i ? i : i.css,
+                        d: "M12.657 21.979c.407-.027.567-.512.28-.8l-.058-.058a3 3 0 1 1 4.242-4.242l.525.525a.5.5 0 0 0 .708 0l2.525-2.525c.196-.197.413-.36.644-.49a.535.535 0 0 0 .27-.35c.136-.659.207-1.34.207-2.039 0-5.523-4.477-10-10-10S2 6.477 2 12c0 1.97.57 3.808 1.554 5.357a.517.517 0 0 1-.04.617l-2.067 2.369C.882 20.989 1.342 22 2.2 22H12c.22 0 .44-.007.657-.021Z",
+                        className: o
+                    }), (0, u.jsx)("path", {
+                        fill: "string" == typeof i ? i : i.css,
+                        d: "M23.707 17.707a1 1 0 0 0-1.414-1.414L18 20.586l-2.293-2.293a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.414 0l5-5Z",
+                        className: o
+                    })]
+                })
             }
+        },
+        320954: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var u = n("917351"),
+                l = n.n(u);
+
+            function r(e, t) {
+                let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
+                return l(e).map(e => "null" === e.channel.id ? t[e.channel.id] : [e, t[e.channel.id]]).flattenDeep().filter(n).value()
+            }
+        },
+        298878: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return o
+                }
+            });
+            var u = n("37983");
+            n("884691");
+            var l = n("669491"),
+                r = n("956089"),
+                i = n("782340");
+
+            function o(e) {
+                let {
+                    className: t,
+                    color: n = l.default.unsafe_rawColors.BRAND_500.css,
+                    ...o
+                } = e;
+                return (0, u.jsx)(r.TextBadge, {
+                    ...o,
+                    text: i.default.Messages.BETA,
+                    color: n,
+                    className: t
+                })
+            }
+        },
+        13162: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                getPacksForUser: function() {
+                    return a
+                },
+                collectPack: function() {
+                    return s
+                },
+                uncollectPack: function() {
+                    return d
+                },
+                updateInventorySettings: function() {
+                    return c
+                },
+                getPackMetadata: function() {
+                    return E
+                },
+                dismissPackAddedNotification: function() {
+                    return _
+                }
+            });
+            var u = n("872717"),
+                l = n("913144"),
+                r = n("569883"),
+                i = n("871336"),
+                o = n("49111");
+            async function a() {
+                l.default.dispatch({
+                    type: "INVENTORY_FETCH"
+                });
+                try {
+                    let e = await u.default.get({
+                        url: o.Endpoints.INVENTORY_GET
+                    });
+                    l.default.dispatch({
+                        type: "INVENTORY_FETCH_SUCCESS",
+                        packs: e.body.map(e => i.default.fromServer(e))
+                    })
+                } catch (t) {
+                    var e;
+                    l.default.dispatch({
+                        type: "INVENTORY_FETCH_ERROR",
+                        is4XXError: (null == (e = t.body) ? void 0 : e.status) >= 400 && (null == e ? void 0 : e.status) <= 499
+                    })
+                }
+            }
+            async function s(e) {
+                let {
+                    authorId: t,
+                    packId: n,
+                    expressionName: r
+                } = e;
+                try {
+                    let e = await u.default.put({
+                        url: o.Endpoints.INVENTORY_ADD_PACK,
+                        body: {
+                            author_id: t,
+                            pack_id: n,
+                            name_override: r
+                        }
+                    });
+                    l.default.dispatch({
+                        type: "INVENTORY_COLLECT_PACK_SUCCESS",
+                        pack: i.default.fromServer(e.body)
+                    })
+                } catch (e) {
+                    return
+                }
+            }
+            async function d(e) {
+                let {
+                    packId: t
+                } = e;
+                try {
+                    await u.default.put({
+                        url: o.Endpoints.INVENTORY_REMOVE_PACK,
+                        body: {
+                            pack_id: t
+                        }
+                    }), l.default.dispatch({
+                        type: "INVENTORY_REMOVE_PACK_SUCCESS",
+                        packId: t
+                    })
+                } catch (e) {
+                    return
+                }
+            }
+            async function c(e) {
+                let {
+                    guildId: t,
+                    settings: n
+                } = e;
+                try {
+                    await u.default.patch({
+                        url: o.Endpoints.INVENTORY_UPDATE_SETTINGS(t),
+                        body: {
+                            is_emoji_pack_collectible: n.isEmojiPackCollectible
+                        }
+                    })
+                } catch (e) {
+                    return
+                }
+            }
+            async function E(e) {
+                let {
+                    packId: t
+                } = e;
+                try {
+                    let e = await u.default.get({
+                        url: o.Endpoints.INVENTORY_PACK_METADATA(t)
+                    });
+                    return r.default.createFromServer(e.body)
+                } catch (e) {
+                    return
+                }
+            }
+
+            function _() {
+                l.default.dispatch({
+                    type: "INVENTORY_DISMISS_PACK_ADDED_NOTIFICATION"
+                })
+            }
+        },
+        365058: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                INVENTORY_MAX_PACKS: function() {
+                    return u
+                },
+                INVENTORY_MAX_FREE_PACKS: function() {
+                    return l
+                },
+                INVENTORY_PACK_ADDED_NOTIFICATION_DURATION: function() {
+                    return r
+                }
+            });
+            let u = 100,
+                l = 1,
+                r = 2e3
+        },
+        529932: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                getJoinedEmojiSourceGuildData: function() {
+                    return O
+                },
+                useEmojiAndSourceGuild: function() {
+                    return N
+                },
+                usePackCollectionData: function() {
+                    return T
+                },
+                useExpressionSourceGuildDataForGuildLeaveModal: function() {
+                    return A
+                }
+            }), n("222007");
+            var u = n("884691"),
+                l = n("65597"),
+                r = n("913144"),
+                i = n("385976"),
+                o = n("858619"),
+                a = n("305961"),
+                s = n("697218"),
+                d = n("719923"),
+                c = n("252931"),
+                E = n("166465"),
+                _ = n("557562"),
+                f = n("446066"),
+                I = n("49111"),
+                C = n("958706");
+            let O = (e, t, n) => {
+                    let u = null != n ? e.getCustomEmojiById(n) : null;
+                    switch (null == u ? void 0 : u.type) {
+                        case o.EmojiTypes.GUILD:
+                            return {
+                                emoji: u, joinedEmojiSourceGuildRecord: t.getGuild(null == u ? void 0 : u.guildId)
+                            };
+                        case o.EmojiTypes.PACK:
+                            return {
+                                emoji: u, joinedEmojiSourceGuildRecord: t.getGuild(null == u ? void 0 : u.packId)
+                            };
+                        default:
+                            return {
+                                emoji: null, joinedEmojiSourceGuildRecord: null
+                            }
+                    }
+                },
+                N = e => {
+                    let {
+                        emojiId: t,
+                        refreshPositionKey: n
+                    } = e, {
+                        joinedEmojiSourceGuildRecord: r,
+                        emoji: o
+                    } = (0, l.useStateFromStoresObject)([i.default, a.default], () => O(i.default, a.default, t)), s = null != r, d = null != r && r.hasFeature(I.GuildFeatures.DISCOVERABLE), c = (!s || d) && null != t, [E, _] = u.useState(c), C = null != r ? f.default.createFromGuildRecord(r) : null, [N, P] = u.useState(C);
+                    return u.useEffect(() => {
+                        null == n || n();
+                        let e = async () => {
+                            let e = null != t ? await f.default.getGuildFromEmojiId(t) : null;
+                            P(e), _(!1), null == n || n()
+                        };
+                        if (c) {
+                            e();
+                            return
+                        }
+                        null == n || n()
+                    }, [t, c]), {
+                        expressionSourceGuild: N,
+                        joinedEmojiSourceGuildRecord: r,
+                        hasJoinedEmojiSourceGuild: s,
+                        emoji: o,
+                        isFetching: E
+                    }
+                },
+                P = e => {
+                    let {
+                        expressionSourceGuild: t
+                    } = e, n = (0, l.default)([E.default], () => null != t ? E.default.getPackByPackId({
+                        packId: t.id
+                    }) : null);
+                    return null != n ? n : null
+                },
+                T = e => {
+                    let {
+                        expressionSourceGuild: t
+                    } = e, n = (0, l.default)([s.default], () => s.default.getCurrentUser()), u = d.default.isPremium(n), r = (0, c.useInventoryGuildPacksUserExperiment)({
+                        expressionSourceGuild: t
+                    }), i = (0, l.default)([E.default], () => E.default.countPacksCollected()), o = P({
+                        expressionSourceGuild: t
+                    }), a = i >= (0, _.getMaxPacksForUserType)(u);
+                    return {
+                        ...r,
+                        collectedPack: o,
+                        numPacksCollected: i,
+                        hasReachedMaxPacksCollected: a,
+                        isPremium: u
+                    }
+                },
+                A = e => {
+                    let t = (0, c.useInventoryGuildPacksUserExperiment)({
+                            expressionSourceGuild: f.default.createFromGuildRecord(e),
+                            autoTrackExposure: !1
+                        }),
+                        n = (0, c.useInventoryGuildSettingsExperiment)({
+                            guildId: e.id,
+                            autoTrackExposure: !1
+                        }),
+                        o = t.collectEnabled && n.allowCollection,
+                        a = (0, l.default)([i.default], () => {
+                            let t = i.default.getGuildEmoji(e.id).filter(e => 0 === e.roles.length && e.available && !e.managed);
+                            return 0 === t.length ? null : t[0].id
+                        }),
+                        [s, d] = u.useState(null);
+                    return u.useEffect(() => {
+                        let e = async e => {
+                            d(await f.default.getGuildFromEmojiId(e))
+                        };
+                        o && null != a && e(a)
+                    }, []), u.useEffect(() => {
+                        r.default.dispatch({
+                            type: "EMOJI_INTERACTION_INITIATED",
+                            interaction: C.EmojiInteractionPoint.GuildLeaveModalShown
+                        })
+                    }, []), s
+                }
+        },
+        557562: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                maybeGetPacksForUser: function() {
+                    return I
+                },
+                getPackIconURL: function() {
+                    return C
+                },
+                getAddOrRemovePackHandler: function() {
+                    return O
+                },
+                getMaxPacksForUserType: function() {
+                    return N
+                }
+            });
+            var u = n("811022"),
+                l = n("412745"),
+                r = n("697218"),
+                i = n("599110"),
+                o = n("315102"),
+                a = n("252931"),
+                s = n("13162"),
+                d = n("166465"),
+                c = n("365058"),
+                E = n("49111");
+            let _ = new u.default("InventoryUtils");
+
+            function f(e) {}
+            async function I() {
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown",
+                    t = "maybeGetPacks, trigger point: ".concat(e, " "),
+                    n = r.default.getCurrentUser();
+                if (null == n) {
+                    f(t + "no current user");
+                    return
+                }
+                let u = (0, a.getInventoryGuildPacksUserExperimentConfig)({
+                    user: n
+                });
+                if (!u.viewAndUseEnabled) {
+                    f(t + "packs experiment not enabled"), d.default.hasPersistedState() && d.default.clear();
+                    return
+                }
+                let l = d.default.getPackEmojisTTL();
+                if (null != l && Date.now() < l) {
+                    f(t + "ttl has not passed");
+                    return
+                }
+                if (d.default.getIsFetching()) {
+                    f(t + "currently fetching, so not going to fetch again");
+                    return
+                }
+                f(t + "fetching"), await (0, s.getPacksForUser)()
+            }
+
+            function C(e, t) {
+                let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                return o.default.getGuildIconURL({
+                    id: e.id,
+                    size: t,
+                    icon: e.icon,
+                    canAnimate: n
+                })
+            }
+            let O = e => {
+                    let {
+                        expressionSourceGuild: t,
+                        action: n,
+                        onComplete: u,
+                        nonce: r,
+                        expressionName: o
+                    } = e;
+                    return () => {
+                        if (null == t) {
+                            null == u || u();
+                            return
+                        }
+                        let e = t.id,
+                            a = t.isDiscoverable();
+                        n === l.EmojiPopoutType.ADD_PACK ? (0, s.collectPack)({
+                            packId: e,
+                            expressionName: a ? void 0 : o
+                        }) : n === l.EmojiPopoutType.REMOVE_PACK && (0, s.uncollectPack)({
+                            packId: e
+                        }), i.default.track(E.AnalyticEvents.INVENTORY_PACK_ACTION_COMPLETED, {
+                            type: n,
+                            inventory_pack_id: e,
+                            nonce: r
+                        }), null == u || u()
+                    }
+                },
+                N = e => e ? c.INVENTORY_MAX_PACKS : c.INVENTORY_MAX_FREE_PACKS
+        },
+        446066: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return l
+                }
+            }), n("222007");
+            var u, l, r = n("872717"),
+                i = n("666038"),
+                o = n("813006"),
+                a = n("315102"),
+                s = n("159885"),
+                d = n("886167"),
+                c = n("49111");
+            (u || (u = {})).GUILD = "GUILD";
+            let E = async e => {
+                let t = null;
+                try {
+                    var n;
+                    let u = await r.default.get({
+                        url: c.Endpoints.EMOJI_SOURCE_DATA(e),
+                        oldFormErrors: !0,
+                        timeout: 5e3
+                    });
+                    (null == u ? void 0 : null === (n = u.body) || void 0 === n ? void 0 : n.guild) != null && (t = {
+                        guild: l.createFromServer(u.body.guild),
+                        type: u.body.type
+                    })
+                } catch {}
+                return t
+            };
+            l = class e extends i.default {
+                getIconURL(e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                    return a.default.getGuildIconURL({
+                        id: this.id,
+                        size: e,
+                        icon: this.icon,
+                        canAnimate: t
+                    })
+                }
+                getIconSource(e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                    return a.default.getAnimatableSourceWithFallback(t, t => a.default.getGuildIconSource({
+                        id: this.id,
+                        size: e,
+                        icon: this.icon,
+                        canAnimate: t
+                    }))
+                }
+                hasFeature(e) {
+                    return this.features.has(e)
+                }
+                isDiscoverable() {
+                    return this.hasFeature(c.GuildFeatures.DISCOVERABLE)
+                }
+                get acronym() {
+                    return (0, s.getAcronym)(this.name)
+                }
+                static async getGuildFromEmojiId(e) {
+                    let t = await E(e),
+                        n = null != t && (null == t ? void 0 : t.type) === "GUILD";
+                    return n ? t.guild : null
+                }
+                static _mapCommon(e) {
+                    var t;
+                    return {
+                        id: e.id,
+                        name: e.name,
+                        icon: e.icon,
+                        description: e.description,
+                        features: new Set(null !== (t = e.features) && void 0 !== t ? t : new Set)
+                    }
+                }
+                static createFromGuildRecord(t) {
+                    return new e({
+                        ...e._mapCommon(t),
+                        premiumTier: t.premiumTier,
+                        premiumSubscriberCount: t.premiumSubscriberCount,
+                        presenceCount: null,
+                        memberCount: null,
+                        emojis: null,
+                        inventorySettings: t.inventorySettings
+                    })
+                }
+                static createFromDiscoverableGuild(t) {
+                    return new e({
+                        ...e._mapCommon(t),
+                        premiumTier: null,
+                        premiumSubscriberCount: t.premiumSubscriptionCount,
+                        presenceCount: t.presenceCount,
+                        memberCount: t.memberCount,
+                        emojis: t.emojis,
+                        inventorySettings: void 0
+                    })
+                }
+                static createFromServer(t) {
+                    return new e({
+                        ...e._mapCommon(t),
+                        premiumTier: t.premium_tier,
+                        premiumSubscriberCount: t.premium_subscription_count,
+                        presenceCount: t.approximate_presence_count,
+                        memberCount: t.approximate_member_count,
+                        emojis: t.emojis,
+                        inventorySettings: (0, d.guildInventorySettingsFromServer)(t.inventory_settings)
+                    })
+                }
+                static createFromGuildType(t) {
+                    return t instanceof e ? t : t instanceof o.default ? e.createFromGuildRecord(t) : e.createFromDiscoverableGuild(t)
+                }
+                constructor(e) {
+                    super(), this.id = e.id, this.name = e.name, this.icon = e.icon, this.description = e.description, this.features = e.features, this.premiumTier = e.premiumTier, this.premiumSubscriberCount = e.premiumSubscriberCount, this.presenceCount = e.presenceCount, this.memberCount = e.memberCount, this.emojis = e.emojis, this.inventorySettings = e.inventorySettings
+                }
+            }
+        },
+        569883: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return u
+                }
+            });
+            var u, l = n("666038");
+            u = class e extends l.default {
+                static createFromServer(t) {
+                    return new e({
+                        collectedCount: t.collected_count
+                    })
+                }
+                constructor(e) {
+                    super(), this.collectedCount = e.collectedCount
+                }
+            }
+        },
+        412745: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                EmojiPopoutType: function() {
+                    return i
+                },
+                getEmojiPopoutData: function() {
+                    return E
+                }
+            });
+            var u, l, r, i, o = n("365058"),
+                a = n("782340");
+            (u = r || (r = {})).DEFAULT = "Custom Emoji Popout", u.CROSS_SERVER = "Custom Emoji Popout (Cross-Server)", u.UPSELL_CURRENT_SERVER_JOINED = "Custom Emoji Popout (Upsell Joined Current-Server)", u.UPSELL_CROSS_SERVER_JOINED = "Custom Emoji Popout (Upsell Joined Cross-Server)", u.UPSELL_CROSS_SERVER_JOINABLE = "Custom Emoji Popout (Upsell Not-Joined Cross-Server)", u.UPSELL_CROSS_SERVER_UNJOINABLE = "Custom Emoji Popout (Soft Upsell)", (l = i || (i = {})).GET_PREMIUM_INVENTORY_DISABLED = "GET_PREMIUM_INVENTORY_DISABLED", l.GET_PREMIUM_INVENTORY_ENABLED = "GET_PREMIUM_INVENTORY_ENABLED", l.JOIN_GUILD = "JOIN_GUILD", l.ADD_PACK = "ADD_PACK", l.REMOVE_PACK = "REMOVE_PACK", l.UNAVAILABLE = "UNAVAILABLE";
+            let s = e => {
+                    let {
+                        isPremium: t,
+                        hasJoinedEmojiSourceGuild: n,
+                        isUnusableRoleSubscriptionEmoji: u,
+                        emojiComesFromCurrentGuild: l,
+                        isDiscoverable: r
+                    } = e, i = "Custom Emoji Popout";
+                    return t && !n && r ? i = "Custom Emoji Popout (Cross-Server)" : t || !n || u ? !t && !n && (i = r ? "Custom Emoji Popout (Upsell Not-Joined Cross-Server)" : "Custom Emoji Popout (Soft Upsell)") : i = l ? "Custom Emoji Popout (Upsell Joined Current-Server)" : "Custom Emoji Popout (Upsell Joined Cross-Server)", i
+                },
+                d = e => {
+                    let {
+                        isPremium: t,
+                        hasJoinedEmojiSourceGuild: n,
+                        isUnusableRoleSubscriptionEmoji: u,
+                        isDiscoverable: l,
+                        emojiComesFromCurrentGuild: r,
+                        userIsRoleSubscriber: i,
+                        isRoleSubscriptionEmoji: o,
+                        shouldHideRoleSubscriptionCTA: s,
+                        packCollectionData: d,
+                        onOpenPremiumSettings: c
+                    } = e, E = null, _ = (null == d ? void 0 : d.collectEnabled) === !0, f = (null == d ? void 0 : d.viewAndUseEnabled) === !0, I = (null == d ? void 0 : d.collectedPack) != null;
+                    if ((_ || f && I) && !n) {
+                        let e = _ && (null == d ? void 0 : d.showTryPacksModalAndV2Copy) === !0;
+                        return e ? I ? a.default.Messages.EMOJI_POPOUT_ADDED_PACK_DESCRIPTION : a.default.Messages.INVENTORY_EMOJI_FROM_ADDABLE_PACK : null
+                    }
+                    return E = t ? n ? o ? s && u ? a.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UNAVAILABLE_DESCRIPTION : u ? i ? a.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_UPGRADE_UPSELL_DESCRIPTION : a.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UPSELL_DESCRIPTION : a.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_SUBSCRIBED_DESCRIPTION : r ? a.default.Messages.EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : a.default.Messages.EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : l ? a.default.Messages.EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : a.default.Messages.EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : n ? s && u ? a.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UNAVAILABLE_DESCRIPTION : u ? i ? a.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_UPGRADE_UPSELL_DESCRIPTION : a.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UPSELL_DESCRIPTION : r ? a.default.Messages.EMOJI_POPOUT_CURRENT_GUILD_DESCRIPTION : a.default.Messages.EMOJI_POPOUT_JOINED_GUILD_DESCRIPTION : l ? a.default.Messages.EMOJI_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : a.default.Messages.EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
+                        openPremiumSettings: c
+                    })
+                },
+                c = e => {
+                    let {
+                        isPremium: t,
+                        hasJoinedEmojiSourceGuild: n,
+                        isUnusableRoleSubscriptionEmoji: u,
+                        isDiscoverable: l,
+                        packCollectionData: r
+                    } = e, i = (null == r ? void 0 : r.collectEnabled) === !0, s = (null == r ? void 0 : r.viewAndUseEnabled) === !0, d = (null == r ? void 0 : r.collectedPack) != null, c = (null == r ? void 0 : r.showTryPacksModalAndV2Copy) === !0, E = !i && !d, _ = !n && l;
+                    if ((E || !s) && t && _) return {
+                        type: "JOIN_GUILD",
+                        text: a.default.Messages.GUILD_PROFILE_JOIN_SERVER_BUTTON,
+                        description: null
+                    };
+                    if (!t && (n && !u || (E || !s) && _)) return {
+                        type: "GET_PREMIUM_INVENTORY_DISABLED",
+                        text: a.default.Messages.EMOJI_POPOUT_PREMIUM_CTA,
+                        description: null
+                    };
+                    if (i && !n && !d && t) return {
+                        type: "ADD_PACK",
+                        text: a.default.Messages.INVENTORY_ADD_PACK,
+                        description: c ? a.default.Messages.INVENTORY_ADD_PACK_WITHOUT_JOINING_V2.format({
+                            maxPacks: o.INVENTORY_MAX_PACKS
+                        }) : a.default.Messages.INVENTORY_ADD_PACK_WITHOUT_JOINING
+                    };
+                    else if (!i || n || d || t) {
+                        if (i && !n && d) return {
+                            type: "REMOVE_PACK",
+                            text: a.default.Messages.INVENTORY_REMOVE_PACK,
+                            description: c ? null : a.default.Messages.INVENTORY_REMOVE_PACK_DESCRIPTION
+                        }
+                    } else {
+                        var f;
+                        let e = (null !== (f = null == r ? void 0 : r.numPacksCollected) && void 0 !== f ? f : 0) >= o.INVENTORY_MAX_FREE_PACKS,
+                            t = e ? a.default.Messages.INVENTORY_ADD_NITRO_DESCRIPTION_WITH_PLURAL.format({
+                                maxFreePacks: o.INVENTORY_MAX_FREE_PACKS,
+                                maxPacks: o.INVENTORY_MAX_PACKS
+                            }) : a.default.Messages.INVENTORY_ADD_PACK_NON_NITRO.format({
+                                maxFreePacks: o.INVENTORY_MAX_FREE_PACKS,
+                                maxPacks: o.INVENTORY_MAX_PACKS
+                            });
+                        return {
+                            type: e ? "GET_PREMIUM_INVENTORY_ENABLED" : "ADD_PACK",
+                            text: e ? a.default.Messages.EMOJI_POPOUT_PREMIUM_CTA : a.default.Messages.INVENTORY_ADD_PACK,
+                            description: t
+                        }
+                    }
+                    return {
+                        type: "UNAVAILABLE",
+                        text: null,
+                        description: null
+                    }
+                },
+                E = e => {
+                    let t = d(e),
+                        n = s(e),
+                        u = c(e);
+                    return {
+                        ...u,
+                        emojiDescription: t,
+                        analyticsType: n
+                    }
+                }
+        },
+        245997: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return U
+                }
+            }), n("424973"), n("222007"), n("808653");
+            var u = n("446674"),
+                l = n("913144"),
+                r = n("320954"),
+                i = n("379881"),
+                o = n("271938"),
+                a = n("42203"),
+                s = n("923959"),
+                d = n("305961"),
+                c = n("49111");
+            let E = null,
+                _ = {},
+                f = null;
+
+            function I() {
+                return {
+                    _categories: [],
+                    null: []
+                }
+            }
+            let C = I();
+
+            function O(e, t) {
+                e.index = t
+            }
+
+            function N(e) {
+                let t = s.default.getChannels(e),
+                    n = I(),
+                    u = e => {
+                        var t;
+                        let {
+                            channel: u
+                        } = e, l = null !== (t = n[null != u.parent_id ? u.parent_id : "null"]) && void 0 !== t ? t : n.null;
+                        l.push({
+                            channel: u,
+                            index: -1
+                        })
+                    };
+                return t[c.ChannelTypes.GUILD_CATEGORY].forEach(e => {
+                    let {
+                        channel: t
+                    } = e;
+                    n._categories.push({
+                        channel: t,
+                        index: -1
+                    }), n[t.id] = []
+                }), t[0, s.GUILD_SELECTABLE_CHANNELS_KEY].forEach(u), t[0, s.GUILD_VOCAL_CHANNELS_KEY].forEach(u), (0, r.default)(n._categories, n).forEach(O), _[e] = n, n
+            }
+
+            function P() {
+                _ = {}, null != E && N(E)
+            }
+
+            function T(e) {
+                let {
+                    guild: {
+                        id: t
+                    }
+                } = e;
+                _[t] = void 0, E === t && N(t)
+            }
+
+            function A(e) {
+                let {
+                    channel: {
+                        guild_id: t
+                    }
+                } = e;
+                if (null == t) return !1;
+                _[t] = void 0, E === t && N(t)
+            }
+
+            function m(e) {
+                let {
+                    guildId: t
+                } = e;
+                _[t] = void 0, t === E && N(t)
+            }
+
+            function R(e, t) {
+                if (f = t, null == e || null == e.getGuildId()) return !1;
+                let n = e.getGuildId();
+                return null != n && (_[n] = void 0, n === E && N(n), !0)
+            }
+
+            function p() {
+                N(c.FAVORITES)
+            }
+            class S extends u.default.Store {
+                initialize() {
+                    this.waitFor(s.default, d.default, o.default, a.default, i.default), this.syncWith([i.default], p)
+                }
+                getCategories(e) {
+                    return null != e ? function(e) {
+                        let t = _[e];
+                        return null != t ? t : N(e)
+                    }(e) : C
+                }
+            }
+            S.displayName = "GuildCategoryStore";
+            var U = new S(l.default, {
+                CHANNEL_SELECT: function(e) {
+                    let {
+                        guildId: t
+                    } = e;
+                    if (E = null != t ? t : null, null == t || null != _[t]) return !1;
+                    N(t)
+                },
+                CONNECTION_OPEN: P,
+                OVERLAY_INITIALIZE: P,
+                CACHE_LOADED_LAZY: P,
+                GUILD_CREATE: T,
+                GUILD_UPDATE: T,
+                GUILD_DELETE: function(e) {
+                    let {
+                        guild: {
+                            id: t
+                        }
+                    } = e;
+                    delete _[t]
+                },
+                CHANNEL_CREATE: A,
+                CHANNEL_DELETE: A,
+                CHANNEL_UPDATES: function(e) {
+                    let {
+                        channels: t
+                    } = e, n = !1;
+                    for (let {
+                            guild_id: e
+                        }
+                        of t) null != e && (_[e] = void 0, n = !0, E === e && N(e));
+                    return n
+                },
+                GUILD_MEMBER_UPDATE: function(e) {
+                    let {
+                        guildId: t,
+                        user: n
+                    } = e;
+                    if (o.default.getId() !== n.id) return !1;
+                    _[t] = void 0, t === E && N(t)
+                },
+                CURRENT_USER_UPDATE: function() {
+                    if (null == E) return !1;
+                    N(E)
+                },
+                GUILD_ROLE_CREATE: m,
+                GUILD_ROLE_UPDATE: m,
+                GUILD_ROLE_DELETE: m,
+                IMPERSONATE_UPDATE: m,
+                IMPERSONATE_STOP: m,
+                VOICE_CHANNEL_SELECT: function(e) {
+                    let {
+                        channelId: t
+                    } = e;
+                    return null == t && null != f ? R(a.default.getChannel(f), null) : R(a.default.getChannel(t), t)
+                },
+                VOICE_STATE_UPDATES: function(e) {
+                    let {
+                        voiceStates: t
+                    } = e;
+                    return t.reduce((e, t) => {
+                        let {
+                            channelId: n,
+                            sessionId: u
+                        } = t;
+                        return o.default.getSessionId() !== u ? e : R(a.default.getChannel(n), n) || e
+                    }, !1)
+                }
+            })
+        },
+        171710: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return o
+                }
+            });
+            var u = n("37983");
+            n("884691");
+            var l = n("469563"),
+                r = n("253980"),
+                i = n("75196"),
+                o = (0, l.replaceIcon)(function(e) {
+                    let {
+                        width: t = 24,
+                        height: n = 24,
+                        color: l = "currentColor",
+                        foreground: r,
+                        ...o
+                    } = e;
+                    return (0, u.jsx)("svg", {
+                        ...(0, i.default)(o),
+                        width: t,
+                        height: n,
+                        viewBox: "0 0 24 24",
+                        children: (0, u.jsx)("path", {
+                            className: r,
+                            fill: l,
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                            d: "M12.291 5.70697L15.998 9.41397L21.705 3.70697L20.291 2.29297L15.998 6.58597L13.705 4.29297L12.291 5.70697ZM1.99805 7H11.088C11.564 9.837 14.025 12 16.998 12V18C16.998 19.103 16.102 20 14.998 20H8.33205L2.99805 24V20H1.99805C0.894047 20 -0.00195312 19.103 -0.00195312 18V9C-0.00195312 7.897 0.894047 7 1.99805 7Z"
+                        })
+                    })
+                }, r.ChatCheckIcon)
         }
     }
 ]);
