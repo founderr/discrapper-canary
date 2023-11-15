@@ -1,941 +1,668 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["21413"], {
-        27562: function(t, e, n) {
+    ["43870"], {
+        53708: function(t, e, r) {
             "use strict";
-            t.exports = n.p + "6adc630fe0534895ff0f.mp4"
+            t.exports = r.p + "f6c7b8245d3a54cf98b2.png"
         },
-        851703: function(t, e, n) {
+        688318: function(t, e, r) {
             "use strict";
-            t.exports = n.p + "f3c9e56752e6e7dae615.mp4"
-        },
-        902577: function(t, e, n) {
-            "use strict";
-            t.exports = n.p + "61220d00e627e7f4a440.png"
-        },
-        351288: function(t, e, n) {
-            "use strict";
-            t.exports = n.p + "c3f841e9edf0f8c90ca2.mp4"
-        },
-        595726: function(t, e, n) {
-            "use strict";
-            t.exports = n.p + "c694675351be2cd8923b.png"
-        },
-        462641: function(t, e, n) {
-            "use strict";
-            t.exports = n.p + "0a10740d903f2a7e3f1e.png"
-        },
-        95937: function(t, e, n) {
-            "use strict";
-            t.exports = n.p + "4c6d753b661bdac6ed49.png"
-        },
-        929461: function(t, e, n) {
-            "use strict";
-            t.exports = n.p + "a1aa5e5cf3f255bb84cd.mp4"
-        },
-        686298: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                ApplicationStreamResolutions: function() {
-                    return i
-                },
-                getApplicationResolution: function() {
-                    return _
-                },
-                ApplicationStreamFPS: function() {
-                    return u
-                },
-                ApplicationStreamPresets: function() {
-                    return r
-                },
-                getApplicationFramerate: function() {
-                    return f
-                },
-                ApplicationStreamPresetValues: function() {
-                    return E
-                },
-                ApplicationStreamSettingRequirements: function() {
-                    return p
-                },
-                ApplicationStreamResolutionButtons: function() {
-                    return S
-                },
-                GoLiveDeviceResolutionButtons: function() {
-                    return T
-                },
-                ApplicationStreamResolutionButtonsWithSuffixLabel: function() {
-                    return I
-                },
-                ApplicationStreamFPSButtons: function() {
-                    return g
-                },
-                ApplicationStreamFPSButtonsWithSuffixLabel: function() {
-                    return R
-                }
-            }), n("70102");
-            var i, u, r, o, a, s, l = n("49111"),
-                d = n("646718"),
-                c = n("782340");
-
-            function _(t) {
-                switch (t) {
-                    case 480:
-                        return 480;
-                    case 720:
-                        return 720;
-                    case 1080:
-                        return 1080;
-                    case 0:
-                        return 0;
-                    default:
-                        throw Error("Unknown resolution: ".concat(t))
-                }
-            }
-
-            function f(t) {
-                switch (t) {
-                    case 5:
-                        return 5;
-                    case 15:
-                        return 15;
-                    case 30:
-                        return 30;
-                    case 60:
-                        return 60;
-                    default:
-                        throw Error("Unknown frame rate: ".concat(t))
-                }
-            }(o = i || (i = {}))[o.RESOLUTION_480 = 480] = "RESOLUTION_480", o[o.RESOLUTION_720 = 720] = "RESOLUTION_720", o[o.RESOLUTION_1080 = 1080] = "RESOLUTION_1080", o[o.RESOLUTION_1440 = 1440] = "RESOLUTION_1440", o[o.RESOLUTION_SOURCE = 0] = "RESOLUTION_SOURCE", (a = u || (u = {}))[a.FPS_5 = 5] = "FPS_5", a[a.FPS_15 = 15] = "FPS_15", a[a.FPS_30 = 30] = "FPS_30", a[a.FPS_60 = 60] = "FPS_60", (s = r || (r = {}))[s.PRESET_VIDEO = 1] = "PRESET_VIDEO", s[s.PRESET_DOCUMENTS = 2] = "PRESET_DOCUMENTS", s[s.PRESET_CUSTOM = 3] = "PRESET_CUSTOM";
-            let E = {
-                    2: [{
-                        resolution: 0,
-                        fps: 15
-                    }, {
-                        resolution: 0,
-                        fps: 5
-                    }],
-                    1: [{
-                        resolution: 1440,
-                        fps: 60
-                    }, {
-                        resolution: 1080,
-                        fps: 60
-                    }, {
-                        resolution: 720,
-                        fps: 60
-                    }, {
-                        resolution: 720,
-                        fps: 30
-                    }],
-                    3: []
-                },
-                p = [{
-                    resolution: 0,
-                    fps: 60,
-                    quality: d.StreamQualities.HIGH_STREAMING_QUALITY
-                }, {
-                    resolution: 0,
-                    fps: 30,
-                    quality: d.StreamQualities.HIGH_STREAMING_QUALITY
-                }, {
-                    resolution: 0,
-                    fps: 15,
-                    quality: d.StreamQualities.HIGH_STREAMING_QUALITY
-                }, {
-                    resolution: 0,
-                    fps: 5,
-                    preset: 2
-                }, {
-                    resolution: 1440,
-                    fps: 60,
-                    guildPremiumTier: l.BoostedGuildTiers.TIER_2,
-                    quality: d.StreamQualities.MID_STREAMING_QUALITY
-                }, {
-                    resolution: 1440,
-                    fps: 30,
-                    guildPremiumTier: l.BoostedGuildTiers.TIER_2,
-                    quality: d.StreamQualities.MID_STREAMING_QUALITY
-                }, {
-                    resolution: 1440,
-                    fps: 15,
-                    guildPremiumTier: l.BoostedGuildTiers.TIER_2,
-                    quality: d.StreamQualities.MID_STREAMING_QUALITY
-                }, {
-                    resolution: 1080,
-                    fps: 60,
-                    guildPremiumTier: l.BoostedGuildTiers.TIER_2,
-                    quality: d.StreamQualities.MID_STREAMING_QUALITY
-                }, {
-                    resolution: 1080,
-                    fps: 30,
-                    guildPremiumTier: l.BoostedGuildTiers.TIER_2,
-                    quality: d.StreamQualities.MID_STREAMING_QUALITY
-                }, {
-                    resolution: 1080,
-                    fps: 15,
-                    guildPremiumTier: l.BoostedGuildTiers.TIER_2,
-                    quality: d.StreamQualities.MID_STREAMING_QUALITY
-                }, {
-                    resolution: 720,
-                    fps: 60,
-                    guildPremiumTier: l.BoostedGuildTiers.TIER_1,
-                    quality: d.StreamQualities.MID_STREAMING_QUALITY
-                }, {
-                    resolution: 720,
-                    fps: 30
-                }, {
-                    resolution: 720,
-                    fps: 15
-                }, {
-                    resolution: 720,
-                    fps: 5
-                }, {
-                    resolution: 480,
-                    fps: 60,
-                    guildPremiumTier: l.BoostedGuildTiers.TIER_1,
-                    quality: d.StreamQualities.MID_STREAMING_QUALITY
-                }, {
-                    resolution: 480,
-                    fps: 30
-                }, {
-                    resolution: 480,
-                    fps: 15
-                }, {
-                    resolution: 480,
-                    fps: 5
-                }];
-
-            function A(t, e) {
-                return {
-                    value: t,
-                    get label() {
-                        return null != e ? e() : t
-                    }
-                }
-            }
-            let S = [A(720), A(1080), A(1440), A(0, () => c.default.Messages.SCREENSHARE_SOURCE)],
-                T = [A(720), A(1080), A(1440)],
-                O = t => "".concat(t, "p"),
-                I = [A(480, () => O(480)), A(720, () => O(720)), A(1080, () => O(1080)), A(1440, () => O(1440)), A(0, () => c.default.Messages.SCREENSHARE_SOURCE)],
-                g = [A(15), A(30), A(60)],
-                R = [A(15, () => c.default.Messages.STREAM_FPS_OPTION.format({
-                    value: 15
-                })), A(30, () => c.default.Messages.STREAM_FPS_OPTION.format({
-                    value: 30
-                })), A(60, () => c.default.Messages.STREAM_FPS_OPTION.format({
-                    value: 60
-                }))]
-        },
-        504385: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                snapVolumeToDefault: function() {
-                    return a
-                },
-                coerceAudioContextForProto: function() {
+            r.r(e), r.d(e, {
+                default: function() {
                     return s
                 }
-            });
-            var i = n("938850"),
-                u = n("773364"),
-                r = n("829536"),
-                o = n("397336");
-
-            function a(t, e) {
-                let n = e === u.MediaEngineContextTypes.STREAM ? i.AudioSettingsDefaultVolumes.STREAM : i.AudioSettingsDefaultVolumes.USER;
-                return 1 > Math.abs((0, r.amplitudeToPerceptual)(n) - (0, r.amplitudeToPerceptual)(t)) ? n : t
-            }
-
-            function s(t) {
-                switch (t) {
-                    case u.MediaEngineContextTypes.DEFAULT:
-                        return o.ProtoAudioSettingsContextTypes.USER;
-                    case u.MediaEngineContextTypes.STREAM:
-                        return o.ProtoAudioSettingsContextTypes.STREAM;
-                    default:
-                        return
+            }), r("222007");
+            var n = r("884691"),
+                o = r("446674"),
+                i = r("206230"),
+                u = r("91653"),
+                a = r("471671"),
+                l = r("315102"),
+                c = r("53708"),
+                s = t => {
+                    let {
+                        user: e,
+                        size: r,
+                        animateOnHover: s = !1,
+                        showPending: T = !1,
+                        showTryItOut: E = !1,
+                        avatarDecorationOverride: _
+                    } = t, [S, d] = n.useState(!1), C = (0, o.useStateFromStores)([i.default], () => i.default.useReducedMotion), I = (0, o.useStateFromStores)([a.default], () => a.default.isFocused()), {
+                        pendingAvatarDecoration: A
+                    } = (0, u.default)({
+                        isTryItOut: E
+                    }), f = I && (S || !C && !s), N = T && void 0 !== A ? A : null == e ? void 0 : e.avatarDecoration, O = n.useMemo(() => (0, l.getAvatarDecorationURL)({
+                        avatarDecoration: void 0 !== _ ? _ : N,
+                        canAnimate: f,
+                        size: r
+                    }), [N, f, r, _]), R = n.useCallback(() => d(!0), []), v = n.useCallback(() => d(!1), []);
+                    return {
+                        avatarPlaceholderSrc: c,
+                        avatarDecorationSrc: O,
+                        isAvatarDecorationAnimating: f,
+                        eventHandlers: {
+                            onMouseEnter: R,
+                            onMouseLeave: v
+                        }
+                    }
                 }
-            }
         },
-        659558: function(t, e, n) {
+        853987: function(t, e, r) {
             "use strict";
-            n.r(e), n.d(e, {
-                getLastUsedVideoBackgroundOption: function() {
+            let n, o;
+            r.r(e), r.d(e, {
+                default: function() {
+                    return N
+                }
+            }), r("222007"), r("808653"), r("424973");
+            var i = r("917351"),
+                u = r("635058"),
+                a = r("446674"),
+                l = r("913144"),
+                c = r("491232");
+            let s = new Map,
+                T = new Map,
+                E = {},
+                _ = new Map,
+                S = s,
+                d = T,
+                C = E,
+                I = _,
+                A = !1;
+            class f extends a.default.Store {
+                get isFetching() {
+                    return A
+                }
+                get error() {
+                    return n
+                }
+                get lastFetched() {
                     return o
                 }
-            }), n("884691"), n("446674");
-            var i = n("374363");
-            n("697218");
-            var u = n("719923"),
-                r = n("239448");
-
-            function o(t) {
-                var e;
-                let n = i.default.settings;
-                return function(t, e) {
-                    let n = (0, r.getVideoBackgroundOptionFromProto)(t, e.id);
-                    return (0, r.isCustomBackgroundOption)(n) && !u.default.canUseCustomBackgrounds(e) ? null : "number" != typeof n || (0, r.isDefaultBackgroundOption)(n) ? n : null
-                }(null === (e = n.voiceAndVideo) || void 0 === e ? void 0 : e.videoBackgroundFilterDesktop, t)
-            }
-        },
-        154867: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                fetchVideoFilterAssets: function() {
-                    return _
-                },
-                uploadVideoFilterAsset: function() {
-                    return f
-                },
-                deleteVideoFilterAsset: function() {
-                    return E
-                },
-                saveLastUsedBackgroundOption: function() {
-                    return p
-                },
-                applyMediaFilterSettings: function() {
-                    return A
-                },
-                startApplyMediaFilterSettings: function() {
+                get categories() {
                     return S
+                }
+                get products() {
+                    return d
+                }
+                get categorySkuIdsByProductSkuId() {
+                    return C
+                }
+                get productsByItemTypeAndCategory() {
+                    return I
+                }
+                getCategory(t) {
+                    return null != t ? S.get(t) : void 0
+                }
+                getProduct(t) {
+                    return null != t ? d.get(t) : void 0
+                }
+                getCategoryForProduct(t) {
+                    return null != t ? this.getCategory(C[t]) : void 0
+                }
+                getProductsByItemType(t) {
+                    return null != t && u.CollectiblesCategorySkuIdSets.ALL.has(t) ? I.get(t) : void 0
+                }
+            }
+            f.displayName = "CollectiblesCategoryStore";
+            var N = new f(l.default, {
+                COLLECTIBLES_CATEGORIES_FETCH: t => {
+                    A = !0, n = void 0
                 },
-                errorApplyingMediaFilterSettings: function() {
-                    return T
-                }
-            });
-            var i = n("872717"),
-                u = n("913144"),
-                r = n("872173"),
-                o = n("42887"),
-                a = n("697218"),
-                s = n("659558"),
-                l = n("239448"),
-                d = n("407756"),
-                c = n("49111");
-            async function _() {
-                let t = await i.default.get(c.Endpoints.VIDEO_FILTER_ASSETS);
-                return u.default.dispatch({
-                    type: "VIDEO_FILTER_ASSETS_FETCH_SUCCESS",
-                    assets: t.body
-                }), t
-            }
-            async function f(t, e, n) {
-                try {
-                    let r = await i.default.post({
-                        url: c.Endpoints.VIDEO_FILTER_ASSETS,
-                        body: {
-                            type: e,
-                            asset: t,
-                            last_used: null == n ? void 0 : n.toISOString()
-                        }
-                    });
-                    return u.default.dispatch({
-                        type: "VIDEO_FILTER_ASSET_UPLOAD_SUCCESS",
-                        videoFilterAsset: r.body
-                    }), r.body
-                } catch (t) {
-                    throw new d.default(t)
-                }
-            }
-            async function E(t) {
-                await i.default.delete(c.Endpoints.VIDEO_FILTER_ASSET(t.id));
-                let e = (0, s.getLastUsedVideoBackgroundOption)(a.default.getCurrentUser());
-                (0, l.isCustomBackgroundOption)(e) && e.id === t.id && p(null), u.default.dispatch({
-                    type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS",
-                    videoFilterAsset: t
-                })
-            }
-            async function p(t) {
-                if (await r.PreloadedUserSettingsActionCreators.updateAsync("voiceAndVideo", e => {
-                        e.videoBackgroundFilterDesktop = (0, l.getVideoBackgroundProtoFromOption)(t)
-                    }, r.UserSettingsDelay.FREQUENT_USER_ACTION), (0, l.isCustomBackgroundOption)(t)) {
-                    let e = await i.default.post(c.Endpoints.VIDEO_FILTER_ASSET_LAST_USED(t.id));
-                    u.default.dispatch({
-                        type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION",
-                        backgroundOption: e.body
-                    })
-                } else u.default.dispatch({
-                    type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION",
-                    backgroundOption: t
-                })
-            }
-
-            function A(t) {
-                o.default.isSupported() && u.default.dispatch({
-                    type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS",
-                    settings: t
-                })
-            }
-
-            function S() {
-                o.default.isSupported() && u.default.dispatch({
-                    type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START"
-                })
-            }
-
-            function T() {
-                u.default.dispatch({
-                    type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR"
-                })
-            }
-        },
-        870879: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return T
-                }
-            }), n("808653");
-            var i = n("446674"),
-                u = n("773364"),
-                r = n("913144"),
-                o = n("374363"),
-                a = n("42887"),
-                s = n("18494"),
-                l = n("697218"),
-                d = n("239448");
-            let c = !1,
-                _ = null,
-                f = !1,
-                E = {};
-
-            function p(t) {
-                var e;
-                let n = l.default.getCurrentUser();
-                if (null == n) return !1;
-                let i = null != t ? t : (0, d.getVideoBackgroundOptionFromProto)(null === (e = o.default.settings.voiceAndVideo) || void 0 === e ? void 0 : e.videoBackgroundFilterDesktop, n.id);
-                return null != s.default.getVoiceChannelId() && a.default.isVideoEnabled() && null != i
-            }
-
-            function A() {
-                _ !== s.default.getVoiceChannelId() && (f = !1), p() && (f = !0), _ = s.default.getVoiceChannelId()
-            }
-            class S extends i.default.Store {
-                initialize() {
-                    this.waitFor(o.default, s.default, a.default), this.syncWith([s.default, a.default], A)
-                }
-                get videoFilterAssets() {
-                    return E
-                }
-                get hasBeenApplied() {
-                    return c
-                }
-                get hasUsedBackgroundInCall() {
-                    return f
-                }
-            }
-            S.displayName = "VideoBackgroundStore";
-            var T = new S(r.default, {
-                VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function(t) {
-                    let {
-                        assets: e
-                    } = t;
-                    E = e.reduce((t, e) => ({
-                        ...t,
-                        [e.id]: e
-                    }), {})
+                COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: t => {
+                    0 === t.categories.length ? (S = s, d = T, C = E, I = _) : !(0, i.isEqual)([...S.values()], t.categories) && (S = new Map(t.categories.map(t => [t.skuId, t])), d = new Map((0, c.getProductsFromCategories)(S).map(t => [t.skuId, t])), C = t.categories.reduce((t, e) => (e.products.forEach(r => {
+                        t[r.skuId] = e.skuId
+                    }), t), {}), t.categories.forEach(t => {
+                        let e = t.products.reduce((t, e) => {
+                            if (e.items.length > 0) {
+                                var r;
+                                let n = e.items[0].type;
+                                t[n] = null !== (r = t[n]) && void 0 !== r ? r : [], t[n].push(e)
+                            }
+                            return t
+                        }, {});
+                        I.set(t.skuId, e)
+                    })), o = Date.now(), A = !1, n = void 0
                 },
-                VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: function(t) {
+                COLLECTIBLES_CATEGORIES_FETCH_FAILURE: t => {
                     let {
-                        videoFilterAsset: e
+                        error: e
                     } = t;
-                    E = {
-                        ...E,
-                        [e.id]: e
-                    }
+                    S = s, d = T, C = E, I = _, A = !1, n = e
                 },
-                VIDEO_FILTER_ASSET_DELETE_SUCCESS: function(t) {
-                    let {
-                        videoFilterAsset: e
-                    } = t;
-                    E = {
-                        ...E
-                    }, delete E[e.id]
+                COLLECTIBLES_PRODUCT_FETCH: t => {
+                    A = !0, n = void 0
                 },
-                VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: function(t) {
-                    let {
-                        backgroundOption: e
-                    } = t;
-                    p(e) && (f = !0)
+                COLLECTIBLES_PRODUCT_FETCH_SUCCESS: t => {
+                    d.set(t.product.skuId, t.product), A = !1, n = void 0
                 },
-                MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function(t) {
+                COLLECTIBLES_PRODUCT_FETCH_FAILURE: t => {
                     let {
-                        settings: e
+                        error: e
                     } = t;
-                    u.FilterSettingsKey.CAMERA_BACKGROUND_LIVE in e && (c = !0)
+                    A = !1, n = e
+                },
+                LOGOUT: t => {
+                    S = s, d = T, C = E, I = _, o = void 0, A = !1, n = void 0
                 }
             })
         },
-        239448: function(t, e, n) {
+        491232: function(t, e, r) {
             "use strict";
-            n.r(e), n.d(e, {
-                isCustomBackgroundOption: function() {
-                    return d
-                },
-                isDefaultBackgroundOption: function() {
-                    return c
-                },
-                getEffectAnalyticsType: function() {
-                    return f
-                },
-                getEffectDetailAnalyticsName: function() {
-                    return E
-                },
-                trackBackgroundOptionUpdated: function() {
-                    return p
-                },
-                trackBackgroundOptionAdded: function() {
-                    return A
-                },
-                trackBackgroundOptionDeleted: function() {
-                    return S
-                },
-                getVideoBackgroundProtoFromOption: function() {
+            r.r(e), r.d(e, {
+                isPremiumCollectiblesCategory: function() {
                     return T
                 },
-                getVideoBackgroundOptionFromProto: function() {
+                isPremiumCollectiblesPurchase: function() {
+                    return E
+                },
+                getFormattedPriceForCollectiblesProduct: function() {
+                    return _
+                },
+                extractPriceByPurchaseTypes: function() {
+                    return S
+                },
+                getProductsFromCategories: function() {
+                    return d
+                },
+                getAvatarDecorationsFromPurchases: function() {
+                    return A
+                },
+                getAvatarDecorationsFromCategories: function() {
+                    return f
+                },
+                getCollectiblesAssetURL: function() {
+                    return N
+                },
+                getProfileEffectsFromPurchases: function() {
                     return O
+                },
+                getProfileEffectsFromCategories: function() {
+                    return R
+                },
+                groupProfileEffects: function() {
+                    return v
+                }
+            }), r("222007");
+            var n = r("917351"),
+                o = r("635058"),
+                i = r("265586"),
+                u = r("407063"),
+                a = r("153160"),
+                l = r("730297"),
+                c = r("806410"),
+                s = r("49111");
+            let T = t => (null == t ? void 0 : t.skuId) === o.CollectiblesCategorySkuId.DISXCORE,
+                E = t => (null == t ? void 0 : t.purchaseType) === s.EntitlementTypes.PREMIUM_PURCHASE,
+                _ = (t, e) => {
+                    let r = S(t, e ? s.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2 : s.PriceSetAssignmentPurchaseTypes.DEFAULT);
+                    return null == r ? "" : (0, a.formatPrice)(null == r ? void 0 : r.amount, null == r ? void 0 : r.currency)
+                },
+                S = (t, e) => {
+                    var r, n, o;
+                    let i = null !== (o = t.prices[e]) && void 0 !== o ? o : null;
+                    return null == i ? null : null === (n = i.countryPrices) || void 0 === n ? void 0 : null === (r = n.prices) || void 0 === r ? void 0 : r[0]
+                },
+                d = t => {
+                    let e = (0, n.flatMap)([...t.values()], "products");
+                    return (0, n.uniqBy)(e, "storeListingId")
+                },
+                C = (t, e) => {
+                    if (e === i.CollectiblesItemType.AVATAR_DECORATION) {
+                        let e = (0, n.flatMap)([...t.values()], "items").filter(l.isAvatarDecorationRecord);
+                        return (0, n.uniqBy)(e, "id")
+                    }
+                    if (e === i.CollectiblesItemType.PROFILE_EFFECT) {
+                        let e = (0, n.flatMap)([...t.values()], "items").filter(c.isProfileEffectRecord);
+                        return (0, n.uniqBy)(e, "id")
+                    }
+                },
+                I = (t, e) => {
+                    let r = d(t);
+                    if (e === i.CollectiblesItemType.AVATAR_DECORATION) {
+                        let t = (0, n.flatMap)(r, "items").filter(l.isAvatarDecorationRecord);
+                        return (0, n.uniqBy)(t, "id")
+                    }
+                    if (e === i.CollectiblesItemType.PROFILE_EFFECT) {
+                        let t = (0, n.flatMap)(r, "items").filter(c.isProfileEffectRecord);
+                        return (0, n.uniqBy)(t, "id")
+                    }
+                },
+                A = t => C(t, i.CollectiblesItemType.AVATAR_DECORATION),
+                f = t => I(t, i.CollectiblesItemType.AVATAR_DECORATION),
+                N = (t, e) => {
+                    var r;
+                    let {
+                        CDN_HOST: n,
+                        API_ENDPOINT: o
+                    } = window.GLOBAL_ENV, i = (0, u.getBestMediaProxySize)(e.size * (0, u.getDevicePixelRatio)()), a = null !== (r = null == e ? void 0 : e.format) && void 0 !== r ? r : "png";
+                    if (null != n) return "".concat(location.protocol, "//").concat(n, "/app-assets/").concat(s.COLLECTIBLES_APPLICATION_ID, "/").concat(t, ".").concat(a, "?size=").concat(i);
+                    let l = s.Endpoints.APPLICATION_ASSET(s.COLLECTIBLES_APPLICATION_ID, t, a);
+                    return "".concat(location.protocol).concat(o).concat(l, "?size=").concat(i)
+                },
+                O = t => C(t, i.CollectiblesItemType.PROFILE_EFFECT),
+                R = t => I(t, i.CollectiblesItemType.PROFILE_EFFECT),
+                v = (t, e) => {
+                    let r = O(e),
+                        n = R(t).filter(t => {
+                            let {
+                                id: e
+                            } = t;
+                            return !r.some(t => t.id === e)
+                        });
+                    return {
+                        purchased: r,
+                        shopPreviews: n
+                    }
+                }
+        },
+        170313: function(t, e, r) {
+            "use strict";
+            r.r(e), r.d(e, {
+                default: function() {
+                    return E
+                }
+            }), r("222007"), r("794252");
+            var n = r("884691"),
+                o = r("506838"),
+                i = r("265586"),
+                u = r("65597"),
+                a = r("599110"),
+                l = r("853987"),
+                c = r("491232"),
+                s = r("49111"),
+                T = r("646718"),
+                E = t => {
+                    let [e, r, E] = (0, u.useStateFromStoresArray)([l.default], () => [l.default.categories, l.default.products, l.default.categorySkuIdsByProductSkuId]);
+                    return (0, n.useCallback)(n => {
+                        let {
+                            type: u,
+                            skuId: l
+                        } = n, _ = e.get(E[l]), S = r.get(l);
+                        a.default.track(s.AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, {
+                            feature_name: (0, o.match)(u).with(i.CollectiblesItemType.AVATAR_DECORATION, () => T.AnalyticsPremiumFeatureNames.AVATAR_DECORATION).otherwise(() => void 0),
+                            feature_tier: (0, c.isPremiumCollectiblesCategory)(_) ? T.AnalyticsPremiumFeatureTiers.FREE : T.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD,
+                            feature_selection: null == S ? void 0 : S.name,
+                            location_stack: t
+                        })
+                    }, [e, r, E, t])
+                }
+        },
+        730297: function(t, e, r) {
+            "use strict";
+            r.r(e), r.d(e, {
+                isAvatarDecorationRecord: function() {
+                    return u
+                },
+                default: function() {
+                    return n
                 }
             });
-            var i = n("716241"),
-                u = n("42203"),
-                r = n("945956"),
-                o = n("599110"),
-                a = n("315102"),
-                s = n("917219"),
-                l = n("49111");
-
-            function d(t) {
-                return null != t && "object" == typeof t && "id" in t && t.type === s.VideoFilterType.BACKGROUND
-            }
-
-            function c(t) {
-                return "number" == typeof t && t in s.DefaultVideoBackground
-            }
-
-            function _(t) {
-                return c(t) ? s.ANIMATED_DEFAULT_VIDEO_BACKGROUNDS.includes(t) : !!d(t) && ((0, a.isAnimatedIconHash)(t.asset) || (0, a.isVideoAssetHash)(t.asset))
-            }
-
-            function f(t) {
-                return null != t ? "Video Background" : "None"
-            }
-
-            function E(t) {
-                if (null == t) return "None";
-                if (d(t)) return "Custom";
-                if ("blur" === t) return "Blur";
-                else return "Preset - ".concat(function(t) {
-                    switch (t) {
-                        case s.DefaultVideoBackground.OPTION_1:
-                            return "Cybercity";
-                        case s.DefaultVideoBackground.OPTION_2:
-                            return "Discord the Movie";
-                        case s.DefaultVideoBackground.OPTION_3:
-                            return "Wumpus Vacation";
-                        case s.DefaultVideoBackground.OPTION_4:
-                            return "Vaporwave";
-                        case s.DefaultVideoBackground.OPTION_7:
-                            return "Capernite Day";
-                        case s.DefaultVideoBackground.OPTION_8:
-                            return "Capernite Night";
-                        case s.DefaultVideoBackground.OPTION_9:
-                            return "Hacker Den";
-                        case s.DefaultVideoBackground.OPTION_10:
-                            return "Wumpice"
-                    }
-                }(t))
-            }
-
-            function p(t, e, n) {
-                let a = r.default.getGuildId(),
-                    s = r.default.getChannelId(),
-                    d = u.default.getChannel(s),
-                    c = (0, i.getVoiceStateMetadata)(a, s, !0);
-                o.default.track(l.AnalyticEvents.VIDEO_EFFECT_UPDATED, {
-                    location: e,
-                    effect_type: f(t),
-                    effect_detail: E(t),
-                    effect_state: n,
-                    channel_id: s,
-                    channel_type: null == d ? void 0 : d.type,
-                    guild_id: a,
-                    voice_state_count: c.voice_state_count,
-                    video_stream_count: c.video_stream_count,
-                    media_session_id: r.default.getMediaSessionId(),
-                    rtc_connection_id: r.default.getRTCConnectionId(),
-                    is_animated: _(t)
-                })
-            }
-
-            function A(t, e, n) {
-                o.default.track(l.AnalyticEvents.VIDEO_BACKGROUND_ADDED, {
-                    is_animated: _(t),
-                    is_video: e,
-                    is_from_tenor: n
-                })
-            }
-
-            function S(t) {
-                o.default.track(l.AnalyticEvents.VIDEO_BACKGROUND_DELETED, {
-                    is_animated: _(t)
-                })
-            }
-
-            function T(t) {
-                if (null == t) return {
-                    oneofKind: void 0
-                };
-                if (d(t)) return {
-                    oneofKind: "customAsset",
-                    customAsset: {
-                        id: t.id,
-                        assetHash: t.asset
-                    }
-                };
-                if ("blur" === t) return {
-                    oneofKind: "blur",
-                    blur: {
-                        useBlur: !0
-                    }
-                };
-                else return {
-                    oneofKind: "presetOption",
-                    presetOption: t
+            var n, o = r("265586"),
+                i = r("200410");
+            let u = t => t instanceof n;
+            n = class t extends i.default {
+                static fromServer(e) {
+                    return new t({
+                        ...super.fromServer(e),
+                        ...e
+                    })
                 }
-            }
-
-            function O(t, e) {
-                if (null == t || void 0 === t.oneofKind) return null;
-                switch (t.oneofKind) {
-                    case "customAsset":
-                        return {
-                            type: s.VideoFilterType.BACKGROUND, id: t.customAsset.id, user_id: e, asset: t.customAsset.assetHash
-                        };
-                    case "blur":
-                        return t.blur.useBlur ? "blur" : null;
-                    case "presetOption":
-                        return t.presetOption
+                constructor(t) {
+                    super(t), this.type = o.CollectiblesItemType.AVATAR_DECORATION, this.asset = t.asset, this.label = t.label
                 }
             }
         },
-        407756: function(t, e, n) {
+        200410: function(t, e, r) {
             "use strict";
-            n.r(e), n.d(e, {
+            r.r(e), r.d(e, {
+                default: function() {
+                    return n
+                }
+            });
+            var n, o = r("666038");
+            n = class t extends o.default {
+                static fromServer(e) {
+                    let {
+                        sku_id: r,
+                        ...n
+                    } = e;
+                    return new t({
+                        ...n,
+                        skuId: r
+                    })
+                }
+                constructor(t) {
+                    super(), this.id = t.id, this.skuId = t.skuId
+                }
+            }
+        },
+        806410: function(t, e, r) {
+            "use strict";
+            r.r(e), r.d(e, {
+                isProfileEffectRecord: function() {
+                    return u
+                },
+                default: function() {
+                    return n
+                }
+            });
+            var n, o = r("265586"),
+                i = r("200410");
+            let u = t => t instanceof n;
+            n = class t extends i.default {
+                static fromServer(e) {
+                    return new t({
+                        ...super.fromServer(e),
+                        ...e
+                    })
+                }
+                constructor(t) {
+                    super(t), this.type = o.CollectiblesItemType.PROFILE_EFFECT
+                }
+            }
+        },
+        91653: function(t, e, r) {
+            "use strict";
+            r.r(e), r.d(e, {
                 default: function() {
                     return s
                 }
             });
-            var i, u, r = n("872717"),
-                o = n("782340");
-            (i || (i = {})).ASSET_SIZE = "BINARY_TYPE_MAX_SIZE", (u || (u = {})).ASSET = "asset";
-            class a extends r.default.V8APIError {
-                constructor(t, e) {
-                    var n;
-                    super(t, e, o.default.Messages.VIDEO_BACKGROUND_ERROR_UPLOAD);
-                    let i = this.getFieldErrors("asset");
-                    null != i && (null === (n = i[0]) || void 0 === n ? void 0 : n.code) === "BINARY_TYPE_MAX_SIZE" && (this.message = o.default.Messages.VIDEO_BACKGROUND_ERROR_UPLOAD_FILE_SIZE)
-                }
-            }
-            var s = a
-        },
-        439141: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                applyBackgroundOptionLive: function() {
-                    return O
-                },
-                applyBackgroundOptionPreview: function() {
-                    return I
-                },
-                applyInitialVideoBackgroundOption: function() {
-                    return g
-                }
-            }), n("332822"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341");
-            var i = n("627445"),
-                u = n.n(i),
-                r = n("773364"),
-                o = n("697218"),
-                a = n("315102"),
-                s = n("659558"),
-                l = n("154867"),
-                d = n("870879"),
-                c = n("239448"),
-                _ = n("977801"),
-                f = n("512244"),
-                E = n("917219"),
-                p = n("49111");
-            async function A(t) {
-                let e = await fetch(t),
-                    n = await e.blob();
-                return new Uint8ClampedArray(await n.arrayBuffer())
-            }
-
-            function S(t, e, n, i, u) {
-                (0, l.applyMediaFilterSettings)({
-                    [t]: {
-                        graph: n,
-                        target: e,
-                        image: i,
-                        blob: u
+            var n = r("884691"),
+                o = r("65597"),
+                i = r("170313"),
+                u = r("906932"),
+                a = r("790618"),
+                l = r("697218"),
+                c = r("783142"),
+                s = t => {
+                    let {
+                        isTryItOut: e,
+                        analyticsLocations: r
+                    } = t, s = (0, o.default)([l.default], () => l.default.getCurrentUser()), T = (0, i.default)(r), {
+                        pendingAvatar: E,
+                        pendingAvatarDecoration: _
+                    } = (0, o.useStateFromStoresObject)([a.default], () => ({
+                        pendingAvatar: e ? a.default.getTryItOutAvatar() : a.default.getPendingAvatar(),
+                        pendingAvatarDecoration: e ? a.default.getTryItOutAvatarDecoration() : a.default.getPendingAvatarDecoration()
+                    })), S = (0, n.useCallback)(t => (0, u.setNewPendingAvatar)(t, null == s ? void 0 : s.avatar), [null == s ? void 0 : s.avatar]), d = (0, n.useCallback)(t => {
+                        (0, u.setNewPendingAvatarDecoration)(t, null == s ? void 0 : s.avatarDecoration), null != t && T(t)
+                    }, [null == s ? void 0 : s.avatarDecoration, T]);
+                    return {
+                        pendingAvatar: E,
+                        pendingAvatarDecoration: _,
+                        setPendingAvatar: e ? c.setTryItOutAvatar : S,
+                        setPendingAvatarDecoration: e ? c.setTryItOutAvatarDecoration : d
                     }
-                })
-            }
-            async function T(t, e, n) {
-                var i, o;
-                let s, d = !1;
-                if (null == n) return S(t, e, r.FilterSettingsGraph.NONE);
-                if (n === E.BLUR_BACKGROUND_OPTION) return S(t, e, r.FilterSettingsGraph.BACKGROUND_BLUR);
-                if ("string" == typeof n || "number" == typeof n) {
-                    ;
-                    let t = (0, _.default)()[n];
-                    d = null !== (i = t.isVideo) && void 0 !== i && i, s = t.source
-                } else {
-                    let t = n.asset;
-                    d = (0, a.isAnimatedIconHash)(t) || (0, a.isVideoAssetHash)(t), s = (0, a.getVideoFilterAssetURL)({
-                        userId: n.user_id,
-                        assetId: n.id,
-                        assetHash: t,
-                        size: E.BACKGROUND_REPLACEMENT_SIZE.width
-                    })
                 }
-                if (null != s) try {
-                    ;
-                    let n = d ? void 0 : await (o = s, new Promise((t, e) => {
-                            let n = new Image;
-                            n.crossOrigin = "anonymous", n.onload = () => {
-                                let e = document.createElement("canvas");
-                                e.width = E.BACKGROUND_REPLACEMENT_SIZE.width, e.height = E.BACKGROUND_REPLACEMENT_SIZE.height;
-                                let i = e.getContext("2d");
-                                u(null != i, "Canvas context is missing");
-                                let r = n.height / n.width,
-                                    o = E.BACKGROUND_REPLACEMENT_SIZE.height,
-                                    a = E.BACKGROUND_REPLACEMENT_SIZE.height / r,
-                                    s = (e.width - a) / 2,
-                                    l = (e.height - o) / 2;
-                                i.drawImage(n, s, l, a, o);
-                                let d = i.getImageData(0, 0, e.width, e.height);
-                                t({
-                                    data: d.data,
-                                    width: d.width,
-                                    height: d.height,
-                                    pixelFormat: "rgba"
-                                })
-                            }, n.onerror = t => e(t), n.src = o
-                        })),
-                        i = d ? await A(s) : void 0;
-                    S(t, e, r.FilterSettingsGraph.BACKGROUND_REPLACEMENT, n, i)
-                } catch (t) {
-                    (0, l.errorApplyingMediaFilterSettings)()
+        },
+        790618: function(t, e, r) {
+            "use strict";
+            let n, o, i, u, a, l, c, s, T, E, _, S, d, C;
+            r.r(e), r.d(e, {
+                default: function() {
+                    return F
                 }
-            }
-            async function O(t, e) {
-                let {
-                    track: n = !0,
-                    location: i
-                } = e;
-                await T(r.FilterSettingsKey.CAMERA_BACKGROUND_LIVE, {
-                    type: r.FilterTargetType.INPUT_DEVICE
-                }, t), n && (0, c.trackBackgroundOptionUpdated)(t, i, "Enabled")
-            }
-            async function I(t, e, n) {
-                let {
-                    track: i = !0,
-                    location: u
-                } = n;
-                (0, l.startApplyMediaFilterSettings)(), await T(r.FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW, {
-                    type: r.FilterTargetType.STREAM,
-                    streamId: e
-                }, t), i && (0, c.trackBackgroundOptionUpdated)(t, u, "Preview")
+            });
+            var I = r("446674"),
+                A = r("913144"),
+                f = r("49111");
+            let N = f.FormStates.CLOSED,
+                O = {},
+                R = !1;
+
+            function v() {
+                N = f.FormStates.OPEN, O = {}
             }
 
             function g() {
-                let t = o.default.getCurrentUser();
-                if (null == t) return;
-                let e = (0, s.getLastUsedVideoBackgroundOption)(t);
-                (0, f.default)() && !d.default.hasBeenApplied && null != e && O(e, {
-                    track: !1
-                }).catch(p.NOOP)
+                N = f.FormStates.CLOSED, O = {}
             }
-        },
-        977801: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return E
-                }
-            });
-            var i = n("917219"),
-                u = n("533613"),
-                r = n("782340"),
-                o = n("27562"),
-                a = n("851703"),
-                s = n("902577"),
-                l = n("351288"),
-                d = n("595726"),
-                c = n("462641"),
-                _ = n("95937"),
-                f = n("929461"),
-                E = () => ({
-                    [i.DefaultVideoBackground.OPTION_1]: {
-                        id: i.DefaultVideoBackground.OPTION_1,
-                        source: s,
-                        name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_1
-                    },
-                    [i.DefaultVideoBackground.OPTION_2]: {
-                        id: i.DefaultVideoBackground.OPTION_2,
-                        source: d,
-                        name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_2
-                    },
-                    [i.DefaultVideoBackground.OPTION_3]: {
-                        id: i.DefaultVideoBackground.OPTION_3,
-                        source: c,
-                        name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_3
-                    },
-                    [i.DefaultVideoBackground.OPTION_4]: {
-                        id: i.DefaultVideoBackground.OPTION_4,
-                        source: _,
-                        name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_4
-                    },
-                    [i.DefaultVideoBackground.OPTION_7]: {
-                        id: i.DefaultVideoBackground.OPTION_7,
-                        source: o,
-                        name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_7,
-                        isVideo: !0,
-                        hotspotLocation: u.HotspotLocations.ANIMATED_VIDEO_BG_CAPERNITE_DAY_NEW
-                    },
-                    [i.DefaultVideoBackground.OPTION_8]: {
-                        id: i.DefaultVideoBackground.OPTION_8,
-                        source: a,
-                        name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_8,
-                        isVideo: !0,
-                        hotspotLocation: u.HotspotLocations.ANIMATED_VIDEO_BG_CAPERNITE_NIGHT_NEW
-                    },
-                    [i.DefaultVideoBackground.OPTION_9]: {
-                        id: i.DefaultVideoBackground.OPTION_9,
-                        source: l,
-                        name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_9,
-                        isVideo: !0,
-                        hotspotLocation: u.HotspotLocations.ANIMATED_VIDEO_BG_HACKER_DEN_NEW
-                    },
-                    [i.DefaultVideoBackground.OPTION_10]: {
-                        id: i.DefaultVideoBackground.OPTION_10,
-                        source: f,
-                        name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_10,
-                        isVideo: !0,
-                        hotspotLocation: u.HotspotLocations.ANIMATED_VIDEO_BG_WUMPICE_NEW
-                    }
-                })
-        },
-        512244: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return r
-                }
-            });
-            var i = n("42887"),
-                u = n("353927");
 
-            function r() {
-                var t;
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : i.default;
-                return (t = e).supports(u.Features.MEDIAPIPE) && Object.values(t.getVideoDevices()).length > 0
+            function P() {
+                U(), m(), O = {}
             }
-        },
-        12307: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                isPremiumResolution: function() {
-                    return _
-                },
-                isPremiumFPS: function() {
-                    return f
-                },
-                getResolutionText: function() {
-                    return p
-                },
-                getFPSText: function() {
-                    return A
-                },
-                getMaxQuality: function() {
-                    return S
-                },
-                trackStreamSettingsUpdate: function() {
+
+            function U() {
+                n = void 0, o = void 0, i = void 0, u = void 0
+            }
+
+            function m() {
+                a = void 0, l = void 0, c = void 0, s = void 0, T = void 0, u = void 0
+            }
+
+            function L() {
+                _ = void 0, S = void 0, d = void 0, C = void 0, E = void 0
+            }
+            class p extends I.default.Store {
+                getFormState() {
+                    return N
+                }
+                getErrors() {
+                    return O
+                }
+                showNotice() {
+                    return void 0 !== n || void 0 !== a || void 0 !== l || void 0 !== c || void 0 !== s || void 0 !== T || void 0 !== i || void 0 !== u || void 0 !== o
+                }
+                getPendingAvatar() {
+                    return n
+                }
+                getPendingGlobalName() {
+                    return o
+                }
+                getPendingBanner() {
+                    return a
+                }
+                getPendingBio() {
+                    return l
+                }
+                getPendingPronouns() {
+                    return c
+                }
+                getPendingAccentColor() {
+                    return s
+                }
+                getPendingThemeColors() {
                     return T
                 }
-            });
-            var i = n("305961"),
-                u = n("945956"),
-                r = n("697218"),
-                o = n("599110"),
-                a = n("49111"),
-                s = n("686298"),
-                l = n("646718"),
-                d = n("353927"),
-                c = n("782340");
-
-            function _(t) {
-                if (null == t) return;
-                let e = t.maxResolution.type === d.ResolutionTypes.SOURCE ? s.ApplicationStreamResolutions.RESOLUTION_SOURCE : t.maxResolution.height,
-                    n = (0, s.getApplicationResolution)(e),
-                    i = (0, s.getApplicationFramerate)(t.maxFrameRate);
-                return i !== s.ApplicationStreamFPS.FPS_5 && null == s.ApplicationStreamSettingRequirements.find(t => t.resolution === n && t.fps !== s.ApplicationStreamFPS.FPS_5 && !E(t))
-            }
-
-            function f(t) {
-                if (null == t) return;
-                let e = (0, s.getApplicationFramerate)(t.maxFrameRate);
-                return null == s.ApplicationStreamSettingRequirements.find(t => t.fps === e && !E(t))
-            }
-
-            function E(t) {
-                return null != t.quality || null != t.guildPremiumTier
-            }
-
-            function p(t) {
-                return t.type === d.ResolutionTypes.SOURCE ? c.default.Messages.SCREENSHARE_SOURCE : c.default.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
-                    resolution: t.height
-                })
-            }
-
-            function A(t) {
-                return c.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
-                    fps: t
-                })
-            }
-
-            function S(t) {
-                return null == t.maxResolution || null == t.maxFrameRate ? null : {
-                    maxFrameRate: t.maxFrameRate,
-                    maxResolution: t.maxResolution
-                }
-            }
-
-            function T(t, e, n) {
-                var d, c, _;
-                let f = (d = t, c = e, _ = n, s.ApplicationStreamSettingRequirements.find(t => (null == t.preset || t.preset === d) && t.resolution === c && t.fps === _)),
-                    E = r.default.getCurrentUser(),
-                    p = u.default.getGuildId(),
-                    A = null != p ? i.default.getGuild(p) : null;
-                o.default.track(a.AnalyticEvents.STREAM_SETTINGS_UPDATE, {
-                    user_premium_tier: null == E ? void 0 : E.premiumType,
-                    guild_premium_tier: null == A ? void 0 : A.premiumTier,
-                    stream_quality_user_premium_tier: (null == f ? void 0 : f.quality) != null ? l.StreamQualitiesToPremiumType[f.quality] : null,
-                    stream_quality_guild_premium_tier: null == f ? void 0 : f.guildPremiumTier,
-                    stream_quality_preset: t,
-                    stream_quality_resolution: e,
-                    stream_quality_frame_rate: n
-                })
-            }
-        },
-        938850: function(t, e, n) {
-            "use strict";
-            var i, u;
-            n.r(e), n.d(e, {
-                AudioSettingsDefaultVolumes: function() {
+                getPendingAvatarDecoration() {
                     return i
                 }
-            }), (u = i || (i = {}))[u.USER = 100] = "USER", u[u.STREAM = 18] = "STREAM"
+                getPendingProfileEffectID() {
+                    return u
+                }
+                getAllPending() {
+                    return {
+                        pendingAvatar: n,
+                        pendingBanner: a,
+                        pendingBio: l,
+                        pendingPronouns: c,
+                        pendingAccentColor: s,
+                        pendingThemeColors: T,
+                        pendingAvatarDecoration: i,
+                        pendingProfileEffectID: u,
+                        pendingGlobalName: o
+                    }
+                }
+                getTryItOutThemeColors() {
+                    return E
+                }
+                getTryItOutAvatar() {
+                    return _
+                }
+                getTryItOutAvatarDecoration() {
+                    return S
+                }
+                getTryItOutProfileEffectID() {
+                    return d
+                }
+                getTryItOutBanner() {
+                    return C
+                }
+                getAllTryItOut() {
+                    return {
+                        tryItOutThemeColors: E,
+                        tryItOutAvatar: _,
+                        tryItOutAvatarDecoration: S,
+                        tryItOutProfileEffectID: d,
+                        tryItOutBanner: C
+                    }
+                }
+                getIsDisableSubmit() {
+                    return R
+                }
+            }
+            p.displayName = "UserSettingsAccountStore";
+            var F = new p(A.default, {
+                USER_SETTINGS_ACCOUNT_INIT: v,
+                USER_SETTINGS_MODAL_INIT: v,
+                USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: v,
+                USER_SETTINGS_MODAL_SET_SECTION: function(t) {
+                    let {
+                        section: e
+                    } = t;
+                    return e === f.UserSettingsSections.ACCOUNT && v()
+                },
+                USER_SETTINGS_ACCOUNT_CLOSE: g,
+                USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function() {
+                    P(), L(), g()
+                },
+                USER_SETTINGS_ACCOUNT_SUBMIT: function() {
+                    N = f.FormStates.SUBMITTING, O = {}
+                },
+                USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: function(t) {
+                    var e;
+                    if (N !== f.FormStates.SUBMITTING) return !1;
+                    N = f.FormStates.OPEN, O = null !== (e = t.errors) && void 0 !== e ? e : {}
+                },
+                USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: function(t) {
+                    let {
+                        avatar: e
+                    } = t;
+                    n = e, _ = void 0
+                },
+                USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: function(t) {
+                    let {
+                        globalName: e
+                    } = t;
+                    o = e
+                },
+                USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: function(t) {
+                    let {
+                        avatarDecoration: e
+                    } = t;
+                    i = e
+                },
+                USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: function(t) {
+                    let {
+                        profileEffectID: e
+                    } = t;
+                    u = e
+                },
+                USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: function(t) {
+                    let {
+                        banner: e
+                    } = t;
+                    a = e
+                },
+                USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: function(t) {
+                    let {
+                        bio: e
+                    } = t;
+                    l = e
+                },
+                USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS: function(t) {
+                    let {
+                        pronouns: e
+                    } = t;
+                    c = e
+                },
+                USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR: function(t) {
+                    let {
+                        color: e
+                    } = t;
+                    s = e
+                },
+                USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS: function(t) {
+                    let {
+                        themeColors: e
+                    } = t;
+                    T = e
+                },
+                USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: function(t) {
+                    let {
+                        avatar: e
+                    } = t;
+                    _ = e
+                },
+                USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION: function(t) {
+                    let {
+                        avatarDecoration: e
+                    } = t;
+                    S = e
+                },
+                USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID: function(t) {
+                    let {
+                        profileEffectID: e
+                    } = t;
+                    d = e
+                },
+                USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: function(t) {
+                    let {
+                        banner: e
+                    } = t;
+                    C = e
+                },
+                USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS: function(t) {
+                    let {
+                        themeColors: e
+                    } = t;
+                    E = e
+                },
+                USER_SETTINGS_CLEAR_ERRORS: function() {
+                    O = {}
+                },
+                USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: U,
+                USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: m,
+                USER_SETTINGS_RESET_ALL_PENDING: P,
+                USER_SETTINGS_RESET_ALL_TRY_IT_OUT: L,
+                USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: function() {
+                    i = void 0
+                },
+                LOGOUT: function() {
+                    n = void 0
+                },
+                USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT: function(t) {
+                    let {
+                        disable: e
+                    } = t;
+                    R = e
+                }
+            })
+        },
+        635058: function(t, e, r) {
+            "use strict";
+            var n, o;
+            r.r(e), r.d(e, {
+                CollectiblesCategorySkuId: function() {
+                    return n
+                },
+                CollectiblesCategorySkuIdSets: function() {
+                    return i
+                }
+            }), r("222007"), (o = n || (n = {})).FANTASY = "1144003461608906824", o.ANIME = "1144302037593497701", o.BREAKFAST = "1144054000099012659", o.DISXCORE = "1144058340327047249", o.HALLOWEEN = "1157410718711304313", o.FALL = "1157406994873991284";
+            let i = {
+                ALL: new Set(["1144003461608906824", "1144054000099012659", "1144058340327047249", "1144302037593497701", "1157406994873991284", "1157410718711304313"])
+            }
+        },
+        265586: function(t, e, r) {
+            "use strict";
+            var n, o;
+            r.r(e), r.d(e, {
+                CollectiblesItemType: function() {
+                    return n
+                }
+            }), (o = n || (n = {}))[o.AVATAR_DECORATION = 0] = "AVATAR_DECORATION", o[o.PROFILE_EFFECT = 1] = "PROFILE_EFFECT"
         }
     }
 ]);

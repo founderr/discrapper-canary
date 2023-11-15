@@ -1,1006 +1,698 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["18814"], {
-        851387: function(e, t, l) {
+    ["89894"], {
+        79112: function(e, t, n) {
             "use strict";
-            l.r(t), l.d(t, {
-                waitForGuild: function() {
-                    return P
-                },
+            n.r(t), n.d(t, {
                 default: function() {
-                    return w
+                    return _
                 }
-            }), l("70102"), l("860677");
-            var n = l("759843"),
-                d = l("316693"),
-                r = l("872717"),
-                o = l("913144"),
-                a = l("333805"),
-                u = l("81732"),
-                i = l("248967"),
-                s = l("21121"),
-                E = l("693051"),
-                c = l("153498"),
-                _ = l("934306"),
-                p = l("258158"),
-                f = l("393414"),
-                L = l("239380"),
-                I = l("271938"),
-                T = l("42203"),
-                D = l("383173"),
-                G = l("923959"),
-                h = l("305961"),
-                U = l("18494"),
-                y = l("162771"),
-                S = l("697218"),
-                A = l("599110"),
-                R = l("991170"),
-                m = l("719923"),
-                C = l("840707"),
-                g = l("404118"),
-                O = l("49111"),
-                N = l("782340");
-            let M = e => {
-                    g.default.show({
-                        title: N.default.Messages.TOO_MANY_USER_GUILDS_ALERT_TITLE,
-                        body: N.default.Messages.TOO_MANY_USER_GUILDS_ALERT_DESCRIPTION.format({
-                            quantity: e
+            });
+            var l = n("872717"),
+                o = n("95410"),
+                i = n("913144"),
+                u = n("211895"),
+                r = n("26092"),
+                s = n("599110"),
+                a = n("315102"),
+                d = n("730622"),
+                c = n("49111"),
+                S = n("191349"),
+                E = n("782340"),
+                _ = {
+                    open() {
+                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+                            t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+                                openWithoutBackstack: !1
+                            };
+                        (0, u.default)(e, t, n)
+                    },
+                    init: function(e) {
+                        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                            n = arguments.length > 2 ? arguments[2] : void 0;
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_INIT",
+                            section: e,
+                            subsection: t,
+                            ...n
                         })
-                    })
-                },
-                F = e => {
-                    o.default.dispatch({
-                        type: "GUILD_DELETE",
-                        guild: {
-                            id: e
-                        }
-                    })
-                },
-                b = () => {
-                    g.default.show({
-                        title: N.default.Messages.SERVER_IS_CURRENTLY_FULL,
-                        body: N.default.Messages.PLEASE_TRY_AGAIN_LATER
-                    })
-                };
-            async function v(e) {
-                var t, n, d, a, u;
-                let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    {
-                        source: s,
-                        loadId: E,
-                        lurkLocation: c
-                    } = i,
-                    _ = null !== (t = i.lurker) && void 0 !== t && t,
-                    L = S.default.getCurrentUser();
-                if (null !== (n = null == L ? void 0 : L.hasFlag(O.UserFlags.QUARANTINED)) && void 0 !== n && n) return (0, p.default)(), new Promise((e, t) => t(Error()));
-                o.default.wait(() => o.default.dispatch({
-                    type: "GUILD_JOIN",
-                    guildId: e,
-                    lurker: _,
-                    source: s,
-                    loadId: E
-                }));
-                try {
-                    let t = y.default.getGuildId(),
-                        n = e === t && null != h.default.getGuild(e),
-                        d = n ? U.default.getChannelId(e) : null,
-                        a = await r.default.put({
-                            url: O.Endpoints.GUILD_JOIN(e),
-                            query: {
-                                lurker: _,
-                                session_id: _ ? I.default.getSessionId() : null,
-                                recommendation_load_id: E,
-                                location: _ && null != c ? c : null
-                            },
-                            context: {
-                                source: s
-                            },
-                            oldFormErrors: !0,
-                            body: {}
+                    },
+                    close() {
+                        let e = r.default.onClose;
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_CLOSE"
+                        }), null != e && e()
+                    },
+                    setSection(e) {
+                        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_SET_SECTION",
+                            section: e,
+                            subsection: t,
+                            ...n
+                        })
+                    },
+                    clearSubsection(e) {
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_CLEAR_SUBSECTION",
+                            forSection: e
+                        })
+                    },
+                    clearScrollPosition(e) {
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION",
+                            forSection: e
+                        })
+                    },
+                    updateAccount(e) {
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_UPDATE_ACCOUNT",
+                            settings: e
+                        })
+                    },
+                    submitComplete() {
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_SUBMIT_COMPLETE"
+                        })
+                    },
+                    reset() {
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_RESET"
+                        })
+                    },
+                    saveAccountChanges(e, t) {
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_SUBMIT"
                         });
-                    if (null != a.body.join_request && o.default.dispatch({
-                            type: "USER_GUILD_JOIN_REQUEST_UPDATE",
-                            guildId: e,
-                            request: a.body.join_request
-                        }), null == h.default.getGuild(e) && a.body.show_verification_form) return (0, f.transitionTo)(O.Routes.GUILD_MEMBER_VERIFICATION(e)), a;
-                    if (null != a.body.welcome_screen && o.default.dispatch({
-                            type: "WELCOME_SCREEN_UPDATE",
-                            guildId: a.body.id,
-                            welcomeScreen: a.body.welcome_screen
-                        }), null != a.body.approximate_presence_count && o.default.dispatch({
-                            type: "ONLINE_GUILD_MEMBER_COUNT_UPDATE",
-                            guildId: a.body.id,
-                            count: a.body.approximate_presence_count
-                        }), !_) {
                         let {
-                            default: t
-                        } = await l.el("937692").then(l.bind(l, "937692"));
-                        await t({
-                            guildId: e,
-                            returnChannelId: d
-                        })
+                            username: n,
+                            email: u,
+                            emailToken: r,
+                            password: _,
+                            avatar: T,
+                            newPassword: p,
+                            discriminator: f
+                        } = e, {
+                            close: h
+                        } = t;
+                        return (0, d.default)(e => {
+                            let t = {
+                                    username: n,
+                                    email: u,
+                                    email_token: r,
+                                    password: _,
+                                    avatar: T,
+                                    new_password: p,
+                                    ...e,
+                                    discriminator: null != f && "" !== f ? f : void 0
+                                },
+                                i = o.default.get(c.DEVICE_TOKEN),
+                                s = (0, S.getDevicePushProvider)();
+                            null != s && null != i && (t.push_provider = s, t.push_token = i);
+                            let a = o.default.get(c.DEVICE_VOIP_TOKEN);
+                            return null != S.DEVICE_PUSH_VOIP_PROVIDER && null != a && (t.push_voip_provider = S.DEVICE_PUSH_VOIP_PROVIDER, t.push_voip_token = a), l.default.patch({
+                                url: c.Endpoints.ME,
+                                oldFormErrors: !0,
+                                body: t
+                            })
+                        }, {
+                            checkEnabled: !1,
+                            modalProps: {
+                                title: E.default.Messages.TWO_FA_CHANGE_ACCOUNT
+                            },
+                            hooks: {
+                                onEarlyClose: () => i.default.dispatch({
+                                    type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE",
+                                    errors: {}
+                                })
+                            }
+                        }).then(e => {
+                            let t = e.body,
+                                n = t.token;
+                            return s.default.track(c.AnalyticEvents.USER_AVATAR_UPDATED, {
+                                animated: (0, a.isAnimatedIconHash)(t.avatar)
+                            }), delete t.token, i.default.dispatch({
+                                type: "UPDATE_TOKEN",
+                                token: n,
+                                userId: t.id
+                            }), i.default.dispatch({
+                                type: "CURRENT_USER_UPDATE",
+                                user: t
+                            }), null != p && i.default.dispatch({
+                                type: "USER_PASSWORD_UPDATE",
+                                user: t,
+                                newPassword: p
+                            }), null != _ && null != p && i.default.dispatch({
+                                type: "PASSWORD_UPDATED",
+                                userId: t.id
+                            }), h ? this.close() : this.submitComplete(), e
+                        }, e => (i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE",
+                            errors: e.body
+                        }), e))
                     }
-                    return a
-                } catch (t) {
-                    if ((null === (d = t.body) || void 0 === d ? void 0 : d.code) === O.AbortCodes.TOO_MANY_USER_GUILDS) {
-                        let e = S.default.getCurrentUser(),
-                            t = m.default.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff());
-                        t ? M(O.MAX_USER_GUILDS_PREMIUM) : M(O.MAX_USER_GUILDS)
-                    }
-                    throw (null === (a = t.body) || void 0 === a ? void 0 : a.code) === O.AbortCodes.GUILD_AT_CAPACITY && b(), _ && (null === (u = t.body) || void 0 === u ? void 0 : u.code) === O.AbortCodes.UNKNOWN_GUILD && F(e), t
                 }
+        },
+        521590: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                GlobeEarthIcon: function() {
+                    return u
+                }
+            });
+            var l = n("37983");
+            n("884691");
+            var o = n("669491"),
+                i = n("75196");
+            let u = e => {
+                let {
+                    width: t = 24,
+                    height: n = 24,
+                    color: u = o.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: r = "",
+                    ...s
+                } = e;
+                return (0, l.jsx)("svg", {
+                    ...(0, i.default)(s),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: n,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: (0, l.jsx)("path", {
+                        fill: "string" == typeof u ? u : u.css,
+                        fillRule: "evenodd",
+                        d: "M23 12c0 6.075-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1s11 4.925 11 11Zm-4.157 5.847A9.004 9.004 0 0 0 15 3.513V4a3 3 0 0 1-3 3h-.77a.23.23 0 0 0-.23.23A2.77 2.77 0 0 1 8.23 10a.23.23 0 0 0-.23.23v1.52c0 .138.112.25.25.25H13a3 3 0 0 1 3 3v.77c0 .127.103.23.23.23a2.77 2.77 0 0 1 2.613 1.847Zm-15.66-7.664A9.001 9.001 0 0 0 11 20.945v-2.714a.23.23 0 0 0-.23-.231h-.649A2.121 2.121 0 0 1 8 15.879c0-.563-.223-1.102-.621-1.5l-4.196-4.196Z",
+                        clipRule: "evenodd",
+                        className: r
+                    })
+                })
+            }
+        },
+        692171: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return d
+                }
+            });
+            var l = n("446674"),
+                o = n("872717"),
+                i = n("913144"),
+                u = n("49111");
+            let r = Object.freeze({
+                    burstCredits: 0,
+                    wasReplenishedToday: !1,
+                    nextReplenishAt: null,
+                    isReactionPickerBurstToggled: null,
+                    emojiReactionForCoachmark: null,
+                    guildBurstPreviews: {}
+                }),
+                s = {
+                    ...r
+                };
+            class a extends l.default.PersistedStore {
+                initialize(e) {
+                    s = null != e ? e : {
+                        ...r
+                    }
+                }
+                get remainingBurstCurrency() {
+                    return s.burstCredits
+                }
+                get hasAvailableBurstCurrency() {
+                    return this.remainingBurstCurrency > 0
+                }
+                get nextReplenishAt() {
+                    return s.nextReplenishAt
+                }
+                get isReactionPickerBurstToggled() {
+                    return null != s.isReactionPickerBurstToggled && s.isReactionPickerBurstToggled
+                }
+                get emojiReactionToTargetForCoachmark() {
+                    return s.emojiReactionForCoachmark
+                }
+                getBurstedPreviewData(e) {
+                    var t;
+                    return null !== (t = s.guildBurstPreviews[e]) && void 0 !== t ? t : void 0
+                }
+                getState() {
+                    return s
+                }
+            }
+            a.displayName = "BurstReactionStore", a.persistKey = "BurstReactionStore33";
+            var d = new a(i.default, {
+                BURST_CREDITS_SET: e => {
+                    let {
+                        amount: t,
+                        wasReplenishedToday: n,
+                        nextReplenishAt: l
+                    } = e;
+                    s.burstCredits = t, s.wasReplenishedToday = n, s.nextReplenishAt = l
+                },
+                POST_CONNECTION_OPEN: () => {
+                    o.default.get({
+                        url: u.Endpoints.BURST_CREDIT_BALANCE
+                    }).then(e => {
+                        i.default.dispatch({
+                            type: "BURST_CREDITS_SET",
+                            amount: e.body.amount,
+                            wasReplenishedToday: e.body.replenished_today,
+                            nextReplenishAt: new Date(e.body.next_replenish_at)
+                        })
+                    }).catch(() => {})
+                },
+                BURST_REACTION_PICKER_TOGGLE: e => {
+                    let {
+                        value: t
+                    } = e;
+                    s.isReactionPickerBurstToggled = t
+                },
+                BURST_REACTION_SHOW_FREE_USER_SENT_POPOUT: e => {
+                    let {
+                        emoji: t
+                    } = e;
+                    s.emojiReactionForCoachmark = null != t ? t : null
+                },
+                BURST_GUILD_PREVIEW_SET: e => {
+                    let {
+                        guildId: t,
+                        channelId: n,
+                        messageId: l,
+                        emoji: o
+                    } = e;
+                    s.guildBurstPreviews[t] = {
+                        channelId: n,
+                        messageId: l,
+                        emoji: o
+                    }
+                },
+                BURST_GUILD_PREVIEW_CLEAR: e => {
+                    let {
+                        guildId: t
+                    } = e;
+                    delete s.guildBurstPreviews[t]
+                }
+            })
+        },
+        870346: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return C
+                }
+            }), n("222007"), n("70102");
+            var l = n("627445"),
+                o = n.n(l),
+                i = n("917351"),
+                u = n.n(i),
+                r = n("288661"),
+                s = n("446674"),
+                a = n("913144"),
+                d = n("605250"),
+                c = n("773336"),
+                S = n("50885"),
+                E = n("563680"),
+                _ = n("49111");
+            let T = {},
+                p = {},
+                f = {},
+                h = {},
+                O = {},
+                R = new Set,
+                I = () => N.emitChange(),
+                U = u.debounce(I, 150);
+
+            function v(e) {
+                let t = f[e];
+                null != t && !t.closed && (T[e] = {
+                    x: t.screenX,
+                    y: t.screenY,
+                    width: t.innerWidth,
+                    height: t.innerHeight,
+                    alwaysOnTop: !!c.isPlatformEmbedded && p[e]
+                })
             }
 
             function P(e) {
-                return new Promise(t => h.default.addConditionalChangeListener(() => {
-                    let l = h.default.getGuild(e);
-                    return null == l || (t(l), !1)
-                }))
+                let t = f[e];
+                null != t && (!t.closed && v(e), t.close(), ! function(e) {
+                    let t = f[e];
+                    o(null != t, "Popout window was null during unmount"), t.removeEventListener("focus", I), t.removeEventListener("blur", I), t.removeEventListener("resize", U);
+                    let n = h[e];
+                    o(null != n, "Window root was null while unmounting"), n.unmount(), delete f[e], delete p[e], delete O[e], delete h[e]
+                }(e), N.emitChange())
             }
-            var w = {
-                joinGuild: v,
-                waitForGuild: P,
-                async transitionToGuildSync(e, t, l, n) {
-                    var d, r;
-                    let o = await P(e);
-                    let a = (d = o.id, null != (r = l) ? r : (0, s.isInMainTabsExperiment)() ? void 0 : (0, L.getChannelIdForGuildTransition)(d)),
-                        u = t;
-                    (null == t ? void 0 : t.hasOwnProperty("welcomeModalChannelId")) && null == t.welcomeModalChannelId && (u = {
-                        ...t,
-                        welcomeModalChannelId: a
-                    }), (0, f.transitionTo)(O.Routes.CHANNEL(e, a), u, void 0, n), await new Promise(setImmediate)
-                },
-                deleteGuild: F,
-                selectGuild(e) {
-                    (0, i.stopLurking)(e)
-                },
-                async addGuild(e) {
-                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-                        l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-                        n = arguments.length > 3 ? arguments[3] : void 0;
-                    try {
-                        let d = await r.default.post({
-                            url: O.Endpoints.GUILDS,
-                            body: {
-                                name: e,
-                                icon: t,
-                                channels: l,
-                                system_channel_id: n
-                            },
-                            oldFormErrors: !0
-                        });
-                        return d.body
-                    } catch (e) {
-                        throw new a.default(e)
-                    }
-                },
-                createGuild(e) {
-                    o.default.dispatch({
-                        type: "GUILD_CREATE",
-                        guild: e
-                    })
-                },
-                setServerMute: (e, t, l) => r.default.patch({
-                    url: O.Endpoints.GUILD_MEMBER(e, t),
-                    body: {
-                        mute: l
-                    },
-                    oldFormErrors: !0
-                }),
-                setServerDeaf: (e, t, l) => r.default.patch({
-                    url: O.Endpoints.GUILD_MEMBER(e, t),
-                    body: {
-                        deaf: l
-                    },
-                    oldFormErrors: !0
-                }),
-                setChannel(e, t, l) {
-                    r.default.patch({
-                        url: O.Endpoints.GUILD_MEMBER(e, t),
-                        body: {
-                            channel_id: l
-                        },
-                        oldFormErrors: !0
-                    })
-                },
-                setMemberFlags(e, t, l) {
-                    r.default.patch({
-                        url: O.Endpoints.GUILD_MEMBER(e, t),
-                        body: {
-                            flags: l
-                        },
-                        oldFormErrors: !0
-                    })
-                },
-                kickUser: (e, t, l) => r.default.delete({
-                    url: O.Endpoints.GUILD_MEMBER(e, t),
-                    reason: l,
-                    oldFormErrors: !0
-                }),
-                setCommunicationDisabledUntil(e) {
-                    let {
-                        guildId: t,
-                        userId: l,
-                        communicationDisabledUntilTimestamp: d,
-                        duration: r,
-                        reason: o,
-                        location: a
-                    } = e;
-                    return C.default.patch({
-                        url: O.Endpoints.GUILD_MEMBER(t, l),
-                        reason: o,
-                        body: {
-                            communication_disabled_until: d
-                        },
-                        oldFormErrors: !0,
-                        trackedActionData: {
-                            event: n.NetworkActionNames.USER_COMMUNICATION_DISABLED_UPDATE,
-                            properties: {
-                                guild_id: t,
-                                target_user_id: l,
-                                duration: null != r ? r : null,
-                                reason: null != o ? o : null,
-                                communication_disabled_until: d,
-                                location: null != a ? a : null
+
+            function g(e) {
+                let {
+                    data: t
+                } = e;
+                if (!(t instanceof Object && t.discordPopoutEvent instanceof Object)) return;
+                let n = t.discordPopoutEvent;
+                if (null != n.key) switch (n.type) {
+                    case _.PopoutEventTypes.LOADED:
+                        var l;
+                        return l = n.key, void(R.has(l) && (! function(e) {
+                            let t = f[e],
+                                n = O[e];
+                            if (null == t) {
+                                new(0, d.default)("PopoutWindowStore").warn("Failed to open window", e);
+                                return
                             }
-                        }
-                    })
-                },
-                banUser: (e, t, l, n) => r.default.put({
-                    url: O.Endpoints.GUILD_BAN(e, t),
-                    reason: n,
-                    body: {
-                        delete_message_seconds: l
-                    },
-                    oldFormErrors: !0
-                }),
-                unbanUser: (e, t) => r.default.delete({
-                    url: O.Endpoints.GUILD_BAN(e, t),
-                    oldFormErrors: !0
-                }),
-                banMultipleUsers: (e, t, l, n) => r.default.post({
-                    url: O.Endpoints.BULK_GUILD_BAN(e),
-                    body: {
-                        user_ids: t,
-                        delete_message_seconds: l,
-                        reason: n
-                    },
-                    oldFormErrors: !0
-                }),
-                async createRole(e, t, l) {
-                    let n = {
-                        name: null != t && "" !== t ? t : N.default.Messages.NEW_ROLE,
-                        color: null != l ? l : 0,
-                        permissions: R.default.NONE
-                    };
-                    try {
-                        let t = await r.default.post({
-                                url: O.Endpoints.GUILD_ROLES(e),
-                                oldFormErrors: !0,
-                                body: n
-                            }),
-                            l = t.body;
-                        return l.permissions = d.default.deserialize(l.permissions), o.default.dispatch({
-                            type: "GUILD_SETTINGS_ROLE_SELECT",
-                            roleId: t.body.id,
-                            role: l
-                        }), u.default.checkGuildTemplateDirty(e), l
-                    } catch (e) {
-                        throw new a.default(e)
-                    }
-                },
-                async updateRole(e, t, l) {
-                    let {
-                        icon: n,
-                        unicodeEmoji: d,
-                        ...o
-                    } = l, a = null === n || (null == n ? void 0 : n.startsWith("data:")) ? n : void 0, i = await r.default.patch({
-                        url: O.Endpoints.GUILD_ROLE(e, t),
-                        body: {
-                            ...o,
-                            icon: a,
-                            unicode_emoji: d
-                        },
-                        oldFormErrors: !0
-                    });
-                    return u.default.checkGuildTemplateDirty(e), i
-                },
-                updateRolePermissions: (e, t, l) => r.default.patch({
-                    url: O.Endpoints.GUILD_ROLE(e, t),
-                    body: {
-                        permissions: l
-                    },
-                    oldFormErrors: !0
-                }),
-                deleteRole(e, t) {
-                    r.default.delete({
-                        url: O.Endpoints.GUILD_ROLE(e, t),
-                        oldFormErrors: !0
-                    }).then(() => {
-                        u.default.checkGuildTemplateDirty(e)
-                    })
-                },
-                async batchChannelUpdate(e, t) {
-                    let l = await r.default.patch({
-                        url: O.Endpoints.GUILD_CHANNELS(e),
-                        body: t,
-                        oldFormErrors: !0
-                    });
-                    return u.default.checkGuildTemplateDirty(e), l
-                },
-                async batchRoleUpdate(e, t) {
-                    let l = await r.default.patch({
-                        url: O.Endpoints.GUILD_ROLES(e),
-                        body: t,
-                        oldFormErrors: !0
-                    });
-                    return u.default.checkGuildTemplateDirty(e), l
-                },
-                requestMembers(e) {
-                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "",
-                        l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
-                        n = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-                    return o.default.dispatch({
-                        type: "GUILD_MEMBERS_REQUEST",
-                        guildIds: Array.isArray(e) ? e : [e],
-                        query: t,
-                        limit: l,
-                        presences: n
-                    })
-                },
-                searchRecentMembers(e, t) {
-                    let {
-                        query: l,
-                        continuationToken: n
-                    } = null != t ? t : {};
-                    return o.default.dispatch({
-                        type: "GUILD_SEARCH_RECENT_MEMBERS",
-                        guildId: e,
-                        query: l,
-                        continuationToken: n
-                    })
-                },
-                requestMembersById(e, t) {
-                    let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-                    return o.default.dispatch({
-                        type: "GUILD_MEMBERS_REQUEST",
-                        guildIds: Array.isArray(e) ? e : [e],
-                        userIds: Array.isArray(t) ? t : [t],
-                        presences: l
-                    })
-                },
-                move(e, t, l, n) {
-                    o.default.dispatch({
-                        type: "GUILD_MOVE",
-                        fromIndex: e,
-                        toIndex: t,
-                        fromFolderIndex: l,
-                        toFolderIndex: n
-                    })
-                },
-                moveById(e, t) {
-                    let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                        n = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-                    o.default.dispatch({
-                        type: "GUILD_MOVE_BY_ID",
-                        sourceId: e,
-                        targetId: t,
-                        moveToBelow: l,
-                        combine: n
-                    })
-                },
-                createGuildFolderLocal(e, t) {
-                    A.default.track(O.AnalyticEvents.GUILD_FOLDER_CREATED), o.default.dispatch({
-                        type: "GUILD_FOLDER_CREATE_LOCAL",
-                        sourceIds: e,
-                        name: t
-                    })
-                },
-                editGuildFolderLocal(e, t, l) {
-                    o.default.dispatch({
-                        type: "GUILD_FOLDER_EDIT_LOCAL",
-                        targetId: e,
-                        sourceIds: t,
-                        name: l
-                    })
-                },
-                deleteGuildFolderLocal(e) {
-                    o.default.dispatch({
-                        type: "GUILD_FOLDER_DELETE_LOCAL",
-                        targetId: e
-                    })
-                },
-                toggleGuildFolderExpand(e) {
-                    let t = D.default.isFolderExpanded(e);
-                    A.default.track(O.AnalyticEvents.GUILD_FOLDER_CLICKED, {
-                        source: "sidebar",
-                        action: t ? "collapsed" : "expanded"
-                    }), o.default.dispatch({
-                        type: "TOGGLE_GUILD_FOLDER_EXPAND",
-                        folderId: e
-                    })
-                },
-                setGuildFolderExpanded(e, t) {
-                    o.default.dispatch({
-                        type: "SET_GUILD_FOLDER_EXPANDED",
-                        folderId: e,
-                        expanded: t
-                    })
-                },
-                collapseAllFolders() {
-                    o.default.dispatch({
-                        type: "GUILD_FOLDER_COLLAPSE"
-                    })
-                },
-                nsfwAgree(e) {
-                    o.default.dispatch({
-                        type: "GUILD_NSFW_AGREE",
-                        guildId: e
-                    })
-                },
-                nsfwReturnToSafety(e) {
-                    if ((0, s.isInMainTabsExperiment)() && !(0, _.isOnNewPanels)()) {
-                        let e = (0, E.getRootNavigationRef)();
-                        if ((null == e ? void 0 : e.isReady()) !== !0) return;
-                        let t = (0, c.coerceModalRoute)(e.getCurrentRoute());
-                        for (null != t && e.goBack();;) {
-                            let t = (0, c.coerceChannelRoute)(e.getCurrentRoute());
-                            if (null == t) break;
-                            let l = T.default.getChannel(t.params.channelId);
-                            if (null == l || !l.isNSFW()) break;
-                            e.goBack()
-                        }
-                        return
-                    }
-                    if (null == e) {
-                        (0, f.transitionTo)(O.Routes.FRIENDS);
-                        return
-                    }
-                    let t = G.default.getDefaultChannel(e);
-                    null == t || t.isNSFW() ? (0, f.transitionTo)(O.Routes.FRIENDS) : (0, f.transitionTo)(O.Routes.CHANNEL(e, t.id))
-                },
-                escapeToDefaultChannel(e) {
-                    let t = G.default.getDefaultChannel(e);
-                    null != t ? (0, f.transitionTo)(O.Routes.CHANNEL(e, t.id)) : (0, f.transitionTo)(O.Routes.FRIENDS)
-                },
-                async fetchApplications(e, t) {
-                    let l = {
-                        url: O.Endpoints.GUILD_APPLICATIONS(e),
-                        oldFormErrors: !0
-                    };
-                    null != t && (l.query = {
-                        channel_id: t
-                    });
-                    let n = await r.default.get(l),
-                        d = n.body;
-                    o.default.dispatch({
-                        type: "GUILD_APPLICATIONS_FETCH_SUCCESS",
-                        guildId: e,
-                        applications: d
-                    })
-                },
-                async fetchGuildBansBatch(e) {
-                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e3,
-                        l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-                        n = {
-                            limit: t
-                        };
-                    null != l && (n.after = l), await r.default.get({
-                        url: O.Endpoints.GUILD_BANS(e),
-                        oldFormErrors: !0,
-                        query: n
-                    }).then(t => {
-                        o.default.dispatch({
-                            type: "GUILD_SETTINGS_LOADED_BANS_BATCH",
-                            bans: t.body,
-                            guildId: e
-                        })
-                    })
-                },
-                async searchGuildBans(e, t, l) {
-                    let n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 10,
-                        d = {
-                            limit: n
-                        };
-                    null != l && l.length > 0 && (d.user_ids = l), null != t && t.trim().length > 0 && (d.query = t), await r.default.get({
-                        url: O.Endpoints.GUILD_BANS_SEARCH(e),
-                        oldFormErrors: !0,
-                        query: d
-                    }).then(t => {
-                        o.default.dispatch({
-                            type: "GUILD_SETTINGS_LOADED_BANS_BATCH",
-                            bans: t.body,
-                            guildId: e
-                        })
-                    })
-                },
-                async fetchGuildBans(e) {
-                    await r.default.get({
-                        url: O.Endpoints.GUILD_BANS(e),
-                        oldFormErrors: !0
-                    }).then(e => {
-                        o.default.dispatch({
-                            type: "GUILD_SETTINGS_LOADED_BANS",
-                            bans: e.body
-                        })
-                    })
-                },
-                fetchGuildRoleConnectionsEligibility: (e, t) => r.default.get({
-                    url: O.Endpoints.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(e, t),
-                    oldFormErrors: !0
-                }).then(e => {
-                    let {
-                        body: l
-                    } = e;
-                    return o.default.dispatch({
-                        type: "GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS",
-                        roleId: t,
-                        roleConnectionEligibility: l
-                    }), l
-                }),
-                async assignGuildRoleConnection(e, t) {
-                    await r.default.post({
-                        url: O.Endpoints.GUILD_ROLE_CONNECTIONS_ASSIGN(e, t),
-                        oldFormErrors: !0
-                    })
-                },
-                async unassignGuildRoleConnection(e, t) {
-                    await r.default.post({
-                        url: O.Endpoints.GUILD_ROLE_CONNECTIONS_UNASSIGN(e, t),
-                        oldFormErrors: !0
-                    })
-                },
-                async getGuildRoleConnectionsConfigurations(e) {
-                    let t = await r.default.get({
-                        url: O.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(e),
-                        oldFormErrors: !0
-                    });
-                    return t.body
+                            let l = t.document;
+                            (0, E.subscribeDocumentToFullScreenChange)(l, I), t.addEventListener("focus", I), t.addEventListener("blur", I), t.addEventListener("resize", U), ! function(e, t) {
+                                let n = t.document,
+                                    l = document.querySelectorAll('link[rel="stylesheet"]'),
+                                    i = "".concat(window.location.protocol, "//").concat(window.location.host);
+                                for (let e of l) {
+                                    if (!e.href.startsWith(i)) continue;
+                                    let t = n.createElement("link");
+                                    t.href = e.href, t.rel = e.rel, t.integrity = e.integrity, o(null != n.head, "Document head was null"), n.head.appendChild(t)
+                                }
+                            }(0, t);
+                            let i = (0, r.createRoot)(l.getElementById("app-mount"));
+                            o(null != i, "No render target for popout!"), h[e] = i, i.render(n(e))
+                        }(l), R.delete(l), N.emitChange()));
+                    case _.PopoutEventTypes.UNLOADED:
+                        return P(n.key)
                 }
             }
-        },
-        883069: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
-                default: function() {
-                    return u
-                }
-            });
-            var n = l("872717"),
-                d = l("913144"),
-                r = l("599110"),
-                o = l("82339"),
-                a = l("49111"),
-                u = {
-                    resolveGuildTemplate: function e(t) {
-                        return d.default.isDispatching() ? Promise.resolve().then(() => e(t)) : (d.default.dispatch({
-                            type: "GUILD_TEMPLATE_RESOLVE",
-                            code: t
-                        }), n.default.get({
-                            url: a.Endpoints.UNRESOLVED_GUILD_TEMPLATE(t),
-                            oldFormErrors: !0
-                        }).then(e => {
-                            let l = e.body;
-                            return r.default.track(a.AnalyticEvents.GUILD_TEMPLATE_RESOLVED, {
-                                resolved: !0,
-                                guild_template_code: t,
-                                guild_template_name: l.name,
-                                guild_template_description: l.description,
-                                guild_template_guild_id: l.source_guild_id
-                            }), d.default.dispatch({
-                                type: "GUILD_TEMPLATE_RESOLVE_SUCCESS",
-                                guildTemplate: l,
-                                code: t
-                            }), {
-                                guildTemplate: (0, o.default)(l),
-                                code: t
-                            }
-                        }, () => (r.default.track(a.AnalyticEvents.GUILD_TEMPLATE_RESOLVED, {
-                            resolved: !1,
-                            guild_template_code: t
-                        }), d.default.dispatch({
-                            type: "GUILD_TEMPLATE_RESOLVE_FAILURE",
-                            code: t
-                        }), {
-                            guildTemplate: null,
-                            code: t
-                        })))
-                    },
-                    loadTemplatesForGuild: e => n.default.get({
-                        url: a.Endpoints.GUILD_TEMPLATES(e),
-                        oldFormErrors: !0
-                    }).then(e => (d.default.dispatch({
-                        type: "GUILD_TEMPLATE_LOAD_FOR_GUILD_SUCCESS",
-                        guildTemplates: e.body
-                    }), e)),
-                    createGuildTemplate: (e, t, l) => n.default.post({
-                        url: a.Endpoints.GUILD_TEMPLATES(e),
-                        body: {
-                            name: t,
-                            description: l
-                        },
-                        oldFormErrors: !0
-                    }).then(e => {
-                        d.default.dispatch({
-                            type: "GUILD_TEMPLATE_CREATE_SUCCESS",
-                            guildTemplate: e.body,
-                            code: e.body.code
-                        })
-                    }),
-                    syncGuildTemplate: (e, t) => n.default.put({
-                        url: a.Endpoints.GUILD_TEMPLATE(e, t),
-                        oldFormErrors: !0
-                    }).then(e => {
-                        d.default.dispatch({
-                            type: "GUILD_TEMPLATE_SYNC_SUCCESS",
-                            guildTemplate: e.body,
-                            code: t
-                        })
-                    }),
-                    updateGuildTemplate: (e, t, l, r) => n.default.patch({
-                        url: a.Endpoints.GUILD_TEMPLATE(e, t),
-                        body: {
-                            name: l,
-                            description: r
-                        },
-                        oldFormErrors: !0
-                    }).then(e => {
-                        d.default.dispatch({
-                            type: "GUILD_TEMPLATE_SYNC_SUCCESS",
-                            guildTemplate: e.body,
-                            code: t
-                        })
-                    }),
-                    deleteGuildTemplate: (e, t) => n.default.delete({
-                        url: a.Endpoints.GUILD_TEMPLATE(e, t),
-                        oldFormErrors: !0
-                    }).then(() => {
-                        d.default.dispatch({
-                            type: "GUILD_TEMPLATE_DELETE_SUCCESS",
-                            guildId: e,
-                            code: t
-                        })
-                    })
-                }
-        },
-        81732: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
-                default: function() {
-                    return a
-                }
-            });
-            var n = l("913144"),
-                d = l("957255"),
-                r = l("883069"),
-                o = l("49111"),
-                a = {
-                    async checkGuildTemplateDirty(e) {
-                        if (!d.default.canWithPartialContext(o.Permissions.MANAGE_GUILD, {
-                                guildId: e
-                            })) return;
-                        let t = await r.default.loadTemplatesForGuild(e);
-                        t.body.length > 0 && n.default.dispatch({
-                            type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_REFRESH",
-                            guildTemplate: t.body[0]
-                        })
-                    },
-                    hideGuildTemplateDirtyTooltip(e) {
-                        n.default.dispatch({
-                            type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE",
-                            guildId: e
-                        })
-                    },
-                    hideGuildTemplatePromotionTooltip() {
-                        n.default.dispatch({
-                            type: "GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE"
-                        })
-                    }
-                }
-        },
-        579033: function(e, t, l) {
-            "use strict";
-            var n, d, r, o;
-            l.r(t), l.d(t, {
-                GuildTemplateStates: function() {
-                    return n
-                },
-                InternalTemplateCodes: function() {
-                    return d
-                }
-            }), (r = n || (n = {})).RESOLVING = "RESOLVING", r.RESOLVED = "RESOLVED", r.EXPIRED = "EXPIRED", r.ACCEPTED = "ACCEPTED", r.ACCEPTING = "ACCEPTING", (o = d || (d = {})).CLASSROOM = "fVfBazbqjhXg", o.LOCAL_COMMUNITIES = "64UDvRNCC52Y", o.CREATORS_HOBBIES = "6exdzMgjZgah", o.GLOBAL_COMMUNITIES = "4sgbPdCjzAYU", o.FRIENDS_FAMILY = "hgM48av5Q69A", o.STUDY_GROUPS = "FbwUwRp4j8Es", o.CREATE_FROM_SCRATCH = "WYAQmEzjw3Pj", o.CAMPUS_CLUBS = "Ctg7PUHcQmZu", o.LEAGUE_CLUBS = "PJ6VvgEJYg45", o.GITHUB_HACKATHON = "UqzZCTj2zfwy"
-        },
-        82339: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
-                default: function() {
-                    return d
-                }
-            });
-            var n = l("579033");
 
-            function d(e) {
-                var t;
-                return {
-                    code: e.code,
-                    state: n.GuildTemplateStates.RESOLVED,
-                    name: e.name,
-                    description: null !== (t = e.description) && void 0 !== t ? t : "",
-                    creatorId: e.creator_id,
-                    creator: e.creator,
-                    createdAt: e.created_at,
-                    updatedAt: e.updated_at,
-                    sourceGuildId: e.source_guild_id,
-                    serializedSourceGuild: e.serialized_source_guild,
-                    usageCount: e.usage_count,
-                    isDirty: e.is_dirty
+            function m() {
+                for (let e of Object.keys(f)) {
+                    let t = f[e];
+                    null != t && t.close()
                 }
             }
-        },
-        248967: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
-                stopLurkingAll: function() {
-                    return i
-                },
-                stopLurking: function() {
-                    return s
-                }
-            }), l("222007");
-            var n = l("872717"),
-                d = l("913144"),
-                r = l("945956"),
-                o = l("449008"),
-                a = l("267567"),
-                u = l("49111");
-            async function i(e) {
-                let t = a.default.lurkingGuildIds(),
-                    l = t.filter(t => !e.includes(t));
-                0 !== l.length && (d.default.dispatch({
-                    type: "GUILD_STOP_LURKING",
-                    ignoredGuildIds: e
-                }), await Promise.all(l.map(async e => {
-                    let t = a.default.getLurkingSource();
-                    try {
-                        await n.default.delete({
-                            url: u.Endpoints.GUILD_LEAVE(e),
-                            body: {
-                                lurking: !0
-                            },
-                            oldFormErrors: !0
-                        })
-                    } catch (l) {
-                        d.default.dispatch({
-                            type: "GUILD_STOP_LURKING_FAILURE",
-                            lurkingGuildId: e,
-                            lurkingSource: t
-                        })
-                    }
-                })))
-            }
-            async function s() {
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-                    t = a.default.lurkingGuildIds();
-                if (0 === t.length) return;
-                let l = null == e || !t.includes(e);
-                if (!l) return;
-                let n = r.default.getGuildId(),
-                    d = [e, n].filter(o.isNotNullish);
-                await i(d)
-            }
-        },
-        153498: function(e, t, l) {
-            "use strict";
-
-            function n(e) {
-                let {} = e;
-                return !1
-            }
-
-            function d(e, t) {
-                return !1
-            }
-
-            function r(e) {
-                return !1
-            }
-
-            function o() {
-                return !1
-            }
-
-            function a() {
-                return !1
-            }
-
-            function u(e) {
-                let {} = e;
-                return !1
-            }
-
-            function i(e, t) {
-                return !1
-            }
-
-            function s() {
-                return !1
-            }
-
-            function E(e) {}
-
-            function c(e) {}
-
-            function _(e) {
-                return !1
-            }
-            l.r(t), l.d(t, {
-                navigateToChannel: function() {
-                    return n
-                },
-                navigateToMemberVerification: function() {
-                    return d
-                },
-                navigateToRootTab: function() {
-                    return r
-                },
-                resetToAuthRoute: function() {
-                    return o
-                },
-                resetToPanelsUI: function() {
-                    return a
-                },
-                pushModal: function() {
-                    return u
-                },
-                popModal: function() {
-                    return i
-                },
-                popAllModals: function() {
-                    return s
-                },
-                coerceChannelRoute: function() {
-                    return E
-                },
-                coerceModalRoute: function() {
-                    return c
-                },
-                useIsModalOpen: function() {
-                    return _
-                }
-            })
-        },
-        258158: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
-                default: function() {
-                    return r
-                }
-            });
-            var n = l("37983");
-            l("884691");
-            var d = l("551042");
-
-            function r() {
-                (0, d.openModalLazy)(async () => {
-                    let {
-                        default: e
-                    } = await l.el("826269").then(l.bind(l, "826269"));
-                    return t => (0, n.jsx)(e, {
-                        ...t
-                    })
-                })
-            }
-        },
-        383173: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
-                default: function() {
-                    return u
-                }
-            }), l("222007");
-            var n = l("446674"),
-                d = l("913144"),
-                r = l("374363");
-            let o = new Set;
-            class a extends n.default.PersistedStore {
+            class A extends s.default.PersistedStore {
                 initialize(e) {
-                    null != e && (o = new Set(e.expandedFolders)), this.waitFor(r.default)
+                    window.addEventListener("message", g), window.addEventListener("beforeunload", m), T = null != e ? e : {}
+                }
+                getWindow(e) {
+                    return f[e]
+                }
+                getWindowState(e) {
+                    return T[e]
+                }
+                getWindowKeys() {
+                    return Object.keys(f)
+                }
+                getWindowOpen(e) {
+                    let t = f[e];
+                    return null != t && !t.closed
+                }
+                getIsAlwaysOnTop(e) {
+                    return !!p[e]
+                }
+                getWindowFocused(e) {
+                    var t, n;
+                    let l = f[e];
+                    return null !== (n = null == l ? void 0 : null === (t = l.document) || void 0 === t ? void 0 : t.hasFocus()) && void 0 !== n && n
                 }
                 getState() {
-                    return {
-                        expandedFolders: Array.from(o)
-                    }
+                    return T
                 }
-                getExpandedFolders() {
-                    return o
-                }
-                isFolderExpanded(e) {
-                    return o.has(e)
+                unmountWindow(e) {
+                    return P(e)
                 }
             }
-            a.displayName = "ExpandedGuildFolderStore", a.persistKey = "ExpandedGuildFolderStore";
-            var u = new a(d.default, {
-                TOGGLE_GUILD_FOLDER_EXPAND: function(e) {
+            A.displayName = "PopoutWindowStore", A.persistKey = "PopoutWindowStore";
+            let N = new A(a.default, {
+                POPOUT_WINDOW_OPEN: function(e) {
                     let {
-                        folderId: t
+                        key: t,
+                        features: n,
+                        render: l
                     } = e;
-                    (o = new Set(o)).has(t) ? o.delete(t) : o.add(t)
-                },
-                SET_GUILD_FOLDER_EXPANDED: function(e) {
+                    if (c.isPlatformEmbedded && !S.default.supportsFeature(_.NativeFeatures.POPOUT_WINDOWS)) throw Error("Popout windows not supported on this native module version!");
+                    let o = f[t];
+                    if (null != o && !o.closed) return c.isPlatformEmbedded ? S.default.focus(t) : o.focus(), !1;
                     let {
-                        folderId: t,
-                        expanded: l
+                        defaultWidth: i,
+                        defaultHeight: u,
+                        defaultAlwaysOnTop: r = !1,
+                        ...s
+                    } = n, a = s, d = r, E = T[t];
+                    if (null != E) {
+                        let {
+                            width: e,
+                            height: t,
+                            x: n,
+                            y: l,
+                            alwaysOnTop: o
+                        } = E;
+                        d = null != o ? o : r, a = {
+                            width: null != e && 0 !== e ? e : i,
+                            height: null != t && 0 !== t ? t : u,
+                            left: n,
+                            top: l,
+                            ...a
+                        }
+                    }
+                    let h = window.open(_.Routes.POPOUT_WINDOW, t, function(e) {
+                        let t = "";
+                        for (let n of Object.keys(e)) {
+                            let l = e[n];
+                            void 0 !== l && ("boolean" == typeof l && (l = l ? "yes" : "no"), t += "".concat(n, "=").concat(l, ","))
+                        }
+                        return t
+                    }(a));
+                    h.windowKey = t, null == h || h.focus(), f[t] = h, O[t] = l, c.isPlatformEmbedded && (S.default.setAlwaysOnTop(t, d), p[t] = d, S.default.isAlwaysOnTop(t).then(e => p[t] = e)), R.add(t)
+                },
+                POPOUT_WINDOW_CLOSE: function(e) {
+                    let {
+                        key: t
+                    } = e, n = f[t];
+                    null != n && !n.closed && (v(t), n.close())
+                },
+                POPOUT_WINDOW_SET_ALWAYS_ON_TOP: function(e) {
+                    let {
+                        key: t,
+                        alwaysOnTop: n
                     } = e;
-                    o = new Set(o), l ? o.add(t) : o.has(t) && o.delete(t)
+                    c.isPlatformEmbedded && (S.default.setAlwaysOnTop(t, n), p[t] = n, S.default.isAlwaysOnTop(t).then(e => p[t] = e))
                 },
-                USER_SETTINGS_PROTO_UPDATE: function() {
-                    let e = r.default.getGuildFolders();
-                    if (null == e) return !1;
-                    let t = !1;
-                    for (let l of o) !e.some(e => e.folderId === l) && ((o = new Set(o)).delete(l), t = !0);
-                    return t
-                },
-                GUILD_FOLDER_COLLAPSE: function() {
-                    if (0 === o.size) return !1;
-                    o = new Set
-                }
-            })
+                LOGOUT: m
+            });
+            var C = N
         },
-        840707: function(e, t, l) {
+        191349: function(e, t, n) {
             "use strict";
-            l.r(t), l.d(t, {
-                default: function() {
-                    return o
+            n.r(t), n.d(t, {
+                DEVICE_PUSH_VOIP_PROVIDER: function() {
+                    return u
+                },
+                getDevicePushProvider: function() {
+                    return r
                 }
             });
-            var n = l("872717"),
-                d = l("599110");
+            var l, o, i = n("773336");
+            let u = null;
 
-            function r(e, t, l) {
-                let {
-                    trackedActionData: n,
-                    ...r
-                } = t, o = {
-                    url: r.url,
-                    request_method: l
-                };
-                return new Promise((t, l) => {
-                    e(r).then(e => {
-                        let l = n.properties;
-                        "function" == typeof n.properties && (l = n.properties(e)), (0, d.trackNetworkAction)(n.event, {
-                            status_code: e.status,
-                            ...o,
-                            ...l
-                        }), t(e)
-                    }).catch(e => {
-                        var t, r;
-                        let a = n.properties;
-                        "function" == typeof n.properties && (a = n.properties(e)), (0, d.trackNetworkAction)(n.event, {
-                            status_code: e.status,
-                            error_code: null === (t = e.body) || void 0 === t ? void 0 : t.code,
-                            error_message: null === (r = e.body) || void 0 === r ? void 0 : r.message,
-                            ...o,
-                            ...a
-                        }), l(e)
-                    })
-                })
+            function r() {
+                return (0, i.isAndroid)(), null
+            }(l = o || (o = {})).REMINDER = "reminder", l.TOP_MESSAGE_PUSH = "top_messages_push", l.TRENDING_CONTENT_PUSH = "trending_content_push"
+        },
+        211895: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return u
+                }
+            });
+            var l = n("913144"),
+                o = n("54239"),
+                i = n("49111");
+
+            function u() {
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+                    t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+                        openWithoutBackstack: !1
+                    };
+                l.default.dispatch({
+                    type: "USER_SETTINGS_MODAL_OPEN",
+                    section: e,
+                    subsection: t,
+                    ...n
+                }), (0, o.pushLayer)(i.Layers.USER_SETTINGS)
             }
-            var o = {
-                get: function(e) {
-                    return r(n.default.get, e, "get")
-                },
-                post: function(e) {
-                    return r(n.default.post, e, "post")
-                },
-                put: function(e) {
-                    return r(n.default.put, e, "put")
-                },
-                patch: function(e) {
-                    return r(n.default.patch, e, "patch")
-                },
-                delete: function(e) {
-                    return r(n.default.delete, e, "del")
+        },
+        26092: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return C
+                }
+            });
+            var l = n("917351"),
+                o = n.n(l),
+                i = n("446674"),
+                u = n("913144"),
+                r = n("697218"),
+                s = n("49111");
+            let a = s.FormStates.CLOSED,
+                d = null,
+                c = null,
+                S = {},
+                E = {},
+                _ = {},
+                T = null,
+                p = null,
+                f = !1,
+                h = !1,
+                O = null,
+                R = null,
+                I = null,
+                U = [],
+                v = null,
+                P = null;
+
+            function g(e) {
+                var t, n, l, o, i, u;
+                let d = r.default.getCurrentUser();
+                if (null == d) return m();
+                c = null !== (t = e.section) && void 0 !== t ? t : c, v = null !== (n = e.section) && void 0 !== n ? n : c, null != e.subsection && null != c && (S[c] = e.subsection), null != e.scrollPosition && null != c && (E[c] = e.scrollPosition), h = !!e.openWithoutBackstack, a = s.FormStates.OPEN, _ = {}, p = {
+                    ...T = {
+                        [s.UserSettingsSections.ACCOUNT]: {
+                            userId: d.id,
+                            username: d.username,
+                            discriminator: d.discriminator,
+                            email: d.email,
+                            avatar: d.avatar,
+                            password: "",
+                            newPassword: null,
+                            claimed: d.isClaimed()
+                        }
+                    }
+                }, R = null !== (l = e.onClose) && void 0 !== l ? l : null, I = null !== (o = e.analyticsLocation) && void 0 !== o ? o : null, U = null !== (i = e.analyticsLocations) && void 0 !== i ? i : [], P = null !== (u = e.impressionSource) && void 0 !== u ? u : null
+            }
+
+            function m() {
+                a = s.FormStates.CLOSED, f = !1, T = null, v = null, p = null, d = null, c = null, S = {}, E = {}, R = null, I = null, U = [], P = null
+            }
+
+            function A() {
+                a = s.FormStates.OPEN, _ = {}
+            }
+            class N extends i.default.Store {
+                initialize() {
+                    this.waitFor(r.default)
+                }
+                hasChanges() {
+                    return null != p && null != T && (!!this.isOpen() || O === s.DrawerTabTypes.USER_SETTINGS) && !o.isEqual(p, T)
+                }
+                isOpen() {
+                    return f
+                }
+                getPreviousSection() {
+                    return d
+                }
+                getSection() {
+                    return c
+                }
+                getSubsection() {
+                    return null != c ? S[c] : null
+                }
+                getScrollPosition() {
+                    return null != c ? E[c] : null
+                }
+                shouldOpenWithoutBackstack() {
+                    return h
+                }
+                getProps() {
+                    return {
+                        submitting: a === s.FormStates.SUBMITTING,
+                        section: c,
+                        subsection: null != c ? S[c] : null,
+                        scrollPosition: null != c ? E[c] : null,
+                        settings: p,
+                        errors: _,
+                        hasChanges: this.hasChanges(),
+                        openWithoutBackstack: h,
+                        analyticsLocation: I,
+                        analyticsLocations: U,
+                        initialSection: v,
+                        impressionSource: P
+                    }
+                }
+                get onClose() {
+                    return R
                 }
             }
+            N.displayName = "UserSettingsModalStore";
+            var C = new N(u.default, {
+                USER_SETTINGS_MODAL_OPEN: function(e) {
+                    f = !0, g(e)
+                },
+                USER_SETTINGS_MODAL_INIT: g,
+                USER_SETTINGS_MODAL_CLOSE: m,
+                LOGOUT: m,
+                USER_SETTINGS_MODAL_SUBMIT: function() {
+                    a = s.FormStates.SUBMITTING
+                },
+                USER_SETTINGS_MODAL_SUBMIT_FAILURE: function(e) {
+                    var t;
+                    if (a !== s.FormStates.SUBMITTING) return !1;
+                    a = s.FormStates.OPEN, c = s.UserSettingsSections.ACCOUNT, _ = null !== (t = e.errors) && void 0 !== t ? t : {}
+                },
+                USER_SETTINGS_MODAL_SET_SECTION: function(e) {
+                    var t;
+                    d = c, c = e.section, I = null, U = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (S[c] = e.subsection)
+                },
+                USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function(e) {
+                    let {
+                        forSection: t
+                    } = e;
+                    null != t ? delete S[t] : null != c && delete S[c]
+                },
+                USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: function(e) {
+                    let {
+                        forSection: t
+                    } = e;
+                    null != t ? delete E[t] : null != c && delete E[c]
+                },
+                USER_SETTINGS_MODAL_UPDATE_ACCOUNT: function(e) {
+                    let {
+                        settings: t
+                    } = e;
+                    null == p && (p = {});
+                    let n = p[s.UserSettingsSections.ACCOUNT];
+                    p[s.UserSettingsSections.ACCOUNT] = {
+                        ...n,
+                        ...t
+                    }
+                },
+                USER_SETTINGS_MODAL_SUBMIT_COMPLETE: A,
+                USER_SETTINGS_MODAL_RESET: function() {
+                    let e = r.default.getCurrentUser();
+                    A(), null != e && (p = {
+                        ...T = {
+                            [s.UserSettingsSections.ACCOUNT]: {
+                                userId: e.id,
+                                username: e.username,
+                                discriminator: e.discriminator,
+                                email: e.email,
+                                avatar: e.avatar,
+                                password: "",
+                                newPassword: null,
+                                claimed: e.isClaimed()
+                            }
+                        }
+                    })
+                },
+                DRAWER_SELECT_TAB: function(e) {
+                    return O = e.tab, null == c && O === s.DrawerTabTypes.USER_SETTINGS && g({
+                        type: "USER_SETTINGS_MODAL_INIT",
+                        section: null,
+                        subsection: null,
+                        scrollPosition: null,
+                        openWithoutBackstack: !1
+                    })
+                }
+            })
         }
     }
 ]);

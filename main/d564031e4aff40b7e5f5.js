@@ -1,1025 +1,986 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["74836"], {
-        413476: function(e, t, n) {
+    ["40894"], {
+        875212: function(e, t, r) {
             "use strict";
-            n.r(t), n.d(t, {
-                ReportRaidExperiment: function() {
-                    return l
-                },
-                RaidAlertExperiment: function() {
-                    return r
+            r.r(t), r.d(t, {
+                useTriggerDebuggingAA: function() {
+                    return u
                 }
             });
-            var i = n("862205");
-            let l = (0, i.createExperiment)({
-                    kind: "guild",
-                    id: "2022-07_report_raids",
-                    label: "Report Raids",
-                    defaultConfig: {
-                        enableRaidReporting: !1
-                    },
-                    treatments: [{
-                        id: 1,
-                        label: "Enable Reporting Of Raids",
-                        config: {
-                            enableRaidReporting: !0
-                        }
-                    }]
-                }),
-                r = (0, i.createExperiment)({
-                    kind: "guild",
-                    id: "2022-10_guild_raid_messaging",
-                    label: "Raid Alerts",
-                    defaultConfig: {
-                        enableRaidAlerts: !1
-                    },
-                    treatments: [{
-                        id: 1,
-                        label: "Enable Reporting Of Raids",
-                        config: {
-                            enableRaidAlerts: !0
-                        }
-                    }]
-                })
-        },
-        592407: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return N
-                }
-            });
-            var i = n("759843"),
-                l = n("872717"),
-                r = n("913144"),
-                d = n("54239"),
-                s = n("605250"),
-                u = n("413476"),
-                a = n("81732"),
-                o = n("479756"),
-                E = n("38654"),
-                _ = n("267567"),
-                S = n("271938"),
-                I = n("26989"),
-                c = n("305961"),
-                T = n("730622"),
-                G = n("840707"),
-                f = n("900938"),
-                p = n("49111"),
-                D = n("782340");
-            let A = new s.default("GuildSettingsActionCreators"),
-                L = {
-                    init(e, t, n, i) {
-                        r.default.dispatch({
-                            type: "GUILD_SETTINGS_INIT",
-                            guildId: e,
-                            section: t,
-                            subsection: i,
-                            location: n
-                        })
-                    },
-                    open(e, t, n, i) {
-                        var l;
-                        (null === (l = c.default.getGuild(e)) || void 0 === l ? void 0 : l.hasFeature(p.GuildFeatures.COMMUNITY)) && (t === p.GuildSettingsSections.GUILD_AUTOMOD && (t = p.GuildSettingsSections.SAFETY, i = p.GuildSettingsSubsections.SAFETY_AUTOMOD), t === p.GuildSettingsSections.MEMBER_VERIFICATION && (t = p.GuildSettingsSections.SAFETY, i = p.GuildSettingsSubsections.SAFETY_DM_AND_SPAM_PROTECTION)), L.init(e, t, n, i), (0, d.pushLayer)(p.Layers.GUILD_SETTINGS)
-                    },
-                    close() {
-                        r.default.dispatch({
-                            type: "GUILD_SETTINGS_CLOSE"
-                        })
-                    },
-                    saveRouteStack(e) {
-                        r.default.dispatch({
-                            type: "GUILD_SETTINGS_SAVE_ROUTE_STACK",
-                            state: e
-                        })
-                    },
-                    setSection(e, t) {
-                        var n;
-                        let i = f.default.getGuildId();
-                        null != i && ((null === (n = c.default.getGuild(i)) || void 0 === n ? void 0 : n.hasFeature(p.GuildFeatures.COMMUNITY)) && (e === p.GuildSettingsSections.GUILD_AUTOMOD && (e = p.GuildSettingsSections.SAFETY, t = p.GuildSettingsSubsections.SAFETY_AUTOMOD), e === p.GuildSettingsSections.MEMBER_VERIFICATION && (e = p.GuildSettingsSections.SAFETY, t = p.GuildSettingsSubsections.SAFETY_DM_AND_SPAM_PROTECTION)), r.default.dispatch({
-                            type: "GUILD_SETTINGS_SET_SECTION",
-                            section: e,
-                            subsection: t
-                        }))
-                    },
-                    setSearchQuery(e) {
-                        r.default.dispatch({
-                            type: "GUILD_SETTINGS_SET_SEARCH_QUERY",
-                            searchQuery: e
-                        })
-                    },
-                    selectRole(e, t) {
-                        r.default.dispatch({
-                            type: "GUILD_SETTINGS_ROLE_SELECT",
-                            roleId: e,
-                            searchQuery: t
-                        })
-                    },
-                    updateEmbed(e, t, n) {
-                        l.default.patch({
-                            url: p.Endpoints.GUILD_WIDGET(e),
-                            body: {
-                                enabled: t,
-                                channel_id: n
-                            },
-                            oldFormErrors: !0
-                        }).then(t => {
-                            r.default.dispatch({
-                                type: "GUILD_SETTINGS_SET_WIDGET",
-                                guildId: e,
-                                enabled: t.body.enabled,
-                                channelId: t.body.channel_id
-                            })
-                        })
-                    },
-                    updateMFALevel(e) {
-                        let {
-                            guildId: t,
-                            level: n,
-                            isEnabled: i
-                        } = e;
-                        return (0, T.default)(e => l.default.post({
-                            url: p.Endpoints.GUILD_MFA(t),
-                            body: {
-                                level: n,
-                                ...e
-                            },
-                            oldFormErrors: !0
-                        }), {
-                            modalProps: {
-                                title: D.default.Messages.GUILD_SECURITY_REQ_MFA_LABEL,
-                                actionText: i ? D.default.Messages.GUILD_SECURITY_REQ_MFA_TURN_OFF : D.default.Messages.GUILD_SECURITY_REQ_MFA_TURN_ON
-                            },
-                            checkEnabled: !1
-                        }).then(e => r.default.dispatch({
-                            type: "GUILD_SETTINGS_SET_MFA_SUCCESS",
-                            level: e.body.level
-                        }))
-                    },
-                    updateIcon(e, t) {
-                        l.default.patch({
-                            url: p.Endpoints.GUILD(e),
-                            body: {
-                                icon: t
-                            },
-                            oldFormErrors: !0
-                        }).then(() => {
-                            r.default.dispatch({
-                                type: "GUILD_SETTINGS_UPDATE",
-                                icon: t
-                            }), a.default.checkGuildTemplateDirty(e)
-                        }, e => r.default.dispatch({
-                            type: "GUILD_SETTINGS_SUBMIT_FAILURE",
-                            errors: e.body
-                        }))
-                    },
-                    cancelChanges(e) {
-                        r.default.dispatch({
-                            type: "GUILD_SETTINGS_CANCEL_CHANGES",
-                            guildId: e
-                        })
-                    },
-                    updateGuild(e) {
-                        let {
-                            safetyAlertsChannelId: t,
-                            ...n
-                        } = e, i = {
-                            ...n
-                        }, l = f.default.getGuildId();
-                        if (null != l) {
-                            var d;
-                            let e = null === (d = u.RaidAlertExperiment.getCurrentConfig({
-                                guildId: l,
-                                location: "be0372_1"
-                            })) || void 0 === d ? void 0 : d.enableRaidAlerts;
-                            e && null != t && (i.safetyAlertsChannelId = t)
-                        }
-                        r.default.dispatch({
-                            type: "GUILD_SETTINGS_UPDATE",
-                            ...i
-                        })
-                    },
-                    saveGuild(e, t) {
-                        let {
-                            name: n,
-                            description: i,
-                            icon: d,
-                            splash: s,
-                            banner: u,
-                            homeHeader: o,
-                            afkChannelId: E,
-                            afkTimeout: _,
-                            systemChannelId: S,
-                            verificationLevel: I,
-                            defaultMessageNotifications: c,
-                            explicitContentFilter: T,
-                            features: G,
-                            systemChannelFlags: f,
-                            preferredLocale: D,
-                            rulesChannelId: L,
-                            safetyAlertsChannelId: N,
-                            discoverySplash: U,
-                            publicUpdatesChannelId: R,
-                            premiumProgressBarEnabled: g
-                        } = t, C = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, h = {
-                            name: n,
-                            description: i,
-                            icon: d,
-                            splash: s,
-                            banner: u,
-                            home_header: o,
-                            features: G,
-                            preferred_locale: D,
-                            afk_channel_id: E,
-                            afk_timeout: _,
-                            system_channel_id: S,
-                            verification_level: I,
-                            default_message_notifications: c,
-                            explicit_content_filter: T,
-                            system_channel_flags: f,
-                            rules_channel_id: L,
-                            discovery_splash: U,
-                            public_updates_channel_id: R,
-                            safety_alerts_channel_id: N,
-                            ...null != g ? {
-                                premium_progress_bar_enabled: g
-                            } : null
-                        };
-                        return r.default.dispatch({
-                            type: "GUILD_SETTINGS_SUBMIT"
-                        }), l.default.patch({
-                            url: p.Endpoints.GUILD(e),
-                            query: {
-                                for_discovery: C.isForDiscovery
-                            },
-                            body: h,
-                            oldFormErrors: !0
-                        }).then(t => {
-                            r.default.dispatch({
-                                type: "GUILD_SETTINGS_SUBMIT_SUCCESS",
-                                guild: t.body
-                            }), a.default.checkGuildTemplateDirty(e)
-                        }, e => {
-                            if (r.default.dispatch({
-                                    type: "GUILD_SETTINGS_SUBMIT_FAILURE",
-                                    errors: e.body
-                                }), A.error("Failed to save guild settings", {
-                                    errors: e.body
-                                }), C.throwErr) throw e.body
-                        })
-                    },
-                    updateGuildModeration: (e, t) => l.default.patch({
-                        url: p.Endpoints.GUILD(e),
-                        body: {
-                            verification_level: t.verificationLevel,
-                            explicit_content_filter: t.explicitContentFilter
-                        },
-                        oldFormErrors: !0
-                    }).then(t => (a.default.checkGuildTemplateDirty(e), t)),
-                    transferOwnership(e, t) {
-                        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-                            l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-                        return (0, T.default)(r => G.default.patch({
-                            url: p.Endpoints.GUILD(e),
-                            body: {
-                                owner_id: t,
-                                code: l,
-                                ...r
-                            },
-                            oldFormErrors: !0,
-                            trackedActionData: {
-                                event: i.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP,
-                                properties: {
-                                    guild_id: e,
-                                    verification_type: n
-                                }
-                            }
-                        }), {
-                            modalProps: {
-                                title: D.default.Messages.TRANSFER_OWNERSHIP,
-                                actionText: D.default.Messages.TRANSFER_OWNERSHIP
-                            },
-                            checkEnabled: !1
-                        })
-                    },
-                    sendTransferOwnershipPincode(e) {
-                        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                        return G.default.put({
-                            url: p.Endpoints.GUILD_PINCODE(e),
-                            oldFormErrors: !0,
-                            trackedActionData: {
-                                event: i.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE,
-                                properties: {
-                                    guild_id: e,
-                                    is_resend: t
-                                }
-                            }
-                        })
-                    },
-                    deleteGuild: (e, t) => (0, T.default)(t => l.default.post({
-                        url: p.Endpoints.GUILD_DELETE(e),
-                        body: t,
-                        oldFormErrors: !0
-                    }), {
-                        modalProps: {
-                            title: D.default.Messages.DELETE_SERVER_TITLE.format({
-                                name: t
-                            }),
-                            actionText: D.default.Messages.DELETE_SERVER,
-                            disallowBackupCodes: !0
-                        },
-                        checkEnabled: !1
-                    }).then(() => {
-                        L.close()
-                    }),
-                    async leaveGuild(e) {
-                        await l.default.delete({
-                            url: p.Endpoints.GUILD_LEAVE(e),
-                            body: {
-                                lurking: _.default.isLurking(e) || I.default.isCurrentUserGuest(e)
-                            },
-                            oldFormErrors: !0
-                        }), L.close()
-                    },
-                    async updateMemberRoles(e, t, n, i, d) {
-                        if (E.default.isFullServerPreview(e) && t === S.default.getId()) {
-                            (0, o.updateImpersonatedRoles)(e, n);
-                            return
-                        }
-                        await l.default.patch({
-                            url: p.Endpoints.GUILD_MEMBER(e, t),
-                            body: {
-                                roles: n
-                            },
-                            oldFormErrors: !0
-                        }), i.forEach(n => r.default.dispatch({
-                            type: "GUILD_ROLE_MEMBER_ADD",
-                            guildId: e,
-                            roleId: n,
-                            userId: t
-                        })), d.forEach(n => r.default.dispatch({
-                            type: "GUILD_ROLE_MEMBER_REMOVE",
-                            guildId: e,
-                            roleId: n,
-                            userId: t
-                        }))
-                    },
-                    bulkAddMemberRoles: (e, t, n) => l.default.patch({
-                        url: p.Endpoints.GUILD_ROLE_MEMBERS(e, t),
-                        body: {
-                            member_ids: n
-                        }
-                    }).then(n => {
-                        r.default.dispatch({
-                            type: "GUILD_ROLE_MEMBER_BULK_ADD",
-                            guildId: e,
-                            roleId: t,
-                            added: n.body
-                        })
-                    }),
-                    updateRolesEditSection(e) {
-                        r.default.dispatch({
-                            type: "GUILD_SETTINGS_ROLES_EDIT_SECTION_UPDATE",
-                            section: e
-                        })
-                    },
-                    enableIntegration: (e, t, n) => l.default.post({
-                        url: p.Endpoints.GUILD_INTEGRATIONS(e),
-                        body: {
-                            type: t,
-                            id: n
-                        },
-                        oldFormErrors: !0
-                    }),
-                    disableIntegration: (e, t) => l.default.delete({
-                        url: p.Endpoints.GUILD_INTEGRATION(e, t),
-                        oldFormErrors: !0
-                    }),
-                    updateIntegration: (e, t, n, i, r) => l.default.patch({
-                        url: p.Endpoints.GUILD_INTEGRATION(e, t),
-                        body: {
-                            expire_behavior: n,
-                            expire_grace_period: i,
-                            enable_emoticons: r
-                        },
-                        oldFormErrors: !0
-                    }),
-                    syncIntegration(e, t) {
-                        l.default.post({
-                            url: p.Endpoints.GUILD_INTEGRATION_SYNC(e, t),
-                            oldFormErrors: !0
-                        })
-                    }
-                };
-            var N = L
-        },
-        468349: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                GuildSettingsBansNewExperiment: function() {
-                    return l
-                }
-            });
-            var i = n("296892");
-            let l = (0, i.default)({
-                kind: "guild",
-                id: "2023-08_improved_bans_page",
-                label: "Guild Settings Improved Bans Page",
+            var n = r("862205");
+            let i = (0, n.createExperiment)({
+                kind: "user",
+                id: "2023-09_trigger_debugging_aa",
+                label: "trigger debugging aa mobile",
                 defaultConfig: {
-                    enabled: !1
+                    inUse: !1
                 },
                 treatments: [{
                     id: 1,
-                    label: "Guild Settings Improved Bans Page",
+                    label: "On",
                     config: {
-                        enabled: !0
+                        inUse: !0
                     }
                 }]
+            });
+
+            function u(e) {
+                let {
+                    autoTrackExposure: t = !1,
+                    location: r
+                } = e;
+                return i.useExperiment({
+                    location: r
+                }, {
+                    autoTrackExposure: t
+                })
+            }
+        },
+        473591: function(e, t, r) {
+            "use strict";
+            let n, i, u, l, s, a;
+            r.r(t), r.d(t, {
+                default: function() {
+                    return f
+                }
+            });
+            var E = r("446674"),
+                o = r("913144");
+            let c = !1,
+                _ = !1,
+                d = null,
+                C = {},
+                S = {},
+                T = {},
+                I = {};
+
+            function A() {
+                n = void 0, i = void 0, u = void 0, l = void 0, s = void 0, d = null
+            }
+            class L extends E.default.Store {
+                getSettings(e) {
+                    if (null != e) return T[e]
+                }
+                getProfile(e) {
+                    return null == e ? null : C[e]
+                }
+                getGeneratedPersonality() {
+                    return a
+                }
+                getPendingPersonality() {
+                    return n
+                }
+                getPendingNick() {
+                    return i
+                }
+                getErrors() {
+                    return d
+                }
+                hasPendingChanges() {
+                    return void 0 !== n || void 0 !== i || void 0 !== u || void 0 !== l || void 0 !== s
+                }
+                getPendingUpdates() {
+                    return {
+                        pendingAvatar: u,
+                        pendingNick: i,
+                        pendingPersonality: n,
+                        pendingBanner: l,
+                        pendingThemeColors: s
+                    }
+                }
+                isSavingSettings() {
+                    return c
+                }
+                isFetchingSettings(e) {
+                    var t;
+                    return null === (t = I[e]) || void 0 === t ? void 0 : t.isFetching
+                }
+                shouldFetchSettings(e) {
+                    var t, r;
+                    let n = null !== (t = I[e]) && void 0 !== t ? t : {
+                            isFetching: !1
+                        },
+                        i = Date.now(),
+                        u = i - (null !== (r = n.lastFetchTimestampMs) && void 0 !== r ? r : 0) > 36e5;
+                    return !(null == n ? void 0 : n.isFetching) && u
+                }
+                isFetchingProfile(e) {
+                    var t;
+                    return null === (t = S[e]) || void 0 === t ? void 0 : t.isFetching
+                }
+                isEditingClydeProfile() {
+                    return _
+                }
+            }
+            L.displayName = "ClydeStore";
+            var f = new L(o.default, {
+                CLYDE_GUILD_SETTINGS_FETCH_START: function(e) {
+                    let {
+                        guildId: t
+                    } = e, r = I[t];
+                    I[t] = {
+                        isFetching: !0,
+                        lastFetchTimestampMs: null == r ? void 0 : r.lastFetchTimestampMs
+                    }
+                },
+                CLYDE_GUILD_SETTINGS_FETCH_SUCCESS: function(e) {
+                    let {
+                        guildId: t,
+                        settings: r
+                    } = e;
+                    I[t] = {
+                        isFetching: !1,
+                        lastFetchTimestampMs: Date.now()
+                    }, T[t] = r
+                },
+                CLYDE_GUILD_SETTINGS_FETCH_FAIL: function(e) {
+                    let {
+                        guildId: t
+                    } = e, r = I[t];
+                    I[t] = {
+                        isFetching: !1,
+                        lastFetchTimestampMs: null == r ? void 0 : r.lastFetchTimestampMs
+                    }
+                },
+                CLYDE_SET_PENDING_PERSONALITY: function(e) {
+                    let {
+                        personality: t,
+                        isGenerated: r
+                    } = e;
+                    n = t, r && (a = t)
+                },
+                CLYDE_SET_PENDING_NICK: function(e) {
+                    let {
+                        nick: t
+                    } = e;
+                    i = t
+                },
+                CLYDE_SET_PENDING_AVATAR: function(e) {
+                    let {
+                        avatar: t
+                    } = e;
+                    u = t
+                },
+                CLYDE_SET_PENDING_BANNER: function(e) {
+                    let {
+                        banner: t
+                    } = e;
+                    l = t
+                },
+                CLYDE_SET_PENDING_THEME_COLORS: function(e) {
+                    let {
+                        themeColors: t
+                    } = e;
+                    s = t
+                },
+                CLYDE_GUILD_SETTINGS_SAVE_START: function() {
+                    d = null, c = !0
+                },
+                CLYDE_GUILD_SETTINGS_SAVE_SUCCESS: function(e) {
+                    let {
+                        settings: t
+                    } = e;
+                    c = !1, T[t.guild_id] = t, A()
+                },
+                CLYDE_GUILD_SETTINGS_SAVE_FAIL: function(e) {
+                    c = !1, d = e.errors
+                },
+                CLYDE_RESET_PENDING_CHANGES: A,
+                CLYDE_PROFILE_FETCH_START: function(e) {
+                    let {
+                        clydeProfileId: t
+                    } = e, r = S[t];
+                    S[t] = {
+                        isFetching: !0,
+                        lastFetchTimestampMs: null == r ? void 0 : r.lastFetchTimestampMs
+                    }
+                },
+                CLYDE_PROFILE_FETCH_SUCCESS: function(e) {
+                    let {
+                        profile: t
+                    } = e;
+                    S[t.clyde_profile_id] = {
+                        isFetching: !1,
+                        lastFetchTimestampMs: Date.now()
+                    }, C[t.clyde_profile_id] = t
+                },
+                CLYDE_PROFILE_FETCH_FAIL: function(e) {
+                    let {
+                        clydeProfileId: t
+                    } = e, r = S[t];
+                    S[t] = {
+                        isFetching: !1,
+                        lastFetchTimestampMs: null == r ? void 0 : r.lastFetchTimestampMs
+                    }
+                },
+                CLYDE_PROFILE_CREATE_SUCCESS: function(e) {
+                    let {
+                        profile: t
+                    } = e;
+                    C[t.clyde_profile_id] = t
+                },
+                CLYDE_PROFILE_EDITING_START: function() {
+                    _ = !0
+                },
+                CLYDE_PROFILE_EDITING_END: function() {
+                    _ = !1
+                }
             })
         },
-        970700: function(e, t, n) {
+        21526: function(e, t, r) {
             "use strict";
-            n.r(t), n.d(t, {
-                fetchGuildIntegrationsApplications: function() {
+            r.r(t), r.d(t, {
+                trackCollectiblesShopOpened: function() {
+                    return c
+                },
+                openCollectiblesShop: function() {
+                    return _
+                },
+                closeCollectiblesShop: function() {
+                    return d
+                },
+                fetchCollectiblesCategories: function() {
+                    return C
+                },
+                fetchCollectiblesPurchases: function() {
+                    return S
+                },
+                fetchCollectiblesProduct: function() {
+                    return T
+                },
+                claimPremiumCollectiblesProduct: function() {
+                    return I
+                },
+                setCollectiblesCategoryItemsViewed: function() {
+                    return A
+                }
+            });
+            var n = r("872717"),
+                i = r("913144"),
+                u = r("54239"),
+                l = r("448993"),
+                s = r("514296"),
+                a = r("407788"),
+                E = r("489134"),
+                o = r("49111");
+            r("853987"), r("426497"), r("775416"), r("216719");
+            let c = e => {
+                    i.default.dispatch({
+                        type: "COLLECTIBLES_SHOP_OPEN",
+                        ...e
+                    })
+                },
+                _ = e => {
+                    c(e), (0, u.pushLayer)(o.Layers.COLLECTIBLES_SHOP)
+                },
+                d = () => {
+                    i.default.dispatch({
+                        type: "COLLECTIBLES_SHOP_CLOSE"
+                    }), (0, u.popLayer)()
+                },
+                C = async () => {
+                    i.default.dispatch({
+                        type: "COLLECTIBLES_CATEGORIES_FETCH"
+                    });
+                    try {
+                        let e = await n.default.get(o.Endpoints.COLLECTIBLES_CATEGORIES);
+                        i.default.dispatch({
+                            type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS",
+                            categories: e.body.map(s.default.fromServer)
+                        })
+                    } catch (e) {
+                        throw i.default.dispatch({
+                            type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE",
+                            error: e
+                        }), new l.APIError(e)
+                    }
+                }, S = async () => {
+                    i.default.dispatch({
+                        type: "COLLECTIBLES_PURCHASES_FETCH"
+                    });
+                    try {
+                        let e = await n.default.get(o.Endpoints.COLLECTIBLES_PURCHASES);
+                        i.default.dispatch({
+                            type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS",
+                            purchases: e.body.map(E.default.fromServer)
+                        })
+                    } catch (e) {
+                        throw i.default.dispatch({
+                            type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE",
+                            error: e
+                        }), new l.APIError(e)
+                    }
+                }, T = async e => {
+                    i.default.dispatch({
+                        type: "COLLECTIBLES_PRODUCT_FETCH"
+                    });
+                    try {
+                        let t = await n.default.get(o.Endpoints.COLLECTIBLES_PRODUCTS(e));
+                        i.default.dispatch({
+                            type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS",
+                            product: a.default.fromServer(t.body)
+                        })
+                    } catch (e) {
+                        throw i.default.dispatch({
+                            type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE",
+                            error: e
+                        }), new l.APIError(e)
+                    }
+                }, I = async e => {
+                    i.default.dispatch({
+                        type: "COLLECTIBLES_CLAIM",
+                        skuId: e
+                    });
+                    try {
+                        var t;
+                        let r = await n.default.put({
+                            url: o.Endpoints.COLLECTIBLES_CLAIM,
+                            body: {
+                                sku_id: e
+                            }
+                        });
+                        i.default.dispatch({
+                            type: "COLLECTIBLES_CLAIM_SUCCESS",
+                            skuId: e,
+                            purchases: null === (t = r.body) || void 0 === t ? void 0 : t.map(E.default.fromServer)
+                        })
+                    } catch (t) {
+                        throw i.default.dispatch({
+                            type: "COLLECTIBLES_CLAIM_FAILURE",
+                            skuId: e,
+                            error: t
+                        }), new l.APIError(t)
+                    }
+                }, A = e => {
+                    i.default.dispatch({
+                        type: "COLLECTIBLES_CATEGORY_ITEMS_VIEWED",
+                        ...e
+                    })
+                }
+        },
+        426497: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return d
+                }
+            }), r("808653");
+            var n = r("635058"),
+                i = r("265586"),
+                u = r("446674"),
+                l = r("913144"),
+                s = r("853987");
+            let a = new Date(2023, 8, 25),
+                E = new Date(2023, 9, 5),
+                o = () => ({
+                    categoryItemViews: {
+                        [n.CollectiblesCategorySkuId.FANTASY]: {
+                            [i.CollectiblesItemType.AVATAR_DECORATION]: a,
+                            [i.CollectiblesItemType.PROFILE_EFFECT]: E
+                        },
+                        [n.CollectiblesCategorySkuId.ANIME]: {
+                            [i.CollectiblesItemType.AVATAR_DECORATION]: a,
+                            [i.CollectiblesItemType.PROFILE_EFFECT]: E
+                        },
+                        [n.CollectiblesCategorySkuId.BREAKFAST]: {
+                            [i.CollectiblesItemType.AVATAR_DECORATION]: a,
+                            [i.CollectiblesItemType.PROFILE_EFFECT]: E
+                        },
+                        [n.CollectiblesCategorySkuId.DISXCORE]: {
+                            [i.CollectiblesItemType.AVATAR_DECORATION]: a
+                        }
+                    }
+                }),
+                c = o();
+            class _ extends u.default.PersistedStore {
+                initialize(e) {
+                    null != e && (c = e)
+                }
+                getState() {
+                    return c
+                }
+                isItemViewed(e) {
+                    var t;
+                    let r = s.default.getCategoryForProduct(e.skuId);
+                    return null != r && (null === (t = c.categoryItemViews[r.skuId]) || void 0 === t ? void 0 : t[e.type]) != null
+                }
+                reset() {
+                    c = o()
+                }
+            }
+            _.displayName = "CollectiblesPersistedStore", _.persistKey = "CollectiblesPersistedStoreV2";
+            var d = new _(l.default, {
+                COLLECTIBLES_CATEGORY_ITEMS_VIEWED: e => {
+                    let {
+                        categories: t,
+                        itemTypes: r
+                    } = e, n = new Date;
+                    return t.reduce((e, t) => {
+                        let {
+                            skuId: i
+                        } = t, u = r.reduce((e, t) => {
+                            var r;
+                            return (null === (r = c.categoryItemViews[i]) || void 0 === r ? void 0 : r[t]) != null ? e : (null == c.categoryItemViews[i] && (c.categoryItemViews[i] = {}), c.categoryItemViews[i][t] = n, !0)
+                        }, !1);
+                        return e || u
+                    }, !1)
+                }
+            })
+        },
+        775416: function(e, t, r) {
+            "use strict";
+            let n, i, u;
+            r.r(t), r.d(t, {
+                default: function() {
+                    return d
+                }
+            }), r("222007");
+            var l = r("917351"),
+                s = r("446674"),
+                a = r("913144");
+            let E = new Map,
+                o = E,
+                c = !1;
+            class _ extends s.default.Store {
+                get isFetching() {
+                    return c
+                }
+                get isClaiming() {
+                    return n
+                }
+                get purchases() {
+                    return o
+                }
+                get fetchError() {
+                    return i
+                }
+                get claimError() {
+                    return u
+                }
+                getPurchase(e) {
+                    return null != e ? o.get(e) : void 0
+                }
+            }
+            _.displayName = "CollectiblesPurchaseStore";
+            var d = new _(a.default, {
+                COLLECTIBLES_PURCHASES_FETCH: e => {
+                    c = !0, i = void 0
+                },
+                COLLECTIBLES_PURCHASES_FETCH_SUCCESS: e => {
+                    0 === e.purchases.length ? o = E : !(0, l.isEqual)([...o.values()], e.purchases) && (o = new Map(e.purchases.map(e => [e.skuId, e]))), c = !1, i = void 0
+                },
+                COLLECTIBLES_PURCHASES_FETCH_FAILURE: e => {
+                    let {
+                        error: t
+                    } = e;
+                    o = E, c = !1, i = t
+                },
+                COLLECTIBLES_CLAIM: e => {
+                    n = e.skuId, u = void 0
+                },
+                COLLECTIBLES_CLAIM_SUCCESS: e => {
+                    null == e.purchases || 0 === e.purchases.length ? o = E : !(0, l.isEqual)([...o.values()], e.purchases) && (o = new Map(e.purchases.map(e => [e.skuId, e]))), n = void 0, u = void 0
+                },
+                COLLECTIBLES_CLAIM_FAILURE: e => {
+                    let {
+                        error: t,
+                        skuId: r
+                    } = e;
+                    n = r, u = t
+                },
+                LOGOUT: e => {
+                    o = E, c = !1, n = void 0, i = void 0, u = void 0
+                }
+            })
+        },
+        216719: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return o
+                }
+            });
+            var n = r("446674"),
+                i = r("913144");
+            let u = [],
+                l = u,
+                s = null,
+                a = e => {
+                    l = u, s = null
+                };
+            class E extends n.default.Store {
+                get analyticsLocations() {
+                    return l
+                }
+                get analyticsSource() {
+                    return s
+                }
+                getAnalytics() {
+                    return {
+                        analyticsLocations: l,
+                        analyticsSource: s
+                    }
+                }
+            }
+            E.displayName = "CollectiblesShopStore";
+            var o = new E(i.default, {
+                COLLECTIBLES_SHOP_OPEN: e => {
+                    var t, r;
+                    l = null !== (t = e.analyticsLocations) && void 0 !== t ? t : u, s = null !== (r = e.analyticsSource) && void 0 !== r ? r : null
+                },
+                COLLECTIBLES_SHOP_CLOSE: a,
+                LOGOUT: a
+            })
+        },
+        514296: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return n
+                }
+            }), r("808653"), r("424973");
+            var n, i = r("407788"),
+                u = r("792382");
+            n = class e extends u.default {
+                static fromServer(t) {
+                    let {
+                        products: r,
+                        logo: n,
+                        ...u
+                    } = t;
+                    return new e({
+                        ...super.fromServer(u),
+                        products: r.reduce((e, t) => {
+                            let r = i.default.fromServer(t);
+                            return 0 === r.items.length ? e : (e.push(r), e)
+                        }, []),
+                        logo: n
+                    })
+                }
+                constructor(e) {
+                    super(e), this.products = e.products, this.logo = e.logo
+                }
+            }
+        },
+        407788: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return n
+                }
+            }), r("808653"), r("794252"), r("424973");
+            var n, i = r("506838"),
+                u = r("265586"),
+                l = r("797647"),
+                s = r("730297"),
+                a = r("792382"),
+                E = r("806410");
+            n = class e extends a.default {
+                static fromServer(t) {
+                    var r;
+                    let {
+                        currency: n,
+                        price: a,
+                        prices: o,
+                        ...c
+                    } = t;
+                    return new e({
+                        ...super.fromServer(c),
+                        currency: n,
+                        price: a,
+                        prices: null == (r = o) ? {} : Object.keys(r).reduce((e, t) => {
+                            if (null == r) return e;
+                            let n = r[t];
+                            return e[t] = {
+                                countryPrices: {
+                                    countryCode: n.country_prices.country_code,
+                                    prices: n.country_prices.prices.map(e => (0, l.getPriceFromServer)(e, !0))
+                                },
+                                paymentSourcePrices: {}
+                            }, e
+                        }, {}),
+                        items: c.items.reduce((e, t) => (0, i.match)(t).with({
+                            type: u.CollectiblesItemType.AVATAR_DECORATION
+                        }, t => (e.push(s.default.fromServer(t)), e)).with({
+                            type: u.CollectiblesItemType.PROFILE_EFFECT
+                        }, t => (e.push(E.default.fromServer(t)), e)).otherwise(() => e), [])
+                    })
+                }
+                constructor(e) {
+                    super(e), this.currency = e.currency, this.price = e.price, this.prices = e.prices, this.summary = e.summary, this.items = e.items
+                }
+            }
+        },
+        489134: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return n
+                }
+            });
+            var n, i = r("407788");
+            n = class e extends i.default {
+                static fromServer(t) {
+                    let {
+                        purchased_at: r,
+                        purchase_type: n,
+                        ...i
+                    } = t;
+                    return new e({
+                        ...super.fromServer(i),
+                        purchaseType: n,
+                        purchasedAt: null != r ? new Date(r) : r
+                    })
+                }
+                constructor(e) {
+                    super(e), this.purchasedAt = e.purchasedAt, this.purchaseType = e.purchaseType
+                }
+            }
+        },
+        792382: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return n
+                }
+            });
+            var n, i = r("666038");
+            n = class e extends i.default {
+                static fromServer(t) {
+                    let {
+                        store_listing_id: r,
+                        sku_id: n,
+                        unpublished_at: i,
+                        ...u
+                    } = t, l = null != i ? new Date(i) : null;
+                    return new e({
+                        ...u,
+                        storeListingId: r,
+                        skuId: n,
+                        unpublishedAt: l
+                    })
+                }
+                constructor(e) {
+                    super(), this.storeListingId = e.storeListingId, this.skuId = e.skuId, this.name = e.name, this.summary = e.summary, this.banner = e.banner, this.unpublishedAt = e.unpublishedAt
+                }
+            }
+        },
+        75015: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                UploadTypes: function() {
                     return u
                 },
-                fetchGuildIntegrationsCommands: function() {
+                EDITING_CONTAINER_WIDTH: function() {
+                    return a
+                },
+                USER_BANNER_MAX_WIDTH: function() {
+                    return E
+                },
+                USER_BANNER_MAX_HEIGHT: function() {
+                    return o
+                },
+                GUILD_BANNER_MAX_WIDTH: function() {
+                    return c
+                },
+                GUILD_BANNER_MAX_HEIGHT: function() {
+                    return _
+                },
+                SCHEDULED_EVENT_IMAGE_MAX_WIDTH: function() {
+                    return d
+                },
+                SCHEDULED_EVENT_IMAGE_MAX_HEIGHT: function() {
+                    return C
+                },
+                HOME_HEADER_MAX_WIDTH: function() {
+                    return S
+                },
+                HOME_HEADER_MAX_HEIGHT: function() {
+                    return T
+                },
+                BANNER_ASPECT_RATIO: function() {
+                    return I
+                },
+                GUILD_BANNER_ASPECT_RATIO: function() {
+                    return A
+                },
+                SCHEDULED_EVENT_IMAGE_ASPECT_RATIO: function() {
+                    return L
+                },
+                HOME_HEADER_ASPECT_RATIO: function() {
+                    return f
+                },
+                MAX_BANNER_OVERLAY_HEIGHT: function() {
+                    return p
+                },
+                MAX_GUILD_BANNER_OVERLAY_HEIGHT: function() {
+                    return O
+                },
+                MAX_SCHEDULED_EVENT_IMAGE_OVERLAY_HEIGHT: function() {
+                    return R
+                },
+                MAX_HOME_HEADER_OVERLAY_HEIGHT: function() {
+                    return h
+                },
+                VIDEO_BACKGROUND_ASPECT_RATIO: function() {
+                    return v
+                },
+                MAX_VIDEO_OVERLAY_HEIGHT: function() {
+                    return g
+                },
+                MessageTypes: function() {
+                    return l
+                }
+            });
+            var n, i, u, l, s = r("917219");
+            (n = u || (u = {}))[n.AVATAR = 0] = "AVATAR", n[n.BANNER = 1] = "BANNER", n[n.GUILD_BANNER = 2] = "GUILD_BANNER", n[n.VIDEO_BACKGROUND = 3] = "VIDEO_BACKGROUND", n[n.SCHEDULED_EVENT_IMAGE = 4] = "SCHEDULED_EVENT_IMAGE", n[n.HOME_HEADER = 5] = "HOME_HEADER", n[n.AVATAR_DECORATION = 6] = "AVATAR_DECORATION";
+            let a = 568,
+                E = 2400,
+                o = 848,
+                c = 2400,
+                _ = 1350,
+                d = 2400,
+                C = 960,
+                S = 2400,
+                T = 600,
+                I = 17 / 6,
+                A = 16 / 9,
+                L = 2.5,
+                f = 4,
+                p = a / I,
+                O = a / A,
+                R = a / L,
+                h = a / f,
+                v = s.BACKGROUND_REPLACEMENT_SIZE.width / s.BACKGROUND_REPLACEMENT_SIZE.height,
+                g = a / v;
+            (i = l || (l = {}))[i.CROP_GIF_START = 0] = "CROP_GIF_START", i[i.CROP_GIF_COMPLETE = 1] = "CROP_GIF_COMPLETE", i[i.CROP_GIF_ERROR = 2] = "CROP_GIF_ERROR"
+        },
+        737403: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                maybeOpenProfilePreviewModal: function() {
+                    return i
+                }
+            });
+            var n = r("913144");
+
+            function i(e) {
+                let {
+                    imageSrc: t,
+                    file: r,
+                    uploadType: i,
+                    guildId: u,
+                    isTryItOutFlow: l = !1
+                } = e;
+                n.default.dispatch({
+                    type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL",
+                    imageSrc: t,
+                    file: r,
+                    uploadType: i,
+                    guildId: u,
+                    isTryItOutFlow: l
+                })
+            }
+        },
+        453252: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                MAX_IMAGE_UPLOAD_FILESIZE_BYTES: function() {
+                    return n
+                }
+            });
+            let n = 10485760
+        },
+        771325: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                handleOpenSelectImageModal: function() {
+                    return C
+                },
+                showFileSizeErrorModal: function() {
+                    return S
+                },
+                getPreviewAvatar: function() {
+                    return T
+                },
+                getPreviewNickname: function() {
+                    return I
+                },
+                getPreviewDisplayName: function() {
+                    return A
+                },
+                isColorDark: function() {
+                    return L
+                }
+            });
+            var n = r("37983");
+            r("884691");
+            var i = r("509043"),
+                u = r("77078"),
+                l = r("336522"),
+                s = r("473591"),
+                a = r("315102"),
+                E = r("254490"),
+                o = r("737403"),
+                c = r("453252"),
+                _ = r("75015"),
+                d = r("782340");
+
+            function C(e, t, i, l) {
+                (0, u.openModalLazy)(async () => {
+                    let {
+                        default: u
+                    } = await r.el("420333").then(r.bind(r, "420333")), a = s.default.isEditingClydeProfile();
+                    return r => (0, n.jsx)(u, {
+                        filters: l,
+                        maxFileSizeBytes: c.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
+                        imageSpecifications: e === _.UploadTypes.BANNER && d.default.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
+                        onComplete: (r, n) => (0, o.maybeOpenProfilePreviewModal)({
+                            imageSrc: r,
+                            file: n,
+                            uploadType: e,
+                            guildId: t,
+                            isTryItOutFlow: i
+                        }),
+                        uploadType: e,
+                        showUpsellHeader: !a,
+                        ...r
+                    })
+                })
+            }
+
+            function S() {
+                (0, l.openUploadError)({
+                    title: d.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+                    help: d.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+                        maxSize: (0, E.sizeString)(c.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
+                    })
+                })
+            }
+
+            function T(e, t, r) {
+                let n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+                if (null != e) return e;
+                let {
+                    size: i = 80,
+                    canAnimate: u = !0
+                } = n, l = null === e;
+                return l && null == t ? a.default.getDefaultAvatarURL(r.id, r.discriminator) : l || (null == t ? void 0 : t.avatar) == null ? r.getAvatarURL(void 0, i, u) : r.getAvatarURL(null == t ? void 0 : t.guildId, i, u)
+            }
+
+            function I(e, t) {
+                return "" === e ? null : null != e ? e : t
+            }
+
+            function A(e, t) {
+                return "" === e ? null : null != e ? e : t
+            }
+
+            function L(e) {
+                let t = null != e ? (0, i.getDarkness)(e) : 1;
+                return t > .25
+            }
+        },
+        106435: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
                     return a
                 }
             });
-            var i = n("872717"),
-                l = n("913144"),
-                r = n("653047"),
-                d = n("766274"),
-                s = n("49111");
-
-            function u(e) {
-                i.default.get({
-                    url: s.Endpoints.GUILD_INTEGRATIONS(e),
-                    query: {
-                        include_applications: !0,
-                        include_role_connections_metadata: !0
-                    },
-                    oldFormErrors: !0
-                }).then(t => {
-                    let n = t.body.map(e => (null != e.user && (e.user = new d.default(e.user)), null != e.application && (e.application = r.default.createFromServer(e.application)), e));
-                    l.default.dispatch({
-                        type: "GUILD_SETTINGS_LOADED_INTEGRATIONS",
-                        guildId: e,
-                        integrations: n
-                    })
-                }).catch(() => {})
-            }
+            var n = r("884691"),
+                i = r("77078"),
+                u = r("606292"),
+                l = r("688318"),
+                s = r("19287");
 
             function a(e) {
-                i.default.get({
-                    url: s.Endpoints.GUILD_INTEGRATIONS(e),
-                    query: {
-                        has_commands: !0
-                    },
-                    oldFormErrors: !0
-                }).then(t => {
-                    let n = t.body.map(e => e.id);
-                    l.default.dispatch({
-                        type: "GUILD_SETTINGS_LOADED_INTEGRATIONS_WITH_COMMANDS",
-                        guildId: e,
-                        integrationIds: n
-                    })
-                }).catch(() => {})
-            }
-        },
-        900938: function(e, t, n) {
-            "use strict";
-            let i, l, r, d, s, u, a, o;
-            n.r(t), n.d(t, {
-                default: function() {
-                    return el
-                }
-            }), n("222007"), n("808653");
-            var E = n("917351"),
-                _ = n.n(E),
-                S = n("866227"),
-                I = n.n(S),
-                c = n("446674"),
-                T = n("872717"),
-                G = n("95410"),
-                f = n("913144"),
-                p = n("851387"),
-                D = n("233069"),
-                A = n("813006"),
-                L = n("517763"),
-                N = n("766274"),
-                U = n("305961"),
-                R = n("697218"),
-                g = n("468349"),
-                C = n("970700"),
-                h = n("49111"),
-                m = n("447621"),
-                O = n("69741");
-            let y = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkChannelId", "afkTimeout", "systemChannelId", "verificationLevel", "defaultMessageNotifications", "explicitContentFilter", "features", "systemChannelFlags", "preferredLocale", "rulesChannelId", "safetyAlertsChannelId", "discoverySplash", "publicUpdatesChannelId", "premiumProgressBarEnabled"],
-                b = new Set(["icon", "splash", "banner", "discoverySplash", "homeHeader"]),
-                M = !1,
-                v = h.FormStates.CLOSED,
-                F = {},
-                P = !1,
-                Y = null,
-                B = null,
-                V = 0,
-                k = h.MFALevels.NONE,
-                w = null,
-                x = {
-                    primaryCategoryId: m.DEFAULT_DISCOVERY_CATEGORY_ID,
-                    secondaryCategoryIds: [],
-                    keywords: [],
-                    emojiDiscoverabilityEnabled: m.DEFAULT_EMOJI_DISCOVERABILITY_SETTING,
-                    partnerActionedTimestamp: null,
-                    partnerApplicationTimestamp: null,
-                    isPublished: !1,
-                    reasonsToJoin: [],
-                    socialLinks: [],
-                    about: ""
-                },
-                H = !1,
-                W = x,
-                K = x,
-                J = null,
-                Q = 0,
-                j = null,
-                q = null,
-                X = null;
-
-            function z(e) {
-                if (null == s || null == d || d.id !== e) return !1;
-                let t = U.default.getGuild(e);
-                return null != t && (d === s ? s = d = t : (d = t, s = s.set("roles", d.roles)), !0)
-            }
-
-            function Z(e) {
-                var t;
                 let {
-                    guildId: n,
-                    section: l,
-                    subsection: r,
-                    location: a
-                } = e, E = U.default.getGuild(n);
-                if (null == E) return $();
-                d = s = E, v = h.FormStates.OPEN, F = {}, u = n, k = s.mfaLevel, K = W, o = null, w = a, ee({
-                    section: null !== (t = null != l ? l : i) && void 0 !== t ? t : h.GuildSettingsSections.OVERVIEW,
-                    subsection: null != r ? r : null
-                })
-            }
-
-            function $() {
-                M = !1, v = h.FormStates.CLOSED, d = s = null, P = !1, Y = null, B = null, V = 0, J = null, q = null, X = null, i = null, l = null, r = null, k = h.MFALevels.NONE, a = void 0
-            }
-
-            function ee(e) {
-                if (null == s) return !1;
-                let t = i;
-                if (i = e.section, l = e.subsection, i === h.GuildSettingsSections.BANS) {
-                    let {
-                        enabled: e
-                    } = g.GuildSettingsBansNewExperiment.getCurrentConfig({
-                        guildId: s.id,
-                        location: "7f0c91_1"
-                    });
-                    !e && p.default.fetchGuildBans(s.id)
-                } else if (i === h.GuildSettingsSections.INSTANT_INVITES) T.default.get({
-                    url: h.Endpoints.GUILD_INSTANT_INVITES(s.id),
-                    oldFormErrors: !0
-                }).then(e => {
-                    f.default.dispatch({
-                        type: "GUILD_SETTINGS_LOADED_INVITES",
-                        invites: e.body
-                    })
-                });
-                else if (i === h.GuildSettingsSections.WIDGET) T.default.get({
-                    url: h.Endpoints.GUILD_WIDGET(s.id),
-                    oldFormErrors: !0
-                }).then(e => {
-                    f.default.dispatch({
-                        type: "GUILD_SETTINGS_SET_WIDGET",
-                        enabled: e.body.enabled,
-                        channelId: e.body.channel_id
-                    })
-                });
-                else if (i === h.GuildSettingsSections.INTEGRATIONS || i === h.GuildSettingsSections.ROLES) {
-                    if (u = null, t !== e.section) return en(e)
-                } else i === h.GuildSettingsSections.MEMBERS ? u = s.id : i === h.GuildSettingsSections.VANITY_URL ? T.default.get({
-                    url: h.Endpoints.GUILD_VANITY_URL(s.id),
-                    oldFormErrors: !0
-                }).then(e => {
-                    let {
-                        body: {
-                            code: t,
-                            uses: n,
-                            error: i
-                        }
-                    } = e;
-                    f.default.dispatch({
-                        type: "GUILD_SETTINGS_SET_VANITY_URL",
-                        code: t,
-                        uses: n,
-                        error: i
-                    })
-                }) : i === h.GuildSettingsSections.SAFETY && f.default.dispatch({
-                    type: "GUILD_SETTINGS_SAFETY_SET_SUBSECTION",
-                    subsection: null == l ? h.GuildSettingsSubsections.SAFETY_OVERVIEW : l
-                })
-            }
-
-            function et(e) {
-                var t;
-                return new L.default({
-                    code: e.code,
-                    temporary: e.temporary,
-                    revoked: e.revoked,
-                    inviter: null != e.inviter ? new N.default(e.inviter) : null,
-                    channel: (0, D.createChannelRecordFromInvite)(e.channel),
-                    guild: null != e.guild ? new A.default(e.guild) : null,
-                    uses: e.uses,
-                    maxUses: e.max_uses,
-                    maxAge: e.max_age,
-                    createdAt: I(null !== (t = e.created_at) && void 0 !== t ? t : void 0)
-                })
-            }
-
-            function en(e) {
-                if (null == s || v !== h.FormStates.OPEN || "GUILD_INTEGRATIONS_UPDATE" === e.type && e.guildId !== s.id) return !1;
-                (0, C.fetchGuildIntegrationsApplications)(s.id), (0, C.fetchGuildIntegrationsCommands)(s.id)
-            }
-            class ei extends c.default.Store {
-                initialize() {
-                    this.waitFor(U.default, R.default)
-                }
-                getMetadata() {
-                    return K
-                }
-                hasChanges() {
-                    return !_.isEqual(s, d) || !_.isEqual(K, W)
-                }
-                isOpen() {
-                    return M
-                }
-                getSavedRouteState() {
-                    return a
-                }
-                getSection() {
-                    return i
-                }
-                showNotice() {
-                    return this.hasChanges()
-                }
-                getGuildId() {
-                    return null != s ? s.id : null
-                }
-                showPublicSuccessModal() {
-                    return !G.default.get(O.PUBLIC_SUCCESS_MODAL_SEEN_KEY)
-                }
-                getGuild() {
-                    return s
-                }
-                isSubmitting() {
-                    return v === h.FormStates.SUBMITTING
-                }
-                isGuildMetadataLoaded() {
-                    return H
-                }
-                getErrors() {
-                    return F
-                }
-                getSelectedRoleId() {
-                    return u
-                }
-                getSlug() {
-                    return o
-                }
-                getBans() {
-                    return [J, Q]
-                }
-                getProps() {
-                    return {
-                        submitting: this.isSubmitting(),
-                        integrations: X,
-                        section: i,
-                        subsection: l,
-                        errors: F,
-                        guild: s,
-                        bans: J,
-                        bansVersion: Q,
-                        invites: q,
-                        selectedRoleId: u,
-                        embedEnabled: P,
-                        embedChannelId: Y,
-                        mfaLevel: k,
-                        searchQuery: r,
-                        vanityURLCode: B,
-                        vanityURLUses: V,
-                        originalGuild: d,
-                        hasChanges: this.hasChanges(),
-                        guildMetadata: K,
-                        analyticsLocation: w,
-                        isGuildMetadataLoaded: H
+                    user: t,
+                    guildId: r,
+                    size: a,
+                    showPending: E = !1,
+                    showTryItOut: o = !1,
+                    animateOnHover: c = !1,
+                    avatarDecorationOverride: _,
+                    avatarOverride: d
+                } = e, {
+                    avatarSrc: C,
+                    isAvatarAnimating: S,
+                    eventHandlers: T
+                } = (0, s.useAnimatedAvatarSrc)({
+                    user: t,
+                    guildId: r,
+                    size: (0, i.getAvatarSize)(a),
+                    showPending: E,
+                    animateOnHover: c,
+                    avatarOverride: d
+                }), {
+                    avatarPlaceholderSrc: I,
+                    avatarDecorationSrc: A,
+                    eventHandlers: L
+                } = (0, l.default)({
+                    user: t,
+                    size: (0, u.getDecorationSizeForAvatarSize)(a),
+                    showPending: E,
+                    animateOnHover: c,
+                    avatarDecorationOverride: _,
+                    showTryItOut: o
+                }), f = n.useCallback(() => {
+                    T.onMouseEnter(), L.onMouseEnter()
+                }, [T, L]), p = n.useCallback(() => {
+                    T.onMouseLeave(), L.onMouseLeave()
+                }, [T, L]);
+                return {
+                    avatarPlaceholderSrc: I,
+                    avatarDecorationSrc: A,
+                    avatarSrc: C,
+                    isAnimating: S,
+                    eventHandlers: {
+                        onMouseEnter: f,
+                        onMouseLeave: p
                     }
                 }
             }
-            ei.displayName = "GuildSettingsStore";
-            var el = new ei(f.default, __OVERLAY__ ? {} : {
-                GUILD_SETTINGS_INIT: Z,
-                GUILD_SETTINGS_OPEN: function(e) {
-                    M = !0, Z(e)
-                },
-                GUILD_SETTINGS_CLOSE: $,
-                GUILD_SETTINGS_UPDATE: function(e) {
-                    if (null == s) return !1;
-                    y.forEach(t => {
-                        null != s && e.hasOwnProperty(t) && (s = s.set(t, e[t]))
-                    }), ! function() {
-                        if (null == s) return;
-                        let e = s.toJS(),
-                            t = d.toJS(),
-                            n = y.some(n => e[n] !== t[n]);
-                        !n && (s = d)
-                    }()
-                },
-                GUILD_SETTINGS_CANCEL_CHANGES: function(e) {
-                    let {
-                        guildId: t
-                    } = e;
-                    F = {};
-                    let n = U.default.getGuild(t);
-                    null != n && (d = s = n)
-                },
-                GUILD_SETTINGS_SAVE_ROUTE_STACK: function(e) {
-                    let {
-                        state: t
-                    } = e;
-                    return a = t, !1
-                },
-                GUILD_SETTINGS_SUBMIT: function() {
-                    v = h.FormStates.SUBMITTING, F = {}
-                },
-                GUILD_SETTINGS_SUBMIT_SUCCESS: function() {
-                    v = h.FormStates.OPEN
-                },
-                GUILD_SETTINGS_SUBMIT_FAILURE: function(e) {
-                    var t;
-                    v = h.FormStates.OPEN, i = null != i ? i : h.GuildSettingsSections.OVERVIEW, l = null, F = null !== (t = e.errors) && void 0 !== t ? t : {}
-                },
-                GUILD_SETTINGS_SET_SECTION: ee,
-                GUILD_SETTINGS_SET_SEARCH_QUERY: function(e) {
-                    r = e.searchQuery
-                },
-                GUILD_SETTINGS_LOADED_BANS: function(e) {
-                    J = e.bans.reduce((e, t) => (null != t.user && null != t.user.id && e.set(t.user.id, t), e), new Map), Q++
-                },
-                GUILD_SETTINGS_LOADED_BANS_BATCH: function(e) {
-                    let {
-                        bans: t,
-                        guildId: n
-                    } = e;
-                    (j !== n || null == J) && (j = n, J = new Map), J = t.reduce((e, t) => (null != t.user && null != t.user.id && e.set(t.user.id, t), e), J), Q++
-                },
-                GUILD_SETTINGS_LOADED_INVITES: function(e) {
-                    q = e.invites.reduce((e, t) => (e[t.code] = et(t), e), {})
-                },
-                GUILD_SETTINGS_SET_WIDGET: function(e) {
-                    P = e.enabled, Y = e.channelId
-                },
-                GUILD_SETTINGS_SET_VANITY_URL: function(e) {
-                    var t;
-                    B = null !== (t = e.code) && void 0 !== t ? t : null, V = e.uses
-                },
-                GUILD_SETTINGS_SET_MFA_SUCCESS: function(e) {
-                    let {
-                        level: t
-                    } = e;
-                    k = t
-                },
-                GUILD_SETTINGS_ROLE_SELECT: function(e) {
-                    let {
-                        roleId: t
-                    } = e;
-                    u = null != t ? t : null
-                },
-                GUILD_SETTINGS_LOADED_INTEGRATIONS: function(e) {
-                    X = e.integrations
-                },
-                GUILD_BAN_ADD: function(e) {
-                    let {
-                        user: t,
-                        guildId: n
-                    } = e;
-                    if (null == J || null == s || s.id !== n) return !1;
-                    J.set(t.id, {
-                        user: t,
-                        reason: null
-                    }), Q++
-                },
-                GUILD_BAN_REMOVE: function(e) {
-                    let {
-                        user: t,
-                        guildId: n
-                    } = e;
-                    if (null == J || null == s || s.id !== n) return !1;
-                    J.delete(t.id), Q++
-                },
-                GUILD_ROLE_CREATE: function(e) {
-                    let {
-                        guildId: t
-                    } = e;
-                    if (!z(t)) return !1
-                },
-                GUILD_ROLE_UPDATE: function(e) {
-                    let {
-                        guildId: t
-                    } = e;
-                    if (!z(t)) return !1
-                },
-                GUILD_ROLE_DELETE: function(e) {
-                    let {
-                        guildId: t,
-                        roleId: n
-                    } = e;
-                    if (!z(t)) return !1;
-                    u === n && (u = null)
-                },
-                GUILD_UPDATE: function(e) {
-                    if (null == s || s.id !== e.guild.id) return !1;
-                    {
-                        let e = U.default.getGuild(s.id);
-                        if (null == e) return !1;
-                        let t = d = e,
-                            n = s.toJS();
-                        y.forEach(e => {
-                            if (!b.has(e)) {
-                                if ("rulesChannelId" !== e && "publicUpdatesChannelId" !== e || n[e] !== O.CREATE_NEW_CHANNEL_VALUE) {
-                                    if ("features" === e) {
-                                        t.set(e, new Set(n[e]));
-                                        return
-                                    }
-                                    t = t.set(e, n[e])
-                                }
-                            }
-                        }), s = t
-                    }
-                },
-                GUILD_DELETE: function(e) {
-                    if (null == s || s.id !== e.guild.id) return !1;
-                    $()
-                },
-                USER_CONNECTIONS_UPDATE: en,
-                GUILD_INTEGRATIONS_UPDATE: en,
-                INSTANT_INVITE_REVOKE_SUCCESS: function(e) {
-                    q = {
-                        ...q
-                    }, delete q[e.code]
-                },
-                INSTANT_INVITE_CREATE_SUCCESS: function(e) {
-                    q = {
-                        ...q,
-                        [e.invite.code]: et(e.invite)
-                    }
-                },
-                GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER: function(e) {
-                    var t, n, i, l, r, d, u, a, o, E;
-                    let {
-                        guildId: _,
-                        metadata: S
-                    } = e;
-                    null != s && _ === s.id && (!1 === H && (H = !0), K = W = {
-                        primaryCategoryId: null !== (t = S.primaryCategoryId) && void 0 !== t ? t : m.DEFAULT_DISCOVERY_CATEGORY_ID,
-                        secondaryCategoryIds: null !== (n = S.secondaryCategoryIds) && void 0 !== n ? n : [],
-                        keywords: null !== (i = S.keywords) && void 0 !== i ? i : [],
-                        emojiDiscoverabilityEnabled: null !== (l = S.emojiDiscoverabilityEnabled) && void 0 !== l ? l : m.DEFAULT_EMOJI_DISCOVERABILITY_SETTING,
-                        partnerActionedTimestamp: null !== (r = S.partnerActionedTimestamp) && void 0 !== r ? r : null,
-                        partnerApplicationTimestamp: null !== (d = S.partnerApplicationTimestamp) && void 0 !== d ? d : null,
-                        isPublished: null !== (u = S.isPublished) && void 0 !== u && u,
-                        reasonsToJoin: null !== (a = S.reasonsToJoin) && void 0 !== a ? a : [],
-                        socialLinks: null !== (o = S.socialLinks) && void 0 !== o ? o : [],
-                        about: null !== (E = S.about) && void 0 !== E ? E : ""
-                    }, F = {})
-                },
-                GUILD_DISCOVERY_METADATA_FETCH_FAIL: function() {
-                    W = K = x
-                },
-                GUILD_DISCOVERY_CATEGORY_ADD: function(e) {
-                    let {
-                        guildId: t,
-                        categoryId: n
-                    } = e;
-                    null != s && t === s.id && (K = {
-                        ...K,
-                        secondaryCategoryIds: [...K.secondaryCategoryIds, n]
-                    }, W = {
-                        ...W,
-                        secondaryCategoryIds: [...W.secondaryCategoryIds, n]
-                    })
-                },
-                GUILD_DISCOVERY_CATEGORY_DELETE: function(e) {
-                    let t, {
-                        guildId: n,
-                        categoryId: i
-                    } = e;
-                    if (null == s || n !== s.id) return;
-                    let l = K.secondaryCategoryIds.indexOf(i); - 1 !== l && ((t = [...K.secondaryCategoryIds]).splice(l, 1), K = {
-                        ...K,
-                        secondaryCategoryIds: t
-                    }), -1 !== (l = W.secondaryCategoryIds.indexOf(i)) && ((t = [...W.secondaryCategoryIds]).splice(l, 1), W = {
-                        ...W,
-                        secondaryCategoryIds: t
-                    })
-                },
-                GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL: function(e) {
-                    let {
-                        guildId: t,
-                        errors: n
-                    } = e;
-                    null != s && t === s.id && (F = null != n ? n : {})
-                },
-                GUILD_UPDATE_DISCOVERY_METADATA: function(e) {
-                    let {
-                        guildId: t,
-                        primaryCategoryId: n,
-                        keywords: i,
-                        emojiDiscoverabilityEnabled: l,
-                        isPublished: r,
-                        reasonsToJoin: d,
-                        socialLinks: u,
-                        about: a
-                    } = e;
-                    null != s && t === s.id && (K = {
-                        ...K,
-                        primaryCategoryId: null != n ? n : K.primaryCategoryId,
-                        keywords: null != i ? i : K.keywords,
-                        emojiDiscoverabilityEnabled: null != l ? l : K.emojiDiscoverabilityEnabled,
-                        isPublished: null != r ? r : K.isPublished,
-                        reasonsToJoin: null != d ? d : K.reasonsToJoin,
-                        socialLinks: null != u ? u : K.socialLinks,
-                        about: null != a ? a : K.about
-                    })
-                },
-                GUILD_UPDATE_DISCOVERY_METADATA_FAIL: function(e) {
-                    let {
-                        guildId: t,
-                        errors: n
-                    } = e;
-                    null != s && t === s.id && (F = null != n ? n : {})
-                },
-                GUILD_DISCOVERY_SLUG_FETCH_SUCCESS: function(e) {
-                    let {
-                        slug: t
-                    } = e;
-                    o = t
-                },
-                GUILD_DISCOVERY_SLUG_FETCH_FAIL: function(e) {
-                    let {} = e;
-                    o = null
-                }
-            })
         },
-        69741: function(e, t, n) {
+        19287: function(e, t, r) {
             "use strict";
-            n.r(t), n.d(t, {
-                PUBLIC_SUCCESS_MODAL_SEEN_KEY: function() {
-                    return s
-                },
-                PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID: function() {
-                    return u
-                },
-                PUBLIC_GUILD_UPDATES_WEBHOOK_USER_ID: function() {
-                    return a
-                },
-                CREATE_NEW_CHANNEL_VALUE: function() {
+            r.r(t), r.d(t, {
+                useAnimatedAvatarSrc: function() {
                     return o
-                },
-                MODERATOR_PERMISSIONS: function() {
-                    return E
-                },
-                MODERATOR_PERMISSIONS_FLAG: function() {
-                    return _
-                },
-                COMMUNITY_UPSELL_MINIMUM_GUILD_SIZE: function() {
-                    return S
-                },
-                ENABLE_COMMUNITY_FLOW_MODAL_KEY: function() {
-                    return I
-                },
-                EnableCommunityModalSteps: function() {
-                    return i
                 }
-            }), n("222007");
-            var i, l, r = n("316693"),
-                d = n("49111");
-            let s = "publicSuccessModalSeen",
-                u = "667560445975986187",
-                a = "669627189624307712",
-                o = "1",
-                E = [d.Permissions.ADMINISTRATOR, d.Permissions.MANAGE_GUILD, d.Permissions.MANAGE_CHANNELS, d.Permissions.MANAGE_ROLES, d.Permissions.KICK_MEMBERS, d.Permissions.BAN_MEMBERS, d.Permissions.MANAGE_MESSAGES, d.Permissions.MENTION_EVERYONE, d.Permissions.MANAGE_GUILD_EXPRESSIONS, d.Permissions.CREATE_GUILD_EXPRESSIONS, d.Permissions.MANAGE_EVENTS, d.Permissions.CREATE_EVENTS, d.Permissions.MODERATE_MEMBERS],
-                _ = r.default.combine(...E),
-                S = 1e3,
-                I = "Enable Community Modal";
-            (l = i || (i = {})).SAFETY_CHECK = "safety_check", l.BASICS = "basics", l.FINISH = "finish"
+            }), r("222007");
+            var n = r("884691"),
+                i = r("446674"),
+                u = r("206230"),
+                l = r("771325"),
+                s = r("26989"),
+                a = r("471671"),
+                E = r("91653");
+
+            function o(e) {
+                let {
+                    user: t,
+                    guildId: r,
+                    size: o,
+                    showPending: c = !1,
+                    animateOnHover: _ = !1,
+                    avatarOverride: d
+                } = e, [C, S] = n.useState(!1), T = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion), I = (0, i.useStateFromStores)([a.default], () => a.default.isFocused()), A = I && (C || !T && !_), {
+                    pendingAvatar: L
+                } = (0, E.default)({}), f = (0, i.useStateFromStores)([s.default], () => null != r && null != t ? s.default.getMember(r, t.id) : null), p = n.useMemo(() => null != t ? (0, l.getPreviewAvatar)(c ? null != d ? d : L : void 0, f, t, {
+                    canAnimate: A,
+                    size: o
+                }) : void 0, [c, L, f, t, A, o, d]), O = n.useCallback(() => S(!0), []), R = n.useCallback(() => S(!1), []);
+                return {
+                    avatarSrc: p,
+                    isAvatarAnimating: A,
+                    eventHandlers: {
+                        onMouseEnter: O,
+                        onMouseLeave: R
+                    }
+                }
+            }
         }
     }
 ]);
