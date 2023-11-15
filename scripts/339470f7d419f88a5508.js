@@ -42,8 +42,8 @@
                 d = l("446674"),
                 o = l("77078"),
                 c = l("812204"),
-                h = l("685665"),
-                m = l("656038"),
+                m = l("685665"),
+                h = l("656038"),
                 v = l("419830"),
                 f = l("817963"),
                 g = l("957255"),
@@ -55,9 +55,9 @@
                 p = l("822516"),
                 S = l("707916"),
                 k = l("255050"),
-                T = l("400271"),
-                _ = l("427554"),
-                I = l("644189"),
+                I = l("400271"),
+                T = l("427554"),
+                _ = l("644189"),
                 R = l("29913"),
                 L = l("745049"),
                 b = l("49111"),
@@ -70,7 +70,7 @@
                     onClick: l
                 } = e, {
                     canManageAllEvents: t
-                } = (0, f.useManageResourcePermissions)(n), i = (0, d.useStateFromStores)([g.default], () => !n.isGuildVocal() || g.default.can(b.Permissions.CONNECT, n), [n]), r = s.useMemo(() => (0, m.default)(n), [n]), c = (0, v.getChannelIconComponent)(n);
+                } = (0, f.useManageResourcePermissions)(n), i = (0, d.useStateFromStores)([g.default], () => !n.isGuildVocal() || g.default.can(b.Permissions.CONNECT, n), [n]), r = s.useMemo(() => (0, h.default)(n), [n]), c = (0, v.getChannelIconComponent)(n);
                 return (0, a.jsx)(o.Tooltip, {
                     text: M.default.Messages.GUILD_EVENT_CANNOT_CONNECT,
                     shouldShow: !i && null != l,
@@ -150,7 +150,7 @@
                     creator: s,
                     name: r,
                     entityType: d,
-                    description: m,
+                    description: h,
                     imageLocation: v = 0,
                     imageSource: f,
                     isActive: g,
@@ -180,7 +180,7 @@
                     recurrenceId: Q
                 } = e, $ = (0, j.isChannelPublic)(i, d), ee = d === L.GuildScheduledEventEntityTypes.EXTERNAL, {
                     analyticsLocations: en
-                } = (0, h.default)(c.default.GUILD_EVENT_CARD), {
+                } = (0, m.default)(c.default.GUILD_EVENT_CARD), {
                     enabled: el
                 } = C.default.useExperiment({
                     guildId: null !== (n = null == t ? void 0 : t.id) && void 0 !== n ? n : "",
@@ -207,10 +207,10 @@
                         }),
                         children: [0 === v && (0, a.jsx)(k.default, {
                             source: f
-                        }), (0, a.jsx)(T.default, {
+                        }), (0, a.jsx)(I.default, {
                             creator: s,
                             name: r,
-                            description: m,
+                            description: h,
                             imageSource: 1 === v ? f : null,
                             truncate: y,
                             guildId: null == t ? void 0 : t.id,
@@ -236,7 +236,7 @@
                                 location: w,
                                 isExternal: ee,
                                 isHub: b
-                            }), b ? (0, a.jsx)(I.default, {
+                            }), b ? (0, a.jsx)(_.default, {
                                 isActive: g,
                                 isUserLurking: x,
                                 isMember: N,
@@ -266,7 +266,7 @@
                         }), ei && (0, a.jsx)("hr", {
                             className: A.divider
                         })]
-                    }), ei && (0, a.jsx)(_.default, {
+                    }), ei && (0, a.jsx)(T.default, {
                         guildId: null == t ? void 0 : t.id,
                         recurrenceRule: q,
                         guildEventId: X,
@@ -292,8 +292,8 @@
                 d = l("272030"),
                 o = l("42203"),
                 c = l("305961"),
-                h = l("433487"),
-                m = l("398604"),
+                m = l("433487"),
+                h = l("398604"),
                 v = l("397680"),
                 f = l("393745"),
                 g = l("745049"),
@@ -306,11 +306,11 @@
                     originalScheduledStartTime: n,
                     guildEventId: i,
                     onClick: N
-                } = e, j = s.default.fromTimestamp(Math.floor(n.getTime() / x.Durations.SECOND)), p = (0, r.useStateFromStores)([m.default], () => m.default.getGuildScheduledEvent(i)), S = (0, v.default)(j, null == p ? void 0 : p.id), k = (0, r.useStateFromStores)([c.default], () => c.default.getGuild(null == p ? void 0 : p.guild_id)), T = (0, r.useStateFromStores)([o.default], () => o.default.getChannel(null == p ? void 0 : p.channel_id));
+                } = e, j = s.default.fromTimestamp(Math.floor(n.getTime() / x.Durations.SECOND)), p = (0, r.useStateFromStores)([h.default], () => h.default.getGuildScheduledEvent(i)), S = (0, v.default)(j, null == p ? void 0 : p.id), k = (0, r.useStateFromStores)([c.default], () => c.default.getGuild(null == p ? void 0 : p.guild_id)), I = (0, r.useStateFromStores)([o.default], () => o.default.getChannel(null == p ? void 0 : p.channel_id));
                 if (null == p) return null;
                 let {
-                    is_canceled: _ = !1
-                } = null != S ? S : {}, I = (null == S ? void 0 : S.scheduled_start_time) != null ? new Date(null == S ? void 0 : S.scheduled_start_time) : n, R = e => {
+                    is_canceled: T = !1
+                } = null != S ? S : {}, _ = (null == S ? void 0 : S.scheduled_start_time) != null ? new Date(null == S ? void 0 : S.scheduled_start_time) : n, R = e => {
                     e.stopPropagation(), null != k && (0, d.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
@@ -318,27 +318,28 @@
                         return n => (0, t.jsx)(e, {
                             guildEventId: p.id,
                             recurrenceId: j,
-                            channel: T,
+                            channel: I,
                             guild: k,
+                            isRecurrenceItem: !0,
                             ...n
                         })
                     })
                 };
                 return (0, t.jsxs)(u.ClickableContainer, {
                     className: a(C.container, {
-                        [C.canceled]: _
+                        [C.canceled]: T
                     }),
                     onClick: e => {
-                        e.stopPropagation(), !_ && (null == N || N(j))
+                        e.stopPropagation(), !T && (null == N || N(j))
                     },
                     onContextMenu: R,
                     "aria-label": "",
                     children: [(0, t.jsx)(f.GuildEventTimeStatus, {
-                        startTime: I.toISOString(),
-                        status: _ ? g.GuildScheduledEventStatus.CANCELED : g.GuildScheduledEventStatus.SCHEDULED,
+                        startTime: _.toISOString(),
+                        status: T ? g.GuildScheduledEventStatus.CANCELED : g.GuildScheduledEventStatus.SCHEDULED,
                         eventType: p.entity_type,
                         className: C.timeStatus
-                    }), _ && (0, t.jsx)(u.Text, {
+                    }), T && (0, t.jsx)(u.Text, {
                         variant: "text-sm/semibold",
                         color: "text-danger",
                         className: C.canceledStatus,
@@ -351,7 +352,7 @@
                             ...e,
                             onClick: R,
                             className: C.iconButton,
-                            children: (0, t.jsx)(h.default, {
+                            children: (0, t.jsx)(m.default, {
                                 width: 20,
                                 height: 20,
                                 className: C.icon
@@ -365,7 +366,7 @@
             "use strict";
             l.r(n), l.d(n, {
                 default: function() {
-                    return h
+                    return m
                 }
             }), l("222007");
             var t = l("37983"),
@@ -378,12 +379,12 @@
                 o = l("782340"),
                 c = l("849882");
 
-            function h(e) {
+            function m(e) {
                 let {
                     guildId: n,
                     recurrenceRule: l,
-                    guildEventId: h,
-                    onClick: m
+                    guildEventId: m,
+                    onClick: h
                 } = e, [v, f] = i.useState([]);
                 i.useEffect(() => {
                     if (null != l) {
@@ -393,8 +394,8 @@
                 }, [l]), i.useEffect(() => {
                     if (null == n) return;
                     let e = v.map(e => a.default.fromTimestamp(e.getTime()));
-                    r.default.getGuildEventUserCounts(n, h, e)
-                }, [h, n, v]);
+                    r.default.getGuildEventUserCounts(n, m, e)
+                }, [m, n, v]);
                 let g = i.useMemo(() => {
                     if (null == l || 0 === v.length) return !1;
                     let e = new Date;
@@ -414,8 +415,8 @@
                         className: c.scroller,
                         children: [v.map(e => (0, t.jsx)(d.default, {
                             originalScheduledStartTime: e,
-                            guildEventId: h,
-                            onClick: m
+                            guildEventId: m,
+                            onClick: h
                         }, e.toString())), g && (0, t.jsx)(s.Button, {
                             grow: !1,
                             onClick: e => {
@@ -456,7 +457,7 @@
                     speakers: l,
                     speakerCount: i,
                     className: o
-                } = e, c = l.slice(0, 5), h = c.map(e => {
+                } = e, c = l.slice(0, 5), m = c.map(e => {
                     var l, i;
                     return (0, t.jsxs)("div", {
                         className: d.speakerContainer,
@@ -475,10 +476,10 @@
                             })
                         })]
                     }, null == e ? void 0 : null === (i = e.user) || void 0 === i ? void 0 : i.id)
-                }), m = i - c.length;
+                }), h = i - c.length;
                 return (0, t.jsxs)("div", {
                     className: a(d.grid, o),
-                    children: [h, m > 0 && (0, t.jsxs)("div", {
+                    children: [m, h > 0 && (0, t.jsxs)("div", {
                         className: d.speakerContainer,
                         children: [(0, t.jsx)("div", {
                             className: d.iconMicrophone,
@@ -490,7 +491,7 @@
                             variant: "text-sm/normal",
                             className: d.textInGrid,
                             children: u.default.Messages.STAGE_DISCOVERY_LIVE_STAGE_TILE_SPEAKER_SUMMARY_OVERFLOW.format({
-                                count: m
+                                count: h
                             })
                         })]
                     })]
