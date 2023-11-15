@@ -1457,7 +1457,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return C
+                    return S
                 }
             });
             var l = n("37983"),
@@ -1468,70 +1468,71 @@
                 a = n("501536"),
                 u = n("124299"),
                 d = n("240249"),
-                c = n("524768"),
-                f = n("529190"),
-                p = n("41884"),
-                m = n("406291"),
-                h = n("782340"),
-                E = n("253184");
+                c = n("972620"),
+                f = n("524768"),
+                p = n("529190"),
+                m = n("41884"),
+                h = n("406291"),
+                E = n("782340"),
+                C = n("253184");
 
-            function C(e) {
+            function S(e) {
                 let {
                     query: t,
                     onHover: n,
-                    onClick: C,
-                    channel: S,
-                    selectedIndex: g
-                } = e, T = i.useRef(null), {
-                    commands: v,
-                    sections: x,
-                    scrollDown: y
-                } = d.useQuery(S, {
+                    onClick: S,
+                    channel: g,
+                    selectedIndex: T
+                } = e, v = i.useRef(null), {
+                    commands: x,
+                    sections: y,
+                    scrollDown: I
+                } = d.useQuery(g, {
                     commandType: r.ApplicationCommandType.CHAT,
                     text: t
                 }, {
-                    limit: s.MAX_COMMAND_AUTOCOMPLETE_RESULTS,
+                    limit: s.MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY,
                     placeholderCount: s.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
-                    sortByScore: !0
-                }), I = i.useCallback(e => {
+                    scoreMethod: c.ScoreMethod.COMMAND_OR_APPLICATION
+                }), _ = i.useCallback(e => {
                     var t;
-                    if (null == v) return null;
-                    let i = v[e],
+                    if (null == x) return null;
+                    let i = x[e],
                         r = null !== (t = null == i ? void 0 : i.id) && void 0 !== t ? t : e;
-                    if (null == i || i.inputType === c.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(p.default, {}, r);
-                    let o = x.find(e => e.id === i.applicationId);
+                    if (null == i || i.inputType === f.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(m.default, {}, r);
+                    let o = y.find(e => e.id === i.applicationId);
                     return (0, l.jsx)(a.default.NewCommand, {
                         index: e,
                         command: i,
-                        channel: S,
-                        className: E.itemWrapper,
-                        selected: g === e,
+                        channel: g,
+                        className: C.itemWrapper,
+                        selected: T === e,
                         showImage: !0,
                         section: o,
-                        onClick: C,
+                        onClick: S,
                         onHover: n
                     }, r)
-                }, [S, v, x, C, n, g]);
-                return null == v || 0 === v.length ? null : (0, l.jsxs)(l.Fragment, {
+                }, [g, x, y, S, n, T]);
+                return null == x || 0 === x.length ? null : (0, l.jsxs)(l.Fragment, {
                     children: [(0, o.renderHeader)({
-                        titleWithQuery: h.default.Messages.COMMANDS_MATCHING,
-                        titleWithoutQuery: h.default.Messages.COMMANDS,
+                        titleWithQuery: E.default.Messages.COMMANDS_MATCHING,
+                        titleWithoutQuery: E.default.Messages.COMMANDS,
                         query: t,
-                        getQuery: e => "".concat(m.COMMAND_SENTINEL).concat(e)
+                        getQuery: e => "".concat(h.COMMAND_SENTINEL).concat(e)
                     }), (0, l.jsx)(u.default, {
-                        ref: T,
+                        ref: v,
                         role: "listbox",
-                        className: E.list,
+                        className: C.list,
                         listPadding: [0, 8, 0, 8],
                         onScroll: e => {
-                            if (null == v) return;
-                            let t = v.length * f.ITEM_HEIGHT,
-                                n = T.current.getListDimensions().height;
-                            t - e - n < 9 * f.ITEM_HEIGHT && y()
+                            if (null == x) return;
+                            let t = x.length * p.ITEM_HEIGHT,
+                                n = v.current.getListDimensions().height;
+                            t - e - n < 9 * p.ITEM_HEIGHT && I()
                         },
-                        renderRow: I,
-                        rowCount: v.length,
-                        rowHeight: f.ITEM_HEIGHT
+                        renderRow: _,
+                        rowCount: x.length,
+                        rowHeight: p.ITEM_HEIGHT
                     })]
                 })
             }
@@ -2096,8 +2097,11 @@
                 MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS: function() {
                     return y
                 },
-                MAX_COMMAND_AUTOCOMPLETE_RESULTS: function() {
+                MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY: function() {
                     return I
+                },
+                MAX_COMMAND_AUTOCOMPLETE_RESULTS: function() {
+                    return _
                 },
                 GlobalMentionMode: function() {
                     return l
@@ -2131,7 +2135,8 @@
                 }
             });
             let y = 3,
-                I = 7;
+                I = 7,
+                _ = 20;
             (p = l || (l = {}))[p.DENY = 0] = "DENY", p[p.ALLOW_EVERYONE = 1] = "ALLOW_EVERYONE", p[p.ALLOW_EVERYONE_OR_HERE = 2] = "ALLOW_EVERYONE_OR_HERE", (m = i || (i = {}))[m.DENY = 0] = "DENY", m[m.ALLOW_CHANNEL = 1] = "ALLOW_CHANNEL", m[m.ALLOW_GUILD = 2] = "ALLOW_GUILD", (h = r || (r = {}))[h.DENY = 0] = "DENY", h[h.ALLOW_MENTIONABLE = 1] = "ALLOW_MENTIONABLE", h[h.ALLOW_ALL = 2] = "ALLOW_ALL", (E = o || (o = {}))[E.DENY = 0] = "DENY", E[E.ALLOW_SELECTABLE = 1] = "ALLOW_SELECTABLE", (C = s || (s = {}))[C.DENY = 0] = "DENY", C[C.ALLOW = 1] = "ALLOW", (S = a || (a = {}))[S.DISABLED = 0] = "DISABLED", S[S.OLD_BUILT_INS = 1] = "OLD_BUILT_INS", S[S.NEW_TEXT_ONLY = 2] = "NEW_TEXT_ONLY", S[S.NEW = 3] = "NEW", (g = u || (u = {}))[g.INSERT = 0] = "INSERT", g[g.SEND = 1] = "SEND", (T = d || (d = {})).MENTIONS = "MENTIONS", T.CHANNELS = "CHANNELS", T.EMOJIS_AND_STICKERS = "EMOJIS_AND_STICKERS", T.REACTIONS = "REACTIONS", T.GIFS = "GIFS", T.LEGACY_COMMANDS = "LEGACY_COMMANDS", T.COMMANDS = "COMMANDS", T.COMMAND_OPTIONS = "COMMAND_OPTIONS", T.CHOICES = "CHOICES", (v = c || (c = {})).MENTION = "MENTION", v.CHANNEL = "CHANNEL", v.EMOJI = "EMOJI", v.STICKER = "STICKER", v.REACTION = "REACTION", v.GIF = "GIF", v.COMMAND = "COMMAND", v.COMMAND_OPTION = "COMMAND_OPTION", v.COMMAND_SUGGESTION = "COMMAND_SUGGESTION", v.CHOICE = "CHOICE", v.EMOJI_UPSELL = "EMOJI_UPSELL", (x = f || (f = {}))[x.AUTO = 0] = "AUTO", x[x.AUTO_WHEN_FILTERED = 1] = "AUTO_WHEN_FILTERED", x[x.MANUAL = 2] = "MANUAL"
         },
         962254: function(e, t, n) {
@@ -2532,13 +2537,16 @@
             "use strict";
             n.r(t), n.d(t, {
                 EMPTY_RESULTS: function() {
-                    return N
-                },
-                FakeFooter: function() {
                     return A
                 },
-                default: function() {
+                FakeFooter: function() {
+                    return O
+                },
+                getLimit: function() {
                     return M
+                },
+                default: function() {
+                    return k
                 }
             });
             var l = n("37983");
@@ -2550,32 +2558,33 @@
                 a = n("589777"),
                 u = n("988721"),
                 d = n("240249"),
-                c = n("166004"),
-                f = n("383018"),
-                p = n("524768"),
-                m = n("389153"),
-                h = n("396465"),
-                E = n("355263"),
-                C = n("957255"),
-                S = n("501536"),
-                g = n("655518"),
-                T = n("200294"),
-                v = n("851745"),
-                x = n("406291"),
-                y = n("317041"),
-                I = n("782340"),
-                _ = n("94885");
-            let N = {
+                c = n("972620"),
+                f = n("166004"),
+                p = n("383018"),
+                m = n("524768"),
+                h = n("389153"),
+                E = n("396465"),
+                C = n("355263"),
+                S = n("957255"),
+                g = n("501536"),
+                T = n("655518"),
+                v = n("200294"),
+                x = n("851745"),
+                y = n("406291"),
+                I = n("317041"),
+                _ = n("782340"),
+                N = n("94885");
+            let A = {
                 results: {
                     entries: []
                 }
             };
 
-            function A() {
+            function O() {
                 return d.useSearchOpenState(), null
             }
 
-            function O() {
+            function R() {
                 (0, r.openModalLazy)(async () => {
                     let {
                         default: e
@@ -2585,54 +2594,61 @@
                     })
                 })
             }
-            let R = {
-                sentinel: x.COMMAND_SENTINEL,
-                stores: [f.default, c.default, u.default, C.default],
-                matches: (e, t, n, l, i) => i.commands !== v.CommandMode.DISABLED && null == f.default.getActiveCommand(e.id) && (l || i.commands !== v.CommandMode.OLD_BUILT_INS),
+
+            function M(e) {
+                return d.isInIndexExperiment({
+                    location: e
+                }) ? x.MAX_COMMAND_AUTOCOMPLETE_RESULTS : x.MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY
+            }
+            let b = {
+                sentinel: y.COMMAND_SENTINEL,
+                stores: [p.default, f.default, u.default, S.default],
+                matches: (e, t, n, l, i) => i.commands !== x.CommandMode.DISABLED && null == p.default.getActiveCommand(e.id) && (l || i.commands !== x.CommandMode.OLD_BUILT_INS),
                 queryResults(e, t, n, l, i) {
-                    if (0 === n.length && l.commands !== v.CommandMode.OLD_BUILT_INS) return N;
-                    if (l.commands === v.CommandMode.OLD_BUILT_INS) {
+                    if (0 === n.length && l.commands !== x.CommandMode.OLD_BUILT_INS) return A;
+                    let r = M("CommandAutocompletes");
+                    if (l.commands === x.CommandMode.OLD_BUILT_INS) {
                         let l = (0, a.getBuiltInCommands)(o.ApplicationCommandType.CHAT, !1, !1),
-                            i = RegExp("^".concat(g.default.escape(n)), "i"),
-                            r = (0, m.getMatchingGroupCommands)(l, i, {
+                            i = RegExp("^".concat(T.default.escape(n)), "i"),
+                            s = (0, h.getMatchingGroupCommands)(l, i, {
                                 channel: e,
                                 guild: t
-                            }, v.MAX_COMMAND_AUTOCOMPLETE_RESULTS),
-                            s = a.BUILT_IN_SECTIONS[y.BuiltInSectionId.BUILT_IN];
-                        return 0 === r.length ? N : {
+                            }, r),
+                            u = a.BUILT_IN_SECTIONS[I.BuiltInSectionId.BUILT_IN];
+                        return 0 === s.length ? A : {
                             results: {
-                                entries: r.map(e => ({
+                                entries: s.map(e => ({
                                     command: e,
-                                    section: s
+                                    section: u
                                 }))
                             }
                         }
                     }
-                    let r = (0, E.getCommandQuery)(e, n),
+                    let s = (0, C.getCommandQuery)(e, n),
                         {
-                            commands: s,
-                            sections: u
+                            commands: u,
+                            sections: f
                         } = d.executeQuery(e, {
                             commandType: o.ApplicationCommandType.CHAT,
-                            text: r.text
+                            text: s.text
                         }, {
-                            limit: v.MAX_COMMAND_AUTOCOMPLETE_RESULTS,
-                            placeholderCount: v.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
-                            sortByScore: !0,
+                            limit: r,
+                            placeholderCount: x.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
+                            scoreMethod: c.ScoreMethod.COMMAND_OR_APPLICATION,
                             allowFetch: i
                         });
-                    if (null == s) return N;
-                    let c = s;
-                    if (r.hasSpaceTerminator) {
-                        let e = r.text.trim(),
+                    if (null == u) return A;
+                    let p = u;
+                    if (s.hasSpaceTerminator) {
+                        let e = s.text.trim(),
                             t = e + " ";
-                        c = c.filter(n => n.name === e || n.name.startsWith(t))
+                        p = p.filter(n => n.name === e || n.name.startsWith(t))
                     }
-                    return 0 === c.length ? N : {
+                    return 0 === p.length ? A : {
                         results: {
-                            entries: c.map(e => ({
+                            entries: p.slice(0, r).map(e => ({
                                 command: e,
-                                section: null == u ? void 0 : u.find(t => t.id === e.applicationId)
+                                section: null == f ? void 0 : f.find(t => t.id === e.applicationId)
                             }))
                         }
                     }
@@ -2648,27 +2664,27 @@
                         options: s,
                         onHover: a,
                         onClick: u
-                    } = e, c = (0, E.getCommandQuery)(r, o);
-                    if (s.commands !== v.CommandMode.OLD_BUILT_INS && !d.isInIndexExperiment({
+                    } = e, c = (0, C.getCommandQuery)(r, o);
+                    if (s.commands !== x.CommandMode.OLD_BUILT_INS && !d.isInIndexExperiment({
                             location: "CommandAutocompletes"
-                        })) return (0, l.jsx)(h.default, {
+                        })) return (0, l.jsx)(E.default, {
                         channel: r,
                         query: c.text,
                         selectedIndex: n,
                         onHover: a,
                         onClick: u
                     });
-                    let f = s.commands === v.CommandMode.OLD_BUILT_INS;
-                    return (0, T.renderAutocompleteGroup)({
+                    let f = s.commands === x.CommandMode.OLD_BUILT_INS;
+                    return (0, v.renderAutocompleteGroup)({
                         query: c.text,
                         selectedIndex: n,
                         autocompletes: t,
                         onHover: a,
                         onClick: u,
-                        titleWithQuery: I.default.Messages.COMMANDS_MATCHING,
-                        titleWithoutQuery: I.default.Messages.COMMANDS,
-                        getQuery: e => "".concat(x.COMMAND_SENTINEL).concat(e),
-                        Component: f ? S.default.Command : S.default.NewCommand,
+                        titleWithQuery: _.default.Messages.COMMANDS_MATCHING,
+                        titleWithoutQuery: _.default.Messages.COMMANDS,
+                        getQuery: e => "".concat(y.COMMAND_SENTINEL).concat(e),
+                        Component: f ? g.default.Command : g.default.NewCommand,
                         getProps: e => {
                             let {
                                 command: t,
@@ -2684,16 +2700,16 @@
                             }
                         },
                         key: "commands",
-                        headerClassName: f ? _.legacyInputCommandHeader : null,
+                        headerClassName: f ? N.legacyInputCommandHeader : null,
                         headerTrailingContent: f ? (0, l.jsx)(i.Button, {
                             type: "button",
                             look: i.Button.Looks.LINK,
                             color: i.Button.Colors.BRAND,
                             size: i.Button.Sizes.MIN,
-                            onClick: O,
-                            children: I.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
+                            onClick: R,
+                            children: _.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
                         }) : null,
-                        footer: (0, l.jsx)(A, {})
+                        footer: (0, l.jsx)(O, {})
                     })
                 },
                 onSelect(e) {
@@ -2711,13 +2727,13 @@
                         command: u,
                         section: d
                     } = t[n];
-                    if (u.inputType === p.ApplicationCommandInputType.PLACEHOLDER) return null;
-                    if (i.commands === v.CommandMode.OLD_BUILT_INS) i.insertText(function(e) {
-                        return "".concat(x.COMMAND_SENTINEL).concat(e.name)
+                    if (u.inputType === m.ApplicationCommandInputType.PLACEHOLDER) return null;
+                    if (i.commands === x.CommandMode.OLD_BUILT_INS) i.insertText(function(e) {
+                        return "".concat(y.COMMAND_SENTINEL).concat(e.name)
                     }(u));
                     else {
                         let e = o;
-                        null == e && (e = a ? p.ApplicationCommandTriggerLocations.QUERY : p.ApplicationCommandTriggerLocations.DISCOVERY), s.setActiveCommand({
+                        null == e && (e = a ? m.ApplicationCommandTriggerLocations.QUERY : m.ApplicationCommandTriggerLocations.DISCOVERY), s.setActiveCommand({
                             channelId: r.id,
                             command: u,
                             section: null != d ? d : null,
@@ -2726,11 +2742,11 @@
                         })
                     }
                     return {
-                        type: v.AutocompleteSelectionTypes.COMMAND
+                        type: x.AutocompleteSelectionTypes.COMMAND
                     }
                 }
             };
-            var M = R
+            var k = b
         },
         116189: function(e, t, n) {
             "use strict";
@@ -3373,35 +3389,36 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return T
                 }
             }), n("781738");
             var l = n("37983");
             n("884691");
             var i = n("798609"),
                 r = n("240249"),
-                o = n("524768"),
-                s = n("355263"),
-                a = n("845579"),
-                u = n("697218"),
-                d = n("501536"),
-                c = n("387111"),
-                f = n("511104"),
-                p = n("200294"),
-                m = n("851745"),
-                h = n("825871"),
-                E = n("782340");
+                o = n("972620"),
+                s = n("524768"),
+                a = n("355263"),
+                u = n("845579"),
+                d = n("697218"),
+                c = n("501536"),
+                f = n("387111"),
+                p = n("511104"),
+                m = n("200294"),
+                h = n("851745"),
+                E = n("825871"),
+                C = n("782340");
 
-            function C(e) {
-                let t = f.PREFIX_COMMAND_REGEX.exec(e);
+            function S(e) {
+                let t = p.PREFIX_COMMAND_REGEX.exec(e);
                 if (null != t) return {
                     type: "prefix",
                     cleanedQuery: e.substring(t[0].length).trim()
                 };
-                let n = f.BOT_MENTION_COMMAND_REGEX.exec(e);
+                let n = p.BOT_MENTION_COMMAND_REGEX.exec(e);
                 if (null != n) {
                     let t = n[1],
-                        l = u.default.getUser(t);
+                        l = d.default.getUser(t);
                     return null == l || !l.bot || l.isClyde() ? null : {
                         type: "mention",
                         cleanedQuery: e.substring(n[0].length).trim(),
@@ -3410,44 +3427,45 @@
                 }
                 return null
             }
-            let S = {
-                ...h.default,
+            let g = {
+                ...E.default,
                 sentinel: void 0,
-                focusMode: m.FocusMode.MANUAL,
+                focusMode: h.FocusMode.MANUAL,
                 matches(e, t, n, l, i) {
-                    if (i.commands === m.CommandMode.DISABLED || i.commands === m.CommandMode.OLD_BUILT_INS || n.length < 2 || !a.ShowCommandSuggestions.getSetting()) return !1;
-                    let r = C(n);
+                    if (i.commands === h.CommandMode.DISABLED || i.commands === h.CommandMode.OLD_BUILT_INS || n.length < 2 || !u.ShowCommandSuggestions.getSetting()) return !1;
+                    let r = S(n);
                     return null != r && r.cleanedQuery.length > 0
                 },
-                queryResults(e, t, n, l, o) {
-                    if (!a.ShowCommandSuggestions.getSetting()) return h.EMPTY_RESULTS;
-                    let u = C(n);
-                    if (null == u) return h.EMPTY_RESULTS;
-                    let d = (0, s.getCommandQuery)(e, u.cleanedQuery),
+                queryResults(e, t, n, l, s) {
+                    if (!u.ShowCommandSuggestions.getSetting()) return E.EMPTY_RESULTS;
+                    let d = S(n);
+                    if (null == d) return E.EMPTY_RESULTS;
+                    let c = (0, E.getLimit)("LegacyCommandAutocompletes"),
+                        f = (0, a.getCommandQuery)(e, d.cleanedQuery),
                         {
-                            commands: c,
-                            sections: f
+                            commands: p,
+                            sections: m
                         } = r.executeQuery(e, {
                             commandType: i.ApplicationCommandType.CHAT,
-                            text: d.text
+                            text: f.text
                         }, {
-                            limit: m.MAX_COMMAND_AUTOCOMPLETE_RESULTS,
-                            placeholderCount: m.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
-                            sortByScore: !0,
-                            allowFetch: o
+                            limit: c,
+                            placeholderCount: h.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
+                            scoreMethod: o.ScoreMethod.COMMAND_OR_APPLICATION,
+                            allowFetch: s
                         });
-                    if (null == c) return h.EMPTY_RESULTS;
-                    let p = c;
-                    if (d.hasSpaceTerminator) {
-                        let e = d.text.trim(),
+                    if (null == p) return E.EMPTY_RESULTS;
+                    let C = p;
+                    if (f.hasSpaceTerminator) {
+                        let e = f.text.trim(),
                             t = e + " ";
-                        p = p.filter(n => n.name === e || n.name.startsWith(t))
+                        C = C.filter(n => n.name === e || n.name.startsWith(t))
                     }
-                    return 0 === p.length ? h.EMPTY_RESULTS : {
+                    return 0 === C.length ? E.EMPTY_RESULTS : {
                         results: {
-                            entries: p.map(e => ({
+                            entries: C.slice(0, c).map(e => ({
                                 command: e,
-                                section: null == f ? void 0 : f.find(t => t.id === e.applicationId)
+                                section: null == m ? void 0 : m.find(t => t.id === e.applicationId)
                             }))
                         }
                     }
@@ -3465,15 +3483,15 @@
                         onHover: a,
                         onClick: u
                     } = e;
-                    return (0, p.renderAutocompleteGroup)({
+                    return (0, m.renderAutocompleteGroup)({
                         query: o,
                         selectedIndex: n,
                         autocompletes: t,
                         onHover: a,
                         onClick: u,
-                        titleWithQuery: E.default.Messages.COMMANDS_MATCHING,
-                        titleWithoutQuery: E.default.Messages.COMMANDS,
-                        Component: s.commands === m.CommandMode.OLD_BUILT_INS ? d.default.Command : d.default.NewCommand,
+                        titleWithQuery: C.default.Messages.COMMANDS_MATCHING,
+                        titleWithoutQuery: C.default.Messages.COMMANDS,
+                        Component: s.commands === h.CommandMode.OLD_BUILT_INS ? c.default.Command : c.default.NewCommand,
                         getProps: e => {
                             let {
                                 command: t,
@@ -3489,13 +3507,13 @@
                             }
                         },
                         getQuery: e => {
-                            let t = C(e);
+                            let t = S(e);
                             if ("mention" !== t.type) return e;
-                            let n = c.default.getName(null == i ? void 0 : i.id, r.id, t.user);
-                            return e.replace(f.BOT_MENTION_COMMAND_REGEX, "@".concat(n))
+                            let n = f.default.getName(null == i ? void 0 : i.id, r.id, t.user);
+                            return e.replace(p.BOT_MENTION_COMMAND_REGEX, "@".concat(n))
                         },
                         key: "commands",
-                        footer: (0, l.jsx)(h.FakeFooter, {})
+                        footer: (0, l.jsx)(E.FakeFooter, {})
                     })
                 },
                 onSelect(e) {
@@ -3505,21 +3523,21 @@
                         type: l,
                         options: i,
                         channel: r
-                    } = e, s = h.default.onSelect({
+                    } = e, o = E.default.onSelect({
                         results: t,
                         index: n,
                         type: l,
                         options: i,
                         channel: r,
-                        location: o.ApplicationCommandTriggerLocations.SUGGESTION
+                        location: s.ApplicationCommandTriggerLocations.SUGGESTION
                     });
-                    return null == s ? null : {
-                        ...s,
-                        type: m.AutocompleteSelectionTypes.COMMAND_SUGGESTION
+                    return null == o ? null : {
+                        ...o,
+                        type: h.AutocompleteSelectionTypes.COMMAND_SUGGESTION
                     }
                 }
             };
-            var g = S
+            var T = g
         },
         122270: function(e, t, n) {
             "use strict";
