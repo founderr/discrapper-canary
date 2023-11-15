@@ -1737,7 +1737,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "245952"
+                        buildNumber: "245958"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -11384,7 +11384,7 @@
                                     is_overlay_game_enabled: r.enabled,
                                     is_overlay_game_source: r.source,
                                     fullscreen_type: o.RunningProcessFullscreenType[n],
-                                    overlay_method: K.OverlayMethod[F.default.method],
+                                    overlay_method: K.OverlayMethod[r.overlayMethod],
                                     activity_status_enabled: p.ShowCurrentGame.getSetting(),
                                     activity_status_shared_guilds: s,
                                     current_user_status: b.default.getStatus()

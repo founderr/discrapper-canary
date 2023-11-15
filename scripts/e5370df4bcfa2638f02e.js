@@ -9876,7 +9876,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "090c02b5da64de9473d9731076f3eab735195688", e.substring(0, 7)),
+                    S = (e = "5a8bb02764e18d8e6303136a1f50a60968af1724", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -9889,7 +9889,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "245952", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "245958", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
@@ -14779,7 +14779,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return ea
+                    return ei
                 }
             }), s("222007"), s("70102");
             var a = s("37983"),
@@ -14807,25 +14807,27 @@
                 O = s("370492"),
                 x = s("584369"),
                 R = s("619443"),
-                M = s("368694"),
-                D = s("313915"),
-                v = s("381684"),
-                L = s("697218"),
-                P = s("860957"),
-                j = s("941886"),
-                U = s("145131"),
-                b = s("258078"),
-                B = s("50885"),
-                y = s("161778"),
-                F = s("484894"),
-                G = s("49111"),
-                k = s("180855"),
-                H = s("716731"),
-                w = s("405879"),
-                V = s("926622"),
-                Y = s("862839");
-            let W = ["discord_web", "discord_marketing", "discord_ios", "discord_android"],
-                K = [{
+                M = s("32128"),
+                D = s("368694"),
+                v = s("313915"),
+                L = s("381684"),
+                P = s("697218"),
+                j = s("860957"),
+                U = s("941886"),
+                b = s("145131"),
+                B = s("258078"),
+                y = s("50885"),
+                F = s("161778"),
+                G = s("484894"),
+                k = s("49111"),
+                H = s("180855"),
+                w = s("6791"),
+                V = s("716731"),
+                Y = s("405879"),
+                W = s("926622"),
+                K = s("862839");
+            let z = ["discord_web", "discord_marketing", "discord_ios", "discord_android"],
+                Q = [{
                     value: "branch",
                     label: "Branch Name"
                 }, {
@@ -14833,10 +14835,10 @@
                     label: "Build ID"
                 }];
 
-            function z(e) {
+            function q(e) {
                 return "discord_ios" in e || "discord_android" in e
             }
-            class Q extends n.Component {
+            class Z extends n.Component {
                 render() {
                     let {
                         project: e,
@@ -14845,33 +14847,33 @@
                         disabled: n,
                         error: l
                     } = this.props;
-                    return (0, a.jsxs)(U.default, {
-                        direction: U.default.Direction.VERTICAL,
-                        className: i(H.buildOverrideGroup, V.marginBottom20, w.card, H.row),
+                    return (0, a.jsxs)(b.default, {
+                        direction: b.default.Direction.VERTICAL,
+                        className: i(V.buildOverrideGroup, W.marginBottom20, Y.card, V.row),
                         children: [(0, a.jsx)(_.default, {
-                            className: i(H.removeBuildOverride, {
-                                [H.removeBuildOverrideDisabled]: n
+                            className: i(V.removeBuildOverride, {
+                                [V.removeBuildOverrideDisabled]: n
                             }),
                             onClick: n ? void 0 : this.handleRemoveBuildOverride
-                        }), (0, a.jsxs)(U.default, {
-                            className: V.marginBottom8,
-                            children: [(0, a.jsx)(U.default.Child, {
+                        }), (0, a.jsxs)(b.default, {
+                            className: W.marginBottom8,
+                            children: [(0, a.jsx)(b.default.Child, {
                                 basis: "50%",
                                 children: (0, a.jsx)(S.FormItem, {
                                     title: "Override Type",
-                                    className: H.item,
+                                    className: V.item,
                                     children: (0, a.jsx)(S.SingleSelect, {
-                                        options: K,
+                                        options: Q,
                                         onChange: this.handleOverrideTypeChanged,
                                         value: t,
                                         isDisabled: n
                                     })
                                 })
-                            }), (0, a.jsx)(U.default.Child, {
+                            }), (0, a.jsx)(b.default.Child, {
                                 basis: "50%",
                                 children: (0, a.jsx)(S.FormItem, {
                                     title: "branch" === t ? "Branch Name" : "Build ID",
-                                    className: H.item,
+                                    className: V.item,
                                     children: (0, a.jsx)(S.TextInput, {
                                         value: s,
                                         onChange: this.handleOverrideIdChanged,
@@ -14879,16 +14881,16 @@
                                     })
                                 })
                             })]
-                        }), (0, a.jsxs)(U.default.Child, {
+                        }), (0, a.jsxs)(b.default.Child, {
                             children: [null != l && "" !== l && (0, a.jsx)(S.FormText, {
-                                className: H.item,
+                                className: V.item,
                                 style: {
                                     color: c.default.unsafe_rawColors.RED_400.css
                                 },
                                 type: S.FormText.Types.DESCRIPTION,
                                 children: l
                             }), (0, a.jsxs)(S.FormText, {
-                                className: H.item,
+                                className: V.item,
                                 type: S.FormText.Types.DESCRIPTION,
                                 children: ["This controls the build that will be served for the ", (0, a.jsx)("code", {
                                     children: e
@@ -14912,7 +14914,7 @@
                     }
                 }
             }
-            class q extends n.Component {
+            class X extends n.Component {
                 async refreshBuildOverrides() {
                     this.setState({
                         loading: !0
@@ -14941,18 +14943,18 @@
                     } = this.state;
                     if (null == e) return [];
                     let t = Object.keys(e);
-                    return o.without(W, ...t)
+                    return o.without(z, ...t)
                 }
                 renderEmpty() {
-                    return (0, a.jsxs)(j.default, {
-                        theme: y.default.theme,
-                        className: i(V.marginTop40, V.marginBottom20),
-                        children: [(0, a.jsx)(j.EmptyStateImage, {
+                    return (0, a.jsxs)(U.default, {
+                        theme: F.default.theme,
+                        className: i(W.marginTop40, W.marginBottom20),
+                        children: [(0, a.jsx)(U.EmptyStateImage, {
                             darkSrc: s("522025"),
                             lightSrc: s("471737"),
                             width: 294,
                             height: 192
-                        }), (0, a.jsx)(j.EmptyStateText, {
+                        }), (0, a.jsx)(U.EmptyStateText, {
                             children: "You have no build overrides configured."
                         })]
                     })
@@ -14963,7 +14965,7 @@
                         saving: t,
                         errors: s
                     } = this.state;
-                    return null == e ? null : o.map(e, (e, n) => (0, a.jsx)(Q, {
+                    return null == e ? null : o.map(e, (e, n) => (0, a.jsx)(Z, {
                         project: n,
                         overrideType: e.type,
                         overrideId: e.id,
@@ -14974,10 +14976,10 @@
                     }, n))
                 }
                 renderRefreshButton() {
-                    return !this.state.didSave || this.isDirty() ? null : (0, a.jsx)(U.default, {
+                    return !this.state.didSave || this.isDirty() ? null : (0, a.jsx)(b.default, {
                         grow: 0,
-                        direction: U.default.Direction.HORIZONTAL_REVERSE,
-                        children: (0, a.jsx)(U.default.Child, {
+                        direction: b.default.Direction.HORIZONTAL_REVERSE,
+                        children: (0, a.jsx)(b.default.Child, {
                             grow: 0,
                             children: (0, a.jsx)(S.Button, {
                                 onClick: () => location.reload(),
@@ -14991,10 +14993,10 @@
                     let {
                         buildOverrides: e
                     } = this.state;
-                    return null == e || 0 === Object.keys(e).length ? null : (0, a.jsx)(U.default, {
+                    return null == e || 0 === Object.keys(e).length ? null : (0, a.jsx)(b.default, {
                         grow: 0,
-                        direction: U.default.Direction.HORIZONTAL_REVERSE,
-                        children: (0, a.jsx)(U.default.Child, {
+                        direction: b.default.Direction.HORIZONTAL_REVERSE,
+                        children: (0, a.jsx)(b.default.Child, {
                             grow: 0,
                             children: (0, a.jsx)(S.Button, {
                                 onClick: this.handleLinkGeneration,
@@ -15010,19 +15012,19 @@
                         saving: e,
                         buildOverrides: t
                     } = this.state;
-                    return (0, a.jsxs)(U.default, {
+                    return (0, a.jsxs)(b.default, {
                         grow: 0,
-                        direction: U.default.Direction.HORIZONTAL_REVERSE,
-                        children: [(0, a.jsx)(U.default.Child, {
+                        direction: b.default.Direction.HORIZONTAL_REVERSE,
+                        children: [(0, a.jsx)(b.default.Child, {
                             grow: 0,
                             children: (0, a.jsx)(S.Button, {
-                                disabled: z(null != t ? t : {}),
+                                disabled: q(null != t ? t : {}),
                                 onClick: this.handleSaveChanges,
                                 submitting: e,
                                 color: S.Button.Colors.GREEN,
                                 children: "Save Build Overrides"
                             })
-                        }), (0, a.jsx)(U.default.Child, {
+                        }), (0, a.jsx)(b.default.Child, {
                             grow: 0,
                             children: (0, a.jsx)(S.Button, {
                                 onClick: this.handleDiscardChanges,
@@ -15041,24 +15043,24 @@
                         buildOverrides: n
                     } = this.state;
                     e = t ? (0, a.jsx)(S.Spinner, {
-                        className: V.marginTop20
+                        className: W.marginTop20
                     }) : null != n && 0 === Object.keys(n).length ? this.renderEmpty() : this.renderItems();
                     let l = !s && !t && this.getAvailableProjects().length > 0,
-                        i = z(null != n ? n : {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, a.jsx)(S.Text, {
+                        i = q(null != n ? n : {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, a.jsx)(S.Text, {
                             color: "text-danger",
                             variant: "text-md/normal",
                             children: "Mobile build overrides must be generated using the desktop/web stable client for now!"
                         }) : null;
                     return (0, a.jsxs)(S.FormSection, {
-                        className: V.marginTop60,
-                        children: [(0, a.jsxs)(U.default, {
-                            className: V.marginBottom20,
-                            children: [(0, a.jsx)(U.default.Child, {
+                        className: W.marginTop60,
+                        children: [(0, a.jsxs)(b.default, {
+                            className: W.marginBottom20,
+                            children: [(0, a.jsx)(b.default.Child, {
                                 children: (0, a.jsx)(S.FormTitle, {
                                     tag: S.FormTitleTags.H1,
                                     children: "Build Overrides"
                                 })
-                            }), (0, a.jsx)(U.default.Child, {
+                            }), (0, a.jsx)(b.default.Child, {
                                 grow: 0,
                                 children: (0, a.jsx)(S.Button, {
                                     size: S.ButtonSizes.SMALL,
@@ -15067,11 +15069,11 @@
                                     children: "Add Build Override"
                                 })
                             })]
-                        }), (0, a.jsx)(S.FormDivider, {}), (0, a.jsxs)(U.default, {
-                            direction: U.default.Direction.VERTICAL,
-                            children: [i, e, (0, a.jsxs)(U.default, {
+                        }), (0, a.jsx)(S.FormDivider, {}), (0, a.jsxs)(b.default, {
+                            direction: b.default.Direction.VERTICAL,
+                            children: [i, e, (0, a.jsxs)(b.default, {
                                 grow: 0,
-                                direction: U.default.Direction.HORIZONTAL_REVERSE,
+                                direction: b.default.Direction.HORIZONTAL_REVERSE,
                                 children: [this.renderRefreshButton(), this.renderSaveButton(), this.renderLinkButton()]
                             })]
                         })]
@@ -15103,7 +15105,7 @@
                                         })
                                     }), (0, a.jsx)(S.ModalContent, {
                                         children: (0, a.jsx)("div", {
-                                            className: H.buildOverrideList,
+                                            className: V.buildOverrideList,
                                             children: e.map(e => (0, a.jsx)(S.Button, {
                                                 value: e,
                                                 color: S.Button.Colors.GREEN,
@@ -15192,17 +15194,17 @@
                         let {
                             buildOverrides: e
                         } = this.state;
-                        (0, S.openModal)(t => (0, a.jsx)(Z, {
+                        (0, S.openModal)(t => (0, a.jsx)(J, {
                             ...t,
                             buildOverrides: e
                         }))
                     }
                 }
             }
-            class Z extends n.Component {
+            class J extends n.Component {
                 isMobile() {
                     var e;
-                    return z(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {})
+                    return q(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {})
                 }
                 renderSettingsForm() {
                     let {
@@ -15216,35 +15218,35 @@
                         allowLoggedOut: o,
                         experiments: d,
                         experimentsError: u
-                    } = this.state, c = k.BUILD_OVERRIDE_EXPIRATION_OPTIONS.find(t => t.value === e), E = l.map(e => ({
+                    } = this.state, c = H.BUILD_OVERRIDE_EXPIRATION_OPTIONS.find(t => t.value === e), E = l.map(e => ({
                         label: e,
                         value: e
                     }));
-                    return (0, a.jsxs)(U.default.Child, {
+                    return (0, a.jsxs)(b.default.Child, {
                         basis: "70%",
                         children: [(0, a.jsx)(S.FormItem, {
                             title: "Expire After",
-                            className: V.marginBottom20,
+                            className: W.marginBottom20,
                             children: (0, a.jsx)(S.SingleSelect, {
                                 value: null != c ? c.value : null,
-                                options: k.BUILD_OVERRIDE_EXPIRATION_OPTIONS,
+                                options: H.BUILD_OVERRIDE_EXPIRATION_OPTIONS,
                                 onChange: this.handleExpirationChange
                             })
                         }), this.isMobile() ? null : (0, a.jsx)(S.FormItem, {
                             title: "Release Channel",
-                            className: V.marginBottom20,
+                            className: W.marginBottom20,
                             children: (0, a.jsx)(S.SingleSelect, {
                                 value: t,
-                                options: k.BUILD_OVERRIDE_RELEASE_CHANNEL_OPTIONS,
+                                options: H.BUILD_OVERRIDE_RELEASE_CHANNEL_OPTIONS,
                                 onChange: this.handleReleaseChannelChange
                             })
                         }), this.isMobile() ? (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsx)(S.FormItem, {
                                 title: "Add allowed app version (required)",
-                                className: V.marginBottom20,
-                                children: (0, a.jsxs)(U.default, {
-                                    direction: U.default.Direction.HORIZONTAL,
-                                    children: [(0, a.jsx)(U.default.Child, {
+                                className: W.marginBottom20,
+                                children: (0, a.jsxs)(b.default, {
+                                    direction: b.default.Direction.HORIZONTAL,
+                                    children: [(0, a.jsx)(b.default.Child, {
                                         wrap: !0,
                                         basis: "90%",
                                         children: (0, a.jsx)(S.TextInput, {
@@ -15262,7 +15264,7 @@
                                 })
                             }), (0, a.jsx)(S.FormItem, {
                                 title: "Remove allowed app version",
-                                className: V.marginBottom20,
+                                className: W.marginBottom20,
                                 children: (0, a.jsx)(S.SingleSelect, {
                                     value: null,
                                     options: E,
@@ -15273,10 +15275,10 @@
                         }) : null, this.isMobile() ? null : (0, a.jsx)(a.Fragment, {
                             children: (0, a.jsxs)(S.FormItem, {
                                 title: "Limit to User IDs (optional)",
-                                className: V.marginBottom20,
-                                children: [(0, a.jsx)(U.default, {
-                                    direction: U.default.Direction.HORIZONTAL,
-                                    children: (0, a.jsx)(U.default.Child, {
+                                className: W.marginBottom20,
+                                children: [(0, a.jsx)(b.default, {
+                                    direction: b.default.Direction.HORIZONTAL,
+                                    children: (0, a.jsx)(b.default.Child, {
                                         wrap: !0,
                                         basis: "90%",
                                         children: (0, a.jsx)(S.TextArea, {
@@ -15289,16 +15291,16 @@
                                 }), (0, a.jsx)(S.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
-                                    className: V.marginTop8,
+                                    className: W.marginTop8,
                                     children: "User IDs can be separated by whitespace or commas."
                                 })]
                             })
                         }), (0, a.jsxs)(S.FormItem, {
                             title: "Client Experiment Override",
-                            className: V.marginBottom20,
-                            children: [(0, a.jsx)(U.default, {
-                                direction: U.default.Direction.HORIZONTAL,
-                                children: (0, a.jsx)(U.default.Child, {
+                            className: W.marginBottom20,
+                            children: [(0, a.jsx)(b.default, {
+                                direction: b.default.Direction.HORIZONTAL,
+                                children: (0, a.jsx)(b.default.Child, {
                                     wrap: !0,
                                     basis: "90%",
                                     children: (0, a.jsx)(S.TextArea, {
@@ -15311,7 +15313,7 @@
                             }), (0, a.jsx)(S.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                className: V.marginTop8,
+                                className: W.marginTop8,
                                 children: "Locally override the given experiments to the given bucket. This ONLY applies locally and WILL NOT affect the server. When the user clears build override, the experiment override is removed as well."
                             })]
                         }), (0, a.jsx)(S.FormSwitch, {
@@ -15331,14 +15333,14 @@
                             render: s => {
                                 let n = s.highlight("json", e, !0);
                                 return null == n ? t() : (0, a.jsx)("code", {
-                                    className: "hljs scroller ".concat(n.language, " ").concat(Y.scrollbarGhost, " ").concat(H.codebox),
+                                    className: "hljs scroller ".concat(n.language, " ").concat(K.scrollbarGhost, " ").concat(V.codebox),
                                     dangerouslySetInnerHTML: {
                                         __html: n.value
                                     }
                                 })
                             }
                         });
-                    return (0, a.jsx)(U.default.Child, {
+                    return (0, a.jsx)(b.default.Child, {
                         children: (0, a.jsx)(S.Card, {
                             children: (0, a.jsx)("pre", {
                                 children: n
@@ -15355,8 +15357,8 @@
                     return (0, a.jsxs)("div", {
                         children: [(0, a.jsx)(S.FormItem, {
                             title: "Signed Link",
-                            children: (0, a.jsxs)(U.default, {
-                                children: [(0, a.jsx)(U.default.Child, {
+                            children: (0, a.jsxs)(b.default, {
+                                children: [(0, a.jsx)(b.default.Child, {
                                     wrap: !0,
                                     basis: "75%",
                                     children: (0, a.jsx)(I.default, {
@@ -15367,9 +15369,9 @@
                                     children: "Generate Link"
                                 })]
                             })
-                        }), (0, a.jsx)(b.default, {
+                        }), (0, a.jsx)(B.default, {
                             color: e,
-                            className: "".concat(V.marginBottom8, " ").concat(V.marginTop8),
+                            className: "".concat(W.marginBottom8, " ").concat(W.marginTop8),
                             children: t
                         })]
                     })
@@ -15384,7 +15386,7 @@
                         transitionState: t,
                         "aria-label": "Generate Public Build Override Link",
                         children: [(0, a.jsxs)(S.ModalHeader, {
-                            justify: U.default.Justify.BETWEEN,
+                            justify: b.default.Justify.BETWEEN,
                             separator: !1,
                             children: [(0, a.jsx)(S.Heading, {
                                 variant: "heading-lg/semibold",
@@ -15393,7 +15395,7 @@
                                 onClick: e
                             })]
                         }), (0, a.jsxs)(S.ModalContent, {
-                            children: [(0, a.jsxs)(U.default, {
+                            children: [(0, a.jsxs)(b.default, {
                                 children: [this.renderSettingsForm(), this.renderPayloadBlock()]
                             }), this.renderLinkForm()]
                         })]
@@ -15411,7 +15413,7 @@
                         allowedVersionEntryError: null,
                         publicLink: " ",
                         statusText: null,
-                        statusTextColor: b.default.Colors.STATUS_RED,
+                        statusTextColor: B.default.Colors.STATUS_RED,
                         allowLoggedOut: !1
                     }, this.setUserEntryError = e => {
                         this.setState({
@@ -15420,7 +15422,7 @@
                     }, this.setStatusMessage = (e, t) => {
                         this.setState({
                             statusText: e,
-                            statusTextColor: null != t ? t : b.default.Colors.STATUS_RED
+                            statusTextColor: null != t ? t : B.default.Colors.STATUS_RED
                         })
                     }, this.handleUserIDEntry = e => {
                         if (!/^[\d\s,]*$/.test(e)) return this.setUserEntryError("User IDs are numbers!");
@@ -15438,7 +15440,7 @@
                             allowedVersionEntry: e
                         })
                     }, this.handleAllowedVersionEnter = e => {
-                        e.charCode === G.KeyboardKeys.ENTER && this.handleAddAllowedVersion()
+                        e.charCode === k.KeyboardKeys.ENTER && this.handleAddAllowedVersion()
                     }, this.handleAddAllowedVersion = () => {
                         let {
                             allowedVersions: e,
@@ -15519,27 +15521,27 @@
                         this.setStatusMessage(null);
                         let e = this.generatePayload(),
                             t = await (0, h.getPublicBuildOverrideLink)(e);
-                        !1 !== t.error ? this.setStatusMessage(JSON.stringify(t.error), b.default.Colors.STATUS_RED) : (this.setState({
+                        !1 !== t.error ? this.setStatusMessage(JSON.stringify(t.error), B.default.Colors.STATUS_RED) : (this.setState({
                             publicLink: t.url.toString()
-                        }), 0 === e.meta.user_ids.length && this.setStatusMessage("Warning! No users added to the whitelist! This link could be used by anyone to override their build.", b.default.Colors.STATUS_YELLOW))
+                        }), 0 === e.meta.user_ids.length && this.setStatusMessage("Warning! No users added to the whitelist! This link could be used by anyone to override their build.", B.default.Colors.STATUS_YELLOW))
                     }
                 }
             }
 
-            function X() {
+            function $() {
                 throw Error("Send help")
             }
 
-            function J() {
+            function ee() {
                 let [e, t] = n.useState(!1), [s, l] = n.useState("");
                 return (n.useEffect(() => {
                     (async () => {
-                        let e = await (0, P.getOverlayURL)();
+                        let e = await (0, j.getOverlayURL)();
                         l(e)
                     })()
                 }, []), e) ? {} : (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsxs)("div", {
-                        className: [H.buttonsContainer, V.marginBottom20].join(" "),
+                        className: [V.buttonsContainer, W.marginBottom20].join(" "),
                         children: [(0, a.jsx)(S.Button, {
                             onClick: () => window.open(s, "_blank"),
                             disabled: "" === s,
@@ -15561,7 +15563,7 @@
                         title: "Crashes",
                         tag: S.FormTitleTags.H1,
                         children: (0, a.jsxs)("div", {
-                            className: H.buttonsContainer,
+                            className: V.buttonsContainer,
                             children: [(0, a.jsx)(S.SingleSelect, {
                                 value: void 0,
                                 options: [{
@@ -15583,7 +15585,7 @@
                                     value: 4,
                                     label: "Out of Memory"
                                 }],
-                                onChange: e => null != e && B.default.crash(e)
+                                onChange: e => null != e && y.default.crash(e)
                             }), (0, a.jsx)(S.SingleSelect, {
                                 value: void 0,
                                 options: [{
@@ -15601,30 +15603,30 @@
                                 }],
                                 onChange: e => {
                                     var t;
-                                    return null != e ? (t = e, void B.default.triggerJSException(t)) : void 0
+                                    return null != e ? (t = e, void y.default.triggerJSException(t)) : void 0
                                 }
                             }), (0, a.jsx)(S.Button, {
                                 onClick: () => t(!0),
                                 children: "React Crash"
                             }), (0, a.jsx)(S.Button, {
-                                onClick: X,
+                                onClick: $,
                                 children: "onClick Throw"
                             })]
                         })
                     })]
                 })
             }
-            let $ = u.default.connectStores([D.default, x.default], () => ({
-                isTracingRequests: D.default.isTracingRequests,
-                isForcedCanary: D.default.isForcedCanary,
-                isLoggingGatewayEvents: D.default.isLoggingGatewayEvents,
-                isLoggingOverlayEvents: D.default.isLoggingOverlayEvents,
-                isLoggingAnalyticsEvents: D.default.isLoggingAnalyticsEvents,
-                isAxeEnabled: D.default.isAxeEnabled,
-                isSourceMapsEnabled: D.default.sourceMapsEnabled,
-                isAnalyticsDebuggerEnabled: D.default.isAnalyticsDebuggerEnabled,
-                isIdleStatusIndicatorEnabled: D.default.isIdleStatusIndicatorEnabled,
-                appDirectoryIncludesInactiveCollections: D.default.appDirectoryIncludesInactiveCollections,
+            let et = u.default.connectStores([v.default, x.default], () => ({
+                isTracingRequests: v.default.isTracingRequests,
+                isForcedCanary: v.default.isForcedCanary,
+                isLoggingGatewayEvents: v.default.isLoggingGatewayEvents,
+                isLoggingOverlayEvents: v.default.isLoggingOverlayEvents,
+                isLoggingAnalyticsEvents: v.default.isLoggingAnalyticsEvents,
+                isAxeEnabled: v.default.isAxeEnabled,
+                isSourceMapsEnabled: v.default.sourceMapsEnabled,
+                isAnalyticsDebuggerEnabled: v.default.isAnalyticsDebuggerEnabled,
+                isIdleStatusIndicatorEnabled: v.default.isIdleStatusIndicatorEnabled,
+                appDirectoryIncludesInactiveCollections: v.default.appDirectoryIncludesInactiveCollections,
                 isDevToolsEnabled: x.default.devToolsEnabled
             }))(e => {
                 let {
@@ -15639,21 +15641,21 @@
                     isIdleStatusIndicatorEnabled: c,
                     appDirectoryIncludesInactiveCollections: E,
                     isDevToolsEnabled: T
-                } = e, m = (0, u.useStateFromStores)([L.default], () => L.default.getCurrentUser());
+                } = e, m = (0, u.useStateFromStores)([P.default], () => P.default.getCurrentUser());
                 return (0, a.jsxs)(S.FormSection, {
                     title: "Developer Flags",
                     tag: S.FormTitleTags.H1,
-                    children: [M.default.isDeveloper && (0, a.jsx)(S.FormSwitch, {
+                    children: [D.default.isDeveloper && (0, a.jsx)(S.FormSwitch, {
                         value: T,
                         note: (0, a.jsxs)(a.Fragment, {
                             children: ["Enable client DevTools (open via Help menu in top right or with", " ", (0, a.jsx)("kbd", {
-                                className: H.key,
+                                className: V.key,
                                 children: g.default.modKey
                             }), " + ", (0, a.jsx)("kbd", {
-                                className: H.key,
+                                className: V.key,
                                 children: g.default.altKey
                             }), " ", "+ ", (0, a.jsx)("kbd", {
-                                className: H.key,
+                                className: V.key,
                                 children: "O"
                             }), ")."]
                         }),
@@ -15724,33 +15726,33 @@
                             appDirectoryIncludesInactiveCollections: e
                         }),
                         children: "Preview Unpublished Collections on App Directory Homepage"
-                    }) : null, M.default.isDeveloper ? (0, a.jsxs)(a.Fragment, {
+                    }) : null, D.default.isDeveloper ? (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)("div", {
-                            className: [H.buttonsContainer, V.marginBottom20].join(" "),
-                            children: (0, a.jsx)(F.OverridePremiumTypeDropDown, {})
+                            className: [V.buttonsContainer, W.marginBottom20].join(" "),
+                            children: (0, a.jsx)(G.OverridePremiumTypeDropDown, {})
                         }), (0, a.jsx)(S.FormDivider, {
-                            className: H.divider
+                            className: V.divider
                         })]
                     }) : null]
                 })
             });
 
-            function ee() {
-                let e = (0, u.useStateFromStores)([v.default], () => v.default.getSurveyOverride()),
+            function es() {
+                let e = (0, u.useStateFromStores)([L.default], () => L.default.getSurveyOverride()),
                     [t, s] = n.useState(null != e ? e : "");
                 return (0, a.jsxs)(S.FormSection, {
                     tag: S.FormTitleTags.H1,
                     title: "Survey Override",
-                    className: V.marginTop60,
+                    className: W.marginTop60,
                     children: [(0, a.jsx)(S.FormTitle, {
                         children: "Copy the ID of the Survey you want to test:"
                     }), (0, a.jsxs)("form", {
-                        className: H.surveyOverride,
+                        className: V.surveyOverride,
                         onSubmit: e => {
                             e.preventDefault(), t.length > 0 ? m.overrideSurvey(t) : m.overrideSurvey(null)
                         },
                         children: [(0, a.jsx)(S.TextInput, {
-                            className: H.surveyOverrideInput,
+                            className: V.surveyOverrideInput,
                             value: t,
                             onChange: s
                         }), (0, a.jsx)(S.Button, {
@@ -15761,20 +15763,50 @@
                 })
             }
 
-            function et() {
+            function ea() {
+                let e = M.OverlayStoredSettings.methodOverride,
+                    [t, s] = n.useState(e);
+                return (0, a.jsxs)(S.FormSection, {
+                    tag: S.FormTitleTags.H1,
+                    title: "In-Game Overlay Method Override",
+                    className: W.marginTop60,
+                    children: [(0, a.jsx)(S.FormTitle, {
+                        children: "Force all overlay enabled games to use a specific overlay method:"
+                    }), (0, a.jsx)(S.SingleSelect, {
+                        value: t,
+                        options: [{
+                            value: void 0,
+                            label: "No override"
+                        }, {
+                            value: w.OverlayMethod.OutOfProcess,
+                            label: "Out of process"
+                        }, {
+                            value: w.OverlayMethod.Hook,
+                            label: "In-process hook"
+                        }],
+                        onChange: e => {
+                            M.OverlayStoredSettings.update({
+                                methodOverride: e
+                            }), s(e)
+                        }
+                    })]
+                })
+            }
+
+            function en() {
                 var e;
                 let t = (0, u.useStateFromStores)([p.default], () => p.default.overrideId()),
                     [s, l] = n.useState(null !== (e = p.default.overrideId()) && void 0 !== e ? e : "");
                 return (0, a.jsxs)(S.FormSection, {
                     tag: S.FormTitleTags.H1,
                     title: "Changelog Override",
-                    className: V.marginTop60,
+                    className: W.marginTop60,
                     children: [(0, a.jsx)(S.FormTitle, {
                         children: "Enter the ID of the changelog you want to test"
                     }), (0, a.jsxs)("div", {
-                        className: H.surveyOverride,
+                        className: V.surveyOverride,
                         children: [(0, a.jsx)(S.TextInput, {
-                            className: H.surveyOverrideInput,
+                            className: V.surveyOverrideInput,
                             value: s,
                             onChange: l
                         }), (0, a.jsx)(S.Button, {
@@ -15787,14 +15819,14 @@
                     })]
                 })
             }
-            class es extends n.PureComponent {
+            class el extends n.PureComponent {
                 render() {
                     return (0, a.jsxs)(n.Fragment, {
-                        children: [(0, a.jsx)($, {}), (0, a.jsx)(J, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(et, {}), (0, a.jsx)(q, {})]
+                        children: [(0, a.jsx)(et, {}), (0, a.jsx)(ee, {}), (0, a.jsx)(es, {}), (0, a.jsx)(ea, {}), (0, a.jsx)(en, {}), (0, a.jsx)(X, {})]
                     })
                 }
             }
-            var ea = es
+            var ei = el
         },
         409862: function(e, t, s) {
             "use strict";
@@ -16080,14 +16112,10 @@
                 }
 
                 function k() {
-                    u.default.toggleOverlay(m)
-                }
-
-                function H() {
                     u.default.toggleDetection(m)
                 }
 
-                function w() {
+                function H() {
                     if (x) return;
                     let e = null != m.id ? E.default.getDetectableGame(m.id) : null;
                     O.default.track(D.AnalyticEvents.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
@@ -16156,7 +16184,7 @@
                                 return (0, a.jsx)(d.Clickable, {
                                     "aria-label": v.default.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION,
                                     className: L.toggleIcon,
-                                    onClick: w,
+                                    onClick: H,
                                     onMouseEnter: t,
                                     onMouseLeave: s,
                                     children: (0, a.jsx)(N.default, {
@@ -16195,7 +16223,7 @@
                                     return (0, a.jsx)(d.Clickable, {
                                         "aria-label": v.default.Messages.SETTINGS_GAMES_TOGGLE_DETECTION,
                                         className: L.toggleIcon,
-                                        onClick: H,
+                                        onClick: k,
                                         onMouseEnter: s,
                                         onMouseLeave: n,
                                         children: t
@@ -16225,17 +16253,20 @@
                             className: i(j.flexCenter, j.noWrap, j.justifyBetween, L.toggleContainer),
                             children: [n, (0, a.jsx)(d.Tooltip, {
                                 text: v.default.Messages.SETTINGS_GAMES_TOGGLE_OVERLAY,
-                                children: e => {
+                                children: t => {
                                     let {
-                                        onMouseEnter: t,
-                                        onMouseLeave: n
-                                    } = e;
+                                        onMouseEnter: n,
+                                        onMouseLeave: l
+                                    } = t;
                                     return (0, a.jsx)(d.Clickable, {
                                         "aria-label": v.default.Messages.SETTINGS_GAMES_TOGGLE_OVERLAY,
                                         className: L.toggleIcon,
-                                        onClick: k,
-                                        onMouseEnter: t,
-                                        onMouseLeave: n,
+                                        onClick: () => {
+                                            var t;
+                                            return t = !e, void u.default.toggleOverlay(m, t)
+                                        },
+                                        onMouseEnter: n,
+                                        onMouseLeave: l,
                                         children: s
                                     })
                                 }
@@ -17331,7 +17362,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return P
+                    return M
                 }
             }), s("222007");
             var a = s("37983"),
@@ -17344,137 +17375,100 @@
                 u = s("539405"),
                 c = s("278108"),
                 S = s("6193"),
-                E = s("42203"),
-                T = s("697218"),
-                f = s("227602"),
-                m = s("860957"),
-                _ = s("901165"),
-                I = s("145131"),
-                g = s("759885"),
-                h = s("314892"),
-                N = s("599110");
+                E = s("227602"),
+                T = s("860957"),
+                f = s("901165"),
+                m = s("145131"),
+                _ = s("314892"),
+                I = s("599110");
             s("701909");
-            var C = s("13798"),
-                p = s("49111"),
-                A = s("6791"),
-                O = s("782340"),
-                x = s("388165"),
-                R = s("926622");
-            let M = v(null);
+            var g = s("13798"),
+                h = s("49111"),
+                N = s("782340"),
+                C = s("388165"),
+                p = s("926622");
+            let A = x(null);
 
-            function D() {
-                let e = v(M);
-                !i.isEqual(e, M) && (N.default.track(p.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, e), M = e)
+            function O() {
+                let e = x(A);
+                !i.isEqual(e, A) && (I.default.track(h.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, e), A = e)
             }
 
-            function v(e) {
-                var t, s;
-                let a = _.default.getNotificationPositionMode(),
-                    n = a !== p.OverlayNotificationPositions.DISABLED,
-                    l = f.default.getOverlayKeybind(),
-                    i = f.default.getOverlayChatKeybind();
+            function x(e) {
+                var t;
+                let s = f.default.getNotificationPositionMode(),
+                    a = s !== h.OverlayNotificationPositions.DISABLED,
+                    n = E.default.getOverlayKeybind(),
+                    l = E.default.getOverlayChatKeybind();
                 return {
-                    enabled: m.default.enabled,
-                    notifications_enabled: n,
-                    notifications_position: n ? a : null,
-                    text_notifications_mode: _.default.getTextChatNotificationMode(),
-                    hotkey: null != l ? (0, C.toString)(l.shortcut) : null,
-                    text_activation_hotkey: null != i ? (0, C.toString)(i.shortcut) : null,
-                    text_opacity_slider: _.default.getTextWidgetOpacity(),
-                    overlay_method: A.OverlayMethod[m.default.method],
-                    old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : m.default.enabled,
-                    old_overlay_method: null !== (s = null == e ? void 0 : e.overlay_method) && void 0 !== s ? s : A.OverlayMethod[m.default.method]
+                    enabled: T.default.enabled,
+                    notifications_enabled: a,
+                    notifications_position: a ? s : null,
+                    text_notifications_mode: f.default.getTextChatNotificationMode(),
+                    hotkey: null != n ? (0, g.toString)(n.shortcut) : null,
+                    text_activation_hotkey: null != l ? (0, g.toString)(l.shortcut) : null,
+                    text_opacity_slider: f.default.getTextWidgetOpacity(),
+                    old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : T.default.enabled
                 }
             }
-            class L extends n.PureComponent {
+            class R extends n.PureComponent {
                 renderExplanation() {
                     return null
                 }
                 renderOverlayToggle() {
-                    var e, t;
                     let {
-                        enabled: s,
-                        inputLockKeybind: n,
-                        method: l,
-                        isGlobalSupported: i
-                    } = this.props, r = (0, S.isHookModuleTooOld)(), d = null !== (t = null === (e = T.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t, u = E.default.getChannel("1146954506530209792");
-                    return (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsxs)(I.default, {
-                            className: R.marginBottom20,
-                            children: [(0, a.jsx)(I.default.Child, {
+                        enabled: e,
+                        inputLockKeybind: t
+                    } = this.props, s = (0, S.isHookModuleTooOld)();
+                    return (0, a.jsx)(a.Fragment, {
+                        children: (0, a.jsxs)(m.default, {
+                            className: p.marginBottom20,
+                            children: [(0, a.jsx)(m.default.Child, {
                                 basis: "50%",
                                 children: (0, a.jsxs)(o.FormItem, {
                                     children: [(0, a.jsx)(o.FormTitle, {
                                         tag: o.FormTitleTags.H5,
-                                        children: O.default.Messages.SETTINGS_GAMES_ENABLE_OVERLAY_LABEL
+                                        children: N.default.Messages.SETTINGS_GAMES_ENABLE_OVERLAY_LABEL
                                     }), (0, a.jsx)(o.FormSwitch, {
-                                        className: R.marginBottom20,
+                                        className: p.marginBottom20,
                                         style: {
                                             marginTop: 16
                                         },
-                                        value: s,
-                                        disabled: r,
-                                        note: r ? O.default.Messages.OVERLAY_DISABLED_OLD_CLIENT : null,
+                                        value: e,
+                                        disabled: s,
+                                        note: s ? N.default.Messages.OVERLAY_DISABLED_OLD_CLIENT : null,
                                         hideBorder: !0,
                                         onChange: this.handleChangeEnabled,
-                                        children: O.default.Messages.ENABLE_INGAME_OVERLAY
+                                        children: N.default.Messages.ENABLE_INGAME_OVERLAY
                                     })]
                                 })
-                            }), (0, a.jsx)(I.default.Child, {
+                            }), (0, a.jsx)(m.default.Child, {
                                 basis: "50%",
                                 children: (0, a.jsx)(o.FormItem, {
-                                    title: O.default.Messages.KEYBIND_TOGGLE_OVERLAY_INPUT_LOCK,
+                                    title: N.default.Messages.KEYBIND_TOGGLE_OVERLAY_INPUT_LOCK,
                                     children: (0, a.jsx)(c.default, {
-                                        disabled: !s,
-                                        defaultValue: null != n ? n.shortcut : [],
+                                        disabled: !e,
+                                        defaultValue: null != t ? t.shortcut : [],
                                         onChange: this.handleInputLockShortcutChange
                                     })
                                 })
                             })]
-                        }), i ? (0, a.jsx)(I.default, {
-                            className: R.marginBottom20,
-                            children: (0, a.jsx)(I.default.Child, {
-                                basis: "100%",
-                                children: (0, a.jsxs)(o.FormItem, {
-                                    children: [(0, a.jsx)(o.FormTitle, {
-                                        tag: o.FormTitleTags.H5,
-                                        children: "Enable Experiment"
-                                    }), (0, a.jsx)(o.FormSwitch, {
-                                        className: R.marginBottom20,
-                                        style: {
-                                            marginTop: 16
-                                        },
-                                        value: l === A.OverlayMethod.Global,
-                                        disabled: r,
-                                        hideBorder: !0,
-                                        onChange: this.handleChangeMethod,
-                                        children: "Use experimental out of process overlay"
-                                    }), d && null != u ? (0, a.jsx)(a.Fragment, {
-                                        children: (0, a.jsxs)(o.FormText, {
-                                            type: o.FormTextTypes.DESCRIPTION,
-                                            children: ["Hello! Native platform & tools is conducting an experiment with an out of process game overlay. If you encounter any issues, please report them in ", (0, a.jsx)(g.default, {
-                                                channel: u
-                                            })]
-                                        })
-                                    }) : (0, a.jsx)(a.Fragment, {})]
-                                })
-                            })
-                        }) : (0, a.jsx)(a.Fragment, {})]
+                        })
                     })
                 }
                 renderAvatarSize() {
-                    return (0, a.jsx)(I.default, {
-                        className: R.marginBottom20,
-                        children: (0, a.jsx)(I.default.Child, {
+                    return (0, a.jsx)(m.default, {
+                        className: p.marginBottom20,
+                        children: (0, a.jsx)(m.default.Child, {
                             children: (0, a.jsx)(o.FormItem, {
-                                title: O.default.Messages.FORM_LABEL_AVATAR_SIZE,
+                                title: N.default.Messages.FORM_LABEL_AVATAR_SIZE,
                                 children: (0, a.jsx)(o.RadioGroup, {
                                     options: [{
-                                        name: O.default.Messages.AVATAR_SIZE_OPTION_LARGE,
-                                        value: p.OverlayAvatarSizes.LARGE
+                                        name: N.default.Messages.AVATAR_SIZE_OPTION_LARGE,
+                                        value: h.OverlayAvatarSizes.LARGE
                                     }, {
-                                        name: O.default.Messages.AVATAR_SIZE_OPTION_SMALL,
-                                        value: p.OverlayAvatarSizes.SMALL
+                                        name: N.default.Messages.AVATAR_SIZE_OPTION_SMALL,
+                                        value: h.OverlayAvatarSizes.SMALL
                                     }],
                                     onChange: this.handleChangeAvatarSizeMode,
                                     value: this.props.avatarSizeMode
@@ -17484,21 +17478,21 @@
                     })
                 }
                 renderDisplayNames() {
-                    return (0, a.jsx)(I.default, {
-                        className: R.marginBottom20,
-                        children: (0, a.jsx)(I.default.Child, {
+                    return (0, a.jsx)(m.default, {
+                        className: p.marginBottom20,
+                        children: (0, a.jsx)(m.default.Child, {
                             children: (0, a.jsx)(o.FormItem, {
-                                title: O.default.Messages.FORM_LABEL_DISPLAY_NAMES,
+                                title: N.default.Messages.FORM_LABEL_DISPLAY_NAMES,
                                 children: (0, a.jsx)(o.RadioGroup, {
                                     options: [{
-                                        name: O.default.Messages.DISPLAY_OPTION_ALWAYS,
-                                        value: p.OverlayDisplayNames.ALWAYS
+                                        name: N.default.Messages.DISPLAY_OPTION_ALWAYS,
+                                        value: h.OverlayDisplayNames.ALWAYS
                                     }, {
-                                        name: O.default.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING,
-                                        value: p.OverlayDisplayNames.ONLY_WHILE_SPEAKING
+                                        name: N.default.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING,
+                                        value: h.OverlayDisplayNames.ONLY_WHILE_SPEAKING
                                     }, {
-                                        name: O.default.Messages.DISPLAY_OPTION_NEVER,
-                                        value: p.OverlayDisplayNames.NEVER
+                                        name: N.default.Messages.DISPLAY_OPTION_NEVER,
+                                        value: h.OverlayDisplayNames.NEVER
                                     }],
                                     onChange: this.handleChangeDisplayNameMode,
                                     value: this.props.displayNameMode
@@ -17508,18 +17502,18 @@
                     })
                 }
                 renderDisplayUsers() {
-                    return (0, a.jsx)(I.default, {
-                        className: R.marginBottom20,
-                        children: (0, a.jsx)(I.default.Child, {
+                    return (0, a.jsx)(m.default, {
+                        className: p.marginBottom20,
+                        children: (0, a.jsx)(m.default.Child, {
                             children: (0, a.jsx)(o.FormItem, {
-                                title: O.default.Messages.FORM_LABEL_DISPLAY_USERS,
+                                title: N.default.Messages.FORM_LABEL_DISPLAY_USERS,
                                 children: (0, a.jsx)(o.RadioGroup, {
                                     options: [{
-                                        name: O.default.Messages.DISPLAY_OPTION_ALWAYS,
-                                        value: p.OverlayDisplayUsers.ALWAYS
+                                        name: N.default.Messages.DISPLAY_OPTION_ALWAYS,
+                                        value: h.OverlayDisplayUsers.ALWAYS
                                     }, {
-                                        name: O.default.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING,
-                                        value: p.OverlayDisplayUsers.ONLY_WHILE_SPEAKING
+                                        name: N.default.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING,
+                                        value: h.OverlayDisplayUsers.ONLY_WHILE_SPEAKING
                                     }],
                                     onChange: this.handleChangeDisplayUserMode,
                                     value: this.props.displayUserMode
@@ -17529,32 +17523,32 @@
                     })
                 }
                 renderTextNotificationMode() {
-                    let e = this.props.notificationPositionMode !== p.OverlayNotificationPositions.DISABLED,
-                        t = e && this.props.textChatNotificationMode === p.OverlayNotificationTextChatTypes.ENABLED;
-                    return (0, a.jsx)(I.default, {
-                        className: R.marginBottom20,
-                        children: (0, a.jsx)(I.default.Child, {
+                    let e = this.props.notificationPositionMode !== h.OverlayNotificationPositions.DISABLED,
+                        t = e && this.props.textChatNotificationMode === h.OverlayNotificationTextChatTypes.ENABLED;
+                    return (0, a.jsx)(m.default, {
+                        className: p.marginBottom20,
+                        children: (0, a.jsx)(m.default.Child, {
                             children: (0, a.jsx)(o.FormItem, {
                                 children: (0, a.jsx)(o.FormSwitch, {
                                     value: t,
                                     disabled: !e,
                                     onChange: this.handleChangeTextNotificationMode,
                                     hideBorder: !0,
-                                    children: O.default.Messages.FORM_LABEL_OVERLAY_TEXT_CHAT_NOTIFICATIONS
+                                    children: N.default.Messages.FORM_LABEL_OVERLAY_TEXT_CHAT_NOTIFICATIONS
                                 })
                             })
                         })
                     })
                 }
                 renderNotificationPosition() {
-                    return (0, a.jsx)(I.default, {
-                        className: R.marginBottom20,
-                        children: (0, a.jsx)(I.default.Child, {
+                    return (0, a.jsx)(m.default, {
+                        className: p.marginBottom20,
+                        children: (0, a.jsx)(m.default.Child, {
                             children: (0, a.jsx)(o.FormItem, {
-                                title: O.default.Messages.FORM_LABEL_NOTIFICATION_POSITION,
+                                title: N.default.Messages.FORM_LABEL_NOTIFICATION_POSITION,
                                 children: (0, a.jsx)("div", {
-                                    className: x.notificationSettings,
-                                    children: (0, a.jsx)(h.default, {
+                                    className: C.notificationSettings,
+                                    children: (0, a.jsx)(_.default, {
                                         position: this.props.notificationPositionMode,
                                         onChange: this.handleChangeNotificationPositionMode
                                     })
@@ -17567,24 +17561,22 @@
                     return (0, a.jsxs)(n.Fragment, {
                         children: [(0, a.jsxs)(o.FormSection, {
                             tag: o.FormTitleTags.H1,
-                            title: O.default.Messages.OVERLAY,
+                            title: N.default.Messages.OVERLAY,
                             children: [this.renderExplanation(), this.renderOverlayToggle(), this.renderAvatarSize(), this.renderDisplayNames(), this.renderDisplayUsers()]
                         }), (0, a.jsxs)(o.FormSection, {
                             tag: o.FormTitleTags.H1,
-                            title: O.default.Messages.OVERLAY_NOTIFICATIONS_SETTINGS,
-                            className: R.marginTop40,
+                            title: N.default.Messages.OVERLAY_NOTIFICATIONS_SETTINGS,
+                            className: p.marginTop40,
                             children: [this.renderNotificationPosition(), this.renderTextNotificationMode()]
                         })]
                     })
                 }
                 constructor(...e) {
                     super(...e), this.handleChangeEnabled = e => {
-                        u.default.setEnabled(e), N.default.track(p.AnalyticEvents.OVERLAY_TOGGLED, {
+                        u.default.setEnabled(e), I.default.track(h.AnalyticEvents.OVERLAY_TOGGLED, {
                             enabled: e,
                             setting_type: "overlay toggled - global"
                         })
-                    }, this.handleChangeMethod = e => {
-                        u.default.setMethod(e ? A.OverlayMethod.Global : A.OverlayMethod.Hook)
                     }, this.handleChangeDisplayNameMode = e => {
                         let {
                             value: t
@@ -17604,29 +17596,27 @@
                         let {
                             ENABLED: e,
                             DISABLED: t
-                        } = p.OverlayNotificationTextChatTypes, s = this.props.textChatNotificationMode === e ? t : e;
+                        } = h.OverlayNotificationTextChatTypes, s = this.props.textChatNotificationMode === e ? t : e;
                         u.default.setTextChatNotificationMode(s)
                     }, this.handleChangeNotificationPositionMode = (e, t) => {
-                        u.default.setNotificationPositionMode(t), D()
+                        u.default.setNotificationPositionMode(t), O()
                     }, this.handleInputLockShortcutChange = e => {
                         d.default.setKeybind({
                             ...this.props.inputLockKeybind,
                             shortcut: e
-                        }), D()
+                        }), O()
                     }
                 }
             }
-            var P = r.default.connectStores([m.default, _.default, f.default], () => (D(), {
-                enabled: m.default.enabled,
-                method: m.default.method,
-                isGlobalSupported: m.default.isMethodSupported(A.OverlayMethod.Global),
-                avatarSizeMode: _.default.getAvatarSizeMode(),
-                displayNameMode: _.default.getDisplayNameMode(),
-                displayUserMode: _.default.getDisplayUserMode(),
-                notificationPositionMode: _.default.getNotificationPositionMode(),
-                textChatNotificationMode: _.default.getTextChatNotificationMode(),
-                inputLockKeybind: f.default.getOverlayKeybind()
-            }))(L)
+            var M = r.default.connectStores([T.default, f.default, E.default], () => (O(), {
+                enabled: T.default.enabled,
+                avatarSizeMode: f.default.getAvatarSizeMode(),
+                displayNameMode: f.default.getDisplayNameMode(),
+                displayUserMode: f.default.getDisplayUserMode(),
+                notificationPositionMode: f.default.getNotificationPositionMode(),
+                textChatNotificationMode: f.default.getTextChatNotificationMode(),
+                inputLockKeybind: E.default.getOverlayKeybind()
+            }))(R)
         },
         974926: function(e, t, s) {
             "use strict";
