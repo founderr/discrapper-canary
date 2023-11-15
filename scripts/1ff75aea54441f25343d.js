@@ -4,7 +4,7 @@
             "use strict";
             t.r(s), t.d(s, {
                 default: function() {
-                    return f
+                    return c
                 }
             });
             var a = t("872717"),
@@ -78,13 +78,13 @@
                     }))
                 }
             };
-            var f = o
+            var c = o
         },
         249561: function(e, s, t) {
             "use strict";
             t.r(s), t.d(s, {
                 default: function() {
-                    return T
+                    return A
                 }
             }), t("702976"), t("222007");
             var a = t("37983"),
@@ -95,18 +95,18 @@
                 r = t("828986"),
                 u = t("819689"),
                 o = t("679653"),
-                f = t("390236"),
-                E = t("377114"),
-                c = t("699473"),
+                c = t("390236"),
+                f = t("377114"),
+                E = t("699473"),
                 g = t("27618"),
-                _ = t("697218"),
-                m = t("822332"),
+                m = t("697218"),
+                _ = t("822332"),
                 N = t("568734"),
                 M = t("870190"),
                 h = t("49111"),
                 S = t("782340"),
-                p = t("834476");
-            class A extends n.PureComponent {
+                T = t("834476");
+            class p extends n.PureComponent {
                 render() {
                     let e, s;
                     let {
@@ -117,16 +117,16 @@
                         showContextMenuHint: i,
                         ...r
                     } = this.props, u = n.type === h.ChannelTypes.GUILD_ANNOUNCEMENT && (0, N.hasFlag)(l.flags, h.MessageFlags.CROSSPOSTED);
-                    return i && (e = (0, a.jsx)(m.default, {
-                        className: p.spacingTop,
+                    return i && (e = (0, a.jsx)(_.default, {
+                        className: T.spacingTop,
                         children: S.default.Messages.DELETE_MESSAGE_CONTEXT_MENU_HINT.format()
                     })), (0, M.canDeleteAndReportMessage)(l) && (s = (0, a.jsx)(d.FormSwitch, {
                         value: t,
                         onChange: this.handleToggleReport,
                         hideBorder: !0,
-                        className: p.spacingTop,
+                        className: T.spacingTop,
                         children: S.default.Messages.DELETE_MESSAGE_REPORT
-                    })), (0, a.jsx)(f.default.Provider, {
+                    })), (0, a.jsx)(c.default.Provider, {
                         value: n.guild_id,
                         children: (0, a.jsxs)(d.ConfirmModal, {
                             header: u ? S.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER : S.default.Messages.DELETE_MESSAGE_TITLE,
@@ -136,11 +136,11 @@
                             ...r,
                             children: [(0, a.jsx)(d.Text, {
                                 variant: "text-md/normal",
-                                className: p.spacing,
+                                className: T.spacing,
                                 children: u ? S.default.Messages.DELETE_FOLLOWED_NEWS_BODY : S.default.Messages.DELETE_MESSAGE_BODY
                             }), (0, a.jsx)("div", {
-                                className: p.message,
-                                children: (0, a.jsx)(c.default, {
+                                className: T.message,
+                                children: (0, a.jsx)(E.default, {
                                     channel: n,
                                     message: l,
                                     disableInteraction: !0
@@ -159,7 +159,7 @@
                             channel: s,
                             message: t
                         } = this.props;
-                        e ? (0, E.showReportModalForMessage)(t, () => u.default.deleteMessage(s.id, t.id)) : u.default.deleteMessage(s.id, t.id)
+                        e ? (0, f.showReportModalForMessage)(t, () => u.default.deleteMessage(s.id, t.id)) : u.default.deleteMessage(s.id, t.id)
                     }, this.handleToggleReport = e => {
                         this.setState({
                             report: e
@@ -167,14 +167,14 @@
                     }
                 }
             }
-            var T = {
+            var A = {
                 confirmPin: function(e, s) {
                     (0, d.openModal)(t => {
                         let n;
-                        let l = (0, o.computeChannelName)(e, _.default, g.default);
+                        let l = (0, o.computeChannelName)(e, m.default, g.default);
                         return n = e.isPrivate() ? S.default.Messages.PIN_MESSAGE_BODY_PRIVATE_CHANNEL : S.default.Messages.PIN_MESSAGE_BODY.format({
                             channelName: l
-                        }), (0, a.jsx)(f.default.Provider, {
+                        }), (0, a.jsx)(c.default.Provider, {
                             value: e.guild_id,
                             children: (0, a.jsxs)(d.ConfirmModal, {
                                 header: S.default.Messages.PIN_MESSAGE_TITLE,
@@ -185,11 +185,11 @@
                                 ...t,
                                 children: [(0, a.jsx)(d.Text, {
                                     variant: "text-md/normal",
-                                    className: p.spacing,
+                                    className: T.spacing,
                                     children: n
                                 }), (0, a.jsx)("div", {
-                                    className: p.message,
-                                    children: (0, a.jsx)(c.default, {
+                                    className: T.message,
+                                    children: (0, a.jsx)(E.default, {
                                         channel: e,
                                         message: s,
                                         animateAvatar: !1,
@@ -201,7 +201,7 @@
                     })
                 },
                 confirmUnpin: function(e, s) {
-                    (0, d.openModal)(t => (0, a.jsx)(f.default.Provider, {
+                    (0, d.openModal)(t => (0, a.jsx)(c.default.Provider, {
                         value: e.guild_id,
                         children: (0, a.jsxs)(d.ConfirmModal, {
                             header: S.default.Messages.UNPIN_MESSAGE_TITLE,
@@ -211,16 +211,16 @@
                             ...t,
                             children: [(0, a.jsx)(d.Text, {
                                 variant: "text-md/normal",
-                                className: p.spacing,
+                                className: T.spacing,
                                 children: S.default.Messages.UNPIN_MESSAGE_BODY
                             }), (0, a.jsx)("div", {
-                                className: i(p.message, p.spacing),
-                                children: (0, a.jsx)(c.default, {
+                                className: i(T.message, T.spacing),
+                                children: (0, a.jsx)(E.default, {
                                     channel: e,
                                     message: s,
                                     disableInteraction: !0
                                 })
-                            }), (0, a.jsx)(m.default, {
+                            }), (0, a.jsx)(_.default, {
                                 children: S.default.Messages.UNPIN_MESSAGE_CONTEXT_MENU_HINT.format()
                             })]
                         })
@@ -228,7 +228,7 @@
                 },
                 confirmDelete: function(e, s) {
                     let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                    (0, d.openModal)(n => (0, a.jsx)(A, {
+                    (0, d.openModal)(n => (0, a.jsx)(p, {
                         channel: e,
                         message: s,
                         showContextMenuHint: t,
@@ -247,7 +247,7 @@
                         ...n,
                         children: (0, a.jsx)(d.Text, {
                             variant: "text-md/normal",
-                            className: p.spacing,
+                            className: T.spacing,
                             children: S.default.Messages.EDIT_FOLLOWED_NEWS_BODY
                         })
                     }))
@@ -258,7 +258,7 @@
             "use strict";
             t.r(s), t.d(s, {
                 default: function() {
-                    return p
+                    return T
                 }
             }), t("843762");
             var a = t("917351"),
@@ -269,13 +269,13 @@
                 r = t("915639"),
                 u = t("42203"),
                 o = t("26989"),
-                f = t("305961"),
-                E = t("377253"),
-                c = t("27618"),
+                c = t("305961"),
+                f = t("377253"),
+                E = t("27618"),
                 g = t("697218");
-            let _ = {};
+            let m = {};
 
-            function m(e) {
+            function _(e) {
                 let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
                     t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
@@ -294,11 +294,11 @@
                 let {
                     channel: s
                 } = e;
-                delete _[s.id]
+                delete m[s.id]
             }
 
             function M() {
-                n.forEach(_, e => {
+                n.forEach(m, e => {
                     n.forEach(e.messages, e => {
                         e.timestamp.locale(r.default.locale)
                     })
@@ -306,38 +306,38 @@
             }
 
             function h() {
-                n.forEach(_, e => {
-                    e.messages = e.messages.map(e => e.set("blocked", c.default.isBlocked(e.author.id)))
+                n.forEach(m, e => {
+                    e.messages = e.messages.map(e => e.set("blocked", E.default.isBlocked(e.author.id)))
                 })
             }
             class S extends l.default.Store {
                 initialize() {
-                    this.waitFor(u.default, f.default, o.default, E.default, g.default, r.default)
+                    this.waitFor(u.default, c.default, o.default, f.default, g.default, r.default)
                 }
                 getPinnedMessages(e) {
                     var s;
-                    return null !== (s = _[e]) && void 0 !== s ? s : void 0
+                    return null !== (s = m[e]) && void 0 !== s ? s : void 0
                 }
                 loaded(e) {
-                    return null != _[e] && _[e].loaded
+                    return null != m[e] && m[e].loaded
                 }
             }
             S.displayName = "ChannelPinsStore";
-            var p = new S(i.default, {
+            var T = new S(i.default, {
                 CONNECTION_OPEN: function() {
-                    _ = {}
+                    m = {}
                 },
                 GUILD_DELETE: function(e) {
                     let {
                         guild: s
                     } = e;
-                    _ = n(_).filter(e => e.guildId !== s.id).keyBy("id").value()
+                    m = n(m).filter(e => e.guildId !== s.id).keyBy("id").value()
                 },
                 MESSAGE_UPDATE: function(e) {
                     let s = e.message.id,
                         t = e.message.channel_id;
                     if (null == t) return !1;
-                    let a = _[t];
+                    let a = m[t];
                     if (null == a && !e.message.pinned) return !1;
                     if (null == e.message.author) {
                         if (null != a) {
@@ -347,7 +347,7 @@
                                     n = (0, d.updateMessageRecord)(s, e.message);
                                 if (n !== s) {
                                     let e = a.messages.slice();
-                                    e[l] = n, _[t].messages = e
+                                    e[l] = n, m[t].messages = e
                                 }
                             }
                         }
@@ -355,67 +355,80 @@
                     }
                     if (e.message.pinned) {
                         if (null == a) {
-                            a = m(t, [e.message], !1), _[t] = a;
+                            a = _(t, [e.message], !1), m[t] = a;
                             return
                         }
                         a.messages = a.messages.slice();
-                        let l = n.findIndex(a.messages, e => e.id === s); - 1 === l ? a.messages.unshift((0, d.createMessageRecord)(e.message)) : a.messages[l] = (0, d.updateMessageRecord)(a.messages[l], e.message), _[t] = a
+                        let l = n.findIndex(a.messages, e => e.id === s); - 1 === l ? a.messages.unshift((0, d.createMessageRecord)(e.message)) : a.messages[l] = (0, d.updateMessageRecord)(a.messages[l], e.message), m[t] = a
                     } else {
                         if (null == a) return;
                         let e = n.findIndex(a.messages, e => e.id === s);
                         if (-1 === e) return;
-                        a.messages = a.messages.slice(), a.messages.splice(e, 1), _[t] = a
+                        a.messages = a.messages.slice(), a.messages.splice(e, 1), m[t] = a
                     }
                 },
                 MESSAGE_DELETE: function(e) {
                     let {
                         id: s,
                         channelId: t
-                    } = e, a = _[t];
+                    } = e, a = m[t];
                     if (null == a) return !1;
                     let l = n.remove(a.messages, e => e.id === s);
                     if (0 === l.length) return !1;
-                    a.messages = a.messages.slice(), _[t] = a
+                    a.messages = a.messages.slice(), m[t] = a
                 },
                 MESSAGE_DELETE_BULK: function(e) {
                     let {
                         ids: s,
                         channelId: t
-                    } = e, a = _[t];
+                    } = e, a = m[t];
                     null != a && (a.messages = a.messages.filter(e => -1 === s.indexOf(e.id)))
                 },
                 LOAD_PINNED_MESSAGES: function(e) {
                     let {
                         channelId: s
                     } = e;
-                    _[s] = m(s, [], !1, !0)
+                    m[s] = _(s, [], !1, !0)
                 },
                 LOAD_PINNED_MESSAGES_SUCCESS: function(e) {
                     let {
                         channelId: s,
                         messages: t
                     } = e;
-                    _[s] = m(s, t, !0)
+                    m[s] = _(s, t, !0)
                 },
                 LOAD_PINNED_MESSAGES_FAILURE: function(e) {
                     let {
                         channelId: s
                     } = e;
-                    delete _[s]
+                    delete m[s]
                 },
                 USER_SETTINGS_PROTO_UPDATE: M,
                 I18N_LOAD_SUCCESS: M,
                 CHANNEL_DELETE: N,
                 THREAD_DELETE: N,
                 RELATIONSHIP_ADD: h,
-                RELATIONSHIP_REMOVE: h
+                RELATIONSHIP_REMOVE: h,
+                MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function(e) {
+                    let {
+                        messageId: s,
+                        channelId: t
+                    } = e, a = m[t];
+                    if (null == a) return;
+                    let l = n.findIndex(a.messages, e => e.id === s);
+                    if (-1 === l) return;
+                    let i = a.messages[l],
+                        d = i.attachments.map(e => (null == e.content_scan_version && (e.content_scan_version = -1), e)),
+                        r = i.embeds.map(e => (null == e.contentScanVersion && (e.contentScanVersion = -1), e));
+                    i = (i = i.set("attachments", d)).set("embeds", r), a.messages = a.messages.slice(), a.messages[l] = i, m[t] = a
+                }
             })
         },
         822332: function(e, s, t) {
             "use strict";
             t.r(s), t.d(s, {
                 default: function() {
-                    return E
+                    return f
                 }
             });
             var a = t("37983"),
@@ -429,7 +442,7 @@
                 BLOCK: u.block,
                 INLINE: u.inline
             };
-            class f extends n.PureComponent {
+            class c extends n.PureComponent {
                 render() {
                     let {
                         children: e,
@@ -455,8 +468,8 @@
                     })
                 }
             }
-            f.Types = o;
-            var E = f
+            c.Types = o;
+            var f = c
         },
         870190: function(e, s, t) {
             "use strict";
