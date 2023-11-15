@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["70249"], {
+    ["86426"], {
         78349: function(t, e, n) {
             "use strict";
             n("424973"), t.exports.parse = function(t) {
@@ -232,21 +232,21 @@
                 }, {
                     quantize: function(u, a) {
                         if (!u.length || a < 2 || a > 256) return !1;
-                        var s, l, c, f, d, h, v, g, p, E, I, m, _, S, y, w, R = (s = u, d = Array(32768), s.forEach(function(n) {
+                        var s, l, c, f, d, h, v, g, p, E, m, I, _, y, S, A, w = (s = u, d = Array(32768), s.forEach(function(n) {
                                 c = n[0] >> t, f = n[1] >> t, d[l = e(c, f, n[2] >> t)] = (d[l] || 0) + 1
                             }), d),
-                            A = 0;
-                        R.forEach(function() {
-                            A++
+                            R = 0;
+                        w.forEach(function() {
+                            R++
                         });
-                        var O = (h = u, v = R, I = 1e6, m = 0, _ = 1e6, S = 0, y = 1e6, w = 0, h.forEach(function(e) {
-                                g = e[0] >> t, p = e[1] >> t, E = e[2] >> t, g < I ? I = g : g > m && (m = g), p < _ ? _ = p : p > S && (S = p), E < y ? y = E : E > w && (w = E)
-                            }), new i(I, m, _, S, y, w, v)),
+                        var b = (h = u, v = w, m = 1e6, I = 0, _ = 1e6, y = 0, S = 1e6, A = 0, h.forEach(function(e) {
+                                g = e[0] >> t, p = e[1] >> t, E = e[2] >> t, g < m ? m = g : g > I && (I = g), p < _ ? _ = p : p > y && (y = p), E < S ? S = E : E > A && (A = E)
+                            }), new i(m, I, _, y, S, A, v)),
                             M = new n(function(t, e) {
                                 return r.naturalOrder(t.count(), e.count())
                             });
 
-                        function b(t, n) {
+                        function O(t, n) {
                             for (var i, o = 1, u = 0; u < 1e3;) {
                                 if (!(i = t.pop()).count()) {
                                     t.push(i), u++;
@@ -294,18 +294,18 @@
                                                     return i[l] = u, o[a] = i[l] + 1, [i, o]
                                                 }
                                         }
-                                    }(R, i),
+                                    }(w, i),
                                     s = a[0],
                                     l = a[1];
                                 if (!s) return;
                                 if (t.push(s), l && (t.push(l), o++), o >= n || u++ > 1e3) return
                             }
                         }
-                        M.push(O), b(M, .75 * a);
+                        M.push(b), O(M, .75 * a);
                         for (var N = new n(function(t, e) {
                                 return r.naturalOrder(t.count() * t.volume(), e.count() * e.volume())
                             }); M.size();) N.push(M.pop());
-                        b(N, a - N.size());
+                        O(N, a - N.size());
                         for (var T = new o; N.size();) T.push(N.pop());
                         return T
                     }
@@ -402,7 +402,7 @@
                     return Y
                 },
                 match: function() {
-                    return Q
+                    return q
                 }
             }), n("222007"), n("424973"), n("70102"), n("808653");
             let r = Symbol.for("@ts-pattern/matcher"),
@@ -458,7 +458,7 @@
                     optional: () => d(t),
                     and: e => g(t, e),
                     or: e => p(t, e),
-                    select: e => void 0 === e ? I(t) : I(e, t)
+                    select: e => void 0 === e ? m(t) : m(e, t)
                 })
             }
 
@@ -544,7 +544,7 @@
                 }
             }
 
-            function I() {
+            function m() {
                 for (var t = arguments.length, e = Array(t), n = 0; n < t; n++) e[n] = arguments[n];
                 let i = "string" == typeof e[0] ? e[0] : void 0,
                     u = 2 === e.length ? e[1] : "string" == typeof e[0] ? void 0 : e[0];
@@ -566,7 +566,7 @@
                 })
             }
 
-            function m(t) {
+            function I(t) {
                 return "number" == typeof t
             }
 
@@ -574,69 +574,69 @@
                 return "string" == typeof t
             }
 
-            function S(t) {
+            function y(t) {
                 return "bigint" == typeof t
             }
-            let y = f(E(function(t) {
+            let S = f(E(function(t) {
                     return !0
                 })),
-                w = t => Object.assign(f(t), {
-                    startsWith: e => w(g(t, E(t => _(t) && t.startsWith(e)))),
-                    endsWith: e => w(g(t, E(t => _(t) && t.endsWith(e)))),
+                A = t => Object.assign(f(t), {
+                    startsWith: e => A(g(t, E(t => _(t) && t.startsWith(e)))),
+                    endsWith: e => A(g(t, E(t => _(t) && t.endsWith(e)))),
                     minLength: e => {
                         var n;
-                        return w(g(t, (n = e, E(t => _(t) && t.length >= n))))
+                        return A(g(t, (n = e, E(t => _(t) && t.length >= n))))
                     },
                     maxLength: e => {
                         var n;
-                        return w(g(t, (n = e, E(t => _(t) && t.length <= n))))
+                        return A(g(t, (n = e, E(t => _(t) && t.length <= n))))
                     },
-                    includes: e => w(g(t, E(t => _(t) && t.includes(e)))),
-                    regex: e => w(g(t, E(t => _(t) && !!t.match(e))))
+                    includes: e => A(g(t, E(t => _(t) && t.includes(e)))),
+                    regex: e => A(g(t, E(t => _(t) && !!t.match(e))))
                 }),
-                R = w(E(_)),
-                A = (t, e) => E(n => m(n) && t <= n && e >= n),
-                O = t => E(e => m(e) && e < t),
-                M = t => E(e => m(e) && e > t),
-                b = t => E(e => m(e) && e <= t),
-                N = t => E(e => m(e) && e >= t),
-                T = () => E(t => m(t) && Number.isInteger(t)),
-                F = () => E(t => m(t) && Number.isFinite(t)),
-                C = () => E(t => m(t) && t > 0),
-                x = () => E(t => m(t) && t < 0),
+                w = A(E(_)),
+                R = (t, e) => E(n => I(n) && t <= n && e >= n),
+                b = t => E(e => I(e) && e < t),
+                M = t => E(e => I(e) && e > t),
+                O = t => E(e => I(e) && e <= t),
+                N = t => E(e => I(e) && e >= t),
+                T = () => E(t => I(t) && Number.isInteger(t)),
+                C = () => E(t => I(t) && Number.isFinite(t)),
+                x = () => E(t => I(t) && t > 0),
+                F = () => E(t => I(t) && t < 0),
                 P = t => Object.assign(f(t), {
-                    between: (e, n) => P(g(t, A(e, n))),
-                    lt: e => P(g(t, O(e))),
+                    between: (e, n) => P(g(t, R(e, n))),
+                    lt: e => P(g(t, b(e))),
                     gt: e => P(g(t, M(e))),
-                    lte: e => P(g(t, b(e))),
+                    lte: e => P(g(t, O(e))),
                     gte: e => P(g(t, N(e))),
                     int: () => P(g(t, T())),
-                    finite: () => P(g(t, F())),
-                    positive: () => P(g(t, C())),
-                    negative: () => P(g(t, x()))
+                    finite: () => P(g(t, C())),
+                    positive: () => P(g(t, x())),
+                    negative: () => P(g(t, F()))
                 }),
-                L = P(E(m)),
-                V = (t, e) => E(n => S(n) && t <= n && e >= n),
-                D = t => E(e => S(e) && e < t),
-                U = t => E(e => S(e) && e > t),
-                z = t => E(e => S(e) && e <= t),
-                B = t => E(e => S(e) && e >= t),
-                G = () => E(t => S(t) && t > 0),
-                k = () => E(t => S(t) && t < 0),
-                W = t => Object.assign(f(t), {
-                    between: (e, n) => W(g(t, V(e, n))),
-                    lt: e => W(g(t, D(e))),
-                    gt: e => W(g(t, U(e))),
-                    lte: e => W(g(t, z(e))),
-                    gte: e => W(g(t, B(e))),
-                    positive: () => W(g(t, G())),
-                    negative: () => W(g(t, k()))
+                L = P(E(I)),
+                V = (t, e) => E(n => y(n) && t <= n && e >= n),
+                D = t => E(e => y(e) && e < t),
+                U = t => E(e => y(e) && e > t),
+                z = t => E(e => y(e) && e <= t),
+                B = t => E(e => y(e) && e >= t),
+                G = () => E(t => y(t) && t > 0),
+                k = () => E(t => y(t) && t < 0),
+                j = t => Object.assign(f(t), {
+                    between: (e, n) => j(g(t, V(e, n))),
+                    lt: e => j(g(t, D(e))),
+                    gt: e => j(g(t, U(e))),
+                    lte: e => j(g(t, z(e))),
+                    gte: e => j(g(t, B(e))),
+                    positive: () => j(g(t, G())),
+                    negative: () => j(g(t, k()))
                 }),
-                j = W(E(S)),
-                K = f(E(function(t) {
+                W = j(E(y)),
+                H = f(E(function(t) {
                     return "boolean" == typeof t
                 })),
-                H = f(E(function(t) {
+                K = f(E(function(t) {
                     return "symbol" == typeof t
                 })),
                 X = f(E(function(t) {
@@ -658,7 +658,7 @@
                             }
                         })), {
                             optional: () => t(d(e)),
-                            select: n => t(void 0 === n ? I(e) : I(n, e))
+                            select: n => t(void 0 === n ? m(e) : m(n, e))
                         })
                     }({
                         [r]: () => ({
@@ -767,19 +767,19 @@
                     })
                 },
                 when: E,
-                select: I,
-                any: y,
-                _: y,
-                string: R,
-                between: A,
-                lt: O,
+                select: m,
+                any: S,
+                _: S,
+                string: w,
+                between: R,
+                lt: b,
                 gt: M,
-                lte: b,
+                lte: O,
                 gte: N,
                 int: T,
-                finite: F,
-                positive: C,
-                negative: x,
+                finite: C,
+                positive: x,
+                negative: F,
                 number: L,
                 betweenBigInt: V,
                 ltBigInt: D,
@@ -788,9 +788,9 @@
                 gteBigInt: B,
                 positiveBigInt: G,
                 negativeBigInt: k,
-                bigint: j,
-                boolean: K,
-                symbol: H,
+                bigint: W,
+                boolean: H,
+                symbol: K,
                 nullish: X,
                 instanceOf: function(t) {
                     var e;
@@ -811,15 +811,15 @@
                     }(t)))
                 }
             };
-            let q = {
+            let Z = {
                 matched: !1,
                 value: void 0
             };
 
-            function Q(t) {
-                return new Z(t, q)
+            function q(t) {
+                return new Q(t, Z)
             }
-            class Z {
+            class Q {
                 with() {
                     let t;
                     for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
@@ -835,16 +835,16 @@
                         f = u.some(t => s(t, this.input, c)) && (!t || t(this.input)) ? {
                             matched: !0,
                             value: i(a ? o in l ? l[o] : l : this.input, this.input)
-                        } : q;
-                    return new Z(this.input, f)
+                        } : Z;
+                    return new Q(this.input, f)
                 }
                 when(t, e) {
                     if (this.state.matched) return this;
                     let n = !!t(this.input);
-                    return new Z(this.input, n ? {
+                    return new Q(this.input, n ? {
                         matched: !0,
                         value: e(this.input, this.input)
-                    } : q)
+                    } : Z)
                 }
                 otherwise(t) {
                     return this.state.matched ? this.state.value : t(this.input)
@@ -961,6 +961,44 @@
                     return i
                 }
             }), (o = r || (r = {}))[o.GAME = 1] = "GAME", o[o.TICKETED_EVENTS = 3] = "TICKETED_EVENTS", o[o.GUILD_ROLE_SUBSCRIPTIONS = 4] = "GUILD_ROLE_SUBSCRIPTIONS", (u = i || (i = {}))[u.BOT = 0] = "BOT", u[u.SERVER = 1] = "SERVER", u[u.SYSTEM_DM = 2] = "SYSTEM_DM", u[u.OFFICIAL = 3] = "OFFICIAL", u[u.STAFF_ONLY_DM = 4] = "STAFF_ONLY_DM", u[u.ORIGINAL_POSTER = 5] = "ORIGINAL_POSTER", u[u.AI = 6] = "AI", u[u.REMIX = 7] = "REMIX"
+        },
+        413266: function(t, e, n) {
+            "use strict";
+            n.r(e), n.d(e, {
+                openReportRaidModal: function() {
+                    return o
+                },
+                openSafetyChannelSetupModal: function() {
+                    return u
+                }
+            });
+            var r = n("37983");
+            n("884691");
+            var i = n("77078");
+
+            function o(t) {
+                (0, i.openModalLazy)(async () => {
+                    let {
+                        default: e
+                    } = await n.el("423588").then(n.bind(n, "423588"));
+                    return n => (0, r.jsx)(e, {
+                        ...n,
+                        guildId: t
+                    })
+                })
+            }
+
+            function u(t) {
+                (0, i.openModalLazy)(async () => {
+                    let {
+                        default: e
+                    } = await n.el("982537").then(n.bind(n, "982537"));
+                    return n => (0, r.jsx)(e, {
+                        ...n,
+                        guildId: t
+                    })
+                })
+            }
         },
         689226: function(t, e, n) {
             "use strict";
@@ -1315,6 +1353,60 @@
                     let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                     !t && c(), (0, i.closeModal)(s.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)
                 }
+            }
+        },
+        199938: function(t, e, n) {
+            "use strict";
+            n.r(e), n.d(e, {
+                staffOnlyGuildSettingsAccess: function() {
+                    return a
+                },
+                useGuildAccessRateInsightExperiment: function() {
+                    return s
+                }
+            });
+            var r = n("884691"),
+                i = n("862205"),
+                o = n("697218");
+            let u = (0, i.createExperiment)({
+                kind: "guild",
+                id: "2022-03_guild_access_rate_insight_experiment",
+                label: "Guild Access Rate Insight Experiment",
+                defaultConfig: {
+                    showAccessRate: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "Show guild access rate in insights",
+                    config: {
+                        showAccessRate: !0
+                    }
+                }]
+            });
+
+            function a(t) {
+                var e;
+                let n = null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff();
+                return n && u.getCurrentConfig({
+                    guildId: t,
+                    location: "77b4b2_1"
+                }).showAccessRate
+            }
+
+            function s(t) {
+                let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                return r.useEffect(() => {
+                    !e && null != t && u.trackExposure({
+                        guildId: t,
+                        location: "77b4b2_2"
+                    })
+                }, [t, e]), u.useExperiment({
+                    guildId: null != t ? t : "",
+                    location: "77b4b2_3"
+                }, {
+                    autoTrackExposure: !1,
+                    disable: e || null == t
+                })
             }
         },
         9294: function(t, e, n) {
@@ -1738,33 +1830,50 @@
                 })
             }
         },
-        476765: function(t, e, n) {
+        756609: function(t, e, n) {
             "use strict";
             n.r(e), n.d(e, {
-                uid: function() {
-                    return u
-                },
-                useUID: function() {
+                default: function() {
                     return a
-                },
-                UID: function() {
-                    return s
                 }
             });
-            var r = n("995008"),
-                i = n.n(r),
-                o = n("775560");
-            let u = function() {
-                    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "uid_";
-                    return i(t)
-                },
-                a = () => (0, o.useLazyValue)(() => u()),
-                s = t => {
+            var r = n("37983");
+            n("884691");
+            var i = n("469563"),
+                o = n("308472"),
+                u = n("75196"),
+                a = (0, i.replaceIcon)(function(t) {
                     let {
-                        children: e
+                        width: e = 18,
+                        height: n = 18,
+                        color: i = "currentColor",
+                        foreground: o,
+                        ...a
                     } = t;
-                    return e(a())
-                }
+                    return (0, r.jsxs)("svg", {
+                        ...(0, u.default)(a),
+                        width: e,
+                        height: n,
+                        viewBox: "0 0 18 18",
+                        children: [(0, r.jsx)("path", {
+                            fill: i,
+                            className: o,
+                            d: "M4.5,16.5v-3H3A1.5,1.5,0,0,1,1.5,12V3A1.5,1.5,0,0,1,3,1.5H15A1.5,1.5,0,0,1,16.5,3v9A1.5,1.5,0,0,1,15,13.5H8.5ZM3,3v9H6v1.5L8,12h7V3Z"
+                        }), (0, r.jsx)("path", {
+                            fill: i,
+                            className: o,
+                            d: "M6.75,4.5H5.25v6h1.5Z"
+                        }), (0, r.jsx)("path", {
+                            fill: i,
+                            className: o,
+                            d: "M9.75,7.5H8.25v3h1.5Z"
+                        }), (0, r.jsx)("path", {
+                            fill: i,
+                            className: o,
+                            d: "M12.75,6h-1.5v4.5h1.5Z"
+                        })]
+                    })
+                }, o.AnalyticsIcon)
         },
         486952: function(t, e, n) {
             "use strict";
@@ -1822,16 +1931,16 @@
                     return p
                 },
                 readFileAsBase64: function() {
-                    return I
+                    return m
                 },
                 dataUriFileSize: function() {
-                    return m
+                    return I
                 },
                 dataUrlToFile: function() {
                     return _
                 },
                 isPNGAnimated: function() {
-                    return S
+                    return y
                 }
             }), n("424973"), n("101997"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("70102");
             var r = n("627445"),
@@ -1928,7 +2037,7 @@
                     }, r.src = t
                 }));
 
-            function I(t) {
+            function m(t) {
                 return new Promise((e, n) => {
                     let r = new FileReader;
                     r.readAsDataURL(t), r.onload = () => {
@@ -1937,7 +2046,7 @@
                 })
             }
 
-            function m(t) {
+            function I(t) {
                 let e = t.split(";base64,");
                 return i(2 === e.length, "Input data is not a valid image."), atob(e[1]).length
             }
@@ -1957,7 +2066,7 @@
                     type: n
                 })
             }
-            async function S(t) {
+            async function y(t) {
                 var e;
                 let n = null === (e = t.type) || void 0 === e ? void 0 : e.split(";")[0];
                 if ("image/png" !== n) throw Error("File is not a PNG");
