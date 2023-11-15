@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["62218"], {
+    ["50359"], {
         608905: function(e, t, s) {
             "use strict";
             e.exports = s.p + "66ada300576adf0f4e4f.svg"
@@ -447,6 +447,10 @@
         907511: function(e, t, s) {
             "use strict";
             e.exports = s.p + "42775205001e34ae43f4.svg"
+        },
+        871938: function(e, t, s) {
+            "use strict";
+            e.exports = s.p + "1bb2a3420b9e5ae4990a.svg"
         },
         679324: function(e, t, s) {
             "use strict";
@@ -1483,8 +1487,8 @@
                 V = s("83900"),
                 Y = s("216422"),
                 z = s("547896"),
-                Q = s("599110"),
-                X = s("306160"),
+                X = s("599110"),
+                Q = s("306160"),
                 Z = s("568734"),
                 J = s("153160"),
                 q = s("271560"),
@@ -1556,7 +1560,7 @@
                             loadDate: t
                         }
                     } = this.props;
-                    null != t && Q.default.track(eI.AnalyticEvents.STORE_LISTING_EXITED, {
+                    null != t && X.default.track(eI.AnalyticEvents.STORE_LISTING_EXITED, {
                         load_id: e,
                         duration_ms: Date.now() - t
                     })
@@ -1590,7 +1594,7 @@
                         images: 0,
                         videos: 0
                     });
-                    Q.default.track(eI.AnalyticEvents.STORE_LISTING_VIEWED, {
+                    X.default.track(eI.AnalyticEvents.STORE_LISTING_VIEWED, {
                         ...this._extraAnalyticsProperties,
                         load_id: a.loadId,
                         has_description: null != t.description && t.description.length > 0,
@@ -1892,7 +1896,7 @@
                         let {
                             sku: a
                         } = this.props;
-                        null != a && Q.default.track(eI.AnalyticEvents.STORE_LISTING_MEDIA_SCROLLED, {
+                        null != a && X.default.track(eI.AnalyticEvents.STORE_LISTING_MEDIA_SCROLLED, {
                             ...(0, h.default)(a),
                             card_index: s,
                             card_type: e.type === eI.CarouselMediaTypes.IMG ? "image" : "video"
@@ -1902,7 +1906,7 @@
                         let {
                             location: t
                         } = this.props;
-                        (0, X.copy)((e = t.pathname, "".concat(location.protocol, "//").concat(location.host).concat(e))), this.setState({
+                        (0, Q.copy)((e = t.pathname, "".concat(location.protocol, "//").concat(location.host).concat(e))), this.setState({
                             showLinkCopied: !0
                         }, () => {
                             this.showCopyLinkTextTimeout.start(1500, () => {
@@ -5292,13 +5296,13 @@
                         AnalyticsLocationProvider: r,
                         sourceAnalyticsLocations: y,
                         analyticsLocations: B
-                    } = (0, T.default)(f.default.PREMIUM_MARKETING), G = (0, i.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), k = (0, i.useStateFromStores)([m.default], () => m.default.getCurrentUser()), H = (0, x.usePremiumTrialOffer)(), F = (0, L.usePremiumDiscountOffer)(), K = (0, R.useSubscriptionPlansLoaded)(), [w, W] = n.useState(!0), V = n.useRef(0), Y = (0, g.isPremiumExactly)(k, D.PremiumTypes.TIER_2), z = (0, M.useLocalizedPromoQuery)(), Q = null == z ? void 0 : z.countryCode;
+                    } = (0, T.default)(f.default.PREMIUM_MARKETING), G = (0, i.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), k = (0, i.useStateFromStores)([m.default], () => m.default.getCurrentUser()), H = (0, x.usePremiumTrialOffer)(), F = (0, L.usePremiumDiscountOffer)(), K = (0, R.useSubscriptionPlansLoaded)(), [w, W] = n.useState(!0), V = n.useRef(0), Y = (0, g.isPremiumExactly)(k, D.PremiumTypes.TIER_2), z = (0, M.useLocalizedPromoQuery)(), X = null == z ? void 0 : z.countryCode;
                     n.useEffect(() => {
                         d.default.wait(async () => {
                             let e = Date.now();
-                            await Promise.all([c.fetchSubscriptions(), (0, _.fetchGuildBoostSlots)(), c.fetchPaymentSources(), (0, E.fetchPremiumSubscriptionPlans)(Q, null, b.RevenueSurfaces.DISCOVERY)]), V.current = Date.now() - e, W(!1)
+                            await Promise.all([c.fetchSubscriptions(), (0, _.fetchGuildBoostSlots)(), c.fetchPaymentSources(), (0, E.fetchPremiumSubscriptionPlans)(X, null, b.RevenueSurfaces.DISCOVERY)]), V.current = Date.now() - e, W(!1)
                         })
-                    }, [Q]), n.useEffect(() => {
+                    }, [X]), n.useEffect(() => {
                         if (s && (null != H || null != F)) {
                             let {
                                 enabled: e
@@ -5315,7 +5319,7 @@
                             load_duration_ms: V.current
                         })
                     }, [y, w]);
-                    let [X, Z] = n.useState(!1), J = (0, i.useStateFromStores)([A.default], () => A.default.enabled);
+                    let [Q, Z] = n.useState(!1), J = (0, i.useStateFromStores)([A.default], () => A.default.enabled);
                     if (J) return (0, a.jsx)(I.default, {});
                     if (s) return (0, a.jsx)(p.BlockedPaymentsContentSettings, {});
                     let q = t === D.PremiumMarketingEntrypoints.ApplicationStoreHome;
@@ -5323,7 +5327,7 @@
                         children: (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsx)(U.default, {}), (0, a.jsx)(u.default, {
                                 onChange: e => {
-                                    e && !X && (P.default.track(b.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                                    e && !Q && (P.default.track(b.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                                         location_stack: B
                                     }), Z(!0))
                                 },
@@ -5338,7 +5342,7 @@
                                 entrypoint: t
                             }), (0, a.jsx)(u.default, {
                                 onChange: e => {
-                                    e && !X && (P.default.track(b.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                                    e && !Q && (P.default.track(b.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                                         location_stack: B
                                     }), Z(!0))
                                 },
@@ -6587,9 +6591,9 @@
                         AnalyticsLocationProvider: G
                     } = (0, I.default)(E.default.PREMIUM_MARKETING_PLAN_COMPARISON),
                     z = (0, i.useStateFromStores)([A.default], () => A.default.hasFetchedSubscriptions()),
-                    Q = (0, f.useSubscriptionPlansLoaded)(),
+                    X = (0, f.useSubscriptionPlansLoaded)(),
                     {
-                        enabled: X,
+                        enabled: Q,
                         hasUnlimited: Z
                     } = (0, d.useBurstReactionsExperiment)(),
                     J = "PlanComparisonTable";
@@ -6605,7 +6609,7 @@
                 } = (0, T.default)({
                     location: J
                 }), $ = (0, _.default)(), ee = (0, u.isThemeLight)($), et = (0, i.useStateFromStores)([p.default], () => p.default.getCurrentUser()), es = (0, P.isPremiumExactly)(et, v.PremiumTypes.TIER_2), ea = (0, O.usePremiumTrialOffer)(), en = null == ea ? void 0 : null === (t = ea.subscription_trial) || void 0 === t ? void 0 : t.sku_id, er = (0, C.useCurrentPremiumTrialTier)(), el = (0, h.useIsEligibleForBogoPromotion)();
-                if (!z || !Q) return null;
+                if (!z || !X) return null;
                 let ei = P.default.getDefaultPrice(v.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
                     eu = P.default.getDefaultPrice(v.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
                     eo = {
@@ -6665,7 +6669,7 @@
                         column2: (0, a.jsx)(W, {
                             includes: !0
                         })
-                    }, ...X ? [{
+                    }, ...Q ? [{
                         label: (0, a.jsx)(K, {
                             text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SUPER_REACTIONS
                         }),
@@ -6984,7 +6988,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return _
+                    return f
                 }
             });
             var a = s("37983");
@@ -6994,33 +6998,45 @@
                 l = s("77078"),
                 i = s("812204"),
                 u = s("685665"),
-                o = s("635956"),
-                d = s("782340"),
-                c = s("903610"),
-                _ = e => {
+                o = s("53253"),
+                d = s("635956"),
+                c = s("782340"),
+                _ = s("903610"),
+                E = s("35257"),
+                I = s("871938"),
+                f = e => {
                     let {
                         className: t
                     } = e, {
                         AnalyticsLocationProvider: s
-                    } = (0, u.default)(i.default.PREMIUM_MARKETING_GIFT_SECTION);
+                    } = (0, u.default)(i.default.PREMIUM_MARKETING_GIFT_SECTION), {
+                        enabled: n
+                    } = o.SeasonalGiftingMarketingExperiment.useExperiment({
+                        location: "GiftNitro"
+                    }, {
+                        autoTrackExposure: !1
+                    }), f = (0, o.useIsSeasonalGiftingActive)(), T = n && f;
                     return (0, a.jsx)(s, {
                         children: (0, a.jsx)("div", {
-                            className: r(c.container, t),
+                            className: r(_.container, t),
+                            style: {
+                                backgroundImage: "url(".concat(T ? I : E, ")")
+                            },
                             children: (0, a.jsxs)("div", {
-                                className: c.textContainer,
+                                className: _.textContainer,
                                 children: [(0, a.jsx)(l.Heading, {
                                     variant: "heading-lg/extrabold",
-                                    className: c.heading,
-                                    children: d.default.Messages.GIFT_NITRO
+                                    className: _.heading,
+                                    children: T ? c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : c.default.Messages.GIFT_NITRO
                                 }), (0, a.jsx)(l.Text, {
                                     variant: "text-sm/medium",
-                                    children: d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
-                                }), (0, a.jsx)(o.default, {
+                                    children: T ? c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+                                }), (0, a.jsx)(d.default, {
                                     isGift: !0,
-                                    className: c.giftCardButton,
+                                    className: _.giftCardButton,
                                     look: l.Button.Looks.OUTLINED,
-                                    buttonText: d.default.Messages.GIFT_NITRO,
-                                    buttonTextClassName: c.giftButtonCTA,
+                                    buttonText: c.default.Messages.GIFT_NITRO,
+                                    buttonTextClassName: _.giftButtonCTA,
                                     color: l.Button.Colors.CUSTOM
                                 })]
                             })
@@ -7199,7 +7215,7 @@
                     var t;
                     let {
                         isFullscreen: s
-                    } = e, [r, F] = n.useState(!1), [K, w] = n.useState(!1), [W, V] = n.useState(!1), Y = (0, i.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()), z = null != Y ? (0, f.getPremiumPlanItem)(Y) : null, Q = null != z ? f.default.getSkuIdForPlan(z.planId) : null, X = null !== Q && Q !== y.PremiumSubscriptionSKUs.TIER_2 ? y.PremiumSubscriptionSKUs.TIER_2 : null, Z = (0, p.useLocalizedPromoQuery)(), J = null != Z, q = (0, A.usePremiumDiscountOffer)(), $ = (0, m.usePremiumTrialOffer)(), ee = null == $ ? void 0 : null === (t = $.subscription_trial) || void 0 === t ? void 0 : t.sku_id, et = (0, T.useIsInPremiumOfferExperience)(), es = (0, C.useIsEligibleForBogoPromotion)(), {
+                    } = e, [r, F] = n.useState(!1), [K, w] = n.useState(!1), [W, V] = n.useState(!1), Y = (0, i.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()), z = null != Y ? (0, f.getPremiumPlanItem)(Y) : null, X = null != z ? f.default.getSkuIdForPlan(z.planId) : null, Q = null !== X && X !== y.PremiumSubscriptionSKUs.TIER_2 ? y.PremiumSubscriptionSKUs.TIER_2 : null, Z = (0, p.useLocalizedPromoQuery)(), J = null != Z, q = (0, A.usePremiumDiscountOffer)(), $ = (0, m.usePremiumTrialOffer)(), ee = null == $ ? void 0 : null === (t = $.subscription_trial) || void 0 === t ? void 0 : t.sku_id, et = (0, T.useIsInPremiumOfferExperience)(), es = (0, C.useIsEligibleForBogoPromotion)(), {
                         enabled: ea
                     } = (0, R.default)(), en = "PremiumMarketingHome";
                     (0, d.useTriggerDebuggingAA)({
@@ -7237,7 +7253,7 @@
                             threshold: 0,
                             active: !0,
                             children: (0, a.jsx)(L.default, {
-                                subscriptionTier: X,
+                                subscriptionTier: Q,
                                 isFullscreen: s || et,
                                 className: l(s ? B.fullscreenHero : et ? B.settingsHeroNoBackground : B.settingsHero, {
                                     [B.trialMarketingMargin]: et,
@@ -7334,7 +7350,7 @@
                         }), (0, a.jsx)(D.default, {
                             isVisible: !r && !K && W,
                             isFullscreen: s,
-                            subscriptionTier: X
+                            subscriptionTier: Q
                         }), (0, a.jsx)(I.default, {
                             src: G,
                             className: B.bottomIllustration,
