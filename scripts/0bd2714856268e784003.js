@@ -1084,11 +1084,13 @@
                 } = t, P = (0, I.default)({
                     emojiId: N,
                     emojiName: h
-                }), g = (0, o.useStateFromStores)([E.default], () => null != n ? E.default.getDefaultChannel(n) : null), L = i.createRef(), U = (0, d.default)(L), O = t => (e, n) => {
+                }), g = (0, o.useStateFromStores)([E.default], () => null != n ? E.default.getDefaultChannel(n) : null), L = i.createRef(), U = (0, d.default)(L), O = () => {
+                    R(void 0), A(void 0)
+                }, m = t => (e, n) => {
                     let r = (null == e ? void 0 : e.id) == null;
-                    r ? R(null == e ? void 0 : e.optionallyDiverseSequence) : (v ? R(null == e ? void 0 : e.name) : R(void 0), A(null == e ? void 0 : e.id)), n && t()
-                }, m = t => {
-                    t.stopPropagation(), R(void 0), A(void 0)
+                    O(), r ? R(null == e ? void 0 : e.optionallyDiverseSequence) : (v && R(null == e ? void 0 : e.name), A(null == e ? void 0 : e.id)), n && t()
+                }, D = t => {
+                    t.stopPropagation(), O()
                 };
                 return (0, r.jsx)(a.FormItem, {
                     required: C,
@@ -1106,7 +1108,7 @@
                                 closePopout: e,
                                 pickerIntention: T.EmojiIntention.SOUNDBOARD,
                                 onNavigateAway: e,
-                                onSelectEmoji: O(e),
+                                onSelectEmoji: m(e),
                                 guildId: n,
                                 channel: g
                             })
@@ -1134,7 +1136,7 @@
                                     readOnly: !0
                                 }), U && null != P && (0, r.jsx)(c.default, {
                                     ...t,
-                                    onClick: m,
+                                    onClick: D,
                                     className: S.removeButton
                                 })]
                             })
