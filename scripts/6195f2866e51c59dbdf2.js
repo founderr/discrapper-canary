@@ -1647,17 +1647,17 @@
                 let P = (null == F ? void 0 : F.name) == null || (null == F ? void 0 : F.name) === "" ? y.default.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME : "#".concat(F.name);
                 return (0, i.jsxs)(s.Scroller, {
                     className: M.scroll,
-                    children: [null != H || null != B ? (0, i.jsxs)(I.default, {
+                    children: [null != H || null != B ? (0, i.jsx)(I.default, {
                         aspectRatio: 16 / 9,
                         className: M.imageContainer,
-                        children: [(0, i.jsx)(p.default, {
+                        children: (0, i.jsx)(p.default, {
                             className: M.video,
                             src: H,
                             loop: !0,
                             autoPlay: !A,
                             poster: B,
                             muted: !0
-                        }), ")"]
+                        })
                     }) : null, (0, i.jsxs)("div", {
                         className: M.descriptionArea,
                         children: [(0, i.jsx)(s.Heading, {
