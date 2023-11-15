@@ -48,15 +48,16 @@
                         }
                     }
                 },
-                async fetchSuggestions() {
+                async fetchSuggestions(e) {
                     if ((0, d.isInPomeloSuggestionsExperiment)()) try {
-                        var e;
-                        let t = await a.default.get({
-                            url: g.Endpoints.POMELO_SUGGESTIONS
+                        var t;
+                        let n = await a.default.get({
+                            url: g.Endpoints.POMELO_SUGGESTIONS,
+                            timeout: e
                         });
-                        if (t.ok && (null === (e = t.body) || void 0 === e ? void 0 : e.username) != null) return r.default.dispatch({
+                        if (n.ok && (null === (t = n.body) || void 0 === t ? void 0 : t.username) != null) return r.default.dispatch({
                             type: "POMELO_SUGGESTIONS_SUCCESS",
-                            suggestion: t.body
+                            suggestion: n.body
                         })
                     } catch (e) {
                         return
