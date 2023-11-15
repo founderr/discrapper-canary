@@ -1,687 +1,698 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["99742"], {
-        583367: function(e, t, i) {
+    ["89894"], {
+        79112: function(e, t, n) {
             "use strict";
-            i.r(t), i.d(t, {
-                fetchAppliedGuildBoostsForGuild: function() {
-                    return d
-                },
-                fetchGuildBoostSlots: function() {
-                    return l
-                },
-                applyToGuild: function() {
-                    return n
-                },
-                unapplyFromGuild: function() {
-                    return E
-                },
-                cancelGuildBoostSlot: function() {
-                    return a
-                },
-                uncancelGuildBoostSlot: function() {
-                    return S
+            n.r(t), n.d(t, {
+                default: function() {
+                    return _
                 }
             });
-            var _ = i("872717"),
-                s = i("913144"),
-                o = i("448993"),
-                I = i("783111"),
-                u = i("522308"),
-                r = i("521012"),
-                T = i("49111");
-            async function d(e) {
-                let t = await _.default.get({
-                        url: T.Endpoints.APPLIED_GUILD_BOOSTS_FOR_GUILD(e),
-                        oldFormErrors: !0
-                    }),
-                    i = t.body.map(e => I.default.createFromServer(e));
-                return s.default.dispatch({
-                    type: "GUILD_APPLIED_BOOSTS_FETCH_SUCCESS",
-                    guildId: e,
-                    appliedBoosts: i
-                }), i
-            }
-            async function l() {
-                let e = await _.default.get({
-                        url: T.Endpoints.USER_GUILD_BOOST_SLOTS,
-                        oldFormErrors: !0
-                    }),
-                    t = e.body.map(e => u.default.createFromServer(e, r.default.getSubscriptionById(e.subscription_id)));
-                return s.default.dispatch({
-                    type: "GUILD_BOOST_SLOTS_FETCH_SUCCESS",
-                    guildBoostSlots: t
-                }), t
-            }
-            async function n(e, t) {
-                s.default.dispatch({
-                    type: "GUILD_APPLY_BOOST_START"
-                });
-                try {
-                    let i = await _.default.put({
-                            url: T.Endpoints.APPLIED_GUILD_BOOSTS_FOR_GUILD(e),
-                            body: {
-                                user_premium_guild_subscription_slot_ids: t
+            var l = n("872717"),
+                o = n("95410"),
+                i = n("913144"),
+                u = n("211895"),
+                r = n("26092"),
+                s = n("599110"),
+                a = n("315102"),
+                d = n("730622"),
+                c = n("49111"),
+                S = n("191349"),
+                E = n("782340"),
+                _ = {
+                    open() {
+                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+                            t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+                                openWithoutBackstack: !1
+                            };
+                        (0, u.default)(e, t, n)
+                    },
+                    init: function(e) {
+                        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                            n = arguments.length > 2 ? arguments[2] : void 0;
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_INIT",
+                            section: e,
+                            subsection: t,
+                            ...n
+                        })
+                    },
+                    close() {
+                        let e = r.default.onClose;
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_CLOSE"
+                        }), null != e && e()
+                    },
+                    setSection(e) {
+                        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_SET_SECTION",
+                            section: e,
+                            subsection: t,
+                            ...n
+                        })
+                    },
+                    clearSubsection(e) {
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_CLEAR_SUBSECTION",
+                            forSection: e
+                        })
+                    },
+                    clearScrollPosition(e) {
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION",
+                            forSection: e
+                        })
+                    },
+                    updateAccount(e) {
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_UPDATE_ACCOUNT",
+                            settings: e
+                        })
+                    },
+                    submitComplete() {
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_SUBMIT_COMPLETE"
+                        })
+                    },
+                    reset() {
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_RESET"
+                        })
+                    },
+                    saveAccountChanges(e, t) {
+                        i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_SUBMIT"
+                        });
+                        let {
+                            username: n,
+                            email: u,
+                            emailToken: r,
+                            password: _,
+                            avatar: T,
+                            newPassword: p,
+                            discriminator: f
+                        } = e, {
+                            close: h
+                        } = t;
+                        return (0, d.default)(e => {
+                            let t = {
+                                    username: n,
+                                    email: u,
+                                    email_token: r,
+                                    password: _,
+                                    avatar: T,
+                                    new_password: p,
+                                    ...e,
+                                    discriminator: null != f && "" !== f ? f : void 0
+                                },
+                                i = o.default.get(c.DEVICE_TOKEN),
+                                s = (0, S.getDevicePushProvider)();
+                            null != s && null != i && (t.push_provider = s, t.push_token = i);
+                            let a = o.default.get(c.DEVICE_VOIP_TOKEN);
+                            return null != S.DEVICE_PUSH_VOIP_PROVIDER && null != a && (t.push_voip_provider = S.DEVICE_PUSH_VOIP_PROVIDER, t.push_voip_token = a), l.default.patch({
+                                url: c.Endpoints.ME,
+                                oldFormErrors: !0,
+                                body: t
+                            })
+                        }, {
+                            checkEnabled: !1,
+                            modalProps: {
+                                title: E.default.Messages.TWO_FA_CHANGE_ACCOUNT
                             },
-                            oldFormErrors: !0
-                        }),
-                        o = Array.isArray(i.body) ? i.body.map(I.default.createFromServer) : [I.default.createFromServer(i.body)];
-                    return s.default.dispatch({
-                        type: "GUILD_APPLY_BOOST_SUCCESS",
-                        appliedGuildBoost: o
-                    }), l(), o
-                } catch (t) {
-                    let e = new o.AppliedGuildBoostError(t);
-                    throw s.default.dispatch({
-                        type: "GUILD_APPLY_BOOST_FAIL",
-                        error: e
-                    }), e
+                            hooks: {
+                                onEarlyClose: () => i.default.dispatch({
+                                    type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE",
+                                    errors: {}
+                                })
+                            }
+                        }).then(e => {
+                            let t = e.body,
+                                n = t.token;
+                            return s.default.track(c.AnalyticEvents.USER_AVATAR_UPDATED, {
+                                animated: (0, a.isAnimatedIconHash)(t.avatar)
+                            }), delete t.token, i.default.dispatch({
+                                type: "UPDATE_TOKEN",
+                                token: n,
+                                userId: t.id
+                            }), i.default.dispatch({
+                                type: "CURRENT_USER_UPDATE",
+                                user: t
+                            }), null != p && i.default.dispatch({
+                                type: "USER_PASSWORD_UPDATE",
+                                user: t,
+                                newPassword: p
+                            }), null != _ && null != p && i.default.dispatch({
+                                type: "PASSWORD_UPDATED",
+                                userId: t.id
+                            }), h ? this.close() : this.submitComplete(), e
+                        }, e => (i.default.dispatch({
+                            type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE",
+                            errors: e.body
+                        }), e))
+                    }
                 }
-            }
-            async function E(e, t) {
-                s.default.dispatch({
-                    type: "GUILD_UNAPPLY_BOOST_START"
-                });
-                try {
-                    await _.default.delete({
-                        url: T.Endpoints.APPLIED_GUILD_BOOST(e, t),
-                        oldFormErrors: !0
-                    }), l()
-                } catch (t) {
-                    let e = new o.AppliedGuildBoostError(t);
-                    throw s.default.dispatch({
-                        type: "GUILD_UNAPPLY_BOOST_FAIL",
-                        error: e
-                    }), e
-                }
-                s.default.dispatch({
-                    type: "GUILD_UNAPPLY_BOOST_SUCCESS",
-                    boostId: t
-                })
-            }
-            async function a(e) {
-                let t = await _.default.post({
-                        url: T.Endpoints.USER_GUILD_BOOST_SLOT_CANCEL(e),
-                        oldFormErrors: !0
-                    }),
-                    i = u.default.createFromServer(t.body, r.default.getSubscriptionById(t.body.subscription_id));
-                return s.default.dispatch({
-                    type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS",
-                    guildBoostSlot: i
-                }), i
-            }
-            async function S(e) {
-                let t = await _.default.post({
-                        url: T.Endpoints.USER_GUILD_BOOST_SLOT_UNCANCEL(e),
-                        oldFormErrors: !0
-                    }),
-                    i = u.default.createFromServer(t.body, r.default.getSubscriptionById(t.body.subscription_id));
-                return s.default.dispatch({
-                    type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS",
-                    guildBoostSlot: i
-                }), i
-            }
         },
-        783111: function(e, t, i) {
+        521590: function(e, t, n) {
             "use strict";
-            i.r(t), i.d(t, {
-                default: function() {
-                    return o
-                }
-            });
-            var _ = i("666038");
-            class s extends _.default {
-                static createFromServer(e) {
-                    return new s({
-                        id: e.id,
-                        guildId: e.guild_id,
-                        userId: null != e.user ? e.user.id : e.user_id,
-                        user: e.user,
-                        ended: e.ended,
-                        endsAt: null != e.ends_at && "" !== e.ends_at ? new Date(e.ends_at) : null
-                    })
-                }
-                constructor(e) {
-                    super(), this.id = e.id, this.guildId = e.guildId, this.userId = e.userId, this.user = e.user, this.ended = e.ended, this.endsAt = null != e.endsAt ? e.endsAt : null
-                }
-            }
-            var o = s
-        },
-        625634: function(e, t, i) {
-            "use strict";
-            i.r(t), i.d(t, {
-                default: function() {
-                    return l
-                }
-            }), i("222007");
-            var _ = i("446674"),
-                s = i("913144"),
-                o = i("521012");
-            let I = !1,
-                u = {};
-
-            function r(e) {
-                let {
-                    guildBoostSlot: t
-                } = e;
-                u = {
-                    ...u,
-                    [t.id]: t
-                }
-            }
-
-            function T() {
-                let e = {};
-                for (let t of Object.values(u)) e[t.id] = t, t.subscription = o.default.getSubscriptionById(t.subscriptionId);
-                u = e
-            }
-            class d extends _.default.Store {
-                initialize() {
-                    this.syncWith([o.default], T)
-                }
-                get hasFetched() {
-                    return I
-                }
-                get boostSlots() {
+            n.r(t), n.d(t, {
+                GlobeEarthIcon: function() {
                     return u
                 }
-                getGuildBoostSlot(e) {
-                    return u[e]
+            });
+            var l = n("37983");
+            n("884691");
+            var o = n("669491"),
+                i = n("75196");
+            let u = e => {
+                let {
+                    width: t = 24,
+                    height: n = 24,
+                    color: u = o.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: r = "",
+                    ...s
+                } = e;
+                return (0, l.jsx)("svg", {
+                    ...(0, i.default)(s),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: n,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: (0, l.jsx)("path", {
+                        fill: "string" == typeof u ? u : u.css,
+                        fillRule: "evenodd",
+                        d: "M23 12c0 6.075-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1s11 4.925 11 11Zm-4.157 5.847A9.004 9.004 0 0 0 15 3.513V4a3 3 0 0 1-3 3h-.77a.23.23 0 0 0-.23.23A2.77 2.77 0 0 1 8.23 10a.23.23 0 0 0-.23.23v1.52c0 .138.112.25.25.25H13a3 3 0 0 1 3 3v.77c0 .127.103.23.23.23a2.77 2.77 0 0 1 2.613 1.847Zm-15.66-7.664A9.001 9.001 0 0 0 11 20.945v-2.714a.23.23 0 0 0-.23-.231h-.649A2.121 2.121 0 0 1 8 15.879c0-.563-.223-1.102-.621-1.5l-4.196-4.196Z",
+                        clipRule: "evenodd",
+                        className: r
+                    })
+                })
+            }
+        },
+        692171: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return d
+                }
+            });
+            var l = n("446674"),
+                o = n("872717"),
+                i = n("913144"),
+                u = n("49111");
+            let r = Object.freeze({
+                    burstCredits: 0,
+                    wasReplenishedToday: !1,
+                    nextReplenishAt: null,
+                    isReactionPickerBurstToggled: null,
+                    emojiReactionForCoachmark: null,
+                    guildBurstPreviews: {}
+                }),
+                s = {
+                    ...r
+                };
+            class a extends l.default.PersistedStore {
+                initialize(e) {
+                    s = null != e ? e : {
+                        ...r
+                    }
+                }
+                get remainingBurstCurrency() {
+                    return s.burstCredits
+                }
+                get hasAvailableBurstCurrency() {
+                    return this.remainingBurstCurrency > 0
+                }
+                get nextReplenishAt() {
+                    return s.nextReplenishAt
+                }
+                get isReactionPickerBurstToggled() {
+                    return null != s.isReactionPickerBurstToggled && s.isReactionPickerBurstToggled
+                }
+                get emojiReactionToTargetForCoachmark() {
+                    return s.emojiReactionForCoachmark
+                }
+                getBurstedPreviewData(e) {
+                    var t;
+                    return null !== (t = s.guildBurstPreviews[e]) && void 0 !== t ? t : void 0
+                }
+                getState() {
+                    return s
                 }
             }
-            d.displayName = "GuildBoostSlotStore";
-            var l = new d(s.default, {
-                GUILD_BOOST_SLOTS_FETCH_SUCCESS: function(e) {
+            a.displayName = "BurstReactionStore", a.persistKey = "BurstReactionStore33";
+            var d = new a(i.default, {
+                BURST_CREDITS_SET: e => {
                     let {
-                        guildBoostSlots: t
+                        amount: t,
+                        wasReplenishedToday: n,
+                        nextReplenishAt: l
                     } = e;
-                    u = {}, t.forEach(e => {
-                        u[e.id] = e
-                    }), I = !0
+                    s.burstCredits = t, s.wasReplenishedToday = n, s.nextReplenishAt = l
                 },
-                GUILD_BOOST_SLOT_UPDATE_SUCCESS: r,
-                GUILD_BOOST_SLOT_CREATE: r,
-                GUILD_BOOST_SLOT_UPDATE: r,
-                LOGOUT: function() {
-                    u = {}, I = !1
+                POST_CONNECTION_OPEN: () => {
+                    o.default.get({
+                        url: u.Endpoints.BURST_CREDIT_BALANCE
+                    }).then(e => {
+                        i.default.dispatch({
+                            type: "BURST_CREDITS_SET",
+                            amount: e.body.amount,
+                            wasReplenishedToday: e.body.replenished_today,
+                            nextReplenishAt: new Date(e.body.next_replenish_at)
+                        })
+                    }).catch(() => {})
+                },
+                BURST_REACTION_PICKER_TOGGLE: e => {
+                    let {
+                        value: t
+                    } = e;
+                    s.isReactionPickerBurstToggled = t
+                },
+                BURST_REACTION_SHOW_FREE_USER_SENT_POPOUT: e => {
+                    let {
+                        emoji: t
+                    } = e;
+                    s.emojiReactionForCoachmark = null != t ? t : null
+                },
+                BURST_GUILD_PREVIEW_SET: e => {
+                    let {
+                        guildId: t,
+                        channelId: n,
+                        messageId: l,
+                        emoji: o
+                    } = e;
+                    s.guildBurstPreviews[t] = {
+                        channelId: n,
+                        messageId: l,
+                        emoji: o
+                    }
+                },
+                BURST_GUILD_PREVIEW_CLEAR: e => {
+                    let {
+                        guildId: t
+                    } = e;
+                    delete s.guildBurstPreviews[t]
                 }
             })
         },
-        118503: function(e, t, i) {
+        870346: function(e, t, n) {
             "use strict";
-            i.r(t), i.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return o
-                }
-            });
-            var _ = i("37983");
-            i("884691");
-            var s = i("75196");
-
-            function o(e) {
-                let {
-                    width: t = 24,
-                    height: i = 24,
-                    color: o = "currentColor",
-                    foreground: I,
-                    ...u
-                } = e;
-                return (0, _.jsxs)("svg", {
-                    ...(0, s.default)(u),
-                    width: t,
-                    height: i,
-                    viewBox: "0 0 8 12",
-                    children: [(0, _.jsx)("path", {
-                        d: "M4 0L0 4V8L4 12L8 8V4L4 0ZM7 7.59L4 10.59L1 7.59V4.41L4 1.41L7 4.41V7.59Z",
-                        fill: o,
-                        className: I
-                    }), (0, _.jsx)("path", {
-                        d: "M2 4.83V7.17L4 9.17L6 7.17V4.83L4 2.83L2 4.83Z",
-                        fill: o,
-                        className: I
-                    })]
-                })
-            }
-        },
-        427459: function(e, t, i) {
-            "use strict";
-            i.r(t), i.d(t, {
-                PerkIcons: function() {
-                    return _
-                },
-                getNextTier: function() {
-                    return M
-                },
-                getTotalStickerCountForTier: function() {
-                    return f
-                },
-                getIncrementalStickerCountForTier: function() {
-                    return c
-                },
-                getTotalSoundboardSoundCountForTier: function() {
-                    return L
-                },
-                getIncrementalSoundboardSoundCountForTier: function() {
-                    return D
-                },
-                getTiers: function() {
-                    return N
-                },
-                getTierName: function() {
-                    return P
-                },
-                getShortenedTierName: function() {
-                    return O
-                },
-                minimumRequiredTierForGuildFeature: function() {
-                    return B
-                },
-                boostedGuildTierToAnalyticsObjectType: function() {
-                    return A
-                },
-                getGuildTierFromAppliedBoostCount: function() {
-                    return p
-                },
-                getNextGuildTierFromAppliedBoostCount: function() {
-                    return g
-                },
-                getAppliedGuildBoostMonths: function() {
-                    return m
-                },
-                isGuildBoostedAtLeast: function() {
                     return C
-                },
-                isTierUnlocked: function() {
-                    return b
-                },
-                getAvailableGuildBoostSlots: function() {
-                    return K
-                },
-                generateBlockGuildSubscriptionPurchasesNode: function() {
-                    return y
-                },
-                isInGracePeriod: function() {
-                    return h
-                },
-                appliedGuildBoostsRequiredForPerks: function() {
-                    return F
-                },
-                getAppliedGuildBoostsRequired: function() {
-                    return v
-                },
-                getGracePeriodEndingDate: function() {
-                    return w
-                },
-                getAvailableStickerSlotCount: function() {
-                    return V
-                },
-                getAvailableSoundboardSoundCount: function() {
-                    return j
-                },
-                getNumberOfAppliedBoostsNeededForTier: function() {
-                    return x
-                },
-                isGuildBoostSlotCanceled: function() {
-                    return k
                 }
-            }), i("70102"), i("222007"), i("808653");
-            var _, s, o = i("917351"),
-                I = i.n(o),
-                u = i("866227"),
-                r = i.n(u),
-                T = i("625634"),
-                d = i("521012"),
-                l = i("993105"),
-                n = i("449008"),
-                E = i("701909"),
-                a = i("719923"),
-                S = i("49111"),
-                R = i("646718"),
-                G = i("782340");
-            Object.freeze({
-                1: 1,
-                2: 2,
-                3: 3,
-                4: 6,
-                5: 9,
-                6: 12,
-                7: 15,
-                8: 18,
-                9: 24
-            }), (s = _ || (_ = {}))[s.EMOJI = 1] = "EMOJI", s[s.AUDIO = 2] = "AUDIO", s[s.ANIMATED = 3] = "ANIMATED", s[s.CUSTOMIZATION = 4] = "CUSTOMIZATION", s[s.UPLOAD = 5] = "UPLOAD", s[s.VANITY = 6] = "VANITY", s[s.STREAM = 7] = "STREAM", s[s.STICKER = 8] = "STICKER", s[s.CUSTOM_ROLE_ICON = 11] = "CUSTOM_ROLE_ICON", s[s.STAGE_VIDEO = 12] = "STAGE_VIDEO", s[s.SOUNDBOARD = 13] = "SOUNDBOARD";
-            let U = [S.BoostedGuildTiers.NONE, S.BoostedGuildTiers.TIER_1, S.BoostedGuildTiers.TIER_2, S.BoostedGuildTiers.TIER_3],
-                M = (e, t) => {
-                    var i;
-                    return e === S.BoostedGuildTiers.NONE ? S.BoostedGuildTiers.TIER_1 : null === (i = Y(t).find(t => t.tier === e)) || void 0 === i ? void 0 : i.nextTier
-                },
-                f = e => R.TotalStickerCountsByTier[e],
-                c = e => R.IncrementalStickerCountsByTier[e],
-                L = e => R.TotalSoundboardSoundCountsByTier[e],
-                D = e => {
-                    if (e === S.BoostedGuildTiers.NONE) return R.TotalSoundboardSoundCountsByTier[e];
-                    let t = U[U.indexOf(e) - 1];
-                    return R.TotalSoundboardSoundCountsByTier[e] - R.TotalSoundboardSoundCountsByTier[t]
-                },
-                N = e => [{
-                    tier: S.BoostedGuildTiers.TIER_1,
-                    title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_TIER_1,
-                    perks: [{
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_EMOJI.format({
-                            adding: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_1].limits.emoji - R.BoostedGuildFeatures[S.BoostedGuildTiers.NONE].limits.emoji,
-                            total: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_1].limits.emoji
-                        }),
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_EMOJI,
-                        icon: 1
-                    }, {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-                            adding: c(S.BoostedGuildTiers.TIER_1),
-                            total: f(S.BoostedGuildTiers.TIER_1)
-                        }),
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_STICKER,
-                        icon: 8
-                    }, {
-                        title: G.default.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
-                            soundCount: D(S.BoostedGuildTiers.TIER_1),
-                            totalSoundCount: L(S.BoostedGuildTiers.TIER_1)
-                        }),
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_SOUNDBOARD,
-                        icon: 13
-                    }, {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({
-                            bitrate: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_1].limits.bitrate / 1e3
-                        }),
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_AUDIO_QUALITY,
-                        icon: 2
-                    }, {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_1_ANIMATED_GUILD_ICON,
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_ANIMATED_GUILD_ICON.format(),
-                        icon: 3
-                    }, {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_1_SPLASH,
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_SPLASH,
-                        icon: 4
-                    }, {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_1_STREAMING,
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_STREAMING,
-                        icon: 7
-                    }].filter(n.isNotNullish)
-                }, {
-                    tier: S.BoostedGuildTiers.TIER_2,
-                    title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_TIER_2,
-                    perks: [{
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_EMOJI.format({
-                            adding: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_2].limits.emoji - R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_1].limits.emoji,
-                            total: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_2].limits.emoji
-                        }),
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_EMOJI,
-                        icon: 1
-                    }, {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-                            adding: c(S.BoostedGuildTiers.TIER_2),
-                            total: f(S.BoostedGuildTiers.TIER_2)
-                        }),
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_STICKER,
-                        icon: 8
-                    }, {
-                        title: G.default.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
-                            soundCount: D(S.BoostedGuildTiers.TIER_2),
-                            totalSoundCount: L(S.BoostedGuildTiers.TIER_2)
-                        }),
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_SOUNDBOARD,
-                        icon: 13
-                    }, {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({
-                            bitrate: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_2].limits.bitrate / 1e3
-                        }),
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_AUDIO_QUALITY,
-                        icon: 2
-                    }, {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_2_BANNER,
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_BANNER,
-                        icon: 4
-                    }, {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_UPLOAD_LIMIT.format({
-                            fileSize: (0, l.formatSize)(R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_2].limits.fileSize / 1024, {
-                                useKibibytes: !0
-                            })
-                        }),
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_UPLOAD_LIMIT.format(),
-                        icon: 5
-                    }, {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_2_STREAMING,
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_STREAMING,
-                        icon: 7
-                    }, {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_2_CUSTOM_ROLE_ICONS,
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_CUSTOM_ROLE_ICONS,
-                        icon: 11
-                    }, e ? {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({
-                            limit: S.MAX_STAGE_VIDEO_USER_LIMIT_TIER2
-                        }),
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({
-                            limit: S.MAX_STAGE_VIDEO_USER_LIMIT_TIER2
-                        }),
-                        icon: 12
-                    } : null].filter(n.isNotNullish)
-                }, {
-                    tier: S.BoostedGuildTiers.TIER_3,
-                    title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_TIER_3,
-                    perks: [{
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_EMOJI.format({
-                            adding: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_3].limits.emoji - R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_2].limits.emoji,
-                            total: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_3].limits.emoji
-                        }),
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_EMOJI,
-                        icon: 1
-                    }, {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-                            adding: c(S.BoostedGuildTiers.TIER_3),
-                            total: f(S.BoostedGuildTiers.TIER_3)
-                        }),
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_STICKER,
-                        icon: 8
-                    }, {
-                        title: G.default.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
-                            soundCount: D(S.BoostedGuildTiers.TIER_3),
-                            totalSoundCount: L(S.BoostedGuildTiers.TIER_3)
-                        }),
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_SOUNDBOARD,
-                        icon: 13
-                    }, {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({
-                            bitrate: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_3].limits.bitrate / 1e3
-                        }),
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_AUDIO_QUALITY,
-                        icon: 2
-                    }, {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_3_VANITY_URL,
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_VANITY_URL.format({
-                            helpdeskArticle: E.default.getArticleURL(S.HelpdeskArticles.GUILD_VANITY_URL)
-                        }),
-                        icon: 6
-                    }, {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_UPLOAD_LIMIT.format({
-                            fileSize: (0, l.formatSize)(R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_3].limits.fileSize / 1024, {
-                                useKibibytes: !0
-                            })
-                        }),
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_UPLOAD_LIMIT.format(),
-                        icon: 5
-                    }, {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_3_ANIMATED_BANNER,
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_ANIMATED_BANNER,
-                        icon: 3
-                    }, e ? {
-                        title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({
-                            limit: S.MAX_STAGE_VIDEO_USER_LIMIT_TIER3
-                        }),
-                        description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({
-                            limit: S.MAX_STAGE_VIDEO_USER_LIMIT_TIER3
-                        }),
-                        icon: 12
-                    } : null].filter(n.isNotNullish)
-                }];
-
-            function P(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    {
-                        useLevels: i = !0
-                    } = t;
-                switch (e) {
-                    case S.BoostedGuildTiers.NONE:
-                        return i ? G.default.Messages.PREMIUM_GUILD_TIER_0 : G.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_NONE_NAME;
-                    case S.BoostedGuildTiers.TIER_1:
-                        return G.default.Messages.PREMIUM_GUILD_TIER_1;
-                    case S.BoostedGuildTiers.TIER_2:
-                        return G.default.Messages.PREMIUM_GUILD_TIER_2;
-                    case S.BoostedGuildTiers.TIER_3:
-                        return G.default.Messages.PREMIUM_GUILD_TIER_3;
-                    default:
-                        throw Error("Not a valid tier type")
-                }
-            }
-
-            function O(e) {
-                switch (e) {
-                    case S.BoostedGuildTiers.NONE:
-                        return G.default.Messages.PREMIUM_GUILD_TIER_0;
-                    case S.BoostedGuildTiers.TIER_1:
-                        return G.default.Messages.PREMIUM_GUILD_TIER_1_SHORT;
-                    case S.BoostedGuildTiers.TIER_2:
-                        return G.default.Messages.PREMIUM_GUILD_TIER_2_SHORT;
-                    case S.BoostedGuildTiers.TIER_3:
-                        return G.default.Messages.PREMIUM_GUILD_TIER_3_SHORT;
-                    default:
-                        throw Error("Not a valid tier type")
-                }
-            }
-            let B = I.memoize(e => (0, R.BoostedGuildFeatures)[S.BoostedGuildTiers.TIER_1].features.includes(e) ? S.BoostedGuildTiers.TIER_1 : (0, R.BoostedGuildFeatures)[S.BoostedGuildTiers.TIER_2].features.includes(e) ? S.BoostedGuildTiers.TIER_2 : (0, R.BoostedGuildFeatures)[S.BoostedGuildTiers.TIER_3].features.includes(e) ? S.BoostedGuildTiers.TIER_3 : null),
-                A = e => {
-                    if (e === S.BoostedGuildTiers.NONE) return S.AnalyticsObjectTypes.NONE;
-                    if (e === S.BoostedGuildTiers.TIER_1) return S.AnalyticsObjectTypes.TIER_1;
-                    if (e === S.BoostedGuildTiers.TIER_2) return S.AnalyticsObjectTypes.TIER_2;
-                    else if (e === S.BoostedGuildTiers.TIER_3) return S.AnalyticsObjectTypes.TIER_3;
-                    return null
-                };
-
-            function p(e, t) {
-                for (let i of Y(t))
-                    if (e >= i.amount) return i.tier;
-                return S.BoostedGuildTiers.NONE
-            }
-
-            function g(e, t) {
-                for (let i of Y(t))
-                    if (e >= i.amount) return i.nextTier;
-                return S.BoostedGuildTiers.TIER_1
-            }
-
-            function m(e) {
-                var t;
-                return null !== (t = r().diff(r(e), "months")) && void 0 !== t ? t : 1
-            }
-
-            function C(e, t) {
-                return null == t || null != e && e >= t
-            }
-
-            function b(e, t) {
-                return C(e.premiumTier, t)
-            }
-
-            function K(e) {
-                return I.values(e).filter(e => e.isAvailable())
-            }
-
-            function y() {
-                let e = d.default.getPremiumTypeSubscription(),
-                    t = Object.values(T.default.boostSlots),
-                    {
-                        numAvailableGuildBoostSlots: i,
-                        numCanceledGuildBoostSlots: _
-                    } = t.reduce((e, t) => (k(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
-                        numAvailableGuildBoostSlots: 0,
-                        numCanceledGuildBoostSlots: 0
-                    });
-                if (null == e || i > 0) return null;
-                if (e.status === S.SubscriptionStatusTypes.PAST_DUE) return G.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_PAST_DUE;
-                if (e.status === S.SubscriptionStatusTypes.ACCOUNT_HOLD) return G.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_ACCOUNT_HOLD;
-                if (_ > 0) return G.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION;
-                if (null == e.renewalMutations) return null;
-                let s = a.getNumPremiumGuildSubscriptions(e.renewalMutations.additionalPlans),
-                    o = a.getNumPremiumGuildSubscriptions(e.additionalPlans);
-                return o > s ? G.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION : G.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PLAN
-            }
-
-            function h(e, t) {
-                return F(e, t) > 0
-            }
-
-            function F(e, t) {
-                let i = p(e.length, t),
-                    _ = v(t)[i],
-                    s = e.filter(e => null != e.endsAt);
-                return _ - (e.length - s.length)
-            }
+            }), n("222007"), n("70102");
+            var l = n("627445"),
+                o = n.n(l),
+                i = n("917351"),
+                u = n.n(i),
+                r = n("288661"),
+                s = n("446674"),
+                a = n("913144"),
+                d = n("605250"),
+                c = n("773336"),
+                S = n("50885"),
+                E = n("563680"),
+                _ = n("49111");
+            let T = {},
+                p = {},
+                f = {},
+                h = {},
+                O = {},
+                R = new Set,
+                I = () => N.emitChange(),
+                U = u.debounce(I, 150);
 
             function v(e) {
-                return S.AppliedGuildBoostsRequiredForBoostedGuildTier
+                let t = f[e];
+                null != t && !t.closed && (T[e] = {
+                    x: t.screenX,
+                    y: t.screenY,
+                    width: t.innerWidth,
+                    height: t.innerHeight,
+                    alwaysOnTop: !!c.isPlatformEmbedded && p[e]
+                })
             }
 
-            function Y(e) {
-                let t = v(e);
-                return [{
-                    tier: S.BoostedGuildTiers.TIER_3,
-                    amount: t[S.BoostedGuildTiers.TIER_3],
-                    nextTier: null
-                }, {
-                    tier: S.BoostedGuildTiers.TIER_2,
-                    amount: t[S.BoostedGuildTiers.TIER_2],
-                    nextTier: S.BoostedGuildTiers.TIER_3
-                }, {
-                    tier: S.BoostedGuildTiers.TIER_1,
-                    amount: t[S.BoostedGuildTiers.TIER_1],
-                    nextTier: S.BoostedGuildTiers.TIER_2
-                }]
+            function P(e) {
+                let t = f[e];
+                null != t && (!t.closed && v(e), t.close(), ! function(e) {
+                    let t = f[e];
+                    o(null != t, "Popout window was null during unmount"), t.removeEventListener("focus", I), t.removeEventListener("blur", I), t.removeEventListener("resize", U);
+                    let n = h[e];
+                    o(null != n, "Window root was null while unmounting"), n.unmount(), delete f[e], delete p[e], delete O[e], delete h[e]
+                }(e), N.emitChange())
             }
 
-            function w(e, t) {
-                let i = F(e, t);
-                if (i > 0) {
-                    let t = e.sort((e, t) => null != e.endsAt && null != t.endsAt ? e.endsAt.getTime() - t.endsAt.getTime() : -1).filter(e => null != e.endsAt),
-                        _ = t[t.length - i];
-                    return _.endsAt
+            function g(e) {
+                let {
+                    data: t
+                } = e;
+                if (!(t instanceof Object && t.discordPopoutEvent instanceof Object)) return;
+                let n = t.discordPopoutEvent;
+                if (null != n.key) switch (n.type) {
+                    case _.PopoutEventTypes.LOADED:
+                        var l;
+                        return l = n.key, void(R.has(l) && (! function(e) {
+                            let t = f[e],
+                                n = O[e];
+                            if (null == t) {
+                                new(0, d.default)("PopoutWindowStore").warn("Failed to open window", e);
+                                return
+                            }
+                            let l = t.document;
+                            (0, E.subscribeDocumentToFullScreenChange)(l, I), t.addEventListener("focus", I), t.addEventListener("blur", I), t.addEventListener("resize", U), ! function(e, t) {
+                                let n = t.document,
+                                    l = document.querySelectorAll('link[rel="stylesheet"]'),
+                                    i = "".concat(window.location.protocol, "//").concat(window.location.host);
+                                for (let e of l) {
+                                    if (!e.href.startsWith(i)) continue;
+                                    let t = n.createElement("link");
+                                    t.href = e.href, t.rel = e.rel, t.integrity = e.integrity, o(null != n.head, "Document head was null"), n.head.appendChild(t)
+                                }
+                            }(0, t);
+                            let i = (0, r.createRoot)(l.getElementById("app-mount"));
+                            o(null != i, "No render target for popout!"), h[e] = i, i.render(n(e))
+                        }(l), R.delete(l), N.emitChange()));
+                    case _.PopoutEventTypes.UNLOADED:
+                        return P(n.key)
                 }
-                return null
             }
 
-            function V(e, t) {
-                let i = c(t),
-                    _ = U.indexOf(t);
-                if (-1 === _) return 0;
-                let s = U[_ - 1],
-                    o = null != s ? f(s) : 0,
-                    I = f(t);
-                return Math.max(0, i - e.slice(o, I).length)
+            function m() {
+                for (let e of Object.keys(f)) {
+                    let t = f[e];
+                    null != t && t.close()
+                }
+            }
+            class A extends s.default.PersistedStore {
+                initialize(e) {
+                    window.addEventListener("message", g), window.addEventListener("beforeunload", m), T = null != e ? e : {}
+                }
+                getWindow(e) {
+                    return f[e]
+                }
+                getWindowState(e) {
+                    return T[e]
+                }
+                getWindowKeys() {
+                    return Object.keys(f)
+                }
+                getWindowOpen(e) {
+                    let t = f[e];
+                    return null != t && !t.closed
+                }
+                getIsAlwaysOnTop(e) {
+                    return !!p[e]
+                }
+                getWindowFocused(e) {
+                    var t, n;
+                    let l = f[e];
+                    return null !== (n = null == l ? void 0 : null === (t = l.document) || void 0 === t ? void 0 : t.hasFocus()) && void 0 !== n && n
+                }
+                getState() {
+                    return T
+                }
+                unmountWindow(e) {
+                    return P(e)
+                }
+            }
+            A.displayName = "PopoutWindowStore", A.persistKey = "PopoutWindowStore";
+            let N = new A(a.default, {
+                POPOUT_WINDOW_OPEN: function(e) {
+                    let {
+                        key: t,
+                        features: n,
+                        render: l
+                    } = e;
+                    if (c.isPlatformEmbedded && !S.default.supportsFeature(_.NativeFeatures.POPOUT_WINDOWS)) throw Error("Popout windows not supported on this native module version!");
+                    let o = f[t];
+                    if (null != o && !o.closed) return c.isPlatformEmbedded ? S.default.focus(t) : o.focus(), !1;
+                    let {
+                        defaultWidth: i,
+                        defaultHeight: u,
+                        defaultAlwaysOnTop: r = !1,
+                        ...s
+                    } = n, a = s, d = r, E = T[t];
+                    if (null != E) {
+                        let {
+                            width: e,
+                            height: t,
+                            x: n,
+                            y: l,
+                            alwaysOnTop: o
+                        } = E;
+                        d = null != o ? o : r, a = {
+                            width: null != e && 0 !== e ? e : i,
+                            height: null != t && 0 !== t ? t : u,
+                            left: n,
+                            top: l,
+                            ...a
+                        }
+                    }
+                    let h = window.open(_.Routes.POPOUT_WINDOW, t, function(e) {
+                        let t = "";
+                        for (let n of Object.keys(e)) {
+                            let l = e[n];
+                            void 0 !== l && ("boolean" == typeof l && (l = l ? "yes" : "no"), t += "".concat(n, "=").concat(l, ","))
+                        }
+                        return t
+                    }(a));
+                    h.windowKey = t, null == h || h.focus(), f[t] = h, O[t] = l, c.isPlatformEmbedded && (S.default.setAlwaysOnTop(t, d), p[t] = d, S.default.isAlwaysOnTop(t).then(e => p[t] = e)), R.add(t)
+                },
+                POPOUT_WINDOW_CLOSE: function(e) {
+                    let {
+                        key: t
+                    } = e, n = f[t];
+                    null != n && !n.closed && (v(t), n.close())
+                },
+                POPOUT_WINDOW_SET_ALWAYS_ON_TOP: function(e) {
+                    let {
+                        key: t,
+                        alwaysOnTop: n
+                    } = e;
+                    c.isPlatformEmbedded && (S.default.setAlwaysOnTop(t, n), p[t] = n, S.default.isAlwaysOnTop(t).then(e => p[t] = e))
+                },
+                LOGOUT: m
+            });
+            var C = N
+        },
+        191349: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                DEVICE_PUSH_VOIP_PROVIDER: function() {
+                    return u
+                },
+                getDevicePushProvider: function() {
+                    return r
+                }
+            });
+            var l, o, i = n("773336");
+            let u = null;
+
+            function r() {
+                return (0, i.isAndroid)(), null
+            }(l = o || (o = {})).REMINDER = "reminder", l.TOP_MESSAGE_PUSH = "top_messages_push", l.TRENDING_CONTENT_PUSH = "trending_content_push"
+        },
+        211895: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return u
+                }
+            });
+            var l = n("913144"),
+                o = n("54239"),
+                i = n("49111");
+
+            function u() {
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+                    t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+                        openWithoutBackstack: !1
+                    };
+                l.default.dispatch({
+                    type: "USER_SETTINGS_MODAL_OPEN",
+                    section: e,
+                    subsection: t,
+                    ...n
+                }), (0, o.pushLayer)(i.Layers.USER_SETTINGS)
+            }
+        },
+        26092: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return C
+                }
+            });
+            var l = n("917351"),
+                o = n.n(l),
+                i = n("446674"),
+                u = n("913144"),
+                r = n("697218"),
+                s = n("49111");
+            let a = s.FormStates.CLOSED,
+                d = null,
+                c = null,
+                S = {},
+                E = {},
+                _ = {},
+                T = null,
+                p = null,
+                f = !1,
+                h = !1,
+                O = null,
+                R = null,
+                I = null,
+                U = [],
+                v = null,
+                P = null;
+
+            function g(e) {
+                var t, n, l, o, i, u;
+                let d = r.default.getCurrentUser();
+                if (null == d) return m();
+                c = null !== (t = e.section) && void 0 !== t ? t : c, v = null !== (n = e.section) && void 0 !== n ? n : c, null != e.subsection && null != c && (S[c] = e.subsection), null != e.scrollPosition && null != c && (E[c] = e.scrollPosition), h = !!e.openWithoutBackstack, a = s.FormStates.OPEN, _ = {}, p = {
+                    ...T = {
+                        [s.UserSettingsSections.ACCOUNT]: {
+                            userId: d.id,
+                            username: d.username,
+                            discriminator: d.discriminator,
+                            email: d.email,
+                            avatar: d.avatar,
+                            password: "",
+                            newPassword: null,
+                            claimed: d.isClaimed()
+                        }
+                    }
+                }, R = null !== (l = e.onClose) && void 0 !== l ? l : null, I = null !== (o = e.analyticsLocation) && void 0 !== o ? o : null, U = null !== (i = e.analyticsLocations) && void 0 !== i ? i : [], P = null !== (u = e.impressionSource) && void 0 !== u ? u : null
             }
 
-            function j(e, t) {
-                let i = U.indexOf(t);
-                if (-1 === i) return 0;
-                let _ = L(t);
-                return Math.max(0, _ - e.length)
+            function m() {
+                a = s.FormStates.CLOSED, f = !1, T = null, v = null, p = null, d = null, c = null, S = {}, E = {}, R = null, I = null, U = [], P = null
             }
 
-            function x(e, t) {
-                let i = e.premiumSubscriberCount,
-                    _ = v(e.id)[t];
-                return Math.max(0, _ - i)
+            function A() {
+                a = s.FormStates.OPEN, _ = {}
             }
-
-            function k(e) {
-                var t;
-                return (null === (t = e.subscription) || void 0 === t ? void 0 : t.status) === S.SubscriptionStatusTypes.CANCELED || e.canceled
+            class N extends i.default.Store {
+                initialize() {
+                    this.waitFor(r.default)
+                }
+                hasChanges() {
+                    return null != p && null != T && (!!this.isOpen() || O === s.DrawerTabTypes.USER_SETTINGS) && !o.isEqual(p, T)
+                }
+                isOpen() {
+                    return f
+                }
+                getPreviousSection() {
+                    return d
+                }
+                getSection() {
+                    return c
+                }
+                getSubsection() {
+                    return null != c ? S[c] : null
+                }
+                getScrollPosition() {
+                    return null != c ? E[c] : null
+                }
+                shouldOpenWithoutBackstack() {
+                    return h
+                }
+                getProps() {
+                    return {
+                        submitting: a === s.FormStates.SUBMITTING,
+                        section: c,
+                        subsection: null != c ? S[c] : null,
+                        scrollPosition: null != c ? E[c] : null,
+                        settings: p,
+                        errors: _,
+                        hasChanges: this.hasChanges(),
+                        openWithoutBackstack: h,
+                        analyticsLocation: I,
+                        analyticsLocations: U,
+                        initialSection: v,
+                        impressionSource: P
+                    }
+                }
+                get onClose() {
+                    return R
+                }
             }
+            N.displayName = "UserSettingsModalStore";
+            var C = new N(u.default, {
+                USER_SETTINGS_MODAL_OPEN: function(e) {
+                    f = !0, g(e)
+                },
+                USER_SETTINGS_MODAL_INIT: g,
+                USER_SETTINGS_MODAL_CLOSE: m,
+                LOGOUT: m,
+                USER_SETTINGS_MODAL_SUBMIT: function() {
+                    a = s.FormStates.SUBMITTING
+                },
+                USER_SETTINGS_MODAL_SUBMIT_FAILURE: function(e) {
+                    var t;
+                    if (a !== s.FormStates.SUBMITTING) return !1;
+                    a = s.FormStates.OPEN, c = s.UserSettingsSections.ACCOUNT, _ = null !== (t = e.errors) && void 0 !== t ? t : {}
+                },
+                USER_SETTINGS_MODAL_SET_SECTION: function(e) {
+                    var t;
+                    d = c, c = e.section, I = null, U = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (S[c] = e.subsection)
+                },
+                USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function(e) {
+                    let {
+                        forSection: t
+                    } = e;
+                    null != t ? delete S[t] : null != c && delete S[c]
+                },
+                USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: function(e) {
+                    let {
+                        forSection: t
+                    } = e;
+                    null != t ? delete E[t] : null != c && delete E[c]
+                },
+                USER_SETTINGS_MODAL_UPDATE_ACCOUNT: function(e) {
+                    let {
+                        settings: t
+                    } = e;
+                    null == p && (p = {});
+                    let n = p[s.UserSettingsSections.ACCOUNT];
+                    p[s.UserSettingsSections.ACCOUNT] = {
+                        ...n,
+                        ...t
+                    }
+                },
+                USER_SETTINGS_MODAL_SUBMIT_COMPLETE: A,
+                USER_SETTINGS_MODAL_RESET: function() {
+                    let e = r.default.getCurrentUser();
+                    A(), null != e && (p = {
+                        ...T = {
+                            [s.UserSettingsSections.ACCOUNT]: {
+                                userId: e.id,
+                                username: e.username,
+                                discriminator: e.discriminator,
+                                email: e.email,
+                                avatar: e.avatar,
+                                password: "",
+                                newPassword: null,
+                                claimed: e.isClaimed()
+                            }
+                        }
+                    })
+                },
+                DRAWER_SELECT_TAB: function(e) {
+                    return O = e.tab, null == c && O === s.DrawerTabTypes.USER_SETTINGS && g({
+                        type: "USER_SETTINGS_MODAL_INIT",
+                        section: null,
+                        subsection: null,
+                        scrollPosition: null,
+                        openWithoutBackstack: !1
+                    })
+                }
+            })
         }
     }
 ]);

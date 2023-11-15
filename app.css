@@ -4625,12 +4625,12 @@
 }
 
 .topicsPillTextUnselected__5a35e {
-    padding-left: 2px;
     align-items: center;
     display: flex;
     text-overflow: ellipsis;
     overflow: hidden;
-    white-space: nowrap
+    white-space: nowrap;
+    padding-left: 4px
 }
 
 .topicsPillTextSelected_fdcbd4 {
@@ -19460,8 +19460,8 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
