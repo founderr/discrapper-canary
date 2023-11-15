@@ -8437,7 +8437,8 @@
                         MESSAGE_CREATE: N,
                         LOGOUT: I,
                         SEARCH_FINISH: R,
-                        CHANNEL_SELECT: M
+                        CHANNEL_SELECT: M,
+                        LOAD_PINNED_MESSAGES_SUCCESS: R
                     }
                 }
             }
