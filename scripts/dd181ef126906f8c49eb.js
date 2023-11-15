@@ -10717,65 +10717,6 @@
                     })
                 }
         },
-        574933: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return c
-                }
-            }), n("808653");
-            var a = n("446674"),
-                l = n("913144"),
-                s = n("692038"),
-                i = n("457971");
-            let r = {};
-
-            function u(e) {
-                return "".concat(e.channel_id, ":").concat(e.id)
-            }
-
-            function o() {
-                r = {}
-            }
-            class d extends a.default.Store {
-                getMessage(e, t) {
-                    return r[u({
-                        id: e,
-                        channel_id: t
-                    })]
-                }
-            }
-            d.displayName = "SearchMessageStore";
-            var c = new d(l.default, {
-                SEARCH_FINISH: function(e) {
-                    return !!(0, i.isEligibleForExplicitMediaRedaction)() && null != e.messages && (r = e.messages.reduce((e, t) => (t.forEach(t => {
-                        e[u(t)] = (0, s.createMessageRecord)(t)
-                    }), e), {}), !0)
-                },
-                MESSAGE_UPDATE: function(e) {
-                    let {
-                        message: t
-                    } = e;
-                    if (!(0, i.isEligibleForExplicitMediaRedaction)() || null == t.id || null == t.channel_id) return !1;
-                    let n = u(t),
-                        a = r[n];
-                    return null != a && (r[n] = (0, s.updateMessageRecord)(a, {
-                        attachments: t.attachments,
-                        embeds: t.embeds
-                    }), !0)
-                },
-                LOGOUT: function() {
-                    (function() {
-                        r = {}
-                    })()
-                },
-                CONNECTION_OPEN: function() {
-                    (function() {
-                        r = {}
-                    })()
-                }
-            })
-        },
         526812: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
