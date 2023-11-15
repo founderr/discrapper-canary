@@ -42,8 +42,8 @@
                 m = n("406043"),
                 p = n("809810"),
                 f = n("3765"),
-                C = n("752598"),
-                E = n("267567"),
+                E = n("752598"),
+                C = n("267567"),
                 S = n("300322"),
                 T = n("42203"),
                 N = n("26989"),
@@ -75,7 +75,7 @@
                 L = e => {
                     let t = T.default.getChannel(e),
                         n = (0, r.useStateFromStores)([v.default], () => (null == t ? void 0 : t.guild_id) == null || v.default.canChatInGuild(t.guild_id), [t]),
-                        l = (0, r.useStateFromStores)([E.default], () => (null == t ? void 0 : t.guild_id) != null && E.default.isLurking(t.guild_id), [t]),
+                        l = (0, r.useStateFromStores)([C.default], () => (null == t ? void 0 : t.guild_id) != null && C.default.isLurking(t.guild_id), [t]),
                         a = (0, r.useStateFromStores)([N.default, h.default], () => {
                             var e, n;
                             let l = h.default.getCurrentUser();
@@ -118,7 +118,7 @@
                     m = a.useCallback(n => {
                         if (!d(n)) return !1;
                         let l = T.default.getChannel(e.channel_id);
-                        return null != l && null != t.customId && (0, C.executeMessageComponentInteraction)({
+                        return null != l && null != t.customId && (0, E.executeMessageComponentInteraction)({
                             componentType: t.type,
                             messageId: e.id,
                             messageFlags: e.flags,
@@ -384,7 +384,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 renderComponents: function() {
-                    return E
+                    return C
                 },
                 default: function() {
                     return S
@@ -402,15 +402,15 @@
                 m = n("73829"),
                 p = n("263130"),
                 f = n("284360"),
-                C = n("393486");
+                E = n("393486");
 
-            function E(e) {
+            function C(e) {
                 return e.map((e, t) => (function(e, t) {
                     switch (e.type) {
                         case s.ComponentType.ACTION_ROW:
                             return (0, l.jsx)(f.default, {
                                 ...e,
-                                renderComponents: E
+                                renderComponents: C
                             }, t);
                         case s.ComponentType.BUTTON:
                             return (0, l.jsx)(r.default, {
@@ -448,10 +448,10 @@
                     return (0, i.createComponents)(null !== (e = t.components) && void 0 !== e ? e : [], null !== (n = t.applicationId) && void 0 !== n ? n : t.author.id, a)
                 }, [t]);
                 return 0 === n.length ? null : (0, l.jsx)("div", {
-                    className: C.container,
+                    className: E.container,
                     children: (0, l.jsx)(o.ComponentStateContextProvider, {
                         message: t,
-                        children: E(n)
+                        children: C(n)
                     })
                 })
             }
@@ -476,8 +476,8 @@
                 m = n("128259"),
                 p = n("307311"),
                 f = n("192112"),
-                C = n("782340"),
-                E = n("588005"),
+                E = n("782340"),
+                C = n("588005"),
                 S = n("736341");
 
             function T(e) {
@@ -488,12 +488,12 @@
                 return c.SUPPORTS_COPY && null != t ? (0, l.jsx)(u.Menu, {
                     navId: "component-button",
                     onClose: o.closeContextMenu,
-                    "aria-label": C.default.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_NAME,
+                    "aria-label": E.default.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_NAME,
                     onSelect: n,
                     children: (0, l.jsx)(u.MenuGroup, {
                         children: (0, l.jsx)(u.MenuItem, {
                             id: "copy",
-                            label: C.default.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_COPY,
+                            label: E.default.Messages.MESSAGE_BUTTON_COMPONENT_LINK_CONTEXT_MENU_COPY,
                             action: () => (0, c.copy)(t)
                         })
                     })
@@ -506,7 +506,7 @@
                     label: n,
                     style: a,
                     disabled: c,
-                    emoji: C,
+                    emoji: E,
                     url: N
                 } = e, {
                     executeStateUpdate: v,
@@ -519,7 +519,7 @@
                         shouldConfirm: !0
                     })
                 } : () => v(), (0, l.jsxs)(u.Button, {
-                    className: E.component,
+                    className: C.component,
                     color: function(e) {
                         switch (e) {
                             case r.ButtonStyle.PRIMARY:
@@ -547,14 +547,14 @@
                             [S.hidden]: O
                         }),
                         "aria-hidden": O,
-                        children: [null != C ? (0, l.jsx)(i.default, {
+                        children: [null != E ? (0, l.jsx)(i.default, {
                             className: s({
                                 [S.textEmoji]: I
                             }),
-                            src: C.src,
-                            emojiId: C.id,
-                            emojiName: C.name,
-                            animated: C.animated
+                            src: E.src,
+                            emojiId: E.id,
+                            emojiName: E.name,
+                            animated: E.animated
                         }) : null, I ? (0, l.jsx)("div", {
                             className: S.label,
                             children: n
@@ -596,10 +596,10 @@
                 var t;
                 let {
                     channelTypes: n
-                } = e, f = (0, r.useComponentStateContext)(), C = null == f ? void 0 : null === (t = f.message) || void 0 === t ? void 0 : t.getChannelId(), E = u.default.getChannel(C), S = o.default.getGuild(null == E ? void 0 : E.getGuildId()), T = a.useMemo(() => (0, d.getSnowflakeSelectDefaultValues)(e.defaultValues, null == S ? void 0 : S.id, n), [e.defaultValues, S, n]);
+                } = e, f = (0, r.useComponentStateContext)(), E = null == f ? void 0 : null === (t = f.message) || void 0 === t ? void 0 : t.getChannelId(), C = u.default.getChannel(E), S = o.default.getGuild(null == C ? void 0 : C.getGuildId()), T = a.useMemo(() => (0, d.getSnowflakeSelectDefaultValues)(e.defaultValues, null == S ? void 0 : S.id, n), [e.defaultValues, S, n]);
                 return (0, l.jsx)(c.default, {
                     selectActionComponent: e,
-                    queryOptions: e => (0, d.queryChannels)(e, C, n),
+                    queryOptions: e => (0, d.queryChannels)(e, E, n),
                     renderIcon: (e, t) => {
                         let n = u.default.getChannel(null == e ? void 0 : e.value);
                         if (null == n) return null;
@@ -636,8 +636,8 @@
                 m = n("305961"),
                 p = n("824563"),
                 f = n("697218"),
-                C = n("781896"),
-                E = n("682344"),
+                E = n("781896"),
+                C = n("682344"),
                 S = n("483093"),
                 T = n("307311"),
                 N = n("192112"),
@@ -676,7 +676,7 @@
                             let u = (0, i.canGuildUseRoleIcons)(x, n) ? (0, r.getRoleIconProps)(n, t) : null;
                             return null != u ? (0, l.jsx)(S.default, {
                                 ...u
-                            }) : (0, l.jsx)(E.default, {
+                            }) : (0, l.jsx)(C.default, {
                                 color: null !== (a = n.colorString) && void 0 !== a ? a : (0, s.int2hex)(_.DEFAULT_ROLE_COLOR),
                                 height: t,
                                 width: t
@@ -700,7 +700,7 @@
                                 a = null == n ? null : null == L ? void 0 : L[n.id];
                             null != a && (t = (0, l.jsxs)("div", {
                                 className: I.roleCountContainer,
-                                children: [(0, l.jsx)(C.default, {
+                                children: [(0, l.jsx)(E.default, {
                                     className: I.roleCountIcon,
                                     height: 18,
                                     width: 18
@@ -742,8 +742,8 @@
                 m = n("307311"),
                 p = n("192112"),
                 f = n("782340"),
-                C = n("693098"),
-                E = n("709965");
+                E = n("693098"),
+                C = n("709965");
 
             function S(e) {
                 let {
@@ -751,7 +751,7 @@
                     iconSize: n
                 } = e;
                 return (0, s.jsx)("div", {
-                    className: C.iconContainer,
+                    className: E.iconContainer,
                     style: {
                         height: n,
                         width: n
@@ -772,45 +772,53 @@
                     placeholder: N,
                     maxValues: v,
                     disabled: h
-                } = t, [_, I] = u.useState(!1), [g, O] = u.useState(!1), [x, L] = u.useState(new Map(null == o ? void 0 : o.map(e => [e.value, e]))), [y, j] = u.useState(new Set(x.keys())), {
-                    state: A,
-                    executeStateUpdate: M,
-                    visualState: R,
-                    isDisabled: b,
-                    error: U
+                } = t, [_, I] = u.useState(!1), [g, O] = u.useState(!1), [x, L] = u.useState(new Map(null == o ? void 0 : o.map(e => [e.value, e]))), [y, j] = u.useState(new Set(x.keys())), [A, M] = u.useState(() => (null != o ? o : []).map(e => e.value)), [R, b] = u.useState(0);
+                u.useEffect(() => {
+                    let e = (null != o ? o : []).map(e => e.value);
+                    if (e.every(e => A.includes(e)) && A.every(t => e.includes(t))) return;
+                    M(e);
+                    let t = new Map(null == o ? void 0 : o.map(e => [e.value, e]));
+                    L(t), j(new Set(t.keys())), b(e => e + 1)
+                }, [o, A]);
+                let {
+                    state: U,
+                    executeStateUpdate: P,
+                    visualState: G,
+                    isDisabled: w,
+                    error: D
                 } = (0, m.useComponentState)(t, {
                     type: T,
                     selectedOptions: Array.from(x.values())
-                }), P = R === p.ActionComponentState.LOADING;
+                }), B = G === p.ActionComponentState.LOADING;
                 u.useEffect(() => {
-                    if ((null == A ? void 0 : A.type) === d.ComponentType.USER_SELECT || (null == A ? void 0 : A.type) === d.ComponentType.ROLE_SELECT || (null == A ? void 0 : A.type) === d.ComponentType.MENTIONABLE_SELECT || (null == A ? void 0 : A.type) === d.ComponentType.CHANNEL_SELECT) {
-                        let e = new Map(A.selectedOptions.map(e => [e.value, e]));
+                    if ((null == U ? void 0 : U.type) === d.ComponentType.USER_SELECT || (null == U ? void 0 : U.type) === d.ComponentType.ROLE_SELECT || (null == U ? void 0 : U.type) === d.ComponentType.MENTIONABLE_SELECT || (null == U ? void 0 : U.type) === d.ComponentType.CHANNEL_SELECT) {
+                        let e = new Map(U.selectedOptions.map(e => [e.value, e]));
                         L(e), j(new Set(e.keys()))
                     }
-                }, [A]);
-                let G = u.useCallback(() => {
-                    M({
+                }, [U]);
+                let k = u.useCallback(() => {
+                    P({
                         type: T,
                         selectedOptions: Array.from(x.values())
                     }) && j(new Set(x.keys()))
-                }, [M, T, x]);
+                }, [P, T, x]);
                 u.useEffect(() => {
-                    if (!_ && !g) !(x.size === y.size && Array.from(x.keys()).every(e => y.has(e))) && G()
-                }, [_, g, y, x, G]);
-                let w = 0 === x.size || _,
-                    D = {
-                        isDisabled: h || b,
-                        wrapperClassName: C.select,
+                    if (!_ && !g) !(x.size === y.size && Array.from(x.keys()).every(e => y.has(e))) && k()
+                }, [_, g, y, x, k]);
+                let z = 0 === x.size || _,
+                    F = {
+                        isDisabled: h || w,
+                        wrapperClassName: E.select,
                         options: e => new Promise(t => {
                             let l = n(e);
                             t(l)
                         }),
-                        placeholder: w ? null != N ? N : f.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER : void 0,
+                        placeholder: z ? null != N ? N : f.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER : void 0,
                         onClose: () => I(!1),
                         onOpen: () => I(!0),
                         onBlur: () => O(!1),
                         maxVisibleItems: 5,
-                        optionClassName: C.selectOption,
+                        optionClassName: E.selectOption,
                         renderOptionPrefix: (e, t) => {
                             let {
                                 inPill: n
@@ -824,41 +832,41 @@
                     };
                 return (0, s.jsxs)(u.Fragment, {
                     children: [(0, s.jsxs)("div", {
-                        className: C.container,
+                        className: E.container,
                         children: [v > 1 ? (0, s.jsx)(r.SearchableSelect, {
-                            className: C.badges,
+                            className: E.badges,
                             value: Array.from(x.values()),
                             onChange: e => {
                                 !_ && O(!0), L(new Map(e.map(e => [e.value, e])))
                             },
                             multi: !0,
                             inputClassNames: i({
-                                [C.soloInput]: 0 === x.size,
-                                [C.inlineInput]: x.size > 0,
-                                [C.hidden]: !w
+                                [E.soloInput]: 0 === x.size,
+                                [E.inlineInput]: x.size > 0,
+                                [E.hidden]: !z
                             }),
                             closeOnSelect: !1,
                             centerCaret: !0,
-                            ...D
-                        }) : (0, s.jsx)(r.SearchableSelect, {
-                            className: (C.badges, C.singleSelect),
+                            ...F
+                        }, R) : (0, s.jsx)(r.SearchableSelect, {
+                            className: (E.badges, E.singleSelect),
                             value: [...x.values()][0],
                             onChange: e => L(null != e ? new Map([
                                 [e.value, e]
                             ]) : new Map),
                             clearable: !0,
                             centerCaret: !0,
-                            ...D
-                        }), P ? (0, s.jsx)("div", {
-                            className: C.loading,
+                            ...F
+                        }, R), B ? (0, s.jsx)("div", {
+                            className: E.loading,
                             children: (0, s.jsx)(r.Dots, {
                                 dotRadius: 3.5,
                                 themed: !0
                             })
                         }) : null]
-                    }), null != U ? (0, s.jsx)(c.InteractionStatusMessage, {
-                        ...(0, c.getFailedContent)(U),
-                        className: E.error
+                    }), null != D ? (0, s.jsx)(c.InteractionStatusMessage, {
+                        ...(0, c.getFailedContent)(D),
+                        className: C.error
                     }) : null]
                 })
             }(a = l || (l = {}))[a.PILL_ICON_SIZE = 16] = "PILL_ICON_SIZE", a[a.ROW_ICON_SIZE = 24] = "ROW_ICON_SIZE"
@@ -883,7 +891,7 @@
                 p = n("782340"),
                 f = n("709965");
 
-            function C(e) {
+            function E(e) {
                 let {
                     emoji: t,
                     label: n,
@@ -914,7 +922,7 @@
                 })
             }
 
-            function E(e) {
+            function C(e) {
                 let {
                     emoji: t,
                     label: n
@@ -1022,14 +1030,14 @@
                             maxVisibleItems: 5,
                             closeOnSelect: !x,
                             optionClassName: f.selectOption,
-                            renderOptionLabel: e => (0, l.jsx)(C, {
+                            renderOptionLabel: e => (0, l.jsx)(E, {
                                 ...e,
                                 isDisabled: x && !A.has(e.value) && A.size === i,
                                 isOffset: U
                             }),
                             renderOptionValue: e => x ? (0, l.jsx)(S, {
                                 options: e
-                            }) : (0, l.jsx)(E, {
+                            }) : (0, l.jsx)(C, {
                                 ...e[0]
                             }),
                             ...w
@@ -1071,15 +1079,15 @@
                     minLength: m,
                     maxLength: p,
                     required: f,
-                    value: C,
-                    indices: E
-                } = e, [S, T] = a.useState(null != C ? C : ""), {
+                    value: E,
+                    indices: C
+                } = e, [S, T] = a.useState(null != E ? E : ""), {
                     state: N,
                     executeStateUpdate: v,
                     error: h
-                } = (0, o.useComponentState)(e, null != C ? {
+                } = (0, o.useComponentState)(e, null != E ? {
                     type: n,
-                    value: C
+                    value: E
                 } : void 0);
                 a.useEffect(() => {
                     (null == N ? void 0 : N.type) === n && T(N.value)
@@ -1097,7 +1105,7 @@
                             value: e
                         })
                     },
-                    autoFocus: 0 === E[0]
+                    autoFocus: 0 === C[0]
                 };
                 switch (r) {
                     case u.TextComponentStyle.SMALL:
