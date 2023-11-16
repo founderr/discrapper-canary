@@ -1737,7 +1737,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "246258"
+                        buildNumber: "246271"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -20227,7 +20227,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return u
                 }
             });
             var a = n("37983");
@@ -20235,23 +20235,23 @@
             var s = n("414456"),
                 l = n.n(s),
                 i = n("925749"),
-                r = n("36553");
+                r = n("342845"),
+                o = n("36553");
 
-            function o(e) {
+            function u(e) {
                 let {
                     activity: t,
                     className: n,
                     iconClassName: s
                 } = e;
                 if (null == t) return null;
-                let o = (0, i.getHangStatus)(t),
-                    u = (0, i.getHangStatusIcon)(o),
-                    d = (0, i.humanizeHangStatus)(o);
+                let u = (0, i.getHangStatusText)(t);
                 return (0, a.jsxs)("div", {
-                    className: l(r.container, n),
-                    children: [null != u ? (0, a.jsx)(u, {
-                        className: l(r.emoji, s)
-                    }) : null, null != d && d.length > 0 ? d : null]
+                    className: l(o.container, n),
+                    children: [(0, a.jsx)(r.default, {
+                        hangStatusActivity: t,
+                        className: l(o.emoji, s)
+                    }), null != u && u.length > 0 ? u : null]
                 })
             }
         },

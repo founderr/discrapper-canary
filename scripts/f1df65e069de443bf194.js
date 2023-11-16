@@ -6227,16 +6227,20 @@
                     }), (0, a.jsxs)("div", {
                         className: W.giftInfo,
                         children: [(0, a.jsx)(S.Heading, {
-                            className: W.giftTitle,
+                            className: i(W.giftTitle, {
+                                [W.seasonalColor]: s
+                            }),
                             variant: "heading-xl/extrabold",
                             children: s ? Y.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : Y.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING
                         }), (0, a.jsx)(S.Text, {
-                            className: W.giftText,
+                            className: i(W.giftText, {
+                                [W.seasonalColor]: s
+                            }),
                             variant: "text-sm/normal",
                             children: s ? Y.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : Y.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
                         }), (0, a.jsx)(F.default, {
                             isGift: !0,
-                            className: W.giftCardButton,
+                            className: i(W.giftCardButton, s ? W.seasonalColor : W.giftCardButtonColor),
                             look: S.Button.Looks.OUTLINED,
                             buttonText: Y.default.Messages.GIFT_NITRO,
                             buttonTextClassName: W.giftButtonCTA,
@@ -9853,7 +9857,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "a2ceae9a3e365b075e6fb7d47c7ceee237d64f9f", e.substring(0, 7)),
+                    S = (e = "819eba62cbff0c2600128d0a0a7d01bad77acd2e", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -9866,7 +9870,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "246258", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "246271", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
