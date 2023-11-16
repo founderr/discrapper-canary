@@ -14805,46 +14805,41 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return c
                 }
             }), n("222007");
             var l = n("37983"),
                 i = n("884691"),
                 r = n("77078"),
-                o = n("685665"),
-                s = n("599110"),
-                a = n("824986"),
-                u = n("49111"),
-                d = n("506653"),
-                c = n("908324"),
-                f = n("383819");
-            let p = e => {
+                o = n("824986"),
+                s = n("506653"),
+                a = n("908324"),
+                u = n("383819");
+            let d = e => {
                 switch (e) {
-                    case a.PremiumTutorialTooltips.EMOJI_PICKER:
-                        return d.emojiSparkle;
-                    case a.PremiumTutorialTooltips.STICKER_PICKER:
-                        return d.stickerSparkle;
-                    case a.PremiumTutorialTooltips.FILE_UPLOAD:
-                        return d.fileUploadSparkle;
-                    case a.PremiumTutorialTooltips.BOOSTING_FLOW:
+                    case o.PremiumTutorialTooltips.EMOJI_PICKER:
+                        return s.emojiSparkle;
+                    case o.PremiumTutorialTooltips.STICKER_PICKER:
+                        return s.stickerSparkle;
+                    case o.PremiumTutorialTooltips.FILE_UPLOAD:
+                        return s.fileUploadSparkle;
+                    case o.PremiumTutorialTooltips.BOOSTING_FLOW:
                     default:
                         return
                 }
             };
-            var m = e => {
+            var c = e => {
                 let {
                     tutorialType: t,
                     text: n,
-                    unformattedText: m,
-                    children: h
-                } = e, [E, C] = i.useState(!1), S = t === a.PremiumTutorialTooltips.EMOJI_PICKER ? c : f, {
-                    analyticsLocations: g
-                } = (0, o.default)();
+                    unformattedText: c,
+                    children: f
+                } = e, [p, m] = i.useState(!1), h = t === o.PremiumTutorialTooltips.EMOJI_PICKER ? a : u;
                 return (0, l.jsx)(r.Tooltip, {
-                    "aria-label": null != m ? m : n,
+                    "aria-label": null != c ? c : n,
                     text: n,
                     position: "top",
-                    tooltipContentClassName: d.tooltipText,
+                    tooltipContentClassName: s.tooltipText,
                     children: e => {
                         let {
                             onMouseEnter: n,
@@ -14852,19 +14847,16 @@
                         } = e;
                         return (0, l.jsxs)("div", {
                             onMouseEnter: () => {
-                                null == n || n(), C(!0), s.default.track(u.AnalyticEvents.PREMIUM_TUTORIAL_TOOLTIP_VIEWED, {
-                                    location_stack: g,
-                                    feature: t
-                                })
+                                null == n || n(), m(!0)
                             },
                             onMouseLeave: () => {
-                                null == i || i(), C(!1)
+                                null == i || i(), m(!1)
                             },
-                            children: [E && (0, l.jsx)("img", {
+                            children: [p && (0, l.jsx)("img", {
                                 alt: "",
-                                src: S,
-                                className: p(t)
-                            }), h]
+                                src: h,
+                                className: d(t)
+                            }), f]
                         })
                     }
                 })
