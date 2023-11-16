@@ -74,7 +74,7 @@
                         if (1 !== e.length || 1 !== t.length) return e;
                         let n = e[0],
                             a = t[0];
-                        return "link" === n.type && s.has(a.type) && (0, i.isEmbedInline)(a) ? [] : e
+                        return ("link" === n.type || "attachmentLink" === n.type) && s.has(a.type) && (0, i.isEmbedInline)(a) ? [] : e
                     }(e, t.embeds)), !m && (e = function(e, t) {
                         return t ? c(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = c(e[0].content)), e)
                     }(e, n)), g = function(e, t) {
@@ -193,10 +193,10 @@
                     A = m && e.content === e.embeds[0].url && e.embeds[0].type === r.MessageEmbedTypes.GIFV,
                     h = e.type !== r.MessageTypes.DEFAULT || !A && "" !== e.content,
                     I = (0, i.default)(e),
-                    T = !I && (null == n ? void 0 : n.hasTimestamp) !== !1,
-                    y = o(e, t),
+                    y = !I && (null == n ? void 0 : n.hasTimestamp) !== !1,
+                    T = o(e, t),
                     M = l(e),
-                    x = I ? "" : "".concat(c ? M : y, " ").concat(a.MESSAGE_NICKNAME_PAUSE_LABEL_SEGMENT_ID);
+                    x = I ? "" : "".concat(c ? M : T, " ").concat(a.MESSAGE_NICKNAME_PAUSE_LABEL_SEGMENT_ID);
                 if (h) {
                     let t = s(e);
                     x += " ".concat(t)
@@ -205,7 +205,7 @@
                     let t = d(e);
                     x += " ".concat(t)
                 }
-                if (T) {
+                if (y) {
                     let t = u(e);
                     x += " ".concat(a.MESSAGE_PRE_TIMESTAMP_PAUSE_LABEL_SEGMENT_ID, " ").concat(t)
                 }
@@ -463,7 +463,7 @@
                     onUpdate: S,
                     contentRef: A,
                     asPartialPreview: h
-                } = e, I = r.isEdited(), T = r.state === m.MessageStates.SEND_FAILED, y = r.state === m.MessageStates.SENDING, M = r.isCommandType(), x = null === (t = r.editedTimestamp) || void 0 === t ? void 0 : t.toString(), v = i.useRef(!1);
+                } = e, I = r.isEdited(), y = r.state === m.MessageStates.SEND_FAILED, T = r.state === m.MessageStates.SENDING, M = r.isCommandType(), x = null === (t = r.editedTimestamp) || void 0 === t ? void 0 : t.toString(), v = i.useRef(!1);
                 return i.useLayoutEffect(() => {
                     v.current ? null != S && S() : v.current = !0
                 }, [S, r.content, u, x, l]), (0, a.jsxs)("div", {
@@ -471,9 +471,9 @@
                     ref: A,
                     className: s(n, g.markup, {
                         [p.messageContent]: !0,
-                        [p.isSending]: y && !M,
+                        [p.isSending]: T && !M,
                         [p.markupRtl]: "rtl" === o(r.content),
-                        [p.isFailed]: T
+                        [p.isFailed]: y
                     }),
                     children: [null != l ? l : E(r, u, {
                         asPartialPreview: h
@@ -595,7 +595,7 @@
                     return i
                 },
                 default: function() {
-                    return T
+                    return y
                 }
             });
             var a, i, r = n("37983"),
@@ -625,15 +625,15 @@
                 })
             }
 
-            function T(e) {
+            function y(e) {
                 let t, {
                         author: n,
                         message: a,
                         userOverride: i,
                         compact: l = !1,
                         withMentionPrefix: S = !1,
-                        showPopout: T = !1,
-                        className: y,
+                        showPopout: y = !1,
+                        className: T,
                         onClick: M,
                         onContextMenu: x,
                         onPopoutRequestClose: v,
@@ -659,7 +659,7 @@
                         onContextMenu: x,
                         children: (S ? "@" : "") + N
                     };
-                t = null != _ && null != T ? (0, r.jsx)(d.Popout, {
+                t = null != _ && null != y ? (0, r.jsx)(d.Popout, {
                     preload: j ? void 0 : function() {
                         let e = null != i ? i : a.author;
                         return (0, E.default)(e.id, null != n.guildMemberAvatar && null != L ? (0, A.getGuildMemberAvatarURLSimple)({
@@ -673,7 +673,7 @@
                         })
                     },
                     renderPopout: _,
-                    shouldShow: T,
+                    shouldShow: y,
                     position: u.isMobile ? "window_center" : "right",
                     onRequestClose: v,
                     children: e => {
@@ -685,12 +685,12 @@
                             tag: "span",
                             ...n,
                             ...F,
-                            className: o(F.className, h.clickable, y)
+                            className: o(F.className, h.clickable, T)
                         })
                     }
                 }) : (0, r.jsx)(d.Clickable, {
                     ...F,
-                    className: o(F.className, y)
+                    className: o(F.className, T)
                 });
                 let P = null != C ? C[0] : null,
                     B = null != C ? C[1] : null;

@@ -7857,6 +7857,9 @@
                     mediaPostLink: {
                         type: "skip"
                     },
+                    attachmentLink: {
+                        type: "skip"
+                    },
                     newline: {
                         type: "verbatim"
                     },

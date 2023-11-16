@@ -4303,7 +4303,7 @@
                         if (1 !== e.length || 1 !== t.length) return e;
                         let r = e[0],
                             a = t[0];
-                        return "link" === r.type && i.has(a.type) && (0, n.isEmbedInline)(a) ? [] : e
+                        return ("link" === r.type || "attachmentLink" === r.type) && i.has(a.type) && (0, n.isEmbedInline)(a) ? [] : e
                     }(e, t.embeds)), !f && (e = function(e, t) {
                         return t ? c(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = c(e[0].content)), e)
                     }(e, r)), m = function(e, t) {
