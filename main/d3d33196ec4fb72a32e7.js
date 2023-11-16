@@ -1,1307 +1,829 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["17744"], {
-        618017: function(e, r, t) {
+    ["60499"], {
+        340616: function(e, t, r) {
             "use strict";
-            t.r(r), t.d(r, {
-                canEditClydeAIProfile: function() {
-                    return o
-                }
-            });
-            var l = t("957255"),
-                i = t("49111");
-
-            function o(e) {
-                return null != e && l.default.can(i.Permissions.USE_CLYDE_AI, e)
-            }
-        },
-        190045: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
+            r.r(t), r.d(t, {
                 default: function() {
-                    return s
-                }
-            });
-            var l = t("37983");
-            t("884691");
-            var i = t("77078"),
-                o = t("599110"),
-                n = t("49111");
-
-            function s(e) {
-                o.default.track(n.AnalyticEvents.OPEN_MODAL, {
-                    type: "Edit Clyde Profile",
-                    location_page: "Profile Popout",
-                    guild_id: e
-                }), (0, i.openModalLazy)(async () => {
-                    let {
-                        default: r
-                    } = await t.el("485261").then(t.bind(t, "485261"));
-                    return t => (0, l.jsx)(r, {
-                        ...t,
-                        guildId: e
-                    })
-                })
-            }
-        },
-        21526: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                trackCollectiblesShopOpened: function() {
-                    return d
-                },
-                openCollectiblesShop: function() {
-                    return f
-                },
-                closeCollectiblesShop: function() {
-                    return E
-                },
-                fetchCollectiblesCategories: function() {
-                    return p
-                },
-                fetchCollectiblesPurchases: function() {
-                    return P
-                },
-                fetchCollectiblesProduct: function() {
-                    return T
-                },
-                claimPremiumCollectiblesProduct: function() {
-                    return _
-                },
-                setCollectiblesCategoryItemsViewed: function() {
-                    return C
-                }
-            });
-            var l = t("872717"),
-                i = t("913144"),
-                o = t("54239"),
-                n = t("448993"),
-                s = t("514296"),
-                a = t("407788"),
-                u = t("489134"),
-                c = t("49111");
-            t("853987"), t("426497"), t("775416"), t("216719");
-            let d = e => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_SHOP_OPEN",
-                        ...e
-                    })
-                },
-                f = e => {
-                    d(e), (0, o.pushLayer)(c.Layers.COLLECTIBLES_SHOP)
-                },
-                E = () => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_SHOP_CLOSE"
-                    }), (0, o.popLayer)()
-                },
-                p = async () => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_CATEGORIES_FETCH"
-                    });
-                    try {
-                        let e = await l.default.get(c.Endpoints.COLLECTIBLES_CATEGORIES);
-                        i.default.dispatch({
-                            type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS",
-                            categories: e.body.map(s.default.fromServer)
-                        })
-                    } catch (e) {
-                        throw i.default.dispatch({
-                            type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE",
-                            error: e
-                        }), new n.APIError(e)
-                    }
-                }, P = async () => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_PURCHASES_FETCH"
-                    });
-                    try {
-                        let e = await l.default.get(c.Endpoints.COLLECTIBLES_PURCHASES);
-                        i.default.dispatch({
-                            type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS",
-                            purchases: e.body.map(u.default.fromServer)
-                        })
-                    } catch (e) {
-                        throw i.default.dispatch({
-                            type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE",
-                            error: e
-                        }), new n.APIError(e)
-                    }
-                }, T = async e => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_PRODUCT_FETCH"
-                    });
-                    try {
-                        let r = await l.default.get(c.Endpoints.COLLECTIBLES_PRODUCTS(e));
-                        i.default.dispatch({
-                            type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS",
-                            product: a.default.fromServer(r.body)
-                        })
-                    } catch (e) {
-                        throw i.default.dispatch({
-                            type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE",
-                            error: e
-                        }), new n.APIError(e)
-                    }
-                }, _ = async e => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_CLAIM",
-                        skuId: e
-                    });
-                    try {
-                        var r;
-                        let t = await l.default.put({
-                            url: c.Endpoints.COLLECTIBLES_CLAIM,
-                            body: {
-                                sku_id: e
-                            }
-                        });
-                        i.default.dispatch({
-                            type: "COLLECTIBLES_CLAIM_SUCCESS",
-                            skuId: e,
-                            purchases: null === (r = t.body) || void 0 === r ? void 0 : r.map(u.default.fromServer)
-                        })
-                    } catch (r) {
-                        throw i.default.dispatch({
-                            type: "COLLECTIBLES_CLAIM_FAILURE",
-                            skuId: e,
-                            error: r
-                        }), new n.APIError(r)
-                    }
-                }, C = e => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_CATEGORY_ITEMS_VIEWED",
-                        ...e
-                    })
-                }
-        },
-        426497: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return E
-                }
-            }), t("808653");
-            var l = t("635058"),
-                i = t("265586"),
-                o = t("446674"),
-                n = t("913144"),
-                s = t("853987");
-            let a = new Date(2023, 8, 25),
-                u = new Date(2023, 9, 5),
-                c = () => ({
-                    categoryItemViews: {
-                        [l.CollectiblesCategorySkuId.FANTASY]: {
-                            [i.CollectiblesItemType.AVATAR_DECORATION]: a,
-                            [i.CollectiblesItemType.PROFILE_EFFECT]: u
-                        },
-                        [l.CollectiblesCategorySkuId.ANIME]: {
-                            [i.CollectiblesItemType.AVATAR_DECORATION]: a,
-                            [i.CollectiblesItemType.PROFILE_EFFECT]: u
-                        },
-                        [l.CollectiblesCategorySkuId.BREAKFAST]: {
-                            [i.CollectiblesItemType.AVATAR_DECORATION]: a,
-                            [i.CollectiblesItemType.PROFILE_EFFECT]: u
-                        },
-                        [l.CollectiblesCategorySkuId.DISXCORE]: {
-                            [i.CollectiblesItemType.AVATAR_DECORATION]: a
-                        }
-                    }
-                }),
-                d = c();
-            class f extends o.default.PersistedStore {
-                initialize(e) {
-                    null != e && (d = e)
-                }
-                getState() {
-                    return d
-                }
-                isItemViewed(e) {
-                    var r;
-                    let t = s.default.getCategoryForProduct(e.skuId);
-                    return null != t && (null === (r = d.categoryItemViews[t.skuId]) || void 0 === r ? void 0 : r[e.type]) != null
-                }
-                reset() {
-                    d = c()
-                }
-            }
-            f.displayName = "CollectiblesPersistedStore", f.persistKey = "CollectiblesPersistedStoreV2";
-            var E = new f(n.default, {
-                COLLECTIBLES_CATEGORY_ITEMS_VIEWED: e => {
-                    let {
-                        categories: r,
-                        itemTypes: t
-                    } = e, l = new Date;
-                    return r.reduce((e, r) => {
-                        let {
-                            skuId: i
-                        } = r, o = t.reduce((e, r) => {
-                            var t;
-                            return (null === (t = d.categoryItemViews[i]) || void 0 === t ? void 0 : t[r]) != null ? e : (null == d.categoryItemViews[i] && (d.categoryItemViews[i] = {}), d.categoryItemViews[i][r] = l, !0)
-                        }, !1);
-                        return e || o
-                    }, !1)
-                }
-            })
-        },
-        775416: function(e, r, t) {
-            "use strict";
-            let l, i, o;
-            t.r(r), t.d(r, {
-                default: function() {
-                    return E
-                }
-            }), t("222007");
-            var n = t("917351"),
-                s = t("446674"),
-                a = t("913144");
-            let u = new Map,
-                c = u,
-                d = !1;
-            class f extends s.default.Store {
-                get isFetching() {
-                    return d
-                }
-                get isClaiming() {
-                    return l
-                }
-                get purchases() {
                     return c
                 }
-                get fetchError() {
-                    return i
-                }
-                get claimError() {
-                    return o
-                }
-                getPurchase(e) {
-                    return null != e ? c.get(e) : void 0
-                }
-            }
-            f.displayName = "CollectiblesPurchaseStore";
-            var E = new f(a.default, {
-                COLLECTIBLES_PURCHASES_FETCH: e => {
-                    d = !0, i = void 0
-                },
-                COLLECTIBLES_PURCHASES_FETCH_SUCCESS: e => {
-                    0 === e.purchases.length ? c = u : !(0, n.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), d = !1, i = void 0
-                },
-                COLLECTIBLES_PURCHASES_FETCH_FAILURE: e => {
+            });
+            var n = r("37983"),
+                l = r("884691"),
+                i = r("132710"),
+                a = r.n(i),
+                s = r("77078"),
+                u = r("812204"),
+                d = r("685665"),
+                o = r("128259"),
+                c = l.memo(function(e) {
                     let {
-                        error: r
-                    } = e;
-                    c = u, d = !1, i = r
-                },
-                COLLECTIBLES_CLAIM: e => {
-                    l = e.skuId, o = void 0
-                },
-                COLLECTIBLES_CLAIM_SUCCESS: e => {
-                    null == e.purchases || 0 === e.purchases.length ? c = u : !(0, n.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), l = void 0, o = void 0
-                },
-                COLLECTIBLES_CLAIM_FAILURE: e => {
-                    let {
-                        error: r,
-                        skuId: t
-                    } = e;
-                    l = t, o = r
-                },
-                LOGOUT: e => {
-                    c = u, d = !1, l = void 0, i = void 0, o = void 0
-                }
-            })
+                        onClick: t,
+                        trusted: r,
+                        title: i,
+                        href: c,
+                        children: f,
+                        messageId: v,
+                        channelId: g,
+                        ...h
+                    } = e, {
+                        analyticsLocations: E
+                    } = (0, d.default)(u.default.MASKED_LINK), C = l.useCallback(t => (0, o.handleClick)(e, t, E), [E, e]), I = l.useCallback(e => {
+                        1 === e.button && C(e)
+                    }, [C]), R = a.sanitizeUrl(c);
+                    return (0, n.jsx)(s.Anchor, {
+                        ...h,
+                        title: i,
+                        target: "_blank",
+                        rel: "noreferrer noopener",
+                        href: R,
+                        onClick: C,
+                        onAuxClick: I,
+                        children: null != f ? f : i
+                    })
+                })
         },
-        805172: function(e, r, t) {
+        225389: function(e, t, r) {
             "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return o
+            r.r(t), r.d(t, {
+                CircleInformationIcon: function() {
+                    return a
                 }
             });
-            var l = t("862205");
-            let i = (0, l.createExperiment)({
-                kind: "user",
-                id: "2023-10_collectibles_shop_for_all",
-                label: "Collectibles Shop For All",
-                defaultConfig: {
-                    shopForAllEnabled: !1,
-                    marketingEnabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enables Collectibles Shop For All",
-                    config: {
-                        shopForAllEnabled: !0,
-                        marketingEnabled: !1
-                    }
-                }, {
-                    id: 2,
-                    label: "Enables Collectibles Shop For All with in-app DCF marketing",
-                    config: {
-                        shopForAllEnabled: !0,
-                        marketingEnabled: !0
-                    }
-                }]
-            });
-            var o = e => {
+            var n = r("37983");
+            r("884691");
+            var l = r("669491"),
+                i = r("75196");
+            let a = e => {
                 let {
-                    location: r,
-                    autoTrackExposure: t = !0,
-                    trackExposureOptions: l = {}
+                    width: t = 24,
+                    height: r = 24,
+                    secondaryColor: a = "transparent",
+                    secondaryColorClass: s = "",
+                    color: u = l.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: d = "",
+                    ...o
                 } = e;
-                return i.useExperiment({
-                    location: r
-                }, {
-                    autoTrackExposure: t,
-                    trackExposureOptions: l
-                })
-            }
-        },
-        216719: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return c
-                }
-            });
-            var l = t("446674"),
-                i = t("913144");
-            let o = [],
-                n = o,
-                s = null,
-                a = e => {
-                    n = o, s = null
-                };
-            class u extends l.default.Store {
-                get analyticsLocations() {
-                    return n
-                }
-                get analyticsSource() {
-                    return s
-                }
-                getAnalytics() {
-                    return {
-                        analyticsLocations: n,
-                        analyticsSource: s
-                    }
-                }
-            }
-            u.displayName = "CollectiblesShopStore";
-            var c = new u(i.default, {
-                COLLECTIBLES_SHOP_OPEN: e => {
-                    var r, t;
-                    n = null !== (r = e.analyticsLocations) && void 0 !== r ? r : o, s = null !== (t = e.analyticsSource) && void 0 !== t ? t : null
-                },
-                COLLECTIBLES_SHOP_CLOSE: a,
-                LOGOUT: a
-            })
-        },
-        514296: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return l
-                }
-            }), t("808653"), t("424973");
-            var l, i = t("407788"),
-                o = t("792382");
-            l = class e extends o.default {
-                static fromServer(r) {
-                    let {
-                        products: t,
-                        logo: l,
-                        ...o
-                    } = r;
-                    return new e({
-                        ...super.fromServer(o),
-                        products: t.reduce((e, r) => {
-                            let t = i.default.fromServer(r);
-                            return 0 === t.items.length ? e : (e.push(t), e)
-                        }, []),
-                        logo: l
-                    })
-                }
-                constructor(e) {
-                    super(e), this.products = e.products, this.logo = e.logo
-                }
-            }
-        },
-        407788: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return l
-                }
-            }), t("808653"), t("794252"), t("424973");
-            var l, i = t("506838"),
-                o = t("265586"),
-                n = t("797647"),
-                s = t("730297"),
-                a = t("792382"),
-                u = t("806410");
-            l = class e extends a.default {
-                static fromServer(r) {
-                    var t;
-                    let {
-                        currency: l,
-                        price: a,
-                        prices: c,
-                        ...d
-                    } = r;
-                    return new e({
-                        ...super.fromServer(d),
-                        currency: l,
-                        price: a,
-                        prices: null == (t = c) ? {} : Object.keys(t).reduce((e, r) => {
-                            if (null == t) return e;
-                            let l = t[r];
-                            return e[r] = {
-                                countryPrices: {
-                                    countryCode: l.country_prices.country_code,
-                                    prices: l.country_prices.prices.map(e => (0, n.getPriceFromServer)(e, !0))
-                                },
-                                paymentSourcePrices: {}
-                            }, e
-                        }, {}),
-                        items: d.items.reduce((e, r) => (0, i.match)(r).with({
-                            type: o.CollectiblesItemType.AVATAR_DECORATION
-                        }, r => (e.push(s.default.fromServer(r)), e)).with({
-                            type: o.CollectiblesItemType.PROFILE_EFFECT
-                        }, r => (e.push(u.default.fromServer(r)), e)).otherwise(() => e), [])
-                    })
-                }
-                constructor(e) {
-                    super(e), this.currency = e.currency, this.price = e.price, this.prices = e.prices, this.summary = e.summary, this.items = e.items
-                }
-            }
-        },
-        489134: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return l
-                }
-            });
-            var l, i = t("407788");
-            l = class e extends i.default {
-                static fromServer(r) {
-                    let {
-                        purchased_at: t,
-                        purchase_type: l,
-                        ...i
-                    } = r;
-                    return new e({
-                        ...super.fromServer(i),
-                        purchaseType: l,
-                        purchasedAt: null != t ? new Date(t) : t
-                    })
-                }
-                constructor(e) {
-                    super(e), this.purchasedAt = e.purchasedAt, this.purchaseType = e.purchaseType
-                }
-            }
-        },
-        792382: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return l
-                }
-            });
-            var l, i = t("666038");
-            l = class e extends i.default {
-                static fromServer(r) {
-                    let {
-                        store_listing_id: t,
-                        sku_id: l,
-                        unpublished_at: i,
-                        ...o
-                    } = r, n = null != i ? new Date(i) : null;
-                    return new e({
-                        ...o,
-                        storeListingId: t,
-                        skuId: l,
-                        unpublishedAt: n
-                    })
-                }
-                constructor(e) {
-                    super(), this.storeListingId = e.storeListingId, this.skuId = e.skuId, this.name = e.name, this.summary = e.summary, this.banner = e.banner, this.unpublishedAt = e.unpublishedAt
-                }
-            }
-        },
-        335031: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return u
-                }
-            });
-            var l = t("884691"),
-                i = t("656280"),
-                o = t.n(i),
-                n = t("509043"),
-                s = t("446674"),
-                a = t("206230"),
-                u = e => {
-                    let r = (0, s.useStateFromStores)([a.default], () => a.default.desaturateUserColors ? a.default.saturation : 1),
-                        t = (0, l.useMemo)(() => {
-                            let {
-                                h: t,
-                                s: l,
-                                l: i
-                            } = o((0, n.int2hex)(e)).toHsl(), s = o({
-                                h: t,
-                                s: l * r,
-                                l: i
-                            });
-                            return {
-                                hex: s.toHexString(),
-                                hsl: s.toHslString()
-                            }
-                        }, [e, r]);
-                    return t
-                }
-        },
-        528438: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return s
-                }
-            }), t("222007");
-            var l = t("509043"),
-                i = t("462274"),
-                o = t("449918"),
-                n = t("49111");
-
-            function s(e, r) {
-                var t, s;
-                let {
-                    pendingThemeColors: a,
-                    isPreview: u
-                } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, c = null == e ? void 0 : e.getAvatarURL(null == r ? void 0 : r.guildId, 80), d = (0, o.useColorValue)(n.Color.PRIMARY_530).hex, [f, E] = (0, i.useAvatarColors)(c, d, !1);
-                if (!(null == r ? void 0 : r.canEditThemes) && !u) return [null, null];
-                let p = null == r ? void 0 : r.getPreviewThemeColors(a),
-                    P = null !== (t = null == p ? void 0 : p[0]) && void 0 !== t ? t : (0, l.hex2int)(f),
-                    T = null !== (s = null == p ? void 0 : p[1]) && void 0 !== s ? s : (0, l.hex2int)(E);
-                return [P, T]
-            }
-        },
-        289918: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return J
-                }
-            }), t("222007");
-            var l, i, o = t("37983"),
-                n = t("884691"),
-                s = t("414456"),
-                a = t.n(s),
-                u = t("509043"),
-                c = t("446674"),
-                d = t("669491"),
-                f = t("77078"),
-                E = t("79112"),
-                p = t("812204"),
-                P = t("685665"),
-                T = t("462274"),
-                _ = t("618017"),
-                C = t("190045"),
-                O = t("335031"),
-                S = t("252063"),
-                h = t("38766"),
-                L = t("845579"),
-                I = t("271938"),
-                y = t("42203"),
-                m = t("305961"),
-                U = t("18494"),
-                A = t("697218"),
-                v = t("471671"),
-                g = t("275623"),
-                R = t("945330"),
-                N = t("474571"),
-                b = t("216422"),
-                B = t("987772"),
-                M = t("956089"),
-                D = t("599110"),
-                w = t("315102"),
-                F = t("719923"),
-                H = t("713135"),
-                x = t("581295"),
-                k = t("878569"),
-                G = t("236100"),
-                j = t("590456"),
-                W = t("49111"),
-                z = t("646718"),
-                V = t("782340"),
-                Y = t("220817");
-            (i = l || (l = {}))[i.SHOULD_LOAD = 0] = "SHOULD_LOAD", i[i.LOADING = 1] = "LOADING", i[i.COMPLETE = 2] = "COMPLETE";
-            let X = {
-                    [j.UserProfileTypes.POPOUT]: 18,
-                    [j.UserProfileTypes.MODAL]: 24,
-                    [j.UserProfileTypes.SETTINGS]: 0,
-                    [j.UserProfileTypes.PANEL]: 18,
-                    [j.UserProfileTypes.POMELO_POPOUT]: 18,
-                    [j.UserProfileTypes.CANCEL_MODAL]: 0
-                },
-                Z = {
-                    [j.UserProfileTypes.MODAL]: W.AnalyticsPages.USER_PROFILE,
-                    [j.UserProfileTypes.POPOUT]: W.AnalyticsPages.USER_POPOUT,
-                    [j.UserProfileTypes.SETTINGS]: W.AnalyticsPages.USER_POPOUT,
-                    [j.UserProfileTypes.PANEL]: W.AnalyticsPages.DM_CHANNEL,
-                    [j.UserProfileTypes.POMELO_POPOUT]: W.AnalyticsPages.POMELO_POPOUT,
-                    [j.UserProfileTypes.CANCEL_MODAL]: W.AnalyticsPages.USER_POPOUT
-                };
-
-            function K(e) {
-                let {
-                    type: r,
-                    shown: l,
-                    onClick: i
-                } = e, s = (0, c.useStateFromStores)([A.default], () => {
-                    let e = A.default.getCurrentUser();
-                    return F.default.canUsePremiumProfileCustomization(e)
-                }), u = n.useRef(!1), {
-                    analyticsLocations: d
-                } = (0, P.default)(p.default.BADGE);
-                return n.useEffect(() => {
-                    l && !u.current && (u.current = !0, D.default.track(W.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-                        type: z.PremiumUpsellTypes.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL,
-                        location: {
-                            page: Z[r],
-                            section: W.AnalyticsSections.NITRO_BANNER,
-                            object: W.AnalyticsObjects.NITRO_BADGE
-                        },
-                        location_stack: d
-                    }))
-                }, [d, l, r]), (0, o.jsx)(f.Tooltip, {
-                    tooltipContentClassName: Y.premiumIconTooltipContent,
-                    text: s ? V.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP : V.default.Messages.USER_SETTINGS_PROFILE_THEMES_USER_PROFILE_ICON_TOOLTIP_UPSELL,
-                    children: e => (0, o.jsx)(f.Clickable, {
-                        ...e,
-                        onClick: s ? void 0 : () => {
-                            var e;
-                            e = d, (0, f.openModalLazy)(async () => {
-                                let {
-                                    default: r
-                                } = await t.el("292890").then(t.bind(t, "292890"));
-                                return t => {
-                                    let {
-                                        onClose: l,
-                                        ...i
-                                    } = t;
-                                    return (0, o.jsx)(r, {
-                                        analyticsLocations: e,
-                                        title: V.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_TITLE,
-                                        description: V.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
-                                            onAndMoreWithPremiumClick: () => {
-                                                l(), E.default.open(W.UserSettingsSections.PREMIUM, null, {
-                                                    analyticsLocations: e
-                                                })
-                                            }
-                                        }),
-                                        onClose: l,
-                                        ...i
-                                    })
-                                }
-                            }), null == i || i()
-                        },
-                        className: a(Y.premiumIconWrapper, {
-                            [Y.visible]: l,
-                            [Y.clickable]: !s
-                        }),
-                        children: (0, o.jsx)(M.TextBadge, {
-                            color: "rgba(32, 34, 37, 0.8)",
-                            text: (0, o.jsx)(b.default, {
-                                width: 16,
-                                height: 16,
-                                className: Y.premiumIcon
-                            })
-                        })
-                    })
-                })
-            }
-
-            function q(e) {
-                let {
-                    darkenOnHover: r,
-                    profileType: t,
-                    profileLabel: l,
-                    icon: i,
-                    ...n
-                } = e, s = X[t], a = "pencil" === i ? B.default : N.default;
-                return (0, o.jsx)(f.Clickable, {
-                    ...n,
-                    "aria-label": l,
-                    className: r ? Y.pencilContainerDark : Y.pencilContainer,
-                    children: (0, o.jsx)(f.Tooltip, {
-                        text: l,
-                        children: e => (0, o.jsx)(a, {
-                            ...e,
-                            width: s,
-                            height: s,
-                            className: Y.editIcon
-                        })
-                    })
-                })
-            }
-
-            function J(e) {
-                var r, t, l;
-                let {
-                    user: i,
-                    displayProfile: s,
-                    bannerSrc: E,
-                    onClose: p,
-                    guildId: P,
-                    profileType: A = j.UserProfileTypes.POPOUT,
-                    allowEdit: N = !0,
-                    showPremiumBadgeUpsell: b = !0,
-                    isHovering: B,
-                    animateOnHover: M
-                } = e, [D, X] = n.useState((null == s ? void 0 : s.banner) == null ? 2 : 0), Z = (0, c.useStateFromStores)([m.default], () => m.default.getGuild(P)), J = (0, c.useStateFromStores)([I.default], () => I.default.getId()), Q = J === i.id && N || i.isClyde() && null != Z && (0, _.canEditClydeAIProfile)(Z), $ = F.default.isPremiumAtLeast(null == s ? void 0 : s.premiumType, z.PremiumTypes.TIER_2), [ee, er] = n.useState(!1), et = (0, c.useStateFromStores)([v.default], () => v.default.isFocused()), el = L.GifAutoPlay.getSetting(), ei = (0, f.useToken)(d.default.unsafe_rawColors.PRIMARY_800).hex(), eo = (0, f.getAvatarSize)(f.AvatarSizes.SIZE_80), en = (0, u.hex2int)((0, T.default)(i.getAvatarURL(P, eo), ei, !1)), es = (0, O.default)(null !== (r = null == s ? void 0 : s.primaryColor) && void 0 !== r ? r : en).hsl, ea = (0, k.getUserBannerSize)(A), eu = null != E ? E : null == s ? void 0 : s.getBannerURL({
-                    size: ea,
-                    canAnimate: M || !el ? ee : et
-                }), ec = null != eu, ed = (0, c.useStateFromStores)([H.default], () => H.default.getUserProfile(i.id)), ef = y.default.getChannel(U.default.getChannelId()), {
-                    appsInGDMEnabled: eE,
-                    availableApplications: ep
-                } = (0, S.usePrivateChannelIntegrationState)({
-                    channelId: null !== (t = null == ef ? void 0 : ef.id) && void 0 !== t ? t : ""
-                }), eP = null == ed ? void 0 : ed.application, eT = eE && null != ep.find(e => e.id === (null == eP ? void 0 : eP.id));
-                if (ec && ($ || i.isClyde()) && 0 === D) {
-                    X(1);
-                    let e = new Image;
-                    e.src = eu, e.onload = () => X(2)
-                }
-                n.useEffect(() => {
-                    if (el || !$) return;
-                    let e = null != E ? E : null == s ? void 0 : s.getBannerURL({
-                        size: ea,
-                        canAnimate: !0
-                    });
-                    if (null == e) return;
-                    let r = new Image;
-                    r.src = e
-                }, [el, $, E, s, ea]);
-                let e_ = (0, h.default)({
-                        analyticsLocation: {
-                            page: W.AnalyticsPages.USER_POPOUT,
-                            section: W.AnalyticsSections.PROFILE_POPOUT
-                        }
-                    }),
-                    eC = (null == s ? void 0 : s.profileEffectID) != null;
-                return (0, o.jsx)(x.default, {
-                    isPremium: $,
-                    hasThemeColors: null !== (l = null == s ? void 0 : s.canEditThemes) && void 0 !== l && l,
-                    profileType: A,
-                    hasBanner: ec,
-                    hasProfileEffect: eC,
-                    children: (0, o.jsxs)("div", {
-                        className: a(Y.banner, (0, k.getUserBannerStyles)({
-                            profileType: A,
-                            user: {
-                                hasBanner: ec,
-                                isPremium: $,
-                                hasProfileEffect: eC
-                            }
-                        }), {
-                            [Y.reducedMotion]: !el
-                        }),
-                        onMouseMove: () => er(!0),
-                        onMouseLeave: () => er(!1),
-                        style: {
-                            backgroundImage: ec && $ ? "url(".concat(eu, ")") : void 0,
-                            backgroundColor: 2 !== D ? d.default.unsafe_rawColors.PRIMARY_800.css : es
-                        },
-                        children: [Q ? null != Z || i.isClyde() ? null != Z && i.isClyde() && (0, _.canEditClydeAIProfile)(Z) ? (0, o.jsx)(q, {
-                            profileType: A,
-                            profileLabel: V.default.Messages.CLYDE_SETTINGS,
-                            icon: "gear",
-                            onClick: () => {
-                                null == p || p(), (0, C.default)(Z.id)
-                            }
-                        }) : null == Z ? null : (0, o.jsx)(f.Popout, {
-                            spacing: 6,
-                            position: "bottom",
-                            renderPopout: e => {
-                                let {
-                                    closePopout: r
-                                } = e;
-                                return (0, o.jsx)(G.default, {
-                                    onClose: r,
-                                    onSelect: p,
-                                    guild: Z
-                                })
-                            },
-                            children: e => (0, o.jsx)(q, {
-                                darkenOnHover: eC && B,
-                                profileLabel: V.default.Messages.EDIT_PROFILE,
-                                icon: "pencil",
-                                ...e,
-                                profileType: A
-                            })
-                        }) : (0, o.jsx)(q, {
-                            darkenOnHover: eC && B,
-                            profileType: A,
-                            profileLabel: V.default.Messages.EDIT_PROFILE,
-                            icon: "pencil",
-                            onClick: () => {
-                                null == p || p(), e_()
-                            }
-                        }) : (() => {
-                            let e = b && ec && A !== j.UserProfileTypes.SETTINGS;
-                            return e ? (0, o.jsx)(K, {
-                                type: A,
-                                shown: void 0 === B ? ee : B,
-                                onClick: p
-                            }) : null
-                        })(), eT ? A !== j.UserProfileTypes.MODAL ? null : (0, o.jsx)(f.Clickable, {
-                            onClick: p,
-                            "aria-label": V.default.Messages.BACK,
-                            className: Y.pencilContainer,
-                            children: (0, o.jsx)(f.Tooltip, {
-                                text: V.default.Messages.BACK,
-                                children: e => (0, o.jsx)(R.default, {
-                                    ...e,
-                                    className: Y.closeIcon,
-                                    color: "white"
-                                })
-                            })
-                        }) : null, !el && (0, w.isAnimatedImageURL)(eu) && (0, o.jsx)(g.default, {
-                            className: Y.gifTag
-                        })]
-                    })
-                })
-            }
-        },
-        581295: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return P
-                }
-            }), t("70102"), t("794252");
-            var l = t("37983");
-            t("884691");
-            var i = t("506838"),
-                o = t("769846"),
-                n = t("77078"),
-                s = t("606292"),
-                a = t("476765"),
-                u = t("159885"),
-                c = t("878569"),
-                d = t("590456"),
-                f = t("573135"),
-                E = t("423713");
-            let p = {
-                [d.UserProfileTypes.POPOUT]: n.AvatarSizes.SIZE_80,
-                [d.UserProfileTypes.MODAL]: n.AvatarSizes.SIZE_120,
-                [d.UserProfileTypes.SETTINGS]: n.AvatarSizes.SIZE_80,
-                [d.UserProfileTypes.PANEL]: n.AvatarSizes.SIZE_80,
-                [d.UserProfileTypes.POMELO_POPOUT]: n.AvatarSizes.SIZE_80,
-                [d.UserProfileTypes.CANCEL_MODAL]: n.AvatarSizes.SIZE_56
-            };
-
-            function P(e) {
-                let {
-                    children: r,
-                    profileType: t,
-                    isPremium: P,
-                    hasThemeColors: T,
-                    hasBanner: _,
-                    forProfileEffectModal: C,
-                    hasProfileEffect: O = !1
-                } = e, S = p[t], h = (0, a.useUID)(), L = function(e) {
-                    let {
-                        profileType: r,
-                        avatarSize: t,
-                        hasBanner: l,
-                        isPremium: a,
-                        hasThemeColors: E,
-                        hasProfileEffect: p
-                    } = e, P = f.AvatarDecorationBorderSizes[t];
-                    if (null == P) throw Error("Unsupported avatar size for banner mask");
-                    let T = (0, s.getDecorationSizeForAvatarSize)(t),
-                        {
-                            size: _,
-                            stroke: C
-                        } = (0, n.getAvatarSpecs)(t),
-                        O = {
-                            avatarSize: _,
-                            avatarBorderSize: C,
-                            avatarDecorationSize: T,
-                            avatarDecorationBorderSize: P,
-                            avatarDecorationOffsetY: -(T + 2 * P) / 2,
-                            bannerHeight: (0, c.getUserBannerHeight)({
-                                profileType: r,
-                                user: {
-                                    hasBanner: l,
-                                    isPremium: a,
-                                    hasProfileEffect: p
-                                }
-                            })
-                        };
-                    return (0, i.match)(r).with(d.UserProfileTypes.POPOUT, () => {
-                        let e = E ? (0, u.cssValueToNumber)(o.default.USER_PROFILE_THEMED_CONTAINER_USER_PROFILE_THEMED_PADDING) : 0;
-                        return {
-                            ...O,
-                            bannerWidth: (0, u.cssValueToNumber)(o.default.USER_PROFILE_THEMED_CONTAINER_USER_POPOUT_WIDTH),
-                            offsetX: 16 - e,
-                            offsetY: 4 + e,
-                            avatarDecorationOffsetX: 4
-                        }
-                    }).with(d.UserProfileTypes.MODAL, () => ({
-                        ...O,
-                        bannerWidth: (0, c.getUserBannerSize)(d.UserProfileTypes.MODAL),
-                        offsetX: 14,
-                        offsetY: 5,
-                        avatarDecorationOffsetX: 2
-                    })).with(d.UserProfileTypes.SETTINGS, () => ({
-                        ...O,
-                        bannerWidth: 660,
-                        offsetX: 16,
-                        offsetY: -22,
-                        avatarDecorationOffsetX: 8
-                    })).with(d.UserProfileTypes.PANEL, () => {
-                        let e = (0, u.cssValueToNumber)(o.default.USER_PROFILE_THEMED_CONTAINER_USER_PROFILE_THEMED_PADDING);
-                        return {
-                            ...O,
-                            bannerWidth: (0, u.cssValueToNumber)(o.default.USER_PROFILE_THEMED_CONTAINER_USER_POPOUT_WIDTH),
-                            offsetX: 16 - e,
-                            offsetY: 4 + e,
-                            avatarDecorationOffsetX: 4
-                        }
-                    }).with(d.UserProfileTypes.POMELO_POPOUT, () => ({
-                        ...O,
-                        bannerWidth: (0, c.getUserBannerSize)(d.UserProfileTypes.POMELO_POPOUT),
-                        offsetX: 20,
-                        offsetY: -20,
-                        avatarDecorationOffsetX: 10
-                    })).with(d.UserProfileTypes.CANCEL_MODAL, () => ({
-                        ...O,
-                        bannerWidth: (0, c.getUserBannerSize)(d.UserProfileTypes.CANCEL_MODAL),
-                        offsetX: 8,
-                        offsetY: 2,
-                        avatarDecorationOffsetX: 8
-                    })).exhaustive()
-                }({
-                    profileType: t,
-                    avatarSize: S,
-                    hasBanner: _,
-                    isPremium: P,
-                    hasThemeColors: T,
-                    hasProfileEffect: O
-                });
-                C && (L.bannerWidth = (0, u.cssValueToNumber)(o.default.USER_PROFILE_THEMED_CONTAINER_PROFILE_EFFECTS_USER_POPOUT_WIDTH));
-                let I = L.avatarSize / 2 + L.avatarBorderSize,
-                    y = L.bannerHeight - L.offsetY;
-                return (0, l.jsxs)("svg", {
-                    className: E.bannerSVGWrapper,
-                    viewBox: "0 0 ".concat(L.bannerWidth, " ").concat(L.bannerHeight),
-                    style: {
-                        minWidth: L.bannerWidth,
-                        minHeight: L.bannerHeight
-                    },
-                    children: [(0, l.jsxs)("mask", {
-                        id: h,
-                        children: [(0, l.jsx)("rect", {
-                            fill: "white",
-                            x: "0",
-                            y: "0",
-                            width: "100%",
-                            height: "100%"
-                        }), (0, l.jsx)("circle", {
-                            fill: "black",
-                            cx: L.offsetX + I,
-                            cy: y,
-                            r: I
-                        })]
-                    }), (0, l.jsx)("foreignObject", {
-                        x: "0",
-                        y: "0",
-                        width: "100%",
-                        height: "100%",
-                        overflow: "visible",
-                        mask: "url(#".concat(h, ")"),
-                        children: r
+                return (0, n.jsxs)("svg", {
+                    ...(0, i.default)(o),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: r,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: [(0, n.jsx)("circle", {
+                        cx: "12",
+                        cy: "12",
+                        r: "10",
+                        fill: "string" == typeof a ? a : a.css,
+                        className: s
+                    }), (0, n.jsx)("path", {
+                        fill: "string" == typeof u ? u : u.css,
+                        fillRule: "evenodd",
+                        d: "M23 12c0 6.075-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1s11 4.925 11 11Zm-9.5-4.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Zm-.772 3.96a1 1 0 1 0-1.956-.42L9.73 15.655a2.766 2.766 0 0 0 4.312 2.83l.24-.171a1 1 0 1 0-1.163-1.628l-.24.171a.766.766 0 0 1-1.194-.783l1.043-4.865Z",
+                        clipRule: "evenodd",
+                        className: d
                     })]
                 })
             }
         },
-        878569: function(e, r, t) {
+        960460: function(e, t, r) {
             "use strict";
-            t.r(r), t.d(r, {
-                buildGetPremiumUserBannerStyles: function() {
-                    return a
+            let n;
+            r.r(t), r.d(t, {
+                applyStaffBuildOverride: function() {
+                    return d
                 },
-                getUserBannerStyles: function() {
-                    return u
+                applyPublicBuildOverride: function() {
+                    return o
                 },
-                getUserBannerHeight: function() {
+                clearBuildOverride: function() {
                     return c
                 },
-                getUserBannerSize: function() {
+                getPublicBuildOverrideLink: function() {
                     return f
                 }
-            }), t("794252");
-            var l = t("506838"),
-                i = t("617258"),
-                o = t("769846"),
-                n = t("590456"),
-                s = t("220817");
-            let a = e => r => {
-                    if (r.hasBanner && r.isPremium || r.hasProfileEffect) return e.premiumUserWithBanner;
-                    if (r.isPremium) {
-                        var t;
-                        return null !== (t = e.premiumUserWithoutBanner) && void 0 !== t ? t : e.default
-                    }
-                    return e.default
-                },
-                u = e => {
-                    let {
-                        profileType: r,
-                        user: t
-                    } = e;
-                    return (0, l.match)(r).with(n.UserProfileTypes.POPOUT, n.UserProfileTypes.POMELO_POPOUT, () => {
-                        let e = a({
-                            premiumUserWithBanner: s.popoutBannerPremium,
-                            premiumUserWithoutBanner: s.popoutNoBannerPremium,
-                            default: s.popoutBanner
-                        });
-                        return e(t)
-                    }).with(n.UserProfileTypes.MODAL, () => {
-                        let e = a({
-                            premiumUserWithBanner: s.profileBannerPremium,
-                            premiumUserWithoutBanner: s.profileBanner,
-                            default: s.profileBanner
-                        });
-                        return e(t)
-                    }).with(n.UserProfileTypes.SETTINGS, () => s.settingsBanner).with(n.UserProfileTypes.PANEL, () => s.panelBanner).with(n.UserProfileTypes.CANCEL_MODAL, () => s.cancelModalBanner).exhaustive()
-                },
-                c = e => {
-                    let {
-                        profileType: r,
-                        user: t
-                    } = e, s = (0, l.match)(r).with(n.UserProfileTypes.POPOUT, () => {
-                        let e = a({
-                            premiumUserWithBanner: o.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_POPOUT,
-                            premiumUserWithoutBanner: o.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_NO_BANNER_IMAGE_POPOUT,
-                            default: o.default.USER_BANNER_BANNER_HEIGHT_POPOUT
-                        });
-                        return e(t)
-                    }).with(n.UserProfileTypes.MODAL, () => {
-                        let e = a({
-                            premiumUserWithBanner: o.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_PROFILE,
-                            premiumUserWithoutBanner: o.default.USER_BANNER_BANNER_HEIGHT_PROFILE,
-                            default: o.default.USER_BANNER_BANNER_HEIGHT_PROFILE
-                        });
-                        return e(t)
-                    }).with(n.UserProfileTypes.POMELO_POPOUT, () => o.default.USER_BANNER_BANNER_HEIGHT_POMELO).with(n.UserProfileTypes.SETTINGS, () => o.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_SETTINGS).with(n.UserProfileTypes.PANEL, () => o.default.USER_BANNER_BANNER_HEIGHT_PANEL).with(n.UserProfileTypes.CANCEL_MODAL, () => o.default.USER_BANNER_CANCEL_MODAL_HEIGHT).exhaustive();
-                    return (0, i.cssValueToNumber)(s)
-                },
-                d = Object.freeze({
-                    [n.UserProfileTypes.POPOUT]: 480,
-                    [n.UserProfileTypes.PANEL]: 480,
-                    [n.UserProfileTypes.MODAL]: 600,
-                    [n.UserProfileTypes.SETTINGS]: 600,
-                    [n.UserProfileTypes.POMELO_POPOUT]: 432,
-                    [n.UserProfileTypes.CANCEL_MODAL]: 172
-                }),
-                f = e => d[e]
+            });
+            var l = r("872717"),
+                i = r("271938"),
+                a = r("922932"),
+                s = r("355025");
+            let u = "/__development/build_overrides";
+            async function d(e) {
+                try {
+                    var t;
+                    let r = await l.default.put({
+                        url: (0, s.getAPIEndpoint)(u),
+                        body: {
+                            overrides: e,
+                            version: s.APP_VERSION
+                        },
+                        headers: {
+                            Authorization: null !== (t = i.default.getToken()) && void 0 !== t ? t : ""
+                        },
+                        oldFormErrors: !0
+                    });
+                    return await n(r), r
+                } catch (e) {
+                    return e
+                }
+            }
+            async function o(e) {
+                try {
+                    let t = await l.default.put({
+                        url: (0, s.getAPIEndpoint)("/__development/link"),
+                        body: {
+                            payload: e,
+                            token: i.default.getToken(),
+                            version: s.APP_VERSION
+                        },
+                        oldFormErrors: !0
+                    });
+                    return await n(t), t
+                } catch (e) {
+                    return e
+                }
+            }
+            async function c() {
+                let e = await l.default.delete({
+                    url: (0, s.getAPIEndpoint)(u),
+                    oldFormErrors: !0
+                });
+                return await n(e), e
+            }
+
+            function f(e) {
+                var t;
+                return l.default.post({
+                    url: (0, s.getAPIEndpoint)("/__development/create_build_override_link"),
+                    body: e,
+                    headers: {
+                        Authorization: null !== (t = i.default.getToken()) && void 0 !== t ? t : ""
+                    },
+                    oldFormErrors: !0
+                }).then(e => ({
+                    url: e.body.url,
+                    error: !1
+                }), e => 400 === e.status ? {
+                    url: !1,
+                    error: e.body
+                } : {
+                    url: !1,
+                    error: "Error making API request (".concat(e.status, ")")
+                })
+            }
+            n = async e => {
+                try {
+                    await a.default.flushCookies()
+                } catch (e) {}
+            }
         },
-        430312: function(e, r, t) {
+        489740: function(e, t, r) {
             "use strict";
-            t.r(r), t.d(r, {
-                UserProfileContext: function() {
-                    return E
+            r.r(t), r.d(t, {
+                State: function() {
+                    return l
                 },
                 default: function() {
-                    return P
+                    return f
                 }
-            }), t("794252");
-            var l = t("37983"),
-                i = t("884691"),
-                o = t("414456"),
-                n = t.n(o),
-                s = t("506838"),
-                a = t("217513"),
-                u = t("906889"),
-                c = t("590456"),
-                d = t("200932"),
-                f = t("677055");
-            let E = i.createContext({
-                profileType: null,
-                profileTheme: null
             });
+            var n, l, i = r("446674"),
+                a = r("913144"),
+                s = r("355025");
+            (n = l || (l = {}))[n.NotResolved = 0] = "NotResolved", n[n.Resolving = 1] = "Resolving", n[n.Resolved = 2] = "Resolved", n[n.Invalid = 3] = "Invalid";
+            let u = 0,
+                d = null,
+                o = {};
+            class c extends i.default.Store {
+                getCurrentBuildOverride() {
+                    return 0 === u && (u = 1, (0, s.getBuildOverride)().then(e => {
+                        a.default.dispatch({
+                            type: "CURRENT_BUILD_OVERRIDE_RESOLVED",
+                            overrides: e
+                        })
+                    })), {
+                        state: u,
+                        overrides: d
+                    }
+                }
+                getBuildOverride(e) {
+                    return ! function(e) {
+                        if (e in o) return;
+                        let t = (0, s.validateURL)(e);
+                        if (null == t) {
+                            o = {
+                                ...o,
+                                [e]: {
+                                    url: e,
+                                    state: 3
+                                }
+                            };
+                            return
+                        }
+                        o = {
+                            ...o,
+                            [e]: {
+                                url: e,
+                                validatedURL: t.url,
+                                payload: String(t.payload),
+                                state: 1
+                            }
+                        };
+                        (0, s.getBuildOverrideMeta)(t.url).then(t => {
+                            a.default.dispatch({
+                                type: "BUILD_OVERRIDE_RESOLVED",
+                                url: e,
+                                override: t
+                            })
+                        })
+                    }(e), o[e]
+                }
+                getBuildOverrides() {
+                    return o
+                }
+            }
+            c.displayName = "BuildOverrideStore";
+            var f = new c(a.default, {
+                BUILD_OVERRIDE_RESOLVED: function(e) {
+                    let {
+                        url: t,
+                        override: r
+                    } = e;
+                    o = {
+                        ...o,
+                        [t]: {
+                            ...o[t],
+                            state: null == r ? 3 : 2,
+                            override: r
+                        }
+                    }
+                },
+                CURRENT_BUILD_OVERRIDE_RESOLVED: function(e) {
+                    let {
+                        overrides: t
+                    } = e;
+                    u = 2, d = t
+                }
+            })
+        },
+        161449: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return d
+                }
+            });
+            var n = r("917351"),
+                l = r.n(n),
+                i = r("271938"),
+                a = r("180855"),
+                s = r("49111"),
+                u = r("782340");
+
+            function d(e, t, r) {
+                if (null == e || null == t) return {
+                    valid: !1,
+                    reason: u.default.Messages.BUILD_OVERRIDE_INVALID
+                };
+                let {
+                    releaseChannel: n,
+                    expiresAt: d,
+                    validForUserIds: o,
+                    allowedVersions: c,
+                    targetBuildOverride: f
+                } = e, v = Object.keys(f);
+                if (0 === l.intersection(v, t).length) return {
+                    valid: !1,
+                    reason: u.default.Messages.BUILD_OVERRIDE_INCOMPATIBLE_TARGETS.format({
+                        requestedTargets: v.map(e => {
+                            var t;
+                            return null !== (t = a.BUILD_OVERRIDE_TARGET_NAMES[e]) && void 0 !== t ? t : "unknown"
+                        }).join(", ")
+                    })
+                };
+                if (null != n && n !== window.GLOBAL_ENV.RELEASE_CHANNEL) {
+                    let e = n === s.PublicReleaseChannels.PTB ? n.toUpperCase() : "".concat(n.charAt(0).toUpperCase()).concat(n.slice(1));
+                    return {
+                        valid: !1,
+                        reason: u.default.Messages.BUILD_OVERRIDE_INCOMPATIBLE_CLIENT.format({
+                            releaseChannel: e
+                        })
+                    }
+                }
+                if (null != c && (null == r || !c.includes(r))) return {
+                    valid: !1,
+                    reason: u.default.Messages.BUILD_OVERRIDE_INCOMPATIBLE_CLIENT.format({
+                        releaseChannel: c.join(", ")
+                    })
+                };
+                let g = null != d ? new Date(d).getTime() : null;
+                return null != g && g < Date.now() ? {
+                    valid: !1,
+                    reason: u.default.Messages.BUILD_OVERRIDE_EXPIRED
+                } : o.length > 0 && !o.includes(i.default.getId()) ? {
+                    valid: !1,
+                    reason: u.default.Messages.BUILD_OVERRIDE_INVALID_USER
+                } : {
+                    valid: !0
+                }
+            }
+        },
+        451540: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return m
+                }
+            }), r("222007");
+            var n = r("37983"),
+                l = r("884691"),
+                i = r("414456"),
+                a = r.n(i),
+                s = r("627445"),
+                u = r.n(s),
+                d = r("77078"),
+                o = r("68238"),
+                c = r("83900"),
+                f = r("626820"),
+                v = r("306160"),
+                g = r("701909"),
+                h = r("161449"),
+                E = r("49111"),
+                C = r("782340"),
+                I = r("939848");
+
+            function R(e) {
+                let {
+                    url: t
+                } = e, [r, i] = l.useState(!1), s = l.useRef(void 0), u = l.useCallback(() => {
+                    !r && ((0, v.copy)(t) && i(!0), s.current = setTimeout(() => i(!1), 2e3))
+                }, [t, r]);
+                return l.useEffect(() => () => clearTimeout(s.current), []), v.SUPPORTS_COPY ? (0, n.jsxs)(d.Clickable, {
+                    className: a(I.copyLink, r ? I.copied : null),
+                    onClick: u,
+                    children: [(0, n.jsx)(c.default, {
+                        className: I.copyLinkIcon
+                    }), r ? C.default.Messages.BUILD_OVERRIDE_LINK_COPIED : C.default.Messages.BUILD_OVERRIDE_LINK_COPY]
+                }) : null
+            }
 
             function p(e) {
-                var r, t;
                 let {
-                    user: o,
-                    guildId: p,
-                    profileType: P,
-                    className: T,
-                    pendingThemeColors: _,
-                    useDefaultClientTheme: C,
-                    children: O,
-                    forceShowPremium: S = !1,
-                    showOutOfBoundaryComponents: h = !1
-                } = e, L = i.useRef(null), I = (0, a.default)(o.id, p), {
-                    profileTheme: y
-                } = (0, u.default)(o, I, {
-                    themeElementRef: L,
-                    pendingThemeColors: _,
-                    isPreview: S,
-                    useDefaultClientTheme: C
-                }), m = (null == I ? void 0 : I.canEditThemes) || S, U = i.useMemo(() => ({
-                    profileType: P,
-                    profileTheme: y
-                }), [P, y]);
-                return (0, l.jsx)("div", {
-                    ref: L,
-                    className: n((r = P, (0, s.match)(r).with(c.UserProfileTypes.POPOUT, c.UserProfileTypes.SETTINGS, c.UserProfileTypes.CANCEL_MODAL, () => f.userPopoutOuter).with(c.UserProfileTypes.MODAL, () => f.userProfileModalOuter).with(c.UserProfileTypes.PANEL, () => f.userPanelOuter).with(c.UserProfileTypes.CARD, () => f.userCardOuter).exhaustive()), m ? f.userProfileOuterThemed : f.userProfileOuterUnthemed, d.profileColors, h ? f.showOutOfBoundaryComponents : void 0, "theme-".concat(y), T),
-                    children: (0, l.jsx)("div", {
-                        className: n((t = P, (0, s.match)(t).with(c.UserProfileTypes.POPOUT, c.UserProfileTypes.SETTINGS, c.UserProfileTypes.CANCEL_MODAL, () => f.userPopoutInner).with(c.UserProfileTypes.MODAL, () => f.userProfileModalInner).with(c.UserProfileTypes.PANEL, () => f.userPanelInner).with(c.UserProfileTypes.CARD, () => f.userCardInner).exhaustive()), function() {
-                            let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                                r = arguments.length > 1 ? arguments[1] : void 0,
-                                t = arguments.length > 2 ? arguments[2] : void 0;
-                            return (0, s.match)({
-                                profileType: t,
-                                canUsePremiumProfileCustomization: e,
-                                hasBanner: r
-                            }).with({
-                                profileType: c.UserProfileTypes.PANEL
-                            }, () => f.userPanelInnerThemed).with({
-                                canUsePremiumProfileCustomization: !0,
-                                hasBanner: !0
-                            }, () => f.userProfileInnerThemedWithBanner).with({
-                                canUsePremiumProfileCustomization: !0
-                            }, () => f.userProfileInnerThemedPremiumWithoutBanner).otherwise(() => f.userProfileInnerThemedNonPremium)
-                        }((null == I ? void 0 : I.canUsePremiumProfileCustomization) || S, (null == I ? void 0 : I.banner) != null, P)),
-                        children: (0, l.jsx)(E.Provider, {
-                            value: U,
-                            children: O
-                        })
-                    })
+                    subHead: t,
+                    buildDetails: r,
+                    buttonColor: i,
+                    buttonClick: s,
+                    buttonText: u,
+                    disabled: o = !1,
+                    submitting: c = !1
+                } = e;
+                return (0, n.jsxs)(l.Fragment, {
+                    children: [(0, n.jsxs)("div", {
+                        className: I.buildInfo,
+                        children: [(0, n.jsx)(d.Text, {
+                            variant: "text-sm/medium",
+                            className: I.subHead,
+                            children: t
+                        }), (0, n.jsx)("div", {
+                            className: I.buildDetails,
+                            children: r
+                        })]
+                    }), (0, n.jsx)(d.Button, {
+                        submitting: c,
+                        color: i,
+                        onClick: s,
+                        className: a(I.button, o ? I.disabledButtonOverride : null),
+                        size: I.buttonSize,
+                        disabled: o,
+                        children: u
+                    })]
                 })
             }
-            p.Inner = function(e) {
-                var r;
+            var m = e => {
+                var t, r, i;
                 let {
-                    className: t,
-                    children: o
-                } = e, {
-                    profileType: a
-                } = i.useContext(E);
-                return (0, l.jsx)("div", {
-                    className: n((r = a, (0, s.match)(r).with(c.UserProfileTypes.POPOUT, c.UserProfileTypes.SETTINGS, () => f.userPopoutOverlayBackground).with(c.UserProfileTypes.MODAL, () => f.userProfileModalOverlayBackground).with(c.UserProfileTypes.PANEL, () => f.userPanelOverlayBackground).otherwise(() => f.overlayBackground)), t),
-                    children: o
-                })
-            };
-            var P = p
-        },
-        236100: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return d
-                }
-            });
-            var l = t("37983");
-            t("884691");
-            var i = t("77078"),
-                o = t("38766"),
-                n = t("49111"),
-                s = t("782340"),
-                a = t("364547");
-            let u = {
-                    page: n.AnalyticsPages.GUILD_CHANNEL,
-                    section: n.AnalyticsSections.PROFILE_POPOUT,
-                    object: n.AnalyticsObjects.EDIT_PER_SERVER_IDENTITY
-                },
-                c = {
-                    page: n.AnalyticsPages.USER_POPOUT,
-                    section: n.AnalyticsSections.PROFILE_POPOUT
-                };
-
-            function d(e) {
-                let {
-                    onSelect: r,
-                    onClose: t,
-                    guild: n
-                } = e, d = (0, o.default)({
-                    guild: n,
-                    analyticsLocation: u
-                }), f = (0, o.default)({
-                    analyticsLocation: c
-                });
-                return (0, l.jsxs)(i.Menu, {
-                    className: a.popoutMenu,
-                    onSelect: r,
-                    navId: "edit-profile-popout",
-                    onClose: t,
-                    "aria-label": s.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
-                    children: [(0, l.jsx)(i.MenuItem, {
-                        id: "edit-server-profile",
-                        label: s.default.Messages.CHANGE_IDENTITY,
-                        subtext: s.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE_MENU_HELP,
-                        action: () => d()
-                    }), (0, l.jsx)(i.MenuItem, {
-                        id: "edit-default-profile",
-                        label: s.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE,
-                        subtext: s.default.Messages.USER_PROFILE_MENU_HELP,
-                        action: () => f()
+                    loading: s = !1,
+                    currentOverrides: c,
+                    linkMeta: v,
+                    url: m,
+                    applyBuildOverride: L,
+                    clearBuildOverride: _
+                } = e, [O, B] = l.useState(!1), D = l.useCallback(() => {
+                    !O && (B(!0), L().catch(() => B(!1)))
+                }, [L, O]), b = l.useCallback(() => {
+                    !O && (B(!0), _().catch(() => B(!1)))
+                }, [_, O]);
+                return (0, n.jsxs)("div", {
+                    className: I.wrapper,
+                    children: [(t = v, r = m, i = s, (0, n.jsxs)(d.Text, {
+                        variant: "text-xs/normal",
+                        className: I.titleRegion,
+                        children: [(0, n.jsx)("strong", {
+                            className: I.title,
+                            children: null != t && null != t.releaseChannel ? C.default.Messages.BUILD_OVERRIDE_FOR.format({
+                                releaseChannel: t.releaseChannel
+                            }) : C.default.Messages.BUILD_OVERRIDE
+                        }), (0, n.jsx)(d.Anchor, {
+                            className: I.infoLink,
+                            href: g.default.getArticleURL(E.HelpdeskArticles.BUILD_OVERRIDE_EMBED),
+                            target: "_blank",
+                            children: (0, n.jsx)(o.default, {
+                                className: I.infoIcon
+                            })
+                        }), i ? null : (0, n.jsx)(R, {
+                            url: r
+                        })]
+                    })), (0, n.jsxs)("div", {
+                        className: I.content,
+                        children: [(0, n.jsx)(f.default, {
+                            className: I.icon
+                        }), s ? (0, n.jsxs)(l.Fragment, {
+                            children: [(0, n.jsxs)("div", {
+                                className: I.buildInfo,
+                                children: [(0, n.jsx)("div", {
+                                    className: a(I.barLoader, I.barTitle)
+                                }), (0, n.jsx)("div", {
+                                    className: I.barLoader
+                                })]
+                            }), (0, n.jsx)("div", {
+                                className: I.buttonLoader
+                            })]
+                        }) : function(e) {
+                            var t, r;
+                            let n, l, i, {
+                                    currentOverrides: a,
+                                    linkMeta: s,
+                                    applyBuildOverride: o,
+                                    clearBuildOverride: c,
+                                    submitting: f
+                                } = e,
+                                v = (0, h.default)(s, ["discord_web"]);
+                            if (!v.valid) return function(e) {
+                                return p({
+                                    subHead: C.default.Messages.BUILD_OVERRIDE_ISNT_AVAILABLE,
+                                    buttonColor: d.Button.Colors.TRANSPARENT,
+                                    buttonText: "Invalid",
+                                    buildDetails: e,
+                                    disabled: !0
+                                })
+                            }(v.reason);
+                            u(null != s, "BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved");
+                            let {
+                                discord_web: g
+                            } = s.targetBuildOverride;
+                            if (u(null != g, "BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web should never be null if resolved"), t = g, null == (r = a) || null == r.discord_web ? 1 : t.id !== r.discord_web.id || t.type !== r.discord_web.type) l = C.default.Messages.BUILD_OVERRIDE_APPLY, n = o, i = d.Button.Colors.GREEN;
+                            else l = C.default.Messages.BUILD_OVERRIDE_CLEAR, n = c, i = d.Button.Colors.RED;
+                            return p({
+                                subHead: C.default.Messages.BUILD_OVERRIDE_ID,
+                                buildDetails: g.id,
+                                buttonClick: n,
+                                buttonText: l,
+                                buttonColor: i,
+                                submitting: f
+                            })
+                        }({
+                            currentOverrides: c,
+                            linkMeta: v,
+                            applyBuildOverride: D,
+                            clearBuildOverride: b,
+                            submitting: O
+                        })]
                     })]
                 })
             }
         },
-        906889: function(e, r, t) {
+        198700: function(e, t, r) {
             "use strict";
-            t.r(r), t.d(r, {
+            r.r(t), r.d(t, {
                 default: function() {
                     return f
                 }
-            }), t("222007");
-            var l = t("884691"),
-                i = t("509043"),
-                o = t("446674"),
-                n = t("841098"),
-                s = t("206230"),
-                a = t("388491"),
-                u = t("528438");
-            let c = ["--profile-gradient-primary-color", "--profile-gradient-secondary-color", "--profile-gradient-button-color", "--profile-gradient-overlay-color", "--profile-body-background-color", "--profile-body-divider-color", "--profile-avatar-border-color", "--profile-message-input-border-color", "--profile-note-background-color", "--profile-body-background-hover", "--account-profile-modal-list-item-hover", "--profile-role-pill-background-color", "--profile-role-pill-border-color"];
+            }), r("70102");
+            var n = r("37983"),
+                l = r("884691"),
+                i = r("446674"),
+                a = r("960460"),
+                s = r("489740"),
+                u = r("451540"),
+                d = r("425916");
+            async function o(e) {
+                let t = await (0, a.applyPublicBuildOverride)(e);
+                if (200 !== t.status) throw Error("Build override couldn't apply");
+                window.location.reload(!0)
+            }
+            async function c() {
+                await (0, a.clearBuildOverride)(), window.location.reload(!0)
+            }
+            var f = l.memo(function(e) {
+                let {
+                    url: t
+                } = e, r = (0, i.useStateFromStoresObject)([s.default], () => s.default.getCurrentBuildOverride()), a = (0, i.useStateFromStores)([s.default], () => s.default.getBuildOverride(t)), {
+                    payload: f,
+                    validatedURL: v
+                } = a, g = r.state === s.State.Resolving || a.state === s.State.Resolving, h = l.useCallback(() => null == f ? Promise.reject(Error("Invalid override payload")) : ((0, d.addRecentBuildOverride)(a.override, f), o(f)), [f, a]);
+                return null != v ? (0, n.jsx)(u.default, {
+                    loading: g,
+                    linkMeta: a.override,
+                    currentOverrides: r.overrides,
+                    applyBuildOverride: h,
+                    clearBuildOverride: c,
+                    url: v
+                }) : null
+            })
+        },
+        425916: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                getRecentBuildOverrides: function() {
+                    return i
+                },
+                addRecentBuildOverride: function() {
+                    return a
+                }
+            }), r("222007");
+            var n = r("95410");
+            let l = "recentBuildOverrides";
 
-            function d(e, r, t) {
-                var l;
-                null == e || null === (l = e.current) || void 0 === l || l.style.setProperty(r, null != t ? t : null)
+            function i() {
+                var e;
+                let t = null !== (e = n.default.get(l)) && void 0 !== e ? e : [];
+                return t.filter(e => null == e.exp || e.exp > Date.now())
             }
 
-            function f(e, r) {
-                let {
-                    themeElementRef: t,
-                    pendingThemeColors: f,
-                    isPreview: E,
-                    useDefaultClientTheme: p
-                } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, [P, T] = (0, u.default)(e, r, {
-                    pendingThemeColors: f,
-                    isPreview: E
-                }), [_, C, O] = (0, o.useStateFromStoresArray)([s.default], () => [s.default.desaturateUserColors, s.default.saturation, s.default.syncProfileThemeWithUserTheme]), S = (0, n.default)(), h = l.useCallback(() => O || p ? S : (0, a.getProfileTheme)(P), [p, O, S, P]), [L, I] = l.useState(h()), y = (0, a.useProfileThemeValues)(L), m = (0, a.useDividerColor)(L, P), U = (0, a.useMessageInputBorderColor)(L, T), A = l.useCallback((e, r) => (0, i.int2hsl)(e, _, null, r), [_]);
-                l.useEffect(() => {
-                    I(h())
-                }, [P, O, S, p, h]);
-                let v = (0, a.useAvatarBorderColor)(L, P, O),
-                    g = null != v ? (0, i.int2hsl)(v, !1, _ ? C : null) : null,
-                    R = e => c.forEach(r => {
-                        e.style.removeProperty(r)
-                    });
-                return l.useEffect(() => {
-                    if (null != P && null != T && null != L && null != v && null != m && null != U) {
-                        let e = O && L !== S ? null == y ? void 0 : y.overlaySyncedWithUserTheme : null == y ? void 0 : y.overlay;
-                        d(t, "--profile-gradient-primary-color", A(P)), d(t, "--profile-gradient-secondary-color", A(T)), d(t, "--profile-gradient-button-color", A((0, a.calculateButtonColor)(P))), d(t, "--profile-gradient-overlay-color", e), d(t, "--profile-body-background-color", null == y ? void 0 : y.sectionBox), d(t, "--profile-body-background-hover", null == y ? void 0 : y.profileBodyBackgroundHover), d(t, "--profile-body-divider-color", A(m, null == y ? void 0 : y.dividerOpacity)), d(t, "--profile-avatar-border-color", A(v)), d(t, "--profile-message-input-border-color", A(U)), d(t, "--profile-note-background-color", null == y ? void 0 : y.noteBackgroundColor), d(t, "--profile-role-pill-background-color", null == y ? void 0 : y.rolePillBackgroundColor), d(t, "--profile-role-pill-border-color", null == y ? void 0 : y.rolePillBorderColor)
-                    } else(null == t ? void 0 : t.current) != null && R(null == t ? void 0 : t.current)
-                }, [P, T, v, L, S, t, A, O, m, null == y ? void 0 : y.overlaySyncedWithUserTheme, null == y ? void 0 : y.overlay, null == y ? void 0 : y.sectionBox, null == y ? void 0 : y.profileBodyBackgroundHover, null == y ? void 0 : y.dividerOpacity, null == y ? void 0 : y.noteBackgroundColor, null == y ? void 0 : y.rolePillBackgroundColor, null == y ? void 0 : y.rolePillBorderColor, U]), {
-                    profileTheme: null != L ? L : S,
-                    primaryProfileColor: P,
-                    avatarBorderColor: g
+            function a(e, t) {
+                if (null == t || null == e || null == e.targetBuildOverride.discord_web) return;
+                let r = {
+                        id: e.targetBuildOverride.discord_web.id,
+                        payload: t,
+                        exp: Date.parse(e.expiresAt)
+                    },
+                    a = i(),
+                    s = [r, ...a.filter(e => r.id !== e.id)].slice(0, 5);
+                n.default.set(l, s)
+            }
+        },
+        758926: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                isLinkTrusted: function() {
+                    return i
+                }
+            });
+            var n = r("176309"),
+                l = r("128259");
+
+            function i(e) {
+                return null != e.target && (0, l.isLinkTrusted)(e.target, null != e.title && "" !== e.title ? e.title : (0, n.astToString)(e.content))
+            }
+        },
+        47677: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return c
+                }
+            });
+            var n = r("37983"),
+                l = r("884691"),
+                i = r("176309"),
+                a = r("340616"),
+                s = r("355025"),
+                u = r("198700"),
+                d = r("128259"),
+                o = r("758926");
+
+            function c(e) {
+                return {
+                    react(t, r, c) {
+                        if (e.enableBuildOverrides && (0, s.isBuildOverrideLink)(t.target)) return (0, n.jsx)(l.Fragment, {
+                            children: (0, n.jsx)(u.default, {
+                                url: t.target
+                            }, t.target)
+                        }, c.key);
+                        let f = r(t.content, c),
+                            v = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, i.astToString)(t.content),
+                            g = (null == e ? void 0 : e.mustConfirmExternalLink) ? e => (null == e || e.stopPropagation(), null == e || e.preventDefault(), (0, d.handleClick)({
+                                href: t.target,
+                                shouldConfirm: !0,
+                                messageId: c.messageId,
+                                channelId: c.channelId
+                            }), null) : void 0;
+                        if (c.previewLinkTarget && !(0, o.isLinkTrusted)(t)) {
+                            let e = "\n\n(".concat(t.target, ")"),
+                                r = v.length + e.length;
+                            r > 1024 && (e = "..." + e, v = (v = v.substr(0, 1024 - e.length)).trimEnd()), v += e
+                        }
+                        return c.noStyleAndInteraction ? (0, n.jsx)("span", {
+                            title: v,
+                            children: f
+                        }, c.key) : (0, n.jsx)(a.default, {
+                            title: v,
+                            href: t.target,
+                            trusted: () => (0, o.isLinkTrusted)(t),
+                            onClick: g,
+                            messageId: c.messageId,
+                            channelId: c.channelId,
+                            children: f
+                        }, c.key)
+                    }
+                }
+            }
+        },
+        68238: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return s
+                }
+            });
+            var n = r("37983");
+            r("884691");
+            var l = r("469563"),
+                i = r("225389"),
+                a = r("75196"),
+                s = (0, l.replaceIcon)(function(e) {
+                    let {
+                        width: t = 16,
+                        height: r = 16,
+                        color: l = "currentColor",
+                        foreground: i,
+                        ...s
+                    } = e;
+                    return (0, n.jsx)("svg", {
+                        ...(0, a.default)(s),
+                        width: t,
+                        height: r,
+                        viewBox: "0 0 12 12",
+                        children: (0, n.jsx)("path", {
+                            fill: l,
+                            className: i,
+                            d: "M6 1C3.243 1 1 3.244 1 6c0 2.758 2.243 5 5 5s5-2.242 5-5c0-2.756-2.243-5-5-5zm0 2.376a.625.625 0 110 1.25.625.625 0 010-1.25zM7.5 8.5h-3v-1h1V6H5V5h1a.5.5 0 01.5.5v2h1v1z"
+                        })
+                    })
+                }, i.CircleInformationIcon, {}, {
+                    size: 16
+                })
+        },
+        626820: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return a
+                }
+            });
+            var n = r("37983"),
+                l = r("884691"),
+                i = r("354214"),
+                a = l.memo(function(e) {
+                    let {
+                        className: t
+                    } = e;
+                    return (0, n.jsxs)("svg", {
+                        width: "57",
+                        height: "40",
+                        viewBox: "0 0 57 40",
+                        fill: "none",
+                        className: t,
+                        children: [(0, n.jsx)("path", {
+                            d: "M49.4949 36H3.9596C1.78182 36 0 34.2486 0 32.1081V3.89189C0 1.75135 1.78182 0 3.9596 0H49.4949C51.6727 0 53.4545 1.75135 53.4545 3.89189V32.1081C53.4545 34.2486 51.6727 36 49.4949 36Z",
+                            className: i.svgContentRight
+                        }), (0, n.jsx)("path", {
+                            d: "M44.5456 10.8889H25.7375C24.6486 10.8889 23.7577 9.99798 23.7577 8.90909C23.7577 7.8202 24.6486 6.92929 25.7375 6.92929H44.5456C45.6345 6.92929 46.5254 7.8202 46.5254 8.90909C46.5254 9.99798 45.6345 10.8889 44.5456 10.8889ZM19.7981 10.8889C18.7092 10.8889 17.8183 9.99798 17.8183 8.90909C17.8183 7.8202 18.7092 6.92929 19.7981 6.92929C20.887 6.92929 21.7779 7.8202 21.7779 8.90909C21.7779 9.99798 20.887 10.8889 19.7981 10.8889ZM44.5456 19.798H25.7375C24.6486 19.798 23.7577 18.9071 23.7577 17.8182C23.7577 16.7293 24.6486 15.8384 25.7375 15.8384H44.5456C45.6345 15.8384 46.5254 16.7293 46.5254 17.8182C46.5254 18.9071 45.6345 19.798 44.5456 19.798ZM19.7981 19.798C18.7092 19.798 17.8183 18.9071 17.8183 17.8182C17.8183 16.7293 18.7092 15.8384 19.7981 15.8384C20.887 15.8384 21.7779 16.7293 21.7779 17.8182C21.7779 18.9071 20.887 19.798 19.7981 19.798ZM31.6365 28.7071H25.7375C24.6486 28.7071 23.7577 27.8162 23.7577 26.7273C23.7577 25.6384 24.6486 24.7475 25.7375 24.7475H31.6365C32.7254 24.7475 33.6163 25.6384 33.6163 26.7273C33.6163 27.8162 32.7254 28.7071 31.6365 28.7071ZM19.7981 28.7071C18.7092 28.7071 17.8183 27.8162 17.8183 26.7273C17.8183 25.6384 18.7092 24.7475 19.7981 24.7475C20.887 24.7475 21.7779 25.6384 21.7779 26.7273C21.7779 27.8162 20.887 28.7071 19.7981 28.7071Z",
+                            className: i.svgContentLines
+                        }), (0, n.jsx)("path", {
+                            d: "M3.9596 36H13.8586V0H3.9596C1.78182 0 0 1.78182 0 3.9596V32.0404C0 34.2182 1.78182 36 3.9596 36Z",
+                            className: i.svgContentLeft
+                        }), (0, n.jsx)("path", {
+                            d: "M6.9293 10.8889C5.24647 10.8889 3.9596 9.60202 3.9596 7.91919C3.9596 6.23636 5.24647 4.94949 6.9293 4.94949C8.61212 4.94949 9.89899 6.23636 9.89899 7.91919C9.89899 9.60202 8.61212 10.8889 6.9293 10.8889ZM6.9293 20.7879C5.24647 20.7879 3.9596 19.501 3.9596 17.8182C3.9596 16.1354 5.24647 14.8485 6.9293 14.8485C8.61212 14.8485 9.89899 16.1354 9.89899 17.8182C9.89899 19.501 8.61212 20.7879 6.9293 20.7879ZM6.9293 30.6869C5.24647 30.6869 3.9596 29.4 3.9596 27.7172C3.9596 26.0343 5.24647 24.7475 6.9293 24.7475C8.61212 24.7475 9.89899 26.0343 9.89899 27.7172C9.89899 29.4 8.61212 30.6869 6.9293 30.6869Z",
+                            className: i.svgDots
+                        }), (0, n.jsx)("path", {
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                            d: "M41.4328 33L46 37.7129L43.7836 40L37 32.9999L39.2164 30.7128L39.2165 30.7129L43.7836 26L46 28.2871L41.4328 33Z",
+                            className: i.svgTag
+                        }), (0, n.jsx)("path", {
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                            d: "M54.7821 35.2871L54.7841 35.2892L57 33.0021L50.2159 26L48 28.2871L52.5662 33L48 37.7129L50.2159 40L54.7821 35.2871Z",
+                            className: i.svgTag
+                        })]
+                    })
+                })
+        },
+        515557: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                astToString: function() {
+                    return l
+                },
+                flattenAst: function() {
+                    return function e(t) {
+                        let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+                        if (Array.isArray(t)) {
+                            let n = t.length,
+                                l = [];
+                            for (let i = 0; i < n; i++) ! function(e, t) {
+                                if (Array.isArray(t)) {
+                                    let {
+                                        length: r
+                                    } = t;
+                                    for (let n = 0; n < r; n++) e.push(t[n]);
+                                    return
+                                }
+                                e.push(t)
+                            }(l, e(t[i], r));
+                            return l
+                        }
+                        return (null != t.content && (t.content = e(t.content, t)), null != r && t.type === r.type) ? t.content : t
+                    }
+                },
+                constrainAst: function() {
+                    return function e(t) {
+                        let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+                            limit: 200
+                        };
+                        if (Array.isArray(t)) {
+                            let l = t.length;
+                            for (let i = 0; i < l; i++) {
+                                let l = e(t[i], r);
+                                if (l === n) {
+                                    t.length = i;
+                                    break
+                                }
+                                t[i] = l
+                            }
+                        } else if ("text" !== t.type) {
+                            if (r.limit -= 1, r.limit <= 0) return n;
+                            Array.isArray(t.content) && (t.content = e(t.content, r))
+                        }
+                        return t
+                    }
+                }
+            }), r("424973");
+            let n = {};
+
+            function l(e) {
+                return (function e(t) {
+                    let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+                    return Array.isArray(t) ? t.forEach(t => e(t, r)) : "string" == typeof t.content ? r.push(t.content) : null != t.content && e(t.content, r), r
+                })(e).join("")
+            }
+        },
+        176309: function(e, t, r) {
+            "use strict";
+            let n;
+            r.r(t), r.d(t, {
+                reactParserFor: function() {
+                    return i
+                },
+                astParserFor: function() {
+                    return a
+                }
+            });
+            var l = r("515557");
+            r.es(l, t), n = r("214434").default;
+            let i = n.reactParserFor,
+                a = n.astParserFor
+        },
+        214434: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return s
+                }
+            });
+            var n = r("132710"),
+                l = r.n(n),
+                i = r("515557");
+
+            function a(e, t, r, n, l) {
+                let a;
+                return !r && (t += "\n\n"), a = e(t, {
+                    inline: r,
+                    ...n
+                }), a = (0, i.flattenAst)(a), a = (0, i.constrainAst)(a), null != l && (a = l(a, r)), a
+            }
+            var s = {
+                reactParserFor(e) {
+                    let t = l.parserFor(e),
+                        r = l.reactFor(l.ruleOutput(e, "react"));
+                    return function() {
+                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
+                            n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+                            l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+                        return r(a(t, e, n, l, i), l)
+                    }
+                },
+                astParserFor(e) {
+                    let t = l.parserFor(e);
+                    return function() {
+                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
+                            r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+                            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                            l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+                        return a(t, e, r, n, l)
+                    }
                 }
             }
         }
