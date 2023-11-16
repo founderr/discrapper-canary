@@ -269,24 +269,24 @@
             function S(e) {
                 return "bigint" == typeof e
             }
-            let m = d(T(function(e) {
+            let v = d(T(function(e) {
                     return !0
                 })),
-                v = e => Object.assign(d(e), {
-                    startsWith: t => v(_(e, T(e => C(e) && e.startsWith(t)))),
-                    endsWith: t => v(_(e, T(e => C(e) && e.endsWith(t)))),
+                m = e => Object.assign(d(e), {
+                    startsWith: t => m(_(e, T(e => C(e) && e.startsWith(t)))),
+                    endsWith: t => m(_(e, T(e => C(e) && e.endsWith(t)))),
                     minLength: t => {
                         var n;
-                        return v(_(e, (n = t, T(e => C(e) && e.length >= n))))
+                        return m(_(e, (n = t, T(e => C(e) && e.length >= n))))
                     },
                     maxLength: t => {
                         var n;
-                        return v(_(e, (n = t, T(e => C(e) && e.length <= n))))
+                        return m(_(e, (n = t, T(e => C(e) && e.length <= n))))
                     },
-                    includes: t => v(_(e, T(e => C(e) && e.includes(t)))),
-                    regex: t => v(_(e, T(e => C(e) && !!e.match(t))))
+                    includes: t => m(_(e, T(e => C(e) && e.includes(t)))),
+                    regex: t => m(_(e, T(e => C(e) && !!e.match(t))))
                 }),
-                N = v(T(C)),
+                N = m(T(C)),
                 R = (e, t) => T(n => g(n) && e <= n && t >= n),
                 A = e => T(t => g(t) && t < e),
                 y = e => T(t => g(t) && t > e),
@@ -328,10 +328,10 @@
                 W = d(T(function(e) {
                     return "boolean" == typeof e
                 })),
-                K = d(T(function(e) {
+                Z = d(T(function(e) {
                     return "symbol" == typeof e
                 })),
-                Z = d(T(function(e) {
+                K = d(T(function(e) {
                     return null == e
                 }));
             var z = {
@@ -460,8 +460,8 @@
                 },
                 when: T,
                 select: I,
-                any: m,
-                _: m,
+                any: v,
+                _: v,
                 string: N,
                 between: R,
                 lt: A,
@@ -482,8 +482,8 @@
                 negativeBigInt: k,
                 bigint: Y,
                 boolean: W,
-                symbol: K,
-                nullish: Z,
+                symbol: Z,
+                nullish: K,
                 instanceOf: function(e) {
                     var t;
                     return d(T((t = e, e => e instanceof t)))
@@ -766,10 +766,10 @@
                     return S
                 },
                 setPendingAvatar: function() {
-                    return m
+                    return v
                 },
                 setPendingGlobalNameName: function() {
-                    return v
+                    return m
                 },
                 setPendingAvatarDecoration: function() {
                     return N
@@ -931,14 +931,14 @@
                 })
             }
 
-            function m(e) {
+            function v(e) {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR",
                     avatar: e
                 }), null == e ? l.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : l.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
             }
 
-            function v(e) {
+            function m(e) {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME",
                     globalName: e
@@ -1020,16 +1020,16 @@
                         disabled: g,
                         saveButtonTooltip: C
                     } = e, S = r.useRef(null), [{
-                        spring: m
-                    }, v] = (0, l.useSpring)(() => ({
+                        spring: v
+                    }, m] = (0, l.useSpring)(() => ({
                         spring: 0
                     }));
                     r.useEffect(() => {
                         function e() {
-                            v({
+                            m({
                                 spring: 1,
                                 config: l.config.gentle
-                            }), v({
+                            }), m({
                                 spring: 0,
                                 config: l.config.gentle,
                                 delay: 1e3
@@ -1038,12 +1038,12 @@
                         return a.ComponentDispatch.subscribe(u.ComponentActions.EMPHASIZE_NOTICE, e), () => {
                             a.ComponentDispatch.unsubscribe(u.ComponentActions.EMPHASIZE_NOTICE, e)
                         }
-                    }, [v]);
-                    let N = m.to({
+                    }, [m]);
+                    let N = v.to({
                             range: [0, 1],
                             output: [(0, s.useToken)(o.default.colors.TEXT_NORMAL).hex(), (0, s.useToken)(o.default.unsafe_rawColors.WHITE_500).hex()]
                         }),
-                        R = m.to({
+                        R = v.to({
                             range: [0, 1],
                             output: [(0, s.useToken)(o.default.colors.BACKGROUND_FLOATING).hex(), (0, s.useToken)(o.default.colors.STATUS_DANGER).hex()]
                         }),
@@ -1148,7 +1148,7 @@
                                 children: _
                             })
                         })]
-                    }) : null, m = g ? (0, i.jsx)(s.Card, {
+                    }) : null, v = g ? (0, i.jsx)(s.Card, {
                         type: s.Card.Types.SUCCESS,
                         className: u.card,
                         children: (0, i.jsx)(s.Text, {
@@ -1172,7 +1172,7 @@
                                     variant: "text-md/normal",
                                     className: u.spacing,
                                     children: E
-                                }) : null, C, m, (0, i.jsxs)(s.FormItem, {
+                                }) : null, C, v, (0, i.jsxs)(s.FormItem, {
                                     title: this.getLabelText(),
                                     className: u.spacing,
                                     children: [(0, i.jsx)(s.TextInput, {
@@ -1488,7 +1488,7 @@
                     children: (0, i.jsx)("path", {
                         fill: "string" == typeof o ? o : o.css,
                         fillRule: "evenodd",
-                        d: "M8 1a3 3 0 0 0-3 3v16a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3H8Zm2 2a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2h-4Z",
+                        d: "M5 4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v16a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V4Zm5 16a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1ZM8 3a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H8Z",
                         clipRule: "evenodd",
                         className: s
                     })
@@ -2263,7 +2263,7 @@
                     return S
                 },
                 setDisableSubmit: function() {
-                    return m
+                    return v
                 }
             }), n("70102");
             var i = n("872717"),
@@ -2397,7 +2397,7 @@
                 })
             }
 
-            function m(e) {
+            function v(e) {
                 r.default.dispatch({
                     type: "GUILD_IDENTITY_SETTINGS_SET_DISABLE_SUBMIT",
                     disable: e
@@ -2409,7 +2409,7 @@
             let i, r, l, o, s, a, u, c, d;
             n.r(t), n.d(t, {
                 default: function() {
-                    return v
+                    return m
                 }
             });
             var f = n("446674"),
@@ -2434,7 +2434,7 @@
             function S() {
                 r = void 0, l = void 0, o = void 0, a = void 0
             }
-            class m extends f.default.Store {
+            class v extends f.default.Store {
                 getFormState() {
                     return _
                 }
@@ -2488,8 +2488,8 @@
                     return T
                 }
             }
-            m.displayName = "GuildIdentitySettingsStore";
-            var v = new m(h.default, {
+            v.displayName = "GuildIdentitySettingsStore";
+            var m = new v(h.default, {
                 GUILD_IDENTITY_SETTINGS_INIT: function(e) {
                     u = e.guild, _ = E.FormStates.OPEN, p = {}, c = e.source, d = e.analyticsLocations
                 },
@@ -3496,22 +3496,22 @@
                     setBodyNode: g,
                     setFooterNode: C,
                     setModalOverlayNode: S,
-                    setReadySlideId: m
-                } = (0, f.usePaymentContext)(), v = I.find(e => e.key === T);
+                    setReadySlideId: v
+                } = (0, f.usePaymentContext)(), m = I.find(e => e.key === T);
                 r.useEffect(() => {
                     S(null)
-                }, [T, S]), a(null != v, "Unknown step for current payment flow.");
-                let N = null !== (u = null == v ? void 0 : null === (t = v.options) || void 0 === t ? void 0 : t.hideSlider) && void 0 !== u && u,
-                    R = null == v ? void 0 : null === (n = v.options) || void 0 === n ? void 0 : n.bodyClassName,
-                    A = void 0 !== _ && _ ? h.sliderBodyLarge : null == v ? void 0 : null === (l = v.options) || void 0 === l ? void 0 : l.sliderBodyClassName;
+                }, [T, S]), a(null != m, "Unknown step for current payment flow.");
+                let N = null !== (u = null == m ? void 0 : null === (t = m.options) || void 0 === t ? void 0 : t.hideSlider) && void 0 !== u && u,
+                    R = null == m ? void 0 : null === (n = m.options) || void 0 === n ? void 0 : n.bodyClassName,
+                    A = void 0 !== _ && _ ? h.sliderBodyLarge : null == m ? void 0 : null === (l = m.options) || void 0 === l ? void 0 : l.sliderBodyClassName;
                 return (0, i.jsxs)(i.Fragment, {
-                    children: [null === (c = null == v ? void 0 : null === (s = v.options) || void 0 === s ? void 0 : s.renderHeader) || void 0 === c || c ? E : null, v.renderStep(p), null == T || N ? null : (0, i.jsxs)(i.Fragment, {
+                    children: [null === (c = null == m ? void 0 : null === (s = m.options) || void 0 === s ? void 0 : s.renderHeader) || void 0 === c || c ? E : null, m.renderStep(p), null == T || N ? null : (0, i.jsxs)(i.Fragment, {
                         children: [(0, i.jsx)(d.ModalContent, {
                             className: o(h.body, R),
                             children: (0, i.jsx)(d.Slides, {
                                 activeSlide: T,
                                 centered: !1,
-                                onSlideReady: e => m(e),
+                                onSlideReady: e => v(e),
                                 children: I.filter(e => null != e.key).map(e => (0, i.jsx)(d.Slide, {
                                     id: e.key,
                                     children: (0, i.jsx)("form", {
@@ -3579,8 +3579,8 @@
                     analyticsLocation: g,
                     analyticsSourceLocation: C,
                     isGift: S = !1,
-                    giftMessage: m,
-                    subscriptionTier: v,
+                    giftMessage: v,
+                    subscriptionTier: m,
                     trialId: N,
                     postSuccessGuild: R,
                     openInvoiceId: A,
@@ -3601,10 +3601,10 @@
                         return (0, i.jsx)(e, {
                             ...l,
                             loadId: x,
-                            subscriptionTier: v,
-                            skuId: v,
+                            subscriptionTier: m,
+                            skuId: m,
                             isGift: S,
-                            giftMessage: m,
+                            giftMessage: v,
                             giftRecipient: O,
                             initialPlanId: t,
                             followupSKUInfo: h,
@@ -4372,10 +4372,10 @@
                     return S
                 },
                 setTryItOutAvatarDecoration: function() {
-                    return m
+                    return v
                 },
                 setTryItOutBanner: function() {
-                    return v
+                    return m
                 },
                 setTryItOutThemeColors: function() {
                     return N
@@ -4493,14 +4493,14 @@
                 }), f(d.AnalyticsPremiumFeatureNames.ANIMATED_AVATAR)
             }
 
-            function m(e) {
+            function v(e) {
                 r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION",
                     avatarDecoration: e
                 }), f(d.AnalyticsPremiumFeatureNames.AVATAR_DECORATION)
             }
 
-            function v(e) {
+            function m(e) {
                 r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER",
                     banner: e

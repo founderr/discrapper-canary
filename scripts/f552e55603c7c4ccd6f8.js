@@ -63,7 +63,7 @@
                     children: (0, l.jsx)("path", {
                         fill: "string" == typeof u ? u : u.css,
                         fillRule: "evenodd",
-                        d: "M12 1a4.985 4.985 0 0 0-3.308 1.25 1 1 0 0 0 1.324 1.5A3 3 0 0 1 15 6v2H5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-8a3 3 0 0 0-3-3h-2V6a5 5 0 0 0-5-5Zm1 14.732A2 2 0 0 0 12 12a2 2 0 0 0-1 3.732V17a1 1 0 1 0 2 0v-1.268Z",
+                        d: "M8.692 2.25A5 5 0 0 1 17 6v3h1a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3v-8a3 3 0 0 1 3-3h9V6a3 3 0 0 0-4.984-2.25 1 1 0 0 1-1.324-1.5ZM14 14a2 2 0 0 1-1 1.732V18a1 1 0 1 1-2 0v-2.268A2 2 0 0 1 12 12a2 2 0 0 1 2 2Z",
                         clipRule: "evenodd",
                         className: i
                     })
@@ -97,12 +97,12 @@
                     fill: "none",
                     viewBox: "0 0 24 24",
                     children: [(0, l.jsx)("path", {
-                        fill: "string" == typeof u ? u : u.css,
                         d: "M19 14a1 1 0 0 1 1 1v3h3a1 1 0 0 1 0 2h-3v3a1 1 0 0 1-2 0v-3h-3a1 1 0 1 1 0-2h3v-3a1 1 0 0 1 1-1Z",
+                        fill: "string" == typeof u ? u : u.css,
                         className: i
                     }), (0, l.jsx)("path", {
-                        fill: "string" == typeof u ? u : u.css,
                         d: "M16.828 12.93c.259-.271.259-.746-.077-.915A9.493 9.493 0 0 0 12.467 11h-.934A9.533 9.533 0 0 0 2 20.533C2 21.343 2.657 22 3.467 22h.22c.24 0 .445-.17.504-.403.285-1.113.84-2.17 1.32-2.91.134-.208.43-.094.405.154l-.261 2.61a.5.5 0 0 0 .497.549h7.64c.123 0 .17-.31.06-.363C12.819 21.14 12 20.224 12 19a3 3 0 0 1 3-3h.5a.5.5 0 0 0 .5-.5V15c0-.802.315-1.53.828-2.07ZM12 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z",
+                        fill: "string" == typeof u ? u : u.css,
                         className: i
                     })]
                 })
@@ -133,7 +133,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 getMuteTimes: function() {
-                    return M
+                    return _
                 },
                 default: function() {
                     return S
@@ -152,25 +152,25 @@
                 f = n("679653"),
                 h = n("49111"),
                 E = n("468200"),
-                _ = n("782340");
-            let M = () => [{
+                M = n("782340");
+            let _ = () => [{
                     value: E.MuteUntilSeconds.MINUTES_15,
-                    label: _.default.Messages.MUTE_DURATION_15_MINUTES
+                    label: M.default.Messages.MUTE_DURATION_15_MINUTES
                 }, {
                     value: E.MuteUntilSeconds.HOURS_1,
-                    label: _.default.Messages.MUTE_DURATION_1_HOUR
+                    label: M.default.Messages.MUTE_DURATION_1_HOUR
                 }, {
                     value: E.MuteUntilSeconds.HOURS_3,
-                    label: _.default.Messages.MUTE_DURATION_3_HOURS
+                    label: M.default.Messages.MUTE_DURATION_3_HOURS
                 }, {
                     value: E.MuteUntilSeconds.HOURS_8,
-                    label: _.default.Messages.MUTE_DURATION_8_HOURS
+                    label: M.default.Messages.MUTE_DURATION_8_HOURS
                 }, {
                     value: E.MuteUntilSeconds.HOURS_24,
-                    label: _.default.Messages.MUTE_DURATION_24_HOURS
+                    label: M.default.Messages.MUTE_DURATION_24_HOURS
                 }, {
                     value: E.MuteUntilSeconds.ALWAYS,
-                    label: _.default.Messages.MUTE_DURATION_ALWAYS
+                    label: M.default.Messages.MUTE_DURATION_ALWAYS
                 }],
                 g = e => {
                     let t = e > 0 ? a().add(e, "second").toISOString() : null;
@@ -191,24 +191,24 @@
                         muted: t
                     })
                 }
-                let p = _.default.Messages.MUTE_CHANNEL_GENERIC,
-                    I = _.default.Messages.UNMUTE_CHANNEL_GENERIC;
+                let p = M.default.Messages.MUTE_CHANNEL_GENERIC,
+                    I = M.default.Messages.UNMUTE_CHANNEL_GENERIC;
                 switch (e.type) {
                     case h.ChannelTypes.GUILD_CATEGORY:
-                        p = _.default.Messages.MUTE_CATEGORY, I = _.default.Messages.UNMUTE_CATEGORY;
+                        p = M.default.Messages.MUTE_CATEGORY, I = M.default.Messages.UNMUTE_CATEGORY;
                         break;
                     case h.ChannelTypes.GROUP_DM:
-                        p = _.default.Messages.MUTE_CONVERSATION, I = _.default.Messages.UNMUTE_CONVERSATION;
+                        p = M.default.Messages.MUTE_CONVERSATION, I = M.default.Messages.UNMUTE_CONVERSATION;
                         break;
                     case h.ChannelTypes.DM:
-                        p = _.default.Messages.MUTE_CHANNEL.format({
+                        p = M.default.Messages.MUTE_CHANNEL.format({
                             name: E
-                        }), I = _.default.Messages.UNMUTE_CHANNEL.format({
+                        }), I = M.default.Messages.UNMUTE_CHANNEL.format({
                             name: E
                         });
                         break;
                     default:
-                        p = _.default.Messages.MUTE_CHANNEL_GENERIC, I = _.default.Messages.UNMUTE_CHANNEL_GENERIC
+                        p = M.default.Messages.MUTE_CHANNEL_GENERIC, I = M.default.Messages.UNMUTE_CHANNEL_GENERIC
                 }
                 return n ? (0, l.jsx)(i.MenuItem, {
                     id: "unmute-channel",
@@ -219,7 +219,7 @@
                     id: "mute-channel",
                     label: p,
                     action: () => S(!0),
-                    children: M().map(n => {
+                    children: _().map(n => {
                         let {
                             value: s,
                             label: a
@@ -362,8 +362,8 @@
                 f = n("255812"),
                 h = n("529932"),
                 E = n("724026"),
-                _ = n("271938"),
-                M = n("923959"),
+                M = n("271938"),
+                _ = n("923959"),
                 g = n("697218"),
                 S = n("578411"),
                 p = n("230947"),
@@ -383,7 +383,7 @@
                     guild: t,
                     onSelect: s,
                     hideSettings: d
-                } = e, o = t.id, L = M.default.getDefaultChannel(o), R = (0, h.useExpressionSourceGuildDataForGuildLeaveModal)(t), G = (0, u.useStateFromStores)([g.default], () => {
+                } = e, o = t.id, L = _.default.getDefaultChannel(o), R = (0, h.useExpressionSourceGuildDataForGuildLeaveModal)(t), G = (0, u.useStateFromStores)([g.default], () => {
                     let e = g.default.getCurrentUser();
                     return a(null != e, "GuildContextMenu: user cannot be undefined"), t.isOwner(e)
                 }, [t]), H = (0, x.default)({
@@ -392,7 +392,7 @@
                     channel: L
                 }), j = (0, T.default)(o), b = (0, N.default)(t), y = (0, A.default)(t), D = (0, v.default)(t), w = (0, p.default)({
                     guildId: t.id,
-                    userId: _.default.getId(),
+                    userId: M.default.getId(),
                     analyticsLocation: {
                         page: U.AnalyticsPages.GUILD_CHANNEL,
                         section: U.AnalyticsSections.CHAT_USERNAME,
@@ -665,9 +665,9 @@
                 f = n("956089"),
                 h = n("49111"),
                 E = n("782340"),
-                _ = n("460856");
+                M = n("460856");
 
-            function M() {
+            function _() {
                 return [{
                     setting: h.UserNotificationSettings.ALL_MESSAGES,
                     label: E.default.Messages.FORM_LABEL_ALL_MESSAGES
@@ -704,7 +704,7 @@
                         }
                         return (0, l.jsxs)(l.Fragment, {
                             children: [(0, l.jsx)(u.MenuGroup, {
-                                children: M().map(e => {
+                                children: _().map(e => {
                                     let {
                                         setting: t,
                                         label: n
@@ -726,7 +726,7 @@
                                         children: [E.default.Messages.FORM_LABEL_UNREAD_SETTINGS_OPT_IN, (0, l.jsx)(f.TextBadge, {
                                             text: E.default.Messages.BETA,
                                             color: a.default.unsafe_rawColors.BRAND_500.css,
-                                            className: _.betaBadge
+                                            className: M.betaBadge
                                         })]
                                     }),
                                     action: () => {
@@ -770,7 +770,7 @@
                         })
                     }(e),
                     p = (0, s.useStateFromStores)([c.default], () => c.default.getMessageNotifications(e.id), [e.id]),
-                    I = null === (g = M()) || void 0 === g ? void 0 : null === (t = g.find(e => {
+                    I = null === (g = _()) || void 0 === g ? void 0 : null === (t = g.find(e => {
                         let {
                             setting: t
                         } = e;
@@ -1310,8 +1310,8 @@
                         color: f,
                         onClick: h,
                         onContextMenu: E,
-                        style: _,
-                        title: M,
+                        style: M,
+                        title: _,
                         uppercase: g
                     } = e;
                     return (0, l.jsx)(u.H, {
@@ -1326,11 +1326,11 @@
                             [i.muted]: n,
                             [i.uppercase]: g
                         }),
-                        title: M,
+                        title: _,
                         style: null != f ? {
-                            ..._,
+                            ...M,
                             color: f
-                        } : _,
+                        } : M,
                         children: c
                     })
                 };
@@ -1359,8 +1359,8 @@
                 f = n("766274"),
                 h = n("697218"),
                 E = n("368121"),
-                _ = n("523096"),
-                M = n("587974"),
+                M = n("523096"),
+                _ = n("587974"),
                 g = n("494101");
             let S = {
                 SIZE_16: 16,
@@ -1389,11 +1389,11 @@
                         u.push(t ? (0, l.jsx)("div", {
                             className: g.avatarContainer,
                             children: i
-                        }, p(null !== (o = e[d]) && void 0 !== o ? o : null, d)) : (0, l.jsx)(M.default, {
+                        }, p(null !== (o = e[d]) && void 0 !== o ? o : null, d)) : (0, l.jsx)(_.default, {
                             className: g.avatarContainerMasked,
                             height: s,
                             width: s,
-                            mask: M.default.Masks.VOICE_USER_SUMMARY_ITEM,
+                            mask: _.default.Masks.VOICE_USER_SUMMARY_ITEM,
                             children: i
                         }, p(e[d], d))), d++
                     }
@@ -1442,7 +1442,7 @@
                         useFallbackUserForPopout: i
                     } = this.props, {
                         popoutUserId: f
-                    } = this.state, E = n.find(e => null != e && e.id === f), _ = i && null == h.default.getUser(f);
+                    } = this.state, E = n.find(e => null != e && e.id === f), M = i && null == h.default.getUser(f);
                     return (0, l.jsx)(d.Popout, {
                         position: "right",
                         preload: null == E ? void 0 : () => (0, o.default)(E.id, E.getAvatarURL(s, 80), {
@@ -1452,7 +1452,7 @@
                         fixed: !0,
                         renderPopout: e => (r(null != f, "UserSummaryItem.render - renderPopout: popoutUserId cannot be null"), (0, l.jsx)(c.default, {
                             ...this.props,
-                            user: _ && null != E ? E : void 0,
+                            user: M && null != E ? E : void 0,
                             ...e,
                             userId: f,
                             guildId: this.props.guildId
@@ -1496,8 +1496,8 @@
                                 className: g.emptyUser
                             });
                             {
-                                let e = (null != n ? n : 0) % _.default.DEFAULT_AVATARS.length,
-                                    t = _.default.DEFAULT_AVATARS[e];
+                                let e = (null != n ? n : 0) % M.default.DEFAULT_AVATARS.length,
+                                    t = M.default.DEFAULT_AVATARS[e];
                                 return (0, l.jsx)("img", {
                                     src: t,
                                     alt: "",
