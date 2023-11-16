@@ -1419,8 +1419,8 @@
                 M = s("661579"),
                 L = s("539938"),
                 x = s("393414"),
-                v = s("915639"),
-                U = s("161778"),
+                U = s("915639"),
+                v = s("161778"),
                 D = s("305961"),
                 b = s("957255"),
                 j = s("71010"),
@@ -2022,7 +2022,7 @@
                     }
                 }
             }
-            var eR = (0, N.default)((0, P.default)(c.default.connectStores([y.default, U.default, v.default, F.default, k.default, G.default, H.default, g.default, C.default, j.default, D.default, B.default], e => {
+            var eR = (0, N.default)((0, P.default)(c.default.connectStores([y.default, v.default, U.default, F.default, k.default, G.default, H.default, g.default, C.default, j.default, D.default, B.default], e => {
                 let t, s, a, {
                     inputSkuId: n,
                     applicationId: r,
@@ -2054,8 +2054,8 @@
                     }),
                     isInTestMode: null != r && o,
                     matureAgree: y.default.didMatureAgree,
-                    theme: U.default.theme,
-                    locale: v.default.locale,
+                    theme: v.default.theme,
+                    locale: U.default.locale,
                     guild: null != u ? D.default.getGuild(u.getGuildId()) : null
                 }
             })(eS)))
@@ -2194,8 +2194,8 @@
                 M = s("767982"),
                 L = s("503278"),
                 x = s("224860"),
-                v = s("206100"),
-                U = s("886680"),
+                U = s("206100"),
+                v = s("886680"),
                 D = s("49111"),
                 b = s("646718"),
                 j = s("782340"),
@@ -2389,7 +2389,7 @@
                             children: [(0, a.jsx)("div", {
                                 className: y.actionText,
                                 children: this.getActionText()
-                            }), (0, a.jsx)(v.OperatingSystemSection, {
+                            }), (0, a.jsx)(U.OperatingSystemSection, {
                                 systems: e.supportedOperatingSystems
                             })]
                         }), this.renderPrice(), !0 !== r || !u || d ? (0, a.jsxs)(n.Fragment, {
@@ -2447,7 +2447,7 @@
                             children: [this.renderAlternativeSkus(), this.renderBody()]
                         }), null == t.entitlementBranchId ? (0, a.jsx)("div", {
                             className: y.bodySection,
-                            children: (0, a.jsx)(U.default, {
+                            children: (0, a.jsx)(v.default, {
                                 storeListing: t,
                                 sku: s,
                                 guildId: n,
@@ -4588,8 +4588,8 @@
                 M = s("309920"),
                 L = s("578770"),
                 x = s("761708"),
-                v = s("224456"),
-                U = s("656564"),
+                U = s("224456"),
+                v = s("656564"),
                 D = s("124989"),
                 b = s("14528"),
                 j = s("443817"),
@@ -4654,7 +4654,7 @@
                         longerMessages: {
                             title: c.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_DESCRIPTION,
-                            imageSource: B(s, v, U),
+                            imageSource: B(s, U, v),
                             imageClassName: t.longerMessagesImage
                         },
                         moreGuilds: {
@@ -4921,15 +4921,15 @@
                 M = s("908173"),
                 L = s("930767"),
                 x = s("398683"),
-                v = s("816571"),
-                U = s("114244"),
+                U = s("816571"),
+                v = s("114244"),
                 D = s("991119");
             let b = new Map([
                 ["BG", l],
                 ["CZ", o],
                 ["HU", S],
                 ["RO", x],
-                ["SE", v],
+                ["SE", U],
                 ["CY", u],
                 ["EE", c],
                 ["IS", A],
@@ -4940,7 +4940,7 @@
                 ["LU", P],
                 ["MT", C],
                 ["SK", D],
-                ["SI", U],
+                ["SI", v],
                 ["GR", T],
                 ["FI", E],
                 ["PT", L],
@@ -5145,8 +5145,8 @@
                 M = s("959905"),
                 L = s("154889"),
                 x = s("917247"),
-                v = s("254893"),
-                U = s("840326"),
+                U = s("254893"),
+                v = s("840326"),
                 D = s("646718"),
                 b = s("49111"),
                 j = s("265921"),
@@ -5186,7 +5186,7 @@
                     let q = t === D.PremiumMarketingEntrypoints.ApplicationStoreHome;
                     return q && Y ? (0, a.jsx)(r, {
                         children: (0, a.jsxs)(a.Fragment, {
-                            children: [(0, a.jsx)(U.default, {}), (0, a.jsx)(u.default, {
+                            children: [(0, a.jsx)(v.default, {}), (0, a.jsx)(u.default, {
                                 onChange: e => {
                                     e && !Q && (P.default.track(b.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                                         location_stack: B
@@ -5199,7 +5199,7 @@
                         })
                     }) : G && K && !w ? (0, a.jsx)(r, {
                         children: (0, a.jsxs)(a.Fragment, {
-                            children: [(0, a.jsx)(v.default, {
+                            children: [(0, a.jsx)(U.default, {
                                 entrypoint: t
                             }), (0, a.jsx)(u.default, {
                                 onChange: e => {
@@ -5855,8 +5855,8 @@
                     } = e, T = (0, u.default)([d.default], () => d.default.useReducedMotion), [f, S] = n.useState(!1), [p, m] = n.useState(!1), h = (0, A.default)(), [M] = (0, _.useDangerouslyPeekDismissibleContents)(null != r && s ? [r] : []), {
                         easterEggLevel: L,
                         isEasterEggTriggered: x,
-                        onHover: v,
-                        onUnhover: U
+                        onHover: U,
+                        onUnhover: v
                     } = (0, R.default)(5), D = (0, i.debounce)(() => {
                         E.default.track(N.AnalyticEvents.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                             card_type: (0, i.snakeCase)(t)
@@ -5875,10 +5875,10 @@
                         className: l(g.flipCardContainer, {
                             [g.forceShadow]: I
                         }),
-                        onMouseEnter: v,
-                        onFocus: v,
-                        onMouseLeave: U,
-                        onBlur: U,
+                        onMouseEnter: U,
+                        onFocus: U,
+                        onMouseLeave: v,
+                        onBlur: v,
                         children: (0, a.jsxs)("div", {
                             className: l(g.flipCard, {
                                 [g.partialFlipCard]: !x,
@@ -6297,8 +6297,8 @@
                 M = s("400307"),
                 L = s("218435"),
                 x = s("881155"),
-                v = s("646718"),
-                U = s("49111"),
+                U = s("646718"),
+                v = s("49111"),
                 D = s("782340"),
                 b = s("992250"),
                 j = s("640754"),
@@ -6328,7 +6328,7 @@
                             premiumType: s
                         } = e,
                         n = (0, _.default)();
-                    t = s === v.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(n) ? j : y : (0, u.isThemeDark)(n) ? B : G;
+                    t = s === U.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(n) ? j : y : (0, u.isThemeDark)(n) ? B : G;
                     let r = (0, P.getPremiumTypeDisplayName)(s);
                     return (0, a.jsx)("img", {
                         src: t,
@@ -6446,7 +6446,7 @@
                         headingOverride: N,
                         hidePill: j = !1,
                         selectedPlanColumnClassName: y,
-                        selectedPlanTier: B = v.PremiumTypes.TIER_2
+                        selectedPlanTier: B = U.PremiumTypes.TIER_2
                     } = e,
                     {
                         AnalyticsLocationProvider: G
@@ -6466,38 +6466,39 @@
                     autoTrackExposure: !1
                 });
                 let {
-                    shopForAllEnabled: q
+                    shopForAllEnabled: q,
+                    marketingEnabled: $
                 } = (0, f.default)({
                     location: J
-                }), $ = (0, _.default)(), ee = (0, u.isThemeLight)($), et = (0, i.useStateFromStores)([A.default], () => A.default.getCurrentUser()), es = (0, P.isPremiumExactly)(et, v.PremiumTypes.TIER_2), ea = (0, O.usePremiumTrialOffer)(), en = null == ea ? void 0 : null === (t = ea.subscription_trial) || void 0 === t ? void 0 : t.sku_id, er = (0, C.useCurrentPremiumTrialTier)(), el = (0, h.useIsEligibleForBogoPromotion)();
+                }), ee = (0, _.default)(), et = (0, u.isThemeLight)(ee), es = (0, i.useStateFromStores)([A.default], () => A.default.getCurrentUser()), ea = (0, P.isPremiumExactly)(es, U.PremiumTypes.TIER_2), en = (0, O.usePremiumTrialOffer)(), er = null == en ? void 0 : null === (t = en.subscription_trial) || void 0 === t ? void 0 : t.sku_id, el = (0, C.useCurrentPremiumTrialTier)(), ei = (0, h.useIsEligibleForBogoPromotion)();
                 if (!z || !X) return null;
-                let ei = P.default.getDefaultPrice(v.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-                    eu = P.default.getDefaultPrice(v.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
-                    eo = {
+                let eu = P.default.getDefaultPrice(U.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+                    eo = P.default.getDefaultPrice(U.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+                    ed = {
                         label: (0, a.jsx)(o.Heading, {
                             className: b.textColor,
                             variant: "heading-lg/extrabold",
                             children: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_HEADER
                         }),
                         column1: (0, a.jsx)(F, {
-                            premiumType: v.PremiumTypes.TIER_0
+                            premiumType: U.PremiumTypes.TIER_0
                         }),
                         column2: (0, a.jsx)(F, {
-                            premiumType: v.PremiumTypes.TIER_2
+                            premiumType: U.PremiumTypes.TIER_2
                         })
                     },
-                    ed = [{
+                    ec = [{
                         label: (0, a.jsx)(K, {
                             text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_PRICE
                         }),
                         column1: (0, a.jsx)(a.Fragment, {
                             children: (0, a.jsx)(w, {
-                                text: P.default.formatPriceString(ei, v.SubscriptionIntervalTypes.MONTH)
+                                text: P.default.formatPriceString(eu, U.SubscriptionIntervalTypes.MONTH)
                             })
                         }),
                         column2: (0, a.jsx)(a.Fragment, {
                             children: (0, a.jsx)(w, {
-                                text: P.default.formatPriceString(eu, v.SubscriptionIntervalTypes.MONTH)
+                                text: P.default.formatPriceString(eo, U.SubscriptionIntervalTypes.MONTH)
                             })
                         })
                     }, {
@@ -6553,10 +6554,10 @@
                             text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_UPLOAD
                         }),
                         column1: (0, a.jsx)(w, {
-                            text: (0, P.getMaxFileSizeForPremiumType)(v.PremiumTypes.TIER_0)
+                            text: (0, P.getMaxFileSizeForPremiumType)(U.PremiumTypes.TIER_0)
                         }),
                         column2: (0, a.jsx)(w, {
-                            text: (0, P.getMaxFileSizeForPremiumType)(v.PremiumTypes.TIER_2)
+                            text: (0, P.getMaxFileSizeForPremiumType)(U.PremiumTypes.TIER_2)
                         })
                     }, {
                         label: (0, a.jsx)(K, {
@@ -6571,8 +6572,8 @@
                     }, {
                         label: (0, a.jsx)(K, {
                             text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BOOSTS.format({
-                                numBoosts: v.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
-                                percentageOff: (0, g.formatPercent)(R.default.locale, v.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+                                numBoosts: U.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
+                                percentageOff: (0, g.formatPercent)(R.default.locale, U.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
                             })
                         }),
                         column1: (0, a.jsx)(W, {
@@ -6603,7 +6604,7 @@
                         })
                     }, {
                         label: (0, a.jsx)(K, {
-                            text: q && !es ? D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SHOP_DISCOUNTS : D.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_GRID
+                            text: q && !ea ? $ ? D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SHOP_DISCOUNTS_GENERIC : D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_SHOP_DISCOUNTS : D.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_GRID
                         }),
                         column1: (0, a.jsx)(W, {
                             includes: !1
@@ -6674,7 +6675,7 @@
                     }, {
                         label: (0, a.jsx)(K, {
                             text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_MESSAGE_LENGTH.format({
-                                maxChars: U.MAX_MESSAGE_LENGTH_PREMIUM
+                                maxChars: v.MAX_MESSAGE_LENGTH_PREMIUM
                             })
                         }),
                         column1: (0, a.jsx)(W, {
@@ -6684,7 +6685,7 @@
                             includes: !0
                         })
                     }];
-                return m ? ed.push({
+                return m ? ec.push({
                     label: null,
                     column1: null,
                     column2: null,
@@ -6692,52 +6693,52 @@
                     withBottomBorderRadius: !0,
                     buttonsRow: !1,
                     shortRow: !0
-                }) : ed.push({
+                }) : ec.push({
                     label: null,
                     column1: (0, a.jsxs)(a.Fragment, {
-                        children: [en === v.PremiumSubscriptionSKUs.TIER_2 || el ? (0, a.jsx)(x.default, {
+                        children: [er === U.PremiumSubscriptionSKUs.TIER_2 || ei ? (0, a.jsx)(x.default, {
                             className: b.button,
-                            subscriptionTier: v.PremiumSubscriptionSKUs.TIER_0,
+                            subscriptionTier: U.PremiumSubscriptionSKUs.TIER_0,
                             showIcon: !1,
                             look: o.ButtonLooks.OUTLINED,
-                            color: ee ? o.ButtonColors.BRAND_NEW : o.ButtonColors.WHITE,
+                            color: et ? o.ButtonColors.BRAND_NEW : o.ButtonColors.WHITE,
                             buttonShineClassName: void 0
                         }) : (0, a.jsx)(x.default, {
                             className: b.button,
-                            subscriptionTier: v.PremiumSubscriptionSKUs.TIER_0,
+                            subscriptionTier: U.PremiumSubscriptionSKUs.TIER_0,
                             showIcon: !1
-                        }), er === v.PremiumTypes.TIER_2 || null != en ? null : (0, a.jsx)(L.default, {
+                        }), el === U.PremiumTypes.TIER_2 || null != er ? null : (0, a.jsx)(L.default, {
                             className: b.button,
-                            subscriptionTier: v.PremiumSubscriptionSKUs.TIER_0
+                            subscriptionTier: U.PremiumSubscriptionSKUs.TIER_0
                         })]
                     }),
                     column2: (0, a.jsxs)(a.Fragment, {
-                        children: [en === v.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(x.default, {
+                        children: [er === U.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(x.default, {
                             className: b.button,
-                            subscriptionTier: v.PremiumSubscriptionSKUs.TIER_2,
+                            subscriptionTier: U.PremiumSubscriptionSKUs.TIER_2,
                             showIcon: !1,
                             look: o.ButtonLooks.OUTLINED,
-                            color: ee ? o.ButtonColors.BRAND_NEW : o.ButtonColors.WHITE,
+                            color: et ? o.ButtonColors.BRAND_NEW : o.ButtonColors.WHITE,
                             buttonShineClassName: void 0
                         }) : (0, a.jsx)(x.default, {
                             className: b.button,
-                            subscriptionTier: v.PremiumSubscriptionSKUs.TIER_2,
+                            subscriptionTier: U.PremiumSubscriptionSKUs.TIER_2,
                             showIcon: !1,
-                            isEligibleForBogoPromotion: el
-                        }), er === v.PremiumTypes.TIER_0 || null != en ? null : (0, a.jsx)(L.default, {
+                            isEligibleForBogoPromotion: ei
+                        }), el === U.PremiumTypes.TIER_0 || null != er ? null : (0, a.jsx)(L.default, {
                             className: b.button,
-                            subscriptionTier: v.PremiumSubscriptionSKUs.TIER_2
+                            subscriptionTier: U.PremiumSubscriptionSKUs.TIER_2
                         })]
                     }),
                     withBottomBorder: !1,
                     withBottomBorderRadius: !0,
-                    buttonsRow: null == en
-                }), s = j ? null : null != en || null != er ? (0, a.jsx)(M.PremiumPillWithSparkles, {
-                    text: null != en ? D.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
+                    buttonsRow: null == er
+                }), s = j ? null : null != er || null != el ? (0, a.jsx)(M.PremiumPillWithSparkles, {
+                    text: null != er ? D.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
                     className: b.freeTrialPillWithSparkles,
-                    colorOptions: en === v.PremiumSubscriptionSKUs.TIER_0 ? ee ? M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : ee ? es ? M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
-                }) : el ? (0, a.jsx)(k, {
-                    isLightTheme: ee
+                    colorOptions: er === U.PremiumSubscriptionSKUs.TIER_0 ? et ? M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : et ? ea ? M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
+                }) : ei ? (0, a.jsx)(k, {
+                    isLightTheme: et
                 }) : (0, a.jsx)(H, {}), (0, a.jsx)(G, {
                     children: (0, a.jsxs)("div", {
                         className: l(b.root, r),
@@ -6749,16 +6750,16 @@
                         }), (0, a.jsxs)("div", {
                             className: b.tableWrapper,
                             children: [(0, a.jsx)("div", {
-                                className: en === v.PremiumSubscriptionSKUs.TIER_0 || er === v.PremiumTypes.TIER_0 || B === v.PremiumTypes.TIER_0 ? l(y, b.tier0ColumnOuter) : l(y, b.tier2ColumnOuter),
+                                className: er === U.PremiumSubscriptionSKUs.TIER_0 || el === U.PremiumTypes.TIER_0 || B === U.PremiumTypes.TIER_0 ? l(y, b.tier0ColumnOuter) : l(y, b.tier2ColumnOuter),
                                 children: s
                             }), (0, a.jsxs)("table", {
                                 className: b.table,
                                 children: [(0, a.jsx)("thead", {
                                     children: (0, a.jsx)(V, {
-                                        ...eo
+                                        ...ed
                                     })
                                 }), (0, a.jsx)("tbody", {
-                                    children: ed.map((e, t) => (0, n.createElement)(Y, {
+                                    children: ec.map((e, t) => (0, n.createElement)(Y, {
                                         ...e,
                                         key: t
                                     }))
@@ -7062,8 +7063,8 @@
                 M = s("379521"),
                 L = s("958966"),
                 x = s("830648"),
-                v = s("627474"),
-                U = s("904871"),
+                U = s("627474"),
+                v = s("904871"),
                 D = s("360776"),
                 b = s("525505"),
                 j = s("881155"),
@@ -7175,14 +7176,14 @@
                             })]
                         }), s ? (0, a.jsxs)("div", {
                             className: B.whatsNewSection,
-                            children: [(0, a.jsx)(v.default, {
-                                variant: v.PerksDiscoverabilityVariants.WHATS_NEW
-                            }), ea ? (0, a.jsx)(v.default, {}) : null, et ? (0, a.jsx)(U.default, {
+                            children: [(0, a.jsx)(U.default, {
+                                variant: U.PerksDiscoverabilityVariants.WHATS_NEW
+                            }), ea ? (0, a.jsx)(U.default, {}) : null, et ? (0, a.jsx)(v.default, {
                                 className: B.pdSparklesTop,
-                                variant: U.SparkleVariants.TOP
-                            }) : null, et ? (0, a.jsx)(U.default, {
+                                variant: v.SparkleVariants.TOP
+                            }) : null, et ? (0, a.jsx)(v.default, {
                                 className: B.pdSparklesBottom,
-                                variant: U.SparkleVariants.BOTTOM
+                                variant: v.SparkleVariants.BOTTOM
                             }) : null]
                         }) : null, (0, a.jsx)(x.default, {
                             className: s ? B.perkCardsContainerSpacingFullscreen : B.perkCardsContainerSpacingSettings
@@ -7443,8 +7444,8 @@
                 M = s("62414"),
                 L = s("613697"),
                 x = s("907511"),
-                v = s("165870"),
-                U = s("443646");
+                U = s("165870"),
+                v = s("443646");
             (a = n || (n = {})).AVATAR_DECORATIONS = "avatarDecorations", a.CLIENT_THEMES = "clientThemes", a.CLIPS = "clips", a.EARLY_ACCESS = "earlyAccess", a.ENTRANCE_SOUNDS = "entranceSounds", a.PROFILE_EFFECTS = "profileEffects", a.PROFILES = "profiles", a.REMIXING = "remixing", a.SERVER_BOOSTS = "serverBoosts", a.SPECIAL_MEMBER_PRICING = "specialMemberPricing", a.UNLIMITED_SUPER_REACTIONS = "unlimitedSuperReactions", a.UPCOMING_DROP_UNTIMED = "upcomingDropUntimed";
             var D = () => {
                 let {
@@ -7621,28 +7622,28 @@
                         description: p.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
                         descriptionCta: p.default.Messages.VISIT_THE_SHOP_CTA,
                         onCtaClick: B,
-                        perkImage: v
+                        perkImage: U
                     } : {
                         name: "specialMemberPricing",
                         title: p.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
                         subtitle: p.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE,
                         description: p.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
                         isPremiumGetCta: !0,
-                        perkImage: v
+                        perkImage: U
                     },
                     unlimitedSuperReactions: n ? {
                         name: "unlimitedSuperReactions",
                         title: p.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE,
                         subtitle: p.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_SUBTITLE,
                         description: p.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_DESCRIPTION_SUB,
-                        perkImage: U
+                        perkImage: v
                     } : {
                         name: "unlimitedSuperReactions",
                         title: p.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE,
                         subtitle: p.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_SUBTITLE,
                         description: p.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_DESCRIPTION_NON_SUB,
                         isPremiumGetCta: !0,
-                        perkImage: U
+                        perkImage: v
                     },
                     upcomingDropUntimed: {
                         name: "upcomingDropUntimed",
