@@ -2701,7 +2701,7 @@
                     let {
                         userTrialOffer: t
                     } = e;
-                    d.userTrialOffers[t.trial_id] = t, d.userOffersLastFetchedAtDate = Date.now()
+                    null != t ? d.userTrialOffers[t.trial_id] = t : d.userTrialOffers = {}, d.userOffersLastFetchedAtDate = Date.now()
                 },
                 BILLING_USER_OFFER_FETCH_SUCCESS: function(e) {
                     let {
@@ -2715,7 +2715,7 @@
                         userTrialOffer: t,
                         userDiscount: n
                     } = e;
-                    (null != t || null != n) && (null != t && (d.userTrialOffers[t.trial_id] = t), null != n && (d.userDiscounts[n.discount_id] = n), d.userOffersLastFetchedAtDate = Date.now())
+                    null != t ? d.userTrialOffers[t.trial_id] = t : d.userTrialOffers = {}, null != n ? d.userDiscounts[n.discount_id] = n : d.userDiscounts = {}, d.userOffersLastFetchedAtDate = Date.now()
                 },
                 LOGOUT: c
             })

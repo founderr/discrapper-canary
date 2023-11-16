@@ -835,8 +835,8 @@
                 C = r("706098"),
                 j = r("383925"),
                 S = r("21573"),
-                T = r("245515"),
-                N = r("172248"),
+                N = r("245515"),
+                T = r("172248"),
                 w = r("719086"),
                 E = r("811199"),
                 L = r("175768"),
@@ -890,7 +890,7 @@
                             }, {
                                 id: "dispatcher",
                                 name: "Dispatcher",
-                                render: () => (0, a.jsx)(T.default, {})
+                                render: () => (0, a.jsx)(N.default, {})
                             }];
                             return h.default.isDeveloper && t.push({
                                 id: "quick_actions",
@@ -911,13 +911,13 @@
                             }), t.push({
                                 id: "overlays",
                                 name: "Dev Overlays",
-                                render: () => (0, a.jsx)(N.default, {
+                                render: () => (0, a.jsx)(T.default, {
                                     devSettingsCategory: k.DevSettingsCategory.OVERLAYS
                                 })
                             }), t.push({
                                 id: "messaging",
                                 name: "Messaging",
-                                render: () => (0, a.jsx)(N.default, {
+                                render: () => (0, a.jsx)(T.default, {
                                     devSettingsCategory: k.DevSettingsCategory.MESSAGING
                                 })
                             }), t.push({
@@ -1081,8 +1081,8 @@
                 C = r("724209"),
                 j = r("782340"),
                 S = r("185187"),
-                T = r("694735");
-            let N = [{
+                N = r("694735");
+            let T = [{
                 key: "event",
                 cellClassName: S.eventColumn,
                 render(e) {
@@ -1143,7 +1143,7 @@
                         } = e, o = f.default.getUser(l), d = s(n);
                         return (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsxs)(p.default, {
-                                className: i(T.headerBar, S.subPanelHeaderBar),
+                                className: i(N.headerBar, S.subPanelHeaderBar),
                                 children: [(0, a.jsx)(p.default.Icon, {
                                     icon: h.default,
                                     tooltip: t
@@ -1233,7 +1233,7 @@
                     }, []);
                 return (0, a.jsxs)("div", {
                     ref: e,
-                    className: i(T.panel, S.panel),
+                    className: i(N.panel, S.panel),
                     children: [(0, a.jsxs)("div", {
                         className: S.toolbar,
                         children: [(0, a.jsx)(c.Button, {
@@ -1266,7 +1266,7 @@
                     }), (0, a.jsx)(c.ScrollerThin, {
                         className: S.tableContainer,
                         children: (0, a.jsx)(v.default, {
-                            columns: N,
+                            columns: T,
                             data: o,
                             selectedRowKey: s,
                             onClickRow: u
@@ -1330,8 +1330,8 @@
                 C = r("810567"),
                 j = r("945330"),
                 S = r("811199"),
-                T = r("559980"),
-                N = r("694735");
+                N = r("559980"),
+                T = r("694735");
 
             function w() {
                 let e = (0, a._)(["\n    import {defineColorTokens, themedToken} from '../tools/define';\n\n    const semanticTokenValues = {\n      ", "\n    };\n\n    export const semanticTokens = defineColorTokens(() => semanticTokenValues);\n    export type SemanticTokenValue = typeof semanticTokenValues;\n  "]);
@@ -1405,7 +1405,7 @@
                     }, {
                         autoTrackExposure: !1
                     }).enabledAMOLEDThemeOption;
-                t === T.AMOLEDThemeState.ON && r && (e = "amoled");
+                t === N.AMOLEDThemeState.ON && r && (e = "amoled");
                 let [{
                     rawPalette: a,
                     semanticTokens: i
@@ -1504,19 +1504,19 @@
                     })
                 }, [i, s]);
                 return (0, n.jsxs)("div", {
-                    className: N.panel,
+                    className: T.panel,
                     style: {
                         display: "flex",
                         flexDirection: "column"
                     },
                     children: [(0, n.jsxs)("div", {
-                        className: N.toolbar,
+                        className: T.toolbar,
                         style: {
                             flex: "0 0 34px",
                             padding: "0 4px"
                         },
                         children: [(0, n.jsxs)("div", {
-                            className: N.toolbarGroup,
+                            className: T.toolbarGroup,
                             children: [(0, n.jsx)(y.Button, {
                                 onClick: c,
                                 disabled: !p,
@@ -1529,11 +1529,11 @@
                                 children: "Redo"
                             })]
                         }), (0, n.jsx)("div", {
-                            className: N.toolbarDivider
+                            className: T.toolbarDivider
                         }), (0, n.jsxs)("div", {
-                            className: N.toolbarGroup,
+                            className: T.toolbarGroup,
                             children: [(0, n.jsx)("span", {
-                                className: N.toolbarGroupLabel,
+                                className: T.toolbarGroupLabel,
                                 children: "Raw"
                             }), (0, n.jsx)(y.Button, {
                                 size: y.Button.Sizes.MIN,
@@ -1551,11 +1551,11 @@
                                 children: "Export"
                             })]
                         }), (0, n.jsx)("div", {
-                            className: N.toolbarDivider
+                            className: T.toolbarDivider
                         }), (0, n.jsxs)("div", {
-                            className: N.toolbarGroup,
+                            className: T.toolbarGroup,
                             children: [(0, n.jsx)("span", {
-                                className: N.toolbarGroupLabel,
+                                className: T.toolbarGroupLabel,
                                 children: "Semantic"
                             }), (0, n.jsx)(y.Button, {
                                 size: y.Button.Sizes.MIN,
@@ -1565,9 +1565,9 @@
                                 children: "Export"
                             })]
                         }), (0, n.jsx)("div", {
-                            className: N.toolbarDivider
+                            className: T.toolbarDivider
                         }), (0, n.jsx)("div", {
-                            className: N.toolbarGroup,
+                            className: T.toolbarGroup,
                             children: (0, n.jsx)(y.Button, {
                                 size: y.Button.Sizes.MIN,
                                 type: "reset",
@@ -1581,9 +1581,9 @@
                                 children: "Reset all"
                             })
                         }), (0, n.jsx)("div", {
-                            className: N.toolbarDivider
+                            className: T.toolbarDivider
                         }), (0, n.jsxs)("div", {
-                            className: N.toolbarGroup,
+                            className: T.toolbarGroup,
                             style: {
                                 flexGrow: 1
                             },
@@ -1795,7 +1795,7 @@
                     })
                 })
             }
-            let T = [{
+            let N = [{
                 id: "action",
                 name: "Action",
                 render(e) {
@@ -1838,11 +1838,11 @@
                 }
             }];
 
-            function N(e) {
+            function T(e) {
                 let {
                     actionLog: t,
                     initialHeight: r
-                } = e, l = n.useMemo(() => t.error ? [...T, {
+                } = e, l = n.useMemo(() => t.error ? [...N, {
                     id: "error",
                     name: (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(f.default, {
@@ -1873,7 +1873,7 @@
                             })]
                         })
                     }
-                }] : T, [t]), {
+                }] : N, [t]), {
                     TabBar: o,
                     renderSelectedTab: s
                 } = (0, x.default)({
@@ -1945,7 +1945,7 @@
                             selectedRowKey: null == l ? void 0 : l.toString(),
                             onClickRow: e => o(Number.parseInt(e, 10))
                         })
-                    }), null != s && (0, a.jsx)(N, {
+                    }), null != s && (0, a.jsx)(T, {
                         actionLog: s,
                         initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                     })]
@@ -2020,8 +2020,8 @@
                 C = r("879946"),
                 j = r("664336"),
                 S = r("928063"),
-                T = r("149310"),
-                N = r("694735");
+                N = r("149310"),
+                T = r("694735");
 
             function w(e) {
                 let {
@@ -2034,25 +2034,25 @@
                     null != e && (0, p.default)(t, e)
                 }, [t, r]);
                 return 0 === r.size || null == l ? null : (0, a.jsxs)("div", {
-                    className: T.channelRow,
+                    className: N.channelRow,
                     children: [(0, a.jsx)(f.Clickable, {
-                        className: T.channelName,
+                        className: N.channelName,
                         onClick: i,
                         children: (0, a.jsx)(f.Text, {
                             variant: "text-md/semibold",
                             children: l.name
                         })
                     }), (0, a.jsxs)("div", {
-                        className: T.channelActions,
+                        className: N.channelActions,
                         children: [(0, a.jsx)(f.Clickable, {
-                            className: T.markUnread,
+                            className: N.markUnread,
                             onClick: o,
                             children: (0, a.jsx)(v.default, {
                                 height: 18,
                                 width: 18
                             })
                         }), (0, a.jsx)(k.default, {
-                            className: T.badge,
+                            className: N.badge,
                             value: r.size
                         })]
                     })]
@@ -2069,10 +2069,10 @@
                     return m.default.getHighlightedMessageIds(t.id)
                 }).value(), [r]);
                 return (0, a.jsxs)(S.default, {
-                    className: T.highlightsPanel,
+                    className: N.highlightsPanel,
                     initialHeight: 240,
                     children: [(0, a.jsx)(j.default, {
-                        className: N.headerBar,
+                        className: T.headerBar,
                         children: (0, a.jsx)(j.default.Title, {
                             children: "Channels with Highlights"
                         })
@@ -2093,14 +2093,14 @@
                         null != e && (0, h.fetchChannelHighlights)(e)
                     }, [e]);
                 return (0, a.jsxs)("div", {
-                    className: i(N.panel, T.panel),
+                    className: i(T.panel, N.panel),
                     children: [(0, a.jsxs)("div", {
-                        className: T.infoBar,
+                        className: N.infoBar,
                         children: [(0, a.jsxs)(f.Text, {
                             variant: "text-md/semibold",
                             children: ["Last Fetched: ", c(t).fromNow()]
                         }), (0, a.jsx)(f.Clickable, {
-                            className: T.refreshButton,
+                            className: N.refreshButton,
                             onClick: r,
                             children: (0, a.jsx)(C.default, {})
                         })]
@@ -2465,7 +2465,7 @@
                     C = (0, d.default)(r, !0),
                     j = null != r ? (0, y.getChannelPermissionSpecMap)(r, !1, !0) : null,
                     S = null != n ? b.default.getGuildPermissionSpecMap(n) : null,
-                    T = Object.values(null != j ? j : {}).map(e => {
+                    N = Object.values(null != j ? j : {}).map(e => {
                         let {
                             title: t,
                             flag: r
@@ -2475,7 +2475,7 @@
                             can: n
                         }, t)
                     }),
-                    N = Object.values(null != S ? S : {}).map(e => {
+                    T = Object.values(null != S ? S : {}).map(e => {
                         let {
                             title: t,
                             flag: r
@@ -2494,13 +2494,13 @@
                             children: [(0, a.jsx)(s.Heading, {
                                 variant: "heading-md/semibold",
                                 children: null != C ? "Permissions in ".concat(C) : "No channel selected"
-                            }), T]
+                            }), N]
                         }), (0, a.jsxs)("section", {
                             className: x.section,
                             children: [(0, a.jsx)(s.Heading, {
                                 variant: "heading-md/semibold",
                                 children: null != n ? "Permissions in ".concat(n.name) : "No guild selected"
-                            }), N]
+                            }), T]
                         })]
                     })
                 })
@@ -3111,7 +3111,7 @@
                 } catch {} finally {
                     await (0, c.fetchUserOffer)()
                 }
-            }, T = async (e, t) => {
+            }, N = async (e, t) => {
                 try {
                     await o.default.delete({
                         url: x.Endpoints.DELETE_USER_OFFER(e, t)
@@ -3119,7 +3119,7 @@
                 } catch {} finally {
                     await (0, c.fetchUserOffer)()
                 }
-            }, N = async (e, t) => {
+            }, T = async (e, t) => {
                 try {
                     await o.default.post({
                         url: x.Endpoints.UNACK_USER_OFFER(e, t)
@@ -3179,7 +3179,7 @@
                     } = e;
                     return t === P
                 })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", O = null != _, B = null != _ && new Date(_).getTime() < Date.now(), D = (null == M ? void 0 : M.sku_id) === k.PremiumSubscriptionSKUs.TIER_0, H = async () => {
-                    w(!0), O ? await N(A, "trial") : await (0, c.acknowledgeUserOffer)(s), f(), w(!1)
+                    w(!0), O ? await T(A, "trial") : await (0, c.acknowledgeUserOffer)(s), f(), w(!1)
                 };
                 n.useEffect(() => {
                     if (y) {
@@ -3210,7 +3210,7 @@
                             children: I
                         }), (0, a.jsx)(d.Clickable, {
                             onClick: async () => {
-                                w(!0), await T(A, "trial"), f(), w(!1)
+                                w(!0), await N(A, "trial"), f(), w(!1)
                             },
                             children: (0, a.jsx)(p.default, {
                                 className: i(C.icon, C.trashIcon)
@@ -3312,7 +3312,7 @@
                     } = e;
                     return t === L
                 })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", R = null != w, P = null != w && new Date(w).getTime() < Date.now(), M = async () => {
-                    k(!0), R ? await N(S, "discount") : await (0, c.acknowledgeUserOffer)(void 0, l), s(), k(!1)
+                    k(!0), R ? await T(S, "discount") : await (0, c.acknowledgeUserOffer)(void 0, l), s(), k(!1)
                 };
                 n.useEffect(() => {
                     if (u) {
@@ -3343,7 +3343,7 @@
                             children: _
                         }), (0, a.jsx)(d.Clickable, {
                             onClick: async () => {
-                                k(!0), await T(S, "discount"), s(), k(!1)
+                                k(!0), await N(S, "discount"), s(), k(!1)
                             },
                             children: (0, a.jsx)(p.default, {
                                 className: i(C.icon, C.trashIcon)
@@ -3414,9 +3414,9 @@
             }
 
             function _() {
-                let [e, t] = n.useState([]), [r, l] = n.useState([]), [o, h] = n.useState(), [m, p] = n.useState(), [g, b] = n.useState([]), [x, k] = n.useState([]), [T, N] = n.useState(!0);
+                let [e, t] = n.useState([]), [r, l] = n.useState([]), [o, h] = n.useState(), [m, p] = n.useState(), [g, b] = n.useState([]), [x, k] = n.useState([]), [N, T] = n.useState(!0);
                 n.useEffect(() => {
-                    (0 === e.length || 0 === r.length || T) && j().then(e => {
+                    (0 === e.length || 0 === r.length || N) && j().then(e => {
                         let r = Object.keys(e.trial).map(t => ({
                                 label: t,
                                 value: e.trial[t]
@@ -3427,20 +3427,20 @@
                             }));
                         t(r), l(a), null == o && h(r[0].value), null == m && p(a[0].value)
                     })
-                }, [e, r, o, m, T]), n.useEffect(() => {
-                    T && (N(!1), f.default.forceReset(), (0, c.fetchUserOffer)(), w().then(e => {
+                }, [e, r, o, m, N]), n.useEffect(() => {
+                    N && (T(!1), f.default.forceReset(), (0, c.fetchUserOffer)(), w().then(e => {
                         let t = e.trial.sort((e, t) => e.id.localeCompare(t.id));
                         b(t);
                         let r = e.discount.sort((e, t) => e.id.localeCompare(t.id));
                         k(r)
                     }))
-                }, [T]);
+                }, [N]);
                 let _ = async () => {
-                    null != o && (await S(o, "trial"), N(!0))
+                    null != o && (await S(o, "trial"), T(!0))
                 }, R = async () => {
-                    null != m && (await S(m, "discount"), N(!0))
+                    null != m && (await S(m, "discount"), T(!0))
                 }, P = async () => {
-                    await E(), N(!0)
+                    await E(), T(!0)
                 };
                 return (0, a.jsx)(d.ScrollerThin, {
                     className: i(v.panel),
@@ -3463,7 +3463,7 @@
                                     children: "Clear Mobile Trials DismissibleContent"
                                 }), (0, a.jsx)(d.Button, {
                                     size: d.Button.Sizes.SMALL,
-                                    onClick: () => N(!0),
+                                    onClick: () => T(!0),
                                     children: "Refresh DevTools"
                                 })]
                             })]
@@ -3515,7 +3515,7 @@
                             }), g.map(t => (0, a.jsx)(L, {
                                 offer: t,
                                 offerOptions: e,
-                                forceRefetch: () => N(!0)
+                                forceRefetch: () => T(!0)
                             }, t.id))]
                         }), x.length > 0 && (0, a.jsxs)("section", {
                             className: C.section,
@@ -3525,7 +3525,7 @@
                             }), x.map(e => (0, a.jsx)(A, {
                                 offer: e,
                                 offerOptions: r,
-                                forceRefetch: () => N(!0)
+                                forceRefetch: () => T(!0)
                             }, e.id))]
                         })]
                     })
@@ -3561,12 +3561,12 @@
                 C = r("928063"),
                 j = r("109475"),
                 S = r("724209"),
-                T = r("782340"),
-                N = r("185187"),
+                N = r("782340"),
+                T = r("185187"),
                 w = r("694735");
             let E = [{
                     key: "id",
-                    cellClassName: N.eventColumn,
+                    cellClassName: T.eventColumn,
                     render(e) {
                         let {
                             experimentId: t
@@ -3575,7 +3575,7 @@
                     }
                 }, {
                     key: "bucket",
-                    cellClassName: N.locationColumn,
+                    cellClassName: T.locationColumn,
                     render(e) {
                         let {
                             descriptor: t
@@ -3584,7 +3584,7 @@
                     }
                 }, {
                     key: "timestamp",
-                    cellClassName: N.locationColumn,
+                    cellClassName: T.locationColumn,
                     render(e) {
                         let {
                             timestamp: t
@@ -3609,7 +3609,7 @@
                         } = e, u = c(o);
                         return (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsxs)(b.default, {
-                                className: i(w.headerBar, N.subPanelHeaderBar),
+                                className: i(w.headerBar, T.subPanelHeaderBar),
                                 children: [(0, a.jsx)(b.default.Icon, {
                                     icon: p.default,
                                     tooltip: t
@@ -3617,7 +3617,7 @@
                                     children: t
                                 })]
                             }), (0, a.jsxs)(v.Properties, {
-                                className: N.commonProperties,
+                                className: T.commonProperties,
                                 children: [(0, a.jsx)(v.Property, {
                                     name: "Timestamp (local)",
                                     children: (0, a.jsx)("time", {
@@ -3685,37 +3685,37 @@
                 }, []);
                 return (0, a.jsxs)("div", {
                     ref: r,
-                    className: i(w.panel, N.panel),
+                    className: i(w.panel, T.panel),
                     children: [(0, a.jsxs)("div", {
-                        className: N.toolbar,
+                        className: T.toolbar,
                         children: [(0, a.jsx)("div", {
                             title: "Enables tracking of all triggers",
-                            className: N.triggersEnable,
+                            className: T.triggersEnable,
                             children: (0, a.jsx)(f.Switch, {
                                 checked: v,
                                 onChange: A,
-                                className: N.toolbarSwitch
+                                className: T.toolbarSwitch
                             })
                         }), (0, a.jsx)(f.Button, {
-                            className: N.toolbarButton,
+                            className: T.toolbarButton,
                             look: f.Button.Looks.BLANK,
                             size: f.Button.Sizes.ICON,
                             onClick: k.clearAnalyticsLog,
                             children: (0, a.jsx)("span", {
-                                title: T.default.Messages.CLEAR,
+                                title: N.default.Messages.CLEAR,
                                 children: (0, a.jsx)(g.default, {
-                                    "aria-label": T.default.Messages.CLEAR
+                                    "aria-label": N.default.Messages.CLEAR
                                 })
                             })
                         }), (0, a.jsx)(m.default, {
-                            className: N.searchBar,
+                            className: T.searchBar,
                             query: e,
                             onChange: t,
                             onClear: () => t(""),
                             placeholder: "Search by experiment id"
                         })]
                     }), (0, a.jsx)(f.ScrollerThin, {
-                        className: N.tableContainer,
+                        className: T.tableContainer,
                         children: (0, a.jsx)(j.default, {
                             columns: E,
                             data: o,
@@ -3723,7 +3723,7 @@
                             onClickRow: c
                         })
                     }), null != p && (0, a.jsxs)(C.default, {
-                        className: N.subPanel,
+                        className: T.subPanel,
                         minHeight: 100,
                         initialHeight: null != r.current ? r.current.clientHeight / 2 : 300,
                         children: [(0, a.jsx)(b, {}), y({
@@ -4488,6 +4488,12 @@
                         type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
                         userTrialOffer: null !== (t = e.body.user_trial_offer) && void 0 !== t ? t : null,
                         userDiscount: null !== (r = e.body.user_discount) && void 0 !== r ? r : null
+                    })
+                }).catch(e => {
+                    404 === e.status && n.default.dispatch({
+                        type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
+                        userTrialOffer: null,
+                        userDiscount: null
                     })
                 })
             }
@@ -5285,8 +5291,8 @@
                         role: C,
                         "aria-label": j,
                         "aria-hidden": S,
-                        "aria-checked": T,
-                        "aria-expanded": N,
+                        "aria-checked": N,
+                        "aria-expanded": T,
                         "aria-haspopup": w
                     } = e, E = (0, a.jsx)(p, {
                         x: 0,
@@ -5343,9 +5349,9 @@
                                 role: C,
                                 "aria-label": L,
                                 "aria-hidden": S,
-                                "aria-checked": T,
+                                "aria-checked": N,
                                 "aria-haspopup": w,
-                                "aria-expanded": N,
+                                "aria-expanded": T,
                                 tabIndex: o || null == g ? -1 : 0,
                                 children: [s ? (0, a.jsx)(h.default, {
                                     mask: h.default.Masks.HEADER_BAR_BADGE,

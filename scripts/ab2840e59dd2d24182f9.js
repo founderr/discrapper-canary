@@ -11589,6 +11589,12 @@
                         userTrialOffer: null !== (t = e.body.user_trial_offer) && void 0 !== t ? t : null,
                         userDiscount: null !== (n = e.body.user_discount) && void 0 !== n ? n : null
                     })
+                }).catch(e => {
+                    404 === e.status && s.default.dispatch({
+                        type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
+                        userTrialOffer: null,
+                        userDiscount: null
+                    })
                 })
             }
         },
