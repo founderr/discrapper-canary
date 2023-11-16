@@ -24386,11 +24386,8 @@
                         [ec, ef, eh, ep, em] = (0, o.useStateFromStoresArray)([I.default], () => [I.default.getMutualFriendsCount(X.id), I.default.getMutualFriends(X.id), I.default.getMutualGuilds(X.id), I.default.isFetchingProfile(X.id), I.default.isFetchingFriends(X.id)]),
                         eE = !X.bot && null != eh && eh.length > 0,
                         eC = !X.bot && null != ec && ec > 0,
-                        {
-                            shouldShow: eS,
-                            markAsDismissed: eg
-                        } = (0, P.useShouldShowUserPopoutCollectiblesUpsell)(X),
-                        e_ = (0, f.default)();
+                        eS = (0, P.useShouldShowUserPopoutCollectiblesUpsell)(X),
+                        eg = (0, f.default)();
                     l.useEffect(() => {
                         K.current = Date.now()
                     }, []), l.useEffect(() => {
@@ -24408,34 +24405,35 @@
                             status: er
                         })
                     }, [q, ei, ea, el, er, en]);
-                    let eI = null == eh ? void 0 : eh.map(e => (0, a.jsx)(k.default, {
+                    let e_ = null == eh ? void 0 : eh.map(e => (0, a.jsx)(k.default, {
                             connection: e,
                             user: X,
-                            theme: e_
+                            theme: eg
                         }, e.guild.id)),
-                        eT = null == ef ? void 0 : ef.map(e => (0, a.jsx)(F.default, {
+                        eI = null == ef ? void 0 : ef.map(e => (0, a.jsx)(F.default, {
                             connection: e
                         }, e.key)),
-                        ex = Q.map(e => (0, a.jsx)(U.default, {
+                        eT = Q.map(e => (0, a.jsx)(U.default, {
                             channel: n,
                             integration: e
                         }, e.application.id)),
-                        ev = l.useCallback(() => {
-                            !X.bot && !em && null == eT && (0, c.fetchMutualFriends)(X.id)
-                        }, [em, eT, X.id, X.bot]),
-                        eN = l.useCallback(() => z(!0), []),
-                        eA = l.useCallback(() => z(!1), []);
+                        ex = l.useCallback(() => {
+                            !X.bot && !em && null == eI && (0, c.fetchMutualFriends)(X.id)
+                        }, [em, eI, X.id, X.bot]),
+                        ev = l.useCallback(() => z(!0), []),
+                        eN = l.useCallback(() => z(!1), []);
                     return en ? (0, a.jsx)("aside", {
                         className: W.profilePanel,
-                        onMouseEnter: eN,
-                        onMouseLeave: eA,
+                        onMouseEnter: ev,
+                        onMouseLeave: eN,
                         children: (0, a.jsxs)(A.default, {
                             user: X,
                             profileType: B.UserProfileTypes.PANEL,
                             useDefaultClientTheme: !0,
-                            children: [eS && (0, a.jsx)(M.default, {
-                                onDismiss: eg,
-                                isInSidebar: !0
+                            children: [eS.shouldShow && (0, a.jsx)(M.default, {
+                                user: X,
+                                isInSidebar: !0,
+                                ...eS
                             }, X.id), (0, a.jsxs)(d.ScrollerNone, {
                                 children: [(0, a.jsx)(V.default, {
                                     user: X,
@@ -24477,7 +24475,7 @@
                                             count: null == eh ? void 0 : eh.length
                                         }),
                                         isLoadingHeader: ep,
-                                        children: eI
+                                        children: e_
                                     }) : null, eC ? (0, a.jsx)(w.default, {
                                         className: i(W.mutualFriendsList, {
                                             [W.mutualFriendsDivider]: eE
@@ -24488,21 +24486,21 @@
                                         isLoadingHeader: ep,
                                         isLoadingContents: em,
                                         loadingContentsCount: ec,
-                                        onFocus: ev,
-                                        onHover: ev,
+                                        onFocus: ex,
+                                        onHover: ex,
                                         itemType: w.ListType.MutualFriendsList,
-                                        children: eT
+                                        children: eI
                                     }) : null]
                                 }), (0, a.jsx)(A.default.Inner, {
                                     className: i(W.profilePanelConnections, W.appListThemedContainer),
                                     children: ee && (0, a.jsxs)(w.default, {
-                                        header: ex.length > 0 ? G.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
-                                            count: ex.length
+                                        header: eT.length > 0 ? G.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
+                                            count: eT.length
                                         }) : G.default.Messages.PRIVATE_CHANNEL_APPS_HEADER,
                                         isLoadingContents: !$,
                                         isLoadingHeader: !1,
                                         itemType: w.ListType.AppsList,
-                                        children: [ex, et.length > 0 && (0, a.jsxs)("div", {
+                                        children: [eT, et.length > 0 && (0, a.jsxs)("div", {
                                             className: W.appButtonContainer,
                                             children: [0 === Q.length && (0, a.jsx)(d.Text, {
                                                 variant: "text-xs/normal",
