@@ -760,17 +760,10 @@
                 }
                 let C = () => {
                         if (null != n) {
-                            if (null != g) {
-                                let {
-                                    scheduled_start_time: e,
-                                    scheduled_end_time: l
-                                } = g;
-                                s.default.updateGuildEventException({
-                                    scheduled_start_time: e,
-                                    scheduled_end_time: l,
-                                    is_canceled: !0
-                                }, f.id, t, n)
-                            } else {
+                            if (null != g) s.default.updateGuildEventException({
+                                is_canceled: !0
+                            }, f.id, t, n);
+                            else {
                                 let e = d.default.extractTimestamp(n);
                                 s.default.createGuildEventException({
                                     original_scheduled_start_time: new Date(e).toISOString(),
