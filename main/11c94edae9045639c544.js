@@ -296,11 +296,8 @@
                         return {
                             type: "attachmentLink",
                             content: [{
-                                type: "mention",
-                                content: [{
-                                    type: "text",
-                                    content: l = a
-                                }]
+                                type: "text",
+                                content: l = a
                             }],
                             attachmentUrl: r,
                             attachmentName: l
