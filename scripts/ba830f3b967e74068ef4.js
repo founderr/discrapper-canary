@@ -367,8 +367,8 @@
                 L = a("778588"),
                 b = a("697218"),
                 v = a("764490"),
-                N = a("29557"),
-                I = a("956089"),
+                I = a("29557"),
+                N = a("956089"),
                 _ = a("599110"),
                 j = a("719923"),
                 A = a("439932"),
@@ -426,7 +426,7 @@
                                 color: "header-secondary",
                                 variant: "text-sm/bold",
                                 children: X.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE
-                            }), null != E && (0, s.jsx)(I.PremiumBadge, {
+                            }), null != E && (0, s.jsx)(N.PremiumBadge, {
                                 className: Z.newItemTypeBadge,
                                 text: X.default.Messages.NEW
                             })]
@@ -468,7 +468,7 @@
                 } = (0, c.useStateFromStoresObject)([P.default], () => P.default.getAnalytics()), {
                     AnalyticsLocationProvider: u,
                     analyticsLocations: x
-                } = (0, p.default)([...r, E.default.COLLECTIBLES_SHOP]), I = (0, c.default)([L.default], () => L.default.getLayers().includes(V.Layers.COLLECTIBLES_SHOP)), {
+                } = (0, p.default)([...r, E.default.COLLECTIBLES_SHOP]), N = (0, c.default)([L.default], () => L.default.getLayers().includes(V.Layers.COLLECTIBLES_SHOP)), {
                     source: R
                 } = (0, W.useCollectiblesShopRouting)(), M = (0, c.default)([b.default], () => b.default.getCurrentUser()), F = j.default.canUseCollectibles(M), {
                     categories: U,
@@ -513,7 +513,7 @@
                         children: [t ? null : (0, s.jsxs)(h.default, {
                             className: n((0, A.getThemeClass)(es), Z.headerBar),
                             toolbar: !0,
-                            children: [(0, s.jsx)(N.default, {
+                            children: [(0, s.jsx)(I.default, {
                                 className: Z.logo
                             }), (0, s.jsx)(h.default.Title, {
                                 className: Z.title,
@@ -548,7 +548,7 @@
                                     children: (0, s.jsx)(C.default, {
                                         className: Z.close,
                                         closeAction: () => {
-                                            if (I) {
+                                            if (N) {
                                                 (0, y.closeCollectiblesShop)();
                                                 return
                                             }
@@ -567,7 +567,7 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return N
+                    return I
                 }
             });
             var s = a("37983"),
@@ -627,7 +627,7 @@
                     })
                 };
 
-            function N(e) {
+            function I(e) {
                 let {
                     category: t
                 } = e, {
@@ -697,8 +697,8 @@
                 L = a("697218"),
                 b = a("944441"),
                 v = a("462579"),
-                N = a("216422"),
-                I = a("956089"),
+                I = a("216422"),
+                N = a("956089"),
                 _ = a("50885"),
                 j = a("21526"),
                 A = a("775416"),
@@ -919,10 +919,10 @@
                             tooltipContentClassName: W.premiumWheelTooltipContent,
                             color: c.Tooltip.Colors.PRIMARY,
                             text: H.default.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER,
-                            children: e => (0, s.jsx)(I.TextBadge, {
+                            children: e => (0, s.jsx)(N.TextBadge, {
                                 ...e,
                                 className: W.premiumWheelBadge,
-                                text: (0, s.jsx)(N.default, {
+                                text: (0, s.jsx)(I.default, {
                                     className: W.premiumWheel
                                 })
                             })
@@ -1287,8 +1287,8 @@
                 L = a("782340"),
                 b = a("601664"),
                 v = a("725015");
-            let N = n.AvatarSizes.SIZE_120,
-                I = (0, h.getLogoSize)(96);
+            let I = n.AvatarSizes.SIZE_120,
+                N = (0, h.getLogoSize)(96);
             var _ = e => {
                 var t, a, _;
                 let {
@@ -1298,7 +1298,7 @@
                 } = (0, i.default)(), {
                     backgroundColors: y
                 } = (0, S.default)(j), R = (0, r.default)([f.default], () => f.default.getCurrentUser()), O = l.useRef(null), P = (0, o.default)(O), k = {
-                    size: (0, c.getDecorationSizeForAvatarSize)(N),
+                    size: (0, c.getDecorationSizeForAvatarSize)(I),
                     animateOnHover: !P
                 }, B = j.products.map(e => {
                     var t;
@@ -1335,7 +1335,7 @@
                         }), (0, s.jsx)("img", {
                             className: b.bannerFont,
                             src: (0, E.getCollectiblesAssetURL)(j.logo, {
-                                size: I
+                                size: N
                             }),
                             alt: j.name
                         }), (0, s.jsx)(n.Text, {
@@ -1368,7 +1368,7 @@
                                 avatarDecoration: D,
                                 "aria-label": L.default.Messages.USER_SETTINGS_AVATAR,
                                 src: v,
-                                size: N
+                                size: I
                             })
                         }), (0, s.jsx)("div", {
                             className: b.blueHeadset,
@@ -1376,7 +1376,7 @@
                                 avatarDecoration: M,
                                 "aria-label": L.default.Messages.USER_SETTINGS_AVATAR,
                                 src: v,
-                                size: N
+                                size: I
                             })
                         }), (0, s.jsx)("div", {
                             className: b.greenSmoke,
@@ -1384,7 +1384,7 @@
                                 avatarDecoration: F,
                                 "aria-label": L.default.Messages.USER_SETTINGS_AVATAR,
                                 src: v,
-                                size: N
+                                size: I
                             })
                         })]
                     }), (0, s.jsx)("div", {
@@ -1548,6 +1548,12 @@
                         confettiColors: ["#EE5619", "#FDBE44", "#42D612", "#DC0DDE", "#8A0AE5"]
                     },
                     [r.CollectiblesCategorySkuId.FALL]: {
+                        backgroundColors: C("#FFC267", "#6C1A00"),
+                        buttonColors: g("#F5A142", "#E4760E"),
+                        confettiSprites: [a("740683"), a("489847")],
+                        confettiColors: ["#FF7138", "#92360C", "#F6A334", "#FFC586", "#FF8A00"]
+                    },
+                    [r.CollectiblesCategorySkuId.WINTER]: {
                         backgroundColors: C("#FFC267", "#6C1A00"),
                         buttonColors: g("#F5A142", "#E4760E"),
                         confettiSprites: [a("740683"), a("489847")],
