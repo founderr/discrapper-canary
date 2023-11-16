@@ -174,7 +174,7 @@
                     transitionState: N,
                     onClose: D,
                     analyticsData: R
-                } = e, g = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]), [x] = l.useState(!1), [T, v] = l.useState(h.DEFAULT_LOCKDOWN_DURATION), S = (0, i.useStateFromStores)([f.default], () => f.default.getGuildIncident(t)), L = (0, I.hasInvitesDisabled)(S), m = (0, I.hasDMsDisabled)(S), [M, p] = l.useState(L), [O, j] = l.useState(m), G = M !== L || O !== m;
+                } = e, g = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]), [x] = l.useState(!1), [T, v] = l.useState(h.DEFAULT_LOCKDOWN_DURATION), S = (0, i.useStateFromStores)([f.default], () => f.default.getGuildIncident(t)), L = (0, I.hasInvitesDisabled)(S), m = (0, I.hasDMsDisabled)(S), [M, p] = l.useState(L), [O, j] = l.useState(m), [G, w] = l.useState(!1), b = M !== L || O !== m || G;
                 return null == g ? (D(), null) : (0, n.jsxs)(d.ModalRoot, {
                     transitionState: N,
                     size: d.ModalSize.MEDIUM,
@@ -199,7 +199,7 @@
                                 placeholder: A.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_PLACEHOLDER,
                                 options: (0, h.getTimeframes)(),
                                 select: e => {
-                                    v(e)
+                                    v(e), w(!0)
                                 },
                                 isSelected: e => e === T,
                                 serialize: e => String(e)
@@ -275,7 +275,7 @@
                             color: d.Button.Colors.BRAND_NEW,
                             look: d.Button.Looks.FILLED,
                             submitting: x,
-                            disabled: !G,
+                            disabled: !b,
                             children: A.default.Messages.GUILD_SERVER_LOCKDOWN_MODAL_CTA
                         }), (0, n.jsx)(d.Button, {
                             onClick: D,
