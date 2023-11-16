@@ -1,1484 +1,717 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["67079"], {
-        437822: function(e, t, o) {
+    ["34426"], {
+        564967: function(e, t, i) {
             "use strict";
-            let s;
-            o.r(t), o.d(t, {
-                PasswordResetResult: function() {
-                    return n
-                },
+            i.r(t), i.d(t, {
                 default: function() {
-                    return g
-                }
-            }), o("70102"), o("860677"), o("506083");
-            var n, a, l = o("759843"),
-                d = o("171718"),
-                r = o("872717"),
-                i = o("95410"),
-                u = o("913144"),
-                c = o("448993"),
-                E = o("307439"),
-                _ = o("605250"),
-                p = o("21121"),
-                f = o("776502"),
-                h = o("393414"),
-                S = o("271938"),
-                A = o("350522"),
-                O = o("840707"),
-                N = o("772017"),
-                I = o("49111"),
-                y = o("191349"),
-                R = o("782340");
-            let m = new _.default("AuthenticationActionCreators"),
-                T = null;
-
-            function C(e) {
-                return null == e ? R.default.Messages.NETWORK_ERROR_REST_REQUEST : null != e.message ? e.message : null != e.code && Array.isArray(e.code) ? e.code[0] : R.default.Messages.NETWORK_ERROR_REST_REQUEST
-            }
-
-            function v(e) {
-                let t = {
-                    type: "LOGOUT",
-                    ...e
-                };
-                u.default.dispatch(t).catch(e => {
-                    var t;
-                    throw m.error("Error while dispatching LOGOUT", e), null === (t = window.DiscordErrors) || void 0 === t || t.softCrash(e), e
-                })
-            }
-
-            function M() {
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : I.Routes.DEFAULT_LOGGED_OUT;
-                v();
-                let t = (0, p.getRootNavigationRefIfInExperiment)();
-                null != e && (null != t ? (N.default.popAll(), t.navigate("auth")) : (0, h.transitionTo)(e))
-            }(a = n || (n = {})).MFA = "MFA", a.SUCCESS = "SUCCESS";
-            var g = {
-                startSession(e) {
-                    u.default.wait(() => {
-                        u.default.dispatch({
-                            type: "START_SESSION",
-                            token: e
-                        })
-                    })
-                },
-                setLoginCredentials(e, t) {
-                    u.default.dispatch({
-                        type: "SET_LOGIN_CREDENTIALS",
-                        login: e,
-                        password: t
-                    })
-                },
-                login(e) {
-                    var t;
-                    let {
-                        login: o,
-                        password: s,
-                        loginCode: n,
-                        undelete: a,
-                        source: d,
-                        giftCodeSKUId: r,
-                        invite: i,
-                        isMultiAccount: E
-                    } = e;
-                    u.default.dispatch({
-                        type: "LOGIN",
-                        login: o,
-                        loginMethod: null != n && "" !== n ? I.LoginMethods.LOGIN_CODE : I.LoginMethods.PASSWORD
-                    }), this.setLoginCredentials(o, null !== (t = null != s ? s : n) && void 0 !== t ? t : void 0), O.default.post({
-                        url: I.Endpoints.LOGIN,
-                        body: {
-                            login: o,
-                            password: s,
-                            undelete: a,
-                            login_code: n,
-                            login_source: d,
-                            gift_code_sku_id: r
-                        },
-                        retries: 2,
-                        oldFormErrors: !0,
-                        trackedActionData: {
-                            event: l.NetworkActionNames.USER_LOGIN,
-                            properties: {
-                                invite_code: null == i ? void 0 : i.code,
-                                is_multi_account: E
-                            }
-                        },
-                        ...E ? {
-                            headers: {
-                                authorization: ""
-                            }
-                        } : {}
-                    }).then(e => {
-                        let {
-                            body: {
-                                mfa: t,
-                                sms: o,
-                                webauthn: s,
-                                ticket: n,
-                                token: a,
-                                backup: l,
-                                user_id: d,
-                                required_actions: r,
-                                totp: i
-                            }
-                        } = e;
-                        u.default.dispatch({
-                            type: "LOGIN_ATTEMPTED",
-                            user_id: d,
-                            required_actions: r
-                        }), t ? u.default.dispatch({
-                            type: "LOGIN_MFA_STEP",
-                            ticket: n,
-                            sms: o,
-                            webauthn: s,
-                            totp: i,
-                            backup: l
-                        }) : E ? this.switchAccountToken(a) : u.default.dispatch({
-                            type: "LOGIN_SUCCESS",
-                            token: a
-                        })
-                    }, e => {
-                        var t;
-                        let n = null === (t = e.body) || void 0 === t ? void 0 : t.code;
-                        n === I.AbortCodes.ACCOUNT_SCHEDULED_FOR_DELETION && null != s && "" !== s ? u.default.dispatch({
-                            type: "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION",
-                            credentials: {
-                                login: o,
-                                password: s
-                            }
-                        }) : n === I.AbortCodes.ACCOUNT_DISABLED && null != s && "" !== s ? u.default.dispatch({
-                            type: "LOGIN_ACCOUNT_DISABLED",
-                            credentials: {
-                                login: o,
-                                password: s
-                            }
-                        }) : n === I.AbortCodes.PHONE_VERIFICATION_REQUIRED ? u.default.dispatch({
-                            type: "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED"
-                        }) : u.default.dispatch({
-                            type: "LOGIN_FAILURE",
-                            error: new c.V6OrEarlierAPIError(e)
-                        })
-                    })
-                },
-                loginMFA(e) {
-                    let {
-                        code: t,
-                        ticket: o,
-                        source: s,
-                        giftCodeSKUId: n,
-                        isMultiAccount: a,
-                        isWebAuthn: d
-                    } = e;
-                    d ? u.default.dispatch({
-                        type: "LOGIN_MFA_WEBAUTHN"
-                    }) : u.default.dispatch({
-                        type: "LOGIN_MFA"
-                    }), O.default.post({
-                        url: d ? I.Endpoints.LOGIN_WEBAUTHN : I.Endpoints.LOGIN_MFA,
-                        body: {
-                            code: t,
-                            ticket: o,
-                            login_source: s,
-                            gift_code_sku_id: n
-                        },
-                        retries: 2,
-                        oldFormErrors: !0,
-                        trackedActionData: {
-                            event: l.NetworkActionNames.USER_LOGIN_MFA
-                        }
-                    }).then(e => {
-                        a ? this.switchAccountToken(e.body.token) : u.default.dispatch({
-                            type: "LOGIN_SUCCESS",
-                            token: e.body.token
-                        })
-                    }, e => u.default.dispatch({
-                        type: "LOGIN_MFA_FAILURE",
-                        message: C(e.body)
-                    }))
-                },
-                loginMFAv2(e) {
-                    let t, {
-                        code: o,
-                        ticket: s,
-                        source: n,
-                        giftCodeSKUId: a,
-                        isMultiAccount: d,
-                        mfaType: r
-                    } = e;
-                    return t = "webauthn" === r ? I.Endpoints.LOGIN_WEBAUTHN : "sms" === r ? I.Endpoints.LOGIN_SMS : I.Endpoints.LOGIN_MFA, O.default.post({
-                        url: t,
-                        body: {
-                            code: o,
-                            ticket: s,
-                            login_source: n,
-                            gift_code_sku_id: a
-                        },
-                        retries: 2,
-                        oldFormErrors: !0,
-                        trackedActionData: {
-                            event: l.NetworkActionNames.USER_LOGIN_MFA
-                        }
-                    }).then(e => {
-                        d ? this.switchAccountToken(e.body.token) : u.default.dispatch({
-                            type: "LOGIN_SUCCESS",
-                            token: e.body.token
-                        })
-                    }).catch(e => {
-                        var t;
-                        if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === I.AbortCodes.MFA_INVALID_CODE) throw Error((0, f.mapError)(r));
-                        throw e
-                    })
-                },
-                requestSMSToken(e) {
-                    u.default.dispatch({
-                        type: "LOGIN_MFA_SMS"
-                    }), O.default.post({
-                        url: I.Endpoints.LOGIN_SMS_SEND,
-                        body: {
-                            ticket: e
-                        },
-                        oldFormErrors: !0,
-                        trackedActionData: {
-                            event: l.NetworkActionNames.LOGIN_REQUEST_SMS_TOKEN
-                        }
-                    }).then(e => {
-                        let {
-                            body: {
-                                phone: t
-                            }
-                        } = e;
-                        u.default.dispatch({
-                            type: "LOGIN_MFA_SMS_REQUEST_SUCCESS",
-                            phone: t
-                        })
-                    }, e => {
-                        u.default.dispatch({
-                            type: "LOGIN_MFA_FAILURE",
-                            message: C(e.body)
-                        })
-                    })
-                },
-                loginSMS(e) {
-                    let {
-                        code: t,
-                        ticket: o,
-                        source: s,
-                        giftCodeSKUId: n,
-                        isMultiAccount: a
-                    } = e;
-                    u.default.dispatch({
-                        type: "LOGIN_MFA_SMS"
-                    }), O.default.post({
-                        url: I.Endpoints.LOGIN_SMS,
-                        body: {
-                            code: t,
-                            ticket: o,
-                            login_source: s,
-                            gift_code_sku_id: n
-                        },
-                        retries: 2,
-                        oldFormErrors: !0,
-                        trackedActionData: {
-                            event: l.NetworkActionNames.USER_LOGIN_MFA_SMS
-                        }
-                    }).then(e => {
-                        a ? this.switchAccountToken(e.body.token) : u.default.dispatch({
-                            type: "LOGIN_SUCCESS",
-                            token: e.body.token
-                        })
-                    }, e => u.default.dispatch({
-                        type: "LOGIN_MFA_SMS_FAILURE",
-                        message: C(e.body)
-                    }))
-                },
-                loginToken(e) {
-                    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                    return u.default.dispatch({
-                        type: "LOGIN"
-                    }), new Promise(o => {
-                        setImmediate(() => {
-                            u.default.dispatch({
-                                type: "LOGIN_SUCCESS",
-                                token: e
-                            }), t && this.startSession(e), o()
-                        })
-                    })
-                },
-                loginReset(e) {
-                    u.default.dispatch({
-                        type: "LOGIN_RESET",
-                        isMultiAccount: e
-                    })
-                },
-                loginStatusReset() {
-                    u.default.dispatch({
-                        type: "LOGIN_STATUS_RESET"
-                    })
-                },
-                logoutInternal(e) {
-                    v(e)
-                },
-                logout() {
-                    var e;
-                    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : I.Routes.DEFAULT_LOGGED_OUT,
-                        o = arguments.length > 1 ? arguments[1] : void 0;
-                    return O.default.post({
-                        url: I.Endpoints.LOGOUT,
-                        body: {
-                            provider: (0, y.getDevicePushProvider)(),
-                            token: i.default.get(I.DEVICE_TOKEN),
-                            voip_provider: y.DEVICE_PUSH_VOIP_PROVIDER,
-                            voip_token: i.default.get(I.DEVICE_VOIP_TOKEN)
-                        },
-                        oldFormErrors: !0,
-                        trackedActionData: {
-                            event: l.NetworkActionNames.USER_LOGOUT
-                        },
-                        ...null != o && {
-                            headers: {
-                                authorization: null !== (e = d.default.getToken(o)) && void 0 !== e ? e : ""
-                            }
-                        }
-                    }).finally(() => {
-                        (null == o || o === S.default.getId()) && M(t)
-                    })
-                },
-                switchAccountToken(e) {
-                    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                        o = S.default.getToken();
-                    m.log("Switching accounts", {
-                        wasLoggedIn: null != o,
-                        tokenHasChanged: e !== o
-                    }), v({
-                        isSwitchingAccount: !0
-                    });
-                    let s = this.loginToken(e, !0).then(() => {
-                        let t = S.default.getToken();
-                        m.log("Switched accounts finished", {
-                            isCorrectToken: e === t
-                        })
-                    });
-                    return t && (0, h.transitionTo)(I.Routes.ME), s
-                },
-                verifySSOToken() {
-                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : I.Routes.DEFAULT_LOGGED_OUT;
-                    return r.default.get({
-                        url: I.Endpoints.ME,
-                        oldFormErrors: !0
-                    }).catch(() => M(e))
-                },
-                verify(e) {
-                    null != e ? O.default.post({
-                        url: I.Endpoints.VERIFY,
-                        body: {
-                            token: e
-                        },
-                        oldFormErrors: !0,
-                        trackedActionData: {
-                            event: l.NetworkActionNames.USER_VERIFY
-                        }
-                    }).then(e => {
-                        u.default.dispatch({
-                            type: "LOGIN_SUCCESS",
-                            token: e.body.token
-                        }), u.default.dispatch({
-                            type: "VERIFY_SUCCESS",
-                            verifyingUserId: e.body.user_id
-                        })
-                    }, e => u.default.dispatch({
-                        type: "VERIFY_FAILURE",
-                        errors: e.body
-                    })) : u.default.dispatch({
-                        type: "VERIFY_FAILURE",
-                        errors: {}
-                    })
-                },
-                async authorizePayment(e) {
-                    try {
-                        await O.default.post({
-                            url: I.Endpoints.AUTHORIZE_PAYMENT,
-                            body: {
-                                token: e
-                            },
-                            oldFormErrors: !0,
-                            trackedActionData: {
-                                event: l.NetworkActionNames.AUTHORIZE_PAYMENT
-                            }
-                        }), u.default.dispatch({
-                            type: "VERIFY_SUCCESS"
-                        })
-                    } catch (e) {
-                        u.default.dispatch({
-                            type: "VERIFY_FAILURE",
-                            errors: {}
-                        })
-                    }
-                },
-                async authorizeIPAddress(e) {
-                    if (null == e) {
-                        u.default.dispatch({
-                            type: "VERIFY_FAILURE",
-                            errors: {}
-                        });
-                        return
-                    }
-                    try {
-                        await O.default.post({
-                            url: I.Endpoints.AUTHORIZE_IP,
-                            body: {
-                                token: e
-                            },
-                            oldFormErrors: !0,
-                            trackedActionData: {
-                                event: l.NetworkActionNames.AUTHORIZE_IP
-                            }
-                        }), u.default.dispatch({
-                            type: "VERIFY_SUCCESS"
-                        })
-                    } catch (e) {
-                        u.default.dispatch({
-                            type: "VERIFY_FAILURE",
-                            errors: {}
-                        })
-                    }
-                },
-                verifyResend: () => O.default.post({
-                    url: I.Endpoints.VERIFY_RESEND,
-                    oldFormErrors: !0,
-                    trackedActionData: {
-                        event: l.NetworkActionNames.USER_VERIFY_RESEND
-                    }
-                }),
-                async resetPassword(e, t, o) {
-                    u.default.dispatch({
-                        type: "LOGIN"
-                    });
-                    let s = {
-                            token: e,
-                            password: t,
-                            source: o
-                        },
-                        n = i.default.get(I.DEVICE_TOKEN),
-                        a = (0, y.getDevicePushProvider)();
-                    null != a && null != n && (s.push_provider = a, s.push_token = n);
-                    let d = i.default.get(I.DEVICE_VOIP_TOKEN);
-                    null != y.DEVICE_PUSH_VOIP_PROVIDER && null != d && (s.push_voip_provider = y.DEVICE_PUSH_VOIP_PROVIDER, s.push_voip_token = d);
-                    try {
-                        let {
-                            body: {
-                                mfa: e,
-                                sms: t,
-                                webauthn: o,
-                                ticket: n,
-                                token: a,
-                                backup: d,
-                                totp: r
-                            }
-                        } = await O.default.post({
-                            url: I.Endpoints.RESET_PASSWORD,
-                            body: s,
-                            oldFormErrors: !0,
-                            trackedActionData: {
-                                event: l.NetworkActionNames.USER_RESET_PASSWORD
-                            }
-                        });
-                        return {
-                            result: e ? "MFA" : "SUCCESS",
-                            sms: t,
-                            webauthn: o,
-                            ticket: n,
-                            token: a,
-                            backup: d,
-                            totp: r
-                        }
-                    } catch (e) {
-                        throw u.default.dispatch({
-                            type: "LOGIN_FAILURE",
-                            error: new c.V6OrEarlierAPIError(e)
-                        }), e
-                    }
-                },
-                async resetPasswordMFA(e, t, o, s, n) {
-                    u.default.dispatch({
-                        type: "LOGIN_MFA"
-                    });
-                    try {
-                        let a = await O.default.post({
-                            url: I.Endpoints.RESET_PASSWORD,
-                            body: {
-                                code: e,
-                                ticket: t,
-                                password: o,
-                                token: s,
-                                source: n
-                            },
-                            oldFormErrors: !0,
-                            trackedActionData: {
-                                event: l.NetworkActionNames.USER_RESET_PASSWORD,
-                                properties: {
-                                    mfa: !0
-                                }
-                            }
-                        });
-                        return a.body.token
-                    } catch (e) {
-                        throw u.default.dispatch({
-                            type: "LOGIN_MFA_FAILURE",
-                            message: C(e.body)
-                        }), e
-                    }
-                },
-                async resetPasswordMFAv2(e) {
-                    let {
-                        method: t,
-                        code: o,
-                        ticket: s,
-                        password: n,
-                        token: a,
-                        source: d
-                    } = e;
-                    u.default.dispatch({
-                        type: "LOGIN_MFA"
-                    });
-                    let r = await O.default.post({
-                        url: I.Endpoints.RESET_PASSWORD,
-                        body: {
-                            code: o,
-                            ticket: s,
-                            password: n,
-                            token: a,
-                            source: d,
-                            method: t
-                        },
-                        oldFormErrors: !0,
-                        trackedActionData: {
-                            event: l.NetworkActionNames.USER_RESET_PASSWORD,
-                            properties: {
-                                mfa: !0
-                            }
-                        }
-                    });
-                    return r.body.token
-                },
-                async forgotPassword(e) {
-                    this.setLoginCredentials(e), u.default.dispatch({
-                        type: "FORGOT_PASSWORD_REQUEST"
-                    });
-                    try {
-                        await O.default.post({
-                            url: I.Endpoints.FORGOT_PASSWORD,
-                            body: {
-                                login: e
-                            },
-                            oldFormErrors: !0,
-                            trackedActionData: {
-                                event: l.NetworkActionNames.FORGOT_PASSWORD
-                            }
-                        }), u.default.dispatch({
-                            type: "FORGOT_PASSWORD_SENT"
-                        })
-                    } catch (o) {
-                        let e = new c.V6OrEarlierAPIError(o),
-                            t = e.code;
-                        throw t === I.AbortCodes.PHONE_VERIFICATION_REQUIRED ? u.default.dispatch({
-                            type: "LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION"
-                        }) : u.default.dispatch({
-                            type: "LOGIN_FAILURE",
-                            error: e
-                        }), o
-                    }
-                },
-                setFingerprint(e) {
-                    u.default.dispatch({
-                        type: "FINGERPRINT",
-                        fingerprint: e
-                    })
-                },
-                getExperiments(e) {
-                    u.default.dispatch({
-                        type: "EXPERIMENTS_FETCH",
-                        withGuildExperiments: e
-                    })
-                },
-                getLocationMetadata: () => null != T ? T : (clearTimeout(s), s = setTimeout(() => {
-                    u.default.dispatch({
-                        type: "SET_CONSENT_REQUIRED",
-                        consentRequired: !0
-                    })
-                }, 5e3), T = r.default.get({
-                    url: I.Endpoints.AUTH_LOCATION_METADATA,
-                    retries: 2,
-                    oldFormErrors: !0
-                }).then(e => {
-                    var t, o, n, a, l;
-                    if (clearTimeout(s), null == A.default.getAuthenticationConsentRequired()) {
-                        let t = null === (a = null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.consent_required) || void 0 === a || a;
-                        u.default.dispatch({
-                            type: "SET_CONSENT_REQUIRED",
-                            consentRequired: t
-                        })
-                    }
-                    if (u.default.dispatch({
-                            type: "SET_LOCATION_METADATA",
-                            countryCode: null !== (l = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.country_code) && void 0 !== l ? l : void 0
-                        }), T = null, (null == e ? void 0 : null === (o = e.body) || void 0 === o ? void 0 : o.promotional_email_opt_in) != null) {
-                        let t = e.body.promotional_email_opt_in;
-                        (0, E.setPromoEmailConsentState)({
-                            required: t.required,
-                            checked: t.pre_checked,
-                            preChecked: t.pre_checked
-                        })
-                    }
-                }, () => {
-                    clearTimeout(s), u.default.dispatch({
-                        type: "SET_CONSENT_REQUIRED",
-                        consentRequired: !0
-                    }), T = null
-                }))
-            }
-        },
-        772017: function(e, t, o) {
-            "use strict";
-            o.r(t), o.d(t, {
-                default: function() {
-                    return c
-                }
-            }), o("424973");
-            var s = o("995008"),
-                n = o.n(s),
-                a = o("913144"),
-                l = o("693051"),
-                d = o("153498"),
-                r = o("76493"),
-                i = o("91731"),
-                u = o("49111"),
-                c = {
-                    push(e, t) {
-                        let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : n("modal"),
-                            s = arguments.length > 3 ? arguments[3] : void 0,
-                            l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : u.AppContext.APP;
-                        return (0, d.pushModal)({
-                            key: o,
-                            modal: (0, i.default)(e, {}, t, o),
-                            ...s
-                        }), a.default.dispatch({
-                            type: "MODAL_PUSH",
-                            modal: e,
-                            props: t,
-                            key: o,
-                            appContext: l
-                        }), o
-                    },
-                    pushLazy(e, t) {
-                        let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : n("modal"),
-                            s = arguments.length > 3 ? arguments[3] : void 0,
-                            a = (0, l.getRootNavigationRef)();
-                        return null != a && a.isReady() ? (e instanceof Promise ? e.then(e => {
-                            let {
-                                default: t
-                            } = e;
-                            return t
-                        }) : e()).then(e => this.push(e, t, o, s)) : new Promise(n => r.default.enqueue(() => n(this.pushLazy(e, t, o, s))))
-                    },
-                    updateAnimation(e, t) {
-                        a.default.dispatch({
-                            type: "MODAL_UPDATE",
-                            key: e,
-                            props: {},
-                            partial: !0,
-                            animation: t
-                        })
-                    },
-                    pop() {
-                        (0, d.popModal)(), a.default.dispatch({
-                            type: "MODAL_POP"
-                        })
-                    },
-                    popWithKey(e, t) {
-                        (0, d.popModal)(e, t), a.default.dispatch({
-                            type: "MODAL_POP",
-                            key: e,
-                            onExited: t
-                        })
-                    },
-                    popAll() {
-                        (0, d.popAllModals)(), a.default.dispatch({
-                            type: "MODAL_POP_ALL"
-                        }), a.default.dispatch({
-                            type: "CHANNEL_SETTINGS_CLOSE"
-                        }), a.default.dispatch({
-                            type: "EMAIL_VERIFICATION_MODAL_CLOSE"
-                        }), a.default.dispatch({
-                            type: "GUILD_SETTINGS_CLOSE"
-                        }), a.default.dispatch({
-                            type: "HIDE_ACTION_SHEET"
-                        }), a.default.dispatch({
-                            type: "DISPLAYED_INVITE_CLEAR"
-                        }), a.default.dispatch({
-                            type: "DRAWER_CLOSE",
-                            animated: !0
-                        }), a.default.dispatch({
-                            type: "NOTIFICATION_SETTINGS_MODAL_CLOSE"
-                        }), a.default.dispatch({
-                            type: "QUICKSWITCHER_HIDE"
-                        }), a.default.dispatch({
-                            type: "MENTION_MODAL_CLOSE"
-                        }), a.default.dispatch({
-                            type: "USER_SETTINGS_MODAL_CLOSE"
-                        }), a.default.dispatch({
-                            type: "SEARCH_MODAL_CLOSE"
-                        }), a.default.dispatch({
-                            type: "CONNECTIONS_GRID_MODAL_HIDE"
-                        })
-                    }
-                }
-        },
-        307439: function(e, t, o) {
-            "use strict";
-            o.r(t), o.d(t, {
-                setPromoEmailConsentState: function() {
-                    return a
-                },
-                setPromoEmailConsentChecked: function() {
-                    return l
-                },
-                usePromoEmailConsentStore: function() {
-                    return d
+                    return o
                 }
             });
-            var s = o("308503");
-            let n = (0, s.default)(() => ({
-                    required: !1,
-                    checked: !1,
-                    preChecked: !1
-                })),
-                a = e => {
-                    n.setState(e)
+            var n = i("862205");
+            let r = (0, n.createExperiment)({
+                kind: "user",
+                id: "2023-01_emoji_discovery_backfill",
+                label: "Emoji Hotrail Backfill",
+                defaultConfig: {
+                    shouldBackfillEmojis: !1
                 },
-                l = e => {
-                    n.setState({
-                        checked: e
-                    })
-                },
-                d = n
-        },
-        76493: function(e, t, o) {
-            "use strict";
-            o.r(t), o.d(t, {
-                default: function() {
-                    return s
-                }
-            }), o("424973");
-            var s = new class e {
-                enqueue(e) {
-                    this.queue.push(e)
-                }
-                flush() {
-                    for (; this.queue.length > 0;) {
-                        var e;
-                        null === (e = this.queue.shift()) || void 0 === e || e()
+                treatments: [{
+                    id: 1,
+                    label: "Backfills Hotrail With Emojis",
+                    config: {
+                        shouldBackfillEmojis: !0
                     }
-                }
-                constructor() {
-                    this.queue = []
-                }
-            }
-        },
-        776502: function(e, t, o) {
-            "use strict";
-            o.r(t), o.d(t, {
-                mapError: function() {
-                    return d
-                },
-                openMFAModal: function() {
-                    return i
-                }
-            }), o("70102"), o("581081");
-            var s = o("872717"),
-                n = o("695501"),
-                a = o("49111"),
-                l = o("782340");
-
-            function d(e) {
-                let t = l.default.Messages.MFA_V2_INVALID_CODE;
-                switch (e) {
-                    case "webauthn":
-                        t = l.default.Messages.MFA_V2_INVALID_WEBAUTHN;
-                        break;
-                    case "password":
-                        t = l.default.Messages.MFA_V2_INVALID_PASSWORD
-                }
-                return t
-            }
-            async function r(e) {
-                let {
-                    ticket: t,
-                    mfaType: o,
-                    data: n
-                } = e, l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                try {
-                    let e = await s.default.post({
-                        url: a.Endpoints.FINISH_MFA_CHECK,
-                        body: {
-                            ticket: t,
-                            mfa_type: o,
-                            data: n
-                        },
-                        retries: l
-                    });
-                    return e.body
-                } catch (e) {
-                    var r;
-                    if ((null === (r = e.body) || void 0 === r ? void 0 : r.code) === a.AbortCodes.MFA_INVALID_CODE) throw Error(d(o));
-                    throw e
-                }
-            }
-
-            function i(e, t, s) {
-                let l = async e => {
-                    let o = await r(e),
-                        s = {
-                            "X-Discord-MFA-Authorization": o.token
-                        };
-                    return new Promise((o, n) => {
-                        t(s, (t, s, l) => {
-                            var r, i;
-                            return (null === (r = t.body) || void 0 === r ? void 0 : r.code) === a.AbortCodes.MFA_INVALID_CODE || (null === (i = t.body) || void 0 === i ? void 0 : i.code) === a.AbortCodes.MFA_REQUIRED ? (n(Error(d(e.mfaType))), !0) : (o(), !1)
-                        })
-                    })
-                };
-                e.methods = e.methods.filter(e => Object.hasOwn(n.SELECT_NAMES, e.type)), o("24287").openMFAModal(e, l, s)
-            }
-        },
-        695501: function(e, t, o) {
-            "use strict";
-            o.r(t), o.d(t, {
-                SELECT_NAMES: function() {
-                    return n
-                }
+                }]
             });
-            var s = o("782340");
-            let n = {
-                get webauthn() {
-                    return s.default.Messages.MFA_V2_WEBAUTHN_NAME
-                },
-                get totp() {
-                    return s.default.Messages.MFA_V2_TOTP_NAME
-                },
-                get sms() {
-                    return s.default.Messages.MFA_V2_SMS_NAME
-                },
-                get password() {
-                    return s.default.Messages.MFA_V2_PASSWORD_NAME
-                },
-                get backup() {
-                    return s.default.Messages.MFA_V2_BACKUP_NAME
-                }
-            }
+            var o = r
         },
-        24287: function(e, t, o) {
+        788506: function(e, t, i) {
             "use strict";
-            o.r(t), o.d(t, {
-                MFAModal: function() {
-                    return v
+            i.r(t), i.d(t, {
+                useEmojiCategories: function() {
+                    return A
                 },
-                MFASlides: function() {
+                trackPremiumSettingsPaneOpened: function() {
+                    return h
+                },
+                trackEmojiSearchStart: function() {
                     return M
                 },
-                openMFAModal: function() {
-                    return g
+                trackEmojiSearchResultsViewed: function() {
+                    return R
+                },
+                trackEmojiSearchSelect: function() {
+                    return N
+                },
+                trackEmojiSearchEmpty: function() {
+                    return P
+                },
+                trackEmojiFocus: function() {
+                    return v
+                },
+                trackEmojiSelect: function() {
+                    return k
+                },
+                trackEmojiFavorited: function() {
+                    return F
+                },
+                getAriaIdForEmojiCategory: function() {
+                    return U
+                },
+                getStringForEmojiCategory: function() {
+                    return x
+                },
+                allowUnicodeEmojiForIntention: function() {
+                    return L
+                },
+                useEmojiSearchResults: function() {
+                    return J
+                },
+                useFrequentlyUsedEmojis: function() {
+                    return G
+                },
+                useFavoriteEmojis: function() {
+                    return b
+                },
+                useIsFavoriteEmoji: function() {
+                    return w
+                },
+                useEmojiInPriorityOrder: function() {
+                    return Y
+                },
+                useTrackEmojiPickerOpened: function() {
+                    return W
+                },
+                getEmojiSubCategory: function() {
+                    return K
+                },
+                dedupeUnicodeEmojis: function() {
+                    return B
+                },
+                getSearchPlaceholder: function() {
+                    return q
                 }
-            }), o("222007"), o("781738"), o("506083"), o("70102");
-            var s = o("37983"),
-                n = o("884691"),
-                a = o("376507"),
-                l = o("872717"),
-                d = o("77078"),
-                r = o("145131"),
-                i = o("772280"),
-                u = o("773336"),
-                c = o("286235"),
-                E = o("50885"),
-                _ = o("695501"),
-                p = o("49111"),
-                f = o("782340"),
-                h = o("992279");
-
-            function S(e) {
-                let {
-                    subtitle: t,
-                    onClose: o
-                } = e;
-                return (0, s.jsxs)(d.ModalHeader, {
-                    direction: r.default.Direction.VERTICAL,
-                    className: h.header,
-                    separator: !1,
-                    children: [(0, s.jsx)(d.Heading, {
-                        variant: "heading-xl/semibold",
-                        children: f.default.Messages.MFA_V2_HEADER
-                    }), null != t && (0, s.jsx)(d.Text, {
-                        color: "header-secondary",
-                        variant: "text-md/normal",
-                        className: h.subtitle,
-                        children: t
-                    }), (0, s.jsx)(d.ModalCloseButton, {
-                        className: h.closeButton,
-                        onClick: o
-                    })]
-                })
-            }
-
-            function A(e) {
-                let {
-                    children: t
-                } = e;
-                return (0, s.jsx)(d.ModalContent, {
-                    className: h.content,
-                    children: t
-                })
-            }
-
-            function O(e) {
-                let {
-                    error: t
-                } = e;
-                return null == t ? null : (0, s.jsx)(d.Text, {
-                    className: h.error,
-                    variant: "text-sm/normal",
-                    color: "text-danger",
-                    children: t
-                })
-            }
-
-            function N(e) {
-                let {
-                    request: t,
-                    setSlide: o,
-                    showConfirm: n = !1,
-                    ...a
-                } = e, l = t.methods.length > 1;
-                return l || n ? (0, s.jsxs)(d.ModalFooter, {
-                    className: h.footer,
-                    direction: n && !l ? r.default.Direction.HORIZONTAL_REVERSE : r.default.Direction.HORIZONTAL,
-                    children: [l && (0, s.jsx)(d.Button, {
-                        look: d.Button.Looks.LINK,
-                        onClick: () => o("select"),
-                        color: d.Button.Colors.PRIMARY,
-                        children: f.default.Messages.MFA_V2_GO_TO_SELECT
-                    }), n && (0, s.jsx)(d.Button, {
-                        type: "submit",
-                        ...a,
-                        children: f.default.Messages.CONFIRM
-                    })]
-                }) : null
-            }
-
-            function I(e) {
-                let {
-                    request: t,
-                    setSlide: o,
-                    onClose: n
-                } = e;
-                return (0, s.jsxs)(s.Fragment, {
-                    children: [(0, s.jsx)(S, {
-                        subtitle: f.default.Messages.MFA_V2_SELECT_HEADER,
-                        onClose: n
-                    }), (0, s.jsx)(A, {
-                        children: t.methods.map(e => (0, s.jsxs)(d.Clickable, {
-                            className: h.listItemContainer,
-                            onClick: () => {
-                                o(e.type)
-                            },
-                            children: [(0, s.jsx)(d.Text, {
-                                className: h.listItemText,
-                                variant: "text-md/semibold",
-                                children: _.SELECT_NAMES[e.type]
-                            }), (0, s.jsx)(i.default, {
-                                width: 20,
-                                height: 20,
-                                className: h.listItemArrow
-                            })]
-                        }, e.type))
-                    })]
-                })
-            }
-
-            function y(e) {
-                let {
-                    request: t,
-                    finish: o,
-                    setSlide: l,
-                    onClose: r
-                } = e, [i, _] = n.useState(!1), [h, I] = n.useState(null), {
-                    challenge: y
-                } = t.methods.find(e => "webauthn" === e.type), R = async () => {
-                    _(!0), I(null);
-                    let e = u.isPlatformEmbedded && E.default.supportsFeature(p.NativeFeatures.WEBAUTHN) ? E.default.webAuthnAuthenticate(y) : a.get(JSON.parse(y)).then(e => JSON.stringify(e));
-                    try {
-                        let t = await e;
-                        await o({
-                            mfaType: "webauthn",
-                            data: t
-                        })
-                    } catch (e) {
-                        c.default.captureException(e), I(f.default.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR)
-                    } finally {
-                        _(!1)
-                    }
-                };
-                return (0, s.jsxs)(s.Fragment, {
-                    children: [(0, s.jsx)(S, {
-                        onClose: r
-                    }), (0, s.jsxs)(A, {
-                        children: [(0, s.jsx)(d.Button, {
-                            submitting: i,
-                            onClick: R,
-                            children: f.default.Messages.MFA_V2_WEBAUTHN_CTA
-                        }), (0, s.jsx)(O, {
-                            error: h
-                        })]
-                    }), (0, s.jsx)(N, {
-                        request: t,
-                        setSlide: l
-                    })]
-                })
-            }
-
-            function R(e) {
-                let {
-                    request: t,
-                    finish: o,
-                    setSlide: a,
-                    onClose: l,
-                    isSlideReady: r
-                } = e, [i, u] = n.useState(!1), [c, E] = n.useState(null), [_, p] = n.useState(""), h = n.useRef(null), I = f.default.Messages.TWO_FA_ENTER_BACKUP_LABEL, y = f.default.Messages.TWO_FA_BACKUP_CODE, R = n.useCallback(e => {
-                    p(e), E(null)
-                }, [p, E]);
-                return n.useEffect(() => {
-                    if (r) {
-                        var e;
-                        null === (e = h.current) || void 0 === e || e.focus()
-                    }
-                }, [r]), (0, s.jsxs)("form", {
-                    onSubmit: e => {
-                        e.preventDefault(), u(!0), o({
-                            mfaType: "backup",
-                            data: _.replace(/-/g, "")
-                        }).catch(e => {
-                            var t, o;
-                            E(null !== (o = e.message) && void 0 !== o ? o : null === (t = e.body) || void 0 === t ? void 0 : t.message)
-                        }).finally(() => {
-                            u(!1)
-                        })
-                    },
-                    children: [(0, s.jsx)(S, {
-                        onClose: l
-                    }), (0, s.jsx)(A, {
-                        children: (0, s.jsxs)(d.FormItem, {
-                            title: I,
-                            children: [(0, s.jsx)(d.TextInput, {
-                                inputRef: h,
-                                onChange: R,
-                                placeholder: y,
-                                maxLength: 9,
-                                minLength: 8,
-                                value: _,
-                                spellCheck: "false",
-                                disabled: i
-                            }), (0, s.jsx)(O, {
-                                error: c
-                            })]
-                        })
-                    }), (0, s.jsx)(N, {
-                        request: t,
-                        setSlide: a,
-                        showConfirm: !0,
-                        disabled: _.length < 8,
-                        submitting: i
-                    })]
-                })
-            }
-
-            function m(e) {
-                let {
-                    request: t,
-                    finish: o,
-                    setSlide: a,
-                    onClose: l,
-                    isSlideReady: r
-                } = e, [i, u] = n.useState(!1), [c, E] = n.useState(null), [_, p] = n.useState(""), h = n.useRef(null);
-                return n.useEffect(() => {
-                    if (r) {
-                        var e;
-                        null === (e = h.current) || void 0 === e || e.focus()
-                    }
-                }, [r]), (0, s.jsxs)("form", {
-                    onSubmit: e => {
-                        e.preventDefault(), u(!0), o({
-                            mfaType: "totp",
-                            data: _
-                        }).catch(e => {
-                            var t, o;
-                            E(null !== (o = e.message) && void 0 !== o ? o : null === (t = e.body) || void 0 === t ? void 0 : t.message)
-                        }).finally(() => {
-                            u(!1)
-                        })
-                    },
-                    children: [(0, s.jsx)(S, {
-                        onClose: l
-                    }), (0, s.jsx)(A, {
-                        children: (0, s.jsxs)(d.FormItem, {
-                            title: f.default.Messages.TWO_FA_ENTER_TOKEN_NO_BACKUP_LABEL,
-                            children: [(0, s.jsx)(d.TextInput, {
-                                inputRef: h,
-                                onChange: p,
-                                placeholder: f.default.Messages.TWO_FA_AUTH_CODE_NO_BACKUP,
-                                maxLength: 6,
-                                minLength: 6,
-                                value: _,
-                                autoComplete: "one-time-code",
-                                spellCheck: "false",
-                                disabled: i
-                            }), (0, s.jsx)(O, {
-                                error: c
-                            })]
-                        })
-                    }), (0, s.jsx)(N, {
-                        request: t,
-                        setSlide: a,
-                        showConfirm: !0,
-                        disabled: 0 === _.length,
-                        submitting: i
-                    })]
-                })
-            }
-
-            function T(e) {
-                let {
-                    request: t,
-                    finish: o,
-                    setSlide: a,
-                    onClose: r,
-                    isSlideReady: i
-                } = e, [u, c] = n.useState(!1), [E, _] = n.useState(null), [I, y] = n.useState(!1), [R, m] = n.useState(null), [T, C] = n.useState(""), v = n.useRef(null);
-                n.useEffect(() => {
-                    c(!0), l.default.post({
-                        url: p.Endpoints.LOGIN_SMS_SEND,
-                        body: {
-                            ticket: t.ticket
-                        },
-                        oldFormErrors: !0
-                    }).then(e => {
-                        _(e.body.phone)
-                    }).catch(e => {
-                        var t;
-                        m(e.message || (null === (t = e.body) || void 0 === t ? void 0 : t.message))
-                    }).finally(() => {
-                        c(!1)
-                    })
-                }, [t.ticket]), n.useEffect(() => {
-                    if (i) {
-                        var e;
-                        null === (e = v.current) || void 0 === e || e.focus()
-                    }
-                }, [i]);
-                let M = null == E ? f.default.Messages.TWO_FA_ENTER_SMS_TOKEN_SENDING : f.default.Messages.TWO_FA_ENTER_SMS_TOKEN_SENT.format({
-                    phoneNumber: E
-                });
-                return (0, s.jsxs)("form", {
-                    onSubmit: e => {
-                        e.preventDefault(), y(!0), o({
-                            mfaType: "sms",
-                            data: T
-                        }).catch(e => {
-                            var t, o;
-                            m(null !== (o = e.message) && void 0 !== o ? o : null === (t = e.body) || void 0 === t ? void 0 : t.message)
-                        }).finally(() => {
-                            y(!1)
-                        })
-                    },
-                    children: [(0, s.jsx)(S, {
-                        subtitle: M,
-                        onClose: r
-                    }), (0, s.jsx)(A, {
-                        children: (0, s.jsxs)(d.FormItem, {
-                            title: f.default.Messages.TWO_FA_ENTER_TOKEN_NO_BACKUP_LABEL,
-                            children: [(0, s.jsxs)("div", {
-                                className: h.smsInputContainer,
-                                children: [(0, s.jsx)(d.TextInput, {
-                                    className: h.smsInput,
-                                    inputRef: v,
-                                    onChange: C,
-                                    placeholder: f.default.Messages.TWO_FA_AUTH_CODE_NO_BACKUP,
-                                    maxLength: 10,
-                                    value: T,
-                                    autoComplete: "one-time-code",
-                                    spellCheck: "false",
-                                    disabled: I
-                                }), (0, s.jsx)(d.Button, {
-                                    size: d.Button.Sizes.MEDIUM,
-                                    submitting: u,
-                                    onClick: () => {
-                                        l.default.post({
-                                            url: p.Endpoints.LOGIN_SMS_SEND,
-                                            body: {
-                                                ticket: t.ticket
-                                            },
-                                            oldFormErrors: !0
-                                        }).then(e => {
-                                            _(e.body.phone)
-                                        }).catch(e => {
-                                            var t;
-                                            m(e.message || (null === (t = e.body) || void 0 === t ? void 0 : t.message))
+            }), i("843762"), i("424973"), i("222007"), i("808653"), i("781738");
+            var n = i("884691");
+            i("375128");
+            var r = i("446674"),
+                o = i("716241"),
+                a = i("385976"),
+                s = i("858619"),
+                u = i("630400"),
+                l = i("252931"),
+                E = i("166465"),
+                d = i("872173"),
+                c = i("305961"),
+                m = i("677099"),
+                _ = i("599110"),
+                f = i("402671"),
+                g = i("577426"),
+                p = i("255214"),
+                I = i("352046"),
+                C = i("115279"),
+                y = i("49111"),
+                O = i("958706"),
+                j = i("13030"),
+                T = i("646718"),
+                S = i("782340");
+            let A = function(e, t) {
+                    let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null == t ? void 0 : t.getGuildId();
+                    (0, u.maybeFetchTopEmojisByGuild)(i);
+                    let o = (0, O.isExternalEmojiAllowedForIntention)(e),
+                        s = G(i),
+                        d = b(i),
+                        _ = (0, r.useStateFromStoresArray)([E.default], () => E.default.getSortedPackIds(), []),
+                        {
+                            topEmojis: g,
+                            newlyAddedEmojis: y,
+                            backfillEmojis: j
+                        } = (0, I.default)(i, e),
+                        {
+                            allEmojis: T
+                        } = (0, p.default)({
+                            topEmojis: g,
+                            newlyAddedEmojis: y,
+                            backfillEmojis: j
+                        }),
+                        {
+                            viewAndUseEnabled: A
+                        } = (0, l.useInventoryGuildPacksUserExperiment)({
+                            autoTrackExposure: !1
+                        }),
+                        h = (0, r.useStateFromStores)([a.default], () => a.default.getDisambiguatedEmojiContext(i)),
+                        M = (0, r.useStateFromStores)([c.default], () => {
+                            var e;
+                            return null === (e = c.default.getGuild(i)) || void 0 === e ? void 0 : e.name
+                        }),
+                        R = n.useMemo(() => {
+                            let n = h.getGroupedCustomEmoji(),
+                                r = m.default.getFlattenedGuildIds(),
+                                u = [],
+                                l = (r, o) => {
+                                    for (let a of r) {
+                                        let r;
+                                        if (o === C.EmojiCategoryTypes.PACK ? r = E.default.getPackByPackId({
+                                                packId: a
+                                            }) : o === C.EmojiCategoryTypes.GUILD && (r = c.default.getGuild(a)), null == r) continue;
+                                        let s = null == n ? void 0 : n[r.id];
+                                        if (null == s || 0 === s.length || null != t && s.every(i => f.default.isEmojiFiltered({
+                                                emoji: i,
+                                                channel: t,
+                                                intention: e,
+                                                canViewAndUsePackEmoji: A
+                                            }))) continue;
+                                        let l = null;
+                                        if (o === C.EmojiCategoryTypes.PACK) {
+                                            let e = r;
+                                            l = {
+                                                type: C.EmojiCategoryTypes.PACK,
+                                                pack: e,
+                                                id: e.id
+                                            }
+                                        } else o === C.EmojiCategoryTypes.GUILD && (l = {
+                                            type: C.EmojiCategoryTypes.GUILD,
+                                            guild: r
+                                        });
+                                        null != l && (r.id === i ? u.unshift(l) : u.push(l))
+                                    }
+                                };
+                            return l(_, C.EmojiCategoryTypes.PACK), l(r, C.EmojiCategoryTypes.GUILD), a.default.categories.reduce((t, n) => {
+                                if (n === C.EmojiCategories.TOP_GUILD_EMOJI) {
+                                    if (0 === T.length) return t;
+                                    t.push({
+                                        type: C.EmojiCategoryTypes.TOP_GUILD_EMOJI,
+                                        id: n,
+                                        name: S.default.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({
+                                            guildName: M
                                         })
-                                    },
-                                    children: f.default.Messages.MFA_SMS_RESEND
-                                })]
-                            }), (0, s.jsx)(O, {
-                                error: R
-                            })]
-                        })
-                    }), (0, s.jsx)(N, {
-                        request: t,
-                        setSlide: a,
-                        showConfirm: !0,
-                        disabled: 0 === T.length,
-                        submitting: I
-                    })]
-                })
-            }
-
-            function C(e) {
-                let {
-                    request: t,
-                    finish: o,
-                    setSlide: a,
-                    onClose: l,
-                    isSlideReady: r
-                } = e, [i, u] = n.useState(!1), [c, E] = n.useState(null), [_, p] = n.useState(""), h = n.useRef(null);
-                return n.useEffect(() => {
-                    if (r) {
-                        var e;
-                        null === (e = h.current) || void 0 === e || e.focus()
-                    }
-                }, [r]), (0, s.jsxs)("form", {
-                    onSubmit: e => {
-                        e.preventDefault(), u(!0), o({
-                            mfaType: "password",
-                            data: _
-                        }).catch(e => {
-                            var t, o;
-                            E(null !== (o = e.message) && void 0 !== o ? o : null === (t = e.body) || void 0 === t ? void 0 : t.message)
-                        }).finally(() => {
-                            u(!1)
-                        })
-                    },
-                    children: [(0, s.jsx)(S, {
-                        onClose: l
-                    }), (0, s.jsx)(A, {
-                        children: (0, s.jsxs)(d.FormItem, {
-                            title: f.default.Messages.FORM_LABEL_PASSWORD,
-                            children: [(0, s.jsx)(d.TextInput, {
-                                inputRef: h,
-                                onChange: p,
-                                value: _,
-                                type: "password",
-                                autoComplete: "password",
-                                spellCheck: "false",
-                                disabled: i
-                            }), (0, s.jsx)(O, {
-                                error: c
-                            })]
-                        })
-                    }), (0, s.jsx)(N, {
-                        request: t,
-                        setSlide: a,
-                        showConfirm: !0,
-                        disabled: 0 === _.length,
-                        submitting: i
-                    })]
-                })
-            }
-
-            function v(e) {
-                let {
-                    transitionState: t,
-                    request: o,
-                    finish: n,
-                    onClose: a
-                } = e;
-                return (0, s.jsx)(d.ModalRoot, {
-                    transitionState: t,
-                    size: d.ModalSize.SMALL,
-                    "aria-label": f.default.Messages.MFA_V2_HEADER,
-                    children: (0, s.jsx)(M, {
-                        request: o,
-                        mfaFinish: n,
-                        onClose: a,
-                        onEarlyClose: a
+                                    })
+                                } else if (n === C.EmojiCategories.RECENT) {
+                                    if (0 === s.length) return t;
+                                    t.push({
+                                        type: C.EmojiCategoryTypes.RECENT,
+                                        id: n,
+                                        name: S.default.Messages.EMOJI_CATEGORY_RECENT
+                                    })
+                                } else if (n === C.EmojiCategories.FAVORITES) {
+                                    if (0 === d.length) return t;
+                                    t.push({
+                                        type: C.EmojiCategoryTypes.FAVORITES,
+                                        id: n,
+                                        name: S.default.Messages.CATEGORY_FAVORITE
+                                    })
+                                } else if (n === C.EmojiCategories.CUSTOM) {
+                                    let e = u;
+                                    !o && (e = u.filter(e => e.type === C.EmojiCategoryTypes.GUILD && e.guild.id === i)), t.push(...e)
+                                } else if (L(e)) t.push({
+                                    type: C.EmojiCategoryTypes.UNICODE,
+                                    id: n,
+                                    name: n
+                                });
+                                return t
+                            }, [])
+                        }, [h, t, i, e, T.length, M, _, s.length, d.length, o, A]);
+                    return R
+                },
+                h = e => {
+                    let t = (null == e ? void 0 : e.getGuildId()) != null;
+                    _.default.track(y.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+                        location_page: t ? y.AnalyticsPages.GUILD_CHANNEL : y.AnalyticsPages.DM_CHANNEL,
+                        location_section: null != e ? y.AnalyticsSections.EMOJI_PICKER_POPOUT : y.AnalyticsSections.CUSTOM_STATUS_MODAL
                     })
-                })
-            }
-
-            function M(e) {
-                var t, o;
-                let {
-                    request: a,
-                    mfaFinish: l,
-                    onEarlyClose: r,
-                    onClose: i,
-                    width: u = 440
-                } = e, [c, E] = n.useState(null !== (o = null === (t = a.methods[0]) || void 0 === t ? void 0 : t.type) && void 0 !== o ? o : "select"), [_, p] = n.useState(c), f = async e => {
+                },
+                M = (e, t) => {
+                    o.default.trackWithMetadata(y.AnalyticEvents.SEARCH_STARTED, {
+                        search_type: null != t && t === O.EmojiIntention.REACTION ? y.SearchTypes.EMOJI_REACTION : y.SearchTypes.EMOJI,
+                        location: e
+                    })
+                },
+                R = (e, t, i, n, r) => {
+                    o.default.trackWithMetadata(y.AnalyticEvents.SEARCH_RESULT_VIEWED, {
+                        search_type: null != r && r === O.EmojiIntention.REACTION ? y.SearchTypes.EMOJI_REACTION : y.SearchTypes.EMOJI,
+                        total_results: e,
+                        num_results_locked: t,
+                        query: n,
+                        location: i
+                    })
+                },
+                N = (e, t, i, n) => {
+                    var r;
+                    let a = null !== (r = e.uniqueName) && void 0 !== r ? r : e.name;
+                    o.default.trackWithMetadata(y.AnalyticEvents.SEARCH_RESULT_SELECTED, {
+                        search_type: null != n && n === O.EmojiIntention.REACTION ? y.SearchTypes.EMOJI_REACTION : y.SearchTypes.EMOJI,
+                        location: t,
+                        expression_guild_id: D(e),
+                        expression_pack_id: e.type === s.EmojiTypes.PACK ? e.packId : void 0,
+                        emoji_id: e.id,
+                        emoji_name: a,
+                        is_custom: null != e.id,
+                        is_animated: e.animated,
+                        query: i
+                    })
+                },
+                P = (e, t) => {
+                    o.default.trackWithMetadata(y.AnalyticEvents.SEARCH_RESULT_EMPTY, {
+                        search_type: y.SearchTypes.EMOJI,
+                        query: t,
+                        location: e
+                    })
+                },
+                v = e => {
                     let {
-                        mfaType: t,
-                        data: o
+                        emoji: t,
+                        subCategory: i,
+                        position: n,
+                        backfillEmoji: r,
+                        newlyAddedHighlight: a
                     } = e;
-                    await l({
-                        mfaType: t,
-                        data: o,
-                        ticket: a.ticket
-                    }), null != i && i()
-                }, h = {
-                    request: a,
-                    finish: f,
-                    setSlide: E,
-                    onClose: r
+                    o.default.trackWithMetadata(y.AnalyticEvents.EXPRESSION_PICKER_EXPRESSION_FOCUS, {
+                        expression_section: null == i ? void 0 : i.toString(),
+                        newly_added_highlight: a,
+                        emoji_id: t.id,
+                        emoji_name: t.name,
+                        emoji_animated: t.animated,
+                        emoji_backfilled: r,
+                        emoji_position: n
+                    })
+                },
+                k = e => {
+                    var t;
+                    let i, {
+                        emoji: n,
+                        location: r,
+                        pickerIntention: a,
+                        category: u,
+                        subCategory: l = C.EmojiSubCategory.NONE,
+                        position: E,
+                        backfillEmoji: d,
+                        newlyAddedHighlight: c,
+                        isBurstReaction: m
+                    } = e;
+                    switch (a) {
+                        case O.EmojiIntention.REACTION:
+                            i = m ? T.PremiumUpsellTypes.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED : T.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
+                            break;
+                        case O.EmojiIntention.STATUS:
+                            i = T.PremiumUpsellTypes.EMOJI_PICKER_STATUS_EMOJI_CLICKED;
+                            break;
+                        default:
+                            i = T.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED
+                    }
+                    let _ = null !== (t = n.uniqueName) && void 0 !== t ? t : n.name;
+                    o.default.trackWithMetadata(y.AnalyticEvents.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
+                        type: i,
+                        location: r,
+                        expression_id: n.id,
+                        expression_name: _,
+                        expression_guild_id: D(n),
+                        expression_pack_id: n.type === s.EmojiTypes.PACK ? n.packId : void 0,
+                        is_custom: null != n.id,
+                        is_animated: n.animated,
+                        expression_picker_section: u,
+                        expression_section: null == l ? void 0 : l.toString(),
+                        emoji_position: E,
+                        emoji_backfilled: d,
+                        newly_added_highlight: c,
+                        is_burst: m
+                    })
+                },
+                F = e => {
+                    var t;
+                    let {
+                        emoji: i,
+                        location: n
+                    } = e, r = null !== (t = i.uniqueName) && void 0 !== t ? t : i.name;
+                    o.default.trackWithMetadata(y.AnalyticEvents.EXPRESSION_FAVORITED, {
+                        location: n,
+                        expression_type: j.ExpressionPickerViewType.EMOJI,
+                        expression_id: i.id,
+                        expression_name: r,
+                        expression_guild_id: D(i),
+                        expression_pack_id: i.type === s.EmojiTypes.PACK ? i.packId : void 0,
+                        is_custom: null != i.id,
+                        is_animated: i.animated
+                    })
                 };
-                return (0, s.jsxs)(d.Slides, {
-                    activeSlide: c,
-                    width: u,
-                    onSlideReady: p,
-                    children: [(0, s.jsx)(d.Slide, {
-                        id: "select",
-                        children: (0, s.jsx)(I, {
-                            ...h
-                        })
-                    }), (0, s.jsx)(d.Slide, {
-                        id: "webauthn",
-                        children: (0, s.jsx)(y, {
-                            ...h
-                        })
-                    }), (0, s.jsx)(d.Slide, {
-                        id: "totp",
-                        children: (0, s.jsx)(m, {
-                            ...h,
-                            isSlideReady: "totp" === _
-                        })
-                    }), (0, s.jsx)(d.Slide, {
-                        id: "sms",
-                        children: (0, s.jsx)(T, {
-                            ...h,
-                            isSlideReady: "sms" === _
-                        })
-                    }), (0, s.jsx)(d.Slide, {
-                        id: "backup",
-                        children: (0, s.jsx)(R, {
-                            ...h,
-                            isSlideReady: "backup" === _
-                        })
-                    }), (0, s.jsx)(d.Slide, {
-                        id: "password",
-                        children: (0, s.jsx)(C, {
-                            ...h,
-                            isSlideReady: "password" === _
-                        })
-                    })]
-                })
+
+            function D(e) {
+                return e.type !== s.EmojiTypes.PACK ? e.guildId : void 0
+            }
+            let U = (e, t, i) => {
+                    switch (e.type) {
+                        case C.EmojiCategoryTypes.GUILD:
+                            if (null != t) return t.toString();
+                            return "";
+                        case C.EmojiCategoryTypes.PACK:
+                            if (null != i) return i.name;
+                            return e.id;
+                        default:
+                            return e.id
+                    }
+                },
+                x = (e, t, i) => {
+                    switch (e) {
+                        case C.EmojiCategories.TOP_GUILD_EMOJI:
+                            return S.default.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({
+                                guildName: t
+                            });
+                        case C.EmojiCategories.RECENT:
+                            return S.default.Messages.EMOJI_CATEGORY_RECENT;
+                        case C.EmojiCategories.FAVORITES:
+                            return S.default.Messages.CATEGORY_FAVORITE;
+                        case C.EmojiCategories.ACTIVITY:
+                            return S.default.Messages.EMOJI_CATEGORY_ACTIVITY;
+                        case C.EmojiCategories.FLAGS:
+                            return S.default.Messages.EMOJI_CATEGORY_FLAGS;
+                        case C.EmojiCategories.FOOD:
+                            return S.default.Messages.EMOJI_CATEGORY_FOOD;
+                        case C.EmojiCategories.NATURE:
+                            return S.default.Messages.EMOJI_CATEGORY_NATURE;
+                        case C.EmojiCategories.OBJECTS:
+                            return S.default.Messages.EMOJI_CATEGORY_OBJECTS;
+                        case C.EmojiCategories.PEOPLE:
+                            return S.default.Messages.EMOJI_CATEGORY_PEOPLE;
+                        case C.EmojiCategories.SYMBOLS:
+                            return S.default.Messages.EMOJI_CATEGORY_SYMBOLS;
+                        case C.EmojiCategories.TRAVEL:
+                            return S.default.Messages.EMOJI_CATEGORY_TRAVEL;
+                        case C.EmojiCategories.PREMIUM_UPSELL:
+                            return S.default.Messages.EMOJI_CATEGORY_PREMIUM_UPSELL;
+                        default:
+                            return null != i ? S.default.Messages.EMOJI_CATEGORY_PACK.format({
+                                packName: i
+                            }) : null != t ? t : e
+                    }
+                },
+                L = e => e !== O.EmojiIntention.COMMUNITY_CONTENT_ONLY;
+
+            function J(e, t, i) {
+                let {
+                    viewAndUseEnabled: o
+                } = (0, l.useInventoryGuildPacksUserExperiment)({
+                    autoTrackExposure: !1
+                });
+                n.useEffect(() => {
+                    d.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []);
+                let s = (0, O.isExternalEmojiAllowedForIntention)(i);
+                return (0, r.useStateFromStores)([a.default], () => {
+                    let n = e.replace(/^:/, "").replace(/:$/, "");
+                    return "" === n ? null : a.default.searchWithoutFetchingLatest({
+                        channel: t,
+                        query: n,
+                        count: 0,
+                        intention: i,
+                        includeExternalGuilds: s,
+                        canViewAndUsePackEmoji: o
+                    })
+                }, [t, i, e, s, o], r.statesWillNeverBeEqual)
             }
 
-            function g(e, t, o) {
-                (0, d.openModal)(o => (0, s.jsx)(v, {
-                    finish: t,
-                    request: e,
-                    ...o
+            function G(e) {
+                return n.useEffect(() => {
+                    d.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []), (0, r.useStateFromStoresArray)([a.default], () => a.default.getDisambiguatedEmojiContext(e).getFrequentlyUsedEmojisWithoutFetchingLatest())
+            }
+
+            function b(e) {
+                return n.useEffect(() => {
+                    d.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []), (0, r.useStateFromStoresArray)([a.default], () => a.default.getDisambiguatedEmojiContext(e).favoriteEmojisWithoutFetchingLatest)
+            }
+
+            function w(e, t) {
+                return n.useEffect(() => {
+                    d.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []), (0, r.useStateFromStores)([a.default], () => null != t && a.default.getDisambiguatedEmojiContext(e).isFavoriteEmojiWithoutFetchingLatest(t))
+            }
+
+            function Y(e) {
+                return n.useEffect(() => {
+                    d.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []), (0, r.useStateFromStoresArray)([a.default], () => a.default.getDisambiguatedEmojiContext(e).getEmojiInPriorityOrderWithoutFetchingLatest())
+            }
+
+            function W(e) {
+                let t = n.useCallback(() => {
+                    (0, g.default)(e)
+                }, [e]);
+                return n.useEffect(() => {
+                    e.intention === O.EmojiIntention.REACTION && t()
+                }, []), {
+                    trackOnPickerOpen: t
+                }
+            }
+
+            function K(e, t, i) {
+                if (null == i) return C.EmojiSubCategory.NONE;
+                let n = e.map(e => {
+                        var t, i;
+                        return null !== (i = null !== (t = e.id) && void 0 !== t ? t : e.uniqueName) && void 0 !== i ? i : e.name
+                    }),
+                    r = t.map(e => e.id);
+                return n.includes(i) ? C.EmojiSubCategory.TOP_GUILD_EMOJI : r.includes(i) ? C.EmojiSubCategory.NEWLY_ADDED_EMOJI : C.EmojiSubCategory.NONE
+            }
+
+            function B(e) {
+                let t = new Set,
+                    i = e.filter(e => null == e.uniqueName || (t.has(e.optionallyDiverseSequence) ? void 0 : (t.add(e.optionallyDiverseSequence), !0)));
+                return i
+            }
+
+            function q(e, t) {
+                return e === O.EmojiIntention.REACTION ? t ? S.default.Messages.SEARCH_FOR_SUPER_REACTION : S.default.Messages.SEARCH_FOR_REACTION : S.default.Messages.SEARCH_FOR_EMOJI
+            }
+        },
+        577426: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                default: function() {
+                    return f
+                }
+            }), i("808653");
+            var n = i("716241"),
+                r = i("385976"),
+                o = i("166465"),
+                a = i("692171"),
+                s = i("42203"),
+                u = i("18494"),
+                l = i("402671"),
+                E = i("255214"),
+                d = i("352046"),
+                c = i("49111"),
+                m = i("958706"),
+                _ = i("13030");
+
+            function f(e) {
+                var t;
+                let {
+                    intention: i,
+                    containerWidth: f,
+                    rowSize: g,
+                    isBurstReaction: p,
+                    analyticsObject: I
+                } = e, C = s.default.getChannel(u.default.getChannelId()), y = null == C ? void 0 : C.getGuildId(), O = r.default.emojiFrecencyWithoutFetchingLatest.frequently.slice(), j = null != C ? r.default.getDisambiguatedEmojiContext(C.getGuildId()).favoriteEmojisWithoutFetchingLatest : [], T = O.slice(0, r.default.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems), S = null != y ? r.default.getGuildEmoji(y) : [], A = o.default.getPacksForUser().map(e => e.content.emojis).reduce((e, t) => e.concat(t), []), h = null !== (t = r.default.getDisambiguatedEmojiContext(null == C ? void 0 : C.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}, M = Object.values(h).reduce((e, t) => e += t.length, 0), {
+                    topEmojis: R,
+                    newlyAddedEmojis: N,
+                    backfillEmojis: P
+                } = (0, d.getTopAndNewlyAddedEmojis)({
+                    guildId: null == C ? void 0 : C.getGuildId(),
+                    pickerIntention: i
                 }), {
-                    onCloseCallback: () => {
-                        o(Error(f.default.Messages.MFA_V2_CANCELED))
+                    visibleTopEmojis: v,
+                    visibleNewlyAddedEmojis: k,
+                    visibleBackfillEmojis: F
+                } = (0, E.getEmojiHotrail)({
+                    topEmojis: R,
+                    newlyAddedEmojis: N,
+                    backfillEmojis: P,
+                    rowSize: g
+                }), D = a.default.remainingBurstCurrency;
+                n.default.trackWithMetadata(i === m.EmojiIntention.REACTION ? c.AnalyticEvents.REACTION_PICKER_OPENED : c.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
+                    width: f,
+                    tab: _.ExpressionPickerViewType.EMOJI,
+                    badged: !1,
+                    num_expressions_favorites: j.length,
+                    num_animated_expressions_favorites: j.filter(e => null == e ? void 0 : e.animated).length,
+                    num_custom_expressions_favorites: j.filter(l.default.isCustomEmoji).length,
+                    num_standard_expressions_favorites: j.filter(e => null == e.id).length,
+                    num_expressions_frecent: T.length,
+                    num_animated_expressions_frecent: T.filter(e => null == e ? void 0 : e.animated).length,
+                    num_custom_expressions_frecent: T.filter(l.default.isCustomEmoji).length,
+                    num_standard_expressions_frecent: T.filter(e => null == e.id).length,
+                    num_current_guild_expressions: S.length,
+                    num_current_pack_expressions: A.length,
+                    num_custom_expressions_total: M,
+                    num_expressions_top_server: v.length,
+                    num_animated_expressions_top_server: v.filter(e => e.animated).length,
+                    num_expressions_newly_added: k.length,
+                    num_animated_expressions_newly_added: k.filter(e => e.animated).length,
+                    num_expressions_backfilled: F.length,
+                    num_animated_expressions_backfilled: F.filter(e => e.animated).length,
+                    ...i === m.EmojiIntention.REACTION && {
+                        is_burst: p,
+                        burst_reaction_balance: D
+                    },
+                    ...null != I && {
+                        location_object: I
                     }
                 })
             }
         },
-        350522: function(e, t, o) {
+        255214: function(e, t, i) {
             "use strict";
-            o.r(t), o.d(t, {
+            i.r(t), i.d(t, {
+                getEmojiHotrail: function() {
+                    return o
+                },
                 default: function() {
+                    return a
+                }
+            });
+            var n = i("884691"),
+                r = i("115279");
+
+            function o(e) {
+                let {
+                    topEmojis: t,
+                    newlyAddedEmojis: i,
+                    backfillEmojis: n,
+                    rowSize: o = r.EMOJI_ROW_SIZE
+                } = e, a = t.slice(0, o - i.length), s = [];
+                return a.length + i.length < o && (s = n.slice(0, o - t.length - i.length)), {
+                    visibleTopEmojis: a,
+                    visibleNewlyAddedEmojis: i,
+                    visibleBackfillEmojis: s,
+                    allEmojis: a.concat(s).concat(i)
+                }
+            }
+
+            function a(e) {
+                return n.useMemo(() => o(e), [e])
+            }
+        },
+        352046: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                getTopAndNewlyAddedEmojis: function() {
+                    return l
+                },
+                default: function() {
+                    return E
+                }
+            });
+            var n = i("65597"),
+                r = i("385976"),
+                o = i("564967"),
+                a = i("61559"),
+                s = i("958706");
+            let u = [];
+
+            function l(e) {
+                let {
+                    emojiStoreInstance: t = r.default,
+                    guildId: i,
+                    pickerIntention: n,
+                    shouldSeeTopEmojis: l = (0, a.getEmojiPickerDiscoveryExperimentConfig)().shouldSeeTopEmojiBar,
+                    shouldSeeNewlyAddedEmoji: E = (0, a.getEmojiPickerDiscoveryExperimentConfig)().shouldSeeNewlyAddedEmoji,
+                    shouldSeeBackfillEmojis: d = o.default.getCurrentConfig({
+                        location: "fe926e_1"
+                    }, {
+                        autoTrackExposure: !1
+                    }).shouldBackfillEmojis
+                } = e;
+                return {
+                    topEmojis: n !== s.EmojiIntention.REACTION && l ? t.getTopEmoji(i) : u,
+                    newlyAddedEmojis: n !== s.EmojiIntention.REACTION && E ? t.getNewlyAddedEmoji(i) : u,
+                    backfillEmojis: n !== s.EmojiIntention.REACTION && l && d ? t.getBackfillTopEmojis(i) : u
+                }
+            }
+
+            function E(e, t) {
+                let {
+                    shouldSeeNewlyAddedEmoji: i,
+                    shouldSeeTopEmojiBar: s
+                } = (0, a.useEmojiPickerDiscoveryExperiment)(!0), {
+                    shouldBackfillEmojis: u
+                } = o.default.useExperiment({
+                    location: "fe926e_1"
+                }, {
+                    autoTrackExposure: !1
+                });
+                return (0, n.useStateFromStoresObject)([r.default], () => l({
+                    emojiStoreInstance: r.default,
+                    guildId: e,
+                    pickerIntention: t,
+                    shouldSeeTopEmojis: s,
+                    shouldSeeNewlyAddedEmoji: i,
+                    shouldSeeBackfillEmojis: u
+                }), [e, t, s, i, u])
+            }
+        },
+        305781: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                fetchTopEmojis: function() {
+                    return a
+                },
+                updateNewlyAddedLastSeen: function() {
+                    return s
+                },
+                updateNewlyAddedEmojiSeenAcknowledged: function() {
                     return u
                 }
             });
-            var s = o("446674"),
-                n = o("913144");
-            let a = !1,
-                l = !1,
-                d = {},
-                r = null;
-            class i extends s.default.Store {
-                hasConsented(e) {
-                    return null != d[e] && d[e].consented
-                }
-                get fetchedConsents() {
-                    return a
-                }
-                get receivedConsentsInConnectionOpen() {
-                    return l
-                }
-                getAuthenticationConsentRequired() {
-                    return r
-                }
+            var n = i("872717"),
+                r = i("913144"),
+                o = i("49111");
+
+            function a(e) {
+                r.default.dispatch({
+                    type: "TOP_EMOJIS_FETCH",
+                    guildId: e
+                }), n.default.get({
+                    url: o.Endpoints.TOP_EMOJIS_FOR_GUILD(e),
+                    oldFormErrors: !0
+                }).then(t => r.default.dispatch({
+                    type: "TOP_EMOJIS_FETCH_SUCCESS",
+                    guildId: e,
+                    topEmojisMetadata: t.body.items.map(e => ({
+                        emojiId: e.emoji_id,
+                        rank: e.emoji_rank
+                    })).sort((e, t) => e.rank - t.rank)
+                }), () => r.default.dispatch({
+                    type: "TOP_EMOJIS_FETCH_FAILURE",
+                    guildId: e
+                }))
             }
-            i.displayName = "ConsentStore";
-            var u = new i(n.default, {
-                CONNECTION_OPEN: function(e) {
-                    let {
-                        consents: t
-                    } = e;
-                    null != t && (d = {
-                        ...d,
-                        ...t
-                    }, l = !0)
-                },
-                UPDATE_CONSENTS: function(e) {
-                    let {
-                        consents: t
-                    } = e;
-                    d = {
-                        ...t
-                    }, a = !0
-                },
-                SET_CONSENT_REQUIRED: function(e) {
-                    r = e.consentRequired
-                },
-                LOGOUT: function() {
-                    r = null
-                }
-            })
+
+            function s(e, t) {
+                r.default.dispatch({
+                    type: "NEWLY_ADDED_EMOJI_SEEN_UPDATED"
+                }), null != e && null != t && r.default.dispatch({
+                    type: "NEWLY_ADDED_EMOJI_SEEN_PENDING",
+                    guildId: e,
+                    emojiId: t
+                })
+            }
+
+            function u(e, t) {
+                null != e && null != t && r.default.dispatch({
+                    type: "NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED",
+                    guildId: e,
+                    emojiId: t
+                })
+            }
         },
-        91731: function(e, t, o) {
+        630400: function(e, t, i) {
             "use strict";
-            o.r(t), o.d(t, {
-                default: function() {
-                    return a
+            i.r(t), i.d(t, {
+                maybeFetchTopEmojisByGuild: function() {
+                    return u
                 }
             });
-            var s = o("206230"),
-                n = o("49111");
+            var n = i("61559"),
+                r = i("697218"),
+                o = i("385976"),
+                a = i("26430"),
+                s = i("305781");
 
-            function a(e, t, o) {
-                var a, l, d, r, i, u, c, E;
-                let _ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-                return {
-                    key: null !== (l = null !== (a = t.key) && void 0 !== a ? a : _) && void 0 !== l ? l : "modal",
-                    modal: e,
-                    animation: null !== (d = t.animation) && void 0 !== d ? d : s.default.useReducedMotion ? n.ModalAnimation.FADE : n.ModalAnimation.SLIDE_UP,
-                    shouldPersistUnderModals: null !== (r = t.shouldPersistUnderModals) && void 0 !== r && r,
-                    props: o,
-                    backdropStyle: null !== (i = t.backdropStyle) && void 0 !== i ? i : null,
-                    backdropInstant: null !== (u = t.backdropInstant) && void 0 !== u && u,
-                    disableAnimation: null !== (c = t.disableAnimation) && void 0 !== c && c,
-                    closable: "boolean" != typeof t.closable || t.closable,
-                    label: null !== (E = t.label) && void 0 !== E ? E : "",
-                    callbacks: {}
-                }
+            function u(e) {
+                if (null == e) return;
+                let t = r.default.getCurrentUser();
+                if (null == t) return;
+                let {
+                    shouldSeeTopEmojiBar: i
+                } = (0, n.getEmojiPickerDiscoveryExperimentConfig)();
+                if (!i) return;
+                let u = o.default.getTopEmojisMetadata(e);
+                if (null != u) {
+                    let {
+                        topEmojisTTL: e
+                    } = u;
+                    if (null == e || Date.now() < e) return
+                }!a.default.getIsFetching(e) && (0, s.fetchTopEmojis)(e)
             }
         }
     }
