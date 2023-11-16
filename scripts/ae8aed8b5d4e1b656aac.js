@@ -12,13 +12,13 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return M
+                    return E
                 }
             }), s("781738");
             var a = s("37983"),
-                n = s("884691"),
-                o = s("414456"),
-                r = s.n(o),
+                o = s("884691"),
+                n = s("414456"),
+                r = s.n(n),
                 l = s("730290"),
                 i = s("394846"),
                 u = s("446674"),
@@ -26,39 +26,38 @@
                 h = s("437822"),
                 c = s("457108"),
                 f = s("724038"),
-                m = s("648498"),
-                g = s("24287"),
-                p = s("970366"),
-                S = s("271938"),
-                T = s("124969"),
-                _ = s("659500"),
+                p = s("24287"),
+                g = s("970366"),
+                m = s("271938"),
+                S = s("124969"),
+                T = s("659500"),
                 N = s("49111"),
-                E = s("782340"),
+                _ = s("782340"),
                 A = s("926622");
             u.default.initialize();
-            class C extends n.PureComponent {
+            class C extends o.PureComponent {
                 componentDidMount() {
-                    (0, p.trackAppUIViewed)("reset_password")
+                    (0, g.trackAppUIViewed)("reset_password")
                 }
                 renderPasswordReset() {
                     let {
                         password: e,
                         error: t,
-                        hasCancel: n
-                    } = this.state, o = this.isSubmitting(), r = null != t ? t : this.renderError("password");
-                    return (0, a.jsxs)(T.default, {
+                        hasCancel: o
+                    } = this.state, n = this.isSubmitting(), r = null != t ? t : this.renderError("password");
+                    return (0, a.jsxs)(S.default, {
                         onSubmit: this.handleSubmit,
                         tag: "form",
                         children: [(0, a.jsx)("img", {
                             alt: "",
                             src: null == r ? s("245288") : s("314837"),
                             className: A.marginBottom20
-                        }), (0, a.jsx)(T.Title, {
-                            children: E.default.Messages.RESET_PASSWORD_TITLE
-                        }), (0, a.jsxs)(T.Block, {
+                        }), (0, a.jsx)(S.Title, {
+                            children: _.default.Messages.RESET_PASSWORD_TITLE
+                        }), (0, a.jsxs)(S.Block, {
                             className: A.marginTop20,
-                            children: [(0, a.jsx)(T.Input, {
-                                label: E.default.Messages.FORM_LABEL_NEW_PASSWORD,
+                            children: [(0, a.jsx)(S.Input, {
+                                label: _.default.Messages.FORM_LABEL_NEW_PASSWORD,
                                 className: A.marginBottom20,
                                 name: "password",
                                 value: e,
@@ -67,69 +66,30 @@
                                 }),
                                 error: r,
                                 type: "password"
-                            }), (0, a.jsx)(T.Button, {
+                            }), (0, a.jsx)(S.Button, {
                                 type: "submit",
-                                submitting: o,
-                                children: E.default.Messages.CHANGE_PASSWORD
-                            }), n ? (0, a.jsx)(T.Button, {
+                                submitting: n,
+                                children: _.default.Messages.CHANGE_PASSWORD
+                            }), o ? (0, a.jsx)(S.Button, {
                                 className: A.marginTop8,
                                 onClick: this.handleGoToLogin,
-                                submitting: o,
-                                color: T.Button.Colors.PRIMARY,
-                                children: E.default.Messages.CANCEL
+                                submitting: n,
+                                color: S.Button.Colors.PRIMARY,
+                                children: _.default.Messages.CANCEL
                             }) : null]
                         })]
                     })
                 }
                 renderMFA() {
-                    if (this.props.hasLoginExperiment) return this.renderMFAv2();
-                    let {
-                        error: e
-                    } = this.state, t = null != e ? e : this.renderError("code");
-                    return (0, a.jsxs)(T.default, {
-                        onSubmit: this.handleTokenSubmit,
-                        tag: "form",
-                        children: [(0, a.jsx)("img", {
-                            alt: "",
-                            src: null == t ? s("245288") : s("314837"),
-                            className: r(A.marginBottom20, i.isMobile ? A.marginTop20 : "")
-                        }), (0, a.jsx)(T.Title, {
-                            className: A.marginBottom8,
-                            children: E.default.Messages.TWO_FA_ENTER_TOKEN_LABEL
-                        }), (0, a.jsx)(T.SubTitle, {
-                            children: E.default.Messages.TWO_FA_ENTER_TOKEN_BODY
-                        }), (0, a.jsxs)(T.Block, {
-                            className: A.marginTop20,
-                            children: [(0, a.jsx)(T.Input, {
-                                className: A.marginBottom8,
-                                error: t,
-                                onChange: e => this.setState({
-                                    code: e
-                                }),
-                                autoComplete: "off",
-                                placeholder: E.default.Messages.TWO_FA_AUTH_CODE,
-                                spellCheck: "false",
-                                maxLength: 10,
-                                autoFocus: !0,
-                                value: this.state.code
-                            }), (0, a.jsx)(T.Button, {
-                                type: "submit",
-                                submitting: this.isSubmitting(),
-                                children: E.default.Messages._LOGIN
-                            })]
-                        })]
-                    })
-                }
-                renderMFAv2() {
                     let e = {
                         ticket: this.props.mfaTicket,
                         methods: this.props.mfaMethods
                     };
-                    return (0, a.jsx)(T.default, {
+                    return (0, a.jsx)(S.default, {
                         style: {
                             padding: 0
                         },
-                        children: (0, a.jsx)(g.MFASlides, {
+                        children: (0, a.jsx)(p.MFASlides, {
                             mfaFinish: e => {
                                 let {
                                     mfaType: t,
@@ -148,17 +108,17 @@
                     })
                 }
                 renderSucceeded() {
-                    return (0, a.jsxs)(T.default, {
+                    return (0, a.jsxs)(S.default, {
                         children: [(0, a.jsx)("img", {
                             alt: "",
                             src: s("245288"),
                             className: r(A.marginBottom20, i.isMobile ? A.marginTop20 : "")
-                        }), (0, a.jsx)(T.Title, {
+                        }), (0, a.jsx)(S.Title, {
                             className: A.marginBottom40,
-                            children: E.default.Messages.RESET_PASSWORD_SUCCESS_TITLE
-                        }), (0, a.jsx)(T.Button, {
+                            children: _.default.Messages.RESET_PASSWORD_SUCCESS_TITLE
+                        }), (0, a.jsx)(S.Button, {
                             onClick: this.handleOpenApp,
-                            children: E.default.Messages.VERIFICATION_OPEN_DISCORD
+                            children: _.default.Messages.VERIFICATION_OPEN_DISCORD
                         })]
                     })
                 }
@@ -172,21 +132,21 @@
                             location: t,
                             onLoginSuccess: s,
                             source: a,
-                            resetToken: n
+                            resetToken: o
                         } = this.props, {
-                            password: o,
+                            password: n,
                             error: r
                         } = this.state;
-                        if (null != e && e.preventDefault(), 0 === o.length) {
+                        if (null != e && e.preventDefault(), 0 === n.length) {
                             this.setState({
-                                error: E.default.Messages.PASSWORD_REQUIRED
-                            }), _.ComponentDispatch.dispatch(N.ComponentActions.WAVE_EMPHASIZE);
+                                error: _.default.Messages.PASSWORD_REQUIRED
+                            }), T.ComponentDispatch.dispatch(N.ComponentActions.WAVE_EMPHASIZE);
                             return
                         }
                         null != r && this.setState({
                             error: null
                         });
-                        let l = n;
+                        let l = o;
                         if (null != t && (l = (0, c.default)(t)), null != l) {
                             this.setState({
                                 working: !0
@@ -195,17 +155,17 @@
                                 let {
                                     result: e,
                                     sms: t,
-                                    webauthn: n,
+                                    webauthn: o,
                                     ticket: r,
                                     token: i,
                                     totp: u,
                                     backup: c
-                                } = await h.default.resetPassword(l, o, a);
+                                } = await h.default.resetPassword(l, n, a);
                                 e === h.PasswordResetResult.MFA ? d.default.dispatch({
                                     type: "LOGIN_MFA_STEP",
                                     ticket: r,
                                     sms: t,
-                                    webauthn: n,
+                                    webauthn: o,
                                     totp: u,
                                     backup: c
                                 }) : null != s ? s(i) : (d.default.dispatch({
@@ -222,8 +182,8 @@
                             location: t,
                             mfaTicket: s,
                             onLoginSuccess: a,
-                            resetToken: n,
-                            source: o
+                            resetToken: o,
+                            source: n
                         } = this.props, {
                             code: r,
                             password: l,
@@ -231,20 +191,20 @@
                         } = this.state;
                         if (null != e && e.preventDefault(), 0 === l.length) {
                             this.setState({
-                                error: E.default.Messages.PASSWORD_REQUIRED
-                            }), _.ComponentDispatch.dispatch(N.ComponentActions.WAVE_EMPHASIZE);
+                                error: _.default.Messages.PASSWORD_REQUIRED
+                            }), T.ComponentDispatch.dispatch(N.ComponentActions.WAVE_EMPHASIZE);
                             return
                         }
                         null != i && this.setState({
                             error: null
                         });
-                        let u = n;
+                        let u = o;
                         if (null != t && (u = (0, c.default)(t)), null != u) {
                             this.setState({
                                 working: !0
                             });
                             try {
-                                let e = await h.default.resetPasswordMFA(r, s, l, u, o);
+                                let e = await h.default.resetPasswordMFA(r, s, l, u, n);
                                 null != a ? a(e) : (d.default.dispatch({
                                     type: "LOGIN_SUCCESS",
                                     token: e
@@ -258,8 +218,8 @@
                         let {
                             location: s,
                             mfaTicket: a,
-                            onLoginSuccess: n,
-                            resetToken: o,
+                            onLoginSuccess: o,
+                            resetToken: n,
                             source: r
                         } = this.props, {
                             password: l
@@ -267,7 +227,7 @@
                         if (0 === l.length) return d.default.dispatch({
                             type: "LOGIN_RESET"
                         }), Promise.reject();
-                        let i = o;
+                        let i = n;
                         return (null != s && (i = (0, c.default)(s)), null == i) ? (d.default.dispatch({
                             type: "LOGIN_RESET"
                         }), Promise.reject()) : h.default.resetPasswordMFAv2({
@@ -278,7 +238,7 @@
                             token: i,
                             source: r
                         }).then(e => {
-                            null != n ? n(e) : (d.default.dispatch({
+                            null != o ? o(e) : (d.default.dispatch({
                                 type: "LOGIN_SUCCESS",
                                 token: e
                             }), this.handlePasswordChangeSuccess())
@@ -334,20 +294,16 @@
                 transitionTo: e => s.g.location.assign(e),
                 replaceWith: e => s.g.location.replace(e)
             };
-            var M = function(e) {
-                let t = (0, u.useStateFromStoresObject)([S.default], () => ({
-                        loginStatus: S.default.getLoginStatus(),
-                        mfaTicket: S.default.getMFATicket(),
-                        errors: S.default.getErrors(),
-                        mfaMethods: S.default.getMFAMethods()
-                    })),
-                    s = m.default.useExperiment({
-                        location: "webConnectedReset"
-                    }).enabled;
+            var E = function(e) {
+                let t = (0, u.useStateFromStoresObject)([m.default], () => ({
+                    loginStatus: m.default.getLoginStatus(),
+                    mfaTicket: m.default.getMFATicket(),
+                    errors: m.default.getErrors(),
+                    mfaMethods: m.default.getMFAMethods()
+                }));
                 return (0, a.jsx)(C, {
                     ...e,
-                    ...t,
-                    hasLoginExperiment: s
+                    ...t
                 })
             }
         },
@@ -355,12 +311,12 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return n
+                    return o
                 }
             });
             var a = s("730290");
 
-            function n(e) {
+            function o(e) {
                 let t = null != e.hash && "" !== e.hash ? (0, a.parse)(e.hash) : null;
                 if ((null == t ? void 0 : t.token) != null) return t.token;
                 let s = null != e.search && "" !== e.search ? (0, a.parse)(e.search) : null;
@@ -375,9 +331,9 @@
                 }
             }), s("781738");
             var a = s("37983"),
-                n = s("884691"),
-                o = s("414456"),
-                r = s.n(o),
+                o = s("884691"),
+                n = s("414456"),
+                r = s.n(n),
                 l = s("446674"),
                 i = s("77078"),
                 u = s("437822"),
@@ -385,21 +341,21 @@
                 h = s("152434"),
                 c = s("21572"),
                 f = s("648498"),
-                m = s("24287"),
+                p = s("24287"),
                 g = s("878720"),
-                p = s("25033"),
+                m = s("25033"),
                 S = s("589252"),
                 T = s("161778"),
-                _ = s("271938"),
-                N = s("476108"),
-                E = s("124969"),
-                A = s("659500"),
-                C = s("439932"),
+                N = s("271938"),
+                _ = s("476108"),
+                A = s("124969"),
+                C = s("659500"),
+                E = s("439932"),
                 M = s("49111"),
-                O = s("782340"),
-                L = s("698995"),
+                L = s("782340"),
+                O = s("698995"),
                 R = s("926622");
-            class I extends n.PureComponent {
+            class I extends o.PureComponent {
                 componentDidMount() {
                     window.addEventListener("keydown", this.handleTabOrEnter)
                 }
@@ -409,8 +365,8 @@
                         transitionTo: s
                     } = this.props;
                     if (t && !e.authenticated && s(M.Routes.APP), e.errors !== this.props.errors) {
-                        var a, n, o;
-                        this.hasError("password") ? null === (a = this.passwordRef) || void 0 === a || a.focus() : this.hasError("email") || this.hasError("login") ? null === (n = this.loginRef) || void 0 === n || n.focus() : this.hasError("code") && (null === (o = this.codeRef) || void 0 === o || o.focus())
+                        var a, o, n;
+                        this.hasError("password") ? null === (a = this.passwordRef) || void 0 === a || a.focus() : this.hasError("email") || this.hasError("login") ? null === (o = this.loginRef) || void 0 === o || o.focus() : this.hasError("code") && (null === (n = this.codeRef) || void 0 === n || n.focus())
                     }
                 }
                 componentWillUnmount() {
@@ -423,26 +379,26 @@
                     var e;
                     let {
                         country: t
-                    } = this.props, s = !this.hasError("email") && this.hasError("password"), o = (0, a.jsxs)(n.Fragment, {
-                        children: [(0, a.jsx)(E.Title, {
-                            className: r(R.marginBottom8, L.title),
-                            children: O.default.Messages.MULTI_ACCOUNT_LOGIN_TITLE
+                    } = this.props, s = !this.hasError("email") && this.hasError("password"), n = (0, a.jsxs)(o.Fragment, {
+                        children: [(0, a.jsx)(A.Title, {
+                            className: r(R.marginBottom8, O.title),
+                            children: L.default.Messages.MULTI_ACCOUNT_LOGIN_TITLE
                         }, "title"), (0, a.jsx)(i.Text, {
                             color: "header-secondary",
                             variant: "text-md/normal",
-                            className: L.subtitle,
-                            children: O.default.Messages.MULTI_ACCOUNT_LOGIN_SUBTITLE
+                            className: O.subtitle,
+                            children: L.default.Messages.MULTI_ACCOUNT_LOGIN_SUBTITLE
                         })]
                     });
                     return (0, a.jsxs)("div", {
-                        className: L.mainLoginContainer,
-                        children: [o, (0, a.jsxs)(E.Block, {
-                            className: L.loginForm,
+                        className: O.mainLoginContainer,
+                        children: [n, (0, a.jsxs)(A.Block, {
+                            className: O.loginForm,
                             children: [(0, a.jsx)(S.default, {
                                 alpha2: t.alpha2,
                                 countryCode: t.code.split(" ")[0],
                                 className: R.marginBottom20,
-                                label: O.default.Messages.FORM_LABEL_EMAIL_OR_PHONE_NUMBER,
+                                label: L.default.Messages.FORM_LABEL_EMAIL_OR_PHONE_NUMBER,
                                 error: null !== (e = this.renderError("login")) && void 0 !== e ? e : this.renderError("email"),
                                 onChange: (e, t) => this.setState({
                                     login: e,
@@ -456,8 +412,8 @@
                                 value: this.state.login,
                                 autoFocus: !s,
                                 required: !0
-                            }), (0, a.jsx)(E.Input, {
-                                label: O.default.Messages.FORM_LABEL_PASSWORD,
+                            }), (0, a.jsx)(A.Input, {
+                                label: L.default.Messages.FORM_LABEL_PASSWORD,
                                 error: this.renderError("password"),
                                 onChange: e => this.setState({
                                     password: e
@@ -470,12 +426,12 @@
                                 autoFocus: s,
                                 value: this.state.password,
                                 required: !0
-                            }), (0, a.jsx)(E.Button, {
+                            }), (0, a.jsx)(A.Button, {
                                 onClick: this.handleForgotPassword,
                                 look: i.Button.Looks.LINK,
                                 color: i.Button.Colors.LINK,
                                 className: r(R.marginTop4),
-                                children: O.default.Messages.FORGOT_PASSWORD
+                                children: L.default.Messages.FORGOT_PASSWORD
                             })]
                         })]
                     })
@@ -485,34 +441,34 @@
                         authBoxClassName: e,
                         loginStatus: t,
                         closeLogin: s,
-                        theme: n
+                        theme: o
                     } = this.props;
                     return (0, a.jsxs)("div", {
-                        className: L.pageContainer,
-                        children: [(0, a.jsx)(E.default, {
+                        className: O.pageContainer,
+                        children: [(0, a.jsx)(A.default, {
                             tag: "form",
                             className: e,
                             expanded: !0,
-                            theme: n,
+                            theme: o,
                             children: this.renderDefaultForm()
                         }), (0, a.jsxs)("div", {
-                            "data-theme": n,
-                            className: r((0, C.getThemeClass)(n), L.navRow),
+                            "data-theme": o,
+                            className: r((0, E.getThemeClass)(o), O.navRow),
                             children: [(0, a.jsx)(i.Button, {
                                 type: "button",
                                 look: i.Button.Looks.LINK,
                                 "aria-label": "back",
                                 onClick: s,
                                 size: i.Button.Sizes.SMALL,
-                                className: r((0, C.getThemeClass)(n), L.backButton),
-                                children: O.default.Messages.BACK
+                                className: r((0, E.getThemeClass)(o), O.backButton),
+                                children: L.default.Messages.BACK
                             }), (0, a.jsx)(i.Button, {
                                 "aria-label": "continue",
                                 submitting: t === M.LoginStates.LOGGING_IN,
                                 color: i.Button.Colors.BRAND,
                                 onClick: this.handleLogin,
-                                className: L.continueButton,
-                                children: O.default.Messages.CONTINUE
+                                className: O.continueButton,
+                                children: L.default.Messages.CONTINUE
                             })]
                         })]
                     })
@@ -522,12 +478,12 @@
                         ticket: this.props.mfaTicket,
                         methods: this.props.mfaMethods
                     };
-                    return (0, a.jsx)(E.default, {
+                    return (0, a.jsx)(A.default, {
                         style: {
                             padding: 0
                         },
                         theme: this.props.theme,
-                        children: (0, a.jsx)(m.MFASlides, {
+                        children: (0, a.jsx)(p.MFASlides, {
                             mfaFinish: this.handleTokenSubmitMFAv2,
                             request: e,
                             onEarlyClose: () => {
@@ -542,26 +498,26 @@
                     let {
                         loginStatus: e,
                         mfaSMS: t,
-                        authBoxClassName: n,
-                        theme: o
+                        authBoxClassName: o,
+                        theme: n
                     } = this.props;
-                    return (0, a.jsxs)(E.default, {
+                    return (0, a.jsxs)(A.default, {
                         onSubmit: this.handleTokenSubmit,
                         tag: "form",
-                        className: n,
-                        theme: o,
+                        className: o,
+                        theme: n,
                         children: [(0, a.jsx)("img", {
                             alt: "",
                             src: s("367598"),
                             className: R.marginBottom20
-                        }), (0, a.jsx)(E.Title, {
+                        }), (0, a.jsx)(A.Title, {
                             className: R.marginBottom8,
-                            children: O.default.Messages.TWO_FA
-                        }), (0, a.jsx)(E.SubTitle, {
-                            children: O.default.Messages.TWO_FA_ENTER_TOKEN_BODY
-                        }), (0, a.jsxs)(E.Block, {
+                            children: L.default.Messages.TWO_FA
+                        }), (0, a.jsx)(A.SubTitle, {
+                            children: L.default.Messages.TWO_FA_ENTER_TOKEN_BODY
+                        }), (0, a.jsxs)(A.Block, {
                             className: R.marginTop40,
-                            children: [(0, a.jsx)(E.Input, {
+                            children: [(0, a.jsx)(A.Input, {
                                 className: R.marginBottom20,
                                 error: this.renderError("code"),
                                 setRef: this.setCodeRef,
@@ -569,36 +525,36 @@
                                     code: e
                                 }),
                                 autoComplete: "off",
-                                placeholder: O.default.Messages.TWO_FA_AUTH_CODE,
+                                placeholder: L.default.Messages.TWO_FA_AUTH_CODE,
                                 spellCheck: "false",
                                 maxLength: 10,
                                 autoFocus: !0,
-                                label: O.default.Messages.TWO_FA_ENTER_TOKEN_LABEL,
+                                label: L.default.Messages.TWO_FA_ENTER_TOKEN_LABEL,
                                 value: this.state.code,
                                 required: !0
                             }, "totpCode"), (0, a.jsx)(i.Button, {
                                 type: "submit",
                                 submitting: e === M.LoginStates.LOGGING_IN_MFA,
                                 fullWidth: !0,
-                                children: O.default.Messages._LOGIN
+                                children: L.default.Messages._LOGIN
                             }), t ? (0, a.jsx)(i.Button, {
                                 onClick: this.handleToggleSMSLogin,
                                 submitting: e === M.LoginStates.LOGGING_IN_MFA_SMS,
-                                className: r(L.paddingResetLeft, R.marginTop8),
+                                className: r(O.paddingResetLeft, R.marginTop8),
                                 look: i.Button.Looks.LINK,
                                 color: i.Button.Colors.LINK,
                                 size: i.Button.Sizes.TINY,
-                                children: O.default.Messages.MFA_SMS_RECEIVE_CODE
+                                children: L.default.Messages.MFA_SMS_RECEIVE_CODE
                             }) : null, (0, a.jsx)(i.Button, {
                                 look: i.Button.Looks.LINK,
                                 color: i.Button.Colors.LINK,
-                                className: r(L.paddingResetLeft, {
+                                className: r(O.paddingResetLeft, {
                                     [R.marginReset]: t,
                                     [R.marginTop8]: !t
                                 }),
                                 onClick: this.handleReset,
                                 size: i.Button.Sizes.TINY,
-                                children: O.default.Messages._TWO_FA_LOGIN_FOOTER
+                                children: L.default.Messages._TWO_FA_LOGIN_FOOTER
                             })]
                         })]
                     })
@@ -614,27 +570,27 @@
                     let {
                         authBoxClassName: e,
                         theme: t
-                    } = this.props, s = this.props.loginStatus === M.LoginStates.ACCOUNT_DISABLED, n = s ? O.default.Messages.ACCOUNT_DISABLED_TITLE : O.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_TITLE, o = s ? O.default.Messages.ACCOUNT_DISABLED_DESCRIPTION : O.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_DESCRIPTION;
-                    return (0, a.jsxs)(E.default, {
+                    } = this.props, s = this.props.loginStatus === M.LoginStates.ACCOUNT_DISABLED, o = s ? L.default.Messages.ACCOUNT_DISABLED_TITLE : L.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_TITLE, n = s ? L.default.Messages.ACCOUNT_DISABLED_DESCRIPTION : L.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_DESCRIPTION;
+                    return (0, a.jsxs)(A.default, {
                         tag: "form",
                         onSubmit: this.handleReset,
                         className: e,
                         theme: t,
-                        children: [(0, a.jsx)(E.Title, {
+                        children: [(0, a.jsx)(A.Title, {
                             className: R.marginBottom8,
-                            children: n
-                        }), (0, a.jsx)(E.SubTitle, {
-                            className: R.marginBottom20,
                             children: o
-                        }), (0, a.jsxs)(E.Block, {
+                        }), (0, a.jsx)(A.SubTitle, {
+                            className: R.marginBottom20,
+                            children: n
+                        }), (0, a.jsxs)(A.Block, {
                             children: [(0, a.jsx)(i.Button, {
                                 color: i.Button.Colors.BRAND,
                                 type: "submit",
                                 fullWidth: !0,
-                                children: O.default.Messages._RETURN_TO_LOGIN
+                                children: L.default.Messages._RETURN_TO_LOGIN
                             }), (0, a.jsx)("div", {
-                                className: r(R.marginTop8, L.needAccount),
-                                children: O.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_CANCEL.format({
+                                className: r(R.marginTop8, O.needAccount),
+                                children: L.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_CANCEL.format({
                                     onClick: this.handleCancelAccountDeletion
                                 })
                             })]
@@ -659,14 +615,14 @@
                     } = this.props, {
                         phoneVerifyError: t
                     } = this.state;
-                    return (0, a.jsx)(E.default, {
+                    return (0, a.jsx)(A.default, {
                         tag: "form",
                         className: e,
                         children: (0, a.jsx)("div", {
                             className: R.marginTop20,
                             children: (0, a.jsx)(c.default, {
-                                title: O.default.Messages.PASSWORD_RECOVERY_VERIFY_PHONE_TITLE,
-                                subtitle: O.default.Messages.PASSWORD_RECOVERY_VERIFY_PHONE_SUBTITLE_RESEND.format({
+                                title: L.default.Messages.PASSWORD_RECOVERY_VERIFY_PHONE_TITLE,
+                                subtitle: L.default.Messages.PASSWORD_RECOVERY_VERIFY_PHONE_SUBTITLE_RESEND.format({
                                     onResendClick: this.handleResendCode
                                 }),
                                 error: t,
@@ -681,29 +637,29 @@
                     let {
                         loginStatus: e,
                         maskedPhone: t,
-                        authBoxClassName: n,
-                        theme: o
+                        authBoxClassName: o,
+                        theme: n
                     } = this.props, l = e === M.LoginStates.LOGGING_IN_MFA_SMS || "" === t;
-                    return (0, a.jsxs)(E.default, {
+                    return (0, a.jsxs)(A.default, {
                         onSubmit: this.handleSMSTokenSubmit,
                         tag: "form",
-                        className: n,
-                        theme: o,
+                        className: o,
+                        theme: n,
                         children: [(0, a.jsx)("img", {
                             alt: "",
                             src: s("367598"),
                             className: R.marginBottom20
-                        }), (0, a.jsx)(E.Title, {
+                        }), (0, a.jsx)(A.Title, {
                             className: R.marginBottom8,
-                            children: O.default.Messages.TWO_FA
-                        }), (0, a.jsx)(E.SubTitle, {
+                            children: L.default.Messages.TWO_FA
+                        }), (0, a.jsx)(A.SubTitle, {
                             className: R.marginBottom8,
-                            children: l ? O.default.Messages.TWO_FA_ENTER_SMS_TOKEN_SENDING : O.default.Messages.TWO_FA_ENTER_SMS_TOKEN_SENT.format({
+                            children: l ? L.default.Messages.TWO_FA_ENTER_SMS_TOKEN_SENDING : L.default.Messages.TWO_FA_ENTER_SMS_TOKEN_SENT.format({
                                 phoneNumber: t
                             })
-                        }), (0, a.jsxs)(E.Block, {
+                        }), (0, a.jsxs)(A.Block, {
                             className: R.marginTop40,
-                            children: [(0, a.jsx)(E.Input, {
+                            children: [(0, a.jsx)(A.Input, {
                                 className: R.marginBottom20,
                                 error: this.renderError("code"),
                                 setRef: this.setCodeRef,
@@ -711,11 +667,11 @@
                                     smsCode: e
                                 }),
                                 autoComplete: "off",
-                                placeholder: O.default.Messages.TWO_FA_AUTH_CODE,
+                                placeholder: L.default.Messages.TWO_FA_AUTH_CODE,
                                 spellCheck: "false",
                                 maxLength: 10,
                                 autoFocus: !0,
-                                label: O.default.Messages.TWO_FA_ENTER_SMS_TOKEN_LABEL,
+                                label: L.default.Messages.TWO_FA_ENTER_SMS_TOKEN_LABEL,
                                 value: this.state.smsCode,
                                 required: !0
                             }, "smsCode"), (0, a.jsx)(i.Button, {
@@ -723,24 +679,24 @@
                                 submitting: l,
                                 fullWidth: !0,
                                 color: l ? i.Button.Colors.TRANSPARENT : i.Button.Colors.BRAND,
-                                children: O.default.Messages._LOGIN
+                                children: L.default.Messages._LOGIN
                             }), l ? null : (0, a.jsx)(i.Button, {
                                 onClick: this.handleToggleSMSLogin,
                                 look: i.Button.Looks.LINK,
                                 color: i.Button.Colors.LINK,
                                 size: i.Button.Sizes.TINY,
-                                className: r(L.paddingResetLeft, R.marginTop8),
-                                children: O.default.Messages.MFA_SMS_RESEND
+                                className: r(O.paddingResetLeft, R.marginTop8),
+                                children: L.default.Messages.MFA_SMS_RESEND
                             }), (0, a.jsx)(i.Button, {
                                 look: i.Button.Looks.LINK,
                                 color: i.Button.Colors.LINK,
                                 onClick: this.handleReset,
                                 size: i.Button.Sizes.TINY,
-                                className: r(L.paddingResetLeft, {
+                                className: r(O.paddingResetLeft, {
                                     [R.marginReset]: !l,
                                     [R.marginTop8]: l
                                 }),
-                                children: O.default.Messages._TWO_FA_LOGIN_FOOTER
+                                children: L.default.Messages._TWO_FA_LOGIN_FOOTER
                             })]
                         })]
                     })
@@ -805,14 +761,14 @@
                         null == e || e.preventDefault(), null === (t = this.loginRef) || void 0 === t || t.focus();
                         let s = this.getFullLogin();
                         try {
-                            A.ComponentDispatch.dispatch(M.ComponentActions.WAVE_EMPHASIZE), await u.default.forgotPassword(s), (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
-                                header: O.default.Messages.EMAIL_VERIFICATION_INSTRUCTIONS_HEADER,
-                                confirmText: O.default.Messages.OKAY,
+                            C.ComponentDispatch.dispatch(M.ComponentActions.WAVE_EMPHASIZE), await u.default.forgotPassword(s), (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
+                                header: L.default.Messages.EMAIL_VERIFICATION_INSTRUCTIONS_HEADER,
+                                confirmText: L.default.Messages.OKAY,
                                 confirmButtonColor: i.Button.Colors.BRAND,
                                 ...e,
                                 children: (0, a.jsx)(i.Text, {
                                     variant: "text-md/normal",
-                                    children: O.default.Messages.EMAIL_VERIFICATION_INSTRUCTIONS_BODY.format({
+                                    children: L.default.Messages.EMAIL_VERIFICATION_INSTRUCTIONS_BODY.format({
                                         email: s
                                     })
                                 })
@@ -915,16 +871,16 @@
                 replaceWith: e => s.g.location.replace(e)
             };
             var x = function(e) {
-                let t = (0, l.useStateFromStoresObject)([N.default, _.default, p.default, T.default], () => ({
-                        authenticated: _.default.isAuthenticated(),
-                        loginStatus: _.default.getLoginStatus(),
-                        mfaTicket: _.default.getMFATicket(),
-                        mfaSMS: _.default.getMFASMS(),
-                        maskedPhone: _.default.getMaskedPhone(),
-                        mfaMethods: _.default.getMFAMethods(),
-                        errors: _.default.getErrors(),
-                        defaultRoute: N.default.defaultRoute,
-                        country: p.default.getCountryCode(),
+                let t = (0, l.useStateFromStoresObject)([_.default, N.default, m.default, T.default], () => ({
+                        authenticated: N.default.isAuthenticated(),
+                        loginStatus: N.default.getLoginStatus(),
+                        mfaTicket: N.default.getMFATicket(),
+                        mfaSMS: N.default.getMFASMS(),
+                        maskedPhone: N.default.getMaskedPhone(),
+                        mfaMethods: N.default.getMFAMethods(),
+                        errors: N.default.getErrors(),
+                        defaultRoute: _.default.defaultRoute,
+                        country: m.default.getCountryCode(),
                         theme: T.default.theme
                     })),
                     s = f.default.useExperiment({
@@ -946,19 +902,19 @@
             });
             var a = s("37983");
             s("884691");
-            var n = s("393414"),
-                o = s("479287"),
+            var o = s("393414"),
+                n = s("479287"),
                 r = s("545358"),
                 l = e => {
                     let {
                         onClose: t
                     } = e;
-                    return (0, a.jsx)(o.default, {
+                    return (0, a.jsx)(n.default, {
                         transitionTo: e => {
-                            (0, n.transitionTo)(e)
+                            (0, o.transitionTo)(e)
                         },
                         replaceWith: e => {
-                            (0, n.replaceWith)(e)
+                            (0, o.replaceWith)(e)
                         },
                         authBoxClassName: r.card,
                         closeLogin: t
@@ -969,10 +925,10 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return A
+                    return C
                 }
             }), s("222007");
-            var a, n, o = s("37983"),
+            var a, o, n = s("37983"),
                 r = s("884691"),
                 l = s("759843"),
                 i = s("446674"),
@@ -981,127 +937,127 @@
                 h = s("428958"),
                 c = s("648498"),
                 f = s("697218"),
-                m = s("555158"),
+                p = s("555158"),
                 g = s("770032"),
-                p = s("350218"),
+                m = s("350218"),
                 S = s("851460"),
                 T = s("583374"),
-                _ = s("782340"),
-                N = s("635937");
-            (n = a || (a = {}))[n.MANAGE_ACCOUNTS = 0] = "MANAGE_ACCOUNTS", n[n.LOGIN = 1] = "LOGIN";
-            let E = {
+                N = s("782340"),
+                _ = s("635937");
+            (o = a || (a = {}))[o.MANAGE_ACCOUNTS = 0] = "MANAGE_ACCOUNTS", o[o.LOGIN = 1] = "LOGIN";
+            let A = {
                 0: u.ModalSize.SMALL,
                 1: u.ModalSize.DYNAMIC
             };
 
-            function A(e) {
+            function C(e) {
                 let {
                     transitionState: t,
                     onClose: s
-                } = e, [a, n] = r.useState(0), {
-                    currentUser: A,
-                    multiAccountUsers: C
+                } = e, [a, o] = r.useState(0), {
+                    currentUser: C,
+                    multiAccountUsers: E
                 } = (0, i.useStateFromStoresObject)([f.default, g.default], () => ({
                     currentUser: f.default.getCurrentUser(),
                     multiAccountUsers: g.default.getUsers()
-                })), [M, O] = r.useState(!1), [L, R] = r.useState(""), [I, x] = r.useState(null);
+                })), [M, L] = r.useState(!1), [O, R] = r.useState(""), [I, x] = r.useState(null);
                 r.useEffect(() => {
-                    if (M) x((0, o.jsx)(m.default, {
-                        messageType: m.HelpMessageTypes.ERROR,
-                        className: N.infoMessage,
-                        children: _.default.Messages.MULTI_ACCOUNT_MAX_ACCOUNTS_ERROR.format({
+                    if (M) x((0, n.jsx)(p.default, {
+                        messageType: p.HelpMessageTypes.ERROR,
+                        className: _.infoMessage,
+                        children: N.default.Messages.MULTI_ACCOUNT_MAX_ACCOUNTS_ERROR.format({
                             maxNumAccounts: T.MAX_ACCOUNTS
                         })
                     })), R("");
-                    else if (null != L) {
-                        let e = f.default.getUser(L);
-                        null != e && x((0, o.jsx)(m.default, {
-                            messageType: m.HelpMessageTypes.POSITIVE,
-                            className: N.infoMessage,
-                            children: _.default.Messages.MULTI_ACCOUNT_LOGGED_OUT.format({
+                    else if (null != O) {
+                        let e = f.default.getUser(O);
+                        null != e && x((0, n.jsx)(p.default, {
+                            messageType: p.HelpMessageTypes.POSITIVE,
+                            className: _.infoMessage,
+                            children: N.default.Messages.MULTI_ACCOUNT_LOGGED_OUT.format({
                                 username: e.username
                             })
-                        })), O(!1)
+                        })), L(!1)
                     }
-                }, [L, M]), r.useEffect(() => {
-                    C.length < T.MAX_ACCOUNTS && O(!1)
-                }, [C]), (0, h.default)({
+                }, [O, M]), r.useEffect(() => {
+                    E.length < T.MAX_ACCOUNTS && L(!1)
+                }, [E]), (0, h.default)({
                     type: l.ImpressionTypes.MODAL,
                     name: 0 === a ? l.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING : l.ImpressionNames.USER_LOGIN
                 });
                 let k = null;
-                0 === a ? k = (0, o.jsxs)(o.Fragment, {
-                    children: [(0, o.jsx)(u.ModalHeader, {
+                0 === a ? k = (0, n.jsxs)(n.Fragment, {
+                    children: [(0, n.jsx)(u.ModalHeader, {
                         separator: !1,
-                        children: (0, o.jsxs)("div", {
-                            className: N.header,
-                            children: [(0, o.jsx)(u.Heading, {
+                        children: (0, n.jsxs)("div", {
+                            className: _.header,
+                            children: [(0, n.jsx)(u.Heading, {
                                 variant: "heading-xl/semibold",
                                 color: "header-primary",
-                                children: _.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS
-                            }), (0, o.jsx)(u.Text, {
-                                className: N.subheaderText,
+                                children: N.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS
+                            }), (0, n.jsx)(u.Text, {
+                                className: _.subheaderText,
                                 color: "header-secondary",
                                 variant: "text-md/normal",
-                                children: _.default.Messages.SWITCH_ACCOUNTS_MODAL_SUBHEADER
+                                children: N.default.Messages.SWITCH_ACCOUNTS_MODAL_SUBHEADER
                             })]
                         })
-                    }), (0, o.jsxs)(u.ModalContent, {
-                        children: [I, (0, o.jsx)(S.default, {
-                            actionText: _.default.Messages.SWITCH_ACCOUNTS_ACTION_SWITCH,
+                    }), (0, n.jsxs)(u.ModalContent, {
+                        children: [I, (0, n.jsx)(S.default, {
+                            actionText: N.default.Messages.SWITCH_ACCOUNTS_ACTION_SWITCH,
                             onAction: (e, t) => {
                                 switch (e) {
                                     case S.MultiAccountActionType.LOGIN_REQUIRED:
-                                        n(1);
+                                        o(1);
                                         break;
                                     case S.MultiAccountActionType.SWITCHED:
                                         s();
                                         break;
                                     case S.MultiAccountActionType.REMOVED:
-                                        t === (null == A ? void 0 : A.id) && s(), R(t)
+                                        t === (null == C ? void 0 : C.id) && s(), R(t)
                                 }
                             }
-                        }), (0, o.jsx)("div", {
-                            className: N.actions,
-                            children: (0, o.jsx)(u.Button, {
+                        }), (0, n.jsx)("div", {
+                            className: _.actions,
+                            children: (0, n.jsx)(u.Button, {
                                 look: u.Button.Looks.LINK,
                                 color: u.Button.Colors.PRIMARY,
                                 onClick: () => {
-                                    if (C.length >= T.MAX_ACCOUNTS) {
-                                        O(!0);
+                                    if (E.length >= T.MAX_ACCOUNTS) {
+                                        L(!0);
                                         return
                                     }
-                                    n(1)
+                                    o(1)
                                 },
                                 size: u.Button.Sizes.MEDIUM,
-                                children: (0, o.jsx)(u.Text, {
+                                children: (0, n.jsx)(u.Text, {
                                     variant: "text-sm/semibold",
-                                    children: _.default.Messages.SWITCH_ACCOUNTS_ADD_AN_ACCOUNT_BUTTON
+                                    children: N.default.Messages.SWITCH_ACCOUNTS_ADD_AN_ACCOUNT_BUTTON
                                 })
                             })
                         })]
                     })]
-                }) : 1 === a && (k = (0, o.jsx)(p.default, {
+                }) : 1 === a && (k = (0, n.jsx)(m.default, {
                     onClose: () => {
                         d.default.dispatch({
                             type: "CLEAR_AUTHENTICATION_ERRORS"
-                        }), n(0)
+                        }), o(0)
                     }
                 }));
-                let B = !c.default.useExperiment({
+                let F = !c.default.useExperiment({
                     location: "accountSwitcherModal"
                 }).enabled;
-                return (0, o.jsx)(u.ModalRoot, {
-                    className: N.modal,
+                return (0, n.jsx)(u.ModalRoot, {
+                    className: _.modal,
                     transitionState: t,
-                    size: E[a],
-                    "aria-label": _.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
-                    children: (0, o.jsxs)(u.Sequencer, {
+                    size: A[a],
+                    "aria-label": N.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
+                    children: (0, n.jsxs)(u.Sequencer, {
                         step: a,
                         steps: [0, 1],
-                        children: [B && (0, o.jsx)(u.ModalCloseButton, {
+                        children: [F && (0, n.jsx)(u.ModalCloseButton, {
                             onClick: s,
-                            className: N.modalCloseButton
+                            className: _.modalCloseButton
                         }), k]
                     })
                 })
