@@ -1,767 +1,819 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["21396"], {
-        656280: function(t, r, e) {
-            t = e.nmd(t), e("424973"), e("781738"), ! function(r) {
-                var e, n, a, i = /^\s+/,
-                    s = /\s+$/,
-                    o = 0,
-                    f = r.round,
-                    h = r.min,
-                    u = r.max,
-                    l = r.random;
-
-                function c(t, e) {
-                    if (e = e || {}, (t = t || "") instanceof c) return t;
-                    if (!(this instanceof c)) return new c(t, e);
-                    var n = function(t) {
-                        var e = {
-                                r: 0,
-                                g: 0,
-                                b: 0
-                            },
-                            n = 1,
-                            a = null,
-                            o = null,
-                            f = null,
-                            l = !1,
-                            c = !1;
-                        return "string" == typeof t && (t = function(t) {
-                            t = t.replace(i, "").replace(s, "").toLowerCase();
-                            var r, e = !1;
-                            if (q[t]) t = q[t], e = !0;
-                            else if ("transparent" == t) return {
-                                r: 0,
-                                g: 0,
-                                b: 0,
-                                a: 0,
-                                format: "name"
-                            };
-                            if (r = P.rgb.exec(t)) return {
-                                r: r[1],
-                                g: r[2],
-                                b: r[3]
-                            };
-                            if (r = P.rgba.exec(t)) return {
-                                r: r[1],
-                                g: r[2],
-                                b: r[3],
-                                a: r[4]
-                            };
-                            if (r = P.hsl.exec(t)) return {
-                                h: r[1],
-                                s: r[2],
-                                l: r[3]
-                            };
-                            if (r = P.hsla.exec(t)) return {
-                                h: r[1],
-                                s: r[2],
-                                l: r[3],
-                                a: r[4]
-                            };
-                            if (r = P.hsv.exec(t)) return {
-                                h: r[1],
-                                s: r[2],
-                                v: r[3]
-                            };
-                            if (r = P.hsva.exec(t)) return {
-                                h: r[1],
-                                s: r[2],
-                                v: r[3],
-                                a: r[4]
-                            };
-                            if (r = P.hex8.exec(t)) return {
-                                r: z(r[1]),
-                                g: z(r[2]),
-                                b: z(r[3]),
-                                a: z(r[4]) / 255,
-                                format: e ? "name" : "hex8"
-                            };
-                            if (r = P.hex6.exec(t)) return {
-                                r: z(r[1]),
-                                g: z(r[2]),
-                                b: z(r[3]),
-                                format: e ? "name" : "hex"
-                            };
-                            if (r = P.hex4.exec(t)) return {
-                                r: z(r[1] + "" + r[1]),
-                                g: z(r[2] + "" + r[2]),
-                                b: z(r[3] + "" + r[3]),
-                                a: z(r[4] + "" + r[4]) / 255,
-                                format: e ? "name" : "hex8"
-                            };
-                            return !!(r = P.hex3.exec(t)) && {
-                                r: z(r[1] + "" + r[1]),
-                                g: z(r[2] + "" + r[2]),
-                                b: z(r[3] + "" + r[3]),
-                                format: e ? "name" : "hex"
-                            }
-                        }(t)), "object" == typeof t && ($(t.r) && $(t.g) && $(t.b) ? (e = function(t, r, e) {
-                            return {
-                                r: 255 * L(t, 255),
-                                g: 255 * L(r, 255),
-                                b: 255 * L(e, 255)
-                            }
-                        }(t.r, t.g, t.b), l = !0, c = "%" === String(t.r).substr(-1) ? "prgb" : "rgb") : $(t.h) && $(t.s) && $(t.v) ? (a = T(t.s), o = T(t.v), e = function(t, e, n) {
-                            t = 6 * L(t, 360), e = L(e, 100), n = L(n, 100);
-                            var a = r.floor(t),
-                                i = t - a,
-                                s = n * (1 - e),
-                                o = n * (1 - i * e),
-                                f = n * (1 - (1 - i) * e),
-                                h = a % 6;
-                            return {
-                                r: 255 * [n, o, s, s, f, n][h],
-                                g: 255 * [f, n, n, o, s, s][h],
-                                b: 255 * [s, s, f, n, n, o][h]
-                            }
-                        }(t.h, a, o), l = !0, c = "hsv") : $(t.h) && $(t.s) && $(t.l) && (a = T(t.s), f = T(t.l), e = function(t, r, e) {
-                            var n, a, i;
-
-                            function s(t, r, e) {
-                                return (e < 0 && (e += 1), e > 1 && (e -= 1), e < 1 / 6) ? t + (r - t) * 6 * e : e < .5 ? r : e < 2 / 3 ? t + (r - t) * (2 / 3 - e) * 6 : t
-                            }
-                            if (t = L(t, 360), r = L(r, 100), e = L(e, 100), 0 === r) n = a = i = e;
-                            else {
-                                var o = e < .5 ? e * (1 + r) : e + r - e * r,
-                                    f = 2 * e - o;
-                                n = s(f, o, t + 1 / 3), a = s(f, o, t), i = s(f, o, t - 1 / 3)
-                            }
-                            return {
-                                r: 255 * n,
-                                g: 255 * a,
-                                b: 255 * i
-                            }
-                        }(t.h, a, f), l = !0, c = "hsl"), t.hasOwnProperty("a") && (n = t.a)), n = I(n), {
-                            ok: l,
-                            format: t.format || c,
-                            r: h(255, u(e.r, 0)),
-                            g: h(255, u(e.g, 0)),
-                            b: h(255, u(e.b, 0)),
-                            a: n
-                        }
-                    }(t);
-                    this._originalInput = t, this._r = n.r, this._g = n.g, this._b = n.b, this._a = n.a, this._roundA = f(100 * this._a) / 100, this._format = e.format || n.format, this._gradientType = e.gradientType, this._r < 1 && (this._r = f(this._r)), this._g < 1 && (this._g = f(this._g)), this._b < 1 && (this._b = f(this._b)), this._ok = n.ok, this._tc_id = o++
+    ["22918"], {
+        516555: function(t, e, n) {
+            "use strict";
+            n.r(e), n.d(e, {
+                ConfettiCanvas: function() {
+                    return V
+                },
+                Environment: function() {
+                    return d
+                },
+                SpriteCanvas: function() {
+                    return P
+                },
+                useConfettiCannon: function() {
+                    return F
                 }
-                c.prototype = {
-                    isDark: function() {
-                        return 128 > this.getBrightness()
-                    },
-                    isLight: function() {
-                        return !this.isDark()
-                    },
-                    isValid: function() {
-                        return this._ok
-                    },
-                    getOriginalInput: function() {
-                        return this._originalInput
-                    },
-                    getFormat: function() {
-                        return this._format
-                    },
-                    getAlpha: function() {
-                        return this._a
-                    },
-                    getBrightness: function() {
-                        var t = this.toRgb();
-                        return (299 * t.r + 587 * t.g + 114 * t.b) / 1e3
-                    },
-                    getLuminance: function() {
-                        var t, e, n, a, i, s, o = this.toRgb();
-                        return t = o.r / 255, e = o.g / 255, n = o.b / 255, a = t <= .03928 ? t / 12.92 : r.pow((t + .055) / 1.055, 2.4), i = e <= .03928 ? e / 12.92 : r.pow((e + .055) / 1.055, 2.4), .2126 * a + .7152 * i + .0722 * (s = n <= .03928 ? n / 12.92 : r.pow((n + .055) / 1.055, 2.4))
-                    },
-                    setAlpha: function(t) {
-                        return this._a = I(t), this._roundA = f(100 * this._a) / 100, this
-                    },
-                    toHsv: function() {
-                        var t = b(this._r, this._g, this._b);
-                        return {
-                            h: 360 * t.h,
-                            s: t.s,
-                            v: t.v,
-                            a: this._a
-                        }
-                    },
-                    toHsvString: function() {
-                        var t = b(this._r, this._g, this._b),
-                            r = f(360 * t.h),
-                            e = f(100 * t.s),
-                            n = f(100 * t.v);
-                        return 1 == this._a ? "hsv(" + r + ", " + e + "%, " + n + "%)" : "hsva(" + r + ", " + e + "%, " + n + "%, " + this._roundA + ")"
-                    },
-                    toHsl: function() {
-                        var t = g(this._r, this._g, this._b);
-                        return {
-                            h: 360 * t.h,
-                            s: t.s,
-                            l: t.l,
-                            a: this._a
-                        }
-                    },
-                    toHslString: function() {
-                        var t = g(this._r, this._g, this._b),
-                            r = f(360 * t.h),
-                            e = f(100 * t.s),
-                            n = f(100 * t.l);
-                        return 1 == this._a ? "hsl(" + r + ", " + e + "%, " + n + "%)" : "hsla(" + r + ", " + e + "%, " + n + "%, " + this._roundA + ")"
-                    },
-                    toHex: function(t) {
-                        return d(this._r, this._g, this._b, t)
-                    },
-                    toHexString: function(t) {
-                        return "#" + this.toHex(t)
-                    },
-                    toHex8: function(t) {
-                        return function(t, r, e, n, a) {
-                            var i = [E(f(t).toString(16)), E(f(r).toString(16)), E(f(e).toString(16)), E(j(n))];
-                            return a && i[0].charAt(0) == i[0].charAt(1) && i[1].charAt(0) == i[1].charAt(1) && i[2].charAt(0) == i[2].charAt(1) && i[3].charAt(0) == i[3].charAt(1) ? i[0].charAt(0) + i[1].charAt(0) + i[2].charAt(0) + i[3].charAt(0) : i.join("")
-                        }(this._r, this._g, this._b, this._a, t)
-                    },
-                    toHex8String: function(t) {
-                        return "#" + this.toHex8(t)
-                    },
-                    toRgb: function() {
-                        return {
-                            r: f(this._r),
-                            g: f(this._g),
-                            b: f(this._b),
-                            a: this._a
-                        }
-                    },
-                    toRgbString: function() {
-                        return 1 == this._a ? "rgb(" + f(this._r) + ", " + f(this._g) + ", " + f(this._b) + ")" : "rgba(" + f(this._r) + ", " + f(this._g) + ", " + f(this._b) + ", " + this._roundA + ")"
-                    },
-                    toPercentageRgb: function() {
-                        return {
-                            r: f(100 * L(this._r, 255)) + "%",
-                            g: f(100 * L(this._g, 255)) + "%",
-                            b: f(100 * L(this._b, 255)) + "%",
-                            a: this._a
-                        }
-                    },
-                    toPercentageRgbString: function() {
-                        return 1 == this._a ? "rgb(" + f(100 * L(this._r, 255)) + "%, " + f(100 * L(this._g, 255)) + "%, " + f(100 * L(this._b, 255)) + "%)" : "rgba(" + f(100 * L(this._r, 255)) + "%, " + f(100 * L(this._g, 255)) + "%, " + f(100 * L(this._b, 255)) + "%, " + this._roundA + ")"
-                    },
-                    toName: function() {
-                        return 0 === this._a ? "transparent" : !(this._a < 1) && (M[d(this._r, this._g, this._b, !0)] || !1)
-                    },
-                    toFilter: function(t) {
-                        var r = "#" + p(this._r, this._g, this._b, this._a),
-                            e = r,
-                            n = this._gradientType ? "GradientType = 1, " : "";
-                        if (t) {
-                            var a = c(t);
-                            e = "#" + p(a._r, a._g, a._b, a._a)
-                        }
-                        return "progid:DXImageTransform.Microsoft.gradient(" + n + "startColorstr=" + r + ",endColorstr=" + e + ")"
-                    },
-                    toString: function(t) {
-                        var r = !!t;
-                        t = t || this._format;
-                        var e = !1,
-                            n = this._a < 1 && this._a >= 0;
-                        if (!r && n && ("hex" === t || "hex6" === t || "hex3" === t || "hex4" === t || "hex8" === t || "name" === t)) return "name" === t && 0 === this._a ? this.toName() : this.toRgbString();
-                        return "rgb" === t && (e = this.toRgbString()), "prgb" === t && (e = this.toPercentageRgbString()), ("hex" === t || "hex6" === t) && (e = this.toHexString()), "hex3" === t && (e = this.toHexString(!0)), "hex4" === t && (e = this.toHex8String(!0)), "hex8" === t && (e = this.toHex8String()), "name" === t && (e = this.toName()), "hsl" === t && (e = this.toHslString()), "hsv" === t && (e = this.toHsvString()), e || this.toHexString()
-                    },
-                    clone: function() {
-                        return c(this.toString())
-                    },
-                    _applyModification: function(t, r) {
-                        var e = t.apply(null, [this].concat([].slice.call(r)));
-                        return this._r = e._r, this._g = e._g, this._b = e._b, this.setAlpha(e._a), this
-                    },
-                    lighten: function() {
-                        return this._applyModification(y, arguments)
-                    },
-                    brighten: function() {
-                        return this._applyModification(A, arguments)
-                    },
-                    darken: function() {
-                        return this._applyModification(x, arguments)
-                    },
-                    desaturate: function() {
-                        return this._applyModification(_, arguments)
-                    },
-                    saturate: function() {
-                        return this._applyModification(m, arguments)
-                    },
-                    greyscale: function() {
-                        return this._applyModification(v, arguments)
-                    },
-                    spin: function() {
-                        return this._applyModification(k, arguments)
-                    },
-                    _applyCombination: function(t, r) {
-                        return t.apply(null, [this].concat([].slice.call(r)))
-                    },
-                    analogous: function() {
-                        return this._applyCombination(F, arguments)
-                    },
-                    complement: function() {
-                        return this._applyCombination(w, arguments)
-                    },
-                    monochromatic: function() {
-                        return this._applyCombination(C, arguments)
-                    },
-                    splitcomplement: function() {
-                        return this._applyCombination(R, arguments)
-                    },
-                    triad: function() {
-                        return this._applyCombination(S, arguments)
-                    },
-                    tetrad: function() {
-                        return this._applyCombination(H, arguments)
+            }), n("70102"), n("222007"), n("424973");
+            var i = n("884691"),
+                r = n("748820"),
+                a = n("414456"),
+                o = n.n(a);
+
+            function u(t, e) {
+                var n = t.x,
+                    i = t.y;
+                return n > e.x && n < e.x + e.width && i > e.y && i < e.y + e.height
+            }
+
+            function l(t, e) {
+                return t * e * e * (e > 0 ? -1 : 1)
+            }
+            var c = function() {
+                    function t(t) {
+                        this.id = t.id, this.position = t.position, this.velocity = t.velocity, this.rotation = t.rotation, this.dragCoefficient = t.dragCoefficient, this.size = t.size, this.opacity = t.opacity, this.spriteX = t.spriteX, this.spriteY = t.spriteY, this.spriteWidth = t.spriteWidth, this.spriteHeight = t.spriteHeight, this._lastUpdatedAt = Date.now()
                     }
-                }, c.fromRatio = function(t, r) {
-                    if ("object" == typeof t) {
-                        var e = {};
-                        for (var n in t) t.hasOwnProperty(n) && ("a" === n ? e[n] = t[n] : e[n] = T(t[n]));
-                        t = e
+                    return t.prototype.getNewForces = function(t, e) {
+                        var n, i, r, a, o = t.wind * e,
+                            u = -t.gravity * e;
+                        return {
+                            x: o + (n = this.dragCoefficient.x, n * (i = this.velocity.x) * i * (i > 0 ? -1 : 1)),
+                            y: u + (r = this.dragCoefficient.y, r * (a = this.velocity.y) * a * (a > 0 ? -1 : 1))
+                        }
+                    }, t.prototype.update = function(t) {
+                        var e = Date.now(),
+                            n = (e - this._lastUpdatedAt) / 100;
+                        this.rotation.update(n), this.dragCoefficient.update(n);
+                        var i = this.getNewForces(t, n),
+                            r = i.x,
+                            a = i.y;
+                        this.velocity.update(n), this.velocity.x += r, this.velocity.y += a, this.position.update(n), this.position.x += this.velocity.x * n, this.position.y += this.velocity.y * n, this.size.update(n), this.opacity.update(n), this._lastUpdatedAt = e
+                    }, t.prototype.previewPositionUpdate = function(t, e) {
+                        var n = e / 100,
+                            i = this.velocity.previewUpdate(n),
+                            r = this.getNewForces(t, n),
+                            a = r.x,
+                            o = r.y;
+                        i.x += a, i.y += o;
+                        var u = this.position.previewUpdate(n);
+                        return u.x += i.x * n, u.y += i.y * n, u
+                    }, t.prototype.draw = function(t, e) {
+                        e.save(), e.globalAlpha = this.opacity.value, e.setTransform((new DOMMatrix).translateSelf(this.position.x * n.g.devicePixelRatio, this.position.y * n.g.devicePixelRatio).rotateSelf(this.rotation.x, this.rotation.y, this.rotation.z)), e.drawImage(t, this.spriteX, this.spriteY, this.spriteWidth, this.spriteHeight, -this.width / 2 * n.g.devicePixelRatio, -this.height / 2 * n.g.devicePixelRatio, this.width * n.g.devicePixelRatio, this.height * n.g.devicePixelRatio), e.restore()
+                    }, t.prototype.shouldDestroy = function(t, e) {
+                        return this.opacity.value < 0 || e.gravity >= 0 && this.velocity.y < 0 && this.position.y + this.height < 0 || e.gravity <= 0 && this.velocity.y > 0 && this.position.y - this.height > t.height || e.wind >= 0 && this.velocity.x > 0 && this.position.x - this.width > t.width || e.wind <= 0 && this.velocity.x < 0 && this.position.x + this.width < 0
+                    }, Object.defineProperty(t.prototype, "width", {
+                        get: function() {
+                            return this.size.x
+                        },
+                        enumerable: !1,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "height", {
+                        get: function() {
+                            return this.size.y
+                        },
+                        enumerable: !1,
+                        configurable: !0
+                    }), t.prototype.addForce = function(t) {
+                        this.velocity.x += t.x, this.velocity.y += t.y
+                    }, t
+                }(),
+                s = {
+                    velocity: {
+                        type: "static",
+                        value: 0
+                    },
+                    rotation: {
+                        type: "static",
+                        value: 0
+                    },
+                    dragCoefficient: {
+                        type: "static",
+                        value: .001
+                    },
+                    opacity: {
+                        type: "static",
+                        value: 1
                     }
-                    return c(t, r)
+                },
+                d = function(t) {
+                    var e = void 0 === t ? {} : t,
+                        n = e.gravity,
+                        i = e.wind;
+                    this.gravity = -9.8, this.wind = 0, this.gravity = null != n ? n : this.gravity, this.wind = null != i ? i : this.wind
+                },
+                f = function(t, e) {
+                    return (f = Object.setPrototypeOf || ({
+                        __proto__: []
+                    }) instanceof Array && function(t, e) {
+                        t.__proto__ = e
+                    } || function(t, e) {
+                        for (var n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n])
+                    })(t, e)
                 };
 
-                function g(t, r, e) {
-                    t = L(t, 255), r = L(r, 255);
-                    var n = u(t, r, e = L(e, 255)),
-                        a = h(t, r, e),
-                        i, s, o = (n + a) / 2;
-                    if (n == a) i = s = 0;
-                    else {
-                        var f = n - a;
-                        switch (s = o > .5 ? f / (2 - n - a) : f / (n + a), n) {
-                            case t:
-                                i = (r - e) / f + (r < e ? 6 : 0);
-                                break;
-                            case r:
-                                i = (e - t) / f + 2;
-                                break;
-                            case e:
-                                i = (t - r) / f + 4
+            function p(t, e) {
+                if ("function" != typeof e && null !== e) throw TypeError("Class extends value " + String(e) + " is not a constructor or null");
+
+                function n() {
+                    this.constructor = t
+                }
+                f(t, e), t.prototype = null === e ? Object.create(e) : (n.prototype = e.prototype, new n)
+            }
+            var h = function() {
+                    return (h = Object.assign || function(t) {
+                        for (var e, n = 1, i = arguments.length; n < i; n++)
+                            for (var r in e = arguments[n]) Object.prototype.hasOwnProperty.call(e, r) && (t[r] = e[r]);
+                        return t
+                    }).apply(this, arguments)
+                },
+                v = function(t) {
+                    this.value = t
+                },
+                y = function() {
+                    function t(t, e) {
+                        this._x = t, this._y = e
+                    }
+                    return t.prototype.update = function(t) {
+                        this._x.update(t), this._y.update(t)
+                    }, t.prototype.previewUpdate = function(t) {
+                        return {
+                            x: this._x.previewUpdate(t),
+                            y: this._y.previewUpdate(t)
                         }
-                        i /= 6
+                    }, Object.defineProperty(t.prototype, "x", {
+                        get: function() {
+                            return this._x.value
+                        },
+                        set: function(t) {
+                            this._x.value = t
+                        },
+                        enumerable: !1,
+                        configurable: !0
+                    }), Object.defineProperty(t.prototype, "y", {
+                        get: function() {
+                            return this._y.value
+                        },
+                        set: function(t) {
+                            this._y.value = t
+                        },
+                        enumerable: !1,
+                        configurable: !0
+                    }), t
+                }(),
+                m = function(t) {
+                    function e(e, n, i) {
+                        var r = t.call(this, e, n) || this;
+                        return r._z = i, r
                     }
-                    return {
-                        h: i,
-                        s: s,
-                        l: o
+                    return p(e, t), e.prototype.update = function(e) {
+                        t.prototype.update.call(this, e), this._z.update(e)
+                    }, e.prototype.previewUpdate = function(e) {
+                        var n = t.prototype.previewUpdate.call(this, e);
+                        return h(h({}, n), {
+                            z: this._z.previewUpdate(e)
+                        })
+                    }, Object.defineProperty(e.prototype, "z", {
+                        get: function() {
+                            return this._z.value
+                        },
+                        set: function(t) {
+                            this._z.value = t
+                        },
+                        enumerable: !1,
+                        configurable: !0
+                    }), e
+                }(y),
+                w = function(t) {
+                    function e() {
+                        return null !== t && t.apply(this, arguments) || this
                     }
-                }
+                    return p(e, t), e.prototype.update = function() {}, e.prototype.previewUpdate = function() {
+                        return this.value
+                    }, e
+                }(v),
+                x = function(t) {
+                    function e(e, n) {
+                        var i = t.call(this, e) || this;
+                        return i.addValue = n, i
+                    }
+                    return p(e, t), e.prototype.update = function(t) {
+                        this.value = this.previewUpdate(t)
+                    }, e.prototype.previewUpdate = function(t) {
+                        return this.value + this.addValue * t
+                    }, e
+                }(v),
+                g = function(t) {
+                    function e(e, n, i, r, a, o) {
+                        var u = t.call(this, e) || this;
+                        u.min = n, u.max = i, u.duration = r;
+                        var l = u.value / (u.max - u.min) * u.duration,
+                            c = isNaN(l) ? 0 : l;
+                        return u.timePassed = c < 0 ? u.duration - c : c, u.directionMultiplier = a, u.easingFunction = o, u
+                    }
+                    return p(e, t), e.prototype.update = function(t) {
+                        var e = this.doUpdate(t),
+                            n = e[0],
+                            i = e[1],
+                            r = e[2];
+                        this.value = n, this.directionMultiplier = r, this.timePassed = i
+                    }, e.prototype.previewUpdate = function(t) {
+                        return this.doUpdate(t)[0]
+                    }, e.prototype.doUpdate = function(t) {
+                        var e = this.max - this.min,
+                            n = this.timePassed + t * this.directionMultiplier,
+                            i = Math.min(Math.max(n, 0), this.duration),
+                            r = n < 0 || n > this.duration ? -1 * this.directionMultiplier : this.directionMultiplier,
+                            a = this.easingFunction(i, this.min, e, this.duration);
+                        return [isNaN(a) ? 0 : a, i, r]
+                    }, e
+                }(v);
 
-                function b(t, r, e) {
-                    t = L(t, 255), r = L(r, 255);
-                    var n, a = u(t, r, e = L(e, 255)),
-                        i = h(t, r, e);
-                    var s = a - i;
-                    if (a == i) n = 0;
-                    else {
-                        switch (a) {
-                            case t:
-                                n = (r - e) / s + (r < e ? 6 : 0);
-                                break;
-                            case r:
-                                n = (e - t) / s + 2;
-                                break;
-                            case e:
-                                n = (t - r) / s + 4
+            function b(t, e) {
+                return t === e ? t : Math.random() * (e - t + 1) + t
+            }
+
+            function C(t) {
+                var e = Math.floor(b(0, t.length - 1));
+                return [t[e], e]
+            }
+
+            function z(t, e) {
+                return C([t, e])[0]
+            }
+
+            function R(t) {
+                return "number" == typeof t ? {
+                    x: t,
+                    y: t
+                } : t
+            }
+
+            function k(t) {
+                return "number" == typeof t ? {
+                    x: t,
+                    y: t,
+                    z: t
+                } : t
+            }
+
+            function _(t) {
+                return function(t) {
+                    switch (t.type) {
+                        case "static":
+                            var e = R(t.value);
+                            return new y(new w(e.x), new w(e.y));
+                        case "static-random":
+                            var n = R(t.minValue),
+                                i = R(t.maxValue);
+                            return new y(new w(b(n.x, i.x)), new w(b(n.y, i.y)));
+                        case "linear":
+                            e = R(t.value);
+                            var r = R(t.addValue);
+                            return new y(new x(e.x, r.x), new x(e.y, r.y));
+                        case "linear-random":
+                            n = R(t.minValue), i = R(t.maxValue);
+                            var a = R(t.minAddValue),
+                                o = R(t.maxAddValue);
+                            return new y(new x(b(n.x, i.x), b(a.x, o.x)), new x(b(n.y, i.y), b(a.x, o.x)));
+                        case "oscillating":
+                            e = R(t.value);
+                            var u = R(t.start),
+                                l = R(t.final),
+                                c = R(t.duration),
+                                s = R(t.direction);
+                            return new y(new g(e.x, u.x, l.x, c.x, s.x, t.easingFunction), new g(e.y, u.y, l.y, c.x, s.y, t.easingFunction));
+                        case "oscillating-random":
+                            n = R(t.minValue), i = R(t.maxValue);
+                            var d = R(t.minStart),
+                                f = R(t.maxStart),
+                                p = R(t.minFinal),
+                                h = R(t.maxFinal),
+                                v = R(t.minDuration),
+                                m = R(t.maxDuration),
+                                k = R(t.minDirection),
+                                _ = R(t.maxDirection);
+                            return new y(new g(b(n.x, i.x), b(d.x, f.x), b(p.x, h.x), b(v.x, m.x), z(k.x, _.x), C(t.easingFunctions)[0]), new g(b(n.y, i.y), b(d.y, f.y), b(p.y, h.y), b(v.y, m.y), z(k.y, _.y), C(t.easingFunctions)[0]))
+                    }
+                }(h(h({}, t), {
+                    valueType: "Vector2"
+                }))
+            }
+            var V = i.forwardRef(function(t, e) {
+                var a = t.className,
+                    o = t.environment,
+                    l = t.onClick,
+                    d = t.onMouseDown,
+                    f = t.onMouseMove,
+                    p = t.onMouseUp,
+                    v = t.onBeforeRender,
+                    y = t.onAfterRender,
+                    R = function(t, e) {
+                        var n = {};
+                        for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && 0 > e.indexOf(i) && (n[i] = t[i]);
+                        if (null != t && "function" == typeof Object.getOwnPropertySymbols) {
+                            var r = 0;
+                            for (i = Object.getOwnPropertySymbols(t); r < i.length; r++) 0 > e.indexOf(i[r]) && Object.prototype.propertyIsEnumerable.call(t, i[r]) && (n[i[r]] = t[i[r]])
                         }
-                        n /= 6
-                    }
-                    return {
-                        h: n,
-                        s: 0 === a ? 0 : s / a,
-                        v: a
-                    }
-                }
-
-                function d(t, r, e, n) {
-                    var a = [E(f(t).toString(16)), E(f(r).toString(16)), E(f(e).toString(16))];
-                    return n && a[0].charAt(0) == a[0].charAt(1) && a[1].charAt(0) == a[1].charAt(1) && a[2].charAt(0) == a[2].charAt(1) ? a[0].charAt(0) + a[1].charAt(0) + a[2].charAt(0) : a.join("")
-                }
-
-                function p(t, r, e, n) {
-                    return [E(j(n)), E(f(t).toString(16)), E(f(r).toString(16)), E(f(e).toString(16))].join("")
-                }
-
-                function _(t, r) {
-                    r = 0 === r ? 0 : r || 10;
-                    var e = c(t).toHsl();
-                    return e.s -= r / 100, e.s = N(e.s), c(e)
-                }
-
-                function m(t, r) {
-                    r = 0 === r ? 0 : r || 10;
-                    var e = c(t).toHsl();
-                    return e.s += r / 100, e.s = N(e.s), c(e)
-                }
-
-                function v(t) {
-                    return c(t).desaturate(100)
-                }
-
-                function y(t, r) {
-                    r = 0 === r ? 0 : r || 10;
-                    var e = c(t).toHsl();
-                    return e.l += r / 100, e.l = N(e.l), c(e)
-                }
-
-                function A(t, r) {
-                    r = 0 === r ? 0 : r || 10;
-                    var e = c(t).toRgb();
-                    return e.r = u(0, h(255, e.r - f(-(255 * (r / 100))))), e.g = u(0, h(255, e.g - f(-(255 * (r / 100))))), e.b = u(0, h(255, e.b - f(-(255 * (r / 100))))), c(e)
-                }
-
-                function x(t, r) {
-                    r = 0 === r ? 0 : r || 10;
-                    var e = c(t).toHsl();
-                    return e.l -= r / 100, e.l = N(e.l), c(e)
-                }
-
-                function k(t, r) {
-                    var e = c(t).toHsl(),
-                        n = (e.h + r) % 360;
-                    return e.h = n < 0 ? 360 + n : n, c(e)
-                }
-
-                function w(t) {
-                    var r = c(t).toHsl();
-                    return r.h = (r.h + 180) % 360, c(r)
-                }
-
-                function S(t) {
-                    var r = c(t).toHsl(),
-                        e = r.h;
-                    return [c(t), c({
-                        h: (e + 120) % 360,
-                        s: r.s,
-                        l: r.l
-                    }), c({
-                        h: (e + 240) % 360,
-                        s: r.s,
-                        l: r.l
-                    })]
-                }
-
-                function H(t) {
-                    var r = c(t).toHsl(),
-                        e = r.h;
-                    return [c(t), c({
-                        h: (e + 90) % 360,
-                        s: r.s,
-                        l: r.l
-                    }), c({
-                        h: (e + 180) % 360,
-                        s: r.s,
-                        l: r.l
-                    }), c({
-                        h: (e + 270) % 360,
-                        s: r.s,
-                        l: r.l
-                    })]
-                }
-
-                function R(t) {
-                    var r = c(t).toHsl(),
-                        e = r.h;
-                    return [c(t), c({
-                        h: (e + 72) % 360,
-                        s: r.s,
-                        l: r.l
-                    }), c({
-                        h: (e + 216) % 360,
-                        s: r.s,
-                        l: r.l
-                    })]
-                }
-
-                function F(t, r, e) {
-                    r = r || 6, e = e || 30;
-                    var n = c(t).toHsl(),
-                        a = 360 / e,
-                        i = [c(t)];
-                    for (n.h = (n.h - (a * r >> 1) + 720) % 360; --r;) n.h = (n.h + a) % 360, i.push(c(n));
-                    return i
-                }
-
-                function C(t, r) {
-                    r = r || 6;
-                    for (var e = c(t).toHsv(), n = e.h, a = e.s, i = e.v, s = [], o = 1 / r; r--;) s.push(c({
-                        h: n,
-                        s: a,
-                        v: i
-                    })), i = (i + o) % 1;
-                    return s
-                }
-                c.equals = function(t, r) {
-                    return !!t && !!r && c(t).toRgbString() == c(r).toRgbString()
-                }, c.random = function() {
-                    return c.fromRatio({
-                        r: l(),
-                        g: l(),
-                        b: l()
-                    })
-                }, c.mix = function(t, r, e) {
-                    e = 0 === e ? 0 : e || 50;
-                    var n = c(t).toRgb(),
-                        a = c(r).toRgb(),
-                        i = e / 100;
-                    return c({
-                        r: (a.r - n.r) * i + n.r,
-                        g: (a.g - n.g) * i + n.g,
-                        b: (a.b - n.b) * i + n.b,
-                        a: (a.a - n.a) * i + n.a
-                    })
-                }, c.readability = function(t, e) {
-                    var n = c(t),
-                        a = c(e);
-                    return (r.max(n.getLuminance(), a.getLuminance()) + .05) / (r.min(n.getLuminance(), a.getLuminance()) + .05)
-                }, c.isReadable = function(t, r, e) {
-                    var n, a, i = c.readability(t, r);
-                    switch (a = !1, (n = function(t) {
-                            var r, e;
-                            return r = ((t = t || {
-                                level: "AA",
-                                size: "small"
-                            }).level || "AA").toUpperCase(), e = (t.size || "small").toLowerCase(), "AA" !== r && "AAA" !== r && (r = "AA"), "small" !== e && "large" !== e && (e = "small"), {
-                                level: r,
-                                size: e
+                        return n
+                    }(t, ["className", "environment", "onClick", "onMouseDown", "onMouseMove", "onMouseUp", "onBeforeRender", "onAfterRender"]),
+                    V = i.useRef(null),
+                    P = i.useRef(new Map),
+                    F = i.useRef(null),
+                    D = i.useRef(0),
+                    E = i.useRef(0),
+                    M = i.useCallback(function() {
+                        var t = V.current;
+                        if (null != t) {
+                            var e = t.getContext("2d");
+                            if (null != e) {
+                                e.clearRect(0, 0, t.width, t.height), null == v || v(e), P.current.forEach(function(n, i) {
+                                    var r = n.confetti,
+                                        a = n.spriteCanvas;
+                                    r.update(o), r.draw(a, e), r.shouldDestroy(t, o) && P.current.delete(i)
+                                }), null == y || y(e), P.current.size > 0 ? F.current = window.requestAnimationFrame(M) : (e.clearRect(0, 0, t.width, t.height), F.current = null);
+                                var n = Date.now();
+                                0 !== D.current && (E.current = 1e3 / (n - D.current)), D.current = n
                             }
-                        }(e)).level + n.size) {
-                        case "AAsmall":
-                        case "AAAlarge":
-                            a = i >= 4.5;
-                            break;
-                        case "AAlarge":
-                            a = i >= 3;
-                            break;
-                        case "AAAsmall":
-                            a = i >= 7
+                        }
+                    }, [o, y, v]);
+                i.useEffect(function() {
+                    null != F.current && (window.cancelAnimationFrame(F.current), F.current = window.requestAnimationFrame(M))
+                }, [M]);
+                var O = i.useCallback(function(t, e) {
+                        P.current.set(t.id, {
+                            confetti: t,
+                            spriteCanvas: e
+                        }), null == F.current && M()
+                    }, [M]),
+                    U = i.useCallback(function(t, e, n, i, a) {
+                        var o, u, l, d, f, p, v, y, R, V, P, F, D, E, M, U = (o = null !== (M = t.id) && void 0 !== M ? M : (0, r.v4)(), u = t, l = n, d = i, f = a, y = _((v = (p = u, h(h({
+                            id: o
+                        }, s), p))).size), V = (R = function(t, e) {
+                            if (null != t) {
+                                var n = e.sprites.findIndex(function(e) {
+                                    return "string" == typeof t ? e.src === t && e.colorize : e.src === t.src && e.colorize === t.colorize
+                                });
+                                if (-1 !== n) return [t, n]
+                            }
+                            return C(e.sprites)
+                        }(d, l))[0], P = R[1], F = function(t, e, n) {
+                            if (!("string" == typeof(i = t) || i.colorize)) return 0;
+                            var i, r = null != e ? n.colors.findIndex(function(t) {
+                                return t === e
+                            }) : -1;
+                            return -1 !== r ? r : Math.floor(b(0, n.colors.length - 1))
+                        }(null != d ? d : V, f, l), new c({
+                            id: o,
+                            position: _(v.position),
+                            velocity: _(v.velocity),
+                            rotation: (D = v.rotation, function(t) {
+                                switch (t.type) {
+                                    case "static":
+                                        var e = k(t.value);
+                                        return new m(new w(e.x), new w(e.y), new w(e.z));
+                                    case "static-random":
+                                        var n = k(t.minValue),
+                                            i = k(t.maxValue);
+                                        return new m(new w(b(n.x, i.x)), new w(b(n.y, i.y)), new w(b(n.z, i.z)));
+                                    case "linear":
+                                        e = k(t.value);
+                                        var r = k(t.addValue);
+                                        return new m(new x(e.x, r.x), new x(e.y, r.y), new x(e.z, r.z));
+                                    case "linear-random":
+                                        n = k(t.minValue), i = k(t.maxValue);
+                                        var a = k(t.minAddValue),
+                                            o = k(t.maxAddValue);
+                                        return new m(new x(b(n.x, i.x), b(a.x, o.x)), new x(b(n.y, i.y), b(a.y, o.y)), new x(b(n.z, i.z), b(a.z, o.z)));
+                                    case "oscillating":
+                                        e = k(t.value);
+                                        var u = k(t.start),
+                                            l = k(t.final),
+                                            c = k(t.duration),
+                                            s = k(t.direction);
+                                        return new m(new g(e.x, u.x, l.x, c.x, s.x, t.easingFunction), new g(e.y, u.y, l.y, c.z, s.y, t.easingFunction), new g(e.z, u.z, l.z, c.z, s.z, t.easingFunction));
+                                    case "oscillating-random":
+                                        n = k(t.minValue), i = k(t.maxValue);
+                                        var d = k(t.minStart),
+                                            f = k(t.maxStart),
+                                            p = k(t.minFinal),
+                                            h = k(t.maxFinal),
+                                            v = k(t.minDuration),
+                                            y = k(t.maxDuration),
+                                            R = k(t.minDirection),
+                                            _ = k(t.maxDirection);
+                                        return new m(new g(b(n.x, i.x), b(d.x, f.x), b(p.x, h.x), b(v.x, y.x), z(R.x, _.x), C(t.easingFunctions)[0]), new g(b(n.y, i.y), b(d.y, f.y), b(p.y, h.y), b(v.y, y.y), z(R.y, _.y), C(t.easingFunctions)[0]), new g(b(n.z, i.z), b(d.z, f.z), b(p.z, h.z), b(v.z, y.z), z(R.z, _.z), C(t.easingFunctions)[0]))
+                                }
+                            }(h(h({}, D), {
+                                valueType: "Vector3"
+                            }))),
+                            dragCoefficient: _(v.dragCoefficient),
+                            size: y,
+                            opacity: (E = v.opacity, function(t) {
+                                switch (t.type) {
+                                    case "static":
+                                        return new w(t.value);
+                                    case "static-random":
+                                        return new w(b(t.minValue, t.maxValue));
+                                    case "linear":
+                                        return new x(t.value, t.addValue);
+                                    case "linear-random":
+                                        return new x(b(t.minValue, t.maxValue), b(t.minAddValue, t.maxAddValue));
+                                    case "oscillating":
+                                        return new g(t.value, t.start, t.final, t.duration, t.direction, t.easingFunction);
+                                    case "oscillating-random":
+                                        return new g(b(t.minValue, t.maxValue), b(t.minStart, t.maxStart), b(t.minFinal, t.maxFinal), b(t.minDuration, t.maxDuration), z(t.minDirection, t.maxDirection), C(t.easingFunctions)[0])
+                                }
+                            }(h(h({}, E), {
+                                valueType: "number"
+                            }))),
+                            spriteX: F * l.spriteWidth + 2 * F,
+                            spriteY: P * l.spriteHeight + 2 * P,
+                            spriteWidth: l.spriteWidth,
+                            spriteHeight: l.spriteHeight
+                        }));
+                        return O(U, e), U
+                    }, [O]),
+                    S = i.useCallback(function(t) {
+                        P.current.delete(t)
+                    }, []),
+                    A = i.useCallback(function() {
+                        return P.current.clear()
+                    }, []),
+                    H = i.useCallback(function() {
+                        return V.current
+                    }, []);
+                i.useImperativeHandle(e, function() {
+                    return {
+                        createConfetti: U,
+                        addConfetti: O,
+                        deleteConfetti: S,
+                        clearConfetti: A,
+                        getCanvas: H
                     }
-                    return a
-                }, c.mostReadable = function(t, r, e) {
-                    var n, a, i, s, o = null,
-                        f = 0;
-                    a = (e = e || {}).includeFallbackColors, i = e.level, s = e.size;
-                    for (var h = 0; h < r.length; h++)(n = c.readability(t, r[h])) > f && (f = n, o = c(r[h]));
-                    return c.isReadable(t, o, {
-                        level: i,
-                        size: s
-                    }) || !a ? o : (e.includeFallbackColors = !1, c.mostReadable(t, ["#fff", "#000"], e))
-                };
-                var q = c.names = {
-                        aliceblue: "f0f8ff",
-                        antiquewhite: "faebd7",
-                        aqua: "0ff",
-                        aquamarine: "7fffd4",
-                        azure: "f0ffff",
-                        beige: "f5f5dc",
-                        bisque: "ffe4c4",
-                        black: "000",
-                        blanchedalmond: "ffebcd",
-                        blue: "00f",
-                        blueviolet: "8a2be2",
-                        brown: "a52a2a",
-                        burlywood: "deb887",
-                        burntsienna: "ea7e5d",
-                        cadetblue: "5f9ea0",
-                        chartreuse: "7fff00",
-                        chocolate: "d2691e",
-                        coral: "ff7f50",
-                        cornflowerblue: "6495ed",
-                        cornsilk: "fff8dc",
-                        crimson: "dc143c",
-                        cyan: "0ff",
-                        darkblue: "00008b",
-                        darkcyan: "008b8b",
-                        darkgoldenrod: "b8860b",
-                        darkgray: "a9a9a9",
-                        darkgreen: "006400",
-                        darkgrey: "a9a9a9",
-                        darkkhaki: "bdb76b",
-                        darkmagenta: "8b008b",
-                        darkolivegreen: "556b2f",
-                        darkorange: "ff8c00",
-                        darkorchid: "9932cc",
-                        darkred: "8b0000",
-                        darksalmon: "e9967a",
-                        darkseagreen: "8fbc8f",
-                        darkslateblue: "483d8b",
-                        darkslategray: "2f4f4f",
-                        darkslategrey: "2f4f4f",
-                        darkturquoise: "00ced1",
-                        darkviolet: "9400d3",
-                        deeppink: "ff1493",
-                        deepskyblue: "00bfff",
-                        dimgray: "696969",
-                        dimgrey: "696969",
-                        dodgerblue: "1e90ff",
-                        firebrick: "b22222",
-                        floralwhite: "fffaf0",
-                        forestgreen: "228b22",
-                        fuchsia: "f0f",
-                        gainsboro: "dcdcdc",
-                        ghostwhite: "f8f8ff",
-                        gold: "ffd700",
-                        goldenrod: "daa520",
-                        gray: "808080",
-                        green: "008000",
-                        greenyellow: "adff2f",
-                        grey: "808080",
-                        honeydew: "f0fff0",
-                        hotpink: "ff69b4",
-                        indianred: "cd5c5c",
-                        indigo: "4b0082",
-                        ivory: "fffff0",
-                        khaki: "f0e68c",
-                        lavender: "e6e6fa",
-                        lavenderblush: "fff0f5",
-                        lawngreen: "7cfc00",
-                        lemonchiffon: "fffacd",
-                        lightblue: "add8e6",
-                        lightcoral: "f08080",
-                        lightcyan: "e0ffff",
-                        lightgoldenrodyellow: "fafad2",
-                        lightgray: "d3d3d3",
-                        lightgreen: "90ee90",
-                        lightgrey: "d3d3d3",
-                        lightpink: "ffb6c1",
-                        lightsalmon: "ffa07a",
-                        lightseagreen: "20b2aa",
-                        lightskyblue: "87cefa",
-                        lightslategray: "789",
-                        lightslategrey: "789",
-                        lightsteelblue: "b0c4de",
-                        lightyellow: "ffffe0",
-                        lime: "0f0",
-                        limegreen: "32cd32",
-                        linen: "faf0e6",
-                        magenta: "f0f",
-                        maroon: "800000",
-                        mediumaquamarine: "66cdaa",
-                        mediumblue: "0000cd",
-                        mediumorchid: "ba55d3",
-                        mediumpurple: "9370db",
-                        mediumseagreen: "3cb371",
-                        mediumslateblue: "7b68ee",
-                        mediumspringgreen: "00fa9a",
-                        mediumturquoise: "48d1cc",
-                        mediumvioletred: "c71585",
-                        midnightblue: "191970",
-                        mintcream: "f5fffa",
-                        mistyrose: "ffe4e1",
-                        moccasin: "ffe4b5",
-                        navajowhite: "ffdead",
-                        navy: "000080",
-                        oldlace: "fdf5e6",
-                        olive: "808000",
-                        olivedrab: "6b8e23",
-                        orange: "ffa500",
-                        orangered: "ff4500",
-                        orchid: "da70d6",
-                        palegoldenrod: "eee8aa",
-                        palegreen: "98fb98",
-                        paleturquoise: "afeeee",
-                        palevioletred: "db7093",
-                        papayawhip: "ffefd5",
-                        peachpuff: "ffdab9",
-                        peru: "cd853f",
-                        pink: "ffc0cb",
-                        plum: "dda0dd",
-                        powderblue: "b0e0e6",
-                        purple: "800080",
-                        rebeccapurple: "663399",
-                        red: "f00",
-                        rosybrown: "bc8f8f",
-                        royalblue: "4169e1",
-                        saddlebrown: "8b4513",
-                        salmon: "fa8072",
-                        sandybrown: "f4a460",
-                        seagreen: "2e8b57",
-                        seashell: "fff5ee",
-                        sienna: "a0522d",
-                        silver: "c0c0c0",
-                        skyblue: "87ceeb",
-                        slateblue: "6a5acd",
-                        slategray: "708090",
-                        slategrey: "708090",
-                        snow: "fffafa",
-                        springgreen: "00ff7f",
-                        steelblue: "4682b4",
-                        tan: "d2b48c",
-                        teal: "008080",
-                        thistle: "d8bfd8",
-                        tomato: "ff6347",
-                        turquoise: "40e0d0",
-                        violet: "ee82ee",
-                        wheat: "f5deb3",
-                        white: "fff",
-                        whitesmoke: "f5f5f5",
-                        yellow: "ff0",
-                        yellowgreen: "9acd32"
-                    },
-                    M = c.hexNames = function(t) {
-                        var r = {};
-                        for (var e in t) t.hasOwnProperty(e) && (r[t[e]] = e);
-                        return r
-                    }(q);
-
-                function I(t) {
-                    return (isNaN(t = parseFloat(t)) || t < 0 || t > 1) && (t = 1), t
+                }, [U, O, S, A, H]);
+                var j = i.useCallback(function(t, e) {
+                        var n, i, r = e.clickHandler,
+                            a = e.mouseHandler;
+                        if (null != r || null != a) {
+                            var l = null === (n = V.current) || void 0 === n ? void 0 : n.getBoundingClientRect();
+                            if (null != l) {
+                                var c = function(t, e) {
+                                    if (null == e) throw Error("element should not be null");
+                                    var n = e.getBoundingClientRect();
+                                    return {
+                                        x: t.clientX - n.left,
+                                        y: t.clientY - n.top
+                                    }
+                                }(t, V.current);
+                                if (u(c, {
+                                        x: l.left,
+                                        y: l.top,
+                                        width: l.width,
+                                        height: l.height
+                                    })) {
+                                    if (null != a) return a(t);
+                                    if (null != r) {
+                                        var s = -1e3 / E.current * 2,
+                                            d = function(t, e) {
+                                                for (var n = 0, i = Array.from(t.values()); n < i.length; n++) {
+                                                    var r = i[n];
+                                                    if (null != r && e(r)) return r
+                                                }
+                                                return null
+                                            }(P.current, function(t) {
+                                                var e = t.confetti,
+                                                    n = e.previewPositionUpdate(o, s);
+                                                return u(c, {
+                                                    x: n.x - e.width / 2,
+                                                    y: n.y - e.height / 2,
+                                                    width: e.width,
+                                                    height: e.height
+                                                })
+                                            });
+                                        r(t, null !== (i = null == d ? void 0 : d.confetti) && void 0 !== i ? i : null)
+                                    }
+                                }
+                            }
+                        }
+                    }, [o]),
+                    N = i.useCallback(function(t) {
+                        return j(t, {
+                            clickHandler: l
+                        })
+                    }, [j, l]),
+                    I = i.useCallback(function(t) {
+                        return j(t, {
+                            clickHandler: d
+                        })
+                    }, [j, d]),
+                    L = i.useCallback(function(t) {
+                        return j(t, {
+                            mouseHandler: f
+                        })
+                    }, [j, f]),
+                    T = i.useCallback(function(t) {
+                        return j(t, {
+                            mouseHandler: p
+                        })
+                    }, [j, p]);
+                return i.useEffect(function() {
+                    var t = function(t, e, n) {
+                        null != n && window.addEventListener(t, e)
+                    };
+                    return t("click", N, l), t("mousedown", I, d), t("mousemove", L, f), t("mouseup", T, p),
+                        function() {
+                            window.removeEventListener("click", N), window.removeEventListener("mousedown", I), window.removeEventListener("mousemove", L), window.removeEventListener("mouseup", L)
+                        }
+                }, [N, I, L, T, l, d, f, p]), i.useEffect(function() {
+                    var t = V.current,
+                        e = new ResizeObserver(function() {
+                            ! function(t) {
+                                if (null != t) {
+                                    var e = t.getBoundingClientRect(),
+                                        i = e.width,
+                                        r = e.height;
+                                    t.width = i * n.g.devicePixelRatio, t.height = r * n.g.devicePixelRatio
+                                }
+                            }(V.current)
+                        });
+                    return null != t && e.observe(t),
+                        function() {
+                            null != t && e.unobserve(t)
+                        }
+                }, []), i.createElement("canvas", h({}, R, {
+                    className: a,
+                    ref: V
+                }))
+            });
+            ! function(t, e) {
+                void 0 === e && (e = {});
+                var n = e.insertAt;
+                if (t && "undefined" != typeof document) {
+                    var i = document.head || document.getElementsByTagName("head")[0],
+                        r = document.createElement("style");
+                    r.type = "text/css", "top" === n && i.firstChild ? i.insertBefore(r, i.firstChild) : i.appendChild(r), r.styleSheet ? r.styleSheet.cssText = t : r.appendChild(document.createTextNode(t))
                 }
+            }(".SpriteCanvas-module_spriteCanvasHidden__ndzQV {\n  display: none;\n  position: absolute;\n  width: 0;\n  height: 0;\n  left: -100%;\n}\n");
+            var P = i.forwardRef(function(t, e) {
+                var n, a = t.className,
+                    u = t.visible,
+                    l = t.sprites,
+                    c = t.colors,
+                    s = t.spriteWidth,
+                    d = t.spriteHeight,
+                    f = i.useRef(null),
+                    p = i.useRef([]),
+                    h = i.useRef(!1),
+                    v = i.useRef({});
+                i.useImperativeHandle(e, function() {
+                    return {
+                        getCanvas: function() {
+                            return f.current
+                        },
+                        getCreateData: function() {
+                            return {
+                                sprites: p.current,
+                                colors: c,
+                                spriteWidth: s,
+                                spriteHeight: d
+                            }
+                        },
+                        addReadyListener: function(t) {
+                            var e = (0, r.v4)();
+                            return v.current[e] = t, e
+                        },
+                        removeReadyListener: function(t) {
+                            delete v.current[t]
+                        },
+                        isReady: h.current
+                    }
+                }, [c, d, s]);
+                var y = i.useCallback(function() {
+                        var t = f.current,
+                            e = null == t ? void 0 : t.getContext("2d", {
+                                willReadFrequently: !0
+                            });
+                        null != e && null != t && (e.clearRect(0, 0, t.width, t.height), p.current.forEach(function(t, n) {
+                            var i = function(i, r) {
+                                var a = s * r + 2 * r,
+                                    o = d * n + 2 * n;
+                                if (e.drawImage(t.image, a, o, s, d), null != i) {
+                                    for (var u, l, c = e.getImageData(a, o, s, d), f = ("#" === (u = i)[0] && (u = u.slice(1)), {
+                                            r: (l = parseInt(u, 16)) >> 16 & 255,
+                                            g: l >> 8 & 255,
+                                            b: 255 & l
+                                        }), p = 0; p < c.data.length; p += 4) c.data[p] = f.r, c.data[p + 1] = f.g, c.data[p + 2] = f.b;
+                                    e.putImageData(c, a, o)
+                                }
+                            };
+                            t.colorize ? c.forEach(function(t, e) {
+                                return i(t, e)
+                            }) : i(null, 0)
+                        }))
+                    }, [c, d, s]),
+                    m = i.useCallback(function() {
+                        var t = l.map(function(t) {
+                            var e = new Image,
+                                n = "string" == typeof t ? t : t.src,
+                                i = "string" == typeof t || t.colorize;
+                            e.src = n;
+                            var r = new Promise(function(t) {
+                                e.onload = t
+                            });
+                            return {
+                                colorize: i,
+                                image: e,
+                                src: n,
+                                loadPromise: r
+                            }
+                        });
+                        return Promise.all(t.map(function(t) {
+                            return t.loadPromise
+                        })).then(function() {
+                            p.current = t.map(function(t) {
+                                return {
+                                    colorize: t.colorize,
+                                    image: t.image,
+                                    src: t.src
+                                }
+                            })
+                        })
+                    }, [l]),
+                    w = i.useCallback(function(t) {
+                        for (var e in v.current) v.current[e](t)
+                    }, []),
+                    x = i.useCallback(function() {
+                        var t, e, n, i;
+                        return t = void 0, e = void 0, n = void 0, i = function() {
+                            return function(t, e) {
+                                var n, i, r, a, o = {
+                                    label: 0,
+                                    sent: function() {
+                                        if (1 & r[0]) throw r[1];
+                                        return r[1]
+                                    },
+                                    trys: [],
+                                    ops: []
+                                };
+                                return a = {
+                                    next: u(0),
+                                    throw: u(1),
+                                    return: u(2)
+                                }, "function" == typeof Symbol && (a[Symbol.iterator] = function() {
+                                    return this
+                                }), a;
 
-                function L(t, e) {
-                    (function(t) {
-                        return "string" == typeof t && -1 != t.indexOf(".") && 1 === parseFloat(t)
-                    })(t) && (t = "100%");
-                    var n = function(t) {
-                        return "string" == typeof t && -1 != t.indexOf("%")
-                    }(t);
-                    return (t = h(e, u(0, parseFloat(t))), n && (t = parseInt(t * e, 10) / 100), 1e-6 > r.abs(t - e)) ? 1 : t % e / parseFloat(e)
-                }
+                                function u(u) {
+                                    return function(l) {
+                                        return function(u) {
+                                            if (n) throw TypeError("Generator is already executing.");
+                                            for (; a && (a = 0, u[0] && (o = 0)), o;) try {
+                                                if (n = 1, i && (r = 2 & u[0] ? i.return : u[0] ? i.throw || ((r = i.return) && r.call(i), 0) : i.next) && !(r = r.call(i, u[1])).done) return r;
+                                                switch (i = 0, r && (u = [2 & u[0], r.value]), u[0]) {
+                                                    case 0:
+                                                    case 1:
+                                                        r = u;
+                                                        break;
+                                                    case 4:
+                                                        return o.label++, {
+                                                            value: u[1],
+                                                            done: !1
+                                                        };
+                                                    case 5:
+                                                        o.label++, i = u[1], u = [0];
+                                                        continue;
+                                                    case 7:
+                                                        u = o.ops.pop(), o.trys.pop();
+                                                        continue;
+                                                    default:
+                                                        if (!(r = (r = o.trys).length > 0 && r[r.length - 1]) && (6 === u[0] || 2 === u[0])) {
+                                                            o = 0;
+                                                            continue
+                                                        }
+                                                        if (3 === u[0] && (!r || u[1] > r[0] && u[1] < r[3])) {
+                                                            o.label = u[1];
+                                                            break
+                                                        }
+                                                        if (6 === u[0] && o.label < r[1]) {
+                                                            o.label = r[1], r = u;
+                                                            break
+                                                        }
+                                                        if (r && o.label < r[2]) {
+                                                            o.label = r[2], o.ops.push(u);
+                                                            break
+                                                        }
+                                                        r[2] && o.ops.pop(), o.trys.pop();
+                                                        continue
+                                                }
+                                                u = e.call(t, o)
+                                            } catch (t) {
+                                                u = [6, t], i = 0
+                                            } finally {
+                                                n = r = 0
+                                            }
+                                            if (5 & u[0]) throw u[1];
+                                            return {
+                                                value: u[0] ? u[1] : void 0,
+                                                done: !0
+                                            }
+                                        }([u, l])
+                                    }
+                                }
+                            }(this, function(t) {
+                                switch (t.label) {
+                                    case 0:
+                                        return [4, m()];
+                                    case 1:
+                                        return t.sent(), y(), h.current = !0, w(!0), [2]
+                                }
+                            })
+                        }, new(n || (n = Promise))(function(r, a) {
+                            function o(t) {
+                                try {
+                                    l(i.next(t))
+                                } catch (t) {
+                                    a(t)
+                                }
+                            }
 
-                function N(t) {
-                    return h(1, u(0, t))
-                }
+                            function u(t) {
+                                try {
+                                    l(i.throw(t))
+                                } catch (t) {
+                                    a(t)
+                                }
+                            }
 
-                function z(t) {
-                    return parseInt(t, 16)
-                }
+                            function l(t) {
+                                var e;
+                                t.done ? r(t.value) : ((e = t.value) instanceof n ? e : new n(function(t) {
+                                    t(e)
+                                })).then(o, u)
+                            }
+                            l((i = i.apply(t, e || [])).next())
+                        })
+                    }, [w, m, y]);
+                return i.useEffect(function() {
+                    x()
+                }, [x]), i.useEffect(function() {
+                    return function() {
+                        return w(!1)
+                    }
+                }, [w]), i.useEffect(function() {
+                    null != f.current && (f.current.width = (s + 2) * Math.max(c.length, 1), f.current.height = (d + 2) * l.length)
+                }, [c.length, d, s, l.length]), i.createElement("canvas", {
+                    ref: f,
+                    className: o(a, ((n = {})["SpriteCanvas-module_spriteCanvasHidden__ndzQV"] = !(void 0 !== u && u), n))
+                })
+            });
 
-                function E(t) {
-                    return 1 == t.length ? "0" + t : "" + t
-                }
-
-                function T(t) {
-                    return t <= 1 && (t = 100 * t + "%"), t
-                }
-
-                function j(t) {
-                    return r.round(255 * parseFloat(t)).toString(16)
-                }
-
-                function O(t) {
-                    return z(t) / 255
-                }
-                var P = (n = "[\\s|\\(]+(" + (e = "(?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?)") + ")[,|\\s]+(" + e + ")[,|\\s]+(" + e + ")\\s*\\)?", a = "[\\s|\\(]+(" + e + ")[,|\\s]+(" + e + ")[,|\\s]+(" + e + ")[,|\\s]+(" + e + ")\\s*\\)?", {
-                    CSS_UNIT: new RegExp(e),
-                    rgb: RegExp("rgb" + n),
-                    rgba: RegExp("rgba" + a),
-                    hsl: RegExp("hsl" + n),
-                    hsla: RegExp("hsla" + a),
-                    hsv: RegExp("hsv" + n),
-                    hsva: RegExp("hsva" + a),
-                    hex3: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
-                    hex6: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/,
-                    hex4: /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
-                    hex8: /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/
-                });
-
-                function $(t) {
-                    return !!P.CSS_UNIT.exec(t)
-                }
-                void 0 !== t && t.exports ? t.exports = c : "function" == typeof define && define.amd ? define(function() {
-                    return c
-                }) : window.tinycolor = c
-            }(Math)
+            function F(t, e) {
+                var n, r = i.useState(null !== (n = null == e ? void 0 : e.isReady) && void 0 !== n && n),
+                    a = r[0],
+                    o = r[1];
+                i.useEffect(function() {
+                    var t = null == e ? void 0 : e.addReadyListener(o);
+                    return function() {
+                        null != t && (null == e || e.removeReadyListener(t))
+                    }
+                }, [e]);
+                var u = i.useCallback(function(n, i) {
+                        var r = void 0 === i ? {} : i,
+                            a = r.sprite,
+                            o = r.color,
+                            u = null == e ? void 0 : e.getCreateData(),
+                            l = null == e ? void 0 : e.getCanvas();
+                        if (null != l && null != u && 0 !== u.sprites.length) return null == t ? void 0 : t.createConfetti(n, l, u, a, o)
+                    }, [t, e]),
+                    l = i.useCallback(function(t, e, n) {
+                        for (var i = [], r = 0; r < e; r++) {
+                            var a = u(t, n);
+                            a && i.push(a)
+                        }
+                        return i
+                    }, [u]),
+                    c = i.useCallback(function(n) {
+                        var i = null == e ? void 0 : e.getCanvas();
+                        null != i && (null == t || t.addConfetti(n, i))
+                    }, [t, e]),
+                    s = i.useCallback(function(e) {
+                        null == t || t.deleteConfetti(e)
+                    }, [t]),
+                    d = i.useCallback(function() {
+                        return null == t ? void 0 : t.clearConfetti()
+                    }, [t]);
+                return i.useMemo(function() {
+                    return {
+                        createConfetti: u,
+                        createMultipleConfetti: l,
+                        addConfetti: c,
+                        clearConfetti: d,
+                        deleteConfetti: s,
+                        isReady: a && null != e && null != t
+                    }
+                }, [c, d, t, u, l, s, a, e])
+            }
         }
     }
 ]);
