@@ -1,618 +1,428 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["26230"], {
-        309570: function(t, e, l) {
+    ["35306"], {
+        401690: function(e, n, t) {
             "use strict";
-            l.r(e), l.d(e, {
+            t.r(n), t.d(n, {
                 default: function() {
-                    return i
+                    return Q
                 }
-            });
-            var n = l("49111");
+            }), t("222007"), t("424973");
+            var l = t("917351"),
+                i = t.n(l),
+                d = t("249654"),
+                u = t("446674"),
+                r = t("913144"),
+                a = t("208127"),
+                o = t("233069"),
+                f = t("42203"),
+                s = t("305961"),
+                _ = t("660478"),
+                c = t("18494"),
+                E = t("689275"),
+                h = t("755624"),
+                A = t("984674"),
+                T = t("724210");
+            let v = {},
+                g = {},
+                p = {},
+                C = {},
+                S = {},
+                D = {},
+                m = null,
+                N = {};
 
-            function i(t) {
-                return null != t && t.type !== n.ActivityTypes.CUSTOM_STATUS && (null != t.details || null != t.assets && (null != t.assets.large_image || null != t.assets.small_text) || null != t.party || null != t.secrets || null != t.state)
-            }
-        },
-        716241: function(t, e, l) {
-            "use strict";
-            l.r(e), l.d(e, {
-                collectGuildAnalyticsMetadata: function() {
-                    return O
-                },
-                collectChannelAnalyticsMetadataFromId: function() {
-                    return C
-                },
-                collectChannelAnalyticsMetadata: function() {
-                    return L
-                },
-                collectVoiceAnalyticsMetadata: function() {
-                    return M
-                },
-                trackWithMetadata: function() {
-                    return P
-                },
-                getVoiceStateMetadata: function() {
-                    return U
-                },
-                getCustomStatusMetadata: function() {
-                    return F
-                },
-                default: function() {
-                    return G
-                }
-            });
-            var n = l("917351"),
-                i = l.n(n),
-                u = l("316693"),
-                a = l("233069"),
-                s = l("271938"),
-                r = l("42203"),
-                d = l("923959"),
-                c = l("525065"),
-                o = l("26989"),
-                f = l("305961"),
-                _ = l("42887"),
-                E = l("957255"),
-                g = l("824563"),
-                v = l("945956"),
-                I = l("18494"),
-                S = l("162771"),
-                p = l("800762"),
-                h = l("599110"),
-                T = l("991170"),
-                y = l("761932"),
-                A = l("49111"),
-                m = l("724210");
-
-            function N(t) {
-                let e = 0;
-                for (let l in t) e += 1;
-                return e
+            function U() {
+                for (let e in v = {}, S = {}, g = {}, p = {}, C = {}, m = c.default.getChannelId(), N) clearTimeout(N[e]);
+                N = {}, E.default.forEachGuild(e => {
+                    F(e)
+                }), L()
             }
 
-            function O(t) {
-                var e;
-                if (null == t) return null;
-                let l = f.default.getGuild(t);
-                if (null == l) return null;
-                let n = s.default.getId(),
-                    i = o.default.getMember(t, n),
-                    u = d.default.getChannels(t),
-                    a = u[d.GUILD_SELECTABLE_CHANNELS_KEY].length,
-                    r = u[d.GUILD_VOCAL_CHANNELS_KEY].length,
-                    _ = p.default.getVoiceStates(t);
+            function R(e) {
+                for (let n in delete v[e], delete S[e], delete g[e], delete p[e], delete C[e], F(e), p[e]) H(e, n)
+            }
+
+            function F(e) {
+                let n = E.default.getThreadsForGuild(e);
+                for (let e in n)
+                    for (let t in n[e]) {
+                        k(t);
+                        let e = f.default.getChannel(t);
+                        if (null == e) continue;
+                        let n = h.default.joinTimestamp(t);
+                        if (null != n) {
+                            let t = {
+                                    channel: e,
+                                    joinTimestamp: n.getTime()
+                                },
+                                {
+                                    isUnread: l,
+                                    isRelevant: i,
+                                    isTimedRelevant: d
+                                } = J(e);
+                            W(v, e, t, !1), W(S, e, i ? t : null, !1), W(g, e, l ? t : null, !1), d && y(e, !0)
+                        } else {
+                            W(p, e, e, !1);
+                            let n = _.default.isForumPostUnread(e.id);
+                            W(C, e, n ? e : null, !1)
+                        }
+                    }
+            }
+
+            function L() {
+                for (let e in D = {}, p)
+                    for (let n in p[e]) H(e, n)
+            }
+
+            function P(e) {
+                let n = f.default.getBasicChannel(e);
+                null != n && o.THREADED_CHANNEL_TYPES.has(n.type) && H(n.guild_id, n.id)
+            }
+
+            function H(e, n) {
+                let t = f.default.getChannel(n);
+                if (null == t || !t.isForumLikeChannel()) return;
+                if (null == D[e] && (D[e] = {}), D[e][n] = 0, null == p[e] || null == p[e][n]) return;
+                let l = s.default.getGuild(e);
+                if (null == l) return;
+                let i = _.default.getTrackedAckMessageId(n);
+                if (null == i) {
+                    let e = Date.now();
+                    null != l.joinedAt && (l.joinedAt instanceof Date ? e = l.joinedAt.getTime() : "string" == typeof l.joinedAt && (e = new Date(l.joinedAt).getTime())), i = d.default.fromTimestamp(e)
+                }
+                for (let t in p[e][n]) n === m ? _.default.isNewForumThread(t, n, l) && D[e][n]++ : d.default.compare(t, i) > 0 && !_.default.hasOpenedThread(t) && D[e][n]++
+            }
+
+            function I(e, n, t) {
+                if (null == n) return !1;
+                let l = f.default.getChannel(t),
+                    i = h.default.joinTimestamp(t);
+                if (null != l && E.default.isActive(e, n, t)) {
+                    if (null != i) {
+                        let e = {
+                                channel: l,
+                                joinTimestamp: i.getTime()
+                            },
+                            {
+                                isUnread: n,
+                                isRelevant: t,
+                                isTimedRelevant: d
+                            } = J(l);
+                        W(v, l, e, !0), W(S, l, t ? e : null, !0), W(g, l, n ? e : null, !0), W(p, l, null, !0), W(C, l, null, !0), y(l, d)
+                    } else {
+                        let e = _.default.isForumPostUnread(l.id);
+                        W(v, l, null, !0), W(g, l, null, !0), W(S, l, null, !0), W(p, l, l, !0), W(C, l, e ? l : null, !0), k(l.id)
+                    }
+                    H(e, n)
+                } else K(v, e, n, t), K(S, e, n, t), K(g, e, n, t), K(p, e, n, t), K(C, e, n, t), k(t), H(e, n)
+            }
+
+            function M(e) {
+                return I(e.channel.guild_id, e.channel.parent_id, e.channel.id)
+            }
+
+            function G(e) {
+                let n = f.default.getChannel(e.id);
+                return !!(null != n && E.default.isActive(e.guildId, n.parent_id, e.id)) && I(n.guild_id, n.parent_id, n.id)
+            }
+
+            function j(e) {
+                let n = f.default.getChannel(e.channelId);
+                if (null == n) O();
+                else {
+                    let {
+                        guild_id: e,
+                        parent_id: l
+                    } = n;
+                    if (!o.THREAD_CHANNEL_TYPES.has(n.type)) {
+                        var t;
+                        return !!(Number(null === (t = D[e]) || void 0 === t ? void 0 : t[n.id]) > 0) && (H(e, n.id), !0)
+                    }
+                    if (null == l) return !1;
+                    if (b(v, n)) {
+                        let {
+                            isUnread: t,
+                            isRelevant: i,
+                            isTimedRelevant: d
+                        } = J(n);
+                        y(n, d);
+                        let u = b(g, n),
+                            r = b(S, n);
+                        if (t === u && i === r) return !1;
+                        let a = v[e][l][n.id],
+                            o = t ? a : null,
+                            f = i ? a : null;
+                        W(g, n, o, !0), W(S, n, f, !0), H(e, l)
+                    } else {
+                        let e = b(C, n),
+                            t = _.default.isForumPostUnread(n.id);
+                        if (t === e) return !1;
+                        W(C, n, t ? n : null, !0)
+                    }
+                }
+            }
+
+            function O() {
+                for (let e in g = {}, S = {}, v)
+                    for (let n in v[e])
+                        for (let t in v[e][n]) {
+                            let l = v[e][n][t],
+                                {
+                                    isUnread: i,
+                                    isRelevant: d,
+                                    isTimedRelevant: u
+                                } = J(l.channel);
+                            i && W(g, l.channel, l, !1), d && W(S, l.channel, l, !1), y(l.channel, u)
+                        }
+                for (let e in C = {}, p)
+                    for (let n in p[e])
+                        for (let t in p[e][n]) {
+                            let l = p[e][n][t],
+                                i = _.default.isForumPostUnread(t);
+                            i && W(C, l, l, !1)
+                        }
+                L()
+            }
+
+            function w() {
+                let e = m;
+                if ((m = c.default.getChannelId()) === e) return !1;
+                P(e), P(m)
+            }
+
+            function J(e) {
+                let n = _.default.getMentionCount(e.id) > 0,
+                    t = _.default.hasRelevantUnread(e) && (!h.default.isMuted(e.id) || n) || (0, a.isReadStateStaffExperimentEnabled)() && n,
+                    l = e.hasFlag(T.ChannelFlags.PINNED),
+                    i = e.isActiveThread(),
+                    d = i && (0, A.default)(e) > Date.now();
                 return {
-                    guild_id: l.id,
-                    guild_size_total: c.default.getMemberCount(t),
-                    guild_num_channels: a + r,
-                    guild_num_text_channels: a,
-                    guild_num_voice_channels: r,
-                    guild_num_roles: N(l.roles),
-                    guild_member_num_roles: null != i ? i.roles.length : 0,
-                    guild_member_perms: String(null !== (e = E.default.getGuildPermissions(l)) && void 0 !== e ? e : T.default.NONE),
-                    guild_is_vip: l.hasFeature(A.GuildFeatures.VIP_REGIONS),
-                    is_member: null != i,
-                    num_voice_channels_active: N(_)
+                    isUnread: (i || l) && t,
+                    isRelevant: d || l || t,
+                    isTimedRelevant: d
                 }
             }
 
-            function C(t) {
-                if (null == t) return null;
-                let e = r.default.getChannel(t);
-                return null == e ? null : L(e)
+            function y(e, n) {
+                k(e.id), n && function(e) {
+                    N[e.id] = setTimeout(() => {
+                        let n = f.default.getChannel(e.id);
+                        null != n && r.default.dispatch({
+                            type: "THREAD_UPDATE",
+                            channel: n
+                        })
+                    }, (0, A.default)(e) - Date.now() + 1)
+                }(e)
             }
 
-            function L(t) {
-                var e;
-                if (null == t) return null;
-                let l = !1,
-                    n = t.getGuildId();
-                if (null != n) {
-                    let e = t => {
-                        if (null == t) return !1;
-                        let e = t.permissionOverwrites[n];
-                        return null != e && u.default.has(e.deny, A.Permissions.VIEW_CHANNEL)
-                    };
-                    l = a.THREAD_CHANNEL_TYPES.has(t.type) && null != t.parent_id ? e(r.default.getChannel(t.parent_id)) : e(t)
-                }
-                return {
-                    channel_id: t.id,
-                    channel_type: t.type,
-                    channel_size_total: t.isPrivate() ? t.recipients.length : 0,
-                    channel_member_perms: String(null != n && null !== (e = E.default.getChannelPermissions(t)) && void 0 !== e ? e : T.default.NONE),
-                    channel_hidden: l
-                }
+            function k(e) {
+                e in N && (clearTimeout(N[e]), delete N[e])
             }
 
-            function M(t) {
-                if (null == t) return null;
-                let e = r.default.getChannel(t);
-                if (null == e) return null;
-                let l = _.default.isVideoEnabled(),
-                    n = v.default.getMediaSessionId();
-                return {
-                    channel_id: e.id,
-                    channel_type: e.type,
-                    guild_id: e.getGuildId(),
-                    media_session_id: n,
-                    ...U(e.getGuildId(), e.id, l),
-                    ...(0, y.getVoiceAnalyticsMetadataAdditional)()
-                }
+            function W(e, n, t, l) {
+                let {
+                    guild_id: d,
+                    parent_id: u,
+                    id: r
+                } = n;
+                null != d && null != u && null != r && (!(d in e) && (e[d] = {}), !(u in e[d]) && (e[d][u] = {}), l && (e[d] = {
+                    ...e[d],
+                    [u]: {
+                        ...e[d][u]
+                    }
+                }), null === t ? (delete e[d][u][r], i.isEmpty(e[d][u]) && delete e[d][u]) : e[d][u][r] = t)
             }
 
-            function P(t) {
-                var e, l, n, i, u;
-                let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                if (h.default.isThrottled(t)) return;
-                let d = !("location" in a) || a.location !== A.AnalyticsLocations.GUILD_CREATE_INVITE_SUGGESTION,
-                    c = "guild_id" in a ? a.guild_id : d ? S.default.getGuildId() : null,
-                    o = "channel_id" in a ? a.channel_id : d ? I.default.getChannelId(c) : null,
-                    f = r.default.getChannel(o);
-                let _ = (e = f, l = c, null == e ? null != l ? l : null : e.isPrivate() ? null : null !== (i = null !== (n = e.getGuildId()) && void 0 !== n ? n : l) && void 0 !== i ? i : null);
-                let E = {
-                    ...a,
-                    ...O(_),
-                    ...null != c && null != o && (0, m.isStaticChannelRoute)(o) ? (u = 0, {
-                        channel_static_route: o,
-                        channel_hidden: !1
-                    }) : L(f)
-                };
-                h.default.track(t, E, {
-                    flush: s
-                })
+            function K(e, n, t, l) {
+                if (null != n && null != t && null != l) B(e, n, t, l) && (e[n] = {
+                    ...e[n],
+                    [t]: {
+                        ...e[n][t]
+                    }
+                }, delete e[n][t][l], i.isEmpty(e[n][t]) && delete e[n][t])
             }
 
-            function U(t, e, l) {
-                let n = {
-                    voice_state_count: 0,
-                    video_stream_count: 0,
-                    video_enabled: l
-                };
-                return i(p.default.getVoiceStates(t)).filter(t => t.channelId === e).filter(t => t.userId !== s.default.getId()).forEach(t => {
-                    n.voice_state_count++, (t.selfVideo || t.selfStream) && n.video_stream_count++
-                }), n
+            function b(e, n) {
+                return B(e, n.guild_id, n.parent_id, n.id)
             }
 
-            function F(t, e) {
-                let l = {
-                    custom_status_count: 0
-                };
-                return i(p.default.getVoiceStates(t)).forEach(t => {
-                    t.channelId === e && null != g.default.findActivity(t.userId, t => t.type === A.ActivityTypes.CUSTOM_STATUS) && l.custom_status_count++
-                }), l
+            function B(e, n, t, l) {
+                return n in e && t in e[n] && l in e[n][t]
             }
-            var G = {
-                trackWithMetadata: P,
-                getVoiceStateMetadata: U
-            }
-        },
-        761932: function(t, e, l) {
-            "use strict";
-            l.r(e), l.d(e, {
-                getVoiceAnalyticsMetadataAdditional: function() {
-                    return i
+            let x = {},
+                V = {},
+                Y = {},
+                z = {},
+                Z = {};
+            class q extends u.default.Store {
+                initialize() {
+                    this.waitFor(E.default, f.default, h.default, _.default), this.syncWith([c.default], w)
                 }
-            });
-            var n = l("568307");
-
-            function i() {
-                let t = n.default.getCurrentGameForAnalytics();
-                return {
-                    game_name: null != t ? t.name : null,
-                    game_id: null != t ? t.id : null
+                hasActiveJoinedUnreadThreads(e, n) {
+                    return e in g && n in g[e]
                 }
-            }
-        },
-        32346: function(t, e, l) {
-            "use strict";
-            let n;
-            l.r(e), l.d(e, {
-                default: function() {
-                    return s
+                getActiveUnjoinedThreadsForParent(e, n) {
+                    var t;
+                    return e in p && null !== (t = p[e][n]) && void 0 !== t ? t : z
                 }
-            });
-            var i = l("446674"),
-                u = l("913144");
-            class a extends i.default.Store {
-                getCurrentHangStatus() {
+                getActiveJoinedThreadsForParent(e, n) {
+                    var t;
+                    return e in v && null !== (t = v[e][n]) && void 0 !== t ? t : Y
+                }
+                getActiveJoinedThreadsForGuild(e) {
+                    var n;
+                    return null !== (n = v[e]) && void 0 !== n ? n : x
+                }
+                getActiveJoinedUnreadThreadsForGuild(e) {
+                    var n;
+                    return null !== (n = g[e]) && void 0 !== n ? n : x
+                }
+                getActiveJoinedUnreadThreadsForParent(e, n) {
+                    var t;
+                    return null !== (t = this.getActiveJoinedUnreadThreadsForGuild(e)[n]) && void 0 !== t ? t : Y
+                }
+                getActiveJoinedRelevantThreadsForGuild(e) {
+                    var n;
+                    return null !== (n = S[e]) && void 0 !== n ? n : x
+                }
+                getActiveJoinedRelevantThreadsForParent(e, n) {
+                    var t;
+                    return null !== (t = this.getActiveJoinedRelevantThreadsForGuild(e)[n]) && void 0 !== t ? t : Y
+                }
+                getActiveUnjoinedThreadsForGuild(e) {
+                    var n;
+                    return null !== (n = p[e]) && void 0 !== n ? n : V
+                }
+                getActiveUnjoinedUnreadThreadsForGuild(e) {
+                    var n;
+                    return null !== (n = C[e]) && void 0 !== n ? n : x
+                }
+                getActiveUnjoinedUnreadThreadsForParent(e, n) {
+                    var t;
+                    return null !== (t = this.getActiveUnjoinedUnreadThreadsForGuild(e)[n]) && void 0 !== t ? t : Y
+                }
+                getNewThreadCountsForGuild(e) {
+                    var n;
+                    return null !== (n = D[e]) && void 0 !== n ? n : Z
+                }
+                computeAllActiveJoinedThreads(e) {
+                    let n = [];
+                    for (let t in v)
+                        if (t === e || null == e)
+                            for (let e in v[t])
+                                for (let l in v[t][e]) n.push(v[t][e][l].channel);
                     return n
                 }
-            }
-            a.displayName = "HangStatusStore";
-            var s = new a(u.default, {
-                UPDATE_HANG_STATUS: function(t) {
-                    let {
-                        status: e
-                    } = t;
-                    n = e
+                getNewThreadCount(e, n) {
+                    var t, l;
+                    return null !== (l = null === (t = D[e]) || void 0 === t ? void 0 : t[n]) && void 0 !== l ? l : 0
                 }
+                getActiveThreadCount(e, n) {
+                    var t, l, d, u;
+                    let r = i.size(null !== (d = null === (t = v[e]) || void 0 === t ? void 0 : t[n]) && void 0 !== d ? d : {}),
+                        a = i.size(null !== (u = null === (l = p[e]) || void 0 === l ? void 0 : l[n]) && void 0 !== u ? u : {});
+                    return r + a
+                }
+            }
+            q.displayName = "ActiveJoinedThreadsStore";
+            var Q = new q(r.default, {
+                CONNECTION_OPEN: U,
+                OVERLAY_INITIALIZE: U,
+                THREAD_LIST_SYNC: function(e) {
+                    let {
+                        guildId: n
+                    } = e;
+                    return R(n)
+                },
+                LOAD_THREADS_SUCCESS: U,
+                LOAD_ARCHIVED_THREADS_SUCCESS: U,
+                SEARCH_FINISH: U,
+                GUILD_CREATE: function(e) {
+                    let {
+                        guild: n
+                    } = e;
+                    return R(n.id)
+                },
+                GUILD_DELETE: U,
+                CURRENT_USER_UPDATE: U,
+                THREAD_CREATE: M,
+                THREAD_UPDATE: M,
+                THREAD_DELETE: M,
+                CHANNEL_UPDATES: function(e) {
+                    let {
+                        channels: n
+                    } = e;
+                    for (let e of n)
+                        if (e.isNSFW() !== function(e, n) {
+                                if (null == n) return !1;
+                                let t = v[e],
+                                    l = null == t ? null : t[n];
+                                if (null != l) {
+                                    for (let e in l)
+                                        if (l[e].channel.isNSFW()) return !0
+                                }
+                                let i = p[e],
+                                    d = null == i ? null : i[n];
+                                if (null != d) {
+                                    for (let e in d)
+                                        if (d[e].isNSFW()) return !0
+                                }
+                                return !1
+                            }(e.guild_id, e.parent_id)) {
+                            U();
+                            return
+                        } return !1
+                },
+                CHANNEL_DELETE: function(e) {
+                    let {
+                        channel: n
+                    } = e, t = !1;
+                    return null != n.guild_id && null != n.parent_id && (n.guild_id in v && n.parent_id in v[n.guild_id] && (delete v[n.guild_id][n.parent_id], t = !0), n.guild_id in g && n.parent_id in g[n.guild_id] && (delete g[n.guild_id][n.parent_id], t = !0), n.guild_id in S && n.parent_id in S[n.guild_id] && (Object.keys(S[n.guild_id][n.parent_id]).forEach(k), delete S[n.guild_id][n.parent_id], t = !0), n.guild_id in p && n.parent_id in p[n.guild_id] && (delete p[n.guild_id][n.parent_id], t = !0), n.guild_id in C && n.parent_id in C[n.guild_id] && (delete C[n.guild_id][n.parent_id], t = !0), t && H(n.guild_id, n.parent_id)), t
+                },
+                THREAD_MEMBER_UPDATE: G,
+                THREAD_MEMBERS_UPDATE: G,
+                LOAD_MESSAGES_SUCCESS: j,
+                MESSAGE_CREATE: j,
+                MESSAGE_DELETE: j,
+                MESSAGE_DELETE_BULK: j,
+                MESSAGE_ACK: j,
+                CHANNEL_ACK: j,
+                CHANNEL_LOCAL_ACK: j,
+                CHANNEL_SELECT: function(e) {
+                    j(e), w()
+                },
+                PASSIVE_UPDATE_V1: function(e) {
+                    null != e.channels && O()
+                },
+                WINDOW_FOCUS: O,
+                UPDATE_CHANNEL_DIMENSIONS: O,
+                DRAWER_OPEN: O,
+                DRAWER_CLOSE: O,
+                BULK_ACK: O
             })
         },
-        824563: function(t, e, l) {
+        984674: function(e, n, t) {
             "use strict";
-            l.r(e), l.d(e, {
+            t.r(n), t.d(n, {
                 default: function() {
-                    return U
+                    return d
                 }
-            }), l("222007"), l("424973");
-            var n = l("714617"),
-                i = l.n(n),
-                u = l("917351"),
-                a = l.n(u),
-                s = l("446674"),
-                r = l("913144"),
-                d = l("309570"),
-                c = l("32346"),
-                o = l("271938"),
-                f = l("697218"),
-                _ = l("49111");
-            let E = Object.freeze([]),
-                g = {},
-                v = {},
-                I = {},
-                S = {},
-                p = {};
+            });
+            var l = t("660478"),
+                i = t("299039");
 
-            function h(t, e) {
-                let l = g[t];
-                return null != l ? l[e] : null
+            function d(e) {
+                if (null == e.threadMetadata) return 0;
+                let n = 6e4 * e.threadMetadata.autoArchiveDuration;
+                return function(e) {
+                    var n;
+                    if (null == e.threadMetadata) return 0;
+                    let t = null !== (n = l.default.lastMessageId(e.id)) && void 0 !== n ? n : e.id,
+                        d = i.default.extractTimestamp(t),
+                        u = null != e.threadMetadata.archiveTimestamp ? new Date(e.threadMetadata.archiveTimestamp).getTime() : 0;
+                    return Math.max(d, u)
+                }(e) + n
             }
-            let T = t => {
-                    switch (t.type) {
-                        case _.ActivityTypes.CUSTOM_STATUS:
-                            return 4;
-                        case _.ActivityTypes.COMPETING:
-                            return 3;
-                        case _.ActivityTypes.STREAMING:
-                            return 2;
-                        case _.ActivityTypes.PLAYING:
-                            return 1;
-                        default:
-                            return 0
-                    }
-                },
-                y = t => (0, d.default)(t) ? 1 : 0;
-
-            function A(t, e) {
-                var l, n, i, u, a;
-                return l = t, T(e) - T(l) || (n = t, y(e) - y(n)) || (i = t, (null !== (u = e.created_at) && void 0 !== u ? u : 0) - (null !== (a = i.created_at) && void 0 !== a ? a : 0))
-            }
-
-            function m(t) {
-                if (delete v[t], delete I[t], delete S[t], null == g[t]) return;
-                let [e] = a.sortBy(g[t], t => -t.timestamp);
-                e.status !== _.StatusTypes.OFFLINE ? (v[t] = e.status, I[t] = e.activities, null != e.clientStatus && (S[t] = e.clientStatus)) : a.every(g[t], t => t.status === _.StatusTypes.OFFLINE) && delete g[t]
-            }
-
-            function N(t) {
-                let e = g[t];
-                if (null == e) return;
-                let l = a.maxBy(Object.values(e), t => t.timestamp);
-                l.status !== _.StatusTypes.OFFLINE && (v[t] = l.status, I[t] = l.activities, null != l.clientStatus && (S[t] = l.clientStatus))
-            }
-
-            function O(t) {
-                let {
-                    guildId: e,
-                    userId: l,
-                    status: n,
-                    clientStatus: u,
-                    activities: a
-                } = t;
-                if (l === o.default.getId()) return !1;
-                let s = g[l];
-                if (null == s) {
-                    if (n === _.StatusTypes.OFFLINE) return !1;
-                    s = g[l] = {}
-                }
-                if (n === _.StatusTypes.OFFLINE) s[e] = {
-                    status: n,
-                    clientStatus: u,
-                    activities: E,
-                    timestamp: Date.now()
-                };
-                else {
-                    let t = a.length > 1 ? [...a].sort(A) : a,
-                        l = s[e];
-                    a = null != l && i(l.activities, t) ? l.activities : t, s[e] = {
-                        status: n,
-                        clientStatus: u,
-                        activities: a,
-                        timestamp: Date.now()
-                    }
-                }
-                return delete p[l], m(l), !0
-            }
-
-            function C(t) {
-                let {
-                    guildId: e,
-                    userId: l,
-                    status: n,
-                    clientStatus: i,
-                    activities: u,
-                    timestamp: a
-                } = t;
-                if (l === o.default.getId()) return;
-                let s = g[l];
-                if (null == s) {
-                    if (n === _.StatusTypes.OFFLINE) return;
-                    s = g[l] = {}
-                }
-                if (n === _.StatusTypes.OFFLINE) s[e] = {
-                    status: n,
-                    clientStatus: i,
-                    activities: E,
-                    timestamp: Date.now()
-                };
-                else {
-                    let t = u.length > 1 ? [...u].sort(A) : u;
-                    s[e] = {
-                        status: n,
-                        clientStatus: i,
-                        activities: t,
-                        timestamp: a
-                    }
-                }
-            }
-
-            function L(t, e) {
-                if (e === o.default.getId()) return !1;
-                let l = g[e];
-                if (null == l || null == l[t]) return !1;
-                delete l[t], 0 === Object.keys(l).length && delete g[e], m(e)
-            }
-
-            function M(t) {
-                for (let e of Object.keys(g)) L(t, e)
-            }
-            class P extends s.default.Store {
-                initialize() {
-                    this.waitFor(o.default, c.default)
-                }
-                setCurrentUserOnConnectionOpen(t, e) {
-                    v[o.default.getId()] = t, I[o.default.getId()] = e
-                }
-                getStatus(t) {
-                    var e, l;
-                    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-                        i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.StatusTypes.OFFLINE,
-                        u = f.default.getUser(t);
-                    if (null != u && u.hasFlag(_.UserFlags.BOT_HTTP_INTERACTIONS) && (i = _.StatusTypes.UNKNOWN), null == u ? void 0 : u.isClyde()) return _.StatusTypes.ONLINE;
-                    if (null == n) return null !== (e = v[t]) && void 0 !== e ? e : i;
-                    let a = h(t, n);
-                    return null !== (l = null == a ? void 0 : a.status) && void 0 !== l ? l : i
-                }
-                getActivities(t) {
-                    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-                    if (null == e) {
-                        var l;
-                        return null !== (l = I[t]) && void 0 !== l ? l : E
-                    }
-                    let n = h(t, e);
-                    return null == n || null == n.activities ? E : n.activities
-                }
-                getPrimaryActivity(t) {
-                    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-                        l = this.getActivities(t, e);
-                    return l[0]
-                }
-                getAllApplicationActivities(t) {
-                    let e = [];
-                    for (let l of Object.keys(I)) {
-                        let n = I[l];
-                        for (let i of n) i.application_id === t && e.push({
-                            userId: l,
-                            activity: i
-                        })
-                    }
-                    return e
-                }
-                getApplicationActivity(t, e) {
-                    let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-                    return this.findActivity(t, t => t.application_id === e, l)
-                }
-                findActivity(t, e) {
-                    let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-                    return this.getActivities(t, l).find(e)
-                }
-                getActivityMetadata(t) {
-                    return p[t]
-                }
-                getUserIds() {
-                    return Object.keys(I)
-                }
-                isMobileOnline(t) {
-                    let e = S[t];
-                    return null != e && e[_.ClientTypes.MOBILE] === _.StatusTypes.ONLINE && e[_.ClientTypes.DESKTOP] !== _.StatusTypes.ONLINE
-                }
-                getState() {
-                    return {
-                        presencesForGuilds: g,
-                        statuses: v,
-                        activities: I,
-                        activityMetadata: p,
-                        clientStatuses: S
-                    }
-                }
-            }
-            P.displayName = "PresenceStore";
-            var U = new P(r.default, {
-                CONNECTION_OPEN: function() {
-                    return !0
-                },
-                CONNECTION_OPEN_SUPPLEMENTAL: function(t) {
-                    let {
-                        guilds: e,
-                        presences: l
-                    } = t, n = o.default.getId();
-                    g = {}, p = {}, v = {
-                        [n]: v[n]
-                    }, I = {
-                        [n]: I[n]
-                    }, S = {
-                        [n]: {}
-                    };
-                    let i = new Set,
-                        u = Date.now();
-                    e.forEach(t => {
-                        t.presences.forEach(e => {
-                            let {
-                                user: l,
-                                status: n,
-                                clientStatus: a,
-                                activities: s
-                            } = e;
-                            C({
-                                guildId: t.id,
-                                userId: l.id,
-                                status: n,
-                                clientStatus: a,
-                                activities: s,
-                                timestamp: u
-                            }), i.add(l.id)
-                        })
-                    }), l.forEach(t => {
-                        let {
-                            user: e,
-                            status: l,
-                            clientStatus: n,
-                            activities: a
-                        } = t;
-                        null != e && (C({
-                            guildId: _.ME,
-                            userId: e.id,
-                            status: l,
-                            clientStatus: n,
-                            activities: a,
-                            timestamp: u
-                        }), i.add(e.id))
-                    }), i.delete(n), i.forEach(N)
-                },
-                OVERLAY_INITIALIZE: function(t) {
-                    let {
-                        presences: e
-                    } = t;
-                    g = e.presencesForGuilds, v = e.statuses, I = e.activities, p = e.activityMetadata
-                },
-                GUILD_CREATE: function(t) {
-                    let {
-                        guild: e
-                    } = t;
-                    e.presences.forEach(t => {
-                        let {
-                            user: l,
-                            status: n,
-                            clientStatus: i,
-                            activities: u
-                        } = t;
-                        O({
-                            guildId: e.id,
-                            userId: l.id,
-                            status: n,
-                            clientStatus: i,
-                            activities: u
-                        })
-                    })
-                },
-                GUILD_DELETE: function(t) {
-                    let {
-                        guild: e
-                    } = t;
-                    M(e.id)
-                },
-                GUILD_MEMBER_REMOVE: function(t) {
-                    let {
-                        guildId: e,
-                        user: l
-                    } = t;
-                    return L(e, l.id)
-                },
-                PRESENCE_UPDATES: function(t) {
-                    let {
-                        updates: e
-                    } = t;
-                    return e.map(t => {
-                        let {
-                            guildId: e,
-                            user: l,
-                            status: n,
-                            clientStatus: i,
-                            activities: u
-                        } = t;
-                        return O({
-                            guildId: null != e ? e : _.ME,
-                            userId: l.id,
-                            status: n,
-                            clientStatus: i,
-                            activities: u
-                        })
-                    }).some(t => t)
-                },
-                PRESENCES_REPLACE: function(t) {
-                    let {
-                        presences: e
-                    } = t;
-                    M(_.ME), e.forEach(t => {
-                        let {
-                            user: e,
-                            status: l,
-                            clientStatus: n,
-                            activities: i
-                        } = t;
-                        null != e && O({
-                            guildId: _.ME,
-                            userId: e.id,
-                            status: l,
-                            clientStatus: n,
-                            activities: i
-                        })
-                    })
-                },
-                ACTIVITY_METADATA_UPDATE: function(t) {
-                    let {
-                        userId: e,
-                        metadata: l
-                    } = t;
-                    return p[e] = l, !1
-                },
-                THREAD_MEMBER_LIST_UPDATE: function(t) {
-                    let {
-                        guildId: e,
-                        members: l
-                    } = t;
-                    l.forEach(t => {
-                        null != t.presence && O({
-                            guildId: e,
-                            userId: t.user_id,
-                            status: t.presence.status,
-                            clientStatus: t.presence.clientStatus,
-                            activities: t.presence.activities
-                        })
-                    })
-                },
-                THREAD_MEMBERS_UPDATE: function(t) {
-                    let {
-                        guildId: e,
-                        addedMembers: l
-                    } = t;
-                    null == l || l.forEach(t => {
-                        null != t.presence && O({
-                            guildId: e,
-                            userId: t.userId,
-                            status: t.presence.status,
-                            clientStatus: t.presence.clientStatus,
-                            activities: t.presence.activities
-                        })
-                    })
-                },
-                SELF_PRESENCE_STORE_UPDATE: function(t) {
-                    let e = o.default.getId();
-                    if (v[e] === t.status && I[e] === t.activities) return !1;
-                    v[e] = t.status, I[e] = t.activities, delete p[e]
-                }
-            })
         }
     }
 ]);

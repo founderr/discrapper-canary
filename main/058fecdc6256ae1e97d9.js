@@ -1,2785 +1,4070 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["23777"], {
-        251472: function(t, e, n) {
+    ["94816"], {
+        223468: function(e, t, n) {
             "use strict";
-            n.r(e), n.d(e, {
-                fetchUserEntitlementsForApplication: function() {
-                    return a
-                },
-                fetchUserEntitlements: function() {
+            n.r(t), n.d(t, {
+                default: function() {
                     return o
-                },
-                fetchGiftableEntitlements: function() {
-                    return s
                 }
             });
-            var u = n("872717"),
-                i = n("913144"),
-                r = n("271560"),
-                l = n("49111");
-
-            function a(t) {
-                let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                return i.default.wait(() => {
-                    i.default.dispatch({
-                        type: "ENTITLEMENT_FETCH_APPLICATION_START",
-                        applicationId: t
-                    })
-                }), u.default.get({
-                    url: l.Endpoints.ENTITLEMENTS_FOR_APPLICATION(t),
-                    oldFormErrors: !0,
-                    query: {
-                        exclude_consumed: e
-                    }
-                }).then(e => (i.default.dispatch({
-                    type: "ENTITLEMENT_FETCH_APPLICATION_SUCCESS",
-                    applicationId: t,
-                    entitlements: e.body
-                }), e.body)).catch(() => {
-                    i.default.dispatch({
-                        type: "ENTITLEMENT_FETCH_APPLICATION_FAIL",
-                        applicationId: t
-                    })
-                })
-            }
-            async function o(t) {
-                let {
-                    withSku: e = !1,
-                    withApplication: n = !1,
-                    entitlementType: r
-                } = t;
-                i.default.dispatch({
-                    type: "ENTITLEMENTS_FETCH_FOR_USER_START"
-                });
-                try {
-                    let t = await u.default.get({
-                        url: l.Endpoints.ENTITLEMENTS_FOR_USER,
-                        query: {
-                            with_sku: e,
-                            with_application: n,
-                            entitlement_type: r
-                        }
-                    });
-                    i.default.dispatch({
-                        type: "ENTITLEMENTS_FETCH_FOR_USER_SUCCESS",
-                        entitlements: t.body
-                    })
-                } catch (t) {
-                    i.default.dispatch({
-                        type: "ENTITLEMENTS_FETCH_FOR_USER_FAIL"
+            var i = n("872717"),
+                l = n("819689"),
+                a = n("49111"),
+                s = n("782340"),
+                o = {
+                    changeNickname: (e, t, n, o) => i.default.patch({
+                        url: a.Endpoints.GUILD_MEMBER_NICK(e, n),
+                        body: {
+                            nick: o
+                        },
+                        oldFormErrors: !0
+                    }).then(e => {
+                        o = e.body.nick, l.default.sendBotMessage(t, null != o && "" !== o ? s.default.Messages.COMMAND_NICK_SUCCESS.plainFormat({
+                            nick: o
+                        }) : s.default.Messages.COMMAND_NICK_RESET)
+                    }, e => {
+                        403 === e.status ? l.default.sendBotMessage(t, s.default.Messages.COMMAND_NICK_FAILURE_PERMISSION.plainFormat()) : l.default.sendBotMessage(t, s.default.Messages.COMMAND_NICK_FAILURE)
                     })
                 }
+        },
+        81594: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return l
+                }
+            });
+            var i = n("913144"),
+                l = {
+                    popFirstFile(e) {
+                        i.default.dispatch({
+                            type: "UPLOAD_ATTACHMENT_POP_FILE",
+                            channelId: e
+                        })
+                    },
+                    addFiles(e) {
+                        let {
+                            files: t,
+                            channelId: n,
+                            showLargeMessageDialog: l,
+                            draftType: a
+                        } = e;
+                        i.default.dispatch({
+                            type: "UPLOAD_ATTACHMENT_ADD_FILES",
+                            channelId: n,
+                            files: t,
+                            showLargeMessageDialog: l,
+                            draftType: a
+                        })
+                    },
+                    addFile(e) {
+                        let {
+                            file: t,
+                            channelId: n,
+                            showLargeMessageDialog: l,
+                            draftType: a
+                        } = e;
+                        i.default.dispatch({
+                            type: "UPLOAD_ATTACHMENT_ADD_FILES",
+                            channelId: n,
+                            files: [t],
+                            showLargeMessageDialog: l,
+                            draftType: a
+                        })
+                    },
+                    remove(e, t, n) {
+                        i.default.dispatch({
+                            type: "UPLOAD_ATTACHMENT_REMOVE_FILE",
+                            channelId: e,
+                            id: t,
+                            draftType: n
+                        })
+                    },
+                    removeFiles(e, t, n) {
+                        i.default.dispatch({
+                            type: "UPLOAD_ATTACHMENT_REMOVE_FILES",
+                            channelId: e,
+                            attachmentIds: t,
+                            draftType: n
+                        })
+                    },
+                    clearAll(e, t) {
+                        i.default.dispatch({
+                            type: "UPLOAD_ATTACHMENT_CLEAR_ALL_FILES",
+                            channelId: e,
+                            draftType: t
+                        })
+                    },
+                    update(e, t, n, l) {
+                        let {
+                            description: a,
+                            filename: s,
+                            spoiler: o,
+                            thumbnail: r
+                        } = l;
+                        i.default.dispatch({
+                            type: "UPLOAD_ATTACHMENT_UPDATE_FILE",
+                            channelId: e,
+                            id: t,
+                            filename: s,
+                            description: a,
+                            thumbnail: r,
+                            spoiler: o,
+                            draftType: n
+                        })
+                    },
+                    setUploads(e) {
+                        let {
+                            uploads: t,
+                            channelId: n,
+                            draftType: l,
+                            resetState: a
+                        } = e;
+                        i.default.dispatch({
+                            type: "UPLOAD_ATTACHMENT_SET_UPLOADS",
+                            channelId: n,
+                            uploads: a ? t.map(e => e.resetState()) : t,
+                            draftType: l
+                        })
+                    },
+                    setFile(e) {
+                        let {
+                            file: t,
+                            channelId: n,
+                            id: l,
+                            draftType: a
+                        } = e;
+                        i.default.dispatch({
+                            type: "UPLOAD_ATTACHMENT_SET_FILE",
+                            channelId: n,
+                            id: l,
+                            file: t,
+                            draftType: a
+                        })
+                    }
+                }
+        },
+        589777: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                BUILT_IN_SECTIONS: function() {
+                    return R
+                },
+                getBuiltInCommands: function() {
+                    return U
+                }
+            }), n("222007"), n("70102");
+            var i = n("627445"),
+                l = n.n(i),
+                a = n("866227"),
+                s = n.n(a),
+                o = n("298386"),
+                r = n("223468"),
+                u = n("450911"),
+                d = n("851387"),
+                c = n("819689"),
+                p = n("798609"),
+                f = n("700179"),
+                m = n("884351"),
+                _ = n("252862"),
+                I = n("730498"),
+                C = n("300322"),
+                T = n("845579"),
+                A = n("42203"),
+                E = n("957255"),
+                N = n("697218"),
+                S = n("158998"),
+                M = n("524768"),
+                g = n("317041"),
+                O = n("49111"),
+                h = n("903639"),
+                v = n("782340");
+            let D = n("150692").default,
+                y = (e, t) => {
+                    var n;
+                    return null === (n = e.find(e => e.name === t)) || void 0 === n ? void 0 : n.value
+                },
+                R = {
+                    [g.BuiltInSectionId.BUILT_IN]: {
+                        id: g.BuiltInSectionId.BUILT_IN,
+                        type: M.ApplicationCommandSectionType.BUILT_IN,
+                        get name() {
+                            return v.default.Messages.COMMAND_SECTION_BUILT_IN_NAME
+                        }
+                    },
+                    [g.BuiltInSectionId.FRECENCY]: {
+                        id: g.BuiltInSectionId.FRECENCY,
+                        type: M.ApplicationCommandSectionType.BUILT_IN,
+                        get name() {
+                            return v.default.Messages.FREQUENTLY_USED
+                        }
+                    }
+                },
+                P = [...D, {
+                    id: "-1",
+                    name: "shrug",
+                    displayName: "shrug",
+                    type: p.ApplicationCommandType.CHAT,
+                    inputType: M.ApplicationCommandInputType.BUILT_IN_TEXT,
+                    applicationId: g.BuiltInSectionId.BUILT_IN,
+                    get description() {
+                        return v.default.Messages.COMMAND_SHRUG_DESCRIPTION
+                    },
+                    get displayDescription() {
+                        return v.default.Messages.COMMAND_SHRUG_DESCRIPTION
+                    },
+                    options: [{
+                        name: "message",
+                        displayName: "message",
+                        type: p.ApplicationCommandOptionType.STRING,
+                        get description() {
+                            return v.default.Messages.COMMAND_SHRUG_MESSAGE_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_SHRUG_MESSAGE_DESCRIPTION
+                        }
+                    }],
+                    execute: e => {
+                        var t;
+                        let n = null !== (t = y(e, "message")) && void 0 !== t ? t : "";
+                        return {
+                            content: "".concat(n, " \xaf\\_(ツ)_/\xaf").trim()
+                        }
+                    }
+                }, {
+                    id: "-2",
+                    name: "tableflip",
+                    displayName: "tableflip",
+                    type: p.ApplicationCommandType.CHAT,
+                    inputType: M.ApplicationCommandInputType.BUILT_IN_TEXT,
+                    applicationId: g.BuiltInSectionId.BUILT_IN,
+                    get description() {
+                        return v.default.Messages.COMMAND_TABLEFLIP_DESCRIPTION
+                    },
+                    get displayDescription() {
+                        return v.default.Messages.COMMAND_TABLEFLIP_DESCRIPTION
+                    },
+                    options: [{
+                        name: "message",
+                        displayName: "message",
+                        type: p.ApplicationCommandOptionType.STRING,
+                        get description() {
+                            return v.default.Messages.COMMAND_TABLEFLIP_MESSAGE_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_TABLEFLIP_MESSAGE_DESCRIPTION
+                        }
+                    }],
+                    execute: e => {
+                        var t;
+                        let n = null !== (t = y(e, "message")) && void 0 !== t ? t : "";
+                        return {
+                            content: "".concat(n, " (╯\xb0□\xb0)╯︵ ┻━┻").trim()
+                        }
+                    }
+                }, {
+                    id: "-3",
+                    name: "unflip",
+                    displayName: "unflip",
+                    type: p.ApplicationCommandType.CHAT,
+                    inputType: M.ApplicationCommandInputType.BUILT_IN_TEXT,
+                    applicationId: g.BuiltInSectionId.BUILT_IN,
+                    get description() {
+                        return v.default.Messages.COMMAND_TABLEUNFLIP_DESCRIPTION
+                    },
+                    get displayDescription() {
+                        return v.default.Messages.COMMAND_TABLEUNFLIP_DESCRIPTION
+                    },
+                    options: [{
+                        name: "message",
+                        displayName: "message",
+                        type: p.ApplicationCommandOptionType.STRING,
+                        get description() {
+                            return v.default.Messages.COMMAND_TABLEUNFLIP_MESSAGE_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_TABLEUNFLIP_MESSAGE_DESCRIPTION
+                        }
+                    }],
+                    execute: e => {
+                        var t;
+                        let n = null !== (t = y(e, "message")) && void 0 !== t ? t : "";
+                        return {
+                            content: "".concat(n, " ┬─┬ノ( \xba _ \xbaノ)").trim()
+                        }
+                    }
+                }, {
+                    id: "-4",
+                    name: "tts",
+                    displayName: "tts",
+                    type: p.ApplicationCommandType.CHAT,
+                    inputType: M.ApplicationCommandInputType.BUILT_IN_TEXT,
+                    applicationId: g.BuiltInSectionId.BUILT_IN,
+                    get description() {
+                        return v.default.Messages.COMMAND_TTS_DESCRIPTION
+                    },
+                    get displayDescription() {
+                        return v.default.Messages.COMMAND_TTS_DESCRIPTION
+                    },
+                    options: [{
+                        name: "message",
+                        displayName: "message",
+                        type: p.ApplicationCommandOptionType.STRING,
+                        get description() {
+                            return v.default.Messages.COMMAND_TTS_MESSAGE_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_TTS_MESSAGE_DESCRIPTION
+                        },
+                        required: !0
+                    }],
+                    predicate: e => {
+                        let {
+                            channel: t
+                        } = e;
+                        return !t.isPrivate() && T.EnableTTSCommand.getSetting() && E.default.can(O.Permissions.SEND_TTS_MESSAGES, t)
+                    },
+                    execute: e => {
+                        var t;
+                        let n = null !== (t = y(e, "message")) && void 0 !== t ? t : "";
+                        return {
+                            content: n,
+                            tts: !0
+                        }
+                    }
+                }, {
+                    id: "-5",
+                    name: "me",
+                    displayName: "me",
+                    type: p.ApplicationCommandType.CHAT,
+                    inputType: M.ApplicationCommandInputType.BUILT_IN_TEXT,
+                    applicationId: g.BuiltInSectionId.BUILT_IN,
+                    get description() {
+                        return v.default.Messages.COMMAND_ME_DESCRIPTION
+                    },
+                    get displayDescription() {
+                        return v.default.Messages.COMMAND_ME_DESCRIPTION
+                    },
+                    options: [{
+                        name: "message",
+                        displayName: "message",
+                        type: p.ApplicationCommandOptionType.STRING,
+                        get description() {
+                            return v.default.Messages.COMMAND_ME_MESSAGE_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_ME_MESSAGE_DESCRIPTION
+                        },
+                        required: !0
+                    }],
+                    execute: e => {
+                        var t;
+                        let n = null !== (t = y(e, "message")) && void 0 !== t ? t : "";
+                        return {
+                            content: "_".concat(n, "_")
+                        }
+                    }
+                }, {
+                    id: "-6",
+                    name: "spoiler",
+                    displayName: "spoiler",
+                    type: p.ApplicationCommandType.CHAT,
+                    inputType: M.ApplicationCommandInputType.BUILT_IN_TEXT,
+                    applicationId: g.BuiltInSectionId.BUILT_IN,
+                    get description() {
+                        return v.default.Messages.COMMAND_SPOILER_DESCRIPTION
+                    },
+                    get displayDescription() {
+                        return v.default.Messages.COMMAND_SPOILER_DESCRIPTION
+                    },
+                    options: [{
+                        name: "message",
+                        displayName: "message",
+                        type: p.ApplicationCommandOptionType.STRING,
+                        get description() {
+                            return v.default.Messages.COMMAND_SPOILER_MESSAGE_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_SPOILER_MESSAGE_DESCRIPTION
+                        },
+                        required: !0
+                    }],
+                    execute: e => {
+                        var t;
+                        let n = null !== (t = y(e, "message")) && void 0 !== t ? t : "";
+                        return {
+                            content: (0, O.MARKDOWN_SPOILER_WRAPPER)(n).trim()
+                        }
+                    }
+                }, {
+                    id: "-7",
+                    name: "nick",
+                    displayName: "nick",
+                    type: p.ApplicationCommandType.CHAT,
+                    inputType: M.ApplicationCommandInputType.BUILT_IN,
+                    applicationId: g.BuiltInSectionId.BUILT_IN,
+                    get description() {
+                        return v.default.Messages.COMMAND_NICK_DESCRIPTION
+                    },
+                    get displayDescription() {
+                        return v.default.Messages.COMMAND_NICK_DESCRIPTION
+                    },
+                    options: [{
+                        name: "new_nick",
+                        displayName: "new_nick",
+                        type: p.ApplicationCommandOptionType.STRING,
+                        get description() {
+                            return v.default.Messages.COMMAND_NICK_NEWNICK_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_NICK_NEWNICK_DESCRIPTION
+                        }
+                    }],
+                    predicate: e => {
+                        let {
+                            channel: t
+                        } = e;
+                        return !t.isPrivate() && (E.default.can(O.Permissions.CHANGE_NICKNAME, t) || E.default.can(O.Permissions.MANAGE_NICKNAMES, t))
+                    },
+                    execute: (e, t) => {
+                        var n;
+                        let {
+                            guild: i,
+                            channel: l
+                        } = t;
+                        if (null == i) return;
+                        let a = null !== (n = y(e, "new_nick")) && void 0 !== n ? n : "";
+                        r.default.changeNickname(i.id, l.id, O.ME, a || "")
+                    }
+                }, {
+                    id: "-10",
+                    name: "thread",
+                    displayName: "thread",
+                    type: p.ApplicationCommandType.CHAT,
+                    inputType: M.ApplicationCommandInputType.BUILT_IN,
+                    applicationId: g.BuiltInSectionId.BUILT_IN,
+                    get description() {
+                        return v.default.Messages.COMMAND_THREAD_DESCRIPTION
+                    },
+                    get displayDescription() {
+                        return v.default.Messages.COMMAND_THREAD_DESCRIPTION
+                    },
+                    options: [{
+                        name: "name",
+                        displayName: "name",
+                        type: p.ApplicationCommandOptionType.STRING,
+                        get description() {
+                            return v.default.Messages.COMMAND_THREAD_NAME_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_THREAD_NAME_DESCRIPTION
+                        },
+                        required: !0
+                    }, {
+                        name: "message",
+                        displayName: "message",
+                        type: p.ApplicationCommandOptionType.STRING,
+                        get description() {
+                            return v.default.Messages.COMMAND_THREAD_MESSAGE_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_THREAD_MESSAGE_DESCRIPTION
+                        },
+                        required: !0
+                    }],
+                    predicate: e => {
+                        let {
+                            channel: t
+                        } = e;
+                        return (0, C.computeCanStartPublicThread)(t)
+                    },
+                    execute: async (e, t) => {
+                        var n, i;
+                        let {
+                            channel: l
+                        } = t, a = null !== (n = y(e, "name")) && void 0 !== n ? n : "", s = null !== (i = y(e, "message")) && void 0 !== i ? i : "", r = await (0, I.createThread)(l, a, o.ChannelTypes.PUBLIC_THREAD, (0, _.getAutoArchiveDuration)(l, null), "Slash Command");
+                        c.default.sendMessage(r.id, m.default.parse(r, s))
+                    }
+                }, {
+                    id: "-11",
+                    name: "kick",
+                    displayName: "kick",
+                    type: p.ApplicationCommandType.CHAT,
+                    inputType: M.ApplicationCommandInputType.BUILT_IN,
+                    applicationId: g.BuiltInSectionId.BUILT_IN,
+                    get description() {
+                        return v.default.Messages.COMMAND_KICK_DESCRIPTION
+                    },
+                    get displayDescription() {
+                        return v.default.Messages.COMMAND_KICK_DESCRIPTION
+                    },
+                    options: [{
+                        name: "user",
+                        displayName: "user",
+                        type: p.ApplicationCommandOptionType.USER,
+                        get description() {
+                            return v.default.Messages.COMMAND_KICK_USER_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_KICK_USER_DESCRIPTION
+                        },
+                        required: !0
+                    }, {
+                        name: "reason",
+                        displayName: "reason",
+                        type: p.ApplicationCommandOptionType.STRING,
+                        get description() {
+                            return v.default.Messages.COMMAND_KICK_REASON_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_KICK_REASON_DESCRIPTION
+                        },
+                        required: !1
+                    }],
+                    predicate: e => {
+                        let {
+                            guild: t
+                        } = e;
+                        return E.default.can(O.Permissions.KICK_MEMBERS, t)
+                    },
+                    execute: (e, t) => {
+                        var n;
+                        let {
+                            guild: i,
+                            channel: l
+                        } = t;
+                        if (null == i) return;
+                        let a = null !== (n = y(e, "user")) && void 0 !== n ? n : "";
+                        if (!E.default.canManageUser(O.Permissions.KICK_MEMBERS, a, i)) {
+                            c.default.sendBotMessage(l.id, v.default.Messages.COMMAND_KICK_UNABLE);
+                            return
+                        }
+                        let s = async () => {
+                            var t;
+                            let n = N.default.getUser(a);
+                            if (null == n) throw Error();
+                            await d.default.kickUser(i.id, a, null !== (t = y(e, "reason")) && void 0 !== t ? t : ""), c.default.sendBotMessage(l.id, v.default.Messages.COMMAND_KICK_CONFIRMATION.format({
+                                user: S.default.getUserTag(n)
+                            }))
+                        };
+                        s().catch(() => {
+                            c.default.sendBotMessage(l.id, v.default.Messages.COMMAND_KICK_ERROR)
+                        })
+                    }
+                }, {
+                    id: "-12",
+                    name: "ban",
+                    displayName: "ban",
+                    type: p.ApplicationCommandType.CHAT,
+                    inputType: M.ApplicationCommandInputType.BUILT_IN,
+                    applicationId: g.BuiltInSectionId.BUILT_IN,
+                    get description() {
+                        return v.default.Messages.COMMAND_BAN_DESCRIPTION
+                    },
+                    get displayDescription() {
+                        return v.default.Messages.COMMAND_BAN_DESCRIPTION
+                    },
+                    options: [{
+                        name: "user",
+                        displayName: "user",
+                        type: p.ApplicationCommandOptionType.USER,
+                        get description() {
+                            return v.default.Messages.COMMAND_BAN_USER_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_BAN_USER_DESCRIPTION
+                        },
+                        required: !0
+                    }, {
+                        name: "delete_messages",
+                        displayName: "delete_messages",
+                        type: p.ApplicationCommandOptionType.INTEGER,
+                        get description() {
+                            return v.default.Messages.COMMAND_BAN_DELETE_MESSAGES_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_BAN_DELETE_MESSAGES_DESCRIPTION
+                        },
+                        required: !0,
+                        get choices() {
+                            return [{
+                                name: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_NONE,
+                                displayName: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_NONE,
+                                value: 0
+                            }, {
+                                name: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_1HR,
+                                displayName: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_1HR,
+                                value: O.Durations.HOUR
+                            }, {
+                                name: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_6HR,
+                                displayName: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_6HR,
+                                value: 6 * O.Durations.HOUR
+                            }, {
+                                name: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_12HR,
+                                displayName: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_12HR,
+                                value: 12 * O.Durations.HOUR
+                            }, {
+                                name: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_24HR,
+                                displayName: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_24HR,
+                                value: O.Durations.DAY
+                            }, {
+                                name: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_3D,
+                                displayName: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_3D,
+                                value: 3 * O.Durations.DAY
+                            }, {
+                                name: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_7D,
+                                displayName: v.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_7D,
+                                value: 7 * O.Durations.DAY
+                            }]
+                        }
+                    }, {
+                        name: "reason",
+                        displayName: "reason",
+                        type: p.ApplicationCommandOptionType.STRING,
+                        get description() {
+                            return v.default.Messages.COMMAND_BAN_REASON_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_BAN_REASON_DESCRIPTION
+                        },
+                        required: !1
+                    }],
+                    predicate: e => {
+                        let {
+                            guild: t
+                        } = e;
+                        return E.default.can(O.Permissions.BAN_MEMBERS, t)
+                    },
+                    execute: (e, t) => {
+                        var n;
+                        let {
+                            guild: i,
+                            channel: l
+                        } = t;
+                        if (null == i) return;
+                        let a = null !== (n = y(e, "user")) && void 0 !== n ? n : "";
+                        if (!E.default.canManageUser(O.Permissions.BAN_MEMBERS, a, i)) {
+                            c.default.sendBotMessage(l.id, v.default.Messages.COMMAND_BAN_UNABLE);
+                            return
+                        }
+                        let s = async () => {
+                            var t, n;
+                            if ("" === a) throw Error();
+                            let s = null !== (t = y(e, "delete_messages")) && void 0 !== t ? t : 0,
+                                o = null !== (n = y(e, "reason")) && void 0 !== n ? n : "",
+                                r = N.default.getUser(a);
+                            await d.default.banUser(i.id, a, s, o), c.default.sendBotMessage(l.id, v.default.Messages.COMMAND_BAN_CONFIRMATION.format({
+                                user: null != r ? S.default.getUserTag(r) : a
+                            }))
+                        };
+                        s().catch(() => {
+                            c.default.sendBotMessage(l.id, v.default.Messages.COMMAND_BAN_ERROR)
+                        })
+                    }
+                }, {
+                    id: "-13",
+                    name: "timeout",
+                    displayName: "timeout",
+                    type: p.ApplicationCommandType.CHAT,
+                    inputType: M.ApplicationCommandInputType.BUILT_IN,
+                    applicationId: g.BuiltInSectionId.BUILT_IN,
+                    get description() {
+                        return v.default.Messages.COMMAND_TIMEOUT_DESCRIPTION
+                    },
+                    get displayDescription() {
+                        return v.default.Messages.COMMAND_TIMEOUT_DESCRIPTION
+                    },
+                    options: [{
+                        name: "user",
+                        displayName: "user",
+                        type: p.ApplicationCommandOptionType.USER,
+                        get description() {
+                            return v.default.Messages.COMMAND_TIMEOUT_USER_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_TIMEOUT_USER_DESCRIPTION
+                        },
+                        required: !0
+                    }, {
+                        name: "duration",
+                        displayName: "duration",
+                        type: p.ApplicationCommandOptionType.STRING,
+                        get description() {
+                            return v.default.Messages.COMMAND_TIMEOUT_DURATION_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_TIMEOUT_DURATION_DESCRIPTION
+                        },
+                        required: !0,
+                        get choices() {
+                            return (0, h.getDisableCommunicationDurationOptions)().map(e => ({
+                                ...e,
+                                name: e.label,
+                                displayName: e.label
+                            }))
+                        }
+                    }, {
+                        name: "reason",
+                        displayName: "reason",
+                        type: p.ApplicationCommandOptionType.STRING,
+                        get description() {
+                            return v.default.Messages.COMMAND_TIMEOUT_REASON_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_TIMEOUT_REASON_DESCRIPTION
+                        },
+                        required: !1
+                    }],
+                    predicate: e => {
+                        let {
+                            guild: t
+                        } = e;
+                        return E.default.can(O.Permissions.MODERATE_MEMBERS, t)
+                    },
+                    execute: (e, t) => {
+                        let {
+                            guild: n,
+                            channel: i
+                        } = t;
+                        if (null == n) return;
+                        let l = y(e, "user");
+                        if (!(0, f.canToggleCommunicationDisableOnUser)(n.id, l)) {
+                            c.default.sendBotMessage(i.id, v.default.Messages.COMMAND_TIMEOUT_UNABLE);
+                            return
+                        }
+                        let a = async () => {
+                            var t, a;
+                            let o = null !== (t = y(e, "duration")) && void 0 !== t ? t : "",
+                                r = null !== (a = y(e, "reason")) && void 0 !== a ? a : "",
+                                u = N.default.getUser(l);
+                            if (null == u) throw Error();
+                            await d.default.setCommunicationDisabledUntil({
+                                guildId: n.id,
+                                userId: l,
+                                communicationDisabledUntilTimestamp: s().add(o, "s").toISOString(),
+                                duration: o,
+                                reason: r
+                            }), c.default.sendBotMessage(i.id, v.default.Messages.COMMAND_TIMEOUT_CONFIRMATION.format({
+                                user: S.default.getUserTag(u),
+                                duration: o
+                            }))
+                        };
+                        a().catch(() => {
+                            c.default.sendBotMessage(i.id, v.default.Messages.COMMAND_TIMEOUT_ERROR)
+                        })
+                    }
+                }, {
+                    id: "-14",
+                    name: "msg",
+                    displayName: "msg",
+                    type: p.ApplicationCommandType.CHAT,
+                    inputType: M.ApplicationCommandInputType.BUILT_IN,
+                    applicationId: g.BuiltInSectionId.BUILT_IN,
+                    get description() {
+                        return v.default.Messages.COMMAND_MSG_DESCRIPTION
+                    },
+                    get displayDescription() {
+                        return v.default.Messages.COMMAND_MSG_DESCRIPTION
+                    },
+                    options: [{
+                        name: "user",
+                        displayName: "user",
+                        type: p.ApplicationCommandOptionType.USER,
+                        get description() {
+                            return v.default.Messages.COMMAND_MSG_USER_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_MSG_USER_DESCRIPTION
+                        },
+                        required: !0
+                    }, {
+                        name: "message",
+                        displayName: "message",
+                        type: p.ApplicationCommandOptionType.STRING,
+                        get description() {
+                            return v.default.Messages.COMMAND_MSG_MESSAGE_DESCRIPTION
+                        },
+                        get displayDescription() {
+                            return v.default.Messages.COMMAND_MSG_MESSAGE_DESCRIPTION
+                        },
+                        required: !0
+                    }],
+                    execute: (e, t) => {
+                        var n;
+                        let {
+                            channel: i
+                        } = t, a = y(e, "user"), s = null !== (n = y(e, "message")) && void 0 !== n ? n : "", o = async () => {
+                            await u.default.openPrivateChannel(a).then(e => {
+                                let t = A.default.getChannel(e);
+                                l(null != t, "Newly created PrivateChannel is null"), c.default.sendMessage(t.id, m.default.parse(t, s))
+                            })
+                        };
+                        o().catch(() => {
+                            c.default.sendBotMessage(i.id, v.default.Messages.COMMAND_MSG_ERROR)
+                        })
+                    }
+                }],
+                L = P.filter(e => ["gif", "tenor", "tts", "me", "tableflip", "unflip", "shrug", "spoiler", "nick"].includes(e.name)),
+                U = (e, t, n) => {
+                    let i = t ? P : L;
+                    return i = i.filter(t => t.type === e && (!n || t.inputType === M.ApplicationCommandInputType.BUILT_IN_TEXT || t.inputType === M.ApplicationCommandInputType.BUILT_IN_INTEGRATION))
+                }
+        },
+        369010: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                useTopCommands: function() {
+                    return o
+                },
+                useTopRealCommands: function() {
+                    return r
+                }
+            });
+            var i = n("884691"),
+                l = n("446674"),
+                a = n("872173"),
+                s = n("342564");
+
+            function o(e) {
+                i.useEffect(() => {
+                    a.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []);
+                let t = (0, l.useStateFromStores)([s.default], () => s.default.getTopCommandsWithoutLoadingLatest()),
+                    n = i.useMemo(() => (0, s.getFilteredTopCommands)(t, e), [t, e]);
+                return n
             }
-            async function s() {
-                i.default.dispatch({
-                    type: "ENTITLEMENTS_GIFTABLE_FETCH"
+
+            function r(e) {
+                i.useEffect(() => {
+                    a.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []);
+                let t = (0, l.useStateFromStores)([s.default], () => s.default.getTopCommandsWithoutLoadingLatest()),
+                    n = i.useMemo(() => {
+                        let n = (0, s.getFilteredTopCommands)(t, e);
+                        return (0, s.getTopRealCommands)(n)
+                    }, [t, e]);
+                return n
+            }
+        },
+        342564: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                getTopRealCommands: function() {
+                    return m
+                },
+                getFilteredTopCommands: function() {
+                    return _
+                },
+                default: function() {
+                    return A
+                }
+            }), n("222007"), n("424973");
+            var i = n("917351"),
+                l = n.n(i),
+                a = n("446674"),
+                s = n("913144"),
+                o = n("798609"),
+                r = n("80507"),
+                u = n("374363"),
+                d = n("317041"),
+                c = n("397336");
+            let p = {
+                    pendingUsages: []
+                },
+                f = new r.default({
+                    computeBonus: () => 1,
+                    computeWeight: e => e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 0,
+                    lookupKey: e => e,
+                    afterCompute: () => {},
+                    numFrequentlyItems: 500
                 });
-                try {
-                    let t = await (0, r.httpGetWithCountryCodeQuery)({
-                        url: l.Endpoints.ENTITLEMENTS_GIFTABLE
+
+            function m(e) {
+                let t = new Set;
+                for (let n of e) {
+                    let e = n.split(d.SUB_COMMAND_KEY_SEPARATOR)[0];
+                    if (Number(e) > 0 && t.add(e), t.size >= d.DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT) break
+                }
+                return [...t]
+            }
+
+            function _(e, t) {
+                return e.filter(e => {
+                    if (e.includes(":")) return null != t.guild && t.guild.id === e.split(":")[1];
+                    return !0
+                }).map(e => e.split(":")[0])
+            }
+
+            function I(e, t) {
+                return 0 > Number(t.id) ? t.id : null != e.guild && null != t.guildId ? "".concat(t.id, ":").concat(e.guild.id) : t.id
+            }
+
+            function C() {
+                var e, t;
+                let n = u.default.frecencyWithoutFetchingLatest,
+                    i = null !== (t = null === (e = n.applicationCommandFrecency) || void 0 === e ? void 0 : e.applicationCommands) && void 0 !== t ? t : {};
+                f.overwriteHistory(l.mapValues(i, e => ({
+                    ...e,
+                    recentUses: e.recentUses.map(Number).filter(e => e > 0)
+                })), p.pendingUsages)
+            }
+            class T extends a.default.PersistedStore {
+                initialize(e) {
+                    null != e && (p = e), this.syncWith([u.default], C)
+                }
+                getState() {
+                    return p
+                }
+                hasPendingUsage() {
+                    return p.pendingUsages.length > 0
+                }
+                getCommandFrecencyWithoutLoadingLatest() {
+                    return f
+                }
+                getScoreWithoutLoadingLatest(e, t) {
+                    var n;
+                    return null !== (n = f.getScore(I(e, t))) && void 0 !== n ? n : 0
+                }
+                getTopCommandsWithoutLoadingLatest() {
+                    return f.frequently
+                }
+            }
+            T.displayName = "ApplicationCommandFrecencyStore", T.persistKey = "ApplicationCommandFrecencyV2";
+            var A = new T(s.default, {
+                APPLICATION_COMMAND_USED: function(e) {
+                    let {
+                        command: t,
+                        context: n
+                    } = e;
+                    if (t.type !== o.ApplicationCommandType.CHAT) return !1;
+                    let i = I(n, t);
+                    p.pendingUsages.push({
+                        key: i,
+                        timestamp: Date.now()
+                    }), f.track(i), f.compute()
+                },
+                USER_SETTINGS_PROTO_UPDATE: function(e) {
+                    let {
+                        settings: {
+                            type: t
+                        },
+                        wasSaved: n
+                    } = e;
+                    if (t !== c.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+                    p.pendingUsages = []
+                }
+            })
+        },
+        9566: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                fetchApplicationCommandIndex: function() {
+                    return o
+                },
+                requestApplicationCommandIndex: function() {
+                    return r
+                }
+            });
+            var i = n("872717"),
+                l = n("913144"),
+                a = n("599110"),
+                s = n("49111");
+            async function o(e, t, n) {
+                let o, r = 0;
+                switch (e.type) {
+                    case "channel":
+                        o = s.Endpoints.APPLICATION_COMMAND_INDEX_CHANNEL(e.channelId);
+                        break;
+                    case "guild":
+                        o = s.Endpoints.APPLICATION_COMMAND_INDEX_GUILD(e.guildId);
+                        break;
+                    case "user":
+                        o = s.Endpoints.APPLICATION_COMMAND_INDEX_USER
+                }
+                let u = async t => r >= 3 ? (c(!0), l.default.dispatch({
+                    type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE",
+                    target: e
+                })) : (await new Promise(e => setTimeout(e, t)), d()), d = () => i.default.get({
+                    url: o,
+                    retries: 3 - r - 1,
+                    signal: n.signal,
+                    onRequestCreated: () => r++
+                }).then(t => 202 === t.status ? u(5e3) : (c(!1), l.default.dispatch({
+                    type: "APPLICATION_COMMAND_INDEX_FETCH_SUCCESS",
+                    target: e,
+                    index: t.body
+                })), t => {
+                    if (n.signal.aborted) {
+                        c(!0);
+                        return
+                    }
+                    return 429 === t.status ? u(1e3 * t.body.retry_after) : (c(!0), l.default.dispatch({
+                        type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE",
+                        target: e
+                    }))
+                }), c = e => {
+                    let i = performance.now() - t;
+                    a.default.track(s.AnalyticEvents.APPLICATION_COMMAND_PERFORMANCE, {
+                        duration_ms: i,
+                        error: e,
+                        aborted: n.signal.aborted,
+                        include_applications: !0,
+                        retries: Math.max(r - 1, 0),
+                        kind: null,
+                        command_type: null
+                    })
+                };
+                await d()
+            }
+
+            function r(e) {
+                l.default.dispatch({
+                    type: "APPLICATION_COMMAND_INDEX_FETCH_REQUEST",
+                    start: performance.now(),
+                    target: e
+                })
+            }
+        },
+        988721: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return K
+                },
+                useContextIndexState: function() {
+                    return j
+                },
+                useUserIndexState: function() {
+                    return z
+                },
+                useDiscoveryState: function() {
+                    return X
+                },
+                useQueryState: function() {
+                    return Q
+                }
+            }), n("222007"), n("424973"), n("881410");
+            var i, l, a = n("884691"),
+                s = n("627445"),
+                o = n.n(s),
+                r = n("917351"),
+                u = n.n(r),
+                d = n("811022"),
+                c = n("446674"),
+                p = n("913144"),
+                f = n("851387"),
+                m = n("892692"),
+                _ = n("915639"),
+                I = n("872173"),
+                C = n("42203"),
+                T = n("305961"),
+                A = n("697218"),
+                E = n("599110"),
+                N = n("589777"),
+                S = n("369010"),
+                M = n("342564"),
+                g = n("9566"),
+                O = n("972620"),
+                h = n("524768"),
+                v = n("389153"),
+                D = n("123373"),
+                y = n("217946"),
+                R = n("317041"),
+                P = n("49111");
+            let L = new d.default("ApplicationCommandIndexStore"),
+                U = Symbol("currentUser"),
+                B = Symbol("stale"),
+                b = Symbol("current"),
+                H = Object.freeze({
+                    descriptors: [],
+                    commands: [],
+                    sectionedCommands: [],
+                    loading: !0
+                }),
+                F = Object.freeze({
+                    serverVersion: b,
+                    fetchState: {
+                        fetching: !1
+                    },
+                    result: {
+                        sections: {},
+                        sectionIdsByBotId: {},
+                        version: b,
+                        commandTypeCount: {}
+                    }
+                }),
+                w = Object.freeze({
+                    serverVersion: B,
+                    fetchState: {
+                        fetching: !1
+                    }
+                }),
+                G = {
+                    sensitivity: "accent",
+                    numeric: !0
+                };
+
+            function x(e) {
+                switch (e.type) {
+                    case "guild":
+                        return e.guildId;
+                    case "channel":
+                        return e.channelId;
+                    case "user":
+                        return U
+                }
+            }
+
+            function Y(e, t) {
+                let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                    i = x(e),
+                    l = V.indices[i];
+                return null != l ? ("fetchState" in t && l.fetchState.fetching && l.fetchState.abort.abort(), V.indices[i] = {
+                    ...l,
+                    ...t
+                }) : n && (V.indices[i] = {
+                    serverVersion: B,
+                    fetchState: {
+                        fetching: !1
+                    },
+                    ...t
+                }), l
+            }
+
+            function W(e) {
+                let t = x(e),
+                    n = V.indices[t];
+                (null == n ? void 0 : n.fetchState.fetching) && n.fetchState.abort.abort(), delete V.indices[t]
+            }
+
+            function k() {
+                for (let e of Object.values(V.indices)) e.fetchState.fetching && e.fetchState.abort.abort();
+                V.indices = {}
+            }
+            class q extends c.default.Store {
+                initialize() {
+                    this.waitFor(_.default), this.syncWith([_.default], () => {
+                        ! function() {
+                            let e = _.default.locale;
+                            e !== V.oldLocale && (k(), V.collator = new Intl.Collator(e, {
+                                sensitivity: "accent",
+                                numeric: !0
+                            }), V.oldLocale = e)
+                        }()
+                    })
+                }
+                getContextState(e) {
+                    var t, n;
+                    return null != e && J(e) ? null !== (n = this.indices[null !== (t = e.guild_id) && void 0 !== t ? t : e.id]) && void 0 !== n ? n : w : F
+                }
+                getUserState() {
+                    var e;
+                    return (0, v.isInUserAppExperiment)({
+                        location: "getUserState"
+                    }, {
+                        autoTrackExposure: !1
+                    }) ? null !== (e = this.indices[U]) && void 0 !== e ? e : w : F
+                }
+                query(e, t, n) {
+                    let i = A.default.getCurrentUser();
+                    if (null == i) return H;
+                    let l = this.getContextState(e),
+                        a = this.getUserState(),
+                        s = (0, D.buildPermissionContext)(e, t.commandType),
+                        o = !1 !== t.applicationCommands && s.hasBaseAccessPermissions,
+                        r = !1;
+                    if (n.allowFetch) {
+                        let t = o && J(e);
+                        t && (E.default.track(P.AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH, {
+                            miss: null == l.result,
+                            size: Object.keys(V.indices).length
+                        }), ee(l) && (null != e.guild_id ? (0, g.requestApplicationCommandIndex)({
+                            type: "guild",
+                            guildId: e.guild_id
+                        }) : (0, g.requestApplicationCommandIndex)({
+                            type: "channel",
+                            channelId: e.id
+                        }), r = !0)), (0, v.isInUserAppExperiment)({
+                            location: "query"
+                        }) && ee(a) && ((0, g.requestApplicationCommandIndex)({
+                            type: "user"
+                        }), r = !0)
+                    }
+                    let u = Z({
+                        permissionContext: s,
+                        text: t.text,
+                        allowApplicationCommands: o,
+                        builtIns: t.builtIns,
+                        scoreMethod: n.scoreMethod,
+                        allowEmptySections: n.allowEmptySections,
+                        contextState: l,
+                        userState: a
                     });
-                    i.default.dispatch({
-                        type: "ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS",
-                        entitlements: t.body
+                    return u.loading = u.loading || r, u
+                }
+                constructor(...e) {
+                    super(...e), this.indices = {}, this.oldLocale = _.default.locale, this.collator = new Intl.Collator(_.default.locale, G)
+                }
+            }
+            q.displayName = "ApplicationCommandIndexStore";
+            let V = new q(p.default, {
+                LOGOUT: k,
+                CONNECTION_OPEN: k,
+                APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function(e) {
+                    var t;
+                    let {
+                        target: n,
+                        start: i
+                    } = e;
+                    if (ee(null !== (t = V.indices[x(n)]) && void 0 !== t ? t : w)) {
+                        let e = new AbortController;
+                        Y(n, {
+                            fetchState: {
+                                fetching: !0,
+                                abort: e
+                            }
+                        }, !0), (0, g.fetchApplicationCommandIndex)(n, i, e)
+                    }
+                },
+                APPLICATION_COMMAND_INDEX_FETCH_SUCCESS: function(e) {
+                    var t, n, i;
+                    let {
+                        target: l,
+                        index: a
+                    } = e, s = null === (t = A.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
+                    if (null == s) return !1;
+                    let o = {},
+                        r = {},
+                        u = new Set;
+                    for (let e of a.applications) {
+                        if (null == e.bot && null != e.bot_id) {
+                            r[e.bot_id] = e.id;
+                            let t = A.default.getUser(e.bot_id);
+                            null != t ? e.bot = t : u.add(e.bot_id)
+                        } else null != e.bot && (r[e.bot.id] = e.id);
+                        let t = {
+                            descriptor: {
+                                ...(0, v.getApplicationCommandSection)(function(e) {
+                                    return {
+                                        description: e.description,
+                                        icon: e.icon,
+                                        id: e.id,
+                                        name: e.name,
+                                        bot: e.bot
+                                    }
+                                }(e)),
+                                permissions: null != e.permissions ? (0, m.keyPermissions)(ei(e.permissions, s)) : void 0,
+                                botId: e.bot_id
+                            },
+                            commands: {}
+                        };
+                        o[e.id] = t
+                    }
+                    "guild" === l.type && u.size > 0 && f.default.requestMembersById(l.guildId, [...u]);
+                    let d = {};
+                    for (let e of (0, v.buildApplicationCommands)(a.application_commands.map(e => (function(e, t) {
+                            var n, i, l, a, s;
+                            let o = {
+                                ...e,
+                                description: null !== (l = null !== (i = e.description_default) && void 0 !== i ? i : e.description) && void 0 !== l ? l : "",
+                                dm_permission: void 0,
+                                name: null !== (a = e.name_default) && void 0 !== a ? a : e.name,
+                                options: null !== (s = null === (n = e.options) || void 0 === n ? void 0 : n.map(et)) && void 0 !== s ? s : [],
+                                permissions: null != e.permissions ? ei(e.permissions, t) : void 0
+                            };
+                            return e.description !== e.description_default && (o.description_localized = e.description), e.name !== e.name_default && (o.name_localized = e.name), o
+                        })(e, s)), !0)) {
+                        let t = o[e.applicationId];
+                        if (null == t) {
+                            L.error("Command has no matching application");
+                            continue
+                        }
+                        t.commands[e.id] = e, d[e.type] = (null !== (n = d[e.type]) && void 0 !== n ? n : 0) + 1
+                    }
+                    let c = null !== (i = a.version) && void 0 !== i ? i : b;
+                    Y(l, {
+                        serverVersion: c,
+                        result: {
+                            sections: o,
+                            sectionIdsByBotId: r,
+                            version: c,
+                            commandTypeCount: d
+                        },
+                        fetchState: {
+                            fetching: !1
+                        }
                     })
-                } catch (t) {
-                    i.default.dispatch({
-                        type: "ENTITLEMENTS_GIFTABLE_FETCH_FAIL"
+                },
+                APPLICATION_COMMAND_INDEX_FETCH_FAILURE: function(e) {
+                    let {
+                        target: t
+                    } = e;
+                    Y(t, {
+                        fetchState: {
+                            fetching: !1,
+                            retryAfter: Date.now() + 5e3
+                        }
                     })
+                },
+                APPLICATION_COMMAND_EXECUTE_BAD_VERSION: function(e) {
+                    let t, {
+                        channelId: n,
+                        guildId: i
+                    } = e;
+                    Y(t = null != i ? {
+                        type: "guild",
+                        guildId: i
+                    } : {
+                        type: "channel",
+                        channelId: n
+                    }, {
+                        serverVersion: B
+                    })
+                },
+                CHANNEL_DELETE: function(e) {
+                    let {
+                        channel: t
+                    } = e;
+                    W({
+                        type: "channel",
+                        channelId: t.id
+                    })
+                },
+                GUILD_DELETE: function(e) {
+                    let {
+                        guild: t
+                    } = e;
+                    W({
+                        type: "guild",
+                        guildId: t.id
+                    })
+                },
+                GUILD_APPLICATION_COMMAND_INDEX_UPDATE: function(e) {
+                    var t;
+                    let {
+                        guildId: n,
+                        version: i
+                    } = e, l = Y({
+                        type: "guild",
+                        guildId: n
+                    }, {
+                        serverVersion: null != i ? i : B
+                    }), a = null == l ? void 0 : null === (t = l.result) || void 0 === t ? void 0 : t.sectionIdsByBotId;
+                    if (null != a)
+                        for (let e in a) {
+                            let t = C.default.getDMFromUserId(e);
+                            null != t && Y({
+                                type: "channel",
+                                channelId: t
+                            }, {
+                                serverVersion: B
+                            })
+                        }
+                },
+                GUILD_MEMBERS_CHUNK: function(e) {
+                    var t;
+                    let {
+                        guildId: n,
+                        members: i
+                    } = e, l = x({
+                        type: "guild",
+                        guildId: n
+                    }), a = null === (t = V.indices[l]) || void 0 === t ? void 0 : t.result;
+                    if (null == a) return !1;
+                    let s = !1;
+                    return i.forEach(e => {
+                        let t = a.sectionIdsByBotId[e.user.id];
+                        if (null != t) {
+                            let n = a.sections[t];
+                            o(null != n, "Bot has no matching index section"), o(null != n.descriptor.application, "Bot's index section has no application info");
+                            let i = n.descriptor.application;
+                            i.bot = e.user, n.descriptor = (0, v.getApplicationCommandSection)(i), s = !0
+                        }
+                    }), s
+                }
+            });
+            var K = V;
+
+            function j(e, t, n) {
+                let [i, l] = a.useState(!0), s = (0, c.useStateFromStoresObject)([V], () => V.getContextState(e));
+                return a.useEffect(() => {
+                    if (i && null != e) {
+                        if (n) {
+                            let n = t && J(e);
+                            n && (E.default.track(P.AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH, {
+                                miss: null == s.result,
+                                size: Object.keys(V.indices).length
+                            }), ee(s) && (null != e.guild_id ? (0, g.requestApplicationCommandIndex)({
+                                type: "guild",
+                                guildId: e.guild_id
+                            }) : (0, g.requestApplicationCommandIndex)({
+                                type: "channel",
+                                channelId: e.id
+                            })))
+                        }
+                        l(!1)
+                    }
+                }, [s, n, e, t, i]), s
+            }
+
+            function z(e, t) {
+                let [n, i] = a.useState(!0), l = (0, c.useStateFromStoresObject)([V], () => V.getUserState()), s = (0, v.useIsInUserAppExperiment)({
+                    location: "useUserIndexState"
+                });
+                return a.useEffect(() => {
+                    n && (t && ee(l) && e && s && (0, g.requestApplicationCommandIndex)({
+                        type: "user"
+                    }), i(!1))
+                }, [l, t, e, s, n]), l
+            }
+
+            function X(e, t, n, i) {
+                let {
+                    descriptors: l,
+                    commands: s,
+                    sectionedCommands: o,
+                    loading: r
+                } = Q(e, n, i), u = (0, S.useTopCommands)({
+                    channel: e,
+                    guild: t
+                });
+                return a.useMemo(() => {
+                    if (!i.includeFrecency || 0 === u.length) return {
+                        descriptors: l,
+                        commands: s,
+                        sectionedCommands: o,
+                        loading: r
+                    };
+                    let n = {
+                            channel: e,
+                            guild: t
+                        },
+                        a = s.filter(e => u.includes(e.id)).sort((e, t) => {
+                            let i = M.default.getScoreWithoutLoadingLatest(n, e),
+                                l = M.default.getScoreWithoutLoadingLatest(n, t);
+                            return l - i
+                        }).splice(0, R.DISCOVERY_COMMANDS_FRECENCY_LIMIT);
+                    return 0 === a.length ? {
+                        descriptors: l,
+                        commands: s,
+                        sectionedCommands: o,
+                        loading: r
+                    } : {
+                        descriptors: [N.BUILT_IN_SECTIONS[R.BuiltInSectionId.FRECENCY], ...l],
+                        commands: a.concat(s),
+                        sectionedCommands: [{
+                            section: N.BUILT_IN_SECTIONS[R.BuiltInSectionId.FRECENCY],
+                            data: a
+                        }, ...o],
+                        loading: r
+                    }
+                }, [r, i.includeFrecency, u, e, t, s, l, o])
+            }
+
+            function Q(e, t, n) {
+                let i = (0, D.usePermissionContext)(e, t.commandType),
+                    l = !1 !== t.applicationCommands && i.hasBaseAccessPermissions,
+                    s = j(e, l, n.allowFetch),
+                    o = z(l, n.allowFetch);
+                return a.useMemo(() => Z({
+                    permissionContext: i,
+                    text: t.text,
+                    allowApplicationCommands: l,
+                    builtIns: t.builtIns,
+                    scoreMethod: n.scoreMethod,
+                    allowEmptySections: n.allowEmptySections,
+                    contextState: s,
+                    userState: o
+                }), [i, t.text, t.builtIns, l, n.scoreMethod, n.allowEmptySections, s, o])
+            }
+
+            function Z(e) {
+                let {
+                    permissionContext: t,
+                    contextState: n,
+                    userState: i,
+                    text: l,
+                    builtIns: a = O.BuiltInCommandFilter.ALLOW,
+                    allowApplicationCommands: s = !0,
+                    allowEmptySections: r = !1,
+                    scoreMethod: d = O.ScoreMethod.NONE
+                } = e, {
+                    commandType: c
+                } = t, p = null == l ? void 0 : l.toLowerCase(), f = null == p ? void 0 : p.split(" "), m = a === O.BuiltInCommandFilter.ONLY_TEXT, _ = a !== O.BuiltInCommandFilter.DENY ? (0, N.getBuiltInCommands)(c, !0, m) : [], C = [], A = {
+                    permissionContext: t,
+                    query: p,
+                    splitQuery: f,
+                    allowEmptySections: r,
+                    scoreMethod: d
+                };
+                if (s) {
+                    var E, S, g, h;
+                    let e = null !== (g = null === (E = n.result) || void 0 === E ? void 0 : E.sections) && void 0 !== g ? g : {},
+                        t = null !== (h = null === (S = i.result) || void 0 === S ? void 0 : S.sections) && void 0 !== h ? h : {},
+                        l = [...Object.keys(e), ...Object.keys(t).filter(t => !(t in e))];
+                    for (let n of l) {
+                        let i, l;
+                        let a = e[n],
+                            s = t[n];
+                        if (null != a && null != s) {
+                            for (let e in i = s.descriptor, l = [], s.commands) {
+                                let t = s.commands[e];
+                                l.push(t)
+                            }
+                            for (let e in a.commands)
+                                if (!(e in s.commands)) {
+                                    let t = a.commands[e];
+                                    l.push(t)
+                                }
+                        } else null != a ? (i = a.descriptor, l = Object.values(a.commands)) : null != s && (i = s.descriptor, l = Object.values(s.commands));
+                        o(null != i, "Failed to select application descriptor"), o(null != l, "Failed to select list of application commands");
+                        let r = $(i, l, A);
+                        null != r && C.push(r)
+                    }
+                    C.sort((e, t) => el(e.section.name, t.section.name))
+                }
+                if (_.length > 0 || !0 === r) {
+                    let e = $(N.BUILT_IN_SECTIONS[R.BuiltInSectionId.BUILT_IN], _, A);
+                    null != e && C.push(e)
+                }
+                let v = u.flatMap(C, e => e.data);
+                if (d === O.ScoreMethod.COMMAND_ONLY || d === O.ScoreMethod.COMMAND_OR_APPLICATION) {
+                    let e = t.context,
+                        n = T.default.getGuild(t.context.guild_id);
+                    I.FrecencyUserSettingsActionCreators.loadIfNecessary(), v.sort((t, i) => {
+                        var l, a;
+                        let s = null !== (l = t.score) && void 0 !== l ? l : 0,
+                            o = null !== (a = i.score) && void 0 !== a ? a : 0;
+                        if (s !== o) return s - o;
+                        let r = M.default.getScoreWithoutLoadingLatest({
+                                channel: e,
+                                guild: n
+                            }, t),
+                            u = M.default.getScoreWithoutLoadingLatest({
+                                channel: e,
+                                guild: n
+                            }, i);
+                        return r !== u ? u - r : el(t.displayName, i.displayName)
+                    })
+                }
+                return {
+                    commands: v,
+                    descriptors: C.map(e => e.section),
+                    sectionedCommands: C,
+                    loading: (null == n ? void 0 : n.fetchState.fetching) === !0 || (null == i ? void 0 : i.fetchState.fetching) === !0
+                }
+            }
+
+            function $(e, t, n) {
+                let i, {
+                        query: l,
+                        splitQuery: a,
+                        allowEmptySections: s,
+                        scoreMethod: o,
+                        permissionContext: r
+                    } = n,
+                    {
+                        context: u,
+                        userId: d,
+                        roleIds: c,
+                        isImpersonating: p
+                    } = r,
+                    f = null != u.guild_id ? y.computeAllowedForUser(e.permissions, u.guild_id, d, c, p) : null,
+                    m = null != u.guild_id ? y.computeAllowedForChannel(e.permissions, u.id, u.guild_id) : null,
+                    _ = [];
+                for (let e of t) y.hasAccess(e, r, f, m) === y.HasAccessResult.ALLOWED && _.push(e);
+                return 0 !== (i = (o === O.ScoreMethod.COMMAND_ONLY || o === O.ScoreMethod.COMMAND_OR_APPLICATION) && null != l && null != a ? function(e, t, n, i, l) {
+                    let a;
+                    let s = [];
+                    if (l === O.ScoreMethod.APPLICATION_ONLY || l === O.ScoreMethod.COMMAND_OR_APPLICATION) {
+                        let t = i.name.toLocaleLowerCase();
+                        t.startsWith(e) ? a = 5 : t.includes(e) && (a = 6)
+                    }
+                    let o = t[0],
+                        r = t.slice(1).join(" ");
+                    for (let t of n) {
+                        let n;
+                        if (l === O.ScoreMethod.COMMAND_ONLY || l === O.ScoreMethod.COMMAND_OR_APPLICATION) {
+                            var u;
+                            n = null !== (u = function(e, t, n, i) {
+                                var l;
+                                let a = e.name,
+                                    s = e.displayName;
+                                if (a.startsWith(t) || s.startsWith(t)) return 0;
+                                if (a.startsWith(n)) {
+                                    let e = a.split(" ").slice(1).join(" ");
+                                    if (e.startsWith(i)) return 1
+                                }
+                                if (s.startsWith(n)) {
+                                    let e = s.split(" ").slice(1).join(" ");
+                                    if (e.startsWith(i)) return 1
+                                }
+                                if (a.includes(t) || (null == s ? void 0 : s.includes(t))) return 2;
+                                let o = !1;
+                                for (let {
+                                        name: n,
+                                        serverLocalizedName: i
+                                    }
+                                    of null !== (l = e.options) && void 0 !== l ? l : []) {
+                                    if (n.startsWith(t) || "".concat(a, " ").concat(n).startsWith(t) || null != s && "".concat(s, " ").concat(n).startsWith(t) || null != i && (i.startsWith(t) || "".concat(a, " ").concat(i).startsWith(t) || null != s && "".concat(s, " ").concat(i).startsWith(t))) return 3;
+                                    (n.includes(t) || (null == i ? void 0 : i.includes(t))) && (o = !0)
+                                }
+                                if (o) return 4
+                            }(t, e, o, r)) && void 0 !== u ? u : a
+                        } else n = a;
+                        void 0 !== n && s.push({
+                            ...t,
+                            score: n
+                        })
+                    }
+                    return s
+                }(l, a, _, e, o) : _).length || s ? ((o === O.ScoreMethod.NONE || o === O.ScoreMethod.APPLICATION_ONLY) && i.sort((e, t) => el(e.displayName, t.displayName)), {
+                    section: e,
+                    data: i
+                }) : null
+            }
+
+            function J(e) {
+                var t;
+                return null != e.guild_id || e.type === P.ChannelTypes.DM && (null === (t = A.default.getUser(e.getRecipientId())) || void 0 === t ? void 0 : t.bot) === !0
+            }
+
+            function ee(e) {
+                return !! function(e) {
+                    var t;
+                    return (null === (t = e.result) || void 0 === t ? void 0 : t.version) !== e.serverVersion
+                }(e) && !e.fetchState.fetching && (null == e.fetchState.retryAfter || Date.now() >= e.fetchState.retryAfter)
+            }
+
+            function et(e) {
+                var t, n, i, l;
+                let a = {
+                    ...e,
+                    choices: null === (t = e.choices) || void 0 === t ? void 0 : t.map(en),
+                    description: null !== (i = e.description_default) && void 0 !== i ? i : e.description,
+                    name: null !== (l = e.name_default) && void 0 !== l ? l : e.name,
+                    options: null === (n = e.options) || void 0 === n ? void 0 : n.map(et)
+                };
+                return e.description !== e.description_default && (a.description_localized = e.description), e.name !== e.name_default && (a.name_localized = e.name), a
+            }
+
+            function en(e) {
+                var t;
+                let n = {
+                    ...e,
+                    name: null !== (t = e.name_default) && void 0 !== t ? t : e.name
+                };
+                return e.name !== e.name_default && (n.name_localized = e.name), n
+            }
+
+            function ei(e, t) {
+                let n = [];
+                if (null != e.user && n.push({
+                        type: h.ApplicationCommandPermissionType.USER,
+                        id: t,
+                        permission: e.user
+                    }), null != e.channels)
+                    for (let [t, i] of Object.entries(e.channels)) n.push({
+                        type: h.ApplicationCommandPermissionType.CHANNEL,
+                        id: t,
+                        permission: i
+                    });
+                if (null != e.roles)
+                    for (let [t, i] of Object.entries(e.roles)) n.push({
+                        type: h.ApplicationCommandPermissionType.ROLE,
+                        id: t,
+                        permission: i
+                    });
+                return n
+            }(l = i || (i = {}))[l.COMMAND_NAME_STARTS_WITH = 0] = "COMMAND_NAME_STARTS_WITH", l[l.STARTS_WITH_COMMAND_NAME = 1] = "STARTS_WITH_COMMAND_NAME", l[l.COMMAND_NAME_CONTAINS = 2] = "COMMAND_NAME_CONTAINS", l[l.STARTS_WITH_COMMAND_OPTION_NAME_OR_OPTION_NAME = 3] = "STARTS_WITH_COMMAND_OPTION_NAME_OR_OPTION_NAME", l[l.OPTION_NAME_CONTAINS = 4] = "OPTION_NAME_CONTAINS", l[l.SECTION_NAME_STARTS_WITH = 5] = "SECTION_NAME_STARTS_WITH", l[l.SECTION_NAME_CONTAINS = 6] = "SECTION_NAME_CONTAINS";
+
+            function el(e, t) {
+                return V.collator.compare(e, t)
+            }
+        },
+        240249: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                getCachedCommand: function() {
+                    return T
+                },
+                getCachedApplicationSection: function() {
+                    return A
+                },
+                getCachedResults: function() {
+                    return E
+                },
+                getChangeKeys: function() {
+                    return N
+                },
+                useDiscovery: function() {
+                    return S
+                },
+                executeQuery: function() {
+                    return M
+                },
+                useQuery: function() {
+                    return g
+                },
+                useCommand: function() {
+                    return O
+                },
+                useCommandsForApplication: function() {
+                    return h
+                },
+                getCommandTypeCount: function() {
+                    return v
+                },
+                useSearchOpenState: function() {
+                    return D
+                },
+                isInIndexExperiment: function() {
+                    return y
+                }
+            }), n("222007"), n("424973");
+            var i = n("884691"),
+                l = n("446674"),
+                a = n("305961"),
+                s = n("697218"),
+                o = n("449008"),
+                r = n("507217"),
+                u = n("589777"),
+                d = n("14090"),
+                c = n("988721"),
+                p = n("972620"),
+                f = n("216193"),
+                m = n("166004"),
+                _ = n("524768"),
+                I = n("317041"),
+                C = n("49111");
+
+            function T(e, t) {
+                var n, i, l, a;
+                if (null == t) return {
+                    application: void 0,
+                    command: void 0
+                };
+                if (!y({
+                        location: "getCachedCommand"
+                    })) {
+                    let e = f.default.getCommand(t),
+                        n = f.default.getApplication(null == e ? void 0 : e.applicationId);
+                    return {
+                        command: e,
+                        application: n
+                    }
+                }
+                let s = c.default.getUserState(),
+                    o = c.default.getContextState(e),
+                    r = Object.values(null !== (l = null === (n = s.result) || void 0 === n ? void 0 : n.sections) && void 0 !== l ? l : {}).concat(Object.values(null !== (a = null === (i = o.result) || void 0 === i ? void 0 : i.sections) && void 0 !== a ? a : {}));
+                for (let e of r) {
+                    let n = e.commands[t];
+                    if (null != n) return {
+                        application: e.descriptor.application,
+                        command: n
+                    }
+                }
+                return {
+                    application: void 0,
+                    command: void 0
+                }
+            }
+
+            function A(e, t, n) {
+                var i, l, a, s, o, r;
+                if (!y({
+                        location: "getCachedApplicationSection"
+                    })) return null === (o = m.default.getApplicationSections(e.id, t)) || void 0 === o ? void 0 : o.find(e => e.id === n);
+                let u = c.default.getUserState(),
+                    d = c.default.getContextState(e),
+                    p = null !== (r = null === (l = u.result) || void 0 === l ? void 0 : null === (i = l.sections) || void 0 === i ? void 0 : i[n]) && void 0 !== r ? r : null === (s = d.result) || void 0 === s ? void 0 : null === (a = s.sections) || void 0 === a ? void 0 : a[n];
+                return null == p ? void 0 : p.descriptor
+            }
+
+            function E(e, t, n) {
+                if (!y({
+                        location: "getCachedResults"
+                    })) {
+                    var i, l;
+                    return {
+                        commands: null !== (i = m.default.getQueryCommands(e.id, t, n)) && void 0 !== i ? i : [],
+                        sections: null !== (l = m.default.getApplicationSections(e.id, t)) && void 0 !== l ? l : []
+                    }
+                }
+                let a = c.default.query(e, {
+                    commandType: t,
+                    text: n
+                }, {
+                    scoreMethod: p.ScoreMethod.COMMAND_OR_APPLICATION,
+                    allowFetch: !1
+                });
+                return {
+                    commands: a.commands,
+                    sections: a.descriptors
+                }
+            }
+
+            function N(e, t, n) {
+                if (!y({
+                        location: "getChangeKeys"
+                    }, {
+                        autoTrackExposure: !1
+                    })) return [m.default.getQueryCommands(e.id, t, n)];
+                let i = c.default.getUserState(),
+                    l = c.default.getContextState(e);
+                return [null == i ? void 0 : i.result, null == l ? void 0 : l.result]
+            }
+
+            function S(e, t, n) {
+                if (!R({
+                        location: "useDiscovery"
+                    })) {
+                    var s, o;
+                    return (0, m.useDiscoveryState)(e, t.commandType, null !== (s = n.placeholderCount) && void 0 !== s ? s : 0, null !== (o = n.limit) && void 0 !== o ? o : 10, {
+                        canOnlyUseTextCommands: t.builtIns === p.BuiltInCommandFilter.ONLY_TEXT,
+                        canUseFrecency: n.includeFrecency
+                    })
+                }
+                let r = (0, l.useStateFromStores)([a.default], () => a.default.getGuild(null == e ? void 0 : e.guild_id), [e.guild_id]),
+                    {
+                        descriptors: d,
+                        commands: f,
+                        sectionedCommands: _,
+                        loading: T
+                    } = (0, c.useDiscoveryState)(e, r, t, {
+                        ...n,
+                        allowFetch: !0
+                    }),
+                    [A, E] = i.useState(null),
+                    N = i.useRef(!1);
+                N.current = T;
+                let S = i.useMemo(() => {
+                    let e = [];
+                    if (null != n.placeholderCount)
+                        for (let i = 0; i < n.placeholderCount; i++) e.push(P(i, t.commandType));
+                    return e
+                }, [t.commandType, n.placeholderCount]);
+                return i.useMemo(() => {
+                    let e = {
+                        loading: N,
+                        commands: f,
+                        activeSections: d,
+                        commandsByActiveSection: _,
+                        filteredSectionId: A,
+                        hasMoreAfter: !1,
+                        placeholders: T ? S : [],
+                        sectionDescriptors: d,
+                        filterSection: e => {
+                            E(e)
+                        },
+                        scrollDown: C.NOOP
+                    };
+                    if (null != A) {
+                        let t = _.find(e => e.section.id === A);
+                        e.activeSections = null != t ? [t.section] : [], e.commandsByActiveSection = null != t ? [t] : []
+                    }
+                    if (T) {
+                        let t = _[0];
+                        if (null != t) e.commandsByActiveSection = [{
+                            section: t.section,
+                            data: [...t.data, ...S]
+                        }, ..._.slice(1)];
+                        else {
+                            let t = u.BUILT_IN_SECTIONS[I.BuiltInSectionId.BUILT_IN];
+                            e.activeSections = [t], e.commandsByActiveSection = [{
+                                section: t,
+                                data: S
+                            }]
+                        }
+                        e.commands = [...f, ...S]
+                    }
+                    return e
+                }, [f, d, A, _, T, S])
+            }
+
+            function M(e, t, n) {
+                if (!y({
+                        location: "executeQuery"
+                    })) {
+                    var i, l, s, o, d;
+                    return !0 === n.allowFetch && r.querySearchManager({
+                        channel: e,
+                        guild: null != e.guild_id ? a.default.getGuild(e.guild_id) : null
+                    }, null !== (i = t.text) && void 0 !== i ? i : "", null !== (l = n.limit) && void 0 !== l ? l : 10, t.commandType), {
+                        commands: null !== (o = m.default.getQueryCommands(e.id, t.commandType, null !== (s = t.text) && void 0 !== s ? s : "")) && void 0 !== o ? o : [],
+                        sections: null !== (d = m.default.getApplicationSections(e.id, t.commandType)) && void 0 !== d ? d : []
+                    }
+                }
+                let {
+                    descriptors: p,
+                    commands: f,
+                    loading: _
+                } = c.default.query(e, t, n), C = [];
+                if (null != n.placeholderCount && _)
+                    for (let e = 0; e < n.placeholderCount; e++) C.push(P(e, t.commandType));
+                return {
+                    commands: _ ? [...f, ...C] : f,
+                    sections: _ && 0 === p.length ? [u.BUILT_IN_SECTIONS[I.BuiltInSectionId.BUILT_IN]] : p
+                }
+            }
+
+            function g(e, t, n) {
+                if (!R({
+                        location: "useQuery"
+                    })) {
+                    var l, a;
+                    return (0, m.useQueryState)(e, t.commandType, null !== (l = t.text) && void 0 !== l ? l : "", null !== (a = n.limit) && void 0 !== a ? a : 10)
+                }
+                let {
+                    descriptors: s,
+                    commands: o,
+                    loading: r
+                } = (0, c.useQueryState)(e, t, {
+                    ...n,
+                    allowFetch: !0
+                }), d = i.useMemo(() => {
+                    let e = [];
+                    if (null != n.placeholderCount)
+                        for (let i = 0; i < n.placeholderCount; i++) e.push(P(i, t.commandType));
+                    return e
+                }, [t.commandType, n.placeholderCount]);
+                return i.useMemo(() => ({
+                    commands: r ? [...o, ...d] : o,
+                    sections: r && 0 === s.length ? [u.BUILT_IN_SECTIONS[I.BuiltInSectionId.BUILT_IN]] : s,
+                    scrollDown: C.NOOP
+                }), [r, o, s, d])
+            }
+
+            function O(e, t) {
+                if (!R({
+                        location: "useCommand"
+                    })) {
+                    var n;
+                    let a = (0, l.useStateFromStores)([s.default], () => {
+                            if (null == e ? void 0 : e.isDM()) {
+                                let t = e.getRecipientId(),
+                                    n = s.default.getUser(t);
+                                if (null != n && n.bot) return n
+                            }
+                            return null
+                        }, [e]),
+                        {
+                            command: o,
+                            application: u
+                        } = (0, l.useStateFromStoresObject)([f.default], () => {
+                            let e = null != t ? f.default.getCommand(t) : void 0,
+                                n = f.default.getApplication(null == e ? void 0 : e.applicationId);
+                            return {
+                                command: e,
+                                application: n
+                            }
+                        });
+                    return (i.useEffect(() => {
+                        null != e && null == o && (null != a ? r.fetchCommandsForApplication({
+                            guildId: null,
+                            channelId: e.id,
+                            applicationId: a.id
+                        }) : null != e.guild_id && null != t && r.fetchCommand(e.guild_id, e.id, t))
+                    }, [a, e, o, t]), null == e || null == e.guild_id && (null == a || null == u || a.id !== (null === (n = u.bot) || void 0 === n ? void 0 : n.id))) ? {
+                        command: void 0,
+                        application: void 0
+                    } : {
+                        command: o,
+                        application: u
+                    }
+                }
+                let a = (0, c.useUserIndexState)(!0, !0),
+                    o = (0, c.useContextIndexState)(e, !0, !0);
+                return i.useMemo(() => {
+                    if (null != t) {
+                        var e, n, i, l;
+                        let s = Object.values(null !== (i = null === (e = a.result) || void 0 === e ? void 0 : e.sections) && void 0 !== i ? i : {}).concat(Object.values(null !== (l = null === (n = o.result) || void 0 === n ? void 0 : n.sections) && void 0 !== l ? l : {}));
+                        for (let e of s) {
+                            let n = e.commands[t];
+                            if (null != n) return {
+                                command: n,
+                                application: e.descriptor.application
+                            }
+                        }
+                    }
+                    return {
+                        command: void 0,
+                        application: void 0
+                    }
+                }, [o.result, a.result, t])
+            }
+
+            function h(e, t, n) {
+                if (!R({
+                        location: "useCommandsForApplication"
+                    })) return i.useEffect(() => {
+                    r.fetchCommands(e.guild_id, e.id, n)
+                }, [n, e]), (0, l.useStateFromStoresObject)([f.default], () => {
+                    let i = f.default.getApplication(t),
+                        l = f.default.getCommands(n, e.id);
+                    return {
+                        commands: l,
+                        application: i
+                    }
+                });
+                let a = (0, c.useUserIndexState)(!0, !0),
+                    s = (0, c.useContextIndexState)(e, !0, !0);
+                return i.useMemo(() => {
+                    var e, i, l, r, u;
+                    let d = null !== (u = null === (i = a.result) || void 0 === i ? void 0 : null === (e = i.sections) || void 0 === e ? void 0 : e[t]) && void 0 !== u ? u : null === (l = s.result) || void 0 === l ? void 0 : l.sections[t];
+                    return {
+                        application: null == d ? void 0 : null === (r = d.descriptor) || void 0 === r ? void 0 : r.application,
+                        commands: null != d ? n.map(e => d.commands[e]).filter(o.isNotNullish) : []
+                    }
+                }, [null == a ? void 0 : a.result, null == s ? void 0 : s.result, t, n])
+            }
+
+            function v(e, t, n) {
+                var i, l, s, o, r, u;
+                if (!y({
+                        location: "getCommandTypeCount"
+                    })) {
+                    if (e.isPrivate()) return null;
+                    {
+                        let i = null != n ? n : null === (s = a.default.getGuild(e.guild_id)) || void 0 === s ? void 0 : s.applicationCommandCounts;
+                        return null !== (o = null == i ? void 0 : i[t]) && void 0 !== o ? o : 0
+                    }
+                }
+                let d = c.default.getUserState(),
+                    p = c.default.getContextState(e);
+                return (null !== (r = null === (i = d.result) || void 0 === i ? void 0 : i.commandTypeCount[t]) && void 0 !== r ? r : 0) + (null !== (u = null === (l = p.result) || void 0 === l ? void 0 : l.commandTypeCount[t]) && void 0 !== u ? u : 0)
+            }
+
+            function D() {
+                !R({
+                    location: "useSearchOpenState"
+                }) && (0, m.useSearchStoreOpenState)()
+            }
+
+            function y(e, t) {
+                return d.default.getCurrentConfig(e, t).enabled
+            }
+
+            function R(e, t) {
+                let [n] = i.useState(y(e, t));
+                return n
+            }
+
+            function P(e, t) {
+                return {
+                    type: t,
+                    inputType: _.ApplicationCommandInputType.PLACEHOLDER,
+                    id: "placeholder-".concat(e),
+                    name: "",
+                    displayName: "",
+                    description: "",
+                    displayDescription: "",
+                    applicationId: ""
                 }
             }
         },
-        596523: function(t, e, n) {
+        972620: function(e, t, n) {
             "use strict";
-            n.r(e), n.d(e, {
-                subscribe: function() {
-                    return s
+            var i, l, a, s;
+            n.r(t), n.d(t, {
+                ScoreMethod: function() {
+                    return i
                 },
-                resubscribe: function() {
-                    return c
+                BuiltInCommandFilter: function() {
+                    return l
+                }
+            }), (a = i || (i = {}))[a.NONE = 0] = "NONE", a[a.APPLICATION_ONLY = 1] = "APPLICATION_ONLY", a[a.COMMAND_ONLY = 2] = "COMMAND_ONLY", a[a.COMMAND_OR_APPLICATION = 3] = "COMMAND_OR_APPLICATION", (s = l || (l = {}))[s.ALLOW = 0] = "ALLOW", s[s.ONLY_TEXT = 1] = "ONLY_TEXT", s[s.DENY = 2] = "DENY"
+        },
+        216193: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return h
+                }
+            }), n("222007"), n("808653"), n("424973");
+            var i = n("917351"),
+                l = n.n(i),
+                a = n("693566"),
+                s = n.n(a),
+                o = n("446674"),
+                r = n("913144"),
+                u = n("798609"),
+                d = n("140596"),
+                c = n("42203"),
+                p = n("957255"),
+                f = n("507217"),
+                m = n("166004"),
+                _ = n("389153");
+            let I = new Map,
+                C = new Set,
+                T = new Set,
+                A = new s({
+                    max: 1e4
+                }),
+                E = new s({
+                    max: 1e4
+                }),
+                N = e => {
+                    let {
+                        guildId: t,
+                        channelId: n,
+                        params: i,
+                        includeApplications: l
+                    } = e;
+                    return (0, m.search)(n, i).then(e => {
+                        var i;
+                        if (null == e) return;
+                        if (null != t && l && C.add(t), 0 === e.applicationCommands.length && (null == e.applications || 0 === e.applications.length)) return;
+                        let a = (0, _.buildApplicationCommands)(e.applicationCommands);
+                        f.updateRegistry(a, null !== (i = e.applications) && void 0 !== i ? i : [], n)
+                    })
                 },
-                changeSubscriptionCurrency: function() {
-                    return S
+                S = l.debounce(e => {
+                    let {
+                        applicationId: t,
+                        guildId: n,
+                        channelId: i,
+                        includeApplications: l
+                    } = e, a = c.default.getChannel(i);
+                    if (null != a)(0, _.canUseApplicationCommands)(p.default, d.default, !1, a) && N({
+                        guildId: n,
+                        channelId: i,
+                        includeApplications: l,
+                        params: {
+                            type: u.ApplicationCommandType.CHAT,
+                            includeApplications: l,
+                            applicationId: t
+                        }
+                    })
+                }, 250),
+                M = l.debounce((e, t, n, i) => {
+                    let l = [...n].filter(_.isSnowflake);
+                    if (0 === l.length) return;
+                    let a = c.default.getChannel(t);
+                    if (null == a || !(0, _.canUseApplicationCommands)(p.default, d.default, !1, a)) return;
+                    let s = l.slice(0, 100),
+                        o = l.slice(100);
+                    N({
+                        guildId: e,
+                        channelId: t,
+                        includeApplications: i,
+                        params: {
+                            type: u.ApplicationCommandType.CHAT,
+                            includeApplications: i,
+                            commandIds: s,
+                            cursor: void 0,
+                            limit: 0
+                        }
+                    }).then(() => {
+                        o.length > 0 && M(e, t, new Set(o), i)
+                    })
+                }, 250);
+            class g extends o.default.Store {
+                hasCommand(e) {
+                    return null != e && A.has(e)
+                }
+                getApplication(e) {
+                    if (null != e) return I.get(e)
+                }
+                getCommand(e) {
+                    if (null != e) return A.get(e)
+                }
+                getCommands(e, t) {
+                    return e.reduce((e, n) => {
+                        let i = E.get(n);
+                        return (null == i ? void 0 : i.channelId) === t && e.push(i.command), e
+                    }, [])
+                }
+            }
+            g.displayName = "ApplicationCommandRegistryStore";
+            let O = new g(r.default, {
+                APPLICATION_COMMAND_FETCH: function(e) {
+                    let {
+                        channelId: t,
+                        commandId: n,
+                        guildId: i
+                    } = e;
+                    if (A.has(n)) return;
+                    T.add(n);
+                    let l = null != i && !C.has(i);
+                    M(i, t, T, l)
                 },
-                changePaymentSource: function() {
-                    return d
+                APPLICATION_COMMANDS_FETCH: function(e) {
+                    let {
+                        channelId: t,
+                        commandIds: n,
+                        guildId: i
+                    } = e;
+                    n.forEach(e => {
+                        var n;
+                        (null === (n = E.get(e)) || void 0 === n ? void 0 : n.channelId) !== t && T.add(e)
+                    });
+                    let l = null != i && !C.has(i);
+                    M(i, t, T, l)
                 },
-                clearError: function() {
+                APPLICATION_COMMANDS_FETCH_FOR_APPLICATION: function(e) {
+                    let {
+                        channelId: t,
+                        guildId: n,
+                        applicationId: i
+                    } = e;
+                    S({
+                        guildId: n,
+                        channelId: t,
+                        applicationId: i,
+                        includeApplications: !0
+                    })
+                },
+                GUILD_APPLICATION_COMMAND_INDEX_UPDATE: function(e) {
+                    let {
+                        guildId: t
+                    } = e;
+                    C.delete(t)
+                },
+                APPLICATION_COMMAND_REGISTRY_UPDATE: function(e) {
+                    let {
+                        applications: t,
+                        commands: n,
+                        channelId: i
+                    } = e;
+                    for (let e of t) I.set(e.id, e);
+                    for (let e of n) T.delete(e.id), A.set(e.id, e), E.set(e.id, {
+                        channelId: i,
+                        command: e
+                    })
+                },
+                APPLICATION_COMMAND_SET_ACTIVE_COMMAND: function(e) {
+                    let {
+                        command: t
+                    } = e;
+                    null != t && A.set(t.id, t)
+                },
+                APPLICATION_COMMAND_SEARCH_STORE_UPDATE: function(e) {
+                    var t, n;
+                    let {
+                        commandType: i,
+                        state: l
+                    } = e;
+                    i === u.ApplicationCommandType.CHAT && (null === (t = l.applicationCommands) || void 0 === t || t.forEach(e => {
+                        A.set(e.id, e)
+                    }), null === (n = l.applicationSections) || void 0 === n || n.forEach(e => {
+                        null != e.application && I.set(e.application.id, e.application)
+                    }))
+                },
+                LOGOUT: function() {
+                    I.clear(), C.clear(), T.clear(), A.reset(), E.reset()
+                }
+            });
+            var h = O
+        },
+        166004: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                search: function() {
+                    return L
+                },
+                default: function() {
+                    return K
+                },
+                useSearchStoreOpenState: function() {
+                    return z
+                },
+                useDiscoveryState: function() {
+                    return X
+                },
+                useQueryState: function() {
+                    return J
+                }
+            }), n("222007"), n("424973"), n("506083");
+            var i = n("884691"),
+                l = n("483366"),
+                a = n.n(l),
+                s = n("693566"),
+                o = n.n(s),
+                r = n("446674"),
+                u = n("872717"),
+                d = n("913144"),
+                c = n("798609"),
+                p = n("763898"),
+                f = n("38654"),
+                m = n("252063"),
+                _ = n("140596"),
+                I = n("685841"),
+                C = n("872173"),
+                T = n("374363"),
+                A = n("42203"),
+                E = n("923959"),
+                N = n("305961"),
+                S = n("957255"),
+                M = n("18494"),
+                g = n("599110"),
+                O = n("589777"),
+                h = n("369010"),
+                v = n("342564"),
+                D = n("524768"),
+                y = n("389153"),
+                R = n("317041"),
+                P = n("49111");
+
+            function L(e, t, n) {
+                var i;
+                let l;
+                if ((null == n ? void 0 : n.abortable) && (null == n ? void 0 : n.signal.aborted)) return Promise.resolve(null);
+                let a = {
+                    type: t.type,
+                    role_ids: null === (i = t.roleIds) || void 0 === i ? void 0 : i.join(",")
+                };
+                "applicationId" in t && null != t.applicationId ? (a.application_id = t.applicationId, l = "application") : "query" in t ? (a.query = t.query, a.limit = t.limit, a.cursor = t.cursor, l = "query") : "cursor" in t ? (a.limit = t.limit, a.cursor = t.cursor, null != t.commandIds && t.commandIds.length > 0 && (a.command_ids = t.commandIds.join(",")), l = "discovery") : l = "unknown", "includeApplications" in t && (a.include_applications = t.includeApplications), "checkPermissions" in t && (a.check_permissions = t.checkPermissions);
+                let s = async i => {
+                    var l;
+                    return await new Promise(e => {
+                        setTimeout(e, i)
+                    }), L(e, {
+                        ...t,
+                        retries: (null !== (l = t.retries) && void 0 !== l ? l : 0) + 1
+                    }, n)
+                };
+                (null == t.retries || 0 === t.retries) && (t.start = performance.now());
+                let o = e => {
+                    var i, s, o;
+                    if (null == t.start) return;
+                    let r = performance.now() - t.start;
+                    g.default.track(P.AnalyticEvents.APPLICATION_COMMAND_PERFORMANCE, {
+                        duration_ms: r,
+                        aborted: null !== (i = null == n ? void 0 : n.signal.aborted) && void 0 !== i && i,
+                        error: e,
+                        kind: l,
+                        command_type: t.type,
+                        include_applications: null !== (s = a.include_applications) && void 0 !== s && s,
+                        retries: null !== (o = t.retries) && void 0 !== o ? o : 0
+                    })
+                };
+                return u.default.get({
+                    url: P.Endpoints.APPLICATION_COMMANDS_SEARCH(e),
+                    query: a,
+                    signal: (null == n ? void 0 : n.abortable) ? n.signal : void 0
+                }).then(e => {
+                    var t, n, i;
+                    return 202 === e.status ? s(5e3) : (o(!1), {
+                        applicationCommands: e.body.application_commands,
+                        applications: e.body.applications,
+                        nextCursor: null === (t = e.body.cursor) || void 0 === t ? void 0 : t.next,
+                        prevCursor: null === (n = e.body.cursor) || void 0 === n ? void 0 : n.previous,
+                        repaired: null === (i = e.body.cursor) || void 0 === i ? void 0 : i.repaired
+                    })
+                }, e => (null == n ? void 0 : n.abortable) && (null == n ? void 0 : n.signal.aborted) ? (o(!0), null) : 429 === e.status ? s(1e3 * e.body.retry_after) : (o(!0), null))
+            }
+            let U = (e, t, n) => {
+                let {
+                    channel: i,
+                    guild: l
+                } = e;
+                return null != i ? (0, O.getBuiltInCommands)(t, !0, n).filter(e => null == e.predicate || e.predicate({
+                    channel: i,
+                    guild: l
+                })) : []
+            };
+
+            function B(e, t) {
+                if (0 === t.length) return e;
+                let n = [...e],
+                    i = (0, y.buildApplicationCommands)(t).filter(e => {
+                        let t = n.findIndex(t => t.id === e.id);
+                        return !(t >= 0) || (n[t] = e, !1)
+                    });
+                return [...n, ...i]
+            }
+
+            function b(e) {
+                let t = e.map(y.getApplicationCommandSection);
+                return t.concat(O.BUILT_IN_SECTIONS[R.BuiltInSectionId.BUILT_IN])
+            }
+            let H = (e, t) => ({
+                    type: t,
+                    inputType: D.ApplicationCommandInputType.PLACEHOLDER,
+                    id: "placeholder-".concat(e),
+                    name: "",
+                    displayName: "",
+                    description: "",
+                    displayDescription: "",
+                    applicationId: ""
+                }),
+                F = [O.BUILT_IN_SECTIONS[R.BuiltInSectionId.BUILT_IN]];
+            class w extends r.default.Store {
+                initialize() {
+                    this.waitFor(T.default), this.syncWith([S.default], () => {
+                        this.shouldResetAll = !0
+                    }), this.syncWith([T.default], W)
+                }
+                getChannelState(e, t) {
+                    var n;
+                    return null === (n = V.channelStates.get(e)) || void 0 === n ? void 0 : n[t]
+                }
+                getOrInsertChannelState(e, t) {
+                    let n = V.channelStates,
+                        i = n.has(e);
+                    if (g.default.track(P.AnalyticEvents.APPLICATION_COMMAND_CACHE_FETCH, {
+                            miss: !i,
+                            size: n.length
+                        }), !i) {
+                        let t = () => ({
+                                discoveryInitialized: !1,
+                                topCursor: null,
+                                scrollDownCursor: null,
+                                applicationSections: null,
+                                applicationCommands: null,
+                                filteredSectionId: null,
+                                pendingQueries: new Map,
+                                queries: new Map,
+                                queriedApplicationId: null,
+                                sawFrecencySection: !1
+                            }),
+                            i = {
+                                [c.ApplicationCommandType.CHAT]: t(),
+                                [c.ApplicationCommandType.MESSAGE]: t(),
+                                [c.ApplicationCommandType.USER]: t()
+                            };
+                        n.set(e, i)
+                    }
+                    return n.get(e)[t]
+                }
+                getApplicationSections(e, t) {
+                    var n, i;
+                    return null !== (i = null === (n = this.getChannelState(e, t)) || void 0 === n ? void 0 : n.applicationSections) && void 0 !== i ? i : F
+                }
+                getQueryCommands(e, t, n) {
+                    var i, l, a;
+                    let s = this.getChannelState(e, t);
+                    return null !== (a = null == s ? void 0 : null === (i = s.queries.get(n)) || void 0 === i ? void 0 : i.commands) && void 0 !== a ? a : null == s ? void 0 : null === (l = s.pendingQueries.get(n)) || void 0 === l ? void 0 : l.commands
+                }
+                hasQueryResults(e, t, n) {
+                    var i, l;
+                    return null !== (l = null === (i = this.getChannelState(e, t)) || void 0 === i ? void 0 : i.queries.has(n)) && void 0 !== l && l
+                }
+                constructor(...e) {
+                    super(...e), this.channelStates = new o({
+                        max: 5
+                    }), this.componentIsOpen = !1, this.shouldResetAll = !1, this.shouldResetGuild = null, this.shouldResetDMs = !1
+                }
+            }
+
+            function G(e) {
+                var t;
+                let {
+                    guildId: n
+                } = e, i = M.default.getChannelId();
+                return null != i && (null === (t = A.default.getChannel(i)) || void 0 === t ? void 0 : t.guild_id) !== n ? x(n) : V.componentIsOpen ? (V.shouldResetGuild = n, !1) : x(n)
+            }
+
+            function x(e) {
+                let t = E.default.getChannels(e),
+                    n = t[0, E.GUILD_SELECTABLE_CHANNELS_KEY].concat(t[E.GUILD_VOCAL_CHANNELS_KEY]),
+                    i = V.channelStates.length;
+                for (let e of n) V.channelStates.del(e.channel.id);
+                return V.channelStates.length !== i
+            }
+
+            function Y() {
+                let e = V.channelStates.length;
+                return V.channelStates.keys().forEach(e => {
+                    var t;
+                    (null === (t = A.default.getChannel(e)) || void 0 === t ? void 0 : t.isPrivate()) && V.channelStates.del(e)
+                }), V.channelStates.length !== e
+            }
+
+            function W() {
+                var e, t, n;
+                let i = null !== (n = null === (t = T.default.settings.textAndImages) || void 0 === t ? void 0 : null === (e = t.viewNsfwCommands) || void 0 === e ? void 0 : e.value) && void 0 !== n && n,
+                    l = i !== V.viewNsfwCommands;
+                if (l) {
+                    if (V.viewNsfwCommands = i, !V.componentIsOpen) return Y();
+                    V.shouldResetDMs = !0
+                }
+                return !1
+            }
+
+            function k(e) {
+                return !!V.channelStates.has(e) && (V.channelStates.del(e), !0)
+            }
+
+            function q() {
+                V.shouldResetAll = !1, V.shouldResetGuild = null, V.shouldResetDMs = !1, V.componentIsOpen = !1, V.channelStates.reset()
+            }
+            w.displayName = "ApplicationCommandSearchStore";
+            let V = new w(d.default, {
+                LOGOUT: q,
+                CONNECTION_OPEN: q,
+                APPLICATION_COMMAND_SEARCH_STORE_UPDATE: e => {
+                    let {
+                        channelId: t,
+                        commandType: n,
+                        state: i
+                    } = e, l = V.channelStates.get(t);
+                    if (null == l) return;
+                    let a = l[n],
+                        s = {
+                            ...a,
+                            ...i
+                        };
+                    l[n] = s, null == a.applicationCommands && null != s.applicationCommands && s.pendingQueries.forEach((e, t) => {
+                        let {
+                            context: n,
+                            commandType: i,
+                            limit: l
+                        } = e;
+                        Q({
+                            context: n,
+                            commandType: i,
+                            query: t,
+                            limit: l,
+                            canOnlyUseTextCommands: !1
+                        })
+                    })
+                },
+                APPLICATION_COMMAND_SEARCH_STORE_QUERY(e) {
+                    let {
+                        context: t,
+                        commandType: n,
+                        query: i,
+                        limit: l,
+                        applicationId: a
+                    } = e, s = null != I.default.getPendingReply(t.channel.id), o = Q({
+                        context: t,
+                        commandType: n,
+                        query: i,
+                        limit: l,
+                        canOnlyUseTextCommands: s,
+                        applicationId: a
+                    });
+                    !o && !s && Z({
+                        context: t,
+                        commandType: n,
+                        query: i,
+                        limit: l,
+                        applicationId: a
+                    })
+                },
+                CHANNEL_UPDATES(e) {
+                    let {
+                        channels: t
+                    } = e;
+                    for (let e of t)
+                        if (null != e.guild_id && G({
+                                guildId: e.guild_id
+                            })) return !0;
+                    return !1
+                },
+                GUILD_APPLICATION_COMMAND_INDEX_UPDATE: G,
+                IMPERSONATE_UPDATE: G,
+                IMPERSONATE_STOP: G,
+                APPLICATION_COMMAND_SEARCH_STORE_UI_UPDATE(e) {
+                    let {
+                        isOpen: t
+                    } = e;
+                    if (V.componentIsOpen = t, V.shouldResetAll) {
+                        q();
+                        return
+                    }
+                    let n = !1;
+                    return null != V.shouldResetGuild && (n = x(V.shouldResetGuild), V.shouldResetGuild = null), V.shouldResetDMs && (n = Y() || n, V.shouldResetDMs = !1), n
+                },
+                PRIVATE_CHANNEL_INTEGRATION_CREATE(e) {
+                    let {
+                        integration: t
+                    } = e;
+                    return k(t.channel_id)
+                },
+                PRIVATE_CHANNEL_INTEGRATION_UPDATE(e) {
+                    let {
+                        integration: t
+                    } = e;
+                    return k(t.channel_id)
+                },
+                PRIVATE_CHANNEL_INTEGRATION_DELETE(e) {
+                    let {
+                        channelId: t
+                    } = e;
+                    return k(t)
+                },
+                FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS(e) {
+                    let {
+                        channelId: t
+                    } = e;
+                    return k(t)
+                }
+            });
+            var K = V;
+            let j = e => {
+                if (null == e) return;
+                let t = f.default.getViewingRoles(e);
+                if (null == t) return;
+                let n = Object.keys(t);
+                return 0 === n.length && n.push(e), n
+            };
+
+            function z() {
+                i.useEffect(() => (d.default.dispatch({
+                    type: "APPLICATION_COMMAND_SEARCH_STORE_UI_UPDATE",
+                    isOpen: !0
+                }), () => {
+                    d.default.dispatch({
+                        type: "APPLICATION_COMMAND_SEARCH_STORE_UI_UPDATE",
+                        isOpen: !1
+                    })
+                }), [])
+            }
+
+            function X(e, t, n, l) {
+                let {
+                    canOnlyUseTextCommands: a,
+                    canUseFrecency: s
+                } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, {
+                    discoveryInitialized: o,
+                    topCursor: u,
+                    scrollDownCursor: c,
+                    applicationSections: f,
+                    applicationCommands: I,
+                    filteredSectionId: C,
+                    sawFrecencySection: T
+                } = (0, r.useStateFromStores)([V], () => V.getOrInsertChannelState(e.id, t), [e.id, t]), A = i.useCallback(n => {
+                    d.default.dispatch({
+                        type: "APPLICATION_COMMAND_SEARCH_STORE_UPDATE",
+                        channelId: e.id,
+                        commandType: t,
+                        state: n
+                    })
+                }, [e.id, t]);
+                (0, m.usePrivateChannelIntegrationState)({
+                    channelId: e.id
+                });
+                let E = i.useRef(!1),
+                    M = (0, p.default)(),
+                    g = i.useCallback(function(n, i) {
+                        let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+                        if (E.current) return;
+                        E.current = !0;
+                        let a = j(e.guild_id);
+                        L(e.id, {
+                            type: t,
+                            roleIds: a,
+                            ...n
+                        }, {
+                            abortable: l,
+                            signal: M
+                        }).then(e => {
+                            E.current = !1, i(e)
+                        })
+                    }, [e.id, e.guild_id, t, M]),
+                    D = i.useMemo(() => ({
+                        channel: e,
+                        guild: null != e.guild_id ? N.default.getGuild(e.guild_id) : null
+                    }), [e]),
+                    P = (0, h.useTopCommands)(D),
+                    F = (0, h.useTopRealCommands)(D),
+                    w = (0, r.useStateFromStores)([S.default, _.default], () => (0, y.canUseApplicationCommands)(S.default, _.default, null != a && a, e), [a, e]);
+                i.useEffect(() => {
+                    if (o) return;
+                    if (A({
+                            discoveryInitialized: !0
+                        }), !w || null != I && I.length > 0) return;
+                    let t = e.isPrivate() ? {} : {
+                        limit: l,
+                        commandIds: o ? void 0 : F,
+                        cursor: null != u ? u : void 0
+                    };
+                    g({
+                        ...t,
+                        includeApplications: null == f
+                    }, e => {
+                        if (null == e) return;
+                        let t = B([], e.applicationCommands),
+                            n = {
+                                applicationCommands: t,
+                                topCursor: e.prevCursor,
+                                scrollDownCursor: e.nextCursor
+                            };
+                        if (null != e.applications) {
+                            var i;
+                            n.applicationSections = b(null !== (i = e.applications) && void 0 !== i ? i : [])
+                        }
+                        A(n)
+                    }, !1)
+                }, [I, e, l, w, f, o, u, g, F, A]);
+                let G = i.useCallback(() => {
+                        null != c && g({
+                            limit: l,
+                            cursor: c
+                        }, e => {
+                            if (null == e) return;
+                            let t = !1 === e.repaired ? B([], e.applicationCommands) : B(null != I ? I : [], e.applicationCommands);
+                            A({
+                                applicationCommands: t,
+                                scrollDownCursor: e.nextCursor
+                            })
+                        })
+                    }, [l, g, c, I, A]),
+                    x = i.useCallback(t => {
+                        if (!E.current && t !== C) {
+                            if (null == t) {
+                                e.isPrivate() ? A({
+                                    filteredSectionId: null,
+                                    discoveryInitialized: !0
+                                }) : A({
+                                    filteredSectionId: null,
+                                    applicationCommands: null,
+                                    discoveryInitialized: !1
+                                });
+                                return
+                            }!(t in O.BUILT_IN_SECTIONS || e.isPrivate()) && g({
+                                applicationId: t
+                            }, e => {
+                                null != e && A({
+                                    applicationCommands: B([], e.applicationCommands)
+                                })
+                            }), A({
+                                filteredSectionId: t,
+                                scrollDownCursor: null
+                            })
+                        }
+                    }, [e, g, A, C]);
+                z(), i.useEffect(() => () => {
+                    var n;
+                    (null === (n = V.channelStates.get(e.id)) || void 0 === n ? void 0 : n[t].filteredSectionId) != null && x(null)
+                }, []);
+                let Y = i.useMemo(() => U(D, t, a), [D, t, a]),
+                    W = i.useMemo(() => {
+                        if (!s) return [];
+                        let e = (w && null != I ? I : []).concat(Y);
+                        return e.filter(e => P.includes(e.id)).sort((e, t) => {
+                            let n = v.default.getScoreWithoutLoadingLatest(D, e),
+                                i = v.default.getScoreWithoutLoadingLatest(D, t);
+                            return i - n
+                        }).slice(0, R.DISCOVERY_COMMANDS_FRECENCY_LIMIT)
+                    }, [s, P, w, I, Y, D]);
+                i.useEffect(() => {
+                    !T && W.length > 0 && A({
+                        sawFrecencySection: !0
+                    })
+                }, [A, W, T]);
+                let k = i.useMemo(() => {
+                        var e;
+                        let t = [];
+                        return (W.length > 0 || T) && (t = t.concat(O.BUILT_IN_SECTIONS[R.BuiltInSectionId.FRECENCY])), w && null != f && (t = t.concat(f)), (null === (e = t[t.length - 1]) || void 0 === e ? void 0 : e.id) !== R.BuiltInSectionId.BUILT_IN && (t = t.concat(O.BUILT_IN_SECTIONS[R.BuiltInSectionId.BUILT_IN])), t
+                    }, [w, f, W, T]),
+                    q = w && (!o || E.current || null != c),
+                    K = i.useMemo(() => {
+                        if (!q) return [];
+                        let e = [];
+                        for (let i = 0; i < n; i++) e.push(H(i, t));
+                        return e
+                    }, [q, n, t]),
+                    {
+                        activeSections: X,
+                        commandsByActiveSection: Q
+                    } = i.useMemo(() => {
+                        let e = [],
+                            t = [];
+                        return k.forEach(n => {
+                            let i;
+                            (null == C || n.id === C) && ((i = n.id === R.BuiltInSectionId.BUILT_IN ? q ? [] : [...Y] : n.id === R.BuiltInSectionId.FRECENCY ? [...W] : (null != I ? I : []).filter(e => e.applicationId === n.id)).length > 0 || n.id === C) && (e.push(n), t.push({
+                                section: n,
+                                data: i
+                            }))
+                        }), t.length > 0 && K.length > 0 && t[t.length - 1].data.push(...K), {
+                            activeSections: e,
+                            commandsByActiveSection: t
+                        }
+                    }, [k, W, I, Y, K, q, C]),
+                    Z = i.useMemo(() => {
+                        let e = [];
+                        return e = e.concat(W), w && null != I && (e = e.concat(I)), e = e.concat(Y)
+                    }, [w, W, I, Y]);
+                return {
+                    filterSection: x,
+                    scrollDown: G,
+                    loading: E,
+                    filteredSectionId: C,
+                    hasMoreAfter: q,
+                    commands: Z,
+                    sectionDescriptors: k,
+                    activeSections: X,
+                    commandsByActiveSection: Q,
+                    placeholders: K
+                }
+            }
+
+            function Q(e) {
+                let t, {
+                        context: n,
+                        commandType: i,
+                        query: l,
+                        limit: a,
+                        canOnlyUseTextCommands: s,
+                        applicationCommands: o,
+                        scrollDownCursor: r,
+                        applications: u,
+                        applicationId: d = null
+                    } = e,
+                    c = V.getOrInsertChannelState(n.channel.id, i);
+                if (c.queriedApplicationId !== d) c.queries.clear(), c.pendingQueries.clear(), c.queriedApplicationId = d;
+                else if (c.queries.has(l)) return !0;
+                if (null != u && (c.applicationSections = b(u)), s) t = [];
+                else {
+                    var p;
+                    t = n.channel.isPrivate() ? null !== (p = c.applicationCommands) && void 0 !== p ? p : [] : B([], null != o ? o : [])
+                }
+                let f = U(n, i, s),
+                    m = (0, y.canUseApplicationCommands)(S.default, _.default, s, n.channel) && (n.channel.isPrivate() ? null == c.applicationCommands : null == o),
+                    I = [],
+                    T = !1;
+                if (m)
+                    for (let e = l.length - 1; e > 0; e -= 1) {
+                        let n = l.slice(0, e),
+                            i = c.queries.get(n);
+                        if (null != i) {
+                            T = i.done, i.commands.forEach(e => {
+                                null == t.find(t => t.id === e.id) && null == f.find(t => t.id === e.id) && I.push(e)
+                            });
+                            break
+                        }
+                    }
+                T && (m = !1);
+                let A = [],
+                    E = l.split(" ");
+                if ([...t, ...I, ...f].forEach(e => {
+                        var t;
+                        let n = null === (t = c.applicationSections) || void 0 === t ? void 0 : t.find(t => t.id === e.applicationId),
+                            i = ee(l, E, e, n);
+                        i > 0 && A.push({
+                            ...e,
+                            score: i
+                        })
+                    }), C.FrecencyUserSettingsActionCreators.loadIfNecessary(), A.sort((e, t) => {
+                        if (e.score !== t.score) return t.score - e.score;
+                        let i = v.default.getScoreWithoutLoadingLatest(n, e),
+                            l = v.default.getScoreWithoutLoadingLatest(n, t);
+                        return i !== l ? l - i : e.displayName.localeCompare(t.displayName)
+                    }), m || null != r)
+                    for (let e = 0; e < 4; e += 1) A.push({
+                        ...H(e, i),
+                        score: 0
+                    });
+                return m ? (c.pendingQueries.set(l, {
+                    context: n,
+                    commandType: i,
+                    limit: a,
+                    commands: A
+                }), c.queries.delete(l)) : (c.pendingQueries.delete(l), c.queries.set(l, {
+                    commands: A,
+                    done: T || null == r,
+                    scrollDownCursor: r
+                })), T
+            }
+            let Z = a(e => {
+                    var t;
+                    let {
+                        context: n,
+                        commandType: i,
+                        query: l,
+                        limit: a,
+                        applicationId: s
+                    } = e;
+                    if (!(0, y.canUseApplicationCommands)(S.default, _.default, !1, n.channel)) return;
+                    let o = V.getOrInsertChannelState(n.channel.id, i);
+                    if (n.channel.isPrivate()) {
+                        !o.discoveryInitialized && null == o.applicationCommands && L(n.channel.id, {
+                            type: i,
+                            includeApplications: null == o.applicationSections
+                        }).then(e => {
+                            var t;
+                            if (null == e) return;
+                            let l = {
+                                applicationCommands: B([], null !== (t = e.applicationCommands) && void 0 !== t ? t : [])
+                            };
+                            null != e.applications && (l.applicationSections = b(e.applications)), d.default.dispatch({
+                                type: "APPLICATION_COMMAND_SEARCH_STORE_UPDATE",
+                                channelId: n.channel.id,
+                                commandType: i,
+                                state: l
+                            })
+                        });
+                        return
+                    }(null === (t = o.queries.get(l)) || void 0 === t ? void 0 : t.scrollDownCursor) == null && L(n.channel.id, {
+                        type: i,
+                        roleIds: j(n.channel.guild_id),
+                        query: l,
+                        limit: a,
+                        applicationId: s,
+                        includeApplications: !o.discoveryInitialized && null == o.applicationSections
+                    }).then(e => {
+                        if (null != e) V.channelStates.has(n.channel.id) && (Q({
+                            context: n,
+                            commandType: i,
+                            query: l,
+                            limit: a,
+                            canOnlyUseTextCommands: !1,
+                            applicationCommands: e.applicationCommands,
+                            scrollDownCursor: e.nextCursor,
+                            applications: e.applications,
+                            applicationId: s
+                        }), V.emitChange())
+                    })
+                }, 250, {
+                    leading: !0,
+                    trailing: !0,
+                    maxWait: 750
+                }),
+                $ = async (e, t) => {
+                    var n;
+                    let {
+                        context: i,
+                        commandType: l,
+                        query: a,
+                        limit: s
+                    } = e;
+                    if (!(0, y.canUseApplicationCommands)(S.default, _.default, !1, i.channel) || i.channel.isPrivate()) return;
+                    let o = V.getOrInsertChannelState(i.channel.id, l),
+                        r = null === (n = o.queries.get(a)) || void 0 === n ? void 0 : n.scrollDownCursor;
+                    null != r && await L(i.channel.id, {
+                        type: l,
+                        roleIds: j(i.channel.guild_id),
+                        query: a,
+                        limit: s,
+                        cursor: r,
+                        includeApplications: !o.discoveryInitialized && null == o.applicationSections
+                    }, {
+                        abortable: !0,
+                        signal: t
+                    }).then(e => {
+                        var t, n;
+                        if (null == e || !V.channelStates.has(i.channel.id)) return;
+                        let s = null !== (n = null === (t = o.queries.get(a)) || void 0 === t ? void 0 : t.commands.filter(e => e.inputType !== D.ApplicationCommandInputType.PLACEHOLDER)) && void 0 !== n ? n : [],
+                            r = B([], e.applicationCommands),
+                            u = [],
+                            d = a.split(" ");
+                        r.forEach(e => {
+                            var t;
+                            if (null != s.find(t => t.id === e.id)) return;
+                            let n = null === (t = o.applicationSections) || void 0 === t ? void 0 : t.find(t => t.id === e.applicationId),
+                                i = ee(a, d, e, n);
+                            i > 0 && u.push({
+                                ...e,
+                                score: i
+                            })
+                        }), C.FrecencyUserSettingsActionCreators.loadIfNecessary(), u.sort((e, t) => {
+                            if (e.score !== t.score) return t.score - e.score;
+                            let n = v.default.getScoreWithoutLoadingLatest(i, e),
+                                l = v.default.getScoreWithoutLoadingLatest(i, t);
+                            return n !== l ? l - n : e.displayName.localeCompare(t.displayName)
+                        });
+                        let c = e.nextCursor;
+                        if (null != c)
+                            for (let e = 0; e < 4; e += 1) u.push({
+                                ...H(e, l),
+                                score: 0
+                            });
+                        o.queries.set(a, {
+                            commands: e.repaired ? u : [...s, ...u],
+                            done: !0,
+                            scrollDownCursor: c
+                        }), V.emitChange()
+                    })
+                };
+
+            function J(e, t, n, l) {
+                z();
+                let a = (0, p.default)(),
+                    {
+                        commands: s,
+                        applicationSections: o
+                    } = (0, r.useStateFromStoresObject)([V], () => {
+                        var i, l, a;
+                        let {
+                            queries: s,
+                            pendingQueries: o,
+                            applicationSections: r
+                        } = V.getOrInsertChannelState(e.id, t);
+                        return {
+                            applicationSections: r,
+                            commands: null !== (a = null === (i = s.get(n)) || void 0 === i ? void 0 : i.commands) && void 0 !== a ? a : null === (l = o.get(n)) || void 0 === l ? void 0 : l.commands
+                        }
+                    }, [e.id, t, n]);
+                i.useEffect(() => {
+                    d.default.dispatch({
+                        type: "APPLICATION_COMMAND_SEARCH_STORE_QUERY",
+                        context: {
+                            channel: e,
+                            guild: null != e.guild_id ? N.default.getGuild(e.guild_id) : null
+                        },
+                        query: n,
+                        limit: l,
+                        commandType: t
+                    })
+                }, [e, t, n, l]);
+                let u = i.useRef(!1),
+                    c = i.useCallback(() => {
+                        !u.current && (u.current = !0, $({
+                            commandType: t,
+                            context: {
+                                channel: e
+                            },
+                            query: n,
+                            limit: l
+                        }, a).finally(() => {
+                            u.current = !1
+                        }))
+                    }, [t, e, n, a, l]);
+                return {
+                    commands: s,
+                    sections: null != o ? o : F,
+                    scrollDown: c
+                }
+            }
+
+            function ee(e, t, n, i) {
+                var l;
+                let a = n.name,
+                    s = n.displayName;
+                if (a.startsWith(e) || s.startsWith(e)) return 6;
+                if (a.startsWith(t[0])) {
+                    let e = a.split(" ").slice(1).join(" ");
+                    if (e.startsWith(t.slice(1).join(" "))) return 5
+                }
+                if (s.startsWith(t[0])) {
+                    let e = s.split(" ").slice(1).join(" ");
+                    if (e.startsWith(t.slice(1).join(" "))) return 5
+                }
+                if (a.includes(e) || (null == s ? void 0 : s.includes(e))) return 4;
+                let o = !1;
+                for (let {
+                        name: t,
+                        serverLocalizedName: i
+                    }
+                    of null !== (l = n.options) && void 0 !== l ? l : []) {
+                    if (t.startsWith(e) || "".concat(a, " ").concat(t).startsWith(e)) return 3;
+                    if (null != s && "".concat(s, " ").concat(t).startsWith(e)) return 2;
+                    if (null != i && (i.startsWith(e) || "".concat(a, " ").concat(i).startsWith(e) || null != s && "".concat(s, " ").concat(i).startsWith(e))) return 3;
+                    (t.includes(e) || (null == i ? void 0 : i.includes(e))) && (o = !0)
+                }
+                return o ? 2 : (null == i ? void 0 : i.name.toLocaleLowerCase().startsWith(e)) ? 1 : 0
+            }
+        },
+        123373: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                buildPermissionContext: function() {
+                    return _
+                },
+                usePermissionContext: function() {
+                    return I
+                },
+                getContextGuildId: function() {
                     return E
                 }
             });
-            var u = n("627445"),
-                i = n.n(u),
-                r = n("913144"),
-                l = n("719923"),
-                a = n("850068"),
-                o = n("49111");
-            async function s(t) {
-                let {
-                    planId: e,
-                    currency: n,
-                    paymentSource: u,
-                    trialId: i,
-                    code: l,
-                    metadata: o,
-                    referralCode: s,
-                    loadId: c
-                } = t;
-                r.default.dispatch({
-                    type: "PREMIUM_PAYMENT_SUBSCRIBE_START"
-                });
-                try {
-                    let t = await a.createSubscription({
-                        items: [{
-                            planId: e,
-                            quantity: 1
-                        }],
-                        paymentSource: u,
-                        trialId: i,
-                        code: l,
-                        currency: n,
-                        metadata: o,
-                        referralCode: s,
-                        loadId: c
-                    });
-                    return null != t.subscription && r.default.dispatch({
-                        type: "PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS",
-                        subscription: t.subscription
-                    }), t
-                } catch (t) {
-                    throw r.default.dispatch({
-                        type: "PREMIUM_PAYMENT_SUBSCRIBE_FAIL",
-                        error: t
-                    }), t
-                }
-            }
-            async function c(t, e, n, u, s) {
-                try {
-                    let c = (0, l.getPremiumPlanItem)(t);
-                    i(c, "Expected existing premium plan");
-                    let S = (0, l.getItemsWithUpsertedPremiumPlanId)(t, c.planId);
-                    await a.updateSubscription(t, {
-                        status: o.SubscriptionStatusTypes.ACTIVE,
-                        paymentSource: u,
-                        items: S,
-                        currency: n
-                    }, e, s), r.default.dispatch({
-                        type: "PREMIUM_PAYMENT_UPDATE_SUCCESS"
-                    })
-                } catch (t) {
-                    throw r.default.dispatch({
-                        type: "PREMIUM_PAYMENT_UPDATE_FAIL",
-                        error: t
-                    }), t
-                }
-            }
-            async function S(t, e, n, u) {
-                try {
-                    await a.changeSubscriptionCurrency(t, e, n, u), r.default.dispatch({
-                        type: "PREMIUM_PAYMENT_UPDATE_SUCCESS"
-                    })
-                } catch (t) {
-                    throw r.default.dispatch({
-                        type: "PREMIUM_PAYMENT_UPDATE_FAIL",
-                        error: t
-                    }), t
-                }
-            }
-            async function d(t, e, n, u, i) {
-                try {
-                    await a.changePaymentSource(t, e, n, u, i), r.default.dispatch({
-                        type: "PREMIUM_PAYMENT_UPDATE_SUCCESS"
-                    })
-                } catch (t) {
-                    throw r.default.dispatch({
-                        type: "PREMIUM_PAYMENT_UPDATE_FAIL",
-                        error: t
-                    }), t
+            var i = n("884691"),
+                l = n("316693"),
+                a = n("446674"),
+                s = n("798609"),
+                o = n("38654"),
+                r = n("845579"),
+                u = n("233069"),
+                d = n("271938"),
+                c = n("26989"),
+                p = n("957255"),
+                f = n("697218"),
+                m = n("49111");
+
+            function _(e, t) {
+                var n, i, l, a;
+                let s = E(e),
+                    u = r.ViewNsfwCommands.getSetting(),
+                    p = d.default.getId(),
+                    m = null !== (l = null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== l && l,
+                    _ = null != s && null !== (a = null === (i = c.default.getMember(s, p)) || void 0 === i ? void 0 : i.roles) && void 0 !== a ? a : [],
+                    I = o.default.isViewingRoles(s),
+                    {
+                        computedPermissions: N,
+                        hasBaseAccessPermissions: S
+                    } = T(e);
+                return {
+                    context: e,
+                    userId: p,
+                    roleIds: _,
+                    isImpersonating: I,
+                    commandType: t,
+                    commandContextType: A(e),
+                    computedPermissions: N,
+                    hasBaseAccessPermissions: S,
+                    allowNsfw: C(e, m, u)
                 }
             }
 
-            function E() {
-                r.default.dispatch({
-                    type: "PREMIUM_PAYMENT_ERROR_CLEAR"
-                })
+            function I(e, t) {
+                let n = E(e),
+                    l = r.ViewNsfwCommands.useSetting(),
+                    s = (0, a.useStateFromStores)([d.default], () => d.default.getId()),
+                    u = (0, a.useStateFromStores)([f.default], () => {
+                        var e, t;
+                        return null !== (t = null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) && void 0 !== t && t
+                    }),
+                    p = (0, a.useStateFromStoresArray)([c.default], () => {
+                        var e, t;
+                        return null != n && null !== (t = null === (e = c.default.getMember(n, s)) || void 0 === e ? void 0 : e.roles) && void 0 !== t ? t : []
+                    }),
+                    m = (0, a.useStateFromStores)([o.default], () => o.default.isViewingRoles(n));
+                return i.useMemo(() => {
+                    let {
+                        computedPermissions: n,
+                        hasBaseAccessPermissions: i
+                    } = T(e);
+                    return {
+                        context: e,
+                        userId: s,
+                        roleIds: p,
+                        commandType: t,
+                        isImpersonating: m,
+                        commandContextType: A(e),
+                        computedPermissions: n,
+                        hasBaseAccessPermissions: i,
+                        allowNsfw: C(e, u, l)
+                    }
+                }, [t, e, m, p, s, u, l])
+            }
+
+            function C(e, t, n) {
+                return !!t && (!(e instanceof u.ChannelRecordBase) || (null != e.guild_id ? e.nsfw : n))
+            }
+
+            function T(e) {
+                let t;
+                if (e instanceof u.ChannelRecordBase && e.isPrivate()) return {
+                    computedPermissions: l.default.deserialize(0),
+                    hasBaseAccessPermissions: !0
+                };
+                let n = p.default.computePermissions(e);
+                return t = !!l.default.has(n, m.Permissions.ADMINISTRATOR) || (e instanceof u.ChannelRecordBase ? l.default.has(n, m.Permissions.VIEW_CHANNEL) && l.default.has(n, m.Permissions.USE_APPLICATION_COMMANDS) : l.default.has(n, m.Permissions.VIEW_CHANNEL)), {
+                    computedPermissions: n,
+                    hasBaseAccessPermissions: t
+                }
+            }
+
+            function A(e) {
+                var t;
+                return e instanceof u.ChannelRecordBase && null == e.guild_id ? e.type === m.ChannelTypes.DM && (null === (t = f.default.getUser(e.getRecipientId())) || void 0 === t ? void 0 : t.bot) === !0 ? s.ApplicationCommandContextType.BOT_DM : s.ApplicationCommandContextType.PRIVATE_CHANNEL : s.ApplicationCommandContextType.GUILD
+            }
+
+            function E(e) {
+                return e instanceof u.ChannelRecordBase ? e.guild_id : e.id
             }
         },
-        465527: function(t, e, n) {
+        217946: function(e, t, n) {
             "use strict";
-            n.r(e), n.d(e, {
-                fetchSKU: function() {
+            n.r(t), n.d(t, {
+                HasAccessResult: function() {
+                    return i
+                },
+                hasAccess: function() {
+                    return _
+                },
+                computeAllowedForChannel: function() {
+                    return T
+                },
+                computeAllowedForUser: function() {
                     return A
-                },
-                fetchSKUsForApplication: function() {
-                    return I
-                },
-                fetchPurchasePreview: function() {
-                    return p
-                },
-                grantChannelBranchEntitlement: function() {
-                    return C
-                },
-                purchaseSKU: function() {
-                    return N
-                },
-                resendPaymentVerificationEmail: function() {
-                    return R
-                },
-                clearPurchaseError: function() {
-                    return U
-                },
-                showPurchaseConfirmationStep: function() {
-                    return L
-                },
-                updateSKUPaymentIsGift: function() {
-                    return M
                 }
-            }), n("70102");
-            var u = n("872717"),
-                i = n("913144"),
-                r = n("448993"),
-                l = n("736978"),
-                a = n("333805"),
-                o = n("84460"),
-                s = n("552712"),
-                c = n("167726"),
-                S = n("745279"),
-                d = n("449008"),
-                E = n("224400"),
-                f = n("271560"),
-                _ = n("850068"),
-                T = n("49111");
-            async function A(t, e) {
-                if (null == s.default.get(e)) {
-                    i.default.dispatch({
-                        type: "SKU_FETCH_START",
-                        skuId: e
-                    });
-                    try {
-                        let n = c.default.inTestModeForApplication(t) || o.default.inDevModeForApplication(t),
-                            u = await (0, f.httpGetWithCountryCodeQuery)(n ? T.Endpoints.STORE_SKU(e) : T.Endpoints.STORE_PUBLISHED_LISTINGS_SKU(e));
-                        i.default.dispatch({
-                            type: "SKU_FETCH_SUCCESS",
-                            sku: n ? u.body : u.body.sku
-                        })
-                    } catch (t) {
-                        throw i.default.dispatch({
-                            type: "SKU_FETCH_FAIL",
-                            skuId: e
-                        }), new a.default("Failed to fetch SKU ".concat(e))
-                    }
-                }
-            }
-            async function I(t) {
-                let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                    n = c.default.inTestModeForApplication(t) || o.default.inDevModeForApplication(t);
-                if (!n && e) throw Error("this should only be used in test mode");
-                let u = await (0, f.httpGetWithCountryCodeQuery)(T.Endpoints.APPLICATION_SKUS(t)),
-                    r = u.body;
-                return i.default.dispatch({
-                    type: "SKUS_FETCH_SUCCESS",
-                    skus: r,
-                    applicationId: t
-                }), r
-            }
-            async function p(t, e, n) {
-                let u = {
-                        payment_source_id: n
-                    },
-                    r = c.default.inTestModeForApplication(t) || o.default.inDevModeForApplication(t);
-                r && (u.test_mode = !0);
-                let l = await (0, f.httpGetWithCountryCodeQuery)({
-                    url: T.Endpoints.STORE_SKU_PURCHASE(e),
-                    query: u,
-                    oldFormErrors: !0
-                });
-                return i.default.dispatch({
-                    type: "SKU_PURCHASE_PREVIEW_FETCH_SUCCESS",
-                    skuId: e,
-                    paymentSourceId: n,
-                    price: l.body
-                }), l
-            }
-            async function C(t, e, n) {
-                i.default.dispatch({
-                    type: "SKU_PURCHASE_START",
-                    applicationId: t,
-                    skuId: n
-                });
-                try {
-                    let t = await u.default.post({
-                        url: T.Endpoints.CHANNEL_ENTITLEMENT_GRANT(e),
-                        oldFormErrors: !0
-                    });
-                    return i.default.dispatch({
-                        type: "SKU_PURCHASE_SUCCESS",
-                        skuId: n,
-                        entitlements: t.body,
-                        libraryApplications: []
-                    }), t.body
-                } catch (u) {
-                    let e = new r.BillingError(u);
-                    throw i.default.dispatch({
-                        type: "SKU_PURCHASE_FAIL",
-                        applicationId: t,
-                        skuId: n,
-                        error: e
-                    }), e
-                }
-            }
-            let P = {
-                isGift: !1
-            };
-            async function N(t, e, n) {
+            }), n("222007");
+            var i, l, a = n("627445"),
+                s = n.n(a),
+                o = n("316693"),
+                r = n("892692"),
+                u = n("233069"),
+                d = n("305961"),
+                c = n("524768"),
+                p = n("389153"),
+                f = n("123373"),
+                m = n("49111");
+
+            function _(e, t, n, i) {
                 let {
-                    paymentSource: a,
-                    expectedAmount: s,
-                    expectedCurrency: f,
-                    analyticsLoadId: A,
-                    isGift: I,
-                    giftStyle: p,
-                    subscriptionPlanId: C,
-                    loadId: N,
-                    recipientId: R,
-                    customMessage: U,
-                    emojiConfetti: L,
-                    soundEffect: M
-                } = {
-                    ...P,
-                    ...n
-                };
-                i.default.wait(() => {
-                    i.default.dispatch({
-                        type: "SKU_PURCHASE_START",
-                        applicationId: t,
-                        skuId: e
-                    })
-                });
-                let O = c.default.inTestModeForApplication(t) || o.default.inDevModeForApplication(t);
-                try {
-                    let t = {
-                        gift: I,
-                        sku_subscription_plan_id: C,
-                        gateway_checkout_context: await (0, S.createGatewayCheckoutContext)(a),
-                        load_id: N
-                    };
-                    if (O) t.test_mode = !0;
-                    else {
-                        if (null != a && (t.payment_source_id = a.id, t.payment_source_token = await (0, _.createPaymentSourceToken)(a), T.ADYEN_PAYMENT_SOURCES.has(a.type))) {
-                            let e = await (0, _.popupBridgeState)(a.type);
-                            t.return_url = u.default.getAPIBaseURL() + T.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(a.type, null != e ? e : "", "success")
-                        }
-                        null != s && (t.expected_amount = s), null != f && (t.expected_currency = f), null != p && (t.gift_style = p), null != R && (t.recipient_id = R), null != R && (t.custom_message = U, ((null == L ? void 0 : L.id) != null || (null == L ? void 0 : L.surrogates) != null || (null == M ? void 0 : M.soundId) != null) && (t.gift_info_options = {
-                            emoji_id: null == L ? void 0 : L.id,
-                            emoji_name: null == L ? void 0 : L.surrogates,
-                            sound_id: null == M ? void 0 : M.soundId
-                        })), t.purchase_token = (0, E.getPurchaseToken)()
+                    context: l,
+                    commandType: a,
+                    commandContextType: r,
+                    allowNsfw: c,
+                    computedPermissions: _,
+                    userId: I,
+                    roleIds: C,
+                    isImpersonating: E,
+                    hasBaseAccessPermissions: N
+                } = t;
+                if (e.type !== a) return 2;
+                if (e.nsfw && !c) return 1;
+                if (null != e.contexts && !e.contexts.includes(r)) return 4;
+                if (null != e.predicate && l instanceof u.ChannelRecordBase) {
+                    let t = d.default.getGuild(l.guild_id);
+                    if (!e.predicate({
+                            channel: l,
+                            guild: t
+                        })) return 3
+                }
+                let S = (0, f.getContextGuildId)(l);
+                if (null == S || o.default.has(_, m.Permissions.ADMINISTRATOR)) return 0;
+                if (!N) return 5;
+                if (l instanceof u.ChannelRecordBase) {
+                    s(void 0 !== i, "missing applicationAllowedForChannel");
+                    let t = T(e.permissions, l.id, S);
+                    if (function(e) {
+                            return !1 === e
+                        }(t) || ! function(e) {
+                            return !0 === e
+                        }(t) && function(e) {
+                            return !1 === e
+                        }(i)) return 6
+                }
+                let M = A(e.permissions, S, I, C, E);
+                return function(e) {
+                    return !0 === e
+                }(M) ? 0 : function(e) {
+                    return !1 === e
+                }(M) ? 7 : function(e) {
+                    return !1 === e
+                }(n) || null != e.defaultMemberPermissions && !(!o.default.equals(e.defaultMemberPermissions, p.DISABLED_BY_DEFAULT_PERMISSION_FLAG) && o.default.has(_, e.defaultMemberPermissions)) ? 7 : 0
+            }
+
+            function I(e) {
+                return !0 === e
+            }
+
+            function C(e) {
+                return !1 === e
+            }
+
+            function T(e, t, n) {
+                if (null == e) return null;
+                let i = e[(0, r.toPermissionKey)(t, c.ApplicationCommandPermissionType.CHANNEL)];
+                if (null != i) return i.permission;
+                let l = e[(0, r.toPermissionKey)((0, p.allChannelsSentinel)(n), c.ApplicationCommandPermissionType.CHANNEL)];
+                return null != l ? l.permission : null
+            }
+
+            function A(e, t, n, i, l) {
+                if (null == e) return null;
+                if (!l) {
+                    let t = e[(0, r.toPermissionKey)(n, c.ApplicationCommandPermissionType.USER)];
+                    if (null != t) return t.permission
+                }
+                let a = !1;
+                for (let t of i) {
+                    let n = e[(0, r.toPermissionKey)(t, c.ApplicationCommandPermissionType.ROLE)];
+                    if (null != n) {
+                        if (n.permission) return !0;
+                        a = !0
                     }
-                    let n = await u.default.post({
-                        url: T.Endpoints.STORE_SKU_PURCHASE(e),
-                        body: t,
-                        context: {
-                            load_id: A
-                        },
-                        oldFormErrors: !0
-                    });
-                    return i.default.dispatch({
-                        type: "SKU_PURCHASE_SUCCESS",
-                        skuId: e,
-                        libraryApplications: null != n.body.library_applications ? n.body.library_applications.filter(d.isNotNullish) : [],
-                        entitlements: n.body.entitlements,
-                        giftCode: n.body.gift_code
-                    }), {
-                        ...n.body,
-                        redirectConfirmation: !1
-                    }
-                } catch (u) {
-                    let n = u instanceof r.BillingError ? u : new r.BillingError(u);
-                    if ((n.code === l.ErrorCodes.CONFIRMATION_REQUIRED || n.code === l.ErrorCodes.AUTHENTICATION_REQUIRED) && i.default.dispatch({
-                            type: "SKU_PURCHASE_AWAIT_CONFIRMATION",
-                            skuId: e,
-                            isGift: I
-                        }), n.code !== l.ErrorCodes.CONFIRMATION_REQUIRED) throw i.default.dispatch({
-                        type: "SKU_PURCHASE_FAIL",
-                        applicationId: t,
-                        skuId: e,
-                        error: n
-                    }), n;
-                    if (!u.body.payment_id) throw (0, _.dispatchConfirmationError)("payment id cannot be null on redirected confirmations.");
-                    return (0, _.handleConfirmation)(u.body, a)
+                }
+                if (a) return !1;
+                let s = e[(0, r.toPermissionKey)(t, c.ApplicationCommandPermissionType.ROLE)];
+                return null != s ? s.permission : null
+            }(l = i || (i = {}))[l.ALLOWED = 0] = "ALLOWED", l[l.NSFW_NOT_ALLOWED = 1] = "NSFW_NOT_ALLOWED", l[l.WRONG_COMMAND_TYPE = 2] = "WRONG_COMMAND_TYPE", l[l.PREDICATE_FAILED = 3] = "PREDICATE_FAILED", l[l.CONTEXT_NOT_ALLOWED = 4] = "CONTEXT_NOT_ALLOWED", l[l.MISSING_BASE_PERMISSIONS = 5] = "MISSING_BASE_PERMISSIONS", l[l.CHANNEL_DENIED = 6] = "CHANNEL_DENIED", l[l.USER_DENIED = 7] = "USER_DENIED"
+        },
+        150692: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return A
+                }
+            }), n("222007");
+            var i = n("37983");
+            n("884691");
+            var l = n("917351"),
+                a = n.n(l),
+                s = n("77078"),
+                o = n("450911"),
+                r = n("819689"),
+                u = n("798609"),
+                d = n("679653"),
+                c = n("27618"),
+                p = n("697218"),
+                f = n("524768"),
+                m = n("317041"),
+                _ = n("49111"),
+                I = n("782340");
+
+            function C(e) {
+                switch (e) {
+                    case _.ChannelTextAreaIntegrations.GIF.title:
+                    case _.ChannelTextAreaIntegrations.TENOR.title:
+                        return I.default.Messages.COMMAND_GIPHY_DESCRIPTION;
+                    default:
+                        return ""
                 }
             }
-            async function R() {
-                try {
-                    let t = {
-                            purchase_token: (0, E.getPurchaseToken)()
-                        },
-                        e = await u.default.post({
-                            url: T.Endpoints.STORE_EMAIL_RESEND_PAYMENT_VERIFICATION,
-                            body: t,
-                            oldFormErrors: !0
-                        });
-                    return {
-                        ...e.body
+            let T = [...a(_.ChannelTextAreaIntegrations).values().map(e => ({
+                id: e.commandId,
+                name: e.command,
+                displayName: e.command,
+                type: u.ApplicationCommandType.CHAT,
+                inputType: f.ApplicationCommandInputType.BUILT_IN_INTEGRATION,
+                applicationId: m.BuiltInSectionId.BUILT_IN,
+                get description() {
+                    return C(e.title)
+                },
+                get displayDescription() {
+                    return C(e.title)
+                },
+                options: e.type === _.ChannelTextAreaIntegrationTypes.GIF ? [{
+                    name: "query",
+                    displayName: "query",
+                    type: u.ApplicationCommandOptionType.STRING,
+                    get description() {
+                        return I.default.Messages.COMMAND_GIPHY_QUERY_DESCRIPTION
+                    },
+                    get displayDescription() {
+                        return I.default.Messages.COMMAND_GIPHY_QUERY_DESCRIPTION
+                    },
+                    required: !0
+                }] : [],
+                integrationType: e.type,
+                integrationTitle: e.title
+            })).value(), {
+                id: "-15",
+                name: "leave",
+                displayName: "leave",
+                type: u.ApplicationCommandType.CHAT,
+                inputType: f.ApplicationCommandInputType.BUILT_IN,
+                applicationId: m.BuiltInSectionId.BUILT_IN,
+                get description() {
+                    return I.default.Messages.LEAVE_GROUP_DM
+                },
+                get displayDescription() {
+                    return I.default.Messages.LEAVE_GROUP_DM
+                },
+                options: [{
+                    name: "silent",
+                    displayName: "silent",
+                    type: u.ApplicationCommandOptionType.BOOLEAN,
+                    get description() {
+                        return I.default.Messages.LEAVE_GROUP_DM_SILENTLY_COMMAND_OPTION
+                    },
+                    get displayDescription() {
+                        return I.default.Messages.LEAVE_GROUP_DM_SILENTLY
+                    },
+                    required: !1
+                }],
+                predicate: e => {
+                    let {
+                        channel: t
+                    } = e;
+                    return t.isGroupDM()
+                },
+                execute: (e, t) => {
+                    var n, l;
+                    let {
+                        channel: a
+                    } = t, u = (0, d.computeChannelName)(a, p.default, c.default), f = I.default.Messages.LEAVE_GROUP_DM_TITLE.format({
+                        name: u
+                    }), m = I.default.Messages.LEAVE_GROUP_DM_BODY.format({
+                        name: u
+                    }), _ = null !== (l = null === (n = e.find(e => "silent" === e.name)) || void 0 === n ? void 0 : n.value) && void 0 !== l && l;
+                    async function C() {
+                        try {
+                            await o.default.closePrivateChannel(a.id, void 0, _)
+                        } catch (e) {
+                            r.default.sendBotMessage(a.id, I.default.Messages.LEAVE_GROUP_DM_ERROR)
+                        }
                     }
-                } catch (t) {
-                    throw t instanceof r.BillingError ? t : new r.BillingError(t)
+                    a.isManaged() && (f = I.default.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({
+                        name: u
+                    }), m = I.default.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
+                        name: u
+                    })), (0, s.openModal)(e => (0, i.jsx)(s.ConfirmModal, {
+                        header: f,
+                        confirmText: I.default.Messages.LEAVE_GROUP_DM,
+                        cancelText: I.default.Messages.CANCEL,
+                        onConfirm: C,
+                        ...e,
+                        children: (0, i.jsx)(s.Text, {
+                            variant: "text-md/normal",
+                            children: m
+                        })
+                    }))
+                }
+            }];
+            var A = T
+        },
+        670902: function(e, t, n) {
+            "use strict";
+            let i;
+            n.r(t), n.d(t, {
+                computeThreadIdsSnapshot: function() {
+                    return b
+                },
+                default: function() {
+                    return w
+                }
+            }), n("222007");
+            var l = n("917351"),
+                a = n.n(l),
+                s = n("335710"),
+                o = n("249654"),
+                r = n("446674"),
+                u = n("913144"),
+                d = n("689275"),
+                c = n("610730"),
+                p = n("271938"),
+                f = n("42203"),
+                m = n("660478"),
+                _ = n("18494"),
+                I = n("449008"),
+                C = n("786742");
+            let T = [],
+                A = null,
+                E = null,
+                N = new Set,
+                S = s.ThreadSortOrder.LATEST_ACTIVITY,
+                M = 0,
+                g = [],
+                O = !1,
+                h = [],
+                v = a.chain(T),
+                D = a.chain(T),
+                y = new Set,
+                R = new Set;
+
+            function P(e) {
+                var t;
+                return null !== (t = m.default.lastMessageId(e)) && void 0 !== t ? t : e
+            }
+
+            function L(e) {
+                return function(t, n) {
+                    if ((0, C.isForumPostPinned)(t)) return -1;
+                    if ((0, C.isForumPostPinned)(n)) return 1;
+                    if (e === s.ThreadSortOrder.LATEST_ACTIVITY) return o.default.compare(P(n), P(t));
+                    else return o.default.compare(n, t)
                 }
             }
 
             function U() {
-                i.default.dispatch({
-                    type: "SKU_PURCHASE_CLEAR_ERROR"
+                g = [], i = null, E = null, N = new Set, S = s.ThreadSortOrder.LATEST_ACTIVITY, M = 0, h = [], v = a.chain(T), D = a.chain(T), R.clear(), y.clear()
+            }
+
+            function B() {
+                var e;
+                let t = _.default.getChannelId();
+                if (null == t || !(null === (e = f.default.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return U(), !1;
+                H({
+                    refreshThreadIds: !0
                 })
             }
 
-            function L() {
-                i.default.wait(() => i.default.dispatch({
-                    type: "SKU_PURCHASE_SHOW_CONFIRMATION_STEP"
-                }))
+            function b(e) {
+                let t = f.default.getChannel(e);
+                return null == t ? [] : Object.values(d.default.getThreadsForParent(t.guild_id, t.id)).map(e => {
+                    let {
+                        id: t
+                    } = e;
+                    return t
+                }).sort(L(S))
             }
 
-            function M(t) {
-                i.default.dispatch({
-                    type: "SKU_PURCHASE_UPDATE_IS_GIFT",
-                    isGift: t
-                })
+            function H(e) {
+                var t;
+                let n = f.default.getChannel(E);
+                if (null == n) return;
+                (null == e ? void 0 : e.refreshThreadIds) && (h = Object.values(d.default.getThreadsForParent(n.guild_id, n.id)).map(e => {
+                    let {
+                        id: t
+                    } = e;
+                    return t
+                }), M = 0, O = !0), 0 !== y.size && (h = h.filter(e => !y.has(e)), y.clear()), 0 !== R.size && (h = Array.from(new Set([...h, ...R])), R.clear()), ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && (D = a.chain(h).sort(L(s.ThreadSortOrder.LATEST_ACTIVITY)), v = a.chain(h).sort(L(s.ThreadSortOrder.CREATION_DATE)));
+                let l = S === s.ThreadSortOrder.LATEST_ACTIVITY ? D : v,
+                    o = l.value();
+                g = 0 === N.size ? o : o.filter((t = N, function(e) {
+                    var n;
+                    let i = null === (n = f.default.getChannel(e)) || void 0 === n ? void 0 : n.appliedTags;
+                    return null != i && 0 !== i.length && i.some(e => t.has(e))
+                }));
+                let r = g.find(e => (function(e) {
+                    let t = c.default.getCount(e);
+                    return null === t || 0 === t
+                })(e));
+                i = null == r ? null : r
+            }
+            class F extends r.default.Store {
+                initialize() {
+                    this.waitFor(f.default, d.default, _.default, m.default)
+                }
+                getNewThreadCount() {
+                    return M
+                }
+                getCanAckThreads() {
+                    return O
+                }
+                getThreadIds(e, t, n) {
+                    let i = e !== E,
+                        l = !(0, I.areSetsEqual)(n, N),
+                        a = t !== S;
+                    return E = e, N = n, S = t, i ? H({
+                        refreshThreadIds: !0
+                    }) : a ? H({
+                        sortThreadIds: !0
+                    }) : l && H(), g
+                }
+                getCurrentThreadIds() {
+                    return g
+                }
+                getAndDeleteMostRecentUserCreatedThreadId() {
+                    let e = A;
+                    return A = null, e
+                }
+                getFirstNoReplyThreadId() {
+                    return i
+                }
+            }
+            F.displayName = "ForumActivePostStore";
+            var w = new F(u.default, {
+                CONNECTION_OPEN: B,
+                OVERLAY_INITIALIZE: B,
+                GUILD_CREATE: B,
+                CHANNEL_SELECT: B,
+                CHANNEL_DELETE: function(e) {
+                    let {
+                        channel: t
+                    } = e;
+                    if (null == t.parent_id || t.parent_id !== E) return !1;
+                    U()
+                },
+                THREAD_LIST_SYNC: function(e) {
+                    var t;
+                    let {
+                        guildId: n
+                    } = e;
+                    if (null == E || n !== (null === (t = f.default.getChannel(E)) || void 0 === t ? void 0 : t.guild_id)) return !1;
+                    H({
+                        refreshThreadIds: !0
+                    })
+                },
+                THREAD_CREATE: function(e) {
+                    let {
+                        channel: t,
+                        isNewlyCreated: n
+                    } = e;
+                    if (null == t.parent_id || t.parent_id !== E || !n) return !1;
+                    t.ownerId !== p.default.getId() ? M++ : A = t.id
+                },
+                THREAD_UPDATE: function(e) {
+                    let {
+                        channel: t
+                    } = e;
+                    if (null == t.parent_id || t.parent_id !== E) return !1;
+                    let n = (0, C.isForumPostPinned)(t.id),
+                        i = R.has(t.id);
+                    if (n && !i) R.add(t.id), H({
+                        sortThreadIds: !0
+                    });
+                    else {
+                        if (n || !i) return !1;
+                        R.delete(t.id), H({
+                            sortThreadIds: !0
+                        })
+                    }
+                },
+                THREAD_DELETE: function(e) {
+                    let {
+                        channel: t
+                    } = e;
+                    if (null == t.parent_id || t.parent_id !== E) return !1;
+                    y.add(t.id), H({
+                        sortThreadIds: !0
+                    })
+                },
+                RESORT_THREADS: function(e) {
+                    let {
+                        channelId: t
+                    } = e;
+                    if (null == t || t !== E) return !1;
+                    H({
+                        refreshThreadIds: !0
+                    })
+                },
+                CHANNEL_ACK: function(e) {
+                    let {
+                        channelId: t
+                    } = e;
+                    if (null == t || t !== E) return !1;
+                    O = !1
+                }
+            })
+        },
+        700179: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                canToggleCommunicationDisableOnUser: function() {
+                    return u
+                },
+                default: function() {
+                    return d
+                }
+            }), n("222007");
+            var i = n("446674"),
+                l = n("305961"),
+                a = n("957255"),
+                s = n("697218"),
+                o = n("991170"),
+                r = n("49111");
+
+            function u(e, t) {
+                let [n, i, u] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [s.default, l.default, a.default], d = i.getGuild(e), c = n.getUser(t);
+                if (null == d || null == c || c.isNonUserBot()) return !1;
+                let p = d.isOwner(c) || o.default.can({
+                    permission: r.Permissions.ADMINISTRATOR,
+                    user: c,
+                    context: d
+                });
+                return !p && u.canManageUser(r.Permissions.MODERATE_MEMBERS, c, d)
+            }
+
+            function d(e, t) {
+                return (0, i.useStateFromStores)([s.default, l.default, a.default], () => u(e, t, [s.default, l.default, a.default]), [e, t])
             }
         },
-        598981: function(t, e, n) {
+        292687: function(e, t, n) {
             "use strict";
-            n.r(e), n.d(e, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return i.default
                 }
             });
-            var u = n("65597"),
-                i = n("271938");
-
-            function r() {
-                return (0, u.default)([i.default], () => i.default.isAuthenticated())
-            }
+            var i = n("870346")
         },
-        479952: function(t, e, n) {
+        685841: function(e, t, n) {
             "use strict";
-            let u;
-            n.r(e), n.d(e, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return p
                 }
             });
             var i = n("446674"),
-                r = n("913144");
-            let l = {
-                lastGuildDismissedTime: {}
-            };
-            class a extends i.default.DeviceSettingsStore {
+                l = n("913144"),
+                a = n("377253");
+            let s = {},
+                o = {};
+
+            function r(e) {
+                if (null == e) return !1;
+                let t = o[e];
+                if (null == t) return !1;
+                let n = a.default.getMessage(e, t.messageId);
+                if (null == n) return !1;
+                s[e] = {
+                    channel: t.channel,
+                    message: n,
+                    shouldMention: t.shouldMention,
+                    showMentionToggle: t.showMentionToggle
+                }, delete o[e]
+            }
+
+            function u() {
+                s = {}, o = {}
+            }
+            class d extends i.default.Store {
                 initialize() {
-                    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l;
-                    u = t
+                    this.waitFor(a.default)
                 }
-                getUserAgnosticState() {
-                    return u
-                }
-                getLastGuildDismissedTime(t) {
-                    return u.lastGuildDismissedTime[t]
+                getPendingReply(e) {
+                    return s[e]
                 }
             }
-            a.displayName = "ApplicationSubscriptionChannelNoticeStore", a.persistKey = "ApplicationSubscriptionChannelNoticeStore";
-            var o = new a(r.default, {
-                APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED: function(t) {
+            d.displayName = "PendingReplyStore";
+            let c = new d(l.default, {
+                CREATE_PENDING_REPLY: function(e) {
                     let {
-                        guildId: e
-                    } = t;
-                    u.lastGuildDismissedTime[e] = Date.now()
-                }
-            })
-        },
-        524503: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                fetchAllSubscriptionListingsDataForApplication: function() {
-                    return l
+                        channel: t,
+                        message: n,
+                        shouldMention: i = !0,
+                        showMentionToggle: l = !0
+                    } = e;
+                    s[t.id] = {
+                        channel: t,
+                        message: n,
+                        shouldMention: i,
+                        showMentionToggle: l
+                    }
                 },
-                fetchEntitlementsForGuild: function() {
-                    return a
-                },
-                dismissApplicationSubscriptionExpirationNotice: function() {
-                    return o
-                },
-                fetchSubscriptionListingForPlan: function() {
-                    return s
-                }
-            }), n("222007");
-            var u = n("913144"),
-                i = n("775433"),
-                r = n("104449");
-            async function l(t, e) {
-                u.default.dispatch({
-                    type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS",
-                    applicationId: t
-                });
-                try {
-                    let n = await r.getApplicationSubscriptionGroupListingsForApplication(t, e);
-                    return u.default.dispatch({
-                        type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS",
-                        applicationId: t,
-                        groupListing: n
-                    }), n
-                } catch (e) {
-                    u.default.dispatch({
-                        type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE",
-                        applicationId: t
-                    })
-                }
-            }
-            async function a(t) {
-                u.default.dispatch({
-                    type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS",
-                    guildId: t
-                });
-                try {
-                    let e = await r.getEntitlementsForGuild(t);
-                    u.default.dispatch({
-                        type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS",
-                        guildId: t,
-                        entitlements: e
-                    })
-                } catch (e) {
-                    u.default.dispatch({
-                        type: "APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE",
-                        guildId: t
-                    })
-                }
-            }
-
-            function o(t) {
-                u.default.dispatch({
-                    type: "APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED",
-                    guildId: t
-                })
-            }
-            async function s(t) {
-                u.default.dispatch({
-                    type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN",
-                    planId: t
-                });
-                try {
-                    var e;
-                    let n = await r.getSubscriptionGroupForSubscriptionPlan(t);
-                    u.default.dispatch({
-                        type: "APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS",
-                        groupListing: n
-                    });
-                    let l = null !== (e = n.subscription_listings) && void 0 !== e ? e : [];
-                    for (let e of l) e.subscription_plans[0].id === t && await i.fetchSubscriptionPlansForSKU(e.id, void 0, void 0, !0)
-                } catch (t) {}
-            }
-        },
-        650509: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                LoadState: function() {
-                    return u
-                },
-                useFetchListingsForApplication: function() {
-                    return N
-                },
-                useFetchEntitlementsForGuild: function() {
-                    return R
-                },
-                useSubscriptionListingsForGroup: function() {
-                    return L
-                },
-                useActiveSubscriptionListingForApplication: function() {
-                    return F
-                },
-                useUnseenEndedApplicationSubscriptionEntitlements: function() {
-                    return m
-                },
-                useFetchListingsForSubscriptions: function() {
-                    return h
-                },
-                useFetchUserApplicationSubscriptionEntitlements: function() {
-                    return y
-                },
-                useApplication: function() {
-                    return g
-                },
-                default: function() {
-                    return G
-                },
-                useEligibleApplicationSubscriptionGuilds: function() {
-                    return D
-                }
-            }), n("424973"), n("222007");
-            var u, i, r = n("884691"),
-                l = n("446674"),
-                a = n("251472"),
-                o = n("598981"),
-                s = n("299285"),
-                c = n("305961"),
-                S = n("957255"),
-                d = n("10514"),
-                E = n("521012"),
-                f = n("437712"),
-                _ = n("552712"),
-                T = n("479952"),
-                A = n("524503"),
-                I = n("104449"),
-                p = n("186211"),
-                C = n("90592"),
-                P = n("49111");
-            (i = u || (u = {}))[i.NOT_LOADED = 0] = "NOT_LOADED", i[i.LOADING = 1] = "LOADING", i[i.LOADED = 2] = "LOADED", i[i.ERROR = 3] = "ERROR";
-            let N = function(t, e) {
+                CREATE_SHALLOW_PENDING_REPLY: function(e) {
                     let {
-                        refetchOnMount: n = !1
-                    } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, u = (0, l.useStateFromStores)([p.default], () => null != t ? p.default.getSubscriptionGroupListingsForApplicationFetchState(t) : p.FetchState.FETCHED, [t]);
-                    return r.useEffect(() => {
-                        if (null == t || null == e) return;
-                        let u = p.default.getSubscriptionGroupListingsForApplicationFetchState(t);
-                        (n || u === p.FetchState.NOT_FETCHED) && (0, A.fetchAllSubscriptionListingsDataForApplication)(t, e)
-                    }, [t, e, n]), {
-                        listingsLoaded: u === p.FetchState.FETCHED
+                        channel: t,
+                        messageId: n,
+                        shouldMention: i = !0,
+                        showMentionToggle: l = !0
+                    } = e;
+                    o[t.id] = {
+                        channel: t,
+                        messageId: n,
+                        shouldMention: i,
+                        showMentionToggle: l
                     }
                 },
-                R = t => {
+                SET_PENDING_REPLY_SHOULD_MENTION: function(e) {
                     let {
-                        guildId: e,
-                        canFetch: n = !0,
-                        forceRefetch: u = !1
-                    } = t, i = (0, l.useStateFromStores)([p.default], () => null != e ? p.default.getEntitlementsForGuildFetchState(e) : null, [e]);
-                    return r.useEffect(() => {
-                        if (null == e || e === P.ME) return;
-                        let t = p.default.getEntitlementsForGuildFetchState(e);
-                        n && (t === p.FetchState.NOT_FETCHED || u) && (0, A.fetchEntitlementsForGuild)(e)
-                    }, [e, n, u]), {
-                        entitlementsLoaded: i === p.FetchState.FETCHED
-                    }
-                },
-                U = t => {
-                    let {
-                        applicationId: e,
-                        canFetch: n = !0,
-                        forceRefetch: u = !1,
-                        loggedIn: i
-                    } = t, o = (0, l.useStateFromStores)([f.default], () => f.default.isFetchedForApplication(e), [e]);
-                    return r.useEffect(() => {
-                        if (i) {
-                            let t = f.default.isFetchingForApplication(e),
-                                i = n && !t && !o || u;
-                            i && (0, a.fetchUserEntitlements)({
-                                entitlementType: P.EntitlementTypes.APPLICATION_SUBSCRIPTION
-                            })
-                        }
-                    }, [e, n, o, u, i]), {
-                        entitlementsLoaded: o
-                    }
-                },
-                L = function(t) {
-                    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
-                        includeSoftDeleted: !1
-                    };
-                    return (0, l.useStateFromStoresArray)([p.default], () => {
-                        if (null == t) return [];
-                        let n = p.default.getSubscriptionGroupListing(t);
-                        if (null == n) return [];
-                        let u = [];
-                        for (let t of n.subscription_listings_ids) {
-                            let n = p.default.getSubscriptionListing(t);
-                            if (null != n)(!n.soft_deleted || e.includeSoftDeleted) && u.push(n)
-                        }
-                        return u
-                    }, [t, e.includeSoftDeleted])
-                },
-                M = [],
-                O = [];
-
-            function F(t, e) {
-                let n = (0, l.useStateFromStores)([E.default], () => E.default.getSubscriptions()),
-                    {
-                        subscriptionGroupListing: u,
-                        guildEntitlements: i,
-                        userEntitlements: a
-                    } = (0, l.useStateFromStoresObject)([p.default, f.default], () => {
-                        var n, u;
-                        return {
-                            subscriptionGroupListing: null != t ? p.default.getSubscriptionGroupListingForApplication(t) : null,
-                            guildEntitlements: null != t && null != e ? p.default.getApplicationEntitlementsForGuild(t, e) : M,
-                            userEntitlements: null != t && null !== (u = null === (n = f.default.getForApplication(t)) || void 0 === n ? void 0 : n.values()) && void 0 !== u ? u : O
-                        }
-                    }, [t, e]),
-                    o = r.useMemo(() => [...i, ...a], [i, a]),
-                    s = null == u ? void 0 : u.subscription_listings,
-                    {
-                        activeSubscriptionListing: c,
-                        activeEntitlement: S
-                    } = r.useMemo(() => {
-                        if (null != s) {
-                            for (let t of o)
-                                for (let n of s)
-                                    if ((0, C.isListingActiveInGuild)(n, t, e)) return {
-                                        activeSubscriptionListing: n,
-                                        activeEntitlement: t
-                                    }
-                        }
-                        return {
-                            activeSubscriptionListing: null,
-                            activeEntitlement: null
-                        }
-                    }, [o, s, e]),
-                    d = r.useMemo(() => {
-                        if (null == n) return null;
-                        let t = null == c ? void 0 : c.subscription_plans[0].id;
-                        for (let e of Object.values(n))
-                            if (e.type === P.SubscriptionTypes.APPLICATION) {
-                                let n = e.items[0].planId;
-                                if (n === t) return e
-                            } return null
-                    }, [c, n]);
-                return {
-                    activeSubscription: d,
-                    activeSubscriptionListing: c,
-                    activeEntitlement: S,
-                    subscriptionGroupListing: u
-                }
-            }
-
-            function m(t) {
-                var e;
-                let n = null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : "",
-                    u = (0, l.useStateFromStores)([S.default], () => S.default.can(P.Permissions.ADMINISTRATOR, t)),
-                    {
-                        entitlementsLoaded: i
-                    } = R({
-                        guildId: n,
-                        canFetch: u
-                    }),
-                    a = (0, l.useStateFromStores)([T.default], () => T.default.getLastGuildDismissedTime(n)),
-                    o = (0, l.useStateFromStoresArray)([p.default], () => {
-                        let t = p.default.getEntitlementsForGuild(n),
-                            e = p.default.getEntitlementsForGuild(n, !1),
-                            u = t.map(t => t.applicationId);
-                        return e.filter(t => !u.includes(t.applicationId))
-                    }),
-                    s = (0, l.useStateFromStores)([_.default], () => _.default.getSKUs()),
-                    c = r.useMemo(() => o.filter(t => {
-                        let e = s[t.skuId];
-                        return null != e && e.available
-                    }), [o, s]);
-                return i ? c.filter(t => null != t.endsAt && t.endsAt.getTime() > Math.max(null != a ? a : 0, Date.now() - 2592e6)) : []
-            }
-            let h = t => {
-                    let [e, n] = r.useState(!1), u = r.useMemo(() => t.map(C.getApplicationSubscriptionPlanId), [t]), i = (0, l.useStateFromStoresArray)([d.default], () => u.filter(t => null == d.default.get(t)), [u]);
-                    return r.useEffect(() => {
-                        i.length > 0 && (n(!0), Promise.all(i.map(t => (0, A.fetchSubscriptionListingForPlan)(t))).catch(() => {}).then(() => {
-                            n(!1)
-                        }))
-                    }, [i]), {
-                        loading: e
-                    }
-                },
-                y = () => {
-                    let [t, e] = r.useState(0);
-                    return r.useEffect(() => {
-                        e(1), (0, a.fetchUserEntitlements)({
-                            withSku: !0,
-                            withApplication: !0,
-                            entitlementType: P.EntitlementTypes.APPLICATION_SUBSCRIPTION
-                        }).catch(() => {
-                            e(3)
-                        }).then(() => {
-                            e(2)
-                        })
-                    }, []), {
-                        loadState: t
-                    }
-                },
-                g = t => {
-                    let e = (0, o.default)(),
-                        n = (0, l.useStateFromStores)([s.default], () => null != t ? s.default.getApplication(t) : null, [t]),
-                        u = null != n;
-                    return r.useEffect(() => {
-                        !u && null != t && e && (0, I.fetchApplication)(t)
-                    }, [u, t, e]), n
-                };
-
-            function G(t) {
-                let {
-                    applicationId: e,
-                    groupListingId: n,
-                    guildId: u
-                } = t, i = (0, o.default)(), {
-                    listingsLoaded: r
-                } = N(e, n), {
-                    entitlementsLoaded: l
-                } = R({
-                    guildId: u
-                }), {
-                    entitlementsLoaded: a
-                } = U({
-                    applicationId: e,
-                    loggedIn: i
-                }), {
-                    subscriptionGroupListing: s
-                } = F(e, u);
-                return {
-                    applicationSubscriptionListingsShown: null != e && null != n && (null == u || l) && (!i || a) && r && null != s && (0, C.hasPayableSubscriptionPlan)(s)
-                }
-            }
-
-            function D(t, e) {
-                let n = (0, l.useStateFromStores)([c.default], () => c.default.isLoaded()),
-                    [u, i] = r.useState([]);
-                return r.useEffect(() => {
-                    null == e && null != t && n && (0, I.fetchEligibleApplicationSubscriptionGuilds)(t).then(t => {
-                        let e = t.map(t => c.default.getGuild(t)).filter(t => null != t);
-                        i(e)
+                        channelId: t,
+                        shouldMention: n
+                    } = e;
+                    t in s && (s[t] = {
+                        ...s[t],
+                        shouldMention: n
+                    }), t in o && (o[t] = {
+                        ...o[t],
+                        shouldMention: n
                     })
-                }, [t, e, n]), u
-            }
-        },
-        104449: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                getApplicationSubscriptionGroupListingsForApplication: function() {
-                    return a
                 },
-                getEntitlementsForGuild: function() {
-                    return o
+                DELETE_PENDING_REPLY: function(e) {
+                    let {
+                        channelId: t
+                    } = e;
+                    delete s[t], delete o[t]
                 },
-                getSubscriptionGroupForSubscriptionPlan: function() {
-                    return s
+                CONNECTION_OPEN: u,
+                LOGOUT: u,
+                MESSAGE_DELETE: function(e) {
+                    var t, n, i;
+                    let {
+                        id: l,
+                        channelId: a
+                    } = e;
+                    if ((null === (n = s[a]) || void 0 === n ? void 0 : null === (t = n.message) || void 0 === t ? void 0 : t.id) === l) delete s[a];
+                    else {
+                        if ((null === (i = o[a]) || void 0 === i ? void 0 : i.messageId) !== l) return !1;
+                        delete o[a]
+                    }
                 },
-                fetchApplication: function() {
-                    return c
+                CHANNEL_SELECT: function(e) {
+                    let {
+                        channelId: t
+                    } = e;
+                    r(t)
                 },
-                fetchEligibleApplicationSubscriptionGuilds: function() {
-                    return S
+                LOAD_MESSAGES_SUCCESS: function(e) {
+                    let {
+                        channelId: t
+                    } = e;
+                    r(t)
                 }
             });
-            var u = n("872717"),
-                i = n("913144"),
-                r = n("599417"),
-                l = n("49111");
-            let a = async (t, e) => {
-                let n = await u.default.get({
-                    url: l.Endpoints.APPLICATION_SUBSCRIPTION_GROUP_LISTING(t, e)
-                });
-                return n.body
-            }, o = async function(t) {
-                let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    n = await u.default.get({
-                        url: l.Endpoints.GUILD_ENTITLEMENTS(t),
-                        query: {
-                            with_sku: !0,
-                            with_application: !0,
-                            exclude_deleted: e
-                        }
-                    });
-                return n.body
-            }, s = async t => {
-                let e = await u.default.get({
-                    url: l.Endpoints.SUBSCRIPTION_PLAN_GROUP_LISTING(t)
-                });
-                return e.body
-            };
-
-            function c(t) {
-                return i.default.dispatch({
-                    type: "APPLICATION_FETCH",
-                    applicationId: t
-                }), u.default.get({
-                    url: l.Endpoints.APPLICATION_PUBLIC(t)
-                }).then(t => (i.default.dispatch({
-                    type: "APPLICATION_FETCH_SUCCESS",
-                    application: t.body
-                }), t.body)).catch(e => (i.default.dispatch({
-                    type: "APPLICATION_FETCH_FAIL",
-                    applicationId: t
-                }), Promise.reject(new r.default(e))))
-            }
-            async function S(t) {
-                let e = await u.default.get({
-                    url: l.Endpoints.ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS,
-                    query: {
-                        application_id: t
-                    }
-                });
-                return e.body
-            }
+            var p = c
         },
-        186211: function(t, e, n) {
+        812809: function(e, t, n) {
             "use strict";
-            n.r(e), n.d(e, {
-                FetchState: function() {
-                    return u
-                },
-                default: function() {
-                    return L
-                }
-            }), n("222007");
-            var u, i, r = n("627445"),
-                l = n.n(r),
-                a = n("446674"),
-                o = n("407846"),
-                s = n("913144"),
-                c = n("984273"),
-                S = n("552712");
-
-            function d(t) {
-                return "subscription_listing:".concat(t)
-            }
-
-            function E(t) {
-                return "application:".concat(t)
-            }
-
-            function f(t) {
-                return "plan:".concat(t)
-            }
-
-            function _(t, e, n) {
-                return "entitlement:".concat(t, ":").concat(n, ":").concat(e)
-            }
-
-            function T(t, e) {
-                return "entitlement:".concat(e, ":").concat(t)
-            }(i = u || (u = {}))[i.NOT_FETCHED = 0] = "NOT_FETCHED", i[i.FETCHING = 1] = "FETCHING", i[i.FETCHED = 2] = "FETCHED";
-            let A = new o.default(t => [E(t.application_id), ...t.subscription_listings_ids.map(d)], t => t.id),
-                I = new o.default(t => [E(t.application_id), f(t.subscription_plans[0].id)], t => t.id),
-                p = new o.default(t => [_(t.applicationId, t.isValid(null, S.default), t.guildId), T(t.isValid(null, S.default), t.guildId)], t => t.id),
-                C = {},
-                P = {};
-
-            function N(t) {
-                let e = A.values(E(t));
-                return l(e.length <= 1, "Found multiple group listings for application"), e[0]
-            }
-
-            function R(t) {
-                var e;
-                for (let n of (A.set(t.id, t), null !== (e = t.subscription_listings) && void 0 !== e ? e : []))(function(t) {
-                    I.set(t.id, t)
-                })(n)
-            }
-            class U extends a.default.Store {
-                getSubscriptionGroupListingsForApplicationFetchState(t) {
-                    var e;
-                    return null !== (e = C[t]) && void 0 !== e ? e : 0
-                }
-                getSubscriptionGroupListing(t) {
-                    return A.get(t)
-                }
-                getSubscriptionGroupListingForApplication(t) {
-                    return N(t)
-                }
-                getSubscriptionGroupListingForSubscriptionListing(t) {
-                    let e = A.values(d(t));
-                    return l(e.length <= 1, "Found multiple group listings for listing"), e[0]
-                }
-                getSubscriptionListing(t) {
-                    return I.get(t)
-                }
-                getSubscriptionListingsForApplication(t) {
-                    return I.values(E(t))
-                }
-                getEntitlementsForGuildFetchState(t) {
-                    var e;
-                    return null !== (e = P[t]) && void 0 !== e ? e : 0
-                }
-                getSubscriptionListingForPlan(t) {
-                    let e = I.values(f(t));
-                    return l(e.length <= 1, "Found multiple listings for plan"), e[0]
-                }
-                getApplicationEntitlementsForGuild(t, e) {
-                    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-                    return p.values(_(t, n, e))
-                }
-                getEntitlementsForGuild(t) {
-                    let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                    return p.values(T(e, t))
-                }
-            }
-            U.displayName = "ApplicationSubscriptionStore";
-            var L = new U(s.default, {
-                LOGOUT: function() {
-                    A.clear(), I.clear(), p.clear(), C = {}, P = {}
-                },
-                APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS: function(t) {
-                    let {
-                        applicationId: e
-                    } = t;
-                    C[e] = 1;
-                    let n = N(e);
-                    if (null != n)
-                        for (let t of n.subscription_listings_ids) I.delete(t)
-                },
-                APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function(t) {
-                    let {
-                        applicationId: e,
-                        groupListing: n
-                    } = t;
-                    C[e] = 2, R(n)
-                },
-                APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function(t) {
-                    let {
-                        applicationId: e
-                    } = t;
-                    C[e] = 2
-                },
-                APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS(t) {
-                    let {
-                        guildId: e
-                    } = t;
-                    P[e] = 1
-                },
-                APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS(t) {
-                    let {
-                        guildId: e,
-                        entitlements: n
-                    } = t;
-                    P[e] = 2, n.forEach(t => {
-                        let e = c.default.createFromServer(t);
-                        p.set(e.id, e)
-                    })
-                },
-                APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE(t) {
-                    let {
-                        guildId: e
-                    } = t;
-                    P[e] = 0
-                },
-                APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: function(t) {
-                    let {
-                        groupListing: e
-                    } = t;
-                    R(e)
-                }
-            })
-        },
-        90592: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                getApplicationSubscriptionPlanId: function() {
-                    return a
-                },
-                hasPayableSubscriptionPlan: function() {
-                    return o
-                },
-                getPayableSubscriptionListing: function() {
-                    return s
-                },
-                isApplicationGuildSubscription: function() {
-                    return c
-                },
-                isApplicationUserSubscription: function() {
-                    return S
-                },
-                isListingActiveInGuild: function() {
-                    return d
-                }
-            });
-            var u = n("627445"),
-                i = n.n(u),
-                r = n("568734"),
-                l = n("49111");
-
-            function a(t) {
-                let e = t.items;
-                return i(1 === e.length, "more than 1 subscription item for application subscription"), e[0].planId
-            }
-
-            function o(t) {
-                return null != s(t)
-            }
-
-            function s(t) {
-                var e;
-                return null === (e = t.subscription_listings) || void 0 === e ? void 0 : e.find(t => t.published && (c(t.sku_flags) || S(t.sku_flags)) && t.subscription_plans[0].price > 0)
-            }
-
-            function c(t) {
-                return (0, r.hasFlag)(t, l.SKUFlags.APPLICATION_GUILD_SUBSCRIPTION)
-            }
-
-            function S(t) {
-                return (0, r.hasFlag)(t, l.SKUFlags.APPLICATION_USER_SUBSCRIPTION)
-            }
-
-            function d(t, e, n) {
-                return t.subscription_plans[0].sku_id === e.skuId && (c(t.sku_flags) ? null != n && e.guildId === n && n !== l.ME : !!S(t.sku_flags) && null == e.guildId)
-            }
-        },
-        619935: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                useBlockedPaymentsConfig: function() {
-                    return a
-                },
-                default: function() {
-                    return o
-                }
-            });
-            var u = n("862205"),
-                i = n("15733");
-            let r = (0, u.createExperiment)({
-                    kind: "user",
-                    id: "2022-03_block_russian_purchases",
-                    label: "Block purchases based on country",
-                    defaultConfig: {
-                        paymentsBlocked: !1
-                    },
-                    treatments: [{
-                        id: 1,
-                        label: "Payments Blocked",
-                        config: {
-                            paymentsBlocked: !0
-                        }
-                    }]
-                }),
-                l = (0, u.createExperiment)({
-                    kind: "user",
-                    id: "2022-03_block_russian_purchases_desktop",
-                    label: "Block purchases based on country (desktop specific flags)",
-                    defaultConfig: {
-                        checkPaymentSource: !1
-                    },
-                    treatments: [{
-                        id: 1,
-                        label: "Check Payment Source",
-                        config: {
-                            checkPaymentSource: !0
-                        }
-                    }]
-                });
-
-            function a() {
-                let {
-                    paymentsBlocked: t
-                } = r.useExperiment({
-                    location: "c519a9_1"
-                }, {
-                    autoTrackExposure: !1
-                }), {
-                    checkPaymentSource: e
-                } = l.useExperiment({
-                    location: "c519a9_2"
-                }, {
-                    autoTrackExposure: !1
-                }), {
-                    defaultBillingCountryCode: n
-                } = (0, i.default)();
-                return t || e && "RU" === n
-            }
-            var o = r
-        },
-        308592: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                useSubscriptionPlansLoaded: function() {
-                    return c
-                },
-                getSubscriptionPlansLoaded: function() {
-                    return S
-                }
-            }), n("222007");
-            var u = n("446674"),
-                i = n("605250"),
-                r = n("357957"),
-                l = n("10514"),
-                a = n("521012"),
-                o = n("646718");
-            new i.default("useSubscriptionPlansLoaded");
-            let s = t => {};
-
-            function c() {
-                let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [...o.ACTIVE_PREMIUM_SKUS];
-                return (0, u.useStateFromStores)([r.default, l.default, a.default], () => S(t, [r.default, l.default, a.default]), [t])
-            }
-
-            function S() {
-                var t;
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [...o.ACTIVE_PREMIUM_SKUS],
-                    [n, u, i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.default, l.default, a.default],
-                    c = n.paymentSourceIds,
-                    S = n.defaultPaymentSourceId,
-                    d = u.isLoadedForSKUs(e),
-                    E = null === (t = i.getPremiumTypeSubscription()) || void 0 === t ? void 0 : t.paymentSourceId;
-                if (null != E && !u.hasPaymentSourceForSKUIds(E, e)) return s("subscription payment source ".concat(E, " not loaded for ").concat(e)), !1;
-                if (null != S && !u.hasPaymentSourceForSKUIds(S, e)) return s("default payment source ".concat(S, " not loaded for ").concat(e)), !1;
-                for (let t of c)
-                    if (!u.hasPaymentSourceForSKUIds(t, e)) return s("payment source ".concat(t, " not loaded for ").concat(e)), !1;
-                return s("isLoadedForSKUs ".concat(d)), d
-            }
-        },
-        621746: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return l
-                }
-            }), n("222007");
-            var u = n("884691"),
-                i = n("446674"),
-                r = n("10514");
-
-            function l() {
-                let [t, e] = u.useState(void 0), [n, l] = u.useState(void 0), a = (0, i.useStateFromStores)([r.default], () => null != n ? r.default.get(n) : null);
-                return {
-                    selectedSkuId: t,
-                    selectedPlan: a,
-                    setSelectedSkuId: e,
-                    setSelectedPlanId: l
-                }
-            }
-        },
-        642906: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                PaymentContextProvider: function() {
-                    return w
-                },
-                PaymentContext: function() {
-                    return H
-                },
-                usePaymentContext: function() {
-                    return v
-                },
-                useForwardedPaymentContext: function() {
-                    return K
-                }
-            }), n("222007"), n("702976");
-            var u = n("37983"),
-                i = n("884691"),
-                r = n("41092"),
-                l = n("775560"),
-                a = n("748820"),
-                o = n("446674"),
-                s = n("191225"),
-                c = n("650509"),
-                S = n("619935"),
-                d = n("78345"),
-                E = n("53253"),
-                f = n("467292"),
-                _ = n("622839"),
-                T = n("105097"),
-                A = n("568734"),
-                I = n("659632"),
-                p = n("719923"),
-                C = n("286235"),
-                P = n("621746"),
-                N = n("854381"),
-                R = n("237288"),
-                U = n("986681"),
-                L = n("702924"),
-                M = n("241006"),
-                O = n("284797"),
-                F = n("383802"),
-                m = n("334702"),
-                h = n("775325"),
-                y = n("403293"),
-                g = n("523591"),
-                G = n("49111"),
-                D = n("646718");
-            let B = d.PremiumGiftStyles.STANDARD_BOX,
-                b = void 0,
-                [H, v, K] = (0, T.default)();
-
-            function w(t) {
-                var e, n;
-                let {
-                    loadId: T,
-                    activeSubscription: v,
-                    stepConfigs: K,
-                    breadcrumbs: w = [],
-                    skuIDs: Y,
-                    isGift: W = !1,
-                    giftRecipient: k,
-                    children: V,
-                    defaultPlanId: Z,
-                    purchaseType: x = G.PurchaseTypes.SUBSCRIPTION,
-                    applicationId: J,
-                    referralCode: Q
-                } = t, X = (0, y.default)(), j = (0, S.useBlockedPaymentsConfig)(), q = (0, R.default)(), {
-                    paymentSources: z,
-                    hasPaymentSources: $,
-                    paymentSourceId: tt,
-                    setPaymentSourceId: te,
-                    hasFetchedPaymentSources: tn
-                } = (0, U.default)({
-                    isGift: W,
-                    activeSubscription: v
-                }), tu = i.useRef($), {
-                    hasFetchedSubscriptionPlans: ti,
-                    priceOptions: tr,
-                    setCurrency: tl,
-                    currencyLoading: ta,
-                    currencies: to
-                } = (0, N.default)({
-                    activeSubscription: v,
-                    skuIDs: Y,
-                    paymentSourceId: tt,
-                    isGift: W
-                }), ts = (0, F.default)(), [tc, tS] = i.useState(!1), {
-                    step: td,
-                    setStep: tE,
-                    steps: tf,
-                    breadcrumbsData: t_
-                } = (0, h.default)({
-                    stepConfigs: K,
-                    breadcrumbs: w
-                }), [tT, tA] = (0, O.default)(td), {
-                    paymentError: tI,
-                    paymentAuthenticationState: tp
-                } = (0, L.default)(), {
-                    purchaseError: tC,
-                    purchaseErrorBlockRef: tP,
-                    setPurchaseError: tN
-                } = (0, M.default)(), tR = (0, l.useLazyValue)(() => {
-                    let t = null != T ? T : (0, a.v4)();
-                    return C.default.addBreadcrumb({
-                        message: "Checkout session ID: ".concat(t)
-                    }), {
-                        loadId: t,
-                        startTime: Date.now()
-                    }
-                }), {
-                    selectedSkuId: tU,
-                    selectedPlan: tL,
-                    setSelectedSkuId: tM,
-                    setSelectedPlanId: tO
-                } = (0, P.default)(), [tF, tm] = (0, o.useStateFromStoresArray)([f.default], () => [f.default.purchaseTokenAuthState, f.default.purchaseTokenHash]), [th, ty] = (0, o.useStateFromStoresArray)([g.default], () => [g.default.browserCheckoutState, g.default.loadId]), [tg, tG] = i.useState(null), [tD, tB] = i.useState(null), [tb, tH] = i.useState(null), [tv, tK] = i.useState(null), [tw, tY] = i.useState(null), [tW, tk] = i.useState(void 0), [tV, tZ] = i.useState([]), tx = i.useMemo(() => null == tL || (0, p.isPremiumSubscriptionPlan)(tL.id), [tL]), tJ = (0, I.shouldShowCustomGiftExperience)(k), tQ = (0, E.useIsSeasonalGiftingActive)(), {
-                    enabled: tX
-                } = E.default.useExperiment({
-                    location: "PaymentContextProvider"
-                }, {
-                    autoTrackExposure: tJ && tQ
-                }), [tj, tq] = i.useState(tJ ? tX && tQ ? d.PremiumGiftStyles.SEASONAL_STANDARD_BOX : B : b), tz = i.useRef(null != v ? v.planId : null);
-                i.useEffect(() => {
-                    null == tz.current && null != v && (tz.current = v.planId)
-                }, [v]);
-                let {
-                    skusById: t$,
-                    hasFetchedSkus: t0,
-                    skuPricePreviewsById: t1
-                } = (0, m.default)({
-                    applicationId: null != J ? J : D.PREMIUM_SUBSCRIPTION_APPLICATION,
-                    skuIDs: Y,
-                    currentPaymentSourceId: tt
-                }), t2 = i.useMemo(() => {
-                    if (null == tU) return null;
-                    let t = t1[tU];
-                    if (null == t) return null;
-                    let e = null != tt ? tt : _.NO_PAYMENT_SOURCE;
-                    return t[e]
-                }, [tU, t1, tt]), t4 = (0, c.useApplication)(J), t7 = (0, A.hasFlag)(null !== (e = null == t4 ? void 0 : t4.flags) && void 0 !== e ? e : 0, G.ApplicationFlags.EMBEDDED) && (0, A.hasFlag)(null !== (n = null == t4 ? void 0 : t4.flags) && void 0 !== n ? n : 0, G.ApplicationFlags.EMBEDDED_IAP), t6 = (0, o.useStateFromStores)([s.default], () => Array.from(s.default.getSelfEmbeddedActivities().values()).find(t => {
-                    let {
-                        application_id: e
-                    } = t;
-                    return J === e
-                })), t9 = null != t6 ? t6.activity_id : void 0;
-                return (0, u.jsx)(H.Provider, {
-                    value: {
-                        stripe: X,
-                        contextMetadata: tR,
-                        blockedPayments: j,
-                        isGift: W,
-                        giftRecipient: k,
-                        activeSubscription: v,
-                        hasFetchedSubscriptions: q,
-                        hasFetchedSubscriptionPlans: ti,
-                        updatedSubscription: tv,
-                        setUpdatedSubscription: tK,
-                        subscriptionMetadataRequest: tw,
-                        setSubscriptionMetadataRequest: tY,
-                        hasFetchedPaymentSources: tn,
-                        paymentSources: z,
-                        hasPaymentSources: $,
-                        paymentSourceId: tt,
-                        setPaymentSourceId: te,
-                        priceOptions: tr,
-                        setCurrency: tl,
-                        currencyLoading: ta,
-                        currencies: to,
-                        ...ts,
-                        hasAcceptedTerms: tc,
-                        setHasAcceptedTerms: tS,
-                        step: td,
-                        setStep: tE,
-                        steps: tf,
-                        stepConfigs: K,
-                        breadcrumbs: t_,
-                        purchaseState: tT,
-                        setPurchaseState: tA,
-                        paymentAuthenticationState: tp,
-                        paymentError: tI,
-                        purchaseError: tC,
-                        setPurchaseError: tN,
-                        purchaseErrorBlockRef: tP,
-                        purchaseTokenAuthState: tF,
-                        purchaseTokenHash: tm,
-                        browserCheckoutState: th,
-                        browserCheckoutStateLoadId: ty,
-                        bodyNode: tg,
-                        setBodyNode: tG,
-                        footerNode: tD,
-                        setFooterNode: tB,
-                        modalOverlayNode: tb,
-                        setModalOverlayNode: tH,
-                        selectedSkuId: tU,
-                        selectedPlan: tL,
-                        setSelectedSkuId: tM,
-                        setSelectedPlanId: tO,
-                        readySlideId: tW,
-                        setReadySlideId: tk,
-                        defaultPlanId: Z,
-                        isPremium: tx,
-                        startedPaymentFlowWithPaymentSourcesRef: tu,
-                        startingPremiumSubscriptionPlanIdRef: tz,
-                        selectedGiftStyle: tj,
-                        setSelectedGiftStyle: tq,
-                        hasFetchedSkus: t0,
-                        skusById: t$,
-                        skuPricePreviewsById: t1,
-                        selectedSkuPricePreview: t2,
-                        application: t4,
-                        purchaseType: x,
-                        isEmbeddedIAP: t7,
-                        activitySessionId: t9,
-                        entitlementsGranted: tV,
-                        setEntitlementsGranted: tZ,
-                        referralCode: Q
-                    },
-                    children: (0, u.jsx)(r.Elements, {
-                        options: G.StripeElementsOptions,
-                        stripe: X,
-                        children: V
-                    })
-                })
-            }
-        },
-        85336: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                Step: function() {
-                    return u
-                },
-                COLLAPSED_PAYMENT_BREADCRUMB_STEPS: function() {
-                    return d
-                },
-                getLabelForStep: function() {
-                    return E
-                },
-                errorToStep: function() {
-                    return f
-                },
-                usePurchaseStateForStep: function() {
-                    return _
-                }
-            }), n("222007"), n("70102");
-            var u, i, r = n("884691"),
-                l = n("448993"),
-                a = n("605250"),
-                o = n("745279"),
-                s = n("286350"),
-                c = n("782340");
-            let S = new a.default("PaymentSteps");
-            (i = u || (u = {})).PAYMENT_TYPE = "payment_type", i.CREDIT_CARD_INFORMATION = "credit_card_information", i.PAYPAL_INFORMATION = "paypal_information", i.VENMO_INFORMATION = "venmo_information", i.SOFORT_INFORMATION = "sofort_information", i.PRZELEWY24_INFORMATION = "przelewy24_information", i.EPS_INFORMATION = "eps_information", i.IDEAL_INFORMATION = "ideal_information", i.CASH_APP_INFORMATION = "cash_app_information", i.PAYMENT_REQUEST_INFORMATION = "payment_request_information", i.ADDRESS = "address", i.AWAITING_AUTHENTICATION = "awaiting_authentication", i.SKU_SELECT = "sku_select", i.PLAN_SELECT = "plan_select", i.PREMIUM_UPSELL = "premium_upsell", i.PREMIUM_GUILD_UPSELL = "premium_guild_upsell", i.REVIEW = "review", i.CONFIRM = "confirm", i.CLAIM_FREE_SKU = "claim_free_sku", i.SKU_PREVIEW = "sku_preview", i.LOADING_PAYMENT_SOURCES = "loading_payment_sources", i.SHOP = "shop", i.PROMOTION_INFO = "promotion_info", i.AWAITING_PURCHASE_TOKEN_AUTH = "awaiting_purchase_token_auth", i.BENEFITS = "benefits", i.WHAT_YOU_LOSE = "what_you_lose", i.ADD_PAYMENT_STEPS = "add_payment_steps", i.AWAITING_BROWSER_CHECKOUT = "awaiting_browser_checkout";
-            let d = new Set(["credit_card_information", "payment_request_information", "paypal_information", "venmo_information", "cash_app_information", "address", "claim_free_sku", "sku_preview", "premium_upsell", "sofort_information", "przelewy24_information"]);
-
-            function E(t) {
-                switch (t) {
-                    case "plan_select":
-                        return c.default.Messages.BILLING_STEP_SELECT_PLAN;
-                    case "payment_type":
-                    case "add_payment_steps":
-                        return c.default.Messages.BILLING_STEP_PAYMENT;
-                    case "awaiting_purchase_token_auth":
-                    case "review":
-                        return c.default.Messages.BILLING_STEP_REVIEW;
-                    case "shop":
-                        return c.default.Messages.BILLING_STEP_SHOP;
-                    case "payment_request_information":
-                        return c.default.Messages.BILLING_STEP_PAYMENT_INFO;
-                    case "credit_card_information":
-                        return c.default.Messages.PAYMENT_SOURCE_INFORMATION;
-                    case "address":
-                        return c.default.Messages.BILLING_ADDRESS;
-                    case "paypal_information":
-                        return c.default.Messages.PAYMENT_SOURCE_PAYPAL_DETAILS;
-                    case "venmo_information":
-                        return c.default.Messages.PAYMENT_SOURCE_VENMO_DETAILS;
-                    case "sofort_information":
-                        return c.default.Messages.PAYMENT_SOURCE_SOFORT_INFO;
-                    case "przelewy24_information":
-                        return c.default.Messages.PAYMENT_SOURCE_PRZELEWY24_INFO;
-                    case "cash_app_information":
-                        return c.default.Messages.PAYMENT_SOURCE_CASH_APP_PAY_DETAILS
-                }
-                throw Error("Unexpected step: ".concat(t))
-            }
-
-            function f(t) {
-                if (null != t) {
-                    if (!(t instanceof l.BillingError)) throw S.error(t), (0, o.captureBillingException)(t), Error("Unexpected error type");
-                    if (t.hasCardError()) return "credit_card_information";
-                    if (t.hasAddressError()) return "address"
-                }
-                return null
-            }
-
-            function _(t, e, n) {
-                r.useEffect(() => {
-                    null != t && "review" !== t && e !== s.PurchaseState.WAITING && e !== s.PurchaseState.COMPLETED && n(s.PurchaseState.WAITING)
-                }, [t, e, n])
-            }
-        },
-        286350: function(t, e, n) {
-            "use strict";
-            var u, i;
-            n.r(e), n.d(e, {
-                PurchaseState: function() {
-                    return u
-                }
-            }), (i = u || (u = {})).WAITING = "WAITING", i.PURCHASING = "PURCHASING", i.FAIL = "FAIL", i.COMPLETED = "COMPLETED"
-        },
-        854381: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return o
-                }
-            });
-            var u = n("446674"),
-                i = n("10514"),
-                r = n("713518"),
-                l = n("646718"),
-                a = n("843455");
-
-            function o(t) {
-                var e, n;
-                let {
-                    activeSubscription: o,
-                    skuIDs: s,
-                    paymentSourceId: c,
-                    isGift: S
-                } = t;
-                s = s.filter(t => t !== l.PremiumSubscriptionSKUs.NONE);
-                let d = (0, u.useStateFromStores)([i.default], () => {
-                        let t = i.default.getPlanIdsForSkus(s).filter(t => !S || l.PREMIUM_PLANS.has(t));
-                        return t.length > 0 ? i.default.get(t[0]) : null
-                    }),
-                    E = null == d ? [] : (0, r.getCurrencies)(d.id, c, S),
-                    f = null !== (n = null !== (e = E.find(t => t === (null == o ? void 0 : o.currency))) && void 0 !== e ? e : E[0]) && void 0 !== n ? n : a.CurrencyCodes.USD;
-                return {
-                    ...(0, r.useCurrencyWithPaymentSourceChange)(f, null == d ? void 0 : d.id, c, S, s),
-                    currencies: E
-                }
-            }
-        },
-        237288: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return a
-                }
-            });
-            var u = n("884691"),
-                i = n("446674"),
-                r = n("850068"),
-                l = n("521012");
-
-            function a() {
-                let t = (0, i.useStateFromStores)([l.default], () => l.default.hasFetchedSubscriptions());
-                return u.useEffect(() => {
-                    !t && (0, r.fetchSubscriptions)()
-                }, [t]), t
-            }
-        },
-        986681: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return a
-                }
-            }), n("222007");
-            var u = n("884691"),
-                i = n("446674"),
-                r = n("850068"),
-                l = n("357957");
-
-            function a(t) {
-                let {
-                    isGift: e,
-                    activeSubscription: n
-                } = t, {
-                    defaultPaymentSourceId: a,
-                    paymentSources: o,
-                    hasFetchedPaymentSources: s
-                } = (0, i.useStateFromStoresObject)([l.default], () => ({
-                    defaultPaymentSourceId: l.default.defaultPaymentSourceId,
-                    paymentSources: l.default.paymentSources,
-                    hasFetchedPaymentSources: l.default.hasFetchedPaymentSources
-                })), c = (t, e, n) => t || (null == e ? void 0 : e.paymentSourceId) == null ? n : e.paymentSourceId, [S, d] = u.useState(() => c(e, n, a));
-                return u.useEffect(() => {
-                    s ? d(c(e, n, a)) : (0, r.fetchPaymentSources)()
-                }, [s, e, n, a]), {
-                    paymentSources: o,
-                    hasPaymentSources: Object.keys(o).length > 0,
-                    paymentSourceId: S,
-                    setPaymentSourceId: d,
-                    hasFetchedPaymentSources: s
-                }
-            }
-        },
-        702924: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return a
-                }
-            }), n("222007");
-            var u = n("446674"),
-                i = n("877261"),
-                r = n("926223"),
-                l = n("758764");
-
-            function a() {
-                let t = (0, u.useStateFromStores)([r.default], () => r.default.error),
-                    [e, n] = (0, u.useStateFromStoresArray)([l.default], () => [l.default.error, l.default.isAwaitingAuthentication]);
-                return {
-                    paymentError: null != e ? e : t,
-                    paymentAuthenticationState: n ? i.PaymentAuthenticationState.PENDING : null != e ? i.PaymentAuthenticationState.ERROR : i.PaymentAuthenticationState.NONE
-                }
-            }
-        },
-        241006: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return i
-                }
-            }), n("222007");
-            var u = n("884691");
-
-            function i() {
-                let [t, e] = u.useState(null), n = u.useRef(null);
-                return u.useEffect(() => {
-                    null != t && null != n.current && n.current.scrollIntoView({
-                        behavior: "smooth"
-                    })
-                }, [t]), {
-                    purchaseError: t,
-                    setPurchaseError: e,
-                    purchaseErrorBlockRef: n
-                }
-            }
-        },
-        284797: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return l
-                }
-            }), n("222007");
-            var u = n("884691"),
-                i = n("85336"),
-                r = n("286350");
-
-            function l(t) {
-                let [e, n] = u.useState(r.PurchaseState.WAITING);
-                return u.useEffect(() => {
-                    null != t && t !== i.Step.REVIEW && e !== r.PurchaseState.WAITING && e !== r.PurchaseState.COMPLETED && n(r.PurchaseState.WAITING)
-                }, [t, e, n]), [e, n]
-            }
-        },
-        383802: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return a
-                }
-            }), n("222007");
-            var u = n("884691"),
-                i = n("976979"),
-                r = n("446674"),
-                l = n("160299");
-
-            function a() {
-                let [t, e] = u.useState(!1), [n, a] = u.useState(!1), o = (0, r.useStateFromStores)([l.default], () => i.CountryCodesSets.EEA_COUNTRIES.has(l.default.ipCountryCodeWithFallback));
-                return {
-                    hasViewedPurchaseTerms: t,
-                    setHasViewedPurchaseTerms: e,
-                    showWithdrawalWaiver: o,
-                    hasAcceptedWithdrawalWaiver: !o || n,
-                    setHasAcceptedWithdrawalWaiver: a
-                }
-            }
-        },
-        334702: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
+            n.r(t), n.d(t, {
                 default: function() {
                     return s
                 }
-            }), n("222007");
-            var u = n("884691"),
-                i = n("65597"),
-                r = n("465527"),
-                l = n("622839"),
-                a = n("552712"),
-                o = n("646718");
+            });
+            var i = n("845579"),
+                l = n("42887"),
+                a = n("829536");
 
-            function s(t) {
-                let {
-                    applicationId: e,
-                    skuIDs: n,
-                    currentPaymentSourceId: s
-                } = t, c = u.useMemo(() => n.filter(t => !o.ACTIVE_PREMIUM_SKUS.includes(t)), [n]), S = (0, i.default)([a.default], () => c.every(t => !a.default.isFetching(t) && null != a.default.get(t))), d = (0, i.useStateFromStoresObject)([a.default], () => {
-                    let t = {};
-                    for (let n of c) {
+            function s(e) {
+                let t = function() {
                         var e;
-                        t[n] = null !== (e = a.default.get(n)) && void 0 !== e ? e : void 0
-                    }
-                    return t
-                }, [c]);
-                u.useEffect(() => {
-                    for (let t of c) !a.default.isFetching(t) && null == a.default.get(t) && (0, r.fetchSKU)(e, t)
-                }, [e, c]);
-                let E = (0, i.useStateFromStoresObject)([l.default], () => {
-                    let t = {};
-                    for (let n of c) {
-                        var e;
-                        t[n] = null !== (e = l.default.getPricesForSku(n)) && void 0 !== e ? e : void 0
-                    }
-                    return t
-                }, [c]);
-                return u.useEffect(() => {
-                    for (let t of c) {
-                        let n = l.default.getPricesForSku(t),
-                            u = null != s ? s : l.NO_PAYMENT_SOURCE;
-                        (null == n || null == n[u]) && (0, r.fetchPurchasePreview)(e, t, s)
-                    }
-                }, [e, c, s]), {
-                    hasFetchedSkus: S,
-                    skusById: d,
-                    skuPricePreviewsById: E
-                }
+                        let t = i.SoundboardSettings.getSetting();
+                        return (0, a.amplitudeToPerceptual)(null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 100) / 100
+                    }(),
+                    n = Math.min(l.default.getOutputVolume() / 100, 1);
+                return Math.min(e * t * n, 1)
             }
         },
-        775325: function(t, e, n) {
+        252862: function(e, t, n) {
             "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return i
-                }
-            }), n("222007");
-            var u = n("884691");
-
-            function i(t) {
-                var e;
-                let {
-                    stepConfigs: n,
-                    breadcrumbs: i
-                } = t, [r, l] = u.useState(null === (e = n[0]) || void 0 === e ? void 0 : e.key), a = n.map(t => t.key).filter(t => null != t), o = n.filter(t => {
-                    var e;
-                    return null != t.key && (null == t ? void 0 : null === (e = t.options) || void 0 === e ? void 0 : e.useBreadcrumbLabel) != null
-                }).map(t => ({
-                    id: t.key,
-                    useBreadcrumbLabel: t.options.useBreadcrumbLabel
-                })).sort((t, e) => null != i ? i.indexOf(t.id) - i.indexOf(e.id) : 0);
-                return {
-                    steps: a,
-                    step: r,
-                    setStep: l,
-                    breadcrumbsData: o
-                }
-            }
-        },
-        403293: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return l
-                }
-            }), n("222007");
-            var u = n("884691"),
-                i = n("745279"),
-                r = n("520713");
-
-            function l() {
-                let [t, e] = u.useState(null);
-                return u.useEffect(() => {
-                    (0, r.getStripe)().then(t => e(t)).catch(t => {
-                        (0, i.captureBillingException)(t)
-                    })
-                }, []), t
-            }
-        },
-        523591: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                BrowserCheckoutState: function() {
-                    return i
-                },
-                default: function() {
-                    return c
-                }
-            });
-            var u, i, r = n("446674"),
-                l = n("913144");
-            (u = i || (i = {}))[u.UNKNOWN = 0] = "UNKNOWN", u[u.PENDING = 1] = "PENDING", u[u.DONE = 2] = "DONE";
-            let a = 0,
-                o = null;
-            class s extends r.default.Store {
-                get browserCheckoutState() {
-                    return a
-                }
-                get loadId() {
-                    return o
-                }
-            }
-            s.displayName = "BrowserCheckoutStateStore";
-            var c = new s(l.default, {
-                USER_PAYMENT_BROWSER_CHECKOUT_STARTED: function(t) {
-                    a = 1, o = t.loadId
-                },
-                USER_PAYMENT_BROWSER_CHECKOUT_DONE: function(t) {
-                    o === t.loadId && (a = 2)
-                }
-            })
-        },
-        53253: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                SeasonalGiftingMarketingExperiment: function() {
-                    return S
-                },
-                useIsSeasonalGiftingActive: function() {
-                    return d
-                },
-                default: function() {
-                    return E
-                }
-            }), n("222007");
-            var u = n("884691"),
-                i = n("866227"),
-                r = n.n(i),
-                l = n("862337"),
-                a = n("296892");
-            let o = new Date("2024-01-01T07:59:59.000Z"),
-                s = r(o),
-                c = (0, a.default)({
-                    id: "2023-11_seasonal_gifting",
-                    label: "Seasonal Gifting 2023",
-                    kind: "user",
-                    defaultConfig: {
-                        enabled: !1
-                    },
-                    treatments: [{
-                        id: 1,
-                        label: "Enabled",
-                        config: {
-                            enabled: !0
-                        }
-                    }]
-                }),
-                S = (0, a.default)({
-                    id: "2023-11_seasonal_gifting_marketing_2023",
-                    label: "Seasonal Gifting Marketing 2023",
-                    kind: "user",
-                    defaultConfig: {
-                        enabled: !1
-                    },
-                    treatments: [{
-                        id: 1,
-                        label: "Enabled",
-                        config: {
-                            enabled: !0
-                        }
-                    }]
-                });
-
-            function d() {
-                let [t, e] = u.useState(() => s.isAfter(Date.now()));
-                return u.useEffect(() => {
-                    let n = new l.Timeout,
-                        u = () => {
-                            let t = s.diff(Date.now(), "millisecond");
-                            null == n || n.start(t, () => {
-                                s.isBefore(Date.now()) ? e(!1) : u()
-                            })
-                        };
-                    return t && u(), () => n.stop()
-                }), t
-            }
-            var E = c
-        },
-        15733: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return c
-                }
-            });
-            var u = n("884691"),
-                i = n("446674"),
-                r = n("913144"),
-                l = n("850068"),
-                a = n("271938"),
-                o = n("160299"),
-                s = n("357957");
-
-            function c() {
-                let t = (0, i.useStateFromStores)([s.default], () => s.default.getDefaultBillingCountryCode()),
-                    e = (0, i.useStateFromStores)([o.default], () => o.default.ipCountryCode),
-                    n = (0, i.useStateFromStores)([a.default], () => a.default.isAuthenticated());
-                return u.useEffect(() => {
-                    r.default.wait(() => {
-                        n && !o.default.isPaymentSourceFetching && !s.default.hasFetchedPaymentSources && l.fetchPaymentSources()
-                    })
-                }, [n]), u.useEffect(() => {
-                    n && !o.default.ipCountryCodeLoaded && l.fetchIpCountryCode()
-                }, [e, n]), {
-                    defaultBillingCountryCode: t,
-                    ipCountryCode: e
-                }
-            }
-        },
-        877261: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                PaymentAuthenticationState: function() {
-                    return i
-                },
-                usePaymentStepForAuthentication: function() {
-                    return d
-                },
-                usePaymentAuthenticationPoller: function() {
-                    return E
-                }
-            });
-            var u, i, r = n("884691"),
-                l = n("446674"),
-                a = n("862337"),
-                o = n("850068"),
-                s = n("619443"),
-                c = n("85336"),
-                S = n("758764");
-
-            function d(t, e, n) {
-                let u = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-                    i = arguments.length > 4 ? arguments[4] : void 0;
-                r.useEffect(() => {
-                    null != t && (1 === e && t !== c.Step.AWAITING_AUTHENTICATION ? n(c.Step.AWAITING_AUTHENTICATION) : t === c.Step.AWAITING_AUTHENTICATION && (2 === e ? n(c.Step.REVIEW) : 3 === e && (u ? null != i ? i() : n(c.Step.REVIEW) : n(c.Step.CONFIRM))))
-                }, [t, e, n, u, i])
-            }(u = i || (i = {}))[u.PENDING = 1] = "PENDING", u[u.ERROR = 2] = "ERROR", u[u.NONE = 3] = "NONE";
-
-            function E(t) {
-                let e = (0, l.useStateFromStores)([S.default], () => S.default.awaitingPaymentId),
-                    n = (0, l.useStateFromStores)([s.default], () => s.default.isConnected()),
-                    u = r.useRef(new a.Interval);
-                r.useEffect(() => {
-                    n || null == e || 1 !== t ? u.current.stop() : u.current.start(5e3, () => (0, o.fetchPayment)(e))
-                }, [e, t, n])
-            }
-        },
-        926223: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return h
-                }
-            });
-            var u = n("446674"),
-                i = n("913144"),
-                r = n("520713");
-            let l = "",
-                a = null,
-                o = "",
-                s = null,
-                c = !1,
-                S = null,
-                d = "",
-                E = "",
-                f = "",
-                _ = "",
-                T = "",
-                A = "",
-                I = "",
-                p = "",
-                C = !1,
-                P = null,
-                N = null,
-                R = null,
-                U = null;
-
-            function L() {
-                s = null, l = "", a = null, o = "", c = !1, S = null, d = "US", E = "", f = "", _ = "", T = "", A = "", I = "", p = "", C = !1, P = null, N = null, R = null, U = null
-            }
-
-            function M(t) {
-                E = t.name, d = t.country, _ = t.line1, T = t.line2, A = t.city, I = t.postalCode, p = t.state, f = t.email
-            }
-
-            function O() {
-                P = null
-            }
-
-            function F(t) {
-                let {
-                    error: e
-                } = t;
-                P = e
-            }
-            class m extends u.default.Store {
-                get stripePaymentMethod() {
-                    return s
-                }
-                get popupCallbackCalled() {
-                    return R
-                }
-                get braintreeEmail() {
-                    return l
-                }
-                get braintreeNonce() {
-                    return a
-                }
-                get venmoUsername() {
-                    return o
-                }
-                get redirectedPaymentId() {
-                    return N
-                }
-                get adyenPaymentData() {
-                    return S
-                }
-                get redirectedPaymentSourceId() {
-                    return U
-                }
-                getCreditCardInfo() {
-                    return {
-                        name: E
-                    }
-                }
-                get isCardInfoValid() {
-                    return c
-                }
-                getBillingAddressInfo() {
-                    return {
-                        name: E,
-                        email: f,
-                        country: d,
-                        line1: _,
-                        line2: T,
-                        city: A,
-                        postalCode: I,
-                        state: p
-                    }
-                }
-                get isBillingAddressInfoValid() {
-                    return C
-                }
-                get error() {
-                    return P
-                }
-            }
-            m.displayName = "NewPaymentSourceStore";
-            var h = new m(i.default, {
-                NEW_PAYMENT_SOURCE_STRIPE_PAYMENT_REQUEST_UPDATE: function(t) {
-                    let {
-                        stripePaymentMethod: e
-                    } = t;
-                    if (null == e) {
-                        L();
-                        return
-                    }
-                    s = e;
-                    let {
-                        billingAddressInfo: n
-                    } = r.parseStripePaymentMethod(s);
-                    M(n)
-                },
-                NEW_PAYMENT_SOURCE_CARD_INFO_UPDATE: function(t) {
-                    let {
-                        info: e,
-                        isValid: n
-                    } = t;
-                    E = e.name, c = n
-                },
-                NEW_PAYMENT_SOURCE_ADDRESS_INFO_UPDATE: function(t) {
-                    let {
-                        info: e,
-                        isValid: n
-                    } = t;
-                    null != e.name && "" !== e.name && (E = e.name), d = e.country, E = e.name, _ = e.line1, T = e.line2, A = e.city, I = e.postalCode, p = e.state, f = e.email, C = n
-                },
-                BRAINTREE_TOKENIZE_PAYPAL_START: function() {
-                    l = "", a = null
-                },
-                BRAINTREE_TOKENIZE_PAYPAL_SUCCESS: function(t) {
-                    let {
-                        email: e,
-                        nonce: n,
-                        billingAddress: u
-                    } = t;
-                    l = e, a = n, M(u), C = d.length > 0
-                },
-                BRAINTREE_TOKENIZE_VENMO_START: function() {
-                    o = "", a = null
-                },
-                BRAINTREE_TOKENIZE_VENMO_SUCCESS: function(t) {
-                    let {
-                        username: e,
-                        nonce: n
-                    } = t;
-                    o = e, a = n
-                },
-                ADYEN_CASH_APP_PAY_SUBMIT_SUCCESS: function(t) {
-                    let {
-                        data: e
-                    } = t;
-                    S = e
-                },
-                BILLING_PAYMENT_SOURCE_CREATE_START: O,
-                MODAL_POP: O,
-                NEW_PAYMENT_SOURCE_CLEAR_ERROR: O,
-                BILLING_PAYMENT_SOURCE_CREATE_FAIL: F,
-                STRIPE_TOKEN_FAILURE: F,
-                BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: L,
-                LOGOUT: L,
-                BILLING_POPUP_BRIDGE_CALLBACK: function(t) {
-                    let {
-                        query: e
-                    } = t;
-                    (null == e ? void 0 : e.payment_id) != null ? (R = !0, N = e.payment_id) : (null == e ? void 0 : e.payment_source_id) != null && (R = !0, U = e.payment_source_id)
-                },
-                RESET_PAYMENT_ID: function() {
-                    R = !1, N = null
-                }
-            })
-        },
-        758764: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return C
-                }
-            }), n("70102");
-            var u = n("446674"),
-                i = n("913144"),
-                r = n("596523"),
-                l = n("465527"),
-                a = n("736978"),
-                o = n("745279"),
-                s = n("520713"),
-                c = n("49111"),
-                S = n("782340");
-            let d = !1,
-                E = null,
-                f = null;
-
-            function _() {
-                d = !1, f = null
-            }
-
-            function T(t) {
-                let {
-                    error: e
-                } = t, {
-                    code: n,
-                    paymentId: u
-                } = e;
-                if (n !== a.default.ErrorCodes.AUTHENTICATION_REQUIRED) return d = !1, !1;
-                !d && (d = !0, E = u, A(u))
-            }
-            async function A(t) {
-                if (null == t) return;
-                let {
-                    error: e
-                } = await (0, s.authenticatePaymentIntentForPaymentId)(t);
-                if (null != e) {
-                    i.default.dispatch({
-                        type: "PAYMENT_AUTHENTICATION_ERROR",
-                        error: new a.default(S.default.Messages.PAYMENT_METHOD_CONFIRMATION_ERROR)
-                    });
-                    let t = Error(e);
-                    (0, o.captureBillingException)(t, {
-                        extra: {
-                            authenticationError: e
-                        }
-                    })
-                }
-            }
-
-            function I(t) {
-                let {
-                    payment: e
-                } = t;
-                if (!d || e.id !== E || ![c.PaymentStatusTypes.COMPLETED, c.PaymentStatusTypes.CANCELED].includes(e.status)) return !1;
-                d = !1, f = null, E = null, i.default.wait(r.clearError), i.default.wait(l.clearPurchaseError)
-            }
-            class p extends u.default.Store {
-                get isAwaitingAuthentication() {
-                    return d
-                }
-                get error() {
-                    return f
-                }
-                get awaitingPaymentId() {
-                    return E
-                }
-            }
-            p.displayName = "PaymentAuthenticationStore";
-            var C = new p(i.default, {
-                BILLING_SUBSCRIPTION_UPDATE_START: _,
-                PAYMENT_AUTHENTICATION_CLEAR_ERROR: _,
-                PREMIUM_PAYMENT_ERROR_CLEAR: _,
-                PREMIUM_PAYMENT_MODAL_CLOSE: _,
-                PREMIUM_PAYMENT_MODAL_OPEN: _,
-                PREMIUM_PAYMENT_SUBSCRIBE_START: _,
-                PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: _,
-                PREMIUM_PAYMENT_UPDATE_SUCCESS: _,
-                SKU_PURCHASE_MODAL_CLOSE: _,
-                SKU_PURCHASE_MODAL_OPEN: _,
-                SKU_PURCHASE_START: _,
-                SKU_PURCHASE_SUCCESS: _,
-                BILLING_SUBSCRIPTION_UPDATE_FAIL: T,
-                PREMIUM_PAYMENT_SUBSCRIBE_FAIL: T,
-                PREMIUM_PAYMENT_UPDATE_FAIL: T,
-                SKU_PURCHASE_FAIL: T,
-                GIFT_CODE_REDEEM_FAILURE: T,
-                PAYMENT_AUTHENTICATION_ERROR: function(t) {
-                    let {
-                        error: e
-                    } = t;
-                    f = e, d = !1
-                },
-                PAYMENT_UPDATE: I,
-                BILLING_PAYMENT_FETCH_SUCCESS: I
-            })
-        },
-        467292: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                PurchaseTokenAuthState: function() {
-                    return i
-                },
-                default: function() {
-                    return _
-                }
-            });
-            var u, i, r = n("446674"),
-                l = n("913144"),
-                a = n("736978"),
-                o = n("619443");
-            (u = i || (i = {}))[u.UNKNOWN = 0] = "UNKNOWN", u[u.PENDING = 1] = "PENDING", u[u.SUCCESS = 2] = "SUCCESS", u[u.ERROR = 3] = "ERROR";
-            let s = 0,
-                c = null,
-                S = null;
-
-            function d(t) {
-                let {
-                    error: e
-                } = t, n = e instanceof a.default ? e : new a.default(e);
-                o.default.isConnected() && n.code === a.default.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (s = 1)
-            }
-
-            function E() {
-                s = 0, c = null, S = null
-            }
-            class f extends r.default.Store {
-                get purchaseTokenAuthState() {
-                    return s
-                }
-                get purchaseTokenHash() {
-                    return c
-                }
-                get expiresAt() {
-                    return S
-                }
-            }
-            f.displayName = "PurchaseTokenAuthStore";
-            var _ = new f(l.default, {
-                SKU_PURCHASE_FAIL: d,
-                PREMIUM_PAYMENT_SUBSCRIBE_FAIL: d,
-                USER_PAYMENT_CLIENT_ADD: function(t) {
-                    s = 2, c = t.purchaseTokenHash, S = t.expiresAt
-                },
-                BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE: E,
-                BILLING_SUBSCRIPTION_UPDATE_START: E,
-                PAYMENT_AUTHENTICATION_CLEAR_ERROR: E,
-                PREMIUM_PAYMENT_ERROR_CLEAR: E,
-                PREMIUM_PAYMENT_MODAL_CLOSE: E,
-                PREMIUM_PAYMENT_MODAL_OPEN: E,
-                PREMIUM_PAYMENT_SUBSCRIBE_START: E,
-                PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: E,
-                PREMIUM_PAYMENT_UPDATE_SUCCESS: E,
-                SKU_PURCHASE_MODAL_CLOSE: E,
-                SKU_PURCHASE_MODAL_OPEN: E,
-                SKU_PURCHASE_START: E,
-                SKU_PURCHASE_SUCCESS: E
-            })
-        },
-        437712: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return U
-                }
-            }), n("222007");
-            var u = n("917351"),
-                i = n.n(u),
-                r = n("446674"),
-                l = n("913144"),
-                a = n("984273"),
-                o = n("686470"),
-                s = n("964889"),
-                c = n("552712");
-            let S = {},
-                d = {},
-                E = {},
-                f = {},
-                _ = !1,
-                T = !1,
-                A = new Set,
-                I = new Set,
-                p = {};
-
-            function C(t) {
-                S[t.id] = a.default.createFromServer(t), null == E[t.sku_id] && (E[t.sku_id] = new Set), null == f[t.application_id] && (f[t.application_id] = new Set), null != t.subscription_id && (null == p[t.subscription_id] && (p[t.subscription_id] = new Set), p[t.subscription_id].add(t.id)), f[t.application_id].add(t.id), E[t.sku_id].add(t.id)
-            }
-
-            function P(t) {
-                d[t.id] = a.default.createFromServer(t)
-            }
-
-            function N(t) {
-                return C(t.entitlement)
-            }
-            class R extends r.default.Store {
-                initialize() {
-                    this.syncWith([o.default], () => !0)
-                }
-                get(t) {
-                    return S[t]
-                }
-                getGiftable() {
-                    return i.values(d)
-                }
-                getForApplication(t) {
-                    let e = f[t];
-                    if (null == e) return null;
-                    let n = new Set;
-                    for (let t of e) n.add(S[t]);
-                    return n
-                }
-                getForSku(t) {
-                    let e = E[t];
-                    if (null == e) return null;
-                    let n = new Set;
-                    for (let t of e) n.add(S[t]);
-                    return n
-                }
-                get fetchingAllEntitlements() {
-                    return _
-                }
-                get fetchedAllEntitlements() {
-                    return T
-                }
-                get applicationIdsFetching() {
-                    return A
-                }
-                get applicationIdsFetched() {
-                    return I
-                }
-                isFetchingForApplication(t) {
-                    return this.fetchingAllEntitlements || null != t && this.applicationIdsFetching.has(t)
-                }
-                isFetchedForApplication(t) {
-                    return this.fetchedAllEntitlements || null != t && this.applicationIdsFetched.has(t)
-                }
-                getForSubscription(t) {
-                    let e = p[t];
-                    if (null == e) return null;
-                    let n = new Set;
-                    for (let t of e) n.add(S[t]);
-                    return n
-                }
-                isEntitledToSku(t, e, n) {
-                    let u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-                        i = E[e];
-                    if (null != i)
-                        for (let e of i) {
-                            let n = S[e];
-                            if (null != n && n.isValid(t, c.default, u)) return !0
-                        }
-                    if (I.has(n)) return !1;
-                    let r = null != u ? o.default.getLibraryApplication(n, u) : o.default.getActiveLibraryApplication(n);
-                    return !!(null != r && r.sku.id === e && (0, s.isUserEntitledToLibraryApplication)(r)) || null
-                }
-                hasFetchedForApplicationIds(t) {
-                    return t.every(t => I.has(t))
-                }
-            }
-            R.displayName = "EntitlementStore";
-            var U = new R(l.default, {
-                ENTITLEMENT_FETCH_APPLICATION_START: function(t) {
-                    let {
-                        applicationId: e
-                    } = t;
-                    A.add(e)
-                },
-                ENTITLEMENT_FETCH_APPLICATION_SUCCESS: function(t) {
-                    let {
-                        applicationId: e,
-                        entitlements: n
-                    } = t;
-                    for (let t of (A.delete(e), I.add(e), n)) !0 !== t.consumed && C(t)
-                },
-                ENTITLEMENT_FETCH_APPLICATION_FAIL: function() {},
-                ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function(t) {
-                    let {
-                        entitlements: e
-                    } = t;
-                    d = {}, e.forEach(P)
-                },
-                SKU_PURCHASE_SUCCESS: function(t) {
-                    let {
-                        entitlements: e
-                    } = t;
-                    for (let t of e) C(t)
-                },
-                LIBRARY_FETCH_SUCCESS: function(t) {
-                    let {
-                        libraryApplications: e
-                    } = t;
-                    for (let t of e)
-                        if (null != t.entitlements)
-                            for (let e of t.entitlements) C(e)
-                },
-                ENTITLEMENT_CREATE: N,
-                ENTITLEMENT_UPDATE: N,
-                ENTITLEMENT_DELETE: function(t) {
-                    return function(t) {
-                        delete S[t.id];
-                        let e = f[t.application_id];
-                        null != e && e.delete(t.id);
-                        let n = E[t.sku_id];
-                        if (null != n && n.delete(t.id), null != t.subscription_id) {
-                            let e = p[t.subscription_id];
-                            null != e && e.delete(t.id)
-                        }
-                    }(t.entitlement)
-                },
-                LOGOUT: function() {
-                    S = {}, E = {}, f = {}, _ = !1, T = !1, A = new Set, I = new Set
-                },
-                ENTITLEMENTS_FETCH_FOR_USER_START: function() {
-                    _ = !0
-                },
-                ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: function(t) {
-                    let {
-                        entitlements: e
-                    } = t;
-                    for (let t of (T = !0, _ = !1, e)) C(t)
-                },
-                ENTITLEMENTS_FETCH_FOR_USER_FAIL: function() {
-                    T = !1, _ = !1
-                }
-            })
-        },
-        622839: function(t, e, n) {
-            "use strict";
-            let u, i;
-            n.r(e), n.d(e, {
-                NO_PAYMENT_SOURCE: function() {
+            n.r(t), n.d(t, {
+                getAutoArchiveOptions: function() {
                     return o
                 },
-                default: function() {
-                    return L
-                }
-            });
-            var r = n("446674"),
-                l = n("913144"),
-                a = n("49111");
-            let o = "no_payment_source",
-                s = null,
-                c = null,
-                S = null,
-                d = null,
-                E = null,
-                f = {},
-                _ = null,
-                T = !1,
-                A = null,
-                I = !1,
-                p = !1,
-                C = !1,
-                P = !1,
-                N = null;
-
-            function R(t) {
-                null != u && null != _ ? u(_) : null != i && i(t), u = null, i = null
-            }
-            class U extends r.default.Store {
-                getPricesForSku(t) {
-                    return f[t]
-                }
-                isOpen() {
-                    let t = __OVERLAY__ ? a.AppContext.OVERLAY : a.AppContext.APP;
-                    return N === t && C
-                }
-                get isPurchasingSKU() {
-                    return T
-                }
-                get forceConfirmationStepOnMount() {
-                    return I
-                }
-                get error() {
-                    return A
-                }
-                get skuId() {
-                    return s
-                }
-                get applicationId() {
-                    return S
-                }
-                get analyticsLocation() {
-                    return d
-                }
-                get promotionId() {
-                    return E
-                }
-                get isIAP() {
-                    return p
-                }
-                get giftCode() {
-                    return c
-                }
-                get isGift() {
-                    return P
-                }
-            }
-            U.displayName = "SKUPaymentModalStore";
-            var L = new U(l.default, {
-                SKU_PURCHASE_MODAL_OPEN: function(t) {
-                    R(), s = t.skuId, S = t.applicationId, p = t.isIAP, d = t.analyticsLocation, N = t.context, P = t.isGift, C = !0, I = !1, u = t.resolve, i = t.reject, A = null, _ = null, E = t.promotionId
-                },
-                SKU_PURCHASE_MODAL_CLOSE: function(t) {
-                    let {
-                        error: e
-                    } = t;
-                    C = !1, N = null, R(e)
-                },
-                SKU_PURCHASE_PREVIEW_FETCH_SUCCESS: function(t) {
-                    let {
-                        skuId: e,
-                        paymentSourceId: n,
-                        price: u
-                    } = t;
-                    f = {
-                        ...f,
-                        [e]: {
-                            ...f[e],
-                            [null != n ? n : o]: u
-                        }
-                    }
-                },
-                SKU_PURCHASE_START: function() {
-                    T = !0
-                },
-                SKU_PURCHASE_SUCCESS: function(t) {
-                    let {
-                        entitlements: e,
-                        giftCode: n
-                    } = t;
-                    T = !1, _ = e, c = n
-                },
-                SKU_PURCHASE_FAIL: function(t) {
-                    let {
-                        error: e
-                    } = t;
-                    T = !1, A = e
-                },
-                SKU_PURCHASE_SHOW_CONFIRMATION_STEP: function() {
-                    I = !0
-                },
-                SKU_PURCHASE_CLEAR_ERROR: function() {
-                    A = null
-                },
-                SKU_PURCHASE_UPDATE_IS_GIFT: function(t) {
-                    P = t.isGift
-                },
-                OVERLAY_SET_INPUT_LOCKED: function(t) {
-                    let {
-                        locked: e
-                    } = t;
-                    if (!e || null == N) return !1;
-                    C = !1, N = null, R()
-                },
-                GIFT_CODE_CREATE: function(t) {
-                    let {
-                        giftCode: e
-                    } = t;
-                    if (0 !== e.uses || e.sku_id !== s) return !1;
-                    c = e.code
-                }
-            })
-        },
-        105097: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
+                getAutoArchiveDuration: function() {
                     return r
                 }
-            }), n("70102");
-            var u = n("37983"),
-                i = n("884691");
+            });
+            var i = n("661201"),
+                l = n.n(i);
+            n("866227");
+            var a = n("648564"),
+                s = n("782340");
 
-            function r() {
-                let t = i.createContext(void 0);
-
-                function e() {
-                    let e = i.useContext(t);
-                    if (null == e) throw Error("Context was used outside of defined provider.");
-                    return e
-                }
-                return [t, e, function() {
-                    let n = e();
-                    return function(e) {
-                        let {
-                            children: i
-                        } = e;
-                        return (0, u.jsx)(t.Provider, {
-                            value: n,
-                            children: i
-                        })
-                    }
+            function o() {
+                return [{
+                    label: s.default.Messages.AUTO_ARCHIVE_DURATION_1_HOUR,
+                    value: 60
+                }, {
+                    label: s.default.Messages.AUTO_ARCHIVE_DURATION_24_HOURS,
+                    value: 1440
+                }, {
+                    label: s.default.Messages.AUTO_ARCHIVE_DURATION_3_DAYS,
+                    value: 4320
+                }, {
+                    label: s.default.Messages.AUTO_ARCHIVE_DURATION_1_WEEK,
+                    value: 10080
                 }]
             }
-        },
-        713518: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                fetchSubscriptionPlansOnNewPaymentSource: function() {
-                    return E
-                },
-                getCurrencies: function() {
-                    return f
-                },
-                planHasCurrency: function() {
-                    return _
-                },
-                useCurrencyWithPaymentSourceChange: function() {
-                    return T
-                }
-            }), n("222007");
-            var u = n("884691"),
-                i = n("627445"),
-                r = n.n(i),
-                l = n("913144"),
-                a = n("775433"),
-                o = n("308592"),
-                s = n("10514"),
-                c = n("719923"),
-                S = n("49111"),
-                d = n("646718");
 
-            function E(t) {
-                let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [...d.ACTIVE_PREMIUM_SKUS];
-                return null == t || s.default.hasPaymentSourceForSKUIds(t, e) ? Promise.resolve() : new Promise(t => {
-                    l.default.wait(async () => {
-                        await (0, a.fetchSubscriptionPlansBySKUs)(e), t()
+            function r(e, t) {
+                var n;
+                return null !== (n = null != t ? t : null == e ? void 0 : e.defaultAutoArchiveDuration) && void 0 !== n ? n : a.DEFAULT_AUTO_ARCHIVE_DURATION
+            }
+            l(() => o().map(e => e.value))
+        },
+        730498: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                PrivateThreadMode: function() {
+                    return i
+                },
+                usePrivateThreadMode: function() {
+                    return v
+                },
+                getIsPrivate: function() {
+                    return D
+                },
+                getDefaultThreadName: function() {
+                    return y
+                },
+                useCreateThreadCommon: function() {
+                    return R
+                },
+                createThread: function() {
+                    return P
+                },
+                useCreateForumPostCommon: function() {
+                    return L
+                }
+            }), n("424973"), n("222007");
+            var i, l, a = n("884691"),
+                s = n("872717"),
+                o = n("913144"),
+                r = n("404118"),
+                u = n("295426"),
+                d = n("819689"),
+                c = n("81594"),
+                p = n("670902"),
+                f = n("867965"),
+                m = n("884351"),
+                _ = n("804888"),
+                I = n("42203"),
+                C = n("474643"),
+                T = n("377253"),
+                A = n("401848"),
+                E = n("568734"),
+                N = n("252862"),
+                S = n("300322"),
+                M = n("24337"),
+                g = n("648564"),
+                O = n("49111"),
+                h = n("782340");
+
+            function v(e) {
+                let t = (0, S.useCanStartPublicThread)(e),
+                    n = (0, S.useCanStartPrivateThread)(e);
+                return n ? t ? 2 : 3 : 1
+            }
+
+            function D(e, t) {
+                var n;
+                if (3 === t) return !0;
+                return null !== (n = e.isPrivate) && void 0 !== n && n
+            }
+
+            function y(e, t) {
+                var n, i, l, a;
+                let s = null == t ? null : T.default.getMessage(e.id, t),
+                    o = null !== (l = null == s ? void 0 : null === (i = s.embeds) || void 0 === i ? void 0 : null === (n = i[0]) || void 0 === n ? void 0 : n.rawTitle) && void 0 !== l ? l : "";
+                if ("" !== o) return o.length > 40 ? o.substring(0, 40) + "..." : o;
+                {
+                    let t = m.default.unparse(null !== (a = null == s ? void 0 : s.content) && void 0 !== a ? a : "", e.id, !0),
+                        n = (0, M.default)(t.split("\n")[0], !0),
+                        i = [];
+                    for (;;) {
+                        let e = n.match(/(?:\s|[!@#$%^&*()_\-+={}[\]:";'<>?,./])+/);
+                        if (null == e || null == e.index) {
+                            i.push(n);
+                            break
+                        }
+                        i.push(n.substring(0, e.index)), i.push(e[0]), n = n.substring(e.index + e[0].length)
+                    }
+                    let l = i[0];
+                    for (let e = 1; e < i.length; e++) {
+                        let t = l + i[e];
+                        if (t.length > 40) break;
+                        l = t
+                    }
+                    return l.length > 40 && (l = l.substring(0, 40) + "..."), l
+                }
+            }
+
+            function R(e) {
+                let {
+                    parentChannel: t,
+                    parentMessageId: n,
+                    threadSettings: i,
+                    privateThreadMode: l,
+                    location: o,
+                    onThreadCreated: r,
+                    useDefaultThreadName: p,
+                    uploadHandler: f
+                } = e;
+                return a.useCallback(async (e, a, _) => {
+                    var T;
+                    let A = null == n,
+                        E = D(i, l),
+                        S = null !== (T = i.name) && void 0 !== T ? T : "";
+                    if ("" === S && p) {
+                        let e = y(t, n);
+                        S = "" !== e ? e : h.default.Messages.THREAD
+                    }
+                    let M = (0, N.getAutoArchiveDuration)(t),
+                        g = I.default.getChannel(n),
+                        v = await U(t, () => {
+                            let e = null != n ? O.Endpoints.CHANNEL_MESSAGE_THREADS(t.id, n) : O.Endpoints.CHANNEL_THREADS(t.id);
+                            return s.default.post({
+                                url: e,
+                                body: {
+                                    name: S,
+                                    type: E ? O.ChannelTypes.PRIVATE_THREAD : t.type === O.ChannelTypes.GUILD_ANNOUNCEMENT ? O.ChannelTypes.ANNOUNCEMENT_THREAD : O.ChannelTypes.PUBLIC_THREAD,
+                                    auto_archive_duration: M,
+                                    location: o
+                                }
+                            })
+                        });
+                    v !== g && (u.default.clearDraft(t.id, C.DraftType.ThreadSettings), u.default.clearDraft(t.id, C.DraftType.FirstThreadMessage), null == r || r(v), (A || e.length > 0 || null != a && a.length > 0 || null != _ && _.length > 0) && function(e, t, n, i, l) {
+                        if (null != l && null != i && i.length > 0) l(e, i, t, n);
+                        else if (null != n && n.length > 0) d.default.sendStickers(e.id, n, t);
+                        else d.default.sendMessage(e.id, m.default.parse(e, t))
+                    }(v, e, a, _, f)), c.default.clearAll(t.id, C.DraftType.FirstThreadMessage)
+                }, [t, n, i, r, l, o, p, f])
+            }
+
+            function P(e, t, n, i, l) {
+                return U(e, () => s.default.post({
+                    url: O.Endpoints.CHANNEL_THREADS(e.id),
+                    body: {
+                        name: t,
+                        type: n,
+                        auto_archive_duration: i,
+                        location: l
+                    }
+                }))
+            }
+
+            function L(e) {
+                let {
+                    parentChannel: t,
+                    name: n,
+                    appliedTags: i,
+                    onThreadCreated: l,
+                    upload: o
+                } = e;
+                return a.useCallback(async (e, a, r) => {
+                    let d = 0,
+                        [p, m] = (0, _.default)(e);
+                    p && (e = m, d = (0, E.addFlag)(d, O.MessageFlags.SUPPRESS_NOTIFICATIONS));
+                    let I = (0, N.getAutoArchiveDuration)(t, null),
+                        T = O.Endpoints.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
+                        A = {
+                            name: n,
+                            auto_archive_duration: I,
+                            applied_tags: i,
+                            message: {
+                                content: e,
+                                sticker_ids: a,
+                                flags: 0 !== d ? d : void 0
+                            }
+                        },
+                        S = await U(t, () => null != r && r.length > 0 ? o(T, A, r) : s.default.post({
+                            url: T,
+                            body: A
+                        }));
+                    return u.default.clearDraft(t.id, C.DraftType.ThreadSettings), u.default.clearDraft(t.id, C.DraftType.FirstThreadMessage), c.default.clearAll(t.id, C.DraftType.FirstThreadMessage), (0, f.trackForumPostCreated)({
+                        guildId: t.guild_id,
+                        channelId: t.id,
+                        postId: S.id
+                    }), null == l || l(S), S
+                }, [t, n, l, i, o])
+            }(l = i || (i = {}))[l.Disabled = 1] = "Disabled", l[l.Enabled = 2] = "Enabled", l[l.PrivateOnly = 3] = "PrivateOnly";
+            async function U(e, t) {
+                let n;
+                let i = e.isForumLikeChannel();
+                try {
+                    n = await t(), null == n.body ? r.default.show({
+                        title: h.default.Messages.ERROR,
+                        body: h.default.Messages.ERROR_OCCURRED_TRY_AGAIN
+                    }) : (o.default.dispatch({
+                        type: "SLOWMODE_RESET_COOLDOWN",
+                        slowmodeType: A.SlowmodeType.CreateThread,
+                        channelId: e.id
+                    }), o.default.dispatch({
+                        type: "THREAD_CREATE_LOCAL",
+                        channelId: n.body.id
+                    }))
+                } catch (t) {
+                    var l, a, s, u, d, c;
+                    if ((null === (l = t.body) || void 0 === l ? void 0 : l.code) === O.AbortCodes.TOO_MANY_THREADS) r.default.show({
+                        title: i ? h.default.Messages.CANNOT_CREATE_FORUM_POST : h.default.Messages.CANNOT_CREATE_THREAD,
+                        body: i ? h.default.Messages.TOO_MANY_FORUM_POSTS_MESSAGE : h.default.Messages.TOO_MANY_THREADS_MESSAGE
+                    });
+                    else if ((null === (a = t.body) || void 0 === a ? void 0 : a.code) === O.AbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS) r.default.show({
+                        title: h.default.Messages.CANNOT_CREATE_THREAD,
+                        body: h.default.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
+                    });
+                    else if ((null === (s = t.body) || void 0 === s ? void 0 : s.code) === O.AbortCodes.SLOWMODE_RATE_LIMITED) {
+                        let n = null !== (c = t.body.retry_after) && void 0 !== c ? c : 0;
+                        n > 0 && o.default.dispatch({
+                            type: "SLOWMODE_SET_COOLDOWN",
+                            channelId: e.id,
+                            slowmodeType: A.SlowmodeType.CreateThread,
+                            cooldownMs: 1e3 * n
+                        })
+                    } else if (429 === t.status) r.default.show({
+                        title: i ? h.default.Messages.CANNOT_CREATE_FORUM_POST : h.default.Messages.CANNOT_CREATE_THREAD,
+                        body: h.default.Messages.RATE_LIMITED
+                    });
+                    else if (g.FORUM_POST_CREATION_AUTOMOD_ERRORS.has(null === (u = t.body) || void 0 === u ? void 0 : u.code)) throw t;
+                    else {
+                        if (g.FORUM_POST_CREATION_UPLOAD_ERRORS.has(null === (d = t.body) || void 0 === d ? void 0 : d.code)) return new Promise((e, n) => {
+                            null == t.body && n(), p.default.addConditionalChangeListener(() => {
+                                let t = p.default.getAndDeleteMostRecentUserCreatedThreadId();
+                                if (null != t) {
+                                    let i = I.default.getChannel(t);
+                                    return o.default.wait(() => {
+                                        null == i ? n() : e(i)
+                                    }), !1
+                                }
+                            })
+                        });
+                        r.default.show({
+                            title: h.default.Messages.ERROR,
+                            body: h.default.Messages.ERROR_OCCURRED_TRY_AGAIN
+                        })
+                    }
+                }
+                return new Promise((e, t) => {
+                    null == n.body && t(), I.default.addConditionalChangeListener(() => {
+                        let t = I.default.getChannel(n.body.id);
+                        if (null != t) return o.default.wait(() => {
+                            e(t)
+                        }), !1
                     })
                 })
             }
-
-            function f(t, e, n) {
-                let u, i = [],
-                    l = [],
-                    a = {
-                        purchaseType: n ? S.PriceSetAssignmentPurchaseTypes.GIFT : S.PriceSetAssignmentPurchaseTypes.DEFAULT
-                    };
-                return r(u = "string" == typeof t ? s.default.get(t) : t, "subscription plan not loaded"), null != e && s.default.hasPaymentSourceForSKUId(e, u.skuId) && (a.paymentSourceId = e), (i = (l = (0, c.experimentalGetPrices)(u.id, a)).map(t => t.currency)).length < 1 && (i = [S.CurrencyCodes.USD]), i
-            }
-
-            function _(t, e, n) {
-                let u = s.default.get(t);
-                r(null != u, "plan is undefined");
-                let i = f(u, n, !1);
-                return i.includes(e)
-            }
-
-            function T(t, e, n, i, r) {
-                let [l, a] = u.useReducer((t, e) => ({
-                    ...t,
-                    ...e
-                }), null != n ? {
-                    paymentSourceId: n,
-                    currency: t,
-                    loaded: !1
-                } : {
-                    currency: t,
-                    loaded: !1
-                }), c = (0, o.useSubscriptionPlansLoaded)(r);
-                u.useEffect(() => {
-                    let t = async () => {
-                        await E(n, r);
-                        let t = [];
-                        null != e && null != s.default.get(e) && (t = f(e, n, i)), t.length > 0 ? a({
-                            paymentSourceId: n,
-                            currency: t[0],
-                            loaded: !0
-                        }) : a({
-                            paymentSourceId: n,
-                            loaded: !1
-                        })
-                    };
-                    t()
-                }, [n, JSON.stringify(r), e, i, c]);
-                let S = l.paymentSourceId !== n || null == e || !c || !0 !== l.loaded;
-                return {
-                    hasFetchedSubscriptionPlans: c,
-                    priceOptions: l,
-                    setCurrency: t => {
-                        a({
-                            currency: t
-                        })
-                    },
-                    currencyLoading: S
-                }
-            }
         },
-        976979: function(t, e, n) {
+        24337: function(e, t, n) {
             "use strict";
-            var u, i;
-            n.r(e), n.d(e, {
-                CountryCodes: function() {
-                    return u
-                },
-                CountryCodesSets: function() {
-                    return r
-                }
-            }), n("222007"), (i = u || (u = {})).AD = "AD", i.AE = "AE", i.AF = "AF", i.AG = "AG", i.AI = "AI", i.AL = "AL", i.AM = "AM", i.AO = "AO", i.AQ = "AQ", i.AR = "AR", i.AS = "AS", i.AT = "AT", i.AU = "AU", i.AW = "AW", i.AX = "AX", i.AZ = "AZ", i.BA = "BA", i.BB = "BB", i.BD = "BD", i.BE = "BE", i.BF = "BF", i.BG = "BG", i.BH = "BH", i.BI = "BI", i.BJ = "BJ", i.BL = "BL", i.BM = "BM", i.BN = "BN", i.BO = "BO", i.BQ = "BQ", i.BR = "BR", i.BS = "BS", i.BT = "BT", i.BV = "BV", i.BW = "BW", i.BY = "BY", i.BZ = "BZ", i.CA = "CA", i.CC = "CC", i.CD = "CD", i.CF = "CF", i.CG = "CG", i.CH = "CH", i.CI = "CI", i.CK = "CK", i.CL = "CL", i.CM = "CM", i.CN = "CN", i.CO = "CO", i.CR = "CR", i.CU = "CU", i.CV = "CV", i.CW = "CW", i.CX = "CX", i.CY = "CY", i.CZ = "CZ", i.DE = "DE", i.DJ = "DJ", i.DK = "DK", i.DM = "DM", i.DO = "DO", i.DZ = "DZ", i.EC = "EC", i.EE = "EE", i.EG = "EG", i.EH = "EH", i.ER = "ER", i.ES = "ES", i.ET = "ET", i.FI = "FI", i.FJ = "FJ", i.FK = "FK", i.FM = "FM", i.FO = "FO", i.FR = "FR", i.GA = "GA", i.GB = "GB", i.GD = "GD", i.GE = "GE", i.GF = "GF", i.GG = "GG", i.GH = "GH", i.GI = "GI", i.GL = "GL", i.GM = "GM", i.GN = "GN", i.GP = "GP", i.GQ = "GQ", i.GR = "GR", i.GS = "GS", i.GT = "GT", i.GU = "GU", i.GW = "GW", i.GY = "GY", i.HK = "HK", i.HM = "HM", i.HN = "HN", i.HR = "HR", i.HT = "HT", i.HU = "HU", i.ID = "ID", i.IE = "IE", i.IL = "IL", i.IM = "IM", i.IN = "IN", i.IO = "IO", i.IQ = "IQ", i.IR = "IR", i.IS = "IS", i.IT = "IT", i.JE = "JE", i.JM = "JM", i.JO = "JO", i.JP = "JP", i.KE = "KE", i.KG = "KG", i.KH = "KH", i.KI = "KI", i.KM = "KM", i.KN = "KN", i.KP = "KP", i.KR = "KR", i.KW = "KW", i.KY = "KY", i.KZ = "KZ", i.LA = "LA", i.LB = "LB", i.LC = "LC", i.LI = "LI", i.LK = "LK", i.LR = "LR", i.LS = "LS", i.LT = "LT", i.LU = "LU", i.LV = "LV", i.LY = "LY", i.MA = "MA", i.MC = "MC", i.MD = "MD", i.ME = "ME", i.MF = "MF", i.MG = "MG", i.MH = "MH", i.MK = "MK", i.ML = "ML", i.MM = "MM", i.MN = "MN", i.MO = "MO", i.MP = "MP", i.MQ = "MQ", i.MR = "MR", i.MS = "MS", i.MT = "MT", i.MU = "MU", i.MV = "MV", i.MW = "MW", i.MX = "MX", i.MY = "MY", i.MZ = "MZ", i.NA = "NA", i.NC = "NC", i.NE = "NE", i.NF = "NF", i.NG = "NG", i.NI = "NI", i.NL = "NL", i.NO = "NO", i.NP = "NP", i.NR = "NR", i.NU = "NU", i.NZ = "NZ", i.OM = "OM", i.PA = "PA", i.PE = "PE", i.PF = "PF", i.PG = "PG", i.PH = "PH", i.PK = "PK", i.PL = "PL", i.PM = "PM", i.PN = "PN", i.PR = "PR", i.PS = "PS", i.PT = "PT", i.PW = "PW", i.PY = "PY", i.QA = "QA", i.RE = "RE", i.RO = "RO", i.RS = "RS", i.RU = "RU", i.RW = "RW", i.SA = "SA", i.SB = "SB", i.SC = "SC", i.SD = "SD", i.SE = "SE", i.SG = "SG", i.SH = "SH", i.SI = "SI", i.SJ = "SJ", i.SK = "SK", i.SL = "SL", i.SM = "SM", i.SN = "SN", i.SO = "SO", i.SR = "SR", i.SS = "SS", i.ST = "ST", i.SV = "SV", i.SX = "SX", i.SY = "SY", i.SZ = "SZ", i.TC = "TC", i.TD = "TD", i.TF = "TF", i.TG = "TG", i.TH = "TH", i.TJ = "TJ", i.TK = "TK", i.TL = "TL", i.TM = "TM", i.TN = "TN", i.TO = "TO", i.TR = "TR", i.TT = "TT", i.TV = "TV", i.TW = "TW", i.TZ = "TZ", i.UA = "UA", i.UG = "UG", i.UM = "UM", i.US = "US", i.UY = "UY", i.UZ = "UZ", i.VA = "VA", i.VC = "VC", i.VE = "VE", i.VG = "VG", i.VI = "VI", i.VN = "VN", i.VU = "VU", i.WF = "WF", i.WS = "WS", i.YE = "YE", i.YT = "YT", i.ZA = "ZA", i.ZM = "ZM", i.ZW = "ZW", i.XK = "XK", i.AC = "AC", i.AN = "AN", i.DG = "DG", i.EL = "EL", i.IC = "IC", i.MI = "MI", i.TP = "TP", i.WK = "WK";
-            let r = {
-                NON_STANDARD_CODES: new Set(["AC", "AN", "DG", "EL", "IC", "MI", "TP", "WK", "XK"]),
-                ALL: new Set(["AC", "AD", "AE", "AF", "AG", "AI", "AL", "AM", "AN", "AO", "AQ", "AR", "AS", "AT", "AU", "AW", "AX", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BL", "BM", "BN", "BO", "BQ", "BR", "BS", "BT", "BV", "BW", "BY", "BZ", "CA", "CC", "CD", "CF", "CG", "CH", "CI", "CK", "CL", "CM", "CN", "CO", "CR", "CU", "CV", "CW", "CX", "CY", "CZ", "DE", "DG", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "EH", "EL", "ER", "ES", "ET", "FI", "FJ", "FK", "FM", "FO", "FR", "GA", "GB", "GD", "GE", "GF", "GG", "GH", "GI", "GL", "GM", "GN", "GP", "GQ", "GR", "GS", "GT", "GU", "GW", "GY", "HK", "HM", "HN", "HR", "HT", "HU", "IC", "ID", "IE", "IL", "IM", "IN", "IO", "IQ", "IR", "IS", "IT", "JE", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KP", "KR", "KW", "KY", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "LY", "MA", "MC", "MD", "ME", "MF", "MG", "MH", "MI", "MK", "ML", "MM", "MN", "MO", "MP", "MQ", "MR", "MS", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NC", "NE", "NF", "NG", "NI", "NL", "NO", "NP", "NR", "NU", "NZ", "OM", "PA", "PE", "PF", "PG", "PH", "PK", "PL", "PM", "PN", "PR", "PS", "PT", "PW", "PY", "QA", "RE", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SD", "SE", "SG", "SH", "SI", "SJ", "SK", "SL", "SM", "SN", "SO", "SR", "SS", "ST", "SV", "SX", "SY", "SZ", "TC", "TD", "TF", "TG", "TH", "TJ", "TK", "TL", "TM", "TN", "TO", "TP", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "UM", "US", "UY", "UZ", "VA", "VC", "VE", "VG", "VI", "VN", "VU", "WF", "WK", "WS", "XK", "YE", "YT", "ZA", "ZM", "ZW"]),
-                US_TERRITORIES: new Set(["AS", "GU", "MP", "PR", "VI"]),
-                FRANCE_AND_FRENCH_REGION: new Set(["FR", "GF", "GP", "MQ", "NC", "PF", "PM", "RE", "TF", "WF", "YT"]),
-                VAT_EU_COUNTRIES: new Set(["AT", "BE", "BG", "CY", "CZ", "DE", "DK", "EE", "EL", "ES", "FI", "FR", "GR", "HR", "HU", "IE", "IT", "LT", "LU", "LV", "MT", "NL", "PL", "PT", "RO", "SE", "SI", "SK"]),
-                VAT_COUNTRIES: new Set(["AT", "AU", "BE", "BG", "CH", "CY", "CZ", "DE", "DK", "EE", "EL", "ES", "FI", "FR", "GR", "HR", "HU", "IE", "IT", "LT", "LU", "LV", "MT", "NL", "NO", "PL", "PT", "RO", "SE", "SI", "SK"]),
-                TAX_DOMESTIC: new Set(["CA", "GB", "US"]),
-                EU_COUNTRIES: new Set(["AD", "AL", "AT", "AX", "BA", "BE", "BG", "BY", "CH", "CY", "CZ", "DE", "DK", "EE", "EL", "ES", "FI", "FO", "FR", "GG", "GR", "HR", "HU", "IC", "IE", "IM", "IT", "JE", "LI", "LT", "LU", "LV", "MC", "MD", "MK", "MT", "NL", "NO", "PL", "PT", "RO", "RU", "SE", "SI", "SJ", "SK", "SM", "UA", "VA"]),
-                EEA_COUNTRIES: new Set(["AT", "BE", "BG", "CY", "CZ", "DE", "DK", "EE", "EL", "ES", "FI", "FR", "GR", "HR", "HU", "IE", "IS", "IT", "LI", "LT", "LU", "LV", "MT", "NL", "NO", "PL", "PT", "RO", "SE", "SI", "SK"]),
-                DSA_COUNTRIES: new Set(["AT", "BE", "BG", "CY", "CZ", "DE", "DK", "EE", "EL", "ES", "FI", "FR", "GR", "HR", "HU", "IE", "IT", "LT", "LU", "LV", "MT", "NL", "PL", "PT", "RO", "SE", "SI", "SK"]),
-                WITHOUT_POSTAL_CODES: new Set(["AE", "AG", "AN", "AO", "AW", "BF", "BI", "BJ", "BM", "BO", "BQ", "BS", "BW", "BZ", "CD", "CF", "CG", "CI", "CK", "CM", "CW", "DJ", "DM", "ER", "FJ", "GA", "GD", "GH", "GM", "GQ", "GY", "HK", "HM", "IE", "JM", "KE", "KI", "KM", "KN", "KP", "LY", "ML", "MO", "MR", "MW", "NA", "NR", "NU", "QA", "RW", "SB", "SC", "SL", "SR", "ST", "SX", "SY", "TD", "TF", "TG", "TK", "TL", "TO", "TV", "UG", "VU", "YE", "ZA", "ZW"]),
-                TAX_EXCLUSIVE: new Set(["CA", "US"]),
-                TAX_ADDRESS_REQUIRE_POSTAL_CODE: new Set(["CA", "US"]),
-                NITRO_TAX_EXCLUSIVE_EXPERIMENT_COUNTRIES: new Set(["US"]),
-                NITRO_TAX_EXCLUSIVE_EXPERIMENT_STATES: new Set(["TN", "WI"])
+
+            function i(e, t) {
+                return t && (e = e.trim()), e
             }
+            n.r(t), n.d(t, {
+                default: function() {
+                    return i
+                }
+            })
         }
     }
 ]);
