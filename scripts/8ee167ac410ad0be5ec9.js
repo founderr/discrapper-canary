@@ -32076,9 +32076,9 @@
                         children: (0, a.jsx)(C.default, {
                             className: i(j.icon, S)
                         })
-                    }, "watch")), 0 === y.length && null == b && null == L) ? null : (0, a.jsxs)("div", {
+                    }, "watch")), 0 === y.length && null == b && (null == L ? void 0 : L.emoji) == null) ? null : (0, a.jsxs)("div", {
                         className: j.icons,
-                        children: [b, y, null != L && (0, a.jsx)(O, {
+                        children: [b, y, (null == L ? void 0 : L.emoji) != null && (0, a.jsx)(O, {
                             hangStatusActivity: L,
                             iconClassName: S
                         })]

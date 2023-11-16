@@ -40254,12 +40254,12 @@ html .progress__4ef76 {
     justify-content: space-between;
     margin-top: 4px;
     padding: 8px 12px;
-    border-radius: 8px
+    border-radius: 8px;
+    gap: 4px
 }
 
 .statusIcon__87cd6 {
     flex-shrink: 0;
-    margin-left: 4px;
     height: 28px
 }
 
