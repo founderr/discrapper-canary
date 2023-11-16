@@ -5305,9 +5305,7 @@
                         friction: 24
                     }
                 }), c = n ? a : 0, p = (0, u.isThemeDark)(o) ? b[c] : k[c];
-                return !t && n ? (0, l.jsx)(D, {
-                    style: d
-                }) : n && s ? (0, l.jsx)(j, {
+                return !t && n ? (0, l.jsx)(D, {}) : n && s ? (0, l.jsx)(j, {
                     isDark: (0, u.isThemeDark)(o),
                     style: d
                 }) : (0, l.jsx)(U, {

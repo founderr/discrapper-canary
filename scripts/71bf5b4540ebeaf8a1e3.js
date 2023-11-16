@@ -7,23 +7,23 @@
                     return l
                 }
             });
-            var i, l, a = n("37983"),
-                u = n("884691"),
+            var i, l, u = n("37983"),
+                a = n("884691"),
                 r = n("748820"),
                 d = n("599110"),
                 s = n("117362"),
                 o = n("49111");
-            (i = class extends u.Component {
+            (i = class extends a.Component {
                 renderProvider(e) {
                     var t, n;
                     let {
                         section: i,
                         page: l,
-                        object: u,
+                        object: a,
                         objectType: r,
                         children: s
-                    } = this.props, o = this.mergeLocation(e.location, this.getLocation(l, i, u, r)), c = this.getContext(o, null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate, null !== (n = this._loadId) && void 0 !== n ? n : e.loadId);
-                    return (0, a.jsx)(d.AnalyticsContext.Provider, {
+                    } = this.props, o = this.mergeLocation(e.location, this.getLocation(l, i, a, r)), c = this.getContext(o, null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate, null !== (n = this._loadId) && void 0 !== n ? n : e.loadId);
+                    return (0, u.jsx)(d.AnalyticsContext.Provider, {
                         value: c,
                         children: s
                     })
@@ -32,7 +32,7 @@
                     let {
                         context: e
                     } = this.props;
-                    return null != e ? this.renderProvider(e) : (0, a.jsx)(d.AnalyticsContext.Consumer, {
+                    return null != e ? this.renderProvider(e) : (0, u.jsx)(d.AnalyticsContext.Consumer, {
                         children: e => this.renderProvider(e)
                     })
                 }
@@ -57,14 +57,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return u
                 }
             });
             var i = n("37983");
             n("884691");
             var l = n("901582");
 
-            function a(e, t) {
+            function u(e, t) {
                 return function(n) {
                     return (0, i.jsx)(l.default, {
                         page: t.page,
@@ -82,19 +82,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return u
                 }
             });
             var i = n("37983");
             n("884691");
             var l = n("685665");
 
-            function a(e, t) {
+            function u(e, t) {
                 return function(n) {
                     let {
-                        AnalyticsLocationProvider: a
+                        AnalyticsLocationProvider: u
                     } = (0, l.default)(t);
-                    return (0, i.jsx)(a, {
+                    return (0, i.jsx)(u, {
                         children: (0, i.jsx)(e, {
                             ...n
                         })
@@ -114,11 +114,11 @@
             });
             var i = n("316693"),
                 l = n("446674"),
-                a = n("862205"),
-                u = n("305961"),
+                u = n("862205"),
+                a = n("305961"),
                 r = n("957255"),
                 d = n("421127");
-            let s = (0, a.createExperiment)({
+            let s = (0, u.createExperiment)({
                     kind: "guild",
                     id: "2023-04_guild_alert_mode",
                     label: "Guild Alert Mode",
@@ -142,7 +142,7 @@
                         }
                     }]
                 }),
-                o = (0, a.createExperiment)({
+                o = (0, u.createExperiment)({
                     kind: "guild",
                     id: "2023-08_guild_alert_mode_friend_server",
                     label: "Guild Alert Mode (friend servers only)",
@@ -168,9 +168,9 @@
                 });
 
             function c(e) {
-                let t = (0, l.useStateFromStores)([u.default], () => u.default.getGuild(e)),
+                let t = (0, l.useStateFromStores)([a.default], () => a.default.getGuild(e)),
                     n = (0, l.useStateFromStores)([r.default], () => null != t && i.default.hasAny(r.default.computePermissions(t), d.IncidentAlertModeratorPermissions)),
-                    a = s.useExperiment({
+                    u = s.useExperiment({
                         guildId: e,
                         location: "c3fae3_1"
                     }, {
@@ -185,13 +185,13 @@
                         autoTrackExposure: !0
                     });
                 return {
-                    showAlertMode: a.showAlertMode || c.showAlertMode,
-                    alsoShowMemberSafety: a.alsoShowMemberSafety || c.alsoShowMemberSafety
+                    showAlertMode: u.showAlertMode || c.showAlertMode,
+                    alsoShowMemberSafety: u.alsoShowMemberSafety || c.alsoShowMemberSafety
                 }
             }
 
             function f(e) {
-                let t = u.default.getGuild(e),
+                let t = a.default.getGuild(e),
                     n = null != t && i.default.hasAny(r.default.computePermissions(t), d.IncidentAlertModeratorPermissions),
                     l = s.getCurrentConfig({
                         guildId: e,
@@ -200,7 +200,7 @@
                         disable: !n,
                         autoTrackExposure: !0
                     }),
-                    a = o.getCurrentConfig({
+                    u = o.getCurrentConfig({
                         guildId: e,
                         location: "c3fae3_4"
                     }, {
@@ -208,8 +208,8 @@
                         autoTrackExposure: !0
                     });
                 return {
-                    showAlertMode: l.showAlertMode || a.showAlertMode,
-                    alsoShowMemberSafety: l.alsoShowMemberSafety || a.alsoShowMemberSafety
+                    showAlertMode: l.showAlertMode || u.showAlertMode,
+                    alsoShowMemberSafety: l.alsoShowMemberSafety || u.alsoShowMemberSafety
                 }
             }
         },
@@ -234,8 +234,8 @@
             }), n("222007");
             var i = n("866227"),
                 l = n.n(i),
-                a = n("872717"),
-                u = n("716241"),
+                u = n("872717"),
+                a = n("716241"),
                 r = n("592407"),
                 d = n("305961"),
                 s = n("599110"),
@@ -245,7 +245,7 @@
             function f(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
                 0 !== t.length && s.default.track(c.AnalyticEvents.GUILD_RAID_REPORTED, {
-                    ...(0, u.collectGuildAnalyticsMetadata)(e),
+                    ...(0, a.collectGuildAnalyticsMetadata)(e),
                     guild_id: e,
                     raid_types: t
                 })
@@ -259,12 +259,12 @@
                 })
             }
             async function A(e, t, n, i) {
-                let u = l().add(i, "hours").toISOString(),
-                    r = await a.default.put({
+                let a = l().add(i, "hours").toISOString(),
+                    r = await u.default.put({
                         url: c.Endpoints.GUILD_INCIDENT_ACTIONS(e),
                         body: {
-                            invites_disabled_until: t ? u : null,
-                            dms_disabled_until: n ? u : null
+                            invites_disabled_until: t ? a : null,
+                            dms_disabled_until: n ? a : null
                         }
                     });
                 return r
@@ -272,9 +272,9 @@
             async function D(e, t, n) {
                 let {
                     showAlertMode: i
-                } = (0, o.getGuildAlertModeEnabled)(e), l = d.default.getGuild(e), u = null == l ? void 0 : l.getSafetyAlertsChannelId();
-                if (!i || null == u) return null;
-                let r = await a.default.post({
+                } = (0, o.getGuildAlertModeEnabled)(e), l = d.default.getGuild(e), a = null == l ? void 0 : l.getSafetyAlertsChannelId();
+                if (!i || null == a) return null;
+                let r = await u.default.post({
                     url: c.Endpoints.GUILD_INCIDENT_REPORT_FALSE_ALARM(e),
                     body: {
                         alert_message_id: t,
@@ -288,7 +288,7 @@
                     showAlertMode: t
                 } = (0, o.getGuildAlertModeEnabled)(e), n = d.default.getGuild(e), i = null == n ? void 0 : n.getSafetyAlertsChannelId();
                 if (!t || null == i) return null;
-                let l = await a.default.post({
+                let l = await u.default.post({
                     url: c.Endpoints.GUILD_INCIDENT_REPORT_RAID(e)
                 });
                 return l
@@ -298,7 +298,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 NAGBAR_DISPLAY_MAX_HOURS: function() {
-                    return u
+                    return a
                 },
                 DEFAULT_LOCKDOWN_DURATION: function() {
                     return r
@@ -312,27 +312,27 @@
             });
             var i = n("316693"),
                 l = n("843455"),
-                a = n("782340");
-            let u = 2,
+                u = n("782340");
+            let a = 2,
                 r = 2,
                 d = () => [{
                     value: 1,
-                    label: a.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_1_HOUR
+                    label: u.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_1_HOUR
                 }, {
                     value: 2,
-                    label: a.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_2_HOURS
+                    label: u.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_2_HOURS
                 }, {
                     value: 4,
-                    label: a.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_4_HOURS
+                    label: u.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_4_HOURS
                 }, {
                     value: 6,
-                    label: a.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_6_HOURS
+                    label: u.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_6_HOURS
                 }, {
                     value: 12,
-                    label: a.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_12_HOURS
+                    label: u.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_12_HOURS
                 }, {
                     value: 24,
-                    label: a.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_24_HOURS
+                    label: u.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_24_HOURS
                 }],
                 s = i.default.combine(l.Permissions.ADMINISTRATOR, l.Permissions.MANAGE_GUILD, l.Permissions.BAN_MEMBERS, l.Permissions.KICK_MEMBERS, l.Permissions.MODERATE_MEMBERS)
         },
@@ -340,17 +340,17 @@
             "use strict";
             n.r(t), n.d(t, {
                 openReportRaidModal: function() {
-                    return a
+                    return u
                 },
                 openSafetyChannelSetupModal: function() {
-                    return u
+                    return a
                 }
             });
             var i = n("37983");
             n("884691");
             var l = n("77078");
 
-            function a(e) {
+            function u(e) {
                 (0, l.openModalLazy)(async () => {
                     let {
                         default: t
@@ -362,7 +362,7 @@
                 })
             }
 
-            function u(e) {
+            function a(e) {
                 (0, l.openModalLazy)(async () => {
                     let {
                         default: t
@@ -376,7 +376,7 @@
         },
         712125: function(e, t, n) {
             "use strict";
-            var i, l, a, u, r, d;
+            var i, l, u, a, r, d;
             n.r(t), n.d(t, {
                 GuildIncidentActionSources: function() {
                     return i
@@ -385,9 +385,9 @@
                     return l
                 },
                 GuildIncidentActionTypes: function() {
-                    return a
+                    return u
                 }
-            }), (u = i || (i = {})).MESSAGE = "message", u.NAGBAR = "nagbar", u.GUILD_SETTINGS = "guild_settings", u.CONTEXT_MENU = "context_menu", u.GUILD_PROFILE = "guild_profile", u.MEMBER_SAFETY_PAGE = "member_safety_page", (r = l || (l = {})).JOIN_RAID = "join_raid", r.DM_RAID = "dm_raid", (d = a || (a = {})).INVITES_DISABLED = "invites_disabled", d.DMS_DISABLED = "dms_disabled"
+            }), (a = i || (i = {})).MESSAGE = "message", a.NAGBAR = "nagbar", a.GUILD_SETTINGS = "guild_settings", a.CONTEXT_MENU = "context_menu", a.GUILD_PROFILE = "guild_profile", a.MEMBER_SAFETY_PAGE = "member_safety_page", (r = l || (l = {})).JOIN_RAID = "join_raid", r.DM_RAID = "dm_raid", (d = u || (u = {})).INVITES_DISABLED = "invites_disabled", d.DMS_DISABLED = "dms_disabled"
         },
         311161: function(e, t, n) {
             "use strict";
@@ -428,8 +428,8 @@
             }), n("424973");
             var i = n("866227"),
                 l = n.n(i),
-                a = n("712125"),
-                u = n("421127"),
+                u = n("712125"),
+                a = n("421127"),
                 r = n("782340");
             let d = {
                 month: "numeric",
@@ -439,29 +439,29 @@
             };
 
             function s(e) {
-                return null != e.dmSpamDetectedAt && l(e.dmSpamDetectedAt).add(u.NAGBAR_DISPLAY_MAX_HOURS, "hours") > l() || null != e.raidDetectedAt && l(e.raidDetectedAt).add(u.NAGBAR_DISPLAY_MAX_HOURS, "hours") > l()
+                return null != e.dmSpamDetectedAt && l(e.dmSpamDetectedAt).add(a.NAGBAR_DISPLAY_MAX_HOURS, "hours") > l() || null != e.raidDetectedAt && l(e.raidDetectedAt).add(a.NAGBAR_DISPLAY_MAX_HOURS, "hours") > l()
             }
 
             function o(e) {
-                return null != e.raidDetectedAt && l(e.raidDetectedAt).add(u.NAGBAR_DISPLAY_MAX_HOURS, "hours") > l()
+                return null != e.raidDetectedAt && l(e.raidDetectedAt).add(a.NAGBAR_DISPLAY_MAX_HOURS, "hours") > l()
             }
 
             function c(e) {
-                return null != e.dmSpamDetectedAt && l(e.dmSpamDetectedAt).add(u.NAGBAR_DISPLAY_MAX_HOURS, "hours") > l()
+                return null != e.dmSpamDetectedAt && l(e.dmSpamDetectedAt).add(a.NAGBAR_DISPLAY_MAX_HOURS, "hours") > l()
             }
 
             function f(e) {
-                return null == e ? void 0 : o(e) ? a.GuildIncidentAlertTypes.JOIN_RAID : a.GuildIncidentAlertTypes.DM_RAID
+                return null == e ? void 0 : o(e) ? u.GuildIncidentAlertTypes.JOIN_RAID : u.GuildIncidentAlertTypes.DM_RAID
             }
 
             function _(e, t) {
                 let n = [];
-                return e && n.push(a.GuildIncidentActionTypes.INVITES_DISABLED), t && n.push(a.GuildIncidentActionTypes.DMS_DISABLED), n
+                return e && n.push(u.GuildIncidentActionTypes.INVITES_DISABLED), t && n.push(u.GuildIncidentActionTypes.DMS_DISABLED), n
             }
 
             function A(e, t) {
                 let n = [];
-                return !e && n.push(a.GuildIncidentActionTypes.INVITES_DISABLED), !t && n.push(a.GuildIncidentActionTypes.DMS_DISABLED), n
+                return !e && n.push(u.GuildIncidentActionTypes.INVITES_DISABLED), !t && n.push(u.GuildIncidentActionTypes.DMS_DISABLED), n
             }
 
             function D(e) {
@@ -481,9 +481,9 @@
                 let i = null !== (n = e.dmsDisabledUntil) && void 0 !== n ? n : e.invitesDisabledUntil;
                 if (null == i) return "";
                 let l = null != e.dmsDisabledUntil,
-                    a = null != e.invitesDisabledUntil;
+                    u = null != e.invitesDisabledUntil;
                 switch (!0) {
-                    case l && a:
+                    case l && u:
                         return r.default.Messages.GUILD_ANTIRAID_PAUSE_DMS_AND_JOINS_NAGBAR_MESSAGE_NEW.format({
                             guildName: t,
                             time: new Date(i).toLocaleString(r.default.getLocale(), d)
@@ -493,7 +493,7 @@
                             guildName: t,
                             time: new Date(i).toLocaleString(r.default.getLocale(), d)
                         });
-                    case a:
+                    case u:
                         return r.default.Messages.GUILD_ANTIRAID_PAUSE_JOINS_NAGBAR_MESSAGE_NEW.format({
                             guildName: t,
                             time: new Date(i).toLocaleString(r.default.getLocale(), d)
@@ -512,8 +512,8 @@
             }), n("222007");
             var i = n("446674"),
                 l = n("913144"),
-                a = n("374363"),
-                u = n("305961"),
+                u = n("374363"),
+                a = n("305961"),
                 r = n("957255"),
                 d = n("607620"),
                 s = n("610174"),
@@ -523,8 +523,8 @@
 
             function _() {
                 var e;
-                let t = null !== (e = a.default.getGuildsProto()) && void 0 !== e ? e : {},
-                    n = u.default.getGuilds(),
+                let t = null !== (e = u.default.getGuildsProto()) && void 0 !== e ? e : {},
+                    n = a.default.getGuilds(),
                     i = Object.keys(n);
                 for (let e of (f = {}, i))(0, s.getGuildAlertModeEnabled)(e).showAlertMode && (f[e] = {
                     guildId: e,
@@ -543,7 +543,7 @@
             }
             class D extends i.default.Store {
                 initialize() {
-                    this.waitFor(a.default, u.default, r.default, d.default), this.syncWith([a.default, u.default, r.default, d.default], _)
+                    this.waitFor(u.default, a.default, r.default, d.default), this.syncWith([u.default, a.default, r.default, d.default], _)
                 }
                 getGuildIncident(e) {
                     return c[e]
@@ -573,10 +573,7 @@
                     let {
                         guild: t
                     } = e, n = A(t.incidents_data);
-                    null != n && ((0, o.hasDetectedActivity)(n) || (0, o.isUnderLockdown)(n)) ? (Object.keys(c).forEach(e => {
-                        let t = c[e];
-                        !(0, o.hasDetectedActivity)(t) && delete c[e]
-                    }), c[t.id] = n) : delete c[t.id]
+                    null != n && ((0, o.hasDetectedActivity)(n) || (0, o.isUnderLockdown)(n)) ? c[t.id] = n : delete c[t.id]
                 },
                 GUILD_DELETE: function(e) {
                     let {
@@ -610,8 +607,8 @@
             }), n("222007");
             var i = n("446674"),
                 l = n("862205"),
-                a = n("54346"),
-                u = n("957255"),
+                u = n("54346"),
+                a = n("957255"),
                 r = n("592407"),
                 d = n("49111");
             let s = (0, l.createExperiment)({
@@ -631,7 +628,7 @@
             });
 
             function o(e) {
-                return (0, i.useStateFromStores)([u.default], () => null != e && u.default.can(d.Permissions.MANAGE_GUILD, e), [e])
+                return (0, i.useStateFromStores)([a.default], () => null != e && a.default.can(d.Permissions.MANAGE_GUILD, e), [e])
             }
 
             function c(e) {
@@ -655,9 +652,9 @@
             function _(e) {
                 var t;
                 let n = o(e),
-                    l = (0, i.useStateFromStores)([a.default], () => null != e ? a.default.getGuildIncident(e.id) : null),
-                    u = (null == e ? void 0 : null === (t = e.hasFeature) || void 0 === t ? void 0 : t.call(e, d.GuildFeatures.INVITES_DISABLED)) || (null == l ? void 0 : l.invitesDisabledUntil) != null && new Date(l.invitesDisabledUntil) > new Date;
-                return n && u
+                    l = (0, i.useStateFromStores)([u.default], () => null != e ? u.default.getGuildIncident(e.id) : null),
+                    a = (null == e ? void 0 : null === (t = e.hasFeature) || void 0 === t ? void 0 : t.call(e, d.GuildFeatures.INVITES_DISABLED)) || (null == l ? void 0 : l.invitesDisabledUntil) != null && new Date(l.invitesDisabledUntil) > new Date;
+                return n && a
             }
         },
         701587: function(e, t, n) {
@@ -670,8 +667,8 @@
             var i = n("37983");
             n("884691");
             var l = n("77078"),
-                a = n("272030"),
-                u = n("838446"),
+                u = n("272030"),
+                a = n("838446"),
                 r = n("158534"),
                 d = n("812204"),
                 s = n("32573"),
@@ -679,17 +676,17 @@
                 c = n("743370"),
                 f = n("49111"),
                 _ = n("782340"),
-                A = (0, r.default)((0, u.default)(function(e) {
+                A = (0, r.default)((0, a.default)(function(e) {
                     let {
                         guildId: t,
                         context: n,
-                        onSelect: u
+                        onSelect: a
                     } = e, r = (0, c.default)(t, n), d = (0, o.default)(t, n), f = (0, s.default)(t, n);
                     return (0, i.jsxs)(l.Menu, {
                         navId: "moderation-raid-context",
-                        onClose: a.closeContextMenu,
+                        onClose: u.closeContextMenu,
                         "aria-label": _.default.Messages.USER_ACTIONS_MENU_LABEL,
-                        onSelect: u,
+                        onSelect: a,
                         children: [(0, i.jsx)(l.MenuGroup, {
                             children: d
                         }), (0, i.jsxs)(l.MenuGroup, {
@@ -710,8 +707,8 @@
             var i = n("37983");
             n("884691");
             var l = n("77078"),
-                a = n("54239"),
-                u = n("592407"),
+                u = n("54239"),
+                a = n("592407"),
                 r = n("49111"),
                 d = n("782340");
 
@@ -721,7 +718,7 @@
                     id: "nav-server-settings",
                     label: d.default.Messages.SERVER_SETTINGS,
                     action: () => {
-                        (0, a.popLayer)(), u.default.open(e, r.GuildSettingsSections.MODERATION)
+                        (0, u.popLayer)(), a.default.open(e, r.GuildSettingsSections.MODERATION)
                     }
                 })
             }
@@ -735,8 +732,8 @@
             }), n("222007");
             var i = n("37983"),
                 l = n("884691"),
-                a = n("446674"),
-                u = n("77078"),
+                u = n("446674"),
+                a = n("77078"),
                 r = n("272030"),
                 d = n("610174"),
                 s = n("311340"),
@@ -750,25 +747,25 @@
 
             function E(e, t) {
                 let E = t === D.AppContext.POPOUT,
-                    S = (0, a.useStateFromStores)([A.default], () => A.default.getGuild(e), [e]),
-                    [m, h] = l.useState(!1),
+                    S = (0, u.useStateFromStores)([A.default], () => A.default.getGuild(e), [e]),
+                    [m, M] = l.useState(!1),
                     {
-                        showAlertMode: M
+                        showAlertMode: h
                     } = (0, d.useGuildAlertModeEnabled)(e),
-                    p = (0, a.useStateFromStores)([f.default], () => null != S ? f.default.getGuildIncident(S.id) : null),
-                    b = (null == S ? void 0 : S.hasFeature(D.GuildFeatures.INVITES_DISABLED)) || M && (null == p ? void 0 : p.invitesDisabledUntil) != null && new Date(p.invitesDisabledUntil) > new Date,
-                    [R, g] = l.useState(b),
+                    p = (0, u.useStateFromStores)([f.default], () => null != S ? f.default.getGuildIncident(S.id) : null),
+                    R = (null == S ? void 0 : S.hasFeature(D.GuildFeatures.INVITES_DISABLED)) || h && (null == p ? void 0 : p.invitesDisabledUntil) != null && new Date(p.invitesDisabledUntil) > new Date,
+                    [b, g] = l.useState(R),
                     G = async t => {
                         if (!m && null != S) {
-                            h(!0);
+                            M(!0);
                             try {
-                                if (g(t), M) {
+                                if (g(t), h) {
                                     if (t) {
                                         let t = {
                                             source: o.GuildIncidentActionSources.MESSAGE,
                                             alertType: (0, c.getIncidentAlertType)(p)
                                         };
-                                        (0, u.openModalLazy)(async () => {
+                                        (0, a.openModalLazy)(async () => {
                                             let {
                                                 default: l
                                             } = await n.el("186638").then(n.bind(n, "186638"));
@@ -783,17 +780,17 @@
                             } catch (e) {
                                 g(!t)
                             } finally {
-                                h(!1), (0, r.closeContextMenu)()
+                                M(!1), (0, r.closeContextMenu)()
                             }
                         }
                     };
-                return E ? null : (0, i.jsx)(u.MenuCheckboxItem, {
+                return E ? null : (0, i.jsx)(a.MenuCheckboxItem, {
                     id: "pause-invites",
                     label: I.default.Messages.DISABLE_INVITES,
                     action: () => {
-                        G(!R)
+                        G(!b)
                     },
-                    checked: R
+                    checked: b
                 })
             }
         },
@@ -807,8 +804,8 @@
             var i = n("37983");
             n("884691");
             var l = n("77078"),
-                a = n("54239"),
-                u = n("413266"),
+                u = n("54239"),
+                a = n("413266"),
                 r = n("49111"),
                 d = n("782340");
 
@@ -818,7 +815,7 @@
                     id: "report-raid",
                     label: d.default.Messages.GUILD_REPORT_RAID_BUTTON_TITLE,
                     action: () => {
-                        (0, a.popLayer)(), (0, u.openReportRaidModal)(e)
+                        (0, u.popLayer)(), (0, a.openReportRaidModal)(e)
                     }
                 })
             }
@@ -832,30 +829,30 @@
             });
             var i = n("446674"),
                 l = n("913144"),
-                a = n("789563");
+                u = n("789563");
 
-            function u() {
+            function a() {
                 return !0
             }
             class r extends i.default.Store {
                 initialize() {
-                    this.waitFor(a.default)
+                    this.waitFor(u.default)
                 }
                 getExperimentAssignment(e, t) {
-                    return a.default.getGuildExperimentDescriptor(t, e)
+                    return u.default.getGuildExperimentDescriptor(t, e)
                 }
             }
             r.displayName = "GuildExperimentStore";
             var d = new r(l.default, {
-                LOGOUT: u,
-                LOGIN_SUCCESS: u,
-                CONNECTION_OPEN: u,
-                EXPERIMENTS_FETCH_SUCCESS: u,
-                OVERLAY_INITIALIZE: u,
-                CACHE_LOADED: u,
-                EXPERIMENTS_FETCH_FAILURE: u,
-                EXPERIMENT_REGISTER_LEGACY: u,
-                EXPERIMENT_OVERRIDE_BUCKET: u
+                LOGOUT: a,
+                LOGIN_SUCCESS: a,
+                CONNECTION_OPEN: a,
+                EXPERIMENTS_FETCH_SUCCESS: a,
+                OVERLAY_INITIALIZE: a,
+                CACHE_LOADED: a,
+                EXPERIMENTS_FETCH_FAILURE: a,
+                EXPERIMENT_REGISTER_LEGACY: a,
+                EXPERIMENT_OVERRIDE_BUCKET: a
             })
         }
     }

@@ -615,14 +615,11 @@
         398654: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                useFirstGuildIncidentId: function() {
+                useGuildIncidentsState: function() {
                     return C
                 },
-                useGuildIncidentsState: function() {
-                    return p
-                },
                 shouldShowRaidNotificationNagbar: function() {
-                    return g
+                    return p
                 }
             }), n("222007");
             var r = n("316693"),
@@ -637,27 +634,9 @@
                 f = n("311161"),
                 h = n("54346"),
                 _ = n("421127");
-
-            function C() {
-                let e = (0, i.default)([a.default], () => a.default.getCurrentUser()),
-                    t = (0, i.default)([h.default], () => h.default.getIncidentsByGuild()),
-                    n = (0, i.useStateFromStoresArray)([l.default], () => Object.keys(t).map(e => l.default.getGuild(e)));
-                for (let i of n) {
-                    if (null == i) continue;
-                    let n = t[i.id];
-                    if (null == n || !(0, f.hasDetectedActivity)(n) && !(0, f.isUnderLockdown)(n)) continue;
-                    let u = r.default.hasAny(d.default.computePermissions({
-                        user: e,
-                        context: i,
-                        checkElevated: !1
-                    }), _.IncidentAlertModeratorPermissions);
-                    if (u) return i.id
-                }
-                return null
-            }
             n("49111");
 
-            function p(e) {
+            function C(e) {
                 let {
                     showAlertMode: t
                 } = (0, c.useGuildAlertModeEnabled)(null != e ? e : "0"), n = (0, i.default)([l.default, o.default], () => {
@@ -673,7 +652,7 @@
                 }
             }
 
-            function g() {
+            function p() {
                 var e;
                 let t = s.default.getGuildId(),
                     n = function(e) {

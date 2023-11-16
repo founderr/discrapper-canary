@@ -1737,7 +1737,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "246303"
+                        buildNumber: "246320"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -16341,7 +16341,7 @@
                 var t, p;
                 let {
                     onDismiss: g
-                } = e, R = (0, l.useStateFromStores)([c.default], () => c.default.getGuildId()), O = (0, l.useStateFromStores)([d.default], () => null != R ? d.default.getChannelId(R) : null, [R]), L = (0, h.useFirstGuildIncidentId)(), v = (0, l.useStateFromStores)([u.default], () => null != L ? u.default.getGuild(L) : null, [L]), {
+                } = e, R = (0, l.useStateFromStores)([c.default], () => c.default.getGuildId()), O = (0, l.useStateFromStores)([d.default], () => null != R ? d.default.getChannelId(R) : null, [R]), L = null != R ? R : null, v = (0, l.useStateFromStores)([u.default], () => null != L ? u.default.getGuild(L) : null, [L]), {
                     shouldShowIncidentActions: M,
                     incidentData: P,
                     isUnderLockdown: D
