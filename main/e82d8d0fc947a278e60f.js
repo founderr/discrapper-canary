@@ -1,1212 +1,165 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["4867"], {
-        53708: function(t, e, n) {
+    ["64873"], {
+        753809: function(_, I, E) {
             "use strict";
-            t.exports = n.p + "f6c7b8245d3a54cf98b2.png"
-        },
-        875212: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                useTriggerDebuggingAA: function() {
-                    return u
+            E.r(I), E.d(I, {
+                LinkIcon: function() {
+                    return R
                 }
             });
-            var r = n("862205");
-            let i = (0, r.createExperiment)({
-                kind: "user",
-                id: "2023-09_trigger_debugging_aa",
-                label: "trigger debugging aa mobile",
-                defaultConfig: {
-                    inUse: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "On",
-                    config: {
-                        inUse: !0
-                    }
-                }]
-            });
-
-            function u(t) {
+            var T = E("37983");
+            E("884691");
+            var S = E("669491"),
+                N = E("75196");
+            let R = _ => {
                 let {
-                    autoTrackExposure: e = !1,
-                    location: n
-                } = t;
-                return i.useExperiment({
-                    location: n
-                }, {
-                    autoTrackExposure: e
+                    width: I = 24,
+                    height: E = 24,
+                    color: R = S.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: A = "",
+                    ...O
+                } = _;
+                return (0, T.jsxs)("svg", {
+                    ...(0, N.default)(O),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: I,
+                    height: E,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: [(0, T.jsx)("path", {
+                        fill: "string" == typeof R ? R : R.css,
+                        d: "M16.293 14.707a1 1 0 0 1 0-1.414l2.5-2.5a3.95 3.95 0 1 0-5.586-5.586l-2.5 2.5a1 1 0 1 1-1.414-1.414l2.5-2.5a5.95 5.95 0 1 1 8.414 8.414l-2.5 2.5a1 1 0 0 1-1.414 0ZM7.707 9.293a1 1 0 0 1 0 1.414l-2.5 2.5a3.95 3.95 0 0 0 5.586 5.586l2.5-2.5a1 1 0 1 1 1.414 1.414l-2.5 2.5a5.95 5.95 0 0 1-8.414-8.414l2.5-2.5a1 1 0 0 1 1.414 0Z",
+                        className: A
+                    }), (0, T.jsx)("path", {
+                        fill: "string" == typeof R ? R : R.css,
+                        d: "M14.707 10.707a1 1 0 1 0-1.414-1.414l-4 4a1 1 0 0 0 1.414 1.414l4-4Z",
+                        className: A
+                    })]
                 })
             }
         },
-        688318: function(t, e, n) {
+        769846: function(_, I, E) {
             "use strict";
-            n.r(e), n.d(e, {
+            E.r(I), E.d(I, {
                 default: function() {
-                    return _
+                    return N
                 }
-            }), n("222007");
-            var r = n("884691"),
-                i = n("446674"),
-                u = n("206230"),
-                o = n("91653"),
-                l = n("471671"),
-                a = n("315102"),
-                E = n("53708"),
-                _ = t => {
-                    let {
-                        user: e,
-                        size: n,
-                        animateOnHover: _ = !1,
-                        showPending: s = !1,
-                        showTryItOut: c = !1,
-                        avatarDecorationOverride: T
-                    } = t, [d, S] = r.useState(!1), A = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion), I = (0, i.useStateFromStores)([l.default], () => l.default.isFocused()), {
-                        pendingAvatarDecoration: f
-                    } = (0, o.default)({
-                        isTryItOut: c
-                    }), C = I && (d || !A && !_), R = s && void 0 !== f ? f : null == e ? void 0 : e.avatarDecoration, N = r.useMemo(() => (0, a.getAvatarDecorationURL)({
-                        avatarDecoration: void 0 !== T ? T : R,
-                        canAnimate: C,
-                        size: n
-                    }), [R, C, n, T]), O = r.useCallback(() => S(!0), []), v = r.useCallback(() => S(!1), []);
-                    return {
-                        avatarPlaceholderSrc: E,
-                        avatarDecorationSrc: N,
-                        isAvatarDecorationAnimating: C,
-                        eventHandlers: {
-                            onMouseEnter: O,
-                            onMouseLeave: v
-                        }
-                    }
-                }
+            }), (T = S || (S = {})).CHANNEL_CHAT_RESIZABLE_SIDEBAR_RESIZE_HANDLE_WIDTH = "8px", T.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE = "485px", T.ACTIVITIES_HOME_WHATS_NEW_TILE_WIDTH = "224px", T.ACTIVITIES_HOME_WHATS_NEW_HORIZONTAL_MARGIN = "10px", T.ACTIVITIES_HOME_HAPPENING_NOW_CARD_WIDTH = "305px", T.ACTIVITIES_HOME_HAPPENING_NOW_GAP = "16px", T.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH = "356px", T.FOLDER_ITEM_ANIMATION_DURATION = "150ms", T.FOLDER_ITEM_GUILD_ICON_SIZE = "48px", T.GUILD_TOOLTIP_ICON_SIZE = "20px", T.GUILD_TOOLTIP_ICON_SIZE_V_2 = "16px", T.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING = "2px", T.FULL_SCREEN_LAYER_ANIMATION_DURATION = "150ms", T.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP = "7px", T.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS = "76px", T.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_PADDING = "2px", T.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN = "0", T.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING = "8px", T.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_SIZE = "32px", T.STICKERS_CONSTANTS_STICKER_CATEGORY_ICON_MARGIN = "8px", T.STICKERS_CONSTANTS_STICKER_CATEGORY_UNICODE_ICON_SIZE = "24px", T.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_SIZE = "1px", T.STICKERS_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL = "12px", T.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL = "360px", T.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM = "446px", T.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP = "0", T.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP_SEARCH_RESULTS = "8px", T.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT = "0", T.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM = "0", T.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT = "8px", T.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT = "30px", T.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS = "96px", T.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL = "80px", T.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING = "2px", T.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN = "12px", T.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT = "54px", T.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT = "32px", T.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS = "28px", T.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS = "32px", T.STICKERS_CONSTANTS_STICKER_DIMENSION = "160px", T.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL = "4px", T.ASPECT_STABLE_IMAGE_CONTAINER_PADDING = "20px", T.USER_PROFILE_THEMED_CONTAINER_USER_PROFILE_THEMED_PADDING = "4px", T.USER_PROFILE_THEMED_CONTAINER_USER_POPOUT_WIDTH = "340px", T.USER_PROFILE_THEMED_CONTAINER_PROFILE_EFFECTS_USER_POPOUT_WIDTH = "280px", T.USER_BANNER_PREMIUM_BANNER_HEIGHT_POPOUT = "120px", T.USER_BANNER_PREMIUM_BANNER_HEIGHT_NO_BANNER_IMAGE_POPOUT = "90px", T.USER_BANNER_BANNER_HEIGHT_POPOUT = "60px", T.USER_BANNER_PREMIUM_BANNER_HEIGHT_PROFILE = "212px", T.USER_BANNER_BANNER_HEIGHT_PROFILE = "106px", T.USER_BANNER_BANNER_HEIGHT_POMELO = "64px", T.USER_BANNER_PREMIUM_BANNER_HEIGHT_SETTINGS = "100px", T.USER_BANNER_BANNER_HEIGHT_PANEL = "120px", T.USER_BANNER_CANCEL_MODAL_HEIGHT = "42px", T.PREMIUM_GUILD_PROGRESS_BAR_PROGRESS_BAR_WIDTH = "24px", T.PREMIUM_GUILD_PROGRESS_BAR_TIER_MARKER_SIZE = "16px", T.ACTIVITY_SHELF_MODAL_MODAL_PADDING = "80px", T.ACTIVITY_SHELF_MODAL_MODAL_WIDTH = "496px", T.ACTIVITY_SHELF_MODAL_MODAL_MIN_WIDTH = "496px", T.ACTIVITY_SHELF_MODAL_MODAL_MAX_WIDTH = "1024px", T.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT = "720px", T.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT = "64px", T.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT = "230px", T.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT = "143px", T.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP = "16px", T.LIVE_INDICATOR_BORDER_RADIUS = "16px", T.GUILD_PRODUCT_DOWNLOAD_MODAL_HEADER_IMAGE_WIDTH = "119px", T.FOLDER_ITEM_GUILD_ICON_MARGIN = "8px", T.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE = "288px", T.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL = "225px", T.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH = "576px", T.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE = "80px", T.GUILD_ROLE_SUBSCRIPTION_CARD_BASIC_INFO_TIER_IMAGE_SIZE_MOBILE = "48px", T.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH = "1024px", T.GUILD_COUNT_SMALL_ICON_SIZE = "16px", T.GUILD_COUNT_LARGE_ICON_SIZE = "20px", T.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN = "12px", T.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE = "196px", T.APPLICATION_SUBSCRIPTION_CARD_LISTING_IMAGE_SIZE = "40px", T.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL = "4px", T.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT = "8px", T.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE = "32px", T.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL = "8px", T.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE = "24px", T.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL = "2px", T.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING = "4px", T.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE = "1px", T.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL = "12px", T.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL = "4px", T.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE = "24px", T.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP = "0", T.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_RIGHT = "0", T.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_BOTTOM = "8px", T.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_SEARCH_RESULTS_PADDING_TOP = "8px", T.EMOJI_PICKER_CONSTANTS_EMOJI_SECTION_MARGIN_BOTTOM = "12px", T.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_HEIGHT = "54px", T.EMOJI_PICKER_CONSTANTS_EMOJI_PREMIUM_UPSELL_MARGIN_TOP = "16px", T.VOICE_WIDGET_TOP_MARGIN = "var(--custom-widget-bar-height) + calc(2 * var(--custom-widget-bar-padding))", T.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING = "8px", T.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE = "48px", T.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN = "8px", T.COLLECTION_GALLERY_MEDIA_BREAKPOINT = "1024px", T.COLLECTION_GALLERY_COLUMN_CARD_HEIGHT = "600px", T.COLLECTION_GALLERY_ROW_CARD_HEIGHT = "283px", T.COLLECTION_LIST_CARD_GAP = "16px", T.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH = "520px", T.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE = "40px", T.ROLE_ICON_UPLOADER_ICON_SIZE = "24px", T.GRADIENT_PROGRESS_NOTCH_WIDTH = "8px", T.GAME_LIST_ROW_MIN_HEIGHT = "62px", T.GAME_LIST_LINKED_TO_GLOW_DURATION = "2000ms", T.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH = "320px", T.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH = "1280px", T.INTERACTION_IFRAME_MODAL_MODAL_MARGIN = "80px", T.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT = "52px", T.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE = "122px";
+            var T, S, N = S
         },
-        473591: function(t, e, n) {
+        522308: function(_, I, E) {
             "use strict";
-            let r, i, u, o, l, a;
-            n.r(e), n.d(e, {
+            E.r(I), E.d(I, {
                 default: function() {
-                    return R
+                    return N
                 }
             });
-            var E = n("446674"),
-                _ = n("913144");
-            let s = !1,
-                c = !1,
-                T = null,
-                d = {},
-                S = {},
-                A = {},
-                I = {};
+            var T = E("666038");
+            class S extends T.default {
+                static createFromServer(_, I) {
+                    return new S({
+                        id: _.id,
+                        subscriptionId: _.subscription_id,
+                        premiumGuildSubscription: null != _.premium_guild_subscription ? {
+                            id: _.premium_guild_subscription.id,
+                            guildId: _.premium_guild_subscription.guild_id
+                        } : null,
+                        canceled: _.canceled,
+                        cooldownEndsAt: _.cooldown_ends_at,
+                        subscription: I
+                    })
+                }
+                isOnCooldown() {
+                    return null != this.cooldownEndsAt && new Date(this.cooldownEndsAt).getTime() >= Date.now()
+                }
+                isAvailable() {
+                    return null == this.premiumGuildSubscription && !this.isOnCooldown()
+                }
+                constructor(_) {
+                    super(), this.id = _.id, this.subscriptionId = _.subscriptionId, this.premiumGuildSubscription = _.premiumGuildSubscription, this.canceled = _.canceled, this.cooldownEndsAt = _.cooldownEndsAt, this.subscription = _.subscription
+                }
+            }
+            var N = S
+        },
+        778588: function(_, I, E) {
+            "use strict";
+            E.r(I), E.d(I, {
+                default: function() {
+                    return O
+                }
+            }), E("222007");
+            var T = E("446674"),
+                S = E("913144");
+            let N = [];
 
-            function f() {
-                r = void 0, i = void 0, u = void 0, o = void 0, l = void 0, T = null
+            function R() {
+                N = []
             }
-            class C extends E.default.Store {
-                getSettings(t) {
-                    if (null != t) return A[t]
+            class A extends T.default.Store {
+                hasLayers() {
+                    return N.length > 0
                 }
-                getProfile(t) {
-                    return null == t ? null : d[t]
-                }
-                getGeneratedPersonality() {
-                    return a
-                }
-                getPendingPersonality() {
-                    return r
-                }
-                getPendingNick() {
-                    return i
-                }
-                getErrors() {
-                    return T
-                }
-                hasPendingChanges() {
-                    return void 0 !== r || void 0 !== i || void 0 !== u || void 0 !== o || void 0 !== l
-                }
-                getPendingUpdates() {
-                    return {
-                        pendingAvatar: u,
-                        pendingNick: i,
-                        pendingPersonality: r,
-                        pendingBanner: o,
-                        pendingThemeColors: l
-                    }
-                }
-                isSavingSettings() {
-                    return s
-                }
-                isFetchingSettings(t) {
-                    var e;
-                    return null === (e = I[t]) || void 0 === e ? void 0 : e.isFetching
-                }
-                shouldFetchSettings(t) {
-                    var e, n;
-                    let r = null !== (e = I[t]) && void 0 !== e ? e : {
-                            isFetching: !1
-                        },
-                        i = Date.now(),
-                        u = i - (null !== (n = r.lastFetchTimestampMs) && void 0 !== n ? n : 0) > 36e5;
-                    return !(null == r ? void 0 : r.isFetching) && u
-                }
-                isFetchingProfile(t) {
-                    var e;
-                    return null === (e = S[t]) || void 0 === e ? void 0 : e.isFetching
-                }
-                isEditingClydeProfile() {
-                    return c
+                getLayers() {
+                    return N
                 }
             }
-            C.displayName = "ClydeStore";
-            var R = new C(_.default, {
-                CLYDE_GUILD_SETTINGS_FETCH_START: function(t) {
+            A.displayName = "LayerStore";
+            var O = new A(S.default, {
+                LAYER_PUSH: function(_) {
                     let {
-                        guildId: e
-                    } = t, n = I[e];
-                    I[e] = {
-                        isFetching: !0,
-                        lastFetchTimestampMs: null == n ? void 0 : n.lastFetchTimestampMs
-                    }
+                        component: I
+                    } = _;
+                    if (N.indexOf(I) >= 0) return !1;
+                    N = [...N, I]
                 },
-                CLYDE_GUILD_SETTINGS_FETCH_SUCCESS: function(t) {
-                    let {
-                        guildId: e,
-                        settings: n
-                    } = t;
-                    I[e] = {
-                        isFetching: !1,
-                        lastFetchTimestampMs: Date.now()
-                    }, A[e] = n
+                LAYER_POP: function() {
+                    if (0 === N.length) return !1;
+                    N = N.slice(0, -1)
                 },
-                CLYDE_GUILD_SETTINGS_FETCH_FAIL: function(t) {
-                    let {
-                        guildId: e
-                    } = t, n = I[e];
-                    I[e] = {
-                        isFetching: !1,
-                        lastFetchTimestampMs: null == n ? void 0 : n.lastFetchTimestampMs
-                    }
-                },
-                CLYDE_SET_PENDING_PERSONALITY: function(t) {
-                    let {
-                        personality: e,
-                        isGenerated: n
-                    } = t;
-                    r = e, n && (a = e)
-                },
-                CLYDE_SET_PENDING_NICK: function(t) {
-                    let {
-                        nick: e
-                    } = t;
-                    i = e
-                },
-                CLYDE_SET_PENDING_AVATAR: function(t) {
-                    let {
-                        avatar: e
-                    } = t;
-                    u = e
-                },
-                CLYDE_SET_PENDING_BANNER: function(t) {
-                    let {
-                        banner: e
-                    } = t;
-                    o = e
-                },
-                CLYDE_SET_PENDING_THEME_COLORS: function(t) {
-                    let {
-                        themeColors: e
-                    } = t;
-                    l = e
-                },
-                CLYDE_GUILD_SETTINGS_SAVE_START: function() {
-                    T = null, s = !0
-                },
-                CLYDE_GUILD_SETTINGS_SAVE_SUCCESS: function(t) {
-                    let {
-                        settings: e
-                    } = t;
-                    s = !1, A[e.guild_id] = e, f()
-                },
-                CLYDE_GUILD_SETTINGS_SAVE_FAIL: function(t) {
-                    s = !1, T = t.errors
-                },
-                CLYDE_RESET_PENDING_CHANGES: f,
-                CLYDE_PROFILE_FETCH_START: function(t) {
-                    let {
-                        clydeProfileId: e
-                    } = t, n = S[e];
-                    S[e] = {
-                        isFetching: !0,
-                        lastFetchTimestampMs: null == n ? void 0 : n.lastFetchTimestampMs
-                    }
-                },
-                CLYDE_PROFILE_FETCH_SUCCESS: function(t) {
-                    let {
-                        profile: e
-                    } = t;
-                    S[e.clyde_profile_id] = {
-                        isFetching: !1,
-                        lastFetchTimestampMs: Date.now()
-                    }, d[e.clyde_profile_id] = e
-                },
-                CLYDE_PROFILE_FETCH_FAIL: function(t) {
-                    let {
-                        clydeProfileId: e
-                    } = t, n = S[e];
-                    S[e] = {
-                        isFetching: !1,
-                        lastFetchTimestampMs: null == n ? void 0 : n.lastFetchTimestampMs
-                    }
-                },
-                CLYDE_PROFILE_CREATE_SUCCESS: function(t) {
-                    let {
-                        profile: e
-                    } = t;
-                    d[e.clyde_profile_id] = e
-                },
-                CLYDE_PROFILE_EDITING_START: function() {
-                    c = !0
-                },
-                CLYDE_PROFILE_EDITING_END: function() {
-                    c = !1
-                }
+                LAYER_POP_ALL: R,
+                LOGOUT: R,
+                NOTIFICATION_CLICK: R
             })
         },
-        853987: function(t, e, n) {
+        83900: function(_, I, E) {
             "use strict";
-            let r, i;
-            n.r(e), n.d(e, {
+            E.r(I), E.d(I, {
                 default: function() {
-                    return R
-                }
-            }), n("222007"), n("808653"), n("424973");
-            var u = n("917351"),
-                o = n("635058"),
-                l = n("446674"),
-                a = n("913144"),
-                E = n("491232");
-            let _ = new Map,
-                s = new Map,
-                c = {},
-                T = new Map,
-                d = _,
-                S = s,
-                A = c,
-                I = T,
-                f = !1;
-            class C extends l.default.Store {
-                get isFetching() {
-                    return f
-                }
-                get error() {
-                    return r
-                }
-                get lastFetched() {
-                    return i
-                }
-                get categories() {
-                    return d
-                }
-                get products() {
-                    return S
-                }
-                get categorySkuIdsByProductSkuId() {
                     return A
                 }
-                get productsByItemTypeAndCategory() {
-                    return I
-                }
-                getCategory(t) {
-                    return null != t ? d.get(t) : void 0
-                }
-                getProduct(t) {
-                    return null != t ? S.get(t) : void 0
-                }
-                getCategoryForProduct(t) {
-                    return null != t ? this.getCategory(A[t]) : void 0
-                }
-                getProductsByItemType(t) {
-                    return null != t && o.CollectiblesCategorySkuIdSets.ALL.has(t) ? I.get(t) : void 0
-                }
-            }
-            C.displayName = "CollectiblesCategoryStore";
-            var R = new C(a.default, {
-                COLLECTIBLES_CATEGORIES_FETCH: t => {
-                    f = !0, r = void 0
-                },
-                COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: t => {
-                    0 === t.categories.length ? (d = _, S = s, A = c, I = T) : !(0, u.isEqual)([...d.values()], t.categories) && (d = new Map(t.categories.map(t => [t.skuId, t])), S = new Map((0, E.getProductsFromCategories)(d).map(t => [t.skuId, t])), A = t.categories.reduce((t, e) => (e.products.forEach(n => {
-                        t[n.skuId] = e.skuId
-                    }), t), {}), t.categories.forEach(t => {
-                        let e = t.products.reduce((t, e) => {
-                            if (e.items.length > 0) {
-                                var n;
-                                let r = e.items[0].type;
-                                t[r] = null !== (n = t[r]) && void 0 !== n ? n : [], t[r].push(e)
-                            }
-                            return t
-                        }, {});
-                        I.set(t.skuId, e)
-                    })), i = Date.now(), f = !1, r = void 0
-                },
-                COLLECTIBLES_CATEGORIES_FETCH_FAILURE: t => {
+            });
+            var T = E("37983");
+            E("884691");
+            var S = E("469563"),
+                N = E("753809"),
+                R = E("75196"),
+                A = (0, S.replaceIcon)(function(_) {
                     let {
-                        error: e
-                    } = t;
-                    d = _, S = s, A = c, I = T, f = !1, r = e
-                },
-                COLLECTIBLES_PRODUCT_FETCH: t => {
-                    f = !0, r = void 0
-                },
-                COLLECTIBLES_PRODUCT_FETCH_SUCCESS: t => {
-                    S.set(t.product.skuId, t.product), f = !1, r = void 0
-                },
-                COLLECTIBLES_PRODUCT_FETCH_FAILURE: t => {
-                    let {
-                        error: e
-                    } = t;
-                    f = !1, r = e
-                },
-                LOGOUT: t => {
-                    d = _, S = s, A = c, I = T, i = void 0, f = !1, r = void 0
-                }
-            })
-        },
-        491232: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                isPremiumCollectiblesCategory: function() {
-                    return s
-                },
-                isPremiumCollectiblesPurchase: function() {
-                    return c
-                },
-                getFormattedPriceForCollectiblesProduct: function() {
-                    return T
-                },
-                extractPriceByPurchaseTypes: function() {
-                    return d
-                },
-                getProductsFromCategories: function() {
-                    return S
-                },
-                getAvatarDecorationsFromPurchases: function() {
-                    return f
-                },
-                getAvatarDecorationsFromCategories: function() {
-                    return C
-                },
-                getCollectiblesAssetURL: function() {
-                    return R
-                },
-                getProfileEffectsFromPurchases: function() {
-                    return N
-                },
-                getProfileEffectsFromCategories: function() {
-                    return O
-                },
-                groupProfileEffects: function() {
-                    return v
-                }
-            }), n("222007");
-            var r = n("917351"),
-                i = n("635058"),
-                u = n("265586"),
-                o = n("407063"),
-                l = n("153160"),
-                a = n("730297"),
-                E = n("806410"),
-                _ = n("49111");
-            let s = t => (null == t ? void 0 : t.skuId) === i.CollectiblesCategorySkuId.DISXCORE,
-                c = t => (null == t ? void 0 : t.purchaseType) === _.EntitlementTypes.PREMIUM_PURCHASE,
-                T = (t, e) => {
-                    let n = d(t, e ? _.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2 : _.PriceSetAssignmentPurchaseTypes.DEFAULT);
-                    return null == n ? "" : (0, l.formatPrice)(null == n ? void 0 : n.amount, null == n ? void 0 : n.currency)
-                },
-                d = (t, e) => {
-                    var n, r, i;
-                    let u = null !== (i = t.prices[e]) && void 0 !== i ? i : null;
-                    return null == u ? null : null === (r = u.countryPrices) || void 0 === r ? void 0 : null === (n = r.prices) || void 0 === n ? void 0 : n[0]
-                },
-                S = t => {
-                    let e = (0, r.flatMap)([...t.values()], "products");
-                    return (0, r.uniqBy)(e, "storeListingId")
-                },
-                A = (t, e) => {
-                    if (e === u.CollectiblesItemType.AVATAR_DECORATION) {
-                        let e = (0, r.flatMap)([...t.values()], "items").filter(a.isAvatarDecorationRecord);
-                        return (0, r.uniqBy)(e, "id")
-                    }
-                    if (e === u.CollectiblesItemType.PROFILE_EFFECT) {
-                        let e = (0, r.flatMap)([...t.values()], "items").filter(E.isProfileEffectRecord);
-                        return (0, r.uniqBy)(e, "id")
-                    }
-                },
-                I = (t, e) => {
-                    let n = S(t);
-                    if (e === u.CollectiblesItemType.AVATAR_DECORATION) {
-                        let t = (0, r.flatMap)(n, "items").filter(a.isAvatarDecorationRecord);
-                        return (0, r.uniqBy)(t, "id")
-                    }
-                    if (e === u.CollectiblesItemType.PROFILE_EFFECT) {
-                        let t = (0, r.flatMap)(n, "items").filter(E.isProfileEffectRecord);
-                        return (0, r.uniqBy)(t, "id")
-                    }
-                },
-                f = t => A(t, u.CollectiblesItemType.AVATAR_DECORATION),
-                C = t => I(t, u.CollectiblesItemType.AVATAR_DECORATION),
-                R = (t, e) => {
-                    var n;
-                    let {
-                        CDN_HOST: r,
-                        API_ENDPOINT: i
-                    } = window.GLOBAL_ENV, u = (0, o.getBestMediaProxySize)(e.size * (0, o.getDevicePixelRatio)()), l = null !== (n = null == e ? void 0 : e.format) && void 0 !== n ? n : "png";
-                    if (null != r) return "".concat(location.protocol, "//").concat(r, "/app-assets/").concat(_.COLLECTIBLES_APPLICATION_ID, "/").concat(t, ".").concat(l, "?size=").concat(u);
-                    let a = _.Endpoints.APPLICATION_ASSET(_.COLLECTIBLES_APPLICATION_ID, t, l);
-                    return "".concat(location.protocol).concat(i).concat(a, "?size=").concat(u)
-                },
-                N = t => A(t, u.CollectiblesItemType.PROFILE_EFFECT),
-                O = t => I(t, u.CollectiblesItemType.PROFILE_EFFECT),
-                v = (t, e) => {
-                    let n = N(e),
-                        r = O(t).filter(t => {
-                            let {
-                                id: e
-                            } = t;
-                            return !n.some(t => t.id === e)
-                        });
-                    return {
-                        purchased: n,
-                        shopPreviews: r
-                    }
-                }
-        },
-        170313: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return c
-                }
-            }), n("222007"), n("794252");
-            var r = n("884691"),
-                i = n("506838"),
-                u = n("265586"),
-                o = n("65597"),
-                l = n("599110"),
-                a = n("853987"),
-                E = n("491232"),
-                _ = n("49111"),
-                s = n("646718"),
-                c = t => {
-                    let [e, n, c] = (0, o.useStateFromStoresArray)([a.default], () => [a.default.categories, a.default.products, a.default.categorySkuIdsByProductSkuId]);
-                    return (0, r.useCallback)(r => {
-                        let {
-                            type: o,
-                            skuId: a
-                        } = r, T = e.get(c[a]), d = n.get(a);
-                        l.default.track(_.AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, {
-                            feature_name: (0, i.match)(o).with(u.CollectiblesItemType.AVATAR_DECORATION, () => s.AnalyticsPremiumFeatureNames.AVATAR_DECORATION).otherwise(() => void 0),
-                            feature_tier: (0, E.isPremiumCollectiblesCategory)(T) ? s.AnalyticsPremiumFeatureTiers.FREE : s.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD,
-                            feature_selection: null == d ? void 0 : d.name,
-                            location_stack: t
+                        width: I = 24,
+                        height: E = 24,
+                        color: S = "currentColor",
+                        foreground: N,
+                        ...A
+                    } = _;
+                    return (0, T.jsx)("svg", {
+                        ...(0, R.default)(A),
+                        width: I,
+                        height: E,
+                        viewBox: "0 0 24 24",
+                        children: (0, T.jsxs)("g", {
+                            fill: "none",
+                            fillRule: "evenodd",
+                            children: [(0, T.jsx)("path", {
+                                className: N,
+                                fill: S,
+                                d: "M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.982 2.982 0 0 0 0-4.24 2.982 2.982 0 0 0-4.24 0l-3.53 3.53a2.982 2.982 0 0 0 0 4.24zm2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.982 2.982 0 0 0 0 4.24 2.982 2.982 0 0 0 4.24 0l3.53-3.53a2.982 2.982 0 0 0 0-4.24.973.973 0 0 1 0-1.42z"
+                            }), (0, T.jsx)("rect", {
+                                width: "24",
+                                height: "24"
+                            })]
                         })
-                    }, [e, n, c, t])
-                }
-        },
-        730297: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                isAvatarDecorationRecord: function() {
-                    return o
-                },
-                default: function() {
-                    return r
-                }
-            });
-            var r, i = n("265586"),
-                u = n("200410");
-            let o = t => t instanceof r;
-            r = class t extends u.default {
-                static fromServer(e) {
-                    return new t({
-                        ...super.fromServer(e),
-                        ...e
                     })
-                }
-                constructor(t) {
-                    super(t), this.type = i.CollectiblesItemType.AVATAR_DECORATION, this.asset = t.asset, this.label = t.label
-                }
-            }
-        },
-        200410: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return r
-                }
-            });
-            var r, i = n("666038");
-            r = class t extends i.default {
-                static fromServer(e) {
-                    let {
-                        sku_id: n,
-                        ...r
-                    } = e;
-                    return new t({
-                        ...r,
-                        skuId: n
-                    })
-                }
-                constructor(t) {
-                    super(), this.id = t.id, this.skuId = t.skuId
-                }
-            }
-        },
-        806410: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                isProfileEffectRecord: function() {
-                    return o
-                },
-                default: function() {
-                    return r
-                }
-            });
-            var r, i = n("265586"),
-                u = n("200410");
-            let o = t => t instanceof r;
-            r = class t extends u.default {
-                static fromServer(e) {
-                    return new t({
-                        ...super.fromServer(e),
-                        ...e
-                    })
-                }
-                constructor(t) {
-                    super(t), this.type = i.CollectiblesItemType.PROFILE_EFFECT
-                }
-            }
-        },
-        75015: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                UploadTypes: function() {
-                    return u
-                },
-                EDITING_CONTAINER_WIDTH: function() {
-                    return a
-                },
-                USER_BANNER_MAX_WIDTH: function() {
-                    return E
-                },
-                USER_BANNER_MAX_HEIGHT: function() {
-                    return _
-                },
-                GUILD_BANNER_MAX_WIDTH: function() {
-                    return s
-                },
-                GUILD_BANNER_MAX_HEIGHT: function() {
-                    return c
-                },
-                SCHEDULED_EVENT_IMAGE_MAX_WIDTH: function() {
-                    return T
-                },
-                SCHEDULED_EVENT_IMAGE_MAX_HEIGHT: function() {
-                    return d
-                },
-                HOME_HEADER_MAX_WIDTH: function() {
-                    return S
-                },
-                HOME_HEADER_MAX_HEIGHT: function() {
-                    return A
-                },
-                BANNER_ASPECT_RATIO: function() {
-                    return I
-                },
-                GUILD_BANNER_ASPECT_RATIO: function() {
-                    return f
-                },
-                SCHEDULED_EVENT_IMAGE_ASPECT_RATIO: function() {
-                    return C
-                },
-                HOME_HEADER_ASPECT_RATIO: function() {
-                    return R
-                },
-                MAX_BANNER_OVERLAY_HEIGHT: function() {
-                    return N
-                },
-                MAX_GUILD_BANNER_OVERLAY_HEIGHT: function() {
-                    return O
-                },
-                MAX_SCHEDULED_EVENT_IMAGE_OVERLAY_HEIGHT: function() {
-                    return v
-                },
-                MAX_HOME_HEADER_OVERLAY_HEIGHT: function() {
-                    return g
-                },
-                VIDEO_BACKGROUND_ASPECT_RATIO: function() {
-                    return D
-                },
-                MAX_VIDEO_OVERLAY_HEIGHT: function() {
-                    return L
-                },
-                MessageTypes: function() {
-                    return o
-                }
-            });
-            var r, i, u, o, l = n("917219");
-            (r = u || (u = {}))[r.AVATAR = 0] = "AVATAR", r[r.BANNER = 1] = "BANNER", r[r.GUILD_BANNER = 2] = "GUILD_BANNER", r[r.VIDEO_BACKGROUND = 3] = "VIDEO_BACKGROUND", r[r.SCHEDULED_EVENT_IMAGE = 4] = "SCHEDULED_EVENT_IMAGE", r[r.HOME_HEADER = 5] = "HOME_HEADER", r[r.AVATAR_DECORATION = 6] = "AVATAR_DECORATION";
-            let a = 568,
-                E = 2400,
-                _ = 848,
-                s = 2400,
-                c = 1350,
-                T = 2400,
-                d = 960,
-                S = 2400,
-                A = 600,
-                I = 17 / 6,
-                f = 16 / 9,
-                C = 2.5,
-                R = 4,
-                N = a / I,
-                O = a / f,
-                v = a / C,
-                g = a / R,
-                D = l.BACKGROUND_REPLACEMENT_SIZE.width / l.BACKGROUND_REPLACEMENT_SIZE.height,
-                L = a / D;
-            (i = o || (o = {}))[i.CROP_GIF_START = 0] = "CROP_GIF_START", i[i.CROP_GIF_COMPLETE = 1] = "CROP_GIF_COMPLETE", i[i.CROP_GIF_ERROR = 2] = "CROP_GIF_ERROR"
-        },
-        737403: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                maybeOpenProfilePreviewModal: function() {
-                    return i
-                }
-            });
-            var r = n("913144");
-
-            function i(t) {
-                let {
-                    imageSrc: e,
-                    file: n,
-                    uploadType: i,
-                    guildId: u,
-                    isTryItOutFlow: o = !1
-                } = t;
-                r.default.dispatch({
-                    type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL",
-                    imageSrc: e,
-                    file: n,
-                    uploadType: i,
-                    guildId: u,
-                    isTryItOutFlow: o
-                })
-            }
-        },
-        453252: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                MAX_IMAGE_UPLOAD_FILESIZE_BYTES: function() {
-                    return r
-                }
-            });
-            let r = 10485760
-        },
-        771325: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                handleOpenSelectImageModal: function() {
-                    return d
-                },
-                showFileSizeErrorModal: function() {
-                    return S
-                },
-                getPreviewAvatar: function() {
-                    return A
-                },
-                getPreviewNickname: function() {
-                    return I
-                },
-                getPreviewDisplayName: function() {
-                    return f
-                },
-                isColorDark: function() {
-                    return C
-                }
-            });
-            var r = n("37983");
-            n("884691");
-            var i = n("509043"),
-                u = n("77078"),
-                o = n("336522"),
-                l = n("473591"),
-                a = n("315102"),
-                E = n("254490"),
-                _ = n("737403"),
-                s = n("453252"),
-                c = n("75015"),
-                T = n("782340");
-
-            function d(t, e, i, o) {
-                (0, u.openModalLazy)(async () => {
-                    let {
-                        default: u
-                    } = await n.el("420333").then(n.bind(n, "420333")), a = l.default.isEditingClydeProfile();
-                    return n => (0, r.jsx)(u, {
-                        filters: o,
-                        maxFileSizeBytes: s.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
-                        imageSpecifications: t === c.UploadTypes.BANNER && T.default.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
-                        onComplete: (n, r) => (0, _.maybeOpenProfilePreviewModal)({
-                            imageSrc: n,
-                            file: r,
-                            uploadType: t,
-                            guildId: e,
-                            isTryItOutFlow: i
-                        }),
-                        uploadType: t,
-                        showUpsellHeader: !a,
-                        ...n
-                    })
-                })
-            }
-
-            function S() {
-                (0, o.openUploadError)({
-                    title: T.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-                    help: T.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-                        maxSize: (0, E.sizeString)(s.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
-                    })
-                })
-            }
-
-            function A(t, e, n) {
-                let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-                if (null != t) return t;
-                let {
-                    size: i = 80,
-                    canAnimate: u = !0
-                } = r, o = null === t;
-                return o && null == e ? a.default.getDefaultAvatarURL(n.id, n.discriminator) : o || (null == e ? void 0 : e.avatar) == null ? n.getAvatarURL(void 0, i, u) : n.getAvatarURL(null == e ? void 0 : e.guildId, i, u)
-            }
-
-            function I(t, e) {
-                return "" === t ? null : null != t ? t : e
-            }
-
-            function f(t, e) {
-                return "" === t ? null : null != t ? t : e
-            }
-
-            function C(t) {
-                let e = null != t ? (0, i.getDarkness)(t) : 1;
-                return e > .25
-            }
-        },
-        91653: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return _
-                }
-            });
-            var r = n("884691"),
-                i = n("65597"),
-                u = n("170313"),
-                o = n("906932"),
-                l = n("790618"),
-                a = n("697218"),
-                E = n("783142"),
-                _ = t => {
-                    let {
-                        isTryItOut: e,
-                        analyticsLocations: n
-                    } = t, _ = (0, i.default)([a.default], () => a.default.getCurrentUser()), s = (0, u.default)(n), {
-                        pendingAvatar: c,
-                        pendingAvatarDecoration: T
-                    } = (0, i.useStateFromStoresObject)([l.default], () => ({
-                        pendingAvatar: e ? l.default.getTryItOutAvatar() : l.default.getPendingAvatar(),
-                        pendingAvatarDecoration: e ? l.default.getTryItOutAvatarDecoration() : l.default.getPendingAvatarDecoration()
-                    })), d = (0, r.useCallback)(t => (0, o.setNewPendingAvatar)(t, null == _ ? void 0 : _.avatar), [null == _ ? void 0 : _.avatar]), S = (0, r.useCallback)(t => {
-                        (0, o.setNewPendingAvatarDecoration)(t, null == _ ? void 0 : _.avatarDecoration), null != t && s(t)
-                    }, [null == _ ? void 0 : _.avatarDecoration, s]);
-                    return {
-                        pendingAvatar: c,
-                        pendingAvatarDecoration: T,
-                        setPendingAvatar: e ? E.setTryItOutAvatar : d,
-                        setPendingAvatarDecoration: e ? E.setTryItOutAvatarDecoration : S
-                    }
-                }
-        },
-        106435: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                default: function() {
-                    return a
-                }
-            });
-            var r = n("884691"),
-                i = n("77078"),
-                u = n("606292"),
-                o = n("688318"),
-                l = n("19287");
-
-            function a(t) {
-                let {
-                    user: e,
-                    guildId: n,
-                    size: a,
-                    showPending: E = !1,
-                    showTryItOut: _ = !1,
-                    animateOnHover: s = !1,
-                    avatarDecorationOverride: c,
-                    avatarOverride: T
-                } = t, {
-                    avatarSrc: d,
-                    isAvatarAnimating: S,
-                    eventHandlers: A
-                } = (0, l.useAnimatedAvatarSrc)({
-                    user: e,
-                    guildId: n,
-                    size: (0, i.getAvatarSize)(a),
-                    showPending: E,
-                    animateOnHover: s,
-                    avatarOverride: T
-                }), {
-                    avatarPlaceholderSrc: I,
-                    avatarDecorationSrc: f,
-                    eventHandlers: C
-                } = (0, o.default)({
-                    user: e,
-                    size: (0, u.getDecorationSizeForAvatarSize)(a),
-                    showPending: E,
-                    animateOnHover: s,
-                    avatarDecorationOverride: c,
-                    showTryItOut: _
-                }), R = r.useCallback(() => {
-                    A.onMouseEnter(), C.onMouseEnter()
-                }, [A, C]), N = r.useCallback(() => {
-                    A.onMouseLeave(), C.onMouseLeave()
-                }, [A, C]);
-                return {
-                    avatarPlaceholderSrc: I,
-                    avatarDecorationSrc: f,
-                    avatarSrc: d,
-                    isAnimating: S,
-                    eventHandlers: {
-                        onMouseEnter: R,
-                        onMouseLeave: N
-                    }
-                }
-            }
-        },
-        19287: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                useAnimatedAvatarSrc: function() {
-                    return _
-                }
-            }), n("222007");
-            var r = n("884691"),
-                i = n("446674"),
-                u = n("206230"),
-                o = n("771325"),
-                l = n("26989"),
-                a = n("471671"),
-                E = n("91653");
-
-            function _(t) {
-                let {
-                    user: e,
-                    guildId: n,
-                    size: _,
-                    showPending: s = !1,
-                    animateOnHover: c = !1,
-                    avatarOverride: T
-                } = t, [d, S] = r.useState(!1), A = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion), I = (0, i.useStateFromStores)([a.default], () => a.default.isFocused()), f = I && (d || !A && !c), {
-                    pendingAvatar: C
-                } = (0, E.default)({}), R = (0, i.useStateFromStores)([l.default], () => null != n && null != e ? l.default.getMember(n, e.id) : null), N = r.useMemo(() => null != e ? (0, o.getPreviewAvatar)(s ? null != T ? T : C : void 0, R, e, {
-                    canAnimate: f,
-                    size: _
-                }) : void 0, [s, C, R, e, f, _, T]), O = r.useCallback(() => S(!0), []), v = r.useCallback(() => S(!1), []);
-                return {
-                    avatarSrc: N,
-                    isAvatarAnimating: f,
-                    eventHandlers: {
-                        onMouseEnter: O,
-                        onMouseLeave: v
-                    }
-                }
-            }
-        },
-        790618: function(t, e, n) {
-            "use strict";
-            let r, i, u, o, l, a, E, _, s, c, T, d, S, A;
-            n.r(e), n.d(e, {
-                default: function() {
-                    return m
-                }
-            });
-            var I = n("446674"),
-                f = n("913144"),
-                C = n("49111");
-            let R = C.FormStates.CLOSED,
-                N = {},
-                O = !1;
-
-            function v() {
-                R = C.FormStates.OPEN, N = {}
-            }
-
-            function g() {
-                R = C.FormStates.CLOSED, N = {}
-            }
-
-            function D() {
-                L(), P(), N = {}
-            }
-
-            function L() {
-                r = void 0, i = void 0, u = void 0, o = void 0
-            }
-
-            function P() {
-                l = void 0, a = void 0, E = void 0, _ = void 0, s = void 0, o = void 0
-            }
-
-            function U() {
-                T = void 0, d = void 0, S = void 0, A = void 0, c = void 0
-            }
-            class F extends I.default.Store {
-                getFormState() {
-                    return R
-                }
-                getErrors() {
-                    return N
-                }
-                showNotice() {
-                    return void 0 !== r || void 0 !== l || void 0 !== a || void 0 !== E || void 0 !== _ || void 0 !== s || void 0 !== u || void 0 !== o || void 0 !== i
-                }
-                getPendingAvatar() {
-                    return r
-                }
-                getPendingGlobalName() {
-                    return i
-                }
-                getPendingBanner() {
-                    return l
-                }
-                getPendingBio() {
-                    return a
-                }
-                getPendingPronouns() {
-                    return E
-                }
-                getPendingAccentColor() {
-                    return _
-                }
-                getPendingThemeColors() {
-                    return s
-                }
-                getPendingAvatarDecoration() {
-                    return u
-                }
-                getPendingProfileEffectID() {
-                    return o
-                }
-                getAllPending() {
-                    return {
-                        pendingAvatar: r,
-                        pendingBanner: l,
-                        pendingBio: a,
-                        pendingPronouns: E,
-                        pendingAccentColor: _,
-                        pendingThemeColors: s,
-                        pendingAvatarDecoration: u,
-                        pendingProfileEffectID: o,
-                        pendingGlobalName: i
-                    }
-                }
-                getTryItOutThemeColors() {
-                    return c
-                }
-                getTryItOutAvatar() {
-                    return T
-                }
-                getTryItOutAvatarDecoration() {
-                    return d
-                }
-                getTryItOutProfileEffectID() {
-                    return S
-                }
-                getTryItOutBanner() {
-                    return A
-                }
-                getAllTryItOut() {
-                    return {
-                        tryItOutThemeColors: c,
-                        tryItOutAvatar: T,
-                        tryItOutAvatarDecoration: d,
-                        tryItOutProfileEffectID: S,
-                        tryItOutBanner: A
-                    }
-                }
-                getIsDisableSubmit() {
-                    return O
-                }
-            }
-            F.displayName = "UserSettingsAccountStore";
-            var m = new F(f.default, {
-                USER_SETTINGS_ACCOUNT_INIT: v,
-                USER_SETTINGS_MODAL_INIT: v,
-                USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: v,
-                USER_SETTINGS_MODAL_SET_SECTION: function(t) {
-                    let {
-                        section: e
-                    } = t;
-                    return e === C.UserSettingsSections.ACCOUNT && v()
-                },
-                USER_SETTINGS_ACCOUNT_CLOSE: g,
-                USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function() {
-                    D(), U(), g()
-                },
-                USER_SETTINGS_ACCOUNT_SUBMIT: function() {
-                    R = C.FormStates.SUBMITTING, N = {}
-                },
-                USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: function(t) {
-                    var e;
-                    if (R !== C.FormStates.SUBMITTING) return !1;
-                    R = C.FormStates.OPEN, N = null !== (e = t.errors) && void 0 !== e ? e : {}
-                },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: function(t) {
-                    let {
-                        avatar: e
-                    } = t;
-                    r = e, T = void 0
-                },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: function(t) {
-                    let {
-                        globalName: e
-                    } = t;
-                    i = e
-                },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: function(t) {
-                    let {
-                        avatarDecoration: e
-                    } = t;
-                    u = e
-                },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: function(t) {
-                    let {
-                        profileEffectID: e
-                    } = t;
-                    o = e
-                },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: function(t) {
-                    let {
-                        banner: e
-                    } = t;
-                    l = e
-                },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: function(t) {
-                    let {
-                        bio: e
-                    } = t;
-                    a = e
-                },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS: function(t) {
-                    let {
-                        pronouns: e
-                    } = t;
-                    E = e
-                },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR: function(t) {
-                    let {
-                        color: e
-                    } = t;
-                    _ = e
-                },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS: function(t) {
-                    let {
-                        themeColors: e
-                    } = t;
-                    s = e
-                },
-                USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: function(t) {
-                    let {
-                        avatar: e
-                    } = t;
-                    T = e
-                },
-                USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION: function(t) {
-                    let {
-                        avatarDecoration: e
-                    } = t;
-                    d = e
-                },
-                USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID: function(t) {
-                    let {
-                        profileEffectID: e
-                    } = t;
-                    S = e
-                },
-                USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: function(t) {
-                    let {
-                        banner: e
-                    } = t;
-                    A = e
-                },
-                USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS: function(t) {
-                    let {
-                        themeColors: e
-                    } = t;
-                    c = e
-                },
-                USER_SETTINGS_CLEAR_ERRORS: function() {
-                    N = {}
-                },
-                USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: L,
-                USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: P,
-                USER_SETTINGS_RESET_ALL_PENDING: D,
-                USER_SETTINGS_RESET_ALL_TRY_IT_OUT: U,
-                USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: function() {
-                    u = void 0
-                },
-                LOGOUT: function() {
-                    r = void 0
-                },
-                USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT: function(t) {
-                    let {
-                        disable: e
-                    } = t;
-                    O = e
-                }
-            })
-        },
-        635058: function(t, e, n) {
-            "use strict";
-            var r, i;
-            n.r(e), n.d(e, {
-                CollectiblesCategorySkuId: function() {
-                    return r
-                },
-                CollectiblesCategorySkuIdSets: function() {
-                    return u
-                }
-            }), n("222007"), (i = r || (r = {})).FANTASY = "1144003461608906824", i.ANIME = "1144302037593497701", i.BREAKFAST = "1144054000099012659", i.DISXCORE = "1144058340327047249", i.HALLOWEEN = "1157410718711304313", i.FALL = "1157406994873991284";
-            let u = {
-                ALL: new Set(["1144003461608906824", "1144054000099012659", "1144058340327047249", "1144302037593497701", "1157406994873991284", "1157410718711304313"])
-            }
-        },
-        265586: function(t, e, n) {
-            "use strict";
-            var r, i;
-            n.r(e), n.d(e, {
-                CollectiblesItemType: function() {
-                    return r
-                }
-            }), (i = r || (r = {}))[i.AVATAR_DECORATION = 0] = "AVATAR_DECORATION", i[i.PROFILE_EFFECT = 1] = "PROFILE_EFFECT"
+                }, N.LinkIcon)
         }
     }
 ]);

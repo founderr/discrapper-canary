@@ -5727,7 +5727,7 @@
             "use strict";
             i.r(t), i.d(t, {
                 default: function() {
-                    return A
+                    return N
                 }
             }), i("222007");
             var n = i("37983"),
@@ -5737,42 +5737,41 @@
                 r = i("301165"),
                 o = i("446674"),
                 u = i("151426"),
-                c = i("906069"),
-                d = i("856567"),
-                f = i("77078"),
-                E = i("206230"),
-                m = i("509802"),
-                I = i("697218"),
-                p = i("181114"),
-                g = i("216422"),
-                _ = i("719923"),
-                S = i("994428"),
-                C = i("782340"),
-                h = i("985330");
-            let T = {
+                c = i("856567"),
+                d = i("77078"),
+                f = i("206230"),
+                E = i("509802"),
+                m = i("697218"),
+                I = i("181114"),
+                p = i("216422"),
+                g = i("719923"),
+                _ = i("994428"),
+                S = i("782340"),
+                C = i("985330");
+            let h = {
                 tension: 750,
                 mass: 2.5,
                 friction: 70
             };
 
-            function N(e) {
+            function T(e) {
                 let {
                     tooltipText: t,
                     headingText: i,
                     textColor: s
                 } = e, l = null != i;
                 return (0, n.jsxs)("span", {
-                    className: l ? void 0 : h.tooltipContainer,
+                    className: l ? void 0 : C.tooltipContainer,
                     children: [(0, n.jsxs)("span", {
-                        className: h.tooltipContainer,
-                        children: [(0, n.jsx)(g.default, {
-                            className: h.nitroWheel
-                        }), l ? (0, n.jsx)(f.Heading, {
+                        className: C.tooltipContainer,
+                        children: [(0, n.jsx)(p.default, {
+                            className: C.nitroWheel
+                        }), l ? (0, n.jsx)(d.Heading, {
                             color: null != s ? s : "text-normal",
                             variant: "heading-sm/semibold",
                             children: i
                         }) : null]
-                    }), (0, n.jsx)(f.Text, {
+                    }), (0, n.jsx)(d.Text, {
                         variant: l ? "text-xs/normal" : "text-sm/medium",
                         color: null != s ? s : "text-normal",
                         children: t
@@ -5780,74 +5779,64 @@
                 })
             }
 
-            function A(e) {
+            function N(e) {
                 let {
                     checked: t,
                     onClick: i,
                     id: l = "burst-reaction-toggle-button"
-                } = e, g = (0, o.useStateFromStores)([E.default], () => E.default.useReducedMotion), A = I.default.getCurrentUser(), R = null != A && !(0, _.isPremium)(A), y = R ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [j, v] = (0, m.useDismissibleContentGroup)(y), [O, M] = s.useState(!1), [x, P] = (0, r.useSpring)(() => ({})), L = (0, r.animated)(c.ReactionIcon), D = (0, r.animated)(d.SuperReactionIcon);
+                } = e, p = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), N = m.default.getCurrentUser(), A = null != N && !(0, g.isPremium)(N), R = A ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [y, j] = (0, E.useDismissibleContentGroup)(R), [v, O] = s.useState(!1), [M, x] = (0, r.useSpring)(() => ({})), P = (0, r.animated)(c.SuperReactionIcon);
                 s.useEffect(() => {
-                    let e = j === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-                    e && (v(S.ContentDismissActionType.DISMISS), setTimeout(() => M(e), 200))
-                }, [j, v]);
-                let b = O ? C.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? C.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : C.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
-                    U = O ? C.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
-                return (0, n.jsxs)(f.TooltipContainer, {
+                    let e = y === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+                    e && (j(_.ContentDismissActionType.DISMISS), setTimeout(() => O(e), 200))
+                }, [y, j]);
+                let L = v ? S.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? S.default.Messages.SUPER_REACTION_TOGGLE_ENABLED : S.default.Messages.SUPER_REACTION_TOGGLE_DISABLED,
+                    D = v ? S.default.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
+                return (0, n.jsxs)(d.TooltipContainer, {
                     position: "top",
-                    text: (0, n.jsx)(N, {
+                    text: (0, n.jsx)(T, {
                         textColor: "always-white",
-                        tooltipText: b,
-                        headingText: U
+                        tooltipText: L,
+                        headingText: D
                     }),
-                    color: f.Tooltip.Colors.BRAND,
-                    forceOpen: O,
-                    "aria-label": b,
-                    tooltipClassName: h.tooltip,
+                    color: d.Tooltip.Colors.BRAND,
+                    forceOpen: v,
+                    "aria-label": L,
+                    tooltipClassName: C.tooltip,
                     children: [(0, n.jsx)("input", {
-                        className: h.visuallyHidden,
+                        className: C.visuallyHidden,
                         checked: t,
                         onChange: function() {
-                            P({
+                            x({
                                 from: {
                                     rotate: t ? "360deg" : "0deg"
                                 },
                                 to: {
                                     rotate: t ? "0deg" : "360deg"
                                 },
-                                config: T
-                            }), null == i || i(), M(!1)
+                                config: h
+                            }), null == i || i(), O(!1)
                         },
                         id: l,
                         type: "checkbox"
                     }), (0, n.jsxs)("label", {
                         htmlFor: l,
-                        className: a(h.label, {
-                            [h.labelChecked]: t
+                        className: a(C.label, {
+                            [C.labelChecked]: t
                         }),
-                        children: [t ? (0, n.jsx)(p.Shine, {
-                            className: h.shine,
-                            shinePaused: g
-                        }) : null, (0, n.jsx)(L, {
-                            style: g ? void 0 : x,
+                        children: [t ? (0, n.jsx)(I.Shine, {
+                            className: C.shine,
+                            shinePaused: p
+                        }) : null, (0, n.jsx)(P, {
+                            style: p ? void 0 : M,
                             width: 20,
                             height: 20,
                             color: t ? "white" : void 0,
-                            className: a(h.icon, {
-                                [h.iconHidden]: t
-                            })
-                        }), (0, n.jsx)(D, {
-                            style: g ? void 0 : x,
-                            width: 20,
-                            height: 20,
-                            color: t ? "white" : void 0,
-                            className: a(h.icon, {
-                                [h.iconHidden]: !t
-                            })
+                            className: C.icon
                         }), (0, n.jsx)("span", {
-                            children: (0, n.jsx)(f.Text, {
-                                className: h.visuallyHidden,
+                            children: (0, n.jsx)(d.Text, {
+                                className: C.visuallyHidden,
                                 variant: "text-sm/semibold",
-                                children: C.default.Messages.SUPER_REACTION_TOGGLE_DISABLED
+                                children: S.default.Messages.SUPER_REACTION_TOGGLE_DISABLED
                             })
                         })]
                     })]
