@@ -1439,7 +1439,10 @@
                                     scheduledStartTime: null == t ? void 0 : t.toISOString(),
                                     scheduledEndTime: null == n ? void 0 : n.toISOString()
                                 };
-                                null != t && null != P && (null == n ? void 0 : n.isBefore(t)) && (l.scheduledEndTime = t.add(1, "hour").toISOString()), M(l)
+                                null != t && null != P && (null == n ? void 0 : n.isBefore(t)) && (l.scheduledEndTime = t.add(1, "hour").toISOString()), null != t && null != H && (l.recurrenceRule = {
+                                    ...H,
+                                    start: t.milliseconds(0).toISOString()
+                                }), M(l)
                             },
                             onRecurrenceChange: e => {
                                 let t = k.startDate;
