@@ -143,16 +143,16 @@
                 }, {
                     quantize: function(u, a) {
                         if (!u.length || a < 2 || a > 256) return !1;
-                        var l, s, c, d, E, _, f, I, h, A, N, p, T, S, O, v, g = (l = u, E = Array(32768), l.forEach(function(n) {
+                        var l, s, c, d, E, _, f, I, h, A, N, T, p, S, O, v, g = (l = u, E = Array(32768), l.forEach(function(n) {
                                 c = n[0] >> t, d = n[1] >> t, E[s = e(c, d, n[2] >> t)] = (E[s] || 0) + 1
                             }), E),
                             C = 0;
                         g.forEach(function() {
                             C++
                         });
-                        var M = (_ = u, f = g, N = 1e6, p = 0, T = 1e6, S = 0, O = 1e6, v = 0, _.forEach(function(e) {
-                                I = e[0] >> t, h = e[1] >> t, A = e[2] >> t, I < N ? N = I : I > p && (p = I), h < T ? T = h : h > S && (S = h), A < O ? O = A : A > v && (v = A)
-                            }), new i(N, p, T, S, O, v, f)),
+                        var M = (_ = u, f = g, N = 1e6, T = 0, p = 1e6, S = 0, O = 1e6, v = 0, _.forEach(function(e) {
+                                I = e[0] >> t, h = e[1] >> t, A = e[2] >> t, I < N ? N = I : I > T && (T = I), h < p ? p = h : h > S && (S = h), A < O ? O = A : A > v && (v = A)
+                            }), new i(N, T, p, S, O, v, f)),
                             D = new n(function(t, e) {
                                 return r.naturalOrder(t.count(), e.count())
                             });
@@ -367,8 +367,8 @@
                     } = this.props, {
                         code: A,
                         errorMessage: N,
-                        retrySuccess: p
-                    } = this.state, T = i.Children.count(o) > 0 ? (0, r.jsx)(a.Card, {
+                        retrySuccess: T
+                    } = this.state, p = i.Children.count(o) > 0 ? (0, r.jsx)(a.Card, {
                         type: a.Card.Types.WARNING,
                         className: s.card,
                         children: (0, r.jsx)(a.Text, {
@@ -385,7 +385,7 @@
                                 children: I
                             })
                         })]
-                    }) : null, O = p ? (0, r.jsx)(a.Card, {
+                    }) : null, O = T ? (0, r.jsx)(a.Card, {
                         type: a.Card.Types.SUCCESS,
                         className: s.card,
                         children: (0, r.jsx)(a.Text, {
@@ -409,7 +409,7 @@
                                     variant: "text-md/normal",
                                     className: s.spacing,
                                     children: f
-                                }) : null, T, O, (0, r.jsxs)(a.FormItem, {
+                                }) : null, p, O, (0, r.jsxs)(a.FormItem, {
                                     title: this.getLabelText(),
                                     className: s.spacing,
                                     children: [(0, r.jsx)(a.TextInput, {
@@ -1010,10 +1010,10 @@
                     return N
                 },
                 updateImpersonating: function() {
-                    return p
+                    return T
                 },
                 stopImpersonating: function() {
-                    return T
+                    return p
                 },
                 updateImpersonatedChannels: function() {
                     return O
@@ -1053,7 +1053,7 @@
                 }), S(t)
             }
 
-            function p(t, e) {
+            function T(t, e) {
                 let n = f.default.getData(t);
                 null != n && n.type === e.type && (_.default.track(h.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
                     num_roles: Object.keys(n.roles).length,
@@ -1069,7 +1069,7 @@
                 }), S(t))
             }
 
-            function T(t) {
+            function p(t) {
                 r.default.dispatch({
                     type: "IMPERSONATE_STOP",
                     guildId: t
@@ -1088,7 +1088,7 @@
 
             function O(t, e, n) {
                 let r = new Set(E.default.getOptedInChannels(t));
-                e.forEach(t => r.add(t)), n.forEach(t => r.delete(t)), p(t, {
+                e.forEach(t => r.add(t)), n.forEach(t => r.delete(t)), T(t, {
                     type: I.ImpersonateType.NEW_MEMBER,
                     optInChannels: r
                 })
@@ -1110,14 +1110,14 @@
                     })
                 }(t, e);
                 let r = {};
-                e.forEach(t => r[t] = n.roles[t]), p(t, {
+                e.forEach(t => r[t] = n.roles[t]), T(t, {
                     type: I.ImpersonateType.NEW_MEMBER,
                     roles: r
                 })
             }
 
             function g(t, e) {
-                p(t, {
+                T(t, {
                     type: I.ImpersonateType.NEW_MEMBER,
                     ...e
                 })
@@ -1283,8 +1283,8 @@
                 h = /^.*\.discordapp\.net$/,
                 A = "https://cdn.discordapp.com",
                 N = "".concat(I, "/stickers"),
-                p = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp"]),
-                T = new Set(["jpg", "jpeg", "png"]),
+                T = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp"]),
+                p = new Set(["jpg", "jpeg", "png"]),
                 S = t => {
                     var e;
                     return null === (e = new URL(t).pathname.split(".").pop()) || void 0 === e ? void 0 : e.toLowerCase()
@@ -1302,7 +1302,7 @@
                 if (o || (null == n ? void 0 : n.shouldHideMediaOptions) === !0 || !s.isPlatformEmbedded || null == t || ! function(t) {
                         let e = new URL(t),
                             n = S(t);
-                        return (h.test(e.hostname) || e.origin === A) && !t.startsWith(N) && !(0, u.isRoleIconAssetUrl)(t) && null != n && p.has(n)
+                        return (h.test(e.hostname) || e.origin === A) && !t.startsWith(N) && !(0, u.isRoleIconAssetUrl)(t) && null != n && T.has(n)
                     }(t)) return null;
                 let c = function(t) {
                         let e = new URL(t);
@@ -1331,7 +1331,7 @@
                     };
                 return [d.default.canCopyImage() && function(t) {
                     let e = S(t);
-                    return null != e && T.has(e)
+                    return null != e && p.has(e)
                 }(t) ? (0, r.jsx)(i.MenuItem, {
                     id: "copy-image",
                     label: f.default.Messages.COPY_IMAGE_MENU_ITEM,
@@ -1369,7 +1369,7 @@
                 let A = (0, u.default)(null == n ? void 0 : n.getChannelId());
                 if (!d.isPlatformEmbedded || null == t || "" === t || A || (null == h ? void 0 : h.shouldHideMediaOptions) === !0 || null != t && null != (0, a.isStickerAssetUrl)(t) || null != t && (0, o.isRoleIconAssetUrl)(t)) return null;
                 let N = (0, l.getHostname)(t),
-                    p = n => {
+                    T = n => {
                         s.default.track(f.AnalyticEvents.CONTEXT_MENU_LINK_OPENED, {
                             hostname: N,
                             ...(0, _.getNativeContextMenuChannelAnalytics)()
@@ -1391,7 +1391,7 @@
                 }, "copy-native-link"), (0, r.jsx)(i.MenuItem, {
                     id: "open-native-link",
                     label: I.default.Messages.OPEN_LINK,
-                    action: t => p(t)
+                    action: t => T(t)
                 }, "open-native-link")]
             }
         },
@@ -1422,6 +1422,9 @@
                 },
                 NUM_RECENTLY_HEARD_SOUNDS: function() {
                     return E
+                },
+                NUM_FREQUENTLY_PLAYED_SOUNDS: function() {
+                    return _
                 }
             }), n("222007");
             let o = 32,
@@ -1436,7 +1439,8 @@
                 s = "ctrl+`",
                 c = [],
                 d = "0",
-                E = 6
+                E = 6,
+                _ = 6
         },
         235004: function(t, e, n) {
             "use strict";
@@ -1460,8 +1464,8 @@
             (i = r || (r = {}))[i.NOT_FETCHED = 0] = "NOT_FETCHED", i[i.FETCHING = 1] = "FETCHING", i[i.FETCHED = 2] = "FETCHED";
             let A = new Map,
                 N = new Map,
-                p = new Set,
-                T = 0,
+                T = new Set,
+                p = 0,
                 S = 0,
                 O = new Set,
                 v = new Map,
@@ -1484,8 +1488,8 @@
             function D(t) {
                 var e, n;
                 let r = null !== (n = null == t ? void 0 : null === (e = t.audioContextSettings) || void 0 === e ? void 0 : e.user) && void 0 !== n ? n : {};
-                for (let [t, e] of Object.entries(r)) e.soundboardMuted ? p.add(t) : p.delete(t);
-                for (let t of p.keys()) null == r[t] && p.delete(t)
+                for (let [t, e] of Object.entries(r)) e.soundboardMuted ? T.add(t) : T.delete(t);
+                for (let t of T.keys()) null == r[t] && T.delete(t)
             }
             class L extends a.default.Store {
                 initialize() {
@@ -1495,7 +1499,7 @@
                     return {
                         soundboardSounds: Object.fromEntries(A),
                         favoritedSoundIds: Array.from(O),
-                        localSoundboardMutes: Array.from(p)
+                        localSoundboardMutes: Array.from(T)
                     }
                 }
                 getSounds() {
@@ -1517,16 +1521,16 @@
                     return 1 === S
                 }
                 isFetchingDefaultSounds() {
-                    return 1 === T
+                    return 1 === p
                 }
                 isFetching() {
                     return this.isFetchingSounds() || this.isFetchingDefaultSounds()
                 }
                 shouldFetchDefaultSounds() {
-                    return 0 === T
+                    return 0 === p
                 }
                 hasFetchedDefaultSounds() {
-                    return 2 === T
+                    return 2 === p
                 }
                 isUserPlayingSounds(t) {
                     let e = v.get(t);
@@ -1542,19 +1546,19 @@
                     return O
                 }
                 isLocalSoundboardMuted(t) {
-                    return p.has(t)
+                    return T.has(t)
                 }
                 hasHadOtherUserPlaySoundInSession() {
                     return g
                 }
                 hasFetchedAllSounds() {
-                    return 2 === S && 2 === T
+                    return 2 === S && 2 === p
                 }
             }
             L.displayName = "SoundboardStore";
             var R = new L(l.default, {
                 LOGOUT: function() {
-                    A.clear(), N.clear(), v.clear(), g = !1, S = 0, T = 0
+                    A.clear(), N.clear(), v.clear(), g = !1, S = 0, p = 0
                 },
                 GUILD_SOUNDBOARD_FETCH: function() {
                     S = 1
@@ -1609,13 +1613,13 @@
                     } else n === h.UserSettingsTypes.PRELOADED_USER_SETTINGS && D(r)
                 },
                 SOUNDBOARD_FETCH_DEFAULT_SOUNDS: function() {
-                    T = 1
+                    p = 1
                 },
                 SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: function(t) {
                     let {
                         soundboardSounds: e
                     } = t;
-                    A.set(f.DEFAULT_SOUND_GUILD_ID, e), T = 2
+                    A.set(f.DEFAULT_SOUND_GUILD_ID, e), p = 2
                 },
                 SOUNDBOARD_SOUNDS_RECEIVED: function(t) {
                     let {
@@ -1639,13 +1643,13 @@
                     let {
                         userId: e
                     } = t;
-                    p.has(e) ? p.delete(e) : p.add(e)
+                    T.has(e) ? T.delete(e) : T.add(e)
                 },
                 OVERLAY_INITIALIZE: function(t) {
                     let {
                         soundboardStoreState: e
                     } = t;
-                    A = new Map(Object.entries(e.soundboardSounds)), O = new Set(e.favoritedSoundIds), p = new Set(e.localSoundboardMutes)
+                    A = new Map(Object.entries(e.soundboardSounds)), O = new Set(e.favoritedSoundIds), T = new Set(e.localSoundboardMutes)
                 },
                 GUILD_SOUNDBOARD_SOUNDS_UPDATE: function(t) {
                     let {
@@ -1991,10 +1995,10 @@
                     return N
                 },
                 dataUriFileSize: function() {
-                    return p
+                    return T
                 },
                 dataUrlToFile: function() {
-                    return T
+                    return p
                 },
                 isPNGAnimated: function() {
                     return S
@@ -2103,11 +2107,11 @@
                 })
             }
 
-            function p(t) {
+            function T(t) {
                 let e = t.split(";base64,");
                 return i(2 === e.length, "Input data is not a valid image."), atob(e[1]).length
             }
-            async function T(t, e, n) {
+            async function p(t, e, n) {
                 let r = function(t) {
                         let e;
                         e = t.split(",")[0].indexOf("base64") >= 0 ? atob(t.split(",")[1]) : btoa(t.split(",")[1]);

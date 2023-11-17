@@ -1502,8 +1502,8 @@
                     maxFileSizeBytes: O,
                     showUpsellHeader: L,
                     filters: D,
-                    analyticsLocation: b,
-                    analyticsLocations: U = [],
+                    analyticsLocation: U,
+                    analyticsLocations: b = [],
                     modalSubTitle: w,
                     imageSpecifications: P,
                     modalTitle: V = M.default.Messages.SELECT_IMAGE_MODAL_TITLE,
@@ -1512,7 +1512,7 @@
                     reducedMotion: Y
                 } = l.useContext(a.AccessibilityPreferencesContext), z = (0, a.useModalContext)(), Z = !T.default.canUseAnimatedAvatar(j) && m === N.UploadTypes.AVATAR && !W, {
                     analyticsLocations: K
-                } = (0, s.default)(U, o.default.SELECT_IMAGE_MODAL);
+                } = (0, s.default)(b, o.default.SELECT_IMAGE_MODAL);
 
                 function X(e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -1524,9 +1524,9 @@
                         location_stack: K
                     }), S.default.track(v.AnalyticEvents.OPEN_MODAL, {
                         type: v.AnalyticsSections.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
-                        location: b
+                        location: U
                     })
-                }, [Z, b, K]), (0, i.jsxs)(a.ModalRoot, {
+                }, [Z, U, K]), (0, i.jsxs)(a.ModalRoot, {
                     transitionState: t,
                     size: a.ModalSize.SMALL,
                     children: [(0, i.jsxs)(a.ModalHeader, {
@@ -1578,7 +1578,7 @@
                                                 uploadType: m,
                                                 showUpsellHeader: L,
                                                 allowSkip: !0,
-                                                analyticsPage: null == b ? void 0 : b.page,
+                                                analyticsPage: null == U ? void 0 : U.page,
                                                 ...n
                                             })
                                         }, {
@@ -1602,7 +1602,7 @@
                                             uploadType: m,
                                             onComplete: (e, t) => X(e, t, !0),
                                             showUpsellHeader: L,
-                                            analyticsPage: null == b ? void 0 : b.page,
+                                            analyticsPage: null == U ? void 0 : U.page,
                                             ...t
                                         })
                                     }, {
@@ -2267,6 +2267,9 @@
                 },
                 NUM_RECENTLY_HEARD_SOUNDS: function() {
                     return f
+                },
+                NUM_FREQUENTLY_PLAYED_SOUNDS: function() {
+                    return E
                 }
             }), n("222007");
             let r = 32,
@@ -2281,7 +2284,8 @@
                 u = "ctrl+`",
                 d = [],
                 c = "0",
-                f = 6
+                f = 6,
+                E = 6
         },
         235004: function(e, t, n) {
             "use strict";

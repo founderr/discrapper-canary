@@ -3131,6 +3131,9 @@
                 },
                 NUM_RECENTLY_HEARD_SOUNDS: function() {
                     return f
+                },
+                NUM_FREQUENTLY_PLAYED_SOUNDS: function() {
+                    return E
                 }
             }), n("222007");
             let l = 32,
@@ -3145,7 +3148,8 @@
                 o = "ctrl+`",
                 d = [],
                 c = "0",
-                f = 6
+                f = 6,
+                E = 6
         },
         235004: function(e, t, n) {
             "use strict";
