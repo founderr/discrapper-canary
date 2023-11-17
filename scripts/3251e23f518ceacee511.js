@@ -4000,6 +4000,44 @@
                 return n
             }
         },
+        413266: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                openReportRaidModal: function() {
+                    return l
+                },
+                openSafetyChannelSetupModal: function() {
+                    return i
+                }
+            });
+            var a = s("37983");
+            s("884691");
+            var n = s("77078");
+
+            function l(e) {
+                (0, n.openModalLazy)(async () => {
+                    let {
+                        default: t
+                    } = await s.el("423588").then(s.bind(s, "423588"));
+                    return s => (0, a.jsx)(t, {
+                        ...s,
+                        guildId: e
+                    })
+                })
+            }
+
+            function i(e) {
+                (0, n.openModalLazy)(async () => {
+                    let {
+                        default: t
+                    } = await s.el("982537").then(s.bind(s, "982537"));
+                    return s => (0, a.jsx)(t, {
+                        ...s,
+                        guildId: e
+                    })
+                })
+            }
+        },
         309021: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
@@ -18481,6 +18519,60 @@
                 } catch {
                     return "//".concat(window.GLOBAL_ENV.DEVELOPERS_ENDPOINT, "/").concat(e)
                 }
+            }
+        },
+        199938: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                staffOnlyGuildSettingsAccess: function() {
+                    return r
+                },
+                useGuildAccessRateInsightExperiment: function() {
+                    return o
+                }
+            });
+            var a = s("884691"),
+                n = s("862205"),
+                l = s("697218");
+            let i = (0, n.createExperiment)({
+                kind: "guild",
+                id: "2022-03_guild_access_rate_insight_experiment",
+                label: "Guild Access Rate Insight Experiment",
+                defaultConfig: {
+                    showAccessRate: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "Show guild access rate in insights",
+                    config: {
+                        showAccessRate: !0
+                    }
+                }]
+            });
+
+            function r(e) {
+                var t;
+                let s = null === (t = l.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff();
+                return s && i.getCurrentConfig({
+                    guildId: e,
+                    location: "77b4b2_1"
+                }).showAccessRate
+            }
+
+            function o(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                return a.useEffect(() => {
+                    !t && null != e && i.trackExposure({
+                        guildId: e,
+                        location: "77b4b2_2"
+                    })
+                }, [e, t]), i.useExperiment({
+                    guildId: null != e ? e : "",
+                    location: "77b4b2_3"
+                }, {
+                    autoTrackExposure: !1,
+                    disable: t || null == e
+                })
             }
         },
         961394: function(e, t, s) {
@@ -41619,6 +41711,51 @@
                         }) : null]
                     })
                 }
+        },
+        756609: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var a = s("37983");
+            s("884691");
+            var n = s("469563"),
+                l = s("308472"),
+                i = s("75196"),
+                r = (0, n.replaceIcon)(function(e) {
+                    let {
+                        width: t = 18,
+                        height: s = 18,
+                        color: n = "currentColor",
+                        foreground: l,
+                        ...r
+                    } = e;
+                    return (0, a.jsxs)("svg", {
+                        ...(0, i.default)(r),
+                        width: t,
+                        height: s,
+                        viewBox: "0 0 18 18",
+                        children: [(0, a.jsx)("path", {
+                            fill: n,
+                            className: l,
+                            d: "M4.5,16.5v-3H3A1.5,1.5,0,0,1,1.5,12V3A1.5,1.5,0,0,1,3,1.5H15A1.5,1.5,0,0,1,16.5,3v9A1.5,1.5,0,0,1,15,13.5H8.5ZM3,3v9H6v1.5L8,12h7V3Z"
+                        }), (0, a.jsx)("path", {
+                            fill: n,
+                            className: l,
+                            d: "M6.75,4.5H5.25v6h1.5Z"
+                        }), (0, a.jsx)("path", {
+                            fill: n,
+                            className: l,
+                            d: "M9.75,7.5H8.25v3h1.5Z"
+                        }), (0, a.jsx)("path", {
+                            fill: n,
+                            className: l,
+                            d: "M12.75,6h-1.5v4.5h1.5Z"
+                        })]
+                    })
+                }, l.AnalyticsIcon)
         },
         217928: function(e, t, s) {
             "use strict";
