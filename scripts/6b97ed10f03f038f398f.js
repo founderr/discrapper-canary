@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["70249"], {
+    ["47628"], {
         78349: function(t, e, n) {
             "use strict";
             n("424973"), t.exports.parse = function(t) {
@@ -232,16 +232,16 @@
                 }, {
                     quantize: function(u, a) {
                         if (!u.length || a < 2 || a > 256) return !1;
-                        var s, l, c, f, d, h, v, g, p, E, I, m, _, S, y, w, R = (s = u, d = Array(32768), s.forEach(function(n) {
+                        var s, l, c, f, d, h, v, g, p, E, m, I, _, S, y, w, R = (s = u, d = Array(32768), s.forEach(function(n) {
                                 c = n[0] >> t, f = n[1] >> t, d[l = e(c, f, n[2] >> t)] = (d[l] || 0) + 1
                             }), d),
                             A = 0;
                         R.forEach(function() {
                             A++
                         });
-                        var O = (h = u, v = R, I = 1e6, m = 0, _ = 1e6, S = 0, y = 1e6, w = 0, h.forEach(function(e) {
-                                g = e[0] >> t, p = e[1] >> t, E = e[2] >> t, g < I ? I = g : g > m && (m = g), p < _ ? _ = p : p > S && (S = p), E < y ? y = E : E > w && (w = E)
-                            }), new i(I, m, _, S, y, w, v)),
+                        var O = (h = u, v = R, m = 1e6, I = 0, _ = 1e6, S = 0, y = 1e6, w = 0, h.forEach(function(e) {
+                                g = e[0] >> t, p = e[1] >> t, E = e[2] >> t, g < m ? m = g : g > I && (I = g), p < _ ? _ = p : p > S && (S = p), E < y ? y = E : E > w && (w = E)
+                            }), new i(m, I, _, S, y, w, v)),
                             M = new n(function(t, e) {
                                 return r.naturalOrder(t.count(), e.count())
                             });
@@ -458,7 +458,7 @@
                     optional: () => d(t),
                     and: e => g(t, e),
                     or: e => p(t, e),
-                    select: e => void 0 === e ? I(t) : I(e, t)
+                    select: e => void 0 === e ? m(t) : m(e, t)
                 })
             }
 
@@ -544,7 +544,7 @@
                 }
             }
 
-            function I() {
+            function m() {
                 for (var t = arguments.length, e = Array(t), n = 0; n < t; n++) e[n] = arguments[n];
                 let i = "string" == typeof e[0] ? e[0] : void 0,
                     u = 2 === e.length ? e[1] : "string" == typeof e[0] ? void 0 : e[0];
@@ -566,7 +566,7 @@
                 })
             }
 
-            function m(t) {
+            function I(t) {
                 return "number" == typeof t
             }
 
@@ -595,15 +595,15 @@
                     regex: e => w(g(t, E(t => _(t) && !!t.match(e))))
                 }),
                 R = w(E(_)),
-                A = (t, e) => E(n => m(n) && t <= n && e >= n),
-                O = t => E(e => m(e) && e < t),
-                M = t => E(e => m(e) && e > t),
-                b = t => E(e => m(e) && e <= t),
-                N = t => E(e => m(e) && e >= t),
-                T = () => E(t => m(t) && Number.isInteger(t)),
-                F = () => E(t => m(t) && Number.isFinite(t)),
-                C = () => E(t => m(t) && t > 0),
-                x = () => E(t => m(t) && t < 0),
+                A = (t, e) => E(n => I(n) && t <= n && e >= n),
+                O = t => E(e => I(e) && e < t),
+                M = t => E(e => I(e) && e > t),
+                b = t => E(e => I(e) && e <= t),
+                N = t => E(e => I(e) && e >= t),
+                T = () => E(t => I(t) && Number.isInteger(t)),
+                F = () => E(t => I(t) && Number.isFinite(t)),
+                C = () => E(t => I(t) && t > 0),
+                x = () => E(t => I(t) && t < 0),
                 P = t => Object.assign(f(t), {
                     between: (e, n) => P(g(t, A(e, n))),
                     lt: e => P(g(t, O(e))),
@@ -615,7 +615,7 @@
                     positive: () => P(g(t, C())),
                     negative: () => P(g(t, x()))
                 }),
-                L = P(E(m)),
+                L = P(E(I)),
                 V = (t, e) => E(n => S(n) && t <= n && e >= n),
                 D = t => E(e => S(e) && e < t),
                 U = t => E(e => S(e) && e > t),
@@ -658,7 +658,7 @@
                             }
                         })), {
                             optional: () => t(d(e)),
-                            select: n => t(void 0 === n ? I(e) : I(n, e))
+                            select: n => t(void 0 === n ? m(e) : m(n, e))
                         })
                     }({
                         [r]: () => ({
@@ -767,7 +767,7 @@
                     })
                 },
                 when: E,
-                select: I,
+                select: m,
                 any: y,
                 _: y,
                 string: R,
@@ -1738,34 +1738,6 @@
                 })
             }
         },
-        476765: function(t, e, n) {
-            "use strict";
-            n.r(e), n.d(e, {
-                uid: function() {
-                    return u
-                },
-                useUID: function() {
-                    return a
-                },
-                UID: function() {
-                    return s
-                }
-            });
-            var r = n("995008"),
-                i = n.n(r),
-                o = n("775560");
-            let u = function() {
-                    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "uid_";
-                    return i(t)
-                },
-                a = () => (0, o.useLazyValue)(() => u()),
-                s = t => {
-                    let {
-                        children: e
-                    } = t;
-                    return e(a())
-                }
-        },
         486952: function(t, e, n) {
             "use strict";
             n.r(e), n.d(e, {
@@ -1822,10 +1794,10 @@
                     return p
                 },
                 readFileAsBase64: function() {
-                    return I
+                    return m
                 },
                 dataUriFileSize: function() {
-                    return m
+                    return I
                 },
                 dataUrlToFile: function() {
                     return _
@@ -1928,7 +1900,7 @@
                     }, r.src = t
                 }));
 
-            function I(t) {
+            function m(t) {
                 return new Promise((e, n) => {
                     let r = new FileReader;
                     r.readAsDataURL(t), r.onload = () => {
@@ -1937,7 +1909,7 @@
                 })
             }
 
-            function m(t) {
+            function I(t) {
                 let e = t.split(";base64,");
                 return i(2 === e.length, "Input data is not a valid image."), atob(e[1]).length
             }
