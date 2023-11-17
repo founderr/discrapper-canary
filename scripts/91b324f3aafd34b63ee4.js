@@ -1737,7 +1737,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "246620"
+                        buildNumber: "246622"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -21767,20 +21767,21 @@
                 E = n("649678"),
                 f = function(e) {
                     let {
-                        children: t,
-                        user: l,
-                        channel: f,
-                        onClick: _,
-                        isFocused: C,
-                        isActive: h,
-                        onOtherHover: I,
-                        className: T
-                    } = e, [S, N] = s.useState(!1), [A, m] = s.useState(!1), p = () => {
-                        N(!0), C && !h && !A && (null == I || I())
-                    }, g = () => {
-                        N(!1)
-                    }, R = (e, t) => {
-                        null != t && (m(!0), (0, d.openContextMenuLazy)(e, async () => {
+                        index: t,
+                        children: l,
+                        user: f,
+                        channel: _,
+                        onClick: C,
+                        isFocused: h,
+                        isActive: I,
+                        onOtherHover: T,
+                        className: S
+                    } = e, [N, A] = s.useState(!1), [m, p] = s.useState(!1), g = () => {
+                        A(!0), h && !I && !m && (null == T || T())
+                    }, R = () => {
+                        A(!1)
+                    }, O = (e, t) => {
+                        null != t && (p(!0), (0, d.openContextMenuLazy)(e, async () => {
                             let {
                                 default: e
                             } = await n.el("406784").then(n.bind(n, "406784"));
@@ -21790,31 +21791,32 @@
                             })
                         }, {
                             onClose: () => {
-                                m(!1)
+                                p(!1)
                             }
                         }))
                     };
                     return (0, a.jsx)(o.ListNavigatorItem, {
-                        id: f.id,
+                        id: _.id,
                         children: e => (0, a.jsx)(u.FocusRing, {
                             offset: {
                                 left: -8,
                                 right: -8
                             },
                             children: (0, a.jsx)(r.default.div, {
-                                className: i(E.messageRequestItem, T, {
-                                    [E.active]: h || A
+                                className: i(E.messageRequestItem, S, {
+                                    [E.active]: I || m,
+                                    [E.firstItem]: 0 === t
                                 }),
-                                onContextMenu: e => R(e, l),
-                                onMouseEnter: p,
-                                onMouseLeave: g,
-                                onClick: null != _ ? _ : void 0,
+                                onContextMenu: e => O(e, f),
+                                onMouseEnter: g,
+                                onMouseLeave: R,
+                                onClick: null != C ? C : void 0,
                                 style: {
                                     LIST_ROW_HEIGHT: c.LIST_ROW_HEIGHT,
                                     opacity: 1
                                 },
                                 ...e,
-                                children: t(S || h || A)
+                                children: l(N || I || m)
                             })
                         })
                     })
@@ -21906,6 +21908,7 @@
                             row: r
                         } = e, o = n[r], u = null === (s = n[r + 1]) || void 0 === s ? void 0 : null === (t = s.channel) || void 0 === t ? void 0 : t.id, d = o.channel.id;
                         return (0, a.jsx)(K.default, {
+                            index: r,
                             className: i({
                                 [X.selected]: null != C && C === d,
                                 [X.siblingSelected]: null != C && C === u
@@ -22345,37 +22348,39 @@
 
             function E(e) {
                 let {
-                    className: t,
-                    channel: n,
-                    user: E,
-                    hasSingleMessageRequest: f
+                    index: t,
+                    className: n,
+                    channel: E,
+                    user: f,
+                    hasSingleMessageRequest: _
                 } = e, {
-                    channelId: _
+                    channelId: C
                 } = (0, o.useMessageRequestSidebarState)();
                 return (0, a.jsx)(u.default, {
-                    className: t,
-                    isFocused: _ === n.id,
-                    channel: n,
-                    user: E,
+                    index: t,
+                    className: n,
+                    isFocused: C === E.id,
+                    channel: E,
+                    user: f,
                     onClick: e => {
                         e.stopPropagation(), s.default.openPrivateChannelAsSidebar({
-                            channelId: n.id,
+                            channelId: E.id,
                             baseChannelId: l.MESSAGE_REQUESTS_BASE_CHANNEL_ID,
-                            hasSingleMessageRequest: f
+                            hasSingleMessageRequest: _
                         }), i.default.track(c.AnalyticEvents.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                             is_spam: !1,
-                            channel_id: n.id,
-                            other_user_id: E.id
+                            channel_id: E.id,
+                            other_user_id: f.id
                         }), setTimeout(() => {
                             r.ComponentDispatch.dispatch(c.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
-                                channelId: n.id
+                                channelId: E.id
                             })
                         }, 0)
                     },
                     children: e => (0, a.jsx)(d.PendingMessageRequestRowItem, {
                         active: e,
-                        user: E,
-                        channel: n
+                        user: f,
+                        channel: E
                     })
                 })
             }
@@ -22476,35 +22481,37 @@
 
             function c(e) {
                 let {
-                    className: t,
-                    channel: n,
-                    user: c,
-                    hasSingleMessageRequest: E
+                    index: t,
+                    className: n,
+                    channel: c,
+                    user: E,
+                    hasSingleMessageRequest: f
                 } = e;
                 return (0, a.jsx)(o.default, {
-                    className: t,
+                    index: t,
+                    className: n,
                     isFocused: !1,
-                    channel: n,
-                    user: c,
+                    channel: c,
+                    user: E,
                     onClick: e => {
                         e.stopPropagation(), s.default.openPrivateChannelAsSidebar({
-                            channelId: n.id,
+                            channelId: c.id,
                             baseChannelId: l.MESSAGE_REQUESTS_BASE_CHANNEL_ID,
-                            hasSingleMessageRequest: E
+                            hasSingleMessageRequest: f
                         }), i.default.track(d.AnalyticEvents.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                             is_spam: !0,
-                            channel_id: n.id,
-                            other_user_id: c.id
+                            channel_id: c.id,
+                            other_user_id: E.id
                         }), setTimeout(() => {
                             r.ComponentDispatch.dispatch(d.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
-                                channelId: n.id
+                                channelId: c.id
                             })
                         }, 0)
                     },
                     children: e => (0, a.jsx)(u.default, {
                         active: e,
-                        user: c,
-                        channel: n
+                        user: E,
+                        channel: c
                     })
                 })
             }
@@ -22575,6 +22582,7 @@
                             row: r
                         } = e, o = t[r], u = null === (s = t[r + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
                         return (0, a.jsx)(A.default, {
+                            index: r,
                             className: i({
                                 [R.selected]: null != v && v === d,
                                 [R.siblingSelected]: null != v && v === u
