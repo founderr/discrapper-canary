@@ -32083,12 +32083,12 @@
                         iconClassName: S,
                         embeddedApplication: g,
                         otherClientSessionType: v,
-                        voicePlatform: N,
-                        hangStatusActivity: L
+                        voicePlatform: L,
+                        hangStatusActivity: y
                     } = this.props;
                     if (u || h) return null;
-                    let y = [],
-                        D = (0, a.jsx)(b, {
+                    let D = [],
+                        P = (0, a.jsx)(b, {
                             iconClassName: S,
                             mute: e,
                             localMute: t,
@@ -32096,53 +32096,55 @@
                             deaf: s,
                             serverDeaf: r
                         });
-                    return (o && (n ? y.push((0, a.jsx)(c.TooltipContainer, {
+                    o && (n ? D.push((0, a.jsx)(c.TooltipContainer, {
                         className: j.iconSpacing,
                         text: R.default.Messages.LOCAL_VIDEO_DISABLED,
                         children: (0, a.jsx)(E.default, {
                             className: i(j.icon, S),
                             foreground: j.strikethrough
                         })
-                    }, "video")) : y.push((0, a.jsx)(c.TooltipContainer, {
+                    }, "video")) : D.push((0, a.jsx)(c.TooltipContainer, {
                         className: j.iconSpacing,
                         text: R.default.Messages.VIDEO,
                         children: (0, a.jsx)(m.default, {
                             className: i(j.icon, S)
                         })
-                    }, "video"))), null != g && y.push((0, a.jsx)(c.TooltipContainer, {
+                    }, "video"))), null != g && D.push((0, a.jsx)(c.TooltipContainer, {
                         text: (0, f.default)(g.name),
                         className: j.iconSpacing,
                         children: (0, a.jsx)(T.default, {
                             className: i(j.icon, S)
                         })
-                    }, "activity")), v === M.GameConsoleTypes.XBOX || N === A.VoicePlatforms.XBOX ? y.push((0, a.jsx)("div", {
+                    }, "activity")), v === M.GameConsoleTypes.XBOX || L === A.VoicePlatforms.XBOX ? D.push((0, a.jsx)("div", {
                         className: i(j.iconSpacing),
                         children: (0, a.jsx)(I.default, {
                             className: i(j.icon, S)
                         })
-                    }, "xbox")) : (v === M.GameConsoleTypes.PLAYSTATION || N === A.VoicePlatforms.PLAYSTATION) && y.push((0, a.jsx)("div", {
+                    }, "xbox")) : (v === M.GameConsoleTypes.PLAYSTATION || L === A.VoicePlatforms.PLAYSTATION) && D.push((0, a.jsx)("div", {
                         className: i(j.iconSpacing),
                         children: (0, a.jsx)(_.default, {
                             className: i(j.icon, S)
                         })
-                    }, "playstation")), d ? y.push((0, a.jsx)("div", {
+                    }, "playstation")), d ? D.push((0, a.jsx)("div", {
                         className: i(j.iconSpacing, j.liveIconSpacing),
                         children: (0, a.jsx)(x.default, {
                             size: x.default.Sizes.SMALL
                         })
-                    }, "stream")) : p && y.push((0, a.jsx)(c.TooltipContainer, {
+                    }, "stream")) : p && D.push((0, a.jsx)(c.TooltipContainer, {
                         className: j.iconSpacing,
                         text: R.default.Messages.WATCH_STREAM_WATCHING,
                         children: (0, a.jsx)(C.default, {
                             className: i(j.icon, S)
                         })
-                    }, "watch")), 0 === y.length && null == D && (null == L ? void 0 : L.emoji) == null) ? null : (0, a.jsxs)("div", {
+                    }, "watch"));
+                    let U = null != y && ((null == y ? void 0 : y.state) !== N.HangStatusTypes.CUSTOM || (null == y ? void 0 : y.emoji) != null);
+                    return 0 !== D.length || null != P || U ? (0, a.jsxs)("div", {
                         className: j.icons,
-                        children: [D, y, (null == L ? void 0 : L.emoji) != null && (0, a.jsx)(O, {
-                            hangStatusActivity: L,
+                        children: [P, D, U && (0, a.jsx)(O, {
+                            hangStatusActivity: y,
                             iconClassName: S
                         })]
-                    })
+                    }) : null
                 }
                 render() {
                     let {
