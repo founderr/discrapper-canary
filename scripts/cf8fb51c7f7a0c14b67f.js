@@ -1737,7 +1737,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "246667"
+                        buildNumber: "246675"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -3020,7 +3020,8 @@
                     }), i = I.default.HOME_PAGE_SHOP_TAB, {
                         analyticsLocations: r
                     } = (0, S.default)(i), {
-                        collectiblesShopTabNewBadge: u
+                        collectiblesShopTabNewBadge: u,
+                        dismissCollectiblesShopTabNewBadge: d
                     } = (0, R.default)();
                     return l ? (0, a.jsx)(ec.LinkButton, {
                         selected: t,
@@ -3031,7 +3032,7 @@
                             (0, p.trackCollectiblesShopOpened)({
                                 analyticsSource: i,
                                 analyticsLocations: r
-                            })
+                            }), d()
                         },
                         locationState: n,
                         ...s,
