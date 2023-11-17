@@ -24040,9 +24040,9 @@
 
             function s() {
                 let e = r.getCurrentConfig({
-                    location: "1"
+                    location: "isOOPExperimentEnabled"
                 }, {
-                    autoTrackExposure: !1
+                    autoTrackExposure: !0
                 });
                 return null != e && e.useGlobalOverlay
             }
@@ -49507,7 +49507,7 @@
                         var i;
                         let d = {
                                 environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                                build_number: "246984"
+                                build_number: "246996"
                             },
                             f = l.default.getCurrentUser();
                         null != f && (d.user_id = f.id, d.user_name = f.tag, null != f.email && (d.email = f.email));
