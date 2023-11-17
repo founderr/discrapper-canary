@@ -1737,7 +1737,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "246786"
+                        buildNumber: "246790"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -16438,7 +16438,8 @@
                 let U = e => {
                         if (e && y && O !== A.StaticChannelRoute.MEMBER_SAFETY && x()) {
                             C.default.track(S.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
-                                notice_type: S.NoticeTypes.GUILD_RAID_NOTIFICATION
+                                notice_type: S.NoticeTypes.GUILD_RAID_NOTIFICATION,
+                                guild_id: v.id
                             });
                             return
                         }(0, i.openModalLazy)(async () => {
