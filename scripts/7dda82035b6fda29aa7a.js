@@ -120,17 +120,21 @@
                     }
                 },
                 async createPomelo(e) {
-                    let t = await u.default.post({
-                        body: e,
-                        url: g.Endpoints.POMELO_CREATE,
-                        trackedActionData: {
-                            event: i.NetworkActionNames.POMELO_CREATE
-                        }
-                    });
+                    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                        n = await u.default.post({
+                            body: e,
+                            url: g.Endpoints.POMELO_CREATE,
+                            trackedActionData: {
+                                event: i.NetworkActionNames.POMELO_CREATE,
+                                properties: {
+                                    one_click_flow: t
+                                }
+                            }
+                        });
                     return r.default.dispatch({
                         type: "CURRENT_USER_UPDATE",
-                        user: t.body
-                    }), t.body
+                        user: n.body
+                    }), n.body
                 }
             }
         },
@@ -395,13 +399,13 @@
                     return O
                 },
                 formatPomeloForEditing: function() {
-                    return v
+                    return p
                 },
                 getMemberSince: function() {
-                    return R
+                    return v
                 },
                 formatUsernameLiveCheckValidation: function() {
-                    return S
+                    return R
                 }
             }), n("781738"), n("222007"), n("794252");
             var i = n("866227"),
@@ -445,11 +449,11 @@
                 return !1
             }
 
-            function v(e) {
+            function p(e) {
                 return e.toLowerCase().replace(/\s/g, "").replace("@", "")
             }
 
-            function R(e) {
+            function v(e) {
                 let t = o.default.extractTimestamp(e);
                 try {
                     return a(new Date(t)).format("MMM DD, YYYY")
@@ -457,7 +461,7 @@
                 return null
             }
 
-            function S(e) {
+            function R(e) {
                 return (0, r.match)(e).with({
                     rateLimited: !0
                 }, () => ({
