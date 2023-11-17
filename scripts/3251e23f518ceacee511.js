@@ -43266,6 +43266,12 @@
                 }, {
                     value: D.AuditLogActions.CLYDE_AI_PROFILE_UPDATE,
                     label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_CLYDE_AI_PROFIE_UPDATE
+                }, {
+                    value: D.AuditLogActions.VOICE_CHANNEL_STATUS_CREATE,
+                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_VOICE_CHANNEL_STATUS_CREATE
+                }, {
+                    value: D.AuditLogActions.VOICE_CHANNEL_STATUS_DELETE,
+                    label: U.default.Messages.GUILD_SETTINGS_ACTION_FILTER_VOICE_CHANNEL_STATUS_DELETE
                 }];
 
             function en(e) {
