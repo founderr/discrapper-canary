@@ -2581,7 +2581,9 @@
                             fill: i
                         })
                     })
-                }, l.PencilIcon)
+                }, l.PencilIcon, void 0, {
+                    size: 16
+                })
         },
         351825: function(t, e, n) {
             "use strict";

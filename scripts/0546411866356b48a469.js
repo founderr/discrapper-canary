@@ -508,6 +508,42 @@
                     }
                 }
         },
+        833222: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                DenyIcon: function() {
+                    return i
+                }
+            });
+            var l = s("37983");
+            s("884691");
+            var a = s("669491"),
+                n = s("75196");
+            let i = e => {
+                let {
+                    width: t = 24,
+                    height: s = 24,
+                    color: i = a.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: r = "",
+                    ...o
+                } = e;
+                return (0, l.jsx)("svg", {
+                    ...(0, n.default)(o),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: s,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: (0, l.jsx)("path", {
+                        fill: "string" == typeof i ? i : i.css,
+                        fillRule: "evenodd",
+                        d: "M23 12c0 6.075-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1s11 4.925 11 11Zm-2 0a9 9 0 0 1-14.618 7.032l12.65-12.65A8.962 8.962 0 0 1 21 12ZM4.968 17.618l12.65-12.65a9 9 0 0 0-12.65 12.65Z",
+                        clipRule: "evenodd",
+                        className: r
+                    })
+                })
+            }
+        },
         443202: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
@@ -610,10 +646,10 @@
                 F = s("454273"),
                 b = s("443202"),
                 P = s("165161"),
-                H = s("460812"),
-                w = s("606762"),
-                U = s("49111"),
-                B = s("843455"),
+                w = s("460812"),
+                H = s("606762"),
+                B = s("49111"),
+                U = s("843455"),
                 G = s("782340"),
                 V = s("674310");
 
@@ -635,9 +671,9 @@
                             } = e,
                             C = !1;
                         switch (S) {
-                            case w.AudienceSelectorSections.ROLES:
+                            case H.AudienceSelectorSections.ROLES:
                                 var _;
-                                T = (m = s[N]).rowType === w.RowType.ROLE && (null === (_ = m.tags) || void 0 === _ ? void 0 : _.guild_connections) === null ? (0, l.jsx)(f.default, {
+                                T = (m = s[N]).rowType === H.RowType.ROLE && (null === (_ = m.tags) || void 0 === _ ? void 0 : _.guild_connections) === null ? (0, l.jsx)(f.default, {
                                     className: V.shield,
                                     color: m.colorString,
                                     size: 20
@@ -657,7 +693,7 @@
                                     })]
                                 }), C = m.disabled;
                                 break;
-                            case w.AudienceSelectorSections.MEMBERS:
+                            case H.AudienceSelectorSections.MEMBERS:
                                 m = a[N], c = (0, l.jsxs)(l.Fragment, {
                                     children: [(0, l.jsx)(o.Avatar, {
                                         src: m.avatarURL,
@@ -696,7 +732,7 @@
                                 color: "text-muted",
                                 variant: "text-xs/normal",
                                 children: F.getRowTypeLabel(m.rowType)
-                            }), m.rowType !== w.RowType.EMPTY_STATE && (0, l.jsx)(o.TooltipContainer, {
+                            }), m.rowType !== H.RowType.EMPTY_STATE && (0, l.jsx)(o.TooltipContainer, {
                                 className: V.removeIconContainer,
                                 text: null != n ? n : r(m.rowType, m.disabled),
                                 children: (0, l.jsx)(o.Clickable, {
@@ -710,7 +746,7 @@
                                             cancelText: G.default.Messages.CANCEL,
                                             onConfirm: () => (function(e, s) {
                                                 if (t.isGuildStageVoice()) {
-                                                    let l = (0, g.removeModeratorOverwrite)(e, s === w.RowType.ROLE ? E.PermissionOverwriteType.ROLE : E.PermissionOverwriteType.MEMBER, t);
+                                                    let l = (0, g.removeModeratorOverwrite)(e, s === H.RowType.ROLE ? E.PermissionOverwriteType.ROLE : E.PermissionOverwriteType.MEMBER, t);
                                                     (0, g.isEmptyOverwrite)(l) ? u.default.clearPermissionOverwrite(t.id, l.id): (0, h.savePermissionUpdates)(t.id, [l])
                                                 } else u.default.clearPermissionOverwrite(t.id, e)
                                             })(e, l)
@@ -733,11 +769,11 @@
                             section: t
                         } = e;
                         switch (t) {
-                            case w.AudienceSelectorSections.ROLES:
+                            case H.AudienceSelectorSections.ROLES:
                                 return (0, l.jsx)(z, {
                                     title: G.default.Messages.ROLES
                                 }, "roles-title");
-                            case w.AudienceSelectorSections.MEMBERS:
+                            case H.AudienceSelectorSections.MEMBERS:
                                 return (0, l.jsx)(z, {
                                     title: G.default.Messages.MEMBERS
                                 }, "members-title")
@@ -816,12 +852,12 @@
                     isPrivateGuildChannel: n,
                     roles: d,
                     members: u
-                } = e, c = (0, r.useStateFromStores)([p.default], () => p.default.can(B.Permissions.ADMINISTRATOR, t)), h = y.default.canEveryoneRole(B.Permissions.VIEW_CHANNEL, t), E = y.default.canEveryoneRole(B.Permissions.ADMINISTRATOR, t), f = {
+                } = e, c = (0, r.useStateFromStores)([p.default], () => p.default.can(U.Permissions.ADMINISTRATOR, t)), h = y.default.canEveryoneRole(U.Permissions.VIEW_CHANNEL, t), E = y.default.canEveryoneRole(U.Permissions.ADMINISTRATOR, t), f = {
                     title: G.default.Messages.PRIVATE_CHANNEL,
                     subtitle: G.default.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION,
                     formLabel: G.default.Messages.FORM_LABEL_CHANNEL_PERMISSIONS
                 };
-                return a.isCategory() ? (f.title = G.default.Messages.PRIVATE_CATEGORY, f.subtitle = G.default.Messages.CHANNEL_PERMISSIONS_PRIVATE_CATEGORY_DESCRIPTION, f.formLabel = G.default.Messages.FORM_LABEL_CATEGORY_PERMISSIONS) : a.type === U.ChannelTypes.GUILD_VOICE && (f.subtitle = G.default.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION_VOICE), (0, l.jsxs)("div", {
+                return a.isCategory() ? (f.title = G.default.Messages.PRIVATE_CATEGORY, f.subtitle = G.default.Messages.CHANNEL_PERMISSIONS_PRIVATE_CATEGORY_DESCRIPTION, f.formLabel = G.default.Messages.FORM_LABEL_CATEGORY_PERMISSIONS) : a.type === B.ChannelTypes.GUILD_VOICE && (f.subtitle = G.default.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION_VOICE), (0, l.jsxs)("div", {
                     className: i(V.settingCard, {
                         [V.active]: n
                     }),
@@ -922,7 +958,7 @@
                     }, {}), l = F.getExistingRolesRows(e, t, t.accessPermissions, n), a = F.getExistingMembersRows(s, t, e, t.accessPermissions, n), i = F.isPrivateGuildChannel(t, n))
                 }
                 return {
-                    canSyncChannel: null != s && p.default.can(B.Permissions.MANAGE_ROLES, s),
+                    canSyncChannel: null != s && p.default.can(U.Permissions.MANAGE_ROLES, s),
                     category: s,
                     channel: t,
                     filteredMembers: a,
@@ -943,11 +979,11 @@
                     isPrivateGuildChannel: h,
                     locked: E,
                     permissionUpdates: f
-                } = e, [g, T] = a.useState(!y.default.canEveryoneRole(B.Permissions.SEND_MESSAGES, i));
+                } = e, [g, T] = a.useState(!y.default.canEveryoneRole(U.Permissions.SEND_MESSAGES, i));
                 if (null == i || null == u) return null;
 
                 function S() {
-                    F.toggleChannelEveryonePermission(i, B.Permissions.SEND_MESSAGES, g), T(!g)
+                    F.toggleChannelEveryonePermission(i, U.Permissions.SEND_MESSAGES, g), T(!g)
                 }
 
                 function N() {
@@ -984,13 +1020,13 @@
                         children: C.title
                     }), (0, l.jsx)(o.FormText, {
                         children: C.subtitle
-                    }), null != n && t ? E ? (0, l.jsx)(H.default, {
+                    }), null != n && t ? E ? (0, l.jsx)(w.default, {
                         canSync: !1,
                         icon: j.default,
                         noticeText: G.default.Messages.CHANNEL_LOCKED_TO_CATEGORY.format({
                             categoryName: n.name
                         })
-                    }) : (0, l.jsx)(H.default, {
+                    }) : (0, l.jsx)(w.default, {
                         buttonText: G.default.Messages.SYNC_NOW,
                         canSync: !0,
                         icon: D.default,
@@ -1137,7 +1173,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return w
+                    return H
                 }
             });
             var l = s("37983"),
@@ -1184,7 +1220,7 @@
                     location: s
                 })
             }
-            class H extends a.PureComponent {
+            class w extends a.PureComponent {
                 componentDidMount() {
                     P(this.props.section, null, this.props.analyticsLocation)
                 }
@@ -1318,7 +1354,7 @@
                 }
             }
 
-            function w() {
+            function H() {
                 let {
                     channel: e,
                     analyticsLocation: t
@@ -1331,7 +1367,7 @@
                     canManageRoles: null != e && x.default.can(y.Permissions.MANAGE_ROLES, e),
                     canManageWebhooks: null != e && x.default.can(y.Permissions.MANAGE_WEBHOOKS, e)
                 })), E = (0, n.useStateFromStores)([M.default], () => M.default.getChannel(null == e ? void 0 : e.parent_id));
-                return (0, l.jsx)(H, {
+                return (0, l.jsx)(w, {
                     channel: e,
                     category: E,
                     canManageChannels: (null == e ? void 0 : e.isThread()) ? o : u,
@@ -1499,10 +1535,10 @@
                 F = s("271938"),
                 b = s("492114"),
                 P = s("305961"),
-                H = s("957255"),
-                w = s("402904"),
-                U = s("697218"),
-                B = s("145131"),
+                w = s("957255"),
+                H = s("402904"),
+                B = s("697218"),
+                U = s("145131"),
                 G = s("476765"),
                 V = s("956089"),
                 k = s("404008"),
@@ -1629,7 +1665,7 @@
                         guild: x,
                         isForumPost: A,
                         isOwner: L
-                    } = this.props, v = y.THREAD_CHANNEL_TYPES.has(e.type), D = e.isForumLikeChannel(), F = D && (null === (s = e.availableTags) || void 0 === s ? void 0 : s.every(e => e.moderated)), b = (null === (a = U.default.getCurrentUser()) || void 0 === a ? void 0 : a.isStaff()) === !0, P = y.TOPIC_CHANNEL_TYPES.has(e.type) ? (0, l.jsxs)("div", {
+                    } = this.props, v = y.THREAD_CHANNEL_TYPES.has(e.type), D = e.isForumLikeChannel(), F = D && (null === (s = e.availableTags) || void 0 === s ? void 0 : s.every(e => e.moderated)), b = (null === (a = B.default.getCurrentUser()) || void 0 === a ? void 0 : a.isStaff()) === !0, P = y.TOPIC_CHANNEL_TYPES.has(e.type) ? (0, l.jsxs)("div", {
                         children: [(0, l.jsx)(h.FormItem, {
                             title: D ? et.default.Messages.FORM_LABEL_CHANNEL_GUIDELINES : et.default.Messages.FORM_LABEL_CHANNEL_TOPIC,
                             className: el.marginTop20,
@@ -1669,7 +1705,7 @@
                         }), (0, l.jsx)(h.FormDivider, {
                             className: i(el.marginTop40, el.marginBottom40)
                         })]
-                    }) : null, H = D && b ? (0, l.jsxs)("div", {
+                    }) : null, w = D && b ? (0, l.jsxs)("div", {
                         children: [(0, l.jsx)(h.FormItem, {
                             title: et.default.Messages.FORM_LABEL_CHANNEL_TEMPLATE,
                             className: el.marginTop20,
@@ -1685,7 +1721,7 @@
                         }), (0, l.jsx)(h.FormDivider, {
                             className: i(el.marginTop40, el.marginBottom40)
                         })]
-                    }) : null, w = e.isForumLikeChannel() ? (0, l.jsxs)("div", {
+                    }) : null, H = e.isForumLikeChannel() ? (0, l.jsxs)("div", {
                         children: [(0, l.jsxs)(h.FormItem, {
                             children: [(0, l.jsx)(h.FormTitle, {
                                 id: ea,
@@ -1711,7 +1747,7 @@
                         }), (0, l.jsx)(h.FormDivider, {
                             className: i(el.marginTop40, el.marginBottom40)
                         })]
-                    }) : null, B = e.isForumLikeChannel() ? (0, l.jsxs)("div", {
+                    }) : null, U = e.isForumLikeChannel() ? (0, l.jsxs)("div", {
                         children: [(0, l.jsxs)("div", {
                             className: es.twoColumnSettings,
                             children: [(0, l.jsxs)(h.FormItem, {
@@ -1963,7 +1999,7 @@
                             })
                         }), (0, l.jsx)(h.FormDivider, {
                             className: i(el.marginTop40, el.marginBottom40)
-                        }), P, H, w, B, z, J, G, k, $, ed, eu, eh, ec, eE]
+                        }), P, w, H, U, z, J, G, k, $, ed, eu, eh, ec, eE]
                     })
                 }
                 renderHomeFlags(e) {
@@ -2036,8 +2072,8 @@
                     if (!this.showVoiceSettings()) return null;
                     let a = (0, k.getBitrateLimit)(t, e),
                         n = this.getError("bitrate");
-                    return (0, l.jsxs)(B.default, {
-                        direction: B.default.Direction.VERTICAL,
+                    return (0, l.jsxs)(U.default, {
+                        direction: U.default.Direction.VERTICAL,
                         className: el.marginBottom40,
                         children: [(0, l.jsx)(h.FormTitle, {
                             id: ed,
@@ -2093,8 +2129,8 @@
                         value: Q.VideoQualityMode.FULL,
                         name: et.default.Messages.VIDEO_QUALITY_MODE_FULL
                     }];
-                    return (0, l.jsxs)(B.default, {
-                        direction: B.default.Direction.VERTICAL,
+                    return (0, l.jsxs)(U.default, {
+                        direction: U.default.Direction.VERTICAL,
                         className: el.marginBottom40,
                         children: [(0, l.jsx)(h.FormItem, {
                             title: et.default.Messages.FORM_LABEL_VIDEO_QUALITY,
@@ -2127,8 +2163,8 @@
                     if (!this.showVoiceSettings()) return null;
                     let s = this.getError("user_limit"),
                         a = e.isGuildStageVoice() ? Q.MAX_STAGE_VOICE_USER_LIMIT : Q.MAX_VOICE_USER_LIMIT;
-                    return (0, l.jsxs)(B.default, {
-                        direction: B.default.Direction.VERTICAL,
+                    return (0, l.jsxs)(U.default, {
+                        direction: U.default.Direction.VERTICAL,
                         className: el.marginBottom40,
                         children: [(0, l.jsx)(h.FormTitle, {
                             id: eh,
@@ -2179,8 +2215,8 @@
                         })
                     }
                     let r = null !== (t = e.rtcRegion) && void 0 !== t ? t : eg;
-                    return (0, l.jsxs)(B.default, {
-                        direction: B.default.Direction.VERTICAL,
+                    return (0, l.jsxs)(U.default, {
+                        direction: U.default.Direction.VERTICAL,
                         children: [(0, l.jsx)(h.FormTitle, {
                             children: et.default.Messages.FORM_LABEL_REGION_OVERRIDE
                         }), (0, l.jsx)(h.SingleSelect, {
@@ -2199,8 +2235,8 @@
                     let {
                         theme: a
                     } = this.props;
-                    return t = e.type === Q.ChannelTypes.GUILD_CATEGORY ? (0, c.isThemeDark)(a) ? s("23141") : s("182418") : (0, c.isThemeDark)(a) ? s("34705") : s("164370"), (0, l.jsx)(B.default, {
-                        justify: B.default.Justify.CENTER,
+                    return t = e.type === Q.ChannelTypes.GUILD_CATEGORY ? (0, c.isThemeDark)(a) ? s("23141") : s("182418") : (0, c.isThemeDark)(a) ? s("34705") : s("164370"), (0, l.jsx)(U.default, {
+                        justify: U.default.Justify.CENTER,
                         className: el.marginTop60,
                         children: (0, l.jsx)("img", {
                             alt: "",
@@ -2430,15 +2466,15 @@
                     channel: t,
                     submitting: s,
                     subsection: n
-                } = (0, d.useStateFromStoresObject)([b.default], () => b.default.getProps()), i = (0, d.useStateFromStores)([w.default], () => {
+                } = (0, d.useStateFromStoresObject)([b.default], () => b.default.getProps()), i = (0, d.useStateFromStores)([H.default], () => {
                     var e;
-                    return w.default.getRegions(null !== (e = null == t ? void 0 : t.getGuildId()) && void 0 !== e ? e : null)
+                    return H.default.getRegions(null !== (e = null == t ? void 0 : t.getGuildId()) && void 0 !== e ? e : null)
                 }), r = (0, d.useStateFromStores)([D.default], () => D.default.theme), o = (0, d.useStateFromStores)([P.default], () => P.default.getGuild(null == t ? void 0 : t.getGuildId())), u = (0, L.useCanManageThread)(t), c = (0, L.useIsThreadModerator)(t), {
                     canManageChannels: h,
                     canSendMessages: E
-                } = (0, d.useStateFromStoresObject)([H.default], () => ({
-                    canManageChannels: H.default.can(Q.Permissions.MANAGE_CHANNELS, t),
-                    canSendMessages: H.default.can(Q.Permissions.SEND_MESSAGES, t)
+                } = (0, d.useStateFromStoresObject)([w.default], () => ({
+                    canManageChannels: w.default.can(Q.Permissions.MANAGE_CHANNELS, t),
+                    canSendMessages: w.default.can(Q.Permissions.SEND_MESSAGES, t)
                 })), f = (0, S.default)(t), m = F.default.getId(), g = (0, x.useForumChannelStoreApi)(), N = null == t ? void 0 : t.id, C = (0, T.useChannelSummariesExperiment)(t, !1, !0), _ = a.useCallback(e => {
                     null != N && g.getState().setLayoutType(N, e)
                 }, [N, g]);
@@ -2506,15 +2542,15 @@
                 F = s("465305"),
                 b = s("991170"),
                 P = s("158998"),
-                H = s("51944"),
-                w = s("49111"),
-                U = s("782340"),
-                B = s("896888");
+                w = s("51944"),
+                H = s("49111"),
+                B = s("782340"),
+                U = s("896888");
             let G = o.default.connectStores([p.default, M.default], () => {
                 let e = M.default.getChannel(),
                     t = p.default.formState;
                 return {
-                    submitting: t === w.FormStates.SUBMITTING,
+                    submitting: t === H.FormStates.SUBMITTING,
                     onReset() {
                         (0, E.init)()
                     },
@@ -2579,40 +2615,40 @@
                                 null != s && (e = s.name)
                             }
                         }
-                        H.showPermissionLockoutModal(e)
+                        w.showPermissionLockoutModal(e)
                     }
                 }, S = () => {
                     let e = f();
                     c.default.show({
-                        title: U.default.Messages.SETTINGS_PERMISSIONS_DELETE_TITLE,
-                        body: U.default.Messages.SETTINGS_PERMISSIONS_DELETE_BODY.format({
+                        title: B.default.Messages.SETTINGS_PERMISSIONS_DELETE_TITLE,
+                        body: B.default.Messages.SETTINGS_PERMISSIONS_DELETE_BODY.format({
                             name: e
                         }),
-                        cancelText: U.default.Messages.CANCEL,
+                        cancelText: B.default.Messages.CANCEL,
                         onConfirm: () => h.default.clearPermissionOverwrite(i, d)
                     })
                 }, N = e => {
-                    let t = I.default.can(w.Permissions.ADMINISTRATOR, a) || I.default.can(w.Permissions.MANAGE_ROLES, s, void 0, void 0, !0);
-                    return s.isGuildStageVoice() && C.STAGE_CHANNEL_DISABLED_PERMISSIONS.has(e) ? U.default.Messages.STAGE_CHANNEL_CANNOT_OVERWRITE_PERMISSION : !((!r.default.equals(e, w.Permissions.MANAGE_ROLES) || t) && (null == e || I.default.can(e, a) || t)) && U.default.Messages.HELP_MISSING_PERMISSION
-                }, _ = d === n, M = s.isForumLikeChannel() && r.default.has(t.deny, w.Permissions.SEND_MESSAGES), x = r.default.has(t.deny, w.Permissions.SEND_MESSAGES), O = r.default.has(t.deny, w.Permissions.READ_MESSAGE_HISTORY), v = F.default.generateChannelPermissionSpec(n, s, _, {
+                    let t = I.default.can(H.Permissions.ADMINISTRATOR, a) || I.default.can(H.Permissions.MANAGE_ROLES, s, void 0, void 0, !0);
+                    return s.isGuildStageVoice() && C.STAGE_CHANNEL_DISABLED_PERMISSIONS.has(e) ? B.default.Messages.STAGE_CHANNEL_CANNOT_OVERWRITE_PERMISSION : !((!r.default.equals(e, H.Permissions.MANAGE_ROLES) || t) && (null == e || I.default.can(e, a) || t)) && B.default.Messages.HELP_MISSING_PERMISSION
+                }, _ = d === n, M = s.isForumLikeChannel() && r.default.has(t.deny, H.Permissions.SEND_MESSAGES), x = r.default.has(t.deny, H.Permissions.SEND_MESSAGES), O = r.default.has(t.deny, H.Permissions.READ_MESSAGE_HISTORY), v = F.default.generateChannelPermissionSpec(n, s, _, {
                     createPostsDisabled: M,
                     sendMessagesDisabled: x,
                     readMessageHistoryDisabled: O
                 });
                 return (0, l.jsxs)(L.default.Content, {
-                    className: B.layoutStyle,
+                    className: U.layoutStyle,
                     children: [v.map((e, s) => (0, l.jsx)(m.default, {
                         spec: e,
                         allow: t.allow,
                         deny: t.deny,
                         onChange: g,
                         permissionRender: N,
-                        className: B.permissionsForm
+                        className: U.permissionsForm
                     }, s)), n === d ? null : (0, l.jsx)(u.Button, {
                         look: u.Button.Looks.OUTLINED,
                         color: u.Button.Colors.RED,
                         onClick: S,
-                        children: U.default.Messages.REMOVE_ROLE_OR_USER.format({
+                        children: B.default.Messages.REMOVE_ROLE_OR_USER.format({
                             name: f()
                         })
                     })]
@@ -2626,9 +2662,9 @@
                     user: a
                 } = e, n = a.getAvatarURL(t, 32), i = y.default.getNickname(t, s, a), r = P.default.useUserTag(a), o = null, d = null;
                 return o = null != i ? i : a.hasAvatarForGuild(t) ? a.username : r, (null != i || a.hasAvatarForGuild(t)) && (d = (0, l.jsxs)("div", {
-                    className: B.userRowSubText,
+                    className: U.userRowSubText,
                     children: [a.hasAvatarForGuild(t) ? (0, l.jsx)(u.Avatar, {
-                        className: B.userRowSubAvatar,
+                        className: U.userRowSubAvatar,
                         size: u.AvatarSizes.SIZE_16,
                         src: a.getAvatarURL(void 0, 16),
                         "aria-label": a.username
@@ -2638,16 +2674,16 @@
                         children: r
                     })]
                 })), (0, l.jsxs)("div", {
-                    className: B.inline,
+                    className: U.inline,
                     children: [(0, l.jsx)(u.Avatar, {
                         size: u.AvatarSizes.SIZE_32,
                         src: n,
                         "aria-label": a.username,
-                        className: B.userRowAvatar
+                        className: U.userRowAvatar
                     }), (0, l.jsxs)("div", {
-                        className: B.userRowText,
+                        className: U.userRowText,
                         children: [(0, l.jsx)(u.Text, {
-                            className: B.userRowText,
+                            className: U.userRowText,
                             variant: "text-md/normal",
                             children: o
                         }), d]
@@ -2669,10 +2705,10 @@
                     position: d
                 } = e, u = (0, o.useStateFromStores)([x.default], () => x.default.getMemberIds(t.id));
                 return (0, l.jsx)(O.default, {
-                    label: U.default.Messages.OVERWRITE_AUTOCOMPLETE_LABEL,
-                    placeholder: U.default.Messages.OVERWRITE_AUTOCOMPLETE_PLACEHOLDER,
-                    "aria-label": U.default.Messages.OVERWRITE_AUTOCOMPLETE_A11Y_LABEL,
-                    sections: [U.default.Messages.ROLES, U.default.Messages.MEMBERS],
+                    label: B.default.Messages.OVERWRITE_AUTOCOMPLETE_LABEL,
+                    placeholder: B.default.Messages.OVERWRITE_AUTOCOMPLETE_PLACEHOLDER,
+                    "aria-label": B.default.Messages.OVERWRITE_AUTOCOMPLETE_A11Y_LABEL,
+                    sections: [B.default.Messages.ROLES, B.default.Messages.MEMBERS],
                     onRenderResult: e => {
                         if (W(e)) {
                             let t;
@@ -2752,21 +2788,21 @@
                                 decoration: "never"
                             }),
                             children: (0, l.jsxs)("div", {
-                                className: B.inline,
+                                className: U.inline,
                                 children: [(0, l.jsx)(u.Avatar, {
                                     size: u.AvatarSizes.SIZE_20,
                                     src: t,
                                     "aria-label": e.username,
-                                    className: B.xsmallAvatar
+                                    className: U.xsmallAvatar
                                 }), (0, l.jsx)("span", {
-                                    className: B.username,
+                                    className: U.username,
                                     children: P.default.getUserTag(e)
                                 })]
                             })
                         }, "".concat(n, "-").concat(e.id))
                     }).value();
                 return (0, l.jsx)(L.default.Sidebar, {
-                    className: B.layoutStyle,
+                    className: U.layoutStyle,
                     scrollable: !0,
                     children: (0, l.jsxs)(u.TabBar, {
                         onItemSelect: E.selectPermission,
@@ -2781,12 +2817,12 @@
                                 children: t => (0, l.jsx)(u.TabBar.Header, {
                                     ...t,
                                     children: (0, l.jsxs)("div", {
-                                        className: B.sidebarHeaderDefault,
+                                        className: U.sidebarHeaderDefault,
                                         children: [(0, l.jsxs)("span", {
-                                            children: [U.default.Messages.ROLES, "/", U.default.Messages.MEMBERS]
+                                            children: [B.default.Messages.ROLES, "/", B.default.Messages.MEMBERS]
                                         }), (0, l.jsx)("img", {
                                             alt: "",
-                                            className: B.sidebarHeader,
+                                            className: U.sidebarHeader,
                                             src: e
                                         })]
                                     })
@@ -2801,9 +2837,9 @@
                             }), (0, l.jsx)(u.FormText, {
                                 type: u.FormTextTypes.DESCRIPTION,
                                 children: (0, l.jsx)(u.Anchor, {
-                                    href: D.default.getArticleURL(w.HelpdeskArticles.PERMISSIONS_TUTORIAL),
+                                    href: D.default.getArticleURL(H.HelpdeskArticles.PERMISSIONS_TUTORIAL),
                                     target: "_blank",
-                                    children: U.default.Messages.PERMISSION_HELPDESK
+                                    children: B.default.Messages.PERMISSION_HELPDESK
                                 })
                             })]
                         })]
@@ -2820,7 +2856,7 @@
                 if (null == a || null == e || null == t || null == s) return null;
                 let n = t[s];
                 return (0, l.jsxs)(L.default, {
-                    className: B.container,
+                    className: U.container,
                     children: [(0, l.jsx)(z, {}), (0, l.jsx)(V, {
                         overwrite: n
                     })]
@@ -3677,38 +3713,39 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return n
+                    return r
                 }
             });
             var l = s("37983");
             s("884691");
-            var a = s("75196");
-
-            function n(e) {
-                let {
-                    width: t = 24,
-                    height: s = 24,
-                    color: n = "currentColor",
-                    className: i,
-                    foreground: r,
-                    ...o
-                } = e;
-                return (0, l.jsxs)("svg", {
-                    ...(0, a.default)(o),
-                    className: i,
-                    width: t,
-                    height: s,
-                    viewBox: "0 0 24 24",
-                    children: [(0, l.jsx)("path", {
-                        d: "M0 0h24v24H0z",
-                        fill: "none"
-                    }), (0, l.jsx)("path", {
-                        className: r,
-                        fill: n,
-                        d: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z"
-                    })]
-                })
-            }
+            var a = s("469563"),
+                n = s("833222"),
+                i = s("75196"),
+                r = (0, a.replaceIcon)(function(e) {
+                    let {
+                        width: t = 24,
+                        height: s = 24,
+                        color: a = "currentColor",
+                        className: n,
+                        foreground: r,
+                        ...o
+                    } = e;
+                    return (0, l.jsxs)("svg", {
+                        ...(0, i.default)(o),
+                        className: n,
+                        width: t,
+                        height: s,
+                        viewBox: "0 0 24 24",
+                        children: [(0, l.jsx)("path", {
+                            d: "M0 0h24v24H0z",
+                            fill: "none"
+                        }), (0, l.jsx)("path", {
+                            className: r,
+                            fill: a,
+                            d: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z"
+                        })]
+                    })
+                }, n.DenyIcon)
         },
         447089: function(e, t, s) {
             "use strict";

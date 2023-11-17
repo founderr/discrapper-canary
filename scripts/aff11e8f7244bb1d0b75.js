@@ -70,8 +70,8 @@
                 u = s("188525"),
                 c = s("306160"),
                 d = s("782340"),
-                E = s("166392");
-            class f extends l.PureComponent {
+                f = s("166392");
+            class E extends l.PureComponent {
                 componentWillUnmount() {
                     this._timeout.stop()
                 }
@@ -91,7 +91,7 @@
                             value: t,
                             inputClassName: r
                         }), (0, n.jsx)(i.Button, {
-                            className: E.button,
+                            className: f.button,
                             onClick: this.handleCopy,
                             size: i.Button.Sizes.MIN,
                             color: this.getVerticalButtonColor(a),
@@ -133,17 +133,17 @@
                     }, this._timeout = new a.Timeout, this.handleCopy = this.handleCopy.bind(this)
                 }
             }
-            f.defaultProps = {
+            E.defaultProps = {
                 isVertical: !1,
                 delay: 300
             };
-            var _ = f
+            var _ = E
         },
         45299: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return E
+                    return f
                 }
             }), s("222007");
             var n = s("37983"),
@@ -155,12 +155,12 @@
                 u = s("49111"),
                 c = s("782340"),
                 d = s("317404"),
-                E = function(e) {
+                f = function(e) {
                     var t;
                     let {
                         message: s,
-                        errorMessage: E,
-                        submitting: f,
+                        errorMessage: f,
+                        submitting: E,
                         onReset: _,
                         onSave: L,
                         onSaveText: C,
@@ -170,15 +170,15 @@
                         saveButtonTooltip: m
                     } = e, p = l.useRef(null), [{
                         spring: g
-                    }, T] = (0, r.useSpring)(() => ({
+                    }, R] = (0, r.useSpring)(() => ({
                         spring: 0
                     }));
                     l.useEffect(() => {
                         function e() {
-                            T({
+                            R({
                                 spring: 1,
                                 config: r.config.gentle
-                            }), T({
+                            }), R({
                                 spring: 0,
                                 config: r.config.gentle,
                                 delay: 1e3
@@ -187,8 +187,8 @@
                         return i.ComponentDispatch.subscribe(u.ComponentActions.EMPHASIZE_NOTICE, e), () => {
                             i.ComponentDispatch.unsubscribe(u.ComponentActions.EMPHASIZE_NOTICE, e)
                         }
-                    }, [T]);
-                    let R = g.to({
+                    }, [R]);
+                    let T = g.to({
                             range: [0, 1],
                             output: [(0, a.useToken)(o.default.colors.TEXT_NORMAL).hex(), (0, a.useToken)(o.default.unsafe_rawColors.WHITE_500).hex()]
                         }),
@@ -212,9 +212,9 @@
                                     children: (0, n.jsx)(r.animated.div, {
                                         className: d.message,
                                         style: {
-                                            color: null != E ? v : R
+                                            color: null != f ? v : T
                                         },
-                                        children: null !== (t = null != E ? E : s) && void 0 !== t ? t : c.default.Messages.SETTINGS_NOTICE_MESSAGE
+                                        children: null !== (t = null != f ? f : s) && void 0 !== t ? t : c.default.Messages.SETTINGS_NOTICE_MESSAGE
                                     })
                                 }), (0, n.jsxs)("div", {
                                     className: d.actions,
@@ -226,7 +226,7 @@
                                         onClick: _,
                                         children: (0, n.jsx)(r.animated.span, {
                                             style: {
-                                                color: R
+                                                color: T
                                             },
                                             children: null != I ? I : c.default.Messages.RESET
                                         })
@@ -235,7 +235,7 @@
                                         children: e => (0, n.jsx)(a.Button, {
                                             size: a.Button.Sizes.SMALL,
                                             color: null != h ? h : a.Button.Colors.GREEN,
-                                            submitting: f,
+                                            submitting: E,
                                             disabled: N,
                                             onClick: L,
                                             ...e,
@@ -247,6 +247,42 @@
                         })
                     })
                 }
+        },
+        833222: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                DenyIcon: function() {
+                    return o
+                }
+            });
+            var n = s("37983");
+            s("884691");
+            var l = s("669491"),
+                r = s("75196");
+            let o = e => {
+                let {
+                    width: t = 24,
+                    height: s = 24,
+                    color: o = l.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: a = "",
+                    ...i
+                } = e;
+                return (0, n.jsx)("svg", {
+                    ...(0, r.default)(i),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: s,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: (0, n.jsx)("path", {
+                        fill: "string" == typeof o ? o : o.css,
+                        fillRule: "evenodd",
+                        d: "M23 12c0 6.075-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1s11 4.925 11 11Zm-2 0a9 9 0 0 1-14.618 7.032l12.65-12.65A8.962 8.962 0 0 1 21 12ZM4.968 17.618l12.65-12.65a9 9 0 0 0-12.65 12.65Z",
+                        clipRule: "evenodd",
+                        className: a
+                    })
+                })
+            }
         },
         639055: function(e, t, s) {
             "use strict";
@@ -315,12 +351,12 @@
                 u = s("719923"),
                 c = s("646718"),
                 d = s("782340"),
-                E = s("157997");
-            let f = e => {
+                f = s("157997");
+            let E = e => {
                 let {
                     onOpenPremiumClick: t
                 } = e, s = (0, n.jsx)(r.Button, {
-                    className: E.tier0Button,
+                    className: f.tier0Button,
                     color: r.Button.Colors.BRAND,
                     look: r.Button.Looks.INVERTED,
                     onClick: () => {
@@ -329,13 +365,13 @@
                     children: d.default.Messages.LEARN_MORE
                 });
                 return (0, n.jsxs)("div", {
-                    className: E.tier0Container,
+                    className: f.tier0Container,
                     children: [(0, n.jsx)(r.Heading, {
-                        className: E.tier0Heading,
+                        className: f.tier0Heading,
                         variant: "heading-xxl/extrabold",
                         children: d.default.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_HEADING_SECONDARY
                     }), (0, n.jsx)(a.Tier2Card, {
-                        className: E.tier0Card,
+                        className: f.tier0Card,
                         ctaButton: s,
                         featureSet: a.Tier2FeatureSet.BOOSTING,
                         showWumpus: !0,
@@ -347,7 +383,7 @@
                 let {
                     onOpenPremiumClick: t
                 } = e, s = (0, l.useStateFromStores)([i.default], () => i.default.getCurrentUser());
-                return u.default.isPremium(s, c.PremiumTypes.TIER_2) ? null : (0, n.jsx)(f, {
+                return u.default.isPremium(s, c.PremiumTypes.TIER_2) ? null : (0, n.jsx)(E, {
                     onOpenPremiumClick: t
                 })
             }
@@ -369,8 +405,8 @@
                 u = s("697218"),
                 c = s("10514"),
                 d = s("521012"),
-                E = s("719923"),
-                f = s("153160"),
+                f = s("719923"),
+                E = s("153160"),
                 _ = s("646718"),
                 L = s("782340"),
                 C = s("545627"),
@@ -394,8 +430,8 @@
                                     guildBoostingPlanId: l,
                                     interval: r,
                                     intervalCount: o
-                                } = e, a = E.default.getDefaultPrice(l, E.default.isPremium(t)), i = E.default.getDefaultPrice(l, !1), u = (0, f.formatRate)((0, f.formatPrice)(a.amount, a.currency), r, o), c = (0, f.formatRate)((0, f.formatPrice)(i.amount, i.currency), r, o);
-                                return E.default.isPremium(t, _.PremiumTypes.TIER_2) ? L.default.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_SUBHEADING_TIER_2.format({
+                                } = e, a = f.default.getDefaultPrice(l, f.default.isPremium(t)), i = f.default.getDefaultPrice(l, !1), u = (0, E.formatRate)((0, E.formatPrice)(a.amount, a.currency), r, o), c = (0, E.formatRate)((0, E.formatPrice)(i.amount, i.currency), r, o);
+                                return f.default.isPremium(t, _.PremiumTypes.TIER_2) ? L.default.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_SUBHEADING_TIER_2.format({
                                     price: u,
                                     originalPrice: c,
                                     originalPriceHook: (e, t) => (0, n.jsx)("span", {
@@ -403,15 +439,15 @@
                                         children: e
                                     }, t),
                                     freeSubscriptionCount: _.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
-                                    discountPercent: (0, f.formatPercent)(s, _.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
-                                }) : E.default.isPremium(t, _.PremiumTypes.TIER_1) ? L.default.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_SUBHEADING_TIER_1.format({
+                                    discountPercent: (0, E.formatPercent)(s, _.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+                                }) : f.default.isPremium(t, _.PremiumTypes.TIER_1) ? L.default.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_SUBHEADING_TIER_1.format({
                                     price: u,
                                     originalPrice: c,
                                     originalPriceHook: (e, t) => (0, n.jsx)("span", {
                                         className: C.originalPrice,
                                         children: e
                                     }, t),
-                                    discountPercent: (0, f.formatPercent)(s, _.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+                                    discountPercent: (0, E.formatPercent)(s, _.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
                                 }) : L.default.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_SUBHEADING.format({
                                     price: u
                                 })
@@ -448,19 +484,19 @@
                     Icon: s,
                     title: c,
                     body: d,
-                    onClose: E
-                } = e, f = (0, a.useUID)();
+                    onClose: f
+                } = e, E = (0, a.useUID)();
                 return (0, n.jsxs)(l.ModalRoot, {
                     className: u.container,
                     transitionState: t,
-                    "aria-labelledby": f,
+                    "aria-labelledby": E,
                     children: [(0, n.jsxs)(l.ModalContent, {
                         children: [(0, n.jsx)(o.default, {
                             Icon: s
                         }), (0, n.jsx)(r.default, {
                             size: 24
                         }), (0, n.jsx)(l.Heading, {
-                            id: f,
+                            id: E,
                             className: u.title,
                             variant: "heading-xl/semibold",
                             children: c
@@ -476,7 +512,7 @@
                     }), (0, n.jsx)(l.Button, {
                         size: l.Button.Sizes.MEDIUM,
                         grow: !1,
-                        onClick: E,
+                        onClick: f,
                         children: i.default.Messages.GOT_IT
                     })]
                 })
@@ -590,10 +626,10 @@
             "use strict";
             s.r(t), s.d(t, {
                 WarningBlockButtonPosition: function() {
-                    return E
+                    return f
                 },
                 default: function() {
-                    return f
+                    return E
                 }
             });
             var n = s("37983");
@@ -606,17 +642,17 @@
                 u = s("223984"),
                 c = s("417186"),
                 d = s("946790");
-            let E = {
+            let f = {
                 RIGHT: d.horizontalStatusWarningBlock,
                 BOTTOM: d.verticalStatusWarningBlock
             };
 
-            function f(e) {
+            function E(e) {
                 let {
                     className: t,
                     color: s = u.MessageBlockColors.YELLOW,
-                    buttonPosition: l = E.BOTTOM,
-                    notice: f,
+                    buttonPosition: l = f.BOTTOM,
+                    notice: E,
                     ctaLabel: _,
                     ctaLoading: L,
                     ctaDisabled: C,
@@ -633,7 +669,7 @@
                         children: [(0, n.jsx)(a.Text, {
                             variant: "text-sm/normal",
                             color: "interactive-active",
-                            children: f
+                            children: E
                         }), null != _ && null != h && (0, n.jsx)("div", {
                             className: d.ctaButtonContainer,
                             children: (0, n.jsx)(a.Button, {
@@ -673,10 +709,10 @@
                     return g
                 },
                 CustomColorPicker: function() {
-                    return T
+                    return R
                 },
                 default: function() {
-                    return R
+                    return T
                 }
             }), s("222007");
             var n = s("37983"),
@@ -688,8 +724,8 @@
                 u = s("77078"),
                 c = s("248559"),
                 d = s("449918"),
-                E = s("526975"),
-                f = s("36694"),
+                f = s("526975"),
+                E = s("36694"),
                 _ = s("422403"),
                 L = s("664336"),
                 C = s("49111"),
@@ -704,10 +740,10 @@
                     isCustom: l = !1,
                     isSelected: r = !1,
                     disabled: c = !1,
-                    style: E = {},
+                    style: f = {},
                     onClick: L,
                     "aria-label": I
-                } = e, N = (0, a.useListItem)("color-".concat(t)), m = null != t ? (0, i.int2hex)(t) : E.backgroundColor, p = !1;
+                } = e, N = (0, a.useListItem)("color-".concat(t)), m = null != t ? (0, i.int2hex)(t) : f.backgroundColor, p = !1;
                 return l && !r ? p = !0 : (l || r) && (p = (0, i.getDarkness)(t) > .1), (0, n.jsx)(u.FocusRing, {
                     offset: -2,
                     children: (0, n.jsxs)("button", {
@@ -721,7 +757,7 @@
                         disabled: c,
                         onClick: () => null == L ? void 0 : L(t),
                         style: {
-                            ...E,
+                            ...f,
                             backgroundColor: m
                         },
                         "aria-label": null != I ? I : m,
@@ -735,7 +771,7 @@
                         }) : null, function() {
                             let e = 16,
                                 t = 16;
-                            if ((l || s) && (e = 32, t = 24), r) return (0, n.jsx)(f.default, {
+                            if ((l || s) && (e = 32, t = 24), r) return (0, n.jsx)(E.default, {
                                 width: e,
                                 height: t,
                                 color: (0, d.getColor)(p ? C.Color.WHITE_500 : C.Color.BLACK_500)
@@ -778,7 +814,7 @@
                     })
                 }
             }
-            let T = l.memo(e => {
+            let R = l.memo(e => {
                 let {
                     value: t,
                     onChange: s,
@@ -786,7 +822,7 @@
                     suggestedColors: o,
                     middle: a,
                     footer: d,
-                    showEyeDropper: f
+                    showEyeDropper: E
                 } = e, C = (0, c.default)(), [N, m] = l.useState(() => {
                     let e = null != t ? t : 0,
                         s = (0, i.int2hex)(e);
@@ -828,35 +864,35 @@
                             } = await C.open();
                             p(e)
                         } catch {}
-                    }, T = e => {
+                    }, R = e => {
                         m(t => ({
                             ...t,
                             pending: e,
                             input: e
                         }))
-                    }, R = e => {
+                    }, T = e => {
                         s((0, i.hex2int)(e))
                     };
                 return (0, n.jsxs)(u.Dialog, {
                     "aria-label": I.default.Messages.PICK_A_COLOR,
                     className: h.customColorPicker,
-                    children: [(0, n.jsx)(E.default, {
+                    children: [(0, n.jsx)(f.default, {
                         onChange: e => {
-                            let {
-                                hex: t
-                            } = e;
-                            return T(t)
-                        },
-                        onChangeComplete: e => {
                             let {
                                 hex: t
                             } = e;
                             return R(t)
                         },
+                        onChangeComplete: e => {
+                            let {
+                                hex: t
+                            } = e;
+                            return T(t)
+                        },
                         color: N.pending
                     }), a, (0, n.jsxs)("div", {
                         className: h.customColorPickerInputContainer,
-                        children: [f && null != C && (0, n.jsx)(L.Icon, {
+                        children: [E && null != C && (0, n.jsx)(L.Icon, {
                             onClick: g,
                             tooltip: I.default.Messages.PICK_A_COLOR_FROM_THE_PAGE,
                             tooltipPosition: "top",
@@ -882,7 +918,7 @@
                 })
             });
 
-            function R(e) {
+            function T(e) {
                 let {
                     className: t,
                     defaultColor: s,
@@ -892,8 +928,8 @@
                     disabled: u,
                     onChange: c,
                     renderDefaultButton: d,
-                    renderCustomButton: E,
-                    colorContainerClassName: f
+                    renderCustomButton: f,
+                    colorContainerClassName: E
                 } = e, _ = e => (0, n.jsx)("div", {
                     className: h.colorPickerRow,
                     children: e.map(e => (0, n.jsx)(m, {
@@ -921,7 +957,7 @@
                                 ref: r,
                                 ...a,
                                 children: [(0, n.jsx)("div", {
-                                    className: o(h.defaultContainer, f),
+                                    className: o(h.defaultContainer, E),
                                     children: d({
                                         value: i,
                                         color: s,
@@ -929,8 +965,8 @@
                                         disabled: u
                                     })
                                 }), (0, n.jsx)("div", {
-                                    className: o(h.customContainer, f),
-                                    children: E({
+                                    className: o(h.customContainer, E),
+                                    children: f({
                                         value: i,
                                         customColor: l,
                                         disabled: u
@@ -978,7 +1014,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 CopyInputModes: function() {
-                    return E
+                    return f
                 },
                 default: function() {
                     return _
@@ -993,12 +1029,12 @@
                 u = s("145131"),
                 c = s("782340"),
                 d = s("863448");
-            let E = {
+            let f = {
                 DEFAULT: "default",
                 SUCCESS: "success",
                 ERROR: "error"
             };
-            class f extends l.PureComponent {
+            class E extends l.PureComponent {
                 select() {
                     var e;
                     null === (e = this.inputRef.current) || void 0 === e || e.select()
@@ -1028,13 +1064,13 @@
                         mode: s,
                         hideMessage: l,
                         className: r,
-                        buttonLook: f
+                        buttonLook: E
                     } = this.props, _ = null != l;
                     switch (s) {
-                        case E.SUCCESS:
+                        case f.SUCCESS:
                             e = a.ButtonColors.GREEN;
                             break;
-                        case E.ERROR:
+                        case f.ERROR:
                             e = a.ButtonColors.RED;
                             break;
                         default:
@@ -1065,7 +1101,7 @@
                                         onClick: this.handleButtonClick,
                                         size: a.ButtonSizes.MIN,
                                         color: e,
-                                        look: f,
+                                        look: E,
                                         children: t
                                     })
                                 })]
@@ -1086,13 +1122,13 @@
                     }
                 }
             }
-            f.contextType = a.FormContext, f.defaultProps = {
+            E.contextType = a.FormContext, E.defaultProps = {
                 supportsCopy: !0,
                 buttonColor: a.ButtonColors.PRIMARY,
                 buttonLook: a.ButtonLooks.FILLED,
-                mode: E.DEFAULT
-            }, f.Modes = E, f.ButtonColors = a.ButtonColors, f.ButtonLooks = a.ButtonLooks;
-            var _ = f
+                mode: f.DEFAULT
+            }, E.Modes = f, E.ButtonColors = a.ButtonColors, E.ButtonLooks = a.ButtonLooks;
+            var _ = E
         },
         430677: function(e, t, s) {
             "use strict";
@@ -1317,38 +1353,39 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return r
+                    return a
                 }
             });
             var n = s("37983");
             s("884691");
-            var l = s("75196");
-
-            function r(e) {
-                let {
-                    width: t = 24,
-                    height: s = 24,
-                    color: r = "currentColor",
-                    className: o,
-                    foreground: a,
-                    ...i
-                } = e;
-                return (0, n.jsxs)("svg", {
-                    ...(0, l.default)(i),
-                    className: o,
-                    width: t,
-                    height: s,
-                    viewBox: "0 0 24 24",
-                    children: [(0, n.jsx)("path", {
-                        d: "M0 0h24v24H0z",
-                        fill: "none"
-                    }), (0, n.jsx)("path", {
-                        className: a,
-                        fill: r,
-                        d: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z"
-                    })]
-                })
-            }
+            var l = s("469563"),
+                r = s("833222"),
+                o = s("75196"),
+                a = (0, l.replaceIcon)(function(e) {
+                    let {
+                        width: t = 24,
+                        height: s = 24,
+                        color: l = "currentColor",
+                        className: r,
+                        foreground: a,
+                        ...i
+                    } = e;
+                    return (0, n.jsxs)("svg", {
+                        ...(0, o.default)(i),
+                        className: r,
+                        width: t,
+                        height: s,
+                        viewBox: "0 0 24 24",
+                        children: [(0, n.jsx)("path", {
+                            d: "M0 0h24v24H0z",
+                            fill: "none"
+                        }), (0, n.jsx)("path", {
+                            className: a,
+                            fill: l,
+                            d: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z"
+                        })]
+                    })
+                }, r.DenyIcon)
         },
         62418: function(e, t, s) {
             "use strict";
@@ -1363,10 +1400,10 @@
                     return d
                 },
                 generateDmSpamOptions: function() {
-                    return E
+                    return f
                 },
                 generateExplicitImageOptions: function() {
-                    return f
+                    return E
                 }
             });
             var n = s("151426");
@@ -1462,7 +1499,7 @@
                 }]
             }
 
-            function E() {
+            function f() {
                 return [{
                     name: i.default.Messages.USER_DM_SPAM_FILTER_FRIENDS_AND_NON_FRIENDS,
                     desc: i.default.Messages.USER_DM_SPAM_FILTER_FRIENDS_AND_NON_FRIENDS_HELP,
@@ -1481,7 +1518,7 @@
                 }]
             }
 
-            function f() {
+            function E() {
                 return [{
                     name: i.default.Messages.USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS_V2,
                     desc: i.default.Messages.USER_EXPLICIT_CONTENT_FILTER_FRIENDS_AND_NON_FRIENDS_HELP_V2,

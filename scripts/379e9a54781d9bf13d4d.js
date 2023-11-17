@@ -4867,7 +4867,9 @@
                             fill: r
                         })
                     })
-                }, l.PencilIcon)
+                }, l.PencilIcon, void 0, {
+                    size: 16
+                })
         },
         132755: function(e, t, n) {
             "use strict";

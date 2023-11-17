@@ -369,6 +369,42 @@
                 })
             }
         },
+        833222: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                DenyIcon: function() {
+                    return i
+                }
+            });
+            var a = r("37983");
+            r("884691");
+            var n = r("669491"),
+                s = r("75196");
+            let i = e => {
+                let {
+                    width: t = 24,
+                    height: r = 24,
+                    color: i = n.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: l = "",
+                    ...u
+                } = e;
+                return (0, a.jsx)("svg", {
+                    ...(0, s.default)(u),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: r,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: (0, a.jsx)("path", {
+                        fill: "string" == typeof i ? i : i.css,
+                        fillRule: "evenodd",
+                        d: "M23 12c0 6.075-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1s11 4.925 11 11Zm-2 0a9 9 0 0 1-14.618 7.032l12.65-12.65A8.962 8.962 0 0 1 21 12ZM4.968 17.618l12.65-12.65a9 9 0 0 0-12.65 12.65Z",
+                        clipRule: "evenodd",
+                        className: l
+                    })
+                })
+            }
+        },
         998460: function(e, t, r) {
             "use strict";
             r.r(t), r.d(t, {
@@ -2485,38 +2521,39 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return s
+                    return l
                 }
             });
             var a = r("37983");
             r("884691");
-            var n = r("75196");
-
-            function s(e) {
-                let {
-                    width: t = 24,
-                    height: r = 24,
-                    color: s = "currentColor",
-                    className: i,
-                    foreground: l,
-                    ...u
-                } = e;
-                return (0, a.jsxs)("svg", {
-                    ...(0, n.default)(u),
-                    className: i,
-                    width: t,
-                    height: r,
-                    viewBox: "0 0 24 24",
-                    children: [(0, a.jsx)("path", {
-                        d: "M0 0h24v24H0z",
-                        fill: "none"
-                    }), (0, a.jsx)("path", {
-                        className: l,
-                        fill: s,
-                        d: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z"
-                    })]
-                })
-            }
+            var n = r("469563"),
+                s = r("833222"),
+                i = r("75196"),
+                l = (0, n.replaceIcon)(function(e) {
+                    let {
+                        width: t = 24,
+                        height: r = 24,
+                        color: n = "currentColor",
+                        className: s,
+                        foreground: l,
+                        ...u
+                    } = e;
+                    return (0, a.jsxs)("svg", {
+                        ...(0, i.default)(u),
+                        className: s,
+                        width: t,
+                        height: r,
+                        viewBox: "0 0 24 24",
+                        children: [(0, a.jsx)("path", {
+                            d: "M0 0h24v24H0z",
+                            fill: "none"
+                        }), (0, a.jsx)("path", {
+                            className: l,
+                            fill: n,
+                            d: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8 0-1.85.63-3.55 1.69-4.9L16.9 18.31C15.55 19.37 13.85 20 12 20zm6.31-3.1L7.1 5.69C8.45 4.63 10.15 4 12 4c4.42 0 8 3.58 8 8 0 1.85-.63 3.55-1.69 4.9z"
+                        })]
+                    })
+                }, s.DenyIcon)
         },
         600785: function(e, t, r) {
             "use strict";

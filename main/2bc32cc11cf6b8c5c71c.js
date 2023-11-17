@@ -7515,7 +7515,9 @@
                             fill: s
                         })
                     })
-                }, s.SendMessageIcon)
+                }, s.SendMessageIcon, void 0, {
+                    size: 16
+                })
         },
         483093: function(e, t, l) {
             "use strict";

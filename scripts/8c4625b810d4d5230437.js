@@ -25824,11 +25824,11 @@
                     });
                     else if (l || A !== J.ParticipantTypes.STREAM || !g || G || x) {
                         if (z) {
-                            let e, i;
-                            p ? (e = o.HeadphonesDenyIcon, i = u.default.colors.STATUS_DANGER) : s ? (e = c.MicrophoneDenyIcon, i = u.default.colors.STATUS_DANGER) : n ? (e = d.HeadphonesSlashIcon, i = u.default.colors.STATUS_DANGER) : l ? (e = c.MicrophoneDenyIcon, i = u.default.colors.STATUS_DANGER) : t && (e = f.MicrophoneSlashIcon, i = u.default.colors.STATUS_DANGER), F = null != e && (0, a.jsx)("div", {
+                            let e;
+                            p ? e = o.HeadphonesDenyIcon : s ? e = c.MicrophoneDenyIcon : n ? e = d.HeadphonesSlashIcon : l ? e = c.MicrophoneDenyIcon : t && (e = f.MicrophoneSlashIcon), F = null != e && (0, a.jsx)("div", {
                                 className: ee.status,
                                 children: (0, a.jsx)(e, {
-                                    color: null != i ? i : "currentColor"
+                                    color: u.default.colors.WHITE
                                 })
                             })
                         } else if (n || t || l) {
@@ -29139,7 +29139,7 @@
                     ...c
                 } = e, f = t || n || l, h = r ? u.CenterControlButton : u.default, p = (0, s.default)(t, n, l, o), m = f ? d : i.default;
                 return (0, a.jsx)(h, {
-                    isActive: f,
+                    isActive: !f,
                     iconComponent: m,
                     label: p,
                     ...c
@@ -32251,10 +32251,10 @@
                 if (n) {
                     let e;
                     if (p) {
-                        let n, r;
-                        s ? n = o.MicrophoneDenyIcon : l ? n = o.MicrophoneDenyIcon : n = d.MicrophoneSlashIcon, r = c.tokens.colors.STATUS_DANGER, e = (0, a.jsx)(n, {
+                        let n;
+                        n = s ? o.MicrophoneDenyIcon : l ? o.MicrophoneDenyIcon : d.MicrophoneSlashIcon, e = (0, a.jsx)(n, {
                             className: i(j.icon, t),
-                            color: null != r ? r : "currentColor"
+                            color: s ? c.tokens.colors.STATUS_DANGER.css : "currentColor"
                         })
                     } else e = (0, a.jsx)(g.default, {
                         className: i(j.icon, t, {
@@ -32274,7 +32274,7 @@
                         let n = h ? r.HeadphonesDenyIcon : u.HeadphonesSlashIcon;
                         e = (0, a.jsx)(n, {
                             className: i(j.icon, t),
-                            color: h || f ? c.tokens.colors.STATUS_DANGER : "currentColor"
+                            color: h ? c.tokens.colors.STATUS_DANGER : "currentColor"
                         })
                     } else e = (0, a.jsx)(S.default, {
                         className: i(j.icon, t, {
