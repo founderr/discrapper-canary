@@ -139,7 +139,7 @@
                         } = (0, l.useInventoryGuildPacksUserExperiment)({
                             autoTrackExposure: !1
                         }),
-                        h = (0, r.useStateFromStores)([a.default], () => a.default.getDisambiguatedEmojiContext(i)),
+                        h = (0, r.useStateFromStores)([a.default], () => a.default.getDisambiguatedEmojiContext(i), [i]),
                         M = (0, r.useStateFromStores)([c.default], () => {
                             var e;
                             return null === (e = c.default.getGuild(i)) || void 0 === e ? void 0 : e.name
