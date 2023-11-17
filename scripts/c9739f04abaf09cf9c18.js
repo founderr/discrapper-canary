@@ -4,14 +4,14 @@
             "use strict";
             a.r(e), a.d(e, {
                 default: function() {
-                    return M
+                    return N
                 }
             }), a("222007");
             var s = a("37983"),
                 n = a("884691"),
                 l = a("414456"),
-                u = a.n(l),
-                o = a("65597"),
+                o = a.n(l),
+                u = a("65597"),
                 i = a("77078"),
                 d = a("430568"),
                 r = a("86678"),
@@ -24,9 +24,9 @@
                 C = a("958706"),
                 p = a("843455"),
                 x = a("782340"),
-                N = a("645897");
+                f = a("645897");
 
-            function f(t) {
+            function M(t) {
                 let {
                     customStatusEmoji: e,
                     setCustomStatusEmoji: a,
@@ -72,10 +72,10 @@
                         return (0, s.jsx)(c.default, {
                             ...t,
                             active: n,
-                            className: N.emojiButton,
+                            className: f.emojiButton,
                             tabIndex: 0,
                             renderButtonContents: null == e ? null : () => (0, s.jsx)(d.default, {
-                                className: N.emoji,
+                                className: f.emoji,
                                 emojiId: e.id,
                                 emojiName: e.name,
                                 animated: !!e.animated
@@ -85,85 +85,83 @@
                 })
             }
 
-            function M(t) {
-                var e;
+            function N(t) {
                 let {
-                    transitionState: a,
-                    onClose: l,
-                    selectedHangStatus: d
+                    transitionState: e,
+                    onClose: a,
+                    selectedHangStatus: l
                 } = t, {
-                    oldHangStatus: r,
-                    oldStatusText: c,
-                    oldStatusIcon: C
-                } = (0, o.useStateFromStoresObject)([T.default], () => ({
+                    oldHangStatus: d,
+                    oldStatusText: r,
+                    oldStatusIcon: c
+                } = (0, u.useStateFromStoresObject)([T.default], () => ({
                     oldHangStatus: T.default.getCurrentHangStatus(),
                     oldStatusText: T.default.getCustomHangStatus(),
                     oldStatusIcon: T.default.getCustomHangStatusEmoji()
-                })), [M, H] = n.useState(null !== (e = null != d ? d : r) && void 0 !== e ? e : p.HangStatusTypes.NONE), [h, O] = n.useState(null != c ? c : ""), [A, E] = n.useState(C), U = (0, g.getHangStatusOptions)();
+                })), [C, N] = n.useState(null != l ? l : d), [h, H] = n.useState(null != r ? r : ""), [A, O] = n.useState(c), U = (0, g.getHangStatusOptions)();
                 return (0, s.jsxs)(i.ModalRoot, {
-                    transitionState: a,
+                    transitionState: e,
                     size: i.ModalSize.LARGE,
                     children: [(0, s.jsxs)(i.ModalHeader, {
-                        className: N.modalHeader,
+                        className: f.modalHeader,
                         separator: !1,
                         children: [(0, s.jsx)(i.ModalCloseButton, {
-                            className: N.closeButton,
-                            onClick: l
+                            className: f.closeButton,
+                            onClick: a
                         }), (0, s.jsx)(i.Heading, {
                             variant: "heading-xl/medium",
                             children: x.default.Messages.SET_STATUS_MODAL_TITLE
                         }), (0, s.jsx)(i.Text, {
                             color: "header-secondary",
                             variant: "text-sm/normal",
-                            className: N.subtitle,
+                            className: f.subtitle,
                             children: x.default.Messages.SET_STATUS_MODAL_SUBTITLE
                         })]
                     }), (0, s.jsxs)(i.ModalContent, {
-                        className: N.modalContent,
+                        className: f.modalContent,
                         children: [(0, s.jsx)(i.FormTitle, {
-                            className: N.title,
+                            className: f.title,
                             children: x.default.Messages.HANG_STATUS
                         }), (0, s.jsxs)("div", {
-                            className: N.hangStatusSelector,
+                            className: f.hangStatusSelector,
                             children: [Object.entries(U).map(t => {
                                 let [e, a] = t;
                                 return (0, s.jsx)(i.Clickable, {
-                                    onClick: () => H(e),
+                                    onClick: () => N(e),
                                     children: (0, s.jsx)(j.default, {
-                                        leadIn: a.leadIn,
                                         name: a.title,
                                         icon: a.icon,
                                         color: a.color,
-                                        selected: M === e,
-                                        className: u(N.statusWidget, {
-                                            [N.statusWidgetSelected]: M === e
+                                        selected: C === e,
+                                        className: o(f.statusWidget, {
+                                            [f.statusWidgetSelected]: C === e
                                         })
                                     })
                                 }, e)
                             }), (0, s.jsx)(i.Clickable, {
-                                onClick: () => H(p.HangStatusTypes.CUSTOM),
+                                onClick: () => N(p.HangStatusTypes.CUSTOM),
                                 children: (0, s.jsx)(j.default, {
                                     name: x.default.Messages.CUSTOM_HANG_STATUS,
-                                    selected: M === p.HangStatusTypes.CUSTOM,
-                                    className: u(N.statusWidget, {
-                                        [N.statusWidgetSelected]: M === p.HangStatusTypes.CUSTOM
+                                    selected: C === p.HangStatusTypes.CUSTOM,
+                                    className: o(f.statusWidget, {
+                                        [f.statusWidgetSelected]: C === p.HangStatusTypes.CUSTOM
                                     })
                                 })
                             }, p.HangStatusTypes.CUSTOM)]
-                        }), M === p.HangStatusTypes.CUSTOM ? (0, s.jsxs)(s.Fragment, {
+                        }), C === p.HangStatusTypes.CUSTOM ? (0, s.jsxs)(s.Fragment, {
                             children: [(0, s.jsx)(i.FormTitle, {
-                                className: N.title,
+                                className: f.title,
                                 children: x.default.Messages.CUSTOM_HANG_STATUS
                             }), (0, s.jsxs)("div", {
-                                className: N.customInputRow,
-                                children: [(0, s.jsx)(f, {
+                                className: f.customInputRow,
+                                children: [(0, s.jsx)(M, {
                                     customStatusEmoji: A,
-                                    setCustomStatusEmoji: E,
-                                    onClose: l
+                                    setCustomStatusEmoji: O,
+                                    onClose: a
                                 }), (0, s.jsx)(i.TextInput, {
-                                    className: N.customInput,
+                                    className: f.customInput,
                                     value: h,
-                                    onChange: O
+                                    onChange: H
                                 })]
                             })]
                         }) : null]
@@ -172,20 +170,20 @@
                         direction: S.default.Direction.HORIZONTAL,
                         children: [(0, s.jsx)(i.Button, {
                             color: i.Button.Colors.PRIMARY,
-                            onClick: l,
+                            onClick: a,
                             children: x.default.Messages.CANCEL
                         }), (0, s.jsx)(i.Button, {
                             onClick: () => {
                                 let t = h.trim();
-                                if (M === p.HangStatusTypes.CUSTOM && "" !== t)(0, m.updateCustomHangStatus)(h.trim(), A, "HangStatusModal");
+                                if (C === p.HangStatusTypes.CUSTOM && "" !== t)(0, m.updateCustomHangStatus)(h.trim(), A, "HangStatusModal");
                                 else {
-                                    if (M === p.HangStatusTypes.CUSTOM) return;
-                                    (0, m.updateHangStatus)(M === p.HangStatusTypes.NONE ? null : M, "HangStatusModal")
+                                    if (C === p.HangStatusTypes.CUSTOM) return;
+                                    (0, m.updateHangStatus)(C, "HangStatusModal")
                                 }
-                                l()
+                                a()
                             },
-                            className: N.button,
-                            disabled: M === p.HangStatusTypes.CUSTOM && "" === h.trim(),
+                            className: f.button,
+                            disabled: C === p.HangStatusTypes.CUSTOM && "" === h.trim(),
                             children: x.default.Messages.VOICE_CHANNEL_STATUS_MODAL_SET_STATUS
                         })]
                     })]

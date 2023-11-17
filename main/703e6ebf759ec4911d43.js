@@ -232,7 +232,7 @@
                     let {
                         status: e
                     } = t;
-                    l = e === r.HangStatusTypes.NONE ? null : e, i = null, u = null
+                    l = e, i = null, u = null
                 },
                 UPDATE_HANG_STATUS_CUSTOM: function(t) {
                     let {
