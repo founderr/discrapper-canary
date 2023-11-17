@@ -12,14 +12,14 @@
             var l = n("446674"),
                 u = n("77078"),
                 d = n("255397"),
-                r = n("191145"),
-                o = n("782340");
+                o = n("191145"),
+                r = n("782340");
 
             function s(e) {
-                let t = (0, l.useStateFromStores)([r.default], () => r.default.getVoiceParticipantsHidden(e));
+                let t = (0, l.useStateFromStores)([o.default], () => o.default.getVoiceParticipantsHidden(e));
                 return (0, a.jsx)(u.MenuCheckboxItem, {
                     id: "no-video-hide",
-                    label: o.default.Messages.STREAM_SHOW_NON_VIDEO,
+                    label: r.default.Messages.STREAM_SHOW_NON_VIDEO,
                     checked: !t,
                     action: () => d.default.toggleVoiceParticipantsHidden(e, !t)
                 })
@@ -29,7 +29,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return b
+                    return w
                 }
             });
             var a = n("37983");
@@ -37,8 +37,8 @@
             var l = n("446674"),
                 u = n("77078"),
                 d = n("629109"),
-                r = n("272030"),
-                o = n("987317"),
+                o = n("272030"),
+                r = n("987317"),
                 s = n("990766"),
                 i = n("901582"),
                 c = n("243288"),
@@ -47,101 +47,101 @@
                 M = n("386045"),
                 g = n("18346"),
                 m = n("803725"),
-                E = n("76393"),
-                p = n("103979"),
+                p = n("76393"),
+                E = n("103979"),
                 C = n("816106"),
-                I = n("373469"),
-                h = n("42203"),
-                T = n("42887"),
-                x = n("697218"),
-                A = n("374014"),
-                v = n("49111"),
-                _ = n("353927"),
+                h = n("373469"),
+                I = n("271938"),
+                T = n("42203"),
+                x = n("42887"),
+                A = n("697218"),
+                v = n("374014"),
+                _ = n("49111"),
+                b = n("353927"),
                 U = n("782340");
 
             function V(e) {
-                return (0, l.useStateFromStores)([I.default], () => {
-                    let t = I.default.getActiveStreamForApplicationStream(e);
-                    return null != t && (0, A.encodeStreamKey)(t) === (0, A.encodeStreamKey)(e)
+                return (0, l.useStateFromStores)([h.default], () => {
+                    let t = h.default.getActiveStreamForApplicationStream(e);
+                    return null != t && (0, v.encodeStreamKey)(t) === (0, v.encodeStreamKey)(e)
                 })
             }
 
-            function b(e) {
+            function w(e) {
                 let {
                     stream: t,
                     analyticsContext: n,
-                    appContext: I,
-                    exitFullscreen: b,
-                    onSelect: w
-                } = e, O = function(e) {
+                    appContext: h,
+                    exitFullscreen: w,
+                    onSelect: O
+                } = e, j = function(e) {
                     let t = V(e),
-                        n = x.default.getCurrentUser(),
-                        d = null != n && e.ownerId === n.id,
-                        r = (0, g.default)(),
+                        n = e.ownerId === I.default.getId(),
+                        d = (0, g.default)(),
                         {
                             enableViewerClipping: o,
-                            ignoreSenderPreference: s
-                        } = p.default.useExperiment({
+                            ignoreSenderPreference: r
+                        } = E.default.useExperiment({
                             location: "StreamContextMenu"
                         }, {
                             autoTrackExposure: !1
                         }),
-                        i = (0, l.useStateFromStores)([M.default], () => M.default.getIsAtMaxSaveClipOperations()),
-                        c = (0, l.useStateFromStores)([M.default], () => M.default.isViewerClippingAllowedForUser(e.ownerId)) || s;
-                    return r && o && t && !d ? (0, a.jsx)(u.MenuItem, {
+                        s = (0, l.useStateFromStores)([M.default], () => M.default.getIsAtMaxSaveClipOperations()),
+                        i = (0, l.useStateFromStores)([M.default], () => M.default.isViewerClippingAllowedForUser(e.ownerId)) || r;
+                    return d && o && t ? (0, a.jsx)(u.MenuItem, {
                         id: "clip-stream",
-                        disabled: !c || i,
-                        label: U.default.Messages.CLIPS_VIEWERSIDE_SAVE,
-                        action: () => (0, m.saveClip)((0, A.encodeStreamKey)(e))
+                        disabled: !(n || i) || s,
+                        label: U.default.Messages.CLIPS_SAVE,
+                        action: () => n ? (0, m.saveClip)() : (0, m.saveClip)((0, v.encodeStreamKey)(e))
                     }) : null
-                }(t), R = V(t), j = function(e) {
+                }(t), R = V(t), F = function(e) {
                     let t = V(e),
-                        n = (0, C.default)(e.ownerId, _.MediaEngineContextTypes.STREAM);
+                        n = (0, C.default)(e.ownerId, b.MediaEngineContextTypes.STREAM);
                     return t ? n : null
-                }(t), F = function(e) {
+                }(t), L = function(e) {
                     let t;
-                    let n = (0, l.useStateFromStores)([E.default], () => null != E.default.getRemoteSessionId()),
-                        d = (0, l.useStateFromStores)([h.default], () => h.default.getChannel(e.channelId), [e.channelId]),
-                        r = V(e),
-                        i = x.default.getCurrentUser(),
+                    let n = (0, l.useStateFromStores)([p.default], () => null != p.default.getRemoteSessionId()),
+                        d = (0, l.useStateFromStores)([T.default], () => T.default.getChannel(e.channelId), [e.channelId]),
+                        o = V(e),
+                        i = A.default.getCurrentUser(),
                         c = null != i && e.ownerId === i.id;
-                    return (t = c ? U.default.Messages.STOP_STREAMING : r ? U.default.Messages.STOP_WATCHING : U.default.Messages.WATCH_STREAM, n || !c && r && (null == d ? void 0 : d.isGuildStageVoice())) ? null : (0, a.jsx)(u.MenuItem, {
+                    return (t = c ? U.default.Messages.STOP_STREAMING : o ? U.default.Messages.STOP_WATCHING : U.default.Messages.WATCH_STREAM, n || !c && o && (null == d ? void 0 : d.isGuildStageVoice())) ? null : (0, a.jsx)(u.MenuItem, {
                         id: "watch",
                         label: t,
-                        action: r ? function() {
-                            (0, s.stopStream)((0, A.encodeStreamKey)(e))
+                        action: o ? function() {
+                            (0, s.stopStream)((0, v.encodeStreamKey)(e))
                         } : function() {
-                            o.default.selectVoiceChannel(e.channelId), (0, s.watchStream)(e)
+                            r.default.selectVoiceChannel(e.channelId), (0, s.watchStream)(e)
                         }
                     })
-                }(t), L = function(e) {
+                }(t), y = function(e) {
                     let t = V(e),
-                        n = (0, l.useStateFromStores)([T.default], () => T.default.isLocalMute(e.ownerId, _.MediaEngineContextTypes.STREAM)),
-                        r = x.default.getCurrentUser(),
-                        o = null != r && e.ownerId === r.id;
-                    return !t || o ? null : (0, a.jsx)(u.MenuCheckboxItem, {
+                        n = (0, l.useStateFromStores)([x.default], () => x.default.isLocalMute(e.ownerId, b.MediaEngineContextTypes.STREAM)),
+                        o = A.default.getCurrentUser(),
+                        r = null != o && e.ownerId === o.id;
+                    return !t || r ? null : (0, a.jsx)(u.MenuCheckboxItem, {
                         id: "mute",
                         label: U.default.Messages.SOUND_MUTE,
                         action: function() {
-                            d.default.toggleLocalMute(e.ownerId, _.MediaEngineContextTypes.STREAM)
+                            d.default.toggleLocalMute(e.ownerId, b.MediaEngineContextTypes.STREAM)
                         },
                         checked: n
                     })
-                }(t), y = (0, S.default)(t, I, b), k = (0, f.default)(t.channelId, t.ownerId), N = (0, c.default)(t.channelId), G = (0, l.useStateFromStores)([h.default], () => h.default.getChannel(t.channelId), [t.channelId]);
+                }(t), k = (0, S.default)(t, h, w), N = (0, f.default)(t.channelId, t.ownerId), G = (0, c.default)(t.channelId), P = (0, l.useStateFromStores)([T.default], () => T.default.getChannel(t.channelId), [t.channelId]);
                 return (0, a.jsx)(i.default, {
                     context: n,
-                    object: v.AnalyticsObjects.CONTEXT_MENU,
+                    object: _.AnalyticsObjects.CONTEXT_MENU,
                     children: (0, a.jsxs)(u.Menu, {
                         navId: "stream-context",
-                        onClose: r.closeContextMenu,
+                        onClose: o.closeContextMenu,
                         "aria-label": U.default.Messages.STREAM_ACTIONS_MENU_LABEL,
-                        onSelect: w,
+                        onSelect: O,
                         children: [(0, a.jsxs)(u.MenuGroup, {
-                            children: [F, O, L]
+                            children: [L, j, y]
                         }), (0, a.jsx)(u.MenuGroup, {
-                            children: j
+                            children: F
                         }), (0, a.jsxs)(u.MenuGroup, {
-                            children: [(null == G ? void 0 : G.isGuildStageVoice()) ? null : N, k, R && y]
+                            children: [(null == P ? void 0 : P.isGuildStageVoice()) ? null : G, N, R && k]
                         })]
                     })
                 })
@@ -159,8 +159,8 @@
             var l = n("446674"),
                 u = n("77078"),
                 d = n("629109"),
-                r = n("42887"),
-                o = n("697218"),
+                o = n("42887"),
+                r = n("697218"),
                 s = n("829536"),
                 i = n("773336"),
                 c = n("353927"),
@@ -169,8 +169,8 @@
             function S(e) {
                 var t;
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.MediaEngineContextTypes.DEFAULT,
-                    S = (0, l.useStateFromStores)([r.default], () => r.default.getLocalVolume(e, n), [e, n]),
-                    M = e === (null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
+                    S = (0, l.useStateFromStores)([o.default], () => o.default.getLocalVolume(e, n), [e, n]),
+                    M = e === (null === (t = r.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
                     g = n === c.MediaEngineContextTypes.STREAM;
                 return M ? null : (0, a.jsx)(u.MenuControlItem, {
                     id: "user-volume",
