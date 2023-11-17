@@ -421,7 +421,9 @@
 
             function E(e) {}
 
-            function _(e) {
+            function _(e) {}
+
+            function R(e) {
                 return !1
             }
             r.r(t), r.d(t, {
@@ -452,11 +454,14 @@
                 coerceChannelRoute: function() {
                     return c
                 },
-                coerceModalRoute: function() {
+                coerceGuildsRoute: function() {
                     return E
                 },
-                useIsModalOpen: function() {
+                coerceModalRoute: function() {
                     return _
+                },
+                useIsModalOpen: function() {
+                    return R
                 }
             })
         },

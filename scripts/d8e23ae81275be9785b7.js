@@ -16,8 +16,8 @@
                     n = e.replace(/-/g, "+").replace(/_/g, "/") + t,
                     r = atob(n),
                     s = new ArrayBuffer(r.length),
-                    a = new Uint8Array(s);
-                for (let e = 0; e < r.length; e++) a[e] = r.charCodeAt(e);
+                    o = new Uint8Array(s);
+                for (let e = 0; e < r.length; e++) o[e] = r.charCodeAt(e);
                 return s
             }
 
@@ -37,29 +37,29 @@
                     return N
                 }
             }), n("781738"), n("101997"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("222007"), n("70102");
-            var a = "copy",
-                o = "convert";
+            var o = "copy",
+                a = "convert";
 
             function l(e, t, n) {
-                if (t === a) return n;
-                if (t === o) return e(n);
+                if (t === o) return n;
+                if (t === a) return e(n);
                 if (t instanceof Array) return n.map(n => l(e, t[0], n));
                 if (t instanceof Object) {
                     let r = {};
-                    for (let [s, a] of Object.entries(t)) {
-                        if (a.derive) {
-                            let e = a.derive(n);
+                    for (let [s, o] of Object.entries(t)) {
+                        if (o.derive) {
+                            let e = o.derive(n);
                             void 0 !== e && (n[s] = e)
                         }
                         if (!(s in n)) {
-                            if (a.required) throw Error("Missing key: ".concat(s));
+                            if (o.required) throw Error("Missing key: ".concat(s));
                             continue
                         }
                         if (null == n[s]) {
                             r[s] = null;
                             continue
                         }
-                        r[s] = l(e, a.schema, n[s])
+                        r[s] = l(e, o.schema, n[s])
                     }
                     return r
                 }
@@ -87,75 +87,75 @@
                 }
             }
             var c = {
-                    type: u(a),
-                    id: u(o),
-                    transports: d(a)
+                    type: u(o),
+                    id: u(a),
+                    transports: d(o)
                 },
                 _ = {
-                    appid: d(a),
-                    appidExclude: d(a),
-                    credProps: d(a)
+                    appid: d(o),
+                    appidExclude: d(o),
+                    credProps: d(o)
                 },
                 f = {
-                    appid: d(a),
-                    appidExclude: d(a),
-                    credProps: d(a)
+                    appid: d(o),
+                    appidExclude: d(o),
+                    credProps: d(o)
                 },
                 E = {
                     publicKey: u({
-                        rp: u(a),
+                        rp: u(o),
                         user: u({
-                            id: u(o),
-                            name: u(a),
-                            displayName: u(a)
+                            id: u(a),
+                            name: u(o),
+                            displayName: u(o)
                         }),
-                        challenge: u(o),
-                        pubKeyCredParams: u(a),
-                        timeout: d(a),
+                        challenge: u(a),
+                        pubKeyCredParams: u(o),
+                        timeout: d(o),
                         excludeCredentials: d([c]),
-                        authenticatorSelection: d(a),
-                        attestation: d(a),
+                        authenticatorSelection: d(o),
+                        attestation: d(o),
                         extensions: d(_)
                     }),
-                    signal: d(a)
+                    signal: d(o)
                 },
                 A = {
-                    type: u(a),
-                    id: u(a),
-                    rawId: u(o),
-                    authenticatorAttachment: d(a),
+                    type: u(o),
+                    id: u(o),
+                    rawId: u(a),
+                    authenticatorAttachment: d(o),
                     response: u({
-                        clientDataJSON: u(o),
-                        attestationObject: u(o),
-                        transports: i(a, e => {
+                        clientDataJSON: u(a),
+                        attestationObject: u(a),
+                        transports: i(o, e => {
                             var t;
                             return (null == (t = e.getTransports) ? void 0 : t.call(e)) || []
                         })
                     }),
                     clientExtensionResults: i(f, e => e.getClientExtensionResults())
                 },
-                p = {
-                    mediation: d(a),
+                R = {
+                    mediation: d(o),
                     publicKey: u({
-                        challenge: u(o),
-                        timeout: d(a),
-                        rpId: d(a),
+                        challenge: u(a),
+                        timeout: d(o),
+                        rpId: d(o),
                         allowCredentials: d([c]),
-                        userVerification: d(a),
+                        userVerification: d(o),
                         extensions: d(_)
                     }),
-                    signal: d(a)
+                    signal: d(o)
                 },
-                R = {
-                    type: u(a),
-                    id: u(a),
-                    rawId: u(o),
-                    authenticatorAttachment: d(a),
+                p = {
+                    type: u(o),
+                    id: u(o),
+                    rawId: u(a),
+                    authenticatorAttachment: d(o),
                     response: u({
-                        clientDataJSON: u(o),
-                        authenticatorData: u(o),
-                        signature: u(o),
-                        userHandle: u(o)
+                        clientDataJSON: u(a),
+                        authenticatorData: u(a),
+                        signature: u(a),
+                        userHandle: u(a)
                     }),
                     clientExtensionResults: i(f, e => e.getClientExtensionResults())
                 };
@@ -164,8 +164,8 @@
                 return l(s, A, t)
             }
             async function N(e) {
-                let t = await navigator.credentials.get(l(r, p, e));
-                return l(s, R, t)
+                let t = await navigator.credentials.get(l(r, R, e));
+                return l(s, p, t)
             }
         },
         152584: function(e, t, n) {
@@ -175,10 +175,10 @@
                     return A
                 },
                 accountDetailsClose: function() {
-                    return p
+                    return R
                 },
                 disableAccount: function() {
-                    return R
+                    return p
                 },
                 saveAccountRequest: function() {
                     return I
@@ -222,8 +222,8 @@
             });
             var r = n("872717"),
                 s = n("95410"),
-                a = n("819855"),
-                o = n("913144"),
+                o = n("819855"),
+                a = n("913144"),
                 l = n("393414"),
                 i = n("599110"),
                 u = n("315102"),
@@ -234,18 +234,18 @@
                 E = n("782340");
 
             function A() {
-                o.default.dispatch({
+                a.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_INIT"
                 })
             }
 
-            function p() {
-                o.default.dispatch({
+            function R() {
+                a.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_CLOSE"
                 })
             }
 
-            function R(e, t) {
+            function p(e, t) {
                 let n = t ? E.default.Messages.DELETE_ACCOUNT : E.default.Messages.DISABLE_ACCOUNT,
                     s = t ? _.Endpoints.DELETE_ACCOUNT : _.Endpoints.DISABLE_ACCOUNT;
                 return (0, d.default)(t => r.default.post({
@@ -273,16 +273,16 @@
                     n = t.body;
                 if (n.token) {
                     let t = n.token;
-                    delete n.token, o.default.dispatch({
+                    delete n.token, a.default.dispatch({
                         type: "UPDATE_TOKEN",
                         token: t,
                         userId: n.id
-                    }), (null == e ? void 0 : e.password) != null && (null == e ? void 0 : e.new_password) != null && o.default.dispatch({
+                    }), (null == e ? void 0 : e.password) != null && (null == e ? void 0 : e.new_password) != null && a.default.dispatch({
                         type: "PASSWORD_UPDATED",
                         userId: n.id
                     })
                 }
-                return o.default.dispatch({
+                return a.default.dispatch({
                     type: "CURRENT_USER_UPDATE",
                     user: n
                 }), t
@@ -293,40 +293,40 @@
                     username: t,
                     discriminator: n,
                     email: r,
-                    emailToken: a,
+                    emailToken: o,
                     password: l,
                     avatar: c,
                     avatarDecoration: A,
-                    newPassword: p,
-                    globalName: R
+                    newPassword: R,
+                    globalName: p
                 } = e;
-                return o.default.dispatch({
+                return a.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SUBMIT"
                 }), (0, d.default)(e => {
-                    let o = {
+                    let a = {
                         username: t,
                         email: r,
-                        email_token: a,
+                        email_token: o,
                         password: l,
                         avatar: c,
                         discriminator: n,
-                        global_name: R,
-                        new_password: p,
+                        global_name: p,
+                        new_password: R,
                         ...e
                     };
-                    null === A && (o.avatar_decoration_id = null), null != A && (o.avatar_decoration_id = A.id, o.avatar_decoration_sku_id = A.skuId);
+                    null === A && (a.avatar_decoration_id = null), null != A && (a.avatar_decoration_id = A.id, a.avatar_decoration_sku_id = A.skuId);
                     let i = s.default.get(_.DEVICE_TOKEN),
                         u = (0, f.getDevicePushProvider)();
-                    null != u && null != i && (o.push_provider = u, o.push_token = i);
+                    null != u && null != i && (a.push_provider = u, a.push_token = i);
                     let d = s.default.get(_.DEVICE_VOIP_TOKEN);
-                    return null != f.DEVICE_PUSH_VOIP_PROVIDER && null != d && (o.push_voip_provider = f.DEVICE_PUSH_VOIP_PROVIDER, o.push_voip_token = d), I(o)
+                    return null != f.DEVICE_PUSH_VOIP_PROVIDER && null != d && (a.push_voip_provider = f.DEVICE_PUSH_VOIP_PROVIDER, a.push_voip_token = d), I(a)
                 }, {
                     checkEnabled: !1,
                     modalProps: {
                         title: E.default.Messages.TWO_FA_CHANGE_ACCOUNT
                     },
                     hooks: {
-                        onEarlyClose: () => o.default.dispatch({
+                        onEarlyClose: () => a.default.dispatch({
                             type: "USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE",
                             errors: {}
                         })
@@ -335,10 +335,10 @@
                     let t = e.body;
                     return i.default.track(_.AnalyticEvents.USER_AVATAR_UPDATED, {
                         animated: (0, u.isAnimatedIconHash)(t.avatar)
-                    }), o.default.dispatch({
+                    }), a.default.dispatch({
                         type: "USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS"
                     }), e
-                }, e => (o.default.dispatch({
+                }, e => (a.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE",
                     errors: e.body
                 }), e))
@@ -359,59 +359,59 @@
             }
 
             function C(e) {
-                o.default.dispatch({
+                a.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR",
                     avatar: e
-                }), null == e ? a.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : a.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
+                }), null == e ? o.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : o.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
             }
 
             function h(e) {
-                o.default.dispatch({
+                a.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME",
                     globalName: e
                 })
             }
 
             function m(e) {
-                o.default.dispatch({
+                a.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION",
                     avatarDecoration: e
                 })
             }
 
             function g(e) {
-                o.default.dispatch({
+                a.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID",
                     profileEffectID: e
                 })
             }
 
             function O() {
-                o.default.dispatch({
+                a.default.dispatch({
                     type: "USER_SETTINGS_CLEAR_ERRORS"
                 })
             }
 
             function D() {
-                o.default.dispatch({
+                a.default.dispatch({
                     type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
                 })
             }
 
             function U() {
-                o.default.dispatch({
+                a.default.dispatch({
                     type: "USER_SETTINGS_RESET_ALL_PENDING"
                 })
             }
 
             function L() {
-                o.default.dispatch({
+                a.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM"
                 })
             }
 
             function v(e) {
-                o.default.dispatch({
+                a.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT",
                     disable: e
                 })
@@ -426,8 +426,8 @@
             }), n("222007");
             var r = n("37983"),
                 s = n("884691"),
-                a = n("414456"),
-                o = n.n(a),
+                o = n("414456"),
+                a = n.n(o),
                 l = n("77078"),
                 i = n("782340"),
                 u = n("347129");
@@ -437,30 +437,30 @@
                     let {
                         title: t,
                         actionText: n,
-                        children: a,
+                        children: o,
                         error: d,
                         isLoading: c,
                         maxLength: _,
                         transitionState: f,
                         helpMessage: E,
                         retryPrompt: A,
-                        retrySuccessMessage: p
+                        retrySuccessMessage: R
                     } = this.props, {
-                        code: R,
+                        code: p,
                         errorMessage: I,
                         retrySuccess: N
-                    } = this.state, S = s.Children.count(a) > 0 ? (0, r.jsx)(l.Card, {
+                    } = this.state, S = s.Children.count(o) > 0 ? (0, r.jsx)(l.Card, {
                         type: l.Card.Types.WARNING,
                         className: u.card,
                         children: (0, r.jsx)(l.Text, {
                             variant: "text-md/normal",
-                            children: a
+                            children: o
                         })
                     }) : null, T = null != A ? (0, r.jsxs)(l.Text, {
-                        className: o(u.submitText, u.spacing),
+                        className: a(u.submitText, u.spacing),
                         variant: "text-sm/normal",
                         children: [(0, r.jsx)("br", {}), (0, r.jsx)(l.Clickable, {
-                            className: o(u.spacing, u.link),
+                            className: a(u.spacing, u.link),
                             onClick: this.handleRetry,
                             children: (0, r.jsx)(l.Anchor, {
                                 children: A
@@ -471,7 +471,7 @@
                         className: u.card,
                         children: (0, r.jsx)(l.Text, {
                             variant: "text-md/normal",
-                            children: p
+                            children: R
                         })
                     }) : null;
                     return (0, r.jsx)(l.ModalRoot, {
@@ -498,7 +498,7 @@
                                         onChange: this.handleCodeChange,
                                         placeholder: null !== (e = this.getPlaceholder()) && void 0 !== e ? e : void 0,
                                         maxLength: null != _ ? _ : 10,
-                                        value: R,
+                                        value: p,
                                         autoComplete: "one-time-code",
                                         autoFocus: !0
                                     }), this.errorPresent() ? (0, r.jsx)(l.Text, {
@@ -511,7 +511,7 @@
                             }), (0, r.jsxs)(l.ModalFooter, {
                                 children: [(0, r.jsx)(l.Button, {
                                     type: "submit",
-                                    disabled: c || 0 === R.length,
+                                    disabled: c || 0 === p.length,
                                     children: null != n ? n : i.default.Messages.CONFIRM
                                 }), (0, r.jsx)(l.Button, {
                                     onClick: this.handleCancel,
@@ -585,15 +585,15 @@
                 }
             });
             var r, s = n("872717"),
-                a = n("49111"),
-                o = n("782340");
+                o = n("49111"),
+                a = n("782340");
             r = class extends s.default.V8APIError {
                 constructor(e, t) {
-                    super(e, t, null != t ? o.default.Messages.FORM_ERROR_GENERIC_WITH_DETAILS.format({
-                        statusPageURL: a.Links.STATUS,
+                    super(e, t, null != t ? a.default.Messages.FORM_ERROR_GENERIC_WITH_DETAILS.format({
+                        statusPageURL: o.Links.STATUS,
                         details: "".concat(t)
-                    }) : o.default.Messages.FORM_ERROR_GENERIC.format({
-                        statusPageURL: a.Links.STATUS
+                    }) : a.default.Messages.FORM_ERROR_GENERIC.format({
+                        statusPageURL: o.Links.STATUS
                     }))
                 }
             }
@@ -607,22 +607,22 @@
             });
             var r = n("888400"),
                 s = n("333805"),
-                a = n("782340");
-            class o extends s.default {
+                o = n("782340");
+            class a extends s.default {
                 _getMessageFromRateLimit(e) {
                     let t = e.body.retry_after,
                         n = (0, r.diffAsUnits)(0, 1e3 * t);
                     return (0, r.unitsAsStrings)(n, {
-                        days: a.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_DAYS,
-                        hours: a.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_HOURS,
-                        minutes: a.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_MINUTES
+                        days: o.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_DAYS,
+                        hours: o.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_HOURS,
+                        minutes: o.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_MINUTES
                     })
                 }
                 constructor(e, t) {
                     super(e, t), 429 === this.status && (this.message = this._getMessageFromRateLimit(e))
                 }
             }
-            var l = o
+            var l = a
         },
         736978: function(e, t, n) {
             "use strict";
@@ -637,13 +637,13 @@
                     return h
                 }
             }), n("222007");
-            var r, s, a, o, l, i, u, d, c = n("486196"),
+            var r, s, o, a, l, i, u, d, c = n("486196"),
                 _ = n("614247"),
                 f = n("821879"),
                 E = n("333805"),
                 A = n("782340");
-            (l = r || (r = {}))[l.UNKNOWN = 0] = "UNKNOWN", l[l.UNKNOWN_BILLING_PROFILE = 100001] = "UNKNOWN_BILLING_PROFILE", l[l.UNKNOWN_PAYMENT_SOURCE = 100002] = "UNKNOWN_PAYMENT_SOURCE", l[l.UNKNOWN_SUBSCRIPTION = 100003] = "UNKNOWN_SUBSCRIPTION", l[l.ALREADY_SUBSCRIBED = 100004] = "ALREADY_SUBSCRIBED", l[l.INVALID_PLAN = 100005] = "INVALID_PLAN", l[l.PAYMENT_SOURCE_REQUIRED = 100006] = "PAYMENT_SOURCE_REQUIRED", l[l.ALREADY_CANCELED = 100007] = "ALREADY_CANCELED", l[l.INVALID_PAYMENT = 100008] = "INVALID_PAYMENT", l[l.ALREADY_REFUNDED = 100009] = "ALREADY_REFUNDED", l[l.INVALID_BILLING_ADDRESS = 100010] = "INVALID_BILLING_ADDRESS", l[l.ALREADY_PURCHASED = 100011] = "ALREADY_PURCHASED", l[l.NEGATIVE_INVOICE_AMOUNT = 100027] = "NEGATIVE_INVOICE_AMOUNT", l[l.AUTHENTICATION_REQUIRED = 100029] = "AUTHENTICATION_REQUIRED", l[l.SUBSCRIPTION_RENEWAL_IN_PROGRESS = 100042] = "SUBSCRIPTION_RENEWAL_IN_PROGRESS", l[l.CONFIRMATION_REQUIRED = 100047] = "CONFIRMATION_REQUIRED", l[l.CARD_DECLINED = 100054] = "CARD_DECLINED", l[l.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED = 50097] = "INVALID_GIFT_REDEMPTION_FRAUD_REJECTED", l[l.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED = 100056] = "PURCHASE_TOKEN_AUTHORIZATION_REQUIRED", l[l.INVALID_PAYMENT_SOURCE = 50048] = "INVALID_PAYMENT_SOURCE", l[l.INVALID_CURRENCY_FOR_PAYMENT_SOURCE = 100051] = "INVALID_CURRENCY_FOR_PAYMENT_SOURCE", l[l.BILLING_APPLE_SERVER_API_ERROR = 100070] = "BILLING_APPLE_SERVER_API_ERROR", l[l.BILLING_TRIAL_REDEMPTION_DISABLED = 100078] = "BILLING_TRIAL_REDEMPTION_DISABLED", (i = s || (s = {})).CARD_NUMBER = "cardNumber", i.CARD_CVC = "cvc", i.CARD_EXPIRATION_DATE = "expirationDate", i.CARD_NAME = "name", i.ADDRESS_NAME = "name", i.ADDRESS_LINE_1 = "line1", i.ADDRESS_LINE_2 = "line2", i.ADDRESS_CITY = "city", i.ADDRESS_STATE = "state", i.ADDRESS_POSTAL_CODE = "postalCode", i.ADDRESS_COUNTRY = "country", (u = a || (a = {})).ADDRESS_LINE_1 = "address_line1", u.ADDRESS_LINE_2 = "address_line2", u.ADDRESS_CITY = "address_city", u.ADDRESS_STATE = "address_state", u.ADDRESS_ZIP = "address_zip", u.ADDRESS_COUNTRY = "address_country", u.CARD_NUMBER = "number", u.CARD_EXPIRATION_DATE = "exp", u.CARD_EXPIRATION_MONTH = "exp_month", u.CARD_EXPIRATION_YEAR = "exp_year";
-            let p = Object.freeze({
+            (l = r || (r = {}))[l.UNKNOWN = 0] = "UNKNOWN", l[l.UNKNOWN_BILLING_PROFILE = 100001] = "UNKNOWN_BILLING_PROFILE", l[l.UNKNOWN_PAYMENT_SOURCE = 100002] = "UNKNOWN_PAYMENT_SOURCE", l[l.UNKNOWN_SUBSCRIPTION = 100003] = "UNKNOWN_SUBSCRIPTION", l[l.ALREADY_SUBSCRIBED = 100004] = "ALREADY_SUBSCRIBED", l[l.INVALID_PLAN = 100005] = "INVALID_PLAN", l[l.PAYMENT_SOURCE_REQUIRED = 100006] = "PAYMENT_SOURCE_REQUIRED", l[l.ALREADY_CANCELED = 100007] = "ALREADY_CANCELED", l[l.INVALID_PAYMENT = 100008] = "INVALID_PAYMENT", l[l.ALREADY_REFUNDED = 100009] = "ALREADY_REFUNDED", l[l.INVALID_BILLING_ADDRESS = 100010] = "INVALID_BILLING_ADDRESS", l[l.ALREADY_PURCHASED = 100011] = "ALREADY_PURCHASED", l[l.NEGATIVE_INVOICE_AMOUNT = 100027] = "NEGATIVE_INVOICE_AMOUNT", l[l.AUTHENTICATION_REQUIRED = 100029] = "AUTHENTICATION_REQUIRED", l[l.SUBSCRIPTION_RENEWAL_IN_PROGRESS = 100042] = "SUBSCRIPTION_RENEWAL_IN_PROGRESS", l[l.CONFIRMATION_REQUIRED = 100047] = "CONFIRMATION_REQUIRED", l[l.CARD_DECLINED = 100054] = "CARD_DECLINED", l[l.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED = 50097] = "INVALID_GIFT_REDEMPTION_FRAUD_REJECTED", l[l.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED = 100056] = "PURCHASE_TOKEN_AUTHORIZATION_REQUIRED", l[l.INVALID_PAYMENT_SOURCE = 50048] = "INVALID_PAYMENT_SOURCE", l[l.INVALID_CURRENCY_FOR_PAYMENT_SOURCE = 100051] = "INVALID_CURRENCY_FOR_PAYMENT_SOURCE", l[l.BILLING_APPLE_SERVER_API_ERROR = 100070] = "BILLING_APPLE_SERVER_API_ERROR", l[l.BILLING_TRIAL_REDEMPTION_DISABLED = 100078] = "BILLING_TRIAL_REDEMPTION_DISABLED", (i = s || (s = {})).CARD_NUMBER = "cardNumber", i.CARD_CVC = "cvc", i.CARD_EXPIRATION_DATE = "expirationDate", i.CARD_NAME = "name", i.ADDRESS_NAME = "name", i.ADDRESS_LINE_1 = "line1", i.ADDRESS_LINE_2 = "line2", i.ADDRESS_CITY = "city", i.ADDRESS_STATE = "state", i.ADDRESS_POSTAL_CODE = "postalCode", i.ADDRESS_COUNTRY = "country", (u = o || (o = {})).ADDRESS_LINE_1 = "address_line1", u.ADDRESS_LINE_2 = "address_line2", u.ADDRESS_CITY = "address_city", u.ADDRESS_STATE = "address_state", u.ADDRESS_ZIP = "address_zip", u.ADDRESS_COUNTRY = "address_country", u.CARD_NUMBER = "number", u.CARD_EXPIRATION_DATE = "exp", u.CARD_EXPIRATION_MONTH = "exp_month", u.CARD_EXPIRATION_YEAR = "exp_year";
+            let R = Object.freeze({
                     address_line1: "line1",
                     address_line2: "line2",
                     address_city: "city",
@@ -655,18 +655,18 @@
                     exp_month: "expirationDate",
                     exp_year: "expirationDate"
                 }),
-                R = Object.freeze({
+                p = Object.freeze({
                     line_1: "line1",
                     line_2: "line2",
                     postal_code: "postalCode"
                 });
-            (d = o || (o = {})).CARD = "card", d.ADDRESS = "address";
+            (d = a || (a = {})).CARD = "card", d.ADDRESS = "address";
             let I = new Set(["cardNumber", "cvc", "expirationDate", "name"]),
                 N = new Set(["cardNumber", "cvc", "expirationDate", "name", "postalCode", "country", "line1", "city", "state"]),
                 S = new Set(["name", "line1", "line2", "city", "state", "postalCode", "country"]);
 
             function T(e) {
-                var t, n, r, s, a;
+                var t, n, r, s, o;
                 if ("string" != typeof e && (null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.code) === c.INVALID_FORM_BODY_ERROR_CODE) {
                     if (!Array.isArray(null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.errors) && (null == e ? void 0 : null === (s = e.body) || void 0 === s ? void 0 : null === (r = s.errors) || void 0 === r ? void 0 : r.billing_address) != null) {
                         for (let t in e.body.errors.billing_address) {
@@ -674,7 +674,7 @@
                             delete e.body.errors.billing_address[t], e.body.errors[t] = n
                         }
                         delete e.body.errors.billing_address
-                    }(null === (a = e.body) || void 0 === a ? void 0 : a.errors) != null && (e.body = (0, _.default)(e.body.errors))
+                    }(null === (o = e.body) || void 0 === o ? void 0 : o.errors) != null && (e.body = (0, _.default)(e.body.errors))
                 }
                 return new C(e)
             }
@@ -691,7 +691,7 @@
                 }
                 constructor(e, t) {
                     for (let n in super(e, t), this.paymentId = null, 100027 === this.code ? this.message = A.default.Messages.BILLING_ERROR_NEGATIVE_INVOICE_AMOUNT : 50048 === this.code ? this.message = A.default.Messages.BILLING_PAYMENT_SOURCE_INVALID : 100002 === this.code ? this.message = A.default.Messages.BILLING_ERROR_UNKNOWN_PAYMENT_SOURCE : 100042 === this.code ? this.message = A.default.Messages.BILLING_ERROR_PENDING_PAYMENT : 100078 === this.code ? this.message = A.default.Messages.BILLING_TRIAL_REDEMPTION_DISABLED : 429 === this.status ? this.message = A.default.Messages.BILLING_ERROR_RATE_LIMIT : 0 === this.code ? this.message = A.default.Messages.BILLING_ERROR_GENERIC : 400 === this.status && null != this.fields.captcha_key && (this.message = A.default.Messages.BILLING_ERROR_INVALID_CAPTCHA_RESPONSE), this.fields) {
-                        let e = p[n] || R[n];
+                        let e = R[n] || p[n];
                         if (null != e) {
                             let t = this.fields[n];
                             delete this.fields[n], this.fields[e] = t
@@ -700,7 +700,7 @@
                     null != e.body && "string" == typeof e.body.payment_id && (this.paymentId = e.body.payment_id)
                 }
             }
-            C.ErrorCodes = r, C.Fields = s, C.Sections = o, C.CARD_ERRORS = I, C.ADDRESS_ERRORS = S;
+            C.ErrorCodes = r, C.Fields = s, C.Sections = a, C.CARD_ERRORS = I, C.ADDRESS_ERRORS = S;
             var h = C
         },
         852766: function(e, t, n) {
@@ -714,24 +714,24 @@
                     return s
                 },
                 default: function() {
-                    return o
+                    return a
                 }
             });
-            var r, s, a = n("782340");
+            var r, s, o = n("782340");
             (r = s || (s = {}))[r.GENERAL = 0] = "GENERAL", r[r.NO_FILE = 1] = "NO_FILE", r[r.PROGRESS = 2] = "PROGRESS", r[r.UPLOAD = 3] = "UPLOAD", r[r.READ = 4] = "READ";
-            var o = class e {
+            var a = class e {
                 get displayMessage() {
                     switch (this.code) {
                         case 1:
-                            return a.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_NO_FILE;
+                            return o.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_NO_FILE;
                         case 2:
-                            return a.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_PROGRESS;
+                            return o.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_PROGRESS;
                         case 3:
-                            return a.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_UPLOAD;
+                            return o.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_UPLOAD;
                         case 4:
-                            return a.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_READ;
+                            return o.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_READ;
                         default:
-                            return a.default.Messages.UPLOAD_DEBUG_LOG_FAILURE
+                            return o.default.Messages.UPLOAD_DEBUG_LOG_FAILURE
                     }
                 }
                 constructor(e) {
@@ -747,15 +747,15 @@
                 }
             });
             var r, s = n("872717"),
-                a = n("49111"),
-                o = n("782340");
+                o = n("49111"),
+                a = n("782340");
             r = class extends s.default.V6OrEarlierAPIError {
                 constructor(e, t) {
-                    super(e, t, null != t ? o.default.Messages.FORM_ERROR_GENERIC_WITH_DETAILS.format({
-                        statusPageURL: a.Links.STATUS,
+                    super(e, t, null != t ? a.default.Messages.FORM_ERROR_GENERIC_WITH_DETAILS.format({
+                        statusPageURL: o.Links.STATUS,
                         details: "".concat(t)
-                    }) : o.default.Messages.FORM_ERROR_GENERIC.format({
-                        statusPageURL: a.Links.STATUS
+                    }) : a.default.Messages.FORM_ERROR_GENERIC.format({
+                        statusPageURL: o.Links.STATUS
                     }))
                 }
             }
@@ -770,10 +770,10 @@
                     return s.default
                 },
                 BillingError: function() {
-                    return a.default
+                    return o.default
                 },
                 AppliedGuildBoostError: function() {
-                    return o.default
+                    return a.default
                 },
                 UploadVoiceDebugLogsError: function() {
                     return l.default
@@ -784,9 +784,9 @@
             });
             var r = n("333805"),
                 s = n("599417"),
-                a = n("736978");
+                o = n("736978");
             n("852766"), n("846071");
-            var o = n("79489"),
+            var a = n("79489"),
                 l = n("927367")
         },
         633156: function(e, t, n) {
@@ -798,8 +798,8 @@
             }), n("222007");
             var r = n("37983"),
                 s = n("884691"),
-                a = n("414456"),
-                o = n.n(a),
+                o = n("414456"),
+                a = n.n(o),
                 l = n("77078"),
                 i = n("437822"),
                 u = n("152584"),
@@ -809,19 +809,19 @@
                 f = n("98013"),
                 E = n("439932"),
                 A = n("49111"),
-                p = n("149806"),
-                R = n("782340"),
+                R = n("149806"),
+                p = n("782340"),
                 I = n("528414");
 
             function N(e) {
                 let {
                     email: t,
                     setEmail: n,
-                    claimRequired: a,
+                    claimRequired: o,
                     onSuccess: _,
                     onClose: f
                 } = e, [N, S] = s.useState(), [T, C] = s.useState(""), [h, m] = s.useState(""), [g, O] = s.useState(!1);
-                s.useEffect(() => d.default.flowStep(p.FlowType.ANY, p.ClaimAccountSteps.CLAIM_ACCOUNT), []);
+                s.useEffect(() => d.default.flowStep(R.FlowType.ANY, R.ClaimAccountSteps.CLAIM_ACCOUNT), []);
                 let D = async e => {
                     e.preventDefault(), O(!0), S(""), m("");
                     try {
@@ -835,7 +835,7 @@
                     }
                 };
                 return (0, r.jsxs)("div", {
-                    className: o(I.modalLight, (0, E.getThemeClass)(A.ThemeTypes.LIGHT)),
+                    className: a(I.modalLight, (0, E.getThemeClass)(A.ThemeTypes.LIGHT)),
                     children: [(0, r.jsxs)(l.ModalHeader, {
                         className: I.formHeader,
                         direction: c.default.Direction.VERTICAL,
@@ -845,12 +845,12 @@
                         }), (0, r.jsx)(l.Heading, {
                             className: I.formTitle,
                             variant: "heading-xl/semibold",
-                            children: R.default.Messages.FINISH_SIGNING_UP
+                            children: p.default.Messages.FINISH_SIGNING_UP
                         }), (0, r.jsx)(l.Text, {
                             className: I.formBody,
                             variant: "text-md/normal",
                             color: "header-secondary",
-                            children: a ? R.default.Messages.CLAIM_ACCOUNT_REQUIRED_BODY : R.default.Messages.CLAIM_ACCOUNT_BODY_2
+                            children: o ? p.default.Messages.CLAIM_ACCOUNT_REQUIRED_BODY : p.default.Messages.CLAIM_ACCOUNT_BODY_2
                         }), (0, r.jsx)(l.ModalCloseButton, {
                             className: I.closeButton,
                             onClick: f
@@ -860,7 +860,7 @@
                             className: I.formContent,
                             onSubmit: D,
                             children: [(0, r.jsx)(l.FormItem, {
-                                title: R.default.Messages.FORM_LABEL_EMAIL,
+                                title: p.default.Messages.FORM_LABEL_EMAIL,
                                 className: I.formItem,
                                 children: (0, r.jsx)(l.TextInput, {
                                     value: t,
@@ -869,7 +869,7 @@
                                     autoFocus: !0
                                 })
                             }), (0, r.jsx)(l.FormItem, {
-                                title: R.default.Messages.FORM_LABEL_PASSWORD,
+                                title: p.default.Messages.FORM_LABEL_PASSWORD,
                                 className: I.formItem,
                                 children: (0, r.jsx)(l.TextInput, {
                                     type: "password",
@@ -883,8 +883,8 @@
                                 fullWidth: !0,
                                 submitting: g,
                                 disabled: 0 === t.length || 0 === T.length,
-                                children: R.default.Messages.CLAIM_ACCOUNT
-                            }), a && (0, r.jsx)(l.Button, {
+                                children: p.default.Messages.CLAIM_ACCOUNT
+                            }), o && (0, r.jsx)(l.Button, {
                                 className: I.logoutButton,
                                 color: l.Button.Colors.PRIMARY,
                                 look: l.Button.Looks.LINK,
@@ -892,7 +892,7 @@
                                 onClick: () => {
                                     i.default.logout(), f()
                                 },
-                                children: R.default.Messages.LOGOUT
+                                children: p.default.Messages.LOGOUT
                             })]
                         })
                     })]
@@ -903,8 +903,8 @@
                 let {
                     email: t,
                     claimRequired: n,
-                    onClose: a
-                } = e, i = n ? R.default.Messages.CLAIM_ACCOUNT_REQUIRED_EMAIL_TO : R.default.Messages.CLAIM_ACCOUNT_EMAIL_TO;
+                    onClose: o
+                } = e, i = n ? p.default.Messages.CLAIM_ACCOUNT_REQUIRED_EMAIL_TO : p.default.Messages.CLAIM_ACCOUNT_EMAIL_TO;
 
                 function u() {
                     window.open((0, f.getCurrentPlatformDownloadURL)(), "_blank"), _.default.track(A.AnalyticEvents.DOWNLOAD_APP, {
@@ -916,13 +916,13 @@
                         qr_code: !1
                     })
                 }
-                return s.useEffect(() => d.default.flowStep(p.FlowType.ANY, p.ClaimAccountSteps.CLAIM_ACCOUNT_SUCCESS), []), (0, r.jsxs)("div", {
-                    className: o(I.modalLight, (0, E.getThemeClass)(A.ThemeTypes.LIGHT)),
+                return s.useEffect(() => d.default.flowStep(R.FlowType.ANY, R.ClaimAccountSteps.CLAIM_ACCOUNT_SUCCESS), []), (0, r.jsxs)("div", {
+                    className: a(I.modalLight, (0, E.getThemeClass)(A.ThemeTypes.LIGHT)),
                     children: [(0, r.jsxs)(l.ModalContent, {
                         className: I.successContent,
                         children: [!n && (0, r.jsx)(l.ModalCloseButton, {
                             className: I.closeButton,
-                            onClick: a
+                            onClick: o
                         }), (0, r.jsx)("div", {
                             className: I.successImage
                         }), (0, r.jsx)(l.Text, {
@@ -934,14 +934,14 @@
                         }), (0, r.jsx)(l.Text, {
                             className: I.successPromotion,
                             variant: "text-md/normal",
-                            children: R.default.Messages.CLAIM_ACCOUNT_PROMOTE_APP_2021_04
+                            children: p.default.Messages.CLAIM_ACCOUNT_PROMOTE_APP_2021_04
                         })]
                     }), n ? (0, r.jsx)(l.ModalFooter, {
                         direction: c.default.Direction.VERTICAL,
                         children: (0, r.jsx)(l.Button, {
                             size: l.Button.Sizes.LARGE,
-                            onClick: a,
-                            children: R.default.Messages.OKAY
+                            onClick: o,
+                            children: p.default.Messages.OKAY
                         })
                     }) : (0, r.jsx)(l.ModalFooter, {
                         direction: c.default.Direction.VERTICAL,
@@ -949,7 +949,7 @@
                             color: l.Button.Colors.BRAND,
                             size: l.Button.Sizes.LARGE,
                             onClick: u,
-                            children: R.default.Messages.CLAIM_ACCOUNT_GET_APP
+                            children: p.default.Messages.CLAIM_ACCOUNT_GET_APP
                         })
                     })]
                 })
@@ -959,21 +959,21 @@
                 let {
                     onClose: t,
                     transitionState: n,
-                    claimRequired: a = !1
-                } = e, [o, i] = s.useState(""), [u, d] = s.useState(!1);
+                    claimRequired: o = !1
+                } = e, [a, i] = s.useState(""), [u, d] = s.useState(!1);
                 return u ? (0, r.jsx)(l.ModalRoot, {
                     transitionState: n,
                     children: (0, r.jsx)(S, {
-                        email: o,
-                        claimRequired: a,
+                        email: a,
+                        claimRequired: o,
                         onClose: t
                     })
                 }) : (0, r.jsx)(l.ModalRoot, {
                     transitionState: n,
                     children: (0, r.jsx)(N, {
-                        email: o,
+                        email: a,
                         setEmail: i,
-                        claimRequired: a,
+                        claimRequired: o,
                         onSuccess: () => d(!0),
                         onClose: t
                     })
@@ -992,11 +992,11 @@
                 return !1
             }
 
-            function a(e) {
+            function o(e) {
                 return !1
             }
 
-            function o() {
+            function a() {
                 return !1
             }
 
@@ -1021,7 +1021,9 @@
 
             function _(e) {}
 
-            function f(e) {
+            function f(e) {}
+
+            function E(e) {
                 return !1
             }
             n.r(t), n.d(t, {
@@ -1032,10 +1034,10 @@
                     return s
                 },
                 navigateToRootTab: function() {
-                    return a
+                    return o
                 },
                 resetToAuthRoute: function() {
-                    return o
+                    return a
                 },
                 resetToPanelsUI: function() {
                     return l
@@ -1052,11 +1054,14 @@
                 coerceChannelRoute: function() {
                     return c
                 },
-                coerceModalRoute: function() {
+                coerceGuildsRoute: function() {
                     return _
                 },
-                useIsModalOpen: function() {
+                coerceModalRoute: function() {
                     return f
+                },
+                useIsModalOpen: function() {
+                    return E
                 }
             })
         },
@@ -1064,7 +1069,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 reducedPaymentInfoExperiment: function() {
-                    return a
+                    return o
                 }
             });
             var r = n("862205");
@@ -1093,7 +1098,7 @@
                 }]
             });
 
-            function a() {
+            function o() {
                 let {
                     autoTrackExposure: e
                 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
@@ -1110,22 +1115,22 @@
             "use strict";
             n.r(t), n.d(t, {
                 DEVICE_PUSH_VOIP_PROVIDER: function() {
-                    return o
+                    return a
                 },
                 getDevicePushProvider: function() {
                     return l
                 }
             });
-            var r, s, a = n("773336");
-            let o = null;
+            var r, s, o = n("773336");
+            let a = null;
 
             function l() {
-                return (0, a.isAndroid)(), null
+                return (0, o.isAndroid)(), null
             }(r = s || (s = {})).REMINDER = "reminder", r.TOP_MESSAGE_PUSH = "top_messages_push", r.TRENDING_CONTENT_PUSH = "trending_content_push"
         },
         149806: function(e, t, n) {
             "use strict";
-            var r, s, a, o, l, i, u, d, c, _;
+            var r, s, o, a, l, i, u, d, c, _;
             n.r(t), n.d(t, {
                 FlowType: function() {
                     return r
@@ -1134,27 +1139,27 @@
                     return s
                 },
                 ClaimAccountSteps: function() {
-                    return a
+                    return o
                 },
                 CreateGuildSteps: function() {
-                    return o
+                    return a
                 },
                 RegistrationSteps: function() {
                     return l
                 }
-            }), (i = r || (r = {})).UNKNOWN = "unknown", i.ANY = "any", i.INVITE = "invite", i.ORGANIC = "organic_registration", i.ORGANIC_MARKETING = "organic_marketing", i.ORGANIC_GUILD_TEMPLATES = "organic_guild_template", i.CREATE_GUILD = "create_guild", (u = s || (s = {})).AGE_GATE = "age_gate", u.AGE_GATE_UNDERAGE = "age_gate_underage", (d = a || (a = {})).CLAIM_ACCOUNT = "claim_account", d.CLAIM_ACCOUNT_SUCCESS = "claim_account_success", (c = o || (o = {})).GUILD_TEMPLATES = "guild_templates", c.GUILD_CREATE = "guild_create", c.CREATION_INTENT = "creation_intent", c.CHANNEL_PROMPT = "channel_prompt", c.JOIN_GUILD = "join_guild", c.SUCCESS = "create_success", (_ = l || (l = {})).NUF_STARTED = "nuf_started", _.AGE_GATE = "age_gate", _.NUF_COMPLETE = "nuf_complete", _.HUB_CONNECTION = "hub_connection"
+            }), (i = r || (r = {})).UNKNOWN = "unknown", i.ANY = "any", i.INVITE = "invite", i.ORGANIC = "organic_registration", i.ORGANIC_MARKETING = "organic_marketing", i.ORGANIC_GUILD_TEMPLATES = "organic_guild_template", i.CREATE_GUILD = "create_guild", (u = s || (s = {})).AGE_GATE = "age_gate", u.AGE_GATE_UNDERAGE = "age_gate_underage", (d = o || (o = {})).CLAIM_ACCOUNT = "claim_account", d.CLAIM_ACCOUNT_SUCCESS = "claim_account_success", (c = a || (a = {})).GUILD_TEMPLATES = "guild_templates", c.GUILD_CREATE = "guild_create", c.CREATION_INTENT = "creation_intent", c.CHANNEL_PROMPT = "channel_prompt", c.JOIN_GUILD = "join_guild", c.SUCCESS = "create_success", (_ = l || (l = {})).NUF_STARTED = "nuf_started", _.AGE_GATE = "age_gate", _.NUF_COMPLETE = "nuf_complete", _.HUB_CONNECTION = "hub_connection"
         },
         42963: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return R
                 }
             });
             var r = n("308503"),
                 s = n("95410"),
-                a = n("605250"),
-                o = n("599110"),
+                o = n("605250"),
+                a = n("599110"),
                 l = n("149806"),
                 i = n("49111");
             let u = "UserFlowAnalyticsStore_current",
@@ -1170,7 +1175,7 @@
                 } = t;
                 return 1 !== n ? null : r
             }
-            new a.default("UserFlowAnalytics");
+            new o.default("UserFlowAnalytics");
             let _ = (0, r.default)((e, t) => ({
                 flows: {},
                 currentFlow: null,
@@ -1180,8 +1185,8 @@
                     if (null == n) return null;
                     let {
                         [n]: r
-                    } = t().flows, a = null != r ? r : c(n);
-                    return (null == a ? void 0 : a.currentStep) != null ? n : null
+                    } = t().flows, o = null != r ? r : c(n);
+                    return (null == o ? void 0 : o.currentStep) != null ? n : null
                 }
             }));
 
@@ -1213,11 +1218,11 @@
                     r = null !== (s = _.getState().activeFlow()) && void 0 !== s ? s : l.FlowType.UNKNOWN
                 }
                 let {
-                    [r]: a, ...o
-                } = _.getState().flows, i = null != a ? a : c(r);
+                    [r]: o, ...a
+                } = _.getState().flows, i = null != o ? o : c(r);
                 if (null != i && null != i.currentStep) i.currentStep !== t && _.setState({
                     flows: {
-                        ...o,
+                        ...a,
                         [r]: {
                             ...i,
                             lastStep: i.currentStep,
@@ -1239,7 +1244,7 @@
                             ...e,
                             version: 1
                         }), s.default.set(u, e.type))
-                    }(e), o.default.track(i.AnalyticEvents.NUO_TRANSITION, {
+                    }(e), a.default.track(i.AnalyticEvents.NUO_TRANSITION, {
                         flow_type: e.type,
                         from_step: e.lastStep,
                         to_step: e.currentStep,
@@ -1260,7 +1265,7 @@
             function A() {
                 return null != _.getState().activeFlow()
             }
-            var p = {
+            var R = {
                 flowStart: f,
                 flowStepOrStart: function(e, t) {
                     A() ? E(e, t) : f(e, t)
@@ -1287,8 +1292,8 @@
             });
             var r = n("597755"),
                 s = n.n(r),
-                a = n("815157"),
-                o = n("271938"),
+                o = n("815157"),
+                a = n("271938"),
                 l = n("49111");
             let i = "linux";
 
@@ -1321,17 +1326,17 @@
                 let r = null != n ? n.toString() : null;
                 switch (t) {
                     case "iOS":
-                        return (0, a.default)(null != r ? r : "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746", {
+                        return (0, o.default)(null != r ? r : "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746", {
                             utmSource: e,
-                            fingerprint: o.default.getFingerprint(),
-                            attemptId: (0, a.generateAttemptId)()
+                            fingerprint: a.default.getFingerprint(),
+                            attemptId: (0, o.generateAttemptId)()
                         });
                     case "Android":
-                        return (0, a.default)(null != r ? r : "https://play.google.com/store/apps/details", {
+                        return (0, o.default)(null != r ? r : "https://play.google.com/store/apps/details", {
                             utmSource: e,
                             id: "com.discord",
-                            fingerprint: o.default.getFingerprint(),
-                            attemptId: (0, a.generateAttemptId)()
+                            fingerprint: a.default.getFingerprint(),
+                            attemptId: (0, o.generateAttemptId)()
                         });
                     default:
                         return null != r ? r : "https://www.discord.com"
@@ -1342,13 +1347,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 resolveThunk: function() {
-                    return a
+                    return o
                 }
             });
             var r = n("917351"),
                 s = n.n(r);
-            let a = e => "function" == typeof e ? e() : e;
-            s.curry((e, t, n) => a(t) ? e(n) : n({}))
+            let o = e => "function" == typeof e ? e() : e;
+            s.curry((e, t, n) => o(t) ? e(n) : n({}))
         },
         730622: function(e, t, n) {
             "use strict";
@@ -1358,8 +1363,8 @@
                     return d
                 }
             }), n("70102");
-            var a = n("697218"),
-                o = n("615931");
+            var o = n("697218"),
+                a = n("615931");
             let l = () => {
                 throw Error("updateModal has not been implemented.")
             };
@@ -1372,8 +1377,8 @@
                 let {
                     promiseFn: t,
                     resolve: n,
-                    reject: a,
-                    modalProps: o = {},
+                    reject: o,
+                    modalProps: a = {},
                     hooks: {
                         onEarlyClose: i
                     } = {}
@@ -1382,7 +1387,7 @@
                     null == i || i();
                     return
                 }
-                let d = r(E, c, o);
+                let d = r(E, c, a);
 
                 function c() {
                     null == i || i()
@@ -1393,12 +1398,12 @@
                 }
 
                 function f(e) {
-                    s(d), a(e)
+                    s(d), o(e)
                 }
 
                 function E(e) {
                     return l(d, E, c, {
-                        ...o,
+                        ...a,
                         isLoading: !0
                     }), u({
                         promiseFn: t,
@@ -1415,7 +1420,7 @@
                         res: t
                     } = e;
                     l(d, E, c, {
-                        ...o,
+                        ...a,
                         error: t.body.message
                     })
                 }
@@ -1427,15 +1432,15 @@
                     resolve: n,
                     reject: r,
                     code: s,
-                    mfaCodeHandler: a = i,
-                    isModalOpen: o = !1,
+                    mfaCodeHandler: o = i,
+                    isModalOpen: a = !1,
                     ...l
                 } = e;
                 return t(null != s ? {
                     code: s
                 } : {}).then(n, e => {
                     var s, i;
-                    if (s = e, i = o, s.body && 60008 === s.body.code || i && 429 === s.status) return a({
+                    if (s = e, i = a, s.body && 60008 === s.body.code || i && 429 === s.status) return o({
                         promiseFn: t,
                         resolve: n,
                         reject: r,
@@ -1449,11 +1454,11 @@
             function d(e, t) {
                 var n, r;
                 let {
-                    checkEnabled: s = null !== (r = null === (n = a.default.getCurrentUser()) || void 0 === n ? void 0 : n.mfaEnabled) && void 0 !== r && r,
+                    checkEnabled: s = null !== (r = null === (n = o.default.getCurrentUser()) || void 0 === n ? void 0 : n.mfaEnabled) && void 0 !== r && r,
                     ...l
                 } = null != t ? t : {};
                 return new Promise((t, n) => {
-                    ((0, o.resolveThunk)(s) ? i : u)({
+                    ((0, a.resolveThunk)(s) ? i : u)({
                         promiseFn: e,
                         resolve: t,
                         reject: n,
@@ -1466,56 +1471,56 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return a
                 }
             });
             var r = n("872717"),
                 s = n("599110");
 
-            function a(e, t, n) {
+            function o(e, t, n) {
                 let {
                     trackedActionData: r,
-                    ...a
-                } = t, o = {
-                    url: a.url,
+                    ...o
+                } = t, a = {
+                    url: o.url,
                     request_method: n
                 };
                 return new Promise((t, n) => {
-                    e(a).then(e => {
+                    e(o).then(e => {
                         let n = r.properties;
                         "function" == typeof r.properties && (n = r.properties(e)), (0, s.trackNetworkAction)(r.event, {
                             status_code: e.status,
-                            ...o,
+                            ...a,
                             ...n
                         }), t(e)
                     }).catch(e => {
-                        var t, a;
+                        var t, o;
                         let l = r.properties;
                         "function" == typeof r.properties && (l = r.properties(e)), (0, s.trackNetworkAction)(r.event, {
                             status_code: e.status,
                             error_code: null === (t = e.body) || void 0 === t ? void 0 : t.code,
-                            error_message: null === (a = e.body) || void 0 === a ? void 0 : a.message,
-                            ...o,
+                            error_message: null === (o = e.body) || void 0 === o ? void 0 : o.message,
+                            ...a,
                             ...l
                         }), n(e)
                     })
                 })
             }
-            var o = {
+            var a = {
                 get: function(e) {
-                    return a(r.default.get, e, "get")
+                    return o(r.default.get, e, "get")
                 },
                 post: function(e) {
-                    return a(r.default.post, e, "post")
+                    return o(r.default.post, e, "post")
                 },
                 put: function(e) {
-                    return a(r.default.put, e, "put")
+                    return o(r.default.put, e, "put")
                 },
                 patch: function(e) {
-                    return a(r.default.patch, e, "patch")
+                    return o(r.default.patch, e, "patch")
                 },
                 delete: function(e) {
-                    return a(r.default.delete, e, "del")
+                    return o(r.default.delete, e, "del")
                 }
             }
         },
@@ -1532,9 +1537,9 @@
             var r = n("37983");
             n("884691");
             var s = n("551042"),
-                a = n("920636");
-            let o = (e, t, n) => function(s) {
-                return (0, r.jsx)(a.default, {
+                o = n("920636");
+            let a = (e, t, n) => function(s) {
+                return (0, r.jsx)(o.default, {
                     handleSubmit: e,
                     handleEarlyClose: t,
                     ...n,
@@ -1543,13 +1548,13 @@
             };
 
             function l(e, t, n) {
-                return (0, s.openModal)(o(e, t, n), {
+                return (0, s.openModal)(a(e, t, n), {
                     onCloseCallback: t
                 })
             }
 
             function i(e, t, n, r) {
-                return (0, s.updateModal)(e, o(t, n, r))
+                return (0, s.updateModal)(e, a(t, n, r))
             }
         },
         815157: function(e, t, n) {
@@ -1567,12 +1572,12 @@
             }), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
             var r = n("383536"),
                 s = n.n(r),
-                a = n("748820"),
-                o = n("530334");
+                o = n("748820"),
+                a = n("530334");
             let l = "https://discordapp.page.link";
 
             function i() {
-                return (0, a.v4)()
+                return (0, o.v4)()
             }
 
             function u(e) {
@@ -1583,12 +1588,12 @@
                         r = n.searchParams,
                         s = r.get("link");
                     if (null == s) return null;
-                    let a = decodeURIComponent(s),
-                        o = new URL(a).searchParams,
+                    let o = decodeURIComponent(s),
+                        a = new URL(o).searchParams,
                         l = {
                             utmSource: null !== (t = r.get("utm_source")) && void 0 !== t ? t : void 0
                         };
-                    for (let [e, t] of o.entries()) l[e] = t;
+                    for (let [e, t] of a.entries()) l[e] = t;
                     return l
                 } catch {
                     return null
@@ -1599,7 +1604,7 @@
                 let {
                     utmSource: n,
                     androidFallbackLink: r,
-                    iosFallbackLink: a,
+                    iosFallbackLink: o,
                     ...i
                 } = t, u = new URL(e);
                 for (let e in i) {
@@ -1607,16 +1612,16 @@
                     null != t && u.searchParams.set(e, t)
                 }
                 let d = encodeURIComponent(u.toString()),
-                    c = encodeURIComponent((0, o.default)()),
+                    c = encodeURIComponent((0, a.default)()),
                     _ = ! function() {
                         var e, t;
                         let n = RegExp("(".concat("WebView|(iPhone|iPod|iPad)(?!.*Safari/)", ")"), "ig"),
                             r = (null == s ? void 0 : null === (e = s.ua) || void 0 === e ? void 0 : e.match(n)) != null,
-                            a = (null == s ? void 0 : s.name) === "Safari" && !r;
-                        return (null == s ? void 0 : null === (t = s.os) || void 0 === t ? void 0 : t.family) !== "iOS" || a
+                            o = (null == s ? void 0 : s.name) === "Safari" && !r;
+                        return (null == s ? void 0 : null === (t = s.os) || void 0 === t ? void 0 : t.family) !== "iOS" || o
                     }() ? 0 : 1,
                     f = null != r ? encodeURIComponent(r) : null,
-                    E = null != a ? encodeURIComponent(a) : null,
+                    E = null != o ? encodeURIComponent(o) : null,
                     A = "".concat(l, "/?link=").concat(d, "&utm_source=").concat(n, "&apn=").concat("com.discord", "&isi=").concat(985746746, "&ibi=").concat("com.hammerandchisel.discord", "&sd=").concat(c, "&efr=").concat(_);
                 return null != f && (A += "&afl=".concat(f)), null != E && (A += "&ifl=".concat(E)), A
             }

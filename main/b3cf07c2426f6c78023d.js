@@ -19669,16 +19669,16 @@
                 l.default.preload(i.guild_id, i.id), (0, u.transitionTo)(o.Routes.CHANNEL(a, i.id), t, n)
             }
 
-            function c(e, t) {
-                a(null != e.parent_id, "Thread must have a parent ID.");
-                let n = (0, s.getGuildIdForGenericRedirect)(e);
-                (0, u.transitionTo)(o.Routes.CHANNEL(n, e.id), void 0, t)
-            }
-
-            function _(e, t, n) {
+            function c(e, t, n) {
                 a(null != e.parent_id, "Thread must have a parent ID.");
                 let i = (0, s.getGuildIdForGenericRedirect)(e);
-                (0, u.transitionTo)(o.Routes.CHANNEL(i, e.id, t), void 0, n)
+                (0, u.transitionTo)(o.Routes.CHANNEL(i, e.id), n, t)
+            }
+
+            function _(e, t, n, i) {
+                a(null != e.parent_id, "Thread must have a parent ID.");
+                let l = (0, s.getGuildIdForGenericRedirect)(e);
+                (0, u.transitionTo)(o.Routes.CHANNEL(l, e.id, t), i, n)
             }
 
             function E(e, t, n, i) {
