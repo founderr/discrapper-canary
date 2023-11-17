@@ -4,7 +4,7 @@
             "use strict";
             t.r(s), t.d(s, {
                 default: function() {
-                    return c
+                    return E
                 }
             });
             var a = t("872717"),
@@ -78,13 +78,13 @@
                     }))
                 }
             };
-            var c = o
+            var E = o
         },
         249561: function(e, s, t) {
             "use strict";
             t.r(s), t.d(s, {
                 default: function() {
-                    return A
+                    return p
                 }
             }), t("702976"), t("222007");
             var a = t("37983"),
@@ -95,18 +95,18 @@
                 r = t("828986"),
                 u = t("819689"),
                 o = t("679653"),
-                c = t("390236"),
+                E = t("390236"),
                 f = t("377114"),
-                E = t("699473"),
+                c = t("699473"),
                 g = t("27618"),
-                m = t("697218"),
-                _ = t("822332"),
-                N = t("568734"),
-                M = t("870190"),
+                _ = t("697218"),
+                m = t("822332"),
+                M = t("568734"),
+                N = t("870190"),
                 h = t("49111"),
                 S = t("782340"),
                 T = t("834476");
-            class p extends n.PureComponent {
+            class A extends n.PureComponent {
                 render() {
                     let e, s;
                     let {
@@ -116,17 +116,17 @@
                         message: l,
                         showContextMenuHint: i,
                         ...r
-                    } = this.props, u = n.type === h.ChannelTypes.GUILD_ANNOUNCEMENT && (0, N.hasFlag)(l.flags, h.MessageFlags.CROSSPOSTED);
-                    return i && (e = (0, a.jsx)(_.default, {
+                    } = this.props, u = n.type === h.ChannelTypes.GUILD_ANNOUNCEMENT && (0, M.hasFlag)(l.flags, h.MessageFlags.CROSSPOSTED);
+                    return i && (e = (0, a.jsx)(m.default, {
                         className: T.spacingTop,
                         children: S.default.Messages.DELETE_MESSAGE_CONTEXT_MENU_HINT.format()
-                    })), (0, M.canDeleteAndReportMessage)(l) && (s = (0, a.jsx)(d.FormSwitch, {
+                    })), (0, N.canDeleteAndReportMessage)(l) && (s = (0, a.jsx)(d.FormSwitch, {
                         value: t,
                         onChange: this.handleToggleReport,
                         hideBorder: !0,
                         className: T.spacingTop,
                         children: S.default.Messages.DELETE_MESSAGE_REPORT
-                    })), (0, a.jsx)(c.default.Provider, {
+                    })), (0, a.jsx)(E.default.Provider, {
                         value: n.guild_id,
                         children: (0, a.jsxs)(d.ConfirmModal, {
                             header: u ? S.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER : S.default.Messages.DELETE_MESSAGE_TITLE,
@@ -140,7 +140,7 @@
                                 children: u ? S.default.Messages.DELETE_FOLLOWED_NEWS_BODY : S.default.Messages.DELETE_MESSAGE_BODY
                             }), (0, a.jsx)("div", {
                                 className: T.message,
-                                children: (0, a.jsx)(E.default, {
+                                children: (0, a.jsx)(c.default, {
                                     channel: n,
                                     message: l,
                                     disableInteraction: !0
@@ -167,14 +167,14 @@
                     }
                 }
             }
-            var A = {
+            var p = {
                 confirmPin: function(e, s) {
                     (0, d.openModal)(t => {
                         let n;
-                        let l = (0, o.computeChannelName)(e, m.default, g.default);
+                        let l = (0, o.computeChannelName)(e, _.default, g.default);
                         return n = e.isPrivate() ? S.default.Messages.PIN_MESSAGE_BODY_PRIVATE_CHANNEL : S.default.Messages.PIN_MESSAGE_BODY.format({
                             channelName: l
-                        }), (0, a.jsx)(c.default.Provider, {
+                        }), (0, a.jsx)(E.default.Provider, {
                             value: e.guild_id,
                             children: (0, a.jsxs)(d.ConfirmModal, {
                                 header: S.default.Messages.PIN_MESSAGE_TITLE,
@@ -189,7 +189,7 @@
                                     children: n
                                 }), (0, a.jsx)("div", {
                                     className: T.message,
-                                    children: (0, a.jsx)(E.default, {
+                                    children: (0, a.jsx)(c.default, {
                                         channel: e,
                                         message: s,
                                         animateAvatar: !1,
@@ -201,7 +201,7 @@
                     })
                 },
                 confirmUnpin: function(e, s) {
-                    (0, d.openModal)(t => (0, a.jsx)(c.default.Provider, {
+                    (0, d.openModal)(t => (0, a.jsx)(E.default.Provider, {
                         value: e.guild_id,
                         children: (0, a.jsxs)(d.ConfirmModal, {
                             header: S.default.Messages.UNPIN_MESSAGE_TITLE,
@@ -215,12 +215,12 @@
                                 children: S.default.Messages.UNPIN_MESSAGE_BODY
                             }), (0, a.jsx)("div", {
                                 className: i(T.message, T.spacing),
-                                children: (0, a.jsx)(E.default, {
+                                children: (0, a.jsx)(c.default, {
                                     channel: e,
                                     message: s,
                                     disableInteraction: !0
                                 })
-                            }), (0, a.jsx)(_.default, {
+                            }), (0, a.jsx)(m.default, {
                                 children: S.default.Messages.UNPIN_MESSAGE_CONTEXT_MENU_HINT.format()
                             })]
                         })
@@ -228,7 +228,7 @@
                 },
                 confirmDelete: function(e, s) {
                     let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                    (0, d.openModal)(n => (0, a.jsx)(p, {
+                    (0, d.openModal)(n => (0, a.jsx)(A, {
                         channel: e,
                         message: s,
                         showContextMenuHint: t,
@@ -258,32 +258,33 @@
             "use strict";
             t.r(s), t.d(s, {
                 default: function() {
-                    return T
+                    return A
                 }
             }), t("843762");
             var a = t("917351"),
                 n = t.n(a),
                 l = t("446674"),
                 i = t("913144"),
-                d = t("692038"),
-                r = t("915639"),
-                u = t("42203"),
-                o = t("26989"),
-                c = t("305961"),
-                f = t("377253"),
-                E = t("27618"),
-                g = t("697218");
+                d = t("793441"),
+                r = t("692038"),
+                u = t("915639"),
+                o = t("42203"),
+                E = t("26989"),
+                f = t("305961"),
+                c = t("377253"),
+                g = t("27618"),
+                _ = t("697218");
             let m = {};
 
-            function _(e) {
+            function M(e) {
                 let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
                     t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-                    n = u.default.getChannel(e),
+                    n = o.default.getChannel(e),
                     l = null != n ? n.getGuildId() : null;
                 return {
                     id: e,
-                    messages: s.map(e => (0, d.createMessageRecord)(e)),
+                    messages: s.map(e => (0, r.createMessageRecord)(e)),
                     guildId: l,
                     loaded: t,
                     loading: a
@@ -297,22 +298,22 @@
                 delete m[s.id]
             }
 
-            function M() {
+            function h() {
                 n.forEach(m, e => {
                     n.forEach(e.messages, e => {
-                        e.timestamp.locale(r.default.locale)
+                        e.timestamp.locale(u.default.locale)
                     })
                 })
             }
 
-            function h() {
+            function S() {
                 n.forEach(m, e => {
-                    e.messages = e.messages.map(e => e.set("blocked", E.default.isBlocked(e.author.id)))
+                    e.messages = e.messages.map(e => e.set("blocked", g.default.isBlocked(e.author.id)))
                 })
             }
-            class S extends l.default.Store {
+            class T extends l.default.Store {
                 initialize() {
-                    this.waitFor(u.default, c.default, o.default, f.default, g.default, r.default)
+                    this.waitFor(o.default, f.default, E.default, c.default, _.default, u.default)
                 }
                 getPinnedMessages(e) {
                     var s;
@@ -322,8 +323,8 @@
                     return null != m[e] && m[e].loaded
                 }
             }
-            S.displayName = "ChannelPinsStore";
-            var T = new S(i.default, {
+            T.displayName = "ChannelPinsStore";
+            var A = new T(i.default, {
                 CONNECTION_OPEN: function() {
                     m = {}
                 },
@@ -344,7 +345,7 @@
                             let l = n.findIndex(a.messages, e => e.id === s);
                             if (l >= 0) {
                                 let s = a.messages[l],
-                                    n = (0, d.updateMessageRecord)(s, e.message);
+                                    n = (0, r.updateMessageRecord)(s, e.message);
                                 if (n !== s) {
                                     let e = a.messages.slice();
                                     e[l] = n, m[t].messages = e
@@ -355,11 +356,11 @@
                     }
                     if (e.message.pinned) {
                         if (null == a) {
-                            a = _(t, [e.message], !1), m[t] = a;
+                            a = M(t, [e.message], !1), m[t] = a;
                             return
                         }
                         a.messages = a.messages.slice();
-                        let l = n.findIndex(a.messages, e => e.id === s); - 1 === l ? a.messages.unshift((0, d.createMessageRecord)(e.message)) : a.messages[l] = (0, d.updateMessageRecord)(a.messages[l], e.message), m[t] = a
+                        let l = n.findIndex(a.messages, e => e.id === s); - 1 === l ? a.messages.unshift((0, r.createMessageRecord)(e.message)) : a.messages[l] = (0, r.updateMessageRecord)(a.messages[l], e.message), m[t] = a
                     } else {
                         if (null == a) return;
                         let e = n.findIndex(a.messages, e => e.id === s);
@@ -388,14 +389,14 @@
                     let {
                         channelId: s
                     } = e;
-                    m[s] = _(s, [], !1, !0)
+                    m[s] = M(s, [], !1, !0)
                 },
                 LOAD_PINNED_MESSAGES_SUCCESS: function(e) {
                     let {
                         channelId: s,
                         messages: t
                     } = e;
-                    m[s] = _(s, t, !0)
+                    m[s] = M(s, t, !0)
                 },
                 LOAD_PINNED_MESSAGES_FAILURE: function(e) {
                     let {
@@ -403,24 +404,19 @@
                     } = e;
                     delete m[s]
                 },
-                USER_SETTINGS_PROTO_UPDATE: M,
-                I18N_LOAD_SUCCESS: M,
+                USER_SETTINGS_PROTO_UPDATE: h,
+                I18N_LOAD_SUCCESS: h,
                 CHANNEL_DELETE: N,
                 THREAD_DELETE: N,
-                RELATIONSHIP_ADD: h,
-                RELATIONSHIP_REMOVE: h,
+                RELATIONSHIP_ADD: S,
+                RELATIONSHIP_REMOVE: S,
                 MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function(e) {
                     let {
                         messageId: s,
                         channelId: t
                     } = e, a = m[t];
                     if (null == a) return;
-                    let l = n.findIndex(a.messages, e => e.id === s);
-                    if (-1 === l) return;
-                    let i = a.messages[l],
-                        d = i.attachments.map(e => (null == e.content_scan_version && (e.content_scan_version = -1), e)),
-                        r = i.embeds.map(e => (null == e.contentScanVersion && (e.contentScanVersion = -1), e));
-                    i = (i = i.set("attachments", d)).set("embeds", r), a.messages = a.messages.slice(), a.messages[l] = i, m[t] = a
+                    let l = n.findIndex(a.messages, e => e.id === s); - 1 !== l && (a.messages = a.messages.slice(), a.messages[l] = (0, d.handleExplicitMediaScanTimeoutForMessage)(a.messages[l]), m[t] = a)
                 }
             })
         },
@@ -442,7 +438,7 @@
                 BLOCK: u.block,
                 INLINE: u.inline
             };
-            class c extends n.PureComponent {
+            class E extends n.PureComponent {
                 render() {
                     let {
                         children: e,
@@ -468,8 +464,8 @@
                     })
                 }
             }
-            c.Types = o;
-            var f = c
+            E.Types = o;
+            var f = E
         },
         870190: function(e, s, t) {
             "use strict";
