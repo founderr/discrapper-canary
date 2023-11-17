@@ -1,9 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
     ["15671"], {
-        367598: function(e, t, n) {
-            "use strict";
-            e.exports = n.p + "8ab4327800a9af31b602.svg"
-        },
         527826: function(e, t, n) {
             "use strict";
             e.exports = n.p + "adf75861421c2a6a6269.png"
@@ -341,11 +337,10 @@
                 default: function() {
                     return K
                 }
-            }), n("222007");
+            });
             var s = n("37983"),
-                a = n("884691");
-            n("376507");
-            var l = n("414456"),
+                a = n("884691"),
+                l = n("414456"),
                 r = n.n(l),
                 i = n("730290"),
                 o = n("394846"),
