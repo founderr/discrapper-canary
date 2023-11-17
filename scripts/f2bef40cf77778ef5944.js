@@ -14021,10 +14021,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 TutorialIndicator: function() {
-                    return T
+                    return A
                 },
                 default: function() {
-                    return M
+                    return T
                 }
             }), n("222007");
             var a = n("37983"),
@@ -14044,9 +14044,8 @@
                 E = n("807061"),
                 g = n("826431"),
                 S = n("612246"),
-                _ = n("49111"),
-                A = n("933934");
-            class T extends s.PureComponent {
+                _ = n("933934");
+            class A extends s.PureComponent {
                 componentDidMount() {
                     this.updateCache()
                 }
@@ -14121,29 +14120,29 @@
                     } = this.state, S = {
                         left: null != m ? s.x + m : void 0,
                         top: null != g ? s.y + g : void 0
-                    }, T = e => {
+                    }, A = e => {
                         let t = n && !e;
                         return !0 !== d ? null : (0, a.jsxs)("div", {
                             children: [(0, a.jsx)("div", {
-                                className: i(A.top, {
-                                    [A.animating]: t,
-                                    [A.notAnimating]: !t
+                                className: i(_.top, {
+                                    [_.animating]: t,
+                                    [_.notAnimating]: !t
                                 })
                             }), (0, a.jsx)("div", {
-                                className: i(A.bottom, {
-                                    [A.animating]: t,
-                                    [A.notAnimating]: !t
+                                className: i(_.bottom, {
+                                    [_.animating]: t,
+                                    [_.notAnimating]: !t
                                 })
                             })]
                         })
-                    }, M = e => {
+                    }, T = e => {
                         let t = n && !e;
                         return {
-                            [A.animating]: t,
-                            [A.notAnimating]: !t,
-                            [A.highPriority]: d
+                            [_.animating]: t,
+                            [_.notAnimating]: !t,
+                            [_.highPriority]: d
                         }
-                    }, N = this.getTutorialPopoutText();
+                    }, M = this.getTutorialPopoutText();
                     return (0, a.jsx)(p.default, {
                         position: C,
                         renderMedia: r,
@@ -14153,24 +14152,23 @@
                         uniqueId: e,
                         autoInvert: t,
                         arrowAlignment: h,
-                        forceTheme: _.ThemeTypes.LIGHT,
                         onSkipAll: this.handleSkipTips,
                         onComplete: this.handleDismiss,
-                        ...N,
+                        ...M,
                         children: (e, t) => {
                             let {
                                 isShown: n
                             } = t;
                             return (0, a.jsx)(f.Clickable, {
                                 ...e,
-                                className: A.indicator,
+                                className: _.indicator,
                                 style: S,
                                 children: (0, a.jsxs)("div", {
-                                    className: i(A.animationContainer, M(n)),
-                                    children: [T(n), (0, a.jsx)("div", {
-                                        className: i(A.innerCircle, M(n))
+                                    className: i(_.animationContainer, T(n)),
+                                    children: [A(n), (0, a.jsx)("div", {
+                                        className: i(_.innerCircle, T(n))
                                     }), (0, a.jsx)("div", {
-                                        className: i(A.outerCircle, M(n))
+                                        className: i(_.outerCircle, T(n))
                                     })]
                                 })
                             })
@@ -14186,7 +14184,7 @@
                     }
                 }
             }
-            var M = function() {
+            var T = function() {
                 let {
                     indicators: e,
                     tutorialData: t,
@@ -14201,7 +14199,7 @@
                 return s ? (0, a.jsx)(a.Fragment, {
                     children: Object.entries(e).map(e => {
                         let [s, l] = e, i = t[s];
-                        return o(null != i, "Missing tutorial definition for ".concat(s)), (0, a.jsx)(T, {
+                        return o(null != i, "Missing tutorial definition for ".concat(s)), (0, a.jsx)(A, {
                             tutorialId: s,
                             tutorialDefinition: i,
                             focused: n,
