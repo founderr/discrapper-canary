@@ -8389,6 +8389,12 @@
                         dark: {
                             color: "black.500"
                         }
+                    },
+                    "toast-bg": {
+                        name: "bg-surface-overlay"
+                    },
+                    "alert-bg": {
+                        name: "bg-base-primary"
                     }
                 }
         },
