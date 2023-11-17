@@ -8190,7 +8190,7 @@
                     })) && void 0 !== u ? u : [];
                 return {
                     attachmentIds: c.map(e => e.id).filter(Boolean),
-                    embedIds: _.map(e => e.reference_id).filter(Boolean)
+                    embedIds: _.map((e, t) => "embed_".concat(t)).filter(Boolean)
                 }
             }
 
