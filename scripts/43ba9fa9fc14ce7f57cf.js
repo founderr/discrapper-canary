@@ -937,25 +937,27 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return u
                 },
                 useGetOrFetchApplication: function() {
-                    return u
+                    return o
                 }
             });
             var r = n("884691"),
                 i = n("446674"),
-                l = n("651057"),
-                s = n("299285");
-
-            function a(e) {
-                return r.useEffect(() => {
-                    l.default.fetchApplications(e, !1)
-                }, e), (0, i.useStateFromStoresArray)([s.default], () => e.map(e => s.default.getApplication(e)), e)
-            }
+                l = n("233736"),
+                s = n("651057"),
+                a = n("299285");
 
             function u(e) {
-                return a(null != e ? [e] : [])[0]
+                let t = r.useRef([]);
+                return r.useEffect(() => {
+                    !(0, l.areArraysShallowEqual)(e, t.current) && (s.default.fetchApplications(e, !1), t.current = e)
+                }, [e]), (0, i.useStateFromStoresArray)([a.default], () => e.map(e => a.default.getApplication(e)))
+            }
+
+            function o(e) {
+                return u(null != e ? [e] : [])[0]
             }
         },
         843962: function(e, t, n) {
