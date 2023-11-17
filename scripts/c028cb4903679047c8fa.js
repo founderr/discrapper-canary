@@ -14251,7 +14251,7 @@
                 null == f.current && (f.current = [(0, c.generateEmptyPollAnswer)(), (0, c.generateEmptyPollAnswer)()]);
                 let [m, h] = l.useState(f.current), [E, C] = l.useState(""), [S, g] = l.useState(i.PollLayoutTypes.DEFAULT), [T, v] = l.useState(!1), x = m.filter(e => (0, c.isAnswerFilled)(e, S)), y = m.filter(e => (0, c.isIncompleteAnswer)(e, S)), I = E.length > 0 && x.length > 1 && 0 === y.length, [_, {
                     loading: N
-                }] = (0, r.default)(d.default.createPoll), A = l.useMemo(() => [...m].every(e => (0, c.isAnswerFilled)(e, S)), [m, S]), O = m.length < 6, R = l.useCallback((e, t) => {
+                }] = (0, r.default)(d.default.createPoll), A = l.useMemo(() => [...m].every(e => null != e.image || null != e.text && e.text.length > 0), [m]), O = m.length < 6, R = l.useCallback((e, t) => {
                     h(n => {
                         let l = [...n];
                         return l[t] = {
