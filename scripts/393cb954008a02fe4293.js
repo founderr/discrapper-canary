@@ -28839,22 +28839,21 @@
                 u = n("614182");
             let o = (0, l.animated)(e => {
                 let {
-                    className: t,
-                    percentComplete: n
-                } = e;
+                    percentComplete: t
+                } = e, n = 20;
                 return (0, a.jsx)("svg", {
-                    className: t,
-                    width: 52,
-                    height: 52,
-                    viewBox: "0 0 ".concat(52, " ").concat(52),
+                    className: u.countdown,
+                    width: 40,
+                    height: 40,
+                    viewBox: "0 0 ".concat(40, " ").concat(40),
                     children: (0, a.jsx)("circle", {
                         style: {
-                            strokeDashoffset: 100 * n
+                            strokeDashoffset: Math.round(100 * t)
                         },
                         className: u.progress,
-                        cx: 26,
-                        cy: 26,
-                        r: 20,
+                        cx: n,
+                        cy: n,
+                        r: n - 6,
                         fill: "none",
                         stroke: "#4F545C",
                         pathLength: "100"
@@ -28884,7 +28883,9 @@
                 }) : void 0, _ = m ? i.CenterControlButton : i.default;
                 return (0, a.jsxs)("div", {
                     className: u.container,
-                    children: [(0, a.jsx)(_, {
+                    children: [C ? (0, a.jsx)(o, {
+                        percentComplete: S.percentComplete
+                    }) : null, (0, a.jsx)(_, {
                         ...E,
                         disabled: C,
                         label: g,
@@ -28895,10 +28896,7 @@
                         onMouseLeave: h,
                         isActive: p,
                         grow: !1
-                    }), C ? (0, a.jsx)(o, {
-                        className: u.countdown,
-                        percentComplete: S.percentComplete
-                    }) : null]
+                    })]
                 })
             }
         },
