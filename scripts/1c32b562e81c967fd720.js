@@ -50,8 +50,8 @@
                 S = a("145131"),
                 v = a("158998"),
                 R = a("701964"),
-                D = a("831963"),
-                y = a("129324"),
+                y = a("831963"),
+                D = a("129324"),
                 E = a("48445"),
                 T = a("990455"),
                 F = a("252260"),
@@ -144,7 +144,7 @@
                         onClick: () => {
                             d.setSection(o)
                         },
-                        element: y.default,
+                        element: D.default,
                         elementProps: {
                             context: e,
                             index: a,
@@ -162,7 +162,7 @@
                 } = (0, s.useStateFromStores)([h.default], () => ({
                     defaultStats: h.default.getAllStats(N.MediaEngineContextTypes.DEFAULT),
                     streamStats: h.default.getAllStats(N.MediaEngineContextTypes.STREAM)
-                }), [], s.statesWillNeverBeEqual), l = (0, s.useStateFromStores)([g.default, f.default], () => f.default.getChannel(g.default.getChannelId())), p = null === (e = a.concat(i).find(e => null != e.screenshare)) || void 0 === e ? void 0 : e.screenshare, C = null === (t = i.find(e => null != e.clips)) || void 0 === t ? void 0 : t.clips, S = (0, s.useStateFromStores)([m.default], () => m.default.theme), v = (0, s.useStateFromStores)([m.default], () => m.default.darkSidebar ? x.ThemeTypes.DARK : void 0), R = (0, s.useStateFromStores)([h.default], () => h.default.getSection()), y = (0, s.useStateFromStores)([h.default], () => h.default.getVideoStreams()), E = function(e) {
+                }), [], s.statesWillNeverBeEqual), l = (0, s.useStateFromStores)([g.default, f.default], () => f.default.getChannel(g.default.getChannelId())), p = null === (e = a.concat(i).find(e => null != e.screenshare)) || void 0 === e ? void 0 : e.screenshare, C = null === (t = i.find(e => null != e.clips)) || void 0 === t ? void 0 : t.clips, S = (0, s.useStateFromStores)([m.default], () => m.default.theme), v = (0, s.useStateFromStores)([m.default], () => m.default.darkSidebar ? x.ThemeTypes.DARK : void 0), R = (0, s.useStateFromStores)([h.default], () => h.default.getSection()), D = (0, s.useStateFromStores)([h.default], () => h.default.getVideoStreams()), E = function(e) {
                     let {
                         defaultStats: t,
                         streamStats: a,
@@ -183,7 +183,7 @@
                     })), null != l && (f.push(p), f.push({
                         section: x.RTCDebugSections.CLIPS,
                         label: b.default.Messages.RTC_DEBUG_CLIPS,
-                        element: D.default,
+                        element: y.default,
                         elementProps: {
                             clips: l
                         }
@@ -201,7 +201,7 @@
                 }({
                     defaultStats: a,
                     streamStats: i,
-                    videoStreams: y,
+                    videoStreams: D,
                     screenshare: p,
                     clips: C,
                     channel: l
@@ -566,19 +566,19 @@
                 framesDecoded: "Frames Decoded",
                 framesDecodeErrors: "Decoder Error Count",
                 framesDropped: "Frames Dropped",
-                framesDroppedRateLimiter: "Frames Dropped by Bitrate Limiter",
-                framesDroppedEncoderQueue: "Frames Dropped by Encoder Queue",
                 framesDroppedCongestionWindow: "Frames Dropped by Congestion Window",
+                framesDroppedEncoderQueue: "Frames Dropped by Encoder Queue",
+                framesDroppedRateLimiter: "Frames Dropped by Bitrate Limiter",
                 framesEncoded: "Frames Encoded",
                 framesReceived: "Frames Received",
                 framesSent: "Frames Sent",
                 freezeCount: "Freeze Count",
                 hostname: "Hostname",
+                hybridCaptureMethodSwitches: "Hybrid Capture Method Switches",
                 hybridDxgiFrames: "Hybrid DXGI Frames",
                 hybridGdiFrames: "Hybrid GDI Frames",
-                hybridVideohookFrames: "Hybrid Videohook Frames",
                 hybridGraphicsCaptureFrames: "Hybrid Graphics Capture Frames",
-                hybridCaptureMethodSwitches: "Hybrid Capture Method Switches",
+                hybridVideohookFrames: "Hybrid Videohook Frames",
                 inboundBitrateEstimate: "Inbound Bitrate Estimate",
                 jitter: "Jitter",
                 jitterBuffer: "Jitter Buffer",
@@ -608,13 +608,13 @@
                 preemptiveExpandRate: "Pre-emptive Expand Rate",
                 qpSum: "QP Sum",
                 quartzFrames: "Quartz Frames",
-                screenCaptureKitFrames: "ScreenCaptureKit frames",
                 receiverBitrateEstimate: "Receiver Bitrate Estimate (REMB)",
                 relativePlayoutDelay: "Relative Playout Delay",
                 relativeReceptionDelay: "Relative Reception Delay",
                 renderDelay: "Render Delay",
                 resolution: "Resolution",
                 routingFailures: "Routing Failures",
+                screenCaptureKitFrames: "ScreenCaptureKit frames",
                 screenshareFrames: "WebRTC Frames",
                 secondaryDecodedRate: "Secondary Decode Rate",
                 secureFramesProtocolVersion: "SF Protocol",
@@ -622,7 +622,6 @@
                 sinkWantLocal: "Sink Quality Level (Local)",
                 speechExpandRate: "Speech Expand Rate",
                 ssrc: "SSRC",
-                sumOfSquaredFramesDurations: "Sum of Squared Frames Duration (ms?)",
                 targetDelay: "Target Delay",
                 totalFramesDuration: "Frames Duration (ms)",
                 totalFreezesDuration: "Freezes Duration (ms)",
@@ -675,6 +674,7 @@
                     framesRendered: !0,
                     noiseCancellerProcessTime: !0,
                     sinkWantAsInt: !0,
+                    sumOfSquaredFramesDurations: !0,
                     timestamp: !0,
                     type: !0,
                     videoJitterBuffer: !0,
@@ -733,10 +733,10 @@
                         } = e;
                         return "".concat(t, "x").concat(a)
                     },
+                    secondaryDecodedRate: g,
                     secureFramesProtocolVersion: function(e) {
                         return e > 0 ? "Static Key Test (".concat(e, ")") : "Disabled"
                     },
-                    secondaryDecodedRate: g,
                     speechExpandRate: g,
                     targetDelay: p,
                     videohookBackend: function(e) {
@@ -744,8 +744,8 @@
                         return e < t.length ? t[e] : "Unknown"
                     }
                 },
-                D = e => e,
-                y = e => {
+                y = e => e,
+                D = e => {
                     let [t] = n.useState([]);
                     return t.push({
                         value: e.value,
@@ -763,12 +763,12 @@
                     label: l,
                     value: c,
                     section: m
-                } = e, f = null !== (a = R[l]) && void 0 !== a ? a : D;
+                } = e, f = null !== (a = R[l]) && void 0 !== a ? a : y;
                 let p = s.graphs[l] && (Array.isArray(i = c) && i.length > 0 && "number" == typeof i[0].value ? (0, r.jsx)(o.default, {
                         dataPoints: i,
                         width: 300,
                         height: 100
-                    }) : "number" == typeof i ? (0, r.jsx)(y, {
+                    }) : "number" == typeof i ? (0, r.jsx)(D, {
                         value: i,
                         width: 300,
                         height: 100
@@ -884,8 +884,8 @@
                 S = a("245622"),
                 v = a("601615"),
                 R = a("266331"),
-                D = a("353927"),
-                y = a("782340"),
+                y = a("353927"),
+                D = a("782340"),
                 E = a("361430"),
                 T = a("926622");
             class F extends n.PureComponent {
@@ -938,7 +938,7 @@
                         });
                     return (0, r.jsxs)(o.FormSection, {
                         tag: o.FormTitleTags.H2,
-                        title: y.default.Messages.RTC_DEBUG_TRANSPORT + (null != t ? " - " + t : ""),
+                        title: D.default.Messages.RTC_DEBUG_TRANSPORT + (null != t ? " - " + t : ""),
                         className: E.allowSelection,
                         children: [(0, S.renderTwoColumns)(s), 0 === d.length ? null : (0, r.jsx)(o.FormDivider, {
                             className: T.marginBottom20
@@ -950,7 +950,7 @@
                 let {
                     context: t,
                     index: a
-                } = e, r = u.default.getAllStats(t)[a], n = t === D.MediaEngineContextTypes.STREAM ? m.default.getHostname(m.default.getActiveStreamKey()) : d.default.getHostname();
+                } = e, r = u.default.getAllStats(t)[a], n = t === y.MediaEngineContextTypes.STREAM ? m.default.getHostname(m.default.getActiveStreamKey()) : d.default.getHostname();
                 return {
                     hidePersonalInformation: f.default.hidePersonalInformation,
                     transport: null != r ? r.transport : null,
