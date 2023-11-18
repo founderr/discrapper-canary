@@ -129,8 +129,8 @@
                 h = l("721618"),
                 _ = l("733160"),
                 g = l("990864"),
-                N = l("274652"),
-                p = l("922744"),
+                p = l("274652"),
+                N = l("922744"),
                 I = l("155207"),
                 x = l("745183"),
                 A = l("368121"),
@@ -148,7 +148,7 @@
                         let l = (0, n.getIsBroadcastingGDM)(e.id);
                         return l ? d.default : I.default;
                     case O.ChannelTypes.GUILD_ANNOUNCEMENT:
-                        if (e.isNSFW()) return N.default;
+                        if (e.isNSFW()) return p.default;
                         if ((0, L.default)(e)) return g.default;
                         else return _.default;
                     case O.ChannelTypes.GUILD_TEXT:
@@ -172,11 +172,11 @@
                         return A.default;
                     case O.ChannelTypes.ANNOUNCEMENT_THREAD:
                     case O.ChannelTypes.PUBLIC_THREAD:
-                        if (e.isNSFW()) return p.default;
+                        if (e.isNSFW()) return N.default;
                         if (e.isForumPost()) return S.default;
                         else return T.default;
                     case O.ChannelTypes.PRIVATE_THREAD:
-                        if (e.isNSFW()) return p.default;
+                        if (e.isNSFW()) return N.default;
                         return x.default;
                     case O.ChannelTypes.GUILD_DIRECTORY:
                         return s.default;
@@ -269,8 +269,8 @@
                 h = l("30591"),
                 _ = l("803725"),
                 g = l("49111"),
-                N = l("782340"),
-                p = l("173266"),
+                p = l("782340"),
+                N = l("173266"),
                 I = l("770420");
             let x = e => {
                 let {
@@ -299,25 +299,25 @@
                             dismissibleContent: u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK,
                             shouldUseHorizontalButtons: !0,
                             inlineArt: !0,
-                            artClassName: p.clipsEducationArt,
+                            artClassName: N.clipsEducationArt,
                             position: "right",
-                            header: N.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_TITLE,
-                            headerClassName: p.clipsEducationHeader,
+                            header: p.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_TITLE,
+                            headerClassName: N.clipsEducationHeader,
                             body: (0, n.jsxs)(n.Fragment, {
                                 children: [(0, n.jsx)(o.Text, {
                                     variant: "text-sm/normal",
                                     color: "always-white",
-                                    children: N.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
+                                    children: p.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
                                 }), I ? (0, n.jsx)(o.Text, {
                                     variant: "text-sm/normal",
                                     color: "always-white",
-                                    className: p.warningText,
-                                    children: N.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
+                                    className: N.warningText,
+                                    children: p.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
                                         url: S.default.getArticleURL(g.HelpdeskArticles.CLIPS)
                                     })
                                 }) : null]
                             }),
-                            tryItText: N.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
+                            tryItText: p.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
                             onTryFeature: e => {
                                 (0, _.updateClipsEnabled)({
                                     clipsEnabled: !0,
@@ -341,17 +341,17 @@
                 r(null != s, "Clips keybind should be set");
                 let u = E.toString(s.shortcut, !0);
                 return (0, n.jsx)(o.FormItem, {
-                    title: N.default.Messages.CLIPS_SETTINGS,
+                    title: p.default.Messages.CLIPS_SETTINGS,
                     titleClassName: I.formItemTitle,
                     className: I.modalContent,
                     children: (0, n.jsxs)("div", {
-                        className: p.container,
+                        className: N.container,
                         children: [(0, n.jsx)(x, {
                             clipsEnabled: a,
                             guildId: l,
                             isAnimationDone: t,
                             children: (0, n.jsx)(o.FormSwitch, {
-                                className: p.formSwitch,
+                                className: N.formSwitch,
                                 value: a,
                                 onChange: e => (0, _.updateClipsEnabled)({
                                     clipsEnabled: e,
@@ -359,18 +359,18 @@
                                     trackAnalytics: !0
                                 }),
                                 hideBorder: !0,
-                                children: N.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
+                                children: p.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
                             })
                         }), (0, n.jsx)(o.Text, {
                             variant: "text-xs/normal",
                             color: "interactive-normal",
-                            className: p.description,
-                            children: N.default.Messages.CLIPS_SETTINGS_HELP_IN_GO_LIVE_CTA.format({
+                            className: N.description,
+                            children: p.default.Messages.CLIPS_SETTINGS_HELP_IN_GO_LIVE_CTA.format({
                                 keybind: u,
                                 keybindHook: () => (0, n.jsx)("span", {
-                                    className: p.keybindHintKeys,
+                                    className: N.keybindHintKeys,
                                     children: (0, n.jsx)(o.KeyCombo, {
-                                        className: p.keybindShortcut,
+                                        className: N.keybindShortcut,
                                         shortcut: u
                                     })
                                 })
@@ -408,8 +408,8 @@
                         contentClassName: h,
                         tryItText: _,
                         onTryFeature: g,
-                        onClose: N,
-                        className: p,
+                        onClose: p,
+                        className: N,
                         inlineArt: I = !1,
                         isPremiumFeature: x = !1,
                         shouldUseHorizontalButtons: A = !1,
@@ -436,7 +436,7 @@
                     }, [D, U, b, M]), a.useEffect(() => {
                         (0, o.requestMarkDismissibleContentAsShown)(R)
                     }, [R]), (0, n.jsx)("div", {
-                        className: p,
+                        className: N,
                         ref: t,
                         children: (0, n.jsxs)("div", {
                             className: r(S.content, h, {
@@ -480,7 +480,7 @@
                                         className: S.button,
                                         size: j,
                                         onClick: e => {
-                                            null == N || N(e), g(e), G(f.ContentDismissActionType.PRIMARY)
+                                            null == p || p(e), g(e), G(f.ContentDismissActionType.PRIMARY)
                                         },
                                         color: x || O ? i.Button.Colors.BRAND : i.Button.Colors.WHITE,
                                         look: x || O ? i.Button.Looks.INVERTED : i.Button.Looks.FILLED,
@@ -489,7 +489,7 @@
                                         className: S.button,
                                         size: j,
                                         onClick: e => {
-                                            null == N || N(e), G(f.ContentDismissActionType.DISMISS)
+                                            null == p || p(e), G(f.ContentDismissActionType.DISMISS)
                                         },
                                         color: x || O ? i.Button.Colors.WHITE : i.Button.Colors.BRAND,
                                         look: x || O ? i.Button.Looks.LINK : i.Button.Looks.FILLED,
@@ -499,7 +499,7 @@
                                     className: S.button,
                                     size: i.Button.Sizes.MAX,
                                     onClick: e => {
-                                        null == N || N(e), G(f.ContentDismissActionType.PRIMARY)
+                                        null == p || p(e), G(f.ContentDismissActionType.PRIMARY)
                                     },
                                     color: i.Button.Colors.WHITE,
                                     children: m.default.Messages.EDUCATION_NEW_FEATURE_CONFIRM
@@ -797,7 +797,7 @@
                     selectedSource: t,
                     onChangeVideoDeviceSource: l,
                     onChangeAudioDevice: s
-                } = e, h = (0, f.default)(), _ = (0, u.useStateFromStores)([d.default], () => d.default.getInputDevices()), [g, N] = a.useState(function(e, t, l) {
+                } = e, h = (0, f.default)(), _ = (0, u.useStateFromStores)([d.default], () => d.default.getInputDevices()), [g, p] = a.useState(function(e, t, l) {
                     if (null != t && null != l) {
                         let n = t.find(t => t.id === e);
                         if (null == n) return;
@@ -830,7 +830,7 @@
                                 value: g,
                                 className: C.marginaTop8,
                                 onChange: e => {
-                                    N(e), s(e)
+                                    p(e), s(e)
                                 },
                                 options: r.map(_, e => {
                                     let {
@@ -875,7 +875,7 @@
                     selectedChannelId: t,
                     guildId: l,
                     onChangeSelectedChannelId: C
-                } = e, h = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()), _ = (0, a.useStateFromStores)([i.default, r.default, u.default], () => (0, c.getStreamEligibleChannels)(r.default.getChannels(l), i.default, u.default)), g = (0, a.useStateFromStores)([d.default], () => d.default.getVoiceStates(l)), N = _.map(e => {
+                } = e, h = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()), _ = (0, a.useStateFromStores)([i.default, r.default, u.default], () => (0, c.getStreamEligibleChannels)(r.default.getChannels(l), i.default, u.default)), g = (0, a.useStateFromStores)([d.default], () => d.default.getVoiceStates(l)), p = _.map(e => {
                     var l;
                     return {
                         name: (0, n.jsx)(f.default, {
@@ -900,7 +900,7 @@
                     title: S.default.Messages.GO_LIVE_MODAL_SELECT_CHANNEL_FORM_TITLE,
                     scrollerInnerClassName: E.channelSelectScrollerInner,
                     children: (0, n.jsx)(s.RadioGroup, {
-                        options: N,
+                        options: p,
                         value: t,
                         itemInfoClassName: E.channelInfoWrapper,
                         itemTitleClassName: E.channelTitleWrapper,
@@ -938,8 +938,8 @@
                 h = l("525065"),
                 _ = l("305961"),
                 g = l("42887"),
-                N = l("568307"),
-                p = l("18494"),
+                p = l("568307"),
+                N = l("18494"),
                 I = l("697218"),
                 x = l("703370"),
                 A = l("145131"),
@@ -973,7 +973,7 @@
                     selectSource: l,
                     sourceChanged: a,
                     onChangeSource: s
-                } = e, r = (0, i.useStateFromStores)([N.default, x.default], () => (0, P.isWindows)() ? (0, U.default)(N.default, x.default) : null), o = (0, i.useStateFromStores)([d.default], () => (null == r ? void 0 : r.id) != null ? d.default.getApplication(r.id) : null), c = (0, i.useStateFromStores)([N.default], () => N.default.getRunningGames()), f = (0, i.useStateFromStoresArray)([d.default], () => c.map(e => null != e.id ? d.default.getApplication(e.id) : null).filter(j.isNotNullish), [c]), m = null;
+                } = e, r = (0, i.useStateFromStores)([p.default, x.default], () => (0, P.isWindows)() ? (0, U.default)(p.default, x.default) : null), o = (0, i.useStateFromStores)([d.default], () => (null == r ? void 0 : r.id) != null ? d.default.getApplication(r.id) : null), c = (0, i.useStateFromStores)([p.default], () => p.default.getRunningGames()), f = (0, i.useStateFromStoresArray)([d.default], () => c.map(e => null != e.id ? d.default.getApplication(e.id) : null).filter(j.isNotNullish), [c]), m = null;
                 if (null != t ? m = t.name : null != r && (m = r.name), null == m) return null;
                 let S = (0, B.default)(r, t, c),
                     E = a ? f.find(e => {
@@ -1089,7 +1089,7 @@
                     guildId: E,
                     selectSource: h,
                     selectGuild: _,
-                    onClose: N,
+                    onClose: p,
                     onChangeSelectedFPS: x,
                     onChangeSelectedResolution: A,
                     onChangeSelectedPreset: v,
@@ -1098,12 +1098,12 @@
                     onChangeAudioDevice: L,
                     onChangeGuild: O,
                     isAnimationDone: M
-                } = e, j = (0, i.useStateFromStores)([p.default, C.default], () => C.default.getChannel(p.default.getVoiceChannelId())), P = (0, i.useStateFromStores)([b.default], () => b.default.GPUDriversOutdated), U = (0, i.useStateFromStores)([b.default], () => b.default.problematicGPUDriver), w = (0, i.useStateFromStores)([g.default], () => g.default.getSoundshareEnabled()), B = (0, i.useStateFromStores)([I.default], () => I.default.getCurrentUser()), H = (0, f.useEnableClips)(), K = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
+                } = e, j = (0, i.useStateFromStores)([N.default, C.default], () => C.default.getChannel(N.default.getVoiceChannelId())), P = (0, i.useStateFromStores)([b.default], () => b.default.GPUDriversOutdated), U = (0, i.useStateFromStores)([b.default], () => b.default.problematicGPUDriver), w = (0, i.useStateFromStores)([g.default], () => g.default.getSoundshareEnabled()), B = (0, i.useStateFromStores)([I.default], () => I.default.getCurrentUser()), H = (0, f.useEnableClips)(), K = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
                     autoTrackExposure: !H
                 }), Y = (0, G.default)();
-                null != t && t.id.startsWith("screen") ? Y = z.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND : null == Y && g.default.supportsEnableSoundshare() && w !== W.SoundshareEnableState.ENABLED && (Y = z.default.Messages.GO_LIVE_SCREENSHARE_ENABLE_FOR_SOUNDSHARE.format({
+                null != t && t.id.startsWith("screen") && !g.default.supportsScreenSoundshare() ? Y = z.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND : null == Y && g.default.supportsEnableSoundshare() && w !== W.SoundshareEnableState.ENABLED && (Y = z.default.Messages.GO_LIVE_SCREENSHARE_ENABLE_FOR_SOUNDSHARE.format({
                     onVoiceSettingsClick: () => {
-                        N(), o.default.open(W.UserSettingsSections.VOICE)
+                        p(), o.default.open(W.UserSettingsSections.VOICE)
                     }
                 }));
                 let q = H ? (0, n.jsx)(S.default, {
@@ -1149,7 +1149,7 @@
                         selectedFPS: l,
                         selectedResolution: u,
                         guildId: E,
-                        onClose: N,
+                        onClose: p,
                         onFPSChange: x,
                         onResolutionChange: A,
                         onPresetChange: v,
@@ -1249,8 +1249,8 @@
                 h = l("928609"),
                 _ = l("268491"),
                 g = l("42203"),
-                N = l("305961"),
-                p = l("42887"),
+                p = l("305961"),
+                N = l("42887"),
                 I = l("568307"),
                 x = l("18494"),
                 A = l("697218"),
@@ -1290,13 +1290,13 @@
                 } = (0, d.useStateFromStoresObject)([_.default], () => _.default.getState()), q = (0, d.useStateFromStores)([x.default, g.default], () => g.default.getChannel(x.default.getVoiceChannelId())), $ = (0, d.useStateFromStores)([I.default, v.default], () => (0, O.isWindows)() ? (0, P.default)(I.default, v.default) : null), ee = (0, d.useStateFromStores)([A.default], () => {
                     let e = A.default.getCurrentUser();
                     return u(null != e, "GoLiveModal: user cannot be undefined"), e
-                }), et = (0, d.useStateFromStores)([N.default], () => {
+                }), et = (0, d.useStateFromStores)([p.default], () => {
                     var e;
-                    return null === (e = N.default.getGuild(z)) || void 0 === e ? void 0 : e.premiumTier
+                    return null === (e = p.default.getGuild(z)) || void 0 === e ? void 0 : e.premiumTier
                 }), [el, en] = null !== (t = (0, D.default)(J, ee, et)) && void 0 !== t ? t : [F.ApplicationStreamResolutions.RESOLUTION_720, F.ApplicationStreamFPS.FPS_30];
                 J !== F.ApplicationStreamPresets.PRESET_CUSTOM && (X = el, Q = en);
                 let ea = (0, T.useUID)();
-                let [es, er] = r.useState((a = H, i = W, a ? 0 : i ? 1 : 2)), [ei, eu] = r.useState(null), [eo, ed] = r.useState(!1), [ec, ef] = r.useState(null), [em, eS] = r.useState(null), [eE, eC] = r.useState(null), [eh, e_] = r.useState(J), [eg, eN] = r.useState(X), [ep, eI] = r.useState(Q), [ex, eA] = r.useState(null != z ? z : null), ev = null !== (n = null == q ? void 0 : q.id) && void 0 !== n ? n : ec;
+                let [es, er] = r.useState((a = H, i = W, a ? 0 : i ? 1 : 2)), [ei, eu] = r.useState(null), [eo, ed] = r.useState(!1), [ec, ef] = r.useState(null), [em, eS] = r.useState(null), [eE, eC] = r.useState(null), [eh, e_] = r.useState(J), [eg, ep] = r.useState(X), [eN, eI] = r.useState(Q), [ex, eA] = r.useState(null != z ? z : null), ev = null !== (n = null == q ? void 0 : q.id) && void 0 !== n ? n : ec;
                 r.useEffect(() => {
                     let e = (0, O.isWindows)() ? (0, P.default)(I.default, v.default) : null,
                         t = (null == e ? void 0 : e.id) != null ? C.default.getApplication(e.id) : null;
@@ -1320,7 +1320,7 @@
                         null == q && m.default.selectVoiceChannel(l);
                         let s = eh,
                             r = eg,
-                            i = ep;
+                            i = eN;
                         !(0, j.default)(s, r, i, ee, et) && (s = F.ApplicationStreamPresets.PRESET_VIDEO, r = F.ApplicationStreamResolutions.RESOLUTION_720, i = F.ApplicationStreamFPS.FPS_30), (0, S.updateStreamSettings)({
                             preset: s,
                             resolution: r,
@@ -1352,14 +1352,14 @@
                         let [e, n] = (0, D.default)(F.ApplicationStreamPresets.PRESET_VIDEO, ee, et);
                         t = e, l = n
                     }
-                    l !== ep && eI(l), t !== eg && eN(t), a !== t || s !== l ? e_(F.ApplicationStreamPresets.PRESET_CUSTOM) : e !== eh && e_(e)
-                }, [ee, et, ep, eg, eh]);
+                    l !== eN && eI(l), t !== eg && ep(t), a !== t || s !== l ? e_(F.ApplicationStreamPresets.PRESET_CUSTOM) : e !== eh && e_(e)
+                }, [ee, et, eN, eg, eh]);
                 async function eL(e) {
                     if (e.preventDefault(), 1 === es) return er(2);
                     let t = (0, y.default)($, em, I.default.getRunningGames()),
                         n = M.default.supportsFeature(k.NativeFeatures.ELEVATED_HOOK) && (null == t ? void 0 : t.elevated);
                     if ((0, O.isMac)() && null != em) {
-                        let e = await p.default.getMediaEngine().getDesktopSources(),
+                        let e = await N.default.getMediaEngine().getDesktopSources(),
                             t = em.id;
                         if (t.startsWith("screen") && e.length > 0 && !e.some(e => e.includes(t))) {
                             var a, r;
@@ -1465,12 +1465,12 @@
                                     selectedPreset: eh,
                                     selectedResolution: eg,
                                     selectedSource: em,
-                                    selectedFPS: ep,
+                                    selectedFPS: eN,
                                     sourceChanged: eo,
                                     selectSource: W,
                                     onChangeSelectedFPS: e => eT(eh, eg, e),
-                                    onChangeSelectedResolution: e => eT(eh, e, ep),
-                                    onChangeSelectedPreset: e => eT(e, eg, ep),
+                                    onChangeSelectedResolution: e => eT(eh, e, eN),
+                                    onChangeSelectedPreset: e => eT(e, eg, eN),
                                     onChangeSelectedChannelId: ef,
                                     onChangeSelectedSource: eO,
                                     onChangeSource: () => er(1),
@@ -1564,9 +1564,9 @@
                 h = l("644169"),
                 _ = l("782340"),
                 g = l("770420"),
-                N = l("305013");
+                p = l("305013");
 
-            function p(e) {
+            function N(e) {
                 let {
                     guildId: t,
                     onClick: l
@@ -1578,18 +1578,18 @@
                 }));
                 return null != a && s ? (0, n.jsxs)(o.Clickable, {
                     onClick: () => l(t),
-                    className: N.guildRow,
+                    className: p.guildRow,
                     children: [(0, n.jsx)(S.default, {
                         guild: a,
                         size: S.default.Sizes.SMALL,
-                        className: N.guildIcon
+                        className: p.guildIcon
                     }), (0, n.jsx)(o.Text, {
                         variant: "text-md/normal",
-                        className: N.guildName,
+                        className: p.guildName,
                         children: a.toString()
                     }), (0, n.jsx)(E.default, {
                         direction: E.default.Directions.RIGHT,
-                        className: N.guildArrow
+                        className: p.guildArrow
                     })]
                 }) : null
             }
@@ -1600,12 +1600,12 @@
                 } = e, l = (0, u.useStateFromStores)([m.default], () => m.default.getGuildFolders());
                 return (0, n.jsx)(h.default, {
                     title: _.default.Messages.GO_LIVE_MODAL_SELECT_GUILD_FORM_TITLE,
-                    scrollerClassName: s(N.guildScroller, g.marginBottom),
+                    scrollerClassName: s(p.guildScroller, g.marginBottom),
                     children: i.flatMap(l, e => {
                         let {
                             guildIds: l
                         } = e;
-                        return l.map(e => (0, n.jsx)(p, {
+                        return l.map(e => (0, n.jsx)(N, {
                             guildId: e,
                             onClick: t
                         }, e))
@@ -1797,8 +1797,8 @@
                 h = l("162933"),
                 _ = l("773336"),
                 g = l("301834"),
-                N = l("756898"),
-                p = l("375202"),
+                p = l("756898"),
+                N = l("375202"),
                 I = l("321443"),
                 x = l("444276"),
                 A = l("353927"),
@@ -1863,9 +1863,9 @@
             }
 
             function O(e) {
-                let t = (0, _.isWindows)() ? (0, p.default)(S.default, E.default) : null,
+                let t = (0, _.isWindows)() ? (0, N.default)(S.default, E.default) : null,
                     l = S.default.getRunningGames();
-                return null != t && (0, N.default)(e.id, t.windowHandle) ? 2 : null != l.find(t => (0, N.default)(e.id, t.windowHandle)) ? 1 : 0
+                return null != t && (0, p.default)(e.id, t.windowHandle) ? 2 : null != l.find(t => (0, p.default)(e.id, t.windowHandle)) ? 1 : 0
             }
 
             function M(e) {
@@ -1876,7 +1876,7 @@
                     enableGoLiveCaptureCard: s
                 } = g.default.useExperiment({
                     location: "GoLive_Source_Select"
-                }), i = m.default.supports(A.Features.GO_LIVE_HARDWARE), [o, f] = a.useState(null), [S, E] = a.useState(null), [_, N] = a.useState(null), p = null != _ && _.length > 0, [L, O] = a.useState(u.DesktopSources.WINDOW), [M, j] = a.useState(!1), D = a.useRef(null), P = a.useRef(new d.Interval);
+                }), i = m.default.supports(A.Features.GO_LIVE_HARDWARE), [o, f] = a.useState(null), [S, E] = a.useState(null), [_, p] = a.useState(null), N = null != _ && _.length > 0, [L, O] = a.useState(u.DesktopSources.WINDOW), [M, j] = a.useState(!1), D = a.useRef(null), P = a.useRef(new d.Interval);
                 a.useEffect(() => {
                     let e = P.current;
                     return T().then(e => {
@@ -1885,14 +1885,14 @@
                             windowSources: l,
                             cameraSources: n
                         } = e;
-                        f(t), E(l), N(n)
+                        f(t), E(l), p(n)
                     }), e.start(1e3, async () => {
                         let {
                             screenSources: e,
                             windowSources: t,
                             cameraSources: l
                         } = await T();
-                        f(e), E(t), N(l)
+                        f(e), E(t), p(l)
                     }), () => {
                         e.stop()
                     }
@@ -1953,7 +1953,7 @@
                                     name: v.default.Messages.GO_LIVE_MODAL_SCREENS,
                                     value: u.DesktopSources.SCREEN
                                 }];
-                                return s && i && p && e.push({
+                                return s && i && N && e.push({
                                     name: v.default.Messages.GO_LIVE_MODAL_CAPTURE,
                                     value: u.DesktopSources.CAMERA
                                 }), e
@@ -2071,8 +2071,8 @@
                 h = l("145131"),
                 _ = l("216422"),
                 g = l("719923"),
-                N = l("773356"),
-                p = l("480862"),
+                p = l("773356"),
+                N = l("480862"),
                 I = l("686298"),
                 x = l("49111"),
                 A = l("646718"),
@@ -2188,7 +2188,7 @@
                     buttons: B.map(e => j({
                         type: e,
                         selected: e.value === a,
-                        needsPremium: !(0, N.default)(l, e.value, s, b, y),
+                        needsPremium: !(0, p.default)(l, e.value, s, b, y),
                         analyticsLocation: H,
                         onClick: () => r(e.value),
                         onClose: t
@@ -2197,7 +2197,7 @@
                     buttons: I.ApplicationStreamFPSButtons.map(e => j({
                         type: e,
                         selected: e.value === s,
-                        needsPremium: !(0, N.default)(l, a, e.value, b, y),
+                        needsPremium: !(0, p.default)(l, a, e.value, b, y),
                         analyticsLocation: H,
                         onClick: () => _(e.value),
                         onClose: t
@@ -2224,7 +2224,7 @@
                                 })
                             })
                         })
-                    }), V ? (0, n.jsx)(p.default, {
+                    }), V ? (0, n.jsx)(N.default, {
                         message: v.default.Messages.STREAM_PREMIUM_UPSELL_BANNER_PRESET_DOCUMENTS,
                         onClose: t,
                         openStreamUpsellModal: O
@@ -2242,7 +2242,7 @@
                             titleClassName: R.formItemTitleSlim,
                             children: z
                         })]
-                    }), V ? (0, n.jsx)(p.default, {
+                    }), V ? (0, n.jsx)(N.default, {
                         onClose: t,
                         openStreamUpsellModal: O
                     }) : null]
