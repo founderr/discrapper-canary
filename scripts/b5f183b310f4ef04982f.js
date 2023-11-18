@@ -4,7 +4,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return m
                 }
             });
             var i = n("759843"),
@@ -17,9 +17,9 @@
                 d = n("856368"),
                 c = n("697543"),
                 g = n("49111"),
-                m = n("782340");
+                f = n("782340");
             n("2581");
-            var f = {
+            var m = {
                 resetSuggestions: () => r.default.dispatch({
                     type: "POMELO_SUGGESTIONS_RESET"
                 }),
@@ -66,19 +66,21 @@
                 async attemptPomelo(e) {
                     var t, n;
                     let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "modal",
-                        d = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                    let c = (t = e, !1 === /^[A-Za-z0-9_.]*$/.test(t) ? m.default.Messages.POMELO_EXISTING_FLOW_ERROR_INVALID : t.includes("..") ? m.default.Messages.POMELO_EXISTING_FLOW_ERROR_DOT_DOT : t.length < 2 || t.length > 32 ? m.default.Messages.POMELO_EXISTING_FLOW_ERROR_LIMIT.format({
+                        d = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                        c = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+                    let m = (t = e, !1 === /^[A-Za-z0-9_.]*$/.test(t) ? f.default.Messages.POMELO_EXISTING_FLOW_ERROR_INVALID : t.includes("..") ? f.default.Messages.POMELO_EXISTING_FLOW_ERROR_DOT_DOT : t.length < 2 || t.length > 32 ? f.default.Messages.POMELO_EXISTING_FLOW_ERROR_LIMIT.format({
                         maxNum: 32,
                         minNum: 2
                     }) : void 0);
-                    if (null != c) return o.default.track(g.AnalyticEvents.POMELO_ERRORS, {
-                        reason: c,
+                    if (null != m) return o.default.track(g.AnalyticEvents.POMELO_ERRORS, {
+                        reason: m,
                         username_error: !0,
-                        location: a
+                        location: a,
+                        one_click_flow: c
                     }), r.default.dispatch({
                         type: "POMELO_ATTEMPT_FAILURE",
                         username: e,
-                        error: c
+                        error: m
                     });
                     if ((0, l.getPomeloAttempt)()) try {
                         let t = await u.default.post({
@@ -96,7 +98,8 @@
                         t.body.taken && o.default.track(g.AnalyticEvents.POMELO_ERRORS, {
                             reason: "already_taken",
                             username_error: !0,
-                            location: a
+                            location: a,
+                            one_click_flow: c
                         }), r.default.dispatch({
                             type: "POMELO_ATTEMPT_SUCCESS",
                             username: e,
@@ -109,7 +112,8 @@
                         o.default.track(g.AnalyticEvents.POMELO_ERRORS, {
                             reason: i,
                             username_error: !0,
-                            location: a
+                            location: a,
+                            one_click_flow: c
                         }), r.default.dispatch({
                             username: e,
                             type: "POMELO_ATTEMPT_FAILURE",
@@ -393,16 +397,16 @@
                     return g
                 },
                 getDefaultPomelo: function() {
-                    return m
+                    return f
                 },
                 shouldSkipToEditUsername: function() {
-                    return O
+                    return v
                 },
                 formatPomeloForEditing: function() {
-                    return p
+                    return O
                 },
                 getMemberSince: function() {
-                    return v
+                    return p
                 },
                 formatUsernameLiveCheckValidation: function() {
                     return R
@@ -428,19 +432,19 @@
                 }, t, 80)
             }
 
-            function m(e) {
+            function f(e) {
                 let t = (0, u.stripDiacritics)(e.username).replace(d.dirtyChars, "").replace(d.coalescePeriods, ".").toLowerCase();
                 return "".concat(t).concat(e.discriminator).substring(0, 32)
             }
-            let f = ["@", "#", ":"],
+            let m = ["@", "#", ":"],
                 E = ["```", "discord", "hypesquad", "system message", "system mesage", "sustem message", "sustem mesage", "clyde"],
                 _ = ["discordtag", "everyone", "here", "discord nitro", "discord", "snowsgiving"];
 
-            function O(e) {
+            function v(e) {
                 var t, n;
                 let i = e.username.toLowerCase();
                 if ((t = i, n = d.CONTROL_CHARACTERS_CODE, t.split("").filter(e => !n.includes(e.charCodeAt(0))).join("")).length < 2) return !0;
-                for (let e of f)
+                for (let e of m)
                     if (i.includes(e)) return !0;
                 for (let e of _)
                     if (i === e.toLowerCase()) return !0;
@@ -449,11 +453,11 @@
                 return !1
             }
 
-            function p(e) {
+            function O(e) {
                 return e.toLowerCase().replace(/\s/g, "").replace("@", "")
             }
 
-            function v(e) {
+            function p(e) {
                 let t = o.default.extractTimestamp(e);
                 try {
                     return a(new Date(t)).format("MMM DD, YYYY")
@@ -572,13 +576,14 @@
             let d = function(e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    d = (0, r.default)([u.default], () => u.default.validate(e), [e]),
-                    c = (0, r.default)([u.default], () => u.default.isRateLimited()),
-                    g = (0, o.usePomeloDebounceDelay)(),
-                    m = i.useMemo(() => (0, a.debounce)(e => s.default.attemptPomelo(e, n ? "registration" : "modal", n), g), [g, n]);
+                    d = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+                    c = (0, r.default)([u.default], () => u.default.validate(e), [e]),
+                    g = (0, r.default)([u.default], () => u.default.isRateLimited()),
+                    f = (0, o.usePomeloDebounceDelay)(),
+                    m = i.useMemo(() => (0, a.debounce)(e => s.default.attemptPomelo(e, n ? "registration" : "modal", n, d), f), [f, n, d]);
                 return i.useEffect(() => {
-                    t && !c && null == d && "" !== e && m(e)
-                }, [t, c, d, e, m]), i.useMemo(() => null != d ? (0, l.formatUsernameLiveCheckValidation)(d) : void 0, [d])
+                    t && !g && null == c && "" !== e && m(e)
+                }, [t, g, c, e, m]), i.useMemo(() => null != c ? (0, l.formatUsernameLiveCheckValidation)(c) : void 0, [c])
             }
         },
         79345: function(e, t, n) {
