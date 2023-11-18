@@ -6055,6 +6055,9 @@
                     darker: "plum.11",
                     light: "primary.460",
                     amoled: "plum.9"
+                },
+                "typing-indicator-bg": {
+                    name: "bg-base-secondary"
                 }
             })
         },
