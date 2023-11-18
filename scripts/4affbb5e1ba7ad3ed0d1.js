@@ -1729,7 +1729,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "247235"
+                        buildNumber: "247242"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -12290,7 +12290,7 @@
                             component: (0, a.jsxs)(o.Heading, {
                                 variant: "heading-lg/semibold",
                                 className: N.title,
-                                children: [A.default.Messages.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL_TITLE, (0, a.jsx)(o.Clickable, {
+                                children: [A.default.Messages.COLLECTIBLES_ACCOUNT_SWITCHER_POPOUT_HEADER, (0, a.jsx)(o.Clickable, {
                                     className: N.close,
                                     onClick: M,
                                     children: (0, a.jsx)(f.default, {
@@ -12300,7 +12300,7 @@
                             }),
                             children: (0, a.jsx)(o.Text, {
                                 variant: "text-sm/normal",
-                                children: A.default.Messages.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL_SUB_TITLE
+                                children: A.default.Messages.COLLECTIBLES_ACCOUNT_SWITCHER_POPOUT_SUBHEADER
                             })
                         }), (0, a.jsx)(o.SegmentedControl, {
                             options: m(),
@@ -12493,7 +12493,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return c
                 }
             });
             var a = n("37983");
@@ -12504,7 +12504,8 @@
                 r = n("369964"),
                 o = n("21526"),
                 u = n("782340"),
-                d = e => {
+                d = n("247629"),
+                c = e => {
                     let {
                         onDismiss: t
                     } = e, {
@@ -12514,7 +12515,8 @@
                         dismissibleContent: s.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_COACHMARK,
                         shouldUseHorizontalButtons: !0,
                         inlineArt: !0,
-                        tryItText: u.default.Messages.COLLECTIBLES_SHOP_FOR_ALL_NITRO_ONLY_COACHMARK_CTA,
+                        className: d.coachmark,
+                        tryItText: u.default.Messages.CHECK_IT_OUT,
                         onTryFeature: () => {
                             t(), (0, o.openCollectiblesShop)({
                                 analyticsLocations: n,
@@ -12522,8 +12524,9 @@
                             })
                         },
                         onClose: t,
-                        header: u.default.Messages.COLLECTIBLES_SHOP_FOR_ALL_NITRO_ONLY_COACHMARK_HEADER,
-                        body: u.default.Messages.COLLECTIBLES_SHOP_FOR_ALL_NITRO_ONLY_COACHMARK_DESCRIPTION,
+                        header: u.default.Messages.USER_PROFILE_SETTINGS_SHOP_FOR_ALL_BANNER_HEADER,
+                        body: u.default.Messages.COLLECTIBLES_SHOP_TAB_COACHMARK_SUBHEADER,
+                        dismissText: u.default.Messages.BACK,
                         position: "right",
                         art: (0, a.jsx)("div", {
                             children: u.default.Messages.COLLECTIBLES_SHOP_FOR_ALL_NITRO_ONLY_COACHMARK_ART
