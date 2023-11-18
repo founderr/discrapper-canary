@@ -15336,7 +15336,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return g
                 }
             });
             var a = n("37983");
@@ -15350,58 +15350,59 @@
                 d = n("697218"),
                 c = n("315102"),
                 f = n("699209"),
-                h = n("342845"),
-                p = n("661743"),
-                m = n("49111"),
-                E = n("782340"),
-                C = n("730039"),
-                S = e => {
+                h = n("925749"),
+                p = n("342845"),
+                m = n("661743"),
+                E = n("49111"),
+                C = n("782340"),
+                S = n("730039"),
+                g = e => {
                     let {
                         hangStatusActivity: t,
                         userId: n,
-                        channel: S,
-                        previewIsOpen: g
+                        channel: g,
+                        previewIsOpen: _
                     } = e, {
-                        enableHangStatus: _
+                        enableHangStatus: I
                     } = f.HangStatusExperiment.useExperiment({
                         location: "HangStatusPopout"
-                    }), I = (0, l.default)([r.default], () => r.default.getId()), T = (0, l.default)([d.default], () => d.default.getUser(n)), x = (0, l.default)([o.default], () => o.default.getChannelId() === S.id), v = (0, l.default)([u.default], () => u.default.can(m.Permissions.CONNECT, S));
-                    return null != t && g && null != T ? I === n && _ ? (0, a.jsx)(p.HangStatusPopout, {
+                    }), T = (0, l.default)([r.default], () => r.default.getId()), x = (0, l.default)([d.default], () => d.default.getUser(n)), v = (0, l.default)([o.default], () => o.default.getChannelId() === g.id), N = (0, l.default)([u.default], () => u.default.can(E.Permissions.CONNECT, g));
+                    return null != t && _ && null != x ? T === n && I ? (0, a.jsx)(m.HangStatusPopout, {
                         currentStatus: t
                     }) : (0, a.jsxs)("div", {
-                        className: C.wrapper,
+                        className: S.wrapper,
                         children: [(0, a.jsxs)("div", {
-                            className: C.contentContainer,
+                            className: S.contentContainer,
                             children: [(0, a.jsxs)("div", {
-                                className: C.statusGroup,
+                                className: S.statusGroup,
                                 children: [(0, a.jsx)(s.Text, {
                                     variant: "text-xs/medium",
                                     color: "text-muted",
-                                    children: E.default.Messages.STATUS_LEAD_IN_JUST
+                                    children: C.default.Messages.STATUS_LEAD_IN_JUST
                                 }), (0, a.jsx)(s.Text, {
                                     variant: "text-sm/semibold",
                                     color: "text-normal",
-                                    children: t.name
+                                    children: (0, h.getHangStatusText)(t)
                                 })]
                             }), (0, a.jsxs)("div", {
-                                className: C.iconGroup,
-                                children: [(0, a.jsx)(h.default, {
-                                    className: C.statusIcon,
+                                className: S.iconGroup,
+                                children: [(0, a.jsx)(p.default, {
+                                    className: S.statusIcon,
                                     hangStatusActivity: t
                                 }), (0, a.jsx)(s.Avatar, {
-                                    className: C.avatar,
+                                    className: S.avatar,
                                     size: s.AvatarSizes.SIZE_40,
-                                    src: (0, c.getUserAvatarURL)(T),
+                                    src: (0, c.getUserAvatarURL)(x),
                                     "aria-hidden": !0
                                 })]
                             })]
-                        }), !x && v ? (0, a.jsx)(s.Button, {
-                            className: C.cta,
+                        }), !v && N ? (0, a.jsx)(s.Button, {
+                            className: S.cta,
                             size: s.Button.Sizes.SMALL,
                             onClick: () => {
-                                !x && v && i.default.selectVoiceChannel(S.id)
+                                !v && N && i.default.selectVoiceChannel(g.id)
                             },
-                            children: E.default.Messages.CUSTOM_HANG_STATUS_CTA
+                            children: C.default.Messages.CUSTOM_HANG_STATUS_CTA
                         }) : null]
                     }) : null
                 }
