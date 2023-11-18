@@ -1661,8 +1661,11 @@
         235898: function(e, t, r) {
             "use strict";
             r.r(t), r.d(t, {
-                default: function() {
+                useMaybeFetchCollectiblesCategories: function() {
                     return o
+                },
+                default: function() {
+                    return c
                 }
             }), r("222007");
             var a = r("884691"),
@@ -1673,6 +1676,28 @@
                 u = r("775416");
 
             function o() {
+                let e = "useMaybeFetchCollectiblesCategories";
+                (0, s.useTriggerDebuggingAA)({
+                    location: e + " auto on",
+                    autoTrackExposure: !0
+                }), (0, s.useTriggerDebuggingAA)({
+                    location: e + " auto off",
+                    autoTrackExposure: !1
+                });
+                let [t, r, u, o] = (0, n.useStateFromStoresArray)([l.default], () => {
+                    var e;
+                    return [l.default.isFetching, l.default.error, null !== (e = l.default.lastFetched) && void 0 !== e ? e : 0, l.default.categories]
+                });
+                return (0, a.useEffect)(() => {
+                    !(t || r || Date.now() - u < 6e5) && (0, i.fetchCollectiblesCategories)()
+                }, [t, u, r]), {
+                    isFetching: t,
+                    categories: o,
+                    error: r
+                }
+            }
+
+            function c() {
                 var e;
                 let t = "useFetchCollectiblesCategoriesAndPurchases";
                 (0, s.useTriggerDebuggingAA)({
@@ -1684,29 +1709,9 @@
                 });
                 let {
                     isFetching: r,
-                    categories: o,
+                    categories: l,
                     error: c
-                } = function() {
-                    let e = "useMaybeFetchCollectiblesCategories";
-                    (0, s.useTriggerDebuggingAA)({
-                        location: e + " auto on",
-                        autoTrackExposure: !0
-                    }), (0, s.useTriggerDebuggingAA)({
-                        location: e + " auto off",
-                        autoTrackExposure: !1
-                    });
-                    let [t, r, u, o] = (0, n.useStateFromStoresArray)([l.default], () => {
-                        var e;
-                        return [l.default.isFetching, l.default.error, null !== (e = l.default.lastFetched) && void 0 !== e ? e : 0, l.default.categories]
-                    });
-                    return (0, a.useEffect)(() => {
-                        !(t || r || Date.now() - u < 6e5) && (0, i.fetchCollectiblesCategories)()
-                    }, [t, u, r]), {
-                        isFetching: t,
-                        categories: o,
-                        error: r
-                    }
-                }(), {
+                } = o(), {
                     isClaiming: d,
                     fetchError: f,
                     claimError: E,
@@ -1737,7 +1742,7 @@
                     isFetchingCategories: r,
                     isFetchingPurchases: C,
                     isClaiming: d,
-                    categories: o,
+                    categories: l,
                     purchases: p,
                     error: h
                 }

@@ -324,6 +324,10 @@
             "use strict";
             e.exports = n.p + "d71df05a611472844848.webm"
         },
+        513002: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "f328a6f8209d4f1f5022.png"
+        },
         727992: function(e, t, n) {
             "use strict";
             e.exports = n.p + "6296fbce83bbcc0e73d9.svg"
@@ -1737,7 +1741,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "247178"
+                        buildNumber: "247179"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -12127,8 +12131,11 @@
         235898: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                default: function() {
+                useMaybeFetchCollectiblesCategories: function() {
                     return u
+                },
+                default: function() {
+                    return d
                 }
             }), n("222007");
             var a = n("884691"),
@@ -12139,6 +12146,28 @@
                 o = n("775416");
 
             function u() {
+                let e = "useMaybeFetchCollectiblesCategories";
+                (0, l.useTriggerDebuggingAA)({
+                    location: e + " auto on",
+                    autoTrackExposure: !0
+                }), (0, l.useTriggerDebuggingAA)({
+                    location: e + " auto off",
+                    autoTrackExposure: !1
+                });
+                let [t, n, o, u] = (0, s.useStateFromStoresArray)([r.default], () => {
+                    var e;
+                    return [r.default.isFetching, r.default.error, null !== (e = r.default.lastFetched) && void 0 !== e ? e : 0, r.default.categories]
+                });
+                return (0, a.useEffect)(() => {
+                    !(t || n || Date.now() - o < 6e5) && (0, i.fetchCollectiblesCategories)()
+                }, [t, o, n]), {
+                    isFetching: t,
+                    categories: u,
+                    error: n
+                }
+            }
+
+            function d() {
                 var e;
                 let t = "useFetchCollectiblesCategoriesAndPurchases";
                 (0, l.useTriggerDebuggingAA)({
@@ -12150,29 +12179,9 @@
                 });
                 let {
                     isFetching: n,
-                    categories: u,
+                    categories: r,
                     error: d
-                } = function() {
-                    let e = "useMaybeFetchCollectiblesCategories";
-                    (0, l.useTriggerDebuggingAA)({
-                        location: e + " auto on",
-                        autoTrackExposure: !0
-                    }), (0, l.useTriggerDebuggingAA)({
-                        location: e + " auto off",
-                        autoTrackExposure: !1
-                    });
-                    let [t, n, o, u] = (0, s.useStateFromStoresArray)([r.default], () => {
-                        var e;
-                        return [r.default.isFetching, r.default.error, null !== (e = r.default.lastFetched) && void 0 !== e ? e : 0, r.default.categories]
-                    });
-                    return (0, a.useEffect)(() => {
-                        !(t || n || Date.now() - o < 6e5) && (0, i.fetchCollectiblesCategories)()
-                    }, [t, o, n]), {
-                        isFetching: t,
-                        categories: u,
-                        error: n
-                    }
-                }(), {
+                } = u(), {
                     isClaiming: c,
                     fetchError: E,
                     claimError: f,
@@ -12203,7 +12212,7 @@
                     isFetchingCategories: n,
                     isFetchingPurchases: _,
                     isClaiming: c,
-                    categories: u,
+                    categories: r,
                     purchases: C,
                     error: h
                 }
@@ -12213,63 +12222,61 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return D
+                    return g
                 }
-            });
+            }), n("222007");
             var a = n("37983"),
                 s = n("884691"),
-                l = n("414456"),
-                i = n.n(l),
-                r = n("272214"),
-                o = n.n(r),
-                u = n("301165"),
-                d = n("446674"),
-                c = n("77078"),
-                E = n("206230"),
-                f = n("812204"),
-                _ = n("685665"),
-                C = n("606292"),
-                h = n("688318"),
-                I = n("91653"),
-                T = n("697218"),
-                S = n("945330"),
-                A = n("21526"),
-                N = n("491232"),
-                m = n("235898"),
-                p = n("8977"),
-                g = n("994428"),
-                R = n("782340"),
-                O = n("55395");
-            let L = c.AvatarSizes.SIZE_40,
-                v = (0, C.getDecorationSizeForAvatarSize)(L),
-                M = e => Math.floor((e - 104 - 76) / 92),
-                P = f.default.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL;
+                l = n("301165"),
+                i = n("265586"),
+                r = n("446674"),
+                o = n("77078"),
+                u = n("206230"),
+                d = n("812204"),
+                c = n("685665"),
+                E = n("91653"),
+                f = n("945330"),
+                _ = n("21526"),
+                C = n("491232"),
+                h = n("235898"),
+                I = n("806224"),
+                T = n("8977"),
+                S = n("994428"),
+                A = n("782340"),
+                N = n("55395");
+            let m = () => [{
+                    name: A.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
+                    value: i.CollectiblesItemType.PROFILE_EFFECT
+                }, {
+                    name: A.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER,
+                    value: i.CollectiblesItemType.AVATAR_DECORATION
+                }],
+                p = d.default.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL;
 
-            function D(e) {
+            function g(e) {
                 let {
                     height: t,
                     onClose: n
                 } = e, {
-                    dismiss: l
-                } = (0, p.default)(), {
-                    categories: i,
-                    isFetching: r
-                } = (0, m.default)(), {
-                    pendingAvatarDecoration: f,
-                    setPendingAvatarDecoration: C
-                } = (0, I.default)({
+                    dismiss: d
+                } = (0, T.default)(), {
+                    categories: g,
+                    isFetching: R
+                } = (0, h.useMaybeFetchCollectiblesCategories)(), {
+                    setPendingAvatarDecoration: O
+                } = (0, E.default)({
                     isTryItOut: !0
                 }), {
-                    analyticsLocations: h
-                } = (0, _.default)(P), T = s.useCallback(() => {
-                    l(g.ContentDismissActionType.PRIMARY), n(), (0, A.openCollectiblesShop)({
-                        analyticsLocations: h,
-                        analyticsSource: P
+                    analyticsLocations: L
+                } = (0, c.default)(p), v = s.useCallback(() => {
+                    d(S.ContentDismissActionType.PRIMARY), n(), (0, _.openCollectiblesShop)({
+                        analyticsLocations: L,
+                        analyticsSource: p
                     })
-                }, [l, n, h]), L = s.useCallback(() => {
-                    l(g.ContentDismissActionType.DISMISS), n()
-                }, [l, n]), v = (0, d.useStateFromStores)([E.default], () => E.default.useReducedMotion), D = (0, u.useSpring)({
-                    immediate: v,
+                }, [d, n, L]), M = s.useCallback(() => {
+                    d(S.ContentDismissActionType.DISMISS), n()
+                }, [d, n]), P = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), D = (0, l.useSpring)({
+                    immediate: P,
                     from: {
                         transform: "translate3d(-110%, 0, 0)",
                         height: t
@@ -12283,108 +12290,174 @@
                         stiffness: 100,
                         damping: 15
                     }
-                }), y = s.useMemo(() => (0, N.getAvatarDecorationsFromCategories)(i), [i]);
+                }), y = s.useMemo(() => (0, C.getAvatarDecorationsFromCategories)(g), [g]), x = s.useMemo(() => (0, C.getProfileEffectsFromCategories)(g), [g]), [U, b] = s.useState(i.CollectiblesItemType.PROFILE_EFFECT), [G, j] = s.useState();
                 return (s.useEffect(() => () => {
-                    C(null)
-                }, [C]), s.useEffect(() => {
-                    if (null == f) {
-                        let e = 3 * M(null == t ? 0 : t),
-                            n = o(0, Math.min(e, y.length) - 1);
-                        C(y[n])
-                    }
-                }, [y, C, t, f]), null == t) ? null : (0, a.jsxs)(u.animated.div, {
-                    className: O.container,
+                    O(null)
+                }, [O]), null == t) ? null : (0, a.jsxs)(l.animated.div, {
+                    className: N.container,
                     style: D,
-                    children: [(0, a.jsx)("div", {
-                        className: O.content,
-                        children: (0, a.jsx)(c.HeadingLevel, {
-                            component: (0, a.jsxs)(c.Heading, {
+                    children: [(0, a.jsxs)("div", {
+                        className: N.content,
+                        children: [(0, a.jsx)(o.HeadingLevel, {
+                            component: (0, a.jsxs)(o.Heading, {
                                 variant: "heading-lg/semibold",
-                                className: O.title,
-                                children: [R.default.Messages.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL_TITLE, (0, a.jsx)(c.Clickable, {
-                                    className: O.close,
-                                    onClick: L,
-                                    children: (0, a.jsx)(S.default, {
-                                        className: O.closeIcon
+                                className: N.title,
+                                children: [A.default.Messages.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL_TITLE, (0, a.jsx)(o.Clickable, {
+                                    className: N.close,
+                                    onClick: M,
+                                    children: (0, a.jsx)(f.default, {
+                                        className: N.closeIcon
                                     })
                                 })]
                             }),
-                            children: (0, a.jsx)(c.Text, {
+                            children: (0, a.jsx)(o.Text, {
                                 variant: "text-sm/normal",
-                                children: R.default.Messages.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL_SUB_TITLE
+                                children: A.default.Messages.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL_SUB_TITLE
                             })
-                        })
-                    }), (0, a.jsx)(x, {
-                        avatarDecorations: y,
-                        isFetching: r
+                        }), (0, a.jsx)(o.SegmentedControl, {
+                            options: m(),
+                            value: U,
+                            onChange: e => {
+                                let {
+                                    value: t
+                                } = e;
+                                return b(t)
+                            },
+                            className: N.segmentControl,
+                            optionClassName: N.segmentControlOption,
+                            look: "pill"
+                        })]
+                    }), (0, a.jsx)(I.CollectiblesItemsList, {
+                        items: U === i.CollectiblesItemType.PROFILE_EFFECT ? x : y,
+                        isFetching: R,
+                        selectedItem: G,
+                        setSelectedItem: j,
+                        containerClassName: N.listContainer
                     }), (0, a.jsx)("div", {
-                        className: O.ctaContainer,
-                        children: (0, a.jsx)(c.Button, {
-                            className: O.cta,
-                            size: c.Button.Sizes.LARGE,
-                            color: c.Button.Colors.BRAND_NEW,
-                            onClick: T,
-                            children: R.default.Messages.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL_CTA
+                        className: N.ctaContainer,
+                        children: (0, a.jsx)(o.Button, {
+                            className: N.cta,
+                            size: o.Button.Sizes.LARGE,
+                            color: o.Button.Colors.BRAND_NEW,
+                            onClick: v,
+                            children: A.default.Messages.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL_CTA
                         })
                     })]
                 })
             }
-
-            function y(e) {
-                let {
-                    avatarDecoration: t
-                } = e, n = (0, d.useStateFromStores)([T.default], () => T.default.getCurrentUser()), {
-                    avatarDecorationSrc: s,
-                    eventHandlers: l
-                } = (0, h.default)({
-                    user: n,
-                    avatarDecorationOverride: t,
-                    size: v
-                }), {
-                    pendingAvatarDecoration: r,
-                    setPendingAvatarDecoration: o
-                } = (0, I.default)({
-                    isTryItOut: !0
-                });
-                return (0, a.jsx)(c.FocusRing, {
-                    children: (0, a.jsx)(c.Clickable, {
-                        ...l,
-                        className: i(O.item, {
-                            [O.selectedItem]: (null == r ? void 0 : r.skuId) === t.skuId
-                        }),
-                        onClick: () => {
-                            o(t)
-                        },
-                        children: (0, a.jsx)("img", {
-                            className: O.avatarDecorationItem,
-                            src: s,
-                            alt: t.label
+        },
+        806224: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                CollectiblesItemsList: function() {
+                    return N
+                }
+            });
+            var a = n("37983"),
+                s = n("884691"),
+                l = n("414456"),
+                i = n.n(l),
+                r = n("265586"),
+                o = n("446674"),
+                u = n("77078"),
+                d = n("252744"),
+                c = n("606292"),
+                E = n("688318"),
+                f = n("845962"),
+                _ = n("697218"),
+                C = n("312595"),
+                h = n("513002");
+            let I = u.AvatarSizes.SIZE_40,
+                T = (0, c.getDecorationSizeForAvatarSize)(I),
+                S = e => {
+                    let {
+                        item: t,
+                        isSelected: n,
+                        setSelectedItem: l
+                    } = e, r = (0, o.useStateFromStores)([_.default], () => _.default.getCurrentUser()), c = s.useRef(null), f = (0, d.default)(c), {
+                        avatarDecorationSrc: h,
+                        eventHandlers: I
+                    } = (0, E.default)({
+                        user: r,
+                        avatarDecorationOverride: t,
+                        size: T,
+                        animateOnHover: !f
+                    });
+                    return (0, a.jsx)(u.FocusRing, {
+                        children: (0, a.jsx)(u.Clickable, {
+                            ...I,
+                            className: i(C.item, {
+                                [C.selectedAvatarDecorationItem]: n
+                            }),
+                            innerRef: c,
+                            onClick: () => l(t),
+                            children: (0, a.jsx)("img", {
+                                className: C.avatarDecorationItem,
+                                src: h,
+                                alt: t.label
+                            })
                         })
                     })
-                })
-            }
-
-            function x(e) {
-                let {
-                    avatarDecorations: t,
-                    isFetching: n
-                } = e, l = s.useRef(null);
-                return n ? (0, a.jsx)(c.Spinner, {
-                    className: O.loading
-                }) : (0, a.jsx)(c.FocusRingScope, {
-                    containerRef: l,
-                    children: (0, a.jsx)(c.AdvancedScroller, {
-                        className: O.listWrapper,
-                        children: (0, a.jsx)("div", {
-                            ref: l,
-                            className: O.collectiblesList,
-                            children: t.map(e => (0, a.jsx)(y, {
-                                avatarDecoration: e
-                            }, e.id))
+                },
+                A = e => {
+                    var t;
+                    let {
+                        item: n,
+                        isSelected: s,
+                        setSelectedItem: l
+                    } = e, r = (0, o.useStateFromStores)([f.default], () => f.default.getProfileEffectById(n.id)), {
+                        accessibilityLabel: d,
+                        thumbnailPreviewSrc: c,
+                        title: E
+                    } = null !== (t = null == r ? void 0 : r.config) && void 0 !== t ? t : {};
+                    return (0, a.jsx)(u.FocusRing, {
+                        children: (0, a.jsxs)(u.Clickable, {
+                            className: i(C.item, {
+                                [C.selectedProfileEffectItem]: s
+                            }),
+                            onClick: () => l(n),
+                            children: [(0, a.jsx)("img", {
+                                src: h,
+                                alt: d,
+                                className: C.presetEffectBackground
+                            }), (0, a.jsx)("img", {
+                                className: C.presetEffectImg,
+                                src: c,
+                                alt: E
+                            })]
                         })
                     })
-                })
-            }
+                },
+                N = e => {
+                    let {
+                        items: t,
+                        isFetching: n,
+                        selectedItem: l,
+                        setSelectedItem: o,
+                        containerClassName: d
+                    } = e, c = s.useRef(null);
+                    return n ? (0, a.jsx)(u.Spinner, {
+                        className: C.loading
+                    }) : (0, a.jsx)(u.FocusRingScope, {
+                        containerRef: c,
+                        children: (0, a.jsx)(u.AdvancedScroller, {
+                            className: i(d),
+                            children: (0, a.jsx)("div", {
+                                ref: c,
+                                className: C.collectiblesList,
+                                children: t.map(e => e.type === r.CollectiblesItemType.AVATAR_DECORATION ? (0, a.jsx)(S, {
+                                    item: e,
+                                    isSelected: e.skuId === (null == l ? void 0 : l.skuId),
+                                    setSelectedItem: o
+                                }, e.id) : (0, a.jsx)(A, {
+                                    item: e,
+                                    isSelected: e.skuId === (null == l ? void 0 : l.skuId),
+                                    setSelectedItem: o
+                                }, e.id))
+                            })
+                        })
+                    })
+                }
         },
         580280: function(e, t, n) {
             "use strict";

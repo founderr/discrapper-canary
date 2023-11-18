@@ -878,7 +878,7 @@
             let i, r, l, s, a, u;
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return g
                 }
             });
             var o = n("446674"),
@@ -950,7 +950,7 @@
                 }
             }
             v.displayName = "ClydeStore";
-            var S = new v(c.default, {
+            var g = new v(c.default, {
                 CLYDE_GUILD_SETTINGS_FETCH_START: function(e) {
                     let {
                         guildId: t
@@ -1098,8 +1098,11 @@
         235898: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                default: function() {
+                useMaybeFetchCollectiblesCategories: function() {
                     return o
+                },
+                default: function() {
+                    return c
                 }
             }), n("222007");
             var i = n("884691"),
@@ -1110,6 +1113,28 @@
                 u = n("775416");
 
             function o() {
+                let e = "useMaybeFetchCollectiblesCategories";
+                (0, l.useTriggerDebuggingAA)({
+                    location: e + " auto on",
+                    autoTrackExposure: !0
+                }), (0, l.useTriggerDebuggingAA)({
+                    location: e + " auto off",
+                    autoTrackExposure: !1
+                });
+                let [t, n, u, o] = (0, r.useStateFromStoresArray)([a.default], () => {
+                    var e;
+                    return [a.default.isFetching, a.default.error, null !== (e = a.default.lastFetched) && void 0 !== e ? e : 0, a.default.categories]
+                });
+                return (0, i.useEffect)(() => {
+                    !(t || n || Date.now() - u < 6e5) && (0, s.fetchCollectiblesCategories)()
+                }, [t, u, n]), {
+                    isFetching: t,
+                    categories: o,
+                    error: n
+                }
+            }
+
+            function c() {
                 var e;
                 let t = "useFetchCollectiblesCategoriesAndPurchases";
                 (0, l.useTriggerDebuggingAA)({
@@ -1121,29 +1146,9 @@
                 });
                 let {
                     isFetching: n,
-                    categories: o,
+                    categories: a,
                     error: c
-                } = function() {
-                    let e = "useMaybeFetchCollectiblesCategories";
-                    (0, l.useTriggerDebuggingAA)({
-                        location: e + " auto on",
-                        autoTrackExposure: !0
-                    }), (0, l.useTriggerDebuggingAA)({
-                        location: e + " auto off",
-                        autoTrackExposure: !1
-                    });
-                    let [t, n, u, o] = (0, r.useStateFromStoresArray)([a.default], () => {
-                        var e;
-                        return [a.default.isFetching, a.default.error, null !== (e = a.default.lastFetched) && void 0 !== e ? e : 0, a.default.categories]
-                    });
-                    return (0, i.useEffect)(() => {
-                        !(t || n || Date.now() - u < 6e5) && (0, s.fetchCollectiblesCategories)()
-                    }, [t, u, n]), {
-                        isFetching: t,
-                        categories: o,
-                        error: n
-                    }
-                }(), {
+                } = o(), {
                     isClaiming: d,
                     fetchError: f,
                     claimError: E,
@@ -1174,7 +1179,7 @@
                     isFetchingCategories: n,
                     isFetchingPurchases: h,
                     isClaiming: d,
-                    categories: o,
+                    categories: a,
                     purchases: C,
                     error: _
                 }
@@ -1223,10 +1228,10 @@
                     return v
                 },
                 HOME_HEADER_ASPECT_RATIO: function() {
-                    return S
+                    return g
                 },
                 MAX_BANNER_OVERLAY_HEIGHT: function() {
-                    return g
+                    return S
                 },
                 MAX_GUILD_BANNER_OVERLAY_HEIGHT: function() {
                     return T
@@ -1261,11 +1266,11 @@
                 p = 17 / 6,
                 I = 16 / 9,
                 v = 2.5,
-                S = 4,
-                g = u / p,
+                g = 4,
+                S = u / p,
                 T = u / I,
                 m = u / v,
-                A = u / S,
+                A = u / g,
                 L = a.BACKGROUND_REPLACEMENT_SIZE.width / a.BACKGROUND_REPLACEMENT_SIZE.height,
                 N = u / L;
             (r = s || (s = {}))[r.CROP_GIF_START = 0] = "CROP_GIF_START", r[r.CROP_GIF_COMPLETE = 1] = "CROP_GIF_COMPLETE", r[r.CROP_GIF_ERROR = 2] = "CROP_GIF_ERROR"
@@ -1299,8 +1304,8 @@
                     analyticsLocations: p,
                     analyticsObject: I,
                     analyticsLocation: v,
-                    analyticsSourceLocation: S,
-                    isGift: g = !1,
+                    analyticsSourceLocation: g,
+                    isGift: S = !1,
                     giftMessage: T,
                     subscriptionTier: m,
                     trialId: A,
@@ -1325,7 +1330,7 @@
                             loadId: x,
                             subscriptionTier: m,
                             skuId: m,
-                            isGift: g,
+                            isGift: S,
                             giftMessage: T,
                             giftRecipient: P,
                             initialPlanId: t,
@@ -1334,13 +1339,13 @@
                                 r(), null == h || h(e), e && (null == _ || _())
                             },
                             onComplete: () => {
-                                F = !0, null == C || C(), !g && ((0, u.setIsPersistentHelperHidden)(!0), (0, u.setCanPlayWowMoment)(!0))
+                                F = !0, null == C || C(), !S && ((0, u.setIsPersistentHelperHidden)(!0), (0, u.setCanPlayWowMoment)(!0))
                             },
                             onSubscriptionConfirmation: _,
                             analyticsLocations: p,
                             analyticsObject: I,
                             analyticsLocation: v,
-                            analyticsSourceLocation: S,
+                            analyticsSourceLocation: g,
                             trialId: A,
                             postSuccessGuild: L,
                             planGroup: f.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
@@ -1357,13 +1362,13 @@
                             load_id: x,
                             payment_type: d.PurchaseTypeToAnalyticsPaymentType[d.PurchaseTypes.SUBSCRIPTION],
                             location: null != v ? v : I,
-                            source: S,
+                            source: g,
                             subscription_type: d.SubscriptionTypes.PREMIUM,
-                            is_gift: g,
+                            is_gift: S,
                             eligible_for_trial: null != A,
                             application_id: R,
                             location_stack: p
-                        }), (0, s.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == h || h(F), F && (!g && c.ComponentDispatch.dispatch(d.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED), null == _ || _())
+                        }), (0, s.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == h || h(F), F && (!S && c.ComponentDispatch.dispatch(d.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED), null == _ || _())
                     },
                     onCloseRequest: d.NOOP
                 })
@@ -1914,8 +1919,8 @@
                 p = n("635956"),
                 I = n("906932"),
                 v = n("217513"),
-                S = n("790618"),
-                g = n("697218"),
+                g = n("790618"),
+                S = n("697218"),
                 T = n("599110"),
                 m = n("719923"),
                 A = n("717262"),
@@ -1976,10 +1981,10 @@
                     onClose: u,
                     initialSelectedProfileEffectID: o,
                     currentSavedEffectID: c
-                } = e, d = (0, s.useStateFromStores)([S.default], () => S.default.getPendingProfileEffectID()), [_, p] = r.useMemo(() => {
+                } = e, d = (0, s.useStateFromStores)([g.default], () => g.default.getPendingProfileEffectID()), [_, p] = r.useMemo(() => {
                     let e = (0, C.groupProfileEffects)(n, l);
                     return [e.purchased, e.shopPreviews]
-                }, [n, l]), [v, g] = r.useState(() => null != o ? o : void 0 !== d ? d : null == c ? null : null != c ? c : null), [T, N] = r.useMemo(() => {
+                }, [n, l]), [v, S] = r.useState(() => null != o ? o : void 0 !== d ? d : null == c ? null : null != c ? c : null), [T, N] = r.useMemo(() => {
                     var e;
                     let t = _.find(e => (null == e ? void 0 : e.id) === v),
                         n = null != t || null === v,
@@ -1996,8 +2001,8 @@
                 } = (0, h.default)({
                     location: "AvatarDecorationModal"
                 }), U = v === (void 0 === d ? null != c ? c : null : d), H = r.useCallback(e => {
-                    g(e)
-                }, [g]);
+                    S(e)
+                }, [S]);
                 return (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsxs)(a.ModalHeader, {
                         separator: !1,
@@ -2059,8 +2064,8 @@
                     isFetching: h,
                     categories: C,
                     purchases: p
-                } = (0, _.default)(), I = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), {
-                    AnalyticsLocationProvider: S,
+                } = (0, _.default)(), I = (0, s.useStateFromStores)([S.default], () => S.default.getCurrentUser()), {
+                    AnalyticsLocationProvider: g,
                     analyticsLocations: m
                 } = (0, c.default)(u, o.default.EDIT_PROFILE_EFFECT_MODAL), A = (0, v.default)(null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : ""), L = null == A ? void 0 : A.profileEffectID;
                 return r.useEffect(() => {
@@ -2073,7 +2078,7 @@
                         categories: [...C.values()],
                         itemTypes: [l.CollectiblesItemType.PROFILE_EFFECT]
                     })
-                }, [C]), null == I ? null : (0, i.jsx)(S, {
+                }, [C]), null == I ? null : (0, i.jsx)(g, {
                     children: (0, i.jsx)(a.ModalRoot, {
                         transitionState: n,
                         size: a.ModalSize.DYNAMIC,
@@ -2119,8 +2124,8 @@
                 I = n("697218");
             n("550515");
             var v = n("719923"),
-                S = n("782340"),
-                g = n("146252");
+                g = n("782340"),
+                S = n("146252");
             let T = e => {
                     var t;
                     let {
@@ -2134,36 +2139,36 @@
                         location: "ProfileEffectPreview"
                     }), p = v.default.canUseCollectibles(f), T = (0, o.isPremiumCollectiblesPurchase)(d), A = (0, o.isPremiumCollectiblesCategory)(c), L = m(!p && T, A, p, _);
                     return null != s ? (0, i.jsx)("div", {
-                        className: n ? g.effectDescriptionNoGradient : g.effectDescriptionBorderWithGradient,
+                        className: n ? S.effectDescriptionNoGradient : S.effectDescriptionBorderWithGradient,
                         children: (0, i.jsxs)("div", {
-                            className: g.effectDescriptionContainer,
+                            className: S.effectDescriptionContainer,
                             children: [(0, i.jsx)(l.Text, {
                                 color: "header-primary",
                                 variant: "text-sm/semibold",
-                                className: g.effectName,
+                                className: S.effectName,
                                 children: null !== (t = null == d ? void 0 : d.name) && void 0 !== t ? t : null == E ? void 0 : E.name
                             }), (0, i.jsx)(l.Text, {
                                 color: "text-normal",
                                 variant: "text-sm/normal",
-                                className: g.effectDescription,
+                                className: S.effectDescription,
                                 children: null != d ? d.summary : L
                             }), null != d && (0, i.jsxs)(l.Text, {
                                 variant: "text-xxs/normal",
                                 color: "text-muted",
-                                className: g.effectPurchasedAt,
-                                children: [S.default.Messages.COLLECTIBLES_ACQUIRED_DATE.format({
+                                className: S.effectPurchasedAt,
+                                children: [g.default.Messages.COLLECTIBLES_ACQUIRED_DATE.format({
                                     date: d.purchasedAt.toLocaleDateString(C, {
                                         month: "long",
                                         year: "numeric"
                                     })
                                 }), T && (0, i.jsxs)(i.Fragment, {
-                                    children: [(0, i.jsx)("br", {}), S.default.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC]
+                                    children: [(0, i.jsx)("br", {}), g.default.Messages.CHANGE_DECORATION_MODAL_STARTER_DESC]
                                 })]
                             })]
                         })
                     }) : null
                 },
-                m = (e, t, n, i) => e ? S.default.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER_CHURNED : t && n ? S.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM : t && !n ? S.default.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER : !t && n || i ? S.default.Messages.CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE_PREMIUM : S.default.Messages.CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE;
+                m = (e, t, n, i) => e ? g.default.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER_CHURNED : t && n ? g.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM : t && !n ? g.default.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER : !t && n || i ? g.default.Messages.CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE_PREMIUM : g.default.Messages.CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE;
             var A = e => {
                 var t;
                 let {
@@ -2175,7 +2180,7 @@
                 } = e, {
                     pendingAvatar: h,
                     pendingBanner: I,
-                    pendingBio: S,
+                    pendingBio: g,
                     pendingPronouns: m,
                     pendingGlobalName: A,
                     pendingAccentColor: L,
@@ -2188,7 +2193,7 @@
                         ...e,
                         errors: t
                     }
-                }), M = v.default.isPremium(n), P = (0, E.default)(n.id), O = !!(null == P ? void 0 : P.getPreviewBio(S).value), F = C.UseLegacyChatInput.useSetting(), x = F && null != S ? c.default.parse(void 0, S).content : S, y = v.default.canUsePremiumProfileCustomization(n), D = (null == P ? void 0 : P.canUsePremiumProfileCustomization) || y, U = {
+                }), M = v.default.isPremium(n), P = (0, E.default)(n.id), O = !!(null == P ? void 0 : P.getPreviewBio(g).value), F = C.UseLegacyChatInput.useSetting(), x = F && null != g ? c.default.parse(void 0, g).content : g, y = v.default.canUsePremiumProfileCustomization(n), D = (null == P ? void 0 : P.canUsePremiumProfileCustomization) || y, U = {
                     user: n,
                     canUsePremiumCustomization: y,
                     onUpsellClick: _.default,
@@ -2206,7 +2211,7 @@
                     hideFakeActivity: O
                 };
                 return (0, i.jsxs)("div", {
-                    className: D ? g.previewContainerWithTheme : g.previewContainerWithoutTheme,
+                    className: D ? S.previewContainerWithTheme : S.previewContainerWithoutTheme,
                     children: [(0, i.jsx)(d.default, {
                         ...U,
                         disabledInputs: !0,
@@ -2245,8 +2250,8 @@
                 p = n("468759"),
                 I = n("600785"),
                 v = n("956089"),
-                S = n("719923"),
-                g = n("845962"),
+                g = n("719923"),
+                S = n("845962"),
                 T = n("326054"),
                 m = n("49111"),
                 A = n("782340"),
@@ -2278,14 +2283,14 @@
                         section: a,
                         isSelected: c,
                         ...d
-                    } = e, C = (0, o.default)([g.default], () => g.default.getProfileEffectById(l.id)), p = (0, o.default)([f.default], () => {
+                    } = e, C = (0, o.default)([S.default], () => S.default.getProfileEffectById(l.id)), p = (0, o.default)([f.default], () => {
                         let e = f.default.getCategoryForProduct(l.skuId);
                         return (0, h.isPremiumCollectiblesCategory)(e)
                     }), m = (0, o.default)([E.default], () => E.default.isItemViewed(l)), R = r.useRef(null), {
                         accessibilityLabel: P,
                         thumbnailPreviewSrc: O,
                         title: F
-                    } = null !== (t = null == C ? void 0 : C.config) && void 0 !== t ? t : {}, x = S.default.canUseCollectibles(n), y = a === T.Section.PREMIUM_PURCHASE && !x, [D, U] = r.useState(c);
+                    } = null !== (t = null == C ? void 0 : C.config) && void 0 !== t ? t : {}, x = g.default.canUseCollectibles(n), y = a === T.Section.PREMIUM_PURCHASE && !x, [D, U] = r.useState(c);
                     return r.useEffect(() => {
                         c && U(!0)
                     }, [c]), (0, i.jsxs)(M, {
@@ -2654,9 +2659,9 @@
                     animateOnHover: d,
                     avatarDecorationOverride: f,
                     showTryItOut: c
-                }), S = i.useCallback(() => {
+                }), g = i.useCallback(() => {
                     _.onMouseEnter(), v.onMouseEnter()
-                }, [_, v]), g = i.useCallback(() => {
+                }, [_, v]), S = i.useCallback(() => {
                     _.onMouseLeave(), v.onMouseLeave()
                 }, [_, v]);
                 return {
@@ -2665,8 +2670,8 @@
                     avatarSrc: h,
                     isAnimating: C,
                     eventHandlers: {
-                        onMouseEnter: S,
-                        onMouseLeave: g
+                        onMouseEnter: g,
+                        onMouseLeave: S
                     }
                 }
             }
@@ -2696,12 +2701,12 @@
                     avatarOverride: E
                 } = e, [h, C] = i.useState(!1), _ = (0, r.useStateFromStores)([l.default], () => l.default.useReducedMotion), p = (0, r.useStateFromStores)([u.default], () => u.default.isFocused()), I = p && (h || !_ && !f), {
                     pendingAvatar: v
-                } = (0, o.default)({}), S = (0, r.useStateFromStores)([a.default], () => null != n && null != t ? a.default.getMember(n, t.id) : null), g = i.useMemo(() => null != t ? (0, s.getPreviewAvatar)(d ? null != E ? E : v : void 0, S, t, {
+                } = (0, o.default)({}), g = (0, r.useStateFromStores)([a.default], () => null != n && null != t ? a.default.getMember(n, t.id) : null), S = i.useMemo(() => null != t ? (0, s.getPreviewAvatar)(d ? null != E ? E : v : void 0, g, t, {
                     canAnimate: I,
                     size: c
-                }) : void 0, [d, v, S, t, I, c, E]), T = i.useCallback(() => C(!0), []), m = i.useCallback(() => C(!1), []);
+                }) : void 0, [d, v, g, t, I, c, E]), T = i.useCallback(() => C(!0), []), m = i.useCallback(() => C(!1), []);
                 return {
-                    avatarSrc: g,
+                    avatarSrc: S,
                     isAvatarAnimating: I,
                     eventHandlers: {
                         onMouseEnter: T,
@@ -2871,14 +2876,14 @@
                     buttonShineClassName: h,
                     onlyShineOnHover: C,
                     ...p
-                } = e, I = s.createRef(), v = (0, d.default)(I), S = !i && !r && !0 !== a && (!C || v);
+                } = e, I = s.createRef(), v = (0, d.default)(I), g = !i && !r && !0 !== a && (!C || v);
                 return (0, l.jsxs)(c.Button, {
                     buttonRef: I,
                     ...p,
                     className: u(E.shinyButton, n),
                     disabled: i,
                     submitting: r,
-                    children: [t, S ? (0, l.jsx)(_, {
+                    children: [t, g ? (0, l.jsx)(_, {
                         shinePaused: f,
                         className: u(E.buttonShine, C ? E.onlyShineOnHover : void 0, h),
                         shineSize: o
@@ -2952,15 +2957,15 @@
                         expanded: I,
                         ...v
                     } = e, {
-                        enabled: S
-                    } = (0, c.useRedesignIconContext)(), g = t;
-                    if (!0 === I ? g = E.DOWN : !1 === I && (g = E.RIGHT), S) {
+                        enabled: g
+                    } = (0, c.useRedesignIconContext)(), S = t;
+                    if (!0 === I ? S = E.DOWN : !1 === I && (S = E.RIGHT), g) {
                         let e = {
                             [E.UP]: o.ChevronSmallUpIcon,
                             [E.DOWN]: s.ChevronSmallDownIcon,
                             [E.LEFT]: a.ChevronSmallLeftIcon,
                             [E.RIGHT]: u.ChevronSmallRightIcon
-                        } [g];
+                        } [S];
                         return (0, i.jsx)(e, {
                             ...v,
                             className: _,
@@ -2971,7 +2976,7 @@
                         })
                     }
                     return (0, i.jsx)("svg", {
-                        className: l(_, C, g),
+                        className: l(_, C, S),
                         width: n,
                         height: r,
                         viewBox: "0 0 24 24",
