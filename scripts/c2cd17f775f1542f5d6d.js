@@ -18,8 +18,8 @@
             var a = s("37983"),
                 n = s("884691"),
                 r = s("414456"),
-                l = s.n(r),
-                o = s("730290"),
+                o = s.n(r),
+                l = s("730290"),
                 i = s("394846"),
                 u = s("446674"),
                 d = s("913144"),
@@ -31,8 +31,8 @@
                 C = s("271938"),
                 S = s("124969"),
                 g = s("659500"),
-                A = s("49111"),
-                T = s("782340"),
+                T = s("49111"),
+                A = s("782340"),
                 N = s("926622");
             u.default.initialize();
             class E extends n.PureComponent {
@@ -44,38 +44,38 @@
                         password: e,
                         error: t,
                         hasCancel: n
-                    } = this.state, r = this.isSubmitting(), l = null != t ? t : this.renderError("password");
+                    } = this.state, r = this.isSubmitting(), o = null != t ? t : this.renderError("password");
                     return (0, a.jsxs)(S.default, {
                         onSubmit: this.handleSubmit,
                         tag: "form",
                         children: [(0, a.jsx)("img", {
                             alt: "",
-                            src: null == l ? s("245288") : s("314837"),
+                            src: null == o ? s("245288") : s("314837"),
                             className: N.marginBottom20
                         }), (0, a.jsx)(S.Title, {
-                            children: T.default.Messages.RESET_PASSWORD_TITLE
+                            children: A.default.Messages.RESET_PASSWORD_TITLE
                         }), (0, a.jsxs)(S.Block, {
                             className: N.marginTop20,
                             children: [(0, a.jsx)(S.Input, {
-                                label: T.default.Messages.FORM_LABEL_NEW_PASSWORD,
+                                label: A.default.Messages.FORM_LABEL_NEW_PASSWORD,
                                 className: N.marginBottom20,
                                 name: "password",
                                 value: e,
                                 onChange: e => this.setState({
                                     password: e
                                 }),
-                                error: l,
+                                error: o,
                                 type: "password"
                             }), (0, a.jsx)(S.Button, {
                                 type: "submit",
                                 submitting: r,
-                                children: T.default.Messages.CHANGE_PASSWORD
+                                children: A.default.Messages.CHANGE_PASSWORD
                             }), n ? (0, a.jsx)(S.Button, {
                                 className: N.marginTop8,
                                 onClick: this.handleGoToLogin,
                                 submitting: r,
                                 color: S.Button.Colors.PRIMARY,
-                                children: T.default.Messages.CANCEL
+                                children: A.default.Messages.CANCEL
                             }) : null]
                         })]
                     })
@@ -112,13 +112,13 @@
                         children: [(0, a.jsx)("img", {
                             alt: "",
                             src: s("245288"),
-                            className: l(N.marginBottom20, i.isMobile ? N.marginTop20 : "")
+                            className: o(N.marginBottom20, i.isMobile ? N.marginTop20 : "")
                         }), (0, a.jsx)(S.Title, {
                             className: N.marginBottom40,
-                            children: T.default.Messages.RESET_PASSWORD_SUCCESS_TITLE
+                            children: A.default.Messages.RESET_PASSWORD_SUCCESS_TITLE
                         }), (0, a.jsx)(S.Button, {
                             onClick: this.handleOpenApp,
-                            children: T.default.Messages.VERIFICATION_OPEN_DISCORD
+                            children: A.default.Messages.VERIFICATION_OPEN_DISCORD
                         })]
                     })
                 }
@@ -135,19 +135,19 @@
                             resetToken: n
                         } = this.props, {
                             password: r,
-                            error: l
+                            error: o
                         } = this.state;
                         if (null != e && e.preventDefault(), 0 === r.length) {
                             this.setState({
-                                error: T.default.Messages.PASSWORD_REQUIRED
-                            }), g.ComponentDispatch.dispatch(A.ComponentActions.WAVE_EMPHASIZE);
+                                error: A.default.Messages.PASSWORD_REQUIRED
+                            }), g.ComponentDispatch.dispatch(T.ComponentActions.WAVE_EMPHASIZE);
                             return
                         }
-                        null != l && this.setState({
+                        null != o && this.setState({
                             error: null
                         });
-                        let o = n;
-                        if (null != t && (o = (0, h.default)(t)), null != o) {
+                        let l = n;
+                        if (null != t && (l = (0, h.default)(t)), null != l) {
                             this.setState({
                                 working: !0
                             });
@@ -156,14 +156,14 @@
                                     result: e,
                                     sms: t,
                                     webauthn: n,
-                                    ticket: l,
+                                    ticket: o,
                                     token: i,
                                     totp: u,
                                     backup: h
-                                } = await c.default.resetPassword(o, r, a);
+                                } = await c.default.resetPassword(l, r, a);
                                 e === c.PasswordResetResult.MFA ? d.default.dispatch({
                                     type: "LOGIN_MFA_STEP",
-                                    ticket: l,
+                                    ticket: o,
                                     sms: t,
                                     webauthn: n,
                                     totp: u,
@@ -177,54 +177,17 @@
                                 working: !1
                             })
                         }
-                    }, this.handleTokenSubmit = async e => {
-                        let {
-                            location: t,
-                            mfaTicket: s,
-                            onLoginSuccess: a,
-                            resetToken: n,
-                            source: r
-                        } = this.props, {
-                            code: l,
-                            password: o,
-                            error: i
-                        } = this.state;
-                        if (null != e && e.preventDefault(), 0 === o.length) {
-                            this.setState({
-                                error: T.default.Messages.PASSWORD_REQUIRED
-                            }), g.ComponentDispatch.dispatch(A.ComponentActions.WAVE_EMPHASIZE);
-                            return
-                        }
-                        null != i && this.setState({
-                            error: null
-                        });
-                        let u = n;
-                        if (null != t && (u = (0, h.default)(t)), null != u) {
-                            this.setState({
-                                working: !0
-                            });
-                            try {
-                                let e = await c.default.resetPasswordMFA(l, s, o, u, r);
-                                null != a ? a(e) : (d.default.dispatch({
-                                    type: "LOGIN_SUCCESS",
-                                    token: e
-                                }), this.handlePasswordChangeSuccess())
-                            } catch (e) {}
-                            this.setState({
-                                working: !1
-                            })
-                        }
                     }, this.handleTokenSubmitMFAv2 = (e, t) => {
                         let {
                             location: s,
                             mfaTicket: a,
                             onLoginSuccess: n,
                             resetToken: r,
-                            source: l
+                            source: o
                         } = this.props, {
-                            password: o
+                            password: l
                         } = this.state;
-                        if (0 === o.length) return d.default.dispatch({
+                        if (0 === l.length) return d.default.dispatch({
                             type: "LOGIN_RESET"
                         }), Promise.reject();
                         let i = r;
@@ -234,9 +197,9 @@
                             method: e,
                             code: t,
                             ticket: a,
-                            password: o,
+                            password: l,
                             token: i,
-                            source: l
+                            source: o
                         }).then(e => {
                             null != n ? n(e) : (d.default.dispatch({
                                 type: "LOGIN_SUCCESS",
@@ -253,19 +216,19 @@
                             });
                             return
                         }
-                        e(A.Routes.APP)
+                        e(T.Routes.APP)
                     }, this.handleGoToLogin = () => {
                         let {
                             transitionTo: e
                         } = this.props;
-                        c.default.loginReset(), e(A.Routes.LOGIN)
+                        c.default.loginReset(), e(T.Routes.LOGIN)
                     }, this.isSubmitting = () => {
                         let {
                             loginStatus: e
                         } = this.props, {
                             working: t
                         } = this.state;
-                        return t || e === A.LoginStates.LOGGING_IN_MFA
+                        return t || e === T.LoginStates.LOGGING_IN_MFA
                     }, this.handleOpenApp = () => {
                         (0, f.default)("password_reset")
                     }, this.hasError = e => null != this.props.errors[e] || null != this.state.error, this.renderError = e => {
@@ -278,7 +241,7 @@
                         }
                         return null
                     };
-                    let s = (null === (t = this.props.location) || void 0 === t ? void 0 : t.search) != null && "" !== this.props.location.search ? (0, o.parse)(this.props.location.search) : null;
+                    let s = (null === (t = this.props.location) || void 0 === t ? void 0 : t.search) != null && "" !== this.props.location.search ? (0, l.parse)(this.props.location.search) : null;
                     this.state = {
                         method: "",
                         password: "",
@@ -334,8 +297,8 @@
             s("884691");
             var n = s("77078"),
                 r = s("794538"),
-                l = s("145131"),
-                o = s("124969"),
+                o = s("145131"),
+                l = s("124969"),
                 i = s("782340"),
                 u = s("265445"),
                 d = s("926622");
@@ -348,12 +311,12 @@
                     onSubmit: h,
                     onCancel: f
                 } = e;
-                return (0, a.jsxs)(l.default, {
-                    direction: l.default.Direction.VERTICAL,
-                    children: [(0, a.jsx)(o.Title, {
+                return (0, a.jsxs)(o.default, {
+                    direction: o.default.Direction.VERTICAL,
+                    children: [(0, a.jsx)(l.Title, {
                         className: d.marginBottom8,
                         children: t
-                    }), (0, a.jsx)(o.SubTitle, {
+                    }), (0, a.jsx)(l.SubTitle, {
                         className: u.subTitle,
                         children: s
                     }), (0, a.jsxs)("div", {
@@ -384,8 +347,8 @@
             var a = s("37983"),
                 n = s("884691"),
                 r = s("414456"),
-                l = s.n(r),
-                o = s("446674"),
+                o = s.n(r),
+                l = s("446674"),
                 i = s("77078"),
                 u = s("437822"),
                 d = s("152434"),
@@ -397,8 +360,8 @@
                 C = s("161778"),
                 S = s("271938"),
                 g = s("476108"),
-                A = s("124969"),
-                T = s("659500"),
+                T = s("124969"),
+                A = s("659500"),
                 N = s("439932"),
                 E = s("49111"),
                 _ = s("782340"),
@@ -429,8 +392,8 @@
                     let {
                         country: t
                     } = this.props, s = !this.hasError("email") && this.hasError("password"), r = (0, a.jsxs)(n.Fragment, {
-                        children: [(0, a.jsx)(A.Title, {
-                            className: l(O.marginBottom8, M.title),
+                        children: [(0, a.jsx)(T.Title, {
+                            className: o(O.marginBottom8, M.title),
                             children: _.default.Messages.MULTI_ACCOUNT_LOGIN_TITLE
                         }, "title"), (0, a.jsx)(i.Text, {
                             color: "header-secondary",
@@ -441,7 +404,7 @@
                     });
                     return (0, a.jsxs)("div", {
                         className: M.mainLoginContainer,
-                        children: [r, (0, a.jsxs)(A.Block, {
+                        children: [r, (0, a.jsxs)(T.Block, {
                             className: M.loginForm,
                             children: [(0, a.jsx)(p.default, {
                                 alpha2: t.alpha2,
@@ -461,7 +424,7 @@
                                 value: this.state.login,
                                 autoFocus: !s,
                                 required: !0
-                            }), (0, a.jsx)(A.Input, {
+                            }), (0, a.jsx)(T.Input, {
                                 label: _.default.Messages.FORM_LABEL_PASSWORD,
                                 error: this.renderError("password"),
                                 onChange: e => this.setState({
@@ -475,11 +438,11 @@
                                 autoFocus: s,
                                 value: this.state.password,
                                 required: !0
-                            }), (0, a.jsx)(A.Button, {
+                            }), (0, a.jsx)(T.Button, {
                                 onClick: this.handleForgotPassword,
                                 look: i.Button.Looks.LINK,
                                 color: i.Button.Colors.LINK,
-                                className: l(O.marginTop4),
+                                className: o(O.marginTop4),
                                 children: _.default.Messages.FORGOT_PASSWORD
                             })]
                         })]
@@ -494,7 +457,7 @@
                     } = this.props;
                     return (0, a.jsxs)("div", {
                         className: M.pageContainer,
-                        children: [(0, a.jsx)(A.default, {
+                        children: [(0, a.jsx)(T.default, {
                             tag: "form",
                             className: e,
                             expanded: !0,
@@ -502,14 +465,14 @@
                             children: this.renderDefaultForm()
                         }), (0, a.jsxs)("div", {
                             "data-theme": n,
-                            className: l((0, N.getThemeClass)(n), M.navRow),
+                            className: o((0, N.getThemeClass)(n), M.navRow),
                             children: [(0, a.jsx)(i.Button, {
                                 type: "button",
                                 look: i.Button.Looks.LINK,
                                 "aria-label": "back",
                                 onClick: s,
                                 size: i.Button.Sizes.SMALL,
-                                className: l((0, N.getThemeClass)(n), M.backButton),
+                                className: o((0, N.getThemeClass)(n), M.backButton),
                                 children: _.default.Messages.BACK
                             }), (0, a.jsx)(i.Button, {
                                 "aria-label": "continue",
@@ -527,7 +490,7 @@
                         ticket: this.props.mfaTicket,
                         methods: this.props.mfaMethods
                     };
-                    return (0, a.jsx)(A.default, {
+                    return (0, a.jsx)(T.default, {
                         style: {
                             padding: 0
                         },
@@ -547,25 +510,25 @@
                         authBoxClassName: e,
                         theme: t
                     } = this.props, s = this.props.loginStatus === E.LoginStates.ACCOUNT_DISABLED, n = s ? _.default.Messages.ACCOUNT_DISABLED_TITLE : _.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_TITLE, r = s ? _.default.Messages.ACCOUNT_DISABLED_DESCRIPTION : _.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_DESCRIPTION;
-                    return (0, a.jsxs)(A.default, {
+                    return (0, a.jsxs)(T.default, {
                         tag: "form",
                         onSubmit: this.handleReset,
                         className: e,
                         theme: t,
-                        children: [(0, a.jsx)(A.Title, {
+                        children: [(0, a.jsx)(T.Title, {
                             className: O.marginBottom8,
                             children: n
-                        }), (0, a.jsx)(A.SubTitle, {
+                        }), (0, a.jsx)(T.SubTitle, {
                             className: O.marginBottom20,
                             children: r
-                        }), (0, a.jsxs)(A.Block, {
+                        }), (0, a.jsxs)(T.Block, {
                             children: [(0, a.jsx)(i.Button, {
                                 color: i.Button.Colors.BRAND,
                                 type: "submit",
                                 fullWidth: !0,
                                 children: _.default.Messages._RETURN_TO_LOGIN
                             }), (0, a.jsx)("div", {
-                                className: l(O.marginTop8, M.needAccount),
+                                className: o(O.marginTop8, M.needAccount),
                                 children: _.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_CANCEL.format({
                                     onClick: this.handleCancelAccountDeletion
                                 })
@@ -591,7 +554,7 @@
                     } = this.props, {
                         phoneVerifyError: t
                     } = this.state;
-                    return (0, a.jsx)(A.default, {
+                    return (0, a.jsx)(T.default, {
                         tag: "form",
                         className: e,
                         children: (0, a.jsx)("div", {
@@ -666,7 +629,7 @@
                         null == e || e.preventDefault(), null === (t = this.loginRef) || void 0 === t || t.focus();
                         let s = this.getFullLogin();
                         try {
-                            T.ComponentDispatch.dispatch(E.ComponentActions.WAVE_EMPHASIZE), await u.default.forgotPassword(s), (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
+                            A.ComponentDispatch.dispatch(E.ComponentActions.WAVE_EMPHASIZE), await u.default.forgotPassword(s), (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
                                 header: _.default.Messages.EMAIL_VERIFICATION_INSTRUCTIONS_HEADER,
                                 confirmText: _.default.Messages.OKAY,
                                 confirmButtonColor: i.Button.Colors.BRAND,
@@ -751,7 +714,7 @@
                 replaceWith: e => s.g.location.replace(e)
             };
             var x = function(e) {
-                let t = (0, o.useStateFromStoresObject)([g.default, S.default, m.default, C.default], () => ({
+                let t = (0, l.useStateFromStoresObject)([g.default, S.default, m.default, C.default], () => ({
                     authenticated: S.default.isAuthenticated(),
                     loginStatus: S.default.getLoginStatus(),
                     mfaTicket: S.default.getMFATicket(),
@@ -773,15 +736,15 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return o
+                    return l
                 }
             });
             var a = s("37983");
             s("884691");
             var n = s("393414"),
                 r = s("479287"),
-                l = s("545358"),
-                o = e => {
+                o = s("545358"),
+                l = e => {
                     let {
                         onClose: t
                     } = e;
@@ -792,7 +755,7 @@
                         replaceWith: e => {
                             (0, n.replaceWith)(e)
                         },
-                        authBoxClassName: l.card,
+                        authBoxClassName: o.card,
                         closeLogin: t
                     })
                 }
@@ -808,9 +771,9 @@
                 }
             }), s("506083");
             var a, n, r = s("37983"),
-                l = s("884691"),
-                o = s("414456"),
-                i = s.n(o),
+                o = s("884691"),
+                l = s("414456"),
+                i = s.n(l),
                 u = s("446674"),
                 d = s("77078"),
                 c = s("437822"),
@@ -821,8 +784,8 @@
                 C = s("697218"),
                 S = s("433487"),
                 g = s("599110"),
-                A = s("158998"),
-                T = s("694787"),
+                T = s("158998"),
+                A = s("694787"),
                 N = s("770032"),
                 E = s("927101"),
                 _ = s("49111"),
@@ -836,13 +799,13 @@
                     onAction: a
                 } = e, {
                     currentUser: n,
-                    hidePrivateData: l,
-                    isAuthenticated: o
+                    hidePrivateData: o,
+                    isAuthenticated: l
                 } = (0, u.useStateFromStoresObject)([C.default, p.default, m.default], () => ({
                     currentUser: C.default.getCurrentUser(),
                     hidePrivateData: p.default.hidePersonalInformation,
                     isAuthenticated: m.default.isAuthenticated()
-                })), E = new f.default(s), I = o && (null == n ? void 0 : n.id) === E.id, x = s.tokenStatus === N.MultiAccountTokenStatus.INVALID, R = l || E.isPomelo() ? null : "#".concat(E.discriminator), L = null;
+                })), E = new f.default(s), I = l && (null == n ? void 0 : n.id) === E.id, x = s.tokenStatus === N.MultiAccountTokenStatus.INVALID, R = o || E.isPomelo() ? null : "#".concat(E.discriminator), L = null;
                 return I ? L = (0, r.jsx)(d.Text, {
                     variant: "text-sm/semibold",
                     className: O.hintText,
@@ -871,9 +834,9 @@
                                     variant: "text-md/semibold",
                                     color: "header-primary",
                                     className: O.textOverflow,
-                                    children: A.default.getUserTag(E, {
+                                    children: T.default.getUserTag(E, {
                                         mode: "username",
-                                        identifiable: l ? "never" : "always"
+                                        identifiable: o ? "never" : "always"
                                     })
                                 }), (0, r.jsx)(d.Text, {
                                     color: "header-secondary",
@@ -893,7 +856,7 @@
                                         location: {
                                             section: _.AnalyticsSections.MANAGE_ACCOUNTS_MODAL
                                         }
-                                    }), T.switchAccount(s.id), a(1, s.id)
+                                    }), A.switchAccount(s.id), a(1, s.id)
                                 },
                                 color: d.Button.Colors.PRIMARY,
                                 children: x ? M.default.Messages.SWITCH_ACCOUNTS_ACTION_LOG_IN : t
@@ -915,7 +878,7 @@
                                                 action: () => {
                                                     ! function() {
                                                         c.default.logout(null, s.id).finally(() => {
-                                                            T.removeAccount(s.id)
+                                                            A.removeAccount(s.id)
                                                         });
                                                         let e = {};
                                                         null != n ? e.section = _.AnalyticsSections.MANAGE_ACCOUNTS_MODAL : e.page = _.PageAnalyticsLocations.LOGIN, g.default.track(_.AnalyticEvents.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
@@ -951,7 +914,7 @@
                 } = (0, E.useMultiAccountUsers)();
                 return (0, r.jsx)("div", {
                     className: O.list,
-                    children: a ? (0, r.jsx)(d.Spinner, {}) : n.map((e, a) => (0, r.jsxs)(l.Fragment, {
+                    children: a ? (0, r.jsx)(d.Spinner, {}) : n.map((e, a) => (0, r.jsxs)(o.Fragment, {
                         children: [(0, r.jsx)(I, {
                             user: e,
                             actionText: t,
@@ -972,8 +935,8 @@
                 }
             }), s("222007");
             var a, n, r = s("37983"),
-                l = s("884691"),
-                o = s("759843"),
+                o = s("884691"),
+                l = s("759843"),
                 i = s("446674"),
                 u = s("77078"),
                 d = s("913144"),
@@ -985,9 +948,9 @@
                 C = s("851460"),
                 S = s("583374"),
                 g = s("782340"),
-                A = s("635937");
+                T = s("635937");
             (n = a || (a = {}))[n.MANAGE_ACCOUNTS = 0] = "MANAGE_ACCOUNTS", n[n.LOGIN = 1] = "LOGIN";
-            let T = {
+            let A = {
                 0: u.ModalSize.SMALL,
                 1: u.ModalSize.DYNAMIC
             };
@@ -996,17 +959,17 @@
                 let {
                     transitionState: t,
                     onClose: s
-                } = e, [a, n] = l.useState(0), {
+                } = e, [a, n] = o.useState(0), {
                     currentUser: N,
                     multiAccountUsers: E
                 } = (0, i.useStateFromStoresObject)([h.default, m.default], () => ({
                     currentUser: h.default.getCurrentUser(),
                     multiAccountUsers: m.default.getUsers()
-                })), [_, M] = l.useState(!1), [O, I] = l.useState(""), [x, R] = l.useState(null);
-                l.useEffect(() => {
+                })), [_, M] = o.useState(!1), [O, I] = o.useState(""), [x, R] = o.useState(null);
+                o.useEffect(() => {
                     if (_) R((0, r.jsx)(f.default, {
                         messageType: f.HelpMessageTypes.ERROR,
-                        className: A.infoMessage,
+                        className: T.infoMessage,
                         children: g.default.Messages.MULTI_ACCOUNT_MAX_ACCOUNTS_ERROR.format({
                             maxNumAccounts: S.MAX_ACCOUNTS
                         })
@@ -1015,30 +978,30 @@
                         let e = h.default.getUser(O);
                         null != e && R((0, r.jsx)(f.default, {
                             messageType: f.HelpMessageTypes.POSITIVE,
-                            className: A.infoMessage,
+                            className: T.infoMessage,
                             children: g.default.Messages.MULTI_ACCOUNT_LOGGED_OUT.format({
                                 username: e.username
                             })
                         })), M(!1)
                     }
-                }, [O, _]), l.useEffect(() => {
+                }, [O, _]), o.useEffect(() => {
                     E.length < S.MAX_ACCOUNTS && M(!1)
                 }, [E]), (0, c.default)({
-                    type: o.ImpressionTypes.MODAL,
-                    name: 0 === a ? o.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING : o.ImpressionNames.USER_LOGIN
+                    type: l.ImpressionTypes.MODAL,
+                    name: 0 === a ? l.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING : l.ImpressionNames.USER_LOGIN
                 });
                 let L = null;
                 return 0 === a ? L = (0, r.jsxs)(r.Fragment, {
                     children: [(0, r.jsx)(u.ModalHeader, {
                         separator: !1,
                         children: (0, r.jsxs)("div", {
-                            className: A.header,
+                            className: T.header,
                             children: [(0, r.jsx)(u.Heading, {
                                 variant: "heading-xl/semibold",
                                 color: "header-primary",
                                 children: g.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS
                             }), (0, r.jsx)(u.Text, {
-                                className: A.subheaderText,
+                                className: T.subheaderText,
                                 color: "header-secondary",
                                 variant: "text-md/normal",
                                 children: g.default.Messages.SWITCH_ACCOUNTS_MODAL_SUBHEADER
@@ -1060,7 +1023,7 @@
                                 }
                             }
                         }), (0, r.jsx)("div", {
-                            className: A.actions,
+                            className: T.actions,
                             children: (0, r.jsx)(u.Button, {
                                 look: u.Button.Looks.LINK,
                                 color: u.Button.Colors.PRIMARY,
@@ -1086,9 +1049,9 @@
                         }), n(0)
                     }
                 })), (0, r.jsx)(u.ModalRoot, {
-                    className: A.modal,
+                    className: T.modal,
                     transitionState: t,
-                    size: T[a],
+                    size: A[a],
                     "aria-label": g.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
                     children: (0, r.jsx)(u.Sequencer, {
                         step: a,
@@ -1106,14 +1069,14 @@
                     return a
                 },
                 shouldShowCountryCodeSelector: function() {
-                    return o
+                    return l
                 }
             }), (n = a || (a = {})).PHONE = "phone", n.EMAIL = "email";
             let r = /^[-() \d]+$/,
-                l = e => e.startsWith("+");
+                o = e => e.startsWith("+");
 
-            function o(e, t) {
-                return "phone" === e ? !l(t) : "email" !== e && !(t.length < 3) && r.test(t)
+            function l(e, t) {
+                return "phone" === e ? !o(t) : "email" !== e && !(t.length < 3) && r.test(t)
             }
         },
         467413: function(e, t, s) {
@@ -1126,8 +1089,8 @@
             var a = s("37983"),
                 n = s("884691"),
                 r = s("414456"),
-                l = s.n(r),
-                o = s("301165"),
+                o = s.n(r),
+                l = s("301165"),
                 i = s("446674"),
                 u = s("77078"),
                 d = s("206230"),
@@ -1140,7 +1103,7 @@
                     show: t,
                     alpha2: s,
                     countryCode: r
-                } = e, m = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), p = n.useRef(null), [C, S] = n.useState(0), [g, A] = n.useState(!1);
+                } = e, m = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), p = n.useRef(null), [C, S] = n.useState(0), [g, T] = n.useState(!1);
                 n.useEffect(() => {
                     function e() {
                         var e, s;
@@ -1148,14 +1111,14 @@
                     }
                     return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e)
                 }, [t, s, r]);
-                let T = (0, o.useSpring)({
+                let A = (0, l.useSpring)({
                         width: "".concat(C, "px"),
                         immediate: m,
                         onStart: () => {
-                            A(!0)
+                            T(!0)
                         },
                         onRest: () => {
-                            A(!1)
+                            T(!1)
                         }
                     }),
                     N = e => {
@@ -1170,12 +1133,12 @@
                         }
                     }),
                     children: e => (0, a.jsx)("div", {
-                        className: l(f.outerContainer, {
+                        className: o(f.outerContainer, {
                             [f.hidden]: !(t || g)
                         }),
-                        children: (0, a.jsx)(o.animated.div, {
+                        children: (0, a.jsx)(l.animated.div, {
                             className: f.container,
-                            style: T,
+                            style: A,
                             children: (0, a.jsxs)("div", {
                                 className: f.innerContainer,
                                 ref: p,
@@ -1202,8 +1165,8 @@
             var a = s("37983"),
                 n = s("884691"),
                 r = s("414456"),
-                l = s.n(r),
-                o = s("77078"),
+                o = s.n(r),
+                l = s("77078"),
                 i = s("476765"),
                 u = s("345327"),
                 d = s("467413"),
@@ -1221,8 +1184,8 @@
                     required: C,
                     value: S,
                     setRef: g,
-                    placeholder: A,
-                    autoFocus: T,
+                    placeholder: T,
+                    autoFocus: A,
                     maxLength: N,
                     spellCheck: E,
                     autoComplete: _,
@@ -1231,7 +1194,7 @@
                     onChange: I,
                     inputClassName: x
                 } = e, R = (0, i.useUID)(), [L, v] = n.useState(!1), j = (0, u.shouldShowCountryCodeSelector)(r, S);
-                return (0, a.jsx)(o.FormItem, {
+                return (0, a.jsx)(l.FormItem, {
                     title: f,
                     error: m,
                     className: p,
@@ -1239,7 +1202,7 @@
                     tag: "label",
                     htmlFor: R,
                     children: (0, a.jsxs)("div", {
-                        className: l(h.input, c.input, x, {
+                        className: o(h.input, c.input, x, {
                             [h.error]: null != m,
                             [h.focused]: L
                         }),
@@ -1247,13 +1210,13 @@
                             show: j,
                             alpha2: t,
                             countryCode: s
-                        }), (0, a.jsx)(o.TextInput, {
+                        }), (0, a.jsx)(l.TextInput, {
                             id: R,
                             name: "email",
                             type: r === u.PhoneOrEmailSelectorForceMode.EMAIL ? "email" : "text",
                             value: S,
                             inputRef: g,
-                            placeholder: A,
+                            placeholder: T,
                             "aria-label": f,
                             required: C,
                             onChange: function(e) {
@@ -1263,7 +1226,7 @@
                             autoComplete: _,
                             autoCapitalize: M,
                             autoCorrect: O,
-                            autoFocus: T,
+                            autoFocus: A,
                             maxLength: N,
                             spellCheck: E,
                             className: c.inputWrapper,

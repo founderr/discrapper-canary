@@ -2443,7 +2443,7 @@
                     if (null != u) return u;
                     let e = b.default.getChannelId(),
                         t = null == e || (0, el.isStaticChannelRoute)(e) ? void 0 : U.default.getChannel(e);
-                    return (null == t ? void 0 : t.isThread()) && (t = U.default.getChannel(t.parent_id)), null != t ? t : y.default.getDefaultChannel(o.id)
+                    return (null == t ? void 0 : t.isThread()) && (t = U.default.getChannel(t.parent_id)), null != t ? t : y.default.getDefaultChannel(o.id, !0)
                 }, [K, V, D, u, o.id, W, Y]), [X, Q] = i.useState(null), J = null != X ? X : Z, $ = null;
                 null != h ? $ = er.InviteTargetTypes.STREAM : null != I && ($ = er.InviteTargetTypes.EMBEDDED_APPLICATION);
                 let ee = null != u ? u.getGuildId() : null != o ? o.id : null,

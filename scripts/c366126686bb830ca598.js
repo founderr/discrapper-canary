@@ -2142,43 +2142,6 @@
                                 working: !1
                             })
                         }
-                    }, this.handleTokenSubmit = async e => {
-                        let {
-                            location: t,
-                            mfaTicket: n,
-                            onLoginSuccess: s,
-                            resetToken: a,
-                            source: l
-                        } = this.props, {
-                            code: i,
-                            password: r,
-                            error: u
-                        } = this.state;
-                        if (null != e && e.preventDefault(), 0 === r.length) {
-                            this.setState({
-                                error: T.default.Messages.PASSWORD_REQUIRED
-                            }), m.ComponentDispatch.dispatch(N.ComponentActions.WAVE_EMPHASIZE);
-                            return
-                        }
-                        null != u && this.setState({
-                            error: null
-                        });
-                        let o = a;
-                        if (null != t && (o = (0, f.default)(t)), null != o) {
-                            this.setState({
-                                working: !0
-                            });
-                            try {
-                                let e = await c.default.resetPasswordMFA(i, n, r, o, l);
-                                null != s ? s(e) : (d.default.dispatch({
-                                    type: "LOGIN_SUCCESS",
-                                    token: e
-                                }), this.handlePasswordChangeSuccess())
-                            } catch (e) {}
-                            this.setState({
-                                working: !1
-                            })
-                        }
                     }, this.handleTokenSubmitMFAv2 = (e, t) => {
                         let {
                             location: n,

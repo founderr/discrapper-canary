@@ -613,7 +613,7 @@
                         id: t.id,
                         label: t.name,
                         action: () => (function(e, t) {
-                            let a = f.default.getDefaultChannel(e.id);
+                            let a = f.default.getDefaultChannel(e.id, !0);
                             if (null != a) {
                                 if (c({
                                         ...o,

@@ -21101,14 +21101,6 @@
                 tooltipText: "tooltipText__955d4"
             }
         },
-        661597: function(e, t, o) {
-            "use strict";
-            e.exports = {
-                imageLoader: "imageLoader_faf230",
-                loading: "loading_b968ad",
-                shopArt: "shopArt__1605a"
-            }
-        },
         825054: function(e, t, o) {
             "use strict";
             e.exports = {
