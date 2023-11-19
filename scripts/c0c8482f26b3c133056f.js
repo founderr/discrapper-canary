@@ -1729,7 +1729,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "247265"
+                        buildNumber: "247275"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -35073,6 +35073,21 @@
                 }
             })
         },
+        403275: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                deprecatedCommand: function() {
+                    return l
+                }
+            });
+            var a = n("861309"),
+                s = n("49111");
+            let l = {
+                handler(e) {
+                    throw new a.default(s.RPCErrors.INVALID_COMMAND, "Deprecated command: ".concat(e.cmd))
+                }
+            }
+        },
         207873: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -37899,72 +37914,60 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return N
+                    return g
                 }
             }), n("222007");
             var a = n("901165"),
                 s = n("50885"),
                 l = n("84090"),
                 i = n("251744"),
-                r = n("520295"),
-                o = n("261131"),
-                u = n("370453"),
+                r = n("261131"),
+                o = n("370453"),
+                u = n("878099"),
                 d = n("221850"),
                 c = n("700721"),
-                E = n("805875"),
-                f = n("376897"),
-                _ = n("683805"),
-                C = n("825734"),
-                h = n("696287"),
-                I = n("750390"),
-                T = n("195180");
-            let S = {
+                E = n("871832"),
+                f = n("805875"),
+                _ = n("376897"),
+                C = n("683805"),
+                h = n("825734"),
+                I = n("766383"),
+                T = n("696287"),
+                S = n("750390"),
+                A = n("195180"),
+                N = n("357147");
+            let m = {
                     ...l.crossPlatformCommands,
                     ...d.default,
                     ...c.default,
-                    ...E.default,
                     ...f.default,
                     ..._.default,
                     ...C.default,
                     ...h.default,
                     ...T.default,
-                    ...I.default,
-                    ...r.default.authCommands
+                    ...A.default,
+                    ...S.default,
+                    ...E.default,
+                    ...I.default
                 },
-                A = {
+                p = {
                     ...i.default,
-                    ...u.overlayEventHandlers,
-                    ...r.default.voiceSettingsEvents
+                    ...o.overlayEventHandlers,
+                    ...u.voiceSettingsEventHandlers
                 };
-            var N = {
-                server: o.default,
-                commands: S,
-                events: A,
+            var g = {
+                server: r.default,
+                commands: m,
+                events: p,
                 stores: [a.default],
-                transports: [r.default.postMessageTransport],
+                transports: [N.default],
                 registerTransportsForEmbeddedPlatform: function() {
                     s.default.ensureModule("discord_rpc").then(() => {
                         let e = [n("255516").default, n("90906").default];
-                        for (let t of e) o.default.registerTransport(t)
+                        for (let t of e) r.default.registerTransport(t)
                     })
                 }
             }
-        },
-        520295: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return i
-                }
-            });
-            var a = n("878099"),
-                s = n("871832"),
-                l = n("357147"),
-                i = {
-                    authCommands: s.default,
-                    voiceSettingsEvents: a.voiceSettingsEventHandlers,
-                    postMessageTransport: l.default
-                }
         },
         370453: function(e, t, n) {
             "use strict";
@@ -39000,6 +39003,18 @@
                     }
                 }
             }
+        },
+        766383: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return s
+                }
+            });
+            var a = n("403275"),
+                s = {
+                    [n("49111").RPCCommands.SEND_GENERIC_EVENT]: a.deprecatedCommand
+                }
         },
         696287: function(e, t, n) {
             "use strict";
