@@ -4,7 +4,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return d
                 }
             });
             var a = n("37983");
@@ -14,11 +14,11 @@
                 r = n("954016"),
                 o = n("49111");
 
-            function u(e) {
+            function d(e) {
                 let {
                     channel: t,
-                    guildId: u,
-                    locationObject: d,
+                    guildId: d,
+                    locationObject: u,
                     openInPopout: s,
                     initialSelectedApplicationId: c,
                     initialSlide: f = r.ActivityShelfSlides.DIRECTORY,
@@ -34,8 +34,8 @@
                     return n => (0, a.jsx)(e, {
                         ...n,
                         channel: t,
-                        guildId: u,
-                        locationObject: d,
+                        guildId: d,
+                        locationObject: u,
                         initialSlide: f,
                         initialSelectedApplicationId: c,
                         enableSelectedTextChannelInvite: p,
@@ -180,8 +180,8 @@
                 l = n("418009"),
                 r = n("404118"),
                 o = n("819689"),
-                u = n("815297"),
-                d = n("271938"),
+                d = n("815297"),
+                u = n("271938"),
                 s = n("474643"),
                 c = n("377253"),
                 f = n("585722"),
@@ -203,7 +203,8 @@
                             if (null == e) return {
                                 channelId: n,
                                 selectedAnswerIds: new Set([l]),
-                                submitting: !1
+                                submitting: !1,
+                                editing: !1
                             };
                             let t = {
                                     ...e
@@ -225,7 +226,8 @@
                         } = e, a = (0, m.getPollState)(t, n);
                         i(null != a, "Must not be able to vote without existing state!"), (0, m.updatePollState)(t, n, e => (i(null != e, "Must not be able to vote without existing state!"), {
                             ...e,
-                            submitting: !0
+                            submitting: !0,
+                            editing: !1
                         }));
                         try {
                             let e = [...a.selectedAnswerIds.values()];
@@ -235,17 +237,31 @@
                                 answerIds: e
                             }), (0, m.updatePollState)(t, n, () => void 0)
                         } catch (e) {
-                            var l, o, u;
+                            var l, o, d;
                             r.default.show({
                                 title: _.default.Messages.GENERIC_ERROR_TITLE,
-                                body: null !== (u = null !== (o = null === (l = e.getAnyErrorMessage) || void 0 === l ? void 0 : l.call(e)) && void 0 !== o ? o : e.message) && void 0 !== u ? u : _.default.Messages.GENERIC_ERROR_BODY
+                                body: null !== (d = null !== (o = null === (l = e.getAnyErrorMessage) || void 0 === l ? void 0 : l.call(e)) && void 0 !== o ? o : e.message) && void 0 !== d ? d : _.default.Messages.GENERIC_ERROR_BODY
                             }), (0, m.updatePollState)(t, n, e => {
                                 if (null != e) return {
                                     ...e,
-                                    submitting: !1
+                                    submitting: !1,
+                                    editing: !1
                                 }
                             })
                         }
+                    },
+                    handleUpdateVoteEditingState: function(e) {
+                        let {
+                            channelId: t,
+                            messageId: n,
+                            isEditing: a
+                        } = e, l = c.default.getMessage(t, n);
+                        i(null != l, "Tapped on a non-existent poll message"), (0, m.updatePollState)(t, n, () => ({
+                            channelId: t,
+                            selectedAnswerIds: new Set,
+                            submitting: !1,
+                            editing: a
+                        }))
                     },
                     createPoll: async function e(e) {
                         let {
@@ -283,13 +299,13 @@
                         try {
                             if (null != h && h.length > 0) {
                                 var E;
-                                let e = null !== (E = d.default.getToken()) && void 0 !== E ? E : "";
+                                let e = null !== (E = u.default.getToken()) && void 0 !== E ? E : "";
                                 await p.sendPollMessageWithAttachments({
                                     channel: t,
                                     items: h,
                                     token: e,
                                     poll: _,
-                                    nonce: (0, u.createNonce)(),
+                                    nonce: (0, d.createNonce)(),
                                     maxSizeCallback: () => {}
                                 })
                             } else await o.default.sendPollMessage(t.id, _)
@@ -376,10 +392,10 @@
                     return o
                 },
                 updatePollState: function() {
-                    return u
+                    return d
                 },
                 getPollState: function() {
-                    return d
+                    return u
                 }
             });
             var a = n("308503"),
@@ -410,11 +426,11 @@
                 }, i.default)
             }
 
-            function u(e, t, n) {
+            function d(e, t, n) {
                 r.getState().updatePollState(e, t, n)
             }
 
-            function d(e, t) {
+            function u(e, t) {
                 var n;
                 return null === (n = r.getState().polls[e]) || void 0 === n ? void 0 : n[t]
             }
@@ -473,7 +489,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 openThreadSidebarForViewing: function() {
-                    return g
+                    return v
                 },
                 openThreadSidebarForCreating: function() {
                     return A
@@ -490,8 +506,8 @@
                 l = n("917351"),
                 r = n.n(l),
                 o = n("913144"),
-                u = n("295426"),
-                d = n("244201"),
+                d = n("295426"),
+                u = n("244201"),
                 s = n("716241"),
                 c = n("565298"),
                 f = n("393414"),
@@ -500,13 +516,13 @@
                 m = n("474643"),
                 _ = n("18494"),
                 E = n("800762"),
-                y = n("659500"),
-                C = n("648564"),
+                g = n("659500"),
+                y = n("648564"),
                 T = n("49111"),
-                v = n("724210");
+                C = n("724210");
 
-            function g(e, t, n) {
-                d.MainWindowDispatch.dispatch(T.ComponentActions.POPOUT_CLOSE);
+            function v(e, t, n) {
+                u.MainWindowDispatch.dispatch(T.ComponentActions.POPOUT_CLOSE);
                 let a = !r.isEmpty(E.default.getVoiceStatesForChannel(e.id));
                 if (t || !h.UseThreadSidebar.getSetting() || __OVERLAY__ || a) {
                     o.default.dispatch({
@@ -517,8 +533,8 @@
                 }
                 i(null != e.parent_id, "all threads must have parents");
                 let l = _.default.getChannelId();
-                e.parent_id !== l && !(0, v.isGuildHomeChannel)(l) && (0, p.transitionToChannel)(e.parent_id), (0, f.transitionTo)(T.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, v.isGuildHomeChannel)(l) ? v.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? C.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
-                    y.ComponentDispatch.dispatch(T.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+                e.parent_id !== l && !(0, C.isGuildHomeChannel)(l) && (0, p.transitionToChannel)(e.parent_id), (0, f.transitionTo)(T.Routes.CHANNEL_THREAD_VIEW((0, c.getGuildIdForGenericRedirect)(e), (0, C.isGuildHomeChannel)(l) ? C.StaticChannelRoute.GUILD_HOME : e.parent_id, e.id), void 0, e.isForumPost() ? y.OpenThreadAnalyticsLocations.FORUM : void 0), setTimeout(() => {
+                    g.ComponentDispatch.dispatch(T.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                         channelId: e.id
                     })
                 }, 0)
@@ -529,11 +545,11 @@
                     location: n,
                     channel_id: e.id,
                     guild_id: e.guild_id
-                }), d.MainWindowDispatch.dispatch(T.ComponentActions.POPOUT_CLOSE), _.default.getChannelId() !== e.id && (0, p.transitionToChannel)(e.id);
+                }), u.MainWindowDispatch.dispatch(T.ComponentActions.POPOUT_CLOSE), _.default.getChannelId() !== e.id && (0, p.transitionToChannel)(e.id);
                 let a = m.default.getDraft(e.id, m.DraftType.FirstThreadMessage);
                 if ("" === a) {
                     let t = m.default.getDraft(e.id, m.DraftType.ChannelMessage);
-                    u.default.saveDraft(e.id, "", m.DraftType.ChannelMessage), u.default.saveDraft(e.id, t, m.DraftType.FirstThreadMessage)
+                    d.default.saveDraft(e.id, "", m.DraftType.ChannelMessage), d.default.saveDraft(e.id, t, m.DraftType.FirstThreadMessage)
                 }
                 setTimeout(() => {
                     o.default.dispatch({
@@ -546,7 +562,7 @@
             }
 
             function S(e, t) {
-                (0, f.transitionTo)(T.Routes.CHANNEL(e, (0, v.isGuildHomeChannel)(t) ? v.StaticChannelRoute.GUILD_HOME : t)), o.default.dispatch({
+                (0, f.transitionTo)(T.Routes.CHANNEL(e, (0, C.isGuildHomeChannel)(t) ? C.StaticChannelRoute.GUILD_HOME : t)), o.default.dispatch({
                     type: "SIDEBAR_CLOSE",
                     baseChannelId: t
                 })
@@ -609,10 +625,10 @@
                     return o
                 },
                 ChatLayerProvider: function() {
-                    return u
+                    return d
                 },
                 default: function() {
-                    return d
+                    return u
                 }
             });
             var a = n("228256");
@@ -620,8 +636,8 @@
                 Layer: i,
                 LayerContainer: l,
                 LayerProvider: r
-            } = (0, a.createLayer)("Chat"), o = l, u = r;
-            var d = i
+            } = (0, a.createLayer)("Chat"), o = l, d = r;
+            var u = i
         },
         418009: function(e, t, n) {
             "use strict";
