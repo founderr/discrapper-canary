@@ -32,10 +32,6 @@
             "use strict";
             e.exports = n.p + "5d2fef1f3542b417e129.svg"
         },
-        987224: function(e, t, n) {
-            "use strict";
-            e.exports = n.p + "d752b8cc85d981730031.svg"
-        },
         602416: function(e, t, n) {
             "use strict";
             e.exports = n.p + "e06145e06880de9e47ee.svg"
@@ -92,64 +88,63 @@
                 s = n("77078"),
                 a = n("509802"),
                 u = n("778588"),
-                d = n("599110"),
-                c = n("49111"),
-                f = n("782340"),
-                p = n("843011"),
-                m = n("987224");
+                d = n("841792"),
+                c = n("599110"),
+                f = n("49111"),
+                p = n("782340"),
+                m = n("843011");
 
             function h(e) {
                 let {
-                    updatePosition: t,
-                    onComplete: n,
+                    onComplete: t,
                     onDMCheckItOutClick: r,
                     isDM: o
                 } = e;
-                return i.useEffect(() => {
-                    d.default.track(c.AnalyticEvents.PREMIUM_GIFT_UPSELL_VIEWED, {
+                i.useEffect(() => {
+                    c.default.track(f.AnalyticEvents.PREMIUM_GIFT_UPSELL_VIEWED, {
                         type: "holiday_gifting_tip"
                     })
-                }, []), (0, l.jsxs)("div", {
-                    className: p.container,
-                    children: [(0, l.jsx)("img", {
-                        className: p.image,
-                        alt: "",
-                        src: m,
-                        onLoad: () => t()
+                }, []);
+                let a = i.useMemo(() => [() => n.el("540902").then(n.t.bind(n, "540902", 19)), () => n.el("915604").then(n.t.bind(n, "915604", 19)), () => n.el("166505").then(n.t.bind(n, "166505", 19))], []);
+                return (0, l.jsxs)("div", {
+                    className: m.container,
+                    children: [(0, l.jsx)(d.default, {
+                        className: m.image,
+                        animationData: a
                     }), (0, l.jsxs)("div", {
-                        className: p.body,
+                        className: m.body,
                         children: [(0, l.jsx)(s.Heading, {
-                            className: p.text,
+                            className: m.text,
                             variant: "heading-sm/semibold",
-                            children: o ? f.default.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : f.default.Messages.SEASONAL_GIFTING_POPUP_HEADER
+                            children: o ? p.default.Messages.SEASONAL_GIFTING_DM_POPUP_HEADER : p.default.Messages.SEASONAL_GIFTING_POPUP_HEADER
                         }), (0, l.jsx)(s.Text, {
-                            className: p.text,
+                            className: m.text,
                             variant: "text-sm/normal",
-                            children: o ? f.default.Messages.SEASONAL_GIFTING_DM_POPUP_BODY : f.default.Messages.SEASONAL_GIFTING_SPREAD_CHEER_TOOLTIP
+                            children: o ? p.default.Messages.SEASONAL_GIFTING_DM_POPUP_BODY : p.default.Messages.SEASONAL_GIFTING_SPREAD_CHEER_TOOLTIP
                         })]
                     }), o ? (0, l.jsxs)("div", {
-                        className: p.dmButtonContainer,
+                        className: m.dmButtonContainer,
                         children: [(0, l.jsx)(s.Button, {
-                            className: p.dmButton,
+                            className: m.dmButton,
                             look: s.Button.Looks.FILLED,
                             color: s.Button.Colors.BRAND,
-                            onClick: () => n(),
-                            children: f.default.Messages.GOT_IT
+                            onClick: () => t(),
+                            children: p.default.Messages.GOT_IT
                         }), (0, l.jsx)(s.Button, {
-                            className: p.dmButton,
+                            className: m.dmButton,
                             look: s.Button.Looks.INVERTED,
                             color: s.Button.Colors.BRAND,
                             onClick: () => r(),
-                            children: f.default.Messages.SEASONAL_GIFTING_DM_POPUP_CTA
+                            children: p.default.Messages.SEASONAL_GIFTING_DM_POPUP_CTA
                         })]
                     }) : (0, l.jsx)(s.Button, {
-                        className: p.button,
+                        className: m.button,
                         look: s.Button.Looks.INVERTED,
                         color: s.Button.Colors.BRAND,
-                        onClick: () => n(),
-                        children: f.default.Messages.GOT_IT
+                        onClick: () => t(),
+                        children: p.default.Messages.GOT_IT
                     }), (0, l.jsx)("div", {
-                        className: p.pointer
+                        className: m.pointer
                     })]
                 })
             }
@@ -186,7 +181,7 @@
                             closeOnScroll: !1,
                             ignoreModalClicks: !0,
                             children: () => (0, l.jsx)("div", {
-                                className: p.popoutTarget
+                                className: m.popoutTarget
                             })
                         }) : null
                     }
@@ -18928,6 +18923,39 @@
                         children: t
                     })
                 }
+        },
+        841792: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return a
+                }
+            }), n("222007");
+            var l = n("37983"),
+                i = n("884691"),
+                r = n("446674"),
+                o = n("206230"),
+                s = n("491605");
+
+            function a(e) {
+                let {
+                    animationData: t,
+                    className: n
+                } = e, [a, u] = (0, i.useState)(0), d = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion);
+                return (0, i.useEffect)(() => {
+                    let e = a + 1;
+                    e < t.length && t[e]()
+                }, [a, t]), (0, l.jsx)(s.default, {
+                    importData: t[a],
+                    className: n,
+                    shouldAnimate: !d,
+                    versionKey: a,
+                    onComplete: () => {
+                        a < t.length - 1 && u(a + 1)
+                    },
+                    loop: a === t.length - 1
+                })
+            }
         },
         551305: function(e, t, n) {
             "use strict";
