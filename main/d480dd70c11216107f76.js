@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["59459"], {
+    ["94638"], {
         304983: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -7,26 +7,26 @@
                     return u
                 }
             });
-            var r = n("37983");
+            var l = n("37983");
             n("884691");
-            var l = n("669491"),
+            var r = n("669491"),
                 a = n("75196");
             let u = e => {
                 let {
                     width: t = 24,
                     height: n = 24,
-                    color: u = l.default.colors.INTERACTIVE_NORMAL,
+                    color: u = r.default.colors.INTERACTIVE_NORMAL,
                     colorClass: o = "",
                     ...i
                 } = e;
-                return (0, r.jsx)("svg", {
+                return (0, l.jsx)("svg", {
                     ...(0, a.default)(i),
                     xmlns: "http://www.w3.org/2000/svg",
                     width: t,
                     height: n,
                     fill: "none",
                     viewBox: "0 0 24 24",
-                    children: (0, r.jsx)("path", {
+                    children: (0, l.jsx)("path", {
                         fill: "string" == typeof u ? u : u.css,
                         fillRule: "evenodd",
                         d: "M4 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm10-2a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm8 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z",
@@ -40,11 +40,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 ChannelEmojisExperiment: function() {
-                    return l
+                    return r
                 }
             });
-            var r = n("862205");
-            let l = (0, r.createExperiment)({
+            var l = n("862205");
+            let r = (0, l.createExperiment)({
                 kind: "user",
                 id: "2023-03_channel_name_emojis",
                 label: "Channel Emojis",
@@ -73,7 +73,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 NON_TOKEN_TYPE: function() {
-                    return l
+                    return r
                 },
                 Token: function() {
                     return i
@@ -82,24 +82,24 @@
                     return s
                 }
             }), n("222007"), n("702976"), n("424973");
-            let r = /.+/g,
-                l = "NON_TOKEN";
+            let l = /.+/g,
+                r = "NON_TOKEN";
 
             function a(e, t, n) {
                 if (null == t) return null;
-                for (let r = 0; r < t.length; r++) {
-                    let l;
-                    let a = t[r],
+                for (let l = 0; l < t.length; l++) {
+                    let r;
+                    let a = t[l],
                         o = u(e.match(a.regex), n);
                     if (null != o) {
                         let {
                             cache: e
                         } = a;
-                        if (null != e && null != (l = e.get(o[0])) && ((l = new i(l)).start = o.index), null == l) {
-                            if (l = new i(o, a.type), null != a.validator && !a.validator(l)) continue;
-                            null != e && !(null == e ? void 0 : e.has(o[0])) && e.set(o[0], l)
+                        if (null != e && null != (r = e.get(o[0])) && ((r = new i(r)).start = o.index), null == r) {
+                            if (r = new i(o, a.type), null != a.validator && !a.validator(r)) continue;
+                            null != e && !(null == e ? void 0 : e.has(o[0])) && e.set(o[0], r)
                         }
-                        return l
+                        return r
                     }
                 }
                 return null
@@ -112,45 +112,45 @@
             }
             class o {
                 reset(e) {
-                    this._rules = [], this._followers = {}, this._nonTokenType = null != e ? e : l
+                    this._rules = [], this._followers = {}, this._nonTokenType = null != e ? e : r
                 }
                 addRule(e) {
                     let t;
                     let {
                         type: n,
-                        follows: r,
-                        validator: l
+                        follows: l,
+                        validator: r
                     } = e, {
                         regex: a
                     } = e;
-                    if ("^" !== a.source.charAt(0) && (a = new RegExp("^".concat(a.source), a.flags)), null != l && (t = new Map), null == r) {
+                    if ("^" !== a.source.charAt(0) && (a = new RegExp("^".concat(a.source), a.flags)), null != r && (t = new Map), null == l) {
                         this._rules.push({
                             regex: a,
                             type: n,
-                            validator: l,
+                            validator: r,
                             cache: t
                         });
                         return
                     }
-                    r.forEach(e => {
+                    l.forEach(e => {
                         null == this._followers[e] && (this._followers[e] = []), this._followers[e].push({
                             regex: a,
                             type: n,
-                            validator: l,
+                            validator: r,
                             cache: t
                         })
                     })
                 }
                 tokenize(e) {
                     let t, n = e,
-                        l = "",
+                        r = "",
                         a = 0,
                         o = [];
                     for (; n.length > 0;) {
-                        let e = this._getMatch(n, t, a + l.length);
-                        null != e ? (null != l && "" !== l && o.push(new i(u(l.match(r), a), this._nonTokenType)), t = e, o.push(e), a += t.length + l.length, n = n.substring(t.length), l = "") : (l += n[0], n = n.substring(1))
+                        let e = this._getMatch(n, t, a + r.length);
+                        null != e ? (null != r && "" !== r && o.push(new i(u(r.match(l), a), this._nonTokenType)), t = e, o.push(e), a += t.length + r.length, n = n.substring(t.length), r = "") : (r += n[0], n = n.substring(1))
                     }
-                    return null != l && "" !== l && o.push(new i(u(l.match(r), a), this._nonTokenType)), o
+                    return null != r && "" !== r && o.push(new i(u(r.match(l), a), this._nonTokenType)), o
                 }
                 clearCache() {
                     for (let e in this._rules.forEach(e => {
@@ -165,12 +165,12 @@
                     }
                 }
                 _getMatch(e, t, n) {
-                    let r;
-                    let l = null != t ? t.type : null;
-                    return (null == t ? void 0 : t.end) === n && (r = a(e, this._followers[String(l)], n)), null == r && (r = a(e, this._rules, n)), r
+                    let l;
+                    let r = null != t ? t.type : null;
+                    return (null == t ? void 0 : t.end) === n && (l = a(e, this._followers[String(r)], n)), null == l && (l = a(e, this._rules, n)), l
                 }
                 constructor(e = [], t) {
-                    this._rules = [], this._followers = {}, this._nonTokenType = l, this.reset(t), e.forEach(e => this.addRule(e))
+                    this._rules = [], this._followers = {}, this._nonTokenType = r, this.reset(t), e.forEach(e => this.addRule(e))
                 }
             }
             class i {
@@ -204,7 +204,7 @@
                     } else this.match = [], this.start = 0, this.type = t
                 }
             }
-            o.NON_TOKEN_TYPE = l, o.Token = i;
+            o.NON_TOKEN_TYPE = r, o.Token = i;
             var s = o
         },
         955513: function(e, t, n) {
@@ -214,7 +214,7 @@
                     return W
                 },
                 ComponentTypes: function() {
-                    return r
+                    return l
                 },
                 refreshSearchTokens: function() {
                     return V
@@ -226,7 +226,7 @@
                     return z
                 }
             }), n("222007"), n("843762");
-            var r, l, a = n("448105"),
+            var l, r, a = n("448105"),
                 u = n.n(a),
                 o = n("917351"),
                 i = n.n(o),
@@ -269,8 +269,8 @@
             }
 
             function L(e, t, n) {
-                let r = c(e, t).local();
-                return C(r, n)
+                let l = c(e, t).local();
+                return C(l, n)
             }
 
             function v() {
@@ -289,39 +289,39 @@
                 return "".concat(e, ":")
             }
 
-            function D(e) {
+            function k(e) {
                 return RegExp(O(e), "i")
             }
 
-            function k(e) {
+            function D(e) {
                 let t;
                 let n = e.getMatch(1),
-                    r = e => null != e ? null == e ? void 0 : e.id : null;
-                return null != (t = g.ID_REGEX.test(n) ? n : n === g.ME ? r(h.default.getCurrentUser()) : null != e.getMatch(4) ? r(h.default.findByTag(e.getMatch(4))) : r(h.default.findByTag(e.getMatch(2), e.getMatch(3)))) && (e.setData("userId", t), !0)
+                    l = e => null != e ? null == e ? void 0 : e.id : null;
+                return null != (t = g.ID_REGEX.test(n) ? n : n === g.ME ? l(h.default.getCurrentUser()) : null != e.getMatch(4) ? l(h.default.findByTag(e.getMatch(4))) : l(h.default.findByTag(e.getMatch(2), e.getMatch(3)))) && (e.setData("userId", t), !0)
             }
 
             function w(e, t) {
-                let n, r;
-                let l = e.getFullMatch().trim().toLowerCase(),
-                    a = v()[l];
-                null != a ? [n, r] = a() : I().has(l) ? [n, r] = L(l, "MMMM", "month") : m().has(l) ? [n, r] = L(l, "dddd", "day") : y().has(l) ? [n, r] = L(l, "YYYY", "year") : [n, r] = L(l, g.SEARCH_DATE_FORMAT, "day");
-                let u = n.isValid() && r.isValid();
-                return !!u && ("before" === t ? (r = n, n = null) : "after" === t && (n = r, r = null), e.setData("start", n), e.setData("end", r), !0)
+                let n, l;
+                let r = e.getFullMatch().trim().toLowerCase(),
+                    a = v()[r];
+                null != a ? [n, l] = a() : I().has(r) ? [n, l] = L(r, "MMMM", "month") : m().has(r) ? [n, l] = L(r, "dddd", "day") : y().has(r) ? [n, l] = L(r, "YYYY", "year") : [n, l] = L(r, g.SEARCH_DATE_FORMAT, "day");
+                let u = n.isValid() && l.isValid();
+                return !!u && ("before" === t ? (l = n, n = null) : "after" === t && (n = l, l = null), e.setData("start", n), e.setData("end", l), !0)
             }
 
             function U(e) {
                 let t = e.getMatch(1),
                     n = T.default.getGuildId(),
-                    r = d.default.getChannels(n)[d.GUILD_SELECTABLE_CHANNELS_KEY].concat(d.default.getChannels(n)[d.GUILD_VOCAL_CHANNELS_KEY]),
-                    l = d.default.getTextChannelNameDisambiguations(n),
-                    a = i.chain(r).map(e => {
+                    l = d.default.getChannels(n)[d.GUILD_SELECTABLE_CHANNELS_KEY].concat(d.default.getChannels(n)[d.GUILD_VOCAL_CHANNELS_KEY]),
+                    r = d.default.getTextChannelNameDisambiguations(n),
+                    a = i.chain(l).map(e => {
                         let {
                             channel: t
                         } = e;
                         return t
                     }).find(e => {
-                        var n, r;
-                        return t === (null !== (r = null === (n = l[e.id]) || void 0 === n ? void 0 : n.name) && void 0 !== r ? r : e.name)
+                        var n, l;
+                        return t === (null !== (l = null === (n = r[e.id]) || void 0 === n ? void 0 : n.name) && void 0 !== l ? l : e.name)
                     }).value();
                 return null != a && (e.setData("channel", a), !0)
             }
@@ -356,21 +356,21 @@
             }
 
             function x(e, t, n) {
-                let r = e.toLocaleLowerCase();
-                return i(n).filter(e => u(r, e.toLocaleLowerCase())).take(t).map(e => ({
+                let l = e.toLocaleLowerCase();
+                return i(n).filter(e => u(l, e.toLocaleLowerCase())).take(t).map(e => ({
                     text: e
                 })).value()
             }
 
             function K(e, t) {
-                let n, r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
-                    l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+                let n, l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
+                    r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
                     a = _.default.getSearchType(t);
                 e = e.split("#")[0];
                 let u = {
                     query: e,
-                    limit: r,
-                    request: l
+                    limit: l,
+                    request: r
                 };
                 switch (a) {
                     case g.SearchTypes.GUILD:
@@ -386,7 +386,7 @@
                         });
                         break;
                     case g.SearchTypes.DMS:
-                        n = R.default.queryUsers(e, r, !0, l, () => !0);
+                        n = R.default.queryUsers(e, l, !0, r, () => !0);
                         break;
                     default:
                         return []
@@ -415,7 +415,7 @@
                 return !S.default.hidePersonalInformation
             }
             let q = /^(?:\s*(\d{17,20}|@me|([^@#:]+)#([0-9]{4})|([a-z0-9_.]{2,32})))/i;
-            (l = r || (r = {})).FILTER = "FILTER", l.ANSWER = "ANSWER";
+            (r = l || (l = {})).FILTER = "FILTER", r.ANSWER = "ANSWER";
             let Y = {};
 
             function V() {
@@ -423,7 +423,7 @@
                     let e = [N.default.Messages.SEARCH_ANSWER_HAS_LINK, N.default.Messages.SEARCH_ANSWER_HAS_EMBED, N.default.Messages.SEARCH_ANSWER_HAS_ATTACHMENT, N.default.Messages.SEARCH_ANSWER_HAS_VIDEO, N.default.Messages.SEARCH_ANSWER_HAS_IMAGE, N.default.Messages.SEARCH_ANSWER_HAS_SOUND, N.default.Messages.SEARCH_ANSWER_HAS_STICKER];
                     return {
                         [g.SearchTokenTypes.FILTER_FROM]: {
-                            regex: D(N.default.Messages.SEARCH_FILTER_FROM),
+                            regex: k(N.default.Messages.SEARCH_FILTER_FROM),
                             componentType: "FILTER",
                             key: O(N.default.Messages.SEARCH_FILTER_FROM),
                             validator: j,
@@ -432,13 +432,13 @@
                         [g.SearchTokenTypes.ANSWER_USERNAME_FROM]: {
                             follows: [g.SearchTokenTypes.FILTER_FROM],
                             regex: q,
-                            validator: k,
+                            validator: D,
                             mutable: !0,
                             componentType: "ANSWER",
                             queryKey: "author_id"
                         },
                         [g.SearchTokenTypes.FILTER_MENTIONS]: {
-                            regex: D(N.default.Messages.SEARCH_FILTER_MENTIONS),
+                            regex: k(N.default.Messages.SEARCH_FILTER_MENTIONS),
                             componentType: "FILTER",
                             key: O(N.default.Messages.SEARCH_FILTER_MENTIONS),
                             validator: j,
@@ -447,16 +447,16 @@
                         [g.SearchTokenTypes.ANSWER_USERNAME_MENTIONS]: {
                             follows: [g.SearchTokenTypes.FILTER_MENTIONS],
                             regex: q,
-                            validator: k,
+                            validator: D,
                             mutable: !0,
                             componentType: "ANSWER",
                             queryKey: "mentions"
                         },
                         [g.SearchTokenTypes.FILTER_HAS]: {
-                            regex: D(N.default.Messages.SEARCH_FILTER_HAS),
+                            regex: k(N.default.Messages.SEARCH_FILTER_HAS),
                             componentType: "FILTER",
                             key: O(N.default.Messages.SEARCH_FILTER_HAS),
-                            getAutocompletions: (t, n, r) => x(t, r, e)
+                            getAutocompletions: (t, n, l) => x(t, l, e)
                         },
                         [g.SearchTokenTypes.ANSWER_HAS]: {
                             regex: RegExp("(?:\\s*-?(".concat(e.map(e => p.default.escape(e)).join("|"), "))"), "i"),
@@ -466,7 +466,7 @@
                             queryKey: "has"
                         },
                         [g.SearchTokenTypes.FILTER_FILE_TYPE]: {
-                            regex: D(N.default.Messages.SEARCH_FILTER_FILE_TYPE),
+                            regex: k(N.default.Messages.SEARCH_FILTER_FILE_TYPE),
                             key: O(N.default.Messages.SEARCH_FILTER_FILE_TYPE),
                             componentType: "FILTER"
                         },
@@ -478,7 +478,7 @@
                             queryKey: "attachment_extensions"
                         },
                         [g.SearchTokenTypes.FILTER_FILE_NAME]: {
-                            regex: D(N.default.Messages.SEARCH_FILTER_FILE_NAME),
+                            regex: k(N.default.Messages.SEARCH_FILTER_FILE_NAME),
                             key: O(N.default.Messages.SEARCH_FILTER_FILE_NAME),
                             componentType: "FILTER"
                         },
@@ -490,19 +490,19 @@
                             queryKey: "attachment_filename"
                         },
                         [g.SearchTokenTypes.FILTER_BEFORE]: {
-                            regex: D(N.default.Messages.SEARCH_FILTER_BEFORE),
+                            regex: k(N.default.Messages.SEARCH_FILTER_BEFORE),
                             componentType: "FILTER",
                             key: O(N.default.Messages.SEARCH_FILTER_BEFORE),
                             getAutocompletions: (e, t, n) => P(e, n, g.SearchTokenTypes.FILTER_BEFORE)
                         },
                         [g.SearchTokenTypes.FILTER_ON]: {
-                            regex: D("(".concat(N.default.Messages.SEARCH_FILTER_ON, "|").concat(N.default.Messages.SEARCH_FILTER_DURING, ")")),
+                            regex: k("(".concat(N.default.Messages.SEARCH_FILTER_ON, "|").concat(N.default.Messages.SEARCH_FILTER_DURING, ")")),
                             componentType: "FILTER",
                             key: O(N.default.Messages.SEARCH_FILTER_DURING),
                             getAutocompletions: (e, t, n) => P(e, n, g.SearchTokenTypes.FILTER_ON)
                         },
                         [g.SearchTokenTypes.FILTER_AFTER]: {
-                            regex: D(N.default.Messages.SEARCH_FILTER_AFTER),
+                            regex: k(N.default.Messages.SEARCH_FILTER_AFTER),
                             componentType: "FILTER",
                             key: O(N.default.Messages.SEARCH_FILTER_AFTER),
                             getAutocompletions: (e, t, n) => P(e, n, g.SearchTokenTypes.FILTER_AFTER)
@@ -529,13 +529,13 @@
                             validator: e => w(e, "after")
                         },
                         [g.SearchTokenTypes.FILTER_IN]: {
-                            regex: D(N.default.Messages.SEARCH_FILTER_IN),
+                            regex: k(N.default.Messages.SEARCH_FILTER_IN),
                             componentType: "FILTER",
                             key: O(N.default.Messages.SEARCH_FILTER_IN),
                             validator: B,
                             getAutocompletions(e, t, n) {
                                 "#" === e[0] && (e = e.substring(1));
-                                let r = R.default.queryChannels({
+                                let l = R.default.queryChannels({
                                     query: e,
                                     type: d.GUILD_SELECTABLE_CHANNELS_KEY,
                                     guildId: t,
@@ -553,14 +553,14 @@
                                 }).filter(e => !e.isThread());
                                 if ("" === e.trim()) {
                                     let e = f.default.getChannelId(t),
-                                        n = r.find(t => t.id === e);
-                                    null != n && (r.splice(r.indexOf(n), 1), r.unshift(n))
+                                        n = l.find(t => t.id === e);
+                                    null != n && (l.splice(l.indexOf(n), 1), l.unshift(n))
                                 }
-                                let l = d.default.getTextChannelNameDisambiguations(t);
-                                return i(r).take(n).map(e => {
+                                let r = d.default.getTextChannelNameDisambiguations(t);
+                                return i(l).take(n).map(e => {
                                     var t, n;
                                     return {
-                                        text: "".concat(null !== (n = null === (t = l[e.id]) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : e.name),
+                                        text: "".concat(null !== (n = null === (t = r[e.id]) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : e.name),
                                         channel: e
                                     }
                                 }).value()
@@ -575,7 +575,7 @@
                             queryKey: "channel_id"
                         },
                         [g.SearchTokenTypes.FILTER_PINNED]: {
-                            regex: D(N.default.Messages.SEARCH_FILTER_PINNED),
+                            regex: k(N.default.Messages.SEARCH_FILTER_PINNED),
                             componentType: "FILTER",
                             key: O(N.default.Messages.SEARCH_FILTER_PINNED),
                             getAutocompletions: () => [{
@@ -616,11 +616,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 SimpleDeadchatPromptExperiment: function() {
-                    return l
+                    return r
                 }
             });
-            var r = n("862205");
-            let l = (0, r.createExperiment)({
+            var l = n("862205");
+            let r = (0, l.createExperiment)({
                 kind: "guild",
                 id: "2023-08_deadchat_simple_prompt_guild",
                 label: "Simple deadchat prompt",
@@ -652,24 +652,24 @@
                     return c
                 }
             }), n("70102");
-            var r = n("811022"),
-                l = n("872717"),
+            var l = n("811022"),
+                r = n("872717"),
                 a = n("913144"),
                 u = n("448993"),
                 o = n("828434"),
                 i = n("49111");
-            let s = new r.default("MemberSafetyElasticSearch");
+            let s = new l.default("MemberSafetyElasticSearch");
             async function c(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                    r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-                if (r > 3) throw Error("Unable to search guild members after max retries");
+                    l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+                if (l > 3) throw Error("Unable to search guild members after max retries");
                 let {
                     autoRetry: d = !0,
                     signal: E
                 } = n;
                 try {
                     var _;
-                    let u = await l.default.post({
+                    let u = await r.default.post({
                         url: i.Endpoints.GUILD_MEMBER_SEARCH(e),
                         body: t,
                         signal: E
@@ -682,7 +682,7 @@
                         return await a.default.dispatch({
                             type: "MEMBER_SAFETY_GUILD_MEMBER_SEARCH_STILL_INDEXING",
                             guildId: e
-                        }), await new Promise(e => setTimeout(e, 1e3 * u.body.retry_after)), c(e, t, n, r + 1)
+                        }), await new Promise(e => setTimeout(e, 1e3 * u.body.retry_after)), c(e, t, n, l + 1)
                     }
                     return {
                         type: o.GuildMemberSearchResponseType.SUCCESSFUL_QUERY,
@@ -706,17 +706,17 @@
         },
         828434: function(e, t, n) {
             "use strict";
-            var r, l;
+            var l, r;
             n.r(t), n.d(t, {
                 INDEXING_RESPONSE_CODE: function() {
                     return a
                 },
                 GuildMemberSearchResponseType: function() {
-                    return r
+                    return l
                 }
             });
             let a = 202;
-            (l = r || (r = {}))[l.SUCCESSFUL_QUERY = 1] = "SUCCESSFUL_QUERY", l[l.ERROR = 2] = "ERROR"
+            (r = l || (l = {}))[r.SUCCESSFUL_QUERY = 1] = "SUCCESSFUL_QUERY", r[r.ERROR = 2] = "ERROR"
         },
         225982: function(e, t, n) {
             "use strict";
@@ -725,20 +725,20 @@
                     return i
                 }
             });
-            var r = n("811022"),
-                l = n("913144"),
+            var l = n("811022"),
+                r = n("913144"),
                 a = n("127421"),
                 u = n("828434");
-            let o = new r.default("MemberSafetyGuildMemberSearchActionCreators");
+            let o = new l.default("MemberSafetyGuildMemberSearchActionCreators");
             async function i(e, t, n) {
-                let r = await (0, a.searchAllGuildMembers)(e, t, n);
-                if (r.type === u.GuildMemberSearchResponseType.ERROR) throw r.body;
+                let l = await (0, a.searchAllGuildMembers)(e, t, n);
+                if (l.type === u.GuildMemberSearchResponseType.ERROR) throw l.body;
                 let {
                     body: i
-                } = r;
+                } = l;
                 o.info("JANK searchGuildMembers success", {
                     body: i
-                }), l.default.dispatch({
+                }), r.default.dispatch({
                     type: "MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS",
                     guildId: e,
                     members: i.members,
@@ -763,10 +763,10 @@
                     return O
                 },
                 handleSearchStateUpdateV2: function() {
-                    return D
+                    return k
                 },
                 handlePaginationUpdateV2: function() {
-                    return k
+                    return D
                 },
                 handleGuildMemberSearchSuccessV2: function() {
                     return w
@@ -775,7 +775,7 @@
                     return U
                 }
             }), n("222007"), n("70102");
-            var r, l, a, u, o = n("714617"),
+            var l, r, a, u, o = n("714617"),
                 i = n.n(o),
                 s = n("917351"),
                 c = n("308503"),
@@ -802,7 +802,7 @@
                     cursor: null,
                     previousPagination: null
                 }
-            }(a = r || (r = {}))[a.FAILED = 0] = "FAILED", a[a.UNFETCHED = 1] = "UNFETCHED", a[a.PENDING = 2] = "PENDING", a[a.SUCCEEDED = 3] = "SUCCEEDED", a[a.STILL_INDEXING = 4] = "STILL_INDEXING";
+            }(a = l || (l = {}))[a.FAILED = 0] = "FAILED", a[a.UNFETCHED = 1] = "UNFETCHED", a[a.PENDING = 2] = "PENDING", a[a.SUCCEEDED = 3] = "SUCCEEDED", a[a.STILL_INDEXING = 4] = "STILL_INDEXING";
             let N = (0, c.default)(e => ({}));
 
             function I(e, t) {
@@ -843,44 +843,44 @@
                     };
                     return delete n[t], n
                 })
-            }(u = l || (l = {}))[u.FIRST_PAGE_CHUNK = 0] = "FIRST_PAGE_CHUNK", u[u.CURRENT_SEARCH_CHUNK = 1] = "CURRENT_SEARCH_CHUNK", u[u.NEXT_SEARCH_CHUNK = 2] = "NEXT_SEARCH_CHUNK", u[u.PREVIOUS_SEARCH_CHUNK = 3] = "PREVIOUS_SEARCH_CHUNK";
+            }(u = r || (r = {}))[u.FIRST_PAGE_CHUNK = 0] = "FIRST_PAGE_CHUNK", u[u.CURRENT_SEARCH_CHUNK = 1] = "CURRENT_SEARCH_CHUNK", u[u.NEXT_SEARCH_CHUNK = 2] = "NEXT_SEARCH_CHUNK", u[u.PREVIOUS_SEARCH_CHUNK = 3] = "PREVIOUS_SEARCH_CHUNK";
             async function L(e) {
-                var t, n, r, l;
+                var t, n, l, r;
                 let a = R.default.getSearchStateByGuildId(e),
                     u = R.default.getPaginationStateByGuildId(e),
                     o = A(e),
                     c = y(o),
                     [d, g] = function(e, t, n) {
-                        var r, l, a, u, o, i;
+                        var l, r, a, u, o, i;
                         let s = function(e, t) {
                                 var n;
                                 let {
-                                    currentPageChunkNumber: r,
-                                    previousPageChunkNumber: l,
+                                    currentPageChunkNumber: l,
+                                    previousPageChunkNumber: r,
                                     nextPageChunkNumber: a
                                 } = function(e) {
                                     let t = e.pageSize * e.currentPage,
                                         n = Math.floor(t / f.DEFAULT_SEARCH_CHUNK_LIMIT),
-                                        r = Math.floor(e.pageSize * (e.currentPage - 1) / f.DEFAULT_SEARCH_CHUNK_LIMIT),
-                                        l = Math.floor(e.pageSize * (e.currentPage + 1) / f.DEFAULT_SEARCH_CHUNK_LIMIT);
+                                        l = Math.floor(e.pageSize * (e.currentPage - 1) / f.DEFAULT_SEARCH_CHUNK_LIMIT),
+                                        r = Math.floor(e.pageSize * (e.currentPage + 1) / f.DEFAULT_SEARCH_CHUNK_LIMIT);
                                     return {
                                         currentPageChunkNumber: n,
-                                        previousPageChunkNumber: r,
-                                        nextPageChunkNumber: l
+                                        previousPageChunkNumber: l,
+                                        nextPageChunkNumber: r
                                     }
                                 }(t), {
                                     previousPagination: u
                                 } = y(A(e)), o = t.currentPage, i = null !== (n = null == u ? void 0 : u.currentPage) && void 0 !== n ? n : 0, s = R.default.getElasticSearchPaginationByGuildId(e);
                                 switch (!0) {
                                     case null == s:
-                                    case r === a && 0 === r:
+                                    case l === a && 0 === l:
                                         return 0;
-                                    case r === a && r === l:
+                                    case l === a && l === r:
                                         return 1;
-                                    case i < o && r < a:
+                                    case i < o && l < a:
                                         return 2;
-                                    case i > o && r >= l:
-                                        if (0 < r) return 3;
+                                    case i > o && l >= r:
+                                        if (0 < l) return 3;
                                         return 0;
                                     default:
                                         return 1
@@ -899,9 +899,9 @@
                                 }]
                             }
                             case 1:
-                                return [null !== (r = t.cursor) && void 0 !== r ? r : null, {
+                                return [null !== (l = t.cursor) && void 0 !== l ? l : null, {
                                     limit: f.DEFAULT_SEARCH_CHUNK_LIMIT,
-                                    after: null !== (l = t.cursor) && void 0 !== l ? l : void 0
+                                    after: null !== (r = t.cursor) && void 0 !== r ? r : void 0
                                 }];
                             case 2:
                                 return [null !== (a = null == c ? void 0 : c.after) && void 0 !== a ? a : null, {
@@ -924,10 +924,10 @@
                             and_query: {}
                         },
                         {
-                            query: r
+                            query: l
                         } = e;
-                    if (null != (t = r) && t.length > 1) {
-                        let [e, t] = (0, T.splitQuery)(r);
+                    if (null != (t = l) && t.length > 1) {
+                        let [e, t] = (0, T.splitQuery)(l);
                         e.length > 0 && (n.and_query.usernames = {
                             or_query: e
                         }), t.length > 0 && (n.and_query.user_id = {
@@ -935,10 +935,10 @@
                         })
                     }
                     let {
-                        requireUnusualDmActivity: l,
+                        requireUnusualDmActivity: r,
                         requireCommunicationDisabled: a
                     } = e, u = {};
-                    l && (u.unusual_dm_activity_until = {
+                    r && (u.unusual_dm_activity_until = {
                         range: {
                             gte: Date.now() - S.UNUSUAL_DM_COMPARISON_DELTA
                         }
@@ -961,11 +961,11 @@
                         let n = y(e);
                         return i(n.query, t)
                     }(o, N) && (0, s.isEqual)(d, c.cursor)) return;
-                let M = function(e, t, n, r) {
-                    let l = m(e);
-                    if ((null == l ? void 0 : l.requestState) === 2) {
+                let M = function(e, t, n, l) {
+                    let r = m(e);
+                    if ((null == r ? void 0 : r.requestState) === 2) {
                         var a;
-                        null === (a = l.abortController) || void 0 === a || a.abort()
+                        null === (a = r.abortController) || void 0 === a || a.abort()
                     }
                     return I(e, {
                         requestState: 2,
@@ -973,7 +973,7 @@
                         lastUpdated: Date.now(),
                         query: t,
                         cursor: n,
-                        previousPagination: r
+                        previousPagination: l
                     })
                 }(o, N, d, u);
                 try {
@@ -983,7 +983,7 @@
                             guildId: e
                         }), null == M.query) throw Error("Query is null");
                     await (0, h.searchGuildMembers)(e, M.query, {
-                        signal: null !== (l = null === (r = M.abortController) || void 0 === r ? void 0 : r.signal) && void 0 !== l ? l : void 0
+                        signal: null !== (r = null === (l = M.abortController) || void 0 === l ? void 0 : l.signal) && void 0 !== r ? r : void 0
                     })
                 } catch (e) {
                     if (-1 === e.code) return;
@@ -1003,16 +1003,16 @@
             function v(e) {
                 return N(t => {
                     var n;
-                    let r = A(e);
-                    return (null === (n = t[r]) || void 0 === n ? void 0 : n.requestState) === 2
+                    let l = A(e);
+                    return (null === (n = t[l]) || void 0 === n ? void 0 : n.requestState) === 2
                 })
             }
 
             function F(e) {
                 return N(t => {
                     var n;
-                    let r = A(e);
-                    return (null === (n = t[r]) || void 0 === n ? void 0 : n.requestState) === 4
+                    let l = A(e);
+                    return (null === (n = t[l]) || void 0 === n ? void 0 : n.requestState) === 4
                 })
             }
 
@@ -1030,14 +1030,14 @@
                 M(t.id)
             }
 
-            function D(e) {
+            function k(e) {
                 let {
                     guildId: t
                 } = e;
                 L(t)
             }
 
-            function k(e) {
+            function D(e) {
                 let {
                     guildId: t
                 } = e;
@@ -1084,8 +1084,8 @@
                     return g
                 }
             }), n("808653");
-            var r = n("872717"),
-                l = n("913144"),
+            var l = n("872717"),
+                r = n("913144"),
                 a = n("819689"),
                 u = n("115718"),
                 o = n("38654"),
@@ -1098,46 +1098,46 @@
                 f = n("290886"),
                 T = n("49111");
             let S = async e => {
-                l.default.dispatch({
+                r.default.dispatch({
                     type: "GUILD_HOME_SETTINGS_FETCH_START",
                     guildId: e
                 });
                 try {
-                    let t = await r.default.get({
+                    let t = await l.default.get({
                             url: T.Endpoints.GUILD_HOME_SETTINGS(e),
                             oldFormErrors: !0
                         }),
                         n = (0, E.settingsFromServer)(t.body);
-                    return l.default.dispatch({
+                    return r.default.dispatch({
                         type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS",
                         guildId: e,
                         homeSettings: n
                     }), n
                 } catch (t) {
-                    l.default.dispatch({
+                    r.default.dispatch({
                         type: "GUILD_HOME_SETTINGS_FETCH_FAIL",
                         guildId: e
                     })
                 }
             }, h = async e => {
                 if (!o.default.isFullServerPreview(e)) {
-                    l.default.dispatch({
+                    r.default.dispatch({
                         type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START",
                         guildId: e
                     });
                     try {
-                        let t = await r.default.get({
+                        let t = await l.default.get({
                                 url: T.Endpoints.GUILD_MEMBER_ACTIONS(e),
                                 oldFormErrors: !0
                             }),
                             n = (0, E.actionsFromServer)(t.body);
-                        return l.default.dispatch({
+                        return r.default.dispatch({
                             type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS",
                             guildId: e,
                             memberActions: n
                         }), n
                     } catch (t) {
-                        l.default.dispatch({
+                        r.default.dispatch({
                             type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL",
                             guildId: e
                         })
@@ -1145,16 +1145,16 @@
                 }
             }, R = function(e, t) {
                 let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-                if (l.default.dispatch({
+                if (r.default.dispatch({
                         type: "SELECT_HOME_RESOURCE_CHANNEL",
                         guildId: e,
                         channelId: t
                     }), null == t) return;
-                let r = s.default.getChannel(t),
+                let l = s.default.getChannel(t),
                     E = d.default.getResourceForChannel(e, t);
-                null != e && !o.default.isFullServerPreview(e) && null != r && null != E && c.default.track(T.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
+                null != e && !o.default.isFullServerPreview(e) && null != l && null != E && c.default.track(T.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
                     guild_id: e,
-                    channel_id: r.id,
+                    channel_id: l.id,
                     server_guide_channel_type: "resource",
                     channel_action_type: -1
                 }), n && (0, i.transitionToChannel)(t), a.default.jumpToMessage({
@@ -1164,21 +1164,21 @@
                     jumpType: u.JumpTypes.INSTANT
                 })
             }, p = (e, t) => {
-                l.default.dispatch({
+                r.default.dispatch({
                     type: "SELECT_NEW_MEMBER_ACTION_CHANNEL",
                     guildId: e,
                     channelId: t
                 });
                 let n = s.default.getChannel(t),
-                    r = d.default.getActionForChannel(e, t);
-                null != e && !o.default.isFullServerPreview(e) && null != n && null != r && c.default.track(T.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
+                    l = d.default.getActionForChannel(e, t);
+                null != e && !o.default.isFullServerPreview(e) && null != n && null != l && c.default.track(T.AnalyticEvents.SERVER_GUIDE_CHANNEL_SELECTED, {
                     guild_id: e,
                     channel_id: n.id,
                     server_guide_channel_type: "member action",
-                    channel_action_type: r.actionType
+                    channel_action_type: l.actionType
                 }), (0, i.transitionToChannel)(t)
             }, A = (e, t) => {
-                if (l.default.dispatch({
+                if (r.default.dispatch({
                         type: "COMPLETE_NEW_MEMBER_ACTION",
                         guildId: e,
                         channelId: t
@@ -1188,15 +1188,15 @@
                 if (null != n && null != a) {
                     var u, i;
                     let t = Object.keys(null !== (u = _.default.getCompletedActions(e)) && void 0 !== u ? u : {}),
-                        r = null !== (i = d.default.getNewMemberActions(e)) && void 0 !== i ? i : [];
+                        l = null !== (i = d.default.getNewMemberActions(e)) && void 0 !== i ? i : [];
                     c.default.track(T.AnalyticEvents.SERVER_GUIDE_ACTION_COMPLETED, {
                         guild_id: n.guild_id,
                         channel_id: n.id,
                         channel_action_type: a.actionType,
-                        has_completed_all: r.reduce((e, n) => e && t.includes(n.channelId), !0)
+                        has_completed_all: l.reduce((e, n) => e && t.includes(n.channelId), !0)
                     })
                 }
-                r.default.post({
+                l.default.post({
                     url: T.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, t)
                 })
             };
@@ -1204,8 +1204,8 @@
                 if (null == e) return !1;
                 let n = (0, f.canSeeOnboardingHome)(e);
                 if (!n) return !1;
-                let r = d.default.getSettings(e);
-                return r === d.NO_SETTINGS && (await S(e), r = d.default.getSettings(e)), r !== d.NO_SETTINGS && null != r && (null != r.newMemberActions && null != r.newMemberActions.find(e => e.channelId === t) ? "todo" : null != r.resourceChannels && null != r.resourceChannels.find(e => e.channelId === t) && "resource")
+                let l = d.default.getSettings(e);
+                return l === d.NO_SETTINGS && (await S(e), l = d.default.getSettings(e)), l !== d.NO_SETTINGS && null != l && (null != l.newMemberActions && null != l.newMemberActions.find(e => e.channelId === t) ? "todo" : null != l.resourceChannels && null != l.resourceChannels.find(e => e.channelId === t) && "resource")
             }
         },
         129092: function(e, t, n) {
@@ -1239,7 +1239,7 @@
                     return h
                 },
                 NewMemberActionTypes: function() {
-                    return l
+                    return r
                 },
                 newMemberActionFromServer: function() {
                     return R
@@ -1272,7 +1272,7 @@
                     return M
                 }
             });
-            var r, l, a = n("42203"),
+            var l, r, a = n("42203"),
                 u = n("449008"),
                 o = n("991170"),
                 i = n("49111");
@@ -1322,55 +1322,55 @@
                 let {
                     welcome_message: t,
                     new_member_actions: n,
-                    resource_channels: r,
-                    enabled: l
+                    resource_channels: l,
+                    enabled: r
                 } = e, o = {
                     authorIds: t.author_ids,
                     message: t.message
-                }, i = n.filter(e => (0, u.isNotNullish)(a.default.getChannel(e.channel_id))).map(R), s = r.filter(e => (0, u.isNotNullish)(a.default.getChannel(e.channel_id))).map(p);
+                }, i = n.filter(e => (0, u.isNotNullish)(a.default.getChannel(e.channel_id))).map(R), s = l.filter(e => (0, u.isNotNullish)(a.default.getChannel(e.channel_id))).map(p);
                 return {
                     welcomeMessage: o,
                     newMemberActions: i,
                     resourceChannels: s,
-                    enabled: l
+                    enabled: r
                 }
             }
 
             function g(e, t) {
-                var n, r;
+                var n, l;
                 if (null == t) return null;
                 let {
-                    welcomeMessage: l,
+                    welcomeMessage: r,
                     newMemberActions: o,
                     resourceChannels: i,
                     enabled: s
                 } = t, c = {
-                    author_ids: null !== (n = null == l ? void 0 : l.authorIds) && void 0 !== n ? n : [],
-                    message: null !== (r = null == l ? void 0 : l.message) && void 0 !== r ? r : ""
+                    author_ids: null !== (n = null == r ? void 0 : r.authorIds) && void 0 !== n ? n : [],
+                    message: null !== (l = null == r ? void 0 : r.message) && void 0 !== l ? l : ""
                 }, d = (null != o ? o : []).filter(e => (0, u.isNotNullish)(a.default.getChannel(e.channelId))).map(e => {
-                    var t, n, r, l, a, u, o;
+                    var t, n, l, r, a, u, o;
                     return {
                         channel_id: e.channelId,
                         action_type: e.actionType,
                         title: e.title,
                         description: e.description,
                         emoji: {
-                            id: null !== (l = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== l ? l : void 0,
+                            id: null !== (r = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : void 0,
                             name: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== a ? a : void 0,
-                            animated: null !== (u = null === (r = e.emoji) || void 0 === r ? void 0 : r.animated) && void 0 !== u ? u : void 0
+                            animated: null !== (u = null === (l = e.emoji) || void 0 === l ? void 0 : l.animated) && void 0 !== u ? u : void 0
                         },
                         icon: null !== (o = e.icon) && void 0 !== o ? o : void 0
                     }
                 }), E = (null != i ? i : []).filter(e => (0, u.isNotNullish)(a.default.getChannel(e.channelId))).map(e => {
-                    var t, n, r, l, a, u, o;
+                    var t, n, l, r, a, u, o;
                     return {
                         channel_id: e.channelId,
                         title: e.title,
                         description: e.description,
                         emoji: {
-                            id: null !== (l = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== l ? l : void 0,
+                            id: null !== (r = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : void 0,
                             name: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== a ? a : void 0,
-                            animated: null !== (u = null === (r = e.emoji) || void 0 === r ? void 0 : r.animated) && void 0 !== u ? u : void 0
+                            animated: null !== (u = null === (l = e.emoji) || void 0 === l ? void 0 : l.animated) && void 0 !== u ? u : void 0
                         },
                         icon: null !== (o = e.icon) && void 0 !== o ? o : void 0
                     }
@@ -1382,7 +1382,7 @@
                     resource_channels: E,
                     enabled: s
                 }
-            }(r = l || (l = {}))[r.VIEW = 0] = "VIEW", r[r.CHAT = 1] = "CHAT";
+            }(l = r || (r = {}))[l.VIEW = 0] = "VIEW", l[l.CHAT = 1] = "CHAT";
             let N = e => {
                 if (null == e) return null;
                 let t = {};
@@ -1426,12 +1426,12 @@
                     return s
                 }
             }), n("222007");
-            var r = n("446674"),
-                l = n("913144");
+            var l = n("446674"),
+                r = n("913144");
             let a = {},
                 u = {},
                 o = new Set;
-            class i extends r.default.Store {
+            class i extends l.default.Store {
                 getCompletedActions(e) {
                     return null == e ? null : u[e]
                 }
@@ -1447,7 +1447,7 @@
                 }
             }
             i.displayName = "GuildOnboardingMemberActionStore";
-            var s = new i(l.default, {
+            var s = new i(r.default, {
                 GUILD_NEW_MEMBER_ACTIONS_FETCH_START: function(e) {
                     let {
                         guildId: t
@@ -1500,35 +1500,6 @@
                 }
             })
         },
-        654017: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                isSpamSupported: function() {
-                    return a
-                },
-                isSpammer: function() {
-                    return u
-                },
-                isSpam: function() {
-                    return o
-                }
-            });
-            var r = n("697218"),
-                l = n("49111");
-
-            function a(e) {
-                return void 0 !== e && e.type !== l.ChannelTypes.DM
-            }
-
-            function u(e) {
-                var t, n;
-                return null !== (n = null === (t = r.default.getUser(e)) || void 0 === t ? void 0 : t.hasFlag(l.UserFlags.SPAMMER)) && void 0 !== n && n
-            }
-
-            function o(e) {
-                return u(e.author.id)
-            }
-        },
         433487: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -1536,26 +1507,26 @@
                     return o
                 }
             });
-            var r = n("37983");
+            var l = n("37983");
             n("884691");
-            var l = n("469563"),
+            var r = n("469563"),
                 a = n("304983"),
                 u = n("75196"),
-                o = (0, l.replaceIcon)(function(e) {
+                o = (0, r.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: n = 24,
-                        color: l = "currentColor",
+                        color: r = "currentColor",
                         foreground: a,
                         ...o
                     } = e;
-                    return (0, r.jsx)("svg", {
+                    return (0, l.jsx)("svg", {
                         ...(0, u.default)(o),
                         width: t,
                         height: n,
                         viewBox: "0 0 24 24",
-                        children: (0, r.jsx)("path", {
-                            fill: l,
+                        children: (0, l.jsx)("path", {
+                            fill: r,
                             className: a,
                             fillRule: "evenodd",
                             clipRule: "evenodd",
@@ -1574,8 +1545,8 @@
                     return s
                 }
             }), n("424973"), n("222007");
-            var r = n("917351"),
-                l = n.n(r),
+            var l = n("917351"),
+                r = n.n(l),
                 a = n("605250");
             let u = new a.default("DragAndDropUtils");
 
@@ -1583,22 +1554,22 @@
                 let {
                     oldOrdering: t,
                     newOrdering: n,
-                    idGetter: r,
-                    existingPositionGetter: l,
+                    idGetter: l,
+                    existingPositionGetter: r,
                     ascending: a = !0
                 } = e, o = n.length;
                 if (t.length !== o) return u.warn("Arrays are not of the same length!", t, n), [];
-                let i = t.map(r).sort().join(":"),
-                    s = n.map(r).sort().join(":");
+                let i = t.map(l).sort().join(":"),
+                    s = n.map(l).sort().join(":");
                 if (i !== s) return u.warn("Object IDs in the old ordering and the new ordering are not the same.", i, s), [];
                 let c = {};
-                for (let e = 0; e < o; e++) c[r(t[e])] = l(t[e]);
+                for (let e = 0; e < o; e++) c[l(t[e])] = r(t[e]);
                 let d = [];
                 for (let e = 0; e < o; e++) {
-                    let t = r(n[e]),
+                    let t = l(n[e]),
                         u = c[t],
                         i = a ? e : o - 1 - e;
-                    (u !== i || l(n[e]) !== i) && d.push({
+                    (u !== i || r(n[e]) !== i) && d.push({
                         id: t,
                         position: i
                     })
@@ -1607,9 +1578,9 @@
             }
 
             function i(e, t, n) {
-                let r = e[t],
-                    l = [...e];
-                return l.splice(t, 1), l.splice(n, 0, r), l
+                let l = e[t],
+                    r = [...e];
+                return r.splice(t, 1), r.splice(n, 0, l), r
             }
             var s = {
                 moveItemFromTo: i,
@@ -1618,13 +1589,13 @@
                     let {
                         objectArray: t,
                         fromPosition: n,
-                        toPosition: r,
+                        toPosition: l,
                         idGetter: a,
                         existingPositionGetter: u,
                         ascending: s = !0
                     } = e;
-                    !Array.isArray(t) && (t = l.values(t));
-                    let c = i(t, n, r);
+                    !Array.isArray(t) && (t = r.values(t));
+                    let c = i(t, n, l);
                     return o({
                         oldOrdering: t,
                         newOrdering: c,
@@ -1678,8 +1649,8 @@
                     return C
                 }
             }), n("222007"), n("808653");
-            var r = n("917351"),
-                l = n.n(r),
+            var l = n("917351"),
+                r = n.n(l),
                 a = n("76385"),
                 u = n("955513"),
                 o = n("247013"),
@@ -1725,7 +1696,7 @@
 
             function T(e) {
                 let t = {};
-                for (let [n, r] of(e.forEach(e => {
+                for (let [n, l] of(e.forEach(e => {
                         let {
                             type: n
                         } = e;
@@ -1734,9 +1705,9 @@
                             case c.SearchTokenTypes.ANSWER_BEFORE:
                             case c.SearchTokenTypes.ANSWER_ON:
                             case c.SearchTokenTypes.ANSWER_AFTER:
-                                let r = e.getData("start"),
-                                    l = e.getData("end");
-                                r && (t.min_id = s.default.fromTimestamp(r)), l && (t.max_id = s.default.fromTimestamp(l));
+                                let l = e.getData("start"),
+                                    r = e.getData("end");
+                                l && (t.min_id = s.default.fromTimestamp(l)), r && (t.max_id = s.default.fromTimestamp(r));
                                 return
                         }
                         let a = function(e) {
@@ -1767,17 +1738,17 @@
                             default:
                                 o.add(e.getFullMatch().trim())
                         }
-                    }), Object.entries(t))) r instanceof Set && (t[n] = Array.from(r));
+                    }), Object.entries(t))) l instanceof Set && (t[n] = Array.from(l));
                 return t.content && (t.content = t.content.join(" ").trim(), !t.content && delete t.content), t
             }
 
             function S(e, t, n) {
-                let r, l;
-                let a = e.find((a, u) => t >= a.start && t <= a.end && n >= a.start && n <= a.end ? (null != e[u + 1] && (l = e[u + 1]), !0) : (r = a, !1));
+                let l, r;
+                let a = e.find((a, u) => t >= a.start && t <= a.end && n >= a.start && n <= a.end ? (null != e[u + 1] && (r = e[u + 1]), !0) : (l = a, !1));
                 return null == a ? null : {
-                    previousToken: r,
+                    previousToken: l,
                     currentToken: a,
-                    nextToken: l,
+                    nextToken: r,
                     focusOffset: t,
                     anchorOffset: n
                 }
@@ -1787,8 +1758,8 @@
                 let n;
                 e = null != e ? e : {};
                 let {
-                    currentToken: r,
-                    nextToken: l,
+                    currentToken: l,
+                    nextToken: r,
                     previousToken: u
                 } = e;
                 if (0 === t.length) return {
@@ -1796,28 +1767,28 @@
                     filter: null,
                     token: null
                 };
-                if (null == r) return {
+                if (null == l) return {
                     type: c.SearchPopoutModes.FILTER_ALL,
                     filter: null,
                     token: null
                 };
-                if (c.IS_SEARCH_FILTER_TOKEN.test(r.type)) {
-                    if (null == l || l.type === a.default.NON_TOKEN_TYPE) return {
+                if (c.IS_SEARCH_FILTER_TOKEN.test(l.type)) {
+                    if (null == r || r.type === a.default.NON_TOKEN_TYPE) return {
                         type: c.SearchPopoutModes.FILTER,
-                        filter: r.type,
-                        token: l
+                        filter: l.type,
+                        token: r
                     };
-                    if (null != l && !c.IS_SEARCH_ANSWER_TOKEN.test(l.type)) return {
+                    if (null != r && !c.IS_SEARCH_ANSWER_TOKEN.test(r.type)) return {
                         type: c.SearchPopoutModes.FILTER,
-                        filter: r.type,
+                        filter: l.type,
                         token: null
                     }
                 }
-                return r.type === a.default.NON_TOKEN_TYPE && null != u && c.IS_SEARCH_FILTER_TOKEN.test(u.type) ? {
+                return l.type === a.default.NON_TOKEN_TYPE && null != u && c.IS_SEARCH_FILTER_TOKEN.test(u.type) ? {
                     type: c.SearchPopoutModes.FILTER,
                     filter: u.type,
-                    token: r
-                } : (r.type === a.default.NON_TOKEN_TYPE && (n = r), {
+                    token: l
+                } : (l.type === a.default.NON_TOKEN_TYPE && (n = l), {
                     type: c.SearchPopoutModes.FILTER_ALL,
                     filter: null,
                     token: n
@@ -1826,15 +1797,15 @@
 
             function R(e, t) {
                 let n = [];
-                return l(e).forEach(e => {
+                return r(e).forEach(e => {
                     if (null == e || 0 === e.results.length) return;
-                    let r = e.group;
+                    let l = e.group;
                     n = n.concat(e.results.map(e => {
                         let n = e.text;
                         if (t === c.SearchPopoutModes.FILTER_ALL) {
-                            var l;
-                            r = null !== (l = e.group) && void 0 !== l ? l : r;
-                            let t = u.default[r];
+                            var r;
+                            l = null !== (r = e.group) && void 0 !== r ? r : l;
+                            let t = u.default[l];
                             (null == t ? void 0 : t.key) != null && (null == t ? void 0 : t.key) !== "" && (n = "".concat(t.key, " ").concat(n))
                         }
                         return n
@@ -1869,7 +1840,7 @@
             }
 
             function C() {
-                (0, u.refreshSearchTokens)(), g.reset(), l(u.default).forOwn((e, t) => g.addRule({
+                (0, u.refreshSearchTokens)(), g.reset(), r(u.default).forOwn((e, t) => g.addRule({
                     type: t,
                     ...e
                 }))
