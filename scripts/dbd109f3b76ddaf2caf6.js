@@ -162,42 +162,24 @@
         831585: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                AutomodNonCommunityGuildsRelease: function() {
+                AutomodMentionRaidLimit: function() {
                     return o
                 },
-                AutomodMentionRaidLimit: function() {
+                AutomodMentionRaidNotice: function() {
                     return u
                 },
-                AutomodMentionRaidNotice: function() {
+                AutomodCustomMessage: function() {
                     return i
                 },
-                AutomodCustomMessage: function() {
+                AutomodServerPolicy: function() {
                     return l
                 },
-                AutomodServerPolicy: function() {
-                    return a
-                },
                 AutomodUserProfile: function() {
-                    return d
+                    return a
                 }
             });
             var r = n("862205");
             let o = (0, r.createExperiment)({
-                    kind: "guild",
-                    id: "2022-11_automod_non_community_guilds_release",
-                    label: "Automod Non-Community Guilds Release",
-                    defaultConfig: {
-                        enabled: !1
-                    },
-                    treatments: [{
-                        id: 1,
-                        label: "Automod Non-Community Guilds Release",
-                        config: {
-                            enabled: !0
-                        }
-                    }]
-                }),
-                u = (0, r.createExperiment)({
                     kind: "guild",
                     id: "2022-12_mention_raid_limit",
                     label: "Automod Mention Raid Limit",
@@ -212,7 +194,7 @@
                         }
                     }]
                 }),
-                i = (0, r.createExperiment)({
+                u = (0, r.createExperiment)({
                     kind: "guild",
                     id: "2023-01_mention_raid_notice",
                     label: "Automod Mention Raid Notice",
@@ -227,7 +209,7 @@
                         }
                     }]
                 }),
-                l = (0, r.createExperiment)({
+                i = (0, r.createExperiment)({
                     kind: "guild",
                     id: "2023-02_automod_custom_message",
                     label: "Automod Custom Message",
@@ -242,7 +224,7 @@
                         }
                     }]
                 }),
-                a = (0, r.createExperiment)({
+                l = (0, r.createExperiment)({
                     kind: "guild",
                     id: "2023-02_free_form",
                     label: "Automod Server Policy",
@@ -263,7 +245,7 @@
                         }
                     }]
                 }),
-                d = (0, r.createExperiment)({
+                a = (0, r.createExperiment)({
                     kind: "guild",
                     id: "2023-05_automod_user_profile_ab",
                     label: "Automod on User Profile A/B",
@@ -746,56 +728,28 @@
         926809: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                isInNonCommunityGuildsRollout: function() {
+                isInMentionRaidExperiment: function() {
                     return o
                 },
-                useIsInNonCommunityGuildsRollout: function() {
+                useIsMentionRaidExperimentEnabled: function() {
                     return u
                 },
-                isInMentionRaidExperiment: function() {
+                isInMentionRaidNoticeExperiment: function() {
                     return i
                 },
-                useIsMentionRaidExperimentEnabled: function() {
+                useIsCustomMessageExperimentEnabled: function() {
                     return l
                 },
-                isInMentionRaidNoticeExperiment: function() {
+                useIsServerPolicyExperimentEnabled: function() {
                     return a
                 },
-                useIsCustomMessageExperimentEnabled: function() {
-                    return d
-                },
-                useIsServerPolicyExperimentEnabled: function() {
-                    return s
-                },
                 useIsUserProfileRuleExperimentEnabled: function() {
-                    return A
+                    return d
                 }
             });
             var r = n("831585");
 
             function o(e) {
-                let {
-                    enabled: t
-                } = r.AutomodNonCommunityGuildsRelease.getCurrentConfig({
-                    guildId: e,
-                    location: "988d4e_1"
-                });
-                return t
-            }
-
-            function u(e) {
-                let {
-                    enabled: t
-                } = r.AutomodNonCommunityGuildsRelease.useExperiment({
-                    guildId: e,
-                    location: "988d4e_2"
-                }, {
-                    autoTrackExposure: !0
-                });
-                return t
-            }
-
-            function i(e) {
                 let {
                     enabled: t
                 } = r.AutomodMentionRaidLimit.getCurrentConfig({
@@ -805,7 +759,7 @@
                 return t
             }
 
-            function l(e) {
+            function u(e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                     {
                         enabled: n
@@ -818,7 +772,7 @@
                 return n
             }
 
-            function a(e) {
+            function i(e) {
                 if (null == e) return !1;
                 let {
                     enabled: t
@@ -829,7 +783,7 @@
                 return t
             }
 
-            function d(e) {
+            function l(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     {
                         enabled: n
@@ -842,7 +796,7 @@
                 return n
             }
 
-            function s(e) {
+            function a(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     {
                         enabled: n
@@ -855,7 +809,7 @@
                 return n
             }
 
-            function A(e) {
+            function d(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     {
                         enabled: n
@@ -946,10 +900,8 @@
             let a = function(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.default, u.default],
                     [n, r] = t,
-                    a = n.getGuild(e);
-                if (null == a) return !1;
-                let d = a.hasFeature(l.GuildFeatures.COMMUNITY) || (0, i.isInNonCommunityGuildsRollout)(e);
-                return d && r.can(l.Permissions.MANAGE_GUILD, a)
+                    i = n.getGuild(e);
+                return null != i && r.can(l.Permissions.MANAGE_GUILD, i)
             };
 
             function d(e) {

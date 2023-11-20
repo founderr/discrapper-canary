@@ -21,9 +21,9 @@
             }), n("222007");
             var i = n("866227"),
                 l = n.n(i),
-                o = n("872717"),
-                u = n("716241"),
-                a = n("592407"),
+                a = n("872717"),
+                o = n("716241"),
+                u = n("592407"),
                 r = n("305961"),
                 d = n("599110"),
                 s = n("610174"),
@@ -32,50 +32,50 @@
             function A(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
                 0 !== t.length && d.default.track(c.AnalyticEvents.GUILD_RAID_REPORTED, {
-                    ...(0, u.collectGuildAnalyticsMetadata)(e),
+                    ...(0, o.collectGuildAnalyticsMetadata)(e),
                     guild_id: e,
                     raid_types: t
                 })
             }
             async function E(e, t) {
                 let n = new Set(e.features);
-                n.has(c.GuildFeatures.COMMUNITY) ? t ? n.delete(c.GuildFeatures.RAID_ALERTS_DISABLED) : n.add(c.GuildFeatures.RAID_ALERTS_DISABLED) : t ? n.add(c.GuildFeatures.NON_COMMUNITY_RAID_ALERTS) : n.delete(c.GuildFeatures.NON_COMMUNITY_RAID_ALERTS), await a.default.saveGuild(e.id, {
+                n.has(c.GuildFeatures.COMMUNITY) ? t ? n.delete(c.GuildFeatures.RAID_ALERTS_DISABLED) : n.add(c.GuildFeatures.RAID_ALERTS_DISABLED) : t ? n.add(c.GuildFeatures.NON_COMMUNITY_RAID_ALERTS) : n.delete(c.GuildFeatures.NON_COMMUNITY_RAID_ALERTS), await u.default.saveGuild(e.id, {
                     features: n
                 }, {
                     throwErr: !0
                 })
             }
             async function _(e, t, n, i) {
-                let u = l().add(i, "hours").toISOString(),
-                    a = await o.default.put({
+                let o = l().add(i, "hours").toISOString(),
+                    u = await a.default.put({
                         url: c.Endpoints.GUILD_INCIDENT_ACTIONS(e),
                         body: {
-                            invites_disabled_until: t ? u : null,
-                            dms_disabled_until: n ? u : null
+                            invites_disabled_until: t ? o : null,
+                            dms_disabled_until: n ? o : null
                         }
                     });
-                return a
+                return u
             }
             async function I(e, t, n) {
                 let {
                     showAlertMode: i
-                } = (0, s.getGuildAlertModeEnabled)(e), l = r.default.getGuild(e), u = null == l ? void 0 : l.getSafetyAlertsChannelId();
-                if (!i || null == u) return null;
-                let a = await o.default.post({
+                } = (0, s.getGuildAlertModeEnabled)(e), l = r.default.getGuild(e), o = null == l ? void 0 : l.getSafetyAlertsChannelId();
+                if (!i || null == o) return null;
+                let u = await a.default.post({
                     url: c.Endpoints.GUILD_INCIDENT_REPORT_FALSE_ALARM(e),
                     body: {
                         alert_message_id: t,
                         reason: n
                     }
                 });
-                return a
+                return u
             }
             async function f(e) {
                 let {
                     showAlertMode: t
                 } = (0, s.getGuildAlertModeEnabled)(e), n = r.default.getGuild(e), i = null == n ? void 0 : n.getSafetyAlertsChannelId();
                 if (!t || null == i) return null;
-                let l = await o.default.post({
+                let l = await a.default.post({
                     url: c.Endpoints.GUILD_INCIDENT_REPORT_RAID(e)
                 });
                 return l
@@ -99,9 +99,9 @@
             });
             var i = n("884691"),
                 l = n("446674"),
-                o = n("926809"),
-                u = n("957255"),
-                a = n("610174"),
+                a = n("926809"),
+                o = n("957255"),
+                u = n("610174"),
                 r = n("413476"),
                 d = n("311161"),
                 s = n("54346"),
@@ -111,36 +111,36 @@
                 var t;
                 let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
                     {
-                        enableRaidReporting: o
+                        enableRaidReporting: a
                     } = r.ReportRaidExperiment.useExperiment({
                         guildId: n,
                         location: "4467c7_1"
                     }, {
                         autoTrackExposure: !1
                     }),
-                    a = (0, l.useStateFromStores)([u.default], () => (function(e) {
-                        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.default;
+                    u = (0, l.useStateFromStores)([o.default], () => (function(e) {
+                        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.default;
                         return t.can(c.Permissions.BAN_MEMBERS, e) || t.can(c.Permissions.KICK_MEMBERS, e) || t.can(c.Permissions.MANAGE_GUILD, e)
-                    })(e, u.default), [e]),
+                    })(e, o.default), [e]),
                     A = (0, l.useStateFromStores)([s.default], () => null != e ? s.default.getGuildIncident(e.id) : null, [e]),
                     E = null != A && (0, d.hasDetectedActivity)(A);
                 return i.useEffect(() => {
-                    !E && a && r.ReportRaidExperiment.trackExposure({
+                    !E && u && r.ReportRaidExperiment.trackExposure({
                         guildId: n,
                         location: "4467c7_2"
                     })
-                }, [E, a, n]), !E && a && o
+                }, [E, u, n]), !E && u && a
             }
 
             function E(e) {
                 var t;
                 let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
-                    i = (0, l.useStateFromStores)([u.default], () => (function(e) {
-                        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.default;
+                    i = (0, l.useStateFromStores)([o.default], () => (function(e) {
+                        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.default;
                         return t.can(c.Permissions.MANAGE_GUILD, e)
-                    })(e, u.default), [e]),
+                    })(e, o.default), [e]),
                     {
-                        enableRaidAlerts: o
+                        enableRaidAlerts: a
                     } = r.RaidAlertExperiment.useExperiment({
                         guildId: n,
                         location: "4467c7_3"
@@ -149,8 +149,8 @@
                     }),
                     {
                         showAlertMode: d
-                    } = (0, a.useGuildAlertModeEnabled)(n);
-                return i && (o || d)
+                    } = (0, u.useGuildAlertModeEnabled)(n);
+                return i && (a || d)
             }
 
             function _(e) {
@@ -161,11 +161,11 @@
 
             function I(e) {
                 var t;
-                let n = (0, l.useStateFromStores)([u.default], () => (function(e) {
-                        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.default;
+                let n = (0, l.useStateFromStores)([o.default], () => (function(e) {
+                        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.default;
                         return t.can(c.Permissions.MANAGE_GUILD, e)
-                    })(e, u.default), [e]),
-                    i = (0, o.useIsMentionRaidExperimentEnabled)(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "", !1);
+                    })(e, o.default), [e]),
+                    i = (0, a.useIsMentionRaidExperimentEnabled)(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "", !1);
                 return i && n
             }
         },
@@ -173,14 +173,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return M
                 }
             }), n("222007");
             var i = n("37983"),
                 l = n("884691"),
-                o = n("298386"),
-                u = n("446674"),
-                a = n("77078"),
+                a = n("298386"),
+                o = n("446674"),
+                u = n("77078"),
                 r = n("716241"),
                 d = n("679653"),
                 s = n("85448"),
@@ -190,24 +190,24 @@
                 _ = n("27618"),
                 I = n("697218"),
                 f = n("311340"),
-                m = n("701203"),
+                T = n("701203"),
                 R = n("49111"),
-                T = n("782340"),
-                N = n("456793");
+                m = n("782340"),
+                S = n("456793");
 
-            function S(e) {
+            function M(e) {
                 var t, n;
                 let {
-                    guildId: S,
-                    transitionState: M,
-                    onClose: C
-                } = e, L = (0, u.useStateFromStores)([E.default], () => E.default.getGuild(S), [S]), D = null !== (t = null == L ? void 0 : L.safetyAlertsChannelId) && void 0 !== t ? t : null, [p, g] = l.useState(!!(null == L ? void 0 : L.hasFeature(R.GuildFeatures.RAID_ALERTS_DISABLED))), b = (0, m.useCanEnableRaidAlerts)(L), [h, G] = l.useState(null != D ? D : null !== (n = null == L ? void 0 : L.publicUpdatesChannelId) && void 0 !== n ? n : null), [x, v] = l.useState(!1), y = (0, u.useStateFromStoresArray)([A.default, I.default, _.default], () => {
-                    let e = A.default.getChannels(S),
+                    guildId: M,
+                    transitionState: N,
+                    onClose: L
+                } = e, C = (0, o.useStateFromStores)([E.default], () => E.default.getGuild(M), [M]), D = null !== (t = null == C ? void 0 : C.safetyAlertsChannelId) && void 0 !== t ? t : null, [p, h] = l.useState(!!(null == C ? void 0 : C.hasFeature(R.GuildFeatures.RAID_ALERTS_DISABLED))), g = (0, T.useCanEnableRaidAlerts)(C), [b, G] = l.useState(null != D ? D : null !== (n = null == C ? void 0 : C.publicUpdatesChannelId) && void 0 !== n ? n : null), [v, x] = l.useState(!1), O = (0, o.useStateFromStoresArray)([A.default, I.default, _.default], () => {
+                    let e = A.default.getChannels(M),
                         t = e[0, A.GUILD_SELECTABLE_CHANNELS_KEY].filter(e => {
                             let {
                                 channel: t
                             } = e;
-                            return t.type === o.ChannelTypes.GUILD_TEXT
+                            return t.type === a.ChannelTypes.GUILD_TEXT
                         }).map(e => {
                             let {
                                 channel: t
@@ -218,103 +218,103 @@
                             }
                         });
                     return null != D ? t : [...t]
-                }, [S, D]), O = async () => {
-                    if (null == L) {
-                        (0, a.showToast)((0, a.createToast)(T.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, a.ToastType.FAILURE));
+                }, [M, D]), U = async () => {
+                    if (null == C) {
+                        (0, u.showToast)((0, u.createToast)(m.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, u.ToastType.FAILURE));
                         return
                     }
                     try {
-                        v(!0), p !== L.hasFeature(R.GuildFeatures.RAID_ALERTS_DISABLED) && await (0, f.setGuildRaidAlerts)(L, !p), h !== D && (await c.default.saveGuild(S, {
-                            safetyAlertsChannelId: h
+                        x(!0), p !== C.hasFeature(R.GuildFeatures.RAID_ALERTS_DISABLED) && await (0, f.setGuildRaidAlerts)(C, !p), b !== D && (await c.default.saveGuild(M, {
+                            safetyAlertsChannelId: b
                         }, {
                             throwErr: !0
                         }), c.default.updateGuild({
-                            safetyAlertsChannelId: h
+                            safetyAlertsChannelId: b
                         }));
-                        let e = null != h ? h : D;
+                        let e = null != b ? b : D;
                         if (null != e) {
                             let t = {
                                 raid_alert_type: s.RaidAlertType.JOIN_RAID,
                                 enabled: p,
                                 raid_alert_channel_id: e,
-                                guild_id: S,
+                                guild_id: M,
                                 channel_id: e
                             };
                             (0, r.trackWithMetadata)(R.AnalyticEvents.GUILD_RAID_ALERTS_SETUP, t)
                         }
-                        C()
+                        L()
                     } catch (e) {
-                        (0, a.showToast)((0, a.createToast)(T.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, a.ToastType.FAILURE))
+                        (0, u.showToast)((0, u.createToast)(m.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_ERROR, u.ToastType.FAILURE))
                     } finally {
-                        v(!1)
+                        x(!1)
                     }
                 };
-                return (0, i.jsxs)(a.ModalRoot, {
-                    transitionState: M,
-                    size: a.ModalSize.SMALL,
-                    children: [(0, i.jsx)(a.ModalHeader, {
+                return (0, i.jsxs)(u.ModalRoot, {
+                    transitionState: N,
+                    size: u.ModalSize.SMALL,
+                    children: [(0, i.jsx)(u.ModalHeader, {
                         separator: !1,
-                        children: (0, i.jsx)(a.Heading, {
+                        children: (0, i.jsx)(u.Heading, {
                             color: "header-primary",
                             variant: "heading-md/semibold",
-                            children: T.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_MODAL_TITLE
+                            children: m.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_MODAL_TITLE
                         })
-                    }), (0, i.jsxs)(a.ModalContent, {
-                        children: [(0, i.jsx)(a.Text, {
+                    }), (0, i.jsxs)(u.ModalContent, {
+                        children: [(0, i.jsx)(u.Text, {
                             variant: "text-sm/normal",
                             color: "header-secondary",
-                            children: T.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_MODAL_DESCRIPTION
+                            children: m.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_MODAL_DESCRIPTION
                         }), (0, i.jsx)("div", {
-                            className: N.mainChannelContainer,
-                            children: (0, i.jsxs)(a.Clickable, {
-                                className: N.enableAlertsContainer,
+                            className: S.mainChannelContainer,
+                            children: (0, i.jsxs)(u.Clickable, {
+                                className: S.enableAlertsContainer,
                                 onClick: () => {
-                                    b && g(!p)
+                                    g && h(!p)
                                 },
-                                children: [(0, i.jsx)(a.Text, {
+                                children: [(0, i.jsx)(u.Text, {
                                     variant: "text-md/medium",
                                     color: "text-normal",
-                                    children: T.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_MODAL_ENABLE_ALERTS
-                                }), (0, i.jsx)(a.Checkbox, {
+                                    children: m.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_MODAL_ENABLE_ALERTS
+                                }), (0, i.jsx)(u.Checkbox, {
                                     value: !p,
-                                    className: N.enabledAlertsCheckbox,
-                                    type: a.Checkbox.Types.INVERTED,
-                                    disabled: !b
+                                    className: S.enabledAlertsCheckbox,
+                                    type: u.Checkbox.Types.INVERTED,
+                                    disabled: !g
                                 })]
                             })
                         }), (0, i.jsxs)("div", {
-                            className: N.mainChannelContainer,
-                            children: [(0, i.jsx)(a.Text, {
+                            className: S.mainChannelContainer,
+                            children: [(0, i.jsx)(u.Text, {
                                 variant: "eyebrow",
                                 color: "text-muted",
-                                children: T.default.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_TITLE
-                            }), (0, i.jsx)(a.SearchableSelect, {
-                                options: y,
+                                children: m.default.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_TITLE
+                            }), (0, i.jsx)(u.SearchableSelect, {
+                                options: O,
                                 onChange: e => {
                                     G(e)
                                 },
-                                value: h,
-                                className: N.channelSelect,
+                                value: b,
+                                className: S.channelSelect,
                                 maxVisibleItems: 4
-                            }), (0, i.jsx)(a.Text, {
+                            }), (0, i.jsx)(u.Text, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
-                                children: T.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_MODAL_CHANNEL_PERMISSIONS_NOTICE
+                                children: m.default.Messages.GUILD_ANTIRAID_SAFETY_SETUP_CHANNEL_MODAL_CHANNEL_PERMISSIONS_NOTICE
                             })]
                         })]
-                    }), (0, i.jsxs)(a.ModalFooter, {
-                        children: [(0, i.jsx)(a.Button, {
-                            onClick: O,
-                            color: a.Button.Colors.BRAND_NEW,
-                            look: a.Button.Looks.FILLED,
-                            submitting: x,
-                            children: T.default.Messages.SAVE
-                        }), (0, i.jsx)(a.Button, {
-                            onClick: C,
-                            color: a.Button.Colors.PRIMARY,
-                            look: a.Button.Looks.LINK,
-                            disabled: x,
-                            children: T.default.Messages.CANCEL
+                    }), (0, i.jsxs)(u.ModalFooter, {
+                        children: [(0, i.jsx)(u.Button, {
+                            onClick: U,
+                            color: u.Button.Colors.BRAND_NEW,
+                            look: u.Button.Looks.FILLED,
+                            submitting: v,
+                            children: m.default.Messages.SAVE
+                        }), (0, i.jsx)(u.Button, {
+                            onClick: L,
+                            color: u.Button.Colors.PRIMARY,
+                            look: u.Button.Looks.LINK,
+                            disabled: v,
+                            children: m.default.Messages.CANCEL
                         })]
                     })]
                 })
@@ -323,42 +323,24 @@
         831585: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                AutomodNonCommunityGuildsRelease: function() {
+                AutomodMentionRaidLimit: function() {
                     return l
                 },
-                AutomodMentionRaidLimit: function() {
-                    return o
-                },
                 AutomodMentionRaidNotice: function() {
-                    return u
-                },
-                AutomodCustomMessage: function() {
                     return a
                 },
+                AutomodCustomMessage: function() {
+                    return o
+                },
                 AutomodServerPolicy: function() {
-                    return r
+                    return u
                 },
                 AutomodUserProfile: function() {
-                    return d
+                    return r
                 }
             });
             var i = n("862205");
             let l = (0, i.createExperiment)({
-                    kind: "guild",
-                    id: "2022-11_automod_non_community_guilds_release",
-                    label: "Automod Non-Community Guilds Release",
-                    defaultConfig: {
-                        enabled: !1
-                    },
-                    treatments: [{
-                        id: 1,
-                        label: "Automod Non-Community Guilds Release",
-                        config: {
-                            enabled: !0
-                        }
-                    }]
-                }),
-                o = (0, i.createExperiment)({
                     kind: "guild",
                     id: "2022-12_mention_raid_limit",
                     label: "Automod Mention Raid Limit",
@@ -373,7 +355,7 @@
                         }
                     }]
                 }),
-                u = (0, i.createExperiment)({
+                a = (0, i.createExperiment)({
                     kind: "guild",
                     id: "2023-01_mention_raid_notice",
                     label: "Automod Mention Raid Notice",
@@ -388,7 +370,7 @@
                         }
                     }]
                 }),
-                a = (0, i.createExperiment)({
+                o = (0, i.createExperiment)({
                     kind: "guild",
                     id: "2023-02_automod_custom_message",
                     label: "Automod Custom Message",
@@ -403,7 +385,7 @@
                         }
                     }]
                 }),
-                r = (0, i.createExperiment)({
+                u = (0, i.createExperiment)({
                     kind: "guild",
                     id: "2023-02_free_form",
                     label: "Automod Server Policy",
@@ -424,7 +406,7 @@
                         }
                     }]
                 }),
-                d = (0, i.createExperiment)({
+                r = (0, i.createExperiment)({
                     kind: "guild",
                     id: "2023-05_automod_user_profile_ab",
                     label: "Automod on User Profile A/B",
@@ -442,7 +424,7 @@
         },
         85448: function(e, t, n) {
             "use strict";
-            var i, l, o, u, a, r, d, s;
+            var i, l, a, o, u, r, d, s;
 
             function c(e) {
                 return e.includes("LEGITIMATE_ACTIVITY") ? "LEGITIMATE_ACTIVITY" : e.includes("DM_SPAM") ? "DM_SPAM" : e.includes("JOIN_RAID") ? "JOIN_RAID" : "OTHER"
@@ -455,69 +437,41 @@
                     return l
                 },
                 RaidResolutionType: function() {
-                    return o
+                    return a
                 },
                 getMostImportantRaidResolutionType: function() {
                     return c
                 },
                 RaidLockdownFeedbackType: function() {
-                    return u
+                    return o
                 }
-            }), n("782340"), (a = i || (i = {})).BUG = "BUG", a.ALLOWED = "ALLOWED", a.MENTION_RAID_REMOVE_RESTRICTION = "MENTION_RAID_REMOVE_RESTRICTION", (r = l || (l = {})).JOIN_RAID = "JOIN_RAID", r.MENTION_RAID = "MENTION_RAID", (d = o || (o = {})).LEGITIMATE_ACTIVITY = "LEGITIMATE_ACTIVITY", d.LEGITIMATE_ACCOUNTS = "LEGITIMATE_ACCOUNTS", d.LEGITIMATE_DMS = "LEGITIMATE_DMS", d.DM_SPAM = "DM_SPAM", d.JOIN_RAID = "JOIN_RAID", d.OTHER = "OTHER", (s = u || (u = {})).DM_SPAM = "DM_SPAM", s.MENTION_SPAM = "MENTION_SPAM", s.CHANNEL_SPAM = "CHANNEL_SPAM", s.SUS_NEW_MEMBERS = "SUS_NEW_MEMBERS", s.CHANGING_SETTINGS = "CHANGING_SETTINGS", s.OTHER = "OTHER"
+            }), n("782340"), (u = i || (i = {})).BUG = "BUG", u.ALLOWED = "ALLOWED", u.MENTION_RAID_REMOVE_RESTRICTION = "MENTION_RAID_REMOVE_RESTRICTION", (r = l || (l = {})).JOIN_RAID = "JOIN_RAID", r.MENTION_RAID = "MENTION_RAID", (d = a || (a = {})).LEGITIMATE_ACTIVITY = "LEGITIMATE_ACTIVITY", d.LEGITIMATE_ACCOUNTS = "LEGITIMATE_ACCOUNTS", d.LEGITIMATE_DMS = "LEGITIMATE_DMS", d.DM_SPAM = "DM_SPAM", d.JOIN_RAID = "JOIN_RAID", d.OTHER = "OTHER", (s = o || (o = {})).DM_SPAM = "DM_SPAM", s.MENTION_SPAM = "MENTION_SPAM", s.CHANNEL_SPAM = "CHANNEL_SPAM", s.SUS_NEW_MEMBERS = "SUS_NEW_MEMBERS", s.CHANGING_SETTINGS = "CHANGING_SETTINGS", s.OTHER = "OTHER"
         },
         926809: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                isInNonCommunityGuildsRollout: function() {
-                    return l
-                },
-                useIsInNonCommunityGuildsRollout: function() {
-                    return o
-                },
                 isInMentionRaidExperiment: function() {
-                    return u
+                    return l
                 },
                 useIsMentionRaidExperimentEnabled: function() {
                     return a
                 },
                 isInMentionRaidNoticeExperiment: function() {
-                    return r
+                    return o
                 },
                 useIsCustomMessageExperimentEnabled: function() {
-                    return d
+                    return u
                 },
                 useIsServerPolicyExperimentEnabled: function() {
-                    return s
+                    return r
                 },
                 useIsUserProfileRuleExperimentEnabled: function() {
-                    return c
+                    return d
                 }
             });
             var i = n("831585");
 
             function l(e) {
-                let {
-                    enabled: t
-                } = i.AutomodNonCommunityGuildsRelease.getCurrentConfig({
-                    guildId: e,
-                    location: "988d4e_1"
-                });
-                return t
-            }
-
-            function o(e) {
-                let {
-                    enabled: t
-                } = i.AutomodNonCommunityGuildsRelease.useExperiment({
-                    guildId: e,
-                    location: "988d4e_2"
-                }, {
-                    autoTrackExposure: !0
-                });
-                return t
-            }
-
-            function u(e) {
                 let {
                     enabled: t
                 } = i.AutomodMentionRaidLimit.getCurrentConfig({
@@ -540,7 +494,7 @@
                 return n
             }
 
-            function r(e) {
+            function o(e) {
                 if (null == e) return !1;
                 let {
                     enabled: t
@@ -551,7 +505,7 @@
                 return t
             }
 
-            function d(e) {
+            function u(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     {
                         enabled: n
@@ -564,7 +518,7 @@
                 return n
             }
 
-            function s(e) {
+            function r(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     {
                         enabled: n
@@ -577,7 +531,7 @@
                 return n
             }
 
-            function c(e) {
+            function d(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     {
                         enabled: n
