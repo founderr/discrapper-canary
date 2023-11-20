@@ -9891,7 +9891,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "74981c11f0a8737a2cbf34127fefc0ef1effcfc9", e.substring(0, 7)),
+                    S = (e = "2ea423a8eabcc9b49280b7874bc84cf4faa681cd", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -9904,7 +9904,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "247450", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "247452", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
@@ -21962,7 +21962,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return j
+                    return D
                 }
             });
             var a = s("37983"),
@@ -21970,113 +21970,97 @@
                 l = s("627445"),
                 i = s.n(l),
                 r = s("446674"),
-                o = s("151426"),
-                d = s("913144"),
-                u = s("327037"),
-                c = s("152584"),
-                S = s("642950"),
-                E = s("875212"),
-                T = s("812204"),
-                f = s("685665"),
-                m = s("104385"),
-                _ = s("10641"),
-                I = s("884351"),
-                g = s("184900"),
-                h = s("11899"),
-                N = s("635415"),
-                C = s("662286"),
-                p = s("783142"),
-                A = s("102985"),
-                O = s("790618"),
-                x = s("697218"),
-                R = s("719923"),
-                M = s("845579"),
-                D = s("415167"),
-                v = s("907148"),
-                L = s("994428"),
-                P = s("646718");
+                o = s("913144"),
+                d = s("327037"),
+                u = s("152584"),
+                c = s("642950"),
+                S = s("875212"),
+                E = s("812204"),
+                T = s("685665"),
+                f = s("104385"),
+                m = s("884351"),
+                _ = s("184900"),
+                I = s("11899"),
+                g = s("635415"),
+                h = s("783142"),
+                N = s("102985"),
+                C = s("790618"),
+                p = s("697218"),
+                A = s("719923"),
+                O = s("845579"),
+                x = s("415167"),
+                R = s("907148"),
+                M = s("646718");
 
-            function j(e) {
-                let t = (0, r.useStateFromStores)([x.default], () => {
-                    let e = x.default.getCurrentUser();
+            function D(e) {
+                let t = (0, r.useStateFromStores)([p.default], () => {
+                    let e = p.default.getCurrentUser();
                     return i(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e
                 });
                 n.useEffect(() => {
-                    (0, u.fetchProfile)(t.id)
+                    (0, d.fetchProfile)(t.id)
                 }, [t.id]);
-                let s = (0, r.useStateFromStores)([A.default], () => A.default.hidePersonalInformation),
+                let s = (0, r.useStateFromStores)([N.default], () => N.default.hidePersonalInformation),
                     {
                         pendingAvatar: l,
-                        pendingBanner: j,
-                        pendingBio: U,
-                        pendingPronouns: b,
-                        pendingGlobalName: B,
-                        pendingAccentColor: y,
-                        pendingAvatarDecoration: F,
-                        pendingThemeColors: G,
-                        pendingProfileEffectID: k
-                    } = (0, r.useStateFromStoresObject)([O.default], () => {
-                        let e = O.default.getAllPending(),
-                            t = O.default.getErrors();
+                        pendingBanner: D,
+                        pendingBio: v,
+                        pendingPronouns: L,
+                        pendingGlobalName: P,
+                        pendingAccentColor: j,
+                        pendingAvatarDecoration: U,
+                        pendingThemeColors: b,
+                        pendingProfileEffectID: B
+                    } = (0, r.useStateFromStoresObject)([C.default], () => {
+                        let e = C.default.getAllPending(),
+                            t = C.default.getErrors();
                         return {
                             ...e,
                             errors: t
                         }
                     }),
-                    H = M.UseLegacyChatInput.useSetting(),
-                    w = H && null != U ? I.default.parse(void 0, U).content : U,
-                    V = R.default.canUsePremiumProfileCustomization(t),
+                    y = O.UseLegacyChatInput.useSetting(),
+                    F = y && null != v ? m.default.parse(void 0, v).content : v,
+                    G = A.default.canUsePremiumProfileCustomization(t),
                     {
-                        AnalyticsLocationProvider: Y
-                    } = (0, f.default)(T.default.PROFILE),
-                    W = {
+                        AnalyticsLocationProvider: k
+                    } = (0, T.default)(E.default.PROFILE),
+                    H = {
                         user: t,
-                        canUsePremiumCustomization: V,
-                        onUpsellClick: D.default,
-                        onAvatarChange: c.setPendingAvatar,
-                        onBannerChange: p.setPendingBanner,
-                        pendingBanner: j,
-                        pendingBio: w,
-                        pendingPronouns: b,
+                        canUsePremiumCustomization: G,
+                        onUpsellClick: x.default,
+                        onAvatarChange: u.setPendingAvatar,
+                        onBannerChange: h.setPendingBanner,
+                        pendingBanner: D,
+                        pendingBio: F,
+                        pendingPronouns: L,
                         pendingAvatar: l,
-                        pendingGlobalName: B,
-                        pendingAvatarDecoration: F,
-                        pendingProfileEffectID: k
+                        pendingGlobalName: P,
+                        pendingAvatarDecoration: U,
+                        pendingProfileEffectID: B
                     };
-                n.useEffect(() => () => d.default.wait(c.resetAllPending), []);
-                let K = "UserSettingsProfileCustomization";
-                (0, E.useTriggerDebuggingAA)({
-                    location: K + " auto on",
+                n.useEffect(() => () => o.default.wait(u.resetAllPending), []);
+                let w = "UserSettingsProfileCustomization";
+                return ((0, S.useTriggerDebuggingAA)({
+                    location: w + " auto on",
                     autoTrackExposure: !0
-                }), (0, E.useTriggerDebuggingAA)({
-                    location: K + " auto off",
+                }), (0, S.useTriggerDebuggingAA)({
+                    location: w + " auto off",
                     autoTrackExposure: !1
-                });
-                let z = (0, C.useCanUseProfileEffects)({
-                    location: "UserSettingsProfileCustomization"
-                });
-                return (! function(e, t) {
-                    let s = (0, _.useIsDismissibleContentDismissed)(e);
-                    n.useEffect(() => {
-                        t && !s && (0, _.markDismissibleContentAsDismissed)(e, {
-                            dismissAction: L.ContentDismissActionType.AUTO,
-                            forceTrack: !0
-                        })
-                    }, [])
-                }(o.DismissibleContent.SETTINGS_PROFILES_PROFILE_EFFECT_NEW_BADGE, z), s) ? (0, a.jsx)(S.default, {}) : (0, a.jsx)(Y, {
+                }), s) ? (0, a.jsx)(c.default, {}) : (0, a.jsx)(k, {
                     children: (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsx)(m.default, {
-                            type: P.PremiumUpsellTypes.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
-                        }), (0, a.jsx)(h.default, {
-                            profilePreview: (0, a.jsx)(g.default, {
-                                ...W,
-                                pendingThemeColors: G,
-                                pendingAccentColor: y
+                        children: [(0, a.jsx)(f.default, {
+                            type: M.PremiumUpsellTypes.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
+                        }), (0, a.jsx)(I.default, {
+                            profilePreview: (0, a.jsx)(_.default, {
+                                ...H,
+                                pendingThemeColors: b,
+                                pendingAccentColor: j
                             }),
-                            children: (0, a.jsx)(v.default, {
+                            children: (0, a.jsx)(R.default, {
                                 navigateToGuildIdentitySettings: e.navigateToGuildIdentitySettings
                             })
-                        }), !R.default.canUsePremiumProfileCustomization(t) && (0, a.jsx)(N.default, {
+                        }), !A.default.canUsePremiumProfileCustomization(t) && (0, a.jsx)(g.default, {
                             user: t
                         })]
                     })
@@ -23769,9 +23753,8 @@
                     impressionSource: ex,
                     clipsEnabled: eR = !1,
                     numOfPendingFamilyRequests: eM,
-                    isClipsBetaTagShowing: eD = !1,
-                    collectiblesDismissibleContentTypes: ev
-                } = e, eL = [{
+                    isClipsBetaTagShowing: eD = !1
+                } = e, ev = [{
                     section: S.SectionTypes.HEADER,
                     label: eC.default.Messages.USER_SETTINGS
                 }, {
@@ -23788,7 +23771,6 @@
                     newIndicator: (0, a.jsx)(j.PremiumBadge, {
                         text: eC.default.Messages.NEW
                     }),
-                    newIndicatorDismissibleContentTypes: ev,
                     notice: {
                         stores: [D.default, h.default],
                         element: A.default
@@ -24072,7 +24054,7 @@
                     section: S.SectionTypes.CUSTOM,
                     element: k.default
                 }];
-                return eL
+                return ev
             }
         },
         415167: function(e, t, s) {
@@ -24241,7 +24223,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return T
+                    return E
                 }
             }), s("222007");
             var a = s("446674"),
@@ -24252,38 +24234,31 @@
                 o = s("25132"),
                 d = s("921149"),
                 u = s("694540"),
-                c = s("662286"),
-                S = s("26092"),
-                E = s("435645");
+                c = s("26092"),
+                S = s("435645");
 
-            function T() {
+            function E() {
                 let e = (0, u.useUnseenOutboundPromotions)(),
                     t = e.length,
                     s = (0, d.useIsPrepaidPaymentPastDue)(),
-                    T = (0, a.useStateFromStores)([S.default], () => S.default.getProps().impressionSource),
-                    f = (0, o.usePendingRequestCount)(),
-                    m = (0, i.useEnableClips)(),
-                    [_] = (0, r.useGetDismissibleContent)(m ? [n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
-                    I = "useGenerateUserSettingsSections";
-                (0, l.useTriggerDebuggingAA)({
-                    location: I + " auto on",
+                    E = (0, a.useStateFromStores)([c.default], () => c.default.getProps().impressionSource),
+                    T = (0, o.usePendingRequestCount)(),
+                    f = (0, i.useEnableClips)(),
+                    [m] = (0, r.useGetDismissibleContent)(f ? [n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
+                    _ = "useGenerateUserSettingsSections";
+                return (0, l.useTriggerDebuggingAA)({
+                    location: _ + " auto on",
                     autoTrackExposure: !0
                 }), (0, l.useTriggerDebuggingAA)({
-                    location: I + " auto off",
+                    location: _ + " auto off",
                     autoTrackExposure: !1
-                });
-                let g = (0, c.useCanUseProfileEffects)({
-                        location: "SettingsNewBadge"
-                    }),
-                    h = g ? [n.DismissibleContent.SETTINGS_PROFILES_PROFILE_EFFECT_NEW_BADGE] : [];
-                return (0, E.default)({
+                }), (0, S.default)({
                     unseenGiftCount: t,
-                    clipsEnabled: m,
+                    clipsEnabled: f,
                     showPrepaidPaymentPastDueWarning: s,
-                    impressionSource: T,
-                    numOfPendingFamilyRequests: f,
-                    isClipsBetaTagShowing: _ === n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG,
-                    collectiblesDismissibleContentTypes: h
+                    impressionSource: E,
+                    numOfPendingFamilyRequests: T,
+                    isClipsBetaTagShowing: m === n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG
                 })
             }
         },
