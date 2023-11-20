@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["64311"], {
+    ["66656"], {
         717837: function(e, t, n) {
             "use strict";
             e.exports = function(e) {
@@ -14,7 +14,7 @@
             "use strict";
             e.exports = function(e) {
                 var t, n;
-                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), x.test(e) ? e = e.substr(0, e.length - 2) : E.test(e) && (e = e.substr(0, e.length - 1)), (n = h.exec(e)) ? o.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = g.exec(e)) && c.test(n[1]) && (e = n[1], b.test(e) ? e += "e" : C.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = _.exec(e)) && c.test(n[1]) && (e = n[1] + "i"), (n = M.exec(e)) && o.test(n[1]) && (e = n[1] + i[n[2]]), (n = N.exec(e)) && o.test(n[1]) && (e = n[1] + r[n[2]]), (n = y.exec(e)) ? d.test(n[1]) && (e = n[1]) : (n = v.exec(e)) && d.test(n[1]) && (e = n[1]), (n = p.exec(e)) && (d.test(n[1]) || u.test(n[1]) && !f.test(n[1])) && (e = n[1]), m.test(e) && d.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
+                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), E.test(e) ? e = e.substr(0, e.length - 2) : x.test(e) && (e = e.substr(0, e.length - 1)), (n = g.exec(e)) ? o.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = b.exec(e)) && d.test(n[1]) && (e = n[1], h.test(e) ? e += "e" : C.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = v.exec(e)) && d.test(n[1]) && (e = n[1] + "i"), (n = y.exec(e)) && o.test(n[1]) && (e = n[1] + i[n[2]]), (n = A.exec(e)) && o.test(n[1]) && (e = n[1] + r[n[2]]), (n = N.exec(e)) ? c.test(n[1]) && (e = n[1]) : (n = _.exec(e)) && c.test(n[1]) && (e = n[1]), (n = p.exec(e)) && (c.test(n[1]) || u.test(n[1]) && !f.test(n[1])) && (e = n[1]), m.test(e) && c.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
             };
             var i = {
                     ational: "ate",
@@ -53,22 +53,22 @@
                 a = "(" + l + "[aeiou]*)",
                 o = RegExp("^" + s + "?" + a + s),
                 u = RegExp("^" + s + "?" + a + s + a + "?$"),
-                d = RegExp("^" + s + "?(" + a + s + "){2,}"),
-                c = RegExp("^" + s + "?" + l),
+                c = RegExp("^" + s + "?(" + a + s + "){2,}"),
+                d = RegExp("^" + s + "?" + l),
                 f = RegExp("^" + s + l + "[^aeiouwxy]$"),
                 m = /ll$/,
                 p = /^(.+?)e$/,
-                _ = /^(.+?)y$/,
-                v = /^(.+?(s|t))(ion)$/,
-                g = /^(.+?)(ed|ing)$/,
-                b = /(at|bl|iz)$/,
-                h = /^(.+?)eed$/,
-                E = /^.+?[^s]s$/,
-                x = /^.+?(ss|i)es$/,
+                v = /^(.+?)y$/,
+                _ = /^(.+?(s|t))(ion)$/,
+                b = /^(.+?)(ed|ing)$/,
+                h = /(at|bl|iz)$/,
+                g = /^(.+?)eed$/,
+                x = /^.+?[^s]s$/,
+                E = /^.+?(ss|i)es$/,
                 C = /([^aeiouylsz])\1$/,
-                M = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
-                N = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
-                y = RegExp("^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$")
+                y = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
+                A = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
+                N = RegExp("^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$")
         },
         949041: function(e, t, n) {
             "use strict";
@@ -183,8 +183,8 @@
                 a = n("77078"),
                 o = n("54239"),
                 u = n("79112"),
-                d = n("49111"),
-                c = n("782340"),
+                c = n("49111"),
+                d = n("782340"),
                 f = n("519409");
             class m extends r.Component {
                 render() {
@@ -197,13 +197,13 @@
                                 [f.disabled]: this.props.disableButton
                             }),
                             onClick: this.handleClick,
-                            children: c.default.Messages.STREAMER_MODE_ENABLED
+                            children: d.default.Messages.STREAMER_MODE_ENABLED
                         })]
                     })
                 }
                 constructor(...e) {
                     super(...e), this.handleClick = () => {
-                        !this.props.disableButton && ((0, o.pushLayer)(d.Layers.USER_SETTINGS), u.default.setSection(d.UserSettingsSections.STREAMER_MODE))
+                        !this.props.disableButton && ((0, o.pushLayer)(c.Layers.USER_SETTINGS), u.default.setSection(c.UserSettingsSections.STREAMER_MODE))
                     }
                 }
             }
@@ -256,114 +256,6 @@
             var i = n("884691");
             let r = i.createContext(void 0);
             var l = r
-        },
-        531674: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                getMuteTimes: function() {
-                    return v
-                },
-                default: function() {
-                    return b
-                }
-            }), n("222007");
-            var i = n("37983");
-            n("884691");
-            var r = n("866227"),
-                l = n.n(r),
-                s = n("446674"),
-                a = n("77078"),
-                o = n("820542"),
-                u = n("519705"),
-                d = n("319165"),
-                c = n("282109"),
-                f = n("679653"),
-                m = n("49111"),
-                p = n("468200"),
-                _ = n("782340");
-            let v = () => [{
-                    value: p.MuteUntilSeconds.MINUTES_15,
-                    label: _.default.Messages.MUTE_DURATION_15_MINUTES
-                }, {
-                    value: p.MuteUntilSeconds.HOURS_1,
-                    label: _.default.Messages.MUTE_DURATION_1_HOUR
-                }, {
-                    value: p.MuteUntilSeconds.HOURS_3,
-                    label: _.default.Messages.MUTE_DURATION_3_HOURS
-                }, {
-                    value: p.MuteUntilSeconds.HOURS_8,
-                    label: _.default.Messages.MUTE_DURATION_8_HOURS
-                }, {
-                    value: p.MuteUntilSeconds.HOURS_24,
-                    label: _.default.Messages.MUTE_DURATION_24_HOURS
-                }, {
-                    value: p.MuteUntilSeconds.ALWAYS,
-                    label: _.default.Messages.MUTE_DURATION_ALWAYS
-                }],
-                g = e => {
-                    let t = e > 0 ? l().add(e, "second").toISOString() : null;
-                    return {
-                        muted: !0,
-                        mute_config: {
-                            selected_time_window: e,
-                            end_time: t
-                        }
-                    }
-                };
-
-            function b(e, t) {
-                let [n, r] = (0, s.useStateFromStoresArray)([c.default], () => [c.default.isChannelMuted(e.guild_id, e.id), c.default.getChannelMuteConfig(e.guild_id, e.id)]), l = (0, d.useMutedUntilText)(r), p = (0, f.default)(e, !0);
-
-                function b(t) {
-                    t && e.type === m.ChannelTypes.GUILD_CATEGORY && (0, o.categoryCollapse)(e.id), u.default.updateChannelOverrideSettings(e.guild_id, e.id, {
-                        muted: t
-                    })
-                }
-                let h = _.default.Messages.MUTE_CHANNEL_GENERIC,
-                    E = _.default.Messages.UNMUTE_CHANNEL_GENERIC;
-                switch (e.type) {
-                    case m.ChannelTypes.GUILD_CATEGORY:
-                        h = _.default.Messages.MUTE_CATEGORY, E = _.default.Messages.UNMUTE_CATEGORY;
-                        break;
-                    case m.ChannelTypes.GROUP_DM:
-                        h = _.default.Messages.MUTE_CONVERSATION, E = _.default.Messages.UNMUTE_CONVERSATION;
-                        break;
-                    case m.ChannelTypes.DM:
-                        h = _.default.Messages.MUTE_CHANNEL.format({
-                            name: p
-                        }), E = _.default.Messages.UNMUTE_CHANNEL.format({
-                            name: p
-                        });
-                        break;
-                    default:
-                        h = _.default.Messages.MUTE_CHANNEL_GENERIC, E = _.default.Messages.UNMUTE_CHANNEL_GENERIC
-                }
-                return n ? (0, i.jsx)(a.MenuItem, {
-                    id: "unmute-channel",
-                    label: E,
-                    subtext: l,
-                    action: () => b(!1)
-                }) : (0, i.jsx)(a.MenuItem, {
-                    id: "mute-channel",
-                    label: h,
-                    action: () => b(!0),
-                    children: v().map(n => {
-                        let {
-                            value: r,
-                            label: l
-                        } = n;
-                        return (0, i.jsx)(a.MenuItem, {
-                            id: "".concat(r),
-                            label: l,
-                            action: () => (function(n) {
-                                e.type === m.ChannelTypes.GUILD_CATEGORY && (0, o.categoryCollapse)(e.id);
-                                let i = g(n);
-                                u.default.updateChannelOverrideSettings(e.guild_id, e.id, i, t)
-                            })(r)
-                        }, r)
-                    })
-                })
-            }
         },
         831585: function(e, t, n) {
             "use strict";
@@ -763,16 +655,16 @@
                         profile_user_status: o,
                         has_custom_status: null != l,
                         has_profile_effect: null != t.profileEffectID,
-                        ...d(t)
+                        ...c(t)
                     })
                 },
                 u = (e, t) => {
                     s.default.track(a.AnalyticEvents.DM_PROFILE_TOGGLED, {
                         is_profile_open: t,
-                        ...d(e)
+                        ...c(e)
                     })
                 },
-                d = e => {
+                c = e => {
                     var t;
                     if (null == e) return {};
                     let n = e.userId,
@@ -784,10 +676,10 @@
                             return s ? t === a.ActivityTypes.PLAYING : t !== a.ActivityTypes.CUSTOM_STATUS
                         }),
                         u = null == o ? void 0 : o.assets,
-                        d = l.default.isFriend(n);
+                        c = l.default.isFriend(n);
                     return {
                         has_images: !!(null !== (t = null == u ? void 0 : u.large_image) && void 0 !== t ? t : null == u ? void 0 : u.small_image),
-                        is_friend: d,
+                        is_friend: c,
                         viewed_profile_user_id: n,
                         profile_has_nitro_customization: e.hasPremiumCustomization(),
                         profile_has_theme_color_customized: e.hasThemeColors(),
@@ -799,7 +691,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return c
+                    return d
                 }
             });
             var i = n("446674"),
@@ -812,7 +704,7 @@
                 },
                 o = a,
                 u = "LAST_VIEWED_PATH";
-            class d extends i.default.PersistedStore {
+            class c extends i.default.PersistedStore {
                 initialize() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a;
                     o = null != e ? e : a
@@ -831,13 +723,13 @@
                     return o
                 }
             }
-            d.displayName = "DefaultRouteStore", d.persistKey = "DefaultRouteStore", d.migrations = [() => {
+            c.displayName = "DefaultRouteStore", c.persistKey = "DefaultRouteStore", c.migrations = [() => {
                 let e = r.default.get(u, null);
                 return r.default.remove(u), {
                     lastViewedPath: e
                 }
             }];
-            var c = new d(l.default, {
+            var d = new c(l.default, {
                 SAVE_LAST_ROUTE: function(e) {
                     let {
                         path: t
@@ -871,13 +763,13 @@
                     DOWN: "down",
                     LEFT: "left"
                 },
-                d = {
+                c = {
                     [u.UP]: o.up,
                     [u.RIGHT]: o.right,
                     [u.DOWN]: o.down,
                     [u.LEFT]: o.left
                 };
-            class c extends r.PureComponent {
+            class d extends r.PureComponent {
                 render() {
                     let {
                         direction: e,
@@ -885,13 +777,13 @@
                     } = this.props;
                     return (0, i.jsx)(a.default, {
                         className: s(o.arrow, t, {
-                            [d[e]]: !0
+                            [c[e]]: !0
                         })
                     })
                 }
             }
-            c.Directions = u;
-            var f = c
+            d.Directions = u;
+            var f = d
         },
         944832: function(e, t, n) {
             "use strict";
@@ -939,8 +831,8 @@
                 a = n("77078"),
                 o = n("145131"),
                 u = n("461380"),
-                d = n("298619");
-            class c extends r.PureComponent {
+                c = n("298619");
+            class d extends r.PureComponent {
                 handleClick(e) {
                     let {
                         onBreadcrumbClick: t
@@ -954,7 +846,7 @@
                     } = this.props, n = e.map(this.renderBreadcrumb);
                     return (0, i.jsx)(o.default, {
                         justify: o.default.Justify.START,
-                        className: s(d.breadcrumbs, t),
+                        className: s(c.breadcrumbs, t),
                         children: n
                     })
                 }
@@ -965,32 +857,32 @@
                             onBreadcrumbClick: r,
                             breadcrumbs: l,
                             renderCustomBreadcrumb: o,
-                            separatorClassName: c
+                            separatorClassName: d
                         } = this.props, f = e.id === n, m = t === l.length - 1, p = null != o ? o(e, f) : (0, i.jsx)("span", {
-                            className: s(d.breadcrumb, {
-                                [d.activeBreadcrumb]: f,
-                                [d.interactiveBreadcrumb]: null != r
+                            className: s(c.breadcrumb, {
+                                [c.activeBreadcrumb]: f,
+                                [c.interactiveBreadcrumb]: null != r
                             }),
                             children: e.label
                         });
                         return (0, i.jsxs)("div", {
-                            className: s(d.breadcrumbWrapper, {
-                                [d.breadcrumbFinalWrapper]: m
+                            className: s(c.breadcrumbWrapper, {
+                                [c.breadcrumbFinalWrapper]: m
                             }),
                             children: [null != r ? (0, i.jsx)(a.Clickable, {
                                 tag: "span",
                                 onClick: () => this.handleClick(e),
-                                className: d.breadcrumbClickWrapper,
+                                className: c.breadcrumbClickWrapper,
                                 children: p
                             }) : p, m ? null : (0, i.jsx)(u.default, {
-                                className: s(d.breadcrumbArrow, c),
+                                className: s(c.breadcrumbArrow, d),
                                 direction: u.default.Directions.RIGHT
                             })]
                         }, e.id)
                     }
                 }
             }
-            var f = c
+            var f = d
         },
         440351: function(e, t, n) {
             "use strict";
@@ -1006,8 +898,8 @@
                 a = n("77078"),
                 o = n("145131"),
                 u = n("296165"),
-                d = n("926622");
-            class c extends r.PureComponent {
+                c = n("926622");
+            class d extends r.PureComponent {
                 render() {
                     let {
                         title: e,
@@ -1015,7 +907,7 @@
                         agreement: n,
                         disagreement: r,
                         onAgree: l,
-                        onDisagree: c,
+                        onDisagree: d,
                         imageClassName: f
                     } = this.props;
                     return (0, i.jsxs)(o.default, {
@@ -1026,10 +918,10 @@
                         children: [(0, i.jsx)("div", {
                             className: s(u.image, f)
                         }), (0, i.jsx)("div", {
-                            className: s(u.title, d.marginBottom8),
+                            className: s(u.title, c.marginBottom8),
                             children: e
                         }), (0, i.jsx)("div", {
-                            className: s(u.description, d.marginBottom20),
+                            className: s(u.description, c.marginBottom20),
                             children: t
                         }), (0, i.jsxs)(o.default, {
                             justify: o.default.Justify.CENTER,
@@ -1039,7 +931,7 @@
                                 className: u.action,
                                 size: a.ButtonSizes.LARGE,
                                 color: a.ButtonColors.PRIMARY,
-                                onClick: c,
+                                onClick: d,
                                 children: r
                             }) : null, null != n ? (0, i.jsx)(a.Button, {
                                 className: u.action,
@@ -1052,7 +944,7 @@
                     })
                 }
             }
-            var f = c
+            var f = d
         },
         822332: function(e, t, n) {
             "use strict";
@@ -1068,17 +960,17 @@
                 a = n("77078"),
                 o = n("782340"),
                 u = n("440318");
-            let d = {
+            let c = {
                 BLOCK: u.block,
                 INLINE: u.inline
             };
-            class c extends r.PureComponent {
+            class d extends r.PureComponent {
                 render() {
                     let {
                         children: e,
                         className: t,
                         textClassName: n,
-                        type: r = d.BLOCK,
+                        type: r = c.BLOCK,
                         style: l
                     } = this.props;
                     return (0, i.jsxs)("div", {
@@ -1098,8 +990,8 @@
                     })
                 }
             }
-            c.Types = d;
-            var f = c
+            d.Types = c;
+            var f = d
         },
         546671: function(e, t, n) {
             "use strict";
@@ -1161,13 +1053,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 Icon: function() {
-                    return _
-                },
-                Divider: function() {
                     return v
                 },
+                Divider: function() {
+                    return _
+                },
                 default: function() {
-                    return b
+                    return h
                 }
             });
             var i = n("37983"),
@@ -1177,12 +1069,12 @@
                 a = n("353386"),
                 o = n("394846"),
                 u = n("77078"),
-                d = n("597590"),
-                c = n("980428"),
+                c = n("597590"),
+                d = n("980428"),
                 f = n("772280"),
                 m = n("587974"),
                 p = n("133934");
-            let _ = e => {
+            let v = e => {
                     let {
                         className: t,
                         iconClassName: n,
@@ -1190,92 +1082,92 @@
                         selected: l = !1,
                         disabled: a = !1,
                         showBadge: o = !1,
-                        color: d,
-                        foreground: c,
+                        color: c,
+                        foreground: d,
                         background: f,
-                        icon: _,
-                        onClick: v,
-                        onContextMenu: g,
-                        tooltip: b = null,
-                        tooltipColor: h,
-                        tooltipPosition: E = "bottom",
-                        hideOnClick: x = !0,
+                        icon: v,
+                        onClick: _,
+                        onContextMenu: b,
+                        tooltip: h = null,
+                        tooltipColor: g,
+                        tooltipPosition: x = "bottom",
+                        hideOnClick: E = !0,
                         role: C,
-                        "aria-label": M,
-                        "aria-hidden": N,
-                        "aria-checked": y,
-                        "aria-expanded": A,
-                        "aria-haspopup": S
-                    } = e, T = (0, i.jsx)(_, {
+                        "aria-label": y,
+                        "aria-hidden": A,
+                        "aria-checked": N,
+                        "aria-expanded": S,
+                        "aria-haspopup": j
+                    } = e, R = (0, i.jsx)(v, {
                         x: 0,
                         y: 0,
                         width: 24,
                         height: 24,
                         className: s(n, p.icon),
-                        foreground: null != c ? c : void 0,
+                        foreground: null != d ? d : void 0,
                         background: null != f ? f : void 0,
-                        color: d
-                    }), R = M;
-                    return null == R && "string" == typeof b && (R = b), (0, i.jsx)(u.Tooltip, {
-                        text: b,
-                        color: h,
-                        position: E,
-                        hideOnClick: x,
+                        color: c
+                    }), M = y;
+                    return null == M && "string" == typeof h && (M = h), (0, i.jsx)(u.Tooltip, {
+                        text: h,
+                        color: g,
+                        position: x,
+                        hideOnClick: E,
                         children: e => {
                             let {
-                                onMouseEnter: b,
-                                onMouseLeave: h,
-                                onFocus: E,
-                                onBlur: x
+                                onMouseEnter: h,
+                                onMouseLeave: g,
+                                onFocus: x,
+                                onBlur: E
                             } = e;
-                            return null == v ? (0, i.jsx)("div", {
+                            return null == _ ? (0, i.jsx)("div", {
                                 className: s(t, [p.iconWrapper]),
-                                children: (0, i.jsx)(_, {
+                                children: (0, i.jsx)(v, {
                                     x: 0,
                                     y: 0,
                                     width: 24,
                                     height: 24,
                                     className: s(n, p.icon),
-                                    foreground: null != c ? c : void 0,
+                                    foreground: null != d ? d : void 0,
                                     background: null != f ? f : void 0,
-                                    color: d,
-                                    "aria-hidden": N,
-                                    onMouseEnter: b,
-                                    onMouseLeave: h,
-                                    onFocus: E,
-                                    onBlur: x
+                                    color: c,
+                                    "aria-hidden": A,
+                                    onMouseEnter: h,
+                                    onMouseLeave: g,
+                                    onFocus: x,
+                                    onBlur: E
                                 })
                             }) : (0, i.jsxs)(u.Clickable, {
                                 tag: "div",
-                                onClick: a ? void 0 : v,
-                                onContextMenu: a ? void 0 : g,
-                                onMouseEnter: b,
-                                onMouseLeave: h,
-                                onFocus: E,
-                                onBlur: x,
+                                onClick: a ? void 0 : _,
+                                onContextMenu: a ? void 0 : b,
+                                onMouseEnter: h,
+                                onMouseLeave: g,
+                                onFocus: x,
+                                onBlur: E,
                                 className: s(t, {
                                     [p.iconWrapper]: !0,
-                                    [p.clickable]: !a && null != v,
+                                    [p.clickable]: !a && null != _,
                                     [p.selected]: l
                                 }),
                                 role: C,
-                                "aria-label": R,
-                                "aria-hidden": N,
-                                "aria-checked": y,
-                                "aria-haspopup": S,
-                                "aria-expanded": A,
-                                tabIndex: a || null == v ? -1 : 0,
+                                "aria-label": M,
+                                "aria-hidden": A,
+                                "aria-checked": N,
+                                "aria-haspopup": j,
+                                "aria-expanded": S,
+                                tabIndex: a || null == _ ? -1 : 0,
                                 children: [o ? (0, i.jsx)(m.default, {
                                     mask: m.default.Masks.HEADER_BAR_BADGE,
-                                    children: T
-                                }) : T, o ? (0, i.jsx)("span", {
+                                    children: R
+                                }) : R, o ? (0, i.jsx)("span", {
                                     className: p.iconBadge
                                 }) : null, r]
                             })
                         }
                     })
                 },
-                v = e => {
+                _ = e => {
                     let {
                         className: t
                     } = e;
@@ -1283,52 +1175,52 @@
                         className: s(p.divider, t)
                     })
                 },
-                g = e => {
+                b = e => {
                     let {
                         className: t,
                         innerClassName: n,
                         children: l,
-                        childrenBottom: c,
+                        childrenBottom: d,
                         toolbar: f,
                         onDoubleClick: m,
-                        "aria-label": _,
-                        "aria-labelledby": v,
-                        role: g,
-                        scrollable: b,
-                        transparent: h = !1
-                    } = e, E = r.useRef(null), x = r.useContext(d.default);
+                        "aria-label": v,
+                        "aria-labelledby": _,
+                        role: b,
+                        scrollable: h,
+                        transparent: g = !1
+                    } = e, x = r.useRef(null), E = r.useContext(c.default);
                     return (0, i.jsx)("section", {
                         className: s(t, p.container, {
-                            [p.themed]: !h,
-                            [p.transparent]: h,
+                            [p.themed]: !g,
+                            [p.transparent]: g,
                             [p.themedMobile]: o.isMobile
                         }),
-                        "aria-label": _,
-                        "aria-labelledby": v,
-                        role: g,
-                        ref: E,
+                        "aria-label": v,
+                        "aria-labelledby": _,
+                        role: b,
+                        ref: x,
                         children: (0, i.jsxs)(u.FocusRingScope, {
-                            containerRef: E,
+                            containerRef: x,
                             children: [(0, i.jsxs)("div", {
                                 className: p.upperContainer,
                                 children: [(0, i.jsxs)("div", {
                                     className: s(p.children, n, {
-                                        [p.scrollable]: b
+                                        [p.scrollable]: h
                                     }),
                                     onDoubleClick: m,
-                                    children: [o.isMobile && null != x ? (0, i.jsx)(a.default, {
-                                        onClick: x,
+                                    children: [o.isMobile && null != E ? (0, i.jsx)(a.default, {
+                                        onClick: E,
                                         className: p.hamburger
                                     }) : null, l]
                                 }), null != f ? (0, i.jsx)("div", {
                                     className: p.toolbar,
                                     children: f
                                 }) : null]
-                            }), c]
+                            }), d]
                         })
                     })
                 };
-            g.Icon = _, g.Title = e => {
+            b.Icon = v, b.Title = e => {
                 let {
                     className: t,
                     wrapperClassName: n,
@@ -1336,13 +1228,13 @@
                     onContextMenu: l,
                     onClick: a,
                     id: o,
-                    muted: d = !1,
-                    level: c = 1
+                    muted: c = !1,
+                    level: d = 1
                 } = e, f = (0, i.jsx)(u.HeadingLevel, {
-                    forceLevel: c,
+                    forceLevel: d,
                     children: (0, i.jsx)(u.Heading, {
                         variant: "heading-md/semibold",
-                        color: d ? "header-secondary" : void 0,
+                        color: c ? "header-secondary" : void 0,
                         className: s(t, p.title),
                         id: o,
                         children: r
@@ -1358,17 +1250,17 @@
                     onContextMenu: l,
                     children: f
                 })
-            }, g.Divider = v, g.Caret = function(e) {
+            }, b.Divider = _, b.Caret = function(e) {
                 let {
                     direction: t = "right"
                 } = e;
                 return "right" === t ? (0, i.jsx)(f.default, {
                     className: p.caret
-                }) : (0, i.jsx)(c.default, {
+                }) : (0, i.jsx)(d.default, {
                     className: p.caret
                 })
             };
-            var b = g
+            var h = b
         },
         353386: function(e, t, n) {
             "use strict";

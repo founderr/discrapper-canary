@@ -654,12 +654,13 @@
                     location: "AvatarDecorationModal"
                 }), H = (0, T.isEqualAvatarDecoration)(A, void 0 === S ? null == t ? void 0 : t.avatarDecoration : S), w = () => {
                     m(A), i()
-                }, D = () => {
+                }, D = n.useCallback(() => {
                     i(), (0, c.openCollectiblesShop)({
                         analyticsLocations: s,
-                        analyticsSource: u.default.EDIT_AVATAR_DECORATION_MODAL
+                        analyticsSource: u.default.EDIT_AVATAR_DECORATION_MODAL,
+                        initialItem: null != A ? A : void 0
                     })
-                };
+                }, [s, i, A]);
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsxs)(l.ModalHeader, {
                         separator: !1,
@@ -1291,13 +1292,13 @@
         21526: function(e, t, r) {
             "use strict";
             r.r(t), r.d(t, {
-                trackCollectiblesShopOpened: function() {
+                openCollectiblesShop: function() {
                     return d
                 },
-                openCollectiblesShop: function() {
+                closeCollectiblesShop: function() {
                     return f
                 },
-                closeCollectiblesShop: function() {
+                productDetailsOpened: function() {
                     return E
                 },
                 fetchCollectiblesCategories: function() {
@@ -1326,18 +1327,25 @@
                 c = r("49111");
             r("853987"), r("426497"), r("775416"), r("216719");
             let d = e => {
+                    let {
+                        openInLayer: t = !0,
+                        ...r
+                    } = e;
                     n.default.dispatch({
                         type: "COLLECTIBLES_SHOP_OPEN",
-                        ...e
-                    })
+                        ...r
+                    }), t && (0, s.pushLayer)(c.Layers.COLLECTIBLES_SHOP)
                 },
-                f = e => {
-                    d(e), (0, s.pushLayer)(c.Layers.COLLECTIBLES_SHOP)
-                },
-                E = () => {
+                f = () => {
                     n.default.dispatch({
                         type: "COLLECTIBLES_SHOP_CLOSE"
                     }), (0, s.popLayer)()
+                },
+                E = e => {
+                    n.default.dispatch({
+                        type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN",
+                        item: e
+                    })
                 },
                 C = async () => {
                     n.default.dispatch({
@@ -1602,41 +1610,48 @@
         },
         216719: function(e, t, r) {
             "use strict";
+            let a;
             r.r(t), r.d(t, {
                 default: function() {
-                    return c
+                    return d
                 }
             });
-            var a = r("446674"),
-                n = r("913144");
-            let s = [],
-                i = s,
-                l = null,
-                u = e => {
-                    i = s, l = null
+            var n = r("446674"),
+                s = r("913144");
+            let i = [],
+                l = i,
+                u = null,
+                o = e => {
+                    l = i, u = null
                 };
-            class o extends a.default.Store {
+            class c extends n.default.Store {
                 get analyticsLocations() {
-                    return i
+                    return l
                 }
                 get analyticsSource() {
-                    return l
+                    return u
+                }
+                get initialItem() {
+                    return a
                 }
                 getAnalytics() {
                     return {
-                        analyticsLocations: i,
-                        analyticsSource: l
+                        analyticsLocations: l,
+                        analyticsSource: u
                     }
                 }
             }
-            o.displayName = "CollectiblesShopStore";
-            var c = new o(n.default, {
+            c.displayName = "CollectiblesShopStore";
+            var d = new c(s.default, {
                 COLLECTIBLES_SHOP_OPEN: e => {
                     var t, r;
-                    i = null !== (t = e.analyticsLocations) && void 0 !== t ? t : s, l = null !== (r = e.analyticsSource) && void 0 !== r ? r : null
+                    l = null !== (t = e.analyticsLocations) && void 0 !== t ? t : i, u = null !== (r = e.analyticsSource) && void 0 !== r ? r : null, a = e.initialItem
                 },
-                COLLECTIBLES_SHOP_CLOSE: u,
-                LOGOUT: u
+                COLLECTIBLES_SHOP_CLOSE: o,
+                COLLECTIBLES_PRODUCT_DETAILS_OPEN: e => {
+                    e.item.skuId === (null == a ? void 0 : a.skuId) && (a = void 0)
+                },
+                LOGOUT: o
             })
         },
         984002: function(e, t, r) {

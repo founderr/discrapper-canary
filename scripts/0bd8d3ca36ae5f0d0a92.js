@@ -1729,7 +1729,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "247550"
+                        buildNumber: "247559"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -3031,7 +3031,8 @@
                         icon: es.default,
                         text: eT.default.Messages.COLLECTIBLES_SHOP,
                         onClick: () => {
-                            (0, p.trackCollectiblesShopOpened)({
+                            (0, p.openCollectiblesShop)({
+                                openInLayer: !1,
                                 analyticsSource: u,
                                 analyticsLocations: d
                             }), _()
@@ -12254,17 +12255,10 @@
                     setPendingAvatarDecoration: O
                 } = (0, E.default)({
                     isTryItOut: !0
-                }), {
-                    analyticsLocations: L
-                } = (0, c.default)(p), v = s.useCallback(() => {
-                    d(S.ContentDismissActionType.PRIMARY), n(), (0, _.openCollectiblesShop)({
-                        analyticsLocations: L,
-                        analyticsSource: p
-                    })
-                }, [d, n, L]), M = s.useCallback(() => {
+                }), L = s.useCallback(() => {
                     d(S.ContentDismissActionType.DISMISS), n()
-                }, [d, n]), P = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), D = (0, l.useSpring)({
-                    immediate: P,
+                }, [d, n]), v = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), M = (0, l.useSpring)({
+                    immediate: v,
                     from: {
                         transform: "translate3d(-110%, 0, 0)",
                         height: t
@@ -12278,12 +12272,22 @@
                         stiffness: 100,
                         damping: 15
                     }
-                }), y = s.useMemo(() => (0, C.getAvatarDecorationsFromCategories)(g), [g]), x = s.useMemo(() => (0, C.getProfileEffectsFromCategories)(g), [g]), [U, b] = s.useState(i.CollectiblesItemType.PROFILE_EFFECT), [G, j] = s.useState();
-                return (s.useEffect(() => () => {
+                }), P = s.useMemo(() => (0, C.getAvatarDecorationsFromCategories)(g), [g]), D = s.useMemo(() => (0, C.getProfileEffectsFromCategories)(g), [g]), [y, x] = s.useState(i.CollectiblesItemType.PROFILE_EFFECT), [U, b] = s.useState();
+                s.useEffect(() => () => {
                     O(null)
-                }, [O]), null == t) ? null : (0, a.jsxs)(l.animated.div, {
+                }, [O]);
+                let {
+                    analyticsLocations: G
+                } = (0, c.default)(p), j = s.useCallback(() => {
+                    d(S.ContentDismissActionType.PRIMARY), n(), (0, _.openCollectiblesShop)({
+                        analyticsLocations: G,
+                        analyticsSource: p,
+                        initialItem: null != U ? U : void 0
+                    })
+                }, [d, n, G, U]);
+                return null == t ? null : (0, a.jsxs)(l.animated.div, {
                     className: N.container,
-                    style: D,
+                    style: M,
                     children: [(0, a.jsxs)("div", {
                         className: N.content,
                         children: [(0, a.jsx)(o.HeadingLevel, {
@@ -12292,7 +12296,7 @@
                                 className: N.title,
                                 children: [A.default.Messages.COLLECTIBLES_ACCOUNT_SWITCHER_POPOUT_HEADER, (0, a.jsx)(o.Clickable, {
                                     className: N.close,
-                                    onClick: M,
+                                    onClick: L,
                                     children: (0, a.jsx)(f.default, {
                                         className: N.closeIcon
                                     })
@@ -12304,22 +12308,22 @@
                             })
                         }), (0, a.jsx)(o.SegmentedControl, {
                             options: m(),
-                            value: U,
+                            value: y,
                             onChange: e => {
                                 let {
                                     value: t
                                 } = e;
-                                return b(t)
+                                return x(t)
                             },
                             className: N.segmentControl,
                             optionClassName: N.segmentControlOption,
                             look: "pill"
                         })]
                     }), (0, a.jsx)(I.CollectiblesItemsList, {
-                        items: U === i.CollectiblesItemType.PROFILE_EFFECT ? x : y,
+                        items: y === i.CollectiblesItemType.PROFILE_EFFECT ? D : P,
                         isFetching: R,
-                        selectedItem: G,
-                        setSelectedItem: j,
+                        selectedItem: U,
+                        setSelectedItem: b,
                         containerClassName: N.listContainer,
                         isScrollable: !0
                     }), (0, a.jsx)("div", {
@@ -12328,7 +12332,7 @@
                             className: N.cta,
                             size: o.Button.Sizes.LARGE,
                             color: o.Button.Colors.BRAND_NEW,
-                            onClick: v,
+                            onClick: j,
                             children: A.default.Messages.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL_CTA
                         })
                     })]
