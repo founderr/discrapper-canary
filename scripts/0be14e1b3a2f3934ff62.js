@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["27809"], {
+    ["28110"], {
         717837: function(e, t, n) {
             "use strict";
             e.exports = function(e) {
@@ -14,7 +14,7 @@
             "use strict";
             e.exports = function(e) {
                 var t, n;
-                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), x.test(e) ? e = e.substr(0, e.length - 2) : _.test(e) && (e = e.substr(0, e.length - 1)), (n = g.exec(e)) ? o.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = h.exec(e)) && c.test(n[1]) && (e = n[1], E.test(e) ? e += "e" : C.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = v.exec(e)) && c.test(n[1]) && (e = n[1] + "i"), (n = A.exec(e)) && o.test(n[1]) && (e = n[1] + i[n[2]]), (n = y.exec(e)) && o.test(n[1]) && (e = n[1] + r[n[2]]), (n = N.exec(e)) ? d.test(n[1]) && (e = n[1]) : (n = b.exec(e)) && d.test(n[1]) && (e = n[1]), (n = p.exec(e)) && (d.test(n[1]) || u.test(n[1]) && !f.test(n[1])) && (e = n[1]), m.test(e) && d.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
+                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), x.test(e) ? e = e.substr(0, e.length - 2) : g.test(e) && (e = e.substr(0, e.length - 1)), (n = b.exec(e)) ? o.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = h.exec(e)) && c.test(n[1]) && (e = n[1], E.test(e) ? e += "e" : C.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = v.exec(e)) && c.test(n[1]) && (e = n[1] + "i"), (n = A.exec(e)) && o.test(n[1]) && (e = n[1] + i[n[2]]), (n = y.exec(e)) && o.test(n[1]) && (e = n[1] + r[n[2]]), (n = N.exec(e)) ? d.test(n[1]) && (e = n[1]) : (n = _.exec(e)) && d.test(n[1]) && (e = n[1]), (n = p.exec(e)) && (d.test(n[1]) || u.test(n[1]) && !f.test(n[1])) && (e = n[1]), m.test(e) && d.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
             };
             var i = {
                     ational: "ate",
@@ -59,11 +59,11 @@
                 m = /ll$/,
                 p = /^(.+?)e$/,
                 v = /^(.+?)y$/,
-                b = /^(.+?(s|t))(ion)$/,
+                _ = /^(.+?(s|t))(ion)$/,
                 h = /^(.+?)(ed|ing)$/,
                 E = /(at|bl|iz)$/,
-                g = /^(.+?)eed$/,
-                _ = /^.+?[^s]s$/,
+                b = /^(.+?)eed$/,
+                g = /^.+?[^s]s$/,
                 x = /^.+?(ss|i)es$/,
                 C = /([^aeiouylsz])\1$/,
                 A = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
@@ -119,6 +119,14 @@
             "use strict";
             e.exports = n.p + "d063b4bf17f1fee95f05.svg"
         },
+        665718: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "5420f8fd9d89897c6448.svg"
+        },
+        897327: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "d8197d45ef3e7289594d.svg"
+        },
         926607: function(e, t, n) {
             "use strict";
 
@@ -134,6 +142,32 @@
                     return i
                 }
             })
+        },
+        289867: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var i = n("913144"),
+                r = {
+                    toggleMembersSection() {
+                        i.default.dispatch({
+                            type: "CHANNEL_TOGGLE_MEMBERS_SECTION"
+                        })
+                    },
+                    toggleProfilePanelSection() {
+                        i.default.dispatch({
+                            type: "PROFILE_PANEL_TOGGLE_SECTION"
+                        })
+                    },
+                    toggleSummariesSection() {
+                        i.default.dispatch({
+                            type: "CHANNEL_TOGGLE_SUMMARIES_SECTION"
+                        })
+                    }
+                }
         },
         642950: function(e, t, n) {
             "use strict";
@@ -589,6 +623,70 @@
                 a.trackAppUIViewed(e)
             }
         },
+        893980: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                trackProfilePanelViewed: function() {
+                    return o
+                },
+                trackProfilePanelToggled: function() {
+                    return u
+                }
+            });
+            var i = n("373469"),
+                r = n("824563"),
+                l = n("27618"),
+                s = n("599110"),
+                a = n("49111");
+            let o = e => {
+                    let {
+                        displayProfile: t,
+                        isMobile: n,
+                        loadDurationMs: i,
+                        activity: r,
+                        customStatusActivity: l,
+                        status: o
+                    } = e;
+                    s.default.track(a.AnalyticEvents.DM_PROFILE_VIEWED, {
+                        has_mobile_indicator: n,
+                        has_activity: null != r && (null == r ? void 0 : r.type) !== a.ActivityTypes.CUSTOM_STATUS,
+                        has_game_activity: (null == r ? void 0 : r.type) === a.ActivityTypes.PLAYING,
+                        load_duration_ms: i,
+                        profile_user_status: o,
+                        has_custom_status: null != l,
+                        has_profile_effect: null != t.profileEffectID,
+                        ...d(t)
+                    })
+                },
+                u = (e, t) => {
+                    s.default.track(a.AnalyticEvents.DM_PROFILE_TOGGLED, {
+                        is_profile_open: t,
+                        ...d(e)
+                    })
+                },
+                d = e => {
+                    var t;
+                    if (null == e) return {};
+                    let n = e.userId,
+                        s = null != i.default.getAnyStreamForUser(n),
+                        o = r.default.findActivity(n, e => {
+                            let {
+                                type: t
+                            } = e;
+                            return s ? t === a.ActivityTypes.PLAYING : t !== a.ActivityTypes.CUSTOM_STATUS
+                        }),
+                        u = null == o ? void 0 : o.assets,
+                        d = l.default.isFriend(n);
+                    return {
+                        has_images: !!(null !== (t = null == u ? void 0 : u.large_image) && void 0 !== t ? t : null == u ? void 0 : u.small_image),
+                        is_friend: d,
+                        viewed_profile_user_id: n,
+                        profile_has_nitro_customization: e.hasPremiumCustomization(),
+                        profile_has_theme_color_customized: e.hasThemeColors(),
+                        profile_has_theme_animation: null != e.popoutAnimationParticleType
+                    }
+                }
+        },
         476108: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -651,7 +749,7 @@
             let i, r, l;
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return P
                 }
             }), n("222007"), n("424973");
             var s, a, o = n("866227"),
@@ -662,11 +760,11 @@
                 m = n("21121"),
                 p = n("934306"),
                 v = n("288518"),
-                b = n("486503"),
+                _ = n("486503"),
                 h = n("233069"),
                 E = n("42203"),
-                g = n("305961"),
-                _ = n("660478"),
+                b = n("305961"),
+                g = n("660478"),
                 x = n("282109"),
                 C = n("697218"),
                 A = n("299039"),
@@ -685,10 +783,10 @@
                 return -t
             });
 
-            function M(e) {
+            function T(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(e) {
                     var t, n;
-                    let i = null !== (n = null !== (t = _.default.lastMessageId(e.id)) && void 0 !== t ? t : e.lastMessageId) && void 0 !== n ? n : e.id,
+                    let i = null !== (n = null !== (t = g.default.lastMessageId(e.id)) && void 0 !== t ? t : e.lastMessageId) && void 0 !== n ? n : e.id,
                         r = e.isMessageRequestTimestamp;
                     if (null != r) {
                         let e = u(r).valueOf(),
@@ -701,24 +799,24 @@
                     channelId: e.id,
                     lastMessageId: t,
                     isFavorite: x.default.isMessagesFavorite(e.id) && (0, m.isInMainTabsExperiment)(),
-                    isRequest: v.default.isMessageRequest(e.id) || b.default.isSpam(e.id)
+                    isRequest: v.default.isMessageRequest(e.id) || _.default.isSpam(e.id)
                 }
             }
 
-            function R() {
+            function S() {
                 N.clear(), Object.values(E.default.getMutablePrivateChannels()).forEach(e => {
-                    N.set(e.id, M(e))
+                    N.set(e.id, T(e))
                 }), (0, m.isInMainTabsExperiment)() && (0, p.isSplitMessagesTab)() && x.default.getAddedToMessages().forEach(e => {
                     let t = E.default.getChannel(e);
-                    null != t && (0, h.isGuildTextChannelType)(t.type) && N.set(t.id, M(t))
+                    null != t && (0, h.isGuildTextChannelType)(t.type) && N.set(t.id, T(t))
                 })
             }
 
-            function I() {
+            function R() {
                 let e = E.default.getMutablePrivateChannels();
-                for (let t in e) N.set(t, M(e[t]))
+                for (let t in e) N.set(t, T(e[t]))
             }
-            let S = (i = [], r = [], l = [], () => {
+            let I = (i = [], r = [], l = [], () => {
                 let e = N.values("FAVORITE"),
                     t = N.values("DEFAULT");
                 return (i !== e || r !== t) && (l = [], e.forEach(e => {
@@ -733,12 +831,12 @@
                     return l.push(t)
                 }), r = t), l
             });
-            class j extends d.default.Store {
+            class M extends d.default.Store {
                 initialize() {
-                    this.waitFor(E.default, g.default, C.default, v.default, x.default), this.syncWith([x.default, v.default], R)
+                    this.waitFor(E.default, b.default, C.default, v.default, x.default), this.syncWith([x.default, v.default], S)
                 }
                 getPrivateChannelIds() {
-                    return S()
+                    return I()
                 }
                 getSortedChannels() {
                     return [N.values("FAVORITE"), N.values("DEFAULT")]
@@ -754,19 +852,19 @@
                     }), e
                 }
             }
-            j.displayName = "PrivateChannelSortStore";
-            var T = new j(f.default, {
-                CONNECTION_OPEN: R,
-                CONNECTION_OPEN_SUPPLEMENTAL: R,
-                OVERLAY_INITIALIZE: R,
-                CACHE_LOADED: I,
-                CACHE_LOADED_LAZY: I,
+            M.displayName = "PrivateChannelSortStore";
+            var P = new M(f.default, {
+                CONNECTION_OPEN: S,
+                CONNECTION_OPEN_SUPPLEMENTAL: S,
+                OVERLAY_INITIALIZE: S,
+                CACHE_LOADED: R,
+                CACHE_LOADED_LAZY: R,
                 CHANNEL_UPDATES: function(e) {
                     let {
                         channels: t
                     } = e;
                     t.forEach(e => {
-                        ((0, h.isPrivate)(e.type) || N.has(e.id)) && N.set(e.id, M(e))
+                        ((0, h.isPrivate)(e.type) || N.has(e.id)) && N.set(e.id, T(e))
                     })
                 },
                 CHANNEL_CREATE: function(e) {
@@ -774,7 +872,7 @@
                         channel: t
                     } = e;
                     if (!(0, h.isPrivate)(t.type) || t.id === y.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) return !1;
-                    N.set(t.id, M(t))
+                    N.set(t.id, T(t))
                 },
                 CHANNEL_DELETE: function(e) {
                     let {
@@ -789,7 +887,7 @@
                     } = e;
                     if (!N.has(t)) return !1;
                     let i = E.default.getChannel(t);
-                    return null != i && N.set(t, M(i, n.id))
+                    return null != i && N.set(t, T(i, n.id))
                 },
                 GUILD_CREATE: function(e) {
                     let t = e.guild.id;
@@ -937,6 +1035,68 @@
             }
             var f = c
         },
+        440351: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return f
+                }
+            });
+            var i = n("37983"),
+                r = n("884691"),
+                l = n("414456"),
+                s = n.n(l),
+                a = n("77078"),
+                o = n("145131"),
+                u = n("296165"),
+                d = n("926622");
+            class c extends r.PureComponent {
+                render() {
+                    let {
+                        title: e,
+                        description: t,
+                        agreement: n,
+                        disagreement: r,
+                        onAgree: l,
+                        onDisagree: c,
+                        imageClassName: f
+                    } = this.props;
+                    return (0, i.jsxs)(o.default, {
+                        className: u.gatedContent,
+                        justify: o.default.Justify.CENTER,
+                        align: o.default.Align.CENTER,
+                        direction: o.default.Direction.VERTICAL,
+                        children: [(0, i.jsx)("div", {
+                            className: s(u.image, f)
+                        }), (0, i.jsx)("div", {
+                            className: s(u.title, d.marginBottom8),
+                            children: e
+                        }), (0, i.jsx)("div", {
+                            className: s(u.description, d.marginBottom20),
+                            children: t
+                        }), (0, i.jsxs)(o.default, {
+                            justify: o.default.Justify.CENTER,
+                            align: o.default.Align.CENTER,
+                            grow: 0,
+                            children: [null != r ? (0, i.jsx)(a.Button, {
+                                className: u.action,
+                                size: a.ButtonSizes.LARGE,
+                                color: a.ButtonColors.PRIMARY,
+                                onClick: c,
+                                children: r
+                            }) : null, null != n ? (0, i.jsx)(a.Button, {
+                                className: u.action,
+                                color: a.Button.Colors.RED,
+                                size: a.ButtonSizes.LARGE,
+                                onClick: l,
+                                children: n
+                            }) : null]
+                        })]
+                    })
+                }
+            }
+            var f = c
+        },
         822332: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -1047,7 +1207,7 @@
                     return v
                 },
                 Divider: function() {
-                    return b
+                    return _
                 },
                 default: function() {
                     return E
@@ -1077,19 +1237,19 @@
                         foreground: c,
                         background: f,
                         icon: v,
-                        onClick: b,
+                        onClick: _,
                         onContextMenu: h,
                         tooltip: E = null,
-                        tooltipColor: g,
-                        tooltipPosition: _ = "bottom",
+                        tooltipColor: b,
+                        tooltipPosition: g = "bottom",
                         hideOnClick: x = !0,
                         role: C,
                         "aria-label": A,
                         "aria-hidden": y,
                         "aria-checked": N,
-                        "aria-expanded": M,
-                        "aria-haspopup": R
-                    } = e, I = (0, i.jsx)(v, {
+                        "aria-expanded": T,
+                        "aria-haspopup": S
+                    } = e, R = (0, i.jsx)(v, {
                         x: 0,
                         y: 0,
                         width: 24,
@@ -1098,20 +1258,20 @@
                         foreground: null != c ? c : void 0,
                         background: null != f ? f : void 0,
                         color: d
-                    }), S = A;
-                    return null == S && "string" == typeof E && (S = E), (0, i.jsx)(u.Tooltip, {
+                    }), I = A;
+                    return null == I && "string" == typeof E && (I = E), (0, i.jsx)(u.Tooltip, {
                         text: E,
-                        color: g,
-                        position: _,
+                        color: b,
+                        position: g,
                         hideOnClick: x,
                         children: e => {
                             let {
                                 onMouseEnter: E,
-                                onMouseLeave: g,
-                                onFocus: _,
+                                onMouseLeave: b,
+                                onFocus: g,
                                 onBlur: x
                             } = e;
-                            return null == b ? (0, i.jsx)("div", {
+                            return null == _ ? (0, i.jsx)("div", {
                                 className: s(t, [p.iconWrapper]),
                                 children: (0, i.jsx)(v, {
                                     x: 0,
@@ -1124,41 +1284,41 @@
                                     color: d,
                                     "aria-hidden": y,
                                     onMouseEnter: E,
-                                    onMouseLeave: g,
-                                    onFocus: _,
+                                    onMouseLeave: b,
+                                    onFocus: g,
                                     onBlur: x
                                 })
                             }) : (0, i.jsxs)(u.Clickable, {
                                 tag: "div",
-                                onClick: a ? void 0 : b,
+                                onClick: a ? void 0 : _,
                                 onContextMenu: a ? void 0 : h,
                                 onMouseEnter: E,
-                                onMouseLeave: g,
-                                onFocus: _,
+                                onMouseLeave: b,
+                                onFocus: g,
                                 onBlur: x,
                                 className: s(t, {
                                     [p.iconWrapper]: !0,
-                                    [p.clickable]: !a && null != b,
+                                    [p.clickable]: !a && null != _,
                                     [p.selected]: l
                                 }),
                                 role: C,
-                                "aria-label": S,
+                                "aria-label": I,
                                 "aria-hidden": y,
                                 "aria-checked": N,
-                                "aria-haspopup": R,
-                                "aria-expanded": M,
-                                tabIndex: a || null == b ? -1 : 0,
+                                "aria-haspopup": S,
+                                "aria-expanded": T,
+                                tabIndex: a || null == _ ? -1 : 0,
                                 children: [o ? (0, i.jsx)(m.default, {
                                     mask: m.default.Masks.HEADER_BAR_BADGE,
-                                    children: I
-                                }) : I, o ? (0, i.jsx)("span", {
+                                    children: R
+                                }) : R, o ? (0, i.jsx)("span", {
                                     className: p.iconBadge
                                 }) : null, r]
                             })
                         }
                     })
                 },
-                b = e => {
+                _ = e => {
                     let {
                         className: t
                     } = e;
@@ -1175,23 +1335,23 @@
                         toolbar: f,
                         onDoubleClick: m,
                         "aria-label": v,
-                        "aria-labelledby": b,
+                        "aria-labelledby": _,
                         role: h,
                         scrollable: E,
-                        transparent: g = !1
-                    } = e, _ = r.useRef(null), x = r.useContext(d.default);
+                        transparent: b = !1
+                    } = e, g = r.useRef(null), x = r.useContext(d.default);
                     return (0, i.jsx)("section", {
                         className: s(t, p.container, {
-                            [p.themed]: !g,
-                            [p.transparent]: g,
+                            [p.themed]: !b,
+                            [p.transparent]: b,
                             [p.themedMobile]: o.isMobile
                         }),
                         "aria-label": v,
-                        "aria-labelledby": b,
+                        "aria-labelledby": _,
                         role: h,
-                        ref: _,
+                        ref: g,
                         children: (0, i.jsxs)(u.FocusRingScope, {
-                            containerRef: _,
+                            containerRef: g,
                             children: [(0, i.jsxs)("div", {
                                 className: p.upperContainer,
                                 children: [(0, i.jsxs)("div", {
@@ -1241,7 +1401,7 @@
                     onContextMenu: l,
                     children: f
                 })
-            }, h.Divider = b, h.Caret = function(e) {
+            }, h.Divider = _, h.Caret = function(e) {
                 let {
                     direction: t = "right"
                 } = e;
