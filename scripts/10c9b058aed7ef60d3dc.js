@@ -776,7 +776,9 @@
                         analyticsLocations: w
                     } = (0, u.default)(),
                     Z = null !== (l = null == w ? void 0 : w[0]) && void 0 !== l ? l : null;
-                return (0, m.trackMembersPageViewed)(t.id, Z), (0, a.jsxs)("table", {
+                return n.useEffect(() => {
+                    (0, m.trackMembersPageViewed)(t.id, Z)
+                }, [t.id, Z]), (0, a.jsxs)("table", {
                     className: i(_.table, s),
                     children: [(0, a.jsx)(x.default, {
                         guildId: t.id,
