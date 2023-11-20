@@ -231,8 +231,8 @@
                 A = e => T(t => v(t) && t < e),
                 O = e => T(t => v(t) && t > e),
                 y = e => T(t => v(t) && t <= e),
-                M = e => T(t => v(t) && t >= e),
-                R = () => T(e => v(e) && Number.isInteger(e)),
+                R = e => T(t => v(t) && t >= e),
+                M = () => T(e => v(e) && Number.isInteger(e)),
                 L = () => T(e => v(e) && Number.isFinite(e)),
                 D = () => T(e => v(e) && e > 0),
                 j = () => T(e => v(e) && e < 0),
@@ -241,8 +241,8 @@
                     lt: t => V(_(e, A(t))),
                     gt: t => V(_(e, O(t))),
                     lte: t => V(_(e, y(t))),
-                    gte: t => V(_(e, M(t))),
-                    int: () => V(_(e, R())),
+                    gte: t => V(_(e, R(t))),
+                    int: () => V(_(e, M())),
                     finite: () => V(_(e, L())),
                     positive: () => V(_(e, D())),
                     negative: () => V(_(e, j()))
@@ -407,8 +407,8 @@
                 lt: A,
                 gt: O,
                 lte: y,
-                gte: M,
-                int: R,
+                gte: R,
+                int: M,
                 finite: L,
                 positive: D,
                 negative: j,
@@ -1101,8 +1101,8 @@
                 A = n("427554"),
                 O = n("644189"),
                 y = n("29913"),
-                M = n("745049"),
-                R = n("49111"),
+                R = n("745049"),
+                M = n("49111"),
                 L = n("782340"),
                 D = n("955614");
 
@@ -1112,7 +1112,7 @@
                     onClick: n
                 } = e, {
                     canManageAllEvents: l
-                } = (0, _.useManageResourcePermissions)(t), a = (0, o.useStateFromStores)([I.default], () => !t.isGuildVocal() || I.default.can(R.Permissions.CONNECT, t), [t]), i = r.useMemo(() => (0, f.default)(t), [t]), c = (0, h.getChannelIconComponent)(t);
+                } = (0, _.useManageResourcePermissions)(t), a = (0, o.useStateFromStores)([I.default], () => !t.isGuildVocal() || I.default.can(M.Permissions.CONNECT, t), [t]), i = r.useMemo(() => (0, f.default)(t), [t]), c = (0, h.getChannelIconComponent)(t);
                 return (0, s.jsx)(d.Tooltip, {
                     text: L.default.Messages.GUILD_EVENT_CANNOT_CONNECT,
                     shouldShow: !a && null != n,
@@ -1199,7 +1199,7 @@
                     isUserLurking: T,
                     isJoined: m = !1,
                     isMember: N = !1,
-                    isHub: R = !1,
+                    isHub: M = !1,
                     speakers: L,
                     speakerCount: j,
                     rsvped: U,
@@ -1220,7 +1220,7 @@
                     eventPreview: q,
                     recurrenceRule: J,
                     recurrenceId: Q
-                } = e, $ = (0, g.isChannelPublic)(a, o), ee = o === M.GuildScheduledEventEntityTypes.EXTERNAL, {
+                } = e, $ = (0, g.isChannelPublic)(a, o), ee = o === R.GuildScheduledEventEntityTypes.EXTERNAL, {
                     analyticsLocations: et
                 } = (0, E.default)(c.default.GUILD_EVENT_CARD), {
                     enabled: en
@@ -1256,7 +1256,7 @@
                             imageSource: 1 === h ? _ : null,
                             truncate: b,
                             guildId: null == l ? void 0 : l.id,
-                            isHub: R,
+                            isHub: M,
                             isNew: K,
                             guildEventId: W,
                             eventPreview: q,
@@ -1277,8 +1277,8 @@
                                 handleLocationClick: ee ? e => e.stopPropagation() : void 0,
                                 location: P,
                                 isExternal: ee,
-                                isHub: R
-                            }), R ? (0, s.jsx)(O.default, {
+                                isHub: M
+                            }), M ? (0, s.jsx)(O.default, {
                                 isActive: I,
                                 isUserLurking: T,
                                 isMember: N,
@@ -1433,8 +1433,8 @@
                 let A = null,
                     O = v.startDate,
                     y = s(),
-                    M = s().add(E.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
-                    R = s().add(E.MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days"),
+                    R = s().add(E.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
+                    M = s().add(E.MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days"),
                     L = e => {
                         a({
                             ...v,
@@ -1454,7 +1454,7 @@
                                 value: v.endDate,
                                 onSelect: L,
                                 minDate: v.startDate,
-                                maxDate: R
+                                maxDate: M
                             })
                         }), (0, l.jsx)(r.FormItem, {
                             title: h.default.Messages.CREATE_EVENT_END_TIME_LABEL,
@@ -1515,7 +1515,7 @@
                                     })
                                 },
                                 minDate: y,
-                                maxDate: M,
+                                maxDate: R,
                                 disabled: p
                             })
                         }), (0, l.jsx)(r.FormItem, {
@@ -1622,8 +1622,8 @@
                     editBroadcastInfoData: A,
                     error: O,
                     validationErrorMessage: y,
-                    onChange: M,
-                    canSetFocus: R = !1
+                    onChange: R,
+                    canSetFocus: M = !1
                 } = e, {
                     entityType: L,
                     channelId: D,
@@ -1646,13 +1646,13 @@
                     }
                 }, [t, P]), Y = a.useRef(null);
                 a.useEffect(() => {
-                    if (R) {
+                    if (M) {
                         var e;
                         null === (e = Y.current) || void 0 === e || e.focus()
                     }
-                }, [R]);
+                }, [M]);
                 let z = e => {
-                        M({
+                        R({
                             image: e
                         })
                     },
@@ -1689,7 +1689,7 @@
                             children: [(0, l.jsx)(o.TextInput, {
                                 className: x.textInput,
                                 onChange: e => {
-                                    M({
+                                    R({
                                         name: e
                                     })
                                 },
@@ -1717,13 +1717,13 @@
                                 null != t && null != G && (null == n ? void 0 : n.isBefore(t)) && (l.scheduledEndTime = t.add(1, "hour").toISOString()), null != t && null != B && (l.recurrenceRule = {
                                     ...B,
                                     start: t.milliseconds(0).toISOString()
-                                }), M(l)
+                                }), R(l)
                             },
                             onRecurrenceChange: e => {
                                 let t = k.startDate;
                                 if (null == t) return;
                                 let n = (0, T.recurrenceOptionToRecurrenceRule)(e, t);
-                                M({
+                                R({
                                     recurrenceRule: n
                                 })
                             },
@@ -1744,7 +1744,7 @@
                                 type: o.Checkbox.Types.INVERTED,
                                 value: b,
                                 onChange: (e, t) => {
-                                    M({
+                                    R({
                                         autoStart: t
                                     })
                                 },
@@ -1762,7 +1762,7 @@
                                 placeholder: p.default.Messages.GUILD_EVENT_CREATE_DESCRIPTION_PLACEHOLDER,
                                 value: j,
                                 onChange: e => {
-                                    M({
+                                    R({
                                         description: e
                                     })
                                 },
@@ -1815,50 +1815,51 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return B
+                    return H
                 }
             }), n("222007");
             var l, a, s = n("37983"),
                 r = n("884691"),
-                i = n("446674"),
-                u = n("77078"),
-                o = n("970728"),
-                d = n("206230"),
-                c = n("526887"),
-                E = n("960757"),
-                f = n("923959"),
-                h = n("305961"),
-                _ = n("683911"),
-                I = n("476765"),
-                T = n("354023"),
-                m = n("686904"),
-                v = n("398604"),
-                N = n("322224"),
-                g = n("152475"),
-                S = n("799547"),
-                p = n("189443"),
-                x = n("841363"),
-                C = n("558286"),
-                A = n("560309"),
-                O = n("151859"),
-                y = n("299342"),
+                i = n("917351"),
+                u = n("446674"),
+                o = n("77078"),
+                d = n("970728"),
+                c = n("206230"),
+                E = n("526887"),
+                f = n("960757"),
+                h = n("923959"),
+                _ = n("305961"),
+                I = n("683911"),
+                T = n("476765"),
+                m = n("354023"),
+                v = n("686904"),
+                N = n("398604"),
+                g = n("322224"),
+                S = n("152475"),
+                p = n("799547"),
+                x = n("189443"),
+                C = n("841363"),
+                A = n("558286"),
+                O = n("560309"),
+                y = n("151859"),
+                R = n("299342"),
                 M = n("499950"),
-                R = n("27754"),
-                L = n("745049"),
-                D = n("49111"),
-                j = n("782340"),
-                V = n("738021");
+                L = n("27754"),
+                D = n("745049"),
+                j = n("49111"),
+                V = n("782340"),
+                U = n("738021");
             let {
-                INVITE_OPTIONS_7_DAYS: U,
-                INVITE_OPTIONS_UNLIMITED: G
-            } = T.default;
+                INVITE_OPTIONS_7_DAYS: G,
+                INVITE_OPTIONS_UNLIMITED: P
+            } = m.default;
 
-            function P(e) {
+            function b(e) {
                 let {
                     modal: t
                 } = e, {
                     createMultipleConfetti: n
-                } = r.useContext(c.ConfettiCannonContext);
+                } = r.useContext(E.ConfettiCannonContext);
                 return r.useEffect(() => {
                     let e = null == t ? void 0 : t.getScrollerNode();
                     if (null == e) return;
@@ -1913,171 +1914,171 @@
                 }, [n, t]), null
             }
 
-            function b(e) {
+            function B(e) {
                 let {
                     guildId: t,
                     guildEvent: n,
                     guildEventId: a,
-                    editBroadcastInfoData: o,
-                    isEdit: c,
-                    formErrors: E,
-                    transitionState: f,
-                    loading: h,
-                    error: T,
-                    onChange: m,
-                    onSave: N,
-                    onClose: g,
-                    createdEvent: S
-                } = e, p = (0, I.useUID)(), x = r.useMemo(() => [{
+                    editBroadcastInfoData: d,
+                    isEdit: E,
+                    formErrors: f,
+                    transitionState: h,
+                    loading: _,
+                    error: m,
+                    onChange: v,
+                    onSave: g,
+                    onClose: S,
+                    createdEvent: p
+                } = e, x = (0, T.useUID)(), C = r.useRef(n), L = !(0, i.isEqual)(C.current, n), D = r.useMemo(() => [{
                     slideId: 0,
-                    label: j.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_1,
-                    valid: null == E.entity,
-                    userErrorMessage: E.entity
+                    label: V.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_1,
+                    valid: null == f.entity,
+                    userErrorMessage: f.entity
                 }, {
                     slideId: 1,
-                    label: j.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_2,
-                    valid: null == E.schedule && null == E.topic,
-                    userErrorMessage: E.schedule
+                    label: V.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_2,
+                    valid: null == f.schedule && null == f.topic && (!E || L),
+                    userErrorMessage: f.schedule
                 }, {
                     slideId: 2,
-                    label: j.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_3,
+                    label: V.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_3,
                     valid: !0
-                }], [E]), R = Object.keys(l).length, L = (0, v.isGuildScheduledEventActive)(n), D = e => Math.max(0, Math.min(e, R - 1)), [U, G] = r.useState(L ? 1 : 0), [b, B] = r.useState(!1), H = r.useMemo(() => x.slice(0, U + 1).map(e => e.valid).every(Boolean), [x, U]), w = U >= x.length ? 3 : x[D(U)].slideId, F = 3 === w, k = (0, C.useGuildEventModalStore)(e => e.onUpdateCanCloseModal);
-                k(F);
-                let Y = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion),
-                    z = r.useRef(null),
-                    Z = e => {
-                        B(!1), G(D(e))
+                }], [f, E, L]), j = Object.keys(l).length, G = (0, N.isGuildScheduledEventActive)(n), P = e => Math.max(0, Math.min(e, j - 1)), [B, H] = r.useState(G ? 1 : 0), [w, F] = r.useState(!1), k = r.useMemo(() => D.slice(0, B + 1).map(e => e.valid).every(Boolean), [D, B]), Y = B >= D.length ? 3 : D[P(B)].slideId, z = 3 === Y, Z = (0, A.useGuildEventModalStore)(e => e.onUpdateCanCloseModal);
+                Z(z);
+                let X = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion),
+                    K = r.useRef(null),
+                    W = e => {
+                        F(!1), H(P(e))
                     };
                 r.useEffect(() => {
-                    null != S && Z(3)
-                }, [null == S ? void 0 : S.id, Z]);
-                let X = () => {
-                        if (!H) return;
-                        let e = 2 === w;
-                        e ? N() : F ? g() : Z(U + 1)
+                    null != p && W(3)
+                }, [null == p ? void 0 : p.id, W]);
+                let q = () => {
+                        if (!k) return;
+                        let e = 2 === Y;
+                        e ? g() : z ? S() : W(B + 1)
                     },
-                    K = () => {
-                        Z(U - 1)
+                    J = () => {
+                        W(B - 1)
                     },
-                    W = j.default.Messages.NEXT;
-                return 2 === w && (W = c ? j.default.Messages.SAVE_EVENT : j.default.Messages.SCHEDULE_EVENT), (0, s.jsx)(s.Fragment, {
-                    children: (0, s.jsxs)(u.ModalRoot, {
-                        transitionState: f,
-                        "aria-labelledby": p,
-                        size: u.ModalSize.DYNAMIC,
-                        children: [!Y && F ? (0, s.jsx)(P, {
-                            modal: z.current
-                        }) : null, (0, s.jsxs)(u.ModalContent, {
-                            className: V.content,
-                            scrollerRef: z,
-                            children: [!F && (0, s.jsx)(_.default, {
-                                steps: x.map(e => e.label),
-                                stepIndex: U,
+                    Q = V.default.Messages.NEXT;
+                return 2 === Y && (Q = E ? V.default.Messages.SAVE_EVENT : V.default.Messages.SCHEDULE_EVENT), (0, s.jsx)(s.Fragment, {
+                    children: (0, s.jsxs)(o.ModalRoot, {
+                        transitionState: h,
+                        "aria-labelledby": x,
+                        size: o.ModalSize.DYNAMIC,
+                        children: [!X && z ? (0, s.jsx)(b, {
+                            modal: K.current
+                        }) : null, (0, s.jsxs)(o.ModalContent, {
+                            className: U.content,
+                            scrollerRef: K,
+                            children: [!z && (0, s.jsx)(I.default, {
+                                steps: D.map(e => e.label),
+                                stepIndex: B,
                                 onClick: e => {
-                                    e < U ? K() : e > U && X()
+                                    e < B ? J() : e > B && q()
                                 }
-                            }), (0, s.jsxs)(u.Slides, {
-                                activeSlide: w,
+                            }), (0, s.jsxs)(o.Slides, {
+                                activeSlide: Y,
                                 width: 440,
                                 onSlideReady: e => {
-                                    B(e === w)
+                                    F(e === Y)
                                 },
-                                children: [(0, s.jsx)(u.Slide, {
+                                children: [(0, s.jsx)(o.Slide, {
                                     id: 0,
-                                    children: (0, s.jsx)(A.default, {
-                                        guildId: t,
-                                        guildEvent: n,
-                                        validationErrorMessage: E.entity,
-                                        isSlideReady: b,
-                                        onChange: m
-                                    })
-                                }), (0, s.jsx)(u.Slide, {
-                                    id: 1,
-                                    children: (0, s.jsx)(y.default, {
-                                        guildEvent: n,
-                                        guildEventId: a,
-                                        guildId: t,
-                                        editBroadcastInfoData: o,
-                                        onChange: m,
-                                        error: T,
-                                        validationErrorMessage: E.schedule,
-                                        isSlideReady: b
-                                    })
-                                }), (0, s.jsx)(u.Slide, {
-                                    id: 2,
                                     children: (0, s.jsx)(O.default, {
                                         guildId: t,
                                         guildEvent: n,
-                                        guildEventId: a,
-                                        error: T
+                                        validationErrorMessage: f.entity,
+                                        isSlideReady: w,
+                                        onChange: v
                                     })
-                                }), (0, s.jsx)(u.Slide, {
+                                }), (0, s.jsx)(o.Slide, {
+                                    id: 1,
+                                    children: (0, s.jsx)(R.default, {
+                                        guildEvent: n,
+                                        guildEventId: a,
+                                        guildId: t,
+                                        editBroadcastInfoData: d,
+                                        onChange: v,
+                                        error: m,
+                                        validationErrorMessage: f.schedule,
+                                        isSlideReady: w
+                                    })
+                                }), (0, s.jsx)(o.Slide, {
+                                    id: 2,
+                                    children: (0, s.jsx)(y.default, {
+                                        guildId: t,
+                                        guildEvent: n,
+                                        guildEventId: a,
+                                        error: m
+                                    })
+                                }), (0, s.jsx)(o.Slide, {
                                     id: 3,
                                     children: (0, s.jsx)(M.default, {
-                                        onClose: g,
-                                        event: S
+                                        onClose: S,
+                                        event: p
                                     })
                                 })]
                             })]
-                        }), !F && (0, s.jsxs)(u.ModalFooter, {
-                            className: V.footer,
+                        }), !z && (0, s.jsxs)(o.ModalFooter, {
+                            className: U.footer,
                             children: [(0, s.jsxs)("div", {
-                                className: V.inline,
-                                children: [(0, s.jsx)(u.Button, {
-                                    color: u.Button.Colors.PRIMARY,
-                                    onClick: g,
-                                    children: j.default.Messages.CANCEL
-                                }), (0, s.jsx)(u.Button, {
-                                    onClick: X,
-                                    disabled: !H,
-                                    className: V.button,
-                                    submitting: h,
-                                    children: W
+                                className: U.inline,
+                                children: [(0, s.jsx)(o.Button, {
+                                    color: o.Button.Colors.PRIMARY,
+                                    onClick: S,
+                                    children: V.default.Messages.CANCEL
+                                }), (0, s.jsx)(o.Button, {
+                                    onClick: q,
+                                    disabled: !k,
+                                    className: U.button,
+                                    submitting: _,
+                                    children: Q
                                 })]
-                            }), 0 !== w && (0, s.jsx)(u.Button, {
-                                look: u.Button.Looks.LINK,
-                                size: u.Button.Sizes.MIN,
-                                onClick: K,
-                                color: u.Button.Colors.LINK,
-                                children: j.default.Messages.BACK
+                            }), 0 !== Y && (0, s.jsx)(o.Button, {
+                                look: o.Button.Looks.LINK,
+                                size: o.Button.Sizes.MIN,
+                                onClick: J,
+                                color: o.Button.Colors.LINK,
+                                children: V.default.Messages.BACK
                             })]
                         })]
                     })
                 })
             }
 
-            function B(e) {
+            function H(e) {
                 let {
                     guildId: t,
                     guildScheduledEventId: l,
                     transitionState: a,
-                    onClose: d
-                } = e, c = (0, i.useStateFromStores)([h.default], () => h.default.getGuild(t)), _ = (0, i.useStateFromStores)([v.default], () => v.default.getGuildScheduledEvent(l), [l]), I = (0, i.useStateFromStores)([f.default], () => f.default.getDefaultChannel(t), [t]), T = (0, p.getInitialGuildEventData)(c, _, I), [C, A] = r.useState(T), [O] = r.useState((0, p.isEditingEvent)(_)), [y, M] = r.useState(null), V = e => {
+                    onClose: i
+                } = e, c = (0, u.useStateFromStores)([_.default], () => _.default.getGuild(t)), E = (0, u.useStateFromStores)([N.default], () => N.default.getGuildScheduledEvent(l), [l]), I = (0, u.useStateFromStores)([h.default], () => h.default.getDefaultChannel(t), [t]), T = (0, x.getInitialGuildEventData)(c, E, I), [m, A] = r.useState(T), [O] = r.useState((0, x.isEditingEvent)(E)), [y, R] = r.useState(null), M = e => {
                     var t;
-                    let n = (0, g.isGuildEventInvitable)(e),
+                    let n = (0, S.isGuildEventInvitable)(e),
                         l = null !== (t = e.channel_id) && void 0 !== t ? t : null == I ? void 0 : I.id;
-                    null != l && o.default.createInvite(l, {
-                        max_age: U.value,
-                        max_uses: G.value
-                    }, D.InstantInviteSources.GUILD_EVENTS), n ? M(e) : d()
-                }, P = (0, E.default)(c, null == _ ? void 0 : _.id, C), [B, {
+                    null != l && d.default.createInvite(l, {
+                        max_age: G.value,
+                        max_uses: P.value
+                    }, j.InstantInviteSources.GUILD_EVENTS), n ? R(e) : i()
+                }, U = (0, f.default)(c, null == E ? void 0 : E.id, m), [b, {
                     loading: H,
                     error: w
-                }] = (0, m.default)(async () => {
+                }] = (0, v.default)(async () => {
                     if (null != y) return;
                     let e = {
-                        broadcastToDirectoryChannels: P.broadcastToDirectoryChannels
+                        broadcastToDirectoryChannels: U.broadcastToDirectoryChannels
                     };
-                    if (O && null != l) return await N.default.saveEvent(l, C, t, e), d();
-                    let n = await N.default.createGuildEvent(C, t, e);
-                    return V(n.body), n
-                }), F = r.useMemo(() => (0, R.default)(C, O), [C, O]);
-                return (0, s.jsx)(b, {
+                    if (O && null != l) return await g.default.saveEvent(l, m, t, e), i();
+                    let n = await g.default.createGuildEvent(m, t, e);
+                    return M(n.body), n
+                }), F = r.useMemo(() => (0, L.default)(m, O), [m, O]);
+                return (0, s.jsx)(B, {
                     guildId: t,
-                    guildEvent: C,
+                    guildEvent: m,
                     guildEventId: l,
-                    editBroadcastInfoData: P,
+                    editBroadcastInfoData: U,
                     isEdit: O,
                     formErrors: F,
                     transitionState: a,
@@ -2086,9 +2087,9 @@
                     onChange: e => {
                         if (null != e.entityType) {
                             var n;
-                            let l = (0, x.getChannelTypeFromEntity)(e.entityType),
-                                [a] = (0, S.getEventChannelsByType)(t, l);
-                            e.channelId = null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : null, e.entityType !== L.GuildScheduledEventEntityTypes.EXTERNAL && C.entityType === L.GuildScheduledEventEntityTypes.EXTERNAL && (e.entityMetadata = null)
+                            let l = (0, C.getChannelTypeFromEntity)(e.entityType),
+                                [a] = (0, p.getEventChannelsByType)(t, l);
+                            e.channelId = null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : null, e.entityType !== D.GuildScheduledEventEntityTypes.EXTERNAL && m.entityType === D.GuildScheduledEventEntityTypes.EXTERNAL && (e.entityMetadata = null)
                         }
                         A(t => ({
                             ...t,
@@ -2096,27 +2097,28 @@
                         }))
                     },
                     onSave: () => {
-                        null != C.recurrenceRule && O ? (0, u.openModalLazy)(async () => {
+                        let e = (null == E ? void 0 : E.scheduled_start_time) !== m.scheduledStartTime || E.scheduled_end_time !== m.scheduledEndTime;
+                        null != m.recurrenceRule && O && e ? (0, o.openModalLazy)(async () => {
                             let {
                                 ConfirmModal: e
                             } = await n.el("77078").then(n.bind(n, "77078"));
                             return t => (0, s.jsxs)(e, {
                                 ...t,
-                                header: j.default.Messages.EDIT_ALL_EVENTS,
-                                confirmText: j.default.Messages.SAVE_EVENT,
-                                cancelText: j.default.Messages.NEVERMIND,
-                                onConfirm: B,
-                                children: [(0, s.jsx)(u.Text, {
+                                header: V.default.Messages.EDIT_ALL_EVENTS,
+                                confirmText: V.default.Messages.SAVE_EVENT,
+                                cancelText: V.default.Messages.NEVERMIND,
+                                onConfirm: b,
+                                children: [(0, s.jsx)(o.Text, {
                                     variant: "text-md/normal",
-                                    children: j.default.Messages.GUILD_EVENT_EDIT_CONFIRM_BODY_CONFIRM
-                                }), (0, s.jsx)("br", {}), (0, s.jsx)(u.Text, {
+                                    children: V.default.Messages.GUILD_EVENT_EDIT_CONFIRM_BODY_CONFIRM
+                                }), (0, s.jsx)("br", {}), (0, s.jsx)(o.Text, {
                                     variant: "text-md/normal",
-                                    children: j.default.Messages.GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT.format()
+                                    children: V.default.Messages.GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT.format()
                                 })]
                             })
-                        }) : B()
+                        }) : b()
                     },
-                    onClose: d,
+                    onClose: i,
                     createdEvent: y
                 })
             }(a = l || (l = {}))[a.ENTITY = 0] = "ENTITY", a[a.SETTINGS = 1] = "SETTINGS", a[a.PREVIEW = 2] = "PREVIEW", a[a.SUCCESS = 3] = "SUCCESS"
@@ -2154,8 +2156,8 @@
                 A = n("306939"),
                 O = n("745049"),
                 y = n("49111"),
-                M = n("782340"),
-                R = n("869785");
+                R = n("782340"),
+                M = n("869785");
             let L = e => e === O.GuildScheduledEventEntityTypes.EXTERNAL,
                 D = (e, t) => {
                     let n = d.default.getChannel(e);
@@ -2166,7 +2168,7 @@
                         i = s ? m.default : v.default;
                     return (0, l.jsx)(a ? i : r, {
                         height: 24,
-                        className: R.channelOptionIcon
+                        className: M.channelOptionIcon
                     })
                 },
                 j = e => {
@@ -2179,8 +2181,8 @@
                         entityType: i
                     } = e, d = n === y.ChannelTypes.GUILD_STAGE_VOICE, c = (0, x.isChannelPublic)(a, i), E = (0, S.useGetEventChannelsByType)(t, n);
                     return (0, l.jsxs)(u.FormItem, {
-                        title: d ? M.default.Messages.START_STAGE_MODAL_SET_TOPIC_SELECT_LABEL : M.default.Messages.GUILD_EVENT_LOCATION_VOICE_FIELD_LABEL,
-                        className: R.options,
+                        title: d ? R.default.Messages.START_STAGE_MODAL_SET_TOPIC_SELECT_LABEL : R.default.Messages.GUILD_EVENT_LOCATION_VOICE_FIELD_LABEL,
+                        className: M.options,
                         disabled: r,
                         required: !0,
                         children: [(0, l.jsx)(u.SearchableSelect, {
@@ -2197,9 +2199,9 @@
                             isDisabled: r
                         }), !c && (0, l.jsx)(u.Text, {
                             color: "header-secondary",
-                            className: R.channelPrivate,
+                            className: M.channelPrivate,
                             variant: "text-sm/normal",
-                            children: M.default.Messages.GUILD_EVENT_PRIVATE_DESCRIPTION
+                            children: R.default.Messages.GUILD_EVENT_PRIVATE_DESCRIPTION
                         })]
                     })
                 };
@@ -2207,16 +2209,16 @@
             function V(e, t, n, l) {
                 return t ? {
                     disabled: !0,
-                    tooltipText: M.default.Messages.GUILD_EVENT_LOCATION_DISABLED_CANNOT_EDIT
+                    tooltipText: R.default.Messages.GUILD_EVENT_LOCATION_DISABLED_CANNOT_EDIT
                 } : n ? 0 === l && e !== O.GuildScheduledEventEntityTypes.EXTERNAL ? {
                     disabled: !0,
-                    tooltipText: M.default.Messages.GUILD_EVENT_LOCATION_DISABLED_NO_AVAILABLE_CHANNEL
+                    tooltipText: R.default.Messages.GUILD_EVENT_LOCATION_DISABLED_NO_AVAILABLE_CHANNEL
                 } : {
                     disabled: !1,
                     tooltipText: null
                 } : {
                     disabled: !0,
-                    tooltipText: M.default.Messages.GUILD_EVENT_LOCATION_DISABLED_NO_PERMISSION
+                    tooltipText: R.default.Messages.GUILD_EVENT_LOCATION_DISABLED_NO_PERMISSION
                 }
             }
             let U = e => t => {
@@ -2269,13 +2271,13 @@
                     T = (0, C.getChannelTypeFromEntity)(o),
                     m = (0, N.isGuildScheduledEventActive)(n);
                 return null == o || o === O.GuildScheduledEventEntityTypes.NONE ? null : L(o) ? (0, l.jsx)(u.FormItem, {
-                    title: M.default.Messages.GUILD_EVENT_LOCATION_ELSEWHERE_FIELD_LABEL,
-                    className: R.options,
+                    title: R.default.Messages.GUILD_EVENT_LOCATION_ELSEWHERE_FIELD_LABEL,
+                    className: M.options,
                     required: !0,
                     children: (0, l.jsx)(u.TextInput, {
-                        className: R.textInput,
+                        className: M.textInput,
                         onChange: h,
-                        placeholder: M.default.Messages.GUILD_EVENT_LOCATION_OPTION_ELSEWHERE_PLACEHOLDER,
+                        placeholder: R.default.Messages.GUILD_EVENT_LOCATION_OPTION_ELSEWHERE_PLACEHOLDER,
                         maxLength: O.MAX_EVENT_LOCATION_LENGTH,
                         value: null != I ? I : "",
                         inputRef: f
@@ -2297,22 +2299,22 @@
                     onChange: s
                 } = e, r = (0, i.useStateFromStores)([c.default], () => c.default.getGuild(t), [t]), o = (0, g.default)(t, void 0), d = (0, g.default)(t, y.ChannelTypes.GUILD_VOICE), E = (0, g.default)(t, y.ChannelTypes.GUILD_STAGE_VOICE), f = (0, S.useGetEventChannelsByType)(t, y.ChannelTypes.GUILD_VOICE), h = (0, p.useChannelsUserCanStartStageIn)(r), T = null == r ? void 0 : r.hasFeature(y.GuildFeatures.COMMUNITY), v = (0, N.isGuildScheduledEventActive)(n), x = P(s, n), C = a.useMemo(() => {
                     let e = [{
-                        name: M.default.Messages.VOICE_CHANNEL,
+                        name: R.default.Messages.VOICE_CHANNEL,
                         value: O.GuildScheduledEventEntityTypes.VOICE,
-                        desc: M.default.Messages.GUILD_EVENT_LOCATION_OPTION_VOICE_HINT,
+                        desc: R.default.Messages.GUILD_EVENT_LOCATION_OPTION_VOICE_HINT,
                         icon: I.default,
                         ...V(O.GuildScheduledEventEntityTypes.VOICE, v, d, f.length)
                     }, {
-                        name: M.default.Messages.GUILD_EVENT_LOCATION_EXTERNAL,
+                        name: R.default.Messages.GUILD_EVENT_LOCATION_EXTERNAL,
                         value: O.GuildScheduledEventEntityTypes.EXTERNAL,
-                        desc: M.default.Messages.GUILD_EVENT_LOCATION_OPTION_ELSEWHERE_HINT,
+                        desc: R.default.Messages.GUILD_EVENT_LOCATION_OPTION_ELSEWHERE_HINT,
                         icon: _.default,
                         ...V(O.GuildScheduledEventEntityTypes.EXTERNAL, v, o, 0)
                     }];
                     return T ? [{
-                        name: M.default.Messages.STAGE_CHANNEL,
+                        name: R.default.Messages.STAGE_CHANNEL,
                         value: O.GuildScheduledEventEntityTypes.STAGE_INSTANCE,
-                        desc: M.default.Messages.GUILD_EVENT_LOCATION_OPTION_STAGE_HINT,
+                        desc: R.default.Messages.GUILD_EVENT_LOCATION_OPTION_STAGE_HINT,
                         icon: m.default,
                         ...V(O.GuildScheduledEventEntityTypes.STAGE_INSTANCE, v, E, h.length)
                     }, ...e] : e
@@ -2321,7 +2323,7 @@
                     value: n.entityType,
                     options: C,
                     onChange: x,
-                    className: R.options
+                    className: M.options
                 })
             }
 
@@ -2336,16 +2338,16 @@
                     entityType: d
                 } = a, f = (0, i.useStateFromStores)([c.default], () => c.default.getGuild(t), [t]), h = (0, p.useChannelsUserCanStartStageIn)(f), _ = (0, i.useStateFromStores)([E.default], () => E.default.can(y.Permissions.MANAGE_CHANNELS, f)), I = null == f ? void 0 : f.hasFeature(y.GuildFeatures.COMMUNITY), T = P(r, a), m = I && !L(d) && 0 === h.length && _ && null != d;
                 return (0, l.jsxs)("div", {
-                    className: R.container,
+                    className: M.container,
                     children: [(0, l.jsx)(u.Heading, {
                         variant: "heading-xl/semibold",
-                        className: R.header,
-                        children: M.default.Messages.GUILD_EVENT_LOCATION_TITLE
+                        className: M.header,
+                        children: R.default.Messages.GUILD_EVENT_LOCATION_TITLE
                     }), (0, l.jsx)(u.Text, {
                         color: "header-secondary",
-                        className: R.text,
+                        className: M.text,
                         variant: "text-sm/normal",
-                        children: M.default.Messages.GUILD_EVENT_LOCATION_SUBTITLE
+                        children: R.default.Messages.GUILD_EVENT_LOCATION_SUBTITLE
                     }), (0, l.jsx)(B, {
                         guildId: t,
                         guildEvent: a,
@@ -2359,7 +2361,7 @@
                         onClick: () => {
                             T({
                                 value: O.GuildScheduledEventEntityTypes.STAGE_INSTANCE,
-                                name: M.default.Messages.STAGE_CHANNEL
+                                name: R.default.Messages.STAGE_CHANNEL
                             }), (0, u.openModalLazy)(async () => {
                                 let {
                                     default: e
@@ -2411,18 +2413,18 @@
                     channel_id: A,
                     name: O,
                     image: y,
-                    description: M
-                } = C, R = (0, s.useStateFromStores)([o.default], () => o.default.getChannel(A), [A]), L = (0, s.useStateFromStores)([d.default], () => d.default.getGuild(g), [g]), D = (0, h.getLocationFromEvent)(C), j = (0, s.useStateFromStores)([c.default], () => null != S.creatorId ? c.default.getUser(S.creatorId) : c.default.getCurrentUser(), [S.creatorId]), V = (0, s.useStateFromStores)([u.default], () => u.default.isLurking(g), [g]), U = (0, i.getChannelIconComponent)(R, L);
+                    description: R
+                } = C, M = (0, s.useStateFromStores)([o.default], () => o.default.getChannel(A), [A]), L = (0, s.useStateFromStores)([d.default], () => d.default.getGuild(g), [g]), D = (0, h.getLocationFromEvent)(C), j = (0, s.useStateFromStores)([c.default], () => null != S.creatorId ? c.default.getUser(S.creatorId) : c.default.getCurrentUser(), [S.creatorId]), V = (0, s.useStateFromStores)([u.default], () => u.default.isLurking(g), [g]), U = (0, i.getChannelIconComponent)(M, L);
                 return (0, l.jsxs)("div", {
                     className: v.content,
                     children: [(0, l.jsx)(I.default, {
                         className: v.previewCard,
                         guild: L,
-                        channel: R,
+                        channel: M,
                         location: null != D ? D : void 0,
                         creator: j,
                         name: O,
-                        description: M,
+                        description: R,
                         imageSource: (n = (0, f.convertToFakeGuildEvent)(S, g, p), null == (N = y) && null == n.image ? null : null != N && /^data:/.test(N) ? N : (0, _.default)(n)),
                         isActive: !1,
                         isUserLurking: V,
@@ -2441,7 +2443,7 @@
                             variant: "text-md/normal",
                             className: v.subheader,
                             children: null != location ? m.default.Messages.GUILD_EVENT_PREVIEW_EXTERNAL_EVENT_BODY : m.default.Messages.GUILD_EVENT_PREVIEW_BODY.format({
-                                channelName: null !== (t = null == R ? void 0 : R.name) && void 0 !== t ? t : "",
+                                channelName: null !== (t = null == M ? void 0 : M.name) && void 0 !== t ? t : "",
                                 channelHook: () => {
                                     var e;
                                     return (0, l.jsxs)("div", {
@@ -2454,7 +2456,7 @@
                                             height: 18,
                                             width: 18,
                                             className: v.locationIcon
-                                        }), null !== (e = null == R ? void 0 : R.name) && void 0 !== e ? e : D]
+                                        }), null !== (e = null == M ? void 0 : M.name) && void 0 !== e ? e : D]
                                     })
                                 }
                             })
@@ -2545,10 +2547,10 @@
                 let {
                     onClose: A,
                     event: O
-                } = e, y = null == O ? void 0 : O.guild_id, M = (0, a.useStateFromStores)([c.default], () => {
+                } = e, y = null == O ? void 0 : O.guild_id, R = (0, a.useStateFromStores)([c.default], () => {
                     var e;
                     return null != y ? null === (e = c.default.getDefaultChannel(y)) || void 0 === e ? void 0 : e.id : null
-                }, [y]), R = (0, a.useStateFromStores)([E.default], () => E.default.getGuild(y), [y]), L = (null == R ? void 0 : R.vanityURLCode) != null && (null == R ? void 0 : R.vanityURLCode.length) > 0, {
+                }, [y]), M = (0, a.useStateFromStores)([E.default], () => E.default.getGuild(y), [y]), L = (null == M ? void 0 : M.vanityURLCode) != null && (null == M ? void 0 : M.vanityURLCode.length) > 0, {
                     enabled: D
                 } = i.default.useExperiment({
                     guildId: null != y ? y : "",
@@ -2559,11 +2561,11 @@
                     channel_id: j,
                     id: V
                 } = null != O ? O : {}, U = (0, a.useStateFromStores)([f.default], () => {
-                    let e = null != j ? j : M;
+                    let e = null != j ? j : R;
                     return null == e ? null : f.default.getInvite(e)
-                }, [j, M]);
+                }, [j, R]);
                 if (null == O) return A(), null;
-                let G = D && null !== (t = null == R ? void 0 : R.vanityURLCode) && void 0 !== t ? t : null == U ? void 0 : U.code,
+                let G = D && null !== (t = null == M ? void 0 : M.vanityURLCode) && void 0 !== t ? t : null == U ? void 0 : U.code,
                     P = null != G ? (0, r.generateInviteKeyFromExtraData)({
                         baseCode: G,
                         guildScheduledEventId: V
@@ -2615,7 +2617,7 @@
                                     guild_scheduled_event_id: null == O ? void 0 : O.id
                                 })
                             }
-                        }), (null == R ? void 0 : R.vanityURLCode) == null && (0, l.jsx)(s.Text, {
+                        }), (null == M ? void 0 : M.vanityURLCode) == null && (0, l.jsx)(s.Text, {
                             variant: "text-xs/normal",
                             color: "header-secondary",
                             className: S.inviteDetail,
@@ -3061,8 +3063,8 @@
                         icon: A,
                         hideSize: O,
                         imageStyle: y,
-                        showRemoveButton: M,
-                        maxFileSizeBytes: R,
+                        showRemoveButton: R,
+                        maxFileSizeBytes: M,
                         onFileSizeError: L,
                         onOpenImageSelectModal: D,
                         "aria-label": j
@@ -3120,7 +3122,7 @@
                                         className: h.imageUploaderFileInput,
                                         "aria-label": V,
                                         tabIndex: 0,
-                                        maxFileSizeBytes: R,
+                                        maxFileSizeBytes: M,
                                         onFileSizeError: L
                                     })]
                                 }), null != u && (0, l.jsx)("div", {
@@ -3132,7 +3134,7 @@
                                     icon: A
                                 })]
                             })
-                        }), M ? s : null]
+                        }), R ? s : null]
                     })
                 }
                 constructor(...e) {
@@ -3919,59 +3921,59 @@
                 }
                 return new Set
             }
-            let M = {
+            let R = {
                     MINUTES: "minutes",
                     HOURS: "hours",
                     DAYS: "days",
                     NEVER: "never"
                 },
-                R = {
+                M = {
                     [l.INVITE_OPTIONS_30_MINUTES.value]: {
                         value: 30,
-                        type: M.MINUTES
+                        type: R.MINUTES
                     },
                     [l.INVITE_OPTIONS_1_HOUR.value]: {
                         value: 1,
-                        type: M.HOURS
+                        type: R.HOURS
                     },
                     [l.INVITE_OPTIONS_6_HOURS.value]: {
                         value: 6,
-                        type: M.HOURS
+                        type: R.HOURS
                     },
                     [l.INVITE_OPTIONS_12_HOURS.value]: {
                         value: 12,
-                        type: M.HOURS
+                        type: R.HOURS
                     },
                     [l.INVITE_OPTIONS_1_DAY.value]: {
                         value: 1,
-                        type: M.DAYS
+                        type: R.DAYS
                     },
                     [l.INVITE_OPTIONS_7_DAYS.value]: {
                         value: 7,
-                        type: M.DAYS
+                        type: R.DAYS
                     },
                     [l.INVITE_OPTIONS_30_DAYS.value]: {
                         value: 30,
-                        type: M.DAYS
+                        type: R.DAYS
                     },
                     [l.INVITE_OPTIONS_FOREVER.value]: {
                         value: 0,
-                        type: M.NEVER
+                        type: R.NEVER
                     }
                 };
 
             function L(e, t) {
                 let n = parseInt(t, 10),
                     l = 0 === n,
-                    a = R[e].value,
-                    s = R[e].type;
+                    a = M[e].value,
+                    s = M[e].type;
                 switch (s) {
-                    case M.MINUTES:
+                    case R.MINUTES:
                         if (l) return I.default.Messages.INVITE_EXPIRES_MINUTES;
                         return I.default.Messages.INVITE_EXPIRES_MINUTES_OR_USES.format({
                             numUses: n
                         });
-                    case M.HOURS:
+                    case R.HOURS:
                         if (l) return I.default.Messages.INVITE_EXPIRES_HOURS.format({
                             numHours: a
                         });
@@ -3979,7 +3981,7 @@
                             numHours: a,
                             numUses: n
                         });
-                    case M.DAYS:
+                    case R.DAYS:
                         if (l) return I.default.Messages.INVITE_EXPIRES_DAYS_PLURAL.format({
                             numDays: a
                         });
@@ -3987,7 +3989,7 @@
                             numDays: a,
                             numUses: n
                         });
-                    case M.NEVER:
+                    case R.NEVER:
                         if (l) return I.default.Messages.INVITE_EXPIRES_NEVER;
                         return I.default.Messages.INVITE_EXPIRES_USES.format({
                             numUses: n
