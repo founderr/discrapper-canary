@@ -450,7 +450,7 @@
                 NUM_RECENTLY_HEARD_SOUNDS: function() {
                     return d
                 },
-                NUM_FREQUENTLY_PLAYED_SOUNDS: function() {
+                NUM_FREQUENTLY_USED_SOUNDS: function() {
                     return c
                 }
             }), n("222007");

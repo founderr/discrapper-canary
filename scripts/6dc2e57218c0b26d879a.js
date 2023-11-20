@@ -811,8 +811,8 @@
                     activeSections: V,
                     commandsByActiveSection: K,
                     hasMoreAfter: W,
-                    commands: q,
-                    filteredSectionId: Y,
+                    commands: Y,
+                    filteredSectionId: q,
                     scrollDown: z,
                     filterSection: Q
                 } = T.useDiscovery(n, {
@@ -844,7 +844,7 @@
                 };
                 i.useEffect(() => {
                     Z(a.current)
-                }, [q]);
+                }, [Y]);
                 let J = i.useCallback(e => {
                         let t = e === V.length - 1;
                         return t && !W ? 0 : 16
@@ -853,17 +853,17 @@
                 i.useEffect(() => {
                     null != w.current && F && null != U && w.current.scrollRowIntoView(U)
                 }, [F, U]), i.useLayoutEffect(() => {
-                    if (null != Y) {
+                    if (null != q) {
                         var e;
                         null === (e = w.current) || void 0 === e || e.scrollToSectionTop(0)
                     }
-                }, [q, Y]);
+                }, [Y, q]);
                 let ee = i.useCallback(e => {
-                        if (e.id === Y || e.id === A.BuiltInSectionId.FRECENCY) {
+                        if (e.id === q || e.id === A.BuiltInSectionId.FRECENCY) {
                             var t;
                             Q(null), null === (t = w.current) || void 0 === t || t.scrollToSectionTop(0)
                         } else Q(e.id)
-                    }, [Q, Y]),
+                    }, [Q, q]),
                     et = i.useCallback((e, t, l) => {
                         g.setActiveCommand({
                             channelId: n.id,
@@ -888,13 +888,13 @@
                             } return !0
                     },
                     onMoveSelection: e => {
-                        if (0 === q.length) return !0;
+                        if (0 === Y.length) return !0;
                         let t = W ? 7 : 0,
-                            n = q.length + t,
+                            n = Y.length + t,
                             l = null == U ? 0 : U + e;
                         return l >= n ? l = n - 1 : l < 0 && (l = 0), D(l), B(!0), !0
                     }
-                }), [q.length, K, W, G, et, U]);
+                }), [Y.length, K, W, G, et, U]);
                 let en = i.useCallback(e => {
                         let t = V[e];
                         if (null == t) return null;
@@ -966,7 +966,7 @@
                         className: M.rail,
                         channel: n,
                         sections: G,
-                        filteredSectionId: Y,
+                        filteredSectionId: q,
                         activeCategoryIndex: H,
                         onSectionClick: ee,
                         applicationCommandListRef: w
@@ -5762,7 +5762,7 @@
                     channel: H,
                     handleSubmit: G,
                     isEmpty: V
-                } = e, K = (0, o.useStateFromStores)([a.default], () => a.default.isSubmitButtonEnabled), W = (0, o.useStateFromStores)([h.default], () => h.default.getStickerPreview(H.id, F.drafts.type)), q = null != W && W.length > 0, Y = (0, o.useStateFromStores)([E.default], () => E.default.getUploads(H.id, F.drafts.type)), {
+                } = e, K = (0, o.useStateFromStores)([a.default], () => a.default.isSubmitButtonEnabled), W = (0, o.useStateFromStores)([h.default], () => h.default.getStickerPreview(H.id, F.drafts.type)), Y = null != W && W.length > 0, q = (0, o.useStateFromStores)([E.default], () => E.default.getUploads(H.id, F.drafts.type)), {
                     activeCommand: z,
                     activeCommandOption: Q
                 } = (0, o.useStateFromStoresObject)([d.default], () => ({
@@ -5838,7 +5838,7 @@
                     type: F
                 }, "expression")), (null === (I = F.submit) || void 0 === I ? void 0 : I.button) != null && ((null === (N = F.submit) || void 0 === N ? void 0 : N.ignorePreference) || K) && Z.push((0, l.jsx)(A.default, {
                     onClick: G,
-                    disabled: B || 0 === Y.length && V && !q
+                    disabled: B || 0 === q.length && V && !Y
                 }, "submit")), 0 === Z.length) ? null : (0, l.jsx)("div", {
                     className: b.buttons,
                     children: Z
@@ -5895,8 +5895,8 @@
                 V = n("697218"),
                 K = n("378765"),
                 W = n("991170"),
-                q = n("773336"),
-                Y = n("545054"),
+                Y = n("773336"),
+                q = n("545054"),
                 z = n("850391"),
                 Q = n("743825"),
                 X = n("231868"),
@@ -5941,8 +5941,8 @@
                         canMentionChannels: eV,
                         maxCharacterCount: eK,
                         showRemainingCharsAfterCount: eW,
-                        allowNewLines: eq = !0,
-                        characterCountClassName: eY,
+                        allowNewLines: eY = !0,
+                        characterCountClassName: eq,
                         "aria-describedby": ez,
                         "aria-labelledby": eQ,
                         setEditorRef: eX,
@@ -6006,7 +6006,7 @@
                             isPendingMember: o,
                             ...s
                         }
-                    }(eR, eO, e6, e_), to = eO.toolbarType === z.SlateToolbarTypes.STATIC, ts = !D.UseLegacyChatInput.useSetting() && !(0, q.isAndroidWeb)() && null != window.ResizeObserver, ta = !ts || !(null === (r = eO.commands) || void 0 === r ? void 0 : r.enabled) || !eM || eg !== er.COMMAND_SENTINEL, tu = (0, k.usePollCreationStore)(e => {
+                    }(eR, eO, e6, e_), to = eO.toolbarType === z.SlateToolbarTypes.STATIC, ts = !D.UseLegacyChatInput.useSetting() && !(0, Y.isAndroidWeb)() && null != window.ResizeObserver, ta = !ts || !(null === (r = eO.commands) || void 0 === r ? void 0 : r.enabled) || !eM || eg !== er.COMMAND_SENTINEL, tu = (0, k.usePollCreationStore)(e => {
                         let {
                             isOpen: t
                         } = e;
@@ -6238,7 +6238,7 @@
                                 handleOuterClick: s
                             }
                         }(eO, tm, e5);
-                    (0, Y.useHereMentionCallback)(tm, eR.guild_id, eR.id);
+                    (0, q.useHereMentionCallback)(tm, eR.guild_id, eR.id);
                     let tj = null != eL,
                         tD = tn && !((te || tt) && tr) || tE && (null === (a = eO.submit) || void 0 === a ? void 0 : a.useDisabledStylesOnSubmit),
                         tw = null;
@@ -6323,7 +6323,7 @@
                                                 canPasteFiles: tl,
                                                 uploadPromptCharacterCount: ei.MAX_MESSAGE_LENGTH_PREMIUM,
                                                 maxCharacterCount: null != eK ? eK : td,
-                                                allowNewLines: eq,
+                                                allowNewLines: eY,
                                                 "aria-describedby": ez,
                                                 onChange: eP,
                                                 onResize: tR,
@@ -6386,7 +6386,7 @@
                                 }), tF ? (0, l.jsx)(et.default, {
                                     type: eO,
                                     textValue: eg,
-                                    className: eY,
+                                    className: eq,
                                     maxCharacterCount: eK,
                                     showRemainingCharsAfterCount: eW
                                 }) : null, tH ? (0, l.jsx)(N.default, {
@@ -7049,8 +7049,8 @@
                         onBlur: V,
                         onKeyDown: K,
                         onKeyUp: W,
-                        onTab: q,
-                        onEnter: Y,
+                        onTab: Y,
+                        onEnter: q,
                         onSubmit: z,
                         maybeShowAutocomplete: Q,
                         hideAutocomplete: X,
@@ -7169,8 +7169,8 @@
                         disableEnterToSubmit: en,
                         onKeyDown: K,
                         onKeyUp: W,
-                        onTab: q,
-                        onEnter: Y,
+                        onTab: Y,
+                        onEnter: q,
                         allowNewLines: el,
                         submit: ex,
                         hideAutocomplete: X,
@@ -13240,11 +13240,11 @@
                     type: V,
                     closeOnModalOuterClick: K = !1,
                     parentModalKey: W
-                } = e, q = i.useRef(null), Y = i.useRef(!1), z = i.useRef(), Q = i.useRef(null), {
+                } = e, Y = i.useRef(null), q = i.useRef(!1), z = i.useRef(), Q = i.useRef(null), {
                     drawerWidth: X,
                     handleDrawerResizeHandleMouseDown: Z
                 } = H({
-                    positionContainerRef: q,
+                    positionContainerRef: Y,
                     drawerRef: Q
                 }), J = (0, b.useExpressionPickerStore)(e => e.activeView), $ = (0, I.useHasSendableSticker)(G), {
                     renderWindow: ee,
@@ -13273,18 +13273,18 @@
                     return ee.addEventListener("mousedown", eo), ee.addEventListener("contextmenu", eo), et.subscribe(L.ComponentActions.POPOUT_CLOSE, es), O.ComponentDispatch.subscribe(L.ComponentActions.CLOSE_GIF_PICKER, e), () => {
                         ee.removeEventListener("mousedown", eo), ee.removeEventListener("contextmenu", eo), et.unsubscribe(L.ComponentActions.POPOUT_CLOSE, es), O.ComponentDispatch.unsubscribe(L.ComponentActions.CLOSE_GIF_PICKER, e)
                     }
-                }, [J, es, eo, ee, et]), (0, p.useFocusLock)(q), i.useEffect(() => {
+                }, [J, es, eo, ee, et]), (0, p.useFocusLock)(Y), i.useEffect(() => {
                     (0, b.setSearchQuery)("")
                 }, []), i.useEffect(() => {
                     (!ei && (0, f.hasAnyModalOpen)() || ei && !er) && (0, b.closeExpressionPicker)()
                 }, [er, ei]), i.useEffect(() => {
-                    if (null != Q.current && !Y.current) {
+                    if (null != Q.current && !q.current) {
                         var e, t, n, l;
-                        J === k.ExpressionPickerViewType.EMOJI ? (null == z ? void 0 : null === (e = z.current) || void 0 === e ? void 0 : e.onPickerOpen) != null && (null == z || null === (t = z.current) || void 0 === t || t.onPickerOpen(), Y.current = !0) : J === k.ExpressionPickerViewType.STICKER ? (null == z ? void 0 : null === (n = z.current) || void 0 === n ? void 0 : n.onPickerOpen) != null && !en && (null == z || null === (l = z.current) || void 0 === l || l.onPickerOpen(), Y.current = !0) : (S.default.trackWithMetadata(L.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
+                        J === k.ExpressionPickerViewType.EMOJI ? (null == z ? void 0 : null === (e = z.current) || void 0 === e ? void 0 : e.onPickerOpen) != null && (null == z || null === (t = z.current) || void 0 === t || t.onPickerOpen(), q.current = !0) : J === k.ExpressionPickerViewType.STICKER ? (null == z ? void 0 : null === (n = z.current) || void 0 === n ? void 0 : n.onPickerOpen) != null && !en && (null == z || null === (l = z.current) || void 0 === l || l.onPickerOpen(), q.current = !0) : (S.default.trackWithMetadata(L.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
                             width: Q.current.offsetWidth,
                             tab: J,
                             badged: !1
-                        }), Y.current = !0)
+                        }), q.current = !0)
                     }
                 });
                 let ea = (null === (t = V.gifs) || void 0 === t ? void 0 : t.allowSending) && !u.isMobile,
@@ -13307,7 +13307,7 @@
                                 className: o(w.positionContainer, {
                                     [w.positionContainerOnlyEmoji]: !ed
                                 }),
-                                ref: q,
+                                ref: Y,
                                 role: "dialog",
                                 "aria-label": D.default.Messages.EXPRESSION_PICKER,
                                 children: t ? (0, l.jsxs)("div", {
@@ -13459,8 +13459,8 @@
                     expressionsGrid: V,
                     rowCount: K,
                     rowCountBySection: W,
-                    columnCounts: q,
-                    gutterWidth: Y
+                    columnCounts: Y,
+                    gutterWidth: q
                 } = (0, o.useExpressionGrid)({
                     categories: t,
                     collapsedCategories: n,
@@ -13475,7 +13475,7 @@
                     handleGridContainerKeyDown: Z,
                     isUsingKeyboardNavigation: J
                 } = (0, o.useKeyboardNavigation)({
-                    columnCounts: q,
+                    columnCounts: Y,
                     expressionsListRef: D,
                     expressionsGrid: V,
                     onSelectItem: f,
@@ -13485,10 +13485,10 @@
                     let t = V[e];
                     return S(t, Q(e), {
                         isUsingKeyboardNavigation: J.current,
-                        gutterWidth: Y,
+                        gutterWidth: q,
                         rowIndex: e
                     }, t => z(e, t), t => c.setInspectedExpressionPosition(t, e))
-                }, [V, z, Q, Y, J, S, c]), ee = i.useCallback(e => null == g ? void 0 : g(t[e]), [t, g]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
+                }, [V, z, Q, q, J, S, c]), ee = i.useCallback(e => null == g ? void 0 : g(t[e]), [t, g]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
                     var e;
                     return null == y ? void 0 : y(null == V ? void 0 : null === (e = V[H.rowIndex]) || void 0 === e ? void 0 : e[H.columnIndex])
                 }, [V, H.columnIndex, H.rowIndex, y]);
@@ -13877,7 +13877,7 @@
                     onSelectSticker: s,
                     stickerIconVisible: c = !1,
                     submitButtonVisible: f = !1
-                } = e, y = o.useContext(E.default), [x, A] = o.useState(null), [P, U] = o.useState(!1), [j, B] = o.useState(null), H = (0, C.useExpressionPickerStore)(e => null != e.activeView), G = o.useRef(null), [V, K] = o.useState(""), [W, q] = o.useState(""), [Y, z] = o.useState(!1), [Q, X] = o.useState(!1), Z = (0, O.useStickerSuggestionResults)(V, P, l), {
+                } = e, y = o.useContext(E.default), [x, A] = o.useState(null), [P, U] = o.useState(!1), [j, B] = o.useState(null), H = (0, C.useExpressionPickerStore)(e => null != e.activeView), G = o.useRef(null), [V, K] = o.useState(""), [W, Y] = o.useState(""), [q, z] = o.useState(!1), [Q, X] = o.useState(!1), Z = (0, O.useStickerSuggestionResults)(V, P, l), {
                     analyticsLocations: J,
                     AnalyticsLocationProvider: $
                 } = (0, h.default)(m.default.EXPRESSION_SUGGESTIONS), {
@@ -13914,7 +13914,7 @@
                     })
                 }, [i]);
                 let ei = Z.length > 0,
-                    er = en && !H && !Y && !P && !Q && ei,
+                    er = en && !H && !q && !P && !Q && ei,
                     {
                         stickersNavigator: eo
                     } = function(e) {
@@ -13992,7 +13992,7 @@
                     ea = o.useRef([]),
                     eu = o.useRef(!1);
                 o.useEffect(() => {
-                    er && (ea.current = Z), er !== eu.current && (y.emit(er ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), er && ((0, M.throttledTrackExpressionSuggestionDisplayed)(V), q(V))), eu.current = er
+                    er && (ea.current = Z), er !== eu.current && (y.emit(er ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), er && ((0, M.throttledTrackExpressionSuggestionDisplayed)(V), Y(V))), eu.current = er
                 }, [y, er, Z, V]);
                 let ed = !er,
                     ec = er ? Z : ea.current;
@@ -14988,140 +14988,158 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return g
                 },
                 useSearchCategories: function() {
-                    return g
+                    return T
                 }
             }), n("222007"), n("424973");
             var l = n("884691"),
                 i = n("249654"),
                 r = n("446674"),
-                o = n("817963");
-            n("872173");
-            var s = n("305961"),
-                a = n("957255"),
-                u = n("697218"),
-                d = n("719923"),
-                c = n("469607"),
-                f = n("235004"),
-                p = n("389480"),
-                m = n("774473"),
-                h = n("846325");
+                o = n("817963"),
+                s = n("872173"),
+                a = n("305961"),
+                u = n("957255"),
+                d = n("697218"),
+                c = n("719923"),
+                f = n("469607"),
+                p = n("235004"),
+                m = n("389480"),
+                h = n("774473"),
+                E = n("846325");
 
-            function E(e) {
+            function C(e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                     n = e.map(e => ({
-                        type: p.SoundboardSoundItemType.SOUND,
+                        type: m.SoundboardSoundItemType.SOUND,
                         sound: e
                     }));
                 return t ? n.sort((e, t) => i.default.compare(e.sound.soundId, t.sound.soundId)) : n
             }
 
-            function C(e, t) {
+            function S(e, t) {
                 var n;
-                let l = null !== (n = t.get(h.DEFAULT_SOUND_GUILD_ID)) && void 0 !== n ? n : h.EMPTY_SOUND_LIST;
+                let l = null !== (n = t.get(E.DEFAULT_SOUND_GUILD_ID)) && void 0 !== n ? n : E.EMPTY_SOUND_LIST;
                 e.push({
-                    key: p.SoundboardSoundGridSectionType.DEFAULTS,
+                    key: m.SoundboardSoundGridSectionType.DEFAULTS,
                     categoryInfo: {
-                        type: p.SoundboardSoundGridSectionType.DEFAULTS
+                        type: m.SoundboardSoundGridSectionType.DEFAULTS
                     },
-                    items: E(l)
+                    items: C(l)
                 })
             }
 
-            function S(e) {
+            function g(e) {
                 let {
                     filterOutEmptyCurrentGuild: t = !1
-                } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], i = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), [S, g, T] = (0, r.useStateFromStoresArray)([f.default], () => [f.default.getSounds(), f.default.getFavorites(), f.default.isFetching()]), v = (0, r.useStateFromStores)([c.default], () => c.default.frecentlyHeardSounds), y = (0, m.useSortedGuildIdsForSoundboard)(e, !1), x = (0, r.useStateFromStoresArray)([s.default], () => {
+                } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], i = (0, r.useStateFromStores)([d.default], () => d.default.getCurrentUser()), [g, T, v] = (0, r.useStateFromStoresArray)([p.default], () => [p.default.getSounds(), p.default.getFavorites(), p.default.isFetching()]), y = function() {
+                    l.useEffect(() => {
+                        s.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                    }, []);
+                    let e = (0, r.useStateFromStores)([f.default], () => f.default.frecentlyHeardSounds);
+                    return e
+                }(), x = function() {
+                    l.useEffect(() => {
+                        s.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                    }, []);
+                    let e = (0, r.useStateFromStores)([f.default], () => f.default.frecentlyPlayedSounds);
+                    return e
+                }(), I = (0, h.useSortedGuildIdsForSoundboard)(e, !1), _ = (0, r.useStateFromStoresArray)([a.default], () => {
                     let e = [];
-                    return y.forEach(t => {
-                        let n = s.default.getGuild(t);
+                    return I.forEach(t => {
+                        let n = a.default.getGuild(t);
                         null != n && e.push(n)
                     }), e
-                }), I = d.default.canUseSoundboardEverywhere(i), _ = (0, r.useStateFromStores)([s.default], () => s.default.getGuild(null == e ? void 0 : e.guild_id)), N = (0, r.useStateFromStores)([a.default], () => {
+                }), N = c.default.canUseSoundboardEverywhere(i), A = (0, r.useStateFromStores)([a.default], () => a.default.getGuild(null == e ? void 0 : e.guild_id)), R = (0, r.useStateFromStores)([u.default], () => {
                     let {
                         canCreateExpressions: e
-                    } = (0, o.getManageResourcePermissions)(_);
+                    } = (0, o.getManageResourcePermissions)(A);
                     return e
-                }, [_]);
+                }, [A]);
                 return l.useMemo(() => {
-                    var e, l;
-                    let i = [];
-                    if (n) return C(i, S), {
-                        categories: i,
-                        isFetching: T
+                    var e, l, i, r;
+                    let o = [];
+                    if (n) return S(o, g), {
+                        categories: o,
+                        isFetching: v
                     };
-                    return e = i, (l = v).length > 0 && e.push({
-                        key: p.SoundboardSoundGridSectionType.RECENTLY_HEARD,
+                    return e = o, (l = y).length > 0 && e.push({
+                        key: m.SoundboardSoundGridSectionType.RECENTLY_HEARD,
                         categoryInfo: {
-                            type: p.SoundboardSoundGridSectionType.RECENTLY_HEARD
+                            type: m.SoundboardSoundGridSectionType.RECENTLY_HEARD
                         },
-                        items: E(l, !1)
+                        items: C(l, !1)
+                    }), i = o, (r = x).length > 0 && i.push({
+                        key: m.SoundboardSoundGridSectionType.FREQUENTLY_USED,
+                        categoryInfo: {
+                            type: m.SoundboardSoundGridSectionType.FREQUENTLY_USED
+                        },
+                        items: C(r, !1)
                     }), ! function(e, t, n, l) {
                         let i = [],
-                            r = [...t, h.DEFAULT_SOUND_GUILD_ID];
+                            r = [...t, E.DEFAULT_SOUND_GUILD_ID];
                         for (let e of r) {
                             var o;
                             let t = null !== (o = n.get(e)) && void 0 !== o ? o : [];
                             for (let e of t) l.has(e.soundId) && i.push(e)
                         }
-                        let s = E(i);
+                        let s = C(i);
                         s.length > 0 && e.push({
-                            key: p.SoundboardSoundGridSectionType.FAVORITES,
+                            key: m.SoundboardSoundGridSectionType.FAVORITES,
                             categoryInfo: {
-                                type: p.SoundboardSoundGridSectionType.FAVORITES
+                                type: m.SoundboardSoundGridSectionType.FAVORITES
                             },
                             items: s
                         })
-                    }(i, y, S, g), ! function(e, t, n, l, i) {
+                    }(o, I, g, T), ! function(e, t, n, l, i) {
                         var r;
                         if (null == t) return;
                         let o = null !== (r = l.get(t.id)) && void 0 !== r ? r : [],
-                            s = E(o),
+                            s = C(o),
                             a = o.length < t.getMaxSoundboardSlots() && n,
                             u = 0 === s.length;
                         (a || u) && !i && s.push({
-                            type: p.SoundboardSoundItemType.ADD_SOUND,
+                            type: m.SoundboardSoundItemType.ADD_SOUND,
                             guild: t
                         });
                         !(i && u) && e.push({
                             categoryInfo: {
-                                type: p.SoundboardSoundGridSectionType.GUILD,
+                                type: m.SoundboardSoundGridSectionType.GUILD,
                                 guild: t
                             },
                             key: t.id,
                             items: s
                         })
-                    }(i, _, N, S, t), !I && C(i, S), ! function(e, t, n, l) {
+                    }(o, A, R, g, t), !N && S(o, g), ! function(e, t, n, l) {
                         for (let r of t) {
                             var i;
                             if (r.id === n) continue;
                             let t = null !== (i = l.get(r.id)) && void 0 !== i ? i : [],
-                                o = E(t);
+                                o = C(t);
                             o.length > 0 && e.push({
                                 categoryInfo: {
-                                    type: p.SoundboardSoundGridSectionType.GUILD,
+                                    type: m.SoundboardSoundGridSectionType.GUILD,
                                     guild: r
                                 },
                                 key: r.id,
                                 items: o
                             })
                         }
-                    }(i, x, null == _ ? void 0 : _.id, S), I && C(i, S), {
-                        categories: i,
-                        isFetching: T
+                    }(o, _, null == A ? void 0 : A.id, g), N && S(o, g), {
+                        categories: o,
+                        isFetching: v
                     }
-                }, [y, S, g, v, _, N, t, I, x, n, T])
+                }, [I, g, T, y, x, A, R, t, N, _, n, v])
             }
 
-            function g(e, t, n) {
+            function T(e, t, n) {
                 return l.useMemo(() => n.length > 0 ? [{
-                    key: p.SoundboardSoundGridSectionType.SEARCH,
+                    key: m.SoundboardSoundGridSectionType.SEARCH,
                     categoryInfo: {
-                        type: p.SoundboardSoundGridSectionType.SEARCH
+                        type: m.SoundboardSoundGridSectionType.SEARCH
                     },
-                    items: E(t, !1)
+                    items: C(t, !1)
                 }] : e, [e, n.length, t])
             }
         },
@@ -15235,8 +15253,8 @@
                     ...K
                 } = e, {
                     soundId: W,
-                    name: q,
-                    emojiId: Y,
+                    name: Y,
+                    emojiId: q,
                     emojiName: z
                 } = k, Q = (0, a.useStateFromStores)([h.default], () => h.default.getCurrentUser()), X = (0, N.useSoundButtonContextMenu)(k, null == L ? void 0 : L.guild_id), {
                     playSoundboardSound: Z,
@@ -15263,7 +15281,7 @@
                     es = (0, a.useStateFromStores)([y.default], () => y.default.isFavoriteSound(W), [W]),
                     ea = "sound-".concat(k.soundId),
                     eu = (0, s.useListItem)(ea),
-                    ed = null != Y || null != z,
+                    ed = null != q || null != z,
                     ec = !(0, I.canUseSoundboardSound)(Q, k, L);
 
                 function ef(e) {
@@ -15362,7 +15380,7 @@
                             "aria-hidden": !0,
                             ref: et,
                             children: [ed && (0, l.jsx)(f.default, {
-                                emojiId: Y,
+                                emojiId: q,
                                 emojiName: z,
                                 className: O.emoji
                             }), (0, l.jsx)(c.Text, {
@@ -15371,7 +15389,7 @@
                                 className: o(O.soundName, {
                                     [O.hasEmoji]: ed
                                 }),
-                                children: q
+                                children: Y
                             })]
                         }), function() {
                             switch (V) {
@@ -15467,105 +15485,117 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return v
+                    return y
                 }
             });
             var l = n("37983"),
                 i = n("884691"),
                 r = n("414456"),
                 o = n.n(r),
-                s = n("77078"),
-                a = n("917764"),
-                u = n("986632"),
-                d = n("405607"),
-                c = n("423080"),
-                f = n("93393"),
-                p = n("153769"),
-                m = n("671434"),
-                h = n("389480"),
-                E = n("782340"),
-                C = n("510585");
-            let S = [8, 8, 8, 8];
+                s = n("308472"),
+                a = n("77078"),
+                u = n("917764"),
+                d = n("986632"),
+                c = n("405607"),
+                f = n("423080"),
+                p = n("93393"),
+                m = n("153769"),
+                h = n("671434"),
+                E = n("389480"),
+                C = n("782340"),
+                S = n("510585");
+            let g = [8, 8, 8, 8];
 
-            function g(e) {
+            function T(e) {
                 let {
                     icon: t,
                     isSelected: n,
                     onClick: i,
                     ...r
                 } = e;
-                return (0, l.jsx)(s.Clickable, {
+                return (0, l.jsx)(a.Clickable, {
                     ...r,
                     onClick: i,
-                    className: o(C.categoryIcon, {
-                        [C.selected]: n
+                    className: o(S.categoryIcon, {
+                        [S.selected]: n
                     }),
                     children: (0, l.jsx)(t, {
-                        className: C.categoryIconIcon
+                        className: S.categoryIconIcon
                     })
                 })
             }
 
-            function T(e, t, n, i) {
-                return (0, l.jsx)(s.Tooltip, {
+            function v(e, t, n, i) {
+                return (0, l.jsx)(a.Tooltip, {
                     text: function(e) {
                         switch (e.categoryInfo.type) {
-                            case h.SoundboardSoundGridSectionType.FAVORITES:
-                                return E.default.Messages.FAVORITES;
-                            case h.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-                                return E.default.Messages.RECENTLY_HEARD;
-                            case h.SoundboardSoundGridSectionType.GUILD:
-                                return (0, l.jsx)(c.GuildTooltipText, {
+                            case E.SoundboardSoundGridSectionType.FAVORITES:
+                                return C.default.Messages.FAVORITES;
+                            case E.SoundboardSoundGridSectionType.RECENTLY_HEARD:
+                                return C.default.Messages.RECENTLY_HEARD;
+                            case E.SoundboardSoundGridSectionType.FREQUENTLY_USED:
+                                return C.default.Messages.FREQUENTLY_USED;
+                            case E.SoundboardSoundGridSectionType.GUILD:
+                                return (0, l.jsx)(f.GuildTooltipText, {
                                     guild: e.categoryInfo.guild,
                                     includeActivity: !1
                                 });
-                            case h.SoundboardSoundGridSectionType.DEFAULTS:
-                                return E.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS
+                            case E.SoundboardSoundGridSectionType.DEFAULTS:
+                                return C.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS
                         }
                     }(e),
                     "aria-label": function(e) {
                         switch (e.categoryInfo.type) {
-                            case h.SoundboardSoundGridSectionType.FAVORITES:
-                                return E.default.Messages.FAVORITES;
-                            case h.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-                                return E.default.Messages.RECENTLY_HEARD;
-                            case h.SoundboardSoundGridSectionType.GUILD:
+                            case E.SoundboardSoundGridSectionType.FAVORITES:
+                                return C.default.Messages.FAVORITES;
+                            case E.SoundboardSoundGridSectionType.RECENTLY_HEARD:
+                                return C.default.Messages.RECENTLY_HEARD;
+                            case E.SoundboardSoundGridSectionType.FREQUENTLY_USED:
+                                return C.default.Messages.FREQUENTLY_USED;
+                            case E.SoundboardSoundGridSectionType.GUILD:
                                 return e.categoryInfo.guild.name;
-                            case h.SoundboardSoundGridSectionType.DEFAULTS:
-                                return E.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS
+                            case E.SoundboardSoundGridSectionType.DEFAULTS:
+                                return C.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS
                         }
                     }(e),
                     position: "right",
                     children: t => (function(e, t, n, i) {
                         switch (e.categoryInfo.type) {
-                            case h.SoundboardSoundGridSectionType.FAVORITES:
-                                return (0, l.jsx)(g, {
+                            case E.SoundboardSoundGridSectionType.FAVORITES:
+                                return (0, l.jsx)(T, {
                                     ...i,
-                                    icon: m.default,
+                                    icon: h.default,
                                     onClick: t,
                                     isSelected: n
                                 }, e.key);
-                            case h.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-                                return (0, l.jsx)(g, {
+                            case E.SoundboardSoundGridSectionType.RECENTLY_HEARD:
+                                return (0, l.jsx)(T, {
                                     ...i,
-                                    icon: f.default,
+                                    icon: p.default,
                                     onClick: t,
                                     isSelected: n
                                 }, e.key);
-                            case h.SoundboardSoundGridSectionType.GUILD:
-                                return (0, l.jsx)(s.Clickable, {
+                            case E.SoundboardSoundGridSectionType.FREQUENTLY_USED:
+                                return (0, l.jsx)(T, {
                                     ...i,
-                                    className: C.category,
+                                    icon: s.AnalyticsIcon,
                                     onClick: t,
-                                    children: (0, l.jsx)(a.default, {
+                                    isSelected: n
+                                }, e.key);
+                            case E.SoundboardSoundGridSectionType.GUILD:
+                                return (0, l.jsx)(a.Clickable, {
+                                    ...i,
+                                    className: S.category,
+                                    onClick: t,
+                                    children: (0, l.jsx)(u.default, {
                                         guild: e.categoryInfo.guild,
                                         isSelected: n
                                     })
                                 }, e.key);
-                            case h.SoundboardSoundGridSectionType.DEFAULTS:
-                                return (0, l.jsx)(g, {
+                            case E.SoundboardSoundGridSectionType.DEFAULTS:
+                                return (0, l.jsx)(T, {
                                     ...i,
-                                    icon: p.default,
+                                    icon: m.default,
                                     onClick: t,
                                     isSelected: n
                                 }, e.key);
@@ -15576,20 +15606,20 @@
                 })
             }
 
-            function v(e) {
+            function y(e) {
                 let {
                     soundboardListRef: t,
                     categories: n,
-                    listPadding: r = S
+                    listPadding: r = g
                 } = e, o = i.useRef(null);
-                return (0, l.jsx)(d.default, {
-                    className: C.categoryList,
+                return (0, l.jsx)(c.default, {
+                    className: S.categoryList,
                     categoryListRef: o,
                     expressionsListRef: t,
-                    store: u.SoundboardPickerStore,
+                    store: d.SoundboardPickerStore,
                     categories: n,
                     listPadding: r,
-                    renderCategoryListItem: T,
+                    renderCategoryListItem: v,
                     rowCount: n.length,
                     categoryHeight: 40
                 })
@@ -15787,7 +15817,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return W
+                    return Y
                 }
             }), n("222007");
             var l = n("37983"),
@@ -15795,113 +15825,120 @@
                 r = n("414456"),
                 o = n.n(r),
                 s = n("446674"),
-                a = n("77078"),
-                u = n("272030"),
-                d = n("96386"),
-                c = n("685665"),
-                f = n("917764"),
-                p = n("986632"),
-                m = n("538282"),
-                h = n("522096"),
-                E = n("845579"),
-                C = n("697218"),
-                S = n("800762"),
-                g = n("476765"),
-                T = n("461380"),
-                v = n("93393"),
-                y = n("153769"),
-                x = n("671434"),
-                I = n("229915"),
-                _ = n("368121"),
-                N = n("719923"),
-                A = n("880342"),
-                R = n("389480"),
-                O = n("78581"),
-                M = n("262439"),
-                b = n("557585"),
-                k = n("553372"),
-                L = n("122557"),
-                P = n("478477"),
-                U = n("181021"),
-                j = n("299069"),
-                D = n("569717"),
-                w = n("782340"),
-                F = n("872759");
-            let B = [8, 0, 8, 8];
+                a = n("308472"),
+                u = n("77078"),
+                d = n("272030"),
+                c = n("96386"),
+                f = n("685665"),
+                p = n("917764"),
+                m = n("986632"),
+                h = n("538282"),
+                E = n("522096"),
+                C = n("845579"),
+                S = n("697218"),
+                g = n("800762"),
+                T = n("476765"),
+                v = n("461380"),
+                y = n("93393"),
+                x = n("153769"),
+                I = n("671434"),
+                _ = n("229915"),
+                N = n("368121"),
+                A = n("719923"),
+                R = n("880342"),
+                O = n("389480"),
+                M = n("78581"),
+                b = n("262439"),
+                k = n("557585"),
+                L = n("553372"),
+                P = n("122557"),
+                U = n("478477"),
+                j = n("181021"),
+                D = n("299069"),
+                w = n("569717"),
+                F = n("782340"),
+                B = n("872759");
+            let H = [8, 0, 8, 8];
 
-            function H(e) {
+            function G(e) {
                 return 0 === e ? 16 : 32
             }
 
-            function G(e) {
+            function V(e) {
                 let {
                     categoryInfo: t,
                     collapsed: n,
                     toggleCollapsed: i,
                     index: r
                 } = e;
-                return (0, l.jsxs)(a.Clickable, {
-                    className: o(F.sectionHeader, {
-                        [F.notFirstSectionHeader]: 0 !== r
+                return (0, l.jsxs)(u.Clickable, {
+                    className: o(B.sectionHeader, {
+                        [B.notFirstSectionHeader]: 0 !== r
                     }),
                     onClick: i,
                     children: [function() {
                         switch (t.type) {
-                            case R.SoundboardSoundGridSectionType.FAVORITES:
-                                return (0, l.jsx)(x.default, {
-                                    className: F.headerIcon
+                            case O.SoundboardSoundGridSectionType.FAVORITES:
+                                return (0, l.jsx)(I.default, {
+                                    className: B.headerIcon
                                 });
-                            case R.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-                                return (0, l.jsx)(v.default, {
-                                    className: F.headerIcon
+                            case O.SoundboardSoundGridSectionType.RECENTLY_HEARD:
+                                return (0, l.jsx)(y.default, {
+                                    className: B.headerIcon
                                 });
-                            case R.SoundboardSoundGridSectionType.GUILD:
-                                return (0, l.jsx)(f.default, {
+                            case O.SoundboardSoundGridSectionType.FREQUENTLY_USED:
+                                return (0, l.jsx)(a.AnalyticsIcon, {
+                                    className: B.headerIcon
+                                });
+                            case O.SoundboardSoundGridSectionType.GUILD:
+                                return (0, l.jsx)(p.default, {
                                     guild: t.guild,
                                     height: 16,
                                     width: 16
                                 });
-                            case R.SoundboardSoundGridSectionType.DEFAULTS:
-                                return (0, l.jsx)(y.default, {
-                                    className: F.headerIcon
+                            case O.SoundboardSoundGridSectionType.DEFAULTS:
+                                return (0, l.jsx)(x.default, {
+                                    className: B.headerIcon
                                 });
-                            case R.SoundboardSoundGridSectionType.SEARCH:
-                                return (0, l.jsx)(I.default, {
-                                    className: F.headerIcon
+                            case O.SoundboardSoundGridSectionType.SEARCH:
+                                return (0, l.jsx)(_.default, {
+                                    className: B.headerIcon
                                 })
                         }
-                    }(), (0, l.jsx)(a.Heading, {
+                    }(), (0, l.jsx)(u.Heading, {
                         variant: "eyebrow",
                         color: "none",
-                        className: F.sectionTitle,
+                        className: B.sectionTitle,
                         children: function() {
                             switch (t.type) {
-                                case R.SoundboardSoundGridSectionType.FAVORITES:
-                                    return w.default.Messages.FAVORITES;
-                                case R.SoundboardSoundGridSectionType.RECENTLY_HEARD:
-                                    return w.default.Messages.RECENTLY_HEARD;
-                                case R.SoundboardSoundGridSectionType.GUILD:
+                                case O.SoundboardSoundGridSectionType.FAVORITES:
+                                    return F.default.Messages.FAVORITES;
+                                case O.SoundboardSoundGridSectionType.RECENTLY_HEARD:
+                                    return F.default.Messages.RECENTLY_HEARD;
+                                case O.SoundboardSoundGridSectionType.FREQUENTLY_USED:
+                                    return F.default.Messages.FREQUENTLY_USED;
+                                case O.SoundboardSoundGridSectionType.GUILD:
                                     return t.guild.name;
-                                case R.SoundboardSoundGridSectionType.DEFAULTS:
-                                    return w.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
-                                case R.SoundboardSoundGridSectionType.SEARCH:
-                                    return w.default.Messages.SEARCH_RESULTS_SECTION_LABEL
+                                case O.SoundboardSoundGridSectionType.DEFAULTS:
+                                    return F.default.Messages.SOUNDBOARD_SOUND_SECTION_DEFAULTS;
+                                case O.SoundboardSoundGridSectionType.SEARCH:
+                                    return F.default.Messages.SEARCH_RESULTS_SECTION_LABEL
                             }
                         }()
-                    }), (0, l.jsx)(T.default, {
-                        className: F.headerIcon,
-                        direction: n ? T.default.Directions.RIGHT : T.default.Directions.DOWN
+                    }), (0, l.jsx)(v.default, {
+                        className: B.headerIcon,
+                        direction: n ? v.default.Directions.RIGHT : v.default.Directions.DOWN
                     })]
                 })
             }
 
-            function V() {
-                return (0, l.jsx)(d.default, {
-                    message: w.default.Messages.SOUNDBOARD_SEARCH_EMPTY_STATE_BODY
+            function K() {
+                return (0, l.jsx)(c.default, {
+                    message: F.default.Messages.SOUNDBOARD_SEARCH_EMPTY_STATE_BODY
                 })
             }
 
-            function K(e) {
+            function W(e) {
                 let {
                     descriptors: t,
                     soundButtonProps: n,
@@ -15913,16 +15950,16 @@
                     onSelectItem: d,
                     onItemMouseEnter: c,
                     buttonOverlay: f
-                } = e, m = p.SoundboardPickerStore.useStore(e => e.inspectedExpressionPosition);
+                } = e, p = m.SoundboardPickerStore.useStore(e => e.inspectedExpressionPosition);
                 return (0, l.jsx)("ul", {
                     ...a,
-                    className: F.soundRow,
+                    className: B.soundRow,
                     children: t.map((e, t) => {
                         let l = "item-".concat(t),
-                            a = o && m.rowIndex === r && m.columnIndex === t;
+                            a = o && p.rowIndex === r && p.columnIndex === t;
                         switch (e.item.type) {
-                            case R.SoundboardSoundItemType.SOUND:
-                                return (0, i.createElement)(k.default, {
+                            case O.SoundboardSoundItemType.SOUND:
+                                return (0, i.createElement)(L.default, {
                                     ...u(t),
                                     ...n,
                                     key: "".concat(l, "-").concat(e.item.sound.soundId),
@@ -15934,8 +15971,8 @@
                                     enableSecondaryActions: !0,
                                     buttonOverlay: f
                                 });
-                            case R.SoundboardSoundItemType.ADD_SOUND:
-                                return (0, i.createElement)(L.default, {
+                            case O.SoundboardSoundItemType.ADD_SOUND:
+                                return (0, i.createElement)(P.default, {
                                     ...u(t),
                                     key: l,
                                     guild: e.item.guild,
@@ -15946,76 +15983,77 @@
                 })
             }
 
-            function W(e) {
+            function Y(e) {
                 let {
                     guildId: t,
                     channel: r,
                     containerWidth: o,
-                    onClose: d,
-                    onSelect: f,
-                    suppressPlaySound: T = !1,
+                    onClose: a,
+                    onSelect: c,
+                    suppressPlaySound: p = !1,
                     shouldShowUpsell: v = !0,
                     gridNotice: y,
                     soundButtonOverlay: x,
                     listPadding: I,
-                    renderHeader: k,
+                    renderHeader: _,
                     defaultSoundsOnly: L = !1
                 } = e, {
-                    analyticsLocations: W
-                } = (0, c.default)(), [q, Y] = i.useState(!1), z = (0, s.useStateFromStores)([C.default], () => C.default.getCurrentUser()), Q = (0, s.useStateFromStores)([S.default], () => {
+                    analyticsLocations: P
+                } = (0, f.default)(), [Y, q] = i.useState(!1), z = (0, s.useStateFromStores)([S.default], () => S.default.getCurrentUser()), Q = (0, s.useStateFromStores)([g.default], () => {
                     var e;
-                    return S.default.getVoiceState(t, null !== (e = null == z ? void 0 : z.id) && void 0 !== e ? e : "")
-                }), X = (null == Q ? void 0 : Q.selfDeaf) || (null == Q ? void 0 : Q.mute) || (null == Q ? void 0 : Q.suppress), Z = (0, m.useExpressionPickerStore)(e => e.searchQuery), J = (0, g.useUID)(), {
+                    return g.default.getVoiceState(t, null !== (e = null == z ? void 0 : z.id) && void 0 !== e ? e : "")
+                }), X = (null == Q ? void 0 : Q.selfDeaf) || (null == Q ? void 0 : Q.mute) || (null == Q ? void 0 : Q.suppress), Z = (0, h.useExpressionPickerStore)(e => e.searchQuery), J = (0, T.useUID)(), {
                     categories: $
-                } = (0, b.default)(r, void 0, L), {
-                    canSeeRecentlyHeard: ee
-                } = (0, A.useRecentlyHeardExperiment)({
+                } = (0, k.default)(r, void 0, L), {
+                    canSeeRecentlyHeard: ee,
+                    canSeeFrequentlyPlayed: et
+                } = (0, R.useRecentlyHeardExperiment)({
                     location: "soundboard-grid",
                     autoTrackExposure: !0
-                }), et = i.useMemo(() => ee ? $ : $.filter(e => e.key !== R.SoundboardSoundGridSectionType.RECENTLY_HEARD), [$, ee]), [en, el] = i.useState([]), ei = (0, b.useSearchCategories)(et, en, Z), er = E.SoundboardPickerCollapsedSections.useSetting(), eo = i.useMemo(() => new Set(er), [er]), es = null == r, ea = N.default.canUseCustomCallSounds(z), eu = i.useCallback(e => {
-                    let t = !eo.has(e);
-                    t ? eo.add(e) : eo.delete(e), E.SoundboardPickerCollapsedSections.updateSetting(Array.from(eo))
-                }, [eo]), ed = i.useCallback((e, t) => {
-                    if (!T && (0, O.canUseSoundboardSound)(z, e, r, !1)) {
+                }), en = i.useMemo(() => $.filter(e => (!!ee || e.key !== O.SoundboardSoundGridSectionType.RECENTLY_HEARD) && (!!et || e.key !== O.SoundboardSoundGridSectionType.FREQUENTLY_USED) || !1), [$, ee, et]), [el, ei] = i.useState([]), er = (0, k.useSearchCategories)(en, el, Z), eo = C.SoundboardPickerCollapsedSections.useSetting(), es = i.useMemo(() => new Set(eo), [eo]), ea = null == r, eu = A.default.canUseCustomCallSounds(z), ed = i.useCallback(e => {
+                    let t = !es.has(e);
+                    t ? es.add(e) : es.delete(e), C.SoundboardPickerCollapsedSections.updateSetting(Array.from(es))
+                }, [es]), ec = i.useCallback((e, t) => {
+                    if (!p && (0, M.canUseSoundboardSound)(z, e, r, !1)) {
                         var n;
-                        (0, O.playSound)(e, null !== (n = null == r ? void 0 : r.id) && void 0 !== n ? n : "", t)
+                        (0, M.playSound)(e, null !== (n = null == r ? void 0 : r.id) && void 0 !== n ? n : "", t)
                     } else {
-                        if ((0, O.canUseSoundboardSound)(z, e, r)) return;
-                        v && Y(!0)
+                        if ((0, M.canUseSoundboardSound)(z, e, r)) return;
+                        v && q(!0)
                     }
-                }, [T, z, r, v]), ec = i.useCallback(e => {
+                }, [p, z, r, v]), ef = i.useCallback(e => {
                     switch (e.item.type) {
-                        case R.SoundboardSoundItemType.SOUND:
-                            return null == f || f(e.item.sound), ed(e.item.sound, W);
-                        case R.SoundboardSoundItemType.ADD_SOUND:
-                            return (0, D.default)(e.item.guild.id)
+                        case O.SoundboardSoundItemType.SOUND:
+                            return null == c || c(e.item.sound), ec(e.item.sound, P);
+                        case O.SoundboardSoundItemType.ADD_SOUND:
+                            return (0, w.default)(e.item.guild.id)
                     }
-                }, [W, ed, f]), ef = i.useCallback((e, t, n, i, o) => (0, l.jsx)(K, {
+                }, [P, ec, c]), ep = i.useCallback((e, t, n, i, o) => (0, l.jsx)(W, {
                     descriptors: e,
                     rowIndex: n.rowIndex,
                     isUsingKeyboardNavigation: n.isUsingKeyboardNavigation,
                     gridRowProps: t,
                     getItemProps: i,
                     onItemMouseEnter: o,
-                    suppressPlaySound: T,
-                    onSelectItem: ec,
+                    suppressPlaySound: p,
+                    onSelectItem: ef,
                     soundButtonProps: {
                         channel: r,
-                        interactive: es ? ea : !X,
-                        forceSecondaryActions: es,
-                        analyticsLocations: W
+                        interactive: ea ? eu : !X,
+                        forceSecondaryActions: ea,
+                        analyticsLocations: P
                     },
                     buttonOverlay: x
-                }, "row-".concat(t["aria-rowindex"])), [ec, r, X, T, W, es, ea, x]), ep = i.useCallback((e, t) => {
+                }, "row-".concat(t["aria-rowindex"])), [ef, r, X, p, P, ea, eu, x]), em = i.useCallback((e, t) => {
                     let n = "".concat(e.key);
-                    return (0, l.jsx)(G, {
+                    return (0, l.jsx)(V, {
                         categoryInfo: e.categoryInfo,
-                        toggleCollapsed: () => eu(n),
-                        collapsed: eo.has(n),
+                        toggleCollapsed: () => ed(n),
+                        collapsed: es.has(n),
                         index: t
                     }, "header-".concat(n))
-                }, [eo, eu]), em = i.useCallback(e => el((0, M.default)(e, et, z, r)), [r, z, et]), eh = i.useCallback(e => {
-                    (0, u.openContextMenuLazy)(e, async () => {
+                }, [es, ed]), eh = i.useCallback(e => ei((0, b.default)(e, en, z, r)), [r, z, en]), eE = i.useCallback(e => {
+                    (0, d.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
                         } = await n.el("136137").then(n.bind(n, "136137"));
@@ -16023,54 +16061,54 @@
                             ...t
                         })
                     })
-                }, []), eE = i.useCallback(() => (0, l.jsx)(a.Clickable, {
+                }, []), eC = i.useCallback(() => (0, l.jsx)(u.Clickable, {
                     tabIndex: 0,
-                    className: F.settingsClickArea,
-                    onClick: eh,
-                    "aria-label": w.default.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME,
-                    children: (0, l.jsx)(_.default, {
-                        className: F.settingsIcon
+                    className: B.settingsClickArea,
+                    onClick: eE,
+                    "aria-label": F.default.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME,
+                    children: (0, l.jsx)(N.default, {
+                        className: B.settingsIcon
                     })
-                }), [eh]), eC = i.useCallback(e => (0, l.jsx)(P.default, {
+                }), [eE]), eS = i.useCallback(e => (0, l.jsx)(U.default, {
                     soundboardListRef: e,
-                    categories: et,
+                    categories: en,
                     listPadding: I
-                }), [et, I]), eS = i.useCallback(e => {
-                    if ((null == e ? void 0 : e.item.type) === R.SoundboardSoundItemType.SOUND) {
+                }), [en, I]), eg = i.useCallback(e => {
+                    if ((null == e ? void 0 : e.item.type) === O.SoundboardSoundItemType.SOUND) {
                         var t;
-                        return (0, l.jsx)(U.default, {
-                            closePicker: d,
+                        return (0, l.jsx)(j.default, {
+                            closePicker: a,
                             soundboardSound: null !== (t = null == e ? void 0 : e.item.sound) && void 0 !== t ? t : null
                         })
                     }
                     return null
-                }, [d]);
+                }, [a]);
                 return (0, l.jsxs)(l.Fragment, {
-                    children: [q && (0, l.jsx)(j.default, {
-                        onClose: () => Y(!1),
-                        closePopout: d
-                    }), (0, l.jsx)(h.default, {
-                        categories: ei,
-                        collapsedCategories: eo,
+                    children: [Y && (0, l.jsx)(D.default, {
+                        onClose: () => q(!1),
+                        closePopout: a
+                    }), (0, l.jsx)(E.default, {
+                        categories: er,
+                        collapsedCategories: es,
                         containerWidth: o,
-                        store: p.SoundboardPickerStore,
-                        onSelectItem: ec,
-                        onSearchExpressions: em,
-                        hasSearchResults: en.length > 0,
-                        defaultSearchPlaceholder: w.default.Messages.SOUNDBOARD_SEARCH_PLACEHOLDER,
-                        renderRow: ef,
-                        renderSectionHeader: ep,
-                        renderCategoryList: eC,
-                        renderHeaderAccessories: eE,
+                        store: m.SoundboardPickerStore,
+                        onSelectItem: ef,
+                        onSearchExpressions: eh,
+                        hasSearchResults: el.length > 0,
+                        defaultSearchPlaceholder: F.default.Messages.SOUNDBOARD_SEARCH_PLACEHOLDER,
+                        renderRow: ep,
+                        renderSectionHeader: em,
+                        renderCategoryList: eS,
+                        renderHeaderAccessories: eC,
                         rowHeight: 48,
-                        sectionHeaderHeight: H,
-                        listPadding: B,
+                        sectionHeaderHeight: G,
+                        listPadding: H,
                         itemNodeWidth: 150,
                         gridNavigatorId: J,
-                        renderEmptySearchState: V,
-                        renderInspector: eS,
+                        renderEmptySearchState: K,
+                        renderInspector: eg,
                         gridNotice: y,
-                        renderHeader: k
+                        renderHeader: _
                     })]
                 })
             }
@@ -16514,11 +16552,11 @@
                 V = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
                 K = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
                 W = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
-                q = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
-                Y = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
+                Y = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
+                q = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
                 z = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
-                Q = q + 2 * z,
-                X = Y + 2 * z,
+                Q = Y + 2 * z,
+                X = q + 2 * z,
                 Z = o(A.trackStickerSearchEmpty, 200),
                 J = o(A.trackStickerSearchResultsViewed, 200),
                 $ = i.forwardRef(function(e, t) {
@@ -16527,9 +16565,9 @@
                         containerWidth: o,
                         channel: u,
                         onSelectSticker: I,
-                        closePopout: q
+                        closePopout: Y
                     } = e, {
-                        location: Y
+                        location: q
                     } = (0, c.useAnalyticsContext)(), {
                         AnalyticsLocationProvider: z
                     } = (0, p.default)(f.default.STICKER_PICKER);
@@ -16592,7 +16630,7 @@
                                 case M.StickerGridItemTypes.CREATE_STICKER:
                                     x.default.track(F.AnalyticEvents.OPEN_MODAL, {
                                         type: F.AnalyticsSections.CREATE_STICKER_MODAL,
-                                        location: Y
+                                        location: q
                                     }), (0, d.openModalLazy)(async () => {
                                         let {
                                             default: t
@@ -16606,7 +16644,7 @@
                                 case M.StickerGridItemTypes.STICKER:
                                     null != e.sticker && (0, N.isSendableSticker)(e.sticker, ef, u) && eT(e)
                             }
-                        }, [Y, ef, u, eT]),
+                        }, [q, ef, u, eT]),
                         {
                             getItemProps: eR,
                             getRowProps: eO,
@@ -16650,10 +16688,10 @@
                         null === (e = en.current) || void 0 === e || e.focus()
                     }, []);
                     let eP = i.useCallback(() => {
-                        q(), x.default.track(F.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+                        Y(), x.default.track(F.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                             location_section: F.AnalyticsSections.STICKER_PICKER_UPSELL
                         }), (0, C.navigateToPremiumMarketingPage)()
-                    }, [q]);
+                    }, [Y]);
                     return (0, l.jsxs)(z, {
                         children: [!($ && ea) && (0, l.jsx)("div", {
                             className: B.header,
@@ -16665,7 +16703,7 @@
                             })
                         }), ea ? (0, l.jsx)(L.default, {
                             className: B.emptyState,
-                            onClose: q
+                            onClose: Y
                         }) : (0, l.jsxs)(l.Fragment, {
                             children: [(0, l.jsx)("div", {
                                 ref: ee,
@@ -17262,8 +17300,8 @@
                 V = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
                 K = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP),
                 W = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP_SEARCH_RESULTS),
-                q = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
-                Y = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
+                Y = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+                q = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
                 z = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
                 Q = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT),
                 X = (0, N.cssValueToNumber)(s.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
@@ -17274,8 +17312,8 @@
                 et = Z + 2 * $,
                 en = et + ee,
                 el = J + 2 * $ + ee,
-                ei = [K, q, Y, z],
-                er = [W, q, Y, z],
+                ei = [K, Y, q, z],
+                er = [W, Y, q, z],
                 eo = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
                 es = ["laugh", "wave", "yes", "dance", "sad", "no", "hi", "bye", "cry", "ok"],
                 ea = e => {
@@ -17365,9 +17403,9 @@
                         onSelectSticker: r,
                         channel: A,
                         currentUser: P
-                    }), [K, W] = i.useState(!1), q = i.useCallback(e => {
+                    }), [K, W] = i.useState(!1), Y = i.useCallback(e => {
                         g.StickerPickerCollapsedSections.updateSetting(Array.from(e))
-                    }, []), Y = i.useCallback(e => {
+                    }, []), q = i.useCallback(e => {
                         let t = E[e];
                         return null != t ? (0, l.jsx)(U.default, {
                             getStickerItemProps: s,
@@ -17399,8 +17437,8 @@
                             tab: w.ExpressionPickerViewType.STICKER,
                             collapsed: !i,
                             sticker_pack_id: n ? e : null
-                        }), q(l)
-                    }, [R, t, q]), ee = i.useCallback(e => {
+                        }), Y(l)
+                    }, [R, t, Y]), ee = i.useCallback(e => {
                         let n = C[e];
                         if (null != y) {
                             let {
@@ -17515,7 +17553,7 @@
                         return n.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL || l ? 0 : eo
                     }, [C, t]);
                     return {
-                        renderRow: Y,
+                        renderRow: q,
                         renderSection: z,
                         renderSectionHeader: ee,
                         sectionHeaderHeight: et,
@@ -17562,7 +17600,7 @@
                         filteredStickers: a,
                         ownedStickerPacks: U,
                         channel: _
-                    }), q = (0, C.useSynchronizedActiveCategoryIndexForScrollPosition)({
+                    }), Y = (0, C.useSynchronizedActiveCategoryIndexForScrollPosition)({
                         activeCategoryIndex: R,
                         isScrolling: N,
                         listRef: A,
@@ -17623,7 +17661,7 @@
                             }) : (0, l.jsx)(y.default, {
                                 role: "none presentation",
                                 listPadding: null != a ? er : ei,
-                                onScroll: q,
+                                onScroll: Y,
                                 renderRow: j,
                                 renderSection: null == a ? D : void 0,
                                 renderSectionHeader: K,

@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["38170"], {
+    ["22961"], {
         48648: function(t, e, n) {
             if (n("808653"), n("424973"), !r) var r = {
                 map: function(t, e) {
@@ -143,21 +143,21 @@
                 }, {
                     quantize: function(u, a) {
                         if (!u.length || a < 2 || a > 256) return !1;
-                        var l, s, c, d, _, E, f, I, h, A, T, N, p, S, O, v, g = (l = u, _ = Array(32768), l.forEach(function(n) {
-                                c = n[0] >> t, d = n[1] >> t, _[s = e(c, d, n[2] >> t)] = (_[s] || 0) + 1
-                            }), _),
+                        var l, s, c, d, E, _, f, I, h, A, N, T, p, S, O, v, g = (l = u, E = Array(32768), l.forEach(function(n) {
+                                c = n[0] >> t, d = n[1] >> t, E[s = e(c, d, n[2] >> t)] = (E[s] || 0) + 1
+                            }), E),
                             C = 0;
                         g.forEach(function() {
                             C++
                         });
-                        var D = (E = u, f = g, T = 1e6, N = 0, p = 1e6, S = 0, O = 1e6, v = 0, E.forEach(function(e) {
-                                I = e[0] >> t, h = e[1] >> t, A = e[2] >> t, I < T ? T = I : I > N && (N = I), h < p ? p = h : h > S && (S = h), A < O ? O = A : A > v && (v = A)
-                            }), new i(T, N, p, S, O, v, f)),
-                            L = new n(function(t, e) {
+                        var M = (_ = u, f = g, N = 1e6, T = 0, p = 1e6, S = 0, O = 1e6, v = 0, _.forEach(function(e) {
+                                I = e[0] >> t, h = e[1] >> t, A = e[2] >> t, I < N ? N = I : I > T && (T = I), h < p ? p = h : h > S && (S = h), A < O ? O = A : A > v && (v = A)
+                            }), new i(N, T, p, S, O, v, f)),
+                            D = new n(function(t, e) {
                                 return r.naturalOrder(t.count(), e.count())
                             });
 
-                        function M(t, n) {
+                        function L(t, n) {
                             for (var i, o = 1, u = 0; u < 1e3;) {
                                 if (!(i = t.pop()).count()) {
                                     t.push(i), u++;
@@ -170,27 +170,27 @@
                                                 u = n.b2 - n.b1 + 1,
                                                 a = r.max([i, o, u]);
                                             if (1 == n.count()) return [n.copy()];
-                                            var l, s, c, d, _, E = 0,
+                                            var l, s, c, d, E, _ = 0,
                                                 f = [],
                                                 I = [];
                                             if (a == i)
                                                 for (l = n.r1; l <= n.r2; l++) {
                                                     for (d = 0, s = n.g1; s <= n.g2; s++)
-                                                        for (c = n.b1; c <= n.b2; c++) d += t[_ = e(l, s, c)] || 0;
-                                                    E += d, f[l] = E
+                                                        for (c = n.b1; c <= n.b2; c++) d += t[E = e(l, s, c)] || 0;
+                                                    _ += d, f[l] = _
                                                 } else if (a == o)
                                                     for (l = n.g1; l <= n.g2; l++) {
                                                         for (d = 0, s = n.r1; s <= n.r2; s++)
-                                                            for (c = n.b1; c <= n.b2; c++) d += t[_ = e(s, l, c)] || 0;
-                                                        E += d, f[l] = E
+                                                            for (c = n.b1; c <= n.b2; c++) d += t[E = e(s, l, c)] || 0;
+                                                        _ += d, f[l] = _
                                                     } else
                                                         for (l = n.b1; l <= n.b2; l++) {
                                                             for (d = 0, s = n.r1; s <= n.r2; s++)
-                                                                for (c = n.g1; c <= n.g2; c++) d += t[_ = e(s, c, l)] || 0;
-                                                            E += d, f[l] = E
+                                                                for (c = n.g1; c <= n.g2; c++) d += t[E = e(s, c, l)] || 0;
+                                                            _ += d, f[l] = _
                                                         }
                                             return f.forEach(function(t, e) {
-                                                I[e] = E - t
+                                                I[e] = _ - t
                                             }), h(a == i ? "r" : a == o ? "g" : "b")
                                         }
 
@@ -199,7 +199,7 @@
                                                 s = t + "2",
                                                 c = 0;
                                             for (l = n[a]; l <= n[s]; l++)
-                                                if (f[l] > E / 2) {
+                                                if (f[l] > _ / 2) {
                                                     for (i = n.copy(), o = n.copy(), e = l - n[a], u = e <= (r = n[s] - l) ? Math.min(n[s] - 1, ~~(l + r / 2)) : Math.max(n[a], ~~(l - 1 - e / 2)); !f[u];) u++;
                                                     for (c = I[u]; !c && f[u - 1];) c = I[--u];
                                                     return i[s] = u, o[a] = i[s] + 1, [i, o]
@@ -212,11 +212,11 @@
                                 if (t.push(l), s && (t.push(s), o++), o >= n || u++ > 1e3) return
                             }
                         }
-                        L.push(D), M(L, .75 * a);
+                        D.push(M), L(D, .75 * a);
                         for (var R = new n(function(t, e) {
                                 return r.naturalOrder(t.count() * t.volume(), e.count() * e.volume())
-                            }); L.size();) R.push(L.pop());
-                        M(R, a - R.size());
+                            }); D.size();) R.push(D.pop());
+                        L(R, a - R.size());
                         for (var m = new o; R.size();) m.push(R.pop());
                         return m
                     }
@@ -359,15 +359,15 @@
                         children: o,
                         error: c,
                         isLoading: d,
-                        maxLength: _,
-                        transitionState: E,
+                        maxLength: E,
+                        transitionState: _,
                         helpMessage: f,
                         retryPrompt: I,
                         retrySuccessMessage: h
                     } = this.props, {
                         code: A,
-                        errorMessage: T,
-                        retrySuccess: N
+                        errorMessage: N,
+                        retrySuccess: T
                     } = this.state, p = i.Children.count(o) > 0 ? (0, r.jsx)(a.Card, {
                         type: a.Card.Types.WARNING,
                         className: s.card,
@@ -385,7 +385,7 @@
                                 children: I
                             })
                         })]
-                    }) : null, O = N ? (0, r.jsx)(a.Card, {
+                    }) : null, O = T ? (0, r.jsx)(a.Card, {
                         type: a.Card.Types.SUCCESS,
                         className: s.card,
                         children: (0, r.jsx)(a.Text, {
@@ -394,7 +394,7 @@
                         })
                     }) : null;
                     return (0, r.jsx)(a.ModalRoot, {
-                        transitionState: E,
+                        transitionState: _,
                         children: (0, r.jsxs)("form", {
                             onSubmit: this.handleSubmit,
                             children: [(0, r.jsx)(a.ModalHeader, {
@@ -416,7 +416,7 @@
                                         inputRef: this.setRef,
                                         onChange: this.handleCodeChange,
                                         placeholder: null !== (t = this.getPlaceholder()) && void 0 !== t ? t : void 0,
-                                        maxLength: null != _ ? _ : 10,
+                                        maxLength: null != E ? E : 10,
                                         value: A,
                                         autoComplete: "one-time-code",
                                         autoFocus: !0
@@ -424,7 +424,7 @@
                                         color: "text-danger",
                                         variant: "text-xs/normal",
                                         className: s.error,
-                                        children: null != c ? c : T
+                                        children: null != c ? c : N
                                     }) : null, S]
                                 })]
                             }), (0, r.jsxs)(a.ModalFooter, {
@@ -646,7 +646,7 @@
                     return d
                 },
                 replaceRoleIconSourceSize: function() {
-                    return _
+                    return E
                 },
                 isRoleIconAssetUrl: function() {
                     return f
@@ -667,12 +667,12 @@
                     if (null == t) return null;
                     let n = null != t.unicodeEmoji ? r.default.getByName(r.default.convertSurrogateToName(t.unicodeEmoji, !1)) : void 0;
                     return {
-                        customIconSrc: E(t, e),
+                        customIconSrc: _(t, e),
                         unicodeEmoji: null != n ? n : void 0
                     }
                 },
-                _ = (t, e) => t.replace(/size=[0-9]+/g, "size=".concat((0, i.getBestMediaProxySize)(e * (0, i.getDevicePixelRatio)()))),
-                E = (t, e) => {
+                E = (t, e) => t.replace(/size=[0-9]+/g, "size=".concat((0, i.getBestMediaProxySize)(e * (0, i.getDevicePixelRatio)()))),
+                _ = (t, e) => {
                     let {
                         id: n,
                         icon: r
@@ -681,8 +681,8 @@
                     if (r.startsWith("data:")) return r;
                     let u = o.SUPPORTS_WEBP ? "webp" : "png",
                         d = "",
-                        _ = "quality=lossless";
-                    return (null != e && (d = "size=" + (0, i.getBestMediaProxySize)(e * (0, i.getDevicePixelRatio)()), _ = c ? "" : "&" + _), null != window.GLOBAL_ENV.CDN_HOST) ? "".concat(l, "/").concat(n, "/").concat(r, ".").concat(u, "?").concat(d).concat(_) : "".concat(s).concat(a.Endpoints.ROLE_ICON(n, r), "?").concat(d)
+                        E = "quality=lossless";
+                    return (null != e && (d = "size=" + (0, i.getBestMediaProxySize)(e * (0, i.getDevicePixelRatio)()), E = c ? "" : "&" + E), null != window.GLOBAL_ENV.CDN_HOST) ? "".concat(l, "/").concat(n, "/").concat(r, ".").concat(u, "?").concat(d).concat(E) : "".concat(s).concat(a.Endpoints.ROLE_ICON(n, r), "?").concat(d)
                 },
                 f = t => t.startsWith(l) || t.startsWith("".concat(s, "/roles")) && t.includes("/icons/"),
                 I = (t, e) => {
@@ -707,7 +707,7 @@
                 s = n("337543"),
                 c = n("697218"),
                 d = n("49111");
-            let _ = async (t, e) => {
+            let E = async (t, e) => {
                 let n = null != e ? e : s.default.getInviteKeyForGuildId(t),
                     o = c.default.getCurrentUser(),
                     u = !l.default.isMember(t, null == o ? void 0 : o.id);
@@ -740,7 +740,7 @@
                         guildId: t
                     })
                 }
-            }, E = async (t, e) => {
+            }, _ = async (t, e) => {
                 let n = await r.default.patch({
                         url: d.Endpoints.GUILD_MEMBER_VERIFICATION(t),
                         body: {
@@ -818,8 +818,8 @@
                 }
             };
             var A = {
-                fetchVerificationForm: _,
-                updateVerificationForm: E,
+                fetchVerificationForm: E,
+                updateVerificationForm: _,
                 updateVerificationFormDescription: f,
                 enableVerificationForm: I,
                 submitVerificationForm: h
@@ -850,10 +850,10 @@
                     return d
                 },
                 MAX_CHOICE_LENGTH: function() {
-                    return _
+                    return E
                 },
                 MAX_TEXT_RESPONSE_LENGTH: function() {
-                    return E
+                    return _
                 },
                 MAX_PARAGRAPH_RESPONSE_LENGTH: function() {
                     return f
@@ -877,8 +877,8 @@
                 s = 300,
                 c = 300,
                 d = 8,
-                _ = 150,
                 E = 150,
+                _ = 150,
                 f = 1e3,
                 I = 300,
                 h = "Membership Gating",
@@ -932,7 +932,7 @@
             "use strict";
             n.r(e), n.d(e, {
                 default: function() {
-                    return _
+                    return E
                 }
             });
             var r = n("37983");
@@ -954,7 +954,7 @@
                         guild_id: t
                     })
                 };
-            var _ = {
+            var E = {
                 openMemberVerificationModal(t, e) {
                     d(t);
                     let o = async e => {
@@ -1007,10 +1007,10 @@
             "use strict";
             n.r(e), n.d(e, {
                 startImpersonating: function() {
-                    return T
+                    return N
                 },
                 updateImpersonating: function() {
-                    return N
+                    return T
                 },
                 stopImpersonating: function() {
                     return p
@@ -1034,15 +1034,15 @@
                 s = n("305961"),
                 c = n("957255"),
                 d = n("18494"),
-                _ = n("282109"),
-                E = n("599110"),
+                E = n("282109"),
+                _ = n("599110"),
                 f = n("38654"),
                 I = n("507950"),
                 h = n("49111"),
                 A = n("724210");
 
-            function T(t, e) {
-                E.default.track(h.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
+            function N(t, e) {
+                _.default.track(h.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
                     num_roles: Object.keys(e.roles).length,
                     ...(0, i.collectGuildAnalyticsMetadata)(t),
                     is_viewing_as_member: e.type === I.ImpersonateType.NEW_MEMBER
@@ -1053,9 +1053,9 @@
                 }), S(t)
             }
 
-            function N(t, e) {
+            function T(t, e) {
                 let n = f.default.getData(t);
-                null != n && n.type === e.type && (E.default.track(h.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
+                null != n && n.type === e.type && (_.default.track(h.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
                     num_roles: Object.keys(n.roles).length,
                     ...(0, i.collectGuildAnalyticsMetadata)(t),
                     is_viewing_as_member: n.type === I.ImpersonateType.NEW_MEMBER
@@ -1087,8 +1087,8 @@
             }
 
             function O(t, e, n) {
-                let r = new Set(_.default.getOptedInChannels(t));
-                e.forEach(t => r.add(t)), n.forEach(t => r.delete(t)), N(t, {
+                let r = new Set(E.default.getOptedInChannels(t));
+                e.forEach(t => r.add(t)), n.forEach(t => r.delete(t)), T(t, {
                     type: I.ImpersonateType.NEW_MEMBER,
                     optInChannels: r
                 })
@@ -1110,14 +1110,14 @@
                     })
                 }(t, e);
                 let r = {};
-                e.forEach(t => r[t] = n.roles[t]), N(t, {
+                e.forEach(t => r[t] = n.roles[t]), T(t, {
                     type: I.ImpersonateType.NEW_MEMBER,
                     roles: r
                 })
             }
 
             function g(t, e) {
-                N(t, {
+                T(t, {
                     type: I.ImpersonateType.NEW_MEMBER,
                     ...e
                 })
@@ -1225,11 +1225,11 @@
                 }
             }
         },
-        399758: function(t, e, n) {
+        467592: function(t, e, n) {
             "use strict";
             n.r(e), n.d(e, {
                 default: function() {
-                    return s
+                    return c
                 }
             });
             var r = n("37983");
@@ -1237,24 +1237,110 @@
             var i = n("77078"),
                 o = n("272030"),
                 u = n("773336"),
-                a = n("26051"),
-                l = n("782340");
+                a = n("447651"),
+                l = n("26051"),
+                s = n("782340");
 
-            function s(t) {
+            function c(t) {
                 let {
-                    href: e,
-                    textContent: n,
-                    onSelect: s
-                } = t, c = (0, a.default)(e, n);
-                return u.isPlatformEmbedded && null != c ? (0, r.jsx)(i.Menu, {
+                    src: e,
+                    onSelect: n
+                } = t, c = (0, a.default)(e), d = (0, l.default)(e, null);
+                return u.isPlatformEmbedded ? (0, r.jsxs)(i.Menu, {
                     navId: "image-context",
                     onClose: o.closeContextMenu,
-                    "aria-label": l.default.Messages.IMAGE_ACTIONS_MENU_LABEL,
-                    onSelect: s,
-                    children: (0, r.jsx)(i.MenuGroup, {
+                    "aria-label": s.default.Messages.IMAGE_ACTIONS_MENU_LABEL,
+                    onSelect: n,
+                    children: [(0, r.jsx)(i.MenuGroup, {
                         children: c
-                    })
+                    }), (0, r.jsx)(i.MenuGroup, {
+                        children: d
+                    })]
                 }) : null
+            }
+        },
+        447651: function(t, e, n) {
+            "use strict";
+            n.r(e), n.d(e, {
+                default: function() {
+                    return v
+                }
+            }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660");
+            var r = n("37983");
+            n("884691");
+            var i = n("77078"),
+                o = n("404118"),
+                u = n("689226"),
+                a = n("467475"),
+                l = n("599110"),
+                s = n("773336"),
+                c = n("286235"),
+                d = n("50885"),
+                E = n("146574"),
+                _ = n("49111"),
+                f = n("782340");
+            let I = "https://media.discordapp.net",
+                h = /^.*\.discordapp\.net$/,
+                A = "https://cdn.discordapp.com",
+                N = "".concat(I, "/stickers"),
+                T = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp"]),
+                p = new Set(["jpg", "jpeg", "png"]),
+                S = t => {
+                    var e;
+                    return null === (e = new URL(t).pathname.split(".").pop()) || void 0 === e ? void 0 : e.toLowerCase()
+                };
+
+            function O(t, e) {
+                o.default.show({
+                    title: f.default.Messages.ERROR,
+                    body: t
+                }), c.default.captureException(e)
+            }
+
+            function v(t, e, n) {
+                let o = (0, a.default)(null == e ? void 0 : e.getChannelId());
+                if (o || (null == n ? void 0 : n.shouldHideMediaOptions) === !0 || !s.isPlatformEmbedded || null == t || ! function(t) {
+                        let e = new URL(t),
+                            n = S(t);
+                        return (h.test(e.hostname) || e.origin === A) && !t.startsWith(N) && !(0, u.isRoleIconAssetUrl)(t) && null != n && T.has(n)
+                    }(t)) return null;
+                let c = function(t) {
+                        let e = new URL(t);
+                        return e.origin === A ? t : e.origin === I ? A + e.pathname : (e.searchParams.delete("width"), e.searchParams.delete("height"), e.searchParams.set("quality", "lossless"), e.toString())
+                    }(t),
+                    v = async () => {
+                        try {
+                            await d.default.saveImage(c), l.default.track(_.AnalyticEvents.CONTEXT_MENU_IMAGE_SAVED, {
+                                ...(0, E.getNativeContextMenuChannelAnalytics)()
+                            })
+                        } catch (t) {
+                            l.default.track(_.AnalyticEvents.CONTEXT_MENU_IMAGE_SAVE_FAILED, {
+                                ...(0, E.getNativeContextMenuChannelAnalytics)()
+                            }), O(f.default.Messages.ERROR_SAVING_IMAGE, t)
+                        }
+                    }, g = async () => {
+                        try {
+                            await d.default.copyImage(c), l.default.track(_.AnalyticEvents.CONTEXT_MENU_IMAGE_COPIED, {
+                                ...(0, E.getNativeContextMenuChannelAnalytics)()
+                            })
+                        } catch (t) {
+                            O(f.default.Messages.ERROR_COPYING_IMAGE, t), l.default.track(_.AnalyticEvents.CONTEXT_MENU_IMAGE_COPY_FAILED, {
+                                ...(0, E.getNativeContextMenuChannelAnalytics)()
+                            })
+                        }
+                    };
+                return [d.default.canCopyImage() && function(t) {
+                    let e = S(t);
+                    return null != e && p.has(e)
+                }(t) ? (0, r.jsx)(i.MenuItem, {
+                    id: "copy-image",
+                    label: f.default.Messages.COPY_IMAGE_MENU_ITEM,
+                    action: g
+                }, "copy-image") : null, (0, r.jsx)(i.MenuItem, {
+                    id: "save-image",
+                    label: f.default.Messages.SAVE_IMAGE_MENU_ITEM,
+                    action: v
+                }, "save-image")]
             }
         },
         26051: function(t, e, n) {
@@ -1274,19 +1360,19 @@
                 s = n("599110"),
                 c = n("128259"),
                 d = n("773336"),
-                _ = n("50885"),
-                E = n("146574"),
+                E = n("50885"),
+                _ = n("146574"),
                 f = n("49111"),
                 I = n("782340");
 
             function h(t, e, n, h) {
                 let A = (0, u.default)(null == n ? void 0 : n.getChannelId());
                 if (!d.isPlatformEmbedded || null == t || "" === t || A || (null == h ? void 0 : h.shouldHideMediaOptions) === !0 || null != t && null != (0, a.isStickerAssetUrl)(t) || null != t && (0, o.isRoleIconAssetUrl)(t)) return null;
-                let T = (0, l.getHostname)(t),
-                    N = n => {
+                let N = (0, l.getHostname)(t),
+                    T = n => {
                         s.default.track(f.AnalyticEvents.CONTEXT_MENU_LINK_OPENED, {
-                            hostname: T,
-                            ...(0, E.getNativeContextMenuChannelAnalytics)()
+                            hostname: N,
+                            ...(0, _.getNativeContextMenuChannelAnalytics)()
                         }), (0, c.handleClick)({
                             href: t,
                             trusted: (0, c.isLinkTrusted)(t, e),
@@ -1298,14 +1384,14 @@
                     label: I.default.Messages.COPY_LINK,
                     action: () => {
                         s.default.track(f.AnalyticEvents.CONTEXT_MENU_LINK_COPIED, {
-                            hostname: T,
-                            ...(0, E.getNativeContextMenuChannelAnalytics)()
-                        }), _.default.copy(t)
+                            hostname: N,
+                            ...(0, _.getNativeContextMenuChannelAnalytics)()
+                        }), E.default.copy(t)
                     }
                 }, "copy-native-link"), (0, r.jsx)(i.MenuItem, {
                     id: "open-native-link",
                     label: I.default.Messages.OPEN_LINK,
-                    action: t => N(t)
+                    action: t => T(t)
                 }, "open-native-link")]
             }
         },
@@ -1335,10 +1421,10 @@
                     return d
                 },
                 NUM_RECENTLY_HEARD_SOUNDS: function() {
-                    return _
-                },
-                NUM_FREQUENTLY_PLAYED_SOUNDS: function() {
                     return E
+                },
+                NUM_FREQUENTLY_USED_SOUNDS: function() {
+                    return _
                 }
             }), n("222007");
             let o = 32,
@@ -1353,8 +1439,8 @@
                 s = "ctrl+`",
                 c = [],
                 d = "0",
-                _ = 6,
-                E = 6
+                E = 6,
+                _ = 6
         },
         235004: function(t, e, n) {
             "use strict";
@@ -1370,15 +1456,15 @@
                 s = n("845579"),
                 c = n("374363"),
                 d = n("697218"),
-                _ = n("599110"),
-                E = n("829536"),
+                E = n("599110"),
+                _ = n("829536"),
                 f = n("846325"),
                 I = n("49111"),
                 h = n("397336");
             (i = r || (r = {}))[i.NOT_FETCHED = 0] = "NOT_FETCHED", i[i.FETCHING = 1] = "FETCHING", i[i.FETCHED = 2] = "FETCHED";
             let A = new Map,
-                T = new Map,
-                N = new Set,
+                N = new Map,
+                T = new Set,
                 p = 0,
                 S = 0,
                 O = new Set,
@@ -1391,29 +1477,29 @@
                 } = t, n = A.get(e.guildId), r = null == n ? void 0 : n.findIndex(t => t.soundId === e.soundId);
                 null != n && null != r && -1 !== r ? (n[r] = e, A.set(e.guildId, [...n])) : null != n && (null == n || n.push(e), A.set(e.guildId, [...n]))
             }
-            let D = u.debounce(t => {
-                _.default.track(I.AnalyticEvents.UPDATE_SOUNDBOARD_SETTINGS, {
-                    volume: Math.round((0, E.amplitudeToPerceptual)(t))
+            let M = u.debounce(t => {
+                E.default.track(I.AnalyticEvents.UPDATE_SOUNDBOARD_SETTINGS, {
+                    volume: Math.round((0, _.amplitudeToPerceptual)(t))
                 }), s.SoundboardSettings.updateSetting({
                     volume: t
                 })
             }, 1e3);
 
-            function L(t) {
+            function D(t) {
                 var e, n;
                 let r = null !== (n = null == t ? void 0 : null === (e = t.audioContextSettings) || void 0 === e ? void 0 : e.user) && void 0 !== n ? n : {};
-                for (let [t, e] of Object.entries(r)) e.soundboardMuted ? N.add(t) : N.delete(t);
-                for (let t of N.keys()) null == r[t] && N.delete(t)
+                for (let [t, e] of Object.entries(r)) e.soundboardMuted ? T.add(t) : T.delete(t);
+                for (let t of T.keys()) null == r[t] && T.delete(t)
             }
-            class M extends a.default.Store {
+            class L extends a.default.Store {
                 initialize() {
-                    this.waitFor(c.default), L(c.default.settings)
+                    this.waitFor(c.default), D(c.default.settings)
                 }
                 getOverlaySerializedState() {
                     return {
                         soundboardSounds: Object.fromEntries(A),
                         favoritedSoundIds: Array.from(O),
-                        localSoundboardMutes: Array.from(N)
+                        localSoundboardMutes: Array.from(T)
                     }
                 }
                 getSounds() {
@@ -1451,7 +1537,7 @@
                     return null != e && e > 0
                 }
                 isPlayingSound(t) {
-                    return null != T.get(t)
+                    return null != N.get(t)
                 }
                 isFavoriteSound(t) {
                     return O.has(t)
@@ -1460,7 +1546,7 @@
                     return O
                 }
                 isLocalSoundboardMuted(t) {
-                    return N.has(t)
+                    return T.has(t)
                 }
                 hasHadOtherUserPlaySoundInSession() {
                     return g
@@ -1469,10 +1555,10 @@
                     return 2 === S && 2 === p
                 }
             }
-            M.displayName = "SoundboardStore";
-            var R = new M(l.default, {
+            L.displayName = "SoundboardStore";
+            var R = new L(l.default, {
                 LOGOUT: function() {
-                    A.clear(), T.clear(), v.clear(), g = !1, S = 0, p = 0
+                    A.clear(), N.clear(), v.clear(), g = !1, S = 0, p = 0
                 },
                 GUILD_SOUNDBOARD_FETCH: function() {
                     S = 1
@@ -1494,25 +1580,25 @@
                     let {
                         soundId: i,
                         userId: o
-                    } = t, u = (null !== (n = T.get(i)) && void 0 !== n ? n : 0) + 1, a = (null !== (r = v.get(o)) && void 0 !== r ? r : 0) + 1;
-                    T.set(i, u), v.set(o, a), o !== (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) && (g = !0)
+                    } = t, u = (null !== (n = N.get(i)) && void 0 !== n ? n : 0) + 1, a = (null !== (r = v.get(o)) && void 0 !== r ? r : 0) + 1;
+                    N.set(i, u), v.set(o, a), o !== (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) && (g = !0)
                 },
                 GUILD_SOUNDBOARD_SOUND_PLAY_END: function(t) {
                     var e, n;
                     let {
                         soundId: r,
                         userId: i
-                    } = t, o = (null !== (e = T.get(r)) && void 0 !== e ? e : 0) - 1, u = (null !== (n = v.get(i)) && void 0 !== n ? n : 0) - 1;
-                    o <= 0 ? T.delete(r) : T.set(r, o), u <= 0 ? v.delete(i) : v.set(i, u)
+                    } = t, o = (null !== (e = N.get(r)) && void 0 !== e ? e : 0) - 1, u = (null !== (n = v.get(i)) && void 0 !== n ? n : 0) - 1;
+                    o <= 0 ? N.delete(r) : N.set(r, o), u <= 0 ? v.delete(i) : v.set(i, u)
                 },
                 USER_SOUNDBOARD_SET_VOLUME: function(t) {
                     let {
                         volume: e
                     } = t;
-                    D(e)
+                    M(e)
                 },
                 VOICE_CHANNEL_SELECT: function() {
-                    T.clear(), v.clear()
+                    N.clear(), v.clear()
                 },
                 USER_SETTINGS_PROTO_UPDATE: function(t) {
                     let {
@@ -1524,7 +1610,7 @@
                     if (n === h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
                         var i, o;
                         O = new Set(null !== (o = null == r ? void 0 : null === (i = r.favoriteSoundboardSounds) || void 0 === i ? void 0 : i.soundIds) && void 0 !== o ? o : [])
-                    } else n === h.UserSettingsTypes.PRELOADED_USER_SETTINGS && L(r)
+                    } else n === h.UserSettingsTypes.PRELOADED_USER_SETTINGS && D(r)
                 },
                 SOUNDBOARD_FETCH_DEFAULT_SOUNDS: function() {
                     p = 1
@@ -1557,13 +1643,13 @@
                     let {
                         userId: e
                     } = t;
-                    N.has(e) ? N.delete(e) : N.add(e)
+                    T.has(e) ? T.delete(e) : T.add(e)
                 },
                 OVERLAY_INITIALIZE: function(t) {
                     let {
                         soundboardStoreState: e
                     } = t;
-                    A = new Map(Object.entries(e.soundboardSounds)), O = new Set(e.favoritedSoundIds), N = new Set(e.localSoundboardMutes)
+                    A = new Map(Object.entries(e.soundboardSounds)), O = new Set(e.favoritedSoundIds), T = new Set(e.localSoundboardMutes)
                 },
                 GUILD_SOUNDBOARD_SOUNDS_UPDATE: function(t) {
                     let {
@@ -1624,7 +1710,7 @@
             "use strict";
             n.r(e), n.d(e, {
                 default: function() {
-                    return E
+                    return _
                 }
             }), n("702976");
             var r = n("446674"),
@@ -1661,7 +1747,7 @@
                     e.state = "banned" in t && t.banned ? u.InviteStates.BANNED : u.InviteStates.EXPIRED
                 })
             }
-            class _ extends r.default.Store {
+            class E extends r.default.Store {
                 getInvite(t) {
                     return a[t]
                 }
@@ -1675,8 +1761,8 @@
                     return s[t]
                 }
             }
-            _.displayName = "InviteStore";
-            var E = new _(i.default, {
+            E.displayName = "InviteStore";
+            var _ = new E(i.default, {
                 INVITE_RESOLVE: function(t) {
                     let {
                         code: e
@@ -1752,7 +1838,7 @@
             "use strict";
             n.r(e), n.d(e, {
                 default: function() {
-                    return _
+                    return E
                 }
             }), n("222007");
             var r = n("627445"),
@@ -1848,7 +1934,7 @@
                     t.client_app_state = d.isFocused() ? "focused" : "unfocused"
                 })
             });
-            var _ = d
+            var E = d
         },
         486952: function(t, e, n) {
             "use strict";
@@ -1894,10 +1980,10 @@
                     return d
                 },
                 getCoverRatio: function() {
-                    return _
+                    return E
                 },
                 makeCssUrlString: function() {
-                    return E
+                    return _
                 },
                 getPalette: function() {
                     return I
@@ -1906,10 +1992,10 @@
                     return h
                 },
                 readFileAsBase64: function() {
-                    return T
+                    return N
                 },
                 dataUriFileSize: function() {
-                    return N
+                    return T
                 },
                 dataUrlToFile: function() {
                     return p
@@ -1969,7 +2055,7 @@
                 return (n = Math.round(n * o)) > i && (u = i / n), Math.min(o * u, 1)
             }
 
-            function _(t) {
+            function E(t) {
                 let {
                     width: e,
                     height: n,
@@ -1979,7 +2065,7 @@
                 return e === n ? 1 : Math.min(Math.max(r / e, i / n), 1)
             }
 
-            function E(t) {
+            function _(t) {
                 return null == t || "" === t ? "none" : "url(".concat(t, ")")
             }
             let f = [
@@ -2012,7 +2098,7 @@
                     }, r.src = t
                 }));
 
-            function T(t) {
+            function N(t) {
                 return new Promise((e, n) => {
                     let r = new FileReader;
                     r.readAsDataURL(t), r.onload = () => {
@@ -2021,7 +2107,7 @@
                 })
             }
 
-            function N(t) {
+            function T(t) {
                 let e = t.split(";base64,");
                 return i(2 === e.length, "Input data is not a valid image."), atob(e[1]).length
             }
@@ -2100,11 +2186,11 @@
                     null == l || l()
                 }
 
-                function _(t) {
+                function E(t) {
                     i(c), n(t)
                 }
 
-                function E(t) {
+                function _(t) {
                     i(c), o(t)
                 }
 
@@ -2114,8 +2200,8 @@
                         isLoading: !0
                     }), s({
                         promiseFn: e,
-                        resolve: _,
-                        reject: E,
+                        resolve: E,
+                        reject: _,
                         code: t,
                         mfaCodeHandler: I,
                         isModalOpen: !0

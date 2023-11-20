@@ -1861,7 +1861,7 @@
                 NUM_RECENTLY_HEARD_SOUNDS: function() {
                     return f
                 },
-                NUM_FREQUENTLY_PLAYED_SOUNDS: function() {
+                NUM_FREQUENTLY_USED_SOUNDS: function() {
                     return E
                 }
             }), n("222007");
