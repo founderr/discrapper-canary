@@ -1257,7 +1257,7 @@
                             },
                             oldFormErrors: !0
                         }).then(e => {
-                            if (null == e.body || "1a4c62d577c2d8f2a115d835626605a1a61146cb" === e.body.hash) return this._handleUpdateNotAvailable();
+                            if (null == e.body || "7d9c49cb88424642f0d7bb2c561023dc7eeff966" === e.body.hash) return this._handleUpdateNotAvailable();
                             if (e.body.required || (0, r.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
                             let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? 6048e5 : 864e5;
                             if (Date.now() - f > t) return s.default.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
@@ -2788,28 +2788,6 @@
                 if (n.hasFlag(i.MessageFlags.HAS_THREAD) || n.isCommandType()) return !0;
                 if (n.type > i.MessageTypes.DEFAULT) return !(0, s.default)(t) || n.type === i.MessageTypes.REPLY || !1;
                 return !!((0, s.default)(t) || t.author.id !== n.author.id || t.hasFlag(i.MessageFlags.EPHEMERAL) !== n.hasFlag(i.MessageFlags.EPHEMERAL) || null != n.webhookId && t.author.username !== n.author.username || (null == e ? void 0 : e.isForumPost()) && t.id === e.id || !(0, l.isWithinInterval)(t.timestamp, n.timestamp, 42e4) || n.hasFlag(i.MessageFlags.SUPPRESS_NOTIFICATIONS) && !t.hasFlag(i.MessageFlags.SUPPRESS_NOTIFICATIONS) || t.hasFlag(i.MessageFlags.SUPPRESS_NOTIFICATIONS) && !n.hasFlag(i.MessageFlags.SUPPRESS_NOTIFICATIONS) && (n.mentions.length > 0 || n.mentionRoles.length > 0 || n.mentionEveryone) || (0, a.default)(n)) || !1
-            }
-        },
-        654017: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                isSpamSupported: function() {
-                    return s
-                },
-                isSpam: function() {
-                    return i
-                }
-            });
-            var l = n("697218"),
-                a = n("49111");
-
-            function s(e) {
-                return void 0 !== e && e.type !== a.ChannelTypes.DM
-            }
-
-            function i(e) {
-                var t, n, s;
-                return t = e.author.id, null !== (s = null === (n = l.default.getUser(t)) || void 0 === n ? void 0 : n.hasFlag(a.UserFlags.SPAMMER)) && void 0 !== s && s
             }
         },
         603531: function(e, t, n) {
