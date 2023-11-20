@@ -1729,7 +1729,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "247447"
+                        buildNumber: "247450"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -12320,7 +12320,8 @@
                         isFetching: R,
                         selectedItem: G,
                         setSelectedItem: j,
-                        containerClassName: N.listContainer
+                        containerClassName: N.listContainer,
+                        isScrollable: !0
                     }), (0, a.jsx)("div", {
                         className: N.ctaContainer,
                         children: (0, a.jsx)(o.Button, {
@@ -12338,7 +12339,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 CollectiblesItemsList: function() {
-                    return N
+                    return m
                 }
             });
             var a = n("37983"),
@@ -12418,30 +12419,53 @@
                 },
                 N = e => {
                     let {
+                        listRef: t,
+                        items: n,
+                        selectedItem: s,
+                        setSelectedItem: l
+                    } = e;
+                    return (0, a.jsx)("div", {
+                        ref: t,
+                        className: C.collectiblesList,
+                        children: n.map(e => e.type === r.CollectiblesItemType.AVATAR_DECORATION ? (0, a.jsx)(S, {
+                            item: e,
+                            isSelected: e.skuId === (null == s ? void 0 : s.skuId),
+                            setSelectedItem: l
+                        }, e.id) : (0, a.jsx)(A, {
+                            item: e,
+                            isSelected: e.skuId === (null == s ? void 0 : s.skuId),
+                            setSelectedItem: l
+                        }, e.id))
+                    })
+                },
+                m = e => {
+                    let {
                         items: t,
                         isFetching: n,
                         selectedItem: l,
-                        setSelectedItem: o,
-                        containerClassName: d
+                        setSelectedItem: r,
+                        containerClassName: o,
+                        isScrollable: d
                     } = e, c = s.useRef(null);
                     return n ? (0, a.jsx)(u.Spinner, {
                         className: C.loading
                     }) : (0, a.jsx)(u.FocusRingScope, {
                         containerRef: c,
-                        children: (0, a.jsx)(u.AdvancedScroller, {
-                            className: i(d),
-                            children: (0, a.jsx)("div", {
-                                ref: c,
-                                className: C.collectiblesList,
-                                children: t.map(e => e.type === r.CollectiblesItemType.AVATAR_DECORATION ? (0, a.jsx)(S, {
-                                    item: e,
-                                    isSelected: e.skuId === (null == l ? void 0 : l.skuId),
-                                    setSelectedItem: o
-                                }, e.id) : (0, a.jsx)(A, {
-                                    item: e,
-                                    isSelected: e.skuId === (null == l ? void 0 : l.skuId),
-                                    setSelectedItem: o
-                                }, e.id))
+                        children: d ? (0, a.jsx)(u.AdvancedScroller, {
+                            className: i(o),
+                            children: (0, a.jsx)(N, {
+                                listRef: c,
+                                items: t,
+                                selectedItem: l,
+                                setSelectedItem: r
+                            })
+                        }) : (0, a.jsx)("div", {
+                            className: i(o),
+                            children: (0, a.jsx)(N, {
+                                listRef: c,
+                                items: t,
+                                selectedItem: l,
+                                setSelectedItem: r
                             })
                         })
                     })
