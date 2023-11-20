@@ -1,10 +1,44 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["47726"], {
+    ["21318"], {
         969176: function(e, t, n) {
             var a = n("354069");
             e.exports = function(e, t) {
                 return a(e, t)
             }
+        },
+        665718: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "5420f8fd9d89897c6448.svg"
+        },
+        897327: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "d8197d45ef3e7289594d.svg"
+        },
+        289867: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return l
+                }
+            });
+            var a = n("913144"),
+                l = {
+                    toggleMembersSection() {
+                        a.default.dispatch({
+                            type: "CHANNEL_TOGGLE_MEMBERS_SECTION"
+                        })
+                    },
+                    toggleProfilePanelSection() {
+                        a.default.dispatch({
+                            type: "PROFILE_PANEL_TOGGLE_SECTION"
+                        })
+                    },
+                    toggleSummariesSection() {
+                        a.default.dispatch({
+                            type: "CHANNEL_TOGGLE_SUMMARIES_SECTION"
+                        })
+                    }
+                }
         },
         158534: function(e, t, n) {
             "use strict";
@@ -58,6 +92,184 @@
                     }
                 }]
             })
+        },
+        219352: function(e, t, n) {
+            "use strict";
+            var a, l;
+            n.r(t), n.d(t, {
+                SelfStreamAndVideoAlertType: function() {
+                    return a
+                }
+            }), (l = a || (a = {}))[l.STREAM = 0] = "STREAM", l[l.VIDEO = 1] = "VIDEO"
+        },
+        301603: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var a = n("446674"),
+                l = n("629109"),
+                i = n("271938"),
+                u = n("42887"),
+                d = n("49111"),
+                s = n("353927");
+
+            function r(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.MediaEngineContextTypes.DEFAULT,
+                    n = (0, a.useStateFromStores)([i.default], () => i.default.getId()),
+                    r = (0, a.useStateFromStores)([u.default], () => u.default.supports(s.Features.DISABLE_VIDEO) && u.default.isVideoEnabled()),
+                    o = (0, a.useStateFromStores)([u.default], () => u.default.isLocalVideoDisabled(n, t), [n, t]),
+                    c = null == e || e === n;
+                return [c && (r || o), o, e => {
+                    let a = e ? d.VideoToggleState.DISABLED : d.VideoToggleState.MANUAL_ENABLED;
+                    l.default.setDisableLocalVideo(n, a, t)
+                }]
+            }
+        },
+        632616: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return s
+                }
+            });
+            var a = n("37983");
+            n("884691");
+            var l = n("452804"),
+                i = n("135230"),
+                u = n("219352"),
+                d = n("782340");
+
+            function s(e) {
+                let {
+                    type: t,
+                    onConfirm: n,
+                    ...s
+                } = e, r = t === u.SelfStreamAndVideoAlertType.STREAM ? d.default.Messages.HIDE_SELF_STREAM_CONFIRMATION_HEADER : d.default.Messages.HIDE_SELF_VIDEO_CONFIRMATION_HEADER, o = t === u.SelfStreamAndVideoAlertType.STREAM ? d.default.Messages.HIDE_SELF_STREAM_CONFIRMATION_BODY : d.default.Messages.HIDE_SELF_VIDEO_CONFIRMATION_BODY;
+                return (0, a.jsx)(i.default, {
+                    confirmText: d.default.Messages.CONFIRM,
+                    secondaryConfirmText: d.default.Messages.DONT_ASK_AGAIN,
+                    title: r,
+                    cancelText: d.default.Messages.CANCEL,
+                    onConfirm: n,
+                    onConfirmSecondary: () => {
+                        l.default.updatedUnsyncedSettings({
+                            disableHideSelfStreamAndVideoConfirmationAlert: !0
+                        }), n()
+                    },
+                    body: o,
+                    ...s
+                })
+            }
+        },
+        243288: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var a = n("37983");
+            n("884691");
+            var l = n("446674"),
+                i = n("77078"),
+                u = n("255397"),
+                d = n("191145"),
+                s = n("782340");
+
+            function r(e) {
+                let t = (0, l.useStateFromStores)([d.default], () => d.default.getVoiceParticipantsHidden(e));
+                return (0, a.jsx)(i.MenuCheckboxItem, {
+                    id: "no-video-hide",
+                    label: s.default.Messages.STREAM_SHOW_NON_VIDEO,
+                    checked: !t,
+                    action: () => u.default.toggleVoiceParticipantsHidden(e, !t)
+                })
+            }
+        },
+        321135: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return f
+                }
+            }), n("222007");
+            var a = n("37983");
+            n("884691");
+            var l = n("446674"),
+                i = n("77078"),
+                u = n("168973"),
+                d = n("301603"),
+                s = n("632616"),
+                r = n("219352"),
+                o = n("353927"),
+                c = n("782340");
+
+            function f(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.MediaEngineContextTypes.DEFAULT,
+                    [n, f, E] = (0, d.default)(e, t),
+                    _ = (0, l.useStateFromStores)([u.default], () => u.default.disableHideSelfStreamAndVideoConfirmationAlert);
+                return n ? (0, a.jsx)(i.MenuCheckboxItem, {
+                    id: "self-video-hide",
+                    label: c.default.Messages.SHOW_SELF_VIDEO,
+                    checked: !f,
+                    action: () => {
+                        if (_ || f) return E(!f);
+                        (0, i.openModal)(e => (0, a.jsx)(s.default, {
+                            ...e,
+                            type: r.SelfStreamAndVideoAlertType.VIDEO,
+                            onConfirm: () => E(!f)
+                        }))
+                    }
+                }) : null
+            }
+        },
+        873254: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return c
+                }
+            });
+            var a = n("37983");
+            n("884691");
+            var l = n("446674"),
+                i = n("77078"),
+                u = n("648911"),
+                d = n("271938"),
+                s = n("42887"),
+                r = n("782340"),
+                o = n("431024");
+
+            function c(e) {
+                let t = (0, i.useModalContext)(),
+                    c = (0, l.useStateFromStores)([s.default], () => s.default.isVideoEnabled()),
+                    f = (0, l.useStateFromStores)([d.default], () => d.default.getId() === e),
+                    E = (0, u.default)();
+                return (!c || E) && f ? (0, a.jsx)(i.MenuItem, {
+                    id: "change-video-background",
+                    label: (0, a.jsx)("div", {
+                        className: o.item,
+                        children: c ? r.default.Messages.CAMERA_CHANGE_VIDEO_BACKGROUND_MENU_ITEM : r.default.Messages.CAMERA_PREVIEW_MENU_ITEM
+                    }),
+                    action: function() {
+                        (0, i.openModalLazy)(async () => {
+                            let {
+                                default: e
+                            } = await n.el("381736").then(n.bind(n, "381736"));
+                            return t => (0, a.jsx)(e, {
+                                ...t,
+                                videoEnabled: c
+                            })
+                        }, {
+                            modalKey: "camera-preview",
+                            contextKey: t
+                        })
+                    }
+                }) : null
+            }
         },
         207273: function(e, t, n) {
             "use strict";
@@ -142,7 +354,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return S
                 }
             });
             var a = n("37983");
@@ -159,38 +371,38 @@
                 E = n("47006"),
                 _ = n("878526"),
                 C = n("531674"),
-                h = n("619436"),
-                p = n("731390"),
-                I = n("339876"),
-                N = n("49111"),
-                T = n("782340"),
-                g = (0, u.default)(function(e) {
+                p = n("619436"),
+                T = n("731390"),
+                A = n("339876"),
+                I = n("49111"),
+                m = n("782340"),
+                S = (0, u.default)(function(e) {
                     let {
                         channel: t,
                         guild: n,
                         includeTopic: u = !1,
                         onSelect: d
-                    } = e, g = (0, I.default)(t), O = (0, C.default)(t), m = (0, h.default)(t), A = (0, o.default)(t), M = (0, E.default)(t), L = (0, _.default)(t, n), S = (0, r.default)(t, n), x = (0, c.default)(t, n, N.ChannelTypes.GUILD_TEXT), v = (0, c.default)(t, n, N.ChannelTypes.GUILD_VOICE), U = (0, f.default)(t), b = (0, s.default)({
+                    } = e, S = (0, A.default)(t), g = (0, C.default)(t), h = (0, p.default)(t), N = (0, o.default)(t), M = (0, E.default)(t), O = (0, _.default)(t, n), v = (0, r.default)(t, n), L = (0, c.default)(t, n, I.ChannelTypes.GUILD_TEXT), x = (0, c.default)(t, n, I.ChannelTypes.GUILD_VOICE), y = (0, f.default)(t), b = (0, s.default)({
                         id: t.id,
-                        label: T.default.Messages.COPY_ID_CHANNEL
-                    }), y = (0, p.default)(t, "title_context_menu");
+                        label: m.default.Messages.COPY_ID_CHANNEL
+                    }), D = (0, T.default)(t, "title_context_menu");
                     return (0, a.jsxs)(l.Menu, {
                         navId: "channel-context",
                         onClose: i.closeContextMenu,
-                        "aria-label": T.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+                        "aria-label": m.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                         onSelect: d,
                         children: [(0, a.jsx)(l.MenuGroup, {
-                            children: g
+                            children: S
                         }), (0, a.jsx)(l.MenuGroup, {
-                            children: O
+                            children: g
                         }), (0, a.jsxs)(l.MenuGroup, {
-                            children: [u ? A : m, M]
+                            children: [u ? N : h, M]
                         }), (0, a.jsxs)(l.MenuGroup, {
-                            children: [L, S, x, v]
+                            children: [O, v, L, x]
+                        }), (0, a.jsx)(l.MenuGroup, {
+                            children: D
                         }), (0, a.jsx)(l.MenuGroup, {
                             children: y
-                        }), (0, a.jsx)(l.MenuGroup, {
-                            children: U
                         }), (0, a.jsx)(l.MenuGroup, {
                             children: b
                         })]
@@ -533,6 +745,85 @@
                     })
                 })
         },
+        893980: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                trackProfilePanelViewed: function() {
+                    return s
+                },
+                trackProfilePanelToggled: function() {
+                    return r
+                }
+            });
+            var a = n("373469"),
+                l = n("824563"),
+                i = n("27618"),
+                u = n("599110"),
+                d = n("49111");
+            let s = e => {
+                    let {
+                        displayProfile: t,
+                        isMobile: n,
+                        loadDurationMs: a,
+                        activity: l,
+                        customStatusActivity: i,
+                        status: s
+                    } = e;
+                    u.default.track(d.AnalyticEvents.DM_PROFILE_VIEWED, {
+                        has_mobile_indicator: n,
+                        has_activity: null != l && (null == l ? void 0 : l.type) !== d.ActivityTypes.CUSTOM_STATUS,
+                        has_game_activity: (null == l ? void 0 : l.type) === d.ActivityTypes.PLAYING,
+                        load_duration_ms: a,
+                        profile_user_status: s,
+                        has_custom_status: null != i,
+                        has_profile_effect: null != t.profileEffectID,
+                        ...o(t)
+                    })
+                },
+                r = (e, t) => {
+                    u.default.track(d.AnalyticEvents.DM_PROFILE_TOGGLED, {
+                        is_profile_open: t,
+                        ...o(e)
+                    })
+                },
+                o = e => {
+                    var t;
+                    if (null == e) return {};
+                    let n = e.userId,
+                        u = null != a.default.getAnyStreamForUser(n),
+                        s = l.default.findActivity(n, e => {
+                            let {
+                                type: t
+                            } = e;
+                            return u ? t === d.ActivityTypes.PLAYING : t !== d.ActivityTypes.CUSTOM_STATUS
+                        }),
+                        r = null == s ? void 0 : s.assets,
+                        o = i.default.isFriend(n);
+                    return {
+                        has_images: !!(null !== (t = null == r ? void 0 : r.large_image) && void 0 !== t ? t : null == r ? void 0 : r.small_image),
+                        is_friend: o,
+                        viewed_profile_user_id: n,
+                        profile_has_nitro_customization: e.hasPremiumCustomization(),
+                        profile_has_theme_color_customized: e.hasThemeColors(),
+                        profile_has_theme_animation: null != e.popoutAnimationParticleType
+                    }
+                }
+        },
+        648911: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return u
+                }
+            });
+            var a = n("446674"),
+                l = n("42887"),
+                i = n("512244");
+
+            function u() {
+                return (0, a.useStateFromStores)([l.default], () => (0, i.default)(l.default))
+            }
+        },
         830210: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -608,6 +899,68 @@
                     contextKey: t === u.AppContext.POPOUT ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT
                 }) : null == e || e()
             }
+        },
+        440351: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return f
+                }
+            });
+            var a = n("37983"),
+                l = n("884691"),
+                i = n("414456"),
+                u = n.n(i),
+                d = n("77078"),
+                s = n("145131"),
+                r = n("296165"),
+                o = n("926622");
+            class c extends l.PureComponent {
+                render() {
+                    let {
+                        title: e,
+                        description: t,
+                        agreement: n,
+                        disagreement: l,
+                        onAgree: i,
+                        onDisagree: c,
+                        imageClassName: f
+                    } = this.props;
+                    return (0, a.jsxs)(s.default, {
+                        className: r.gatedContent,
+                        justify: s.default.Justify.CENTER,
+                        align: s.default.Align.CENTER,
+                        direction: s.default.Direction.VERTICAL,
+                        children: [(0, a.jsx)("div", {
+                            className: u(r.image, f)
+                        }), (0, a.jsx)("div", {
+                            className: u(r.title, o.marginBottom8),
+                            children: e
+                        }), (0, a.jsx)("div", {
+                            className: u(r.description, o.marginBottom20),
+                            children: t
+                        }), (0, a.jsxs)(s.default, {
+                            justify: s.default.Justify.CENTER,
+                            align: s.default.Align.CENTER,
+                            grow: 0,
+                            children: [null != l ? (0, a.jsx)(d.Button, {
+                                className: r.action,
+                                size: d.ButtonSizes.LARGE,
+                                color: d.ButtonColors.PRIMARY,
+                                onClick: c,
+                                children: l
+                            }) : null, null != n ? (0, a.jsx)(d.Button, {
+                                className: r.action,
+                                color: d.Button.Colors.RED,
+                                size: d.ButtonSizes.LARGE,
+                                onClick: i,
+                                children: n
+                            }) : null]
+                        })]
+                    })
+                }
+            }
+            var f = c
         }
     }
 ]);
