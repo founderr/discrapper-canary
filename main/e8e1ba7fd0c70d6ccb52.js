@@ -1,1307 +1,881 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["17744"], {
-        618017: function(e, r, t) {
+    ["37102"], {
+        565581: function(t, e, l) {
             "use strict";
-            t.r(r), t.d(r, {
-                canEditClydeAIProfile: function() {
-                    return o
+            t.exports = l.p + "f6bc645aead00959a690.svg"
+        },
+        154393: function(t, e, l) {
+            "use strict";
+            t.exports = l.p + "fef39f80370ecfd7507d.svg"
+        },
+        280609: function(t, e, l) {
+            "use strict";
+            t.exports = l.p + "c00cfaed1382bf7f33d4.svg"
+        },
+        595247: function(t, e, l) {
+            "use strict";
+            t.exports = l.p + "c8576c5063b9f32889cb.svg"
+        },
+        551921: function(t, e, l) {
+            "use strict";
+            t.exports = l.p + "27f92332674f9dacc1e9.svg"
+        },
+        153518: function(t, e, l) {
+            "use strict";
+            t.exports = l.p + "f95c22b2edd5edef268b.svg"
+        },
+        959254: function(t, e, l) {
+            "use strict";
+            l.r(e), l.d(e, {
+                sync: function() {
+                    return c
                 }
-            });
-            var l = t("957255"),
-                i = t("49111");
-
-            function o(e) {
-                return null != e && l.default.can(i.Permissions.USE_CLYDE_AI, e)
+            }), l("70102");
+            var n = l("913144"),
+                a = l("605250"),
+                i = l("355045"),
+                s = l("49111");
+            let o = new a.default("CloudSync");
+            class u {
+                constructor(t) {
+                    this.message = t
+                }
+            }
+            async function c(t, e) {
+                let l, a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+                n.default.dispatch({
+                    type: "GAME_CLOUD_SYNC_START",
+                    applicationId: t,
+                    branchId: e
+                });
+                try {
+                    if ((l = await i.syncApplication(t, e, a)).type === s.CloudSyncResultTypes.CONFLICT) throw n.default.dispatch({
+                        type: "GAME_CLOUD_SYNC_CONFLICT",
+                        applicationId: t,
+                        branchId: e,
+                        next: l.next,
+                        remote: l.remote
+                    }), new u("Conflict in cloud sync.");
+                    (l.type === s.CloudSyncResultTypes.PULL || l.type === s.CloudSyncResultTypes.PUSH) && o.info("Sync complete", l)
+                } catch (l) {
+                    if (l instanceof u) throw l;
+                    throw n.default.dispatch({
+                        type: "GAME_CLOUD_SYNC_ERROR",
+                        applicationId: t,
+                        branchId: e
+                    }), o.error("Failed to cloud sync:", l), Error("Failed to cloud sync.")
+                }
+                return n.default.dispatch({
+                    type: "GAME_CLOUD_SYNC_COMPLETE",
+                    applicationId: t,
+                    branchId: e
+                }), l
             }
         },
-        190045: function(e, r, t) {
+        406189: function(t, e, l) {
             "use strict";
-            t.r(r), t.d(r, {
+            l.r(e), l.d(e, {
                 default: function() {
-                    return s
+                    return a
                 }
             });
-            var l = t("37983");
-            t("884691");
-            var i = t("77078"),
-                o = t("599110"),
-                n = t("49111");
-
-            function s(e) {
-                o.default.track(n.AnalyticEvents.OPEN_MODAL, {
-                    type: "Edit Clyde Profile",
-                    location_page: "Profile Popout",
-                    guild_id: e
-                }), (0, i.openModalLazy)(async () => {
-                    let {
-                        default: r
-                    } = await t.el("485261").then(t.bind(t, "485261"));
-                    return t => (0, l.jsx)(r, {
-                        ...t,
-                        guildId: e
+            var n = l("913144"),
+                a = {
+                    updateChannelDimensions(t, e, l, a, i) {
+                        n.default.wait(() => {
+                            n.default.dispatch({
+                                type: "UPDATE_CHANNEL_DIMENSIONS",
+                                channelId: t,
+                                scrollTop: e,
+                                scrollHeight: l,
+                                offsetHeight: a
+                            }), null != i && i()
+                        })
+                    },
+                    updateChannelListScroll(t, e) {
+                        let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+                        n.default.dispatch({
+                            type: "UPDATE_CHANNEL_LIST_DIMENSIONS",
+                            guildId: t,
+                            scrollTop: e,
+                            channelIds: l
+                        })
+                    },
+                    channelListScrollTo(t, e) {
+                        n.default.dispatch({
+                            type: "UPDATE_CHANNEL_LIST_DIMENSIONS",
+                            guildId: t,
+                            scrollTo: e,
+                            channelIds: []
+                        })
+                    },
+                    clearChannelListScrollTo(t) {
+                        n.default.dispatch({
+                            type: "UPDATE_CHANNEL_LIST_DIMENSIONS",
+                            guildId: t,
+                            scrollTo: null,
+                            channelIds: []
+                        })
+                    },
+                    clearChannelDimensions(t, e) {
+                        this.updateChannelDimensions(t, null, null, null, e)
+                    },
+                    updateGuildListScrollTo(t) {
+                        n.default.dispatch({
+                            type: "UPDATE_GUILD_LIST_DIMENSIONS",
+                            scrollTop: t
+                        })
+                    }
+                }
+        },
+        596169: function(t, e, l) {
+            "use strict";
+            l.r(e), l.d(e, {
+                playApplication: function() {
+                    return S
+                }
+            }), l("70102"), l("222007");
+            var n = l("37983"),
+                a = l("884691"),
+                i = l("866227"),
+                s = l.n(i),
+                o = l("446674"),
+                u = l("77078"),
+                c = l("959254"),
+                r = l("823411"),
+                d = l("299285"),
+                p = l("148813"),
+                f = l("145131"),
+                C = l("599110"),
+                h = l("49111"),
+                A = l("782340"),
+                _ = l("141804"),
+                y = l("926622");
+            class T extends a.PureComponent {
+                renderConflictButton(t, e, l, a) {
+                    return (0, n.jsxs)(u.Button, {
+                        className: _.conflictButton,
+                        innerClassName: _.conflictButtonInner,
+                        onClick: a,
+                        children: [(0, n.jsx)("div", {
+                            className: l
+                        }), (0, n.jsxs)("div", {
+                            className: _.buttonBody,
+                            children: [(0, n.jsx)("div", {
+                                className: _.conflictTitle,
+                                children: t
+                            }), (0, n.jsx)("div", {
+                                children: A.default.Messages.CLOUD_SYNC_MODAL_CONFLICT_LAST_MODIFIED
+                            }), (0, n.jsx)("div", {
+                                className: _.timestamp,
+                                children: s(e).calendar()
+                            })]
+                        })]
                     })
+                }
+                renderError() {
+                    let {
+                        application: t
+                    } = this.props;
+                    return (0, n.jsxs)(a.Fragment, {
+                        children: [(0, n.jsxs)(u.ModalContent, {
+                            children: [(0, n.jsx)(f.default, {
+                                justify: f.default.Justify.CENTER,
+                                children: (0, n.jsx)("div", {
+                                    className: _.errorArt
+                                })
+                            }), (0, n.jsx)("div", {
+                                className: _.description,
+                                children: A.default.Messages.CLOUD_SYNC_MODAL_ERROR_DESCRIPTION.format({
+                                    applicationName: t.name
+                                })
+                            })]
+                        }), (0, n.jsx)(u.ModalFooter, {
+                            children: (0, n.jsxs)(f.default, {
+                                justify: f.default.Justify.BETWEEN,
+                                children: [(0, n.jsx)(u.Button, {
+                                    className: _.linkButton,
+                                    size: _.linkButtonSize,
+                                    look: u.Button.Looks.LINK,
+                                    color: u.Button.Colors.PRIMARY,
+                                    onClick: this.onClose,
+                                    children: A.default.Messages.CANCEL
+                                }), (0, n.jsxs)(f.default, {
+                                    direction: f.default.Direction.HORIZONTAL,
+                                    justify: f.default.Justify.END,
+                                    children: [(0, n.jsx)(u.Button, {
+                                        look: u.Button.Looks.LINK,
+                                        color: u.Button.Colors.PRIMARY,
+                                        onClick: () => this.handlePlay(),
+                                        className: _.retryButton,
+                                        children: A.default.Messages.RETRY
+                                    }), (0, n.jsx)(u.Button, {
+                                        onClick: () => this.handlePlay(!1),
+                                        children: A.default.Messages.GAME_ACTION_BUTTON_PLAY
+                                    })]
+                                })]
+                            })
+                        })]
+                    })
+                }
+                renderConflict() {
+                    let {
+                        application: t,
+                        cloudSyncState: e
+                    } = this.props;
+                    if (e.type !== h.CloudSyncStateTypes.CONFLICT) throw Error("Cannot render conflict for non conflict type");
+                    return (0, n.jsxs)(u.ModalContent, {
+                        className: y.marginBottom20,
+                        children: [(0, n.jsx)("div", {
+                            className: _.description,
+                            children: A.default.Messages.CLOUD_SYNC_MODAL_CONFLICT_DESCRIPTION.format({
+                                applicationName: t.name
+                            })
+                        }), this.renderConflictButton(A.default.Messages.CLOUD_SYNC_MODAL_CONFLICT_CHOICE_DOWNLOAD, e.remote.timestamp, _.conflictDownloadArt, this.handleChooseDownload), (0, n.jsxs)(f.default, {
+                            className: _.choiceWrapper,
+                            align: f.default.Align.CENTER,
+                            children: [(0, n.jsx)("div", {
+                                className: _.choiceLine
+                            }), (0, n.jsx)("div", {
+                                className: _.choiceTitle,
+                                children: A.default.Messages.CLOUD_SYNC_MODAL_OR
+                            }), (0, n.jsx)("div", {
+                                className: _.choiceLine
+                            })]
+                        }), this.renderConflictButton(A.default.Messages.CLOUD_SYNC_MODAL_CONFLICT_CHOICE_UPLOAD, e.next.timestamp, _.conflictUploadArt, this.handleChooseUpload)]
+                    })
+                }
+                render() {
+                    let {
+                        cloudSyncState: t,
+                        transitionState: e
+                    } = this.props, l = t.type === h.CloudSyncStateTypes.CONFLICT ? A.default.Messages.CLOUD_SYNC_MODAL_CONFLICT_HEADER : A.default.Messages.CLOUD_SYNC_MODAL_ERROR_HEADER;
+                    return (0, n.jsxs)(u.ModalRoot, {
+                        transitionState: e,
+                        className: _.modal,
+                        "aria-label": l,
+                        children: [(0, n.jsxs)(u.ModalHeader, {
+                            separator: !1,
+                            children: [(0, n.jsx)(u.ModalCloseButton, {
+                                className: _.closeButton,
+                                onClick: this.onClose
+                            }), (0, n.jsx)(u.FormTitle, {
+                                tag: "h2",
+                                className: y.marginReset,
+                                children: l
+                            })]
+                        }), t.type === h.CloudSyncStateTypes.CONFLICT ? this.renderConflict() : this.renderError()]
+                    })
+                }
+                constructor(...t) {
+                    var e;
+                    super(...t), e = this, this.onClose = () => {
+                        this.props.onClose()
+                    }, this.handlePlay = function() {
+                        let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
+                            l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                            {
+                                libraryApplication: n,
+                                analyticsParams: a
+                            } = e.props;
+                        e.onClose(), S(n.id, n, {
+                            analyticsParams: a,
+                            cloudSync: t,
+                            cloudSyncForceHash: l
+                        })
+                    }, this.handleChooseDownload = () => {
+                        let {
+                            cloudSyncState: t
+                        } = this.props;
+                        t.type === h.CloudSyncStateTypes.CONFLICT && this.handlePlay(!0, t.remote.hash)
+                    }, this.handleChooseUpload = () => {
+                        let {
+                            cloudSyncState: t
+                        } = this.props;
+                        t.type === h.CloudSyncStateTypes.CONFLICT && this.handlePlay(!0, t.next.hash)
+                    }
+                }
+            }
+            let E = o.default.connectStores([p.default, d.default], t => {
+                let {
+                    libraryApplication: e,
+                    branchId: l
+                } = t;
+                return {
+                    cloudSyncState: p.default.getState(e.id, l),
+                    application: d.default.getApplication(e.id)
+                }
+            })(T);
+            async function S(t, e, l) {
+                let a = d.default.getApplication(t);
+                if (null == a) return;
+                let {
+                    cloudSync: i = !0,
+                    cloudSyncForceHash: s = null,
+                    analyticsParams: o
+                } = l;
+                if (i && null != e) {
+                    let t = e.branchId;
+                    try {
+                        await c.sync(e.id, t, s)
+                    } catch (l) {
+                        (0, u.openModal)(l => (0, n.jsx)(E, {
+                            libraryApplication: e,
+                            analyticsParams: o,
+                            branchId: t,
+                            ...l
+                        }));
+                        return
+                    }
+                }
+                return C.default.track(h.AnalyticEvents.APPLICATION_OPENED, {
+                    application_id: a.id,
+                    application_name: a.name,
+                    type: h.AnalyticsGameOpenTypes.LAUNCH,
+                    distributor: null != e ? e.getDistributor() : null,
+                    ...o
+                }), r.default.launch(a.id, null == e ? void 0 : e.branchId)
+            }
+        },
+        104589: function(t, e, l) {
+            "use strict";
+            l.r(e), l.d(e, {
+                show: function() {
+                    return O
+                },
+                hide: function() {
+                    return D
+                },
+                search: function() {
+                    return U
+                },
+                selectResult: function() {
+                    return P
+                },
+                switchToResult: function() {
+                    return b
+                }
+            }), l("781738"), l("222007");
+            var n = l("913144"),
+                a = l("450911"),
+                i = l("255397"),
+                s = l("406189"),
+                o = l("987317"),
+                u = l("123225"),
+                c = l("537325"),
+                r = l("144491"),
+                d = l("239380"),
+                p = l("233069"),
+                f = l("42203"),
+                C = l("686470"),
+                h = l("18494"),
+                A = l("162771"),
+                _ = l("599110"),
+                y = l("340454"),
+                T = l("116460"),
+                E = l("49111"),
+                S = l("724210");
+            let I = () => Promise.resolve();
+            {
+                let t = l("780009");
+                I = t.playApplication
+            }
+            let N = Object.freeze({
+                    [u.AutocompleterQuerySymbols.USER]: u.AutocompleterResultTypes.USER,
+                    [u.AutocompleterQuerySymbols.TEXT_CHANNEL]: u.AutocompleterResultTypes.TEXT_CHANNEL,
+                    [u.AutocompleterQuerySymbols.VOICE_CHANNEL]: u.AutocompleterResultTypes.VOICE_CHANNEL,
+                    [u.AutocompleterQuerySymbols.GUILD]: u.AutocompleterResultTypes.GUILD,
+                    [u.AutocompleterQuerySymbols.APPLICATION]: u.AutocompleterResultTypes.APPLICATION
+                }),
+                m = new RegExp("^".concat(u.AutocompleterQuerySymbols.USER, "|").concat(u.AutocompleterQuerySymbols.TEXT_CHANNEL, "|").concat(u.AutocompleterQuerySymbols.VOICE_CHANNEL, "|\\").concat(u.AutocompleterQuerySymbols.GUILD, "|\\").concat(u.AutocompleterQuerySymbols.APPLICATION));
+
+            function L(t) {
+                let [e, l] = function(t) {
+                    var e;
+                    let l = t.charAt(0),
+                        n = null !== (e = N[l]) && void 0 !== e ? e : null;
+                    return [t.replace(m, ""), n]
+                }(t);
+                return {
+                    query: e,
+                    queryMode: l
+                }
+            }
+
+            function R(t, e) {
+                let {
+                    results: l,
+                    queryMode: n,
+                    query: a,
+                    maxQueryLength: i
+                } = T.default.getProps(), s = A.default.getGuildId(), o = h.default.getChannelId(s), c = l[(0, u.findNextSelectedResult)(u.FindResultDirections.DOWN, -1, l)], r = y.default.isEmail(a), d = y.default.isPhoneNumber(a), C = y.default.isUserTagLike(a), E = null != o && (0, S.isStaticChannelRoute)(o), I = {
+                    current_channel_id: E ? void 0 : o,
+                    current_channel_static_route: E ? o : void 0,
+                    current_guild_id: s,
+                    query_mode: null != n ? n : "GENERAL",
+                    query_length: a.length,
+                    max_query_length: i,
+                    is_email_like: r,
+                    is_phone_like: d,
+                    is_username_like: C,
+                    query: r || d || C ? null : a,
+                    top_result_type: null != c ? c.type : null,
+                    top_result_score: null != c ? c.score : null,
+                    num_results_total: T.default.getResultTotals(),
+                    num_results_users: T.default.getResultTotals(u.AutocompleterResultTypes.USER),
+                    num_results_text_channels: T.default.getResultTotals(u.AutocompleterResultTypes.TEXT_CHANNEL),
+                    num_results_voice_channels: T.default.getResultTotals(u.AutocompleterResultTypes.VOICE_CHANNEL),
+                    num_results_guilds: T.default.getResultTotals(u.AutocompleterResultTypes.GUILD),
+                    num_results_group_dms: T.default.getResultTotals(u.AutocompleterResultTypes.GROUP_DM)
+                };
+                if (null != o) {
+                    let t = f.default.getChannel(o);
+                    I.current_channel_type = null != t ? t.type : null
+                }
+                if (null != e) {
+                    let {
+                        type: t,
+                        score: n,
+                        record: a
+                    } = e;
+                    switch (I.selected_type = t, I.selected_score = n, I.selected_index = l.indexOf(e), t) {
+                        case u.AutocompleterResultTypes.GUILD:
+                            I.selected_guild_id = a.id;
+                            break;
+                        case u.AutocompleterResultTypes.TEXT_CHANNEL:
+                        case u.AutocompleterResultTypes.VOICE_CHANNEL:
+                            a instanceof p.ChannelRecordBase && (I.selected_guild_id = null != a.guild_id ? a.guild_id : null), I.selected_channel_id = a.id;
+                            break;
+                        case u.AutocompleterResultTypes.GROUP_DM:
+                            I.selected_channel_id = a.id;
+                            break;
+                        case u.AutocompleterResultTypes.USER:
+                            I.selected_user_id = a.id
+                    }
+                }
+                _.default.track(t, I)
+            }
+
+            function g() {
+                n.default.dispatch({
+                    type: "QUICKSWITCHER_HIDE"
+                })
+            }
+
+            function O() {
+                let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "KEYBIND",
+                    e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                ! function(t) {
+                    let e;
+                    if (T.default.isOpen()) return;
+                    let l = A.default.getGuildId(),
+                        n = h.default.getChannelId(l);
+                    if (null != n) {
+                        let t = f.default.getChannel(n);
+                        e = null != t ? t.type : null
+                    }
+                    _.default.track(E.AnalyticEvents.QUICKSWITCHER_OPENED, {
+                        source: t,
+                        current_guild_id: l,
+                        current_channel_id: n,
+                        current_channel_type: e
+                    })
+                }(t), n.default.dispatch({
+                    type: "QUICKSWITCHER_SHOW",
+                    ...L(e)
+                })
+            }
+
+            function D() {
+                R(E.AnalyticEvents.QUICKSWITCHER_CLOSED), g()
+            }
+
+            function U(t) {
+                n.default.dispatch({
+                    type: "QUICKSWITCHER_SEARCH",
+                    ...L(t)
+                })
+            }
+
+            function P(t) {
+                n.default.dispatch({
+                    type: "QUICKSWITCHER_SELECT",
+                    selectedIndex: t
+                })
+            }
+
+            function b(t) {
+                let e, l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                g(), R(E.AnalyticEvents.QUICKSWITCHER_RESULT_SELECTED, t);
+                let {
+                    type: p,
+                    record: h
+                } = t, A = {
+                    page: E.AnalyticsPages.QUICK_SWITCHER
+                };
+                switch (p) {
+                    case u.AutocompleterResultTypes.GUILD:
+                        (0, d.transitionToGuild)(h.id, {
+                            navigationReplace: !0
+                        });
+                        break;
+                    case u.AutocompleterResultTypes.TEXT_CHANNEL:
+                        null != (e = f.default.getChannel(h.id)) && (0, r.transitionToChannel)(e.id, {
+                            state: {
+                                analyticsSource: A
+                            },
+                            navigationReplace: !0
+                        });
+                        break;
+                    case u.AutocompleterResultTypes.VOICE_CHANNEL:
+                        null != (e = f.default.getChannel(h.id)) && (l ? i.default.updateChatOpen(h.id, !0) : o.default.selectVoiceChannel(h.id), (0, r.transitionToChannel)(e.id, {
+                            state: {
+                                analyticsSource: A
+                            },
+                            navigationReplace: !0
+                        }));
+                        break;
+                    case u.AutocompleterResultTypes.USER:
+                        a.default.openPrivateChannel([h.id], !1, !1, "Quickswitcher"), s.default.channelListScrollTo(E.ME, h.id);
+                        break;
+                    case u.AutocompleterResultTypes.GROUP_DM:
+                        (0, r.transitionToChannel)(h.id, {
+                            navigationReplace: !0
+                        }), s.default.channelListScrollTo(E.ME, h.id);
+                        break;
+                    case u.AutocompleterResultTypes.APPLICATION:
+                        let _ = C.default.getActiveLibraryApplication(h.id);
+                        I(h.id, _, {
+                            analyticsParams: {
+                                source: E.AnalyticsLocations.QUICK_SWITCHER,
+                                location: E.AnalyticsLocations.QUICK_SWITCHER
+                            }
+                        });
+                        break;
+                    case u.AutocompleterResultTypes.LINK:
+                        (0, c.default)(h.path, {
+                            navigationReplace: !0
+                        })
+                }
+                n.default.dispatch({
+                    type: "QUICKSWITCHER_SWITCH_TO",
+                    result: t
                 })
             }
         },
-        21526: function(e, r, t) {
+        971427: function(t, e, l) {
             "use strict";
-            t.r(r), t.d(r, {
-                trackCollectiblesShopOpened: function() {
-                    return d
-                },
-                openCollectiblesShop: function() {
-                    return f
-                },
-                closeCollectiblesShop: function() {
-                    return E
-                },
-                fetchCollectiblesCategories: function() {
-                    return p
-                },
-                fetchCollectiblesPurchases: function() {
-                    return P
-                },
-                fetchCollectiblesProduct: function() {
-                    return T
-                },
-                claimPremiumCollectiblesProduct: function() {
-                    return _
-                },
-                setCollectiblesCategoryItemsViewed: function() {
-                    return C
-                }
-            });
-            var l = t("872717"),
-                i = t("913144"),
-                o = t("54239"),
-                n = t("448993"),
-                s = t("514296"),
-                a = t("407788"),
-                u = t("489134"),
-                c = t("49111");
-            t("853987"), t("426497"), t("775416"), t("216719");
-            let d = e => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_SHOP_OPEN",
-                        ...e
-                    })
-                },
-                f = e => {
-                    d(e), (0, o.pushLayer)(c.Layers.COLLECTIBLES_SHOP)
-                },
-                E = () => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_SHOP_CLOSE"
-                    }), (0, o.popLayer)()
-                },
-                p = async () => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_CATEGORIES_FETCH"
-                    });
-                    try {
-                        let e = await l.default.get(c.Endpoints.COLLECTIBLES_CATEGORIES);
-                        i.default.dispatch({
-                            type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS",
-                            categories: e.body.map(s.default.fromServer)
-                        })
-                    } catch (e) {
-                        throw i.default.dispatch({
-                            type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE",
-                            error: e
-                        }), new n.APIError(e)
-                    }
-                }, P = async () => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_PURCHASES_FETCH"
-                    });
-                    try {
-                        let e = await l.default.get(c.Endpoints.COLLECTIBLES_PURCHASES);
-                        i.default.dispatch({
-                            type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS",
-                            purchases: e.body.map(u.default.fromServer)
-                        })
-                    } catch (e) {
-                        throw i.default.dispatch({
-                            type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE",
-                            error: e
-                        }), new n.APIError(e)
-                    }
-                }, T = async e => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_PRODUCT_FETCH"
-                    });
-                    try {
-                        let r = await l.default.get(c.Endpoints.COLLECTIBLES_PRODUCTS(e));
-                        i.default.dispatch({
-                            type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS",
-                            product: a.default.fromServer(r.body)
-                        })
-                    } catch (e) {
-                        throw i.default.dispatch({
-                            type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE",
-                            error: e
-                        }), new n.APIError(e)
-                    }
-                }, _ = async e => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_CLAIM",
-                        skuId: e
-                    });
-                    try {
-                        var r;
-                        let t = await l.default.put({
-                            url: c.Endpoints.COLLECTIBLES_CLAIM,
-                            body: {
-                                sku_id: e
-                            }
-                        });
-                        i.default.dispatch({
-                            type: "COLLECTIBLES_CLAIM_SUCCESS",
-                            skuId: e,
-                            purchases: null === (r = t.body) || void 0 === r ? void 0 : r.map(u.default.fromServer)
-                        })
-                    } catch (r) {
-                        throw i.default.dispatch({
-                            type: "COLLECTIBLES_CLAIM_FAILURE",
-                            skuId: e,
-                            error: r
-                        }), new n.APIError(r)
-                    }
-                }, C = e => {
-                    i.default.dispatch({
-                        type: "COLLECTIBLES_CATEGORY_ITEMS_VIEWED",
-                        ...e
-                    })
-                }
-        },
-        426497: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
+            let n;
+            l.r(e), l.d(e, {
                 default: function() {
-                    return E
+                    return u
                 }
-            }), t("808653");
-            var l = t("635058"),
-                i = t("265586"),
-                o = t("446674"),
-                n = t("913144"),
-                s = t("853987");
-            let a = new Date(2023, 8, 25),
-                u = new Date(2023, 9, 5),
-                c = () => ({
-                    categoryItemViews: {
-                        [l.CollectiblesCategorySkuId.FANTASY]: {
-                            [i.CollectiblesItemType.AVATAR_DECORATION]: a,
-                            [i.CollectiblesItemType.PROFILE_EFFECT]: u
-                        },
-                        [l.CollectiblesCategorySkuId.ANIME]: {
-                            [i.CollectiblesItemType.AVATAR_DECORATION]: a,
-                            [i.CollectiblesItemType.PROFILE_EFFECT]: u
-                        },
-                        [l.CollectiblesCategorySkuId.BREAKFAST]: {
-                            [i.CollectiblesItemType.AVATAR_DECORATION]: a,
-                            [i.CollectiblesItemType.PROFILE_EFFECT]: u
-                        },
-                        [l.CollectiblesCategorySkuId.DISXCORE]: {
-                            [i.CollectiblesItemType.AVATAR_DECORATION]: a
-                        }
-                    }
-                }),
-                d = c();
-            class f extends o.default.PersistedStore {
-                initialize(e) {
-                    null != e && (d = e)
+            }), l("424973");
+            var a = l("446674"),
+                i = l("913144");
+            let s = {
+                hasAcceptedStoreTerms: !1,
+                hasAcceptedEulaIds: []
+            };
+            class o extends a.default.PersistedStore {
+                initialize(t) {
+                    n = null != t ? t : s
                 }
                 getState() {
-                    return d
-                }
-                isItemViewed(e) {
-                    var r;
-                    let t = s.default.getCategoryForProduct(e.skuId);
-                    return null != t && (null === (r = d.categoryItemViews[t.skuId]) || void 0 === r ? void 0 : r[e.type]) != null
-                }
-                reset() {
-                    d = c()
-                }
-            }
-            f.displayName = "CollectiblesPersistedStore", f.persistKey = "CollectiblesPersistedStoreV2";
-            var E = new f(n.default, {
-                COLLECTIBLES_CATEGORY_ITEMS_VIEWED: e => {
-                    let {
-                        categories: r,
-                        itemTypes: t
-                    } = e, l = new Date;
-                    return r.reduce((e, r) => {
-                        let {
-                            skuId: i
-                        } = r, o = t.reduce((e, r) => {
-                            var t;
-                            return (null === (t = d.categoryItemViews[i]) || void 0 === t ? void 0 : t[r]) != null ? e : (null == d.categoryItemViews[i] && (d.categoryItemViews[i] = {}), d.categoryItemViews[i][r] = l, !0)
-                        }, !1);
-                        return e || o
-                    }, !1)
-                }
-            })
-        },
-        775416: function(e, r, t) {
-            "use strict";
-            let l, i, o;
-            t.r(r), t.d(r, {
-                default: function() {
-                    return E
-                }
-            }), t("222007");
-            var n = t("917351"),
-                s = t("446674"),
-                a = t("913144");
-            let u = new Map,
-                c = u,
-                d = !1;
-            class f extends s.default.Store {
-                get isFetching() {
-                    return d
-                }
-                get isClaiming() {
-                    return l
-                }
-                get purchases() {
-                    return c
-                }
-                get fetchError() {
-                    return i
-                }
-                get claimError() {
-                    return o
-                }
-                getPurchase(e) {
-                    return null != e ? c.get(e) : void 0
-                }
-            }
-            f.displayName = "CollectiblesPurchaseStore";
-            var E = new f(a.default, {
-                COLLECTIBLES_PURCHASES_FETCH: e => {
-                    d = !0, i = void 0
-                },
-                COLLECTIBLES_PURCHASES_FETCH_SUCCESS: e => {
-                    0 === e.purchases.length ? c = u : !(0, n.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), d = !1, i = void 0
-                },
-                COLLECTIBLES_PURCHASES_FETCH_FAILURE: e => {
-                    let {
-                        error: r
-                    } = e;
-                    c = u, d = !1, i = r
-                },
-                COLLECTIBLES_CLAIM: e => {
-                    l = e.skuId, o = void 0
-                },
-                COLLECTIBLES_CLAIM_SUCCESS: e => {
-                    null == e.purchases || 0 === e.purchases.length ? c = u : !(0, n.isEqual)([...c.values()], e.purchases) && (c = new Map(e.purchases.map(e => [e.skuId, e]))), l = void 0, o = void 0
-                },
-                COLLECTIBLES_CLAIM_FAILURE: e => {
-                    let {
-                        error: r,
-                        skuId: t
-                    } = e;
-                    l = t, o = r
-                },
-                LOGOUT: e => {
-                    c = u, d = !1, l = void 0, i = void 0, o = void 0
-                }
-            })
-        },
-        805172: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return o
-                }
-            });
-            var l = t("862205");
-            let i = (0, l.createExperiment)({
-                kind: "user",
-                id: "2023-10_collectibles_shop_for_all",
-                label: "Collectibles Shop For All",
-                defaultConfig: {
-                    shopForAllEnabled: !1,
-                    marketingEnabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enables Collectibles Shop For All",
-                    config: {
-                        shopForAllEnabled: !0,
-                        marketingEnabled: !1
-                    }
-                }, {
-                    id: 2,
-                    label: "Enables Collectibles Shop For All with in-app DCF marketing",
-                    config: {
-                        shopForAllEnabled: !0,
-                        marketingEnabled: !0
-                    }
-                }]
-            });
-            var o = e => {
-                let {
-                    location: r,
-                    autoTrackExposure: t = !0,
-                    trackExposureOptions: l = {}
-                } = e;
-                return i.useExperiment({
-                    location: r
-                }, {
-                    autoTrackExposure: t,
-                    trackExposureOptions: l
-                })
-            }
-        },
-        216719: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return c
-                }
-            });
-            var l = t("446674"),
-                i = t("913144");
-            let o = [],
-                n = o,
-                s = null,
-                a = e => {
-                    n = o, s = null
-                };
-            class u extends l.default.Store {
-                get analyticsLocations() {
                     return n
                 }
-                get analyticsSource() {
-                    return s
+                get hasAcceptedStoreTerms() {
+                    return n.hasAcceptedStoreTerms
                 }
-                getAnalytics() {
-                    return {
-                        analyticsLocations: n,
-                        analyticsSource: s
-                    }
+                hasAcceptedEULA(t) {
+                    return n.hasAcceptedEulaIds.includes(t)
                 }
             }
-            u.displayName = "CollectiblesShopStore";
-            var c = new u(i.default, {
-                COLLECTIBLES_SHOP_OPEN: e => {
-                    var r, t;
-                    n = null !== (r = e.analyticsLocations) && void 0 !== r ? r : o, s = null !== (t = e.analyticsSource) && void 0 !== t ? t : null
+            o.displayName = "ApplicationStoreUserSettingsStore", o.persistKey = "ApplicationStoreUserSettingsStore", o.migrations = [t => null == t.hasAcceptedEulaIds ? {
+                ...t,
+                hasAcceptedEulaIds: []
+            } : t];
+            var u = new o(i.default, {
+                APPLICATION_STORE_ACCEPT_STORE_TERMS: function() {
+                    n.hasAcceptedStoreTerms = !0
                 },
-                COLLECTIBLES_SHOP_CLOSE: a,
-                LOGOUT: a
+                APPLICATION_STORE_ACCEPT_EULA: function(t) {
+                    let {
+                        eulaId: e
+                    } = t;
+                    if (n.hasAcceptedEulaIds.includes(e)) return !1;
+                    n.hasAcceptedEulaIds.push(e)
+                }
             })
         },
-        514296: function(e, r, t) {
+        148813: function(t, e, l) {
             "use strict";
-            t.r(r), t.d(r, {
+            let n, a, i;
+            l.r(e), l.d(e, {
                 default: function() {
-                    return l
+                    return A
                 }
-            }), t("808653"), t("424973");
-            var l, i = t("407788"),
-                o = t("792382");
-            l = class e extends o.default {
-                static fromServer(r) {
+            }), l("222007");
+            var s = l("446674"),
+                o = l("913144"),
+                u = l("959254"),
+                c = l("686470"),
+                r = l("568307"),
+                d = l("964889"),
+                p = l("773336"),
+                f = l("355045"),
+                C = l("49111");
+            class h extends s.default.Store {
+                initialize() {
+                    p.isPlatformEmbedded && f.init(), n = {}, a = new Set, i = []
+                }
+                getState(t, e) {
+                    let l = (0, d.getComboId)(t, e);
+                    return n[l]
+                }
+                isSyncing(t, e) {
+                    let l = (0, d.getComboId)(t, e);
+                    return a.has(l)
+                }
+            }
+            h.displayName = "CloudSyncStore";
+            var A = new h(o.default, {
+                GAME_CLOUD_SYNC_START: function(t) {
                     let {
-                        products: t,
-                        logo: l,
-                        ...o
-                    } = r;
-                    return new e({
-                        ...super.fromServer(o),
-                        products: t.reduce((e, r) => {
-                            let t = i.default.fromServer(r);
-                            return 0 === t.items.length ? e : (e.push(t), e)
-                        }, []),
-                        logo: l
-                    })
-                }
-                constructor(e) {
-                    super(e), this.products = e.products, this.logo = e.logo
-                }
-            }
-        },
-        407788: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return l
-                }
-            }), t("808653"), t("794252"), t("424973");
-            var l, i = t("506838"),
-                o = t("265586"),
-                n = t("797647"),
-                s = t("730297"),
-                a = t("792382"),
-                u = t("806410");
-            l = class e extends a.default {
-                static fromServer(r) {
-                    var t;
-                    let {
-                        currency: l,
-                        price: a,
-                        prices: c,
-                        ...d
-                    } = r;
-                    return new e({
-                        ...super.fromServer(d),
-                        currency: l,
-                        price: a,
-                        prices: null == (t = c) ? {} : Object.keys(t).reduce((e, r) => {
-                            if (null == t) return e;
-                            let l = t[r];
-                            return e[r] = {
-                                countryPrices: {
-                                    countryCode: l.country_prices.country_code,
-                                    prices: l.country_prices.prices.map(e => (0, n.getPriceFromServer)(e, !0))
-                                },
-                                paymentSourcePrices: {}
-                            }, e
-                        }, {}),
-                        items: d.items.reduce((e, r) => (0, i.match)(r).with({
-                            type: o.CollectiblesItemType.AVATAR_DECORATION
-                        }, r => (e.push(s.default.fromServer(r)), e)).with({
-                            type: o.CollectiblesItemType.PROFILE_EFFECT
-                        }, r => (e.push(u.default.fromServer(r)), e)).otherwise(() => e), [])
-                    })
-                }
-                constructor(e) {
-                    super(e), this.currency = e.currency, this.price = e.price, this.prices = e.prices, this.summary = e.summary, this.items = e.items
-                }
-            }
-        },
-        489134: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return l
-                }
-            });
-            var l, i = t("407788");
-            l = class e extends i.default {
-                static fromServer(r) {
-                    let {
-                        purchased_at: t,
-                        purchase_type: l,
-                        ...i
-                    } = r;
-                    return new e({
-                        ...super.fromServer(i),
-                        purchaseType: l,
-                        purchasedAt: null != t ? new Date(t) : t
-                    })
-                }
-                constructor(e) {
-                    super(e), this.purchasedAt = e.purchasedAt, this.purchaseType = e.purchaseType
-                }
-            }
-        },
-        792382: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return l
-                }
-            });
-            var l, i = t("666038");
-            l = class e extends i.default {
-                static fromServer(r) {
-                    let {
-                        store_listing_id: t,
-                        sku_id: l,
-                        unpublished_at: i,
-                        ...o
-                    } = r, n = null != i ? new Date(i) : null;
-                    return new e({
-                        ...o,
-                        storeListingId: t,
-                        skuId: l,
-                        unpublishedAt: n
-                    })
-                }
-                constructor(e) {
-                    super(), this.storeListingId = e.storeListingId, this.skuId = e.skuId, this.name = e.name, this.summary = e.summary, this.banner = e.banner, this.unpublishedAt = e.unpublishedAt
-                }
-            }
-        },
-        335031: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return u
-                }
-            });
-            var l = t("884691"),
-                i = t("656280"),
-                o = t.n(i),
-                n = t("509043"),
-                s = t("446674"),
-                a = t("206230"),
-                u = e => {
-                    let r = (0, s.useStateFromStores)([a.default], () => a.default.desaturateUserColors ? a.default.saturation : 1),
-                        t = (0, l.useMemo)(() => {
-                            let {
-                                h: t,
-                                s: l,
-                                l: i
-                            } = o((0, n.int2hex)(e)).toHsl(), s = o({
-                                h: t,
-                                s: l * r,
-                                l: i
-                            });
-                            return {
-                                hex: s.toHexString(),
-                                hsl: s.toHslString()
-                            }
-                        }, [e, r]);
-                    return t
-                }
-        },
-        528438: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return s
-                }
-            }), t("222007");
-            var l = t("509043"),
-                i = t("462274"),
-                o = t("449918"),
-                n = t("49111");
-
-            function s(e, r) {
-                var t, s;
-                let {
-                    pendingThemeColors: a,
-                    isPreview: u
-                } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, c = null == e ? void 0 : e.getAvatarURL(null == r ? void 0 : r.guildId, 80), d = (0, o.useColorValue)(n.Color.PRIMARY_530).hex, [f, E] = (0, i.useAvatarColors)(c, d, !1);
-                if (!(null == r ? void 0 : r.canEditThemes) && !u) return [null, null];
-                let p = null == r ? void 0 : r.getPreviewThemeColors(a),
-                    P = null !== (t = null == p ? void 0 : p[0]) && void 0 !== t ? t : (0, l.hex2int)(f),
-                    T = null !== (s = null == p ? void 0 : p[1]) && void 0 !== s ? s : (0, l.hex2int)(E);
-                return [P, T]
-            }
-        },
-        289918: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return J
-                }
-            }), t("222007");
-            var l, i, o = t("37983"),
-                n = t("884691"),
-                s = t("414456"),
-                a = t.n(s),
-                u = t("509043"),
-                c = t("446674"),
-                d = t("669491"),
-                f = t("77078"),
-                E = t("79112"),
-                p = t("812204"),
-                P = t("685665"),
-                T = t("462274"),
-                _ = t("618017"),
-                C = t("190045"),
-                O = t("335031"),
-                S = t("252063"),
-                h = t("38766"),
-                L = t("845579"),
-                I = t("271938"),
-                y = t("42203"),
-                m = t("305961"),
-                U = t("18494"),
-                A = t("697218"),
-                v = t("471671"),
-                g = t("275623"),
-                R = t("945330"),
-                N = t("474571"),
-                b = t("216422"),
-                B = t("987772"),
-                M = t("956089"),
-                D = t("599110"),
-                w = t("315102"),
-                F = t("719923"),
-                H = t("713135"),
-                x = t("581295"),
-                k = t("878569"),
-                G = t("236100"),
-                j = t("590456"),
-                W = t("49111"),
-                z = t("646718"),
-                V = t("782340"),
-                Y = t("220817");
-            (i = l || (l = {}))[i.SHOULD_LOAD = 0] = "SHOULD_LOAD", i[i.LOADING = 1] = "LOADING", i[i.COMPLETE = 2] = "COMPLETE";
-            let X = {
-                    [j.UserProfileTypes.POPOUT]: 18,
-                    [j.UserProfileTypes.MODAL]: 24,
-                    [j.UserProfileTypes.SETTINGS]: 0,
-                    [j.UserProfileTypes.PANEL]: 18,
-                    [j.UserProfileTypes.POMELO_POPOUT]: 18,
-                    [j.UserProfileTypes.CANCEL_MODAL]: 0
+                        applicationId: e,
+                        branchId: l
+                    } = t, n = (0, d.getComboId)(e, l);
+                    a.add(n)
                 },
-                Z = {
-                    [j.UserProfileTypes.MODAL]: W.AnalyticsPages.USER_PROFILE,
-                    [j.UserProfileTypes.POPOUT]: W.AnalyticsPages.USER_POPOUT,
-                    [j.UserProfileTypes.SETTINGS]: W.AnalyticsPages.USER_POPOUT,
-                    [j.UserProfileTypes.PANEL]: W.AnalyticsPages.DM_CHANNEL,
-                    [j.UserProfileTypes.POMELO_POPOUT]: W.AnalyticsPages.POMELO_POPOUT,
-                    [j.UserProfileTypes.CANCEL_MODAL]: W.AnalyticsPages.USER_POPOUT
-                };
-
-            function K(e) {
-                let {
-                    type: r,
-                    shown: l,
-                    onClick: i
-                } = e, s = (0, c.useStateFromStores)([A.default], () => {
-                    let e = A.default.getCurrentUser();
-                    return F.default.canUsePremiumProfileCustomization(e)
-                }), u = n.useRef(!1), {
-                    analyticsLocations: d
-                } = (0, P.default)(p.default.BADGE);
-                return n.useEffect(() => {
-                    l && !u.current && (u.current = !0, D.default.track(W.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-                        type: z.PremiumUpsellTypes.CUSTOM_PROFILES_PROFILE_BANNER_SOCIAL_UPSELL,
-                        location: {
-                            page: Z[r],
-                            section: W.AnalyticsSections.NITRO_BANNER,
-                            object: W.AnalyticsObjects.NITRO_BADGE
-                        },
-                        location_stack: d
-                    }))
-                }, [d, l, r]), (0, o.jsx)(f.Tooltip, {
-                    tooltipContentClassName: Y.premiumIconTooltipContent,
-                    text: s ? V.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP : V.default.Messages.USER_SETTINGS_PROFILE_THEMES_USER_PROFILE_ICON_TOOLTIP_UPSELL,
-                    children: e => (0, o.jsx)(f.Clickable, {
-                        ...e,
-                        onClick: s ? void 0 : () => {
-                            var e;
-                            e = d, (0, f.openModalLazy)(async () => {
-                                let {
-                                    default: r
-                                } = await t.el("292890").then(t.bind(t, "292890"));
-                                return t => {
-                                    let {
-                                        onClose: l,
-                                        ...i
-                                    } = t;
-                                    return (0, o.jsx)(r, {
-                                        analyticsLocations: e,
-                                        title: V.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_TITLE,
-                                        description: V.default.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_FROM_ICON_MODAL_DESCRIPTION.format({
-                                            onAndMoreWithPremiumClick: () => {
-                                                l(), E.default.open(W.UserSettingsSections.PREMIUM, null, {
-                                                    analyticsLocations: e
-                                                })
-                                            }
-                                        }),
-                                        onClose: l,
-                                        ...i
-                                    })
-                                }
-                            }), null == i || i()
-                        },
-                        className: a(Y.premiumIconWrapper, {
-                            [Y.visible]: l,
-                            [Y.clickable]: !s
-                        }),
-                        children: (0, o.jsx)(M.TextBadge, {
-                            color: "rgba(32, 34, 37, 0.8)",
-                            text: (0, o.jsx)(b.default, {
-                                width: 16,
-                                height: 16,
-                                className: Y.premiumIcon
-                            })
+                GAME_CLOUD_SYNC_UPDATE: function(t) {
+                    let {
+                        state: e
+                    } = t;
+                    for (let t of Object.keys(e)) n[t] = e[t]
+                },
+                GAME_CLOUD_SYNC_COMPLETE: function(t) {
+                    let {
+                        applicationId: e,
+                        branchId: l
+                    } = t, i = (0, d.getComboId)(e, l);
+                    return a.delete(i), n[i] = {
+                        type: C.CloudSyncStateTypes.DONE,
+                        timestamp: Date.now()
+                    }, !0
+                },
+                GAME_CLOUD_SYNC_CONFLICT: function(t) {
+                    let {
+                        applicationId: e,
+                        branchId: l,
+                        next: i,
+                        remote: s
+                    } = t, o = (0, d.getComboId)(e, l);
+                    n[o] = {
+                        type: C.CloudSyncStateTypes.CONFLICT,
+                        next: i,
+                        remote: s
+                    }, a.delete(o)
+                },
+                GAME_CLOUD_SYNC_ERROR: function(t) {
+                    let {
+                        applicationId: e,
+                        branchId: l
+                    } = t, i = (0, d.getComboId)(e, l);
+                    n[i] = {
+                        type: C.CloudSyncStateTypes.ERROR
+                    }, a.delete(i)
+                },
+                RUNNING_GAMES_CHANGE: function() {
+                    let t = r.default.getRunningDiscordApplicationIds(),
+                        e = i.filter(e => !t.includes(e));
+                    for (let t of e) {
+                        let e = c.default.getActiveLibraryApplication(t);
+                        null != e && o.default.wait(() => {
+                            try {
+                                u.sync(e.id, e.branchId)
+                            } catch (t) {}
                         })
-                    })
-                })
-            }
-
-            function q(e) {
-                let {
-                    darkenOnHover: r,
-                    profileType: t,
-                    profileLabel: l,
-                    icon: i,
-                    ...n
-                } = e, s = X[t], a = "pencil" === i ? B.default : N.default;
-                return (0, o.jsx)(f.Clickable, {
-                    ...n,
-                    "aria-label": l,
-                    className: r ? Y.pencilContainerDark : Y.pencilContainer,
-                    children: (0, o.jsx)(f.Tooltip, {
-                        text: l,
-                        children: e => (0, o.jsx)(a, {
-                            ...e,
-                            width: s,
-                            height: s,
-                            className: Y.editIcon
-                        })
-                    })
-                })
-            }
-
-            function J(e) {
-                var r, t, l;
-                let {
-                    user: i,
-                    displayProfile: s,
-                    bannerSrc: E,
-                    onClose: p,
-                    guildId: P,
-                    profileType: A = j.UserProfileTypes.POPOUT,
-                    allowEdit: N = !0,
-                    showPremiumBadgeUpsell: b = !0,
-                    isHovering: B,
-                    animateOnHover: M
-                } = e, [D, X] = n.useState((null == s ? void 0 : s.banner) == null ? 2 : 0), Z = (0, c.useStateFromStores)([m.default], () => m.default.getGuild(P)), J = (0, c.useStateFromStores)([I.default], () => I.default.getId()), Q = J === i.id && N || i.isClyde() && null != Z && (0, _.canEditClydeAIProfile)(Z), $ = F.default.isPremiumAtLeast(null == s ? void 0 : s.premiumType, z.PremiumTypes.TIER_2), [ee, er] = n.useState(!1), et = (0, c.useStateFromStores)([v.default], () => v.default.isFocused()), el = L.GifAutoPlay.getSetting(), ei = (0, f.useToken)(d.default.unsafe_rawColors.PRIMARY_800).hex(), eo = (0, f.getAvatarSize)(f.AvatarSizes.SIZE_80), en = (0, u.hex2int)((0, T.default)(i.getAvatarURL(P, eo), ei, !1)), es = (0, O.default)(null !== (r = null == s ? void 0 : s.primaryColor) && void 0 !== r ? r : en).hsl, ea = (0, k.getUserBannerSize)(A), eu = null != E ? E : null == s ? void 0 : s.getBannerURL({
-                    size: ea,
-                    canAnimate: M || !el ? ee : et
-                }), ec = null != eu, ed = (0, c.useStateFromStores)([H.default], () => H.default.getUserProfile(i.id)), ef = y.default.getChannel(U.default.getChannelId()), {
-                    appsInGDMEnabled: eE,
-                    availableApplications: ep
-                } = (0, S.usePrivateChannelIntegrationState)({
-                    channelId: null !== (t = null == ef ? void 0 : ef.id) && void 0 !== t ? t : ""
-                }), eP = null == ed ? void 0 : ed.application, eT = eE && null != ep.find(e => e.id === (null == eP ? void 0 : eP.id));
-                if (ec && ($ || i.isClyde()) && 0 === D) {
-                    X(1);
-                    let e = new Image;
-                    e.src = eu, e.onload = () => X(2)
-                }
-                n.useEffect(() => {
-                    if (el || !$) return;
-                    let e = null != E ? E : null == s ? void 0 : s.getBannerURL({
-                        size: ea,
-                        canAnimate: !0
-                    });
-                    if (null == e) return;
-                    let r = new Image;
-                    r.src = e
-                }, [el, $, E, s, ea]);
-                let e_ = (0, h.default)({
-                        analyticsLocation: {
-                            page: W.AnalyticsPages.USER_POPOUT,
-                            section: W.AnalyticsSections.PROFILE_POPOUT
-                        }
-                    }),
-                    eC = (null == s ? void 0 : s.profileEffectID) != null;
-                return (0, o.jsx)(x.default, {
-                    isPremium: $,
-                    hasThemeColors: null !== (l = null == s ? void 0 : s.canEditThemes) && void 0 !== l && l,
-                    profileType: A,
-                    hasBanner: ec,
-                    hasProfileEffect: eC,
-                    children: (0, o.jsxs)("div", {
-                        className: a(Y.banner, (0, k.getUserBannerStyles)({
-                            profileType: A,
-                            user: {
-                                hasBanner: ec,
-                                isPremium: $,
-                                hasProfileEffect: eC
-                            }
-                        }), {
-                            [Y.reducedMotion]: !el
-                        }),
-                        onMouseMove: () => er(!0),
-                        onMouseLeave: () => er(!1),
-                        style: {
-                            backgroundImage: ec && $ ? "url(".concat(eu, ")") : void 0,
-                            backgroundColor: 2 !== D ? d.default.unsafe_rawColors.PRIMARY_800.css : es
-                        },
-                        children: [Q ? null != Z || i.isClyde() ? null != Z && i.isClyde() && (0, _.canEditClydeAIProfile)(Z) ? (0, o.jsx)(q, {
-                            profileType: A,
-                            profileLabel: V.default.Messages.CLYDE_SETTINGS,
-                            icon: "gear",
-                            onClick: () => {
-                                null == p || p(), (0, C.default)(Z.id)
-                            }
-                        }) : null == Z ? null : (0, o.jsx)(f.Popout, {
-                            spacing: 6,
-                            position: "bottom",
-                            renderPopout: e => {
-                                let {
-                                    closePopout: r
-                                } = e;
-                                return (0, o.jsx)(G.default, {
-                                    onClose: r,
-                                    onSelect: p,
-                                    guild: Z
-                                })
-                            },
-                            children: e => (0, o.jsx)(q, {
-                                darkenOnHover: eC && B,
-                                profileLabel: V.default.Messages.EDIT_PROFILE,
-                                icon: "pencil",
-                                ...e,
-                                profileType: A
-                            })
-                        }) : (0, o.jsx)(q, {
-                            darkenOnHover: eC && B,
-                            profileType: A,
-                            profileLabel: V.default.Messages.EDIT_PROFILE,
-                            icon: "pencil",
-                            onClick: () => {
-                                null == p || p(), e_()
-                            }
-                        }) : (() => {
-                            let e = b && ec && A !== j.UserProfileTypes.SETTINGS;
-                            return e ? (0, o.jsx)(K, {
-                                type: A,
-                                shown: void 0 === B ? ee : B,
-                                onClick: p
-                            }) : null
-                        })(), eT ? A !== j.UserProfileTypes.MODAL ? null : (0, o.jsx)(f.Clickable, {
-                            onClick: p,
-                            "aria-label": V.default.Messages.BACK,
-                            className: Y.pencilContainer,
-                            children: (0, o.jsx)(f.Tooltip, {
-                                text: V.default.Messages.BACK,
-                                children: e => (0, o.jsx)(R.default, {
-                                    ...e,
-                                    className: Y.closeIcon,
-                                    color: "white"
-                                })
-                            })
-                        }) : null, !el && (0, w.isAnimatedImageURL)(eu) && (0, o.jsx)(g.default, {
-                            className: Y.gifTag
-                        })]
-                    })
-                })
-            }
-        },
-        581295: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return P
-                }
-            }), t("70102"), t("794252");
-            var l = t("37983");
-            t("884691");
-            var i = t("506838"),
-                o = t("769846"),
-                n = t("77078"),
-                s = t("606292"),
-                a = t("476765"),
-                u = t("159885"),
-                c = t("878569"),
-                d = t("590456"),
-                f = t("573135"),
-                E = t("423713");
-            let p = {
-                [d.UserProfileTypes.POPOUT]: n.AvatarSizes.SIZE_80,
-                [d.UserProfileTypes.MODAL]: n.AvatarSizes.SIZE_120,
-                [d.UserProfileTypes.SETTINGS]: n.AvatarSizes.SIZE_80,
-                [d.UserProfileTypes.PANEL]: n.AvatarSizes.SIZE_80,
-                [d.UserProfileTypes.POMELO_POPOUT]: n.AvatarSizes.SIZE_80,
-                [d.UserProfileTypes.CANCEL_MODAL]: n.AvatarSizes.SIZE_56
-            };
-
-            function P(e) {
-                let {
-                    children: r,
-                    profileType: t,
-                    isPremium: P,
-                    hasThemeColors: T,
-                    hasBanner: _,
-                    forProfileEffectModal: C,
-                    hasProfileEffect: O = !1
-                } = e, S = p[t], h = (0, a.useUID)(), L = function(e) {
-                    let {
-                        profileType: r,
-                        avatarSize: t,
-                        hasBanner: l,
-                        isPremium: a,
-                        hasThemeColors: E,
-                        hasProfileEffect: p
-                    } = e, P = f.AvatarDecorationBorderSizes[t];
-                    if (null == P) throw Error("Unsupported avatar size for banner mask");
-                    let T = (0, s.getDecorationSizeForAvatarSize)(t),
-                        {
-                            size: _,
-                            stroke: C
-                        } = (0, n.getAvatarSpecs)(t),
-                        O = {
-                            avatarSize: _,
-                            avatarBorderSize: C,
-                            avatarDecorationSize: T,
-                            avatarDecorationBorderSize: P,
-                            avatarDecorationOffsetY: -(T + 2 * P) / 2,
-                            bannerHeight: (0, c.getUserBannerHeight)({
-                                profileType: r,
-                                user: {
-                                    hasBanner: l,
-                                    isPremium: a,
-                                    hasProfileEffect: p
-                                }
-                            })
-                        };
-                    return (0, i.match)(r).with(d.UserProfileTypes.POPOUT, () => {
-                        let e = E ? (0, u.cssValueToNumber)(o.default.USER_PROFILE_THEMED_CONTAINER_USER_PROFILE_THEMED_PADDING) : 0;
-                        return {
-                            ...O,
-                            bannerWidth: (0, u.cssValueToNumber)(o.default.USER_PROFILE_THEMED_CONTAINER_USER_POPOUT_WIDTH),
-                            offsetX: 16 - e,
-                            offsetY: 4 + e,
-                            avatarDecorationOffsetX: 4
-                        }
-                    }).with(d.UserProfileTypes.MODAL, () => ({
-                        ...O,
-                        bannerWidth: (0, c.getUserBannerSize)(d.UserProfileTypes.MODAL),
-                        offsetX: 14,
-                        offsetY: 5,
-                        avatarDecorationOffsetX: 2
-                    })).with(d.UserProfileTypes.SETTINGS, () => ({
-                        ...O,
-                        bannerWidth: 660,
-                        offsetX: 16,
-                        offsetY: -22,
-                        avatarDecorationOffsetX: 8
-                    })).with(d.UserProfileTypes.PANEL, () => {
-                        let e = (0, u.cssValueToNumber)(o.default.USER_PROFILE_THEMED_CONTAINER_USER_PROFILE_THEMED_PADDING);
-                        return {
-                            ...O,
-                            bannerWidth: (0, u.cssValueToNumber)(o.default.USER_PROFILE_THEMED_CONTAINER_USER_POPOUT_WIDTH),
-                            offsetX: 16 - e,
-                            offsetY: 4 + e,
-                            avatarDecorationOffsetX: 4
-                        }
-                    }).with(d.UserProfileTypes.POMELO_POPOUT, () => ({
-                        ...O,
-                        bannerWidth: (0, c.getUserBannerSize)(d.UserProfileTypes.POMELO_POPOUT),
-                        offsetX: 20,
-                        offsetY: -20,
-                        avatarDecorationOffsetX: 10
-                    })).with(d.UserProfileTypes.CANCEL_MODAL, () => ({
-                        ...O,
-                        bannerWidth: (0, c.getUserBannerSize)(d.UserProfileTypes.CANCEL_MODAL),
-                        offsetX: 8,
-                        offsetY: 2,
-                        avatarDecorationOffsetX: 8
-                    })).exhaustive()
-                }({
-                    profileType: t,
-                    avatarSize: S,
-                    hasBanner: _,
-                    isPremium: P,
-                    hasThemeColors: T,
-                    hasProfileEffect: O
-                });
-                C && (L.bannerWidth = (0, u.cssValueToNumber)(o.default.USER_PROFILE_THEMED_CONTAINER_PROFILE_EFFECTS_USER_POPOUT_WIDTH));
-                let I = L.avatarSize / 2 + L.avatarBorderSize,
-                    y = L.bannerHeight - L.offsetY;
-                return (0, l.jsxs)("svg", {
-                    className: E.bannerSVGWrapper,
-                    viewBox: "0 0 ".concat(L.bannerWidth, " ").concat(L.bannerHeight),
-                    style: {
-                        minWidth: L.bannerWidth,
-                        minHeight: L.bannerHeight
-                    },
-                    children: [(0, l.jsxs)("mask", {
-                        id: h,
-                        children: [(0, l.jsx)("rect", {
-                            fill: "white",
-                            x: "0",
-                            y: "0",
-                            width: "100%",
-                            height: "100%"
-                        }), (0, l.jsx)("circle", {
-                            fill: "black",
-                            cx: L.offsetX + I,
-                            cy: y,
-                            r: I
-                        })]
-                    }), (0, l.jsx)("foreignObject", {
-                        x: "0",
-                        y: "0",
-                        width: "100%",
-                        height: "100%",
-                        overflow: "visible",
-                        mask: "url(#".concat(h, ")"),
-                        children: r
-                    })]
-                })
-            }
-        },
-        878569: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                buildGetPremiumUserBannerStyles: function() {
-                    return a
-                },
-                getUserBannerStyles: function() {
-                    return u
-                },
-                getUserBannerHeight: function() {
-                    return c
-                },
-                getUserBannerSize: function() {
-                    return f
-                }
-            }), t("794252");
-            var l = t("506838"),
-                i = t("617258"),
-                o = t("769846"),
-                n = t("590456"),
-                s = t("220817");
-            let a = e => r => {
-                    if (r.hasBanner && r.isPremium || r.hasProfileEffect) return e.premiumUserWithBanner;
-                    if (r.isPremium) {
-                        var t;
-                        return null !== (t = e.premiumUserWithoutBanner) && void 0 !== t ? t : e.default
                     }
-                    return e.default
-                },
-                u = e => {
-                    let {
-                        profileType: r,
-                        user: t
-                    } = e;
-                    return (0, l.match)(r).with(n.UserProfileTypes.POPOUT, n.UserProfileTypes.POMELO_POPOUT, () => {
-                        let e = a({
-                            premiumUserWithBanner: s.popoutBannerPremium,
-                            premiumUserWithoutBanner: s.popoutNoBannerPremium,
-                            default: s.popoutBanner
-                        });
-                        return e(t)
-                    }).with(n.UserProfileTypes.MODAL, () => {
-                        let e = a({
-                            premiumUserWithBanner: s.profileBannerPremium,
-                            premiumUserWithoutBanner: s.profileBanner,
-                            default: s.profileBanner
-                        });
-                        return e(t)
-                    }).with(n.UserProfileTypes.SETTINGS, () => s.settingsBanner).with(n.UserProfileTypes.PANEL, () => s.panelBanner).with(n.UserProfileTypes.CANCEL_MODAL, () => s.cancelModalBanner).exhaustive()
-                },
-                c = e => {
-                    let {
-                        profileType: r,
-                        user: t
-                    } = e, s = (0, l.match)(r).with(n.UserProfileTypes.POPOUT, () => {
-                        let e = a({
-                            premiumUserWithBanner: o.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_POPOUT,
-                            premiumUserWithoutBanner: o.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_NO_BANNER_IMAGE_POPOUT,
-                            default: o.default.USER_BANNER_BANNER_HEIGHT_POPOUT
-                        });
-                        return e(t)
-                    }).with(n.UserProfileTypes.MODAL, () => {
-                        let e = a({
-                            premiumUserWithBanner: o.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_PROFILE,
-                            premiumUserWithoutBanner: o.default.USER_BANNER_BANNER_HEIGHT_PROFILE,
-                            default: o.default.USER_BANNER_BANNER_HEIGHT_PROFILE
-                        });
-                        return e(t)
-                    }).with(n.UserProfileTypes.POMELO_POPOUT, () => o.default.USER_BANNER_BANNER_HEIGHT_POMELO).with(n.UserProfileTypes.SETTINGS, () => o.default.USER_BANNER_PREMIUM_BANNER_HEIGHT_SETTINGS).with(n.UserProfileTypes.PANEL, () => o.default.USER_BANNER_BANNER_HEIGHT_PANEL).with(n.UserProfileTypes.CANCEL_MODAL, () => o.default.USER_BANNER_CANCEL_MODAL_HEIGHT).exhaustive();
-                    return (0, i.cssValueToNumber)(s)
-                },
-                d = Object.freeze({
-                    [n.UserProfileTypes.POPOUT]: 480,
-                    [n.UserProfileTypes.PANEL]: 480,
-                    [n.UserProfileTypes.MODAL]: 600,
-                    [n.UserProfileTypes.SETTINGS]: 600,
-                    [n.UserProfileTypes.POMELO_POPOUT]: 432,
-                    [n.UserProfileTypes.CANCEL_MODAL]: 172
-                }),
-                f = e => d[e]
-        },
-        430312: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                UserProfileContext: function() {
-                    return E
-                },
-                default: function() {
-                    return P
+                    return i = t, !1
                 }
-            }), t("794252");
-            var l = t("37983"),
-                i = t("884691"),
-                o = t("414456"),
-                n = t.n(o),
-                s = t("506838"),
-                a = t("217513"),
-                u = t("906889"),
-                c = t("590456"),
-                d = t("200932"),
-                f = t("677055");
-            let E = i.createContext({
-                profileType: null,
-                profileTheme: null
-            });
-
-            function p(e) {
-                var r, t;
-                let {
-                    user: o,
-                    guildId: p,
-                    profileType: P,
-                    className: T,
-                    pendingThemeColors: _,
-                    useDefaultClientTheme: C,
-                    children: O,
-                    forceShowPremium: S = !1,
-                    showOutOfBoundaryComponents: h = !1
-                } = e, L = i.useRef(null), I = (0, a.default)(o.id, p), {
-                    profileTheme: y
-                } = (0, u.default)(o, I, {
-                    themeElementRef: L,
-                    pendingThemeColors: _,
-                    isPreview: S,
-                    useDefaultClientTheme: C
-                }), m = (null == I ? void 0 : I.canEditThemes) || S, U = i.useMemo(() => ({
-                    profileType: P,
-                    profileTheme: y
-                }), [P, y]);
-                return (0, l.jsx)("div", {
-                    ref: L,
-                    className: n((r = P, (0, s.match)(r).with(c.UserProfileTypes.POPOUT, c.UserProfileTypes.SETTINGS, c.UserProfileTypes.CANCEL_MODAL, () => f.userPopoutOuter).with(c.UserProfileTypes.MODAL, () => f.userProfileModalOuter).with(c.UserProfileTypes.PANEL, () => f.userPanelOuter).with(c.UserProfileTypes.CARD, () => f.userCardOuter).exhaustive()), m ? f.userProfileOuterThemed : f.userProfileOuterUnthemed, d.profileColors, h ? f.showOutOfBoundaryComponents : void 0, "theme-".concat(y), T),
-                    children: (0, l.jsx)("div", {
-                        className: n((t = P, (0, s.match)(t).with(c.UserProfileTypes.POPOUT, c.UserProfileTypes.SETTINGS, c.UserProfileTypes.CANCEL_MODAL, () => f.userPopoutInner).with(c.UserProfileTypes.MODAL, () => f.userProfileModalInner).with(c.UserProfileTypes.PANEL, () => f.userPanelInner).with(c.UserProfileTypes.CARD, () => f.userCardInner).exhaustive()), function() {
-                            let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                                r = arguments.length > 1 ? arguments[1] : void 0,
-                                t = arguments.length > 2 ? arguments[2] : void 0;
-                            return (0, s.match)({
-                                profileType: t,
-                                canUsePremiumProfileCustomization: e,
-                                hasBanner: r
-                            }).with({
-                                profileType: c.UserProfileTypes.PANEL
-                            }, () => f.userPanelInnerThemed).with({
-                                canUsePremiumProfileCustomization: !0,
-                                hasBanner: !0
-                            }, () => f.userProfileInnerThemedWithBanner).with({
-                                canUsePremiumProfileCustomization: !0
-                            }, () => f.userProfileInnerThemedPremiumWithoutBanner).otherwise(() => f.userProfileInnerThemedNonPremium)
-                        }((null == I ? void 0 : I.canUsePremiumProfileCustomization) || S, (null == I ? void 0 : I.banner) != null, P)),
-                        children: (0, l.jsx)(E.Provider, {
-                            value: U,
-                            children: O
-                        })
-                    })
-                })
+            })
+        },
+        355045: function(t, e, l) {
+            "use strict";
+            let n;
+            l.r(e), l.d(e, {
+                init: function() {
+                    return C
+                },
+                syncApplication: function() {
+                    return h
+                }
+            }), l("70102");
+            var a = l("872717"),
+                i = l("913144"),
+                s = l("605250"),
+                o = l("831610"),
+                u = l("271938"),
+                c = l("535974"),
+                r = l("964889"),
+                d = l("773336"),
+                p = l("50885"),
+                f = l("49111");
+            async function C() {
+                if (null != n) return;
+                if (!(d.isPlatformEmbedded && ((0, d.isMac)() || (0, d.isWindows)()))) {
+                    new(0, s.default)("CloudSyncUtils").warn("CloudSync is not supported on this platform");
+                    return
+                }
+                await p.default.ensureModule("discord_cloudsync");
+                let t = p.default.getCloudSync();
+                (n = new t).on("state", t => i.default.dispatch({
+                    type: "GAME_CLOUD_SYNC_UPDATE",
+                    state: t
+                }))
             }
-            p.Inner = function(e) {
-                var r;
-                let {
-                    className: t,
-                    children: o
-                } = e, {
-                    profileType: a
-                } = i.useContext(E);
-                return (0, l.jsx)("div", {
-                    className: n((r = a, (0, s.match)(r).with(c.UserProfileTypes.POPOUT, c.UserProfileTypes.SETTINGS, () => f.userPopoutOverlayBackground).with(c.UserProfileTypes.MODAL, () => f.userProfileModalOverlayBackground).with(c.UserProfileTypes.PANEL, () => f.userPanelOverlayBackground).otherwise(() => f.overlayBackground)), t),
-                    children: o
-                })
-            };
-            var P = p
-        },
-        236100: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return d
-                }
-            });
-            var l = t("37983");
-            t("884691");
-            var i = t("77078"),
-                o = t("38766"),
-                n = t("49111"),
-                s = t("782340"),
-                a = t("364547");
-            let u = {
-                    page: n.AnalyticsPages.GUILD_CHANNEL,
-                    section: n.AnalyticsSections.PROFILE_POPOUT,
-                    object: n.AnalyticsObjects.EDIT_PER_SERVER_IDENTITY
-                },
-                c = {
-                    page: n.AnalyticsPages.USER_POPOUT,
-                    section: n.AnalyticsSections.PROFILE_POPOUT
-                };
 
-            function d(e) {
-                let {
-                    onSelect: r,
-                    onClose: t,
-                    guild: n
-                } = e, d = (0, o.default)({
-                    guild: n,
-                    analyticsLocation: u
-                }), f = (0, o.default)({
-                    analyticsLocation: c
-                });
-                return (0, l.jsxs)(i.Menu, {
-                    className: a.popoutMenu,
-                    onSelect: r,
-                    navId: "edit-profile-popout",
-                    onClose: t,
-                    "aria-label": s.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
-                    children: [(0, l.jsx)(i.MenuItem, {
-                        id: "edit-server-profile",
-                        label: s.default.Messages.CHANGE_IDENTITY,
-                        subtext: s.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE_MENU_HELP,
-                        action: () => d()
-                    }), (0, l.jsx)(i.MenuItem, {
-                        id: "edit-default-profile",
-                        label: s.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE,
-                        subtext: s.default.Messages.USER_PROFILE_MENU_HELP,
-                        action: () => f()
-                    })]
-                })
-            }
-        },
-        906889: function(e, r, t) {
-            "use strict";
-            t.r(r), t.d(r, {
-                default: function() {
-                    return f
-                }
-            }), t("222007");
-            var l = t("884691"),
-                i = t("509043"),
-                o = t("446674"),
-                n = t("841098"),
-                s = t("206230"),
-                a = t("388491"),
-                u = t("528438");
-            let c = ["--profile-gradient-primary-color", "--profile-gradient-secondary-color", "--profile-gradient-button-color", "--profile-gradient-overlay-color", "--profile-body-background-color", "--profile-body-divider-color", "--profile-avatar-border-color", "--profile-message-input-border-color", "--profile-note-background-color", "--profile-body-background-hover", "--account-profile-modal-list-item-hover", "--profile-role-pill-background-color", "--profile-role-pill-border-color"];
-
-            function d(e, r, t) {
+            function h(t, e) {
                 var l;
-                null == e || null === (l = e.current) || void 0 === l || l.style.setProperty(r, null != t ? t : null)
+                let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+                if (!c.default.supportsCloudSync(t, e)) return Promise.resolve({
+                    type: f.CloudSyncResultTypes.NONE
+                });
+                let s = function() {
+                        if (null == n) throw Error("Initialize cloud sync module before syncing.");
+                        return n
+                    }(),
+                    d = c.default.getState(t, e);
+                if (null == d) throw Error("No dispatch state for ".concat(t, ":").concat(e));
+                let p = null !== (l = d.storage) && void 0 !== l ? l : {},
+                    C = (0, r.getComboId)(t, e),
+                    h = u.default.getToken();
+                if (null == h) throw Error("Cannot use cloud sync when not authenticated.");
+                let A = null != d.installPath ? (0, o.default)(d.installPath) : null;
+                if (null == A) throw Error("No install path for ".concat(t, ":").concat(e));
+                let _ = u.default.getId(),
+                    y = {
+                        forceHash: i,
+                        manifestPath: f.DefaultCloudSyncConfiguration.STORAGE_MANIFEST(A, _),
+                        roots: null != p.roots ? p.roots : [{
+                            id: f.DefaultCloudSyncConfiguration.ROOT_ID,
+                            paths: Object.keys(f.DefaultCloudSyncConfiguration.ROOT_PLATFORMS).map(t => ({
+                                platform: t,
+                                path: f.DefaultCloudSyncConfiguration.ROOT_STORAGE_PATH(A, _)
+                            })),
+                            patterns: f.DefaultCloudSyncConfiguration.ROOT_PATTERN
+                        }],
+                        storage: {
+                            baseURL: "".concat(a.default.getAPIBaseURL()).concat(f.Endpoints.APPLICATION_STORAGE(t, e)),
+                            token: h
+                        },
+                        replacements: {
+                            INSTALLDIR: f.DefaultCloudSyncConfiguration.INSTALL_DIR(A),
+                            USERID: _,
+                            BRANCHID: e
+                        }
+                    };
+                return s.sync(C, y)
+            }
+        },
+        551994: function(t, e, l) {
+            "use strict";
+            l.r(e), l.d(e, {
+                installApplication: function() {
+                    return u
+                }
+            });
+            var n = l("37983");
+            l("884691");
+            var a = l("77078"),
+                i = l("190017"),
+                s = l("971427"),
+                o = l("98328");
+
+            function u(t, e, u, c, r) {
+                let d = o.default.getInstallationPath(t.id, e),
+                    p = null != t.eulaId && !s.default.hasAcceptedEULA(t.eulaId);
+                null == d || p ? (0, a.openModalLazy)(async () => {
+                    let {
+                        default: a
+                    } = await l.el("727441").then(l.bind(l, "727441"));
+                    return l => (0, n.jsx)(a, {
+                        ...l,
+                        applicationId: t.id,
+                        branchId: e,
+                        analyticsLocation: r
+                    })
+                }) : (0, i.installApplication)({
+                    application: t,
+                    branchId: e,
+                    buildId: u,
+                    manifestIds: c,
+                    installationPath: d,
+                    analyticsLocation: r
+                })
+            }
+        },
+        780009: function(t, e, l) {
+            "use strict";
+            l.r(e), l.d(e, {
+                playApplication: function() {
+                    return a.playApplication
+                },
+                installApplication: function() {
+                    return p
+                },
+                updateApplication: function() {
+                    return f
+                },
+                repairApplication: function() {
+                    return C
+                },
+                performDefaultLibraryApplicationAction: function() {
+                    return h
+                }
+            });
+            var n = l("190017"),
+                a = l("596169"),
+                i = l("299285"),
+                s = l("677225"),
+                o = l("9377"),
+                u = l("535974"),
+                c = l("352326"),
+                r = l("551994"),
+                d = l("49111");
+
+            function p(t, e, l) {
+                let n = i.default.getApplication(t);
+                if (null == n) return;
+                let a = s.default.getTargetBuildId(n.id, e),
+                    o = s.default.getTargetManifests(n.id, e);
+                null != a && null != o && null != r.installApplication && (0, r.installApplication)(n, e, a, o, l)
             }
 
-            function f(e, r) {
-                let {
-                    themeElementRef: t,
-                    pendingThemeColors: f,
-                    isPreview: E,
-                    useDefaultClientTheme: p
-                } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, [P, T] = (0, u.default)(e, r, {
-                    pendingThemeColors: f,
-                    isPreview: E
-                }), [_, C, O] = (0, o.useStateFromStoresArray)([s.default], () => [s.default.desaturateUserColors, s.default.saturation, s.default.syncProfileThemeWithUserTheme]), S = (0, n.default)(), h = l.useCallback(() => O || p ? S : (0, a.getProfileTheme)(P), [p, O, S, P]), [L, I] = l.useState(h()), y = (0, a.useProfileThemeValues)(L), m = (0, a.useDividerColor)(L, P), U = (0, a.useMessageInputBorderColor)(L, T), A = l.useCallback((e, r) => (0, i.int2hsl)(e, _, null, r), [_]);
-                l.useEffect(() => {
-                    I(h())
-                }, [P, O, S, p, h]);
-                let v = (0, a.useAvatarBorderColor)(L, P, O),
-                    g = null != v ? (0, i.int2hsl)(v, !1, _ ? C : null) : null,
-                    R = e => c.forEach(r => {
-                        e.style.removeProperty(r)
-                    });
-                return l.useEffect(() => {
-                    if (null != P && null != T && null != L && null != v && null != m && null != U) {
-                        let e = O && L !== S ? null == y ? void 0 : y.overlaySyncedWithUserTheme : null == y ? void 0 : y.overlay;
-                        d(t, "--profile-gradient-primary-color", A(P)), d(t, "--profile-gradient-secondary-color", A(T)), d(t, "--profile-gradient-button-color", A((0, a.calculateButtonColor)(P))), d(t, "--profile-gradient-overlay-color", e), d(t, "--profile-body-background-color", null == y ? void 0 : y.sectionBox), d(t, "--profile-body-background-hover", null == y ? void 0 : y.profileBodyBackgroundHover), d(t, "--profile-body-divider-color", A(m, null == y ? void 0 : y.dividerOpacity)), d(t, "--profile-avatar-border-color", A(v)), d(t, "--profile-message-input-border-color", A(U)), d(t, "--profile-note-background-color", null == y ? void 0 : y.noteBackgroundColor), d(t, "--profile-role-pill-background-color", null == y ? void 0 : y.rolePillBackgroundColor), d(t, "--profile-role-pill-border-color", null == y ? void 0 : y.rolePillBorderColor)
-                    } else(null == t ? void 0 : t.current) != null && R(null == t ? void 0 : t.current)
-                }, [P, T, v, L, S, t, A, O, m, null == y ? void 0 : y.overlaySyncedWithUserTheme, null == y ? void 0 : y.overlay, null == y ? void 0 : y.sectionBox, null == y ? void 0 : y.profileBodyBackgroundHover, null == y ? void 0 : y.dividerOpacity, null == y ? void 0 : y.noteBackgroundColor, null == y ? void 0 : y.rolePillBackgroundColor, null == y ? void 0 : y.rolePillBorderColor, U]), {
-                    profileTheme: null != L ? L : S,
-                    primaryProfileColor: P,
-                    avatarBorderColor: g
+            function f(t, e) {
+                let l = i.default.getApplication(t);
+                if (null != l) return n.updateApplication(l, e, s.default.getTargetBuildId(l.id, e), s.default.getTargetManifests(l.id, e))
+            }
+
+            function C(t, e, l) {
+                let a = i.default.getApplication(t);
+                if (null != a) return n.repairApplication(a, e, l)
+            }
+
+            function h(t, e) {
+                let l = (0, o.getDefaultLibraryApplicationAction)(t, u.default, c.default),
+                    {
+                        analyticsParams: n
+                    } = e;
+                switch (l) {
+                    case d.LibraryApplicationActions.PLAY:
+                        return (0, a.playApplication)(t.id, t, {
+                            analyticsParams: n
+                        });
+                    case d.LibraryApplicationActions.INSTALL:
+                        return p(t.id, t.branchId, n.source);
+                    case d.LibraryApplicationActions.UPDATE:
+                        return f(t.id, t.branchId)
                 }
             }
         }
