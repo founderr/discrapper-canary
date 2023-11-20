@@ -15586,6 +15586,7 @@
                             color: "header-secondary",
                             children: f.default.Messages.STATUS_LEAD_IN_JUST
                         }), (0, a.jsx)(r.Text, {
+                            className: h.statusText,
                             variant: "text-sm/semibold",
                             color: "text-normal",
                             children: _
