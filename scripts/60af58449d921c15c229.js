@@ -8,13 +8,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 accountDetailsInit: function() {
-                    return T
+                    return S
                 },
                 accountDetailsClose: function() {
-                    return N
+                    return C
                 },
                 disableAccount: function() {
-                    return C
+                    return N
                 },
                 saveAccountRequest: function() {
                     return f
@@ -38,52 +38,55 @@
                     return U
                 },
                 setPendingProfileEffectID: function() {
+                    return O
+                },
+                setSingleTryItOutCollectiblesItem: function() {
                     return m
                 },
                 clearErrors: function() {
-                    return O
-                },
-                resetPendingAccountChanges: function() {
                     return v
                 },
-                resetAllPending: function() {
+                resetPendingAccountChanges: function() {
                     return g
                 },
-                resetAndCloseUserProfileForm: function() {
+                resetAllPending: function() {
                     return M
                 },
-                setDisableSubmit: function() {
+                resetAndCloseUserProfileForm: function() {
                     return D
+                },
+                setDisableSubmit: function() {
+                    return G
                 }
             });
             var s = n("872717"),
                 o = n("95410"),
-                r = n("819855"),
-                l = n("913144"),
+                l = n("819855"),
+                r = n("913144"),
                 a = n("393414"),
                 i = n("599110"),
                 u = n("315102"),
                 d = n("730622"),
-                _ = n("437822"),
-                E = n("49111"),
+                E = n("437822"),
+                _ = n("49111"),
                 c = n("191349"),
-                S = n("782340");
+                T = n("782340");
 
-            function T() {
-                l.default.dispatch({
+            function S() {
+                r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_INIT"
                 })
             }
 
-            function N() {
-                l.default.dispatch({
+            function C() {
+                r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_CLOSE"
                 })
             }
 
-            function C(e, t) {
-                let n = t ? S.default.Messages.DELETE_ACCOUNT : S.default.Messages.DISABLE_ACCOUNT,
-                    o = t ? E.Endpoints.DELETE_ACCOUNT : E.Endpoints.DISABLE_ACCOUNT;
+            function N(e, t) {
+                let n = t ? T.default.Messages.DELETE_ACCOUNT : T.default.Messages.DISABLE_ACCOUNT,
+                    o = t ? _.Endpoints.DELETE_ACCOUNT : _.Endpoints.DISABLE_ACCOUNT;
                 return (0, d.default)(t => s.default.post({
                     url: o,
                     body: {
@@ -97,28 +100,28 @@
                     },
                     checkEnabled: !1
                 }).then(() => {
-                    _.default.logoutInternal(), (0, a.transitionTo)(E.Routes.DEFAULT_LOGGED_OUT)
+                    E.default.logoutInternal(), (0, a.transitionTo)(_.Routes.DEFAULT_LOGGED_OUT)
                 })
             }
             async function f(e) {
                 let t = await s.default.patch({
-                        url: E.Endpoints.ME,
+                        url: _.Endpoints.ME,
                         oldFormErrors: !0,
                         body: e
                     }),
                     n = t.body;
                 if (n.token) {
                     let t = n.token;
-                    delete n.token, l.default.dispatch({
+                    delete n.token, r.default.dispatch({
                         type: "UPDATE_TOKEN",
                         token: t,
                         userId: n.id
-                    }), (null == e ? void 0 : e.password) != null && (null == e ? void 0 : e.new_password) != null && l.default.dispatch({
+                    }), (null == e ? void 0 : e.password) != null && (null == e ? void 0 : e.new_password) != null && r.default.dispatch({
                         type: "PASSWORD_UPDATED",
                         userId: n.id
                     })
                 }
-                return l.default.dispatch({
+                return r.default.dispatch({
                     type: "CURRENT_USER_UPDATE",
                     user: n
                 }), t
@@ -129,52 +132,52 @@
                     username: t,
                     discriminator: n,
                     email: s,
-                    emailToken: r,
+                    emailToken: l,
                     password: a,
-                    avatar: _,
-                    avatarDecoration: T,
-                    newPassword: N,
-                    globalName: C
+                    avatar: E,
+                    avatarDecoration: S,
+                    newPassword: C,
+                    globalName: N
                 } = e;
-                return l.default.dispatch({
+                return r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SUBMIT"
                 }), (0, d.default)(e => {
-                    let l = {
+                    let r = {
                         username: t,
                         email: s,
-                        email_token: r,
+                        email_token: l,
                         password: a,
-                        avatar: _,
+                        avatar: E,
                         discriminator: n,
-                        global_name: C,
-                        new_password: N,
+                        global_name: N,
+                        new_password: C,
                         ...e
                     };
-                    null === T && (l.avatar_decoration_id = null), null != T && (l.avatar_decoration_id = T.id, l.avatar_decoration_sku_id = T.skuId);
-                    let i = o.default.get(E.DEVICE_TOKEN),
+                    null === S && (r.avatar_decoration_id = null), null != S && (r.avatar_decoration_id = S.id, r.avatar_decoration_sku_id = S.skuId);
+                    let i = o.default.get(_.DEVICE_TOKEN),
                         u = (0, c.getDevicePushProvider)();
-                    null != u && null != i && (l.push_provider = u, l.push_token = i);
-                    let d = o.default.get(E.DEVICE_VOIP_TOKEN);
-                    return null != c.DEVICE_PUSH_VOIP_PROVIDER && null != d && (l.push_voip_provider = c.DEVICE_PUSH_VOIP_PROVIDER, l.push_voip_token = d), f(l)
+                    null != u && null != i && (r.push_provider = u, r.push_token = i);
+                    let d = o.default.get(_.DEVICE_VOIP_TOKEN);
+                    return null != c.DEVICE_PUSH_VOIP_PROVIDER && null != d && (r.push_voip_provider = c.DEVICE_PUSH_VOIP_PROVIDER, r.push_voip_token = d), f(r)
                 }, {
                     checkEnabled: !1,
                     modalProps: {
-                        title: S.default.Messages.TWO_FA_CHANGE_ACCOUNT
+                        title: T.default.Messages.TWO_FA_CHANGE_ACCOUNT
                     },
                     hooks: {
-                        onEarlyClose: () => l.default.dispatch({
+                        onEarlyClose: () => r.default.dispatch({
                             type: "USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE",
                             errors: {}
                         })
                     }
                 }).then(e => {
                     let t = e.body;
-                    return i.default.track(E.AnalyticEvents.USER_AVATAR_UPDATED, {
+                    return i.default.track(_.AnalyticEvents.USER_AVATAR_UPDATED, {
                         animated: (0, u.isAnimatedIconHash)(t.avatar)
-                    }), l.default.dispatch({
+                    }), r.default.dispatch({
                         type: "USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS"
                     }), e
-                }, e => (l.default.dispatch({
+                }, e => (r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE",
                     errors: e.body
                 }), e))
@@ -182,72 +185,79 @@
 
             function I() {
                 return s.default.get({
-                    url: E.Endpoints.USER_HARVEST,
+                    url: _.Endpoints.USER_HARVEST,
                     oldFormErrors: !0
                 })
             }
 
             function R() {
                 return s.default.post({
-                    url: E.Endpoints.USER_HARVEST,
+                    url: _.Endpoints.USER_HARVEST,
                     oldFormErrors: !0
                 })
             }
 
             function h(e) {
-                l.default.dispatch({
+                r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR",
                     avatar: e
-                }), null == e ? r.AccessibilityAnnouncer.announce(S.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : r.AccessibilityAnnouncer.announce(S.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
+                }), null == e ? l.AccessibilityAnnouncer.announce(T.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : l.AccessibilityAnnouncer.announce(T.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
             }
 
             function p(e) {
-                l.default.dispatch({
+                r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME",
                     globalName: e
                 })
             }
 
             function U(e) {
-                l.default.dispatch({
+                r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION",
                     avatarDecoration: e
                 })
             }
 
-            function m(e) {
-                l.default.dispatch({
+            function O(e) {
+                r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID",
                     profileEffectID: e
                 })
             }
 
-            function O() {
-                l.default.dispatch({
-                    type: "USER_SETTINGS_CLEAR_ERRORS"
+            function m(e) {
+                r.default.dispatch({
+                    type: "USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM",
+                    item: e
                 })
             }
 
             function v() {
-                l.default.dispatch({
-                    type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
+                r.default.dispatch({
+                    type: "USER_SETTINGS_CLEAR_ERRORS"
                 })
             }
 
             function g() {
-                l.default.dispatch({
-                    type: "USER_SETTINGS_RESET_ALL_PENDING"
+                r.default.dispatch({
+                    type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
                 })
             }
 
             function M() {
-                l.default.dispatch({
+                r.default.dispatch({
+                    type: "USER_SETTINGS_RESET_ALL_PENDING"
+                })
+            }
+
+            function D() {
+                r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM"
                 })
             }
 
-            function D(e) {
-                l.default.dispatch({
+            function G(e) {
+                r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT",
                     disable: e
                 })
@@ -257,13 +267,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return E
                 }
             }), n("222007");
             var s = n("37983"),
                 o = n("884691"),
-                r = n("414456"),
-                l = n.n(r),
+                l = n("414456"),
+                r = n.n(l),
                 a = n("77078"),
                 i = n("782340"),
                 u = n("347129");
@@ -273,33 +283,33 @@
                     let {
                         title: t,
                         actionText: n,
-                        children: r,
+                        children: l,
                         error: d,
-                        isLoading: _,
-                        maxLength: E,
+                        isLoading: E,
+                        maxLength: _,
                         transitionState: c,
-                        helpMessage: S,
-                        retryPrompt: T,
-                        retrySuccessMessage: N
+                        helpMessage: T,
+                        retryPrompt: S,
+                        retrySuccessMessage: C
                     } = this.props, {
-                        code: C,
+                        code: N,
                         errorMessage: f,
                         retrySuccess: A
-                    } = this.state, I = o.Children.count(r) > 0 ? (0, s.jsx)(a.Card, {
+                    } = this.state, I = o.Children.count(l) > 0 ? (0, s.jsx)(a.Card, {
                         type: a.Card.Types.WARNING,
                         className: u.card,
                         children: (0, s.jsx)(a.Text, {
                             variant: "text-md/normal",
-                            children: r
+                            children: l
                         })
-                    }) : null, R = null != T ? (0, s.jsxs)(a.Text, {
-                        className: l(u.submitText, u.spacing),
+                    }) : null, R = null != S ? (0, s.jsxs)(a.Text, {
+                        className: r(u.submitText, u.spacing),
                         variant: "text-sm/normal",
                         children: [(0, s.jsx)("br", {}), (0, s.jsx)(a.Clickable, {
-                            className: l(u.spacing, u.link),
+                            className: r(u.spacing, u.link),
                             onClick: this.handleRetry,
                             children: (0, s.jsx)(a.Anchor, {
-                                children: T
+                                children: S
                             })
                         })]
                     }) : null, h = A ? (0, s.jsx)(a.Card, {
@@ -307,7 +317,7 @@
                         className: u.card,
                         children: (0, s.jsx)(a.Text, {
                             variant: "text-md/normal",
-                            children: N
+                            children: C
                         })
                     }) : null;
                     return (0, s.jsx)(a.ModalRoot, {
@@ -321,11 +331,11 @@
                                     children: t
                                 })
                             }), (0, s.jsxs)(a.ModalContent, {
-                                children: [null != S ? (0, s.jsx)(a.Text, {
+                                children: [null != T ? (0, s.jsx)(a.Text, {
                                     color: "text-normal",
                                     variant: "text-md/normal",
                                     className: u.spacing,
-                                    children: S
+                                    children: T
                                 }) : null, I, h, (0, s.jsxs)(a.FormItem, {
                                     title: this.getLabelText(),
                                     className: u.spacing,
@@ -333,8 +343,8 @@
                                         inputRef: this.setRef,
                                         onChange: this.handleCodeChange,
                                         placeholder: null !== (e = this.getPlaceholder()) && void 0 !== e ? e : void 0,
-                                        maxLength: null != E ? E : 10,
-                                        value: C,
+                                        maxLength: null != _ ? _ : 10,
+                                        value: N,
                                         autoComplete: "one-time-code",
                                         autoFocus: !0
                                     }), this.errorPresent() ? (0, s.jsx)(a.Text, {
@@ -347,11 +357,11 @@
                             }), (0, s.jsxs)(a.ModalFooter, {
                                 children: [(0, s.jsx)(a.Button, {
                                     type: "submit",
-                                    disabled: _ || 0 === C.length,
+                                    disabled: E || 0 === N.length,
                                     children: null != n ? n : i.default.Messages.CONFIRM
                                 }), (0, s.jsx)(a.Button, {
                                     onClick: this.handleCancel,
-                                    disabled: _,
+                                    disabled: E,
                                     look: a.Button.Looks.LINK,
                                     color: a.Button.Colors.PRIMARY,
                                     children: i.default.Messages.CANCEL
@@ -411,7 +421,7 @@
                 error: null,
                 forceNoPlaceholder: !1
             };
-            var _ = d
+            var E = d
         },
         893044: function(e, t, n) {
             "use strict";
@@ -422,41 +432,41 @@
             }), n("222007");
             var s = n("37983"),
                 o = n("884691"),
-                r = n("446674"),
-                l = n("77078"),
+                l = n("446674"),
+                r = n("77078"),
                 a = n("599417"),
                 i = n("734990"),
                 u = n("790618"),
                 d = n("258078"),
-                _ = n("782340"),
-                E = n("679012");
+                E = n("782340"),
+                _ = n("679012");
 
             function c(e) {
                 var t;
                 let {
                     isSlideReady: n,
                     error: c,
-                    setEmailToken: S,
-                    setError: T,
-                    onNext: N,
-                    onClose: C
-                } = e, [f, A] = o.useState(!1), [I, R] = o.useState(""), [h, p] = o.useState(!1), U = (0, r.useStateFromStores)([u.default], () => u.default.getErrors()), m = o.useRef(null);
+                    setEmailToken: T,
+                    setError: S,
+                    onNext: C,
+                    onClose: N
+                } = e, [f, A] = o.useState(!1), [I, R] = o.useState(""), [h, p] = o.useState(!1), U = (0, l.useStateFromStores)([u.default], () => u.default.getErrors()), O = o.useRef(null);
                 o.useEffect(() => {
                     if (n) {
                         var e;
-                        null === (e = m.current) || void 0 === e || e.focus()
+                        null === (e = O.current) || void 0 === e || e.focus()
                     }
                 }, [n]);
-                let O = async e => {
-                    e.preventDefault(), T(null), A(!0);
+                let m = async e => {
+                    e.preventDefault(), S(null), A(!0);
                     try {
                         let {
                             token: e
                         } = await (0, i.confirmEmailChange)(I);
-                        S(e), N()
+                        T(e), C()
                     } catch (t) {
                         let e = new a.default(t);
-                        T(e.getAnyErrorMessage())
+                        S(e.getAnyErrorMessage())
                     } finally {
                         A(!1)
                     }
@@ -464,59 +474,59 @@
                     if (!h) {
                         p(!0);
                         try {
-                            await (0, i.sendConfirmationCode)(!0), (0, l.showToast)((0, l.createToast)(_.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT, l.ToastType.SUCCESS))
+                            await (0, i.sendConfirmationCode)(!0), (0, r.showToast)((0, r.createToast)(E.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT, r.ToastType.SUCCESS))
                         } catch (n) {
                             let e = new a.default(n),
                                 t = e.getAnyErrorMessage();
-                            null != t && (0, l.showToast)((0, l.createToast)(t, l.ToastType.FAILURE))
+                            null != t && (0, r.showToast)((0, r.createToast)(t, r.ToastType.FAILURE))
                         } finally {
                             p(!1)
                         }
                     }
                 };
                 return (0, s.jsxs)("form", {
-                    onSubmit: O,
-                    children: [(0, s.jsxs)(l.ModalHeader, {
+                    onSubmit: m,
+                    children: [(0, s.jsxs)(r.ModalHeader, {
                         separator: !1,
-                        className: E.header,
+                        className: _.header,
                         children: [(0, s.jsx)(d.default, {
                             color: d.default.Colors.HEADER_PRIMARY,
                             size: d.default.Sizes.SIZE_24,
-                            className: E.title,
-                            children: _.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_TITLE_DESKTOP
-                        }), (0, s.jsx)(l.Text, {
+                            className: _.title,
+                            children: E.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_TITLE_DESKTOP
+                        }), (0, s.jsx)(r.Text, {
                             color: "header-secondary",
                             variant: "text-md/normal",
-                            className: E.subtitle,
-                            children: _.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_SUBTITLE
-                        }), (0, s.jsx)(l.ModalCloseButton, {
-                            onClick: C,
-                            className: E.modalCloseButton
+                            className: _.subtitle,
+                            children: E.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_SUBTITLE
+                        }), (0, s.jsx)(r.ModalCloseButton, {
+                            onClick: N,
+                            className: _.modalCloseButton
                         })]
-                    }), (0, s.jsxs)(l.ModalContent, {
-                        className: E.content,
-                        children: [(0, s.jsx)(l.FormItem, {
-                            title: _.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_PROMPT,
+                    }), (0, s.jsxs)(r.ModalContent, {
+                        className: _.content,
+                        children: [(0, s.jsx)(r.FormItem, {
+                            title: E.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_PROMPT,
                             error: null != c ? c : null == U ? void 0 : null === (t = U.email_token) || void 0 === t ? void 0 : t[0],
-                            children: (0, s.jsx)(l.TextInput, {
+                            children: (0, s.jsx)(r.TextInput, {
                                 value: I,
                                 onChange: R,
-                                inputRef: m
+                                inputRef: O
                             })
-                        }), (0, s.jsx)(l.Text, {
-                            className: E.help,
+                        }), (0, s.jsx)(r.Text, {
+                            className: _.help,
                             variant: "text-sm/normal",
-                            children: _.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_RESEND.format({
+                            children: E.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_RESEND.format({
                                 onResend: v
                             })
                         })]
-                    }), (0, s.jsx)(l.ModalFooter, {
-                        children: (0, s.jsx)(l.Button, {
+                    }), (0, s.jsx)(r.ModalFooter, {
+                        children: (0, s.jsx)(r.Button, {
                             type: "submit",
-                            color: l.Button.Colors.BRAND,
-                            size: l.Button.Sizes.MEDIUM,
+                            color: r.Button.Colors.BRAND,
+                            size: r.Button.Sizes.MEDIUM,
                             submitting: f,
-                            children: _.default.Messages.NEXT
+                            children: E.default.Messages.NEXT
                         })
                     })]
                 })
@@ -531,68 +541,68 @@
             }), n("222007");
             var s = n("37983"),
                 o = n("884691"),
-                r = n("446674"),
-                l = n("77078"),
+                l = n("446674"),
+                r = n("77078"),
                 a = n("599417"),
                 i = n("734990"),
                 u = n("697218"),
                 d = n("258078"),
-                _ = n("782340"),
-                E = n("679012");
+                E = n("782340"),
+                _ = n("679012");
 
             function c(e) {
                 let {
                     onNext: t,
                     onClose: n
-                } = e, [c, S] = o.useState(!1), T = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), N = async e => {
-                    e.preventDefault(), S(!0);
+                } = e, [c, T] = o.useState(!1), S = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUser()), C = async e => {
+                    e.preventDefault(), T(!0);
                     try {
                         await (0, i.sendConfirmationCode)(), t()
                     } catch (n) {
                         let e = new a.default(n),
                             t = e.getAnyErrorMessage();
-                        null != t && (0, l.showToast)((0, l.createToast)(t, l.ToastType.FAILURE))
+                        null != t && (0, r.showToast)((0, r.createToast)(t, r.ToastType.FAILURE))
                     } finally {
-                        S(!1)
+                        T(!1)
                     }
                 };
                 return (0, s.jsxs)("form", {
-                    onSubmit: N,
-                    children: [(0, s.jsxs)(l.ModalHeader, {
+                    onSubmit: C,
+                    children: [(0, s.jsxs)(r.ModalHeader, {
                         separator: !1,
-                        className: E.confirmStartHeader,
+                        className: _.confirmStartHeader,
                         children: [(0, s.jsx)(d.default, {
                             color: d.default.Colors.HEADER_PRIMARY,
                             size: d.default.Sizes.SIZE_24,
-                            className: E.title,
-                            children: _.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_TITLE
-                        }), (0, s.jsx)(l.Text, {
-                            className: E.description,
+                            className: _.title,
+                            children: E.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_TITLE
+                        }), (0, s.jsx)(r.Text, {
+                            className: _.description,
                             variant: "text-md/normal",
-                            children: _.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_DESCRIPTION_NO_LINK.format({
-                                oldEmail: null == T ? void 0 : T.email
+                            children: E.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_DESCRIPTION_NO_LINK.format({
+                                oldEmail: null == S ? void 0 : S.email
                             })
-                        }), (0, s.jsx)(l.ModalCloseButton, {
+                        }), (0, s.jsx)(r.ModalCloseButton, {
                             onClick: n,
-                            className: E.modalCloseButton
+                            className: _.modalCloseButton
                         })]
-                    }), (0, s.jsx)(l.ModalContent, {
-                        className: E.content,
+                    }), (0, s.jsx)(r.ModalContent, {
+                        className: _.content,
                         children: (0, s.jsxs)("div", {
-                            className: E.buttons,
-                            children: [(0, s.jsx)(l.Button, {
+                            className: _.buttons,
+                            children: [(0, s.jsx)(r.Button, {
                                 type: "submit",
-                                color: l.Button.Colors.BRAND,
-                                size: l.Button.Sizes.MEDIUM,
+                                color: r.Button.Colors.BRAND,
+                                size: r.Button.Sizes.MEDIUM,
                                 submitting: c,
-                                className: E.submit,
-                                children: _.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_BUTTON
-                            }), (0, s.jsx)(l.Button, {
-                                className: E.cancel,
-                                look: l.Button.Looks.LINK,
-                                color: l.Button.Colors.PRIMARY,
+                                className: _.submit,
+                                children: E.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_BUTTON
+                            }), (0, s.jsx)(r.Button, {
+                                className: _.cancel,
+                                look: r.Button.Looks.LINK,
+                                color: r.Button.Colors.PRIMARY,
                                 onClick: n,
-                                children: _.default.Messages.CANCEL
+                                children: E.default.Messages.CANCEL
                             })]
                         })
                     })]
@@ -603,82 +613,82 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return N
+                    return C
                 }
             }), n("222007");
             var s = n("37983"),
                 o = n("884691"),
-                r = n("759843"),
-                l = n("446674"),
+                l = n("759843"),
+                r = n("446674"),
                 a = n("77078"),
                 i = n("152584"),
                 u = n("697218"),
                 d = n("893044"),
-                _ = n("509943"),
-                E = n("457818"),
+                E = n("509943"),
+                _ = n("457818"),
                 c = n("397336"),
-                S = n("679012"),
-                T = n("92693");
+                T = n("679012"),
+                S = n("92693");
 
-            function N(e) {
+            function C(e) {
                 var t;
                 let {
                     transitionState: n,
-                    onClose: N
-                } = e, C = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUser()), f = o.useRef(null !== (t = null == C ? void 0 : C.verified) && void 0 !== t && t);
+                    onClose: C
+                } = e, N = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), f = o.useRef(null !== (t = null == N ? void 0 : N.verified) && void 0 !== t && t);
                 o.useEffect(() => () => (0, i.accountDetailsClose)(), []);
-                let A = null == C ? void 0 : C.verified,
+                let A = null == N ? void 0 : N.verified,
                     I = A ? c.ChangeEmailSteps.CONFIRM_START : c.ChangeEmailSteps.EMAIL_AND_PASSWORD,
                     [R, h] = o.useState(I),
                     [p, U] = o.useState(null),
-                    [m, O] = o.useState(null),
+                    [O, m] = o.useState(null),
                     [v, g] = o.useState(null),
                     M = {
-                        impression_group: r.ImpressionGroups.USER_ACCOUNT_EMAIL_CHANGE_FLOW
+                        impression_group: l.ImpressionGroups.USER_ACCOUNT_EMAIL_CHANGE_FLOW
                     };
                 return (0, s.jsxs)(a.ModalRoot, {
                     transitionState: n,
                     disableTrack: !0,
                     children: [R === c.ChangeEmailSteps.CONFIRM_START ? (0, s.jsx)("img", {
                         alt: "",
-                        className: S.headerImage,
-                        src: T
+                        className: T.headerImage,
+                        src: S
                     }) : null, (0, s.jsxs)(a.Slides, {
                         activeSlide: R,
                         width: 440,
                         onSlideReady: e => U(e),
                         children: [(0, s.jsx)(a.Slide, {
                             id: c.ChangeEmailSteps.CONFIRM_START,
-                            impressionName: r.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
+                            impressionName: l.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
                             impressionProperties: M,
-                            children: (0, s.jsx)(_.default, {
+                            children: (0, s.jsx)(E.default, {
                                 onNext: () => h(c.ChangeEmailSteps.CONFIRM_CODE),
-                                onClose: N
+                                onClose: C
                             })
                         }), (0, s.jsx)(a.Slide, {
                             id: c.ChangeEmailSteps.CONFIRM_CODE,
-                            impressionName: r.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE,
+                            impressionName: l.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE,
                             impressionProperties: M,
                             children: (0, s.jsx)(d.default, {
                                 error: v,
                                 setError: g,
-                                setEmailToken: O,
+                                setEmailToken: m,
                                 isSlideReady: p === c.ChangeEmailSteps.CONFIRM_CODE,
                                 onNext: () => h(c.ChangeEmailSteps.EMAIL_AND_PASSWORD),
-                                onClose: N
+                                onClose: C
                             })
                         }), (0, s.jsx)(a.Slide, {
                             id: c.ChangeEmailSteps.EMAIL_AND_PASSWORD,
-                            impressionName: r.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_ENTER_EMAIL,
+                            impressionName: l.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_ENTER_EMAIL,
                             impressionProperties: {
                                 ...M,
                                 email_verified: f.current
                             },
-                            children: (0, s.jsx)(E.default, {
-                                emailToken: m,
+                            children: (0, s.jsx)(_.default, {
+                                emailToken: O,
                                 isSlideReady: p === c.ChangeEmailSteps.EMAIL_AND_PASSWORD,
                                 onBack: A ? () => h(c.ChangeEmailSteps.CONFIRM_CODE) : null,
-                                onClose: N
+                                onClose: C
                             })
                         })]
                     })]
@@ -694,100 +704,100 @@
             }), n("222007");
             var s = n("37983"),
                 o = n("884691"),
-                r = n("446674"),
-                l = n("77078"),
+                l = n("446674"),
+                r = n("77078"),
                 a = n("152584"),
                 i = n("790618"),
                 u = n("258078"),
                 d = n("648661"),
-                _ = n("782340"),
-                E = n("679012");
+                E = n("782340"),
+                _ = n("679012");
 
             function c(e) {
                 var t, n;
                 let {
                     emailToken: c,
-                    isSlideReady: S,
-                    onClose: T,
-                    onBack: N
-                } = e, [C, f] = o.useState(""), [A, I] = o.useState(""), [R, h] = o.useState(!1), p = (0, r.useStateFromStores)([i.default], () => i.default.getErrors()), U = o.useRef(null);
-                async function m(e) {
+                    isSlideReady: T,
+                    onClose: S,
+                    onBack: C
+                } = e, [N, f] = o.useState(""), [A, I] = o.useState(""), [R, h] = o.useState(!1), p = (0, l.useStateFromStores)([i.default], () => i.default.getErrors()), U = o.useRef(null);
+                async function O(e) {
                     e.preventDefault(), h(!0);
                     let t = await (0, a.saveAccountChanges)({
-                        email: C,
+                        email: N,
                         emailToken: c,
                         password: A
                     });
-                    if (h(!1), null == t ? void 0 : t.ok) T();
+                    if (h(!1), null == t ? void 0 : t.ok) S();
                     else {
                         var n, s;
-                        (null == t ? void 0 : null === (n = t.body) || void 0 === n ? void 0 : n.username) != null ? (0, d.showInvalidUsernameToast)() : (null == t ? void 0 : null === (s = t.body) || void 0 === s ? void 0 : s.email_token) != null && (null == N || N())
+                        (null == t ? void 0 : null === (n = t.body) || void 0 === n ? void 0 : n.username) != null ? (0, d.showInvalidUsernameToast)() : (null == t ? void 0 : null === (s = t.body) || void 0 === s ? void 0 : s.email_token) != null && (null == C || C())
                     }
                 }
                 return o.useEffect(() => {
-                    if (S) {
+                    if (T) {
                         var e;
                         null === (e = U.current) || void 0 === e || e.focus()
                     }
-                }, [S]), (0, s.jsxs)("form", {
-                    onSubmit: m,
-                    children: [(0, s.jsxs)(l.ModalHeader, {
+                }, [T]), (0, s.jsxs)("form", {
+                    onSubmit: O,
+                    children: [(0, s.jsxs)(r.ModalHeader, {
                         separator: !1,
-                        className: E.header,
+                        className: _.header,
                         children: [(0, s.jsx)(u.default, {
                             color: u.default.Colors.HEADER_PRIMARY,
                             size: u.default.Sizes.SIZE_24,
-                            className: E.title,
-                            children: _.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_TITLE_DESKTOP
-                        }), (0, s.jsx)(l.Text, {
+                            className: _.title,
+                            children: E.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_TITLE_DESKTOP
+                        }), (0, s.jsx)(r.Text, {
                             color: "header-secondary",
                             variant: "text-md/normal",
-                            className: E.subtitle,
-                            children: _.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_PROMPT_DESKTOP
-                        }), (0, s.jsx)(l.ModalCloseButton, {
-                            onClick: T,
-                            className: E.modalCloseButton
+                            className: _.subtitle,
+                            children: E.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_PROMPT_DESKTOP
+                        }), (0, s.jsx)(r.ModalCloseButton, {
+                            onClick: S,
+                            className: _.modalCloseButton
                         })]
-                    }), (0, s.jsxs)(l.ModalContent, {
-                        className: E.content,
-                        children: [(0, s.jsx)(l.FormItem, {
-                            title: _.default.Messages.EMAIL,
+                    }), (0, s.jsxs)(r.ModalContent, {
+                        className: _.content,
+                        children: [(0, s.jsx)(r.FormItem, {
+                            title: E.default.Messages.EMAIL,
                             error: null == p ? void 0 : null === (t = p.email) || void 0 === t ? void 0 : t[0],
-                            children: (0, s.jsx)(l.TextInput, {
+                            children: (0, s.jsx)(r.TextInput, {
                                 type: "email",
-                                value: C,
+                                value: N,
                                 onChange: f,
                                 inputRef: U
                             })
-                        }), (0, s.jsx)(l.FormItem, {
-                            className: E.password,
-                            title: _.default.Messages.USER_SETTINGS_LABEL_CURRENT_PASSWORD,
+                        }), (0, s.jsx)(r.FormItem, {
+                            className: _.password,
+                            title: E.default.Messages.USER_SETTINGS_LABEL_CURRENT_PASSWORD,
                             error: null == p ? void 0 : null === (n = p.password) || void 0 === n ? void 0 : n[0],
-                            children: (0, s.jsx)(l.TextInput, {
+                            children: (0, s.jsx)(r.TextInput, {
                                 type: "password",
                                 value: A,
                                 onChange: I
                             })
                         })]
-                    }), (0, s.jsxs)(l.ModalFooter, {
-                        children: [(0, s.jsx)(l.Button, {
+                    }), (0, s.jsxs)(r.ModalFooter, {
+                        children: [(0, s.jsx)(r.Button, {
                             type: "submit",
-                            color: l.Button.Colors.BRAND,
-                            size: l.Button.Sizes.MEDIUM,
+                            color: r.Button.Colors.BRAND,
+                            size: r.Button.Sizes.MEDIUM,
                             submitting: R,
-                            children: _.default.Messages.DONE
-                        }), null != N ? (0, s.jsx)(l.Button, {
-                            className: E.cancel,
-                            look: l.Button.Looks.LINK,
-                            color: l.Button.Colors.PRIMARY,
-                            onClick: N,
-                            children: _.default.Messages.BACK
-                        }) : (0, s.jsx)(l.Button, {
-                            className: E.cancel,
-                            look: l.Button.Looks.LINK,
-                            color: l.Button.Colors.PRIMARY,
-                            onClick: T,
-                            children: _.default.Messages.CANCEL
+                            children: E.default.Messages.DONE
+                        }), null != C ? (0, s.jsx)(r.Button, {
+                            className: _.cancel,
+                            look: r.Button.Looks.LINK,
+                            color: r.Button.Colors.PRIMARY,
+                            onClick: C,
+                            children: E.default.Messages.BACK
+                        }) : (0, s.jsx)(r.Button, {
+                            className: _.cancel,
+                            look: r.Button.Looks.LINK,
+                            color: r.Button.Colors.PRIMARY,
+                            onClick: S,
+                            children: E.default.Messages.CANCEL
                         })]
                     })]
                 })
@@ -797,13 +807,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 showInvalidUsernameToast: function() {
-                    return r
+                    return l
                 }
             });
             var s = n("77078"),
                 o = n("782340");
 
-            function r() {
+            function l() {
                 (0, s.showToast)((0, s.createToast)(o.default.Messages.USER_SETTINGS_UPDATE_FAILURE, s.ToastType.FAILURE))
             }
         },
@@ -811,7 +821,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 sendConfirmationCode: function() {
-                    return l
+                    return r
                 },
                 confirmEmailChange: function() {
                     return a
@@ -819,12 +829,12 @@
             });
             var s = n("759843"),
                 o = n("840707"),
-                r = n("49111");
+                l = n("49111");
 
-            function l() {
+            function r() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 return o.default.put({
-                    url: r.Endpoints.USER_EMAIL,
+                    url: l.Endpoints.USER_EMAIL,
                     trackedActionData: {
                         event: s.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
                         properties: {
@@ -835,7 +845,7 @@
             }
             async function a(e) {
                 let t = await o.default.post({
-                    url: r.Endpoints.USER_EMAIL_VERIFY_CODE,
+                    url: l.Endpoints.USER_EMAIL_VERIFY_CODE,
                     body: {
                         code: e
                     },
@@ -848,51 +858,52 @@
         },
         790618: function(e, t, n) {
             "use strict";
-            let s, o, r, l, a, i, u, d, _, E, c, S, T, N;
+            let s, o, l, r, a, i, u, d, E, _, c, T, S, C;
             n.r(t), n.d(t, {
                 default: function() {
-                    return D
+                    return G
                 }
             });
-            var C = n("446674"),
-                f = n("913144"),
-                A = n("49111");
-            let I = A.FormStates.CLOSED,
-                R = {},
-                h = !1;
-
-            function p() {
-                I = A.FormStates.OPEN, R = {}
-            }
+            var N = n("265586"),
+                f = n("446674"),
+                A = n("913144"),
+                I = n("49111");
+            let R = I.FormStates.CLOSED,
+                h = {},
+                p = !1;
 
             function U() {
-                I = A.FormStates.CLOSED, R = {}
-            }
-
-            function m() {
-                O(), v(), R = {}
+                R = I.FormStates.OPEN, h = {}
             }
 
             function O() {
-                s = void 0, o = void 0, r = void 0, l = void 0
+                R = I.FormStates.CLOSED, h = {}
+            }
+
+            function m() {
+                v(), g(), h = {}
             }
 
             function v() {
-                a = void 0, i = void 0, u = void 0, d = void 0, _ = void 0, l = void 0
+                s = void 0, o = void 0, l = void 0, r = void 0
             }
 
             function g() {
-                c = void 0, S = void 0, T = void 0, N = void 0, E = void 0
+                a = void 0, i = void 0, u = void 0, d = void 0, E = void 0, r = void 0
             }
-            class M extends C.default.Store {
+
+            function M() {
+                c = void 0, T = void 0, S = void 0, C = void 0, _ = void 0
+            }
+            class D extends f.default.Store {
                 getFormState() {
-                    return I
-                }
-                getErrors() {
                     return R
                 }
+                getErrors() {
+                    return h
+                }
                 showNotice() {
-                    return void 0 !== s || void 0 !== a || void 0 !== i || void 0 !== u || void 0 !== d || void 0 !== _ || void 0 !== r || void 0 !== l || void 0 !== o
+                    return void 0 !== s || void 0 !== a || void 0 !== i || void 0 !== u || void 0 !== d || void 0 !== E || void 0 !== l || void 0 !== r || void 0 !== o
                 }
                 getPendingAvatar() {
                     return s
@@ -913,13 +924,13 @@
                     return d
                 }
                 getPendingThemeColors() {
-                    return _
+                    return E
                 }
                 getPendingAvatarDecoration() {
-                    return r
+                    return l
                 }
                 getPendingProfileEffectID() {
-                    return l
+                    return r
                 }
                 getAllPending() {
                     return {
@@ -928,62 +939,62 @@
                         pendingBio: i,
                         pendingPronouns: u,
                         pendingAccentColor: d,
-                        pendingThemeColors: _,
-                        pendingAvatarDecoration: r,
-                        pendingProfileEffectID: l,
+                        pendingThemeColors: E,
+                        pendingAvatarDecoration: l,
+                        pendingProfileEffectID: r,
                         pendingGlobalName: o
                     }
                 }
                 getTryItOutThemeColors() {
-                    return E
+                    return _
                 }
                 getTryItOutAvatar() {
                     return c
                 }
                 getTryItOutAvatarDecoration() {
-                    return S
-                }
-                getTryItOutProfileEffectID() {
                     return T
                 }
+                getTryItOutProfileEffectID() {
+                    return S
+                }
                 getTryItOutBanner() {
-                    return N
+                    return C
                 }
                 getAllTryItOut() {
                     return {
-                        tryItOutThemeColors: E,
+                        tryItOutThemeColors: _,
                         tryItOutAvatar: c,
-                        tryItOutAvatarDecoration: S,
-                        tryItOutProfileEffectID: T,
-                        tryItOutBanner: N
+                        tryItOutAvatarDecoration: T,
+                        tryItOutProfileEffectID: S,
+                        tryItOutBanner: C
                     }
                 }
                 getIsDisableSubmit() {
-                    return h
+                    return p
                 }
             }
-            M.displayName = "UserSettingsAccountStore";
-            var D = new M(f.default, {
-                USER_SETTINGS_ACCOUNT_INIT: p,
-                USER_SETTINGS_MODAL_INIT: p,
-                USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: p,
+            D.displayName = "UserSettingsAccountStore";
+            var G = new D(A.default, {
+                USER_SETTINGS_ACCOUNT_INIT: U,
+                USER_SETTINGS_MODAL_INIT: U,
+                USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: U,
                 USER_SETTINGS_MODAL_SET_SECTION: function(e) {
                     let {
                         section: t
                     } = e;
-                    return t === A.UserSettingsSections.ACCOUNT && p()
+                    return t === I.UserSettingsSections.ACCOUNT && U()
                 },
-                USER_SETTINGS_ACCOUNT_CLOSE: U,
+                USER_SETTINGS_ACCOUNT_CLOSE: O,
                 USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function() {
-                    m(), g(), U()
+                    m(), M(), O()
                 },
                 USER_SETTINGS_ACCOUNT_SUBMIT: function() {
-                    I = A.FormStates.SUBMITTING, R = {}
+                    R = I.FormStates.SUBMITTING, h = {}
                 },
                 USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: function(e) {
                     var t;
-                    if (I !== A.FormStates.SUBMITTING) return !1;
-                    I = A.FormStates.OPEN, R = null !== (t = e.errors) && void 0 !== t ? t : {}
+                    if (R !== I.FormStates.SUBMITTING) return !1;
+                    R = I.FormStates.OPEN, h = null !== (t = e.errors) && void 0 !== t ? t : {}
                 },
                 USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: function(e) {
                     let {
@@ -1001,13 +1012,19 @@
                     let {
                         avatarDecoration: t
                     } = e;
-                    r = t
+                    l = t
+                },
+                USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: function(e) {
+                    let {
+                        item: t
+                    } = e;
+                    (null == t ? void 0 : t.type) === N.CollectiblesItemType.PROFILE_EFFECT ? (T = null, S = null == t ? void 0 : t.id) : (S = null, T = t)
                 },
                 USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: function(e) {
                     let {
                         profileEffectID: t
                     } = e;
-                    l = t
+                    r = t
                 },
                 USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: function(e) {
                     let {
@@ -1037,7 +1054,7 @@
                     let {
                         themeColors: t
                     } = e;
-                    _ = t
+                    E = t
                 },
                 USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: function(e) {
                     let {
@@ -1049,35 +1066,35 @@
                     let {
                         avatarDecoration: t
                     } = e;
-                    S = t
+                    T = t
                 },
                 USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID: function(e) {
                     let {
                         profileEffectID: t
                     } = e;
-                    T = t
+                    S = t
                 },
                 USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: function(e) {
                     let {
                         banner: t
                     } = e;
-                    N = t
+                    C = t
                 },
                 USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS: function(e) {
                     let {
                         themeColors: t
                     } = e;
-                    E = t
+                    _ = t
                 },
                 USER_SETTINGS_CLEAR_ERRORS: function() {
-                    R = {}
+                    h = {}
                 },
-                USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: O,
-                USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: v,
+                USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: v,
+                USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: g,
                 USER_SETTINGS_RESET_ALL_PENDING: m,
-                USER_SETTINGS_RESET_ALL_TRY_IT_OUT: g,
+                USER_SETTINGS_RESET_ALL_TRY_IT_OUT: M,
                 USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: function() {
-                    r = void 0
+                    l = void 0
                 },
                 LOGOUT: function() {
                     s = void 0
@@ -1086,7 +1103,7 @@
                     let {
                         disable: t
                     } = e;
-                    h = t
+                    p = t
                 }
             })
         },
@@ -1094,13 +1111,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 resolveThunk: function() {
-                    return r
+                    return l
                 }
             });
             var s = n("917351"),
                 o = n.n(s);
-            let r = e => "function" == typeof e ? e() : e;
-            o.curry((e, t, n) => r(t) ? e(n) : n({}))
+            let l = e => "function" == typeof e ? e() : e;
+            o.curry((e, t, n) => l(t) ? e(n) : n({}))
         },
         730622: function(e, t, n) {
             "use strict";
@@ -1110,8 +1127,8 @@
                     return d
                 }
             }), n("70102");
-            var r = n("697218"),
-                l = n("615931");
+            var l = n("697218"),
+                r = n("615931");
             let a = () => {
                 throw Error("updateModal has not been implemented.")
             };
@@ -1124,8 +1141,8 @@
                 let {
                     promiseFn: t,
                     resolve: n,
-                    reject: r,
-                    modalProps: l = {},
+                    reject: l,
+                    modalProps: r = {},
                     hooks: {
                         onEarlyClose: i
                     } = {}
@@ -1134,40 +1151,40 @@
                     null == i || i();
                     return
                 }
-                let d = s(S, _, l);
+                let d = s(T, E, r);
 
-                function _() {
+                function E() {
                     null == i || i()
                 }
 
-                function E(e) {
+                function _(e) {
                     o(d), n(e)
                 }
 
                 function c(e) {
-                    o(d), r(e)
+                    o(d), l(e)
                 }
 
-                function S(e) {
-                    return a(d, S, _, {
-                        ...l,
+                function T(e) {
+                    return a(d, T, E, {
+                        ...r,
                         isLoading: !0
                     }), u({
                         promiseFn: t,
-                        resolve: E,
+                        resolve: _,
                         reject: c,
                         code: e,
-                        mfaCodeHandler: T,
+                        mfaCodeHandler: S,
                         isModalOpen: !0
                     })
                 }
 
-                function T(e) {
+                function S(e) {
                     let {
                         res: t
                     } = e;
-                    a(d, S, _, {
-                        ...l,
+                    a(d, T, E, {
+                        ...r,
                         error: t.body.message
                     })
                 }
@@ -1179,15 +1196,15 @@
                     resolve: n,
                     reject: s,
                     code: o,
-                    mfaCodeHandler: r = i,
-                    isModalOpen: l = !1,
+                    mfaCodeHandler: l = i,
+                    isModalOpen: r = !1,
                     ...a
                 } = e;
                 return t(null != o ? {
                     code: o
                 } : {}).then(n, e => {
                     var o, i;
-                    if (o = e, i = l, o.body && 60008 === o.body.code || i && 429 === o.status) return r({
+                    if (o = e, i = r, o.body && 60008 === o.body.code || i && 429 === o.status) return l({
                         promiseFn: t,
                         resolve: n,
                         reject: s,
@@ -1201,11 +1218,11 @@
             function d(e, t) {
                 var n, s;
                 let {
-                    checkEnabled: o = null !== (s = null === (n = r.default.getCurrentUser()) || void 0 === n ? void 0 : n.mfaEnabled) && void 0 !== s && s,
+                    checkEnabled: o = null !== (s = null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.mfaEnabled) && void 0 !== s && s,
                     ...a
                 } = null != t ? t : {};
                 return new Promise((t, n) => {
-                    ((0, l.resolveThunk)(o) ? i : u)({
+                    ((0, r.resolveThunk)(o) ? i : u)({
                         promiseFn: e,
                         resolve: t,
                         reject: n,
@@ -1227,9 +1244,9 @@
             var s = n("37983");
             n("884691");
             var o = n("551042"),
-                r = n("920636");
-            let l = (e, t, n) => function(o) {
-                return (0, s.jsx)(r.default, {
+                l = n("920636");
+            let r = (e, t, n) => function(o) {
+                return (0, s.jsx)(l.default, {
                     handleSubmit: e,
                     handleEarlyClose: t,
                     ...n,
@@ -1238,14 +1255,23 @@
             };
 
             function a(e, t, n) {
-                return (0, o.openModal)(l(e, t, n), {
+                return (0, o.openModal)(r(e, t, n), {
                     onCloseCallback: t
                 })
             }
 
             function i(e, t, n, s) {
-                return (0, o.updateModal)(e, l(t, n, s))
+                return (0, o.updateModal)(e, r(t, n, s))
             }
+        },
+        265586: function(e, t, n) {
+            "use strict";
+            var s, o;
+            n.r(t), n.d(t, {
+                CollectiblesItemType: function() {
+                    return s
+                }
+            }), (o = s || (s = {}))[o.AVATAR_DECORATION = 0] = "AVATAR_DECORATION", o[o.PROFILE_EFFECT = 1] = "PROFILE_EFFECT"
         }
     }
 ]);

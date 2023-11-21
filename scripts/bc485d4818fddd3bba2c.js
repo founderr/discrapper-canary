@@ -1729,7 +1729,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "247893"
+                        buildNumber: "247900"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -12238,7 +12238,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return p
                 }
             }), n("222007");
             var a = n("37983"),
@@ -12247,41 +12247,40 @@
                 i = n("265586"),
                 r = n("446674"),
                 o = n("77078"),
-                u = n("206230"),
-                d = n("812204"),
-                c = n("685665"),
-                E = n("91653"),
-                f = n("945330"),
-                _ = n("21526"),
-                C = n("491232"),
-                h = n("235898"),
-                I = n("806224"),
-                T = n("782340"),
-                S = n("55395");
-            let A = () => [{
-                    name: T.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
+                u = n("152584"),
+                d = n("206230"),
+                c = n("812204"),
+                E = n("685665"),
+                f = n("783142"),
+                _ = n("945330"),
+                C = n("21526"),
+                h = n("491232"),
+                I = n("235898"),
+                T = n("806224"),
+                S = n("782340"),
+                A = n("55395");
+            let N = () => [{
+                    name: S.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
                     value: i.CollectiblesItemType.PROFILE_EFFECT
                 }, {
-                    name: T.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER,
+                    name: S.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER,
                     value: i.CollectiblesItemType.AVATAR_DECORATION
                 }],
-                N = d.default.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL;
+                m = c.default.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL;
 
-            function m(e) {
+            function p(e) {
                 let {
                     height: t,
                     onClose: n
                 } = e, {
-                    categories: d,
-                    isFetching: m
-                } = (0, h.useMaybeFetchCollectiblesCategories)(), {
-                    setPendingAvatarDecoration: p
-                } = (0, E.default)({
-                    isTryItOut: !0
-                }), g = s.useCallback(() => {
+                    categories: c,
+                    isFetching: p
+                } = (0, I.useMaybeFetchCollectiblesCategories)(), {
+                    analyticsLocations: g
+                } = (0, E.default)(m), R = s.useCallback(() => {
                     n()
-                }, [n]), R = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), O = (0, l.useSpring)({
-                    immediate: R,
+                }, [n]), O = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = (0, l.useSpring)({
+                    immediate: O,
                     from: {
                         transform: "translate3d(-110%, 0, 0)",
                         height: t
@@ -12295,68 +12294,66 @@
                         stiffness: 100,
                         damping: 15
                     }
-                }), L = s.useMemo(() => (0, C.getAvatarDecorationsFromCategories)(d), [d]), v = s.useMemo(() => (0, C.getProfileEffectsFromCategories)(d), [d]), [M, P] = s.useState(i.CollectiblesItemType.PROFILE_EFFECT), [D, y] = s.useState();
-                s.useEffect(() => () => {
-                    p(null)
-                }, [p]);
-                let {
-                    analyticsLocations: x
-                } = (0, c.default)(N), U = s.useCallback(() => {
-                    n(), (0, _.openCollectiblesShop)({
-                        analyticsLocations: x,
-                        analyticsSource: N,
-                        initialItem: null != D ? D : void 0
+                }), v = s.useMemo(() => (0, h.getAvatarDecorationsFromCategories)(c), [c]), M = s.useMemo(() => (0, h.getProfileEffectsFromCategories)(c), [c]), [P, D] = s.useState(i.CollectiblesItemType.PROFILE_EFFECT), [y, x] = s.useState();
+                s.useEffect(() => (null != y && (0, u.setSingleTryItOutCollectiblesItem)(y), () => {
+                    (0, f.setTryItOutAvatarDecoration)(null), (0, f.setTryItOutProfileEffect)(null)
+                }), [y]);
+                let U = s.useCallback(() => {
+                    n(), (0, C.openCollectiblesShop)({
+                        analyticsLocations: g,
+                        analyticsSource: m,
+                        initialItem: null != y ? y : void 0
                     })
-                }, [n, x, D]);
+                }, [n, g, y]);
                 return null == t ? null : (0, a.jsxs)(l.animated.div, {
-                    className: S.container,
-                    style: O,
+                    className: A.container,
+                    style: L,
                     children: [(0, a.jsxs)("div", {
-                        className: S.content,
+                        className: A.content,
                         children: [(0, a.jsx)(o.HeadingLevel, {
                             component: (0, a.jsxs)(o.Heading, {
                                 variant: "heading-lg/semibold",
-                                className: S.title,
-                                children: [T.default.Messages.COLLECTIBLES_ACCOUNT_SWITCHER_POPOUT_HEADER, (0, a.jsx)(o.Clickable, {
-                                    className: S.close,
-                                    onClick: g,
-                                    children: (0, a.jsx)(f.default, {
-                                        className: S.closeIcon
+                                className: A.title,
+                                children: [S.default.Messages.COLLECTIBLES_ACCOUNT_SWITCHER_POPOUT_HEADER, (0, a.jsx)(o.Clickable, {
+                                    className: A.close,
+                                    onClick: R,
+                                    children: (0, a.jsx)(_.default, {
+                                        className: A.closeIcon
                                     })
                                 })]
                             }),
                             children: (0, a.jsx)(o.Text, {
                                 variant: "text-sm/normal",
-                                children: T.default.Messages.COLLECTIBLES_ACCOUNT_SWITCHER_POPOUT_SUBHEADER
+                                children: S.default.Messages.COLLECTIBLES_ACCOUNT_SWITCHER_POPOUT_SUBHEADER
                             })
                         }), (0, a.jsx)(o.SegmentedControl, {
-                            options: A(),
-                            value: M,
+                            options: N(),
+                            value: P,
                             onChange: e => {
                                 let {
                                     value: t
                                 } = e;
-                                return P(t)
+                                return D(t)
                             },
-                            className: S.segmentControl,
-                            optionClassName: S.segmentControlOption,
+                            className: A.segmentControl,
+                            optionClassName: A.segmentControlOption,
                             look: "pill"
                         })]
-                    }), (0, a.jsx)(I.CollectiblesItemsList, {
-                        items: M === i.CollectiblesItemType.PROFILE_EFFECT ? v : L,
-                        isFetching: m,
-                        selectedItem: D,
-                        setSelectedItem: y,
-                        containerClassName: S.listContainer,
+                    }), (0, a.jsx)(T.CollectiblesItemsList, {
+                        items: P === i.CollectiblesItemType.PROFILE_EFFECT ? M : v,
+                        isFetching: p,
+                        selectedItem: y,
+                        setSelectedItem: x,
+                        containerClassName: A.listContainer,
                         isScrollable: !0
                     }), (0, a.jsx)("div", {
-                        className: S.ctaContainer,
+                        className: A.ctaContainer,
                         children: (0, a.jsx)(o.Button, {
-                            className: S.cta,
+                            className: A.cta,
                             size: o.Button.Sizes.LARGE,
                             color: o.Button.Colors.BRAND_NEW,
                             onClick: U,
-                            children: T.default.Messages.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL_CTA
+                            children: S.default.Messages.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL_CTA
                         })
                     })]
                 })
@@ -23182,102 +23179,105 @@
                 return (0, a.jsx)(V, {
                     children: (0, a.jsxs)("div", {
                         className: B.popoutContainer,
-                        ref: J,
                         children: [Z && (0, a.jsx)(S.default, {
                             height: $,
                             onClose: () => {
                                 v(), X()
                             }
-                        }), (0, a.jsxs)(g.default, {
-                            user: l,
-                            profileType: k.UserProfileTypes.POPOUT,
-                            children: [(0, a.jsx)(L.default, {
+                        }), (0, a.jsx)("div", {
+                            ref: J,
+                            children: (0, a.jsxs)(g.default, {
                                 user: l,
-                                displayProfile: Y,
-                                onClose: () => null == D ? void 0 : D(),
-                                isMobile: q,
-                                isStreaming: (0, h.default)(W),
-                                status: z,
-                                disableUserProfileLink: __OVERLAY__,
-                                isHovering: ee,
-                                showPremiumBadgeUpsell: !1
-                            }), (0, a.jsxs)(g.default.Inner, {
-                                children: [(0, a.jsx)(R.default, {
-                                    activity: W,
-                                    customStatusActivity: K,
-                                    displayProfile: Y,
+                                profileType: k.UserProfileTypes.POPOUT,
+                                children: [(0, a.jsx)(L.default, {
                                     user: l,
-                                    onClose: v,
-                                    setNote: !1,
-                                    canDM: !1,
-                                    hideNote: !0,
-                                    showCopiableUsername: !0
-                                }), (0, a.jsx)(O.default, {
-                                    className: B.divider
-                                }), (0, a.jsxs)(c.Menu, {
-                                    navId: "account",
-                                    "aria-label": F.default.Messages.SET_STATUS,
-                                    hideScroller: !0,
-                                    className: B.menu,
-                                    onClose: v,
-                                    onSelect: M,
-                                    children: [(0, a.jsxs)(c.MenuGroup, {
-                                        children: [(0, a.jsx)(c.MenuItem, {
-                                            id: "status-picker",
-                                            label: (0, U.humanizeStatus)(z),
-                                            focusedClassName: B.menuItemFocused,
-                                            subMenuIconClassName: B.subMenuIcon,
-                                            action: u.isMobile ? function() {
-                                                (0, c.openModalLazy)(() => new Promise(e => {
-                                                    e(e => (0, a.jsx)(c.ModalRoot, {
-                                                        ...e,
-                                                        size: c.ModalSize.SMALL,
-                                                        className: B.modal,
-                                                        "aria-label": F.default.Messages.SET_STATUS,
-                                                        children: (0, a.jsx)(c.Menu, {
-                                                            navId: "account",
-                                                            variant: "fixed",
+                                    displayProfile: Y,
+                                    onClose: () => null == D ? void 0 : D(),
+                                    isMobile: q,
+                                    isStreaming: (0, h.default)(W),
+                                    status: z,
+                                    disableUserProfileLink: __OVERLAY__,
+                                    isHovering: ee,
+                                    showPremiumBadgeUpsell: !1,
+                                    showCollectiblesUpsell: Z
+                                }), (0, a.jsxs)(g.default.Inner, {
+                                    children: [(0, a.jsx)(R.default, {
+                                        activity: W,
+                                        customStatusActivity: K,
+                                        displayProfile: Y,
+                                        user: l,
+                                        onClose: v,
+                                        setNote: !1,
+                                        canDM: !1,
+                                        hideNote: !0,
+                                        showCopiableUsername: !0
+                                    }), (0, a.jsx)(O.default, {
+                                        className: B.divider
+                                    }), (0, a.jsxs)(c.Menu, {
+                                        navId: "account",
+                                        "aria-label": F.default.Messages.SET_STATUS,
+                                        hideScroller: !0,
+                                        className: B.menu,
+                                        onClose: v,
+                                        onSelect: M,
+                                        children: [(0, a.jsxs)(c.MenuGroup, {
+                                            children: [(0, a.jsx)(c.MenuItem, {
+                                                id: "status-picker",
+                                                label: (0, U.humanizeStatus)(z),
+                                                focusedClassName: B.menuItemFocused,
+                                                subMenuIconClassName: B.subMenuIcon,
+                                                action: u.isMobile ? function() {
+                                                    (0, c.openModalLazy)(() => new Promise(e => {
+                                                        e(e => (0, a.jsx)(c.ModalRoot, {
+                                                            ...e,
+                                                            size: c.ModalSize.SMALL,
+                                                            className: B.modal,
                                                             "aria-label": F.default.Messages.SET_STATUS,
-                                                            hideScroller: !0,
-                                                            className: B.statusPickerModalMenu,
-                                                            onClose: e.onClose,
-                                                            onSelect: e.onClose,
-                                                            children: Q
-                                                        })
+                                                            children: (0, a.jsx)(c.Menu, {
+                                                                navId: "account",
+                                                                variant: "fixed",
+                                                                "aria-label": F.default.Messages.SET_STATUS,
+                                                                hideScroller: !0,
+                                                                className: B.statusPickerModalMenu,
+                                                                onClose: e.onClose,
+                                                                onSelect: e.onClose,
+                                                                children: Q
+                                                            })
+                                                        }))
                                                     }))
-                                                }))
-                                            } : void 0,
-                                            showIconFirst: !0,
-                                            icon: e => {
-                                                let {
-                                                    className: t,
-                                                    isFocused: n
-                                                } = e;
-                                                return (0, a.jsx)(c.Status, {
-                                                    status: z,
-                                                    size: 12,
-                                                    className: i(t, B.mainStatusIcon),
-                                                    color: n ? "currentColor" : void 0
-                                                })
-                                            },
-                                            children: u.isMobile ? void 0 : Q
-                                        }, "status-picker"), en]
-                                    }), (0, a.jsx)(c.MenuGroup, {
-                                        children: (0, a.jsx)(c.MenuItem, {
-                                            id: "switch-account",
-                                            focusedClassName: B.menuItemFocused,
-                                            subMenuIconClassName: B.subMenuIcon,
-                                            label: F.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
-                                            icon: y.default,
-                                            showIconFirst: !0,
-                                            action: j.default,
-                                            children: et
-                                        }, "switch-account")
-                                    }), (0, a.jsx)(c.MenuGroup, {
-                                        children: ea
+                                                } : void 0,
+                                                showIconFirst: !0,
+                                                icon: e => {
+                                                    let {
+                                                        className: t,
+                                                        isFocused: n
+                                                    } = e;
+                                                    return (0, a.jsx)(c.Status, {
+                                                        status: z,
+                                                        size: 12,
+                                                        className: i(t, B.mainStatusIcon),
+                                                        color: n ? "currentColor" : void 0
+                                                    })
+                                                },
+                                                children: u.isMobile ? void 0 : Q
+                                            }, "status-picker"), en]
+                                        }), (0, a.jsx)(c.MenuGroup, {
+                                            children: (0, a.jsx)(c.MenuItem, {
+                                                id: "switch-account",
+                                                focusedClassName: B.menuItemFocused,
+                                                subMenuIconClassName: B.subMenuIcon,
+                                                label: F.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
+                                                icon: y.default,
+                                                showIconFirst: !0,
+                                                action: j.default,
+                                                children: et
+                                            }, "switch-account")
+                                        }), (0, a.jsx)(c.MenuGroup, {
+                                            children: ea
+                                        })]
                                     })]
                                 })]
-                            })]
+                            })
                         })]
                     })
                 })

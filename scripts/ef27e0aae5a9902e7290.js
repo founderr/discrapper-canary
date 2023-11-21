@@ -80,8 +80,8 @@
                 }
                 let c = a(.5 * l),
                     E = a(i, -c),
-                    f = a(i + l, c);
-                for (E > 0 && (E = Math.max(d(0), E)), E = Math.floor(E / u.MINIMUM_RANGE) * u.MINIMUM_RANGE; E <= f;) E = d(E);
+                    _ = a(i + l, c);
+                for (E > 0 && (E = Math.max(d(0), E)), E = Math.floor(E / u.MINIMUM_RANGE) * u.MINIMUM_RANGE; E <= _;) E = d(E);
                 o(t, n, s)
             }
         },
@@ -110,10 +110,10 @@
                     return U
                 },
                 setPendingAvatar: function() {
-                    return g
+                    return C
                 },
                 setPendingGlobalNameName: function() {
-                    return C
+                    return g
                 },
                 setPendingAvatarDecoration: function() {
                     return D
@@ -121,20 +121,23 @@
                 setPendingProfileEffectID: function() {
                     return m
                 },
-                clearErrors: function() {
+                setSingleTryItOutCollectiblesItem: function() {
                     return R
+                },
+                clearErrors: function() {
+                    return O
                 },
                 resetPendingAccountChanges: function() {
                     return h
                 },
                 resetAllPending: function() {
-                    return O
+                    return P
                 },
                 resetAndCloseUserProfileForm: function() {
                     return v
                 },
                 setDisableSubmit: function() {
-                    return P
+                    return y
                 }
             });
             var i = n("872717"),
@@ -147,8 +150,8 @@
                 d = n("730622"),
                 c = n("437822"),
                 E = n("49111"),
-                f = n("191349"),
-                _ = n("782340");
+                _ = n("191349"),
+                f = n("782340");
 
             function T() {
                 r.default.dispatch({
@@ -163,7 +166,7 @@
             }
 
             function I(e, t) {
-                let n = t ? _.default.Messages.DELETE_ACCOUNT : _.default.Messages.DISABLE_ACCOUNT,
+                let n = t ? f.default.Messages.DELETE_ACCOUNT : f.default.Messages.DISABLE_ACCOUNT,
                     u = t ? E.Endpoints.DELETE_ACCOUNT : E.Endpoints.DISABLE_ACCOUNT;
                 return (0, d.default)(t => i.default.post({
                     url: u,
@@ -233,14 +236,14 @@
                     };
                     null === T && (r.avatar_decoration_id = null), null != T && (r.avatar_decoration_id = T.id, r.avatar_decoration_sku_id = T.skuId);
                     let a = u.default.get(E.DEVICE_TOKEN),
-                        s = (0, f.getDevicePushProvider)();
+                        s = (0, _.getDevicePushProvider)();
                     null != s && null != a && (r.push_provider = s, r.push_token = a);
                     let d = u.default.get(E.DEVICE_VOIP_TOKEN);
-                    return null != f.DEVICE_PUSH_VOIP_PROVIDER && null != d && (r.push_voip_provider = f.DEVICE_PUSH_VOIP_PROVIDER, r.push_voip_token = d), N(r)
+                    return null != _.DEVICE_PUSH_VOIP_PROVIDER && null != d && (r.push_voip_provider = _.DEVICE_PUSH_VOIP_PROVIDER, r.push_voip_token = d), N(r)
                 }, {
                     checkEnabled: !1,
                     modalProps: {
-                        title: _.default.Messages.TWO_FA_CHANGE_ACCOUNT
+                        title: f.default.Messages.TWO_FA_CHANGE_ACCOUNT
                     },
                     hooks: {
                         onEarlyClose: () => r.default.dispatch({
@@ -275,14 +278,14 @@
                 })
             }
 
-            function g(e) {
+            function C(e) {
                 r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR",
                     avatar: e
-                }), null == e ? l.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : l.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
+                }), null == e ? l.AccessibilityAnnouncer.announce(f.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : l.AccessibilityAnnouncer.announce(f.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
             }
 
-            function C(e) {
+            function g(e) {
                 r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME",
                     globalName: e
@@ -303,7 +306,14 @@
                 })
             }
 
-            function R() {
+            function R(e) {
+                r.default.dispatch({
+                    type: "USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM",
+                    item: e
+                })
+            }
+
+            function O() {
                 r.default.dispatch({
                     type: "USER_SETTINGS_CLEAR_ERRORS"
                 })
@@ -315,7 +325,7 @@
                 })
             }
 
-            function O() {
+            function P() {
                 r.default.dispatch({
                     type: "USER_SETTINGS_RESET_ALL_PENDING"
                 })
@@ -327,7 +337,7 @@
                 })
             }
 
-            function P(e) {
+            function y(e) {
                 r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT",
                     disable: e
@@ -638,10 +648,10 @@
                     return E
                 },
                 setPendingBanner: function() {
-                    return f
+                    return _
                 },
                 setPendingBio: function() {
-                    return _
+                    return f
                 },
                 setPendingPronouns: function() {
                     return T
@@ -665,7 +675,7 @@
                     return U
                 },
                 setDisableSubmit: function() {
-                    return g
+                    return C
                 }
             }), n("70102");
             var i = n("872717"),
@@ -740,14 +750,14 @@
                 })
             }
 
-            function f(e) {
+            function _(e) {
                 u.default.dispatch({
                     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER",
                     banner: e
                 })
             }
 
-            function _(e) {
+            function f(e) {
                 u.default.dispatch({
                     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO",
                     bio: e
@@ -799,7 +809,7 @@
                 })
             }
 
-            function g(e) {
+            function C(e) {
                 u.default.dispatch({
                     type: "GUILD_IDENTITY_SETTINGS_SET_DISABLE_SUBMIT",
                     disable: e
@@ -811,22 +821,22 @@
             let i, u, l, r, o, a, s, d, c;
             n.r(t), n.d(t, {
                 default: function() {
-                    return C
+                    return g
                 }
             });
             var E = n("446674"),
-                f = n("913144"),
-                _ = n("49111");
-            let T = _.FormStates.CLOSED,
+                _ = n("913144"),
+                f = n("49111");
+            let T = f.FormStates.CLOSED,
                 S = {},
                 I = !1;
 
             function N() {
-                T = _.FormStates.CLOSED, S = {}, s = null, d = void 0, c = []
+                T = f.FormStates.CLOSED, S = {}, s = null, d = void 0, c = []
             }
 
             function A() {
-                p(), U(), S = {}, T = _.FormStates.OPEN
+                p(), U(), S = {}, T = f.FormStates.OPEN
             }
 
             function p() {
@@ -836,7 +846,7 @@
             function U() {
                 u = void 0, l = void 0, r = void 0, a = void 0
             }
-            class g extends E.default.Store {
+            class C extends E.default.Store {
                 getFormState() {
                     return T
                 }
@@ -890,10 +900,10 @@
                     return I
                 }
             }
-            g.displayName = "GuildIdentitySettingsStore";
-            var C = new g(f.default, {
+            C.displayName = "GuildIdentitySettingsStore";
+            var g = new C(_.default, {
                 GUILD_IDENTITY_SETTINGS_INIT: function(e) {
-                    s = e.guild, T = _.FormStates.OPEN, S = {}, d = e.source, c = e.analyticsLocations
+                    s = e.guild, T = f.FormStates.OPEN, S = {}, d = e.source, c = e.analyticsLocations
                 },
                 GUILD_IDENTITY_SETTINGS_CLOSE: N,
                 GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function() {
@@ -903,15 +913,15 @@
                     s = e.guild, S = {}
                 },
                 GUILD_IDENTITY_SETTINGS_SUBMIT: function() {
-                    T = _.FormStates.SUBMITTING, S = {}
+                    T = f.FormStates.SUBMITTING, S = {}
                 },
                 GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: function(e) {
                     var t;
-                    if (T !== _.FormStates.SUBMITTING) return !1;
-                    T = _.FormStates.OPEN, S = null !== (t = e.errors) && void 0 !== t ? t : {}
+                    if (T !== f.FormStates.SUBMITTING) return !1;
+                    T = f.FormStates.OPEN, S = null !== (t = e.errors) && void 0 !== t ? t : {}
                 },
                 USER_PROFILE_UPDATE_FAILURE: function(e) {
-                    T = _.FormStates.OPEN, S = e.errors
+                    T = f.FormStates.OPEN, S = e.errors
                 },
                 GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: function(e) {
                     let {
@@ -968,7 +978,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 useTrackMemberSearchUsed: function() {
-                    return _
+                    return f
                 },
                 useTrackMemberFilterRolesUsed: function() {
                     return T
@@ -996,7 +1006,7 @@
                 c = n("599110"),
                 E = n("49111");
 
-            function f(e, t, n) {
+            function _(e, t, n) {
                 var i;
                 let u = {
                     ...t,
@@ -1005,14 +1015,14 @@
                 c.default.track(e, u)
             }
 
-            function _(e) {
+            function f(e) {
                 let t = o.useCallback(t => {
                     ! function(e) {
                         let t = {
                             guild_id: e,
                             location: a.default.MEMBER_SAFETY_PAGE
                         };
-                        f(E.AnalyticEvents.MOD_DASH_SEARCH_MEMBERS, t)
+                        _(E.AnalyticEvents.MOD_DASH_SEARCH_MEMBERS, t)
                     }(e)
                 }, [e]);
                 return t
@@ -1026,7 +1036,7 @@
                             guild_id: e,
                             location: a.default.MEMBER_SAFETY_PAGE
                         };
-                        f(E.AnalyticEvents.MOD_DASH_FILTER_ROLES, n)
+                        _(E.AnalyticEvents.MOD_DASH_FILTER_ROLES, n)
                     }(e, t)
                 }, [e]);
                 return t
@@ -1040,7 +1050,7 @@
                             guild_id: e,
                             location: a.default.MEMBER_SAFETY_PAGE
                         };
-                        f(E.AnalyticEvents.MOD_DASH_FILTER_SAFETY_FLAGS, n)
+                        _(E.AnalyticEvents.MOD_DASH_FILTER_SAFETY_FLAGS, n)
                     }(e, t)
                 }, [e]);
                 return t
@@ -1060,13 +1070,13 @@
                         target_user_id: null != i ? i : void 0,
                         targets: null != u ? u : void 0
                     };
-                    f(E.AnalyticEvents.MODERATION_ACTION, l)
+                    _(E.AnalyticEvents.MODERATION_ACTION, l)
                 }, [e, n, i, u]);
                 return l
             }
 
             function N(e, t) {
-                f(E.AnalyticEvents.MOD_DASH_MEMBERS_TABLE_VIEWED, {
+                _(E.AnalyticEvents.MOD_DASH_MEMBERS_TABLE_VIEWED, {
                     guild_id: e,
                     location: t
                 })
@@ -1082,7 +1092,7 @@
                     return c
                 },
                 useInventoryGuildSettingsExperiment: function() {
-                    return f
+                    return _
                 }
             });
             var i = n("65597"),
@@ -1221,10 +1231,10 @@
                     } = s({
                         user: u,
                         config: r
-                    }), f = o && c && null != t && (null == t ? void 0 : null === (e = t.inventorySettings) || void 0 === e ? void 0 : e.isEmojiPackCollectible) !== !1;
+                    }), _ = o && c && null != t && (null == t ? void 0 : null === (e = t.inventorySettings) || void 0 === e ? void 0 : e.isEmojiPackCollectible) !== !1;
                     return {
                         viewAndUseEnabled: o,
-                        collectEnabled: f,
+                        collectEnabled: _,
                         showTryPacksModalAndV2Copy: d,
                         autoUnfurlReactionTooltip: E
                     }
@@ -1264,7 +1274,7 @@
                         }
                     }]
                 }),
-                f = function() {
+                _ = function() {
                     let {
                         guildId: e,
                         autoTrackExposure: t = !0
@@ -1303,10 +1313,10 @@
                     return E
                 },
                 getProfilePreviewField: function() {
-                    return f
+                    return _
                 },
                 showRemoveAvatar: function() {
-                    return _
+                    return f
                 },
                 showRemoveBanner: function() {
                     return T
@@ -1354,7 +1364,7 @@
                 }(0, u.setPendingProfileEffectID)(e)
             }
 
-            function f(e, t, n) {
+            function _(e, t, n) {
                 let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
                 if (null != e) return "" === e ? {
                     value: i ? n : null,
@@ -1372,7 +1382,7 @@
                 }
             }
 
-            function _(e, t) {
+            function f(e, t) {
                 return void 0 === e ? null != t : null != e
             }
 
@@ -1404,7 +1414,7 @@
                     openWithoutBackstack: c = !1
                 } = e, {
                     analyticsLocations: E
-                } = (0, l.default)(), f = (0, i.useCallback)(() => {
+                } = (0, l.default)(), _ = (0, i.useCallback)(() => {
                     null != t && (0, r.initGuildIdentitySettings)(t, null != d ? d : E), u.default.open(o.UserSettingsSections.PROFILE_CUSTOMIZATION, null != t ? a.ProfileCustomizationSubsection.GUILD : a.ProfileCustomizationSubsection.USER_PROFILE, {
                         scrollPosition: n,
                         analyticsLocation: s,
@@ -1412,7 +1422,7 @@
                         openWithoutBackstack: c
                     })
                 }, [t, n, s, d, c, E]);
-                return f
+                return _
             }
         },
         866353: function(e, t, n) {
@@ -1466,7 +1476,7 @@
                 pendingUsages: []
             };
             d.Durations.DAY;
-            let f = new o.default({
+            let _ = new o.default({
                     computeBonus: () => 100,
                     computeWeight: e => {
                         let t = 0;
@@ -1476,18 +1486,18 @@
                     afterCompute: () => {},
                     numFrequentlyItems: 20
                 }),
-                _ = () => {
-                    s.default.isLoaded && f.compute()
+                f = () => {
+                    s.default.isLoaded && _.compute()
                 },
                 T = () => {
-                    _()
+                    f()
                 };
 
             function S() {
                 var e;
                 let t = null === (e = a.default.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
                 if (null == t) return !1;
-                f.overwriteHistory(u.mapValues(t, e => ({
+                _.overwriteHistory(u.mapValues(t, e => ({
                     ...e,
                     recentUses: e.recentUses.map(Number).filter(e => e > 0)
                 })), E.pendingUsages)
@@ -1503,7 +1513,7 @@
                     return E.pendingUsages.length > 0
                 }
                 get stickerFrecencyWithoutFetchingLatest() {
-                    return f
+                    return _
                 }
             }
             I.displayName = "StickersPersistedStore", I.persistKey = "StickersPersistedStoreV2";
@@ -1513,11 +1523,11 @@
                         stickerIds: t
                     } = e;
                     null == t || t.forEach(e => {
-                        f.track(e), E.pendingUsages.push({
+                        _.track(e), E.pendingUsages.push({
                             key: e,
                             timestamp: Date.now()
                         })
-                    }), _()
+                    }), f()
                 },
                 USER_SETTINGS_PROTO_UPDATE: function(e) {
                     let {
@@ -1535,7 +1545,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return O
+                    return h
                 }
             });
             var i = n("37983"),
@@ -1548,8 +1558,8 @@
                 d = n("997289"),
                 c = n("812204"),
                 E = n("685665"),
-                f = n("861370"),
-                _ = n("230947"),
+                _ = n("861370"),
+                f = n("230947"),
                 T = n("130037"),
                 S = n("26989"),
                 I = n("800762"),
@@ -1557,52 +1567,52 @@
                 A = n("489836"),
                 p = n("421602"),
                 U = n("459870"),
-                g = n("325882"),
-                C = n("625187"),
+                C = n("325882"),
+                g = n("625187"),
                 D = n("806179"),
                 m = n("97508"),
                 R = n("49111"),
-                h = n("782340"),
-                O = (0, s.default)((0, a.default)(function(e) {
+                O = n("782340"),
+                h = (0, s.default)((0, a.default)(function(e) {
                     var t;
                     let {
                         user: n,
                         guildId: a,
                         channelId: s,
                         context: R,
-                        onSelect: O,
-                        moderationAlertId: v,
-                        analyticsLocation: P,
-                        analyticsLocations: G,
-                        onCloseContextMenu: y
+                        onSelect: h,
+                        moderationAlertId: P,
+                        analyticsLocation: v,
+                        analyticsLocations: y,
+                        onCloseContextMenu: G
                     } = e, {
                         analyticsLocations: M
-                    } = (0, E.default)(c.default.CONTEXT_MENU), b = (0, d.useAnalyticsContext)(), L = null !== (t = null == G ? void 0 : G[0]) && void 0 !== t ? t : M[0], F = (0, T.useTrackModerationAction)(a, {
-                        location: L,
+                    } = (0, E.default)(c.default.CONTEXT_MENU), L = (0, d.useAnalyticsContext)(), b = null !== (t = null == y ? void 0 : y[0]) && void 0 !== t ? t : M[0], F = (0, T.useTrackModerationAction)(a, {
+                        location: b,
                         targetUserId: n.id
                     }), w = (0, l.useStateFromStores)([I.default], () => {
                         var e;
                         return null !== (e = I.default.getUserVoiceChannelId(a, n.id)) && void 0 !== e ? e : void 0
                     }, [a, n.id]), k = u.useCallback(() => {
                         F(T.ModerationActionType.COPY_ID)
-                    }, [F]), B = (0, l.useStateFromStores)([S.default], () => S.default.isMember(a, n.id), [a, n.id]), x = (0, D.default)(n.id, a), V = (0, p.default)(n.id, R), Y = (0, _.default)({
+                    }, [F]), B = (0, l.useStateFromStores)([S.default], () => S.default.isMember(a, n.id), [a, n.id]), x = (0, D.default)(n.id, a), V = (0, p.default)(n.id, R), Y = (0, f.default)({
                         guildId: a,
                         userId: n.id,
-                        analyticsLocation: null != P ? P : b.location,
-                        analyticsLocations: [L],
+                        analyticsLocation: null != v ? v : L.location,
+                        analyticsLocations: [b],
                         context: R
-                    }), H = (0, A.default)(n, L), j = (0, N.default)(n, a, null != s ? s : w, L), W = (0, g.default)(s, v), K = (0, C.default)(n, a), Z = (0, m.default)(n.id, a, !1, L), q = (0, f.default)({
+                    }), H = (0, A.default)(n, b), j = (0, N.default)(n, a, null != s ? s : w, b), W = (0, C.default)(s, P), K = (0, g.default)(n, a), Z = (0, m.default)(n.id, a, !1, b), q = (0, _.default)({
                         id: n.id,
-                        label: h.default.Messages.COPY_ID_USER,
+                        label: O.default.Messages.COPY_ID_USER,
                         onSuccess: k
                     }), z = (0, U.default)(n, a), X = !!(null == n ? void 0 : n.isNonUserBot());
                     return (0, i.jsxs)(r.Menu, {
                         navId: "user-context",
                         onClose: () => {
-                            (0, o.closeContextMenu)(), null == y || y()
+                            (0, o.closeContextMenu)(), null == G || G()
                         },
-                        "aria-label": h.default.Messages.USER_ACTIONS_MENU_LABEL,
-                        onSelect: O,
+                        "aria-label": O.default.Messages.USER_ACTIONS_MENU_LABEL,
+                        onSelect: h,
                         children: [!X && (0, i.jsxs)(i.Fragment, {
                             children: [(0, i.jsxs)(r.MenuGroup, {
                                 children: [x, V]
@@ -1614,7 +1624,7 @@
                                 }), (0, i.jsxs)(r.MenuGroup, {
                                     children: [Z, z]
                                 })]
-                            }), null != v ? W : null, null != K ? (0, i.jsx)(r.MenuGroup, {
+                            }), null != P ? W : null, null != K ? (0, i.jsx)(r.MenuGroup, {
                                 children: K
                             }) : null]
                         }), (0, i.jsx)(r.MenuGroup, {
@@ -1654,7 +1664,7 @@
                     E = (0, u.useStateFromStores)([o.default], () => o.default.isBlocked(n), [n]);
                 if (c) return null;
 
-                function f() {
+                function _() {
                     r.default.addRelationship({
                         userId: n,
                         context: {
@@ -1674,7 +1684,7 @@
                         }),
                         confirmText: d.default.Messages.BLOCK,
                         cancelText: d.default.Messages.CANCEL,
-                        onConfirm: f,
+                        onConfirm: _,
                         ...t,
                         children: (0, i.jsx)(l.Text, {
                             variant: "text-md/normal",
@@ -1690,7 +1700,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return f
                 }
             });
             var i = n("37983");
@@ -1704,23 +1714,23 @@
                 d = n("377253"),
                 c = n("957255"),
                 E = n("49111"),
-                f = n("782340");
+                _ = n("782340");
 
-            function _(e, t) {
+            function f(e, t) {
                 let n = (0, u.useStateFromStores)([c.default], () => null != e && c.default.canWithPartialContext(E.Permissions.MANAGE_MESSAGES, {
                         channelId: e
                     }), [e]),
-                    _ = (0, u.useStateFromStores)([s.default], () => s.default.getChannel(e), [e]),
+                    f = (0, u.useStateFromStores)([s.default], () => s.default.getChannel(e), [e]),
                     T = (0, u.useStateFromStores)([d.default], () => null != e && null != t ? d.default.getMessage(e, t) : null),
                     S = (0, o.useAutomodAlertActions)(null != T ? T : null);
-                if (null == _ || null == T) return null;
+                if (null == f || null == T) return null;
                 let I = null != S && S.actions.hasOwnProperty(r.AutomodAlertActionType.SET_COMPLETED) ? r.AutomodAlertActionType.UNSET_COMPLETED : r.AutomodAlertActionType.SET_COMPLETED,
-                    N = I === r.AutomodAlertActionType.SET_COMPLETED ? f.default.Messages.GUILD_AUTOMOD_ALERT_SET_COMPLETED : f.default.Messages.GUILD_AUTOMOD_ALERT_UNSET_COMPLETED;
+                    N = I === r.AutomodAlertActionType.SET_COMPLETED ? _.default.Messages.GUILD_AUTOMOD_ALERT_SET_COMPLETED : _.default.Messages.GUILD_AUTOMOD_ALERT_UNSET_COMPLETED;
                 return n && null != t ? (0, i.jsx)(l.MenuItem, {
                     id: "mark-automod-alert-completed",
                     label: N,
                     action: () => {
-                        (0, a.executeAlertAction)(t, _, I)
+                        (0, a.executeAlertAction)(t, f, I)
                     }
                 }, "mark-automod-alert-completed") : null
             }
@@ -1798,10 +1808,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 saveProfileChanges: function() {
-                    return f
+                    return _
                 },
                 handleProfileAccessibilityTooltipViewed: function() {
-                    return _
+                    return f
                 },
                 resetPendingProfileChanges: function() {
                     return T
@@ -1825,13 +1835,16 @@
                     return U
                 },
                 setTryItOutAvatarDecoration: function() {
+                    return C
+                },
+                setTryItOutProfileEffect: function() {
                     return g
                 },
                 setTryItOutBanner: function() {
-                    return C
+                    return D
                 },
                 setTryItOutThemeColors: function() {
-                    return D
+                    return m
                 }
             });
             var i = n("872717"),
@@ -1850,7 +1863,7 @@
                     feature_tier: c.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD
                 })
             }
-            async function f(e, t) {
+            async function _(e, t) {
                 var n, s;
                 let c = null === (n = a.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
                 if (null == c) return;
@@ -1892,7 +1905,7 @@
                 }
             }
 
-            function _() {
+            function f() {
                 u.default.dispatch({
                     type: "USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED"
                 })
@@ -1946,21 +1959,28 @@
                 }), E(c.AnalyticsPremiumFeatureNames.ANIMATED_AVATAR)
             }
 
-            function g(e) {
+            function C(e) {
                 u.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION",
                     avatarDecoration: e
                 }), E(c.AnalyticsPremiumFeatureNames.AVATAR_DECORATION)
             }
 
-            function C(e) {
+            function g(e) {
+                u.default.dispatch({
+                    type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID",
+                    profileEffectID: e
+                }), E(c.AnalyticsPremiumFeatureNames.PROFILE_EFFECT)
+            }
+
+            function D(e) {
                 u.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER",
                     banner: e
                 }), E(c.AnalyticsPremiumFeatureNames.PROFILE_BANNER)
             }
 
-            function D(e) {
+            function m(e) {
                 u.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
                     themeColors: e
@@ -1992,10 +2012,10 @@
                     friendToken: d,
                     autoFocusNote: c,
                     analyticsLocation: E
-                } = e, f = l.default.getUser(t), _ = a !== o.ME ? a : void 0;
-                if (null == f) return (0, u.fetchProfile)(t, {
+                } = e, _ = l.default.getUser(t), f = a !== o.ME ? a : void 0;
+                if (null == _) return (0, u.fetchProfile)(t, {
                     friendToken: d,
-                    guildId: _
+                    guildId: f
                 }).then(() => {
                     i.default.dispatch({
                         type: "USER_PROFILE_MODAL_OPEN",
@@ -2008,10 +2028,10 @@
                         analyticsLocation: E
                     })
                 });
-                (0, r.default)(t, f.getAvatarURL(void 0, 80), {
+                (0, r.default)(t, _.getAvatarURL(void 0, 80), {
                     withMutualGuilds: !0,
                     friendToken: d,
-                    guildId: _
+                    guildId: f
                 }), i.default.dispatch({
                     type: "USER_PROFILE_MODAL_OPEN",
                     userId: t,

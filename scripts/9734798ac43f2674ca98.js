@@ -204,20 +204,23 @@
                 setPendingProfileEffectID: function() {
                     return g
                 },
-                clearErrors: function() {
+                setSingleTryItOutCollectiblesItem: function() {
                     return O
                 },
-                resetPendingAccountChanges: function() {
+                clearErrors: function() {
                     return D
                 },
-                resetAllPending: function() {
+                resetPendingAccountChanges: function() {
                     return U
                 },
-                resetAndCloseUserProfileForm: function() {
+                resetAllPending: function() {
                     return L
                 },
-                setDisableSubmit: function() {
+                resetAndCloseUserProfileForm: function() {
                     return v
+                },
+                setDisableSubmit: function() {
+                    return M
                 }
             });
             var r = n("872717"),
@@ -386,31 +389,38 @@
                 })
             }
 
-            function O() {
+            function O(e) {
                 a.default.dispatch({
-                    type: "USER_SETTINGS_CLEAR_ERRORS"
+                    type: "USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM",
+                    item: e
                 })
             }
 
             function D() {
                 a.default.dispatch({
-                    type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
+                    type: "USER_SETTINGS_CLEAR_ERRORS"
                 })
             }
 
             function U() {
                 a.default.dispatch({
-                    type: "USER_SETTINGS_RESET_ALL_PENDING"
+                    type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
                 })
             }
 
             function L() {
                 a.default.dispatch({
+                    type: "USER_SETTINGS_RESET_ALL_PENDING"
+                })
+            }
+
+            function v() {
+                a.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM"
                 })
             }
 
-            function v(e) {
+            function M(e) {
                 a.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT",
                     disable: e

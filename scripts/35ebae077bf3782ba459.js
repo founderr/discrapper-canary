@@ -179,22 +179,25 @@
                     return m
                 },
                 setPendingProfileEffectID: function() {
+                    return R
+                },
+                setSingleTryItOutCollectiblesItem: function() {
                     return A
                 },
                 clearErrors: function() {
-                    return R
-                },
-                resetPendingAccountChanges: function() {
                     return M
                 },
-                resetAllPending: function() {
+                resetPendingAccountChanges: function() {
                     return O
                 },
-                resetAndCloseUserProfileForm: function() {
+                resetAllPending: function() {
                     return U
                 },
-                setDisableSubmit: function() {
+                resetAndCloseUserProfileForm: function() {
                     return P
+                },
+                setDisableSubmit: function() {
+                    return L
                 }
             });
             var i = n("872717"),
@@ -356,38 +359,45 @@
                 })
             }
 
-            function A(e) {
+            function R(e) {
                 l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID",
                     profileEffectID: e
                 })
             }
 
-            function R() {
+            function A(e) {
                 l.default.dispatch({
-                    type: "USER_SETTINGS_CLEAR_ERRORS"
+                    type: "USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM",
+                    item: e
                 })
             }
 
             function M() {
                 l.default.dispatch({
-                    type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
+                    type: "USER_SETTINGS_CLEAR_ERRORS"
                 })
             }
 
             function O() {
                 l.default.dispatch({
-                    type: "USER_SETTINGS_RESET_ALL_PENDING"
+                    type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
                 })
             }
 
             function U() {
                 l.default.dispatch({
+                    type: "USER_SETTINGS_RESET_ALL_PENDING"
+                })
+            }
+
+            function P() {
+                l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM"
                 })
             }
 
-            function P(e) {
+            function L(e) {
                 l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT",
                     disable: e
@@ -446,7 +456,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return A
+                    return R
                 }
             }), n("222007");
             var i = n("37983"),
@@ -690,7 +700,7 @@
                     }
                 }
             }
-            var A = s.default.connectStores([I.default, h.default], () => {
+            var R = s.default.connectStores([I.default, h.default], () => {
                 let e = I.default.getCurrentUser();
                 return l(null != e, "MFAEnableSuccess: currentUser cannot be undefined"), {
                     currentUser: e,
@@ -2501,12 +2511,12 @@
                     N(null)
                 }, [p, N]), a(null != g, "Unknown step for current payment flow.");
                 let m = null !== (u = null == g ? void 0 : null === (t = g.options) || void 0 === t ? void 0 : t.hideSlider) && void 0 !== u && u,
-                    A = null == g ? void 0 : null === (n = g.options) || void 0 === n ? void 0 : n.bodyClassName,
-                    R = void 0 !== h && h ? E.sliderBodyLarge : null == g ? void 0 : null === (o = g.options) || void 0 === o ? void 0 : o.sliderBodyClassName;
+                    R = null == g ? void 0 : null === (n = g.options) || void 0 === n ? void 0 : n.bodyClassName,
+                    A = void 0 !== h && h ? E.sliderBodyLarge : null == g ? void 0 : null === (o = g.options) || void 0 === o ? void 0 : o.sliderBodyClassName;
                 return (0, i.jsxs)(i.Fragment, {
                     children: [null === (d = null == g ? void 0 : null === (s = g.options) || void 0 === s ? void 0 : s.renderHeader) || void 0 === d || d ? _ : null, g.renderStep(I), null == p || m ? null : (0, i.jsxs)(i.Fragment, {
                         children: [(0, i.jsx)(c.ModalContent, {
-                            className: l(E.body, A),
+                            className: l(E.body, R),
                             children: (0, i.jsx)(c.Slides, {
                                 activeSlide: p,
                                 centered: !1,
@@ -2514,7 +2524,7 @@
                                 children: S.filter(e => null != e.key).map(e => (0, i.jsx)(c.Slide, {
                                     id: e.key,
                                     children: (0, i.jsx)("form", {
-                                        className: l(E.sliderBody, R),
+                                        className: l(E.sliderBody, A),
                                         ref: e => T(e),
                                         onSubmit: e => e.preventDefault()
                                     })
@@ -2581,8 +2591,8 @@
                     giftMessage: v,
                     subscriptionTier: g,
                     trialId: m,
-                    postSuccessGuild: A,
-                    openInvoiceId: R,
+                    postSuccessGuild: R,
+                    openInvoiceId: A,
                     applicationId: M,
                     referralTrialOfferId: O,
                     giftRecipient: U,
@@ -2619,9 +2629,9 @@
                             analyticsLocation: T,
                             analyticsSourceLocation: C,
                             trialId: m,
-                            postSuccessGuild: A,
+                            postSuccessGuild: R,
                             planGroup: f.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
-                            openInvoiceId: R,
+                            openInvoiceId: A,
                             applicationId: M,
                             referralTrialOfferId: O,
                             returnRef: P
@@ -3474,11 +3484,14 @@
                 setTryItOutAvatarDecoration: function() {
                     return v
                 },
-                setTryItOutBanner: function() {
+                setTryItOutProfileEffect: function() {
                     return g
                 },
-                setTryItOutThemeColors: function() {
+                setTryItOutBanner: function() {
                     return m
+                },
+                setTryItOutThemeColors: function() {
+                    return R
                 }
             });
             var i = n("872717"),
@@ -3602,12 +3615,19 @@
 
             function g(e) {
                 r.default.dispatch({
+                    type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID",
+                    profileEffectID: e
+                }), f(c.AnalyticsPremiumFeatureNames.PROFILE_EFFECT)
+            }
+
+            function m(e) {
+                r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER",
                     banner: e
                 }), f(c.AnalyticsPremiumFeatureNames.PROFILE_BANNER)
             }
 
-            function m(e) {
+            function R(e) {
                 r.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
                     themeColors: e
