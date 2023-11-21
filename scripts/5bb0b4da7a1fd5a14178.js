@@ -6898,7 +6898,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return x
                 }
             });
             var a = n("37983");
@@ -6911,57 +6911,58 @@
                 o = n("103979"),
                 d = n("780166"),
                 c = n("245463"),
-                f = n("697218"),
-                h = n("991170"),
-                p = n("456127"),
-                m = n("888814"),
-                E = n("943917"),
-                C = n("380116"),
-                S = n("149882"),
-                g = n("568009"),
-                _ = n("49111"),
-                I = n("621262");
+                f = n("42887"),
+                h = n("697218"),
+                p = n("991170"),
+                m = n("456127"),
+                E = n("888814"),
+                C = n("943917"),
+                S = n("380116"),
+                g = n("149882"),
+                _ = n("568009"),
+                I = n("49111"),
+                T = n("621262");
 
-            function T(e) {
+            function x(e) {
                 var t;
                 let {
                     channel: n,
                     hasActiveStream: l,
-                    themeable: T = !1
-                } = e, x = (0, i.useStateFromStores)([f.default], () => {
-                    let e = f.default.getCurrentUser();
+                    themeable: x = !1
+                } = e, v = (0, i.useStateFromStores)([h.default], () => {
+                    let e = h.default.getCurrentUser();
                     return s(null != e, "CenterControlTray: currentUser cannot be undefined"), e
-                }), v = (0, u.default)(), {
-                    isSharedCanvasEnabled: N
+                }), N = (0, u.default)(), {
+                    isSharedCanvasEnabled: A
                 } = d.default.useExperiment({
                     guildId: null !== (t = null == n ? void 0 : n.guild_id) && void 0 !== t ? t : "",
                     location: "b7309a_1"
                 }), {
-                    enableViewerClipping: A
+                    enableViewerClipping: M
                 } = o.default.useExperiment({
                     location: "VoiceEffectsActionBar"
                 }, {
                     autoTrackExposure: !1
-                }), M = (0, r.default)();
-                if (null == n || null != v) return null;
-                let R = (0, c.default)(n),
-                    j = h.default.can({
-                        permission: _.Permissions.ADD_REACTIONS,
-                        user: x,
+                }), R = (0, r.default)(f.default);
+                if (null == n || null != N) return null;
+                let j = (0, c.default)(n),
+                    L = p.default.can({
+                        permission: I.Permissions.ADD_REACTIONS,
+                        user: v,
                         context: n
                     });
                 return (0, a.jsxs)("div", {
-                    className: I.voiceEffectsActionBar,
-                    children: [R && (0, a.jsx)(S.default, {
+                    className: T.voiceEffectsActionBar,
+                    children: [j && (0, a.jsx)(g.default, {
                         channel: n,
-                        themeable: T
-                    }), j && (0, a.jsx)(C.default, {
+                        themeable: x
+                    }), L && (0, a.jsx)(S.default, {
                         channel: n
-                    }), A && M && (0, a.jsx)(p.default, {
+                    }), M && R && (0, a.jsx)(m.default, {
                         channel: n
-                    }), N && l && (0, a.jsx)(m.default, {}), N && l && (0, a.jsx)(E.default, {
+                    }), A && l && (0, a.jsx)(E.default, {}), A && l && (0, a.jsx)(C.default, {
                         channel: n
-                    }), N && l && (0, a.jsx)(g.default, {})]
+                    }), A && l && (0, a.jsx)(_.default, {})]
                 })
             }
         },

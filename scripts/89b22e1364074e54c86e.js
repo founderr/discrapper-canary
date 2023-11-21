@@ -77,7 +77,7 @@
                 } = e, j = function(e) {
                     let t = V(e),
                         n = e.ownerId === I.default.getId(),
-                        d = (0, g.default)(),
+                        d = (0, g.default)(x.default),
                         {
                             enableViewerClipping: o,
                             ignoreSenderPreference: r

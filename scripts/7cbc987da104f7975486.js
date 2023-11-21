@@ -7395,7 +7395,7 @@
                     return n
                 },
                 default: function() {
-                    return D
+                    return b
                 }
             });
             var a, n, r = s("65597"),
@@ -7406,250 +7406,251 @@
                 d = s("18346"),
                 c = s("21526"),
                 _ = s("38766"),
-                E = s("521012"),
-                I = s("701909"),
-                T = s("719923"),
-                f = s("184684"),
-                S = s("646718"),
-                R = s("49111"),
-                A = s("397336"),
-                p = s("782340"),
-                N = s("571685"),
-                m = s("994679"),
-                P = s("620826"),
-                g = s("333078"),
-                C = s("156591"),
-                O = s("913204"),
-                h = s("174433"),
-                M = s("62414"),
-                L = s("613697"),
-                x = s("907511"),
-                U = s("165870"),
-                v = s("443646");
+                E = s("42887"),
+                I = s("521012"),
+                T = s("701909"),
+                f = s("719923"),
+                S = s("184684"),
+                R = s("646718"),
+                A = s("49111"),
+                p = s("397336"),
+                N = s("782340"),
+                m = s("571685"),
+                P = s("994679"),
+                g = s("620826"),
+                C = s("333078"),
+                O = s("156591"),
+                h = s("913204"),
+                M = s("174433"),
+                L = s("62414"),
+                x = s("613697"),
+                U = s("907511"),
+                v = s("165870"),
+                D = s("443646");
             (a = n || (n = {})).AVATAR_DECORATIONS = "avatarDecorations", a.CLIENT_THEMES = "clientThemes", a.CLIPS = "clips", a.EARLY_ACCESS = "earlyAccess", a.ENTRANCE_SOUNDS = "entranceSounds", a.PROFILE_EFFECTS = "profileEffects", a.PROFILES = "profiles", a.REMIXING = "remixing", a.SERVER_BOOSTS = "serverBoosts", a.SPECIAL_MEMBER_PRICING = "specialMemberPricing", a.SPECIAL_SHOP_PERKS = "specialShopPerks", a.UNLIMITED_SUPER_REACTIONS = "unlimitedSuperReactions", a.UPCOMING_DROP_UNTIMED = "upcomingDropUntimed";
-            var D = () => {
+            var b = () => {
                 let {
                     analyticsLocations: e
-                } = (0, o.default)(u.default.PREMIUM_MARKETING_PERK_CARD), t = (0, r.default)([E.default], () => E.default.getPremiumTypeSubscription()), s = null != t ? T.default.getPremiumPlanItem(t) : null, a = null != s ? T.default.getSkuIdForPlan(s.planId) : null, n = a === S.PremiumSubscriptionSKUs.TIER_2, {
-                    flipped: D
-                } = (0, f.useWhatsNewAvatarDecoRollout)(), {
+                } = (0, o.default)(u.default.PREMIUM_MARKETING_PERK_CARD), t = (0, r.default)([I.default], () => I.default.getPremiumTypeSubscription()), s = null != t ? f.default.getPremiumPlanItem(t) : null, a = null != s ? f.default.getSkuIdForPlan(s.planId) : null, n = a === R.PremiumSubscriptionSKUs.TIER_2, {
                     flipped: b
-                } = (0, f.useWhatsNewProfileFXRollout)(), j = (0, d.default)(), y = (0, _.default)({
-                    scrollPosition: A.ProfileCustomizationScrollPositions.TRY_IT_OUT,
+                } = (0, S.useWhatsNewAvatarDecoRollout)(), {
+                    flipped: j
+                } = (0, S.useWhatsNewProfileFXRollout)(), y = (0, d.default)(E.default), B = (0, _.default)({
+                    scrollPosition: p.ProfileCustomizationScrollPositions.TRY_IT_OUT,
                     analyticsLocations: e
-                }), B = () => {
+                }), G = () => {
                     (0, c.openCollectiblesShop)({
                         analyticsLocations: e,
                         analyticsSource: u.default.PREMIUM_MARKETING_PERK_CARD
                     })
-                }, G = {
+                }, k = {
                     avatarDecorations: n ? {
                         name: "avatarDecorations",
-                        title: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
-                        subtitle: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_SUB,
-                        description: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_SUB,
-                        descriptionCta: p.default.Messages.VISIT_THE_SHOP_CTA,
-                        onCtaClick: B,
-                        pillText: p.default.Messages.EARLY_ACCESS,
-                        perkImage: g,
-                        canReveal: D,
+                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
+                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_SUB,
+                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_SUB,
+                        descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
+                        onCtaClick: G,
+                        pillText: N.default.Messages.EARLY_ACCESS,
+                        perkImage: C,
+                        canReveal: b,
                         dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
                     } : {
                         name: "avatarDecorations",
-                        title: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
-                        subtitle: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_NON_SUB,
-                        description: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_NON_SUB,
-                        pillText: p.default.Messages.EARLY_ACCESS,
-                        perkImage: g,
-                        canReveal: D,
+                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_TITLE,
+                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_NON_SUB,
+                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_NON_SUB,
+                        pillText: N.default.Messages.EARLY_ACCESS,
+                        perkImage: C,
+                        canReveal: b,
                         dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
                     },
                     clientThemes: {
                         name: "clientThemes",
-                        title: p.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_TITLE,
-                        subtitle: p.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_SUBTITLE,
-                        description: p.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_DESCRIPTION,
-                        descriptionCta: p.default.Messages.TAKE_ME_THERE,
+                        title: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_TITLE,
+                        subtitle: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_SUBTITLE,
+                        description: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_THEMES_DESCRIPTION,
+                        descriptionCta: N.default.Messages.TAKE_ME_THERE,
                         onCtaClick: () => {
-                            i.default.open(R.UserSettingsSections.APPEARANCE, null, {
+                            i.default.open(A.UserSettingsSections.APPEARANCE, null, {
                                 openWithoutBackstack: !0,
                                 analyticsLocations: e
                             })
                         },
-                        perkImage: N
+                        perkImage: m
                     },
                     clips: n ? {
                         name: "clips",
-                        title: p.default.Messages.CLIPS,
-                        subtitle: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
-                        description: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_SUB,
-                        descriptionCta: j ? p.default.Messages.TAKE_ME_THERE : p.default.Messages.LEARN_MORE,
-                        pillText: p.default.Messages.EARLY_ACCESS,
-                        onCtaClick: j ? () => {
-                            i.default.open(R.UserSettingsSections.CLIPS, null, {
+                        title: N.default.Messages.CLIPS,
+                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
+                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_SUB,
+                        descriptionCta: y ? N.default.Messages.TAKE_ME_THERE : N.default.Messages.LEARN_MORE,
+                        pillText: N.default.Messages.EARLY_ACCESS,
+                        onCtaClick: y ? () => {
+                            i.default.open(A.UserSettingsSections.CLIPS, null, {
                                 openWithoutBackstack: !0,
                                 analyticsLocations: e
                             })
                         } : () => {
-                            window.open(I.default.getArticleURL(R.HelpdeskArticles.CLIPS), "_blank")
+                            window.open(T.default.getArticleURL(A.HelpdeskArticles.CLIPS), "_blank")
                         },
-                        perkImage: C
+                        perkImage: O
                     } : {
                         name: "clips",
-                        title: p.default.Messages.CLIPS,
-                        subtitle: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
-                        description: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_NON_SUB,
-                        pillText: p.default.Messages.EARLY_ACCESS,
-                        perkImage: C
+                        title: N.default.Messages.CLIPS,
+                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
+                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_NON_SUB,
+                        pillText: N.default.Messages.EARLY_ACCESS,
+                        perkImage: O
                     },
                     earlyAccess: n ? {
                         name: "earlyAccess",
-                        title: p.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
-                        subtitle: p.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE,
-                        description: p.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_SUB,
-                        perkImage: O
+                        title: N.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
+                        subtitle: N.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE,
+                        description: N.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_SUB,
+                        perkImage: h
                     } : {
                         name: "earlyAccess",
-                        title: p.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
-                        subtitle: p.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE,
-                        description: p.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_NON_SUB,
+                        title: N.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_TITLE,
+                        subtitle: N.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_SUBTITLE,
+                        description: N.default.Messages.Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_NON_SUB,
                         isPremiumGetCta: !0,
-                        perkImage: O
+                        perkImage: h
                     },
                     entranceSounds: n ? {
                         name: "entranceSounds",
-                        title: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
-                        subtitle: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
-                        description: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
-                        descriptionCta: p.default.Messages.TAKE_ME_THERE,
+                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
+                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
+                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
+                        descriptionCta: N.default.Messages.TAKE_ME_THERE,
                         onCtaClick: () => {
-                            i.default.open(R.UserSettingsSections.VOICE, A.SOUNDBOARD_SUBSECTION, {
+                            i.default.open(A.UserSettingsSections.VOICE, p.SOUNDBOARD_SUBSECTION, {
                                 openWithoutBackstack: !0,
                                 analyticsLocations: e
                             })
                         },
-                        perkImage: h
+                        perkImage: M
                     } : {
                         name: "entranceSounds",
-                        title: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
-                        subtitle: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
-                        description: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
-                        perkImage: h
+                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
+                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
+                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
+                        perkImage: M
                     },
                     profileEffects: n ? {
                         name: "profileEffects",
-                        title: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
-                        subtitle: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
-                        description: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_SUB,
-                        descriptionCta: p.default.Messages.VISIT_THE_SHOP_CTA,
-                        onCtaClick: B,
-                        pillText: p.default.Messages.EARLY_ACCESS,
-                        perkImage: L,
-                        canReveal: b,
+                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
+                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
+                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_SUB,
+                        descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
+                        onCtaClick: G,
+                        pillText: N.default.Messages.EARLY_ACCESS,
+                        perkImage: x,
+                        canReveal: j,
                         dismissibleContentType: l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
                     } : {
                         name: "profileEffects",
-                        title: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
-                        subtitle: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
-                        description: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_NON_SUB,
-                        pillText: p.default.Messages.EARLY_ACCESS,
-                        perkImage: L,
-                        canReveal: b,
+                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
+                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_SUBTITLE,
+                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_NON_SUB,
+                        pillText: N.default.Messages.EARLY_ACCESS,
+                        perkImage: x,
+                        canReveal: j,
                         dismissibleContentType: l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
                     },
                     profiles: {
                         name: "profiles",
-                        title: p.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_TITLE,
-                        subtitle: p.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_SUBTITLE,
-                        description: p.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
-                        descriptionCta: p.default.Messages.TAKE_ME_THERE,
-                        onCtaClick: y,
-                        perkImage: m
+                        title: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_TITLE,
+                        subtitle: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_SUBTITLE,
+                        description: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
+                        descriptionCta: N.default.Messages.TAKE_ME_THERE,
+                        onCtaClick: B,
+                        perkImage: P
                     },
                     remixing: n ? {
                         name: "remixing",
-                        title: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_TITLE,
-                        subtitle: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_SUBTITLE,
-                        description: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_DESCRIPTION_SUB,
-                        perkImage: x,
-                        pillText: p.default.Messages.EARLY_ACCESS
+                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_TITLE,
+                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_SUBTITLE,
+                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_DESCRIPTION_SUB,
+                        perkImage: U,
+                        pillText: N.default.Messages.EARLY_ACCESS
                     } : {
                         name: "remixing",
-                        title: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_TITLE,
-                        subtitle: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_SUBTITLE,
-                        description: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_DESCRIPTION_NON_SUB,
-                        perkImage: x,
-                        pillText: p.default.Messages.EARLY_ACCESS
+                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_TITLE,
+                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_SUBTITLE,
+                        description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_DESCRIPTION_NON_SUB,
+                        perkImage: U,
+                        pillText: N.default.Messages.EARLY_ACCESS
                     },
                     serverBoosts: {
                         name: "serverBoosts",
-                        title: p.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_TITLE,
-                        subtitle: p.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_SUBTITLE,
-                        description: p.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_DESCRIPTION,
-                        descriptionCta: p.default.Messages.TAKE_ME_THERE,
+                        title: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_TITLE,
+                        subtitle: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_SUBTITLE,
+                        description: N.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_BOOSTS_DESCRIPTION,
+                        descriptionCta: N.default.Messages.TAKE_ME_THERE,
                         onCtaClick: () => {
-                            i.default.open(R.UserSettingsSections.GUILD_BOOSTING, null, {
+                            i.default.open(A.UserSettingsSections.GUILD_BOOSTING, null, {
                                 openWithoutBackstack: !0,
                                 analyticsLocations: e
                             })
                         },
-                        perkImage: P
+                        perkImage: g
                     },
                     specialMemberPricing: n ? {
                         name: "specialMemberPricing",
-                        title: p.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
-                        subtitle: p.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE,
-                        description: p.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
-                        descriptionCta: p.default.Messages.VISIT_THE_SHOP_CTA,
-                        onCtaClick: B,
-                        perkImage: U
+                        title: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
+                        subtitle: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE,
+                        description: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
+                        descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
+                        onCtaClick: G,
+                        perkImage: v
                     } : {
                         name: "specialMemberPricing",
-                        title: p.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
-                        subtitle: p.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE,
-                        description: p.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
+                        title: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
+                        subtitle: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE,
+                        description: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
                         isPremiumGetCta: !0,
-                        perkImage: U
+                        perkImage: v
                     },
                     specialShopPerks: n ? {
                         name: "specialShopPerks",
-                        title: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_TITLE,
-                        subtitle: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
-                        description: p.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
-                        descriptionCta: p.default.Messages.VISIT_THE_SHOP_CTA,
-                        onCtaClick: B,
-                        perkImage: U
+                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_TITLE,
+                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
+                        description: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
+                        descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
+                        onCtaClick: G,
+                        perkImage: v
                     } : {
                         name: "specialShopPerks",
-                        title: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_TITLE,
-                        subtitle: p.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
-                        description: p.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
-                        descriptionCta: p.default.Messages.VISIT_THE_SHOP_CTA,
-                        onCtaClick: B,
-                        perkImage: U
+                        title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_TITLE,
+                        subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_SUBTITLE,
+                        description: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
+                        descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
+                        onCtaClick: G,
+                        perkImage: v
                     },
                     unlimitedSuperReactions: n ? {
                         name: "unlimitedSuperReactions",
-                        title: p.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE,
-                        subtitle: p.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_SUBTITLE,
-                        description: p.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_DESCRIPTION_SUB,
-                        perkImage: v
+                        title: N.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE,
+                        subtitle: N.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_SUBTITLE,
+                        description: N.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_DESCRIPTION_SUB,
+                        perkImage: D
                     } : {
                         name: "unlimitedSuperReactions",
-                        title: p.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE,
-                        subtitle: p.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_SUBTITLE,
-                        description: p.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_DESCRIPTION_NON_SUB,
+                        title: N.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE,
+                        subtitle: N.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_SUBTITLE,
+                        description: N.default.Messages.Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_DESCRIPTION_NON_SUB,
                         isPremiumGetCta: !0,
-                        perkImage: v
+                        perkImage: D
                     },
                     upcomingDropUntimed: {
                         name: "upcomingDropUntimed",
-                        title: p.default.Messages.NEW_DROP,
-                        pillText: p.default.Messages.COMING_SOON,
-                        backgroundImage: M
+                        title: N.default.Messages.NEW_DROP,
+                        pillText: N.default.Messages.COMING_SOON,
+                        backgroundImage: L
                     }
                 };
-                return G
+                return k
             }
         },
         416555: function(e, t, s) {
