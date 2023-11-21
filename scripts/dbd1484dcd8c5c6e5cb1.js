@@ -1729,7 +1729,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "247975"
+                        buildNumber: "247987"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -12294,7 +12294,7 @@
                         stiffness: 100,
                         damping: 15
                     }
-                }), v = s.useMemo(() => (0, h.getAvatarDecorationsFromCategories)(c), [c]), M = s.useMemo(() => (0, h.getProfileEffectsFromCategories)(c), [c]), [P, D] = s.useState(i.CollectiblesItemType.PROFILE_EFFECT), [y, x] = s.useState();
+                }), v = s.useMemo(() => (0, h.sortAvatarDecorationsByPopularity)((0, h.getAvatarDecorationsFromCategories)(c)), [c]), M = s.useMemo(() => (0, h.sortProfileEffectsByPopularity)((0, h.getProfileEffectsFromCategories)(c)), [c]), [P, D] = s.useState(i.CollectiblesItemType.PROFILE_EFFECT), [y, x] = s.useState();
                 s.useEffect(() => (null != y && (0, u.setSingleTryItOutCollectiblesItem)(y), () => {
                     (0, f.setTryItOutAvatarDecoration)(null), (0, f.setTryItOutProfileEffect)(null)
                 }), [y]);
