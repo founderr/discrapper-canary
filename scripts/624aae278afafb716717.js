@@ -23545,47 +23545,46 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return m
                 }
             }), n("222007");
             var a = n("37983"),
                 l = n("884691"),
                 s = n("446674"),
-                i = n("782926"),
-                r = n("77078"),
-                u = n("247013"),
-                o = n("697218"),
-                d = n("959097"),
-                c = n("664336"),
-                f = n("487269"),
-                h = n("537560"),
-                p = n("782340"),
-                m = n("16064");
+                i = n("77078"),
+                r = n("247013"),
+                u = n("697218"),
+                o = n("959097"),
+                d = n("664336"),
+                c = n("487269"),
+                f = n("537560"),
+                h = n("782340"),
+                p = n("16064");
 
-            function E(e) {
+            function m(e) {
                 let {
                     channel: t
-                } = e, [n, E] = l.useState(!1), C = (0, s.useStateFromStores)([u.default, o.default], () => {
-                    let e = o.default.getCurrentUser();
-                    return null == e || t.isNSFW() && (!e.nsfwAllowed || !u.default.didAgree(t.getGuildId()))
-                }, [t]), S = l.useCallback(() => {
-                    E(!1)
-                }, []), g = l.useCallback(() => {
-                    !n && (0, f.trackThreadBrowserOpened)("Popout"), E(!n)
-                }, [n]), _ = (0, r.useRedesignIconContext)().enabled;
-                return (0, a.jsx)(r.Popout, {
-                    animation: r.Popout.Animation.NONE,
+                } = e, [n, m] = l.useState(!1), E = (0, s.useStateFromStores)([r.default, u.default], () => {
+                    let e = u.default.getCurrentUser();
+                    return null == e || t.isNSFW() && (!e.nsfwAllowed || !r.default.didAgree(t.getGuildId()))
+                }, [t]), C = l.useCallback(() => {
+                    m(!1)
+                }, []), S = l.useCallback(() => {
+                    !n && (0, c.trackThreadBrowserOpened)("Popout"), m(!n)
+                }, [n]);
+                return (0, a.jsx)(i.Popout, {
+                    animation: i.Popout.Animation.NONE,
                     position: "bottom",
                     align: "right",
                     autoInvert: !1,
                     shouldShow: n,
-                    onRequestClose: S,
+                    onRequestClose: C,
                     renderPopout: function() {
-                        return (0, a.jsx)(r.Dialog, {
-                            children: (0, a.jsx)(h.default, {
-                                className: m.browser,
+                        return (0, a.jsx)(i.Dialog, {
+                            children: (0, a.jsx)(f.default, {
+                                className: p.browser,
                                 channel: t,
-                                onClose: S
+                                onClose: C
                             })
                         })
                     },
@@ -23593,14 +23592,14 @@
                         let {
                             isShown: n
                         } = t;
-                        return (0, a.jsx)(c.Icon, {
+                        return (0, a.jsx)(d.Icon, {
                             ...e,
-                            className: m.icon,
-                            onClick: g,
-                            icon: _ ? i.ThreadIcon : d.default,
-                            "aria-label": p.default.Messages.THREADS,
-                            tooltip: n ? null : p.default.Messages.THREADS,
-                            disabled: C,
+                            className: p.icon,
+                            onClick: S,
+                            icon: o.default,
+                            "aria-label": h.default.Messages.THREADS,
+                            tooltip: n ? null : h.default.Messages.THREADS,
+                            disabled: E,
                             selected: n
                         })
                     }

@@ -13,7 +13,7 @@
                     return _
                 },
                 useArchivedThreads: function() {
-                    return R
+                    return N
                 }
             }), a("222007");
             var s = a("884691"),
@@ -66,7 +66,7 @@
                 return s.useMemo(() => l(t).sort((e, t) => f.default.compare(o.default.lastMessageId(e), o.default.lastMessageId(t))).reverse().value(), [t])
             }
 
-            function R(e, t, a) {
+            function N(e, t, a) {
                 let {
                     canLoadMore: r,
                     loading: o,
@@ -144,7 +144,7 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return N
+                    return R
                 }
             }), a("222007");
             var s = a("37983"),
@@ -166,14 +166,14 @@
                 x = a("648564"),
                 v = a("49111"),
                 _ = a("782340"),
-                R = a("466107");
+                N = a("466107");
 
-            function N(e) {
+            function R(e) {
                 let {
                     channel: t,
                     className: a,
                     onClose: l
-                } = e, o = (0, d.useStateFromStores)([i.default], () => i.default.can(v.Permissions.READ_MESSAGE_HISTORY, t)), N = (0, m.useCanStartThread)(t), A = () => {
+                } = e, o = (0, d.useStateFromStores)([i.default], () => i.default.can(v.Permissions.READ_MESSAGE_HISTORY, t)), R = (0, m.useCanStartThread)(t), j = () => {
                     l(), (0, E.openThreadSidebarForCreating)(t, void 0, "Thread Browser Empty State")
                 }, M = r.useCallback((e, t) => {
                     l(), (0, E.openThreadSidebarForViewing)(e, !t, x.OpenThreadAnalyticsLocations.BROWSER)
@@ -205,33 +205,33 @@
                 return r.useEffect(() => {
                     (0, g.trackThreadBrowserTab)()
                 }, []), (0, s.jsx)("div", {
-                    className: n(a, R.container),
+                    className: n(a, N.container),
                     children: (0, s.jsx)(u.HeadingLevel, {
                         component: (0, s.jsxs)("div", {
-                            className: R.header,
+                            className: N.header,
                             children: [(0, s.jsx)(f.default, {
-                                className: R.threadIcon
+                                className: N.threadIcon
                             }), (0, s.jsx)(u.Heading, {
                                 variant: "heading-md/semibold",
-                                className: R.title,
+                                className: N.title,
                                 children: _.default.Messages.THREAD_BROWSER_TITLE
                             }), o ? (0, s.jsxs)(s.Fragment, {
                                 children: [(0, s.jsx)("div", {
-                                    className: R.divider
-                                }), (0, s.jsx)(j, {
+                                    className: N.divider
+                                }), (0, s.jsx)(A, {
                                     ...C
                                 })]
                             }) : null, (0, s.jsx)("div", {
-                                className: R.spacer
-                            }), N ? (0, s.jsx)(u.Button, {
+                                className: N.spacer
+                            }), R ? (0, s.jsx)(u.Button, {
                                 size: u.Button.Sizes.MIN,
-                                className: R.createButton,
+                                className: N.createButton,
                                 onClick: () => {
                                     l(), (0, E.openThreadSidebarForCreating)(t, void 0, "Thread Browser Toolbar")
                                 },
                                 children: _.default.Messages.CREATE
                             }) : null, (0, s.jsx)(u.Clickable, {
-                                className: R.closeIcon,
+                                className: N.closeIcon,
                                 onClick: l,
                                 "aria-label": _.default.Messages.CLOSE,
                                 children: (0, s.jsx)(c.default, {})
@@ -239,19 +239,19 @@
                         }),
                         children: C.hasResults ? (0, s.jsx)(S.default, {
                             channel: t,
-                            startThread: A,
+                            startThread: j,
                             goToThread: M,
                             threadIds: C.results
                         }) : (0, s.jsx)(T.default, {
                             channel: t,
-                            startThread: A,
+                            startThread: j,
                             goToThread: M
                         })
                     })
                 })
             }
 
-            function j(e) {
+            function A(e) {
                 let {
                     query: t,
                     setQuery: a,
@@ -260,7 +260,7 @@
                 } = e;
                 return (0, s.jsx)(o.default, {
                     autoFocus: !0,
-                    className: R.searchBox,
+                    className: N.searchBox,
                     query: t,
                     isLoading: l,
                     onChange: e => a(e),
@@ -275,53 +275,49 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return c
+                    return o
                 }
             });
             var s = a("37983");
             a("884691");
-            var r = a("782926"),
-                l = a("77078"),
-                n = a("543289"),
-                d = a("959097"),
-                u = a("300322"),
-                i = a("782340"),
-                o = a("590545");
+            var r = a("77078"),
+                l = a("543289"),
+                n = a("959097"),
+                d = a("300322"),
+                u = a("782340"),
+                i = a("590545");
 
-            function c(e) {
+            function o(e) {
                 let {
                     channel: t,
                     header: a,
-                    startThread: c
-                } = e, f = (0, l.useRedesignIconContext)().enabled, h = (0, u.useCanStartPublicThread)(t), m = (0, u.useCanStartPrivateThread)(t);
+                    startThread: o
+                } = e, c = (0, d.useCanStartPublicThread)(t), f = (0, d.useCanStartPrivateThread)(t);
                 return (0, s.jsxs)("div", {
-                    className: o.container,
+                    className: i.container,
                     children: [(0, s.jsxs)("div", {
-                        className: o.iconContainer,
+                        className: i.iconContainer,
                         children: [(0, s.jsx)("div", {
-                            className: o.icon,
-                            children: f ? (0, s.jsx)(r.ThreadIcon, {
-                                width: 36,
-                                height: 36
-                            }) : (0, s.jsx)(d.default, {
+                            className: i.icon,
+                            children: (0, s.jsx)(n.default, {
                                 width: 36,
                                 height: 36
                             })
-                        }), (0, s.jsx)(n.default, {
-                            className: o.stars
+                        }), (0, s.jsx)(l.default, {
+                            className: i.stars
                         })]
-                    }), (0, s.jsx)(l.Heading, {
-                        className: o.header,
+                    }), (0, s.jsx)(r.Heading, {
+                        className: i.header,
                         variant: "heading-xl/semibold",
                         children: a
-                    }), (0, s.jsx)(l.Text, {
+                    }), (0, s.jsx)(r.Text, {
                         color: "header-secondary",
                         variant: "text-md/normal",
-                        children: i.default.Messages.THREAD_BROWSER_EMPTY_STATE_SUBTEXT
-                    }), h || m ? (0, s.jsx)(l.Button, {
-                        className: o.cta,
-                        onClick: c,
-                        children: i.default.Messages.CREATE_THREAD
+                        children: u.default.Messages.THREAD_BROWSER_EMPTY_STATE_SUBTEXT
+                    }), c || f ? (0, s.jsx)(r.Button, {
+                        className: i.cta,
+                        onClick: o,
+                        children: u.default.Messages.CREATE_THREAD
                     }) : null]
                 })
             }
@@ -411,7 +407,7 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return A
+                    return j
                 }
             });
             var s = a("37983"),
@@ -433,14 +429,14 @@
                 x = a("158998"),
                 v = a("610730"),
                 _ = a("487269"),
-                R = a("719347"),
-                N = a("782340"),
-                j = a("140407");
+                N = a("719347"),
+                R = a("782340"),
+                A = a("140407");
 
-            function A(e) {
+            function j(e) {
                 return e.isActiveThread() ? (0, s.jsx)(M, {
                     channel: e
-                }) : (0, s.jsx)(b, {
+                }) : (0, s.jsx)(I, {
                     channel: e
                 })
             }
@@ -451,7 +447,7 @@
                 } = e, a = (0, l.useStateFromStores)([v.default], () => v.default.getMostRecentMessage(t.id));
                 return null == a ? (0, s.jsx)(C, {
                     channel: t
-                }) : (0, s.jsx)(I, {
+                }) : (0, s.jsx)(p, {
                     channel: t,
                     message: a
                 })
@@ -462,14 +458,14 @@
                     channel: t
                 } = e, a = (0, _.useLastMessageTimestamp)(t);
                 return (0, s.jsxs)(n.Text, {
-                    className: j.subtext,
+                    className: A.subtext,
                     variant: "text-sm/normal",
                     color: "header-secondary",
-                    children: [N.default.Messages.THREAD_BROWSER_NO_RECENT_MESSAGES, "\xa0 • \xa0", (0, _.getTimestampString)(a)]
+                    children: [R.default.Messages.THREAD_BROWSER_NO_RECENT_MESSAGES, "\xa0 • \xa0", (0, _.getTimestampString)(a)]
                 })
             }
 
-            function I(e) {
+            function p(e) {
                 let {
                     channel: t,
                     message: a
@@ -494,9 +490,9 @@
                                 contentPlaceholder: t,
                                 renderedContent: r,
                                 icon: l
-                            } = (0, T.renderSingleLineMessage)(a, e, S, j.messageContent, {
-                                iconClass: j.messageContentIcon,
-                                iconSize: R.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
+                            } = (0, T.renderSingleLineMessage)(a, e, S, A.messageContent, {
+                                iconClass: A.messageContentIcon,
+                                iconSize: N.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
                             });
                         return (0, s.jsxs)(s.Fragment, {
                             children: [null != r ? r : (0, s.jsx)("span", {
@@ -505,22 +501,22 @@
                         })
                     }, [a, S]);
                 return (0, s.jsxs)(n.Text, {
-                    className: j.subtext,
+                    className: A.subtext,
                     variant: "text-sm/normal",
                     color: "header-secondary",
                     children: [(0, s.jsx)(d.default, {
-                        className: j.avatar,
+                        className: A.avatar,
                         user: i,
                         size: n.AvatarSizes.SIZE_16
                     }), (0, s.jsx)(n.NameWithRole, {
                         name: f,
                         color: h,
-                        className: j.authorName
+                        className: A.authorName
                     }), ":\xa0", x, "\xa0 • \xa0", (0, _.getTimestampString)(E.default.extractTimestamp(a.id))]
                 })
             }
 
-            function b(e) {
+            function I(e) {
                 var t, a, r;
                 let {
                     channel: o
@@ -530,39 +526,39 @@
                 });
                 let T = (0, l.useStateFromStores)([g.default], () => g.default.getUser(o.ownerId)),
                     v = (0, l.useStateFromStores)([f.default], () => f.default.getMember(o.guild_id, o.ownerId)),
-                    R = null !== (r = (0, i.default)(o)) && void 0 !== r ? r : S.default;
+                    N = null !== (r = (0, i.default)(o)) && void 0 !== r ? r : S.default;
                 return (0, s.jsx)(n.Text, {
-                    className: j.subtext,
+                    className: A.subtext,
                     variant: "text-sm/normal",
                     color: "header-secondary",
                     children: null == T ? (0, s.jsxs)(s.Fragment, {
                         children: [(0, s.jsx)("div", {
-                            className: j.noAvatarIcon,
-                            children: (0, s.jsx)(R, {
+                            className: A.noAvatarIcon,
+                            children: (0, s.jsx)(N, {
                                 width: 10,
                                 height: 10
                             })
-                        }), N.default.Messages.THREAD_BROWSER_LAST_ACTIVE_TIME.format({
+                        }), R.default.Messages.THREAD_BROWSER_LAST_ACTIVE_TIME.format({
                             time: (0, _.getTimestampString)(m)
                         })]
                     }) : (0, s.jsxs)(s.Fragment, {
                         children: [(0, s.jsx)(d.default, {
-                            className: j.avatar,
+                            className: A.avatar,
                             user: T,
                             size: n.AvatarSizes.SIZE_16
-                        }), N.default.Messages.THREAD_BROWSER_STARTED_BY.format({
+                        }), R.default.Messages.THREAD_BROWSER_STARTED_BY.format({
                             authorHook(e, t) {
                                 var a, r;
                                 return (0, s.jsx)(n.NameWithRole, {
-                                    className: j.startedByName,
+                                    className: A.startedByName,
                                     color: null !== (a = null == v ? void 0 : v.colorString) && void 0 !== a ? a : void 0,
                                     name: null !== (r = null == v ? void 0 : v.nick) && void 0 !== r ? r : x.default.getName(T)
                                 }, t)
                             }
                         }), (0, s.jsx)("span", {
-                            className: j.bullet,
+                            className: A.bullet,
                             children: "•"
-                        }), N.default.Messages.THREAD_BROWSER_LAST_ACTIVE_TIME.format({
+                        }), R.default.Messages.THREAD_BROWSER_LAST_ACTIVE_TIME.format({
                             time: (0, _.getTimestampString)(m)
                         })]
                     })
@@ -602,14 +598,14 @@
                     loadMore: v
                 } = (0, d.useArchivedThreads)(t, l.ThreadSortOrder.LATEST_ACTIVITY, f), _ = r.useRef(null);
                 (0, d.useTrackThreadBrowserTab)();
-                let R = r.useCallback(e => {
+                let N = r.useCallback(e => {
                         let t = 0 === e.section ? g : 1 === e.section ? S : T;
                         return (0, s.jsx)(i.default, {
                             threadId: t[e.row],
                             goToThread: h
                         }, "".concat(e.section, "-").concat(e.row))
                     }, [T, g, S, h]),
-                    N = r.useCallback(e => 0 === e.section ? (0, s.jsx)(m, {
+                    R = r.useCallback(e => 0 === e.section ? (0, s.jsx)(m, {
                         text: o.default.Messages.THREAD_BROWSER_JOINED_HEADER.format({
                             count: g.length
                         })
@@ -620,8 +616,8 @@
                     }, e.section) : (0, s.jsx)(m, {
                         text: o.default.Messages.THREAD_BROWSER_ARCHIVED_HEADER
                     }, e.section), [g.length, S.length]),
-                    j = r.useCallback(e => 1 === e && g.length > 0 ? 64 : 2 === e && (g.length > 0 || S.length > 0) ? 64 : 32, [g.length, S.length]),
-                    A = r.useCallback(() => {
+                    A = r.useCallback(e => 1 === e && g.length > 0 ? 64 : 2 === e && (g.length > 0 || S.length > 0) ? 64 : 32, [g.length, S.length]),
+                    j = r.useCallback(() => {
                         var e;
                         let t = null === (e = _.current) || void 0 === e ? void 0 : e.getScrollerState();
                         if (null == t) return;
@@ -647,12 +643,12 @@
                     className: c.list,
                     fade: !0,
                     sections: [g.length, S.length, T.length],
-                    sectionHeight: j,
+                    sectionHeight: A,
                     rowHeight: 80,
-                    renderRow: R,
-                    renderSection: N,
+                    renderRow: N,
+                    renderSection: R,
                     chunkSize: 20,
-                    onScroll: E ? A : void 0
+                    onScroll: E ? j : void 0
                 })
             }
 
