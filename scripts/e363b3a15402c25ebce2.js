@@ -8014,6 +8014,18 @@
                     },
                     "alert-bg": {
                         name: "bg-base-primary"
+                    },
+                    "chat-banner-bg": {
+                        name: "bg-base-secondary"
+                    },
+                    "guild-icon-inactive-bg": {
+                        name: "bg-base-secondary"
+                    },
+                    "guild-icon-inactive-nested-bg": {
+                        name: "bg-base-primary"
+                    },
+                    "expression-picker-bg": {
+                        name: "bg-base-secondary"
                     }
                 }
         },
