@@ -38,6 +38,7 @@
                 "./detune_user_moved.mp3": "267717",
                 "./discodo.mp3": "904613",
                 "./disconnect.mp3": "17802",
+                "./hang_status_select.mp3": "980401",
                 "./highfive_clap.mp3": "362389",
                 "./highfive_whistle.mp3": "937092",
                 "./human_man.mp3": "649460",
@@ -228,6 +229,10 @@
         17802: function(e, t, n) {
             "use strict";
             e.exports = n.p + "e08aa3fc806a6137b9af.mp3"
+        },
+        980401: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "d20b9636e9ef7c82b9ec.mp3"
         },
         362389: function(e, t, n) {
             "use strict";
@@ -866,8 +871,8 @@
                 U = n("531674"),
                 L = n("619436"),
                 D = n("339876"),
-                b = n("702741"),
-                x = n("809937"),
+                x = n("702741"),
+                b = n("809937"),
                 y = n("782000"),
                 R = n("45593"),
                 G = n("604887"),
@@ -880,10 +885,10 @@
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, d = t.isGuildStageVoice(), r = (0, u.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, T.default)(t), m = (0, S.useActiveEvent)(t.id), v = (0, g.default)(null == m ? void 0 : m.id, n, t), A = (0, y.default)(t, r), h = (0, p.default)(t), O = (0, _.default)(t), C = (0, E.default)(t), U = (0, M.default)(t), D = (0, L.default)(t), x = (0, I.default)(t), R = (0, P.default)(t, n), G = (0, c.default)({
+                } = e, d = t.isGuildStageVoice(), r = (0, u.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, T.default)(t), m = (0, S.useActiveEvent)(t.id), v = (0, g.default)(null == m ? void 0 : m.id, n, t), A = (0, y.default)(t, r), h = (0, p.default)(t), O = (0, _.default)(t), C = (0, E.default)(t), U = (0, M.default)(t), D = (0, L.default)(t), b = (0, I.default)(t), R = (0, P.default)(t, n), G = (0, c.default)({
                     id: t.id,
                     label: V.default.Messages.COPY_ID_CHANNEL
-                }), F = (0, b.default)(t), k = (0, o.default)(t);
+                }), F = (0, x.default)(t), k = (0, o.default)(t);
                 return (0, a.jsxs)(i.Menu, {
                     navId: "channel-context",
                     onClose: s.closeContextMenu,
@@ -894,7 +899,7 @@
                     }), (0, a.jsxs)(i.MenuGroup, {
                         children: [C, O, h]
                     }), (0, a.jsxs)(i.MenuGroup, {
-                        children: [U, D, x]
+                        children: [U, D, b]
                     }), (0, a.jsx)(i.MenuGroup, {
                         children: k
                     }), (0, a.jsxs)(i.MenuGroup, {
@@ -915,7 +920,7 @@
                 } = e, d = t.isGuildStageVoice(), r = (0, u.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, C.default)(t), _ = (0, T.default)(t), E = (0, S.useActiveEvent)(t.id), F = (0, g.default)(null == E ? void 0 : E.id, n, t), k = (0, y.default)(t, r), w = (0, p.default)(t), j = (0, M.default)(t), H = (0, L.default)(t), B = (0, I.default)(t), Y = (0, O.default)(t, n, r), W = (0, P.default)(t, n), q = (0, R.default)(t, n), K = (0, G.default)(t, n.id), Q = (0, v.default)(t, n), Z = (0, A.default)(t, n), X = (0, h.default)(t), J = (0, c.default)({
                     id: t.id,
                     label: V.default.Messages.COPY_ID_CHANNEL
-                }), z = (0, b.default)(t), $ = (0, o.default)(t), ee = (0, D.default)(t), et = (0, m.default)(t), en = (0, U.default)(t);
+                }), z = (0, x.default)(t), $ = (0, o.default)(t), ee = (0, D.default)(t), et = (0, m.default)(t), en = (0, U.default)(t);
                 return (0, a.jsxs)(i.Menu, {
                     navId: "channel-context",
                     onClose: s.closeContextMenu,
@@ -930,7 +935,7 @@
                     }, "channel-actions"), (0, a.jsxs)(i.MenuGroup, {
                         children: [K, W, q, j, et, z]
                     }, "voice-actions"), (0, a.jsxs)(i.MenuGroup, {
-                        children: [en, H, (0, x.default)(t)]
+                        children: [en, H, (0, b.default)(t)]
                     }, "notifications"), (0, a.jsxs)(i.MenuGroup, {
                         children: [B, Q, Z, X]
                     }, "admin-actions"), (0, a.jsx)(i.MenuGroup, {

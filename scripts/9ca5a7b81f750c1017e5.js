@@ -38,6 +38,7 @@
                 "./detune_user_moved.mp3": "267717",
                 "./discodo.mp3": "904613",
                 "./disconnect.mp3": "17802",
+                "./hang_status_select.mp3": "980401",
                 "./highfive_clap.mp3": "362389",
                 "./highfive_whistle.mp3": "937092",
                 "./human_man.mp3": "649460",
@@ -232,6 +233,10 @@
         17802: function(t, e, s) {
             "use strict";
             t.exports = s.p + "e08aa3fc806a6137b9af.mp3"
+        },
+        980401: function(t, e, s) {
+            "use strict";
+            t.exports = s.p + "d20b9636e9ef7c82b9ec.mp3"
         },
         362389: function(t, e, s) {
             "use strict";

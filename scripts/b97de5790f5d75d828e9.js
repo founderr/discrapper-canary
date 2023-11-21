@@ -15536,27 +15536,33 @@
             "use strict";
             n.r(t), n.d(t, {
                 HangStatusPopout: function() {
-                    return C
+                    return x
                 },
                 default: function() {
-                    return S
+                    return v
                 }
             }), n("222007");
             var a = n("37983"),
                 l = n("884691"),
                 s = n("414456"),
                 i = n.n(s),
-                r = n("469258"),
-                u = n("77078"),
-                o = n("284679"),
-                d = n("233965"),
-                c = n("925749"),
-                f = n("329537"),
-                h = n("843455"),
-                p = n("782340"),
-                m = n("492013");
-            let E = e => {
-                    (0, u.openModalLazy)(async () => {
+                r = n("917351"),
+                u = n.n(r),
+                o = n("927003"),
+                d = n("469258"),
+                c = n("77078"),
+                f = n("943722"),
+                h = n("93393"),
+                p = n("284679"),
+                m = n("233965"),
+                E = n("32346"),
+                C = n("925749"),
+                S = n("329537"),
+                g = n("843455"),
+                _ = n("782340"),
+                I = n("492013");
+            let T = e => {
+                    (0, c.openModalLazy)(async () => {
                         let {
                             default: t
                         } = await n.el("579371").then(n.bind(n, "579371"));
@@ -15566,86 +15572,125 @@
                         })
                     })
                 },
-                C = e => {
+                x = e => {
                     let {
                         currentStatus: t
-                    } = e, n = (0, c.getHangStatusOptions)();
+                    } = e, n = l.useRef(E.default.getRecentCustomStatuses()), s = (0, C.getHangStatusOptions)(), r = e => {
+                        !C.COMING_SOON_STATUSES.includes(e) && (0, m.updateHangStatus)(e, "HangStatusQuickswitcher")
+                    };
                     return (0, a.jsxs)("div", {
-                        className: m.popoutWrapper,
-                        children: [(0, a.jsx)(u.Text, {
-                            className: m.popoutTitle,
-                            color: "header-muted",
-                            variant: "text-xs/bold",
-                            children: p.default.Messages.STATUS_POPOUT_DEFAULTS
-                        }), (0, a.jsx)("div", {
-                            className: m.iconsContainer,
-                            children: Object.entries(n).map(e => {
+                        className: I.popoutWrapper,
+                        children: [(0, a.jsx)("div", {
+                            className: I.iconsContainer,
+                            children: Object.entries(s).map(e => {
                                 let [n, l] = e;
-                                return (0, a.jsx)(u.Clickable, {
+                                return (0, a.jsx)(c.Clickable, {
                                     "aria-label": l.title,
-                                    onClick: () => (0, d.updateHangStatus)(n, "HangStatusQuickswitcher"),
-                                    children: (0, a.jsx)(f.HangStatusIconWidget, {
-                                        className: m.iconWidget,
+                                    "aria-disabled": C.COMING_SOON_STATUSES.includes(n),
+                                    onClick: () => r(n),
+                                    children: (0, a.jsx)(S.HangStatusIconWidget, {
+                                        className: i(I.iconWidget, {
+                                            [I.selectedWidget]: n === (null == t ? void 0 : t.state),
+                                            [I.disabledWidget]: C.COMING_SOON_STATUSES.includes(n)
+                                        }),
                                         name: l.title,
                                         icon: (0, a.jsx)("img", {
                                             src: l.icon,
                                             alt: "",
-                                            className: m.icon
+                                            className: i(I.icon, {
+                                                [I.comingSoonIcon]: C.COMING_SOON_STATUSES.includes(n)
+                                            }),
+                                            style: null != l.size ? {
+                                                width: l.size,
+                                                height: l.size
+                                            } : {}
                                         }),
                                         style: n === (null == t ? void 0 : t.state) ? {
-                                            backgroundColor: (0, o.hexWithOpacity)(l.color, .5),
-                                            border: "1px solid ".concat((0, o.hexWithOpacity)(l.color, .7))
+                                            backgroundColor: null != l.color ? l.color : void 0,
+                                            border: "1px solid ".concat((0, p.hexWithOpacity)(o.default.WHITE, .2))
                                         } : {}
                                     })
                                 }, n)
                             })
-                        }), (0, a.jsx)("div", {
-                            className: m.divider
-                        }), (0, a.jsxs)(u.Clickable, {
-                            className: i(m.popoutOption, m.editOption),
-                            "aria-label": p.default.Messages.STATUS_POPOUT_SET_CUSTOM,
-                            onClick: () => E(h.HangStatusTypes.CUSTOM),
-                            children: [(0, a.jsx)(u.Text, {
+                        }), n.current.length > 0 ? (0, a.jsxs)(a.Fragment, {
+                            children: [(0, a.jsxs)(c.Text, {
+                                className: I.popoutTitle,
+                                color: "header-muted",
+                                variant: "text-xs/bold",
+                                children: [(0, a.jsx)(h.default, {
+                                    className: I.recentIcon
+                                }), " ", _.default.Messages.STATUS_POPOUT_CUSTOM_TITLE]
+                            }), (0, a.jsx)("div", {
+                                className: I.iconsContainer,
+                                children: n.current.map((e, n) => {
+                                    let l = e.status === (null == t ? void 0 : t.details) && u.isEqual(e.emoji, null == t ? void 0 : t.emoji);
+                                    return (0, a.jsx)(c.Clickable, {
+                                        "aria-label": e.status,
+                                        onClick: () => (0, m.updateCustomHangStatus)(e.status, e.emoji, "HangStatusQuickswitcher"),
+                                        children: (0, a.jsx)(S.HangStatusIconWidget, {
+                                            className: i(I.iconWidget, {
+                                                [I.selectedWidget]: l
+                                            }),
+                                            name: e.status,
+                                            icon: null != e.emoji ? (0, a.jsx)(f.ActivityEmoji, {
+                                                className: I.customIcon,
+                                                emoji: e.emoji,
+                                                hideTooltip: !0
+                                            }) : null,
+                                            style: l ? {
+                                                border: "1px solid ".concat((0, p.hexWithOpacity)(o.default.WHITE, .2))
+                                            } : {}
+                                        })
+                                    }, "custom-status-".concat(n))
+                                })
+                            })]
+                        }) : null, (0, a.jsx)("div", {
+                            className: I.divider
+                        }), (0, a.jsxs)(c.Clickable, {
+                            className: i(I.popoutOption, I.editOption),
+                            "aria-label": _.default.Messages.STATUS_POPOUT_SET_CUSTOM,
+                            onClick: () => T(g.HangStatusTypes.CUSTOM),
+                            children: [(0, a.jsx)(c.Text, {
                                 color: "interactive-normal",
                                 variant: "text-xs/medium",
-                                children: p.default.Messages.STATUS_POPOUT_SET_CUSTOM
-                            }), (0, a.jsx)(r.PencilSparkleIcon, {
-                                className: m.optionIcon,
-                                colorClass: m.editIcon
+                                children: _.default.Messages.STATUS_POPOUT_SET_CUSTOM
+                            }), (0, a.jsx)(d.PencilSparkleIcon, {
+                                className: I.optionIcon,
+                                colorClass: I.editIcon
                             })]
-                        }, h.HangStatusTypes.CUSTOM), (0, a.jsx)(u.Clickable, {
-                            className: m.popoutOption,
-                            "aria-label": p.default.Messages.STATUS_POPOUT_SET_CUSTOM,
-                            onClick: d.clearHangStatus,
-                            children: (0, a.jsx)(u.Text, {
+                        }, "custom-status"), (0, a.jsx)(c.Clickable, {
+                            className: i(I.popoutOption, I.deleteOption),
+                            "aria-label": _.default.Messages.STATUS_POPOUT_SET_CUSTOM,
+                            onClick: m.clearHangStatus,
+                            children: (0, a.jsx)(c.Text, {
                                 color: "status-danger",
                                 variant: "text-xs/medium",
-                                children: p.default.Messages.STATUS_POPOUT_CLEAR_STATUS
+                                children: _.default.Messages.STATUS_POPOUT_CLEAR_STATUS
                             })
-                        }, h.HangStatusTypes.CUSTOM)]
+                        }, "clear-status")]
                     })
                 };
-            var S = e => {
+            var v = e => {
                 let {
                     currentStatus: t
                 } = e, [n, s] = l.useState(!1);
                 return (0, a.jsx)("div", {
-                    className: m.statusButtonRegion,
+                    className: I.statusButtonRegion,
                     onMouseEnter: () => s(!0),
                     onMouseLeave: () => s(!1),
-                    children: (0, a.jsx)(u.Popout, {
+                    children: (0, a.jsx)(c.Popout, {
                         position: "right",
-                        renderPopout: () => (0, a.jsx)(C, {
+                        renderPopout: () => (0, a.jsx)(x, {
                             currentStatus: t
                         }),
                         shouldShow: n,
                         onRequestClose: () => s(!1),
                         spacing: 0,
-                        children: e => (0, a.jsx)(f.default, {
+                        children: e => (0, a.jsx)(S.default, {
                             ...e,
-                            className: m.statusWidget,
+                            className: I.statusWidget,
                             hangStatusActivity: t,
-                            name: null == t ? p.default.Messages.STATUS_NONE : null
+                            name: null == t ? _.default.Messages.STATUS_NONE : null
                         })
                     })
                 })
