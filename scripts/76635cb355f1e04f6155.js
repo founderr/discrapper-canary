@@ -485,35 +485,38 @@
                 getEventTimeData: function() {
                     return m
                 },
-                getScheduleFromEventData: function() {
+                getBaseScheduleForRecurrence: function() {
                     return N
                 },
-                getScheduleFromEvent: function() {
+                getScheduleForRecurrenceWithException: function() {
                     return T
                 },
-                areDatesIdentical: function() {
+                getScheduleFromEventData: function() {
                     return p
                 },
-                areSchedulesIdentical: function() {
+                areDatesIdentical: function() {
                     return x
                 },
-                getRRule: function() {
+                areSchedulesIdentical: function() {
                     return I
                 },
-                generateNextRecurrences: function() {
+                getRRule: function() {
                     return R
                 },
-                getNextRecurrenceIdInEvent: function() {
+                generateNextRecurrences: function() {
                     return L
                 },
-                isValidRecurrence: function() {
+                getNextRecurrenceIdInEvent: function() {
                     return A
                 },
-                recurrenceOptionToRecurrenceRule: function() {
+                isValidRecurrence: function() {
                     return D
                 },
-                recurrenceRuleToOption: function() {
+                recurrenceOptionToRecurrenceRule: function() {
                     return M
+                },
+                recurrenceRuleToOption: function() {
+                    return j
                 }
             }), n("222007"), n("424973");
             var l = n("917351"),
@@ -564,23 +567,41 @@
                 }, null != t && (n.endDate = r(t))), n
             }
 
-            function N(e) {
+            function N(e, t) {
+                let n = function(e) {
+                        return C(e.scheduled_start_time, e.scheduled_end_time)
+                    }(t),
+                    l = r(i.default.extractTimestamp(e)),
+                    a = (null == n ? void 0 : n.endDate) != null ? l.clone().add(n.endDate.diff(n.startDate)) : void 0;
+                return {
+                    startDate: l,
+                    endDate: a
+                }
+            }
+
+            function T(e, t) {
+                var n;
+                if (null == t) return e;
+                let l = null !== (n = t.scheduled_end_time) && void 0 !== n ? n : e.endDate;
+                return {
+                    startDate: null != t.scheduled_start_time ? r(t.scheduled_start_time) : e.startDate,
+                    endDate: null != l ? r(l) : void 0
+                }
+            }
+
+            function p(e) {
                 return C(e.scheduledStartTime, e.scheduledEndTime)
             }
 
-            function T(e) {
-                return C(e.scheduled_start_time, e.scheduled_end_time)
-            }
-
-            function p(e, t) {
+            function x(e, t) {
                 return null == e || null == t ? null == e && null == t : e.isSame(t)
             }
 
-            function x(e, t) {
-                return null == e || null == t ? null == e && null == t : p(e.startDate, t.startDate) && p(e.endDate, t.endDate)
+            function I(e, t) {
+                return null == e || null == t ? null == e && null == t : x(e.startDate, t.startDate) && x(e.endDate, t.endDate)
             }
 
-            function I(e) {
+            function R(e) {
                 return new s.RRule({
                     dtstart: new Date(e.start),
                     until: null != e.end ? new Date(e.end) : null,
@@ -594,7 +615,7 @@
                 })
             }
 
-            function R(e, t, n) {
+            function L(e, t, n) {
                 let l = [],
                     a = null == n,
                     r = null != n ? n : new Date,
@@ -609,19 +630,19 @@
                 return l
             }
 
-            function L(e) {
+            function A(e) {
                 let t = function(e) {
                     var t;
                     if (null == e.recurrence_rule) return null;
-                    let n = I(e.recurrence_rule);
-                    return null !== (t = R(1, n, new Date)[0]) && void 0 !== t ? t : null
+                    let n = R(e.recurrence_rule);
+                    return null !== (t = L(1, n, new Date)[0]) && void 0 !== t ? t : null
                 }(e);
                 return null != t ? i.default.fromTimestamp(Math.floor(t.getTime() / u.default.Millis.SECOND) * u.default.Millis.SECOND) : null
             }
 
-            function A(e, t) {
+            function D(e, t) {
                 if (null == t || null == e) return !1;
-                let n = I(e),
+                let n = R(e),
                     l = i.default.extractTimestamp(t),
                     a = new Date(l),
                     r = n.after(a, !0);
@@ -634,7 +655,7 @@
                 return n.weekday - t.weekday > 0 ? g : n.weekday - t.weekday < 0 ? h : E
             }
 
-            function D(e, t) {
+            function M(e, t) {
                 let n = function(e, t) {
                     let n = y(t),
                         l = t.toDate();
@@ -684,9 +705,9 @@
                 }
             }
 
-            function M(e, t) {
+            function j(e, t) {
                 if (null == t) return o.RecurrenceOptions.NONE;
-                let n = I(t);
+                let n = R(t);
                 switch (n.options.freq) {
                     case s.RRule.WEEKLY:
                         return o.RecurrenceOptions.WEEKLY;
@@ -864,8 +885,8 @@
                 let R = null,
                     L = m.startDate,
                     A = r(),
-                    y = r().add(f.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
-                    D = r().add(f.MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days"),
+                    D = r().add(f.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
+                    y = r().add(f.MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days"),
                     M = e => {
                         a({
                             ...m,
@@ -885,7 +906,7 @@
                                 value: m.endDate,
                                 onSelect: M,
                                 minDate: m.startDate,
-                                maxDate: D
+                                maxDate: y
                             })
                         }), (0, l.jsx)(s.FormItem, {
                             title: h.default.Messages.CREATE_EVENT_END_TIME_LABEL,
@@ -946,7 +967,7 @@
                                     })
                                 },
                                 minDate: A,
-                                maxDate: y,
+                                maxDate: D,
                                 disabled: p
                             })
                         }), (0, l.jsx)(s.FormItem, {
@@ -1588,7 +1609,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return D
+                    return y
                 }
             }), n("222007");
             var l = n("37983"),
@@ -1618,7 +1639,7 @@
                 L = n("782340"),
                 A = n("529555");
 
-            function y(e) {
+            function D(e) {
                 let {
                     stageChannelsInGuild: t,
                     channel: n,
@@ -1647,8 +1668,8 @@
                 })
             }
 
-            function D(e) {
-                var t, n, r, g, S, _, D, M;
+            function y(e) {
+                var t, n, r, g, S, _, y, M;
                 let {
                     channel: j,
                     guild: O,
@@ -1656,8 +1677,8 @@
                     error: k,
                     loading: G,
                     onSave: P,
-                    onEventSave: V,
-                    onClose: B,
+                    onEventSave: B,
+                    onClose: V,
                     onSelectChannel: U,
                     isEvent: b = !1,
                     defaultOptions: H,
@@ -1684,7 +1705,7 @@
                     };
                     if (q) {
                         if (!Q) return;
-                        null == V || V({
+                        null == B || B({
                             ...t,
                             schedule: X,
                             description: z,
@@ -1697,13 +1718,13 @@
                 let {
                     color: ev,
                     text: em
-                } = (D = F, M = ei, q ? {
+                } = (y = F, M = ei, q ? {
                     color: u.Button.Colors.BRAND,
                     text: L.default.Messages.SCHEDULE_EVENT
-                } : M === I.GuildScheduledEventPrivacyLevel.PUBLIC && (null == D ? void 0 : D.privacy_level) !== I.GuildScheduledEventPrivacyLevel.PUBLIC ? {
+                } : M === I.GuildScheduledEventPrivacyLevel.PUBLIC && (null == y ? void 0 : y.privacy_level) !== I.GuildScheduledEventPrivacyLevel.PUBLIC ? {
                     color: u.Button.Colors.BRAND,
                     text: L.default.Messages.CONTINUE
-                } : null == D ? {
+                } : null == y ? {
                     color: u.Button.Colors.GREEN,
                     text: L.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_BUTTON
                 } : {
@@ -1749,7 +1770,7 @@
                                     className: A.warning,
                                     children: k.getAnyErrorMessage()
                                 }) : null]
-                            }), eg && eS ? (0, l.jsx)(y, {
+                            }), eg && eS ? (0, l.jsx)(D, {
                                 stageChannelsInGuild: eh,
                                 channel: j,
                                 onSelectChannel: U
@@ -1809,7 +1830,7 @@
                         }), (0, l.jsx)(u.Button, {
                             color: u.Button.Colors.PRIMARY,
                             className: A.cancelButton,
-                            onClick: B,
+                            onClick: V,
                             children: L.default.Messages.CANCEL
                         })]
                     })]
@@ -1906,8 +1927,8 @@
                     readySlide: R,
                     handleSlideReady: L,
                     savedOptions: A,
-                    handleSettingsSave: y,
-                    handleDelayedSave: D
+                    handleSettingsSave: D,
+                    handleDelayedSave: y
                 } = (0, g.default)({
                     stageInstance: C,
                     defaultStep: S.StartStageSteps.STAGE_CHANNEL_SETTINGS,
@@ -1937,7 +1958,7 @@
                                     onClose: n,
                                     loading: N,
                                     error: T,
-                                    onSave: y,
+                                    onSave: D,
                                     defaultOptions: A,
                                     isSlideReady: R === S.StartStageSteps.STAGE_CHANNEL_SETTINGS
                                 })
@@ -1952,7 +1973,7 @@
                                     channel: t,
                                     stageData: A,
                                     loading: N,
-                                    onNext: D,
+                                    onNext: y,
                                     onCancel: n,
                                     onBack: () => I(S.StartStageSteps.STAGE_CHANNEL_SETTINGS)
                                 })

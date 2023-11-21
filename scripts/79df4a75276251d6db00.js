@@ -860,8 +860,8 @@
                 S = n("534222"),
                 g = n("601131"),
                 N = n("834052"),
-                v = n("715243"),
-                T = n("458574"),
+                T = n("715243"),
+                v = n("458574"),
                 A = n("963150"),
                 h = n("308798"),
                 I = n("47006"),
@@ -885,7 +885,7 @@
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, d = t.isGuildStageVoice(), r = (0, u.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, T.default)(t), m = (0, S.useActiveEvent)(t.id), v = (0, g.default)(null == m ? void 0 : m.id, n, t), A = (0, y.default)(t, r), h = (0, p.default)(t), O = (0, _.default)(t), C = (0, E.default)(t), U = (0, M.default)(t), D = (0, L.default)(t), b = (0, I.default)(t), R = (0, P.default)(t, n), G = (0, c.default)({
+                } = e, d = t.isGuildStageVoice(), r = (0, u.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, v.default)(t), m = (0, S.useActiveEvent)(t.id), T = (0, g.default)(null == m ? void 0 : m.id, n, t), A = (0, y.default)(t, r), h = (0, p.default)(t), O = (0, _.default)(t), C = (0, E.default)(t), U = (0, M.default)(t), D = (0, L.default)(t), b = (0, I.default)(t), R = (0, P.default)(t, n), G = (0, c.default)({
                     id: t.id,
                     label: V.default.Messages.COPY_ID_CHANNEL
                 }), F = (0, x.default)(t), k = (0, o.default)(t);
@@ -895,7 +895,7 @@
                     "aria-label": V.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                     onSelect: l,
                     children: [(0, a.jsx)(i.MenuGroup, {
-                        children: null != m ? v : A
+                        children: null != m ? T : A
                     }), (0, a.jsxs)(i.MenuGroup, {
                         children: [C, O, h]
                     }), (0, a.jsxs)(i.MenuGroup, {
@@ -917,7 +917,7 @@
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, d = t.isGuildStageVoice(), r = (0, u.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, C.default)(t), _ = (0, T.default)(t), E = (0, S.useActiveEvent)(t.id), F = (0, g.default)(null == E ? void 0 : E.id, n, t), k = (0, y.default)(t, r), w = (0, p.default)(t), j = (0, M.default)(t), H = (0, L.default)(t), B = (0, I.default)(t), Y = (0, O.default)(t, n, r), W = (0, P.default)(t, n), q = (0, R.default)(t, n), K = (0, G.default)(t, n.id), Q = (0, v.default)(t, n), Z = (0, A.default)(t, n), X = (0, h.default)(t), J = (0, c.default)({
+                } = e, d = t.isGuildStageVoice(), r = (0, u.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, C.default)(t), _ = (0, v.default)(t), E = (0, S.useActiveEvent)(t.id), F = (0, g.default)(null == E ? void 0 : E.id, n, t), k = (0, y.default)(t, r), w = (0, p.default)(t), j = (0, M.default)(t), H = (0, L.default)(t), B = (0, I.default)(t), Y = (0, O.default)(t, n, r), W = (0, P.default)(t, n), q = (0, R.default)(t, n), K = (0, G.default)(t, n.id), Q = (0, T.default)(t, n), Z = (0, A.default)(t, n), X = (0, h.default)(t), J = (0, c.default)({
                     id: t.id,
                     label: V.default.Messages.COPY_ID_CHANNEL
                 }), z = (0, x.default)(t), $ = (0, o.default)(t), ee = (0, D.default)(t), et = (0, m.default)(t), en = (0, U.default)(t);
@@ -1042,27 +1042,27 @@
                     })
                 }
                 let N = E.default.Messages.MUTE_CHANNEL_GENERIC,
-                    v = E.default.Messages.UNMUTE_CHANNEL_GENERIC;
+                    T = E.default.Messages.UNMUTE_CHANNEL_GENERIC;
                 switch (e.type) {
                     case p.ChannelTypes.GUILD_CATEGORY:
-                        N = E.default.Messages.MUTE_CATEGORY, v = E.default.Messages.UNMUTE_CATEGORY;
+                        N = E.default.Messages.MUTE_CATEGORY, T = E.default.Messages.UNMUTE_CATEGORY;
                         break;
                     case p.ChannelTypes.GROUP_DM:
-                        N = E.default.Messages.MUTE_CONVERSATION, v = E.default.Messages.UNMUTE_CONVERSATION;
+                        N = E.default.Messages.MUTE_CONVERSATION, T = E.default.Messages.UNMUTE_CONVERSATION;
                         break;
                     case p.ChannelTypes.DM:
                         N = E.default.Messages.MUTE_CHANNEL.format({
                             name: _
-                        }), v = E.default.Messages.UNMUTE_CHANNEL.format({
+                        }), T = E.default.Messages.UNMUTE_CHANNEL.format({
                             name: _
                         });
                         break;
                     default:
-                        N = E.default.Messages.MUTE_CHANNEL_GENERIC, v = E.default.Messages.UNMUTE_CHANNEL_GENERIC
+                        N = E.default.Messages.MUTE_CHANNEL_GENERIC, T = E.default.Messages.UNMUTE_CHANNEL_GENERIC
                 }
                 return n ? (0, a.jsx)(l.MenuItem, {
                     id: "unmute-channel",
-                    label: v,
+                    label: T,
                     subtext: i,
                     action: () => g(!1)
                 }) : (0, a.jsx)(l.MenuItem, {
@@ -1542,44 +1542,46 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return o
                 },
                 getEventSchedule: function() {
-                    return c
+                    return r
                 }
             });
             var a = n("627445"),
                 u = n.n(a),
                 i = n("446674"),
-                s = n("299039"),
-                l = n("398604"),
-                d = n("397680"),
-                o = n("822516");
+                s = n("398604"),
+                l = n("397680"),
+                d = n("822516");
 
-            function r(e, t, n) {
+            function o(e, t, n) {
                 var a;
-                let s = null !== (a = (0, i.useStateFromStores)([l.default], () => l.default.getGuildScheduledEvent(e))) && void 0 !== a ? a : n;
-                u(null != s, "Event must be defined"), t = null != t ? t : (0, o.getNextRecurrenceIdInEvent)(s);
-                let r = (0, d.default)(t, e);
-                return f(s, r, t)
+                let o = null !== (a = (0, i.useStateFromStores)([s.default], () => s.default.getGuildScheduledEvent(e))) && void 0 !== a ? a : n;
+                u(null != o, "Event must be defined"), t = null != t ? t : (0, d.getNextRecurrenceIdInEvent)(o);
+                let r = (0, l.default)(t, e);
+                return c(o, r, t)
             }
 
-            function c(e, t) {
-                let n = (0, d.getEventException)(t, e.id);
-                return f(e, n, t)
+            function r(e, t) {
+                let n = (0, l.getEventException)(t, e.id);
+                return c(e, n, t)
             }
 
-            function f(e, t, n) {
-                let a = null != e.recurrence_rule ? (0, o.getRRule)(e.recurrence_rule) : null;
+            function c(e, t, n) {
+                let a = null != e.recurrence_rule ? (0, d.getRRule)(e.recurrence_rule) : null;
                 if (null == a || null == n) return {
                     startTime: new Date(e.scheduled_start_time),
                     endTime: null != e.scheduled_end_time ? new Date(e.scheduled_end_time) : null
                 };
-                let u = new Date((null == t ? void 0 : t.scheduled_start_time) == null ? s.default.extractTimestamp(n) : t.scheduled_start_time),
-                    i = (null == t ? void 0 : t.scheduled_end_time) == null ? null : new Date(t.scheduled_end_time);
+                let u = (0, d.getBaseScheduleForRecurrence)(n, e),
+                    {
+                        startDate: i,
+                        endDate: s
+                    } = (0, d.getScheduleForRecurrenceWithException)(u, t);
                 return {
-                    startTime: u,
-                    endTime: i
+                    startTime: i.toDate(),
+                    endTime: null == s ? void 0 : s.toDate()
                 }
             }
         },
@@ -1851,10 +1853,10 @@
                     return N
                 },
                 audienceAckRequestToSpeak: function() {
-                    return v
+                    return T
                 },
                 moveSelfToAudience: function() {
-                    return T
+                    return v
                 },
                 setUserSuppress: function() {
                     return A
@@ -1917,7 +1919,7 @@
                 })
             }
 
-            function v(e, t) {
+            function T(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     a = null == e ? void 0 : e.getGuildId();
                 u(null != a, "This channel cannot be guildless.");
@@ -1938,7 +1940,7 @@
                 })
             }
 
-            function T(e) {
+            function v(e) {
                 let t = null == e ? void 0 : e.getGuildId();
                 return u(null != t, "This channel cannot be guildless."), s.default.patch({
                     url: S.Endpoints.UPDATE_VOICE_STATE(t),
@@ -1994,7 +1996,7 @@
                 let u = r.default.getVoiceChannelId() === e.id;
                 !u && (0, p.connectToStage)(e);
                 let i = await (0, E.startStageInstance)(e.id, t, n, a);
-                return v(e, !1, !0), i
+                return T(e, !1, !0), i
             }
             async function O(e, t, n) {
                 if ("" === t) return;
