@@ -19485,7 +19485,7 @@
                     return i
                 },
                 default: function() {
-                    return v
+                    return y
                 }
             }), n("222007"), n("424973");
             var i, a, l = n("693566"),
@@ -19646,7 +19646,7 @@
                 }
             }
             R.displayName = "ReferencedMessageStore";
-            let y = new R(u.default, {
+            var y = new R(u.default, {
                 CACHE_LOADED: function(e) {
                     let {
                         messages: t
@@ -19743,8 +19743,7 @@
                 },
                 CONNECTION_OPEN: N,
                 LOGOUT: N
-            });
-            var v = y
+            })
         },
         925880: function(e, t, n) {
             "use strict";

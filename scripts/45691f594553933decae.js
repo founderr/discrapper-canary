@@ -2357,7 +2357,7 @@
             let r;
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return c
                 }
             }), n("222007"), n("424973");
             var i = n("446674"),
@@ -2388,7 +2388,7 @@
                 }
             }
             u.displayName = "CommandsMigrationStore", u.persistKey = "CommandsMigrationStore";
-            let c = new u(s.default, {
+            var c = new u(s.default, {
                 COMMANDS_MIGRATION_UPDATE_SUCCESS: function(e) {
                     let {
                         guildId: t,
@@ -2416,8 +2416,7 @@
                     } = e;
                     o.delete(t)
                 }
-            });
-            var d = c
+            })
         },
         676143: function(e, t, n) {
             "use strict";
