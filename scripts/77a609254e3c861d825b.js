@@ -1871,10 +1871,20 @@
                 l = n("448993");
             n("845962");
             var s = n("49111");
-            let a = e => ({
-                    id: e.id,
-                    config: e
-                }),
+            let a = e => {
+                    let {
+                        sku_id: t,
+                        ...n
+                    } = e;
+                    return {
+                        id: n.id,
+                        skuId: t,
+                        config: {
+                            ...n,
+                            skuId: t
+                        }
+                    }
+                },
                 u = async () => {
                     r.default.dispatch({
                         type: "USER_PROFILE_EFFECTS_FETCH"

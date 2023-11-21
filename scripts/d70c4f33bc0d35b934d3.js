@@ -24837,9 +24837,10 @@
                             useDefaultClientTheme: !0,
                             children: [eS.shouldShow && (0, a.jsx)(M.default, {
                                 user: X,
+                                displayProfile: q,
                                 isInSidebar: !0,
                                 ...eS
-                            }, X.id), (0, a.jsxs)(d.ScrollerNone, {
+                            }), (0, a.jsxs)(d.ScrollerNone, {
                                 children: [(0, a.jsx)(V.default, {
                                     user: X,
                                     displayProfile: q,

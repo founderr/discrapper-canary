@@ -1729,7 +1729,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "247911"
+                        buildNumber: "247922"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -34524,10 +34524,20 @@
                 l = n("448993");
             n("845962");
             var i = n("49111");
-            let r = e => ({
-                    id: e.id,
-                    config: e
-                }),
+            let r = e => {
+                    let {
+                        sku_id: t,
+                        ...n
+                    } = e;
+                    return {
+                        id: n.id,
+                        skuId: t,
+                        config: {
+                            ...n,
+                            skuId: t
+                        }
+                    }
+                },
                 o = async () => {
                     s.default.dispatch({
                         type: "USER_PROFILE_EFFECTS_FETCH"
