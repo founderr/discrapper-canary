@@ -26091,19 +26091,15 @@
                     else if (l || A !== J.ParticipantTypes.STREAM || !g || G || x) {
                         if (z) {
                             let e;
-                            p ? e = o.HeadphonesDenyIcon : s ? e = c.MicrophoneDenyIcon : n ? e = d.HeadphonesSlashIcon : l ? e = c.MicrophoneDenyIcon : t && (e = f.MicrophoneSlashIcon), F = null != e && (0, a.jsx)("div", {
-                                className: ee.status,
-                                children: (0, a.jsx)(e, {
-                                    color: u.default.colors.WHITE
-                                })
-                            })
+                            p ? e = o.HeadphonesDenyIcon : s ? e = c.MicrophoneDenyIcon : n ? e = d.HeadphonesSlashIcon : l ? e = c.MicrophoneDenyIcon : t && (e = f.MicrophoneSlashIcon), F = null != e ? (0, a.jsx)(e, {
+                                color: u.default.colors.WHITE
+                            }) : null
                         } else if (n || t || l) {
                             let e = n ? b.default : P.default;
                             F = (0, a.jsx)(e, {
                                 foreground: i({
                                     [ee.localMuteStrikethrough]: l && !n
-                                }),
-                                className: ee.status
+                                })
                             })
                         }
                     } else F = (0, a.jsx)(h.Tooltip, {
@@ -26125,7 +26121,6 @@
                     })
                 }
                 return _ && M.default.supports(Q.Features.VIDEO) || !g ? _ && g && I && !Y && (k = (0, a.jsx)(y.default, {
-                    className: ee.status,
                     foreground: ee.localMuteStrikethrough
                 })) : k = (0, a.jsx)(O.default, {
                     className: ee.status
@@ -26151,12 +26146,14 @@
                         className: i(ee.overlayTop, {
                             [ee.small]: S < 195
                         }),
-                        children: Y || T === X.VideoToggleState.AUTO_PROBING ? m ? (0, a.jsx)(y.default, {
-                            className: ee.status
+                        children: Y || T === X.VideoToggleState.AUTO_PROBING ? m ? (0, a.jsx)("div", {
+                            className: ee.status,
+                            children: (0, a.jsx)(y.default, {})
                         }) : (0, a.jsxs)("div", {
                             className: i(ee.overlayTitle, ee.videoDisabledTitle),
-                            children: [(0, a.jsx)(y.default, {
-                                className: ee.status
+                            children: [(0, a.jsx)("div", {
+                                className: ee.status,
+                                children: (0, a.jsx)(y.default, {})
                             }), (0, a.jsx)(h.Text, {
                                 variant: "text-sm/normal",
                                 className: ee.overlayTitleText,
@@ -26189,7 +26186,13 @@
                             }) : null]
                         }), (0, a.jsxs)("div", {
                             className: ee.statusContainer,
-                            children: [k, F, H]
+                            children: [null != k && (0, a.jsx)("div", {
+                                className: ee.status,
+                                children: k
+                            }), null != F && (0, a.jsx)("div", {
+                                className: ee.status,
+                                children: F
+                            }), H]
                         })]
                     })]
                 })
