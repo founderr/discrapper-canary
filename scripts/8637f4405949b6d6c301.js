@@ -6034,7 +6034,8 @@
             });
             var a = (0, r("237436").defineColorTokens)({
                 "polls-victor-border": {
-                    name: "text-warning"
+                    dark: "yellow.300",
+                    light: "yellow.300"
                 },
                 "polls-victor-fill": {
                     dark: "yellow.200",
@@ -6045,7 +6046,8 @@
                     light: "primary.600"
                 },
                 "polls-voted-border": {
-                    name: "text-positive"
+                    dark: "green.330",
+                    light: "green.330"
                 },
                 "polls-voted-fill": {
                     dark: "green.160",
