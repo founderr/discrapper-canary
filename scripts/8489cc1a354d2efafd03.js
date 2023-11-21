@@ -1729,7 +1729,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "247804"
+                        buildNumber: "247807"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -12238,7 +12238,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return m
                 }
             }), n("222007");
             var a = n("37983"),
@@ -12256,36 +12256,32 @@
                 C = n("491232"),
                 h = n("235898"),
                 I = n("806224"),
-                T = n("8977"),
-                S = n("994428"),
-                A = n("782340"),
-                N = n("55395");
-            let m = () => [{
-                    name: A.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
+                T = n("782340"),
+                S = n("55395");
+            let A = () => [{
+                    name: T.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE,
                     value: i.CollectiblesItemType.PROFILE_EFFECT
                 }, {
-                    name: A.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER,
+                    name: T.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER,
                     value: i.CollectiblesItemType.AVATAR_DECORATION
                 }],
-                p = d.default.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL;
+                N = d.default.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL;
 
-            function g(e) {
+            function m(e) {
                 let {
                     height: t,
                     onClose: n
                 } = e, {
-                    dismiss: d
-                } = (0, T.default)(), {
-                    categories: g,
-                    isFetching: R
+                    categories: d,
+                    isFetching: m
                 } = (0, h.useMaybeFetchCollectiblesCategories)(), {
-                    setPendingAvatarDecoration: O
+                    setPendingAvatarDecoration: p
                 } = (0, E.default)({
                     isTryItOut: !0
-                }), L = s.useCallback(() => {
-                    d(S.ContentDismissActionType.DISMISS), n()
-                }, [d, n]), v = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), M = (0, l.useSpring)({
-                    immediate: v,
+                }), g = s.useCallback(() => {
+                    n()
+                }, [n]), R = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), O = (0, l.useSpring)({
+                    immediate: R,
                     from: {
                         transform: "translate3d(-110%, 0, 0)",
                         height: t
@@ -12299,68 +12295,68 @@
                         stiffness: 100,
                         damping: 15
                     }
-                }), P = s.useMemo(() => (0, C.getAvatarDecorationsFromCategories)(g), [g]), D = s.useMemo(() => (0, C.getProfileEffectsFromCategories)(g), [g]), [y, x] = s.useState(i.CollectiblesItemType.PROFILE_EFFECT), [U, b] = s.useState();
+                }), L = s.useMemo(() => (0, C.getAvatarDecorationsFromCategories)(d), [d]), v = s.useMemo(() => (0, C.getProfileEffectsFromCategories)(d), [d]), [M, P] = s.useState(i.CollectiblesItemType.PROFILE_EFFECT), [D, y] = s.useState();
                 s.useEffect(() => () => {
-                    O(null)
-                }, [O]);
+                    p(null)
+                }, [p]);
                 let {
-                    analyticsLocations: G
-                } = (0, c.default)(p), j = s.useCallback(() => {
-                    d(S.ContentDismissActionType.PRIMARY), n(), (0, _.openCollectiblesShop)({
-                        analyticsLocations: G,
-                        analyticsSource: p,
-                        initialItem: null != U ? U : void 0
+                    analyticsLocations: x
+                } = (0, c.default)(N), U = s.useCallback(() => {
+                    n(), (0, _.openCollectiblesShop)({
+                        analyticsLocations: x,
+                        analyticsSource: N,
+                        initialItem: null != D ? D : void 0
                     })
-                }, [d, n, G, U]);
+                }, [n, x, D]);
                 return null == t ? null : (0, a.jsxs)(l.animated.div, {
-                    className: N.container,
-                    style: M,
+                    className: S.container,
+                    style: O,
                     children: [(0, a.jsxs)("div", {
-                        className: N.content,
+                        className: S.content,
                         children: [(0, a.jsx)(o.HeadingLevel, {
                             component: (0, a.jsxs)(o.Heading, {
                                 variant: "heading-lg/semibold",
-                                className: N.title,
-                                children: [A.default.Messages.COLLECTIBLES_ACCOUNT_SWITCHER_POPOUT_HEADER, (0, a.jsx)(o.Clickable, {
-                                    className: N.close,
-                                    onClick: L,
+                                className: S.title,
+                                children: [T.default.Messages.COLLECTIBLES_ACCOUNT_SWITCHER_POPOUT_HEADER, (0, a.jsx)(o.Clickable, {
+                                    className: S.close,
+                                    onClick: g,
                                     children: (0, a.jsx)(f.default, {
-                                        className: N.closeIcon
+                                        className: S.closeIcon
                                     })
                                 })]
                             }),
                             children: (0, a.jsx)(o.Text, {
                                 variant: "text-sm/normal",
-                                children: A.default.Messages.COLLECTIBLES_ACCOUNT_SWITCHER_POPOUT_SUBHEADER
+                                children: T.default.Messages.COLLECTIBLES_ACCOUNT_SWITCHER_POPOUT_SUBHEADER
                             })
                         }), (0, a.jsx)(o.SegmentedControl, {
-                            options: m(),
-                            value: y,
+                            options: A(),
+                            value: M,
                             onChange: e => {
                                 let {
                                     value: t
                                 } = e;
-                                return x(t)
+                                return P(t)
                             },
-                            className: N.segmentControl,
-                            optionClassName: N.segmentControlOption,
+                            className: S.segmentControl,
+                            optionClassName: S.segmentControlOption,
                             look: "pill"
                         })]
                     }), (0, a.jsx)(I.CollectiblesItemsList, {
-                        items: y === i.CollectiblesItemType.PROFILE_EFFECT ? D : P,
-                        isFetching: R,
-                        selectedItem: U,
-                        setSelectedItem: b,
-                        containerClassName: N.listContainer,
+                        items: M === i.CollectiblesItemType.PROFILE_EFFECT ? v : L,
+                        isFetching: m,
+                        selectedItem: D,
+                        setSelectedItem: y,
+                        containerClassName: S.listContainer,
                         isScrollable: !0
                     }), (0, a.jsx)("div", {
-                        className: N.ctaContainer,
+                        className: S.ctaContainer,
                         children: (0, a.jsx)(o.Button, {
-                            className: N.cta,
+                            className: S.cta,
                             size: o.Button.Sizes.LARGE,
                             color: o.Button.Colors.BRAND_NEW,
-                            onClick: j,
-                            children: A.default.Messages.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL_CTA
+                            onClick: U,
+                            children: T.default.Messages.COLLECTIBLES_ACCOUNT_SWITCH_UPSELL_CTA
                         })
                     })]
                 })
@@ -12634,24 +12630,44 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return E
                 }
-            }), n("222007");
-            var a = n("875212"),
-                s = n("509802"),
-                l = () => {
-                    let e = "useShouldShowAccountProfilePopoutCollectiblesUpsell";
-                    (0, a.useTriggerDebuggingAA)({
+            }), n("424973"), n("222007");
+            var a = n("884691"),
+                s = n("446674"),
+                l = n("151426"),
+                i = n("875212"),
+                r = n("509802"),
+                o = n("697218"),
+                u = n("719923"),
+                d = n("805172"),
+                c = n("994428"),
+                E = () => {
+                    let e = "useShouldShowAccountProfilePopoutCollectiblesUpsell",
+                        t = (0, s.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
+                        n = u.default.canUseCollectibles(t),
+                        {
+                            marketingEnabled: E
+                        } = (0, d.default)({
+                            location: "AccountProfilePopoutCollectiblesUpsell"
+                        });
+                    (0, i.useTriggerDebuggingAA)({
                         location: e + " auto on",
                         autoTrackExposure: !0
-                    }), (0, a.useTriggerDebuggingAA)({
+                    }), (0, i.useTriggerDebuggingAA)({
                         location: e + " auto off",
                         autoTrackExposure: !1
                     });
-                    let [t, n] = (0, s.useDismissibleContentGroup)([], void 0, !0);
+                    let f = a.useMemo(() => {
+                            let e = [];
+                            return !n && E && e.push(l.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_ACCOUNT_POPOUT_UPSELL), e
+                        }, [E, n]),
+                        [_, C] = (0, r.useDismissibleContentGroup)(f, void 0, !0);
                     return {
-                        shouldShow: !1,
-                        dismiss: n
+                        shouldShow: _ === l.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_ACCOUNT_POPOUT_UPSELL,
+                        dismissCollectiblesUpsell: () => {
+                            C(c.ContentDismissActionType.USER_DISMISS)
+                        }
                     }
                 }
         },
@@ -23135,13 +23151,14 @@
                         children: [H(w.StatusTypes.ONLINE, t, n), (0, a.jsx)(c.MenuSeparator, {}, "menu-separator-statuses"), H(w.StatusTypes.IDLE, t, n), H(w.StatusTypes.DND, t, n, F.default.Messages.STATUS_DND_HELP), H(w.StatusTypes.INVISIBLE, t, n, F.default.Messages.STATUS_INVISIBLE_HELPER)]
                     })),
                     {
-                        shouldShow: Z
+                        shouldShow: Z,
+                        dismissCollectiblesUpsell: X
                     } = (0, A.default)(),
                     {
-                        ref: X,
-                        height: J
+                        ref: J,
+                        height: $
                     } = (0, _.default)(),
-                    $ = (0, C.default)(X);
+                    ee = (0, C.default)(J);
                 s.useEffect(() => {
                     x.default.track(w.AnalyticEvents.OPEN_POPOUT, {
                         type: "User Status Menu",
@@ -23155,9 +23172,9 @@
                         has_profile_effect: (null == Y ? void 0 : Y.profileEffectID) != null
                     })
                 }, []);
-                let ee = (0, G.useMultiAccountMenuItems)(),
-                    et = (0, N.useCustomStatusMenuItem)(null != r ? r : void 0, B.menuItemFocused),
-                    en = (0, m.default)({
+                let et = (0, G.useMultiAccountMenuItems)(),
+                    en = (0, N.useCustomStatusMenuItem)(null != r ? r : void 0, B.menuItemFocused),
+                    ea = (0, m.default)({
                         id: l.id,
                         label: F.default.Messages.COPY_ID_USER,
                         showIconFirst: !0
@@ -23165,10 +23182,12 @@
                 return (0, a.jsx)(V, {
                     children: (0, a.jsxs)("div", {
                         className: B.popoutContainer,
-                        ref: X,
+                        ref: J,
                         children: [Z && (0, a.jsx)(S.default, {
-                            height: J,
-                            onClose: v
+                            height: $,
+                            onClose: () => {
+                                v(), X()
+                            }
                         }), (0, a.jsxs)(g.default, {
                             user: l,
                             profileType: k.UserProfileTypes.POPOUT,
@@ -23180,7 +23199,7 @@
                                 isStreaming: (0, h.default)(W),
                                 status: z,
                                 disableUserProfileLink: __OVERLAY__,
-                                isHovering: $,
+                                isHovering: ee,
                                 showPremiumBadgeUpsell: !1
                             }), (0, a.jsxs)(g.default.Inner, {
                                 children: [(0, a.jsx)(R.default, {
@@ -23242,7 +23261,7 @@
                                                 })
                                             },
                                             children: u.isMobile ? void 0 : Q
-                                        }, "status-picker"), et]
+                                        }, "status-picker"), en]
                                     }), (0, a.jsx)(c.MenuGroup, {
                                         children: (0, a.jsx)(c.MenuItem, {
                                             id: "switch-account",
@@ -23252,10 +23271,10 @@
                                             icon: y.default,
                                             showIconFirst: !0,
                                             action: j.default,
-                                            children: ee
+                                            children: et
                                         }, "switch-account")
                                     }), (0, a.jsx)(c.MenuGroup, {
-                                        children: en
+                                        children: ea
                                     })]
                                 })]
                             })]
