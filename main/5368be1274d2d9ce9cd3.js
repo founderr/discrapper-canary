@@ -21948,6 +21948,9 @@
                 LegacyPricingCountries: function() {
                     return eF
                 },
+                LegacySeasonalGiftStyles: function() {
+                    return eB
+                },
                 SeasonalGiftStyles2023: function() {
                     return eH
                 },
