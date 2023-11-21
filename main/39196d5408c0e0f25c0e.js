@@ -2283,17 +2283,27 @@
                         null === (n = this._connection) || void 0 === n || n.setBandwidthEstimationExperiments(t)
                     }
                 }
+                _trackSecureFrameTransition(e, t) {
+                    y.default.track(W.AnalyticEvents.SECURE_FRAMES_TRANSITION, {
+                        ...this._getAnalyticsProperties(),
+                        media_session_id: this.getMediaSessionId(),
+                        parent_media_session_id: this.parentMediaSessionId,
+                        sender_user_id: this.userId,
+                        transition_id: e,
+                        protocol_version: t
+                    })
+                }
                 _handleSecureFramesInit(e) {
                     var t;
                     e > 0 && this.logger.info("Secure frames init with protocol version: ".concat(e)), null === (t = this._connection) || void 0 === t || t.prepareSecureFramesTransition(0, e, () => {
-                        var e;
-                        null === (e = this._connection) || void 0 === e || e.executeSecureFramesTransition(0)
+                        var t;
+                        e > 0 && this._trackSecureFrameTransition(0, e), null === (t = this._connection) || void 0 === t || t.executeSecureFramesTransition(0)
                     })
                 }
                 _handleSecureFramesPrepareTransition(e, t, n) {
                     var i;
                     this.logger.info("Preparing secure frames transition: ".concat(t, ", protocol version: ").concat(n)), null === (i = this._connection) || void 0 === i || i.prepareSecureFramesTransition(t, n, () => {
-                        this.logger.info("Sending secure frames ready for transition: ".concat(t)), e.secureFramesReadyForTransition(t)
+                        this.logger.info("Sending secure frames ready for transition: ".concat(t)), e.secureFramesReadyForTransition(t), this._trackSecureFrameTransition(t, n)
                     })
                 }
                 _handleSecureFramesExecuteTransition(e) {
@@ -14558,7 +14568,7 @@
                         var i;
                         let c = {
                                 environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                                build_number: "247598"
+                                build_number: "247602"
                             },
                             h = l.default.getCurrentUser();
                         null != h && (c.user_id = h.id, c.user_name = h.tag, null != h.email && (c.email = h.email));

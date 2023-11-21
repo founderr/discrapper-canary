@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["8011"], {
+    ["57621"], {
         767590: function(e, t, n) {
             var a = n("890022"),
                 l = n("566040"),
@@ -26,7 +26,7 @@
             "use strict";
             e.exports = function(e) {
                 var t, n;
-                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), C.test(e) ? e = e.substr(0, e.length - 2) : S.test(e) && (e = e.substr(0, e.length - 1)), (n = I.exec(e)) ? s.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = m.exec(e)) && c.test(n[1]) && (e = n[1], x.test(e) ? e += "e" : b.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = E.exec(e)) && c.test(n[1]) && (e = n[1] + "i"), (n = v.exec(e)) && s.test(n[1]) && (e = n[1] + a[n[2]]), (n = T.exec(e)) && s.test(n[1]) && (e = n[1] + l[n[2]]), (n = _.exec(e)) ? o.test(n[1]) && (e = n[1]) : (n = g.exec(e)) && o.test(n[1]) && (e = n[1]), (n = h.exec(e)) && (o.test(n[1]) || d.test(n[1]) && !f.test(n[1])) && (e = n[1]), p.test(e) && o.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
+                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), v.test(e) ? e = e.substr(0, e.length - 2) : I.test(e) && (e = e.substr(0, e.length - 1)), (n = S.exec(e)) ? s.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = m.exec(e)) && c.test(n[1]) && (e = n[1], g.test(e) ? e += "e" : x.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = E.exec(e)) && c.test(n[1]) && (e = n[1] + "i"), (n = T.exec(e)) && s.test(n[1]) && (e = n[1] + a[n[2]]), (n = C.exec(e)) && s.test(n[1]) && (e = n[1] + l[n[2]]), (n = y.exec(e)) ? o.test(n[1]) && (e = n[1]) : (n = _.exec(e)) && o.test(n[1]) && (e = n[1]), (n = h.exec(e)) && (o.test(n[1]) || d.test(n[1]) && !f.test(n[1])) && (e = n[1]), p.test(e) && o.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
             };
             var a = {
                     ational: "ate",
@@ -71,16 +71,16 @@
                 p = /ll$/,
                 h = /^(.+?)e$/,
                 E = /^(.+?)y$/,
-                g = /^(.+?(s|t))(ion)$/,
+                _ = /^(.+?(s|t))(ion)$/,
                 m = /^(.+?)(ed|ing)$/,
-                x = /(at|bl|iz)$/,
-                I = /^(.+?)eed$/,
-                S = /^.+?[^s]s$/,
-                C = /^.+?(ss|i)es$/,
-                b = /([^aeiouylsz])\1$/,
-                v = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
-                T = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
-                _ = RegExp("^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$")
+                g = /(at|bl|iz)$/,
+                S = /^(.+?)eed$/,
+                I = /^.+?[^s]s$/,
+                v = /^.+?(ss|i)es$/,
+                x = /([^aeiouylsz])\1$/,
+                T = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
+                C = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
+                y = RegExp("^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$")
         },
         949041: function(e, t, n) {
             "use strict";
@@ -122,6 +122,32 @@
                     }
                 }
             }
+        },
+        289867: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return l
+                }
+            });
+            var a = n("913144"),
+                l = {
+                    toggleMembersSection() {
+                        a.default.dispatch({
+                            type: "CHANNEL_TOGGLE_MEMBERS_SECTION"
+                        })
+                    },
+                    toggleProfilePanelSection() {
+                        a.default.dispatch({
+                            type: "PROFILE_PANEL_TOGGLE_SECTION"
+                        })
+                    },
+                    toggleSummariesSection() {
+                        a.default.dispatch({
+                            type: "CHANNEL_TOGGLE_SUMMARIES_SECTION"
+                        })
+                    }
+                }
         },
         913452: function(e, t, n) {
             "use strict";
@@ -176,28 +202,28 @@
                 p = n("390008"),
                 h = n("41205"),
                 E = n("715243"),
-                g = n("458574"),
+                _ = n("458574"),
                 m = n("963150"),
-                x = n("308798"),
-                I = n("47006"),
-                S = n("878526"),
-                C = n("44141"),
-                b = n("531674"),
-                v = n("619436"),
-                T = n("731390"),
-                _ = n("339876"),
+                g = n("308798"),
+                S = n("47006"),
+                I = n("878526"),
+                v = n("44141"),
+                x = n("531674"),
+                T = n("619436"),
+                C = n("731390"),
+                y = n("339876"),
                 A = n("809937"),
-                y = n("49111"),
+                b = n("49111"),
                 N = n("782340");
 
-            function M(e) {
+            function L(e) {
                 let {
                     channel: t,
                     onSelect: n
-                } = e, u = (0, C.default)(t), r = (0, g.default)(t), d = (0, f.default)(t), c = (0, p.default)(t), E = (0, h.default)(t), m = (0, b.default)(t), x = (0, v.default)(t), S = (0, I.default)(t), T = (0, o.default)({
+                } = e, u = (0, v.default)(t), r = (0, _.default)(t), d = (0, f.default)(t), c = (0, p.default)(t), E = (0, h.default)(t), m = (0, x.default)(t), g = (0, T.default)(t), I = (0, S.default)(t), C = (0, o.default)({
                     id: t.id,
                     label: N.default.Messages.COPY_ID_CHANNEL
-                }), _ = (0, s.default)(t);
+                }), y = (0, s.default)(t);
                 return (0, a.jsxs)(l.Menu, {
                     navId: "channel-context",
                     onClose: i.closeContextMenu,
@@ -208,28 +234,28 @@
                     }), (0, a.jsxs)(l.MenuGroup, {
                         children: [E, c, d]
                     }), (0, a.jsxs)(l.MenuGroup, {
-                        children: [m, x]
+                        children: [m, g]
                     }), (0, a.jsx)(l.MenuGroup, {
-                        children: S
+                        children: I
                     }), (0, a.jsx)(l.MenuGroup, {
-                        children: _
+                        children: y
                     }), (0, a.jsx)(l.MenuGroup, {
                         children: r
                     }), (0, a.jsx)(l.MenuGroup, {
-                        children: T
+                        children: C
                     })]
                 })
             }
 
-            function L(e) {
+            function M(e) {
                 let {
                     channel: t,
                     guild: n,
                     onSelect: u
-                } = e, r = (0, C.default)(t), s = (0, g.default)(t), d = (0, f.default)(t), c = (0, _.default)(t), p = (0, b.default)(t), h = (0, v.default)(t), y = (0, I.default)(t), M = (0, S.default)(t, n), L = (0, E.default)(t, n), O = (0, m.default)(t, n), G = (0, x.default)(t), R = (0, o.default)({
+                } = e, r = (0, v.default)(t), s = (0, _.default)(t), d = (0, f.default)(t), c = (0, y.default)(t), p = (0, x.default)(t), h = (0, T.default)(t), b = (0, S.default)(t), L = (0, I.default)(t, n), M = (0, E.default)(t, n), O = (0, m.default)(t, n), G = (0, g.default)(t), P = (0, o.default)({
                     id: t.id,
                     label: N.default.Messages.COPY_ID_CHANNEL
-                }), U = (0, T.default)(t, "list_text_channel_context_menu");
+                }), R = (0, C.default)(t, "list_text_channel_context_menu");
                 return (0, a.jsxs)(l.Menu, {
                     navId: "channel-context",
                     onClose: i.closeContextMenu,
@@ -238,25 +264,25 @@
                     children: [(0, a.jsx)(l.MenuGroup, {
                         children: r
                     }, "mark-as-read"), (0, a.jsxs)(l.MenuGroup, {
-                        children: [M, c, s, d, U]
+                        children: [L, c, s, d, R]
                     }, "channel-actions"), (0, a.jsxs)(l.MenuGroup, {
                         children: [p, h, (0, A.default)(t)]
                     }, "notifications"), (0, a.jsxs)(l.MenuGroup, {
-                        children: [y, L, O, G]
+                        children: [b, M, O, G]
                     }, "admin-actions"), (0, a.jsx)(l.MenuGroup, {
-                        children: R
+                        children: P
                     }, "developer-actions")]
                 })
             }
             var O = (0, r.default)((0, u.default)(function(e) {
                 let t = (0, c.default)();
-                return t ? (0, a.jsx)(M, {
+                return t ? (0, a.jsx)(L, {
                     ...e
-                }) : (0, a.jsx)(L, {
+                }) : (0, a.jsx)(M, {
                     ...e
                 })
             }, {
-                object: y.AnalyticsObjects.CONTEXT_MENU
+                object: b.AnalyticsObjects.CONTEXT_MENU
             }), [d.default.CONTEXT_MENU, d.default.CHANNEL_LIST_TEXT_CHANNEL_MENU])
         },
         731390: function(e, t, n) {
@@ -561,6 +587,70 @@
                             type: "SIDEBAR_CLOSE_GUILD",
                             guildId: e
                         })
+                    }
+                }
+        },
+        893980: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                trackProfilePanelViewed: function() {
+                    return s
+                },
+                trackProfilePanelToggled: function() {
+                    return d
+                }
+            });
+            var a = n("373469"),
+                l = n("824563"),
+                i = n("27618"),
+                u = n("599110"),
+                r = n("49111");
+            let s = e => {
+                    let {
+                        displayProfile: t,
+                        isMobile: n,
+                        loadDurationMs: a,
+                        activity: l,
+                        customStatusActivity: i,
+                        status: s
+                    } = e;
+                    u.default.track(r.AnalyticEvents.DM_PROFILE_VIEWED, {
+                        has_mobile_indicator: n,
+                        has_activity: null != l && (null == l ? void 0 : l.type) !== r.ActivityTypes.CUSTOM_STATUS,
+                        has_game_activity: (null == l ? void 0 : l.type) === r.ActivityTypes.PLAYING,
+                        load_duration_ms: a,
+                        profile_user_status: s,
+                        has_custom_status: null != i,
+                        has_profile_effect: null != t.profileEffectID,
+                        ...o(t)
+                    })
+                },
+                d = (e, t) => {
+                    u.default.track(r.AnalyticEvents.DM_PROFILE_TOGGLED, {
+                        is_profile_open: t,
+                        ...o(e)
+                    })
+                },
+                o = e => {
+                    var t;
+                    if (null == e) return {};
+                    let n = e.userId,
+                        u = null != a.default.getAnyStreamForUser(n),
+                        s = l.default.findActivity(n, e => {
+                            let {
+                                type: t
+                            } = e;
+                            return u ? t === r.ActivityTypes.PLAYING : t !== r.ActivityTypes.CUSTOM_STATUS
+                        }),
+                        d = null == s ? void 0 : s.assets,
+                        o = i.default.isFriend(n);
+                    return {
+                        has_images: !!(null !== (t = null == d ? void 0 : d.large_image) && void 0 !== t ? t : null == d ? void 0 : d.small_image),
+                        is_friend: o,
+                        viewed_profile_user_id: n,
+                        profile_has_nitro_customization: e.hasPremiumCustomization(),
+                        profile_has_theme_color_customized: e.hasThemeColors(),
+                        profile_has_theme_animation: null != e.popoutAnimationParticleType
                     }
                 }
         },
