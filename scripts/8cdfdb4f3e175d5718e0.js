@@ -121,8 +121,8 @@
                 I = n("290886"),
                 E = n("398604"),
                 S = n("38654"),
-                v = n("126198"),
-                y = n("21121"),
+                v = n("21121"),
+                y = n("325796"),
                 m = n("364281"),
                 _ = n("797694"),
                 w = n("512395"),
@@ -136,8 +136,8 @@
                 D = n("816092"),
                 G = n("305961"),
                 U = n("957255"),
-                M = n("660478"),
-                V = n("18494"),
+                V = n("660478"),
+                M = n("18494"),
                 P = n("282109"),
                 F = n("800762"),
                 H = n("316133"),
@@ -198,8 +198,8 @@
             class et {
                 get initializationData() {
                     return {
-                        selectedChannel: b.default.getChannel(V.default.getChannelId()),
-                        selectedVoiceChannelId: V.default.getVoiceChannelId(),
+                        selectedChannel: b.default.getChannel(M.default.getChannelId()),
+                        selectedVoiceChannelId: M.default.getVoiceChannelId(),
                         activeJoinedRelevantThreads: L.default.getActiveJoinedRelevantThreadsForGuild(this.id),
                         activeJoinedUnreadThreads: L.default.getActiveJoinedUnreadThreadsForGuild(this.id)
                     }
@@ -418,7 +418,7 @@
                         }
                     }
                     for (let e in this.categories = {}, o) this.categories[e] = new es(this, a[e], o[e], g);
-                    this.recentsSectionNumber = 2, this.favoritesSectionNumber = Z, this.noParentCategory = new ei(this, d, g), this.favoritesCategory = new el(this, g), this.recentsCategory = (0, v.isRecentChannelsEnabled)() ? new ea(this, s, g) : new er(this, u, g), this.voiceChannelsCategory = new ed(this, c, a, g), this.communitySection = new eh(t, C.length > 0), r(!("null" in this.categories), "somehow a null got into categories"), this.voiceChannelsSectionNumber = $ + h.size(this.categories)
+                    this.recentsSectionNumber = 2, this.favoritesSectionNumber = Z, this.noParentCategory = new ei(this, d, g), this.favoritesCategory = new el(this, g), this.recentsCategory = (0, y.isRecentlyActiveChannelsEnabled)() ? new ea(this, s, g) : new er(this, u, g), this.voiceChannelsCategory = new ed(this, c, a, g), this.communitySection = new eh(t, C.length > 0), r(!("null" in this.categories), "somehow a null got into categories"), this.voiceChannelsSectionNumber = $ + h.size(this.categories)
                 }
             }
             class en {
@@ -688,7 +688,7 @@
                     return C.default.isCallout(this.id)
                 }
                 get lastMessageTimestamp() {
-                    return Math.max(M.default.lastMessageTimestamp(this.id), ...this.threadIds.map(M.default.lastMessageTimestamp))
+                    return Math.max(V.default.lastMessageTimestamp(this.id), ...this.threadIds.map(V.default.lastMessageTimestamp))
                 }
                 updateChannel(e, t) {
                     let n = !1;
@@ -743,7 +743,7 @@
                     return (a = eI(this.record, c, n, i, d.hideMutedChannels), d.optInEnabled && d.hideResourceChannels && this.record.hasFlag(z.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) ? {
                         renderLevel: o ? 4 : 1,
                         threadIds: a
-                    } : !d.optInEnabled || d.optedInChannels.has(this.id) || null != r && d.optedInChannels.has(r) ? o || u || !h.isEmpty(a) || M.default.getMentionCount(this.id) > 0 ? {
+                    } : !d.optInEnabled || d.optedInChannels.has(this.id) || null != r && d.optedInChannels.has(r) ? o || u || !h.isEmpty(a) || V.default.getMentionCount(this.id) > 0 ? {
                         renderLevel: 4,
                         threadIds: a
                     } : d.hideMutedChannels && d.mutedChannelIds.has(this.id) ? {
@@ -804,7 +804,7 @@
                     if (t > 1) {
                         let i = this.record.parent_id,
                             s = this.category.guild;
-                        s.mutedChannelIds.has(this.id) || null != i && s.mutedChannelIds.has(i) ? t = 2 : 4 === t ? t = 3 : 2 === t && ey(this.category.guild, this.record, e) && (t = 3), 3 === t && ev(this, e) && (t = 4), n = h.sortBy(n, e => -M.default.lastMessageTimestamp(e))
+                        s.mutedChannelIds.has(this.id) || null != i && s.mutedChannelIds.has(i) ? t = 2 : 4 === t ? t = 3 : 2 === t && ey(this.category.guild, this.record, e) && (t = 3), 3 === t && ev(this, e) && (t = 4), n = h.sortBy(n, e => -V.default.lastMessageTimestamp(e))
                     }
                     return {
                         renderLevel: t,
@@ -870,7 +870,7 @@
                 if (A.THREADED_CHANNEL_TYPES.has(e.type)) {
                     let e = h.sortBy(Object.values(t), e => -e.joinTimestamp).map(e => e.channel.id);
                     if (l) return e;
-                    if (a) return !(n.id in t) && !(0, y.isInMainTabsExperiment)() && e.unshift(n.id), e;
+                    if (a) return !(n.id in t) && !(0, v.isInMainTabsExperiment)() && e.unshift(n.id), e;
                     else if (s) return e.filter(e => !R.default.isMuted(e));
                     else return e
                 }
@@ -890,9 +890,9 @@
                     selectedChannel: n,
                     activeJoinedRelevantThreads: i
                 } = t;
-                if (M.default.getMentionCount(e.id) > 0) return !0;
+                if (V.default.getMentionCount(e.id) > 0) return !0;
                 for (let t in i[e.id])
-                    if (M.default.getMentionCount(t) > 0) return !0;
+                    if (V.default.getMentionCount(t) > 0) return !0;
                 if (null != n && (n.id === e.id || n.isThread() && n.parent_id === e.id)) return true;
                 let s = T.default.getNewChannelIds(e.category.guild.id);
                 if (s.size > K);
@@ -906,13 +906,13 @@
                     activeJoinedRelevantThreads: s
                 } = n;
                 if (t.type === j.ChannelTypes.GUILD_DIRECTORY || !e.optInEnabled || t.isGuildVocal() || e.optedInChannels.has(t.id) || t.isThread() || null != t.parent_id && e.optedInChannels.has(t.parent_id) || e.hideResourceChannels && t.hasFlag(z.ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) return !1;
-                if (null != i && !(0, y.isInMainTabsExperiment)() && (i.id === t.id || i.isThread() && i.parent_id === t.id) || M.default.getMentionCount(t.id) > 0) return !0;
+                if (null != i && !(0, v.isInMainTabsExperiment)() && (i.id === t.id || i.isThread() && i.parent_id === t.id) || V.default.getMentionCount(t.id) > 0) return !0;
                 let l = T.default.getNewChannelIds(e.id),
                     a = Array.from(l).sort((e, t) => x.default.compare(t, e));
                 if (l.has(t.id) && a.indexOf(t.id) < K) return !0;
                 for (let e in s[t.id])
-                    if (M.default.getMentionCount(e) > 0 || M.default.hasUnread(e) || M.default.hasRecentlyVisitedAndRead(e)) return !0;
-                return !(e.mutedChannelIds.has(t.id) || null != t.parent_id && e.mutedChannelIds.has(t.parent_id)) && (!!M.default.hasRecentlyVisitedAndRead(t.id) || !1)
+                    if (V.default.getMentionCount(e) > 0 || V.default.hasUnread(e) || V.default.hasRecentlyVisitedAndRead(e)) return !0;
+                return !(e.mutedChannelIds.has(t.id) || null != t.parent_id && e.mutedChannelIds.has(t.parent_id)) && (!!V.default.hasRecentlyVisitedAndRead(t.id) || !1)
             }
             let em = new Set(Object.values(W.ChannelListCommunityRow))
         },
@@ -963,6 +963,21 @@
                     return i
                 }
             }), (s = i || (i = {})).GUILD_PREMIUM_PROGRESS_BAR = "guild-premium-progress-bar", s.GUILD_SCHEDULED_EVENTS = "guild-scheduled-events", s.GUILD_HUB_HEADER_OPTIONS = "guild-hub-header-options", s.GUILD_FAVORITES = "favorites", s.GUILD_CHANNEL_LIST_OPT_IN_NOTICE = "guild-channel-list-opt-in-notice", s.GUILD_ROLE_SUBSCRIPTIONS = "role-subscriptions", s.GUILD_SHOP = "shop", s.GUILD_MEMBER_APPLICATIONS = "member-applications", s.GUILD_HOME = "@home", s.CHANNELS_AND_ROLES = "channels-and-roles", s.BROWSE_CHANNELS = "browse-channels", s.GUILD_DIRECTORY = "guild-directory", s.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR = "guild-new-member-actions-progress-bar", s.GUILD_MOD_DASH_MEMBER_SAFETY = "guild-mod-dash-member-safety"
+        },
+        325796: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                isRecentlyActiveChannelsEnabled: function() {
+                    return l
+                }
+            });
+            var i = n("650033");
+            n("362391");
+            var s = n("126198");
+
+            function l() {
+                return !!(i.default.get("enable_recently_active") || (0, s.getCombinedCurryExperimentValue)("recentChannels")) || !1
+            }
         },
         364281: function(e, t, n) {
             "use strict";
