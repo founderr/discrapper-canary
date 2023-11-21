@@ -475,27 +475,28 @@
                     recurrenceRule: n,
                     guildEventId: i,
                     onClick: h,
-                    hideScroller: C = !1
-                } = e, [N, g] = s.useState([]);
+                    hideScroller: C = !1,
+                    initialStartDate: N
+                } = e, [g, v] = s.useState([]);
                 s.useEffect(() => {
                     if (null != n) {
                         let e = (0, d.getRRule)(n);
-                        g((0, d.generateNextRecurrences)(4, e))
+                        v((0, d.generateNextRecurrences)(4, e, N))
                     }
-                }, [n]), s.useEffect(() => {
+                }, [n, N]), s.useEffect(() => {
                     if (null == t) return;
-                    let e = N.map(e => a.default.fromTimestamp(e.getTime()));
+                    let e = g.map(e => a.default.fromTimestamp(e.getTime()));
                     r.default.getGuildEventUserCounts(t, i, e)
-                }, [i, t, N]);
-                let v = s.useMemo(() => {
-                    if (null == n || 0 === N.length) return !1;
+                }, [i, t, g]);
+                let L = s.useMemo(() => {
+                    if (null == n || 0 === g.length) return !1;
                     let e = new Date;
                     e.setFullYear(e.getFullYear() + d.MAX_YEARS_AHEAD_RECURRING_EVENT);
-                    let t = N[N.length - 1],
+                    let t = g[g.length - 1],
                         l = (0, d.getRRule)(n),
                         s = l.after(t);
                     return null != s && !(s > e) && !0
-                }, [n, N]);
+                }, [n, g]);
                 return (0, l.jsxs)("div", {
                     className: f.recurrences,
                     children: [(0, l.jsx)(o.Heading, {
@@ -506,17 +507,17 @@
                         className: u(f.scroller, {
                             [f.showScroller]: !C
                         }),
-                        children: [N.map(e => (0, l.jsx)(c.default, {
+                        children: [g.map(e => (0, l.jsx)(c.default, {
                             originalScheduledStartTime: e,
                             guildEventId: i,
                             onClick: h
-                        }, e.toString())), v && (0, l.jsx)(o.Button, {
+                        }, e.toString())), L && (0, l.jsx)(o.Button, {
                             grow: !1,
                             onClick: e => {
                                 if (e.stopPropagation(), null == n) return;
                                 let t = (0, d.getRRule)(n),
-                                    l = N[N.length - 1];
-                                g([...N, ...(0, d.generateNextRecurrences)(4, t, l)])
+                                    l = g[g.length - 1];
+                                v([...g, ...(0, d.generateNextRecurrences)(4, t, l)])
                             },
                             look: o.Button.Looks.LINK,
                             size: o.Button.Sizes.MIN,

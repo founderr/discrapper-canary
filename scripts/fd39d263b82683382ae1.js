@@ -1321,9 +1321,9 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return f
                 }
-            });
+            }), n("222007"), n("424973");
             var l = n("37983"),
                 a = n("884691"),
                 s = n("77078"),
@@ -1333,38 +1333,40 @@
                 o = n("757767"),
                 d = n("782340"),
                 c = n("572721");
+            let E = new Set([0, 6]);
 
-            function E(e) {
+            function f(e) {
                 let {
                     startDate: t,
                     recurrenceRule: n,
-                    onRecurrenceChange: E
-                } = e, f = a.useMemo(() => (0, u.recurrenceRuleToOption)(t, n), [n, t]), h = function(e) {
+                    onRecurrenceChange: f
+                } = e, h = a.useMemo(() => (0, u.recurrenceRuleToOption)(t, n), [n, t]), _ = function(e) {
                     let t = e.toDate(),
                         n = t.toLocaleString(d.default.getLocale(), {
                             weekday: "long"
-                        });
-                    return [{
-                        value: o.RecurrenceOptions.NONE,
-                        label: d.default.Messages.CREATE_EVENT_RECUR_NONE
-                    }, {
-                        value: o.RecurrenceOptions.WEEKLY,
-                        label: d.default.Messages.CREATE_EVENT_RECUR_WEEKLY.format({
-                            weekday: n
-                        })
-                    }, {
-                        value: o.RecurrenceOptions.YEARLY,
-                        label: d.default.Messages.CREATE_EVENT_RECUR_YEARLY.format({
-                            date: t.toLocaleString(d.default.getLocale(), {
-                                month: "short",
-                                day: "2-digit"
+                        }),
+                        l = [{
+                            value: o.RecurrenceOptions.NONE,
+                            label: d.default.Messages.CREATE_EVENT_RECUR_NONE
+                        }, {
+                            value: o.RecurrenceOptions.WEEKLY,
+                            label: d.default.Messages.CREATE_EVENT_RECUR_WEEKLY.format({
+                                weekday: n
                             })
-                        })
-                    }, {
+                        }, {
+                            value: o.RecurrenceOptions.YEARLY,
+                            label: d.default.Messages.CREATE_EVENT_RECUR_YEARLY.format({
+                                date: t.toLocaleString(d.default.getLocale(), {
+                                    month: "short",
+                                    day: "2-digit"
+                                })
+                            })
+                        }];
+                    return !E.has(t.getDay()) && l.push({
                         value: o.RecurrenceOptions.WEEKDAY_ONLY,
                         label: d.default.Messages.CREATE_EVENT_RECUR_WEEKDAYS
-                    }]
-                }(t), _ = e => e.toString(), I = (0, l.jsxs)("div", {
+                    }), l
+                }(t), I = e => e.toString(), T = (0, l.jsxs)("div", {
                     className: c.title,
                     children: [d.default.Messages.CREATE_EVENT_RECUR_LABEL, (0, l.jsx)(i.TextBadge, {
                         text: d.default.Messages.NEW,
@@ -1372,14 +1374,14 @@
                     })]
                 });
                 return (0, l.jsx)(s.FormItem, {
-                    title: I,
+                    title: T,
                     required: !0,
                     children: (0, l.jsx)(s.Select, {
                         placeholder: "gaming",
-                        options: h,
-                        select: E,
-                        serialize: _,
-                        isSelected: e => null != f && _(e) === _(f)
+                        options: _,
+                        select: f,
+                        serialize: I,
+                        isSelected: e => null != h && I(e) === I(h)
                     })
                 })
             }

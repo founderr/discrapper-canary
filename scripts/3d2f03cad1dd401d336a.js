@@ -1305,11 +1305,14 @@
                 getNextRecurrenceIdInEvent: function() {
                     return M
                 },
+                isValidRecurrence: function() {
+                    return L
+                },
                 recurrenceOptionToRecurrenceRule: function() {
-                    return y
+                    return O
                 },
                 recurrenceRuleToOption: function() {
-                    return O
+                    return p
                 }
             }), n("222007"), n("424973");
             var l = n("917351"),
@@ -1415,15 +1418,24 @@
                 return null != t ? a.default.fromTimestamp(Math.floor(t.getTime() / d.default.Millis.SECOND) * d.default.Millis.SECOND) : null
             }
 
-            function L(e) {
+            function L(e, t) {
+                if (null == t || null == e) return !1;
+                let n = A(e),
+                    l = a.default.extractTimestamp(t),
+                    u = new Date(l),
+                    r = n.after(u, !0);
+                return u.getTime() === (null == r ? void 0 : r.getTime())
+            }
+
+            function y(e) {
                 let t = new i.Weekday(e.toDate().getDay()),
                     n = new i.Weekday(e.toDate().getUTCDay());
                 return n.weekday - t.weekday > 0 ? N : n.weekday - t.weekday < 0 ? _ : f
             }
 
-            function y(e, t) {
+            function O(e, t) {
                 let n = function(e, t) {
-                    let n = L(t),
+                    let n = y(t),
                         l = t.toDate();
                     switch (l.setMilliseconds(0), e) {
                         case o.RecurrenceOptions.NONE:
@@ -1471,7 +1483,7 @@
                 }
             }
 
-            function O(e, t) {
+            function p(e, t) {
                 if (null == t) return o.RecurrenceOptions.NONE;
                 let n = A(t);
                 switch (n.options.freq) {
@@ -1480,7 +1492,7 @@
                     case i.RRule.YEARLY:
                         return o.RecurrenceOptions.YEARLY;
                     case i.RRule.DAILY:
-                        if (!(0, l.isEqual)(n.options.byweekday, L(e))) return o.RecurrenceOptions.NONE;
+                        if (!(0, l.isEqual)(n.options.byweekday, y(e))) return o.RecurrenceOptions.NONE;
                         return o.RecurrenceOptions.WEEKDAY_ONLY;
                     default:
                         return o.RecurrenceOptions.NONE
