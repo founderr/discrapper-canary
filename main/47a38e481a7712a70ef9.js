@@ -946,7 +946,7 @@
                         range: {
                             gte: Date.now()
                         }
-                    }), Object.keys(u).length > 0 && (n.and_query.safety_signals = u);
+                    }), Object.keys(u).length > 0 && (n.or_query.safety_signals = u);
                     let {
                         selectedRoleIds: o
                     } = e;

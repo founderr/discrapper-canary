@@ -1,682 +1,661 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["22198"], {
-        335189: function(e, t, n) {
+    ["26230"], {
+        309570: function(t, e, n) {
             "use strict";
-            n.r(t), n.d(t, {
-                saveClydeProfile: function() {
-                    return c
-                },
-                addClydeGuildMember: function() {
-                    return f
-                },
-                generatePersonality: function() {
-                    return d
-                },
-                setPendingPersonality: function() {
-                    return _
-                },
-                setPendingNick: function() {
-                    return p
-                },
-                setPendingAvatar: function() {
-                    return T
-                },
-                setPendingBanner: function() {
-                    return S
-                },
-                setPendingThemeColors: function() {
-                    return y
-                },
-                resetPendingChanges: function() {
-                    return I
-                },
-                fetchClydeSettings: function() {
+            n.r(e), n.d(e, {
+                default: function() {
+                    return i
+                }
+            });
+            var l = n("49111");
+
+            function i(t) {
+                return null != t && t.type !== l.ActivityTypes.CUSTOM_STATUS && (null != t.details || null != t.assets && (null != t.assets.large_image || null != t.assets.small_text) || null != t.party || null != t.secrets || null != t.state)
+            }
+        },
+        716241: function(t, e, n) {
+            "use strict";
+            n.r(e), n.d(e, {
+                collectGuildAnalyticsMetadata: function() {
                     return C
                 },
-                fetchClydeProfile: function() {
-                    return A
+                collectChannelAnalyticsMetadataFromId: function() {
+                    return O
                 },
-                createClydeProfile: function() {
+                collectChannelAnalyticsMetadata: function() {
                     return L
                 },
-                startEditingClydeProfile: function() {
-                    return m
+                collectVoiceAnalyticsMetadata: function() {
+                    return M
                 },
-                doneEditingClydeProfile: function() {
-                    return D
+                trackWithMetadata: function() {
+                    return U
+                },
+                getVoiceStateMetadata: function() {
+                    return P
+                },
+                getCustomStatusMetadata: function() {
+                    return G
+                },
+                default: function() {
+                    return F
                 }
             });
-            var r = n("872717"),
-                i = n("913144"),
-                l = n("327037"),
-                u = n("599110"),
-                o = n("473591"),
-                a = n("680894"),
-                s = n("49111");
-            async function c(e, t) {
-                let n = await E(e, t);
-                return n
+            var l = n("917351"),
+                i = n.n(l),
+                u = n("316693"),
+                a = n("233069"),
+                s = n("271938"),
+                r = n("42203"),
+                d = n("923959"),
+                c = n("525065"),
+                o = n("26989"),
+                f = n("305961"),
+                _ = n("42887"),
+                g = n("957255"),
+                E = n("824563"),
+                S = n("945956"),
+                v = n("18494"),
+                p = n("162771"),
+                I = n("800762"),
+                T = n("599110"),
+                h = n("991170"),
+                A = n("761932"),
+                m = n("49111"),
+                y = n("724210");
+
+            function N(t) {
+                let e = 0;
+                for (let n in t) e += 1;
+                return e
             }
-            async function f(e) {
-                return await r.default.put({
-                    url: s.Endpoints.GUILD_CLYDE_ADD_MEMBER(e),
-                    oldFormErrors: !0
-                })
-            }
-            async function d(e) {
-                try {
-                    let t = await r.default.post({
-                        url: s.Endpoints.CLYDE_PROFILES_GENERATE_PERSONALITY,
-                        oldFormErrors: !0,
-                        body: {
-                            personality: e
-                        }
-                    });
-                    if (t.ok) return t.body.personality;
-                    return null
-                } catch (e) {
-                    return null
-                }
-            }
-            async function E(e, t) {
-                i.default.dispatch({
-                    type: "CLYDE_GUILD_SETTINGS_SAVE_START"
-                });
-                let n = null != t.personality && o.default.getGeneratedPersonality() === o.default.getPendingPersonality();
-                try {
-                    var l, c;
-                    let o = await r.default.patch({
-                        url: s.Endpoints.GUILD_CLYDE_SETTINGS(e),
-                        oldFormErrors: !0,
-                        body: {
-                            ...t,
-                            personality_preset: n ? "generated" : "custom"
-                        }
-                    });
-                    if (o.ok) return i.default.dispatch({
-                        type: "CLYDE_GUILD_SETTINGS_SAVE_SUCCESS",
-                        settings: o.body.settings
-                    }), null != o.body.guild_member_profile && i.default.dispatch({
-                        type: "USER_PROFILE_UPDATE_SUCCESS",
-                        userId: a.CLYDE_AI_USER_ID,
-                        profileEffectID: void 0,
-                        ...o.body.guild_member_profile
-                    }), null != o.body.guild_member && i.default.dispatch({
-                        type: "GUILD_MEMBER_PROFILE_UPDATE",
-                        guildMember: o.body.guild_member,
-                        guildId: e
-                    }), o.body.settings;
-                    return i.default.dispatch({
-                        type: "CLYDE_GUILD_SETTINGS_SAVE_FAIL",
-                        errors: null !== (c = null === (l = o.body) || void 0 === l ? void 0 : l.errors) && void 0 !== c ? c : {}
-                    }), u.default.track(s.AnalyticEvents.CLYDE_AI_PROFILE_UPDATE_FAILED, {
-                        guild_id: e,
-                        clyde_profile_id: t.clyde_profile_id
-                    }), null
-                } catch (n) {
-                    return i.default.dispatch({
-                        type: "CLYDE_GUILD_SETTINGS_SAVE_FAIL",
-                        errors: n.body
-                    }), u.default.track(s.AnalyticEvents.CLYDE_AI_PROFILE_UPDATE_FAILED, {
-                        guild_id: e,
-                        clyde_profile_id: t.clyde_profile_id
-                    }), null
+
+            function C(t) {
+                var e;
+                if (null == t) return null;
+                let n = f.default.getGuild(t);
+                if (null == n) return null;
+                let l = s.default.getId(),
+                    i = o.default.getMember(t, l),
+                    u = d.default.getChannels(t),
+                    a = u[d.GUILD_SELECTABLE_CHANNELS_KEY].length,
+                    r = u[d.GUILD_VOCAL_CHANNELS_KEY].length,
+                    _ = I.default.getVoiceStates(t);
+                return {
+                    guild_id: n.id,
+                    guild_size_total: c.default.getMemberCount(t),
+                    guild_num_channels: a + r,
+                    guild_num_text_channels: a,
+                    guild_num_voice_channels: r,
+                    guild_num_roles: N(n.roles),
+                    guild_member_num_roles: null != i ? i.roles.length : 0,
+                    guild_member_perms: String(null !== (e = g.default.getGuildPermissions(n)) && void 0 !== e ? e : h.default.NONE),
+                    guild_is_vip: n.hasFeature(m.GuildFeatures.VIP_REGIONS),
+                    is_member: null != i,
+                    num_voice_channels_active: N(_)
                 }
             }
 
-            function _(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                i.default.dispatch({
-                    type: "CLYDE_SET_PENDING_PERSONALITY",
-                    personality: e,
-                    isGenerated: t
-                })
+            function O(t) {
+                if (null == t) return null;
+                let e = r.default.getChannel(t);
+                return null == e ? null : L(e)
             }
 
-            function p(e) {
-                i.default.dispatch({
-                    type: "CLYDE_SET_PENDING_NICK",
-                    nick: null != e ? e : ""
-                })
-            }
-
-            function T(e) {
-                i.default.dispatch({
-                    type: "CLYDE_SET_PENDING_AVATAR",
-                    avatar: e
-                })
-            }
-
-            function S(e) {
-                i.default.dispatch({
-                    type: "CLYDE_SET_PENDING_BANNER",
-                    banner: e
-                })
-            }
-
-            function y(e) {
-                i.default.dispatch({
-                    type: "CLYDE_SET_PENDING_THEME_COLORS",
-                    themeColors: e
-                })
-            }
-
-            function I() {
-                i.default.dispatch({
-                    type: "CLYDE_RESET_PENDING_CHANGES"
-                })
-            }
-            async function C(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                if (t || o.default.shouldFetchSettings(e)) {
-                    (0, l.fetchProfile)(a.CLYDE_AI_USER_ID, {
-                        guildId: e
-                    }), i.default.dispatch({
-                        type: "CLYDE_GUILD_SETTINGS_FETCH_START",
-                        guildId: e
-                    });
-                    try {
-                        let t = await r.default.get({
-                                url: s.Endpoints.GUILD_CLYDE_SETTINGS(e),
-                                oldFormErrors: !0
-                            }),
-                            n = t.body;
-                        i.default.dispatch({
-                            type: "CLYDE_GUILD_SETTINGS_FETCH_SUCCESS",
-                            guildId: n.guild_id,
-                            settings: n
-                        })
-                    } catch (t) {
-                        i.default.dispatch({
-                            type: "CLYDE_GUILD_SETTINGS_FETCH_FAIL",
-                            guildId: e
-                        })
-                    }
+            function L(t) {
+                var e;
+                if (null == t) return null;
+                let n = !1,
+                    l = t.getGuildId();
+                if (null != l) {
+                    let e = t => {
+                        if (null == t) return !1;
+                        let e = t.permissionOverwrites[l];
+                        return null != e && u.default.has(e.deny, m.Permissions.VIEW_CHANNEL)
+                    };
+                    n = a.THREAD_CHANNEL_TYPES.has(t.type) && null != t.parent_id ? e(r.default.getChannel(t.parent_id)) : e(t)
                 }
-            }
-            async function A(e) {
-                if (null == o.default.getProfile(e)) {
-                    i.default.dispatch({
-                        type: "CLYDE_PROFILE_FETCH_START",
-                        clydeProfileId: e
-                    });
-                    try {
-                        let t = await r.default.get({
-                                url: s.Endpoints.CLYDE_PROFILES(e),
-                                oldFormErrors: !0
-                            }),
-                            n = t.body;
-                        i.default.dispatch({
-                            type: "CLYDE_PROFILE_FETCH_SUCCESS",
-                            profile: n
-                        })
-                    } catch (t) {
-                        i.default.dispatch({
-                            type: "CLYDE_PROFILE_FETCH_FAIL",
-                            clydeProfileId: e
-                        })
-                    }
-                }
-            }
-            async function L(e) {
-                try {
-                    let t = await r.default.post({
-                        url: s.Endpoints.CLYDE_PROFILES_CREATE(e),
-                        oldFormErrors: !0
-                    });
-                    return t.ok && i.default.dispatch({
-                        type: "CLYDE_PROFILE_CREATE_SUCCESS",
-                        profile: t.body
-                    }), t.body
-                } catch (e) {
-                    return null
+                return {
+                    channel_id: t.id,
+                    channel_type: t.type,
+                    channel_size_total: t.isPrivate() ? t.recipients.length : 0,
+                    channel_member_perms: String(null != l && null !== (e = g.default.getChannelPermissions(t)) && void 0 !== e ? e : h.default.NONE),
+                    channel_hidden: n
                 }
             }
 
-            function m() {
-                i.default.dispatch({
-                    type: "CLYDE_PROFILE_EDITING_START"
+            function M(t) {
+                if (null == t) return null;
+                let e = r.default.getChannel(t);
+                if (null == e) return null;
+                let n = _.default.isVideoEnabled(),
+                    l = S.default.getMediaSessionId();
+                return {
+                    channel_id: e.id,
+                    channel_type: e.type,
+                    guild_id: e.getGuildId(),
+                    media_session_id: l,
+                    ...P(e.getGuildId(), e.id, n),
+                    ...(0, A.getVoiceAnalyticsMetadataAdditional)()
+                }
+            }
+
+            function U(t) {
+                var e, n, l, i, u;
+                let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                    s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                if (T.default.isThrottled(t)) return;
+                let d = !("location" in a) || a.location !== m.AnalyticsLocations.GUILD_CREATE_INVITE_SUGGESTION,
+                    c = "guild_id" in a ? a.guild_id : d ? p.default.getGuildId() : null,
+                    o = "channel_id" in a ? a.channel_id : d ? v.default.getChannelId(c) : null,
+                    f = r.default.getChannel(o);
+                let _ = (e = f, n = c, null == e ? null != n ? n : null : e.isPrivate() ? null : null !== (i = null !== (l = e.getGuildId()) && void 0 !== l ? l : n) && void 0 !== i ? i : null);
+                let g = {
+                    ...a,
+                    ...C(_),
+                    ...null != c && null != o && (0, y.isStaticChannelRoute)(o) ? (u = 0, {
+                        channel_static_route: o,
+                        channel_hidden: !1
+                    }) : L(f)
+                };
+                T.default.track(t, g, {
+                    flush: s
                 })
             }
 
-            function D() {
-                i.default.dispatch({
-                    type: "CLYDE_PROFILE_EDITING_END"
-                })
+            function P(t, e, n) {
+                let l = {
+                    voice_state_count: 0,
+                    video_stream_count: 0,
+                    video_enabled: n
+                };
+                return i(I.default.getVoiceStates(t)).filter(t => t.channelId === e).filter(t => t.userId !== s.default.getId()).forEach(t => {
+                    l.voice_state_count++, (t.selfVideo || t.selfStream) && l.video_stream_count++
+                }), l
+            }
+
+            function G(t, e) {
+                let n = {
+                    custom_status_count: 0
+                };
+                return i(I.default.getVoiceStates(t)).forEach(t => {
+                    t.channelId === e && null != E.default.findActivity(t.userId, t => t.type === m.ActivityTypes.CUSTOM_STATUS) && n.custom_status_count++
+                }), n
+            }
+            var F = {
+                trackWithMetadata: U,
+                getVoiceStateMetadata: P
             }
         },
-        845962: function(e, t, n) {
+        761932: function(t, e, n) {
             "use strict";
-            let r;
-            n.r(t), n.d(t, {
+            n.r(e), n.d(e, {
+                getVoiceAnalyticsMetadataAdditional: function() {
+                    return i
+                }
+            });
+            var l = n("568307");
+
+            function i() {
+                let t = l.default.getCurrentGameForAnalytics();
+                return {
+                    game_name: null != t ? t.name : null,
+                    game_id: null != t ? t.id : null
+                }
+            }
+        },
+        32346: function(t, e, n) {
+            "use strict";
+            let l, i;
+            n.r(e), n.d(e, {
                 default: function() {
                     return _
                 }
-            });
-            var i = n("917351"),
-                l = n("446674"),
-                u = n("913144");
-            let o = [],
-                a = !1;
-            let s = o,
-                c = {},
-                f = null,
-                d = e => {
-                    s = (0, i.cloneDeep)(e);
-                    let t = {};
-                    s.forEach(e => {
-                        t[e.id] = e
-                    }), c = t
-                };
-            class E extends l.default.Store {
-                get isFetching() {
-                    return a
-                }
-                get fetchError() {
-                    return r
-                }
-                get profileEffects() {
-                    return s
-                }
-                get tryItOutId() {
-                    return f
-                }
-                getProfileEffectById(e) {
-                    return null != e ? c[e] : void 0
-                }
-            }
-            E.displayName = "ProfileEffectStore";
-            var _ = new E(u.default, {
-                USER_PROFILE_EFFECTS_FETCH: () => {
-                    a = !0
-                },
-                USER_PROFILE_EFFECTS_FETCH_SUCCESS: e => {
-                    let {
-                        profileEffects: t
-                    } = e;
-                    a = !1, d(0 === t.length ? o : t)
-                },
-                USER_PROFILE_EFFECTS_FETCH_FAILURE: e => {
-                    let {
-                        error: t
-                    } = e;
-                    a = !1, r = t, d(o)
-                },
-                PROFILE_EFFECTS_SET_TRY_IT_OUT: e => {
-                    let {
-                        id: t
-                    } = e;
-                    f = t
-                },
-                LOGOUT: e => {
-                    a = !1, d(o), f = null
-                }
-            })
-        },
-        662286: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                useCanUseProfileEffects: function() {
-                    return l
-                },
-                canUseProfileEffects: function() {
-                    return u
-                }
-            });
-            var r = n("862205");
-            let i = (0, r.createExperiment)({
-                kind: "user",
-                id: "2023-08_profile_effects",
-                label: "Profile Effects User Experiment",
-                defaultConfig: {
-                    enabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enables profile effects and shop",
-                    config: {
-                        enabled: !0
-                    }
-                }]
-            });
-
-            function l(e) {
-                let {
-                    location: t,
-                    trackExposureOptions: n = {},
-                    autoTrackExposure: r = !0
-                } = e;
-                return i.useExperiment({
-                    location: t
-                }, {
-                    autoTrackExposure: r,
-                    trackExposureOptions: n
-                }).enabled
-            }
-
-            function u(e) {
-                let {
-                    location: t,
-                    trackExposureOptions: n = {},
-                    autoTrackExposure: r = !0
-                } = e;
-                return i.getCurrentConfig({
-                    location: t
-                }, {
-                    autoTrackExposure: r,
-                    trackExposureOptions: n
-                }).enabled
-            }
-        },
-        76047: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                ENTRY_DELAY: function() {
-                    return r
-                },
-                RESET: function() {
-                    return i
-                }
-            });
-            let r = 500,
-                i = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-        },
-        859498: function(e, t, n) {
-            "use strict";
-            var r, i, l, u;
-            n.r(t), n.d(t, {
-                RestartMethod: function() {
-                    return r
-                },
-                AnimationTypes: function() {
-                    return i
-                }
-            }), (l = r || (r = {})).FromLoop = "fromLoop", l.FromStart = "fromStart", (u = i || (i = {}))[u.UNSPECIFIED = 0] = "UNSPECIFIED", u[u.PERSISTENT = 1] = "PERSISTENT", u[u.INTERMITTENT = 2] = "INTERMITTENT"
-        },
-        687682: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return l
-                }
-            });
-            var r = n("884691");
-            let i = 1e3 / 24;
-            var l = function(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i,
-                    n = r.useRef(0),
-                    l = r.useRef(),
-                    u = r.useRef(!0),
-                    o = r.useCallback(() => {
-                        u.current = !1, cancelAnimationFrame(n.current)
-                    }, []),
-                    a = r.useCallback(r => {
-                        null == l.current && (l.current = r);
-                        let i = r - l.current;
-                        i >= t && (l.current = r, e(i)), u.current && (n.current = requestAnimationFrame(a))
-                    }, [e, t]),
-                    s = r.useCallback(() => {
-                        u.current = !0, l.current = void 0, n.current = requestAnimationFrame(a)
-                    }, [a]);
-                return r.useEffect(() => (n.current = requestAnimationFrame(a), () => cancelAnimationFrame(n.current)), []), {
-                    stop: o,
-                    reset: s,
-                    ticking: u
-                }
-            }
-        },
-        833395: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return i
-                }
-            }), n("222007"), n("808653"), n("424973");
-            var r = n("884691"),
-                i = (e, t) => {
-                    let [n, i] = r.useState(-1), l = r.useRef(-1);
-                    return r.useEffect(() => {
-                        let t = e.reduce((e, t) => (!e.includes(t.src) && e.push(t.src), e), []);
-                        i(t.length), l.current = t.length
-                    }, [e, l, i]), r.useEffect(() => {
-                        0 === n && t()
-                    }, [n, t]), {
-                        pending: n,
-                        pendingRef: l,
-                        setPending: i
-                    }
-                }
-        },
-        525808: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                sortEffectLayers: function() {
-                    return r
-                }
-            });
-            let r = e => e.sort((e, t) => {
-                var n, r;
-                return (null !== (n = e.zIndex) && void 0 !== n ? n : 0) - (null !== (r = t.zIndex) && void 0 !== r ? r : 0)
-            })
-        },
-        635471: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return C
-                }
             }), n("222007");
-            var r = n("37983"),
-                i = n("884691"),
-                l = n("414456"),
-                u = n.n(l),
-                o = n("446674"),
-                a = n("206230"),
-                s = n("845962"),
-                c = n("662286"),
-                f = n("76047"),
-                d = n("859498"),
-                E = n("687682"),
-                _ = n("525808"),
-                p = n("465523"),
-                T = n("417675"),
-                S = n("260742");
-            let y = e => {
+            var u = n("917351"),
+                a = n.n(u),
+                s = n("446674"),
+                r = n("913144"),
+                d = n("843455");
+            let c = o();
+
+            function o() {
+                return {
+                    recentCustomStatuses: []
+                }
+            }
+            class f extends s.default.PersistedStore {
+                initialize(t) {
+                    c = {
+                        ...o(),
+                        ...null != t ? t : {}
+                    }
+                }
+                getState() {
+                    return c
+                }
+                getCurrentHangStatus() {
+                    return l
+                }
+                getCustomHangStatus() {
+                    return i
+                }
+                getRecentCustomStatuses() {
+                    return c.recentCustomStatuses
+                }
+            }
+            f.displayName = "HangStatusStore", f.persistKey = "HangStatusStore";
+            var _ = new f(r.default, {
+                LOGOUT: function() {
+                    c = o()
+                },
+                UPDATE_HANG_STATUS: function(t) {
                     let {
-                        bannerAdjustment: t = 0,
-                        maxLoops: n,
-                        resetOnHover: l = !1,
-                        isHovering: o = !1,
-                        useOpacityOnHover: a = !0,
-                        autoPlay: s = !0,
-                        restartMethod: c,
-                        urlQueryString: p,
-                        profileEffectConfig: y,
-                        noBorderRadius: I = !1,
-                        introDelay: C = f.ENTRY_DELAY
-                    } = e, A = i.useRef(null), [L, m] = i.useState([]);
-                    (0, T.default)(y);
-                    let [D, R] = i.useState(0), [h, P] = i.useState(0), {
-                        accessibilityLabel: g
-                    } = y, [F, N] = i.useState(-C), {
-                        stop: v,
-                        reset: b,
-                        ticking: U
-                    } = (0, E.default)(e => {
-                        N(t => t + e)
-                    });
-                    i.useEffect(() => {
-                        N(-C), m((0, _.sortEffectLayers)(y.effects))
-                    }, [y]), i.useEffect(() => {
-                        let e = 0,
-                            t = 1 / 0;
-                        L.forEach(n => {
-                            let r = n.start + n.duration;
-                            r > e && (e = r), n.loop && n.start < t && (t = n.start)
-                        }), R(t), P(e)
-                    }, [P, L]);
-                    let [Y, G] = i.useState(!1);
-                    return i.useEffect(() => {
-                        !0 !== s && !o && (v(), N(0)), !o && Y && U.current && (v(), N(0)), l && o && !U.current && (b(), y.animationType === d.AnimationTypes.PERSISTENT ? N(c === d.RestartMethod.FromStart ? 0 : D) : N(0))
-                    }, [o, Y, D, l, v, b, U, y.animationType, s, c]), (0, r.jsx)("div", {
-                        ref: A,
-                        className: u(S.profileEffects, {
-                            [S.hovered]: o && a
-                        }),
-                        children: (0, r.jsx)("div", {
-                            className: I ? S.innerNoRadius : S.inner,
-                            children: L.map((e, i) => {
-                                var l, u, o, a, c, E, _, T;
-                                if (!U.current) {
-                                    if (y.animationType === d.AnimationTypes.PERSISTENT && null != y.staticFrameSrc && 0 === i && !0 === s) {
-                                        let {
-                                            staticFrameSrc: n
-                                        } = y;
-                                        return (0, r.jsx)("img", {
-                                            className: S.effect,
-                                            style: {
-                                                top: null !== (c = null === (o = e.position) || void 0 === o ? void 0 : o.y) && void 0 !== c ? c : 0 - t,
-                                                left: null !== (E = null === (a = e.position) || void 0 === a ? void 0 : a.x) && void 0 !== E ? E : 0
-                                            },
-                                            src: n,
-                                            alt: g
-                                        }, e.src + i)
-                                    }
-                                    return (0, r.jsx)("img", {
-                                        src: f.RESET,
-                                        alt: g
-                                    }, e.src + i)
-                                }
-                                if (F < e.start || !e.loop && F > e.duration + e.start) return (0, r.jsx)("img", {
-                                    src: f.RESET,
-                                    alt: g
-                                }, e.src + i);
-                                if (y.animationType === d.AnimationTypes.PERSISTENT && !Y && null != n && F >= h && G(!0), e.loop && void 0 !== e.loopDelay && e.loopDelay > 0) {
-                                    let t = e.duration + e.loopDelay,
-                                        l = Math.floor((F - e.start) / t);
-                                    if (F - e.start - l * t > e.duration) return y.animationType === d.AnimationTypes.INTERMITTENT && !Y && null != n && l >= n && G(!0), (0, r.jsx)("img", {
-                                        src: f.RESET,
-                                        alt: g
-                                    }, e.src + i)
-                                }
-                                return (0, r.jsx)("img", {
-                                    src: null != p ? "".concat(e.src, "?query=").concat(p) : e.src,
-                                    className: S.effect,
-                                    style: {
-                                        top: (null !== (_ = null === (l = e.position) || void 0 === l ? void 0 : l.y) && void 0 !== _ ? _ : 0) - t,
-                                        left: null !== (T = null === (u = e.position) || void 0 === u ? void 0 : u.x) && void 0 !== T ? T : 0
-                                    },
-                                    alt: g
-                                }, e.src + i)
-                            })
+                        status: e
+                    } = t;
+                    l = e, i = null
+                },
+                UPDATE_HANG_STATUS_CUSTOM: function(t) {
+                    let {
+                        status: e,
+                        emoji: n
+                    } = t;
+                    l = d.HangStatusTypes.CUSTOM, i = {
+                        status: e,
+                        emoji: n
+                    };
+                    let u = [...c.recentCustomStatuses],
+                        s = u.findIndex(t => t.status === e && a.isEqual(t.emoji, n)); - 1 !== s ? u.splice(s, 1) : 4 === u.length && u.splice(3, 1), c.recentCustomStatuses = [i, ...u]
+                },
+                CLEAR_HANG_STATUS: function() {
+                    l = null, i = null
+                }
+            })
+        },
+        824563: function(t, e, n) {
+            "use strict";
+            n.r(e), n.d(e, {
+                default: function() {
+                    return P
+                }
+            }), n("222007"), n("424973");
+            var l = n("714617"),
+                i = n.n(l),
+                u = n("917351"),
+                a = n.n(u),
+                s = n("446674"),
+                r = n("913144"),
+                d = n("309570"),
+                c = n("32346"),
+                o = n("271938"),
+                f = n("697218"),
+                _ = n("49111");
+            let g = Object.freeze([]),
+                E = {},
+                S = {},
+                v = {},
+                p = {},
+                I = {};
+
+            function T(t, e) {
+                let n = E[t];
+                return null != n ? n[e] : null
+            }
+            let h = t => {
+                    switch (t.type) {
+                        case _.ActivityTypes.CUSTOM_STATUS:
+                            return 4;
+                        case _.ActivityTypes.COMPETING:
+                            return 3;
+                        case _.ActivityTypes.STREAMING:
+                            return 2;
+                        case _.ActivityTypes.PLAYING:
+                            return 1;
+                        default:
+                            return 0
+                    }
+                },
+                A = t => (0, d.default)(t) ? 1 : 0;
+
+            function m(t, e) {
+                var n, l, i, u, a;
+                return n = t, h(e) - h(n) || (l = t, A(e) - A(l)) || (i = t, (null !== (u = e.created_at) && void 0 !== u ? u : 0) - (null !== (a = i.created_at) && void 0 !== a ? a : 0))
+            }
+
+            function y(t) {
+                if (delete S[t], delete v[t], delete p[t], null == E[t]) return;
+                let [e] = a.sortBy(E[t], t => -t.timestamp);
+                e.status !== _.StatusTypes.OFFLINE ? (S[t] = e.status, v[t] = e.activities, null != e.clientStatus && (p[t] = e.clientStatus)) : a.every(E[t], t => t.status === _.StatusTypes.OFFLINE) && delete E[t]
+            }
+
+            function N(t) {
+                let e = E[t];
+                if (null == e) return;
+                let n = a.maxBy(Object.values(e), t => t.timestamp);
+                n.status !== _.StatusTypes.OFFLINE && (S[t] = n.status, v[t] = n.activities, null != n.clientStatus && (p[t] = n.clientStatus))
+            }
+
+            function C(t) {
+                let {
+                    guildId: e,
+                    userId: n,
+                    status: l,
+                    clientStatus: u,
+                    activities: a
+                } = t;
+                if (n === o.default.getId()) return !1;
+                let s = E[n];
+                if (null == s) {
+                    if (l === _.StatusTypes.OFFLINE) return !1;
+                    s = E[n] = {}
+                }
+                if (l === _.StatusTypes.OFFLINE) s[e] = {
+                    status: l,
+                    clientStatus: u,
+                    activities: g,
+                    timestamp: Date.now()
+                };
+                else {
+                    let t = a.length > 1 ? [...a].sort(m) : a,
+                        n = s[e];
+                    a = null != n && i(n.activities, t) ? n.activities : t, s[e] = {
+                        status: l,
+                        clientStatus: u,
+                        activities: a,
+                        timestamp: Date.now()
+                    }
+                }
+                return delete I[n], y(n), !0
+            }
+
+            function O(t) {
+                let {
+                    guildId: e,
+                    userId: n,
+                    status: l,
+                    clientStatus: i,
+                    activities: u,
+                    timestamp: a
+                } = t;
+                if (n === o.default.getId()) return;
+                let s = E[n];
+                if (null == s) {
+                    if (l === _.StatusTypes.OFFLINE) return;
+                    s = E[n] = {}
+                }
+                if (l === _.StatusTypes.OFFLINE) s[e] = {
+                    status: l,
+                    clientStatus: i,
+                    activities: g,
+                    timestamp: Date.now()
+                };
+                else {
+                    let t = u.length > 1 ? [...u].sort(m) : u;
+                    s[e] = {
+                        status: l,
+                        clientStatus: i,
+                        activities: t,
+                        timestamp: a
+                    }
+                }
+            }
+
+            function L(t, e) {
+                if (e === o.default.getId()) return !1;
+                let n = E[e];
+                if (null == n || null == n[t]) return !1;
+                delete n[t], 0 === Object.keys(n).length && delete E[e], y(e)
+            }
+
+            function M(t) {
+                for (let e of Object.keys(E)) L(t, e)
+            }
+            class U extends s.default.Store {
+                initialize() {
+                    this.waitFor(o.default, c.default)
+                }
+                setCurrentUserOnConnectionOpen(t, e) {
+                    S[o.default.getId()] = t, v[o.default.getId()] = e
+                }
+                getStatus(t) {
+                    var e, n;
+                    let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                        i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.StatusTypes.OFFLINE,
+                        u = f.default.getUser(t);
+                    if (null != u && u.hasFlag(_.UserFlags.BOT_HTTP_INTERACTIONS) && (i = _.StatusTypes.UNKNOWN), null == u ? void 0 : u.isClyde()) return _.StatusTypes.ONLINE;
+                    if (null == l) return null !== (e = S[t]) && void 0 !== e ? e : i;
+                    let a = T(t, l);
+                    return null !== (n = null == a ? void 0 : a.status) && void 0 !== n ? n : i
+                }
+                getActivities(t) {
+                    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+                    if (null == e) {
+                        var n;
+                        return null !== (n = v[t]) && void 0 !== n ? n : g
+                    }
+                    let l = T(t, e);
+                    return null == l || null == l.activities ? g : l.activities
+                }
+                getPrimaryActivity(t) {
+                    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                        n = this.getActivities(t, e);
+                    return n[0]
+                }
+                getAllApplicationActivities(t) {
+                    let e = [];
+                    for (let n of Object.keys(v)) {
+                        let l = v[n];
+                        for (let i of l) i.application_id === t && e.push({
+                            userId: n,
+                            activity: i
+                        })
+                    }
+                    return e
+                }
+                getApplicationActivity(t, e) {
+                    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+                    return this.findActivity(t, t => t.application_id === e, n)
+                }
+                findActivity(t, e) {
+                    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+                    return this.getActivities(t, n).find(e)
+                }
+                getActivityMetadata(t) {
+                    return I[t]
+                }
+                getUserIds() {
+                    return Object.keys(v)
+                }
+                isMobileOnline(t) {
+                    let e = p[t];
+                    return null != e && e[_.ClientTypes.MOBILE] === _.StatusTypes.ONLINE && e[_.ClientTypes.DESKTOP] !== _.StatusTypes.ONLINE
+                }
+                getState() {
+                    return {
+                        presencesForGuilds: E,
+                        statuses: S,
+                        activities: v,
+                        activityMetadata: I,
+                        clientStatuses: p
+                    }
+                }
+            }
+            U.displayName = "PresenceStore";
+            var P = new U(r.default, {
+                CONNECTION_OPEN: function() {
+                    return !0
+                },
+                CONNECTION_OPEN_SUPPLEMENTAL: function(t) {
+                    let {
+                        guilds: e,
+                        presences: n
+                    } = t, l = o.default.getId();
+                    E = {}, I = {}, S = {
+                        [l]: S[l]
+                    }, v = {
+                        [l]: v[l]
+                    }, p = {
+                        [l]: {}
+                    };
+                    let i = new Set,
+                        u = Date.now();
+                    e.forEach(t => {
+                        t.presences.forEach(e => {
+                            let {
+                                user: n,
+                                status: l,
+                                clientStatus: a,
+                                activities: s
+                            } = e;
+                            O({
+                                guildId: t.id,
+                                userId: n.id,
+                                status: l,
+                                clientStatus: a,
+                                activities: s,
+                                timestamp: u
+                            }), i.add(n.id)
+                        })
+                    }), n.forEach(t => {
+                        let {
+                            user: e,
+                            status: n,
+                            clientStatus: l,
+                            activities: a
+                        } = t;
+                        null != e && (O({
+                            guildId: _.ME,
+                            userId: e.id,
+                            status: n,
+                            clientStatus: l,
+                            activities: a,
+                            timestamp: u
+                        }), i.add(e.id))
+                    }), i.delete(l), i.forEach(N)
+                },
+                OVERLAY_INITIALIZE: function(t) {
+                    let {
+                        presences: e
+                    } = t;
+                    E = e.presencesForGuilds, S = e.statuses, v = e.activities, I = e.activityMetadata
+                },
+                GUILD_CREATE: function(t) {
+                    let {
+                        guild: e
+                    } = t;
+                    e.presences.forEach(t => {
+                        let {
+                            user: n,
+                            status: l,
+                            clientStatus: i,
+                            activities: u
+                        } = t;
+                        C({
+                            guildId: e.id,
+                            userId: n.id,
+                            status: l,
+                            clientStatus: i,
+                            activities: u
                         })
                     })
                 },
-                I = e => {
+                GUILD_DELETE: function(t) {
                     let {
-                        config: t,
-                        useThumbnail: n,
-                        bannerAdjustment: i = 0,
-                        noBorderRadius: l
-                    } = e, {
-                        reducedMotionSrc: u,
-                        thumbnailPreviewSrc: o,
-                        accessibilityLabel: a
+                        guild: e
                     } = t;
-                    return (0, r.jsx)("div", {
-                        className: S.profileEffects,
-                        children: (0, r.jsx)("div", {
-                            className: l ? S.innerNoRadius : S.inner,
-                            children: (0, r.jsx)("img", {
-                                src: n ? o : u,
-                                className: S.effect,
-                                style: {
-                                    top: 0 - i
-                                },
-                                alt: a
-                            })
+                    M(e.id)
+                },
+                GUILD_MEMBER_REMOVE: function(t) {
+                    let {
+                        guildId: e,
+                        user: n
+                    } = t;
+                    return L(e, n.id)
+                },
+                PRESENCE_UPDATES: function(t) {
+                    let {
+                        updates: e
+                    } = t;
+                    return e.map(t => {
+                        let {
+                            guildId: e,
+                            user: n,
+                            status: l,
+                            clientStatus: i,
+                            activities: u
+                        } = t;
+                        return C({
+                            guildId: null != e ? e : _.ME,
+                            userId: n.id,
+                            status: l,
+                            clientStatus: i,
+                            activities: u
+                        })
+                    }).some(t => t)
+                },
+                PRESENCES_REPLACE: function(t) {
+                    let {
+                        presences: e
+                    } = t;
+                    M(_.ME), e.forEach(t => {
+                        let {
+                            user: e,
+                            status: n,
+                            clientStatus: l,
+                            activities: i
+                        } = t;
+                        null != e && C({
+                            guildId: _.ME,
+                            userId: e.id,
+                            status: n,
+                            clientStatus: l,
+                            activities: i
                         })
                     })
-                };
-            var C = e => {
-                var t;
-                let n = (0, c.useCanUseProfileEffects)({
-                        location: "WebWrappedProfileEffect"
-                    }),
-                    l = null != e.profileEffectID ? null === (t = s.default.getProfileEffectById(e.profileEffectID)) || void 0 === t ? void 0 : t.config : null,
-                    u = (0, o.useStateFromStores)([a.default], () => a.default.useReducedMotion),
-                    [f, d] = i.useState(!1);
-                return n && null != l ? u || !1 === e.autoPlay && !1 === e.isHovering ? (0, r.jsx)(I, {
-                    useThumbnail: e.useThumbnail,
-                    config: l,
-                    bannerAdjustment: e.bannerAdjustment,
-                    noBorderRadius: e.noBorderRadius
-                }) : f ? (0, r.jsx)(y, {
-                    profileEffectConfig: l,
-                    ...e
-                }) : (0, r.jsx)(p.default, {
-                    profileEffectConfig: l,
-                    onReady: () => {
-                        d(!0)
-                    }
-                }) : null
-            }
-        },
-        465523: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return l
-                }
-            });
-            var r = n("37983");
-            n("884691");
-            var i = n("833395"),
-                l = e => {
+                },
+                ACTIVITY_METADATA_UPDATE: function(t) {
                     let {
-                        profileEffectConfig: t,
-                        onReady: n
-                    } = e, {
-                        pendingRef: l,
-                        setPending: u
-                    } = (0, i.default)(t.effects, n);
-                    return (0, r.jsx)("div", {
-                        children: t.effects.map(e => (0, r.jsx)("img", {
-                            src: e.src,
-                            alt: "Preload Profile Effect Asset",
-                            "aria-hidden": !0,
-                            style: {
-                                opacity: 0,
-                                position: "absolute"
-                            },
-                            onLoad: () => {
-                                u(l.current - 1), l.current = l.current - 1
-                            }
-                        }, e.src))
+                        userId: e,
+                        metadata: n
+                    } = t;
+                    return I[e] = n, !1
+                },
+                THREAD_MEMBER_LIST_UPDATE: function(t) {
+                    let {
+                        guildId: e,
+                        members: n
+                    } = t;
+                    n.forEach(t => {
+                        null != t.presence && C({
+                            guildId: e,
+                            userId: t.user_id,
+                            status: t.presence.status,
+                            clientStatus: t.presence.clientStatus,
+                            activities: t.presence.activities
+                        })
                     })
-                }
-        },
-        417675: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return l
-                }
-            });
-            var r = n("884691");
-            let i = e => {
-                e.effects.forEach(e => {
+                },
+                THREAD_MEMBERS_UPDATE: function(t) {
                     let {
-                        src: t
-                    } = e, n = document.createElement("link");
-                    n.rel = "prefetch", n.href = t, document.body.appendChild(n)
-                })
-            };
-            var l = e => {
-                r.useEffect(() => {
-                    i(e)
-                }, [e])
-            }
+                        guildId: e,
+                        addedMembers: n
+                    } = t;
+                    null == n || n.forEach(t => {
+                        null != t.presence && C({
+                            guildId: e,
+                            userId: t.userId,
+                            status: t.presence.status,
+                            clientStatus: t.presence.clientStatus,
+                            activities: t.presence.activities
+                        })
+                    })
+                },
+                SELF_PRESENCE_STORE_UPDATE: function(t) {
+                    let e = o.default.getId();
+                    if (S[e] === t.status && v[e] === t.activities) return !1;
+                    S[e] = t.status, v[e] = t.activities, delete I[e]
+                }
+            })
         }
     }
 ]);
