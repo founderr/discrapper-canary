@@ -30,16 +30,16 @@
                 r = Object.prototype,
                 i = r.hasOwnProperty,
                 o = r.toString,
-                a = Symbol ? Symbol.toStringTag : void 0;
+                u = Symbol ? Symbol.toStringTag : void 0;
             t.exports = function(t) {
-                var e = i.call(t, a),
-                    n = t[a];
+                var e = i.call(t, u),
+                    n = t[u];
                 try {
-                    t[a] = void 0;
+                    t[u] = void 0;
                     var r = !0
                 } catch (t) {}
-                var u = o.call(t);
-                return r && (e ? t[a] = n : delete t[a]), u
+                var a = o.call(t);
+                return r && (e ? t[u] = n : delete t[u]), a
             }
         },
         19797: function(t, e, n) {
@@ -67,21 +67,21 @@
             var r = n("952133"),
                 i = n("645942"),
                 o = n("261497"),
-                a = Math.max,
-                u = Math.min;
+                u = Math.max,
+                a = Math.min;
             t.exports = function(t, e, n) {
                 var c, l, s, f, d, p, E = 0,
                     S = !1,
                     v = !1,
-                    _ = !0;
+                    T = !0;
                 if ("function" != typeof t) throw TypeError("Expected a function");
 
-                function T(e) {
+                function _(e) {
                     var n = c,
                         r = l;
                     return c = l = void 0, E = e, f = t.apply(r, n)
                 }
-                e = o(e) || 0, r(n) && (S = !!n.leading, s = (v = "maxWait" in n) ? a(o(n.maxWait) || 0, e) : s, _ = "trailing" in n ? !!n.trailing : _);
+                e = o(e) || 0, r(n) && (S = !!n.leading, s = (v = "maxWait" in n) ? u(o(n.maxWait) || 0, e) : s, T = "trailing" in n ? !!n.trailing : T);
 
                 function m(t) {
                     var n = t - p,
@@ -89,33 +89,33 @@
                     return void 0 === p || n >= e || n < 0 || v && r >= s
                 }
 
-                function P() {
-                    var t, n, r, o, a = i();
-                    if (m(a)) return x(a);
-                    d = setTimeout(P, (n = (t = a) - p, r = t - E, o = e - n, v ? u(o, s - r) : o))
+                function x() {
+                    var t, n, r, o, u = i();
+                    if (m(u)) return P(u);
+                    d = setTimeout(x, (n = (t = u) - p, r = t - E, o = e - n, v ? a(o, s - r) : o))
                 }
 
-                function x(t) {
-                    return (d = void 0, _ && c) ? T(t) : (c = l = void 0, f)
+                function P(t) {
+                    return (d = void 0, T && c) ? _(t) : (c = l = void 0, f)
                 }
 
-                function N() {
+                function I() {
                     var t, n = i(),
                         r = m(n);
                     if (c = arguments, l = this, p = n, r) {
                         if (void 0 === d) {
                             ;
-                            return E = t = p, d = setTimeout(P, e), S ? T(t) : f
+                            return E = t = p, d = setTimeout(x, e), S ? _(t) : f
                         }
-                        if (v) return clearTimeout(d), d = setTimeout(P, e), T(p)
+                        if (v) return clearTimeout(d), d = setTimeout(x, e), _(p)
                     }
-                    return void 0 === d && (d = setTimeout(P, e)), f
+                    return void 0 === d && (d = setTimeout(x, e)), f
                 }
-                return N.cancel = function() {
+                return I.cancel = function() {
                     void 0 !== d && clearTimeout(d), E = 0, c = p = l = d = void 0
-                }, N.flush = function() {
-                    return void 0 === d ? f : x(i())
-                }, N
+                }, I.flush = function() {
+                    return void 0 === d ? f : P(i())
+                }, I
             }
         },
         952133: function(t, e, n) {
@@ -148,12 +148,12 @@
                 i = n("952133");
             t.exports = function(t, e, n) {
                 var o = !0,
-                    a = !0;
+                    u = !0;
                 if ("function" != typeof t) throw TypeError("Expected a function");
-                return i(n) && (o = "leading" in n ? !!n.leading : o, a = "trailing" in n ? !!n.trailing : a), r(t, e, {
+                return i(n) && (o = "leading" in n ? !!n.leading : o, u = "trailing" in n ? !!n.trailing : u), r(t, e, {
                     leading: o,
                     maxWait: e,
-                    trailing: a
+                    trailing: u
                 })
             }
         },
@@ -161,14 +161,14 @@
             var r = n("306551"),
                 i = n("952133"),
                 o = n("501870"),
-                a = 0 / 0,
-                u = /^[-+]0x[0-9a-f]+$/i,
+                u = 0 / 0,
+                a = /^[-+]0x[0-9a-f]+$/i,
                 c = /^0b[01]+$/i,
                 l = /^0o[0-7]+$/i,
                 s = parseInt;
             t.exports = function(t) {
                 if ("number" == typeof t) return t;
-                if (o(t)) return a;
+                if (o(t)) return u;
                 if (i(t)) {
                     var e = "function" == typeof t.valueOf ? t.valueOf() : t;
                     t = i(e) ? e + "" : e
@@ -176,31 +176,31 @@
                 if ("string" != typeof t) return 0 === t ? t : +t;
                 t = r(t);
                 var n = c.test(t);
-                return n || l.test(t) ? s(t.slice(2), n ? 2 : 8) : u.test(t) ? a : +t
+                return n || l.test(t) ? s(t.slice(2), n ? 2 : 8) : a.test(t) ? u : +t
             }
         },
         87657: function(t, e, n) {
             "use strict";
             n.r(e), n.d(e, {
                 default: function() {
-                    return u
+                    return a
                 }
             });
             var r = n("37983"),
                 i = n("884691"),
                 o = n("77078"),
-                a = n("390236"),
-                u = i.memo(function(t) {
-                    var e, n, u, c;
+                u = n("390236"),
+                a = i.memo(function(t) {
+                    var e, n, a, c;
                     let {
                         user: l,
                         size: s = o.AvatarSizes.SIZE_32,
                         animate: f = !1,
                         "aria-hidden": d = !1,
                         ...p
-                    } = t, E = i.useContext(a.default);
+                    } = t, E = i.useContext(u.default);
                     return (0, r.jsx)(o.Avatar, {
-                        src: (e = l, n = (0, o.getAvatarSize)(s), u = f, c = E, e.getAvatarURL(c, n, u)),
+                        src: (e = l, n = (0, o.getAvatarSize)(s), a = f, c = E, e.getAvatarURL(c, n, a)),
                         size: s,
                         "aria-label": d ? void 0 : l.username,
                         "aria-hidden": d,
@@ -219,8 +219,8 @@
             n("884691");
             var i = n("627445"),
                 o = n.n(i),
-                a = n("77078"),
-                u = n("642906"),
+                u = n("77078"),
+                a = n("642906"),
                 c = n("367767"),
                 l = n("650484"),
                 s = n("782340"),
@@ -233,7 +233,7 @@
                     skusById: n,
                     selectedSkuId: i,
                     application: d
-                } = (0, u.usePaymentContext)();
+                } = (0, a.usePaymentContext)();
                 o(null != i, "Expected selectedSkuId"), o(null != d, "Expected application");
                 let p = n[i];
                 o(null != p, "Expected sku");
@@ -244,16 +244,16 @@
                 return (0, r.jsxs)(l.PaymentPortalBody, {
                     children: [(0, r.jsx)(c.default, {}), (0, r.jsxs)("div", {
                         className: f.confirmation,
-                        children: [(0, r.jsx)(a.Heading, {
+                        children: [(0, r.jsx)(u.Heading, {
                             variant: "heading-xxl/bold",
                             className: f.confirmationHeader,
                             children: "Success!"
-                        }), (0, r.jsx)(a.Text, {
+                        }), (0, r.jsx)(u.Text, {
                             variant: "text-md/normal",
                             children: E
                         }), (0, r.jsx)("div", {
                             className: f.divider
-                        }), (0, r.jsx)(a.Button, {
+                        }), (0, r.jsx)(u.Button, {
                             onClick: e,
                             children: s.default.Messages.CLOSE
                         })]
@@ -274,18 +274,18 @@
                     return v
                 },
                 ONE_TIME_PAYMENT_CONFIRM_STEP_CONFIG: function() {
-                    return _
+                    return T
                 },
                 SHARED_STEP_CONFIGS: function() {
-                    return T
+                    return _
                 }
             });
             var r = n("37983");
             n("884691");
             var i = n("357957"),
                 o = n("85336"),
-                a = n("262683"),
-                u = n("946359"),
+                u = n("262683"),
+                a = n("946359"),
                 c = n("724269"),
                 l = n("7127"),
                 s = n("99836"),
@@ -299,7 +299,7 @@
                 p = {
                     key: o.Step.ADD_PAYMENT_STEPS,
                     renderStep: t => (0, r.jsx)(r.Fragment, {
-                        children: (0, r.jsx)(a.PaymentModalAddPaymentStep, {
+                        children: (0, r.jsx)(u.PaymentModalAddPaymentStep, {
                             ...t,
                             breadcrumbSteps: [o.Step.ADD_PAYMENT_STEPS, o.Step.REVIEW, o.Step.CONFIRM],
                             onReturn: () => {
@@ -320,7 +320,7 @@
                 },
                 S = {
                     key: o.Step.AWAITING_AUTHENTICATION,
-                    renderStep: () => (0, r.jsx)(u.default, {})
+                    renderStep: () => (0, r.jsx)(a.default, {})
                 },
                 v = {
                     key: o.Step.REVIEW,
@@ -328,45 +328,64 @@
                         ...t
                     })
                 },
-                _ = {
+                T = {
                     key: o.Step.CONFIRM,
                     renderStep: t => (0, r.jsx)(l.PaymentModalConfirmStep, {
                         ...t
                     })
                 },
-                T = [E, S]
+                _ = [E, S]
         },
         217796: function(t, e, n) {
             "use strict";
             n.r(e), n.d(e, {
                 OneTimePaymentPredicateStep: function() {
-                    return l
+                    return p
                 }
             }), n("222007");
             var r = n("37983"),
                 i = n("884691"),
-                o = n("245187"),
-                a = n("642906"),
-                u = n("85336"),
-                c = n("628738");
+                o = n("627445"),
+                u = n.n(o),
+                a = n("245187"),
+                c = n("635357"),
+                l = n("642906"),
+                s = n("85336"),
+                f = n("628738"),
+                d = n("49111");
 
-            function l(t) {
+            function p(t) {
                 let {
                     handleStepChange: e,
                     handleClose: n
                 } = t, {
-                    blockedPayments: l,
-                    hasFetchedSkus: s,
-                    paymentSources: f,
-                    hasFetchedPaymentSources: d,
-                    application: p
-                } = (0, a.usePaymentContext)(), [E, S] = i.useState(!0);
+                    blockedPayments: o,
+                    hasFetchedSkus: p,
+                    paymentSources: E,
+                    hasFetchedPaymentSources: S,
+                    application: v,
+                    skusById: T,
+                    selectedSkuId: _
+                } = (0, l.usePaymentContext)(), {
+                    isGift: m
+                } = (0, c.useGiftContext)(), [x, P] = i.useState(!0);
                 return (i.useEffect(() => {
-                    let t = null != p;
-                    s && d && t && S(!1)
-                }, [s, d, p]), i.useEffect(() => {
-                    !E && !l && (0 === Object.keys(f).length ? e(u.Step.ADD_PAYMENT_STEPS) : e(u.Step.REVIEW))
-                }, [E, l, e, f]), E) ? (0, r.jsx)(c.default, {}) : l ? (0, r.jsx)(o.BlockedPaymentsContentModal, {
+                    let t = null != v;
+                    p && S && t && P(!1)
+                }, [p, S, v]), i.useEffect(() => {
+                    if (x || o) return;
+                    u(null != _, "Expected selectedSkuId");
+                    let t = T[_];
+                    if (m && (null == t ? void 0 : t.productLine) === d.SKUProductLines.COLLECTIBLES) {
+                        e(s.Step.GIFT_CUSTOMIZATION);
+                        return
+                    }
+                    if (0 === Object.keys(E).length) {
+                        e(s.Step.ADD_PAYMENT_STEPS);
+                        return
+                    }
+                    e(s.Step.REVIEW)
+                }, [x, o, e, E, m, T, _]), x) ? (0, r.jsx)(f.default, {}) : o ? (0, r.jsx)(a.BlockedPaymentsContentModal, {
                     onClose: n
                 }) : null
             }
@@ -385,8 +404,8 @@
             n("884691");
             var i = n("812204"),
                 o = n("685665"),
-                a = n("635357"),
-                u = n("642906"),
+                u = n("635357"),
+                a = n("642906"),
                 c = n("385179"),
                 l = n("292215"),
                 s = n("843455");
@@ -396,16 +415,16 @@
                     onClose: e,
                     onComplete: n,
                     transitionState: i,
-                    loadId: a,
+                    loadId: u,
                     applicationId: l,
                     skuId: s
-                } = t, {} = (0, u.usePaymentContext)(), {
+                } = t, {} = (0, a.usePaymentContext)(), {
                     analyticsLocations: f
                 } = (0, o.default)();
                 return (0, r.jsx)(c.PaymentModal, {
                     onClose: e,
                     onComplete: n,
-                    loadId: a,
+                    loadId: u,
                     applicationId: l,
                     skuId: s,
                     initialPlanId: null,
@@ -424,13 +443,13 @@
                     AnalyticsLocationProvider: l
                 } = (0, o.default)(c, i.default.PREMIUM_PAYMENT_MODAL);
                 return (0, r.jsx)(l, {
-                    children: (0, r.jsx)(u.PaymentContextProvider, {
+                    children: (0, r.jsx)(a.PaymentContextProvider, {
                         stepConfigs: d,
                         applicationId: e,
                         skuIDs: [n],
                         activeSubscription: null,
                         purchaseType: s.PurchaseTypes.ONE_TIME,
-                        children: (0, r.jsx)(a.GiftContextProvider, {
+                        children: (0, r.jsx)(u.GiftContextProvider, {
                             children: (0, r.jsx)(f, {
                                 ...t
                             })
@@ -449,8 +468,8 @@
             var r = n("37983"),
                 i = n("884691"),
                 o = n("446674"),
-                a = n("206230"),
-                u = n("491605"),
+                u = n("206230"),
+                a = n("491605"),
                 c = n("210721"),
                 l = n("78345");
 
@@ -461,34 +480,34 @@
                     shouldAnimate: s = !0,
                     defaultAnimationState: f,
                     idleAnimationState: d
-                } = t, p = (0, o.useStateFromStores)([a.default], () => a.default.useReducedMotion), [E, S] = i.useState(f), v = i.useRef((0, c.getGiftAnimationData)(e, E)), [_, T] = i.useState(null == d), [m, P] = i.useState(!1), [x, N] = i.useState(-1), y = () => {
-                    v.current = (0, c.getGiftAnimationData)(e, E), N(t => t + 1)
-                }, I = () => {
-                    T(!1), P(!0), N(-1), S(f)
+                } = t, p = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), [E, S] = i.useState(f), v = i.useRef((0, c.getGiftAnimationData)(e, E)), [T, _] = i.useState(null == d), [m, x] = i.useState(!1), [P, I] = i.useState(-1), N = () => {
+                    v.current = (0, c.getGiftAnimationData)(e, E), I(t => t + 1)
+                }, y = () => {
+                    _(!1), x(!0), I(-1), S(f)
                 };
                 i.useEffect(() => {
                     null == d && S(f)
                 }, [d, f]), i.useEffect(() => {
-                    if (null != d && x >= 0) {
-                        I();
+                    if (null != d && P >= 0) {
+                        y();
                         return
                     }
-                    y()
+                    N()
                 }, [e, d]), i.useEffect(() => {
-                    (!m || null == d) && y()
+                    (!m || null == d) && N()
                 }, [E]), i.useEffect(() => {
-                    m && (T(null == d), P(!1), y())
+                    m && (_(null == d), x(!1), N())
                 }, [m]);
                 if (!l.PremiumGiftStyles.hasOwnProperty(e)) throw Error("Unexpected giftStyle ".concat(e));
-                return (0, r.jsx)(u.default, {
+                return (0, r.jsx)(a.default, {
                     importData: v.current,
                     shouldAnimate: !p && s,
                     className: n,
-                    versionKey: x,
+                    versionKey: P,
                     onComplete: null != d ? () => {
-                        null != d && (S(d), T(!0))
+                        null != d && (S(d), _(!0))
                     } : void 0,
-                    loop: _
+                    loop: T
                 })
             }
         }

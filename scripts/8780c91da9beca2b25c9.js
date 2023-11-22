@@ -866,7 +866,7 @@
                     return N
                 },
                 canRetryInteractionData: function() {
-                    return m
+                    return v
                 }
             }), n("222007");
             var r, u, l = n("249654"),
@@ -974,7 +974,7 @@
                 else if (i && e.state === h.MessageStates.SEND_FAILED) return 2
             };
 
-            function m(e) {
+            function v(e) {
                 let t = e.options;
                 for (;
                     (null == t ? void 0 : t.length) === 1 && (t[0].type === o.ApplicationCommandOptionType.SUB_COMMAND_GROUP || t[0].type === o.ApplicationCommandOptionType.SUB_COMMAND);) t = t[0].options;
@@ -1006,33 +1006,52 @@
             "use strict";
             n.r(t), n.d(t, {
                 OneTimePaymentPredicateStep: function() {
-                    return o
+                    return p
                 }
             }), n("222007");
             var r = n("37983"),
                 u = n("884691"),
-                l = n("245187"),
-                a = n("642906"),
-                s = n("85336"),
-                i = n("628738");
+                l = n("627445"),
+                a = n.n(l),
+                s = n("245187"),
+                i = n("635357"),
+                o = n("642906"),
+                c = n("85336"),
+                d = n("628738"),
+                f = n("49111");
 
-            function o(e) {
+            function p(e) {
                 let {
                     handleStepChange: t,
                     handleClose: n
                 } = e, {
-                    blockedPayments: o,
-                    hasFetchedSkus: c,
-                    paymentSources: d,
-                    hasFetchedPaymentSources: f,
-                    application: p
-                } = (0, a.usePaymentContext)(), [E, I] = u.useState(!0);
+                    blockedPayments: l,
+                    hasFetchedSkus: p,
+                    paymentSources: E,
+                    hasFetchedPaymentSources: I,
+                    application: h,
+                    skusById: T,
+                    selectedSkuId: S
+                } = (0, o.usePaymentContext)(), {
+                    isGift: A
+                } = (0, i.useGiftContext)(), [C, N] = u.useState(!0);
                 return (u.useEffect(() => {
-                    let e = null != p;
-                    c && f && e && I(!1)
-                }, [c, f, p]), u.useEffect(() => {
-                    !E && !o && (0 === Object.keys(d).length ? t(s.Step.ADD_PAYMENT_STEPS) : t(s.Step.REVIEW))
-                }, [E, o, t, d]), E) ? (0, r.jsx)(i.default, {}) : o ? (0, r.jsx)(l.BlockedPaymentsContentModal, {
+                    let e = null != h;
+                    p && I && e && N(!1)
+                }, [p, I, h]), u.useEffect(() => {
+                    if (C || l) return;
+                    a(null != S, "Expected selectedSkuId");
+                    let e = T[S];
+                    if (A && (null == e ? void 0 : e.productLine) === f.SKUProductLines.COLLECTIBLES) {
+                        t(c.Step.GIFT_CUSTOMIZATION);
+                        return
+                    }
+                    if (0 === Object.keys(E).length) {
+                        t(c.Step.ADD_PAYMENT_STEPS);
+                        return
+                    }
+                    t(c.Step.REVIEW)
+                }, [C, l, t, E, A, T, S]), C) ? (0, r.jsx)(d.default, {}) : l ? (0, r.jsx)(s.BlockedPaymentsContentModal, {
                     onClose: n
                 }) : null
             }
@@ -1059,10 +1078,10 @@
                     shouldAnimate: c = !0,
                     defaultAnimationState: d,
                     idleAnimationState: f
-                } = e, p = (0, l.useStateFromStores)([a.default], () => a.default.useReducedMotion), [E, I] = u.useState(d), h = u.useRef((0, i.getGiftAnimationData)(t, E)), [T, S] = u.useState(null == f), [A, C] = u.useState(!1), [N, m] = u.useState(-1), v = () => {
-                    h.current = (0, i.getGiftAnimationData)(t, E), m(e => e + 1)
+                } = e, p = (0, l.useStateFromStores)([a.default], () => a.default.useReducedMotion), [E, I] = u.useState(d), h = u.useRef((0, i.getGiftAnimationData)(t, E)), [T, S] = u.useState(null == f), [A, C] = u.useState(!1), [N, v] = u.useState(-1), m = () => {
+                    h.current = (0, i.getGiftAnimationData)(t, E), v(e => e + 1)
                 }, _ = () => {
-                    S(!1), C(!0), m(-1), I(d)
+                    S(!1), C(!0), v(-1), I(d)
                 };
                 u.useEffect(() => {
                     null == f && I(d)
@@ -1071,11 +1090,11 @@
                         _();
                         return
                     }
-                    v()
+                    m()
                 }, [t, f]), u.useEffect(() => {
-                    (!A || null == f) && v()
+                    (!A || null == f) && m()
                 }, [E]), u.useEffect(() => {
-                    A && (S(null == f), C(!1), v())
+                    A && (S(null == f), C(!1), m())
                 }, [A]);
                 if (!o.PremiumGiftStyles.hasOwnProperty(t)) throw Error("Unexpected giftStyle ".concat(t));
                 return (0, r.jsx)(s.default, {

@@ -30,14 +30,14 @@
                         isGift: T,
                         isEmbeddedIAP: L,
                         renewalInvoice: A,
-                        paymentSourceType: f,
-                        hide: M,
+                        paymentSourceType: M,
+                        hide: f,
                         purchaseType: N,
                         productLine: S,
                         basePrice: R,
                         currentSubscription: h
                     } = e;
-                    if (M) return null;
+                    if (f) return null;
                     let P = null == e.planGroup ? [] : e.planGroup;
                     if (null != A) {
                         let e = i.default.getIntervalForInvoice(A);
@@ -52,7 +52,7 @@
                             isPrepaidPaymentSource: !1
                         }),
                         U = "",
-                        m = "";
+                        g = "";
                     if (L) {
                         if (null != I && (null == A ? void 0 : A.subscriptionPeriodEnd) != null) U = E.default.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_RATE_AND_RENEWAL.format({
                             rate: I,
@@ -68,7 +68,7 @@
                                 U = E.default.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_YEARLY;
                                 break;
                             case void 0:
-                                m = E.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
+                                g = E.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
                                     primaryText: C,
                                     paidURL: o.MarketingURLs.PAID_TERMS
                                 }), U = E.default.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE.format({});
@@ -76,11 +76,11 @@
                             default:
                                 throw Error("Unexpected interval: ".concat(t))
                         }
-                    } else if (N === o.PurchaseTypes.ONE_TIME) m = E.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
+                    } else if (N === o.PurchaseTypes.ONE_TIME) g = E.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
                         primaryText: C,
                         paidURL: o.MarketingURLs.PAID_TERMS
-                    }), U = S === o.SKUProductLines.COLLECTIBLES ? E.default.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT : E.default.Messages.ONE_TIME_PURCHASE_FINE_PRINT;
-                    else if (null == p || T) switch (T && (m = E.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
+                    }), U = S === o.SKUProductLines.COLLECTIBLES ? T ? E.default.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_GIFT_PAYMENT : E.default.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT : E.default.Messages.ONE_TIME_PURCHASE_FINE_PRINT;
+                    else if (null == p || T) switch (T && (g = E.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
                             primaryText: C,
                             paidURL: o.MarketingURLs.PAID_TERMS
                         })), t) {
@@ -130,18 +130,18 @@
                         })
                     }
                     return (0, a.jsxs)(a.Fragment, {
-                        children: ["" !== m && (0, a.jsxs)("div", {
+                        children: ["" !== g && (0, a.jsxs)("div", {
                             children: [(0, a.jsx)("div", {
-                                children: m
+                                children: g
                             }), (0, a.jsx)("div", {
                                 className: _.divider
                             })]
                         }), "" !== U && (0, a.jsx)("div", {
                             children: U
-                        }), f === o.PaymentSourceTypes.PAYSAFE_CARD && (0, a.jsx)("div", {
+                        }), M === o.PaymentSourceTypes.PAYSAFE_CARD && (0, a.jsx)("div", {
                             className: _.paymentSourceNoticeCopy,
                             children: E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD
-                        }), f === o.PaymentSourceTypes.SOFORT && (0, a.jsxs)("div", {
+                        }), M === o.PaymentSourceTypes.SOFORT && (0, a.jsxs)("div", {
                             className: _.paymentSourceNoticeCopy,
                             children: [E.default.Messages.SOFORT_MANDATE_AGREEMENT, " "]
                         })]
@@ -152,7 +152,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return f
+                    return M
                 }
             }), s("70102"), s("222007");
             var a = s("37983"),
@@ -198,8 +198,8 @@
                         checkboxClassname: d,
                         checkboxLabelClassname: p,
                         finePrint: A,
-                        showPricingLink: f,
-                        showWithdrawalWaiver: M,
+                        showPricingLink: M,
+                        showWithdrawalWaiver: f,
                         isTrial: N,
                         isDiscount: S,
                         subscriptionPlan: R,
@@ -208,9 +208,9 @@
                         hasAcceptedEULA: P,
                         hasAcceptedWithdrawalWaiver: C
                     } = this.state;
-                    return (u(!N || null != R, "subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true"), r || null != e && !n || M) ? (0, a.jsxs)("div", {
+                    return (u(!N || null != R, "subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true"), r || null != e && !n || f) ? (0, a.jsxs)("div", {
                         className: c,
-                        children: [M && (0, a.jsx)(o.FormTitle, {
+                        children: [f && (0, a.jsx)(o.FormTitle, {
                             className: L.formTitle,
                             children: T.default.Messages.BILLING_ONLINE_PURCHASE_WAIVER
                         }), null != e && (r || !n) ? (0, a.jsx)(o.Checkbox, {
@@ -239,7 +239,7 @@
                         }) : null, null == A ? null : (0, a.jsx)("div", {
                             className: l(L.finePrint, h),
                             children: A
-                        }), M ? (0, a.jsxs)("div", {
+                        }), f ? (0, a.jsxs)("div", {
                             className: c,
                             children: [(0, a.jsx)(o.Checkbox, {
                                 type: o.Checkbox.Types.INVERTED,
@@ -255,7 +255,7 @@
                                 className: L.finePrint,
                                 children: T.default.Messages.BILLING_ONLINE_PURCHASE_WAIVER_DISCLAIMER
                             })]
-                        }) : null, f && (0, a.jsxs)("div", {
+                        }) : null, M && (0, a.jsxs)("div", {
                             className: L.finePrint,
                             children: ["*", T.default.Messages.BILLING_HOW_PRICING_WORKS.format({
                                 documentationLink: E.default.getArticleURL(I.HelpdeskArticles.LOCALIZED_PRICING)
@@ -296,7 +296,7 @@
                     }
                 }
             }
-            var f = c.default.connectStores([d.default], e => {
+            var M = c.default.connectStores([d.default], e => {
                 let {
                     eulaId: t
                 } = e;
@@ -338,7 +338,7 @@
                     planGroup: l,
                     isPrepaidPaymentSource: i
                 } = e;
-                if (t === d.PurchaseTypes.ONE_TIME) return E.default.Messages.GUILD_PRODUCT_PURCHASE_MODAL_CTA;
+                if (t === d.PurchaseTypes.ONE_TIME) return n ? E.default.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT : E.default.Messages.GUILD_PRODUCT_PURCHASE_MODAL_CTA;
                 if (r(null != s, "Subscription plan must be selected to render SubscriptionReviewButton"), n) return E.default.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT;
                 if ((0, c.isPremiumSubscriptionPlan)(s.id)) return i ? E.default.Messages.BILLING_SELECT_PLAN : null != a ? (0, o.subscriptionCanSwitchImmediately)(a, s.id, l) ? E.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : E.default.Messages.BILLING_SWITCH_PLAN_CHANGE : (0, c.getBillingReviewSubheader)(null, s);
                 return E.default.Messages.BILLING_SUBSCRIBE_TO_PLAN
@@ -361,8 +361,8 @@
                     premiumSubscription: d,
                     isGift: L,
                     planGroup: A,
-                    isPrepaid: f,
-                    isTrial: M,
+                    isPrepaid: M,
+                    isTrial: f,
                     makePurchase: N,
                     needsPaymentSource: S
                 } = e, {
@@ -375,7 +375,7 @@
                     premiumSubscription: d,
                     isGift: L,
                     planGroup: A,
-                    isPrepaidPaymentSource: f
+                    isPrepaidPaymentSource: M
                 });
                 if (null != s || null != n || r) return (0, a.jsx)(l.Button, {
                     color: l.Button.Colors.GREEN,
@@ -393,7 +393,7 @@
                         children: C
                     })
                 });
-                if (M) return (0, a.jsxs)(u.default, {
+                if (f) return (0, a.jsxs)(u.default, {
                     innerClassName: _.innerButton,
                     "data-testid": h ? "purchase" : "submitButton",
                     onClick: h ? N : () => T(t, c),

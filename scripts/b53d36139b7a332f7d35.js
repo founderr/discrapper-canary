@@ -5197,11 +5197,13 @@
             function c(e) {
                 let {
                     skuId: t,
-                    onClose: c,
-                    onComplete: S,
-                    analyticsLocations: E,
-                    analyticsObject: T
-                } = e, f = !1, m = (0, n.v4)();
+                    isGift: c = !1,
+                    giftMessage: S,
+                    onClose: E,
+                    onComplete: T,
+                    analyticsLocations: f,
+                    analyticsObject: m
+                } = e, _ = !1, I = (0, n.v4)();
                 (0, l.openModalLazy)(async () => {
                     let {
                         default: e
@@ -5214,27 +5216,29 @@
                         } = s;
                         return (0, a.jsx)(e, {
                             ...i,
-                            loadId: m,
+                            loadId: I,
                             skuId: t,
-                            analyticsLocations: E,
+                            isGift: c,
+                            giftMessage: S,
+                            analyticsLocations: f,
                             onClose: e => {
-                                n(), null == c || c(e)
+                                n(), null == E || E(e)
                             },
                             onComplete: () => {
-                                f = !0, null == S || S()
+                                _ = !0, null == T || T()
                             },
                             returnRef: l
                         })
                     }
                 }, {
                     onCloseCallback: () => {
-                        !f && d.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                            load_id: m,
+                        !_ && d.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+                            load_id: I,
                             payment_type: u.PurchaseTypeToAnalyticsPaymentType[u.PurchaseTypes.ONE_TIME],
-                            location: T,
+                            location: m,
                             is_gift: !1,
-                            location_stack: E
-                        }), (0, i.clearError)(), (0, r.clearPurchaseTokenAuthState)(), null == c || c(f), f && (0, o.fetchCollectiblesPurchases)()
+                            location_stack: f
+                        }), (0, i.clearError)(), (0, r.clearPurchaseTokenAuthState)(), null == E || E(_), _ && (0, o.fetchCollectiblesPurchases)()
                     },
                     onCloseRequest: u.NOOP
                 })
@@ -9891,7 +9895,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "dd68ddb49c95eaeba2aa450bca1884e33cb7b37f", e.substring(0, 7)),
+                    S = (e = "4833e2b294f8c9aa183e7651f47112322ba4ede2", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -9904,7 +9908,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "248080", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "248081", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
