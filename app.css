@@ -62276,6 +62276,10 @@ html .progress__4ef76 {
     margin-right: 8px
 }
 
+.clickable__4bf67:hover {
+    cursor: pointer
+}
+
 .recurrences_c13348 {
     display: flex;
     flex-direction: column;

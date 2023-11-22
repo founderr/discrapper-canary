@@ -1108,7 +1108,7 @@
                 default: function() {
                     return b
                 }
-            });
+            }), n("222007");
             var i = n("37983"),
                 l = n("884691"),
                 r = n("414456"),
@@ -1251,23 +1251,23 @@
                     isHub: h = !1,
                     containerRef: _,
                     recurrenceId: p
-                } = e, C = (0, o.useStateFromStores)([E.default], () => null != E.default.getGuild(n.id), [n.id]), {
-                    startTime: y,
-                    endTime: U
-                } = (0, g.default)(t.id, p), b = (0, o.useStateFromStores)([S.default], () => S.default.getUserCount(t.id, p)), w = l.useCallback(e => {
+                } = e, [C, y] = l.useState(p), U = (0, o.useStateFromStores)([E.default], () => null != E.default.getGuild(n.id), [n.id]), {
+                    startTime: b,
+                    endTime: w
+                } = (0, g.default)(t.id, C), M = (0, o.useStateFromStores)([S.default], () => S.default.getUserCount(t.id, C)), D = l.useCallback(e => {
                     e.stopPropagation(), null != t && (0, d.transitionToGuildFromEventInvite)(t)
-                }, [t]), M = (0, T.default)(t);
+                }, [t]), j = (0, T.default)(t);
                 l.useEffect(() => {
-                    v.default.getGuildEventUserCounts(n.id, t.id, null != p ? [p] : []), v.default.getGuildEventsForCurrentUser(n.id)
-                }, [n.id, t.id, p]);
-                let D = (0, I.recurrenceRuleFromServer)(t.recurrence_rule);
+                    v.default.getGuildEventUserCounts(n.id, t.id, null != C ? [C] : []), v.default.getGuildEventsForCurrentUser(n.id)
+                }, [n.id, t.id, C]);
+                let V = (0, I.recurrenceRuleFromServer)(t.recurrence_rule);
                 return (0, i.jsxs)("div", {
                     ref: _,
                     children: [(0, i.jsxs)("div", {
                         className: x.header,
                         children: [(0, i.jsx)(A.GuildEventTimeStatus, {
-                            startTime: y.toISOString(),
-                            endTime: null == U ? void 0 : U.toISOString(),
+                            startTime: b.toISOString(),
+                            endTime: null == w ? void 0 : w.toISOString(),
                             status: t.status,
                             eventType: t.entity_type
                         }), (0, i.jsx)(u.Heading, {
@@ -1281,19 +1281,19 @@
                         className: x.body,
                         children: [(0, i.jsx)(O, {
                             guild: n,
-                            onClick: C ? w : void 0,
+                            onClick: U ? D : void 0,
                             onClose: c
                         }), (0, i.jsx)(R.default, {
                             guildScheduledEvent: t,
                             channel: r,
                             onClose: c
-                        }), null != b && (0, i.jsx)(L, {
-                            userCount: b,
+                        }), null != M && (0, i.jsx)(L, {
+                            userCount: M,
                             onClick: f
-                        }), !h && null != M && (0, i.jsx)(P, {
-                            creator: M,
+                        }), !h && null != j && (0, i.jsx)(P, {
+                            creator: j,
                             guildId: n.id
-                        }, M.id), null != t.description && (0, i.jsx)("div", {
+                        }, j.id), null != t.description && (0, i.jsx)("div", {
                             className: x.description,
                             children: (0, i.jsx)(N.default, {
                                 description: t.description,
@@ -1301,14 +1301,17 @@
                                 guildId: n.id
                             })
                         })]
-                    }), null != D && (0, i.jsx)("hr", {
+                    }), null != V && (0, i.jsx)("hr", {
                         className: x.divider
-                    }), null != D && (0, i.jsx)(m.default, {
+                    }), null != V && (0, i.jsx)(m.default, {
                         guildId: n.id,
-                        recurrenceRule: D,
+                        recurrenceRule: V,
                         guildEventId: t.id,
+                        onClick: e => {
+                            y(e)
+                        },
                         hideScroller: !0,
-                        initialStartDate: null != p ? new Date(a.default.extractTimestamp(p)) : null
+                        initialStartDate: null != C ? new Date(a.default.extractTimestamp(C)) : null
                     })]
                 })
             }

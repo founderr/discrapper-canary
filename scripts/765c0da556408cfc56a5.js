@@ -415,7 +415,8 @@
                 };
                 return (0, l.jsxs)(o.ClickableContainer, {
                     className: i(L.container, {
-                        [L.canceled]: p
+                        [L.canceled]: p,
+                        [L.clickable]: null != S
                     }),
                     onClick: e => {
                         e.stopPropagation(), !p && (null == S || S(I))
