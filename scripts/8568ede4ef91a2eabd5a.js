@@ -14341,44 +14341,74 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return E
                 }
             });
-            var l = n("37983");
-            n("884691");
-            var i = n("414456"),
-                r = n.n(i),
-                o = n("77078"),
-                s = n("418009"),
-                a = n("46829"),
-                u = n("818643"),
-                d = n("782340"),
-                c = n("177037"),
-                f = n("415973");
+            var l = n("37983"),
+                i = n("884691"),
+                r = n("414456"),
+                o = n.n(r),
+                s = n("77078"),
+                a = n("418009"),
+                u = n("430568"),
+                d = n("46829"),
+                c = n("818643"),
+                f = n("782340"),
+                p = n("177037"),
+                m = n("415973");
 
-            function p(e) {
+            function h(e) {
+                let {
+                    image: t,
+                    icon: n,
+                    emojiStyles: r,
+                    emojiSize: o
+                } = e, s = (null == t ? void 0 : t.emoji) != null, a = i.useMemo(() => {
+                    if ((null == t ? void 0 : t.emoji) != null) return (0, l.jsx)(u.default, {
+                        emojiId: t.emoji.id,
+                        emojiName: t.emoji.name,
+                        animated: t.emoji.animated,
+                        className: r,
+                        size: o
+                    })
+                }, [t, r, o]);
+                return (0, l.jsx)("div", {
+                    children: s ? a : n
+                })
+            }
+
+            function E(e) {
                 let {
                     answer: t,
                     index: n,
                     layout: i,
-                    onAnswerTextChange: p
+                    onAnswerTextChange: r
                 } = e;
                 return (0, l.jsx)(l.Fragment, {
-                    children: i === s.PollLayoutTypes.DEFAULT ? (0, l.jsxs)("div", {
-                        className: r(f.formInput, c.defaultContainer),
-                        children: [(0, l.jsx)(a.default, {
-                            className: c.emojiIcon
-                        }), (0, l.jsx)(o.TextInput, {
-                            placeholder: d.default.Messages.CREATE_POLL_ANSWER_PLACEHOLDER,
+                    children: i === a.PollLayoutTypes.DEFAULT ? (0, l.jsxs)("div", {
+                        className: o(m.formInput, p.defaultContainer),
+                        children: [(0, l.jsx)(h, {
+                            image: t.image,
+                            icon: (0, l.jsx)(d.default, {
+                                className: p.emojiIcon
+                            }),
+                            emojiStyles: p.emoji,
+                            emojiSize: "default"
+                        }), (0, l.jsx)(s.TextInput, {
+                            placeholder: f.default.Messages.CREATE_POLL_ANSWER_PLACEHOLDER,
                             value: t.text,
-                            className: c.defaultTextInput,
-                            inputClassName: r(f.formInput, c.defaultTextInput),
-                            onChange: e => p(e, n)
+                            className: p.defaultTextInput,
+                            inputClassName: o(m.formInput, p.defaultTextInput),
+                            onChange: e => r(e, n)
                         })]
-                    }) : (0, l.jsx)(o.Clickable, {
-                        className: c.imageOnlyContainer,
-                        children: (0, l.jsx)(u.default, {
-                            className: c.imageUploadIcon
+                    }) : (0, l.jsx)("div", {
+                        className: p.imageOnlyContainer,
+                        children: (0, l.jsx)(h, {
+                            image: t.image,
+                            icon: (0, l.jsx)(c.default, {
+                                className: p.imageUploadIcon
+                            }),
+                            emojiSize: "jumbo"
                         })
                     })
                 })
