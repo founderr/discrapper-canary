@@ -32336,7 +32336,7 @@ html .progress__4ef76 {
     text-align: center;
     border-radius: 3px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: .875rem;
     padding: 12px 0;
     margin-top: 16px;
     color: var(--white-500);
@@ -77303,8 +77303,8 @@ input::-webkit-inner-spin-button {
 
 .bodyText__923f7 {
     color: var(--interactive-normal);
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     font-weight: 500;
     margin-bottom: 16px
 }
@@ -77351,8 +77351,8 @@ input::-webkit-inner-spin-button {
 }
 
 .trialCheckboxLabel__0297c {
-    font-size: 14px;
-    line-height: 18px
+    font-size: .875rem;
+    line-height: 1.125rem
 }
 
 .loader_acb69b {
@@ -94196,6 +94196,10 @@ html .invoiceCancelRow_a8669b {
     background: var(--background-modifier-accent)
 }
 
+.memberRowContainer_f0d0e5 .compact__3f738 {
+    padding: 4px
+}
+
 .memberRowContainer_f0d0e5:hover td:after {
     opacity: 0
 }
@@ -95054,6 +95058,15 @@ html .invoiceCancelRow_a8669b {
     background-color: var(--background-modifier-active)
 }
 
+.settingsColumn__23153 {
+    max-width: 1200px
+}
+
+.settingsContent_cd9872 {
+    margin-right: 55px;
+    padding-bottom: 60px
+}
+
 .page__6780f {
     display: flex;
     flex-direction: column;
@@ -95073,22 +95086,13 @@ html .invoiceCancelRow_a8669b {
     padding: 8px
 }
 
-.mainTableContainer_ea650e {
-    display: flex;
-    flex-direction: column;
-    border-radius: var(--radius-md);
-    min-width: 860px;
-    background-color: var(--background-secondary);
-    box-shadow: var(--elevation-high)
-}
-
+.mainTableContainer_ea650e,
 .movedTable__31aca {
     display: flex;
     flex-direction: column;
     border-radius: var(--radius-md);
     min-width: 860px;
-    background-color: var(--background-secondary);
-    box-shadow: none
+    background-color: var(--background-secondary)
 }
 
 .noResultsContainer_bebecd {

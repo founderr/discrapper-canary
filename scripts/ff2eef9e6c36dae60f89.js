@@ -10848,7 +10848,7 @@
                     guildId: t
                 } = e, s = (0, r.default)([_.default], () => _.default.getGuild(t)), {
                     AnalyticsLocationProvider: l
-                } = (0, u.default)(d.default.GUILD_SETTINGS_MEMBERS_PAGE), D = n.useRef(null), M = !1 == !!(null == s ? void 0 : s.hasFeature(O.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), G = (0, r.default)([T.default], () => T.default.getEstimatedMemberSearchCountByGuildId(t), [t]), x = n.useCallback(e => {
+                } = (0, u.default)(d.default.GUILD_SETTINGS_MEMBERS_PAGE), D = !1 == !!(null == s ? void 0 : s.hasFeature(O.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)), M = (0, r.default)([T.default], () => T.default.getEstimatedMemberSearchCountByGuildId(t), [t]), G = n.useCallback(e => {
                     null != e && (0, E.openUserProfileModal)({
                         userId: e.userId,
                         guildId: e.guildId,
@@ -10856,65 +10856,69 @@
                             section: O.AnalyticsSections.GUILD_SETTINGS_MEMBERS
                         }
                     })
-                }, []), p = n.useCallback(e => {
-                    null != D.current && D.current.scrollToTop()
                 }, []);
                 if (null == s) return null;
-                let U = (0, f.getSearchState)(!1, !1, G);
+                let x = (0, f.getSearchState)(!1, !1, M);
                 return (0, a.jsx)(l, {
-                    children: (0, a.jsxs)("div", {
-                        className: i(R.page),
-                        children: [(0, a.jsx)(o.FormSection, {
-                            className: i(R.header),
-                            children: (0, a.jsx)(o.FormTitle, {
-                                tag: o.FormTitleTags.H1,
-                                children: h.default.Messages.GUILD_SETTINGS_MEMBERS_SERVER_MEMBERS
-                            })
-                        }, "header"), (0, a.jsx)(o.FormSection, {
-                            children: (0, a.jsx)(o.AdvancedScroller, {
-                                className: i(R.scroller),
-                                ref: D,
-                                children: (0, a.jsxs)("div", {
-                                    className: i(R.tableContainer),
-                                    children: [(0, a.jsx)(N.default, {
-                                        guild: s
-                                    }), (0, a.jsx)(S.default, {
-                                        guild: s
-                                    }), M ? (0, a.jsxs)("div", {
-                                        className: i(R.mainTableContainer),
-                                        children: [(0, a.jsx)(m.default, {
-                                            guild: s
-                                        }), (0, a.jsx)(A.default, {
-                                            guild: s,
-                                            onSelectRow: x,
-                                            searchState: U
-                                        }), U !== f.SearchState.SUCCESS_STILL_INDEXING && (0, a.jsx)(L.default, {
-                                            guildId: s.id,
-                                            onPageChange: p
-                                        })]
-                                    }) : (0, a.jsx)("div", {
-                                        className: i(R.movedTable),
+                    children: (0, a.jsx)("div", {
+                        className: R.settingsColumn,
+                        children: (0, a.jsx)("div", {
+                            className: R.settingsContainer,
+                            children: (0, a.jsx)(o.ScrollerAuto, {
+                                className: R.settingsScroller,
+                                orientation: "auto",
+                                children: (0, a.jsxs)("main", {
+                                    className: R.settingsContent,
+                                    children: [(0, a.jsx)(o.FormSection, {
+                                        className: i(R.header),
+                                        children: (0, a.jsx)(o.FormTitle, {
+                                            tag: o.FormTitleTags.H1,
+                                            children: h.default.Messages.GUILD_SETTINGS_MEMBERS_SERVER_MEMBERS
+                                        })
+                                    }, "header"), (0, a.jsx)(o.FormSection, {
                                         children: (0, a.jsxs)("div", {
-                                            className: i(R.noResultsContainer),
-                                            children: [(0, a.jsx)("div", {
-                                                className: i(R.noResultsIconContainer),
-                                                children: (0, a.jsx)(C.default, {})
-                                            }), (0, a.jsx)(o.Text, {
-                                                variant: "text-md/normal",
-                                                color: "text-muted",
-                                                children: h.default.Messages.GUILD_SETTINGS_SAFETY_MODERATION_EXPERIENCE_ENABLED.format({
-                                                    onClick: e => {
-                                                        null != s && (e.preventDefault(), c.default.close(), (0, I.goToMemberSafetyDashboard)(s.id))
-                                                    }
+                                            className: i(R.tableContainer),
+                                            children: [(0, a.jsx)(N.default, {
+                                                guild: s
+                                            }), (0, a.jsx)(S.default, {
+                                                guild: s
+                                            }), D ? (0, a.jsxs)("div", {
+                                                className: i(R.mainTableContainer),
+                                                children: [(0, a.jsx)(m.default, {
+                                                    guild: s
+                                                }), (0, a.jsx)(A.default, {
+                                                    guild: s,
+                                                    searchState: x,
+                                                    compact: !0,
+                                                    onSelectRow: G
+                                                }), x !== f.SearchState.SUCCESS_STILL_INDEXING && (0, a.jsx)(L.default, {
+                                                    guildId: s.id
+                                                })]
+                                            }) : (0, a.jsx)("div", {
+                                                className: i(R.movedTable),
+                                                children: (0, a.jsxs)("div", {
+                                                    className: i(R.noResultsContainer),
+                                                    children: [(0, a.jsx)("div", {
+                                                        className: i(R.noResultsIconContainer),
+                                                        children: (0, a.jsx)(C.default, {})
+                                                    }), (0, a.jsx)(o.Text, {
+                                                        variant: "text-md/normal",
+                                                        color: "text-muted",
+                                                        children: h.default.Messages.GUILD_SETTINGS_SAFETY_MODERATION_EXPERIENCE_ENABLED.format({
+                                                            onClick: e => {
+                                                                null != s && (e.preventDefault(), c.default.close(), (0, I.goToMemberSafetyDashboard)(s.id))
+                                                            }
+                                                        })
+                                                    })]
                                                 })
                                             })]
                                         })
+                                    }, "body"), (0, a.jsx)(g.default, {
+                                        guildId: s.id
                                     })]
                                 })
                             })
-                        }, "body"), (0, a.jsx)(g.default, {
-                            guildId: s.id
-                        })]
+                        })
                     })
                 })
             }
