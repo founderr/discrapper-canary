@@ -380,9 +380,9 @@
                     iconClassName: R,
                     subtitle: G,
                     subtitleColor: x,
-                    hangStatus: b,
+                    hangStatus: H,
                     channel: {
-                        type: H
+                        type: b
                     },
                     onMouseEnter: P,
                     onMouseLeave: w,
@@ -390,8 +390,8 @@
                     children: V,
                     guild: J,
                     channelTypeOverride: K,
-                    forceInteractable: z,
-                    mentionCount: W,
+                    forceInteractable: W,
+                    mentionCount: z,
                     unreadMode: Y,
                     isFavoriteSuggestion: Q
                 } = B, {
@@ -401,7 +401,7 @@
                     location: "337985_1"
                 }, {
                     autoTrackExposure: !1
-                }), q = Y === v.UnreadMode.IMPORTANT || null != W && W > 0, {
+                }), q = Y === v.UnreadMode.IMPORTANT || null != z && z > 0, {
                     role: $,
                     ...BB
                 } = (0, F.useListItem)(E.id), Be = n.useRef(null), BE = n.useRef(null), BC = (0, s.default)(E), Bn = h.Routes.CHANNEL(BC, E.id), Bl = (0, D.default)(E), Bt = E.isGuildVocal(), {
@@ -496,7 +496,7 @@
                                     className: S.subtitle,
                                     children: G
                                 })
-                            }) : null, null != b ? b : null, X && Bu.length > 0 && Bu.map((B, e) => (0, C.jsx)("span", {
+                            }) : null, null != H ? H : null, X && Bu.length > 0 && Bu.map((B, e) => (0, C.jsx)("span", {
                                 className: S.ripple,
                                 style: {
                                     top: B.y,
@@ -519,7 +519,7 @@
                         right: 4
                     },
                     children: (0, C.jsxs)("div", {
-                        className: t(M, null != T || null != g || null != O || z ? S.wrapper : S.notInteractive, (() => {
+                        className: t(M, null != T || null != g || null != O || W ? S.wrapper : S.notInteractive, (() => {
                             if (r && !X) return p.SELECTED;
                             if (d) return p.CONNECTED;
                             if (N) return p.LOCKED;
@@ -543,14 +543,14 @@
                                 default:
                                     return S.typeDefault
                             }
-                        }(null != K ? K : H)),
+                        }(null != K ? K : b)),
                         onMouseUp: B => null == g ? void 0 : g(B, E),
                         onMouseDown: B => null == O ? void 0 : O(B, E),
                         onContextMenu: B => null == U ? void 0 : U(B, E),
                         onMouseEnter: P,
                         onMouseLeave: w,
                         children: [i || !c || r && !Bt ? null : (0, C.jsx)("div", {
-                            className: t(S.unread, q ? S.unreadImportant : void 0)
+                            className: t(S.unread, q ? S.unreadImportant : void 0, null != H ? S.unreadWithHangStatus : void 0)
                         }), null !== (e = null == j ? void 0 : j(Bs)) && void 0 !== e ? e : Bs]
                     })
                 })
