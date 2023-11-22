@@ -1649,7 +1649,7 @@
                 COLLECTIBLES_SHOP_OPEN: e => {
                     var t, r;
                     c = null !== (t = e.analyticsLocations) && void 0 !== t ? t : o, d = null !== (r = e.analyticsSource) && void 0 !== r ? r : null, a = e.initialItem, (0, l.markDismissibleContentAsDismissed)(s.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_INTERACTIVE_MODAL_UPSELL, {
-                        dismissAction: u.ContentDismissActionType.AUTO
+                        dismissAction: u.ContentDismissActionType.AUTO_DISMISS
                     })
                 },
                 COLLECTIBLES_SHOP_CLOSE: f,

@@ -19,22 +19,22 @@
                 }
             }), s("222007");
             var l = s("884691"),
-                i = s("65597"),
-                a = s("875212"),
+                a = s("65597"),
+                i = s("875212"),
                 r = s("21526"),
                 o = s("853987"),
                 n = s("775416");
 
             function c() {
                 let e = "useMaybeFetchCollectiblesCategories";
-                (0, a.useTriggerDebuggingAA)({
+                (0, i.useTriggerDebuggingAA)({
                     location: e + " auto on",
                     autoTrackExposure: !0
-                }), (0, a.useTriggerDebuggingAA)({
+                }), (0, i.useTriggerDebuggingAA)({
                     location: e + " auto off",
                     autoTrackExposure: !1
                 });
-                let [t, s, n, c] = (0, i.useStateFromStoresArray)([o.default], () => {
+                let [t, s, n, c] = (0, a.useStateFromStoresArray)([o.default], () => {
                     var e;
                     return [o.default.isFetching, o.default.error, null !== (e = o.default.lastFetched) && void 0 !== e ? e : 0, o.default.categories]
                 });
@@ -50,10 +50,10 @@
             function u() {
                 var e;
                 let t = "useFetchCollectiblesCategoriesAndPurchases";
-                (0, a.useTriggerDebuggingAA)({
+                (0, i.useTriggerDebuggingAA)({
                     location: t + " auto on",
                     autoTrackExposure: !0
-                }), (0, a.useTriggerDebuggingAA)({
+                }), (0, i.useTriggerDebuggingAA)({
                     location: t + " auto off",
                     autoTrackExposure: !1
                 });
@@ -69,14 +69,14 @@
                     purchases: C
                 } = function() {
                     let e = "useFetchPurchases";
-                    (0, a.useTriggerDebuggingAA)({
+                    (0, i.useTriggerDebuggingAA)({
                         location: e + " auto on",
                         autoTrackExposure: !0
-                    }), (0, a.useTriggerDebuggingAA)({
+                    }), (0, i.useTriggerDebuggingAA)({
                         location: e + " auto off",
                         autoTrackExposure: !1
                     });
-                    let [t, s, o, c, u] = (0, i.useStateFromStoresArray)([n.default], () => [n.default.isFetching, n.default.isClaiming, n.default.fetchError, n.default.claimError, n.default.purchases]);
+                    let [t, s, o, c, u] = (0, a.useStateFromStoresArray)([n.default], () => [n.default.isFetching, n.default.isClaiming, n.default.fetchError, n.default.claimError, n.default.purchases]);
                     return (0, l.useEffect)(() => {
                         (0, r.fetchCollectiblesPurchases)()
                     }, []), {
@@ -106,9 +106,9 @@
                 }
             });
             var l = s("37983"),
-                i = s("884691"),
-                a = s("414456"),
-                r = s.n(a),
+                a = s("884691"),
+                i = s("414456"),
+                r = s.n(i),
                 o = s("265586"),
                 n = s("446674"),
                 c = s("77078"),
@@ -125,8 +125,8 @@
                     let {
                         item: t,
                         isSelected: s,
-                        setSelectedItem: a
-                    } = e, o = (0, n.useStateFromStores)([g.default], () => g.default.getCurrentUser()), d = i.useRef(null), m = (0, u.default)(d), {
+                        setSelectedItem: i
+                    } = e, o = (0, n.useStateFromStores)([g.default], () => g.default.getCurrentUser()), d = a.useRef(null), m = (0, u.default)(d), {
                         avatarDecorationSrc: h,
                         eventHandlers: E
                     } = (0, f.default)({
@@ -142,7 +142,7 @@
                                 [C.selectedAvatarDecorationItem]: s
                             }),
                             innerRef: d,
-                            onClick: () => a(t),
+                            onClick: () => i(t),
                             children: (0, l.jsx)("img", {
                                 className: C.avatarDecorationItem,
                                 src: h,
@@ -155,8 +155,8 @@
                     var t;
                     let {
                         item: s,
-                        isSelected: i,
-                        setSelectedItem: a
+                        isSelected: a,
+                        setSelectedItem: i
                     } = e, o = (0, n.useStateFromStores)([m.default], () => m.default.getProfileEffectById(s.id)), {
                         accessibilityLabel: u,
                         thumbnailPreviewSrc: d,
@@ -165,9 +165,9 @@
                     return (0, l.jsx)(c.FocusRing, {
                         children: (0, l.jsxs)(c.Clickable, {
                             className: r(C.item, {
-                                [C.selectedProfileEffectItem]: i
+                                [C.selectedProfileEffectItem]: a
                             }),
-                            onClick: () => a(s),
+                            onClick: () => i(s),
                             children: [(0, l.jsx)("img", {
                                 src: h,
                                 alt: u,
@@ -184,20 +184,20 @@
                     let {
                         listRef: t,
                         items: s,
-                        selectedItem: i,
-                        setSelectedItem: a
+                        selectedItem: a,
+                        setSelectedItem: i
                     } = e;
                     return (0, l.jsx)("div", {
                         ref: t,
                         className: C.collectiblesList,
                         children: s.map(e => e.type === o.CollectiblesItemType.AVATAR_DECORATION ? (0, l.jsx)(S, {
                             item: e,
-                            isSelected: e.skuId === (null == i ? void 0 : i.skuId),
-                            setSelectedItem: a
+                            isSelected: e.skuId === (null == a ? void 0 : a.skuId),
+                            setSelectedItem: i
                         }, e.id) : (0, l.jsx)(x, {
                             item: e,
-                            isSelected: e.skuId === (null == i ? void 0 : i.skuId),
-                            setSelectedItem: a
+                            isSelected: e.skuId === (null == a ? void 0 : a.skuId),
+                            setSelectedItem: i
                         }, e.id))
                     })
                 },
@@ -205,11 +205,11 @@
                     let {
                         items: t,
                         isFetching: s,
-                        selectedItem: a,
+                        selectedItem: i,
                         setSelectedItem: o,
                         containerClassName: n,
                         isScrollable: u
-                    } = e, d = i.useRef(null);
+                    } = e, d = a.useRef(null);
                     return s ? (0, l.jsx)(c.Spinner, {
                         className: C.loading
                     }) : (0, l.jsx)(c.FocusRingScope, {
@@ -219,7 +219,7 @@
                             children: (0, l.jsx)(A, {
                                 listRef: d,
                                 items: t,
-                                selectedItem: a,
+                                selectedItem: i,
                                 setSelectedItem: o
                             })
                         }) : (0, l.jsx)("div", {
@@ -227,7 +227,7 @@
                             children: (0, l.jsx)(A, {
                                 listRef: d,
                                 items: t,
-                                selectedItem: a,
+                                selectedItem: i,
                                 setSelectedItem: o
                             })
                         })
@@ -242,8 +242,8 @@
                 }
             }), s("222007");
             var l = s("37983"),
-                i = s("884691"),
-                a = s("446674"),
+                a = s("884691"),
+                i = s("446674"),
                 r = s("77078"),
                 o = s("812204"),
                 n = s("685665"),
@@ -265,12 +265,12 @@
                 let {
                     onClose: t,
                     markAsDismissed: s
-                } = e, i = (0, d.useUID)();
+                } = e, a = (0, d.useUID)();
                 return (0, l.jsxs)(r.ModalHeader, {
                     separator: !1,
                     className: A.header,
                     children: [(0, l.jsx)(r.Heading, {
-                        id: i,
+                        id: a,
                         variant: "heading-xl/extrabold",
                         className: A.headerTitle,
                         children: x.default.Messages.COLLECTIBLES_INTERACTIVE_MODAL_HEADER
@@ -288,14 +288,14 @@
                 })
             }
 
-            function v(e) {
+            function T(e) {
                 let {
                     selectedItem: t,
                     setSelectedItem: s
-                } = e, o = (0, a.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
+                } = e, o = (0, i.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
                     categories: n,
                     isFetching: d
-                } = (0, C.useMaybeFetchCollectiblesCategories)(), m = f.default.canUsePremiumProfileCustomization(o), S = i.useMemo(() => (0, g.sortAvatarDecorationsByPopularity)((0, g.getAvatarDecorationsFromCategories)(n).slice(0, 12)), [n]), p = i.useMemo(() => (0, g.sortProfileEffectsByPopularity)((0, g.getProfileEffectsFromCategories)(n).slice(0, 12)), [n]);
+                } = (0, C.useMaybeFetchCollectiblesCategories)(), m = f.default.canUsePremiumProfileCustomization(o), S = a.useMemo(() => (0, g.sortAvatarDecorationsByPopularity)((0, g.getAvatarDecorationsFromCategories)(n).slice(0, 12)), [n]), p = a.useMemo(() => (0, g.sortProfileEffectsByPopularity)((0, g.getProfileEffectsFromCategories)(n).slice(0, 12)), [n]);
                 return null == o ? null : (0, l.jsxs)(r.ModalContent, {
                     className: A.modalContent,
                     children: [(0, l.jsxs)("div", {
@@ -343,12 +343,12 @@
                 })
             }
 
-            function T(e) {
+            function v(e) {
                 let {
                     onClose: t,
                     selectedItem: s
                 } = e, {
-                    analyticsLocations: i
+                    analyticsLocations: a
                 } = (0, n.default)(o.default.COLLECTIBLES_INTERACTIVE_MODAL_POPUP_UPSELL);
                 return (0, l.jsx)(r.ModalFooter, {
                     children: (0, l.jsx)(r.Button, {
@@ -358,13 +358,14 @@
                         color: r.Button.Colors.BRAND,
                         onClick: () => {
                             (0, m.openCollectiblesShop)({
-                                analyticsLocations: i,
+                                analyticsLocations: a,
                                 analyticsSource: o.default.COLLECTIBLES_INTERACTIVE_MODAL_POPUP_UPSELL,
                                 initialItem: null != s ? s : void 0
                             }), null == t || t()
                         },
                         children: (0, l.jsx)(r.Text, {
                             variant: "text-sm/medium",
+                            className: A.checkItOutButtonText,
                             children: x.default.Messages.CHECK_IT_OUT
                         })
                     })
@@ -375,19 +376,19 @@
                 let {
                     transitionState: t,
                     onClose: s,
-                    markAsDismissed: a
-                } = e, [o, n] = i.useState();
+                    markAsDismissed: i
+                } = e, [o, n] = a.useState();
                 return (0, l.jsxs)(r.ModalRoot, {
                     transitionState: t,
                     size: r.ModalSize.DYNAMIC,
                     className: A.modal,
                     children: [(0, l.jsx)(p, {
                         onClose: s,
-                        markAsDismissed: a
-                    }), (0, l.jsx)(v, {
+                        markAsDismissed: i
+                    }), (0, l.jsx)(T, {
                         selectedItem: o,
                         setSelectedItem: n
-                    }), (0, l.jsx)(T, {
+                    }), (0, l.jsx)(v, {
                         onClose: s,
                         selectedItem: o
                     })]
