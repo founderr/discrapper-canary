@@ -484,6 +484,7 @@
                 } catch (e) {
                     t(E.PurchaseState.FAIL), N(e), d.default.track(I.AnalyticEvents.PAYMENT_FLOW_FAILED, {
                         ...O,
+                        payment_error_code: null == e ? void 0 : e.code,
                         payment_source_id: null == L ? void 0 : L.id,
                         payment_source_type: null == L ? void 0 : L.type,
                         duration_ms: Date.now() - v
@@ -2628,6 +2629,7 @@
                         } catch (e) {
                             n(_.PurchaseState.FAIL), j(e), T.default.track(v.AnalyticEvents.PAYMENT_FLOW_FAILED, {
                                 ...G,
+                                payment_error_code: null == e ? void 0 : e.code,
                                 payment_source_id: q,
                                 payment_source_type: null == e_ ? void 0 : e_.type,
                                 duration_ms: Date.now() - D

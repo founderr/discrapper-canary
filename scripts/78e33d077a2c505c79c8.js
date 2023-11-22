@@ -41,7 +41,7 @@
                     purchaseScene: r.PremiumPaymentGuildAnimation.Scenes.STARS,
                     errorScene: r.PremiumPaymentGuildAnimation.Scenes.ERROR,
                     successScene: r.PremiumPaymentGuildAnimation.Scenes.SUCCESS
-                }), E = (0, a.useStateFromStores)([i.default], () => i.default.useReducedMotion);
+                }), m = (0, a.useStateFromStores)([i.default], () => i.default.useReducedMotion);
                 return (0, l.jsxs)(s.ModalHeader, {
                     align: o.default.Align.START,
                     className: c.header,
@@ -51,7 +51,7 @@
                         nextScene: S,
                         onScenePlay: e => p(r.PremiumPaymentGuildAnimation.getNextScene(e)),
                         pauseWhileUnfocused: !1,
-                        pause: E
+                        pause: m
                     }), (0, l.jsx)("div", {
                         className: c.headerTitle
                     }), (0, l.jsx)(s.ModalCloseButton, {
@@ -81,8 +81,8 @@
                 d = n("819855"),
                 S = n("77078"),
                 p = n("850068"),
-                E = n("583367"),
-                m = n("157009"),
+                m = n("583367"),
+                E = n("157009"),
                 P = n("612039"),
                 _ = n("812204"),
                 f = n("685665"),
@@ -90,8 +90,8 @@
                 M = n("245187"),
                 T = n("642906"),
                 N = n("85336"),
-                A = n("286350"),
-                y = n("626301"),
+                y = n("286350"),
+                A = n("626301"),
                 R = n("818711"),
                 L = n("877261"),
                 C = n("724522"),
@@ -122,9 +122,9 @@
                 Q = [N.Step.PLAN_SELECT, N.Step.REVIEW, N.Step.CONFIRM],
                 Z = [N.Step.PLAN_SELECT, N.Step.ADD_PAYMENT_STEPS, N.Step.REVIEW, N.Step.CONFIRM];
             async function $(e) {
-                await (0, E.fetchGuildBoostSlots)();
+                await (0, m.fetchGuildBoostSlots)();
                 let t = (0, j.getAvailableGuildBoostSlots)(O.default.boostSlots);
-                return (0, E.applyToGuild)(e, t.map(e => e.id))
+                return (0, m.applyToGuild)(e, t.map(e => e.id))
             }
 
             function ee(e) {
@@ -132,7 +132,7 @@
                         transitionState: n,
                         onClose: l,
                         closeGuildPerksModal: i,
-                        analyticsLocations: E,
+                        analyticsLocations: m,
                         analyticsLocation: ee,
                         analyticsSourceLocation: et,
                         guildId: en,
@@ -150,8 +150,8 @@
                     ed = null != eo ? eo.paymentSourceId : null,
                     eS = (0, c.useStateFromStores)([x.default], () => null != eo ? (0, w.getOrFetchSubscriptionPlan)(eo.planId) : null),
                     ep = (0, c.useStateFromStores)([x.default], () => null == eo || null != x.default.get(eo.planId)),
-                    eE = (0, c.useStateFromStores)([x.default], () => null == eS ? x.default.get(X) : eS),
-                    em = (0, c.useStateFromStores)([h.default], () => h.default.theme),
+                    em = (0, c.useStateFromStores)([x.default], () => null == eS ? x.default.get(X) : eS),
+                    eE = (0, c.useStateFromStores)([h.default], () => h.default.theme),
                     eP = s.useRef((0, j.getAvailableGuildBoostSlots)(O.default.boostSlots)).current,
                     e_ = (0, c.useStateFromStores)([D.default], () => D.default.defaultPaymentSourceId),
                     ef = (0, C.useSharedPaymentModal)(null != ed ? ed : ec ? e_ : null),
@@ -160,8 +160,8 @@
                         setPurchaseError: eM,
                         paymentSourceId: eT,
                         setIsSubmittingCurrentStep: eN,
-                        paymentAuthenticationState: eA,
-                        setPaymentSourceId: ey,
+                        paymentAuthenticationState: ey,
+                        setPaymentSourceId: eA,
                         isSubmittingCurrentStep: eR,
                         paymentError: eL,
                         purchaseError: eC,
@@ -179,7 +179,7 @@
                     [eG, ej] = (0, o.useLazyValue)(() => [(0, r.v4)(), Date.now()]),
                     {
                         analyticsLocations: ev
-                    } = (0, f.default)(E, _.default.GUILD_BOOST_PURCHASE_MODAL),
+                    } = (0, f.default)(m, _.default.GUILD_BOOST_PURCHASE_MODAL),
                     eF = s.useMemo(() => {
                         var e, t;
                         return {
@@ -205,10 +205,11 @@
                     let e = async () => {
                         if (!0 === ex) try {
                             if (null == b.default.redirectedPaymentId) return;
-                            await (0, p.redirectedPaymentSucceeded)(b.default.redirectedPaymentId), eX(N.Step.CONFIRM), eK(A.PurchaseState.COMPLETED), null != en && await $(en), null != el && el()
+                            await (0, p.redirectedPaymentSucceeded)(b.default.redirectedPaymentId), eX(N.Step.CONFIRM), eK(y.PurchaseState.COMPLETED), null != en && await $(en), null != el && el()
                         } catch (e) {
-                            eK(A.PurchaseState.FAIL), eM(e), G.default.track(V.AnalyticEvents.PAYMENT_FLOW_FAILED, {
+                            eK(y.PurchaseState.FAIL), eM(e), G.default.track(V.AnalyticEvents.PAYMENT_FLOW_FAILED, {
                                 ...eF,
+                                payment_error_code: null == e ? void 0 : e.code,
                                 payment_gateway: V.PaymentGateways.STRIPE,
                                 payment_source_id: eT,
                                 duration_ms: Date.now() - ej
@@ -228,7 +229,7 @@
                         guild_id: en
                     })
                 }, []);
-                let [ew, eW] = s.useState(Q), [eY, eH] = s.useState(N.Step.PLAN_SELECT), [eV, eK] = s.useState(A.PurchaseState.WAITING), [ez, eq] = s.useState(!0), eJ = (0, o.useStableMemo)(() => Date.now(), [eY]), eX = s.useCallback((e, t) => {
+                let [ew, eW] = s.useState(Q), [eY, eH] = s.useState(N.Step.PLAN_SELECT), [eV, eK] = s.useState(y.PurchaseState.WAITING), [ez, eq] = s.useState(!0), eJ = (0, o.useStableMemo)(() => Date.now(), [eY]), eX = s.useCallback((e, t) => {
                     eH(e), eM(null);
                     let n = Date.now();
                     G.default.track(V.AnalyticEvents.PAYMENT_FLOW_STEP, {
@@ -241,11 +242,11 @@
                         application_id: eu
                     })
                 }, [eM, eF, eY, eJ, ej, en, eu]), eQ = () => {
-                    l(eV === A.PurchaseState.COMPLETED)
+                    l(eV === y.PurchaseState.COMPLETED)
                 }, eZ = null != eo && eo.isPurchasedExternally;
                 s.useEffect(() => {
-                    eA !== L.PaymentAuthenticationState.PENDING && eY !== N.Step.CONFIRM && null != ed && (ew !== Q && eW(Q), !Q.includes(eY) && eY !== N.Step.PREMIUM_UPSELL && eX(N.Step.REVIEW)), eY === N.Step.ADD_PAYMENT_STEPS && ew !== Z && eW(Z), eZ && eY !== N.Step.PLAN_SELECT && eH(N.Step.PLAN_SELECT)
-                }, [eY, eX, eZ, eA, eo, ed, ew]), (0, L.usePaymentStepForAuthentication)(eY, eA, eX), (0, N.usePurchaseStateForStep)(eY, eV, eK);
+                    ey !== L.PaymentAuthenticationState.PENDING && eY !== N.Step.CONFIRM && null != ed && (ew !== Q && eW(Q), !Q.includes(eY) && eY !== N.Step.PREMIUM_UPSELL && eX(N.Step.REVIEW)), eY === N.Step.ADD_PAYMENT_STEPS && ew !== Z && eW(Z), eZ && eY !== N.Step.PLAN_SELECT && eH(N.Step.PLAN_SELECT)
+                }, [eY, eX, eZ, ey, eo, ed, ew]), (0, L.usePaymentStepForAuthentication)(eY, ey, eX), (0, N.usePurchaseStateForStep)(eY, eV, eK);
                 let e$ = s.useRef(null),
                     [e0, e1] = (0, P.default)(!1, 500),
                     [e4, e8] = s.useState(null),
@@ -296,7 +297,7 @@
                         })
                     });
                     else if (eY === N.Step.PREMIUM_UPSELL) {
-                        u(null != eE, "Missing nextPremiumSubscriptionPlan"), u(e4, "Currency not defined");
+                        u(null != em, "Missing nextPremiumSubscriptionPlan"), u(e4, "Currency not defined");
                         let e = null != eT ? {
                             paymentSourceId: eT,
                             currency: e4
@@ -304,7 +305,7 @@
                             currency: e4
                         };
                         t = (0, a.jsx)(H.default, {
-                            premiumSubscriptionPlan: eE,
+                            premiumSubscriptionPlan: em,
                             analyticsLocation: ee,
                             analyticsSourceLocation: et,
                             onClose: eQ,
@@ -324,8 +325,8 @@
                         };
                         switch (eY) {
                             case N.Step.PLAN_SELECT:
-                                u(null != en, "Missing guildId"), u(null != eE, "Missing nextPremiumSubscriptionPlan"), e = (0, a.jsx)(Y.GuildBoostingPlanSelect, {
-                                    premiumSubscriptionPlan: eE,
+                                u(null != en, "Missing guildId"), u(null != em, "Missing nextPremiumSubscriptionPlan"), e = (0, a.jsx)(Y.GuildBoostingPlanSelect, {
+                                    premiumSubscriptionPlan: em,
                                     numGuildBoosts: eg,
                                     setNumGuildBoosts: eO,
                                     setForceDisableSubmitButton: eq,
@@ -336,7 +337,7 @@
                                             window.location.href = "discord://app/settings/nitro";
                                             return
                                         }
-                                        eQ(), null != i && i(), (0, y.navigateToPremiumMarketingPage)()
+                                        eQ(), null != i && i(), (0, A.navigateToPremiumMarketingPage)()
                                     },
                                     guildId: en,
                                     priceOptions: o
@@ -349,7 +350,7 @@
                                     }), e]
                                 })), l = (0, a.jsx)(S.Button, {
                                     look: S.Button.Looks.LINK,
-                                    color: (0, d.isThemeLight)(em) ? S.Button.Colors.PRIMARY : S.Button.Colors.WHITE,
+                                    color: (0, d.isThemeLight)(eE) ? S.Button.Colors.PRIMARY : S.Button.Colors.WHITE,
                                     onClick: eQ,
                                     children: q.default.Messages.NEVERMIND
                                 }), s = (0, a.jsx)(S.Button, {
@@ -368,21 +369,21 @@
                             case N.Step.ADD_PAYMENT_STEPS:
                                 break;
                             case N.Step.AWAITING_AUTHENTICATION:
-                                e = (0, a.jsx)(m.AwaitingAuthenticationStepBody, {
+                                e = (0, a.jsx)(E.AwaitingAuthenticationStepBody, {
                                     className: J.body
                                 });
                                 break;
                             case N.Step.REVIEW:
-                                u(null != eE, "Missing nextPremiumSubscriptionPlan"), e = (0, a.jsx)(Y.GuildBoostingReview, {
+                                u(null != em, "Missing nextPremiumSubscriptionPlan"), e = (0, a.jsx)(Y.GuildBoostingReview, {
                                     paymentSources: eI,
                                     priceOptions: o,
                                     currentPremiumSubscription: eo,
                                     premiumSubscriptionPaymentSourceId: ed,
-                                    premiumSubscriptionPlan: eE,
+                                    premiumSubscriptionPlan: em,
                                     newAdditionalPlans: ek,
-                                    onPaymentSourceChange: e => ey(null != e ? e.id : null),
+                                    onPaymentSourceChange: e => eA(null != e ? e.id : null),
                                     onPaymentSourceAdd: () => {
-                                        eX(N.Step.ADD_PAYMENT_STEPS), ey(null)
+                                        eX(N.Step.ADD_PAYMENT_STEPS), eA(null)
                                     },
                                     onPurchaseTermsChange: eD,
                                     legalTermsNodeRef: e$,
@@ -396,7 +397,7 @@
                                         let e = null != eT ? eI[eT] : null;
                                         eM(null);
                                         try {
-                                            if (eK(A.PurchaseState.PURCHASING), eN(!0), u(null != eT, "Missing paymentSourceId"), G.default.track(V.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
+                                            if (eK(y.PurchaseState.PURCHASING), eN(!0), u(null != eT, "Missing paymentSourceId"), G.default.track(V.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
                                                     ...eF,
                                                     duration_ms: Date.now() - ej,
                                                     guild_id: en,
@@ -424,10 +425,11 @@
                                                     return
                                                 }
                                             }
-                                            eX(N.Step.CONFIRM), eK(A.PurchaseState.COMPLETED), null != en && await $(en), null != el && el()
+                                            eX(N.Step.CONFIRM), eK(y.PurchaseState.COMPLETED), null != en && await $(en), null != el && el()
                                         } catch (t) {
-                                            eK(A.PurchaseState.FAIL), eM(t), G.default.track(V.AnalyticEvents.PAYMENT_FLOW_FAILED, {
+                                            eK(y.PurchaseState.FAIL), eM(t), G.default.track(V.AnalyticEvents.PAYMENT_FLOW_FAILED, {
                                                 ...eF,
+                                                payment_error_code: null == t ? void 0 : t.code,
                                                 payment_gateway: null != e ? e.type === V.PaymentSourceTypes.CARD ? V.PaymentGateways.STRIPE : V.PaymentGateways.BRAINTREE : null,
                                                 payment_source_id: eT,
                                                 duration_ms: Date.now() - ej
@@ -479,7 +481,7 @@
                                 children: [null != n ? (0, a.jsx)("div", {
                                     className: J.backStep,
                                     children: (0, a.jsx)(S.Button, {
-                                        color: (0, d.isThemeLight)(em) ? S.Button.Colors.PRIMARY : S.Button.Colors.WHITE,
+                                        color: (0, d.isThemeLight)(eE) ? S.Button.Colors.PRIMARY : S.Button.Colors.WHITE,
                                         look: S.Button.Looks.LINK,
                                         size: S.Button.Sizes.NONE,
                                         onClick: () => {
@@ -544,8 +546,8 @@
                 d = n("685665"),
                 S = n("649844"),
                 p = n("917247"),
-                E = n("956597"),
-                m = n("674158"),
+                m = n("956597"),
+                E = n("674158"),
                 P = n("915639"),
                 _ = n("145131"),
                 f = n("46829"),
@@ -553,8 +555,8 @@
                 M = n("619911"),
                 T = n("698015"),
                 N = n("599110"),
-                A = n("719923"),
-                y = n("153160"),
+                y = n("719923"),
+                A = n("153160"),
                 R = n("49111"),
                 L = n("646718"),
                 C = n("782340"),
@@ -566,27 +568,27 @@
                 } = e, n = (0, u.useStateFromStores)([P.default], () => P.default.locale);
                 return (0, l.jsxs)("div", {
                     className: U.perksList,
-                    children: [(0, l.jsx)(m.default, {
+                    children: [(0, l.jsx)(E.default, {
                         icon: I.default,
                         iconClassName: U.perkIconGuild,
                         description: C.default.Messages.PREMIUM_UPSELL_FEATURE_FREE_GUILD_SUBSCRIPTION.format({
                             numFreeGuildSubscriptions: L.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM
                         })
-                    }), (0, l.jsx)(m.default, {
+                    }), (0, l.jsx)(E.default, {
                         icon: I.default,
                         iconClassName: U.perkIconGuild,
                         description: C.default.Messages.PREMIUM_UPSELL_FEATURE_GUILD_SUBSCRIPTION_DISCOUNT.format({
-                            percent: (0, y.formatPercent)(n, L.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+                            percent: (0, A.formatPercent)(n, L.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
                         })
-                    }), t ? (0, l.jsx)(m.default, {
+                    }), t ? (0, l.jsx)(E.default, {
                         icon: f.default,
                         iconClassName: U.perkIconChatPerks,
                         description: C.default.Messages.PREMIUM_UPSELL_FEATURE_CHAT_PERKS
-                    }) : null, (0, l.jsx)(m.default, {
+                    }) : null, (0, l.jsx)(E.default, {
                         icon: M.default,
                         iconClassName: U.perkIconStream,
                         description: C.default.Messages.PREMIUM_UPSELL_FEATURE_STREAM
-                    }), (0, l.jsx)(m.default, {
+                    }), (0, l.jsx)(E.default, {
                         icon: T.default,
                         iconClassName: U.perkIconUpload,
                         description: C.default.Messages.PREMIUM_UPSELL_FEATURE_UPLOAD
@@ -600,7 +602,7 @@
                     premiumSubscriptionPlan: n,
                     onClose: s,
                     onBack: u,
-                    onSkip: m,
+                    onSkip: E,
                     onSubscriptionConfirmation: P,
                     analyticsLocation: f,
                     analyticsSourceLocation: I,
@@ -610,7 +612,7 @@
                     sourceAnalyticsLocations: g
                 } = (0, d.default)(c.default.GUILD_BOOSTING_PREMIUM_UPSELL), {
                     theme: O
-                } = (0, r.useThemeContext)(), b = (0, o.isThemeLight)(O) ? r.Button.Colors.PRIMARY : r.Button.Colors.WHITE, D = null == n || null == n.premiumSubscriptionType, x = A.default.getPrice(L.SubscriptionPlans.PREMIUM_MONTH_TIER_2, !1, !1, M), B = (0, y.formatPrice)(x.amount, x.currency), k = (0, p.usePremiumTrialOffer)(), G = null == k ? void 0 : k.trial_id, j = (null == k ? void 0 : null === (t = k.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === L.PremiumSubscriptionSKUs.TIER_2;
+                } = (0, r.useThemeContext)(), b = (0, o.isThemeLight)(O) ? r.Button.Colors.PRIMARY : r.Button.Colors.WHITE, D = null == n || null == n.premiumSubscriptionType, x = y.default.getPrice(L.SubscriptionPlans.PREMIUM_MONTH_TIER_2, !1, !1, M), B = (0, A.formatPrice)(x.amount, x.currency), k = (0, p.usePremiumTrialOffer)(), G = null == k ? void 0 : k.trial_id, j = (null == k ? void 0 : null === (t = k.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === L.PremiumSubscriptionSKUs.TIER_2;
                 return a.useEffect(() => {
                     N.default.track(R.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                         type: L.PremiumUpsellTypes.GUILD_PREMIUM_UPSELL_MODAL,
@@ -622,7 +624,7 @@
                         children: [(0, l.jsx)(r.ModalCloseButton, {
                             onClick: s,
                             className: U.closeButton
-                        }), j && (0, l.jsx)(E.PremiumTrialGradientBadge, {
+                        }), j && (0, l.jsx)(m.PremiumTrialGradientBadge, {
                             className: U.premiumTrialBadge
                         }), (0, l.jsx)("div", {
                             className: i(U.upsellImage, {
@@ -644,7 +646,7 @@
                             children: [(0, l.jsx)(r.Button, {
                                 look: r.Button.Looks.LINK,
                                 color: b,
-                                onClick: m,
+                                onClick: E,
                                 children: C.default.Messages.PREMIUM_UPSELL_CONTINUE_TO_BOOSTS
                             }), (0, l.jsx)(r.Button, {
                                 color: r.Button.Colors.GREEN,
