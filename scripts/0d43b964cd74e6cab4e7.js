@@ -10751,22 +10751,23 @@
                             didSelfVote: T,
                             style: g,
                             votesPercentage: Math.round(100 * E),
-                            votes: (0, a.match)(G).with(s.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(m, ")")).otherwise(() => h.default.Messages.POLL_VOTES_COUNT.format({
-                                count: m
+                            votes: (0, a.match)(G).with(s.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(String(m), ")")).otherwise(() => h.default.Messages.POLL_VOTES_COUNT.format({
+                                count: String(m)
                             }))
                         }
                     }),
                     V = !P && x && (!H || j),
-                    Y = !D && k && !F && x,
-                    K = (0, a.match)({
-                        canSubmitVote: Y,
+                    Y = F || P,
+                    K = !D && k && !F && x,
+                    W = (0, a.match)({
+                        canSubmitVote: K,
                         hasVoted: F,
                         isEditingVote: j
                     }).with({
                         isEditingVote: !0
                     }, () => h.default.Messages.POLL_SUBMIT_VOTE_EDIT).otherwise(() => h.default.Messages.POLL_SUBMIT_VOTE),
-                    W = "normal";
-                return P ? W = "victor" : F && (W = "voted"), {
+                    z = "normal";
+                return P ? z = "victor" : F && (z = "voted"), {
                     question: M.question,
                     answers: w,
                     layoutType: G,
@@ -10774,14 +10775,14 @@
                         theme: S,
                         layoutType: G
                     }),
-                    containerStyle: W,
-                    submitVoteLabel: K,
-                    canSubmitVote: Y,
+                    containerStyle: z,
+                    submitVoteLabel: W,
+                    canSubmitVote: K,
                     canTapAnswers: V,
                     isEditingVote: j,
                     canSelectMultipleAnswers: M.allow_multiselect,
                     hasSelectedAnswer: k,
-                    canShowVoteCounts: F,
+                    canShowVoteCounts: Y,
                     hasVoted: F,
                     expirationLabel: null != R ? R : h.default.Messages.POLL_EXPIRED,
                     isExpired: P,
