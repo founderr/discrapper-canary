@@ -24843,7 +24843,7 @@
                                 displayProfile: q,
                                 isInSidebar: !0,
                                 ...eS
-                            }), (0, a.jsxs)(d.ScrollerNone, {
+                            }, X.id), (0, a.jsxs)(d.ScrollerNone, {
                                 children: [(0, a.jsx)(V.default, {
                                     user: X,
                                     displayProfile: q,
