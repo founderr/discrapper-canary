@@ -763,6 +763,9 @@
                     label: o.default.Messages.UNREAD_SETTINGS,
                     subtext: n === d.UnreadMode.IMPORTANT ? o.default.Messages.FORM_LABEL_ALL_MESSAGES : o.default.Messages.HIGHLIGHTS_AND_MENTIONS,
                     children: [{
+                        setting: null,
+                        label: o.default.Messages.FORM_LABEL_DEFAULT
+                    }, {
                         setting: d.UnreadSetting.ALL_MESSAGES,
                         label: o.default.Messages.FORM_LABEL_ALL_MESSAGES
                     }, {
