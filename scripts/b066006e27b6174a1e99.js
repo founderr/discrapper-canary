@@ -176,7 +176,8 @@
                             applicationStream: y,
                             animate: ee,
                             hideEmoji: !t,
-                            hideTooltip: !0
+                            hideTooltip: !0,
+                            user: M
                         })
                     })(),
                     decorators: (0, a.jsxs)(a.Fragment, {

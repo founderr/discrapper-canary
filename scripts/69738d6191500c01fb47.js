@@ -845,7 +845,8 @@
                         activities: c,
                         applicationStream: T,
                         animate: G,
-                        hideTooltip: !0
+                        hideTooltip: !0,
+                        user: r
                     }) : null
                 }, ed = () => {
                     if (t.isMultiUserDM()) return (0, l.jsx)(V, {
@@ -10164,6 +10165,7 @@
                 }).enabled, {
                     enableHangStatus: k
                 } = v.HangStatusExperiment.useExperiment({
+                    guildId: r.guild_id,
                     location: "VoiceChannel"
                 }), Y = (0, i.useStateFromStores)([w.default], () => w.default.getActivities()), W = Y.find(e => e.type === X.ActivityTypes.HANG_STATUS), Z = (0, K.default)({
                     channel: r,

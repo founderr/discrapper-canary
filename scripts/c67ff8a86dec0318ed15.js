@@ -15278,6 +15278,7 @@
                 }), [x, i.id]), U = (0, c.default)(null != D ? [D.application_id] : []), [w, F] = (0, r.useStateFromStoresArray)([p.default], () => [p.default.getStreamForUser(x, i.getGuildId()), p.default.getActiveStreamForUser(x, i.getGuildId())], [i, x]), k = (0, r.useStateFromStores)([_.default], () => _.default.getSessionById(u)), V = v.default.useName(s), B = (0, r.useStateFromStores)([T.default], () => T.default.getVoicePlatformForChannel(i.id, x), [i.id, x]), {
                     enableHangStatus: H
                 } = f.HangStatusExperiment.useExperiment({
+                    guildId: i.guild_id,
                     location: "VoiceUsers"
                 }), G = (0, r.useStateFromStores)([g.default], () => H ? g.default.findActivity(s.id, e => e.type === A.ActivityTypes.HANG_STATUS) : null);
                 return (0, a.jsx)(h.default, {
@@ -15500,9 +15501,10 @@
                     } = e, {
                         enableHangStatus: x
                     } = h.HangStatusExperiment.useExperiment({
+                        guildId: I.guild_id,
                         location: "HangStatusPopout"
                     }), v = (0, l.default)([r.default], () => r.default.getId()), N = (0, l.default)([d.default], () => d.default.getUser(_)), A = (0, l.default)([o.default], () => o.default.getChannelId() === I.id), M = (0, l.default)([u.default], () => u.default.can(C.Permissions.CONNECT, I));
-                    return null != t && T && null != N ? v === _ && x ? (0, a.jsx)(E.HangStatusPopout, {
+                    return x && null != t && T && null != N ? v === _ ? (0, a.jsx)(E.HangStatusPopout, {
                         currentStatus: t
                     }) : (0, a.jsxs)("div", {
                         className: g.wrapper,
@@ -15557,7 +15559,7 @@
                                         startingText: t.details,
                                         startingEmoji: t.emoji
                                     })
-                                }) : (0, f.updateHangStatus)(e, "HangStatusPopout", !0)
+                                }) : (0, f.updateHangStatus)(e, !0)
                             },
                             children: S.default.Messages.CUSTOM_HANGS_STATUS_COPY_CTA
                         }) : null]
@@ -15605,7 +15607,7 @@
                     let {
                         currentStatus: t
                     } = e, n = l.useRef(p.default.getRecentCustomStatuses()), s = (0, m.getHangStatusOptions)(), r = e => {
-                        (0, h.updateHangStatus)(e, "HangStatusQuickswitcher", !0)
+                        (0, h.updateHangStatus)(e, !0)
                     }, I = l.useCallback(() => {
                         (0, h.clearHangStatus)(!0)
                     }, []);
@@ -15668,7 +15670,7 @@
                                     let l = e.status === (null == t ? void 0 : t.details) && u.isEqual(e.emoji, null == t ? void 0 : t.emoji);
                                     return (0, a.jsx)(d.Clickable, {
                                         "aria-label": e.status,
-                                        onClick: () => (0, h.updateCustomHangStatus)(e.status, e.emoji, "HangStatusQuickswitcher", !0),
+                                        onClick: () => (0, h.updateCustomHangStatus)(e.status, e.emoji, !0),
                                         children: (0, a.jsx)(E.HangStatusIconWidget, {
                                             className: i(S.iconWidget, {
                                                 [S.selectedWidget]: l

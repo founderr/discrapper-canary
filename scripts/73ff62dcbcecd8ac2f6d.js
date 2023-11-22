@@ -1729,7 +1729,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "248434"
+                        buildNumber: "248441"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -31078,7 +31078,8 @@
                                     hovered: t,
                                     activities: n,
                                     applicationStream: s,
-                                    status: l
+                                    status: l,
+                                    user: e
                                 }),
                                 hovered: t,
                                 showAccountIdentifier: !0
@@ -32039,7 +32040,8 @@
                         hovered: t,
                         activities: n,
                         applicationStream: r,
-                        status: o
+                        status: o,
+                        user: u
                     } = e;
                     return n.length > 0 ? (0, a.jsx)(s.default, {
                         className: i.activity,
@@ -32047,7 +32049,8 @@
                         emojiClassName: i.customStatusEmoji,
                         activities: n,
                         applicationStream: r,
-                        animate: t
+                        animate: t,
+                        user: u
                     }) : (0, a.jsx)("div", {
                         className: i.text,
                         children: (0, l.humanizeStatus)(o)
