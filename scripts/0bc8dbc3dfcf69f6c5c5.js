@@ -112,8 +112,8 @@
                 u = r("865146"),
                 h = r("145131"),
                 p = r("712218"),
-                f = r("745279"),
-                m = r("159885"),
+                m = r("745279"),
+                f = r("159885"),
                 g = r("782340"),
                 b = r("584565");
             (a = class extends l.PureComponent {
@@ -141,7 +141,7 @@
                 }
                 getLabel(e) {
                     return e instanceof u.CreditCardSourceRecord ? g.default.Messages.PAYMENT_SOURCE_CARD_ENDING.format({
-                        brand: (0, m.upperCaseFirstChar)(e.brand),
+                        brand: (0, f.upperCaseFirstChar)(e.brand),
                         last_4: e.last4
                     }) : e instanceof u.PaypalSourceRecord ? g.default.Messages.PAYMENT_SOURCE_PAYPAL : e instanceof u.SofortSourceRecord ? g.default.Messages.PAYMENT_SOURCE_SOFORT : e instanceof u.GiropaySourceRecord ? g.default.Messages.PAYMENT_SOURCE_GIROPAY : e instanceof u.Przelewy24SourceRecord ? g.default.Messages.PAYMENT_SOURCE_PRZELEWY24 : e instanceof u.PaysafeSourceRecord ? g.default.Messages.PAYMENT_SOURCE_PAYSAFE_CARD : e instanceof u.GcashSourceRecord ? g.default.Messages.PAYMENT_SOURCE_GCASH : e instanceof u.GrabPayMySourceRecord ? g.default.Messages.PAYMENT_SOURCE_GRABPAY : e instanceof u.MomoWalletSourceRecord ? g.default.Messages.PAYMENT_SOURCE_MOMO_WALLET : e instanceof u.VenmoSourceRecord ? g.default.Messages.PAYMENT_SOURCE_VENMO : e instanceof u.KaKaoPaySourceRecord ? g.default.Messages.PAYMENT_SOURCE_KAKAOPAY : e instanceof u.GoPayWalletSourceRecord ? g.default.Messages.PAYMENT_SOURCE_GOPAY_WALLET : e instanceof u.BancontactSourceRecord ? g.default.Messages.PAYMENT_SOURCE_BANCONTACT : e instanceof u.IdealSourceRecord ? g.default.Messages.PAYMENT_SOURCE_IDEAL_WITH_BANK.format({
                         bank: (0, d.getIdealBankDisplayNameFromBankName)(e.bank)
@@ -166,7 +166,7 @@
                         locale: t
                     } = this.props, r = null;
                     return e instanceof u.CreditCardSourceRecord ? r = g.default.Messages.PAYMENT_SOURCE_CARD_EXPIRES.format({
-                        month: (0, f.getLocalizedDisplayMonth)(e.expiresMonth, t),
+                        month: (0, m.getLocalizedDisplayMonth)(e.expiresMonth, t),
                         year: e.expiresYear
                     }) : e instanceof u.PaypalSourceRecord ? r = e.email : e instanceof u.SofortSourceRecord ? r = e.email : e instanceof u.Przelewy24SourceRecord ? r = e.email : e instanceof u.VenmoSourceRecord ? r = "@" + e.username : e instanceof u.CashAppSourceRecord && (r = e.username), r
                 }
@@ -376,14 +376,14 @@
                     throttleDuration: d = 300,
                     orientation: u,
                     usePointerEvents: h = !1
-                } = e, [p, f] = o.useState(!1), m = o.useRef(0), g = o.useRef(null == t ? 0 : t);
+                } = e, [p, m] = o.useState(!1), f = o.useRef(0), g = o.useRef(null == t ? 0 : t);
                 return o.useLayoutEffect(() => {
                     if (!p || null == r.current) return;
 
                     function e(e) {
                         let t = 1 === c(u) ? e.screenX : e.screenY,
                             r = 0 === u || 2 === u,
-                            i = (t - m.current) * (r ? -1 : 1),
+                            i = (t - f.current) * (r ? -1 : 1),
                             l = g.current + i;
                         return (0, s.clamp)(l, null != n ? n : 0, null != a ? a : l)
                     }
@@ -395,7 +395,7 @@
                             r.current.style[i] = "".concat(n, "px"), t(n)
                         },
                         b = t => {
-                            f(!1);
+                            m(!1);
                             let r = e(t);
                             i(r), null == l || l(r)
                         },
@@ -407,7 +407,7 @@
                     }
                 }, [p, i, n, a, u, r, d, l, h]), o.useCallback(e => {
                     let t = 1 === c(u);
-                    null != r.current && (g.current = t ? r.current.offsetWidth : r.current.offsetHeight), m.current = t ? e.screenX : e.screenY, f(!0)
+                    null != r.current && (g.current = t ? r.current.offsetWidth : r.current.offsetHeight), f.current = t ? e.screenX : e.screenY, m(!0)
                 }, [u, r])
             }
         },
@@ -633,7 +633,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return f
+                    return m
                 }
             }), r("222007");
             var a = r("748820"),
@@ -661,7 +661,7 @@
                 }
             }
             p.displayName = "AnalyticsLogStore";
-            var f = new p(l.default, {
+            var m = new p(l.default, {
                 TRACK: function(e) {
                     let {
                         event: t,
@@ -747,8 +747,8 @@
                 u = r("428958"),
                 h = r("368694"),
                 p = r("461380"),
-                f = r("945330"),
-                m = r("496657"),
+                m = r("945330"),
+                f = r("496657"),
                 g = r("664336"),
                 b = r("370492"),
                 y = r("584369"),
@@ -885,12 +885,12 @@
                     children: [(0, a.jsxs)(g.default, {
                         className: D.headerBar,
                         toolbar: (0, a.jsx)(g.default.Icon, {
-                            icon: f.default,
+                            icon: m.default,
                             tooltip: I.default.Messages.CLOSE,
                             onClick: b.toggleDisplayDevTools
                         }),
                         children: [(0, a.jsx)(g.default.Icon, {
-                            icon: m.default,
+                            icon: f.default,
                             tooltip: "DevTools"
                         }), (0, a.jsx)(g.default.Title, {
                             children: "DevTools"
@@ -946,7 +946,7 @@
                                 direction: p.default.Directions.UP
                             }),
                             children: [(0, a.jsx)(g.default.Icon, {
-                                icon: m.default,
+                                icon: f.default,
                                 tooltip: "DevTools"
                             }), (0, a.jsx)(g.default.Title, {
                                 children: "DevTools"
@@ -985,8 +985,8 @@
                 u = r("145079"),
                 h = r("697218"),
                 p = r("756609"),
-                f = r("228220"),
-                m = r("664336"),
+                m = r("228220"),
+                f = r("664336"),
                 g = r("888400"),
                 b = r("398570"),
                 y = r("370492"),
@@ -1057,12 +1057,12 @@
                             }
                         } = e, o = h.default.getUser(i), c = s(n);
                         return (0, a.jsxs)(a.Fragment, {
-                            children: [(0, a.jsxs)(m.default, {
+                            children: [(0, a.jsxs)(f.default, {
                                 className: l(T.headerBar, j.subPanelHeaderBar),
-                                children: [(0, a.jsx)(m.default.Icon, {
+                                children: [(0, a.jsx)(f.default.Icon, {
                                     icon: p.default,
                                     tooltip: t
-                                }), (0, a.jsx)(m.default.Title, {
+                                }), (0, a.jsx)(f.default.Title, {
                                     children: t
                                 })]
                             }), (0, a.jsxs)(x.Properties, {
@@ -1142,7 +1142,7 @@
                     h = o.find(e => e.key === s),
                     {
                         TabBar: p,
-                        renderSelectedTab: m
+                        renderSelectedTab: f
                     } = (0, C.default)({
                         tabs: L
                     }, []);
@@ -1158,7 +1158,7 @@
                             onClick: y.clearAnalyticsLog,
                             children: (0, a.jsx)("span", {
                                 title: S.default.Messages.CLEAR,
-                                children: (0, a.jsx)(f.default, {
+                                children: (0, a.jsx)(m.default, {
                                     "aria-label": S.default.Messages.CLEAR
                                 })
                             })
@@ -1190,7 +1190,7 @@
                         className: j.subPanel,
                         minHeight: 100,
                         initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
-                        children: [(0, a.jsx)(p, {}), m({
+                        children: [(0, a.jsx)(p, {}), f({
                             loggedEvent: h
                         })]
                     })]
@@ -1234,8 +1234,8 @@
                 u = r.n(d),
                 h = r("703809"),
                 p = r("65597"),
-                f = r("95410"),
-                m = r("497991"),
+                m = r("95410"),
+                f = r("497991"),
                 g = r("928114"),
                 b = r("111940"),
                 y = r("133198"),
@@ -1264,12 +1264,12 @@
             }
             let A = {
                     ...y.semanticColorTokens,
-                    ...m.componentColorTokens,
+                    ...f.componentColorTokens,
                     ...g.gradients
                 },
                 _ = {
                     ...O(y.semanticColorTokens),
-                    ...O(m.componentColorTokens)
+                    ...O(f.componentColorTokens)
                 },
                 R = ["100", "130", "160", "200", "230", "260", "300", "330", "345", "360", "400", "430", "460", "500", "530", "560", "600", "630", "645", "660", "700", "730", "760", "800", "830", "860", "900"];
 
@@ -1306,11 +1306,11 @@
 
             function I(e, t) {
                 let [r, a] = i.useState(() => {
-                    let r = f.default.get(e);
+                    let r = m.default.get(e);
                     return null != r ? r : t
                 });
                 return i.useEffect(() => {
-                    f.default.set(e, r)
+                    m.default.set(e, r)
                 }, [e, r]), [r, a]
             }
 
@@ -1326,7 +1326,7 @@
                 let [{
                     rawPalette: a,
                     semanticTokens: l
-                }, s, d, f, m, g] = function(e, t) {
+                }, s, d, m, f, g] = function(e, t) {
                     let [r, a] = I("".concat(e, "-states"), [t]), [n, l] = I("".concat(e, "-index"), 0), o = r[n], s = i.useCallback(e => {
                         let t = [e, ...r].slice(0, 20);
                         a(t), l(0)
@@ -1436,11 +1436,11 @@
                             className: N.toolbarGroup,
                             children: [(0, n.jsx)(x.Button, {
                                 onClick: d,
-                                disabled: !m,
+                                disabled: !f,
                                 size: x.Button.Sizes.MIN,
                                 children: "Undo"
                             }), (0, n.jsx)(x.Button, {
-                                onClick: f,
+                                onClick: m,
                                 disabled: !g,
                                 size: x.Button.Sizes.MIN,
                                 children: "Redo"
@@ -1666,8 +1666,8 @@
                 u = r("561703"),
                 h = r("315585"),
                 p = r("664336"),
-                f = r("888400"),
-                m = r("50625"),
+                m = r("888400"),
+                f = r("50625"),
                 g = r("332814"),
                 b = r("928063"),
                 y = r("109475"),
@@ -1727,8 +1727,8 @@
                                 name: "Created at",
                                 children: (0, a.jsx)("time", {
                                     dateTime: null === (t = r.createdAt) || void 0 === t ? void 0 : t.toISOString(),
-                                    title: (0, f.dateFormat)(n, "LLLL"),
-                                    children: (0, f.calendarFormat)(n)
+                                    title: (0, m.dateFormat)(n, "LLLL"),
+                                    children: (0, m.calendarFormat)(n)
                                 })
                             }), (0, a.jsxs)(g.Property, {
                                 name: "Total Time",
@@ -1736,7 +1736,7 @@
                             })]
                         }), (0, a.jsx)(c.ScrollerThin, {
                             className: k.inspectorContainer,
-                            children: (0, a.jsx)(m.default, {
+                            children: (0, a.jsx)(f.default, {
                                 data: r.action
                             })
                         })]
@@ -1784,7 +1784,7 @@
                                 })
                             }), (0, a.jsx)(c.ScrollerThin, {
                                 className: k.inspectorContainer,
-                                children: (0, a.jsx)(m.default, {
+                                children: (0, a.jsx)(f.default, {
                                     data: t.error
                                 })
                             })]
@@ -1912,7 +1912,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return m
+                    return f
                 }
             }), r("222007");
             var a = r("37983");
@@ -1941,7 +1941,7 @@
             let h = u(d),
                 p = u(d);
 
-            function f(e) {
+            function m(e) {
                 return s.TOKEN_REGEX.test(e) ? (0, a.jsx)(o.default, {
                     type: o.default.Types.TEXT,
                     children: () => (0, a.jsx)(a.Fragment, {
@@ -1950,7 +1950,7 @@
                 }) : e
             }
 
-            function m(e) {
+            function f(e) {
                 let {
                     data: t
                 } = e, r = (0, l.default)();
@@ -1960,7 +1960,7 @@
                         data: t,
                         theme: "light" === r ? p : h,
                         invertTheme: !1,
-                        valueRenderer: f
+                        valueRenderer: m
                     })
                 })
             }
@@ -2083,8 +2083,8 @@
                 u = r("364735"),
                 h = r("357957"),
                 p = r("811199"),
-                f = r("694735"),
-                m = r("186720");
+                m = r("694735"),
+                f = r("186720");
             let g = [{
                 label: "VISA",
                 value: "pm_card_us"
@@ -2132,9 +2132,9 @@
                 return n.useEffect(() => {
                     (0, d.fetchPaymentSources)()
                 }, []), (0, a.jsx)(c.ScrollerThin, {
-                    className: l(f.panel),
+                    className: l(m.panel),
                     children: (0, a.jsxs)("div", {
-                        className: m.panelInner,
+                        className: f.panelInner,
                         children: [(0, a.jsxs)(c.Text, {
                             style: {
                                 marginBottom: "16px"
@@ -2142,7 +2142,7 @@
                             variant: "text-lg/bold",
                             children: [" ", "Manage Payment Sources", " "]
                         }), (0, a.jsxs)("div", {
-                            className: m.buttons,
+                            className: f.buttons,
                             children: [(0, a.jsx)(c.Text, {
                                 variant: "text-md/normal",
                                 children: " Card Type "
@@ -2180,7 +2180,7 @@
                     paymentSource: t
                 } = e;
                 return (0, a.jsxs)("div", {
-                    className: m.inputRow,
+                    className: f.inputRow,
                     children: [(0, a.jsx)(u.default, {
                         locale: "en-US",
                         paymentSource: t
@@ -2221,8 +2221,8 @@
                 u = r("305961"),
                 h = r("957255"),
                 p = r("18494"),
-                f = r("162771"),
-                m = r("36694"),
+                m = r("162771"),
+                f = r("36694"),
                 g = r("945330"),
                 b = r("465305"),
                 y = r("606762"),
@@ -2233,7 +2233,7 @@
                 let {
                     title: t,
                     can: r
-                } = e, n = r ? m.default : g.default, l = (0, a.jsx)("div", {
+                } = e, n = r ? f.default : g.default, l = (0, a.jsx)("div", {
                     className: i(x.iconOuter, r ? x.iconCheck : x.iconCross),
                     children: (0, a.jsx)(n, {
                         className: x.icon
@@ -2253,10 +2253,10 @@
 
             function C() {
                 let e = (0, o.useStateFromStores)([p.default], () => p.default.getChannelId()),
-                    t = (0, o.useStateFromStores)([f.default], () => f.default.getGuildId()),
+                    t = (0, o.useStateFromStores)([m.default], () => m.default.getGuildId()),
                     r = (0, o.useStateFromStores)([d.default], () => d.default.getChannel(e)),
                     n = (0, o.useStateFromStores)([u.default], () => u.default.getGuild(t)),
-                    m = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(r)),
+                    f = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(r)),
                     g = (0, o.useStateFromStores)([h.default], () => h.default.computePermissions(n)),
                     C = (0, c.default)(r, !0),
                     S = null != r ? (0, y.getChannelPermissionSpecMap)(r, !1, !0) : null,
@@ -2265,7 +2265,7 @@
                         let {
                             title: t,
                             flag: r
-                        } = e, n = l.default.has(m, r);
+                        } = e, n = l.default.has(f, r);
                         return (0, a.jsx)(v, {
                             title: t,
                             can: n
@@ -2430,8 +2430,8 @@
                 u = r("664336"),
                 h = r("50625"),
                 p = r("928063"),
-                f = r("109475"),
-                m = r("724209"),
+                m = r("109475"),
+                f = r("724209"),
                 g = r("694735"),
                 b = r("435275");
 
@@ -2504,7 +2504,7 @@
                 } = e, {
                     TabBar: n,
                     renderSelectedTab: i
-                } = (0, m.default)({
+                } = (0, f.default)({
                     tabs: v
                 }, []);
                 return (0, a.jsxs)(p.default, {
@@ -2540,7 +2540,7 @@
                         return r.getName().toLowerCase().includes(t.toLowerCase())
                     })(e, t)),
                     [h, p] = n.useState(),
-                    m = i.find(e => e._dispatchToken === h);
+                    f = i.find(e => e._dispatchToken === h);
                 return (0, a.jsxs)("div", {
                     ref: e,
                     className: l(g.panel, b.panel),
@@ -2557,14 +2557,14 @@
                         })
                     }), (0, a.jsx)(s.ScrollerThin, {
                         className: b.tableContainer,
-                        children: (0, a.jsx)(f.default, {
+                        children: (0, a.jsx)(m.default, {
                             columns: k,
                             data: u,
                             selectedRowKey: h,
                             onClickRow: p
                         })
-                    }), null != m && (0, a.jsx)(C, {
-                        store: m,
+                    }), null != f && (0, a.jsx)(C, {
+                        store: f,
                         initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                     })]
                 })
@@ -2645,8 +2645,8 @@
                 u = r("521012"),
                 h = r("811199"),
                 p = r("49111"),
-                f = r("694735"),
-                m = r("186720");
+                m = r("694735"),
+                f = r("186720");
             let g = [{
                     label: "Nitro Monthly",
                     value: "511651880837840896"
@@ -2714,9 +2714,9 @@
                     await s.default.delete("/debug/subscription"), await (0, d.fetchSubscriptions)()
                 };
                 return (0, a.jsx)(c.ScrollerThin, {
-                    className: l(f.panel),
+                    className: l(m.panel),
                     children: (0, a.jsxs)("div", {
-                        className: m.panelInner,
+                        className: f.panelInner,
                         children: [(0, a.jsx)(c.Text, {
                             style: {
                                 marginBottom: "16px"
@@ -2724,7 +2724,7 @@
                             variant: "text-lg/bold",
                             children: "Manage Subscription"
                         }), (0, a.jsxs)("section", {
-                            className: m.buttons,
+                            className: f.buttons,
                             children: [null == r && (0, a.jsxs)(a.Fragment, {
                                 children: [(0, a.jsx)(c.Text, {
                                     variant: "text-md/normal",
@@ -2777,7 +2777,7 @@
                         variant: "text-md/normal",
                         children: "Existing Subscription"
                     }), (0, a.jsxs)("div", {
-                        className: l(m.card, i ? m.gradientWrapperTier0 : m.gradientWrapperTier2),
+                        className: l(f.card, i ? f.gradientWrapperTier0 : f.gradientWrapperTier2),
                         children: [(0, a.jsxs)(c.Text, {
                             variant: "text-md/normal",
                             children: [" Subscription Type: ", (() => {
@@ -2830,7 +2830,7 @@
                     onClickRow: u,
                     selectedRowKey: h,
                     ...p
-                } = e, f = n.useMemo(() => t.map(e => ({
+                } = e, m = n.useMemo(() => t.map(e => ({
                     renderHeader: () => (0, a.jsx)(o.Text, {
                         variant: "text-sm/semibold",
                         children: e.key
@@ -2839,7 +2839,7 @@
                 })), [t]);
                 return (0, a.jsx)(s.default, {
                     ...p,
-                    columns: f,
+                    columns: m,
                     rowComponent: null != r ? r : e => {
                         let {
                             item: t,
@@ -2879,8 +2879,8 @@
                 u = r("872173"),
                 h = r("340412"),
                 p = r("413709"),
-                f = r("830031"),
-                m = r("228220"),
+                m = r("830031"),
+                f = r("228220"),
                 g = r("306160"),
                 b = r("719923"),
                 y = r("811199"),
@@ -3008,7 +3008,7 @@
                             onClick: async () => {
                                 N(!0), await T(A, "trial"), h(), N(!1)
                             },
-                            children: (0, a.jsx)(m.default, {
+                            children: (0, a.jsx)(f.default, {
                                 className: l(C.icon, C.trashIcon)
                             })
                         })]
@@ -3021,7 +3021,7 @@
                             variant: "eyebrow",
                             color: "always-white",
                             children: ["Offer: ", A]
-                        }), y ? (0, a.jsx)(f.default, {
+                        }), y ? (0, a.jsx)(m.default, {
                             className: l(C.icon, C.noMargin)
                         }) : (0, a.jsx)(p.default, {
                             className: C.icon
@@ -3035,7 +3035,7 @@
                             variant: "eyebrow",
                             color: "always-white",
                             children: ["Trial: ", P]
-                        }), v ? (0, a.jsx)(f.default, {
+                        }), v ? (0, a.jsx)(m.default, {
                             className: l(C.icon, C.noMargin)
                         }) : (0, a.jsx)(p.default, {
                             className: C.icon
@@ -3141,7 +3141,7 @@
                             onClick: async () => {
                                 k(!0), await T(j, "discount"), s(), k(!1)
                             },
-                            children: (0, a.jsx)(m.default, {
+                            children: (0, a.jsx)(f.default, {
                                 className: l(C.icon, C.trashIcon)
                             })
                         })]
@@ -3154,7 +3154,7 @@
                             variant: "eyebrow",
                             color: "text-normal",
                             children: ["Offer: ", j]
-                        }), u ? (0, a.jsx)(f.default, {
+                        }), u ? (0, a.jsx)(m.default, {
                             className: l(C.icon, C.noMargin)
                         }) : (0, a.jsx)(p.default, {
                             className: C.icon
@@ -3168,7 +3168,7 @@
                             variant: "eyebrow",
                             color: "text-normal",
                             children: ["Discount: ", L]
-                        }), b ? (0, a.jsx)(f.default, {
+                        }), b ? (0, a.jsx)(m.default, {
                             className: l(C.icon, C.noMargin)
                         }) : (0, a.jsx)(p.default, {
                             className: C.icon
@@ -3210,7 +3210,7 @@
             }
 
             function _() {
-                let [e, t] = n.useState([]), [r, i] = n.useState([]), [o, p] = n.useState(), [f, m] = n.useState(), [g, b] = n.useState([]), [x, k] = n.useState([]), [T, w] = n.useState(!0);
+                let [e, t] = n.useState([]), [r, i] = n.useState([]), [o, p] = n.useState(), [m, f] = n.useState(), [g, b] = n.useState([]), [x, k] = n.useState([]), [T, w] = n.useState(!0);
                 n.useEffect(() => {
                     (0 === e.length || 0 === r.length || T) && S().then(e => {
                         let r = Object.keys(e.trial).map(t => ({
@@ -3221,9 +3221,9 @@
                                 label: t,
                                 value: e.discount[t]
                             }));
-                        t(r), i(a), null == o && p(r[0].value), null == f && m(a[0].value)
+                        t(r), i(a), null == o && p(r[0].value), null == m && f(a[0].value)
                     })
-                }, [e, r, o, f, T]), n.useEffect(() => {
+                }, [e, r, o, m, T]), n.useEffect(() => {
                     T && (w(!1), h.default.forceReset(), (0, d.fetchUserOffer)(), N().then(e => {
                         let t = e.trial.sort((e, t) => e.id.localeCompare(t.id));
                         b(t);
@@ -3234,7 +3234,7 @@
                 let _ = async () => {
                     null != o && (await j(o, "trial"), w(!0))
                 }, R = async () => {
-                    null != f && (await j(f, "discount"), w(!0))
+                    null != m && (await j(m, "discount"), w(!0))
                 }, P = async () => {
                     await E(), w(!0)
                 };
@@ -3293,10 +3293,10 @@
                                 children: [(0, a.jsx)(c.Select, {
                                     className: C.input,
                                     options: r,
-                                    isSelected: e => f === e,
+                                    isSelected: e => m === e,
                                     placeholder: "Discount Type",
                                     serialize: e => String(e),
-                                    select: e => m(e),
+                                    select: e => f(e),
                                     popoutLayerContext: y.devToolsLayerContext
                                 }), (0, a.jsx)(c.Button, {
                                     onClick: R,
@@ -3346,8 +3346,8 @@
                 u = r("446674"),
                 h = r("77078"),
                 p = r("913144"),
-                f = r("810567"),
-                m = r("756609"),
+                m = r("810567"),
+                f = r("756609"),
                 g = r("228220"),
                 b = r("664336"),
                 y = r("888400"),
@@ -3407,7 +3407,7 @@
                             children: [(0, a.jsxs)(b.default, {
                                 className: l(N.headerBar, w.subPanelHeaderBar),
                                 children: [(0, a.jsx)(b.default.Icon, {
-                                    icon: m.default,
+                                    icon: f.default,
                                     tooltip: t
                                 }), (0, a.jsx)(b.default.Title, {
                                     children: t
@@ -3468,7 +3468,7 @@
                 }];
 
             function A() {
-                let [e, t] = n.useState(""), r = n.useRef(null), i = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = n.useMemo(() => i.filter(t => 0 === e.length || s(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [i, e]), [c, d] = n.useState(void 0), m = o.find(e => e.key === c), {
+                let [e, t] = n.useState(""), r = n.useRef(null), i = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = n.useMemo(() => i.filter(t => 0 === e.length || s(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [i, e]), [c, d] = n.useState(void 0), f = o.find(e => e.key === c), {
                     TabBar: b,
                     renderSelectedTab: y
                 } = (0, j.default)({
@@ -3503,7 +3503,7 @@
                                     "aria-label": T.default.Messages.CLEAR
                                 })
                             })
-                        }), (0, a.jsx)(f.default, {
+                        }), (0, a.jsx)(m.default, {
                             className: w.searchBar,
                             query: e,
                             onChange: t,
@@ -3518,12 +3518,12 @@
                             selectedRowKey: c,
                             onClickRow: d
                         })
-                    }), null != m && (0, a.jsxs)(C.default, {
+                    }), null != f && (0, a.jsxs)(C.default, {
                         className: w.subPanel,
                         minHeight: 100,
                         initialHeight: null != r.current ? r.current.clientHeight / 2 : 300,
                         children: [(0, a.jsx)(b, {}), y({
-                            loggedTrigger: m
+                            loggedTrigger: f
                         })]
                     })]
                 })
@@ -3559,7 +3559,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return f
+                    return m
                 }
             }), r("222007"), r("424973");
             var a = r("37983"),
@@ -3594,13 +3594,13 @@
                     tabs: t,
                     selectedTabId: r,
                     onSelectTab: i
-                } = e, l = n.useRef(null), p = n.useRef(0), f = n.useRef(new Map), [m, g] = n.useState([]), b = n.useCallback(() => {
+                } = e, l = n.useRef(null), p = n.useRef(0), m = n.useRef(new Map), [f, g] = n.useState([]), b = n.useCallback(() => {
                     var e, a, n, i;
                     if (null == l.current) return;
                     let o = [],
                         s = l.current.getBoundingClientRect().width;
                     if (s !== p.current) {
-                        for (let l of (p.current = s, s -= null !== (a = null === (e = f.current.get(r)) || void 0 === e ? void 0 : e.width) && void 0 !== a ? a : 0, t)) l.id !== r && (s -= null !== (i = null === (n = f.current.get(l.id)) || void 0 === n ? void 0 : n.width) && void 0 !== i ? i : 0) < 0 && o.push(l.id);
+                        for (let l of (p.current = s, s -= null !== (a = null === (e = m.current.get(r)) || void 0 === e ? void 0 : e.width) && void 0 !== a ? a : 0, t)) l.id !== r && (s -= null !== (i = null === (n = m.current.get(l.id)) || void 0 === n ? void 0 : n.width) && void 0 !== i ? i : 0) < 0 && o.push(l.id);
                         g(o)
                     }
                 }, [t, r]), y = n.useRef(null);
@@ -3623,14 +3623,14 @@
                                 id: t,
                                 name: n
                             } = e;
-                            return m.includes(t) && r !== t ? (0, a.jsx)(o.MenuItem, {
+                            return f.includes(t) && r !== t ? (0, a.jsx)(o.MenuItem, {
                                 id: t,
                                 label: n,
                                 action: () => i(t)
                             }, t) : null
                         }).filter(c.isNotNullish)
                     })
-                }, [t, m, i, r]);
+                }, [t, f, i, r]);
                 return (0, a.jsxs)("div", {
                     className: u.tabBar,
                     ref: l,
@@ -3639,13 +3639,13 @@
                             id: t,
                             name: n
                         } = e;
-                        if (!m.includes(t)) return (0, a.jsx)(h, {
+                        if (!f.includes(t)) return (0, a.jsx)(h, {
                             id: t,
                             selected: r === t,
                             ref: e => {
                                 var r, a, n;
-                                let i = null !== (a = null === (r = f.current.get(t)) || void 0 === r ? void 0 : r.width) && void 0 !== a ? a : 0;
-                                f.current.set(t, {
+                                let i = null !== (a = null === (r = m.current.get(t)) || void 0 === r ? void 0 : r.width) && void 0 !== a ? a : 0;
+                                m.current.set(t, {
                                     node: e,
                                     width: null !== (n = null == e ? void 0 : e.getBoundingClientRect().width) && void 0 !== n ? n : i
                                 })
@@ -3653,7 +3653,7 @@
                             onClick: r !== t ? () => i(t) : void 0,
                             children: n
                         }, t)
-                    }).filter(c.isNotNullish), m.length > 0 && (0, a.jsx)(a.Fragment, {
+                    }).filter(c.isNotNullish), f.length > 0 && (0, a.jsx)(a.Fragment, {
                         children: (0, a.jsx)(o.Popout, {
                             layerContext: d.devToolsLayerContext,
                             renderPopout: x,
@@ -3676,7 +3676,7 @@
                 })
             }
 
-            function f(e, t) {
+            function m(e, t) {
                 var r, i, l;
                 let {
                     tabs: o,
@@ -3688,10 +3688,10 @@
                     onSelectTab: e => {
                         u(e), null == c || c(e)
                     }
-                }), [d, u, c, ...t]), f = null !== (l = null === (i = o.find(e => e.id === d)) || void 0 === i ? void 0 : i.render) && void 0 !== l ? l : () => null;
+                }), [d, u, c, ...t]), m = null !== (l = null === (i = o.find(e => e.id === d)) || void 0 === i ? void 0 : i.render) && void 0 !== l ? l : () => null;
                 return {
                     TabBar: h,
-                    renderSelectedTab: f,
+                    renderSelectedTab: m,
                     selectedTabId: d
                 }
             }
@@ -3914,7 +3914,7 @@
                     return p
                 },
                 useShowAutomodUserProfileUpsell: function() {
-                    return f
+                    return m
                 }
             }), r("222007");
             var a = r("446674"),
@@ -3961,7 +3961,7 @@
                 return i || r
             }
 
-            function f(e) {
+            function m(e) {
                 var t, r;
                 let a = p(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "", !0),
                     n = u(null !== (r = null == e ? void 0 : e.id) && void 0 !== r ? r : "");
@@ -3994,8 +3994,8 @@
                         hideSimpleEmbedContent: c = !0,
                         formatInline: h = !1,
                         postProcessor: p
-                    } = r, f = !1;
-                    let m = e(t.content, !0, (a = t, i = r, {
+                    } = r, m = !1;
+                    let f = e(t.content, !0, (a = t, i = r, {
                         allowLinks: null != a.webhookId || !!i.allowLinks,
                         allowEmojiLinks: null != a.webhookId,
                         channelId: a.channel_id,
@@ -4017,7 +4017,7 @@
                         return ("link" === r.type || "attachmentLink" === r.type) && l.has(a.type) && (0, n.isEmbedInline)(a) ? [] : e
                     }(e, t.embeds)), !h && (e = function(e, t) {
                         return t ? d(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = d(e[0].content)), e)
-                    }(e, r)), f = function(e, t) {
+                    }(e, r)), m = function(e, t) {
                         return t ? u(e) : "paragraph" === e[0].type && e[0].content instanceof Array && u(e[0].content)
                     }(e, r), h && (e = function e(t) {
                         return t.forEach(t => {
@@ -4025,8 +4025,8 @@
                         }), t
                     }(e)), null != p && (e = p(e, r)), e));
                     return {
-                        hasSpoilerEmbeds: f,
-                        content: m
+                        hasSpoilerEmbeds: m,
+                        content: f
                     }
                 }(r, e, t)
             }
@@ -4296,8 +4296,8 @@
                 u = r("647374"),
                 h = r("47677"),
                 p = r("895530"),
-                f = r("238165"),
-                m = r("862839");
+                m = r("238165"),
+                f = r("862839");
             let g = new RegExp("https?://".concat(null !== (a = window.GLOBAL_ENV.CDN_HOST) && void 0 !== a ? a : ""));
 
             function b(e) {
@@ -4318,7 +4318,7 @@
                     paragraph: {
                         ...c.defaultRules.paragraph,
                         react: (e, t, r) => (0, n.jsx)("div", {
-                            className: f.paragraph,
+                            className: m.paragraph,
                             children: t(e.content, r)
                         }, r.key)
                     },
@@ -4348,7 +4348,7 @@
                     blockQuote: {
                         ...c.defaultRules.blockQuote,
                         react: (e, t, r) => (0, n.jsx)("blockquote", {
-                            className: f.blockquote,
+                            className: m.blockquote,
                             children: b(e)
                         }, r.key)
                     },
@@ -4370,7 +4370,7 @@
                         ...c.defaultRules.inlineCode,
                         order: 6,
                         react: (e, t, r) => (0, n.jsx)("code", {
-                            className: f.codeInline,
+                            className: m.codeInline,
                             children: b(e)
                         }, r.key)
                     },
@@ -4379,7 +4379,7 @@
                         react(e, t, a) {
                             let i = () => (0, n.jsx)("pre", {
                                 children: (0, n.jsx)("code", {
-                                    className: o(m.scrollbarGhostHairline, "hljs"),
+                                    className: o(f.scrollbarGhostHairline, "hljs"),
                                     children: b(e)
                                 })
                             }, a.key);
@@ -4393,7 +4393,7 @@
                                         let r = t.highlight(e.lang, e.content, !0);
                                         return null == r ? i() : (0, n.jsx)("pre", {
                                             children: (0, n.jsx)("code", {
-                                                className: o(m.scrollbarGhostHairline, "hljs", r.language),
+                                                className: o(f.scrollbarGhostHairline, "hljs", r.language),
                                                 dangerouslySetInnerHTML: {
                                                     __html: r.value
                                                 }
@@ -4420,7 +4420,7 @@
                         ...r
                     }), s = i(l);
                     return (0, n.jsx)("div", {
-                        className: o(f.markdown, e),
+                        className: o(m.markdown, e),
                         children: s
                     })
                 }
@@ -4487,7 +4487,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return f
+                    return m
                 }
             }), r("222007");
             var a = r("37983"),
@@ -4522,13 +4522,13 @@
                         sortKey: n,
                         headerCellClassName: i,
                         headerClassName: p,
-                        sortedHeaderCellClassName: f,
-                        stickyHeader: m
+                        sortedHeaderCellClassName: m,
+                        stickyHeader: f
                     } = this.props, g = e.map(e => {
                         let h = null != e.renderHeader ? e.renderHeader(e, t) : e.key,
                             p = r === d.TableSortDirections.ASCENDING ? c.default : s.default;
                         return (0, a.jsx)(o.Clickable, {
-                            className: l(u.headerCell, i, e.headerCellClassName, e.cellClassName, n === e.key && f, {
+                            className: l(u.headerCell, i, e.headerCellClassName, e.cellClassName, n === e.key && m, {
                                 [u.clickable]: this.isSortable(e)
                             }),
                             onClick: this.isSortable(e) ? () => this.handleSort(e.key) : void 0,
@@ -4542,7 +4542,7 @@
                     });
                     return (0, a.jsx)(h, {
                         className: l(p, u.row, {
-                            [u.stickyHeader]: m
+                            [u.stickyHeader]: f
                         }),
                         children: g
                     })
@@ -4559,8 +4559,8 @@
                         cellProps: c,
                         rowProps: h,
                         rowComponent: p,
-                        cellComponent: f
-                    } = this.props, m = t;
+                        cellComponent: m
+                    } = this.props, f = t;
                     if (r) {
                         let r = null != a ? e.find(e => {
                                 let {
@@ -4571,10 +4571,10 @@
                             n = [...t],
                             l = null != r && r.sort,
                             o = null != r && null != a && this.isSortable(r) ? n.sort("function" == typeof l ? (e, t) => l(e, t, i) : this.getDefaultSort(a)) : n;
-                        m = null != r && i === d.TableSortDirections.DESCENDING ? o.reverse() : o
+                        f = null != r && i === d.TableSortDirections.DESCENDING ? o.reverse() : o
                     }
-                    return m.map((t, r) => {
-                        let a = e.map(e => (0, n.createElement)(f, {
+                    return f.map((t, r) => {
+                        let a = e.map(e => (0, n.createElement)(m, {
                             ...c,
                             key: e.key,
                             item: t,
@@ -4624,7 +4624,7 @@
                 sortData: !0,
                 stickyHeader: !1
             };
-            var f = p
+            var m = p
         },
         756609: function(e, t, r) {
             "use strict";
@@ -4867,7 +4867,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 Icon: function() {
-                    return m
+                    return f
                 },
                 Divider: function() {
                     return g
@@ -4887,8 +4887,8 @@
                 u = r("980428"),
                 h = r("772280"),
                 p = r("587974"),
-                f = r("133934");
-            let m = e => {
+                m = r("133934");
+            let f = e => {
                     let {
                         className: t,
                         iconClassName: r,
@@ -4899,7 +4899,7 @@
                         color: d,
                         foreground: u,
                         background: h,
-                        icon: m,
+                        icon: f,
                         onClick: g,
                         onContextMenu: b,
                         tooltip: y = null,
@@ -4912,12 +4912,12 @@
                         "aria-checked": T,
                         "aria-expanded": w,
                         "aria-haspopup": N
-                    } = e, E = (0, a.jsx)(m, {
+                    } = e, E = (0, a.jsx)(f, {
                         x: 0,
                         y: 0,
                         width: 24,
                         height: 24,
-                        className: l(r, f.icon),
+                        className: l(r, m.icon),
                         foreground: null != u ? u : void 0,
                         background: null != h ? h : void 0,
                         color: d
@@ -4935,13 +4935,13 @@
                                 onBlur: v
                             } = e;
                             return null == g ? (0, a.jsx)("div", {
-                                className: l(t, [f.iconWrapper]),
-                                children: (0, a.jsx)(m, {
+                                className: l(t, [m.iconWrapper]),
+                                children: (0, a.jsx)(f, {
                                     x: 0,
                                     y: 0,
                                     width: 24,
                                     height: 24,
-                                    className: l(r, f.icon),
+                                    className: l(r, m.icon),
                                     foreground: null != u ? u : void 0,
                                     background: null != h ? h : void 0,
                                     color: d,
@@ -4960,9 +4960,9 @@
                                 onFocus: k,
                                 onBlur: v,
                                 className: l(t, {
-                                    [f.iconWrapper]: !0,
-                                    [f.clickable]: !o && null != g,
-                                    [f.selected]: i
+                                    [m.iconWrapper]: !0,
+                                    [m.clickable]: !o && null != g,
+                                    [m.selected]: i
                                 }),
                                 role: C,
                                 "aria-label": L,
@@ -4975,7 +4975,7 @@
                                     mask: p.default.Masks.HEADER_BAR_BADGE,
                                     children: E
                                 }) : E, s ? (0, a.jsx)("span", {
-                                    className: f.iconBadge
+                                    className: m.iconBadge
                                 }) : null, n]
                             })
                         }
@@ -4986,7 +4986,7 @@
                         className: t
                     } = e;
                     return (0, a.jsx)("div", {
-                        className: l(f.divider, t)
+                        className: l(m.divider, t)
                     })
                 },
                 b = e => {
@@ -4997,44 +4997,44 @@
                         childrenBottom: u,
                         toolbar: h,
                         onDoubleClick: p,
-                        "aria-label": m,
+                        "aria-label": f,
                         "aria-labelledby": g,
                         role: b,
                         scrollable: y,
                         transparent: x = !1
                     } = e, k = n.useRef(null), v = n.useContext(d.default);
                     return (0, a.jsx)("section", {
-                        className: l(t, f.container, {
-                            [f.themed]: !x,
-                            [f.transparent]: x,
-                            [f.themedMobile]: s.isMobile
+                        className: l(t, m.container, {
+                            [m.themed]: !x,
+                            [m.transparent]: x,
+                            [m.themedMobile]: s.isMobile
                         }),
-                        "aria-label": m,
+                        "aria-label": f,
                         "aria-labelledby": g,
                         role: b,
                         ref: k,
                         children: (0, a.jsxs)(c.FocusRingScope, {
                             containerRef: k,
                             children: [(0, a.jsxs)("div", {
-                                className: f.upperContainer,
+                                className: m.upperContainer,
                                 children: [(0, a.jsxs)("div", {
-                                    className: l(f.children, r, {
-                                        [f.scrollable]: y
+                                    className: l(m.children, r, {
+                                        [m.scrollable]: y
                                     }),
                                     onDoubleClick: p,
                                     children: [s.isMobile && null != v ? (0, a.jsx)(o.default, {
                                         onClick: v,
-                                        className: f.hamburger
+                                        className: m.hamburger
                                     }) : null, i]
                                 }), null != h ? (0, a.jsx)("div", {
-                                    className: f.toolbar,
+                                    className: m.toolbar,
                                     children: h
                                 }) : null]
                             }), u]
                         })
                     })
                 };
-            b.Icon = m, b.Title = e => {
+            b.Icon = f, b.Title = e => {
                 let {
                     className: t,
                     wrapperClassName: r,
@@ -5049,7 +5049,7 @@
                     children: (0, a.jsx)(c.Heading, {
                         variant: "heading-md/semibold",
                         color: d ? "header-secondary" : void 0,
-                        className: l(t, f.title),
+                        className: l(t, m.title),
                         id: s,
                         children: n
                     })
@@ -5057,10 +5057,10 @@
                 return null != o ? (0, a.jsx)(c.Clickable, {
                     onClick: o,
                     onContextMenu: i,
-                    className: l(r, f.titleWrapper),
+                    className: l(r, m.titleWrapper),
                     children: h
                 }) : (0, a.jsx)("div", {
-                    className: l(r, f.titleWrapper),
+                    className: l(r, m.titleWrapper),
                     onContextMenu: i,
                     children: h
                 })
@@ -5069,9 +5069,9 @@
                     direction: t = "right"
                 } = e;
                 return "right" === t ? (0, a.jsx)(h.default, {
-                    className: f.caret
+                    className: m.caret
                 }) : (0, a.jsx)(u.default, {
-                    className: f.caret
+                    className: m.caret
                 })
             };
             var y = b
@@ -5614,7 +5614,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 componentColorTokens: function() {
-                    return f
+                    return m
                 }
             });
             var a = r("900731"),
@@ -5628,7 +5628,7 @@
                 u = r("445077"),
                 h = r("5354"),
                 p = r("726110");
-            let f = {
+            let m = {
                 ...a.default,
                 ...i.default,
                 ...n.default,
@@ -6035,6 +6035,18 @@
                 }
             });
             var a = (0, r("237436").defineColorTokens)({
+                "polls-normal-border": {
+                    dark: "primary.260",
+                    light: "primary.260"
+                },
+                "polls-normal-fill": {
+                    dark: "white.500",
+                    light: "white.500"
+                },
+                "polls-normal-label": {
+                    dark: "primary.600",
+                    light: "primary.600"
+                },
                 "polls-victor-border": {
                     dark: "yellow.300",
                     light: "yellow.300"
@@ -6058,6 +6070,30 @@
                 "polls-voted-label": {
                     dark: "primary.600",
                     light: "primary.600"
+                },
+                "polls-embed-border": {
+                    dark: "primary.660",
+                    darker: {
+                        color: "primary.630",
+                        opacity: .5
+                    },
+                    amoled: {
+                        color: "primary.630",
+                        opacity: .5
+                    },
+                    light: "primary.200"
+                },
+                "polls-embed-background": {
+                    dark: "primary.630",
+                    darker: {
+                        color: "brand.360",
+                        opacity: .08
+                    },
+                    amoled: {
+                        color: "brand.360",
+                        opacity: .08
+                    },
+                    light: "primary.130"
                 },
                 "polls-image-normal-border": {
                     dark: {

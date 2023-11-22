@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["95664"], {
+    ["23149"], {
         496559: function(e, t, n) {
             "use strict";
             e.exports = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='271' height='141'><g fill='#000000' fill-rule='evenodd'><rect width='130' height='20' rx='5'/><rect width='254' height='20' y='30' rx='5'/><rect width='190' height='20' y='60' rx='5'/><rect width='66' height='32' y='102' rx='3'/></g></svg>"
@@ -135,6 +135,10 @@
         26511: function(e, t, n) {
             "use strict";
             e.exports = n.p + "20fd6ce03205c6a9281c.svg"
+        },
+        934514: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "f52c432f64584d12cac0.svg"
         },
         728791: function(e, t, n) {
             "use strict";
@@ -10572,9 +10576,9 @@
 
             function o(e, t) {
                 let n = (0, l.match)(t).with(i.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => r.normalStylesImageOnlyAnswers).otherwise(() => r.normalStylesDefault),
-                    a = s(n, r.loserMixinStyles),
+                    a = s(n, r.mutedMixinStyles),
                     o = r.votedStyles,
-                    u = (0, l.match)(t).with(i.PollLayoutTypes.DEFAULT, () => s(o, r.loserMixinStyles, r.defaultNotVotedMixinStyles)).otherwise(() => a),
+                    u = s(n, r.mutedMixinStyles),
                     d = {
                         styles: {
                             loser: a,
@@ -11093,8 +11097,8 @@
                 var t;
                 let {
                     media: n,
-                    attachmentClassName: a,
-                    containerClassName: s,
+                    containerClassName: a,
+                    attachmentClassName: s,
                     emojiClassName: i,
                     fallback: r,
                     alt: o
@@ -11103,13 +11107,13 @@
                 } = (0, h.usePollContext)(), d = null !== (t = null != o ? o : n.text) && void 0 !== t ? t : "";
                 if (n.attachmentIds.length > 0) {
                     let e = u.attachments.find(e => e.id === n.attachmentIds[0]);
-                    if (null != e) return O(s, (0, l.jsx)(v, {
-                        className: a,
+                    if (null != e) return O(a, (0, l.jsx)(v, {
+                        className: s,
                         attachment: e,
                         alt: d
                     }))
                 }
-                return null != n.emoji ? O(s, (0, l.jsx)(x, {
+                return null != n.emoji ? O(a, (0, l.jsx)(x, {
                     className: i,
                     emoji: n.emoji,
                     alt: d
@@ -11466,6 +11470,7 @@
                         children: [(0, a.jsx)(i.PollMediaView, {
                             attachmentClassName: o.attachment,
                             containerClassName: o.mediaContainer,
+                            emojiClassName: o.emoji,
                             media: t.pollMedia,
                             fallback: null,
                             alt: ""
