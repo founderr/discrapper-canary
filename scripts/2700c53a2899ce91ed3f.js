@@ -145,7 +145,7 @@
                         }), (0, l.jsx)(s.Button, {
                             onClick: () => {
                                 let e = g.trim();
-                                "" !== e && ((0, S.updateCustomHangStatus)(e, E, "HangStatusModal"), i())
+                                "" !== e && ((0, S.updateCustomHangStatus)(e, E, "HangStatusModal", !0), i())
                             },
                             className: h.button,
                             disabled: "" === g.trim(),

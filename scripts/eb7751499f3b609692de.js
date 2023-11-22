@@ -15557,7 +15557,7 @@
                                         startingText: t.details,
                                         startingEmoji: t.emoji
                                     })
-                                }) : (0, f.updateHangStatus)(e, "HangStatusPopout")
+                                }) : (0, f.updateHangStatus)(e, "HangStatusPopout", !0)
                             },
                             children: S.default.Messages.CUSTOM_HANGS_STATUS_COPY_CTA
                         }) : null]
@@ -15605,8 +15605,10 @@
                     let {
                         currentStatus: t
                     } = e, n = l.useRef(p.default.getRecentCustomStatuses()), s = (0, m.getHangStatusOptions)(), r = e => {
-                        (0, h.updateHangStatus)(e, "HangStatusQuickswitcher")
-                    };
+                        (0, h.updateHangStatus)(e, "HangStatusQuickswitcher", !0)
+                    }, I = l.useCallback(() => {
+                        (0, h.clearHangStatus)(!0)
+                    }, []);
                     return (0, a.jsxs)("div", {
                         className: S.popoutWrapper,
                         children: [(0, a.jsxs)("div", {
@@ -15666,7 +15668,7 @@
                                     let l = e.status === (null == t ? void 0 : t.details) && u.isEqual(e.emoji, null == t ? void 0 : t.emoji);
                                     return (0, a.jsx)(d.Clickable, {
                                         "aria-label": e.status,
-                                        onClick: () => (0, h.updateCustomHangStatus)(e.status, e.emoji, "HangStatusQuickswitcher"),
+                                        onClick: () => (0, h.updateCustomHangStatus)(e.status, e.emoji, "HangStatusQuickswitcher", !0),
                                         children: (0, a.jsx)(E.HangStatusIconWidget, {
                                             className: i(S.iconWidget, {
                                                 [S.selectedWidget]: l
@@ -15698,7 +15700,7 @@
                         }, "custom-status"), (0, a.jsx)(d.Clickable, {
                             className: i(S.popoutOption, S.deleteOption),
                             "aria-label": C.default.Messages.STATUS_POPOUT_SET_CUSTOM,
-                            onClick: h.clearHangStatus,
+                            onClick: I,
                             children: (0, a.jsx)(d.Text, {
                                 color: "status-danger",
                                 variant: "text-xs/medium",
