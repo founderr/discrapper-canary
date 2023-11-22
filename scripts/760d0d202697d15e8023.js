@@ -1729,7 +1729,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "248136"
+                        buildNumber: "248139"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -35223,44 +35223,45 @@
                 l = n.n(s),
                 i = n("446674"),
                 r = n("913144"),
-                o = n("499031"),
-                u = n("42203"),
-                d = n("26989"),
-                c = n("305961"),
-                E = n("260320"),
-                f = n("169602"),
-                _ = n("42887"),
-                C = n("824563"),
-                h = n("945956"),
-                I = n("27618"),
-                T = n("18494"),
-                S = n("843823"),
-                A = n("697218"),
-                N = n("800762"),
-                m = n("599110"),
-                p = n("449008"),
-                g = n("773336"),
-                R = n("578287"),
-                O = n("65810"),
-                L = n("694352"),
-                v = n("49111"),
-                M = n("954016"),
-                P = n("353927");
+                o = n("191225"),
+                u = n("499031"),
+                d = n("42203"),
+                c = n("26989"),
+                E = n("305961"),
+                f = n("260320"),
+                _ = n("169602"),
+                C = n("42887"),
+                h = n("824563"),
+                I = n("945956"),
+                T = n("27618"),
+                S = n("18494"),
+                A = n("843823"),
+                N = n("697218"),
+                m = n("800762"),
+                p = n("599110"),
+                g = n("449008"),
+                R = n("773336"),
+                O = n("578287"),
+                L = n("65810"),
+                v = n("694352"),
+                M = n("49111"),
+                P = n("954016"),
+                D = n("353927");
             a = class {
                 loadServer() {
-                    for (let e of (g.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
+                    for (let e of (R.isPlatformEmbedded && this.registerTransportsForEmbeddedPlatform(), this.transports)) this.rpcServer.registerTransport(e);
                     let e = this.rpcCommandHandlers;
                     for (let [t, n] of Object.entries(e)) this.rpcServer.setCommandHandler(t, n);
                     let t = this.rpcEventHandlers;
                     for (let [e, n] of Object.entries(t)) this.rpcServer.setEventHandler(e, n)
                 }
                 init() {
-                    this.rpcServer.getCurrentUser = () => A.default.getCurrentUser(), this.rpcServer.onConnect = e => {
+                    this.rpcServer.getCurrentUser = () => N.default.getCurrentUser(), this.rpcServer.onConnect = e => {
                         r.default.dispatch({
                             type: "RPC_APP_CONNECTED",
                             socketId: e.id,
                             application: e.application
-                        }), m.default.track(v.AnalyticEvents.AUTHORIZED_APP_CONNECTED, {
+                        }), p.default.track(M.AnalyticEvents.AUTHORIZED_APP_CONNECTED, {
                             app_id: e.application.id,
                             transport: e.transport
                         })
@@ -35272,9 +35273,9 @@
                             reason: t
                         })
                     };
-                    let e = [u.default, d.default, C.default, N.default, _.default, h.default],
+                    let e = [d.default, c.default, h.default, m.default, C.default, I.default],
                         t = new i.BatchedStoreListener(e.concat(this.stores), () => this.rpcServer.updateSubscriptions());
-                    t.attach("RPCServerManager"), r.default.subscribe("MESSAGE_CREATE", e => this.handleMessage(e)), r.default.subscribe("MESSAGE_UPDATE", e => this.handleMessage(e)), r.default.subscribe("MESSAGE_DELETE", e => this.handleMessage(e)), r.default.subscribe("SPEAKING", e => this.handleSpeaking(e)), r.default.subscribe("OAUTH2_TOKEN_REVOKE", e => this.handleOAuth2TokenRevoke(e)), r.default.subscribe("GUILD_CREATE", e => this.handleGuildCreate(e)), r.default.subscribe("CHANNEL_CREATE", e => this.handleChannelCreate(e)), r.default.subscribe("LOGOUT", () => this.handleLogout()), r.default.subscribe("VOICE_CHANNEL_SELECT", e => this.handleVoiceChannelSelect(e)), r.default.subscribe("RPC_NOTIFICATION_CREATE", e => this.handleNotificationCreate(e)), r.default.subscribe("ACTIVITY_JOIN", e => this.handleActivityJoin(e)), r.default.subscribe("ACTIVITY_LAYOUT_MODE_UPDATE", e => this.handleActivityLayoutModeUpdate(e)), r.default.subscribe("THERMAL_STATE_CHANGE", e => this.handleThermalStateChange(e)), r.default.subscribe("ACTIVITY_SCREEN_ORIENTATION_UPDATE", e => this.handleScreenOrientationUpdate(e)), (0, O.subscribeToActivityInstanceConnectedParticipants)(e => this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), r.default.subscribe("RELATIONSHIP_ADD", e => this.handleRelationshipAdd(e)), r.default.subscribe("RELATIONSHIP_REMOVE", e => this.handleRelationshipRemove(e)), r.default.subscribe("PRESENCE_UPDATES", e => this.handlePresenceUpdate(e)), r.default.subscribe("PRESENCES_REPLACE", () => this.handlePresencesReplace()), r.default.subscribe("LOBBY_UPDATE", e => this.handleLobbyUpdate(e)), r.default.subscribe("LOBBY_DELETE", e => this.handleLobbyDelete(e)), r.default.subscribe("LOBBY_MEMBER_CONNECT", e => this.handleLobbyMemberConnect(e)), r.default.subscribe("LOBBY_MEMBER_UPDATE", e => this.handleLobbyMemberUpdate(e)), r.default.subscribe("LOBBY_MEMBER_DISCONNECT", e => this.handleLobbyMemberDisconnect(e)), r.default.subscribe("LOBBY_MESSAGE", e => this.handleLobbyMessage(e)), r.default.subscribe("ENTITLEMENT_CREATE", e => this.handleEntitlementCreate(e)), r.default.subscribe("ENTITLEMENT_DELETE", e => this.handleEntitlementDelete(e)), r.default.subscribe("USER_ACHIEVEMENT_UPDATE", e => this.handleUserAchievementUpdate(e))
+                    t.attach("RPCServerManager"), r.default.subscribe("MESSAGE_CREATE", e => this.handleMessage(e)), r.default.subscribe("MESSAGE_UPDATE", e => this.handleMessage(e)), r.default.subscribe("MESSAGE_DELETE", e => this.handleMessage(e)), r.default.subscribe("SPEAKING", e => this.handleSpeaking(e)), r.default.subscribe("OAUTH2_TOKEN_REVOKE", e => this.handleOAuth2TokenRevoke(e)), r.default.subscribe("GUILD_CREATE", e => this.handleGuildCreate(e)), r.default.subscribe("CHANNEL_CREATE", e => this.handleChannelCreate(e)), r.default.subscribe("LOGOUT", () => this.handleLogout()), r.default.subscribe("VOICE_CHANNEL_SELECT", e => this.handleVoiceChannelSelect(e)), r.default.subscribe("RPC_NOTIFICATION_CREATE", e => this.handleNotificationCreate(e)), r.default.subscribe("ACTIVITY_JOIN", e => this.handleActivityJoin(e)), r.default.subscribe("ACTIVITY_LAYOUT_MODE_UPDATE", e => this.handleActivityLayoutModeUpdate(e)), r.default.subscribe("THERMAL_STATE_CHANGE", e => this.handleThermalStateChange(e)), r.default.subscribe("ACTIVITY_SCREEN_ORIENTATION_UPDATE", e => this.handleScreenOrientationUpdate(e)), r.default.subscribe("EMBEDDED_ACTIVITY_INSTANCE_CHANGE", e => this.handleActivityInstanceChange(e)), (0, L.subscribeToActivityInstanceConnectedParticipants)(e => this.rpcServer.dispatchToSubscriptions(M.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE, {}, e)), r.default.subscribe("RELATIONSHIP_ADD", e => this.handleRelationshipAdd(e)), r.default.subscribe("RELATIONSHIP_REMOVE", e => this.handleRelationshipRemove(e)), r.default.subscribe("PRESENCE_UPDATES", e => this.handlePresenceUpdate(e)), r.default.subscribe("PRESENCES_REPLACE", () => this.handlePresencesReplace()), r.default.subscribe("LOBBY_UPDATE", e => this.handleLobbyUpdate(e)), r.default.subscribe("LOBBY_DELETE", e => this.handleLobbyDelete(e)), r.default.subscribe("LOBBY_MEMBER_CONNECT", e => this.handleLobbyMemberConnect(e)), r.default.subscribe("LOBBY_MEMBER_UPDATE", e => this.handleLobbyMemberUpdate(e)), r.default.subscribe("LOBBY_MEMBER_DISCONNECT", e => this.handleLobbyMemberDisconnect(e)), r.default.subscribe("LOBBY_MESSAGE", e => this.handleLobbyMessage(e)), r.default.subscribe("ENTITLEMENT_CREATE", e => this.handleEntitlementCreate(e)), r.default.subscribe("ENTITLEMENT_DELETE", e => this.handleEntitlementDelete(e)), r.default.subscribe("USER_ACHIEVEMENT_UPDATE", e => this.handleUserAchievementUpdate(e))
                 }
                 handleMessage(e) {
                     let t, n, a;
@@ -35284,35 +35285,35 @@
                     switch (e.type) {
                         case "MESSAGE_CREATE":
                             if ("SENDING" === e.message.state) return;
-                            t = v.RPCEvents.MESSAGE_CREATE, n = e.channelId, a = e.message, s = "".concat(t).concat(e.message.id);
+                            t = M.RPCEvents.MESSAGE_CREATE, n = e.channelId, a = e.message, s = "".concat(t).concat(e.message.id);
                             break;
                         case "MESSAGE_UPDATE":
-                            t = v.RPCEvents.MESSAGE_UPDATE, n = e.message.channel_id, a = e.message;
+                            t = M.RPCEvents.MESSAGE_UPDATE, n = e.message.channel_id, a = e.message;
                             break;
                         case "MESSAGE_DELETE":
-                            t = v.RPCEvents.MESSAGE_DELETE, n = e.channelId, a = {
+                            t = M.RPCEvents.MESSAGE_DELETE, n = e.channelId, a = {
                                 id: e.id
                             }, s = "".concat(t).concat(e.id);
                             break;
                         default:
-                            return (0, p.assertNever)(e)
+                            return (0, g.assertNever)(e)
                     }
                     null != n && this.rpcServer.dispatchToSubscriptions(t, {
                         channel_id: n
                     }, {
                         channel_id: n,
-                        message: (0, R.transformInternalTextMessage)(a)
+                        message: (0, O.transformInternalTextMessage)(a)
                     }, s)
                 }
                 handleSpeaking(e) {
                     if (0 === this.rpcServer.subscriptions.length) return;
-                    let t = 0 !== e.speakingFlags ? v.RPCEvents.SPEAKING_START : v.RPCEvents.SPEAKING_STOP;
-                    if (e.context === P.MediaEngineContextTypes.DEFAULT) {
-                        let n = T.default.getVoiceChannelId();
+                    let t = 0 !== e.speakingFlags ? M.RPCEvents.SPEAKING_START : M.RPCEvents.SPEAKING_STOP;
+                    if (e.context === D.MediaEngineContextTypes.DEFAULT) {
+                        let n = S.default.getVoiceChannelId();
                         if (null != n) {
-                            let a = u.default.getChannel(n);
+                            let a = d.default.getChannel(n);
                             if (null == a) return;
-                            let s = N.default.getVoiceState(a.getGuildId(), e.userId);
+                            let s = m.default.getVoiceState(a.getGuildId(), e.userId);
                             if (null == s) return;
                             this.rpcServer.dispatchToSubscriptions(t, {
                                 channel_id: s.channelId
@@ -35321,8 +35322,8 @@
                                 user_id: e.userId
                             })
                         }
-                    } else f.default.getLobbyIdsForUser(e.userId).forEach(n => {
-                        let a = E.default.getLobby(n);
+                    } else _.default.getLobbyIdsForUser(e.userId).forEach(n => {
+                        let a = f.default.getLobby(n);
                         null != a && a.application_id === e.context && this.rpcServer.dispatchToSubscriptions(t, {}, {
                             lobby_id: n,
                             user_id: e.userId
@@ -35334,7 +35335,7 @@
                         guildId: t,
                         channelId: n
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.VOICE_CHANNEL_SELECT, {}, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.VOICE_CHANNEL_SELECT, {}, {
                         channel_id: n,
                         guild_id: t
                     })
@@ -35347,10 +35348,10 @@
                         title: s,
                         body: l
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.NOTIFICATION_CREATE, {}, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.NOTIFICATION_CREATE, {}, {
                         channel_id: t,
-                        message: (0, R.transformInternalTextMessage)(n),
-                        icon_url: null != a ? (0, R.getRemoteIconURL)(a) : null,
+                        message: (0, O.transformInternalTextMessage)(n),
+                        icon_url: null != a ? (0, O.getRemoteIconURL)(a) : null,
                         title: s,
                         body: l
                     })
@@ -35366,7 +35367,7 @@
                     let l = {
                         secret: n
                     };
-                    s && (l.intent = a), this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ACTIVITY_JOIN, e => e.socket.application.id === t, l), this.rpcServer.dispatchToSubscriptions(v.RPCEvents.GAME_JOIN, e => e.socket.application.id === t, l)
+                    s && (l.intent = a), this.rpcServer.dispatchToSubscriptions(M.RPCEvents.ACTIVITY_JOIN, e => e.socket.application.id === t, l), this.rpcServer.dispatchToSubscriptions(M.RPCEvents.GAME_JOIN, e => e.socket.application.id === t, l)
                 }
                 handleActivityLayoutModeUpdate(e) {
                     let {
@@ -35374,11 +35375,11 @@
                         layoutMode: n
                     } = e;
                     if (0 === this.rpcServer.subscriptions.length) return;
-                    let a = n !== M.ActivityLayoutMode.FOCUSED;
-                    this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ACTIVITY_PIP_MODE_UPDATE, e => e.socket.application.id === t, {
+                    let a = n !== P.ActivityLayoutMode.FOCUSED;
+                    this.rpcServer.dispatchToSubscriptions(M.RPCEvents.ACTIVITY_PIP_MODE_UPDATE, e => e.socket.application.id === t, {
                         is_pip_mode: a
                     });
-                    this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ACTIVITY_LAYOUT_MODE_UPDATE, e => e.socket.application.id === t, {
+                    this.rpcServer.dispatchToSubscriptions(M.RPCEvents.ACTIVITY_LAYOUT_MODE_UPDATE, e => e.socket.application.id === t, {
                         layout_mode: n
                     })
                 }
@@ -35389,19 +35390,32 @@
                     } = e;
                     if (0 === this.rpcServer.subscriptions.length || null == t) return;
                     let a = {
-                        thermal_state: (0, o.default)(n)
+                        thermal_state: (0, u.default)(n)
                     };
-                    this.rpcServer.dispatchToSubscriptions(v.RPCEvents.THERMAL_STATE_UPDATE, e => e.socket.application.id === t, a)
+                    this.rpcServer.dispatchToSubscriptions(M.RPCEvents.THERMAL_STATE_UPDATE, e => e.socket.application.id === t, a)
                 }
                 handleScreenOrientationUpdate(e) {
                     let {
                         screenOrientation: t
                     } = e;
                     if (0 === this.rpcServer.subscriptions.length) return;
-                    let n = t === M.ActivityScreenOrientation.PORTRAIT ? "portrait" : "landscape";
-                    this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ORIENTATION_UPDATE, {}, {
+                    let n = t === P.ActivityScreenOrientation.PORTRAIT ? "portrait" : "landscape";
+                    this.rpcServer.dispatchToSubscriptions(M.RPCEvents.ORIENTATION_UPDATE, {}, {
                         screen_orientation: t,
                         orientation: n
+                    })
+                }
+                handleActivityInstanceChange(e) {
+                    let {
+                        channelId: t,
+                        instanceId: n
+                    } = e;
+                    if (0 === this.rpcServer.subscriptions.length) return;
+                    let a = N.default.getCurrentUser();
+                    if (null == a) return;
+                    let s = o.default.getSelfEmbeddedActivityForChannel(t);
+                    null != s && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.ACTIVITY_INSTANCE_UPDATE, e => e.socket.application.id === s.application_id, {
+                        instance_id: n
                     })
                 }
                 handleActivityMessage(e) {
@@ -35416,26 +35430,26 @@
                         activity: l
                     } = a;
                     if (null == s || null == l || null == l.party_id) return;
-                    let i = A.default.getUser(null === (t = a.author) || void 0 === t ? void 0 : t.id);
+                    let i = N.default.getUser(null === (t = a.author) || void 0 === t ? void 0 : t.id);
                     if (null == i) return;
-                    let r = A.default.getCurrentUser();
+                    let r = N.default.getCurrentUser();
                     if (null == r || i.id === r.id) return;
-                    let o = l.type === v.ActivityActionTypes.JOIN_REQUEST ? C.default.getApplicationActivity(r.id, s.id) : C.default.getApplicationActivity(i.id, s.id);
+                    let o = l.type === M.ActivityActionTypes.JOIN_REQUEST ? h.default.getApplicationActivity(r.id, s.id) : h.default.getApplicationActivity(i.id, s.id);
                     if (null == o || null == o.party || o.party.id !== l.party_id) return;
                     let u = o.application_id;
                     switch (l.type) {
-                        case v.ActivityActionTypes.JOIN:
-                            this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ACTIVITY_INVITE, e => e.socket.application.id === u, {
-                                user: (0, L.default)(i),
+                        case M.ActivityActionTypes.JOIN:
+                            this.rpcServer.dispatchToSubscriptions(M.RPCEvents.ACTIVITY_INVITE, e => e.socket.application.id === u, {
+                                user: (0, v.default)(i),
                                 activity: o,
                                 type: l.type,
                                 channel_id: n,
                                 message_id: a.id
                             });
                             break;
-                        case v.ActivityActionTypes.JOIN_REQUEST:
-                            this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ACTIVITY_JOIN_REQUEST, e => e.socket.application.id === u, {
-                                user: (0, L.default)(i)
+                        case M.ActivityActionTypes.JOIN_REQUEST:
+                            this.rpcServer.dispatchToSubscriptions(M.RPCEvents.ACTIVITY_JOIN_REQUEST, e => e.socket.application.id === u, {
+                                user: (0, v.default)(i)
                             })
                     }
                 }
@@ -35444,7 +35458,7 @@
                         accessToken: t
                     } = e;
                     this.rpcServer.sockets.forEach(e => {
-                        e.authorization.accessToken === t && e.close(v.RPCCloseCodes.TOKEN_REVOKED, "Token revoked")
+                        e.authorization.accessToken === t && e.close(M.RPCCloseCodes.TOKEN_REVOKED, "Token revoked")
                     })
                 }
                 handleGuildCreate(e) {
@@ -35452,8 +35466,8 @@
                         guild: {
                             id: t
                         }
-                    } = e, n = c.default.getGuild(t);
-                    0 !== this.rpcServer.subscriptions.length && null != n && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.GUILD_CREATE, {}, {
+                    } = e, n = E.default.getGuild(t);
+                    0 !== this.rpcServer.subscriptions.length && null != n && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.GUILD_CREATE, {}, {
                         id: t,
                         name: n.name
                     })
@@ -35466,14 +35480,14 @@
                             type: a
                         }
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.CHANNEL_CREATE, {}, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.CHANNEL_CREATE, {}, {
                         id: t,
                         name: n,
                         type: a
                     })
                 }
                 handleLogout() {
-                    this.rpcServer.sockets.forEach(e => e.close(v.RPCCloseCodes.CLOSE_NORMAL, "User logout"))
+                    this.rpcServer.sockets.forEach(e => e.close(M.RPCCloseCodes.CLOSE_NORMAL, "User logout"))
                 }
                 handleRelationshipAdd(e) {
                     let {
@@ -35482,7 +35496,7 @@
                             type: n
                         }
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, R.transformRelationship)(n, t))
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, O.transformRelationship)(n, t))
                 }
                 handleRelationshipRemove(e) {
                     let {
@@ -35490,7 +35504,7 @@
                             id: t
                         }
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, R.transformRelationship)(v.RelationshipTypes.NONE, t))
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, O.transformRelationship)(M.RelationshipTypes.NONE, t))
                 }
                 handlePresenceUpdate(e) {
                     let {
@@ -35504,26 +35518,26 @@
                             }
                         } = e;
                         if (null != t) return;
-                        let a = I.default.getRelationshipType(n);
-                        a === v.RelationshipTypes.NONE && S.default.getUserAffinitiesUserIds().has(n) && (a = v.RelationshipTypes.IMPLICIT), a !== v.RelationshipTypes.NONE && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, R.transformRelationship)(a, n))
+                        let a = T.default.getRelationshipType(n);
+                        a === M.RelationshipTypes.NONE && A.default.getUserAffinitiesUserIds().has(n) && (a = M.RelationshipTypes.IMPLICIT), a !== M.RelationshipTypes.NONE && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, O.transformRelationship)(a, n))
                     })
                 }
                 handlePresencesReplace() {
-                    0 !== this.rpcServer.subscriptions.length && l.forEach(I.default.getRelationships(), (e, t) => {
-                        this.rpcServer.dispatchToSubscriptions(v.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, R.transformRelationship)(e, t))
+                    0 !== this.rpcServer.subscriptions.length && l.forEach(T.default.getRelationships(), (e, t) => {
+                        this.rpcServer.dispatchToSubscriptions(M.RPCEvents.RELATIONSHIP_UPDATE, {}, (0, O.transformRelationship)(e, t))
                     })
                 }
                 handleLobbyUpdate(e) {
                     let {
                         lobby: t
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.LOBBY_UPDATE, {}, t)
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.LOBBY_UPDATE, {}, t)
                 }
                 handleLobbyDelete(e) {
                     let {
                         lobbyId: t
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.LOBBY_DELETE, {}, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.LOBBY_DELETE, {}, {
                         id: t
                     })
                 }
@@ -35532,7 +35546,7 @@
                         lobbyId: t,
                         member: n
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.LOBBY_MEMBER_CONNECT, {}, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.LOBBY_MEMBER_CONNECT, {}, {
                         lobby_id: t,
                         member: n
                     })
@@ -35542,7 +35556,7 @@
                         lobbyId: t,
                         member: n
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.LOBBY_MEMBER_UPDATE, {}, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.LOBBY_MEMBER_UPDATE, {}, {
                         lobby_id: t,
                         member: n
                     })
@@ -35552,7 +35566,7 @@
                         lobbyId: t,
                         member: n
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.LOBBY_MEMBER_DISCONNECT, {}, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.LOBBY_MEMBER_DISCONNECT, {}, {
                         lobby_id: t,
                         member: n
                     })
@@ -35563,7 +35577,7 @@
                         senderId: n,
                         data: a
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.LOBBY_MESSAGE, {}, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.LOBBY_MESSAGE, {}, {
                         lobby_id: t,
                         sender_id: n,
                         data: a
@@ -35573,7 +35587,7 @@
                     let {
                         entitlement: t
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ENTITLEMENT_CREATE, e => e.socket.application.id === t.application_id, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.ENTITLEMENT_CREATE, e => e.socket.application.id === t.application_id, {
                         entitlement: t
                     })
                 }
@@ -35581,7 +35595,7 @@
                     let {
                         entitlement: t
                     } = e;
-                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(v.RPCEvents.ENTITLEMENT_DELETE, e => e.socket.application.id === t.application_id, {
+                    0 !== this.rpcServer.subscriptions.length && this.rpcServer.dispatchToSubscriptions(M.RPCEvents.ENTITLEMENT_DELETE, e => e.socket.application.id === t.application_id, {
                         entitlement: t
                     })
                 }
@@ -35593,7 +35607,7 @@
                     let {
                         application_id: n
                     } = t;
-                    this.rpcServer.dispatchToSubscriptions(v.RPCEvents.USER_ACHIEVEMENT_UPDATE, e => e.socket.application.id === n, {
+                    this.rpcServer.dispatchToSubscriptions(M.RPCEvents.USER_ACHIEVEMENT_UPDATE, e => e.socket.application.id === n, {
                         user_achievement: t
                     })
                 }
@@ -35894,6 +35908,75 @@
                             return (0, s.validatePostMessageTransport)(t.transport), (0, l.activityInstanceConnectedParticipants)()
                         }
                     })
+                }
+        },
+        737954: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return u
+                }
+            }), n("222007");
+            var a = n("249654"),
+                s = n("913144"),
+                l = n("578287"),
+                i = n("716724"),
+                r = n("613652"),
+                o = n("49111"),
+                u = {
+                    [o.RPCCommands.CREATE_ACTIVITY_INSTANCE]: {
+                        scope: {
+                            [o.RPC_SCOPE_CONFIG.ANY]: [o.RPC_AUTHENTICATED_SCOPE]
+                        },
+                        handler(e) {
+                            let {
+                                socket: t
+                            } = e;
+                            return (0, l.validatePostMessageTransport)(t.transport), Promise.resolve({
+                                instance_id: a.default.fromTimestamp(Date.now())
+                            })
+                        }
+                    },
+                    [o.RPCCommands.JOIN_ACTIVITY_INSTANCE]: {
+                        scope: {
+                            [o.RPC_SCOPE_CONFIG.ANY]: [o.RPC_AUTHENTICATED_SCOPE]
+                        },
+                        validation: e => (0, i.default)(e).required().keys({
+                            instance_id: e.string().required().allow(null)
+                        }),
+                        handler(e) {
+                            let {
+                                socket: t,
+                                args: {
+                                    instance_id: n
+                                }
+                            } = e;
+                            (0, l.validatePostMessageTransport)(t.transport);
+                            let a = (0, r.default)();
+                            return null != t.application.id && (null == a ? void 0 : a.id) != null && s.default.dispatch({
+                                type: "EMBEDDED_ACTIVITY_INSTANCE_CHANGE",
+                                channelId: a.id,
+                                instanceId: n
+                            }), Promise.resolve()
+                        }
+                    },
+                    [o.RPCCommands.LEAVE_ACTIVITY_INSTANCE]: {
+                        scope: {
+                            [o.RPC_SCOPE_CONFIG.ANY]: [o.RPC_AUTHENTICATED_SCOPE]
+                        },
+                        handler(e) {
+                            let {
+                                socket: t
+                            } = e;
+                            (0, l.validatePostMessageTransport)(t.transport);
+                            let n = (0, r.default)();
+                            return null != t.application.id && (null == n ? void 0 : n.id) != null && s.default.dispatch({
+                                type: "EMBEDDED_ACTIVITY_INSTANCE_CHANGE",
+                                channelId: n.id,
+                                instanceId: null
+                            }), Promise.resolve()
+                        }
+                    }
                 }
         },
         878705: function(e, t, n) {
@@ -36251,31 +36334,32 @@
             "use strict";
             n.r(t), n.d(t, {
                 crossPlatformCommands: function() {
-                    return g
+                    return R
                 }
             });
             var a = n("381759"),
                 s = n("81910"),
-                l = n("878705"),
-                i = n("268801"),
-                r = n("523834"),
-                o = n("418194"),
-                u = n("156965"),
-                d = n("234933"),
-                c = n("568887"),
-                E = n("336566"),
-                f = n("899114"),
-                _ = n("709963"),
-                C = n("258316"),
-                h = n("881963"),
-                I = n("88321"),
-                T = n("473902"),
-                S = n("673090"),
-                A = n("108087"),
-                N = n("657322"),
-                m = n("220795"),
-                p = n("272279");
-            let g = {
+                l = n("737954"),
+                i = n("878705"),
+                r = n("268801"),
+                o = n("523834"),
+                u = n("418194"),
+                d = n("156965"),
+                c = n("234933"),
+                E = n("568887"),
+                f = n("336566"),
+                _ = n("899114"),
+                C = n("709963"),
+                h = n("258316"),
+                I = n("881963"),
+                T = n("88321"),
+                S = n("473902"),
+                A = n("673090"),
+                N = n("108087"),
+                m = n("657322"),
+                p = n("220795"),
+                g = n("272279");
+            let R = {
                 ...a.default,
                 ...l.default,
                 ...i.default,
@@ -36287,15 +36371,16 @@
                 ...E.default,
                 ...f.default,
                 ..._.default,
-                ...h.default,
+                ...C.default,
                 ...I.default,
                 ...T.default,
-                ...A.default,
-                ...N.default,
-                ...p.default,
-                ...m.default,
-                ...C.default,
                 ...S.default,
+                ...N.default,
+                ...m.default,
+                ...g.default,
+                ...p.default,
+                ...h.default,
+                ...A.default,
                 ...s.default
             }
         },
@@ -37603,6 +37688,9 @@
                     },
                     handler() {}
                 },
+                [N.RPCEvents.ACTIVITY_INSTANCE_UPDATE]: {
+                    handler() {}
+                },
                 [N.RPCEvents.VOICE_CHANNEL_SELECT]: {
                     scope: N.OAuth2Scopes.RPC,
                     handler() {}
@@ -37769,6 +37857,16 @@
                                 orientation: n
                             }
                         }
+                    }
+                    case o.RPCEvents.ACTIVITY_INSTANCE_UPDATE: {
+                        let e = a.default.getConnectedActivityChannelId();
+                        if (null != e) {
+                            let t = a.default.getSelfEmbeddedActivityForChannel(e);
+                            if (null != t) return Promise.resolve({
+                                instance_id: t.activity_id
+                            })
+                        }
+                        return Promise.resolve(null)
                     }
                     case o.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE:
                         return (0, r.activityInstanceConnectedParticipants)();
