@@ -1738,7 +1738,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "248912"
+                        buildNumber: "248916"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -11945,7 +11945,7 @@
                             if (null == e) {
                                 (0, o.resetBackgroundGradientAngle)(), this._currentBackgroundGradientAngle = void 0;
                                 return
-                            }(0, o.updateBackgroundGradientAngle)(e), this._currentBackgroundGradientPresetId = e
+                            }(0, o.updateBackgroundGradientAngle)(e), this._currentBackgroundGradientAngle = e
                         }
                     }, this._updateClientTheme = () => {
                         var e, t, n, a, r;
