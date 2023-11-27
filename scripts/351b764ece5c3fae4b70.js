@@ -45,7 +45,7 @@
                 let l = e.id,
                     f = a.useRef();
                 null == f.current && (f.current = [(0, d.generateEmptyPollAnswer)(), (0, d.generateEmptyPollAnswer)()]);
-                let [p, E] = a.useState(f.current), [x, A] = a.useState(""), [h, P] = a.useState(n.PollLayoutTypes.DEFAULT), [L, C] = a.useState(!1), g = p.filter(e => (0, d.isAnswerFilled)(e, h)), I = p.filter(e => (0, d.isIncompleteAnswer)(e, h)), T = x.length > 0 && g.length > 1 && 0 === I.length, [j, {
+                let [p, E] = a.useState(f.current), [x, A] = a.useState(""), [h, P] = a.useState(n.PollLayoutTypes.DEFAULT), [L, C] = a.useState(!1), g = p.filter(e => (0, d.isAnswerFilled)(e, h)), I = p.filter(e => (0, d.isIncompleteAnswer)(e, h)), T = x.length > 0 && g.length >= 1 && 0 === I.length, [j, {
                     loading: v
                 }] = (0, o.default)(c.default.createPoll), R = a.useMemo(() => [...p].every(e => null != e.image || null != e.text && e.text.length > 0), [p]), N = p.length < 6, _ = a.useCallback((e, t) => {
                     E(l => {
