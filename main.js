@@ -247,8 +247,8 @@
                 return {
                     logsUploaded: new Date().toISOString(),
                     releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    buildNumber: "248741",
-                    versionHash: "d05e0a4d17ad5a88ca536d8f3e290c595d15085a"
+                    buildNumber: "248743",
+                    versionHash: "af21fdd8cff4a14ac574d6a461ef6509697d5f5a"
                 }
             }
             n.r(e), n.d(e, {
