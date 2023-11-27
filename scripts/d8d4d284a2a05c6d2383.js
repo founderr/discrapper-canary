@@ -16,15 +16,15 @@
                 r = t("264732"),
                 s = t("390236"),
                 c = t("292508"),
-                f = t("42203"),
-                h = t("474643"),
-                o = t("494286");
+                o = t("42203"),
+                f = t("474643"),
+                h = t("494286");
 
             function p(e) {
                 let {
                     windowKey: n,
                     channelId: t
-                } = e, l = (0, u.default)([f.default], () => f.default.getChannel(t));
+                } = e, l = (0, u.default)([o.default], () => o.default.getChannel(t));
                 return d(null != l, "channel cannot be null for popout"), (0, a.jsx)(c.default, {
                     withTitleBar: !0,
                     windowKey: n,
@@ -34,11 +34,12 @@
                         value: l.guild_id,
                         children: [(0, a.jsx)(r.default, {
                             channel: l,
-                            draftType: h.DraftType.ChannelMessage
-                        }), (0, a.jsx)(o.default, {
+                            draftType: f.DraftType.ChannelMessage
+                        }), (0, a.jsx)(h.default, {
                             channel: l
                         }), (0, a.jsx)(i.default, {
-                            showInPopoutWindow: !0
+                            showInPopoutWindow: !0,
+                            disallowTextActivity: !0
                         })]
                     })
                 })

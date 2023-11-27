@@ -3443,7 +3443,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return m
                 }
             });
             var a = n("37983"),
@@ -3453,42 +3453,55 @@
                 r = n("600965"),
                 u = n("292687"),
                 o = n("659500"),
-                d = n("49111");
-            let c = (e, t) => {
+                d = n("191225"),
+                c = n("577261"),
+                f = n("272505"),
+                h = n("49111");
+            let p = (e, t) => {
                 i.default.wait(() => {
                     (0, r.updateRect)(e, t)
                 })
             };
 
-            function f(e) {
-                var t;
-                let {
-                    embedId: n,
-                    className: i,
-                    style: r
-                } = e, f = (0, s.useStateFromStores)([u.default], () => u.default.getWindow(d.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), h = null !== (t = null == f ? void 0 : f.window) && void 0 !== t ? t : window, p = l.useRef(null), m = l.useMemo(() => {
-                    let e = null;
-                    return () => {
-                        null == e && (e = h.requestAnimationFrame(() => {
-                            var t, a;
-                            c(n, null !== (a = null === (t = p.current) || void 0 === t ? void 0 : t.getBoundingClientRect()) && void 0 !== a ? a : null), e = null
-                        }))
-                    }
-                }, [n, h]);
-                return l.useEffect(() => (h.addEventListener("resize", m), o.ComponentDispatch.subscribe(d.ComponentActions.REMEASURE_TARGET, m), () => {
-                    h.removeEventListener("resize", m), o.ComponentDispatch.unsubscribe(d.ComponentActions.REMEASURE_TARGET, m)
-                }), [m, h]), l.useLayoutEffect(() => {
-                    let e = p.current;
+            function m(e) {
+                let t, {
+                        embedId: n,
+                        className: i,
+                        style: r
+                    } = e,
+                    m = (0, s.useStateFromStores)([u.default], () => u.default.getWindow(h.PopoutWindowKeys.CHANNEL_CALL_POPOUT)),
+                    E = (0, c.default)(),
+                    C = (0, s.useStateFromStores)([d.default], () => d.default.getActivityPanelMode()),
+                    S = null != E && C === f.ActivityPanelModes.PANEL;
+                if (S) t = window;
+                else {
+                    var g;
+                    t = null !== (g = null == m ? void 0 : m.window) && void 0 !== g ? g : window
+                }
+                let _ = l.useRef(null),
+                    I = l.useMemo(() => {
+                        let e = null;
+                        return () => {
+                            null == e && (e = t.requestAnimationFrame(() => {
+                                var t, a;
+                                p(n, null !== (a = null === (t = _.current) || void 0 === t ? void 0 : t.getBoundingClientRect()) && void 0 !== a ? a : null), e = null
+                            }))
+                        }
+                    }, [n, t]);
+                return l.useEffect(() => (t.addEventListener("resize", I), o.ComponentDispatch.subscribe(h.ComponentActions.REMEASURE_TARGET, I), () => {
+                    t.removeEventListener("resize", I), o.ComponentDispatch.unsubscribe(h.ComponentActions.REMEASURE_TARGET, I)
+                }), [I, t]), l.useLayoutEffect(() => {
+                    let e = _.current;
                     if (null == e) return;
                     let t = e.ownerDocument.defaultView;
                     if (null == t) return;
-                    m();
-                    let a = new t.ResizeObserver(m);
+                    I();
+                    let a = new t.ResizeObserver(I);
                     return a.observe(e), () => {
-                        a.disconnect(), c(n, null)
+                        a.disconnect(), p(n, null)
                     }
-                }, [n, m]), (0, a.jsx)("div", {
-                    ref: p,
+                }, [n, I]), (0, a.jsx)("div", {
+                    ref: _,
                     style: r,
                     className: i
                 })
