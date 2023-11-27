@@ -805,7 +805,9 @@
                     ...n,
                     ...t
                 };
-                await m.default.getMediaEngine().updateClipMetadata(i.filepath, JSON.stringify(i)), E.default.track(N.AnalyticEvents.CLIP_EDITED), a.default.dispatch({
+                await m.default.getMediaEngine().updateClipMetadata(i.filepath, JSON.stringify(i)), E.default.track(N.AnalyticEvents.CLIP_EDITED, {
+                    clip_id: i.id
+                }), a.default.dispatch({
                     type: "CLIPS_UPDATE_METADATA",
                     clip: i
                 })

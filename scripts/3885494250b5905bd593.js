@@ -628,7 +628,8 @@
                         guild_id: C.guild_id,
                         channel_id: C.id,
                         channel_type: C.type,
-                        application_id: e.applicationId
+                        application_id: e.applicationId,
+                        clip_id: e.id
                     })
                 } catch (e) {
                     throw f.ClipsLogger.error(e), e
