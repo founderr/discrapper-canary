@@ -4,31 +4,34 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return N
+                    return p
                 }
             }), l("222007");
             var a = l("37983"),
                 n = l("884691"),
                 s = l("77078"),
-                o = l("430568"),
-                i = l("86678"),
-                u = l("385976"),
-                d = l("697218"),
-                r = l("882641"),
-                m = l("945330"),
-                c = l("719923"),
-                S = l("233965"),
-                j = l("32346"),
-                x = l("958706"),
-                T = l("782340"),
-                h = l("645897");
+                o = l("446674"),
+                i = l("430568"),
+                u = l("86678"),
+                d = l("385976"),
+                r = l("42203"),
+                m = l("18494"),
+                c = l("697218"),
+                S = l("882641"),
+                j = l("945330"),
+                x = l("719923"),
+                f = l("233965"),
+                h = l("32346"),
+                T = l("958706"),
+                v = l("782340"),
+                g = l("645897");
 
-            function f(e) {
+            function N(e) {
                 let {
                     customStatusEmoji: t,
                     setCustomStatusEmoji: l,
                     onClose: n
-                } = e, u = e => {
+                } = e, d = (0, o.useStateFromStores)([m.default, r.default], () => r.default.getChannel(m.default.getVoiceChannelId())), c = e => {
                     var t;
                     if (null == e) {
                         l(null);
@@ -47,15 +50,18 @@
                 };
                 return (0, a.jsx)(s.Popout, {
                     renderPopout: e => {
+                        var t;
                         let {
-                            closePopout: t
+                            closePopout: l
                         } = e;
-                        return (0, a.jsx)(i.default, {
-                            closePopout: t,
-                            onSelectEmoji: (e, l) => {
-                                u(e), l && t()
+                        return (0, a.jsx)(u.default, {
+                            channel: d,
+                            guildId: null !== (t = null == d ? void 0 : d.guild_id) && void 0 !== t ? t : void 0,
+                            closePopout: l,
+                            onSelectEmoji: (e, t) => {
+                                c(e), t && l()
                             },
-                            pickerIntention: x.EmojiIntention.STATUS,
+                            pickerIntention: T.EmojiIntention.STATUS,
                             onNavigateAway: n
                         })
                     },
@@ -66,13 +72,13 @@
                         let {
                             isShown: n
                         } = l;
-                        return (0, a.jsx)(r.default, {
+                        return (0, a.jsx)(S.default, {
                             ...e,
                             active: n,
-                            className: h.emojiButton,
+                            className: g.emojiButton,
                             tabIndex: 0,
-                            renderButtonContents: null == t ? null : () => (0, a.jsx)(o.default, {
-                                className: h.emoji,
+                            renderButtonContents: null == t ? null : () => (0, a.jsx)(i.default, {
+                                className: g.emoji,
                                 emojiId: t.id,
                                 emojiName: t.name,
                                 animated: !!t.animated
@@ -82,74 +88,74 @@
                 })
             }
 
-            function N(e) {
+            function p(e) {
                 var t, l;
                 let {
                     transitionState: o,
                     onClose: i,
-                    startingText: r,
-                    startingEmoji: x
-                } = e, N = j.default.getCustomHangStatus(), p = null != r ? r : null !== (t = null == N ? void 0 : N.status) && void 0 !== t ? t : "", v = null !== (l = null == N ? void 0 : N.emoji) && void 0 !== l ? l : null;
-                if ((null == x ? void 0 : x.id) != null) {
-                    let e = c.default.canUseEmojisEverywhere(d.default.getCurrentUser()) && null != u.default.getUsableCustomEmojiById(x.id);
-                    v = e ? x : null
-                } else(null == x ? void 0 : x.name) != null && (v = x);
-                let [C, g] = n.useState(p), [E, A] = n.useState(v);
+                    startingText: u,
+                    startingEmoji: r
+                } = e, m = h.default.getCustomHangStatus(), S = null != u ? u : null !== (t = null == m ? void 0 : m.status) && void 0 !== t ? t : "", T = null !== (l = null == m ? void 0 : m.emoji) && void 0 !== l ? l : null;
+                if ((null == r ? void 0 : r.id) != null) {
+                    let e = x.default.canUseEmojisEverywhere(c.default.getCurrentUser()) && null != d.default.getUsableCustomEmojiById(r.id);
+                    T = e ? r : null
+                } else(null == r ? void 0 : r.name) != null && (T = r);
+                let [p, C] = n.useState(S), [E, _] = n.useState(T);
                 return (0, a.jsxs)(s.ModalRoot, {
-                    className: h.modal,
+                    className: g.modal,
                     transitionState: o,
                     size: s.ModalSize.DYNAMIC,
                     children: [(0, a.jsxs)(s.ModalContent, {
-                        className: h.modalContent,
+                        className: g.modalContent,
                         children: [(0, a.jsx)(s.Button, {
-                            "aria-label": T.default.Messages.CLOSE,
+                            "aria-label": v.default.Messages.CLOSE,
                             look: s.Button.Looks.BLANK,
                             size: s.Button.Sizes.NONE,
                             onClick: i,
-                            className: h.closeButton,
-                            children: (0, a.jsx)(m.default, {
+                            className: g.closeButton,
+                            children: (0, a.jsx)(j.default, {
                                 width: 16,
                                 height: 16,
-                                className: h.closeIcon
+                                className: g.closeIcon
                             })
-                        }), (0, a.jsx)(f, {
+                        }), (0, a.jsx)(N, {
                             customStatusEmoji: E,
-                            setCustomStatusEmoji: A,
+                            setCustomStatusEmoji: _,
                             onClose: i
                         }), (0, a.jsxs)("div", {
-                            className: h.customInputGroup,
+                            className: g.customInputGroup,
                             children: [(0, a.jsx)(s.Text, {
-                                className: h.leadInText,
+                                className: g.leadInText,
                                 variant: "text-xs/semibold",
                                 color: "text-muted",
-                                children: T.default.Messages.STATUS_LEAD_IN_JUST
+                                children: v.default.Messages.STATUS_LEAD_IN_JUST
                             }), (0, a.jsx)(s.TextInput, {
-                                className: h.customInput,
-                                value: C,
-                                onChange: e => g(e.substring(0, 50)),
-                                placeholder: T.default.Messages.CUSTOM_HANG_STATUS_PLACEHOLDER
+                                className: g.customInput,
+                                value: p,
+                                onChange: e => C(e.substring(0, 50)),
+                                placeholder: v.default.Messages.CUSTOM_HANG_STATUS_PLACEHOLDER
                             })]
                         })]
                     }), (0, a.jsxs)(s.ModalFooter, {
-                        className: h.modalFooter,
+                        className: g.modalFooter,
                         children: [(0, a.jsxs)("div", {
                             children: [(0, a.jsx)(s.Heading, {
                                 variant: "heading-md/semibold",
-                                children: T.default.Messages.SET_STATUS_MODAL_TITLE
+                                children: v.default.Messages.SET_STATUS_MODAL_TITLE
                             }), (0, a.jsx)(s.Text, {
                                 color: "text-muted",
                                 variant: "text-sm/normal",
-                                className: h.subtitle,
-                                children: T.default.Messages.SET_STATUS_MODAL_SUBTITLE
+                                className: g.subtitle,
+                                children: v.default.Messages.SET_STATUS_MODAL_SUBTITLE
                             })]
                         }), (0, a.jsx)(s.Button, {
                             onClick: () => {
-                                let e = C.trim();
-                                "" !== e && ((0, S.updateCustomHangStatus)(e, E, !0), i())
+                                let e = p.trim();
+                                "" !== e && ((0, f.updateCustomHangStatus)(e, E, !0), i())
                             },
-                            className: h.button,
-                            disabled: "" === C.trim(),
-                            children: T.default.Messages.SET_STATUS_MODAL_CTA
+                            className: g.button,
+                            disabled: "" === p.trim(),
+                            children: v.default.Messages.SET_STATUS_MODAL_CTA
                         })]
                     })]
                 })
