@@ -207,8 +207,8 @@
                 h = n("85336"),
                 R = n("286350"),
                 C = n("359371"),
-                g = n("176108"),
-                O = n("254350"),
+                O = n("176108"),
+                g = n("254350"),
                 v = n("622271"),
                 L = n("628738"),
                 k = n("650484"),
@@ -227,8 +227,8 @@
                     transitionState: f,
                     initialPlanId: E,
                     subscriptionTier: M,
-                    onClose: g,
-                    trialId: O,
+                    onClose: O,
+                    trialId: g,
                     trialFooterMessageOverride: L,
                     reviewWarningMessage: D,
                     planGroup: Y = U.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
@@ -263,29 +263,31 @@
                     activeSubscription: ed,
                     priceOptions: ef,
                     hasPaymentSources: e_,
-                    purchaseType: eE
-                } = (0, y.usePaymentContext)(), ep = (0, C.default)(), em = J || (null == ep ? void 0 : ep.isLargeModal) ? o.ModalSize.LARGE : o.ModalSize.SMALL, {
-                    isGift: eS
-                } = (0, N.useGiftContext)(), eP = (0, p.usePremiumDiscountOffer)(), eT = null != M && !eS && (0, p.discountOfferHasTier)(eP, M), [eM, eA] = u.useState({
+                    paymentSourceId: eE,
+                    paymentSources: ep,
+                    purchaseType: em
+                } = (0, y.usePaymentContext)(), eS = (0, C.default)(), eP = J || (null == eS ? void 0 : eS.isLargeModal) ? o.ModalSize.LARGE : o.ModalSize.SMALL, {
+                    isGift: eT
+                } = (0, N.useGiftContext)(), eM = (0, p.usePremiumDiscountOffer)(), eA = null != M && !eT && (0, p.discountOfferHasTier)(eM, M), [eI, eN] = u.useState({
                     load_id: eo.loadId,
-                    payment_type: x.PurchaseTypeToAnalyticsPaymentType[eE],
+                    payment_type: x.PurchaseTypeToAnalyticsPaymentType[em],
                     location: null != n ? n : a,
                     source: r,
                     subscription_type: c,
                     subscription_plan_id: null == el ? void 0 : el.id,
-                    is_gift: eS,
-                    eligible_for_trial: null != O,
+                    is_gift: eT,
+                    eligible_for_trial: null != g,
                     location_stack: t,
                     sku_id: z,
                     application_id: F,
                     guild_id: W,
                     payment_modal_version: "v1",
                     activity_session_id: Z,
-                    eligible_for_discount: eT
-                });
+                    eligible_for_discount: eA
+                }), ey = null != eE ? ep[eE] : null;
                 u.useEffect(() => {
-                    eA(e => {
-                        let t = null != el ? (0, I.getPrice)(el.id, !1, eS, ef) : void 0,
+                    eN(e => {
+                        let t = null != el ? (0, I.getPrice)(el.id, !1, eT, ef) : void 0,
                             n = {
                                 ...e,
                                 subscription_plan_id: null == el ? void 0 : el.id,
@@ -296,9 +298,9 @@
                             };
                         return n
                     })
-                }, [el, et, eS, ef]), u.useEffect(() => {
+                }, [el, et, eT, ef]), u.useEffect(() => {
                     A.default.track(x.AnalyticEvents.PAYMENT_FLOW_STARTED, {
-                        ...eM,
+                        ...eI,
                         has_saved_payment_source: e_
                     })
                 }, []), u.useEffect(() => {
@@ -308,40 +310,44 @@
                         en(null === (e = T.default.get(E)) || void 0 === e ? void 0 : e.skuId)
                     }
                 }, [eu, en, E, z]);
-                let eI = (0, s.useStableMemo)(() => Date.now(), [er]),
-                    eN = u.useCallback(function(e) {
+                let eh = (0, s.useStableMemo)(() => Date.now(), [er]),
+                    eR = u.useCallback(function(e) {
                         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                             {
                                 trackedFromStep: n,
                                 analyticsDataOverride: l,
                                 fulfillment: u
-                            } = t;
-                        e === h.Step.CONFIRM && (null == d || d(u)), ea(e), ei(null);
-                        let a = null != n ? n : er,
-                            i = Date.now();
-                        if (null === a) {
+                            } = t,
+                            a = Date.now();
+                        e === h.Step.CONFIRM && (A.default.track(x.AnalyticEvents.PAYMENT_FLOW_SUCCEEDED, {
+                            ...eI,
+                            duration_ms: a - eo.startTime,
+                            payment_source_type: null == ey ? void 0 : ey.type
+                        }), null == d || d(u)), ea(e), ei(null);
+                        let i = null != n ? n : er;
+                        if (null === i) {
                             A.default.track(x.AnalyticEvents.PAYMENT_FLOW_LOADED, {
-                                ...eM,
+                                ...eI,
                                 initial_step: e,
                                 has_saved_payment_source: e_
                             });
                             return
                         }
                         A.default.track(x.AnalyticEvents.PAYMENT_FLOW_STEP, {
-                            ...eM,
+                            ...eI,
                             ...l,
-                            from_step: a,
+                            from_step: i,
                             to_step: e === h.Step.ADD_PAYMENT_STEPS ? h.Step.PAYMENT_TYPE : e,
-                            step_duration_ms: i - eI,
-                            flow_duration_ms: i - eo.startTime
+                            step_duration_ms: a - eh,
+                            flow_duration_ms: a - eo.startTime
                         })
-                    }, [eM, eo.startTime, d, ei, ea, er, eI, e_]),
-                    ey = u.useMemo(() => () => null == g ? void 0 : g($ === R.PurchaseState.COMPLETED), [g, $]);
-                (0, m.usePaymentStepForAuthentication)(er, es, eN), (0, h.usePurchaseStateForStep)(er, $, ee), (0, S.usePurchaseTokenAuthStep)(er, ec, eN), (0, _.default)(ey), (0, P.useUnsupportedExternalSubscriptionModalHandler)(ed, () => g(!1), eS), (0, m.usePaymentAuthenticationPoller)(es);
-                let eh = (0, v.PaymentModalHeader)({
+                    }, [eI, eo.startTime, d, ei, ea, er, eh, e_, ey]),
+                    eC = u.useMemo(() => () => null == O ? void 0 : O($ === R.PurchaseState.COMPLETED), [O, $]);
+                (0, m.usePaymentStepForAuthentication)(er, es, eR), (0, h.usePurchaseStateForStep)(er, $, ee), (0, S.usePurchaseTokenAuthStep)(er, ec, eR), (0, _.default)(eC), (0, P.useUnsupportedExternalSubscriptionModalHandler)(ed, () => O(!1), eT), (0, m.usePaymentAuthenticationPoller)(es);
+                let eO = (0, v.PaymentModalHeader)({
                     renderHeader: K,
                     referralTrialOfferId: V,
-                    handleClose: ey
+                    handleClose: eC
                 });
                 return (0, l.jsx)(o.Shaker, {
                     className: b.shaker,
@@ -349,22 +355,22 @@
                     intensity: 2,
                     children: (0, l.jsx)(o.ModalRoot, {
                         className: i(b.root, {
-                            [b.withHeader]: null != eh
+                            [b.withHeader]: null != eO
                         }),
                         transitionState: f,
                         hideShadow: q,
                         returnRef: Q,
-                        size: em,
+                        size: eP,
                         children: (0, l.jsx)(k.default, {
-                            header: eh,
-                            isLargeModal: J || (null == ep ? void 0 : ep.isLargeModal),
+                            header: eO,
+                            isLargeModal: J || (null == eS ? void 0 : eS.isLargeModal),
                             initialPlanId: E,
                             subscriptionTier: M,
-                            handleStepChange: eN,
-                            handleClose: ey,
-                            analyticsData: eM,
-                            setAnalyticsData: eA,
-                            trialId: O,
+                            handleStepChange: eR,
+                            handleClose: eC,
+                            analyticsData: eI,
+                            setAnalyticsData: eN,
+                            trialId: g,
                             trialFooterMessageOverride: L,
                             reviewWarningMessage: D,
                             planGroup: Y,
@@ -399,7 +405,7 @@
                     startedPaymentFlowWithPaymentSourcesRef: I
                 } = (0, y.usePaymentContext)(), {
                     isGift: R
-                } = (0, N.useGiftContext)(), C = I.current, v = (0, O.default)({
+                } = (0, N.useGiftContext)(), C = I.current, v = (0, g.default)({
                     isGift: R,
                     skuId: P,
                     referralTrialOfferId: i
@@ -422,7 +428,7 @@
                     }
                 }), u.useEffect(() => {
                     if (!D && (0, c.fetchUserEntitlementsForApplication)(U.PREMIUM_SUBSCRIPTION_APPLICATION), x || _) return;
-                    let e = (0, g.inOneStepSubscriptionCheckout)({
+                    let e = (0, O.inOneStepSubscriptionCheckout)({
                         isTrial: v,
                         isGift: R,
                         selectedSkuId: P,
@@ -430,7 +436,7 @@
                     });
                     if (null != n) a(h.Step.REVIEW);
                     else if (e) {
-                        let e = (0, g.getDefaultPlanOneStepCheckout)(P, o, A);
+                        let e = (0, O.getDefaultPlanOneStepCheckout)(P, o, A);
                         T(e), a(h.Step.REVIEW)
                     } else null != t ? a(h.Step.PLAN_SELECT) : a(h.Step.SKU_SELECT)
                 }, [o, _, D, n, x, a, t, P, T, k, v, A, R, C]), x) ? (0, l.jsx)(L.default, {}) : _ ? (0, l.jsx)(f.BlockedPaymentsContentModal, {
@@ -478,16 +484,16 @@
                     purchaseType: R
                 } = (0, m.usePaymentContext)(), {
                     isGift: C,
-                    selectedGiftStyle: g,
-                    giftRecipient: O
-                } = (0, p.useGiftContext)(), v = C && (0, E.shouldShowCustomGiftExperience)(O, !0, "PaymentModalHeader") && N === S.Step.CONFIRM && null != g, L = null != n && null != N, k = N !== S.Step.SKU_SELECT && null != I, x = (0, d.usePremiumTrialOffer)(a), U = !C && null != x && null != I && (0, P.SubscriptionTrials)[x.trial_id].skus.includes(I), b = (0, c.usePremiumDiscountOffer)(), D = null == b ? void 0 : null === (t = b.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => P.SubscriptionPlanInfo[e].skuId === I), Y = !C && null != b && null != I && D, G = u.useMemo(() => {
+                    selectedGiftStyle: O,
+                    giftRecipient: g
+                } = (0, p.useGiftContext)(), v = C && (0, E.shouldShowCustomGiftExperience)(g, !0, "PaymentModalHeader") && N === S.Step.CONFIRM && null != O, L = null != n && null != N, k = N !== S.Step.SKU_SELECT && null != I, x = (0, d.usePremiumTrialOffer)(a), U = !C && null != x && null != I && (0, P.SubscriptionTrials)[x.trial_id].skus.includes(I), b = (0, c.usePremiumDiscountOffer)(), D = null == b ? void 0 : null === (t = b.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => P.SubscriptionPlanInfo[e].skuId === I), Y = !C && null != b && null != I && D, G = u.useMemo(() => {
                     if (null == N) return;
                     let e = null;
                     if (v) e = (0, l.jsxs)("div", {
                         className: M.container,
                         children: [(0, l.jsx)(f.default, {
                             defaultAnimationState: o.AnimationState.LOOP,
-                            giftStyle: g,
+                            giftStyle: O,
                             className: M.seasonalGiftBoxHeaderIcon
                         }), (0, l.jsx)(s.ModalCloseButton, {
                             onClick: A,
@@ -507,10 +513,10 @@
                         showTrialBadge: U,
                         showDiscountBadge: Y,
                         isGift: C,
-                        giftRecipient: O
+                        giftRecipient: g
                     });
                     return e
-                }, [g, A, h, n, y, I, N, U, Y, v, k, L, R, C, O]);
+                }, [O, A, h, n, y, I, N, U, Y, v, k, L, R, C, g]);
                 return G
             }
         },
