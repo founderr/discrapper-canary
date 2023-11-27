@@ -325,10 +325,10 @@
                     fill: "none",
                     viewBox: "0 0 24 24",
                     children: (0, i.jsx)("path", {
-                        stroke: "string" == typeof l ? l : l.css,
-                        strokeLinecap: "round",
-                        strokeWidth: "2",
-                        d: "M21 12H3",
+                        fill: "string" == typeof l ? l : l.css,
+                        fillRule: "evenodd",
+                        d: "M22 12a1 1 0 0 1-1 1H3a1 1 0 1 1 0-2h18a1 1 0 0 1 1 1Z",
+                        clipRule: "evenodd",
                         className: u
                     })
                 })
