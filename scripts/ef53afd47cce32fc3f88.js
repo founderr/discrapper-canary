@@ -370,6 +370,7 @@
                                         ...t,
                                         name: p
                                     },
+                                    cropData: i,
                                     applicationAudioEnabled: P,
                                     voiceAudioEnabled: x,
                                     onShareComplete: () => {
