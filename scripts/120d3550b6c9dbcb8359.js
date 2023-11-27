@@ -6390,7 +6390,8 @@
                                 "aria-label": p.default.Messages.OPEN_CHANNEL_TOPIC,
                                 className: m.topicClickTarget
                             }), f.default.parseTopic(e.topic, !0, {
-                                channelId: e.id
+                                channelId: e.id,
+                                allowLinks: !0
                             })]
                         })]
                     })
