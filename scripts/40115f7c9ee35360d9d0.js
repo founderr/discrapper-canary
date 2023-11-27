@@ -1738,7 +1738,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "248836"
+                        buildNumber: "248844"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -12349,6 +12349,7 @@
                             },
                             className: A.segmentControl,
                             optionClassName: A.segmentControlOption,
+                            selectedOptionClassName: A.segmentControlOptionSelected,
                             look: "pill"
                         })]
                     }), (0, a.jsx)(T.CollectiblesItemsList, {
@@ -23211,7 +23212,7 @@
                                     disableUserProfileLink: __OVERLAY__,
                                     isHovering: ee,
                                     showPremiumBadgeUpsell: !1,
-                                    showCollectiblesUpsell: Z
+                                    showCollectiblesTryItOut: Z
                                 }), (0, a.jsxs)(g.default.Inner, {
                                     children: [(0, a.jsx)(R.default, {
                                         activity: W,
