@@ -1219,7 +1219,7 @@
                             },
                             oldFormErrors: !0
                         }).then(e => {
-                            if (null == e.body || "979cf1c06d34d409938da219d1b9e3202d6efb18" === e.body.hash) return this._handleUpdateNotAvailable();
+                            if (null == e.body || "898a9580c0dd32a49f218f9a8f00f3f5ad45262e" === e.body.hash) return this._handleUpdateNotAvailable();
                             if (e.body.required || (0, r.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
                             let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? 6048e5 : 864e5;
                             if (Date.now() - f > t) return s.default.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
@@ -3206,69 +3206,70 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return c
                 }
             }), n("222007");
             var l = n("446674"),
                 a = n("913144");
             n("21121");
             var s = n("138217"),
-                i = n("360191");
-            let r = {
+                i = n("299039"),
+                r = n("360191");
+            let o = {
                 tab: null,
                 localItemAcks: {},
                 hasNewMentions: !1,
                 isDataStale: !1,
                 isRefreshing: !1
             };
-            class o extends l.default.PersistedStore {
+            class u extends l.default.PersistedStore {
                 initialize(e) {
                     if (this.waitFor(s.default), null != e) {
                         var t;
-                        (r = e).localItemAcks = function(e) {
+                        (o = e).localItemAcks = function(e) {
                             let t = {};
                             for (let [n, l] of Object.entries(e)) Date.now() - l < 7776e6 && (t[n] = l);
                             return t
-                        }(null !== (t = r.localItemAcks) && void 0 !== t ? t : {}), r.isDataStale = !0
+                        }(null !== (t = o.localItemAcks) && void 0 !== t ? t : {}), o.isDataStale = !0
                     }
                 }
                 getState() {
-                    return r
+                    return o
                 }
                 getTab() {
                     var e;
-                    return null !== (e = r.tab) && void 0 !== e ? e : i.NotificationCenterTabs.ForYou
+                    return null !== (e = o.tab) && void 0 !== e ? e : r.NotificationCenterTabs.ForYou
                 }
                 isLocalItemAcked(e) {
-                    return null != r.localItemAcks[e]
+                    return null != e.local_id && (null != o.localItemAcks[e.local_id] || i.default.age(e.id) > 7776e6)
                 }
                 hasNewMentions() {
-                    return r.hasNewMentions
+                    return o.hasNewMentions
                 }
                 isDataStale() {
-                    return r.isDataStale
+                    return o.isDataStale
                 }
                 isRefreshing() {
-                    return r.isRefreshing
+                    return o.isRefreshing
                 }
                 shouldReload() {
-                    return r.hasNewMentions || r.isDataStale || r.isRefreshing
+                    return o.hasNewMentions || o.isDataStale || o.isRefreshing
                 }
             }
-            o.displayName = "NotificationCenterStore", o.persistKey = "NotificationCenterStore";
+            u.displayName = "NotificationCenterStore", u.persistKey = "NotificationCenterStore";
 
-            function u() {
-                r.hasNewMentions = !1, r.isDataStale = !1, r.isRefreshing = !1
+            function d() {
+                o.hasNewMentions = !1, o.isDataStale = !1, o.isRefreshing = !1
             }
-            var d = new o(a.default, {
+            var c = new u(a.default, {
                 MESSAGE_CREATE: function(e) {
                     let {
                         message: t
                     } = e
                 },
                 NOTIFICATION_CENTER_SET_TAB: function(e) {
-                    r = {
-                        ...r,
+                    o = {
+                        ...o,
                         tab: e.tab
                     }
                 },
@@ -3277,20 +3278,20 @@
                         localIds: t
                     } = e;
                     t.forEach(e => {
-                        r = {
-                            ...r,
+                        o = {
+                            ...o,
                             localItemAcks: {
-                                ...r.localItemAcks,
+                                ...o.localItemAcks,
                                 [e]: Date.now()
                             }
                         }
                     })
                 },
                 NOTIFICATION_CENTER_REFRESH: function() {
-                    r.isRefreshing = !0
+                    o.isRefreshing = !0
                 },
-                LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: u,
-                LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: u
+                LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: d,
+                LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: d
             })
         },
         183030: function(e, t, n) {
@@ -3304,7 +3305,7 @@
                 a = n("204116"),
                 s = n("342176");
             let i = (e, t) => {
-                let n = (0, l.useStateFromStores)([a.default], () => null != e.local_id && a.default.isLocalItemAcked(e.local_id));
+                let n = (0, l.useStateFromStores)([a.default], () => a.default.isLocalItemAcked(e));
                 return !e.forceUnacked && (n || (0, s.isRemoteAcked)(e, t))
             }
         },
