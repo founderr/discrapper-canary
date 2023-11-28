@@ -249,7 +249,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return v
+                    return A
                 }
             }), l("222007");
             var n = l("37983"),
@@ -269,26 +269,27 @@
                 h = l("30591"),
                 p = l("803725"),
                 g = l("49111"),
-                _ = l("782340"),
-                N = l("173266"),
-                I = l("770420");
-            let x = e => {
+                _ = l("994428"),
+                N = l("782340"),
+                I = l("173266"),
+                x = l("770420");
+            let v = e => {
                 let {
                     clipsEnabled: t,
                     isAnimationDone: l,
                     guildId: s,
                     children: r
-                } = e, m = (0, i.useStateFromStores)([E.default], () => E.default.getHardwareClassification()), C = m === h.ClipsHardwareClassification.MEETS_MINIMUM || m === h.ClipsHardwareClassification.UNKNOWN, I = m === h.ClipsHardwareClassification.BELOW_MINIMUM, x = l && (C || I) && !t, [v, A] = (0, c.useGetDismissibleContent)(x ? [u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), R = v === u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
+                } = e, m = (0, i.useStateFromStores)([E.default], () => E.default.getHardwareClassification()), C = m === h.ClipsHardwareClassification.MEETS_MINIMUM || m === h.ClipsHardwareClassification.UNKNOWN, x = m === h.ClipsHardwareClassification.BELOW_MINIMUM, v = l && (C || x) && !t, [A, R] = (0, c.useGetDismissibleContent)(v ? [u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), T = A === u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
                 a.useEffect(() => {
                     t && (0, d.markDismissibleContentAsDismissed)(u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK, {
                         forceTrack: !0
                     })
                 }, [t]);
-                let T = (e, t) => {
-                    e.stopPropagation(), e.preventDefault(), null == t || t(), A()
+                let L = (e, t) => {
+                    e.stopPropagation(), e.preventDefault(), null == t || t(), R(_.ContentDismissActionType.UNKNOWN)
                 };
                 return (0, n.jsx)(o.Popout, {
-                    shouldShow: R,
+                    shouldShow: T,
                     position: "right",
                     align: "center",
                     renderPopout: e => {
@@ -299,41 +300,41 @@
                             dismissibleContent: u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK,
                             shouldUseHorizontalButtons: !0,
                             inlineArt: !0,
-                            artClassName: N.clipsEducationArt,
+                            artClassName: I.clipsEducationArt,
                             position: "right",
-                            header: _.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_TITLE,
-                            headerClassName: N.clipsEducationHeader,
+                            header: N.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_TITLE,
+                            headerClassName: I.clipsEducationHeader,
                             body: (0, n.jsxs)(n.Fragment, {
                                 children: [(0, n.jsx)(o.Text, {
                                     variant: "text-sm/normal",
                                     color: "always-white",
-                                    children: _.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
-                                }), I ? (0, n.jsx)(o.Text, {
+                                    children: N.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
+                                }), x ? (0, n.jsx)(o.Text, {
                                     variant: "text-sm/normal",
                                     color: "always-white",
-                                    className: N.warningText,
-                                    children: _.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
+                                    className: I.warningText,
+                                    children: N.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
                                         url: S.default.getArticleURL(g.HelpdeskArticles.CLIPS)
                                     })
                                 }) : null]
                             }),
-                            tryItText: _.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
+                            tryItText: N.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
                             onTryFeature: e => {
                                 (0, p.updateClipsEnabled)({
                                     clipsEnabled: !0,
                                     guildId: s,
                                     trackAnalytics: !0
-                                }), T(e)
+                                }), L(e)
                             },
                             onClose: e => {
-                                T(e, t)
+                                L(e, t)
                             }
                         })
                     },
                     children: () => r
                 })
             };
-            var v = function(e) {
+            var A = function(e) {
                 let {
                     isAnimationDone: t,
                     guildId: l
@@ -341,17 +342,17 @@
                 r(null != s, "Clips keybind should be set");
                 let u = C.toString(s.shortcut, !0);
                 return (0, n.jsx)(o.FormItem, {
-                    title: _.default.Messages.CLIPS_SETTINGS,
-                    titleClassName: I.formItemTitle,
-                    className: I.modalContent,
+                    title: N.default.Messages.CLIPS_SETTINGS,
+                    titleClassName: x.formItemTitle,
+                    className: x.modalContent,
                     children: (0, n.jsxs)("div", {
-                        className: N.container,
-                        children: [(0, n.jsx)(x, {
+                        className: I.container,
+                        children: [(0, n.jsx)(v, {
                             clipsEnabled: a,
                             guildId: l,
                             isAnimationDone: t,
                             children: (0, n.jsx)(o.FormSwitch, {
-                                className: N.formSwitch,
+                                className: I.formSwitch,
                                 value: a,
                                 onChange: e => (0, p.updateClipsEnabled)({
                                     clipsEnabled: e,
@@ -359,18 +360,18 @@
                                     trackAnalytics: !0
                                 }),
                                 hideBorder: !0,
-                                children: _.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
+                                children: N.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
                             })
                         }), (0, n.jsx)(o.Text, {
                             variant: "text-xs/normal",
                             color: "interactive-normal",
-                            className: N.description,
-                            children: _.default.Messages.CLIPS_SETTINGS_HELP_IN_GO_LIVE_CTA.format({
+                            className: I.description,
+                            children: N.default.Messages.CLIPS_SETTINGS_HELP_IN_GO_LIVE_CTA.format({
                                 keybind: u,
                                 keybindHook: () => (0, n.jsx)("span", {
-                                    className: N.keybindHintKeys,
+                                    className: I.keybindHintKeys,
                                     children: (0, n.jsx)(o.KeyCombo, {
-                                        className: N.keybindShortcut,
+                                        className: I.keybindShortcut,
                                         shortcut: u
                                     })
                                 })
@@ -422,8 +423,8 @@
                         isPremiumEarlyAccess: j = !1,
                         maxWidth: D = 280
                     } = e, P = A ? i.Button.Sizes.LARGE : i.Button.Sizes.MAX, [b, U] = a.useState(!1), {
-                        ref: G,
-                        width: y
+                        ref: y,
+                        width: G
                     } = (0, u.default)();
 
                     function H(e) {
@@ -433,9 +434,9 @@
                     }
                     return a.useEffect(() => {
                         var e, t;
-                        let l = (null !== (t = null === (e = G.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
+                        let l = (null !== (t = null === (e = y.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
                         !b && l > D && U(!0)
-                    }, [b, y, G, D]), a.useEffect(() => {
+                    }, [b, G, y, D]), a.useEffect(() => {
                         (0, o.requestMarkDismissibleContentAsShown)(T)
                     }, [T]), (0, n.jsx)("div", {
                         className: I,
@@ -475,7 +476,7 @@
                                     children: l
                                 }) : l]
                             }), (0, n.jsx)("div", {
-                                ref: G,
+                                ref: y,
                                 className: b || !A ? S.buttonContainerVertical : S.buttonContainerHorizontal,
                                 children: null != _ ? (0, n.jsxs)(n.Fragment, {
                                     children: [(0, n.jsx)(i.Button, {
@@ -957,8 +958,8 @@
                 P = l("773336"),
                 b = l("767960"),
                 U = l("375202"),
-                G = l("916262"),
-                y = l("75974"),
+                y = l("916262"),
+                G = l("75974"),
                 H = l("359812"),
                 V = l("273405"),
                 w = l("326620"),
@@ -1103,7 +1104,7 @@
                     isAnimationDone: O
                 } = e, j = (0, i.useStateFromStores)([N.default, E.default], () => E.default.getChannel(N.default.getVoiceChannelId())), P = (0, i.useStateFromStores)([b.default], () => b.default.GPUDriversOutdated), U = (0, i.useStateFromStores)([b.default], () => b.default.problematicGPUDriver), w = (0, i.useStateFromStores)([g.default], () => g.default.getSoundshareEnabled()), k = (0, i.useStateFromStores)([I.default], () => I.default.getCurrentUser()), B = (0, f.useEnableClips)(), K = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
                     autoTrackExposure: !B
-                }), Y = (0, G.default)();
+                }), Y = (0, y.default)();
                 null != t && t.id.startsWith("screen") && !g.default.supportsScreenSoundshare() ? Y = z.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND : null == Y && g.default.supportsEnableSoundshare() && w !== W.SoundshareEnableState.ENABLED && (Y = z.default.Messages.GO_LIVE_SCREENSHARE_ENABLE_FOR_SOUNDSHARE.format({
                     onVoiceSettingsClick: () => {
                         _(), o.default.open(W.UserSettingsSections.VOICE)
@@ -1117,7 +1118,7 @@
                     ee = null != k && k.verified && !k.bot,
                     et = null != j && !(0, c.isPrivateGuildChannel)(j);
                 return (0, n.jsxs)(a.Fragment, {
-                    children: [$ ? (0, n.jsx)(y.default, {
+                    children: [$ ? (0, n.jsx)(G.default, {
                         selectedSource: t,
                         onChangeVideoDeviceSource: T,
                         onChangeAudioDevice: L
@@ -1268,8 +1269,8 @@
                 P = l("375202"),
                 b = l("636909"),
                 U = l("934054"),
-                G = l("23922"),
-                y = l("16750"),
+                y = l("23922"),
+                G = l("16750"),
                 H = l("686298"),
                 V = l("49111"),
                 w = l("180524"),
@@ -1329,7 +1330,7 @@
                             resolution: r,
                             frameRate: i
                         });
-                        let o = (0, y.default)($, em, I.default.getRunningGames()),
+                        let o = (0, G.default)($, em, I.default.getRunningGames()),
                             d = !(0, M.isWindows)() || null == o || (null == em ? void 0 : em.id.startsWith("camera:")),
                             c = d || null == o ? null : o.pid;
                         (0, S.startStream)(a, l, {
@@ -1359,7 +1360,7 @@
                 }, [ee, et, eN, eg, eh]);
                 async function eL(e) {
                     if (e.preventDefault(), 1 === es) return er(2);
-                    let t = (0, y.default)($, em, I.default.getRunningGames()),
+                    let t = (0, G.default)($, em, I.default.getRunningGames()),
                         n = O.default.supportsFeature(V.NativeFeatures.ELEVATED_HOOK) && (null == t ? void 0 : t.elevated);
                     if ((0, M.isMac)() && null != em) {
                         let e = await N.default.getMediaEngine().getDesktopSources(),
@@ -1454,7 +1455,7 @@
                             id: 1,
                             children: (0, s.jsx)("div", {
                                 className: k.modalSize,
-                                children: (0, s.jsx)(G.default, {
+                                children: (0, s.jsx)(y.default, {
                                     selectedSource: em,
                                     onChangeSelectedSource: eM
                                 })
@@ -1500,7 +1501,7 @@
                         }
                     }(es, B, W, eo),
                     eU = 2 !== es || null == em && null == $ || null == eA,
-                    eG = (0, s.jsxs)(c.ModalFooter, {
+                    ey = (0, s.jsxs)(c.ModalFooter, {
                         justify: null == eb ? R.default.Justify.START : R.default.Justify.BETWEEN,
                         children: [(0, s.jsx)(c.Button, {
                             type: "submit",
@@ -1536,7 +1537,7 @@
                             className: k.art
                         }), (0, s.jsxs)("form", {
                             onSubmit: eL,
-                            children: [eD, eP, eG]
+                            children: [eD, eP, ey]
                         })]
                     })
                 })
@@ -1922,7 +1923,7 @@
                     align: E.default.Align.CENTER,
                     children: (0, n.jsx)(c.Spinner, {})
                 });
-                let G = U.map(e => {
+                let y = U.map(e => {
                     let {
                         id: a
                     } = e, s = (null == t ? void 0 : t.id) === a;
@@ -1938,7 +1939,7 @@
                     }, a)
                 });
 
-                function y() {
+                function G() {
                     let e = D.current;
                     null != e && j(!e.isScrolledToTop())
                 }
@@ -1976,23 +1977,23 @@
                         children: (0, n.jsx)(c.AdvancedScroller, {
                             ref: b,
                             className: R.sourceScroller,
-                            onScroll: y,
+                            onScroll: G,
                             children: (0, n.jsx)(h.default, {
                                 layout: h.default.Layout.WRAP,
                                 columns: 2,
                                 className: R.sourceContainer,
-                                children: G
+                                children: y
                             })
                         })
                     }) : (0, n.jsx)(c.AdvancedScroller, {
                         ref: b,
                         className: R.sourceScroller,
-                        onScroll: y,
+                        onScroll: G,
                         children: (0, n.jsx)(h.default, {
                             layout: h.default.Layout.WRAP,
                             columns: 2,
                             className: R.sourceContainer,
-                            children: G
+                            children: y
                         })
                     })]
                 })
@@ -2170,7 +2171,7 @@
                 } = e, b = (0, u.useStateFromStores)([C.default], () => {
                     let e = C.default.getCurrentUser();
                     return i(null != e, "StreamSettings: user cannot be undefined"), e
-                }), U = g.default.isPremiumExactly(b, v.PremiumTypes.TIER_0), G = g.default.isPremium(b), y = (0, u.useStateFromStores)([S.default], () => {
+                }), U = g.default.isPremiumExactly(b, v.PremiumTypes.TIER_0), y = g.default.isPremium(b), G = (0, u.useStateFromStores)([S.default], () => {
                     var e;
                     return null === (e = S.default.getGuild(D)) || void 0 === e ? void 0 : e.premiumTier
                 }), {
@@ -2184,14 +2185,14 @@
                     disable: !U
                 }), w = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
                     autoTrackExposure: !1
-                }), F = (V || !G) && !w, k = P ? I.GoLiveDeviceResolutionButtons : I.ApplicationStreamResolutionButtons, B = {
+                }), F = (V || !y) && !w, k = P ? I.GoLiveDeviceResolutionButtons : I.ApplicationStreamResolutionButtons, B = {
                     ...H,
                     section: x.AnalyticsSections.STREAM_SETTINGS
                 }, W = (0, n.jsx)(E.default, {
                     buttons: k.map(e => j({
                         type: e,
                         selected: e.value === a,
-                        needsPremium: !(0, _.default)(l, e.value, s, b, y),
+                        needsPremium: !(0, _.default)(l, e.value, s, b, G),
                         analyticsLocation: B,
                         onClick: () => r(e.value),
                         onClose: t
@@ -2200,7 +2201,7 @@
                     buttons: I.ApplicationStreamFPSButtons.map(e => j({
                         type: e,
                         selected: e.value === s,
-                        needsPremium: !(0, _.default)(l, a, e.value, b, y),
+                        needsPremium: !(0, _.default)(l, a, e.value, b, G),
                         analyticsLocation: B,
                         onClick: () => p(e.value),
                         onClose: t

@@ -804,8 +804,8 @@
                 }, []);
                 let {
                     sectionDescriptors: G,
-                    activeSections: V,
-                    commandsByActiveSection: K,
+                    activeSections: K,
+                    commandsByActiveSection: V,
                     hasMoreAfter: W,
                     commands: q,
                     filteredSectionId: Y,
@@ -824,7 +824,7 @@
                     isScrolling: s,
                     listRef: w,
                     onActiveCategoryIndexChange: e => {
-                        let t = V[e];
+                        let t = K[e];
                         if (null != t) {
                             let e = G.findIndex(e => e.id === t.id);
                             p.ApplicationCommandDiscoveryPickerStore.setActiveCategoryIndex(e)
@@ -833,8 +833,8 @@
                     scrollOffset: 20,
                     searchQuery: ""
                 }), Z = e => {
-                    let t = V.length,
-                        n = K.reduce((e, t) => e + t.data.length, 0) - (W ? 7 : 0),
+                    let t = K.length,
+                        n = V.reduce((e, t) => e + t.data.length, 0) - (W ? 7 : 0),
                         l = 48 * t + n * k - 512;
                     W && e + 420 > l && z(), X(e), P(), a.current = e
                 };
@@ -842,10 +842,10 @@
                     Z(a.current)
                 }, [q]);
                 let J = i.useCallback(e => {
-                        let t = e === V.length - 1;
+                        let t = e === K.length - 1;
                         return t && !W ? 0 : 16
-                    }, [V.length, W]),
-                    $ = K.map(e => e.data.length);
+                    }, [K.length, W]),
+                    $ = V.map(e => e.data.length);
                 i.useEffect(() => {
                     null != w.current && B && null != U && w.current.scrollRowIntoView(U)
                 }, [B, U]), i.useLayoutEffect(() => {
@@ -875,7 +875,7 @@
                         if (null == U) return !1;
                         let t = 0,
                             n = 0;
-                        for (let e of K)
+                        for (let e of V)
                             if (t = n, U < (n += e.data.length)) {
                                 let n = e.data[U - t],
                                     l = G.find(e => e.id === n.applicationId);
@@ -890,9 +890,9 @@
                             l = null == U ? 0 : U + e;
                         return l >= n ? l = n - 1 : l < 0 && (l = 0), D(l), F(!0), !0
                     }
-                }), [q.length, K, W, G, et, U]);
+                }), [q.length, V, W, G, et, U]);
                 let en = i.useCallback(e => {
-                        let t = V[e];
+                        let t = K[e];
                         if (null == t) return null;
                         let i = (0, N.getIconComponent)(t),
                             r = (0, l.jsx)(i, {
@@ -907,13 +907,13 @@
                             icon: r,
                             children: t.name
                         }, e)
-                    }, [n, V]),
+                    }, [n, K]),
                     el = i.useCallback((e, t) => {
-                        let n = e === V.length - 1,
-                            i = V[e],
+                        let n = e === K.length - 1,
+                            i = K[e],
                             {
                                 data: r
-                            } = K[e];
+                            } = V[e];
                         return (0, l.jsxs)("ul", {
                             role: "group",
                             "aria-label": i.name,
@@ -928,10 +928,10 @@
                                 className: M.noSearchResults
                             })]
                         }, e)
-                    }, [V, K]),
+                    }, [K, V]),
                     ei = i.useCallback((e, t) => {
                         var i;
-                        let r = K[t.sectionIndex],
+                        let r = V[t.sectionIndex],
                             o = r.data[t.sectionRowIndex],
                             s = "".concat(r.section.id, ":").concat(null !== (i = null == o ? void 0 : o.id) && void 0 !== i ? i : e);
                         if (null == o || r.section.id !== o.applicationId && r.section.id !== A.BuiltInSectionId.FRECENCY || o.inputType === y.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(_.default, {}, s);
@@ -949,7 +949,7 @@
                                 D(null), F(!1)
                             }
                         }, s)
-                    }, [n, K, et, G, U]),
+                    }, [n, V, et, G, U]),
                     er = (0, S.useUID)();
                 return (0, f.useChannelEditorPopup)(er, !0, (0, E.getAutocompleteRowId)(U)), i.useEffect(() => () => {
                     (0, f.dismissChannelEditorPopup)()
@@ -974,7 +974,7 @@
                         renderRow: ei,
                         renderSection: el,
                         renderSectionHeader: en,
-                        rowCount: V.length,
+                        rowCount: K.length,
                         rowCountBySection: $,
                         rowHeight: k,
                         sectionHeaderHeight: 32,
@@ -4057,7 +4057,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return N
+                    return A
                 }
             });
             var l = n("37983"),
@@ -4078,28 +4078,29 @@
                 S = n("128295"),
                 g = n("414868"),
                 T = n("49111"),
-                v = n("13030"),
-                y = n("782340"),
-                x = n("851855");
+                v = n("994428"),
+                y = n("13030"),
+                x = n("782340"),
+                I = n("851855");
 
-            function I(e) {
+            function _(e) {
                 let {
                     disabled: t,
                     channel: n,
                     markAsDismissed: r,
                     visibleContent: C,
-                    innerRef: I
-                } = e, _ = (0, d.useAppContext)(), {
-                    analyticsLocations: N
-                } = (0, E.default)(), A = _ === T.AppContext.POPOUT, R = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
-                    isActivitiesInTextEnabled: O
+                    innerRef: _
+                } = e, N = (0, d.useAppContext)(), {
+                    analyticsLocations: A
+                } = (0, E.default)(), R = N === T.AppContext.POPOUT, O = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
+                    isActivitiesInTextEnabled: M
                 } = f.ActivitiesInTextExperiment.useExperiment({
                     location: "ChannelActivityPickerButton"
                 }, {
                     autoTrackExposure: !1
-                }), M = i.useCallback(() => {
-                    r(), (0, h.default)({
-                        channel: O ? n : void 0,
+                }), b = i.useCallback(() => {
+                    r(v.ContentDismissActionType.UNKNOWN), (0, h.default)({
+                        channel: M ? n : void 0,
                         guildId: n.guild_id,
                         locationObject: {
                             page: T.AnalyticsPages.GUILD_CHANNEL,
@@ -4107,35 +4108,35 @@
                             object: T.AnalyticsObjects.BUTTON_ICON,
                             objectType: T.AnalyticsObjectTypes.ACTIVITY
                         },
-                        openInPopout: A,
+                        openInPopout: R,
                         enableSelectedTextChannelInvite: !0,
-                        analyticsLocations: N
+                        analyticsLocations: A
                     }), (0, p.fetchShelf)({
                         guildId: n.guild_id
                     })
-                }, [N, n, O, r, A]), b = () => {
+                }, [A, n, M, r, R]), k = () => {
                     if (C === a.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES) return (0, l.jsxs)("div", {
-                        className: x.sparkleContainer,
+                        className: I.sparkleContainer,
                         children: [(0, l.jsx)(g.default, {
-                            className: o(x.sparkleStar, {
-                                [x.noAnimation]: R
+                            className: o(I.sparkleStar, {
+                                [I.noAnimation]: O
                             })
                         }), (0, l.jsx)(S.default, {
-                            className: o(x.sparklePlus, {
-                                [x.noAnimation]: R
+                            className: o(I.sparklePlus, {
+                                [I.noAnimation]: O
                             })
                         })]
                     });
                     return null
                 };
                 return t ? null : (0, l.jsx)(u.Tooltip, {
-                    text: y.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
+                    text: x.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
                     children: e => (0, l.jsxs)("div", {
                         ...e,
-                        className: o(v.CHAT_INPUT_BUTTON_CLASSNAME, x.buttonContainer),
-                        ref: I,
+                        className: o(y.CHAT_INPUT_BUTTON_CLASSNAME, I.buttonContainer),
+                        ref: _,
                         children: [(0, l.jsx)(m.default, {
-                            onClick: M,
+                            onClick: b,
                             tabIndex: 0,
                             focusProps: {
                                 offset: {
@@ -4145,24 +4146,24 @@
                                     right: -4
                                 }
                             }
-                        }), b()]
+                        }), k()]
                     })
                 })
             }
-            let _ = [a.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES];
-            var N = i.memo(i.forwardRef(function(e, t) {
+            let N = [a.DismissibleContent.ACTIVITIES_TEXT_INPUT_BUTTON_SPARKLES];
+            var A = i.memo(i.forwardRef(function(e, t) {
                 return (0, l.jsx)(C.default, {
-                    contentTypes: _,
+                    contentTypes: N,
                     children: n => {
                         let {
                             visibleContent: i,
                             markAsDismissed: r
                         } = n;
-                        return (0, l.jsx)(I, {
+                        return (0, l.jsx)(_, {
                             ...e,
                             innerRef: t,
                             visibleContent: i,
-                            markAsDismissed: r
+                            markAsDismissed: () => r(v.ContentDismissActionType.UNKNOWN)
                         })
                     }
                 })
@@ -5760,8 +5761,8 @@
                     disabled: F,
                     channel: H,
                     handleSubmit: G,
-                    isEmpty: V
-                } = e, K = (0, o.useStateFromStores)([a.default], () => a.default.isSubmitButtonEnabled), W = (0, o.useStateFromStores)([h.default], () => h.default.getStickerPreview(H.id, B.drafts.type)), q = null != W && W.length > 0, Y = (0, o.useStateFromStores)([E.default], () => E.default.getUploads(H.id, B.drafts.type)), {
+                    isEmpty: K
+                } = e, V = (0, o.useStateFromStores)([a.default], () => a.default.isSubmitButtonEnabled), W = (0, o.useStateFromStores)([h.default], () => h.default.getStickerPreview(H.id, B.drafts.type)), q = null != W && W.length > 0, Y = (0, o.useStateFromStores)([E.default], () => E.default.getUploads(H.id, B.drafts.type)), {
                     activeCommand: z,
                     activeCommandOption: Q
                 } = (0, o.useStateFromStoresObject)([d.default], () => ({
@@ -5835,9 +5836,9 @@
                 }, "emoji")), eu && ((null === (n = B.gifs) || void 0 === n ? void 0 : n.button) != null || (null === (i = B.stickers) || void 0 === i ? void 0 : i.button) != null || (null === (p = B.emojis) || void 0 === p ? void 0 : p.button) != null) && null == z && Z.push((0, l.jsx)(y.default, {
                     disabled: F,
                     type: B
-                }, "expression")), (null === (I = B.submit) || void 0 === I ? void 0 : I.button) != null && ((null === (N = B.submit) || void 0 === N ? void 0 : N.ignorePreference) || K) && Z.push((0, l.jsx)(A.default, {
+                }, "expression")), (null === (I = B.submit) || void 0 === I ? void 0 : I.button) != null && ((null === (N = B.submit) || void 0 === N ? void 0 : N.ignorePreference) || V) && Z.push((0, l.jsx)(A.default, {
                     onClick: G,
-                    disabled: F || 0 === Y.length && V && !q
+                    disabled: F || 0 === Y.length && K && !q
                 }, "submit")), 0 === Z.length) ? null : (0, l.jsx)("div", {
                     className: b.buttons,
                     children: Z
@@ -5891,8 +5892,8 @@
                 F = n("585722"),
                 H = n("697218"),
                 G = n("378765"),
-                V = n("991170"),
-                K = n("773336"),
+                K = n("991170"),
+                V = n("773336"),
                 W = n("545054"),
                 q = n("850391"),
                 Y = n("743825"),
@@ -5937,8 +5938,8 @@
                         canMentionRoles: eF,
                         canMentionChannels: eH,
                         maxCharacterCount: eG,
-                        showRemainingCharsAfterCount: eV,
-                        allowNewLines: eK = !0,
+                        showRemainingCharsAfterCount: eK,
+                        allowNewLines: eV = !0,
                         characterCountClassName: eW,
                         "aria-describedby": eq,
                         "aria-labelledby": eY,
@@ -5995,7 +5996,7 @@
                                     disabled: l || o || !s && !d || m,
                                     canAttachFiles: !0 === t.attachments && (s || o || c || p),
                                     canCreateThreads: u,
-                                    canEveryoneSendMessages: V.default.canEveryoneRole(en.Permissions.SEND_MESSAGES, e)
+                                    canEveryoneSendMessages: K.default.canEveryoneRole(en.Permissions.SEND_MESSAGES, e)
                                 }
                             }, [e, t.permissions.requireCreateTherads, t.permissions.requireSendMessages, t.attachments, n, l, o]);
                         return {
@@ -6003,7 +6004,7 @@
                             isPendingMember: o,
                             ...s
                         }
-                    }(eN, eA, e9, ex), ti = eA.toolbarType === q.SlateToolbarTypes.STATIC, tr = !U.UseLegacyChatInput.useSetting() && !(0, K.isAndroidWeb)() && null != window.ResizeObserver, to = !tr || !(null === (r = eA.commands) || void 0 === r ? void 0 : r.enabled) || !eR || eC !== el.COMMAND_SENTINEL, ts = (0, O.default)(), {
+                    }(eN, eA, e9, ex), ti = eA.toolbarType === q.SlateToolbarTypes.STATIC, tr = !U.UseLegacyChatInput.useSetting() && !(0, V.isAndroidWeb)() && null != window.ResizeObserver, to = !tr || !(null === (r = eA.commands) || void 0 === r ? void 0 : r.enabled) || !eR || eC !== el.COMMAND_SENTINEL, ts = (0, O.default)(), {
                         isSubmitButtonEnabled: ta,
                         fontSize: tu
                     } = (0, p.useStateFromStoresObject)([E.default], () => ({
@@ -6315,7 +6316,7 @@
                                                 canPasteFiles: tt,
                                                 uploadPromptCharacterCount: en.MAX_MESSAGE_LENGTH_PREMIUM,
                                                 maxCharacterCount: null != eG ? eG : ts,
-                                                allowNewLines: eK,
+                                                allowNewLines: eV,
                                                 "aria-describedby": eq,
                                                 onChange: ek,
                                                 onResize: t_,
@@ -6378,7 +6379,7 @@
                                     textValue: eC,
                                     className: eW,
                                     maxCharacterCount: eG,
-                                    showRemainingCharsAfterCount: eV
+                                    showRemainingCharsAfterCount: eK
                                 }) : null, tw ? (0, l.jsx)(N.default, {
                                     editorRef: e8,
                                     channel: eN,
@@ -7036,8 +7037,8 @@
                         onPaste: F,
                         onResize: H,
                         onFocus: G,
-                        onBlur: V,
-                        onKeyDown: K,
+                        onBlur: K,
+                        onKeyDown: V,
                         onKeyUp: W,
                         onTab: q,
                         onEnter: Y,
@@ -7157,7 +7158,7 @@
                         editor: ev,
                         channel: b,
                         disableEnterToSubmit: en,
-                        onKeyDown: K,
+                        onKeyDown: V,
                         onKeyUp: W,
                         onTab: q,
                         onEnter: Y,
@@ -7210,7 +7211,7 @@
                                 canFocus: !P,
                                 onChange: eO,
                                 onFocus: G,
-                                onBlur: V,
+                                onBlur: K,
                                 onClick: eR,
                                 onPaste: eN,
                                 onKeyDown: eI,
@@ -13227,8 +13228,8 @@
                     onSelectSticker: E,
                     onSelectSound: A,
                     channel: G,
-                    type: V,
-                    closeOnModalOuterClick: K = !1,
+                    type: K,
+                    closeOnModalOuterClick: V = !1,
                     parentModalKey: W
                 } = e, q = i.useRef(null), Y = i.useRef(!1), z = i.useRef(), Q = i.useRef(null), {
                     drawerWidth: X,
@@ -13241,7 +13242,7 @@
                     windowDispatch: et
                 } = i.useContext(C.default), en = (0, c.useStateFromStores)([_.default], () => !_.default.hasLoadedStickerPacks), el = (0, y.useSoundmojiExperiment)("expression_picker"), ei = null != W, er = (0, f.useIsModalAtTop)(null != W ? W : ""), eo = i.useCallback(e => {
                     var t;
-                    if (!ei && (0, f.hasAnyModalOpen)() || ei && !(er && K)) return;
+                    if (!ei && (0, f.hasAnyModalOpen)() || ei && !(er && V)) return;
                     let {
                         target: n
                     } = e;
@@ -13253,7 +13254,7 @@
                     }(0, b.closeExpressionPicker)();
                     let l = null === (t = (0, M.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
                     (null == l || "BODY" === l.tagName) && O.ComponentDispatch.dispatchToLastSubscribed(L.ComponentActions.TEXTAREA_FOCUS)
-                }, [K, er, ei]), es = i.useCallback(() => {
+                }, [V, er, ei]), es = i.useCallback(() => {
                     (0, b.closeExpressionPicker)()
                 }, []);
                 i.useLayoutEffect(() => {
@@ -13277,9 +13278,9 @@
                         }), Y.current = !0)
                     }
                 });
-                let ea = (null === (t = V.gifs) || void 0 === t ? void 0 : t.allowSending) && !u.isMobile,
-                    eu = null === (n = V.stickers) || void 0 === n ? void 0 : n.allowSending,
-                    ed = !(null === (r = V.expressionPicker) || void 0 === r ? void 0 : r.onlyEmojis) && (ea || eu);
+                let ea = (null === (t = K.gifs) || void 0 === t ? void 0 : t.allowSending) && !u.isMobile,
+                    eu = null === (n = K.stickers) || void 0 === n ? void 0 : n.allowSending,
+                    ed = !(null === (r = K.expressionPicker) || void 0 === r ? void 0 : r.onlyEmojis) && (ea || eu);
                 return (0, l.jsx)(h.default, {
                     section: L.AnalyticsSections.EXPRESSION_PICKER,
                     children: (0, l.jsx)(R.AppReferencePositionLayer, {
@@ -13375,7 +13376,7 @@
                                             ref: e => {
                                                 z.current = e
                                             },
-                                            disableEmojiTutorialFlow: V === g.ChatInputTypes.PROFILE_BIO_INPUT
+                                            disableEmojiTutorialFlow: K === g.ChatInputTypes.PROFILE_BIO_INPUT
                                         }) : null, J === k.ExpressionPickerViewType.SOUNDBOARD ? (0, l.jsx)("div", {
                                             className: w.soundboardContainer,
                                             children: (0, l.jsx)(x.default, {
@@ -13446,8 +13447,8 @@
                     containerWidth: d,
                     showingEmptyState: B
                 }), {
-                    expressionsGrid: V,
-                    rowCount: K,
+                    expressionsGrid: K,
+                    rowCount: V,
                     rowCountBySection: W,
                     columnCounts: q,
                     gutterWidth: Y
@@ -13467,21 +13468,21 @@
                 } = (0, o.useKeyboardNavigation)({
                     columnCounts: q,
                     expressionsListRef: D,
-                    expressionsGrid: V,
+                    expressionsGrid: K,
                     onSelectItem: f,
                     store: c,
                     gridNavigatorId: L
                 }), $ = i.useCallback(e => {
-                    let t = V[e];
+                    let t = K[e];
                     return S(t, Q(e), {
                         isUsingKeyboardNavigation: J.current,
                         gutterWidth: Y,
                         rowIndex: e
                     }, t => z(e, t), t => c.setInspectedExpressionPosition(t, e))
-                }, [V, z, Q, Y, J, S, c]), ee = i.useCallback(e => null == g ? void 0 : g(t[e]), [t, g]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
+                }, [K, z, Q, Y, J, S, c]), ee = i.useCallback(e => null == g ? void 0 : g(t[e]), [t, g]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
                     var e;
-                    return null == y ? void 0 : y(null == V ? void 0 : null === (e = V[H.rowIndex]) || void 0 === e ? void 0 : e[H.columnIndex])
-                }, [V, H.columnIndex, H.rowIndex, y]);
+                    return null == y ? void 0 : y(null == K ? void 0 : null === (e = K[H.rowIndex]) || void 0 === e ? void 0 : e[H.columnIndex])
+                }, [K, H.columnIndex, H.rowIndex, y]);
                 i.useEffect(() => {
                     p(F)
                 }, [p, F]), i.useEffect(() => c.resetStoreState, [c.resetStoreState]), i.useLayoutEffect(() => {
@@ -13524,7 +13525,7 @@
                                 renderSectionFooter: null != v ? en : void 0,
                                 renderInspector: null != y ? el : void 0,
                                 renderEmptySearchState: x,
-                                rowCount: K,
+                                rowCount: V,
                                 rowCountBySection: W,
                                 rowHeight: N,
                                 sectionHeaderHeight: A,
@@ -13867,14 +13868,14 @@
                     onSelectSticker: s,
                     stickerIconVisible: c = !1,
                     submitButtonVisible: f = !1
-                } = e, y = o.useContext(E.default), [x, A] = o.useState(null), [P, U] = o.useState(!1), [j, F] = o.useState(null), H = (0, C.useExpressionPickerStore)(e => null != e.activeView), G = o.useRef(null), [V, K] = o.useState(""), [W, q] = o.useState(""), [Y, z] = o.useState(!1), [Q, X] = o.useState(!1), Z = (0, O.useStickerSuggestionResults)(V, P, l), {
+                } = e, y = o.useContext(E.default), [x, A] = o.useState(null), [P, U] = o.useState(!1), [j, F] = o.useState(null), H = (0, C.useExpressionPickerStore)(e => null != e.activeView), G = o.useRef(null), [K, V] = o.useState(""), [W, q] = o.useState(""), [Y, z] = o.useState(!1), [Q, X] = o.useState(!1), Z = (0, O.useStickerSuggestionResults)(K, P, l), {
                     analyticsLocations: J,
                     AnalyticsLocationProvider: $
                 } = (0, h.default)(m.default.EXPRESSION_SUGGESTIONS), {
                     handleTextChange: ee,
                     debouncedSetTextInputValue: et
                 } = (0, O.useTextChangeHandler)({
-                    setTextInputValue: K,
+                    setTextInputValue: V,
                     setHasDismissed: U,
                     setHasSelection: X,
                     setFocusedSuggestionType: A
@@ -13961,14 +13962,14 @@
                         setFocusedSuggestionType: A,
                         setHasDismissed: U,
                         setFocusedStickerListItem: F,
-                        setTextInputValue: K
+                        setTextInputValue: V
                     }),
                     es = (e, t) => {
                         if (er) {
                             if (R.default.track(b.AnalyticEvents.AUTO_SUGGEST_EXPRESSION_SELECTED, {
                                     sticker_id: e.id,
                                     suggestion_trigger: W
-                                }), t === S.StickerSendability.SENDABLE) U(!0), s(e, T.StickerSelectLocation.EXPRESSION_SUGGESTIONS), et.cancel(), K("");
+                                }), t === S.StickerSendability.SENDABLE) U(!0), s(e, T.StickerSelectLocation.EXPRESSION_SUGGESTIONS), et.cancel(), V("");
                             else if ((0, v.isStandardSticker)(e)) {
                                 let t = g.default.getStickerPack(e.pack_id);
                                 null != t && (0, I.default)({
@@ -13982,8 +13983,8 @@
                     ea = o.useRef([]),
                     eu = o.useRef(!1);
                 o.useEffect(() => {
-                    er && (ea.current = Z), er !== eu.current && (y.emit(er ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), er && ((0, M.throttledTrackExpressionSuggestionDisplayed)(V), q(V))), eu.current = er
-                }, [y, er, Z, V]);
+                    er && (ea.current = Z), er !== eu.current && (y.emit(er ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), er && ((0, M.throttledTrackExpressionSuggestionDisplayed)(K), q(K))), eu.current = er
+                }, [y, er, Z, K]);
                 let ed = !er,
                     ec = er ? Z : ea.current;
                 return (0, r.jsx)($, {
@@ -14808,8 +14809,8 @@
                     onMouseEnter: F,
                     onSelectItem: H,
                     analyticsLocations: G,
-                    buttonOverlay: V = x.SoundButtonOverlay.PLAY,
-                    ...K
+                    buttonOverlay: K = x.SoundButtonOverlay.PLAY,
+                    ...V
                 } = e, {
                     soundId: W,
                     name: q,
@@ -14905,7 +14906,7 @@
                     className: O.soundButtonWrapper,
                     onMouseEnter: F,
                     children: [(0, l.jsxs)(c.ClickableContainer, {
-                        ...K,
+                        ...V,
                         buttonProps: {
                             ...eu,
                             id: ea,
@@ -14951,7 +14952,7 @@
                                 children: q
                             })]
                         }), function() {
-                            switch (V) {
+                            switch (K) {
                                 case x.SoundButtonOverlay.ADD:
                                     return (0, l.jsxs)("div", {
                                         className: O.addButtonOverlay,
@@ -15490,13 +15491,13 @@
                 })
             }
 
-            function V() {
+            function K() {
                 return (0, l.jsx)(c.default, {
                     message: w.default.Messages.SOUNDBOARD_SEARCH_EMPTY_STATE_BODY
                 })
             }
 
-            function K(e) {
+            function V(e) {
                 let {
                     descriptors: t,
                     soundButtonProps: n,
@@ -15580,7 +15581,7 @@
                         case R.SoundboardSoundItemType.ADD_SOUND:
                             return (0, D.default)(e.item.guild.id)
                     }
-                }, [L, es, c]), eu = i.useCallback((e, t, n, i, o) => (0, l.jsx)(K, {
+                }, [L, es, c]), eu = i.useCallback((e, t, n, i, o) => (0, l.jsx)(V, {
                     descriptors: e,
                     rowIndex: n.rowIndex,
                     isUsingKeyboardNavigation: n.isUsingKeyboardNavigation,
@@ -15657,7 +15658,7 @@
                         listPadding: F,
                         itemNodeWidth: 150,
                         gridNavigatorId: Z,
-                        renderEmptySearchState: V,
+                        renderEmptySearchState: K,
                         renderInspector: eh,
                         gridNotice: y,
                         renderHeader: _
@@ -16101,8 +16102,8 @@
                 F = n("642358");
             let H = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 G = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-                V = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
-                K = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
+                K = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+                V = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
                 W = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
                 q = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
                 Y = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
@@ -16170,8 +16171,8 @@
                             stickersCategories: es,
                             collapsedStickersCategories: ec,
                             listWidth: eu,
-                            listPaddingRight: V,
-                            stickerNodeMargin: ev ? K : W,
+                            listPaddingRight: K,
+                            stickerNodeMargin: ev ? V : W,
                             stickerNodeWidth: ev ? Q : X
                         }),
                         eA = i.useCallback((e, t) => {
@@ -16849,8 +16850,8 @@
                 F = n("327518"),
                 H = n("327769");
             let G = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-                V = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
-                K = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP),
+                K = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
+                V = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP),
                 W = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP_SEARCH_RESULTS),
                 q = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
                 Y = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
@@ -16864,7 +16865,7 @@
                 et = Z + 2 * $,
                 en = et + ee,
                 el = J + 2 * $ + ee,
-                ei = [K, q, Y, z],
+                ei = [V, q, Y, z],
                 er = [W, q, Y, z],
                 eo = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
                 es = ["laugh", "wave", "yes", "dance", "sad", "no", "hi", "bye", "cry", "ok"],
@@ -16955,7 +16956,7 @@
                         onSelectSticker: r,
                         channel: A,
                         currentUser: P
-                    }), [K, W] = i.useState(!1), q = i.useCallback(e => {
+                    }), [V, W] = i.useState(!1), q = i.useCallback(e => {
                         g.StickerPickerCollapsedSections.updateSetting(Array.from(e))
                     }, []), Y = i.useCallback(e => {
                         let t = E[e];
@@ -16972,7 +16973,7 @@
                             stickerClassName: F.sticker,
                             stickerDescriptors: t,
                             stickerSize: n > G ? Z : J,
-                            preferAnimation: n <= V,
+                            preferAnimation: n <= K,
                             ownedStickerPacks: N,
                             isDisplayingIndividualStickers: !0,
                             channel: A,
@@ -17096,10 +17097,10 @@
                             className: F.emptyGuildUpsell,
                             guildId: n.id,
                             channel: A,
-                            shouldTrackUpsellViewed: !K,
+                            shouldTrackUpsellViewed: !V,
                             setTrackedUpsellViewed: W
                         }, "sticker-picker-empty-guild-inline-upsell-".concat(n.id))
-                    }, [C, t, y, A, K]), el = i.useCallback(e => {
+                    }, [C, t, y, A, V]), el = i.useCallback(e => {
                         let n = C[e],
                             l = t.has(n.id);
                         return n.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL || l ? 0 : eo
@@ -17134,8 +17135,8 @@
                         renderRow: j,
                         renderSection: D,
                         renderSectionFooter: w,
-                        sectionFooterHeight: V,
-                        renderSectionHeader: K,
+                        sectionFooterHeight: K,
+                        renderSectionHeader: V,
                         sectionHeaderHeight: W
                     } = ed({
                         collapsedStickersCategories: n,
@@ -17216,13 +17217,13 @@
                                 onScroll: q,
                                 renderRow: j,
                                 renderSection: null == a ? D : void 0,
-                                renderSectionHeader: K,
+                                renderSectionHeader: V,
                                 renderSectionFooter: w,
                                 rowCount: T,
                                 rowCountBySection: v,
                                 rowHeight: s > G ? en : el,
                                 sectionHeaderHeight: W,
-                                sectionFooterHeight: V,
+                                sectionFooterHeight: K,
                                 stickyHeaders: !0,
                                 ref: A
                             }), (0, l.jsx)(P.default, {
@@ -17286,19 +17287,19 @@
                         checkSendability: H = !0
                     } = e, {
                         location: G
-                    } = (0, c.useAnalyticsContext)(), V = j + 2 * U, K = i.useMemo(() => ({
+                    } = (0, c.useAnalyticsContext)(), K = j + 2 * U, V = i.useMemo(() => ({
                         gridColumnGap: N,
-                        gridTemplateColumns: "repeat(auto-fill, ".concat(V, "px)"),
-                        height: V,
-                        paddingRight: t ? void 0 : V
-                    }), [t, N, V]), W = i.useMemo(() => ({
+                        gridTemplateColumns: "repeat(auto-fill, ".concat(K, "px)"),
+                        height: K,
+                        paddingRight: t ? void 0 : K
+                    }), [t, N, K]), W = i.useMemo(() => ({
                         width: j,
                         height: j,
                         padding: U
                     }), [U, j]);
                     return (0, l.jsx)("div", {
                         className: y.row,
-                        style: K,
+                        style: V,
                         ...null == _ ? void 0 : _(k),
                         children: P.map(e => {
                             var c;
@@ -17311,12 +17312,12 @@
                                     ref: N,
                                     tabIndex: P,
                                     onFocus: U,
-                                    ...V
+                                    ...K
                                 } = null !== (c = null == a ? void 0 : a(e.columnIndex, k)) && void 0 !== c ? c : {};
                             switch (e.type) {
                                 case E.StickerGridItemTypes.CREATE_STICKER:
                                     return (0, l.jsx)("div", {
-                                        ...V,
+                                        ...K,
                                         children: (0, l.jsxs)(u.Clickable, {
                                             "aria-label": e.name,
                                             className: o(y.createSticker, L, {
@@ -17358,7 +17359,7 @@
                                 case E.StickerGridItemTypes.STICKER: {
                                     let s = t && null != D && (0, C.isStandardSticker)(e.sticker) && !D.has(e.sticker.pack_id);
                                     return (0, i.createElement)("div", {
-                                        ...V,
+                                        ...K,
                                         key: e.sticker.id
                                     }, (0, l.jsxs)(u.Clickable, {
                                         className: o(y.sticker, L, {

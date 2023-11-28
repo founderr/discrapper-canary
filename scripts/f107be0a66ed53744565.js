@@ -9895,7 +9895,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "61f28b6612a2f659e88efce508e6d8de96bd2f20", e.substring(0, 7)),
+                    S = (e = "bce9f79fcd3d41e08909083a69f121ffea1d5189", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -9908,7 +9908,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "249282", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "249287", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
@@ -24042,7 +24042,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 OneWayToTwoWayLinkUpsell: function() {
-                    return c
+                    return S
                 }
             });
             var a = s("37983"),
@@ -24050,31 +24050,32 @@
                 l = s("77078"),
                 i = s("509802"),
                 r = s("956089"),
-                o = s("782340"),
-                d = s("102123");
-            let u = e => {
+                o = s("994428"),
+                d = s("782340"),
+                u = s("102123");
+            let c = e => {
                     let {
                         markAsDismissed: t
                     } = e;
-                    return n.useEffect(() => t, [t]), (0, a.jsx)(r.TextBadge, {
-                        className: d.newBadge,
-                        text: o.default.Messages.NEW
+                    return n.useEffect(() => t(o.ContentDismissActionType.UNKNOWN), [t]), (0, a.jsx)(r.TextBadge, {
+                        className: u.newBadge,
+                        text: d.default.Messages.NEW
                     })
                 },
-                c = e => {
+                S = e => {
                     let {
                         title: t,
                         body: s,
                         img: n,
                         newIndicatorDismissibleContent: r,
-                        onClick: c
+                        onClick: o
                     } = e;
                     return (0, a.jsxs)("div", {
-                        className: d.container,
+                        className: u.container,
                         children: [n, (0, a.jsxs)("div", {
-                            className: d.textContainer,
+                            className: u.textContainer,
                             children: [(0, a.jsxs)("div", {
-                                className: d.headerText,
+                                className: u.headerText,
                                 children: [(0, a.jsx)(i.default, {
                                     contentTypes: [r],
                                     children: e => {
@@ -24082,7 +24083,7 @@
                                             visibleContent: t,
                                             markAsDismissed: s
                                         } = e;
-                                        return t === r ? (0, a.jsx)(u, {
+                                        return t === r ? (0, a.jsx)(c, {
                                             markAsDismissed: s
                                         }) : null
                                     }
@@ -24096,9 +24097,9 @@
                             })]
                         }), (0, a.jsx)(l.Button, {
                             size: l.ButtonSizes.MEDIUM,
-                            onClick: c,
-                            className: d.reconnectButton,
-                            children: o.default.Messages.RECONNECT
+                            onClick: o,
+                            className: u.reconnectButton,
+                            children: d.default.Messages.RECONNECT
                         })]
                     })
                 }

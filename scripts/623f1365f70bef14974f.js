@@ -3688,7 +3688,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return g
                 }
             }), n("222007");
             var l = n("37983"),
@@ -3703,18 +3703,19 @@
                 f = n("217513"),
                 h = n("697218"),
                 C = n("719923"),
-                p = n("805172");
+                p = n("805172"),
+                m = n("994428");
 
-            function m(e) {
+            function E(e) {
                 return "dismissible_content_shop_for_all-".concat(e)
             }
-            var E = a.memo(function() {
+            var g = a.memo(function() {
                 return ! function() {
                     var e;
                     let t = (0, s.default)([h.default], () => h.default.getCurrentUser()),
-                        E = (0, f.default)(null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : ""),
+                        g = (0, f.default)(null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : ""),
                         {
-                            marketingEnabled: g
+                            marketingEnabled: _
                         } = (0, p.default)({
                             location: "TakeoverInteractiveModal"
                         });
@@ -3722,24 +3723,24 @@
                         var e;
                         (0, c.default)(null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : "")
                     }, [null == t ? void 0 : t.id]);
-                    let _ = g && !C.default.isPremium(t) ? [i.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_INTERACTIVE_MODAL_UPSELL] : [],
-                        [S, I] = (0, u.useDismissibleContentGroup)(_),
-                        N = (0, r.useHasAnyModalOpen)(),
-                        T = a.useRef(null);
+                    let S = _ && !C.default.isPremium(t) ? [i.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_INTERACTIVE_MODAL_UPSELL] : [],
+                        [I, N] = (0, u.useDismissibleContentGroup)(S),
+                        T = (0, r.useHasAnyModalOpen)(),
+                        A = a.useRef(null);
                     a.useEffect(() => {
-                        if (null == S) {
-                            T.current = null;
+                        if (null == I) {
+                            A.current = null;
                             return
                         }
-                        null != E && !N && T.current !== S && (! function(e) {
+                        null != g && !T && A.current !== I && (! function(e) {
                             let {
                                 dismissibleContent: t,
                                 markAsDismissed: a
                             } = e, s = d.default.isConnected();
                             if (!s) return;
                             let i = {
-                                onCloseCallback: a,
-                                modalKey: m(t)
+                                onCloseCallback: () => a(m.ContentDismissActionType.UNKNOWN),
+                                modalKey: E(t)
                             };
                             (0, o.openModalLazy)(async () => {
                                 let {
@@ -3751,12 +3752,12 @@
                                 })
                             }, i)
                         }({
-                            dismissibleContent: S,
-                            markAsDismissed: I
-                        }), T.current = S)
-                    }, [S, N, I, E]), a.useEffect(() => () => {
-                        null != S && (0, r.closeModal)(m(S))
-                    }, [S])
+                            dismissibleContent: I,
+                            markAsDismissed: N
+                        }), A.current = I)
+                    }, [I, T, N, g]), a.useEffect(() => () => {
+                        null != I && (0, r.closeModal)(E(I))
+                    }, [I])
                 }(), null
             })
         },
@@ -14985,7 +14986,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return v
+                    return M
                 }
             }), n("424973");
             var l = n("37983");
@@ -15013,37 +15014,38 @@
                 A = n("774223"),
                 L = n("962541"),
                 R = n("49111"),
-                x = n("782340");
+                x = n("994428"),
+                v = n("782340");
 
-            function v() {
+            function M() {
                 let e = (0, a.useStateFromStores)([I.default], () => I.default.getVoiceChannelId()),
                     t = (0, a.useStateFromStores)([_.default], () => _.default.getId()),
                     n = (0, a.useStateFromStores)([S.default, T.default], () => (0, E.default)(S.default, T.default)),
                     {
-                        canBroadcast: v
+                        canBroadcast: M
                     } = d.default.useExperiment({
                         location: "broadcast_button_rtc_panel_no_track"
                     }, {
                         autoTrackExposure: !1
                     }),
-                    M = (0, c.default)() && null != n,
-                    O = (0, a.useStateFromStores)([N.default], () => null != N.default.getBroadcast()),
-                    y = (0, a.useStateFromStoresArray)([g.default], () => g.default.getAllActiveStreams());
-                if (!M && !O) return null;
+                    O = (0, c.default)() && null != n,
+                    y = (0, a.useStateFromStores)([N.default], () => null != N.default.getBroadcast()),
+                    D = (0, a.useStateFromStoresArray)([g.default], () => g.default.getAllActiveStreams());
+                if (!O && !y) return null;
                 if (d.default.trackExposure({
                         location: "broadcast_button_rtc_panel"
-                    }), !v) return null;
-                let D = [];
-                M && D.push(s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP);
-                let b = () => {
+                    }), !M) return null;
+                let b = [];
+                O && b.push(s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP);
+                let j = () => {
                         o.default.trackWithMetadata(R.AnalyticEvents.BROADCAST_START_BUTTON_HOVERED, {
                             game_id: null == n ? void 0 : n.id
                         })
                     },
-                    j = () => {
-                        if (M) {
-                            let l = y.find(e => e.ownerId === t);
-                            null == l ? (0, C.openBroadcastingPrivacySettingsModal)(x.default.Messages.START_BROADCASTING, x.default.Messages.START_BROADCASTING_CTA, () => {
+                    G = () => {
+                        if (O) {
+                            let l = D.find(e => e.ownerId === t);
+                            null == l ? (0, C.openBroadcastingPrivacySettingsModal)(v.default.Messages.START_BROADCASTING, v.default.Messages.START_BROADCASTING_CTA, () => {
                                 (0, r.createBroadcastChannelOrStartStream)({
                                     pid: null == n ? void 0 : n.pid,
                                     channelId: e
@@ -15051,22 +15053,22 @@
                             }) : (0, u.startBroadcastForStream)((0, m.encodeStreamKey)(l), null == n ? void 0 : n.pid)
                         } else(0, u.stopBroadcast)()
                     },
-                    G = e => (0, l.jsx)(L.default, {
-                        tooltipText: M ? x.default.Messages.START_BROADCASTING : x.default.Messages.STOP_BROADCASTING,
+                    U = e => (0, l.jsx)(L.default, {
+                        tooltipText: O ? v.default.Messages.START_BROADCASTING : v.default.Messages.STOP_BROADCASTING,
                         onClick: () => {
-                            j(), null == e || e()
+                            G(), null == e || e(x.ContentDismissActionType.UNKNOWN)
                         },
-                        onMouseEnter: b,
-                        icon: M ? A.default : () => (0, l.jsx)(h.default, {
+                        onMouseEnter: j,
+                        icon: O ? A.default : () => (0, l.jsx)(h.default, {
                             width: 20,
                             height: 20
                         })
                     }),
-                    U = e => (0, l.jsx)(f.default, {
+                    P = e => (0, l.jsx)(f.default, {
                         markAsDismissed: e
                     });
                 return (0, l.jsx)(p.default, {
-                    contentTypes: D,
+                    contentTypes: b,
                     bypassAutoDismiss: !0,
                     children: e => {
                         let {
@@ -15076,10 +15078,10 @@
                         return t === s.DismissibleContent.BROADCASTING_BROADCASTER_TOOLTIP ? (0, l.jsx)(i.Popout, {
                             position: "top",
                             align: "center",
-                            renderPopout: () => U(n),
+                            renderPopout: () => P(n),
                             shouldShow: !0,
-                            children: () => G(n)
-                        }) : G()
+                            children: () => U(n)
+                        }) : U()
                     }
                 })
             }
