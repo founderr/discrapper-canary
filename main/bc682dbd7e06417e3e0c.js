@@ -1,684 +1,489 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["62597"], {
-        44771: function(e, t, s) {
+    ["53509"], {
+        713810: function(e, t, d) {
             "use strict";
-            s.r(t), s.d(t, {
-                default: function() {
-                    return S
-                }
-            }), s("222007");
-            var a = s("37983"),
-                i = s("884691"),
-                n = s("414456"),
-                r = s.n(n),
-                l = s("917351"),
-                d = s.n(l),
-                u = s("77078"),
-                c = s("164546"),
-                o = s("513196"),
-                T = s("42723"),
-                m = s("605475"),
-                E = s("49111"),
-                h = s("782340"),
-                I = s("279732");
-            let _ = () => [h.default.Messages.APP_ICON_PIRATE, h.default.Messages.APP_ICON_PIRATE_1, h.default.Messages.APP_ICON_PIRATE_2, h.default.Messages.APP_ICON_PIRATE_3, h.default.Messages.APP_ICON_PIRATE_4],
-                f = () => {
-                    var e;
-                    return null !== (e = d.sample(_())) && void 0 !== e ? e : h.default.Messages.APP_ICON_PIRATE
-                };
-
-            function Selection(e) {
-                let {
-                    id: t,
-                    className: s,
-                    onSelect: n,
-                    isSelected: l = !1,
-                    tabIndex: d,
-                    children: T
-                } = e, [h, _] = i.useState(m.ICONS_BY_ID[t].name), S = t === o.PremiumAppIconIds.PIRATE, N = (0, u.useRadioItem)({
-                    label: h,
-                    isSelected: l
-                });
-                return (0, a.jsx)(u.Tooltip, {
-                    text: h,
-                    onTooltipShow: () => S && _(f()),
-                    children: e => (0, a.jsxs)("div", {
-                        className: I.appIconSelectionContainer,
-                        children: [(0, a.jsx)(u.Clickable, {
-                            ...e,
-                            ...N,
-                            tabIndex: null != d ? d : N.tabIndex,
-                            className: r(I.appIconSelection, {
-                                [I.selected]: l
-                            }, s),
-                            onClick: l ? E.NOOP : () => null == n ? void 0 : n(t),
-                            children: T
-                        }), l && (0, a.jsx)(c.SelectionCircle, {})]
-                    })
-                })
-            }
-
-            function S(e) {
-                let {
-                    icon: t,
-                    isSelected: s,
-                    disabled: i,
-                    tabIndex: n,
-                    onSelect: r
-                } = e;
-                return (0, a.jsx)(Selection, {
-                    onSelect: i ? void 0 : r,
-                    isSelected: s,
-                    id: t.id,
-                    className: i ? I.disabled : void 0,
-                    tabIndex: n,
-                    children: (0, a.jsx)(T.default, {
-                        id: t.id,
-                        width: m.CUSTOM_BASE_SIZE
-                    })
-                })
-            }
-        },
-        433724: function(e, t, s) {
-            "use strict";
-            s.r(t), s.d(t, {
-                default: function() {
-                    return E
-                }
-            }), s("222007");
-            var a = s("37983");
-            s("884691");
-            var i = s("446674"),
-                n = s("77078"),
-                r = s("913144"),
-                l = s("891653"),
-                d = s("476765"),
-                u = s("805199"),
-                c = s("44771"),
-                o = s("605475"),
-                T = s("782340"),
-                m = s("143598");
-
-            function E(e) {
-                let {
-                    className: t,
-                    disabled: s,
-                    renderCTAButtons: E
-                } = e, [h, I] = (0, i.useStateFromStoresArray)([u.default], () => [u.default.getCurrentDesktopIcon(), u.default.isEditorOpen]), _ = (0, d.useUID)(), f = (0, n.useRadioGroup)({
-                    orientation: "horizontal",
-                    labelledBy: _
-                }), S = e => {
-                    r.default.dispatch({
-                        type: "APP_ICON_UPDATED",
-                        id: e
-                    })
-                };
-                return (0, a.jsx)("div", {
-                    ...f,
-                    className: m.container,
-                    children: (0, a.jsxs)("div", {
-                        className: t,
-                        children: [(0, a.jsxs)("div", {
-                            className: m.header,
-                            children: [(0, a.jsxs)("div", {
-                                className: m.headings,
-                                children: [I ? null : (0, a.jsxs)("div", {
-                                    className: m.title,
-                                    children: [(0, a.jsx)(n.Heading, {
-                                        variant: "text-md/medium",
-                                        children: T.default.Messages.APP_ICON_SETTINGS_TITLE
-                                    }), (0, a.jsx)(l.default, {
-                                        className: m.premiumIcon
-                                    })]
-                                }), (0, a.jsx)(n.Heading, {
-                                    variant: "text-sm/normal",
-                                    children: T.default.Messages.APP_ICON_SETTINGS_DESCRIPTION
-                                })]
-                            }), null == E ? void 0 : E()]
-                        }), (0, a.jsx)("div", {
-                            className: m.presets,
-                            children: o.ICONS.filter(e => {
-                                let {
-                                    isHidden: t
-                                } = e;
-                                return !0 !== t
-                            }).map((e, t) => (0, a.jsx)(c.default, {
-                                icon: e,
-                                isSelected: h === e.id,
-                                onSelect: e => S(e),
-                                disabled: s,
-                                tabIndex: 0 !== t || s ? void 0 : 0
-                            }, e.id))
-                        })]
-                    })
-                })
-            }
-        },
-        788434: function(e, t, s) {
-            "use strict";
-            s.r(t), s.d(t, {
-                openChangelog: function() {
-                    return r
-                }
-            });
-            var a = s("37983");
-            s("884691");
-            var i = s("77078"),
-                n = s("234222");
-
-            function r() {
-                let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                !(!e && (0, i.hasAnyModalOpen)()) && (0, i.openModalLazy)(async () => {
-                    let {
-                        default: e
-                    } = await s.el("170935").then(s.bind(s, "170935"));
-                    return t => (0, a.jsx)(e, {
-                        ...t
-                    })
-                }, {
-                    modalKey: n.CHANGELOG_MODAL_KEY
-                })
-            }
-        },
-        92130: function(e, t, s) {
-            "use strict";
-            s.r(t), s.d(t, {
-                default: function() {
-                    return i
-                }
-            });
-            var a = s("37983");
-            s("884691");
-            var i = e => {
-                let {
-                    fill: t,
-                    className: s
-                } = e;
-                return (0, a.jsxs)("svg", {
-                    className: s,
-                    version: "1.1",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    xmlnsXlink: "http://www.w3.org/1999/xlink",
-                    x: "0px",
-                    y: "0px",
-                    width: "24",
-                    height: "24",
-                    viewBox: "0 0 24 24",
-                    fill: t,
-                    children: [(0, a.jsx)("g", {
-                        id: "Frame_-_24px",
-                        children: (0, a.jsx)("rect", {
-                            y: "0",
-                            fill: "none",
-                            width: "24",
-                            height: "24"
-                        })
-                    }), (0, a.jsx)("g", {
-                        id: "Filled_Icons",
-                        children: (0, a.jsxs)("g", {
-                            children: [(0, a.jsx)("path", {
-                                fill: t,
-                                d: "M6.351,6.351C7.824,4.871,9.828,4,12,4c4.411,0,8,3.589,8,8h2c0-5.515-4.486-10-10-10    C9.285,2,6.779,3.089,4.938,4.938L3,3v6h6L6.351,6.351z"
-                            }), (0, a.jsx)("path", {
-                                fill: t,
-                                d: "M17.649,17.649C16.176,19.129,14.173,20,12,20c-4.411,0-8-3.589-8-8H2c0,5.515,4.486,10,10,10    c2.716,0,5.221-1.089,7.062-2.938L21,21v-6h-6L17.649,17.649z"
-                            })]
-                        })
-                    })]
-                })
-            }
-        },
-        164546: function(e, t, s) {
-            "use strict";
-            s.r(t), s.d(t, {
-                SelectionCircle: function() {
-                    return S
+            d.r(t), d.d(t, {
+                sendFeedShownAnalytics: function() {
+                    return A
                 },
-                DefaultThemeSelection: function() {
-                    return P
+                fetchGuildFeed: function() {
+                    return G
                 },
-                GradientThemeSelection: function() {
+                markGuildFeedItemAsSeen: function() {
+                    return M
+                },
+                markGuildFeedItemAsUnseen: function() {
+                    return U
+                },
+                removeItemFromGuildFeed: function() {
+                    return R
+                },
+                hideItemFromGuildFeed: function() {
+                    return L
+                },
+                fetchGuildFeedFeaturedItems: function() {
+                    return k
+                },
+                featureGuildFeedItem: function() {
                     return C
-                }
-            }), s("794252");
-            var a = s("37983");
-            s("884691");
-            var i = s("414456"),
-                n = s.n(i),
-                r = s("506838"),
-                l = s("446674"),
-                d = s("669491"),
-                u = s("2662"),
-                c = s("819855"),
-                o = s("77078"),
-                T = s("161778"),
-                m = s("578706"),
-                E = s("253539"),
-                h = s("92130"),
-                I = s("49111"),
-                _ = s("782340"),
-                f = s("823470");
-
-            function S() {
-                return (0, a.jsx)("div", {
-                    className: f.selectionCircle,
-                    children: (0, a.jsx)(m.default, {
-                        className: f.checkmarkCircle,
-                        foreground: f.checkmark,
-                        backgroundColor: d.default.unsafe_rawColors.WHITE_500.css
-                    })
-                })
-            }
-
-            function N(e) {
-                let {
-                    name: t,
-                    className: s,
-                    style: i,
-                    onSelect: r,
-                    isSelected: l = !1,
-                    tabIndex: d,
-                    children: u
-                } = e, c = (0, o.useRadioItem)({
-                    label: t,
-                    isSelected: l
-                });
-                return (0, a.jsx)(o.Tooltip, {
-                    text: t,
-                    children: e => (0, a.jsxs)("div", {
-                        className: f.themeSelectionContainer,
-                        children: [(0, a.jsx)(o.Clickable, {
-                            ...e,
-                            ...c,
-                            tabIndex: null != d ? d : c.tabIndex,
-                            className: n(f.themeSelection, {
-                                [f.selected]: l
-                            }, s),
-                            style: i,
-                            onClick: l ? I.NOOP : r,
-                            children: u
-                        }), l && (0, a.jsx)(S, {})]
-                    })
-                })
-            }
-
-            function P(e) {
-                let {
-                    theme: t,
-                    isSelected: s,
-                    onSelect: i
-                } = e, m = (0, l.useStateFromStores)([T.default], () => T.default.systemPrefersColorScheme), E = e => (0, c.isThemeLight)(e) ? d.default.unsafe_rawColors.PRIMARY_600.css : d.default.unsafe_rawColors.WHITE_500.css, S = (0, r.match)({
-                    theme: t,
-                    systemPrefersColorScheme: m
-                }).with({
-                    theme: "system",
-                    systemPrefersColorScheme: I.ThemeTypes.LIGHT
-                }, () => f.lightIcon).with({
-                    theme: I.ThemeTypes.LIGHT
-                }, () => f.lightIcon).otherwise(() => f.darkIcon), P = (0, r.match)(t).with(I.ThemeTypes.LIGHT, () => _.default.Messages.THEME_LIGHT).with(I.ThemeTypes.DARK, () => _.default.Messages.THEME_DARK).with("system", () => _.default.Messages.THEME_SYSTEM).exhaustive(), C = (0, o.useRedesignIconContext)().enabled;
-                return (0, a.jsx)(N, {
-                    onSelect: i,
-                    isSelected: s,
-                    name: P,
-                    className: n(f.defaultThemeSelection, S),
-                    children: "system" === t && (0, a.jsx)("div", {
-                        className: f.iconWrapper,
-                        children: C ? (0, a.jsx)(u.RefreshIcon, {
-                            color: E(m)
-                        }) : (0, a.jsx)(h.default, {
-                            fill: E(m)
-                        })
-                    })
-                })
-            }
-
-            function C(e) {
-                let {
-                    preset: t,
-                    isSelected: s,
-                    disabled: i,
-                    tabIndex: r,
-                    onSelect: l
-                } = e, {
-                    colors: d,
-                    angle: u,
-                    theme: o
-                } = t, T = (0, E.getLinearGradientForBackgroundGradient)({
-                    colors: d,
-                    angle: u
-                });
-                return (0, a.jsx)(N, {
-                    onSelect: i ? void 0 : l,
-                    isSelected: s,
-                    name: t.getName(),
-                    className: n([i ? f.disabled : null, (0, c.isThemeDark)(o) ? f.darkOverlay : f.lightOverlay]),
-                    style: {
-                        background: "var(--bg-overlay), ".concat(T)
-                    },
-                    tabIndex: r
-                })
-            }
-        },
-        648114: function(e, t, s) {
-            "use strict";
-            s.r(t), s.d(t, {
-                ThemeSelectionGroupType: function() {
-                    return a
                 },
-                trackClientThemeUpdated: function() {
-                    return B
+                unfeatureGuildFeedItem: function() {
+                    return w
                 },
-                default: function() {
-                    return z
-                }
-            }), s("794252"), s("222007");
-            var a, i, n = s("37983"),
-                r = s("884691"),
-                l = s("414456"),
-                d = s.n(l),
-                u = s("506838"),
-                c = s("446674"),
-                o = s("151426"),
-                T = s("819855"),
-                m = s("77078"),
-                E = s("452804"),
-                h = s("206230"),
-                I = s("812204"),
-                _ = s("685665"),
-                f = s("626301"),
-                S = s("917247"),
-                N = s("956597"),
-                P = s("891653"),
-                C = s("505093"),
-                x = s("161778"),
-                R = s("168973"),
-                v = s("491605"),
-                p = s("476765"),
-                g = s("599110"),
-                O = s("32531"),
-                A = s("714657"),
-                D = s("164546"),
-                M = s("941719"),
-                j = s("49111"),
-                y = s("646718"),
-                G = s("116319"),
-                k = s("397336"),
-                b = s("843455"),
-                w = s("782340"),
-                H = s("809404");
-            (i = a || (a = {})).EDITOR = "EDITOR", i.SETTINGS = "SETTINGS";
-            let L = Object.freeze({
-                    EDITOR: k.UserSettingsDelay.SLOW_USER_ACTION,
-                    SETTINGS: k.UserSettingsDelay.INFREQUENT_USER_ACTION
-                }),
-                U = r.createContext({}),
-                B = e => {
-                    let {
-                        isPersisted: t,
-                        themeName: s,
-                        analyticsLocations: a
-                    } = e;
-                    g.default.track(j.AnalyticEvents.CLIENT_THEME_UPDATED, {
-                        feature_name: y.AnalyticsPremiumFeatureNames.CLIENT_THEME,
-                        theme_name: s,
-                        is_persisted: t,
-                        location_stack: a
-                    })
+                unhideItemFromGuildFeed: function() {
+                    return H
                 },
-                K = e => {
-                    let {
-                        type: t,
-                        isPreview: s,
-                        isCoachmark: a
-                    } = e, i = (0, u.match)({
-                        type: t,
-                        isPreview: s,
-                        isCoachmark: a
-                    }).with({
-                        type: "EDITOR",
-                        isCoachmark: !0,
-                        isPreview: !0
-                    }, () => w.default.Messages.CLIENT_THEMES_EDITOR_PREVIEW_A_THEME_HEADER).with({
-                        type: "EDITOR",
-                        isCoachmark: !0
-                    }, () => w.default.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER).otherwise(() => w.default.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE);
-                    return (0, n.jsxs)("div", {
-                        className: H.title,
-                        children: [(0, n.jsx)(m.Heading, {
-                            "aria-label": i,
-                            variant: "text-md/medium",
-                            children: i
-                        }), (0, n.jsx)(P.default, {
-                            className: H.premiumIcon
-                        })]
-                    })
+                setFeedItemPreference: function() {
+                    return N
                 },
-                F = e => {
-                    var t, s;
-                    let {
-                        type: a,
-                        isPreview: i,
-                        isCoachmark: r
-                    } = e, l = (null === (s = (0, S.usePremiumTrialOffer)()) || void 0 === s ? void 0 : null === (t = s.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === y.PremiumSubscriptionSKUs.TIER_2;
-                    if (l && i) return null;
-                    let d = (0, u.match)({
-                        type: a,
-                        isPreview: i,
-                        isCoachmark: r
-                    }).with({
-                        type: "EDITOR",
-                        isPreview: !0
-                    }, () => w.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
-                        onPremiumClick: f.navigateToPremiumMarketingPage
-                    })).with({
-                        type: "EDITOR",
-                        isCoachmark: !0
-                    }, () => w.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_COACHMARK).with({
-                        type: "EDITOR",
-                        isPreview: !1
-                    }, () => w.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION).with({
-                        isPreview: !0
-                    }, () => w.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({
-                        onPremiumClick: f.navigateToPremiumMarketingPage
-                    })).otherwise(() => w.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
-                    return (0, n.jsx)(m.Heading, {
-                        variant: "text-sm/normal",
-                        children: d
-                    })
-                },
-                W = e => {
-                    let {
-                        type: t,
-                        children: s
-                    } = e, a = (0, p.useUID)(), i = (0, m.useRadioGroup)({
-                        orientation: "horizontal",
-                        labelledBy: a
-                    }), l = r.useMemo(() => ({
-                        type: t,
-                        delay: L[t]
-                    }), [t]);
-                    return (0, n.jsx)(U.Provider, {
-                        value: l,
-                        children: (0, n.jsx)("div", {
-                            ...i,
-                            className: H.container,
-                            children: s
-                        })
-                    })
-                };
-            W.Basic = e => {
-                let {
-                    className: t
-                } = e, {
-                    delay: s
-                } = r.useContext(U), {
-                    analyticsLocations: a
-                } = (0, _.default)(I.default.CLIENT_THEMES_THEME_SELECTOR), [i, l, u] = (0, c.useStateFromStoresArray)([x.default, R.default, A.default], () => [x.default.theme, null == A.default.gradientPreset, R.default.useSystemTheme === G.SystemThemeState.ON]), o = e => {
-                    (0, O.resetBackgroundGradientPreset)(), B({
-                        isPersisted: !0,
-                        analyticsLocations: a,
-                        themeName: "default ".concat(e)
-                    }), (0, E.saveClientTheme)({
-                        theme: e
-                    }, s)
-                };
-                return (0, n.jsxs)("section", {
-                    className: d(H.presets, t),
-                    children: [(0, n.jsx)(D.DefaultThemeSelection, {
-                        theme: b.ThemeTypes.LIGHT,
-                        isSelected: l && !u && (0, T.isThemeLight)(i),
-                        onSelect: () => o(b.ThemeTypes.LIGHT)
-                    }), (0, n.jsx)(D.DefaultThemeSelection, {
-                        theme: b.ThemeTypes.DARK,
-                        isSelected: l && !u && (0, T.isThemeDark)(i),
-                        onSelect: () => o(b.ThemeTypes.DARK)
-                    }), (0, n.jsx)(D.DefaultThemeSelection, {
-                        theme: "system",
-                        isSelected: l && u,
-                        onSelect: () => o("system")
-                    })]
-                })
-            }, W.Gradient = e => {
-                var t, a;
-                let {
-                    className: i,
-                    renderCTAButtons: l,
-                    disabled: d = !1
-                } = e, {
-                    type: u,
-                    delay: T
-                } = r.useContext(U), {
-                    analyticsLocations: m
-                } = (0, _.default)(I.default.CLIENT_THEMES_THEME_SELECTOR), [P, x, R] = (0, c.useStateFromStoresArray)([A.default], () => {
-                    var e;
-                    return [A.default.isPreview, A.default.isCoachmark, null === (e = A.default.gradientPreset) || void 0 === e ? void 0 : e.id]
-                }), [p, g] = r.useState(!1), [j, k] = r.useState(-1), b = (0, c.useStateFromStores)([h.default], () => h.default.useReducedMotion), L = (null === (a = (0, S.usePremiumTrialOffer)()) || void 0 === a ? void 0 : null === (t = a.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === y.PremiumSubscriptionSKUs.TIER_2;
-                r.useEffect(() => {
-                    (j === M.BACKGROUND_GRADIENT_PRESETS.length - 2 && "EDITOR" === u || R === o.BackgroundGradientPresetId.EASTER_EGG) && g(!0)
-                }, [j, u, R]);
-                let W = (e, t) => {
-                    if ((0, O.updateBackgroundGradientPreset)(e.id), B({
-                            isPersisted: !P,
-                            analyticsLocations: m,
-                            themeName: o.BackgroundGradientPresetId[e.id]
-                        }), P) {
-                        (0, C.setUseSystemTheme)(G.SystemThemeState.OFF);
-                        return
-                    }
-                    if ((0, E.saveClientTheme)({
-                            backgroundGradientPresetId: e.id,
-                            theme: e.theme
-                        }, T), null != t) {
-                        if (p && g(!1), t <= j || 0 === t) {
-                            k(0);
-                            return
-                        }
-                        k(e => e + 1)
-                    }
-                };
-                return (0, n.jsxs)("section", {
-                    className: i,
-                    children: ["EDITOR" === u && P && L ? (0, n.jsx)(N.default, {
-                        type: y.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
-                        subscriptionTier: y.PremiumSubscriptionSKUs.TIER_2,
-                        children: w.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
-                            onPremiumClick: f.navigateToPremiumMarketingPage
-                        })
-                    }) : (0, n.jsxs)("div", {
-                        className: H.header,
-                        children: [(0, n.jsxs)("div", {
-                            className: H.headings,
-                            children: [(0, n.jsx)(K, {
-                                type: u,
-                                isPreview: P,
-                                isCoachmark: x
-                            }), (0, n.jsx)(F, {
-                                type: u,
-                                isPreview: P,
-                                isCoachmark: x
-                            })]
-                        }), null == l ? void 0 : l()]
-                    }), (0, n.jsxs)("div", {
-                        className: H.presets,
-                        children: [M.BACKGROUND_GRADIENT_PRESETS.filter(e => {
-                            let {
-                                id: t
-                            } = e;
-                            return t !== o.BackgroundGradientPresetId.EASTER_EGG
-                        }).map((e, t) => (0, n.jsx)(D.GradientThemeSelection, {
-                            preset: e,
-                            isSelected: R === e.id,
-                            onSelect: () => W(e, t),
-                            disabled: d,
-                            tabIndex: 0 !== t || d ? void 0 : 0
-                        }, e.id)), (() => {
-                            if (!p) return null;
-                            let e = M.BACKGROUND_GRADIENT_PRESETS_MAP[o.BackgroundGradientPresetId.EASTER_EGG];
-                            if (null == e) return null;
-                            async function t() {
-                                let {
-                                    default: e
-                                } = await s.el("922510").then(s.t.bind(s, "922510", 19));
-                                return e
-                            }
-                            return (0, n.jsxs)("div", {
-                                className: H.easterEggSelection,
-                                children: [(0, n.jsx)(D.GradientThemeSelection, {
-                                    preset: e,
-                                    isSelected: R === o.BackgroundGradientPresetId.EASTER_EGG,
-                                    onSelect: () => W(e)
-                                }), (0, n.jsx)(v.default, {
-                                    importData: t,
-                                    shouldAnimate: !b,
-                                    className: H.sparkles
-                                })]
-                            })
-                        })()]
-                    })]
-                })
-            };
-            var z = W
-        },
-        87469: function(e, t, s) {
-            "use strict";
-            s.r(t), s.d(t, {
-                default: function() {
-                    return a
+                trackFeedItemInteracted: function() {
+                    return O
                 }
             });
-            var a = (0, s("862205").createExperiment)({
-                kind: "user",
-                id: "2022-08_amoled_mode_web",
-                label: "Enabled AMOLED Mode on Web",
-                defaultConfig: {
-                    enabledAMOLEDThemeOption: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enabled AMOLED Theme Option",
-                    config: {
-                        enabledAMOLEDThemeOption: !0
+            var n = d("917351"),
+                i = d.n(n),
+                a = d("611221"),
+                l = d("801110"),
+                u = d("885167"),
+                s = d("872717"),
+                r = d("913144"),
+                E = d("599417"),
+                o = d("887446"),
+                c = d("27618"),
+                f = d("938237"),
+                _ = d("395118"),
+                I = d("599110"),
+                F = d("449008"),
+                h = d("350928"),
+                m = d("185014"),
+                p = d("60036"),
+                D = d("145708"),
+                S = d("2804"),
+                y = d("515631"),
+                T = d("49111");
+
+            function g(e, t) {
+                return t.map(t => m.default.getItem(e, t)).filter(e => {
+                    let t = null == e ? null : (0, p.default)(e);
+                    return null != t && !c.default.isBlocked(t.author.id)
+                }).filter(F.isNotNullish).map(e => (0, S.default)(e))
+            }
+
+            function A(e) {
+                I.default.track(T.AnalyticEvents.FEED_SHOWN, {
+                    guild_id: e,
+                    load_id: m.default.getLoadId(e),
+                    home_session_id: o.default.getHomeSessionId(e)
+                })
+            }
+            async function G(e) {
+                let {
+                    guildId: t,
+                    refresh: d,
+                    flushSeenItems: n,
+                    highlightedItemData: l,
+                    limit: u
+                } = e, c = Date.now(), f = d ? 0 : m.default.getPaginationStatus(t).offset, _ = null == f || 0 === f;
+                r.default.dispatch({
+                    type: _ ? "GUILD_FEED_FETCH_FRESH_START" : "GUILD_FEED_FETCH_PAGE_START",
+                    guildId: t
+                });
+                let F = o.default.getHomeSessionId(t);
+                try {
+                    await (null == n ? void 0 : n());
+                    let e = {
+                            limit: null != u ? u : m.GUILD_FEED_FETCH_LIMIT,
+                            offset: _ ? 0 : f,
+                            load_id: _ ? null : m.default.getLoadId(t),
+                            ...null != l && _ && {
+                                highlight_channel_id: l.channelId,
+                                highlight_message_id: l.messageId
+                            }
+                        },
+                        d = await s.default.get({
+                            url: T.Endpoints.GUILD_FEED(t),
+                            query: e
+                        }),
+                        E = d.body,
+                        h = m.default.getFeedItemSection(t, y.GuildFeedSectionTypes.READ).map(e => e.id),
+                        p = m.default.getFeedItemSection(t, y.GuildFeedSectionTypes.UNREAD).map(e => e.id),
+                        D = m.default.getFeedItemsForGuild(t).filter(e => e.featured).map(e => e.id);
+                    await r.default.dispatch({
+                        type: "GUILD_FEED_FETCH_SUCCESS",
+                        guildId: t,
+                        data: E,
+                        fresh: _
+                    });
+                    let S = m.default.getFeedItemSection(t, y.GuildFeedSectionTypes.READ).map(e => e.id),
+                        A = m.default.getFeedItemSection(t, y.GuildFeedSectionTypes.UNREAD).map(e => e.id),
+                        G = m.default.getFeedItemsForGuild(t).filter(e => e.featured).map(e => e.id),
+                        M = Date.now() - c,
+                        U = (null != f ? f : 0) / m.GUILD_FEED_FETCH_LIMIT;
+                    ! function(e) {
+                        let {
+                            guildId: t,
+                            loadTime: d,
+                            startHomeSessionId: n,
+                            page: i,
+                            newUnreadFeedItemIds: a,
+                            newReadFeedItemIds: l,
+                            newFeaturedItemIds: u
+                        } = e;
+                        I.default.track(T.AnalyticEvents.FEED_LOADED, {
+                            guild_id: t,
+                            load_id: m.default.getLoadId(t),
+                            unread_feed_item_ids: g(t, a),
+                            read_feed_item_ids: g(t, l),
+                            load_time_millis: d,
+                            home_session_id: o.default.getHomeSessionId(t),
+                            start_home_session_id: n,
+                            featured_item_ids: g(t, u),
+                            page: i
+                        })
+                    }({
+                        guildId: t,
+                        loadTime: M,
+                        startHomeSessionId: F,
+                        page: U,
+                        newReadFeedItemIds: i.difference(S, h),
+                        newUnreadFeedItemIds: i.difference(A, p),
+                        newFeaturedItemIds: i.difference(G, D)
+                    }), ! function(e, t) {
+                        let d = t.results.items.filter(e => e.type === a.GuildFeedItemTypes.FORUM_POST);
+                        d.length > 0 && r.default.dispatch({
+                            type: "LOAD_THREADS_SUCCESS",
+                            threads: d.map(e => e.thread),
+                            firstMessages: d.map(e => e.message),
+                            guildId: e
+                        })
+                    }(t, E)
+                } catch (e) {
+                    throw r.default.dispatch({
+                        type: "GUILD_FEED_FETCH_FAILURE",
+                        guildId: t,
+                        error: new E.default(e)
+                    }), e
+                }
+            }
+
+            function M(e, t, d) {
+                (0, f.markAnalyticsFeedItemSeen)((0, h.getGuildFeedSeenManagerId)(e), t, d)
+            }
+
+            function U(e, t, d) {
+                (0, f.markAnalyticsFeedItemUnseen)((0, h.getGuildFeedSeenManagerId)(e), t, d)
+            }
+            async function R(e) {
+                let t = (0, p.default)(e),
+                    d = await s.default.post({
+                        url: T.Endpoints.GUILD_FEED_MESSAGE_REMOVE(t.channel_id, t.id)
+                    });
+                return r.default.dispatch({
+                    type: "GUILD_FEED_ITEM_REMOVE",
+                    item: e
+                }), d
+            }
+            async function L(e, t) {
+                let d = (0, p.default)(e),
+                    n = await s.default.put({
+                        url: T.Endpoints.GUILD_FEED_MESSAGE_SET_PREFERENCE(t),
+                        body: {
+                            channel_id: d.channel_id,
+                            message_id: d.id,
+                            load_id: m.default.getLoadId(t),
+                            preference: u.GuildFeedPreferenceOptions.HIDDEN,
+                            entity_type: l.GuildFeedPreferenceEntityTypes.MESSAGE
+                        }
+                    });
+                return r.default.dispatch({
+                    type: "GUILD_FEED_ITEM_HIDE",
+                    item: e
+                }), n
+            }
+            async function k(e) {
+                try {
+                    let t = await s.default.get({
+                            url: T.Endpoints.GUILD_FEED_FEATURE_ITEM(e)
+                        }),
+                        d = t.body;
+                    r.default.dispatch({
+                        type: "GUILD_FEED_FEATURED_ITEMS_FETCH_SUCCESS",
+                        guildId: e,
+                        data: d
+                    })
+                } catch (t) {
+                    throw r.default.dispatch({
+                        type: "GUILD_FEED_FEATURED_ITEMS_FETCH_FAILURE",
+                        guildId: e,
+                        error: new E.default(t)
+                    }), t
+                }
+            }
+            async function C(e, t, d) {
+                let {
+                    entityId: n,
+                    details: i,
+                    guildId: a,
+                    entityType: l
+                } = (0, D.default)(e);
+                try {
+                    let u = await s.default.put({
+                        url: T.Endpoints.GUILD_FEED_FEATURE_ITEM(a),
+                        body: {
+                            entity_id: n,
+                            entity_type: l,
+                            expires_at: t,
+                            details: i
+                        }
+                    });
+                    return r.default.dispatch({
+                        type: "GUILD_FEED_FEATURE_ITEM",
+                        featureableItem: e,
+                        options: d
+                    }), u
+                } catch (e) {
+                    throw e
+                }
+            }
+            async function w(e) {
+                let {
+                    entityId: t,
+                    guildId: d,
+                    entityType: n
+                } = (0, D.default)(e);
+                try {
+                    let i = await s.default.delete({
+                        url: T.Endpoints.GUILD_FEED_FEATURE_ITEM(d),
+                        body: {
+                            entity_id: t,
+                            entity_type: n
+                        }
+                    });
+                    return r.default.dispatch({
+                        type: "GUILD_FEED_UNFEATURE_ITEM",
+                        featureableItem: e
+                    }), i
+                } catch (e) {
+                    throw e
+                }
+            }
+            async function H(e, t) {
+                let d = (0, p.default)(e),
+                    n = await s.default.delete({
+                        url: T.Endpoints.GUILD_FEED_MESSAGE_SET_PREFERENCE(t),
+                        body: {
+                            channel_id: d.channel_id,
+                            message_id: d.id,
+                            load_id: m.default.getLoadId(t),
+                            entity_type: l.GuildFeedPreferenceEntityTypes.MESSAGE
+                        }
+                    });
+                return r.default.dispatch({
+                    type: "GUILD_FEED_ITEM_UNHIDE",
+                    item: e
+                }), n
+            }
+            async function N(e, t) {
+                let d = await s.default.put({
+                    url: T.Endpoints.GUILD_FEED_MESSAGE_SET_PREFERENCE(e),
+                    body: {
+                        ...t,
+                        load_id: m.default.getLoadId(e),
+                        preference: u.GuildFeedPreferenceOptions.DEMOTED
                     }
-                }]
+                });
+                return d
+            }
+
+            function O(e) {
+                let t = e.guild_id;
+                null != t && ! function(e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.ForceFlushType.IMMEDIATE_WITH_COOLDOWN;
+                    (0, f.flushAnalyticsFeedItems)((0, h.getGuildFeedSeenManagerId)(e), t)
+                }(t), I.default.track(T.AnalyticEvents.FEED_ITEM_INTERACTED, e)
+            }
+        },
+        350928: function(e, t, d) {
+            "use strict";
+            d.r(t), d.d(t, {
+                getGuildFeedSeenManagerId: function() {
+                    return F
+                },
+                default: function() {
+                    return n
+                }
+            }), d("222007"), d("424973");
+            var n, i = d("872717"),
+                a = d("913144"),
+                l = d("263024"),
+                u = d("660478"),
+                s = d("395118"),
+                r = d("599110"),
+                E = d("449008"),
+                o = d("299039"),
+                c = d("645600"),
+                f = d("185014"),
+                _ = d("60036"),
+                I = d("49111");
+
+            function F(e) {
+                return "".concat(s.AnalyticsFeedTypes.GUILD_HOME, "_").concat(e)
+            }
+            n = class extends s.AnalyticsFeedItemSeenManager {
+                constructor({
+                    loadId: e,
+                    homeSessionId: t,
+                    guildId: d,
+                    windowId: n,
+                    isPaused: s
+                }) {
+                    super({
+                        windowId: n,
+                        isPaused: s,
+                        id: F(d)
+                    }), this.onInitialize = () => {
+                        a.default.subscribe("GUILD_FEED_ITEM_READ_ACK", this.handleReadAck)
+                    }, this.onTerminate = () => {
+                        a.default.unsubscribe("GUILD_FEED_ITEM_READ_ACK", this.handleReadAck)
+                    }, this.onFeedItemSeen = (e, t) => {
+                        t && (this.pendingReadAcks[e] = setTimeout(() => {
+                            this.ackItemAsRead(e)
+                        }, 3e3), this.feedItemSnapshots[e] = f.default.getItem(this.guildId, e))
+                    }, this.onFeedItemUnseen = (e, t) => {
+                        if (e in this.pendingReadAcks) {
+                            let t = this.pendingReadAcks[e];
+                            clearTimeout(t), delete this.pendingReadAcks[e]
+                        }
+                    }, this.createFlushSeenItemsFunction = e => {
+                        let t = this.guildId,
+                            d = this.loadId,
+                            n = this.trackedFeedItems,
+                            a = this.homeSessionId,
+                            l = this.feedItemSnapshots;
+                        if (null == d || null == a) return;
+                        let u = {
+                            guildId: t,
+                            loadId: d,
+                            trackedFeedItems: n,
+                            feedItemSnapshots: l,
+                            isForcedFlush: null != e,
+                            homeSessionId: a
+                        };
+                        return () => (function(e) {
+                            let {
+                                guildId: t,
+                                loadId: d,
+                                homeSessionId: n,
+                                trackedFeedItems: a,
+                                feedItemSnapshots: l,
+                                isForcedFlush: u
+                            } = e, s = {};
+                            for (let e of Object.keys(a)) {
+                                let t = a[e],
+                                    d = t.computeSeenTimeDestructive(u);
+                                d > 0 && (s[e] = {
+                                    additionalSeenTimeMillis: d
+                                })
+                            }
+                            if (0 === Object.keys(s).length) return Promise.resolve();
+                            let o = [],
+                                c = [],
+                                f = [];
+                            for (let e of Object.keys(s)) o.push(e), c.push(s[e].additionalSeenTimeMillis), s[e].additionalSeenTimeMillis >= 1e3 && f.push(e);
+                            r.default.track(I.AnalyticEvents.FEED_ITEM_SEEN_BATCH, {
+                                guild_id: t,
+                                load_id: d,
+                                feed_item_ids: o,
+                                additional_seen_time_millis: c,
+                                home_session_id: n
+                            });
+                            let F = f.map(e => l[e]).filter(E.isNotNullish).map(_.default).map(e => e.id);
+                            return 0 === F.length ? Promise.resolve() : i.default.post({
+                                url: I.Endpoints.GUILD_FEED_MARK_SEEN(t),
+                                body: {
+                                    item_ids: F
+                                }
+                            })
+                        })(u)
+                    }, this.ackItemAsRead = e => {
+                        delete this.pendingReadAcks[e], !c.default.isItemSeen(this.guildId, e) && a.default.dispatch({
+                            type: "GUILD_FEED_ITEM_READ_ACK",
+                            guildId: this.guildId,
+                            itemId: e
+                        })
+                    }, this.handleReadAck = async e => {
+                        let {
+                            guildId: t,
+                            itemId: d
+                        } = e;
+                        if (this.guildId !== t) return;
+                        let n = f.default.getItem(t, d);
+                        if (null == n || !n.unreadMention || n.seen) return;
+                        let a = (0, _.default)(n),
+                            s = a.channel_id;
+                        await l.default.unarchiveThreadIfNecessary(s);
+                        let r = u.default.getMentionCount(s),
+                            E = u.default.ackMessageId(s);
+                        if (null == E) return;
+                        let c = 0;
+                        for (let e of (0, _.getAllMessagesFromFeedItem)(n)) e.mentioned && o.default.compare(e.id, E) > 0 && (c += 1);
+                        0 !== c && i.default.post({
+                            url: I.Endpoints.MESSAGE_ACK(s, E),
+                            body: {
+                                manual: !0,
+                                mention_count: r - c
+                            }
+                        })
+                    }, this.guildId = d, this.loadId = e, this.homeSessionId = t, this.pendingReadAcks = {}, this.feedItemSnapshots = {}, this.lastFlushTimeMillis = Date.now()
+                }
+            }
+        },
+        645600: function(e, t, d) {
+            "use strict";
+            d.r(t), d.d(t, {
+                default: function() {
+                    return u
+                }
+            }), d("222007");
+            var n = d("446674"),
+                i = d("913144");
+            let a = {};
+            class l extends n.default.Store {
+                isItemSeen(e, t) {
+                    let d = a[e];
+                    return null != d && d.has(t)
+                }
+            }
+            l.displayName = "GuildFeedSeenStore";
+            var u = new l(i.default, {
+                GUILD_FEED_ITEM_READ_ACK: function(e) {
+                    let {
+                        guildId: t,
+                        itemId: d
+                    } = e;
+                    null == a[t] && (a[t] = new Set);
+                    let n = a[t];
+                    n.add(d)
+                }
             })
         },
-        505093: function(e, t, s) {
+        801110: function(e, t, d) {
             "use strict";
-            s.r(t), s.d(t, {
-                setUseSystemTheme: function() {
-                    return i
+            var n, i;
+            d.r(t), d.d(t, {
+                GuildFeedPreferenceEntityTypes: function() {
+                    return n
                 }
-            });
-            var a = s("913144");
-
-            function i(e) {
-                a.default.dispatch({
-                    type: "UNSYNCED_USER_SETTINGS_UPDATE",
-                    settings: {
-                        useSystemTheme: e
-                    }
-                })
-            }
+            }), d("222007"), (i = n || (n = {})).MESSAGE = "message", i.CHANNEL = "channel", i.USER = "user"
+        },
+        885167: function(e, t, d) {
+            "use strict";
+            var n, i;
+            d.r(t), d.d(t, {
+                GuildFeedPreferenceOptions: function() {
+                    return n
+                }
+            }), d("222007"), (i = n || (n = {}))[i.HIDDEN = 1] = "HIDDEN", i[i.DEMOTED = 2] = "DEMOTED"
         }
     }
 ]);
