@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["90438"], {
+    ["43746"], {
         608905: function(e, t, s) {
             "use strict";
             e.exports = s.p + "66ada300576adf0f4e4f.svg"
@@ -91,6 +91,14 @@
         481701: function(e, t, s) {
             "use strict";
             e.exports = s.p + "de0896237eebfc178931.png"
+        },
+        525109: function(e, t, s) {
+            "use strict";
+            e.exports = s.p + "e6f492cf566b4871bb1c.png"
+        },
+        125001: function(e, t, s) {
+            "use strict";
+            e.exports = s.p + "db36f11a654acc0fdc8c.jpg"
         },
         280414: function(e, t, s) {
             "use strict";
@@ -1419,8 +1427,8 @@
                 M = s("661579"),
                 L = s("539938"),
                 x = s("393414"),
-                U = s("915639"),
-                v = s("161778"),
+                v = s("915639"),
+                U = s("161778"),
                 D = s("305961"),
                 b = s("957255"),
                 j = s("71010"),
@@ -2022,7 +2030,7 @@
                     }
                 }
             }
-            var eR = (0, m.default)((0, P.default)(c.default.connectStores([y.default, v.default, U.default, F.default, k.default, G.default, H.default, g.default, C.default, j.default, D.default, B.default], e => {
+            var eR = (0, m.default)((0, P.default)(c.default.connectStores([y.default, U.default, v.default, F.default, k.default, G.default, H.default, g.default, C.default, j.default, D.default, B.default], e => {
                 let t, s, a, {
                     inputSkuId: n,
                     applicationId: r,
@@ -2054,8 +2062,8 @@
                     }),
                     isInTestMode: null != r && o,
                     matureAgree: y.default.didMatureAgree,
-                    theme: v.default.theme,
-                    locale: U.default.locale,
+                    theme: U.default.theme,
+                    locale: v.default.locale,
                     guild: null != u ? D.default.getGuild(u.getGuildId()) : null
                 }
             })(eS)))
@@ -2194,8 +2202,8 @@
                 M = s("767982"),
                 L = s("503278"),
                 x = s("224860"),
-                U = s("206100"),
-                v = s("886680"),
+                v = s("206100"),
+                U = s("886680"),
                 D = s("49111"),
                 b = s("646718"),
                 j = s("782340"),
@@ -2389,7 +2397,7 @@
                             children: [(0, a.jsx)("div", {
                                 className: y.actionText,
                                 children: this.getActionText()
-                            }), (0, a.jsx)(U.OperatingSystemSection, {
+                            }), (0, a.jsx)(v.OperatingSystemSection, {
                                 systems: e.supportedOperatingSystems
                             })]
                         }), this.renderPrice(), !0 !== r || !u || d ? (0, a.jsxs)(n.Fragment, {
@@ -2447,7 +2455,7 @@
                             children: [this.renderAlternativeSkus(), this.renderBody()]
                         }), null == t.entitlementBranchId ? (0, a.jsx)("div", {
                             className: y.bodySection,
-                            children: (0, a.jsx)(v.default, {
+                            children: (0, a.jsx)(U.default, {
                                 storeListing: t,
                                 sku: s,
                                 guildId: n,
@@ -3826,7 +3834,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return g
+                    return C
                 }
             });
             var a = s("37983"),
@@ -3900,32 +3908,58 @@
                             children: A.default.Messages.COLLECTIBLES_SFA_BANNER_DESCRIPTION
                         })]
                     })]
+                }),
+                g = () => (0, a.jsxs)(a.Fragment, {
+                    children: [(0, a.jsx)("div", {
+                        className: p.artContainer,
+                        "aria-hidden": !0,
+                        role: "presentation",
+                        children: (0, a.jsx)("img", {
+                            src: s("525109"),
+                            className: p.art,
+                            alt: " "
+                        })
+                    }), (0, a.jsxs)("div", {
+                        className: p.mainColumn,
+                        children: [(0, a.jsx)(u.Heading, {
+                            variant: "heading-lg/extrabold",
+                            color: "always-white",
+                            className: p.title,
+                            children: A.default.Messages.USER_PROFILE_SETTINGS_SHOP_FOR_ALL_BANNER_HEADER
+                        }), (0, a.jsx)(u.Text, {
+                            className: p.textBody,
+                            variant: "text-sm/normal",
+                            color: "always-white",
+                            children: A.default.Messages.USER_PROFILE_SETTINGS_SHOP_FOR_ALL_BANNER_SUBHEADER
+                        })]
+                    })]
                 });
-            var g = e => {
+            var C = e => {
                 let {
                     type: t,
                     isMarketingPage: s,
                     className: r
                 } = e, o = N[t], {
                     analyticsLocations: R
-                } = (0, d.default)(o), g = "CollectiblesUpsellBanner";
+                } = (0, d.default)(o), C = "CollectiblesUpsellBanner";
                 (0, c.useCanUseProfileEffects)({
-                    location: g
+                    location: C
                 });
                 let {
-                    shopForAllEnabled: C
+                    shopForAllEnabled: O,
+                    marketingEnabled: h
                 } = (0, f.default)({
-                    location: g
-                }), O = n.useRef(null), h = (0, i.default)([_.default], () => _.default.getCurrentUser()), M = C && !I.default.canUseCollectibles(h);
+                    location: C
+                }), M = n.useRef(null), L = (0, i.default)([_.default], () => _.default.getCurrentUser()), x = O && !I.default.canUseCollectibles(L);
                 return n.useEffect(() => {
                     E.default.track(S.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                         type: t,
                         location_stack: R
                     })
                 }, [t, R]), (0, a.jsxs)("div", {
-                    ref: O,
-                    className: l(p.container, s ? p.marketingPage : p.containerDefaultMargin, M ? p.shopForAllBackgroundImage : p.falloweenBackgroundImage, r),
-                    children: [M ? (0, a.jsx)(P, {}) : (0, a.jsx)(m, {}), (0, a.jsx)(u.Button, {
+                    ref: M,
+                    className: l(p.container, s ? p.marketingPage : p.containerDefaultMargin, h ? p.shopForAllWinterBackground : x ? p.shopForAllBackgroundImage : void 0, r),
+                    children: [h ? (0, a.jsx)(g, {}) : x ? (0, a.jsx)(P, {}) : (0, a.jsx)(m, {}), (0, a.jsx)(u.Button, {
                         onClick: () => {
                             (0, T.openCollectiblesShop)({
                                 analyticsLocations: R,
@@ -3934,7 +3968,7 @@
                         },
                         className: p.ctaButton,
                         look: u.Button.Looks.INVERTED,
-                        children: A.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
+                        children: h ? A.default.Messages.CHECK_IT_OUT : A.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
                     })]
                 })
             }
@@ -4611,8 +4645,8 @@
                 M = s("309920"),
                 L = s("578770"),
                 x = s("761708"),
-                U = s("224456"),
-                v = s("656564"),
+                v = s("224456"),
+                U = s("656564"),
                 D = s("124989"),
                 b = s("14528"),
                 j = s("443817"),
@@ -4677,7 +4711,7 @@
                         longerMessages: {
                             title: c.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_DESCRIPTION,
-                            imageSource: B(s, U, v),
+                            imageSource: B(s, v, U),
                             imageClassName: t.longerMessagesImage
                         },
                         moreGuilds: {
@@ -4893,15 +4927,15 @@
                 M = s("908173"),
                 L = s("930767"),
                 x = s("398683"),
-                U = s("816571"),
-                v = s("114244"),
+                v = s("816571"),
+                U = s("114244"),
                 D = s("991119");
             let b = new Map([
                 ["BG", l],
                 ["CZ", o],
                 ["HU", S],
                 ["RO", x],
-                ["SE", U],
+                ["SE", v],
                 ["CY", u],
                 ["EE", c],
                 ["IS", A],
@@ -4912,7 +4946,7 @@
                 ["LU", P],
                 ["MT", C],
                 ["SK", D],
-                ["SI", v],
+                ["SI", U],
                 ["GR", T],
                 ["FI", E],
                 ["PT", L],
@@ -5117,8 +5151,8 @@
                 M = s("781084"),
                 L = s("959905"),
                 x = s("154889"),
-                U = s("917247"),
-                v = s("254893"),
+                v = s("917247"),
+                U = s("254893"),
                 D = s("840326"),
                 b = s("646718"),
                 j = s("49111"),
@@ -5132,7 +5166,7 @@
                         analyticsLocations: G
                     } = (0, f.default)(T.default.PREMIUM_MARKETING), {
                         enabled: k
-                    } = (0, h.default)(), H = (0, i.useStateFromStores)([m.default], () => m.default.hasFetchedSubscriptions()), F = (0, i.useStateFromStores)([N.default], () => N.default.getCurrentUser()), K = (0, U.usePremiumTrialOffer)(), w = (0, x.usePremiumDiscountOffer)(), W = (0, R.useSubscriptionPlansLoaded)(), [V, Y] = n.useState(!0), z = n.useRef(0), Q = (0, g.isPremiumExactly)(F, b.PremiumTypes.TIER_2), X = (0, L.useLocalizedPromoQuery)(), Z = null == X ? void 0 : X.countryCode;
+                    } = (0, h.default)(), H = (0, i.useStateFromStores)([m.default], () => m.default.hasFetchedSubscriptions()), F = (0, i.useStateFromStores)([N.default], () => N.default.getCurrentUser()), K = (0, v.usePremiumTrialOffer)(), w = (0, x.usePremiumDiscountOffer)(), W = (0, R.useSubscriptionPlansLoaded)(), [V, Y] = n.useState(!0), z = n.useRef(0), Q = (0, g.isPremiumExactly)(F, b.PremiumTypes.TIER_2), X = (0, L.useLocalizedPromoQuery)(), Z = null == X ? void 0 : X.countryCode;
                     n.useEffect(() => {
                         d.default.wait(async () => {
                             let e = Date.now();
@@ -5174,7 +5208,7 @@
                         })
                     }) : H && W && !V ? (0, a.jsx)(r, {
                         children: (0, a.jsxs)(a.Fragment, {
-                            children: [(0, a.jsx)(v.default, {
+                            children: [(0, a.jsx)(U.default, {
                                 entrypoint: t
                             }), (0, a.jsx)(u.default, {
                                 onChange: e => {
@@ -5835,8 +5869,8 @@
                     } = e, T = (0, u.default)([d.default], () => d.default.useReducedMotion), [f, S] = n.useState(!1), [p, N] = n.useState(!1), h = (0, A.default)(), [M] = (0, _.useDangerouslyPeekDismissibleContents)(null != r && s ? [r] : []), {
                         easterEggLevel: L,
                         isEasterEggTriggered: x,
-                        onHover: U,
-                        onUnhover: v
+                        onHover: v,
+                        onUnhover: U
                     } = (0, R.default)(5), D = (0, i.debounce)(() => {
                         E.default.track(m.AnalyticEvents.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                             card_type: (0, i.snakeCase)(t)
@@ -5855,10 +5889,10 @@
                         className: l(g.flipCardContainer, {
                             [g.forceShadow]: I
                         }),
-                        onMouseEnter: U,
-                        onFocus: U,
-                        onMouseLeave: v,
-                        onBlur: v,
+                        onMouseEnter: v,
+                        onFocus: v,
+                        onMouseLeave: U,
+                        onBlur: U,
                         children: (0, a.jsxs)("div", {
                             className: l(g.flipCard, {
                                 [g.partialFlipCard]: !x,
@@ -6277,8 +6311,8 @@
                 M = s("400307"),
                 L = s("218435"),
                 x = s("881155"),
-                U = s("646718"),
-                v = s("49111"),
+                v = s("646718"),
+                U = s("49111"),
                 D = s("782340"),
                 b = s("992250"),
                 j = s("640754"),
@@ -6308,7 +6342,7 @@
                             premiumType: s
                         } = e,
                         n = (0, _.default)();
-                    t = s === U.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(n) ? j : y : (0, u.isThemeDark)(n) ? B : G;
+                    t = s === v.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(n) ? j : y : (0, u.isThemeDark)(n) ? B : G;
                     let r = (0, P.getPremiumTypeDisplayName)(s);
                     return (0, a.jsx)("img", {
                         src: t,
@@ -6426,7 +6460,7 @@
                         headingOverride: m,
                         hidePill: j = !1,
                         selectedPlanColumnClassName: y,
-                        selectedPlanTier: B = U.PremiumTypes.TIER_2
+                        selectedPlanTier: B = v.PremiumTypes.TIER_2
                     } = e,
                     {
                         AnalyticsLocationProvider: G
@@ -6450,10 +6484,10 @@
                     marketingEnabled: $
                 } = (0, f.default)({
                     location: J
-                }), ee = (0, _.default)(), et = (0, u.isThemeLight)(ee), es = (0, i.useStateFromStores)([A.default], () => A.default.getCurrentUser()), ea = (0, P.isPremiumExactly)(es, U.PremiumTypes.TIER_2), en = (0, O.usePremiumTrialOffer)(), er = null == en ? void 0 : null === (t = en.subscription_trial) || void 0 === t ? void 0 : t.sku_id, el = (0, C.useCurrentPremiumTrialTier)(), ei = (0, h.useIsEligibleForBogoPromotion)();
+                }), ee = (0, _.default)(), et = (0, u.isThemeLight)(ee), es = (0, i.useStateFromStores)([A.default], () => A.default.getCurrentUser()), ea = (0, P.isPremiumExactly)(es, v.PremiumTypes.TIER_2), en = (0, O.usePremiumTrialOffer)(), er = null == en ? void 0 : null === (t = en.subscription_trial) || void 0 === t ? void 0 : t.sku_id, el = (0, C.useCurrentPremiumTrialTier)(), ei = (0, h.useIsEligibleForBogoPromotion)();
                 if (!z || !Q) return null;
-                let eu = P.default.getDefaultPrice(U.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-                    eo = P.default.getDefaultPrice(U.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+                let eu = P.default.getDefaultPrice(v.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+                    eo = P.default.getDefaultPrice(v.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
                     ed = {
                         label: (0, a.jsx)(o.Heading, {
                             className: b.textColor,
@@ -6461,10 +6495,10 @@
                             children: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_HEADER
                         }),
                         column1: (0, a.jsx)(F, {
-                            premiumType: U.PremiumTypes.TIER_0
+                            premiumType: v.PremiumTypes.TIER_0
                         }),
                         column2: (0, a.jsx)(F, {
-                            premiumType: U.PremiumTypes.TIER_2
+                            premiumType: v.PremiumTypes.TIER_2
                         })
                     },
                     ec = [{
@@ -6473,12 +6507,12 @@
                         }),
                         column1: (0, a.jsx)(a.Fragment, {
                             children: (0, a.jsx)(w, {
-                                text: P.default.formatPriceString(eu, U.SubscriptionIntervalTypes.MONTH)
+                                text: P.default.formatPriceString(eu, v.SubscriptionIntervalTypes.MONTH)
                             })
                         }),
                         column2: (0, a.jsx)(a.Fragment, {
                             children: (0, a.jsx)(w, {
-                                text: P.default.formatPriceString(eo, U.SubscriptionIntervalTypes.MONTH)
+                                text: P.default.formatPriceString(eo, v.SubscriptionIntervalTypes.MONTH)
                             })
                         })
                     }, {
@@ -6534,10 +6568,10 @@
                             text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_UPLOAD
                         }),
                         column1: (0, a.jsx)(w, {
-                            text: (0, P.getMaxFileSizeForPremiumType)(U.PremiumTypes.TIER_0)
+                            text: (0, P.getMaxFileSizeForPremiumType)(v.PremiumTypes.TIER_0)
                         }),
                         column2: (0, a.jsx)(w, {
-                            text: (0, P.getMaxFileSizeForPremiumType)(U.PremiumTypes.TIER_2)
+                            text: (0, P.getMaxFileSizeForPremiumType)(v.PremiumTypes.TIER_2)
                         })
                     }, {
                         label: (0, a.jsx)(K, {
@@ -6552,8 +6586,8 @@
                     }, {
                         label: (0, a.jsx)(K, {
                             text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BOOSTS.format({
-                                numBoosts: U.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
-                                percentageOff: (0, g.formatPercent)(R.default.locale, U.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+                                numBoosts: v.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
+                                percentageOff: (0, g.formatPercent)(R.default.locale, v.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
                             })
                         }),
                         column1: (0, a.jsx)(W, {
@@ -6655,7 +6689,7 @@
                     }, {
                         label: (0, a.jsx)(K, {
                             text: D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_MESSAGE_LENGTH.format({
-                                maxChars: v.MAX_MESSAGE_LENGTH_PREMIUM
+                                maxChars: U.MAX_MESSAGE_LENGTH_PREMIUM
                             })
                         }),
                         column1: (0, a.jsx)(W, {
@@ -6676,38 +6710,38 @@
                 }) : ec.push({
                     label: null,
                     column1: (0, a.jsxs)(a.Fragment, {
-                        children: [er === U.PremiumSubscriptionSKUs.TIER_2 || ei ? (0, a.jsx)(x.default, {
+                        children: [er === v.PremiumSubscriptionSKUs.TIER_2 || ei ? (0, a.jsx)(x.default, {
                             className: b.button,
-                            subscriptionTier: U.PremiumSubscriptionSKUs.TIER_0,
+                            subscriptionTier: v.PremiumSubscriptionSKUs.TIER_0,
                             showIcon: !1,
                             look: o.ButtonLooks.OUTLINED,
                             color: et ? o.ButtonColors.BRAND_NEW : o.ButtonColors.WHITE,
                             buttonShineClassName: void 0
                         }) : (0, a.jsx)(x.default, {
                             className: b.button,
-                            subscriptionTier: U.PremiumSubscriptionSKUs.TIER_0,
+                            subscriptionTier: v.PremiumSubscriptionSKUs.TIER_0,
                             showIcon: !1
-                        }), el === U.PremiumTypes.TIER_2 || null != er ? null : (0, a.jsx)(L.default, {
+                        }), el === v.PremiumTypes.TIER_2 || null != er ? null : (0, a.jsx)(L.default, {
                             className: b.button,
-                            subscriptionTier: U.PremiumSubscriptionSKUs.TIER_0
+                            subscriptionTier: v.PremiumSubscriptionSKUs.TIER_0
                         })]
                     }),
                     column2: (0, a.jsxs)(a.Fragment, {
-                        children: [er === U.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(x.default, {
+                        children: [er === v.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(x.default, {
                             className: b.button,
-                            subscriptionTier: U.PremiumSubscriptionSKUs.TIER_2,
+                            subscriptionTier: v.PremiumSubscriptionSKUs.TIER_2,
                             showIcon: !1,
                             look: o.ButtonLooks.OUTLINED,
                             color: et ? o.ButtonColors.BRAND_NEW : o.ButtonColors.WHITE,
                             buttonShineClassName: void 0
                         }) : (0, a.jsx)(x.default, {
                             className: b.button,
-                            subscriptionTier: U.PremiumSubscriptionSKUs.TIER_2,
+                            subscriptionTier: v.PremiumSubscriptionSKUs.TIER_2,
                             showIcon: !1,
                             isEligibleForBogoPromotion: ei
-                        }), el === U.PremiumTypes.TIER_0 || null != er ? null : (0, a.jsx)(L.default, {
+                        }), el === v.PremiumTypes.TIER_0 || null != er ? null : (0, a.jsx)(L.default, {
                             className: b.button,
-                            subscriptionTier: U.PremiumSubscriptionSKUs.TIER_2
+                            subscriptionTier: v.PremiumSubscriptionSKUs.TIER_2
                         })]
                     }),
                     withBottomBorder: !1,
@@ -6716,7 +6750,7 @@
                 }), s = j ? null : null != er || null != el ? (0, a.jsx)(M.PremiumPillWithSparkles, {
                     text: null != er ? D.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : D.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
                     className: b.freeTrialPillWithSparkles,
-                    colorOptions: er === U.PremiumSubscriptionSKUs.TIER_0 ? et ? M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : et ? ea ? M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
+                    colorOptions: er === v.PremiumSubscriptionSKUs.TIER_0 ? et ? M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : et ? ea ? M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : M.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
                 }) : ei ? (0, a.jsx)(k, {
                     isLightTheme: et
                 }) : (0, a.jsx)(H, {}), (0, a.jsx)(G, {
@@ -6730,7 +6764,7 @@
                         }), (0, a.jsxs)("div", {
                             className: b.tableWrapper,
                             children: [(0, a.jsx)("div", {
-                                className: er === U.PremiumSubscriptionSKUs.TIER_0 || el === U.PremiumTypes.TIER_0 || B === U.PremiumTypes.TIER_0 ? l(y, b.tier0ColumnOuter) : l(y, b.tier2ColumnOuter),
+                                className: er === v.PremiumSubscriptionSKUs.TIER_0 || el === v.PremiumTypes.TIER_0 || B === v.PremiumTypes.TIER_0 ? l(y, b.tier0ColumnOuter) : l(y, b.tier2ColumnOuter),
                                 children: s
                             }), (0, a.jsxs)("table", {
                                 className: b.table,
@@ -7040,8 +7074,8 @@
                 M = s("159646"),
                 L = s("379521"),
                 x = s("958966"),
-                U = s("830648"),
-                v = s("627474"),
+                v = s("830648"),
+                U = s("627474"),
                 D = s("904871"),
                 b = s("360776"),
                 j = s("525505"),
@@ -7156,16 +7190,16 @@
                             })]
                         }), s && !en ? (0, a.jsxs)("div", {
                             className: G.whatsNewSection,
-                            children: [(0, a.jsx)(v.default, {
-                                variant: v.PerksDiscoverabilityVariants.WHATS_NEW
-                            }), er ? (0, a.jsx)(v.default, {}) : null, es ? (0, a.jsx)(D.default, {
+                            children: [(0, a.jsx)(U.default, {
+                                variant: U.PerksDiscoverabilityVariants.WHATS_NEW
+                            }), er ? (0, a.jsx)(U.default, {}) : null, es ? (0, a.jsx)(D.default, {
                                 className: G.pdSparklesTop,
                                 variant: D.SparkleVariants.TOP
                             }) : null, es ? (0, a.jsx)(D.default, {
                                 className: G.pdSparklesBottom,
                                 variant: D.SparkleVariants.BOTTOM
                             }) : null]
-                        }) : null, (0, a.jsx)(U.default, {
+                        }) : null, (0, a.jsx)(v.default, {
                             className: s ? G.perkCardsContainerSpacingFullscreen : G.perkCardsContainerSpacingSettings
                         }), (0, a.jsxs)("div", {
                             className: G.planComparisonTableContainer,
@@ -7424,8 +7458,8 @@
                 M = s("174433"),
                 L = s("62414"),
                 x = s("613697"),
-                U = s("907511"),
-                v = s("165870"),
+                v = s("907511"),
+                U = s("165870"),
                 D = s("443646");
             (a = n || (n = {})).AVATAR_DECORATIONS = "avatarDecorations", a.CLIENT_THEMES = "clientThemes", a.CLIPS = "clips", a.EARLY_ACCESS = "earlyAccess", a.ENTRANCE_SOUNDS = "entranceSounds", a.PROFILE_EFFECTS = "profileEffects", a.PROFILES = "profiles", a.REMIXING = "remixing", a.SERVER_BOOSTS = "serverBoosts", a.SPECIAL_MEMBER_PRICING = "specialMemberPricing", a.SPECIAL_SHOP_PERKS = "specialShopPerks", a.UNLIMITED_SUPER_REACTIONS = "unlimitedSuperReactions", a.UPCOMING_DROP_UNTIMED = "upcomingDropUntimed";
             var b = () => {
@@ -7572,14 +7606,14 @@
                         title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_TITLE,
                         subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_SUBTITLE,
                         description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_DESCRIPTION_SUB,
-                        perkImage: U,
+                        perkImage: v,
                         pillText: N.default.Messages.EARLY_ACCESS
                     } : {
                         name: "remixing",
                         title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_TITLE,
                         subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_SUBTITLE,
                         description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_REMIXING_DESCRIPTION_NON_SUB,
-                        perkImage: U,
+                        perkImage: v,
                         pillText: N.default.Messages.EARLY_ACCESS
                     },
                     serverBoosts: {
@@ -7603,14 +7637,14 @@
                         description: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
                         descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
                         onCtaClick: G,
-                        perkImage: v
+                        perkImage: U
                     } : {
                         name: "specialMemberPricing",
                         title: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE,
                         subtitle: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE,
                         description: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
                         isPremiumGetCta: !0,
-                        perkImage: v
+                        perkImage: U
                     },
                     specialShopPerks: n ? {
                         name: "specialShopPerks",
@@ -7619,7 +7653,7 @@
                         description: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB,
                         descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
                         onCtaClick: G,
-                        perkImage: v
+                        perkImage: U
                     } : {
                         name: "specialShopPerks",
                         title: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SPECIAL_SHOP_PERKS_TITLE,
@@ -7627,7 +7661,7 @@
                         description: N.default.Messages.Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB,
                         descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
                         onCtaClick: G,
-                        perkImage: v
+                        perkImage: U
                     },
                     unlimitedSuperReactions: n ? {
                         name: "unlimitedSuperReactions",
