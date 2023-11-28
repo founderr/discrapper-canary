@@ -1335,11 +1335,8 @@
                     return (0, s.jsxs)(n.Heading, {
                         variant: f,
                         color: "always-white",
-                        className: i.heading,
-                        children: [u, (0, s.jsx)("span", {
-                            className: r(i.price, d),
-                            children: null !== (t = null == c ? void 0 : c(C)) && void 0 !== t ? t : C
-                        })]
+                        className: r(i.heading, d),
+                        children: [u, null !== (t = null == c ? void 0 : c(C)) && void 0 !== t ? t : C]
                     })
                 }
         },

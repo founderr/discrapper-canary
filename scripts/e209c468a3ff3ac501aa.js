@@ -1456,6 +1456,46 @@
                 })
             }
         },
+        598165: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                CameraIcon: function() {
+                    return i
+                }
+            });
+            var a = n("37983");
+            n("884691");
+            var l = n("669491"),
+                s = n("75196");
+            let i = e => {
+                let {
+                    width: t = 24,
+                    height: n = 24,
+                    color: i = l.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: r = "",
+                    ...o
+                } = e;
+                return (0, a.jsxs)("svg", {
+                    ...(0, s.default)(o),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: n,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: [(0, a.jsx)("path", {
+                        fill: "string" == typeof i ? i : i.css,
+                        d: "M15 13a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z",
+                        className: r
+                    }), (0, a.jsx)("path", {
+                        fill: "string" == typeof i ? i : i.css,
+                        fillRule: "evenodd",
+                        d: "M7.17 4.658A3 3 0 0 1 9.855 3h4.292a3 3 0 0 1 2.683 1.658c.344.688.944 1.342 1.713 1.342H20a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H4a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3h1.458c.769 0 1.37-.654 1.713-1.342ZM17 13a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z",
+                        clipRule: "evenodd",
+                        className: r
+                    })]
+                })
+            }
+        },
         918703: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -6497,12 +6537,12 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return m
                 }
             });
             var a = n("37983");
             n("884691");
-            var l = n("77078"),
+            var l = n("598165"),
                 s = n("446674"),
                 i = n("386045"),
                 r = n("803725"),
@@ -6510,36 +6550,36 @@
                 u = n("981913"),
                 d = n("373469"),
                 c = n("271938"),
-                f = n("522049"),
-                h = n("191145"),
-                p = n("99795"),
-                m = n("782340");
+                f = n("191145"),
+                h = n("99795"),
+                p = n("782340");
 
-            function E(e) {
+            function m(e) {
                 let {
                     channel: t
-                } = e, n = (0, s.useStateFromStores)([h.default], () => h.default.getSelectedParticipant(t.id)), E = (null == n ? void 0 : n.type) === p.ParticipantTypes.STREAM, C = (0, s.useStateFromStores)([d.default], () => E ? d.default.getActiveStreamForStreamKey(n.id) : null), {
-                    ignoreSenderPreference: S
+                } = e, n = (0, s.useStateFromStores)([f.default], () => f.default.getSelectedParticipant(t.id)), m = (null == n ? void 0 : n.type) === h.ParticipantTypes.STREAM, E = (0, s.useStateFromStores)([d.default], () => m ? d.default.getActiveStreamForStreamKey(n.id) : null), {
+                    ignoreSenderPreference: C
                 } = o.default.useExperiment({
                     location: "ActionBarClipsButton"
                 }, {
                     autoTrackExposure: !1
                 }), {
-                    viewerClippingAllowed: g,
-                    isAtMaxSavingClipOperations: _
+                    viewerClippingAllowed: S,
+                    isAtMaxSavingClipOperations: g
                 } = (0, s.useStateFromStoresObject)([i.default], () => ({
-                    viewerClippingAllowed: null != C && (i.default.isViewerClippingAllowedForUser(C.ownerId) || S),
+                    viewerClippingAllowed: null != E && (i.default.isViewerClippingAllowedForUser(E.ownerId) || C),
                     isAtMaxSavingClipOperations: i.default.getIsAtMaxSaveClipOperations()
-                })), I = (null == C ? void 0 : C.ownerId) === c.default.getId(), T = !(I || g) || _ || null == n;
-                return (0, a.jsx)(l.TooltipContainer, {
-                    text: null == C ? m.default.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : I || g ? null : m.default.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP,
-                    children: (0, a.jsx)(u.default, {
-                        onClick: () => {
-                            !T && (I ? (0, r.saveClip)() : (0, r.saveClip)(n.id))
-                        },
-                        disabled: T,
-                        iconComponent: f.default
-                    })
+                })), _ = (null == E ? void 0 : E.ownerId) === c.default.getId(), I = !(_ || S) || g || null == n;
+                return (0, a.jsx)(u.default, {
+                    onClick: () => {
+                        !I && (_ ? (0, r.saveClip)() : (0, r.saveClip)(n.id))
+                    },
+                    disabled: I,
+                    iconComponent: e => (0, a.jsx)(l.CameraIcon, {
+                        ...e,
+                        color: "currentColor"
+                    }),
+                    label: null == E ? p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : _ || S ? g ? void 0 : p.default.Messages.CLIPS_SAVE : p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP
                 })
             }
         },
