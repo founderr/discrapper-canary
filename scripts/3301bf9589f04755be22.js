@@ -121,9 +121,9 @@
                 A = n("953109"),
                 O = n("306160"),
                 N = n("659632"),
-                R = n("719923"),
+                v = n("719923"),
                 x = n("158998"),
-                v = n("49111"),
+                R = n("49111"),
                 L = n("646718"),
                 F = n("782340"),
                 P = n("146948");
@@ -151,7 +151,7 @@
                     if (null == t) return F.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRMATION_BLURB;
                     let l = n || null != s;
                     return (e = t.interval === L.SubscriptionIntervalTypes.MONTH ? l ? a ? F.default.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : F.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_MONTHLY : F.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_MONTHLY : l ? a ? F.default.Messages.APPLICATION_STORE_SEASONAL_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : F.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_AND_MESSAGE_CONFIRM_SUBSCRIPTION_YEARLY : F.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_CONFIRM_SUBSCRIPTION_YEARLY).format({
-                        skuName: (0, R.getTierDisplayName)(t.id),
+                        skuName: (0, v.getTierDisplayName)(t.id),
                         intervalCount: t.intervalCount
                     })
                 }
@@ -210,7 +210,7 @@
                             })
                         })
                     }, this.handleInventoryClick = () => {
-                        p.default.open(v.UserSettingsSections.INVENTORY), this.props.onClose()
+                        p.default.open(R.UserSettingsSections.INVENTORY), this.props.onClose()
                     }, this.renderGiftCodeSection = () => {
                         let e;
                         let {
@@ -307,9 +307,9 @@
                 } = (0, l.useStateFromStoresObject)([h.default], () => ({
                     userAffinities: h.default.getUserAffinitiesUserIds(),
                     isLoading: h.default.getFetching()
-                })), O = Array.from(g.values()), N = (0, l.useStateFromStores)([S.default], () => S.default.getFriendIDs()), R = a.difference(N, O), v = [...O, ...R], L = (0, l.useStateFromStores)([T.default], () => T.default.filter(e => v.includes(e.id) && !e.bot), [v]), M = null == L || 0 === L.length;
+                })), O = Array.from(g.values()), N = (0, l.useStateFromStores)([S.default], () => S.default.getFriendIDs()), v = a.difference(N, O), R = [...O, ...v], L = (0, l.useStateFromStores)([T.default], () => T.default.filter(e => R.includes(e.id) && !e.bot), [R]), M = null == L || 0 === L.length;
                 if (M) return null;
-                let y = a.sortBy(L, e => v.indexOf(e.id));
+                let y = a.sortBy(L, e => R.indexOf(e.id));
                 return (0, r.jsxs)("div", {
                     className: P.giftRecipientSection,
                     children: [(0, r.jsx)(u.FormTitle, {
@@ -700,9 +700,9 @@
                 A = n("806410"),
                 O = n("923702"),
                 N = n("716120"),
-                R = n("408381"),
+                v = n("408381"),
                 x = n("57940"),
-                v = n("782340"),
+                R = n("782340"),
                 L = n("99242"),
                 F = n("53708");
             let P = e => {
@@ -739,7 +739,7 @@
                         className: L.modalInner,
                         ref: w,
                         style: null != j ? {
-                            background: (0, R.getBackgroundGradient)(j)
+                            background: (0, v.getBackgroundGradient)(j)
                         } : void 0,
                         children: [(0, r.jsxs)("div", {
                             className: L.bannerContainer,
@@ -767,13 +767,13 @@
                                 children: [(0, r.jsx)(c.Heading, {
                                     variant: "heading-lg/bold",
                                     color: "always-white",
-                                    children: v.default.Messages.COLLECTIBLES_YOU_COLLECTED.format({
+                                    children: R.default.Messages.COLLECTIBLES_YOU_COLLECTED.format({
                                         itemName: i.name
                                     })
                                 }), (0, r.jsx)(c.Text, {
                                     color: "always-white",
                                     variant: "text-sm/normal",
-                                    children: null != G ? v.default.Messages.COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION : v.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
+                                    children: null != G ? R.default.Messages.COLLECTIBLES_PROFILE_EFFECT_PERMANENT_COLLECTION : R.default.Messages.COLLECTIBLES_PERMANENT_COLLECTION
                                 })]
                             }), (0, r.jsx)(c.Button, {
                                 onClick: () => {
@@ -786,9 +786,9 @@
                                     })
                                 },
                                 style: null != D ? {
-                                    background: (0, R.getBackgroundGradient)(D, 90)
+                                    background: (0, v.getBackgroundGradient)(D, 90)
                                 } : void 0,
-                                children: v.default.Messages.COLLECTIBLES_USE_NOW
+                                children: R.default.Messages.COLLECTIBLES_USE_NOW
                             })]
                         }), (0, r.jsx)(c.ModalCloseButton, {
                             onClick: a,
@@ -837,7 +837,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return g
                 }
             }), n("222007");
             var r = n("37983");
@@ -847,17 +847,21 @@
                 a = n("265586"),
                 l = n("606292"),
                 o = n("688318"),
-                u = n("845962"),
-                d = n("697218"),
-                c = n("153160"),
-                f = n("426188"),
-                p = n("782340"),
-                E = n("416465"),
-                C = n("513002");
-            let I = e => {
+                u = n("635357"),
+                d = n("184900"),
+                c = n("845962"),
+                f = n("506885"),
+                p = n("697218"),
+                E = n("153160"),
+                C = n("426188"),
+                I = n("49111"),
+                S = n("782340"),
+                _ = n("416465"),
+                h = n("513002");
+            let T = e => {
                     let {
                         avatarDecoration: t
-                    } = e, n = (0, i.useStateFromStores)([d.default], () => d.default.getCurrentUser()), {
+                    } = e, n = (0, i.useStateFromStores)([p.default], () => p.default.getCurrentUser()), {
                         avatarDecorationSrc: a
                     } = (0, o.default)({
                         user: n,
@@ -867,62 +871,88 @@
                     return (0, r.jsx)("img", {
                         src: a,
                         alt: t.label,
-                        className: E.avatarDecoration
+                        className: _.avatarDecoration
                     })
                 },
-                S = e => {
+                m = e => {
                     var t;
                     let {
                         profileEffect: n
-                    } = e, s = (0, i.useStateFromStores)([u.default], () => u.default.getProfileEffectById(n.id)), {
+                    } = e, s = (0, i.useStateFromStores)([c.default], () => c.default.getProfileEffectById(n.id)), {
                         accessibilityLabel: a,
                         thumbnailPreviewSrc: l,
                         title: o
                     } = null !== (t = null == s ? void 0 : s.config) && void 0 !== t ? t : {};
                     return (0, r.jsxs)("div", {
-                        className: E.profileEffectContainer,
+                        className: _.profileEffectContainer,
                         children: [(0, r.jsx)("img", {
-                            src: C,
+                            src: h,
                             alt: a,
-                            className: E.profileEffectBackground
+                            className: _.profileEffectBackground
                         }), (0, r.jsx)("img", {
-                            className: E.profileEffect,
+                            className: _.profileEffect,
                             src: l,
                             alt: o
                         })]
                     })
                 };
-            var _ = e => {
+            var g = e => {
                 let {
                     selectedSkuId: t,
                     selectedSkuPricePreview: n
                 } = e, {
-                    product: i
-                } = (0, f.useFetchCollectiblesProduct)(t);
-                if (null == i || null == n) return null;
-                let [l] = i.items;
+                    product: l
+                } = (0, C.useFetchCollectiblesProduct)(t), {
+                    giftRecipient: o
+                } = (0, u.useGiftContext)(), c = (0, i.useStateFromStores)([p.default], () => p.default.getCurrentUser());
+                if (null == l || null == n) return null;
+                let [h] = l.items, g = null != o && o.id !== (null == c ? void 0 : c.id);
                 return (0, r.jsxs)("div", {
-                    children: [(0, r.jsx)(s.FormTitle, {
-                        children: p.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER
+                    children: [(0, r.jsxs)("div", {
+                        className: _.previewTitleContainer,
+                        children: [(0, r.jsx)(s.FormTitle, {
+                            className: _.previewTitle,
+                            children: S.default.Messages.COLLECTIBLES_GIFT_LABEL
+                        }), g && (0, r.jsx)(s.Popout, {
+                            preload: () => (0, f.default)(o.id, o.getAvatarURL(null, 80)),
+                            renderPopout: e => (0, r.jsx)(d.default, {
+                                ...e,
+                                user: o,
+                                pendingAvatar: o.avatar,
+                                pendingAvatarDecoration: h.type === a.CollectiblesItemType.AVATAR_DECORATION ? h : null,
+                                pendingProfileEffectID: h.type === a.CollectiblesItemType.PROFILE_EFFECT ? h.id : null,
+                                canUsePremiumCustomization: !0,
+                                onAvatarChange: I.NOOP,
+                                onBannerChange: I.NOOP,
+                                disabledInputs: !0
+                            }),
+                            align: "center",
+                            position: "right",
+                            children: e => (0, r.jsx)(s.Button, {
+                                ...e,
+                                look: s.ButtonLooks.LINK,
+                                children: S.default.Messages.COLLECTIBLES_PREVIEW_GIFT_PROFILE
+                            })
+                        }, o.id)]
                     }), (0, r.jsxs)("div", {
-                        className: E.previewContainer,
-                        children: [l.type === a.CollectiblesItemType.AVATAR_DECORATION && (0, r.jsx)(I, {
-                            avatarDecoration: l
-                        }), l.type === a.CollectiblesItemType.PROFILE_EFFECT && (0, r.jsx)(S, {
-                            profileEffect: l
+                        className: _.previewContainer,
+                        children: [h.type === a.CollectiblesItemType.AVATAR_DECORATION && (0, r.jsx)(T, {
+                            avatarDecoration: h
+                        }), h.type === a.CollectiblesItemType.PROFILE_EFFECT && (0, r.jsx)(m, {
+                            profileEffect: h
                         }), (0, r.jsxs)("div", {
-                            className: E.previewTextContainer,
+                            className: _.previewTextContainer,
                             children: [(0, r.jsx)(s.Text, {
                                 variant: "text-md/semibold",
-                                children: i.name
+                                children: l.name
                             }), (0, r.jsx)(s.Heading, {
                                 variant: "heading-sm/medium",
                                 color: "header-secondary",
-                                children: l.type === a.CollectiblesItemType.AVATAR_DECORATION ? p.default.Messages.USER_SETTINGS_AVATAR_DECORATION : l.type === a.CollectiblesItemType.PROFILE_EFFECT ? p.default.Messages.USER_SETTINGS_PROFILE_EFFECT : null
+                                children: h.type === a.CollectiblesItemType.AVATAR_DECORATION ? S.default.Messages.USER_SETTINGS_AVATAR_DECORATION : h.type === a.CollectiblesItemType.PROFILE_EFFECT ? S.default.Messages.USER_SETTINGS_PROFILE_EFFECT : null
                             })]
                         }), (0, r.jsx)(s.Text, {
                             variant: "text-md/semibold",
-                            children: (0, c.formatPrice)(n.amount, n.currency)
+                            children: (0, E.formatPrice)(n.amount, n.currency)
                         })]
                     })]
                 })
@@ -1292,9 +1322,9 @@
                     skuId: A,
                     isGift: O = !1,
                     giftRecipient: N,
-                    giftMessage: R,
+                    giftMessage: v,
                     analyticsLocations: x,
-                    returnRef: v
+                    returnRef: R
                 } = e, {
                     analyticsLocations: L,
                     AnalyticsLocationProvider: F
@@ -1325,7 +1355,7 @@
                         children: (0, r.jsx)(d.GiftContextProvider, {
                             isGift: O,
                             giftRecipient: null != N ? N : b,
-                            giftMessage: R,
+                            giftMessage: v,
                             children: (0, r.jsx)(p.PaymentModal, {
                                 onClose: t,
                                 onComplete: n,
@@ -1336,7 +1366,7 @@
                                 analyticsLocations: L,
                                 transitionState: S,
                                 renderHeader: m,
-                                returnRef: v,
+                                returnRef: R,
                                 hideShadow: !0
                             })
                         })
