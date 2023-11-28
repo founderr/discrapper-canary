@@ -8035,7 +8035,7 @@
                             userId: this.userId,
                             sessionId: this.sessionId,
                             token: t,
-                            maxSecureFramesVersion: f.default.getSupportedSecureFramesProtocolVersion(),
+                            maxSecureFramesVersion: f.default.getSupportedSecureFramesProtocolVersion(this.rtcServerId),
                             video: !1,
                             streamParameters: s
                         }), this.setState(g.RTCConnectionStates.AUTHENTICATING)
@@ -9895,7 +9895,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "bb84824403c84a9b5e295ceea0ffdb03cd6e42ec", e.substring(0, 7)),
+                    S = (e = "fdcd14eec6b32b3311cf70ef661d3ceb1fdeffff", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -9908,7 +9908,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "249005", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "249009", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
