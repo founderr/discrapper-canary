@@ -919,6 +919,7 @@
                 }), {
                     avatarDecorationSrc: q
                 } = (0, f.default)({
+                    user: t,
                     size: H,
                     animateOnHover: !X,
                     showPending: t.id === (null == U ? void 0 : U.id),
