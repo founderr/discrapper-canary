@@ -200,10 +200,6 @@
             "use strict";
             e.exports = n.p + "b873355451ce01e40054.png"
         },
-        753656: function(e, t, n) {
-            "use strict";
-            e.exports = n.p + "b5d783ec63935c198d5e.png"
-        },
         476742: function(e, t, n) {
             "use strict";
             e.exports = n.p + "82012659f3d934de21a4.png"
@@ -1750,7 +1746,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "249364"
+                        buildNumber: "249372"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -12605,48 +12601,6 @@
                     })
                 })
             }
-        },
-        580280: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return E
-                }
-            });
-            var a = n("37983");
-            n("884691");
-            var s = n("151426"),
-                l = n("812204"),
-                i = n("685665"),
-                r = n("369964"),
-                o = n("21526"),
-                u = n("782340"),
-                d = n("672651"),
-                c = n("753656"),
-                E = () => {
-                    let {
-                        analyticsLocations: e
-                    } = (0, i.default)(l.default.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP);
-                    return (0, a.jsx)(r.default, {
-                        dismissibleContent: s.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_COACHMARK,
-                        shouldUseHorizontalButtons: !0,
-                        inlineArt: !0,
-                        tryItText: u.default.Messages.AVATAR_DECORATION_SHOP_UPSELL_NITRO_CTA,
-                        onTryFeature: () => {
-                            (0, o.openCollectiblesShop)({
-                                analyticsLocations: e,
-                                analyticsSource: l.default.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP
-                            })
-                        },
-                        header: u.default.Messages.COLLECTIBLES_SFA_TITLE,
-                        body: u.default.Messages.COLLECTIBLES_SFA_COACHMARK_DESCRIPTION,
-                        art: (0, a.jsx)("img", {
-                            className: d.art,
-                            src: c,
-                            alt: ""
-                        })
-                    })
-                }
         },
         710342: function(e, t, n) {
             "use strict";
@@ -25795,7 +25749,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return eX
+                    return eq
                 }
             }), n("222007"), n("424973");
             var a = n("37983"),
@@ -25831,75 +25785,72 @@
                 x = n("14124"),
                 U = n("959646"),
                 b = n("338677"),
-                G = n("805172"),
-                j = n("580280"),
-                w = n("20606"),
-                k = n("225772"),
-                F = n("775377"),
-                B = n("10641"),
-                H = n("509802"),
-                V = n("243632"),
-                Y = n("180273"),
-                W = n("579565"),
-                K = n("473503"),
-                z = n("257426"),
-                q = n("76393"),
-                Q = n("957833"),
-                Z = n("535859"),
-                X = n("397009"),
-                J = n("337328"),
-                $ = n("167209"),
-                ee = n("691818"),
-                et = n("106457"),
-                en = n("507917"),
-                ea = n("837944"),
-                es = n("374089"),
-                el = n("189726"),
-                ei = n("666647"),
-                er = n("286914"),
-                eo = n("235004"),
-                eu = n("696770"),
-                ed = n("506885"),
-                ec = n("845579"),
-                eE = n("933422"),
-                ef = n("924658"),
-                e_ = n("244390"),
-                eC = n("271938"),
-                eh = n("42203"),
-                eI = n("778588"),
-                eT = n("42887"),
-                eS = n("945956"),
-                eN = n("101125"),
-                eA = n("102985"),
-                em = n("697218"),
-                ep = n("521012"),
-                eg = n("145131"),
-                eR = n("398288"),
-                eO = n("837899"),
-                eL = n("425190"),
-                ev = n("474571"),
-                eM = n("272339"),
-                eP = n("200639"),
-                eD = n("925877"),
-                ey = n("849467"),
-                ex = n("97347"),
-                eU = n("962541"),
-                eb = n("78574"),
-                eG = n("329858"),
-                ej = n("956089"),
-                ew = n("599110"),
-                ek = n("315102"),
-                eF = n("306160"),
-                eB = n("719923"),
-                eH = n("197881"),
-                eV = n("158998"),
-                eY = n("50885"),
-                eW = n("49111"),
-                eK = n("411511"),
-                ez = n("782340"),
-                eq = n("374555");
-            let eQ = eY.default.getEnableHardwareAcceleration() ? S.AnimatedAvatar : S.Avatar;
-            class eZ extends s.PureComponent {
+                G = n("20606"),
+                j = n("225772"),
+                w = n("775377"),
+                k = n("10641"),
+                F = n("509802"),
+                B = n("243632"),
+                H = n("180273"),
+                V = n("579565"),
+                Y = n("473503"),
+                W = n("257426"),
+                K = n("76393"),
+                z = n("957833"),
+                q = n("535859"),
+                Q = n("397009"),
+                Z = n("337328"),
+                X = n("167209"),
+                J = n("691818"),
+                $ = n("106457"),
+                ee = n("507917"),
+                et = n("837944"),
+                en = n("374089"),
+                ea = n("189726"),
+                es = n("666647"),
+                el = n("286914"),
+                ei = n("235004"),
+                er = n("696770"),
+                eo = n("506885"),
+                eu = n("845579"),
+                ed = n("933422"),
+                ec = n("924658"),
+                eE = n("244390"),
+                ef = n("271938"),
+                e_ = n("42203"),
+                eC = n("778588"),
+                eh = n("42887"),
+                eI = n("945956"),
+                eT = n("101125"),
+                eS = n("102985"),
+                eN = n("697218"),
+                eA = n("521012"),
+                em = n("145131"),
+                ep = n("398288"),
+                eg = n("837899"),
+                eR = n("425190"),
+                eO = n("474571"),
+                eL = n("272339"),
+                ev = n("200639"),
+                eM = n("925877"),
+                eP = n("849467"),
+                eD = n("97347"),
+                ey = n("962541"),
+                ex = n("78574"),
+                eU = n("329858"),
+                eb = n("956089"),
+                eG = n("599110"),
+                ej = n("315102"),
+                ew = n("306160"),
+                ek = n("197881"),
+                eF = n("158998"),
+                eB = n("50885"),
+                eH = n("49111"),
+                eV = n("411511"),
+                eY = n("782340"),
+                eW = n("374555");
+            let eK = eB.default.getEnableHardwareAcceleration() ? S.AnimatedAvatar : S.Avatar;
+            class ez extends s.PureComponent {
                 get isCopiedStreakGodlike() {
                     let {
                         copiedStreak: e
@@ -25922,7 +25873,7 @@
                 renderCopiedSuccess() {
                     let {
                         copiedStreak: e
-                    } = this.state, t = [ez.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_1, ez.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_2, ez.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_3, ez.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_4, ez.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_5, ez.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_6, ez.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_7, ez.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_8, ez.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_9, ez.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_10, ez.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_11], n = Math.min(Math.max(0, e - 1), t.length - 1);
+                    } = this.state, t = [eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_1, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_2, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_3, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_4, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_5, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_6, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_7, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_8, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_9, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_10, eY.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_11], n = Math.min(Math.max(0, e - 1), t.length - 1);
                     return (0, a.jsx)(S.Shaker, {
                         isShaking: this.isCopiedStreakGodlike,
                         children: t[n]
@@ -25940,31 +25891,31 @@
                         status: r
                     } = this.props;
                     if (null == i) return null;
-                    let o = eV.default.getName(i),
-                        u = null != r && r !== eW.StatusTypes.UNKNOWN,
+                    let o = eF.default.getName(i),
+                        u = null != r && r !== eH.StatusTypes.UNKNOWN,
                         d = null != n,
                         c = null != s;
-                    return (c || d || u && i.isPomelo()) && (e = (0, a.jsx)(eR.default, {
+                    return (c || d || u && i.isPomelo()) && (e = (0, a.jsx)(ep.default, {
                         hoverText: l,
                         forceHover: t,
-                        children: c ? (0, a.jsx)(Z.default, {
+                        children: c ? (0, a.jsx)(q.default, {
                             activity: s,
-                            iconClassName: eq.emoji,
-                            className: eq.customStatus
-                        }) : d ? (0, a.jsx)(F.default, {
+                            iconClassName: eW.emoji,
+                            className: eW.customStatus
+                        }) : d ? (0, a.jsx)(w.default, {
                             activity: n,
-                            emojiClassName: eq.emoji,
-                            className: eq.customStatus
-                        }) : eV.default.humanizeStatus(r)
+                            emojiClassName: eW.emoji,
+                            className: eW.customStatus
+                        }) : eF.default.humanizeStatus(r)
                     })), (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)("div", {
-                            className: eq.panelTitleContainer,
-                            children: (0, a.jsx)(eG.default, {
+                            className: eW.panelTitleContainer,
+                            children: (0, a.jsx)(eU.default, {
                                 children: o
                             })
                         }), (0, a.jsx)("div", {
-                            className: eq.panelSubtextContainer,
-                            children: (0, a.jsx)(eb.default, {
+                            className: eW.panelSubtextContainer,
+                            children: (0, a.jsx)(ex.default, {
                                 children: null != e ? e : l
                             })
                         })]
@@ -25980,14 +25931,14 @@
                     if (null == e) return null;
                     let s = null,
                         l = S.TooltipColors.PRIMARY;
-                    return eF.SUPPORTS_COPY && (s = ez.default.Messages.ACCOUNT_CLICK_TO_COPY, n && (s = this.renderCopiedSuccess(), l = this.isCopiedStreakGodlike ? S.TooltipColors.RED : S.TooltipColors.GREEN)), (0, a.jsx)(S.Tooltip, {
+                    return ew.SUPPORTS_COPY && (s = eY.default.Messages.ACCOUNT_CLICK_TO_COPY, n && (s = this.renderCopiedSuccess(), l = this.isCopiedStreakGodlike ? S.TooltipColors.RED : S.TooltipColors.GREEN)), (0, a.jsx)(S.Tooltip, {
                         text: s,
                         forceOpen: t,
-                        "aria-label": !!eF.SUPPORTS_COPY && ez.default.Messages.ACCOUNT_CLICK_TO_COPY,
+                        "aria-label": !!ew.SUPPORTS_COPY && eY.default.Messages.ACCOUNT_CLICK_TO_COPY,
                         color: l,
                         delay: 500,
                         onAnimationRest: (e, a) => {
-                            n && !t && a.phase === eW.SpringTransitionPhases.LEAVE && this.setState({
+                            n && !t && a.phase === eH.SpringTransitionPhases.LEAVE && this.setState({
                                 shouldShowCopiedFeedback: !1
                             })
                         },
@@ -26007,8 +25958,8 @@
                                 onClick: () => {
                                     null == t || t(), this.handleCopyTag()
                                 },
-                                className: i(eq.nameTag, {
-                                    [eq.canCopy]: eF.SUPPORTS_COPY
+                                className: i(eW.nameTag, {
+                                    [eW.canCopy]: ew.SUPPORTS_COPY
                                 }),
                                 children: this.renderNameTag()
                             })
@@ -26025,12 +25976,12 @@
                         showTaglessAccountPanel: r
                     } = this.props;
                     if (null == n) return null;
-                    let o = (0, ek.getAvatarDecorationURL)({
+                    let o = (0, ej.getAvatarDecorationURL)({
                         avatarDecoration: n.avatarDecoration,
                         size: (0, M.getDecorationSizeForAvatarSize)(S.AvatarSizes.SIZE_32)
                     });
                     return (0, a.jsx)(g.default, {
-                        object: eW.AnalyticsObjects.AVATAR,
+                        object: eH.AnalyticsObjects.AVATAR,
                         children: (0, a.jsx)(S.Popout, {
                             renderPopout: this.renderStatusPickerPopout,
                             position: "top",
@@ -26038,31 +25989,31 @@
                             animation: S.Popout.Animation.FADE,
                             spacing: 14,
                             fixed: !0,
-                            preload: () => (0, ed.default)(n.id, null == n ? void 0 : n.getAvatarURL(null, 80)),
+                            preload: () => (0, eo.default)(n.id, null == n ? void 0 : n.getAvatarURL(null, 80)),
                             children: (u, d) => (0, a.jsxs)(S.Clickable, {
                                 ...u,
-                                "aria-label": ez.default.Messages.SET_STATUS,
-                                className: i(eq.avatarWrapper, {
-                                    [eq.withTagAsButton]: l,
-                                    [eq.withTagless]: r
+                                "aria-label": eY.default.Messages.SET_STATUS,
+                                className: i(eW.avatarWrapper, {
+                                    [eW.withTagAsButton]: l,
+                                    [eW.withTagless]: r
                                 }),
-                                children: [(0, a.jsx)(eQ, {
+                                children: [(0, a.jsx)(eK, {
                                     size: S.AvatarSizes.SIZE_32,
                                     src: n.getAvatarURL(void 0, 32, !1),
                                     avatarDecoration: o,
                                     "aria-label": n.username,
-                                    status: t ? eW.StatusTypes.STREAMING : s,
+                                    status: t ? eH.StatusTypes.STREAMING : s,
                                     isSpeaking: e,
-                                    className: eq.avatar
+                                    className: eW.avatar
                                 }), l || r ? (0, a.jsx)("div", {
-                                    className: i(eq.nameTag, {
-                                        [eq.canCopy]: eF.SUPPORTS_COPY
+                                    className: i(eW.nameTag, {
+                                        [eW.canCopy]: ew.SUPPORTS_COPY
                                     }),
-                                    children: r ? (0, a.jsx)(eU.default, {
+                                    children: r ? (0, a.jsx)(ey.default, {
                                         tooltipText: null,
-                                        icon: d.isShown ? eO.default : eL.default,
+                                        icon: d.isShown ? eg.default : eR.default,
                                         role: "switch",
-                                        "aria-label": ez.default.Messages.SET_STATUS
+                                        "aria-label": eY.default.Messages.SET_STATUS
                                     }) : this.renderNameTag()
                                 }) : null]
                             })
@@ -26078,7 +26029,7 @@
                         showTaglessAccountPanel: s
                     } = this.props;
                     return null == e ? null : (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsx)(H.default, {
+                        children: [(0, a.jsx)(F.default, {
                             contentTypes: t.avatar,
                             children: e => {
                                 let {
@@ -26106,49 +26057,49 @@
                     let E = n || u || l,
                         f = t || r;
                     return (0, a.jsxs)("div", {
-                        className: eq.container,
+                        className: eW.container,
                         onMouseEnter: this.handleMouseEnter,
                         onMouseLeave: this.handleMouseLeave,
-                        children: [this.renderNameZone(), (0, a.jsxs)(eg.default, {
+                        children: [this.renderNameZone(), (0, a.jsxs)(em.default, {
                             grow: 0,
-                            children: [(0, a.jsx)(eU.default, {
-                                tooltipText: c ? ez.default.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, x.default)(n, l, u, s),
+                            children: [(0, a.jsx)(ey.default, {
+                                tooltipText: c ? eY.default.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, x.default)(n, l, u, s),
                                 tooltipColor: c ? S.TooltipColors.GREEN : void 0,
                                 tooltipForceOpen: c || void 0,
                                 onMouseEnter: this.handleMouseEnterMute,
                                 onMouseLeave: this.handleMouseLeaveMute,
-                                icon: (0, a.jsx)(e$, {
+                                icon: (0, a.jsx)(eZ, {
                                     selfMute: n,
                                     serverMute: l,
                                     suppress: u
                                 }),
-                                iconForeground: E ? eq.strikethrough : null,
+                                iconForeground: E ? eW.strikethrough : null,
                                 onClick: this.handleToggleSelfMute,
                                 innerClassName: i({
-                                    [eq.redIcon]: l || u
+                                    [eW.redIcon]: l || u
                                 }),
                                 onContextMenu: this.handleInputAudioContextMenu,
                                 role: "switch",
-                                "aria-label": ez.default.Messages.MUTE,
+                                "aria-label": eY.default.Messages.MUTE,
                                 "aria-checked": E,
                                 disabled: s
-                            }), (0, a.jsx)(eU.default, {
+                            }), (0, a.jsx)(ey.default, {
                                 tooltipText: (0, y.default)(t, r, s),
-                                icon: (0, a.jsx)(e0, {
+                                icon: (0, a.jsx)(eX, {
                                     selfDeaf: t,
                                     serverDeaf: r
                                 }),
                                 onClick: this.handleToggleSelfDeaf,
                                 onContextMenu: this.handleOutputAudioContextMenu,
                                 innerClassName: i({
-                                    [eq.redIcon]: r
+                                    [eW.redIcon]: r
                                 }),
-                                iconForeground: f ? eq.strikethrough : null,
+                                iconForeground: f ? eW.strikethrough : null,
                                 role: "switch",
-                                "aria-label": ez.default.Messages.DEAFEN,
+                                "aria-label": eY.default.Messages.DEAFEN,
                                 "aria-checked": f,
                                 disabled: s
-                            }), (0, a.jsx)(H.default, {
+                            }), (0, a.jsx)(F.default, {
                                 contentTypes: d.settings,
                                 children: e => {
                                     let {
@@ -26161,7 +26112,7 @@
                                                 position: "top",
                                                 align: "center",
                                                 shouldShow: !0,
-                                                renderPopout: () => (0, a.jsx)(en.default, {}),
+                                                renderPopout: () => (0, a.jsx)(ee.default, {}),
                                                 children: this.renderSettingsGear
                                             });
                                         case o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP:
@@ -26169,9 +26120,9 @@
                                                 position: "top",
                                                 align: "center",
                                                 shouldShow: !0,
-                                                renderPopout: () => (0, a.jsx)(K.default, {
+                                                renderPopout: () => (0, a.jsx)(Y.default, {
                                                     markAsDismissed: n,
-                                                    partnerGame: eK.PartnerGame.FORTNITE
+                                                    partnerGame: eV.PartnerGame.FORTNITE
                                                 }),
                                                 children: this.renderSettingsGear
                                             });
@@ -26180,9 +26131,9 @@
                                                 position: "top",
                                                 align: "center",
                                                 shouldShow: !0,
-                                                renderPopout: () => (0, a.jsx)(z.default, {
+                                                renderPopout: () => (0, a.jsx)(W.default, {
                                                     markAsDismissed: n,
-                                                    partnerGame: eK.PartnerGame.FORTNITE
+                                                    partnerGame: eV.PartnerGame.FORTNITE
                                                 }),
                                                 children: this.renderSettingsGear
                                             });
@@ -26191,7 +26142,7 @@
                                                 position: "top",
                                                 align: "center",
                                                 shouldShow: !0,
-                                                renderPopout: () => (0, a.jsx)(eE.default, {
+                                                renderPopout: () => (0, a.jsx)(ed.default, {
                                                     markAsDismissed: n
                                                 }),
                                                 children: this.renderSettingsGear
@@ -26201,7 +26152,7 @@
                                                 position: "top",
                                                 align: "center",
                                                 shouldShow: !0,
-                                                renderPopout: () => (0, a.jsx)(el.default, {
+                                                renderPopout: () => (0, a.jsx)(ea.default, {
                                                     markAsDismissed: n
                                                 }),
                                                 children: this.renderSettingsGear
@@ -26211,7 +26162,7 @@
                                                 position: "top",
                                                 align: "center",
                                                 shouldShow: !0,
-                                                renderPopout: () => (0, a.jsx)(ei.default, {
+                                                renderPopout: () => (0, a.jsx)(es.default, {
                                                     markAsDismissed: n
                                                 }),
                                                 children: this.renderSettingsGear
@@ -26221,7 +26172,7 @@
                                                 position: "top",
                                                 align: "center",
                                                 shouldShow: !0,
-                                                renderPopout: () => (0, a.jsx)(eu.default, {
+                                                renderPopout: () => (0, a.jsx)(er.default, {
                                                     markAsDismissed: n
                                                 }),
                                                 children: this.renderSettingsGear
@@ -26231,17 +26182,9 @@
                                                 position: "top",
                                                 align: "center",
                                                 shouldShow: !0,
-                                                renderPopout: () => (0, a.jsx)(er.UserSafetyEducationReportingCoachmark, {
+                                                renderPopout: () => (0, a.jsx)(el.UserSafetyEducationReportingCoachmark, {
                                                     markAsDismissed: n
                                                 }),
-                                                children: this.renderSettingsGear
-                                            });
-                                        case o.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_COACHMARK:
-                                            return (0, a.jsx)(S.Popout, {
-                                                position: "top",
-                                                align: "center",
-                                                shouldShow: !0,
-                                                renderPopout: () => (0, a.jsx)(j.default, {}),
                                                 children: this.renderSettingsGear
                                             });
                                         default:
@@ -26274,7 +26217,7 @@
                     }, this.handleOpenAccountSettings = () => {
                         this.handleOpenSettings()
                     }, this.handleOpenSettings = function() {
-                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eW.UserSettingsSections.ACCOUNT,
+                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eH.UserSettingsSections.ACCOUNT,
                             t = arguments.length > 1 ? arguments[1] : void 0,
                             n = arguments.length > 2 ? arguments[2] : void 0;
                         m.default.open(e, t, n)
@@ -26341,10 +26284,10 @@
                             copiedStreak: n
                         } = this.state;
                         if (null == e) return;
-                        (0, eF.copy)(eV.default.getUserTag(e, {
+                        (0, ew.copy)(eF.default.getUserTag(e, {
                             decoration: "never",
                             identifiable: "always"
-                        })), ew.default.track(eW.AnalyticEvents.TEXT_COPIED, {
+                        })), eG.default.track(eH.AnalyticEvents.TEXT_COPIED, {
                             type: "User Tag"
                         });
                         let a = {
@@ -26401,8 +26344,8 @@
                                 }
                             };
                             return (0, a.jsx)("div", {
-                                className: eq.accountProfilePopoutWrapper,
-                                children: (0, a.jsx)(J.default, {
+                                className: eW.accountProfilePopoutWrapper,
+                                children: (0, a.jsx)(Z.default, {
                                     ...e
                                 })
                             })
@@ -26412,7 +26355,7 @@
                                 this.handleMouseLeave(), null == t || t()
                             }
                         })
-                    }, this.renderSettingsGear = () => (0, a.jsx)(eJ, {
+                    }, this.renderSettingsGear = () => (0, a.jsx)(eQ, {
                         isEligibleForPomelo: this.props.isEligibleForPomelo,
                         webBuildOverride: this.props.webBuildOverride,
                         onClick: this.handleOpenAccountSettings,
@@ -26421,73 +26364,73 @@
                 }
             }
 
-            function eX() {
-                let e = (0, r.useStateFromStores)([em.default], () => em.default.getCurrentUser()),
-                    t = (0, V.useShowEligibilityEnrollmentTooltip)(eK.PartnerGame.FORTNITE),
-                    n = (0, r.useStateFromStores)([eC.default], () => eC.default.getId()),
-                    l = ec.CustomStatusSetting.useSetting(),
-                    i = s.useMemo(() => null != l ? (0, k.default)(l) : null, [l]),
+            function eq() {
+                let e = (0, r.useStateFromStores)([eN.default], () => eN.default.getCurrentUser()),
+                    t = (0, B.useShowEligibilityEnrollmentTooltip)(eV.PartnerGame.FORTNITE),
+                    n = (0, r.useStateFromStores)([ef.default], () => ef.default.getId()),
+                    l = eu.CustomStatusSetting.useSetting(),
+                    i = s.useMemo(() => null != l ? (0, j.default)(l) : null, [l]),
                     {
                         streaming: u,
                         status: d,
                         hangStatusActivity: c
-                    } = (0, r.useStateFromStoresObject)([eN.default], () => ({
-                        streaming: null != eN.default.findActivity(e => e.type === eW.ActivityTypes.STREAMING),
-                        status: eN.default.getStatus(),
-                        hangStatusActivity: eN.default.findActivity(e => e.type === eW.ActivityTypes.HANG_STATUS)
+                    } = (0, r.useStateFromStoresObject)([eT.default], () => ({
+                        streaming: null != eT.default.findActivity(e => e.type === eH.ActivityTypes.STREAMING),
+                        status: eT.default.getStatus(),
+                        hangStatusActivity: eT.default.findActivity(e => e.type === eH.ActivityTypes.HANG_STATUS)
                     })),
                     E = (0, v.default)({
                         userId: n
                     }),
-                    f = eV.default.useUserTag(e, {
+                    f = eF.default.useUserTag(e, {
                         decoration: "never"
                     }),
-                    _ = (0, r.useStateFromStores)([eA.default], () => eA.default.hidePersonalInformation),
-                    C = (0, r.useStateFromStores)([eS.default, eh.default], () => {
-                        let e = eS.default.getChannelId();
-                        return null != e ? eh.default.getChannel(e) : null
+                    _ = (0, r.useStateFromStores)([eS.default], () => eS.default.hidePersonalInformation),
+                    C = (0, r.useStateFromStores)([eI.default, e_.default], () => {
+                        let e = eI.default.getChannelId();
+                        return null != e ? e_.default.getChannel(e) : null
                     }),
                     {
                         mute: h,
                         selfMute: I,
                         suppress: T
-                    } = (0, e_.default)(C),
+                    } = (0, eE.default)(C),
                     {
                         selfDeaf: A,
                         deaf: m
-                    } = (0, ef.default)(C),
+                    } = (0, ec.default)(C),
                     p = (0, r.useStateFromStores)([P.default], () => {
                         var e;
                         return (0, D.probablyHasBuildOverride)() ? null === (e = P.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
                     }),
-                    g = (0, r.useStateFromStores)([ep.default], () => ep.default.getPremiumTypeSubscription()),
-                    M = (0, r.useStateFromStores)([eT.default], () => eT.default.getEverSpeakingWhileMuted()),
-                    y = (0, r.useStateFromStores)([eI.default], () => eI.default.hasLayers()),
+                    g = (0, r.useStateFromStores)([eA.default], () => eA.default.getPremiumTypeSubscription()),
+                    M = (0, r.useStateFromStores)([eh.default], () => eh.default.getEverSpeakingWhileMuted()),
+                    y = (0, r.useStateFromStores)([eC.default], () => eC.default.hasLayers()),
                     x = (0, S.useModalsStore)(S.hasAnyModalOpenSelector),
-                    U = x || y || eH.ProcessArgs.isDisallowPopupsSet(),
-                    b = (0, $.useIsEligibleForPomelo)();
+                    U = x || y || ek.ProcessArgs.isDisallowPopupsSet(),
+                    b = (0, X.useIsEligibleForPomelo)();
                 s.useEffect(() => {
-                    X.default.trackExposure({
+                    Q.default.trackExposure({
                         location: "08bd40_3"
                     })
                 });
-                let j = (0, r.useStateFromStores)([q.default], () => null != q.default.getAwaitingRemoteSessionInfo()),
+                let G = (0, r.useStateFromStores)([K.default], () => null != K.default.getAwaitingRemoteSessionInfo()),
                     {
                         isPopupEnabled: w,
                         isJoinedTagButtonEnabled: F,
-                        isTaglessAccountPanelEnabled: H
-                    } = X.default.useExperiment({
+                        isTaglessAccountPanelEnabled: Y
+                    } = Q.default.useExperiment({
                         location: "08bd40_4"
                     }, {
                         autoTrackExposure: !1
                     }),
-                    K = (0, r.useStateFromStores)([Y.default], () => Y.default.isCurrentQuestCompleted),
-                    z = (0, r.useStateFromStores)([Y.default], () => Y.default.currentDropQuestGameTitle),
-                    Z = (0, Q.useIsHomeSelected)(),
-                    J = (0, O.useIsDmSpamFilterCoachmarkEnabled)(),
-                    en = (0, ea.useCanSeeSafetyEducationBlockMuteCoachmark)(),
-                    el = (0, R.useIsSafetyConsumerEducationBlockMuteBucket)(),
-                    ei = (0, es.useCanSeeSafetyEducationReportingCoachmark)(),
+                    W = (0, r.useStateFromStores)([H.default], () => H.default.isCurrentQuestCompleted),
+                    q = (0, r.useStateFromStores)([H.default], () => H.default.currentDropQuestGameTitle),
+                    Z = (0, z.useIsHomeSelected)(),
+                    ee = (0, O.useIsDmSpamFilterCoachmarkEnabled)(),
+                    ea = (0, et.useCanSeeSafetyEducationBlockMuteCoachmark)(),
+                    es = (0, R.useIsSafetyConsumerEducationBlockMuteBucket)(),
+                    el = (0, en.useCanSeeSafetyEducationReportingCoachmark)(),
                     er = "account";
                 (0, L.useTriggerDebuggingAA)({
                     location: er + " auto on",
@@ -26495,28 +26438,22 @@
                 }), (0, L.useTriggerDebuggingAA)({
                     location: er + " auto off",
                     autoTrackExposure: !1
-                });
-                let {
-                    shopForAllEnabled: eu
-                } = (0, G.default)({
-                    location: "Account"
-                });
-                (0, ea.useSafetyEducationAATriggerPoint)();
-                let ed = (0, r.useStateFromStores)([eo.default], () => eo.default.hasHadOtherUserPlaySoundInSession()),
-                    eE = function() {
-                        let e = (0, B.useIsDismissibleContentDismissed)(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
-                            [t, n] = (0, r.useStateFromStoresArray)([ee.default], () => [ee.default.hasFetchedRelevance, ee.default.profileThemesRelevanceExceeded]),
-                            [a, l] = (0, r.useStateFromStoresArray)([ep.default], () => [ep.default.hasFetchedMostRecentPremiumTypeSubscription(), ep.default.getMostRecentPremiumTypeSubscription()]),
+                }), (0, et.useSafetyEducationAATriggerPoint)();
+                let eo = (0, r.useStateFromStores)([ei.default], () => ei.default.hasHadOtherUserPlaySoundInSession()),
+                    ed = function() {
+                        let e = (0, k.useIsDismissibleContentDismissed)(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
+                            [t, n] = (0, r.useStateFromStoresArray)([J.default], () => [J.default.hasFetchedRelevance, J.default.profileThemesRelevanceExceeded]),
+                            [a, l] = (0, r.useStateFromStoresArray)([eA.default], () => [eA.default.hasFetchedMostRecentPremiumTypeSubscription(), eA.default.getMostRecentPremiumTypeSubscription()]),
                             {
                                 enabled: i
-                            } = et.default.useExperiment({
+                            } = $.default.useExperiment({
                                 location: "08bd40_1"
                             }, {
                                 autoTrackExposure: !0
                             }),
                             u = s.useMemo(() => {
                                 let e = new Date().getTime();
-                                return null != l && (l.status === eW.SubscriptionStatusTypes.ACTIVE || e - l.currentPeriodEnd.getTime() < 2592e6)
+                                return null != l && (l.status === eH.SubscriptionStatusTypes.ACTIVE || e - l.currentPeriodEnd.getTime() < 2592e6)
                             }, [l]);
                         return s.useEffect(() => {
                             let s = async () => {
@@ -26530,22 +26467,22 @@
                             s()
                         }, [i, n, e, a, t, u]), !e && !!i && !u && null != n && n
                     }(),
-                    eg = {
+                    em = {
                         avatar: [],
                         settings: []
                     };
                 if (!U) {
-                    if (eE && eg.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), t) {
-                        var eR;
-                        eg.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), K && z === (null === (eR = (0, W.getDrop)(eK.PartnerGame.FORTNITE)) || void 0 === eR ? void 0 : eR.title) && eg.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)
+                    if (ed && em.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), t) {
+                        var ep;
+                        em.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), W && q === (null === (ep = (0, V.getDrop)(eV.PartnerGame.FORTNITE)) || void 0 === ep ? void 0 : ep.title) && em.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)
                     }
-                    Z && J && eg.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), en && (1 === el ? eg.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eg.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), ed && eg.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), ei && eg.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), eu && !eB.default.canUseCollectibles(e) && eg.settings.push(o.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_COACHMARK)
+                    Z && ee && em.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), ea && (1 === es ? em.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : em.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), eo && em.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), el && em.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING)
                 }
-                return (0, a.jsx)(eZ, {
+                return (0, a.jsx)(ez, {
                     currentUser: e,
                     customStatusActivity: i,
                     hangStatusActivity: c,
-                    dismissibleContents: eg,
+                    dismissibleContents: em,
                     userTag: f,
                     hidePrivateData: _,
                     occluded: U,
@@ -26556,47 +26493,47 @@
                     serverMute: h,
                     showRichProfilePopup: w,
                     showTagAsButton: F,
-                    showTaglessAccountPanel: H,
+                    showTaglessAccountPanel: Y,
                     speaking: E,
                     speakingWhileMuted: M,
                     status: d,
                     streaming: u,
                     suppress: T,
                     webBuildOverride: p,
-                    awaitingRemote: j,
+                    awaitingRemote: G,
                     isEligibleForPomelo: b
                 })
             }
 
-            function eJ(e) {
+            function eQ(e) {
                 let {
                     webBuildOverride: t,
                     isEligibleForPomelo: n,
                     onClick: s,
                     onContextMenu: l
-                } = e, i = (0, S.useRedesignIconContext)().enabled, r = null, o = ev.default;
-                return i ? o = null != t ? T.SettingsInfoIcon : n ? h.SettingsCircleIcon : I.SettingsIcon : null != t ? r = (0, a.jsx)(eD.default, {
+                } = e, i = (0, S.useRedesignIconContext)().enabled, r = null, o = eO.default;
+                return i ? o = null != t ? T.SettingsInfoIcon : n ? h.SettingsCircleIcon : I.SettingsIcon : null != t ? r = (0, a.jsx)(eM.default, {
                     width: 9,
                     height: 9,
-                    className: eq.hasBuildOverride,
+                    className: eW.hasBuildOverride,
                     "aria-hidden": !0
-                }) : n && (r = (0, a.jsx)(ej.CircleBadge, {
-                    color: w.default.STATUS_DANGER,
-                    className: eq.hasBuildOverride,
+                }) : n && (r = (0, a.jsx)(eb.CircleBadge, {
+                    color: G.default.STATUS_DANGER,
+                    className: eW.hasBuildOverride,
                     "aria-hidden": !0
-                })), (0, a.jsx)(eU.default, {
-                    tooltipText: null != t ? ez.default.Messages.USER_SETTINGS_WITH_BUILD_OVERRIDE.format({
+                })), (0, a.jsx)(ey.default, {
+                    tooltipText: null != t ? eY.default.Messages.USER_SETTINGS_WITH_BUILD_OVERRIDE.format({
                         webBuildOverride: t.id
-                    }) : ez.default.Messages.USER_SETTINGS,
+                    }) : eY.default.Messages.USER_SETTINGS,
                     onClick: s,
                     onContextMenu: l,
-                    innerClassName: null != t || n ? eq.buildOverrideButton : null,
+                    innerClassName: null != t || n ? eW.buildOverrideButton : null,
                     icon: o,
                     children: r
                 })
             }
 
-            function e$(e) {
+            function eZ(e) {
                 let {
                     selfMute: t,
                     suppress: n,
@@ -26611,16 +26548,16 @@
                     })
                 } {
                     let e = t || n || s,
-                        l = e ? ex.default : ey.default;
+                        l = e ? eD.default : eP.default;
                     return (0, a.jsx)(l, {
                         width: 20,
                         height: 20,
-                        foreground: e ? eq.strikethrough : void 0
+                        foreground: e ? eW.strikethrough : void 0
                     })
                 }
             }
 
-            function e0(e) {
+            function eX(e) {
                 let {
                     selfDeaf: t,
                     serverDeaf: n
@@ -26633,11 +26570,11 @@
                         color: null != s ? s : "currentColor"
                     })
                 } {
-                    let e = t ? eP.default : eM.default;
+                    let e = t ? ev.default : eL.default;
                     return (0, a.jsx)(e, {
                         width: 20,
                         height: 20,
-                        foreground: t ? eq.strikethrough : void 0
+                        foreground: t ? eW.strikethrough : void 0
                     })
                 }
             }

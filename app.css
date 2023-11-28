@@ -19469,8 +19469,8 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -53431,12 +53431,6 @@ html .progress__4ef76 {
 
 .switchAccountsIcon__18618 {
     margin-left: -2px
-}
-
-.art_eaee27 {
-    width: 213px;
-    height: 176px;
-    margin-top: -83px
 }
 
 .container__9432b {
