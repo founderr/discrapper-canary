@@ -4,10 +4,10 @@
             "use strict";
             t.r(l), t.d(l, {
                 roleToPendingAddition: function() {
-                    return B
+                    return D
                 },
                 channelToPendingAddition: function() {
-                    return D
+                    return B
                 },
                 default: function() {
                     return Z
@@ -45,7 +45,7 @@
                 return 0 === e.type
             }
 
-            function B(e) {
+            function D(e) {
                 let l = "".concat(e.name.includes(N.EVERYONE_ID) ? "" : "@").concat(e.name);
                 return {
                     tag: {
@@ -61,7 +61,7 @@
                 }
             }
 
-            function D(e) {
+            function B(e) {
                 let l = (0, T.computeChannelName)(e, g.default, v.default);
                 return {
                     tag: {
@@ -156,9 +156,9 @@
                     let a = {};
                     return e.forEach(e => {
                         let l = L.default.getChannel(e);
-                        null != l && (a[e] = D(l))
+                        null != l && (a[e] = B(l))
                     }), l.forEach(e => {
-                        e in t && (a[e] = B(t[e]))
+                        e in t && (a[e] = D(t[e]))
                     }), a
                 })(n, s, o), [n, s, o]), m = r.useMemo(() => Object.keys(u), [u]), [T, x] = r.useState(""), [H, N] = r.useState(!1), [v, g] = r.useState(!1), [p, I] = r.useState(!1), {
                     sections: O,
@@ -205,7 +205,7 @@
                         let l = {
                             ...u
                         };
-                        b(e) ? l[e.id] = D(e.record) : V(e) && (l[e.id] = B(e.record)), F(l), x(""), U()
+                        b(e) ? l[e.id] = B(e.record) : V(e) && (l[e.id] = D(e.record)), F(l), x(""), U()
                     }, [F, u]),
                     Y = r.useCallback(e => {
                         let {
@@ -527,7 +527,7 @@
                         className: _.clearButton,
                         children: L.default.Messages.MEMBER_SAFETY_ACTION_NOTICE_CLEAR_SELECTION
                     })]
-                }), B = (0, a.jsxs)("span", {
+                }), D = (0, a.jsxs)("span", {
                     className: _.buttonContainer,
                     children: [(0, a.jsx)(E.default, {
                         width: 20,
@@ -562,7 +562,7 @@
                                     })
                                 })
                             },
-                            onSaveText: B,
+                            onSaveText: D,
                             onSaveButtonColor: o.ButtonColors.RED,
                             message: b
                         })
@@ -726,15 +726,15 @@
                     searchState: L,
                     compact: I,
                     onSelectRow: A
-                } = e, j = (0, o.useStateFromStoresObject)([E.default], () => E.default.getPaginationStateByGuildId(t.id), [t.id]), [R] = (0, o.default)([E.default], () => E.default.getPagedMembersByGuildId(t.id), [t.id], c.isVersionEqual), S = (0, o.default)([r.default], () => r.default.useReducedMotion), V = (0, m.useIsWindowFocused)(), [b, B] = n.useState(!1), [D, O] = n.useState(!1);
+                } = e, j = (0, o.useStateFromStoresObject)([E.default], () => E.default.getPaginationStateByGuildId(t.id), [t.id]), [R] = (0, o.default)([E.default], () => E.default.getPagedMembersByGuildId(t.id), [t.id], c.isVersionEqual), S = (0, o.default)([r.default], () => r.default.useReducedMotion), V = (0, m.useIsWindowFocused)(), [b, D] = n.useState(!1), [B, O] = n.useState(!1);
                 n.useEffect(() => {
-                    !V && (B(!1), O(!1))
+                    !V && (D(!1), O(!1))
                 }, [V]), n.useLayoutEffect(() => {
                     let e = e => {
-                            g(e) && B(!0), p(e) && O(!0)
+                            g(e) && D(!0), p(e) && O(!0)
                         },
                         l = e => {
-                            g(e) && B(!1), p(e) && O(!1)
+                            g(e) && D(!1), p(e) && O(!1)
                         };
                     return window.addEventListener("keydown", e), window.addEventListener("keyup", l), () => {
                         window.removeEventListener("keydown", e), window.removeEventListener("keyup", l)
@@ -793,7 +793,7 @@
                                 guildId: t.id,
                                 style: e,
                                 onSelect: A,
-                                isHoldingAdvancedInfoKey: b && D,
+                                isHoldingAdvancedInfoKey: b && B,
                                 compact: I
                             }, l))]
                         }) : (0, a.jsx)("td", {
@@ -844,12 +844,12 @@
                     guildId: l,
                     onClose: t
                 } = e, s = (0, d.default)([H.default], () => H.default.getSearchStateByGuildId(l), [l], o), i = (0, T.useTrackMemberFilterSafetyFlagsUsed)(l), C = n.useCallback(() => {
-                    i(T.MemberSafetyFlagType.UNUSUAL_DM_ACTIVITY), (0, N.updateSearchState)(l, {
+                    !s.requireUnusualDmActivity && i(T.MemberSafetyFlagType.UNUSUAL_DM_ACTIVITY), (0, N.updateSearchState)(l, {
                         ...s,
                         requireUnusualDmActivity: !s.requireUnusualDmActivity
                     })
                 }, [l, s, i]), r = n.useCallback(() => {
-                    i(T.MemberSafetyFlagType.COMMUNICATION_DISABLED), (0, N.updateSearchState)(l, {
+                    !s.requireCommunicationDisabled && i(T.MemberSafetyFlagType.COMMUNICATION_DISABLED), (0, N.updateSearchState)(l, {
                         ...s,
                         requireCommunicationDisabled: !s.requireCommunicationDisabled
                     })
@@ -932,11 +932,11 @@
                     selectedUserIds: h,
                     addUsers: M,
                     clearSelection: T
-                } = (0, L.default)(t), N = C.requireUnusualDmActivity || C.requireCommunicationDisabled, S = C.selectedRoleIds.size > 0, [V, b] = n.useState(null == r.default.get(R, null)), B = n.useCallback(() => {
+                } = (0, L.default)(t), N = C.requireUnusualDmActivity || C.requireCommunicationDisabled, S = C.selectedRoleIds.size > 0, [V, b] = n.useState(null == r.default.get(R, null)), D = n.useCallback(() => {
                     r.default.set(R, Date.now()), b(!1)
                 }, []), {
-                    analyticsLocations: D
-                } = (0, c.default)(), O = null !== (l = null == D ? void 0 : D[0]) && void 0 !== l ? l : null, y = (0, x.useCanAccessBulkBanningFeature)(t, O, !0), w = n.useMemo(() => s.filter(e => (0, x.canBulkBanUser)(t, y, e)), [y, s, t]), Z = w.length > 0, F = w.filter(e => !h.has(e)), U = 0 === F.length, k = n.useCallback(() => {
+                    analyticsLocations: B
+                } = (0, c.default)(), O = null !== (l = null == B ? void 0 : B[0]) && void 0 !== l ? l : null, y = (0, x.useCanAccessBulkBanningFeature)(t, O, !0), w = n.useMemo(() => s.filter(e => (0, x.canBulkBanUser)(t, y, e)), [y, s, t]), Z = w.length > 0, F = w.filter(e => !h.has(e)), U = 0 === F.length, k = n.useCallback(() => {
                     Z && (U ? T() : M(w))
                 }, [Z, U, T, M, w]);
                 return (0, a.jsx)("thead", {
@@ -1021,13 +1021,13 @@
                                     "aria-label": g.default.Messages.MEMBER_SAFETY_SIGNALS_DESCRIPTION,
                                     onFilter: t => {
                                         var a, n;
-                                        B(), null === (a = l.onClick) || void 0 === a || a.call(l, t), null === (n = e.onClick) || void 0 === n || n.call(e)
+                                        D(), null === (a = l.onClick) || void 0 === a || a.call(l, t), null === (n = e.onClick) || void 0 === n || n.call(e)
                                     },
                                     selected: N,
                                     className: i(I.smallCol),
                                     onMouseEnter: () => {
                                         var t, a;
-                                        B(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e), null === (a = l.onMouseEnter) || void 0 === a || a.call(l)
+                                        D(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e), null === (a = l.onMouseEnter) || void 0 === a || a.call(l)
                                     },
                                     onMouseDown: l.onMouseDown,
                                     onMouseLeave: e.onMouseLeave,
@@ -1281,8 +1281,8 @@
                 S = t("158998"),
                 V = t("466818"),
                 b = t("178406"),
-                B = t("150162"),
-                D = t("998940"),
+                D = t("150162"),
+                B = t("998940"),
                 O = t("624663"),
                 y = t("553275"),
                 w = t("412013"),
@@ -1478,8 +1478,8 @@
                         showLongDate: s
                     } = e, C = n.useMemo(() => {
                         let e = t.joinedAtTimestamp;
-                        return null == e ? null : (0, D.formatDateRelativeTime)(e, D.MembersTableDateFormats.JOINED_AT)
-                    }, [t.joinedAtTimestamp]), o = new Date(null !== (l = t.joinedAtTimestamp) && void 0 !== l ? l : 0).toLocaleDateString(U.default.getLocale(), D.MEMBER_JOIN_DATE_TOOLTIP_CONFIG);
+                        return null == e ? null : (0, B.formatDateRelativeTime)(e, B.MembersTableDateFormats.JOINED_AT)
+                    }, [t.joinedAtTimestamp]), o = new Date(null !== (l = t.joinedAtTimestamp) && void 0 !== l ? l : 0).toLocaleDateString(U.default.getLocale(), B.MEMBER_JOIN_DATE_TOOLTIP_CONFIG);
                     return null == C ? null : s ? (0, a.jsx)("div", {
                         className: i(k.joinedAtContainer),
                         children: (0, a.jsx)(m.Text, {
@@ -1510,8 +1510,8 @@
                         accountCreationDateLong: i
                     } = n.useMemo(() => {
                         let e = r.default.extractTimestamp(l.userId),
-                            t = (0, D.formatDateRelativeTime)(e, D.MembersTableDateFormats.ACCOUNT_AGE),
-                            a = new Date(e).toLocaleDateString(U.default.getLocale(), D.ACCOUNT_AGE_DATE_TOOLTIP_CONFIG);
+                            t = (0, B.formatDateRelativeTime)(e, B.MembersTableDateFormats.ACCOUNT_AGE),
+                            a = new Date(e).toLocaleDateString(U.default.getLocale(), B.ACCOUNT_AGE_DATE_TOOLTIP_CONFIG);
                         return {
                             accountCreationDateShort: t,
                             accountCreationDateLong: a
@@ -1690,7 +1690,7 @@
                 }, [r, E]), _ = n.useCallback(e => {
                     e.stopPropagation(), e.preventDefault(), null != E && (0, y.openMemberProfile)(E)
                 }, [E]), v = n.useCallback((e, l) => d((0, C.omit)(e, ["sourceInviteCode"]), (0, C.omit)(l, ["sourceInviteCode"])), []);
-                return null == E ? null : (0, a.jsx)(B.default, {
+                return null == E ? null : (0, a.jsx)(D.default, {
                     role: "row",
                     value: E,
                     style: o,
