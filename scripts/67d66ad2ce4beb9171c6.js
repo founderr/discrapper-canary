@@ -1750,7 +1750,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "249296"
+                        buildNumber: "249302"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -12460,157 +12460,151 @@
             "use strict";
             n.r(t), n.d(t, {
                 CollectiblesItemsList: function() {
-                    return A
+                    return p
                 }
-            });
+            }), n("794252");
             var a = n("37983"),
                 s = n("884691"),
                 l = n("414456"),
                 i = n.n(l),
-                r = n("265586"),
-                o = n("446674"),
-                u = n("77078"),
-                d = n("252744"),
-                c = n("606292"),
-                E = n("688318"),
-                f = n("845962"),
-                _ = n("697218"),
-                C = n("573135"),
-                h = n("312595"),
-                I = n("513002");
-            let T = e => {
+                r = n("506838"),
+                o = n("265586"),
+                u = n("446674"),
+                d = n("77078"),
+                c = n("252744"),
+                E = n("606292"),
+                f = n("688318"),
+                _ = n("845962"),
+                C = n("859498"),
+                h = n("635471"),
+                I = n("697218"),
+                T = n("312595"),
+                S = n("513002");
+            let N = e => {
                     let {
                         item: t,
-                        isSelected: n,
-                        setSelectedItem: l,
-                        isAccountSwitcher: r,
-                        avatarDecorationSize: c
-                    } = e, f = (0, o.useStateFromStores)([_.default], () => _.default.getCurrentUser()), I = s.useRef(null), T = (0, d.default)(I), {
-                        avatarDecorationSrc: S,
-                        eventHandlers: N,
-                        avatarPlaceholderSrc: A
-                    } = (0, E.default)({
-                        user: f,
+                        avatarSize: n
+                    } = e, s = (0, u.useStateFromStores)([I.default], () => I.default.getCurrentUser()), {
+                        avatarDecorationSrc: l,
+                        eventHandlers: i
+                    } = (0, f.default)({
+                        user: s,
                         avatarDecorationOverride: t,
-                        size: c,
-                        animateOnHover: !T
+                        size: (0, E.getDecorationSizeForAvatarSize)(n),
+                        animateOnHover: !0
                     });
-                    return (0, a.jsx)(u.FocusRing, {
-                        children: (0, a.jsxs)(u.Clickable, {
-                            ...N,
-                            className: i({
-                                [h.selectedAvatarDecorationItem]: n
-                            }, r ? h.accountSwitcherItem : h.interactiveModalItem),
-                            innerRef: I,
-                            onClick: () => l(t),
-                            children: [(0, a.jsx)("img", {
-                                className: h.avatarDecorationPlaceholder,
-                                style: {
-                                    width: c / C.DECORATION_TO_AVATAR_RATIO,
-                                    height: c / C.DECORATION_TO_AVATAR_RATIO
-                                },
-                                src: A,
-                                alt: ""
-                            }), (0, a.jsx)("img", {
-                                className: h.avatarDecorationItem,
-                                src: S,
-                                alt: t.label
-                            })]
-                        })
-                    })
-                },
-                S = e => {
-                    var t;
-                    let {
-                        item: n,
-                        isSelected: s,
-                        setSelectedItem: l,
-                        isAccountSwitcher: r
-                    } = e, d = (0, o.useStateFromStores)([f.default], () => f.default.getProfileEffectById(n.id)), {
-                        accessibilityLabel: c,
-                        thumbnailPreviewSrc: E,
-                        title: _
-                    } = null !== (t = null == d ? void 0 : d.config) && void 0 !== t ? t : {};
-                    return (0, a.jsx)(u.FocusRing, {
-                        children: (0, a.jsxs)(u.Clickable, {
-                            className: i(h.item, {
-                                [h.selectedProfileEffectItem]: s
-                            }, r ? h.accountSwitcherItem : h.interactiveModalItem),
-                            onClick: () => l(n),
-                            children: [(0, a.jsx)("img", {
-                                src: I,
-                                alt: c,
-                                className: i(r ? h.accountSwitcherPresetEffectBackground : h.interactiveModalPresetEffectBackground)
-                            }), (0, a.jsx)("img", {
-                                className: i(r ? h.accountSwitcherPresetEffectImg : h.interactiveModaPresetEffectImg),
-                                src: E,
-                                alt: _
-                            })]
-                        })
-                    })
-                },
-                N = e => {
-                    let {
-                        listRef: t,
-                        items: n,
-                        selectedItem: s,
-                        setSelectedItem: l,
-                        isAccountSwitcher: o,
-                        avatarSize: u
-                    } = e, d = (0, c.getDecorationSizeForAvatarSize)(u);
-                    return (0, a.jsx)("div", {
-                        ref: t,
-                        className: i(o ? h.accountSwitcherCollectiblesList : h.interactiveModalCollectiblesList),
-                        children: n.map(e => e.type === r.CollectiblesItemType.AVATAR_DECORATION ? (0, a.jsx)(T, {
-                            item: e,
-                            isSelected: e.skuId === (null == s ? void 0 : s.skuId),
-                            setSelectedItem: l,
-                            isAccountSwitcher: o,
-                            avatarDecorationSize: d
-                        }, e.id) : (0, a.jsx)(S, {
-                            item: e,
-                            isSelected: e.skuId === (null == s ? void 0 : s.skuId),
-                            setSelectedItem: l,
-                            isAccountSwitcher: o
-                        }, e.id))
+                    return (0, a.jsx)("img", {
+                        ...i,
+                        className: T.avatarDecoration,
+                        src: l,
+                        alt: t.label
                     })
                 },
                 A = e => {
+                    var t;
                     let {
-                        items: t,
-                        isFetching: n,
-                        selectedItem: l,
-                        setSelectedItem: r,
-                        containerClassName: o,
-                        isAccountSwitcher: d
-                    } = e, c = s.useRef(null);
-                    return n ? (0, a.jsx)(u.Spinner, {
-                        className: h.loading
-                    }) : (0, a.jsx)(u.FocusRingScope, {
-                        containerRef: c,
-                        children: d ? (0, a.jsx)(u.AdvancedScroller, {
-                            className: i(o),
-                            children: (0, a.jsx)(N, {
-                                listRef: c,
-                                items: t,
-                                selectedItem: l,
-                                setSelectedItem: r,
-                                isAccountSwitcher: d,
-                                avatarSize: u.AvatarSizes.SIZE_56
-                            })
-                        }) : (0, a.jsx)("div", {
-                            className: i(o),
-                            children: (0, a.jsx)(N, {
-                                listRef: c,
-                                items: t,
-                                selectedItem: l,
-                                setSelectedItem: r,
-                                isAccountSwitcher: d,
-                                avatarSize: u.AvatarSizes.SIZE_48
-                            })
+                        item: n
+                    } = e, l = (0, u.useStateFromStores)([_.default], () => _.default.getProfileEffectById(n.id)), {
+                        accessibilityLabel: i,
+                        id: r
+                    } = null !== (t = null == l ? void 0 : l.config) && void 0 !== t ? t : {}, o = s.useRef(null), d = (0, c.default)(o);
+                    return (0, a.jsxs)(a.Fragment, {
+                        children: [(0, a.jsx)("img", {
+                            ref: o,
+                            src: S,
+                            alt: i,
+                            className: T.presetEffectBackground
+                        }), (0, a.jsx)(h.default, {
+                            profileEffectID: r,
+                            useThumbnail: !0,
+                            autoPlay: d,
+                            restartMethod: C.RestartMethod.FromStart,
+                            resetOnHover: !0,
+                            isHovering: !1,
+                            introDelay: .1,
+                            useOpacityOnHover: !1,
+                            noBorderRadius: !0
+                        })]
+                    })
+                };
+
+            function m(e) {
+                let {
+                    listRef: t,
+                    items: n,
+                    selectedItem: s,
+                    setSelectedItem: l,
+                    isAccountSwitcher: u,
+                    avatarSize: c
+                } = e, E = e => {
+                    let {
+                        item: t,
+                        children: n,
+                        className: r
+                    } = e, o = t.skuId === (null == s ? void 0 : s.skuId);
+                    return (0, a.jsx)(d.FocusRing, {
+                        children: (0, a.jsx)(d.Clickable, {
+                            className: i({
+                                [T.selectedItem]: o
+                            }, u ? T.accountSwitcherItem : T.interactiveModalItem, r),
+                            onClick: () => l(t),
+                            children: n
                         })
                     })
-                }
+                };
+                return (0, a.jsx)("div", {
+                    ref: t,
+                    className: u ? T.accountSwitcherCollectiblesList : T.interactiveModalCollectiblesList,
+                    children: n.map(e => (0, r.match)(e).with({
+                        type: o.CollectiblesItemType.AVATAR_DECORATION
+                    }, e => (0, a.jsx)(E, {
+                        item: e,
+                        className: T.avatarDecorationItem,
+                        children: (0, a.jsx)(N, {
+                            item: e,
+                            avatarSize: c
+                        }, e.id)
+                    })).with({
+                        type: o.CollectiblesItemType.PROFILE_EFFECT
+                    }, e => (0, a.jsx)(E, {
+                        item: e,
+                        children: (0, a.jsx)(A, {
+                            item: e
+                        }, e.id)
+                    })).otherwise(() => null))
+                })
+            }
+            let p = e => {
+                let {
+                    items: t,
+                    isFetching: n,
+                    selectedItem: l,
+                    setSelectedItem: i,
+                    containerClassName: r,
+                    isAccountSwitcher: o
+                } = e, u = s.useRef(null);
+                if (n) return (0, a.jsx)(d.Spinner, {
+                    className: T.loading
+                });
+                let c = (e, n) => (0, a.jsx)(m, {
+                    listRef: u,
+                    items: t,
+                    selectedItem: l,
+                    setSelectedItem: i,
+                    isAccountSwitcher: n,
+                    avatarSize: e
+                });
+                return (0, a.jsx)(d.FocusRingScope, {
+                    containerRef: u,
+                    children: o ? (0, a.jsx)(d.AdvancedScroller, {
+                        className: r,
+                        children: c(d.AvatarSizes.SIZE_56, !0)
+                    }) : (0, a.jsx)("div", {
+                        className: r,
+                        children: c(d.AvatarSizes.SIZE_48)
+                    })
+                })
+            }
         },
         580280: function(e, t, n) {
             "use strict";
