@@ -4177,6 +4177,30 @@
                     return null == t ? void 0 : t.localeForICU
                 }
         },
+        446488: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                default: function() {
+                    return i
+                }
+            });
+            var a = s("446674"),
+                n = s("913144");
+            let r = {
+                fetched: !1
+            };
+            class l extends a.default.Store {
+                get hasFetched() {
+                    return r.fetched
+                }
+            }
+            var i = new l(n.default, {
+                BILLING_NITRO_AFFINITY_FETCHED: function(e) {
+                    let {} = e;
+                    r.fetched = !0
+                }
+            })
+        },
         809071: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
@@ -5120,7 +5144,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return B
+                    return G
                 }
             }), s("222007");
             var a = s("37983"),
@@ -5145,84 +5169,87 @@
                 m = s("521012"),
                 P = s("599110"),
                 g = s("764364"),
-                C = s("456015"),
-                O = s("982457"),
-                h = s("300962"),
-                M = s("781084"),
-                L = s("959905"),
-                x = s("154889"),
-                v = s("917247"),
-                U = s("254893"),
-                D = s("840326"),
-                b = s("646718"),
-                j = s("49111"),
-                y = s("265921"),
-                B = function(e) {
+                C = s("446488"),
+                O = s("456015"),
+                h = s("982457"),
+                M = s("300962"),
+                L = s("781084"),
+                x = s("959905"),
+                v = s("154889"),
+                U = s("917247"),
+                D = s("254893"),
+                b = s("840326"),
+                j = s("646718"),
+                y = s("49111"),
+                B = s("265921"),
+                G = function(e) {
                     let {
-                        entrypoint: t = b.PremiumMarketingEntrypoints.UserSettings
+                        entrypoint: t = j.PremiumMarketingEntrypoints.UserSettings
                     } = e, s = (0, S.useBlockedPaymentsConfig)(), {
                         AnalyticsLocationProvider: r,
-                        sourceAnalyticsLocations: B,
-                        analyticsLocations: G
+                        sourceAnalyticsLocations: G,
+                        analyticsLocations: k
                     } = (0, f.default)(T.default.PREMIUM_MARKETING), {
-                        enabled: k
-                    } = (0, h.default)(), H = (0, i.useStateFromStores)([m.default], () => m.default.hasFetchedSubscriptions()), F = (0, i.useStateFromStores)([N.default], () => N.default.getCurrentUser()), K = (0, v.usePremiumTrialOffer)(), w = (0, x.usePremiumDiscountOffer)(), W = (0, R.useSubscriptionPlansLoaded)(), [V, Y] = n.useState(!0), z = n.useRef(0), Q = (0, g.isPremiumExactly)(F, b.PremiumTypes.TIER_2), X = (0, L.useLocalizedPromoQuery)(), Z = null == X ? void 0 : X.countryCode;
+                        enabled: H
+                    } = (0, M.default)(), F = (0, i.useStateFromStores)([m.default], () => m.default.hasFetchedSubscriptions()), K = (0, i.useStateFromStores)([N.default], () => N.default.getCurrentUser()), w = (0, U.usePremiumTrialOffer)(), W = (0, v.usePremiumDiscountOffer)(), V = (0, R.useSubscriptionPlansLoaded)(), [Y, z] = n.useState(!0), Q = n.useRef(0), X = (0, g.isPremiumExactly)(K, j.PremiumTypes.TIER_2), Z = (0, x.useLocalizedPromoQuery)(), J = null == Z ? void 0 : Z.countryCode, q = (0, i.useStateFromStores)([C.default], () => C.default.hasFetched);
                     n.useEffect(() => {
+                        !q && c.getNitroAffinity()
+                    }, [q]), n.useEffect(() => {
                         d.default.wait(async () => {
                             let e = Date.now();
-                            await Promise.all([c.fetchSubscriptions(), (0, _.fetchGuildBoostSlots)(), c.fetchPaymentSources(), (0, E.fetchPremiumSubscriptionPlans)(Z, null, j.RevenueSurfaces.DISCOVERY)]), z.current = Date.now() - e, Y(!1)
+                            await Promise.all([c.fetchSubscriptions(), (0, _.fetchGuildBoostSlots)(), c.fetchPaymentSources(), (0, E.fetchPremiumSubscriptionPlans)(J, null, y.RevenueSurfaces.DISCOVERY)]), Q.current = Date.now() - e, z(!1)
                         })
-                    }, [Z]), n.useEffect(() => {
-                        if (s && (null != K || null != w)) {
+                    }, [J]), n.useEffect(() => {
+                        if (s && (null != w || null != W)) {
                             let {
                                 enabled: e
-                            } = M.default.getCurrentConfig({
+                            } = L.default.getCurrentConfig({
                                 location: "PremiumMarketingPage"
                             }, {
                                 autoTrackExposure: !1
                             });
-                            e ? (0, C.acknowledgeUserOffer)(K, w) : null != K && null == K.expires_at && O.default.acknowledgeUserTrialOffer(K)
+                            e ? (0, O.acknowledgeUserOffer)(w, W) : null != w && null == w.expires_at && h.default.acknowledgeUserTrialOffer(w)
                         }
-                    }, [s, K, w]), n.useEffect(() => {
-                        !V && P.default.track(j.AnalyticEvents.PREMIUM_MARKETING_PAGE_VIEWED, {
-                            location_stack: B,
-                            load_duration_ms: z.current
+                    }, [s, w, W]), n.useEffect(() => {
+                        !Y && P.default.track(y.AnalyticEvents.PREMIUM_MARKETING_PAGE_VIEWED, {
+                            location_stack: G,
+                            load_duration_ms: Q.current
                         })
-                    }, [B, V]);
-                    let [J, q] = n.useState(!1), $ = (0, i.useStateFromStores)([p.default], () => p.default.enabled);
-                    if ($) return (0, a.jsx)(I.default, {});
+                    }, [G, Y]);
+                    let [$, ee] = n.useState(!1), et = (0, i.useStateFromStores)([p.default], () => p.default.enabled);
+                    if (et) return (0, a.jsx)(I.default, {});
                     if (s) return (0, a.jsx)(A.BlockedPaymentsContentSettings, {});
-                    let ee = t === b.PremiumMarketingEntrypoints.ApplicationStoreHome;
-                    return ee && Q && !k ? (0, a.jsx)(r, {
+                    let es = t === j.PremiumMarketingEntrypoints.ApplicationStoreHome;
+                    return es && X && !H ? (0, a.jsx)(r, {
                         children: (0, a.jsxs)(a.Fragment, {
-                            children: [(0, a.jsx)(D.default, {}), (0, a.jsx)(u.default, {
+                            children: [(0, a.jsx)(b.default, {}), (0, a.jsx)(u.default, {
                                 onChange: e => {
-                                    e && !J && (P.default.track(j.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                                        location_stack: G
-                                    }), q(!0))
+                                    e && !$ && (P.default.track(y.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                                        location_stack: k
+                                    }), ee(!0))
                                 },
                                 children: (0, a.jsx)("div", {
-                                    className: y.bottomOfPageVisibilitySensor
+                                    className: B.bottomOfPageVisibilitySensor
                                 })
                             })]
                         })
-                    }) : H && W && !V ? (0, a.jsx)(r, {
+                    }) : F && V && !Y ? (0, a.jsx)(r, {
                         children: (0, a.jsxs)(a.Fragment, {
-                            children: [(0, a.jsx)(U.default, {
+                            children: [(0, a.jsx)(D.default, {
                                 entrypoint: t
                             }), (0, a.jsx)(u.default, {
                                 onChange: e => {
-                                    e && !J && (P.default.track(j.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                                        location_stack: G
-                                    }), q(!0))
+                                    e && !$ && (P.default.track(y.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                                        location_stack: k
+                                    }), ee(!0))
                                 },
                                 children: (0, a.jsx)("div", {
-                                    className: y.bottomOfPageVisibilitySensor
+                                    className: B.bottomOfPageVisibilitySensor
                                 })
                             })]
                         })
                     }) : (0, a.jsx)("div", {
-                        className: l(y.container, y.loading),
+                        className: l(B.container, B.loading),
                         children: (0, a.jsx)(o.Spinner, {})
                     })
                 }

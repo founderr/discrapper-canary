@@ -1,8 +1,12 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["46574"], {
+    ["4560"], {
         42211: function(e, t, s) {
             "use strict";
             e.exports = s.p + "dd4a336fd444ced6dd81.jpg"
+        },
+        6966: function(e, t, s) {
+            "use strict";
+            e.exports = s.p + "4afee995f6783932a280.jpg"
         },
         513002: function(e, t, s) {
             "use strict";
@@ -102,7 +106,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 CollectiblesItemsList: function() {
-                    return p
+                    return v
                 }
             }), s("794252");
             var a = s("37983"),
@@ -170,7 +174,7 @@
                     })
                 };
 
-            function v(e) {
+            function p(e) {
                 let {
                     listRef: t,
                     items: s,
@@ -216,7 +220,7 @@
                     })).otherwise(() => null))
                 })
             }
-            let p = e => {
+            let v = e => {
                 let {
                     items: t,
                     isFetching: s,
@@ -228,7 +232,7 @@
                 if (s) return (0, a.jsx)(u.Spinner, {
                     className: S.loading
                 });
-                let d = (e, s) => (0, a.jsx)(v, {
+                let d = (e, s) => (0, a.jsx)(p, {
                     listRef: c,
                     items: t,
                     selectedItem: r,
@@ -275,7 +279,7 @@
                 x = s("782340"),
                 A = s("95194");
 
-            function v(e) {
+            function p(e) {
                 let {
                     onClose: t,
                     markAsDismissed: s
@@ -302,15 +306,17 @@
                 })
             }
 
-            function p(e) {
+            function v(e) {
                 let {
                     selectedItem: t,
                     setSelectedItem: s
                 } = e, o = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
                     categories: n,
                     isFetching: d
-                } = (0, h.useMaybeFetchCollectiblesCategories)(), m = f.default.canUsePremiumProfileCustomization(o), I = i.useMemo(() => (0, g.sortAvatarDecorationsByPopularity)((0, g.getAvatarDecorationsFromCategories)(n)).slice(0, 12), [n]), v = i.useMemo(() => (0, g.sortProfileEffectsByPopularity)((0, g.getProfileEffectsFromCategories)(n)).slice(0, 12), [n]);
-                return null == o ? null : (0, a.jsxs)(l.ModalContent, {
+                } = (0, h.useMaybeFetchCollectiblesCategories)(), m = f.default.canUsePremiumProfileCustomization(o), I = i.useMemo(() => (0, g.sortAvatarDecorationsByPopularity)((0, g.getAvatarDecorationsFromCategories)(n)).slice(0, 12), [n]), p = i.useMemo(() => (0, g.sortProfileEffectsByPopularity)((0, g.getProfileEffectsFromCategories)(n)).slice(0, 12), [n]);
+                return (i.useEffect(() => {
+                    0 !== I.length && s(I[0])
+                }, [I, s]), null == o) ? null : (0, a.jsxs)(l.ModalContent, {
                     className: A.modalContent,
                     children: [(0, a.jsxs)("div", {
                         children: [(0, a.jsx)(l.FormTitle, {
@@ -346,7 +352,7 @@
                             className: A.title,
                             children: x.default.Messages.USER_SETTINGS_PROFILE_EFFECT
                         }), (0, a.jsx)(S.CollectiblesItemsList, {
-                            items: v,
+                            items: p,
                             isFetching: d,
                             selectedItem: t,
                             setSelectedItem: s,
@@ -396,10 +402,10 @@
                     transitionState: t,
                     size: l.ModalSize.DYNAMIC,
                     className: A.modal,
-                    children: [(0, a.jsx)(v, {
+                    children: [(0, a.jsx)(p, {
                         onClose: s,
                         markAsDismissed: r
-                    }), (0, a.jsx)(p, {
+                    }), (0, a.jsx)(v, {
                         selectedItem: o,
                         setSelectedItem: n
                     }), (0, a.jsx)(T, {
