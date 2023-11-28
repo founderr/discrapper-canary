@@ -4062,7 +4062,7 @@
             }
 
             function u(e) {
-                return e.some(e => "spoiler" === e.type && Array.isArray(e.content) && e.content.some(e => "link" === e.type))
+                return e.some(e => "spoiler" === e.type && Array.isArray(e.content) && e.content.some(e => "link" === e.type || "attachmentLink" === e.type))
             }
         },
         232268: function(e, t, r) {
