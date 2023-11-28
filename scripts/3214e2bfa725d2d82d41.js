@@ -188,6 +188,18 @@
             "use strict";
             e.exports = n.p + "1a7be5edb7c525306752.gif"
         },
+        200546: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "b2ff1648395d7d98477e.png"
+        },
+        571104: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "c59ef4f6c7e2543b69fa.png"
+        },
+        431616: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "b873355451ce01e40054.png"
+        },
         753656: function(e, t, n) {
             "use strict";
             e.exports = n.p + "b5d783ec63935c198d5e.png"
@@ -1738,7 +1750,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "249043"
+                        buildNumber: "249048"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -2793,7 +2805,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return ey
+                    return ex
                 }
             }), n("222007");
             var a = n("37983"),
@@ -2818,71 +2830,72 @@
                 m = n("813531"),
                 p = n("21526"),
                 g = n("45062"),
-                R = n("96362"),
-                O = n("232374"),
-                L = n("833514"),
-                v = n("20606"),
-                M = n("509802"),
-                P = n("785770"),
-                D = n("260488"),
-                y = n("639547"),
-                x = n("775032"),
-                U = n("25132"),
-                b = n("300962"),
-                G = n("154889"),
-                j = n("917247"),
-                w = n("801388"),
-                k = n("770469"),
-                F = n("641078"),
-                B = n("773367"),
-                H = n("266782"),
-                V = n("367226"),
-                Y = n("104589"),
-                W = n("393027"),
-                K = n("12896"),
-                z = n("161778"),
-                q = n("845579"),
-                Q = n("686470"),
-                Z = n("27618"),
-                X = n("697218"),
-                J = n("160299"),
-                $ = n("521012"),
-                ee = n("791823"),
-                et = n("552712"),
-                en = n("330338"),
-                ea = n("311450"),
-                es = n("743826"),
-                el = n("774223"),
-                ei = n("880013"),
-                er = n("556081"),
-                eo = n("216422"),
-                eu = n("155207"),
-                ed = n("564875"),
-                ec = n("956089"),
-                eE = n("719923"),
-                ef = n("882941"),
-                e_ = n("570687"),
-                eC = n("631316"),
-                eh = n("524110"),
-                eI = n("49111"),
-                eT = n("782340"),
-                eS = n("592265");
-            let eA = e => {
+                R = n("252551"),
+                O = n("710342"),
+                L = n("232374"),
+                v = n("833514"),
+                M = n("20606"),
+                P = n("509802"),
+                D = n("785770"),
+                y = n("260488"),
+                x = n("639547"),
+                U = n("775032"),
+                b = n("25132"),
+                G = n("300962"),
+                j = n("154889"),
+                w = n("917247"),
+                k = n("801388"),
+                F = n("770469"),
+                B = n("641078"),
+                H = n("773367"),
+                V = n("266782"),
+                Y = n("367226"),
+                W = n("104589"),
+                K = n("393027"),
+                z = n("12896"),
+                q = n("161778"),
+                Q = n("845579"),
+                Z = n("686470"),
+                X = n("27618"),
+                J = n("697218"),
+                $ = n("160299"),
+                ee = n("521012"),
+                et = n("791823"),
+                en = n("552712"),
+                ea = n("330338"),
+                es = n("311450"),
+                el = n("743826"),
+                ei = n("774223"),
+                er = n("880013"),
+                eo = n("556081"),
+                eu = n("216422"),
+                ed = n("155207"),
+                ec = n("564875"),
+                eE = n("956089"),
+                ef = n("719923"),
+                e_ = n("882941"),
+                eC = n("570687"),
+                eh = n("631316"),
+                eI = n("524110"),
+                eT = n("49111"),
+                eS = n("782340"),
+                eA = n("592265");
+            let eN = e => {
                     let {
                         selected: t,
                         ...n
-                    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([Z.default], () => Z.default.getPendingCount()), i = (0, m.default)(), {
+                    } = e, s = (0, o.useListItem)("friends"), l = (0, d.useStateFromStores)([X.default], () => X.default.getPendingCount()), i = (0, m.default)(), {
                         canViewBroadcasts: r
                     } = A.default.useExperiment({
                         location: "friends_tab_no_track"
                     }), u = (0, N.default)();
-                    return (0, a.jsxs)(e_.LinkButton, {
+                    return (0, a.jsxs)(eC.LinkButton, {
                         selected: t,
-                        route: eI.Routes.FRIENDS,
-                        icon: ed.default,
-                        text: eT.default.Messages.FRIENDS,
+                        route: eT.Routes.FRIENDS,
+                        icon: ec.default,
+                        text: eS.default.Messages.FRIENDS,
                         onClick: () => {
-                            T.default.trackWithMetadata(eI.AnalyticEvents.BROADCAST_LIST_VISITED, {
+                            T.default.trackWithMetadata(eT.AnalyticEvents.BROADCAST_LIST_VISITED, {
                                 num_active_broadcasts: i.length,
                                 friends_tab_clicked: !0,
                                 is_broadcasting: u
@@ -2890,79 +2903,79 @@
                         },
                         ...n,
                         ...s,
-                        children: [i.length > 0 && r && (0, a.jsx)(ec.TextBadge, {
-                            color: v.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND,
+                        children: [i.length > 0 && r && (0, a.jsx)(eE.TextBadge, {
+                            color: M.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND,
                             text: (0, a.jsxs)("div", {
-                                className: eS.broadcastingBadge,
-                                children: [(0, a.jsx)(el.default, {
-                                    className: eS.broadcastingIcon
+                                className: eA.broadcastingBadge,
+                                children: [(0, a.jsx)(ei.default, {
+                                    className: eA.broadcastingIcon
                                 }), (0, a.jsx)(f.Text, {
                                     variant: "text-xs/semibold",
                                     color: "always-white",
                                     children: i.length.toLocaleString()
                                 })]
                             })
-                        }), l > 0 ? (0, a.jsx)(ec.NumberBadge, {
+                        }), l > 0 ? (0, a.jsx)(eE.NumberBadge, {
                             count: l
                         }) : null]
                     })
                 },
-                eN = e => {
+                em = e => {
                     let {
                         selected: t,
                         hideGameUpdateProgressIndicator: n,
                         ...s
                     } = e, l = (0, o.useListItem)("library");
-                    return (0, a.jsx)(e_.LinkButton, {
+                    return (0, a.jsx)(eC.LinkButton, {
                         selected: t,
-                        route: eI.Routes.APPLICATION_LIBRARY,
-                        icon: ei.default,
-                        text: eT.default.Messages.LIBRARY,
+                        route: eT.Routes.APPLICATION_LIBRARY,
+                        icon: er.default,
+                        text: eS.default.Messages.LIBRARY,
                         ...s,
                         ...l,
-                        children: (0, a.jsx)(eh.default, {
-                            className: i(eS.downloadProgressCircle, {
-                                [eS.hideGameUpdateProgressIndicator]: n
+                        children: (0, a.jsx)(eI.default, {
+                            className: i(eA.downloadProgressCircle, {
+                                [eA.hideGameUpdateProgressIndicator]: n
                             })
                         })
                     })
                 },
-                em = e => {
+                ep = e => {
                     let t, n, {
                             selected: s,
                             route: l,
                             locationState: i,
                             ...r
                         } = e,
-                        u = (0, d.useStateFromStores)([X.default], () => X.default.getCurrentUser()),
-                        c = (0, d.useStateFromStores)([$.default], () => $.default.getPremiumTypeSubscription()),
+                        u = (0, d.useStateFromStores)([J.default], () => J.default.getCurrentUser()),
+                        c = (0, d.useStateFromStores)([ee.default], () => ee.default.getPremiumTypeSubscription()),
                         E = (0, o.useListItem)("nitro"),
-                        f = (0, j.usePremiumTrialOffer)(),
-                        _ = (0, G.usePremiumDiscountOffer)(),
-                        C = (0, d.useStateFromStores)([J.default], () => J.default.isLocalizedPromoEnabled),
+                        f = (0, w.usePremiumTrialOffer)(),
+                        _ = (0, j.usePremiumDiscountOffer)(),
+                        C = (0, d.useStateFromStores)([$.default], () => $.default.isLocalizedPromoEnabled),
                         h = C && null == f,
-                        I = (0, F.useIsEligibleForBogoPromotion)(),
-                        T = (0, V.default)(),
+                        I = (0, B.useIsEligibleForBogoPromotion)(),
+                        T = (0, Y.default)(),
                         {
                             enabled: S
-                        } = (0, b.default)(),
-                        A = s || null != f || null != _ || I || T || null != u && Date.now() - u.createdAt.getTime() > 2592e6 || (0, eE.hasPremiumSubscriptionToDisplay)(u, c);
-                    return A && (!S || s) ? (I ? n = (0, a.jsx)(w.default, {
+                        } = (0, G.default)(),
+                        A = s || null != f || null != _ || I || T || null != u && Date.now() - u.createdAt.getTime() > 2592e6 || (0, ef.hasPremiumSubscriptionToDisplay)(u, c);
+                    return A && (!S || s) ? (I ? n = (0, a.jsx)(k.default, {
                         isNitroTab: !0
-                    }) : T ? n = (0, a.jsx)(H.default, {}) : null != _ ? n = (0, a.jsx)(B.PremiumDiscountOfferTabBadge, {
+                    }) : T ? n = (0, a.jsx)(V.default, {}) : null != _ ? n = (0, a.jsx)(H.PremiumDiscountOfferTabBadge, {
                         userDiscount: _,
                         isTabSelected: s,
                         includesAmountOff: !1
-                    }) : null != f ? n = (0, a.jsx)(B.PremiumTrialOfferTabBadge, {
+                    }) : null != f ? n = (0, a.jsx)(H.PremiumTrialOfferTabBadge, {
                         trialOffer: f,
                         isTabSelected: s
-                    }) : h && (n = (0, a.jsx)(k.LocalizedPricingBadgeIcon, {
-                        entryPoint: k.BadgeEntryPoint.PrivateMessages
-                    }), !s && (t = eS.localizedPricingBadge)), (0, a.jsx)(e_.LinkButton, {
+                    }) : h && (n = (0, a.jsx)(F.LocalizedPricingBadgeIcon, {
+                        entryPoint: F.BadgeEntryPoint.PrivateMessages
+                    }), !s && (t = eA.localizedPricingBadge)), (0, a.jsx)(eC.LinkButton, {
                         selected: s,
                         route: l,
-                        icon: eo.default,
-                        text: eT.default.Messages.PREMIUM,
+                        icon: eu.default,
+                        text: eS.default.Messages.PREMIUM,
                         locationState: i,
                         ...r,
                         ...E,
@@ -2970,53 +2983,53 @@
                         children: n
                     })) : null
                 },
-                ep = e => {
+                eg = e => {
                     let {
                         selected: t,
                         route: n,
                         locationState: s,
                         ...l
-                    } = e, r = (0, o.useListItem)("activities"), u = (0, d.useStateFromStores)([z.default], () => z.default.getState().theme), c = (0, h.useActivitiesWhatsNewCount)();
-                    return (0, a.jsx)(e_.LinkButton, {
+                    } = e, r = (0, o.useListItem)("activities"), u = (0, d.useStateFromStores)([q.default], () => q.default.getState().theme), c = (0, h.useActivitiesWhatsNewCount)();
+                    return (0, a.jsx)(eC.LinkButton, {
                         selected: t,
                         route: n,
-                        icon: ea.default,
-                        iconClassName: i(eS.activitiesBirthdayIcon, {
-                            [eS.activitiesBirthdayIconLight]: "light" === u
+                        icon: es.default,
+                        iconClassName: i(eA.activitiesBirthdayIcon, {
+                            [eA.activitiesBirthdayIconLight]: "light" === u
                         }),
-                        text: eT.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_TAB_TITLE,
+                        text: eS.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_TAB_TITLE,
                         locationState: s,
                         ...l,
                         ...r,
-                        children: c > 0 ? (0, a.jsx)(ec.NumberBadge, {
+                        children: c > 0 ? (0, a.jsx)(eE.NumberBadge, {
                             count: c
                         }) : null
                     })
                 },
-                eg = e => {
+                eR = e => {
                     let {
                         selected: t
-                    } = e, n = (0, D.useMessageRequestsCount)(), s = (0, o.useListItem)("messageRequests"), {
+                    } = e, n = (0, y.useMessageRequestsCount)(), s = (0, o.useListItem)("messageRequests"), {
                         channelId: l
-                    } = (0, P.useMessageRequestSidebarState)(), i = (0, y.useShouldShowMessageRequestsRow)();
+                    } = (0, D.useMessageRequestSidebarState)(), i = (0, x.useShouldShowMessageRequestsRow)();
                     if (!i) return null;
-                    let r = null == l ? void 0 : () => _.default.preload(eI.ME, l);
-                    return (0, a.jsx)(e_.LinkButton, {
+                    let r = null == l ? void 0 : () => _.default.preload(eT.ME, l);
+                    return (0, a.jsx)(eC.LinkButton, {
                         selected: t,
-                        route: eI.Routes.MESSAGE_REQUESTS,
-                        icon: er.default,
-                        text: eT.default.Messages.MESSAGE_REQUESTS,
+                        route: eT.Routes.MESSAGE_REQUESTS,
+                        icon: eo.default,
+                        text: eS.default.Messages.MESSAGE_REQUESTS,
                         onClick: r,
                         ...s,
-                        children: n > 0 ? (0, a.jsx)(ec.NumberBadge, {
+                        children: n > 0 ? (0, a.jsx)(eE.NumberBadge, {
                             count: n
                         }) : null
                     })
                 },
-                eR = () => ((0, V.useClearNewBadge)(), (0, a.jsx)(ec.PremiumBadge, {
-                    text: eT.default.Messages.NEW
+                eO = () => ((0, Y.useClearNewBadge)(), (0, a.jsx)(eE.PremiumBadge, {
+                    text: eS.default.Messages.NEW
                 })),
-                eO = e => {
+                eL = e => {
                     let {
                         selected: t,
                         locationState: n
@@ -3025,11 +3038,11 @@
                     } = (0, S.default)(l), {
                         collectiblesShopTabNewBadge: r,
                         dismissCollectiblesShopTabNewBadge: u
-                    } = (0, L.default)(), d = (0, O.default)(), E = (0, a.jsx)(e_.LinkButton, {
+                    } = (0, v.default)(), d = (0, L.default)(), E = (0, a.jsx)(eC.LinkButton, {
                         selected: t,
-                        route: eI.Routes.COLLECTIBLES_SHOP,
-                        icon: es.default,
-                        text: eT.default.Messages.COLLECTIBLES_SHOP,
+                        route: eT.Routes.COLLECTIBLES_SHOP,
+                        icon: el.default,
+                        text: eS.default.Messages.COLLECTIBLES_SHOP,
                         onClick: () => {
                             (0, p.openCollectiblesShop)({
                                 openInLayer: !1,
@@ -3039,26 +3052,24 @@
                         },
                         locationState: n,
                         ...s,
-                        children: null != r && (0, a.jsx)(eR, {})
+                        children: null != r && (0, a.jsx)(eO, {})
                     });
                     return d !== c.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_NITRO_ONLY_COACHMARK && d !== c.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK ? E : (0, a.jsx)(f.Popout, {
-                        renderPopout: () => (0, a.jsx)(R.default, {
-                            dismissibleContent: d
-                        }),
+                        renderPopout: () => d === c.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_NITRO_ONLY_COACHMARK ? (0, a.jsx)(O.default, {}) : (0, a.jsx)(R.default, {}),
                         animation: f.Popout.Animation.TRANSLATE,
                         align: "top",
                         shouldShow: !0,
                         children: () => E
                     })
                 },
-                eL = e => {
+                ev = e => {
                     let {
                         selected: t
-                    } = e, n = eT.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.useListItem)("family-center"), i = q.FamilyCenterEnabled.useSetting(), r = (0, x.default)(), [u, d] = s.useState(!0);
-                    return i && r ? (0, a.jsx)(e_.LinkButton, {
+                    } = e, n = eS.default.Messages.FAMILY_CENTER_SIDEBAR_TITLE, l = (0, o.useListItem)("family-center"), i = Q.FamilyCenterEnabled.useSetting(), r = (0, U.default)(), [u, d] = s.useState(!0);
+                    return i && r ? (0, a.jsx)(eC.LinkButton, {
                         selected: t,
-                        route: eI.Routes.FAMILY_CENTER,
-                        icon: eu.default,
+                        route: eT.Routes.FAMILY_CENTER,
+                        icon: ed.default,
                         text: n,
                         onMouseEnter: () => {
                             d(!0)
@@ -3066,18 +3077,18 @@
                         onMouseLeave: () => {
                             d(!1)
                         },
-                        interactiveClassName: eS.familyCenterLinkButton,
+                        interactiveClassName: eA.familyCenterLinkButton,
                         ...l,
-                        children: (0, a.jsx)(ev, {
+                        children: (0, a.jsx)(eM, {
                             isParentHovered: u
                         })
                     }) : null
                 },
-                ev = e => {
+                eM = e => {
                     let {
                         isParentHovered: t
-                    } = e, s = (0, U.usePendingRequestCount)();
-                    return t ? (0, a.jsx)(e_.CloseButton, {
+                    } = e, s = (0, b.usePendingRequestCount)();
+                    return t ? (0, a.jsx)(eC.CloseButton, {
                         onClick: () => {
                             (0, E.openModalLazy)(async () => {
                                 let {
@@ -3088,47 +3099,47 @@
                                 })
                             })
                         },
-                        "aria-label": eT.default.Messages.CLOSE
+                        "aria-label": eS.default.Messages.CLOSE
                     }) : s > 0 ? (0, a.jsx)("div", {
-                        className: eS.familyCenterPendingBadge,
-                        children: (0, a.jsx)(ec.NumberBadge, {
+                        className: eA.familyCenterPendingBadge,
+                        children: (0, a.jsx)(eE.NumberBadge, {
                             count: s
                         })
-                    }) : (0, a.jsx)(M.default, {
+                    }) : (0, a.jsx)(P.default, {
                         contentTypes: [c.DismissibleContent.FAMILY_CENTER_NEW_BADGE],
                         children: e => {
                             let {
                                 visibleContent: t
                             } = e;
-                            return t === c.DismissibleContent.FAMILY_CENTER_NEW_BADGE ? (0, a.jsx)(ec.TextBadge, {
-                                text: eT.default.Messages.NEW,
-                                color: v.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND
+                            return t === c.DismissibleContent.FAMILY_CENTER_NEW_BADGE ? (0, a.jsx)(eE.TextBadge, {
+                                text: eS.default.Messages.NEW,
+                                color: M.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND
                             }) : null
                         }
                     })
                 },
-                eM = () => (0, Y.show)("DM_SEARCH");
+                eP = () => (0, W.show)("DM_SEARCH");
 
-            function eP(e) {
+            function eD(e) {
                 switch (e) {
-                    case eI.Routes.APPLICATION_LIBRARY:
-                        return eI.AnalyticsPages.LIBRARY;
-                    case eI.Routes.FRIENDS:
-                        return eI.AnalyticsPages.FRIENDS_LIST;
-                    case eI.Routes.COLLECTIBLES_SHOP:
-                        return eI.AnalyticsPages.COLLECTIBLES_SHOP
+                    case eT.Routes.APPLICATION_LIBRARY:
+                        return eT.AnalyticsPages.LIBRARY;
+                    case eT.Routes.FRIENDS:
+                        return eT.AnalyticsPages.FRIENDS_LIST;
+                    case eT.Routes.COLLECTIBLES_SHOP:
+                        return eT.AnalyticsPages.COLLECTIBLES_SHOP
                 }
-                if (e.startsWith(eI.Routes.APPLICATION_STORE)) return e === eI.Routes.APPLICATION_STORE ? eI.AnalyticsPages.STORE_DIRECTORY_HOME : e.startsWith(eI.Routes.APPLICATION_STORE) ? eI.AnalyticsPages.STORE_DIRECTORY_BROWSE : eI.AnalyticsPages.STORE_LISTING;
-                return eI.AnalyticsPages.DM_CHANNEL
+                if (e.startsWith(eT.Routes.APPLICATION_STORE)) return e === eT.Routes.APPLICATION_STORE ? eT.AnalyticsPages.STORE_DIRECTORY_HOME : e.startsWith(eT.Routes.APPLICATION_STORE) ? eT.AnalyticsPages.STORE_DIRECTORY_BROWSE : eT.AnalyticsPages.STORE_LISTING;
+                return eT.AnalyticsPages.DM_CHANNEL
             }
-            let eD = e => {
+            let ey = e => {
                 let {
                     showLibrary: t,
                     hasLibraryApplication: n,
                     homeLink: s,
                     storeLink: l,
                     premiumTabSelected: o
-                } = e, [d, c] = (0, W.default)(e => {
+                } = e, [d, c] = (0, K.default)(e => {
                     let {
                         channelId: t,
                         path: n
@@ -3146,93 +3157,93 @@
                     autoTrackExposure: !0
                 });
                 return (0, a.jsxs)("nav", {
-                    className: eS.privateChannels,
-                    "aria-label": eT.default.Messages.PRIVATE_CHANNELS_A11Y_LABEL,
-                    children: [(0, a.jsx)(K.default, {
+                    className: eA.privateChannels,
+                    "aria-label": eS.default.Messages.PRIVATE_CHANNELS_A11Y_LABEL,
+                    children: [(0, a.jsx)(z.default, {
                         tutorialId: "direct-messages",
                         position: "right",
                         offsetX: -52,
                         children: (0, a.jsx)("div", {
-                            className: i(eS.searchBar, {
-                                [eS.themedHeaderMobile]: u.isMobile
+                            className: i(eA.searchBar, {
+                                [eA.themedHeaderMobile]: u.isMobile
                             }),
                             children: (0, a.jsx)("button", {
                                 type: "button",
-                                className: i(eS.searchBarComponent, {
-                                    [eS.themedSearchBarMobile]: u.isMobile
+                                className: i(eA.searchBarComponent, {
+                                    [eA.themedSearchBarMobile]: u.isMobile
                                 }),
-                                onClick: eM,
-                                children: eT.default.Messages.DM_SEARCH_PLACEHOLDER
+                                onClick: eP,
+                                children: eS.default.Messages.DM_SEARCH_PLACEHOLDER
                             })
                         })
-                    }), (0, a.jsxs)(eC.default, {
+                    }), (0, a.jsxs)(eh.default, {
                         ...e,
                         version: c,
                         selectedChannelId: d,
                         showDMHeader: !0,
-                        children: [(0, a.jsx)(eA, {
-                            selected: null != c ? c === eI.Routes.FRIENDS : s === eI.Routes.FRIENDS
-                        }, "friends"), n && t ? (0, a.jsx)(eN, {
-                            selected: null == c ? null != s && s.startsWith(eI.Routes.APPLICATION_LIBRARY) : c.startsWith(eI.Routes.APPLICATION_LIBRARY),
-                            hideGameUpdateProgressIndicator: s === eI.Routes.APPLICATION_LIBRARY
-                        }, "library") : null, (0, a.jsx)(em, {
-                            selected: null == c ? o : c.startsWith(eI.Routes.APPLICATION_STORE),
-                            route: null == l || location.pathname.startsWith(eI.Routes.ACTIVITIES) || location.pathname.startsWith(eI.Routes.APPLICATION_STORE) ? eI.Routes.APPLICATION_STORE : l,
+                        children: [(0, a.jsx)(eN, {
+                            selected: null != c ? c === eT.Routes.FRIENDS : s === eT.Routes.FRIENDS
+                        }, "friends"), n && t ? (0, a.jsx)(em, {
+                            selected: null == c ? null != s && s.startsWith(eT.Routes.APPLICATION_LIBRARY) : c.startsWith(eT.Routes.APPLICATION_LIBRARY),
+                            hideGameUpdateProgressIndicator: s === eT.Routes.APPLICATION_LIBRARY
+                        }, "library") : null, (0, a.jsx)(ep, {
+                            selected: null == c ? o : c.startsWith(eT.Routes.APPLICATION_STORE),
+                            route: null == l || location.pathname.startsWith(eT.Routes.ACTIVITIES) || location.pathname.startsWith(eT.Routes.APPLICATION_STORE) ? eT.Routes.APPLICATION_STORE : l,
                             locationState: {
                                 analyticsSource: {
-                                    page: eP(s),
-                                    section: eI.AnalyticsSections.NAVIGATION,
-                                    object: eI.AnalyticsObjects.NAVIGATION_LINK
+                                    page: eD(s),
+                                    section: eT.AnalyticsSections.NAVIGATION,
+                                    object: eT.AnalyticsObjects.NAVIGATION_LINK
                                 }
                             }
-                        }, "premium"), f ? (0, a.jsx)(ep, {
-                            selected: null != c && c.startsWith(eI.Routes.ACTIVITIES) || null != s && s.startsWith(eI.Routes.ACTIVITIES),
-                            route: eI.Routes.ACTIVITIES,
+                        }, "premium"), f ? (0, a.jsx)(eg, {
+                            selected: null != c && c.startsWith(eT.Routes.ACTIVITIES) || null != s && s.startsWith(eT.Routes.ACTIVITIES),
+                            route: eT.Routes.ACTIVITIES,
                             locationState: {
                                 analyticsSource: {
-                                    page: eP(s),
-                                    section: eI.AnalyticsSections.NAVIGATION,
-                                    object: eI.AnalyticsObjects.NAVIGATION_LINK
+                                    page: eD(s),
+                                    section: eT.AnalyticsSections.NAVIGATION,
+                                    object: eT.AnalyticsObjects.NAVIGATION_LINK
                                 }
                             }
-                        }, "activities") : null, (0, a.jsx)(eg, {
-                            selected: null == c ? null != s && s.startsWith(eI.Routes.MESSAGE_REQUESTS) : c === eI.Routes.MESSAGE_REQUESTS
-                        }, "message-requests"), E ? (0, a.jsx)(eO, {
-                            selected: c === eI.Routes.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(eI.Routes.COLLECTIBLES_SHOP)),
+                        }, "activities") : null, (0, a.jsx)(eR, {
+                            selected: null == c ? null != s && s.startsWith(eT.Routes.MESSAGE_REQUESTS) : c === eT.Routes.MESSAGE_REQUESTS
+                        }, "message-requests"), E ? (0, a.jsx)(eL, {
+                            selected: c === eT.Routes.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(eT.Routes.COLLECTIBLES_SHOP)),
                             locationState: {
                                 analyticsSource: {
-                                    page: eP(s),
-                                    section: eI.AnalyticsSections.NAVIGATION,
-                                    object: eI.AnalyticsObjects.NAVIGATION_LINK
+                                    page: eD(s),
+                                    section: eT.AnalyticsSections.NAVIGATION,
+                                    object: eT.AnalyticsObjects.NAVIGATION_LINK
                                 }
                             }
-                        }, "discord-shop") : null, (0, a.jsx)(eL, {
-                            selected: null != s && s.startsWith(eI.Routes.FAMILY_CENTER) || null != c && c.startsWith(eI.Routes.FAMILY_CENTER)
+                        }, "discord-shop") : null, (0, a.jsx)(ev, {
+                            selected: null != s && s.startsWith(eT.Routes.FAMILY_CENTER) || null != c && c.startsWith(eT.Routes.FAMILY_CENTER)
                         }, "family-center")]
                     })]
                 })
             };
 
-            function ey() {
-                let e = (0, d.useStateFromStores)([en.default], () => en.default.getHomeLink()),
-                    t = (0, d.useStateFromStores)([et.default], () => {
-                        if (e === eI.Routes.APPLICATION_STORE) return !0;
-                        let t = (0, ef.getSKUIdFromURL)(e);
+            function ex() {
+                let e = (0, d.useStateFromStores)([ea.default], () => ea.default.getHomeLink()),
+                    t = (0, d.useStateFromStores)([en.default], () => {
+                        if (e === eT.Routes.APPLICATION_STORE) return !0;
+                        let t = (0, e_.getSKUIdFromURL)(e);
                         if (null != t) {
                             var n, a;
-                            return null !== (a = null === (n = et.default.get(t)) || void 0 === n ? void 0 : n.premium) && void 0 !== a && a
+                            return null !== (a = null === (n = en.default.get(t)) || void 0 === n ? void 0 : n.premium) && void 0 !== a && a
                         }
                         return !1
                     }, [e]),
-                    n = !q.DisableGamesTab.useSetting(),
+                    n = !Q.DisableGamesTab.useSetting(),
                     {
                         theme: s
-                    } = (0, d.useStateFromStoresObject)([z.default], () => ({
-                        theme: z.default.theme
+                    } = (0, d.useStateFromStoresObject)([q.default], () => ({
+                        theme: q.default.theme
                     })),
-                    l = (0, d.useStateFromStores)([Q.default], () => Q.default.hasLibraryApplication()),
-                    i = (0, d.useStateFromStores)([ee.default], () => ee.default.getCurrentPath());
-                return (0, a.jsx)(eD, {
+                    l = (0, d.useStateFromStores)([Z.default], () => Z.default.hasLibraryApplication()),
+                    i = (0, d.useStateFromStores)([et.default], () => et.default.getCurrentPath());
+                return (0, a.jsx)(ey, {
                     theme: s,
                     showLibrary: n,
                     hasLibraryApplication: l,
@@ -12403,6 +12414,49 @@
                 })
             }
         },
+        252551: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return c
+                }
+            });
+            var a = n("37983");
+            n("884691");
+            var s = n("151426"),
+                l = n("812204"),
+                i = n("685665"),
+                r = n("369964"),
+                o = n("21526"),
+                u = n("782340"),
+                d = n("608284"),
+                c = () => {
+                    let {
+                        analyticsLocations: e
+                    } = (0, i.default)(l.default.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP);
+                    return (0, a.jsx)(r.default, {
+                        dismissibleContent: s.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK,
+                        shouldUseHorizontalButtons: !0,
+                        inlineArt: !0,
+                        tryItText: u.default.Messages.CHECK_IT_OUT,
+                        onTryFeature: () => {
+                            (0, o.openCollectiblesShop)({
+                                analyticsLocations: e,
+                                analyticsSource: l.default.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP
+                            })
+                        },
+                        header: u.default.Messages.COLLECTIBLES_GIFT_COACHMARK_HEADING,
+                        body: u.default.Messages.COLLECTIBLES_GIFT_COACHMARK_DESC,
+                        dismissText: u.default.Messages.BACK,
+                        position: "right",
+                        align: "top",
+                        art: (0, a.jsx)("div", {
+                            className: d.art,
+                            children: u.default.Messages.COLLECTIBLES_SHOP_FOR_ALL_NITRO_ONLY_COACHMARK_ART
+                        })
+                    })
+                }
+        },
         806224: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -12581,50 +12635,97 @@
                     })
                 }
         },
-        96362: function(e, t, n) {
+        710342: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return c
+                    return m
                 }
-            });
-            var a = n("37983");
-            n("884691");
-            var s = n("151426"),
-                l = n("812204"),
-                i = n("685665"),
-                r = n("369964"),
-                o = n("21526"),
-                u = n("782340"),
-                d = n("85174"),
-                c = e => {
-                    let {
-                        dismissibleContent: t
-                    } = e, {
-                        analyticsLocations: n
-                    } = (0, i.default)(l.default.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP);
-                    return (0, a.jsx)(r.default, {
-                        dismissibleContent: t,
-                        shouldUseHorizontalButtons: !0,
-                        inlineArt: !0,
-                        tryItText: u.default.Messages.CHECK_IT_OUT,
-                        onTryFeature: () => {
-                            (0, o.openCollectiblesShop)({
-                                analyticsLocations: n,
-                                analyticsSource: l.default.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP
-                            })
-                        },
-                        header: t === s.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_NITRO_ONLY_COACHMARK ? u.default.Messages.USER_PROFILE_SETTINGS_SHOP_FOR_ALL_BANNER_HEADER : u.default.Messages.COLLECTIBLES_GIFT_COACHMARK_HEADING,
-                        body: t === s.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_NITRO_ONLY_COACHMARK ? u.default.Messages.COLLECTIBLES_SHOP_TAB_COACHMARK_SUBHEADER : u.default.Messages.COLLECTIBLES_GIFT_COACHMARK_DESC,
-                        dismissText: u.default.Messages.BACK,
-                        position: "right",
-                        align: "top",
-                        art: (0, a.jsx)("div", {
-                            className: d.art,
-                            children: (s.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_NITRO_ONLY_COACHMARK, u.default.Messages.COLLECTIBLES_SHOP_FOR_ALL_NITRO_ONLY_COACHMARK_ART)
+            }), n("222007");
+            var a, s, l = n("37983"),
+                i = n("884691"),
+                r = n("446674"),
+                o = n("151426"),
+                u = n("77078"),
+                d = n("340066"),
+                c = n("206230"),
+                E = n("812204"),
+                f = n("685665"),
+                _ = n("369964"),
+                C = n("21526"),
+                h = n("782340"),
+                I = n("322853"),
+                T = n("200546"),
+                S = n("571104"),
+                A = n("431616");
+            (s = a || (a = {}))[s.LOADING = 0] = "LOADING", s[s.INTRO = 1] = "INTRO", s[s.IDLE = 2] = "IDLE";
+            let N = (e, t) => {
+                if (t) return A;
+                switch (e) {
+                    case 1:
+                        return S;
+                    case 2:
+                        return T;
+                    default:
+                        return A
+                }
+            };
+            var m = () => {
+                let {
+                    analyticsLocations: e
+                } = (0, f.default)(E.default.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP), t = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion), [n, a] = i.useState(!1), [s, A] = i.useState(!1), m = i.useRef(0), [p, g] = i.useState(0), [R, O] = i.useState(!1);
+                return (0, d.default)(() => O(!0), 2e3), i.useEffect(() => {
+                    if (!R || !n || !s || 0 !== m.current) return;
+                    m.current = 1, g(1);
+                    let e = setTimeout(() => {
+                        g(2), m.current = 2
+                    }, 2880);
+                    return () => clearTimeout(e)
+                }, [R, n, s, m]), (0, d.default)(() => {
+                    m.current = 2, g(2)
+                }, 0 === m.current ? 3e3 : null), (0, l.jsx)(_.default, {
+                    dismissibleContent: o.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_NITRO_ONLY_COACHMARK,
+                    shouldUseHorizontalButtons: !0,
+                    inlineArt: !0,
+                    className: 0 === p ? I.loading : I.coachmark,
+                    artClassName: I.shopArt,
+                    tryItText: h.default.Messages.CHECK_IT_OUT,
+                    onTryFeature: () => {
+                        (0, C.openCollectiblesShop)({
+                            analyticsLocations: e,
+                            analyticsSource: E.default.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP
                         })
+                    },
+                    header: h.default.Messages.USER_PROFILE_SETTINGS_SHOP_FOR_ALL_BANNER_HEADER,
+                    body: (0, l.jsxs)(l.Fragment, {
+                        children: [(0, l.jsx)(u.Text, {
+                            variant: "text-sm/normal",
+                            color: "always-white",
+                            children: h.default.Messages.COLLECTIBLES_SHOP_TAB_COACHMARK_SUBHEADER
+                        }), (0, l.jsxs)("div", {
+                            className: I.imageLoader,
+                            "aria-hidden": !0,
+                            role: "presentation",
+                            children: [(0, l.jsx)("img", {
+                                src: S,
+                                alt: " ",
+                                onLoad: () => a(!0)
+                            }), (0, l.jsx)("img", {
+                                src: T,
+                                alt: " ",
+                                onLoad: () => A(!0)
+                            })]
+                        })]
+                    }),
+                    dismissText: h.default.Messages.BACK,
+                    position: "right",
+                    align: "top",
+                    art: (0, l.jsx)("img", {
+                        alt: " ",
+                        src: N(p, t)
                     })
-                }
+                })
+            }
         },
         171984: function(e, t, n) {
             "use strict";
