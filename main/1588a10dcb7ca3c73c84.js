@@ -23788,11 +23788,13 @@
                     this.index = e, this.useSpriteSheet = !0
                 }
                 constructor(e) {
-                    if (this.emojiObject = e, this.type = a.EmojiTypes.UNICODE, this.uniqueName = e.names[0], this.surrogates = e.surrogates, this.diversityChildren = {}, null != e.diversityChildren)
-                        for (let s of e.diversityChildren) {
-                            let e = s.diversity.join("-");
-                            this.diversityChildren[e] = new w(s)
-                        }
+                    if (this.emojiObject = e, this.type = a.EmojiTypes.UNICODE, this.uniqueName = e.names[0], this.surrogates = e.surrogates, this.diversityChildren = {}, null != e.diversityChildren) {
+                        for (let s of e.diversityChildren)
+                            if (null != s.diversity) {
+                                let e = s.diversity.join("-");
+                                this.diversityChildren[e] = new w(s)
+                            }
+                    }
                 }
             }
             let p = n("838426");
