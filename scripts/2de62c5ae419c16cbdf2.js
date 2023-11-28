@@ -1738,7 +1738,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "248959"
+                        buildNumber: "248977"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -22993,6 +22993,72 @@
                 })
             }
         },
+        760797: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                MIDJOURNEY_GUILD_ID: function() {
+                    return a
+                }
+            });
+            let a = "662267976984297473"
+        },
+        256896: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                isEligibleForMidjourneyOnboarding: function() {
+                    return s
+                }
+            });
+            var a = n("924593");
+
+            function s(e) {
+                let {
+                    enabled: t
+                } = a.MidjourneyOnboardingExperiment.getCurrentConfig({
+                    location: e
+                });
+                return t
+            }
+        },
+        924593: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                MidjourneyOnboardingExperiment: function() {
+                    return s
+                }
+            });
+            var a = n("862205");
+            let s = (0, a.createExperiment)({
+                kind: "user",
+                id: "2023-11_midjourney_onboarding",
+                label: "Midjourney Onboarding",
+                defaultConfig: {
+                    enabled: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "Enables the accelerated Midjourney Onboarding & Discord experience for the user.",
+                    config: {
+                        enabled: !0
+                    }
+                }]
+            })
+        },
+        894887: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                isMidjourneyOnboardingFlow: function() {
+                    return i
+                }
+            }), n("446674");
+            var a = n("305961"),
+                s = n("256896"),
+                l = n("760797");
+
+            function i(e) {
+                return (0, s.isEligibleForMidjourneyOnboarding)(e) && 1 === a.default.getGuildCount() && null != a.default.getGuild(l.MIDJOURNEY_GUILD_ID)
+            }
+        },
         397039: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -25429,7 +25495,7 @@
             let a;
             n.r(t), n.d(t, {
                 default: function() {
-                    return M
+                    return P
                 }
             }), n("222007");
             var s = n("37983");
@@ -25440,85 +25506,86 @@
                 o = n("19009"),
                 u = n("774146"),
                 d = n("233322"),
-                c = n("42963"),
-                E = n("223170"),
-                f = n("59811"),
-                _ = n("341542"),
-                C = n("305961"),
-                h = n("162771"),
-                I = n("697218"),
-                T = n("449008"),
-                S = n("773336"),
-                A = n("165926"),
-                N = n("527441"),
-                m = n("56235"),
-                p = n("218971"),
-                g = n("49111"),
-                R = n("492397"),
-                O = n("149806");
+                c = n("894887"),
+                E = n("42963"),
+                f = n("223170"),
+                _ = n("59811"),
+                C = n("341542"),
+                h = n("305961"),
+                I = n("162771"),
+                T = n("697218"),
+                S = n("449008"),
+                A = n("773336"),
+                N = n("165926"),
+                m = n("527441"),
+                p = n("56235"),
+                g = n("218971"),
+                R = n("49111"),
+                O = n("492397"),
+                L = n("149806");
 
-            function L() {
+            function v() {
                 null != a && (0, l.closeModal)(a)
             }
-            class v extends r.default {
+            class M extends r.default {
                 _initialize() {
-                    i.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.subscribe("LOGOUT", L)
+                    i.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.subscribe("LOGOUT", v)
                 }
                 _terminate() {
-                    i.default.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.unsubscribe("LOGOUT", L)
+                    i.default.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.unsubscribe("LOGOUT", v)
                 }
                 handleConnectionOpen() {
                     var e;
-                    let t, i = N.default.getType();
+                    let t, i = m.default.getType();
                     if (null == i) return;
                     switch (i) {
-                        case m.NewUserTypes.INVITE_UNCLAIMED:
-                            c.default.flowStart(O.FlowType.INVITE, O.RegistrationSteps.NUF_STARTED);
+                        case p.NewUserTypes.INVITE_UNCLAIMED:
+                            E.default.flowStart(L.FlowType.INVITE, L.RegistrationSteps.NUF_STARTED);
                             break;
-                        case m.NewUserTypes.ORGANIC_REGISTERED:
-                            c.default.flowStart(O.FlowType.ORGANIC, O.RegistrationSteps.NUF_STARTED);
+                        case p.NewUserTypes.ORGANIC_REGISTERED:
+                            E.default.flowStart(L.FlowType.ORGANIC, L.RegistrationSteps.NUF_STARTED);
                             break;
-                        case m.NewUserTypes.MARKETING_UNCLAIMED:
-                            c.default.flowStart(O.FlowType.ORGANIC_MARKETING, O.RegistrationSteps.NUF_STARTED)
+                        case p.NewUserTypes.MARKETING_UNCLAIMED:
+                            E.default.flowStart(L.FlowType.ORGANIC_MARKETING, L.RegistrationSteps.NUF_STARTED)
                     }
                     let r = !1,
-                        L = h.default.getGuildId();
-                    if (i === m.NewUserTypes.INVITE_UNCLAIMED) {
-                        let e = C.default.getGuild(L);
-                        (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
+                        v = I.default.getGuildId();
+                    if (i === p.NewUserTypes.INVITE_UNCLAIMED) {
+                        let e = h.default.getGuild(v);
+                        (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, f.fetchWelcomeScreen)(e.id))
                     }
-                    let v = () => 0 === _.default.totalGuilds && !S.isPlatformEmbedded,
-                        M = o.userNeedsAgeGate();
+                    let M = () => 0 === C.default.totalGuilds && !A.isPlatformEmbedded,
+                        P = o.userNeedsAgeGate();
                     e = [{
                         key: "Unified NUF Modal",
                         open: async function e(e) {
                             let t = e => {
                                 switch (e) {
-                                    case p.NUFSlides.AGE_GATE:
-                                        c.default.flowStep(O.FlowType.ANY, O.RegistrationSteps.AGE_GATE);
+                                    case g.NUFSlides.AGE_GATE:
+                                        E.default.flowStep(L.FlowType.ANY, L.RegistrationSteps.AGE_GATE);
                                         break;
-                                    case p.NUFSlides.CHOOSE_TEMPLATE:
-                                        c.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.GUILD_TEMPLATES);
+                                    case g.NUFSlides.CHOOSE_TEMPLATE:
+                                        E.default.flowStep(L.FlowType.ANY, L.CreateGuildSteps.GUILD_TEMPLATES);
                                         break;
-                                    case p.NUFSlides.CUSTOMIZE_GUILD:
-                                        c.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.GUILD_CREATE);
+                                    case g.NUFSlides.CUSTOMIZE_GUILD:
+                                        E.default.flowStep(L.FlowType.ANY, L.CreateGuildSteps.GUILD_CREATE);
                                         break;
-                                    case p.NUFSlides.CHANNEL_PROMPT:
-                                        c.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.CHANNEL_PROMPT);
+                                    case g.NUFSlides.CHANNEL_PROMPT:
+                                        E.default.flowStep(L.FlowType.ANY, L.CreateGuildSteps.CHANNEL_PROMPT);
                                         break;
-                                    case p.NUFSlides.JOIN_GUILD:
-                                        c.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.JOIN_GUILD);
+                                    case g.NUFSlides.JOIN_GUILD:
+                                        E.default.flowStep(L.FlowType.ANY, L.CreateGuildSteps.JOIN_GUILD);
                                         break;
-                                    case p.NUFSlides.CREATION_INTENT:
-                                        c.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.CREATION_INTENT);
+                                    case g.NUFSlides.CREATION_INTENT:
+                                        E.default.flowStep(L.FlowType.ANY, L.CreateGuildSteps.CREATION_INTENT);
                                         break;
-                                    case p.NUFSlides.COMPLETE:
-                                        c.default.flowStep(O.FlowType.ANY, O.CreateGuildSteps.SUCCESS);
+                                    case g.NUFSlides.COMPLETE:
+                                        E.default.flowStep(L.FlowType.ANY, L.CreateGuildSteps.SUCCESS);
                                         break;
                                     case null:
                                         break;
                                     default:
-                                        T.assertNever(e)
+                                        S.assertNever(e)
                                 }
                             };
                             a = await (0, l.openModalLazy)(async () => {
@@ -25530,29 +25597,29 @@
                                     onSlideChange: t
                                 })
                             }, {
-                                onCloseRequest: g.NOOP,
+                                onCloseRequest: R.NOOP,
                                 onCloseCallback: e,
                                 modalKey: a
                             })
                         },
-                        predicate: () => v() && !R.CONFERENCE_MODE_ENABLED
+                        predicate: () => M() && !O.CONFERENCE_MODE_ENABLED
                     }, {
                         key: "New User Age Gate",
                         open: u.openNewUserAgeGateModal,
-                        predicate: () => M && !v() && !R.CONFERENCE_MODE_ENABLED
+                        predicate: () => P && !M() && !O.CONFERENCE_MODE_ENABLED
                     }, {
                         key: "Claim Account Modal",
-                        open: e => u.openClaimAccountModal(S.isPlatformEmbedded, e),
+                        open: e => u.openClaimAccountModal(A.isPlatformEmbedded, e),
                         predicate: () => {
                             var e;
-                            return !r && null != I.default.getCurrentUser() && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED
+                            return !r && null != T.default.getCurrentUser() && !(null === (e = T.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !O.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
                         }
                     }, {
                         key: "Verification Gate with Claim Account",
-                        open: e => (0, d.openMemberVerificationModal)(L, null != e ? e : void 0),
+                        open: e => (0, d.openMemberVerificationModal)(v, null != e ? e : void 0),
                         predicate: () => {
                             var e;
-                            return r && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !R.CONFERENCE_MODE_ENABLED
+                            return r && !(null === (e = T.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !O.CONFERENCE_MODE_ENABLED
                         }
                     }, {
                         key: "Guild Welcome Modal",
@@ -25562,14 +25629,14 @@
                             } = await n.el("900257").then(n.bind(n, "900257"));
                             return t => (0, s.jsx)(e, {
                                 ...t,
-                                guildId: L
+                                guildId: v
                             })
                         }, {
                             onCloseCallback: e
                         }),
-                        predicate: () => null != L && null != f.default.get(L) && f.default.get(L) !== f.NO_WELCOME_SCREEN
+                        predicate: () => null != v && null != _.default.get(v) && _.default.get(v) !== _.NO_WELCOME_SCREEN
                     }], t = () => {
-                        A.setNewUserFlowCompleted(), c.default.flowStep(O.FlowType.ANY, O.RegistrationSteps.NUF_COMPLETE, !0)
+                        N.setNewUserFlowCompleted(), E.default.flowStep(L.FlowType.ANY, L.RegistrationSteps.NUF_COMPLETE, !0)
                     }, [...e].reverse().forEach(e => {
                         let n = t;
                         t = () => {
@@ -25578,7 +25645,7 @@
                     }), t()
                 }
             }
-            var M = new v
+            var P = new M
         },
         710768: function(e, t, n) {
             "use strict";
