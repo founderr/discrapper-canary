@@ -315,7 +315,7 @@
                 } = e, o = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
                     categories: c,
                     isFetching: d
-                } = (0, h.useMaybeFetchCollectiblesCategories)(), m = f.default.canUsePremiumProfileCustomization(o), A = a.useMemo(() => (0, g.sortAvatarDecorationsByPopularity)((0, g.getAvatarDecorationsFromCategories)(c).slice(0, 12)), [c]), x = a.useMemo(() => (0, g.sortProfileEffectsByPopularity)((0, g.getProfileEffectsFromCategories)(c).slice(0, 12)), [c]);
+                } = (0, h.useMaybeFetchCollectiblesCategories)(), m = f.default.canUsePremiumProfileCustomization(o), A = a.useMemo(() => (0, g.sortAvatarDecorationsByPopularity)((0, g.getAvatarDecorationsFromCategories)(c)).slice(0, 12), [c]), x = a.useMemo(() => (0, g.sortProfileEffectsByPopularity)((0, g.getProfileEffectsFromCategories)(c)).slice(0, 12), [c]);
                 return null == o ? null : (0, i.jsxs)(l.ModalContent, {
                     className: v.modalContent,
                     children: [(0, i.jsxs)("div", {
