@@ -1,20 +1,20 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["20990"], {
+    ["64311"], {
         717837: function(e, t, n) {
             "use strict";
             e.exports = function(e) {
-                return (e = String(e || ""), s.test(e)) ? "rtl" : l.test(e) ? "ltr" : "neutral"
+                return (e = String(e || ""), l.test(e)) ? "rtl" : s.test(e) ? "ltr" : "neutral"
             };
             var i = "֑-߿יִ-﷽ﹰ-ﻼ",
                 r = "A-Za-z\xc0-\xd6\xd8-\xf6\xf8-ʸ̀-֐ࠀ-῿‎Ⰰ-﬜︀-﹯﻽-￿",
-                s = RegExp("^[^" + r + "]*[" + i + "]"),
-                l = RegExp("^[^" + i + "]*[" + r + "]")
+                l = RegExp("^[^" + r + "]*[" + i + "]"),
+                s = RegExp("^[^" + i + "]*[" + r + "]")
         },
         111633: function(e, t, n) {
             "use strict";
             e.exports = function(e) {
                 var t, n;
-                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), x.test(e) ? e = e.substr(0, e.length - 2) : E.test(e) && (e = e.substr(0, e.length - 1)), (n = h.exec(e)) ? o.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = v.exec(e)) && c.test(n[1]) && (e = n[1], g.test(e) ? e += "e" : C.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = b.exec(e)) && c.test(n[1]) && (e = n[1] + "i"), (n = M.exec(e)) && o.test(n[1]) && (e = n[1] + i[n[2]]), (n = N.exec(e)) && o.test(n[1]) && (e = n[1] + r[n[2]]), (n = R.exec(e)) ? d.test(n[1]) && (e = n[1]) : (n = _.exec(e)) && d.test(n[1]) && (e = n[1]), (n = p.exec(e)) && (d.test(n[1]) || u.test(n[1]) && !f.test(n[1])) && (e = n[1]), m.test(e) && d.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
+                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), x.test(e) ? e = e.substr(0, e.length - 2) : E.test(e) && (e = e.substr(0, e.length - 1)), (n = h.exec(e)) ? o.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = g.exec(e)) && c.test(n[1]) && (e = n[1], b.test(e) ? e += "e" : C.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = _.exec(e)) && c.test(n[1]) && (e = n[1] + "i"), (n = M.exec(e)) && o.test(n[1]) && (e = n[1] + i[n[2]]), (n = N.exec(e)) && o.test(n[1]) && (e = n[1] + r[n[2]]), (n = y.exec(e)) ? d.test(n[1]) && (e = n[1]) : (n = v.exec(e)) && d.test(n[1]) && (e = n[1]), (n = p.exec(e)) && (d.test(n[1]) || u.test(n[1]) && !f.test(n[1])) && (e = n[1]), m.test(e) && d.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
             };
             var i = {
                     ational: "ate",
@@ -48,27 +48,27 @@
                     ful: "",
                     ness: ""
                 },
-                s = "[aeiouy]",
-                l = "([^aeiou][^aeiouy]*)",
-                a = "(" + s + "[aeiou]*)",
-                o = RegExp("^" + l + "?" + a + l),
-                u = RegExp("^" + l + "?" + a + l + a + "?$"),
-                d = RegExp("^" + l + "?(" + a + l + "){2,}"),
-                c = RegExp("^" + l + "?" + s),
-                f = RegExp("^" + l + s + "[^aeiouwxy]$"),
+                l = "[aeiouy]",
+                s = "([^aeiou][^aeiouy]*)",
+                a = "(" + l + "[aeiou]*)",
+                o = RegExp("^" + s + "?" + a + s),
+                u = RegExp("^" + s + "?" + a + s + a + "?$"),
+                d = RegExp("^" + s + "?(" + a + s + "){2,}"),
+                c = RegExp("^" + s + "?" + l),
+                f = RegExp("^" + s + l + "[^aeiouwxy]$"),
                 m = /ll$/,
                 p = /^(.+?)e$/,
-                b = /^(.+?)y$/,
-                _ = /^(.+?(s|t))(ion)$/,
-                v = /^(.+?)(ed|ing)$/,
-                g = /(at|bl|iz)$/,
+                _ = /^(.+?)y$/,
+                v = /^(.+?(s|t))(ion)$/,
+                g = /^(.+?)(ed|ing)$/,
+                b = /(at|bl|iz)$/,
                 h = /^(.+?)eed$/,
                 E = /^.+?[^s]s$/,
                 x = /^.+?(ss|i)es$/,
                 C = /([^aeiouylsz])\1$/,
                 M = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
                 N = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
-                R = RegExp("^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$")
+                y = RegExp("^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$")
         },
         949041: function(e, t, n) {
             "use strict";
@@ -86,11 +86,11 @@
                         let {
                             initialStore: n,
                             createStore: r,
-                            children: s
-                        } = t, l = (0, i.useRef)();
-                        return !l.current && (n && (console.warn("Provider initialStore is deprecated and will be removed in the next version."), !r && (r = () => n)), l.current = r()), (0, i.createElement)(e.Provider, {
-                            value: l.current
-                        }, s)
+                            children: l
+                        } = t, s = (0, i.useRef)();
+                        return !s.current && (n && (console.warn("Provider initialStore is deprecated and will be removed in the next version."), !r && (r = () => n)), s.current = r()), (0, i.createElement)(e.Provider, {
+                            value: s.current
+                        }, l)
                     },
                     useStore: function(t) {
                         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.is,
@@ -143,6 +143,32 @@
                 }
             })
         },
+        289867: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var i = n("913144"),
+                r = {
+                    toggleMembersSection() {
+                        i.default.dispatch({
+                            type: "CHANNEL_TOGGLE_MEMBERS_SECTION"
+                        })
+                    },
+                    toggleProfilePanelSection() {
+                        i.default.dispatch({
+                            type: "PROFILE_PANEL_TOGGLE_SECTION"
+                        })
+                    },
+                    toggleSummariesSection() {
+                        i.default.dispatch({
+                            type: "CHANNEL_TOGGLE_SUMMARIES_SECTION"
+                        })
+                    }
+                }
+        },
         642950: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -152,8 +178,8 @@
             }), n("222007");
             var i = n("37983"),
                 r = n("884691"),
-                s = n("414456"),
-                l = n.n(s),
+                l = n("414456"),
+                s = n.n(l),
                 a = n("77078"),
                 o = n("54239"),
                 u = n("79112"),
@@ -167,7 +193,7 @@
                         children: [(0, i.jsx)("div", {
                             className: f.streamerModeEnabledImage
                         }), (0, i.jsx)(a.Clickable, {
-                            className: l(f.streamerModeEnabledBtn, {
+                            className: s(f.streamerModeEnabledBtn, {
                                 [f.disabled]: this.props.disableButton
                             }),
                             onClick: this.handleClick,
@@ -190,30 +216,30 @@
             "use strict";
             n.r(t), n.d(t, {
                 ArrowSmallUpIcon: function() {
-                    return l
+                    return s
                 }
             });
             var i = n("37983");
             n("884691");
             var r = n("669491"),
-                s = n("75196");
-            let l = e => {
+                l = n("75196");
+            let s = e => {
                 let {
                     width: t = 24,
                     height: n = 24,
-                    color: l = r.default.colors.INTERACTIVE_NORMAL,
+                    color: s = r.default.colors.INTERACTIVE_NORMAL,
                     colorClass: a = "",
                     ...o
                 } = e;
                 return (0, i.jsx)("svg", {
-                    ...(0, s.default)(o),
+                    ...(0, l.default)(o),
                     xmlns: "http://www.w3.org/2000/svg",
                     width: t,
                     height: n,
                     fill: "none",
                     viewBox: "0 0 24 24",
                     children: (0, i.jsx)("path", {
-                        fill: "string" == typeof l ? l : l.css,
+                        fill: "string" == typeof s ? s : s.css,
                         d: "M12.707 3.293a1 1 0 0 0-1.414 0l-5 5a1 1 0 0 0 1.414 1.414L11 6.414V20a1 1 0 1 0 2 0V6.414l3.293 3.293a1 1 0 0 0 1.414-1.414l-5-5Z",
                         className: a
                     })
@@ -224,28 +250,28 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return l
                 }
             });
             var i = n("884691");
             let r = i.createContext(void 0);
-            var s = r
+            var l = r
         },
         531674: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 getMuteTimes: function() {
-                    return _
+                    return v
                 },
                 default: function() {
-                    return g
+                    return b
                 }
             }), n("222007");
             var i = n("37983");
             n("884691");
             var r = n("866227"),
-                s = n.n(r),
-                l = n("446674"),
+                l = n.n(r),
+                s = n("446674"),
                 a = n("77078"),
                 o = n("820542"),
                 u = n("519705"),
@@ -254,28 +280,28 @@
                 f = n("679653"),
                 m = n("49111"),
                 p = n("468200"),
-                b = n("782340");
-            let _ = () => [{
+                _ = n("782340");
+            let v = () => [{
                     value: p.MuteUntilSeconds.MINUTES_15,
-                    label: b.default.Messages.MUTE_DURATION_15_MINUTES
+                    label: _.default.Messages.MUTE_DURATION_15_MINUTES
                 }, {
                     value: p.MuteUntilSeconds.HOURS_1,
-                    label: b.default.Messages.MUTE_DURATION_1_HOUR
+                    label: _.default.Messages.MUTE_DURATION_1_HOUR
                 }, {
                     value: p.MuteUntilSeconds.HOURS_3,
-                    label: b.default.Messages.MUTE_DURATION_3_HOURS
+                    label: _.default.Messages.MUTE_DURATION_3_HOURS
                 }, {
                     value: p.MuteUntilSeconds.HOURS_8,
-                    label: b.default.Messages.MUTE_DURATION_8_HOURS
+                    label: _.default.Messages.MUTE_DURATION_8_HOURS
                 }, {
                     value: p.MuteUntilSeconds.HOURS_24,
-                    label: b.default.Messages.MUTE_DURATION_24_HOURS
+                    label: _.default.Messages.MUTE_DURATION_24_HOURS
                 }, {
                     value: p.MuteUntilSeconds.ALWAYS,
-                    label: b.default.Messages.MUTE_DURATION_ALWAYS
+                    label: _.default.Messages.MUTE_DURATION_ALWAYS
                 }],
-                v = e => {
-                    let t = e > 0 ? s().add(e, "second").toISOString() : null;
+                g = e => {
+                    let t = e > 0 ? l().add(e, "second").toISOString() : null;
                     return {
                         muted: !0,
                         mute_config: {
@@ -285,53 +311,53 @@
                     }
                 };
 
-            function g(e, t) {
-                let [n, r] = (0, l.useStateFromStoresArray)([c.default], () => [c.default.isChannelMuted(e.guild_id, e.id), c.default.getChannelMuteConfig(e.guild_id, e.id)]), s = (0, d.useMutedUntilText)(r), p = (0, f.default)(e, !0);
+            function b(e, t) {
+                let [n, r] = (0, s.useStateFromStoresArray)([c.default], () => [c.default.isChannelMuted(e.guild_id, e.id), c.default.getChannelMuteConfig(e.guild_id, e.id)]), l = (0, d.useMutedUntilText)(r), p = (0, f.default)(e, !0);
 
-                function g(t) {
+                function b(t) {
                     t && e.type === m.ChannelTypes.GUILD_CATEGORY && (0, o.categoryCollapse)(e.id), u.default.updateChannelOverrideSettings(e.guild_id, e.id, {
                         muted: t
                     })
                 }
-                let h = b.default.Messages.MUTE_CHANNEL_GENERIC,
-                    E = b.default.Messages.UNMUTE_CHANNEL_GENERIC;
+                let h = _.default.Messages.MUTE_CHANNEL_GENERIC,
+                    E = _.default.Messages.UNMUTE_CHANNEL_GENERIC;
                 switch (e.type) {
                     case m.ChannelTypes.GUILD_CATEGORY:
-                        h = b.default.Messages.MUTE_CATEGORY, E = b.default.Messages.UNMUTE_CATEGORY;
+                        h = _.default.Messages.MUTE_CATEGORY, E = _.default.Messages.UNMUTE_CATEGORY;
                         break;
                     case m.ChannelTypes.GROUP_DM:
-                        h = b.default.Messages.MUTE_CONVERSATION, E = b.default.Messages.UNMUTE_CONVERSATION;
+                        h = _.default.Messages.MUTE_CONVERSATION, E = _.default.Messages.UNMUTE_CONVERSATION;
                         break;
                     case m.ChannelTypes.DM:
-                        h = b.default.Messages.MUTE_CHANNEL.format({
+                        h = _.default.Messages.MUTE_CHANNEL.format({
                             name: p
-                        }), E = b.default.Messages.UNMUTE_CHANNEL.format({
+                        }), E = _.default.Messages.UNMUTE_CHANNEL.format({
                             name: p
                         });
                         break;
                     default:
-                        h = b.default.Messages.MUTE_CHANNEL_GENERIC, E = b.default.Messages.UNMUTE_CHANNEL_GENERIC
+                        h = _.default.Messages.MUTE_CHANNEL_GENERIC, E = _.default.Messages.UNMUTE_CHANNEL_GENERIC
                 }
                 return n ? (0, i.jsx)(a.MenuItem, {
                     id: "unmute-channel",
                     label: E,
-                    subtext: s,
-                    action: () => g(!1)
+                    subtext: l,
+                    action: () => b(!1)
                 }) : (0, i.jsx)(a.MenuItem, {
                     id: "mute-channel",
                     label: h,
-                    action: () => g(!0),
-                    children: _().map(n => {
+                    action: () => b(!0),
+                    children: v().map(n => {
                         let {
                             value: r,
-                            label: s
+                            label: l
                         } = n;
                         return (0, i.jsx)(a.MenuItem, {
                             id: "".concat(r),
-                            label: s,
+                            label: l,
                             action: () => (function(n) {
                                 e.type === m.ChannelTypes.GUILD_CATEGORY && (0, o.categoryCollapse)(e.id);
-                                let i = v(n);
+                                let i = g(n);
                                 u.default.updateChannelOverrideSettings(e.guild_id, e.id, i, t)
                             })(r)
                         }, r)
@@ -346,10 +372,10 @@
                     return r
                 },
                 AutomodMentionRaidNotice: function() {
-                    return s
+                    return l
                 },
                 AutomodCustomMessage: function() {
-                    return l
+                    return s
                 },
                 AutomodServerPolicy: function() {
                     return a
@@ -374,7 +400,7 @@
                         }
                     }]
                 }),
-                s = (0, i.createExperiment)({
+                l = (0, i.createExperiment)({
                     kind: "guild",
                     id: "2023-01_mention_raid_notice",
                     label: "Automod Mention Raid Notice",
@@ -389,7 +415,7 @@
                         }
                     }]
                 }),
-                l = (0, i.createExperiment)({
+                s = (0, i.createExperiment)({
                     kind: "guild",
                     id: "2023-02_automod_custom_message",
                     label: "Automod Custom Message",
@@ -448,10 +474,10 @@
                     return r
                 },
                 useIsMentionRaidExperimentEnabled: function() {
-                    return s
+                    return l
                 },
                 isInMentionRaidNoticeExperiment: function() {
-                    return l
+                    return s
                 },
                 useIsCustomMessageExperimentEnabled: function() {
                     return a
@@ -475,7 +501,7 @@
                 return t
             }
 
-            function s(e) {
+            function l(e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                     {
                         enabled: n
@@ -488,7 +514,7 @@
                 return n
             }
 
-            function l(e) {
+            function s(e) {
                 if (null == e) return !1;
                 let {
                     enabled: t
@@ -542,22 +568,22 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return s
                 }
             });
             var i = n("37983");
             n("884691");
             var r = n("65597"),
-                s = n("880731");
+                l = n("880731");
 
-            function l(e) {
+            function s(e) {
                 let {
                     children: t,
                     confettiLocation: n
-                } = e, l = (0, r.default)([s.default], () => s.default.isEnabled({
+                } = e, s = (0, r.default)([l.default], () => l.default.isEnabled({
                     confettiLocation: n
                 }));
-                return l ? (0, i.jsx)(i.Fragment, {
+                return s ? (0, i.jsx)(i.Fragment, {
                     children: t
                 }) : null
             }
@@ -571,28 +597,28 @@
             });
             var i = n("884691"),
                 r = n("65597"),
-                s = n("526887"),
-                l = n("880731");
+                l = n("526887"),
+                s = n("880731");
 
             function a() {
                 let {
                     createMultipleConfettiAt: e
-                } = i.useContext(s.ConfettiCannonContext), t = (0, r.default)([l.default], () => l.default.getState()), n = i.useCallback(e => ({
+                } = i.useContext(l.ConfettiCannonContext), t = (0, r.default)([s.default], () => s.default.getState()), n = i.useCallback(e => ({
                     size: {
                         type: "static-random",
                         minValue: e.confettiSize - 7,
                         maxValue: e.confettiSize + 7
                     }
                 }), []), a = i.useMemo(() => ({
-                    fire: (i, r, s) => {
-                        var l, a;
-                        let o = (null == s ? void 0 : s.settings) != null ? {
+                    fire: (i, r, l) => {
+                        var s, a;
+                        let o = (null == l ? void 0 : l.settings) != null ? {
                                 ...t,
-                                ...s.settings
+                                ...l.settings
                             } : t,
                             u = n(o);
-                        e(i, r, u, (null !== (l = null == s ? void 0 : s.count) && void 0 !== l ? l : o.confettiCount) * (null !== (a = null == s ? void 0 : s.countMultiplier) && void 0 !== a ? a : 1), {
-                            sprite: null == s ? void 0 : s.sprite
+                        e(i, r, u, (null !== (s = null == l ? void 0 : l.count) && void 0 !== s ? s : o.confettiCount) * (null !== (a = null == l ? void 0 : l.countMultiplier) && void 0 !== a ? a : 1), {
+                            sprite: null == l ? void 0 : l.sprite
                         })
                     }
                 }), [e, n, t]);
@@ -603,13 +629,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 useLocalizedPromoQuery: function() {
-                    return s
+                    return l
                 }
             });
             var i = n("446674"),
                 r = n("160299");
 
-            function s() {
+            function l() {
                 let {
                     localizedPricingPromo: e,
                     hasError: t
@@ -624,13 +650,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 useTrackLocalizedPricingPromoImpression: function() {
-                    return s
+                    return l
                 }
             });
             var i = n("759843"),
                 r = n("428958");
 
-            function s(e, t) {
+            function l(e, t) {
                 (0, r.default)({
                     type: i.ImpressionTypes.VIEW,
                     name: i.ImpressionNames.LOCALIZED_PRICING_UPSELL_VIEWED,
@@ -650,18 +676,18 @@
             }), n("222007");
             var i = n("748820"),
                 r = n("49671"),
-                s = n("599110"),
-                l = n("49111");
+                l = n("599110"),
+                s = n("49111");
             let a = new class e {
                 trackEvent(e, t) {
                     let n = Date.now();
                     requestIdleCallback(() => {
-                        s.default.track(e, {
+                        l.default.track(e, {
                             ... function() {
                                 var e, t, n;
                                 let i = "--campaign-id=",
-                                    s = null !== (n = null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getMainArgvSync) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n ? n : [];
-                                for (let e of s)
+                                    l = null !== (n = null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getMainArgvSync) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n ? n : [];
+                                for (let e of l)
                                     if (e.startsWith(i)) return {
                                         referrer: e.substr(i.length)
                                     };
@@ -683,8 +709,8 @@
                                 return null != window.performance && null != window.performance.getEntries && window.performance.getEntries().forEach(n => {
                                     let i = null != n.encodedBodySize ? n.encodedBodySize : n.decodedBodySize,
                                         r = null != n.decodedBodySize ? n.decodedBodySize : n.encodedBodySize,
-                                        s = n.transferSize;
-                                    null != r && null != i && (e = !0, t.total_compressed_byte_size += i, t.total_uncompressed_byte_size += r, null != s && (t.total_uncompressed_byte_size += s), "resource" === n.entryType && ("script" === n.initiatorType && null != n.name && null != n.name.match(/\.js/) && (t.js_compressed_byte_size += i, t.js_uncompressed_byte_size += r, null != s && (t.js_uncompressed_byte_size += s)), "link" === n.initiatorType && null != n.name && null != n.name.match(/\.css/) && (t.css_compressed_byte_size += i, t.css_uncompressed_byte_size += r, null != s && (t.css_uncompressed_byte_size += s))))
+                                        l = n.transferSize;
+                                    null != r && null != i && (e = !0, t.total_compressed_byte_size += i, t.total_uncompressed_byte_size += r, null != l && (t.total_uncompressed_byte_size += l), "resource" === n.entryType && ("script" === n.initiatorType && null != n.name && null != n.name.match(/\.js/) && (t.js_compressed_byte_size += i, t.js_uncompressed_byte_size += r, null != l && (t.js_uncompressed_byte_size += l)), "link" === n.initiatorType && null != n.name && null != n.name.match(/\.css/) && (t.css_compressed_byte_size += i, t.css_uncompressed_byte_size += r, null != l && (t.css_uncompressed_byte_size += l))))
                                 }), e ? t : {}
                             }(),
                             load_id: this.loadId,
@@ -694,7 +720,7 @@
                     })
                 }
                 trackAppUIViewed(e) {
-                    !this.appUIViewed && (this.trackEvent(l.AnalyticEvents.APP_UI_VIEWED, e), this.appUIViewed = !0)
+                    !this.appUIViewed && (this.trackEvent(s.AnalyticEvents.APP_UI_VIEWED, e), this.appUIViewed = !0)
                 }
                 constructor() {
                     this.loadId = (0, i.v4)(), this.appUIViewed = !1
@@ -705,6 +731,70 @@
                 a.trackAppUIViewed(e)
             }
         },
+        893980: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                trackProfilePanelViewed: function() {
+                    return o
+                },
+                trackProfilePanelToggled: function() {
+                    return u
+                }
+            });
+            var i = n("373469"),
+                r = n("824563"),
+                l = n("27618"),
+                s = n("599110"),
+                a = n("49111");
+            let o = e => {
+                    let {
+                        displayProfile: t,
+                        isMobile: n,
+                        loadDurationMs: i,
+                        activity: r,
+                        customStatusActivity: l,
+                        status: o
+                    } = e;
+                    s.default.track(a.AnalyticEvents.DM_PROFILE_VIEWED, {
+                        has_mobile_indicator: n,
+                        has_activity: null != r && (null == r ? void 0 : r.type) !== a.ActivityTypes.CUSTOM_STATUS,
+                        has_game_activity: (null == r ? void 0 : r.type) === a.ActivityTypes.PLAYING,
+                        load_duration_ms: i,
+                        profile_user_status: o,
+                        has_custom_status: null != l,
+                        has_profile_effect: null != t.profileEffectID,
+                        ...d(t)
+                    })
+                },
+                u = (e, t) => {
+                    s.default.track(a.AnalyticEvents.DM_PROFILE_TOGGLED, {
+                        is_profile_open: t,
+                        ...d(e)
+                    })
+                },
+                d = e => {
+                    var t;
+                    if (null == e) return {};
+                    let n = e.userId,
+                        s = null != i.default.getAnyStreamForUser(n),
+                        o = r.default.findActivity(n, e => {
+                            let {
+                                type: t
+                            } = e;
+                            return s ? t === a.ActivityTypes.PLAYING : t !== a.ActivityTypes.CUSTOM_STATUS
+                        }),
+                        u = null == o ? void 0 : o.assets,
+                        d = l.default.isFriend(n);
+                    return {
+                        has_images: !!(null !== (t = null == u ? void 0 : u.large_image) && void 0 !== t ? t : null == u ? void 0 : u.small_image),
+                        is_friend: d,
+                        viewed_profile_user_id: n,
+                        profile_has_nitro_customization: e.hasPremiumCustomization(),
+                        profile_has_theme_color_customized: e.hasThemeColors(),
+                        profile_has_theme_animation: null != e.popoutAnimationParticleType
+                    }
+                }
+        },
         476108: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -714,8 +804,8 @@
             });
             var i = n("446674"),
                 r = n("95410"),
-                s = n("913144"),
-                l = n("49111");
+                l = n("913144"),
+                s = n("49111");
             let a = {
                     lastViewedPath: null,
                     lastViewedNonVoicePath: null
@@ -728,14 +818,14 @@
                     o = null != e ? e : a
                 }
                 get defaultRoute() {
-                    return l.Routes.ME
+                    return s.Routes.ME
                 }
                 get lastNonVoiceRoute() {
                     var e;
-                    return null !== (e = o.lastViewedNonVoicePath) && void 0 !== e ? e : l.Routes.ME
+                    return null !== (e = o.lastViewedNonVoicePath) && void 0 !== e ? e : s.Routes.ME
                 }
                 get fallbackRoute() {
-                    return l.Routes.ME
+                    return s.Routes.ME
                 }
                 getState() {
                     return o
@@ -747,7 +837,7 @@
                     lastViewedPath: e
                 }
             }];
-            var c = new d(s.default, {
+            var c = new d(l.default, {
                 SAVE_LAST_ROUTE: function(e) {
                     let {
                         path: t
@@ -771,8 +861,8 @@
             });
             var i = n("37983"),
                 r = n("884691"),
-                s = n("414456"),
-                l = n.n(s),
+                l = n("414456"),
+                s = n.n(l),
                 a = n("546671"),
                 o = n("341417");
             let u = {
@@ -794,7 +884,7 @@
                         className: t
                     } = this.props;
                     return (0, i.jsx)(a.default, {
-                        className: l(o.arrow, t, {
+                        className: s(o.arrow, t, {
                             [d[e]]: !0
                         })
                     })
@@ -813,8 +903,8 @@
             var i = n("37983");
             n("884691");
             var r = n("414456"),
-                s = n.n(r),
-                l = n("561445"),
+                l = n.n(r),
+                s = n("561445"),
                 a = e => {
                     let {
                         aspectRatio: t,
@@ -823,13 +913,13 @@
                         children: a
                     } = e;
                     return (0, i.jsx)("div", {
-                        className: s(l.outer, r),
+                        className: l(s.outer, r),
                         style: {
                             paddingTop: "".concat(1 / t * 100, "%"),
                             ...n
                         },
                         children: (0, i.jsx)("div", {
-                            className: l.inner,
+                            className: s.inner,
                             children: a
                         })
                     })
@@ -844,8 +934,8 @@
             }), n("222007");
             var i = n("37983"),
                 r = n("884691"),
-                s = n("414456"),
-                l = n.n(s),
+                l = n("414456"),
+                s = n.n(l),
                 a = n("77078"),
                 o = n("145131"),
                 u = n("461380"),
@@ -864,7 +954,7 @@
                     } = this.props, n = e.map(this.renderBreadcrumb);
                     return (0, i.jsx)(o.default, {
                         justify: o.default.Justify.START,
-                        className: l(d.breadcrumbs, t),
+                        className: s(d.breadcrumbs, t),
                         children: n
                     })
                 }
@@ -873,18 +963,18 @@
                         let {
                             activeId: n,
                             onBreadcrumbClick: r,
-                            breadcrumbs: s,
+                            breadcrumbs: l,
                             renderCustomBreadcrumb: o,
                             separatorClassName: c
-                        } = this.props, f = e.id === n, m = t === s.length - 1, p = null != o ? o(e, f) : (0, i.jsx)("span", {
-                            className: l(d.breadcrumb, {
+                        } = this.props, f = e.id === n, m = t === l.length - 1, p = null != o ? o(e, f) : (0, i.jsx)("span", {
+                            className: s(d.breadcrumb, {
                                 [d.activeBreadcrumb]: f,
                                 [d.interactiveBreadcrumb]: null != r
                             }),
                             children: e.label
                         });
                         return (0, i.jsxs)("div", {
-                            className: l(d.breadcrumbWrapper, {
+                            className: s(d.breadcrumbWrapper, {
                                 [d.breadcrumbFinalWrapper]: m
                             }),
                             children: [null != r ? (0, i.jsx)(a.Clickable, {
@@ -893,7 +983,7 @@
                                 className: d.breadcrumbClickWrapper,
                                 children: p
                             }) : p, m ? null : (0, i.jsx)(u.default, {
-                                className: l(d.breadcrumbArrow, c),
+                                className: s(d.breadcrumbArrow, c),
                                 direction: u.default.Directions.RIGHT
                             })]
                         }, e.id)
@@ -911,8 +1001,8 @@
             });
             var i = n("37983"),
                 r = n("884691"),
-                s = n("414456"),
-                l = n.n(s),
+                l = n("414456"),
+                s = n.n(l),
                 a = n("77078"),
                 o = n("145131"),
                 u = n("296165"),
@@ -924,7 +1014,7 @@
                         description: t,
                         agreement: n,
                         disagreement: r,
-                        onAgree: s,
+                        onAgree: l,
                         onDisagree: c,
                         imageClassName: f
                     } = this.props;
@@ -934,12 +1024,12 @@
                         align: o.default.Align.CENTER,
                         direction: o.default.Direction.VERTICAL,
                         children: [(0, i.jsx)("div", {
-                            className: l(u.image, f)
+                            className: s(u.image, f)
                         }), (0, i.jsx)("div", {
-                            className: l(u.title, d.marginBottom8),
+                            className: s(u.title, d.marginBottom8),
                             children: e
                         }), (0, i.jsx)("div", {
-                            className: l(u.description, d.marginBottom20),
+                            className: s(u.description, d.marginBottom20),
                             children: t
                         }), (0, i.jsxs)(o.default, {
                             justify: o.default.Justify.CENTER,
@@ -955,7 +1045,7 @@
                                 className: u.action,
                                 color: a.Button.Colors.RED,
                                 size: a.ButtonSizes.LARGE,
-                                onClick: s,
+                                onClick: l,
                                 children: n
                             }) : null]
                         })]
@@ -973,8 +1063,8 @@
             });
             var i = n("37983"),
                 r = n("884691"),
-                s = n("414456"),
-                l = n.n(s),
+                l = n("414456"),
+                s = n.n(l),
                 a = n("77078"),
                 o = n("782340"),
                 u = n("440318");
@@ -989,11 +1079,11 @@
                         className: t,
                         textClassName: n,
                         type: r = d.BLOCK,
-                        style: s
+                        style: l
                     } = this.props;
                     return (0, i.jsxs)("div", {
-                        className: l(t, r),
-                        style: s,
+                        className: s(t, r),
+                        style: l,
                         children: [(0, i.jsxs)(a.Text, {
                             variant: "text-sm/bold",
                             tag: "div",
@@ -1001,7 +1091,7 @@
                             className: u.pro,
                             children: [o.default.Messages.FORM_LABEL_ROLES_PRO_TIP, ":"]
                         }), (0, i.jsx)(a.Text, {
-                            className: l(u.tip, n),
+                            className: s(u.tip, n),
                             variant: "text-sm/normal",
                             children: e
                         })]
@@ -1021,14 +1111,14 @@
             var i = n("37983");
             n("884691");
             var r = n("469563"),
-                s = n("7037"),
-                l = n("246053"),
+                l = n("7037"),
+                s = n("246053"),
                 a = (0, r.replaceIcon)(function(e) {
-                    return (0, i.jsx)(l.default, {
+                    return (0, i.jsx)(s.default, {
                         ...e,
-                        direction: l.default.Directions.UP
+                        direction: s.default.Directions.UP
                     })
-                }, s.ArrowSmallUpIcon)
+                }, l.ArrowSmallUpIcon)
         },
         265363: function(e, t, n) {
             "use strict";
@@ -1040,32 +1130,32 @@
             var i = n("37983");
             n("884691");
             var r = n("469563"),
-                s = n("736616"),
-                l = n("75196"),
+                l = n("736616"),
+                s = n("75196"),
                 a = (0, r.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: n = 24,
                         color: r = "currentColor",
-                        foreground: s,
+                        foreground: l,
                         ...a
                     } = e;
                     return (0, i.jsxs)("svg", {
                         viewBox: "0 0 24 24",
-                        ...(0, l.default)(a),
+                        ...(0, s.default)(a),
                         width: t,
                         height: n,
                         children: [(0, i.jsx)("path", {
                             fill: r,
-                            className: s,
+                            className: l,
                             d: "M9.09091 12C9.09091 13.5786 10.3935 14.8571 12 14.8571C13.6065 14.8571 14.9091 13.5786 14.9091 12C14.9091 10.4214 13.6065 9.14286 12 9.14286C10.3935 9.14286 9.09091 10.4214 9.09091 12ZM13.3402 12C13.3402 12.789 12.689 13.4286 11.8857 13.4286C11.0823 13.4286 10.4311 12.789 10.4311 12C10.4311 11.211 11.0823 10.5714 11.8857 10.5714C12.689 10.5714 13.3402 11.211 13.3402 12Z"
                         }), (0, i.jsx)("path", {
                             fill: r,
-                            className: s,
+                            className: l,
                             d: "M4 2C2.89543 2 2 2.89543 2 4V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V4C22 2.89543 21.1046 2 20 2H4ZM4 12C4 12 7.38036 7 12 7C16.6196 7 20 12 20 12C20 12 16.6196 17 12 17C7.38036 17 4 12 4 12Z"
                         })]
                     })
-                }, s.EyeIcon, void 0, {
+                }, l.EyeIcon, void 0, {
                     size: 24
                 })
         },
@@ -1073,19 +1163,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 Icon: function() {
-                    return b
-                },
-                Divider: function() {
                     return _
                 },
+                Divider: function() {
+                    return v
+                },
                 default: function() {
-                    return g
+                    return b
                 }
             });
             var i = n("37983"),
                 r = n("884691"),
-                s = n("414456"),
-                l = n.n(s),
+                l = n("414456"),
+                s = n.n(l),
                 a = n("353386"),
                 o = n("394846"),
                 u = n("77078"),
@@ -1094,144 +1184,144 @@
                 f = n("772280"),
                 m = n("587974"),
                 p = n("133934");
-            let b = e => {
+            let _ = e => {
                     let {
                         className: t,
                         iconClassName: n,
                         children: r,
-                        selected: s = !1,
+                        selected: l = !1,
                         disabled: a = !1,
                         showBadge: o = !1,
                         color: d,
                         foreground: c,
                         background: f,
-                        icon: b,
-                        onClick: _,
-                        onContextMenu: v,
-                        tooltip: g = null,
+                        icon: _,
+                        onClick: v,
+                        onContextMenu: g,
+                        tooltip: b = null,
                         tooltipColor: h,
                         tooltipPosition: E = "bottom",
                         hideOnClick: x = !0,
                         role: C,
                         "aria-label": M,
                         "aria-hidden": N,
-                        "aria-checked": R,
-                        "aria-expanded": y,
-                        "aria-haspopup": A
-                    } = e, S = (0, i.jsx)(b, {
+                        "aria-checked": y,
+                        "aria-expanded": A,
+                        "aria-haspopup": S
+                    } = e, T = (0, i.jsx)(_, {
                         x: 0,
                         y: 0,
                         width: 24,
                         height: 24,
-                        className: l(n, p.icon),
+                        className: s(n, p.icon),
                         foreground: null != c ? c : void 0,
                         background: null != f ? f : void 0,
                         color: d
-                    }), T = M;
-                    return null == T && "string" == typeof g && (T = g), (0, i.jsx)(u.Tooltip, {
-                        text: g,
+                    }), R = M;
+                    return null == R && "string" == typeof b && (R = b), (0, i.jsx)(u.Tooltip, {
+                        text: b,
                         color: h,
                         position: E,
                         hideOnClick: x,
                         children: e => {
                             let {
-                                onMouseEnter: g,
+                                onMouseEnter: b,
                                 onMouseLeave: h,
                                 onFocus: E,
                                 onBlur: x
                             } = e;
-                            return null == _ ? (0, i.jsx)("div", {
-                                className: l(t, [p.iconWrapper]),
-                                children: (0, i.jsx)(b, {
+                            return null == v ? (0, i.jsx)("div", {
+                                className: s(t, [p.iconWrapper]),
+                                children: (0, i.jsx)(_, {
                                     x: 0,
                                     y: 0,
                                     width: 24,
                                     height: 24,
-                                    className: l(n, p.icon),
+                                    className: s(n, p.icon),
                                     foreground: null != c ? c : void 0,
                                     background: null != f ? f : void 0,
                                     color: d,
                                     "aria-hidden": N,
-                                    onMouseEnter: g,
+                                    onMouseEnter: b,
                                     onMouseLeave: h,
                                     onFocus: E,
                                     onBlur: x
                                 })
                             }) : (0, i.jsxs)(u.Clickable, {
                                 tag: "div",
-                                onClick: a ? void 0 : _,
-                                onContextMenu: a ? void 0 : v,
-                                onMouseEnter: g,
+                                onClick: a ? void 0 : v,
+                                onContextMenu: a ? void 0 : g,
+                                onMouseEnter: b,
                                 onMouseLeave: h,
                                 onFocus: E,
                                 onBlur: x,
-                                className: l(t, {
+                                className: s(t, {
                                     [p.iconWrapper]: !0,
-                                    [p.clickable]: !a && null != _,
-                                    [p.selected]: s
+                                    [p.clickable]: !a && null != v,
+                                    [p.selected]: l
                                 }),
                                 role: C,
-                                "aria-label": T,
+                                "aria-label": R,
                                 "aria-hidden": N,
-                                "aria-checked": R,
-                                "aria-haspopup": A,
-                                "aria-expanded": y,
-                                tabIndex: a || null == _ ? -1 : 0,
+                                "aria-checked": y,
+                                "aria-haspopup": S,
+                                "aria-expanded": A,
+                                tabIndex: a || null == v ? -1 : 0,
                                 children: [o ? (0, i.jsx)(m.default, {
                                     mask: m.default.Masks.HEADER_BAR_BADGE,
-                                    children: S
-                                }) : S, o ? (0, i.jsx)("span", {
+                                    children: T
+                                }) : T, o ? (0, i.jsx)("span", {
                                     className: p.iconBadge
                                 }) : null, r]
                             })
                         }
                     })
                 },
-                _ = e => {
+                v = e => {
                     let {
                         className: t
                     } = e;
                     return (0, i.jsx)("div", {
-                        className: l(p.divider, t)
+                        className: s(p.divider, t)
                     })
                 },
-                v = e => {
+                g = e => {
                     let {
                         className: t,
                         innerClassName: n,
-                        children: s,
+                        children: l,
                         childrenBottom: c,
                         toolbar: f,
                         onDoubleClick: m,
-                        "aria-label": b,
-                        "aria-labelledby": _,
-                        role: v,
-                        scrollable: g,
+                        "aria-label": _,
+                        "aria-labelledby": v,
+                        role: g,
+                        scrollable: b,
                         transparent: h = !1
                     } = e, E = r.useRef(null), x = r.useContext(d.default);
                     return (0, i.jsx)("section", {
-                        className: l(t, p.container, {
+                        className: s(t, p.container, {
                             [p.themed]: !h,
                             [p.transparent]: h,
                             [p.themedMobile]: o.isMobile
                         }),
-                        "aria-label": b,
-                        "aria-labelledby": _,
-                        role: v,
+                        "aria-label": _,
+                        "aria-labelledby": v,
+                        role: g,
                         ref: E,
                         children: (0, i.jsxs)(u.FocusRingScope, {
                             containerRef: E,
                             children: [(0, i.jsxs)("div", {
                                 className: p.upperContainer,
                                 children: [(0, i.jsxs)("div", {
-                                    className: l(p.children, n, {
-                                        [p.scrollable]: g
+                                    className: s(p.children, n, {
+                                        [p.scrollable]: b
                                     }),
                                     onDoubleClick: m,
                                     children: [o.isMobile && null != x ? (0, i.jsx)(a.default, {
                                         onClick: x,
                                         className: p.hamburger
-                                    }) : null, s]
+                                    }) : null, l]
                                 }), null != f ? (0, i.jsx)("div", {
                                     className: p.toolbar,
                                     children: f
@@ -1240,12 +1330,12 @@
                         })
                     })
                 };
-            v.Icon = b, v.Title = e => {
+            g.Icon = _, g.Title = e => {
                 let {
                     className: t,
                     wrapperClassName: n,
                     children: r,
-                    onContextMenu: s,
+                    onContextMenu: l,
                     onClick: a,
                     id: o,
                     muted: d = !1,
@@ -1255,22 +1345,22 @@
                     children: (0, i.jsx)(u.Heading, {
                         variant: "heading-md/semibold",
                         color: d ? "header-secondary" : void 0,
-                        className: l(t, p.title),
+                        className: s(t, p.title),
                         id: o,
                         children: r
                     })
                 });
                 return null != a ? (0, i.jsx)(u.Clickable, {
                     onClick: a,
-                    onContextMenu: s,
-                    className: l(n, p.titleWrapper),
+                    onContextMenu: l,
+                    className: s(n, p.titleWrapper),
                     children: f
                 }) : (0, i.jsx)("div", {
-                    className: l(n, p.titleWrapper),
-                    onContextMenu: s,
+                    className: s(n, p.titleWrapper),
+                    onContextMenu: l,
                     children: f
                 })
-            }, v.Divider = _, v.Caret = function(e) {
+            }, g.Divider = v, g.Caret = function(e) {
                 let {
                     direction: t = "right"
                 } = e;
@@ -1280,7 +1370,7 @@
                     className: p.caret
                 })
             };
-            var g = v
+            var b = g
         },
         353386: function(e, t, n) {
             "use strict";
@@ -1292,8 +1382,8 @@
             var i = n("37983");
             n("884691");
             var r = n("580420"),
-                s = n.n(r),
-                l = n("249907"),
+                l = n.n(r),
+                s = n("249907"),
                 a = e => {
                     let {
                         open: t = !1,
@@ -1302,8 +1392,8 @@
                     } = e;
                     return (0, i.jsxs)("button", {
                         type: "button",
-                        className: s(l.btnHamburger, {
-                            [l.btnHamburgerOpen]: t
+                        className: l(s.btnHamburger, {
+                            [s.btnHamburgerOpen]: t
                         }, n),
                         ...r,
                         children: [(0, i.jsx)("span", {}), (0, i.jsx)("span", {}), (0, i.jsx)("span", {}), (0, i.jsx)("span", {}), (0, i.jsx)("span", {}), (0, i.jsx)("span", {})]
