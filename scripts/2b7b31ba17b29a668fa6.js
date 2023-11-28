@@ -1076,19 +1076,18 @@
             }
 
             function c(e, t, n) {
-                let l = null != e.recurrence_rule ? (0, d.getRRule)(e.recurrence_rule) : null;
-                if (null == l || null == n) return {
+                if (null == e.recurrence_rule || null == n) return {
                     startTime: new Date(e.scheduled_start_time),
                     endTime: null != e.scheduled_end_time ? new Date(e.scheduled_end_time) : null
                 };
-                let u = (0, d.getBaseScheduleForRecurrence)(n, e),
+                let l = (0, d.getBaseScheduleForRecurrence)(n, e),
                     {
-                        startDate: r,
-                        endDate: i
-                    } = (0, d.getScheduleForRecurrenceWithException)(u, t);
+                        startDate: u,
+                        endDate: r
+                    } = (0, d.getScheduleForRecurrenceWithException)(l, t);
                 return {
-                    startTime: r.toDate(),
-                    endTime: null == i ? void 0 : i.toDate()
+                    startTime: u.toDate(),
+                    endTime: null == r ? void 0 : r.toDate()
                 }
             }
         },
@@ -1403,8 +1402,9 @@
             }
 
             function R(e) {
-                return new i.RRule({
-                    dtstart: new Date(e.start),
+                let t = new Date(e.start);
+                return t.setMilliseconds(0), new i.RRule({
+                    dtstart: t,
                     until: null != e.end ? new Date(e.end) : null,
                     freq: e.frequency,
                     interval: e.interval,
@@ -1426,19 +1426,15 @@
                 for (let e = 0; e < a && r < i; e++) {
                     let n = t.after(r);
                     if (null == n) break;
-                    r = new Date(n), n.setMilliseconds(0), (!u || e > 0) && l.push(n)
+                    r = new Date(n), (!u || e > 0) && l.push(n)
                 }
                 return l
             }
 
             function L(e) {
-                let t = function(e) {
-                    var t;
-                    if (null == e.recurrence_rule) return null;
-                    let n = R(e.recurrence_rule);
-                    return null !== (t = M(1, n, new Date)[0]) && void 0 !== t ? t : null
-                }(e);
-                return null != t ? a.default.fromTimestamp(Math.floor(t.getTime() / d.default.Millis.SECOND) * d.default.Millis.SECOND) : null
+                var t;
+                let n = null == (t = e).recurrence_rule ? null : new Date(t.scheduled_start_time);
+                return null != n ? a.default.fromTimestamp(Math.floor(n.getTime() / d.default.Millis.SECOND) * d.default.Millis.SECOND) : null
             }
 
             function y(e, t) {

@@ -1569,19 +1569,18 @@
             }
 
             function c(e, t, n) {
-                let a = null != e.recurrence_rule ? (0, d.getRRule)(e.recurrence_rule) : null;
-                if (null == a || null == n) return {
+                if (null == e.recurrence_rule || null == n) return {
                     startTime: new Date(e.scheduled_start_time),
                     endTime: null != e.scheduled_end_time ? new Date(e.scheduled_end_time) : null
                 };
-                let u = (0, d.getBaseScheduleForRecurrence)(n, e),
+                let a = (0, d.getBaseScheduleForRecurrence)(n, e),
                     {
-                        startDate: i,
-                        endDate: s
-                    } = (0, d.getScheduleForRecurrenceWithException)(u, t);
+                        startDate: u,
+                        endDate: i
+                    } = (0, d.getScheduleForRecurrenceWithException)(a, t);
                 return {
-                    startTime: i.toDate(),
-                    endTime: null == s ? void 0 : s.toDate()
+                    startTime: u.toDate(),
+                    endTime: null == i ? void 0 : i.toDate()
                 }
             }
         },

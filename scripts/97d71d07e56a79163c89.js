@@ -602,8 +602,9 @@
             }
 
             function R(e) {
-                return new s.RRule({
-                    dtstart: new Date(e.start),
+                let t = new Date(e.start);
+                return t.setMilliseconds(0), new s.RRule({
+                    dtstart: t,
                     until: null != e.end ? new Date(e.end) : null,
                     freq: e.frequency,
                     interval: e.interval,
@@ -625,19 +626,15 @@
                 for (let e = 0; e < i && r < s; e++) {
                     let n = t.after(r);
                     if (null == n) break;
-                    r = new Date(n), n.setMilliseconds(0), (!a || e > 0) && l.push(n)
+                    r = new Date(n), (!a || e > 0) && l.push(n)
                 }
                 return l
             }
 
             function A(e) {
-                let t = function(e) {
-                    var t;
-                    if (null == e.recurrence_rule) return null;
-                    let n = R(e.recurrence_rule);
-                    return null !== (t = L(1, n, new Date)[0]) && void 0 !== t ? t : null
-                }(e);
-                return null != t ? i.default.fromTimestamp(Math.floor(t.getTime() / u.default.Millis.SECOND) * u.default.Millis.SECOND) : null
+                var t;
+                let n = null == (t = e).recurrence_rule ? null : new Date(t.scheduled_start_time);
+                return null != n ? i.default.fromTimestamp(Math.floor(n.getTime() / u.default.Millis.SECOND) * u.default.Millis.SECOND) : null
             }
 
             function D(e, t) {
