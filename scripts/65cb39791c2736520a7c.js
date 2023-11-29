@@ -653,9 +653,9 @@
                 if (n.getUTCHours() !== a.getUTCHours() || n.getUTCMinutes() !== a.getUTCMinutes() || n.getUTCSeconds() !== a.getUTCSeconds()) return !1;
                 switch (e.frequency) {
                     case s.RRule.WEEKLY:
-                        return n.getUTCDay() === a.getUTCDate();
-                    case s.RRule.YEARLY:
                         return n.getUTCDay() === a.getUTCDay();
+                    case s.RRule.YEARLY:
+                        return n.getUTCDate() === a.getUTCDate();
                     default:
                         return !0
                 }
