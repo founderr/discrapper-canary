@@ -4,7 +4,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return C
+                    return v
                 }
             }), n("222007");
             var l = n("37983"),
@@ -24,19 +24,19 @@
                 S = n("957255"),
                 T = n("49111"),
                 m = n("782340"),
-                v = n("413075"),
-                C = e => {
+                C = n("413075"),
+                v = e => {
                     let {
                         channel: t,
                         onClose: n,
-                        onConfirm: C,
+                        onConfirm: v,
                         transitionState: g
-                    } = e, D = (0, a.default)(t, !0), I = t.id, A = t.isForumPost(), R = (0, r.useStateFromStores)([h.default], () => h.default.getGuild(t.getGuildId())), M = (0, E.useGuildChannelScheduledEvents)(I), {
+                    } = e, D = (0, a.default)(t, !0), I = t.id, R = t.isForumPost(), A = (0, r.useStateFromStores)([h.default], () => h.default.getGuild(t.getGuildId())), M = (0, E.useGuildChannelScheduledEvents)(I), {
                         isSubscriptionGated: L
-                    } = (0, s.default)(t.id), y = (0, c.default)(R, t), [O, p] = u.useState(null), G = (0, r.useStateFromStores)([N.default], () => t.isOwner(N.default.getId()), [t]), U = (0, r.useStateFromStores)([S.default], () => S.default.can(t.isThread() ? T.Permissions.MANAGE_THREADS : T.Permissions.MANAGE_CHANNELS, t), [t]), w = (0, r.useStateFromStores)([_.default], () => {
+                    } = (0, s.default)(t.id), y = (0, c.default)(A, t), [O, p] = u.useState(null), G = (0, r.useStateFromStores)([N.default], () => t.isOwner(N.default.getId()), [t]), U = (0, r.useStateFromStores)([S.default], () => S.default.can(t.isThread() ? T.Permissions.MANAGE_THREADS : T.Permissions.MANAGE_CHANNELS, t), [t]), w = (0, r.useStateFromStores)([_.default], () => {
                         var e;
                         return null !== (e = _.default.getCount(t.id)) && void 0 !== e ? e : 0
-                    }, [t.id]), H = A && (U || G && w < 1), F = M.length > 0 && (t.type === T.ChannelTypes.GUILD_VOICE || t.type === T.ChannelTypes.GUILD_STAGE_VOICE);
+                    }, [t.id]), H = R && (U || G && w < 1), F = M.length > 0 && (t.type === T.ChannelTypes.GUILD_VOICE || t.type === T.ChannelTypes.GUILD_STAGE_VOICE);
                     if (u.useEffect(() => {
                             (async () => {
                                 let e = await (0, d.isDefaultChannelThresholdMetAfterDelete)(t.getGuildId(), I);
@@ -63,7 +63,7 @@
                                     children: m.default.Messages.CANNOT_DELETE_CHANNEL
                                 })
                             }), (0, l.jsxs)(i.ModalContent, {
-                                className: v.modalContent,
+                                className: C.modalContent,
                                 children: [(0, l.jsx)(i.Text, {
                                     variant: "text-md/normal",
                                     children: t
@@ -71,7 +71,7 @@
                                     variant: "text-md/normal",
                                     children: e.format({
                                         onClick: () => {
-                                            null != R && (f.default.open(R.id, T.GuildSettingsSections.ONBOARDING), null == n || n())
+                                            null != A && (f.default.open(A.id, T.GuildSettingsSections.ONBOARDING), null == n || n())
                                         }
                                     })
                                 })]
@@ -83,9 +83,9 @@
                             })]
                         })
                     }
-                    if (null == R) return null;
-                    if (R.hasFeature(T.GuildFeatures.COMMUNITY) && (R.rulesChannelId === I || R.publicUpdatesChannelId === I)) {
-                        let e = R.rulesChannelId === I,
+                    if (null == A) return null;
+                    if (A.hasFeature(T.GuildFeatures.COMMUNITY) && (A.rulesChannelId === I || A.publicUpdatesChannelId === I)) {
+                        let e = A.rulesChannelId === I,
                             t = e ? m.default.Messages.DELETE_RULES_CHANNEL_BODY : m.default.Messages.DELETE_UPDATES_CHANNEL_BODY;
                         return (0, l.jsxs)(i.ModalRoot, {
                             transitionState: g,
@@ -99,14 +99,14 @@
                             }), (0, l.jsxs)(i.ModalContent, {
                                 children: [(0, l.jsx)(i.Text, {
                                     variant: "text-md/normal",
-                                    className: v.modalText,
+                                    className: C.modalText,
                                     children: t
                                 }), (0, l.jsx)(i.Text, {
                                     variant: "text-md/normal",
-                                    className: v.modalText,
+                                    className: C.modalText,
                                     children: m.default.Messages.DESIGNATE_OTHER_CHANNEL.format({
                                         onClick: () => {
-                                            f.default.open(R.id, T.GuildSettingsSections.COMMUNITY), null == n || n()
+                                            f.default.open(A.id, T.GuildSettingsSections.COMMUNITY), null == n || n()
                                         }
                                     })
                                 })]
@@ -166,7 +166,7 @@
                                     children: e
                                 })
                             }), (0, l.jsxs)(i.ModalContent, {
-                                className: v.modalContent,
+                                className: C.modalContent,
                                 children: [(0, l.jsx)(i.Text, {
                                     variant: "text-md/normal",
                                     color: "header-primary",
@@ -174,14 +174,14 @@
                                 }), F ? (0, l.jsx)(i.Text, {
                                     variant: "text-md/normal",
                                     color: "header-secondary",
-                                    className: v.warningText,
+                                    className: C.warningText,
                                     children: m.default.Messages.GUILD_EVENT_CHANNEL_DELETE_GUILD_EVENTS.format({
                                         count: M.length
                                     })
                                 }) : null]
                             }), (0, l.jsxs)(i.ModalFooter, {
                                 children: [(0, l.jsx)(i.Button, {
-                                    onClick: C,
+                                    onClick: v,
                                     color: i.Button.Colors.RED,
                                     children: e
                                 }), (0, l.jsx)(i.Button, {
@@ -337,10 +337,10 @@
                     return m
                 },
                 completeNewMemberAction: function() {
-                    return v
+                    return C
                 },
                 getBlockForChannelDeletion: function() {
-                    return C
+                    return v
                 }
             }), n("808653");
             var l = n("872717"),
@@ -436,7 +436,7 @@
                     server_guide_channel_type: "member action",
                     channel_action_type: l.actionType
                 }), (0, d.transitionToChannel)(t)
-            }, v = (e, t) => {
+            }, C = (e, t) => {
                 if (u.default.dispatch({
                         type: "COMPLETE_NEW_MEMBER_ACTION",
                         guildId: e,
@@ -459,7 +459,7 @@
                     url: N.Endpoints.GUILD_MEMBER_ACTION_UPDATE(e, t)
                 })
             };
-            async function C(e, t) {
+            async function v(e, t) {
                 if (null == e) return !1;
                 let n = (0, _.canSeeOnboardingHome)(e);
                 if (!n) return !1;
@@ -507,10 +507,10 @@
                     return m
                 },
                 settingsFromServer: function() {
-                    return v
+                    return C
                 },
                 settingsToServer: function() {
-                    return C
+                    return v
                 },
                 actionsFromServer: function() {
                     return g
@@ -522,10 +522,10 @@
                     return I
                 },
                 isSettingsValid: function() {
-                    return A
+                    return R
                 },
                 isChannelValidForResourceChannel: function() {
-                    return R
+                    return A
                 },
                 isChannelValidForNewMemberAction: function() {
                     return M
@@ -576,7 +576,7 @@
                 }
             }
 
-            function v(e) {
+            function C(e) {
                 if (null == e) return null;
                 let {
                     welcome_message: t,
@@ -595,7 +595,7 @@
                 }
             }
 
-            function C(e, t) {
+            function v(e, t) {
                 var n, l;
                 if (null == t) return null;
                 let {
@@ -657,12 +657,12 @@
                 return null == e || !!D(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0
             }
 
-            function A(e) {
+            function R(e) {
                 var t, n;
                 return null != e && (!!I(e) || (null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < o) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0)
             }
 
-            function R(e) {
+            function A(e) {
                 return e.type === d.ChannelTypes.GUILD_TEXT && !a.default.canEveryoneRole(d.Permissions.SEND_MESSAGES, e) && a.default.canEveryoneRole(d.Permissions.VIEW_CHANNEL, e)
             }
 
@@ -1098,10 +1098,10 @@
                     return m
                 },
                 useActiveEvent: function() {
-                    return v
+                    return C
                 },
                 useActiveEventsByChannel: function() {
-                    return C
+                    return v
                 },
                 useGuildUpcomingEventsNotice: function() {
                     return g
@@ -1113,10 +1113,10 @@
                     return I
                 },
                 useFirstActiveEventChannel: function() {
-                    return A
+                    return R
                 },
                 useImminentUpcomingGuildEvents: function() {
-                    return R
+                    return A
                 }
             }), n("222007"), n("808653");
             var l = n("884691"),
@@ -1161,7 +1161,7 @@
                 }, [t, e])
             }
 
-            function v(e) {
+            function C(e) {
                 return (0, u.useStateFromStores)([c.default, i.default, o.default], () => {
                     let t = i.default.getChannel(e);
                     if (!o.default.can(S.Permissions.VIEW_CHANNEL, t)) return null;
@@ -1172,7 +1172,7 @@
                 }, [e])
             }
 
-            function C(e) {
+            function v(e) {
                 let t = (0, u.useStateFromStoresArray)([c.default], () => c.default.getGuildScheduledEventsForGuild(e), [e]),
                     n = l.useMemo(() => {
                         let e = new Map;
@@ -1235,7 +1235,7 @@
                 return (0, u.useStateFromStores)([c.default], () => c.default.getGuildScheduledEventsByIndex(c.StaticGuildEventIndexes.CHANNEL_EVENT_UPCOMING(e)), [e])
             }
 
-            function A(e) {
+            function R(e) {
                 return (0, u.useStateFromStores)([i.default, c.default], () => {
                     let t = c.default.getGuildScheduledEventsByIndex(c.StaticGuildEventIndexes.GUILD_EVENT_ACTIVE(e)).find(e => {
                         let t = i.default.getChannel(e.channel_id);
@@ -1245,7 +1245,7 @@
                 }, [e])
             }
 
-            function R(e) {
+            function A(e) {
                 let [t, n] = l.useState(() => Date.now());
                 l.useEffect(() => {
                     let e = setInterval(() => {
@@ -1286,7 +1286,7 @@
                     return m
                 },
                 getBaseScheduleForRecurrence: function() {
-                    return C
+                    return v
                 },
                 getScheduleForRecurrenceWithException: function() {
                     return g
@@ -1298,10 +1298,10 @@
                     return I
                 },
                 areSchedulesIdentical: function() {
-                    return A
+                    return R
                 },
                 getRRule: function() {
-                    return R
+                    return A
                 },
                 generateNextRecurrences: function() {
                     return M
@@ -1359,7 +1359,7 @@
                 }
             }
 
-            function v(e, t) {
+            function C(e, t) {
                 let n;
                 return null != e && (n = {
                     startDate: r(e),
@@ -1367,9 +1367,9 @@
                 }, null != t && (n.endDate = r(t))), n
             }
 
-            function C(e, t) {
+            function v(e, t) {
                 let n = function(e) {
-                        return v(e.scheduled_start_time, e.scheduled_end_time)
+                        return C(e.scheduled_start_time, e.scheduled_end_time)
                     }(t),
                     l = r(a.default.extractTimestamp(e)),
                     u = (null == n ? void 0 : n.endDate) != null ? l.clone().add(n.endDate.diff(n.startDate)) : void 0;
@@ -1390,18 +1390,18 @@
             }
 
             function D(e) {
-                return v(e.scheduledStartTime, e.scheduledEndTime)
+                return C(e.scheduledStartTime, e.scheduledEndTime)
             }
 
             function I(e, t) {
                 return null == e || null == t ? null == e && null == t : e.isSame(t)
             }
 
-            function A(e, t) {
+            function R(e, t) {
                 return null == e || null == t ? null == e && null == t : I(e.startDate, t.startDate) && I(e.endDate, t.endDate)
             }
 
-            function R(e) {
+            function A(e) {
                 let t = new Date(e.start);
                 return t.setMilliseconds(0), new i.RRule({
                     dtstart: t,
@@ -1439,11 +1439,18 @@
 
             function y(e, t) {
                 if (null == t || null == e) return !1;
-                let n = R(e),
+                let n = new Date(e.start),
                     l = a.default.extractTimestamp(t),
-                    u = new Date(l),
-                    r = n.after(u, !0);
-                return u.getTime() === (null == r ? void 0 : r.getTime())
+                    u = new Date(l);
+                if (n.getUTCHours() !== u.getUTCHours() || n.getUTCMinutes() !== u.getUTCMinutes() || n.getUTCSeconds() !== u.getUTCSeconds()) return !1;
+                switch (e.frequency) {
+                    case i.RRule.WEEKLY:
+                        return n.getUTCDay() === u.getUTCDate();
+                    case i.RRule.YEARLY:
+                        return n.getUTCDay() === u.getUTCDay();
+                    default:
+                        return !0
+                }
             }
 
             function O(e) {
@@ -1504,7 +1511,7 @@
 
             function G(e, t) {
                 if (null == t) return o.RecurrenceOptions.NONE;
-                let n = R(t);
+                let n = A(t);
                 switch (n.options.freq) {
                     case i.RRule.WEEKLY:
                         return o.RecurrenceOptions.WEEKLY;
