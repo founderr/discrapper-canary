@@ -106,7 +106,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 CollectiblesItemsList: function() {
-                    return v
+                    return p
                 }
             }), s("794252");
             var a = s("37983"),
@@ -174,7 +174,7 @@
                     })
                 };
 
-            function p(e) {
+            function v(e) {
                 let {
                     listRef: t,
                     items: s,
@@ -220,7 +220,7 @@
                     })).otherwise(() => null))
                 })
             }
-            let v = e => {
+            let p = e => {
                 let {
                     items: t,
                     isFetching: s,
@@ -232,7 +232,7 @@
                 if (s) return (0, a.jsx)(u.Spinner, {
                     className: S.loading
                 });
-                let d = (e, s) => (0, a.jsx)(p, {
+                let d = (e, s) => (0, a.jsx)(v, {
                     listRef: c,
                     items: t,
                     selectedItem: r,
@@ -279,7 +279,7 @@
                 x = s("782340"),
                 A = s("95194");
 
-            function p(e) {
+            function v(e) {
                 let {
                     onClose: t,
                     markAsDismissed: s
@@ -306,14 +306,14 @@
                 })
             }
 
-            function v(e) {
+            function p(e) {
                 let {
                     selectedItem: t,
                     setSelectedItem: s
                 } = e, o = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
                     categories: n,
                     isFetching: d
-                } = (0, h.useMaybeFetchCollectiblesCategories)(), m = f.default.canUsePremiumProfileCustomization(o), I = i.useMemo(() => (0, g.sortAvatarDecorationsByPopularity)((0, g.getAvatarDecorationsFromCategories)(n)).slice(0, 12), [n]), p = i.useMemo(() => (0, g.sortProfileEffectsByPopularity)((0, g.getProfileEffectsFromCategories)(n)).slice(0, 12), [n]);
+                } = (0, h.useMaybeFetchCollectiblesCategories)(), m = f.default.canUsePremiumProfileCustomization(o), I = i.useMemo(() => (0, g.sortAvatarDecorationsByPopularity)((0, g.getAvatarDecorationsFromCategories)(n)).slice(0, 12), [n]), v = i.useMemo(() => (0, g.sortProfileEffectsByPopularity)((0, g.getProfileEffectsFromCategories)(n)).slice(0, 12), [n]);
                 return (i.useEffect(() => {
                     0 !== I.length && s(I[0])
                 }, [I, s]), null == o) ? null : (0, a.jsxs)(l.ModalContent, {
@@ -346,13 +346,14 @@
                         pendingBio: void 0,
                         pendingPronouns: void 0,
                         pendingAvatar: void 0,
-                        pendingBanner: void 0
+                        pendingBanner: void 0,
+                        slideInAvatarDecoration: !0
                     }), (0, a.jsxs)("div", {
                         children: [(0, a.jsx)(l.FormTitle, {
                             className: A.title,
                             children: x.default.Messages.USER_SETTINGS_PROFILE_EFFECT
                         }), (0, a.jsx)(S.CollectiblesItemsList, {
-                            items: p,
+                            items: v,
                             isFetching: d,
                             selectedItem: t,
                             setSelectedItem: s,
@@ -402,10 +403,10 @@
                     transitionState: t,
                     size: l.ModalSize.DYNAMIC,
                     className: A.modal,
-                    children: [(0, a.jsx)(p, {
+                    children: [(0, a.jsx)(v, {
                         onClose: s,
                         markAsDismissed: r
-                    }), (0, a.jsx)(v, {
+                    }), (0, a.jsx)(p, {
                         selectedItem: o,
                         setSelectedItem: n
                     }), (0, a.jsx)(T, {
