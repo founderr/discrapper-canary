@@ -10823,10 +10823,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 PollAnswers: function() {
-                    return N
+                    return v
                 },
                 PollMediaView: function() {
-                    return L
+                    return P
                 }
             }), n("794252");
             var a, s, l = n("37983"),
@@ -10838,47 +10838,21 @@
                 c = n("77078"),
                 f = n("430568"),
                 m = n("385976"),
-                E = n("952368"),
-                _ = n("847511"),
-                h = n("74232"),
-                p = n("782340"),
-                I = n("652886");
-
-            function g(e) {
-                let {
-                    className: t,
-                    children: n
-                } = e;
-                return (0, l.jsx)("ul", {
-                    "aria-label": p.default.Messages.POLL_OPTIONS_ARIA,
-                    className: t,
-                    children: n
-                })
-            }
-
-            function T(e) {
-                let {
-                    className: t,
-                    children: n
-                } = e;
-                return (0, l.jsx)("div", {
-                    "aria-label": p.default.Messages.POLL_OPTIONS_ARIA,
-                    role: "group",
-                    className: t,
-                    children: n
-                })
-            }
+                E = n("845579"),
+                _ = n("952368"),
+                h = n("866190"),
+                p = n("847511"),
+                I = n("74232"),
+                g = n("782340"),
+                T = n("652886");
 
             function C(e) {
                 let {
                     className: t,
                     children: n
-                } = e, a = (0, c.useRadioGroup)({
-                    orientation: "vertical"
-                });
-                return (0, l.jsx)("div", {
-                    "aria-label": p.default.Messages.POLL_OPTIONS_ARIA,
-                    ...a,
+                } = e;
+                return (0, l.jsx)("ul", {
+                    "aria-label": g.default.Messages.POLL_OPTIONS_ARIA,
                     className: t,
                     children: n
                 })
@@ -10887,20 +10861,48 @@
             function A(e) {
                 let {
                     className: t,
+                    children: n
+                } = e;
+                return (0, l.jsx)("div", {
+                    "aria-label": g.default.Messages.POLL_OPTIONS_ARIA,
+                    role: "group",
+                    className: t,
+                    children: n
+                })
+            }
+
+            function S(e) {
+                let {
+                    className: t,
+                    children: n
+                } = e, a = (0, c.useRadioGroup)({
+                    orientation: "vertical"
+                });
+                return (0, l.jsx)("div", {
+                    "aria-label": g.default.Messages.POLL_OPTIONS_ARIA,
+                    ...a,
+                    className: t,
+                    children: n
+                })
+            }
+
+            function N(e) {
+                let {
+                    className: t,
                     onClick: n,
                     isSelected: a,
                     children: s
                 } = e;
                 return (0, l.jsx)(c.Clickable, {
                     role: "checkbox",
-                    className: o(t, I.enabled),
+                    className: o(t, T.enabled),
                     onClick: n,
                     "aria-checked": a,
                     children: s
                 })
             }
 
-            function S(e) {
+            function M(e) {
                 let t, {
                     className: n,
                     children: a,
@@ -10911,7 +10913,7 @@
                 } = e;
                 return t = r ? i ? 0 : -1 : u ? 0 : -1, (0, l.jsx)(c.Clickable, {
                     role: "radio",
-                    className: o(n, I.enabled),
+                    className: o(n, T.enabled),
                     onClick: s,
                     "aria-checked": i,
                     tabIndex: t,
@@ -10919,7 +10921,7 @@
                 })
             }
 
-            function N(e) {
+            function v(e) {
                 let {
                     answers: t,
                     isInteractive: n,
@@ -10938,22 +10940,22 @@
                     isInteractive: !0,
                     canSelectMultipleAnswers: !1
                 }, () => ({
-                    ContainerComponent: C,
+                    ContainerComponent: S,
                     answerElementType: 1
                 })).with({
                     isInteractive: !0,
                     canSelectMultipleAnswers: !0
                 }, () => ({
-                    ContainerComponent: T,
+                    ContainerComponent: A,
                     answerElementType: 2
                 })).otherwise(() => ({
-                    ContainerComponent: g,
+                    ContainerComponent: C,
                     answerElementType: 0
                 }));
                 return (0, l.jsx)(c, {
                     className: i,
-                    children: t.map((e, t) => (0, l.jsx)(M, {
-                        className: o(I.answer, r),
+                    children: t.map((e, t) => (0, l.jsx)(O, {
+                        className: o(T.answer, r),
                         answer: e,
                         isFirstAnswer: 0 === t,
                         elementType: f,
@@ -10963,7 +10965,7 @@
                 })
             }
 
-            function M(e) {
+            function O(e) {
                 let {
                     className: t,
                     answer: n,
@@ -10974,8 +10976,8 @@
                 } = e, {
                     channelId: d,
                     messageId: c
-                } = (0, h.useMessageIds)(), f = (0, h.useStyleClass)(n.style), m = !0 === n.isSelected, E = i.useCallback(() => {
-                    _.default.handlePollAnswerTapped({
+                } = (0, I.useMessageIds)(), f = (0, I.useStyleClass)(n.style), m = !0 === n.isSelected, E = i.useCallback(() => {
+                    p.default.handlePollAnswerTapped({
                         channelId: d,
                         messageId: c,
                         answerId: n.answerId
@@ -10988,7 +10990,7 @@
                             children: a
                         });
                     case 1:
-                        return (0, l.jsx)(S, {
+                        return (0, l.jsx)(M, {
                             className: o(t, f),
                             onClick: E,
                             isSelected: m,
@@ -10997,7 +10999,7 @@
                             children: a
                         });
                     case 2:
-                        return (0, l.jsx)(A, {
+                        return (0, l.jsx)(N, {
                             className: o(t, f),
                             onClick: E,
                             isSelected: m,
@@ -11006,26 +11008,28 @@
                 }
             }
 
-            function v(e) {
+            function x(e) {
                 var t, n;
                 let {
                     attachment: a,
                     alt: s,
                     className: i
-                } = e;
-                return (0, l.jsx)(E.default, {
+                } = e, r = (0, h.useIsWindowFocused)(), o = E.GifAutoPlay.useSetting();
+                return (0, l.jsx)(_.default, {
                     className: i,
-                    imageClassName: I.attachmentImage,
-                    src: a.url,
+                    imageClassName: T.attachmentImage,
+                    src: null != a.proxy_url && "" !== a.proxy_url ? a.proxy_url : a.url,
                     alt: s,
                     responsive: !0,
                     width: null !== (t = a.width) && void 0 !== t ? t : 1,
                     height: null !== (n = a.height) && void 0 !== n ? n : 1,
+                    autoPlay: o,
+                    shouldAnimate: r,
                     shouldRenderAccessory: !1
                 })
             }
 
-            function O(e) {
+            function L(e) {
                 let {
                     alt: t,
                     className: n,
@@ -11043,7 +11047,7 @@
                 })
             }
 
-            function x(e, t) {
+            function R(e, t) {
                 return null != e ? (0, l.jsx)("div", {
                     className: e,
                     children: t
@@ -11052,7 +11056,7 @@
                 })
             }
 
-            function L(e) {
+            function P(e) {
                 var t;
                 let {
                     media: n,
@@ -11063,16 +11067,16 @@
                     alt: o
                 } = e, {
                     message: u
-                } = (0, h.usePollContext)(), d = null !== (t = null != o ? o : n.text) && void 0 !== t ? t : "";
+                } = (0, I.usePollContext)(), d = null !== (t = null != o ? o : n.text) && void 0 !== t ? t : "";
                 if (n.attachmentIds.length > 0) {
                     let e = u.attachments.find(e => e.id === n.attachmentIds[0]);
-                    if (null != e) return x(a, (0, l.jsx)(v, {
+                    if (null != e) return R(a, (0, l.jsx)(x, {
                         className: s,
                         attachment: e,
                         alt: d
                     }))
                 }
-                return null != n.emoji ? x(a, (0, l.jsx)(O, {
+                return null != n.emoji ? R(a, (0, l.jsx)(L, {
                     className: i,
                     emoji: n.emoji,
                     alt: d
