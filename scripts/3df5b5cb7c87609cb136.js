@@ -731,7 +731,7 @@
                         guildId: null == l ? void 0 : l.id,
                         recurrenceRule: $,
                         guildEventId: J,
-                        onClick: W
+                        onRecurrenceClick: W
                     })]
                 })
             }(l = i || (i = {}))[l.BANNER = 0] = "BANNER", l[l.THUMBNAIL = 1] = "THUMBNAIL"

@@ -478,7 +478,7 @@
                     guildId: t,
                     recurrenceRule: l,
                     guildEventId: u,
-                    onClick: v,
+                    onRecurrenceClick: v,
                     hideScroller: g = !1,
                     initialStartDate: S
                 } = e, [L, _] = s.useState([]), I = (0, o.useStateFromStores)([f.default], () => f.default.getGuildScheduledEvent(u));

@@ -14521,7 +14521,7 @@
                     return n => (0, i.jsx)(e, {
                         guildScheduledEventId: t,
                         parentGuildId: l,
-                        recurrenceId: s,
+                        initialRecurrenceId: s,
                         ...n
                     })
                 })
