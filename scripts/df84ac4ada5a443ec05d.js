@@ -562,7 +562,8 @@
                                     onSetCropData: V,
                                     isLoading: A,
                                     onDoneLoading: () => R(!1),
-                                    audioURL: w
+                                    audioURL: w,
+                                    transitionState: M
                                 }), !A && (0, a.jsx)(p.default, {
                                     voiceAudioEnabled: O,
                                     channelId: T,
@@ -586,22 +587,23 @@
                     cropData: t,
                     onSetCropData: l,
                     voiceAudioEnabled: i,
-                    applicationAudioEnabled: r,
-                    isLoading: s,
-                    onDoneLoading: u,
-                    videoURL: o,
-                    audioURL: d
-                } = e, c = n.useRef(null), f = n.useCallback(() => {
+                    applicationAudioEnabled: s,
+                    isLoading: u,
+                    onDoneLoading: o,
+                    videoURL: d,
+                    audioURL: c,
+                    transitionState: f
+                } = e, m = n.useRef(null), v = n.useCallback(() => {
                     var e;
-                    null === (e = c.current) || void 0 === e || e.seek(t.start), u()
-                }, [u, t.start]);
+                    null === (e = m.current) || void 0 === e || e.seek(t.start), o()
+                }, [o, t.start]);
                 return n.useEffect(() => {
                     function e(e) {
                         var l, a;
                         if ((null === (l = document.activeElement) || void 0 === l ? void 0 : l.tagName) === "INPUT") return;
-                        let n = c.current;
+                        let n = m.current;
                         if (null == n) return;
-                        let i = null === (a = c.current) || void 0 === a ? void 0 : a.videoElement;
+                        let i = null === (a = m.current) || void 0 === a ? void 0 : a.videoElement;
                         if (null == i) return;
                         let r = !1;
                         switch (e.key) {
@@ -622,19 +624,19 @@
                     children: [(0, a.jsx)("div", {
                         className: x.videoSizer,
                         children: (0, a.jsx)(E.default, {
-                            applicationAudioEnabled: r,
+                            applicationAudioEnabled: s,
                             voiceAudioEnabled: i,
-                            ref: c,
-                            audioSrc: d,
-                            src: o,
-                            isLoading: s,
-                            onDoneLoading: f
+                            ref: m,
+                            audioSrc: c,
+                            src: d,
+                            isLoading: u,
+                            onDoneLoading: v
                         })
-                    }), s ? null : (0, a.jsx)(h.default, {
-                        videoPlayerRef: c,
+                    }), u || f !== r.ModalTransitionState.ENTERED ? null : (0, a.jsx)(h.default, {
+                        videoPlayerRef: m,
                         cropData: t,
                         setCropData: l,
-                        sourceURL: o
+                        sourceURL: d
                     })]
                 })
             }
@@ -812,7 +814,7 @@
                         if (null == A) return;
                         if (null == k) return null;
                         let r = (0, s.clamp)(e, k.left, k.right),
-                            u = (r - k.left) / V * A,
+                            u = (r - k.left) / k.width * A,
                             o = (0, s.clamp)(u, 0, A),
                             d = M;
                         if (null == d && t && (d = o <= g.start ? "start" : o >= g.end ? "end" : "playhead", null === (l = I.current) || void 0 === l || l.pause(), j(d), O(L)), "start" === d) {
@@ -831,7 +833,7 @@
                             let e = (0, s.clamp)(o, g.start, g.end);
                             null === (i = I.current) || void 0 === i || i.seek(e)
                         }
-                    }, [A, k, V, M, g, I, L, _]),
+                    }, [A, k, M, g, I, L, _]),
                     W = n.useCallback(e => {
                         X(e.clientX, !0)
                     }, [X]),
