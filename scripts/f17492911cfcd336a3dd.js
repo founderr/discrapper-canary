@@ -1746,7 +1746,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "249896"
+                        buildNumber: "249898"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -23142,74 +23142,6 @@
                         })]
                     })]
                 })
-            }
-        },
-        760797: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                MIDJOURNEY_GUILD_ID: function() {
-                    return a
-                }
-            });
-            let a = "662267976984297473"
-        },
-        256896: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                isEligibleForMidjourneyOnboarding: function() {
-                    return s
-                }
-            });
-            var a = n("924593");
-
-            function s(e) {
-                let {
-                    enabled: t
-                } = a.MidjourneyOnboardingExperiment.getCurrentConfig({
-                    location: e
-                });
-                return t
-            }
-        },
-        924593: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                MidjourneyOnboardingExperiment: function() {
-                    return s
-                }
-            });
-            var a = n("862205");
-            let s = (0, a.createExperiment)({
-                kind: "user",
-                id: "2023-11_midjourney_onboarding",
-                label: "Midjourney Onboarding",
-                defaultConfig: {
-                    enabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enables the accelerated Midjourney Onboarding & Discord experience for the user.",
-                    config: {
-                        enabled: !0
-                    }
-                }]
-            })
-        },
-        894887: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                isMidjourneyOnboardingFlow: function() {
-                    return r
-                }
-            }), n("446674");
-            var a = n("305961"),
-                s = n("697218"),
-                l = n("256896"),
-                i = n("760797");
-
-            function r(e) {
-                let t = s.default.getCurrentUser();
-                return null != t && null == t.email && 1 === a.default.getGuildCount() && null != a.default.getGuild(i.MIDJOURNEY_GUILD_ID) && (0, l.isEligibleForMidjourneyOnboarding)(e)
             }
         },
         397039: function(e, t, n) {
