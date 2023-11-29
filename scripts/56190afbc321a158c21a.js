@@ -179,7 +179,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return eh
+                    return eN
                 }
             }), n("222007");
             var s = n("37983"),
@@ -226,31 +226,33 @@
                 Y = n("275744"),
                 W = n("104110"),
                 K = n("860959"),
-                z = n("152434"),
-                Z = n("404981"),
-                X = n("726206"),
-                J = n("49111"),
-                q = n("492397");
+                z = n("815762"),
+                Z = n("152434"),
+                X = n("404981"),
+                J = n("726206"),
+                q = n("49111"),
+                Q = n("492397");
             n("527441"), u.default.initialize();
-            let Q = (0, j.default)(H.default),
-                $ = (0, j.default)(Y.default),
-                ee = (0, j.default)(k.default),
-                et = (0, j.default)(V.default),
-                en = (0, j.default)(F.default),
-                es = (0, j.default)(A.default),
-                ea = (0, j.default)(K.default),
-                el = (0, j.default)(G.default),
-                ei = (0, j.default)(b.default),
-                er = (0, j.default)(X.default),
-                eu = (0, j.default)(h.default),
-                eo = (0, j.default)(z.default),
-                ed = (0, j.default)(y.default),
-                ec = (0, j.default)(p.default),
-                ef = (0, j.default)(T.default),
-                eE = (0, j.default)(B.default),
-                eI = (0, j.default)(W.default),
-                e_ = (0, j.default)(Z.default);
-            class ep extends a.PureComponent {
+            let $ = (0, j.default)(H.default),
+                ee = (0, j.default)(Y.default),
+                et = (0, j.default)(k.default),
+                en = (0, j.default)(V.default),
+                es = (0, j.default)(F.default),
+                ea = (0, j.default)(A.default),
+                el = (0, j.default)(K.default),
+                ei = (0, j.default)(G.default),
+                er = (0, j.default)(b.default),
+                eu = (0, j.default)(J.default),
+                eo = (0, j.default)(h.default),
+                ed = (0, j.default)(Z.default),
+                ec = (0, j.default)(y.default),
+                ef = (0, j.default)(p.default),
+                eE = (0, j.default)(T.default),
+                eI = (0, j.default)(B.default),
+                e_ = (0, j.default)(W.default),
+                ep = (0, j.default)(X.default),
+                eh = (0, j.default)(z.default);
+            class em extends a.PureComponent {
                 static getDerivedStateFromProps(e, t) {
                     var n;
                     let {
@@ -259,10 +261,10 @@
                     } = e, {
                         backgroundId: i
                     } = t, r = (0, l.parse)(a.search), u = null !== (n = r.redirect_to) && void 0 !== n ? n : null;
-                    (null == u || "" === u || !(0, P.isSafeRedirect)(u) || u.startsWith(J.Routes.ME)) && (u = null);
+                    (null == u || "" === u || !(0, P.isSafeRedirect)(u) || u.startsWith(q.Routes.ME)) && (u = null);
                     let o = null;
                     if (null == s) o = (0, O.getArtForPath)(u);
-                    else if ((null == s ? void 0 : s.state) === J.InviteStates.RESOLVED) {
+                    else if ((null == s ? void 0 : s.state) === q.InviteStates.RESOLVED) {
                         let {
                             guild: e,
                             target_application: t
@@ -283,16 +285,16 @@
                         hasLoadedExperiments: t,
                         isAuthenticated: n
                     } = this.props;
-                    null != e && (!t && n && d.default.getExperiments(!0), R.default.track(J.AnalyticEvents.INVITE_OPENED, {
+                    null != e && (!t && n && d.default.getExperiments(!0), R.default.track(q.AnalyticEvents.INVITE_OPENED, {
                         invite_code: (0, g.parseInviteCodeFromInviteKey)(e),
                         load_time: D.default.getTimeSinceNavigationStart()
                     }, {
                         flush: !0
-                    })), (t || q.CONFERENCE_MODE_ENABLED) && this.resolveInvite(), this.resolveGiftCode(), this.resolveGuildTemplate(), E.default.initialize()
+                    })), (t || Q.CONFERENCE_MODE_ENABLED) && this.resolveInvite(), this.resolveGiftCode(), this.resolveGuildTemplate(), E.default.initialize()
                 }
                 componentDidUpdate(e) {
                     var t, n;
-                    !e.hasLoadedExperiments && this.props.hasLoadedExperiments && !q.CONFERENCE_MODE_ENABLED && this.resolveInvite(), (null === (t = e.invite) || void 0 === t ? void 0 : t.state) !== (null === (n = this.props.invite) || void 0 === n ? void 0 : n.state) && this.maybeFetchApplicationSplash()
+                    !e.hasLoadedExperiments && this.props.hasLoadedExperiments && !Q.CONFERENCE_MODE_ENABLED && this.resolveInvite(), (null === (t = e.invite) || void 0 === t ? void 0 : t.state) !== (null === (n = this.props.invite) || void 0 === n ? void 0 : n.state) && this.maybeFetchApplicationSplash()
                 }
                 componentWillUnmount() {
                     E.default.terminate()
@@ -301,7 +303,7 @@
                     let {
                         invite: e
                     } = this.props;
-                    if ((null == e ? void 0 : e.state) === J.InviteStates.RESOLVED) {
+                    if ((null == e ? void 0 : e.state) === q.InviteStates.RESOLVED) {
                         let {
                             target_application: t
                         } = e;
@@ -321,7 +323,7 @@
                     let t = async () => {
                         let {
                             invite: t
-                        } = await f.default.resolveInvite(e, J.PageAnalyticsLocations.INVITE);
+                        } = await f.default.resolveInvite(e, q.PageAnalyticsLocations.INVITE);
                         null != t && (0, _.updateAuthInvite)(t)
                     };
                     t(), f.default.openNativeAppModal(e)
@@ -330,7 +332,7 @@
                     let {
                         guildTemplateCode: e
                     } = this.props;
-                    null != e && (R.default.track(J.AnalyticEvents.GUILD_TEMPLATE_OPENED, {
+                    null != e && (R.default.track(q.AnalyticEvents.GUILD_TEMPLATE_OPENED, {
                         guild_template_code: e,
                         load_time: D.default.getTimeSinceNavigationStart()
                     }, {
@@ -355,42 +357,42 @@
                     return (0, s.jsxs)(U.default, {
                         splash: e,
                         children: [(0, s.jsx)(I.default, {
-                            path: J.Routes.LOGIN_HANDOFF,
-                            render: e => (0, s.jsx)($, {
+                            path: q.Routes.LOGIN_HANDOFF,
+                            render: e => (0, s.jsx)(ee, {
                                 ...e,
                                 redirectTo: t
                             })
                         }), (0, s.jsx)(I.default, {
                             impressionName: i.ImpressionNames.USER_LOGIN,
-                            path: J.Routes.LOGIN,
-                            render: e => (0, s.jsx)(Q, {
+                            path: q.Routes.LOGIN,
+                            render: e => (0, s.jsx)($, {
                                 ...e,
                                 redirectTo: t
                             })
                         }), (0, s.jsx)(I.default, {
                             impressionName: i.ImpressionNames.USER_REGISTRATION,
-                            path: J.Routes.REGISTER,
-                            render: e => q.CONFERENCE_MODE_ENABLED ? (0, s.jsx)(ee, {
+                            path: q.Routes.REGISTER,
+                            render: e => Q.CONFERENCE_MODE_ENABLED ? (0, s.jsx)(et, {
                                 ...e,
                                 redirectTo: t,
                                 inviteKey: n
-                            }) : (0, s.jsx)(ea, {
+                            }) : (0, s.jsx)(el, {
                                 ...e,
                                 redirectTo: t
                             })
                         }), (0, s.jsx)(I.default, {
-                            path: J.Routes.GIFT_CODE_LOGIN(":giftCode"),
-                            render: e => (0, s.jsx)(en, {
+                            path: q.Routes.GIFT_CODE_LOGIN(":giftCode"),
+                            render: e => (0, s.jsx)(es, {
                                 login: !0,
                                 ...e
                             })
                         }), (0, s.jsx)(I.default, {
-                            path: J.Routes.GIFT_CODE(":giftCode"),
-                            render: e => (0, s.jsx)(en, {
+                            path: q.Routes.GIFT_CODE(":giftCode"),
+                            render: e => (0, s.jsx)(es, {
                                 ...e
                             })
                         }), (0, s.jsx)(I.default, {
-                            path: [J.Routes.INVITE_LOGIN(":inviteCode"), J.Routes.INVITE(":inviteCode")],
+                            path: [q.Routes.INVITE_LOGIN(":inviteCode"), q.Routes.INVITE(":inviteCode")],
                             render: e => {
                                 let {
                                     match: {
@@ -402,18 +404,18 @@
                                     location: a,
                                     transitionTo: l
                                 } = e, i = (0, g.generateInviteKeyFromUrlParams)(t, a.search);
-                                return r.isMobile || r.isTablet ? (0, s.jsx)(es, {
+                                return r.isMobile || r.isTablet ? (0, s.jsx)(ea, {
                                     inviteKey: i,
                                     transitionTo: l
-                                }, i) : (0, s.jsx)(ee, {
+                                }, i) : (0, s.jsx)(et, {
                                     inviteKey: i,
                                     location: a,
                                     transitionTo: l,
-                                    login: n === J.Routes.INVITE_LOGIN(":inviteCode")
+                                    login: n === q.Routes.INVITE_LOGIN(":inviteCode")
                                 })
                             }
                         }), (0, s.jsx)(I.default, {
-                            path: [J.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"), J.Routes.GUILD_TEMPLATE(":guildTemplateCode")],
+                            path: [q.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"), q.Routes.GUILD_TEMPLATE(":guildTemplateCode")],
                             render: e => {
                                 let {
                                     match: {
@@ -427,79 +429,84 @@
                                 } = e;
                                 return r.isMobile || r.isTablet ? (0, s.jsx)(w.default, {
                                     code: t
-                                }, t) : (0, s.jsx)(et, {
+                                }, t) : (0, s.jsx)(en, {
                                     code: t,
                                     location: a,
                                     transitionTo: l,
-                                    login: n === J.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode")
+                                    login: n === q.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode")
                                 })
                             }
                         }), (0, s.jsx)(I.default, {
-                            path: J.Routes.VERIFY,
-                            render: e => (0, s.jsx)(er, {
-                                ...e
-                            })
-                        }), (0, s.jsx)(I.default, {
-                            path: J.Routes.VERIFY_HUB_EMAIL,
-                            render: e => (0, s.jsx)(ef, {
-                                ...e
-                            })
-                        }), (0, s.jsx)(I.default, {
-                            path: J.Routes.VERIFY_REQUEST,
+                            path: q.Routes.VERIFY,
                             render: e => (0, s.jsx)(eu, {
                                 ...e
                             })
                         }), (0, s.jsx)(I.default, {
-                            path: J.Routes.DISABLE_EMAIL_NOTIFICATIONS,
-                            render: e => (0, s.jsx)(ed, {
-                                ...e
-                            })
-                        }), (0, s.jsx)(I.default, {
-                            path: J.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
-                            render: e => (0, s.jsx)(ec, {
-                                ...e
-                            })
-                        }), (0, s.jsx)(I.default, {
-                            path: J.Routes.AUTHORIZE_IP,
-                            render: e => (0, s.jsx)(el, {
-                                ...e
-                            })
-                        }), (0, s.jsx)(I.default, {
-                            path: J.Routes.REJECT_IP,
-                            render: e => (0, s.jsx)(eo, {
-                                source: J.Routes.REJECT_IP,
-                                ...e
-                            })
-                        }), (0, s.jsx)(I.default, {
-                            path: J.Routes.REJECT_MFA,
-                            render: e => (0, s.jsx)(eo, {
-                                source: J.Routes.REJECT_MFA,
-                                ...e
-                            })
-                        }), (0, s.jsx)(I.default, {
-                            path: J.Routes.AUTHORIZE_PAYMENT,
-                            render: e => (0, s.jsx)(ei, {
-                                ...e
-                            })
-                        }), (0, s.jsx)(I.default, {
-                            path: J.Routes.RESET,
-                            render: e => (0, s.jsx)(eo, {
-                                source: J.Routes.RESET,
-                                ...e
-                            })
-                        }), (0, s.jsx)(I.default, {
-                            path: J.Routes.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
-                            render: e => (0, s.jsx)(eI, {
-                                ...e
-                            })
-                        }), (0, s.jsx)(I.default, {
-                            path: J.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"),
+                            path: q.Routes.VERIFY_HUB_EMAIL,
                             render: e => (0, s.jsx)(eE, {
                                 ...e
                             })
                         }), (0, s.jsx)(I.default, {
-                            path: J.Routes.REPORT,
+                            path: q.Routes.VERIFY_REQUEST,
+                            render: e => (0, s.jsx)(eo, {
+                                ...e
+                            })
+                        }), (0, s.jsx)(I.default, {
+                            path: q.Routes.DISABLE_EMAIL_NOTIFICATIONS,
+                            render: e => (0, s.jsx)(ec, {
+                                ...e
+                            })
+                        }), (0, s.jsx)(I.default, {
+                            path: q.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
+                            render: e => (0, s.jsx)(ef, {
+                                ...e
+                            })
+                        }), (0, s.jsx)(I.default, {
+                            path: q.Routes.AUTHORIZE_IP,
+                            render: e => (0, s.jsx)(ei, {
+                                ...e
+                            })
+                        }), (0, s.jsx)(I.default, {
+                            path: q.Routes.REJECT_IP,
+                            render: e => (0, s.jsx)(ed, {
+                                source: q.Routes.REJECT_IP,
+                                ...e
+                            })
+                        }), (0, s.jsx)(I.default, {
+                            path: q.Routes.REJECT_MFA,
+                            render: e => (0, s.jsx)(ed, {
+                                source: q.Routes.REJECT_MFA,
+                                ...e
+                            })
+                        }), (0, s.jsx)(I.default, {
+                            path: q.Routes.AUTHORIZE_PAYMENT,
+                            render: e => (0, s.jsx)(er, {
+                                ...e
+                            })
+                        }), (0, s.jsx)(I.default, {
+                            path: q.Routes.RESET,
+                            render: e => (0, s.jsx)(ed, {
+                                source: q.Routes.RESET,
+                                ...e
+                            })
+                        }), (0, s.jsx)(I.default, {
+                            path: q.Routes.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
                             render: e => (0, s.jsx)(e_, {
+                                ...e
+                            })
+                        }), (0, s.jsx)(I.default, {
+                            path: q.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"),
+                            render: e => (0, s.jsx)(eI, {
+                                ...e
+                            })
+                        }), (0, s.jsx)(I.default, {
+                            path: q.Routes.REPORT,
+                            render: e => (0, s.jsx)(ep, {
+                                ...e
+                            })
+                        }), (0, s.jsx)(I.default, {
+                            path: q.Routes.REPORT_SECOND_LOOK,
+                            render: e => (0, s.jsx)(eh, {
                                 ...e
                             })
                         })]
@@ -513,12 +520,12 @@
                     }
                 }
             }
-            var eh = u.default.connectStores([S.default, x.default, v.default, C.default, m.default], e => {
+            var eN = u.default.connectStores([S.default, x.default, v.default, C.default, m.default], e => {
                 var t, n, s;
                 let {
                     match: a,
                     location: l
-                } = e, i = null == a ? void 0 : null === (t = a.params) || void 0 === t ? void 0 : t.inviteCode, r = q.CONFERENCE_MODE_ENABLED ? q.DEFAULT_INVITE_CODE : void 0, u = null != i ? (0, g.generateInviteKeyFromUrlParams)(i, l.search) : r, o = null == a ? void 0 : null === (n = a.params) || void 0 === n ? void 0 : n.giftCode, d = null == a ? void 0 : null === (s = a.params) || void 0 === s ? void 0 : s.guildTemplateCode;
+                } = e, i = null == a ? void 0 : null === (t = a.params) || void 0 === t ? void 0 : t.inviteCode, r = Q.CONFERENCE_MODE_ENABLED ? Q.DEFAULT_INVITE_CODE : void 0, u = null != i ? (0, g.generateInviteKeyFromUrlParams)(i, l.search) : r, o = null == a ? void 0 : null === (n = a.params) || void 0 === n ? void 0 : n.giftCode, d = null == a ? void 0 : null === (s = a.params) || void 0 === s ? void 0 : s.guildTemplateCode;
                 return {
                     inviteKey: u,
                     isAuthenticated: S.default.isAuthenticated(),
@@ -529,7 +536,7 @@
                     guildTemplate: null != d ? m.default.getGuildTemplate(d) : null,
                     hasLoadedExperiments: C.default.hasLoadedExperiments
                 }
-            })(ep)
+            })(em)
         },
         504568: function(e, t, n) {
             "use strict";
@@ -1970,6 +1977,49 @@
                         match: t,
                         location: n,
                         attemptDeepLink: r
+                    })
+                }
+        },
+        815762: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return E
+                }
+            }), n("222007");
+            var s = n("37983"),
+                a = n("884691"),
+                l = n("77078"),
+                i = n("457108"),
+                r = n("965153"),
+                u = n("98352"),
+                o = n("970366"),
+                d = n("124969"),
+                c = n("782340"),
+                f = n("926622"),
+                E = e => {
+                    let {
+                        location: t
+                    } = e, n = (0, u.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"), [E, I] = a.useState(!1), [_, p] = a.useState(c.default.Messages.AUTHORIZING);
+                    return a.useEffect(() => {
+                        let e = async e => {
+                            try {
+                                let t = null != e ? await (0, r.submitReportSecondLook)(e) : void 0;
+                                null != t ? p(c.default.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : p(c.default.Messages.REPORT_SECOND_LOOK_FAILURE_TITLE)
+                            } catch (e) {
+                                p(c.default.Messages.REPORT_SECOND_LOOK_FAILURE_TITLE)
+                            } finally {
+                                I(!1)
+                            }
+                        };
+                        I(!0);
+                        let n = (0, i.default)(t);
+                        e(n), (0, o.trackAppUIViewed)("report_second_look")
+                    }, [t]), n && (0, s.jsxs)(d.default, {
+                        children: [(0, s.jsx)(d.Title, {
+                            className: f.marginBottom8,
+                            children: _
+                        }), E && (0, s.jsx)(l.Spinner, {})]
                     })
                 }
         },

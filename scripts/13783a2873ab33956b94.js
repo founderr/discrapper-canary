@@ -164,7 +164,7 @@
                 _ = n("49111"),
                 m = n("71041");
             let g = (0, f.cssValueToNumber)(m.responsiveWidthMobile),
-                p = [_.Routes.LOGIN, _.Routes.LOGIN_HANDOFF, _.Routes.REGISTER, _.Routes.INVITE(""), _.Routes.GIFT_CODE(""), _.Routes.GUILD_TEMPLATE_LOGIN(""), _.Routes.GUILD_TEMPLATE(""), _.Routes.DISABLE_EMAIL_NOTIFICATIONS, _.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, _.Routes.BILLING_PREMIUM_SUBSCRIBE, _.Routes.BILLING_PAYMENT_SOURCES_CREATE, _.Routes.BILLING_PAYMENTS, _.Routes.BILLING_PREMIUM_SWITCH_PLAN, _.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, _.Routes.VERIFY, _.Routes.VERIFY_HUB_EMAIL, _.Routes.REJECT_IP, _.Routes.REJECT_MFA, _.Routes.AUTHORIZE_IP, _.Routes.AUTHORIZE_PAYMENT, _.Routes.RESET, _.Routes.HANDOFF, _.Routes.REPORT];
+                p = [_.Routes.LOGIN, _.Routes.LOGIN_HANDOFF, _.Routes.REGISTER, _.Routes.INVITE(""), _.Routes.GIFT_CODE(""), _.Routes.GUILD_TEMPLATE_LOGIN(""), _.Routes.GUILD_TEMPLATE(""), _.Routes.DISABLE_EMAIL_NOTIFICATIONS, _.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, _.Routes.BILLING_PREMIUM_SUBSCRIBE, _.Routes.BILLING_PAYMENT_SOURCES_CREATE, _.Routes.BILLING_PAYMENTS, _.Routes.BILLING_PREMIUM_SWITCH_PLAN, _.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, _.Routes.VERIFY, _.Routes.VERIFY_HUB_EMAIL, _.Routes.REJECT_IP, _.Routes.REJECT_MFA, _.Routes.AUTHORIZE_IP, _.Routes.AUTHORIZE_PAYMENT, _.Routes.RESET, _.Routes.HANDOFF, _.Routes.REPORT, _.Routes.REPORT_SECOND_LOOK];
 
             function A(e) {
                 return p.some(t => e.startsWith(t))
@@ -361,8 +361,8 @@
                 N = n("25033"),
                 S = n("589252"),
                 C = n("970366"),
-                L = n("271938"),
-                O = n("72177"),
+                O = n("271938"),
+                L = n("72177"),
                 M = n("476108"),
                 x = n("145131"),
                 v = n("124969"),
@@ -469,7 +469,7 @@
                         let e = window.location.protocol + window.GLOBAL_ENV.API_ENDPOINT + B.Endpoints.SSO,
                             t = {
                                 ...a,
-                                token: L.default.getToken()
+                                token: O.default.getToken()
                             };
                         window.location = "".concat(e, "?").concat((0, i.stringify)(t))
                     }
@@ -1041,16 +1041,16 @@
                 transitionTo: e => n.g.location.assign(e)
             };
             var K = function(e) {
-                let t = (0, u.useStateFromStoresObject)([O.default, M.default, L.default, T.default, N.default], () => ({
-                    authenticated: L.default.isAuthenticated(),
-                    handoffAvailable: O.default.isHandoffAvailable(),
-                    user: O.default.user,
-                    loginStatus: L.default.getLoginStatus(),
-                    mfaTicket: L.default.getMFATicket(),
-                    mfaSMS: L.default.getMFASMS(),
-                    mfaMethods: L.default.getMFAMethods(),
-                    maskedPhone: L.default.getMaskedPhone(),
-                    errors: L.default.getErrors(),
+                let t = (0, u.useStateFromStoresObject)([L.default, M.default, O.default, T.default, N.default], () => ({
+                    authenticated: O.default.isAuthenticated(),
+                    handoffAvailable: L.default.isHandoffAvailable(),
+                    user: L.default.user,
+                    loginStatus: O.default.getLoginStatus(),
+                    mfaTicket: O.default.getMFATicket(),
+                    mfaSMS: O.default.getMFASMS(),
+                    mfaMethods: O.default.getMFAMethods(),
+                    maskedPhone: O.default.getMaskedPhone(),
+                    errors: O.default.getErrors(),
                     defaultRoute: M.default.defaultRoute,
                     country: N.default.getCountryCode(),
                     hasLoggedInAccounts: T.default.getHasLoggedInAccounts()
@@ -1175,9 +1175,9 @@
                 S = n("926622");
             (l = s || (s = {}))[l.INITIALIZING = 0] = "INITIALIZING", l[l.PENDING_REMOTE_INIT = 1] = "PENDING_REMOTE_INIT", l[l.PENDING_FINISH = 2] = "PENDING_FINISH", l[l.PENDING_TICKET = 3] = "PENDING_TICKET", l[l.PENDING_LOGIN = 4] = "PENDING_LOGIN", l[l.FINISH = 5] = "FINISH", (r = a || (a = {}))[r.QR_CODE = 0] = "QR_CODE", r[r.CONFIRM = 1] = "CONFIRM";
             let C = n("527826"),
-                L = new h.default("LoginQRSocket");
+                O = new h.default("LoginQRSocket");
 
-            function O(e) {
+            function L(e) {
                 let {
                     text: t = ""
                 } = e, [n, s] = o.useState(!1);
@@ -1235,7 +1235,7 @@
                     case 0:
                     case 1:
                         return (0, i.jsxs)(i.Fragment, {
-                            children: [(0, i.jsx)(O, {
+                            children: [(0, i.jsx)(L, {
                                 text: 1 === t.step ? "https://discord.com/ra/".concat(t.fingerprint) : ""
                             }), (0, i.jsx)(m.Title, {
                                 className: S.marginBottom8,
@@ -1298,7 +1298,7 @@
                     h.current = o.useCallback(() => {
                         r({
                             step: 0
-                        }), c ? n(e => e + 1) : (L.info("document is not visible, will defer reconnection when document becomes visible."), a(!0))
+                        }), c ? n(e => e + 1) : (O.info("document is not visible, will defer reconnection when document becomes visible."), a(!0))
                     }, [c]);
                     let _ = o.useCallback(() => {
                             (function(e) {
@@ -1310,19 +1310,19 @@
                             })(h)()
                         }, [h]),
                         m = o.useCallback(() => {
-                            L.error("Could not complete QR code login, trying to restart with a new QR code."), r({
+                            O.error("Could not complete QR code login, trying to restart with a new QR code."), r({
                                 step: 0
                             }), !E.pending && E.fail(_)
                         }, [_, E]);
                     return o.useEffect(() => {
-                        c && s && 0 === l.step && (L.info("reconnecting, now that document is visible"), a(!1), n(e => e + 1))
+                        c && s && 0 === l.step && (O.info("reconnecting, now that document is visible"), a(!1), n(e => e + 1))
                     }, [l, c, s, a]), o.useEffect(() => {
                         let t = Date.now(),
                             n = () => "".concat(Date.now() - t, "ms"),
                             s = "wss:".concat(window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT, "/?v=2"),
                             a = new WebSocket(s);
-                        L.info("[0ms] connecting to ".concat(s));
-                        let l = e => L.info("[".concat(n(), "] ").concat(e)),
+                        O.info("[0ms] connecting to ".concat(s));
+                        let l = e => O.info("[".concat(n(), "] ").concat(e)),
                             i = null,
                             o = null,
                             u = null,
@@ -1546,8 +1546,8 @@
                 N = n("980976"),
                 S = n("534438"),
                 C = n("946859"),
-                L = n("791160"),
-                O = n("434824"),
+                O = n("791160"),
+                L = n("434824"),
                 M = n("770032"),
                 x = n("165926"),
                 v = n("25033"),
@@ -1615,7 +1615,7 @@
                     V.default.track(Z.AnalyticEvents.REGISTER_VIEWED, {
                         location: null != t ? "Invite Register Page" : "Non-Invite Register Page",
                         registration_source: this.registrationSource,
-                        ...null != e ? (0, L.default)(e, !1, !1) : {}
+                        ...null != e ? (0, O.default)(e, !1, !1) : {}
                     }, {
                         flush: !0
                     }), null == this.props.consentRequired && f.default.getLocationMetadata(), (0, F.trackAppUIViewed)("register")
@@ -1938,8 +1938,8 @@
                         apiErrors: {
                             email: S,
                             username: C,
-                            global_name: L,
-                            password: O,
+                            global_name: O,
+                            password: L,
                             date_of_birth: M
                         } = {},
                         hasLoggedInAccounts: x,
@@ -1995,7 +1995,7 @@
                             onChange: e => this.setState({
                                 globalName: e
                             }),
-                            error: ea(L),
+                            error: ea(O),
                             maxLength: $.MAX_DISPLAY_NAME_LENGTH,
                             setRef: e => {
                                 this.globalNameRef = e
@@ -2046,7 +2046,7 @@
                                 password: e,
                                 passwordClientError: 0 === e.length ? ee.default.Messages.REQUIRED : null
                             }),
-                            error: null != _ ? _ : ea(O),
+                            error: null != _ ? _ : ea(L),
                             type: "password",
                             setRef: e => {
                                 this.passwordRef = e
@@ -2114,7 +2114,7 @@
                         giftCode: a,
                         guildTemplate: l
                     } = this.props, r = null != n && null == n.guild && null == n.channel && null != n.inviter;
-                    return null == n || r || t ? null != l ? this.renderFull(() => (0, s.jsx)(O.default, {
+                    return null == n || r || t ? null != l ? this.renderFull(() => (0, s.jsx)(L.default, {
                         guildTemplate: l
                     }), !0) : null != a ? this.renderFull(() => (0, s.jsx)(K.default, {
                         giftCode: a
@@ -2708,7 +2708,7 @@
                     month: N,
                     setMonth: S,
                     year: C,
-                    setYear: L
+                    setYear: O
                 } = function(e) {
                     let t = null,
                         n = null,
@@ -2723,12 +2723,12 @@
                         year: u,
                         setYear: d
                     }
-                }(n), O = a.useMemo(() => null != R && null != N && null != C ? o("".concat(R, "/").concat(N, "/").concat(C), "DD/MM/YYYY") : null, [R, N, C]);
+                }(n), L = a.useMemo(() => null != R && null != N && null != C ? o("".concat(R, "/").concat(N, "/").concat(C), "DD/MM/YYYY") : null, [R, N, C]);
                 a.useEffect(() => {
-                    i((null == O ? void 0 : O.isValid()) ? O : null)
-                }, [O, i]);
+                    i((null == L ? void 0 : L.isValid()) ? L : null)
+                }, [L, i]);
                 let M = m;
-                null != O && !O.isValid() && (M = c.default.Messages.AGE_GATE_INVALID_BIRTHDAY);
+                null != L && !L.isValid() && (M = c.default.Messages.AGE_GATE_INVALID_BIRTHDAY);
                 let x = function() {
                         let e = new Date().getFullYear(),
                             t = a.useRef(Array.from(Array(150).keys()).map(t => ({
@@ -2836,7 +2836,7 @@
                                 key: "year",
                                 input: (0, s.jsx)(g, {
                                     options: x,
-                                    selectOption: L,
+                                    selectOption: O,
                                     children: (0, s.jsx)(d.default, {
                                         ref: G,
                                         className: E.inputYear,
@@ -2852,7 +2852,7 @@
                                             let {
                                                 value: n
                                             } = t;
-                                            L(n), D(e + 1)
+                                            O(n), D(e + 1)
                                         },
                                         maxMenuHeight: 215
                                     })
@@ -3615,7 +3615,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return L
+                    return O
                 }
             }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("506083");
             var s, a, l = n("37983"),
@@ -3642,7 +3642,7 @@
                 C = () => {
                     c.default.remove(R), c.default.remove(I)
                 };
-            var L = () => {
+            var O = () => {
                 let e = (0, u.useStateFromStores)([m.default], () => m.default.getFingerprint()),
                     {
                         fingerprint: t,
@@ -3656,21 +3656,21 @@
                         fingerprint: s
                     })
                 }, [s, e]);
-                let [L, O] = r.useState(null), M = r.useCallback(e => {
-                    O(e), g.default.track(A.AnalyticEvents.MOBILE_WEB_HANDOFF_FAILURE, {
+                let [O, L] = r.useState(null), M = r.useCallback(e => {
+                    L(e), g.default.track(A.AnalyticEvents.MOBILE_WEB_HANDOFF_FAILURE, {
                         reason: e,
                         fingerprint: (0, o.maybeExtractId)(a)
                     }, {
                         fingerprint: a
                     })
-                }, [O, a]), x = c.default.get(R);
-                if ("null" === n && null === L && M("deep_link_failed"), null != n && "null" !== n && null == x && null === L && M("nonce_missing"), r.useEffect(() => {
+                }, [L, a]), x = c.default.get(R);
+                if ("null" === n && null === O && M("deep_link_failed"), null != n && "null" !== n && null == x && null === O && M("nonce_missing"), r.useEffect(() => {
                         if (null != x) {
                             let e = c.default.get(I);
                             (null == e || Date.now() >= e) && (M("nonce_expired"), C())
                         }
                     }, [x, M]), r.useEffect(() => {
-                        null != n && "null" !== n && null != x && null == L && d.default.post({
+                        null != n && "null" !== n && null != x && null == O && d.default.post({
                             url: A.Endpoints.HANDOFF_EXCHANGE,
                             body: {
                                 key: x,
@@ -3690,15 +3690,15 @@
                         }).finally(() => {
                             C()
                         })
-                    }, [n, x, L, a, M]), null == a) return null;
+                    }, [n, x, O, a, M]), null == a) return null;
                 let v = (() => {
-                        if (null == L) return (0, l.jsxs)(l.Fragment, {
+                        if (null == O) return (0, l.jsxs)(l.Fragment, {
                             children: [_.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_1, (0, l.jsx)("br", {}), _.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_2]
                         });
-                        if (S.has(L)) return _.MOBILE_WEB_HANDOFF_ERROR_NO_TRY_AGAIN;
-                        if (N.has(L)) return _.MOBILE_WEB_HANDOFF_ERROR_TRY_AGAIN
+                        if (S.has(O)) return _.MOBILE_WEB_HANDOFF_ERROR_NO_TRY_AGAIN;
+                        if (N.has(O)) return _.MOBILE_WEB_HANDOFF_ERROR_TRY_AGAIN
                     })(),
-                    D = null != L && S.has(L);
+                    D = null != O && S.has(O);
                 return D ? (0, l.jsx)("div", {
                     className: T.errorContainer,
                     children: (0, l.jsx)(E.Text, {
@@ -3801,7 +3801,7 @@
                     return s
                 },
                 default: function() {
-                    return O
+                    return L
                 }
             }), n("506083");
             var s, a, l = n("37983"),
@@ -3826,7 +3826,7 @@
                 S = n("782340"),
                 C = n("31295");
 
-            function L(e) {
+            function O(e) {
                 let {
                     actionText: t,
                     user: n,
@@ -3839,13 +3839,13 @@
                     currentUser: m.default.getCurrentUser(),
                     hidePrivateData: _.default.hidePersonalInformation,
                     isAuthenticated: h.default.isAuthenticated()
-                })), I = new f.default(n), L = i && (null == a ? void 0 : a.id) === I.id, O = n.tokenStatus === R.MultiAccountTokenStatus.INVALID, M = r || I.isPomelo() ? null : "#".concat(I.discriminator), x = null;
-                return L ? x = (0, l.jsx)(d.Text, {
+                })), I = new f.default(n), O = i && (null == a ? void 0 : a.id) === I.id, L = n.tokenStatus === R.MultiAccountTokenStatus.INVALID, M = r || I.isPomelo() ? null : "#".concat(I.discriminator), x = null;
+                return O ? x = (0, l.jsx)(d.Text, {
                     variant: "text-sm/semibold",
                     className: C.hintText,
                     color: "text-positive",
                     children: S.default.Messages.SWITCH_ACCOUNTS_ACTIVE_ACCOUNT
-                }) : O && (x = (0, l.jsx)(d.Text, {
+                }) : L && (x = (0, l.jsx)(d.Text, {
                     variant: "text-sm/semibold",
                     className: C.hintText,
                     color: "text-danger",
@@ -3860,7 +3860,7 @@
                             "aria-label": n.username
                         }), (0, l.jsxs)("div", {
                             className: o(C.usernameSection, {
-                                [C.hasActionMaxWidth]: !L
+                                [C.hasActionMaxWidth]: !O
                             }),
                             children: [(0, l.jsxs)("div", {
                                 className: C.username,
@@ -3880,9 +3880,9 @@
                             }), x]
                         }), (0, l.jsxs)("div", {
                             className: C.userActions,
-                            children: [!L && (0, l.jsx)(d.Button, {
+                            children: [!O && (0, l.jsx)(d.Button, {
                                 onClick: function() {
-                                    if (O) {
+                                    if (L) {
                                         s(0, n.id);
                                         return
                                     }
@@ -3893,7 +3893,7 @@
                                     }), T.switchAccount(n.id), s(1, n.id)
                                 },
                                 color: d.Button.Colors.PRIMARY,
-                                children: O ? S.default.Messages.SWITCH_ACCOUNTS_ACTION_LOG_IN : t
+                                children: L ? S.default.Messages.SWITCH_ACCOUNTS_ACTION_LOG_IN : t
                             }), (0, l.jsx)(d.Button, {
                                 className: C.userActionMenu,
                                 onClick: function(e) {
@@ -3938,7 +3938,7 @@
                 })
             }
 
-            function O(e) {
+            function L(e) {
                 let {
                     actionText: t,
                     onAction: n
@@ -3949,7 +3949,7 @@
                 return (0, l.jsx)("div", {
                     className: C.list,
                     children: s ? (0, l.jsx)(d.Spinner, {}) : a.map((e, s) => (0, l.jsxs)(r.Fragment, {
-                        children: [(0, l.jsx)(L, {
+                        children: [(0, l.jsx)(O, {
                             user: e,
                             actionText: t,
                             onAction: n
@@ -4239,8 +4239,8 @@
                     autoComplete: N,
                     autoCapitalize: S,
                     autoCorrect: C,
-                    onChange: L,
-                    inputClassName: O
+                    onChange: O,
+                    inputClassName: L
                 } = e, M = (0, o.useUID)(), [x, v] = a.useState(!1), D = (0, u.shouldShowCountryCodeSelector)(l, g);
                 return (0, s.jsx)(i.FormItem, {
                     title: f,
@@ -4250,7 +4250,7 @@
                     tag: "label",
                     htmlFor: M,
                     children: (0, s.jsxs)("div", {
-                        className: r(E.input, c.input, O, {
+                        className: r(E.input, c.input, L, {
                             [E.error]: null != h,
                             [E.focused]: x
                         }),
@@ -4269,7 +4269,7 @@
                             required: m,
                             onChange: function(e) {
                                 let t = (0, u.shouldShowCountryCodeSelector)(l, e) ? n : "";
-                                L(e, t)
+                                O(e, t)
                             },
                             autoComplete: N,
                             autoCapitalize: S,

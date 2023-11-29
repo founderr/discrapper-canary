@@ -22875,6 +22875,7 @@
                 else if (e.startsWith(u.Routes.AUTHORIZE_PAYMENT)) return u.PageAnalyticsLocations.AUTHORIZE_PAYMENT;
                 else if (e.startsWith(u.Routes.RESET)) return u.PageAnalyticsLocations.RESET;
                 else if (e.startsWith(u.Routes.REPORT)) return u.PageAnalyticsLocations.REPORT;
+                else if (e.startsWith(u.Routes.REPORT_SECOND_LOOK)) return u.PageAnalyticsLocations.REPORT_SECOND_LOOK;
                 return e
             }
 

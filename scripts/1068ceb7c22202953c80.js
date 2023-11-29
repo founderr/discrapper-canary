@@ -244,14 +244,17 @@
                 verifyUnauthenticatedReport: function() {
                     return _
                 },
-                trackCloseReportModalAnalytics: function() {
-                    return x
+                submitReportSecondLook: function() {
+                    return E
                 },
-                showInAppReportsFeedbackModal: function() {
+                trackCloseReportModalAnalytics: function() {
                     return R
                 },
-                areRequiredElementsUnfilled: function() {
+                showInAppReportsFeedbackModal: function() {
                     return g
+                },
+                areRequiredElementsUnfilled: function() {
+                    return N
                 }
             }), n("70102"), n("808653");
             var a = n("872717"),
@@ -261,7 +264,7 @@
                 i = n("49111");
             async function d(e, t) {
                 var n;
-                let l = h(e),
+                let l = v(e),
                     r = await a.default.get({
                         url: i.Endpoints.GET_REPORT_MENU(l),
                         query: (null == t ? void 0 : t.variant) != null ? {
@@ -273,7 +276,7 @@
             }
             async function u(e, t) {
                 var n;
-                let l = E(e),
+                let l = h(e),
                     r = await a.default.get({
                         url: i.Endpoints.GET_UNAUTHENTICATED_REPORT_MENU(l),
                         query: (null == t ? void 0 : t.variant) != null ? {
@@ -284,11 +287,11 @@
                 return s
             }
             async function o(e, t) {
-                let n = h(e),
+                let n = v(e),
                     l = await d(e, t);
                 await a.default.post({
                     url: i.Endpoints.SUBMIT_REPORT_MENU(n),
-                    body: v(l, e, [{
+                    body: x(l, e, [{
                         nodeRef: l.root_node_id,
                         destination: ["", l.success_node_id]
                     }])
@@ -297,16 +300,16 @@
 
             function c(e, t, n) {
                 return a.default.post({
-                    url: i.Endpoints.SUBMIT_REPORT_MENU(h(t)),
-                    body: v(e, t, n)
+                    url: i.Endpoints.SUBMIT_REPORT_MENU(v(t)),
+                    body: x(e, t, n)
                 })
             }
 
             function m(e, t, n, l) {
-                let r = E(t);
+                let r = h(t);
                 return a.default.post({
                     url: i.Endpoints.SUBMIT_UNAUTHENTICATED_REPORT_MENU(r),
-                    body: v(e, t, n, l)
+                    body: x(e, t, n, l)
                 })
             }
 
@@ -330,19 +333,28 @@
                 });
                 return l.body
             }
+            async function E(e) {
+                let t = await a.default.post({
+                    url: i.Endpoints.SUBMIT_REPORT_SECOND_LOOK,
+                    body: {
+                        token: e
+                    }
+                });
+                return t.body
+            }
 
-            function E(e) {
+            function h(e) {
                 let t = e.name;
                 if (!Object.values(s.UnauthenticatedReportNames).includes(t)) throw Error("Invalid report type ".concat(e.name));
                 return t
             }
 
-            function h(e) {
+            function v(e) {
                 let t = e.name;
                 if (!Object.values(s.ReportNames).includes(t)) throw Error("Invalid report type ".concat(e.name));
                 return t
             }
-            let v = (e, t, n, a) => {
+            let x = (e, t, n, a) => {
                 let {
                     version: l,
                     variant: r,
@@ -461,7 +473,7 @@
                 return null
             };
 
-            function x(e, t, n) {
+            function R(e, t, n) {
                 r.default.trackWithMetadata(i.AnalyticEvents.IAR_MODAL_CLOSE, {
                     report_type: e.name,
                     report_id: n,
@@ -474,7 +486,7 @@
                 })
             }
 
-            function R(e, t) {
+            function g(e, t) {
                 l.default.dispatch({
                     type: "IN_APP_REPORTS_SHOW_FEEDBACK",
                     reportId: t,
@@ -482,7 +494,7 @@
                 })
             }
 
-            function g(e, t, n, a, l) {
+            function N(e, t, n, a, l) {
                 return e.some(e => !0 === e.should_submit_data && ((null == a ? void 0 : a[e.name]) == null || (null == a ? void 0 : a[e.name]) === "")) || t.some(e => !0 === e.should_submit_data && ((null == a ? void 0 : a[e.name]) == null || (null == a ? void 0 : a[e.name]) === "")) || (null == n ? void 0 : n.should_submit_data) === !0 && (null == l || 0 === Object.keys(l).length)
             }
         },
@@ -517,7 +529,7 @@
                         root_node_id: g,
                         success_node_id: N,
                         fail_node_id: p
-                    } = n, [T, I] = l.useState(g), [S, M] = l.useState(void 0), [j, C] = l.useState(void 0), [b, y] = l.useState([]), [L, D] = l.useState(void 0), A = e => {
+                    } = n, [T, S] = l.useState(g), [I, M] = l.useState(void 0), [j, C] = l.useState(void 0), [b, y] = l.useState([]), [L, D] = l.useState(void 0), A = e => {
                         var n;
                         let {
                             destination: a
@@ -536,7 +548,7 @@
                                 next_node: r.id
                             })
                         }
-                        I(l)
+                        S(l)
                     }, O = async e => {
                         var a;
                         let l = v ? await (0, u.submitReport)(n, t, [...b, e]) : await (0, u.submitUnauthenticatedReport)(n, t, [...b, e], h),
@@ -558,7 +570,7 @@
                                 next_node: R[r].id
                             })
                         }
-                        M(null == l ? void 0 : null === (e = l.multiSelect) || void 0 === e ? void 0 : e.state), C(null == l ? void 0 : l.textInput), I(r), y(a), null == E || E("..")
+                        M(null == l ? void 0 : null === (e = l.multiSelect) || void 0 === e ? void 0 : e.state), C(null == l ? void 0 : l.textInput), S(r), y(a), null == E || E("..")
                     }, k = [], B = [];
                     for (let e in R) {
                         var G, P;
@@ -593,7 +605,7 @@
                                         onModalClose: f.onClose,
                                         onSelectChild: A,
                                         onNavigateBack: U,
-                                        multiSelect: S,
+                                        multiSelect: I,
                                         textInput: j,
                                         successNodeId: N,
                                         failNodeId: p,
@@ -687,8 +699,8 @@
                 N = n("538418"),
                 p = n("584866"),
                 T = n("216761"),
-                I = n("71514"),
-                S = n("265104"),
+                S = n("71514"),
+                I = n("265104"),
                 M = n("898623"),
                 j = n("244599"),
                 C = n("291028"),
@@ -805,7 +817,7 @@
                         }), null != D(t, "leave_guild") && "guild" === n.name && (0, a.jsx)(p.default, {
                             guildId: n.record.id,
                             reportId: G
-                        }), null != D(t, "channel_preview") && "stage_channel" === n.name && (0, a.jsx)(S.default, {
+                        }), null != D(t, "channel_preview") && "stage_channel" === n.name && (0, a.jsx)(I.default, {
                             stageInstance: n.record
                         }), null != D(t, "guild_scheduled_event_preview") && "guild_scheduled_event" === n.name && (0, a.jsx)(R.default, {
                             event: n.record
@@ -813,7 +825,7 @@
                             entry: n.record
                         }), null != D(t, "guild_discovery_preview") && "guild_discovery" === n.name && (0, a.jsx)(x.default, {
                             entry: n.record
-                        }), null != w && (0, a.jsx)(I.default, {
+                        }), null != w && (0, a.jsx)(S.default, {
                             element: w,
                             onChange: (e, t) => {
                                 let n = {
