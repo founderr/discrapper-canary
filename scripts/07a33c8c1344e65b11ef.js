@@ -3744,8 +3744,7 @@
                             location: "TakeoverInteractiveModal"
                         });
                     a.useEffect(() => {
-                        var e;
-                        (0, c.default)(null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : "")
+                        (null == t ? void 0 : t.id) != null && (0, c.default)(t.id)
                     }, [null == t ? void 0 : t.id]);
                     let S = _ && !C.default.isPremium(t) ? [i.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_INTERACTIVE_MODAL_UPSELL] : [],
                         [I, N] = (0, u.useDismissibleContentGroup)(S),

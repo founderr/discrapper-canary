@@ -1500,6 +1500,7 @@
                     guildId: N,
                     channelId: C
                 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+                if ("" === e) return;
                 null != t && (0, i.maybeFetchColors)(t), null != N && !v && (v = !0), null != N && (E = null !== (c = null === (n = (0, a.getVisibleConnectionsRole)({
                     guildMember: s.default.getMember(N, e),
                     channel: r.default.getChannel(C)
@@ -1514,9 +1515,7 @@
                 if (null != N) {
                     let t = d.default.getGuildMemberProfile(e, N);
                     D = null == t
-                }
-                if (!x && !D && (I || Date.now() - (null !== (f = null == _ ? void 0 : _.lastFetched) && void 0 !== f ? f : 0) < 6e4)) return Promise.resolve();
-                m ? await l.default.wait(() => (0, u.fetchProfile)(e, {
+                }!(!x && !D && (I || Date.now() - (null !== (f = null == _ ? void 0 : _.lastFetched) && void 0 !== f ? f : 0) < 6e4)) && (m ? await l.default.wait(() => (0, u.fetchProfile)(e, {
                     withMutualGuilds: v,
                     withMutualFriendsCount: S,
                     friendToken: g,
@@ -1528,7 +1527,7 @@
                     friendToken: g,
                     guildId: N,
                     connectionsRoleId: E
-                }, G)
+                }, G))
             }
         },
         386714: function(e, t, n) {
