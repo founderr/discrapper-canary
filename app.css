@@ -19469,8 +19469,8 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -82538,6 +82538,14 @@ input::-webkit-inner-spin-button {
 
 .modalFooterShopButton__32a45 {
     background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color)
+}
+
+.container__85909 {
+    display: inline-block;
+    padding: 0 6px;
+    margin-bottom: 4px;
+    border-radius: var(--radius-sm);
+    border: .5px solid var(--white-500)
 }
 
 .badge__38d19 {
