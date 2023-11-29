@@ -5824,6 +5824,10 @@
                     dark: "primary.600",
                     light: "primary.600"
                 },
+                "polls-normal-confetti": {
+                    dark: "brand.500",
+                    light: "brand.500"
+                },
                 "polls-victor-border": {
                     dark: "yellow.300",
                     light: "yellow.300"
