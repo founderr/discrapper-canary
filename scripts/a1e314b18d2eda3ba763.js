@@ -1733,38 +1733,6 @@
                 }
             })
         },
-        805233: function(e, t, s) {
-            "use strict";
-            s.r(t), s.d(t, {
-                useCreatorMonetizationExperimentContext: function() {
-                    return o
-                },
-                CreatorMonetizationExperimentContextProvider: function() {
-                    return d
-                }
-            });
-            var a = s("37983"),
-                n = s("884691"),
-                l = s("627445"),
-                i = s.n(l);
-            let r = n.createContext(void 0);
-
-            function o() {
-                let e = n.useContext(r);
-                return i(null != e, "useCreatorMonetizationExperimentContext must be used within a CreatorMonetizationExperimentContext"), e
-            }
-
-            function d(e) {
-                let {
-                    children: t,
-                    ...s
-                } = e;
-                return (0, a.jsx)(r.Provider, {
-                    value: s,
-                    children: t
-                })
-            }
-        },
         218567: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
@@ -11949,19 +11917,18 @@
                 d = s("782340");
 
             function u(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    s = (0, r.useGuildRoleSubscriptionSettingsVisibility)(e);
-                switch (s) {
+                let t = (0, r.useGuildRoleSubscriptionSettingsVisibility)(e);
+                switch (t) {
                     case r.GuildRoleSubscriptionSettingsVisibility.NEEDS_COMMUNITY:
                         return {
-                            visibility: s, noticeText: t ? d.default.Messages.GUILD_ROLE_SUBSCRIPTION_COMMUNITY_REQUIREMENT_NOTICE_WITH_GUILD_PRODUCT_EXP : d.default.Messages.GUILD_ROLE_SUBSCRIPTION_COMMUNITY_REQUIREMENT_NOTICE, ctaLabel: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_COMMUNITY_REQUIREMENT_CTA_LABEL, ctaClickable: null != e, onCtaClicked() {
+                            visibility: t, noticeText: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_COMMUNITY_REQUIREMENT_NOTICE, ctaLabel: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_COMMUNITY_REQUIREMENT_CTA_LABEL, ctaClickable: null != e, onCtaClicked() {
                                 var t;
                                 n(null != e, "Guild must be not null open COMMUNITY settings"), i.default.open(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "", o.GuildSettingsSections.COMMUNITY)
                             }
                         };
                     case r.GuildRoleSubscriptionSettingsVisibility.WAITLIST_ONLY:
                         return {
-                            visibility: s, noticeText: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_WAITLIST_NOTICE, ctaLabel: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_WAITLIST_CTA_LABEL, ctaClickable: !0, onCtaClicked() {
+                            visibility: t, noticeText: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_WAITLIST_NOTICE, ctaLabel: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_WAITLIST_CTA_LABEL, ctaClickable: !0, onCtaClicked() {
                                 (0, l.default)("https://dis.gd/creators-waitlist")
                             }
                         };
@@ -13332,7 +13299,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return L
+                    return g
                 }
             });
             var a = s("37983"),
@@ -13341,56 +13308,50 @@
                 i = s("151426"),
                 r = s("77078"),
                 o = s("228100"),
-                d = s("805233"),
-                u = s("10641"),
-                c = s("287883"),
-                E = s("900938"),
-                _ = s("490683"),
-                T = s("432153"),
-                I = s("505705"),
-                S = s("179234"),
-                N = s("459662"),
-                f = s("49111"),
-                g = s("988268"),
-                A = s("276541");
+                d = s("10641"),
+                u = s("900938"),
+                c = s("490683"),
+                E = s("432153"),
+                _ = s("505705"),
+                T = s("179234"),
+                I = s("459662"),
+                S = s("49111"),
+                N = s("988268"),
+                f = s("276541");
 
-            function L() {
+            function g() {
                 let e;
-                let t = (0, l.useStateFromStores)([E.default], () => E.default.getGuild()),
-                    s = (0, c.useGuildEligibleForGuildProducts)(null == t ? void 0 : t.id, "role_sub_settings"),
+                let t = (0, l.useStateFromStores)([u.default], () => u.default.getGuild()),
                     {
-                        application: L,
-                        loading: C
-                    } = (0, o.default)(null == t ? void 0 : t.id, g.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS),
-                    m = n.useRef(null),
-                    O = (0, _.default)(null != t ? t : void 0, s);
+                        application: s,
+                        loading: g
+                    } = (0, o.default)(null == t ? void 0 : t.id, N.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS),
+                    A = n.useRef(null),
+                    L = (0, c.default)(null != t ? t : void 0);
                 n.useEffect(() => {
-                    null != t && (0, T.isEligibleForNewBadge)(t) && (0, u.markDismissibleContentAsDismissed)(i.DismissibleContent.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE)
+                    null != t && (0, E.isEligibleForNewBadge)(t) && (0, d.markDismissibleContentAsDismissed)(i.DismissibleContent.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE)
                 }, [t]);
-                let h = (null == t ? void 0 : t.hasFeature(f.GuildFeatures.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(f.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
-                return e = null == t || C ? (0, a.jsx)(r.Spinner, {}) : null != O ? (0, a.jsx)(S.default, {
+                let C = (null == t ? void 0 : t.hasFeature(S.GuildFeatures.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(S.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
+                return e = null == t || g ? (0, a.jsx)(r.Spinner, {}) : null != L ? (0, a.jsx)(T.default, {
                     guild: t,
-                    config: O
-                }) : h ? (0, a.jsx)(N.default, {
+                    config: L
+                }) : C ? (0, a.jsx)(I.default, {
                     guild: t
-                }) : (0, a.jsx)(I.default, {
+                }) : (0, a.jsx)(_.default, {
                     guild: t,
-                    application: L
-                }), (0, a.jsx)(d.CreatorMonetizationExperimentContextProvider, {
-                    isEligibleForGuildProducts: s,
+                    application: s
+                }), (0, a.jsx)("div", {
+                    className: f.settingsColumn,
                     children: (0, a.jsx)("div", {
-                        className: A.settingsColumn,
-                        children: (0, a.jsx)("div", {
-                            className: A.settingsContainer,
-                            children: (0, a.jsx)(r.ScrollerAuto, {
-                                className: A.settingsScroller,
-                                children: (0, a.jsx)("main", {
-                                    ref: m,
-                                    className: A.settingsContent,
-                                    children: (0, a.jsx)(r.FocusRingScope, {
-                                        containerRef: m,
-                                        children: e
-                                    })
+                        className: f.settingsContainer,
+                        children: (0, a.jsx)(r.ScrollerAuto, {
+                            className: f.settingsScroller,
+                            children: (0, a.jsx)("main", {
+                                ref: A,
+                                className: f.settingsContent,
+                                children: (0, a.jsx)(r.FocusRingScope, {
+                                    containerRef: A,
+                                    children: e
                                 })
                             })
                         })
@@ -16837,7 +16798,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return D
+                    return R
                 }
             });
             var a = s("37983");
@@ -16845,57 +16806,53 @@
             var n = s("819855"),
                 l = s("77078"),
                 i = s("841098"),
-                r = s("805233"),
-                o = s("191814"),
-                d = s("677795"),
-                u = s("782340"),
-                c = s("737599"),
-                E = s("201894"),
-                _ = s("722838"),
-                T = s("497002"),
-                I = s("437250"),
-                S = s("382531"),
-                N = s("865332"),
-                f = s("439044"),
-                g = s("912839"),
-                A = s("600719");
+                r = s("191814"),
+                o = s("677795"),
+                d = s("782340"),
+                u = s("737599"),
+                c = s("201894"),
+                E = s("722838"),
+                _ = s("497002"),
+                T = s("437250"),
+                I = s("382531"),
+                S = s("865332"),
+                N = s("439044"),
+                f = s("912839"),
+                g = s("600719");
 
-            function L(e) {
-                return (0, n.isThemeDark)(e) ? c.revenueSharePercentageDark : c.revenueSharePercentageLight
+            function A(e) {
+                return (0, n.isThemeDark)(e) ? u.revenueSharePercentageDark : u.revenueSharePercentageLight
             }
 
-            function C() {
+            function L() {
                 let e = (0, i.default)(),
                     t = {
                         backgroundColor: (0, n.isThemeDark)(e) ? "#2e3638" : "var(--background-primary)"
-                    },
-                    {
-                        isEligibleForGuildProducts: s
-                    } = (0, r.useCreatorMonetizationExperimentContext)();
+                    };
                 return (0, a.jsxs)("div", {
-                    className: c.earningsPreviewContainer,
+                    className: u.earningsPreviewContainer,
                     style: t,
                     children: [(0, a.jsxs)("div", {
                         children: [(0, a.jsx)(l.Text, {
                             variant: "text-sm/normal",
                             color: "header-secondary",
-                            children: s ? u.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_NEW_SUBS_WITH_GUILD_PRODUCT_EXP : u.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_NEW_SUBS
-                        }), (0, a.jsx)(o.default, {
+                            children: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_NEW_SUBS
+                        }), (0, a.jsx)(r.default, {
                             size: 8
                         }), (0, a.jsx)(l.Heading, {
                             variant: "heading-md/bold",
-                            className: L(e),
-                            children: s ? u.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_REVENUE_INCREASE_WITH_GUILD_PRODUCT_EXP : u.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_REVENUE_INCREASE
+                            className: A(e),
+                            children: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_REVENUE_INCREASE
                         })]
                     }), (0, a.jsx)("img", {
-                        className: c.roundAvatar,
-                        src: N,
-                        alt: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1_PREVIEW_IMG_ALT
+                        className: u.roundAvatar,
+                        src: S,
+                        alt: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1_PREVIEW_IMG_ALT
                     })]
                 })
             }
 
-            function m() {
+            function C() {
                 let e = (0, i.default)();
 
                 function t(e) {
@@ -16904,7 +16861,7 @@
                         horizontal: s
                     } = e;
                     return (0, a.jsx)("div", {
-                        className: s ? c.horizontalConnector : c.verticalConnector,
+                        className: s ? u.horizontalConnector : u.verticalConnector,
                         style: {
                             ...s ? {
                                 width: t
@@ -16916,129 +16873,126 @@
                     })
                 }
                 return (0, a.jsxs)("div", {
-                    className: c.avatarGridContainer,
-                    "aria-label": u.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1_GRID_ARIA_LABEL,
+                    className: u.avatarGridContainer,
+                    "aria-label": d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1_GRID_ARIA_LABEL,
                     children: [(0, a.jsxs)("div", {
-                        className: c.avatarCard,
+                        className: u.avatarCard,
                         children: [(0, a.jsx)(t, {
                             length: 24
                         }), (0, a.jsx)("img", {
-                            className: c.roundAvatar,
-                            src: (0, n.isThemeDark)(e) ? E : _,
+                            className: u.roundAvatar,
+                            src: (0, n.isThemeDark)(e) ? c : E,
                             alt: ""
                         }), (0, a.jsx)(t, {
                             horizontal: !0,
                             length: 12
                         })]
                     }), (0, a.jsxs)("div", {
-                        className: c.avatarCard,
+                        className: u.avatarCard,
                         children: [(0, a.jsx)(t, {
                             length: 24
                         }), (0, a.jsx)("img", {
-                            className: c.roundAvatar,
+                            className: u.roundAvatar,
+                            src: _,
+                            alt: ""
+                        })]
+                    }), (0, a.jsxs)("div", {
+                        className: u.avatarCard,
+                        children: [(0, a.jsx)(t, {
+                            length: 12
+                        }), (0, a.jsx)("img", {
+                            className: u.roundAvatar,
                             src: T,
                             alt: ""
-                        })]
-                    }), (0, a.jsxs)("div", {
-                        className: c.avatarCard,
-                        children: [(0, a.jsx)(t, {
-                            length: 12
-                        }), (0, a.jsx)("img", {
-                            className: c.roundAvatar,
-                            src: I,
-                            alt: ""
                         }), (0, a.jsx)(t, {
                             horizontal: !0,
                             length: 12
                         })]
                     }), (0, a.jsxs)("div", {
-                        className: c.avatarCard,
+                        className: u.avatarCard,
                         children: [(0, a.jsx)(t, {
                             length: 12
                         }), (0, a.jsx)("img", {
-                            className: c.roundAvatar,
-                            src: S,
+                            className: u.roundAvatar,
+                            src: I,
                             alt: ""
                         })]
                     })]
+                })
+            }
+
+            function m() {
+                return (0, a.jsxs)("div", {
+                    className: u.earningBenefitCard,
+                    children: [(0, a.jsx)(l.Text, {
+                        variant: "text-md/normal",
+                        color: "header-secondary",
+                        children: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1
+                    }), (0, a.jsx)(r.default, {
+                        size: 32
+                    }), (0, a.jsx)(L, {}), (0, a.jsx)(r.default, {
+                        size: 24
+                    }), (0, a.jsx)(C, {})]
                 })
             }
 
             function O() {
-                let {
-                    isEligibleForGuildProducts: e
-                } = (0, r.useCreatorMonetizationExperimentContext)();
                 return (0, a.jsxs)("div", {
-                    className: c.earningBenefitCard,
+                    className: u.followerBenefitCard,
                     children: [(0, a.jsx)(l.Text, {
+                        className: u.followerBenefitText,
                         variant: "text-md/normal",
                         color: "header-secondary",
-                        children: e ? u.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1__WITH_GUILD_PRODUCT_EXP : u.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_1
-                    }), (0, a.jsx)(o.default, {
-                        size: 32
-                    }), (0, a.jsx)(C, {}), (0, a.jsx)(o.default, {
-                        size: 24
-                    }), (0, a.jsx)(m, {})]
-                })
-            }
-
-            function h() {
-                return (0, a.jsxs)("div", {
-                    className: c.followerBenefitCard,
-                    children: [(0, a.jsx)(l.Text, {
-                        className: c.followerBenefitText,
-                        variant: "text-md/normal",
-                        color: "header-secondary",
-                        children: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2
+                        children: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2
                     }), (0, a.jsx)("img", {
-                        className: c.roleSubscriptionSocial,
-                        src: A,
-                        alt: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2_IMG_1_ALT
-                    }), (0, a.jsx)("img", {
-                        className: c.roleSubscriptionLanyardIllo,
+                        className: u.roleSubscriptionSocial,
                         src: g,
-                        alt: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2_IMG_2_ALT
+                        alt: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2_IMG_1_ALT
+                    }), (0, a.jsx)("img", {
+                        className: u.roleSubscriptionLanyardIllo,
+                        src: f,
+                        alt: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_2_IMG_2_ALT
                     })]
                 })
             }
 
-            function R() {
+            function h() {
                 let e = (0, i.default)();
                 return (0, a.jsxs)("div", {
-                    className: c.revenueShareBenefitCard,
+                    className: u.revenueShareBenefitCard,
                     children: [(0, a.jsxs)("div", {
                         children: [(0, a.jsxs)(l.Heading, {
-                            className: L(e),
+                            className: A(e),
                             style: {
                                 fontSize: "50px",
                                 lineHeight: "52px"
                             },
                             variant: "heading-xxl/extrabold",
-                            children: [d.CREATOR_REVENUE_SHARE_PERCENTAGE, "%"]
+                            children: [o.CREATOR_REVENUE_SHARE_PERCENTAGE, "%"]
                         }), (0, a.jsx)(l.Text, {
                             variant: "text-md/normal",
                             color: "header-secondary",
-                            children: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_3
+                            children: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_3
                         })]
                     }), (0, a.jsx)("img", {
-                        className: c.roleSubscriptionEarningIllo,
-                        src: f,
-                        alt: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_3_IMG_ALT
+                        className: u.roleSubscriptionEarningIllo,
+                        src: N,
+                        alt: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_CREATOR_BENEFIT_3_IMG_ALT
                     })]
                 })
             }
 
-            function D() {
+            function R() {
                 return (0, a.jsxs)("div", {
                     children: [(0, a.jsx)(l.Heading, {
                         variant: "heading-lg/semibold",
                         color: "header-primary",
-                        children: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFITS_FOR_CREATORS_TITLE
-                    }), (0, a.jsx)(o.default, {
+                        children: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_BENEFITS_FOR_CREATORS_TITLE
+                    }), (0, a.jsx)(r.default, {
                         size: 24
                     }), (0, a.jsxs)("div", {
-                        className: c.creatorBenefitsContainer,
-                        children: [(0, a.jsx)(O, {}), (0, a.jsx)(h, {}), (0, a.jsx)(R, {})]
+                        className: u.creatorBenefitsContainer,
+                        children: [(0, a.jsx)(m, {}), (0, a.jsx)(O, {}), (0, a.jsx)(h, {})]
                     })]
                 })
             }
@@ -17376,37 +17330,36 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return T
+                    return _
                 }
             });
             var a = s("37983");
             s("884691");
             var n = s("77078"),
-                l = s("805233"),
-                i = s("191814"),
-                r = s("677795"),
-                o = s("782340"),
-                d = s("988511"),
-                u = s("627150"),
-                c = s("370730"),
-                E = s("350233");
+                l = s("191814"),
+                i = s("677795"),
+                r = s("782340"),
+                o = s("988511"),
+                d = s("627150"),
+                u = s("370730"),
+                c = s("350233");
 
-            function _(e) {
+            function E(e) {
                 let {
                     imageSrc: t,
                     description: s
                 } = e;
                 return (0, a.jsxs)("div", {
-                    className: d.howItWorksCard,
+                    className: o.howItWorksCard,
                     children: [(0, a.jsx)("div", {
-                        className: d.howItWorksImageContainer,
+                        className: o.howItWorksImageContainer,
                         children: (0, a.jsx)("img", {
-                            className: d.howItWorksImage,
+                            className: o.howItWorksImage,
                             src: t,
                             alt: ""
                         })
                     }), (0, a.jsx)("div", {
-                        className: d.howItWorksDescription,
+                        className: o.howItWorksDescription,
                         children: (0, a.jsx)(n.Text, {
                             variant: "text-sm/normal",
                             color: "header-primary",
@@ -17416,39 +17369,37 @@
                 })
             }
 
-            function T() {
-                let {
-                    isEligibleForGuildProducts: e
-                } = (0, l.useCreatorMonetizationExperimentContext)(), t = [{
-                    imageSrc: E,
-                    description: !0 === e ? o.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_1__WITH_GUILD_PRODUCT_EXP : o.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_1
+            function _() {
+                let e = [{
+                    imageSrc: c,
+                    description: r.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_1
+                }, {
+                    imageSrc: d,
+                    description: r.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_2
                 }, {
                     imageSrc: u,
-                    description: !0 === e ? o.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_2__WITH_GUILD_PRODUCT_EXP : o.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_2
-                }, {
-                    imageSrc: c,
-                    description: !0 === e ? o.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_3__WITH_GUILD_PRODUCT_EXP : o.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_3
+                    description: r.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_3
                 }];
                 return (0, a.jsxs)("div", {
                     children: [(0, a.jsx)(n.Heading, {
                         variant: "heading-lg/semibold",
                         color: "header-primary",
-                        children: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_TITLE
-                    }), (0, a.jsx)(i.default, {
+                        children: r.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_TITLE
+                    }), (0, a.jsx)(l.default, {
                         size: 24
                     }), (0, a.jsx)("div", {
-                        className: d.howItWorksContainer,
-                        children: t.map(e => (0, a.jsx)(_, {
+                        className: o.howItWorksContainer,
+                        children: e.map(e => (0, a.jsx)(E, {
                             imageSrc: e.imageSrc,
                             description: e.description
                         }, e.imageSrc))
-                    }), (0, a.jsx)(i.default, {
+                    }), (0, a.jsx)(l.default, {
                         size: 24
                     }), (0, a.jsx)(n.Text, {
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_FOOTER.format({
-                            creatorPortalUrl: r.CREATOR_REVENUE_PORTAL_URL
+                        children: r.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_FOOTER.format({
+                            creatorPortalUrl: i.CREATOR_REVENUE_PORTAL_URL
                         })
                     })]
                 })
