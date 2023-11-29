@@ -799,7 +799,7 @@
                             size: c.ModalSize.SMALL,
                             className: V.modal,
                             "aria-labelledby": n,
-                            children: [null != a.giftStyle && !_ && (0, i.jsx)(U.default, {
+                            children: [null != a.giftStyle && !_ && !E && (0, i.jsx)(U.default, {
                                 defaultAnimationState: this.getDefaultAnimationStatus(),
                                 idleAnimationState: this.getIdleAnimationStatus(),
                                 giftStyle: a.giftStyle,
@@ -840,7 +840,7 @@
                                     className: V.body,
                                     variant: "text-sm/normal",
                                     children: this.bodyText
-                                }), _ && null != a.giftStyle && !x && (0, i.jsx)(U.default, {
+                                }), _ && !E && null != a.giftStyle && !x && (0, i.jsx)(U.default, {
                                     defaultAnimationState: this.getDefaultAnimationStatus(),
                                     idleAnimationState: this.getIdleAnimationStatus(),
                                     className: V.giftAnimation,
