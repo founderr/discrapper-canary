@@ -8653,18 +8653,18 @@
         },
         908539: function(e, t, s) {
             "use strict";
-            var a, n, l, i, r, o, d, u;
+            var a, n, l, i, r, o, d, u, c, S;
             s.r(t), s.d(t, {
                 ActionType: function() {
-                    return n
-                },
-                AccountStandingState: function() {
                     return l
                 },
-                ClassificationRequestState: function() {
+                AccountStandingState: function() {
                     return i
+                },
+                ClassificationRequestState: function() {
+                    return r
                 }
-            }), (r = a || (a = {}))[r.UNSPECIFIED = 0] = "UNSPECIFIED", r[r.UNKNOWN = 1] = "UNKNOWN", r[r.UNSOLICITED_PORNOGRAPHY = 100] = "UNSOLICITED_PORNOGRAPHY", r[r.NONCONSENSUAL_PORNOGRAPHY = 200] = "NONCONSENSUAL_PORNOGRAPHY", r[r.GLORIFYING_VIOLENCE = 210] = "GLORIFYING_VIOLENCE", r[r.HATE_SPEECH = 220] = "HATE_SPEECH", r[r.CRACKED_ACCOUNTS = 230] = "CRACKED_ACCOUNTS", r[r.ILLICIT_GOODS = 240] = "ILLICIT_GOODS", r[r.SOCIAL_ENGINEERING = 250] = "SOCIAL_ENGINEERING", r[r.TEST_CLASSIFICATION = 9e3] = "TEST_CLASSIFICATION", r[r.TEST_CLASSIFICATION_LOW = 9001] = "TEST_CLASSIFICATION_LOW", r[r.TEST_CLASSIFICATION_SEVERE = 9002] = "TEST_CLASSIFICATION_SEVERE", (o = n || (n = {}))[o.BAN = 0] = "BAN", o[o.TEMP_BAN = 1] = "TEMP_BAN", o[o.GLOBAL_QUARANTINE = 2] = "GLOBAL_QUARANTINE", o[o.REQUIRE_VERIFICATION = 3] = "REQUIRE_VERIFICATION", o[o.USER_WARNING = 4] = "USER_WARNING", o[o.USER_SPAMMER = 5] = "USER_SPAMMER", o[o.CHANNEL_SPAM = 6] = "CHANNEL_SPAM", o[o.MESSAGE_SPAM = 7] = "MESSAGE_SPAM", o[o.DISABLE_SUSPICIOUS_ACTIVITY = 8] = "DISABLE_SUSPICIOUS_ACTIVITY", o[o.LIMITED_ACCESS = 9] = "LIMITED_ACCESS", o[o.CHANNEL_SCHEDULE_DELETE = 10] = "CHANNEL_SCHEDULE_DELETE", o[o.MESSAGE_CONTENT_REMOVAL = 11] = "MESSAGE_CONTENT_REMOVAL", o[o.GUILD_DISABLE_INVITE = 12] = "GUILD_DISABLE_INVITE", o[o.USER_CONTENT_REMOVAL = 13] = "USER_CONTENT_REMOVAL", o[o.USER_USERNAME_MANGLE = 14] = "USER_USERNAME_MANGLE", o[o.GUILD_LIMITED_ACCESS = 15] = "GUILD_LIMITED_ACCESS", o[o.USER_MESSAGE_REMOVAL = 16] = "USER_MESSAGE_REMOVAL", (d = l || (l = {}))[d.ALL_GOOD = 100] = "ALL_GOOD", d[d.LIMITED = 200] = "LIMITED", d[d.VERY_LIMITED = 300] = "VERY_LIMITED", d[d.AT_RISK = 400] = "AT_RISK", d[d.SUSPENDED = 500] = "SUSPENDED", (u = i || (i = {}))[u.PENDING = 0] = "PENDING", u[u.SUCCESS = 1] = "SUCCESS", u[u.FAILED = 2] = "FAILED"
+            }), (o = a || (a = {}))[o.REVIEW_PENDING = 1] = "REVIEW_PENDING", o[o.CLASSIFICATION_UPHELD = 2] = "CLASSIFICATION_UPHELD", o[o.CLASSIFICATION_INVALIDATED = 3] = "CLASSIFICATION_INVALIDATED", (d = n || (n = {}))[d.UNSPECIFIED = 0] = "UNSPECIFIED", d[d.UNKNOWN = 1] = "UNKNOWN", d[d.UNSOLICITED_PORNOGRAPHY = 100] = "UNSOLICITED_PORNOGRAPHY", d[d.NONCONSENSUAL_PORNOGRAPHY = 200] = "NONCONSENSUAL_PORNOGRAPHY", d[d.GLORIFYING_VIOLENCE = 210] = "GLORIFYING_VIOLENCE", d[d.HATE_SPEECH = 220] = "HATE_SPEECH", d[d.CRACKED_ACCOUNTS = 230] = "CRACKED_ACCOUNTS", d[d.ILLICIT_GOODS = 240] = "ILLICIT_GOODS", d[d.SOCIAL_ENGINEERING = 250] = "SOCIAL_ENGINEERING", d[d.TEST_CLASSIFICATION = 9e3] = "TEST_CLASSIFICATION", d[d.TEST_CLASSIFICATION_LOW = 9001] = "TEST_CLASSIFICATION_LOW", d[d.TEST_CLASSIFICATION_SEVERE = 9002] = "TEST_CLASSIFICATION_SEVERE", (u = l || (l = {}))[u.BAN = 0] = "BAN", u[u.TEMP_BAN = 1] = "TEMP_BAN", u[u.GLOBAL_QUARANTINE = 2] = "GLOBAL_QUARANTINE", u[u.REQUIRE_VERIFICATION = 3] = "REQUIRE_VERIFICATION", u[u.USER_WARNING = 4] = "USER_WARNING", u[u.USER_SPAMMER = 5] = "USER_SPAMMER", u[u.CHANNEL_SPAM = 6] = "CHANNEL_SPAM", u[u.MESSAGE_SPAM = 7] = "MESSAGE_SPAM", u[u.DISABLE_SUSPICIOUS_ACTIVITY = 8] = "DISABLE_SUSPICIOUS_ACTIVITY", u[u.LIMITED_ACCESS = 9] = "LIMITED_ACCESS", u[u.CHANNEL_SCHEDULE_DELETE = 10] = "CHANNEL_SCHEDULE_DELETE", u[u.MESSAGE_CONTENT_REMOVAL = 11] = "MESSAGE_CONTENT_REMOVAL", u[u.GUILD_DISABLE_INVITE = 12] = "GUILD_DISABLE_INVITE", u[u.USER_CONTENT_REMOVAL = 13] = "USER_CONTENT_REMOVAL", u[u.USER_USERNAME_MANGLE = 14] = "USER_USERNAME_MANGLE", u[u.GUILD_LIMITED_ACCESS = 15] = "GUILD_LIMITED_ACCESS", u[u.USER_MESSAGE_REMOVAL = 16] = "USER_MESSAGE_REMOVAL", (c = i || (i = {}))[c.ALL_GOOD = 100] = "ALL_GOOD", c[c.LIMITED = 200] = "LIMITED", c[c.VERY_LIMITED = 300] = "VERY_LIMITED", c[c.AT_RISK = 400] = "AT_RISK", c[c.SUSPENDED = 500] = "SUSPENDED", (S = r || (r = {}))[S.PENDING = 0] = "PENDING", S[S.SUCCESS = 1] = "SUCCESS", S[S.FAILED = 2] = "FAILED"
         },
         646356: function(e, t, s) {
             "use strict";
@@ -9895,7 +9895,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "e101a29bafa6095841d84ab397081ab99d685281", e.substring(0, 7)),
+                    S = (e = "bf4f1a16723e90d002b9d867e131e0f7715e9f81", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -9908,7 +9908,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "249592", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "249597", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]

@@ -3,8 +3,8 @@
         60266: function(t, e, n) {
             t.exports = function(t, e, n, i) {
                 for (var a = -1, s = null == t ? 0 : t.length; ++a < s;) {
-                    var c = t[a];
-                    e(i, c, n(c), t)
+                    var o = t[a];
+                    e(i, o, n(o), t)
                 }
                 return i
             }
@@ -21,12 +21,12 @@
             var i = n("60266"),
                 a = n("581628"),
                 s = n("698273"),
-                c = n("725502");
+                o = n("725502");
             t.exports = function(t, e) {
-                return function(n, o) {
-                    var l = c(n) ? i : a,
+                return function(n, l) {
+                    var c = o(n) ? i : a,
                         r = e ? e() : {};
-                    return l(n, t, s(o, 2), r)
+                    return c(n, t, s(l, 2), r)
                 }
             }
         },
@@ -45,38 +45,38 @@
             "use strict";
             n.r(e), n.d(e, {
                 ChatAlertIcon: function() {
-                    return c
+                    return o
                 }
             });
             var i = n("37983");
             n("884691");
             var a = n("669491"),
                 s = n("75196");
-            let c = t => {
+            let o = t => {
                 let {
                     width: e = 24,
                     height: n = 24,
-                    color: c = a.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: o = "",
-                    ...l
+                    color: o = a.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: l = "",
+                    ...c
                 } = t;
                 return (0, i.jsxs)("svg", {
-                    ...(0, s.default)(l),
+                    ...(0, s.default)(c),
                     xmlns: "http://www.w3.org/2000/svg",
                     width: e,
                     height: n,
                     fill: "none",
                     viewBox: "0 0 24 24",
                     children: [(0, i.jsx)("path", {
-                        fill: "string" == typeof c ? c : c.css,
+                        fill: "string" == typeof o ? o : o.css,
                         d: "M12.032 21.505c-.05.27-.269.495-.544.495H2.2c-.859 0-1.318-1.01-.753-1.657l2.066-2.369a.517.517 0 0 0 .041-.617A9.953 9.953 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10c0 .542-.043 1.073-.126 1.591-.018.117-.17.142-.229.04-1.163-2.027-4.127-2.027-5.29 0l-3.96 6.897a3.069 3.069 0 0 0-.363.977Z",
-                        className: o
+                        className: l
                     }), (0, i.jsx)("path", {
-                        fill: "string" == typeof c ? c : c.css,
+                        fill: "string" == typeof o ? o : o.css,
                         fillRule: "evenodd",
                         d: "M18.09 14.627c.394-.688 1.426-.688 1.82 0l3.96 6.897c.38.664-.12 1.476-.911 1.476h-7.918c-.79 0-1.292-.812-.91-1.476l3.958-6.897Zm.464 1.873h.892a.5.5 0 0 1 .497.551l-.208 2.017c-.017.16-.177.262-.334.228A1.928 1.928 0 0 0 19 19.25c-.137 0-.274.019-.4.046-.158.034-.318-.068-.335-.228l-.208-2.017a.5.5 0 0 1 .497-.551ZM19 22a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z",
                         clipRule: "evenodd",
-                        className: o
+                        className: l
                     })]
                 })
             }
@@ -85,32 +85,32 @@
             "use strict";
             n.r(e), n.d(e, {
                 ChevronLargeRightIcon: function() {
-                    return c
+                    return o
                 }
             });
             var i = n("37983");
             n("884691");
             var a = n("669491"),
                 s = n("75196");
-            let c = t => {
+            let o = t => {
                 let {
                     width: e = 24,
                     height: n = 24,
-                    color: c = a.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: o = "",
-                    ...l
+                    color: o = a.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: l = "",
+                    ...c
                 } = t;
                 return (0, i.jsx)("svg", {
-                    ...(0, s.default)(l),
+                    ...(0, s.default)(c),
                     xmlns: "http://www.w3.org/2000/svg",
                     width: e,
                     height: n,
                     fill: "none",
                     viewBox: "0 0 24 24",
                     children: (0, i.jsx)("path", {
-                        fill: "string" == typeof c ? c : c.css,
+                        fill: "string" == typeof o ? o : o.css,
                         d: "M8.293 3.293a1 1 0 0 0 0 1.414L15.586 12l-7.293 7.293a1 1 0 1 0 1.414 1.414l8-8a1 1 0 0 0 0-1.414l-8-8a1 1 0 0 0-1.414 0Z",
-                        className: o
+                        className: l
                     })
                 })
             }
@@ -119,32 +119,32 @@
             "use strict";
             n.r(e), n.d(e, {
                 CloseSmallIcon: function() {
-                    return c
+                    return o
                 }
             });
             var i = n("37983");
             n("884691");
             var a = n("669491"),
                 s = n("75196");
-            let c = t => {
+            let o = t => {
                 let {
                     width: e = 24,
                     height: n = 24,
-                    color: c = a.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: o = "",
-                    ...l
+                    color: o = a.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: l = "",
+                    ...c
                 } = t;
                 return (0, i.jsx)("svg", {
-                    ...(0, s.default)(l),
+                    ...(0, s.default)(c),
                     xmlns: "http://www.w3.org/2000/svg",
                     width: e,
                     height: n,
                     fill: "none",
                     viewBox: "0 0 24 24",
                     children: (0, i.jsx)("path", {
-                        fill: "string" == typeof c ? c : c.css,
+                        fill: "string" == typeof o ? o : o.css,
                         d: "M17.293 18.707a1 1 0 0 0 1.414-1.414L13.414 12l5.293-5.293a1 1 0 0 0-1.414-1.414L12 10.586 6.707 5.293a1 1 0 0 0-1.414 1.414L10.586 12l-5.293 5.293a1 1 0 1 0 1.414 1.414L12 13.414l5.293 5.293Z",
-                        className: o
+                        className: l
                     })
                 })
             }
@@ -153,16 +153,16 @@
             "use strict";
             n.r(e), n.d(e, {
                 getSafetyHubData: function() {
-                    return c
+                    return o
                 },
                 getSafetyHubDataForClassification: function() {
-                    return o
+                    return l
                 }
             });
             var i = n("872717"),
                 a = n("913144"),
                 s = n("49111");
-            async function c() {
+            async function o() {
                 a.default.dispatch({
                     type: "SAFETY_HUB_FETCH_START"
                 }), await i.default.get({
@@ -187,7 +187,7 @@
                     })
                 })
             }
-            async function o(t) {
+            async function l(t) {
                 a.default.dispatch({
                     type: "SAFETY_HUB_FETCH_CLASSIFICATION_START",
                     classificationId: t
@@ -199,10 +199,10 @@
                     } = e, {
                         classifications: i,
                         account_standing: s
-                    } = n, c = i.find(e => e.id === t);
-                    null != c ? a.default.dispatch({
+                    } = n, o = i.find(e => e.id === t);
+                    null != o ? a.default.dispatch({
                         type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
-                        classification: c,
+                        classification: o,
                         accountStanding: s
                     }) : a.default.dispatch({
                         type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
@@ -221,18 +221,18 @@
         },
         908539: function(t, e, n) {
             "use strict";
-            var i, a, s, c, o, l, r, S;
+            var i, a, s, o, l, c, r, A, S, E;
             n.r(e), n.d(e, {
                 ActionType: function() {
-                    return a
-                },
-                AccountStandingState: function() {
                     return s
                 },
+                AccountStandingState: function() {
+                    return o
+                },
                 ClassificationRequestState: function() {
-                    return c
+                    return l
                 }
-            }), (o = i || (i = {}))[o.UNSPECIFIED = 0] = "UNSPECIFIED", o[o.UNKNOWN = 1] = "UNKNOWN", o[o.UNSOLICITED_PORNOGRAPHY = 100] = "UNSOLICITED_PORNOGRAPHY", o[o.NONCONSENSUAL_PORNOGRAPHY = 200] = "NONCONSENSUAL_PORNOGRAPHY", o[o.GLORIFYING_VIOLENCE = 210] = "GLORIFYING_VIOLENCE", o[o.HATE_SPEECH = 220] = "HATE_SPEECH", o[o.CRACKED_ACCOUNTS = 230] = "CRACKED_ACCOUNTS", o[o.ILLICIT_GOODS = 240] = "ILLICIT_GOODS", o[o.SOCIAL_ENGINEERING = 250] = "SOCIAL_ENGINEERING", o[o.TEST_CLASSIFICATION = 9e3] = "TEST_CLASSIFICATION", o[o.TEST_CLASSIFICATION_LOW = 9001] = "TEST_CLASSIFICATION_LOW", o[o.TEST_CLASSIFICATION_SEVERE = 9002] = "TEST_CLASSIFICATION_SEVERE", (l = a || (a = {}))[l.BAN = 0] = "BAN", l[l.TEMP_BAN = 1] = "TEMP_BAN", l[l.GLOBAL_QUARANTINE = 2] = "GLOBAL_QUARANTINE", l[l.REQUIRE_VERIFICATION = 3] = "REQUIRE_VERIFICATION", l[l.USER_WARNING = 4] = "USER_WARNING", l[l.USER_SPAMMER = 5] = "USER_SPAMMER", l[l.CHANNEL_SPAM = 6] = "CHANNEL_SPAM", l[l.MESSAGE_SPAM = 7] = "MESSAGE_SPAM", l[l.DISABLE_SUSPICIOUS_ACTIVITY = 8] = "DISABLE_SUSPICIOUS_ACTIVITY", l[l.LIMITED_ACCESS = 9] = "LIMITED_ACCESS", l[l.CHANNEL_SCHEDULE_DELETE = 10] = "CHANNEL_SCHEDULE_DELETE", l[l.MESSAGE_CONTENT_REMOVAL = 11] = "MESSAGE_CONTENT_REMOVAL", l[l.GUILD_DISABLE_INVITE = 12] = "GUILD_DISABLE_INVITE", l[l.USER_CONTENT_REMOVAL = 13] = "USER_CONTENT_REMOVAL", l[l.USER_USERNAME_MANGLE = 14] = "USER_USERNAME_MANGLE", l[l.GUILD_LIMITED_ACCESS = 15] = "GUILD_LIMITED_ACCESS", l[l.USER_MESSAGE_REMOVAL = 16] = "USER_MESSAGE_REMOVAL", (r = s || (s = {}))[r.ALL_GOOD = 100] = "ALL_GOOD", r[r.LIMITED = 200] = "LIMITED", r[r.VERY_LIMITED = 300] = "VERY_LIMITED", r[r.AT_RISK = 400] = "AT_RISK", r[r.SUSPENDED = 500] = "SUSPENDED", (S = c || (c = {}))[S.PENDING = 0] = "PENDING", S[S.SUCCESS = 1] = "SUCCESS", S[S.FAILED = 2] = "FAILED"
+            }), (c = i || (i = {}))[c.REVIEW_PENDING = 1] = "REVIEW_PENDING", c[c.CLASSIFICATION_UPHELD = 2] = "CLASSIFICATION_UPHELD", c[c.CLASSIFICATION_INVALIDATED = 3] = "CLASSIFICATION_INVALIDATED", (r = a || (a = {}))[r.UNSPECIFIED = 0] = "UNSPECIFIED", r[r.UNKNOWN = 1] = "UNKNOWN", r[r.UNSOLICITED_PORNOGRAPHY = 100] = "UNSOLICITED_PORNOGRAPHY", r[r.NONCONSENSUAL_PORNOGRAPHY = 200] = "NONCONSENSUAL_PORNOGRAPHY", r[r.GLORIFYING_VIOLENCE = 210] = "GLORIFYING_VIOLENCE", r[r.HATE_SPEECH = 220] = "HATE_SPEECH", r[r.CRACKED_ACCOUNTS = 230] = "CRACKED_ACCOUNTS", r[r.ILLICIT_GOODS = 240] = "ILLICIT_GOODS", r[r.SOCIAL_ENGINEERING = 250] = "SOCIAL_ENGINEERING", r[r.TEST_CLASSIFICATION = 9e3] = "TEST_CLASSIFICATION", r[r.TEST_CLASSIFICATION_LOW = 9001] = "TEST_CLASSIFICATION_LOW", r[r.TEST_CLASSIFICATION_SEVERE = 9002] = "TEST_CLASSIFICATION_SEVERE", (A = s || (s = {}))[A.BAN = 0] = "BAN", A[A.TEMP_BAN = 1] = "TEMP_BAN", A[A.GLOBAL_QUARANTINE = 2] = "GLOBAL_QUARANTINE", A[A.REQUIRE_VERIFICATION = 3] = "REQUIRE_VERIFICATION", A[A.USER_WARNING = 4] = "USER_WARNING", A[A.USER_SPAMMER = 5] = "USER_SPAMMER", A[A.CHANNEL_SPAM = 6] = "CHANNEL_SPAM", A[A.MESSAGE_SPAM = 7] = "MESSAGE_SPAM", A[A.DISABLE_SUSPICIOUS_ACTIVITY = 8] = "DISABLE_SUSPICIOUS_ACTIVITY", A[A.LIMITED_ACCESS = 9] = "LIMITED_ACCESS", A[A.CHANNEL_SCHEDULE_DELETE = 10] = "CHANNEL_SCHEDULE_DELETE", A[A.MESSAGE_CONTENT_REMOVAL = 11] = "MESSAGE_CONTENT_REMOVAL", A[A.GUILD_DISABLE_INVITE = 12] = "GUILD_DISABLE_INVITE", A[A.USER_CONTENT_REMOVAL = 13] = "USER_CONTENT_REMOVAL", A[A.USER_USERNAME_MANGLE = 14] = "USER_USERNAME_MANGLE", A[A.GUILD_LIMITED_ACCESS = 15] = "GUILD_LIMITED_ACCESS", A[A.USER_MESSAGE_REMOVAL = 16] = "USER_MESSAGE_REMOVAL", (S = o || (o = {}))[S.ALL_GOOD = 100] = "ALL_GOOD", S[S.LIMITED = 200] = "LIMITED", S[S.VERY_LIMITED = 300] = "VERY_LIMITED", S[S.AT_RISK = 400] = "AT_RISK", S[S.SUSPENDED = 500] = "SUSPENDED", (E = l || (l = {}))[E.PENDING = 0] = "PENDING", E[E.SUCCESS = 1] = "SUCCESS", E[E.FAILED = 2] = "FAILED"
         },
         646356: function(t, e, n) {
             "use strict";
@@ -244,77 +244,77 @@
             var i = n("816494"),
                 a = n.n(i),
                 s = n("446674"),
-                c = n("913144"),
-                o = n("908539");
-            let l = {},
+                o = n("913144"),
+                l = n("908539");
+            let c = {},
                 r = {},
-                S = {
-                    state: o.AccountStandingState.ALL_GOOD
+                A = {
+                    state: l.AccountStandingState.ALL_GOOD
                 },
-                A = !1,
-                u = !1,
-                E = null;
+                S = !1,
+                E = !1,
+                u = null;
             class I extends s.default.Store {
                 isFetching() {
-                    return A
-                }
-                getClassifications() {
-                    return Object.values(l)
-                }
-                getClassification(t) {
-                    return l[t]
-                }
-                getAccountStanding() {
                     return S
                 }
+                getClassifications() {
+                    return Object.values(c)
+                }
+                getClassification(t) {
+                    return c[t]
+                }
+                getAccountStanding() {
+                    return A
+                }
                 getFetchError() {
-                    return E
+                    return u
                 }
                 isInitialized() {
-                    return u
+                    return E
                 }
                 getClassificationRequestState(t) {
                     return r[t]
                 }
             }
             I.displayName = "SafetyHubStore";
-            var _ = new I(c.default, {
+            var _ = new I(o.default, {
                 SAFETY_HUB_FETCH_START: function(t) {
-                    A = !0
+                    S = !0
                 },
                 SAFETY_HUB_FETCH_SUCCESS: function(t) {
                     let {
                         classifications: e,
                         accountStanding: n
                     } = t;
-                    l = a(e, "id"), S = n, A = !1, u = !0, E = null
+                    c = a(e, "id"), A = n, S = !1, E = !0, u = null
                 },
                 SAFETY_HUB_FETCH_FAILURE: function(t) {
                     let {
                         error: e
                     } = t;
-                    A = !1, u = !1, E = e
+                    S = !1, E = !1, u = e
                 },
                 SAFETY_HUB_FETCH_CLASSIFICATION_START: function(t) {
-                    r[t.classificationId] = o.ClassificationRequestState.PENDING, A = !0
+                    r[t.classificationId] = l.ClassificationRequestState.PENDING, S = !0
                 },
                 SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: function(t) {
                     let {
                         classification: e,
                         accountStanding: n
                     } = t;
-                    l[e.id] = e, r[e.id] = o.ClassificationRequestState.SUCCESS, S = n, A = !1, E = null
+                    c[e.id] = e, r[e.id] = l.ClassificationRequestState.SUCCESS, A = n, S = !1, u = null
                 },
                 SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function(t) {
                     let {
                         error: e,
                         classificationId: n
                     } = t;
-                    A = !1, E = e, r[n] = o.ClassificationRequestState.FAILED
+                    S = !1, u = e, r[n] = l.ClassificationRequestState.FAILED
                 },
                 LOGOUT: function() {
-                    A = !1, l = {}, S = {
-                        state: o.AccountStandingState.ALL_GOOD
+                    S = !1, c = {}, A = {
+                        state: l.AccountStandingState.ALL_GOOD
                     }
                 }
             })
@@ -340,42 +340,42 @@
                     return r
                 },
                 useActiveSafetyHubClassifications: function() {
-                    return S
+                    return A
                 },
                 useExpiredSafetyHubClassifications: function() {
-                    return A
+                    return S
                 }
             });
             var i = n("884691"),
                 a = n("446674"),
                 s = n("299039"),
-                c = n("781324"),
-                o = n("646356");
+                o = n("781324"),
+                l = n("646356");
 
-            function l() {
-                let t = (0, a.useStateFromStoresArray)([o.default], () => o.default.getClassifications());
+            function c() {
+                let t = (0, a.useStateFromStoresArray)([l.default], () => l.default.getClassifications());
                 return t.sort((t, e) => s.default.extractTimestamp(e.id) - s.default.extractTimestamp(t.id))
             }
 
             function r(t) {
-                let e = (0, a.useStateFromStores)([o.default], () => o.default.getClassification(t)),
-                    n = (0, a.useStateFromStores)([o.default], () => o.default.getClassificationRequestState(t));
+                let e = (0, a.useStateFromStores)([l.default], () => l.default.getClassification(t)),
+                    n = (0, a.useStateFromStores)([l.default], () => l.default.getClassificationRequestState(t));
                 return i.useEffect(() => {
-                    void 0 === e && null == n && c.getSafetyHubDataForClassification(t)
+                    void 0 === e && null == n && o.getSafetyHubDataForClassification(t)
                 }, [t, e, n]), {
                     classification: e,
                     classificationRequestState: n
                 }
             }
 
-            function S() {
-                let t = l(),
+            function A() {
+                let t = c(),
                     e = new Date;
                 return t.filter(t => new Date(t.max_expiration_time) > e)
             }
 
-            function A() {
-                let t = l(),
+            function S() {
+                let t = c(),
                     e = new Date;
                 return t.filter(t => new Date(t.max_expiration_time) <= e)
             }
@@ -399,20 +399,20 @@
             "use strict";
             n.r(e), n.d(e, {
                 default: function() {
-                    return D
+                    return v
                 }
             }), n("222007");
             var i = n("37983"),
                 a = n("884691"),
                 s = n("669491"),
-                c = n("167338"),
-                o = n("426383"),
-                l = n("165984"),
+                o = n("167338"),
+                l = n("426383"),
+                c = n("165984"),
                 r = n("503420"),
-                S = n("803027"),
-                A = n("877585"),
-                u = n("47693"),
-                E = n("779807"),
+                A = n("803027"),
+                S = n("877585"),
+                E = n("47693"),
+                u = n("779807"),
                 I = n("77078"),
                 _ = n("599110"),
                 T = n("908539"),
@@ -423,18 +423,18 @@
                 L = n("782340"),
                 R = n("190466");
             let U = {
-                    [T.ActionType.BAN]: [l.CircleExclamationPointIcon, s.default.colors.STATUS_DANGER],
-                    [T.ActionType.GLOBAL_QUARANTINE]: [E.WarningIcon, s.default.colors.STATUS_WARNING],
-                    [T.ActionType.DISABLE_SUSPICIOUS_ACTIVITY]: [E.WarningIcon, s.default.colors.STATUS_WARNING],
+                    [T.ActionType.BAN]: [c.CircleExclamationPointIcon, s.default.colors.STATUS_DANGER],
+                    [T.ActionType.GLOBAL_QUARANTINE]: [u.WarningIcon, s.default.colors.STATUS_WARNING],
+                    [T.ActionType.DISABLE_SUSPICIOUS_ACTIVITY]: [u.WarningIcon, s.default.colors.STATUS_WARNING],
                     [T.ActionType.LIMITED_ACCESS]: [r.ClockIcon, s.default.colors.STATUS_WARNING],
-                    [T.ActionType.REQUIRE_VERIFICATION]: [E.WarningIcon, s.default.colors.STATUS_WARNING],
+                    [T.ActionType.REQUIRE_VERIFICATION]: [u.WarningIcon, s.default.colors.STATUS_WARNING],
                     [T.ActionType.TEMP_BAN]: [r.ClockIcon, s.default.colors.STATUS_WARNING],
-                    [T.ActionType.USER_MESSAGE_REMOVAL]: [u.TrashIcon, s.default.colors.STATUS_DANGER],
-                    [T.ActionType.USER_SPAMMER]: [E.WarningIcon, s.default.colors.STATUS_WARNING],
-                    [T.ActionType.USER_USERNAME_MANGLE]: [S.CloseSmallIcon, s.default.colors.STATUS_WARNING],
-                    [T.ActionType.USER_WARNING]: [c.ChatAlertIcon, s.default.colors.STATUS_WARNING]
+                    [T.ActionType.USER_MESSAGE_REMOVAL]: [E.TrashIcon, s.default.colors.STATUS_DANGER],
+                    [T.ActionType.USER_SPAMMER]: [u.WarningIcon, s.default.colors.STATUS_WARNING],
+                    [T.ActionType.USER_USERNAME_MANGLE]: [A.CloseSmallIcon, s.default.colors.STATUS_WARNING],
+                    [T.ActionType.USER_WARNING]: [o.ChatAlertIcon, s.default.colors.STATUS_WARNING]
                 },
-                O = E.WarningIcon,
+                p = u.WarningIcon,
                 x = t => {
                     let {
                         classificationTypeText: e
@@ -452,7 +452,7 @@
                         })
                     })
                 },
-                p = t => {
+                O = t => {
                     let {
                         actions: e
                     } = t, n = e.filter(t => t.descriptions.length > 0);
@@ -473,7 +473,7 @@
                 h = t => {
                     let {
                         action: e
-                    } = t, [n, a] = e.action_type in U ? U[e.action_type] : [O, s.default.colors.STATUS_WARNING];
+                    } = t, [n, a] = e.action_type in U ? U[e.action_type] : [p, s.default.colors.STATUS_WARNING];
                     return (0, i.jsx)(i.Fragment, {
                         children: e.descriptions.map((t, e) => (0, i.jsxs)("div", {
                             className: R.classificationActionsTakenRow,
@@ -506,7 +506,7 @@
                         useDefaultUnderlineStyles: !1,
                         children: [(0, i.jsx)("div", {
                             className: R.classificationPolicyCardIcon,
-                            children: (0, i.jsx)(A.ShieldIcon, {
+                            children: (0, i.jsx)(S.ShieldIcon, {
                                 width: 32,
                                 height: 32,
                                 color: s.default.colors.FOCUS_PRIMARY
@@ -524,7 +524,7 @@
                             })]
                         }), (0, i.jsx)("div", {
                             className: R.classificationPolicyLinkIcon,
-                            children: (0, i.jsx)(o.ChevronLargeRightIcon, {
+                            children: (0, i.jsx)(l.ChevronLargeRightIcon, {
                                 width: 24,
                                 height: 24,
                                 color: s.default.colors.INTERACTIVE_NORMAL
@@ -532,14 +532,36 @@
                         })]
                     })
                 },
-                m = t => {
+                m = () => (0, i.jsx)(I.Text, {
+                    variant: "text-md/normal",
+                    color: "text-muted",
+                    children: L.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_APPEAL_STATUS
+                }),
+                D = t => (0, i.jsx)(I.Text, {
+                    variant: "text-md/normal",
+                    color: "text-muted",
+                    children: L.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_APPEAL_V2.format({
+                        letUsKnowHook: (e, n) => (0, i.jsx)(I.Anchor, {
+                            href: t.appealLink,
+                            onClick: t.letUsKnowClick,
+                            children: e
+                        }, n)
+                    })
+                }),
+                g = t => (0, i.jsx)("div", {
+                    className: R.classificationLetUsKnowContainer,
+                    children: t.hasBeenAppealed ? (0, i.jsx)(m, {}) : (0, i.jsx)(D, {
+                        appealLink: C.SafetyHubLinks.APPEALS_LINK,
+                        letUsKnowClick: t.onLetUsKnowClick
+                    })
+                }),
+                H = t => {
                     let {
                         tosLink: e,
                         communityGuidelinesLink: n,
-                        appealLink: a,
-                        classificationTypeText: s,
-                        policyExplainerLink: c,
-                        letUsKnowClick: o
+                        classificationTypeText: a,
+                        policyExplainerLink: s,
+                        appealComponent: o
                     } = t;
                     return (0, i.jsxs)("div", {
                         className: R.classificationActionExplanationContainer,
@@ -555,70 +577,58 @@
                                 communityGuidelinesLink: n
                             })
                         }), (0, i.jsx)(F, {
-                            classificationTypeText: s,
-                            policyExplainerLink: c
-                        }), (0, i.jsx)("div", {
-                            className: R.classificationLetUsKnowContainer,
-                            children: (0, i.jsx)(I.Text, {
-                                variant: "text-md/normal",
-                                color: "text-muted",
-                                children: L.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_APPEAL_V2.format({
-                                    letUsKnowHook: (t, e) => (0, i.jsx)(I.Anchor, {
-                                        href: a,
-                                        onClick: o,
-                                        children: t
-                                    }, e)
-                                })
-                            })
-                        })]
+                            classificationTypeText: a,
+                            policyExplainerLink: s
+                        }), o]
                     })
                 },
-                g = t => (0, i.jsxs)("div", {
+                y = t => (0, i.jsxs)("div", {
                     className: R.classificationContainer,
                     children: [(0, i.jsx)(x, {
                         classificationTypeText: t.classificationTypeText
-                    }), (0, i.jsx)(p, {
+                    }), (0, i.jsx)(O, {
                         actions: t.actions
-                    }), (0, i.jsx)(m, {
-                        appealLink: t.appealLink,
+                    }), (0, i.jsx)(H, {
                         communityGuidelinesLink: t.communityGuidelinesLink,
                         tosLink: t.tosLink,
                         classificationTypeText: t.classificationTypeText,
                         policyExplainerLink: t.policyExplainerLink,
-                        letUsKnowClick: t.letUsKnowClick
+                        appealComponent: t.appealComponent
                     })]
                 });
-            var D = t => {
+            var v = t => {
                 let {
                     classificationId: e,
                     source: n,
                     onError: s
                 } = t, {
-                    classification: c,
-                    classificationRequestState: o
-                } = (0, f.useSafetyHubClassification)(e), l = (0, d.useSafetyHubAccountStanding)();
+                    classification: o,
+                    classificationRequestState: l
+                } = (0, f.useSafetyHubClassification)(e), c = (0, d.useSafetyHubAccountStanding)();
                 return (a.useEffect(() => {
                     _.default.track(N.AnalyticEvents.SAFETY_HUB_ACTION, {
                         action: C.SafetyHubAnalyticsActions.ViewViolationDetail,
-                        account_standing: l.state,
+                        account_standing: c.state,
                         classification_ids: [Number(e)],
                         source: n
                     })
-                }, []), null == c && o === T.ClassificationRequestState.FAILED) ? (s(), null) : null == c ? null : (0, i.jsx)(g, {
-                    actions: c.actions,
-                    classificationTypeText: c.description,
+                }, []), null == o && l === T.ClassificationRequestState.FAILED) ? (s(), null) : null == o ? null : (0, i.jsx)(y, {
+                    actions: o.actions,
+                    classificationTypeText: o.description,
                     tosLink: C.SafetyHubLinks.TOS_LINK,
                     communityGuidelinesLink: C.SafetyHubLinks.COMMUNITY_GUIDELINES,
-                    appealLink: C.SafetyHubLinks.APPEALS_LINK,
-                    policyExplainerLink: c.explainer_link,
-                    letUsKnowClick: () => {
-                        _.default.track(N.AnalyticEvents.SAFETY_HUB_ACTION, {
-                            action: C.SafetyHubAnalyticsActions.ClickLetUsKnow,
-                            account_standing: l.state,
-                            classification_ids: [Number(e)],
-                            source: n
-                        })
-                    }
+                    policyExplainerLink: o.explainer_link,
+                    appealComponent: (0, i.jsx)(g, {
+                        hasBeenAppealed: null != o.appeal_status,
+                        onLetUsKnowClick: () => {
+                            _.default.track(N.AnalyticEvents.SAFETY_HUB_ACTION, {
+                                action: C.SafetyHubAnalyticsActions.ClickLetUsKnow,
+                                account_standing: c.state,
+                                classification_ids: [Number(e)],
+                                source: n
+                            })
+                        }
+                    })
                 })
             }
         },
@@ -626,56 +636,56 @@
             "use strict";
             n.r(e), n.d(e, {
                 default: function() {
-                    return E
+                    return u
                 }
             });
             var i = n("37983");
             n("884691");
             var a = n("77078"),
                 s = n("79112"),
-                c = n("792105"),
-                o = n("573240"),
-                l = n("170213"),
+                o = n("792105"),
+                l = n("573240"),
+                c = n("170213"),
                 r = n("49111"),
-                S = n("782340"),
-                A = n("581935"),
-                u = n("49155"),
-                E = t => {
+                A = n("782340"),
+                S = n("581935"),
+                E = n("49155"),
+                u = t => {
                     let {
                         transitionState: e,
                         onClose: n,
-                        classificationId: E,
+                        classificationId: u,
                         source: I
-                    } = t, _ = (0, c.default)(), T = () => {
-                        n(), s.default.open(r.UserSettingsSections.PRIVACY_AND_SAFETY, l.SafetyHubView.ACCOUNT_STANDING)
+                    } = t, _ = (0, o.default)(), T = () => {
+                        n(), s.default.open(r.UserSettingsSections.PRIVACY_AND_SAFETY, c.SafetyHubView.ACCOUNT_STANDING)
                     };
                     return (0, i.jsxs)(a.ModalRoot, {
-                        className: A.modalRoot,
+                        className: S.modalRoot,
                         transitionState: e,
                         children: [(0, i.jsxs)("div", {
-                            className: A.modalHeader,
+                            className: S.modalHeader,
                             children: [(0, i.jsx)("img", {
-                                className: A.image,
-                                src: u,
+                                className: S.image,
+                                src: E,
                                 alt: ""
                             }), (0, i.jsx)(a.ModalCloseButton, {
-                                className: A.modalClose,
+                                className: S.modalClose,
                                 onClick: n
                             })]
                         }), (0, i.jsx)(a.ModalContent, {
-                            className: A.modalContent,
-                            children: _ ? (0, i.jsx)(a.Spinner, {}) : (0, i.jsx)(o.default, {
-                                classificationId: E,
+                            className: S.modalContent,
+                            children: _ ? (0, i.jsx)(a.Spinner, {}) : (0, i.jsx)(l.default, {
+                                classificationId: u,
                                 source: I,
                                 onError: T
                             })
                         }), (0, i.jsx)(a.ModalFooter, {
                             children: (0, i.jsx)(a.Button, {
-                                className: A.button,
+                                className: S.button,
                                 type: "button",
                                 color: a.Button.Colors.BRAND,
                                 onClick: T,
-                                children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT
+                                children: A.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_REDIRECT
                             })
                         })]
                     })
