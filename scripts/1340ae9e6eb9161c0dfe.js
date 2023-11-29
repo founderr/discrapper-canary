@@ -9430,13 +9430,7 @@
                 } = (0, C.default)(t.id), M = (0, i.useStateFromStores)([I.default], () => I.default.isFavorite(n.id, t.id)), O = (0, i.useStateFromStores)([N.default], () => {
                     let e = N.default.getCurrentUser();
                     return null != e && (!t.isNSFW() || e.nsfwAllowed)
-                }, [t]), {
-                    isActivitiesInTextEnabled: D
-                } = c.ActivitiesInTextExperiment.useExperiment({
-                    location: "webGuildTextChannel"
-                }, {
-                    autoTrackExposure: !1
-                }), b = (0, L.default)({
+                }, [t]), D = (0, c.useIsActivitiesInTextEnabled)(t.id, "webGuildTextChannel"), b = (0, L.default)({
                     channel: t,
                     isChannelCollapsed: !1,
                     isChannelSelected: o,

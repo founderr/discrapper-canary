@@ -2665,7 +2665,7 @@
                     v = (0, C.useEmbeddedApps)(T),
                     N = (0, C.useEmbeddedAppsWithPresence)(v),
                     A = N.get(null === (j = v[0]) || void 0 === j ? void 0 : null === (R = j.application) || void 0 === R ? void 0 : R.id),
-                    M = (0, h.default)(null != e ? e : void 0);
+                    M = (0, h.useIsActivitiesInTextEnabled)(e, "ActivityPanelActionBar");
                 if (!M || null == A || x !== g.ActivityPanelModes.ACTION_BAR) return null;
                 var R, j, L, O = A.embeddedActivity.details;
                 (null == O || void 0 === O || "" === O) && (O = _.default.Messages.LOADING);
@@ -2884,13 +2884,7 @@
                         connectedActivity: null != t && null !== (e = u.default.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0,
                         activityPanelMode: u.default.getActivityPanelMode()
                     }
-                }), {
-                    isActivitiesInTextEnabled: m
-                } = r.ActivitiesInTextExperiment.useExperiment({
-                    location: "ActivityPanelUI"
-                }, {
-                    autoTrackExposure: !1
-                }), E = (0, i.default)(n);
+                }), m = (0, r.useIsActivitiesInTextEnabled)(n, "ActivityPanelUI"), E = (0, i.default)(n);
                 if (l.useEffect(() => {
                         null == n && null != E ? (0, o.updateActivityPanelMode)(f.ActivityPanelModes.ACTION_BAR) : null != n && null == E && (0, o.updateFocusedActivityLayout)(f.FocusedActivityLayouts.NO_CHAT)
                     }, [n, E]), !m) return null;

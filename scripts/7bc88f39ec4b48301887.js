@@ -4092,13 +4092,7 @@
                     innerRef: _
                 } = e, N = (0, d.useAppContext)(), {
                     analyticsLocations: A
-                } = (0, E.default)(), R = N === T.AppContext.POPOUT, O = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
-                    isActivitiesInTextEnabled: M
-                } = f.ActivitiesInTextExperiment.useExperiment({
-                    location: "ChannelActivityPickerButton"
-                }, {
-                    autoTrackExposure: !1
-                }), b = i.useCallback(() => {
+                } = (0, E.default)(), R = N === T.AppContext.POPOUT, O = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), M = (0, f.useIsActivitiesInTextEnabled)(n.id, "ChannelActivityPickerButton"), b = i.useCallback(() => {
                     r(v.ContentDismissActionType.UNKNOWN), (0, h.default)({
                         channel: M ? n : void 0,
                         guildId: n.guild_id,
@@ -5725,7 +5719,7 @@
                 N = n("108486"),
                 A = n("923582"),
                 R = n("80921"),
-                O = n("49111"),
+                O = n("954016"),
                 M = n("646718"),
                 b = n("537461");
 
@@ -5796,13 +5790,7 @@
                     let i = et || ee > 0,
                         r = f.default.getRecipientEligibility(t);
                     return [J && i && r, r]
-                }), {
-                    isActivitiesInTextEnabled: ei
-                } = u.ActivitiesInTextExperiment.useExperiment({
-                    location: "ChannelTextAreaButtons"
-                }, {
-                    autoTrackExposure: !1
-                }), er = H.isDM() || H.isGroupDM(), eo = er && !r.isMobile, {
+                }), ei = (0, u.useIsActivitiesInTextEnabled)(H.id, "ChannelTextAreaButtons"), er = H.isDM() || H.isGroupDM(), eo = er && !r.isMobile, {
                     enableUnifiedIconOpenLastViewedTab: es,
                     enableUnifiedIconOpenEmojiTab: ea
                 } = g.UnifiedChatInputExpressionIconExperiment.useExperiment({
@@ -5817,7 +5805,7 @@
                     referralsRemaining: ee,
                     channel: H,
                     isResending: et
-                }, "referral"))), ei && H.type === O.ChannelTypes.GUILD_TEXT && null == z && (null === (U = B.commands) || void 0 === U ? void 0 : U.enabled) && Z.push((0, l.jsx)(T.default, {
+                }, "referral"))), ei && O.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(H.type) && null == z && (null === (U = B.commands) || void 0 === U ? void 0 : U.enabled) && Z.push((0, l.jsx)(T.default, {
                     disabled: F,
                     channel: H,
                     type: B
