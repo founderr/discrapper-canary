@@ -656,7 +656,7 @@
                 let er = ei && es.length > 0;
                 return (0, a.jsxs)(o.ClickableContainer, {
                     "aria-label": r,
-                    onClick: () => null == W ? void 0 : W(),
+                    onClick: () => null == W ? void 0 : W(ee),
                     onContextMenu: H,
                     className: d(w.card, {
                         [w.joined]: T,

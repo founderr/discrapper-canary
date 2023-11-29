@@ -749,7 +749,7 @@
                 let ei = ea && er.length > 0;
                 return (0, s.jsxs)(o.ClickableContainer, {
                     "aria-label": i,
-                    onClick: () => null == q ? void 0 : q(),
+                    onClick: () => null == q ? void 0 : q(ee),
                     onContextMenu: w,
                     className: u(V.card, {
                         [V.joined]: S,
