@@ -39,8 +39,8 @@
                 r = l("686904"),
                 u = l("322224"),
                 i = l("397680"),
-                o = l("822516"),
-                c = l("953143"),
+                c = l("822516"),
+                o = l("953143"),
                 E = l("782340"),
                 _ = l("297506");
 
@@ -50,13 +50,13 @@
                     recurrenceId: l,
                     transitionState: g,
                     onClose: h
-                } = e, f = (0, i.default)(l, t.id), x = (0, o.getBaseScheduleForRecurrence)(l, t), T = (0, o.getScheduleForRecurrenceWithException)(x, f), [N, m] = n.useState(T), [A, {
-                    loading: D,
-                    error: R
+                } = e, f = (0, i.default)(l, t.id), A = (0, c.getBaseScheduleForRecurrence)(l, t), N = (0, c.getScheduleForRecurrenceWithException)(A, f), [x, T] = n.useState(N), [R, {
+                    loading: m,
+                    error: D
                 }] = (0, r.default)(async () => {
-                    let e = (0, o.areDatesIdentical)(x.startDate, N.startDate) ? null : N.startDate,
-                        a = (0, o.areDatesIdentical)(x.endDate, N.endDate) ? null : N.endDate;
-                    if (null != f)(0, o.areSchedulesIdentical)(N, x) ? await u.default.deleteGuildEventException(t.guild_id, t.id, f.event_exception_id) : await u.default.updateGuildEventException({
+                    let e = (0, c.areDatesIdentical)(A.startDate, x.startDate) ? null : x.startDate,
+                        a = (0, c.areDatesIdentical)(A.endDate, x.endDate) ? null : x.endDate;
+                    if (null != f)(0, c.areSchedulesIdentical)(x, A) ? await u.default.deleteGuildEventException(t.guild_id, t.id, f.event_exception_id) : await u.default.updateGuildEventException({
                         scheduled_start_time: null == e ? void 0 : e.toISOString(),
                         scheduled_end_time: null == a ? void 0 : a.toISOString(),
                         is_canceled: f.is_canceled
@@ -70,7 +70,7 @@
                             is_canceled: !1
                         }, t.guild_id, t.id)
                     }
-                    null == R && h()
+                    null == D && h()
                 });
                 return (0, a.jsxs)(d.ModalRoot, {
                     transitionState: g,
@@ -81,35 +81,36 @@
                         })
                     }), (0, a.jsxs)(d.ModalContent, {
                         className: _.content,
-                        children: [(0, a.jsx)(c.default, {
+                        children: [(0, a.jsx)(o.default, {
                             onScheduleChange: e => {
                                 let {
                                     startDate: t,
                                     endDate: l
                                 } = e;
-                                null != t && null != l && l.isBefore(t) && (l = t.clone().add(1, "hour")), m({
+                                null != t && null != l && l.isBefore(t) && (l = t.clone().add(1, "hour")), T({
                                     startDate: t,
                                     endDate: l
                                 })
                             },
-                            schedule: N,
-                            showEndDate: null != N.endDate,
-                            requireEndDate: null != N.endDate,
-                            guildId: t.guild_id
-                        }), null != R ? (0, a.jsx)(d.Text, {
+                            schedule: x,
+                            showEndDate: null != x.endDate,
+                            requireEndDate: null != x.endDate,
+                            guildId: t.guild_id,
+                            recurrenceRule: t.recurrence_rule
+                        }), null != D ? (0, a.jsx)(d.Text, {
                             color: "text-danger",
                             variant: "text-xs/normal",
                             className: _.warning,
-                            children: R.getAnyErrorMessage()
+                            children: D.getAnyErrorMessage()
                         }) : null]
                     }), (0, a.jsxs)(d.ModalFooter, {
                         className: _.footer,
                         children: [(0, a.jsx)(d.Button, {
                             color: d.Button.Colors.BRAND,
-                            onClick: A,
+                            onClick: R,
                             className: _.button,
-                            submitting: D,
-                            disabled: (0, o.areSchedulesIdentical)(N, T),
+                            submitting: m,
+                            disabled: (0, c.areSchedulesIdentical)(x, N),
                             children: E.default.Messages.SAVE_EVENT
                         }), (0, a.jsx)(d.Button, {
                             color: d.Button.Colors.PRIMARY,
@@ -134,8 +135,8 @@
                 r = l("956089"),
                 u = l("822516"),
                 i = l("757767"),
-                o = l("782340"),
-                c = l("572721");
+                c = l("782340"),
+                o = l("572721");
             let E = new Set([0, 6]);
 
             function _(e) {
@@ -145,21 +146,21 @@
                     onRecurrenceChange: _
                 } = e, g = n.useMemo(() => (0, u.recurrenceRuleToOption)(t, l), [l, t]), h = function(e) {
                     let t = e.toDate(),
-                        l = t.toLocaleString(o.default.getLocale(), {
+                        l = t.toLocaleString(c.default.getLocale(), {
                             weekday: "long"
                         }),
                         a = [{
                             value: i.RecurrenceOptions.NONE,
-                            label: o.default.Messages.CREATE_EVENT_RECUR_NONE
+                            label: c.default.Messages.CREATE_EVENT_RECUR_NONE
                         }, {
                             value: i.RecurrenceOptions.WEEKLY,
-                            label: o.default.Messages.CREATE_EVENT_RECUR_WEEKLY.format({
+                            label: c.default.Messages.CREATE_EVENT_RECUR_WEEKLY.format({
                                 weekday: l
                             })
                         }, {
                             value: i.RecurrenceOptions.YEARLY,
-                            label: o.default.Messages.CREATE_EVENT_RECUR_YEARLY.format({
-                                date: t.toLocaleString(o.default.getLocale(), {
+                            label: c.default.Messages.CREATE_EVENT_RECUR_YEARLY.format({
+                                date: t.toLocaleString(c.default.getLocale(), {
                                     month: "short",
                                     day: "2-digit"
                                 })
@@ -167,17 +168,17 @@
                         }];
                     return !E.has(t.getDay()) && a.push({
                         value: i.RecurrenceOptions.WEEKDAY_ONLY,
-                        label: o.default.Messages.CREATE_EVENT_RECUR_WEEKDAYS
+                        label: c.default.Messages.CREATE_EVENT_RECUR_WEEKDAYS
                     }), a
-                }(t), f = e => e.toString(), x = (0, a.jsxs)("div", {
-                    className: c.title,
-                    children: [o.default.Messages.CREATE_EVENT_RECUR_LABEL, (0, a.jsx)(r.TextBadge, {
-                        text: o.default.Messages.NEW,
+                }(t), f = e => e.toString(), A = (0, a.jsxs)("div", {
+                    className: o.title,
+                    children: [c.default.Messages.CREATE_EVENT_RECUR_LABEL, (0, a.jsx)(r.TextBadge, {
+                        text: c.default.Messages.NEW,
                         color: d.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND
                     })]
                 });
                 return (0, a.jsx)(s.FormItem, {
-                    title: x,
+                    title: A,
                     required: !0,
                     children: (0, a.jsx)(s.Select, {
                         placeholder: "gaming",
@@ -204,8 +205,8 @@
                 r = l("812204"),
                 u = l("685665"),
                 i = l("381546"),
-                o = l("351825"),
-                c = l("651072"),
+                c = l("351825"),
+                o = l("651072"),
                 E = l("822516"),
                 _ = l("844808"),
                 g = l("782340"),
@@ -217,59 +218,60 @@
                     guildId: l,
                     onScheduleChange: n,
                     onRecurrenceChange: f,
-                    onTimeChange: x,
-                    timeSelected: T = !0,
-                    schedule: N,
-                    recurrenceRule: m,
-                    showEndDate: A = !1,
-                    requireEndDate: D = !1,
-                    disableStartDateTime: R = !1
+                    onTimeChange: A,
+                    timeSelected: N = !0,
+                    schedule: x,
+                    recurrenceRule: T,
+                    showEndDate: R = !1,
+                    requireEndDate: m = !1,
+                    disableStartDateTime: D = !1
                 } = e, {
                     analyticsLocations: S
                 } = (0, u.default)(r.default.EVENT_SETTINGS), {
-                    enabled: v
-                } = c.default.useExperiment({
+                    enabled: I
+                } = o.default.useExperiment({
                     guildId: null != l ? l : "",
                     location: S[0]
                 }, {
                     autoTrackExposure: !1
                 });
-                if (null == N) return null;
-                let I = null,
-                    C = N.startDate,
+                if (null == x) return null;
+                let v = null,
+                    C = x.startDate,
                     j = s(),
-                    p = s().add(E.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
-                    M = s().add(E.MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days"),
-                    L = e => {
-                        n({
-                            ...N,
-                            endDate: e
-                        })
-                    };
-                return null != C && c.default.trackExposure({
+                    M = s().add(E.MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days"),
+                    p = s().add(E.MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
+                null != T && (M.add(E.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"), p.add(E.MAX_YEARS_AHEAD_RECURRING_EVENT, "years"));
+                let L = e => {
+                    n({
+                        ...x,
+                        endDate: e
+                    })
+                };
+                return null != C && o.default.trackExposure({
                     guildId: null != l ? l : "",
                     location: S[0]
-                }), A && (I = null != N.endDate || D ? (0, a.jsxs)(a.Fragment, {
+                }), R && (v = null != x.endDate || m ? (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsxs)("div", {
                         className: h.doubleInput,
                         children: [(0, a.jsx)(d.FormItem, {
                             title: g.default.Messages.CREATE_EVENT_END_DATE_LABEL,
-                            required: D,
+                            required: m,
                             children: (0, a.jsx)(d.DateInput, {
-                                value: N.endDate,
+                                value: x.endDate,
                                 onSelect: L,
-                                minDate: N.startDate,
-                                maxDate: M
+                                minDate: x.startDate,
+                                maxDate: p
                             })
                         }), (0, a.jsx)(d.FormItem, {
                             title: g.default.Messages.CREATE_EVENT_END_TIME_LABEL,
-                            required: D,
+                            required: m,
                             children: (0, a.jsx)(d.TimeInput, {
-                                value: N.endDate,
+                                value: x.endDate,
                                 onChange: L
                             })
                         })]
-                    }), D ? null : (0, a.jsx)(d.Button, {
+                    }), m ? null : (0, a.jsx)(d.Button, {
                         onClick: () => {
                             L(void 0)
                         },
@@ -291,11 +293,11 @@
                     look: d.Button.Looks.BLANK,
                     size: d.Button.Sizes.MIN,
                     onClick: () => {
-                        L(s(N.startDate).add(1, "hour"))
+                        L(s(x.startDate).add(1, "hour"))
                     },
                     children: (0, a.jsxs)("div", {
                         className: h.link,
-                        children: [(0, a.jsx)(o.default, {
+                        children: [(0, a.jsx)(c.default, {
                             width: 20,
                             height: 20,
                             className: h.addIcon
@@ -312,36 +314,36 @@
                             title: g.default.Messages.CREATE_EVENT_START_DATE_LABEL,
                             required: !0,
                             children: (0, a.jsx)(d.DateInput, {
-                                value: N.startDate,
+                                value: x.startDate,
                                 onSelect: e => {
                                     n({
-                                        ...N,
+                                        ...x,
                                         startDate: e
                                     })
                                 },
                                 minDate: j,
-                                maxDate: p,
-                                disabled: R
+                                maxDate: M,
+                                disabled: D
                             })
                         }), (0, a.jsx)(d.FormItem, {
                             title: g.default.Messages.CREATE_EVENT_START_TIME_LABEL,
                             required: !0,
                             children: (0, a.jsx)(d.TimeInput, {
-                                value: N.startDate,
+                                value: x.startDate,
                                 onChange: e => {
-                                    e.isValid() && (null == x || x(!0), n({
-                                        ...N,
+                                    e.isValid() && (null == A || A(!0), n({
+                                        ...x,
                                         startDate: e
                                     }))
                                 },
-                                hideValue: !T,
-                                disabled: R
+                                hideValue: !N,
+                                disabled: D
                             })
                         })]
-                    }), I, v && null != C && null != f && (0, a.jsx)(_.default, {
+                    }), v, I && null != C && null != f && (0, a.jsx)(_.default, {
                         onRecurrenceChange: f,
                         startDate: C,
-                        recurrenceRule: m
+                        recurrenceRule: T
                     })]
                 })
             }
