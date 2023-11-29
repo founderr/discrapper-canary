@@ -91,12 +91,17 @@
                         stickerId: void 0,
                         gifAttachmentState: void 0
                     }, t)
-                }, [l, _, k]);
+                }, [l, _, k]), U = a.useCallback(e => {
+                    E(t => {
+                        let l = [...t];
+                        return l.splice(e, 1), l
+                    })
+                }, []);
                 a.useEffect(() => () => {
                     let e = s.default.getFiles(l);
                     (null == e || 0 === e.length) && u.removeAllPollUploadAttachments(l)
                 }, [l]);
-                let U = a.useCallback(async () => {
+                let M = a.useCallback(async () => {
                     await C({
                         channel: e,
                         question: h,
@@ -120,7 +125,8 @@
                     handleAnswerTextChange: N,
                     handleGifSelect: O,
                     handleEmojiSelect: j,
-                    createPoll: U,
+                    handleRemoveAnswer: U,
+                    createPoll: M,
                     submitting: R
                 }
             }
