@@ -17791,7 +17791,9 @@
                 l = n("718517");
             let o = {
                     [s.DismissibleContent.MJ_NEW_USER_CHAT_BAR]: 0,
-                    [s.DismissibleContent.NUX_GUILD_CHANNEL_EXPLAINER]: 0
+                    [s.DismissibleContent.NUX_GUILD_CHANNEL_EXPLAINER]: 0,
+                    [s.DismissibleContent.SEEN_LAUNCH_WELCOME]: 0,
+                    [s.DismissibleContent.SEEN_OLD_DESIGN]: 0
                 },
                 u = l.default.Millis.DAY;
 
