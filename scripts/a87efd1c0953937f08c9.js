@@ -409,6 +409,796 @@
                 })
             }
         },
+        82372: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                showAppLauncherPopup: function() {
+                    return i
+                },
+                dismissAppLauncherPopup: function() {
+                    return r
+                },
+                showAppDetail: function() {
+                    return o
+                },
+                dismissAppDetail: function() {
+                    return s
+                }
+            });
+            var l = n("913144");
+
+            function i() {
+                l.default.dispatch({
+                    type: "APP_LAUNCHER_SHOW_POPUP"
+                })
+            }
+
+            function r() {
+                l.default.dispatch({
+                    type: "APP_LAUNCHER_DISMISS_POPUP"
+                })
+            }
+
+            function o(e) {
+                l.default.dispatch({
+                    type: "APP_LAUNCHER_SHOW_APP_DETAIL",
+                    appDetail: e
+                })
+            }
+
+            function s() {
+                l.default.dispatch({
+                    type: "APP_LAUNCHER_DISMISS_APP_DETAIL"
+                })
+            }
+        },
+        482626: function(e, t, n) {
+            "use strict";
+            var l, i;
+            n.r(t), n.d(t, {
+                CommandListSortOrder: function() {
+                    return l
+                }
+            }), (i = l || (l = {}))[i.POPULAR = 0] = "POPULAR", i[i.ALPHABETICAL = 1] = "ALPHABETICAL"
+        },
+        996554: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                AppLauncherDesktopExperiment: function() {
+                    return i
+                }
+            });
+            var l = n("862205");
+            (0, l.createExperiment)({
+                kind: "user",
+                id: "2023-06_app_launcher_mobile",
+                label: "App Launcher - Mobile",
+                defaultConfig: {
+                    enabled: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "Enable the app launcher feature on mobile",
+                    config: {
+                        enabled: !0
+                    }
+                }]
+            });
+            let i = (0, l.createExperiment)({
+                kind: "user",
+                id: "2023-11_app_launcher_desktop",
+                label: "App Launcher - Desktop",
+                defaultConfig: {
+                    enabled: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "Enable the app launcher feature on desktop",
+                    config: {
+                        enabled: !0
+                    }
+                }]
+            })
+        },
+        426969: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return a
+                }
+            });
+            var l = n("446674"),
+                i = n("913144");
+            let r = {
+                showPopup: !1,
+                appDetail: null
+            };
+
+            function o() {
+                return r.showPopup = !1, r.appDetail = null, !0
+            }
+            class s extends l.default.Store {
+                initialize() {}
+                shouldShowPopup() {
+                    return r.showPopup
+                }
+                getCurrentAppDetail() {
+                    return r.appDetail
+                }
+            }
+            s.displayName = "AppLauncherStore";
+            var a = new s(i.default, {
+                APP_LAUNCHER_SHOW_POPUP: function() {
+                    return r.showPopup = !0, !0
+                },
+                APP_LAUNCHER_DISMISS_POPUP: o,
+                APP_LAUNCHER_SHOW_APP_DETAIL: function(e) {
+                    let {
+                        appDetail: t
+                    } = e;
+                    return r.appDetail = t, !0
+                },
+                APP_LAUNCHER_DISMISS_APP_DETAIL: function() {
+                    return r.appDetail = null, !0
+                },
+                CONNECTION_OPEN: o,
+                LOGOUT: o,
+                CHANNEL_SELECT: o,
+                APPLICATION_COMMAND_SET_ACTIVE_COMMAND: o,
+                APP_LAUNCHER_SET_ACTIVE_COMMAND: o
+            })
+        },
+        938767: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                useCommandContext: function() {
+                    return r
+                }
+            });
+            var l = n("884691"),
+                i = n("305961");
+
+            function r(e) {
+                return l.useMemo(() => ({
+                    channel: e,
+                    guild: null != e.guild_id ? i.default.getGuild(e.guild_id) : null
+                }), [e])
+            }
+        },
+        381784: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return s
+                }
+            }), n("808653");
+            var l = n("884691"),
+                i = n("369010"),
+                r = n("342564"),
+                o = n("938767");
+
+            function s(e) {
+                let {
+                    channel: t,
+                    commands: n,
+                    limit: s = n.length
+                } = e, a = (0, o.useCommandContext)(t), u = (0, i.useTopCommands)(a), d = l.useMemo(() => n.reduce((e, t) => (e[t.id] = t, e), {}), [n]), c = l.useMemo(() => u.map(e => d[e]).filter(e => null != e).sort((e, t) => {
+                    let n = r.default.getScoreWithoutLoadingLatest(a, e),
+                        l = r.default.getScoreWithoutLoadingLatest(a, t);
+                    return l - n
+                }).slice(0, s), [u, d, a, s]);
+                return c
+            }
+        },
+        476606: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return u
+                }
+            }), n("222007"), n("424973");
+            var l = n("884691"),
+                i = n("446674"),
+                r = n("721698"),
+                o = n("349503"),
+                s = n("482626"),
+                a = n("49111");
+
+            function u(e) {
+                let {
+                    section: t,
+                    commandsByActiveSection: n
+                } = e, [u, d] = l.useState(s.CommandListSortOrder.ALPHABETICAL), {
+                    discoverableApplication: c,
+                    fetching: f
+                } = (0, i.useStateFromStoresObject)([o.default], () => {
+                    let e = t.id,
+                        n = o.default.getApplication(e),
+                        l = !o.default.isInvalidApplication(e),
+                        i = l && o.default.isFetching(e);
+                    return {
+                        discoverableApplication: n,
+                        fetching: i
+                    }
+                }), p = l.useMemo(() => {
+                    var e, l;
+                    return null !== (l = null === (e = n.find(e => e.section.id === t.id)) || void 0 === e ? void 0 : e.data) && void 0 !== l ? l : []
+                }, [n, t.id]), {
+                    popularSortedCommands: m,
+                    globalPopularCommandIds: h
+                } = function(e) {
+                    let {
+                        discoverableApplication: t,
+                        alphabeticalSortedCommands: n
+                    } = e, i = l.useMemo(() => {
+                        var e;
+                        let n = null == t ? void 0 : null === (e = t.directory_entry) || void 0 === e ? void 0 : e.popular_application_command_ids;
+                        return null != n ? new Set(n) : null
+                    }, [t]), r = l.useMemo(() => {
+                        let e = new Map;
+                        return n.forEach(t => {
+                            e.set(t.id, t)
+                        }), e
+                    }, [n]), o = l.useMemo(() => {
+                        if (null == i) return n;
+                        let e = [];
+                        i.forEach(t => {
+                            let n = r.get(t);
+                            null != n && e.push(n)
+                        });
+                        let t = n.filter(e => !i.has(e.id));
+                        return [...e, ...t]
+                    }, [i, n, r]);
+                    return {
+                        globalPopularCommandIds: i,
+                        popularSortedCommands: o
+                    }
+                }({
+                    discoverableApplication: c,
+                    alphabeticalSortedCommands: p
+                }), C = null != h && h.size > 0;
+                l.useEffect(() => {
+                    let e = t.id;
+                    r.getApplication(e, {
+                        dontRefetchMs: a.TimeAsMS.DAY
+                    })
+                }, [t.id]), l.useEffect(() => {
+                    null != h && d(s.CommandListSortOrder.POPULAR)
+                }, [h]);
+                let E = p;
+                switch (u) {
+                    case s.CommandListSortOrder.POPULAR:
+                        E = m;
+                        break;
+                    case s.CommandListSortOrder.ALPHABETICAL:
+                        E = p
+                }
+                return {
+                    sortOrder: u,
+                    setSortOrder: d,
+                    commands: E,
+                    canSort: C,
+                    fetching: f
+                }
+            }
+        },
+        847352: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return x
+                }
+            });
+            var l = n("37983"),
+                i = n("884691"),
+                r = n("414456"),
+                o = n.n(r),
+                s = n("118810"),
+                a = n("446674"),
+                u = n("551042"),
+                d = n("77078"),
+                c = n("901582"),
+                f = n("244201"),
+                p = n("983782"),
+                m = n("659500"),
+                h = n("791776"),
+                C = n("82372"),
+                E = n("426969"),
+                S = n("105571"),
+                g = n("634114"),
+                T = n("49111"),
+                v = n("13030"),
+                y = n("652277"),
+                x = i.memo(function(e) {
+                    let {
+                        positionTargetRef: t,
+                        channel: n,
+                        closeOnModalOuterClick: r = !1,
+                        parentModalKey: x
+                    } = e, I = i.useRef(null), _ = i.useRef(null), {
+                        renderWindow: N,
+                        windowDispatch: A
+                    } = i.useContext(f.default), R = null != x, O = (0, u.useIsModalAtTop)(null != x ? x : ""), M = () => {
+                        C.dismissAppLauncherPopup()
+                    }, b = i.useCallback(e => {
+                        var t;
+                        if (!R && (0, u.hasAnyModalOpen)() || R && !(O && r)) return;
+                        let {
+                            target: n
+                        } = e;
+                        if ((0, s.isElement)(n) && null != n.closest("." + v.CHAT_INPUT_BUTTON_CLASSNAME)) return;
+                        for (;
+                            (0, s.isElement)(n);) {
+                            if (n === _.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
+                            n = n.parentNode
+                        }
+                        M();
+                        let l = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
+                        (null == l || "BODY" === l.tagName) && m.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.TEXTAREA_FOCUS)
+                    }, [r, O, R]), k = i.useCallback(() => {
+                        M()
+                    }, []);
+                    i.useLayoutEffect(() => (N.addEventListener("mousedown", b), N.addEventListener("contextmenu", b), A.subscribe(T.ComponentActions.POPOUT_CLOSE, k), () => {
+                        N.removeEventListener("mousedown", b), N.removeEventListener("contextmenu", b), A.unsubscribe(T.ComponentActions.POPOUT_CLOSE, k)
+                    }), [k, b, N, A]), (0, d.useFocusLock)(I), i.useEffect(() => {
+                        (!R && (0, u.hasAnyModalOpen)() || R && !O) && M()
+                    }, [O, R]);
+                    let L = (0, a.useStateFromStores)([E.default], () => E.default.getCurrentAppDetail());
+                    return (0, l.jsx)(c.default, {
+                        section: T.AnalyticsSections.EXPRESSION_PICKER,
+                        children: (0, l.jsx)(p.AppReferencePositionLayer, {
+                            className: y.positionLayer,
+                            reference: t,
+                            position: "top",
+                            align: "left",
+                            spacing: 8,
+                            autoInvert: !0,
+                            children: e => {
+                                let {
+                                    isPositioned: t
+                                } = e;
+                                return (0, l.jsx)("section", {
+                                    className: o(y.positionContainer),
+                                    ref: I,
+                                    role: "dialog",
+                                    "aria-label": "Application Launcher",
+                                    children: t ? (0, l.jsxs)("div", {
+                                        className: y.drawerSizingWrapper,
+                                        ref: _,
+                                        children: [(0, l.jsx)("div", {
+                                            className: y.resizeHandle
+                                        }), (0, l.jsxs)("div", {
+                                            className: y.contentWrapper,
+                                            children: [(0, l.jsx)(g.default, {
+                                                channel: n,
+                                                isAppDetailPresent: null != L
+                                            }), null != L ? (0, l.jsx)(S.default, {
+                                                channel: n,
+                                                appDetail: L
+                                            }, L.id) : null]
+                                        })]
+                                    }) : null
+                                })
+                            }
+                        })
+                    })
+                })
+        },
+        105571: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return R
+                }
+            });
+            var l = n("37983"),
+                i = n("884691"),
+                r = n("414456"),
+                o = n.n(r),
+                s = n("77078"),
+                a = n("798609"),
+                u = n("507217"),
+                d = n("240249"),
+                c = n("524768"),
+                f = n("355263"),
+                p = n("462274"),
+                m = n("368639"),
+                h = n("945330"),
+                C = n("256170"),
+                E = n("315102"),
+                S = n("659500"),
+                g = n("82372"),
+                T = n("476606"),
+                v = n("540843"),
+                y = n("49111"),
+                x = n("317041"),
+                I = n("782340"),
+                _ = n("253072"),
+                N = n("632215");
+
+            function A(e) {
+                let {
+                    channel: t,
+                    command: n,
+                    section: r
+                } = e, o = i.useCallback(() => {
+                    g.dismissAppLauncherPopup(), u.setActiveCommand({
+                        channelId: t.id,
+                        command: n,
+                        section: r,
+                        location: c.ApplicationCommandTriggerLocations.APP_LAUNCHER_COMMAND_LIST
+                    }), S.ComponentDispatch.dispatch(y.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+                        channelId: t.id
+                    })
+                }, [t, n, r]);
+                return (0, l.jsxs)("li", {
+                    className: _.command,
+                    onClick: o,
+                    children: [(0, l.jsx)(s.Text, {
+                        variant: "text-sm/semibold",
+                        children: n.displayName
+                    }), (0, l.jsx)(s.Text, {
+                        variant: "text-xs/medium",
+                        lineClamp: 1,
+                        children: n.displayDescription
+                    })]
+                })
+            }
+
+            function R(e) {
+                var t, n;
+                let {
+                    channel: r,
+                    appDetail: u
+                } = e, {
+                    filterSection: c,
+                    commandsByActiveSection: S
+                } = d.useDiscovery(r, {
+                    commandType: a.ApplicationCommandType.CHAT
+                }, {
+                    placeholderCount: 0,
+                    limit: x.DISCOVERY_COMMANDS_QUERY_LIMIT,
+                    includeFrecency: !0
+                }), {
+                    commands: y
+                } = (0, T.default)({
+                    section: u,
+                    commandsByActiveSection: S
+                });
+                i.useEffect(() => {
+                    c(u.id)
+                }, [u.id, c]);
+                let R = E.default.getApplicationIconSource({
+                        id: u.id,
+                        icon: u.icon,
+                        bot: null === (t = u.application) || void 0 === t ? void 0 : t.bot,
+                        botIconFirst: !0
+                    }),
+                    O = i.useCallback(() => {
+                        g.dismissAppDetail()
+                    }, []),
+                    M = (0, s.useToken)(s.tokens.colors.BG_BASE_PRIMARY).hex(),
+                    b = (0, p.default)("number" == typeof R ? "" : null == R ? void 0 : R.uri, null != M ? M : ""),
+                    k = (0, f.getIconComponent)(u),
+                    L = i.useMemo(() => {
+                        var e, t;
+                        return (0, m.parseBioReact)(null !== (t = null === (e = u.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
+                    }, [null === (n = u.application) || void 0 === n ? void 0 : n.description]);
+                return (0, l.jsxs)(s.ScrollerNone, {
+                    className: _.container,
+                    fade: !0,
+                    children: [(0, l.jsx)("div", {
+                        className: _.headerWhenSideCard,
+                        style: {
+                            backgroundColor: b
+                        },
+                        children: (0, l.jsx)(s.Clickable, {
+                            "aria-label": I.default.Messages.CLOSE,
+                            onClick: O,
+                            className: _.headerCloseButton,
+                            children: (0, l.jsx)(h.default, {})
+                        })
+                    }), (0, l.jsxs)("div", {
+                        className: _.contentContainer,
+                        children: [(0, l.jsxs)("div", {
+                            className: _.appIcon,
+                            children: [(0, l.jsx)(k, {
+                                channel: r,
+                                section: u,
+                                width: 72,
+                                height: 72
+                            }), (0, l.jsx)("div", {
+                                className: _.appIconBorderThingy
+                            })]
+                        }), (0, l.jsxs)("section", {
+                            children: [(0, l.jsx)(s.Heading, {
+                                className: _.appName,
+                                variant: "heading-lg/bold",
+                                children: u.name
+                            }), (0, l.jsx)(s.Text, {
+                                className: o(_.appDescription, N.markup),
+                                variant: "text-sm/medium",
+                                lineClamp: 3,
+                                children: L
+                            })]
+                        }), (0, l.jsx)(v.default, {
+                            commands: y,
+                            channel: r
+                        }), (0, l.jsxs)("div", {
+                            className: _.commandListHeader,
+                            children: [(0, l.jsx)(s.Heading, {
+                                variant: "text-md/medium",
+                                children: "All Commands"
+                            }), (0, l.jsxs)(s.Text, {
+                                className: _.sortSelector,
+                                variant: "text-md/medium",
+                                children: ["Popular", (0, l.jsx)(C.default, {})]
+                            })]
+                        }), (0, l.jsx)("ul", {
+                            children: y.map(e => (0, l.jsx)(A, {
+                                channel: r,
+                                command: e,
+                                section: u
+                            }, e.id))
+                        })]
+                    })]
+                })
+            }
+        },
+        540843: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var l = n("37983");
+            n("884691");
+            var i = n("381784");
+
+            function r(e) {
+                let {
+                    channel: t,
+                    commands: n
+                } = e, r = (0, i.default)({
+                    channel: t,
+                    commands: n,
+                    limit: 5
+                });
+                return 0 === r.length ? null : (0, l.jsx)("li", {})
+            }
+        },
+        634114: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return C
+                }
+            }), n("222007");
+            var l = n("37983"),
+                i = n("884691"),
+                r = n("414456"),
+                o = n.n(r),
+                s = n("77078"),
+                a = n("798609"),
+                u = n("240249"),
+                d = n("776007"),
+                c = n("810567"),
+                f = n("113713"),
+                p = n("968918"),
+                m = n("317041"),
+                h = n("440987");
+
+            function C(e) {
+                var t, n;
+                let {
+                    channel: r,
+                    isAppDetailPresent: C
+                } = e, [E, S] = i.useState(""), g = i.useCallback(() => S(""), [S]), {
+                    commandsByActiveSection: T,
+                    sectionDescriptors: v,
+                    filterSection: y
+                } = u.useDiscovery(r, {
+                    commandType: a.ApplicationCommandType.CHAT
+                }, {
+                    placeholderCount: 0,
+                    limit: m.DISCOVERY_COMMANDS_QUERY_LIMIT,
+                    includeFrecency: !0
+                });
+                i.useEffect(() => {
+                    y(m.BuiltInSectionId.FRECENCY)
+                }, [y]);
+                let x = null !== (n = null === (t = T[0]) || void 0 === t ? void 0 : t.data) && void 0 !== n ? n : [],
+                    I = v.filter(e => e.id !== m.BuiltInSectionId.FRECENCY && e.id !== m.BuiltInSectionId.BUILT_IN),
+                    _ = (0, d.useSortApplicationsViaFrecency)(I);
+                return (0, l.jsxs)("div", {
+                    className: o(h.container, {
+                        [h.appDetailVisible]: C
+                    }),
+                    children: [(0, l.jsx)("div", {
+                        className: h.searchBarContainer,
+                        children: (0, l.jsx)(c.default, {
+                            placeholder: "Search Apps & Commands",
+                            onChange: S,
+                            query: E,
+                            onClear: g,
+                            size: c.default.Sizes.MEDIUM
+                        })
+                    }), (0, l.jsxs)(s.Scroller, {
+                        className: h.scrollableContent,
+                        fade: !0,
+                        children: [(0, l.jsx)(f.default, {
+                            channel: r,
+                            commands: x,
+                            sectionDescriptors: v
+                        }), (0, l.jsx)(p.default, {
+                            channel: r,
+                            applications: _
+                        })]
+                    })]
+                })
+            }
+        },
+        113713: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return h
+                }
+            });
+            var l = n("37983"),
+                i = n("884691"),
+                r = n("77078"),
+                o = n("507217"),
+                s = n("524768"),
+                a = n("355263"),
+                u = n("93393"),
+                d = n("659500"),
+                c = n("82372"),
+                f = n("49111"),
+                p = n("479931");
+
+            function m(e) {
+                let {
+                    channel: t,
+                    command: n,
+                    applicationSection: u
+                } = e, m = (0, a.getIconComponent)(u), h = i.useCallback(() => {
+                    c.dismissAppLauncherPopup(), o.setActiveCommand({
+                        channelId: t.id,
+                        command: n,
+                        section: u,
+                        location: s.ApplicationCommandTriggerLocations.APP_LAUNCHER_DOCK
+                    }), d.ComponentDispatch.dispatch(f.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+                        channelId: t.id
+                    })
+                }, [t, n, u]);
+                return (0, l.jsxs)("li", {
+                    className: p.command,
+                    onClick: h,
+                    children: [(0, l.jsx)(m, {
+                        className: p.applicationIcon,
+                        channel: t,
+                        section: u,
+                        width: 36,
+                        height: 36
+                    }), (0, l.jsxs)("div", {
+                        children: [(0, l.jsx)(r.Text, {
+                            variant: "text-md/semibold",
+                            children: n.name
+                        }), (0, l.jsx)(r.Text, {
+                            variant: "text-sm/normal",
+                            color: "text-muted",
+                            children: u.name
+                        })]
+                    })]
+                })
+            }
+
+            function h(e) {
+                let {
+                    channel: t,
+                    commands: n,
+                    sectionDescriptors: o
+                } = e, s = i.useMemo(() => n.map(e => {
+                    let n = o.find(t => t.id === e.applicationId);
+                    return null == n ? null : (0, l.jsx)(m, {
+                        channel: t,
+                        command: e,
+                        applicationSection: n
+                    }, e.id)
+                }), [t, n, o]);
+                return 0 === n.length ? null : (0, l.jsxs)("div", {
+                    children: [(0, l.jsxs)(r.Text, {
+                        className: p.commandListHeading,
+                        variant: "text-sm/bold",
+                        color: "text-muted",
+                        children: [(0, l.jsx)(u.default, {
+                            className: p.commandListHeadingIcon,
+                            height: 16,
+                            width: 16
+                        }), "Recent slash commands"]
+                    }), (0, l.jsx)("ul", {
+                        className: p.commandList,
+                        children: s
+                    })]
+                })
+            }
+        },
+        968918: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return m
+                }
+            });
+            var l = n("37983"),
+                i = n("884691"),
+                r = n("446674"),
+                o = n("577776"),
+                s = n("77078"),
+                a = n("355263"),
+                u = n("368639"),
+                d = n("82372"),
+                c = n("426969"),
+                f = n("590144");
+
+            function p(e) {
+                var t;
+                let {
+                    channel: n,
+                    applicationSection: p
+                } = e, m = (0, a.getIconComponent)(p), h = i.useMemo(() => {
+                    var e, t;
+                    return (0, u.parseBioReactWithoutScrolling)(null !== (t = null === (e = p.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
+                }, [null === (t = p.application) || void 0 === t ? void 0 : t.description]), C = (0, r.useStateFromStores)([c.default], () => c.default.getCurrentAppDetail()), E = i.useCallback(e => {
+                    e.stopPropagation(), (null == C ? void 0 : C.id) === p.id ? d.dismissAppDetail() : d.showAppDetail(p)
+                }, [p, C]);
+                return (0, l.jsxs)("li", {
+                    className: f.application,
+                    onClick: E,
+                    children: [(0, l.jsx)(m, {
+                        className: f.applicationIcon,
+                        channel: n,
+                        section: p,
+                        width: 32,
+                        height: 32
+                    }), (0, l.jsxs)("div", {
+                        className: f.applicationDetails,
+                        children: [(0, l.jsx)(s.Heading, {
+                            variant: "heading-md/medium",
+                            children: p.name
+                        }), (0, l.jsx)(o.Text, {
+                            className: f.applicationDescription,
+                            variant: "text-xs/medium",
+                            color: "text-muted",
+                            lineClamp: 1,
+                            children: h
+                        })]
+                    })]
+                })
+            }
+
+            function m(e) {
+                let {
+                    channel: t,
+                    applications: n
+                } = e, r = n.slice(0, 50), s = i.useMemo(() => r.map(e => (0, l.jsx)(p, {
+                    channel: t,
+                    applicationSection: e
+                }, e.id)), [t, r]);
+                return 0 === r.length ? null : (0, l.jsxs)("div", {
+                    children: [(0, l.jsx)(o.Text, {
+                        className: f.listHeading,
+                        variant: "text-sm/semibold",
+                        children: "Server Apps"
+                    }), (0, l.jsx)("ul", {
+                        className: f.applicationList,
+                        children: s
+                    })]
+                })
+            }
+        },
         343952: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -815,8 +1605,8 @@
                     activeSections: V,
                     commandsByActiveSection: K,
                     hasMoreAfter: W,
-                    commands: q,
-                    filteredSectionId: Y,
+                    commands: Y,
+                    filteredSectionId: q,
                     scrollDown: z,
                     filterSection: Q
                 } = T.useDiscovery(n, {
@@ -848,7 +1638,7 @@
                 };
                 i.useEffect(() => {
                     Z(a.current)
-                }, [q]);
+                }, [Y]);
                 let J = i.useCallback(e => {
                         let t = e === V.length - 1;
                         return t && !W ? 0 : 16
@@ -857,17 +1647,17 @@
                 i.useEffect(() => {
                     null != w.current && B && null != U && w.current.scrollRowIntoView(U)
                 }, [B, U]), i.useLayoutEffect(() => {
-                    if (null != Y) {
+                    if (null != q) {
                         var e;
                         null === (e = w.current) || void 0 === e || e.scrollToSectionTop(0)
                     }
-                }, [q, Y]);
+                }, [Y, q]);
                 let ee = i.useCallback(e => {
-                        if (e.id === Y || e.id === A.BuiltInSectionId.FRECENCY) {
+                        if (e.id === q || e.id === A.BuiltInSectionId.FRECENCY) {
                             var t;
                             Q(null), null === (t = w.current) || void 0 === t || t.scrollToSectionTop(0)
                         } else Q(e.id)
-                    }, [Q, Y]),
+                    }, [Q, q]),
                     et = i.useCallback((e, t, l) => {
                         g.setActiveCommand({
                             channelId: n.id,
@@ -892,13 +1682,13 @@
                             } return !0
                     },
                     onMoveSelection: e => {
-                        if (0 === q.length) return !0;
+                        if (0 === Y.length) return !0;
                         let t = W ? 7 : 0,
-                            n = q.length + t,
+                            n = Y.length + t,
                             l = null == U ? 0 : U + e;
                         return l >= n ? l = n - 1 : l < 0 && (l = 0), D(l), F(!0), !0
                     }
-                }), [q.length, K, W, G, et, U]);
+                }), [Y.length, K, W, G, et, U]);
                 let en = i.useCallback(e => {
                         let t = V[e];
                         if (null == t) return null;
@@ -970,7 +1760,7 @@
                         className: M.rail,
                         channel: n,
                         sections: G,
-                        filteredSectionId: Y,
+                        filteredSectionId: q,
                         activeCategoryIndex: H,
                         onSectionClick: ee,
                         applicationCommandListRef: w
@@ -1578,6 +2368,34 @@
                     parts: r,
                     hasSpaceTerminator: l
                 }
+            }
+        },
+        776007: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                useSortApplicationsViaFrecency: function() {
+                    return s
+                }
+            }), n("222007");
+            var l = n("884691"),
+                i = n("446674"),
+                r = n("872173"),
+                o = n("605393");
+
+            function s(e) {
+                l.useEffect(() => {
+                    r.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []);
+                let t = (0, i.useStateFromStores)([o.default], () => o.default.getApplicationFrecencyWithoutLoadingLatest()),
+                    n = l.useMemo(() => {
+                        let n = [...e];
+                        return n.sort((e, n) => {
+                            var l, i;
+                            let r = (null !== (l = t.getScore(n.id)) && void 0 !== l ? l : 0) - (null !== (i = t.getScore(e.id)) && void 0 !== i ? i : 0);
+                            return 0 !== r ? r : e.name.localeCompare(n.name)
+                        }), n
+                    }, [e, t]);
+                return n
             }
         },
         829290: function(e, t, n) {
@@ -5764,7 +6582,7 @@
                     channel: H,
                     handleSubmit: G,
                     isEmpty: V
-                } = e, K = (0, o.useStateFromStores)([a.default], () => a.default.isSubmitButtonEnabled), W = (0, o.useStateFromStores)([h.default], () => h.default.getStickerPreview(H.id, B.drafts.type)), q = null != W && W.length > 0, Y = (0, o.useStateFromStores)([C.default], () => C.default.getUploads(H.id, B.drafts.type)), {
+                } = e, K = (0, o.useStateFromStores)([a.default], () => a.default.isSubmitButtonEnabled), W = (0, o.useStateFromStores)([h.default], () => h.default.getStickerPreview(H.id, B.drafts.type)), Y = null != W && W.length > 0, q = (0, o.useStateFromStores)([C.default], () => C.default.getUploads(H.id, B.drafts.type)), {
                     activeCommand: z,
                     activeCommandOption: Q
                 } = (0, o.useStateFromStoresObject)([d.default], () => ({
@@ -5834,7 +6652,7 @@
                     type: B
                 }, "expression")), (null === (I = B.submit) || void 0 === I ? void 0 : I.button) != null && ((null === (N = B.submit) || void 0 === N ? void 0 : N.ignorePreference) || K) && Z.push((0, l.jsx)(A.default, {
                     onClick: G,
-                    disabled: F || 0 === Y.length && V && !q
+                    disabled: F || 0 === q.length && V && !Y
                 }, "submit")), 0 === Z.length) ? null : (0, l.jsx)("div", {
                     className: b.buttons,
                     children: Z
@@ -5845,7 +6663,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return eo
+                    return eu
                 }
             }), n("222007"), n("70102");
             var l = n("37983"),
@@ -5864,135 +6682,139 @@
                 C = n("206230"),
                 E = n("812204"),
                 S = n("685665"),
-                g = n("383018"),
-                T = n("529190"),
-                v = n("829290"),
-                y = n("842343"),
-                x = n("200197"),
-                I = n("538282"),
-                _ = n("241488"),
-                N = n("292936"),
-                A = n("791234"),
-                R = n("267567"),
-                O = n("217535"),
-                M = n("558901"),
-                b = n("328511"),
-                k = n("467094"),
-                L = n("24373"),
-                P = n("300322"),
-                U = n("845579"),
-                j = n("26989"),
-                D = n("957255"),
-                w = n("18494"),
-                B = n("769264"),
-                F = n("585722"),
-                H = n("697218"),
-                G = n("378765"),
-                V = n("991170"),
-                K = n("773336"),
-                W = n("545054"),
-                q = n("850391"),
-                Y = n("743825"),
-                z = n("231868"),
-                Q = n("834725"),
-                X = n("537566"),
-                Z = n("912823"),
-                J = n("376215"),
-                $ = n("830618"),
-                ee = n("848471"),
-                et = n("153213"),
-                en = n("49111"),
-                el = n("406291"),
-                ei = n("13030"),
-                er = n("537461"),
-                eo = i.memo(i.forwardRef(function(e, t) {
-                    var r, a, eo, es, ea, eu, ed, ec, ef, ep, em, eh, eC;
+                g = n("996554"),
+                T = n("426969"),
+                v = n("847352"),
+                y = n("383018"),
+                x = n("529190"),
+                I = n("829290"),
+                _ = n("842343"),
+                N = n("200197"),
+                A = n("538282"),
+                R = n("241488"),
+                O = n("292936"),
+                M = n("791234"),
+                b = n("267567"),
+                k = n("217535"),
+                L = n("558901"),
+                P = n("328511"),
+                U = n("467094"),
+                j = n("24373"),
+                D = n("300322"),
+                w = n("845579"),
+                B = n("26989"),
+                F = n("957255"),
+                H = n("18494"),
+                G = n("769264"),
+                V = n("585722"),
+                K = n("697218"),
+                W = n("378765"),
+                Y = n("991170"),
+                q = n("773336"),
+                z = n("545054"),
+                Q = n("850391"),
+                X = n("743825"),
+                Z = n("231868"),
+                J = n("834725"),
+                $ = n("537566"),
+                ee = n("912823"),
+                et = n("376215"),
+                en = n("830618"),
+                el = n("848471"),
+                ei = n("153213"),
+                er = n("49111"),
+                eo = n("406291"),
+                es = n("13030"),
+                ea = n("537461"),
+                eu = i.memo(i.forwardRef(function(e, t) {
+                    var r, a, eu, ed, ec, ef, ep, em, eh, eC, eE, eS, eg;
                     let {
-                        textValue: eE,
-                        richValue: eS,
-                        className: eg,
-                        innerClassName: eT,
-                        id: ev,
-                        required: ey,
-                        disabled: ex,
-                        placeholder: eI,
-                        accessibilityLabel: e_,
-                        channel: eN,
-                        type: eA,
-                        focused: eR,
-                        renderAttachButton: eO,
-                        renderApplicationCommandIcon: eM,
-                        pendingReply: eb,
-                        onChange: ek,
-                        onResize: eL,
-                        onBlur: eP,
-                        onFocus: eU,
-                        onKeyDown: ej,
-                        onSubmit: eD,
-                        promptToUpload: ew,
-                        highlighted: eB,
-                        canMentionRoles: eF,
-                        canMentionChannels: eH,
-                        maxCharacterCount: eG,
-                        showRemainingCharsAfterCount: eV,
-                        allowNewLines: eK = !0,
-                        characterCountClassName: eW,
-                        "aria-describedby": eq,
-                        "aria-labelledby": eY,
-                        setEditorRef: ez,
-                        autoCompletePosition: eQ,
-                        children: eX,
-                        disableThemedBackground: eZ = !1,
-                        emojiPickerCloseOnModalOuterClick: eJ,
-                        parentModalKey: e$
+                        textValue: eT,
+                        richValue: ev,
+                        className: ey,
+                        innerClassName: ex,
+                        id: eI,
+                        required: e_,
+                        disabled: eN,
+                        placeholder: eA,
+                        accessibilityLabel: eR,
+                        channel: eO,
+                        type: eM,
+                        focused: eb,
+                        renderAttachButton: ek,
+                        renderAppLauncherButton: eL,
+                        renderApplicationCommandIcon: eP,
+                        pendingReply: eU,
+                        onChange: ej,
+                        onResize: eD,
+                        onBlur: ew,
+                        onFocus: eB,
+                        onKeyDown: eF,
+                        onSubmit: eH,
+                        promptToUpload: eG,
+                        highlighted: eV,
+                        canMentionRoles: eK,
+                        canMentionChannels: eW,
+                        maxCharacterCount: eY,
+                        showRemainingCharsAfterCount: eq,
+                        allowNewLines: ez = !0,
+                        characterCountClassName: eQ,
+                        "aria-describedby": eX,
+                        "aria-labelledby": eZ,
+                        setEditorRef: eJ,
+                        autoCompletePosition: e$,
+                        children: e0,
+                        disableThemedBackground: e1 = !1,
+                        emojiPickerCloseOnModalOuterClick: e2,
+                        parentModalKey: e8
                     } = e;
-                    u(null != eA, "chat input type must be set");
+                    u(null != eM, "chat input type must be set");
                     let {
-                        AnalyticsLocationProvider: e0
-                    } = (0, S.default)(E.default.CHANNEL_TEXT_AREA), e1 = function(e) {
+                        AnalyticsLocationProvider: e4
+                    } = (0, S.default)(E.default.CHANNEL_TEXT_AREA), e5 = function(e) {
                         let t = i.useRef(null);
                         if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
                         return null == e ? t : e
-                    }(t), e2 = i.useRef(null), e8 = i.useRef(null), e4 = i.useRef(null), e5 = i.useRef(null);
-                    null == ez || ez(e8.current);
+                    }(t), e6 = i.useRef(null), e3 = i.useRef(null), e9 = i.useRef(null), e7 = i.useRef(null);
+                    null == eJ || eJ(e3.current);
                     let {
-                        activeCommand: e6,
-                        activeCommandSection: e3
-                    } = (0, p.useStateFromStoresObject)([g.default], () => {
+                        activeCommand: te,
+                        activeCommandSection: tt
+                    } = (0, p.useStateFromStoresObject)([y.default], () => {
                         var e, t;
                         return {
-                            activeCommand: (null === (e = eA.commands) || void 0 === e ? void 0 : e.enabled) ? g.default.getActiveCommand(eN.id) : null,
-                            activeCommandSection: (null === (t = eA.commands) || void 0 === t ? void 0 : t.enabled) ? g.default.getActiveCommandSection(eN.id) : null
+                            activeCommand: (null === (e = eM.commands) || void 0 === e ? void 0 : e.enabled) ? y.default.getActiveCommand(eO.id) : null,
+                            activeCommandSection: (null === (t = eM.commands) || void 0 === t ? void 0 : t.enabled) ? y.default.getActiveCommandSection(eO.id) : null
                         }
                     }), {
-                        isLurking: e9,
-                        isPendingMember: e7,
-                        disabled: te,
-                        canAttachFiles: tt,
-                        canCreateThreads: tn,
-                        canEveryoneSendMessages: tl
+                        isLurking: tn,
+                        isPendingMember: tl,
+                        disabled: ti,
+                        canAttachFiles: tr,
+                        canCreateThreads: to,
+                        canEveryoneSendMessages: ts
                     } = function(e, t, n, l) {
                         let i = e.getGuildId(),
-                            r = (0, p.useStateFromStores)([R.default], () => null != i && R.default.isLurking(i), [i]),
-                            o = (0, p.useStateFromStores)([j.default, H.default], () => {
+                            r = (0, p.useStateFromStores)([b.default], () => null != i && b.default.isLurking(i), [i]),
+                            o = (0, p.useStateFromStores)([B.default, K.default], () => {
                                 var e, t;
-                                let n = H.default.getCurrentUser();
-                                return null !== (t = null != i && null != n ? null === (e = j.default.getMember(i, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
+                                let n = K.default.getCurrentUser();
+                                return null !== (t = null != i && null != n ? null === (e = B.default.getMember(i, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
                             }),
-                            s = (0, p.useStateFromStoresObject)([D.default], () => {
+                            s = (0, p.useStateFromStoresObject)([F.default], () => {
                                 var i, r;
                                 let s = e.isPrivate(),
-                                    a = D.default.computePermissions(e),
-                                    u = f.default.has(a, en.Permissions.CREATE_PUBLIC_THREADS) || f.default.has(a, en.Permissions.CREATE_PRIVATE_THREADS),
-                                    d = (!(null === (i = t.permissions) || void 0 === i ? void 0 : i.requireCreateTherads) || u) && (!(null === (r = t.permissions) || void 0 === r ? void 0 : r.requireSendMessages) || f.default.has(a, en.Permissions.SEND_MESSAGES)),
-                                    c = d && f.default.has(a, en.Permissions.ATTACH_FILES),
+                                    a = F.default.computePermissions(e),
+                                    u = f.default.has(a, er.Permissions.CREATE_PUBLIC_THREADS) || f.default.has(a, er.Permissions.CREATE_PRIVATE_THREADS),
+                                    d = (!(null === (i = t.permissions) || void 0 === i ? void 0 : i.requireCreateTherads) || u) && (!(null === (r = t.permissions) || void 0 === r ? void 0 : r.requireSendMessages) || f.default.has(a, er.Permissions.SEND_MESSAGES)),
+                                    c = d && f.default.has(a, er.Permissions.ATTACH_FILES),
                                     p = null != n,
-                                    m = (0, P.computeIsReadOnlyThread)(e);
+                                    m = (0, D.computeIsReadOnlyThread)(e);
                                 return {
                                     disabled: l || o || !s && !d || m,
                                     canAttachFiles: !0 === t.attachments && (s || o || c || p),
                                     canCreateThreads: u,
-                                    canEveryoneSendMessages: V.default.canEveryoneRole(en.Permissions.SEND_MESSAGES, e)
+                                    canEveryoneSendMessages: Y.default.canEveryoneRole(er.Permissions.SEND_MESSAGES, e)
                                 }
                             }, [e, t.permissions.requireCreateTherads, t.permissions.requireSendMessages, t.attachments, n, l, o]);
                         return {
@@ -6000,39 +6822,39 @@
                             isPendingMember: o,
                             ...s
                         }
-                    }(eN, eA, e6, ex), ti = eA.toolbarType === q.SlateToolbarTypes.STATIC, tr = !U.UseLegacyChatInput.useSetting() && !(0, K.isAndroidWeb)() && null != window.ResizeObserver, to = !tr || !(null === (r = eA.commands) || void 0 === r ? void 0 : r.enabled) || !eR || eE !== el.COMMAND_SENTINEL, ts = (0, O.default)(), {
-                        isSubmitButtonEnabled: ta,
-                        fontSize: tu
+                    }(eO, eM, te, eN), ta = eM.toolbarType === Q.SlateToolbarTypes.STATIC, tu = !w.UseLegacyChatInput.useSetting() && !(0, q.isAndroidWeb)() && null != window.ResizeObserver, td = !tu || !(null === (r = eM.commands) || void 0 === r ? void 0 : r.enabled) || !eb || eT !== eo.COMMAND_SENTINEL, tc = (0, k.default)(), {
+                        isSubmitButtonEnabled: tf,
+                        fontSize: tp
                     } = (0, p.useStateFromStoresObject)([C.default], () => ({
                         fontSize: C.default.fontSize,
                         isSubmitButtonEnabled: C.default.isSubmitButtonEnabled
-                    })), td = (0, p.useStateFromStores)([B.default], () => B.default.isEnabled());
+                    })), tm = (0, p.useStateFromStores)([G.default], () => G.default.isEnabled());
                     ! function(e, t) {
                         let n = i.useCallback(() => {
-                                !t && (0, I.toggleExpressionPicker)(ei.ExpressionPickerViewType.EMOJI, e)
+                                !t && (0, A.toggleExpressionPicker)(es.ExpressionPickerViewType.EMOJI, e)
                             }, [t, e]),
                             l = i.useCallback(() => {
                                 var n;
-                                !t && (null === (n = e.gifs) || void 0 === n ? void 0 : n.allowSending) && (0, I.toggleExpressionPicker)(ei.ExpressionPickerViewType.GIF, e)
+                                !t && (null === (n = e.gifs) || void 0 === n ? void 0 : n.allowSending) && (0, A.toggleExpressionPicker)(es.ExpressionPickerViewType.GIF, e)
                             }, [t, e]),
                             r = i.useCallback(() => {
                                 var n;
-                                !t && (null === (n = e.stickers) || void 0 === n ? void 0 : n.allowSending) && (0, I.toggleExpressionPicker)(ei.ExpressionPickerViewType.STICKER, e)
+                                !t && (null === (n = e.stickers) || void 0 === n ? void 0 : n.allowSending) && (0, A.toggleExpressionPicker)(es.ExpressionPickerViewType.STICKER, e)
                             }, [t, e]);
-                        (0, G.useComponentAction)({
-                            event: en.ComponentActions.TOGGLE_EMOJI_POPOUT,
+                        (0, W.useComponentAction)({
+                            event: er.ComponentActions.TOGGLE_EMOJI_POPOUT,
                             handler: n
-                        }), (0, G.useComponentAction)({
-                            event: en.ComponentActions.TOGGLE_GIF_PICKER,
+                        }), (0, W.useComponentAction)({
+                            event: er.ComponentActions.TOGGLE_GIF_PICKER,
                             handler: l
-                        }), (0, G.useComponentAction)({
-                            event: en.ComponentActions.TOGGLE_STICKER_PICKER,
+                        }), (0, W.useComponentAction)({
+                            event: er.ComponentActions.TOGGLE_STICKER_PICKER,
                             handler: r
                         })
-                    }(eA, te);
+                    }(eM, ti);
                     let {
-                        eventEmitter: tc,
-                        handleEditorSelectionChanged: tf
+                        eventEmitter: th,
+                        handleEditorSelectionChanged: tC
                     } = function(e, t, n) {
                         let [l] = i.useState(() => new s.EventEmitter);
                         return i.useEffect(() => {
@@ -6043,18 +6865,18 @@
                                 null != e.current && l.emit("selection-changed", t)
                             }
                         }
-                    }(e8, eE, eS), {
-                        submitting: tp,
-                        submit: tm,
-                        handleSubmit: th
+                    }(e3, eT, ev), {
+                        submitting: tE,
+                        submit: tS,
+                        handleSubmit: tg
                     } = function(e, t, r, o) {
                         let [s, a] = i.useState(!1), u = i.useCallback((i, d, c, f, p) => {
                             var C, E, S;
                             if (s) return;
                             a(!0);
-                            let g = null !== (E = null === (C = b.default.getStickerPreview(o, t.drafts.type)) || void 0 === C ? void 0 : C.map(e => e.id)) && void 0 !== E ? E : [],
-                                T = null !== (S = F.default.getUploads(o, t.drafts.type)) && void 0 !== S ? S : [];
-                            if (null == d && !f && !p && (0, A.shouldShowAddMediaToOriginalPostModal)(T, o)) {
+                            let g = null !== (E = null === (C = P.default.getStickerPreview(o, t.drafts.type)) || void 0 === C ? void 0 : C.map(e => e.id)) && void 0 !== E ? E : [],
+                                T = null !== (S = V.default.getUploads(o, t.drafts.type)) && void 0 !== S ? S : [];
+                            if (null == d && !f && !p && (0, M.shouldShowAddMediaToOriginalPostModal)(T, o)) {
                                 a(!1), (0, m.openModalLazy)(async () => {
                                     let {
                                         default: e
@@ -6084,10 +6906,10 @@
                                 let c = (n = u, l = t, null !== (s = n && (null === (i = l.submit) || void 0 === i ? void 0 : i.clearOnSubmit)) && void 0 !== s && s),
                                     f = null != r.current;
                                 if (c) {
-                                    if (o !== w.default.getChannelId()) h.default.saveDraft(o, "", t.drafts.type);
+                                    if (o !== H.default.getChannelId()) h.default.saveDraft(o, "", t.drafts.type);
                                     else f && r.current.clearValue()
                                 }
-                                f && (a(!1), (0, I.closeExpressionPicker)(), d && r.current.focus())
+                                f && (a(!1), (0, A.closeExpressionPicker)(), d && r.current.focus())
                             })
                         }, [r, e, s, t, o]), d = i.useCallback(e => {
                             var t;
@@ -6098,10 +6920,10 @@
                             submit: u,
                             handleSubmit: d
                         }
-                    }(eD, eA, e8, eN.id), {
-                        autocompleteRef: tC,
-                        handleMaybeShowAutocomplete: tE,
-                        handleHideAutocomplete: tS
+                    }(eH, eM, e3, eO.id), {
+                        autocompleteRef: tT,
+                        handleMaybeShowAutocomplete: tv,
+                        handleHideAutocomplete: ty
                     } = function() {
                         let e = i.useRef(null),
                             t = i.useCallback(() => {
@@ -6118,16 +6940,16 @@
                             handleHideAutocomplete: n
                         }
                     }();
-                    let tg = (ef = tm, ep = eA, em = e8, i.useCallback(e => {
+                    let tx = (eh = tS, eC = eM, eE = e3, i.useCallback(e => {
                         var t, n;
-                        ep === q.ChatInputTypes.CREATE_FORUM_POST ? null === (n = em.current) || void 0 === n || n.insertGIF(e) : ef(e.url, void 0, void 0, !0), (0, I.closeExpressionPicker)(), null === (t = em.current) || void 0 === t || t.focus()
-                    }, [em, ef, ep]));
-                    let tT = (eh = e8, i.useCallback(function(e, t) {
+                        eC === Q.ChatInputTypes.CREATE_FORUM_POST ? null === (n = eE.current) || void 0 === n || n.insertGIF(e) : eh(e.url, void 0, void 0, !0), (0, A.closeExpressionPicker)(), null === (t = eE.current) || void 0 === t || t.focus()
+                    }, [eE, eh, eC]));
+                    let tI = (eS = e3, i.useCallback(function(e, t) {
                             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                                l = eh.current;
-                            null != e && null != l && l.insertEmoji(e, t, n), t && (0, I.closeExpressionPicker)()
-                        }, [eh])),
-                        tv = function(e) {
+                                l = eS.current;
+                            null != e && null != l && l.insertEmoji(e, t, n), t && (0, A.closeExpressionPicker)()
+                        }, [eS])),
+                        t_ = function(e) {
                             let {
                                 editorRef: t,
                                 disabled: n,
@@ -6140,36 +6962,36 @@
                             } = (0, S.default)();
                             return i.useCallback((e, i) => {
                                 var u, d;
-                                !n && ((0, L.shouldAttachSticker)(i, l, r, o.drafts.type) ? ((0, Q.trackStickerPreviewSelect)({
+                                !n && ((0, j.shouldAttachSticker)(i, l, r, o.drafts.type) ? ((0, J.trackStickerPreviewSelect)({
                                     sticker: e,
                                     stickerSelectLocation: i,
-                                    isReplacement: null != b.default.getStickerPreview(r, o.drafts.type),
+                                    isReplacement: null != P.default.getStickerPreview(r, o.drafts.type),
                                     analyticsLocations: a
-                                }), (0, k.addStickerPreview)(r, e, o.drafts.type)) : (s({
+                                }), (0, U.addStickerPreview)(r, e, o.drafts.type)) : (s({
                                     value: "",
                                     uploads: void 0,
                                     stickers: [e.id]
-                                }), null === (d = t.current) || void 0 === d || d.clearValue()), (0, I.closeExpressionPicker)(), null === (u = t.current) || void 0 === u || u.focus())
+                                }), null === (d = t.current) || void 0 === d || d.clearValue()), (0, A.closeExpressionPicker)(), null === (u = t.current) || void 0 === u || u.focus())
                             }, [n, l, r, o.drafts.type, t, a, s])
                         }({
-                            editorRef: e8,
-                            disabled: te,
-                            textValue: eE,
-                            channelId: eN.id,
-                            chatInputType: eA,
-                            submit: eD
+                            editorRef: e3,
+                            disabled: ti,
+                            textValue: eT,
+                            channelId: eO.id,
+                            chatInputType: eM,
+                            submit: eH
                         });
-                    let ty = (eC = e8, i.useCallback(e => {
-                            let t = eC.current;
-                            null != e && null != t && t.insertSound(e), (0, I.closeExpressionPicker)()
-                        }, [eC])),
-                        tx = i.useCallback(() => {
+                    let tN = (eg = e3, i.useCallback(e => {
+                            let t = eg.current;
+                            null != e && null != t && t.insertSound(e), (0, A.closeExpressionPicker)()
+                        }, [eg])),
+                        tA = i.useCallback(() => {
                             var e;
-                            return null == e5 ? void 0 : null === (e = e5.current) || void 0 === e ? void 0 : e.hide()
+                            return null == e7 ? void 0 : null === (e = e7.current) || void 0 === e ? void 0 : e.hide()
                         }, []),
                         {
-                            editorHeight: tI,
-                            handleResize: t_
+                            editorHeight: tR,
+                            handleResize: tO
                         } = function(e) {
                             let [t, n] = i.useState(0), l = i.useCallback(t => {
                                 n(null != t ? t : 0), null == e || e(t)
@@ -6178,11 +7000,11 @@
                                 editorHeight: t,
                                 handleResize: l
                             }
-                        }(eL),
+                        }(eD),
                         {
-                            handleTab: tN,
-                            handleEnter: tA,
-                            handleMoveSelection: tR
+                            handleTab: tM,
+                            handleEnter: tb,
+                            handleMoveSelection: tk
                         } = function(e, t, n) {
                             let l = i.useCallback(() => {
                                     var l, i;
@@ -6201,19 +7023,19 @@
                                 handleEnter: r,
                                 handleMoveSelection: o
                             }
-                        }(tC, e2, to),
+                        }(tT, e6, td),
                         {
-                            expressionPickerView: tO,
-                            shouldHideExpressionPicker: tM,
-                            handleAutocompleteVisibilityChange: tb,
-                            handleOuterClick: tk
+                            expressionPickerView: tL,
+                            shouldHideExpressionPicker: tP,
+                            handleAutocompleteVisibilityChange: tU,
+                            handleOuterClick: tj
                         } = function(e, t, n) {
-                            let [l, r] = (0, I.useExpressionPickerStore)(e => [e.activeView, e.activeViewType], d.default);
+                            let [l, r] = (0, A.useExpressionPickerStore)(e => [e.activeView, e.activeViewType], d.default);
                             i.useEffect(() => () => {
-                                (0, I.closeExpressionPicker)(e)
+                                (0, A.closeExpressionPicker)(e)
                             }, [e]);
                             let o = i.useCallback(e => {
-                                    t.emit("autocomplete-visibility-change", e), e && (0, I.closeExpressionPicker)()
+                                    t.emit("autocomplete-visibility-change", e), e && (0, A.closeExpressionPicker)()
                                 }, [t]),
                                 s = i.useCallback(() => {
                                     var e;
@@ -6226,175 +7048,187 @@
                                 handleAutocompleteVisibilityChange: o,
                                 handleOuterClick: s
                             }
-                        }(eA, tc, e8);
-                    (0, W.useHereMentionCallback)(tc, eN.guild_id, eN.id);
-                    let tL = null != eb,
-                        tP = te && !((e9 || e7) && tl) || tp && (null === (a = eA.submit) || void 0 === a ? void 0 : a.useDisabledStylesOnSubmit),
-                        tU = null;
-                    null != e6 ? tU = null == eM ? void 0 : eM(e6, e3, er.attachButton) : (!te || tn) && (tU = null == eO ? void 0 : eO(eA === q.ChatInputTypes.NORMAL, tL, er.attachButton));
-                    let tj = tr && null != eS && !te && eA.showCharacterCount && null == e6,
-                        tD = tr && !__OVERLAY__ && null != eS && null == e6,
-                        tw = function(e, t, n, l) {
+                        }(eM, th, e3),
+                        tD = g.AppLauncherDesktopExperiment.useExperiment({
+                            location: "chat_input"
+                        }, {
+                            autoTrackExposure: !1
+                        }).enabled,
+                        tw = (0, p.useStateFromStores)([T.default], () => T.default.shouldShowPopup(), []);
+                    (0, z.useHereMentionCallback)(th, eO.guild_id, eO.id);
+                    let tB = null != eU,
+                        tF = ti && !((tn || tl) && ts) || tE && (null === (a = eM.submit) || void 0 === a ? void 0 : a.useDisabledStylesOnSubmit),
+                        tH = null,
+                        tG = null;
+                    null != te ? tH = null == eP ? void 0 : eP(te, tt, ea.attachButton) : (!ti || to) && (tH = null == ek ? void 0 : ek(eM === Q.ChatInputTypes.NORMAL, tB, ea.attachButton), tD && (tG = null == eL ? void 0 : eL()));
+                    let tV = tu && null != ev && !ti && eM.showCharacterCount && null == te,
+                        tK = tu && !__OVERLAY__ && null != ev && null == te,
+                        tW = function(e, t, n, l) {
                             var i, r;
-                            let o = U.ExpressionSuggestionsEnabled.useSetting(),
-                                s = (0, p.useStateFromStores)([b.default], () => b.default.getStickerPreview(e.id, t.drafts.type)),
+                            let o = w.ExpressionSuggestionsEnabled.useSetting(),
+                                s = (0, p.useStateFromStores)([P.default], () => P.default.getStickerPreview(e.id, t.drafts.type)),
                                 a = null != s && s.length > 0;
                             return o && (null === (i = t.stickers) || void 0 === i ? void 0 : i.autoSuggest) && !a && (null === (r = l.current) || void 0 === r ? void 0 : r.isVisible()) !== !0 && !__OVERLAY__ && null != n
-                        }(eN, eA, eS, tC),
-                        tB = (0, v.useShouldShowPTONotice)(eN),
-                        tF = null != e6 || null != eb || tB;
-                    return (0, l.jsx)(x.EventEmitterProvider, {
-                        value: tc,
-                        children: (0, l.jsxs)(e0, {
-                            children: [tD && ti ? (0, l.jsx)(et.default, {
-                                editorRef: e8,
-                                options: eA.markdown,
-                                channel: eN
-                            }) : tD ? (0, l.jsx)(ee.default, {
-                                ref: e5,
-                                editorRef: e8,
-                                containerRef: e4,
-                                options: eA.markdown
+                        }(eO, eM, ev, tT),
+                        tY = (0, I.useShouldShowPTONotice)(eO),
+                        tq = null != te || null != eU || tY;
+                    return (0, l.jsx)(N.EventEmitterProvider, {
+                        value: th,
+                        children: (0, l.jsxs)(e4, {
+                            children: [tK && ta ? (0, l.jsx)(ei.default, {
+                                editorRef: e3,
+                                options: eM.markdown,
+                                channel: eO
+                            }) : tK ? (0, l.jsx)(el.default, {
+                                ref: e7,
+                                editorRef: e3,
+                                containerRef: e9,
+                                options: eM.markdown
                             }) : null, (0, l.jsxs)("div", {
-                                ref: e1,
-                                className: o(eg, {
-                                    [er.channelTextArea]: !0,
-                                    [er.channelTextAreaDisabled]: tP,
-                                    [er.highlighted]: eB,
-                                    [er.textAreaMobileThemed]: c.isMobile
+                                ref: e5,
+                                className: o(ey, {
+                                    [ea.channelTextArea]: !0,
+                                    [ea.channelTextAreaDisabled]: tF,
+                                    [ea.highlighted]: eV,
+                                    [ea.textAreaMobileThemed]: c.isMobile
                                 }),
-                                onMouseDown: tk,
-                                children: [(0, l.jsx)(X.default, {
-                                    type: eA,
-                                    channel: eN,
-                                    activeCommand: e6,
-                                    pendingReply: eb
+                                onMouseDown: tj,
+                                children: [(0, l.jsx)($.default, {
+                                    type: eM,
+                                    channel: eO,
+                                    activeCommand: te,
+                                    pendingReply: eU
                                 }), (0, l.jsxs)("div", {
-                                    ref: e4,
-                                    onScroll: tx,
-                                    className: o(eT, {
-                                        [er.scrollableContainer]: !0,
-                                        [er.themedBackground]: !eZ,
-                                        [er.webkit]: "Blink" === platform.layout,
-                                        [er.hasConnectedBar]: tF
+                                    ref: e9,
+                                    onScroll: tA,
+                                    className: o(ex, {
+                                        [ea.scrollableContainer]: !0,
+                                        [ea.themedBackground]: !e1,
+                                        [ea.webkit]: "Blink" === platform.layout,
+                                        [ea.hasConnectedBar]: tq
                                     }),
-                                    children: [(0, l.jsx)(z.default, {
-                                        channelId: eN.id,
-                                        chatInputType: eA
-                                    }), eA.hideAttachmentArea ? null : (0, l.jsx)(J.default, {
-                                        channelId: eN.id,
-                                        type: eA,
-                                        canAttachFiles: tt
+                                    children: [(0, l.jsx)(Z.default, {
+                                        channelId: eO.id,
+                                        chatInputType: eM
+                                    }), eM.hideAttachmentArea ? null : (0, l.jsx)(et.default, {
+                                        channelId: eO.id,
+                                        type: eM,
+                                        canAttachFiles: tr
                                     }), (0, l.jsxs)("div", {
-                                        className: o(er.inner, {
-                                            [er.innerDisabled]: tP,
-                                            [er.sansAttachButton]: eA !== q.ChatInputTypes.EDIT && (null != tU || tP && null == tU || e9),
-                                            [er.sansAttachButtonCreateThread]: eA === q.ChatInputTypes.THREAD_CREATION,
-                                            [er.sansAttachButtonCreatePost]: eA === q.ChatInputTypes.CREATE_FORUM_POST
+                                        className: o(ea.inner, {
+                                            [ea.innerDisabled]: tF,
+                                            [ea.sansAttachButton]: eM !== Q.ChatInputTypes.EDIT && (null != tH || tF && null == tH || tn),
+                                            [ea.sansAttachButtonCreateThread]: eM === Q.ChatInputTypes.THREAD_CREATION,
+                                            [ea.sansAttachButtonCreatePost]: eM === Q.ChatInputTypes.CREATE_FORUM_POST
                                         }),
-                                        children: [tU, (0, l.jsx)(m.FocusRing, {
-                                            ringTarget: e1,
-                                            ringClassName: er.focusRing,
-                                            children: (0, l.jsx)(Y.default, {
-                                                ref: e8,
-                                                id: ev,
-                                                focused: eR,
-                                                useSlate: tr,
-                                                textValue: eE,
-                                                richValue: eS,
-                                                disabled: te,
-                                                placeholder: eI,
-                                                required: ey,
-                                                accessibilityLabel: e_,
-                                                isPreviewing: (e9 || e7) && tl,
-                                                channel: eN,
-                                                type: eA,
-                                                canPasteFiles: tt,
-                                                uploadPromptCharacterCount: en.MAX_MESSAGE_LENGTH_PREMIUM,
-                                                maxCharacterCount: null != eG ? eG : ts,
-                                                allowNewLines: eK,
-                                                "aria-describedby": eq,
-                                                onChange: ek,
-                                                onResize: t_,
-                                                onBlur: eP,
-                                                onFocus: eU,
-                                                onKeyDown: ej,
-                                                onSubmit: tm,
-                                                onTab: tN,
-                                                onEnter: tA,
-                                                onMoveSelection: tR,
-                                                onSelectionChanged: tf,
-                                                onMaybeShowAutocomplete: tE,
-                                                onHideAutocomplete: tS,
-                                                promptToUpload: ew,
-                                                fontSize: tu,
-                                                spellcheckEnabled: td,
-                                                canOnlyUseTextCommands: tL,
+                                        children: [tH, tG, (0, l.jsx)(m.FocusRing, {
+                                            ringTarget: e5,
+                                            ringClassName: ea.focusRing,
+                                            children: (0, l.jsx)(X.default, {
+                                                ref: e3,
+                                                id: eI,
+                                                focused: eb,
+                                                useSlate: tu,
+                                                textValue: eT,
+                                                richValue: ev,
+                                                disabled: ti,
+                                                placeholder: eA,
+                                                required: e_,
+                                                accessibilityLabel: eR,
+                                                isPreviewing: (tn || tl) && ts,
+                                                channel: eO,
+                                                type: eM,
+                                                canPasteFiles: tr,
+                                                uploadPromptCharacterCount: er.MAX_MESSAGE_LENGTH_PREMIUM,
+                                                maxCharacterCount: null != eY ? eY : tc,
+                                                allowNewLines: ez,
+                                                "aria-describedby": eX,
+                                                onChange: ej,
+                                                onResize: tO,
+                                                onBlur: ew,
+                                                onFocus: eB,
+                                                onKeyDown: eF,
+                                                onSubmit: tS,
+                                                onTab: tM,
+                                                onEnter: tb,
+                                                onMoveSelection: tk,
+                                                onSelectionChanged: tC,
+                                                onMaybeShowAutocomplete: tv,
+                                                onHideAutocomplete: ty,
+                                                promptToUpload: eG,
+                                                fontSize: tp,
+                                                spellcheckEnabled: tm,
+                                                canOnlyUseTextCommands: tB,
                                                 className: o({
-                                                    [er.textAreaThreadCreation]: eA === q.ChatInputTypes.THREAD_CREATION,
-                                                    [er.profileBioInput]: eA === q.ChatInputTypes.PROFILE_BIO_INPUT
+                                                    [ea.textAreaThreadCreation]: eM === Q.ChatInputTypes.THREAD_CREATION,
+                                                    [ea.profileBioInput]: eM === Q.ChatInputTypes.PROFILE_BIO_INPUT
                                                 }),
-                                                "aria-labelledby": eY
+                                                "aria-labelledby": eZ
                                             })
-                                        }), (0, l.jsx)(Z.default, {
-                                            type: eA,
-                                            disabled: te,
-                                            channel: eN,
-                                            handleSubmit: th,
-                                            isEmpty: 0 === eE.trim().length
+                                        }), (0, l.jsx)(ee.default, {
+                                            type: eM,
+                                            disabled: ti,
+                                            channel: eO,
+                                            handleSubmit: tg,
+                                            isEmpty: 0 === eT.trim().length
                                         })]
                                     })]
-                                }), to ? null : (0, l.jsx)(T.default, {
-                                    ref: e2,
-                                    channel: eN,
-                                    canOnlyUseTextCommands: tL
-                                }), (0, l.jsx)(y.default, {
-                                    ref: tC,
-                                    channel: eN,
-                                    canMentionRoles: eF,
-                                    canMentionChannels: eH,
-                                    useNewSlashCommands: tr,
-                                    canOnlyUseTextCommands: tL,
-                                    canSendStickers: null === (eo = eA.stickers) || void 0 === eo ? void 0 : eo.allowSending,
-                                    textValue: eE,
-                                    focused: eR,
-                                    expressionPickerView: tO,
-                                    type: eA,
-                                    editorRef: e8,
-                                    onSendMessage: tm,
-                                    onSendSticker: tv,
-                                    onVisibilityChange: tb,
-                                    editorHeight: tI,
-                                    setValue: (e, t) => null == ek ? void 0 : ek(null, e, t),
-                                    position: eQ
-                                }), (0, l.jsx)(M.default, {
-                                    textValue: eE,
-                                    editorHeight: tI
-                                }), tj ? (0, l.jsx)($.default, {
-                                    type: eA,
-                                    textValue: eE,
-                                    className: eW,
-                                    maxCharacterCount: eG,
-                                    showRemainingCharsAfterCount: eV
-                                }) : null, tw ? (0, l.jsx)(N.default, {
-                                    editorRef: e8,
-                                    channel: eN,
-                                    isEditorFocused: eR,
-                                    onSelectSticker: tv,
-                                    submitButtonVisible: (null === (es = eA.submit) || void 0 === es ? void 0 : es.button) && (null !== (ed = null === (ea = eA.submit) || void 0 === ea ? void 0 : ea.ignorePreference) && void 0 !== ed ? ed : ta),
-                                    stickerIconVisible: null !== (ec = null === (eu = eA.stickers) || void 0 === eu ? void 0 : eu.button) && void 0 !== ec && ec
-                                }) : null, eX]
-                            }), tM ? null : (0, l.jsx)(_.default, {
-                                positionTargetRef: e1,
-                                type: eA,
-                                onSelectGIF: tg,
-                                onSelectEmoji: tT,
-                                onSelectSticker: tv,
-                                onSelectSound: ty,
-                                channel: eN,
-                                closeOnModalOuterClick: eJ,
-                                parentModalKey: e$
-                            })]
+                                }), td ? null : (0, l.jsx)(x.default, {
+                                    ref: e6,
+                                    channel: eO,
+                                    canOnlyUseTextCommands: tB
+                                }), (0, l.jsx)(_.default, {
+                                    ref: tT,
+                                    channel: eO,
+                                    canMentionRoles: eK,
+                                    canMentionChannels: eW,
+                                    useNewSlashCommands: tu,
+                                    canOnlyUseTextCommands: tB,
+                                    canSendStickers: null === (eu = eM.stickers) || void 0 === eu ? void 0 : eu.allowSending,
+                                    textValue: eT,
+                                    focused: eb,
+                                    expressionPickerView: tL,
+                                    type: eM,
+                                    editorRef: e3,
+                                    onSendMessage: tS,
+                                    onSendSticker: t_,
+                                    onVisibilityChange: tU,
+                                    editorHeight: tR,
+                                    setValue: (e, t) => null == ej ? void 0 : ej(null, e, t),
+                                    position: e$
+                                }), (0, l.jsx)(L.default, {
+                                    textValue: eT,
+                                    editorHeight: tR
+                                }), tV ? (0, l.jsx)(en.default, {
+                                    type: eM,
+                                    textValue: eT,
+                                    className: eQ,
+                                    maxCharacterCount: eY,
+                                    showRemainingCharsAfterCount: eq
+                                }) : null, tW ? (0, l.jsx)(O.default, {
+                                    editorRef: e3,
+                                    channel: eO,
+                                    isEditorFocused: eb,
+                                    onSelectSticker: t_,
+                                    submitButtonVisible: (null === (ed = eM.submit) || void 0 === ed ? void 0 : ed.button) && (null !== (ep = null === (ec = eM.submit) || void 0 === ec ? void 0 : ec.ignorePreference) && void 0 !== ep ? ep : tf),
+                                    stickerIconVisible: null !== (em = null === (ef = eM.stickers) || void 0 === ef ? void 0 : ef.button) && void 0 !== em && em
+                                }) : null, e0]
+                            }), tP ? null : (0, l.jsx)(R.default, {
+                                positionTargetRef: e5,
+                                type: eM,
+                                onSelectGIF: tx,
+                                onSelectEmoji: tI,
+                                onSelectSticker: t_,
+                                onSelectSound: tN,
+                                channel: eO,
+                                closeOnModalOuterClick: e2,
+                                parentModalKey: e8
+                            }), tw ? (0, l.jsx)(v.default, {
+                                positionTargetRef: e5,
+                                channel: eO,
+                                closeOnModalOuterClick: e2,
+                                parentModalKey: e8
+                            }) : null]
                         })
                     })
                 }))
@@ -7036,8 +7870,8 @@
                         onBlur: V,
                         onKeyDown: K,
                         onKeyUp: W,
-                        onTab: q,
-                        onEnter: Y,
+                        onTab: Y,
+                        onEnter: q,
                         onSubmit: z,
                         maybeShowAutocomplete: Q,
                         hideAutocomplete: X,
@@ -7156,8 +7990,8 @@
                         disableEnterToSubmit: en,
                         onKeyDown: K,
                         onKeyUp: W,
-                        onTab: q,
-                        onEnter: Y,
+                        onTab: Y,
+                        onEnter: q,
                         allowNewLines: el,
                         submit: ex,
                         hideAutocomplete: X,
@@ -13227,11 +14061,11 @@
                     type: V,
                     closeOnModalOuterClick: K = !1,
                     parentModalKey: W
-                } = e, q = i.useRef(null), Y = i.useRef(!1), z = i.useRef(), Q = i.useRef(null), {
+                } = e, Y = i.useRef(null), q = i.useRef(!1), z = i.useRef(), Q = i.useRef(null), {
                     drawerWidth: X,
                     handleDrawerResizeHandleMouseDown: Z
                 } = H({
-                    positionContainerRef: q,
+                    positionContainerRef: Y,
                     drawerRef: Q
                 }), J = (0, b.useExpressionPickerStore)(e => e.activeView), $ = (0, I.useHasSendableSticker)(G), {
                     renderWindow: ee,
@@ -13260,18 +14094,18 @@
                     return ee.addEventListener("mousedown", eo), ee.addEventListener("contextmenu", eo), et.subscribe(L.ComponentActions.POPOUT_CLOSE, es), O.ComponentDispatch.subscribe(L.ComponentActions.CLOSE_GIF_PICKER, e), () => {
                         ee.removeEventListener("mousedown", eo), ee.removeEventListener("contextmenu", eo), et.unsubscribe(L.ComponentActions.POPOUT_CLOSE, es), O.ComponentDispatch.unsubscribe(L.ComponentActions.CLOSE_GIF_PICKER, e)
                     }
-                }, [J, es, eo, ee, et]), (0, p.useFocusLock)(q), i.useEffect(() => {
+                }, [J, es, eo, ee, et]), (0, p.useFocusLock)(Y), i.useEffect(() => {
                     (0, b.setSearchQuery)("")
                 }, []), i.useEffect(() => {
                     (!ei && (0, f.hasAnyModalOpen)() || ei && !er) && (0, b.closeExpressionPicker)()
                 }, [er, ei]), i.useEffect(() => {
-                    if (null != Q.current && !Y.current) {
+                    if (null != Q.current && !q.current) {
                         var e, t, n, l;
-                        J === k.ExpressionPickerViewType.EMOJI ? (null == z ? void 0 : null === (e = z.current) || void 0 === e ? void 0 : e.onPickerOpen) != null && (null == z || null === (t = z.current) || void 0 === t || t.onPickerOpen(), Y.current = !0) : J === k.ExpressionPickerViewType.STICKER ? (null == z ? void 0 : null === (n = z.current) || void 0 === n ? void 0 : n.onPickerOpen) != null && !en && (null == z || null === (l = z.current) || void 0 === l || l.onPickerOpen(), Y.current = !0) : (S.default.trackWithMetadata(L.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
+                        J === k.ExpressionPickerViewType.EMOJI ? (null == z ? void 0 : null === (e = z.current) || void 0 === e ? void 0 : e.onPickerOpen) != null && (null == z || null === (t = z.current) || void 0 === t || t.onPickerOpen(), q.current = !0) : J === k.ExpressionPickerViewType.STICKER ? (null == z ? void 0 : null === (n = z.current) || void 0 === n ? void 0 : n.onPickerOpen) != null && !en && (null == z || null === (l = z.current) || void 0 === l || l.onPickerOpen(), q.current = !0) : (S.default.trackWithMetadata(L.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
                             width: Q.current.offsetWidth,
                             tab: J,
                             badged: !1
-                        }), Y.current = !0)
+                        }), q.current = !0)
                     }
                 });
                 let ea = (null === (t = V.gifs) || void 0 === t ? void 0 : t.allowSending) && !u.isMobile,
@@ -13294,7 +14128,7 @@
                                 className: o(w.positionContainer, {
                                     [w.positionContainerOnlyEmoji]: !ed
                                 }),
-                                ref: q,
+                                ref: Y,
                                 role: "dialog",
                                 "aria-label": D.default.Messages.EXPRESSION_PICKER,
                                 children: t ? (0, l.jsxs)("div", {
@@ -13446,8 +14280,8 @@
                     expressionsGrid: V,
                     rowCount: K,
                     rowCountBySection: W,
-                    columnCounts: q,
-                    gutterWidth: Y
+                    columnCounts: Y,
+                    gutterWidth: q
                 } = (0, o.useExpressionGrid)({
                     categories: t,
                     collapsedCategories: n,
@@ -13462,7 +14296,7 @@
                     handleGridContainerKeyDown: Z,
                     isUsingKeyboardNavigation: J
                 } = (0, o.useKeyboardNavigation)({
-                    columnCounts: q,
+                    columnCounts: Y,
                     expressionsListRef: D,
                     expressionsGrid: V,
                     onSelectItem: f,
@@ -13472,10 +14306,10 @@
                     let t = V[e];
                     return S(t, Q(e), {
                         isUsingKeyboardNavigation: J.current,
-                        gutterWidth: Y,
+                        gutterWidth: q,
                         rowIndex: e
                     }, t => z(e, t), t => c.setInspectedExpressionPosition(t, e))
-                }, [V, z, Q, Y, J, S, c]), ee = i.useCallback(e => null == g ? void 0 : g(t[e]), [t, g]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
+                }, [V, z, Q, q, J, S, c]), ee = i.useCallback(e => null == g ? void 0 : g(t[e]), [t, g]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
                     var e;
                     return null == y ? void 0 : y(null == V ? void 0 : null === (e = V[H.rowIndex]) || void 0 === e ? void 0 : e[H.columnIndex])
                 }, [V, H.columnIndex, H.rowIndex, y]);
@@ -13864,7 +14698,7 @@
                     onSelectSticker: s,
                     stickerIconVisible: c = !1,
                     submitButtonVisible: f = !1
-                } = e, y = o.useContext(C.default), [x, A] = o.useState(null), [P, U] = o.useState(!1), [j, F] = o.useState(null), H = (0, E.useExpressionPickerStore)(e => null != e.activeView), G = o.useRef(null), [V, K] = o.useState(""), [W, q] = o.useState(""), [Y, z] = o.useState(!1), [Q, X] = o.useState(!1), Z = (0, O.useStickerSuggestionResults)(V, P, l), {
+                } = e, y = o.useContext(C.default), [x, A] = o.useState(null), [P, U] = o.useState(!1), [j, F] = o.useState(null), H = (0, E.useExpressionPickerStore)(e => null != e.activeView), G = o.useRef(null), [V, K] = o.useState(""), [W, Y] = o.useState(""), [q, z] = o.useState(!1), [Q, X] = o.useState(!1), Z = (0, O.useStickerSuggestionResults)(V, P, l), {
                     analyticsLocations: J,
                     AnalyticsLocationProvider: $
                 } = (0, h.default)(m.default.EXPRESSION_SUGGESTIONS), {
@@ -13901,7 +14735,7 @@
                     })
                 }, [i]);
                 let ei = Z.length > 0,
-                    er = en && !H && !Y && !P && !Q && ei,
+                    er = en && !H && !q && !P && !Q && ei,
                     {
                         stickersNavigator: eo
                     } = function(e) {
@@ -13979,7 +14813,7 @@
                     ea = o.useRef([]),
                     eu = o.useRef(!1);
                 o.useEffect(() => {
-                    er && (ea.current = Z), er !== eu.current && (y.emit(er ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), er && ((0, M.throttledTrackExpressionSuggestionDisplayed)(V), q(V))), eu.current = er
+                    er && (ea.current = Z), er !== eu.current && (y.emit(er ? "sticker-suggestions-shown" : "sticker-suggestions-hidden"), er && ((0, M.throttledTrackExpressionSuggestionDisplayed)(V), Y(V))), eu.current = er
                 }, [y, er, Z, V]);
                 let ed = !er,
                     ec = er ? Z : ea.current;
@@ -14807,8 +15641,8 @@
                     ...K
                 } = e, {
                     soundId: W,
-                    name: q,
-                    emojiId: Y,
+                    name: Y,
+                    emojiId: q,
                     emojiName: z
                 } = k, Q = (0, a.useStateFromStores)([h.default], () => h.default.getCurrentUser()), X = (0, N.useSoundButtonContextMenu)(k, null == L ? void 0 : L.guild_id), {
                     playSoundboardSound: Z,
@@ -14835,7 +15669,7 @@
                     es = (0, a.useStateFromStores)([y.default], () => y.default.isFavoriteSound(W), [W]),
                     ea = "sound-".concat(k.soundId),
                     eu = (0, s.useListItem)(ea),
-                    ed = null != Y || null != z,
+                    ed = null != q || null != z,
                     ec = !(0, I.canUseSoundboardSound)(Q, k, L);
 
                 function ef(e) {
@@ -14934,7 +15768,7 @@
                             "aria-hidden": !0,
                             ref: et,
                             children: [ed && (0, l.jsx)(f.default, {
-                                emojiId: Y,
+                                emojiId: q,
                                 emojiName: z,
                                 className: O.emoji
                             }), (0, l.jsx)(c.Text, {
@@ -14943,7 +15777,7 @@
                                 className: o(O.soundName, {
                                     [O.hasEmoji]: ed
                                 }),
-                                children: q
+                                children: Y
                             })]
                         }), function() {
                             switch (V) {
@@ -15552,23 +16386,23 @@
                     defaultSoundsOnly: k = !1
                 } = e, {
                     analyticsLocations: L
-                } = (0, f.default)(), [W, q] = i.useState(!1), Y = (0, s.useStateFromStores)([S.default], () => S.default.getCurrentUser()), z = (0, s.useStateFromStores)([g.default], () => {
+                } = (0, f.default)(), [W, Y] = i.useState(!1), q = (0, s.useStateFromStores)([S.default], () => S.default.getCurrentUser()), z = (0, s.useStateFromStores)([g.default], () => {
                     var e;
-                    return g.default.getVoiceState(t, null !== (e = null == Y ? void 0 : Y.id) && void 0 !== e ? e : "")
+                    return g.default.getVoiceState(t, null !== (e = null == q ? void 0 : q.id) && void 0 !== e ? e : "")
                 }), Q = (null == z ? void 0 : z.selfDeaf) || (null == z ? void 0 : z.mute) || (null == z ? void 0 : z.suppress), X = (0, h.useExpressionPickerStore)(e => e.searchQuery), Z = (0, T.useUID)(), {
                     categories: J
-                } = (0, b.default)(r, void 0, k), [$, ee] = i.useState([]), et = (0, b.useSearchCategories)(J, $, X), en = E.SoundboardPickerCollapsedSections.useSetting(), el = i.useMemo(() => new Set(en), [en]), ei = null == r, er = A.default.canUseCustomCallSounds(Y), eo = i.useCallback(e => {
+                } = (0, b.default)(r, void 0, k), [$, ee] = i.useState([]), et = (0, b.useSearchCategories)(J, $, X), en = E.SoundboardPickerCollapsedSections.useSetting(), el = i.useMemo(() => new Set(en), [en]), ei = null == r, er = A.default.canUseCustomCallSounds(q), eo = i.useCallback(e => {
                     let t = !el.has(e);
                     t ? el.add(e) : el.delete(e), E.SoundboardPickerCollapsedSections.updateSetting(Array.from(el))
                 }, [el]), es = i.useCallback((e, t) => {
-                    if (!p && (0, O.canUseSoundboardSound)(Y, e, r, !1)) {
+                    if (!p && (0, O.canUseSoundboardSound)(q, e, r, !1)) {
                         var n;
                         (0, O.playSound)(e, null !== (n = null == r ? void 0 : r.id) && void 0 !== n ? n : "", t)
                     } else {
-                        if ((0, O.canUseSoundboardSound)(Y, e, r)) return;
-                        v && q(!0)
+                        if ((0, O.canUseSoundboardSound)(q, e, r)) return;
+                        v && Y(!0)
                     }
-                }, [p, Y, r, v]), ea = i.useCallback(e => {
+                }, [p, q, r, v]), ea = i.useCallback(e => {
                     switch (e.item.type) {
                         case R.SoundboardSoundItemType.SOUND:
                             return null == c || c(e.item.sound), es(e.item.sound, L);
@@ -15599,7 +16433,7 @@
                         collapsed: el.has(n),
                         index: t
                     }, "header-".concat(n))
-                }, [el, eo]), ec = i.useCallback(e => ee((0, M.default)(e, J, Y, r)), [r, Y, J]), ef = i.useCallback(e => {
+                }, [el, eo]), ec = i.useCallback(e => ee((0, M.default)(e, J, q, r)), [r, q, J]), ef = i.useCallback(e => {
                     (0, d.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
@@ -15632,7 +16466,7 @@
                 }, [a]);
                 return (0, l.jsxs)(l.Fragment, {
                     children: [W && (0, l.jsx)(j.default, {
-                        onClose: () => q(!1),
+                        onClose: () => Y(!1),
                         closePopout: a
                     }), (0, l.jsx)(C.default, {
                         categories: et,
@@ -16099,11 +16933,11 @@
                 V = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
                 K = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
                 W = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
-                q = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
-                Y = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
+                Y = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
+                q = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
                 z = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
-                Q = q + 2 * z,
-                X = Y + 2 * z,
+                Q = Y + 2 * z,
+                X = q + 2 * z,
                 Z = o(A.trackStickerSearchEmpty, 200),
                 J = o(A.trackStickerSearchResultsViewed, 200),
                 $ = i.forwardRef(function(e, t) {
@@ -16112,9 +16946,9 @@
                         containerWidth: o,
                         channel: u,
                         onSelectSticker: I,
-                        closePopout: q
+                        closePopout: Y
                     } = e, {
-                        location: Y
+                        location: q
                     } = (0, c.useAnalyticsContext)(), {
                         AnalyticsLocationProvider: z
                     } = (0, p.default)(f.default.STICKER_PICKER);
@@ -16177,7 +17011,7 @@
                                 case M.StickerGridItemTypes.CREATE_STICKER:
                                     x.default.track(B.AnalyticEvents.OPEN_MODAL, {
                                         type: B.AnalyticsSections.CREATE_STICKER_MODAL,
-                                        location: Y
+                                        location: q
                                     }), (0, d.openModalLazy)(async () => {
                                         let {
                                             default: t
@@ -16191,7 +17025,7 @@
                                 case M.StickerGridItemTypes.STICKER:
                                     null != e.sticker && (0, N.isSendableSticker)(e.sticker, ef, u) && eT(e)
                             }
-                        }, [Y, ef, u, eT]),
+                        }, [q, ef, u, eT]),
                         {
                             getItemProps: eR,
                             getRowProps: eO,
@@ -16235,10 +17069,10 @@
                         null === (e = en.current) || void 0 === e || e.focus()
                     }, []);
                     let eP = i.useCallback(() => {
-                        q(), x.default.track(B.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+                        Y(), x.default.track(B.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                             location_section: B.AnalyticsSections.STICKER_PICKER_UPSELL
                         }), (0, E.navigateToPremiumMarketingPage)()
-                    }, [q]);
+                    }, [Y]);
                     return (0, l.jsxs)(z, {
                         children: [!($ && ea) && (0, l.jsx)("div", {
                             className: F.header,
@@ -16250,7 +17084,7 @@
                             })
                         }), ea ? (0, l.jsx)(L.default, {
                             className: F.emptyState,
-                            onClose: q
+                            onClose: Y
                         }) : (0, l.jsxs)(l.Fragment, {
                             children: [(0, l.jsx)("div", {
                                 ref: ee,
@@ -16847,8 +17681,8 @@
                 V = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
                 K = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP),
                 W = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP_SEARCH_RESULTS),
-                q = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
-                Y = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
+                Y = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+                q = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
                 z = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
                 Q = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_DIVIDER_HEIGHT),
                 X = (0, N.cssValueToNumber)(s.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_LIST_SECTION_HEADING_HEIGHT),
@@ -16859,8 +17693,8 @@
                 et = Z + 2 * $,
                 en = et + ee,
                 el = J + 2 * $ + ee,
-                ei = [K, q, Y, z],
-                er = [W, q, Y, z],
+                ei = [K, Y, q, z],
+                er = [W, Y, q, z],
                 eo = (0, N.cssValueToNumber)(s.default.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
                 es = ["laugh", "wave", "yes", "dance", "sad", "no", "hi", "bye", "cry", "ok"],
                 ea = e => {
@@ -16950,9 +17784,9 @@
                         onSelectSticker: r,
                         channel: A,
                         currentUser: P
-                    }), [K, W] = i.useState(!1), q = i.useCallback(e => {
+                    }), [K, W] = i.useState(!1), Y = i.useCallback(e => {
                         g.StickerPickerCollapsedSections.updateSetting(Array.from(e))
-                    }, []), Y = i.useCallback(e => {
+                    }, []), q = i.useCallback(e => {
                         let t = C[e];
                         return null != t ? (0, l.jsx)(U.default, {
                             getStickerItemProps: s,
@@ -16984,8 +17818,8 @@
                             tab: w.ExpressionPickerViewType.STICKER,
                             collapsed: !i,
                             sticker_pack_id: n ? e : null
-                        }), q(l)
-                    }, [R, t, q]), ee = i.useCallback(e => {
+                        }), Y(l)
+                    }, [R, t, Y]), ee = i.useCallback(e => {
                         let n = E[e];
                         if (null != y) {
                             let {
@@ -17100,7 +17934,7 @@
                         return n.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL || l ? 0 : eo
                     }, [E, t]);
                     return {
-                        renderRow: Y,
+                        renderRow: q,
                         renderSection: z,
                         renderSectionHeader: ee,
                         sectionHeaderHeight: et,
@@ -17147,7 +17981,7 @@
                         filteredStickers: a,
                         ownedStickerPacks: U,
                         channel: _
-                    }), q = (0, E.useSynchronizedActiveCategoryIndexForScrollPosition)({
+                    }), Y = (0, E.useSynchronizedActiveCategoryIndexForScrollPosition)({
                         activeCategoryIndex: R,
                         isScrolling: N,
                         listRef: A,
@@ -17208,7 +18042,7 @@
                             }) : (0, l.jsx)(y.default, {
                                 role: "none presentation",
                                 listPadding: null != a ? er : ei,
-                                onScroll: q,
+                                onScroll: Y,
                                 renderRow: j,
                                 renderSection: null == a ? D : void 0,
                                 renderSectionHeader: K,
