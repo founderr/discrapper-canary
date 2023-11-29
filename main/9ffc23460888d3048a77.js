@@ -1,787 +1,514 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["7105"], {
-        272030: function(e, t, n) {
+    ["23398"], {
+        824986: function(e, t, i) {
             "use strict";
-            n.r(t), n.d(t, {
-                closeContextMenu: function() {
-                    return a
-                },
-                openContextMenu: function() {
-                    return o
-                },
-                openContextMenuLazy: function() {
-                    return E
-                }
-            }), n("506083");
-            var i = n("913144"),
-                l = n("244201"),
-                u = n("773336"),
-                r = n("749866"),
-                s = n("49111");
-
-            function _(e) {
-                i.default.dispatch({
-                    type: "CONTEXT_MENU_OPEN",
-                    contextMenu: e
-                })
-            }
-
-            function a(e) {
-                {
-                    let {
-                        flushSync: t
-                    } = n("817736");
-                    t(() => {
-                        i.default.wait(() => {
-                            i.default.dispatch({
-                                type: "CONTEXT_MENU_CLOSE"
-                            }).finally(e)
-                        })
-                    })
-                }
-            }
-
-            function o(e, t, n, i) {
-                var a, o, E;
-                if (e.stopPropagation(), null != e.currentTarget.contains && !e.currentTarget.contains(e.target)) return;
-                let d = 0,
-                    c = 0;
-                if ("pageX" in e && (d = e.pageX, c = e.pageY), 0 === d && 0 === c) {
-                    let t = null === (a = e.target) || void 0 === a ? void 0 : a.getBoundingClientRect(),
-                        {
-                            left: n = 0,
-                            top: i = 0,
-                            width: l = 0,
-                            height: u = 0
-                        } = null != t ? t : {};
-                    d = n + l / 2, c = i + u / 2
-                }
-                let I = {
-                    render: t,
-                    renderLazy: i,
-                    target: null !== (o = e.target) && void 0 !== o ? o : e.currentTarget,
-                    rect: new DOMRect(d, c, 0, 0),
-                    config: {
-                        context: __OVERLAY__ ? s.AppContext.OVERLAY : null !== (E = (0, l.getCurrentlyInteractingAppContext)()) && void 0 !== E ? E : s.AppContext.APP,
-                        ...n
-                    }
-                };
-                if ((null == n ? void 0 : n.enableSpellCheck) && (0, u.isDesktop)()) {
-                    let e = (0, r.addResultListener)(() => {
-                        e(), _(I)
-                    })
-                } else e.preventDefault(), _(I)
-            }
-
-            function E(e, t, n) {
-                o(e, void 0, n, t)
-            }
-        },
-        689988: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return i
-                }
-            }), n("70102"), n("222007"), n("704744");
-            var i, l = n("913144");
-            i = class {
-                initialize() {
-                    this.initializedCount++, !(this.initializedCount > 1) && (this._initialize(), Object.entries(this.actions).forEach(e => {
-                        let [t, n] = e;
-                        l.default.subscribe(t, "function" == typeof n ? n : n.callback)
-                    }), this.stores.forEach((e, t) => {
-                        t.addChangeListener(e), e()
-                    }))
-                }
-                terminate(e) {
-                    !(this.initializedCount <= 0) && (e ? this.initializedCount = 0 : this.initializedCount--, 0 === this.initializedCount && (this._terminate(), Object.entries(this.actions).forEach(e => {
-                        let [t, n] = e;
-                        l.default.unsubscribe(t, "function" == typeof n ? n : n.callback)
-                    })))
-                }
-                _initialize() {}
-                _terminate() {}
-                constructor() {
-                    this.initializedCount = 0, this.actions = {}, this.stores = new Map
-                }
-            }
-        },
-        851234: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return i
-                }
-            }), n("70102");
-            var i, l = n("50885");
-            i = class {
-                get language() {
-                    return this._language
-                }
-                set language(e) {
-                    this._language !== e && (this._language = e, this._onChange(e))
-                }
-                set languageHint(e) {
-                    this._languageHint = e
-                }
-                process(e) {
-                    !this._processing && (this._processing = !0, requestIdleCallback(t => {
-                        var n, i;
-                        let u = t.timeRemaining();
-                        if (u <= this._minimumTimeRemaining) {
-                            this._processEnd();
-                            return
-                        }
-                        e.length > 256 && (e = e.slice(0, 256)), (n = e, i = this._languageHint, l.default.ensureModule("discord_spellcheck").then(() => {
-                            let {
-                                cld: e
-                            } = l.default.requireModule("discord_spellcheck");
-                            return new Promise((t, l) => {
-                                e.detect(n, {
-                                    httpHint: i,
-                                    encodingHint: "UTF8"
-                                }, (e, n) => {
-                                    null != e ? l(Error(e.message)) : !n.reliable || n.languages[0].percent < 90 || n.languages[0].score < 500 ? l(Error("Not enough reliable text.")) : t(n.languages[0].code)
-                                })
-                            })
-                        })).then(e => {
-                            this.language = e, this._processEnd(t.didTimeout)
-                        }, () => {
-                            this._processEnd(t.didTimeout)
-                        })
-                    }))
-                }
-                _processEnd() {
-                    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                    this._processing = !1, e && this._minimumTimeRemaining++
-                }
-                constructor(e, t) {
-                    this._shouldProcess = !1, this._processing = !1, this._minimumTimeRemaining = 5, this._language = e, this._languageHint = e, this._onChange = t, t(e)
-                }
-            }
-        },
-        852046: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                install: function() {
-                    return D
-                }
-            }), n("781738"), n("222007");
-            var i = n("78349"),
-                l = n("917351"),
-                u = n.n(l),
-                r = n("118810"),
-                s = n("49671"),
-                _ = n("605250"),
-                a = n("915639"),
-                o = n("449008"),
-                E = n("851234"),
-                d = n("648610");
-            let c = new _.default("Spellchecker"),
-                I = null === s.default || void 0 === s.default ? void 0 : s.default.spellCheck;
-
-            function N(e) {
-                var t;
-                e = null !== (t = d.default[e]) && void 0 !== t ? t : e;
-                let n = (0, i.parse)(e.replace(/[_-]/g, "-"));
-                if (null == n || null == n.langtag.language || null == n.langtag.region) {
-                    c.error("".concat(e, " is not a valid locale."));
-                    return
-                }
-                let {
-                    language: l,
-                    region: u
-                } = n.langtag;
-                return "".concat(l.language.toLowerCase(), "-").concat(u.toUpperCase())
-            }
-            class T {
-                get enabled() {
-                    return this._enabled
-                }
-                set enabled(e) {
-                    this._enabled = e
-                }
-                setLearnedWords(e) {
-                    I.setLearnedWords(e)
-                }
-                setLocale(e) {
-                    var t;
-                    null === (t = I.setLocale(e)) || void 0 === t || t.then(t => {
-                        c.info("Switching to ".concat(e), t ? "(available)" : "(unavailable)")
-                    })
-                }
-                setAppLocale(e) {
-                    this.regionPreference = e.split("-")[1]
-                }
-                detectLanguage(e) {
-                    this.enabled && this.languageDetector.process(e)
-                }
-                getAvailableLanguages(e) {
-                    let t = {};
-                    return e.forEach(e => {
-                        var n;
-                        let [i] = e.split("-");
-                        t[i] = null !== (n = t[i]) && void 0 !== n ? n : e
-                    }), t
-                }
-                isMisspelled(e, t) {
-                    return "" !== this.misspelledWord && e === this.misspelledWord
-                }
-                getCorrectionsForMisspelling(e, t) {
-                    return this.isMisspelled(e, t) ? this.corrections : []
-                }
-                replaceMisspelling(e) {
-                    I.replaceMisspelling(e)
-                }
-                constructor(e) {
-                    this._enabled = !0, this.misspelledWord = "", this.corrections = [];
-                    let [t, n] = a.default.locale.split("-");
-                    this.regionPreference = n;
-                    let i = this.getAvailableLanguages(e);
-                    this.languageDetector = new E.default(t, n => {
-                        let l = "".concat(n, "-").concat(this.regionPreference);
-                        if (-1 !== e.indexOf(l)) this.setLocale(l);
-                        else {
-                            var u;
-                            let e = null !== (u = i[n]) && void 0 !== u ? u : d.default[t];
-                            null != e && this.setLocale(e)
-                        }
-                    }), I.on("spellcheck-result", (e, t) => {
-                        this.misspelledWord = null != e ? e : "", this.corrections = null != t ? t : []
-                    })
-                }
-            }
-            let A = u.debounce((e, t) => {
-                let n = function(e) {
-                    return null == e ? null : (0, r.isElement)(e, HTMLInputElement) || (0, r.isElement)(e, HTMLTextAreaElement) ? e.value : (0, r.isElement)(e) && e.hasAttribute("contenteditable") ? e.textContent : void 0
-                }(t);
-                null != n && e.detectLanguage(n)
-            }, 250);
-            async function D() {
-                var e, t;
-                let n = null !== (e = await I.getAvailableDictionaries()) && void 0 !== e ? e : [],
-                    i = n.map(N).filter(o.isNotNullish),
-                    l = new T(i);
-                return t = l, null != document.body && document.body.addEventListener("beforeinput", e => A(t, e.target), !0), l
-            }
-        },
-        648610: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return i
-                }
-            });
-            var i = {
-                aa: "aa-ET",
-                af: "af-ZA",
-                ak: "ak-GH",
-                am: "am-ET",
-                an: "an-ES",
-                ar: "ar-MA",
-                as: "as-IN",
-                ay: "ay-PE",
-                az: "az-AZ",
-                be: "be-BY",
-                bg: "bg-BG",
-                bi: "bi-TV",
-                bn: "bn-BD",
-                bo: "bo-CN",
-                br: "br-FR",
-                bs: "bs-BA",
-                ca: "ca-ES",
-                ce: "ce-RU",
-                cs: "cs-CZ",
-                cv: "cv-RU",
-                cy: "cy-GB",
-                da: "da-DK",
-                de: "de-DE",
-                dv: "dv-MV",
-                dz: "dz-BT",
-                el: "el-GR",
-                en: "en-US",
-                es: "es-ES",
-                et: "et-EE",
-                eu: "eu-ES",
-                fa: "fa-IR",
-                ff: "ff-SN",
-                fi: "fi-FI",
-                fo: "fo-FO",
-                fr: "fr-FR",
-                fy: "fy-DE",
-                ga: "ga-IE",
-                gd: "gd-GB",
-                gl: "gl-ES",
-                gu: "gu-IN",
-                gv: "gv-GB",
-                ha: "ha-NG",
-                he: "he-IL",
-                hi: "hi-IN",
-                hr: "hr-HR",
-                ht: "ht-HT",
-                hu: "hu-HU",
-                hy: "hy-AM",
-                ia: "ia-FR",
-                id: "id-ID",
-                ig: "ig-NG",
-                ik: "ik-CA",
-                is: "is-IS",
-                it: "it-IT",
-                iu: "iu-CA",
-                ja: "ja-JP",
-                ka: "ka-GE",
-                kk: "kk-KZ",
-                kl: "kl-GL",
-                km: "km-KH",
-                kn: "kn-IN",
-                ko: "ko-KR",
-                ks: "ks-IN",
-                ku: "ku-TR",
-                kw: "kw-GB",
-                ky: "ky-KG",
-                lb: "lb-LU",
-                lg: "lg-UG",
-                li: "li-BE",
-                ln: "ln-CD",
-                lo: "lo-LA",
-                lt: "lt-LT",
-                lv: "lv-LV",
-                mg: "mg-MG",
-                mh: "mh-MH",
-                mi: "mi-NZ",
-                mk: "mk-MK",
-                ml: "ml-IN",
-                mn: "mn-MN",
-                mr: "mr-IN",
-                ms: "ms-MY",
-                mt: "mt-MT",
-                my: "my-MM",
-                nb: "nb-NO",
-                ne: "ne-NP",
-                nl: "nl-NL",
-                nn: "nn-NO",
-                nr: "nr-ZA",
-                oc: "oc-FR",
-                om: "om-KE",
-                or: "or-IN",
-                os: "os-RU",
-                pa: "pa-PK",
-                pl: "pl-PL",
-                ps: "ps-AF",
-                pt: "pt-PT",
-                ro: "ro-RO",
-                ru: "ru-RU",
-                rw: "rw-RW",
-                sa: "sa-IN",
-                sc: "sc-IT",
-                sd: "sd-IN",
-                se: "se-NO",
-                si: "si-LK",
-                sk: "sk-SK",
-                sl: "sl-SI",
-                so: "so-SO",
-                sq: "sq-AL",
-                sr: "sr-RS",
-                ss: "ss-ZA",
-                st: "st-ZA",
-                sv: "sv-SE",
-                sw: "sw-KE",
-                ta: "ta-IN",
-                te: "te-IN",
-                tg: "tg-TJ",
-                th: "th-TH",
-                ti: "ti-ER",
-                tk: "tk-TM",
-                tl: "tl-PH",
-                tn: "tn-ZA",
-                tr: "tr-TR",
-                ts: "ts-ZA",
-                tt: "tt-RU",
-                ug: "ug-CN",
-                uk: "uk-UA",
-                ur: "ur-PK",
-                uz: "uz-UZ",
-                ve: "ve-ZA",
-                vi: "vi-VN",
-                wa: "wa-BE",
-                wo: "wo-SN",
-                xh: "xh-ZA",
-                yi: "yi-US",
-                yo: "yo-NG",
-                zh: "zh-CN",
-                zu: "zu-ZA"
-            }
-        },
-        533613: function(e, t, n) {
-            "use strict";
-            var i, l;
-            n.r(t), n.d(t, {
-                HotspotLocations: function() {
-                    return i
-                }
-            }), (l = i || (i = {})).REPORT_PROBLEM_POST_STREAM = "REPORT_PROBLEM_POST_STREAM", l.VIDEO_BACKGROUND_FEEDBACK = "VIDEO_BACKGROUND_FEEDBACK", l.VOICE_CALL_FEEDBACK = "VOICE_CALL_FEEDBACK", l.GUILD_ANALYTICS_GUILD_SETTINGS_MENU = "GUILD_ANALYTICS_GUILD_SETTINGS_MENU", l.NOW_PLAYING_CONSENT_CARD = "NOW_PLAYING_CONSENT_CARD", l.IOS_GUILD_NAV_EDUCATION = "IOS_GUILD_NAV_EDUCATION", l.VOICE_PANEL_INTRODUCTION = "VOICE_PANEL_INTRODUCTION", l.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL = "GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL", l.FAVORITE_EMOJI_TOOLTIP = "FAVORITE_EMOJI_TOOLTIP", l.POST_ACTIVITY_FEEDBACK = "POST_ACTIVITY_FEEDBACK", l.GUILD_DELETE_FEEDBACK = "GUILD_DELETE_FEEDBACK", l.GUILD_LEAVE_FEEDBACK = "GUILD_LEAVE_FEEDBACK", l.APPLICATION_COMMAND_TOOLTIP = "APPLICATION_COMMAND_TOOLTIP", l.GUILD_CAP_INLINE_UPSELL = "GUILD_CAP_INLINE_UPSELL", l.STAGE_CHANNEL_UPSELL = "STAGE_CHANNEL_UPSELL", l.HUB_WAITLIST_UPSELL = "HUB_WAITLIST_UPSELL", l.HUB_NEW = "HUB_NEW", l.HUB_SECOND_EMAIL_CONNECTION_UPSELL = "HUB_SECOND_EMAIL_CONNECTION_UPSELL", l.LIVE_STAGE_NOTIFICATION_BADGE = "LIVE_STAGE_NOTIFICATION_BADGE", l.GUILD_EVENT_UPSELL = "GUILD_EVENT_UPSELL", l.HUB_LINK_CHANNEL_NOTICE = "HUB_LINK_CHANNEL_NOTICE", l.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP = "PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP", l.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP = "ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP", l.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL = "ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL", l.MULTI_ACCOUNT_TOOLTIP = "MULTI_ACCOUNT_TOOLTIP", l.HUB_STUDY_ROOM_NOTICE = "HUB_STUDY_ROOM_NOTICE", l.CHANNEL_BANNER_MEMBER_LIST_NOTICE = "CHANNEL_BANNER_MEMBER_LIST_NOTICE", l.CHANGE_LANGUAGE_MODAL = "CHANGE_LANGUAGE_MODAL", l.ACTIVITY_BEB_TUTORIAL = "ACTIVITY_BEB_TUTORIAL", l.APP_DIRECTORY_SETTINGS_NEW_PILL = "APP_DIRECTORY_SETTINGS_NEW_PILL", l.INVITE_SPLASH_GUILD_HEADER_TOOLTIP = "INVITE_SPLASH_GUILD_HEADER_TOOLTIP", l.ANIMATED_VIDEO_BG_CAPERNITE_DAY_NEW = "ANIMATED_VIDEO_BG_CAPERNITE_DAY_NEW", l.ANIMATED_VIDEO_BG_CAPERNITE_NIGHT_NEW = "ANIMATED_VIDEO_BG_CAPERNITE_NIGHT_NEW", l.ANIMATED_VIDEO_BG_HACKER_DEN_NEW = "ANIMATED_VIDEO_BG_HACKER_DEN_NEW", l.ANIMATED_VIDEO_BG_WUMPICE_NEW = "ANIMATED_VIDEO_BG_WUMPICE_NEW", l.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW = "ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW", l.ANIMATED_VIDEO_BG_BIRTHDAY_1_NEW = "ANIMATED_VIDEO_BG_BIRTHDAY_1_NEW", l.SOUNDBOARD_WHEEL_EDUCATION_MODAL = "SOUNDBOARD_WHEEL_EDUCATION_MODAL", l.IN_APP_REPORTS_FEEDBACK = "IN_APP_REPORTS_FEEDBACK", l.CLIPS_CHANNEL_ATTACH_REMINDER = "CLIPS_CHANNEL_ATTACH_REMINDER"
-        },
-        846325: function(e, t, n) {
-            "use strict";
-            var i, l;
-            n.r(t), n.d(t, {
-                MAX_LENGTH_SOUND_NAME: function() {
-                    return u
-                },
-                MAX_SOUND_LENGTH_SECONDS: function() {
+            i.r(t), i.d(t, {
+                PremiumTutorialTooltips: function() {
                     return r
                 },
-                DEFAULT_SOUND_GUILD_ID: function() {
-                    return s
-                },
-                SoundboardWheelSize: function() {
-                    return _
-                },
-                DEFAULT_KEYBIND: function() {
-                    return a
-                },
-                EMPTY_SOUND_LIST: function() {
-                    return o
-                },
-                CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID: function() {
-                    return E
-                },
-                NUM_RECENTLY_HEARD_SOUNDS: function() {
-                    return d
-                },
-                NUM_FREQUENTLY_USED_SOUNDS: function() {
-                    return c
-                }
-            }), n("222007");
-            let u = 32,
-                r = 5,
-                s = "DEFAULT";
-            (l = i || (i = {}))[l.SUCCESS = 0] = "SUCCESS", l[l.INTERRUPTED = 1] = "INTERRUPTED";
-            let _ = {
-                    width: 424,
-                    height: 424,
-                    padding: 100
-                },
-                a = "ctrl+`",
-                o = [],
-                E = "0",
-                d = 6,
-                c = 6
-        },
-        235004: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
                 default: function() {
-                    return M
+                    return f
                 }
-            }), n("222007"), n("424973"), n("834022");
-            var i, l, u = n("917351"),
-                r = n.n(u),
-                s = n("446674"),
-                _ = n("913144"),
-                a = n("845579"),
-                o = n("374363"),
-                E = n("697218"),
-                d = n("599110"),
-                c = n("829536"),
-                I = n("846325"),
-                N = n("49111"),
-                T = n("397336");
-            (l = i || (i = {}))[l.NOT_FETCHED = 0] = "NOT_FETCHED", l[l.FETCHING = 1] = "FETCHING", l[l.FETCHED = 2] = "FETCHED";
-            let A = new Map,
-                D = new Map,
-                L = new Set,
-                O = 0,
-                S = 0,
-                U = new Set,
-                f = new Map,
-                g = !1;
+            });
+            var n, r, l = i("446674"),
+                o = i("913144"),
+                u = i("521012"),
+                s = i("565785"),
+                a = i("646718");
+            (n = r || (r = {})).FILE_UPLOAD = "file_upload", n.STICKER_PICKER = "sticker_picker", n.EMOJI_PICKER = "emoji_picker", n.BOOSTING_FLOW = "boosting_flow";
+            let d = {
+                isPersistentCoachmarkCollapsed: !1,
+                hasFlowStartEventBeenEmitted: {},
+                canPlayWowMoment: !1,
+                isPersistentHelperHidden: !0,
+                isFetchingWowMomentMedia: !1,
+                wowMomentWumpusMediaUrl: null,
+                wowMomentHelperMediaUrl: null,
+                navigatedFromHelper: !1,
+                tutorialExpirationTime: null
+            };
 
-            function C(e) {
-                let {
-                    sound: t
-                } = e, n = A.get(t.guildId), i = null == n ? void 0 : n.findIndex(e => e.soundId === t.soundId);
-                null != n && null != i && -1 !== i ? (n[i] = t, A.set(t.guildId, [...n])) : null != n && (null == n || n.push(t), A.set(t.guildId, [...n]))
+            function c() {
+                d = {
+                    isPersistentCoachmarkCollapsed: !1,
+                    hasFlowStartEventBeenEmitted: {},
+                    canPlayWowMoment: !1,
+                    isPersistentHelperHidden: !0,
+                    isFetchingWowMomentMedia: !1,
+                    wowMomentWumpusMediaUrl: null,
+                    wowMomentHelperMediaUrl: null,
+                    navigatedFromHelper: !1,
+                    tutorialExpirationTime: null
+                }
             }
-            let h = r.debounce(e => {
-                d.default.track(N.AnalyticEvents.UPDATE_SOUNDBOARD_SETTINGS, {
-                    volume: Math.round((0, c.amplitudeToPerceptual)(e))
-                }), a.SoundboardSettings.updateSetting({
-                    volume: e
-                })
-            }, 1e3);
 
-            function R(e) {
-                var t, n;
-                let i = null !== (n = null == e ? void 0 : null === (t = e.audioContextSettings) || void 0 === t ? void 0 : t.user) && void 0 !== n ? n : {};
-                for (let [e, t] of Object.entries(i)) t.soundboardMuted ? L.add(e) : L.delete(e);
-                for (let e of L.keys()) null == i[e] && L.delete(e)
+            function m() {
+                let e = new Date;
+                e.setDate(e.getDate() + 14), d.tutorialExpirationTime = e.getTime()
             }
-            class p extends s.default.Store {
-                initialize() {
-                    this.waitFor(o.default), R(o.default.settings)
+            class E extends l.default.PersistedStore {
+                initialize(e) {
+                    null != e && (d = e), d.isPersistentHelperHidden = !1, d.canPlayWowMoment = !1, d.isFetchingWowMomentMedia = !1, d.wowMomentWumpusMediaUrl = null, d.wowMomentHelperMediaUrl = null
                 }
-                getOverlaySerializedState() {
-                    return {
-                        soundboardSounds: Object.fromEntries(A),
-                        favoritedSoundIds: Array.from(U),
-                        localSoundboardMutes: Array.from(L)
-                    }
+                getState() {
+                    return d
                 }
-                getSounds() {
-                    return A
+                get isPersistentCoachmarkCollapsed() {
+                    return d.isPersistentCoachmarkCollapsed
                 }
-                getSoundsForGuild(e) {
-                    return A.get(e)
+                hasFlowStartEventBeenEmitted(e) {
+                    return null == d.hasFlowStartEventBeenEmitted[e] && (d.hasFlowStartEventBeenEmitted[e] = !1), d.hasFlowStartEventBeenEmitted[e]
                 }
-                getSound(e, t) {
-                    var n;
-                    let i = null !== (n = A.get(e)) && void 0 !== n ? n : [];
-                    return i.find(e => e.soundId === t)
+                get canPlayWowMoment() {
+                    return d.canPlayWowMoment
                 }
-                getSoundById(e) {
-                    let t = Array.from(A.values()).flat();
-                    return t.find(t => t.soundId === e)
+                get isPersistentHelperHidden() {
+                    return d.isPersistentHelperHidden
                 }
-                isFetchingSounds() {
-                    return 1 === S
+                get isFetchingWowMomentMedia() {
+                    return d.isFetchingWowMomentMedia
                 }
-                isFetchingDefaultSounds() {
-                    return 1 === O
+                get wowMomentWumpusMedia() {
+                    return d.wowMomentWumpusMediaUrl
                 }
-                isFetching() {
-                    return this.isFetchingSounds() || this.isFetchingDefaultSounds()
+                get wowMomentHelperMedia() {
+                    return d.wowMomentHelperMediaUrl
                 }
-                shouldFetchDefaultSounds() {
-                    return 0 === O
+                get navigatedFromHelper() {
+                    return d.navigatedFromHelper
                 }
-                hasFetchedDefaultSounds() {
-                    return 2 === O
-                }
-                isUserPlayingSounds(e) {
-                    let t = f.get(e);
-                    return null != t && t > 0
-                }
-                isPlayingSound(e) {
-                    return null != D.get(e)
-                }
-                isFavoriteSound(e) {
-                    return U.has(e)
-                }
-                getFavorites() {
-                    return U
-                }
-                isLocalSoundboardMuted(e) {
-                    return L.has(e)
-                }
-                hasHadOtherUserPlaySoundInSession() {
-                    return g
-                }
-                hasFetchedAllSounds() {
-                    return 2 === S && 2 === O
+                get tutorialExpirationTime() {
+                    return d.tutorialExpirationTime
                 }
             }
-            p.displayName = "SoundboardStore";
-            var M = new p(_.default, {
+            E.displayName = "PremiumTutorialStore", E.persistKey = "PremiumTutorialStore", E.migrations = [e => {
+                var t;
+                return {
+                    ...e,
+                    hasFlowStartEventBeenEmitted: null !== (t = e.hasFlowStartEventBeenEmitted) && void 0 !== t ? t : {}
+                }
+            }];
+            var f = new E(o.default, {
+                PREMIUM_TUTORIAL_PERSISTENT_ONBOARDING_TOGGLE_COLLAPSE: function() {
+                    d.isPersistentCoachmarkCollapsed = !d.isPersistentCoachmarkCollapsed
+                },
+                UPDATE_HAS_FLOW_START_EVENT_BEEN_EMITTED: function(e) {
+                    let {
+                        event: t,
+                        value: i
+                    } = e;
+                    d.hasFlowStartEventBeenEmitted[t] = i
+                },
                 LOGOUT: function() {
-                    A.clear(), D.clear(), f.clear(), g = !1, S = 0, O = 0
+                    c()
                 },
-                GUILD_SOUNDBOARD_FETCH: function() {
-                    S = 1
-                },
-                GUILD_SOUNDBOARD_SOUND_CREATE: C,
-                GUILD_SOUNDBOARD_SOUND_UPDATE: C,
-                GUILD_SOUNDBOARD_SOUND_DELETE: function(e) {
+                RESET_PREMIUM_TUTORIAL_STORE: c,
+                PREMIUM_TUTORIAL_SET_CAN_PLAY_WOW_MOMENT: function(e) {
                     let {
-                        soundId: t,
-                        guildId: n
+                        value: t
                     } = e;
-                    A.delete(t);
-                    let i = A.get(n),
-                        l = null == i ? void 0 : i.findIndex(e => e.soundId === t);
-                    null != i && null != l && !(l < 0) && (i.splice(l, 1), A.set(n, [...i]))
+                    d.canPlayWowMoment = t
                 },
-                GUILD_SOUNDBOARD_SOUND_PLAY_START: function(e) {
-                    var t, n, i;
+                PREMIUM_TUTORIAL_PERSISTENT_SET_IS_HIDDEN: function(e) {
                     let {
-                        soundId: l,
-                        userId: u
-                    } = e, r = (null !== (n = D.get(l)) && void 0 !== n ? n : 0) + 1, s = (null !== (i = f.get(u)) && void 0 !== i ? i : 0) + 1;
-                    D.set(l, r), f.set(u, s), u !== (null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (g = !0)
-                },
-                GUILD_SOUNDBOARD_SOUND_PLAY_END: function(e) {
-                    var t, n;
-                    let {
-                        soundId: i,
-                        userId: l
-                    } = e, u = (null !== (t = D.get(i)) && void 0 !== t ? t : 0) - 1, r = (null !== (n = f.get(l)) && void 0 !== n ? n : 0) - 1;
-                    u <= 0 ? D.delete(i) : D.set(i, u), r <= 0 ? f.delete(l) : f.set(l, r)
-                },
-                USER_SOUNDBOARD_SET_VOLUME: function(e) {
-                    let {
-                        volume: t
+                        value: t
                     } = e;
-                    h(t)
+                    d.isPersistentHelperHidden = t
                 },
-                VOICE_CHANNEL_SELECT: function() {
-                    D.clear(), f.clear()
-                },
-                USER_SETTINGS_PROTO_UPDATE: function(e) {
+                PREMIUM_TUTORIAL_IS_FETCHING_WOW_MOMENT_MEDIA: function(e) {
                     let {
-                        settings: t
+                        value: t
+                    } = e;
+                    d.isFetchingWowMomentMedia = t
+                },
+                PREMIUM_TUTORIAL_FETCH_WOW_MOMENT_MEDIA_SUCCESS: function(e) {
+                    let {
+                        wumpusMedia: t,
+                        helperMedia: i
+                    } = e;
+                    d.wowMomentWumpusMediaUrl = t, d.wowMomentHelperMediaUrl = i, d.isFetchingWowMomentMedia = !1
+                },
+                PREMIUM_TUTORIAL_SET_NAVIGATED_FROM_HELPER: function(e) {
+                    let {
+                        value: t
+                    } = e;
+                    d.navigatedFromHelper = t
+                },
+                PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: function(e) {
+                    let {
+                        subscription: t
                     } = e, {
-                        type: n,
-                        proto: i
-                    } = t;
-                    if (n === T.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
-                        var l, u;
-                        U = new Set(null !== (u = null == i ? void 0 : null === (l = i.favoriteSoundboardSounds) || void 0 === l ? void 0 : l.soundIds) && void 0 !== u ? u : [])
-                    } else n === T.UserSettingsTypes.PRELOADED_USER_SETTINGS && R(i)
+                        enabled: i
+                    } = s.default.getCurrentConfig({
+                        location: "5f2710_1"
+                    }, {
+                        autoTrackExposure: !1
+                    });
+                    i && null != t.items.find(e => a.PREMIUM_TIER_2_PLANS.has(e.plan_id)) && m()
                 },
-                SOUNDBOARD_FETCH_DEFAULT_SOUNDS: function() {
-                    O = 1
-                },
-                SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: function(e) {
+                GIFT_CODE_REDEEM_SUCCESS: function(e) {
                     let {
-                        soundboardSounds: t
-                    } = e;
-                    A.set(I.DEFAULT_SOUND_GUILD_ID, t), O = 2
-                },
-                SOUNDBOARD_SOUNDS_RECEIVED: function(e) {
-                    let {
-                        updates: t
-                    } = e;
-                    t.forEach(e => {
-                        let {
-                            guildId: t,
-                            sounds: n
-                        } = e;
-                        A.set(t, n)
-                    }), S = 2
-                },
-                GUILD_DELETE: function(e) {
-                    let {
-                        guild: t
-                    } = e;
-                    A.delete(t.id)
-                },
-                AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: function(e) {
-                    let {
-                        userId: t
-                    } = e;
-                    L.has(t) ? L.delete(t) : L.add(t)
-                },
-                OVERLAY_INITIALIZE: function(e) {
-                    let {
-                        soundboardStoreState: t
-                    } = e;
-                    A = new Map(Object.entries(t.soundboardSounds)), U = new Set(t.favoritedSoundIds), L = new Set(t.localSoundboardMutes)
-                },
-                GUILD_SOUNDBOARD_SOUNDS_UPDATE: function(e) {
-                    let {
-                        guildId: t,
-                        soundboardSounds: n
-                    } = e;
-                    A.set(t, n)
+                        entitlement: t
+                    } = e, {
+                        enabled: i
+                    } = s.default.getCurrentConfig({
+                        location: "5f2710_2"
+                    }, {
+                        autoTrackExposure: !1
+                    });
+                    i && (null == t ? void 0 : t.sku_id) === a.PremiumSubscriptionSKUs.TIER_2 && null == u.default.getPremiumSubscription(!1) && null == d.tutorialExpirationTime && m()
                 }
             })
         },
-        829536: function(e, t, n) {
+        694768: function(e, t, i) {
             "use strict";
-            n.r(t), n.d(t, {
-                perceptualToAmplitude: function() {
-                    return i
-                },
-                amplitudeToPerceptual: function() {
+            i.r(t), i.d(t, {
+                default: function() {
                     return l
                 }
             });
-
-            function i(e) {
-                let t, n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100;
-                return 0 === e ? 0 : (t = e > n ? (e - n) / n * 6 : e / n * 50 - 50, n * Math.pow(10, t / 20))
-            }
-
-            function l(e) {
-                let t, n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100;
-                if (0 === e) return 0;
-                let i = 20 * Math.log10(e / n);
-                return n * (t = i > 0 ? i / 6 + 1 : (50 + i) / 50)
-            }
+            var n = i("862205");
+            let r = (0, n.createExperiment)({
+                kind: "user",
+                id: "2023-02_nitroduction_experience",
+                label: "Nitroduction Experience",
+                defaultConfig: {
+                    enabled: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "One month trial users recieve the Nitroduction experience",
+                    config: {
+                        enabled: !0
+                    }
+                }]
+            });
+            var l = r
         },
-        749866: function(e, t, n) {
+        565785: function(e, t, i) {
             "use strict";
-            n.r(t), n.d(t, {
-                isSupported: function() {
-                    return s
-                },
-                setEnabled: function() {
-                    return a
-                },
-                setLearnedWords: function() {
-                    return o
-                },
-                isMisspelled: function() {
-                    return E
-                },
-                getCorrections: function() {
-                    return d
-                },
-                replaceWithCorrection: function() {
-                    return c
-                },
-                setAppLocale: function() {
-                    return I
-                },
-                addResultListener: function() {
-                    return N
+            i.r(t), i.d(t, {
+                default: function() {
+                    return l
                 }
             });
-            var i = n("49671"),
-                l = n("852046"),
-                u = n("773336");
+            var n = i("862205");
+            let r = (0, n.createExperiment)({
+                kind: "user",
+                id: "2023-08_premium_tutorial_for_all",
+                label: "Premium Tutorial Experience For All",
+                defaultConfig: {
+                    enabled: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "All net new users (exclude trial) receive premium tutorial experience",
+                    config: {
+                        enabled: !0
+                    }
+                }]
+            });
+            var l = r
+        },
+        921228: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                useIsPremiumTutorialEnabled: function() {
+                    return _
+                },
+                isPremiumTutorialEnabled: function() {
+                    return v
+                },
+                useAllDismissedPremiumTutorialSteps: function() {
+                    return g
+                }
+            });
+            var n = i("884691"),
+                r = i("446674"),
+                l = i("151426"),
+                o = i("850068"),
+                u = i("10641"),
+                s = i("374363"),
+                a = i("697218"),
+                d = i("521012"),
+                c = i("719923"),
+                m = i("324878"),
+                E = i("824986"),
+                f = i("694768"),
+                T = i("565785"),
+                p = i("646718");
+            let S = () => {
+                    let e = (0, r.useStateFromStores)([d.default], () => d.default.getPremiumTypeSubscription()),
+                        t = (0, u.useIsDismissibleContentDismissed)(l.DismissibleContent.PREMIUM_TUTORIAL_EXPERIENCE);
+                    return (0, m.isEligibleTrialSub)(e) && !t
+                },
+                M = () => {
+                    let e = (0, m.useHasActiveTrial)(),
+                        t = (0, u.useIsDismissibleContentDismissed)(l.DismissibleContent.PREMIUM_TUTORIAL_EXPERIENCE),
+                        i = (0, r.useStateFromStores)([a.default], () => a.default.getCurrentUser()),
+                        s = (0, c.isPremiumExactly)(i, p.PremiumTypes.TIER_2),
+                        E = (0, r.useStateFromStores)([d.default], () => d.default.hasFetchedPreviousPremiumTypeSubscription()),
+                        f = (0, r.useStateFromStores)([d.default], () => d.default.getPreviousPremiumTypeSubscription()),
+                        T = !e && s;
+                    n.useEffect(() => {
+                        T && !E && !t && (0, o.fetchMostRecentSubscription)()
+                    }, [T, E, t]);
+                    let S = T && E && null == f;
+                    return S && !t
+                };
 
-            function r() {
-                return (null === i.default || void 0 === i.default ? void 0 : i.default.spellCheck) != null
+            function _(e) {
+                let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+                    i = S() && t,
+                    {
+                        enabled: n
+                    } = f.default.useExperiment({
+                        location: e
+                    }, {
+                        autoTrackExposure: i,
+                        disable: !i
+                    }),
+                    l = (0, r.useStateFromStores)([E.default], () => E.default.tutorialExpirationTime),
+                    o = new Date().getTime(),
+                    u = (0, r.useStateFromStores)([d.default], () => {
+                        var e, t, i;
+                        return null !== (i = null === (t = d.default.getPremiumSubscription()) || void 0 === t ? void 0 : null === (e = t.createdAt) || void 0 === e ? void 0 : e.getTime()) && void 0 !== i ? i : 0
+                    }),
+                    s = M() && t,
+                    a = T.default.useExperiment({
+                        location: e
+                    }, {
+                        autoTrackExposure: s && o - u < 18e5,
+                        disable: !s
+                    }).enabled && null != l && l > o;
+                return n || a
+            }
+            let P = () => {
+                    let e = d.default.getPremiumTypeSubscription(),
+                        t = (0, u.isDismissibleContentDismissed)(l.DismissibleContent.PREMIUM_TUTORIAL_EXPERIENCE);
+                    return (0, m.isEligibleTrialSub)(e) && !t
+                },
+                C = () => {
+                    let e = (0, m.hasActiveTrial)(),
+                        t = (0, u.isDismissibleContentDismissed)(l.DismissibleContent.PREMIUM_TUTORIAL_EXPERIENCE),
+                        i = a.default.getCurrentUser(),
+                        n = (0, c.isPremiumExactly)(i, p.PremiumTypes.TIER_2),
+                        r = d.default.hasFetchedPreviousPremiumTypeSubscription(),
+                        s = d.default.getPreviousPremiumTypeSubscription();
+                    return !r && n && !t && (0, o.fetchMostRecentSubscription)(), !t && !e && n && r && null == s
+                },
+                v = function(e) {
+                    var t, i, n;
+                    let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+                        l = P() && r,
+                        {
+                            enabled: o
+                        } = f.default.getCurrentConfig({
+                            location: e
+                        }, {
+                            disable: !l,
+                            autoTrackExposure: l
+                        }),
+                        u = new Date().getTime(),
+                        s = E.default.tutorialExpirationTime,
+                        a = null !== (n = null === (i = d.default.getPremiumSubscription()) || void 0 === i ? void 0 : null === (t = i.createdAt) || void 0 === t ? void 0 : t.getTime()) && void 0 !== n ? n : 0,
+                        c = C() && r,
+                        m = T.default.getCurrentConfig({
+                            location: e
+                        }, {
+                            disable: !c,
+                            autoTrackExposure: c && u - a < 18e5
+                        }).enabled && null != s && s > u;
+                    return o || m
+                },
+                I = [];
+
+            function R() {
+                return p.PremiumTutorialStepOrder.filter(e => (0, u.isDismissibleContentDismissed)(e))
             }
 
-            function s() {
-                return (0, u.isDesktop)() && r()
+            function g() {
+                return function(e, t) {
+                    let i = _("useMemoizedValueSyncedWithDismissibleContents"),
+                        l = (0, r.useStateFromStores)([s.default], () => {
+                            var e;
+                            return null === (e = s.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
+                        });
+                    return n.useMemo(() => i ? e() : t, [i, t, e, l])
+                }(R, I)
             }
-            let _ = s() ? (0, l.install)() : null;
-            async function a(e) {
-                let t = await _;
-                null != t && (t.enabled = e)
+        },
+        394832: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                default: function() {
+                    return o
+                }
+            });
+            var n = i("37983");
+            i("884691");
+            var r = i("469563"),
+                l = i("125094"),
+                o = (0, r.replaceIcon)(function(e) {
+                    let {
+                        width: t = 24,
+                        height: i = 24,
+                        color: r = "currentColor",
+                        className: l,
+                        foreground: o
+                    } = e;
+                    return (0, n.jsx)("svg", {
+                        className: l,
+                        width: t,
+                        height: i,
+                        viewBox: "0 0 24 24",
+                        fill: "none",
+                        xmlns: "http://www.w3.org/2000/svg",
+                        children: (0, n.jsx)("path", {
+                            className: o,
+                            fill: r,
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                            d: "M2 4.5C2 3.397 2.897 2.5 4 2.5H20C21.103 2.5 22 3.397 22 4.5V15.5C22 16.604 21.103 17.5 20 17.5H13V19.5H17V21.5H7V19.5H11V17.5H4C2.897 17.5 2 16.604 2 15.5V4.5ZM13.2 14.3375V11.6C9.864 11.6 7.668 12.6625 6 15C6.672 11.6625 8.532 8.3375 13.2 7.6625V5L18 9.6625L13.2 14.3375Z"
+                        })
+                    })
+                }, l.ScreenArrowIcon, void 0, {
+                    size: 24
+                })
+        },
+        708169: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                FullScreenLayers: function() {
+                    return v
+                },
+                useFullScreenLayerStore: function() {
+                    return M
+                },
+                openFullScreenLayer: function() {
+                    return I
+                },
+                closeFullScreenLayer: function() {
+                    return R
+                }
+            }), i("222007");
+            var n, r, l = i("37983"),
+                o = i("884691"),
+                u = i("995008"),
+                s = i.n(u),
+                a = i("324134"),
+                d = i("308503"),
+                c = i("769846"),
+                m = i("77078"),
+                E = i("485328"),
+                f = i("159885"),
+                T = i("983782"),
+                p = i("275495");
+            let S = (0, f.cssValueToNumber)(c.default.FULL_SCREEN_LAYER_ANIMATION_DURATION);
+            (r = n || (n = {}))[r.ENTERING = 1] = "ENTERING", r[r.ENTERED = 2] = "ENTERED", r[r.EXITING = 3] = "EXITING", r[r.EXITED = 4] = "EXITED";
+            let M = (0, d.default)(e => ({
+                fullScreenLayers: [],
+                addLayer: t => e(e => {
+                    let {
+                        fullScreenLayers: i
+                    } = e;
+                    return {
+                        fullScreenLayers: [...i, t]
+                    }
+                })
+            }));
+
+            function _(e) {
+                let {
+                    item: t
+                } = e, i = o.useRef(null);
+                return (0, m.useFocusLock)(i), o.useEffect(() => (E.default.disable(), E.default.enableTemp(function(e) {
+                    return {
+                        POP_LAYER: {
+                            binds: ["esc"],
+                            comboKeysBindGlobal: !0,
+                            action() {
+                                R(e)
+                            }
+                        }
+                    }
+                }(t.key)), () => {
+                    E.default.disableTemp()
+                }), [t.key]), (0, l.jsx)(t.LayerComponent, {
+                    children: (0, l.jsxs)("div", {
+                        className: p.root,
+                        ref: i,
+                        children: [(0, l.jsx)("div", {
+                            className: p.drag
+                        }), t.render({
+                            transitionState: null != t ? t.transitionState : 3,
+                            closeLayer: () => R(t.key)
+                        })]
+                    })
+                })
             }
-            async function o(e) {
-                let t = await _;
-                null != t && t.setLearnedWords(e)
-            }
-            async function E(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    n = await _;
-                return null != n && n.isMisspelled(e, t)
-            }
-            async function d(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 5,
-                    i = await _;
-                return null == i ? [] : i.getCorrectionsForMisspelling(e, t).slice(0, n)
-            }
-            async function c(e) {
-                let t = await _;
-                null != t && t.replaceMisspelling(e)
-            }
-            async function I(e) {
-                let t = await _;
-                null != t && t.setAppLocale(e)
+            let P = {
+                    enter: p.enter,
+                    enterActive: p.enterActive,
+                    enterDone: p.enterDone,
+                    exit: p.exit,
+                    exitActive: p.exitActive,
+                    exitDone: p.exitDone
+                },
+                C = {
+                    enter: p.enterReducedMotion,
+                    enterActive: p.enterActiveReducedMotion,
+                    enterDone: p.enterDoneReducedMotion,
+                    exit: p.exitReducedMotion,
+                    exitActive: p.exitActiveReducedMotion,
+                    exitDone: p.exitDoneReducedMotion
+                };
+
+            function v() {
+                let {
+                    reducedMotion: e
+                } = o.useContext(m.AccessibilityPreferencesContext), t = e.enabled, i = t ? C : P, n = M(e => e.fullScreenLayers);
+                return (0, l.jsx)(a.TransitionGroup, {
+                    children: n.map(e => (0, l.jsx)(a.CSSTransition, {
+                        classNames: i,
+                        timeout: S,
+                        onEntered: () => {
+                            M.setState({
+                                fullScreenLayers: n.map(t => t.key === e.key ? {
+                                    ...t,
+                                    transitionState: 2
+                                } : t)
+                            })
+                        },
+                        unmountOnExit: !0,
+                        children: (0, l.jsx)(_, {
+                            item: e
+                        })
+                    }, e.key))
+                })
             }
 
-            function N(e) {
-                if (!r()) return () => {};
-                let t = i.default.spellCheck.on("spellcheck-result", e);
-                return null != t ? t : () => {}
+            function I(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
+                    {
+                        layerKey: i,
+                        Layer: n
+                    } = t,
+                    r = null != i ? i : s();
+                return M.setState(t => ({
+                    fullScreenLayers: [...t.fullScreenLayers, {
+                        key: r,
+                        transitionState: 1,
+                        LayerComponent: null != n ? n : T.default,
+                        render: e
+                    }]
+                })), r
+            }
+
+            function R(e) {
+                M.setState(t => ({
+                    fullScreenLayers: t.fullScreenLayers.filter(t => t.key !== e)
+                }))
             }
         }
     }
