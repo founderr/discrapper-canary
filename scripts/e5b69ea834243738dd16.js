@@ -327,8 +327,8 @@
                 S = i("214509"),
                 R = i("49111"),
                 A = i("590456"),
-                L = i("782340"),
-                P = i("406108");
+                P = i("782340"),
+                L = i("406108");
 
             function b(e) {
                 let t, {
@@ -340,13 +340,13 @@
                 } = e;
                 if (null != s) switch (n) {
                     case S.OperatorTypes.LESS_THAN:
-                        t = L.default.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
+                        t = P.default.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
                             description: s,
                             count: Math.max(0, Number(a) - 1)
                         });
                         break;
                     case S.OperatorTypes.GREATER_THAN:
-                        t = L.default.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
+                        t = P.default.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
                             description: s,
                             count: Math.max(0, Number(a) + 1)
                         });
@@ -360,9 +360,9 @@
                     value: a
                 });
                 return null == t ? null : (0, l.jsxs)("div", {
-                    className: P.popoutCheck,
+                    className: L.popoutCheck,
                     children: [(0, l.jsx)(N.default, {
-                        className: P.popoutCheckIcon
+                        className: L.popoutCheckIcon
                     }), (0, l.jsx)(u.Text, {
                         variant: "text-xs/medium",
                         color: "header-primary",
@@ -387,24 +387,24 @@
                             w = (null == j ? void 0 : j.bot) != null ? new p.default(j.bot) : null,
                             v = T.officialApplicationIds.includes(null !== (t = null == j ? void 0 : j.id) && void 0 !== t ? t : "");
                         return v ? o = (0, l.jsx)(_.default, {
-                            className: P.botTag,
+                            className: L.botTag,
                             color: r,
                             size: 16
                         }) : null != w && (o = (0, l.jsx)(C.default, {
-                            className: P.botTag,
+                            className: L.botTag,
                             verified: w.isVerifiedBot()
                         })), (0, l.jsxs)("div", {
-                            className: P.popoutChecksGroup,
+                            className: L.popoutChecksGroup,
                             children: [(0, l.jsxs)("div", {
-                                className: P.popoutCheckGroupName,
+                                className: L.popoutCheckGroupName,
                                 children: [null != g ? (0, l.jsx)("img", {
                                     src: (0, h.isThemeDark)(i) ? g.icon.darkSVG : g.icon.lightSVG,
                                     alt: "",
-                                    className: P.popoutCheckGroupPlatformIcon
+                                    className: L.popoutCheckGroupPlatformIcon
                                 }) : null, null != w ? (0, l.jsx)(x.default, {
                                     user: w,
                                     size: u.AvatarSizes.SIZE_20,
-                                    className: P.popoutCheckGroupPlatformIcon
+                                    className: L.popoutCheckGroupPlatformIcon
                                 }) : null, (0, l.jsx)(u.Text, {
                                     variant: "text-sm/medium",
                                     color: "interactive-active",
@@ -453,32 +453,32 @@
                     var e, t;
                     return null !== (t = null === (e = v.default.getSelfMember(h)) || void 0 === e ? void 0 : e.roles.includes(o)) && void 0 !== t && t
                 }, [h, o]);
-                return t = 1 === a.length && 1 === a[0].length ? L.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ONE : 1 === a.length ? L.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ALL.format() : L.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_OR.format(), (0, l.jsxs)("div", {
-                    className: P.popout,
+                return t = 1 === a.length && 1 === a[0].length ? P.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ONE : 1 === a.length ? P.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ALL.format() : P.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_OR.format(), (0, l.jsxs)("div", {
+                    className: L.popout,
                     children: [(0, l.jsx)("div", {
-                        className: P.popoutHeaderContainer,
+                        className: L.popoutHeaderContainer,
                         children: (0, l.jsx)(u.Text, {
                             variant: "text-xs/normal",
                             color: "text-normal",
-                            className: P.popoutHeaderText,
+                            className: L.popoutHeaderText,
                             children: t
                         })
                     }), (0, l.jsx)("div", {
-                        className: P.popoutChecks,
+                        className: L.popoutChecks,
                         children: (0, l.jsx)(B, {
                             eligibilityStates: a.flat()
                         })
                     }), (0, l.jsxs)("div", {
-                        className: P.buttonContainer,
+                        className: L.buttonContainer,
                         children: [f ? null : (0, l.jsx)(u.Button, {
-                            className: P.getRolesButton,
+                            className: L.getRolesButton,
                             onClick: i,
-                            children: L.default.Messages.CONNECTIONS_ROLE_POPOUT_GET_ROLES
+                            children: P.default.Messages.CONNECTIONS_ROLE_POPOUT_GET_ROLES
                         }), (0, l.jsx)(u.Button, {
-                            className: P.viewConnectionsButton,
+                            className: L.viewConnectionsButton,
                             color: u.Button.Colors.PRIMARY,
                             onClick: n,
-                            children: L.default.Messages.CONNECTIONS_ROLE_POPOUT_VIEW_CONNECTIONS
+                            children: P.default.Messages.CONNECTIONS_ROLE_POPOUT_VIEW_CONNECTIONS
                         })]
                     })]
                 })
@@ -527,19 +527,19 @@
                     align: "top",
                     nudgeAlignIntoViewport: !0,
                     children: e => (0, l.jsx)(u.Tooltip, {
-                        text: L.default.Messages.CONNECTIONS_ROLE_POPOUT_CLICK_TO_VIEW,
+                        text: P.default.Messages.CONNECTIONS_ROLE_POPOUT_CLICK_TO_VIEW,
                         children: t => (0, l.jsxs)("div", {
-                            className: P.badge,
+                            className: L.badge,
                             ...t,
                             ...e,
                             children: [(0, l.jsx)(M.default, {
-                                className: P.badgeVerifiedIcon,
+                                className: L.badgeVerifiedIcon,
                                 size: 16,
                                 color: s.colorString
                             }), (0, l.jsx)(u.Text, {
                                 variant: "text-xs/bold",
                                 color: "header-primary",
-                                className: P.roleName,
+                                className: L.roleName,
                                 children: s.name
                             })]
                         })
@@ -2157,8 +2157,8 @@
                 S = i("483093"),
                 R = i("315102"),
                 A = i("659500"),
-                L = i("568734"),
-                P = i("719923"),
+                P = i("568734"),
+                L = i("719923"),
                 b = i("587904"),
                 B = i("473374"),
                 D = i("195483"),
@@ -2267,13 +2267,14 @@
                 M.isClyde() && null != i && (null == u ? void 0 : u.guildMemberAvatar) != null && (O = M.addGuildAvatarHash(i, u.guildMemberAvatar));
                 let {
                     avatarSrc: S,
-                    avatarDecorationSrc: L,
-                    eventHandlers: P
+                    avatarDecorationSrc: P,
+                    eventHandlers: L
                 } = (0, T.default)({
                     user: O,
                     guildId: i,
                     size: f ? 32 : 80,
-                    animateOnHover: null != x ? !v : !g
+                    animateOnHover: null != x ? !v : !g,
+                    showPending: !0
                 });
                 if (r.useEffect(() => {
                         if (null != x) return A.ComponentDispatch.subscribeKeyed(U.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, "".concat(x, ":").concat(_), C), () => void A.ComponentDispatch.unsubscribeKeyed(U.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, "".concat(x, ":").concat(_), C)
@@ -2295,9 +2296,9 @@
                         position: s.isMobile ? "window_center" : "right",
                         onRequestClose: w,
                         children: e => G({
-                            ...P,
+                            ...L,
                             avatarSrc: S,
-                            avatarDecorationSrc: L,
+                            avatarDecorationSrc: P,
                             compact: f,
                             onClick: j,
                             onContextMenu: m,
@@ -2308,9 +2309,9 @@
                         })
                     });
                     else return G({
-                        ...P,
+                        ...L,
                         avatarSrc: S,
-                        avatarDecorationSrc: L,
+                        avatarDecorationSrc: P,
                         compact: f,
                         onClick: j,
                         onContextMenu: m,
@@ -2463,8 +2464,8 @@
                 });
                 let et = [],
                     ei = _.default.getCurrentUser(),
-                    el = P.default.isPremium(n.author),
-                    er = P.default.isPremium(ei),
+                    el = L.default.isPremium(n.author),
+                    er = L.default.isPremium(ei),
                     en = null == k ? void 0 : k.isPrivate();
                 (0, g.shouldShowNitroBadge)(null != T, "Message Username") && el && !p && !en && et.push((0, l.jsx)(K, {
                     currentUserIsPremium: er,
@@ -2478,7 +2479,7 @@
                     userId: n.author.id
                 }, "connections"));
                 let ea = [];
-                (0, L.hasFlag)(n.flags, U.MessageFlags.SUPPRESS_NOTIFICATIONS) && ea.push((0, l.jsx)(C.default, {}, "suppress-notifications")), n.isPoll() && ea.push((0, l.jsx)(w.default, {
+                (0, P.hasFlag)(n.flags, U.MessageFlags.SUPPRESS_NOTIFICATIONS) && ea.push((0, l.jsx)(C.default, {}, "suppress-notifications")), n.isPoll() && ea.push((0, l.jsx)(w.default, {
                     className: H.pollBadgeDefault
                 }, "poll"));
                 let es = {};
