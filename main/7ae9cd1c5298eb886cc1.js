@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["24364"], {
+    ["72243"], {
         20860: function(e, t, n) {
             var r = {
                 "./bg.png": "585337",
@@ -33446,6 +33446,10 @@
                 [_.AnalyticEvents.CHANNEL_LIST_END_REACHED]: {
                     throttlePeriod: 9e5,
                     throttleKeys: e => [e.guild_id]
+                },
+                [_.AnalyticEvents.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED]: {
+                    throttlePeriod: 6e4,
+                    throttleKeys: e => [e.guild_id, e.channel_id]
                 }
             };
 
