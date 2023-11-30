@@ -427,6 +427,8 @@
                         startTime: p.toISOString(),
                         status: M ? g.GuildScheduledEventStatus.CANCELED : g.GuildScheduledEventStatus.SCHEDULED,
                         eventType: I.entity_type,
+                        guildEventId: I.id,
+                        recurrenceId: _,
                         className: L.timeStatus
                     }), M && (0, n.jsx)(o.Text, {
                         variant: "text-sm/semibold",

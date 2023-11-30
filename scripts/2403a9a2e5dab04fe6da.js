@@ -238,36 +238,38 @@
                 } = (0, r.useStateFromStoresObject)([o.default], () => ({
                     storedEvent: o.default.getGuildScheduledEvent(S),
                     userCount: o.default.getUserCount(S, D)
-                })), L = null != p ? p : _, A = (0, r.useStateFromStores)([i.default], () => i.default.getNick(a, null == l ? void 0 : l.id), [a, l]);
-                D = null == L || null != D ? D : (0, C.getNextRecurrenceIdInEvent)(L);
+                })), I = null != p ? p : _, L = (0, r.useStateFromStores)([i.default], () => i.default.getNick(a, null == l ? void 0 : l.id), [a, l]);
+                D = null == I || null != D ? D : (0, C.getNextRecurrenceIdInEvent)(I);
                 let {
-                    startTime: I
+                    startTime: A
                 } = (0, f.default)(S, D, _), j = (0, E.default)(D, S), w = null != j ? j.is_canceled ? m.GuildScheduledEventStatus.CANCELED : m.GuildScheduledEventStatus.SCHEDULED : null;
-                if (null == L) return null;
+                if (null == I) return null;
                 let {
                     entity_type: M,
                     status: G,
                     recurrence_rule: O
-                } = L;
+                } = I;
                 return (0, n.jsxs)("div", {
                     className: s(x.statusContainer, t),
                     children: [(0, n.jsx)(N.GuildEventTimeStatus, {
-                        startTime: I.toISOString(),
+                        startTime: A.toISOString(),
                         status: null != w ? w : G,
                         eventType: M,
                         isNew: h,
-                        recurrenceRule: (0, v.recurrenceRuleFromServer)(O)
+                        recurrenceRule: (0, v.recurrenceRuleFromServer)(O),
+                        guildEventId: S,
+                        recurrenceId: D
                     }), (0, n.jsx)("div", {
                         className: x.spacer
                     }), !T && null != l && (0, n.jsx)(u.Tooltip, {
                         text: g.default.Messages.GUILD_EVENT_CREATED_BY.format({
-                            username: null != A ? A : d.default.getName(l)
+                            username: null != L ? L : d.default.getName(l)
                         }),
                         children: e => (0, n.jsx)(u.Avatar, {
                             ...e,
                             src: l.getAvatarURL(a, 20),
                             size: u.AvatarSizes.SIZE_20,
-                            "aria-label": null != A ? A : l.username,
+                            "aria-label": null != L ? L : l.username,
                             className: x.creator
                         })
                     }), (0, n.jsx)(u.Tooltip, {
@@ -373,7 +375,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 GuildEventTimeStatus: function() {
-                    return p
+                    return R
                 }
             }), l("222007");
             var n, a, s = l("37983"),
@@ -388,48 +390,49 @@
                 v = l("943232"),
                 C = l("93393"),
                 h = l("956089"),
-                T = l("822516"),
-                N = l("757767"),
-                m = l("745049"),
-                g = l("843455"),
-                x = l("782340"),
-                S = l("675644");
+                T = l("397680"),
+                N = l("822516"),
+                m = l("757767"),
+                g = l("745049"),
+                x = l("843455"),
+                S = l("782340"),
+                _ = l("675644");
             (a = n || (n = {}))[a.SCHEDULED = 0] = "SCHEDULED", a[a.STARTING_SOON = 1] = "STARTING_SOON", a[a.READY = 2] = "READY", a[a.STARTED = 3] = "STARTED", a[a.ENDED = 4] = "ENDED", a[a.CANCELED = 5] = "CANCELED";
 
-            function _() {
+            function D() {
                 return (0, s.jsx)(h.TextBadge, {
-                    className: S.newBadge,
+                    className: _.newBadge,
                     color: o.default.unsafe_rawColors.BRAND_260.css,
                     text: (0, s.jsx)(E.Text, {
-                        className: S.newBadgeText,
+                        className: _.newBadgeText,
                         variant: "text-xs/bold",
-                        children: x.default.Messages.NEW
+                        children: S.default.Messages.NEW
                     })
                 })
             }
 
-            function D(e) {
+            function p(e) {
                 let {
                     children: t,
                     className: l,
                     tooltipText: n
                 } = e;
                 return (0, s.jsx)("div", {
-                    className: i(S.eventStatusContainer, l),
+                    className: i(_.eventStatusContainer, l),
                     children: (0, s.jsx)(E.Tooltip, {
                         position: "right",
                         text: n,
                         shouldShow: null != n,
                         children: e => (0, s.jsx)("div", {
                             ...e,
-                            className: i(S.eventStatusContainer, l),
+                            className: i(_.eventStatusContainer, l),
                             children: t
                         })
                     })
                 })
             }
 
-            function p(e) {
+            function R(e) {
                 let {
                     startTime: t,
                     status: l,
@@ -439,44 +442,47 @@
                     liveText: c,
                     textVariant: o = "text-sm/semibold",
                     isNew: h,
-                    recurrenceRule: p
-                } = e, R = (0, f.useThemedColorValue)(g.ThemeColor.TEXT_BRAND), L = (0, f.useThemedColorValue)(g.ThemeColor.TEXT_POSITIVE), A = (0, f.useThemedColorValue)(g.ThemeColor.TEXT_DANGER);
-                null == c && (c = n === m.GuildScheduledEventEntityTypes.EXTERNAL ? x.default.Messages.STAGE_CHANNEL_HAPPENING_NOW : x.default.Messages.STAGE_CHANNEL_LIVE_NOW);
-                let [{
-                    startDateTimeString: I,
-                    endDateTimeString: j,
-                    currentOrPastEvent: w,
-                    upcomingEvent: M,
-                    diffMinutes: G
-                }, O] = r.useState((0, T.getEventTimeData)(t, u));
+                    recurrenceRule: R,
+                    guildEventId: I,
+                    recurrenceId: L
+                } = e, A = (0, f.useThemedColorValue)(x.ThemeColor.TEXT_BRAND), j = (0, f.useThemedColorValue)(x.ThemeColor.TEXT_POSITIVE), w = (0, f.useThemedColorValue)(x.ThemeColor.TEXT_DANGER);
+                null == c && (c = n === g.GuildScheduledEventEntityTypes.EXTERNAL ? S.default.Messages.STAGE_CHANNEL_HAPPENING_NOW : S.default.Messages.STAGE_CHANNEL_LIVE_NOW);
+                let M = (0, T.default)(L, I),
+                    [{
+                        startDateTimeString: G,
+                        endDateTimeString: O,
+                        currentOrPastEvent: V,
+                        upcomingEvent: b,
+                        diffMinutes: U
+                    }, H] = r.useState((0, N.getEventTimeData)(t, u));
                 r.useEffect(() => {
-                    O((0, T.getEventTimeData)(t, u));
-                    let e = setInterval(() => O((0, T.getEventTimeData)(t, u)), 1e3);
+                    H((0, N.getEventTimeData)(t, u));
+                    let e = setInterval(() => H((0, N.getEventTimeData)(t, u)), 1e3);
                     return () => {
                         clearInterval(e)
                     }
                 }, [t, u]);
-                let V = I;
-                null != j && "" !== j && (V = x.default.Messages.START_DATE_TO_END_DATE.format({
-                    start: I,
-                    end: j
+                let B = G;
+                null != O && "" !== O && (B = S.default.Messages.START_DATE_TO_END_DATE.format({
+                    start: G,
+                    end: O
                 }));
-                let b = r.useMemo(() => l === m.GuildScheduledEventStatus.CANCELED ? 5 : l === m.GuildScheduledEventStatus.ACTIVE ? 3 : m.GuildScheduledEventStatusDone.has(l) ? 4 : w ? 2 : M ? 1 : 0, [l, w, M]),
-                    U = function(e, t, l, n, a) {
+                let k = r.useMemo(() => l === g.GuildScheduledEventStatus.CANCELED || (null == M ? void 0 : M.is_canceled) ? 5 : l === g.GuildScheduledEventStatus.ACTIVE ? 3 : g.GuildScheduledEventStatusDone.has(l) ? 4 : V ? 2 : b ? 1 : 0, [l, null == M ? void 0 : M.is_canceled, V, b]),
+                    y = function(e, t, l, n, a) {
                         switch (e) {
                             case 1:
-                                return a > 0 ? x.default.Messages.STARTING_IN_MINUTES.format({
+                                return a > 0 ? S.default.Messages.STARTING_IN_MINUTES.format({
                                     minutes: a
-                                }) : x.default.Messages.STARTING_SOON;
+                                }) : S.default.Messages.STARTING_SOON;
                             case 2:
-                                return x.default.Messages.STARTING_SOON;
+                                return S.default.Messages.STARTING_SOON;
                             case 3:
-                                return null != n && "" !== n ? x.default.Messages.START_DATE_TO_END_DATE_WITH_COLOR.format({
+                                return null != n && "" !== n ? S.default.Messages.START_DATE_TO_END_DATE_WITH_COLOR.format({
                                     start: l,
                                     startHook: e => (0, s.jsx)(E.Text, {
                                         color: "text-positive",
                                         variant: "text-sm/semibold",
-                                        className: S.liveEventEndTime,
+                                        className: _.liveEventEndTime,
                                         children: e
                                     }),
                                     end: n
@@ -484,12 +490,12 @@
                             default:
                                 return t
                         }
-                    }(b, V, c, j, G),
+                    }(k, B, c, O, U),
                     {
-                        Icon: H,
-                        iconColor: B,
-                        textColor: k,
-                        tooltipText: y
+                        Icon: P,
+                        iconColor: Y,
+                        textColor: Z,
+                        tooltipText: W
                     } = r.useMemo(() => (function(e) {
                         let t, {
                                 timeStatus: l,
@@ -523,64 +529,64 @@
                             tooltipText: t
                         }
                     })({
-                        timeStatus: b,
-                        textBrand: R,
-                        textPositive: L,
-                        textDanger: A,
-                        endDateTimeString: j,
-                        startDateTimeString: I
-                    }), [b, R, L, A, j, I]),
-                    P = null;
-                if (null != p) {
-                    let e = (0, T.getRRule)(p);
-                    P = x.default.Messages.GUILD_SCHEDULED_EVENT_RECURRENCE_RULE.format({
+                        timeStatus: k,
+                        textBrand: A,
+                        textPositive: j,
+                        textDanger: w,
+                        endDateTimeString: O,
+                        startDateTimeString: G
+                    }), [k, A, j, w, O, G]),
+                    z = null;
+                if (null != R) {
+                    let e = (0, N.getRRule)(R);
+                    z = S.default.Messages.GUILD_SCHEDULED_EVENT_RECURRENCE_RULE.format({
                         recurrenceRule: e.toText()
                     });
                     let l = d(t),
-                        n = (0, T.recurrenceRuleToOption)(l, p);
-                    P = function(e, t) {
+                        n = (0, N.recurrenceRuleToOption)(l, R);
+                    z = function(e, t) {
                         let l = t.toDate(),
-                            n = l.toLocaleString(x.default.getLocale(), {
+                            n = l.toLocaleString(S.default.getLocale(), {
                                 weekday: "long"
                             });
                         switch (e) {
-                            case N.RecurrenceOptions.WEEKLY:
-                                return x.default.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKLY.format({
+                            case m.RecurrenceOptions.WEEKLY:
+                                return S.default.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKLY.format({
                                     weekday: n
                                 });
-                            case N.RecurrenceOptions.YEARLY:
-                                return x.default.Messages.GUILD_SCHEDULED_EVENT_REPEATS_YEARLY.format({
-                                    date: l.toLocaleString(x.default.getLocale(), {
+                            case m.RecurrenceOptions.YEARLY:
+                                return S.default.Messages.GUILD_SCHEDULED_EVENT_REPEATS_YEARLY.format({
+                                    date: l.toLocaleString(S.default.getLocale(), {
                                         month: "short",
                                         day: "2-digit"
                                     })
                                 });
-                            case N.RecurrenceOptions.WEEKDAY_ONLY:
-                                return x.default.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKDAYS;
+                            case m.RecurrenceOptions.WEEKDAY_ONLY:
+                                return S.default.Messages.GUILD_SCHEDULED_EVENT_REPEATS_WEEKDAYS;
                             default:
                                 return null
                         }
                     }(n, l)
                 }
-                return (0, s.jsxs)(D, {
+                return (0, s.jsxs)(p, {
                     className: i(a, {
-                        [S.isRecurring]: null != P
+                        [_.isRecurring]: null != z
                     }),
-                    tooltipText: y,
-                    children: [h && l === m.GuildScheduledEventStatus.SCHEDULED ? (0, s.jsx)(_, {}) : (0, s.jsx)(H, {
-                        color: B,
+                    tooltipText: W,
+                    children: [h && l === g.GuildScheduledEventStatus.SCHEDULED ? (0, s.jsx)(D, {}) : (0, s.jsx)(P, {
+                        color: Y,
                         width: 20,
                         height: 20
                     }), (0, s.jsxs)("div", {
-                        className: S.eventStatusLabel,
+                        className: _.eventStatusLabel,
                         children: [(0, s.jsx)(E.Text, {
-                            color: k,
+                            color: Z,
                             variant: o,
-                            children: U
-                        }), null != P && (0, s.jsx)(E.Text, {
+                            children: y
+                        }), null != z && (0, s.jsx)(E.Text, {
                             color: "header-secondary",
                             variant: "text-xs/normal",
-                            children: P
+                            children: z
                         })]
                     })]
                 })

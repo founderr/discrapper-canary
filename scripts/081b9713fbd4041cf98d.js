@@ -1328,7 +1328,9 @@
                             startTime: U.toISOString(),
                             endTime: null == b ? void 0 : b.toISOString(),
                             status: t.status,
-                            eventType: t.entity_type
+                            eventType: t.entity_type,
+                            guildEventId: t.id,
+                            recurrenceId: h
                         }), (0, i.jsx)(u.Heading, {
                             id: s,
                             variant: "heading-lg/semibold",
