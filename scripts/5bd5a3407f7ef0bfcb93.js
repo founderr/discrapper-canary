@@ -876,8 +876,8 @@
                 L = n("619436"),
                 D = n("339876"),
                 x = n("702741"),
-                b = n("809937"),
-                y = n("782000"),
+                y = n("809937"),
+                b = n("782000"),
                 R = n("45593"),
                 G = n("604887"),
                 P = n("958936"),
@@ -889,7 +889,7 @@
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, d = t.isGuildStageVoice(), r = (0, u.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, v.default)(t), m = (0, S.useActiveEvent)(t.id), T = (0, g.default)(null == m ? void 0 : m.id, n, t), A = (0, y.default)(t, r), h = (0, p.default)(t), M = (0, _.default)(t), O = (0, E.default)(t), U = (0, I.default)(t), D = (0, L.default)(t), b = (0, C.default)(t), R = (0, P.default)(t, n), G = (0, c.default)({
+                } = e, d = t.isGuildStageVoice(), r = (0, u.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, v.default)(t), m = (0, S.useActiveEvent)(t.id), T = (0, g.default)(null == m ? void 0 : m.id, n, t), A = (0, b.default)(t, r), h = (0, p.default)(t), M = (0, _.default)(t), O = (0, E.default)(t), U = (0, I.default)(t), D = (0, L.default)(t), y = (0, C.default)(t), R = (0, P.default)(t, n), G = (0, c.default)({
                     id: t.id,
                     label: V.default.Messages.COPY_ID_CHANNEL
                 }), F = (0, x.default)(t), k = (0, o.default)(t);
@@ -903,7 +903,7 @@
                     }), (0, a.jsxs)(i.MenuGroup, {
                         children: [O, M, h]
                     }), (0, a.jsxs)(i.MenuGroup, {
-                        children: [U, D, b]
+                        children: [U, D, y]
                     }), (0, a.jsx)(i.MenuGroup, {
                         children: k
                     }), (0, a.jsxs)(i.MenuGroup, {
@@ -921,7 +921,7 @@
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, d = t.isGuildStageVoice(), r = (0, u.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, O.default)(t), _ = (0, v.default)(t), E = (0, S.useActiveEvent)(t.id), F = (0, g.default)(null == E ? void 0 : E.id, n, t), k = (0, y.default)(t, r), j = (0, p.default)(t), w = (0, I.default)(t), H = (0, L.default)(t), B = (0, C.default)(t), Y = (0, M.default)(t, n, r), W = (0, P.default)(t, n), q = (0, R.default)(t, n), K = (0, G.default)(t, n.id), Q = (0, T.default)(t, n), Z = (0, A.default)(t, n), X = (0, h.default)(t), J = (0, c.default)({
+                } = e, d = t.isGuildStageVoice(), r = (0, u.useStateFromStores)([N.default], () => d ? N.default.getStageInstanceByChannel(t.id) : void 0, [d, t.id]), f = (0, O.default)(t), _ = (0, v.default)(t), E = (0, S.useActiveEvent)(t.id), F = (0, g.default)(null == E ? void 0 : E.id, n, t), k = (0, b.default)(t, r), j = (0, p.default)(t), w = (0, I.default)(t), H = (0, L.default)(t), B = (0, C.default)(t), Y = (0, M.default)(t, n, r), W = (0, P.default)(t, n), q = (0, R.default)(t, n), K = (0, G.default)(t, n.id), Q = (0, T.default)(t, n), Z = (0, A.default)(t, n), X = (0, h.default)(t), J = (0, c.default)({
                     id: t.id,
                     label: V.default.Messages.COPY_ID_CHANNEL
                 }), z = (0, x.default)(t), $ = (0, o.default)(t), ee = (0, D.default)(t), et = (0, m.default)(t), en = (0, U.default)(t);
@@ -939,7 +939,7 @@
                     }, "channel-actions"), (0, a.jsxs)(i.MenuGroup, {
                         children: [K, W, q, w, et, z]
                     }, "voice-actions"), (0, a.jsxs)(i.MenuGroup, {
-                        children: [en, H, (0, b.default)(t)]
+                        children: [en, H, (0, y.default)(t)]
                     }, "notifications"), (0, a.jsxs)(i.MenuGroup, {
                         children: [B, Q, Z, X]
                     }, "admin-actions"), (0, a.jsx)(i.MenuGroup, {
@@ -1296,7 +1296,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return f
                 }
             });
             var a = n("37983");
@@ -1304,29 +1304,21 @@
             var u = n("446674"),
                 i = n("77078"),
                 s = n("18054"),
-                l = n("746164"),
-                d = n("261552"),
-                o = n("957255"),
-                r = n("207273"),
-                c = n("49111"),
-                f = n("782340");
+                l = n("261552"),
+                d = n("957255"),
+                o = n("207273"),
+                r = n("49111"),
+                c = n("782340");
 
-            function p(e, t) {
-                var n;
-                let p = (0, u.useStateFromStores)([o.default], () => o.default.can(c.Permissions.MANAGE_CHANNELS, t)),
-                    _ = l.default.useExperiment({
-                        guildId: null !== (n = t.id) && void 0 !== n ? n : "",
-                        location: "0f77e2_1"
-                    }, {
-                        autoTrackExposure: !1
-                    }).enabled,
-                    E = (0, d.default)(),
-                    m = (null == E ? void 0 : E.channelId) === e.id,
-                    S = (0, u.useStateFromStores)([r.default], () => r.default.getChannelStatus(e)),
-                    g = null != S && S.length > 0;
-                return e.isGuildVoice() && g && _ && (p || m) ? (0, a.jsx)(i.MenuItem, {
+            function f(e, t) {
+                let n = (0, u.useStateFromStores)([d.default], () => d.default.can(r.Permissions.MANAGE_CHANNELS, t)),
+                    f = (0, l.default)(),
+                    p = (null == f ? void 0 : f.channelId) === e.id,
+                    _ = (0, u.useStateFromStores)([o.default], () => o.default.getChannelStatus(e)),
+                    E = null != _ && _.length > 0;
+                return e.isGuildVoice() && E && (n || p) ? (0, a.jsx)(i.MenuItem, {
                     id: "clear-status",
-                    label: f.default.Messages.VOICE_CHANNEL_CLEAR_STATUS,
+                    label: c.default.Messages.VOICE_CHANNEL_CLEAR_STATUS,
                     action: () => {
                         s.default.updateVoiceChannelStatus(e.id, "")
                     }

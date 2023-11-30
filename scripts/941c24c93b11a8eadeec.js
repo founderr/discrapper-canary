@@ -5305,7 +5305,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return W
+                    return G
                 }
             }), n("222007");
             var a = n("37983");
@@ -5316,70 +5316,69 @@
                 r = n("77078"),
                 o = n("308289"),
                 u = n("789394"),
-                d = n("746164"),
-                c = n("244201"),
-                f = n("204947"),
-                h = n("442939"),
-                p = n("207273"),
-                m = n("679653"),
-                C = n("619335"),
-                E = n("534222"),
-                g = n("822516"),
-                S = n("941298"),
-                _ = n("539938"),
-                I = n("557809"),
-                T = n("367376"),
-                x = n("616718"),
-                v = n("550410"),
-                N = n("957255"),
-                A = n("953109"),
-                M = n("832132"),
-                R = n("664336"),
-                L = n("439932"),
-                j = n("191145"),
-                O = n("598785"),
-                y = n("2830"),
-                P = n("836087"),
-                b = n("843624"),
-                D = n("99795"),
-                U = n("49111"),
-                w = n("843455"),
-                F = n("782340"),
-                V = n("125738"),
-                k = n("632215");
+                d = n("244201"),
+                c = n("204947"),
+                f = n("442939"),
+                h = n("207273"),
+                p = n("679653"),
+                m = n("619335"),
+                C = n("534222"),
+                E = n("822516"),
+                g = n("941298"),
+                S = n("539938"),
+                _ = n("557809"),
+                I = n("367376"),
+                T = n("616718"),
+                x = n("550410"),
+                v = n("957255"),
+                N = n("953109"),
+                A = n("832132"),
+                M = n("664336"),
+                R = n("439932"),
+                L = n("191145"),
+                j = n("598785"),
+                O = n("2830"),
+                y = n("836087"),
+                P = n("843624"),
+                b = n("99795"),
+                D = n("49111"),
+                U = n("843455"),
+                w = n("782340"),
+                F = n("125738"),
+                V = n("632215");
 
-            function H(e) {
+            function k(e) {
                 let {
                     focusedParticipant: t,
                     channel: n
-                } = e, l = (0, c.useAppContext)(), s = (0, i.useStateFromStores)([j.default], () => j.default.getLayout(n.id, l));
-                return (0, a.jsx)(v.default, {
-                    children: (0, a.jsx)(P.default, {
-                        className: V.participants,
+                } = e, l = (0, d.useAppContext)(), s = (0, i.useStateFromStores)([L.default], () => L.default.getLayout(n.id, l));
+                return (0, a.jsx)(x.default, {
+                    children: (0, a.jsx)(y.default, {
+                        className: F.participants,
                         participant: t,
                         maxVisibleUsers: 5,
                         guildId: n.getGuildId(),
                         channelId: n.id,
-                        disableInteraction: l === U.AppContext.POPOUT || s === U.ChannelLayouts.FULL_SCREEN
+                        disableInteraction: l === D.AppContext.POPOUT || s === D.ChannelLayouts.FULL_SCREEN
                     })
                 })
             }
 
-            function B(e) {
+            function H(e) {
                 let {
                     user: t,
                     channel: n,
                     stream: l,
                     color: s
-                } = e, i = (0, x.default)(n, t, l);
+                } = e, i = (0, T.default)(n, t, l);
                 return null == t || null == l ? null : (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(o.default, {
-                        className: V.avatar,
+                        className: F.avatar,
                         size: r.AvatarSizes.SIZE_24,
                         user: t,
                         animate: !1
                     }), (0, a.jsx)(r.Text, {
-                        className: V.playingText,
+                        className: F.playingText,
                         variant: "text-md/medium",
                         color: s,
                         children: i
@@ -5387,155 +5386,149 @@
                 })
             }
 
-            function G(e) {
+            function B(e) {
                 let t, {
                         focusedApplication: n,
                         focusedParticipant: l,
                         channel: s
                     } = e,
-                    i = (0, O.default)(s, !0),
-                    o = (0, E.useActiveEvent)(s.id),
-                    u = null != o ? (0, g.getNextRecurrenceIdInEvent)(o) : null,
+                    i = (0, j.default)(s, !0),
+                    o = (0, C.useActiveEvent)(s.id),
+                    u = null != o ? (0, E.getNextRecurrenceIdInEvent)(o) : null,
                     d = null != o;
-                if ((null == l ? void 0 : l.type) === D.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsx)(R.default.Divider, {
-                        className: V.divider
-                    }), (0, a.jsx)(A.default, {
+                if ((null == l ? void 0 : l.type) === b.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
+                    children: [(0, a.jsx)(M.default.Divider, {
+                        className: F.divider
+                    }), (0, a.jsx)(N.default, {
                         game: n,
-                        className: V.activityIcon
+                        className: F.activityIcon
                     }), (0, a.jsx)(r.Text, {
-                        className: V.playingText,
+                        className: F.playingText,
                         variant: "text-md/normal",
                         color: "none",
-                        children: (0, f.default)(n.name)
-                    }), i && (0, a.jsx)(H, {
+                        children: (0, c.default)(n.name)
+                    }), i && (0, a.jsx)(k, {
                         channel: s,
                         focusedParticipant: l
                     })]
                 }));
-                else if ((null == l ? void 0 : l.type) === D.ParticipantTypes.STREAM) {
+                else if ((null == l ? void 0 : l.type) === b.ParticipantTypes.STREAM) {
                     let e = l.user,
                         n = l.stream;
                     t = (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsx)(R.default.Divider, {
-                            className: V.divider
-                        }), (0, a.jsx)(B, {
+                        children: [(0, a.jsx)(M.default.Divider, {
+                            className: F.divider
+                        }), (0, a.jsx)(H, {
                             user: e,
                             channel: s,
                             stream: n,
                             color: i ? "header-primary" : "none"
-                        }), i && (0, a.jsx)(H, {
+                        }), i && (0, a.jsx)(k, {
                             channel: s,
                             focusedParticipant: l
                         })]
                     })
-                } else d && (t = (0, a.jsx)(S.default, {
+                } else d && (t = (0, a.jsx)(g.default, {
                     guildEvent: o,
                     recurrenceId: u
                 }));
                 return (0, a.jsx)("div", {
-                    className: V.container,
+                    className: F.container,
                     children: t
                 })
             }
 
-            function W(e) {
-                var t;
+            function G(e) {
                 let {
-                    channel: l,
-                    guild: o,
-                    appContext: c,
-                    inCall: f,
-                    isChatOpen: E,
-                    exitFullScreen: g
+                    channel: t,
+                    guild: l,
+                    appContext: o,
+                    inCall: d,
+                    isChatOpen: c,
+                    exitFullScreen: C
                 } = e, {
-                    focusedParticipant: S
-                } = (0, i.useStateFromStoresObject)([j.default], () => ({
-                    focusedParticipant: j.default.getSelectedParticipant(l.id),
-                    participantsOpen: j.default.getParticipantsOpen(l.id)
-                }), [l.id]), x = (0, m.default)(l), v = (0, C.default)(l), A = d.default.useExperiment({
-                    guildId: null !== (t = null == o ? void 0 : o.id) && void 0 !== t ? t : "",
-                    location: "7b48cc_1"
-                }, {
-                    autoTrackExposure: !1
-                }).enabled && f, [O] = (0, h.default)((null == S ? void 0 : S.type) === D.ParticipantTypes.ACTIVITY ? [S.id] : []), P = F.default.Messages.VOICE_CHANNEL;
-                l.isDM() ? P = F.default.Messages.DM : l.isGroupDM() && (P = F.default.Messages.GROUP_DM);
+                    focusedParticipant: E
+                } = (0, i.useStateFromStoresObject)([L.default], () => ({
+                    focusedParticipant: L.default.getSelectedParticipant(t.id),
+                    participantsOpen: L.default.getParticipantsOpen(t.id)
+                }), [t.id]), g = (0, p.default)(t), T = (0, m.default)(t), [x] = (0, f.default)((null == E ? void 0 : E.type) === b.ParticipantTypes.ACTIVITY ? [E.id] : []), N = w.default.Messages.VOICE_CHANNEL;
+                t.isDM() ? N = w.default.Messages.DM : t.isGroupDM() && (N = w.default.Messages.GROUP_DM);
                 let {
-                    enabled: H,
-                    left: B
+                    enabled: j,
+                    left: y
                 } = u.ChannelEmojisExperiment.useExperiment({
                     location: "7b48cc_2"
                 }, {
                     autoTrackExposure: !1
-                }), W = H && (0, a.jsx)(I.ChannelEmoji, {
-                    channel: l
-                }), Y = (0, i.useStateFromStores)([p.default], () => p.default.getChannelStatus(l)), z = l.isGuildVoice() && A && null != Y && Y.length > 0, K = (0, i.useStateFromStores)([N.default], () => N.default.can(U.Permissions.SET_VOICE_CHANNEL_STATUS, l)), Z = z ? (0, a.jsx)(r.Tooltip, {
-                    text: F.default.Messages.VOICE_CHANNEL_SET_STATUS,
+                }), k = j && (0, a.jsx)(_.ChannelEmoji, {
+                    channel: t
+                }), H = (0, i.useStateFromStores)([h.default], () => h.default.getChannelStatus(t)), G = t.isGuildVoice() && d && null != H && H.length > 0, W = (0, i.useStateFromStores)([v.default], () => v.default.can(D.Permissions.SET_VOICE_CHANNEL_STATUS, t)), Y = G ? (0, a.jsx)(r.Tooltip, {
+                    text: w.default.Messages.VOICE_CHANNEL_SET_STATUS,
                     delay: 500,
                     position: "bottom",
-                    shouldShow: K,
+                    shouldShow: W,
                     children: e => (0, a.jsxs)(r.Clickable, {
                         ...e,
-                        className: s(V.channelStatusClickable, {
-                            [V.hoverable]: K
+                        className: s(F.channelStatusClickable, {
+                            [F.hoverable]: W
                         }),
-                        onClick: K ? X : void 0,
+                        onClick: W ? z : void 0,
                         children: [(0, a.jsx)(r.Text, {
                             variant: "text-xs/normal",
-                            className: s(V.channelStatus, k.markup, {
-                                [V.hoverable]: K
+                            className: s(F.channelStatus, V.markup, {
+                                [F.hoverable]: W
                             }),
-                            children: T.default.parseVoiceChannelStatus(Y, !0, {
-                                channelId: l.id
+                            children: I.default.parseVoiceChannelStatus(H, !0, {
+                                channelId: t.id
                             })
-                        }), K && (0, a.jsx)(M.default, {
-                            className: s(V.pencilIcon, V.hoverable),
+                        }), W && (0, a.jsx)(A.default, {
+                            className: s(F.pencilIcon, F.hoverable),
                             width: 14,
                             height: 14
                         })]
                     })
                 }) : null;
 
-                function X() {
+                function z() {
                     (0, r.openModalLazy)(async () => {
                         let {
                             default: e
                         } = await n.el("843624").then(n.bind(n, "843624"));
-                        return t => (0, a.jsx)(e, {
-                            channel: l,
-                            ...t
+                        return n => (0, a.jsx)(e, {
+                            channel: t,
+                            ...n
                         })
                     }, {
-                        modalKey: b.VOICE_CHANNEL_STATUS_MODAL_KEY
+                        modalKey: P.VOICE_CHANNEL_STATUS_MODAL_KEY
                     })
                 }
                 return (0, a.jsx)("div", {
-                    className: V.subtitleContainer,
-                    children: (0, a.jsxs)(R.default, {
-                        onDoubleClick: _.handleDoubleClick,
+                    className: F.subtitleContainer,
+                    children: (0, a.jsxs)(M.default, {
+                        onDoubleClick: S.handleDoubleClick,
                         transparent: !0,
-                        className: (0, L.getThemeClass)(w.ThemeTypes.DARK),
-                        childrenBottom: Z,
-                        toolbar: (0, a.jsx)(y.default, {
-                            channel: l,
-                            appContext: c,
-                            inCall: f,
-                            isChatOpen: E,
-                            exitFullScreen: g
+                        className: (0, R.getThemeClass)(U.ThemeTypes.DARK),
+                        childrenBottom: Y,
+                        toolbar: (0, a.jsx)(O.default, {
+                            channel: t,
+                            appContext: o,
+                            inCall: d,
+                            isChatOpen: c,
+                            exitFullScreen: C
                         }),
-                        children: [B && W, null != v ? (0, a.jsx)(R.default.Icon, {
-                            icon: v,
+                        children: [y && k, null != T ? (0, a.jsx)(M.default.Icon, {
+                            icon: T,
                             disabled: !0,
-                            "aria-label": P
-                        }) : null, !B && W, (0, a.jsx)(R.default.Title, {
-                            children: x
-                        }), (0, a.jsx)(I.HeaderGuildBreadcrumb, {
-                            channel: l,
-                            guild: o
-                        }), (0, a.jsx)(G, {
-                            focusedApplication: O,
-                            focusedParticipant: S,
-                            channel: l
+                            "aria-label": N
+                        }) : null, !y && k, (0, a.jsx)(M.default.Title, {
+                            children: g
+                        }), (0, a.jsx)(_.HeaderGuildBreadcrumb, {
+                            channel: t,
+                            guild: l
+                        }), (0, a.jsx)(B, {
+                            focusedApplication: x,
+                            focusedParticipant: E,
+                            channel: t
                         })]
                     })
                 })

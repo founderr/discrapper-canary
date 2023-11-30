@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["61019"], {
+    ["372"], {
         2396: function(e, t, r) {
             "use strict";
             e.exports = r.p + "27d910e5335bc8ab70d1.svg"
@@ -319,35 +319,6 @@
                     })]
                 })
             }
-        },
-        746164: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                default: function() {
-                    return a
-                }
-            });
-            var a = (0, r("862205").createExperiment)({
-                kind: "guild",
-                id: "2023-02_voice_channel_statuses",
-                label: "Voice Channel Status Guild Experiment",
-                defaultConfig: {
-                    enabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enable viewing and setting voice channel statuses for guild",
-                    config: {
-                        enabled: !0
-                    }
-                }, {
-                    id: 2,
-                    label: "A/A test, identical to treatment 1",
-                    config: {
-                        enabled: !0
-                    }
-                }]
-            })
         },
         594203: function(e, t, r) {
             "use strict";

@@ -1,184 +1,168 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
     ["44941"], {
-        178225: function(E, s, S) {
+        178225: function(E, S, s) {
             "use strict";
-            S.r(s), S.d(s, {
+            s.r(S), s.d(S, {
                 isGuildEligibleForStageChannels: function() {
                     return n
                 },
                 useGuildEligibleForStageChannels: function() {
                     return I
                 }
-            }), S("222007");
-            var e = S("446674"),
-                i = S("305961"),
-                _ = S("49111");
+            }), s("222007");
+            var e = s("446674"),
+                i = s("305961"),
+                _ = s("49111");
 
             function n(E) {
-                var s;
-                let [S] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [i.default];
-                return !!(null === (s = S.getGuild(E)) || void 0 === s ? void 0 : s.hasFeature(_.GuildFeatures.COMMUNITY))
+                var S;
+                let [s] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [i.default];
+                return !!(null === (S = s.getGuild(E)) || void 0 === S ? void 0 : S.hasFeature(_.GuildFeatures.COMMUNITY))
             }
 
             function I(E) {
                 return (0, e.useStateFromStores)([i.default], () => n(E, [i.default]), [E])
             }
         },
-        465305: function(E, s, S) {
+        465305: function(E, S, s) {
             "use strict";
-            S.r(s), S.d(s, {
+            s.r(S), s.d(S, {
                 default: function() {
-                    return g
+                    return L
                 }
-            }), S("222007");
-            var e = S("200900"),
-                i = S("79112"),
-                _ = S("746164"),
-                n = S("980215"),
-                I = S("250666"),
-                t = S("680986"),
-                r = S("867965"),
-                o = S("348934"),
-                N = S("520141"),
-                R = S("592407"),
-                A = S("819450"),
-                O = S("178225"),
-                P = S("300322"),
-                T = S("233069"),
-                M = S("305961"),
-                C = S("701909"),
-                a = S("49111"),
-                l = S("606762"),
-                m = S("782340");
+            }), s("222007");
+            var e = s("200900"),
+                i = s("79112"),
+                _ = s("980215"),
+                n = s("250666"),
+                I = s("680986"),
+                t = s("867965"),
+                r = s("348934"),
+                N = s("520141"),
+                o = s("592407"),
+                R = s("819450"),
+                A = s("178225"),
+                O = s("300322"),
+                P = s("233069"),
+                T = s("305961"),
+                M = s("701909"),
+                C = s("49111"),
+                a = s("606762"),
+                l = s("782340");
 
             function D(E) {
-                let s = (0, O.isGuildEligibleForStageChannels)(E),
-                    S = (0, t.getEnableForumPermissions)(E),
+                let S = (0, A.isGuildEligibleForStageChannels)(E),
+                    s = (0, I.getEnableForumPermissions)(E),
                     e = (0, N.isMemberVerificationManualApproval)(E),
-                    r = M.default.getGuild(E),
-                    o = null != r && (0, I.isCreatorMonetizationEnabledGuild)(r),
-                    R = (0, n.getClydeExperimentEnabled)(r),
-                    A = _.default.getCurrentConfig({
-                        guildId: E,
-                        location: "permission_spec_utils"
-                    }, {
-                        autoTrackExposure: !1
-                    }).enabled;
+                    t = T.default.getGuild(E),
+                    r = null != t && (0, n.isCreatorMonetizationEnabledGuild)(t),
+                    o = (0, _.getClydeExperimentEnabled)(t);
                 return {
-                    PRIORITY_SPEAKER_DESCRIPTION: m.default.Messages.ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION_APP.format({
-                        keybind: m.default.Messages.KEYBIND_PUSH_TO_TALK_PRIORITY,
+                    PRIORITY_SPEAKER_DESCRIPTION: l.default.Messages.ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION_APP.format({
+                        keybind: l.default.Messages.KEYBIND_PUSH_TO_TALK_PRIORITY,
                         onClick: () => {
-                            i.default.open(a.UserSettingsSections.KEYBINDS)
+                            i.default.open(C.UserSettingsSections.KEYBINDS)
                         }
                     }),
-                    SOUNDBOARD_DESCRIPTION: m.default.Messages.ROLE_PERMISSIONS_USE_SOUNDBOARD_DESCRIPTION_LEARN_MORE.format({
-                        helpCenterArticle: C.default.getArticleURL(a.HelpdeskArticles.SOUNDBOARD)
+                    SOUNDBOARD_DESCRIPTION: l.default.Messages.ROLE_PERMISSIONS_USE_SOUNDBOARD_DESCRIPTION_LEARN_MORE.format({
+                        helpCenterArticle: M.default.getArticleURL(C.HelpdeskArticles.SOUNDBOARD)
                     }),
-                    showStageChannelPermissions: s,
+                    showStageChannelPermissions: S,
                     showExperimental: !0,
-                    showForumPermissions: S,
+                    showForumPermissions: s,
                     showMembershipManualApprovalPermissions: e,
-                    showCreatorMonetizationAnalyticsPermission: o,
-                    showClydeAIPermissions: R,
-                    showVoiceChannelStatusPermission: A
+                    showCreatorMonetizationAnalyticsPermission: r,
+                    showClydeAIPermissions: o
                 }
             }
 
-            function L(E, s) {
-                return E ? [s()] : []
+            function m(E, S) {
+                return E ? [S()] : []
             }
-            var g = {
-                generateChannelPermissionSpec: function(E, s, S, i) {
-                    var _, I, N, O, C, L;
-                    let g = (0, t.getEnableForumPermissions)(E),
-                        u = (0, l.getChannelPermissionSpecMap)(s, S, g, i),
+            var L = {
+                generateChannelPermissionSpec: function(E, S, s, i) {
+                    var n, N, A, M, m, L;
+                    let g = (0, I.getEnableForumPermissions)(E),
+                        u = (0, a.getChannelPermissionSpecMap)(S, s, g, i),
                         c = D(E),
-                        G = P.VoiceInThreadsExperiment.getCurrentConfig({
+                        G = O.VoiceInThreadsExperiment.getCurrentConfig({
                             guildId: E,
                             location: "3ad37d_1"
-                        }).enabled && T.VOICE_THREAD_PARENT_CHANNEL_TYPES.has(s.type),
-                        d = (0, A.isStageVideoEnabled)(E),
-                        f = (0, o.canCurrentUserManageMessageFilters)(E),
-                        U = s.isMediaChannel(),
-                        p = M.default.getGuild(E),
-                        h = (0, n.getClydeExperimentEnabled)(p);
-                    switch (s.type) {
-                        case a.ChannelTypes.GUILD_CATEGORY:
+                        }).enabled && P.VOICE_THREAD_PARENT_CHANNEL_TYPES.has(S.type),
+                        d = (0, R.isStageVideoEnabled)(E),
+                        U = (0, r.canCurrentUserManageMessageFilters)(E),
+                        f = S.isMediaChannel(),
+                        p = T.default.getGuild(E),
+                        V = (0, _.getClydeExperimentEnabled)(p);
+                    switch (S.type) {
+                        case C.ChannelTypes.GUILD_CATEGORY:
                             ;
-                            return [e.generateChannelGeneralSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CATEGORY), e.generateChannelMembershipSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelTextSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_TEXT, {
+                            return [e.generateChannelGeneralSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CATEGORY), e.generateChannelMembershipSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelTextSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_TEXT, {
                                 showPrivateThreads: !0,
                                 showCreateThreads: !0,
-                                showClydeAIPermissions: h
-                            }), e.generateChannelVoiceSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE, {
-                                showVoiceChannelStatusPermission: c.showVoiceChannelStatusPermission
-                            }), ...(_ = c.showStageChannelPermissions, I = () => e.generateChannelStageSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_STAGE), _ ? [I()] : []), e.generateChannelEventsSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS)];
-                        case a.ChannelTypes.GUILD_VOICE:
-                            return [e.generateChannelGeneralSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL, {
+                                showClydeAIPermissions: V
+                            }), e.generateChannelVoiceSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE), ...(n = c.showStageChannelPermissions, N = () => e.generateChannelStageSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_STAGE), n ? [N()] : []), e.generateChannelEventsSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS)];
+                        case C.ChannelTypes.GUILD_VOICE:
+                            return [e.generateChannelGeneralSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL, {
                                 showManageWebhooks: !0
-                            }), e.generateChannelMembershipSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelVoiceSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE, {
-                                showVoiceChannelStatusPermission: c.showVoiceChannelStatusPermission
-                            }), e.generateChannelVoiceChatSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT, {
-                                sectionDescription: f ? m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT_DESCRIPTION.format({
+                            }), e.generateChannelMembershipSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelVoiceSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE), e.generateChannelVoiceChatSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT, {
+                                sectionDescription: U ? l.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT_DESCRIPTION.format({
                                     setUpAutomod: () => {
-                                        R.default.open(E, a.GuildSettingsSections.GUILD_AUTOMOD)
+                                        o.default.open(E, C.GuildSettingsSections.GUILD_AUTOMOD)
                                     }
                                 }) : void 0
-                            }), e.generateChannelEventsSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS)];
-                        case a.ChannelTypes.GUILD_STAGE_VOICE:
-                            return [e.generateChannelGeneralSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL, {
+                            }), e.generateChannelEventsSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS)];
+                        case C.ChannelTypes.GUILD_STAGE_VOICE:
+                            return [e.generateChannelGeneralSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL, {
                                 showManageWebhooks: !1
-                            }), e.generateChannelMembershipSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelStageVoiceSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE, d), e.generateChannelStageSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_STAGE), e.generateChannelEventsSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS), e.generateChannelVoiceChatSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT, {
-                                sectionDescription: f ? m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT_DESCRIPTION.format({
+                            }), e.generateChannelMembershipSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelStageVoiceSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE, d), e.generateChannelStageSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_STAGE), e.generateChannelEventsSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS), e.generateChannelVoiceChatSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT, {
+                                sectionDescription: U ? l.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT_DESCRIPTION.format({
                                     setUpAutomod: () => {
-                                        R.default.open(E, a.GuildSettingsSections.GUILD_AUTOMOD)
+                                        o.default.open(E, C.GuildSettingsSections.GUILD_AUTOMOD)
                                     }
                                 }) : void 0
                             })];
-                        case a.ChannelTypes.GUILD_FORUM:
-                        case a.ChannelTypes.GUILD_MEDIA:
+                        case C.ChannelTypes.GUILD_FORUM:
+                        case C.ChannelTypes.GUILD_MEDIA:
                             ;
-                            let V = U ? m.default.Messages.ROLE_PERMISSIONS_SECTION_MEDIA_CHANNEL : m.default.Messages.ROLE_PERMISSIONS_SECTION_FORUMS,
-                                H = U ? m.default.Messages.ROLE_PERMISSIONS_SECTION_MEDIA_CHANNEL_DESCRIPTION : m.default.Messages.ROLE_PERMISSIONS_SECTION_FORUMS_DESCRIPTION;
-                            return [e.generateChannelGeneralSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL), e.generateChannelMembershipSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelTextSection(u, V, {
+                            let h = f ? l.default.Messages.ROLE_PERMISSIONS_SECTION_MEDIA_CHANNEL : l.default.Messages.ROLE_PERMISSIONS_SECTION_FORUMS,
+                                H = f ? l.default.Messages.ROLE_PERMISSIONS_SECTION_MEDIA_CHANNEL_DESCRIPTION : l.default.Messages.ROLE_PERMISSIONS_SECTION_FORUMS_DESCRIPTION;
+                            return [e.generateChannelGeneralSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL), e.generateChannelMembershipSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelTextSection(u, h, {
                                 showPrivateThreads: !1,
                                 showCreateThreads: !1,
-                                sectionDescription: f ? H.format({
+                                sectionDescription: U ? H.format({
                                     setUpAutomod: () => {
-                                        !U && (0, r.trackForumEnableAutomodClicked)(), R.default.open(E, a.GuildSettingsSections.GUILD_AUTOMOD)
+                                        !f && (0, t.trackForumEnableAutomodClicked)(), o.default.open(E, C.GuildSettingsSections.GUILD_AUTOMOD)
                                     }
                                 }) : void 0,
-                                showClydeAIPermissions: h
-                            }), ...(N = G, O = () => e.generateChannelVoiceSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE, {
-                                showVoiceChannelStatusPermission: !1
-                            }), N ? [O()] : [])];
+                                showClydeAIPermissions: V
+                            }), ...(A = G, M = () => e.generateChannelVoiceSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE), A ? [M()] : [])];
                         default:
                             ;
-                            return [e.generateChannelGeneralSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL), e.generateChannelMembershipSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelTextSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_TEXT, {
-                                showPrivateThreads: s.type !== a.ChannelTypes.GUILD_ANNOUNCEMENT,
+                            return [e.generateChannelGeneralSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL), e.generateChannelMembershipSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP), e.generateChannelTextSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_TEXT, {
+                                showPrivateThreads: S.type !== C.ChannelTypes.GUILD_ANNOUNCEMENT,
                                 showCreateThreads: !0,
-                                showClydeAIPermissions: h
-                            }), ...(C = G, L = () => e.generateChannelVoiceSection(u, m.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE, {
-                                showVoiceChannelStatusPermission: !1
-                            }), C ? [L()] : [])]
+                                showClydeAIPermissions: V
+                            }), ...(m = G, L = () => e.generateChannelVoiceSection(u, l.default.Messages.ROLE_PERMISSIONS_SECTION_VOICE), m ? [L()] : [])]
                     }
                 },
                 generateGuildPermissionSpec: function(E) {
-                    var s, S;
+                    var S, s;
                     let i = new Set,
-                        _ = E.hasFeature(a.GuildFeatures.COMMUNITY);
-                    return !_ && i.add(a.Permissions.VIEW_GUILD_ANALYTICS.toString()), s = e.generateGuildPermissionSpec(m.default.Messages, D(E.id)), 0 === (S = i).size ? s : s.map(E => ({
+                        _ = E.hasFeature(C.GuildFeatures.COMMUNITY);
+                    return !_ && i.add(C.Permissions.VIEW_GUILD_ANALYTICS.toString()), S = e.generateGuildPermissionSpec(l.default.Messages, D(E.id)), 0 === (s = i).size ? S : S.map(E => ({
                         ...E,
-                        permissions: E.permissions.filter(E => !S.has(E.flag.toString()))
+                        permissions: E.permissions.filter(E => !s.has(E.flag.toString()))
                     }))
                 },
                 getGuildPermissionSpecMap: function(E) {
-                    return e.getGuildPermissionSpec(m.default.Messages, D(E.id))
+                    return e.getGuildPermissionSpec(l.default.Messages, D(E.id))
                 }
             }
         },
-        200900: function(E, s, S) {
+        200900: function(E, S, s) {
             "use strict";
-            S.r(s), S.d(s, {
+            s.r(S), s.d(S, {
                 getGuildPermissionSpec: function() {
                     return n
                 },
@@ -192,10 +176,10 @@
                     return r
                 },
                 generateChannelTextSection: function() {
-                    return o
+                    return N
                 },
                 generateChannelVoiceSection: function() {
-                    return N
+                    return o
                 },
                 generateChannelVoiceChatSection: function() {
                     return R
@@ -212,24 +196,24 @@
                 renderDescription: function() {
                     return T
                 }
-            }), S("424973");
-            var e = S("843455");
+            }), s("424973");
+            var e = s("843455");
 
             function i(E) {
-                let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                return !s && (E.permissions = E.permissions.filter(E => {
+                let S = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                return !S && (E.permissions = E.permissions.filter(E => {
                     let {
-                        isExperimental: s
+                        isExperimental: S
                     } = E;
-                    return !s
+                    return !S
                 })), E
             }
 
-            function _(E, s) {
-                return E.map(E => s[E.toString()])
+            function _(E, S) {
+                return E.map(E => S[E.toString()])
             }
 
-            function n(E, s) {
+            function n(E, S) {
                 return {
                     [e.Permissions.VIEW_CHANNEL.toString()]: {
                         title: E.ROLE_PERMISSIONS_VIEW_CHANNEL,
@@ -297,8 +281,8 @@
                         flag: e.Permissions.MANAGE_NICKNAMES
                     },
                     [e.Permissions.KICK_MEMBERS.toString()]: {
-                        title: s.showMembershipManualApprovalPermissions ? E.KICK_MEMBERS_AND_REVIEW_APPLICATIONS : E.KICK_MEMBERS,
-                        description: s.showMembershipManualApprovalPermissions ? E.ROLE_PERMISSIONS_KICK_MEMBERS_AND_REVIEW_APPLICATION_DESCRIPTION : E.ROLE_PERMISSIONS_KICK_MEMBERS_DESCRIPTION,
+                        title: S.showMembershipManualApprovalPermissions ? E.KICK_MEMBERS_AND_REVIEW_APPLICATIONS : E.KICK_MEMBERS,
+                        description: S.showMembershipManualApprovalPermissions ? E.ROLE_PERMISSIONS_KICK_MEMBERS_AND_REVIEW_APPLICATION_DESCRIPTION : E.ROLE_PERMISSIONS_KICK_MEMBERS_DESCRIPTION,
                         flag: e.Permissions.KICK_MEMBERS
                     },
                     [e.Permissions.BAN_MEMBERS.toString()]: {
@@ -312,8 +296,8 @@
                         flag: e.Permissions.MODERATE_MEMBERS
                     },
                     [e.Permissions.SEND_MESSAGES.toString()]: {
-                        title: s.showForumPermissions ? E.SEND_MESSAGES_AND_CREATE_FORUM_POSTS : E.SEND_MESSAGES,
-                        description: s.showForumPermissions ? E.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION : E.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION,
+                        title: S.showForumPermissions ? E.SEND_MESSAGES_AND_CREATE_FORUM_POSTS : E.SEND_MESSAGES,
+                        description: S.showForumPermissions ? E.ROLE_PERMISSIONS_SEND_MESSAGES_WITH_FORUMS_DESCRIPTION : E.ROLE_PERMISSIONS_SEND_MESSAGES_DESCRIPTION,
                         flag: e.Permissions.SEND_MESSAGES
                     },
                     [e.Permissions.EMBED_LINKS.toString()]: {
@@ -398,7 +382,7 @@
                     },
                     [e.Permissions.USE_SOUNDBOARD.toString()]: {
                         title: E.USE_SOUNDBOARD,
-                        description: (null == s ? void 0 : s.SOUNDBOARD_DESCRIPTION) || E.ROLE_PERMISSIONS_USE_SOUNDBOARD_DESCRIPTION,
+                        description: (null == S ? void 0 : S.SOUNDBOARD_DESCRIPTION) || E.ROLE_PERMISSIONS_USE_SOUNDBOARD_DESCRIPTION,
                         flag: e.Permissions.USE_SOUNDBOARD
                     },
                     [e.Permissions.USE_EXTERNAL_SOUNDS.toString()]: {
@@ -413,7 +397,7 @@
                     },
                     [e.Permissions.PRIORITY_SPEAKER.toString()]: {
                         title: E.PRIORITY_SPEAKER,
-                        description: (null == s ? void 0 : s.PRIORITY_SPEAKER_DESCRIPTION) || E.ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION,
+                        description: (null == S ? void 0 : S.PRIORITY_SPEAKER_DESCRIPTION) || E.ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION,
                         flag: e.Permissions.PRIORITY_SPEAKER
                     },
                     [e.Permissions.MUTE_MEMBERS.toString()]: {
@@ -453,8 +437,8 @@
                         flag: e.Permissions.CREATE_EVENTS
                     },
                     [e.Permissions.MANAGE_THREADS.toString()]: {
-                        title: s.showForumPermissions ? E.MANAGE_THREADS_AND_FORUM_POSTS : E.MANAGE_THREADS,
-                        description: s.showForumPermissions ? E.ROLE_PERMISSIONS_MANAGE_THREADS_AND_FORUMS_DESCRIPTION : E.ROLE_PERMISSIONS_MANAGE_THREADS_DESCRIPTION,
+                        title: S.showForumPermissions ? E.MANAGE_THREADS_AND_FORUM_POSTS : E.MANAGE_THREADS,
+                        description: S.showForumPermissions ? E.ROLE_PERMISSIONS_MANAGE_THREADS_AND_FORUMS_DESCRIPTION : E.ROLE_PERMISSIONS_MANAGE_THREADS_DESCRIPTION,
                         flag: e.Permissions.MANAGE_THREADS
                     },
                     [e.Permissions.CREATE_PUBLIC_THREADS.toString()]: {
@@ -468,8 +452,8 @@
                         flag: e.Permissions.CREATE_PRIVATE_THREADS
                     },
                     [e.Permissions.SEND_MESSAGES_IN_THREADS.toString()]: {
-                        title: s.showForumPermissions ? E.SEND_MESSAGES_IN_THREADS_AND_FORUM_POSTS : E.SEND_MESSAGES_IN_THREADS,
-                        description: s.showForumPermissions ? E.ROLE_PERMISSIONS_SEND_MESSAGES_IN_THREADS_AND_FORUM_POSTS_DESCRIPTION : E.ROLE_PERMISSIONS_SEND_MESSAGES_IN_THREADS_DESCRIPTION,
+                        title: S.showForumPermissions ? E.SEND_MESSAGES_IN_THREADS_AND_FORUM_POSTS : E.SEND_MESSAGES_IN_THREADS,
+                        description: S.showForumPermissions ? E.ROLE_PERMISSIONS_SEND_MESSAGES_IN_THREADS_AND_FORUM_POSTS_DESCRIPTION : E.ROLE_PERMISSIONS_SEND_MESSAGES_IN_THREADS_DESCRIPTION,
                         flag: e.Permissions.SEND_MESSAGES_IN_THREADS
                     },
                     [e.Permissions.USE_CLYDE_AI.toString()]: {
@@ -485,118 +469,117 @@
                 }
             }
 
-            function I(E, s) {
-                var S;
-                let I = n(E, s),
-                    t = [function(E, s, S) {
+            function I(E, S) {
+                var s;
+                let I = n(E, S),
+                    t = [function(E, S, s) {
                         let n = [e.Permissions.VIEW_CHANNEL, e.Permissions.MANAGE_CHANNELS, e.Permissions.MANAGE_ROLES, e.Permissions.CREATE_GUILD_EXPRESSIONS, e.Permissions.MANAGE_GUILD_EXPRESSIONS, e.Permissions.VIEW_AUDIT_LOG, e.Permissions.VIEW_GUILD_ANALYTICS];
-                        return S.showCreatorMonetizationAnalyticsPermission && n.push(e.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS), n.push(e.Permissions.MANAGE_WEBHOOKS), n.push(e.Permissions.MANAGE_GUILD), i({
-                            title: s.ROLE_PERMISSIONS_SECTION_GENERAL_GUILD,
+                        return s.showCreatorMonetizationAnalyticsPermission && n.push(e.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS), n.push(e.Permissions.MANAGE_WEBHOOKS), n.push(e.Permissions.MANAGE_GUILD), i({
+                            title: S.ROLE_PERMISSIONS_SECTION_GENERAL_GUILD,
                             permissions: _(n, E)
                         })
-                    }(I, E, s), function(E, s) {
-                        let S = [e.Permissions.CREATE_INSTANT_INVITE, e.Permissions.CHANGE_NICKNAME, e.Permissions.MANAGE_NICKNAMES, e.Permissions.KICK_MEMBERS, e.Permissions.BAN_MEMBERS, e.Permissions.MODERATE_MEMBERS];
+                    }(I, E, S), function(E, S) {
+                        let s = [e.Permissions.CREATE_INSTANT_INVITE, e.Permissions.CHANGE_NICKNAME, e.Permissions.MANAGE_NICKNAMES, e.Permissions.KICK_MEMBERS, e.Permissions.BAN_MEMBERS, e.Permissions.MODERATE_MEMBERS];
                         return i({
-                            title: s.ROLE_PERMISSIONS_SECTION_MEMBERSHIP,
-                            permissions: _(S, E)
+                            title: S.ROLE_PERMISSIONS_SECTION_MEMBERSHIP,
+                            permissions: _(s, E)
                         })
-                    }(I, E), function(E, s, S) {
+                    }(I, E), function(E, S, s) {
                         let n = [e.Permissions.SEND_MESSAGES, e.Permissions.SEND_MESSAGES_IN_THREADS, e.Permissions.CREATE_PUBLIC_THREADS, e.Permissions.CREATE_PRIVATE_THREADS, e.Permissions.EMBED_LINKS, e.Permissions.ATTACH_FILES, e.Permissions.ADD_REACTIONS, e.Permissions.USE_EXTERNAL_EMOJIS, e.Permissions.USE_EXTERNAL_STICKERS, e.Permissions.MENTION_EVERYONE, e.Permissions.MANAGE_MESSAGES, e.Permissions.MANAGE_THREADS, e.Permissions.READ_MESSAGE_HISTORY, e.Permissions.SEND_TTS_MESSAGES, e.Permissions.USE_APPLICATION_COMMANDS, e.Permissions.SEND_VOICE_MESSAGES, e.Permissions.USE_CLYDE_AI];
-                        !S.showClydeAIPermissions && (n = n.filter(E => E !== e.Permissions.USE_CLYDE_AI));
+                        !s.showClydeAIPermissions && (n = n.filter(E => E !== e.Permissions.USE_CLYDE_AI));
                         let I = {
-                            title: s.ROLE_PERMISSIONS_SECTION_TEXT,
+                            title: S.ROLE_PERMISSIONS_SECTION_TEXT,
                             permissions: _(n, E)
                         };
                         return i(I)
-                    }(I, E, s), function(E, s, S) {
-                        let n = [e.Permissions.CONNECT, e.Permissions.SPEAK, e.Permissions.STREAM, e.Permissions.USE_EMBEDDED_ACTIVITIES, e.Permissions.USE_SOUNDBOARD, e.Permissions.USE_EXTERNAL_SOUNDS, e.Permissions.USE_VAD, e.Permissions.PRIORITY_SPEAKER, e.Permissions.MUTE_MEMBERS, e.Permissions.DEAFEN_MEMBERS, e.Permissions.MOVE_MEMBERS];
-                        S.showVoiceChannelStatusPermission && n.push(e.Permissions.SET_VOICE_CHANNEL_STATUS);
-                        let I = {
-                            title: s.ROLE_PERMISSIONS_SECTION_VOICE,
-                            permissions: _(n, E)
-                        };
+                    }(I, E, S), function(E, S, s) {
+                        let n = [e.Permissions.CONNECT, e.Permissions.SPEAK, e.Permissions.STREAM, e.Permissions.USE_EMBEDDED_ACTIVITIES, e.Permissions.USE_SOUNDBOARD, e.Permissions.USE_EXTERNAL_SOUNDS, e.Permissions.USE_VAD, e.Permissions.PRIORITY_SPEAKER, e.Permissions.MUTE_MEMBERS, e.Permissions.DEAFEN_MEMBERS, e.Permissions.MOVE_MEMBERS, e.Permissions.SET_VOICE_CHANNEL_STATUS],
+                            I = {
+                                title: S.ROLE_PERMISSIONS_SECTION_VOICE,
+                                permissions: _(n, E)
+                            };
                         return i(I)
-                    }(I, E, s)];
-                return s.showStageChannelPermissions && t.push(function(E, s, S) {
+                    }(I, E, 0)];
+                return S.showStageChannelPermissions && t.push(function(E, S, s) {
                     let n = {
-                        title: s.ROLE_PERMISSIONS_SECTION_STAGE,
+                        title: S.ROLE_PERMISSIONS_SECTION_STAGE,
                         permissions: _([e.Permissions.REQUEST_TO_SPEAK], E)
                     };
-                    return i(n, S.showExperimental)
-                }(I, E, s)), t.push(function(E, s, S) {
+                    return i(n, s.showExperimental)
+                }(I, E, S)), t.push(function(E, S, s) {
                     let n = {
-                        title: s.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS,
+                        title: S.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS,
                         permissions: _([e.Permissions.CREATE_EVENTS, e.Permissions.MANAGE_EVENTS], E)
                     };
-                    return i(n, S.showExperimental)
-                }(I, E, s)), t.push((S = I, i({
+                    return i(n, s.showExperimental)
+                }(I, E, S)), t.push((s = I, i({
                     title: E.ROLE_PERMISSIONS_SECTION_ADVANCED,
-                    permissions: _([e.Permissions.ADMINISTRATOR], S)
+                    permissions: _([e.Permissions.ADMINISTRATOR], s)
                 }))), t
             }
 
-            function t(E, s) {
-                let S = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+            function t(E, S) {
+                let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
                     showManageWebhooks: !0
                 };
                 return {
-                    title: s,
-                    permissions: _((null == S ? void 0 : S.showManageWebhooks) ? [e.Permissions.VIEW_CHANNEL, e.Permissions.MANAGE_CHANNELS, e.Permissions.MANAGE_ROLES, e.Permissions.MANAGE_WEBHOOKS] : [e.Permissions.VIEW_CHANNEL, e.Permissions.MANAGE_CHANNELS, e.Permissions.MANAGE_ROLES], E)
+                    title: S,
+                    permissions: _((null == s ? void 0 : s.showManageWebhooks) ? [e.Permissions.VIEW_CHANNEL, e.Permissions.MANAGE_CHANNELS, e.Permissions.MANAGE_ROLES, e.Permissions.MANAGE_WEBHOOKS] : [e.Permissions.VIEW_CHANNEL, e.Permissions.MANAGE_CHANNELS, e.Permissions.MANAGE_ROLES], E)
                 }
             }
 
-            function r(E, s) {
+            function r(E, S) {
                 return {
-                    title: s,
+                    title: S,
                     permissions: _([e.Permissions.CREATE_INSTANT_INVITE], E)
                 }
             }
 
-            function o(E, s, S) {
+            function N(E, S, s) {
                 let i = [e.Permissions.SEND_MESSAGES, e.Permissions.SEND_MESSAGES_IN_THREADS, e.Permissions.CREATE_PUBLIC_THREADS, e.Permissions.CREATE_PRIVATE_THREADS, e.Permissions.EMBED_LINKS, e.Permissions.ATTACH_FILES, e.Permissions.ADD_REACTIONS, e.Permissions.USE_EXTERNAL_EMOJIS, e.Permissions.USE_EXTERNAL_STICKERS, e.Permissions.MENTION_EVERYONE, e.Permissions.MANAGE_MESSAGES, e.Permissions.MANAGE_THREADS, e.Permissions.READ_MESSAGE_HISTORY, e.Permissions.SEND_TTS_MESSAGES, e.Permissions.USE_APPLICATION_COMMANDS, e.Permissions.SEND_VOICE_MESSAGES, e.Permissions.USE_CLYDE_AI, e.Permissions.USE_EMBEDDED_ACTIVITIES];
-                return (!S.showPrivateThreads || !S.showCreateThreads) && (i = i.filter(E => E !== e.Permissions.CREATE_PRIVATE_THREADS)), !S.showCreateThreads && (i = i.filter(E => E !== e.Permissions.CREATE_PUBLIC_THREADS)), !S.showClydeAIPermissions && (i = i.filter(E => E !== e.Permissions.USE_CLYDE_AI)), {
-                    title: s,
-                    description: S.sectionDescription,
+                return (!s.showPrivateThreads || !s.showCreateThreads) && (i = i.filter(E => E !== e.Permissions.CREATE_PRIVATE_THREADS)), !s.showCreateThreads && (i = i.filter(E => E !== e.Permissions.CREATE_PUBLIC_THREADS)), !s.showClydeAIPermissions && (i = i.filter(E => E !== e.Permissions.USE_CLYDE_AI)), {
+                    title: S,
+                    description: s.sectionDescription,
                     permissions: _(i, E)
                 }
             }
 
-            function N(E, s, S) {
-                let i = [e.Permissions.CONNECT, e.Permissions.SPEAK, e.Permissions.STREAM, e.Permissions.USE_EMBEDDED_ACTIVITIES, e.Permissions.USE_SOUNDBOARD, e.Permissions.USE_EXTERNAL_SOUNDS, e.Permissions.USE_VAD, e.Permissions.PRIORITY_SPEAKER, e.Permissions.MUTE_MEMBERS, e.Permissions.DEAFEN_MEMBERS, e.Permissions.MOVE_MEMBERS];
-                return S.showVoiceChannelStatusPermission && i.push(e.Permissions.SET_VOICE_CHANNEL_STATUS), {
-                    title: s,
-                    permissions: _(i, E)
+            function o(E, S) {
+                let s = [e.Permissions.CONNECT, e.Permissions.SPEAK, e.Permissions.STREAM, e.Permissions.USE_EMBEDDED_ACTIVITIES, e.Permissions.USE_SOUNDBOARD, e.Permissions.USE_EXTERNAL_SOUNDS, e.Permissions.USE_VAD, e.Permissions.PRIORITY_SPEAKER, e.Permissions.MUTE_MEMBERS, e.Permissions.DEAFEN_MEMBERS, e.Permissions.MOVE_MEMBERS, e.Permissions.SET_VOICE_CHANNEL_STATUS];
+                return {
+                    title: S,
+                    permissions: _(s, E)
                 }
             }
 
-            function R(E, s, S) {
+            function R(E, S, s) {
                 let i = [e.Permissions.SEND_MESSAGES, e.Permissions.EMBED_LINKS, e.Permissions.ATTACH_FILES, e.Permissions.ADD_REACTIONS, e.Permissions.USE_EXTERNAL_EMOJIS, e.Permissions.USE_EXTERNAL_STICKERS, e.Permissions.MENTION_EVERYONE, e.Permissions.MANAGE_MESSAGES, e.Permissions.READ_MESSAGE_HISTORY, e.Permissions.SEND_TTS_MESSAGES, e.Permissions.USE_APPLICATION_COMMANDS];
                 return {
-                    title: s,
-                    description: S.sectionDescription,
+                    title: S,
+                    description: s.sectionDescription,
                     permissions: _(i, E)
                 }
             }
 
-            function A(E, s, S) {
+            function A(E, S, s) {
                 return {
-                    title: s,
-                    permissions: _(S ? [e.Permissions.CONNECT, e.Permissions.STREAM, e.Permissions.MUTE_MEMBERS, e.Permissions.MOVE_MEMBERS] : [e.Permissions.CONNECT, e.Permissions.MUTE_MEMBERS, e.Permissions.MOVE_MEMBERS], E)
+                    title: S,
+                    permissions: _(s ? [e.Permissions.CONNECT, e.Permissions.STREAM, e.Permissions.MUTE_MEMBERS, e.Permissions.MOVE_MEMBERS] : [e.Permissions.CONNECT, e.Permissions.MUTE_MEMBERS, e.Permissions.MOVE_MEMBERS], E)
                 }
             }
 
-            function O(E, s) {
+            function O(E, S) {
                 return {
-                    title: s,
+                    title: S,
                     permissions: _([e.Permissions.REQUEST_TO_SPEAK, e.Permissions.MENTION_EVERYONE], E)
                 }
             }
 
-            function P(E, s) {
-                let S = [e.Permissions.CREATE_EVENTS, e.Permissions.MANAGE_EVENTS],
+            function P(E, S) {
+                let s = [e.Permissions.CREATE_EVENTS, e.Permissions.MANAGE_EVENTS],
                     i = {
-                        title: s,
-                        permissions: _(S, E)
+                        title: S,
+                        permissions: _(s, E)
                     };
                 return i
             }
