@@ -2604,7 +2604,7 @@
                 }, [ef]), s.useEffect(() => {
                     ed && !es && null == t && eh()
                 }, [ed, es, t]);
-                let eg = null != w || X === g.PurchaseTypes.ONE_TIME;
+                let eg = null != w || X === g.PurchaseTypes.ONE_TIME && !es;
                 return ed ? null : (0, r.jsxs)(u.ModalFooter, {
                     align: P.default.Align.CENTER,
                     children: [(0, r.jsx)(h.default, {

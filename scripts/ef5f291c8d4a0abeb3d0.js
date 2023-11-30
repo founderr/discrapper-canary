@@ -38,7 +38,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 PaymentModalReviewStep: function() {
-                    return g
+                    return N
                 }
             }), n("222007"), n("70102");
             var i = n("37983"),
@@ -66,11 +66,11 @@
                 b = n("843455"),
                 _ = n("782340");
 
-            function g(e) {
+            function N(e) {
                 var t, n;
                 let r, {
-                        handleStepChange: g,
-                        trialId: N,
+                        handleStepChange: N,
+                        trialId: g,
                         trialFooterMessageOverride: L,
                         reviewWarningMessage: A,
                         planGroup: j,
@@ -91,8 +91,8 @@
                         priceOptions: V,
                         purchaseError: z,
                         purchaseTokenAuthState: Y,
-                        selectedPlan: K,
-                        selectedSkuId: Z,
+                        selectedPlan: Z,
+                        selectedSkuId: K,
                         setCurrency: Q,
                         setPaymentSourceId: J,
                         setPurchaseState: X,
@@ -113,8 +113,8 @@
                 s(null != $, "Step should be set");
                 let eo = a.useRef(null),
                     [ec, ed] = (0, l.default)(!1, 500),
-                    ep = null !== (n = null != N ? N : F) && void 0 !== n ? n : null,
-                    em = null != ep && (!et || (0, C.SubscriptionTrials)[ep].skus.includes(Z)) ? ep : null,
+                    ep = null !== (n = null != g ? g : F) && void 0 !== n ? n : null,
+                    em = null != ep && (!et || (0, C.SubscriptionTrials)[ep].skus.includes(K)) ? ep : null,
                     ef = (0, c.usePremiumTrialOffer)(F),
                     eS = (0, o.usePremiumDiscountOffer)(),
                     eh = {
@@ -126,41 +126,50 @@
                     })
                 }, [z]);
                 let eP = a.useCallback((e, t) => {
-                        D(e), null != t && ea(t), g(P.Step.CONFIRM, {
+                        D(e), null != t && ea(t), N(P.Step.CONFIRM, {
                             fulfillment: {
                                 subscription: e,
                                 entitlements: t
                             }
                         })
-                    }, [g, D, ea]),
+                    }, [N, D, ea]),
                     eI = null != k ? H[k] : null,
-                    ev = null != K && C.MULTI_MONTH_PLANS.has(K.id) && null != eI && !(0, u.isPaymentSourceEligibleForMultiMonthPlans)(eI) ? Error(_.default.Messages.BILLING_ERROR_INVALID_PLAN_FOR_PAYMENT_SOURCE) : null,
+                    ev = null != Z && C.MULTI_MONTH_PLANS.has(Z.id) && null != eI && !(0, u.isPaymentSourceEligibleForMultiMonthPlans)(eI) ? Error(_.default.Messages.BILLING_ERROR_INVALID_PLAN_FOR_PAYMENT_SOURCE) : null,
                     eE = a.useRef(null),
                     [ey, eT] = a.useState(null),
-                    ex = !es && null != ef && null != Z && (0, C.SubscriptionTrials)[ef.trial_id].skus.includes(Z),
+                    ex = !es && null != ef && null != K && (0, C.SubscriptionTrials)[ef.trial_id].skus.includes(K),
                     eC = null == eS ? void 0 : null === (t = eS.discount) || void 0 === t ? void 0 : t.plan_ids,
-                    eb = !es && null != eS && null != eC && null != K && eC.includes(K.id),
+                    eb = !es && null != eS && null != eC && null != Z && eC.includes(Z.id),
                     e_ = es && (0, f.shouldShowCustomGiftExperience)(eu, !0, "PaymentModalReviewStep"),
-                    eg = null == O && null == U && ei === b.PurchaseTypes.SUBSCRIPTION,
-                    eN = (0, E.inOneStepSubscriptionCheckout)({
+                    eN = null == O && null == U && ei === b.PurchaseTypes.SUBSCRIPTION,
+                    eg = (0, E.inOneStepSubscriptionCheckout)({
                         isTrial: ex,
                         isGift: es,
-                        selectedSkuId: Z,
+                        selectedSkuId: K,
                         startedPaymentFlowWithPaymentSources: er.current
-                    });
+                    }),
+                    eL = es && ei === b.PurchaseTypes.ONE_TIME,
+                    eA = eL || (eg ? eN && et : et),
+                    ej = a.useCallback(() => {
+                        if (eg) {
+                            N(P.Step.SKU_SELECT);
+                            return
+                        }
+                        return eL ? N(P.Step.GIFT_CUSTOMIZATION) : N(P.Step.PLAN_SELECT)
+                    }, [N, eg, eL]);
                 return ei === b.PurchaseTypes.ONE_TIME ? r = (0, i.jsx)(y.default, {
                     hasLegalTermsFlash: ec,
                     legalTermsNodeRef: eE,
                     onPaymentSourceChange: e => J(null != e ? e.id : null),
-                    handlePaymentSourceAdd: () => g(P.Step.ADD_PAYMENT_STEPS)
-                }) : null == G || es ? (s(null != K, "Expected plan to be selected"), r = (0, i.jsx)(d.default, {
-                    selectedPlanId: K.id,
+                    handlePaymentSourceAdd: () => N(P.Step.ADD_PAYMENT_STEPS)
+                }) : null == G || es ? (s(null != Z, "Expected plan to be selected"), r = (0, i.jsx)(d.default, {
+                    selectedPlanId: Z.id,
                     paymentSources: H,
                     onPaymentSourceChange: e => J(null != e ? e.id : null),
                     priceOptions: V,
                     currencies: W,
                     onCurrencyChange: e => Q(e),
-                    handlePaymentSourceAdd: () => g(P.Step.ADD_PAYMENT_STEPS),
+                    handlePaymentSourceAdd: () => N(P.Step.ADD_PAYMENT_STEPS),
                     setHasAcceptedTerms: en,
                     legalTermsNodeRef: eE,
                     hasLegalTermsFlash: ec,
@@ -171,7 +180,7 @@
                     referralTrialOfferId: F,
                     isTrial: ex,
                     isDiscount: eb
-                })) : (s(null != K, "Expected plan to be selected"), r = (0, i.jsx)(m.default, {
+                })) : (s(null != Z, "Expected plan to be selected"), r = (0, i.jsx)(m.default, {
                     premiumSubscription: G,
                     paymentSources: H,
                     priceOptions: V,
@@ -179,9 +188,9 @@
                         J(null != e ? e.id : null)
                     },
                     onPaymentSourceAdd: () => {
-                        g(P.Step.ADD_PAYMENT_STEPS)
+                        N(P.Step.ADD_PAYMENT_STEPS)
                     },
-                    planId: K.id,
+                    planId: Z.id,
                     setHasAcceptedTerms: en,
                     legalTermsNodeRef: eE,
                     hasLegalTermsFlash: ec,
@@ -202,7 +211,7 @@
                         children: (0, i.jsx)(p.default, {
                             premiumSubscription: null != G ? G : null,
                             setPurchaseState: X,
-                            onBack: () => eN ? g(P.Step.SKU_SELECT) : g(P.Step.PLAN_SELECT),
+                            onBack: ej,
                             onNext: eP,
                             onPurchaseError: e => q(e),
                             legalTermsNodeRef: eE,
@@ -216,7 +225,7 @@
                             planGroup: j,
                             purchaseTokenAuthState: Y,
                             openInvoiceId: R,
-                            backButtonEligible: eN ? eg && et : et,
+                            backButtonEligible: eA,
                             metadata: eh,
                             isTrial: ex,
                             disablePurchase: null != eI && ei === b.PurchaseTypes.SUBSCRIPTION && ex && !eI.canRedeemTrial()
@@ -289,8 +298,8 @@
                 C = n("153160"),
                 b = n("635357"),
                 _ = n("642906"),
-                g = n("286350"),
-                N = n("628135"),
+                N = n("286350"),
+                g = n("628135"),
                 L = n("49111"),
                 A = n("782340"),
                 j = n("135878");
@@ -369,13 +378,13 @@
                 r(null != D, "Expected selectedSkuId");
                 let z = U[D],
                     Y = G[D],
-                    K = null != F ? F : v.NO_PAYMENT_SOURCE,
-                    Z = null != Y ? Y[K] : null;
+                    Z = null != F ? F : v.NO_PAYMENT_SOURCE,
+                    K = null != Y ? Y[Z] : null;
                 r(null != z, "SKU must exist and be fetched."), r(null != y, "Application must exist.");
                 let Q = (0, l.default)([m.default, E.default], () => E.default.inTestModeForApplication(y.id) || m.default.inDevModeForApplication(y.id), [y.id]),
                     J = (0, l.default)([P.default], () => P.default.enabled),
                     X = s.CountryCodesSets.EEA_COUNTRIES.has(I.default.ipCountryCodeWithFallback),
-                    q = C === g.PurchaseState.PURCHASING || C === g.PurchaseState.COMPLETED,
+                    q = C === N.PurchaseState.PURCHASING || C === N.PurchaseState.COMPLETED,
                     $ = null != F ? w[F].type : null;
                 return (0, i.jsxs)("div", {
                     className: j.stepBody,
@@ -389,19 +398,19 @@
                         application: y,
                         sku: z,
                         isEmbeddedIAP: B
-                    }), V && (0, i.jsx)(N.default, {
+                    }), V && (0, i.jsx)(g.default, {
                         sku: z
                     }), null != H ? (0, i.jsx)(h.SendGiftToUser, {
                         giftRecipient: H
                     }) : null, (0, i.jsx)(u.FormTitle, {
                         tag: u.FormTitleTags.H5,
                         children: k ? A.default.Messages.PREMIUM_GIFTING_BUTTON : A.default.Messages.ONE_TIME_PURCHASE_REVIEW_STEP_PURCHASE_DETAILS_LABEL
-                    }), null == Z ? (0, i.jsx)(u.Spinner, {
+                    }), null == K ? (0, i.jsx)(u.Spinner, {
                         type: u.Spinner.Type.WANDERING_CUBES,
                         className: j.invoiceSpinner
                     }) : (0, i.jsx)(R, {
                         sku: z,
-                        skuPricePreview: Z
+                        skuPricePreview: K
                     }), (0, i.jsxs)("div", {
                         className: j.paymentSourceWrapper,
                         children: [(0, i.jsx)(u.FormTitle, {
@@ -569,8 +578,8 @@
                 C = n("380186"),
                 b = n("809071"),
                 _ = n("883662"),
-                g = n("991329"),
-                N = n("623003"),
+                N = n("991329"),
+                g = n("623003"),
                 L = n("570727"),
                 A = n("146163"),
                 j = n("49111"),
@@ -585,7 +594,7 @@
                         paymentSources: f,
                         priceOptions: S,
                         onPaymentSourceChange: b,
-                        onPaymentSourceAdd: g,
+                        onPaymentSourceAdd: N,
                         planId: A,
                         setHasAcceptedTerms: M,
                         legalTermsNodeRef: F,
@@ -598,8 +607,8 @@
                         purchaseState: Y
                     } = e,
                     {
-                        selectedSkuId: K,
-                        defaultPlanId: Z,
+                        selectedSkuId: Z,
+                        defaultPlanId: K,
                         isPremium: Q,
                         startedPaymentFlowWithPaymentSourcesRef: J
                     } = (0, P.usePaymentContext)(),
@@ -618,19 +627,19 @@
                     ei = (0, v.inOneStepSubscriptionCheckout)({
                         isTrial: !1,
                         isGift: X,
-                        selectedSkuId: K,
+                        selectedSkuId: Z,
                         startedPaymentFlowWithPaymentSources: J.current
                     }),
                     ea = a.useMemo(() => (0, x.getPremiumPlanOptions)({
-                        skuId: K,
+                        skuId: Z,
                         isPremium: Q,
                         multiMonthPlans: [],
                         currentSubscription: r,
                         isGift: X,
                         isEligibleForTrial: !1,
-                        defaultPlanId: Z,
+                        defaultPlanId: K,
                         defaultToMonthlyPlan: !1
-                    }), [K, r, Z, Q, X]);
+                    }), [Z, r, K, Q, X]);
                 return (0, i.jsxs)("div", {
                     className: w.stepBody,
                     children: [ei && (0, i.jsxs)("div", {
@@ -672,7 +681,7 @@
                             paymentSources: Object.values(f),
                             selectedPaymentSourceId: q,
                             onChange: b,
-                            onPaymentSourceAdd: g,
+                            onPaymentSourceAdd: N,
                             hidePersonalInformation: ee,
                             disabled: en
                         })]
@@ -688,7 +697,7 @@
                             onChange: V,
                             disabled: en
                         })]
-                    }), (0, i.jsx)(N.default, {
+                    }), (0, i.jsx)(g.default, {
                         isActive: B,
                         ref: F,
                         children: null != r && (0, C.subscriptionCanSwitchImmediately)(r, A, k) ? (0, i.jsx)(G, {
@@ -785,19 +794,19 @@
                     preventFetch: u,
                     analyticsLocations: m,
                     analyticsLocation: f.default.BILLING_SWITCH_PLAN_IMMEDIATE_RENEWAL_INVOICE_PREVIEW
-                }), g = null != y ? y : C;
+                }), N = null != y ? y : C;
                 if (a.useEffect(() => {
-                        r(g)
-                    }, [r, g]), null != g) return (0, i.jsx)(o.FormErrorBlock, {
-                    children: g.message
+                        r(N)
+                    }, [r, N]), null != N) return (0, i.jsx)(o.FormErrorBlock, {
+                    children: N.message
                 });
-                let N = (0, v.inOneStepSubscriptionCheckout)({
+                let g = (0, v.inOneStepSubscriptionCheckout)({
                         isTrial: !1,
                         isGift: p,
                         selectedSkuId: c,
                         startedPaymentFlowWithPaymentSources: d.current
                     }),
-                    L = (0, v.planSwitchLoadingShowSpinner)(N, E, n);
+                    L = (0, v.planSwitchLoadingShowSpinner)(g, E, n);
                 if (null == E || null == T || L) return (0, i.jsx)(o.Spinner, {
                     className: w.spinner
                 });
@@ -925,7 +934,7 @@
                         }), (0, i.jsx)(_.PremiumInvoiceTableRow, {
                             label: t,
                             value: (0, x.getFormattedRateForPlan)(a, s, !0)
-                        }), (0, i.jsx)(g.default, {
+                        }), (0, i.jsx)(N.default, {
                             invoice: c
                         }), (0, i.jsx)(_.PremiumInvoiceTableDivider, {}), (0, i.jsx)(A.SubscriptionInvoiceFooter, {
                             premiumSubscription: n,
