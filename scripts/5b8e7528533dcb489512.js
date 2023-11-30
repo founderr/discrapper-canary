@@ -546,7 +546,7 @@
                     channel: v,
                     recurrenceId: n,
                     isRecurrenceItem: m
-                }), p = (0, E.default)(t, g, v), O = (0, T.default)(t, g, v), D = (0, s.default)(t, g.id, n), R = (0, f.default)(t), L = (0, d.default)({
+                }), p = (0, E.default)(t, g, v), D = (0, T.default)(t, g, v), O = (0, s.default)(t, g.id, n), R = (0, f.default)(t), L = (0, d.default)({
                     id: null != n ? n : t,
                     label: I.default.Messages.COPY_ID_EVENT
                 }), y = (0, r.default)(t, g.id, v);
@@ -559,7 +559,7 @@
                         "aria-label": I.default.Messages.USER_ACTIONS_MENU_LABEL,
                         onSelect: M,
                         children: [(0, l.jsxs)(u.MenuGroup, {
-                            children: [null == n && y, null == n && O, A, !m && p, h, C, D]
+                            children: [null == n && y, null == n && D, A, !m && p, h, C, O]
                         }), null == n && (0, l.jsx)(u.MenuGroup, {
                             children: R
                         }), (0, l.jsx)(u.MenuGroup, {
@@ -814,7 +814,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return c
+                    return E
                 }
             });
             var l = n("37983");
@@ -824,56 +824,58 @@
                 i = n("817963"),
                 d = n("398604"),
                 r = n("397680"),
-                s = n("842672"),
-                o = n("782340");
+                s = n("466148"),
+                o = n("842672"),
+                c = n("782340");
 
-            function c(e) {
+            function E(e) {
                 let {
                     guildEventId: t,
-                    guild: c,
-                    channel: E,
-                    recurrenceId: f,
-                    isRecurrenceItem: _
+                    guild: E,
+                    channel: f,
+                    recurrenceId: _,
+                    isRecurrenceItem: T
                 } = e, {
-                    canManageGuildEvent: T
-                } = (0, i.useManageResourcePermissions)(null != E ? E : c), S = (0, u.useStateFromStores)([d.default], () => d.default.getGuildScheduledEvent(t)), I = T(S), v = (0, s.default)(), g = (0, r.default)(f, null == S ? void 0 : S.id);
-                if (!I || null == S) return null;
-                let N = null != S.recurrence_rule && !_,
-                    m = e => {
-                        (null == f || e) && !_ ? (0, a.openModalLazy)(async () => {
+                    canManageGuildEvent: S
+                } = (0, i.useManageResourcePermissions)(null != f ? f : E), I = (0, u.useStateFromStores)([d.default], () => d.default.getGuildScheduledEvent(t)), v = S(I), g = (0, o.default)(), N = (0, r.default)(_, null == I ? void 0 : I.id), m = (0, s.default)(t, _);
+                if (!v || null == I) return null;
+                let M = null != I.recurrence_rule && !T,
+                    C = e => {
+                        (null == _ || e) && !T ? (0, a.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await n.el("590942").then(n.bind(n, "590942"));
                             return n => (0, l.jsx)(e, {
                                 ...n,
                                 guildScheduledEventId: t,
-                                guildId: c.id
+                                guildId: E.id
                             })
-                        }, v) : null != f && (0, a.openModalLazy)(async () => {
+                        }, g) : null != _ && (0, a.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await n.el("229798").then(n.bind(n, "229798"));
                             return t => (0, l.jsx)(e, {
                                 ...t,
-                                guildEvent: S,
-                                recurrenceId: f
+                                guildEvent: I,
+                                recurrenceId: _
                             })
-                        }, v)
+                        }, g)
                     };
                 return (0, l.jsx)(a.MenuItem, {
-                    id: o.default.Messages.EDIT_EVENT,
-                    label: o.default.Messages.EDIT_EVENT,
-                    action: N ? void 0 : () => m(!0),
-                    children: N && (0, l.jsxs)(l.Fragment, {
+                    id: c.default.Messages.EDIT_EVENT,
+                    label: c.default.Messages.EDIT_EVENT,
+                    action: M ? void 0 : () => C(!0),
+                    children: M && (0, l.jsxs)(l.Fragment, {
                         children: [(0, l.jsx)(a.MenuItem, {
-                            id: o.default.Messages.EDIT_THIS_EVENT,
-                            label: o.default.Messages.EDIT_THIS_EVENT,
-                            action: () => m(!1),
-                            disabled: null == g ? void 0 : g.is_canceled
+                            id: c.default.Messages.EDIT_THIS_EVENT,
+                            label: c.default.Messages.EDIT_THIS_EVENT,
+                            action: () => C(!1),
+                            disabled: (null == N ? void 0 : N.is_canceled) || m.startTime.getTime() < Date.now()
                         }), (0, l.jsx)(a.MenuItem, {
-                            id: o.default.Messages.EDIT_ALL_EVENTS,
-                            label: o.default.Messages.EDIT_ALL_EVENTS,
-                            action: () => m(!0)
+                            id: c.default.Messages.EDIT_ALL_EVENTS,
+                            label: c.default.Messages.EDIT_ALL_EVENTS,
+                            action: () => C(!0),
+                            disabled: new Date(I.scheduled_start_time).getTime() < Date.now()
                         })]
                     })
                 })
@@ -1325,7 +1327,7 @@
                     return p
                 },
                 endStage: function() {
-                    return O
+                    return D
                 }
             });
             var l = n("627445"),
@@ -1454,7 +1456,7 @@
                 let l = await (0, T.updateStageInstance)(e.id, t, n);
                 return l
             }
-            async function O(e) {
+            async function D(e) {
                 await (0, T.endStageInstance)(e.id)
             }
         },
