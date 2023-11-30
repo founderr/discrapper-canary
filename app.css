@@ -83796,6 +83796,45 @@ input::-webkit-inner-spin-button {
     margin-left: -6px
 }
 
+.categoryWrapper__042a8 {
+    position: relative
+}
+
+@keyframes easterEggAnimation__36472 {
+    0% {
+        transform: translatey(10px)
+    }
+
+    to {
+        transform: translatey(-30px)
+    }
+}
+
+@keyframes easterEggAnimationReverse_ff37f4 {
+    0% {
+        transform: translatey(-30px)
+    }
+
+    to {
+        transform: translatey(10px)
+    }
+}
+
+.hiddenWumpus__3cb90 {
+    width: 50px;
+    left: 30px;
+    position: absolute;
+    animation-name: easterEggAnimation__36472;
+    animation-duration: 1.6s;
+    animation-iteration-count: 1;
+    transition: ease-in-out;
+    animation-fill-mode: forwards
+}
+
+.hiddenWumpusEnabled__72e7a {
+    animation-name: easterEggAnimationReverse_ff37f4
+}
+
 @media(max-width:1124px) {
     .close__354a2 {
         position: fixed

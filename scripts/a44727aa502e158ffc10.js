@@ -822,86 +822,84 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return A
+                    return T
                 }
             }), n("222007");
             var s = n("37983"),
                 r = n("884691"),
                 i = n("516555"),
-                a = n("65597"),
-                l = n("812204"),
-                o = n("685665"),
-                u = n("697218"),
-                d = n("635357"),
-                c = n("642906"),
-                f = n("85336"),
-                p = n("385179"),
-                E = n("292215"),
-                I = n("158184"),
-                h = n("385890"),
-                _ = n("337978"),
-                S = n("49111"),
-                C = n("843455"),
-                T = n("322859");
-            let m = (e, t, n) => (0, s.jsx)(_.CollectiblesPaymentModalHeader, {
+                a = n("812204"),
+                l = n("685665"),
+                o = n("635357"),
+                u = n("642906"),
+                d = n("85336"),
+                c = n("385179"),
+                f = n("292215"),
+                p = n("158184"),
+                E = n("385890"),
+                I = n("337978"),
+                h = n("49111"),
+                _ = n("843455"),
+                S = n("322859");
+            let C = (e, t, n) => (0, s.jsx)(I.CollectiblesPaymentModalHeader, {
                 step: n,
                 onClose: () => t(!1)
             });
 
-            function A(e) {
+            function T(e) {
                 let {
                     onClose: t,
                     onComplete: n,
-                    transitionState: _,
-                    loadId: A,
-                    skuId: g,
-                    isGift: O = !1,
-                    giftRecipient: R,
-                    giftMessage: N,
-                    analyticsLocations: x,
-                    returnRef: v
+                    transitionState: I,
+                    loadId: T,
+                    skuId: m,
+                    isGift: A = !1,
+                    giftRecipient: g,
+                    giftMessage: O,
+                    analyticsLocations: R,
+                    returnRef: N
                 } = e, {
-                    analyticsLocations: P,
-                    AnalyticsLocationProvider: L
-                } = (0, o.default)([...x, l.default.COLLECTIBLES_PAYMENT_MODAL]), M = r.useRef(new i.Environment), [y, F] = r.useState(null), j = (0, a.default)([u.default], () => u.default.getCurrentUser()), U = [E.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, h.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, E.ONE_TIME_PAYMENT_ADD_PAYMENT_STEP_CONFIG, ...E.SHARED_STEP_CONFIGS, E.REVIEW_STEP_CONFIG, {
-                    key: f.Step.CONFIRM,
-                    renderStep: e => (0, s.jsx)(I.CollectiblesPaymentModalConfirmStep, {
+                    analyticsLocations: x,
+                    AnalyticsLocationProvider: v
+                } = (0, l.default)([...R, a.default.COLLECTIBLES_PAYMENT_MODAL]), P = r.useRef(new i.Environment), [L, M] = r.useState(null), y = [f.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, E.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, f.ONE_TIME_PAYMENT_ADD_PAYMENT_STEP_CONFIG, ...f.SHARED_STEP_CONFIGS, f.REVIEW_STEP_CONFIG, {
+                    key: d.Step.CONFIRM,
+                    renderStep: e => (0, s.jsx)(p.CollectiblesPaymentModalConfirmStep, {
                         ...e,
-                        confettiCanvas: y,
-                        analyticsLocations: P
+                        confettiCanvas: L,
+                        analyticsLocations: x
                     }),
                     options: {
-                        bodyClassName: T.modalOverrideBody,
-                        sliderBodyClassName: T.modalOverrideSliderBody
+                        bodyClassName: S.modalOverrideBody,
+                        sliderBodyClassName: S.modalOverrideSliderBody
                     }
                 }];
-                return (0, s.jsxs)(L, {
+                return (0, s.jsxs)(v, {
                     children: [(0, s.jsx)(i.ConfettiCanvas, {
-                        ref: F,
-                        className: T.confettiCanvas,
-                        environment: M.current
-                    }), (0, s.jsx)(c.PaymentContextProvider, {
-                        stepConfigs: U,
-                        applicationId: S.COLLECTIBLES_APPLICATION_ID,
-                        skuIDs: [g],
-                        isGift: O,
+                        ref: M,
+                        className: S.confettiCanvas,
+                        environment: P.current
+                    }), (0, s.jsx)(u.PaymentContextProvider, {
+                        stepConfigs: y,
+                        applicationId: h.COLLECTIBLES_APPLICATION_ID,
+                        skuIDs: [m],
+                        isGift: A,
                         activeSubscription: null,
-                        purchaseType: C.PurchaseTypes.ONE_TIME,
-                        children: (0, s.jsx)(d.GiftContextProvider, {
-                            isGift: O,
-                            giftRecipient: null != R ? R : j,
-                            giftMessage: N,
-                            children: (0, s.jsx)(p.PaymentModal, {
+                        purchaseType: _.PurchaseTypes.ONE_TIME,
+                        children: (0, s.jsx)(o.GiftContextProvider, {
+                            isGift: A,
+                            giftRecipient: g,
+                            giftMessage: O,
+                            children: (0, s.jsx)(c.PaymentModal, {
                                 onClose: t,
                                 onComplete: n,
-                                loadId: A,
-                                applicationId: S.COLLECTIBLES_APPLICATION_ID,
-                                skuId: g,
+                                loadId: T,
+                                applicationId: h.COLLECTIBLES_APPLICATION_ID,
+                                skuId: m,
                                 initialPlanId: null,
-                                analyticsLocations: P,
-                                transitionState: _,
-                                renderHeader: m,
-                                returnRef: v,
+                                analyticsLocations: x,
+                                transitionState: I,
+                                renderHeader: C,
+                                returnRef: N,
                                 hideShadow: !0
                             })
                         })
