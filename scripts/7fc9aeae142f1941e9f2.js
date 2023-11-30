@@ -1082,7 +1082,7 @@
                 default: function() {
                     return A
                 }
-            });
+            }), n("222007");
             var l = n("37983"),
                 a = n("884691"),
                 s = n("414456"),
@@ -1179,21 +1179,21 @@
                     return null != e ? e : {
                         startDate: u(P)
                     }
-                }, [t, P]), Y = a.useRef(null);
+                }, [t, P]), [Y, z] = a.useState(null), X = a.useRef(null);
                 a.useEffect(() => {
                     if (M) {
                         var e;
-                        null === (e = Y.current) || void 0 === e || e.focus()
+                        null === (e = X.current) || void 0 === e || e.focus()
                     }
                 }, [M]);
-                let z = e => {
+                let Z = e => {
                         L({
                             image: e
                         })
                     },
-                    X = (e, t) => {
+                    W = (e, t) => {
                         if (null == e || void 0 === t) {
-                            z(null);
+                            Z(null);
                             return
                         }(0, d.openModalLazy)(async () => {
                             let {
@@ -1202,7 +1202,7 @@
                             return n => (0, l.jsx)(a, {
                                 imgURI: e,
                                 file: t,
-                                onCrop: z,
+                                onCrop: Z,
                                 uploadType: S.UploadTypes.SCHEDULED_EVENT_IMAGE,
                                 allowSkip: !0,
                                 ...n
@@ -1232,7 +1232,7 @@
                                 maxLength: C.MAX_STAGE_TOPIC_LENGTH,
                                 value: j,
                                 autoComplete: "off",
-                                inputRef: Y
+                                inputRef: X
                             }), null != O ? (0, l.jsx)(d.Text, {
                                 color: "text-danger",
                                 variant: "text-xs/normal",
@@ -1249,10 +1249,7 @@
                                     scheduledStartTime: null == t ? void 0 : t.toISOString(),
                                     scheduledEndTime: null == n ? void 0 : n.toISOString()
                                 };
-                                null != t && null != G && (null == n ? void 0 : n.isBefore(t)) && (l.scheduledEndTime = t.add(1, "hour").toISOString()), null != t && null != B && (l.recurrenceRule = {
-                                    ...B,
-                                    start: t.milliseconds(0).toISOString()
-                                }), L(l)
+                                null != t && null != G && (null == n ? void 0 : n.isBefore(t)) && (l.scheduledEndTime = t.add(1, "hour").toISOString()), null != t && null != Y && (l.recurrenceRule = (0, N.recurrenceOptionToRecurrenceRule)(Y, t)), L(l)
                             },
                             onRecurrenceChange: e => {
                                 let t = k.startDate;
@@ -1260,7 +1257,7 @@
                                 let n = (0, N.recurrenceOptionToRecurrenceRule)(e, t);
                                 L({
                                     recurrenceRule: n
-                                })
+                                }), z(e)
                             },
                             schedule: k,
                             recurrenceRule: B,
@@ -1324,19 +1321,19 @@
                                             return null !== (n = (0, h.default)((0, T.convertToFakeGuildEvent)(t, i, s))) && void 0 !== n ? n : null
                                         }
                                     },
-                                    onChange: X,
+                                    onChange: W,
                                     hint: g.default.Messages.GUILD_EVENT_CHANGE_IMAGE,
                                     showRemoveButton: !1,
                                     enabled: !0
                                 }), (0, l.jsx)(d.Button, {
                                     size: d.Button.Sizes.SMALL,
-                                    onClick: () => z(null),
+                                    onClick: () => Z(null),
                                     children: g.default.Messages.GUILD_EVENT_REMOVE_IMAGE
                                 })]
                             }) : (0, l.jsxs)(d.Button, {
                                 size: d.Button.Sizes.SMALL,
                                 children: [g.default.Messages.GUILD_EVENT_ADD_IMAGE, (0, l.jsx)(c.default, {
-                                    onChange: X
+                                    onChange: W
                                 })]
                             })]
                         }), (0, l.jsx)(p, {
