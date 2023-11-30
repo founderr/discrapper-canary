@@ -19195,8 +19195,8 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
 }
 
 .planInfo_cd8cba {
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     margin-top: 8px
 }
 
@@ -34388,6 +34388,11 @@ html .progress__4ef76 {
 
 .container__03455:hover:not(.canceled__5c690) {
     background-color: var(--background-secondary)
+}
+
+.container__03455.active_fcec01,
+.container__03455:hover.active_fcec01 {
+    background-color: var(--background-tertiary)
 }
 
 .timeStatus_b84727 {
