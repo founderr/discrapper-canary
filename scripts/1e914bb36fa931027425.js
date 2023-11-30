@@ -95,15 +95,15 @@
                 g = n("44141"),
                 N = n("531674"),
                 A = n("619436"),
-                C = n("339876"),
-                T = n("809937"),
+                T = n("339876"),
+                C = n("809937"),
                 U = n("782340");
 
             function O(e) {
                 let {
                     channel: t,
                     onSelect: n
-                } = e, i = (0, g.default)(t), u = (0, N.default)(t), d = (0, A.default)(t), _ = (0, c.default)(t), S = (0, f.default)(t), M = (0, o.default)(t), C = (0, E.default)(t), T = (0, r.default)({
+                } = e, i = (0, g.default)(t), u = (0, N.default)(t), d = (0, A.default)(t), _ = (0, c.default)(t), S = (0, f.default)(t), M = (0, o.default)(t), T = (0, E.default)(t), C = (0, r.default)({
                     id: t.id,
                     label: U.default.Messages.COPY_ID_CHANNEL
                 });
@@ -119,9 +119,9 @@
                     }), (0, a.jsxs)(s.MenuGroup, {
                         children: [_, S, M]
                     }), (0, a.jsx)(s.MenuGroup, {
-                        children: C
-                    }), (0, a.jsx)(s.MenuGroup, {
                         children: T
+                    }), (0, a.jsx)(s.MenuGroup, {
+                        children: C
                     })]
                 })
             }
@@ -134,7 +134,7 @@
                 } = e, u = (0, g.default)(t), d = (0, N.default)(t), E = (0, A.default)(t), O = (0, c.default)(t), L = (0, f.default)(t), h = (0, M.default)(t), I = (0, o.default)(t), p = (0, _.default)(t, n), R = (0, S.default)(t), v = (0, r.default)({
                     id: t.id,
                     label: U.default.Messages.COPY_ID_CHANNEL
-                }), m = (0, C.default)(t);
+                }), m = (0, T.default)(t);
                 return (0, a.jsxs)(s.Menu, {
                     navId: "channel-context",
                     onClose: l.closeContextMenu,
@@ -145,7 +145,7 @@
                     }, "mark-as-read"), (0, a.jsxs)(s.MenuGroup, {
                         children: [m, O, L]
                     }, "channel-actions"), (0, a.jsxs)(s.MenuGroup, {
-                        children: [d, E, (0, T.default)(t)]
+                        children: [d, E, (0, C.default)(t)]
                     }, "notifications"), (0, a.jsxs)(s.MenuGroup, {
                         children: [h, I, p, R]
                     }, "admin-actions"), (0, a.jsx)(s.MenuGroup, {
@@ -284,6 +284,7 @@
                 return (0, a.jsx)(s.MenuItem, {
                     id: "delete-channel",
                     label: i.default.Messages.DELETE_CATEGORY,
+                    subtext: i.default.Messages.DELETE_CATEGORY_SUBTEXT,
                     color: "danger",
                     action: () => (0, s.openModalLazy)(async () => {
                         let {
@@ -338,8 +339,8 @@
                         firstMessage: N
                     } = (0, s.useStateFromStores)([r.default], () => r.default.getMessage(e.id), [e.id]),
                     A = t && (S || E && g < 1),
-                    C = t && E && !S && g > 0 && null != N;
-                return M && (S || A || C) ? (0, a.jsx)(l.MenuItem, {
+                    T = t && E && !S && g > 0 && null != N;
+                return M && (S || A || T) ? (0, a.jsx)(l.MenuItem, {
                     id: "delete-channel",
                     label: (() => {
                         if (e.type === c.ChannelTypes.GUILD_CATEGORY) return _.default.Messages.DELETE_CATEGORY;
@@ -355,7 +356,7 @@
                         return n => (0, a.jsx)(t, {
                             ...n,
                             onConfirm: () => {
-                                n.onClose(), C ? u.default.deleteMessage(e.id, e.id) : i.default.deleteChannel(e.id)
+                                n.onClose(), T ? u.default.deleteMessage(e.id, e.id) : i.default.deleteChannel(e.id)
                             },
                             channel: e
                         })
@@ -519,27 +520,27 @@
                     })
                 }
                 let A = S.default.Messages.MUTE_CHANNEL_GENERIC,
-                    C = S.default.Messages.UNMUTE_CHANNEL_GENERIC;
+                    T = S.default.Messages.UNMUTE_CHANNEL_GENERIC;
                 switch (e.type) {
                     case _.ChannelTypes.GUILD_CATEGORY:
-                        A = S.default.Messages.MUTE_CATEGORY, C = S.default.Messages.UNMUTE_CATEGORY;
+                        A = S.default.Messages.MUTE_CATEGORY, T = S.default.Messages.UNMUTE_CATEGORY;
                         break;
                     case _.ChannelTypes.GROUP_DM:
-                        A = S.default.Messages.MUTE_CONVERSATION, C = S.default.Messages.UNMUTE_CONVERSATION;
+                        A = S.default.Messages.MUTE_CONVERSATION, T = S.default.Messages.UNMUTE_CONVERSATION;
                         break;
                     case _.ChannelTypes.DM:
                         A = S.default.Messages.MUTE_CHANNEL.format({
                             name: E
-                        }), C = S.default.Messages.UNMUTE_CHANNEL.format({
+                        }), T = S.default.Messages.UNMUTE_CHANNEL.format({
                             name: E
                         });
                         break;
                     default:
-                        A = S.default.Messages.MUTE_CHANNEL_GENERIC, C = S.default.Messages.UNMUTE_CHANNEL_GENERIC
+                        A = S.default.Messages.MUTE_CHANNEL_GENERIC, T = S.default.Messages.UNMUTE_CHANNEL_GENERIC
                 }
                 return n ? (0, a.jsx)(u.MenuItem, {
                     id: "unmute-channel",
-                    label: C,
+                    label: T,
                     subtext: l,
                     action: () => N(!1)
                 }) : (0, a.jsx)(u.MenuItem, {
