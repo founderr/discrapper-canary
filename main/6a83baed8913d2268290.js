@@ -1922,7 +1922,8 @@
                             input_device: this.getInputDeviceName(),
                             output_device: this.getOutputDeviceName(),
                             device_performance_class: (0, _.getMediaPerformanceClass)(),
-                            num_fast_udp_reconnects: null != this._connection ? null === (l = this._connection) || void 0 === l ? void 0 : l.getNumFastUdpReconnects() : null
+                            num_fast_udp_reconnects: null != this._connection ? null === (l = this._connection) || void 0 === l ? void 0 : l.getNumFastUdpReconnects() : null,
+                            parent_media_session_id: this.parentMediaSessionId
                         });
                         let o = this.getMediaSessionId();
                         O.default.getMediaEngine().getCodecSurvey().then(e => {
@@ -2393,7 +2394,8 @@
                                         input_device: this.getInputDeviceName(),
                                         output_device: this.getOutputDeviceName(),
                                         ping_average: Math.round(this.getAveragePing()),
-                                        ping_bad_count: this._pingBadCount
+                                        ping_bad_count: this._pingBadCount,
+                                        parent_media_session_id: this.parentMediaSessionId
                                     })
                                 }
                                 this._voiceQualityPeriodicStatsSequenceId++
@@ -14669,7 +14671,7 @@
                         var i;
                         let c = {
                                 environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                                build_number: "250188"
+                                build_number: "250192"
                             },
                             h = l.default.getCurrentUser();
                         null != h && (c.user_id = h.id, c.user_name = h.tag, null != h.email && (c.email = h.email));
