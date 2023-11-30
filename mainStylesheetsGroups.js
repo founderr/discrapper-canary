@@ -5955,8 +5955,7 @@
                 titleContainer: "titleContainer_faa17e",
                 titleImage: "titleImage__09f75",
                 tooltip: "tooltip__1a014",
-                unlockDiscountButton: "unlockDiscountButton__10cd2",
-                winterCategoryBanner: "winterCategoryBanner_d13ac3 categoryBanner_f3b247"
+                unlockDiscountButton: "unlockDiscountButton__10cd2"
             }
         },
         492666: function(e, t, o) {

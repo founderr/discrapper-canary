@@ -19469,8 +19469,8 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -83863,12 +83863,7 @@ input::-webkit-inner-spin-button {
 .categoryBanner_f3b247 {
     z-index: 0;
     position: absolute;
-    top: 0;
     right: 0;
-    background-position: right
-}
-
-.winterCategoryBanner_d13ac3 {
     background-position: center
 }
 
