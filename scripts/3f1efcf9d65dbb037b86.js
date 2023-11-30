@@ -7168,7 +7168,11 @@
                                 (u.isCollapsed || d.isCollapsed) && (t = es.HEIGHT_USER), r += t + es.HEIGHT_USER_PADDING
                             }
                         }
-                        if (s === u.id && i && (r += es.HEIGHT_HANG_STATUS), null != u.subtitle && (r += es.HEIGHT_CHANNEL_SUBTITLE), u.record.isGuildStageVoice()) {
+                        if (s === u.id && i && (r += es.HEIGHT_HANG_STATUS), null != u.subtitle) {
+                            let e = s === u.id && i ? 0 : es.HEIGHT_CHANNEL_SUBTITLE;
+                            r += e
+                        }
+                        if (u.record.isGuildStageVoice()) {
                             var c, f;
                             let e = null !== (c = l[u.id]) && void 0 !== c ? c : [],
                                 t = null !== (f = a[u.id]) && void 0 !== f ? f : [];

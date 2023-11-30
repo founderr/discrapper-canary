@@ -506,7 +506,7 @@
                                     className: p.children,
                                     children: V
                                 }) : null]
-                            }), null != G ? (0, C.jsx)("div", {
+                            }), null == H && null != G ? (0, C.jsx)("div", {
                                 className: p.linkBottom,
                                 children: (0, C.jsx)(u.Text, {
                                     color: null != x ? x : "text-muted",
