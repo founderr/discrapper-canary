@@ -15895,7 +15895,7 @@
                                     onClick: t,
                                     ...n
                                 } = e;
-                                return s.type === g.MessageTypes.CHAT_INPUT_COMMAND ? (0, a.jsx)(c.Clickable, {
+                                return s.type === g.MessageTypes.CHAT_INPUT_COMMAND || s.type === g.MessageTypes.INTERACTION_PREMIUM_UPSELL ? (0, a.jsx)(c.Clickable, {
                                     ...n,
                                     tag: "span",
                                     onClick: l,
