@@ -748,17 +748,17 @@
                     channel: _
                 } = e, T = null != n, {
                     canManageGuildEvent: S
-                } = (0, i.useManageResourcePermissions)(null != _ ? _ : f), [I, v] = (0, u.useStateFromStoresArray)([r.default], () => [r.default.isActive(t), r.default.getGuildScheduledEvent(t)]), g = (0, o.default)(n, null == v ? void 0 : v.id), N = null != v && S(v), m = (null == v ? void 0 : v.recurrence_rule) != null && !T, M = T && (null == g || !g.is_canceled), {
-                    startTime: C
+                } = (0, i.useManageResourcePermissions)(null != _ ? _ : f), [I, v] = (0, u.useStateFromStoresArray)([r.default], () => [r.default.isActive(t), r.default.getGuildScheduledEvent(t)]), g = (0, o.default)(n, null == v ? void 0 : v.id), N = null != v && S(v), m = (null == v ? void 0 : v.recurrence_rule) != null && !T, {
+                    startTime: M
                 } = (0, c.default)(t, n);
-                if (!N || I && !m && !T || T && !M || null == v) return null;
+                if (!N || I && !m && !T || T && !T || null == v) return null;
                 if (I && T) {
-                    var h;
-                    if (null == C) return null;
-                    let e = new Date(null !== (h = null == g ? void 0 : g.scheduled_start_time) && void 0 !== h ? h : C);
+                    var C;
+                    if (null == M) return null;
+                    let e = new Date(null !== (C = null == g ? void 0 : g.scheduled_start_time) && void 0 !== C ? C : M);
                     if (new Date > e) return null
                 }
-                let A = () => {
+                let h = () => {
                         if (null != n) {
                             if (null != g) s.default.updateGuildEventException({
                                 is_canceled: !0
@@ -772,13 +772,13 @@
                             }
                         }
                     },
-                    p = e => {
+                    A = e => {
                         (0, a.openModal)(n => (0, l.jsxs)(a.ConfirmModal, {
                             ...n,
                             header: E.default.Messages.GUILD_EVENT_DELETE_CONFIRM_HEADER,
                             confirmText: m || e ? E.default.Messages.DELETE_ALL_EVENTS : E.default.Messages.DELETE_EVENT,
                             cancelText: E.default.Messages.NEVERMIND,
-                            onConfirm: () => T && !e ? A() : s.default.deleteGuildEvent(t, f.id),
+                            onConfirm: () => T && !e ? h() : s.default.deleteGuildEvent(t, f.id),
                             children: [(0, l.jsx)(a.Text, {
                                 variant: "text-md/normal",
                                 children: E.default.Messages.GUILD_EVENT_DELETE_CONFIRM_BODY
@@ -791,18 +791,19 @@
                 return (0, l.jsx)(a.MenuItem, {
                     id: E.default.Messages.DELETE_EVENT,
                     label: E.default.Messages.DELETE_EVENT,
-                    action: T ? void 0 : () => p(),
+                    action: T ? void 0 : () => A(),
                     color: "danger",
                     children: T && (0, l.jsxs)(l.Fragment, {
                         children: [(0, l.jsx)(a.MenuItem, {
                             id: E.default.Messages.DELETE_THIS_EVENT,
                             label: E.default.Messages.DELETE_THIS_EVENT,
-                            action: () => p(),
+                            action: () => A(),
+                            disabled: null == g ? void 0 : g.is_canceled,
                             color: "danger"
                         }), (0, l.jsx)(a.MenuItem, {
                             id: E.default.Messages.DELETE_ALL_EVENTS_IN_SERIES,
                             label: E.default.Messages.DELETE_ALL_EVENTS_IN_SERIES,
-                            action: () => p(!0),
+                            action: () => A(!0),
                             color: "danger"
                         })]
                     })
@@ -836,7 +837,7 @@
                 } = e, {
                     canManageGuildEvent: T
                 } = (0, i.useManageResourcePermissions)(null != E ? E : c), S = (0, u.useStateFromStores)([d.default], () => d.default.getGuildScheduledEvent(t)), I = T(S), v = (0, s.default)(), g = (0, r.default)(f, null == S ? void 0 : S.id);
-                if (!I || null == S || (null == g ? void 0 : g.is_canceled)) return null;
+                if (!I || null == S) return null;
                 let N = null != S.recurrence_rule && !_,
                     m = e => {
                         (null == f || e) && !_ ? (0, a.openModalLazy)(async () => {
@@ -867,7 +868,8 @@
                         children: [(0, l.jsx)(a.MenuItem, {
                             id: o.default.Messages.EDIT_THIS_EVENT,
                             label: o.default.Messages.EDIT_THIS_EVENT,
-                            action: () => m(!1)
+                            action: () => m(!1),
+                            disabled: null == g ? void 0 : g.is_canceled
                         }), (0, l.jsx)(a.MenuItem, {
                             id: o.default.Messages.EDIT_ALL_EVENTS,
                             label: o.default.Messages.EDIT_ALL_EVENTS,
