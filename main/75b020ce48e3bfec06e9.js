@@ -977,9 +977,10 @@
                 l = i("427953");
 
             function d(t) {
-                let e = a.default.getChannel(t),
-                    i = (0, l.isActivitiesInTextEnabled)(e, "isVoiceActivityChannel");
-                return null != e && (e.type === n.ChannelTypes.GUILD_VOICE || e.isPrivate() && !i)
+                let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.default,
+                    i = e.getChannel(t),
+                    d = (0, l.isActivitiesInTextEnabled)(i, "isVoiceActivityChannel");
+                return null != i && (i.type === n.ChannelTypes.GUILD_VOICE || i.isPrivate() && !d)
             }
         },
         760850: function(t, e, i) {
