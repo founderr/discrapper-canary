@@ -761,6 +761,8 @@
                 let h = () => {
                         if (null != n) {
                             if (null != g) s.default.updateGuildEventException({
+                                scheduled_start_time: g.scheduled_start_time,
+                                scheduled_end_time: g.scheduled_end_time,
                                 is_canceled: !0
                             }, f.id, t, n);
                             else {

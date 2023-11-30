@@ -1,1260 +1,1131 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["4867"], {
-        53708: function(e, t, n) {
+    ["74970"], {
+        428958: function(e, t, l) {
             "use strict";
-            e.exports = n.p + "f6c7b8245d3a54cf98b2.png"
-        },
-        875212: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                useTriggerDebuggingAA: function() {
-                    return u
+            l.r(t), l.d(t, {
+                default: function() {
+                    return y
                 }
             });
-            var r = n("862205");
-            let i = (0, r.createExperiment)({
-                kind: "user",
-                id: "2023-09_trigger_debugging_aa",
-                label: "trigger debugging aa mobile",
-                defaultConfig: {
-                    inUse: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "On",
-                    config: {
-                        inUse: !0
-                    }
-                }]
+            var s = l("884691"),
+                u = l("714617"),
+                i = l.n(u),
+                n = l("995008"),
+                r = l.n(n),
+                a = l("759843"),
+                o = l("913144"),
+                h = l("42203"),
+                d = l("18494"),
+                c = l("162771"),
+                p = l("599110"),
+                _ = l("716241"),
+                f = l("939011");
+            let R = (0, a.trackMaker)({
+                analyticEventConfigs: p.AnalyticEventConfigs,
+                dispatcher: o.default,
+                TRACK_ACTION_NAME: "TRACK"
             });
 
-            function u(e) {
-                let {
-                    autoTrackExposure: t = !1,
-                    location: n
-                } = e;
-                return i.useExperiment({
-                    location: n
-                }, {
-                    autoTrackExposure: t
-                })
-            }
-        },
-        688318: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return _
-                }
-            }), n("222007");
-            var r = n("884691"),
-                i = n("446674"),
-                u = n("206230"),
-                o = n("91653"),
-                l = n("697218"),
-                a = n("471671"),
-                E = n("315102"),
-                s = n("53708"),
-                _ = e => {
-                    let {
-                        user: t,
-                        size: n,
-                        animateOnHover: _ = !1,
-                        showPending: c = !1,
-                        showTryItOut: T = !1,
-                        avatarDecorationOverride: d
-                    } = e, [S, A] = r.useState(!1), I = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion), f = (0, i.useStateFromStores)([a.default], () => a.default.isFocused()), C = (0, i.useStateFromStores)([l.default], () => {
-                        var e;
-                        return null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.id
-                    }), R = (0, i.useStateFromStores)([l.default], () => {
-                        var e;
-                        return null === (e = l.default.getUser(null == t ? void 0 : t.id)) || void 0 === e ? void 0 : e.avatarDecoration
-                    }), {
-                        pendingAvatarDecoration: N
-                    } = (0, o.default)({
-                        isTryItOut: T
-                    }), O = f && (S || !I && !_), v = c && void 0 !== N && void 0 !== C && C === (null == t ? void 0 : t.id) ? N : null != R ? R : null == t ? void 0 : t.avatarDecoration, g = r.useMemo(() => (0, E.getAvatarDecorationURL)({
-                        avatarDecoration: void 0 !== d ? d : v,
-                        canAnimate: O,
-                        size: n
-                    }), [v, O, n, d]), D = r.useCallback(() => A(!0), []), L = r.useCallback(() => A(!1), []);
-                    return {
-                        avatarPlaceholderSrc: s,
-                        avatarDecorationSrc: g,
-                        isAvatarDecorationAnimating: O,
-                        eventHandlers: {
-                            onMouseEnter: D,
-                            onMouseLeave: L
-                        }
-                    }
-                }
-        },
-        473591: function(e, t, n) {
-            "use strict";
-            let r, i, u, o, l, a;
-            n.r(t), n.d(t, {
-                default: function() {
-                    return R
-                }
-            });
-            var E = n("446674"),
-                s = n("913144");
-            let _ = !1,
-                c = !1,
-                T = null,
-                d = {},
-                S = {},
-                A = {},
-                I = {};
-
-            function f() {
-                r = void 0, i = void 0, u = void 0, o = void 0, l = void 0, T = null
-            }
-            class C extends E.default.Store {
-                getSettings(e) {
-                    if (null != e) return A[e]
-                }
-                getProfile(e) {
-                    return null == e ? null : d[e]
-                }
-                getGeneratedPersonality() {
-                    return a
-                }
-                getPendingPersonality() {
-                    return r
-                }
-                getPendingNick() {
-                    return i
-                }
-                getErrors() {
-                    return T
-                }
-                hasPendingChanges() {
-                    return void 0 !== r || void 0 !== i || void 0 !== u || void 0 !== o || void 0 !== l
-                }
-                getPendingUpdates() {
-                    return {
-                        pendingAvatar: u,
-                        pendingNick: i,
-                        pendingPersonality: r,
-                        pendingBanner: o,
-                        pendingThemeColors: l
-                    }
-                }
-                isSavingSettings() {
-                    return _
-                }
-                isFetchingSettings(e) {
-                    var t;
-                    return null === (t = I[e]) || void 0 === t ? void 0 : t.isFetching
-                }
-                shouldFetchSettings(e) {
-                    var t, n;
-                    let r = null !== (t = I[e]) && void 0 !== t ? t : {
-                            isFetching: !1
-                        },
-                        i = Date.now(),
-                        u = i - (null !== (n = r.lastFetchTimestampMs) && void 0 !== n ? n : 0) > 36e5;
-                    return !(null == r ? void 0 : r.isFetching) && u
-                }
-                isFetchingProfile(e) {
-                    var t;
-                    return null === (t = S[e]) || void 0 === t ? void 0 : t.isFetching
-                }
-                isEditingClydeProfile() {
-                    return c
-                }
-            }
-            C.displayName = "ClydeStore";
-            var R = new C(s.default, {
-                CLYDE_GUILD_SETTINGS_FETCH_START: function(e) {
-                    let {
-                        guildId: t
-                    } = e, n = I[t];
-                    I[t] = {
-                        isFetching: !0,
-                        lastFetchTimestampMs: null == n ? void 0 : n.lastFetchTimestampMs
-                    }
-                },
-                CLYDE_GUILD_SETTINGS_FETCH_SUCCESS: function(e) {
-                    let {
-                        guildId: t,
-                        settings: n
-                    } = e;
-                    I[t] = {
-                        isFetching: !1,
-                        lastFetchTimestampMs: Date.now()
-                    }, A[t] = n
-                },
-                CLYDE_GUILD_SETTINGS_FETCH_FAIL: function(e) {
-                    let {
-                        guildId: t
-                    } = e, n = I[t];
-                    I[t] = {
-                        isFetching: !1,
-                        lastFetchTimestampMs: null == n ? void 0 : n.lastFetchTimestampMs
-                    }
-                },
-                CLYDE_SET_PENDING_PERSONALITY: function(e) {
-                    let {
-                        personality: t,
-                        isGenerated: n
-                    } = e;
-                    r = t, n && (a = t)
-                },
-                CLYDE_SET_PENDING_NICK: function(e) {
-                    let {
-                        nick: t
-                    } = e;
-                    i = t
-                },
-                CLYDE_SET_PENDING_AVATAR: function(e) {
-                    let {
-                        avatar: t
-                    } = e;
-                    u = t
-                },
-                CLYDE_SET_PENDING_BANNER: function(e) {
-                    let {
-                        banner: t
-                    } = e;
-                    o = t
-                },
-                CLYDE_SET_PENDING_THEME_COLORS: function(e) {
-                    let {
-                        themeColors: t
-                    } = e;
-                    l = t
-                },
-                CLYDE_GUILD_SETTINGS_SAVE_START: function() {
-                    T = null, _ = !0
-                },
-                CLYDE_GUILD_SETTINGS_SAVE_SUCCESS: function(e) {
-                    let {
-                        settings: t
-                    } = e;
-                    _ = !1, A[t.guild_id] = t, f()
-                },
-                CLYDE_GUILD_SETTINGS_SAVE_FAIL: function(e) {
-                    _ = !1, T = e.errors
-                },
-                CLYDE_RESET_PENDING_CHANGES: f,
-                CLYDE_PROFILE_FETCH_START: function(e) {
-                    let {
-                        clydeProfileId: t
-                    } = e, n = S[t];
-                    S[t] = {
-                        isFetching: !0,
-                        lastFetchTimestampMs: null == n ? void 0 : n.lastFetchTimestampMs
-                    }
-                },
-                CLYDE_PROFILE_FETCH_SUCCESS: function(e) {
-                    let {
-                        profile: t
-                    } = e;
-                    S[t.clyde_profile_id] = {
-                        isFetching: !1,
-                        lastFetchTimestampMs: Date.now()
-                    }, d[t.clyde_profile_id] = t
-                },
-                CLYDE_PROFILE_FETCH_FAIL: function(e) {
-                    let {
-                        clydeProfileId: t
-                    } = e, n = S[t];
-                    S[t] = {
-                        isFetching: !1,
-                        lastFetchTimestampMs: null == n ? void 0 : n.lastFetchTimestampMs
-                    }
-                },
-                CLYDE_PROFILE_CREATE_SUCCESS: function(e) {
-                    let {
-                        profile: t
-                    } = e;
-                    d[t.clyde_profile_id] = t
-                },
-                CLYDE_PROFILE_EDITING_START: function() {
-                    c = !0
-                },
-                CLYDE_PROFILE_EDITING_END: function() {
-                    c = !1
-                }
-            })
-        },
-        853987: function(e, t, n) {
-            "use strict";
-            let r, i;
-            n.r(t), n.d(t, {
-                default: function() {
-                    return R
-                }
-            }), n("222007"), n("808653"), n("424973");
-            var u = n("917351"),
-                o = n("635058"),
-                l = n("446674"),
-                a = n("913144"),
-                E = n("491232");
-            let s = new Map,
-                _ = new Map,
-                c = {},
-                T = new Map,
-                d = s,
-                S = _,
-                A = c,
-                I = T,
-                f = !1;
-            class C extends l.default.Store {
-                get isFetching() {
-                    return f
-                }
-                get error() {
-                    return r
-                }
-                get lastFetched() {
-                    return i
-                }
-                get categories() {
-                    return d
-                }
-                get products() {
-                    return S
-                }
-                get categorySkuIdsByProductSkuId() {
-                    return A
-                }
-                get productsByItemTypeAndCategory() {
-                    return I
-                }
-                getCategory(e) {
-                    return null != e ? d.get(e) : void 0
-                }
-                getProduct(e) {
-                    return null != e ? S.get(e) : void 0
-                }
-                getCategoryForProduct(e) {
-                    return null != e ? this.getCategory(A[e]) : void 0
-                }
-                getProductsByItemType(e) {
-                    return null != e && o.CollectiblesCategorySkuIdSets.ALL.has(e) ? I.get(e) : void 0
-                }
-            }
-            C.displayName = "CollectiblesCategoryStore";
-            var R = new C(a.default, {
-                COLLECTIBLES_CATEGORIES_FETCH: e => {
-                    f = !0, r = void 0
-                },
-                COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: e => {
-                    0 === e.categories.length ? (d = s, S = _, A = c, I = T) : !(0, u.isEqual)([...d.values()], e.categories) && (d = new Map(e.categories.map(e => [e.skuId, e])), S = new Map((0, E.getProductsFromCategories)(d).map(e => [e.skuId, e])), A = e.categories.reduce((e, t) => (t.products.forEach(n => {
-                        e[n.skuId] = t.skuId
-                    }), e), {}), e.categories.forEach(e => {
-                        let t = e.products.reduce((e, t) => {
-                            if (t.items.length > 0) {
-                                var n;
-                                let r = t.items[0].type;
-                                e[r] = null !== (n = e[r]) && void 0 !== n ? n : [], e[r].push(t)
-                            }
-                            return e
-                        }, {});
-                        I.set(e.skuId, t)
-                    })), i = Date.now(), f = !1, r = void 0
-                },
-                COLLECTIBLES_CATEGORIES_FETCH_FAILURE: e => {
-                    let {
-                        error: t
-                    } = e;
-                    d = s, S = _, A = c, I = T, f = !1, r = t
-                },
-                COLLECTIBLES_PRODUCT_FETCH: e => {
-                    f = !0, r = void 0
-                },
-                COLLECTIBLES_PRODUCT_FETCH_SUCCESS: e => {
-                    S.set(e.product.skuId, e.product), f = !1, r = void 0
-                },
-                COLLECTIBLES_PRODUCT_FETCH_FAILURE: e => {
-                    let {
-                        error: t
-                    } = e;
-                    f = !1, r = t
-                },
-                LOGOUT: e => {
-                    d = s, S = _, A = c, I = T, i = void 0, f = !1, r = void 0
-                }
-            })
-        },
-        491232: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                isPremiumCollectiblesCategory: function() {
-                    return c
-                },
-                isPremiumCollectiblesPurchase: function() {
-                    return T
-                },
-                getFormattedPriceForCollectiblesProduct: function() {
-                    return d
-                },
-                extractPriceByPurchaseTypes: function() {
-                    return S
-                },
-                getProductsFromCategories: function() {
-                    return A
-                },
-                getAvatarDecorationsFromPurchases: function() {
-                    return C
-                },
-                getAvatarDecorationsFromCategories: function() {
-                    return R
-                },
-                getCollectiblesAssetURL: function() {
-                    return N
-                },
-                getProfileEffectsFromPurchases: function() {
-                    return O
-                },
-                getProfileEffectsFromCategories: function() {
-                    return v
-                },
-                groupProfileEffects: function() {
-                    return g
-                },
-                sortProfileEffectsByPopularity: function() {
-                    return F
-                },
-                sortAvatarDecorationsByPopularity: function() {
-                    return m
-                },
-                getCollectiblesGiftType: function() {
-                    return M
-                }
-            }), n("222007"), n("808653");
-            var r = n("917351"),
-                i = n("635058"),
-                u = n("265586"),
-                o = n("407063"),
-                l = n("153160"),
-                a = n("853987"),
-                E = n("730297"),
-                s = n("806410"),
-                _ = n("49111");
-            let c = e => (null == e ? void 0 : e.skuId) === i.CollectiblesCategorySkuId.DISXCORE,
-                T = e => (null == e ? void 0 : e.purchaseType) === _.EntitlementTypes.PREMIUM_PURCHASE,
-                d = (e, t) => {
-                    let n = S(e, t ? _.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2 : _.PriceSetAssignmentPurchaseTypes.DEFAULT);
-                    return null == n ? "" : (0, l.formatPrice)(null == n ? void 0 : n.amount, null == n ? void 0 : n.currency)
-                },
-                S = (e, t) => {
-                    var n, r, i;
-                    let u = null !== (i = e.prices[t]) && void 0 !== i ? i : null;
-                    return null == u ? null : null === (r = u.countryPrices) || void 0 === r ? void 0 : null === (n = r.prices) || void 0 === n ? void 0 : n[0]
-                },
-                A = e => {
-                    let t = (0, r.flatMap)([...e.values()], "products");
-                    return (0, r.uniqBy)(t, "storeListingId")
-                },
-                I = (e, t) => {
-                    if (t === u.CollectiblesItemType.AVATAR_DECORATION) {
-                        let t = (0, r.flatMap)([...e.values()], "items").filter(E.isAvatarDecorationRecord);
-                        return (0, r.uniqBy)(t, "id")
-                    }
-                    if (t === u.CollectiblesItemType.PROFILE_EFFECT) {
-                        let t = (0, r.flatMap)([...e.values()], "items").filter(s.isProfileEffectRecord);
-                        return (0, r.uniqBy)(t, "id")
-                    }
-                },
-                f = (e, t) => {
-                    let n = A(e);
-                    if (t === u.CollectiblesItemType.AVATAR_DECORATION) {
-                        let e = (0, r.flatMap)(n, "items").filter(E.isAvatarDecorationRecord);
-                        return (0, r.uniqBy)(e, "id")
-                    }
-                    if (t === u.CollectiblesItemType.PROFILE_EFFECT) {
-                        let e = (0, r.flatMap)(n, "items").filter(s.isProfileEffectRecord);
-                        return (0, r.uniqBy)(e, "id")
-                    }
-                },
-                C = e => I(e, u.CollectiblesItemType.AVATAR_DECORATION),
-                R = e => f(e, u.CollectiblesItemType.AVATAR_DECORATION),
-                N = (e, t) => {
-                    var n;
-                    let {
-                        CDN_HOST: r,
-                        API_ENDPOINT: i
-                    } = window.GLOBAL_ENV, u = (0, o.getBestMediaProxySize)(t.size * (0, o.getDevicePixelRatio)()), l = null !== (n = null == t ? void 0 : t.format) && void 0 !== n ? n : "png";
-                    if (null != r) return "".concat(location.protocol, "//").concat(r, "/app-assets/").concat(_.COLLECTIBLES_APPLICATION_ID, "/").concat(e, ".").concat(l, "?size=").concat(u);
-                    let a = _.Endpoints.APPLICATION_ASSET(_.COLLECTIBLES_APPLICATION_ID, e, l);
-                    return "".concat(location.protocol).concat(i).concat(a, "?size=").concat(u)
-                },
-                O = e => I(e, u.CollectiblesItemType.PROFILE_EFFECT),
-                v = e => f(e, u.CollectiblesItemType.PROFILE_EFFECT),
-                g = (e, t) => {
-                    let n = O(t),
-                        r = v(e).filter(e => {
-                            let {
-                                id: t
+            function y(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+                        disableTrack: !1,
+                        trackOnInitialLoad: !1
+                    },
+                    l = arguments.length > 2 ? arguments[2] : void 0,
+                    u = s.useRef(),
+                    n = s.useRef();
+                s.useEffect(() => {
+                    let s = !i(u.current, e);
+                    s && (u.current = e);
+                    let o = !i(n.current, l);
+                    if (o && (n.current = l), !s && !o) return;
+                    let y = {
+                        ...e,
+                        sequenceId: r("impression_")
+                    };
+                    return ! function(e) {
+                        var t, l;
+                        let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                            {
+                                name: u,
+                                type: i,
+                                properties: n
                             } = e;
-                            return !n.some(e => e.id === t)
-                        });
-                    return {
-                        purchased: n,
-                        shopPreviews: r
+                        if (e.type === a.ImpressionTypes.MODAL && null == e.name && (0, f.getImpressionStack)().some(e => {
+                                var t;
+                                return null === (t = e._stackContext) || void 0 === t ? void 0 : t.isSlide
+                            })) return;
+                        (0, f.setCurrentImpression)(e);
+                        let r = null !== (t = null == n ? void 0 : n.guild_id) && void 0 !== t ? t : c.default.getGuildId(),
+                            o = null !== (l = null == n ? void 0 : n.channel_id) && void 0 !== l ? l : d.default.getChannelId(r),
+                            y = (0, p.expandEventProperties)({
+                                impression_type: i,
+                                location: (0, f.getLocation)(),
+                                ...(0, _.collectGuildAnalyticsMetadata)(r),
+                                ...(0, _.collectChannelAnalyticsMetadata)(h.default.getChannel(o)),
+                                ...n
+                            });
+                        if (s) {
+                            (0, f.setDebugTrackedData)(null, null);
+                            return
+                        }
+                        null != u && null != i && ((0, p.debugLogEvent)(u, y), R(u, y)), (0, f.setDebugTrackedData)(u, y)
+                    }(y, t.disableTrack), () => {
+                        null != y && (0, f.cleanupImpression)(y)
                     }
-                },
-                D = (e, t, n) => (e[t] = n, e),
-                L = e => (t, n) => {
-                    var r, i;
-                    let u = null !== (r = e[t.skuId]) && void 0 !== r ? r : Number.MAX_VALUE,
-                        o = null !== (i = e[n.skuId]) && void 0 !== i ? i : Number.MAX_VALUE;
-                    return u - o
-                },
-                P = ["1146328960951668776", "1146328961417224193", "1139323093991575696", "1139323099687436419", "1139323092645183591", "1139323093551165533", "1139323101881061466", "1139323100568244355", "1139323101008642101", "1139323099251232828", "1139323095744790568", "1139323096180994169"].reduce(D, {}),
-                U = ["1174460780842856588", "1174459546748600481", "1174459480348565554", "1174459415924064376", "1154896005045694555", "1144307957425778779", "1144308439720394944", "1144307629225672846", "1144308196723408958", "1144046002110738634", "1144305233707671573", "1144307257807491094", "1144056139584127058", "1144006094134456352", "1144057023726628945", "1144003752978829455", "1144056631374647458", "1144057486203158560", "1144048390594908212", "1144048977138946230", "1144057737475534889", "1144049603109470370", "1144057249392771145", "1144049316009353338", "1144049924397334651"].reduce(D, {}),
-                F = e => e.sort(L(P)),
-                m = e => e.sort(L(U)),
-                p = e => {
-                    let t = a.default.getProduct(e.skuId);
-                    if (null == t) return !1;
-                    let [n] = t.items;
-                    return n.type === u.CollectiblesItemType.AVATAR_DECORATION
-                },
-                G = e => {
-                    let t = a.default.getProduct(e.skuId);
-                    if (null == t) return !1;
-                    let [n] = t.items;
-                    return n.type === u.CollectiblesItemType.PROFILE_EFFECT
-                },
-                M = e => null == e ? null : p(e) ? u.CollectiblesItemType.AVATAR_DECORATION : G(e) ? u.CollectiblesItemType.PROFILE_EFFECT : null
-        },
-        170313: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return c
-                }
-            }), n("222007"), n("794252");
-            var r = n("884691"),
-                i = n("506838"),
-                u = n("265586"),
-                o = n("65597"),
-                l = n("599110"),
-                a = n("853987"),
-                E = n("491232"),
-                s = n("49111"),
-                _ = n("646718"),
-                c = e => {
-                    let [t, n, c] = (0, o.useStateFromStoresArray)([a.default], () => [a.default.categories, a.default.products, a.default.categorySkuIdsByProductSkuId]);
-                    return (0, r.useCallback)(r => {
-                        let {
-                            type: o,
-                            skuId: a
-                        } = r, T = t.get(c[a]), d = n.get(a);
-                        l.default.track(s.AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, {
-                            feature_name: (0, i.match)(o).with(u.CollectiblesItemType.AVATAR_DECORATION, () => _.AnalyticsPremiumFeatureNames.AVATAR_DECORATION).otherwise(() => void 0),
-                            feature_tier: (0, E.isPremiumCollectiblesCategory)(T) ? _.AnalyticsPremiumFeatureTiers.FREE : _.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD,
-                            feature_selection: null == d ? void 0 : d.name,
-                            location_stack: e
-                        })
-                    }, [t, n, c, e])
-                }
-        },
-        730297: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                isAvatarDecorationRecord: function() {
-                    return o
-                },
-                default: function() {
-                    return r
-                }
-            });
-            var r, i = n("265586"),
-                u = n("200410");
-            let o = e => e instanceof r;
-            r = class e extends u.default {
-                static fromServer(t) {
-                    return new e({
-                        ...super.fromServer(t),
-                        ...t
-                    })
-                }
-                constructor(e) {
-                    super(e), this.type = i.CollectiblesItemType.AVATAR_DECORATION, this.asset = e.asset, this.label = e.label
-                }
+                }, t.trackOnInitialLoad ? [] : void 0)
             }
         },
-        200410: function(e, t, n) {
+        337575: function(e, t, l) {
             "use strict";
-            n.r(t), n.d(t, {
+            l.r(t), l.d(t, {
                 default: function() {
-                    return r
-                }
-            });
-            var r, i = n("666038");
-            r = class e extends i.default {
-                static fromServer(t) {
-                    let {
-                        sku_id: n,
-                        ...r
-                    } = t;
-                    return new e({
-                        ...r,
-                        skuId: n
-                    })
-                }
-                constructor(e) {
-                    super(), this.id = e.id, this.skuId = e.skuId
-                }
-            }
-        },
-        806410: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                isProfileEffectRecord: function() {
-                    return o
-                },
-                default: function() {
-                    return r
-                }
-            });
-            var r, i = n("265586"),
-                u = n("200410");
-            let o = e => e instanceof r;
-            r = class e extends u.default {
-                static fromServer(t) {
-                    return new e({
-                        ...super.fromServer(t),
-                        ...t
-                    })
-                }
-                constructor(e) {
-                    super(e), this.type = i.CollectiblesItemType.PROFILE_EFFECT
-                }
-            }
-        },
-        75015: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                UploadTypes: function() {
-                    return u
-                },
-                EDITING_CONTAINER_WIDTH: function() {
-                    return a
-                },
-                USER_BANNER_MAX_WIDTH: function() {
-                    return E
-                },
-                USER_BANNER_MAX_HEIGHT: function() {
                     return s
-                },
-                GUILD_BANNER_MAX_WIDTH: function() {
-                    return _
-                },
-                GUILD_BANNER_MAX_HEIGHT: function() {
-                    return c
-                },
-                SCHEDULED_EVENT_IMAGE_MAX_WIDTH: function() {
-                    return T
-                },
-                SCHEDULED_EVENT_IMAGE_MAX_HEIGHT: function() {
-                    return d
-                },
-                HOME_HEADER_MAX_WIDTH: function() {
-                    return S
-                },
-                HOME_HEADER_MAX_HEIGHT: function() {
-                    return A
-                },
-                BANNER_ASPECT_RATIO: function() {
-                    return I
-                },
-                GUILD_BANNER_ASPECT_RATIO: function() {
-                    return f
-                },
-                SCHEDULED_EVENT_IMAGE_ASPECT_RATIO: function() {
-                    return C
-                },
-                HOME_HEADER_ASPECT_RATIO: function() {
-                    return R
-                },
-                MAX_BANNER_OVERLAY_HEIGHT: function() {
-                    return N
-                },
-                MAX_GUILD_BANNER_OVERLAY_HEIGHT: function() {
-                    return O
-                },
-                MAX_SCHEDULED_EVENT_IMAGE_OVERLAY_HEIGHT: function() {
-                    return v
-                },
-                MAX_HOME_HEADER_OVERLAY_HEIGHT: function() {
-                    return g
-                },
-                VIDEO_BACKGROUND_ASPECT_RATIO: function() {
-                    return D
-                },
-                MAX_VIDEO_OVERLAY_HEIGHT: function() {
-                    return L
-                },
-                MessageTypes: function() {
-                    return o
                 }
-            });
-            var r, i, u, o, l = n("917219");
-            (r = u || (u = {}))[r.AVATAR = 0] = "AVATAR", r[r.BANNER = 1] = "BANNER", r[r.GUILD_BANNER = 2] = "GUILD_BANNER", r[r.VIDEO_BACKGROUND = 3] = "VIDEO_BACKGROUND", r[r.SCHEDULED_EVENT_IMAGE = 4] = "SCHEDULED_EVENT_IMAGE", r[r.HOME_HEADER = 5] = "HOME_HEADER", r[r.AVATAR_DECORATION = 6] = "AVATAR_DECORATION";
-            let a = 568,
-                E = 2400,
-                s = 848,
-                _ = 2400,
-                c = 1350,
-                T = 2400,
-                d = 960,
-                S = 2400,
-                A = 600,
-                I = 17 / 6,
-                f = 16 / 9,
-                C = 2.5,
-                R = 4,
-                N = a / I,
-                O = a / f,
-                v = a / C,
-                g = a / R,
-                D = l.BACKGROUND_REPLACEMENT_SIZE.width / l.BACKGROUND_REPLACEMENT_SIZE.height,
-                L = a / D;
-            (i = o || (o = {}))[i.CROP_GIF_START = 0] = "CROP_GIF_START", i[i.CROP_GIF_COMPLETE = 1] = "CROP_GIF_COMPLETE", i[i.CROP_GIF_ERROR = 2] = "CROP_GIF_ERROR"
-        },
-        737403: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                maybeOpenProfilePreviewModal: function() {
-                    return i
-                }
-            });
-            var r = n("913144");
-
-            function i(e) {
-                let {
-                    imageSrc: t,
-                    file: n,
-                    uploadType: i,
-                    guildId: u,
-                    isTryItOutFlow: o = !1
-                } = e;
-                r.default.dispatch({
-                    type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL",
-                    imageSrc: t,
-                    file: n,
-                    uploadType: i,
-                    guildId: u,
-                    isTryItOutFlow: o
-                })
-            }
-        },
-        453252: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                MAX_IMAGE_UPLOAD_FILESIZE_BYTES: function() {
-                    return r
-                }
-            });
-            let r = 10485760
-        },
-        771325: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                handleOpenSelectImageModal: function() {
-                    return d
-                },
-                showFileSizeErrorModal: function() {
-                    return S
-                },
-                getPreviewAvatar: function() {
-                    return A
-                },
-                getPreviewNickname: function() {
-                    return I
-                },
-                getPreviewDisplayName: function() {
-                    return f
-                },
-                isColorDark: function() {
-                    return C
-                }
-            });
-            var r = n("37983");
-            n("884691");
-            var i = n("509043"),
-                u = n("77078"),
-                o = n("336522"),
-                l = n("473591"),
-                a = n("315102"),
-                E = n("254490"),
-                s = n("737403"),
-                _ = n("453252"),
-                c = n("75015"),
-                T = n("782340");
-
-            function d(e, t, i, o) {
-                (0, u.openModalLazy)(async () => {
-                    let {
-                        default: u
-                    } = await n.el("420333").then(n.bind(n, "420333")), a = l.default.isEditingClydeProfile();
-                    return n => (0, r.jsx)(u, {
-                        filters: o,
-                        maxFileSizeBytes: _.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
-                        imageSpecifications: e === c.UploadTypes.BANNER && T.default.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
-                        onComplete: (n, r) => (0, s.maybeOpenProfilePreviewModal)({
-                            imageSrc: n,
-                            file: r,
-                            uploadType: e,
-                            guildId: t,
-                            isTryItOutFlow: i
-                        }),
-                        uploadType: e,
-                        showUpsellHeader: !a,
-                        ...n
-                    })
-                })
-            }
-
-            function S() {
-                (0, o.openUploadError)({
-                    title: T.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-                    help: T.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-                        maxSize: (0, E.sizeString)(_.MAX_IMAGE_UPLOAD_FILESIZE_BYTES)
-                    })
-                })
-            }
-
-            function A(e, t, n) {
-                let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-                if (null != e) return e;
-                let {
-                    size: i = 80,
-                    canAnimate: u = !0
-                } = r, o = null === e;
-                return o && null == t ? a.default.getDefaultAvatarURL(n.id, n.discriminator) : o || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, i, u) : n.getAvatarURL(null == t ? void 0 : t.guildId, i, u)
-            }
+            }), l("808653"), l("222007"), l("781738"), l("506083"), l("511434"), l("313619"), l("654714"), l("287168"), l("956660"), l("424973");
+            var s, u = l("917351"),
+                i = l.n(u),
+                n = l("132710"),
+                r = l.n(n),
+                a = l("872173"),
+                o = l("233069"),
+                h = l("813006"),
+                d = l("741347"),
+                c = l("42203"),
+                p = l("319781"),
+                _ = l("923959"),
+                f = l("27618"),
+                R = l("697218"),
+                y = l("25292"),
+                E = l("651879"),
+                C = l("253981"),
+                g = l("447909"),
+                T = l("195547"),
+                m = l("375822"),
+                A = l("49111");
+            let U = Object.freeze({});
 
             function I(e, t) {
-                return "" === e ? null : null != e ? e : t
-            }
-
-            function f(e, t) {
-                return "" === e ? null : null != e ? e : t
-            }
-
-            function C(e) {
-                let t = null != e ? (0, i.getDarkness)(e) : 1;
-                return t > .25
-            }
-        },
-        91653: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return s
+                var l, s;
+                if (!t.frecencyBoosters) return {};
+                let u = p.default.getFrequentlyWithoutFetchingLatest(),
+                    i = u.reduce((e, t) => {
+                        let {
+                            id: l
+                        } = t, s = p.default.getScoreWithoutFetchingLatest(l);
+                        return s > e ? s : e
+                    }, 0),
+                    n = [];
+                switch (e) {
+                    case m.AutocompleterResultTypes.GUILD:
+                        n = u.filter(e => e instanceof h.default);
+                        break;
+                    case m.AutocompleterResultTypes.USER:
+                        n = u.filter(e => e instanceof o.ChannelRecordBase && e.type === A.ChannelTypes.DM);
+                        break;
+                    case m.AutocompleterResultTypes.GROUP_DM:
+                        n = u.filter(e => e instanceof o.ChannelRecordBase && e.isMultiUserDM());
+                        break;
+                    case m.AutocompleterResultTypes.TEXT_CHANNEL:
+                        n = u.filter(e => e instanceof o.ChannelRecordBase && (0, o.isGuildSelectableChannelType)(e.type));
+                        break;
+                    case m.AutocompleterResultTypes.VOICE_CHANNEL:
+                        n = u.filter(e => e instanceof o.ChannelRecordBase && e.isGuildVocal())
                 }
-            });
-            var r = n("884691"),
-                i = n("65597"),
-                u = n("170313"),
-                o = n("906932"),
-                l = n("790618"),
-                a = n("697218"),
-                E = n("783142"),
-                s = e => {
+                let r = {};
+                for (let t of n) {
                     let {
-                        isTryItOut: t,
-                        analyticsLocations: n
-                    } = e, s = (0, i.default)([a.default], () => a.default.getCurrentUser()), _ = (0, u.default)(n), {
-                        pendingAvatar: c,
-                        pendingAvatarDecoration: T
-                    } = (0, i.useStateFromStoresObject)([l.default], () => ({
-                        pendingAvatar: t ? l.default.getTryItOutAvatar() : l.default.getPendingAvatar(),
-                        pendingAvatarDecoration: t ? l.default.getTryItOutAvatarDecoration() : l.default.getPendingAvatarDecoration()
-                    })), d = (0, r.useCallback)(e => (0, o.setNewPendingAvatar)(e, null == s ? void 0 : s.avatar), [null == s ? void 0 : s.avatar]), S = (0, r.useCallback)(e => {
-                        (0, o.setNewPendingAvatarDecoration)(e, null == s ? void 0 : s.avatarDecoration), null != e && _(e)
-                    }, [null == s ? void 0 : s.avatarDecoration, _]);
-                    return {
-                        pendingAvatar: c,
-                        pendingAvatarDecoration: T,
-                        setPendingAvatar: t ? E.setTryItOutAvatar : d,
-                        setPendingAvatarDecoration: t ? E.setTryItOutAvatarDecoration : S
-                    }
+                        id: l
+                    } = t, s = p.default.getScoreWithoutFetchingLatest(l);
+                    if (e === m.AutocompleterResultTypes.USER && t instanceof o.PrivateChannelRecord) {
+                        if (t.type === A.ChannelTypes.DM) r[l = t.getRecipientId()] = 1 + s / i;
+                        else if (t.type === A.ChannelTypes.GROUP_DM) {
+                            let e = t.recipients.length;
+                            for (let l of t.recipients) r[l] = 1 + s / i * (1 / e)
+                        }
+                    } else r[l] = 1 + s / i
                 }
+                let a = f.default.getFriendIDs();
+                for (let e of a) r[e] = (null !== (l = r[e]) && void 0 !== l ? l : 1) + .2;
+                let d = c.default.getDMUserIds();
+                for (let e of d) r[e] = (null !== (s = r[e]) && void 0 !== s ? s : 1) + .1;
+                return r
+            }
+            s = class {
+                createSearchContext() {
+                    null == this.userSearchContext && (this.userSearchContext = g.default.getSearchContext(this.parseUserResults, this._limit))
+                }
+                setLimit(e) {
+                    let {
+                        userSearchContext: t
+                    } = this;
+                    this._limit = e, null != t && t.setLimit(e), this._userResults.length > this._limit && (this._userResults.length = this._limit), this._groupDMResults.length > this._limit && (this._groupDMResults.length = this._limit), this._textChannelResults.length > this._limit && (this._textChannelResults.length = this._limit), this._voiceChannelResults.length > this._limit && (this._voiceChannelResults.length = this._limit), this._guildResults.length > this._limit && (this._guildResults.length = this._limit), this._applicationResults.length > this._limit && (this._applicationResults.length = this._limit), this._linkResults.length > this._limit && (this._linkResults.length = this._limit)
+                }
+                setResultTypes(e) {
+                    this.resultTypes = null != e ? new Set(e) : null, this._userResults = this._include(m.AutocompleterResultTypes.USER) ? this._userResults : [], this._groupDMResults = this._include(m.AutocompleterResultTypes.GROUP_DM) ? this._groupDMResults : [], this._textChannelResults = this._include(m.AutocompleterResultTypes.TEXT_CHANNEL) ? this._textChannelResults : [], this._voiceChannelResults = this._include(m.AutocompleterResultTypes.VOICE_CHANNEL) ? this._voiceChannelResults : [], this._guildResults = this._include(m.AutocompleterResultTypes.GUILD) ? this._guildResults : [], this._applicationResults = this._include(m.AutocompleterResultTypes.APPLICATION) ? this._applicationResults : [], this._linkResults = this._include(m.AutocompleterResultTypes.LINK) ? this._linkResults : []
+                }
+                _include(e) {
+                    return null == this.resultTypes || this.resultTypes.has(e)
+                }
+                _isAsyncSearch() {
+                    return this._include(m.AutocompleterResultTypes.USER)
+                }
+                setOptions(e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                    t ? this.options = {
+                        ...this.options,
+                        ...e
+                    } : this.options = e, null != this.options.blacklist ? this._userBlacklist = Array.from(this.options.blacklist).map(e => e.startsWith("user:") ? e.replace("user:", "") : "").filter(e => "" !== e) : this._userBlacklist = null
+                }
+                search(e, t) {
+                    if (this.query = e, "" === e.trim()) {
+                        this.clear(), this.updateAllResults();
+                        return
+                    }
+                    let l = this.options.frecencyBoosters ? a.FrecencyUserSettingsActionCreators.loadIfNecessary() : Promise.resolve();
+                    l.finally(() => {
+                        this.queryUsers(e, t, this._limit), this._groupDMResults = this.queryGroupDMs(e, this._limit), this._textChannelResults = this.queryTextChannels(e, this._limit), this._voiceChannelResults = this.queryVoiceChannels(e, this._limit), this._guildResults = this.queryGuilds(e, this._limit), this._applicationResults = this.queryApplications(e, this._limit), this._linkResults = this.queryLink(e, this._limit), this._isAsyncSearch() ? (clearTimeout(this._asyncTimeout), this._asyncTimeout = setTimeout(this.updateAllResults, 300)) : this.updateAllResults()
+                    })
+                }
+                clear() {
+                    let {
+                        userSearchContext: e
+                    } = this;
+                    null != e && e.clearQuery(), this.results = [], this._userResults = [], this._groupDMResults = [], this._textChannelResults = [], this._voiceChannelResults = [], this._guildResults = [], this._applicationResults = [], this._linkResults = []
+                }
+                clean() {
+                    this.clear(), this.destroy(), this.query = "", this.updateAllResults()
+                }
+                pause() {
+                    var e, t;
+                    null === (t = this.userSearchContext) || void 0 === t || null === (e = t.unsubscribe) || void 0 === e || e.call(t)
+                }
+                resume() {
+                    var e, t;
+                    null === (t = this.userSearchContext) || void 0 === t || null === (e = t.subscribe) || void 0 === e || e.call(t)
+                }
+                destroy() {
+                    let {
+                        userSearchContext: e
+                    } = this;
+                    null != e && (e.destroy(), this.userSearchContext = null)
+                }
+                queryTextChannels(e, t) {
+                    if (!this._include(m.AutocompleterResultTypes.TEXT_CHANNEL)) return [];
+                    let l = I(m.AutocompleterResultTypes.TEXT_CHANNEL, this.options),
+                        {
+                            blacklist: s
+                        } = this.options;
+                    return y.default.queryChannels({
+                        query: e,
+                        guildId: null,
+                        limit: t,
+                        fuzzy: !0,
+                        filter: null != s ? e => !s.has("channel:".concat(e.id)) : void 0,
+                        boosters: l
+                    })
+                }
+                queryVoiceChannels(e, t) {
+                    if (!this._include(m.AutocompleterResultTypes.VOICE_CHANNEL)) return [];
+                    let {
+                        voiceChannelGuildFilter: l
+                    } = this.options, s = I(m.AutocompleterResultTypes.VOICE_CHANNEL, this.options);
+                    return y.default.queryChannels({
+                        query: e,
+                        guildId: l,
+                        limit: t,
+                        fuzzy: !0,
+                        type: _.GUILD_VOCAL_CHANNELS_KEY,
+                        boosters: s
+                    })
+                }
+                queryGuilds(e, t) {
+                    if (!this._include(m.AutocompleterResultTypes.GUILD)) return [];
+                    let l = I(m.AutocompleterResultTypes.GUILD, this.options),
+                        {
+                            blacklist: s
+                        } = this.options;
+                    return y.default.queryGuilds({
+                        query: e,
+                        limit: t,
+                        fuzzy: !0,
+                        filter: null != s ? e => !s.has("guild:".concat(e.id)) : void 0,
+                        boosters: l
+                    })
+                }
+                queryUsers(e, t, l) {
+                    let {
+                        userSearchContext: s
+                    } = this;
+                    if (null == s || !this._include(m.AutocompleterResultTypes.USER)) return;
+                    let {
+                        userFilters: u
+                    } = this.options;
+                    void 0 !== t && E.default.requestMembers(t, e, 100), s.setLimit(l), s.setQuery(e, u, this._userBlacklist, I(m.AutocompleterResultTypes.USER, this.options))
+                }
+                queryGroupDMs(e, t) {
+                    if (!this._include(m.AutocompleterResultTypes.GROUP_DM)) return [];
+                    let {
+                        blacklist: l
+                    } = this.options, s = I(m.AutocompleterResultTypes.GROUP_DM, this.options);
+                    return y.default.queryGroupDMs({
+                        query: e,
+                        limit: t,
+                        fuzzy: !0,
+                        filter: null != l ? e => !l.has("channel:".concat(e.id)) : void 0,
+                        boosters: s
+                    })
+                }
+                queryApplications(e, t) {
+                    return this._include(m.AutocompleterResultTypes.APPLICATION) ? y.default.queryApplications({
+                        query: e,
+                        limit: t,
+                        fuzzy: !0
+                    }) : []
+                }
+                queryLink(e, t) {
+                    let l;
+                    if (!this._include(m.AutocompleterResultTypes.LINK)) return [];
+                    let s = r.sanitizeUrl(e);
+                    try {
+                        l = new URL(s)
+                    } catch (e) {
+                        return []
+                    }
+                    let {
+                        pathname: u,
+                        hostname: i = "",
+                        host: n
+                    } = l, a = C.default.isDiscordHostname(i) || window.location.host === n;
+                    return null !== u && a && C.default.isAppRoute(u) ? [{
+                        type: m.AutocompleterResultTypes.LINK,
+                        record: d.default.fromPath(u),
+                        score: 1
+                    }] : []
+                }
+                constructor(e, t, l = 100, s = U) {
+                    this.query = "", this.options = U, this.results = [], this._userResults = [], this._groupDMResults = [], this._textChannelResults = [], this._voiceChannelResults = [], this._guildResults = [], this._applicationResults = [], this._linkResults = [], this._userBlacklist = null, this.parseUserResults = e => {
+                        let {
+                            results: t
+                        } = e;
+                        if (this._include(m.AutocompleterResultTypes.USER)) {
+                            for (let {
+                                    id: e,
+                                    score: l,
+                                    comparator: s
+                                }
+                                of(this._userResults = [], t)) {
+                                let t = R.default.getUser(e);
+                                null != t && this._userResults.push({
+                                    type: m.AutocompleterResultTypes.USER,
+                                    record: t,
+                                    score: function() {
+                                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+                                            t = arguments.length > 1 ? arguments[1] : void 0;
+                                        return 1e3 * e * (null != t ? t : 1)
+                                    }(l),
+                                    comparator: null != s ? s : void 0
+                                })
+                            }
+                            this._userResults.length > this._limit && (this._userResults.length = this._limit), this.updateAllResults()
+                        }
+                    }, this.updateAllResults = () => {
+                        clearTimeout(this._asyncTimeout), this.results = i([...this._userResults, ...this._groupDMResults, ...this._textChannelResults, ...this._voiceChannelResults, ...this._guildResults, ...this._linkResults]).uniqBy(e => "".concat(e.type, "-").concat(e.record.id)).sort(T.default).value(), this.onResultsChange(this.results, this.query)
+                    }, this.onResultsChange = e, this.setOptions(s, !0), this._limit = l, this.createSearchContext(), this.setResultTypes(t)
+                }
+            }
         },
-        106435: function(e, t, n) {
+        447909: function(e, t, l) {
             "use strict";
-            n.r(t), n.d(t, {
+            l.r(t), l.d(t, {
+                SearchContext: function() {
+                    return g
+                },
                 default: function() {
-                    return a
+                    return m
                 }
-            });
-            var r = n("884691"),
-                i = n("77078"),
-                u = n("606292"),
-                o = n("688318"),
-                l = n("19287");
+            }), l("424973"), l("511434"), l("313619"), l("654714"), l("287168"), l("956660"), l("222007"), l("70102"), l("854508"), l("881410");
+            var s, u, i = l("917351"),
+                n = l.n(i),
+                r = l("748820"),
+                a = l("689988"),
+                o = l("233069"),
+                h = l("42203"),
+                d = l("26989"),
+                c = l("27618"),
+                p = l("697218"),
+                _ = l("449008"),
+                f = l("158998");
 
-            function a(e) {
+            function R(e) {
+                if (null == e || c.default.isBlocked(e.id)) return null;
+                let t = {
+                    id: e.id,
+                    username: "0" !== e.discriminator ? "".concat(e.username, "#").concat(e.discriminator) : e.username
+                };
+                return null != f.default.getGlobalName(e) && (t.globalName = e.globalName), e.bot && (t.isBot = !0), c.default.isFriend(e.id) && (t.isFriend = !0, t.friendNickname = c.default.getNickname(e.id)), t
+            }
+
+            function y(e, t, l) {
+                null != e && (e[t] = null != l && "" !== l ? l : null)
+            }
+
+            function E(e) {
+                let t = [];
+                if (null == e || !(0, o.isPrivate)(e.type)) return t;
                 let {
-                    user: t,
-                    guildId: n,
-                    size: a,
-                    showPending: E = !1,
-                    showTryItOut: s = !1,
-                    animateOnHover: _ = !1,
-                    avatarDecorationOverride: c,
-                    avatarOverride: T
-                } = e, {
-                    avatarSrc: d,
-                    isAvatarAnimating: S,
-                    eventHandlers: A
-                } = (0, l.useAnimatedAvatarSrc)({
-                    user: t,
-                    guildId: n,
-                    size: (0, i.getAvatarSize)(a),
-                    showPending: E,
-                    animateOnHover: _,
-                    avatarOverride: T
-                }), {
-                    avatarPlaceholderSrc: I,
-                    avatarDecorationSrc: f,
-                    eventHandlers: C
-                } = (0, o.default)({
-                    user: t,
-                    size: (0, u.getDecorationSizeForAvatarSize)(a),
-                    showPending: E,
-                    animateOnHover: _,
-                    avatarDecorationOverride: c,
-                    showTryItOut: s
-                }), R = r.useCallback(() => {
-                    A.onMouseEnter(), C.onMouseEnter()
-                }, [A, C]), N = r.useCallback(() => {
-                    A.onMouseLeave(), C.onMouseLeave()
-                }, [A, C]);
-                return {
-                    avatarPlaceholderSrc: I,
-                    avatarDecorationSrc: f,
-                    avatarSrc: d,
-                    isAnimating: S,
-                    eventHandlers: {
-                        onMouseEnter: R,
-                        onMouseLeave: N
+                    recipients: l = []
+                } = e;
+                return l.forEach(l => {
+                    let s = R(p.default.getUser(l));
+                    null != e && y(s, e.id), t.push(s)
+                }), t
+            }
+
+            function C(e, t) {
+                let l = [];
+                return e.forEach(e => {
+                    let s = R(e.user);
+                    null != s && (y(s, t, e.nick), l.push(s))
+                }), l
+            }(u = s || (s = {})).UPDATE_USERS = "UPDATE_USERS", u.USER_RESULTS = "USER_RESULTS", u.QUERY_SET = "QUERY_SET", u.QUERY_CLEAR = "QUERY_CLEAR";
+            class g {
+                setLimit(e) {
+                    this._limit = e, null != this._nextQuery && (this._nextQuery.limit = e)
+                }
+                subscribe() {
+                    null != this._worker && !this._subscribed && (this._worker.addEventListener("message", this.handleMessages, !1), this._subscribed = !0, this._setNextQuery())
+                }
+                unsubscribe() {
+                    null != this._worker && this._subscribed && (this._worker.removeEventListener("message", this.handleMessages, !1), this._subscribed = !1)
+                }
+                destroy() {
+                    this.clearQuery(), this.unsubscribe()
+                }
+                clearQuery() {
+                    this._currentQuery = !1, this._nextQuery = null, null != this._worker && this._subscribed && this._worker.postMessage({
+                        uuid: this._uuid,
+                        type: "QUERY_CLEAR"
+                    })
+                }
+                setQuery(e, t, l, s) {
+                    null != e && (this._nextQuery = {
+                        query: e,
+                        filters: t,
+                        blacklist: l,
+                        boosters: null != s ? s : {},
+                        limit: this._limit
+                    }, this._setNextQuery())
+                }
+                _setNextQuery() {
+                    (null == this._currentQuery || !1 === this._currentQuery) && null != this._nextQuery && (null != this._worker && this._subscribed ? (this._currentQuery = this._nextQuery, this._nextQuery = null, this._worker.postMessage({
+                        uuid: this._uuid,
+                        type: "QUERY_SET",
+                        payload: this._currentQuery
+                    })) : !this._subscribed && this.subscribe())
+                }
+                constructor(e, t, l = 10) {
+                    this.handleMessages = e => {
+                        let t = e.data;
+                        null != t && "USER_RESULTS" === t.type && t.uuid === this._uuid && (!1 !== this._currentQuery && this._callback(t.payload), null != this._currentQuery && (this._currentQuery = null), this._setNextQuery())
+                    }, this._worker = e, this._uuid = (0, r.v4)(), this._callback = t, this._limit = l, this._currentQuery = null, this._nextQuery = null, this._subscribed = !1, this.subscribe()
+                }
+            }
+            class T extends a.default {
+                _initialize() {
+                    this.rebootWebworker()
+                }
+                _terminate() {
+                    null != this._worker && (this._worker.terminate(), this._worker = null)
+                }
+                rebootWebworker() {
+                    null != this._worker && (this._worker.terminate(), this._worker = null), this._worker = new Worker(new URL(l.p + l.u("76730"), l.b))
+                }
+                updateUsers(e) {
+                    let {
+                        _worker: t
+                    } = this;
+                    null != t && (e = e.filter(_.isNotNullish), t.postMessage({
+                        type: "UPDATE_USERS",
+                        payload: e
+                    }))
+                }
+                getSearchContext(e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+                    this.initialize();
+                    let {
+                        _worker: l
+                    } = this;
+                    if (null == l) throw Error("SearchContextManager: No webworker initialized");
+                    return new g(l, e, t)
+                }
+                constructor(...e) {
+                    super(...e), this.actions = {
+                        LOGOUT: () => this._handleLogout(),
+                        POST_CONNECTION_OPEN: () => this._handleConnectionOpen(),
+                        CONNECTION_OPEN_SUPPLEMENTAL: e => this._handleConnectionOpenSupplemental(e),
+                        OVERLAY_INITIALIZE: e => this._handleOverlayInitialize(e),
+                        CURRENT_USER_UPDATE: e => this._handleCurrentUserUpdate(e),
+                        GUILD_CREATE: e => this._handleGuildCreate(e),
+                        GUILD_MEMBERS_CHUNK: e => this._handleGuildMembersChunk(e),
+                        GUILD_MEMBER_ADD: e => this._handleGuildMemberUpdate(e),
+                        GUILD_MEMBER_UPDATE: e => this._handleGuildMemberUpdate(e),
+                        RELATIONSHIP_ADD: e => this._handleRelationshipAdd(e),
+                        RELATIONSHIP_UPDATE: e => this._handleRelationshipUpdate(e),
+                        RELATIONSHIP_REMOVE: e => this._handleRelationshipRemove(e),
+                        CHANNEL_CREATE: e => this._handleDMCreate(e),
+                        CHANNEL_UPDATES: e => this._handleDMUpdates(e),
+                        CHANNEL_RECIPIENT_ADD: e => this._handleRecipientChanges(e),
+                        PASSIVE_UPDATE_V1: e => this._handlePassiveUpdateV1(e)
+                    }, this._handleLogout = () => {
+                        this.rebootWebworker()
+                    }, this._handleConnectionOpen = () => {
+                        setTimeout(() => {
+                            let e = p.default.getCurrentUser();
+                            if (null == e) return;
+                            let t = R(e),
+                                l = {
+                                    [t.id]: t
+                                };
+                            Object.values(p.default.getUsers()).forEach(e => {
+                                l[e.id] = R(e)
+                            });
+                            let s = d.default.getMutableAllGuildsAndMembers();
+                            for (let e in s)
+                                for (let t in s[e]) {
+                                    var u, i;
+                                    let n = l[t],
+                                        r = null !== (i = null === (u = s[e][t]) || void 0 === u ? void 0 : u.nick) && void 0 !== i ? i : f.default.getGlobalName(n);
+                                    null != n && (n[e] = null != r && "" !== r ? r : null)
+                                }
+                            this.updateUsers(Object.values(l))
+                        }, 3e3)
+                    }, this._handleConnectionOpenSupplemental = e => {
+                        let {
+                            guilds: t
+                        } = e;
+                        setTimeout(() => {
+                            let e = n.flatMap(t, e => C(e.members, e.id));
+                            this.updateUsers(e)
+                        }, 3e3)
+                    }, this._handleOverlayInitialize = e => {
+                        let {
+                            users: t,
+                            guildMembers: l
+                        } = e, s = new Map;
+                        for (let e of t) s.set(e.id, R(e));
+                        let u = Object.keys(l);
+                        for (let e of u) {
+                            let t = l[e];
+                            if (null == t) continue;
+                            let u = Object.keys(t);
+                            for (let l of u) {
+                                let u = s.get(l),
+                                    i = t[l];
+                                null != u && null != i && null != i.nick && (y(u, e, i.nick), s.set(l, u))
+                            }
+                        }
+                        this.updateUsers(Array.from(s.values())), s.clear()
+                    }, this._handleCurrentUserUpdate = e => {
+                        let {
+                            user: t
+                        } = e, l = R(t);
+                        null != l && this.updateUsers([l])
+                    }, this._handleGuildCreate = e => {
+                        let {
+                            guild: t
+                        } = e, {
+                            members: l
+                        } = t;
+                        this.updateUsers(C(l, t.id))
+                    }, this._handleGuildMembersChunk = e => {
+                        let {
+                            members: t,
+                            guildId: l
+                        } = e;
+                        this.updateUsers(C(t, l))
+                    }, this._handleGuildMemberUpdate = e => {
+                        let {
+                            guildId: t,
+                            user: l,
+                            nick: s
+                        } = e, u = R(l);
+                        null != u && (y(u, t, s), this.updateUsers([u]))
+                    }, this._handlePassiveUpdateV1 = e => {
+                        null != e.members && this.updateUsers(C(e.members, e.guildId))
+                    }, this._handleRelationshipAdd = e => {
+                        let t = R(e.relationship.user);
+                        this.updateUsers([t])
+                    }, this._handleRelationshipUpdate = e => {
+                        let t = R(p.default.getUser(e.relationship.id));
+                        this.updateUsers([t])
+                    }, this._handleRelationshipRemove = e => {
+                        let t = R(p.default.getUser(e.relationship.id));
+                        this.updateUsers([t])
+                    }, this._handleDMCreate = e => {
+                        let {
+                            channel: {
+                                id: t
+                            }
+                        } = e, l = E(h.default.getChannel(t));
+                        if (0 === l.length) return;
+                        let s = R(p.default.getCurrentUser());
+                        y(s, t), l.push(s), this.updateUsers(l)
+                    }, this._handleDMUpdates = e => {
+                        let {
+                            channels: t
+                        } = e;
+                        for (let e of t) {
+                            let t = E(h.default.getChannel(e.id));
+                            if (0 === t.length) continue;
+                            let l = R(p.default.getCurrentUser());
+                            y(l, e.id), t.push(l), this.updateUsers(t)
+                        }
+                    }, this._handleRecipientChanges = e => {
+                        let {
+                            channelId: t,
+                            user: l,
+                            isMember: s
+                        } = e;
+                        if (!s) return;
+                        let u = R(l);
+                        y(u, t), this.updateUsers([u])
                     }
                 }
             }
+            var m = new T
         },
-        19287: function(e, t, n) {
+        108964: function(e, t, l) {
             "use strict";
-            n.r(t), n.d(t, {
-                useAnimatedAvatarSrc: function() {
-                    return s
-                }
-            }), n("222007");
-            var r = n("884691"),
-                i = n("446674"),
-                u = n("206230"),
-                o = n("771325"),
-                l = n("26989"),
-                a = n("471671"),
-                E = n("91653");
-
-            function s(e) {
-                let {
-                    user: t,
-                    guildId: n,
-                    size: s,
-                    showPending: _ = !1,
-                    animateOnHover: c = !1,
-                    avatarOverride: T
-                } = e, [d, S] = r.useState(!1), A = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion), I = (0, i.useStateFromStores)([a.default], () => a.default.isFocused()), f = I && (d || !A && !c), {
-                    pendingAvatar: C
-                } = (0, E.default)({}), R = (0, i.useStateFromStores)([l.default], () => null != n && null != t ? l.default.getMember(n, t.id) : null), N = r.useMemo(() => null != t ? (0, o.getPreviewAvatar)(_ ? null != T ? T : C : void 0, R, t, {
-                    canAnimate: f,
-                    size: s
-                }) : void 0, [_, C, R, t, f, s, T]), O = r.useCallback(() => S(!0), []), v = r.useCallback(() => S(!1), []);
-                return {
-                    avatarSrc: N,
-                    isAvatarAnimating: f,
-                    eventHandlers: {
-                        onMouseEnter: O,
-                        onMouseLeave: v
-                    }
-                }
-            }
-        },
-        790618: function(e, t, n) {
-            "use strict";
-            let r, i, u, o, l, a, E, s, _, c, T, d, S, A;
-            n.r(t), n.d(t, {
-                default: function() {
-                    return p
-                }
-            });
-            var I = n("265586"),
-                f = n("446674"),
-                C = n("913144"),
-                R = n("49111");
-            let N = R.FormStates.CLOSED,
-                O = {},
-                v = !1;
-
-            function g() {
-                N = R.FormStates.OPEN, O = {}
-            }
-
-            function D() {
-                N = R.FormStates.CLOSED, O = {}
-            }
-
-            function L() {
-                P(), U(), O = {}
-            }
-
-            function P() {
-                r = void 0, i = void 0, u = void 0, o = void 0
-            }
-
-            function U() {
-                l = void 0, a = void 0, E = void 0, s = void 0, _ = void 0, o = void 0
-            }
-
-            function F() {
-                T = void 0, d = void 0, S = void 0, A = void 0, c = void 0
-            }
-            class m extends f.default.Store {
-                getFormState() {
-                    return N
-                }
-                getErrors() {
-                    return O
-                }
-                showNotice() {
-                    return void 0 !== r || void 0 !== l || void 0 !== a || void 0 !== E || void 0 !== s || void 0 !== _ || void 0 !== u || void 0 !== o || void 0 !== i
-                }
-                getPendingAvatar() {
-                    return r
-                }
-                getPendingGlobalName() {
-                    return i
-                }
-                getPendingBanner() {
-                    return l
-                }
-                getPendingBio() {
-                    return a
-                }
-                getPendingPronouns() {
-                    return E
-                }
-                getPendingAccentColor() {
-                    return s
-                }
-                getPendingThemeColors() {
-                    return _
-                }
-                getPendingAvatarDecoration() {
+            l.r(t), l.d(t, {
+                createHeaderResult: function() {
                     return u
                 }
-                getPendingProfileEffectID() {
+            });
+            var s = l("375822");
+
+            function u(e) {
+                return {
+                    type: s.AutocompleterResultTypes.HEADER,
+                    record: new s.HeaderRecord(e),
+                    score: 0
+                }
+            }
+        },
+        681643: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
                     return o
                 }
-                getAllPending() {
-                    return {
-                        pendingAvatar: r,
-                        pendingBanner: l,
-                        pendingBio: a,
-                        pendingPronouns: E,
-                        pendingAccentColor: s,
-                        pendingThemeColors: _,
-                        pendingAvatarDecoration: u,
-                        pendingProfileEffectID: o,
-                        pendingGlobalName: i
+            });
+            var s = l("679653"),
+                u = l("42203"),
+                i = l("27618"),
+                n = l("697218"),
+                r = l("375822"),
+                a = l("49111");
+
+            function o(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.default,
+                    l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : n.default,
+                    o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.default,
+                    h = t.getChannel(e);
+                if (null == h) return null;
+                let d = (0, s.computeChannelName)(h, l, o);
+                switch (h.type) {
+                    case a.ChannelTypes.DM: {
+                        let e = l.getUser(h.getRecipientId());
+                        if (null == e) return null;
+                        return {
+                            type: r.AutocompleterResultTypes.USER,
+                            record: e,
+                            score: 0,
+                            comparator: d
+                        }
                     }
-                }
-                getTryItOutThemeColors() {
-                    return c
-                }
-                getTryItOutAvatar() {
-                    return T
-                }
-                getTryItOutAvatarDecoration() {
-                    return d
-                }
-                getTryItOutProfileEffectID() {
-                    return S
-                }
-                getTryItOutBanner() {
-                    return A
-                }
-                getAllTryItOut() {
-                    return {
-                        tryItOutThemeColors: c,
-                        tryItOutAvatar: T,
-                        tryItOutAvatarDecoration: d,
-                        tryItOutProfileEffectID: S,
-                        tryItOutBanner: A
-                    }
-                }
-                getIsDisableSubmit() {
-                    return v
+                    case a.ChannelTypes.GROUP_DM:
+                        return {
+                            type: r.AutocompleterResultTypes.GROUP_DM, record: h, score: 0, comparator: d
+                        };
+                    case a.ChannelTypes.GUILD_VOICE:
+                    case a.ChannelTypes.GUILD_STAGE_VOICE:
+                        return {
+                            type: r.AutocompleterResultTypes.VOICE_CHANNEL, record: h, score: 0, comparator: d
+                        };
+                    default:
+                        return {
+                            type: r.AutocompleterResultTypes.TEXT_CHANNEL, record: h, score: 0, comparator: d
+                        }
                 }
             }
-            m.displayName = "UserSettingsAccountStore";
-            var p = new m(C.default, {
-                USER_SETTINGS_ACCOUNT_INIT: g,
-                USER_SETTINGS_MODAL_INIT: g,
-                USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: g,
-                USER_SETTINGS_MODAL_SET_SECTION: function(e) {
-                    let {
-                        section: t
-                    } = e;
-                    return t === R.UserSettingsSections.ACCOUNT && g()
+        },
+        940782: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
+                    return function e(t, l, u, i) {
+                        let {
+                            length: n
+                        } = u, r = i, a = l;
+                        if (0 === n) return 0;
+                        if (null == r) r = a;
+                        else if (r === a) return a;
+                        if ((a += t === s.FindResultDirections.UP ? -1 : 1) < 0 || a >= n) return e(t, a < 0 ? n : -1, u, r);
+                        let o = u[a];
+                        return o.type === s.AutocompleterResultTypes.HEADER ? e(t, a, u, r) : a
+                    }
+                }
+            });
+            var s = l("375822")
+        },
+        123225: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                createHeaderResult: function() {
+                    return i.createHeaderResult
                 },
-                USER_SETTINGS_ACCOUNT_CLOSE: D,
-                USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: function() {
-                    L(), F(), D()
+                findNextSelectedResult: function() {
+                    return n.default
                 },
-                USER_SETTINGS_ACCOUNT_SUBMIT: function() {
-                    N = R.FormStates.SUBMITTING, O = {}
-                },
-                USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: function(e) {
+                default: function() {
+                    return r
+                }
+            });
+            var s = l("337575"),
+                u = l("375822");
+            l.es(u, t);
+            var i = l("108964"),
+                n = l("940782");
+            l("195547");
+            var r = s.default
+        },
+        116460: function(e, t, l) {
+            "use strict";
+            let s;
+            l.r(t), l.d(t, {
+                default: function() {
+                    return Y
+                }
+            }), l("424973"), l("222007"), l("843762"), l("808653");
+            var u = l("917351"),
+                i = l.n(u),
+                n = l("446674"),
+                r = l("95410"),
+                a = l("913144"),
+                o = l("123225"),
+                h = l("681643"),
+                d = l("934306"),
+                c = l("615387"),
+                p = l("401690"),
+                _ = l("161778"),
+                f = l("271938"),
+                R = l("42203"),
+                y = l("474643"),
+                E = l("923959"),
+                C = l("26989"),
+                g = l("305961"),
+                T = l("957255"),
+                m = l("660478"),
+                A = l("18494"),
+                U = l("162771"),
+                I = l("282109"),
+                N = l("25292"),
+                S = l("449008"),
+                v = l("49111"),
+                L = l("782340");
+            let D = "seenQSTutorial",
+                M = [o.AutocompleterResultTypes.USER, o.AutocompleterResultTypes.GROUP_DM, o.AutocompleterResultTypes.TEXT_CHANNEL, o.AutocompleterResultTypes.GUILD, o.AutocompleterResultTypes.APPLICATION, o.AutocompleterResultTypes.LINK],
+                O = 0,
+                b = !1,
+                H = !1,
+                k = null,
+                G = [],
+                P = null,
+                Q = 0,
+                q = [],
+                w = [];
+
+            function x() {
+                H = g.default.getGuildCount() >= 3 || i.size(R.default.getMutablePrivateChannels()) >= 20, q = []
+            }
+
+            function W(e) {
+                let t = (0, h.default)(e);
+                return null == t || null != k && k !== t.type ? null : t
+            }
+
+            function F(e) {
+                var t;
+                let {
+                    query: l,
+                    queryMode: u
+                } = e, i = (0, d.isSplitMessagesTabAndOnMessagesTab)() ? void 0 : null !== (t = U.default.getGuildId()) && void 0 !== t ? t : void 0, n = new Set(["user:".concat(f.default.getId())]);
+                null != i && n.add("guild:".concat(i)), s = null != s ? s : new o.default(K, M, null != u ? 100 : 5, {
+                    frecencyBoosters: !0,
+                    blacklist: n
+                }), P = null, Q = l.length, k = u, s.search(l)
+            }
+
+            function K(e, t) {
+                ! function(e, t) {
+                    if (e.length !== t.length) return !1;
+                    for (let l = 0; l < e.length; l++) {
+                        let s = e[l],
+                            u = t[l];
+                        if (s.record.id !== u.record.id) return !1
+                    }
+                    return !0
+                }(e = "" === (t = t.trim()).trim() ? function() {
+                    var e, t;
+                    let l = null !== (e = U.default.getGuildId()) && void 0 !== e ? e : void 0,
+                        s = null !== (t = A.default.getChannelId()) && void 0 !== t ? t : void 0;
+                    switch (k) {
+                        case o.AutocompleterResultTypes.USER: {
+                            let e = f.default.getId();
+                            return N.default.getRecentlyTalked(s, 100).filter(t => {
+                                let {
+                                    record: l
+                                } = t;
+                                return l.id !== e
+                            })
+                        }
+                        case o.AutocompleterResultTypes.APPLICATION:
+                            return N.default.queryApplications({
+                                query: "",
+                                limit: 100,
+                                fuzzy: !0
+                            });
+                        case o.AutocompleterResultTypes.GUILD:
+                            return N.default.queryGuilds({
+                                query: "",
+                                limit: 100,
+                                fuzzy: !0
+                            });
+                        case o.AutocompleterResultTypes.TEXT_CHANNEL:
+                            return N.default.queryChannels({
+                                query: "",
+                                guildId: U.default.getGuildId(),
+                                limit: 100,
+                                fuzzy: !0
+                            });
+                        case o.AutocompleterResultTypes.VOICE_CHANNEL:
+                            return N.default.queryChannels({
+                                query: "",
+                                guildId: U.default.getGuildId(),
+                                limit: 100,
+                                fuzzy: !0,
+                                filter: () => !0,
+                                type: E.GUILD_VOCAL_CHANNELS_KEY
+                            })
+                    }
+                    let u = [],
+                        n = [];
+                    for (let e = 1; e < w.length; e += 1) {
+                        let t = W(w[e]);
+                        if (null != t)(t.type !== o.AutocompleterResultTypes.TEXT_CHANNEL && t.type !== o.AutocompleterResultTypes.VOICE_CHANNEL || T.default.can(v.Permissions.VIEW_CHANNEL, t.record)) && n.push(t)
+                    }
+                    n.length > 0 && u.push((0, o.createHeaderResult)(L.default.Messages.QUICKSWITCHER_LAST_CHANNEL), ...n);
+                    let r = function(e) {
+                        let t = [];
+                        return y.default.getRecentlyEditedDrafts(y.DraftType.ChannelMessage).forEach(l => {
+                            let {
+                                channelId: s
+                            } = l;
+                            if (e(s)) return;
+                            let u = W(s);
+                            null != u && t.push(u)
+                        }), t
+                    }(e => e === s || w.includes(e));
+                    r.length > 0 && u.push((0, o.createHeaderResult)(L.default.Messages.QUICKSWITCHER_DRAFTS), ...r);
+                    let a = m.default.getMentionChannelIds().filter(e => e !== s && !w.includes(e)).map(e => W(e)).filter(S.isNotNullish).reverse();
+                    if (a.length > 0 && (u.push((0, o.createHeaderResult)(L.default.Messages.QUICKSWITCHER_MENTIONS)), u = u.concat(a)), null != l) {
+                        let e = E.default.getSelectableChannelIds(l).filter(e => {
+                            let t = R.default.getChannel(e);
+                            return !(null == t || e === s || w.includes(e) || I.default.isChannelMuted(t.guild_id, e) || null != t.parent_id && I.default.isChannelMuted(t.guild_id, t.parent_id)) && (0, c.getHasImportantUnread)(t)
+                        }).map(e => W(e)).filter(e => e);
+                        Object.values(p.default.getActiveJoinedUnreadThreadsForGuild(l)).forEach(t => {
+                            for (let l in t) {
+                                let t = W(l);
+                                null != t && e.push(t)
+                            }
+                        }), e.length > 0 && (u.push((0, o.createHeaderResult)(L.default.Messages.QUICKSWITCHER_UNREAD_CHANNELS)), u = u.concat(e))
+                    }
+                    return i(u).uniqBy(e => e.record.id).value()
+                }() : e, q) && (q = e, ! function(e, t) {
+                    switch (k) {
+                        case o.AutocompleterResultTypes.USER: {
+                            let t = g.default.getGuild(U.default.getGuildId());
+                            e.unshift((0, o.createHeaderResult)(null != t ? L.default.Messages.QUICKSWITCHER_QUERYMODE_USERS_IN_GUILD.format({
+                                name: t.name
+                            }) : L.default.Messages.QUICKSWITCHER_QUERYMODE_USERS)), G = e;
+                            break
+                        }
+                        case o.AutocompleterResultTypes.TEXT_CHANNEL:
+                            e.unshift((0, o.createHeaderResult)(L.default.Messages.QUICKSWITCHER_QUERYMODE_TEXT_CHANNELS)), G = e;
+                            break;
+                        case o.AutocompleterResultTypes.VOICE_CHANNEL:
+                            e.unshift((0, o.createHeaderResult)(L.default.Messages.QUICKSWITCHER_QUERYMODE_VOICE_CHANNELS)), G = e;
+                            break;
+                        case o.AutocompleterResultTypes.GUILD:
+                            e.unshift((0, o.createHeaderResult)(L.default.Messages.QUICKSWITCHER_QUERYMODE_GUILDS)), G = e;
+                            break;
+                        case o.AutocompleterResultTypes.APPLICATION:
+                            e.unshift((0, o.createHeaderResult)(L.default.Messages.QUICKSWITCHER_QUERYMODE_APPLICATIONS)), G = e;
+                            break;
+                        default:
+                            G = e
+                    }
+                    if (t !== P) P = t, Q = Math.max(t.length, Q), O = (0, o.findNextSelectedResult)(o.FindResultDirections.DOWN, -1, G);
+                    else {
+                        let e = G[O];
+                        null != e && e.type === o.AutocompleterResultTypes.HEADER && (O = (0, o.findNextSelectedResult)(o.FindResultDirections.DOWN, O, G))
+                    }
+                    B.emitChange()
+                }(e, t))
+            }
+
+            function z() {
+                P = null, Q = 0, q = [], null != s && (s.destroy(), s = null)
+            }
+            class V extends n.default.PersistedStore {
+                initialize(e) {
                     var t;
-                    if (N !== R.FormStates.SUBMITTING) return !1;
-                    N = R.FormStates.OPEN, O = null !== (t = e.errors) && void 0 !== t ? t : {}
-                },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: function(e) {
+                    this.waitFor(C.default, g.default, R.default), this.syncWith([_.default], () => !0), b = r.default.get(D) || !1, w = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []
+                }
+                getState() {
+                    return {
+                        channelHistory: w
+                    }
+                }
+                isOpen() {
+                    return null != s
+                }
+                getResultTotals(e) {
+                    return null == s ? 0 : null == e ? s.results.reduce((e, t) => t.type !== o.AutocompleterResultTypes.HEADER ? e + 1 : e, 0) : s.results.reduce((t, l) => l.type === e ? t + 1 : t, 0)
+                }
+                channelNoticePredicate(e, t) {
+                    let l = Date.now() - t >= v.CHANNEL_NOTICE_SHOW_DELAY;
+                    return H && l
+                }
+                getFrequentGuilds() {
+                    return null != s ? s.queryGuilds("", 100) : null
+                }
+                getFrequentGuildsLength() {
+                    return null != s ? s.queryGuilds("", 100).length : 0
+                }
+                getChannelHistory() {
+                    return w
+                }
+                getProps() {
+                    return {
+                        theme: _.default.theme,
+                        query: null != s ? s.query : "",
+                        queryMode: k,
+                        results: G,
+                        selectedIndex: O,
+                        seenTutorial: b,
+                        maxQueryLength: Q
+                    }
+                }
+            }
+            V.displayName = "QuickSwitcherStore", V.persistKey = "QuickSwitcherStore";
+            let B = new V(a.default, {
+                CONNECTION_OPEN: x,
+                CONNECTION_OPEN_SUPPLEMENTAL: x,
+                QUICKSWITCHER_SHOW: F,
+                SHOW_ACTION_SHEET_QUICK_SWITCHER: F,
+                QUICKSWITCHER_HIDE: z,
+                OVERLAY_SET_INPUT_LOCKED: z,
+                HIDE_ACTION_SHEET_QUICK_SWITCHER: z,
+                QUICKSWITCHER_SEARCH: function(e) {
+                    var t, l;
                     let {
-                        avatar: t
+                        query: u,
+                        queryMode: i
                     } = e;
-                    r = t, T = void 0
+                    if (null == s) return !1;
+                    let n = null !== (t = U.default.getGuildId()) && void 0 !== t ? t : null;
+                    if (k !== i) {
+                        s.setResultTypes(null != i ? [i] : M), s.setLimit(null != i ? 100 : 5);
+                        let e = null !== (l = U.default.getGuildId()) && void 0 !== l ? l : void 0;
+                        i === o.AutocompleterResultTypes.USER && null != e ? s.setOptions({
+                            userFilters: {
+                                guild: e,
+                                friends: !0
+                            }
+                        }, !0) : i === o.AutocompleterResultTypes.VOICE_CHANNEL ? s.setOptions({
+                            voiceChannelGuildFilter: null
+                        }, !0) : s.setOptions({
+                            userFilters: null,
+                            voiceChannelGuildFilter: void 0
+                        }, !0)
+                    }
+                    k = i, s.search(u, k === o.AutocompleterResultTypes.USER ? n : void 0)
                 },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: function(e) {
+                QUICKSWITCHER_SELECT: function(e) {
+                    O = e.selectedIndex
+                },
+                QUICKSWITCHER_SWITCH_TO: function() {
+                    if (b) return !1;
+                    b = !0, r.default.set(D, !0)
+                },
+                CHANNEL_SELECT: function(e) {
                     let {
-                        globalName: t
+                        channelId: t
                     } = e;
-                    i = t
+                    if (null == t) return !1;
+                    (w = w.filter(e => e !== t)).unshift(t), w.length > 4 && (w.length = 4)
+                }
+            });
+            var Y = B
+        },
+        615387: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                getHasImportantUnread: function() {
+                    return n
+                }
+            }), l("446674");
+            var s = l("660478"),
+                u = l("282109"),
+                i = l("133335");
+
+            function n(e) {
+                return s.default.hasUnread(e.id) && u.default.getChannelUnreadMode(e) === i.UnreadMode.IMPORTANT
+            }
+        },
+        741347: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
+                    return i
+                }
+            });
+            var s = l("666038");
+            class u extends s.default {
+                static fromPath(e) {
+                    return new u({
+                        id: e,
+                        path: e
+                    })
+                }
+                constructor(e) {
+                    super(), this.id = e.id, this.path = e.path
+                }
+            }
+            var i = u
+        },
+        319781: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                MAX_NUM_SELECTED_ITEMS: function() {
+                    return _
                 },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: function(e) {
+                default: function() {
+                    return m
+                }
+            }), l("424973");
+            var s = l("917351"),
+                u = l.n(s),
+                i = l("446674"),
+                n = l("913144"),
+                r = l("80507"),
+                a = l("374363"),
+                o = l("42203"),
+                h = l("305961"),
+                d = l("18494"),
+                c = l("162771"),
+                p = l("397336");
+            let _ = 100,
+                f = new r.default({
+                    computeBonus: () => 100,
+                    computeWeight: e => {
+                        let t = 0;
+                        return 0 === e ? t = 100 : e >= 1 && e < 2 ? t = 70 : e >= 2 && e < 4 ? t = 50 : e >= 4 && e < 7 ? t = 30 : e >= 7 && (t = 10), t
+                    },
+                    lookupKey: e => {
+                        var t, l;
+                        return null !== (l = null !== (t = h.default.getGuild(e)) && void 0 !== t ? t : o.default.getChannel(e)) && void 0 !== l ? l : o.default.getChannel(o.default.getDMFromUserId(e))
+                    },
+                    afterCompute: () => {},
+                    numFrequentlyItems: _,
+                    maxSamples: 10
+                }),
+                R = null,
+                y = null;
+
+            function E(e) {
+                let {
+                    guildId: t,
+                    channelId: l
+                } = e, s = !1;
+                return l !== R && (R = null != l ? l : null, null != l && (s = !0, f.track(l), g.pendingUsages.push({
+                    key: l,
+                    timestamp: Date.now()
+                }))), null != t && t !== y && (s = !0, f.track(t), y = t, g.pendingUsages.push({
+                    key: t,
+                    timestamp: Date.now()
+                })), s
+            }
+
+            function C() {
+                var e;
+                let t = null === (e = a.default.frecencyWithoutFetchingLatest.guildAndChannelFrecency) || void 0 === e ? void 0 : e.guildAndChannels;
+                if (null == t) return !1;
+                f.overwriteHistory(u.mapValues(t, e => ({
+                    ...e,
+                    recentUses: e.recentUses.map(Number).filter(e => e > 0)
+                })), g.pendingUsages)
+            }
+            let g = {
+                pendingUsages: []
+            };
+            class T extends i.default.PersistedStore {
+                initialize(e) {
+                    this.waitFor(c.default, d.default), null != e && (g = e), this.syncWith([a.default], C)
+                }
+                getState() {
+                    return g
+                }
+                hasPendingUsage() {
+                    return g.pendingUsages.length > 0
+                }
+                get frecencyWithoutFetchingLatest() {
+                    return f
+                }
+                getFrequentlyWithoutFetchingLatest() {
+                    return f.frequently
+                }
+                getScoreWithoutFetchingLatest(e) {
+                    var t;
+                    return null !== (t = f.getFrecency(e)) && void 0 !== t ? t : 0
+                }
+                getScoreForDMWithoutFetchingLatest(e) {
+                    let t = o.default.getDMFromUserId(e);
+                    return null != t ? this.getScoreWithoutFetchingLatest(t) : 0
+                }
+                getMaxScore() {
+                    return 10 * _
+                }
+                getBonusScore() {
+                    return 100
+                }
+            }
+            T.displayName = "FrecencyStore", T.persistKey = "FrecencyStore";
+            var m = new T(n.default, {
+                CHANNEL_SELECT: E,
+                VOICE_CHANNEL_SELECT: E,
+                USER_SETTINGS_PROTO_UPDATE: function(e) {
                     let {
-                        avatarDecoration: t
+                        settings: {
+                            type: t
+                        },
+                        wasSaved: l
                     } = e;
-                    u = t
-                },
-                USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: function(e) {
-                    let {
-                        item: t
-                    } = e;
-                    (null == t ? void 0 : t.type) === I.CollectiblesItemType.PROFILE_EFFECT ? (d = null, S = null == t ? void 0 : t.id) : (S = null, d = t)
-                },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: function(e) {
-                    let {
-                        profileEffectID: t
-                    } = e;
-                    o = t
-                },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: function(e) {
-                    let {
-                        banner: t
-                    } = e;
-                    l = t
-                },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: function(e) {
-                    let {
-                        bio: t
-                    } = e;
-                    a = t
-                },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS: function(e) {
-                    let {
-                        pronouns: t
-                    } = e;
-                    E = t
-                },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR: function(e) {
-                    let {
-                        color: t
-                    } = e;
-                    s = t
-                },
-                USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS: function(e) {
-                    let {
-                        themeColors: t
-                    } = e;
-                    _ = t
-                },
-                USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: function(e) {
-                    let {
-                        avatar: t
-                    } = e;
-                    T = t
-                },
-                USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION: function(e) {
-                    let {
-                        avatarDecoration: t
-                    } = e;
-                    d = t
-                },
-                USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID: function(e) {
-                    let {
-                        profileEffectID: t
-                    } = e;
-                    S = t
-                },
-                USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: function(e) {
-                    let {
-                        banner: t
-                    } = e;
-                    A = t
-                },
-                USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS: function(e) {
-                    let {
-                        themeColors: t
-                    } = e;
-                    c = t
-                },
-                USER_SETTINGS_CLEAR_ERRORS: function() {
-                    O = {}
-                },
-                USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: P,
-                USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: U,
-                USER_SETTINGS_RESET_ALL_PENDING: L,
-                USER_SETTINGS_RESET_ALL_TRY_IT_OUT: F,
-                USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: function() {
-                    u = void 0
-                },
-                LOGOUT: function() {
-                    r = void 0
-                },
-                USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT: function(e) {
-                    let {
-                        disable: t
-                    } = e;
-                    v = t
+                    return t === p.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS && !!l && (g.pendingUsages = [], !0)
                 }
             })
-        },
-        635058: function(e, t, n) {
-            "use strict";
-            var r, i;
-            n.r(t), n.d(t, {
-                CollectiblesCategorySkuId: function() {
-                    return r
-                },
-                CollectiblesCategorySkuIdSets: function() {
-                    return u
-                }
-            }), n("222007"), (i = r || (r = {})).FANTASY = "1144003461608906824", i.ANIME = "1144302037593497701", i.BREAKFAST = "1144054000099012659", i.DISXCORE = "1144058340327047249", i.HALLOWEEN = "1157410718711304313", i.FALL = "1157406994873991284", i.WINTER = "1174459301239197856", i.MONSTERS = "1179493515038818325";
-            let u = {
-                ALL: new Set(["1144003461608906824", "1144054000099012659", "1144058340327047249", "1144302037593497701", "1157406994873991284", "1157410718711304313", "1174459301239197856", "1179493515038818325"])
-            }
-        },
-        265586: function(e, t, n) {
-            "use strict";
-            var r, i;
-            n.r(t), n.d(t, {
-                CollectiblesItemType: function() {
-                    return r
-                }
-            }), (i = r || (r = {}))[i.AVATAR_DECORATION = 0] = "AVATAR_DECORATION", i[i.PROFILE_EFFECT = 1] = "PROFILE_EFFECT"
         }
     }
 ]);
