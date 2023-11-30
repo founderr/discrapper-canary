@@ -70528,16 +70528,6 @@ input::-webkit-inner-spin-button {
     left: 128px
 }
 
-.container_dc9894 {
-    display: flex;
-    flex-direction: row;
-    align-items: center
-}
-
-.emoji_a0e68f {
-    flex-shrink: 0
-}
-
 .collectiblesList_b551dd {
     display: grid;
     justify-items: center;

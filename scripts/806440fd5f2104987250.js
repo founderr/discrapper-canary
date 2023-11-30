@@ -9920,7 +9920,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "4b62075b8aa262b49512e117597a359adbfda93b", e.substring(0, 7)),
+                    S = (e = "14d1c43f66da429b7bc7bf7129a67e5ab0db41a2", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -9933,7 +9933,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "250177", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "250181", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
@@ -20752,7 +20752,7 @@
                         date: new Date(e)
                     })
                 }, [s, o, d]), c = n.useMemo(() => (function(e) {
-                    if (e === I.BoostedGuildTiers.NONE) return "";
+                    if (null == e || e === I.BoostedGuildTiers.NONE) return "";
                     let t = [N.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_EMOJI_SLOTS.format({
                         numEmojiSlots: g.BoostedGuildFeatures[e].limits.emoji
                     }), N.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_STICKER_SLOTS.format({
@@ -20867,13 +20867,13 @@
                     hasCancelableGuildBoostSlot: l,
                     showAltText: r
                 } = e, o = (0, i.default)([u.default], () => u.default.getGuild(t), [t]);
-                return null == o ? null : (0, a.jsxs)("div", {
+                return (0, a.jsxs)("div", {
                     className: h.appliedBoostContainer,
                     children: [(0, a.jsx)(_.default, {
-                        guildId: o.id,
+                        guildId: t,
                         boostingVariant: !1
                     }), s.map((e, t) => (0, a.jsx)(p, {
-                        guildTier: o.premiumTier,
+                        guildTier: null == o ? void 0 : o.premiumTier,
                         guildBoostSlot: e,
                         premiumSubscription: n,
                         hasCancelableGuildBoostSlot: l,
@@ -21169,7 +21169,16 @@
                     boostingVariant: n,
                     showSparkes: N
                 } = e, h = (0, i.default)([u.default], () => u.default.getGuild(s), [s]);
-                return null == h ? null : (0, a.jsxs)("div", {
+                return null == h ? (0, a.jsx)("div", {
+                    className: l(t, I.guildContainer),
+                    children: (0, a.jsx)("div", {
+                        className: I.guildInfoContainer,
+                        children: (0, a.jsx)(r.Text, {
+                            variant: "text-lg/bold",
+                            children: _.default.Messages.GUILD_BOOSTING_USER_SETTINGS_APPLIED_GUILD_BOOST_UNKNOWN_GUILD
+                        })
+                    })
+                }) : (0, a.jsxs)("div", {
                     className: l(t, I.guildContainer),
                     children: [(0, a.jsx)(c.default, {
                         className: I.guildIcon,
