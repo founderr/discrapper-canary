@@ -433,23 +433,6 @@
                 APP_LAUNCHER_SET_ACTIVE_COMMAND: o
             })
         },
-        938767: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                useCommandContext: function() {
-                    return r
-                }
-            });
-            var l = n("884691"),
-                i = n("305961");
-
-            function r(e) {
-                return l.useMemo(() => ({
-                    channel: e,
-                    guild: null != e.guild_id ? i.default.getGuild(e.guild_id) : null
-                }), [e])
-            }
-        },
         381784: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
