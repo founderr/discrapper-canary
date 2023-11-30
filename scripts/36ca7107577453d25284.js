@@ -1585,52 +1585,52 @@
                     guildId: t,
                     guildScheduledEventId: l,
                     transitionState: a,
-                    onClose: i
-                } = e, c = (0, u.useStateFromStores)([I.default], () => I.default.getGuild(t)), E = (0, u.useStateFromStores)([m.default], () => m.default.getGuildScheduledEvent(l), [l]), T = (0, u.useStateFromStores)([_.default], () => _.default.getDefaultChannel(t), [t]), N = (0, x.getInitialGuildEventData)(c, E, T), [h, A] = r.useState(N), [O] = r.useState((0, x.isEditingEvent)(E)), [R, L] = r.useState(null), M = e => {
+                    onClose: c
+                } = e, E = (0, u.useStateFromStores)([I.default], () => I.default.getGuild(t)), T = (0, u.useStateFromStores)([m.default], () => m.default.getGuildScheduledEvent(l), [l]), N = (0, u.useStateFromStores)([_.default], () => _.default.getDefaultChannel(t), [t]), h = (0, x.getInitialGuildEventData)(E, T, N), [A, O] = r.useState(h), [R] = r.useState((0, x.isEditingEvent)(T)), [L, M] = r.useState(null), U = e => {
                     var t;
                     let n = (0, C.isGuildEventInvitable)(e),
-                        l = null !== (t = e.channel_id) && void 0 !== t ? t : null == T ? void 0 : T.id;
+                        l = null !== (t = e.channel_id) && void 0 !== t ? t : null == N ? void 0 : N.id;
                     null != l && o.default.createInvite(l, {
                         max_age: G.value,
                         max_uses: P.value
-                    }, V.InstantInviteSources.GUILD_EVENTS), n ? L(e) : i()
-                }, U = (0, f.default)(c, null == E ? void 0 : E.id, h), [H, {
-                    loading: b,
-                    error: w
+                    }, V.InstantInviteSources.GUILD_EVENTS), n ? M(e) : c()
+                }, H = (0, f.default)(E, null == T ? void 0 : T.id, A), [b, {
+                    loading: w,
+                    error: F
                 }] = (0, v.default)(async () => {
-                    if (null != R) return;
+                    if (null != L) return;
                     let e = {
-                        broadcastToDirectoryChannels: U.broadcastToDirectoryChannels
+                        broadcastToDirectoryChannels: H.broadcastToDirectoryChannels
                     };
-                    if (O && null != l) return await S.default.saveEvent(l, h, t, e), i();
-                    let n = await S.default.createGuildEvent(h, t, e);
-                    return M(n.body), n
-                }), F = r.useMemo(() => (0, D.default)(h, O), [h, O]);
+                    if (R && null != l) return await S.default.saveEvent(l, A, t, e), c();
+                    let n = await S.default.createGuildEvent(A, t, e);
+                    return U(n.body), n
+                }), k = r.useMemo(() => (0, D.default)(A, R), [A, R]);
                 return (0, s.jsx)(B, {
                     guildId: t,
-                    guildEvent: h,
+                    guildEvent: A,
                     guildEventId: l,
-                    editBroadcastInfoData: U,
-                    isEdit: O,
-                    formErrors: F,
+                    editBroadcastInfoData: H,
+                    isEdit: R,
+                    formErrors: k,
                     transitionState: a,
-                    loading: b,
-                    error: w,
+                    loading: w,
+                    error: F,
                     onChange: e => {
                         if (null != e.entityType) {
                             var n;
                             let l = (0, p.getChannelTypeFromEntity)(e.entityType),
                                 [a] = (0, g.getEventChannelsByType)(t, l);
-                            e.channelId = null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : null, e.entityType !== y.GuildScheduledEventEntityTypes.EXTERNAL && h.entityType === y.GuildScheduledEventEntityTypes.EXTERNAL && (e.entityMetadata = null)
+                            e.channelId = null !== (n = null == a ? void 0 : a.id) && void 0 !== n ? n : null, e.entityType !== y.GuildScheduledEventEntityTypes.EXTERNAL && A.entityType === y.GuildScheduledEventEntityTypes.EXTERNAL && (e.entityMetadata = null)
                         }
-                        A(t => ({
+                        O(t => ({
                             ...t,
                             ...e
                         }))
                     },
                     onSave: () => {
-                        let e = (null == E ? void 0 : E.scheduled_start_time) !== h.scheduledStartTime || E.scheduled_end_time !== h.scheduledEndTime;
-                        null != h.recurrenceRule && O && e ? (0, d.openModalLazy)(async () => {
+                        let e = (null == T ? void 0 : T.scheduled_start_time) !== A.scheduledStartTime || T.scheduled_end_time !== A.scheduledEndTime || !(0, i.isEqual)(T.recurrence_rule, A.recurrenceRule);
+                        null != A.recurrenceRule && R && e ? (0, d.openModalLazy)(async () => {
                             let {
                                 ConfirmModal: e
                             } = await n.el("77078").then(n.bind(n, "77078"));
@@ -1639,7 +1639,7 @@
                                 header: j.default.Messages.EDIT_ALL_EVENTS,
                                 confirmText: j.default.Messages.SAVE_EVENT,
                                 cancelText: j.default.Messages.NEVERMIND,
-                                onConfirm: H,
+                                onConfirm: b,
                                 children: [(0, s.jsx)(d.Text, {
                                     variant: "text-md/normal",
                                     children: j.default.Messages.GUILD_EVENT_EDIT_CONFIRM_BODY_CONFIRM
@@ -1648,10 +1648,10 @@
                                     children: j.default.Messages.GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT.format()
                                 })]
                             })
-                        }) : H()
+                        }) : b()
                     },
-                    onClose: i,
-                    createdEvent: R
+                    onClose: c,
+                    createdEvent: L
                 })
             }(a = l || (l = {}))[a.ENTITY = 0] = "ENTITY", a[a.SETTINGS = 1] = "SETTINGS", a[a.PREVIEW = 2] = "PREVIEW", a[a.SUCCESS = 3] = "SUCCESS"
         },

@@ -668,7 +668,8 @@
             }
 
             function M(e, t) {
-                let n = function(e, t) {
+                var n;
+                let l = function(e, t) {
                     let n = y(t),
                         l = t.toDate();
                     switch (l.setMilliseconds(0), e) {
@@ -692,28 +693,28 @@
                             })
                     }
                 }(e, t);
-                if (null == n) return null;
+                if (null == l) return null;
                 let {
-                    dtstart: l,
-                    until: a,
-                    freq: r,
-                    interval: i,
-                    byweekday: u,
-                    bymonth: c,
-                    bymonthday: d,
-                    byyearday: f,
-                    count: E
-                } = n.options;
+                    dtstart: a,
+                    until: r,
+                    freq: i,
+                    interval: u,
+                    byweekday: c,
+                    bymonth: d,
+                    bymonthday: f,
+                    byyearday: E,
+                    count: h
+                } = l.options;
                 return {
-                    start: l.toISOString(),
-                    end: null == a ? void 0 : a.toISOString(),
-                    frequency: r,
-                    interval: i,
-                    byWeekday: null != u ? new Set(u) : null,
-                    byMonth: null != c ? new Set(c) : null,
-                    byMonthDay: null != d ? new Set(d) : null,
-                    byYearDay: null != f ? new Set(f) : null,
-                    count: E
+                    start: a.toISOString(),
+                    end: null !== (n = null == r ? void 0 : r.toISOString()) && void 0 !== n ? n : null,
+                    frequency: i,
+                    interval: u,
+                    byWeekday: null != c ? c : null,
+                    byMonth: null != d ? d : null,
+                    byMonthDay: null != f ? f : null,
+                    byYearDay: null != E ? E : null,
+                    count: h
                 }
             }
 

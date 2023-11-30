@@ -21,8 +21,8 @@
                 _ = n("610730"),
                 N = n("271938"),
                 h = n("305961"),
-                S = n("957255"),
-                T = n("49111"),
+                T = n("957255"),
+                S = n("49111"),
                 m = n("782340"),
                 C = n("413075"),
                 v = e => {
@@ -33,10 +33,10 @@
                         transitionState: g
                     } = e, D = (0, a.default)(t, !0), I = t.id, R = t.isForumPost(), A = (0, r.useStateFromStores)([h.default], () => h.default.getGuild(t.getGuildId())), M = (0, E.useGuildChannelScheduledEvents)(I), {
                         isSubscriptionGated: L
-                    } = (0, s.default)(t.id), y = (0, c.default)(A, t), [O, p] = u.useState(null), G = (0, r.useStateFromStores)([N.default], () => t.isOwner(N.default.getId()), [t]), U = (0, r.useStateFromStores)([S.default], () => S.default.can(t.isThread() ? T.Permissions.MANAGE_THREADS : T.Permissions.MANAGE_CHANNELS, t), [t]), w = (0, r.useStateFromStores)([_.default], () => {
+                    } = (0, s.default)(t.id), y = (0, c.default)(A, t), [O, p] = u.useState(null), G = (0, r.useStateFromStores)([N.default], () => t.isOwner(N.default.getId()), [t]), U = (0, r.useStateFromStores)([T.default], () => T.default.can(t.isThread() ? S.Permissions.MANAGE_THREADS : S.Permissions.MANAGE_CHANNELS, t), [t]), w = (0, r.useStateFromStores)([_.default], () => {
                         var e;
                         return null !== (e = _.default.getCount(t.id)) && void 0 !== e ? e : 0
-                    }, [t.id]), H = R && (U || G && w < 1), F = M.length > 0 && (t.type === T.ChannelTypes.GUILD_VOICE || t.type === T.ChannelTypes.GUILD_STAGE_VOICE);
+                    }, [t.id]), H = R && (U || G && w < 1), F = M.length > 0 && (t.type === S.ChannelTypes.GUILD_VOICE || t.type === S.ChannelTypes.GUILD_STAGE_VOICE);
                     if (u.useEffect(() => {
                             (async () => {
                                 let e = await (0, d.isDefaultChannelThresholdMetAfterDelete)(t.getGuildId(), I);
@@ -71,7 +71,7 @@
                                     variant: "text-md/normal",
                                     children: e.format({
                                         onClick: () => {
-                                            null != A && (f.default.open(A.id, T.GuildSettingsSections.ONBOARDING), null == n || n())
+                                            null != A && (f.default.open(A.id, S.GuildSettingsSections.ONBOARDING), null == n || n())
                                         }
                                     })
                                 })]
@@ -84,7 +84,7 @@
                         })
                     }
                     if (null == A) return null;
-                    if (A.hasFeature(T.GuildFeatures.COMMUNITY) && (A.rulesChannelId === I || A.publicUpdatesChannelId === I)) {
+                    if (A.hasFeature(S.GuildFeatures.COMMUNITY) && (A.rulesChannelId === I || A.publicUpdatesChannelId === I)) {
                         let e = A.rulesChannelId === I,
                             t = e ? m.default.Messages.DELETE_RULES_CHANNEL_BODY : m.default.Messages.DELETE_UPDATES_CHANNEL_BODY;
                         return (0, l.jsxs)(i.ModalRoot, {
@@ -106,7 +106,7 @@
                                     className: C.modalText,
                                     children: m.default.Messages.DESIGNATE_OTHER_CHANNEL.format({
                                         onClick: () => {
-                                            f.default.open(A.id, T.GuildSettingsSections.COMMUNITY), null == n || n()
+                                            f.default.open(A.id, S.GuildSettingsSections.COMMUNITY), null == n || n()
                                         }
                                     })
                                 })]
@@ -122,7 +122,7 @@
                             deleteText: e,
                             deleteBody: u
                         } = (() => {
-                            if (t.type === T.ChannelTypes.GUILD_CATEGORY) return {
+                            if (t.type === S.ChannelTypes.GUILD_CATEGORY) return {
                                 deleteText: m.default.Messages.DELETE_CATEGORY,
                                 deleteBody: m.default.Messages.DELETE_CHANNEL_BODY.format({
                                     channelName: D
@@ -296,8 +296,8 @@
                     N = E.includes(t);
                 if (!N) return !0;
                 let h = n.removingView && _.length - 1 < s.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING,
-                    S = (n.removingChat || n.removingView) && f.length - 1 < s.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
-                return !h && !S
+                    T = (n.removingChat || n.removingView) && f.length - 1 < s.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
+                return !h && !T
             }
             async function N(e, t, n) {
                 let i = e.getGuildId();
@@ -328,10 +328,10 @@
                     return h
                 },
                 fetchNewMemberActions: function() {
-                    return S
+                    return T
                 },
                 selectHomeResourceChannel: function() {
-                    return T
+                    return S
                 },
                 selectNewMemberActionChannel: function() {
                     return m
@@ -378,7 +378,7 @@
                         guildId: e
                     })
                 }
-            }, S = async e => {
+            }, T = async e => {
                 if (!a.default.isFullServerPreview(e)) {
                     u.default.dispatch({
                         type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START",
@@ -402,7 +402,7 @@
                         })
                     }
                 }
-            }, T = function(e, t) {
+            }, S = function(e, t) {
                 let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
                 if (u.default.dispatch({
                         type: "SELECT_HOME_RESOURCE_CHANNEL",
@@ -495,13 +495,13 @@
                     return h
                 },
                 RESOURCE_CHANNEL_MAX: function() {
-                    return S
+                    return T
                 },
                 NewMemberActionTypes: function() {
                     return u
                 },
                 newMemberActionFromServer: function() {
-                    return T
+                    return S
                 },
                 resourceChannelFromServer: function() {
                     return m
@@ -543,9 +543,9 @@
                 _ = 1,
                 N = 30,
                 h = 200,
-                S = 7;
+                T = 7;
 
-            function T(e) {
+            function S(e) {
                 var t;
                 return {
                     channelId: e.channel_id,
@@ -586,7 +586,7 @@
                 } = e, a = {
                     authorIds: t.author_ids,
                     message: t.message
-                }, d = n.filter(e => (0, i.isNotNullish)(r.default.getChannel(e.channel_id))).map(T), o = l.filter(e => (0, i.isNotNullish)(r.default.getChannel(e.channel_id))).map(m);
+                }, d = n.filter(e => (0, i.isNotNullish)(r.default.getChannel(e.channel_id))).map(S), o = l.filter(e => (0, i.isNotNullish)(r.default.getChannel(e.channel_id))).map(m);
                 return {
                     welcomeMessage: a,
                     newMemberActions: d,
@@ -1133,14 +1133,14 @@
                 _ = n("466148"),
                 N = n("822516"),
                 h = n("745049"),
-                S = n("49111");
-            let T = [];
+                T = n("49111");
+            let S = [];
 
             function m(e, t) {
                 return (0, u.useStateFromStoresArray)([d.default, r.default, c.default, o.default, i.default, a.default], () => {
                     let n = d.default.getGuild(e);
-                    if (null == n) return T;
-                    let l = n.hasFeature(S.GuildFeatures.HUB);
+                    if (null == n) return S;
+                    let l = n.hasFeature(T.GuildFeatures.HUB);
                     if (l) {
                         var u, E;
                         let e = null === (u = a.default.getDefaultChannel(n.id)) || void 0 === u ? void 0 : u.id,
@@ -1156,7 +1156,7 @@
                         let t = e.channel_id;
                         if (null == t) return !0;
                         let n = i.default.getChannel(t);
-                        return o.default.can(S.Permissions.VIEW_CHANNEL, n)
+                        return o.default.can(T.Permissions.VIEW_CHANNEL, n)
                     })
                 }, [t, e])
             }
@@ -1164,7 +1164,7 @@
             function C(e) {
                 return (0, u.useStateFromStores)([c.default, i.default, o.default], () => {
                     let t = i.default.getChannel(e);
-                    if (!o.default.can(S.Permissions.VIEW_CHANNEL, t)) return null;
+                    if (!o.default.can(T.Permissions.VIEW_CHANNEL, t)) return null;
                     let n = null == t ? void 0 : t.guild_id;
                     if (null == n) return null;
                     let l = c.default.getGuildScheduledEventsByIndex(c.StaticGuildEventIndexes.CHANNEL_EVENT_ACTIVE(e));
@@ -1192,7 +1192,7 @@
                             if (e.entity_type === h.GuildScheduledEventEntityTypes.NONE || e.status !== h.GuildScheduledEventStatus.SCHEDULED) return !1;
                             if (null == e.channel_id) return !0;
                             let t = i.default.getChannel(e.channel_id);
-                            return o.default.can(S.Permissions.VIEW_CHANNEL, t)
+                            return o.default.can(T.Permissions.VIEW_CHANNEL, t)
                         })
                     }, [t])),
                     r = (0, u.useStateFromStoresObject)([f.default], () => f.default.getAllEventDismissals()),
@@ -1226,7 +1226,7 @@
                         if (e.entity_type === h.GuildScheduledEventEntityTypes.NONE || !(0, c.isGuildScheduledEventActive)(e)) return !1;
                         if (null == e.channel_id) return !0;
                         let t = i.default.getChannel(e.channel_id);
-                        return o.default.can(S.Permissions.VIEW_CHANNEL, t)
+                        return o.default.can(T.Permissions.VIEW_CHANNEL, t)
                     })
                 }, [e])
             }
@@ -1338,10 +1338,10 @@
                         t = e.hour();
                     return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0)
                 },
-                S = (e, t) => e.format(e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT"),
-                T = (e, t) => {
+                T = (e, t) => e.format(e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT"),
+                S = (e, t) => {
                     let n = e.diff(t, "days");
-                    return n > 1 ? S(e, t) : e.calendar(t)
+                    return n > 1 ? T(e, t) : e.calendar(t)
                 };
 
             function m(e, t, n) {
@@ -1350,8 +1350,8 @@
                     u = null != t && "" !== t ? r(t) : void 0,
                     i = null != t && l.isSame(u, "day");
                 return {
-                    startDateTimeString: T(l, n),
-                    endDateTimeString: null != u ? i ? u.format("LT") : S(u, n) : void 0,
+                    startDateTimeString: S(l, n),
+                    endDateTimeString: null != u ? i ? u.format("LT") : T(u, n) : void 0,
                     currentOrPastEvent: l <= n,
                     upcomingEvent: l <= r().add(1, "hour"),
                     withinStartWindow: l <= r().add(15, "minute"),
@@ -1460,7 +1460,8 @@
             }
 
             function p(e, t) {
-                let n = function(e, t) {
+                var n;
+                let l = function(e, t) {
                     let n = O(t),
                         l = t.toDate();
                     switch (l.setMilliseconds(0), e) {
@@ -1484,28 +1485,28 @@
                             })
                     }
                 }(e, t);
-                if (null == n) return null;
+                if (null == l) return null;
                 let {
-                    dtstart: l,
-                    until: u,
-                    freq: r,
-                    interval: a,
-                    byweekday: d,
-                    bymonth: s,
-                    bymonthday: c,
-                    byyearday: E,
-                    count: f
-                } = n.options;
+                    dtstart: u,
+                    until: r,
+                    freq: a,
+                    interval: d,
+                    byweekday: s,
+                    bymonth: c,
+                    bymonthday: E,
+                    byyearday: f,
+                    count: _
+                } = l.options;
                 return {
-                    start: l.toISOString(),
-                    end: null == u ? void 0 : u.toISOString(),
-                    frequency: r,
-                    interval: a,
-                    byWeekday: null != d ? new Set(d) : null,
-                    byMonth: null != s ? new Set(s) : null,
-                    byMonthDay: null != c ? new Set(c) : null,
-                    byYearDay: null != E ? new Set(E) : null,
-                    count: f
+                    start: u.toISOString(),
+                    end: null !== (n = null == r ? void 0 : r.toISOString()) && void 0 !== n ? n : null,
+                    frequency: a,
+                    interval: d,
+                    byWeekday: null != s ? s : null,
+                    byMonth: null != c ? c : null,
+                    byMonthDay: null != E ? E : null,
+                    byYearDay: null != f ? f : null,
+                    count: _
                 }
             }
 
