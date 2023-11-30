@@ -5447,9 +5447,11 @@
                 clipMetadata: "clipMetadata_a529e8",
                 clipName: "clipName__63511",
                 clipNewBadge: "clipNewBadge_b3a814 clipBadge_fbf333",
+                clipProcessingBadge: "clipProcessingBadge__44df6 clipBadge_fbf333",
                 clipThumb: "clipThumb__90837",
                 clipThumbContainer: "clipThumbContainer_f469a2",
                 clipTitle: "clipTitle__779d0",
+                disabled: "disabled__29897",
                 miniIcon: "miniIcon_d6c101",
                 newIcon: "newIcon__98982",
                 usersAndDelete: "usersAndDelete__3b16f"

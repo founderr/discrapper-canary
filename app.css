@@ -81893,6 +81893,10 @@ input::-webkit-inner-spin-button {
     filter: var(--shadow-low-filter)
 }
 
+.clipItem__03b69.disabled__29897 {
+    cursor: wait
+}
+
 .clipItem__03b69:hover {
     background: var(--background-modifier-selected);
     filter: var(--shadow-low-hover-filter)
@@ -81933,6 +81937,10 @@ input::-webkit-inner-spin-button {
 .clipDurationBadge_ba0f00 {
     background: var(--black-500);
     gap: 4px
+}
+
+.clipProcessingBadge__44df6 {
+    background: var(--black-500)
 }
 
 .clipDurationEditIcon_a81a23 {
