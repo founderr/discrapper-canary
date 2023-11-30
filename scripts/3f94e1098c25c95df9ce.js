@@ -1,25 +1,25 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["57475"], {
+    ["90026"], {
         717837: function(e, t, n) {
             "use strict";
             e.exports = function(e) {
-                return (e = String(e || ""), l.test(e)) ? "rtl" : r.test(e) ? "ltr" : "neutral"
+                return (e = String(e || ""), r.test(e)) ? "rtl" : l.test(e) ? "ltr" : "neutral"
             };
-            var i = "֑-߿יִ-﷽ﹰ-ﻼ",
-                s = "A-Za-z\xc0-\xd6\xd8-\xf6\xf8-ʸ̀-֐ࠀ-῿‎Ⰰ-﬜︀-﹯﻽-￿",
-                l = RegExp("^[^" + s + "]*[" + i + "]"),
-                r = RegExp("^[^" + i + "]*[" + s + "]")
+            var s = "֑-߿יִ-﷽ﹰ-ﻼ",
+                i = "A-Za-z\xc0-\xd6\xd8-\xf6\xf8-ʸ̀-֐ࠀ-῿‎Ⰰ-﬜︀-﹯﻽-￿",
+                r = RegExp("^[^" + i + "]*[" + s + "]"),
+                l = RegExp("^[^" + s + "]*[" + i + "]")
         },
         448105: function(e, t, n) {
             "use strict";
             e.exports = function(e, t) {
                 var n = t.length,
-                    i = e.length;
-                if (i > n) return !1;
-                if (i === n) return e === t;
-                e: for (var s = 0, l = 0; s < i; s++) {
-                    for (var r = e.charCodeAt(s); l < n;)
-                        if (t.charCodeAt(l++) === r) continue e;
+                    s = e.length;
+                if (s > n) return !1;
+                if (s === n) return e === t;
+                e: for (var i = 0, r = 0; i < s; i++) {
+                    for (var l = e.charCodeAt(i); r < n;)
+                        if (t.charCodeAt(r++) === l) continue e;
                     return !1
                 }
                 return !0
@@ -33,20 +33,20 @@
                 }
             }), n("222007");
             Object.prototype.hasOwnProperty, Object.prototype.propertyIsEnumerable;
-            var i = Object.defineProperty,
-                s = Object.getOwnPropertySymbols,
-                l = Object.prototype.hasOwnProperty,
-                r = Object.prototype.propertyIsEnumerable,
-                a = (e, t, n) => t in e ? i(e, t, {
+            var s = Object.defineProperty,
+                i = Object.getOwnPropertySymbols,
+                r = Object.prototype.hasOwnProperty,
+                l = Object.prototype.propertyIsEnumerable,
+                a = (e, t, n) => t in e ? s(e, t, {
                     enumerable: !0,
                     configurable: !0,
                     writable: !0,
                     value: n
                 }) : e[t] = n,
                 u = (e, t) => {
-                    for (var n in t || (t = {})) l.call(t, n) && a(e, n, t[n]);
-                    if (s)
-                        for (var n of s(t)) r.call(t, n) && a(e, n, t[n]);
+                    for (var n in t || (t = {})) r.call(t, n) && a(e, n, t[n]);
+                    if (i)
+                        for (var n of i(t)) l.call(t, n) && a(e, n, t[n]);
                     return e
                 };
             let o = e => t => {
@@ -68,8 +68,8 @@
                         }
                     }
                 },
-                d = (e, t) => (n, i, s) => {
-                    let l, r, a = u({
+                d = (e, t) => (n, s, i) => {
+                    let r, l, a = u({
                         getStorage: () => localStorage,
                         serialize: JSON.stringify,
                         deserialize: JSON.parse,
@@ -82,17 +82,17 @@
                         c = new Set,
                         h = new Set;
                     try {
-                        l = a.getStorage()
+                        r = a.getStorage()
                     } catch (e) {}
-                    if (!l) return e(function() {
-                        for (var e = arguments.length, t = Array(e), i = 0; i < e; i++) t[i] = arguments[i];
+                    if (!r) return e(function() {
+                        for (var e = arguments.length, t = Array(e), s = 0; s < e; s++) t[s] = arguments[s];
                         console.warn("[zustand persist middleware] Unable to update item '".concat(a.name, "', the given storage is currently unavailable.")), n(...t)
-                    }, i, s);
-                    !l.removeItem && console.warn("[zustand persist middleware] The given storage for item '".concat(a.name, "' does not contain a 'removeItem' method, which will be required in v4."));
+                    }, s, i);
+                    !r.removeItem && console.warn("[zustand persist middleware] The given storage for item '".concat(a.name, "' does not contain a 'removeItem' method, which will be required in v4."));
                     let f = o(a.serialize),
                         m = () => {
                             let e;
-                            let t = a.partialize(u({}, i()));
+                            let t = a.partialize(u({}, s()));
                             a.whitelist && Object.keys(t).forEach(e => {
                                 var n;
                                 (null == (n = a.whitelist) ? void 0 : n.includes(e)) || delete t[e]
@@ -100,26 +100,26 @@
                             let n = f({
                                 state: t,
                                 version: a.version
-                            }).then(e => l.setItem(a.name, e)).catch(t => {
+                            }).then(e => r.setItem(a.name, e)).catch(t => {
                                 e = t
                             });
                             if (e) throw e;
                             return n
                         },
-                        E = s.setState;
-                    s.setState = (e, t) => {
-                        E(e, t), m()
+                        p = i.setState;
+                    i.setState = (e, t) => {
+                        p(e, t), m()
                     };
-                    let p = e(function() {
-                            for (var e = arguments.length, t = Array(e), i = 0; i < e; i++) t[i] = arguments[i];
+                    let E = e(function() {
+                            for (var e = arguments.length, t = Array(e), s = 0; s < e; s++) t[s] = arguments[s];
                             n(...t), m()
-                        }, i, s),
+                        }, s, i),
                         I = () => {
                             var e;
-                            if (!l) return;
-                            d = !1, c.forEach(e => e(i()));
-                            let t = (null == (e = a.onRehydrateStorage) ? void 0 : e.call(a, i())) || void 0;
-                            return o(l.getItem.bind(l))(a.name).then(e => {
+                            if (!r) return;
+                            d = !1, c.forEach(e => e(s()));
+                            let t = (null == (e = a.onRehydrateStorage) ? void 0 : e.call(a, s())) || void 0;
+                            return o(r.getItem.bind(r))(a.name).then(e => {
                                 if (e) return a.deserialize(e)
                             }).then(e => {
                                 if (e) {
@@ -129,20 +129,20 @@
                                 }
                             }).then(e => {
                                 var t;
-                                return n(r = a.merge(e, null != (t = i()) ? t : p), !0), m()
+                                return n(l = a.merge(e, null != (t = s()) ? t : E), !0), m()
                             }).then(() => {
-                                null == t || t(r, void 0), d = !0, h.forEach(e => e(r))
+                                null == t || t(l, void 0), d = !0, h.forEach(e => e(l))
                             }).catch(e => {
                                 null == t || t(void 0, e)
                             })
                         };
-                    return s.persist = {
+                    return i.persist = {
                         setOptions: e => {
-                            a = u(u({}, a), e), e.getStorage && (l = e.getStorage())
+                            a = u(u({}, a), e), e.getStorage && (r = e.getStorage())
                         },
                         clearStorage: () => {
                             var e;
-                            null == (e = null == l ? void 0 : l.removeItem) || e.call(l, a.name)
+                            null == (e = null == r ? void 0 : r.removeItem) || e.call(r, a.name)
                         },
                         rehydrate: () => I(),
                         hasHydrated: () => d,
@@ -152,7 +152,7 @@
                         onFinishHydration: e => (h.add(e), () => {
                             h.delete(e)
                         })
-                    }, I(), r || p
+                    }, I(), l || E
                 }
         },
         890450: function(e, t, n) {
@@ -191,13 +191,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return S
                 }
             }), n("222007"), n("70102"), n("843762"), n("424973");
-            var i = n("37983"),
-                s = n("884691"),
-                l = n("414456"),
-                r = n.n(l),
+            var s = n("37983"),
+                i = n("884691"),
+                r = n("414456"),
+                l = n.n(r),
                 a = n("817736"),
                 u = n.n(a),
                 o = n("118810"),
@@ -206,11 +206,11 @@
                 h = n("845579"),
                 f = n("901165"),
                 m = n("62843"),
-                E = n("315102"),
-                p = n("402671"),
+                p = n("315102"),
+                E = n("402671"),
                 I = n("866190"),
-                g = n("115279");
-            class _ extends s.PureComponent {
+                v = n("115279");
+            class g extends i.PureComponent {
                 componentWillUnmount() {
                     var e;
                     null === (e = this.cancelLoadImage) || void 0 === e || e.call(this)
@@ -220,10 +220,10 @@
                         {
                             src: t,
                             emojiId: n,
-                            emojiName: i,
-                            animated: s,
-                            shouldAnimate: l,
-                            isFocused: r,
+                            emojiName: s,
+                            animated: i,
+                            shouldAnimate: r,
+                            isFocused: l,
                             isInteracting: a,
                             size: u = "default"
                         } = e,
@@ -232,21 +232,21 @@
                         } = this.state;
                     if (null != t) return t;
                     if (null != n) {
-                        let e = g.EMOJI_SIZE_MAP[u];
-                        return E.default.getEmojiURL({
+                        let e = v.EMOJI_SIZE_MAP[u];
+                        return p.default.getEmojiURL({
                             id: n,
-                            animated: r && !0 === s && (!0 === l || o || !0 === a),
+                            animated: l && !0 === i && (!0 === r || o || !0 === a),
                             size: e
                         })
                     }
-                    if (null != i) return p.default.getURL(i)
+                    if (null != s) return E.default.getURL(s)
                 }
                 render() {
                     var e;
                     let t;
                     let {
                         emojiName: n,
-                        animated: l,
+                        animated: r,
                         className: a,
                         size: u = "default",
                         alt: o,
@@ -255,22 +255,22 @@
                         emojiId: h,
                         autoplay: f,
                         isInteracting: m,
-                        ...E
-                    } = this.props, p = this.getSrc();
-                    return null == p || "" === p ? (0, i.jsx)("span", {
-                        className: r("emoji", "emoji-text"),
+                        ...p
+                    } = this.props, E = this.getSrc();
+                    return null == E || "" === E ? (0, s.jsx)("span", {
+                        className: l("emoji", "emoji-text"),
                         children: n
-                    }) : (l && (t = {
+                    }) : (r && (t = {
                         onMouseEnter: this.onMouseEnter,
                         onMouseLeave: this.onMouseLeave
-                    }), (0, s.createElement)("img", {
-                        ...E,
+                    }), (0, i.createElement)("img", {
+                        ...p,
                         key: this.key,
-                        src: p,
+                        src: E,
                         alt: null !== (e = null != o ? o : n) && void 0 !== e ? e : void 0,
                         draggable: !1,
                         ...t,
-                        className: r("emoji", a, {
+                        className: l("emoji", a, {
                             jumboable: "jumbo" === u
                         }),
                         onError: this.onError,
@@ -309,63 +309,63 @@
                     }
                 }
             }
-            _.defaultProps = {
+            g.defaultProps = {
                 isInteracting: !1
             };
-            let v = function(e) {
+            let _ = function(e) {
                 if (null == window.IntersectionObserver) return function(t) {
-                    return (0, i.jsx)(e, {
+                    return (0, s.jsx)(e, {
                         ...t,
                         shouldAnimate: t.animated
                     })
                 };
                 let t = [],
                     n = [],
-                    l = new window.IntersectionObserver(e => {
+                    r = new window.IntersectionObserver(e => {
                         e.forEach(e => {
-                            let i = n.find(t => {
+                            let s = n.find(t => {
                                 let [n] = t;
                                 return n === e.target
                             });
-                            if (null == i) return;
-                            let s = i[1];
+                            if (null == s) return;
+                            let i = s[1];
                             if (e.intersectionRatio >= .7) {
-                                var l, r;
-                                if (-1 !== t.indexOf(s)) return;
-                                let n = Math.abs(e.intersectionRect.bottom - Number(null === (l = e.rootBounds) || void 0 === l ? void 0 : l.bottom)) < Math.abs(e.intersectionRect.top - Number(null === (r = e.rootBounds) || void 0 === r ? void 0 : r.top));
-                                n ? t.unshift(s) : t.push(s), s.forceUpdate(), n && t.length > 100 && t[100].forceUpdate()
+                                var r, l;
+                                if (-1 !== t.indexOf(i)) return;
+                                let n = Math.abs(e.intersectionRect.bottom - Number(null === (r = e.rootBounds) || void 0 === r ? void 0 : r.bottom)) < Math.abs(e.intersectionRect.top - Number(null === (l = e.rootBounds) || void 0 === l ? void 0 : l.top));
+                                n ? t.unshift(i) : t.push(i), i.forceUpdate(), n && t.length > 100 && t[100].forceUpdate()
                             } else {
-                                let e = t.indexOf(s); - 1 !== e && (t.splice(e, 1), s.forceUpdate(), e < 100 && t.length >= 100 && t[99].forceUpdate())
+                                let e = t.indexOf(i); - 1 !== e && (t.splice(e, 1), i.forceUpdate(), e < 100 && t.length >= 100 && t[99].forceUpdate())
                             }
                         })
                     }, {
                         threshold: .7
                     });
 
-                function r(e) {
+                function l(e) {
                     let t = u.findDOMNode(e);
-                    (0, o.isElement)(t) && (n.push([t, e]), l.observe(t))
+                    (0, o.isElement)(t) && (n.push([t, e]), r.observe(t))
                 }
 
                 function a(e) {
-                    let i = u.findDOMNode(e);
-                    l.unobserve(i);
-                    let s = n.findIndex(t => {
-                        let [n, i] = t;
-                        return i === e
-                    }); - 1 !== s && (n.splice(s, 1), -1 !== (s = t.indexOf(e)) && (t.splice(s, 1), s < 100 && t.length >= 100 && t[99].forceUpdate()))
+                    let s = u.findDOMNode(e);
+                    r.unobserve(s);
+                    let i = n.findIndex(t => {
+                        let [n, s] = t;
+                        return s === e
+                    }); - 1 !== i && (n.splice(i, 1), -1 !== (i = t.indexOf(e)) && (t.splice(i, 1), i < 100 && t.length >= 100 && t[99].forceUpdate()))
                 }
-                return class extends s.Component {
+                return class extends i.Component {
                     shouldAutoplay(e) {
                         return e.animated && e.autoplay
                     }
                     componentDidMount() {
-                        this.shouldAutoplay(this.props) && r(this)
+                        this.shouldAutoplay(this.props) && l(this)
                     }
                     componentDidUpdate(e) {
                         let t = this.shouldAutoplay(e),
                             n = this.shouldAutoplay(this.props);
-                        n !== t && (n ? r(this) : a(this))
+                        n !== t && (n ? l(this) : a(this))
                     }
                     componentWillUnmount() {
                         this.shouldAutoplay(this.props) && a(this)
@@ -373,32 +373,32 @@
                     render() {
                         let n = t.indexOf(this),
                             {
-                                autoplay: s,
-                                allowAnimatedEmoji: l,
-                                ...r
+                                autoplay: i,
+                                allowAnimatedEmoji: r,
+                                ...l
                             } = this.props;
-                        return (0, i.jsx)(m.MessagesInteractionContext.Consumer, {
-                            children: t => (0, i.jsx)(e, {
-                                ...r,
-                                autoplay: s || !1,
-                                shouldAnimate: -1 !== n && n < 100 && !t.disableAnimations && l
+                        return (0, s.jsx)(m.MessagesInteractionContext.Consumer, {
+                            children: t => (0, s.jsx)(e, {
+                                ...l,
+                                autoplay: i || !1,
+                                shouldAnimate: -1 !== n && n < 100 && !t.disableAnimations && r
                             })
                         })
                     }
                 }
-            }(_);
+            }(g);
 
-            function T(e) {
+            function S(e) {
                 let t = h.AnimateEmoji.useSetting(),
                     n = {
                         autoplay: null == e.autoplay ? t : e.autoplay,
                         allowAnimatedEmoji: t
                     },
-                    s = __OVERLAY__ ? (0, d.useStateFromStores)([f.default], () => f.default.isInstanceFocused()) : (0, I.useIsWindowFocused)();
-                return (0, i.jsx)(v, {
+                    i = __OVERLAY__ ? (0, d.useStateFromStores)([f.default], () => f.default.isInstanceFocused()) : (0, I.useIsWindowFocused)();
+                return (0, s.jsx)(_, {
                     ...e,
                     ...n,
-                    isFocused: s
+                    isFocused: i
                 })
             }
         },
@@ -406,14 +406,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return E
                 }
             });
-            var i = n("37983");
+            var s = n("37983");
             n("884691");
-            var s = n("414456"),
-                l = n.n(s),
-                r = n("446674"),
+            var i = n("414456"),
+                r = n.n(i),
+                l = n("446674"),
                 a = n("77078"),
                 u = n("102985"),
                 o = n("79798"),
@@ -428,73 +428,119 @@
                 if (e.bot) return d.BotTypes.BOT;
                 return null
             }
-            let E = e => {
+            let p = e => {
                 let {
                     primary: t,
                     secondary: n,
-                    botType: s,
-                    botVerified: r,
+                    botType: i,
+                    botVerified: l,
                     discriminatorClass: u,
                     className: d,
                     usernameClass: c,
                     color: m,
-                    botClass: E,
-                    showStreamerModeTooltip: p
+                    botClass: p,
+                    showStreamerModeTooltip: E
                 } = e;
-                return (0, i.jsxs)("div", {
-                    className: l(f.info, d),
-                    children: [(0, i.jsx)(a.Tooltip, {
+                return (0, s.jsxs)("div", {
+                    className: r(f.info, d),
+                    children: [(0, s.jsx)(a.Tooltip, {
                         text: h.default.Messages.STREAMER_MODE_ENABLED,
-                        shouldShow: p,
-                        children: e => (0, i.jsx)("span", {
+                        shouldShow: E,
+                        children: e => (0, s.jsx)("span", {
                             ...e,
-                            className: l(f.username, c),
+                            className: r(f.username, c),
                             style: null != m ? {
                                 color: m
                             } : void 0,
                             children: t
                         })
-                    }), null != n ? (0, i.jsx)("span", {
-                        className: l(f.infoSpacing, u),
+                    }), null != n ? (0, s.jsx)("span", {
+                        className: r(f.infoSpacing, u),
                         children: n
-                    }) : void 0, null != s && (0, i.jsx)(o.default, {
-                        type: s,
-                        className: l(f.infoSpacing, E),
-                        verified: r
+                    }) : void 0, null != i && (0, s.jsx)(o.default, {
+                        type: i,
+                        className: r(f.infoSpacing, p),
+                        verified: l
                     })]
                 })
             };
-            var p = e => {
+            var E = e => {
                 let {
                     hideDiscriminator: t = !1,
                     user: n,
-                    nick: s,
-                    forceUsername: l,
+                    nick: i,
+                    forceUsername: r,
                     showAccountIdentifier: a,
                     overrideDiscriminator: o,
                     forcePomelo: h,
                     ...f
-                } = e, p = (0, r.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), I = p || t || n.isNonUserBot(), g = n.toString(), _ = c.default.getName(n), v = l ? g : null != s ? s : _, T = n.isPomelo() || h;
-                if (T || v !== g) {
-                    let e = v === g && T && l ? c.default.getUserTag(n, {
+                } = e, E = (0, l.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), I = E || t || n.isNonUserBot(), v = n.toString(), g = c.default.getName(n), _ = r ? v : null != i ? i : g, S = n.isPomelo() || h;
+                if (S || _ !== v) {
+                    let e = _ === v && S && r ? c.default.getUserTag(n, {
                             forcePomelo: h
-                        }) : v,
-                        t = a && e !== "@".concat(g) ? c.default.getUserTag(n) : void 0;
-                    return (0, i.jsx)(E, {
+                        }) : _,
+                        t = a && e !== "@".concat(v) ? c.default.getUserTag(n) : void 0;
+                    return (0, s.jsx)(p, {
                         primary: e,
                         secondary: t,
                         botVerified: n.isVerifiedBot(),
                         botType: m(n),
-                        showStreamerModeTooltip: p && e !== _,
+                        showStreamerModeTooltip: E && e !== g,
                         ...f
                     })
                 }
-                return (0, i.jsx)(d.default, {
-                    name: v,
+                return (0, s.jsx)(d.default, {
+                    name: _,
                     botType: m(n),
                     botVerified: n.isVerifiedBot(),
-                    discriminator: I || v !== g ? null : null != o ? o : n.discriminator,
+                    discriminator: I || _ !== v ? null : null != o ? o : n.discriminator,
                     ...f
+                })
+            }
+        },
+        811513: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                GroupIcon: function() {
+                    return l
+                }
+            });
+            var s = n("37983");
+            n("884691");
+            var i = n("669491"),
+                r = n("75196");
+            let l = e => {
+                let {
+                    width: t = 24,
+                    height: n = 24,
+                    color: l = i.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: a = "",
+                    ...u
+                } = e;
+                return (0, s.jsxs)("svg", {
+                    ...(0, r.default)(u),
+                    width: t,
+                    height: n,
+                    viewBox: "0 0 24 24",
+                    fill: "none",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    children: [(0, s.jsx)("path", {
+                        d: "M14.5 8C16.1569 8 17.5 6.65685 17.5 5C17.5 3.34315 16.1569 2 14.5 2C13.3114 2 12.2843 2.69119 11.7986 3.69355C11.5972 4.10932 11.8557 4.56448 12.2419 4.81816C13.3081 5.51868 14.0904 6.61601 14.3786 7.90013C14.3915 7.95754 14.4412 8 14.5 8Z",
+                        fill: "string" == typeof l ? l : l.css,
+                        className: a
+                    }), (0, s.jsx)("path", {
+                        d: "M18.4373 17.2714C18.5906 17.6957 18.9807 18 19.4319 18H20.5C21.3284 18 22 17.3284 22 16.5C22 12.6961 19.1681 9.55362 15.4976 9.06577C14.9501 8.993 14.5104 9.45209 14.4013 9.99348C14.3406 10.2944 14.253 10.5855 14.1409 10.8641C13.9082 11.4429 14.0871 12.1554 14.6125 12.4916C16.3621 13.6108 17.7205 15.2876 18.4373 17.2714Z",
+                        fill: "string" == typeof l ? l : l.css,
+                        className: a
+                    }), (0, s.jsx)("path", {
+                        d: "M12.5 9C12.5 10.6569 11.1569 12 9.5 12C7.84315 12 6.5 10.6569 6.5 9C6.5 7.34315 7.84315 6 9.5 6C11.1569 6 12.5 7.34315 12.5 9Z",
+                        fill: "string" == typeof l ? l : l.css,
+                        className: a
+                    }), (0, s.jsx)("path", {
+                        d: "M2 20.5C2 16.3579 5.35786 13 9.5 13C13.6421 13 17 16.3579 17 20.5C17 21.3284 16.3284 22 15.5 22C15.4055 22 15.3242 21.9334 15.3038 21.841C15.0908 20.8768 14.7383 19.9711 14.42 19.2977C14.3117 19.0685 14 19.149 14 19.4026V21.5C14 21.7761 13.7761 22 13.5 22H5.5C5.22386 22 5 21.7761 5 21.5V19.4026C5 19.149 4.6883 19.0685 4.57996 19.2977C4.26174 19.9711 3.90923 20.8768 3.69619 21.841C3.6758 21.9334 3.59454 22 3.5 22C2.67157 22 2 21.3284 2 20.5Z",
+                        fill: "string" == typeof l ? l : l.css,
+                        className: a
+                    })]
                 })
             }
         },
@@ -502,40 +548,61 @@
             "use strict";
             n.r(t), n.d(t, {
                 ScreenXIcon: function() {
-                    return r
+                    return l
                 }
             });
-            var i = n("37983");
+            var s = n("37983");
             n("884691");
-            var s = n("669491"),
-                l = n("75196");
-            let r = e => {
+            var i = n("669491"),
+                r = n("75196");
+            let l = e => {
                 let {
                     width: t = 24,
                     height: n = 24,
-                    color: r = s.default.colors.INTERACTIVE_NORMAL,
+                    color: l = i.default.colors.INTERACTIVE_NORMAL,
                     colorClass: a = "",
                     ...u
                 } = e;
-                return (0, i.jsxs)("svg", {
-                    ...(0, l.default)(u),
+                return (0, s.jsxs)("svg", {
+                    ...(0, r.default)(u),
                     width: t,
                     height: n,
                     viewBox: "0 0 24 24",
                     fill: "none",
                     xmlns: "http://www.w3.org/2000/svg",
-                    children: [(0, i.jsx)("path", {
+                    children: [(0, s.jsx)("path", {
                         fillRule: "evenodd",
                         clipRule: "evenodd",
                         d: "M2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V13C22 14.6569 20.6569 16 19 16H5C3.34315 16 2 14.6569 2 13V5ZM8.29289 5.29289C8.68342 4.90237 9.31658 4.90237 9.70711 5.29289L12 7.58579L14.2929 5.29289C14.6834 4.90237 15.3166 4.90237 15.7071 5.29289C16.0976 5.68342 16.0976 6.31658 15.7071 6.70711L13.4142 9L15.7071 11.2929C16.0976 11.6834 16.0976 12.3166 15.7071 12.7071C15.3166 13.0976 14.6834 13.0976 14.2929 12.7071L12 10.4142L9.70711 12.7071C9.31658 13.0976 8.68342 13.0976 8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L10.5858 9L8.29289 6.70711C7.90237 6.31658 7.90237 5.68342 8.29289 5.29289Z",
-                        fill: "string" == typeof r ? r : r.css,
+                        fill: "string" == typeof l ? l : l.css,
                         className: a
-                    }), (0, i.jsx)("path", {
+                    }), (0, s.jsx)("path", {
                         d: "M13 19.5C13 19.7761 13.2239 20 13.5 20H15C15.5523 20 16 20.4477 16 21C16 21.5523 15.5523 22 15 22H9C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20H10.5C10.7761 20 11 19.7761 11 19.5V17.5C11 17.2239 11.2239 17 11.5 17H12.5C12.7761 17 13 17.2239 13 17.5V19.5Z",
-                        fill: "string" == typeof r ? r : r.css,
+                        fill: "string" == typeof l ? l : l.css,
                         className: a
                     })]
                 })
+            }
+        },
+        206625: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return i
+                }
+            });
+            var s = n("884691");
+
+            function i(e, t) {
+                let n = s.useRef(e);
+                return s.useEffect(() => {
+                    function e(e) {
+                        null != n.current && !n.current.contains(e.target) && t()
+                    }
+                    return document.addEventListener("mousedown", e), () => {
+                        document.removeEventListener("mousedown", e)
+                    }
+                }, [n, t]), n
             }
         },
         388142: function(e, t, n) {
@@ -551,13 +618,13 @@
                     return m
                 },
                 updateGamingStats: function() {
-                    return E
+                    return p
                 }
             });
-            var i = n("872717"),
-                s = n("295426"),
-                l = n("819689"),
-                r = n("529805"),
+            var s = n("872717"),
+                i = n("295426"),
+                r = n("819689"),
+                l = n("529805"),
                 a = n("42203"),
                 u = n("474643"),
                 o = n("377253"),
@@ -565,7 +632,7 @@
                 c = n("49111");
 
             function h(e) {
-                i.default.post({
+                s.default.post({
                     url: c.Endpoints.INITIATE_CHANNEL_PROMPTS,
                     body: {
                         guild_ids: e
@@ -575,7 +642,7 @@
 
             function f(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT;
-                i.default.post({
+                s.default.post({
                     url: c.Endpoints.FORCE_SEND_PROMPT(e),
                     body: {
                         prompt_type: t
@@ -583,7 +650,7 @@
                 })
             }
             async function m(e, t, n) {
-                await i.default.post({
+                await s.default.post({
                     url: c.Endpoints.SEND_GAMING_STATS(t),
                     body: {
                         message_reference: {
@@ -592,36 +659,36 @@
                             message_id: n
                         }
                     }
-                }), p(t)
+                }), E(t)
             }
-            async function E(e) {
-                let t = await i.default.patch({
+            async function p(e) {
+                let t = await s.default.patch({
                     url: c.Endpoints.UPDATE_GAMING_STATS(e.channel_id, e.id)
                 });
                 if (null != t.text && "" !== t.text) {
                     let n = a.default.getChannel(e.channel_id);
-                    null != n && ((0, r.createPendingReply)({
+                    null != n && ((0, l.createPendingReply)({
                         channel: n,
                         message: e,
                         shouldMention: !1,
                         showMentionToggle: !1
-                    }), p(n.id)), s.default.saveDraft(e.channel_id, t.text, u.DraftType.ChannelMessage)
+                    }), E(n.id)), i.default.saveDraft(e.channel_id, t.text, u.DraftType.ChannelMessage)
                 }
             }
 
-            function p(e) {
+            function E(e) {
                 let t = o.default.getMessages(e);
-                t.hasMoreAfter ? l.default.jumpToPresent(e, c.MAX_MESSAGES_PER_CHANNEL) : d.ComponentDispatch.dispatch(c.ComponentActions.SCROLLTO_PRESENT)
+                t.hasMoreAfter ? r.default.jumpToPresent(e, c.MAX_MESSAGES_PER_CHANNEL) : d.ComponentDispatch.dispatch(c.ComponentActions.SCROLLTO_PRESENT)
             }
         },
         172858: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 DUCK_CONFETTI_SPRITE: function() {
-                    return l
+                    return r
                 },
                 COMMON_CONFETTI_COLORS: function() {
-                    return r
+                    return l
                 },
                 COMMON_CONFETTI_SPRITES: function() {
                     return a
@@ -636,11 +703,11 @@
                     return d
                 }
             });
-            var i = n("516555"),
-                s = n("839491");
-            let l = s,
-                r = ["#FF73FA", "#FFC0FF", "#FFD836", "#FF9A15", "#A5F7DE", "#51BC9D", "#AEC7FF", "#3E70DD"],
-                a = [n("890450"), l, n("164654"), n("540346"), n("526094"), n("367469"), n("23933"), {
+            var s = n("516555"),
+                i = n("839491");
+            let r = i,
+                l = ["#FF73FA", "#FFC0FF", "#FFD836", "#FF9A15", "#A5F7DE", "#51BC9D", "#AEC7FF", "#3E70DD"],
+                a = [n("890450"), r, n("164654"), n("540346"), n("526094"), n("367469"), n("23933"), {
                     src: n("283397"),
                     colorize: !1
                 }],
@@ -670,7 +737,7 @@
                         maxValue: u
                     }
                 },
-                d = new i.Environment
+                d = new s.Environment
         },
         969715: function(e, t, n) {
             "use strict";
@@ -679,19 +746,19 @@
                     return m
                 },
                 FeatureItemConfirmationModal: function() {
-                    return E
+                    return p
                 },
                 FeatureMessageConfirmationModal: function() {
-                    return p
+                    return E
                 },
                 FeatureForumPostConfirmationModal: function() {
                     return I
                 }
             }), n("222007");
-            var i = n("37983"),
-                s = n("884691"),
-                l = n("866227"),
-                r = n.n(l),
+            var s = n("37983"),
+                i = n("884691"),
+                r = n("866227"),
+                l = n.n(r),
                 a = n("611221"),
                 u = n("77078"),
                 o = n("599417"),
@@ -704,10 +771,10 @@
                 let {
                     featureableItem: t,
                     header: n,
-                    body: l,
-                    ...r
-                } = e, [a, d] = s.useState(null), [f, m] = s.useState(!1);
-                return (0, i.jsxs)(u.ConfirmModal, {
+                    body: r,
+                    ...l
+                } = e, [a, d] = i.useState(null), [f, m] = i.useState(!1);
+                return (0, s.jsxs)(u.ConfirmModal, {
                     header: n,
                     confirmText: h.default.Messages.GUILD_FEED_UNFEATURE_BUTTON_TEXT,
                     confirmButtonColor: u.Button.Colors.RED,
@@ -720,11 +787,11 @@
                             throw d(new o.default(e)), m(!1), e
                         }
                     },
-                    ...r,
-                    children: [(0, i.jsx)(u.Text, {
+                    ...l,
+                    children: [(0, s.jsx)(u.Text, {
                         variant: "text-md/normal",
-                        children: l
-                    }), null != a && (0, i.jsx)(u.Text, {
+                        children: r
+                    }), null != a && (0, s.jsx)(u.Text, {
                         color: "text-danger",
                         variant: "text-xs/normal",
                         children: a.message
@@ -732,52 +799,52 @@
                 })
             }
 
-            function E(e) {
+            function p(e) {
                 let {
                     featureableItem: t,
                     expiresSeconds: n,
-                    header: l,
+                    header: r,
                     children: a,
                     options: d,
                     ...m
-                } = e, [E, p] = s.useState(null), [I, g] = s.useState(!1);
-                return (0, i.jsxs)(u.ConfirmModal, {
-                    header: l,
+                } = e, [p, E] = i.useState(null), [I, v] = i.useState(!1);
+                return (0, s.jsxs)(u.ConfirmModal, {
+                    header: r,
                     confirmText: h.default.Messages.GUILD_FEED_FEATURE_BUTTON_TEXT,
                     cancelText: h.default.Messages.CANCEL,
                     confirmButtonColor: u.Button.Colors.BRAND,
                     loading: I,
                     onConfirm: async () => {
                         try {
-                            let e = r().add(n, "second").toDate();
-                            g(!0), await (0, c.featureGuildFeedItem)(t, e, d)
+                            let e = l().add(n, "second").toDate();
+                            v(!0), await (0, c.featureGuildFeedItem)(t, e, d)
                         } catch (e) {
-                            throw p(new o.default(e)), e
+                            throw E(new o.default(e)), e
                         } finally {
-                            g(!1)
+                            v(!1)
                         }
                     },
                     ...m,
-                    children: [null != E && (0, i.jsx)(u.Text, {
+                    children: [null != p && (0, s.jsx)(u.Text, {
                         className: f.featureModalError,
                         color: "text-danger",
                         variant: "text-xs/normal",
-                        children: E.message
+                        children: p.message
                     }), a]
                 })
             }
 
-            function p(e) {
+            function E(e) {
                 let {
                     message: t,
                     guildId: n,
-                    channel: s,
-                    expiresSeconds: l,
-                    timePeriod: r,
+                    channel: i,
+                    expiresSeconds: r,
+                    timePeriod: l,
                     options: o,
                     ...c
                 } = e;
-                return (0, i.jsxs)(E, {
+                return (0, s.jsxs)(p, {
                     ...c,
                     featureableItem: {
                         guildId: n,
@@ -785,18 +852,18 @@
                         entityType: a.GuildFeedItemTypes.MESSAGE
                     },
                     header: h.default.Messages.GUILD_FEED_FEATURED_MESSAGE_MODAL_HEADER,
-                    expiresSeconds: l,
+                    expiresSeconds: r,
                     options: o,
-                    children: [(0, i.jsx)(u.Text, {
+                    children: [(0, s.jsx)(u.Text, {
                         className: f.featureModalText,
                         variant: "text-md/normal",
                         children: h.default.Messages.GUILD_FEED_FEATURE_MESSAGE_MODAL_BODY.format({
-                            timePeriod: r
+                            timePeriod: l
                         })
-                    }), (0, i.jsx)("div", {
+                    }), (0, s.jsx)("div", {
                         className: f.featureModalMessage,
-                        children: (0, i.jsx)(d.default, {
-                            channel: s,
+                        children: (0, s.jsx)(d.default, {
+                            channel: i,
                             message: t,
                             disableInteraction: !0
                         })
@@ -808,12 +875,12 @@
                 let {
                     thread: t,
                     guildId: n,
-                    expiresSeconds: s,
-                    timePeriod: l,
-                    options: r,
+                    expiresSeconds: i,
+                    timePeriod: r,
+                    options: l,
                     ...o
                 } = e;
-                return (0, i.jsx)(E, {
+                return (0, s.jsx)(p, {
                     ...o,
                     featureableItem: {
                         guildId: n,
@@ -821,14 +888,14 @@
                         entityType: a.GuildFeedItemTypes.FORUM_POST
                     },
                     header: h.default.Messages.GUILD_FEED_FEATURED_FORUM_POST_MODAL_HEADER,
-                    expiresSeconds: s,
-                    options: r,
-                    children: (0, i.jsx)(u.Text, {
+                    expiresSeconds: i,
+                    options: l,
+                    children: (0, s.jsx)(u.Text, {
                         className: f.featureModalText,
                         variant: "text-md/normal",
                         children: h.default.Messages.GUILD_FEED_FEATURE_FORUM_POST_MODAL_BODY.format({
                             threadName: t.name,
-                            timePeriod: l
+                            timePeriod: r
                         })
                     })
                 })
@@ -836,10 +903,10 @@
         },
         887446: function(e, t, n) {
             "use strict";
-            let i, s, l, r;
+            let s, i, r, l;
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return E
                 }
             });
             var a = n("748820"),
@@ -857,21 +924,21 @@
             }
 
             function m(e) {
-                null != l && l.guildId === e ? (s = l, l = void 0) : s = f(e)
+                null != r && r.guildId === e ? (i = r, r = void 0) : i = f(e)
             }
-            class E extends u.default.Store {
+            class p extends u.default.Store {
                 getSavedScrollPosition(e) {
                     return h[e]
                 }
                 getHomeSessionId(e) {
-                    return null != s && s.guildId === e ? s.sessionId : null != l && l.guildId === e ? l.sessionId : void 0
+                    return null != i && i.guildId === e ? i.sessionId : null != r && r.guildId === e ? r.sessionId : void 0
                 }
                 getHomeSessionSource(e) {
-                    return null != r && r.guildId === e ? r.source : c.GuildHomeLandingSource.ORGANIC
+                    return null != l && l.guildId === e ? l.source : c.GuildHomeLandingSource.ORGANIC
                 }
             }
-            E.displayName = "GuildHomeStore";
-            var p = new E(o.default, {
+            p.displayName = "GuildHomeStore";
+            var E = new p(o.default, {
                 CONNECTION_OPEN: function() {
                     h = {}
                 },
@@ -894,12 +961,12 @@
                         channelId: n
                     } = e;
                     if (null == t || null == n || !(0, d.isStaticChannelRoute)(n) || !(0, d.isGuildHomeChannel)(n)) {
-                        i = void 0, s = void 0, l = void 0, r = void 0;
+                        s = void 0, i = void 0, r = void 0, l = void 0;
                         return
                     }
                     let a = (0, d.buildGuildStaticChannelId)(n, t);
-                    if (i === a || null != s && s.guildId === t) return !1;
-                    m(t), i = a, null != r && r.guildId !== t && (r = void 0)
+                    if (s === a || null != i && i.guildId === t) return !1;
+                    m(t), s = a, null != l && l.guildId !== t && (l = void 0)
                 },
                 CHANNEL_PRELOAD: function(e) {
                     let {
@@ -907,18 +974,18 @@
                         channelId: n
                     } = e;
                     if (null == t || null == n || !(0, d.isStaticChannelRoute)(n) || !(0, d.isGuildHomeChannel)(n)) {
-                        l = void 0;
+                        r = void 0;
                         return
                     }
-                    if (null != l && l.guildId === t) return !1;
-                    l = f(t)
+                    if (null != r && r.guildId === t) return !1;
+                    r = f(t)
                 },
                 GUILD_HOME_SET_SOURCE: function(e) {
                     let {
                         source: t,
                         guildId: n
                     } = e;
-                    r = {
+                    l = {
                         guildId: n,
                         source: t
                     }
@@ -927,11 +994,11 @@
                     let {
                         guildId: t
                     } = e;
-                    if (null != s && s.guildId === t) return !1;
+                    if (null != i && i.guildId === t) return !1;
                     m(t)
                 },
                 LOGOUT: function() {
-                    s = void 0, l = void 0, r = void 0
+                    i = void 0, r = void 0, l = void 0
                 }
             })
         },
@@ -942,28 +1009,28 @@
                     return h
                 }
             }), n("222007");
-            var i = n("689988"),
-                s = n("21121"),
-                l = n("162771"),
-                r = n("398604"),
+            var s = n("689988"),
+                i = n("21121"),
+                r = n("162771"),
+                l = n("398604"),
                 a = n("322224");
             let u = {},
                 o = new Set,
                 d = async e => {
-                    let t = r.default.getGuildScheduledEventsForGuild(e);
+                    let t = l.default.getGuildScheduledEventsForGuild(e);
                     if (0 !== t.length) {
                         if (!o.has(e)) try {
                             await a.default.getGuildEventsForCurrentUser(e), o.add(e)
                         } catch (e) {}
                     }
                 };
-            class c extends i.default {
+            class c extends s.default {
                 async getGuildEventUserCounts(e, t, n) {
-                    let i = n.filter(n => null == u["".concat(e, "-").concat(t, "-").concat(n)] || Date.now() - u["".concat(e, "-").concat(t, "-").concat(n)] > 18e5);
-                    if (!(Date.now() - u["".concat(e, "-").concat(t)] < 18e5) || 0 !== i.length) {
-                        u["".concat(e, "-").concat(t)] = Date.now(), i.forEach(n => u["".concat(e, "-").concat(t, "-").concat(n)] = Date.now());
+                    let s = n.filter(n => null == u["".concat(e, "-").concat(t, "-").concat(n)] || Date.now() - u["".concat(e, "-").concat(t, "-").concat(n)] > 18e5);
+                    if (!(Date.now() - u["".concat(e, "-").concat(t)] < 18e5) || 0 !== s.length) {
+                        u["".concat(e, "-").concat(t)] = Date.now(), s.forEach(n => u["".concat(e, "-").concat(t, "-").concat(n)] = Date.now());
                         try {
-                            await a.default.fetchGuildEventUserCounts(e, t, i)
+                            await a.default.fetchGuildEventUserCounts(e, t, s)
                         } catch (e) {}
                     }
                 }
@@ -975,10 +1042,10 @@
                 }
                 handleConnectionOpen() {
                     o.clear(), u = {};
-                    let e = (0, s.isInMainTabsExperiment)(),
-                        t = l.default.getLastSelectedGuildId();
+                    let e = (0, i.isInMainTabsExperiment)(),
+                        t = r.default.getLastSelectedGuildId();
                     if (e && null != t) {
-                        let e = r.default.getGuildScheduledEventsForGuild(t);
+                        let e = l.default.getGuildScheduledEventsForGuild(t);
                         e.forEach(e => this.getGuildEventUserCounts(t, e.id, []))
                     }
                 }
@@ -998,15 +1065,15 @@
                     var t;
                     let {
                         invite: n
-                    } = e, i = n.guild_scheduled_event, s = null === (t = n.guild) || void 0 === t ? void 0 : t.id;
-                    null != i && null != s && d(s)
+                    } = e, s = n.guild_scheduled_event, i = null === (t = n.guild) || void 0 === t ? void 0 : t.id;
+                    null != s && null != i && d(i)
                 }
                 handleChannelSelect(e) {
                     let {
                         guildId: t
                     } = e;
                     if (null == t) return;
-                    let n = r.default.getGuildScheduledEventsForGuild(t);
+                    let n = l.default.getGuildScheduledEventsForGuild(t);
                     n.forEach(e => this.getGuildEventUserCounts(t, e.id, []))
                 }
                 constructor(...e) {
@@ -1021,6 +1088,131 @@
             }
             var h = new c
         },
+        597517: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                hideHotspot: function() {
+                    return l
+                },
+                setHotspotOverride: function() {
+                    return a
+                },
+                clearHotspotOverride: function() {
+                    return u
+                }
+            });
+            var s = n("913144"),
+                i = n("599110"),
+                r = n("49111");
+
+            function l(e) {
+                i.default.track(r.AnalyticEvents.HOTSPOT_HIDDEN, {
+                    hotspot_location: e
+                }), s.default.wait(() => {
+                    s.default.dispatch({
+                        type: "HOTSPOT_HIDE",
+                        location: e
+                    })
+                })
+            }
+
+            function a(e, t) {
+                s.default.dispatch({
+                    type: "HOTSPOT_OVERRIDE_SET",
+                    location: e,
+                    enabled: t
+                })
+            }
+
+            function u(e) {
+                s.default.dispatch({
+                    type: "HOTSPOT_OVERRIDE_CLEAR",
+                    location: e
+                })
+            }
+        },
+        269596: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return d
+                }
+            }), n("222007");
+            var s = n("446674"),
+                i = n("913144"),
+                r = n("197881"),
+                l = n("492397");
+            let a = new Set,
+                u = {};
+            class o extends s.default.PersistedStore {
+                initialize(e) {
+                    null != e && (Array.isArray(e.hiddenHotspots) && (a = new Set(e.hiddenHotspots)), null != e.hotspotOverrides && (u = e.hotspotOverrides))
+                }
+                hasHotspot(e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                        n = !t && u[e];
+                    return !(l.CONFERENCE_MODE_ENABLED || r.ProcessArgs.isDisallowPopupsSet()) && (n || !a.has(e))
+                }
+                hasHiddenHotspot(e) {
+                    return a.has(e)
+                }
+                getHotspotOverride(e) {
+                    return u[e]
+                }
+                getState() {
+                    return {
+                        hiddenHotspots: a,
+                        hotspotOverrides: u
+                    }
+                }
+            }
+            o.displayName = "HotspotStore", o.persistKey = "hotspots", o.migrations = [e => ({
+                hiddenHotspots: null != e ? e : [],
+                hotspotOverrides: {}
+            })];
+            var d = new o(i.default, {
+                OVERLAY_INITIALIZE: function(e) {
+                    let {
+                        hiddenHotspots: t
+                    } = e;
+                    a = new Set(t)
+                },
+                HOTSPOT_HIDE: function(e) {
+                    let {
+                        location: t
+                    } = e;
+                    if (a.has(t)) return !1;
+                    a.add(t)
+                },
+                HOTSPOT_OVERRIDE_SET: function(e) {
+                    let {
+                        location: t,
+                        enabled: n
+                    } = e;
+                    u[t] = n
+                },
+                HOTSPOT_OVERRIDE_CLEAR: function(e) {
+                    let {
+                        location: t
+                    } = e;
+                    if (null == u[t]) return !1;
+                    delete u[t]
+                }
+            })
+        },
+        139321: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                HotspotStore: function() {
+                    return r.default
+                }
+            });
+            var s = n("533613");
+            n.es(s, t);
+            var i = n("597517");
+            n.es(i, t);
+            var r = n("269596")
+        },
         596512: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -1028,12 +1220,12 @@
                     return o
                 }
             }), n("222007"), n("424973");
-            var i = n("693566"),
-                s = n.n(i),
-                l = n("689988"),
-                r = n("599110"),
+            var s = n("693566"),
+                i = n.n(s),
+                r = n("689988"),
+                l = n("599110"),
                 a = n("49111");
-            class u extends l.default {
+            class u extends r.default {
                 handleMessageBecameVisible(e) {
                     let {
                         messageId: t
@@ -1041,10 +1233,10 @@
                     if (null != this.currentlyVisibleMessageTimers[t] || this.viewsInCurrentChannel.has(t)) return;
                     let n = this.recentViewTimes.get(t);
                     if (null != n && Date.now() - n < 6e4) return;
-                    let i = setTimeout(() => {
+                    let s = setTimeout(() => {
                         delete this.currentlyVisibleMessageTimers[t], this.viewsInCurrentChannel.add(t), this.recentViewTimes.set(t, Date.now()), this.bufferViewTrack(e)
                     }, 1e3);
-                    this.currentlyVisibleMessageTimers[t] = i
+                    this.currentlyVisibleMessageTimers[t] = s
                 }
                 handleMessageLostVisibility(e) {
                     let t = this.currentlyVisibleMessageTimers[e];
@@ -1060,7 +1252,7 @@
                     this.currentlyVisibleMessageTimers = {}, this.viewsInCurrentChannel.clear(), this.drainBuffer()
                 }
                 drainBuffer() {
-                    for (let e of this.batchBuffer) r.default.track(a.AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED, {
+                    for (let e of this.batchBuffer) l.default.track(a.AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED, {
                         message_id: e.messageId,
                         channel_id: e.channelId,
                         guild_id: e.guildId,
@@ -1073,7 +1265,7 @@
                     this.batchBuffer.length >= 10 && this.drainBuffer(), this.batchBuffer.push(e), null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), 2e3))
                 }
                 constructor(...e) {
-                    super(...e), this.currentlyVisibleMessageTimers = {}, this.viewsInCurrentChannel = new Set, this.recentViewTimes = new s({
+                    super(...e), this.currentlyVisibleMessageTimers = {}, this.viewsInCurrentChannel = new Set, this.recentViewTimes = new i({
                         max: 500,
                         maxAge: 6e4
                     }), this.batchBuffer = [], this.batchTimerId = null, this.actions = {
@@ -1087,22 +1279,22 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return l
                 }
             });
-            var i = n("37983");
+            var s = n("37983");
             n("884691");
-            var s = n("65597"),
-                l = n("880731");
+            var i = n("65597"),
+                r = n("880731");
 
-            function r(e) {
+            function l(e) {
                 let {
                     children: t,
                     confettiLocation: n
-                } = e, r = (0, s.default)([l.default], () => l.default.isEnabled({
+                } = e, l = (0, i.default)([r.default], () => r.default.isEnabled({
                     confettiLocation: n
                 }));
-                return r ? (0, i.jsx)(i.Fragment, {
+                return l ? (0, s.jsx)(s.Fragment, {
                     children: t
                 }) : null
             }
@@ -1114,30 +1306,30 @@
                     return a
                 }
             });
-            var i = n("884691"),
-                s = n("65597"),
-                l = n("526887"),
-                r = n("880731");
+            var s = n("884691"),
+                i = n("65597"),
+                r = n("526887"),
+                l = n("880731");
 
             function a() {
                 let {
                     createMultipleConfettiAt: e
-                } = i.useContext(l.ConfettiCannonContext), t = (0, s.default)([r.default], () => r.default.getState()), n = i.useCallback(e => ({
+                } = s.useContext(r.ConfettiCannonContext), t = (0, i.default)([l.default], () => l.default.getState()), n = s.useCallback(e => ({
                     size: {
                         type: "static-random",
                         minValue: e.confettiSize - 7,
                         maxValue: e.confettiSize + 7
                     }
-                }), []), a = i.useMemo(() => ({
-                    fire: (i, s, l) => {
-                        var r, a;
-                        let u = (null == l ? void 0 : l.settings) != null ? {
+                }), []), a = s.useMemo(() => ({
+                    fire: (s, i, r) => {
+                        var l, a;
+                        let u = (null == r ? void 0 : r.settings) != null ? {
                                 ...t,
-                                ...l.settings
+                                ...r.settings
                             } : t,
                             o = n(u);
-                        e(i, s, o, (null !== (r = null == l ? void 0 : l.count) && void 0 !== r ? r : u.confettiCount) * (null !== (a = null == l ? void 0 : l.countMultiplier) && void 0 !== a ? a : 1), {
-                            sprite: null == l ? void 0 : l.sprite
+                        e(s, i, o, (null !== (l = null == r ? void 0 : r.count) && void 0 !== l ? l : u.confettiCount) * (null !== (a = null == r ? void 0 : r.countMultiplier) && void 0 !== a ? a : 1), {
+                            sprite: null == r ? void 0 : r.sprite
                         })
                     }
                 }), [e, n, t]);
@@ -1151,13 +1343,13 @@
                     return a
                 }
             });
-            var i = n("803182"),
-                s = n("308503"),
-                l = n("49111");
+            var s = n("803182"),
+                i = n("308503"),
+                r = n("49111");
 
-            function r(e) {
-                let t = (0, i.matchPath)(null != e ? e : "", {
-                    path: l.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")
+            function l(e) {
+                let t = (0, s.matchPath)(null != e ? e : "", {
+                    path: r.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")
                 });
                 if (null != t) {
                     let {
@@ -1165,12 +1357,12 @@
                         channelId: n
                     } = t.params;
                     return {
-                        guildId: e === l.ME ? null : e,
+                        guildId: e === r.ME ? null : e,
                         channelId: null != n ? n : null
                     }
                 }
-                let n = (0, i.matchPath)(null != e ? e : "", {
-                    path: l.Routes.GUILD_BOOSTING_MARKETING(":guildId")
+                let n = (0, s.matchPath)(null != e ? e : "", {
+                    path: r.Routes.GUILD_BOOSTING_MARKETING(":guildId")
                 });
                 return null != n ? {
                     guildId: n.params.guildId,
@@ -1180,7 +1372,7 @@
                     channelId: null
                 }
             }
-            var a = (0, s.default)(e => ({
+            var a = (0, i.default)(e => ({
                 path: null,
                 basePath: "/",
                 guildId: null,
@@ -1188,23 +1380,23 @@
                 updatePath(t) {
                     let {
                         guildId: n,
-                        channelId: i
-                    } = r(t);
+                        channelId: s
+                    } = l(t);
                     e({
                         path: t,
                         guildId: n,
-                        channelId: i
+                        channelId: s
                     })
                 },
                 resetPath(t) {
                     let {
                         guildId: n,
-                        channelId: i
-                    } = r(t);
+                        channelId: s
+                    } = l(t);
                     e({
                         path: null,
                         guildId: n,
-                        channelId: i,
+                        channelId: s,
                         basePath: t
                     })
                 }
@@ -1220,24 +1412,24 @@
                     return o
                 }
             });
-            var i = n("299039"),
-                s = n("648564"),
-                l = n("782340");
-            let r = e => i.default.compare("992549565104128000", e) > -1,
+            var s = n("299039"),
+                i = n("648564"),
+                r = n("782340");
+            let l = e => s.default.compare("992549565104128000", e) > -1,
                 a = (e, t) => {
                     if (null == e || e < 0) return "0";
                     {
-                        let n = r(t);
-                        return (null == t || n) && e >= s.MAX_THREAD_MESSAGE_COUNT_OLD ? "50+" : e >= s.MAX_THREAD_MESSAGE_COUNT ? "100k+" : "".concat(e)
+                        let n = l(t);
+                        return (null == t || n) && e >= i.MAX_THREAD_MESSAGE_COUNT_OLD ? "50+" : e >= i.MAX_THREAD_MESSAGE_COUNT ? "100k+" : "".concat(e)
                     }
                 },
                 u = (e, t, n) => {
-                    let i = a(e, n);
-                    return "0" === i ? l.default.Messages.SEE_THREAD : t.format({
-                        count: i
+                    let s = a(e, n);
+                    return "0" === s ? r.default.Messages.SEE_THREAD : t.format({
+                        count: s
                     })
                 },
-                o = (e, t) => u(e, l.default.Messages.THREAD_MESSAGE_COUNT, t)
+                o = (e, t) => u(e, r.default.Messages.THREAD_MESSAGE_COUNT, t)
         },
         754474: function(e, t, n) {
             "use strict";
@@ -1249,18 +1441,18 @@
                     return o
                 }
             });
-            var i = n("37983");
+            var s = n("37983");
             n("884691");
-            var s = n("414456"),
-                l = n.n(s),
-                r = n("79798"),
+            var i = n("414456"),
+                r = n.n(i),
+                l = n("79798"),
                 a = n("988268"),
                 u = n("888770"),
                 o = e => {
                     let {
                         name: t,
                         discriminator: n,
-                        invertBotTagColor: s,
+                        invertBotTagColor: i,
                         nameColor: a,
                         className: o,
                         botType: d,
@@ -1268,28 +1460,28 @@
                         discriminatorClass: h,
                         botClass: f,
                         botVerified: m = !1,
-                        style: E,
-                        useRemSizes: p = !1,
+                        style: p,
+                        useRemSizes: E = !1,
                         usernameIcon: I
                     } = e;
-                    return (0, i.jsxs)("div", {
-                        className: l(o, u.nameTag),
-                        style: E,
-                        children: [(0, i.jsxs)("span", {
-                            className: l(u.username, c),
+                    return (0, s.jsxs)("div", {
+                        className: r(o, u.nameTag),
+                        style: p,
+                        children: [(0, s.jsxs)("span", {
+                            className: r(u.username, c),
                             style: null != a ? {
                                 color: a
                             } : void 0,
                             children: [I, t]
-                        }), null != n ? (0, i.jsxs)("span", {
+                        }), null != n ? (0, s.jsxs)("span", {
                             className: null != h ? h : void 0,
                             children: ["#", n]
-                        }) : null, null != d ? (0, i.jsx)(r.default, {
+                        }) : null, null != d ? (0, s.jsx)(l.default, {
                             type: d,
-                            invertColor: s,
-                            className: l(f, u.bot),
+                            invertColor: i,
+                            className: r(f, u.bot),
                             verified: m,
-                            useRemSizes: p
+                            useRemSizes: E
                         }) : null]
                     })
                 }
@@ -1298,7 +1490,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 uid: function() {
-                    return r
+                    return l
                 },
                 useUID: function() {
                     return a
@@ -1307,14 +1499,14 @@
                     return u
                 }
             });
-            var i = n("995008"),
-                s = n.n(i),
-                l = n("775560");
-            let r = function() {
+            var s = n("995008"),
+                i = n.n(s),
+                r = n("775560");
+            let l = function() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "uid_";
-                    return s(e)
+                    return i(e)
                 },
-                a = () => (0, l.useLazyValue)(() => r()),
+                a = () => (0, r.useLazyValue)(() => l()),
                 u = e => {
                     let {
                         children: t
@@ -1326,14 +1518,65 @@
             "use strict";
             n.r(t), n.d(t, {
                 MessagesInteractionContext: function() {
-                    return s
+                    return i
                 }
             });
-            var i = n("884691");
-            let s = i.createContext({
+            var s = n("884691");
+            let i = s.createContext({
                 disableInteractions: !1,
                 disableAnimations: !1
             })
+        },
+        155207: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return a
+                }
+            });
+            var s = n("37983");
+            n("884691");
+            var i = n("469563"),
+                r = n("811513"),
+                l = n("75196"),
+                a = (0, i.replaceIcon)(function(e) {
+                    let {
+                        width: t = 24,
+                        height: n = 24,
+                        color: i = "currentColor",
+                        foreground: r,
+                        ...a
+                    } = e;
+                    return (0, s.jsxs)("svg", {
+                        ...(0, l.default)(a),
+                        width: t,
+                        height: n,
+                        viewBox: "0 0 24 24",
+                        children: [(0, s.jsx)("path", {
+                            className: r,
+                            fill: i,
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                            d: "M14 8.00598C14 10.211 12.206 12.006 10 12.006C7.795 12.006 6 10.211 6 8.00598C6 5.80098 7.794 4.00598 10 4.00598C12.206 4.00598 14 5.80098 14 8.00598ZM2 19.006C2 15.473 5.29 13.006 10 13.006C14.711 13.006 18 15.473 18 19.006V20.006H2V19.006Z"
+                        }), (0, s.jsx)("path", {
+                            className: r,
+                            fill: i,
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                            d: "M14 8.00598C14 10.211 12.206 12.006 10 12.006C7.795 12.006 6 10.211 6 8.00598C6 5.80098 7.794 4.00598 10 4.00598C12.206 4.00598 14 5.80098 14 8.00598ZM2 19.006C2 15.473 5.29 13.006 10 13.006C14.711 13.006 18 15.473 18 19.006V20.006H2V19.006Z"
+                        }), (0, s.jsx)("path", {
+                            className: r,
+                            fill: i,
+                            d: "M20.0001 20.006H22.0001V19.006C22.0001 16.4433 20.2697 14.4415 17.5213 13.5352C19.0621 14.9127 20.0001 16.8059 20.0001 19.006V20.006Z"
+                        }), (0, s.jsx)("path", {
+                            className: r,
+                            fill: i,
+                            d: "M14.8834 11.9077C16.6657 11.5044 18.0001 9.9077 18.0001 8.00598C18.0001 5.96916 16.4693 4.28218 14.4971 4.0367C15.4322 5.09511 16.0001 6.48524 16.0001 8.00598C16.0001 9.44888 15.4889 10.7742 14.6378 11.8102C14.7203 11.8418 14.8022 11.8743 14.8834 11.9077Z"
+                        })]
+                    })
+                }, r.GroupIcon, void 0, {
+                    size: 24
+                })
         },
         985622: function(e, t, n) {
             "use strict";
@@ -1342,53 +1585,314 @@
                     return a
                 }
             });
-            var i = n("37983");
+            var s = n("37983");
             n("884691");
-            var s = n("469563"),
-                l = n("671306"),
-                r = n("75196"),
-                a = (0, s.replaceIcon)(function(e) {
+            var i = n("469563"),
+                r = n("671306"),
+                l = n("75196"),
+                a = (0, i.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: n = 24,
-                        color: s = "currentColor",
-                        foreground: l,
+                        color: i = "currentColor",
+                        foreground: r,
                         ...a
                     } = e;
-                    return (0, i.jsx)("svg", {
-                        ...(0, r.default)(a),
+                    return (0, s.jsx)("svg", {
+                        ...(0, l.default)(a),
                         width: t,
                         height: n,
                         viewBox: "0 0 24 24",
-                        children: (0, i.jsx)("path", {
-                            className: l,
+                        children: (0, s.jsx)("path", {
+                            className: r,
                             fillRule: "evenodd",
                             clipRule: "evenodd",
                             d: "M4 2.5C2.897 2.5 2 3.397 2 4.5V15.5C2 16.604 2.897 17.5 4 17.5H11V19.5H7V21.5H17V19.5H13V17.5H20C21.103 17.5 22 16.604 22 15.5V4.5C22 3.397 21.103 2.5 20 2.5H4ZM14.5483 6L16 7.45174L13.4466 9.99485L16 12.5483L14.5483 14L12.0051 11.4466L9.45174 14L8 12.5483L10.5534 9.99485L8 7.45174L9.45174 6L12.0051 8.55341L14.5483 6Z",
-                            fill: s
+                            fill: i
                         })
                     })
-                }, l.ScreenXIcon, void 0, {
+                }, r.ScreenXIcon, void 0, {
                     size: 24
                 })
+        },
+        713573: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return c
+                }
+            });
+            var s = n("37983");
+            n("884691");
+            var i = n("414456"),
+                r = n.n(i),
+                l = n("77078"),
+                a = n("254686"),
+                u = n("851706");
+            let o = Object.freeze({
+                    SIZE_10: u.size10,
+                    SIZE_12: u.size12,
+                    SIZE_14: u.size14,
+                    SIZE_16: u.size16,
+                    SIZE_20: u.size20,
+                    SIZE_24: u.size24,
+                    SIZE_32: u.size32
+                }),
+                d = e => {
+                    let {
+                        id: t,
+                        muted: n = !1,
+                        className: i = a.wrapper,
+                        size: u = o.SIZE_14,
+                        selectable: d = !1,
+                        children: c,
+                        color: h,
+                        onClick: f,
+                        onContextMenu: m,
+                        style: p,
+                        title: E,
+                        uppercase: I
+                    } = e;
+                    return (0, s.jsx)(l.H, {
+                        role: null != f ? "button" : void 0,
+                        onClick: f,
+                        onContextMenu: m,
+                        id: t,
+                        className: r(i, {
+                            [a.base]: !0,
+                            [u]: !0,
+                            [a.selectable]: d,
+                            [a.muted]: n,
+                            [a.uppercase]: I
+                        }),
+                        title: E,
+                        style: null != h ? {
+                            ...p,
+                            color: h
+                        } : p,
+                        children: c
+                    })
+                };
+            d.Sizes = o;
+            var c = d
+        },
+        811305: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                Sizes: function() {
+                    return v
+                },
+                default: function() {
+                    return S
+                }
+            }), n("424973"), n("222007");
+            var s = n("37983"),
+                i = n("884691"),
+                r = n("414456"),
+                l = n.n(r),
+                a = n("627445"),
+                u = n.n(a),
+                o = n("77078"),
+                d = n("506885"),
+                c = n("981601"),
+                h = n("766274"),
+                f = n("697218"),
+                m = n("368121"),
+                p = n("523096"),
+                E = n("587974"),
+                I = n("494101");
+            let v = {
+                SIZE_16: 16,
+                SIZE_24: 24,
+                SIZE_32: 32,
+                SIZE_56: 56
+            };
+
+            function g(e, t) {
+                let n = e instanceof h.default ? e : null != e ? e.user : null;
+                return null != n ? n.id : "user-".concat(t)
+            }
+            class _ extends i.PureComponent {
+                renderUsers() {
+                    let {
+                        users: e,
+                        max: t,
+                        renderUser: n = this.defaultRenderUser,
+                        size: i,
+                        extraDetail: r
+                    } = this.props, l = [], a = e.length === t ? e.length : t - 1, u = this.renderMoreUsers(a), o = 0;
+                    for (; o < a && o < e.length;) {
+                        var d;
+                        let t = null == u && null == r && o === e.length - 1,
+                            a = n(e[o], t, o);
+                        l.push(t ? (0, s.jsx)("div", {
+                            className: I.avatarContainer,
+                            children: a
+                        }, g(null !== (d = e[o]) && void 0 !== d ? d : null, o)) : (0, s.jsx)(E.default, {
+                            className: I.avatarContainerMasked,
+                            height: i,
+                            width: i,
+                            mask: E.default.Masks.VOICE_USER_SUMMARY_ITEM,
+                            children: a
+                        }, g(e[o], o))), o++
+                    }
+                    return null != r ? l.push(r) : null != u && l.push(u), l
+                }
+                renderMoreUsers(e) {
+                    let {
+                        max: t,
+                        count: n,
+                        hideMoreUsers: r,
+                        renderMoreUsers: l,
+                        users: a
+                    } = this.props, u = Math.min(e, a.length);
+                    if (!r) {
+                        if (null != n) {
+                            if (n >= t) return (0, s.jsx)(i.Fragment, {
+                                children: l("".concat(t, "+"), t)
+                            }, "more-users");
+                            if (n > a.length) {
+                                let e = n - a.length;
+                                return (0, s.jsx)(i.Fragment, {
+                                    children: l("+".concat(e), e)
+                                }, "more-users")
+                            }
+                        } else if (u < a.length) {
+                            let e = Math.min(a.length - u, 99);
+                            return (0, s.jsx)(i.Fragment, {
+                                children: l("+".concat(e), e)
+                            }, "more-users")
+                        }
+                    }
+                }
+                renderIcon() {
+                    return this.props.renderIcon ? (0, s.jsx)(m.default, {
+                        foreground: I.foreground,
+                        className: I.icon
+                    }) : null
+                }
+                render() {
+                    let {
+                        className: e,
+                        size: t,
+                        users: n,
+                        guildId: i,
+                        showUserPopout: r,
+                        useFallbackUserForPopout: a
+                    } = this.props, {
+                        popoutUserId: h
+                    } = this.state, m = n.find(e => null != e && e.id === h), p = a && null == f.default.getUser(h);
+                    return (0, s.jsx)(o.Popout, {
+                        position: "right",
+                        preload: null == m ? void 0 : () => (0, d.default)(m.id, m.getAvatarURL(i, 80), {
+                            guildId: i
+                        }),
+                        shouldShow: !0 === r && null != h,
+                        fixed: !0,
+                        renderPopout: e => (u(null != h, "UserSummaryItem.render - renderPopout: popoutUserId cannot be null"), (0, s.jsx)(c.default, {
+                            ...this.props,
+                            user: p && null != m ? m : void 0,
+                            ...e,
+                            userId: h,
+                            guildId: this.props.guildId
+                        })),
+                        onRequestClose: () => this.setState({
+                            popoutUserId: null
+                        }),
+                        children: n => (0, s.jsxs)("div", {
+                            className: l(e, I.container, function() {
+                                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.SIZE_24;
+                                switch (e) {
+                                    case v.SIZE_16:
+                                        return I.size16;
+                                    case v.SIZE_24:
+                                        return I.size24;
+                                    case v.SIZE_32:
+                                        return I.size32;
+                                    case v.SIZE_56:
+                                        return I.size56;
+                                    default:
+                                        return I.size24
+                                }
+                            }(t)),
+                            ref: this._ref,
+                            ...n,
+                            children: [this.renderIcon(), this.renderUsers()]
+                        })
+                    })
+                }
+                constructor(...e) {
+                    super(...e), this.state = {
+                        popoutUserId: null
+                    }, this._ref = i.createRef(), this.defaultRenderUser = (e, t, n) => {
+                        let {
+                            showUserPopout: i,
+                            guildId: r,
+                            size: l
+                        } = this.props;
+                        if (null == e) {
+                            if (!this.props.showDefaultAvatarsForNullUsers) return (0, s.jsx)("div", {
+                                className: I.emptyUser
+                            });
+                            {
+                                let e = (null != n ? n : 0) % p.default.DEFAULT_AVATARS.length,
+                                    t = p.default.DEFAULT_AVATARS[e];
+                                return (0, s.jsx)("img", {
+                                    src: t,
+                                    alt: "",
+                                    className: I.avatar
+                                })
+                            }
+                        }
+                        let a = (0, s.jsx)("img", {
+                            src: e.getAvatarURL(r, l),
+                            alt: e.username,
+                            className: I.avatar
+                        }, e.id);
+                        return i ? (0, s.jsx)(o.Clickable, {
+                            className: I.clickableAvatar,
+                            onClick: () => {
+                                null != this._ref.current && null != e && this.setState({
+                                    popoutUserId: e.id
+                                })
+                            },
+                            tabIndex: -1,
+                            children: a
+                        }, e.id) : a
+                    }
+                }
+            }
+            _.defaultProps = {
+                max: 10,
+                renderMoreUsers: function(e) {
+                    return (0, s.jsx)("div", {
+                        className: I.moreUsers,
+                        children: e
+                    })
+                },
+                renderIcon: !1,
+                showDefaultAvatarsForNullUsers: !1,
+                size: v.SIZE_24
+            };
+            var S = _
         },
         938237: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 markAnalyticsFeedItemSeen: function() {
-                    return s
+                    return i
                 },
                 markAnalyticsFeedItemUnseen: function() {
-                    return l
+                    return r
                 },
                 flushAnalyticsFeedItems: function() {
-                    return r
+                    return l
                 }
             });
-            var i = n("913144");
+            var s = n("913144");
 
-            function s(e, t, n) {
-                i.default.dispatch({
+            function i(e, t, n) {
+                s.default.dispatch({
                     type: "ANALYTICS_FEED_ITEM_SEEN",
                     id: e,
                     feedItemId: t,
@@ -1396,8 +1900,8 @@
                 })
             }
 
-            function l(e, t, n) {
-                i.default.dispatch({
+            function r(e, t, n) {
+                s.default.dispatch({
                     type: "ANALYTICS_FEED_ITEM_UNSEEN",
                     id: e,
                     feedItemId: t,
@@ -1405,8 +1909,8 @@
                 })
             }
 
-            function r(e, t) {
-                i.default.dispatch({
+            function l(e, t) {
+                s.default.dispatch({
                     type: "ANALYTICS_FEED_FLUSH",
                     id: e,
                     force: t
@@ -1417,19 +1921,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 AnalyticsFeedTypes: function() {
-                    return i
+                    return s
                 },
                 ForceFlushType: function() {
-                    return s
+                    return i
                 },
                 AnalyticsFeedItemSeenManager: function() {
                     return c
                 }
             }), n("424973"), n("222007");
-            var i, s, l, r, a = n("627445"),
+            var s, i, r, l, a = n("627445"),
                 u = n.n(a),
                 o = n("913144");
-            (l = i || (i = {})).GUILD_HOME = "guild_home", l.FORUM_CHANNEL = "forum_channel", (r = s || (s = {}))[r.IMMEDIATE = 0] = "IMMEDIATE", r[r.IMMEDIATE_WITH_COOLDOWN = 1] = "IMMEDIATE_WITH_COOLDOWN", r[r.IMMEDIATE_WITH_DELAY = 2] = "IMMEDIATE_WITH_DELAY";
+            (r = s || (s = {})).GUILD_HOME = "guild_home", r.FORUM_CHANNEL = "forum_channel", (l = i || (i = {}))[l.IMMEDIATE = 0] = "IMMEDIATE", l[l.IMMEDIATE_WITH_COOLDOWN = 1] = "IMMEDIATE_WITH_COOLDOWN", l[l.IMMEDIATE_WITH_DELAY = 2] = "IMMEDIATE_WITH_DELAY";
             class d {
                 maybeMarkSeen(e) {
                     let t = this.seenIntervals[this.seenIntervals.length - 1];
@@ -1448,19 +1952,19 @@
                 computeSeenTimeDestructive(e) {
                     let t = 0,
                         n = [];
-                    for (let i of this.seenIntervals) {
-                        if (null != i.endTimeMillis) {
-                            t += i.endTimeMillis - i.startTimeMillis;
+                    for (let s of this.seenIntervals) {
+                        if (null != s.endTimeMillis) {
+                            t += s.endTimeMillis - s.startTimeMillis;
                             continue
                         }
                         if (e) {
                             let e = Date.now();
-                            t += e - i.startTimeMillis, n.push({
+                            t += e - s.startTimeMillis, n.push({
                                 startTimeMillis: e
                             });
                             continue
                         }
-                        n.push(i)
+                        n.push(s)
                     }
                     return u(n.length < 2, "there should only be a single left over data"), this.seenIntervals = n, Math.round(t)
                 }
@@ -1500,26 +2004,26 @@
                     }, this.handleFeedItemSeen = e => {
                         var t;
                         let n = e.id,
-                            i = e.timestampMillis,
-                            s = e.feedItemId;
+                            s = e.timestampMillis,
+                            i = e.feedItemId;
                         if (n !== this._id) return;
                         if (this._paused) {
-                            this._pausedFeedItemIds.add(s);
+                            this._pausedFeedItemIds.add(i);
                             return
                         }
-                        let l = this.getTrackedFeedItem(s),
-                            r = l.maybeMarkSeen(i);
-                        null === (t = this.onFeedItemSeen) || void 0 === t || t.call(this, s, r)
+                        let r = this.getTrackedFeedItem(i),
+                            l = r.maybeMarkSeen(s);
+                        null === (t = this.onFeedItemSeen) || void 0 === t || t.call(this, i, l)
                     }, this.handleFeedItemUnseen = e => {
                         var t;
                         let n = e.id,
-                            i = e.timestampMillis,
-                            s = e.feedItemId;
+                            s = e.timestampMillis,
+                            i = e.feedItemId;
                         if (n !== this._id) return;
-                        this._paused && this._pausedFeedItemIds.delete(s);
-                        let l = this.getTrackedFeedItem(s),
-                            r = l.maybeMarkUnseen(i);
-                        null === (t = this.onFeedItemUnseen) || void 0 === t || t.call(this, s, r), this.maybeFlushSeenItems()
+                        this._paused && this._pausedFeedItemIds.delete(i);
+                        let r = this.getTrackedFeedItem(i),
+                            l = r.maybeMarkUnseen(s);
+                        null === (t = this.onFeedItemUnseen) || void 0 === t || t.call(this, i, l), this.maybeFlushSeenItems()
                     }, this.getTrackedFeedItem = e => (null == this.trackedFeedItems[e] && (this.trackedFeedItems[e] = new d), this.trackedFeedItems[e]), this.getVisibleFeedItemIds = () => {
                         let e = Object.keys(this.trackedFeedItems);
                         return new Set(e.filter(e => {
@@ -1581,10 +2085,10 @@
                     return f
                 }
             });
-            var i = n("597755"),
-                s = n.n(i),
-                l = n("815157"),
-                r = n("271938"),
+            var s = n("597755"),
+                i = n.n(s),
+                r = n("815157"),
+                l = n("271938"),
                 a = n("49111");
             let u = "linux";
 
@@ -1596,7 +2100,7 @@
 
             function d() {
                 var e;
-                let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = s.os) || void 0 === e ? void 0 : e.family;
+                let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = i.os) || void 0 === e ? void 0 : e.family;
                 return null == t ? "win" : -1 !== t.indexOf("Ubuntu") || -1 !== t.indexOf("Debian") || -1 !== t.indexOf("Fedora") || -1 !== t.indexOf("Red Hat") || -1 !== t.indexOf("SuSE") || -1 !== t.indexOf("Linux") ? u : -1 !== t.indexOf("OS X") ? "osx" : "win"
             }
 
@@ -1614,23 +2118,23 @@
             }
 
             function f(e, t, n) {
-                let i = null != n ? n.toString() : null;
+                let s = null != n ? n.toString() : null;
                 switch (t) {
                     case "iOS":
-                        return (0, l.default)(null != i ? i : "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746", {
+                        return (0, r.default)(null != s ? s : "https://itunes.apple.com/us/app/discord-chat-for-games/id985746746", {
                             utmSource: e,
-                            fingerprint: r.default.getFingerprint(),
-                            attemptId: (0, l.generateAttemptId)()
+                            fingerprint: l.default.getFingerprint(),
+                            attemptId: (0, r.generateAttemptId)()
                         });
                     case "Android":
-                        return (0, l.default)(null != i ? i : "https://play.google.com/store/apps/details", {
+                        return (0, r.default)(null != s ? s : "https://play.google.com/store/apps/details", {
                             utmSource: e,
                             id: "com.discord",
-                            fingerprint: r.default.getFingerprint(),
-                            attemptId: (0, l.generateAttemptId)()
+                            fingerprint: l.default.getFingerprint(),
+                            attemptId: (0, r.generateAttemptId)()
                         });
                     default:
-                        return null != i ? i : "https://www.discord.com"
+                        return null != s ? s : "https://www.discord.com"
                 }
             }
         }
