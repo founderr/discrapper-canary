@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["71020"], {
+    ["87935"], {
         305861: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -115,15 +115,15 @@
                 C = n("913144"),
                 I = n("819689"),
                 p = n("798609"),
-                m = n("274800");
+                h = n("274800");
             (s = i || (i = {}))[s.IN_FLIGHT = 0] = "IN_FLIGHT", s[s.ERRORED = 1] = "ERRORED", s[s.SUCCEEDED = 2] = "SUCCEEDED";
-            class h extends f.default.Store {
+            class m extends f.default.Store {
                 getModalState(e) {
                     return e !== l ? null : a
                 }
             }
-            h.displayName = "InteractionModalStore";
-            var M = new h(C.default, {
+            m.displayName = "InteractionModalStore";
+            var M = new m(C.default, {
                 LOGOUT: function() {
                     return l = null, a = null, o = null, u = null, r = null, !0
                 },
@@ -150,7 +150,7 @@
                             return o = t, u = s.channelId, r = n, !1;
                         case p.InteractionTypes.MODAL_SUBMIT:
                             return c(null == l || 1 === a || 2 === a, "cannot submit multiple modals at once"), l = n, a = 0, setTimeout(() => {
-                                l === n && 0 === a && (0, m.setFailed)(n)
+                                l === n && 0 === a && (0, h.setFailed)(n)
                             }, 1e4), !0;
                         default:
                             return !1
@@ -174,10 +174,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 useModalState: function() {
-                    return g
+                    return _
                 },
                 useIframeModalState: function() {
-                    return A
+                    return x
                 }
             }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660");
             var l = n("884691"),
@@ -193,14 +193,14 @@
                 C = n("271938"),
                 I = n("42203"),
                 p = n("26989"),
-                m = n("162771"),
-                h = n("315102"),
+                h = n("162771"),
+                m = n("315102"),
                 M = n("299039"),
-                T = n("812684"),
-                v = n("470055"),
-                R = n("524094"),
-                E = n("49111"),
-                N = n("782340");
+                v = n("812684"),
+                T = n("470055"),
+                N = n("524094"),
+                R = n("49111"),
+                E = n("782340");
             let S = e => {
                 let t = !0;
                 return e.forEach(e => {
@@ -208,11 +208,11 @@
                 }), t
             };
 
-            function _(e) {
+            function g(e) {
                 return l.useMemo(() => {
-                    let t = m.default.getGuildId(),
+                    let t = h.default.getGuildId(),
                         n = null != t && null != e.bot ? p.default.getMember(t, e.bot.id) : void 0,
-                        l = h.default.getApplicationIconURL({
+                        l = m.default.getApplicationIconURL({
                             id: e.id,
                             icon: e.icon,
                             botIconFirst: !0,
@@ -228,20 +228,20 @@
                 }, [e.id, e.icon, e.name, e.bot])
             }
 
-            function g(e, t) {
+            function _(e, t) {
                 var n;
                 let {
                     application: a,
                     customId: c,
                     components: p,
-                    channelId: m
-                } = e, h = null === (n = I.default.getChannel(m)) || void 0 === n ? void 0 : n.guild_id, R = (0, d.default)(), [g, A] = l.useState(null), [O, y] = l.useState(null), j = (0, u.useStateFromStores)([v.default], () => v.default.getModalState(O), [O]), w = l.useMemo(() => (0, T.createComponents)(p, a.id, h), [p, a.id, h]), L = l.useRef(new Set), b = l.useCallback(() => {
-                    A(null), y(null), S(L.current) && y(function(e, t) {
+                    channelId: h
+                } = e, m = null === (n = I.default.getChannel(h)) || void 0 === n ? void 0 : n.guild_id, N = (0, d.default)(), [_, x] = l.useState(null), [O, y] = l.useState(null), j = (0, u.useStateFromStores)([T.default], () => T.default.getModalState(O), [O]), w = l.useMemo(() => (0, v.createComponents)(p, a.id, m), [p, a.id, m]), L = l.useRef(new Set), b = l.useCallback(() => {
+                    x(null), y(null), S(L.current) && y(function(e, t) {
                         let n = M.default.fromTimestamp(Date.now()),
                             l = e.channelId,
                             a = I.default.getChannel(l);
                         o(null != a, "expected channel");
-                        let u = x(e.customId, e.components, []);
+                        let u = A(e.customId, e.components, []);
                         (0, f.addQueued)(n, {
                             data: {
                                 interactionType: i.InteractionTypes.MODAL_SUBMIT
@@ -249,7 +249,7 @@
                         });
                         let s = () => {
                             (null == t || !t.aborted) && r.default.post({
-                                url: E.Endpoints.INTERACTIONS,
+                                url: R.Endpoints.INTERACTIONS,
                                 body: {
                                     type: i.InteractionTypes.MODAL_SUBMIT,
                                     application_id: e.application.id,
@@ -269,30 +269,30 @@
                             })
                         };
                         return s(), n
-                    }(e, R))
-                }, [R, e]);
+                    }(e, N))
+                }, [N, e]);
                 l.useEffect(() => {
-                    j === v.InteractionModalState.SUCCEEDED && (s.default.dispatch({
+                    j === T.InteractionModalState.SUCCEEDED && (s.default.dispatch({
                         type: "CLEAR_INTERACTION_MODAL_STATE",
                         id: c
-                    }), t()), j === v.InteractionModalState.ERRORED && A(N.default.Messages.INTERACTION_FORM_SUBMISSION_FAILED)
+                    }), t()), j === T.InteractionModalState.ERRORED && x(E.default.Messages.INTERACTION_FORM_SUBMISSION_FAILED)
                 }, [O, j, t, c]);
                 let {
                     applicationIconURL: D,
                     applicationName: U
-                } = _(a);
+                } = g(a);
                 return {
                     components: w,
                     applicationIconURL: D,
                     applicationName: U,
                     submissionState: j,
-                    error: g,
+                    error: _,
                     validators: L.current,
                     onSubmit: b
                 }
             }
 
-            function A(e) {
+            function x(e) {
                 let {
                     application: t,
                     customId: n
@@ -300,7 +300,7 @@
                     applicationIconURL: l,
                     applicationName: a,
                     applicationBaseUrl: u
-                } = _(t), r = I.default.getChannel(e.channelId);
+                } = g(t), r = I.default.getChannel(e.channelId);
                 o(null != r, "channel should not be null");
                 let s = "".concat(e.channelId, ":").concat(t.id, ":").concat(n),
                     i = {
@@ -320,16 +320,16 @@
                     iframeUrl: c
                 }
             }
-            let x = (e, t, n) => t.map((t, l) => {
+            let A = (e, t, n) => t.map((t, l) => {
                 let a = [...n, l];
                 switch (t.type) {
                     case i.ComponentType.ACTION_ROW:
                         var u;
                         return {
-                            type: t.type, components: x(e, null !== (u = t.components) && void 0 !== u ? u : [], a)
+                            type: t.type, components: A(e, null !== (u = t.components) && void 0 !== u ? u : [], a)
                         };
                     case i.ComponentType.INPUT_TEXT: {
-                        let n = R.default.getInteractionComponentState(e, a);
+                        let n = N.default.getInteractionComponentState(e, a);
                         return {
                             type: t.type,
                             custom_id: t.custom_id,
@@ -337,7 +337,7 @@
                         }
                     }
                     case i.ComponentType.STRING_SELECT: {
-                        let n = R.default.getInteractionComponentState(e, a);
+                        let n = N.default.getInteractionComponentState(e, a);
                         return {
                             type: t.type,
                             custom_id: t.custom_id,
@@ -379,25 +379,25 @@
                     transitionState: I
                 } = e, {
                     components: p,
-                    applicationIconURL: m,
-                    applicationName: h,
+                    applicationIconURL: h,
+                    applicationName: m,
                     submissionState: M,
-                    error: T,
-                    validators: v,
-                    onSubmit: R
+                    error: v,
+                    validators: T,
+                    onSubmit: N
                 } = (0, i.useModalState)(e, C);
                 return (0, l.jsx)("form", {
                     onSubmit: e => {
-                        e.preventDefault(), R()
+                        e.preventDefault(), N()
                     },
                     children: (0, l.jsxs)(a.ModalRoot, {
                         transitionState: I,
                         children: [(0, l.jsxs)(a.ModalHeader, {
                             separator: !1,
                             children: [(0, l.jsx)(a.Avatar, {
-                                src: m,
+                                src: h,
                                 size: a.AvatarSizes.SIZE_24,
-                                "aria-label": h,
+                                "aria-label": m,
                                 className: f.applicationIcon
                             }), (0, l.jsx)(u.default, {
                                 color: u.default.Colors.HEADER_PRIMARY,
@@ -408,22 +408,22 @@
                                 className: f.closeButton
                             })]
                         }), (0, l.jsxs)(a.ModalContent, {
-                            children: [null != T && "" !== T ? (0, l.jsx)(o.default, {
+                            children: [null != v && "" !== v ? (0, l.jsx)(o.default, {
                                 messageType: o.HelpMessageTypes.ERROR,
                                 className: f.submissionWarning,
-                                children: T
+                                children: v
                             }) : null, (0, l.jsx)(o.default, {
                                 messageType: o.HelpMessageTypes.WARNING,
                                 className: f.submissionWarning,
                                 children: c.default.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({
-                                    applicationName: h
+                                    applicationName: m
                                 })
                             }), (0, l.jsx)(a.FormSection, {
                                 children: (0, l.jsx)(r.ComponentStateContextProvider, {
                                     modal: {
                                         customId: t
                                     },
-                                    validators: v,
+                                    validators: T,
                                     children: (0, d.renderComponents)(p)
                                 })
                             })]
@@ -518,6 +518,41 @@
                     })]
                 })
             }
+        },
+        346955: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var l = n("37983");
+            n("884691");
+            var a = n("469563"),
+                o = n("509317"),
+                u = n("75196"),
+                r = (0, a.replaceIcon)(function(e) {
+                    let {
+                        width: t = 24,
+                        height: n = 24,
+                        color: a = "currentColor",
+                        foreground: o,
+                        ...r
+                    } = e;
+                    return (0, l.jsx)("svg", {
+                        ...(0, u.default)(r),
+                        width: t,
+                        height: n,
+                        viewBox: "0 0 24 24",
+                        children: (0, l.jsx)("path", {
+                            fill: a,
+                            className: o,
+                            d: "M20 7H12L10.553 5.106C10.214 4.428 9.521 4 8.764 4H3C2.447 4 2 4.447 2 5V19C2 20.104 2.895 21 4 21H20C21.104 21 22 20.104 22 19V9C22 7.896 21.104 7 20 7Z"
+                        })
+                    })
+                }, o.FolderIcon, void 0, {
+                    size: 24
+                })
         },
         781896: function(e, t, n) {
             "use strict";
