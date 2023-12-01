@@ -91,20 +91,20 @@
             function x(e) {
                 let {
                     user: t
-                } = e, s = (0, r.useStateFromStores)([n.default], () => null != n.default.getAnyStreamForUser(t.id)), x = (0, r.useStateFromStores)([u.default], () => u.default.getActivities(t.id)), T = l.useMemo(() => x.filter(e => e.type !== f.ActivityTypes.CUSTOM_STATUS), [x]), p = l.useMemo(() => s ? T.find(e => e.type === f.ActivityTypes.PLAYING) : null, [T, s]), v = l.useMemo(() => T.filter(e => e !== p), [p, T]), A = (0, c.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), h = null != A && !s, {
+                } = e, s = (0, r.useStateFromStores)([n.default], () => null != n.default.getAnyStreamForUser(t.id)), x = (0, r.useStateFromStores)([u.default], () => u.default.getActivities(t.id)), T = l.useMemo(() => x.filter(e => e.type !== f.ActivityTypes.CUSTOM_STATUS), [x]), p = l.useMemo(() => s ? T.find(e => e.type === f.ActivityTypes.PLAYING) : null, [T, s]), v = l.useMemo(() => T.filter(e => e !== p), [p, T]), h = (0, c.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), A = null != h && !s, {
                     showVoiceActivityInProfile: E
                 } = d.VoiceActivityProfileExperiment.useExperiment({
                     location: "user profile modal"
                 }, {
-                    autoTrackExposure: h
+                    autoTrackExposure: A
                 });
                 return (0, a.jsxs)(i.ScrollerThin, {
                     className: m.listScroller,
                     fade: !0,
-                    children: [E && h ? (0, a.jsx)("div", {
+                    children: [E && A ? (0, a.jsx)("div", {
                         className: S.voiceActivity,
                         children: (0, a.jsx)(c.default, {
-                            ...A,
+                            ...h,
                             color: S.actionColor
                         })
                     }) : null, s ? (0, a.jsx)(o.default, {
@@ -174,8 +174,8 @@
                 T = s("880114"),
                 p = s("824140"),
                 v = s("751906"),
-                A = s("782340"),
-                h = s("974991");
+                h = s("782340"),
+                A = s("974991");
 
             function E(e) {
                 var t;
@@ -202,40 +202,40 @@
                     }
                 }, [U]), j) ? (0, a.jsx)(v.default, {}) : (0, a.jsxs)(i.ScrollerThin, {
                     fade: !0,
-                    className: h.infoScroller,
+                    className: A.infoScroller,
                     children: [(0, a.jsxs)("div", {
-                        className: h.userInfoSection,
+                        className: A.userInfoSection,
                         children: [(null == E ? void 0 : E.bio) != null && (null == E ? void 0 : E.bio) !== "" && (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsx)(i.Heading, {
                                 variant: "eyebrow",
-                                className: h.userInfoSectionHeader,
-                                children: A.default.Messages.USER_PROFILE_ABOUT_ME
+                                className: A.userInfoSectionHeader,
+                                children: h.default.Messages.USER_PROFILE_ABOUT_ME
                             }), (0, a.jsx)(m.default, {
-                                className: h.userInfoText,
+                                className: A.userInfoText,
                                 userBio: null !== (t = null == E ? void 0 : E.bio) && void 0 !== t ? t : ""
                             })]
                         }), s.isClyde() && (0, a.jsx)(x.default, {
-                            className: h.userInfoText,
+                            className: A.userInfoText,
                             isExpanded: !0
                         }), (0, a.jsx)(T.default, {
                             userId: s.id,
-                            headingClassName: h.userInfoSectionHeader,
-                            textClassName: h.userInfoText
+                            headingClassName: A.userInfoSectionHeader,
+                            textClassName: A.userInfoText
                         }), (0, a.jsx)(i.Heading, {
                             variant: "eyebrow",
-                            className: h.userInfoSectionHeader,
-                            children: A.default.Messages.NOTE
+                            className: A.userInfoSectionHeader,
+                            children: h.default.Messages.NOTE
                         }), (0, a.jsx)(o.default, {
                             userId: s.id,
                             autoFocus: N,
-                            className: h.note
+                            className: A.note
                         })]
                     }), (0, a.jsx)(p.ConnectedUserAccounts, {
                         ref: M,
                         connectedAccounts: g,
                         theme: C,
                         locale: y,
-                        className: h.userInfoSection,
+                        className: A.userInfoSection,
                         userId: s.id
                     })]
                 })
@@ -264,8 +264,8 @@
                 T = s("824563"),
                 p = s("697218"),
                 v = s("713135"),
-                A = s("765698"),
-                h = s("217513"),
+                h = s("765698"),
+                A = s("217513"),
                 E = s("641055"),
                 N = s("430312"),
                 U = s("453649"),
@@ -333,7 +333,7 @@
                     onClose: b
                 } = e, {
                     AnalyticsLocationProvider: k
-                } = (0, f.default)(c.default.PROFILE_MODAL), G = null !== (t = (0, r.useStateFromStores)([p.default], () => p.default.getUser(v.id))) && void 0 !== t ? t : v, w = (0, h.default)(null !== (s = null == G ? void 0 : G.id) && void 0 !== s ? s : "");
+                } = (0, f.default)(c.default.PROFILE_MODAL), G = null !== (t = (0, r.useStateFromStores)([p.default], () => p.default.getUser(v.id))) && void 0 !== t ? t : v, w = (0, A.default)(null !== (s = null == G ? void 0 : G.id) && void 0 !== s ? s : "");
                 (0, u.useSubscribeGuildMembers)({
                     [O]: [G.id]
                 });
@@ -345,7 +345,7 @@
                     q = (0, r.useStateFromStores)([x.default], () => x.default.getId() === G.id),
                     {
                         showVoiceActivityInProfile: J
-                    } = A.VoiceActivityProfileExperiment.useExperiment({
+                    } = h.VoiceActivityProfileExperiment.useExperiment({
                         location: "user profile modal container"
                     }, {
                         autoTrackExposure: !1
@@ -380,7 +380,8 @@
                                             onClose: b,
                                             isStreaming: (0, d.default)(H),
                                             guildId: O,
-                                            channelId: F
+                                            channelId: F,
+                                            hasProfileEffect: null != es
                                         })
                                     }), (0, a.jsxs)(N.default.Inner, {
                                         children: [L === i.ModalTransitionState.ENTERED && (0, a.jsx)(E.default, {
@@ -496,8 +497,8 @@
                 T = s("27618"),
                 p = s("663745"),
                 v = s("423487"),
-                A = s("50885"),
-                h = s("713135"),
+                h = s("50885"),
+                A = s("713135"),
                 E = s("106435"),
                 N = s("906889"),
                 U = s("289918"),
@@ -510,84 +511,86 @@
                 M = s("782340"),
                 P = s("734675");
             let O = o.AvatarSizes.SIZE_120,
-                F = A.default.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
+                F = h.default.getEnableHardwareAcceleration() ? o.AnimatedAvatar : o.Avatar;
 
             function R(e) {
                 let {
                     displayProfile: t,
-                    user: A,
+                    user: h,
                     guildId: R,
                     channelId: B,
                     friendToken: D,
                     isStreaming: L,
-                    onClose: b
-                } = e, k = (0, r.useStateFromStores)([T.default], () => T.default.getRelationshipType(A.id)), G = (0, r.useStateFromStores)([x.default], () => x.default.isMobileOnline(A.id)), w = (0, r.useStateFromStores)([x.default], () => x.default.getStatus(A.id)), V = (0, r.useStateFromStores)([h.default], () => h.default.getUserProfile(A.id)), H = (0, r.useStateFromStores)([m.default], () => m.default.getId() === A.id), {
-                    profileTheme: Y
-                } = (0, N.default)(A, t), {
-                    avatarSrc: z,
-                    eventHandlers: Z,
-                    avatarDecorationSrc: K
+                    hasProfileEffect: b,
+                    onClose: k
+                } = e, G = (0, r.useStateFromStores)([T.default], () => T.default.getRelationshipType(h.id)), w = (0, r.useStateFromStores)([x.default], () => x.default.isMobileOnline(h.id)), V = (0, r.useStateFromStores)([x.default], () => x.default.getStatus(h.id)), H = (0, r.useStateFromStores)([A.default], () => A.default.getUserProfile(h.id)), Y = (0, r.useStateFromStores)([m.default], () => m.default.getId() === h.id), {
+                    profileTheme: z
+                } = (0, N.default)(h, t), {
+                    avatarSrc: Z,
+                    eventHandlers: K,
+                    avatarDecorationSrc: W
                 } = (0, E.default)({
-                    user: A,
+                    user: h,
                     size: O
-                }), W = l.useMemo(() => (0, S.shouldDisableUserPresenceInChannel)(A, B), [A, B]);
-
-                function q() {
-                    b(), (0, d.popLayer)()
-                }
+                }), q = l.useMemo(() => (0, S.shouldDisableUserPresenceInChannel)(h, B), [h, B]);
 
                 function J() {
-                    c.default.removeFriend(A.id, {
+                    k(), (0, d.popLayer)()
+                }
+
+                function Q() {
+                    c.default.removeFriend(h.id, {
                         location: "User Profile"
                     })
                 }
 
-                function Q(e) {
-                    n.default.openPrivateChannel(A.id, !1, !1, e), q()
+                function X(e) {
+                    n.default.openPrivateChannel(h.id, !1, !1, e), J()
                 }
 
-                function X() {
+                function $() {
                     try {
                         c.default.addRelationship({
-                            userId: A.id,
+                            userId: h.id,
                             context: {
                                 location: "User Profile"
                             },
                             type: y.RelationshipTypes.BLOCKED
                         })
                     } catch (e) {
-                        q()
+                        J()
                     }
                 }
 
-                function $() {
+                function ee() {
                     let e = "@me" === R ? void 0 : R;
-                    (0, f.showReportModalForUser)(A, e)
+                    (0, f.showReportModalForUser)(h, e)
                 }
                 return (0, a.jsxs)("header", {
                     children: [(0, a.jsx)(U.default, {
                         displayProfile: t,
-                        onClose: q,
-                        user: A,
-                        profileType: C.UserProfileTypes.MODAL
+                        onClose: J,
+                        user: h,
+                        profileType: C.UserProfileTypes.MODAL,
+                        hasProfileEffect: b
                     }), (0, a.jsxs)("div", {
                         className: P.header,
                         children: [(0, a.jsx)("div", {
-                            ...Z,
+                            ...K,
                             children: (0, a.jsx)(F, {
-                                src: z,
-                                avatarDecoration: K,
+                                src: Z,
+                                avatarDecoration: W,
                                 size: O,
                                 className: P.avatar,
-                                status: W ? g.StatusTypes.UNKNOWN : L ? g.StatusTypes.STREAMING : w,
-                                statusBackdropColor: (0, o.getStatusBackdropColor)(Y),
-                                isMobile: G,
+                                status: q ? g.StatusTypes.UNKNOWN : L ? g.StatusTypes.STREAMING : V,
+                                statusBackdropColor: (0, o.getStatusBackdropColor)(z),
+                                isMobile: w,
                                 statusTooltip: !0,
-                                "aria-label": A.username
+                                "aria-label": h.username
                             })
                         }), (0, a.jsxs)("div", {
                             className: P.headerTop,
-                            children: [(null == V ? void 0 : V.profileFetchFailed) && !A.isClyde() ? (0, a.jsx)(o.Tooltip, {
+                            children: [(null == H ? void 0 : H.profileFetchFailed) && !h.isClyde() ? (0, a.jsx)(o.Tooltip, {
                                 text: M.default.Messages.USER_PROFILE_LOAD_ERROR,
                                 spacing: 20,
                                 children: e => (0, a.jsx)(v.default, {
@@ -596,7 +599,7 @@
                                     color: i.default.unsafe_rawColors.YELLOW_300.css
                                 })
                             }) : (0, a.jsx)(_.default, {
-                                user: A,
+                                user: h,
                                 className: P.badgeList,
                                 guildId: R,
                                 size: _.BadgeSizes.SIZE_24,
@@ -606,15 +609,15 @@
                                 className: P.relationshipButtons,
                                 children: [(0, a.jsx)(I.default, {
                                     className: P.applicationInstallButton,
-                                    application: null == V ? void 0 : V.application
+                                    application: null == H ? void 0 : H.application
                                 }), (0, a.jsx)(j.default, {
-                                    user: A,
-                                    isCurrentUser: H,
-                                    relationshipType: k,
+                                    user: h,
+                                    isCurrentUser: Y,
+                                    relationshipType: G,
                                     onAddFriend: function() {
                                         try {
                                             c.default.addRelationship({
-                                                userId: A.id,
+                                                userId: h.id,
                                                 context: {
                                                     location: "User Profile"
                                                 },
@@ -622,16 +625,16 @@
                                                 friendToken: D
                                             })
                                         } catch (e) {
-                                            q()
+                                            J()
                                         }
                                     },
                                     onIgnoreFriend: function() {
-                                        c.default.cancelFriendRequest(A.id, {
+                                        c.default.cancelFriendRequest(h.id, {
                                             location: "User Profile"
                                         })
                                     },
-                                    onSendMessage: () => Q("User Profile Modal - Send Message Button")
-                                }), H || A.isNonUserBot() ? null : (0, a.jsx)(o.Clickable, {
+                                    onSendMessage: () => X("User Profile Modal - Send Message Button")
+                                }), Y || h.isNonUserBot() ? null : (0, a.jsx)(o.Clickable, {
                                     focusProps: {
                                         offset: {
                                             left: 8
@@ -644,12 +647,12 @@
                                             } = await s.el("487956").then(s.bind(s, "487956"));
                                             return t => (0, a.jsx)(e, {
                                                 ...t,
-                                                relationshipType: k,
-                                                onRemoveFriend: J,
-                                                onBlock: X,
-                                                onReport: $,
-                                                onMessage: () => Q("User Profile Modal - Context Menu"),
-                                                user: A
+                                                relationshipType: G,
+                                                onRemoveFriend: Q,
+                                                onBlock: $,
+                                                onReport: ee,
+                                                onMessage: () => X("User Profile Modal - Context Menu"),
+                                                user: h
                                             })
                                         })
                                     },
