@@ -1391,66 +1391,70 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return p
                 }
             }), n("222007");
             var r = n("37983"),
                 s = n("884691"),
-                i = n("77078"),
-                a = n("850391"),
-                l = n("149022"),
-                u = n("681060"),
-                o = n("570697"),
-                c = n("233069"),
-                d = n("49111"),
-                f = n("782340"),
-                m = n("809331");
-            let _ = (0, c.createChannelRecord)({
+                i = n("414456"),
+                a = n.n(i),
+                l = n("77078"),
+                u = n("850391"),
+                o = n("149022"),
+                c = n("681060"),
+                d = n("570697"),
+                f = n("233069"),
+                m = n("49111"),
+                _ = n("782340"),
+                I = n("809331");
+            let E = (0, f.createChannelRecord)({
                 id: "1",
-                type: d.ChannelTypes.DM
+                type: m.ChannelTypes.DM
             });
 
-            function I(e) {
+            function p(e) {
                 let {
                     sectionTitle: t,
                     errors: n,
-                    onTextChange: c,
-                    pendingText: d,
-                    placeholder: I,
-                    currentText: E,
-                    disabled: p = !1
-                } = e, [S, N] = s.useState(null != d ? d : E), [P, T] = s.useState((0, l.toRichValue)(S)), C = s.useRef(!1);
+                    onTextChange: i,
+                    pendingText: f,
+                    placeholder: m,
+                    currentText: p,
+                    innerClassName: S,
+                    disabled: N = !1,
+                    disableThemedBackground: P = !1
+                } = e, [T, C] = s.useState(null != f ? f : p), [A, O] = s.useState((0, o.toRichValue)(T)), R = s.useRef(!1);
                 return s.useEffect(() => {
-                    C.current = !0
+                    R.current = !0
                 }, []), s.useEffect(() => {
-                    if (void 0 === d) {
-                        let e = (0, l.toRichValue)(E);
-                        N(E), T(e)
+                    if (void 0 === f) {
+                        let e = (0, o.toRichValue)(p);
+                        C(p), O(e)
                     }
-                }, [d, E]), (0, r.jsx)("div", {
-                    className: m.body,
-                    children: (0, r.jsxs)(o.default, {
+                }, [f, p]), (0, r.jsx)("div", {
+                    className: I.body,
+                    children: (0, r.jsxs)(d.default, {
                         title: t,
                         errors: n,
-                        disabled: p,
-                        children: [(0, r.jsx)(u.default, {
-                            innerClassName: m.textArea,
+                        disabled: N,
+                        children: [(0, r.jsx)(c.default, {
+                            innerClassName: a(I.textArea, S),
                             maxCharacterCount: 190,
                             onChange: function(e, t, n) {
-                                t !== S && (N(t), T(n), c(t))
+                                t !== T && (C(t), O(n), i(t))
                             },
-                            placeholder: I,
-                            channel: _,
-                            textValue: S,
-                            richValue: P,
-                            type: a.ChatInputTypes.CUSTOM_GIFT,
+                            placeholder: m,
+                            channel: E,
+                            textValue: T,
+                            richValue: A,
+                            type: u.ChatInputTypes.CUSTOM_GIFT,
                             onBlur: () => {
-                                C.current = !1
+                                R.current = !1
                             },
                             onFocus: () => {
-                                C.current = !0
+                                R.current = !0
                             },
-                            focused: C.current,
+                            focused: R.current,
                             onSubmit: function() {
                                 return new Promise(e => {
                                     e({
@@ -1458,9 +1462,10 @@
                                         shouldRefocus: !0
                                     })
                                 })
-                            }
-                        }), (0, r.jsx)(i.HiddenVisually, {
-                            children: f.default.Messages.MAXIMUM_LENGTH.format({
+                            },
+                            disableThemedBackground: P
+                        }), (0, r.jsx)(l.HiddenVisually, {
+                            children: _.default.Messages.MAXIMUM_LENGTH.format({
                                 maxLength: 190
                             })
                         })]

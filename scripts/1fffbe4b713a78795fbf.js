@@ -745,7 +745,9 @@
                                     sectionTitle: _.default.Messages.GIFT_OPTIONAL_MESSAGE,
                                     onTextChange: e => null == I ? void 0 : I(e),
                                     pendingText: d,
-                                    currentText: d
+                                    currentText: d,
+                                    disableThemedBackground: !0,
+                                    innerClassName: C.customGiftMessage
                                 }), (0, n.jsx)(i.default, {
                                     selectedSkuId: N,
                                     selectedSkuPricePreview: g
