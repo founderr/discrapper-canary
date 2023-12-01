@@ -4191,17 +4191,27 @@
             var a = s("446674"),
                 n = s("913144");
             let r = {
-                fetched: !1
+                fetched: !1,
+                affinities: []
             };
             class l extends a.default.Store {
                 get hasFetched() {
                     return r.fetched
+                }
+                get affinities() {
+                    return r.affinities
                 }
             }
             var i = new l(n.default, {
                 BILLING_NITRO_AFFINITY_FETCHED: function(e) {
                     let {} = e;
                     r.fetched = !0
+                },
+                BILLING_NITRO_AFFINITY_FETCH_SUCCEEDED: function(e) {
+                    let {
+                        res: t
+                    } = e;
+                    r.affinities = t
                 }
             })
         },

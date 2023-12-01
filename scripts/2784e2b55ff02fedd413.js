@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["99171"], {
+    ["8011"], {
         767590: function(e, t, n) {
             var a = n("890022"),
                 l = n("566040"),
@@ -10,7 +10,7 @@
                 t = (n ? l(e, t, n) : void 0 === t) ? 1 : r(i(t), 0);
                 var s = null == e ? 0 : e.length;
                 if (!s || t < 1) return [];
-                for (var o = 0, d = 0, c = Array(u(s / t)); o < s;) c[d++] = a(e, o, o += t);
+                for (var d = 0, o = 0, c = Array(u(s / t)); d < s;) c[o++] = a(e, d, d += t);
                 return c
             }
         },
@@ -26,7 +26,7 @@
             "use strict";
             e.exports = function(e) {
                 var t, n;
-                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), I.test(e) ? e = e.substr(0, e.length - 2) : C.test(e) && (e = e.substr(0, e.length - 1)), (n = E.exec(e)) ? s.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = m.exec(e)) && c.test(n[1]) && (e = n[1], v.test(e) ? e += "e" : b.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = x.exec(e)) && c.test(n[1]) && (e = n[1] + "i"), (n = S.exec(e)) && s.test(n[1]) && (e = n[1] + a[n[2]]), (n = _.exec(e)) && s.test(n[1]) && (e = n[1] + l[n[2]]), (n = M.exec(e)) ? d.test(n[1]) && (e = n[1]) : (n = g.exec(e)) && d.test(n[1]) && (e = n[1]), (n = h.exec(e)) && (d.test(n[1]) || o.test(n[1]) && !f.test(n[1])) && (e = n[1]), p.test(e) && d.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
+                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), C.test(e) ? e = e.substr(0, e.length - 2) : S.test(e) && (e = e.substr(0, e.length - 1)), (n = I.exec(e)) ? s.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = m.exec(e)) && c.test(n[1]) && (e = n[1], x.test(e) ? e += "e" : b.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = E.exec(e)) && c.test(n[1]) && (e = n[1] + "i"), (n = v.exec(e)) && s.test(n[1]) && (e = n[1] + a[n[2]]), (n = T.exec(e)) && s.test(n[1]) && (e = n[1] + l[n[2]]), (n = _.exec(e)) ? o.test(n[1]) && (e = n[1]) : (n = g.exec(e)) && o.test(n[1]) && (e = n[1]), (n = h.exec(e)) && (o.test(n[1]) || d.test(n[1]) && !f.test(n[1])) && (e = n[1]), p.test(e) && o.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
             };
             var a = {
                     ational: "ate",
@@ -64,23 +64,23 @@
                 u = "([^aeiou][^aeiouy]*)",
                 r = "(" + i + "[aeiou]*)",
                 s = RegExp("^" + u + "?" + r + u),
-                o = RegExp("^" + u + "?" + r + u + r + "?$"),
-                d = RegExp("^" + u + "?(" + r + u + "){2,}"),
+                d = RegExp("^" + u + "?" + r + u + r + "?$"),
+                o = RegExp("^" + u + "?(" + r + u + "){2,}"),
                 c = RegExp("^" + u + "?" + i),
                 f = RegExp("^" + u + i + "[^aeiouwxy]$"),
                 p = /ll$/,
                 h = /^(.+?)e$/,
-                x = /^(.+?)y$/,
+                E = /^(.+?)y$/,
                 g = /^(.+?(s|t))(ion)$/,
                 m = /^(.+?)(ed|ing)$/,
-                v = /(at|bl|iz)$/,
-                E = /^(.+?)eed$/,
-                C = /^.+?[^s]s$/,
-                I = /^.+?(ss|i)es$/,
+                x = /(at|bl|iz)$/,
+                I = /^(.+?)eed$/,
+                S = /^.+?[^s]s$/,
+                C = /^.+?(ss|i)es$/,
                 b = /([^aeiouylsz])\1$/,
-                S = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
-                _ = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
-                M = RegExp("^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$")
+                v = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
+                T = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
+                _ = RegExp("^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$")
         },
         949041: function(e, t, n) {
             "use strict";
@@ -159,7 +159,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return A
+                    return O
                 }
             });
             var a = n("37983");
@@ -169,35 +169,35 @@
                 u = n("838446"),
                 r = n("158534"),
                 s = n("846883"),
-                o = n("812204"),
-                d = n("861370"),
+                d = n("812204"),
+                o = n("861370"),
                 c = n("20209"),
                 f = n("972701"),
                 p = n("390008"),
                 h = n("41205"),
-                x = n("715243"),
+                E = n("715243"),
                 g = n("458574"),
                 m = n("963150"),
-                v = n("308798"),
-                E = n("47006"),
-                C = n("878526"),
-                I = n("44141"),
+                x = n("308798"),
+                I = n("47006"),
+                S = n("878526"),
+                C = n("44141"),
                 b = n("531674"),
-                S = n("619436"),
-                _ = n("731390"),
-                M = n("339876"),
-                O = n("809937"),
-                L = n("49111"),
+                v = n("619436"),
+                T = n("731390"),
+                _ = n("339876"),
+                A = n("809937"),
+                y = n("49111"),
                 N = n("782340");
 
-            function T(e) {
+            function M(e) {
                 let {
                     channel: t,
                     onSelect: n
-                } = e, u = (0, I.default)(t), r = (0, g.default)(t), o = (0, f.default)(t), c = (0, p.default)(t), x = (0, h.default)(t), m = (0, b.default)(t), v = (0, S.default)(t), C = (0, E.default)(t), _ = (0, d.default)({
+                } = e, u = (0, C.default)(t), r = (0, g.default)(t), d = (0, f.default)(t), c = (0, p.default)(t), E = (0, h.default)(t), m = (0, b.default)(t), x = (0, v.default)(t), S = (0, I.default)(t), T = (0, o.default)({
                     id: t.id,
                     label: N.default.Messages.COPY_ID_CHANNEL
-                }), M = (0, s.default)(t);
+                }), _ = (0, s.default)(t);
                 return (0, a.jsxs)(l.Menu, {
                     navId: "channel-context",
                     onClose: i.closeContextMenu,
@@ -206,30 +206,30 @@
                     children: [(0, a.jsx)(l.MenuGroup, {
                         children: u
                     }), (0, a.jsxs)(l.MenuGroup, {
-                        children: [x, c, o]
+                        children: [E, c, d]
                     }), (0, a.jsxs)(l.MenuGroup, {
-                        children: [m, v]
+                        children: [m, x]
                     }), (0, a.jsx)(l.MenuGroup, {
-                        children: C
+                        children: S
                     }), (0, a.jsx)(l.MenuGroup, {
-                        children: M
+                        children: _
                     }), (0, a.jsx)(l.MenuGroup, {
                         children: r
                     }), (0, a.jsx)(l.MenuGroup, {
-                        children: _
+                        children: T
                     })]
                 })
             }
 
-            function y(e) {
+            function L(e) {
                 let {
                     channel: t,
                     guild: n,
                     onSelect: u
-                } = e, r = (0, I.default)(t), s = (0, g.default)(t), o = (0, f.default)(t), c = (0, M.default)(t), p = (0, b.default)(t), h = (0, S.default)(t), L = (0, E.default)(t), T = (0, C.default)(t, n), y = (0, x.default)(t, n), A = (0, m.default)(t, n), w = (0, v.default)(t), G = (0, d.default)({
+                } = e, r = (0, C.default)(t), s = (0, g.default)(t), d = (0, f.default)(t), c = (0, _.default)(t), p = (0, b.default)(t), h = (0, v.default)(t), y = (0, I.default)(t), M = (0, S.default)(t, n), L = (0, E.default)(t, n), O = (0, m.default)(t, n), G = (0, x.default)(t), R = (0, o.default)({
                     id: t.id,
                     label: N.default.Messages.COPY_ID_CHANNEL
-                }), U = (0, _.default)(t, "list_text_channel_context_menu");
+                }), U = (0, T.default)(t, "list_text_channel_context_menu");
                 return (0, a.jsxs)(l.Menu, {
                     navId: "channel-context",
                     onClose: i.closeContextMenu,
@@ -238,26 +238,26 @@
                     children: [(0, a.jsx)(l.MenuGroup, {
                         children: r
                     }, "mark-as-read"), (0, a.jsxs)(l.MenuGroup, {
-                        children: [T, c, s, o, U]
+                        children: [M, c, s, d, U]
                     }, "channel-actions"), (0, a.jsxs)(l.MenuGroup, {
-                        children: [p, h, (0, O.default)(t)]
+                        children: [p, h, (0, A.default)(t)]
                     }, "notifications"), (0, a.jsxs)(l.MenuGroup, {
-                        children: [L, y, A, w]
+                        children: [y, L, O, G]
                     }, "admin-actions"), (0, a.jsx)(l.MenuGroup, {
-                        children: G
+                        children: R
                     }, "developer-actions")]
                 })
             }
-            var A = (0, r.default)((0, u.default)(function(e) {
+            var O = (0, r.default)((0, u.default)(function(e) {
                 let t = (0, c.default)();
-                return t ? (0, a.jsx)(T, {
+                return t ? (0, a.jsx)(M, {
                     ...e
-                }) : (0, a.jsx)(y, {
+                }) : (0, a.jsx)(L, {
                     ...e
                 })
             }, {
-                object: L.AnalyticsObjects.CONTEXT_MENU
-            }), [o.default.CONTEXT_MENU, o.default.CHANNEL_LIST_TEXT_CHANNEL_MENU])
+                object: y.AnalyticsObjects.CONTEXT_MENU
+            }), [d.default.CONTEXT_MENU, d.default.CHANNEL_LIST_TEXT_CHANNEL_MENU])
         },
         731390: function(e, t, n) {
             "use strict";
@@ -272,8 +272,8 @@
                 u = n("390236"),
                 r = n("292508"),
                 s = n("383294"),
-                o = n("913452"),
-                d = n("533466"),
+                d = n("913452"),
+                o = n("533466"),
                 c = n("49111"),
                 f = n("268333");
 
@@ -290,7 +290,7 @@
                     contentClassName: f.popoutContent,
                     children: (0, a.jsx)(u.default.Provider, {
                         value: n.guild_id,
-                        children: (0, a.jsx)(d.default, {
+                        children: (0, a.jsx)(o.default, {
                             providedChannel: n
                         })
                     })
@@ -298,7 +298,7 @@
             }
 
             function h(e, t) {
-                let n = (0, o.useOpenInPopoutExperiment)(t),
+                let n = (0, d.useOpenInPopoutExperiment)(t),
                     u = l.useCallback(() => {
                         s.open("".concat(c.PopoutWindowKeys.CHANNEL_POPOUT, "-").concat(e.id), t => (0, a.jsx)(p, {
                             windowKey: t,
@@ -328,8 +328,8 @@
                 u = n("863636"),
                 r = n("401690"),
                 s = n("923959"),
-                o = n("660478"),
-                d = n("599110"),
+                d = n("660478"),
+                o = n("599110"),
                 c = n("49111"),
                 f = n("133335");
 
@@ -348,19 +348,19 @@
                 }).map(e => ({
                     channelId: e,
                     readStateType: f.ReadStateTypes.CHANNEL,
-                    messageId: o.default.lastMessageId(e)
+                    messageId: d.default.lastMessageId(e)
                 }));
                 return e.forEach(e => {
                     n.push({
                         channelId: e,
                         readStateType: f.ReadStateTypes.GUILD_EVENT,
-                        messageId: o.default.lastMessageId(e, f.ReadStateTypes.GUILD_EVENT)
+                        messageId: d.default.lastMessageId(e, f.ReadStateTypes.GUILD_EVENT)
                     }), n.push({
                         channelId: e,
                         readStateType: f.ReadStateTypes.GUILD_ONBOARDING_QUESTION,
                         messageId: u.default.ackIdForGuild(e)
                     })
-                }), d.default.track(c.AnalyticEvents.MARK_AS_READ, {
+                }), o.default.track(c.AnalyticEvents.MARK_AS_READ, {
                     source: t,
                     type: "guild"
                 }), (0, i.bulkAck)(n)
@@ -431,6 +431,138 @@
                     })
                 }
             }))
+        },
+        208021: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return o
+                }
+            });
+            var a = n("913144"),
+                l = n("819689"),
+                i = n("115718"),
+                u = n("347895"),
+                r = n("341329"),
+                s = n("582713"),
+                d = n("724210"),
+                o = {
+                    openPrivateChannelAsSidebar(e) {
+                        let {
+                            channelId: t,
+                            messageId: n,
+                            baseChannelId: i,
+                            hasSingleMessageRequest: u
+                        } = e;
+                        a.default.dispatch({
+                            type: "SIDEBAR_VIEW_CHANNEL",
+                            sidebarType: s.SidebarType.VIEW_MESSAGE_REQUEST,
+                            baseChannelId: i,
+                            channelId: t,
+                            details: {
+                                type: s.SidebarOpenDetailsType.MESSAGE_REQUEST,
+                                hasSingleMessageRequest: u
+                            }
+                        }), null != n ? l.default.jumpToMessage({
+                            channelId: t,
+                            messageId: n,
+                            flash: !0
+                        }) : r.default.fetchMessages({
+                            channelId: t
+                        })
+                    },
+                    openChannelAsSidebar(e) {
+                        let {
+                            guildId: t,
+                            channelId: n,
+                            baseChannelId: u,
+                            flash: d = !0,
+                            details: o
+                        } = e;
+                        a.default.dispatch({
+                            type: "SIDEBAR_VIEW_CHANNEL",
+                            sidebarType: s.SidebarType.VIEW_CHANNEL,
+                            guildId: t,
+                            baseChannelId: u,
+                            channelId: n,
+                            details: o
+                        });
+                        let c = null == o ? void 0 : o.initialMessageId;
+                        null != c ? l.default.jumpToMessage({
+                            channelId: n,
+                            messageId: c,
+                            flash: d,
+                            jumpType: i.JumpTypes.INSTANT
+                        }) : r.default.fetchMessages({
+                            guildId: t,
+                            channelId: n
+                        })
+                    },
+                    openResourceChannelAsSidebar(e) {
+                        let {
+                            guildId: t,
+                            channelId: n
+                        } = e;
+                        null != t && ((0, u.selectHomeResourceChannel)(t, n, !1), a.default.dispatch({
+                            type: "SIDEBAR_VIEW_CHANNEL",
+                            sidebarType: s.SidebarType.VIEW_CHANNEL,
+                            guildId: t,
+                            baseChannelId: d.StaticChannelRoute.GUILD_HOME,
+                            channelId: n
+                        }))
+                    },
+                    openThreadAsSidebar(e) {
+                        let {
+                            guildId: t,
+                            baseChannelId: n,
+                            channelId: u,
+                            flash: d = !0,
+                            details: o
+                        } = e;
+                        a.default.dispatch({
+                            type: "SIDEBAR_VIEW_CHANNEL",
+                            sidebarType: s.SidebarType.VIEW_THREAD,
+                            baseChannelId: n,
+                            channelId: u,
+                            details: o
+                        }), (null == o ? void 0 : o.initialMessageId) != null ? l.default.jumpToMessage({
+                            channelId: u,
+                            messageId: o.initialMessageId,
+                            flash: d,
+                            jumpType: i.JumpTypes.INSTANT
+                        }) : r.default.fetchMessages({
+                            guildId: t,
+                            channelId: u
+                        })
+                    },
+                    closeChannelSidebar(e) {
+                        a.default.dispatch({
+                            type: "SIDEBAR_CLOSE",
+                            baseChannelId: e
+                        })
+                    },
+                    openGuildSidebar(e) {
+                        let {
+                            guildId: t,
+                            baseChannelId: n,
+                            sidebarType: l,
+                            details: i
+                        } = e;
+                        a.default.dispatch({
+                            type: "SIDEBAR_VIEW_GUILD",
+                            sidebarType: l,
+                            baseChannelId: n,
+                            guildId: t,
+                            details: i
+                        })
+                    },
+                    closeGuildSidebar(e) {
+                        a.default.dispatch({
+                            type: "SIDEBAR_CLOSE_GUILD",
+                            guildId: e
+                        })
+                    }
+                }
         },
         830210: function(e, t, n) {
             "use strict";
@@ -512,7 +644,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 makeDesktopDownloadURL: function() {
-                    return o
+                    return d
                 },
                 getPlatformReadableName: function() {
                     return c
@@ -531,13 +663,13 @@
                 r = n("49111");
             let s = "linux";
 
-            function o(e) {
+            function d(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = arguments.length > 2 ? arguments[2] : void 0;
                 return "".concat(r.DownloadLinks.DESKTOP).concat(t ? "/ptb" : "", "?platform=").concat(e).concat(null != n ? "&format=".concat(n) : "")
             }
 
-            function d() {
+            function o() {
                 var e;
                 let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = l.os) || void 0 === e ? void 0 : e.family;
                 return null == t ? "win" : -1 !== t.indexOf("Ubuntu") || -1 !== t.indexOf("Debian") || -1 !== t.indexOf("Fedora") || -1 !== t.indexOf("Red Hat") || -1 !== t.indexOf("SuSE") || -1 !== t.indexOf("Linux") ? s : -1 !== t.indexOf("OS X") ? "osx" : "win"
@@ -548,12 +680,12 @@
                     win: "Windows",
                     osx: "Mac",
                     [s]: "Linux"
-                })[d(e)]
+                })[o(e)]
             }
 
             function f() {
-                let e = d();
-                return o(e, !1, e === s ? "tar.gz" : null)
+                let e = o();
+                return d(e, !1, e === s ? "tar.gz" : null)
             }
 
             function p(e, t, n) {
