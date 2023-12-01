@@ -1,549 +1,174 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["27057"], {
-        906069: function(t, e, l) {
+    ["21251"], {
+        20606: function(r, a, _) {
             "use strict";
-            l.r(e), l.d(e, {
-                ReactionIcon: function() {
-                    return i
+            _.r(a), _.d(a, {
+                default: function() {
+                    return e
                 }
             });
-            var n = l("37983");
-            l("884691");
-            var a = l("669491"),
-                r = l("75196");
-            let i = t => {
-                let {
-                    width: e = 24,
-                    height: l = 24,
-                    color: i = a.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: s = "",
-                    ...u
-                } = t;
-                return (0, n.jsx)("svg", {
-                    ...(0, r.default)(u),
-                    width: e,
-                    height: l,
-                    viewBox: "0 0 24 24",
-                    fill: "none",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    children: (0, n.jsx)("path", {
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                        d: "M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM6.5 13C7.32843 13 8 12.3284 8 11.5C8 10.6716 7.32843 10 6.5 10C5.67157 10 5 10.6716 5 11.5C5 12.3284 5.67157 13 6.5 13ZM17.5 13C18.3284 13 19 12.3284 19 11.5C19 10.6716 18.3284 10 17.5 10C16.6716 10 16 10.6716 16 11.5C16 12.3284 16.6716 13 17.5 13ZM7.70147 14.169C8.16042 13.8618 8.78152 13.9848 9.08874 14.4438C9.7183 15.3843 10.7874 16 11.9999 16C13.2125 16 14.2816 15.3843 14.9111 14.4438C15.2184 13.9848 15.8395 13.8618 16.2984 14.169C16.7574 14.4762 16.8804 15.0973 16.5732 15.5563C15.5882 17.0277 13.9078 18 11.9999 18C10.0921 18 8.4117 17.0277 7.42673 15.5563C7.11951 15.0973 7.24252 14.4762 7.70147 14.169Z",
-                        fill: "string" == typeof i ? i : i.css,
-                        className: s
-                    })
-                })
-            }
+            var e = _("171210").default
         },
-        596256: function(t, e, l) {
+        956089: function(r, a, _) {
             "use strict";
-            l.r(e), l.d(e, {
-                UploadIcon: function() {
-                    return i
-                }
-            });
-            var n = l("37983");
-            l("884691");
-            var a = l("669491"),
-                r = l("75196");
-            let i = t => {
-                let {
-                    width: e = 24,
-                    height: l = 24,
-                    color: i = a.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: s = "",
-                    ...u
-                } = t;
-                return (0, n.jsxs)("svg", {
-                    ...(0, r.default)(u),
-                    width: e,
-                    height: l,
-                    viewBox: "0 0 24 24",
-                    fill: "none",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    children: [(0, n.jsx)("path", {
-                        d: "M13 16V5.41421L16.2929 8.70711C16.6834 9.09763 17.3166 9.09763 17.7071 8.70711C18.0976 8.31658 18.0976 7.68342 17.7071 7.29289L12.7078 2.29361L12.7005 2.2864C12.5201 2.10925 12.2728 2 12 2C11.8644 2 11.7351 2.02699 11.6172 2.07588C11.502 2.12357 11.3938 2.19374 11.2995 2.2864L11.2922 2.29361L6.29289 7.29289C5.90237 7.68342 5.90237 8.31658 6.29289 8.70711C6.68342 9.09763 7.31658 9.09763 7.70711 8.70711L11 5.41421V16C11 16.5523 11.4477 17 12 17C12.5523 17 13 16.5523 13 16Z",
-                        fill: "string" == typeof i ? i : i.css,
-                        className: s
-                    }), (0, n.jsx)("path", {
-                        d: "M3 20C2.44772 20 2 20.4477 2 21C2 21.5523 2.44772 22 3 22H21C21.5523 22 22 21.5523 22 21C22 20.4477 21.5523 20 21 20H3Z",
-                        fill: "string" == typeof i ? i : i.css,
-                        className: s
-                    })]
-                })
-            }
-        },
-        441413: function(t, e, l) {
-            "use strict";
-            l.r(e), l.d(e, {
-                StretchedSparkleStar: function() {
-                    return c
+            _.r(a), _.d(a, {
+                BadgeShapes: function() {
+                    return T
                 },
-                default: function() {
-                    return C
-                }
-            });
-            var n = l("37983");
-            l("884691");
-            var a = l("414456"),
-                r = l.n(a),
-                i = l("75196"),
-                s = l("956089"),
-                u = l("125835"),
-                o = l("782340"),
-                d = l("159163");
-
-            function c(t) {
-                return (0, n.jsx)("svg", {
-                    ...(0, i.default)({
-                        ...t
-                    }),
-                    width: "25",
-                    height: "48",
-                    viewBox: "0 0 25 48",
-                    fill: "none",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    children: (0, n.jsx)("path", {
-                        d: "M22.6014 22.1003C20.4432 20.6855 18.6067 18.8326 17.2112 16.6618C15.8157 14.4911 14.8925 12.0511 14.5014 9.50028L13.2014 0.700277C13.1553 0.497624 13.0404 0.317179 12.8764 0.189581C12.7123 0.0619821 12.5092 -0.00490199 12.3014 0.000279992C12.1055 -0.00125605 11.9158 0.0691675 11.7683 0.198194C11.6209 0.327221 11.5259 0.505874 11.5014 0.700277L10.1014 9.50028C9.74796 12.0629 8.8402 14.5177 7.44131 16.6938C6.04242 18.8698 4.18605 20.7148 2.00143 22.1003L0.901394 22.8003C0.770775 22.8872 0.665162 23.0067 0.594998 23.1471C0.524833 23.2874 0.49259 23.4436 0.501431 23.6003C0.49259 23.7569 0.524833 23.9132 0.594998 24.0535C0.665162 24.1938 0.770775 24.3134 0.901394 24.4003L2.00143 25.1003C4.18605 26.4857 6.04242 28.3307 7.44131 30.5068C8.8402 32.6828 9.74796 35.1376 10.1014 37.7003L11.5014 46.4003C11.5014 46.6125 11.5857 46.8159 11.7357 46.966C11.8858 47.116 12.0892 47.2003 12.3014 47.2003C12.5238 47.2017 12.7388 47.1207 12.9049 46.973C13.0711 46.8252 13.1767 46.6212 13.2014 46.4003L14.5014 37.7003C14.8925 35.1495 15.8157 32.7095 17.2112 30.5387C18.6067 28.368 20.4432 26.5151 22.6014 25.1003L23.8014 24.4003C24.0329 24.1951 24.1761 23.9085 24.2014 23.6003C24.1761 23.292 24.0329 23.0054 23.8014 22.8003L22.6014 22.1003Z",
-                        fill: "currentColor"
-                    })
-                })
-            }
-
-            function C(t) {
-                let {
-                    className: e,
-                    forceUseColorForSparkles: l = !1,
-                    shouldInheritTextColor: a = !1,
-                    shouldInheritBackgroundColor: i = !1
-                } = t;
-                return (0, n.jsx)(u.default, {
-                    className: e,
-                    forceUseColor: l,
-                    children: (0, n.jsx)(s.TextBadge, {
-                        disableColor: !0,
-                        className: r(d.tag, {
-                            [d.inheritTextColor]: a,
-                            [d.inheritBackgroundColor]: i
-                        }),
-                        text: o.default.Messages.NEW
-                    })
-                })
-            }
-        },
-        125835: function(t, e, l) {
-            "use strict";
-            l.r(e), l.d(e, {
-                default: function() {
-                    return u
-                }
-            });
-            var n = l("37983");
-            l("884691");
-            var a = l("414456"),
-                r = l.n(a),
-                i = l("642032"),
-                s = l("767964");
-
-            function u(t) {
-                let {
-                    className: e,
-                    children: l,
-                    forceUseColor: a = !1,
-                    hideStars: u
-                } = t;
-                return (0, n.jsxs)("span", {
-                    className: r(s.container, e, {
-                        [s.containerColored]: a
-                    }),
-                    children: [l, u ? null : (0, n.jsxs)(n.Fragment, {
-                        children: [(0, n.jsx)(i.default, {
-                            foreground: s.sparkleStarTopRight
-                        }), (0, n.jsx)(i.default, {
-                            foreground: s.sparkleStarRight
-                        }), (0, n.jsx)(i.default, {
-                            foreground: s.sparkleStarBottomLeft
-                        })]
-                    })]
-                })
-            }
-        },
-        617917: function(t, e, l) {
-            "use strict";
-            l.r(e), l.d(e, {
-                default: function() {
-                    return M
-                }
-            }), l("222007");
-            var n = l("37983"),
-                a = l("884691"),
-                r = l("414456"),
-                i = l.n(r),
-                s = l("77078"),
-                u = l("244201"),
-                o = l("685665"),
-                d = l("181114"),
-                c = l("427459"),
-                C = l("954296"),
-                f = l("49111"),
-                p = l("782340"),
-                _ = l("500924"),
-                M = t => {
-                    let {
-                        analyticsLocation: e,
-                        analyticsSourceLocation: l,
-                        guild: r,
-                        buttonText: M,
-                        targetBoostedGuildTier: h,
-                        onClose: L = () => {},
-                        closeLayer: m = () => {},
-                        pauseAnimation: I = !1,
-                        applicationId: S,
-                        handleSubscribeModalClose: T,
-                        withHighlight: g = !1,
-                        ...E
-                    } = t, {
-                        analyticsLocations: A
-                    } = (0, o.default)(), R = (0, u.useAppContext)(), y = R === f.AppContext.POPOUT, [v, P] = a.useState(!1), w = null != h ? Math.max((0, c.getNumberOfAppliedBoostsNeededForTier)(r, h), 1) : 1, x = (0, c.generateBlockGuildSubscriptionPurchasesNode)(), N = async () => {
-                        P(!0), await (0, C.addAppliedGuildBoosts)({
-                            analyticsLocations: A,
-                            analyticsLocation: e,
-                            analyticsSourceLocation: l,
-                            guild: r,
-                            numberOfBoostsToAdd: w,
-                            onClose: L,
-                            closeLayer: m,
-                            inPopout: y,
-                            applicationId: S,
-                            handleSubscribeModalClose: T
-                        }), P(!1)
-                    };
-                    return null != x ? (0, n.jsx)(s.Tooltip, {
-                        text: x,
-                        "aria-label": !1,
-                        children: t => (0, n.jsx)(d.default, {
-                            ...t,
-                            disabled: !0,
-                            size: s.Button.Sizes.SMALL,
-                            pauseAnimation: I,
-                            ...E,
-                            children: null != M ? M : p.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
-                        })
-                    }) : (0, n.jsx)(d.default, {
-                        size: s.Button.Sizes.SMALL,
-                        ...E,
-                        className: i(E.className, {
-                            [_.buttonHighlighted]: g
-                        }),
-                        submitting: v,
-                        onClick: N,
-                        pauseAnimation: I,
-                        children: null != M ? M : p.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_SUBSCRIBE_THIS_SERVER
-                    })
-                }
-        },
-        954296: function(t, e, l) {
-            "use strict";
-            l.r(e), l.d(e, {
-                addAppliedGuildBoosts: function() {
-                    return _
-                }
-            }), l("424973"), l("462568"), l("222007");
-            var n = l("37983");
-            l("884691");
-            var a = l("77078"),
-                r = l("850068"),
-                i = l("583367"),
-                s = l("775433"),
-                u = l("697218"),
-                o = l("625634"),
-                d = l("10514"),
-                c = l("599110"),
-                C = l("427459"),
-                f = l("163732"),
-                p = l("49111");
-            async function _(t) {
-                let {
-                    analyticsLocations: e,
-                    analyticsLocation: _,
-                    analyticsSourceLocation: M,
-                    numberOfBoostsToAdd: h,
-                    onClose: L,
-                    closeLayer: m,
-                    onSubscriptionConfirmation: I,
-                    guild: S,
-                    handleSubscribeModalClose: T,
-                    disablePremiumUpsell: g,
-                    inPopout: E,
-                    applicationId: A
-                } = t, R = E ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT, y = u.default.getCurrentUser();
-                if (null == y) return;
-                if (!y.verified) {
-                    (0, a.openModalLazy)(async () => {
-                        let {
-                            default: t
-                        } = await l.el("899917").then(l.bind(l, "899917"));
-                        return e => {
-                            let {
-                                onClose: l,
-                                ...a
-                            } = e;
-                            return (0, n.jsx)(t, {
-                                ...a,
-                                onClose: l
-                            })
-                        }
-                    }, {
-                        contextKey: R
-                    });
-                    return
-                }
-                let v = [];
-                !d.default.isLoadedForPremiumSKUs() && v.push((0, s.fetchPremiumSubscriptionPlans)()), !o.default.hasFetched && (v.push(r.fetchSubscriptions()), v.push((0, i.fetchGuildBoostSlots)())), v.length > 0 && await Promise.allSettled(v);
-                let P = (0, C.getAvailableGuildBoostSlots)(o.default.boostSlots),
-                    w = P.length,
-                    x = t => {
-                        null == L || L(), null == T || T(t)
-                    };
-                if (w > 0 && (null == h || w >= h)) {
-                    let t;
-                    1 === w ? t = P.slice(0, 1) : null != h && (t = P.slice(0, h));
-                    let e = await (0, a.openModalLazy)(async () => {
-                        let {
-                            default: e
-                        } = await l.el("247760").then(l.bind(l, "247760"));
-                        return l => {
-                            let {
-                                onClose: a,
-                                ...r
-                            } = l;
-                            return (0, n.jsx)(e, {
-                                ...r,
-                                onClose: t => {
-                                    a(), x(t)
-                                },
-                                selectedGuild: S,
-                                locationSection: p.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-                                guildBoostSlots: t
-                            })
-                        }
-                    }, {
-                        onCloseRequest: () => {
-                            null != e && (0, a.closeModal)(e), x(!1)
-                        },
-                        contextKey: R
-                    })
-                } else(0, f.default)({
-                    analyticsLocations: e,
-                    analyticsLocation: _,
-                    analyticsSourceLocation: M,
-                    guildId: S.id,
-                    closeLayer: () => {
-                        null == L || L(), null == m || m(), c.default.track(p.AnalyticEvents.MODAL_DISMISSED, {
-                            type: p.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-                            location_section: _.section
-                        })
-                    },
-                    totalNumberOfSlotsToAssign: null != h ? h : 1,
-                    onCloseModal: x,
-                    disablePremiumUpsell: g,
-                    onSubscriptionConfirmation: I,
-                    inPopout: E,
-                    applicationId: A
-                })
-            }
-        },
-        163732: function(t, e, l) {
-            "use strict";
-            l.r(e), l.d(e, {
-                default: function() {
-                    return f
-                }
-            }), l("222007");
-            var n = l("37983");
-            l("884691");
-            var a = l("77078"),
-                r = l("404118"),
-                i = l("850068"),
-                s = l("775433"),
-                u = l("521012"),
-                o = l("599110"),
-                d = l("719923"),
-                c = l("49111"),
-                C = l("782340");
-            async function f(t) {
-                let {
-                    analyticsLocations: e,
-                    analyticsLocation: f,
-                    analyticsSourceLocation: p,
-                    guildId: _,
-                    closeLayer: M,
-                    onCloseModal: h,
-                    totalNumberOfSlotsToAssign: L = 1,
-                    disablePremiumUpsell: m,
-                    onSubscriptionConfirmation: I,
-                    inPopout: S,
-                    applicationId: T
-                } = t, g = S ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT, E = u.default.getPremiumTypeSubscription();
-                if (null != E && E.isPurchasedExternally && null != E.paymentGateway) {
-                    null != M && M(), r.default.show({
-                        title: C.default.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format({
-                            paymentGatewayName: c.PaymentGatewayToFriendlyName[E.paymentGateway]
-                        }),
-                        body: C.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_UPGRADE_TO_PREMIUM_EXTERNAL_ERROR.format({
-                            paymentGatewayName: c.PaymentGatewayToFriendlyName[E.paymentGateway],
-                            subscriptionManagementLink: (0, d.getExternalSubscriptionMethodUrl)(E.paymentGateway, "SUBSCRIPTION_MANAGEMENT")
-                        })
-                    });
-                    return
-                }
-                Promise.all([(0, i.fetchPaymentSources)(), (0, s.fetchPremiumSubscriptionPlans)()]);
-                let A = await (0, a.openModalLazy)(async () => {
-                    let {
-                        default: t
-                    } = await l.el("860634").then(l.bind(l, "860634"));
-                    return l => {
-                        let {
-                            transitionState: a,
-                            onClose: r
-                        } = l;
-                        return (0, n.jsx)(t, {
-                            transitionState: a,
-                            onClose: t => {
-                                r(), null == h || h(t)
-                            },
-                            analyticsLocations: e,
-                            analyticsLocation: f,
-                            analyticsSourceLocation: null != p ? p : f,
-                            guildId: _,
-                            totalNumberOfSlotsToAssign: L,
-                            closeGuildPerksModal: M,
-                            disablePremiumUpsell: m,
-                            onSubscriptionConfirmation: I,
-                            applicationId: T
-                        })
-                    }
-                }, {
-                    onCloseCallback: () => {
-                        o.default.track(c.AnalyticEvents.MODAL_DISMISSED, {
-                            type: c.AnalyticsSections.PREMIUM_GUILD_PURCHASE_MODAL,
-                            location: f
-                        })
-                    },
-                    onCloseRequest: () => {
-                        null != A && (0, a.closeModal)(A), null == h || h(!1)
-                    },
-                    contextKey: g
-                })
-            }
-        },
-        324878: function(t, e, l) {
-            "use strict";
-            l.r(e), l.d(e, {
-                useHasActiveTrial: function() {
-                    return s
-                },
-                hasActiveTrial: function() {
-                    return u
-                },
-                isEligibleTrialSub: function() {
+                getBadgeWidthForValue: function() {
                     return o
                 },
-                useCurrentPremiumTrialTier: function() {
+                getBadgeCountString: function() {
+                    return O
+                },
+                NumberBadge: function() {
+                    return N
+                },
+                TextBadge: function() {
+                    return A
+                },
+                PremiumBadge: function() {
                     return d
+                },
+                IconBadge: function() {
+                    return i
+                },
+                CircleBadge: function() {
+                    return D
                 }
             });
-            var n = l("446674"),
-                a = l("697218"),
-                r = l("521012"),
-                i = l("646718");
-            let s = () => {
-                    let t = (0, n.useStateFromStores)([r.default], () => r.default.getPremiumTypeSubscription());
-                    return (null == t ? void 0 : t.trialId) != null
-                },
-                u = () => {
-                    var t;
-                    return (null === (t = r.default.getPremiumTypeSubscription()) || void 0 === t ? void 0 : t.trialId) != null
-                },
-                o = t => (null == t ? void 0 : t.trialId) != null && (t.trialId === i.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID || t.trialId === i.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID || t.trialId === i.PREMIUM_TIER_2_3P_ONE_MONTH_TRIAL_ID || t.trialId === i.PREMIUM_TIER_2_REFERRAL_TRIAL_ID);
+            var e = _("37983");
+            _("884691");
+            var E = _("414456"),
+                t = _.n(E);
+            _("77078");
+            var R = _("20606");
+            _("782340");
+            var n = _("444036");
+            let T = {
+                ROUND: n.baseShapeRound,
+                ROUND_LEFT: n.baseShapeRoundLeft,
+                ROUND_RIGHT: n.baseShapeRoundRight,
+                SQUARE: ""
+            };
 
-            function d() {
-                let t = (0, n.useStateFromStores)([r.default], () => r.default.getPremiumTypeSubscription()),
-                    e = (0, n.useStateFromStores)([a.default], () => a.default.getCurrentUser());
-                return (null == t ? void 0 : t.trialId) != null ? null == e ? void 0 : e.premiumType : null
+            function o(r) {
+                return r < 10 ? 16 : r < 100 ? 22 : 30
             }
-        },
-        46829: function(t, e, l) {
-            "use strict";
-            l.r(e), l.d(e, {
-                default: function() {
-                    return s
-                }
-            });
-            var n = l("37983");
-            l("884691");
-            var a = l("469563"),
-                r = l("906069"),
-                i = l("75196"),
-                s = (0, a.replaceIcon)(function(t) {
+
+            function O(r) {
+                return r < 1e3 ? "".concat(r) : "".concat(Math.min(Math.floor(r / 1e3), 9), "k+")
+            }
+            let N = r => {
                     let {
-                        width: e = 24,
-                        height: l = 24,
-                        color: a = "currentColor",
-                        foreground: r,
-                        ...s
-                    } = t;
-                    return (0, n.jsx)("svg", {
-                        ...(0, i.default)(s),
-                        width: e,
-                        height: l,
-                        viewBox: "0 0 24 24",
-                        children: (0, n.jsx)("path", {
-                            fill: a,
-                            className: r,
-                            d: "M12 2C6.477 2 2 6.477 2 12C2 17.522 6.477 22 12 22C17.523 22 22 17.522 22 12C22 6.477 17.523 2 12 2ZM8 6C9.104 6 10 6.896 10 8C10 9.105 9.104 10 8 10C6.896 10 6 9.105 6 8C6 6.896 6.896 6 8 6ZM18 14C18 16.617 15.14 19 12 19C8.86 19 6 16.617 6 14V13H18V14ZM16 10C14.896 10 14 9.105 14 8C14 6.896 14.896 6 16 6C17.104 6 18 6.896 18 8C18 9.105 17.104 10 16 10Z"
+                        count: a,
+                        color: _ = R.default.STATUS_DANGER,
+                        disableColor: E = !1,
+                        shape: N = T.ROUND,
+                        className: A,
+                        style: d,
+                        ...i
+                    } = r;
+                    return (0, e.jsx)("div", {
+                        className: t(A, n.numberBadge, N),
+                        style: {
+                            backgroundColor: E ? void 0 : _,
+                            width: o(a),
+                            paddingRight: function(r) {
+                                switch (r) {
+                                    case 1:
+                                    case 4:
+                                    case 6:
+                                        return 1;
+                                    default:
+                                        return
+                                }
+                            }(a),
+                            ...d
+                        },
+                        ...i,
+                        children: O(a)
+                    })
+                },
+                A = r => {
+                    let {
+                        text: a,
+                        className: _,
+                        color: E = R.default.STATUS_DANGER,
+                        shape: o = T.ROUND,
+                        disableColor: O = !1,
+                        style: N,
+                        ...A
+                    } = r;
+                    return (0, e.jsx)("div", {
+                        className: t(_, n.textBadge, o),
+                        style: {
+                            backgroundColor: O ? void 0 : E,
+                            ...N
+                        },
+                        ...A,
+                        children: a
+                    })
+                },
+                d = r => {
+                    let {
+                        text: a,
+                        className: _,
+                        ...E
+                    } = r;
+                    return (0, e.jsx)(A, {
+                        className: t(n.premiumBadge, _),
+                        text: a,
+                        ...E
+                    })
+                },
+                i = r => {
+                    let {
+                        icon: a,
+                        className: _,
+                        color: E = R.default.STATUS_DANGER,
+                        shape: o = T.ROUND,
+                        disableColor: O = !1,
+                        style: N
+                    } = r;
+                    return (0, e.jsx)("div", {
+                        className: t(_, n.iconBadge, o),
+                        style: {
+                            backgroundColor: O ? void 0 : E,
+                            ...N
+                        },
+                        children: (0, e.jsx)(a, {
+                            className: n.icon
                         })
                     })
-                }, r.ReactionIcon, void 0, {
-                    size: 24
-                })
-        },
-        642032: function(t, e, l) {
-            "use strict";
-            l.r(e), l.d(e, {
-                default: function() {
-                    return r
-                }
-            });
-            var n = l("37983");
-            l("884691");
-            var a = l("75196");
-
-            function r(t) {
-                let {
-                    width: e = 14,
-                    height: l = 13,
-                    color: r = "currentColor",
-                    foreground: i,
-                    ...s
-                } = t;
-                return (0, n.jsx)("svg", {
-                    ...(0, a.default)({
-                        ...s
-                    }),
-                    width: e,
-                    height: l,
-                    viewBox: "0 0 ".concat(e, " ").concat(l),
-                    className: i,
-                    fill: r,
-                    xmlns: "http://www.w3.org/2000/svg",
-                    children: (0, n.jsx)("path", {
-                        d: "M9.30705 8.36284L13.5731 6.46363C13.5889 6.45487 13.6022 6.44203 13.6114 6.42644C13.6206 6.41086 13.6255 6.39309 13.6255 6.375C13.6255 6.35691 13.6206 6.33914 13.6114 6.32356C13.6022 6.30797 13.5889 6.29513 13.5731 6.28637L9.30705 4.38716C9.29358 4.38716 9.28066 4.38183 9.27114 4.37233C9.26162 4.36283 9.25627 4.34995 9.25627 4.33652L7.3518 0.0569762C7.30102 -0.0189921 7.19944 -0.0189921 7.17405 0.0569762L5.26958 4.33652C5.24419 4.36184 5.24419 4.38716 5.2188 4.38716L0.927401 6.28637C0.911525 6.29513 0.898291 6.30797 0.889077 6.32356C0.879862 6.33914 0.875 6.35691 0.875 6.375C0.875 6.39309 0.879862 6.41086 0.889077 6.42644C0.898291 6.44203 0.911525 6.45487 0.927401 6.46363L5.2188 8.36284C5.24419 8.36284 5.24419 8.38816 5.26958 8.41348L7.17405 12.693C7.19944 12.769 7.30102 12.769 7.3518 12.693L9.25627 8.41348C9.25627 8.40005 9.26162 8.38717 9.27114 8.37767C9.28066 8.36817 9.29358 8.36284 9.30705 8.36284Z",
-                        fill: "currentColor"
+                },
+                D = r => {
+                    let {
+                        className: a,
+                        color: _ = R.default.INTERACTIVE_ACTIVE,
+                        shape: E = T.ROUND,
+                        disableColor: o = !1,
+                        style: O,
+                        ...N
+                    } = r;
+                    return (0, e.jsx)("div", {
+                        className: t(a, n.circleBadge, E),
+                        style: {
+                            backgroundColor: o ? void 0 : _,
+                            ...O
+                        },
+                        ...N
                     })
-                })
-            }
+                }
+        },
+        171210: function(r, a, _) {
+            "use strict";
+            _.r(a), _.d(a, {
+                default: function() {
+                    return t
+                }
+            }), (e = E || (E = {})).ACTION_SHEET_GRADIENT_BG = "var(--action-sheet-gradient-bg)", e.ACTIVITY_CARD_BACKGROUND = "var(--activity-card-background)", e.ALERT_BG = "var(--alert-bg)", e.ANDROID_NAVIGATION_BAR_BACKGROUND = "var(--android-navigation-bar-background)", e.ANDROID_NAVIGATION_SCRIM_BACKGROUND = "var(--android-navigation-scrim-background)", e.ANDROID_RIPPLE = "var(--android-ripple)", e.BACKGROUND_ACCENT = "var(--background-accent)", e.BACKGROUND_FLOATING = "var(--background-floating)", e.BACKGROUND_MENTIONED = "var(--background-mentioned)", e.BACKGROUND_MENTIONED_HOVER = "var(--background-mentioned-hover)", e.BACKGROUND_MESSAGE_AUTOMOD = "var(--background-message-automod)", e.BACKGROUND_MESSAGE_AUTOMOD_HOVER = "var(--background-message-automod-hover)", e.BACKGROUND_MESSAGE_HIGHLIGHT = "var(--background-message-highlight)", e.BACKGROUND_MESSAGE_HIGHLIGHT_HOVER = "var(--background-message-highlight-hover)", e.BACKGROUND_MESSAGE_HOVER = "var(--background-message-hover)", e.BACKGROUND_MOBILE_PRIMARY = "var(--background-mobile-primary)", e.BACKGROUND_MOBILE_SECONDARY = "var(--background-mobile-secondary)", e.BACKGROUND_MODIFIER_ACCENT = "var(--background-modifier-accent)", e.BACKGROUND_MODIFIER_ACCENT_2 = "var(--background-modifier-accent-2)", e.BACKGROUND_MODIFIER_ACTIVE = "var(--background-modifier-active)", e.BACKGROUND_MODIFIER_HOVER = "var(--background-modifier-hover)", e.BACKGROUND_MODIFIER_SELECTED = "var(--background-modifier-selected)", e.BACKGROUND_NESTED_FLOATING = "var(--background-nested-floating)", e.BACKGROUND_PRIMARY = "var(--background-primary)", e.BACKGROUND_SECONDARY = "var(--background-secondary)", e.BACKGROUND_SECONDARY_ALT = "var(--background-secondary-alt)", e.BACKGROUND_TERTIARY = "var(--background-tertiary)", e.BG_BACKDROP = "var(--bg-backdrop)", e.BG_BACKDROP_NO_OPACITY = "var(--bg-backdrop-no-opacity)", e.BG_BASE_PRIMARY = "var(--bg-base-primary)", e.BG_BASE_SECONDARY = "var(--bg-base-secondary)", e.BG_BASE_TERTIARY = "var(--bg-base-tertiary)", e.BG_MOD_FAINT = "var(--bg-mod-faint)", e.BG_MOD_STRONG = "var(--bg-mod-strong)", e.BG_MOD_SUBTLE = "var(--bg-mod-subtle)", e.BG_SURFACE_OVERLAY = "var(--bg-surface-overlay)", e.BG_SURFACE_OVERLAY_TMP = "var(--bg-surface-overlay-tmp)", e.BG_SURFACE_RAISED = "var(--bg-surface-raised)", e.BLACK = "var(--black)", e.BLUR_FALLBACK = "var(--blur-fallback)", e.BLUR_FALLBACK_PRESSED = "var(--blur-fallback-pressed)", e.BORDER_FAINT = "var(--border-faint)", e.BORDER_STRONG = "var(--border-strong)", e.BORDER_SUBTLE = "var(--border-subtle)", e.BUG_REPORTER_MODAL_SUBMITTING_BACKGROUND = "var(--bug-reporter-modal-submitting-background)", e.BUTTON_CREATOR_REVENUE_BACKGROUND = "var(--button-creator-revenue-background)", e.BUTTON_DANGER_BACKGROUND = "var(--button-danger-background)", e.BUTTON_DANGER_BACKGROUND_ACTIVE = "var(--button-danger-background-active)", e.BUTTON_DANGER_BACKGROUND_DISABLED = "var(--button-danger-background-disabled)", e.BUTTON_DANGER_BACKGROUND_HOVER = "var(--button-danger-background-hover)", e.BUTTON_OUTLINE_BRAND_BACKGROUND = "var(--button-outline-brand-background)", e.BUTTON_OUTLINE_BRAND_BACKGROUND_ACTIVE = "var(--button-outline-brand-background-active)", e.BUTTON_OUTLINE_BRAND_BACKGROUND_HOVER = "var(--button-outline-brand-background-hover)", e.BUTTON_OUTLINE_BRAND_BORDER = "var(--button-outline-brand-border)", e.BUTTON_OUTLINE_BRAND_BORDER_ACTIVE = "var(--button-outline-brand-border-active)", e.BUTTON_OUTLINE_BRAND_BORDER_HOVER = "var(--button-outline-brand-border-hover)", e.BUTTON_OUTLINE_BRAND_TEXT = "var(--button-outline-brand-text)", e.BUTTON_OUTLINE_BRAND_TEXT_ACTIVE = "var(--button-outline-brand-text-active)", e.BUTTON_OUTLINE_BRAND_TEXT_HOVER = "var(--button-outline-brand-text-hover)", e.BUTTON_OUTLINE_DANGER_BACKGROUND = "var(--button-outline-danger-background)", e.BUTTON_OUTLINE_DANGER_BACKGROUND_ACTIVE = "var(--button-outline-danger-background-active)", e.BUTTON_OUTLINE_DANGER_BACKGROUND_HOVER = "var(--button-outline-danger-background-hover)", e.BUTTON_OUTLINE_DANGER_BORDER = "var(--button-outline-danger-border)", e.BUTTON_OUTLINE_DANGER_BORDER_ACTIVE = "var(--button-outline-danger-border-active)", e.BUTTON_OUTLINE_DANGER_BORDER_HOVER = "var(--button-outline-danger-border-hover)", e.BUTTON_OUTLINE_DANGER_TEXT = "var(--button-outline-danger-text)", e.BUTTON_OUTLINE_DANGER_TEXT_ACTIVE = "var(--button-outline-danger-text-active)", e.BUTTON_OUTLINE_DANGER_TEXT_HOVER = "var(--button-outline-danger-text-hover)", e.BUTTON_OUTLINE_POSITIVE_BACKGROUND = "var(--button-outline-positive-background)", e.BUTTON_OUTLINE_POSITIVE_BACKGROUND_ACTIVE = "var(--button-outline-positive-background-active)", e.BUTTON_OUTLINE_POSITIVE_BACKGROUND_HOVER = "var(--button-outline-positive-background-hover)", e.BUTTON_OUTLINE_POSITIVE_BORDER = "var(--button-outline-positive-border)", e.BUTTON_OUTLINE_POSITIVE_BORDER_ACTIVE = "var(--button-outline-positive-border-active)", e.BUTTON_OUTLINE_POSITIVE_BORDER_HOVER = "var(--button-outline-positive-border-hover)", e.BUTTON_OUTLINE_POSITIVE_TEXT = "var(--button-outline-positive-text)", e.BUTTON_OUTLINE_POSITIVE_TEXT_ACTIVE = "var(--button-outline-positive-text-active)", e.BUTTON_OUTLINE_POSITIVE_TEXT_HOVER = "var(--button-outline-positive-text-hover)", e.BUTTON_OUTLINE_PRIMARY_BACKGROUND = "var(--button-outline-primary-background)", e.BUTTON_OUTLINE_PRIMARY_BACKGROUND_ACTIVE = "var(--button-outline-primary-background-active)", e.BUTTON_OUTLINE_PRIMARY_BACKGROUND_HOVER = "var(--button-outline-primary-background-hover)", e.BUTTON_OUTLINE_PRIMARY_BORDER = "var(--button-outline-primary-border)", e.BUTTON_OUTLINE_PRIMARY_BORDER_ACTIVE = "var(--button-outline-primary-border-active)", e.BUTTON_OUTLINE_PRIMARY_BORDER_HOVER = "var(--button-outline-primary-border-hover)", e.BUTTON_OUTLINE_PRIMARY_TEXT = "var(--button-outline-primary-text)", e.BUTTON_OUTLINE_PRIMARY_TEXT_ACTIVE = "var(--button-outline-primary-text-active)", e.BUTTON_OUTLINE_PRIMARY_TEXT_HOVER = "var(--button-outline-primary-text-hover)", e.BUTTON_POSITIVE_BACKGROUND = "var(--button-positive-background)", e.BUTTON_POSITIVE_BACKGROUND_ACTIVE = "var(--button-positive-background-active)", e.BUTTON_POSITIVE_BACKGROUND_DISABLED = "var(--button-positive-background-disabled)", e.BUTTON_POSITIVE_BACKGROUND_HOVER = "var(--button-positive-background-hover)", e.BUTTON_SECONDARY_BACKGROUND = "var(--button-secondary-background)", e.BUTTON_SECONDARY_BACKGROUND_ACTIVE = "var(--button-secondary-background-active)", e.BUTTON_SECONDARY_BACKGROUND_DISABLED = "var(--button-secondary-background-disabled)", e.BUTTON_SECONDARY_BACKGROUND_HOVER = "var(--button-secondary-background-hover)", e.CARD_GRADIENT_BG = "var(--card-gradient-bg)", e.CARD_GRADIENT_PRESSED_BG = "var(--card-gradient-pressed-bg)", e.CARD_PRIMARY_BG = "var(--card-primary-bg)", e.CARD_PRIMARY_PRESSED_BG = "var(--card-primary-pressed-bg)", e.CARD_SECONDARY_BG = "var(--card-secondary-bg)", e.CARD_SECONDARY_PRESSED_BG = "var(--card-secondary-pressed-bg)", e.CHANNEL_ICON = "var(--channel-icon)", e.CHANNEL_TEXT_AREA_PLACEHOLDER = "var(--channel-text-area-placeholder)", e.CHANNELS_DEFAULT = "var(--channels-default)", e.CHANNELTEXTAREA_BACKGROUND = "var(--channeltextarea-background)", e.CHAT_BACKGROUND = "var(--chat-background)", e.CHAT_BANNER_BG = "var(--chat-banner-bg)", e.CHAT_BORDER = "var(--chat-border)", e.CHAT_INPUT_CONTAINER_BACKGROUND = "var(--chat-input-container-background)", e.CHAT_SWIPE_TO_REPLY_BACKGROUND = "var(--chat-swipe-to-reply-background)", e.CHAT_SWIPE_TO_REPLY_GRADIENT_BACKGROUND = "var(--chat-swipe-to-reply-gradient-background)", e.CONTROL_BRAND_FOREGROUND = "var(--control-brand-foreground)", e.CONTROL_BRAND_FOREGROUND_NEW = "var(--control-brand-foreground-new)", e.CREATOR_REVENUE_ICON_GRADIENT_END = "var(--creator-revenue-icon-gradient-end)", e.CREATOR_REVENUE_ICON_GRADIENT_START = "var(--creator-revenue-icon-gradient-start)", e.CREATOR_REVENUE_INFO_BOX_BACKGROUND = "var(--creator-revenue-info-box-background)", e.CREATOR_REVENUE_INFO_BOX_BORDER = "var(--creator-revenue-info-box-border)", e.CREATOR_REVENUE_LOCKED_CHANNEL_ICON = "var(--creator-revenue-locked-channel-icon)", e.CREATOR_REVENUE_PROGRESS_BAR = "var(--creator-revenue-progress-bar)", e.DEPRECATED_CARD_BG = "var(--deprecated-card-bg)", e.DEPRECATED_CARD_EDITABLE_BG = "var(--deprecated-card-editable-bg)", e.DEPRECATED_QUICKSWITCHER_INPUT_BACKGROUND = "var(--deprecated-quickswitcher-input-background)", e.DEPRECATED_QUICKSWITCHER_INPUT_PLACEHOLDER = "var(--deprecated-quickswitcher-input-placeholder)", e.DEPRECATED_STORE_BG = "var(--deprecated-store-bg)", e.DEPRECATED_TEXT_INPUT_BG = "var(--deprecated-text-input-bg)", e.DEPRECATED_TEXT_INPUT_BORDER = "var(--deprecated-text-input-border)", e.DEPRECATED_TEXT_INPUT_BORDER_DISABLED = "var(--deprecated-text-input-border-disabled)", e.DEPRECATED_TEXT_INPUT_BORDER_HOVER = "var(--deprecated-text-input-border-hover)", e.DEPRECATED_TEXT_INPUT_PREFIX = "var(--deprecated-text-input-prefix)", e.DISPLAY_BANNER_OVERFLOW_BACKGROUND = "var(--display-banner-overflow-background)", e.DIVIDER_STRONG = "var(--divider-strong)", e.DIVIDER_SUBTLE = "var(--divider-subtle)", e.EXPRESSION_PICKER_BG = "var(--expression-picker-bg)", e.FOCUS_PRIMARY = "var(--focus-primary)", e.FORUM_POST_EXTRA_MEDIA_COUNT_CONTAINER_BACKGROUND = "var(--forum-post-extra-media-count-container-background)", e.FORUM_POST_TAG_BACKGROUND = "var(--forum-post-tag-background)", e.GUILD_ICON_INACTIVE_BG = "var(--guild-icon-inactive-bg)", e.GUILD_ICON_INACTIVE_NESTED_BG = "var(--guild-icon-inactive-nested-bg)", e.GUILD_NOTIFICATIONS_BOTTOM_SHEET_PILL_BACKGROUND = "var(--guild-notifications-bottom-sheet-pill-background)", e.HEADER_MUTED = "var(--header-muted)", e.HEADER_PRIMARY = "var(--header-primary)", e.HEADER_SECONDARY = "var(--header-secondary)", e.HOME_BACKGROUND = "var(--home-background)", e.HOME_CARD_RESTING_BORDER = "var(--home-card-resting-border)", e.ICON_MUTED = "var(--icon-muted)", e.ICON_PRIMARY = "var(--icon-primary)", e.ICON_SECONDARY = "var(--icon-secondary)", e.ICON_TRANSPARENT = "var(--icon-transparent)", e.INFO_BOX_BACKGROUND = "var(--info-box-background)", e.INFO_DANGER_BACKGROUND = "var(--info-danger-background)", e.INFO_DANGER_FOREGROUND = "var(--info-danger-foreground)", e.INFO_DANGER_TEXT = "var(--info-danger-text)", e.INFO_HELP_BACKGROUND = "var(--info-help-background)", e.INFO_HELP_FOREGROUND = "var(--info-help-foreground)", e.INFO_HELP_TEXT = "var(--info-help-text)", e.INFO_POSITIVE_BACKGROUND = "var(--info-positive-background)", e.INFO_POSITIVE_FOREGROUND = "var(--info-positive-foreground)", e.INFO_POSITIVE_TEXT = "var(--info-positive-text)", e.INFO_WARNING_BACKGROUND = "var(--info-warning-background)", e.INFO_WARNING_FOREGROUND = "var(--info-warning-foreground)", e.INFO_WARNING_TEXT = "var(--info-warning-text)", e.INPUT_BACKGROUND = "var(--input-background)", e.INPUT_PLACEHOLDER_TEXT = "var(--input-placeholder-text)", e.INTERACTIVE_ACTIVE = "var(--interactive-active)", e.INTERACTIVE_HOVER = "var(--interactive-hover)", e.INTERACTIVE_MUTED = "var(--interactive-muted)", e.INTERACTIVE_NORMAL = "var(--interactive-normal)", e.LEGACY_ANDROID_BLUR_OVERLAY_DEFAULT = "var(--legacy-android-blur-overlay-default)", e.LEGACY_ANDROID_BLUR_OVERLAY_ULTRA_THIN = "var(--legacy-android-blur-overlay-ultra-thin)", e.LEGACY_BLUR_FALLBACK_DEFAULT = "var(--legacy-blur-fallback-default)", e.LEGACY_BLUR_FALLBACK_ULTRA_THIN = "var(--legacy-blur-fallback-ultra-thin)", e.LIVE_STAGE_TILE_BORDER = "var(--live-stage-tile-border)", e.LOGO_PRIMARY = "var(--logo-primary)", e.MENTION_BACKGROUND = "var(--mention-background)", e.MENTION_FOREGROUND = "var(--mention-foreground)", e.MODAL_BACKGROUND = "var(--modal-background)", e.MODAL_FOOTER_BACKGROUND = "var(--modal-footer-background)", e.NAVIGATOR_HEADER_TINT = "var(--navigator-header-tint)", e.PANEL_BG = "var(--panel-bg)", e.POLLS_EMBED_BACKGROUND = "var(--polls-embed-background)", e.POLLS_EMBED_BORDER = "var(--polls-embed-border)", e.POLLS_IMAGE_NORMAL_BORDER = "var(--polls-image-normal-border)", e.POLLS_NORMAL_BORDER = "var(--polls-normal-border)", e.POLLS_NORMAL_CONFETTI = "var(--polls-normal-confetti)", e.POLLS_NORMAL_FILL = "var(--polls-normal-fill)", e.POLLS_NORMAL_LABEL = "var(--polls-normal-label)", e.POLLS_VICTOR_BORDER = "var(--polls-victor-border)", e.POLLS_VICTOR_FILL = "var(--polls-victor-fill)", e.POLLS_VICTOR_LABEL = "var(--polls-victor-label)", e.POLLS_VOTED_BORDER = "var(--polls-voted-border)", e.POLLS_VOTED_FILL = "var(--polls-voted-fill)", e.POLLS_VOTED_LABEL = "var(--polls-voted-label)", e.PROFILE_GRADIENT_CARD_BACKGROUND = "var(--profile-gradient-card-background)", e.PROFILE_GRADIENT_MESSAGE_INPUT_BORDER = "var(--profile-gradient-message-input-border)", e.PROFILE_GRADIENT_NOTE_BACKGROUND = "var(--profile-gradient-note-background)", e.PROFILE_GRADIENT_OVERLAY = "var(--profile-gradient-overlay)", e.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME = "var(--profile-gradient-overlay-synced-with-user-theme)", e.PROFILE_GRADIENT_PROFILE_BODY_BACKGROUND_HOVER = "var(--profile-gradient-profile-body-background-hover)", e.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND = "var(--profile-gradient-role-pill-background)", e.PROFILE_GRADIENT_ROLE_PILL_BORDER = "var(--profile-gradient-role-pill-border)", e.PROFILE_GRADIENT_SECTION_BOX = "var(--profile-gradient-section-box)", e.REDESIGN_ACTIVITY_CARD_BACKGROUND = "var(--redesign-activity-card-background)", e.REDESIGN_ACTIVITY_CARD_BACKGROUND_PRESSED = "var(--redesign-activity-card-background-pressed)", e.REDESIGN_ACTIVITY_CARD_BADGE_ICON = "var(--redesign-activity-card-badge-icon)", e.REDESIGN_ACTIVITY_CARD_BORDER = "var(--redesign-activity-card-border)", e.REDESIGN_ACTIVITY_CARD_OVERFLOW_BACKGROUND = "var(--redesign-activity-card-overflow-background)", e.REDESIGN_BUTTON_DANGER_BACKGROUND = "var(--redesign-button-danger-background)", e.REDESIGN_BUTTON_DANGER_PRESSED_BACKGROUND = "var(--redesign-button-danger-pressed-background)", e.REDESIGN_BUTTON_DANGER_TEXT = "var(--redesign-button-danger-text)", e.REDESIGN_BUTTON_OVERLAY_ALPHA_BACKGROUND = "var(--redesign-button-overlay-alpha-background)", e.REDESIGN_BUTTON_OVERLAY_ALPHA_PRESSED_BACKGROUND = "var(--redesign-button-overlay-alpha-pressed-background)", e.REDESIGN_BUTTON_OVERLAY_ALPHA_TEXT = "var(--redesign-button-overlay-alpha-text)", e.REDESIGN_BUTTON_OVERLAY_BACKGROUND = "var(--redesign-button-overlay-background)", e.REDESIGN_BUTTON_OVERLAY_PRESSED_BACKGROUND = "var(--redesign-button-overlay-pressed-background)", e.REDESIGN_BUTTON_OVERLAY_TEXT = "var(--redesign-button-overlay-text)", e.REDESIGN_BUTTON_POSITIVE_BACKGROUND = "var(--redesign-button-positive-background)", e.REDESIGN_BUTTON_POSITIVE_PRESSED_BACKGROUND = "var(--redesign-button-positive-pressed-background)", e.REDESIGN_BUTTON_POSITIVE_TEXT = "var(--redesign-button-positive-text)", e.REDESIGN_BUTTON_PRIMARY_ALT_BACKGROUND = "var(--redesign-button-primary-alt-background)", e.REDESIGN_BUTTON_PRIMARY_ALT_BORDER = "var(--redesign-button-primary-alt-border)", e.REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_BACKGROUND = "var(--redesign-button-primary-alt-on-blurple-background)", e.REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_BORDER = "var(--redesign-button-primary-alt-on-blurple-border)", e.REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_PRESSED_BACKGROUND = "var(--redesign-button-primary-alt-on-blurple-pressed-background)", e.REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_PRESSED_BORDER = "var(--redesign-button-primary-alt-on-blurple-pressed-border)", e.REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_TEXT = "var(--redesign-button-primary-alt-on-blurple-text)", e.REDESIGN_BUTTON_PRIMARY_ALT_PRESSED_BACKGROUND = "var(--redesign-button-primary-alt-pressed-background)", e.REDESIGN_BUTTON_PRIMARY_ALT_PRESSED_BORDER = "var(--redesign-button-primary-alt-pressed-border)", e.REDESIGN_BUTTON_PRIMARY_ALT_PRESSED_TEXT = "var(--redesign-button-primary-alt-pressed-text)", e.REDESIGN_BUTTON_PRIMARY_ALT_TEXT = "var(--redesign-button-primary-alt-text)", e.REDESIGN_BUTTON_PRIMARY_BACKGROUND = "var(--redesign-button-primary-background)", e.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_BACKGROUND = "var(--redesign-button-primary-on-blurple-background)", e.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_BACKGROUND = "var(--redesign-button-primary-on-blurple-pressed-background)", e.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_TEXT = "var(--redesign-button-primary-on-blurple-pressed-text)", e.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_TEXT = "var(--redesign-button-primary-on-blurple-text)", e.REDESIGN_BUTTON_PRIMARY_PRESSED_BACKGROUND = "var(--redesign-button-primary-pressed-background)", e.REDESIGN_BUTTON_PRIMARY_TEXT = "var(--redesign-button-primary-text)", e.REDESIGN_BUTTON_SECONDARY_ALT_BACKGROUND = "var(--redesign-button-secondary-alt-background)", e.REDESIGN_BUTTON_SECONDARY_ALT_PRESSED_BACKGROUND = "var(--redesign-button-secondary-alt-pressed-background)", e.REDESIGN_BUTTON_SECONDARY_ALT_PRESSED_TEXT = "var(--redesign-button-secondary-alt-pressed-text)", e.REDESIGN_BUTTON_SECONDARY_ALT_TEXT = "var(--redesign-button-secondary-alt-text)", e.REDESIGN_BUTTON_SECONDARY_BACKGROUND = "var(--redesign-button-secondary-background)", e.REDESIGN_BUTTON_SECONDARY_BORDER = "var(--redesign-button-secondary-border)", e.REDESIGN_BUTTON_SECONDARY_PRESSED_BACKGROUND = "var(--redesign-button-secondary-pressed-background)", e.REDESIGN_BUTTON_SECONDARY_PRESSED_BORDER = "var(--redesign-button-secondary-pressed-border)", e.REDESIGN_BUTTON_SECONDARY_TEXT = "var(--redesign-button-secondary-text)", e.REDESIGN_CHANNEL_CATEGORY_NAME_TEXT = "var(--redesign-channel-category-name-text)", e.REDESIGN_CHANNEL_MESSAGE_PREVIEW_TEXT = "var(--redesign-channel-message-preview-text)", e.REDESIGN_CHANNEL_NAME_MUTED_TEXT = "var(--redesign-channel-name-muted-text)", e.REDESIGN_CHANNEL_NAME_TEXT = "var(--redesign-channel-name-text)", e.REDESIGN_CHAT_INPUT_BACKGROUND = "var(--redesign-chat-input-background)", e.REDESIGN_INPUT_CONTROL_ACTIVE_BG = "var(--redesign-input-control-active-bg)", e.REDESIGN_INPUT_CONTROL_SELECTED = "var(--redesign-input-control-selected)", e.REDESIGN_ONLY_BACKGROUND_ACTIVE = "var(--redesign-only-background-active)", e.REDESIGN_ONLY_BACKGROUND_DEFAULT = "var(--redesign-only-background-default)", e.REDESIGN_ONLY_BACKGROUND_OVERLAY = "var(--redesign-only-background-overlay)", e.REDESIGN_ONLY_BACKGROUND_RAISED = "var(--redesign-only-background-raised)", e.REDESIGN_ONLY_BACKGROUND_SUNKEN = "var(--redesign-only-background-sunken)", e.SCROLLBAR_AUTO_SCROLLBAR_COLOR_THUMB = "var(--scrollbar-auto-scrollbar-color-thumb)", e.SCROLLBAR_AUTO_SCROLLBAR_COLOR_TRACK = "var(--scrollbar-auto-scrollbar-color-track)", e.SCROLLBAR_AUTO_THUMB = "var(--scrollbar-auto-thumb)", e.SCROLLBAR_AUTO_TRACK = "var(--scrollbar-auto-track)", e.SCROLLBAR_THIN_THUMB = "var(--scrollbar-thin-thumb)", e.SCROLLBAR_THIN_TRACK = "var(--scrollbar-thin-track)", e.SPOILER_HIDDEN_BACKGROUND = "var(--spoiler-hidden-background)", e.SPOILER_REVEALED_BACKGROUND = "var(--spoiler-revealed-background)", e.STATUS_DANGER = "var(--status-danger)", e.STATUS_DANGER_BACKGROUND = "var(--status-danger-background)", e.STATUS_DANGER_TEXT = "var(--status-danger-text)", e.STATUS_DND = "var(--status-dnd)", e.STATUS_IDLE = "var(--status-idle)", e.STATUS_OFFLINE = "var(--status-offline)", e.STATUS_ONLINE = "var(--status-online)", e.STATUS_POSITIVE = "var(--status-positive)", e.STATUS_POSITIVE_BACKGROUND = "var(--status-positive-background)", e.STATUS_POSITIVE_TEXT = "var(--status-positive-text)", e.STATUS_SPEAKING = "var(--status-speaking)", e.STATUS_WARNING = "var(--status-warning)", e.STATUS_WARNING_BACKGROUND = "var(--status-warning-background)", e.STATUS_WARNING_TEXT = "var(--status-warning-text)", e.TEXT_BRAND = "var(--text-brand)", e.TEXT_DANGER = "var(--text-danger)", e.TEXT_LINK = "var(--text-link)", e.TEXT_LINK_LOW_SATURATION = "var(--text-link-low-saturation)", e.TEXT_LOW_CONTRAST = "var(--text-low-contrast)", e.TEXT_MESSAGE_PREVIEW_LOW_SAT = "var(--text-message-preview-low-sat)", e.TEXT_MUTED = "var(--text-muted)", e.TEXT_MUTED_ON_DEFAULT = "var(--text-muted-on-default)", e.TEXT_NORMAL = "var(--text-normal)", e.TEXT_POSITIVE = "var(--text-positive)", e.TEXT_PRIMARY = "var(--text-primary)", e.TEXT_SECONDARY = "var(--text-secondary)", e.TEXT_WARNING = "var(--text-warning)", e.TEXTBOX_MARKDOWN_SYNTAX = "var(--textbox-markdown-syntax)", e.THEME_LOCKED_BLUR_FALLBACK = "var(--theme-locked-blur-fallback)", e.TOAST_BG = "var(--toast-bg)", e.TYPING_INDICATOR_BG = "var(--typing-indicator-bg)", e.USER_PROFILE_HEADER_OVERFLOW_BACKGROUND = "var(--user-profile-header-overflow-background)", e.VOICE_VIDEO_TILE_BLUR_FALLBACK = "var(--voice-video-tile-blur-fallback)", e.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK = "var(--voice-video-video-tile-blur-fallback)", e.WHITE = "var(--white)";
+            var e, E, t = E
         }
     }
 ]);

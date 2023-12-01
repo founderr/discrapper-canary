@@ -1,484 +1,941 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["75676"], {
-        713876: function(e, C, t) {
+    ["21413"], {
+        27562: function(t, e, n) {
             "use strict";
-            t.r(C), t.d(C, {
-                ChannelListMagnifyingGlassIcon: function() {
+            t.exports = n.p + "6adc630fe0534895ff0f.mp4"
+        },
+        851703: function(t, e, n) {
+            "use strict";
+            t.exports = n.p + "f3c9e56752e6e7dae615.mp4"
+        },
+        902577: function(t, e, n) {
+            "use strict";
+            t.exports = n.p + "61220d00e627e7f4a440.png"
+        },
+        351288: function(t, e, n) {
+            "use strict";
+            t.exports = n.p + "c3f841e9edf0f8c90ca2.mp4"
+        },
+        595726: function(t, e, n) {
+            "use strict";
+            t.exports = n.p + "c694675351be2cd8923b.png"
+        },
+        462641: function(t, e, n) {
+            "use strict";
+            t.exports = n.p + "0a10740d903f2a7e3f1e.png"
+        },
+        95937: function(t, e, n) {
+            "use strict";
+            t.exports = n.p + "4c6d753b661bdac6ed49.png"
+        },
+        929461: function(t, e, n) {
+            "use strict";
+            t.exports = n.p + "a1aa5e5cf3f255bb84cd.mp4"
+        },
+        686298: function(t, e, n) {
+            "use strict";
+            n.r(e), n.d(e, {
+                ApplicationStreamResolutions: function() {
                     return i
+                },
+                getApplicationResolution: function() {
+                    return _
+                },
+                ApplicationStreamFPS: function() {
+                    return u
+                },
+                ApplicationStreamPresets: function() {
+                    return r
+                },
+                getApplicationFramerate: function() {
+                    return f
+                },
+                ApplicationStreamPresetValues: function() {
+                    return E
+                },
+                ApplicationStreamSettingRequirements: function() {
+                    return p
+                },
+                ApplicationStreamResolutionButtons: function() {
+                    return S
+                },
+                GoLiveDeviceResolutionButtons: function() {
+                    return T
+                },
+                ApplicationStreamResolutionButtonsWithSuffixLabel: function() {
+                    return I
+                },
+                ApplicationStreamFPSButtons: function() {
+                    return g
+                },
+                ApplicationStreamFPSButtonsWithSuffixLabel: function() {
+                    return R
+                }
+            }), n("70102");
+            var i, u, r, o, a, s, l = n("49111"),
+                d = n("646718"),
+                c = n("782340");
+
+            function _(t) {
+                switch (t) {
+                    case 480:
+                        return 480;
+                    case 720:
+                        return 720;
+                    case 1080:
+                        return 1080;
+                    case 0:
+                        return 0;
+                    default:
+                        throw Error("Unknown resolution: ".concat(t))
+                }
+            }
+
+            function f(t) {
+                switch (t) {
+                    case 5:
+                        return 5;
+                    case 15:
+                        return 15;
+                    case 30:
+                        return 30;
+                    case 60:
+                        return 60;
+                    default:
+                        throw Error("Unknown frame rate: ".concat(t))
+                }
+            }(o = i || (i = {}))[o.RESOLUTION_480 = 480] = "RESOLUTION_480", o[o.RESOLUTION_720 = 720] = "RESOLUTION_720", o[o.RESOLUTION_1080 = 1080] = "RESOLUTION_1080", o[o.RESOLUTION_1440 = 1440] = "RESOLUTION_1440", o[o.RESOLUTION_SOURCE = 0] = "RESOLUTION_SOURCE", (a = u || (u = {}))[a.FPS_5 = 5] = "FPS_5", a[a.FPS_15 = 15] = "FPS_15", a[a.FPS_30 = 30] = "FPS_30", a[a.FPS_60 = 60] = "FPS_60", (s = r || (r = {}))[s.PRESET_VIDEO = 1] = "PRESET_VIDEO", s[s.PRESET_DOCUMENTS = 2] = "PRESET_DOCUMENTS", s[s.PRESET_CUSTOM = 3] = "PRESET_CUSTOM";
+            let E = {
+                    2: [{
+                        resolution: 0,
+                        fps: 15
+                    }, {
+                        resolution: 0,
+                        fps: 5
+                    }],
+                    1: [{
+                        resolution: 1440,
+                        fps: 60
+                    }, {
+                        resolution: 1080,
+                        fps: 60
+                    }, {
+                        resolution: 720,
+                        fps: 60
+                    }, {
+                        resolution: 720,
+                        fps: 30
+                    }],
+                    3: []
+                },
+                p = [{
+                    resolution: 0,
+                    fps: 60,
+                    quality: d.StreamQualities.HIGH_STREAMING_QUALITY
+                }, {
+                    resolution: 0,
+                    fps: 30,
+                    quality: d.StreamQualities.HIGH_STREAMING_QUALITY
+                }, {
+                    resolution: 0,
+                    fps: 15,
+                    quality: d.StreamQualities.HIGH_STREAMING_QUALITY
+                }, {
+                    resolution: 0,
+                    fps: 5,
+                    preset: 2
+                }, {
+                    resolution: 1440,
+                    fps: 60,
+                    guildPremiumTier: l.BoostedGuildTiers.TIER_2,
+                    quality: d.StreamQualities.MID_STREAMING_QUALITY
+                }, {
+                    resolution: 1440,
+                    fps: 30,
+                    guildPremiumTier: l.BoostedGuildTiers.TIER_2,
+                    quality: d.StreamQualities.MID_STREAMING_QUALITY
+                }, {
+                    resolution: 1440,
+                    fps: 15,
+                    guildPremiumTier: l.BoostedGuildTiers.TIER_2,
+                    quality: d.StreamQualities.MID_STREAMING_QUALITY
+                }, {
+                    resolution: 1080,
+                    fps: 60,
+                    guildPremiumTier: l.BoostedGuildTiers.TIER_2,
+                    quality: d.StreamQualities.MID_STREAMING_QUALITY
+                }, {
+                    resolution: 1080,
+                    fps: 30,
+                    guildPremiumTier: l.BoostedGuildTiers.TIER_2,
+                    quality: d.StreamQualities.MID_STREAMING_QUALITY
+                }, {
+                    resolution: 1080,
+                    fps: 15,
+                    guildPremiumTier: l.BoostedGuildTiers.TIER_2,
+                    quality: d.StreamQualities.MID_STREAMING_QUALITY
+                }, {
+                    resolution: 720,
+                    fps: 60,
+                    guildPremiumTier: l.BoostedGuildTiers.TIER_1,
+                    quality: d.StreamQualities.MID_STREAMING_QUALITY
+                }, {
+                    resolution: 720,
+                    fps: 30
+                }, {
+                    resolution: 720,
+                    fps: 15
+                }, {
+                    resolution: 720,
+                    fps: 5
+                }, {
+                    resolution: 480,
+                    fps: 60,
+                    guildPremiumTier: l.BoostedGuildTiers.TIER_1,
+                    quality: d.StreamQualities.MID_STREAMING_QUALITY
+                }, {
+                    resolution: 480,
+                    fps: 30
+                }, {
+                    resolution: 480,
+                    fps: 15
+                }, {
+                    resolution: 480,
+                    fps: 5
+                }];
+
+            function A(t, e) {
+                return {
+                    value: t,
+                    get label() {
+                        return null != e ? e() : t
+                    }
+                }
+            }
+            let S = [A(720), A(1080), A(1440), A(0, () => c.default.Messages.SCREENSHARE_SOURCE)],
+                T = [A(720), A(1080), A(1440)],
+                O = t => "".concat(t, "p"),
+                I = [A(480, () => O(480)), A(720, () => O(720)), A(1080, () => O(1080)), A(1440, () => O(1440)), A(0, () => c.default.Messages.SCREENSHARE_SOURCE)],
+                g = [A(15), A(30), A(60)],
+                R = [A(15, () => c.default.Messages.STREAM_FPS_OPTION.format({
+                    value: 15
+                })), A(30, () => c.default.Messages.STREAM_FPS_OPTION.format({
+                    value: 30
+                })), A(60, () => c.default.Messages.STREAM_FPS_OPTION.format({
+                    value: 60
+                }))]
+        },
+        504385: function(t, e, n) {
+            "use strict";
+            n.r(e), n.d(e, {
+                snapVolumeToDefault: function() {
+                    return a
+                },
+                coerceAudioContextForProto: function() {
+                    return s
                 }
             });
-            var l = t("37983");
-            t("884691");
-            var n = t("669491"),
-                s = t("75196");
-            let i = e => {
-                let {
-                    width: C = 24,
-                    height: t = 24,
-                    color: i = n.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: r = "",
-                    ...o
-                } = e;
-                return (0, l.jsxs)("svg", {
-                    ...(0, s.default)(o),
-                    width: C,
-                    height: t,
-                    viewBox: "0 0 24 24",
-                    fill: "none",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    children: [(0, l.jsx)("path", {
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                        d: "M18.5 23C19.3805 23 20.202 22.7471 20.8957 22.31L22.2929 23.7071C22.6834 24.0976 23.3166 24.0976 23.7071 23.7071C24.0976 23.3166 24.0976 22.6834 23.7071 22.2929L22.31 20.8957C22.7471 20.202 23 19.3805 23 18.5C23 16.0147 20.9853 14 18.5 14C16.0147 14 14 16.0147 14 18.5C14 20.9853 16.0147 23 18.5 23ZM18.5 21C19.8807 21 21 19.8807 21 18.5C21 17.1193 19.8807 16 18.5 16C17.1193 16 16 17.1193 16 18.5C16 19.8807 17.1193 21 18.5 21Z",
-                        fill: "string" == typeof i ? i : i.css,
-                        className: r
-                    }), (0, l.jsx)("path", {
-                        d: "M3 3C2.44772 3 2 3.44772 2 4C2 4.55228 2.44772 5 3 5L21 5C21.5523 5 22 4.55228 22 4C22 3.44772 21.5523 3 21 3L3 3Z",
-                        fill: "string" == typeof i ? i : i.css,
-                        className: r
-                    }), (0, l.jsx)("path", {
-                        d: "M2 8C2 7.44772 2.44772 7 3 7L21 7C21.5523 7 22 7.44772 22 8C22 8.55229 21.5523 9 21 9L3 9C2.44772 9 2 8.55229 2 8Z",
-                        fill: "string" == typeof i ? i : i.css,
-                        className: r
-                    }), (0, l.jsx)("path", {
-                        d: "M3 11C2.44772 11 2 11.4477 2 12C2 12.5523 2.44772 13 3 13H14C14.5523 13 15 12.5523 15 12C15 11.4477 14.5523 11 14 11H3Z",
-                        fill: "string" == typeof i ? i : i.css,
-                        className: r
-                    }), (0, l.jsx)("path", {
-                        d: "M2 16C2 15.4477 2.44772 15 3 15L11 15C11.5523 15 12 15.4477 12 16C12 16.5523 11.5523 17 11 17L3 17C2.44772 17 2 16.5523 2 16Z",
-                        fill: "string" == typeof i ? i : i.css,
-                        className: r
-                    }), (0, l.jsx)("path", {
-                        d: "M3 19C2.44772 19 2 19.4477 2 20C2 20.5523 2.44772 21 3 21L11 21C11.5523 21 12 20.5523 12 20C12 19.4477 11.5523 19 11 19H3Z",
-                        fill: "string" == typeof i ? i : i.css,
-                        className: r
-                    })]
-                })
+            var i = n("938850"),
+                u = n("773364"),
+                r = n("829536"),
+                o = n("397336");
+
+            function a(t, e) {
+                let n = e === u.MediaEngineContextTypes.STREAM ? i.AudioSettingsDefaultVolumes.STREAM : i.AudioSettingsDefaultVolumes.USER;
+                return 1 > Math.abs((0, r.amplitudeToPerceptual)(n) - (0, r.amplitudeToPerceptual)(t)) ? n : t
+            }
+
+            function s(t) {
+                switch (t) {
+                    case u.MediaEngineContextTypes.DEFAULT:
+                        return o.ProtoAudioSettingsContextTypes.USER;
+                    case u.MediaEngineContextTypes.STREAM:
+                        return o.ProtoAudioSettingsContextTypes.STREAM;
+                    default:
+                        return
+                }
             }
         },
-        841563: function(e, C, t) {
+        659558: function(t, e, n) {
             "use strict";
-            t.r(C), t.d(C, {
-                ForumIcon: function() {
-                    return i
+            n.r(e), n.d(e, {
+                getLastUsedVideoBackgroundOption: function() {
+                    return o
                 }
-            });
-            var l = t("37983");
-            t("884691");
-            var n = t("669491"),
-                s = t("75196");
-            let i = e => {
-                let {
-                    width: C = 24,
-                    height: t = 24,
-                    color: i = n.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: r = "",
-                    ...o
-                } = e;
-                return (0, l.jsxs)("svg", {
-                    ...(0, s.default)(o),
-                    width: C,
-                    height: t,
-                    viewBox: "0 0 24 24",
-                    fill: "none",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    children: [(0, l.jsx)("path", {
-                        d: "M18.9134 12.9767C20.3947 13.9703 21.3667 15.6272 21.3667 17.5C21.3667 18.0745 21.2734 18.6447 21.0922 19.188C20.9858 19.5072 21.0049 19.8609 21.1854 20.1448L22.0236 21.4636C22.4467 22.1294 21.9684 23 21.1796 23H15.6833C12.5496 23 10 20.5333 10 17.5C10 14.4668 12.5496 12 15.6833 12C16.8822 12 17.9956 12.361 18.9134 12.9767Z",
-                        fill: "string" == typeof i ? i : i.css,
-                        className: r
-                    }), (0, l.jsx)("path", {
-                        d: "M19.242 10.8555C19.5602 11.0183 19.96 10.84 19.9839 10.4833C19.9946 10.3234 20 10.1623 20 10C20 5.58172 15.9706 2 11 2C6.02946 2 2.00002 5.58172 2.00002 10C2.00002 11.5039 2.4669 12.911 3.27885 14.1128C3.41873 14.3198 3.40113 14.5989 3.22445 14.7756L1.70713 16.2929C1.07716 16.9229 1.52333 18 2.41424 18H7.51632C7.78708 18 8 17.7708 8 17.5C8 13.3007 11.5075 10 15.6833 10C16.9589 10 18.1721 10.308 19.242 10.8555Z",
-                        fill: "string" == typeof i ? i : i.css,
-                        className: r
-                    })]
-                })
+            }), n("884691"), n("446674");
+            var i = n("374363");
+            n("697218");
+            var u = n("719923"),
+                r = n("239448");
+
+            function o(t) {
+                var e;
+                let n = i.default.settings;
+                return function(t, e) {
+                    let n = (0, r.getVideoBackgroundOptionFromProto)(t, e.id);
+                    return (0, r.isCustomBackgroundOption)(n) && !u.default.canUseCustomBackgrounds(e) ? null : "number" != typeof n || (0, r.isDefaultBackgroundOption)(n) ? n : null
+                }(null === (e = n.voiceAndVideo) || void 0 === e ? void 0 : e.videoBackgroundFilterDesktop, t)
             }
         },
-        578478: function(e, C, t) {
+        154867: function(t, e, n) {
             "use strict";
-            t.r(C), t.d(C, {
-                ImageIcon: function() {
-                    return i
+            n.r(e), n.d(e, {
+                fetchVideoFilterAssets: function() {
+                    return _
+                },
+                uploadVideoFilterAsset: function() {
+                    return f
+                },
+                deleteVideoFilterAsset: function() {
+                    return E
+                },
+                saveLastUsedBackgroundOption: function() {
+                    return p
+                },
+                applyMediaFilterSettings: function() {
+                    return A
+                },
+                startApplyMediaFilterSettings: function() {
+                    return S
+                },
+                errorApplyingMediaFilterSettings: function() {
+                    return T
                 }
             });
-            var l = t("37983");
-            t("884691");
-            var n = t("669491"),
-                s = t("75196");
-            let i = e => {
-                let {
-                    width: C = 24,
-                    height: t = 24,
-                    color: i = n.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: r = "",
-                    ...o
-                } = e;
-                return (0, l.jsx)("svg", {
-                    ...(0, s.default)(o),
-                    width: C,
-                    height: t,
-                    viewBox: "0 0 24 24",
-                    fill: "none",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    children: (0, l.jsx)("path", {
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                        d: "M2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5ZM15.35 13.1333L18.85 17.8C19.2208 18.2944 18.868 19 18.25 19H5.81047C5.18159 19 4.83196 18.2726 5.22482 17.7815L7.0787 15.4641C7.67918 14.7135 8.82082 14.7135 9.4213 15.4641L9.92742 16.0968L12.15 13.1333C12.95 12.0667 14.55 12.0667 15.35 13.1333ZM10.2045 5.97731C10.4329 5.06617 9.32431 4.42611 8.64943 5.07947C8.28741 5.42996 7.71259 5.42996 7.35057 5.07947C6.67569 4.42611 5.56708 5.06617 5.79547 5.97731C5.91798 6.46608 5.63057 6.96388 5.14603 7.10216C4.24276 7.35994 4.24276 8.64006 5.14603 8.89784C5.63057 9.03612 5.91798 9.53392 5.79547 10.0227C5.56708 10.9338 6.67569 11.5739 7.35057 10.9205C7.71259 10.57 8.28741 10.57 8.64943 10.9205C9.32431 11.5739 10.4329 10.9338 10.2045 10.0227C10.082 9.53392 10.3694 9.03612 10.854 8.89784C11.7572 8.64005 11.7572 7.35994 10.854 7.10216C10.3694 6.96388 10.082 6.46608 10.2045 5.97731Z",
-                        fill: "string" == typeof i ? i : i.css,
-                        className: r
+            var i = n("872717"),
+                u = n("913144"),
+                r = n("872173"),
+                o = n("42887"),
+                a = n("697218"),
+                s = n("659558"),
+                l = n("239448"),
+                d = n("407756"),
+                c = n("49111");
+            async function _() {
+                let t = await i.default.get(c.Endpoints.VIDEO_FILTER_ASSETS);
+                return u.default.dispatch({
+                    type: "VIDEO_FILTER_ASSETS_FETCH_SUCCESS",
+                    assets: t.body
+                }), t
+            }
+            async function f(t, e, n) {
+                try {
+                    let r = await i.default.post({
+                        url: c.Endpoints.VIDEO_FILTER_ASSETS,
+                        body: {
+                            type: e,
+                            asset: t,
+                            last_used: null == n ? void 0 : n.toISOString()
+                        }
+                    });
+                    return u.default.dispatch({
+                        type: "VIDEO_FILTER_ASSET_UPLOAD_SUCCESS",
+                        videoFilterAsset: r.body
+                    }), r.body
+                } catch (t) {
+                    throw new d.default(t)
+                }
+            }
+            async function E(t) {
+                await i.default.delete(c.Endpoints.VIDEO_FILTER_ASSET(t.id));
+                let e = (0, s.getLastUsedVideoBackgroundOption)(a.default.getCurrentUser());
+                (0, l.isCustomBackgroundOption)(e) && e.id === t.id && p(null), u.default.dispatch({
+                    type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS",
+                    videoFilterAsset: t
+                })
+            }
+            async function p(t) {
+                if (await r.PreloadedUserSettingsActionCreators.updateAsync("voiceAndVideo", e => {
+                        e.videoBackgroundFilterDesktop = (0, l.getVideoBackgroundProtoFromOption)(t)
+                    }, r.UserSettingsDelay.FREQUENT_USER_ACTION), (0, l.isCustomBackgroundOption)(t)) {
+                    let e = await i.default.post(c.Endpoints.VIDEO_FILTER_ASSET_LAST_USED(t.id));
+                    u.default.dispatch({
+                        type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION",
+                        backgroundOption: e.body
                     })
+                } else u.default.dispatch({
+                    type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION",
+                    backgroundOption: t
+                })
+            }
+
+            function A(t) {
+                o.default.isSupported() && u.default.dispatch({
+                    type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS",
+                    settings: t
+                })
+            }
+
+            function S() {
+                o.default.isSupported() && u.default.dispatch({
+                    type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START"
+                })
+            }
+
+            function T() {
+                u.default.dispatch({
+                    type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR"
                 })
             }
         },
-        681187: function(e, C, t) {
+        870879: function(t, e, n) {
             "use strict";
-            t.r(C), t.d(C, {
-                ImageWarningIcon: function() {
-                    return i
+            n.r(e), n.d(e, {
+                default: function() {
+                    return T
+                }
+            }), n("808653");
+            var i = n("446674"),
+                u = n("773364"),
+                r = n("913144"),
+                o = n("374363"),
+                a = n("42887"),
+                s = n("18494"),
+                l = n("697218"),
+                d = n("239448");
+            let c = !1,
+                _ = null,
+                f = !1,
+                E = {};
+
+            function p(t) {
+                var e;
+                let n = l.default.getCurrentUser();
+                if (null == n) return !1;
+                let i = null != t ? t : (0, d.getVideoBackgroundOptionFromProto)(null === (e = o.default.settings.voiceAndVideo) || void 0 === e ? void 0 : e.videoBackgroundFilterDesktop, n.id);
+                return null != s.default.getVoiceChannelId() && a.default.isVideoEnabled() && null != i
+            }
+
+            function A() {
+                _ !== s.default.getVoiceChannelId() && (f = !1), p() && (f = !0), _ = s.default.getVoiceChannelId()
+            }
+            class S extends i.default.Store {
+                initialize() {
+                    this.waitFor(o.default, s.default, a.default), this.syncWith([s.default, a.default], A)
+                }
+                get videoFilterAssets() {
+                    return E
+                }
+                get hasBeenApplied() {
+                    return c
+                }
+                get hasUsedBackgroundInCall() {
+                    return f
+                }
+            }
+            S.displayName = "VideoBackgroundStore";
+            var T = new S(r.default, {
+                VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function(t) {
+                    let {
+                        assets: e
+                    } = t;
+                    E = e.reduce((t, e) => ({
+                        ...t,
+                        [e.id]: e
+                    }), {})
+                },
+                VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: function(t) {
+                    let {
+                        videoFilterAsset: e
+                    } = t;
+                    E = {
+                        ...E,
+                        [e.id]: e
+                    }
+                },
+                VIDEO_FILTER_ASSET_DELETE_SUCCESS: function(t) {
+                    let {
+                        videoFilterAsset: e
+                    } = t;
+                    E = {
+                        ...E
+                    }, delete E[e.id]
+                },
+                VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: function(t) {
+                    let {
+                        backgroundOption: e
+                    } = t;
+                    p(e) && (f = !0)
+                },
+                MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function(t) {
+                    let {
+                        settings: e
+                    } = t;
+                    u.FilterSettingsKey.CAMERA_BACKGROUND_LIVE in e && (c = !0)
+                }
+            })
+        },
+        239448: function(t, e, n) {
+            "use strict";
+            n.r(e), n.d(e, {
+                isCustomBackgroundOption: function() {
+                    return d
+                },
+                isDefaultBackgroundOption: function() {
+                    return c
+                },
+                getEffectAnalyticsType: function() {
+                    return f
+                },
+                getEffectDetailAnalyticsName: function() {
+                    return E
+                },
+                trackBackgroundOptionUpdated: function() {
+                    return p
+                },
+                trackBackgroundOptionAdded: function() {
+                    return A
+                },
+                trackBackgroundOptionDeleted: function() {
+                    return S
+                },
+                getVideoBackgroundProtoFromOption: function() {
+                    return T
+                },
+                getVideoBackgroundOptionFromProto: function() {
+                    return O
                 }
             });
-            var l = t("37983");
-            t("884691");
-            var n = t("669491"),
-                s = t("75196");
-            let i = e => {
-                let {
-                    width: C = 24,
-                    height: t = 24,
-                    color: i = n.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: r = "",
-                    ...o
-                } = e;
-                return (0, l.jsxs)("svg", {
-                    ...(0, s.default)(o),
-                    width: C,
-                    height: t,
-                    viewBox: "0 0 24 24",
-                    fill: "none",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    children: [(0, l.jsx)("path", {
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                        d: "M5 2C3.34315 2 2 3.34315 2 5V19C2 20.6569 3.34315 22 5 22H11.9858C11.988 21.5186 12.1147 21.0177 12.3956 20.5284L13.2729 19H5.81047C5.18159 19 4.83196 18.2726 5.22482 17.7815L7.0787 15.4641C7.67918 14.7135 8.82082 14.7135 9.4213 15.4641L9.92742 16.0968L12.15 13.1333C12.95 12.0667 14.55 12.0667 15.35 13.1333L16.0811 14.1081L16.3547 13.6314C17.5183 11.6043 20.4817 11.6044 21.6453 13.6314L22 14.2493V5C22 3.34315 20.6569 2 19 2H5ZM8.64943 5.07947C9.32431 4.42611 10.4329 5.06617 10.2045 5.97731C10.082 6.46608 10.3694 6.96388 10.854 7.10216C11.7572 7.35994 11.7572 8.64005 10.854 8.89784C10.3694 9.03612 10.082 9.53392 10.2045 10.0227C10.4329 10.9338 9.32431 11.5739 8.64943 10.9205C8.28741 10.57 7.71259 10.57 7.35057 10.9205C6.67569 11.5739 5.56708 10.9338 5.79547 10.0227C5.91798 9.53392 5.63057 9.03612 5.14603 8.89784C4.24276 8.64006 4.24276 7.35994 5.14603 7.10216C5.63057 6.96388 5.91798 6.46608 5.79547 5.97731C5.56708 5.06617 6.67569 4.42611 7.35057 5.07947C7.71259 5.42996 8.28741 5.42996 8.64943 5.07947Z",
-                        fill: "string" == typeof i ? i : i.css,
-                        className: r
-                    }), (0, l.jsx)("path", {
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                        d: "M19.9108 14.6271C19.5159 13.9391 18.4841 13.9391 18.0892 14.6271L14.1301 21.524C13.7491 22.1878 14.2503 23 15.0409 23L22.959 23C23.7497 23 24.2509 22.1878 23.8699 21.5241L19.9108 14.6271ZM19.4457 16.5H18.5543C18.2579 16.5 18.0265 16.7565 18.057 17.0514L18.2654 19.0683C18.2819 19.2279 18.4424 19.3298 18.5993 19.296C18.726 19.2688 18.863 19.25 19 19.25C19.137 19.25 19.274 19.2688 19.4007 19.296C19.5576 19.3298 19.7181 19.2279 19.7346 19.0683L19.943 17.0514C19.9735 16.7565 19.7421 16.5 19.4457 16.5ZM20 21C20 21.5523 19.5523 22 19 22C18.4477 22 18 21.5523 18 21C18 20.4477 18.4477 20 19 20C19.5523 20 20 20.4477 20 21Z",
-                        fill: "string" == typeof i ? i : i.css,
-                        className: r
-                    })]
+            var i = n("716241"),
+                u = n("42203"),
+                r = n("945956"),
+                o = n("599110"),
+                a = n("315102"),
+                s = n("917219"),
+                l = n("49111");
+
+            function d(t) {
+                return null != t && "object" == typeof t && "id" in t && t.type === s.VideoFilterType.BACKGROUND
+            }
+
+            function c(t) {
+                return "number" == typeof t && t in s.DefaultVideoBackground
+            }
+
+            function _(t) {
+                return c(t) ? s.ANIMATED_DEFAULT_VIDEO_BACKGROUNDS.includes(t) : !!d(t) && ((0, a.isAnimatedIconHash)(t.asset) || (0, a.isVideoAssetHash)(t.asset))
+            }
+
+            function f(t) {
+                return null != t ? "Video Background" : "None"
+            }
+
+            function E(t) {
+                if (null == t) return "None";
+                if (d(t)) return "Custom";
+                if ("blur" === t) return "Blur";
+                else return "Preset - ".concat(function(t) {
+                    switch (t) {
+                        case s.DefaultVideoBackground.OPTION_1:
+                            return "Cybercity";
+                        case s.DefaultVideoBackground.OPTION_2:
+                            return "Discord the Movie";
+                        case s.DefaultVideoBackground.OPTION_3:
+                            return "Wumpus Vacation";
+                        case s.DefaultVideoBackground.OPTION_4:
+                            return "Vaporwave";
+                        case s.DefaultVideoBackground.OPTION_7:
+                            return "Capernite Day";
+                        case s.DefaultVideoBackground.OPTION_8:
+                            return "Capernite Night";
+                        case s.DefaultVideoBackground.OPTION_9:
+                            return "Hacker Den";
+                        case s.DefaultVideoBackground.OPTION_10:
+                            return "Wumpice"
+                    }
+                }(t))
+            }
+
+            function p(t, e, n) {
+                let a = r.default.getGuildId(),
+                    s = r.default.getChannelId(),
+                    d = u.default.getChannel(s),
+                    c = (0, i.getVoiceStateMetadata)(a, s, !0);
+                o.default.track(l.AnalyticEvents.VIDEO_EFFECT_UPDATED, {
+                    location: e,
+                    effect_type: f(t),
+                    effect_detail: E(t),
+                    effect_state: n,
+                    channel_id: s,
+                    channel_type: null == d ? void 0 : d.type,
+                    guild_id: a,
+                    voice_state_count: c.voice_state_count,
+                    video_stream_count: c.video_stream_count,
+                    media_session_id: r.default.getMediaSessionId(),
+                    rtc_connection_id: r.default.getRTCConnectionId(),
+                    is_animated: _(t)
                 })
             }
+
+            function A(t, e, n) {
+                o.default.track(l.AnalyticEvents.VIDEO_BACKGROUND_ADDED, {
+                    is_animated: _(t),
+                    is_video: e,
+                    is_from_tenor: n
+                })
+            }
+
+            function S(t) {
+                o.default.track(l.AnalyticEvents.VIDEO_BACKGROUND_DELETED, {
+                    is_animated: _(t)
+                })
+            }
+
+            function T(t) {
+                if (null == t) return {
+                    oneofKind: void 0
+                };
+                if (d(t)) return {
+                    oneofKind: "customAsset",
+                    customAsset: {
+                        id: t.id,
+                        assetHash: t.asset
+                    }
+                };
+                if ("blur" === t) return {
+                    oneofKind: "blur",
+                    blur: {
+                        useBlur: !0
+                    }
+                };
+                else return {
+                    oneofKind: "presetOption",
+                    presetOption: t
+                }
+            }
+
+            function O(t, e) {
+                if (null == t || void 0 === t.oneofKind) return null;
+                switch (t.oneofKind) {
+                    case "customAsset":
+                        return {
+                            type: s.VideoFilterType.BACKGROUND, id: t.customAsset.id, user_id: e, asset: t.customAsset.assetHash
+                        };
+                    case "blur":
+                        return t.blur.useBlur ? "blur" : null;
+                    case "presetOption":
+                        return t.presetOption
+                }
+            }
         },
-        971785: function(e, C, t) {
+        407756: function(t, e, n) {
             "use strict";
-            t.r(C), t.d(C, {
-                SignPostIcon: function() {
-                    return i
+            n.r(e), n.d(e, {
+                default: function() {
+                    return s
                 }
             });
-            var l = t("37983");
-            t("884691");
-            var n = t("669491"),
-                s = t("75196");
-            let i = e => {
-                let {
-                    width: C = 24,
-                    height: t = 24,
-                    color: i = n.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: r = "",
-                    ...o
-                } = e;
-                return (0, l.jsx)("svg", {
-                    ...(0, s.default)(o),
-                    width: C,
-                    height: t,
-                    viewBox: "0 0 24 24",
-                    fill: "none",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    children: (0, l.jsx)("path", {
-                        d: "M11.0002 3C11.0002 2.44772 11.4479 2 12.0002 2C12.5525 2 13.0002 2.44772 13.0002 3V5H18.7502C18.9076 5 19.0558 5.0741 19.1502 5.2L21.7752 8.7C21.9086 8.87778 21.9086 9.12222 21.7752 9.3L19.1502 12.8C19.0558 12.9259 18.9076 13 18.7502 13H13.0002V18H15.0002C16.1048 18 17.0002 18.8954 17.0002 20V21C17.0002 21.5523 16.5525 22 16.0002 22H8.00022C7.44794 22 7.00022 21.5523 7.00022 21V20C7.00022 18.8954 7.89565 18 9.00022 18H11.0002V13H2.80924C2.43755 13 2.1958 12.6088 2.36203 12.2764L3.88842 9.22361C3.9588 9.08284 3.9588 8.91716 3.88842 8.77639L2.36203 5.72361C2.1958 5.39116 2.43755 5 2.80924 5H11.0002V3Z",
-                        fill: "string" == typeof i ? i : i.css,
-                        className: r
+            var i, u, r = n("872717"),
+                o = n("782340");
+            (i || (i = {})).ASSET_SIZE = "BINARY_TYPE_MAX_SIZE", (u || (u = {})).ASSET = "asset";
+            class a extends r.default.V8APIError {
+                constructor(t, e) {
+                    var n;
+                    super(t, e, o.default.Messages.VIDEO_BACKGROUND_ERROR_UPLOAD);
+                    let i = this.getFieldErrors("asset");
+                    null != i && (null === (n = i[0]) || void 0 === n ? void 0 : n.code) === "BINARY_TYPE_MAX_SIZE" && (this.message = o.default.Messages.VIDEO_BACKGROUND_ERROR_UPLOAD_FILE_SIZE)
+                }
+            }
+            var s = a
+        },
+        439141: function(t, e, n) {
+            "use strict";
+            n.r(e), n.d(e, {
+                applyBackgroundOptionLive: function() {
+                    return O
+                },
+                applyBackgroundOptionPreview: function() {
+                    return I
+                },
+                applyInitialVideoBackgroundOption: function() {
+                    return g
+                }
+            }), n("332822"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341");
+            var i = n("627445"),
+                u = n.n(i),
+                r = n("773364"),
+                o = n("697218"),
+                a = n("315102"),
+                s = n("659558"),
+                l = n("154867"),
+                d = n("870879"),
+                c = n("239448"),
+                _ = n("977801"),
+                f = n("512244"),
+                E = n("917219"),
+                p = n("49111");
+            async function A(t) {
+                let e = await fetch(t),
+                    n = await e.blob();
+                return new Uint8ClampedArray(await n.arrayBuffer())
+            }
+
+            function S(t, e, n, i, u) {
+                (0, l.applyMediaFilterSettings)({
+                    [t]: {
+                        graph: n,
+                        target: e,
+                        image: i,
+                        blob: u
+                    }
+                })
+            }
+            async function T(t, e, n) {
+                var i, o;
+                let s, d = !1;
+                if (null == n) return S(t, e, r.FilterSettingsGraph.NONE);
+                if (n === E.BLUR_BACKGROUND_OPTION) return S(t, e, r.FilterSettingsGraph.BACKGROUND_BLUR);
+                if ("string" == typeof n || "number" == typeof n) {
+                    ;
+                    let t = (0, _.default)()[n];
+                    d = null !== (i = t.isVideo) && void 0 !== i && i, s = t.source
+                } else {
+                    let t = n.asset;
+                    d = (0, a.isAnimatedIconHash)(t) || (0, a.isVideoAssetHash)(t), s = (0, a.getVideoFilterAssetURL)({
+                        userId: n.user_id,
+                        assetId: n.id,
+                        assetHash: t,
+                        size: E.BACKGROUND_REPLACEMENT_SIZE.width
                     })
-                })
+                }
+                if (null != s) try {
+                    ;
+                    let n = d ? void 0 : await (o = s, new Promise((t, e) => {
+                            let n = new Image;
+                            n.crossOrigin = "anonymous", n.onload = () => {
+                                let e = document.createElement("canvas");
+                                e.width = E.BACKGROUND_REPLACEMENT_SIZE.width, e.height = E.BACKGROUND_REPLACEMENT_SIZE.height;
+                                let i = e.getContext("2d");
+                                u(null != i, "Canvas context is missing");
+                                let r = n.height / n.width,
+                                    o = E.BACKGROUND_REPLACEMENT_SIZE.height,
+                                    a = E.BACKGROUND_REPLACEMENT_SIZE.height / r,
+                                    s = (e.width - a) / 2,
+                                    l = (e.height - o) / 2;
+                                i.drawImage(n, s, l, a, o);
+                                let d = i.getImageData(0, 0, e.width, e.height);
+                                t({
+                                    data: d.data,
+                                    width: d.width,
+                                    height: d.height,
+                                    pixelFormat: "rgba"
+                                })
+                            }, n.onerror = t => e(t), n.src = o
+                        })),
+                        i = d ? await A(s) : void 0;
+                    S(t, e, r.FilterSettingsGraph.BACKGROUND_REPLACEMENT, n, i)
+                } catch (t) {
+                    (0, l.errorApplyingMediaFilterSettings)()
+                }
+            }
+            async function O(t, e) {
+                let {
+                    track: n = !0,
+                    location: i
+                } = e;
+                await T(r.FilterSettingsKey.CAMERA_BACKGROUND_LIVE, {
+                    type: r.FilterTargetType.INPUT_DEVICE
+                }, t), n && (0, c.trackBackgroundOptionUpdated)(t, i, "Enabled")
+            }
+            async function I(t, e, n) {
+                let {
+                    track: i = !0,
+                    location: u
+                } = n;
+                (0, l.startApplyMediaFilterSettings)(), await T(r.FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW, {
+                    type: r.FilterTargetType.STREAM,
+                    streamId: e
+                }, t), i && (0, c.trackBackgroundOptionUpdated)(t, u, "Preview")
+            }
+
+            function g() {
+                let t = o.default.getCurrentUser();
+                if (null == t) return;
+                let e = (0, s.getLastUsedVideoBackgroundOption)(t);
+                (0, f.default)() && !d.default.hasBeenApplied && null != e && O(e, {
+                    track: !1
+                }).catch(p.NOOP)
             }
         },
-        346800: function(e, C, t) {
+        977801: function(t, e, n) {
             "use strict";
-            t.r(C), t.d(C, {
-                TextIcon: function() {
-                    return i
+            n.r(e), n.d(e, {
+                default: function() {
+                    return E
                 }
             });
-            var l = t("37983");
-            t("884691");
-            var n = t("669491"),
-                s = t("75196");
-            let i = e => {
-                let {
-                    width: C = 24,
-                    height: t = 24,
-                    color: i = n.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: r = "",
-                    ...o
-                } = e;
-                return (0, l.jsx)("svg", {
-                    ...(0, s.default)(o),
-                    width: C,
-                    height: t,
-                    viewBox: "0 0 24 24",
-                    fill: "none",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    children: (0, l.jsx)("path", {
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                        d: "M10.9864 3.16437C11.0772 2.6196 10.7092 2.10437 10.1644 2.01358C9.61963 1.92278 9.1044 2.2908 9.01361 2.83557L8.15288 7.99991H4C3.44772 7.99991 3 8.44763 3 8.99991C3 9.5522 3.44772 9.99991 4 9.99991H7.81955L7.15288 13.9999H3C2.44772 13.9999 2 14.4476 2 14.9999C2 15.5522 2.44772 15.9999 3 15.9999H6.81955L6.01361 20.8356C5.92281 21.3803 6.29083 21.8956 6.8356 21.9864C7.38037 22.0772 7.8956 21.7091 7.98639 21.1644L8.84714 15.9999H13.8195L13.0136 20.8356C12.9228 21.3803 13.2908 21.8956 13.8356 21.9864C14.3804 22.0772 14.8956 21.7091 14.9864 21.1644L15.8471 15.9999H20C20.5523 15.9999 21 15.5522 21 14.9999C21 14.4476 20.5523 13.9999 20 13.9999H16.1805L16.8471 9.99991H21C21.5523 9.99991 22 9.5522 22 8.99991C22 8.44763 21.5523 7.99991 21 7.99991H17.1805L17.9864 3.16437C18.0772 2.6196 17.7092 2.10437 17.1644 2.01358C16.6196 1.92278 16.1044 2.2908 16.0136 2.83557L15.1529 7.99991H10.1805L10.9864 3.16437ZM14.1529 13.9999L14.8195 9.99991H9.84714L9.18047 13.9999H14.1529Z",
-                        fill: "string" == typeof i ? i : i.css,
-                        className: r
-                    })
+            var i = n("917219"),
+                u = n("533613"),
+                r = n("782340"),
+                o = n("27562"),
+                a = n("851703"),
+                s = n("902577"),
+                l = n("351288"),
+                d = n("595726"),
+                c = n("462641"),
+                _ = n("95937"),
+                f = n("929461"),
+                E = () => ({
+                    [i.DefaultVideoBackground.OPTION_1]: {
+                        id: i.DefaultVideoBackground.OPTION_1,
+                        source: s,
+                        name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_1
+                    },
+                    [i.DefaultVideoBackground.OPTION_2]: {
+                        id: i.DefaultVideoBackground.OPTION_2,
+                        source: d,
+                        name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_2
+                    },
+                    [i.DefaultVideoBackground.OPTION_3]: {
+                        id: i.DefaultVideoBackground.OPTION_3,
+                        source: c,
+                        name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_3
+                    },
+                    [i.DefaultVideoBackground.OPTION_4]: {
+                        id: i.DefaultVideoBackground.OPTION_4,
+                        source: _,
+                        name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_4
+                    },
+                    [i.DefaultVideoBackground.OPTION_7]: {
+                        id: i.DefaultVideoBackground.OPTION_7,
+                        source: o,
+                        name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_7,
+                        isVideo: !0,
+                        hotspotLocation: u.HotspotLocations.ANIMATED_VIDEO_BG_CAPERNITE_DAY_NEW
+                    },
+                    [i.DefaultVideoBackground.OPTION_8]: {
+                        id: i.DefaultVideoBackground.OPTION_8,
+                        source: a,
+                        name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_8,
+                        isVideo: !0,
+                        hotspotLocation: u.HotspotLocations.ANIMATED_VIDEO_BG_CAPERNITE_NIGHT_NEW
+                    },
+                    [i.DefaultVideoBackground.OPTION_9]: {
+                        id: i.DefaultVideoBackground.OPTION_9,
+                        source: l,
+                        name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_9,
+                        isVideo: !0,
+                        hotspotLocation: u.HotspotLocations.ANIMATED_VIDEO_BG_HACKER_DEN_NEW
+                    },
+                    [i.DefaultVideoBackground.OPTION_10]: {
+                        id: i.DefaultVideoBackground.OPTION_10,
+                        source: f,
+                        name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_10,
+                        isVideo: !0,
+                        hotspotLocation: u.HotspotLocations.ANIMATED_VIDEO_BG_WUMPICE_NEW
+                    }
                 })
-            }
         },
-        446685: function(e, C, t) {
+        512244: function(t, e, n) {
             "use strict";
-            t.r(C), t.d(C, {
+            n.r(e), n.d(e, {
                 default: function() {
                     return r
                 }
             });
-            var l = t("37983");
-            t("884691");
-            var n = t("469563"),
-                s = t("713876"),
-                i = t("75196"),
-                r = (0, n.replaceIcon)(function(e) {
-                    let {
-                        width: C = 24,
-                        height: t = 24,
-                        color: n = "currentColor",
-                        ...s
-                    } = e;
-                    return (0, l.jsxs)("svg", {
-                        ...(0, i.default)(s),
-                        width: C,
-                        height: t,
-                        viewBox: "0 0 20 20",
-                        fill: "none",
-                        xmlns: "http://www.w3.org/2000/svg",
-                        children: [(0, l.jsx)("path", {
-                            d: "M5.00328 17.5C4.69218 17.5 4.4566 17.2189 4.51097 16.9126L4.99838 14.1667H2.26014C1.94953 14.1667 1.71409 13.8864 1.76763 13.5805L1.8843 12.9138C1.92617 12.6746 2.13392 12.5 2.37681 12.5H5.29005L6.17338 7.5H3.43514C3.12453 7.5 2.88909 7.21977 2.94263 6.91381L3.0593 6.24714C3.10117 6.00789 3.30892 5.83333 3.55181 5.83333H6.46505L6.98347 2.91262C7.02584 2.67391 7.23335 2.5 7.47578 2.5H8.12681C8.43792 2.5 8.67349 2.78107 8.61912 3.08738L8.13171 5.83333H13.1317L13.6501 2.91262C13.6925 2.67391 13.9 2.5 14.1424 2.5H14.7935C15.1046 2.5 15.3402 2.78107 15.2858 3.08738L14.7984 5.83333H17.5366C17.8472 5.83333 18.0827 6.11356 18.0291 6.41952L17.9125 7.08619C17.8706 7.32544 17.6628 7.5 17.4199 7.5H14.5067L14.2417 9H12.5754L12.8404 7.5H7.84041L6.95708 12.5H8.99835V14.1667H6.66505L6.14662 17.0874C6.10425 17.3261 5.89675 17.5 5.65431 17.5H5.00328Z",
-                            fill: n
-                        }), (0, l.jsx)("path", {
-                            fillRule: "evenodd",
-                            clipRule: "evenodd",
-                            d: "M10.4 14C10.4 12.0118 12.0118 10.4 14 10.4C15.9883 10.4 17.6 12.0118 17.6 14C17.6 14.7775 17.3536 15.4975 16.9345 16.0859L18.9243 18.0758C19.1586 18.3101 19.1586 18.69 18.9243 18.9243C18.69 19.1586 18.3101 19.1586 18.0758 18.9243L16.0859 16.9345C15.4975 17.3536 14.7775 17.6 14 17.6C12.0118 17.6 10.4 15.9883 10.4 14ZM14 11.6C12.6745 11.6 11.6 12.6745 11.6 14C11.6 15.3255 12.6745 16.4 14 16.4C15.3255 16.4 16.4 15.3255 16.4 14C16.4 12.6745 15.3255 11.6 14 11.6Z",
-                            fill: n
-                        })]
-                    })
-                }, s.ChannelListMagnifyingGlassIcon, void 0, {
-                    size: 24
-                })
+            var i = n("42887"),
+                u = n("353927");
+
+            function r() {
+                var t;
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : i.default;
+                return (t = e).supports(u.Features.MEDIAPIPE) && Object.values(t.getVideoDevices()).length > 0
+            }
         },
-        593195: function(e, C, t) {
+        12307: function(t, e, n) {
             "use strict";
-            t.r(C), t.d(C, {
-                default: function() {
-                    return r
+            n.r(e), n.d(e, {
+                isPremiumResolution: function() {
+                    return _
+                },
+                isPremiumFPS: function() {
+                    return f
+                },
+                getResolutionText: function() {
+                    return p
+                },
+                getFPSText: function() {
+                    return A
+                },
+                getMaxQuality: function() {
+                    return S
+                },
+                trackStreamSettingsUpdate: function() {
+                    return T
                 }
             });
-            var l = t("37983");
-            t("884691");
-            var n = t("469563"),
-                s = t("346800"),
-                i = t("75196"),
-                r = (0, n.replaceIcon)(function(e) {
-                    let {
-                        width: C = 24,
-                        height: t = 24,
-                        color: n = "currentColor",
-                        className: s,
-                        foreground: r,
-                        ...o
-                    } = e;
-                    return (0, l.jsx)("svg", {
-                        width: C,
-                        height: t,
-                        viewBox: "0 0 24 24",
-                        className: s,
-                        ...(0, i.default)(o),
-                        children: (0, l.jsx)("path", {
-                            className: r,
-                            fill: n,
-                            fillRule: "evenodd",
-                            clipRule: "evenodd",
-                            d: "M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z"
-                        })
-                    })
-                }, s.TextIcon, void 0, {
-                    size: 24
+            var i = n("305961"),
+                u = n("945956"),
+                r = n("697218"),
+                o = n("599110"),
+                a = n("49111"),
+                s = n("686298"),
+                l = n("646718"),
+                d = n("353927"),
+                c = n("782340");
+
+            function _(t) {
+                if (null == t) return;
+                let e = t.maxResolution.type === d.ResolutionTypes.SOURCE ? s.ApplicationStreamResolutions.RESOLUTION_SOURCE : t.maxResolution.height,
+                    n = (0, s.getApplicationResolution)(e),
+                    i = (0, s.getApplicationFramerate)(t.maxFrameRate);
+                return i !== s.ApplicationStreamFPS.FPS_5 && null == s.ApplicationStreamSettingRequirements.find(t => t.resolution === n && t.fps !== s.ApplicationStreamFPS.FPS_5 && !E(t))
+            }
+
+            function f(t) {
+                if (null == t) return;
+                let e = (0, s.getApplicationFramerate)(t.maxFrameRate);
+                return null == s.ApplicationStreamSettingRequirements.find(t => t.fps === e && !E(t))
+            }
+
+            function E(t) {
+                return null != t.quality || null != t.guildPremiumTier
+            }
+
+            function p(t) {
+                return t.type === d.ResolutionTypes.SOURCE ? c.default.Messages.SCREENSHARE_SOURCE : c.default.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
+                    resolution: t.height
                 })
-        },
-        991497: function(e, C, t) {
-            "use strict";
-            t.r(C), t.d(C, {
-                default: function() {
-                    return r
+            }
+
+            function A(t) {
+                return c.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
+                    fps: t
+                })
+            }
+
+            function S(t) {
+                return null == t.maxResolution || null == t.maxFrameRate ? null : {
+                    maxFrameRate: t.maxFrameRate,
+                    maxResolution: t.maxResolution
                 }
-            });
-            var l = t("37983");
-            t("884691");
-            var n = t("469563"),
-                s = t("841563"),
-                i = t("75196"),
-                r = (0, n.replaceIcon)(function(e) {
-                    let {
-                        width: C = 24,
-                        height: t = 24,
-                        color: n = "currentColor",
-                        foreground: s,
-                        ...r
-                    } = e;
-                    return (0, l.jsx)("svg", {
-                        ...(0, i.default)(r),
-                        width: C,
-                        height: t,
-                        viewBox: "0 0 20 20",
-                        fill: "none",
-                        children: (0, l.jsx)("path", {
-                            className: s,
-                            fill: n,
-                            fillRule: "evenodd",
-                            clipRule: "evenodd",
-                            d: "M6.56929 14.6869H2.34375C1.97079 14.6869 1.61311 14.5387 1.34938 14.275C1.08566 14.0113 0.9375 13.6536 0.9375 13.2806V8.12437C0.9375 6.38389 1.6289 4.7147 2.85961 3.484C4.09032 2.25329 5.75951 1.56189 7.49999 1.56189C9.24047 1.56189 10.9097 2.25329 12.1404 3.484C12.6953 4.03895 13.1406 4.68307 13.4623 5.38267C14.9101 5.5973 16.2513 6.29124 17.2655 7.36251C18.4194 8.58133 19.0625 10.1959 19.0625 11.8744V17.0306C19.0625 17.4036 18.9144 17.7613 18.6506 18.025C18.3869 18.2887 18.0292 18.4369 17.6563 18.4369H12.5C11.1428 18.4369 9.81899 18.0162 8.71072 17.2328C7.7871 16.58 7.05103 15.7019 6.56929 14.6869ZM4.18544 4.80982C5.06451 3.93075 6.25679 3.43689 7.49999 3.43689C8.74319 3.43689 9.93549 3.93075 10.8146 4.80983C11.6936 5.6889 12.1875 6.88119 12.1875 8.12439C12.1875 9.36759 11.6936 10.5599 10.8146 11.439C9.93549 12.318 8.74321 12.8119 7.50001 12.8119H7.20268C7.19767 12.8118 7.19266 12.8118 7.18764 12.8119H2.8125V8.12438C2.8125 6.88118 3.30636 5.6889 4.18544 4.80982ZM8.672 14.5814C8.97763 15.0132 9.35591 15.3928 9.79299 15.7017C10.5847 16.2614 11.5305 16.5619 12.5 16.5619H17.1875V11.8744C17.1875 10.6755 16.7281 9.52219 15.9039 8.65159C15.3804 8.09865 14.735 7.68644 14.027 7.44246C14.0506 7.66798 14.0625 7.89557 14.0625 8.12439C14.0625 9.86487 13.3711 11.5341 12.1404 12.7648C11.1896 13.7156 9.97697 14.3445 8.672 14.5814Z"
-                        })
-                    })
-                }, s.ForumIcon, void 0, {
-                    size: 24
+            }
+
+            function T(t, e, n) {
+                var d, c, _;
+                let f = (d = t, c = e, _ = n, s.ApplicationStreamSettingRequirements.find(t => (null == t.preset || t.preset === d) && t.resolution === c && t.fps === _)),
+                    E = r.default.getCurrentUser(),
+                    p = u.default.getGuildId(),
+                    A = null != p ? i.default.getGuild(p) : null;
+                o.default.track(a.AnalyticEvents.STREAM_SETTINGS_UPDATE, {
+                    user_premium_tier: null == E ? void 0 : E.premiumType,
+                    guild_premium_tier: null == A ? void 0 : A.premiumTier,
+                    stream_quality_user_premium_tier: (null == f ? void 0 : f.quality) != null ? l.StreamQualitiesToPremiumType[f.quality] : null,
+                    stream_quality_guild_premium_tier: null == f ? void 0 : f.guildPremiumTier,
+                    stream_quality_preset: t,
+                    stream_quality_resolution: e,
+                    stream_quality_frame_rate: n
                 })
+            }
         },
-        660074: function(e, C, t) {
+        938850: function(t, e, n) {
             "use strict";
-            t.r(C), t.d(C, {
-                default: function() {
-                    return r
+            var i, u;
+            n.r(e), n.d(e, {
+                AudioSettingsDefaultVolumes: function() {
+                    return i
                 }
-            });
-            var l = t("37983");
-            t("884691");
-            var n = t("469563"),
-                s = t("733154"),
-                i = t("75196"),
-                r = (0, n.replaceIcon)(function(e) {
-                    let {
-                        width: C = 24,
-                        height: t = 24,
-                        color: n = "currentColor",
-                        strokeWidth: s = "2.5",
-                        foreground: r,
-                        ...o
-                    } = e;
-                    return (0, l.jsx)("svg", {
-                        ...(0, i.default)(o),
-                        width: C,
-                        height: t,
-                        viewBox: "0 0 24 24",
-                        fill: "none",
-                        children: (0, l.jsx)("path", {
-                            className: r,
-                            stroke: n,
-                            strokeWidth: s,
-                            strokeLinecap: "round",
-                            strokeLinejoin: "round",
-                            d: "M4.25892 16.5936C3.14073 14.7086 2.74913 12.4802 3.15765 10.3269C3.56618 8.17362 4.74672 6.24353 6.47761 4.89906C8.2085 3.55459 10.3707 2.88823 12.5581 3.02511C14.7455 3.16199 16.8077 4.0927 18.3575 5.64247C19.9073 7.19223 20.838 9.25445 20.9749 11.4419C21.1118 13.6293 20.4454 15.7915 19.101 17.5224C17.7565 19.2532 15.8264 20.4338 13.6731 20.8423C11.5198 21.2509 9.29146 20.8593 7.40646 19.7411L7.40648 19.741L4.29805 20.6291C4.16944 20.6659 4.03335 20.6676 3.90387 20.634C3.7744 20.6005 3.65625 20.5329 3.56167 20.4383C3.4671 20.3437 3.39953 20.2256 3.36598 20.0961C3.33243 19.9666 3.33412 19.8306 3.37086 19.7019L4.25898 16.5935L4.25892 16.5936Z"
-                        })
-                    })
-                }, s.ChatIcon, void 0, {
-                    size: 24
-                })
-        },
-        990745: function(e, C, t) {
-            "use strict";
-            t.r(C), t.d(C, {
-                default: function() {
-                    return r
-                }
-            });
-            var l = t("37983");
-            t("884691");
-            var n = t("469563"),
-                s = t("578478"),
-                i = t("75196"),
-                r = (0, n.replaceIcon)(function(e) {
-                    let {
-                        width: C = 24,
-                        height: t = 24,
-                        color: n = "currentColor",
-                        foreground: s,
-                        ...r
-                    } = e;
-                    return (0, l.jsx)("svg", {
-                        ...(0, i.default)(r),
-                        width: C,
-                        height: t,
-                        viewBox: "0 0 20 20",
-                        fill: "none",
-                        children: (0, l.jsx)("path", {
-                            transform: "translate(2, 1.5)",
-                            fillRule: "evenodd",
-                            clipRule: "evenodd",
-                            d: "M3.2 0C1.43269 0 0 1.43269 0 3.2V12.8C0 14.5673 1.43269 16 3.2 16H12.8C14.5673 16 16 14.5673 16 12.8V3.2C16 1.43269 14.5673 0 12.8 0H3.2ZM6.4 4.8C6.4 3.91616 5.68256 3.2 4.8 3.2C3.91552 3.2 3.2 3.91616 3.2 4.8C3.2 5.68448 3.91552 6.4 4.8 6.4C5.68256 6.4 6.4 5.68448 6.4 4.8ZM5.6 9.6L3.2 12.8H12.8L10.4 7.2L7.2 11.2L5.6 9.6Z",
-                            className: s,
-                            fill: n
-                        })
-                    })
-                }, s.ImageIcon, void 0, {
-                    size: 24
-                })
-        },
-        620193: function(e, C, t) {
-            "use strict";
-            t.r(C), t.d(C, {
-                default: function() {
-                    return r
-                }
-            });
-            var l = t("37983");
-            t("884691");
-            var n = t("469563"),
-                s = t("971785"),
-                i = t("75196"),
-                r = (0, n.replaceIcon)(function(e) {
-                    let {
-                        width: C = 24,
-                        height: t = 24,
-                        color: n = "currentColor",
-                        foreground: s,
-                        ...r
-                    } = e;
-                    return (0, l.jsxs)("svg", {
-                        ...(0, i.default)(r),
-                        width: C,
-                        height: t,
-                        viewBox: "0 0 16 16",
-                        fill: "none",
-                        children: [(0, l.jsx)("path", {
-                            className: s,
-                            fillRule: "evenodd",
-                            clipRule: "evenodd",
-                            d: "M7 15H9V8H12.5L15 5.5L12.5 3H9V1H7V3H1L3.5 5.5L1 8H7V15Z",
-                            fill: n
-                        }), (0, l.jsx)("path", {
-                            className: s,
-                            d: "M5 14C5 12.8954 5.89543 12 7 12H9C10.1046 12 11 12.8954 11 14V15H5V14Z",
-                            fill: n
-                        })]
-                    })
-                }, s.SignPostIcon, void 0, {
-                    size: 24
-                })
+            }), (u = i || (i = {}))[u.USER = 100] = "USER", u[u.STREAM = 18] = "STREAM"
         }
     }
 ]);

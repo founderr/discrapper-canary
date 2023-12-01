@@ -1,174 +1,271 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["21251"], {
-        20606: function(r, a, _) {
+    ["41831"], {
+        400033: function(e, C, L) {
             "use strict";
-            _.r(a), _.d(a, {
-                default: function() {
-                    return e
+            L.r(C), L.d(C, {
+                StaffBadgeIcon: function() {
+                    return r
                 }
             });
-            var e = _("171210").default
+            var t = L("37983");
+            L("884691");
+            var s = L("669491"),
+                l = L("75196");
+            let r = e => {
+                let {
+                    width: C = 24,
+                    height: L = 24,
+                    color: r = s.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: d = "",
+                    ...a
+                } = e;
+                return (0, t.jsxs)("svg", {
+                    ...(0, l.default)(a),
+                    width: C,
+                    height: L,
+                    viewBox: "0 0 24 24",
+                    fill: "none",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    children: [(0, t.jsx)("path", {
+                        d: "M2 20.5858V19.4142C2 19.149 2.10536 18.8947 2.29289 18.7071L4.70711 16.2929C4.89464 16.1054 5.149 16 5.41421 16H6L15 7.00001L14.1451 6.14515C14.0494 6.04939 13.9741 5.93518 13.9238 5.80944L12.4333 2.08324C12.27 1.67508 12.6751 1.27004 13.0832 1.4333L16.8094 2.92378C16.9352 2.97408 17.0494 3.04939 17.1451 3.14515L17.7929 3.79289C18.1834 3.40237 18.8166 3.40237 19.2071 3.79289L20.2071 4.79289C20.5976 5.18342 20.5976 5.81658 20.2071 6.20711L21.7929 7.79291C22.1834 8.18343 22.1834 8.8166 21.7929 9.20712L20.2071 10.7929C19.8166 11.1834 19.1834 11.1834 18.7929 10.7929L17 9.00001L8 18V18.5858C8 18.851 7.89464 19.1054 7.70711 19.2929L5.29289 21.7071C5.10536 21.8947 4.851 22 4.58579 22H3.41421C3.149 22 2.89464 21.8947 2.70711 21.7071L2.29289 21.2929C2.10536 21.1054 2 20.851 2 20.5858Z",
+                        fill: "string" == typeof r ? r : r.css,
+                        className: d
+                    }), (0, t.jsx)("path", {
+                        d: "M8.23223 10.2322C8.42749 10.4275 8.74408 10.4275 8.93934 10.2322L10.2322 8.93935C10.4275 8.74409 10.4275 8.42751 10.2322 8.23225L6.49999 4.50001L6.79288 4.20711C7.18341 3.81659 7.18341 3.18342 6.79288 2.7929L6.29288 2.2929C6.10535 2.10536 5.84843 2.0024 5.59542 2.08194C5.16917 2.21595 4.43086 2.56914 3.49999 3.50001C2.56912 4.43087 2.21593 5.16918 2.08192 5.59544C2.00238 5.84844 2.10535 6.10536 2.29288 6.2929L2.79288 6.7929C3.18341 7.18342 3.81657 7.18342 4.2071 6.7929L4.49999 6.50001L8.23223 10.2322Z",
+                        fill: "string" == typeof r ? r : r.css,
+                        className: d
+                    }), (0, t.jsx)("path", {
+                        d: "M13.7678 15.0607C13.5725 15.2559 13.5725 15.5725 13.7678 15.7678L15.5 17.5L16.9367 19.8944C16.9787 19.9646 17.0292 20.0292 17.087 20.0871L18.8232 21.8232C18.9208 21.9209 19.0791 21.9209 19.1768 21.8232L21.8232 19.1768C21.9208 19.0792 21.9208 18.9209 21.8232 18.8232L20.087 17.0871C20.0292 17.0292 19.9645 16.9787 19.8944 16.9367L17.5 15.5L15.7678 13.7678C15.5725 13.5725 15.2559 13.5725 15.0607 13.7678L13.7678 15.0607Z",
+                        fill: "string" == typeof r ? r : r.css,
+                        className: d
+                    })]
+                })
+            }
         },
-        956089: function(r, a, _) {
+        580357: function(e, C, L) {
             "use strict";
-            _.r(a), _.d(a, {
-                BadgeShapes: function() {
-                    return T
-                },
-                getBadgeWidthForValue: function() {
-                    return o
-                },
-                getBadgeCountString: function() {
-                    return O
-                },
-                NumberBadge: function() {
-                    return N
-                },
-                TextBadge: function() {
-                    return A
-                },
-                PremiumBadge: function() {
-                    return d
-                },
-                IconBadge: function() {
-                    return i
-                },
-                CircleBadge: function() {
-                    return D
+            L.r(C), L.d(C, {
+                default: function() {
+                    return x
                 }
-            });
-            var e = _("37983");
-            _("884691");
-            var E = _("414456"),
-                t = _.n(E);
-            _("77078");
-            var R = _("20606");
-            _("782340");
-            var n = _("444036");
-            let T = {
-                ROUND: n.baseShapeRound,
-                ROUND_LEFT: n.baseShapeRoundLeft,
-                ROUND_RIGHT: n.baseShapeRoundRight,
-                SQUARE: ""
-            };
-
-            function o(r) {
-                return r < 10 ? 16 : r < 100 ? 22 : 30
-            }
-
-            function O(r) {
-                return r < 1e3 ? "".concat(r) : "".concat(Math.min(Math.floor(r / 1e3), 9), "k+")
-            }
-            let N = r => {
+            }), L("222007");
+            var t, s, l = L("37983"),
+                r = L("884691"),
+                d = L("414456"),
+                a = L.n(d),
+                i = L("77078"),
+                n = L("449008"),
+                u = L("931138"),
+                f = L("928564"),
+                c = L("888978"),
+                o = L("390864"),
+                h = L("486952"),
+                E = L("49111"),
+                R = L("782340"),
+                p = L("465835");
+            (s = t || (t = {}))[s.PARTNERED = 0] = "PARTNERED", s[s.STAFF = 1] = "STAFF", s[s.VERIFIED = 2] = "VERIFIED", s[s.VERIFIED_AND_PARTNERED = 3] = "VERIFIED_AND_PARTNERED", s[s.VERIFIED_AND_HUB = 4] = "VERIFIED_AND_HUB", s[s.HUB = 5] = "HUB", s[s.NONE = 6] = "NONE";
+            class v extends r.PureComponent {
+                renderBadge(e, C, L) {
                     let {
-                        count: a,
-                        color: _ = R.default.STATUS_DANGER,
-                        disableColor: E = !1,
-                        shape: N = T.ROUND,
-                        className: A,
-                        style: d,
-                        ...i
-                    } = r;
-                    return (0, e.jsx)("div", {
-                        className: t(A, n.numberBadge, N),
-                        style: {
-                            backgroundColor: E ? void 0 : _,
-                            width: o(a),
-                            paddingRight: function(r) {
-                                switch (r) {
-                                    case 1:
-                                    case 4:
-                                    case 6:
-                                        return 1;
-                                    default:
-                                        return
-                                }
-                            }(a),
-                            ...d
-                        },
-                        ...i,
-                        children: O(a)
-                    })
-                },
-                A = r => {
-                    let {
-                        text: a,
-                        className: _,
-                        color: E = R.default.STATUS_DANGER,
-                        shape: o = T.ROUND,
-                        disableColor: O = !1,
-                        style: N,
-                        ...A
-                    } = r;
-                    return (0, e.jsx)("div", {
-                        className: t(_, n.textBadge, o),
-                        style: {
-                            backgroundColor: O ? void 0 : E,
-                            ...N
-                        },
-                        ...A,
-                        children: a
-                    })
-                },
-                d = r => {
-                    let {
-                        text: a,
-                        className: _,
-                        ...E
-                    } = r;
-                    return (0, e.jsx)(A, {
-                        className: t(n.premiumBadge, _),
-                        text: a,
-                        ...E
-                    })
-                },
-                i = r => {
-                    let {
-                        icon: a,
-                        className: _,
-                        color: E = R.default.STATUS_DANGER,
-                        shape: o = T.ROUND,
-                        disableColor: O = !1,
-                        style: N
-                    } = r;
-                    return (0, e.jsx)("div", {
-                        className: t(_, n.iconBadge, o),
-                        style: {
-                            backgroundColor: O ? void 0 : E,
-                            ...N
-                        },
-                        children: (0, e.jsx)(a, {
-                            className: n.icon
+                        className: t,
+                        badgeStrokeColor: s,
+                        tooltipColor: r = i.Tooltip.Colors.BRAND,
+                        tooltipPosition: d,
+                        size: f = 16,
+                        badgeColor: c,
+                        iconClassName: o,
+                        flowerStarClassName: h
+                    } = this.props, E = function(e) {
+                        switch (e) {
+                            case 2:
+                                return R.default.Messages.GUILD_VERIFIED;
+                            case 0:
+                                return R.default.Messages.GUILD_PARTNERED;
+                            case 3:
+                                return R.default.Messages.GUILD_VERIFIED_AND_PARTNERED;
+                            case 4:
+                                return R.default.Messages.HUB_VERIFIED_DISCORD_HUB;
+                            case 5:
+                                return R.default.Messages.HUB_DISCORD_HUB;
+                            case 1:
+                                return R.default.Messages.INTERNAL_EMPLOYEE_ONLY;
+                            case 6:
+                                return null;
+                            default:
+                                (0, n.assertNever)(e)
+                        }
+                    }(e);
+                    return (0, l.jsx)(i.Tooltip, {
+                        color: r,
+                        position: d,
+                        text: E,
+                        children: r => 5 === e || 4 === e ? (0, l.jsx)("div", {
+                            ...r,
+                            className: a(L, t),
+                            style: {
+                                width: f,
+                                height: f
+                            },
+                            children: (0, l.jsx)(C, {
+                                className: a(p.icon, o)
+                            })
+                        }) : (0, l.jsx)(u.default, {
+                            ...r,
+                            className: a(L, t),
+                            flowerStarClassName: h,
+                            color: c,
+                            stroke: s,
+                            size: f,
+                            children: (0, l.jsx)(C, {
+                                className: a(p.icon, o)
+                            })
                         })
                     })
-                },
-                D = r => {
+                }
+                render() {
                     let {
-                        className: a,
-                        color: _ = R.default.INTERACTIVE_ACTIVE,
-                        shape: E = T.ROUND,
-                        disableColor: o = !1,
-                        style: O,
-                        ...N
-                    } = r;
-                    return (0, e.jsx)("div", {
-                        className: t(a, n.circleBadge, E),
-                        style: {
-                            backgroundColor: o ? void 0 : _,
-                            ...O
-                        },
-                        ...N
-                    })
+                        guild: e
+                    } = this.props, C = new Set(e.features);
+                    return C.has(E.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) ? this.renderBadge(1, o.default, p.staff) : C.has(E.GuildFeatures.VERIFIED) && C.has(E.GuildFeatures.HUB) ? this.renderBadge(4, f.default, p.verifiedHub) : C.has(E.GuildFeatures.HUB) ? this.renderBadge(5, f.default, p.hub) : C.has(E.GuildFeatures.VERIFIED) && C.has(E.GuildFeatures.PARTNERED) ? this.renderBadge(3, h.default, p.verified) : C.has(E.GuildFeatures.VERIFIED) ? this.renderBadge(2, h.default, p.verified) : C.has(E.GuildFeatures.PARTNERED) ? this.renderBadge(0, c.default, p.partnered) : null
                 }
+            }
+            var x = v
         },
-        171210: function(r, a, _) {
+        928564: function(e, C, L) {
             "use strict";
-            _.r(a), _.d(a, {
+            L.r(C), L.d(C, {
                 default: function() {
-                    return t
+                    return l
                 }
-            }), (e = E || (E = {})).ACTION_SHEET_GRADIENT_BG = "var(--action-sheet-gradient-bg)", e.ACTIVITY_CARD_BACKGROUND = "var(--activity-card-background)", e.ALERT_BG = "var(--alert-bg)", e.ANDROID_NAVIGATION_BAR_BACKGROUND = "var(--android-navigation-bar-background)", e.ANDROID_NAVIGATION_SCRIM_BACKGROUND = "var(--android-navigation-scrim-background)", e.ANDROID_RIPPLE = "var(--android-ripple)", e.BACKGROUND_ACCENT = "var(--background-accent)", e.BACKGROUND_FLOATING = "var(--background-floating)", e.BACKGROUND_MENTIONED = "var(--background-mentioned)", e.BACKGROUND_MENTIONED_HOVER = "var(--background-mentioned-hover)", e.BACKGROUND_MESSAGE_AUTOMOD = "var(--background-message-automod)", e.BACKGROUND_MESSAGE_AUTOMOD_HOVER = "var(--background-message-automod-hover)", e.BACKGROUND_MESSAGE_HIGHLIGHT = "var(--background-message-highlight)", e.BACKGROUND_MESSAGE_HIGHLIGHT_HOVER = "var(--background-message-highlight-hover)", e.BACKGROUND_MESSAGE_HOVER = "var(--background-message-hover)", e.BACKGROUND_MOBILE_PRIMARY = "var(--background-mobile-primary)", e.BACKGROUND_MOBILE_SECONDARY = "var(--background-mobile-secondary)", e.BACKGROUND_MODIFIER_ACCENT = "var(--background-modifier-accent)", e.BACKGROUND_MODIFIER_ACCENT_2 = "var(--background-modifier-accent-2)", e.BACKGROUND_MODIFIER_ACTIVE = "var(--background-modifier-active)", e.BACKGROUND_MODIFIER_HOVER = "var(--background-modifier-hover)", e.BACKGROUND_MODIFIER_SELECTED = "var(--background-modifier-selected)", e.BACKGROUND_NESTED_FLOATING = "var(--background-nested-floating)", e.BACKGROUND_PRIMARY = "var(--background-primary)", e.BACKGROUND_SECONDARY = "var(--background-secondary)", e.BACKGROUND_SECONDARY_ALT = "var(--background-secondary-alt)", e.BACKGROUND_TERTIARY = "var(--background-tertiary)", e.BG_BACKDROP = "var(--bg-backdrop)", e.BG_BACKDROP_NO_OPACITY = "var(--bg-backdrop-no-opacity)", e.BG_BASE_PRIMARY = "var(--bg-base-primary)", e.BG_BASE_SECONDARY = "var(--bg-base-secondary)", e.BG_BASE_TERTIARY = "var(--bg-base-tertiary)", e.BG_MOD_FAINT = "var(--bg-mod-faint)", e.BG_MOD_STRONG = "var(--bg-mod-strong)", e.BG_MOD_SUBTLE = "var(--bg-mod-subtle)", e.BG_SURFACE_OVERLAY = "var(--bg-surface-overlay)", e.BG_SURFACE_OVERLAY_TMP = "var(--bg-surface-overlay-tmp)", e.BG_SURFACE_RAISED = "var(--bg-surface-raised)", e.BLACK = "var(--black)", e.BLUR_FALLBACK = "var(--blur-fallback)", e.BLUR_FALLBACK_PRESSED = "var(--blur-fallback-pressed)", e.BORDER_FAINT = "var(--border-faint)", e.BORDER_STRONG = "var(--border-strong)", e.BORDER_SUBTLE = "var(--border-subtle)", e.BUG_REPORTER_MODAL_SUBMITTING_BACKGROUND = "var(--bug-reporter-modal-submitting-background)", e.BUTTON_CREATOR_REVENUE_BACKGROUND = "var(--button-creator-revenue-background)", e.BUTTON_DANGER_BACKGROUND = "var(--button-danger-background)", e.BUTTON_DANGER_BACKGROUND_ACTIVE = "var(--button-danger-background-active)", e.BUTTON_DANGER_BACKGROUND_DISABLED = "var(--button-danger-background-disabled)", e.BUTTON_DANGER_BACKGROUND_HOVER = "var(--button-danger-background-hover)", e.BUTTON_OUTLINE_BRAND_BACKGROUND = "var(--button-outline-brand-background)", e.BUTTON_OUTLINE_BRAND_BACKGROUND_ACTIVE = "var(--button-outline-brand-background-active)", e.BUTTON_OUTLINE_BRAND_BACKGROUND_HOVER = "var(--button-outline-brand-background-hover)", e.BUTTON_OUTLINE_BRAND_BORDER = "var(--button-outline-brand-border)", e.BUTTON_OUTLINE_BRAND_BORDER_ACTIVE = "var(--button-outline-brand-border-active)", e.BUTTON_OUTLINE_BRAND_BORDER_HOVER = "var(--button-outline-brand-border-hover)", e.BUTTON_OUTLINE_BRAND_TEXT = "var(--button-outline-brand-text)", e.BUTTON_OUTLINE_BRAND_TEXT_ACTIVE = "var(--button-outline-brand-text-active)", e.BUTTON_OUTLINE_BRAND_TEXT_HOVER = "var(--button-outline-brand-text-hover)", e.BUTTON_OUTLINE_DANGER_BACKGROUND = "var(--button-outline-danger-background)", e.BUTTON_OUTLINE_DANGER_BACKGROUND_ACTIVE = "var(--button-outline-danger-background-active)", e.BUTTON_OUTLINE_DANGER_BACKGROUND_HOVER = "var(--button-outline-danger-background-hover)", e.BUTTON_OUTLINE_DANGER_BORDER = "var(--button-outline-danger-border)", e.BUTTON_OUTLINE_DANGER_BORDER_ACTIVE = "var(--button-outline-danger-border-active)", e.BUTTON_OUTLINE_DANGER_BORDER_HOVER = "var(--button-outline-danger-border-hover)", e.BUTTON_OUTLINE_DANGER_TEXT = "var(--button-outline-danger-text)", e.BUTTON_OUTLINE_DANGER_TEXT_ACTIVE = "var(--button-outline-danger-text-active)", e.BUTTON_OUTLINE_DANGER_TEXT_HOVER = "var(--button-outline-danger-text-hover)", e.BUTTON_OUTLINE_POSITIVE_BACKGROUND = "var(--button-outline-positive-background)", e.BUTTON_OUTLINE_POSITIVE_BACKGROUND_ACTIVE = "var(--button-outline-positive-background-active)", e.BUTTON_OUTLINE_POSITIVE_BACKGROUND_HOVER = "var(--button-outline-positive-background-hover)", e.BUTTON_OUTLINE_POSITIVE_BORDER = "var(--button-outline-positive-border)", e.BUTTON_OUTLINE_POSITIVE_BORDER_ACTIVE = "var(--button-outline-positive-border-active)", e.BUTTON_OUTLINE_POSITIVE_BORDER_HOVER = "var(--button-outline-positive-border-hover)", e.BUTTON_OUTLINE_POSITIVE_TEXT = "var(--button-outline-positive-text)", e.BUTTON_OUTLINE_POSITIVE_TEXT_ACTIVE = "var(--button-outline-positive-text-active)", e.BUTTON_OUTLINE_POSITIVE_TEXT_HOVER = "var(--button-outline-positive-text-hover)", e.BUTTON_OUTLINE_PRIMARY_BACKGROUND = "var(--button-outline-primary-background)", e.BUTTON_OUTLINE_PRIMARY_BACKGROUND_ACTIVE = "var(--button-outline-primary-background-active)", e.BUTTON_OUTLINE_PRIMARY_BACKGROUND_HOVER = "var(--button-outline-primary-background-hover)", e.BUTTON_OUTLINE_PRIMARY_BORDER = "var(--button-outline-primary-border)", e.BUTTON_OUTLINE_PRIMARY_BORDER_ACTIVE = "var(--button-outline-primary-border-active)", e.BUTTON_OUTLINE_PRIMARY_BORDER_HOVER = "var(--button-outline-primary-border-hover)", e.BUTTON_OUTLINE_PRIMARY_TEXT = "var(--button-outline-primary-text)", e.BUTTON_OUTLINE_PRIMARY_TEXT_ACTIVE = "var(--button-outline-primary-text-active)", e.BUTTON_OUTLINE_PRIMARY_TEXT_HOVER = "var(--button-outline-primary-text-hover)", e.BUTTON_POSITIVE_BACKGROUND = "var(--button-positive-background)", e.BUTTON_POSITIVE_BACKGROUND_ACTIVE = "var(--button-positive-background-active)", e.BUTTON_POSITIVE_BACKGROUND_DISABLED = "var(--button-positive-background-disabled)", e.BUTTON_POSITIVE_BACKGROUND_HOVER = "var(--button-positive-background-hover)", e.BUTTON_SECONDARY_BACKGROUND = "var(--button-secondary-background)", e.BUTTON_SECONDARY_BACKGROUND_ACTIVE = "var(--button-secondary-background-active)", e.BUTTON_SECONDARY_BACKGROUND_DISABLED = "var(--button-secondary-background-disabled)", e.BUTTON_SECONDARY_BACKGROUND_HOVER = "var(--button-secondary-background-hover)", e.CARD_GRADIENT_BG = "var(--card-gradient-bg)", e.CARD_GRADIENT_PRESSED_BG = "var(--card-gradient-pressed-bg)", e.CARD_PRIMARY_BG = "var(--card-primary-bg)", e.CARD_PRIMARY_PRESSED_BG = "var(--card-primary-pressed-bg)", e.CARD_SECONDARY_BG = "var(--card-secondary-bg)", e.CARD_SECONDARY_PRESSED_BG = "var(--card-secondary-pressed-bg)", e.CHANNEL_ICON = "var(--channel-icon)", e.CHANNEL_TEXT_AREA_PLACEHOLDER = "var(--channel-text-area-placeholder)", e.CHANNELS_DEFAULT = "var(--channels-default)", e.CHANNELTEXTAREA_BACKGROUND = "var(--channeltextarea-background)", e.CHAT_BACKGROUND = "var(--chat-background)", e.CHAT_BANNER_BG = "var(--chat-banner-bg)", e.CHAT_BORDER = "var(--chat-border)", e.CHAT_INPUT_CONTAINER_BACKGROUND = "var(--chat-input-container-background)", e.CHAT_SWIPE_TO_REPLY_BACKGROUND = "var(--chat-swipe-to-reply-background)", e.CHAT_SWIPE_TO_REPLY_GRADIENT_BACKGROUND = "var(--chat-swipe-to-reply-gradient-background)", e.CONTROL_BRAND_FOREGROUND = "var(--control-brand-foreground)", e.CONTROL_BRAND_FOREGROUND_NEW = "var(--control-brand-foreground-new)", e.CREATOR_REVENUE_ICON_GRADIENT_END = "var(--creator-revenue-icon-gradient-end)", e.CREATOR_REVENUE_ICON_GRADIENT_START = "var(--creator-revenue-icon-gradient-start)", e.CREATOR_REVENUE_INFO_BOX_BACKGROUND = "var(--creator-revenue-info-box-background)", e.CREATOR_REVENUE_INFO_BOX_BORDER = "var(--creator-revenue-info-box-border)", e.CREATOR_REVENUE_LOCKED_CHANNEL_ICON = "var(--creator-revenue-locked-channel-icon)", e.CREATOR_REVENUE_PROGRESS_BAR = "var(--creator-revenue-progress-bar)", e.DEPRECATED_CARD_BG = "var(--deprecated-card-bg)", e.DEPRECATED_CARD_EDITABLE_BG = "var(--deprecated-card-editable-bg)", e.DEPRECATED_QUICKSWITCHER_INPUT_BACKGROUND = "var(--deprecated-quickswitcher-input-background)", e.DEPRECATED_QUICKSWITCHER_INPUT_PLACEHOLDER = "var(--deprecated-quickswitcher-input-placeholder)", e.DEPRECATED_STORE_BG = "var(--deprecated-store-bg)", e.DEPRECATED_TEXT_INPUT_BG = "var(--deprecated-text-input-bg)", e.DEPRECATED_TEXT_INPUT_BORDER = "var(--deprecated-text-input-border)", e.DEPRECATED_TEXT_INPUT_BORDER_DISABLED = "var(--deprecated-text-input-border-disabled)", e.DEPRECATED_TEXT_INPUT_BORDER_HOVER = "var(--deprecated-text-input-border-hover)", e.DEPRECATED_TEXT_INPUT_PREFIX = "var(--deprecated-text-input-prefix)", e.DISPLAY_BANNER_OVERFLOW_BACKGROUND = "var(--display-banner-overflow-background)", e.DIVIDER_STRONG = "var(--divider-strong)", e.DIVIDER_SUBTLE = "var(--divider-subtle)", e.EXPRESSION_PICKER_BG = "var(--expression-picker-bg)", e.FOCUS_PRIMARY = "var(--focus-primary)", e.FORUM_POST_EXTRA_MEDIA_COUNT_CONTAINER_BACKGROUND = "var(--forum-post-extra-media-count-container-background)", e.FORUM_POST_TAG_BACKGROUND = "var(--forum-post-tag-background)", e.GUILD_ICON_INACTIVE_BG = "var(--guild-icon-inactive-bg)", e.GUILD_ICON_INACTIVE_NESTED_BG = "var(--guild-icon-inactive-nested-bg)", e.GUILD_NOTIFICATIONS_BOTTOM_SHEET_PILL_BACKGROUND = "var(--guild-notifications-bottom-sheet-pill-background)", e.HEADER_MUTED = "var(--header-muted)", e.HEADER_PRIMARY = "var(--header-primary)", e.HEADER_SECONDARY = "var(--header-secondary)", e.HOME_BACKGROUND = "var(--home-background)", e.HOME_CARD_RESTING_BORDER = "var(--home-card-resting-border)", e.ICON_MUTED = "var(--icon-muted)", e.ICON_PRIMARY = "var(--icon-primary)", e.ICON_SECONDARY = "var(--icon-secondary)", e.ICON_TRANSPARENT = "var(--icon-transparent)", e.INFO_BOX_BACKGROUND = "var(--info-box-background)", e.INFO_DANGER_BACKGROUND = "var(--info-danger-background)", e.INFO_DANGER_FOREGROUND = "var(--info-danger-foreground)", e.INFO_DANGER_TEXT = "var(--info-danger-text)", e.INFO_HELP_BACKGROUND = "var(--info-help-background)", e.INFO_HELP_FOREGROUND = "var(--info-help-foreground)", e.INFO_HELP_TEXT = "var(--info-help-text)", e.INFO_POSITIVE_BACKGROUND = "var(--info-positive-background)", e.INFO_POSITIVE_FOREGROUND = "var(--info-positive-foreground)", e.INFO_POSITIVE_TEXT = "var(--info-positive-text)", e.INFO_WARNING_BACKGROUND = "var(--info-warning-background)", e.INFO_WARNING_FOREGROUND = "var(--info-warning-foreground)", e.INFO_WARNING_TEXT = "var(--info-warning-text)", e.INPUT_BACKGROUND = "var(--input-background)", e.INPUT_PLACEHOLDER_TEXT = "var(--input-placeholder-text)", e.INTERACTIVE_ACTIVE = "var(--interactive-active)", e.INTERACTIVE_HOVER = "var(--interactive-hover)", e.INTERACTIVE_MUTED = "var(--interactive-muted)", e.INTERACTIVE_NORMAL = "var(--interactive-normal)", e.LEGACY_ANDROID_BLUR_OVERLAY_DEFAULT = "var(--legacy-android-blur-overlay-default)", e.LEGACY_ANDROID_BLUR_OVERLAY_ULTRA_THIN = "var(--legacy-android-blur-overlay-ultra-thin)", e.LEGACY_BLUR_FALLBACK_DEFAULT = "var(--legacy-blur-fallback-default)", e.LEGACY_BLUR_FALLBACK_ULTRA_THIN = "var(--legacy-blur-fallback-ultra-thin)", e.LIVE_STAGE_TILE_BORDER = "var(--live-stage-tile-border)", e.LOGO_PRIMARY = "var(--logo-primary)", e.MENTION_BACKGROUND = "var(--mention-background)", e.MENTION_FOREGROUND = "var(--mention-foreground)", e.MODAL_BACKGROUND = "var(--modal-background)", e.MODAL_FOOTER_BACKGROUND = "var(--modal-footer-background)", e.NAVIGATOR_HEADER_TINT = "var(--navigator-header-tint)", e.PANEL_BG = "var(--panel-bg)", e.POLLS_EMBED_BACKGROUND = "var(--polls-embed-background)", e.POLLS_EMBED_BORDER = "var(--polls-embed-border)", e.POLLS_IMAGE_NORMAL_BORDER = "var(--polls-image-normal-border)", e.POLLS_NORMAL_BORDER = "var(--polls-normal-border)", e.POLLS_NORMAL_CONFETTI = "var(--polls-normal-confetti)", e.POLLS_NORMAL_FILL = "var(--polls-normal-fill)", e.POLLS_NORMAL_LABEL = "var(--polls-normal-label)", e.POLLS_VICTOR_BORDER = "var(--polls-victor-border)", e.POLLS_VICTOR_FILL = "var(--polls-victor-fill)", e.POLLS_VICTOR_LABEL = "var(--polls-victor-label)", e.POLLS_VOTED_BORDER = "var(--polls-voted-border)", e.POLLS_VOTED_FILL = "var(--polls-voted-fill)", e.POLLS_VOTED_LABEL = "var(--polls-voted-label)", e.PROFILE_GRADIENT_CARD_BACKGROUND = "var(--profile-gradient-card-background)", e.PROFILE_GRADIENT_MESSAGE_INPUT_BORDER = "var(--profile-gradient-message-input-border)", e.PROFILE_GRADIENT_NOTE_BACKGROUND = "var(--profile-gradient-note-background)", e.PROFILE_GRADIENT_OVERLAY = "var(--profile-gradient-overlay)", e.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME = "var(--profile-gradient-overlay-synced-with-user-theme)", e.PROFILE_GRADIENT_PROFILE_BODY_BACKGROUND_HOVER = "var(--profile-gradient-profile-body-background-hover)", e.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND = "var(--profile-gradient-role-pill-background)", e.PROFILE_GRADIENT_ROLE_PILL_BORDER = "var(--profile-gradient-role-pill-border)", e.PROFILE_GRADIENT_SECTION_BOX = "var(--profile-gradient-section-box)", e.REDESIGN_ACTIVITY_CARD_BACKGROUND = "var(--redesign-activity-card-background)", e.REDESIGN_ACTIVITY_CARD_BACKGROUND_PRESSED = "var(--redesign-activity-card-background-pressed)", e.REDESIGN_ACTIVITY_CARD_BADGE_ICON = "var(--redesign-activity-card-badge-icon)", e.REDESIGN_ACTIVITY_CARD_BORDER = "var(--redesign-activity-card-border)", e.REDESIGN_ACTIVITY_CARD_OVERFLOW_BACKGROUND = "var(--redesign-activity-card-overflow-background)", e.REDESIGN_BUTTON_DANGER_BACKGROUND = "var(--redesign-button-danger-background)", e.REDESIGN_BUTTON_DANGER_PRESSED_BACKGROUND = "var(--redesign-button-danger-pressed-background)", e.REDESIGN_BUTTON_DANGER_TEXT = "var(--redesign-button-danger-text)", e.REDESIGN_BUTTON_OVERLAY_ALPHA_BACKGROUND = "var(--redesign-button-overlay-alpha-background)", e.REDESIGN_BUTTON_OVERLAY_ALPHA_PRESSED_BACKGROUND = "var(--redesign-button-overlay-alpha-pressed-background)", e.REDESIGN_BUTTON_OVERLAY_ALPHA_TEXT = "var(--redesign-button-overlay-alpha-text)", e.REDESIGN_BUTTON_OVERLAY_BACKGROUND = "var(--redesign-button-overlay-background)", e.REDESIGN_BUTTON_OVERLAY_PRESSED_BACKGROUND = "var(--redesign-button-overlay-pressed-background)", e.REDESIGN_BUTTON_OVERLAY_TEXT = "var(--redesign-button-overlay-text)", e.REDESIGN_BUTTON_POSITIVE_BACKGROUND = "var(--redesign-button-positive-background)", e.REDESIGN_BUTTON_POSITIVE_PRESSED_BACKGROUND = "var(--redesign-button-positive-pressed-background)", e.REDESIGN_BUTTON_POSITIVE_TEXT = "var(--redesign-button-positive-text)", e.REDESIGN_BUTTON_PRIMARY_ALT_BACKGROUND = "var(--redesign-button-primary-alt-background)", e.REDESIGN_BUTTON_PRIMARY_ALT_BORDER = "var(--redesign-button-primary-alt-border)", e.REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_BACKGROUND = "var(--redesign-button-primary-alt-on-blurple-background)", e.REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_BORDER = "var(--redesign-button-primary-alt-on-blurple-border)", e.REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_PRESSED_BACKGROUND = "var(--redesign-button-primary-alt-on-blurple-pressed-background)", e.REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_PRESSED_BORDER = "var(--redesign-button-primary-alt-on-blurple-pressed-border)", e.REDESIGN_BUTTON_PRIMARY_ALT_ON_BLURPLE_TEXT = "var(--redesign-button-primary-alt-on-blurple-text)", e.REDESIGN_BUTTON_PRIMARY_ALT_PRESSED_BACKGROUND = "var(--redesign-button-primary-alt-pressed-background)", e.REDESIGN_BUTTON_PRIMARY_ALT_PRESSED_BORDER = "var(--redesign-button-primary-alt-pressed-border)", e.REDESIGN_BUTTON_PRIMARY_ALT_PRESSED_TEXT = "var(--redesign-button-primary-alt-pressed-text)", e.REDESIGN_BUTTON_PRIMARY_ALT_TEXT = "var(--redesign-button-primary-alt-text)", e.REDESIGN_BUTTON_PRIMARY_BACKGROUND = "var(--redesign-button-primary-background)", e.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_BACKGROUND = "var(--redesign-button-primary-on-blurple-background)", e.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_BACKGROUND = "var(--redesign-button-primary-on-blurple-pressed-background)", e.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_TEXT = "var(--redesign-button-primary-on-blurple-pressed-text)", e.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_TEXT = "var(--redesign-button-primary-on-blurple-text)", e.REDESIGN_BUTTON_PRIMARY_PRESSED_BACKGROUND = "var(--redesign-button-primary-pressed-background)", e.REDESIGN_BUTTON_PRIMARY_TEXT = "var(--redesign-button-primary-text)", e.REDESIGN_BUTTON_SECONDARY_ALT_BACKGROUND = "var(--redesign-button-secondary-alt-background)", e.REDESIGN_BUTTON_SECONDARY_ALT_PRESSED_BACKGROUND = "var(--redesign-button-secondary-alt-pressed-background)", e.REDESIGN_BUTTON_SECONDARY_ALT_PRESSED_TEXT = "var(--redesign-button-secondary-alt-pressed-text)", e.REDESIGN_BUTTON_SECONDARY_ALT_TEXT = "var(--redesign-button-secondary-alt-text)", e.REDESIGN_BUTTON_SECONDARY_BACKGROUND = "var(--redesign-button-secondary-background)", e.REDESIGN_BUTTON_SECONDARY_BORDER = "var(--redesign-button-secondary-border)", e.REDESIGN_BUTTON_SECONDARY_PRESSED_BACKGROUND = "var(--redesign-button-secondary-pressed-background)", e.REDESIGN_BUTTON_SECONDARY_PRESSED_BORDER = "var(--redesign-button-secondary-pressed-border)", e.REDESIGN_BUTTON_SECONDARY_TEXT = "var(--redesign-button-secondary-text)", e.REDESIGN_CHANNEL_CATEGORY_NAME_TEXT = "var(--redesign-channel-category-name-text)", e.REDESIGN_CHANNEL_MESSAGE_PREVIEW_TEXT = "var(--redesign-channel-message-preview-text)", e.REDESIGN_CHANNEL_NAME_MUTED_TEXT = "var(--redesign-channel-name-muted-text)", e.REDESIGN_CHANNEL_NAME_TEXT = "var(--redesign-channel-name-text)", e.REDESIGN_CHAT_INPUT_BACKGROUND = "var(--redesign-chat-input-background)", e.REDESIGN_INPUT_CONTROL_ACTIVE_BG = "var(--redesign-input-control-active-bg)", e.REDESIGN_INPUT_CONTROL_SELECTED = "var(--redesign-input-control-selected)", e.REDESIGN_ONLY_BACKGROUND_ACTIVE = "var(--redesign-only-background-active)", e.REDESIGN_ONLY_BACKGROUND_DEFAULT = "var(--redesign-only-background-default)", e.REDESIGN_ONLY_BACKGROUND_OVERLAY = "var(--redesign-only-background-overlay)", e.REDESIGN_ONLY_BACKGROUND_RAISED = "var(--redesign-only-background-raised)", e.REDESIGN_ONLY_BACKGROUND_SUNKEN = "var(--redesign-only-background-sunken)", e.SCROLLBAR_AUTO_SCROLLBAR_COLOR_THUMB = "var(--scrollbar-auto-scrollbar-color-thumb)", e.SCROLLBAR_AUTO_SCROLLBAR_COLOR_TRACK = "var(--scrollbar-auto-scrollbar-color-track)", e.SCROLLBAR_AUTO_THUMB = "var(--scrollbar-auto-thumb)", e.SCROLLBAR_AUTO_TRACK = "var(--scrollbar-auto-track)", e.SCROLLBAR_THIN_THUMB = "var(--scrollbar-thin-thumb)", e.SCROLLBAR_THIN_TRACK = "var(--scrollbar-thin-track)", e.SPOILER_HIDDEN_BACKGROUND = "var(--spoiler-hidden-background)", e.SPOILER_REVEALED_BACKGROUND = "var(--spoiler-revealed-background)", e.STATUS_DANGER = "var(--status-danger)", e.STATUS_DANGER_BACKGROUND = "var(--status-danger-background)", e.STATUS_DANGER_TEXT = "var(--status-danger-text)", e.STATUS_DND = "var(--status-dnd)", e.STATUS_IDLE = "var(--status-idle)", e.STATUS_OFFLINE = "var(--status-offline)", e.STATUS_ONLINE = "var(--status-online)", e.STATUS_POSITIVE = "var(--status-positive)", e.STATUS_POSITIVE_BACKGROUND = "var(--status-positive-background)", e.STATUS_POSITIVE_TEXT = "var(--status-positive-text)", e.STATUS_SPEAKING = "var(--status-speaking)", e.STATUS_WARNING = "var(--status-warning)", e.STATUS_WARNING_BACKGROUND = "var(--status-warning-background)", e.STATUS_WARNING_TEXT = "var(--status-warning-text)", e.TEXT_BRAND = "var(--text-brand)", e.TEXT_DANGER = "var(--text-danger)", e.TEXT_LINK = "var(--text-link)", e.TEXT_LINK_LOW_SATURATION = "var(--text-link-low-saturation)", e.TEXT_LOW_CONTRAST = "var(--text-low-contrast)", e.TEXT_MESSAGE_PREVIEW_LOW_SAT = "var(--text-message-preview-low-sat)", e.TEXT_MUTED = "var(--text-muted)", e.TEXT_MUTED_ON_DEFAULT = "var(--text-muted-on-default)", e.TEXT_NORMAL = "var(--text-normal)", e.TEXT_POSITIVE = "var(--text-positive)", e.TEXT_PRIMARY = "var(--text-primary)", e.TEXT_SECONDARY = "var(--text-secondary)", e.TEXT_WARNING = "var(--text-warning)", e.TEXTBOX_MARKDOWN_SYNTAX = "var(--textbox-markdown-syntax)", e.THEME_LOCKED_BLUR_FALLBACK = "var(--theme-locked-blur-fallback)", e.TOAST_BG = "var(--toast-bg)", e.TYPING_INDICATOR_BG = "var(--typing-indicator-bg)", e.USER_PROFILE_HEADER_OVERFLOW_BACKGROUND = "var(--user-profile-header-overflow-background)", e.VOICE_VIDEO_TILE_BLUR_FALLBACK = "var(--voice-video-tile-blur-fallback)", e.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK = "var(--voice-video-video-tile-blur-fallback)", e.WHITE = "var(--white)";
-            var e, E, t = E
+            });
+            var t = L("37983");
+            L("884691");
+            var s = L("75196");
+
+            function l(e) {
+                let {
+                    width: C = 16,
+                    height: L = 16,
+                    color: l = "currentColor",
+                    ...r
+                } = e;
+                return (0, t.jsxs)("svg", {
+                    ...(0, s.default)(r),
+                    width: C,
+                    height: L,
+                    viewBox: "0 0 16 16",
+                    children: [(0, t.jsx)("circle", {
+                        cx: "8",
+                        cy: "8",
+                        r: "8"
+                    }), (0, t.jsx)("path", {
+                        d: "M4.66666 12.6667C3.93028 12.6667 3.33333 12.0697 3.33333 11.3333C3.33333 10.5969 3.93028 9.99999 4.66666 9.99999C5.40304 9.99999 5.99999 10.5969 5.99999 11.3333C5.99999 12.0697 5.40304 12.6667 4.66666 12.6667Z",
+                        fill: l
+                    }), (0, t.jsx)("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        d: "M4.66666 12C4.29847 12 3.99999 11.7015 3.99999 11.3333C3.99999 10.9651 4.29847 10.6667 4.66666 10.6667C5.03485 10.6667 5.33333 10.9651 5.33333 11.3333C5.33333 11.7015 5.03485 12 4.66666 12ZM3.33333 11.3333C3.33333 12.0697 3.93028 12.6667 4.66666 12.6667C5.40304 12.6667 5.99999 12.0697 5.99999 11.3333C5.99999 10.5969 5.40304 9.99999 4.66666 9.99999C3.93028 9.99999 3.33333 10.5969 3.33333 11.3333Z",
+                        fill: l
+                    }), (0, t.jsx)("path", {
+                        d: "M8 12.6667C7.26362 12.6667 6.66666 12.0697 6.66666 11.3333C6.66666 10.5969 7.26362 9.99999 8 9.99999C8.73637 9.99999 9.33333 10.5969 9.33333 11.3333C9.33333 12.0697 8.73637 12.6667 8 12.6667Z",
+                        fill: l
+                    }), (0, t.jsx)("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        d: "M8 12C7.63181 12 7.33333 11.7015 7.33333 11.3333C7.33333 10.9651 7.63181 10.6667 8 10.6667C8.36819 10.6667 8.66666 10.9651 8.66666 11.3333C8.66666 11.7015 8.36819 12 8 12ZM6.66666 11.3333C6.66666 12.0697 7.26362 12.6667 8 12.6667C8.73637 12.6667 9.33333 12.0697 9.33333 11.3333C9.33333 10.5969 8.73637 9.99999 8 9.99999C7.26362 9.99999 6.66666 10.5969 6.66666 11.3333Z",
+                        fill: l
+                    }), (0, t.jsx)("path", {
+                        d: "M8 6C7.26362 6 6.66666 5.40304 6.66666 4.66666C6.66666 3.93028 7.26362 3.33333 8 3.33333C8.73637 3.33333 9.33333 3.93028 9.33333 4.66666C9.33333 5.40304 8.73637 6 8 6Z",
+                        fill: l
+                    }), (0, t.jsx)("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        d: "M8 5.33333C7.63181 5.33333 7.33333 5.03485 7.33333 4.66666C7.33333 4.29847 7.63181 3.99999 8 3.99999C8.36819 3.99999 8.66666 4.29847 8.66666 4.66666C8.66666 5.03485 8.36819 5.33333 8 5.33333ZM6.66666 4.66666C6.66666 5.40304 7.26362 6 8 6C8.73637 6 9.33333 5.40304 9.33333 4.66666C9.33333 3.93028 8.73637 3.33333 8 3.33333C7.26362 3.33333 6.66666 3.93028 6.66666 4.66666Z",
+                        fill: l
+                    }), (0, t.jsx)("path", {
+                        d: "M11.3333 12.6667C10.5969 12.6667 9.99999 12.0697 9.99999 11.3333C9.99999 10.5969 10.5969 9.99999 11.3333 9.99999C12.0697 9.99999 12.6667 10.5969 12.6667 11.3333C12.6667 12.0697 12.0697 12.6667 11.3333 12.6667Z",
+                        fill: l
+                    }), (0, t.jsx)("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        d: "M11.3333 12C10.9651 12 10.6667 11.7015 10.6667 11.3333C10.6667 10.9651 10.9651 10.6667 11.3333 10.6667C11.7015 10.6667 12 10.9651 12 11.3333C12 11.7015 11.7015 12 11.3333 12ZM9.99999 11.3333C9.99999 12.0697 10.5969 12.6667 11.3333 12.6667C12.0697 12.6667 12.6667 12.0697 12.6667 11.3333C12.6667 10.5969 12.0697 9.99999 11.3333 9.99999C10.5969 9.99999 9.99999 10.5969 9.99999 11.3333Z",
+                        fill: l
+                    }), (0, t.jsx)("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        d: "M5.99999 8.49999C5.53976 8.49999 5.16666 8.87309 5.16666 9.33333V10.6667H4.16666V9.33333C4.16666 8.32081 4.98747 7.49999 5.99999 7.49999H9.99999C11.0125 7.49999 11.8333 8.32081 11.8333 9.33333V10.6667H10.8333V9.33333C10.8333 8.87309 10.4602 8.49999 9.99999 8.49999H5.99999Z",
+                        fill: l
+                    }), (0, t.jsx)("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        d: "M7.5 11.3333V4.66666H8.5L8.49999 11.3333H7.5Z",
+                        fill: "white"
+                    })]
+                })
+            }
+        },
+        888978: function(e, C, L) {
+            "use strict";
+            L.r(C), L.d(C, {
+                default: function() {
+                    return l
+                }
+            });
+            var t = L("37983");
+            L("884691");
+            var s = L("75196");
+
+            function l(e) {
+                let {
+                    width: C = 16,
+                    height: L = 16,
+                    color: l = "currentColor",
+                    ...r
+                } = e;
+                return (0, t.jsxs)("svg", {
+                    ...(0, s.default)(r),
+                    width: C,
+                    height: L,
+                    viewBox: "0 0 16 16",
+                    children: [(0, t.jsx)("path", {
+                        d: "M10.5906 6.39993L9.19223 7.29993C8.99246 7.39993 8.89258 7.39993 8.69281 7.29993C8.59293 7.19993 8.39317 7.09993 8.29328 6.99993C7.89375 6.89993 7.5941 6.99993 7.29445 7.19993L6.79504 7.49993L4.29797 9.19993C3.69867 9.49993 2.99949 9.39993 2.69984 8.79993C2.30031 8.29993 2.50008 7.59993 2.99949 7.19993L5.99598 5.19993C6.79504 4.69993 7.79387 4.49993 8.69281 4.69993C9.49188 4.89993 10.0912 5.29993 10.5906 5.89993C10.7904 6.09993 10.6905 6.29993 10.5906 6.39993Z",
+                        fill: l
+                    }), (0, t.jsx)("path", {
+                        d: "M13.4871 7.79985C13.4871 8.19985 13.2874 8.59985 12.9877 8.79985L9.89135 10.7999C9.29206 11.1999 8.69276 11.3999 7.99358 11.3999C7.69393 11.3999 7.49417 11.3999 7.19452 11.2999C6.39545 11.0999 5.79616 10.6999 5.29674 10.0999C5.19686 9.89985 5.29674 9.69985 5.39663 9.59985L6.79499 8.69985C6.89487 8.59985 7.09463 8.59985 7.19452 8.69985C7.39428 8.79985 7.59405 8.89985 7.69393 8.99985C8.09346 8.99985 8.39311 8.99985 8.69276 8.79985L9.39194 8.39985L11.3896 6.99985L11.6892 6.79985C12.1887 6.49985 12.9877 6.59985 13.2874 7.09985C13.4871 7.39985 13.4871 7.59985 13.4871 7.79985Z",
+                        fill: l
+                    })]
+                })
+            }
+        },
+        390864: function(e, C, L) {
+            "use strict";
+            L.r(C), L.d(C, {
+                default: function() {
+                    return r
+                }
+            });
+            var t = L("37983");
+            L("884691");
+            var s = L("469563"),
+                l = L("400033"),
+                r = (0, s.replaceIcon)(function(e) {
+                    return (0, t.jsx)("svg", {
+                        ...e,
+                        xmlns: "http://www.w3.org/2000/svg",
+                        viewBox: "0 0 24 24",
+                        children: (0, t.jsxs)("g", {
+                            fill: "none",
+                            fillRule: "evenodd",
+                            children: [(0, t.jsx)("rect", {
+                                width: "24",
+                                height: "24"
+                            }), (0, t.jsx)("path", {
+                                fill: "currentColor",
+                                d: "M4.95497175,5.40753824 L4.94817763,5.41433235 L9.84188351,10.4332441 L8.59855999,11.6765676 L7.92205999,12.3530676 L2.9710894,7.42150882 L2.97011881,7.42247941 L2.89344234,7.50012647 L2.84394234,7.55059706 C2.69738351,7.68453824 2.4595894,7.86506765 2.31011881,7.78353824 C1.98497175,7.60689118 1.54432469,7.24583235 1.66855999,6.91486176 C1.79279528,6.58389118 2.70320704,4.92903824 4.52305999,4.12247941 C4.52305999,4.12247941 4.75114822,4.06036176 4.89576587,4.18459706 C5.04038351,4.30883235 5.4130894,4.70095 5.30923646,4.86692059 C5.20538351,5.03289118 4.95497175,5.40753824 4.95497175,5.40753824 Z M16.6512394,10.6097941 L16.7211218,11.0368529 L16.2930923,10.9698824 L16.1649747,11.098 L16.1882688,11.1222647 C16.2300041,11.164 16.2300041,11.2309706 16.1882688,11.2736765 C16.1669159,11.2940588 16.1397394,11.3047353 16.1125629,11.3047353 C16.0853865,11.3047353 16.05821,11.2940588 16.036857,11.2736765 L16.0135629,11.2494118 L15.9524159,11.3105588 L15.9825041,11.3406471 C16.0242394,11.3823824 16.0242394,11.4503235 15.9825041,11.4920588 C15.9621218,11.5124412 15.9349453,11.5231176 15.9067982,11.5231176 C15.8796218,11.5231176 15.8524453,11.5124412 15.8320629,11.4920588 L15.8019747,11.4619706 L14.650857,12.6150294 L14.67221,12.6373529 C14.7139453,12.6790882 14.7139453,12.7470294 14.67221,12.7887647 C14.6518276,12.8091471 14.6246512,12.8198235 14.5974747,12.8198235 C14.5693276,12.8198235 14.5421512,12.8091471 14.5217688,12.7887647 L14.5004159,12.7674118 L14.4392688,12.8275882 L14.4674159,12.8557353 C14.5091512,12.8974706 14.5091512,12.9654118 14.4674159,13.0071471 C14.4470335,13.0275294 14.4188865,13.0382059 14.39171,13.0382059 C14.3645335,13.0382059 14.337357,13.0275294 14.3160041,13.0071471 L14.287857,12.979 L14.1141218,13.1537059 L13.9209747,13.1750588 L13.8006218,13.0508235 L13.8035335,13.0566471 L7.64418057,19.2179412 L7.51897469,19.3421765 L7.5180041,19.3431471 L7.58691587,19.4120588 L7.54032763,19.6886765 L7.4112394,19.8148529 L7.45297469,19.8565882 C7.49470999,19.8983235 7.49470999,19.9662647 7.45297469,20.008 C7.43259234,20.0283824 7.40541587,20.0390588 7.37726881,20.0390588 C7.35009234,20.0390588 7.32291587,20.0283824 7.30253351,20.008 L7.25982763,19.9652941 L7.19868057,20.0264412 L7.24818057,20.0749706 C7.28894528,20.1167059 7.28894528,20.1846471 7.24818057,20.2263824 C7.22682763,20.2477353 7.19965116,20.2574412 7.17247469,20.2574412 C7.14529822,20.2574412 7.11715116,20.2477353 7.09676881,20.2263824 L7.04629822,20.1759118 L5.89420999,21.3124706 L5.94565116,21.3648824 C5.98738646,21.4066176 5.98738646,21.4735882 5.94565116,21.5153235 C5.92429822,21.5366765 5.89712175,21.5473529 5.86994528,21.5473529 C5.84276881,21.5473529 5.81462175,21.5366765 5.7942394,21.5153235 L5.74182763,21.4629118 L5.67970999,21.5230882 L5.73988646,21.5832647 C5.78162175,21.625 5.78162175,21.6919706 5.73988646,21.7346765 C5.7195041,21.7550588 5.69135704,21.7657353 5.66418057,21.7657353 C5.6370041,21.7657353 5.60982763,21.7550588 5.58944528,21.7346765 L5.52829822,21.6735294 L5.39532763,21.8035882 L5.46715116,22.2355 L5.03038646,22.1646471 L4.87412175,22.318 L4.24032763,22.2073529 C4.21606293,22.1889118 3.65506293,22.0112941 3.28720999,21.6405294 C2.90770999,21.2581176 2.72329822,20.6815882 2.72329822,20.6815882 L2.60294528,20.0196471 L2.7417394,19.8779412 L2.7087394,19.3868235 L3.14841587,19.4654412 L3.23285704,19.3790588 L3.21344528,19.3586765 C3.17170999,19.3169412 3.17170999,19.249 3.21344528,19.2072647 C3.23382763,19.1868824 3.26197469,19.1762059 3.28818057,19.1762059 C3.31632763,19.1762059 3.3435041,19.1868824 3.36485704,19.2072647 L3.38329822,19.2257059 L3.44347469,19.1645588 L3.4182394,19.1402941 C3.3765041,19.0985588 3.3765041,19.0306176 3.4182394,18.9888824 C3.43959234,18.9675294 3.46676881,18.9578235 3.49394528,18.9578235 C3.52209234,18.9578235 3.54829822,18.9675294 3.56965116,18.9888824 L3.59294528,19.0121765 L4.72756293,17.8581471 L4.72076881,17.8503824 C4.6800041,17.8086471 4.6800041,17.7416765 4.72076881,17.6999412 C4.74212175,17.6785882 4.76929822,17.6679118 4.79647469,17.6679118 C4.82365116,17.6679118 4.85179822,17.6785882 4.87218057,17.6999412 L4.8780041,17.7057647 L4.93818057,17.6436471 L4.92653351,17.632 C4.88479822,17.5902647 4.88479822,17.5232941 4.92653351,17.4815588 C4.94691587,17.4602059 4.97506293,17.4495294 5.0022394,17.4495294 C5.02941587,17.4495294 5.05659234,17.4602059 5.07794528,17.4815588 L5.08765116,17.4912647 L5.2332394,17.3437353 L5.49044528,17.3068529 L5.5710041,17.3738235 L11.7720923,11.1737059 L11.86721,11.0766471 L11.8691512,11.0756765 L11.7905335,10.9951176 L11.8109159,10.8029412 L11.9603865,10.6515294 L11.9400041,10.6311471 C11.8992394,10.5894118 11.8992394,10.5224412 11.9400041,10.4807059 C11.961357,10.4593529 11.9885335,10.4486765 12.0166806,10.4486765 C12.0428865,10.4486765 12.0710335,10.4593529 12.0914159,10.4807059 L12.1117982,10.5001176 L12.1729453,10.4389706 L12.1457688,10.4127647 C12.1040335,10.3710294 12.1040335,10.3030882 12.1457688,10.2613529 C12.1671218,10.2409706 12.1942982,10.2302941 12.2214747,10.2302941 C12.2486512,10.2302941 12.2758276,10.2409706 12.2971806,10.2613529 L12.3233865,10.2875588 L13.4725629,9.13255882 L13.4560629,9.11605882 C13.4143276,9.07432353 13.4143276,9.00638235 13.4560629,8.96464706 C13.4764453,8.94426471 13.5036218,8.93358824 13.5317688,8.93358824 C13.5589453,8.93358824 13.5861218,8.94426471 13.6074747,8.96464706 L13.6230041,8.98114706 L13.6831806,8.92 L13.660857,8.89767647 C13.6191218,8.85594118 13.6191218,8.788 13.660857,8.74626471 C13.68221,8.72588235 13.7093865,8.71520588 13.7365629,8.71520588 C13.7637394,8.71520588 13.7918865,8.72588235 13.8122688,8.74626471 L13.8345923,8.76858824 L13.9607688,8.64241176 L13.8937982,8.20952941 L14.3305629,8.26970588 L14.3936512,8.20661765 L14.5644747,8.03579412 L14.0180335,7.49420588 L11.2867982,2.44714706 C11.2867982,2.44714706 11.1771218,2.18314706 11.3634747,2.05211765 C11.4440335,1.99485294 11.5139159,1.97058824 11.5857394,1.97058824 C11.6789159,1.97058824 11.7759747,2.01135294 11.9079747,2.0725 C12.1418865,2.18314706 16.5347688,4.56885294 16.5347688,4.56885294 L17.2918276,5.30941176 L17.4286806,5.17158824 L17.3995629,5.14247059 L17.3549159,4.74841176 L17.8169159,4.81732353 L17.8790335,4.73482353 L18.4924453,4.84547059 C18.4924453,4.84547059 19.6649159,5.81702941 20.0929453,6.42364706 L20.21621,7.05064706 L20.13371,7.13411765 L20.1958276,7.56894118 L19.8677688,7.53108824 L19.7144159,7.67861765 L19.9890923,7.94747059 L19.9920041,7.94455882 L21.9952982,9.96144118 C21.9952982,9.96144118 22.0719747,10.0031765 21.9952982,10.0788824 C21.9865629,10.0876176 19.3892688,12.6645294 19.3892688,12.6645294 C19.3892688,12.6645294 19.3523865,12.7052941 19.3077394,12.7052941 C19.29221,12.7052941 19.2747394,12.6994706 19.2582394,12.6849118 L16.9123276,10.3613235 L16.6512394,10.6097941 Z M17.5067159,17.5740559 L19.82351,20.05585 L17.0583041,22.6356735 L14.65901,20.0082912 L12.8799218,17.3401441 L12.4062747,16.88785 L14.2901865,15.0039382 L14.7764512,15.5047618 L17.5067159,17.5740559 Z"
+                            })]
+                        })
+                    })
+                }, l.StaffBadgeIcon)
         }
     }
 ]);
