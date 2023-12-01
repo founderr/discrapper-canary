@@ -1,614 +1,1915 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["49191"], {
-        462274: function(e, i, l) {
+    ["79417"], {
+        850068: function(e, t, n) {
             "use strict";
-            l.r(i), l.d(i, {
-                useColorStore: function() {
-                    return c
+            n.r(t), n.d(t, {
+                deletePaymentSource: function() {
+                    return A
                 },
-                maybeFetchColors: function() {
-                    return f
+                updatePaymentSource: function() {
+                    return T
                 },
-                default: function() {
-                    return p
+                validatePaymentSourceBillingAddress: function() {
+                    return C
                 },
-                useAvatarColors: function() {
-                    return _
+                createAdyenPaymentSourceToken: function() {
+                    return h
+                },
+                createPaymentSource: function() {
+                    return O
+                },
+                dispatchConfirmationError: function() {
+                    return U
+                },
+                createCardToken: function() {
+                    return B
+                },
+                confirmEPS: function() {
+                    return D
+                },
+                confirmIdeal: function() {
+                    return b
+                },
+                confirmPrzelewy24: function() {
+                    return w
+                },
+                confirmSofort: function() {
+                    return g
+                },
+                confirmCardPaymentSource: function() {
+                    return M
+                },
+                createPaymentRequestPaymentSource: function() {
+                    return G
+                },
+                createBraintreePaymentSource: function() {
+                    return F
+                },
+                createStripePaymentSource: function() {
+                    return Y
+                },
+                createAdyenPrepaidPaymentSource: function() {
+                    return v
+                },
+                createAdyenVaultablePaymentSource: function() {
+                    return k
+                },
+                createStripePaymentSourceToken: function() {
+                    return V
+                },
+                createPaymentSourceToken: function() {
+                    return K
+                },
+                fetchPaymentSources: function() {
+                    return H
+                },
+                fetchPayment: function() {
+                    return x
+                },
+                fetchPayments: function() {
+                    return q
+                },
+                fetchSubscriptions: function() {
+                    return W
+                },
+                getPerksRelevance: function() {
+                    return Q
+                },
+                getNitroAffinity: function() {
+                    return X
+                },
+                fetchMostRecentSubscription: function() {
+                    return Z
+                },
+                createSubscription: function() {
+                    return z
+                },
+                payInvoiceManually: function() {
+                    return J
+                },
+                handleConfirmation: function() {
+                    return j
+                },
+                redirectedPaymentSucceeded: function() {
+                    return et
+                },
+                paymentIntentSucceeded: function() {
+                    return en
+                },
+                cancelSubscription: function() {
+                    return eo
+                },
+                deleteRenewalMutation: function() {
+                    return el
+                },
+                updateSubscription: function() {
+                    return eu
+                },
+                resubscribeToSubscription: function() {
+                    return es
+                },
+                upgradeSubscription: function() {
+                    return ed
+                },
+                changeSubscriptionCurrency: function() {
+                    return ec
+                },
+                changePaymentSource: function() {
+                    return e_
+                },
+                clearUpdatePaymentSourceError: function() {
+                    return eE
+                },
+                clearRemovePaymentSourceError: function() {
+                    return eI
+                },
+                clearPaymentAuthenticationError: function() {
+                    return ep
+                },
+                voidPendingPayment: function() {
+                    return ey
+                },
+                refundPayment: function() {
+                    return ef
+                },
+                popupBridgeState: function() {
+                    return eS
+                },
+                popupBridgeCallback: function() {
+                    return eR
+                },
+                fetchIpCountryCode: function() {
+                    return eN
+                },
+                fetchLocalizedPromo: function() {
+                    return eA
+                },
+                resetPaymentIntentId: function() {
+                    return eT
+                },
+                resetSubscriptionStore: function() {
+                    return eP
+                },
+                startBrowserCheckout: function() {
+                    return em
                 }
-            }), l("222007");
-            var t = l("884691"),
-                n = l("656280"),
-                r = l.n(n),
-                u = l("308503"),
-                o = l("446674"),
-                d = l("206230"),
-                s = l("284679"),
-                a = l("103603");
-            let c = (0, u.default)(() => ({
-                palette: {},
-                fetching: {}
-            }));
-            async function f(e) {
-                null == c.getState().palette[e] && await m(e)
+            }), n("70102");
+            var r = n("41092"),
+                a = n("627445"),
+                i = n.n(a),
+                o = n("872717"),
+                l = n("913144"),
+                u = n("448993"),
+                s = n("736978"),
+                d = n("865146"),
+                c = n("160299"),
+                _ = n("599110"),
+                E = n("745279"),
+                I = n("719923"),
+                p = n("224400"),
+                y = n("520713"),
+                f = n("49111"),
+                S = n("422487"),
+                R = n("843455"),
+                N = n("782340");
+            async function A(e) {
+                l.default.dispatch({
+                    type: "BILLING_PAYMENT_SOURCE_REMOVE_START"
+                });
+                try {
+                    await o.default.delete({
+                        url: f.Endpoints.BILLING_PAYMENT_SOURCE(e),
+                        oldFormErrors: !0
+                    }), l.default.dispatch({
+                        type: "BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS",
+                        id: e
+                    })
+                } catch (t) {
+                    let e = new u.BillingError(t);
+                    throw l.default.dispatch({
+                        type: "BILLING_PAYMENT_SOURCE_REMOVE_FAIL",
+                        error: e
+                    }), e
+                }
+            }
+            async function T(e, t) {
+                l.default.dispatch({
+                    type: "BILLING_PAYMENT_SOURCE_UPDATE_START"
+                });
+                try {
+                    let {
+                        billingAddress: {
+                            line1: n,
+                            line2: r,
+                            postalCode: a,
+                            ...i
+                        }
+                    } = t, u = await o.default.patch({
+                        url: f.Endpoints.BILLING_PAYMENT_SOURCE(e),
+                        body: {
+                            billing_address: {
+                                ...i,
+                                line_1: n,
+                                line_2: r,
+                                postal_code: a
+                            },
+                            expires_month: t.expiresMonth,
+                            expires_year: t.expiresYear,
+                            default: t.isDefault
+                        }
+                    }), s = d.default.createFromServer(u.body);
+                    l.default.dispatch({
+                        type: "BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS",
+                        paymentSource: s
+                    })
+                } catch (t) {
+                    let e = (0, s.parseV8BillingAddressSkemaErrorToBillingError)(t);
+                    throw l.default.dispatch({
+                        type: "BILLING_PAYMENT_SOURCE_UPDATE_FAIL",
+                        error: e
+                    }), e
+                }
+            }
+            async function P(e) {
+                let t = await o.default.get({
+                        url: f.Endpoints.BILLING_STRIPE_PAYMENT_INTENTS(e),
+                        oldFormErrors: !0
+                    }),
+                    {
+                        stripe_payment_intent_client_secret: n
+                    } = t.body;
+                return n
             }
             async function m(e) {
-                if (!c.getState().fetching[e]) {
-                    c.setState(i => ({
-                        fetching: {
-                            ...i.fetching,
-                            [e]: !0
+                let t = await o.default.get({
+                        url: f.Endpoints.BILLING_STRIPE_PAYMENT_INTENTS(e),
+                        oldFormErrors: !0
+                    }),
+                    {
+                        stripe_payment_intent_client_secret: n,
+                        stripe_payment_intent_payment_method_id: r
+                    } = t.body;
+                return {
+                    clientSecret: n,
+                    paymentMethodId: r
+                }
+            }
+            async function L() {
+                let e = await o.default.post({
+                    url: f.Endpoints.BILLING_STRIPE_SETUP_INTENT_SECRET,
+                    oldFormErrors: !0
+                });
+                return e.body.client_secret
+            }
+            async function C(e) {
+                try {
+                    let t = await o.default.post({
+                        url: f.Endpoints.BILLING_PAYMENT_SOURCES_VALIDATE_BILLING_ADDRESS,
+                        body: {
+                            billing_address: {
+                                name: e.name,
+                                line_1: e.line1,
+                                line_2: e.line2,
+                                city: e.city,
+                                state: e.state,
+                                postal_code: e.postalCode,
+                                country: e.country,
+                                email: e.email
+                            }
+                        }
+                    });
+                    return t.body.token
+                } catch (t) {
+                    let e = (0, s.parseV8BillingAddressSkemaErrorToBillingError)(t);
+                    throw l.default.dispatch({
+                        type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL",
+                        error: e
+                    }), e
+                }
+            }
+
+            function h(e) {
+                var t;
+                return f.VAULTABLE_PAYMENT_SOURCES.has(e.type) ? null : JSON.stringify({
+                    type: null !== (t = R.ADYEN_PAYMENT_SOURCES.get(e.type)) && void 0 !== t ? t : null
+                })
+            }
+            async function O(e, t, n, r) {
+                l.default.dispatch({
+                    type: "BILLING_PAYMENT_SOURCE_CREATE_START"
+                });
+                try {
+                    let a = await o.default.post({
+                            url: f.Endpoints.BILLING_PAYMENT_SOURCES,
+                            query: {
+                                location: r.analyticsLocation
+                            },
+                            body: {
+                                payment_gateway: e,
+                                token: t,
+                                billing_address: {
+                                    name: n.name,
+                                    line_1: n.line1,
+                                    line_2: n.line2,
+                                    city: n.city,
+                                    state: n.state,
+                                    postal_code: n.postalCode,
+                                    country: n.country,
+                                    email: n.email
+                                },
+                                billing_address_token: r.billingAddressToken,
+                                bank: r.bank,
+                                return_url: r.returnUrl
+                            }
+                        }),
+                        i = d.default.createFromServer(a.body);
+                    return l.default.dispatch({
+                        type: "BILLING_PAYMENT_SOURCE_CREATE_SUCCESS",
+                        paymentSource: i
+                    }), i
+                } catch (t) {
+                    let e = (0, s.parseV8BillingAddressSkemaErrorToBillingError)(t);
+                    throw function(e, t) {
+                        var n, r;
+                        (null == t ? void 0 : null === (n = t.body) || void 0 === n ? void 0 : n.adyen_redirect_url) && (e.fields.adyen_redirect_url = null == t ? void 0 : null === (r = t.body) || void 0 === r ? void 0 : r.adyen_redirect_url)
+                    }(e, t), e.code !== s.ErrorCodes.CONFIRMATION_REQUIRED && l.default.dispatch({
+                        type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL",
+                        error: e
+                    }), e
+                }
+            }
+
+            function U(e) {
+                var t, n;
+                let r, a, i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+                    o = N.default.Messages.PAYMENT_METHOD_CONFIRMATION_ERROR;
+                if (t = e, S.StripeErrorTypes.includes(t.type)) {
+                    ;
+                    let t = null != e.message ? "".concat(o, ": ").concat(e.message) : o,
+                        l = {
+                            failure_message: t,
+                            error_type: e.type,
+                            failure_code: e.code,
+                            failure_sub_code: e.decline_code,
+                            payment_source_type: null === (n = e.payment_method) || void 0 === n ? void 0 : n.type
+                        };
+                    if (a = l, "card_error" === e.type) _.default.track(f.AnalyticEvents.PAYMENT_SOURCE_CREATION_FAILED, {
+                        ...l,
+                        stacktrace: Error().stack
+                    }), i = !1;
+                    r = new u.BillingError(t)
+                } else a = {
+                    failure_message: (r = new u.BillingError("string" == typeof e ? o : e)).message,
+                    status_code: r.code
+                }, 429 === r.code && (i = !1);
+                l.default.dispatch({
+                    type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL",
+                    error: r
+                });
+                let s = Error("string" == typeof e ? e : r.message);
+                return i && (0, E.captureBillingException)(s, {
+                    extra: a
+                }), s
+            }
+            async function B(e, t) {
+                if (null == e || null == t) throw U("Stripe or elements not loaded");
+                let n = t.getElement(r.CardNumberElement);
+                if (null == n) throw U("Unable to load card elements from Stripe");
+                let {
+                    token: a,
+                    error: i
+                } = await e.createToken(n);
+                if (null != i) throw U(i);
+                if (null == a) throw U("token not available with successful stripe call");
+                return a.id
+            }
+            async function D(e, t, n, r) {
+                if (null == e) throw U("Stripe not loaded");
+                if (null == t) throw U("Bank required for EPS");
+                let {
+                    email: a,
+                    name: i,
+                    line1: o,
+                    line2: u,
+                    city: s,
+                    state: d,
+                    postalCode: c,
+                    country: _
+                } = n;
+                if (null == i) throw U("Name required for EPS");
+                l.default.dispatch({
+                    type: "BILLING_PAYMENT_SOURCE_CREATE_START"
+                });
+                let E = await C(n),
+                    {
+                        paymentMethod: I,
+                        error: p
+                    } = await e.createPaymentMethod({
+                        type: "eps",
+                        eps: {
+                            bank: t
+                        },
+                        billing_details: {
+                            address: {
+                                line1: o,
+                                line2: u,
+                                city: s,
+                                state: d,
+                                postal_code: c,
+                                country: _
+                            },
+                            name: i,
+                            email: a
+                        }
+                    });
+                if (null != p) throw U(p);
+                if (null == I) throw U("paymentMethod not available with successful stripe call");
+                return O(f.PaymentGateways.STRIPE, I.id, n, {
+                    billingAddressToken: E,
+                    analyticsLocation: r,
+                    bank: t
+                })
+            }
+            async function b(e, t, n, r) {
+                if (null == e) throw U("Stripe not loaded");
+                if (null == t) throw U("Bank required for iDEAL");
+                let {
+                    email: a,
+                    name: i,
+                    line1: o,
+                    line2: u,
+                    city: s,
+                    state: d,
+                    postalCode: c,
+                    country: _
+                } = n;
+                if (null == i) throw U("Name required for iDEAL");
+                l.default.dispatch({
+                    type: "BILLING_PAYMENT_SOURCE_CREATE_START"
+                });
+                let E = await C(n),
+                    {
+                        paymentMethod: I,
+                        error: p
+                    } = await e.createPaymentMethod({
+                        type: "ideal",
+                        ideal: {
+                            bank: t
+                        },
+                        billing_details: {
+                            address: {
+                                line1: o,
+                                line2: u,
+                                city: s,
+                                state: d,
+                                postal_code: c,
+                                country: _
+                            },
+                            name: i,
+                            email: a
+                        }
+                    });
+                if (null != p) throw U(p);
+                if (null == I) throw U("paymentMethod not available with successful stripe call");
+                return O(f.PaymentGateways.STRIPE, I.id, n, {
+                    billingAddressToken: E,
+                    analyticsLocation: r,
+                    bank: t
+                })
+            }
+            async function w(e, t, n, r) {
+                if (null == e) throw U("Stripe not loaded");
+                let {
+                    email: a,
+                    name: i,
+                    line1: o,
+                    line2: u,
+                    city: s,
+                    state: d,
+                    postalCode: c,
+                    country: _
+                } = n;
+                if (null == a) throw U("Email required for Przelewy24");
+                l.default.dispatch({
+                    type: "BILLING_PAYMENT_SOURCE_CREATE_START"
+                });
+                let E = await C(n),
+                    I = t.p24Bank,
+                    {
+                        paymentMethod: p,
+                        error: y
+                    } = await e.createPaymentMethod({
+                        type: "p24",
+                        p24: {
+                            bank: I
+                        },
+                        billing_details: {
+                            address: {
+                                line1: o,
+                                line2: u,
+                                city: s,
+                                state: d,
+                                postal_code: c,
+                                country: _
+                            },
+                            name: i,
+                            email: a
+                        }
+                    });
+                if (null != y) throw U(y);
+                if (null == p) throw U("paymentMethod not available with successful stripe call");
+                return O(f.PaymentGateways.STRIPE, p.id, n, {
+                    billingAddressToken: E,
+                    analyticsLocation: r,
+                    bank: I
+                })
+            }
+            async function g(e, t, n) {
+                if (null == e) throw U("Stripe not loaded");
+                l.default.dispatch({
+                    type: "BILLING_PAYMENT_SOURCE_CREATE_START"
+                });
+                let r = await C(t),
+                    {
+                        email: a,
+                        name: i,
+                        line1: o,
+                        line2: u,
+                        city: s,
+                        state: d,
+                        postalCode: c,
+                        country: _
+                    } = t,
+                    {
+                        paymentMethod: E,
+                        error: I
+                    } = await e.createPaymentMethod({
+                        type: "sofort",
+                        sofort: {
+                            country: _
+                        },
+                        billing_details: {
+                            address: {
+                                line1: o,
+                                line2: u,
+                                city: s,
+                                state: d,
+                                postal_code: c,
+                                country: _
+                            },
+                            name: i,
+                            email: a
+                        }
+                    });
+                if (null != I) throw U(I);
+                if (null == E) throw U("paymentMethod not available with successful stripe call");
+                return O(f.PaymentGateways.STRIPE, E.id, t, {
+                    billingAddressToken: r,
+                    analyticsLocation: n
+                })
+            }
+            async function M(e, t, n, r) {
+                if (null == e || null == t) throw U("Stripe or token not loaded");
+                l.default.dispatch({
+                    type: "BILLING_PAYMENT_SOURCE_CREATE_START"
+                });
+                let a = null;
+                try {
+                    a = await L()
+                } catch (e) {
+                    throw U(e)
+                }
+                let {
+                    name: o,
+                    line1: u,
+                    line2: s,
+                    city: d,
+                    state: c,
+                    postalCode: _,
+                    country: E
+                } = n, I = await C(n), {
+                    setupIntent: p,
+                    error: y
+                } = await e.confirmCardSetup(a, {
+                    payment_method: {
+                        card: {
+                            token: t
+                        },
+                        billing_details: {
+                            address: {
+                                line1: u,
+                                line2: s,
+                                city: d,
+                                state: c,
+                                postal_code: _,
+                                country: E
+                            },
+                            name: o
+                        }
+                    }
+                });
+                if (null != y) throw U(y);
+                if ((null == p ? void 0 : p.payment_method) == null) throw U("setupIntent.payment_method not available with successful stripe call");
+                return i("string" == typeof p.payment_method, "setupIntent.payment_method expanded not supported"), O(f.PaymentGateways.STRIPE, p.payment_method, n, {
+                    billingAddressToken: I,
+                    analyticsLocation: r
+                })
+            }
+
+            function G(e, t, n) {
+                let {
+                    token: r,
+                    billingAddressInfo: a
+                } = y.parseStripePaymentMethod(e);
+                return O(f.PaymentGateways.STRIPE, r, null != t ? t : a, {
+                    analyticsLocation: n
+                })
+            }
+
+            function F(e, t, n) {
+                return O(f.PaymentGateways.BRAINTREE, e, t, {
+                    analyticsLocation: n
+                })
+            }
+            async function Y(e, t, n, r) {
+                if (null == e) throw U("Stripe not loaded");
+                let a = await C(t),
+                    {
+                        name: o,
+                        line1: l,
+                        line2: u,
+                        city: s,
+                        state: d,
+                        postalCode: c,
+                        country: _
+                    } = t,
+                    E = R.STRIPE_PAYMENT_SOURCES.get(n);
+                i(null != E, "unsupported payment method type");
+                let {
+                    paymentMethod: I,
+                    error: p
+                } = await e.createPaymentMethod({
+                    type: E,
+                    billing_details: {
+                        address: {
+                            line1: l,
+                            line2: u,
+                            city: s,
+                            state: d,
+                            postal_code: c,
+                            country: _
+                        },
+                        name: o
+                    }
+                });
+                if (null != p) throw U(p);
+                if (null == I) throw U("stripePaymentMethod not available with successful stripe call");
+                return O(f.PaymentGateways.STRIPE, I.id, t, {
+                    billingAddressToken: a,
+                    analyticsLocation: r
+                })
+            }
+            async function v(e, t, n) {
+                let r = await C(e),
+                    a = {
+                        type: R.ADYEN_PAYMENT_SOURCES.get(t)
+                    };
+                return O(f.PaymentGateways.ADYEN, JSON.stringify(a), e, {
+                    billingAddressToken: r,
+                    analyticsLocation: n
+                })
+            }
+            async function k(e, t, n, r) {
+                var a;
+                let i = await C(e),
+                    d = {
+                        type: R.ADYEN_PAYMENT_SOURCES.get(t),
+                        ...null !== (a = null == r ? void 0 : r.paymentMethod) && void 0 !== a ? a : {}
+                    },
+                    c = await eS(t),
+                    _ = o.default.getAPIBaseURL() + f.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(t, null != c ? c : "", "success");
+                try {
+                    let t = await O(f.PaymentGateways.ADYEN, JSON.stringify(d), e, {
+                        billingAddressToken: i,
+                        analyticsLocation: n,
+                        returnUrl: _
+                    });
+                    return {
+                        paymentSource: t,
+                        redirectConfirmation: !1
+                    }
+                } catch (t) {
+                    if (t.code !== s.ErrorCodes.CONFIRMATION_REQUIRED) throw l.default.dispatch({
+                        type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL",
+                        error: new u.BillingError("Unable to create payment source token: code: ".concat(null == t ? void 0 : t.code, " message: ").concat(null == t ? void 0 : t.message), u.BillingError.ErrorCodes.UNKNOWN)
+                    }), t;
+                    let e = t.fields.adyen_redirect_url;
+                    if (null == e) throw U("redirect url cannot be null on a redirect for adyen.");
+                    return er(e), {
+                        redirectConfirmation: !0
+                    }
+                }
+            }
+            async function V(e) {
+                if (f.VAULTABLE_PAYMENT_SOURCES.has(e.type)) return null;
+                let t = await y.getStripe();
+                if (null == t) throw new u.BillingError("Stripe not loaded", u.BillingError.ErrorCodes.UNKNOWN);
+                let {
+                    email: n,
+                    name: r,
+                    line1: a,
+                    line2: o,
+                    city: l,
+                    state: s,
+                    postalCode: d,
+                    country: c
+                } = e.billingAddress, _ = {
+                    billing_details: {
+                        address: {
+                            line1: a,
+                            line2: o,
+                            city: l,
+                            state: s,
+                            postal_code: d,
+                            country: c
+                        },
+                        name: r
+                    }
+                };
+                switch (e.type) {
+                    case R.PaymentSourceTypes.GIROPAY:
+                        _.type = "giropay";
+                        break;
+                    case R.PaymentSourceTypes.SOFORT:
+                        _.type = "sofort", _.sofort = {
+                            country: null != c ? c : ""
+                        }, _.billing_details.email = n;
+                        break;
+                    case R.PaymentSourceTypes.BANCONTACT:
+                        _.type = "bancontact";
+                        break;
+                    case R.PaymentSourceTypes.IDEAL:
+                        if (null == e.bank) throw new u.BillingError("iDEAL missing bank information", u.BillingError.ErrorCodes.UNKNOWN_PAYMENT_SOURCE);
+                        _.type = "ideal", _.ideal = {
+                            bank: e.bank
+                        };
+                        break;
+                    case R.PaymentSourceTypes.PRZELEWY24:
+                        if (null == e.bank) throw new u.BillingError("p24 missing bank information", u.BillingError.ErrorCodes.UNKNOWN_PAYMENT_SOURCE);
+                        _.type = "p24", _.p24 = {
+                            bank: e.bank
+                        }, _.billing_details.email = e.email;
+                        break;
+                    case R.PaymentSourceTypes.EPS:
+                        if (null == e.bank) throw new u.BillingError("EPS missing bank information", u.BillingError.ErrorCodes.UNKNOWN_PAYMENT_SOURCE);
+                        _.type = "eps", _.eps = {
+                            bank: e.bank
+                        }
+                }
+                i(null != _.type, "unsupported payment method type");
+                let {
+                    paymentMethod: E,
+                    error: I
+                } = await t.createPaymentMethod(_);
+                if (null != I || null == E) throw new u.BillingError("Unable to create payment source token: code: ".concat(null == I ? void 0 : I.code, " message: ").concat(null == I ? void 0 : I.message), u.BillingError.ErrorCodes.UNKNOWN);
+                return E.id
+            }
+
+            function K(e) {
+                return f.VAULTABLE_PAYMENT_SOURCES.has(e.type) ? null : R.ADYEN_PAYMENT_SOURCES.has(e.type) ? h(e) : V(e)
+            }
+            async function H() {
+                try {
+                    let e = o.default.get({
+                        url: f.Endpoints.BILLING_PAYMENT_SOURCES,
+                        oldFormErrors: !0
+                    });
+                    l.default.wait(() => l.default.dispatch({
+                        type: "BILLING_PAYMENT_SOURCES_FETCH_START",
+                        request: e
+                    }));
+                    let t = await e;
+                    return l.default.dispatch({
+                        type: "BILLING_PAYMENT_SOURCES_FETCH_SUCCESS",
+                        paymentSources: t.body
+                    }), t
+                } catch (e) {
+                    throw l.default.dispatch({
+                        type: "BILLING_PAYMENT_SOURCES_FETCH_FAIL"
+                    }), e
+                }
+            }
+            async function x(e) {
+                let t = await o.default.get({
+                    url: f.Endpoints.BILLING_PAYMENT(e)
+                });
+                return l.default.dispatch({
+                    type: "BILLING_PAYMENT_FETCH_SUCCESS",
+                    payment: t.body
+                }), t
+            }
+            async function q() {
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10,
+                    t = arguments.length > 1 ? arguments[1] : void 0;
+                l.default.dispatch({
+                    type: "BILLING_PAYMENTS_FETCH_START"
+                });
+                try {
+                    let n = await o.default.get({
+                        url: f.Endpoints.BILLING_PAYMENTS,
+                        query: {
+                            limit: e,
+                            before: t
+                        },
+                        oldFormErrors: !0
+                    });
+                    return l.default.dispatch({
+                        type: "BILLING_PAYMENTS_FETCH_SUCCESS",
+                        payments: n.body
+                    }), n
+                } catch (e) {
+                    throw l.default.dispatch({
+                        type: "BILLING_PAYMENTS_FETCH_FAIL"
+                    }), e
+                }
+            }
+            async function W() {
+                l.default.wait(() => {
+                    l.default.dispatch({
+                        type: "BILLING_SUBSCRIPTION_FETCH_START"
+                    })
+                });
+                try {
+                    let e = await o.default.get({
+                        url: f.Endpoints.BILLING_SUBSCRIPTIONS,
+                        oldFormErrors: !0
+                    });
+                    if (null == e.body) throw new u.BillingError("response body is null, response: ".concat(JSON.stringify(e)), e.status);
+                    return l.default.dispatch({
+                        type: "BILLING_SUBSCRIPTION_FETCH_SUCCESS",
+                        subscriptions: e.body
+                    }), e
+                } catch (e) {
+                    throw l.default.dispatch({
+                        type: "BILLING_SUBSCRIPTION_FETCH_FAIL"
+                    }), e
+                }
+            }
+            async function Q() {
+                l.default.wait(() => {
+                    l.default.dispatch({
+                        type: "BILLING_PERKS_RELEVANCE_FETCH_START"
+                    })
+                });
+                try {
+                    let e = await o.default.get(f.Endpoints.BILLING_PERKS_RELEVANCE);
+                    l.default.dispatch({
+                        type: "BILLING_PERKS_RELEVANCE_FETCH_SUCCESS",
+                        res: e.body
+                    })
+                } catch (e) {
+                    l.default.dispatch({
+                        type: "BILLING_PERKS_RELEVANCE_FETCH_FAIL"
+                    })
+                }
+            }
+            async function X() {
+                try {
+                    await o.default.get(f.Endpoints.BILLING_NITRO_AFFINITY)
+                } finally {
+                    l.default.dispatch({
+                        type: "BILLING_NITRO_AFFINITY_FETCHED"
+                    })
+                }
+            }
+            async function Z() {
+                l.default.wait(() => {
+                    l.default.dispatch({
+                        type: "BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START"
+                    })
+                });
+                try {
+                    let e = await o.default.get({
+                        url: f.Endpoints.BILLING_SUBSCRIPTIONS,
+                        query: {
+                            include_inactive: !0,
+                            limit: 2,
+                            exclude_unpaid_statuses: !0,
+                            subscription_type: R.SubscriptionTypes.PREMIUM
+                        },
+                        oldFormErrors: !0
+                    });
+                    return e.ok ? (l.default.dispatch({
+                        type: "BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS",
+                        subscription: e.body.length > 0 ? e.body[0] : null
+                    }), l.default.dispatch({
+                        type: "BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS",
+                        subscription: e.body.length > 1 ? e.body[1] : null
+                    })) : l.default.dispatch({
+                        type: "BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_FAIL"
+                    }), e
+                } catch (e) {
+                    l.default.dispatch({
+                        type: "BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_FAIL"
+                    })
+                }
+            }
+            async function z(e) {
+                let {
+                    items: t,
+                    paymentSource: n,
+                    trialId: r,
+                    code: a,
+                    currency: i,
+                    metadata: d,
+                    referralCode: c,
+                    loadId: _
+                } = e;
+                l.default.dispatch({
+                    type: "BILLING_SUBSCRIPTION_UPDATE_START"
+                }), t = (0, I.coerceExistingItemsToNewItemInterval)(t);
+                let y = null;
+                if (null != n && R.ADYEN_PAYMENT_SOURCES.has(n.type)) {
+                    let e = await eS(n.type);
+                    y = o.default.getAPIBaseURL() + f.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(n.type, null != e ? e : "", "success")
+                }
+                try {
+                    let e = await o.default.post({
+                        url: f.Endpoints.BILLING_SUBSCRIPTIONS,
+                        body: {
+                            items: t.map(e => {
+                                let {
+                                    planId: t,
+                                    quantity: n
+                                } = e;
+                                return {
+                                    plan_id: t,
+                                    quantity: n
+                                }
+                            }),
+                            payment_source_id: null != n ? n.id : null,
+                            payment_source_token: null != n ? await K(n) : null,
+                            trial_id: r,
+                            return_url: y,
+                            code: a,
+                            currency: null != n ? i : R.CurrencyCodes.USD,
+                            metadata: d,
+                            gateway_checkout_context: await (0, E.createGatewayCheckoutContext)(n),
+                            purchase_token: (0, p.getPurchaseToken)(),
+                            referral_code: c,
+                            load_id: _
+                        },
+                        oldFormErrors: !0
+                    });
+                    return l.default.dispatch({
+                        type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS",
+                        subscription: e.body
+                    }), {
+                        subscription: e.body,
+                        redirectConfirmation: !1
+                    }
+                } catch (t) {
+                    let e = t instanceof u.BillingError ? t : new u.BillingError(t);
+                    if (e.code !== s.ErrorCodes.CONFIRMATION_REQUIRED) throw l.default.dispatch({
+                        type: "BILLING_SUBSCRIPTION_UPDATE_FAIL",
+                        error: e
+                    }), e;
+                    if (!t.body.payment_id) throw U("payment id cannot be null on redirected confirmations.");
+                    return j(t.body, n)
+                }
+            }
+            async function J(e, t, n, r) {
+                let a = null;
+                if (null != n && R.PREPAID_PAYMENT_SOURCES.has(n.type)) {
+                    let e = await eS(n.type);
+                    a = o.default.getAPIBaseURL() + f.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(n.type, null != e ? e : "", "success")
+                }
+                try {
+                    let i = await o.default.post({
+                        url: f.Endpoints.BILLING_INVOICE_MANUAL_PAYMENT(e.id, t),
+                        body: {
+                            payment_source_id: null != n ? n.id : null,
+                            payment_source_token: null != n ? await K(n) : null,
+                            return_url: a,
+                            currency: r
+                        },
+                        oldFormErrors: !0
+                    });
+                    return l.default.dispatch({
+                        type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS",
+                        subscription: i.body
+                    }), {
+                        subscription: i.body,
+                        redirectConfirmation: f.REDIRECTED_PAYMENT_SOURCES.has(n.type)
+                    }
+                } catch (t) {
+                    let e = t instanceof u.BillingError ? t : new u.BillingError(t);
+                    if (e.code !== s.ErrorCodes.CONFIRMATION_REQUIRED) throw l.default.dispatch({
+                        type: "BILLING_SUBSCRIPTION_UPDATE_FAIL",
+                        error: e
+                    }), e;
+                    if (!t.body.payment_id) throw U("payment id cannot be null on redirected confirmations.");
+                    return j(t.body, n)
+                }
+            }
+
+            function j(e, t) {
+                return null != t && R.ADYEN_PAYMENT_SOURCES.has(t.type) ? $(e.adyen_redirect_url, t) : ee(e.payment_id, t)
+            }
+            async function $(e, t) {
+                if (null == e) throw U("redirect url cannot be null on a redirect for adyen.");
+                if (null == t) throw U("Payment source cannot be null on a redirect.");
+                return f.REDIRECTED_PAYMENT_SOURCES.has(t.type) ? (er(e), {
+                    redirectConfirmation: !0,
+                    redirectURL: e
+                }) : {
+                    redirectConfirmation: !1,
+                    redirectURL: e
+                }
+            }
+            async function ee(e, t) {
+                let n = await y.getStripe();
+                if (null == t) throw U("Payment source cannot be null on a redirect.");
+                let {
+                    clientSecret: r,
+                    paymentMethodId: a
+                } = await m(e);
+                if (null == n) throw U("Stripe cannot be null on a redirect.");
+                if (f.REDIRECTED_PAYMENT_SOURCES.has(t.type)) {
+                    let e = await eS(t.type);
+                    return er(await ei({
+                        stripe: n,
+                        paymentSource: t,
+                        clientSecret: r,
+                        state: e
+                    })), {
+                        redirectConfirmation: !0
+                    }
+                }
+                return await ea({
+                    stripe: n,
+                    clientSecret: r,
+                    paymentMethodId: a,
+                    paymentSource: t
+                }), {
+                    redirectConfirmation: !1
+                }
+            }
+            async function et(e) {
+                var t;
+                let n = await x(e);
+                if ((null == n ? void 0 : n.body) == null) throw U("could not fetch payment");
+                let r = d.default.createFromServer(n.body.payment_source);
+                if (!f.REDIRECTED_PAYMENT_SOURCES.has(r.type)) throw U("unsupported redirect payment source");
+                if ((null == n ? void 0 : null === (t = n.body) || void 0 === t ? void 0 : t.status) === R.PaymentStatusTypes.FAILED) throw U("payment failed");
+                return r.paymentGateway !== f.PaymentGateways.STRIPE || en(e)
+            }
+            async function en(e) {
+                let t = await y.getStripe();
+                if (null == t) throw U("Stripe has not loaded.");
+                if (null == e) throw U("payment intent id cannot be null.");
+                let n = await P(e),
+                    {
+                        paymentIntent: r,
+                        error: a
+                    } = await t.retrievePaymentIntent(n);
+                if (null != a) throw U(a);
+                if (null == r) throw U("paymentIntent not available with successful stripe call");
+                if (null != r.last_payment_error) throw U("unable to retrieve payment intent ".concat(r.last_payment_error));
+                return !0
+            }
+
+            function er(e) {
+                window.open(e)
+            }
+            async function ea(e) {
+                let t, {
+                        stripe: n,
+                        paymentSource: r,
+                        paymentMethodId: a,
+                        clientSecret: i
+                    } = e,
+                    o = {};
+                if (r.type === R.PaymentSourceTypes.SEPA_DEBIT) {
+                    if (null == a) throw U("On a sepa payment payment method id cannot be null");
+                    o.payment_method = a, t = n.confirmSepaDebitPayment
+                } else throw U("Unsupported redirected payment source type.");
+                let {
+                    paymentIntent: l,
+                    error: u
+                } = await t(i, o);
+                if (null != u) throw U(u);
+                if (null == l) throw U("paymentIntent not available with successful stripe call")
+            }
+            async function ei(e) {
+                var t, n;
+                let r, {
+                        stripe: a,
+                        paymentSource: i,
+                        clientSecret: l,
+                        state: u
+                    } = e,
+                    s = {};
+                switch (i.type) {
+                    case R.PaymentSourceTypes.GIROPAY:
+                        s = {
+                            billing_details: {
+                                name: i.billingAddress.name
+                            }
+                        }, r = a.confirmGiropayPayment;
+                        break;
+                    case R.PaymentSourceTypes.BANCONTACT:
+                        s = {
+                            billing_details: {
+                                name: i.billingAddress.name,
+                                email: i.email
+                            }
+                        }, r = a.confirmBancontactPayment;
+                        break;
+                    case R.PaymentSourceTypes.SOFORT:
+                        s = {
+                            sofort: {
+                                country: i.billingAddress.country
+                            },
+                            billing_details: {
+                                name: i.billingAddress.name,
+                                email: i.email
+                            }
+                        }, r = a.confirmSofortPayment;
+                        break;
+                    case R.PaymentSourceTypes.PRZELEWY24:
+                        if (null == i.bank) throw U("PaymentSource (".concat(i.id, ") missing bank info for p24."));
+                        s = {
+                            p24: {
+                                bank: i.bank
+                            },
+                            billing_details: {
+                                name: i.billingAddress.name,
+                                email: i.email
+                            }
+                        }, r = a.confirmP24Payment;
+                        break;
+                    case R.PaymentSourceTypes.EPS:
+                        if (null == i.bank) throw U("PaymentSource (".concat(i.id, ") missing bank info for EPS."));
+                        s = {
+                            eps: {
+                                bank: i.bank
+                            },
+                            billing_details: {
+                                name: i.billingAddress.name
+                            }
+                        }, r = a.confirmEpsPayment;
+                        break;
+                    case R.PaymentSourceTypes.IDEAL:
+                        if (null == i.bank) throw U("PaymentSource (".concat(i.id, ") missing bank info for iDEAL."));
+                        s = {
+                            ideal: {
+                                bank: i.bank
+                            },
+                            billing_details: {
+                                name: i.billingAddress.name
+                            }
+                        }, r = a.confirmIdealPayment;
+                        break;
+                    default:
+                        throw U("Unsupported redirected payment source type.")
+                }
+                let {
+                    paymentIntent: d,
+                    error: c
+                } = await r(l, {
+                    payment_method: s,
+                    return_url: o.default.getAPIBaseURL() + f.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(i.type, null != u ? u : "", "success")
+                }, {
+                    handleActions: !1
+                });
+                if (null != c) throw U(c);
+                if (null == d) throw U("paymentIntent not available with successful api call");
+                if ((null === (n = d.next_action) || void 0 === n ? void 0 : null === (t = n.redirect_to_url) || void 0 === t ? void 0 : t.url) == null) throw U("confirm payment did not return a redirect url");
+                return d.next_action.redirect_to_url.url
+            }
+            async function eo(e, t, n) {
+                l.default.dispatch({
+                    type: "BILLING_SUBSCRIPTION_CANCEL_START"
+                });
+                try {
+                    let r = await o.default.delete({
+                        url: f.Endpoints.BILLING_SUBSCRIPTION(e),
+                        query: {
+                            location: n,
+                            location_stack: t
+                        },
+                        oldFormErrors: !0
+                    });
+                    return l.default.dispatch({
+                        type: "BILLING_SUBSCRIPTION_CANCEL_SUCCESS"
+                    }), r
+                } catch (t) {
+                    let e = new u.BillingError(t);
+                    throw l.default.dispatch({
+                        type: "BILLING_SUBSCRIPTION_CANCEL_FAIL",
+                        error: e
+                    }), e
+                }
+            }
+
+            function el(e, t) {
+                return eu(e, {
+                    items: e.items
+                }, t)
+            }
+            async function eu(e, t, n, r) {
+                if (null != t.paymentSource && null == t.currency) throw Error("Currency must be specified with payment source");
+                l.default.dispatch({
+                    type: "BILLING_SUBSCRIPTION_UPDATE_START"
+                });
+                try {
+                    var a;
+                    let i = {
+                        status: t.status,
+                        payment_source_id: null === (a = t.paymentSource) || void 0 === a ? void 0 : a.id,
+                        payment_source_token: null != t.paymentSource ? await K(t.paymentSource) : null,
+                        currency: t.currency,
+                        gateway_checkout_context: await (0, E.createGatewayCheckoutContext)(t.paymentSource)
+                    };
+                    if (null != t.paymentSource && R.ADYEN_PAYMENT_SOURCES.has(t.paymentSource.type)) {
+                        let e = await eS(t.paymentSource.type);
+                        i.return_url = o.default.getAPIBaseURL() + f.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(t.paymentSource.type, null != e ? e : "", "success")
+                    }
+                    null != t.items && (i.items = (0, I.coerceExistingItemsToNewItemInterval)(t.items).map(e => {
+                        let {
+                            planId: t,
+                            ...n
+                        } = e;
+                        return {
+                            ...n,
+                            plan_id: t
                         }
                     }));
-                    try {
-                        let i = await (0, a.getPaletteForAvatar)(e),
-                            l = (0, s.getComplimentaryPaletteForColor)(i[0]);
-                        c.setState(t => ({
-                            fetching: {
-                                ...t.fetching,
-                                [e]: !1
-                            },
-                            palette: {
-                                ...t.palette,
-                                [e]: [...i.slice(0, 2), ...l]
-                            }
-                        }))
-                    } catch (i) {
-                        c.setState(i => ({
-                            fetching: {
-                                ...i.fetching,
-                                [e]: !1
-                            }
-                        }))
+                    let u = await o.default.patch({
+                        url: f.Endpoints.BILLING_SUBSCRIPTION(e.id),
+                        query: {
+                            location: r,
+                            location_stack: n
+                        },
+                        body: i,
+                        oldFormErrors: !0
+                    });
+                    return l.default.dispatch({
+                        type: "BILLING_SUBSCRIPTION_UPDATE_SUCCESS",
+                        subscription: u.body
+                    }), {
+                        subscription: u.body,
+                        redirectConfirmation: !1
                     }
+                } catch (n) {
+                    let e = n instanceof u.BillingError ? n : new u.BillingError(n);
+                    if (e.code !== s.ErrorCodes.CONFIRMATION_REQUIRED) throw l.default.dispatch({
+                        type: "BILLING_SUBSCRIPTION_UPDATE_FAIL",
+                        error: e
+                    }), e;
+                    if (!n.body.payment_id) throw U("payment id cannot be null on redirected confirmations.");
+                    return j(n.body, t.paymentSource)
                 }
             }
 
-            function p(e, i) {
-                let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                    [t] = _(e, i, l);
-                return t
+            function es(e, t, n, r, a) {
+                return eu(e, {
+                    status: f.SubscriptionStatusTypes.ACTIVE,
+                    paymentSource: n,
+                    currency: r
+                }, t, a)
             }
 
-            function _(e, i) {
-                let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                    n = c(i => null == e ? void 0 : i.palette[e]),
-                    u = (0, o.useStateFromStores)([d.default], () => l && d.default.desaturateUserColors ? d.default.saturation : 1);
-                t.useEffect(() => {
-                    null != e && null == n && m(e)
-                }, [e, n]);
-                let s = t.useMemo(() => null == n ? void 0 : n.map(e => {
-                    let [i, l, t] = e, {
-                        h: n,
-                        s: o,
-                        l: d
-                    } = r({
-                        r: i,
-                        g: l,
-                        b: t
-                    }).toHsl();
-                    return r({
-                        h: n,
-                        s: o * u,
-                        l: d
-                    }).toHexString()
-                }), [n, u]);
-                return null != s ? s : [i, i]
-            }
-        },
-        811907: function(e, i, l) {
-            "use strict";
-            l.r(i), l.d(i, {
-                default: function() {
-                    return t
-                }
-            }), l("222007");
-            var t, n = l("906932"),
-                r = l("315102"),
-                u = l("719923"),
-                o = l("646718");
-
-            function d(e, i) {
-                return null == i || "" === i ? e : i
-            }
-            t = class {
-                get premiumSince() {
-                    return this._userProfile.premiumSince
-                }
-                get premiumGuildSince() {
-                    return this._userProfile.premiumGuildSince
-                }
-                get premiumType() {
-                    return this._userProfile.premiumType
-                }
-                get primaryColor() {
-                    var e, i;
-                    return null !== (i = null === (e = this.themeColors) || void 0 === e ? void 0 : e[0]) && void 0 !== i ? i : this.accentColor
-                }
-                get canUsePremiumProfileCustomization() {
-                    return u.default.isPremiumAtLeast(this.premiumType, o.PremiumTypes.TIER_2)
-                }
-                get canEditThemes() {
-                    return this.canUsePremiumProfileCustomization
-                }
-                get application() {
-                    return this._userProfile.application
-                }
-                hasThemeColors() {
-                    var e, i;
-                    return (null === (e = this.themeColors) || void 0 === e ? void 0 : e[0]) != null || (null === (i = this.themeColors) || void 0 === i ? void 0 : i[1]) != null
-                }
-                hasPremiumCustomization() {
-                    return this.isUsingGuildMemberBanner() || this.isUsingGuildMemberBio() || null != this.banner || this.hasThemeColors() || null != this.popoutAnimationParticleType
-                }
-                hasFullProfile() {
-                    return void 0 !== this._userProfile && (null == this.guildId || void 0 !== this._guildMemberProfile)
-                }
-                isUsingGuildMemberBanner() {
-                    var e;
-                    return (null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.banner) != null
-                }
-                isUsingGuildMemberBio() {
-                    var e, i;
-                    return (null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.bio) != null && (null === (i = this._guildMemberProfile) || void 0 === i ? void 0 : i.bio) !== ""
-                }
-                isUsingGuildMemberPronouns() {
-                    var e, i;
-                    return (null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.pronouns) != null && (null === (i = this._guildMemberProfile) || void 0 === i ? void 0 : i.pronouns) !== ""
-                }
-                getBannerURL(e) {
-                    let {
-                        canAnimate: i,
-                        size: l
-                    } = e;
-                    return null != this.guildId && this.isUsingGuildMemberBanner() ? (0, r.getGuildMemberBannerURL)({
-                        id: this.userId,
-                        guildId: this.guildId,
-                        banner: this.banner,
-                        canAnimate: i,
-                        size: l
-                    }) : (0, r.getUserBannerURL)({
-                        id: this.userId,
-                        banner: this.banner,
-                        canAnimate: i,
-                        size: l
-                    })
-                }
-                getPreviewBanner(e, i) {
-                    let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 480;
-                    return null != e ? e : null === e ? this.isUsingGuildMemberBanner() ? (0, r.getUserBannerURL)({
-                        id: this.userId,
-                        banner: this._userProfile.banner,
-                        canAnimate: i,
-                        size: l
-                    }) : null : this.getBannerURL({
-                        canAnimate: i,
-                        size: 480
-                    })
-                }
-                getPreviewBio(e) {
-                    var i;
-                    return (0, n.getProfilePreviewField)(e, null === (i = this._guildMemberProfile) || void 0 === i ? void 0 : i.bio, this._userProfile.bio, null != this.guildId)
-                }
-                getPreviewThemeColors(e) {
-                    return (null == e ? void 0 : e[0]) != null && (null == e ? void 0 : e[1]) != null ? e : void 0 !== e ? this._userProfile.themeColors : this.themeColors
-                }
-                getBadges() {
-                    var e, i, l;
-                    return [...null !== (i = this._userProfile.badges) && void 0 !== i ? i : [], ...null !== (l = null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.badges) && void 0 !== l ? l : []]
-                }
-                getLegacyUsername() {
-                    return this._userProfile.legacyUsername
-                }
-                constructor(e, i) {
-                    var l, t, n, r;
-                    this.userId = e.userId, this.guildId = null == i ? void 0 : i.guildId, this.banner = null !== (l = null == i ? void 0 : i.banner) && void 0 !== l ? l : e.banner, this.bio = d(e.bio, null == i ? void 0 : i.bio), this.pronouns = d(e.pronouns, null == i ? void 0 : i.pronouns), this.accentColor = e.accentColor, this.themeColors = null !== (t = null == i ? void 0 : i.themeColors) && void 0 !== t ? t : e.themeColors, this.popoutAnimationParticleType = null !== (n = null == i ? void 0 : i.popoutAnimationParticleType) && void 0 !== n ? n : e.popoutAnimationParticleType, this.profileEffectID = null !== (r = null == i ? void 0 : i.profileEffectID) && void 0 !== r ? r : e.profileEffectID, this._userProfile = e, this._guildMemberProfile = i
-                }
-            }
-        },
-        713135: function(e, i, l) {
-            "use strict";
-            l.r(i), l.d(i, {
-                default: function() {
-                    return w
-                }
-            }), l("222007"), l("702976");
-            var t = l("917351"),
-                n = l.n(t),
-                r = l("376556"),
-                u = l("915639"),
-                o = l("766274"),
-                d = l("271938"),
-                s = l("305961"),
-                a = l("824563"),
-                c = l("455079"),
-                f = l("677099");
-            let m = new Set,
-                p = new Set,
-                _ = {},
-                g = {},
-                h = {},
-                v = {},
-                b = {},
-                P = !1;
-
-            function S() {
-                m.clear(), p.clear(), _ = {}, g = {}, h = {}, v = {}, b = {}
+            function ed(e, t, n, r) {
+                let a = (0, I.getItemsWithUpsertedPremiumPlanId)(e, t);
+                return eu(e, {
+                    status: f.SubscriptionStatusTypes.ACTIVE,
+                    items: a
+                }, n, r)
             }
 
-            function E(e) {
+            function ec(e, t, n, r) {
+                return eu(e, {
+                    currency: t
+                }, n, r)
+            }
+
+            function e_(e, t, n, r, a) {
+                return eu(e, {
+                    paymentSource: t,
+                    currency: n
+                }, r, a)
+            }
+
+            function eE() {
+                l.default.dispatch({
+                    type: "BILLING_PAYMENT_SOURCE_UPDATE_CLEAR_ERROR"
+                })
+            }
+
+            function eI() {
+                l.default.dispatch({
+                    type: "BILLING_PAYMENT_SOURCE_REMOVE_CLEAR_ERROR"
+                })
+            }
+
+            function ep() {
+                l.default.dispatch({
+                    type: "PAYMENT_AUTHENTICATION_CLEAR_ERROR"
+                })
+            }
+            async function ey(e) {
+                await o.default.post({
+                    url: f.Endpoints.BILLING_PAYMENTS_VOID(e),
+                    oldFormErrors: !0
+                })
+            }
+            async function ef(e, t) {
+                await o.default.post({
+                    url: f.Endpoints.BILLING_PAYMENTS_REFUND(e),
+                    body: {
+                        reason: t
+                    }
+                })
+            }
+            async function eS(e) {
                 let {
-                    userId: i
-                } = e;
-                p.add(i)
+                    body: {
+                        state: t
+                    }
+                } = await o.default.post({
+                    url: f.Endpoints.BILLING_POPUP_BRIDGE(e),
+                    oldFormErrors: !0
+                });
+                return l.default.dispatch({
+                    type: "BILLING_POPUP_BRIDGE_STATE_UPDATE",
+                    state: t,
+                    paymentSourceType: e
+                }), t
             }
 
-            function C(e) {
+            function eR(e) {
                 let {
-                    userId: i
+                    paymentSourceType: t,
+                    state: n,
+                    path: r,
+                    query: a,
+                    insecure: i
                 } = e;
-                p.delete(i)
+                return l.default.dispatch({
+                    type: "BILLING_POPUP_BRIDGE_CALLBACK_START",
+                    paymentSourceType: t
+                }), o.default.post({
+                    url: f.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK(t),
+                    body: {
+                        state: n,
+                        path: r,
+                        query: a,
+                        insecure: i
+                    },
+                    oldFormErrors: !0
+                }).then(e => (l.default.dispatch({
+                    type: "BILLING_POPUP_BRIDGE_CALLBACK_END",
+                    paymentSourceType: t
+                }), e))
             }
-
-            function I(e) {
-                p.delete(e.userId), h[e.userId] = n(e.mutualFriends).map(e => ({
-                    key: e.id,
-                    user: new o.default(e),
-                    status: a.default.getStatus(e.id)
-                })).sortBy(e => {
-                    let {
-                        user: i
-                    } = e;
-                    return i.username.toLowerCase()
-                }).value(), v[e.userId] = e.mutualFriends.length
+            async function eN() {
+                let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                if (!e && null != c.default.ipCountryCodeRequest) return c.default.ipCountryCodeRequest;
+                try {
+                    let e = o.default.get({
+                        url: f.Endpoints.BILLING_COUNTRY_CODE
+                    });
+                    l.default.wait(() => l.default.dispatch({
+                        type: "BILLING_IP_COUNTRY_CODE_FETCH_START",
+                        request: e
+                    }));
+                    let t = await e,
+                        n = t.body.country_code;
+                    return l.default.dispatch({
+                        type: "BILLING_SET_IP_COUNTRY_CODE",
+                        countryCode: n
+                    }), t
+                } catch (e) {
+                    return l.default.dispatch({
+                        type: "BILLING_IP_COUNTRY_CODE_FAILURE"
+                    }), e
+                }
             }
-
-            function U() {
-                if (0 === Object.keys(b).length) return !1;
-                b = {}
-            }
-
-            function T(e) {
-                if (null == b[e.user.id]) return !1;
-                delete b[e.user.id]
-            }
-
-            function F(e) {
-                var i, l, t, n, u, o, d, a, c, p, h, P, S, E, C, I, U;
-                if (m.delete(e.user.id), null != e.mutual_guilds) {
-                    let i = {};
-                    e.mutual_guilds.forEach(e => {
-                        let {
-                            id: l,
-                            nick: t
-                        } = e, n = s.default.getGuild(l);
-                        null != n && (i[l] = {
-                            guild: n,
-                            nick: t
+            async function eA() {
+                try {
+                    let e = await o.default.get({
+                        url: f.Endpoints.BILLING_LOCALIZED_PROMO
+                    });
+                    if (null != e.body.localized_pricing_promo) {
+                        let t = e.body.localized_pricing_promo;
+                        l.default.dispatch({
+                            type: "BILLING_SET_LOCALIZED_PRICING_PROMO",
+                            localizedPricingPromo: t
                         })
-                    }), b[e.user.id] = f.default.getFlattenedGuildIds().filter(e => null != i[e]).map(e => ({
-                        guild: i[e].guild,
-                        nick: i[e].nick
-                    }))
+                    }
+                    return e
+                } catch (e) {
+                    return l.default.dispatch({
+                        type: "BILLING_LOCALIZED_PRICING_PROMO_FAILURE"
+                    }), e
                 }
-                if (null != e.mutual_friends_count) {
-                    let i = e.mutual_friends_count;
-                    v[e.user.id] = i
+            }
+
+            function eT() {
+                l.default.dispatch({
+                    type: "RESET_PAYMENT_ID"
+                })
+            }
+
+            function eP() {
+                l.default.dispatch({
+                    type: "BILLING_SUBSCRIPTION_RESET"
+                })
+            }
+
+            function em(e) {
+                l.default.dispatch({
+                    type: "USER_PAYMENT_BROWSER_CHECKOUT_STARTED",
+                    loadId: e
+                })
+            }
+        },
+        775433: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                fetchSubscriptionPlansForSKU: function() {
+                    return c
+                },
+                fetchSubscriptionPlansBySKUs: function() {
+                    return _
+                },
+                fetchPremiumSubscriptionPlans: function() {
+                    return E
+                },
+                resetSubscriptionPlanData: function() {
+                    return I
                 }
-                let T = null !== (c = e.premium_since) && void 0 !== c ? c : null,
-                    F = e.application;
-                if (_[e.user.id] = {
-                        userId: e.user.id,
-                        banner: null === (i = e.user_profile) || void 0 === i ? void 0 : i.banner,
-                        accentColor: null === (l = e.user_profile) || void 0 === l ? void 0 : l.accent_color,
-                        themeColors: null === (t = e.user_profile) || void 0 === t ? void 0 : t.theme_colors,
-                        popoutAnimationParticleType: null === (n = e.user_profile) || void 0 === n ? void 0 : n.popout_animation_particle_type,
-                        bio: null !== (p = null === (u = e.user_profile) || void 0 === u ? void 0 : u.bio) && void 0 !== p ? p : "",
-                        profileEffectID: null === (d = e.user_profile) || void 0 === d ? void 0 : null === (o = d.profile_effect) || void 0 === o ? void 0 : o.id,
-                        pronouns: null !== (h = null === (a = e.user_profile) || void 0 === a ? void 0 : a.pronouns) && void 0 !== h ? h : "",
-                        connectedAccounts: null !== (P = e.connected_accounts.filter(e => r.default.isSupported(e.type))) && void 0 !== P ? P : [],
-                        applicationRoleConnections: null !== (S = e.application_role_connections) && void 0 !== S ? S : [],
-                        premiumSince: null != T ? new Date(T) : null,
-                        premiumType: e.premium_type,
-                        premiumGuildSince: null != e.premium_guild_since ? new Date(e.premium_guild_since) : null,
-                        lastFetched: Date.now(),
-                        legacyUsername: e.legacy_username,
-                        profileFetchFailed: !1,
-                        application: null != F ? {
-                            id: F.id,
-                            primarySkuId: F.primary_sku_id,
-                            customInstallUrl: F.custom_install_url,
-                            installParams: F.install_params,
-                            flags: F.flags,
-                            popularApplicationCommandIds: F.popular_application_command_ids
-                        } : null,
-                        badges: e.badges
-                    }, null != e.guild_member_profile) {
+            }), n("222007");
+            var r = n("872717"),
+                a = n("913144"),
+                i = n("333805"),
+                o = n("160299"),
+                l = n("745279"),
+                u = n("850068"),
+                s = n("49111"),
+                d = n("646718");
+            async function c(e, t, n, d, c) {
+                a.default.dispatch({
+                    type: "SUBSCRIPTION_PLANS_FETCH",
+                    skuId: e
+                });
+                try {
                     let i = {
-                        userId: e.user.id,
-                        guildId: e.guild_member_profile.guild_id,
-                        banner: e.guild_member_profile.banner,
-                        accentColor: e.guild_member_profile.accent_color,
-                        themeColors: null === (E = e.guild_member_profile) || void 0 === E ? void 0 : E.theme_colors,
-                        popoutAnimationParticleType: null === (C = e.guild_member_profile) || void 0 === C ? void 0 : C.popout_animation_particle_type,
-                        profileEffectID: null === (U = e.guild_member_profile) || void 0 === U ? void 0 : null === (I = U.profile_effect) || void 0 === I ? void 0 : I.id,
-                        bio: e.guild_member_profile.bio,
-                        pronouns: e.guild_member_profile.pronouns,
-                        badges: e.guild_badges
-                    };
-                    null != g[e.user.id] ? g[e.user.id][e.guild_member_profile.guild_id] = i : g[e.user.id] = {
-                        [e.guild_member_profile.guild_id]: i
-                    }
+                            url: s.Endpoints.STORE_PUBLISHED_LISTINGS_SUBSCRIPTION_PLANS(e),
+                            oldFormErrors: !0
+                        },
+                        l = {};
+                    null != t && (l.country_code = t), null != n && (l.payment_source_id = n), null != d && (l.include_unpublished = d), null != c && (l.revenue_surface = c), i.query = l, !o.default.ipCountryCodeLoaded && await (0, u.fetchIpCountryCode)();
+                    let _ = await r.default.get(i);
+                    a.default.dispatch({
+                        type: "SUBSCRIPTION_PLANS_FETCH_SUCCESS",
+                        skuId: e,
+                        subscriptionPlans: _.body
+                    })
+                } catch (t) {
+                    throw a.default.dispatch({
+                        type: "SUBSCRIPTION_PLANS_FETCH_FAILURE",
+                        skuId: e
+                    }), (0, l.captureBillingException)(t), new i.default(t)
                 }
             }
 
-            function y(e) {
-                let {
-                    userId: i
-                } = e;
-                m.add(i)
+            function _(e, t) {
+                return Promise.all(e.filter(e => e !== d.PremiumSubscriptionSKUs.NONE).map(e => c(e, t)))
             }
 
-            function A(e) {
-                var i;
-                let {
-                    userId: l
-                } = e;
-                _[l] = null !== (i = _[l]) && void 0 !== i ? i : {
-                    connectedAccounts: [],
-                    applicationRoleConnections: [],
-                    premiumSince: null,
-                    premiumGuildSince: null,
-                    lastFetched: Date.now(),
-                    profileFetchFailed: !0,
-                    application: null,
-                    legacyUsername: null,
-                    userId: l,
-                    banner: null,
-                    accentColor: null,
-                    bio: "",
-                    pronouns: ""
-                }, m.delete(l)
+            function E(e, t, n) {
+                return Promise.all(d.ACTIVE_PREMIUM_SKUS.filter(e => e !== d.PremiumSubscriptionSKUs.NONE).map(r => c(r, e, t, void 0, n)))
             }
 
-            function M(e) {
-                return null != e.guild_id ? function(e) {
-                    let {
-                        userId: i,
-                        guild_id: l,
-                        accent_color: t,
-                        banner: n,
-                        bio: r,
-                        pronouns: u,
-                        popout_animation_particle_type: o,
-                        theme_colors: d,
-                        profileEffectID: s
-                    } = e;
-                    if (null == l || null == g[i]) return !1;
-                    let a = g[i][l];
-                    if (null == a) return !1;
-                    g[i][l] = {
-                        ...a,
-                        accentColor: t,
-                        banner: n,
-                        bio: r,
-                        pronouns: u,
-                        popoutAnimationParticleType: o,
-                        themeColors: d,
-                        profileEffectID: s
-                    }
-                }(e) : function(e) {
-                    let {
-                        userId: i,
-                        accent_color: l,
-                        banner: t,
-                        bio: n,
-                        pronouns: r,
-                        popout_animation_particle_type: u,
-                        theme_colors: o,
-                        profileEffectID: d
-                    } = e, s = _[i];
-                    if (null == s) return !1;
-                    _[i] = {
-                        ...s,
-                        accentColor: l,
-                        banner: t,
-                        bio: n,
-                        pronouns: r,
-                        popoutAnimationParticleType: u,
-                        themeColors: o,
-                        profileEffectID: d
-                    }
-                }(e)
+            function I() {
+                a.default.dispatch({
+                    type: "SUBSCRIPTION_PLANS_RESET"
+                })
             }
-
-            function R(e) {
-                P = !0
+        },
+        79489: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return l
+                }
+            });
+            var r = n("888400"),
+                a = n("333805"),
+                i = n("782340");
+            class o extends a.default {
+                _getMessageFromRateLimit(e) {
+                    let t = e.body.retry_after,
+                        n = (0, r.diffAsUnits)(0, 1e3 * t);
+                    return (0, r.unitsAsStrings)(n, {
+                        days: i.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_DAYS,
+                        hours: i.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_HOURS,
+                        minutes: i.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_MINUTES
+                    })
+                }
+                constructor(e, t) {
+                    super(e, t), 429 === this.status && (this.message = this._getMessageFromRateLimit(e))
+                }
             }
-
-            function L(e) {
-                let {
-                    user: i
-                } = e;
-                if (m.has(i.id) || null == _[i.id]) return !1;
-                _[i.id].lastFetched = 0
-            }
-
-            function D() {
-                m.clear(), _ = {}, g = {}
-            }
-            class G extends c.default {
-                isFetchingProfile(e) {
-                    return m.has(e)
-                }
-                isFetchingFriends(e) {
-                    return p.has(e)
-                }
-                getUserProfile(e) {
-                    return _[e]
-                }
-                getGuildMemberProfile(e, i) {
-                    var l;
-                    return null == i ? null : null === (l = g[e]) || void 0 === l ? void 0 : l[i]
-                }
-                getMutualFriends(e) {
-                    return h[e]
-                }
-                getMutualFriendsCount(e) {
-                    return v[e]
-                }
-                getMutualGuilds(e) {
-                    return b[e]
-                }
-                getIsAccessibilityTooltipViewed() {
+            var l = o
+        },
+        736978: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                ErrorCodes: function() {
+                    return r
+                },
+                parseV8BillingAddressSkemaErrorToBillingError: function() {
+                    return A
+                },
+                default: function() {
                     return P
                 }
-                takeSnapshot() {
-                    let e = d.default.getId();
-                    return {
-                        version: G.LATEST_SNAPSHOT_VERSION,
-                        data: [{
-                            userId: e,
-                            profile: _[e]
-                        }]
+            }), n("222007");
+            var r, a, i, o, l, u, s, d, c = n("486196"),
+                _ = n("614247"),
+                E = n("821879"),
+                I = n("333805"),
+                p = n("782340");
+            (l = r || (r = {}))[l.UNKNOWN = 0] = "UNKNOWN", l[l.UNKNOWN_BILLING_PROFILE = 100001] = "UNKNOWN_BILLING_PROFILE", l[l.UNKNOWN_PAYMENT_SOURCE = 100002] = "UNKNOWN_PAYMENT_SOURCE", l[l.UNKNOWN_SUBSCRIPTION = 100003] = "UNKNOWN_SUBSCRIPTION", l[l.ALREADY_SUBSCRIBED = 100004] = "ALREADY_SUBSCRIBED", l[l.INVALID_PLAN = 100005] = "INVALID_PLAN", l[l.PAYMENT_SOURCE_REQUIRED = 100006] = "PAYMENT_SOURCE_REQUIRED", l[l.ALREADY_CANCELED = 100007] = "ALREADY_CANCELED", l[l.INVALID_PAYMENT = 100008] = "INVALID_PAYMENT", l[l.ALREADY_REFUNDED = 100009] = "ALREADY_REFUNDED", l[l.INVALID_BILLING_ADDRESS = 100010] = "INVALID_BILLING_ADDRESS", l[l.ALREADY_PURCHASED = 100011] = "ALREADY_PURCHASED", l[l.NEGATIVE_INVOICE_AMOUNT = 100027] = "NEGATIVE_INVOICE_AMOUNT", l[l.AUTHENTICATION_REQUIRED = 100029] = "AUTHENTICATION_REQUIRED", l[l.SUBSCRIPTION_RENEWAL_IN_PROGRESS = 100042] = "SUBSCRIPTION_RENEWAL_IN_PROGRESS", l[l.CONFIRMATION_REQUIRED = 100047] = "CONFIRMATION_REQUIRED", l[l.CARD_DECLINED = 100054] = "CARD_DECLINED", l[l.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED = 50097] = "INVALID_GIFT_REDEMPTION_FRAUD_REJECTED", l[l.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED = 100056] = "PURCHASE_TOKEN_AUTHORIZATION_REQUIRED", l[l.INVALID_PAYMENT_SOURCE = 50048] = "INVALID_PAYMENT_SOURCE", l[l.INVALID_CURRENCY_FOR_PAYMENT_SOURCE = 100051] = "INVALID_CURRENCY_FOR_PAYMENT_SOURCE", l[l.BILLING_APPLE_SERVER_API_ERROR = 100070] = "BILLING_APPLE_SERVER_API_ERROR", l[l.BILLING_TRIAL_REDEMPTION_DISABLED = 100078] = "BILLING_TRIAL_REDEMPTION_DISABLED", (u = a || (a = {})).CARD_NUMBER = "cardNumber", u.CARD_CVC = "cvc", u.CARD_EXPIRATION_DATE = "expirationDate", u.CARD_NAME = "name", u.ADDRESS_NAME = "name", u.ADDRESS_LINE_1 = "line1", u.ADDRESS_LINE_2 = "line2", u.ADDRESS_CITY = "city", u.ADDRESS_STATE = "state", u.ADDRESS_POSTAL_CODE = "postalCode", u.ADDRESS_COUNTRY = "country", (s = i || (i = {})).ADDRESS_LINE_1 = "address_line1", s.ADDRESS_LINE_2 = "address_line2", s.ADDRESS_CITY = "address_city", s.ADDRESS_STATE = "address_state", s.ADDRESS_ZIP = "address_zip", s.ADDRESS_COUNTRY = "address_country", s.CARD_NUMBER = "number", s.CARD_EXPIRATION_DATE = "exp", s.CARD_EXPIRATION_MONTH = "exp_month", s.CARD_EXPIRATION_YEAR = "exp_year";
+            let y = Object.freeze({
+                    address_line1: "line1",
+                    address_line2: "line2",
+                    address_city: "city",
+                    address_state: "state",
+                    address_zip: "postalCode",
+                    address_country: "country",
+                    number: "cardNumber",
+                    exp: "expirationDate",
+                    exp_month: "expirationDate",
+                    exp_year: "expirationDate"
+                }),
+                f = Object.freeze({
+                    line_1: "line1",
+                    line_2: "line2",
+                    postal_code: "postalCode"
+                });
+            (d = o || (o = {})).CARD = "card", d.ADDRESS = "address";
+            let S = new Set(["cardNumber", "cvc", "expirationDate", "name"]),
+                R = new Set(["cardNumber", "cvc", "expirationDate", "name", "postalCode", "country", "line1", "city", "state"]),
+                N = new Set(["name", "line1", "line2", "city", "state", "postalCode", "country"]);
+
+            function A(e) {
+                var t, n, r, a, i;
+                if ("string" != typeof e && (null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.code) === c.INVALID_FORM_BODY_ERROR_CODE) {
+                    if (!Array.isArray(null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.errors) && (null == e ? void 0 : null === (a = e.body) || void 0 === a ? void 0 : null === (r = a.errors) || void 0 === r ? void 0 : r.billing_address) != null) {
+                        for (let t in e.body.errors.billing_address) {
+                            let n = e.body.errors.billing_address[t];
+                            delete e.body.errors.billing_address[t], e.body.errors[t] = n
+                        }
+                        delete e.body.errors.billing_address
+                    }(null === (i = e.body) || void 0 === i ? void 0 : i.errors) != null && (e.body = (0, _.default)(e.body.errors))
+                }
+                return new T(e)
+            }
+            class T extends I.default {
+                _isInFieldSet(e) {
+                    for (let t in this.fields)
+                        if (e.has(t)) return !0
+                }
+                hasCardError() {
+                    return 2 === (0, E.reducedPaymentInfoExperiment)().bucket ? this._isInFieldSet(R) : this._isInFieldSet(S)
+                }
+                hasAddressError() {
+                    return this._isInFieldSet(N)
+                }
+                constructor(e, t) {
+                    for (let n in super(e, t), this.paymentId = null, 100027 === this.code ? this.message = p.default.Messages.BILLING_ERROR_NEGATIVE_INVOICE_AMOUNT : 50048 === this.code ? this.message = p.default.Messages.BILLING_PAYMENT_SOURCE_INVALID : 100002 === this.code ? this.message = p.default.Messages.BILLING_ERROR_UNKNOWN_PAYMENT_SOURCE : 100042 === this.code ? this.message = p.default.Messages.BILLING_ERROR_PENDING_PAYMENT : 100078 === this.code ? this.message = p.default.Messages.BILLING_TRIAL_REDEMPTION_DISABLED : 429 === this.status ? this.message = p.default.Messages.BILLING_ERROR_RATE_LIMIT : 0 === this.code ? this.message = p.default.Messages.BILLING_ERROR_GENERIC : 400 === this.status && null != this.fields.captcha_key && (this.message = p.default.Messages.BILLING_ERROR_INVALID_CAPTCHA_RESPONSE), this.fields) {
+                        let e = y[n] || f[n];
+                        if (null != e) {
+                            let t = this.fields[n];
+                            delete this.fields[n], this.fields[e] = t
+                        }
+                    }
+                    null != e.body && "string" == typeof e.body.payment_id && (this.paymentId = e.body.payment_id)
+                }
+            }
+            T.ErrorCodes = r, T.Fields = a, T.Sections = o, T.CARD_ERRORS = S, T.ADDRESS_ERRORS = N;
+            var P = T
+        },
+        852766: function(e, t, n) {
+            "use strict";
+            n.r(t), n("736978")
+        },
+        927367: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                UploadErrorCodes: function() {
+                    return a
+                },
+                default: function() {
+                    return o
+                }
+            });
+            var r, a, i = n("782340");
+            (r = a || (a = {}))[r.GENERAL = 0] = "GENERAL", r[r.NO_FILE = 1] = "NO_FILE", r[r.PROGRESS = 2] = "PROGRESS", r[r.UPLOAD = 3] = "UPLOAD", r[r.READ = 4] = "READ";
+            var o = class e {
+                get displayMessage() {
+                    switch (this.code) {
+                        case 1:
+                            return i.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_NO_FILE;
+                        case 2:
+                            return i.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_PROGRESS;
+                        case 3:
+                            return i.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_UPLOAD;
+                        case 4:
+                            return i.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_READ;
+                        default:
+                            return i.default.Messages.UPLOAD_DEBUG_LOG_FAILURE
                     }
                 }
-                constructor() {
-                    super(), this.loadCache = () => {
-                        let e = this.readSnapshot(G.LATEST_SNAPSHOT_VERSION);
-                        null != e && e.forEach(e => {
-                            let {
-                                userId: i,
-                                profile: l
-                            } = e;
-                            _[i] = l
-                        })
-                    }, this.registerActionHandlers({
-                        CACHE_LOADED_LAZY: this.loadCache,
-                        USER_PROFILE_FETCH_START: y,
-                        USER_PROFILE_FETCH_FAILURE: A,
-                        USER_PROFILE_FETCH_SUCCESS: F,
-                        USER_PROFILE_UPDATE_SUCCESS: M,
-                        USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED: R,
-                        MUTUAL_FRIENDS_FETCH_START: E,
-                        MUTUAL_FRIENDS_FETCH_SUCCESS: I,
-                        MUTUAL_FRIENDS_FETCH_FAILURE: C,
-                        GUILD_JOIN: U,
-                        GUILD_DELETE: U,
-                        GUILD_MEMBER_ADD: T,
-                        GUILD_MEMBER_REMOVE: T,
-                        GUILD_MEMBER_UPDATE: L,
-                        USER_UPDATE: L,
-                        LOGOUT: S
-                    }), this.waitFor(f.default), this.syncWith([u.default], D)
+                constructor(e) {
+                    this.code = e
                 }
             }
-            G.displayName = "UserProfileStore", G.LATEST_SNAPSHOT_VERSION = 1;
-            var w = new G
         },
-        506885: function(e, i, l) {
+        448993: function(e, t, n) {
             "use strict";
-            l.r(i), l.d(i, {
-                default: function() {
-                    return c
+            n.r(t), n.d(t, {
+                V6OrEarlierAPIError: function() {
+                    return r.default
+                },
+                APIError: function() {
+                    return a.default
+                },
+                BillingError: function() {
+                    return i.default
+                },
+                AppliedGuildBoostError: function() {
+                    return o.default
+                },
+                UploadVoiceDebugLogsError: function() {
+                    return l.default
+                },
+                UploadErrorCodes: function() {
+                    return l.UploadErrorCodes
                 }
             });
-            var t = l("913144"),
-                n = l("327037"),
-                r = l("462274"),
-                u = l("535013"),
-                o = l("42203"),
-                d = l("26989"),
-                s = l("713135"),
-                a = l("386714");
-            async function c(e, i) {
-                var l, c, f;
-                let m, {
-                    withMutualGuilds: p = !1,
-                    withMutualFriendsCount: _ = !1,
-                    friendToken: g,
-                    preloadUserBanner: h = !0,
-                    dispatchWait: v = !1,
-                    guildId: b,
-                    channelId: P
-                } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                if ("" === e) return;
-                null != i && (0, r.maybeFetchColors)(i), null != b && !p && (p = !0), null != b && (m = null !== (c = null === (l = (0, u.getVisibleConnectionsRole)({
-                    guildMember: d.default.getMember(b, e),
-                    channel: o.default.getChannel(P)
-                })) || void 0 === l ? void 0 : l.id) && void 0 !== c ? c : void 0);
-                let S = s.default.getUserProfile(e),
-                    E = s.default.getMutualGuilds(e),
-                    C = s.default.getMutualFriendsCount(e),
-                    I = s.default.isFetchingProfile(e),
-                    U = (null == S ? void 0 : S.profileFetchFailed) || !I && (!Array.isArray(E) && p || null == C && _),
-                    T = h ? a.default : void 0,
-                    F = !1;
-                if (null != b) {
-                    let i = s.default.getGuildMemberProfile(e, b);
-                    F = null == i
-                }!(!U && !F && (I || Date.now() - (null !== (f = null == S ? void 0 : S.lastFetched) && void 0 !== f ? f : 0) < 6e4)) && (v ? await t.default.wait(() => (0, n.fetchProfile)(e, {
-                    withMutualGuilds: p,
-                    withMutualFriendsCount: _,
-                    friendToken: g,
-                    guildId: b,
-                    connectionsRoleId: m
-                }, T)) : await (0, n.fetchProfile)(e, {
-                    withMutualGuilds: p,
-                    withMutualFriendsCount: _,
-                    friendToken: g,
-                    guildId: b,
-                    connectionsRoleId: m
-                }, T))
-            }
+            var r = n("333805"),
+                a = n("599417"),
+                i = n("736978");
+            n("852766"), n("846071");
+            var o = n("79489"),
+                l = n("927367")
         },
-        386714: function(e, i, l) {
+        422487: function(e, t, n) {
             "use strict";
-            l.r(i), l.d(i, {
-                default: function() {
-                    return r
+            var r, a;
+            n.r(t), n.d(t, {
+                StripeErrorTypes: function() {
+                    return i
                 }
             });
-            var t = l("845579"),
-                n = l("217513");
+            let i = ["api_connection_error", "api_error", "authentication_error", "card_error", "idempotency_error", "invalid_request_error", "rate_limit_error", "validation_error"];
+            (a = r || (r = {})).CREATE = "create", a.CANCEL = "cancel", a.RESUBSCRIBE = "resubscribe", a.CHARGE = "charge"
+        },
+        821879: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                reducedPaymentInfoExperiment: function() {
+                    return i
+                }
+            });
+            var r = n("862205");
+            let a = (0, r.createExperiment)({
+                id: "2023-06_reduced_payment_method_address_info",
+                label: "Reduced Payment Method Address Info",
+                kind: "user",
+                defaultConfig: {
+                    bucket: 0,
+                    enabled: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "Simplify address form",
+                    config: {
+                        bucket: 1,
+                        enabled: !0
+                    }
+                }, {
+                    id: 2,
+                    label: "Partial address in card form",
+                    config: {
+                        bucket: 2,
+                        enabled: !0
+                    }
+                }]
+            });
 
-            function r(e, i) {
-                if ("undefined" == typeof Image) return;
-                let l = (0, n.getDisplayProfile)(e.user.id, i);
-                if (null == l) return;
-                let r = t.GifAutoPlay.getSetting(),
-                    u = l.getBannerURL({
-                        canAnimate: r,
-                        size: 480
-                    });
-                if (null == u) return;
-                let o = new Image;
-                o.src = u
+            function i() {
+                let {
+                    autoTrackExposure: e
+                } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+                    autoTrackExposure: !0
+                }, t = a.getCurrentConfig({
+                    location: "2b69fe_1"
+                }, {
+                    autoTrackExposure: e
+                });
+                return t
             }
         },
-        217513: function(e, i, l) {
+        917219: function(e, t, n) {
             "use strict";
-            l.r(i), l.d(i, {
-                default: function() {
+            var r, a, i, o;
+            n.r(t), n.d(t, {
+                VideoFilterType: function() {
+                    return r
+                },
+                DefaultVideoBackground: function() {
+                    return a
+                },
+                ANIMATED_DEFAULT_VIDEO_BACKGROUNDS: function() {
+                    return l
+                },
+                DEFAULT_VIDEO_BACKGROUND_SORT: function() {
+                    return u
+                },
+                BLUR_BACKGROUND_OPTION: function() {
+                    return s
+                },
+                BACKGROUND_REPLACEMENT_SIZE: function() {
                     return d
                 },
-                getDisplayProfile: function() {
-                    return a
+                MAX_BACKGROUND_IMAGE_UPLOAD_FILESIZE_BYTES: function() {
+                    return c
                 }
-            }), l("222007");
-            var t = l("446674"),
-                n = l("697218"),
-                r = l("117362"),
-                u = l("811907"),
-                o = l("713135");
+            }), n("808653"), (i = r || (r = {}))[i.BACKGROUND = 0] = "BACKGROUND", (o = a || (a = {}))[o.OPTION_1 = 0] = "OPTION_1", o[o.OPTION_2 = 1] = "OPTION_2", o[o.OPTION_3 = 2] = "OPTION_3", o[o.OPTION_4 = 3] = "OPTION_4", o[o.OPTION_7 = 7] = "OPTION_7", o[o.OPTION_8 = 8] = "OPTION_8", o[o.OPTION_9 = 9] = "OPTION_9", o[o.OPTION_10 = 10] = "OPTION_10";
+            let l = [7, 8, 9, 10],
+                u = [7, 8, 9, 10, 0, 1, 2, 3].reduce((e, t, n) => ({
+                    ...e,
+                    [t]: n
+                }), {}),
+                s = "blur",
+                d = {
+                    width: 1280,
+                    height: 720
+                },
+                c = 10485760
+        },
+        224400: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                getPurchaseToken: function() {
+                    return o
+                },
+                getPurchaseTokenHash: function() {
+                    return l
+                }
+            }), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("101997"), n("222007");
+            var r = n("748820"),
+                a = n("95410");
+            let i = "purchase_token";
 
-            function d(e, i) {
-                return (0, t.useStateFromStores)([n.default, o.default], () => a(e, i, [n.default, o.default]))
+            function o() {
+                let e = a.default.get(i);
+                if (null != e && e.expires >= Date.now()) return e.purchaseToken;
+                let t = (0, r.v4)();
+                return a.default.set(i, {
+                    purchaseToken: t,
+                    expires: Date.now() + 5184e6
+                }), t
             }
-            let s = (0, r.cachedFunction)((e, i) => new u.default(e, i));
+            async function l() {
+                let e = new Uint8Array(o().split("").map(e => e.charCodeAt(0))),
+                    t = await window.crypto.subtle.digest({
+                        name: "SHA-256"
+                    }, e);
+                return btoa(String.fromCharCode(...new Uint8Array(t)))
+            }
+        },
+        520713: function(e, t, n) {
+            "use strict";
+            let r;
+            n.r(t), n.d(t, {
+                validateExpiry: function() {
+                    return d
+                },
+                getStripe: function() {
+                    return c
+                },
+                parseStripePaymentMethod: function() {
+                    return _
+                },
+                authenticatePaymentIntentForPaymentId: function() {
+                    return E
+                }
+            }), n("222007");
+            var a, i, o = n("60979"),
+                l = n("872717"),
+                u = n("49111");
+            (i = a || (a = {})).REQUIRES_PAYMENT_METHOD = "requires_payment_method", i.REQUIRES_CONFIRMATION = "requires_confirmation", i.REQUIRES_ACTION = "requires_action", i.PROCESSING = "processing", i.CANCELED = "canceled", i.SUCCEEDED = "succeeded";
+            let s = e => {
+                    let t = t => "You passed an invalid expiration date ".concat(e) + "".concat(null != t ? t : "") + "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`",
+                        n = e.split(/[.\-/\s]+/g);
+                    2 !== n.length && t();
+                    let r = n.map(e => {
+                            let r = parseInt(e);
+                            return isNaN(r) && t("".concat(n, " is not a number.")), r < 1 && t("".concat(r, " is less than one.")), r
+                        }),
+                        [a, i] = r[0] > 12 ? [r[1], r[0]] : [r[0], r[1]];
+                    return a > 12 && t("Month must be a number 1-12, not ".concat(a, ".")), i < 100 && (i += 2e3), [a, i]
+                },
+                d = e => {
+                    let t, n;
+                    try {
+                        [t, n] = s(e)
+                    } catch (e) {
+                        return !1
+                    }
+                    let r = new Date(n, t),
+                        a = new Date;
+                    return r.setMonth(r.getMonth() - 1), r.setMonth(r.getMonth() + 1, 1), r > a
+                };
 
-            function a(e, i) {
-                let [l, t] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [n.default, o.default], r = l.getUser(e), u = t.getUserProfile(e), d = t.getGuildMemberProfile(e, i);
-                return null == r || null == u ? null : s(u, d)
+            function c() {
+                return null != r ? Promise.resolve(r) : (0, o.loadStripe)(u.PaymentSettings.STRIPE.KEY).then(e => (r = e, e))
+            }
+
+            function _(e) {
+                var t, n, r, a, i, o, l, u;
+                let {
+                    billing_details: s
+                } = e, d = null !== (t = s.address) && void 0 !== t ? t : {}, c = {
+                    name: null !== (n = s.name) && void 0 !== n ? n : "",
+                    line1: null !== (r = d.line1) && void 0 !== r ? r : "",
+                    line2: null !== (a = d.line2) && void 0 !== a ? a : "",
+                    city: null !== (i = d.city) && void 0 !== i ? i : "",
+                    state: null !== (o = d.state) && void 0 !== o ? o : "",
+                    country: null !== (l = d.country) && void 0 !== l ? l : "",
+                    postalCode: null !== (u = d.postal_code) && void 0 !== u ? u : ""
+                };
+                return {
+                    token: e.id,
+                    billingAddressInfo: c
+                }
+            }
+            async function E(e) {
+                try {
+                    let t = await l.default.get({
+                            url: u.Endpoints.BILLING_STRIPE_PAYMENT_INTENTS(e),
+                            oldFormErrors: !0
+                        }),
+                        {
+                            stripe_payment_intent_client_secret: n
+                        } = t.body,
+                        r = await c();
+                    if (null == r) return {
+                        error: "unable to load stripe"
+                    };
+                    let {
+                        error: a,
+                        paymentIntent: i
+                    } = await r.retrievePaymentIntent(n);
+                    if (null != a) return {
+                        error: a.message
+                    };
+                    if (null == i) return {
+                        error: "payment intent does not exist"
+                    };
+                    let o = {};
+                    switch ("requires_payment_method" === i.status && null != i.last_payment_error && null != i.last_payment_error.payment_method && (o.payment_method = i.last_payment_error.payment_method.id), i.status) {
+                        case "requires_payment_method":
+                        case "requires_confirmation":
+                        case "requires_action":
+                            let {
+                                error: s
+                            } = await r.confirmCardPayment(n, o);
+                            if (null != s) return {
+                                error: s.message
+                            };
+                            return {};
+                        case "succeeded":
+                        case "processing":
+                            return {};
+                        default:
+                            return {
+                                error: "Invalid Payment Intent status: ".concat(i.status)
+                            }
+                    }
+                } catch (e) {
+                    return {
+                        error: e.message
+                    }
+                }
             }
         }
     }
