@@ -6726,12 +6726,11 @@
             function b(e) {
                 let {
                     guild: t,
-                    channel: n,
-                    caretPosition: a = "left"
-                } = e, l = (0, r.useStateFromStores)([g.default], () => g.default.getGuildId());
-                return l !== v.FAVORITES || null == t ? null : (0, s.jsxs)("div", {
+                    channel: n
+                } = e, a = (0, r.useStateFromStores)([g.default], () => g.default.getGuildId());
+                return a !== v.FAVORITES || null == t ? null : (0, s.jsxs)("div", {
                     className: x.guildBreadcrumbContainer,
-                    children: ["left" === a && (0, s.jsx)(N.default.Caret, {
+                    children: [(0, s.jsx)(N.default.Caret, {
                         direction: "left"
                     }), (0, s.jsx)(A.default, {
                         guild: t,
@@ -6744,8 +6743,6 @@
                         },
                         className: i(x.parentChannelName, x.cursorPointer),
                         children: t.name
-                    }), "right" === a && (0, s.jsx)(N.default.Caret, {
-                        direction: "right"
                     })]
                 })
             }
