@@ -343,27 +343,28 @@
                         channel: t,
                         onClose: s,
                         onConfirm: _,
-                        transitionState: p
-                    } = e, M = (0, r.default)(t, !0), x = t.id, R = t.isForumPost(), I = (0, n.useStateFromStores)([g.default], () => g.default.getGuild(t.getGuildId())), A = (0, h.useGuildChannelScheduledEvents)(x), O = t.guild_id === S.FAVORITES, {
+                        transitionState: p,
+                        isFavorites: M
+                    } = e, x = (0, r.default)(t, !0), R = t.id, I = t.isForumPost(), A = (0, n.useStateFromStores)([g.default], () => g.default.getGuild(t.getGuildId())), O = (0, h.useGuildChannelScheduledEvents)(R), {
                         isSubscriptionGated: L
-                    } = (0, u.default)(t.id), v = (0, c.default)(I, t), [j, D] = a.useState(null), y = (0, n.useStateFromStores)([m.default], () => t.isOwner(m.default.getId()), [t]), F = (0, n.useStateFromStores)([T.default], () => T.default.can(t.isThread() ? S.Permissions.MANAGE_THREADS : S.Permissions.MANAGE_CHANNELS, t), [t]), b = (0, n.useStateFromStores)([f.default], () => {
+                    } = (0, u.default)(t.id), v = (0, c.default)(A, t), [j, D] = a.useState(null), y = (0, n.useStateFromStores)([m.default], () => t.isOwner(m.default.getId()), [t]), F = (0, n.useStateFromStores)([T.default], () => T.default.can(t.isThread() ? S.Permissions.MANAGE_THREADS : S.Permissions.MANAGE_CHANNELS, t), [t]), b = (0, n.useStateFromStores)([f.default], () => {
                         var e;
                         return null !== (e = f.default.getCount(t.id)) && void 0 !== e ? e : 0
-                    }, [t.id]), P = R && (F || y && b < 1), H = A.length > 0 && (t.type === S.ChannelTypes.GUILD_VOICE || t.type === S.ChannelTypes.GUILD_STAGE_VOICE);
+                    }, [t.id]), P = I && (F || y && b < 1), H = O.length > 0 && (t.type === S.ChannelTypes.GUILD_VOICE || t.type === S.ChannelTypes.GUILD_STAGE_VOICE);
                     if (a.useEffect(() => {
                             (async () => {
-                                let e = await (0, o.isDefaultChannelThresholdMetAfterDelete)(t.getGuildId(), x);
+                                let e = await (0, o.isDefaultChannelThresholdMetAfterDelete)(t.getGuildId(), R);
                                 if (!e) {
                                     D("default");
                                     return
                                 }
-                                let s = await (0, d.getBlockForChannelDeletion)(t.getGuildId(), x);
+                                let s = await (0, d.getBlockForChannelDeletion)(t.getGuildId(), R);
                                 if (!1 !== s) {
                                     D(s);
                                     return
                                 }
                             })()
-                        }, [t, x]), null != j) {
+                        }, [t, R]), null != j) {
                         let e;
                         let t = N.default.Messages.DELETE_DEFAULT_CHANNEL_BODY;
                         return e = "todo" === j ? N.default.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_TODO : "resource" === j ? N.default.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_RESOURCE : N.default.Messages.DESIGNATE_OTHER_CHANNEL_ONBOARDING, (0, l.jsxs)(i.ModalRoot, {
@@ -384,7 +385,7 @@
                                     variant: "text-md/normal",
                                     children: e.format({
                                         onClick: () => {
-                                            null != I && (E.default.open(I.id, S.GuildSettingsSections.ONBOARDING), null == s || s())
+                                            null != A && (E.default.open(A.id, S.GuildSettingsSections.ONBOARDING), null == s || s())
                                         }
                                     })
                                 })]
@@ -396,9 +397,9 @@
                             })]
                         })
                     }
-                    if (null == I) return null;
-                    if (I.hasFeature(S.GuildFeatures.COMMUNITY) && (I.rulesChannelId === x || I.publicUpdatesChannelId === x)) {
-                        let e = I.rulesChannelId === x,
+                    if (null == A) return null;
+                    if (A.hasFeature(S.GuildFeatures.COMMUNITY) && (A.rulesChannelId === R || A.publicUpdatesChannelId === R)) {
+                        let e = A.rulesChannelId === R,
                             t = e ? N.default.Messages.DELETE_RULES_CHANNEL_BODY : N.default.Messages.DELETE_UPDATES_CHANNEL_BODY;
                         return (0, l.jsxs)(i.ModalRoot, {
                             transitionState: p,
@@ -419,7 +420,7 @@
                                     className: C.modalText,
                                     children: N.default.Messages.DESIGNATE_OTHER_CHANNEL.format({
                                         onClick: () => {
-                                            E.default.open(I.id, S.GuildSettingsSections.COMMUNITY), null == s || s()
+                                            E.default.open(A.id, S.GuildSettingsSections.COMMUNITY), null == s || s()
                                         }
                                     })
                                 })]
@@ -437,37 +438,41 @@
                         } = (() => {
                             if (t.type === S.ChannelTypes.GUILD_CATEGORY) return {
                                 deleteText: N.default.Messages.DELETE_CATEGORY,
-                                deleteBody: O ? N.default.Messages.DELETE_CHANNEL_BODY_FAVORITES.format({
-                                    channelName: M
+                                deleteBody: M ? N.default.Messages.DELETE_CATEGORY_BODY_FAVORITES.format({
+                                    channelName: x
                                 }) : N.default.Messages.DELETE_CHANNEL_BODY.format({
-                                    channelName: M
+                                    channelName: x
                                 })
                             };
                             if (t.isForumPost()) return {
                                 deleteText: P ? N.default.Messages.DELETE_FORUM_POST : N.default.Messages.DELETE_MESSAGE,
                                 deleteBody: P && y && !F ? N.default.Messages.DELETE_FORUM_POST_OP_CONFIRM_BODY.format({
-                                    postName: M
+                                    postName: x
                                 }) : P ? N.default.Messages.DELETE_FORUM_POST_CONFIRM_BODY.format({
-                                    postName: M
+                                    postName: x
                                 }) : N.default.Messages.DELETE_FORUM_POST_OP_WITH_REPLIES_CONFIRM_BODY
                             };
                             if (t.isThread()) return {
                                 deleteText: N.default.Messages.DELETE_THREAD,
-                                deleteBody: N.default.Messages.DELETE_CHANNEL_BODY.format({
-                                    channelName: M
+                                deleteBody: M ? N.default.Messages.DELETE_CHANNEL_BODY_FAVORITES.format({
+                                    channelName: x
+                                }) : N.default.Messages.DELETE_CHANNEL_BODY.format({
+                                    channelName: x
                                 })
                             };
                             else if (L && v > 0) return {
                                 deleteText: N.default.Messages.DELETE_CHANNEL,
                                 deleteBody: N.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_DELETE_CHANNEL_BODY.format({
-                                    channelName: M,
+                                    channelName: x,
                                     numGuildRoleSubscriptionMembers: v
                                 })
                             };
                             return {
                                 deleteText: N.default.Messages.DELETE_CHANNEL,
-                                deleteBody: N.default.Messages.DELETE_CHANNEL_BODY.format({
-                                    channelName: M
+                                deleteBody: M ? N.default.Messages.DELETE_CHANNEL_BODY_FAVORITES.format({
+                                    channelName: x
+                                }) : N.default.Messages.DELETE_CHANNEL_BODY.format({
+                                    channelName: x
                                 })
                             }
                         })();
@@ -491,7 +496,7 @@
                                     color: "header-secondary",
                                     className: C.warningText,
                                     children: N.default.Messages.GUILD_EVENT_CHANNEL_DELETE_GUILD_EVENTS.format({
-                                        count: A.length
+                                        count: O.length
                                     })
                                 }) : null]
                             }), (0, l.jsxs)(i.ModalFooter, {

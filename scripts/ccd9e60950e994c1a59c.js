@@ -295,7 +295,8 @@
                             onConfirm: () => {
                                 n.onClose(), (0, l.removeFavoriteCategory)(e.id)
                             },
-                            channel: e
+                            channel: e,
+                            isFavorites: !0
                         })
                     })
                 })

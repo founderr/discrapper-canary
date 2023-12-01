@@ -200,6 +200,10 @@
             "use strict";
             e.exports = n.p + "b873355451ce01e40054.png"
         },
+        811982: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "0af0937bdb9bd0b13b86.png"
+        },
         476742: function(e, t, n) {
             "use strict";
             e.exports = n.p + "82012659f3d934de21a4.png"
@@ -1742,7 +1746,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "250687"
+                        buildNumber: "250689"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -12484,7 +12488,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return _
                 }
             });
             var a = n("37983");
@@ -12498,13 +12502,13 @@
                 d = n("49111"),
                 c = n("782340"),
                 E = n("608284"),
-                f = () => {
+                f = n("811982"),
+                _ = () => {
                     let {
                         analyticsLocations: e
                     } = (0, i.default)(l.default.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP);
                     return (0, a.jsx)(r.default, {
                         dismissibleContent: s.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK,
-                        shouldUseHorizontalButtons: !0,
                         inlineArt: !0,
                         tryItText: c.default.Messages.CHECK_IT_OUT,
                         onTryFeature: () => {
@@ -12516,12 +12520,13 @@
                         },
                         header: c.default.Messages.COLLECTIBLES_GIFT_COACHMARK_HEADING,
                         body: c.default.Messages.COLLECTIBLES_GIFT_COACHMARK_DESC,
-                        dismissText: c.default.Messages.BACK,
+                        dismissText: c.default.Messages.EDUCATION_NEW_FEATURE_DISMISS,
                         position: "right",
                         align: "top",
-                        art: (0, a.jsx)("div", {
+                        art: (0, a.jsx)("img", {
                             className: E.art,
-                            children: c.default.Messages.COLLECTIBLES_SHOP_FOR_ALL_NITRO_ONLY_COACHMARK_ART
+                            src: f,
+                            alt: ""
                         })
                     })
                 }
@@ -12728,7 +12733,6 @@
                     g.current = 2, O(2)
                 }, 0 === g.current ? 3e3 : null), (0, l.jsx)(_.default, {
                     dismissibleContent: o.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_NITRO_ONLY_COACHMARK,
-                    shouldUseHorizontalButtons: !0,
                     inlineArt: !0,
                     className: 0 === R ? S.loading : S.coachmark,
                     artClassName: S.shopArt,
@@ -12761,7 +12765,7 @@
                             })]
                         })]
                     }),
-                    dismissText: T.default.Messages.BACK,
+                    dismissText: T.default.Messages.EDUCATION_NEW_FEATURE_DISMISS,
                     position: "right",
                     align: "top",
                     art: (0, l.jsx)("img", {

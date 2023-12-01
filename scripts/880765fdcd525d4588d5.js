@@ -1791,8 +1791,11 @@
         972701: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                default: function() {
+                useAddToFavoritesItem: function() {
                     return C
+                },
+                useRemoveFromFavoritesItem: function() {
+                    return E
                 }
             });
             var i = n("37983");
@@ -1811,41 +1814,52 @@
             }
 
             function C(e) {
-                var t;
-                let n = (0, l.useStateFromStores)([a.default], () => a.default.isFavorite(e.id)),
-                    c = function(e) {
-                        let t = (0, l.useStateFromStores)([s.default], () => s.default.getChannels(d.FAVORITES))[d.ChannelTypes.GUILD_CATEGORY].filter(e => "null" !== e.channel.id),
-                            {
-                                favoritesEnabled: n
-                            } = (0, o.useFavoritesServerExperiment)("58e21a_1");
-                        if (!n) return null;
+                let t = (0, l.useStateFromStores)([s.default], () => s.default.getChannels(d.FAVORITES))[d.ChannelTypes.GUILD_CATEGORY].filter(e => "null" !== e.channel.id),
+                    {
+                        favoritesEnabled: n
+                    } = (0, o.useFavoritesServerExperiment)("58e21a_1"),
+                    c = (0, l.useStateFromStores)([a.default], () => a.default.isFavorite(e.id));
+                if (__OVERLAY__ || c || !n) return null;
 
-                        function a(t) {
-                            (0, u.addFavoriteChannel)(e.id, t)
-                        }
-                        return 0 === t.length ? (0, i.jsx)(r.MenuItem, {
-                            id: "favorite-channel",
-                            label: f(e, !1),
-                            action: () => a(null)
-                        }) : (0, i.jsx)(r.MenuItem, {
-                            id: "favorite-channel",
-                            label: f(e, !1),
-                            action: () => a(null),
-                            children: t.map(e => (0, i.jsx)(r.MenuItem, {
-                                id: "favorite-".concat(e.channel.id),
-                                label: e.channel.name,
-                                action: () => a(e.channel.id)
-                            }, e.channel.id))
-                        })
-                    }(e);
-                let C = (t = e, (0, i.jsx)(r.MenuItem, {
+                function C(t) {
+                    (0, u.addFavoriteChannel)(e.id, t)
+                }
+                return 0 === t.length ? (0, i.jsx)(r.MenuItem, {
                     id: "favorite-channel",
-                    label: f(t, !0),
-                    action: function() {
-                        (0, u.removeFavoriteChannel)(t.id)
-                    }
-                }));
-                return __OVERLAY__ ? null : n ? C : c
+                    label: f(e, !1),
+                    action: () => C(null)
+                }) : (0, i.jsx)(r.MenuItem, {
+                    id: "favorite-channel",
+                    label: f(e, !1),
+                    action: () => C(null),
+                    children: t.map(e => (0, i.jsx)(r.MenuItem, {
+                        id: "favorite-".concat(e.channel.id),
+                        label: e.channel.name,
+                        action: () => C(e.channel.id)
+                    }, e.channel.id))
+                })
+            }
+
+            function E(e) {
+                let t = (0, l.useStateFromStores)([a.default], () => a.default.isFavorite(e.id));
+                return __OVERLAY__ || !t ? null : (0, i.jsx)(r.MenuItem, {
+                    id: "favorite-channel",
+                    label: f(e, !0),
+                    color: "danger",
+                    action: () => (0, r.openModalLazy)(async () => {
+                        let {
+                            default: t
+                        } = await n.el("575351").then(n.bind(n, "575351"));
+                        return n => (0, i.jsx)(t, {
+                            ...n,
+                            onConfirm: () => {
+                                n.onClose(), (0, u.removeFavoriteChannel)(e.id)
+                            },
+                            channel: e,
+                            isFavorites: !0
+                        })
+                    })
+                })
             }
         },
         390008: function(e, t, n) {
@@ -3807,27 +3821,27 @@
                         channel: n,
                         guildId: void 0,
                         onShow: B
-                    }), ef = (0, p.default)(n), eC = (0, I.default)(n), eE = (0, T.useMessageRequestItem)(n), eh = (0, N.useSafetyWarningsItem)(n), e_ = n.isManaged(), ep = t.isNonUserBot();
+                    }), ef = (0, p.useAddToFavoritesItem)(n), eC = (0, p.useRemoveFromFavoritesItem)(n), eE = (0, I.default)(n), eh = (0, T.useMessageRequestItem)(n), e_ = (0, N.useSafetyWarningsItem)(n), ep = n.isManaged(), eI = t.isNonUserBot();
                     return (0, i.jsxs)(l.Menu, {
                         navId: "user-context",
                         onClose: r.closeContextMenu,
                         "aria-label": w.default.Messages.USER_ACTIONS_MENU_LABEL,
                         onSelect: V,
                         children: [(0, i.jsx)(l.MenuGroup, {
-                            children: !ep && es
-                        }), (0, i.jsx)(l.MenuGroup, {
-                            children: eE
+                            children: !eI && es
                         }), (0, i.jsx)(l.MenuGroup, {
                             children: eh
-                        }), (0, i.jsxs)(l.MenuGroup, {
-                            children: [ef, eC]
                         }), (0, i.jsx)(l.MenuGroup, {
-                            children: !ep && eo
+                            children: e_
                         }), (0, i.jsxs)(l.MenuGroup, {
-                            children: [!ep && (0, i.jsxs)(i.Fragment, {
-                                children: [F && k, Y, !e_ && J, F && Z, F && z, W]
+                            children: [ef, eE]
+                        }), (0, i.jsx)(l.MenuGroup, {
+                            children: !eI && eo
+                        }), (0, i.jsxs)(l.MenuGroup, {
+                            children: [!eI && (0, i.jsxs)(i.Fragment, {
+                                children: [F && k, Y, !ep && J, F && Z, F && z, W]
                             }), K]
-                        }), !ep && (0, i.jsxs)(i.Fragment, {
+                        }), !eI && (0, i.jsxs)(i.Fragment, {
                             children: [(0, i.jsx)(l.MenuGroup, {
                                 children: d && X
                             }), (0, i.jsx)(l.MenuGroup, {
@@ -3839,6 +3853,8 @@
                             }), b && (0, i.jsxs)(l.MenuGroup, {
                                 children: [eu, ea]
                             })]
+                        }), (0, i.jsx)(l.MenuGroup, {
+                            children: eC
                         }), (0, i.jsxs)(l.MenuGroup, {
                             children: [el, !j && er]
                         })]

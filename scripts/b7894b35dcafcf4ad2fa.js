@@ -123,8 +123,8 @@
                 N = n("305961"),
                 g = n("957255"),
                 M = n("824563"),
-                y = n("27618"),
-                v = n("18494"),
+                v = n("27618"),
+                y = n("18494"),
                 O = n("101125"),
                 h = n("697218"),
                 C = n("800762"),
@@ -133,12 +133,12 @@
                 U = n("550766"),
                 b = n("191225"),
                 R = n("706508"),
-                G = n("612696"),
-                F = n("871388"),
+                F = n("612696"),
+                G = n("871388"),
                 x = n("152311"),
                 j = n("407908"),
-                D = n("698372"),
-                V = n("141962"),
+                V = n("698372"),
+                D = n("141962"),
                 Y = n("954016"),
                 P = n("49111"),
                 H = n("450484"),
@@ -155,7 +155,7 @@
                         } = e;
                         return n.has(t.id)
                     }) : n
-                }, [t, e]), W = (0, D.default)(), Q = (0, i.useStateFromStores)([g.default], () => null == e || e.isPrivate() || g.default.can(P.Permissions.SEND_MESSAGES, e), [e]), q = (0, i.useStateFromStoresArray)([m.default], () => [...z.map(e => null != e.application_id && m.default.getState(e.application_id, P.ActivityActionTypes.JOIN) === P.ActivityActionStates.LOADING), ...K.map(e => m.default.getState(e.application_id, P.ActivityActionTypes.JOIN) === P.ActivityActionStates.LOADING)], [z, K]), Z = (0, r.default)([...z.filter(e => (null == e ? void 0 : e.application_id) != null).map(e => e.application_id), ...K.map(e => e.application_id)]), $ = null == e ? void 0 : e.id, ee = (0, i.useStateFromStoresArray)([T.default, N.default, p.default, y.default, v.default, C.default, g.default], () => [...z.map(e => (0, G.default)({
+                }, [t, e]), W = (0, V.default)(), Q = (0, i.useStateFromStores)([g.default], () => null == e || e.isPrivate() || g.default.can(P.Permissions.SEND_MESSAGES, e), [e]), q = (0, i.useStateFromStoresArray)([m.default], () => [...z.map(e => null != e.application_id && m.default.getState(e.application_id, P.ActivityActionTypes.JOIN) === P.ActivityActionStates.LOADING), ...K.map(e => m.default.getState(e.application_id, P.ActivityActionTypes.JOIN) === P.ActivityActionStates.LOADING)], [z, K]), Z = (0, r.default)([...z.filter(e => (null == e ? void 0 : e.application_id) != null).map(e => e.application_id), ...K.map(e => e.application_id)]), $ = null == e ? void 0 : e.id, ee = (0, i.useStateFromStoresArray)([T.default, N.default, p.default, v.default, y.default, C.default, g.default], () => [...z.map(e => (0, F.default)({
                     user: null != t ? t : k,
                     activity: e,
                     application: Z.find(t => (null == t ? void 0 : t.id) === e.application_id),
@@ -165,11 +165,11 @@
                     ChannelStore: T.default,
                     GuildStore: N.default,
                     GuildMemberCountStore: p.default,
-                    RelationshipStore: y.default,
-                    SelectedChannelStore: v.default,
+                    RelationshipStore: v.default,
+                    SelectedChannelStore: y.default,
                     VoiceStateStore: C.default,
                     PermissionStore: g.default
-                })), ...K.map(e => (0, G.default)({
+                })), ...K.map(e => (0, F.default)({
                     user: null != t ? t : k,
                     activity: e,
                     application: Z.find(t => (null == t ? void 0 : t.id) === e.application_id),
@@ -179,8 +179,8 @@
                     ChannelStore: T.default,
                     GuildStore: N.default,
                     GuildMemberCountStore: p.default,
-                    RelationshipStore: y.default,
-                    SelectedChannelStore: v.default,
+                    RelationshipStore: v.default,
+                    SelectedChannelStore: y.default,
                     VoiceStateStore: C.default,
                     PermissionStore: g.default
                 }))], [z, Z, $, k, K, t]), et = (0, i.useStateFromStoresArray)([c.default, A.default], () => z.map(e => e.type === P.ActivityTypes.LISTENING && null != t ? (0, I.default)(c.default, A.default, t, e) : void 0), [t, z]), en = (0, s.useAnalyticsContext)();
@@ -237,10 +237,10 @@
                             userId: t.id,
                             sessionId: e.session_id,
                             applicationId: e.application_id,
-                            channelId: v.default.getVoiceChannelId(),
+                            channelId: y.default.getVoiceChannelId(),
                             messageId: null,
                             intent: Y.ActivityIntent.PLAY,
-                            embedded: (0, F.default)(e, P.ActivityFlags.EMBEDDED)
+                            embedded: (0, G.default)(e, P.ActivityFlags.EMBEDDED)
                         }), (0, j.default)({
                             type: P.AnalyticsGameOpenTypes.JOIN,
                             userId: t.id,
@@ -255,7 +255,7 @@
                             currentEmbeddedApplication: W,
                             activityChannelId: null == e ? void 0 : e.id,
                             locationObject: en.location,
-                            embeddedActivitiesManager: V.default,
+                            embeddedActivitiesManager: D.default,
                             analyticsLocations: J
                         })
                     }, ed = [];
@@ -271,19 +271,19 @@
                         }
                     }, "self-embedded-".concat(n.application_id)))
                 }), B.forEach((e, t) => {
-                    e.type === P.ActivityTypes.PLAYING && (0, F.default)(e, P.ActivityFlags.JOIN) ? ed.push((0, a.jsx)(l.MenuItem, {
+                    e.type === P.ActivityTypes.PLAYING && (0, G.default)(e, P.ActivityFlags.JOIN) ? ed.push((0, a.jsx)(l.MenuItem, {
                         id: "invite-to-join",
                         label: w.default.Messages.USER_ACTIVITY_ACTION_INVITE_TO_JOIN,
                         subtext: e.name,
                         action: () => ea(P.ActivityActionTypes.JOIN, e)
-                    }, "self".concat(t))) : e.type === P.ActivityTypes.LISTENING && (0, F.default)(e, P.ActivityFlags.SYNC) && ed.push((0, a.jsx)(l.MenuItem, {
+                    }, "self".concat(t))) : e.type === P.ActivityTypes.LISTENING && (0, G.default)(e, P.ActivityFlags.SYNC) && ed.push((0, a.jsx)(l.MenuItem, {
                         id: "invite-to-listen",
                         label: w.default.Messages.USER_ACTIVITY_ACTION_INVITE_TO_LISTEN_ALONG,
                         subtext: e.name,
                         action: () => ea(P.ActivityActionTypes.LISTEN, e)
                     }, "self".concat(t)))
                 }), ed.length > 0 && ed.push((0, a.jsx)(l.MenuSeparator, {})), z.forEach((n, i) => {
-                    if (n.type === P.ActivityTypes.PLAYING && (0, F.default)(n, P.ActivityFlags.JOIN) && null != n.session_id && null != n.application_id) {
+                    if (n.type === P.ActivityTypes.PLAYING && (0, G.default)(n, P.ActivityFlags.JOIN) && null != n.session_id && null != n.application_id) {
                         if (ee[i]) {
                             let e = q[i];
                             ed.push((0, a.jsx)(l.MenuItem, {
@@ -302,7 +302,7 @@
                             subtext: n.name,
                             action: () => ea(P.ActivityActionTypes.JOIN_REQUEST, n)
                         }, i))
-                    } else if (n.type === P.ActivityTypes.LISTENING && (0, F.default)(n, P.ActivityFlags.SYNC) && null != et[i]) {
+                    } else if (n.type === P.ActivityTypes.LISTENING && (0, G.default)(n, P.ActivityFlags.SYNC) && null != et[i]) {
                         let u = et[i],
                             {
                                 notPlayable: d,
@@ -670,8 +670,11 @@
         972701: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                default: function() {
+                useAddToFavoritesItem: function() {
                     return _
+                },
+                useRemoveFromFavoritesItem: function() {
+                    return I
                 }
             });
             var a = n("37983");
@@ -690,41 +693,52 @@
             }
 
             function _(e) {
-                var t;
-                let n = (0, i.useStateFromStores)([d.default], () => d.default.isFavorite(e.id)),
-                    c = function(e) {
-                        let t = (0, i.useStateFromStores)([u.default], () => u.default.getChannels(r.FAVORITES))[r.ChannelTypes.GUILD_CATEGORY].filter(e => "null" !== e.channel.id),
-                            {
-                                favoritesEnabled: n
-                            } = (0, o.useFavoritesServerExperiment)("58e21a_1");
-                        if (!n) return null;
+                let t = (0, i.useStateFromStores)([u.default], () => u.default.getChannels(r.FAVORITES))[r.ChannelTypes.GUILD_CATEGORY].filter(e => "null" !== e.channel.id),
+                    {
+                        favoritesEnabled: n
+                    } = (0, o.useFavoritesServerExperiment)("58e21a_1"),
+                    c = (0, i.useStateFromStores)([d.default], () => d.default.isFavorite(e.id));
+                if (__OVERLAY__ || c || !n) return null;
 
-                        function d(t) {
-                            (0, s.addFavoriteChannel)(e.id, t)
-                        }
-                        return 0 === t.length ? (0, a.jsx)(l.MenuItem, {
-                            id: "favorite-channel",
-                            label: f(e, !1),
-                            action: () => d(null)
-                        }) : (0, a.jsx)(l.MenuItem, {
-                            id: "favorite-channel",
-                            label: f(e, !1),
-                            action: () => d(null),
-                            children: t.map(e => (0, a.jsx)(l.MenuItem, {
-                                id: "favorite-".concat(e.channel.id),
-                                label: e.channel.name,
-                                action: () => d(e.channel.id)
-                            }, e.channel.id))
-                        })
-                    }(e);
-                let _ = (t = e, (0, a.jsx)(l.MenuItem, {
+                function _(t) {
+                    (0, s.addFavoriteChannel)(e.id, t)
+                }
+                return 0 === t.length ? (0, a.jsx)(l.MenuItem, {
                     id: "favorite-channel",
-                    label: f(t, !0),
-                    action: function() {
-                        (0, s.removeFavoriteChannel)(t.id)
-                    }
-                }));
-                return __OVERLAY__ ? null : n ? _ : c
+                    label: f(e, !1),
+                    action: () => _(null)
+                }) : (0, a.jsx)(l.MenuItem, {
+                    id: "favorite-channel",
+                    label: f(e, !1),
+                    action: () => _(null),
+                    children: t.map(e => (0, a.jsx)(l.MenuItem, {
+                        id: "favorite-".concat(e.channel.id),
+                        label: e.channel.name,
+                        action: () => _(e.channel.id)
+                    }, e.channel.id))
+                })
+            }
+
+            function I(e) {
+                let t = (0, i.useStateFromStores)([d.default], () => d.default.isFavorite(e.id));
+                return __OVERLAY__ || !t ? null : (0, a.jsx)(l.MenuItem, {
+                    id: "favorite-channel",
+                    label: f(e, !0),
+                    color: "danger",
+                    action: () => (0, l.openModalLazy)(async () => {
+                        let {
+                            default: t
+                        } = await n.el("575351").then(n.bind(n, "575351"));
+                        return n => (0, a.jsx)(t, {
+                            ...n,
+                            onConfirm: () => {
+                                n.onClose(), (0, s.removeFavoriteChannel)(e.id)
+                            },
+                            channel: e,
+                            isFavorites: !0
+                        })
+                    })
+                })
             }
         },
         390008: function(e, t, n) {

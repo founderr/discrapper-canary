@@ -26,7 +26,7 @@
             "use strict";
             e.exports = function(e) {
                 var t, n;
-                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), C.test(e) ? e = e.substr(0, e.length - 2) : S.test(e) && (e = e.substr(0, e.length - 1)), (n = I.exec(e)) ? s.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = m.exec(e)) && c.test(n[1]) && (e = n[1], x.test(e) ? e += "e" : b.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = E.exec(e)) && c.test(n[1]) && (e = n[1] + "i"), (n = v.exec(e)) && s.test(n[1]) && (e = n[1] + a[n[2]]), (n = T.exec(e)) && s.test(n[1]) && (e = n[1] + l[n[2]]), (n = _.exec(e)) ? o.test(n[1]) && (e = n[1]) : (n = g.exec(e)) && o.test(n[1]) && (e = n[1]), (n = h.exec(e)) && (o.test(n[1]) || d.test(n[1]) && !f.test(n[1])) && (e = n[1]), p.test(e) && o.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
+                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), v.test(e) ? e = e.substr(0, e.length - 2) : S.test(e) && (e = e.substr(0, e.length - 1)), (n = I.exec(e)) ? s.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = g.exec(e)) && c.test(n[1]) && (e = n[1], x.test(e) ? e += "e" : C.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = m.exec(e)) && c.test(n[1]) && (e = n[1] + "i"), (n = b.exec(e)) && s.test(n[1]) && (e = n[1] + a[n[2]]), (n = T.exec(e)) && s.test(n[1]) && (e = n[1] + l[n[2]]), (n = _.exec(e)) ? o.test(n[1]) && (e = n[1]) : (n = E.exec(e)) && o.test(n[1]) && (e = n[1]), (n = h.exec(e)) && (o.test(n[1]) || d.test(n[1]) && !f.test(n[1])) && (e = n[1]), p.test(e) && o.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
             };
             var a = {
                     ational: "ate",
@@ -70,15 +70,15 @@
                 f = RegExp("^" + u + i + "[^aeiouwxy]$"),
                 p = /ll$/,
                 h = /^(.+?)e$/,
-                E = /^(.+?)y$/,
-                g = /^(.+?(s|t))(ion)$/,
-                m = /^(.+?)(ed|ing)$/,
+                m = /^(.+?)y$/,
+                E = /^(.+?(s|t))(ion)$/,
+                g = /^(.+?)(ed|ing)$/,
                 x = /(at|bl|iz)$/,
                 I = /^(.+?)eed$/,
                 S = /^.+?[^s]s$/,
-                C = /^.+?(ss|i)es$/,
-                b = /([^aeiouylsz])\1$/,
-                v = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
+                v = /^.+?(ss|i)es$/,
+                C = /([^aeiouylsz])\1$/,
+                b = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
                 T = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
                 _ = RegExp("^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$")
         },
@@ -175,48 +175,50 @@
                 f = n("972701"),
                 p = n("390008"),
                 h = n("41205"),
-                E = n("715243"),
-                g = n("458574"),
-                m = n("963150"),
+                m = n("715243"),
+                E = n("458574"),
+                g = n("963150"),
                 x = n("308798"),
                 I = n("47006"),
                 S = n("878526"),
-                C = n("44141"),
-                b = n("531674"),
-                v = n("619436"),
+                v = n("44141"),
+                C = n("531674"),
+                b = n("619436"),
                 T = n("731390"),
                 _ = n("339876"),
                 A = n("809937"),
                 y = n("49111"),
-                N = n("782340");
+                M = n("782340");
 
-            function M(e) {
+            function N(e) {
                 let {
                     channel: t,
                     onSelect: n
-                } = e, u = (0, C.default)(t), r = (0, g.default)(t), d = (0, f.default)(t), c = (0, p.default)(t), E = (0, h.default)(t), m = (0, b.default)(t), x = (0, v.default)(t), S = (0, I.default)(t), T = (0, o.default)({
+                } = e, u = (0, v.default)(t), r = (0, E.default)(t), d = (0, f.useAddToFavoritesItem)(t), c = (0, f.useRemoveFromFavoritesItem)(t), m = (0, p.default)(t), g = (0, h.default)(t), x = (0, C.default)(t), S = (0, b.default)(t), T = (0, I.default)(t), _ = (0, o.default)({
                     id: t.id,
-                    label: N.default.Messages.COPY_ID_CHANNEL
-                }), _ = (0, s.default)(t);
+                    label: M.default.Messages.COPY_ID_CHANNEL
+                }), A = (0, s.default)(t);
                 return (0, a.jsxs)(l.Menu, {
                     navId: "channel-context",
                     onClose: i.closeContextMenu,
-                    "aria-label": N.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+                    "aria-label": M.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                     onSelect: n,
                     children: [(0, a.jsx)(l.MenuGroup, {
                         children: u
                     }), (0, a.jsxs)(l.MenuGroup, {
-                        children: [E, c, d]
+                        children: [g, m, d]
                     }), (0, a.jsxs)(l.MenuGroup, {
-                        children: [m, x]
+                        children: [x, S]
                     }), (0, a.jsx)(l.MenuGroup, {
-                        children: S
+                        children: T
                     }), (0, a.jsx)(l.MenuGroup, {
-                        children: _
+                        children: A
+                    }), (0, a.jsx)(l.MenuGroup, {
+                        children: c
                     }), (0, a.jsx)(l.MenuGroup, {
                         children: r
                     }), (0, a.jsx)(l.MenuGroup, {
-                        children: T
+                        children: _
                     })]
                 })
             }
@@ -226,31 +228,33 @@
                     channel: t,
                     guild: n,
                     onSelect: u
-                } = e, r = (0, C.default)(t), s = (0, g.default)(t), d = (0, f.default)(t), c = (0, _.default)(t), p = (0, b.default)(t), h = (0, v.default)(t), y = (0, I.default)(t), M = (0, S.default)(t, n), L = (0, E.default)(t, n), O = (0, m.default)(t, n), G = (0, x.default)(t), R = (0, o.default)({
+                } = e, r = (0, v.default)(t), s = (0, E.default)(t), d = (0, f.useAddToFavoritesItem)(t), c = (0, f.useRemoveFromFavoritesItem)(t), p = (0, _.default)(t), h = (0, C.default)(t), y = (0, b.default)(t), N = (0, I.default)(t), L = (0, S.default)(t, n), O = (0, m.default)(t, n), G = (0, g.default)(t, n), R = (0, x.default)(t), U = (0, o.default)({
                     id: t.id,
-                    label: N.default.Messages.COPY_ID_CHANNEL
-                }), U = (0, T.default)(t, "list_text_channel_context_menu");
+                    label: M.default.Messages.COPY_ID_CHANNEL
+                }), j = (0, T.default)(t, "list_text_channel_context_menu");
                 return (0, a.jsxs)(l.Menu, {
                     navId: "channel-context",
                     onClose: i.closeContextMenu,
-                    "aria-label": N.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+                    "aria-label": M.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                     onSelect: u,
                     children: [(0, a.jsx)(l.MenuGroup, {
                         children: r
                     }, "mark-as-read"), (0, a.jsxs)(l.MenuGroup, {
-                        children: [M, c, s, d, U]
+                        children: [L, p, s, d, j]
                     }, "channel-actions"), (0, a.jsxs)(l.MenuGroup, {
-                        children: [p, h, (0, A.default)(t)]
+                        children: [h, y, (0, A.default)(t)]
                     }, "notifications"), (0, a.jsxs)(l.MenuGroup, {
-                        children: [y, L, O, G]
+                        children: [N, O, G, R]
                     }, "admin-actions"), (0, a.jsx)(l.MenuGroup, {
-                        children: R
+                        children: c
+                    }), (0, a.jsx)(l.MenuGroup, {
+                        children: U
                     }, "developer-actions")]
                 })
             }
             var O = (0, r.default)((0, u.default)(function(e) {
                 let t = (0, c.default)();
-                return t ? (0, a.jsx)(M, {
+                return t ? (0, a.jsx)(N, {
                     ...e
                 }) : (0, a.jsx)(L, {
                     ...e
