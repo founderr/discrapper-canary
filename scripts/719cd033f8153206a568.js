@@ -10858,7 +10858,7 @@
                 default: function() {
                     return _
                 }
-            }), n("424973"), n("222007");
+            }), n("222007");
             var l = n("884691"),
                 a = n("298386"),
                 s = n("446674"),
@@ -10893,43 +10893,48 @@
                     })),
                     x = L === e,
                     v = (0, s.useStateFromStores)([d.default], () => !!x && null != d.default.getActiveStreamForUser(A, e)),
-                    M = (0, s.useStateFromStores)([E.default], () => E.default.getVoiceStateVersion()),
-                    O = (0, s.useStateFromStoresArray)([E.default, f.default, C.default], () => {
-                        let t = E.default.getVoiceStates(e),
-                            n = [];
-                        for (let e in t) {
-                            let l = f.default.getBasicChannel(t[e].channelId);
-                            null != l && l.type !== a.ChannelTypes.GUILD_STAGE_VOICE && (null == S ? void 0 : S.afkChannelId) !== l.id && C.default.canBasicChannel(g.BasicPermissions.VIEW_CHANNEL, l) && n.push(t[e])
+                    M = null == S ? void 0 : S.afkChannelId,
+                    {
+                        guildHasVoice: O,
+                        guildHasVideo: y,
+                        selectedVoiceChannelHasVideo: D
+                    } = (0, s.useStateFromStoresObject)([E.default, f.default, C.default], () => {
+                        let t = !1,
+                            n = !1,
+                            l = E.default.getVoiceStates(e);
+                        for (let e in l) {
+                            let s = f.default.getBasicChannel(l[e].channelId);
+                            null != s && s.type !== a.ChannelTypes.GUILD_STAGE_VOICE && M !== s.id && C.default.canBasicChannel(g.BasicPermissions.VIEW_CHANNEL, s) && (t = !0, l[e].selfVideo && (n = !0))
                         }
-                        return n
-                    }, [e, M]),
-                    y = O.length > 0,
-                    D = null != O.find(e => e.selfVideo),
+                        return {
+                            guildHasVoice: t,
+                            guildHasVideo: n,
+                            selectedVoiceChannelHasVideo: null != R && E.default.hasVideo(R)
+                        }
+                    }, [M, e, R]),
                     b = (0, s.useStateFromStores)([d.default], () => d.default.getAllApplicationStreams().some(t => t.guildId === e)),
-                    j = (0, s.useStateFromStores)([E.default], () => x && null != R && E.default.hasVideo(R), [x, R]),
-                    G = (0, s.useStateFromStores)([i.default], () => i.default.getEmbeddedActivitiesForGuild(e)),
-                    U = (0, s.useStateFromStores)([i.default], () => Array.from(i.default.getSelfEmbeddedActivities().values()).some(t => {
+                    j = (0, s.useStateFromStores)([i.default], () => i.default.getEmbeddedActivitiesForGuild(e).length > 0),
+                    G = (0, s.useStateFromStores)([i.default], () => Array.from(i.default.getSelfEmbeddedActivities().values()).some(t => {
                         let {
                             guildId: n
                         } = t;
                         return n === e
                     })),
-                    P = G.length > 0,
+                    U = !1,
+                    P = !1,
                     w = !1,
                     F = !1,
                     B = !1,
-                    V = !1,
-                    H = !1,
-                    k = !1;
-                return x ? (w = !0, F = (null == N ? void 0 : N.channel_id) === R, B = T, V = j, H = v, k = U) : !_ && (w = y, F = null != N, B = I, V = D, H = b, k = P), l.useMemo(() => ({
-                    audio: w,
-                    video: V,
-                    screenshare: H,
-                    liveStage: B,
-                    activeEvent: F,
-                    activity: k,
+                    V = !1;
+                return x ? (U = !0, P = (null == N ? void 0 : N.channel_id) === R, w = T, F = x && D, B = v, V = G) : !_ && (U = O, P = null != N, w = I, F = y, B = b, V = j), l.useMemo(() => ({
+                    audio: U,
+                    video: F,
+                    screenshare: B,
+                    liveStage: w,
+                    activeEvent: P,
+                    activity: V,
                     isCurrentUserConnected: x || T
-                }), [w, V, H, B, F, k, x, T])
+                }), [U, F, B, w, P, V, x, T])
             }
         },
         512812: function(e, t, n) {
