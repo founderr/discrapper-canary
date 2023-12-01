@@ -1,698 +1,496 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["89894"], {
-        79112: function(e, t, n) {
+    ["80574"], {
+        393828: function(e, t, i) {
             "use strict";
-            n.r(t), n.d(t, {
+            e.exports = i.p + "714405524ef39906bd06.png"
+        },
+        527382: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                FileUploadIconClassNames: function() {
+                    return a
+                },
+                DEFAULT_FILE_UPLOAD_ICONS: function() {
+                    return l
+                },
+                EMOJI_FILE_UPLOAD_ICONS: function() {
+                    return o
+                }
+            });
+            var s, n, r = i("831839");
+            (s = n || (n = {}))[s.IMAGE = 0] = "IMAGE", s[s.DOCUMENT = 1] = "DOCUMENT", s[s.CODE = 2] = "CODE";
+            let a = {
+                    0: r.image,
+                    1: r.document,
+                    2: r.code
+                },
+                l = [1, 0, 2],
+                o = [0, 0, 0]
+        },
+        109036: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                default: function() {
+                    return o
+                }
+            });
+            var s = i("37983");
+            i("884691");
+            var n = i("414456"),
+                r = i.n(n),
+                a = i("527382"),
+                l = i("831839"),
+                o = function(e) {
+                    let {
+                        icons: t,
+                        className: i
+                    } = e;
+                    return (0, s.jsxs)("div", {
+                        className: r(l.icons, i),
+                        children: [(0, s.jsx)("div", {
+                            className: l.wrapOne,
+                            children: (0, s.jsx)("div", {
+                                className: r(l.icon, l.one, a.FileUploadIconClassNames[t[0]])
+                            })
+                        }), (0, s.jsx)("div", {
+                            className: l.wrapThree,
+                            children: (0, s.jsx)("div", {
+                                className: r(l.icon, l.three, a.FileUploadIconClassNames[t[2]])
+                            })
+                        }), (0, s.jsx)("div", {
+                            className: l.wrapTwo,
+                            children: (0, s.jsx)("div", {
+                                className: r(l.icon, l.two, a.FileUploadIconClassNames[t[1]])
+                            })
+                        })]
+                    })
+                }
+        },
+        336522: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                default: function() {
+                    return m
+                },
+                UPLOAD_ERROR_MODAL_KEY: function() {
+                    return E
+                },
+                openUploadError: function() {
+                    return f
+                }
+            });
+            var s = i("37983");
+            i("884691");
+            var n = i("414456"),
+                r = i.n(n),
+                a = i("551042"),
+                l = i("516256"),
+                o = i("202664"),
+                u = i("476765"),
+                c = i("109036"),
+                d = i("527382"),
+                _ = i("831839");
+
+            function m(e) {
+                let {
+                    title: t,
+                    help: i,
+                    showPremiumUpsell: n,
+                    transitionState: a,
+                    icons: m,
+                    fileSize: E,
+                    onClose: f
+                } = e, I = (0, u.useUID)(), L = null != m ? m : d.DEFAULT_FILE_UPLOAD_ICONS;
+                return n ? (0, s.jsx)(o.default, {
+                    transitionState: a,
+                    onClose: f,
+                    fileSize: E
+                }) : (0, s.jsx)(l.ModalRoot, {
+                    size: l.ModalSize.DYNAMIC,
+                    "aria-labelledby": I,
+                    transitionState: a,
+                    children: (0, s.jsx)("div", {
+                        className: r(_.uploadDropModal, _.error),
+                        children: (0, s.jsxs)("div", {
+                            className: _.inner,
+                            children: [(0, s.jsx)(c.default, {
+                                icons: L
+                            }), (0, s.jsx)("div", {
+                                id: I,
+                                className: _.title,
+                                children: t
+                            }), (0, s.jsx)("div", {
+                                className: _.instructions,
+                                children: i
+                            })]
+                        })
+                    })
+                })
+            }
+            let E = "UPLOAD_ERROR_MODAL_KEY";
+
+            function f(e) {
+                (0, a.openModal)(t => (0, s.jsx)(m, {
+                    ...t,
+                    ...e
+                }), {
+                    modalKey: E
+                })
+            }
+        },
+        942377: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                getHigherExpectedValue: function() {
+                    return r
+                },
+                getHighestLikelihood: function() {
+                    return a
+                }
+            });
+            var s = i("716849"),
+                n = i("646718");
+
+            function r(e, t, i) {
+                return null == e ? n.PremiumTypes.TIER_2 : e[n.PremiumSubscriptionSKUs.TIER_0] * t > e[n.PremiumSubscriptionSKUs.TIER_2] * i ? n.PremiumTypes.TIER_0 : n.PremiumTypes.TIER_2
+            }
+
+            function a(e) {
+                if (null == e) return n.PremiumTypes.TIER_0;
+                let t = e[s.NON_SUBSCRIBER_SENTINEL],
+                    i = e[n.PremiumSubscriptionSKUs.TIER_0],
+                    r = e[n.PremiumSubscriptionSKUs.TIER_2];
+                return r > i && r > t ? n.PremiumTypes.TIER_2 : n.PremiumTypes.TIER_0
+            }
+        },
+        843647: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
                 default: function() {
                     return _
                 }
             });
-            var l = n("872717"),
-                o = n("95410"),
-                i = n("913144"),
-                u = n("211895"),
-                r = n("26092"),
-                s = n("599110"),
-                a = n("315102"),
-                d = n("730622"),
-                c = n("49111"),
-                S = n("191349"),
-                E = n("782340"),
-                _ = {
-                    open() {
-                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-                            t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-                            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
-                                openWithoutBackstack: !1
-                            };
-                        (0, u.default)(e, t, n)
-                    },
-                    init: function(e) {
-                        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-                            n = arguments.length > 2 ? arguments[2] : void 0;
-                        i.default.dispatch({
-                            type: "USER_SETTINGS_MODAL_INIT",
-                            section: e,
-                            subsection: t,
-                            ...n
-                        })
-                    },
-                    close() {
-                        let e = r.default.onClose;
-                        i.default.dispatch({
-                            type: "USER_SETTINGS_MODAL_CLOSE"
-                        }), null != e && e()
-                    },
-                    setSection(e) {
-                        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-                            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                        i.default.dispatch({
-                            type: "USER_SETTINGS_MODAL_SET_SECTION",
-                            section: e,
-                            subsection: t,
-                            ...n
-                        })
-                    },
-                    clearSubsection(e) {
-                        i.default.dispatch({
-                            type: "USER_SETTINGS_MODAL_CLEAR_SUBSECTION",
-                            forSection: e
-                        })
-                    },
-                    clearScrollPosition(e) {
-                        i.default.dispatch({
-                            type: "USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION",
-                            forSection: e
-                        })
-                    },
-                    updateAccount(e) {
-                        i.default.dispatch({
-                            type: "USER_SETTINGS_MODAL_UPDATE_ACCOUNT",
-                            settings: e
-                        })
-                    },
-                    submitComplete() {
-                        i.default.dispatch({
-                            type: "USER_SETTINGS_MODAL_SUBMIT_COMPLETE"
-                        })
-                    },
-                    reset() {
-                        i.default.dispatch({
-                            type: "USER_SETTINGS_MODAL_RESET"
-                        })
-                    },
-                    saveAccountChanges(e, t) {
-                        i.default.dispatch({
-                            type: "USER_SETTINGS_MODAL_SUBMIT"
-                        });
-                        let {
-                            username: n,
-                            email: u,
-                            emailToken: r,
-                            password: _,
-                            avatar: T,
-                            newPassword: p,
-                            discriminator: f
-                        } = e, {
-                            close: O
-                        } = t;
-                        return (0, d.default)(e => {
-                            let t = {
-                                    username: n,
-                                    email: u,
-                                    email_token: r,
-                                    password: _,
-                                    avatar: T,
-                                    new_password: p,
-                                    ...e,
-                                    discriminator: null != f && "" !== f ? f : void 0
-                                },
-                                i = o.default.get(c.DEVICE_TOKEN),
-                                s = (0, S.getDevicePushProvider)();
-                            null != s && null != i && (t.push_provider = s, t.push_token = i);
-                            let a = o.default.get(c.DEVICE_VOIP_TOKEN);
-                            return null != S.DEVICE_PUSH_VOIP_PROVIDER && null != a && (t.push_voip_provider = S.DEVICE_PUSH_VOIP_PROVIDER, t.push_voip_token = a), l.default.patch({
-                                url: c.Endpoints.ME,
-                                oldFormErrors: !0,
-                                body: t
-                            })
-                        }, {
-                            checkEnabled: !1,
-                            modalProps: {
-                                title: E.default.Messages.TWO_FA_CHANGE_ACCOUNT
-                            },
-                            hooks: {
-                                onEarlyClose: () => i.default.dispatch({
-                                    type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE",
-                                    errors: {}
-                                })
-                            }
-                        }).then(e => {
-                            let t = e.body,
-                                n = t.token;
-                            return s.default.track(c.AnalyticEvents.USER_AVATAR_UPDATED, {
-                                animated: (0, a.isAnimatedIconHash)(t.avatar)
-                            }), delete t.token, i.default.dispatch({
-                                type: "UPDATE_TOKEN",
-                                token: n,
-                                userId: t.id
-                            }), i.default.dispatch({
-                                type: "CURRENT_USER_UPDATE",
-                                user: t
-                            }), null != p && i.default.dispatch({
-                                type: "USER_PASSWORD_UPDATE",
-                                user: t,
-                                newPassword: p
-                            }), null != _ && null != p && i.default.dispatch({
-                                type: "PASSWORD_UPDATED",
-                                userId: t.id
-                            }), O ? this.close() : this.submitComplete(), e
-                        }, e => (i.default.dispatch({
-                            type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE",
-                            errors: e.body
-                        }), e))
+            var s = i("446674"),
+                n = i("697218"),
+                r = i("10514"),
+                a = i("719923"),
+                l = i("716849"),
+                o = i("676572"),
+                u = i("942377"),
+                c = i("917247"),
+                d = i("646718");
+
+            function _(e) {
+                let {
+                    autoTrackExposure: t,
+                    experiment: i,
+                    location: _
+                } = e, m = (0, s.useStateFromStores)([n.default], () => n.default.getCurrentUser()), E = (0, c.usePremiumTrialOffer)(), f = null != E, I = null != m && (0, a.isPremium)(m);
+                (0, l.useMaybeFetchPremiumLikelihood)(i);
+                let {
+                    enabled: L,
+                    useExpectedValue: T,
+                    useLikelihood: P
+                } = i.useExperiment({
+                    location: null != _ ? _ : "1"
+                }, {
+                    autoTrackExposure: !I && !f && t
+                }), {
+                    premiumLikelihood: p,
+                    fetched: R
+                } = (0, s.useStateFromStoresObject)([o.default], () => {
+                    let e = o.default.getState();
+                    return {
+                        fetched: e.fetched,
+                        premiumLikelihood: e.premiumLikelihood
                     }
+                }), U = (0, s.useStateFromStores)([r.default], () => r.default.isLoadedForSKUs([d.PremiumSubscriptionSKUs.TIER_0, d.PremiumSubscriptionSKUs.TIER_2])), S = !I && L && !f && (T ? !R || !U : !R), M = d.PremiumTypes.TIER_2;
+                if (f) {
+                    let e = E.subscription_trial;
+                    (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_0 ? M = d.PremiumTypes.TIER_0 : (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_2 && (M = d.PremiumTypes.TIER_2)
+                } else if (!I && !S && L) {
+                    if (T) {
+                        let {
+                            amount: e
+                        } = (0, a.getPrice)(d.SubscriptionPlans.PREMIUM_MONTH_TIER_0), {
+                            amount: t
+                        } = (0, a.getPrice)(d.SubscriptionPlans.PREMIUM_MONTH_TIER_2);
+                        M = (0, u.getHigherExpectedValue)(p, e, t)
+                    } else P && (M = (0, u.getHighestLikelihood)(p))
                 }
+                return {
+                    isLoading: S,
+                    suggestedPremiumType: M
+                }
+            }
         },
-        521590: function(e, t, n) {
+        202664: function(e, t, i) {
             "use strict";
-            n.r(t), n.d(t, {
-                GlobeEarthIcon: function() {
-                    return u
+            i.r(t), i.d(t, {
+                default: function() {
+                    return R
                 }
             });
-            var l = n("37983");
-            n("884691");
-            var o = n("669491"),
-                i = n("75196");
-            let u = e => {
-                let {
-                    width: t = 24,
-                    height: n = 24,
-                    color: u = o.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: r = "",
-                    ...s
-                } = e;
-                return (0, l.jsx)("svg", {
-                    ...(0, i.default)(s),
-                    width: t,
-                    height: n,
-                    viewBox: "0 0 24 24",
-                    fill: "none",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    children: (0, l.jsx)("path", {
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                        d: "M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM18.8426 17.8466C20.1877 16.2738 21 14.2318 21 12C21 8.08134 18.4956 4.74763 15 3.51212V4C15 5.65685 13.6569 7 12 7H11.2308C11.1033 7 11 7.10332 11 7.23077C11 8.76017 9.76017 10 8.23077 10C8.10332 10 8 10.1033 8 10.2308V11.75C8 11.8881 8.11193 12 8.25 12H13C14.6569 12 16 13.3431 16 15V15.7692C16 15.8967 16.1033 16 16.2308 16C17.4367 16 18.4625 16.7708 18.8426 17.8466ZM3.18342 10.1834C3.06316 10.7702 3 11.3777 3 12C3 16.6326 6.50005 20.4476 11 20.9451V18.2308C11 18.1033 10.8967 18 10.7692 18H10.1213C8.94975 18 8 17.0503 8 15.8787C8 15.3161 7.7765 14.7765 7.37868 14.3787L3.18342 10.1834Z",
-                        fill: "string" == typeof u ? u : u.css,
-                        className: r
-                    })
+            var s = i("37983"),
+                n = i("884691"),
+                r = i("414456"),
+                a = i.n(r),
+                l = i("446674"),
+                o = i("77078"),
+                u = i("109036"),
+                c = i("697218"),
+                d = i("993105"),
+                _ = i("719923"),
+                m = i("552917"),
+                E = i("843647"),
+                f = i("789946"),
+                I = i("646718"),
+                L = i("49111"),
+                T = i("527382"),
+                P = i("782340"),
+                p = i("74230");
+
+            function R(e) {
+                let t, {
+                        onClose: i,
+                        fileSize: r,
+                        ...R
+                    } = e,
+                    U = null != r && I.MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE < r,
+                    {
+                        isLoading: S,
+                        suggestedPremiumType: M
+                    } = (0, E.default)({
+                        autoTrackExposure: !U,
+                        experiment: m.default,
+                        location: I.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL
+                    }),
+                    x = !U && M === I.PremiumTypes.TIER_0,
+                    A = (0, l.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
+                    O = (0, s.jsx)(u.default, {
+                        icons: T.DEFAULT_FILE_UPLOAD_ICONS
+                    });
+                t = x ? P.default.Messages.UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2.format({
+                    premiumPlan: (0, _.getPremiumTypeDisplayName)(I.PremiumTypes.TIER_0),
+                    premiumMaxSize: P.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED
+                }) : P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE;
+                let N = n.useMemo(() => {
+                        let e = _.default.getUserMaxFileSize(A),
+                            t = (0, d.formatSize)(e / 1024, {
+                                useKibibytes: !0
+                            }),
+                            i = P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
+                                maxSize: t
+                            });
+                        switch (null == A ? void 0 : A.premiumType) {
+                            case I.PremiumTypes.TIER_0:
+                                i = P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({
+                                    maxSize: t
+                                });
+                                break;
+                            case I.PremiumTypes.TIER_1:
+                                i = P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({
+                                    maxSize: t
+                                })
+                        }
+                        return i
+                    }, [A]),
+                    h = (0, s.jsxs)("div", {
+                        className: p.body,
+                        children: [(0, s.jsx)("span", {
+                            children: N
+                        }), (0, s.jsx)(o.Text, {
+                            variant: "text-md/medium",
+                            children: t
+                        })]
+                    });
+                return (0, s.jsx)(f.default, {
+                    artElement: O,
+                    artContainerClassName: a(p.artContainer),
+                    enableArtBoxShadow: !1,
+                    type: I.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
+                    title: P.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+                    body: h,
+                    context: P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
+                        maxSize: P.default.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD
+                    }),
+                    glowUp: t,
+                    analyticsLocation: {
+                        section: L.AnalyticsSections.FILE_UPLOAD_POPOUT
+                    },
+                    onClose: i,
+                    subscriptionTier: x ? I.PremiumSubscriptionSKUs.TIER_0 : I.PremiumSubscriptionSKUs.TIER_2,
+                    isLoading: S,
+                    ...R
                 })
             }
         },
-        692171: function(e, t, n) {
+        789946: function(e, t, i) {
             "use strict";
-            n.r(t), n.d(t, {
+            i.r(t), i.d(t, {
                 default: function() {
-                    return d
+                    return U
                 }
             });
-            var l = n("446674"),
-                o = n("872717"),
-                i = n("913144"),
-                u = n("49111");
-            let r = Object.freeze({
-                    burstCredits: 0,
-                    wasReplenishedToday: !1,
-                    nextReplenishAt: null,
-                    isReactionPickerBurstToggled: null,
-                    emojiReactionForCoachmark: null,
-                    guildBurstPreviews: {}
-                }),
-                s = {
-                    ...r
-                };
-            class a extends l.default.PersistedStore {
-                initialize(e) {
-                    s = null != e ? e : {
-                        ...r
-                    }
-                }
-                get remainingBurstCurrency() {
-                    return s.burstCredits
-                }
-                get hasAvailableBurstCurrency() {
-                    return this.remainingBurstCurrency > 0
-                }
-                get nextReplenishAt() {
-                    return s.nextReplenishAt
-                }
-                get isReactionPickerBurstToggled() {
-                    return null != s.isReactionPickerBurstToggled && s.isReactionPickerBurstToggled
-                }
-                get emojiReactionToTargetForCoachmark() {
-                    return s.emojiReactionForCoachmark
-                }
-                getBurstedPreviewData(e) {
-                    var t;
-                    return null !== (t = s.guildBurstPreviews[e]) && void 0 !== t ? t : void 0
-                }
-                getState() {
-                    return s
-                }
-            }
-            a.displayName = "BurstReactionStore", a.persistKey = "BurstReactionStore33";
-            var d = new a(i.default, {
-                BURST_CREDITS_SET: e => {
-                    let {
-                        amount: t,
-                        wasReplenishedToday: n,
-                        nextReplenishAt: l
-                    } = e;
-                    s.burstCredits = t, s.wasReplenishedToday = n, s.nextReplenishAt = l
-                },
-                POST_CONNECTION_OPEN: () => {
-                    o.default.get({
-                        url: u.Endpoints.BURST_CREDIT_BALANCE
-                    }).then(e => {
-                        i.default.dispatch({
-                            type: "BURST_CREDITS_SET",
-                            amount: e.body.amount,
-                            wasReplenishedToday: e.body.replenished_today,
-                            nextReplenishAt: new Date(e.body.next_replenish_at)
-                        })
-                    }).catch(() => {})
-                },
-                BURST_REACTION_PICKER_TOGGLE: e => {
-                    let {
-                        value: t
-                    } = e;
-                    s.isReactionPickerBurstToggled = t
-                },
-                BURST_REACTION_SHOW_FREE_USER_SENT_POPOUT: e => {
-                    let {
-                        emoji: t
-                    } = e;
-                    s.emojiReactionForCoachmark = null != t ? t : null
-                },
-                BURST_GUILD_PREVIEW_SET: e => {
-                    let {
-                        guildId: t,
-                        channelId: n,
-                        messageId: l,
-                        emoji: o
-                    } = e;
-                    s.guildBurstPreviews[t] = {
-                        channelId: n,
-                        messageId: l,
-                        emoji: o
-                    }
-                },
-                BURST_GUILD_PREVIEW_CLEAR: e => {
-                    let {
-                        guildId: t
-                    } = e;
-                    delete s.guildBurstPreviews[t]
-                }
-            })
-        },
-        870346: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return A
-                }
-            }), n("222007"), n("70102");
-            var l = n("627445"),
-                o = n.n(l),
-                i = n("917351"),
-                u = n.n(i),
-                r = n("288661"),
-                s = n("446674"),
-                a = n("913144"),
-                d = n("605250"),
-                c = n("773336"),
-                S = n("50885"),
-                E = n("563680"),
-                _ = n("49111");
-            let T = {},
-                p = {},
-                f = {},
-                O = {},
-                h = {},
-                C = new Set,
-                R = () => N.emitChange(),
-                I = u.debounce(R, 150);
+            var s = i("37983"),
+                n = i("884691"),
+                r = i("414456"),
+                a = i.n(r),
+                l = i("77078"),
+                o = i("812204"),
+                u = i("685665"),
+                c = i("617917"),
+                d = i("599110"),
+                _ = i("719923"),
+                m = i("154889"),
+                E = i("917247"),
+                f = i("956597"),
+                I = i("635956"),
+                L = i("646718"),
+                T = i("49111"),
+                P = i("782340"),
+                p = i("857513"),
+                R = i("393828");
 
             function U(e) {
-                let t = f[e];
-                null != t && !t.closed && (T[e] = {
-                    x: t.screenX,
-                    y: t.screenY,
-                    width: t.innerWidth,
-                    height: t.innerHeight,
-                    alwaysOnTop: !!c.isPlatformEmbedded && p[e]
+                var t, i, r;
+                let {
+                    title: U,
+                    type: S,
+                    guildBoostProps: M,
+                    analyticsSource: x,
+                    analyticsLocation: A,
+                    body: O,
+                    context: N,
+                    glowUp: h,
+                    modalClassName: v,
+                    artContainerClassName: D,
+                    bodyClassName: C,
+                    transitionState: b,
+                    onClose: g,
+                    onSubscribeClick: j,
+                    onSecondaryClick: y,
+                    secondaryCTA: k,
+                    subscribeButtonText: F,
+                    showNewBadge: B = !1,
+                    enableArtBoxShadow: K = !0,
+                    subscriptionTier: z = L.PremiumSubscriptionSKUs.TIER_2,
+                    isLoading: w = !1,
+                    hideBackButton: Y,
+                    backButtonText: H,
+                    ...G
+                } = e, V = null != M, W = (0, E.usePremiumTrialOffer)(), J = (0, m.usePremiumDiscountOffer)(), X = ((null == W ? void 0 : null === (t = W.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === z || (0, m.discountOfferHasTier)(J, z)) && !V, {
+                    analyticsLocations: Z
+                } = (0, u.default)(o.default.PREMIUM_UPSELL_MODAL);
+                n.useEffect(() => {
+                    !w && (V ? d.default.track(T.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+                        type: "".concat(S, " - Tier ").concat(M.boostedGuildTier),
+                        guild_id: M.guild.id,
+                        channel_id: M.channelId,
+                        location: A,
+                        location_stack: Z
+                    }) : d.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+                        type: S,
+                        source: x,
+                        location_stack: Z,
+                        sku_id: z
+                    }))
+                }, [V, z, w]);
+                let q = K ? a(p.artContainer, p.artContainerBoxShadow, D) : a(p.artContainer, D),
+                    Q = null;
+                return Q = "artURL" in G ? (0, s.jsx)("img", {
+                    className: p.art,
+                    alt: "",
+                    src: G.artURL
+                }) : G.artElement, (0, s.jsxs)(l.ModalRoot, {
+                    className: a(p.root, v),
+                    "aria-label": U,
+                    transitionState: b,
+                    children: [(0, s.jsxs)("div", {
+                        className: q,
+                        children: [Q, B ? (0, s.jsx)("img", {
+                            className: p.sparkleBadge,
+                            alt: "",
+                            src: R
+                        }) : null]
+                    }), (0, s.jsx)(l.ModalContent, {
+                        className: p.content,
+                        children: w ? (0, s.jsx)(l.Spinner, {}) : (0, s.jsx)(s.Fragment, {
+                            children: X ? (0, s.jsx)(s.Fragment, {
+                                children: (0, s.jsx)(f.default, {
+                                    onClose: g,
+                                    type: S,
+                                    subscriptionTier: null !== (r = null == W ? void 0 : null === (i = W.subscription_trial) || void 0 === i ? void 0 : i.sku_id) && void 0 !== r ? r : L.PremiumSubscriptionSKUs.TIER_2,
+                                    headingText: U,
+                                    context: N,
+                                    analyticsLocationObject: A,
+                                    discountOffer: J,
+                                    trialOffer: W,
+                                    children: h
+                                })
+                            }) : (0, s.jsxs)(s.Fragment, {
+                                children: [(0, s.jsx)(l.Heading, {
+                                    className: p.header,
+                                    variant: "heading-xl/semibold",
+                                    children: U
+                                }), (0, s.jsx)(l.Text, {
+                                    variant: "text-md/normal",
+                                    className: a(C),
+                                    children: O
+                                })]
+                            })
+                        })
+                    }), (0, s.jsxs)(l.ModalFooter, {
+                        className: p.footer,
+                        children: [(0, s.jsxs)("div", {
+                            className: p.primaryActions,
+                            children: [null != k ? (0, s.jsx)(l.Button, {
+                                className: p.secondaryAction,
+                                onClick: y,
+                                size: l.Button.Sizes.SMALL,
+                                color: l.Button.Colors.PRIMARY,
+                                look: l.Button.Looks.LINK,
+                                children: k
+                            }) : null, (() => {
+                                let e, t;
+                                if (V) return (0, s.jsx)(c.default, {
+                                    analyticsLocation: A,
+                                    guild: M.guild,
+                                    onClose: g
+                                });
+                                if (X) {
+                                    if (null != W) {
+                                        var i, n;
+                                        e = (0, _.formatTrialCtaIntervalDuration)({
+                                            intervalType: null == W ? void 0 : null === (i = W.subscription_trial) || void 0 === i ? void 0 : i.interval,
+                                            intervalCount: null == W ? void 0 : null === (n = W.subscription_trial) || void 0 === n ? void 0 : n.interval_count
+                                        }), t = null == W ? void 0 : W.trial_id
+                                    } else null != J && (e = P.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+                                        percent: J.discount.amount
+                                    }))
+                                }
+                                return (0, s.jsx)(I.default, {
+                                    premiumModalAnalyticsLocation: A,
+                                    subscriptionTier: z,
+                                    trialId: t,
+                                    size: l.Button.Sizes.SMALL,
+                                    color: l.Button.Colors.GREEN,
+                                    onClick: () => {
+                                        null == j || j(), g()
+                                    },
+                                    buttonText: null != F ? F : e
+                                })
+                            })()]
+                        }), !Y && (0, s.jsx)(l.Button, {
+                            onClick: g,
+                            size: l.Button.Sizes.SMALL,
+                            color: l.Button.Colors.PRIMARY,
+                            look: l.Button.Looks.LINK,
+                            children: null != H ? H : P.default.Messages.BACK
+                        })]
+                    })]
                 })
             }
-
-            function P(e) {
-                let t = f[e];
-                null != t && (!t.closed && U(e), t.close(), ! function(e) {
-                    let t = f[e];
-                    o(null != t, "Popout window was null during unmount"), t.removeEventListener("focus", R), t.removeEventListener("blur", R), t.removeEventListener("resize", I);
-                    let n = O[e];
-                    o(null != n, "Window root was null while unmounting"), n.unmount(), delete f[e], delete p[e], delete h[e], delete O[e]
-                }(e), N.emitChange())
-            }
-
-            function v(e) {
-                let {
-                    data: t
-                } = e;
-                if (!(t instanceof Object && t.discordPopoutEvent instanceof Object)) return;
-                let n = t.discordPopoutEvent;
-                if (null != n.key) switch (n.type) {
-                    case _.PopoutEventTypes.LOADED:
-                        var l;
-                        return l = n.key, void(C.has(l) && (! function(e) {
-                            let t = f[e],
-                                n = h[e];
-                            if (null == t) {
-                                new(0, d.default)("PopoutWindowStore").warn("Failed to open window", e);
-                                return
-                            }
-                            let l = t.document;
-                            (0, E.subscribeDocumentToFullScreenChange)(l, R), t.addEventListener("focus", R), t.addEventListener("blur", R), t.addEventListener("resize", I), ! function(e, t) {
-                                let n = t.document,
-                                    l = document.querySelectorAll('link[rel="stylesheet"]'),
-                                    i = "".concat(window.location.protocol, "//").concat(window.location.host);
-                                for (let e of l) {
-                                    if (!e.href.startsWith(i)) continue;
-                                    let t = n.createElement("link");
-                                    t.href = e.href, t.rel = e.rel, t.integrity = e.integrity, o(null != n.head, "Document head was null"), n.head.appendChild(t)
-                                }
-                            }(0, t);
-                            let i = (0, r.createRoot)(l.getElementById("app-mount"));
-                            o(null != i, "No render target for popout!"), O[e] = i, i.render(n(e))
-                        }(l), C.delete(l), N.emitChange()));
-                    case _.PopoutEventTypes.UNLOADED:
-                        return P(n.key)
-                }
-            }
-
-            function g() {
-                for (let e of Object.keys(f)) {
-                    let t = f[e];
-                    null != t && t.close()
-                }
-            }
-            class m extends s.default.PersistedStore {
-                initialize(e) {
-                    window.addEventListener("message", v), window.addEventListener("beforeunload", g), T = null != e ? e : {}
-                }
-                getWindow(e) {
-                    return f[e]
-                }
-                getWindowState(e) {
-                    return T[e]
-                }
-                getWindowKeys() {
-                    return Object.keys(f)
-                }
-                getWindowOpen(e) {
-                    let t = f[e];
-                    return null != t && !t.closed
-                }
-                getIsAlwaysOnTop(e) {
-                    return !!p[e]
-                }
-                getWindowFocused(e) {
-                    var t, n;
-                    let l = f[e];
-                    return null !== (n = null == l ? void 0 : null === (t = l.document) || void 0 === t ? void 0 : t.hasFocus()) && void 0 !== n && n
-                }
-                getState() {
-                    return T
-                }
-                unmountWindow(e) {
-                    return P(e)
-                }
-            }
-            m.displayName = "PopoutWindowStore", m.persistKey = "PopoutWindowStore";
-            let N = new m(a.default, {
-                POPOUT_WINDOW_OPEN: function(e) {
-                    let {
-                        key: t,
-                        features: n,
-                        render: l
-                    } = e;
-                    if (c.isPlatformEmbedded && !S.default.supportsFeature(_.NativeFeatures.POPOUT_WINDOWS)) throw Error("Popout windows not supported on this native module version!");
-                    let o = f[t];
-                    if (null != o && !o.closed) return c.isPlatformEmbedded ? S.default.focus(t) : o.focus(), !1;
-                    let {
-                        defaultWidth: i,
-                        defaultHeight: u,
-                        defaultAlwaysOnTop: r = !1,
-                        ...s
-                    } = n, a = s, d = r, E = T[t];
-                    if (null != E) {
-                        let {
-                            width: e,
-                            height: t,
-                            x: n,
-                            y: l,
-                            alwaysOnTop: o
-                        } = E;
-                        d = null != o ? o : r, a = {
-                            width: null != e && 0 !== e ? e : i,
-                            height: null != t && 0 !== t ? t : u,
-                            left: n,
-                            top: l,
-                            ...a
-                        }
-                    }
-                    let O = window.open(_.Routes.POPOUT_WINDOW, t, function(e) {
-                        let t = "";
-                        for (let n of Object.keys(e)) {
-                            let l = e[n];
-                            void 0 !== l && ("boolean" == typeof l && (l = l ? "yes" : "no"), t += "".concat(n, "=").concat(l, ","))
-                        }
-                        return t
-                    }(a));
-                    O.windowKey = t, null == O || O.focus(), f[t] = O, h[t] = l, c.isPlatformEmbedded && (S.default.setAlwaysOnTop(t, d), p[t] = d, S.default.isAlwaysOnTop(t).then(e => p[t] = e)), C.add(t)
-                },
-                POPOUT_WINDOW_CLOSE: function(e) {
-                    let {
-                        key: t
-                    } = e, n = f[t];
-                    null != n && !n.closed && (U(t), n.close())
-                },
-                POPOUT_WINDOW_SET_ALWAYS_ON_TOP: function(e) {
-                    let {
-                        key: t,
-                        alwaysOnTop: n
-                    } = e;
-                    c.isPlatformEmbedded && (S.default.setAlwaysOnTop(t, n), p[t] = n, S.default.isAlwaysOnTop(t).then(e => p[t] = e))
-                },
-                LOGOUT: g
-            });
-            var A = N
-        },
-        191349: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                DEVICE_PUSH_VOIP_PROVIDER: function() {
-                    return u
-                },
-                getDevicePushProvider: function() {
-                    return r
-                }
-            });
-            var l, o, i = n("773336");
-            let u = null;
-
-            function r() {
-                return (0, i.isAndroid)(), null
-            }(l = o || (o = {})).REMINDER = "reminder", l.TOP_MESSAGE_PUSH = "top_messages_push", l.TRENDING_CONTENT_PUSH = "trending_content_push"
-        },
-        211895: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return u
-                }
-            });
-            var l = n("913144"),
-                o = n("54239"),
-                i = n("49111");
-
-            function u() {
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-                    t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-                    n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
-                        openWithoutBackstack: !1
-                    };
-                l.default.dispatch({
-                    type: "USER_SETTINGS_MODAL_OPEN",
-                    section: e,
-                    subsection: t,
-                    ...n
-                }), (0, o.pushLayer)(i.Layers.USER_SETTINGS)
-            }
-        },
-        26092: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return A
-                }
-            });
-            var l = n("917351"),
-                o = n.n(l),
-                i = n("446674"),
-                u = n("913144"),
-                r = n("697218"),
-                s = n("49111");
-            let a = s.FormStates.CLOSED,
-                d = null,
-                c = null,
-                S = {},
-                E = {},
-                _ = {},
-                T = null,
-                p = null,
-                f = !1,
-                O = !1,
-                h = null,
-                C = null,
-                R = null,
-                I = [],
-                U = null,
-                P = null;
-
-            function v(e) {
-                var t, n, l, o, i, u;
-                let d = r.default.getCurrentUser();
-                if (null == d) return g();
-                c = null !== (t = e.section) && void 0 !== t ? t : c, U = null !== (n = e.section) && void 0 !== n ? n : c, null != e.subsection && null != c && (S[c] = e.subsection), null != e.scrollPosition && null != c && (E[c] = e.scrollPosition), O = !!e.openWithoutBackstack, a = s.FormStates.OPEN, _ = {}, p = {
-                    ...T = {
-                        [s.UserSettingsSections.ACCOUNT]: {
-                            userId: d.id,
-                            username: d.username,
-                            discriminator: d.discriminator,
-                            email: d.email,
-                            avatar: d.avatar,
-                            password: "",
-                            newPassword: null,
-                            claimed: d.isClaimed()
-                        }
-                    }
-                }, C = null !== (l = e.onClose) && void 0 !== l ? l : null, R = null !== (o = e.analyticsLocation) && void 0 !== o ? o : null, I = null !== (i = e.analyticsLocations) && void 0 !== i ? i : [], P = null !== (u = e.impressionSource) && void 0 !== u ? u : null
-            }
-
-            function g() {
-                a = s.FormStates.CLOSED, f = !1, T = null, U = null, p = null, d = null, c = null, S = {}, E = {}, C = null, R = null, I = [], P = null
-            }
-
-            function m() {
-                a = s.FormStates.OPEN, _ = {}
-            }
-            class N extends i.default.Store {
-                initialize() {
-                    this.waitFor(r.default)
-                }
-                hasChanges() {
-                    return null != p && null != T && (!!this.isOpen() || h === s.DrawerTabTypes.USER_SETTINGS) && !o.isEqual(p, T)
-                }
-                isOpen() {
-                    return f
-                }
-                getPreviousSection() {
-                    return d
-                }
-                getSection() {
-                    return c
-                }
-                getSubsection() {
-                    return null != c ? S[c] : null
-                }
-                getScrollPosition() {
-                    return null != c ? E[c] : null
-                }
-                shouldOpenWithoutBackstack() {
-                    return O
-                }
-                getProps() {
-                    return {
-                        submitting: a === s.FormStates.SUBMITTING,
-                        section: c,
-                        subsection: null != c ? S[c] : null,
-                        scrollPosition: null != c ? E[c] : null,
-                        settings: p,
-                        errors: _,
-                        hasChanges: this.hasChanges(),
-                        openWithoutBackstack: O,
-                        analyticsLocation: R,
-                        analyticsLocations: I,
-                        initialSection: U,
-                        impressionSource: P
-                    }
-                }
-                get onClose() {
-                    return C
-                }
-            }
-            N.displayName = "UserSettingsModalStore";
-            var A = new N(u.default, {
-                USER_SETTINGS_MODAL_OPEN: function(e) {
-                    f = !0, v(e)
-                },
-                USER_SETTINGS_MODAL_INIT: v,
-                USER_SETTINGS_MODAL_CLOSE: g,
-                LOGOUT: g,
-                USER_SETTINGS_MODAL_SUBMIT: function() {
-                    a = s.FormStates.SUBMITTING
-                },
-                USER_SETTINGS_MODAL_SUBMIT_FAILURE: function(e) {
-                    var t;
-                    if (a !== s.FormStates.SUBMITTING) return !1;
-                    a = s.FormStates.OPEN, c = s.UserSettingsSections.ACCOUNT, _ = null !== (t = e.errors) && void 0 !== t ? t : {}
-                },
-                USER_SETTINGS_MODAL_SET_SECTION: function(e) {
-                    var t;
-                    d = c, c = e.section, R = null, I = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (S[c] = e.subsection)
-                },
-                USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function(e) {
-                    let {
-                        forSection: t
-                    } = e;
-                    null != t ? delete S[t] : null != c && delete S[c]
-                },
-                USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: function(e) {
-                    let {
-                        forSection: t
-                    } = e;
-                    null != t ? delete E[t] : null != c && delete E[c]
-                },
-                USER_SETTINGS_MODAL_UPDATE_ACCOUNT: function(e) {
-                    let {
-                        settings: t
-                    } = e;
-                    null == p && (p = {});
-                    let n = p[s.UserSettingsSections.ACCOUNT];
-                    p[s.UserSettingsSections.ACCOUNT] = {
-                        ...n,
-                        ...t
-                    }
-                },
-                USER_SETTINGS_MODAL_SUBMIT_COMPLETE: m,
-                USER_SETTINGS_MODAL_RESET: function() {
-                    let e = r.default.getCurrentUser();
-                    m(), null != e && (p = {
-                        ...T = {
-                            [s.UserSettingsSections.ACCOUNT]: {
-                                userId: e.id,
-                                username: e.username,
-                                discriminator: e.discriminator,
-                                email: e.email,
-                                avatar: e.avatar,
-                                password: "",
-                                newPassword: null,
-                                claimed: e.isClaimed()
-                            }
-                        }
-                    })
-                },
-                DRAWER_SELECT_TAB: function(e) {
-                    return h = e.tab, null == c && h === s.DrawerTabTypes.USER_SETTINGS && v({
-                        type: "USER_SETTINGS_MODAL_INIT",
-                        section: null,
-                        subsection: null,
-                        scrollPosition: null,
-                        openWithoutBackstack: !1
-                    })
-                }
-            })
         }
     }
 ]);
