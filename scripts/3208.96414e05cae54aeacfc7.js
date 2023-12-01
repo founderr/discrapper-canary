@@ -127,7 +127,7 @@
                     return T
                 },
                 reopenVenmoWindow: function() {
-                    return y
+                    return S
                 }
             }), a("70102"), a("222007");
             var n = a("872717"),
@@ -319,7 +319,7 @@
                 }), window.open(e))
             }
 
-            function y() {
+            function S() {
                 f()
             }
         },
@@ -346,8 +346,8 @@
                 N = a("227443"),
                 T = a("991300");
             (r = n || (n = {})).CARD_NUMBER = "cardNumber", r.EXPIRATION_DATE = "cardExpiry", r.CVC = "cardCvc", r.NAME = "name", r.COUNTRY = "country", r.POSTAL_CODE = "postalCode";
-            let y = (0, p.uid)(),
-                S = (0, p.uid)();
+            let S = (0, p.uid)(),
+                y = (0, p.uid)();
             var C = function(e) {
                 let {
                     onCardInfoChange: t,
@@ -387,7 +387,7 @@
                         name: P.name
                     }, !!e)
                 }, [p, P, M]);
-                let x = {
+                let D = {
                         cardNumber: {
                             name: "cardNumber",
                             title: () => A.default.Messages.CARD_NUMBER,
@@ -434,9 +434,9 @@
                             })
                         }
                     },
-                    D = {
+                    x = {
                         country: e => ({
-                            id: y,
+                            id: S,
                             name: "country",
                             title: () => A.default.Messages.BILLING_ADDRESS_COUNTRY,
                             autoComplete: "country",
@@ -469,7 +469,7 @@
                                     t = A.default.Messages.BILLING_ADDRESS_POSTAL_CODE
                             }
                             return {
-                                id: S,
+                                id: y,
                                 name: "postalCode",
                                 title: () => t,
                                 autoComplete: "postal-code",
@@ -485,14 +485,14 @@
                         }
                     },
                     b = [{
-                        fields: [x.cardNumber]
+                        fields: [D.cardNumber]
                     }, {
-                        fields: [x.cardExpiry, x.cardCvc]
+                        fields: [D.cardExpiry, D.cardCvc]
                     }, {
-                        fields: [x.name]
+                        fields: [D.name]
                     }],
                     v = [{
-                        fields: [D.country, D.postalCode]
+                        fields: [x.country, x.postalCode]
                     }],
                     B = b;
                 if (2 === (0, i.reducedPaymentInfoExperiment)().bucket) {
@@ -570,7 +570,7 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return x
+                    return O
                 }
             }), a("222007"), a("424973");
             var n = a("37983"),
@@ -582,88 +582,79 @@
                 c = a("850068"),
                 i = a("366634"),
                 d = a("339783"),
-                E = a("902651"),
-                p = a("909469"),
-                f = a("160299"),
-                m = a("712218"),
-                _ = a("956089"),
-                A = a("197537"),
-                N = a("49111"),
-                T = a("782340"),
-                y = a("204199"),
+                E = a("909469"),
+                p = a("160299"),
+                f = a("712218"),
+                m = a("956089"),
+                _ = a("197537"),
+                A = a("49111"),
+                N = a("782340"),
+                T = a("204199"),
                 S = a("173791");
-            let C = {
-                    [N.PaymentSourceTypes.CARD]: m.default.Types.UNKNOWN,
-                    [N.PaymentSourceTypes.PAYPAL]: m.default.Types.PAYPAL,
-                    [N.PaymentSourceTypes.SOFORT]: m.default.Types.SOFORT,
-                    [N.PaymentSourceTypes.GIROPAY]: m.default.Types.GIROPAY,
-                    [N.PaymentSourceTypes.PRZELEWY24]: m.default.Types.PRZELEWY24,
-                    [N.PaymentSourceTypes.PAYSAFE_CARD]: m.default.Types.PAYSAFECARD,
-                    [N.PaymentSourceTypes.GCASH]: m.default.Types.GCASH,
-                    [N.PaymentSourceTypes.GRABPAY_MY]: m.default.Types.GRABPAY,
-                    [N.PaymentSourceTypes.MOMO_WALLET]: m.default.Types.MOMO_WALLET,
-                    [N.PaymentSourceTypes.VENMO]: m.default.Types.VENMO,
-                    [N.PaymentSourceTypes.KAKAOPAY]: m.default.Types.KAKAOPAY,
-                    [N.PaymentSourceTypes.GOPAY_WALLET]: m.default.Types.GOPAY_WALLET,
-                    [N.PaymentSourceTypes.BANCONTACT]: m.default.Types.BANCONTACT,
-                    [N.PaymentSourceTypes.EPS]: m.default.Types.EPS,
-                    [N.PaymentSourceTypes.IDEAL]: m.default.Types.IDEAL,
-                    [N.PaymentSourceTypes.CASH_APP]: m.default.Types.CASH_APP
+            let y = {
+                    [A.PaymentSourceTypes.CARD]: f.default.Types.UNKNOWN,
+                    [A.PaymentSourceTypes.PAYPAL]: f.default.Types.PAYPAL,
+                    [A.PaymentSourceTypes.SOFORT]: f.default.Types.SOFORT,
+                    [A.PaymentSourceTypes.GIROPAY]: f.default.Types.GIROPAY,
+                    [A.PaymentSourceTypes.PRZELEWY24]: f.default.Types.PRZELEWY24,
+                    [A.PaymentSourceTypes.PAYSAFE_CARD]: f.default.Types.PAYSAFECARD,
+                    [A.PaymentSourceTypes.GCASH]: f.default.Types.GCASH,
+                    [A.PaymentSourceTypes.GRABPAY_MY]: f.default.Types.GRABPAY,
+                    [A.PaymentSourceTypes.MOMO_WALLET]: f.default.Types.MOMO_WALLET,
+                    [A.PaymentSourceTypes.VENMO]: f.default.Types.VENMO,
+                    [A.PaymentSourceTypes.KAKAOPAY]: f.default.Types.KAKAOPAY,
+                    [A.PaymentSourceTypes.GOPAY_WALLET]: f.default.Types.GOPAY_WALLET,
+                    [A.PaymentSourceTypes.BANCONTACT]: f.default.Types.BANCONTACT,
+                    [A.PaymentSourceTypes.EPS]: f.default.Types.EPS,
+                    [A.PaymentSourceTypes.IDEAL]: f.default.Types.IDEAL,
+                    [A.PaymentSourceTypes.CASH_APP]: f.default.Types.CASH_APP
                 },
-                P = [N.PaymentSourceTypes.CARD, N.PaymentSourceTypes.PAYPAL],
-                R = new Set(["DE", "BG", "CZ", "DK", "HU", "RO", "SE", "CH", "SI", "IE", "LV", "MT", "FR", "SK", "FI", "GR", "PT", "LU", "LT", "CY", "NO", "NL", "ES", "BE", "AT", "IT"]),
-                I = new Set(["BE", "NL", "DE", "ES", "AT", "IT"]),
+                C = [A.PaymentSourceTypes.CARD, A.PaymentSourceTypes.PAYPAL],
+                P = new Set(["DE", "BG", "CZ", "DK", "HU", "RO", "SE", "CH", "SI", "IE", "LV", "MT", "FR", "SK", "FI", "GR", "PT", "LU", "LT", "CY", "NO", "NL", "ES", "BE", "AT", "IT"]),
+                R = new Set(["BE", "NL", "DE", "ES", "AT", "IT"]),
+                I = new Map([
+                    [A.PaymentSourceTypes.SOFORT, new Set(["ALL", ...R])],
+                    [A.PaymentSourceTypes.PRZELEWY24, new Set(["ALL", "PL"])],
+                    [A.PaymentSourceTypes.GIROPAY, new Set(["ALL", "DE"])],
+                    [A.PaymentSourceTypes.PAYSAFE_CARD, new Set(["ALL", ...P])],
+                    [A.PaymentSourceTypes.GCASH, new Set(["ALL", "PH"])],
+                    [A.PaymentSourceTypes.GRABPAY_MY, new Set(["ALL", "MY"])],
+                    [A.PaymentSourceTypes.MOMO_WALLET, new Set(["ALL", "VN"])],
+                    [A.PaymentSourceTypes.VENMO, new Set(["ALL", "US"])],
+                    [A.PaymentSourceTypes.KAKAOPAY, new Set(["ALL", "KR"])],
+                    [A.PaymentSourceTypes.GOPAY_WALLET, new Set(["ALL", "ID"])],
+                    [A.PaymentSourceTypes.BANCONTACT, new Set(["ALL", "BE"])],
+                    [A.PaymentSourceTypes.EPS, new Set(["ALL", "AT"])],
+                    [A.PaymentSourceTypes.IDEAL, new Set(["ALL", "NL"])],
+                    [A.PaymentSourceTypes.CASH_APP, new Set(["ALL", "US"])]
+                ]),
                 L = new Map([
-                    [N.PaymentSourceTypes.SOFORT, new Set(["ALL", ...I])],
-                    [N.PaymentSourceTypes.PRZELEWY24, new Set(["ALL", "PL"])],
-                    [N.PaymentSourceTypes.GIROPAY, new Set(["ALL", "DE"])],
-                    [N.PaymentSourceTypes.PAYSAFE_CARD, new Set(["ALL", ...R])],
-                    [N.PaymentSourceTypes.GCASH, new Set(["ALL", "PH"])],
-                    [N.PaymentSourceTypes.GRABPAY_MY, new Set(["ALL", "MY"])],
-                    [N.PaymentSourceTypes.MOMO_WALLET, new Set(["ALL", "VN"])],
-                    [N.PaymentSourceTypes.VENMO, new Set(["ALL", "US"])],
-                    [N.PaymentSourceTypes.KAKAOPAY, new Set(["ALL", "KR"])],
-                    [N.PaymentSourceTypes.GOPAY_WALLET, new Set(["ALL", "ID"])],
-                    [N.PaymentSourceTypes.BANCONTACT, new Set(["ALL", "BE"])],
-                    [N.PaymentSourceTypes.EPS, new Set(["ALL", "AT"])],
-                    [N.PaymentSourceTypes.IDEAL, new Set(["ALL", "NL"])],
-                    [N.PaymentSourceTypes.CASH_APP, new Set(["ALL", "US"])]
-                ]),
-                h = new Map([
-                    [N.PaymentSourceTypes.PAYSAFE_CARD, new Set(["DE"])]
-                ]),
-                g = "40c266_1";
+                    [A.PaymentSourceTypes.PAYSAFE_CARD, new Set(["DE"])]
+                ]);
 
-            function O(e) {
+            function h(e) {
                 let {
                     enabledPaymentTypes: t,
                     forceCountryCode: a,
                     validCountryCodes: n
                 } = d.default.getCurrentConfig({
-                    location: g
+                    location: "40c266_1"
                 }, {
                     autoTrackExposure: !1
-                }), r = function(e) {
-                    let {
-                        enabled: t
-                    } = E.default.getCurrentConfig({
-                        location: g
-                    });
-                    return t || null === e ? e : e.filter(e => e !== N.PaymentSourceTypes.CASH_APP)
-                }(t), s = null != e ? e : "ALL";
-                n.length > 0 && null != a && null != e && (s = n.includes(e) ? e : a);
-                let l = new Set,
-                    o = [];
-                return L.forEach((e, t) => {
-                    r.includes(t) && (e.has(s) ? l.add(t) : o.push(t))
-                }), h.forEach((e, t) => {
-                    e.has(s) && l.add(t)
+                }), r = null != e ? e : "ALL";
+                n.length > 0 && null != a && null != e && (r = n.includes(e) ? e : a);
+                let s = new Set,
+                    l = [];
+                return I.forEach((e, a) => {
+                    t.includes(a) && (e.has(r) ? s.add(a) : l.push(a))
+                }), L.forEach((e, t) => {
+                    e.has(r) && s.add(t)
                 }), {
-                    countryPaymentMethods: [...P, ...Array.from(l)],
-                    remainingPaymentMethods: o
+                    countryPaymentMethods: [...C, ...Array.from(s)],
+                    remainingPaymentMethods: l
                 }
             }
-            class M extends r.PureComponent {
+            class g extends r.PureComponent {
                 componentDidMount() {
                     (0, c.fetchIpCountryCode)()
                 }
@@ -678,20 +669,20 @@
                 createPaymentButtons(e) {
                     return e.map(e => {
                         var t;
-                        let a = C[e],
-                            r = (0, p.PAYMENT_SOURCE_NAMES)[e](),
+                        let a = y[e],
+                            r = (0, E.PAYMENT_SOURCE_NAMES)[e](),
                             s = null === (t = this.props.localizedPromo) || void 0 === t ? void 0 : t.paymentSourceTypes.includes(e);
                         return (0, n.jsx)(u.Button, {
                             onClick: () => this.props.onChooseType(e),
-                            className: y.button,
+                            className: T.button,
                             children: (0, n.jsxs)("div", {
                                 className: l(S.flex, S.alignCenter),
-                                children: [(0, n.jsx)(m.default, {
-                                    className: y.buttonIcon,
+                                children: [(0, n.jsx)(f.default, {
+                                    className: T.buttonIcon,
                                     type: a
-                                }), r, s && (0, n.jsx)(_.TextBadge, {
-                                    text: T.default.Messages.NEW,
-                                    className: y.newPaymentBadge,
+                                }), r, s && (0, n.jsx)(m.TextBadge, {
+                                    text: N.default.Messages.NEW,
+                                    className: T.newPaymentBadge,
                                     disableColor: !0
                                 })]
                             })
@@ -709,53 +700,53 @@
                         ipCountryCode: o,
                         ipCountryCodeHasError: c,
                         isEligibleForTrial: d = !1
-                    } = this.props, E = s ? (0, n.jsx)(A.default, {
-                        className: y.button,
-                        iconClassName: y.buttonIcon,
-                        paymentLabel: T.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_LABEL,
+                    } = this.props, E = s ? (0, n.jsx)(_.default, {
+                        className: T.button,
+                        iconClassName: T.buttonIcon,
+                        paymentLabel: N.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_LABEL,
                         onStripePaymentMethodReceived: r,
                         onChooseType: t
                     }) : null, p = [], f = [], m = void 0 === o;
-                    if (c) p.push(...this.createPaymentButtons(O("ALL").countryPaymentMethods));
+                    if (c) p.push(...this.createPaymentButtons(h("ALL").countryPaymentMethods));
                     else {
                         let {
                             countryPaymentMethods: e,
                             remainingPaymentMethods: t
-                        } = O(o);
+                        } = h(o);
                         p.push(...this.createPaymentButtons(e)), f.push(...this.createPaymentButtons(t))
                     }
-                    let _ = (0, n.jsxs)("div", {
+                    let A = (0, n.jsxs)("div", {
                         children: [(0, n.jsxs)("div", {
                             className: l(S.wrap, S.horizontal),
                             children: [p, E]
                         }), (0, n.jsx)("div", {
-                            className: f.length > 0 ? S.flex : y.hidden,
+                            className: f.length > 0 ? S.flex : T.hidden,
                             children: (0, n.jsxs)(u.Clickable, {
                                 onClick: () => this.toggleAllPayments(),
-                                className: l(S.flex, y.allPaymentsToggleButton),
-                                children: [T.default.Messages.PAYMENTS_ALL_METHOD_BUTTON, (0, n.jsx)(i.default, {
+                                className: l(S.flex, T.allPaymentsToggleButton),
+                                children: [N.default.Messages.PAYMENTS_ALL_METHOD_BUTTON, (0, n.jsx)(i.default, {
                                     open: e
                                 })]
                             })
                         }), (0, n.jsx)("div", {
-                            className: l(S.wrap, S.horizontal, y.allPaymentsSection, {
-                                [y.hidden]: !e,
+                            className: l(S.wrap, S.horizontal, T.allPaymentsSection, {
+                                [T.hidden]: !e,
                                 [S.flex]: e
                             }),
                             children: f
                         })]
                     });
-                    return m && !c && (_ = (0, n.jsx)(u.Spinner, {
+                    return m && !c && (A = (0, n.jsx)(u.Spinner, {
                         type: u.Spinner.Type.SPINNING_CIRCLE
                     })), (0, n.jsxs)("div", {
                         children: [d && (0, n.jsx)("hr", {
-                            className: y.SeparatorUpper
+                            className: T.SeparatorUpper
                         }), (0, n.jsx)(u.FormSection, {
-                            title: d ? T.default.Messages.BILLING_TRIAL_CHOOSE_PAYMENT : T.default.Messages.PAYMENT_SOURCE_TYPE_SELECT,
+                            title: d ? N.default.Messages.BILLING_TRIAL_CHOOSE_PAYMENT : N.default.Messages.PAYMENT_SOURCE_TYPE_SELECT,
                             className: a,
-                            children: _
+                            children: A
                         }), d && (0, n.jsx)("hr", {
-                            className: y.SeparatorLower
+                            className: T.SeparatorLower
                         })]
                     })
                 }
@@ -765,11 +756,11 @@
                     }
                 }
             }
-            var x = o.default.connectStores([f.default], () => ({
-                ipCountryCode: f.default.ipCountryCode,
-                ipCountryCodeHasError: f.default.ipCountryCodeHasError,
-                localizedPromo: f.default.localizedPricingPromo
-            }))(M)
+            var O = o.default.connectStores([p.default], () => ({
+                ipCountryCode: p.default.ipCountryCode,
+                ipCountryCodeHasError: p.default.ipCountryCodeHasError,
+                localizedPromo: p.default.localizedPricingPromo
+            }))(g)
         },
         812952: function(e, t, a) {
             "use strict";
@@ -903,7 +894,7 @@
                     } = e,
                     [i, A] = u.useState(p.IconTypes.UNKNOWN),
                     [N, T] = u.useState(!1),
-                    [y, S] = u.useState(!1),
+                    [S, y] = u.useState(!1),
                     [C, P] = u.useState(null),
                     [R, I] = u.useState({}),
                     L = (0, c.useElements)(),
@@ -929,21 +920,21 @@
                         }
                     }, [L, a]),
                     g = u.useCallback(e => {
-                        !y && !e.empty && S(!0), null != r && r(e.complete), null != e.error && T(!1)
-                    }, [y, r]),
+                        !S && !e.empty && y(!0), null != r && r(e.complete), null != e.error && T(!1)
+                    }, [S, r]),
                     O = u.useCallback(() => {
                         T(!0), null == s || s()
                     }, [s]),
                     M = u.useCallback(() => {
                         T(!1), null == l || l()
                     }, [l]),
-                    x = u.useCallback(() => {
+                    D = u.useCallback(() => {
                         if (null != L) switch (a) {
                             case "cardNumber": {
                                 let e = L.getElement(c.CardNumberElement);
                                 if (null == e) return;
                                 e.on("change", e => {
-                                    i !== e.brand && A(e.brand), e.empty && y ? P(f.default.Messages.CREDIT_CARD_ERROR_REQUIRED) : null != e.error ? P(f.default.Messages.CREDIT_CARD_ERROR_NUMBER) : P(null), g(e)
+                                    i !== e.brand && A(e.brand), e.empty && S ? P(f.default.Messages.CREDIT_CARD_ERROR_REQUIRED) : null != e.error ? P(f.default.Messages.CREDIT_CARD_ERROR_NUMBER) : P(null), g(e)
                                 }), e.on("focus", O), e.on("blur", M);
                                 break
                             }
@@ -951,7 +942,7 @@
                                 let e = L.getElement(c.CardExpiryElement);
                                 if (null == e) return;
                                 e.on("change", e => {
-                                    null != e.error || e.empty && y ? P(f.default.Messages.CREDIT_CARD_ERROR_EXPIRATION) : P(null), g(e)
+                                    null != e.error || e.empty && S ? P(f.default.Messages.CREDIT_CARD_ERROR_EXPIRATION) : P(null), g(e)
                                 }), e.on("focus", O), e.on("blur", M);
                                 break
                             }
@@ -959,22 +950,22 @@
                                 let e = L.getElement(c.CardCvcElement);
                                 if (null == e) return;
                                 e.on("change", e => {
-                                    null != e.error || e.empty && y ? P(f.default.Messages.CREDIT_CARD_ERROR_SECURITY_CODE) : P(null), g(e)
+                                    null != e.error || e.empty && S ? P(f.default.Messages.CREDIT_CARD_ERROR_SECURITY_CODE) : P(null), g(e)
                                 }), e.on("focus", O), e.on("blur", M)
                             }
                         }
-                    }, [M, g, O, i, L, y, a]);
+                    }, [M, g, O, i, L, S, a]);
 
-                function D() {
+                function x() {
                     return d(m.cardInput, {
                         [m.cardInputError]: null !== C,
                         [m.cardInputFocused]: N,
                         [m.cardNumberInput]: "cardNumber" === a
                     })
                 }
-                return u.useEffect(() => (x(), () => {
+                return u.useEffect(() => (D(), () => {
                     h()
-                }), [x, h]), u.useLayoutEffect(() => {
+                }), [D, h]), u.useLayoutEffect(() => {
                     let {
                         current: e
                     } = t;
@@ -1015,7 +1006,7 @@
                                             style: R,
                                             placeholder: f.default.Messages.PAYMENT_SOURCE_CARD_NUMBER
                                         },
-                                        className: D()
+                                        className: x()
                                     })]
                                 });
                             case "cardExpiry":
@@ -1024,7 +1015,7 @@
                                         style: R,
                                         placeholder: f.default.Messages.PAYMENT_SOURCE_EXPIRATION_DATE_PLACEHOLDER
                                     },
-                                    className: D()
+                                    className: x()
                                 });
                             case "cardCvc":
                                 return (0, o.jsx)(c.CardCvcElement, {
@@ -1032,7 +1023,7 @@
                                         style: R,
                                         placeholder: f.default.Messages.CREDIT_CARD_SECURITY_CODE
                                     },
-                                    className: D()
+                                    className: x()
                                 })
                         }
                     }(), (0, o.jsx)(E.InputError, {
@@ -1255,8 +1246,8 @@
                         default:
                             t = "en-US" === T ? o.default.Layouts.MODAL_US : o.default.Layouts.MODAL_INTL
                     }
-                    let y = (0, s.useStateFromStores)([i.default], () => i.default.ipCountryCode);
-                    return 0 === a.country.length && (a.country = null != y ? y : ""), (0, n.jsxs)(r.Fragment, {
+                    let S = (0, s.useStateFromStores)([i.default], () => i.default.ipCountryCode);
+                    return 0 === a.country.length && (a.country = null != S ? S : ""), (0, n.jsxs)(r.Fragment, {
                         children: [N ? (0, n.jsx)(l.FormErrorBlock, {
                             className: m.errorBlock,
                             children: f.default.Messages.BILLING_ERROR_SECTION_ADDRESS
@@ -1446,31 +1437,6 @@
                     })]
                 })
             }
-        },
-        902651: function(e, t, a) {
-            "use strict";
-            a.r(t), a.d(t, {
-                default: function() {
-                    return s
-                }
-            });
-            var n = a("862205");
-            let r = (0, n.createExperiment)({
-                id: "2023-10_cash_app_pay_rollout",
-                label: "Cash App Pay Rollout",
-                kind: "user",
-                defaultConfig: {
-                    enabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enabled",
-                    config: {
-                        enabled: !0
-                    }
-                }]
-            });
-            var s = r
         },
         454589: function(e, t, a) {
             "use strict";
