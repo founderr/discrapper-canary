@@ -1686,6 +1686,8 @@
         192800: function(e, t, o) {
             "use strict";
             e.exports = {
+                collectiblesAcceptButton: "collectiblesAcceptButton_c5c213",
+                collectiblesEmbedWrapper: "collectiblesEmbedWrapper_f85bff",
                 customGiftEmbedBox: "customGiftEmbedBox_a3693f",
                 customGiftEmbedBoxHorizontal: "customGiftEmbedBoxHorizontal__5eb39",
                 customGiftEmbedWrapper: "customGiftEmbedWrapper__1b187",
@@ -1715,24 +1717,11 @@
                 blurb: "blurb__41902",
                 confirmButton: "confirmButton_ec2b85",
                 divider: "divider__8cf9c",
-                giftBox: "giftBox__17333",
-                giftRecipient: "giftRecipient_ace244",
-                giftRecipientInputError: "giftRecipientInputError__64e9e",
-                giftRecipientInputWrapper: "giftRecipientInputWrapper__310fa",
-                giftRecipientName: "giftRecipientName_e14074",
-                giftRecipientRowAvatar: "giftRecipientRowAvatar__06715",
-                giftRecipientSection: "giftRecipientSection__52978",
-                giftRecipientTag: "giftRecipientTag__731e7",
-                giftSentMessage: "giftSentMessage__40612",
                 header: "header_d454ec",
-                headerCustomGifting: "headerCustomGifting__8a61e",
                 icon: "icon__7fde2",
                 installSelector: "installSelector_b45fd3",
-                sendToRecipientButton: "sendToRecipientButton__58304",
                 storeTerms: "storeTerms__1aed4",
-                subtext: "subtext_d97997",
-                subtextError: "subtextError__2979f subtext_d97997",
-                termsCheckbox: "termsCheckbox__7b994"
+                subtext: "subtext_d97997"
             }
         },
         513972: function(e, t, o) {
@@ -5305,6 +5294,13 @@
             "use strict";
             e.exports = {
                 formItem: "formItem_cc475e"
+            }
+        },
+        127789: function(e, t, o) {
+            "use strict";
+            e.exports = {
+                container: "container_e7feee",
+                textSection: "textSection__3d08d"
             }
         },
         999125: function(e, t, o) {
@@ -18755,6 +18751,13 @@
                 select: "select__47579"
             }
         },
+        432883: function(e, t, o) {
+            "use strict";
+            e.exports = {
+                closeButtonGift: "closeButtonGift__16390",
+                headerContainerGift: "headerContainerGift__108ba"
+            }
+        },
         322859: function(e, t, o) {
             "use strict";
             e.exports = {
@@ -18775,10 +18778,7 @@
             "use strict";
             e.exports = {
                 closeButton: "closeButton__1f98c",
-                closeButtonGift: "closeButtonGift_e7972a",
                 headerContainer: "headerContainer__1a9fc",
-                headerContainerGift: "headerContainerGift_bd1eea",
-                headerGift: "headerGift__9576b",
                 headerImage: "headerImage_f493db",
                 headerImageContainer: "headerImageContainer__96dc0"
             }
@@ -20473,12 +20473,6 @@
                 icon: "icon__63fca"
             }
         },
-        717913: function(e, t, o) {
-            "use strict";
-            e.exports = {
-                back: "back_c368c4"
-            }
-        },
         709626: function(e, t, o) {
             "use strict";
             e.exports = {
@@ -21599,6 +21593,13 @@
                 modalContent: "modalContent__80efb",
                 modalHeader: "modalHeader__2d6f4",
                 modalRoot: "modalRoot_c87f0e"
+            }
+        },
+        161730: function(e, t, o) {
+            "use strict";
+            e.exports = {
+                classificationEvidenceCard: "classificationEvidenceCard__1b7da",
+                classificationEvidenceContainer: "classificationEvidenceContainer__91a8a"
             }
         },
         122698: function(e, t, o) {

@@ -496,6 +496,8 @@
                 APP_LAUNCHER_SEARCH_PLACEHOLDER: "Search Apps & Commands",
                 APP_LAUNCHER_HOME_EMPTY_STATE_BODY: "No apps have been installed in this server yet",
                 APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY: "No apps or commands match your search",
+                APP_LAUNCHER_BUILT_IN_SECTION_NAME: "Discord Built-In",
+                APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION: "Built-in commands for everyday use",
                 READY: "Ready",
                 CONNECTING: "Connecting…",
                 CONNECTING_PROBLEMS_CTA: "Connection problems? Let us know!",
@@ -8309,7 +8311,6 @@
                 GIFT_EMBED_TITLE_PROMOTION: "You got a promotion code!",
                 GIFT_EMBED_TAGLINE_PROMOTION: "This gift link is a promotion code. Click the button below to claim it.",
                 GIFT_EMBED_RESOLVING: "Resolving gift",
-                GIFT_EMBED_BODY_OWNED_MOBILE: "You already own this and cannot accept it.",
                 GIFT_EMBED_BODY_REQUIRES_VERIFICATION_MOBILE: "Verify your account before claiming this gift.",
                 GIFT_EMBED_BODY_REQUIRES_VERIFICATION_EMAIL_MOBILE: "Verify your email address before claiming this gift.",
                 GIFT_INVENTORY: "Gift Inventory",
@@ -18251,7 +18252,7 @@
                 u = E("782340");
             (0, i.setUpdateRules)(s.default), (0, n.default)(u.default, o.default, T.default), a.default.Emitter.injectBatchEmitChanges(r.batchUpdates), a.default.PersistedStore.disableWrites = __OVERLAY__, a.default.initialize();
             let L = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("250299", ", Version Hash: ").concat("94562294382a41d947d76b401cc6c9fda846dcfe")), t.default.setTags({
+            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("250463", ", Version Hash: ").concat("4703d17f0aa534bfb9f47de2cedad162e8cc4791")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), I.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
         },
@@ -20545,8 +20546,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "250299", "250299"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("250299")), _ = 0), _
+                let _ = parseInt((e = "250463", "250463"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("250463")), _ = 0), _
             }
         },
         990629: function(e, _, E) {
@@ -23066,7 +23067,13 @@
                 update() {
                     let e = this.game,
                         _ = R.default.GetWindowFullscreenTypeByPid(e.pid, e.name, e.fullscreenType);
-                    _ !== this.lastscreenType && (this.counters[_].start(), null != this.lastscreenType && this.counters[this.lastscreenType].stop(), this.lastscreenType = _)
+                    if (_ !== this.lastscreenType) {
+                        if (!(_ in this.counters)) {
+                            c.error("ScreenTypeAnalytics: Unknown screen type: ".concat(_), _);
+                            return
+                        }
+                        this.counters[_].start(), null != this.lastscreenType && this.counters[this.lastscreenType].stop(), this.lastscreenType = _
+                    }
                 }
                 getAnalytics() {
                     var e, _;
@@ -28863,7 +28870,7 @@
                     s = i(I, _);
                 return "boolean" == typeof s ? O : s.palette()
             }
-            let R = e => l(e),
+            let R = e => "number" == typeof e ? null : l(e),
                 l = r.memoize(e => new Promise((_, E) => {
                     let t = new Image;
                     t.crossOrigin = "Anonymous", t.onerror = e => {
@@ -29311,7 +29318,7 @@
                 default: function() {
                     return y
                 }
-            }), E("222007"), E("70102"), E("511434"), E("313619"), E("654714"), E("287168"), E("956660");
+            }), E("222007"), E("70102"), E("511434"), E("313619"), E("654714"), E("287168"), E("956660"), E("424973");
             var t, o, n, r, a, i, I, s, T = E("627445"),
                 S = E.n(T),
                 N = E("817792"),
@@ -29754,6 +29761,17 @@
                         getWindowFullscreenTypeByPid: o
                     } = this.getDiscordUtils(), n = 0 !== e && null != o && null != _ ? o(e, _) : null;
                     return -1 === n && (n = null), null !== (t = null != n ? n : E) && void 0 !== t ? t : R.RunningProcessFullscreenType.UNKNOWN
+                },
+                isModuleVersionAtLeast(e, _) {
+                    var E, t, o;
+                    let n = [...null != D ? D : [0, 0, 0]];
+                    n.push(null !== (t = null === (E = this.moduleVersions) || void 0 === E ? void 0 : E[e]) && void 0 !== t ? t : 0);
+                    let r = null !== (o = _[this.releaseChannel]) && void 0 !== o ? o : _.stable;
+                    for (let [e, _] of n.entries()) {
+                        if (_ > r[e]) break;
+                        if (_ < r[e]) return !1
+                    }
+                    return !0
                 }
             }
         },
