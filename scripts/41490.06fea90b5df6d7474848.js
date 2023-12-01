@@ -5880,40 +5880,39 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return c
                 }
             });
             var l = n("37983"),
                 i = n("884691"),
                 r = n("414456"),
                 o = n.n(r),
-                s = n("77078"),
-                a = n("551305"),
-                u = n("164424"),
-                d = n("782340"),
-                c = n("67046"),
-                f = i.memo(function(e) {
+                s = n("551305"),
+                a = n("164424"),
+                u = n("782340"),
+                d = n("67046"),
+                c = i.memo(function(e) {
                     let {
                         onClick: t,
                         disabled: n = !1
-                    } = e, i = (0, s.useRedesignIconContext)().enabled;
+                    } = e;
                     return (0, l.jsx)("div", {
-                        className: c.separator,
+                        className: d.separator,
                         children: (0, l.jsx)("div", {
-                            className: c.buttonContainer,
-                            children: (0, l.jsx)(a.default, {
-                                className: c.button,
-                                innerClassName: c.innerButton,
-                                childClassName: o(c.buttonChild, {
-                                    [c.disabled]: n,
-                                    [c.activeButtonChild]: !n
+                            className: d.buttonContainer,
+                            children: (0, l.jsx)(s.default, {
+                                className: d.button,
+                                innerClassName: d.innerButton,
+                                childClassName: o(d.buttonChild, {
+                                    [d.disabled]: n,
+                                    [d.activeButtonChild]: !n
                                 }),
                                 onClick: t,
                                 disabled: n,
                                 isActive: !1,
-                                "aria-label": d.default.Messages.SEND_MESSAGE,
-                                children: (0, l.jsx)(u.default, {
-                                    className: i ? "" : c.sendIcon
+                                "aria-label": u.default.Messages.SEND_MESSAGE,
+                                children: (0, l.jsx)(a.default, {
+                                    className: d.sendIcon
                                 })
                             })
                         })
