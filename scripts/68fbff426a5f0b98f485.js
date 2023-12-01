@@ -202,7 +202,7 @@
         },
         811982: function(e, t, n) {
             "use strict";
-            e.exports = n.p + "0af0937bdb9bd0b13b86.png"
+            e.exports = n.p + "b3ffe99a1e9696d82b04.png"
         },
         476742: function(e, t, n) {
             "use strict";
@@ -1746,7 +1746,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "250728"
+                        buildNumber: "250747"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -12791,7 +12791,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return _
                 }
             }), n("424973"), n("222007");
             var a = n("151426"),
@@ -12799,23 +12799,31 @@
                 l = n("446674"),
                 i = n("509802"),
                 r = n("778588"),
-                o = n("197881"),
-                u = n("417313"),
-                d = n("195362");
-            let c = "useCollectiblesShopTabCoachmark";
-            var E = () => {
-                let {
-                    coachmarkEnabled: e
-                } = (0, d.default)({
-                    location: c
-                }), {
-                    giftingEnabled: t
-                } = (0, u.default)({
-                    location: c
-                }), n = (0, l.useStateFromStores)([r.default], () => r.default.hasLayers()), E = (0, s.useModalsStore)(s.hasAnyModalOpenSelector), f = E || n || o.ProcessArgs.isDisallowPopupsSet(), _ = [];
-                e && _.push(a.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_NITRO_ONLY_COACHMARK), t && _.push(a.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK);
-                let [C] = (0, i.useDismissibleContentGroup)(f ? [] : _, void 0, !0);
-                return C
+                o = n("697218"),
+                u = n("197881"),
+                d = n("158998"),
+                c = n("417313"),
+                E = n("195362");
+            let f = "useCollectiblesShopTabCoachmark";
+            var _ = () => {
+                let e = (0, l.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
+                    {
+                        coachmarkEnabled: t
+                    } = (0, E.default)({
+                        location: f
+                    }),
+                    {
+                        giftingEnabled: n
+                    } = (0, c.default)({
+                        location: f
+                    }),
+                    _ = (0, l.useStateFromStores)([r.default], () => r.default.hasLayers()),
+                    C = (0, s.useModalsStore)(s.hasAnyModalOpenSelector),
+                    h = C || _ || u.ProcessArgs.isDisallowPopupsSet(),
+                    I = [];
+                t && I.push(a.DismissibleContent.COLLECTIBLES_SHOP_FOR_ALL_NITRO_ONLY_COACHMARK), n && (0, d.ageEligibleForPremiumUpsell)(e) && I.push(a.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK);
+                let [T] = (0, i.useDismissibleContentGroup)(h ? [] : I, void 0, !0);
+                return T
             }
         },
         8977: function(e, t, n) {
