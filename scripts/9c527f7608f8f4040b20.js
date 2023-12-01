@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["2186"], {
+    ["35389"], {
         69448: function(e, t, n) {
             "use strict";
             e.exports = n.p + "f6da6e7ed1d57e445d0e.svg"
@@ -15,10 +15,6 @@
         599964: function(e, t, n) {
             "use strict";
             e.exports = n.p + "87ce0c8ff87b3951af60.png"
-        },
-        978985: function(e, t, n) {
-            "use strict";
-            e.exports = n.p + "02705764250e5f57361c.svg"
         },
         713827: function(e, t, n) {
             "use strict";
@@ -1429,7 +1425,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return L
+                    return R
                 }
             }), n("222007");
             var l = n("37983"),
@@ -1445,17 +1441,18 @@
                 h = n("42887"),
                 C = n("413709"),
                 p = n("758710"),
-                m = n("599110"),
-                E = n("306160"),
-                g = n("701909"),
-                _ = n("687609"),
-                S = n("49111"),
-                I = n("353927"),
-                N = n("782340"),
-                T = n("126657");
-            let A = () => {
+                m = n("45029"),
+                E = n("599110"),
+                g = n("306160"),
+                _ = n("701909"),
+                S = n("687609"),
+                I = n("49111"),
+                N = n("353927"),
+                T = n("782340"),
+                A = n("126657");
+            let L = () => {
                 h.default.getMediaEngine().once(o.MediaEngineEvent.ConnectionStats, e => {
-                    let t = Object.values(I.MediaEngineContextTypes).map(t => {
+                    let t = Object.values(N.MediaEngineContextTypes).map(t => {
                         let n = e.filter(e => {
                             let {
                                 connection: n
@@ -1471,12 +1468,12 @@
                         }
                         return n
                     }).filter(e => e.length > 0);
-                    (0, E.copy)(JSON.stringify(t, null, 2)), (0, u.showToast)((0, u.createToast)(N.default.Messages.COPIED, u.ToastType.SUCCESS))
+                    (0, g.copy)(JSON.stringify(t, null, 2)), (0, u.showToast)((0, u.createToast)(T.default.Messages.COPIED, u.ToastType.SUCCESS))
                 })
             };
-            var L = function(e) {
+            var R = function(e) {
                 (0, a.useEffect)(() => {
-                    m.default.track(S.AnalyticEvents.OPEN_POPOUT, {
+                    E.default.track(I.AnalyticEvents.OPEN_POPOUT, {
                         type: "RTC Connection"
                     })
                 }, []);
@@ -1496,38 +1493,38 @@
                         return (0, l.jsxs)(s.Fragment, {
                             children: [o && (0, l.jsxs)("div", {
                                 children: [(0, l.jsx)("div", {
-                                    className: T.graphContainer,
+                                    className: A.graphContainer,
                                     children: (0, l.jsx)(c.default, {
                                         dataPoints: e.pings,
                                         width: 258,
                                         height: 80
                                     })
                                 }), (0, l.jsx)("div", {
-                                    className: T.popoutText,
+                                    className: A.popoutText,
                                     children: (0, l.jsx)("strong", {
-                                        children: _.default.getShortHostname(t)
+                                        children: S.default.getShortHostname(t)
                                     })
                                 })]
                             }), (0, l.jsx)("div", {
-                                className: T.popoutText,
-                                children: N.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_AVERAGE_PING.format({
+                                className: A.popoutText,
+                                children: T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_AVERAGE_PING.format({
                                     averagePing: n.toFixed(0)
                                 })
                             }), null != a ? (0, l.jsx)("div", {
-                                className: T.popoutText,
-                                children: N.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_LAST_PING.format({
+                                className: A.popoutText,
+                                children: T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_LAST_PING.format({
                                     lastPing: a.toFixed(0)
                                 })
                             }) : null, null != i ? (0, l.jsx)("div", {
-                                className: T.popoutText,
-                                children: N.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_LOSS_VALUE.format({
+                                className: A.popoutText,
+                                children: T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_LOSS_VALUE.format({
                                     outboundLossRate: i.toFixed(1)
                                 })
                             }) : null, (0, l.jsxs)("div", {
-                                className: r(T.popoutText, T.popoutTextDetails),
-                                children: [null == i ? N.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_DETAILS.format({
+                                className: r(A.popoutText, A.popoutTextDetails),
+                                children: [null == i ? T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_DETAILS.format({
                                     badPing: 250
-                                }) : null, null != i ? N.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_DETAILS_WITH_LOSS.format({
+                                }) : null, null != i ? T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTED_DETAILS_WITH_LOSS.format({
                                     badPing: 250,
                                     badLossRate: 10
                                 }) : null]
@@ -1538,63 +1535,68 @@
                         connectionState: i
                     } = e,
                     o = f.DeveloperMode.getSetting(),
-                    E = {
-                        [S.RTCConnectionStates.AWAITING_ENDPOINT]: N.default.Messages.RTC_CONNECTION_STATE_AWAITING_ENDPOINT.format({
-                            url: S.Links.STATUS
+                    g = {
+                        [I.RTCConnectionStates.AWAITING_ENDPOINT]: T.default.Messages.RTC_CONNECTION_STATE_AWAITING_ENDPOINT.format({
+                            url: I.Links.STATUS
                         }),
-                        [S.RTCConnectionStates.CONNECTING]: N.default.Messages.RTC_CONNECTION_STATE_CONNECTING,
-                        [S.RTCConnectionStates.AUTHENTICATING]: N.default.Messages.RTC_CONNECTION_STATE_AUTHENTICATING,
-                        [S.RTCConnectionStates.DISCONNECTED]: N.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED,
-                        [S.RTCConnectionStates.RTC_CONNECTING]: N.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTING,
-                        [S.RTCConnectionStates.ICE_CHECKING]: N.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
-                            url: g.default.getArticleURL(S.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+                        [I.RTCConnectionStates.CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_CONNECTING,
+                        [I.RTCConnectionStates.AUTHENTICATING]: T.default.Messages.RTC_CONNECTION_STATE_AUTHENTICATING,
+                        [I.RTCConnectionStates.DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED,
+                        [I.RTCConnectionStates.RTC_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_RTC_CONNECTING,
+                        [I.RTCConnectionStates.ICE_CHECKING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
+                            url: _.default.getArticleURL(I.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
                         }),
-                        [S.RTCConnectionStates.DTLS_CONNECTING]: N.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
-                            url: g.default.getArticleURL(S.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+                        [I.RTCConnectionStates.DTLS_CONNECTING]: T.default.Messages.RTC_CONNECTION_STATE_ICE_CHECKING.format({
+                            url: _.default.getArticleURL(I.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
                         }),
-                        [S.RTCConnectionStates.RTC_CONNECTED]: n,
-                        [S.RTCConnectionStates.NO_ROUTE]: N.default.Messages.RTC_CONNECTION_STATE_NO_ROUTE.format({
-                            url: g.default.getArticleURL(S.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
+                        [I.RTCConnectionStates.RTC_CONNECTED]: n,
+                        [I.RTCConnectionStates.NO_ROUTE]: T.default.Messages.RTC_CONNECTION_STATE_NO_ROUTE.format({
+                            url: _.default.getArticleURL(I.HelpdeskArticles.VOICE_CONNECTION_ERRORS)
                         }),
-                        [S.RTCConnectionStates.RTC_DISCONNECTED]: N.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED
+                        [I.RTCConnectionStates.RTC_DISCONNECTED]: T.default.Messages.RTC_CONNECTION_STATE_DISCONNECTED
                     } [i];
                 return (0, l.jsx)("div", {
-                    className: T.container,
+                    className: A.container,
                     children: (0, l.jsxs)("section", {
-                        className: T.section,
-                        children: ["function" == typeof E ? E() : (0, l.jsx)("p", {
-                            className: r(T.popoutText, T.popoutTextDetails),
-                            children: E
+                        className: A.section,
+                        children: ["function" == typeof g ? g() : (0, l.jsx)("p", {
+                            className: r(A.popoutText, A.popoutTextDetails),
+                            children: g
                         }), (0, l.jsx)("hr", {
-                            className: T.separator
+                            className: A.separator
                         }), (0, l.jsxs)("div", {
-                            className: T.popoutBottom,
-                            children: [(0, l.jsx)("span", {
-                                className: T.secured,
-                                children: N.default.Messages.SECURE_CONNECTION
-                            }), o && h.default.supports(I.Features.DIAGNOSTICS) && !__OVERLAY__ && (0, l.jsxs)(l.Fragment, {
+                            className: A.popoutBottom,
+                            children: [(0, l.jsxs)("span", {
+                                className: r(A.secured, A.textWithIcon),
+                                children: [(0, l.jsx)(m.default, {
+                                    width: 12,
+                                    height: 12,
+                                    color: u.tokens.colors.TEXT_POSITIVE.css,
+                                    className: A.icon
+                                }), T.default.Messages.SECURE_CONNECTION]
+                            }), o && h.default.supports(N.Features.DIAGNOSTICS) && !__OVERLAY__ && (0, l.jsxs)(l.Fragment, {
                                 children: [(0, l.jsxs)(u.Anchor, {
-                                    className: T.debugButton,
+                                    className: r(A.debugButton, A.textWithIcon),
                                     onClick: t,
-                                    children: [N.default.Messages.DEBUG, (0, l.jsx)(p.default, {
-                                        className: T.launchIcon,
+                                    children: [T.default.Messages.DEBUG, (0, l.jsx)(p.default, {
+                                        className: A.icon,
                                         width: 12,
                                         height: 12
                                     })]
                                 }), (0, l.jsxs)(u.Anchor, {
-                                    className: T.copyStatsButton,
-                                    onClick: A,
+                                    className: r(A.copyStatsButton, A.textWithIcon),
+                                    onClick: L,
                                     title: "Copy to clipboard",
-                                    children: [N.default.Messages.COPY_STATS, (0, l.jsx)(C.default, {
-                                        className: T.copyIcon,
+                                    children: [T.default.Messages.COPY_STATS, (0, l.jsx)(C.default, {
+                                        className: A.icon,
                                         width: 12,
                                         height: 12
                                     })]
                                 })]
                             }), !o && !__OVERLAY__ && (0, l.jsx)(u.Anchor, {
-                                className: T.debugButton,
-                                href: g.default.getArticleURL(S.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING),
-                                children: N.default.Messages.LEARN_MORE
+                                className: A.debugButton,
+                                href: _.default.getArticleURL(I.HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING),
+                                children: T.default.Messages.LEARN_MORE
                             })]
                         })]
                     })
@@ -2391,6 +2393,40 @@
                         fill: "string" == typeof i ? i : i.css,
                         className: r
                     })]
+                })
+            }
+        },
+        375022: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                PlusMediumIcon: function() {
+                    return i
+                }
+            });
+            var l = n("37983");
+            n("884691");
+            var a = n("669491"),
+                s = n("75196");
+            let i = e => {
+                let {
+                    width: t = 24,
+                    height: n = 24,
+                    color: i = a.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: r = "",
+                    ...o
+                } = e;
+                return (0, l.jsx)("svg", {
+                    ...(0, s.default)(o),
+                    width: t,
+                    height: n,
+                    viewBox: "0 0 24 24",
+                    fill: "none",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    children: (0, l.jsx)("path", {
+                        d: "M13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5V11L5 11.0001C4.44771 11.0001 4 11.4478 4 12.0001C4 12.5523 4.44772 13.0001 5 13.0001L11 13V19C11 19.5523 11.4477 20 12 20C12.5523 20 13 19.5523 13 19V13L19 13C19.5523 13 20 12.5523 20 12C20 11.4477 19.5523 11 19 11L13 11V5Z",
+                        fill: "string" == typeof i ? i : i.css,
+                        className: r
+                    })
                 })
             }
         },
@@ -12134,7 +12170,8 @@
                                 },
                                 ...x,
                                 children: null != C && (0, l.jsx)(C, {
-                                    className: f.circleIcon
+                                    className: f.circleIcon,
+                                    color: "currentColor"
                                 })
                             })
                         })
@@ -12147,29 +12184,30 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return A
+                    return L
                 }
             });
             var l = n("37983"),
                 a = n("884691"),
                 s = n("446674"),
-                i = n("77078"),
-                r = n("272030"),
-                o = n("685665"),
-                u = n("616265"),
-                d = n("141254"),
-                c = n("116616"),
-                f = n("12896"),
-                h = n("305961"),
-                C = n("697218"),
-                p = n("151185"),
-                m = n("472942"),
-                E = n("966270"),
-                g = n("49111"),
-                _ = n("243338"),
-                S = n("782340"),
-                I = n("823660");
-            let N = {
+                i = n("375022"),
+                r = n("77078"),
+                o = n("272030"),
+                u = n("685665"),
+                d = n("616265"),
+                c = n("141254"),
+                f = n("116616"),
+                h = n("12896"),
+                C = n("305961"),
+                p = n("697218"),
+                m = n("151185"),
+                E = n("472942"),
+                g = n("966270"),
+                _ = n("49111"),
+                S = n("243338"),
+                I = n("782340"),
+                N = n("823660");
+            let T = {
                 origin: {
                     x: -16,
                     y: 0
@@ -12182,8 +12220,8 @@
                 }
             };
 
-            function T(e) {
-                (0, r.openContextMenuLazy)(e, async () => {
+            function A(e) {
+                (0, o.openContextMenuLazy)(e, async () => {
                     let {
                         default: e
                     } = await n.el("946661").then(n.bind(n, "946661"));
@@ -12193,42 +12231,42 @@
                 })
             }
 
-            function A(e) {
+            function L(e) {
                 let {
                     disableTooltip: t,
                     lastTargetNode: n
-                } = e, r = (0, s.useStateFromStores)([h.default], () => h.default.getGuilds()), A = a.useMemo(() => Object.values(r), [r]), L = (0, s.useStateFromStores)([C.default], () => C.default.getCurrentUser()), R = a.useMemo(() => A.some(e => e.isOwner(L)), [A, L]), x = (0, i.useModalsStore)(e => (0, i.hasModalOpenSelector)(e, _.CREATE_GUILD_MODAL_KEY)), {
-                    analyticsLocations: v
-                } = (0, o.default)(), M = (0, l.jsx)(E.default, {
+                } = e, o = (0, s.useStateFromStores)([C.default], () => C.default.getGuilds()), L = a.useMemo(() => Object.values(o), [o]), R = (0, s.useStateFromStores)([p.default], () => p.default.getCurrentUser()), x = a.useMemo(() => L.some(e => e.isOwner(R)), [L, R]), v = (0, r.useModalsStore)(e => (0, r.hasModalOpenSelector)(e, S.CREATE_GUILD_MODAL_KEY)), {
+                    analyticsLocations: M
+                } = (0, u.default)(), O = (0, r.useRedesignIconContext)().enabled, y = (0, l.jsx)(g.default, {
                     showPill: !1,
                     id: "create-join-button",
                     onClick: () => {
-                        (0, d.isAtGuildCapAndNonPremium)() ? (0, c.default)({
+                        (0, c.isAtGuildCapAndNonPremium)() ? (0, f.default)({
                             analyticsSource: {
-                                page: g.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL
+                                page: _.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL
                             },
                             analyticsLocation: {
-                                page: g.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL,
-                                section: g.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+                                page: _.AnalyticsLocations.CREATE_JOIN_GUILD_MODAL,
+                                section: _.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
                             },
-                            analyticsLocations: v
-                        }) : u.default.openCreateGuildModal({
+                            analyticsLocations: M
+                        }) : d.default.openCreateGuildModal({
                             location: "Guild List"
                         })
                     },
-                    selected: x,
-                    onContextMenu: T,
-                    tooltip: S.default.Messages.ADD_A_SERVER,
-                    icon: p.default
+                    selected: v,
+                    onContextMenu: A,
+                    tooltip: I.default.Messages.ADD_A_SERVER,
+                    icon: O ? i.PlusMediumIcon : m.default
                 });
-                return t ? M : (0, l.jsx)("div", {
-                    className: I.tutorialContainer,
-                    children: (0, l.jsxs)(f.default, {
-                        tutorialId: R ? "create-more-servers" : "create-first-server",
-                        inlineSpecs: N,
+                return t ? y : (0, l.jsx)("div", {
+                    className: N.tutorialContainer,
+                    children: (0, l.jsxs)(h.default, {
+                        tutorialId: x ? "create-more-servers" : "create-first-server",
+                        inlineSpecs: T,
                         position: "right",
-                        children: [M, null != n && (0, l.jsx)(m.default, {
-                            name: S.default.Messages.DND_END_OF_LIST,
+                        children: [y, null != n && (0, l.jsx)(E.default, {
+                            name: I.default.Messages.DND_END_OF_LIST,
                             targetNode: n,
                             below: !0,
                             noCombine: !0

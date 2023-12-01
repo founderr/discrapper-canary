@@ -204,10 +204,6 @@
             "use strict";
             e.exports = n.p + "82012659f3d934de21a4.png"
         },
-        156465: function(e, t, n) {
-            "use strict";
-            e.exports = n.p + "42b086ee3d9863ea45bc.svg"
-        },
         906897: function(e, t, n) {
             "use strict";
             e.exports = n.p + "896c671f42f403930aa1.svg"
@@ -1746,7 +1742,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "250523"
+                        buildNumber: "250528"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -20726,37 +20722,38 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return o
                 }
             });
             var a = n("37983");
             n("884691");
             var s = n("77078"),
-                l = n("782340"),
-                i = n("672639"),
-                r = e => {
+                l = n("745633"),
+                i = n("782340"),
+                r = n("672639"),
+                o = e => {
                     let {
                         hasHub: t
                     } = e;
                     return (0, a.jsxs)("div", {
-                        className: i.container,
+                        className: r.container,
                         children: [(0, a.jsx)("div", {
-                            className: i.iconContainer,
-                            children: (0, a.jsx)("div", {
-                                className: i.icon
+                            className: r.iconContainer,
+                            children: (0, a.jsx)(l.default, {
+                                color: s.tokens.colors.WHITE.css
                             })
                         }), (0, a.jsx)(s.Text, {
                             color: "header-primary",
                             variant: "text-lg/semibold",
-                            className: i.header,
-                            children: t ? l.default.Messages.HUB_EMAIL_CONNECTION_ADD_HEADER : l.default.Messages.HUB_EMAIL_CONNECTION_JOIN_HEADER
+                            className: r.header,
+                            children: t ? i.default.Messages.HUB_EMAIL_CONNECTION_ADD_HEADER : i.default.Messages.HUB_EMAIL_CONNECTION_JOIN_HEADER
                         }), (0, a.jsx)(s.Text, {
                             color: "header-secondary",
                             variant: "text-sm/normal",
-                            className: i.description,
-                            children: t ? l.default.Messages.HUB_EMAIL_CONNECTION_ADD_DESCRIPTION : l.default.Messages.HUB_EMAIL_CONNECTION_JOIN_CARD_DESCRIPTION
+                            className: r.description,
+                            children: t ? i.default.Messages.HUB_EMAIL_CONNECTION_ADD_DESCRIPTION : i.default.Messages.HUB_EMAIL_CONNECTION_JOIN_CARD_DESCRIPTION
                         }), (0, a.jsx)("div", {
-                            className: i.gap
+                            className: r.gap
                         }), (0, a.jsx)(s.Button, {
                             size: s.Button.Sizes.LARGE,
                             color: t ? s.Button.Colors.PRIMARY : s.Button.Colors.GREEN,
@@ -20770,9 +20767,9 @@
                             }),
                             children: (0, a.jsx)(s.Text, {
                                 variant: "text-sm/semibold",
-                                className: i.addButton,
+                                className: r.addButton,
                                 color: "none",
-                                children: t ? l.default.Messages.HUB_EMAIL_CONNECTION_JOIN_ANOTHER : l.default.Messages.HUB_EMAIL_CONNECTION_JOIN_MY_SCHOOOL
+                                children: t ? i.default.Messages.HUB_EMAIL_CONNECTION_JOIN_ANOTHER : i.default.Messages.HUB_EMAIL_CONNECTION_JOIN_MY_SCHOOOL
                             })
                         })]
                     })
@@ -27152,6 +27149,7 @@
                                 enableActivities: s
                             }) : null, (0, V.default)(e) ? (0, a.jsx)(Y.default, {
                                 className: i(ek.button, ek.buttonColor),
+                                innerClassName: ek.buttonContents,
                                 iconClassName: ek.buttonIcon,
                                 channel: e
                             }) : null]
@@ -29470,7 +29468,7 @@
                         icon: (0, a.jsx)(u.default, {
                             width: 20,
                             height: 20,
-                            className: f.positive
+                            color: i.tokens.colors.WHITE.css
                         }),
                         inModal: t
                     }), (0, a.jsx)(C, {
@@ -29479,7 +29477,7 @@
                         icon: (0, a.jsx)(o.default, {
                             width: 20,
                             height: 20,
-                            className: f.positive
+                            color: i.tokens.colors.WHITE.css
                         }),
                         inModal: t
                     }), (0, a.jsx)(C, {
@@ -29488,7 +29486,7 @@
                         icon: (0, a.jsx)(c.default, {
                             width: 20,
                             height: 20,
-                            className: f.positive
+                            color: i.tokens.colors.WHITE.css
                         }),
                         inModal: t
                     }), (0, a.jsx)(i.Text, {
@@ -29502,7 +29500,7 @@
                         icon: (0, a.jsx)(r.default, {
                             width: 20,
                             height: 20,
-                            className: f.negative
+                            color: i.tokens.colors.WHITE.css
                         }),
                         inModal: t
                     })]
@@ -29606,8 +29604,8 @@
                             className: r.circle,
                             children: (0, a.jsx)(t, {
                                 className: l(r.icon, n),
-                                width: 21,
-                                height: 21,
+                                width: 20,
+                                height: 20,
                                 color: "currentColor"
                             })
                         }), (0, a.jsxs)("div", {
@@ -30905,58 +30903,64 @@
                 r = n("393414"),
                 o = n("239380"),
                 u = n("305961"),
-                d = n("599110"),
-                c = n("315102"),
-                E = n("853004"),
-                f = n("49111"),
-                _ = n("782340"),
-                C = n("443"),
-                h = n("156465");
+                d = n("627490"),
+                c = n("599110"),
+                E = n("315102"),
+                f = n("853004"),
+                _ = n("49111"),
+                C = n("782340"),
+                h = n("443");
 
             function I(e, t, n) {
                 return (0, a.jsxs)("button", {
-                    className: C.container,
+                    className: h.container,
                     onClick: n,
-                    children: [(0, a.jsx)("img", {
-                        className: C.icon,
+                    children: ["function" == typeof e ? (0, a.jsx)("div", {
+                        className: h.icon,
+                        children: (0, a.jsx)(e, {
+                            className: h.iconInner,
+                            color: l.tokens.colors.WHITE.css
+                        })
+                    }) : (0, a.jsx)("img", {
+                        className: h.icon,
                         alt: "",
                         src: e
                     }), (0, a.jsx)(l.Text, {
-                        className: C.text,
+                        className: h.text,
                         variant: "text-md/medium",
                         children: t
-                    }), (0, a.jsx)(E.default, {
-                        className: C.arrow
+                    }), (0, a.jsx)(f.default, {
+                        className: h.arrow
                     })]
                 }, t)
             }
 
             function T() {
                 let e = Object.values(u.default.getGuilds()),
-                    t = e.filter(e => e.hasFeature(f.GuildFeatures.HUB)),
+                    t = e.filter(e => e.hasFeature(_.GuildFeatures.HUB)),
                     n = e => {
-                        d.default.track(f.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, {
+                        c.default.track(_.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, {
                             guild_id: e
                         }), (0, o.transitionToGuild)(e)
                     };
                 return (0, a.jsxs)(s.Fragment, {
                     children: [(0, a.jsx)("header", {
-                        className: C.header,
+                        className: h.header,
                         children: (0, a.jsx)(l.FormTitle, {
                             tag: "h2",
-                            className: C.title,
-                            children: _.default.Messages.ADD_FRIEND_MAKE_FRIENDS
+                            className: h.title,
+                            children: C.default.Messages.ADD_FRIEND_MAKE_FRIENDS
                         })
                     }), (0, a.jsxs)("div", {
-                        className: C.grid,
-                        children: [t.map(e => I(c.default.getGuildIconURL({
+                        className: h.grid,
+                        children: [t.map(e => I(E.default.getGuildIconURL({
                             id: e.id,
                             icon: e.icon,
                             size: 240
                         }), e.name, () => {
                             n(e.id)
-                        })), I(h, _.default.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
-                            (0, i.clearSearch)(), d.default.track(f.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, r.transitionTo)(f.Routes.GUILD_DISCOVERY)
+                        })), I(d.default, C.default.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
+                            (0, i.clearSearch)(), c.default.track(_.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, r.transitionTo)(_.Routes.GUILD_DISCOVERY)
                         })]
                     })]
                 })
@@ -40456,46 +40460,47 @@
                     channel: t,
                     iconClassName: v,
                     className: M,
-                    ...P
+                    innerClassName: P,
+                    ...D
                 } = e, {
-                    mute: D,
-                    suppress: y
-                } = (0, C.default)(t), x = (0, i.default)([h.default], () => h.default.isDeaf()), U = D || y || x, [b, G] = s.useState(!1), j = t.getGuildId(), w = (0, N.useSoundBoardDismissContentTypes)({
-                    isSoundboardButtonDisabled: U
-                }), [k, F] = (0, E.useGetDismissibleContent)(w), {
-                    AnalyticsLocationProvider: B
-                } = (0, c.default)(d.default.SOUNDBOARD_BUTTON), H = (0, i.default)([I.default], () => I.default.isFocused()), V = (0, l.v4)();
-
-                function Y(e) {
-                    null == e || e(), null != k && k !== r.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && F(p.ContentDismissActionType.UNKNOWN)
-                }
+                    mute: y,
+                    suppress: x
+                } = (0, C.default)(t), U = (0, i.default)([h.default], () => h.default.isDeaf()), b = y || x || U, [G, j] = s.useState(!1), w = t.getGuildId(), k = (0, N.useSoundBoardDismissContentTypes)({
+                    isSoundboardButtonDisabled: b
+                }), [F, B] = (0, E.useGetDismissibleContent)(k), {
+                    AnalyticsLocationProvider: H
+                } = (0, c.default)(d.default.SOUNDBOARD_BUTTON), V = (0, i.default)([I.default], () => I.default.isFocused()), Y = (0, l.v4)();
 
                 function W(e) {
-                    null != j && (0, u.openContextMenuLazy)(e, async () => {
+                    null == e || e(), null != F && F !== r.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && B(p.ContentDismissActionType.UNKNOWN)
+                }
+
+                function K(e) {
+                    null != w && (0, u.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
                         } = await n.el("136137").then(n.bind(n, "136137"));
                         return t => (0, a.jsx)(e, {
-                            guildId: j,
+                            guildId: w,
                             ...t
                         })
                     })
                 }
-                let K = e => (0, a.jsx)(o.Popout, {
-                    shouldShow: b,
+                let z = e => (0, a.jsx)(o.Popout, {
+                    shouldShow: G,
                     position: "top",
-                    onRequestClose: () => G(!1),
+                    onRequestClose: () => j(!1),
                     renderPopout: e => {
                         let {
                             closePopout: n
                         } = e;
                         return (0, a.jsx)(m.default, {
-                            guildId: j,
+                            guildId: w,
                             channel: t,
                             onClose: n,
-                            gridNotice: k === r.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(A.CustomCallSoundUpsell, {
+                            gridNotice: F === r.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(A.CustomCallSoundUpsell, {
                                 onClose: n,
-                                markAsDismissed: F
+                                markAsDismissed: B
                             }),
                             analyticsSource: "rtc panel"
                         })
@@ -40506,25 +40511,26 @@
                             ...t,
                             className: M,
                             wrapperClassName: M,
-                            disabled: U,
+                            innerClassName: P,
+                            disabled: b,
                             onClick: () => {
                                 var t;
-                                Y(), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), G(!b)
+                                W(), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), j(!G)
                             },
-                            onContextMenu: W,
+                            onContextMenu: K,
                             fullWidth: !0,
                             size: o.Button.Sizes.SMALL,
-                            ...P,
+                            ...D,
                             children: [(0, a.jsx)(S.default, {
                                 className: v
-                            }), k === r.DismissibleContent.CUSTOM_CALL_SOUNDS_SPARKLES && (0, a.jsx)(T.default, {
-                                paused: !H
+                            }), F === r.DismissibleContent.CUSTOM_CALL_SOUNDS_SPARKLES && (0, a.jsx)(T.default, {
+                                paused: !V
                             })]
                         })
                     })
                 });
-                return k === r.DismissibleContent.CUSTOM_CALL_SOUNDS_VOICE_COACHMARK ? (0, a.jsx)(o.Popout, {
-                    positionKey: V,
+                return F === r.DismissibleContent.CUSTOM_CALL_SOUNDS_VOICE_COACHMARK ? (0, a.jsx)(o.Popout, {
+                    positionKey: Y,
                     position: "top",
                     align: "center",
                     shouldShow: !0,
@@ -40551,24 +40557,24 @@
                                     (0, _.default)({
                                         subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
                                         analyticsLocations: []
-                                    }), Y(t)
+                                    }), W(t)
                                 },
-                                onClose: () => Y(t),
+                                onClose: () => W(t),
                                 shouldUseHorizontalButtons: !0,
                                 inlineArt: !0
                             })
                         })
                     },
-                    children: () => K()
-                }) : (0, a.jsx)(B, {
+                    children: () => z()
+                }) : (0, a.jsx)(H, {
                     children: (0, a.jsx)(o.Tooltip, {
                         text: function() {
-                            if (D) return R.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
-                            if (y) return R.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-                            if (x) return R.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
+                            if (y) return R.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
+                            if (x) return R.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
+                            if (U) return R.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
                             return R.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
                         }(),
-                        children: e => K(e)
+                        children: e => z(e)
                     })
                 })
             }
@@ -41579,9 +41585,9 @@
                 l = n("446674"),
                 i = n("713349"),
                 r = n("95410"),
-                o = n("159885"),
-                u = n("116949"),
-                d = n("397336");
+                o = n("116949"),
+                u = n("397336"),
+                d = n("49111");
             let c = "selectedChannelGuildFrecency";
 
             function E(e) {
@@ -41635,7 +41641,7 @@
                     } = l.default.PersistedStore.migrateAndReadStoreState("StickersPersistedStore", [e => null == e || 0 === Object.keys(e).length ? t() : e, e => null == e || 0 === Object.keys(e).length ? t() : (null == e.favorites && (e.favorites = []), e)]);
                     if (null == n) return !1;
                     let a = !1;
-                    return n.favorites.length > 0 && (e.favoriteStickers = i.FavoriteStickers.create(), e.favoriteStickers.stickerIds = s.uniq(n.favorites).slice(0, d.MAX_FAVORITES), a = !0), s.size(n.usageHistory) > 0 && (e.stickerFrecency = i.StickerFrecency.create(), e.stickerFrecency.stickers = (0, u.serializeUsageHistory)(n.usageHistory, 100), a = !0), a
+                    return n.favorites.length > 0 && (e.favoriteStickers = i.FavoriteStickers.create(), e.favoriteStickers.stickerIds = s.uniq(n.favorites).slice(0, u.MAX_FAVORITES), a = !0), s.size(n.usageHistory) > 0 && (e.stickerFrecency = i.StickerFrecency.create(), e.stickerFrecency.stickers = (0, o.serializeUsageHistory)(n.usageHistory, 100), a = !0), a
                 },
                 cleanup() {
                     r.default.remove("StickersPersistedStore")
@@ -41650,7 +41656,7 @@
                     })]);
                     if (null == t) return !1;
                     let n = !1;
-                    return null != t.favorites && t.favorites.length > 0 && (e.favoriteEmojis = i.FavoriteEmojis.create(), e.favoriteEmojis.emojis = s.uniq(t.favorites).slice(0, d.MAX_FAVORITES), n = !0), s.size(t.usageHistory) > 0 && (e.emojiFrecency = i.EmojiFrecency.create(), e.emojiFrecency.emojis = (0, u.serializeUsageHistory)(t.usageHistory, 100), n = !0), n
+                    return null != t.favorites && t.favorites.length > 0 && (e.favoriteEmojis = i.FavoriteEmojis.create(), e.favoriteEmojis.emojis = s.uniq(t.favorites).slice(0, u.MAX_FAVORITES), n = !0), s.size(t.usageHistory) > 0 && (e.emojiFrecency = i.EmojiFrecency.create(), e.emojiFrecency.emojis = (0, o.serializeUsageHistory)(t.usageHistory, 100), n = !0), n
                 },
                 cleanup() {
                     r.default.remove("EmojiStore"), r.default.remove("EmojiUsageHistory"), r.default.remove("EmojiDiversitySurrogate")
@@ -41674,9 +41680,9 @@
                             continue
                         }
                         let r = i.FavoriteGIF.toBinary(l).length + s.length + 7;
-                        !(n + r > d.MAX_FAVORITE_GIFS_SIZE) && (n += r, e.favoriteGifs.gifs[s] = l)
+                        !(n + r > u.MAX_FAVORITE_GIFS_SIZE) && (n += r, e.favoriteGifs.gifs[s] = l)
                     }
-                    for (n = i.FavoriteGIFs.toBinary(e.favoriteGifs).length; n > d.MAX_FAVORITE_GIFS_SIZE;) {
+                    for (n = i.FavoriteGIFs.toBinary(e.favoriteGifs).length; n > u.MAX_FAVORITE_GIFS_SIZE;) {
                         let t = 0;
                         for (let n in e.favoriteGifs.gifs)
                             if (delete e.favoriteGifs.gifs[n], ++t >= 10) break;
@@ -41693,7 +41699,7 @@
                     } = l.default.PersistedStore.migrateAndReadStoreState("ApplicationCommandFrecency", []);
                     if (null == t) return !1;
                     let n = !1;
-                    return s.size(t.usageHistory) > 0 && (e.applicationCommandFrecency = i.ApplicationCommandFrecency.create(), e.applicationCommandFrecency.applicationCommands = (0, u.serializeUsageHistory)(t.usageHistory, 500), n = !0), n
+                    return s.size(t.usageHistory) > 0 && (e.applicationCommandFrecency = i.ApplicationCommandFrecency.create(), e.applicationCommandFrecency.applicationCommands = (0, o.serializeUsageHistory)(t.usageHistory, 500), n = !0), n
                 },
                 cleanup() {
                     r.default.remove("ApplicationCommandFrecency")
@@ -41722,8 +41728,8 @@
                 run(e) {
                     let t = r.default.get(c);
                     if (null == t) return !1;
-                    for (let e in t) !(0, o.isProbablySnowflake)(e) && delete t[e];
-                    return e.guildAndChannelFrecency = i.GuildAndChannelFrecency.create(), e.guildAndChannelFrecency.guildAndChannels = (0, u.serializeUsageHistory)(t, 100), !0
+                    for (let e in t) !d.ID_REGEX.test(e) && delete t[e];
+                    return e.guildAndChannelFrecency = i.GuildAndChannelFrecency.create(), e.guildAndChannelFrecency.guildAndChannels = (0, o.serializeUsageHistory)(t, 100), !0
                 },
                 cleanup() {
                     r.default.remove(c)

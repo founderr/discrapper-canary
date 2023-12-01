@@ -6320,10 +6320,7 @@
             "use strict";
             E.r(u), E.d(u, {
                 isNullOrEmpty: function() {
-                    return B
-                },
-                isProbablySnowflake: function() {
-                    return A
+                    return F
                 },
                 upperCaseFirstChar: function() {
                     return C.upperCaseFirstChar
@@ -6344,15 +6341,10 @@
                     return C.normalize
                 }
             });
-            var C = E("617258"),
-                F = E("49111");
+            var C = E("617258");
 
-            function B(D) {
+            function F(D) {
                 return null == D || 0 === D.length
-            }
-
-            function A(D) {
-                return F.ID_REGEX.test(D)
             }
         },
         617258: function(D, u, E) {

@@ -349,6 +349,10 @@
             "use strict";
             e.exports = s.p + "717e47f4e1c8f4d86f00.svg"
         },
+        156465: function(e, t, s) {
+            "use strict";
+            e.exports = s.p + "42b086ee3d9863ea45bc.svg"
+        },
         709976: function(e, t, s) {
             "use strict";
             e.exports = s.p + "9fdb9e06aa233a3af0d1.png"
@@ -9920,7 +9924,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "4716026624ef316456568b0c78583acc9c666d03", e.substring(0, 7)),
+                    S = (e = "eccfba05933a53296df55e155fe7ade20ac6ff1c", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -9933,7 +9937,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "250523", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "250528", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
@@ -14722,7 +14726,9 @@
                         onComplete: e
                     })
                 }
-                let s = (0, g.usePlatforms)();
+                let s = (0, g.usePlatforms)(),
+                    n = (0, c.useRedesignIconContext)().enabled,
+                    l = n ? 24 : 18;
                 return (0, a.jsxs)("div", {
                     className: K.connectionsContainer,
                     children: [s.slice(0, 10).map(e => (0, a.jsx)(f.default, {
@@ -14747,8 +14753,8 @@
                                         onClick: t,
                                         "aria-label": W.default.Messages.ADD_NEW_CONNECTION,
                                         children: (0, a.jsx)(P.default, {
-                                            height: 18,
-                                            width: 18,
+                                            height: l,
+                                            width: l,
                                             "aria-label": W.default.Messages.CONNECTIONS_VIEW_MORE
                                         })
                                     })
@@ -18728,14 +18734,14 @@
                                 text: e, icon: h.default
                             }
                     }
-                }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), _ = d ? null : (0, T.formatDate)(o.approx_last_used_time), I = [f, S].filter(C.isNotNullish), p = [c, _].filter(C.isNotNullish);
+                }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), _ = d ? null : (0, T.formatDate)(o.approx_last_used_time), I = [f, S].filter(C.isNotNullish), p = [c, _].filter(C.isNotNullish), A = (0, u.useRedesignIconContext)().enabled, R = A ? 24 : 32;
                 return (0, a.jsxs)("div", {
                     className: i(x.session, d ? x.currentSession : null),
                     children: [(0, a.jsx)("div", {
                         className: x.sessionIcon,
                         children: (0, a.jsx)(m, {
-                            width: "32",
-                            height: "32"
+                            width: R,
+                            height: R
                         })
                     }), (0, a.jsxs)("div", {
                         className: x.sessionInfo,

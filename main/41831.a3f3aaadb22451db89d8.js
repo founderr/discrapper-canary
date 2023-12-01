@@ -1,271 +1,718 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["41831"], {
-        400033: function(e, C, L) {
+    ["34426"], {
+        564967: function(e, t, i) {
             "use strict";
-            L.r(C), L.d(C, {
-                StaffBadgeIcon: function() {
-                    return r
+            i.r(t), i.d(t, {
+                default: function() {
+                    return o
                 }
             });
-            var t = L("37983");
-            L("884691");
-            var s = L("669491"),
-                l = L("75196");
-            let r = e => {
-                let {
-                    width: C = 24,
-                    height: L = 24,
-                    color: r = s.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: d = "",
-                    ...a
-                } = e;
-                return (0, t.jsxs)("svg", {
-                    ...(0, l.default)(a),
-                    width: C,
-                    height: L,
-                    viewBox: "0 0 24 24",
-                    fill: "none",
-                    xmlns: "http://www.w3.org/2000/svg",
-                    children: [(0, t.jsx)("path", {
-                        d: "M2 20.5858V19.4142C2 19.149 2.10536 18.8947 2.29289 18.7071L4.70711 16.2929C4.89464 16.1054 5.149 16 5.41421 16H6L15 7.00001L14.1451 6.14515C14.0494 6.04939 13.9741 5.93518 13.9238 5.80944L12.4333 2.08324C12.27 1.67508 12.6751 1.27004 13.0832 1.4333L16.8094 2.92378C16.9352 2.97408 17.0494 3.04939 17.1451 3.14515L17.7929 3.79289C18.1834 3.40237 18.8166 3.40237 19.2071 3.79289L20.2071 4.79289C20.5976 5.18342 20.5976 5.81658 20.2071 6.20711L21.7929 7.79291C22.1834 8.18343 22.1834 8.8166 21.7929 9.20712L20.2071 10.7929C19.8166 11.1834 19.1834 11.1834 18.7929 10.7929L17 9.00001L8 18V18.5858C8 18.851 7.89464 19.1054 7.70711 19.2929L5.29289 21.7071C5.10536 21.8947 4.851 22 4.58579 22H3.41421C3.149 22 2.89464 21.8947 2.70711 21.7071L2.29289 21.2929C2.10536 21.1054 2 20.851 2 20.5858Z",
-                        fill: "string" == typeof r ? r : r.css,
-                        className: d
-                    }), (0, t.jsx)("path", {
-                        d: "M8.23223 10.2322C8.42749 10.4275 8.74408 10.4275 8.93934 10.2322L10.2322 8.93935C10.4275 8.74409 10.4275 8.42751 10.2322 8.23225L6.49999 4.50001L6.79288 4.20711C7.18341 3.81659 7.18341 3.18342 6.79288 2.7929L6.29288 2.2929C6.10535 2.10536 5.84843 2.0024 5.59542 2.08194C5.16917 2.21595 4.43086 2.56914 3.49999 3.50001C2.56912 4.43087 2.21593 5.16918 2.08192 5.59544C2.00238 5.84844 2.10535 6.10536 2.29288 6.2929L2.79288 6.7929C3.18341 7.18342 3.81657 7.18342 4.2071 6.7929L4.49999 6.50001L8.23223 10.2322Z",
-                        fill: "string" == typeof r ? r : r.css,
-                        className: d
-                    }), (0, t.jsx)("path", {
-                        d: "M13.7678 15.0607C13.5725 15.2559 13.5725 15.5725 13.7678 15.7678L15.5 17.5L16.9367 19.8944C16.9787 19.9646 17.0292 20.0292 17.087 20.0871L18.8232 21.8232C18.9208 21.9209 19.0791 21.9209 19.1768 21.8232L21.8232 19.1768C21.9208 19.0792 21.9208 18.9209 21.8232 18.8232L20.087 17.0871C20.0292 17.0292 19.9645 16.9787 19.8944 16.9367L17.5 15.5L15.7678 13.7678C15.5725 13.5725 15.2559 13.5725 15.0607 13.7678L13.7678 15.0607Z",
-                        fill: "string" == typeof r ? r : r.css,
-                        className: d
-                    })]
-                })
-            }
+            var n = i("862205");
+            let r = (0, n.createExperiment)({
+                kind: "user",
+                id: "2023-01_emoji_discovery_backfill",
+                label: "Emoji Hotrail Backfill",
+                defaultConfig: {
+                    shouldBackfillEmojis: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "Backfills Hotrail With Emojis",
+                    config: {
+                        shouldBackfillEmojis: !0
+                    }
+                }]
+            });
+            var o = r
         },
-        580357: function(e, C, L) {
+        788506: function(e, t, i) {
             "use strict";
-            L.r(C), L.d(C, {
-                default: function() {
+            i.r(t), i.d(t, {
+                useEmojiCategories: function() {
+                    return A
+                },
+                trackPremiumSettingsPaneOpened: function() {
+                    return h
+                },
+                trackEmojiSearchStart: function() {
+                    return M
+                },
+                trackEmojiSearchResultsViewed: function() {
+                    return R
+                },
+                trackEmojiSearchSelect: function() {
+                    return N
+                },
+                trackEmojiSearchEmpty: function() {
+                    return P
+                },
+                trackEmojiFocus: function() {
+                    return v
+                },
+                trackEmojiSelect: function() {
+                    return k
+                },
+                trackEmojiFavorited: function() {
+                    return F
+                },
+                getAriaIdForEmojiCategory: function() {
+                    return U
+                },
+                getStringForEmojiCategory: function() {
                     return x
+                },
+                allowUnicodeEmojiForIntention: function() {
+                    return L
+                },
+                useEmojiSearchResults: function() {
+                    return J
+                },
+                useFrequentlyUsedEmojis: function() {
+                    return G
+                },
+                useFavoriteEmojis: function() {
+                    return b
+                },
+                useIsFavoriteEmoji: function() {
+                    return w
+                },
+                useEmojiInPriorityOrder: function() {
+                    return Y
+                },
+                useTrackEmojiPickerOpened: function() {
+                    return W
+                },
+                getEmojiSubCategory: function() {
+                    return K
+                },
+                dedupeUnicodeEmojis: function() {
+                    return B
+                },
+                getSearchPlaceholder: function() {
+                    return q
                 }
-            }), L("222007");
-            var t, s, l = L("37983"),
-                r = L("884691"),
-                d = L("414456"),
-                a = L.n(d),
-                i = L("77078"),
-                n = L("449008"),
-                u = L("931138"),
-                f = L("928564"),
-                c = L("888978"),
-                o = L("390864"),
-                h = L("486952"),
-                E = L("49111"),
-                R = L("782340"),
-                p = L("465835");
-            (s = t || (t = {}))[s.PARTNERED = 0] = "PARTNERED", s[s.STAFF = 1] = "STAFF", s[s.VERIFIED = 2] = "VERIFIED", s[s.VERIFIED_AND_PARTNERED = 3] = "VERIFIED_AND_PARTNERED", s[s.VERIFIED_AND_HUB = 4] = "VERIFIED_AND_HUB", s[s.HUB = 5] = "HUB", s[s.NONE = 6] = "NONE";
-            class v extends r.PureComponent {
-                renderBadge(e, C, L) {
-                    let {
-                        className: t,
-                        badgeStrokeColor: s,
-                        tooltipColor: r = i.Tooltip.Colors.BRAND,
-                        tooltipPosition: d,
-                        size: f = 16,
-                        badgeColor: c,
-                        iconClassName: o,
-                        flowerStarClassName: h
-                    } = this.props, E = function(e) {
-                        switch (e) {
-                            case 2:
-                                return R.default.Messages.GUILD_VERIFIED;
-                            case 0:
-                                return R.default.Messages.GUILD_PARTNERED;
-                            case 3:
-                                return R.default.Messages.GUILD_VERIFIED_AND_PARTNERED;
-                            case 4:
-                                return R.default.Messages.HUB_VERIFIED_DISCORD_HUB;
-                            case 5:
-                                return R.default.Messages.HUB_DISCORD_HUB;
-                            case 1:
-                                return R.default.Messages.INTERNAL_EMPLOYEE_ONLY;
-                            case 6:
-                                return null;
-                            default:
-                                (0, n.assertNever)(e)
-                        }
-                    }(e);
-                    return (0, l.jsx)(i.Tooltip, {
-                        color: r,
-                        position: d,
-                        text: E,
-                        children: r => 5 === e || 4 === e ? (0, l.jsx)("div", {
-                            ...r,
-                            className: a(L, t),
-                            style: {
-                                width: f,
-                                height: f
-                            },
-                            children: (0, l.jsx)(C, {
-                                className: a(p.icon, o)
-                            })
-                        }) : (0, l.jsx)(u.default, {
-                            ...r,
-                            className: a(L, t),
-                            flowerStarClassName: h,
-                            color: c,
-                            stroke: s,
-                            size: f,
-                            children: (0, l.jsx)(C, {
-                                className: a(p.icon, o)
-                            })
-                        })
+            }), i("843762"), i("424973"), i("222007"), i("808653"), i("781738");
+            var n = i("884691");
+            i("375128");
+            var r = i("446674"),
+                o = i("716241"),
+                a = i("385976"),
+                s = i("858619"),
+                u = i("630400"),
+                l = i("252931"),
+                E = i("166465"),
+                d = i("872173"),
+                c = i("305961"),
+                m = i("677099"),
+                _ = i("599110"),
+                f = i("402671"),
+                g = i("577426"),
+                p = i("255214"),
+                I = i("352046"),
+                C = i("115279"),
+                y = i("49111"),
+                O = i("958706"),
+                j = i("13030"),
+                T = i("646718"),
+                S = i("782340");
+            let A = function(e, t) {
+                    let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null == t ? void 0 : t.getGuildId();
+                    (0, u.maybeFetchTopEmojisByGuild)(i);
+                    let o = (0, O.isExternalEmojiAllowedForIntention)(e),
+                        s = G(i),
+                        d = b(i),
+                        _ = (0, r.useStateFromStoresArray)([E.default], () => E.default.getSortedPackIds(), []),
+                        {
+                            topEmojis: g,
+                            newlyAddedEmojis: y,
+                            backfillEmojis: j
+                        } = (0, I.default)(i, e),
+                        {
+                            allEmojis: T
+                        } = (0, p.default)({
+                            topEmojis: g,
+                            newlyAddedEmojis: y,
+                            backfillEmojis: j
+                        }),
+                        {
+                            viewAndUseEnabled: A
+                        } = (0, l.useInventoryGuildPacksUserExperiment)({
+                            autoTrackExposure: !1
+                        }),
+                        h = (0, r.useStateFromStores)([a.default], () => a.default.getDisambiguatedEmojiContext(i), [i]),
+                        M = (0, r.useStateFromStores)([c.default], () => {
+                            var e;
+                            return null === (e = c.default.getGuild(i)) || void 0 === e ? void 0 : e.name
+                        }),
+                        R = n.useMemo(() => {
+                            let n = h.getGroupedCustomEmoji(),
+                                r = m.default.getFlattenedGuildIds(),
+                                u = [],
+                                l = (r, o) => {
+                                    for (let a of r) {
+                                        let r;
+                                        if (o === C.EmojiCategoryTypes.PACK ? r = E.default.getPackByPackId({
+                                                packId: a
+                                            }) : o === C.EmojiCategoryTypes.GUILD && (r = c.default.getGuild(a)), null == r) continue;
+                                        let s = null == n ? void 0 : n[r.id];
+                                        if (null == s || 0 === s.length || null != t && s.every(i => f.default.isEmojiFiltered({
+                                                emoji: i,
+                                                channel: t,
+                                                intention: e,
+                                                canViewAndUsePackEmoji: A
+                                            }))) continue;
+                                        let l = null;
+                                        if (o === C.EmojiCategoryTypes.PACK) {
+                                            let e = r;
+                                            l = {
+                                                type: C.EmojiCategoryTypes.PACK,
+                                                pack: e,
+                                                id: e.id
+                                            }
+                                        } else o === C.EmojiCategoryTypes.GUILD && (l = {
+                                            type: C.EmojiCategoryTypes.GUILD,
+                                            guild: r
+                                        });
+                                        null != l && (r.id === i ? u.unshift(l) : u.push(l))
+                                    }
+                                };
+                            return l(_, C.EmojiCategoryTypes.PACK), l(r, C.EmojiCategoryTypes.GUILD), a.default.categories.reduce((t, n) => {
+                                if (n === C.EmojiCategories.TOP_GUILD_EMOJI) {
+                                    if (0 === T.length) return t;
+                                    t.push({
+                                        type: C.EmojiCategoryTypes.TOP_GUILD_EMOJI,
+                                        id: n,
+                                        name: S.default.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({
+                                            guildName: M
+                                        })
+                                    })
+                                } else if (n === C.EmojiCategories.RECENT) {
+                                    if (0 === s.length) return t;
+                                    t.push({
+                                        type: C.EmojiCategoryTypes.RECENT,
+                                        id: n,
+                                        name: S.default.Messages.EMOJI_CATEGORY_RECENT
+                                    })
+                                } else if (n === C.EmojiCategories.FAVORITES) {
+                                    if (0 === d.length) return t;
+                                    t.push({
+                                        type: C.EmojiCategoryTypes.FAVORITES,
+                                        id: n,
+                                        name: S.default.Messages.CATEGORY_FAVORITE
+                                    })
+                                } else if (n === C.EmojiCategories.CUSTOM) {
+                                    let e = u;
+                                    !o && (e = u.filter(e => e.type === C.EmojiCategoryTypes.GUILD && e.guild.id === i)), t.push(...e)
+                                } else if (L(e)) t.push({
+                                    type: C.EmojiCategoryTypes.UNICODE,
+                                    id: n,
+                                    name: n
+                                });
+                                return t
+                            }, [])
+                        }, [h, t, i, e, T.length, M, _, s.length, d.length, o, A]);
+                    return R
+                },
+                h = e => {
+                    let t = (null == e ? void 0 : e.getGuildId()) != null;
+                    _.default.track(y.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+                        location_page: t ? y.AnalyticsPages.GUILD_CHANNEL : y.AnalyticsPages.DM_CHANNEL,
+                        location_section: null != e ? y.AnalyticsSections.EMOJI_PICKER_POPOUT : y.AnalyticsSections.CUSTOM_STATUS_MODAL
                     })
-                }
-                render() {
+                },
+                M = (e, t) => {
+                    o.default.trackWithMetadata(y.AnalyticEvents.SEARCH_STARTED, {
+                        search_type: null != t && t === O.EmojiIntention.REACTION ? y.SearchTypes.EMOJI_REACTION : y.SearchTypes.EMOJI,
+                        location: e
+                    })
+                },
+                R = (e, t, i, n, r) => {
+                    o.default.trackWithMetadata(y.AnalyticEvents.SEARCH_RESULT_VIEWED, {
+                        search_type: null != r && r === O.EmojiIntention.REACTION ? y.SearchTypes.EMOJI_REACTION : y.SearchTypes.EMOJI,
+                        total_results: e,
+                        num_results_locked: t,
+                        query: n,
+                        location: i
+                    })
+                },
+                N = (e, t, i, n) => {
+                    var r;
+                    let a = null !== (r = e.uniqueName) && void 0 !== r ? r : e.name;
+                    o.default.trackWithMetadata(y.AnalyticEvents.SEARCH_RESULT_SELECTED, {
+                        search_type: null != n && n === O.EmojiIntention.REACTION ? y.SearchTypes.EMOJI_REACTION : y.SearchTypes.EMOJI,
+                        location: t,
+                        expression_guild_id: D(e),
+                        expression_pack_id: e.type === s.EmojiTypes.PACK ? e.packId : void 0,
+                        emoji_id: e.id,
+                        emoji_name: a,
+                        is_custom: null != e.id,
+                        is_animated: e.animated,
+                        query: i
+                    })
+                },
+                P = (e, t) => {
+                    o.default.trackWithMetadata(y.AnalyticEvents.SEARCH_RESULT_EMPTY, {
+                        search_type: y.SearchTypes.EMOJI,
+                        query: t,
+                        location: e
+                    })
+                },
+                v = e => {
                     let {
-                        guild: e
-                    } = this.props, C = new Set(e.features);
-                    return C.has(E.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) ? this.renderBadge(1, o.default, p.staff) : C.has(E.GuildFeatures.VERIFIED) && C.has(E.GuildFeatures.HUB) ? this.renderBadge(4, f.default, p.verifiedHub) : C.has(E.GuildFeatures.HUB) ? this.renderBadge(5, f.default, p.hub) : C.has(E.GuildFeatures.VERIFIED) && C.has(E.GuildFeatures.PARTNERED) ? this.renderBadge(3, h.default, p.verified) : C.has(E.GuildFeatures.VERIFIED) ? this.renderBadge(2, h.default, p.verified) : C.has(E.GuildFeatures.PARTNERED) ? this.renderBadge(0, c.default, p.partnered) : null
+                        emoji: t,
+                        subCategory: i,
+                        position: n,
+                        backfillEmoji: r,
+                        newlyAddedHighlight: a
+                    } = e;
+                    o.default.trackWithMetadata(y.AnalyticEvents.EXPRESSION_PICKER_EXPRESSION_FOCUS, {
+                        expression_section: null == i ? void 0 : i.toString(),
+                        newly_added_highlight: a,
+                        emoji_id: t.id,
+                        emoji_name: t.name,
+                        emoji_animated: t.animated,
+                        emoji_backfilled: r,
+                        emoji_position: n
+                    })
+                },
+                k = e => {
+                    var t;
+                    let i, {
+                        emoji: n,
+                        location: r,
+                        pickerIntention: a,
+                        category: u,
+                        subCategory: l = C.EmojiSubCategory.NONE,
+                        position: E,
+                        backfillEmoji: d,
+                        newlyAddedHighlight: c,
+                        isBurstReaction: m
+                    } = e;
+                    switch (a) {
+                        case O.EmojiIntention.REACTION:
+                            i = m ? T.PremiumUpsellTypes.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED : T.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
+                            break;
+                        case O.EmojiIntention.STATUS:
+                            i = T.PremiumUpsellTypes.EMOJI_PICKER_STATUS_EMOJI_CLICKED;
+                            break;
+                        default:
+                            i = T.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED
+                    }
+                    let _ = null !== (t = n.uniqueName) && void 0 !== t ? t : n.name;
+                    o.default.trackWithMetadata(y.AnalyticEvents.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
+                        type: i,
+                        location: r,
+                        expression_id: n.id,
+                        expression_name: _,
+                        expression_guild_id: D(n),
+                        expression_pack_id: n.type === s.EmojiTypes.PACK ? n.packId : void 0,
+                        is_custom: null != n.id,
+                        is_animated: n.animated,
+                        expression_picker_section: u,
+                        expression_section: null == l ? void 0 : l.toString(),
+                        emoji_position: E,
+                        emoji_backfilled: d,
+                        newly_added_highlight: c,
+                        is_burst: m
+                    })
+                },
+                F = e => {
+                    var t;
+                    let {
+                        emoji: i,
+                        location: n
+                    } = e, r = null !== (t = i.uniqueName) && void 0 !== t ? t : i.name;
+                    o.default.trackWithMetadata(y.AnalyticEvents.EXPRESSION_FAVORITED, {
+                        location: n,
+                        expression_type: j.ExpressionPickerViewType.EMOJI,
+                        expression_id: i.id,
+                        expression_name: r,
+                        expression_guild_id: D(i),
+                        expression_pack_id: i.type === s.EmojiTypes.PACK ? i.packId : void 0,
+                        is_custom: null != i.id,
+                        is_animated: i.animated
+                    })
+                };
+
+            function D(e) {
+                return e.type !== s.EmojiTypes.PACK ? e.guildId : void 0
+            }
+            let U = (e, t, i) => {
+                    switch (e.type) {
+                        case C.EmojiCategoryTypes.GUILD:
+                            if (null != t) return t.toString();
+                            return "";
+                        case C.EmojiCategoryTypes.PACK:
+                            if (null != i) return i.name;
+                            return e.id;
+                        default:
+                            return e.id
+                    }
+                },
+                x = (e, t, i) => {
+                    switch (e) {
+                        case C.EmojiCategories.TOP_GUILD_EMOJI:
+                            return S.default.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({
+                                guildName: t
+                            });
+                        case C.EmojiCategories.RECENT:
+                            return S.default.Messages.EMOJI_CATEGORY_RECENT;
+                        case C.EmojiCategories.FAVORITES:
+                            return S.default.Messages.CATEGORY_FAVORITE;
+                        case C.EmojiCategories.ACTIVITY:
+                            return S.default.Messages.EMOJI_CATEGORY_ACTIVITY;
+                        case C.EmojiCategories.FLAGS:
+                            return S.default.Messages.EMOJI_CATEGORY_FLAGS;
+                        case C.EmojiCategories.FOOD:
+                            return S.default.Messages.EMOJI_CATEGORY_FOOD;
+                        case C.EmojiCategories.NATURE:
+                            return S.default.Messages.EMOJI_CATEGORY_NATURE;
+                        case C.EmojiCategories.OBJECTS:
+                            return S.default.Messages.EMOJI_CATEGORY_OBJECTS;
+                        case C.EmojiCategories.PEOPLE:
+                            return S.default.Messages.EMOJI_CATEGORY_PEOPLE;
+                        case C.EmojiCategories.SYMBOLS:
+                            return S.default.Messages.EMOJI_CATEGORY_SYMBOLS;
+                        case C.EmojiCategories.TRAVEL:
+                            return S.default.Messages.EMOJI_CATEGORY_TRAVEL;
+                        case C.EmojiCategories.PREMIUM_UPSELL:
+                            return S.default.Messages.EMOJI_CATEGORY_PREMIUM_UPSELL;
+                        default:
+                            return null != i ? S.default.Messages.EMOJI_CATEGORY_PACK.format({
+                                packName: i
+                            }) : null != t ? t : e
+                    }
+                },
+                L = e => e !== O.EmojiIntention.COMMUNITY_CONTENT_ONLY;
+
+            function J(e, t, i) {
+                let {
+                    viewAndUseEnabled: o
+                } = (0, l.useInventoryGuildPacksUserExperiment)({
+                    autoTrackExposure: !1
+                });
+                n.useEffect(() => {
+                    d.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []);
+                let s = (0, O.isExternalEmojiAllowedForIntention)(i);
+                return (0, r.useStateFromStores)([a.default], () => {
+                    let n = e.replace(/^:/, "").replace(/:$/, "");
+                    return "" === n ? null : a.default.searchWithoutFetchingLatest({
+                        channel: t,
+                        query: n,
+                        count: 0,
+                        intention: i,
+                        includeExternalGuilds: s,
+                        canViewAndUsePackEmoji: o
+                    })
+                }, [t, i, e, s, o], r.statesWillNeverBeEqual)
+            }
+
+            function G(e) {
+                return n.useEffect(() => {
+                    d.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []), (0, r.useStateFromStoresArray)([a.default], () => a.default.getDisambiguatedEmojiContext(e).getFrequentlyUsedEmojisWithoutFetchingLatest())
+            }
+
+            function b(e) {
+                return n.useEffect(() => {
+                    d.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []), (0, r.useStateFromStoresArray)([a.default], () => a.default.getDisambiguatedEmojiContext(e).favoriteEmojisWithoutFetchingLatest)
+            }
+
+            function w(e, t) {
+                return n.useEffect(() => {
+                    d.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []), (0, r.useStateFromStores)([a.default], () => null != t && a.default.getDisambiguatedEmojiContext(e).isFavoriteEmojiWithoutFetchingLatest(t))
+            }
+
+            function Y(e) {
+                return n.useEffect(() => {
+                    d.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []), (0, r.useStateFromStoresArray)([a.default], () => a.default.getDisambiguatedEmojiContext(e).getEmojiInPriorityOrderWithoutFetchingLatest())
+            }
+
+            function W(e) {
+                let t = n.useCallback(() => {
+                    (0, g.default)(e)
+                }, [e]);
+                return n.useEffect(() => {
+                    e.intention === O.EmojiIntention.REACTION && t()
+                }, []), {
+                    trackOnPickerOpen: t
                 }
             }
-            var x = v
-        },
-        928564: function(e, C, L) {
-            "use strict";
-            L.r(C), L.d(C, {
-                default: function() {
-                    return l
-                }
-            });
-            var t = L("37983");
-            L("884691");
-            var s = L("75196");
 
-            function l(e) {
+            function K(e, t, i) {
+                if (null == i) return C.EmojiSubCategory.NONE;
+                let n = e.map(e => {
+                        var t, i;
+                        return null !== (i = null !== (t = e.id) && void 0 !== t ? t : e.uniqueName) && void 0 !== i ? i : e.name
+                    }),
+                    r = t.map(e => e.id);
+                return n.includes(i) ? C.EmojiSubCategory.TOP_GUILD_EMOJI : r.includes(i) ? C.EmojiSubCategory.NEWLY_ADDED_EMOJI : C.EmojiSubCategory.NONE
+            }
+
+            function B(e) {
+                let t = new Set,
+                    i = e.filter(e => null == e.uniqueName || (t.has(e.optionallyDiverseSequence) ? void 0 : (t.add(e.optionallyDiverseSequence), !0)));
+                return i
+            }
+
+            function q(e, t) {
+                return e === O.EmojiIntention.REACTION ? t ? S.default.Messages.SEARCH_FOR_SUPER_REACTION : S.default.Messages.SEARCH_FOR_REACTION : S.default.Messages.SEARCH_FOR_EMOJI
+            }
+        },
+        577426: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                default: function() {
+                    return f
+                }
+            }), i("808653");
+            var n = i("716241"),
+                r = i("385976"),
+                o = i("166465"),
+                a = i("692171"),
+                s = i("42203"),
+                u = i("18494"),
+                l = i("402671"),
+                E = i("255214"),
+                d = i("352046"),
+                c = i("49111"),
+                m = i("958706"),
+                _ = i("13030");
+
+            function f(e) {
+                var t;
                 let {
-                    width: C = 16,
-                    height: L = 16,
-                    color: l = "currentColor",
-                    ...r
-                } = e;
-                return (0, t.jsxs)("svg", {
-                    ...(0, s.default)(r),
-                    width: C,
-                    height: L,
-                    viewBox: "0 0 16 16",
-                    children: [(0, t.jsx)("circle", {
-                        cx: "8",
-                        cy: "8",
-                        r: "8"
-                    }), (0, t.jsx)("path", {
-                        d: "M4.66666 12.6667C3.93028 12.6667 3.33333 12.0697 3.33333 11.3333C3.33333 10.5969 3.93028 9.99999 4.66666 9.99999C5.40304 9.99999 5.99999 10.5969 5.99999 11.3333C5.99999 12.0697 5.40304 12.6667 4.66666 12.6667Z",
-                        fill: l
-                    }), (0, t.jsx)("path", {
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                        d: "M4.66666 12C4.29847 12 3.99999 11.7015 3.99999 11.3333C3.99999 10.9651 4.29847 10.6667 4.66666 10.6667C5.03485 10.6667 5.33333 10.9651 5.33333 11.3333C5.33333 11.7015 5.03485 12 4.66666 12ZM3.33333 11.3333C3.33333 12.0697 3.93028 12.6667 4.66666 12.6667C5.40304 12.6667 5.99999 12.0697 5.99999 11.3333C5.99999 10.5969 5.40304 9.99999 4.66666 9.99999C3.93028 9.99999 3.33333 10.5969 3.33333 11.3333Z",
-                        fill: l
-                    }), (0, t.jsx)("path", {
-                        d: "M8 12.6667C7.26362 12.6667 6.66666 12.0697 6.66666 11.3333C6.66666 10.5969 7.26362 9.99999 8 9.99999C8.73637 9.99999 9.33333 10.5969 9.33333 11.3333C9.33333 12.0697 8.73637 12.6667 8 12.6667Z",
-                        fill: l
-                    }), (0, t.jsx)("path", {
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                        d: "M8 12C7.63181 12 7.33333 11.7015 7.33333 11.3333C7.33333 10.9651 7.63181 10.6667 8 10.6667C8.36819 10.6667 8.66666 10.9651 8.66666 11.3333C8.66666 11.7015 8.36819 12 8 12ZM6.66666 11.3333C6.66666 12.0697 7.26362 12.6667 8 12.6667C8.73637 12.6667 9.33333 12.0697 9.33333 11.3333C9.33333 10.5969 8.73637 9.99999 8 9.99999C7.26362 9.99999 6.66666 10.5969 6.66666 11.3333Z",
-                        fill: l
-                    }), (0, t.jsx)("path", {
-                        d: "M8 6C7.26362 6 6.66666 5.40304 6.66666 4.66666C6.66666 3.93028 7.26362 3.33333 8 3.33333C8.73637 3.33333 9.33333 3.93028 9.33333 4.66666C9.33333 5.40304 8.73637 6 8 6Z",
-                        fill: l
-                    }), (0, t.jsx)("path", {
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                        d: "M8 5.33333C7.63181 5.33333 7.33333 5.03485 7.33333 4.66666C7.33333 4.29847 7.63181 3.99999 8 3.99999C8.36819 3.99999 8.66666 4.29847 8.66666 4.66666C8.66666 5.03485 8.36819 5.33333 8 5.33333ZM6.66666 4.66666C6.66666 5.40304 7.26362 6 8 6C8.73637 6 9.33333 5.40304 9.33333 4.66666C9.33333 3.93028 8.73637 3.33333 8 3.33333C7.26362 3.33333 6.66666 3.93028 6.66666 4.66666Z",
-                        fill: l
-                    }), (0, t.jsx)("path", {
-                        d: "M11.3333 12.6667C10.5969 12.6667 9.99999 12.0697 9.99999 11.3333C9.99999 10.5969 10.5969 9.99999 11.3333 9.99999C12.0697 9.99999 12.6667 10.5969 12.6667 11.3333C12.6667 12.0697 12.0697 12.6667 11.3333 12.6667Z",
-                        fill: l
-                    }), (0, t.jsx)("path", {
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                        d: "M11.3333 12C10.9651 12 10.6667 11.7015 10.6667 11.3333C10.6667 10.9651 10.9651 10.6667 11.3333 10.6667C11.7015 10.6667 12 10.9651 12 11.3333C12 11.7015 11.7015 12 11.3333 12ZM9.99999 11.3333C9.99999 12.0697 10.5969 12.6667 11.3333 12.6667C12.0697 12.6667 12.6667 12.0697 12.6667 11.3333C12.6667 10.5969 12.0697 9.99999 11.3333 9.99999C10.5969 9.99999 9.99999 10.5969 9.99999 11.3333Z",
-                        fill: l
-                    }), (0, t.jsx)("path", {
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                        d: "M5.99999 8.49999C5.53976 8.49999 5.16666 8.87309 5.16666 9.33333V10.6667H4.16666V9.33333C4.16666 8.32081 4.98747 7.49999 5.99999 7.49999H9.99999C11.0125 7.49999 11.8333 8.32081 11.8333 9.33333V10.6667H10.8333V9.33333C10.8333 8.87309 10.4602 8.49999 9.99999 8.49999H5.99999Z",
-                        fill: l
-                    }), (0, t.jsx)("path", {
-                        fillRule: "evenodd",
-                        clipRule: "evenodd",
-                        d: "M7.5 11.3333V4.66666H8.5L8.49999 11.3333H7.5Z",
-                        fill: "white"
-                    })]
+                    intention: i,
+                    containerWidth: f,
+                    rowSize: g,
+                    isBurstReaction: p,
+                    analyticsObject: I
+                } = e, C = s.default.getChannel(u.default.getChannelId()), y = null == C ? void 0 : C.getGuildId(), O = r.default.emojiFrecencyWithoutFetchingLatest.frequently.slice(), j = null != C ? r.default.getDisambiguatedEmojiContext(C.getGuildId()).favoriteEmojisWithoutFetchingLatest : [], T = O.slice(0, r.default.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems), S = null != y ? r.default.getGuildEmoji(y) : [], A = o.default.getPacksForUser().map(e => e.content.emojis).reduce((e, t) => e.concat(t), []), h = null !== (t = r.default.getDisambiguatedEmojiContext(null == C ? void 0 : C.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}, M = Object.values(h).reduce((e, t) => e += t.length, 0), {
+                    topEmojis: R,
+                    newlyAddedEmojis: N,
+                    backfillEmojis: P
+                } = (0, d.getTopAndNewlyAddedEmojis)({
+                    guildId: null == C ? void 0 : C.getGuildId(),
+                    pickerIntention: i
+                }), {
+                    visibleTopEmojis: v,
+                    visibleNewlyAddedEmojis: k,
+                    visibleBackfillEmojis: F
+                } = (0, E.getEmojiHotrail)({
+                    topEmojis: R,
+                    newlyAddedEmojis: N,
+                    backfillEmojis: P,
+                    rowSize: g
+                }), D = a.default.remainingBurstCurrency;
+                n.default.trackWithMetadata(i === m.EmojiIntention.REACTION ? c.AnalyticEvents.REACTION_PICKER_OPENED : c.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
+                    width: f,
+                    tab: _.ExpressionPickerViewType.EMOJI,
+                    badged: !1,
+                    num_expressions_favorites: j.length,
+                    num_animated_expressions_favorites: j.filter(e => null == e ? void 0 : e.animated).length,
+                    num_custom_expressions_favorites: j.filter(l.default.isCustomEmoji).length,
+                    num_standard_expressions_favorites: j.filter(e => null == e.id).length,
+                    num_expressions_frecent: T.length,
+                    num_animated_expressions_frecent: T.filter(e => null == e ? void 0 : e.animated).length,
+                    num_custom_expressions_frecent: T.filter(l.default.isCustomEmoji).length,
+                    num_standard_expressions_frecent: T.filter(e => null == e.id).length,
+                    num_current_guild_expressions: S.length,
+                    num_current_pack_expressions: A.length,
+                    num_custom_expressions_total: M,
+                    num_expressions_top_server: v.length,
+                    num_animated_expressions_top_server: v.filter(e => e.animated).length,
+                    num_expressions_newly_added: k.length,
+                    num_animated_expressions_newly_added: k.filter(e => e.animated).length,
+                    num_expressions_backfilled: F.length,
+                    num_animated_expressions_backfilled: F.filter(e => e.animated).length,
+                    ...i === m.EmojiIntention.REACTION && {
+                        is_burst: p,
+                        burst_reaction_balance: D
+                    },
+                    ...null != I && {
+                        location_object: I
+                    }
                 })
             }
         },
-        888978: function(e, C, L) {
+        255214: function(e, t, i) {
             "use strict";
-            L.r(C), L.d(C, {
+            i.r(t), i.d(t, {
+                getEmojiHotrail: function() {
+                    return o
+                },
                 default: function() {
-                    return l
+                    return a
                 }
             });
-            var t = L("37983");
-            L("884691");
-            var s = L("75196");
+            var n = i("884691"),
+                r = i("115279");
+
+            function o(e) {
+                let {
+                    topEmojis: t,
+                    newlyAddedEmojis: i,
+                    backfillEmojis: n,
+                    rowSize: o = r.EMOJI_ROW_SIZE
+                } = e, a = t.slice(0, o - i.length), s = [];
+                return a.length + i.length < o && (s = n.slice(0, o - t.length - i.length)), {
+                    visibleTopEmojis: a,
+                    visibleNewlyAddedEmojis: i,
+                    visibleBackfillEmojis: s,
+                    allEmojis: a.concat(s).concat(i)
+                }
+            }
+
+            function a(e) {
+                return n.useMemo(() => o(e), [e])
+            }
+        },
+        352046: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                getTopAndNewlyAddedEmojis: function() {
+                    return l
+                },
+                default: function() {
+                    return E
+                }
+            });
+            var n = i("65597"),
+                r = i("385976"),
+                o = i("564967"),
+                a = i("61559"),
+                s = i("958706");
+            let u = [];
 
             function l(e) {
                 let {
-                    width: C = 16,
-                    height: L = 16,
-                    color: l = "currentColor",
-                    ...r
+                    emojiStoreInstance: t = r.default,
+                    guildId: i,
+                    pickerIntention: n,
+                    shouldSeeTopEmojis: l = (0, a.getEmojiPickerDiscoveryExperimentConfig)().shouldSeeTopEmojiBar,
+                    shouldSeeNewlyAddedEmoji: E = (0, a.getEmojiPickerDiscoveryExperimentConfig)().shouldSeeNewlyAddedEmoji,
+                    shouldSeeBackfillEmojis: d = o.default.getCurrentConfig({
+                        location: "fe926e_1"
+                    }, {
+                        autoTrackExposure: !1
+                    }).shouldBackfillEmojis
                 } = e;
-                return (0, t.jsxs)("svg", {
-                    ...(0, s.default)(r),
-                    width: C,
-                    height: L,
-                    viewBox: "0 0 16 16",
-                    children: [(0, t.jsx)("path", {
-                        d: "M10.5906 6.39993L9.19223 7.29993C8.99246 7.39993 8.89258 7.39993 8.69281 7.29993C8.59293 7.19993 8.39317 7.09993 8.29328 6.99993C7.89375 6.89993 7.5941 6.99993 7.29445 7.19993L6.79504 7.49993L4.29797 9.19993C3.69867 9.49993 2.99949 9.39993 2.69984 8.79993C2.30031 8.29993 2.50008 7.59993 2.99949 7.19993L5.99598 5.19993C6.79504 4.69993 7.79387 4.49993 8.69281 4.69993C9.49188 4.89993 10.0912 5.29993 10.5906 5.89993C10.7904 6.09993 10.6905 6.29993 10.5906 6.39993Z",
-                        fill: l
-                    }), (0, t.jsx)("path", {
-                        d: "M13.4871 7.79985C13.4871 8.19985 13.2874 8.59985 12.9877 8.79985L9.89135 10.7999C9.29206 11.1999 8.69276 11.3999 7.99358 11.3999C7.69393 11.3999 7.49417 11.3999 7.19452 11.2999C6.39545 11.0999 5.79616 10.6999 5.29674 10.0999C5.19686 9.89985 5.29674 9.69985 5.39663 9.59985L6.79499 8.69985C6.89487 8.59985 7.09463 8.59985 7.19452 8.69985C7.39428 8.79985 7.59405 8.89985 7.69393 8.99985C8.09346 8.99985 8.39311 8.99985 8.69276 8.79985L9.39194 8.39985L11.3896 6.99985L11.6892 6.79985C12.1887 6.49985 12.9877 6.59985 13.2874 7.09985C13.4871 7.39985 13.4871 7.59985 13.4871 7.79985Z",
-                        fill: l
-                    })]
+                return {
+                    topEmojis: n !== s.EmojiIntention.REACTION && l ? t.getTopEmoji(i) : u,
+                    newlyAddedEmojis: n !== s.EmojiIntention.REACTION && E ? t.getNewlyAddedEmoji(i) : u,
+                    backfillEmojis: n !== s.EmojiIntention.REACTION && l && d ? t.getBackfillTopEmojis(i) : u
+                }
+            }
+
+            function E(e, t) {
+                let {
+                    shouldSeeNewlyAddedEmoji: i,
+                    shouldSeeTopEmojiBar: s
+                } = (0, a.useEmojiPickerDiscoveryExperiment)(!0), {
+                    shouldBackfillEmojis: u
+                } = o.default.useExperiment({
+                    location: "fe926e_1"
+                }, {
+                    autoTrackExposure: !1
+                });
+                return (0, n.useStateFromStoresObject)([r.default], () => l({
+                    emojiStoreInstance: r.default,
+                    guildId: e,
+                    pickerIntention: t,
+                    shouldSeeTopEmojis: s,
+                    shouldSeeNewlyAddedEmoji: i,
+                    shouldSeeBackfillEmojis: u
+                }), [e, t, s, i, u])
+            }
+        },
+        305781: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                fetchTopEmojis: function() {
+                    return a
+                },
+                updateNewlyAddedLastSeen: function() {
+                    return s
+                },
+                updateNewlyAddedEmojiSeenAcknowledged: function() {
+                    return u
+                }
+            });
+            var n = i("872717"),
+                r = i("913144"),
+                o = i("49111");
+
+            function a(e) {
+                r.default.dispatch({
+                    type: "TOP_EMOJIS_FETCH",
+                    guildId: e
+                }), n.default.get({
+                    url: o.Endpoints.TOP_EMOJIS_FOR_GUILD(e),
+                    oldFormErrors: !0
+                }).then(t => r.default.dispatch({
+                    type: "TOP_EMOJIS_FETCH_SUCCESS",
+                    guildId: e,
+                    topEmojisMetadata: t.body.items.map(e => ({
+                        emojiId: e.emoji_id,
+                        rank: e.emoji_rank
+                    })).sort((e, t) => e.rank - t.rank)
+                }), () => r.default.dispatch({
+                    type: "TOP_EMOJIS_FETCH_FAILURE",
+                    guildId: e
+                }))
+            }
+
+            function s(e, t) {
+                r.default.dispatch({
+                    type: "NEWLY_ADDED_EMOJI_SEEN_UPDATED"
+                }), null != e && null != t && r.default.dispatch({
+                    type: "NEWLY_ADDED_EMOJI_SEEN_PENDING",
+                    guildId: e,
+                    emojiId: t
+                })
+            }
+
+            function u(e, t) {
+                null != e && null != t && r.default.dispatch({
+                    type: "NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED",
+                    guildId: e,
+                    emojiId: t
                 })
             }
         },
-        390864: function(e, C, L) {
+        630400: function(e, t, i) {
             "use strict";
-            L.r(C), L.d(C, {
-                default: function() {
-                    return r
+            i.r(t), i.d(t, {
+                maybeFetchTopEmojisByGuild: function() {
+                    return u
                 }
             });
-            var t = L("37983");
-            L("884691");
-            var s = L("469563"),
-                l = L("400033"),
-                r = (0, s.replaceIcon)(function(e) {
-                    return (0, t.jsx)("svg", {
-                        ...e,
-                        xmlns: "http://www.w3.org/2000/svg",
-                        viewBox: "0 0 24 24",
-                        children: (0, t.jsxs)("g", {
-                            fill: "none",
-                            fillRule: "evenodd",
-                            children: [(0, t.jsx)("rect", {
-                                width: "24",
-                                height: "24"
-                            }), (0, t.jsx)("path", {
-                                fill: "currentColor",
-                                d: "M4.95497175,5.40753824 L4.94817763,5.41433235 L9.84188351,10.4332441 L8.59855999,11.6765676 L7.92205999,12.3530676 L2.9710894,7.42150882 L2.97011881,7.42247941 L2.89344234,7.50012647 L2.84394234,7.55059706 C2.69738351,7.68453824 2.4595894,7.86506765 2.31011881,7.78353824 C1.98497175,7.60689118 1.54432469,7.24583235 1.66855999,6.91486176 C1.79279528,6.58389118 2.70320704,4.92903824 4.52305999,4.12247941 C4.52305999,4.12247941 4.75114822,4.06036176 4.89576587,4.18459706 C5.04038351,4.30883235 5.4130894,4.70095 5.30923646,4.86692059 C5.20538351,5.03289118 4.95497175,5.40753824 4.95497175,5.40753824 Z M16.6512394,10.6097941 L16.7211218,11.0368529 L16.2930923,10.9698824 L16.1649747,11.098 L16.1882688,11.1222647 C16.2300041,11.164 16.2300041,11.2309706 16.1882688,11.2736765 C16.1669159,11.2940588 16.1397394,11.3047353 16.1125629,11.3047353 C16.0853865,11.3047353 16.05821,11.2940588 16.036857,11.2736765 L16.0135629,11.2494118 L15.9524159,11.3105588 L15.9825041,11.3406471 C16.0242394,11.3823824 16.0242394,11.4503235 15.9825041,11.4920588 C15.9621218,11.5124412 15.9349453,11.5231176 15.9067982,11.5231176 C15.8796218,11.5231176 15.8524453,11.5124412 15.8320629,11.4920588 L15.8019747,11.4619706 L14.650857,12.6150294 L14.67221,12.6373529 C14.7139453,12.6790882 14.7139453,12.7470294 14.67221,12.7887647 C14.6518276,12.8091471 14.6246512,12.8198235 14.5974747,12.8198235 C14.5693276,12.8198235 14.5421512,12.8091471 14.5217688,12.7887647 L14.5004159,12.7674118 L14.4392688,12.8275882 L14.4674159,12.8557353 C14.5091512,12.8974706 14.5091512,12.9654118 14.4674159,13.0071471 C14.4470335,13.0275294 14.4188865,13.0382059 14.39171,13.0382059 C14.3645335,13.0382059 14.337357,13.0275294 14.3160041,13.0071471 L14.287857,12.979 L14.1141218,13.1537059 L13.9209747,13.1750588 L13.8006218,13.0508235 L13.8035335,13.0566471 L7.64418057,19.2179412 L7.51897469,19.3421765 L7.5180041,19.3431471 L7.58691587,19.4120588 L7.54032763,19.6886765 L7.4112394,19.8148529 L7.45297469,19.8565882 C7.49470999,19.8983235 7.49470999,19.9662647 7.45297469,20.008 C7.43259234,20.0283824 7.40541587,20.0390588 7.37726881,20.0390588 C7.35009234,20.0390588 7.32291587,20.0283824 7.30253351,20.008 L7.25982763,19.9652941 L7.19868057,20.0264412 L7.24818057,20.0749706 C7.28894528,20.1167059 7.28894528,20.1846471 7.24818057,20.2263824 C7.22682763,20.2477353 7.19965116,20.2574412 7.17247469,20.2574412 C7.14529822,20.2574412 7.11715116,20.2477353 7.09676881,20.2263824 L7.04629822,20.1759118 L5.89420999,21.3124706 L5.94565116,21.3648824 C5.98738646,21.4066176 5.98738646,21.4735882 5.94565116,21.5153235 C5.92429822,21.5366765 5.89712175,21.5473529 5.86994528,21.5473529 C5.84276881,21.5473529 5.81462175,21.5366765 5.7942394,21.5153235 L5.74182763,21.4629118 L5.67970999,21.5230882 L5.73988646,21.5832647 C5.78162175,21.625 5.78162175,21.6919706 5.73988646,21.7346765 C5.7195041,21.7550588 5.69135704,21.7657353 5.66418057,21.7657353 C5.6370041,21.7657353 5.60982763,21.7550588 5.58944528,21.7346765 L5.52829822,21.6735294 L5.39532763,21.8035882 L5.46715116,22.2355 L5.03038646,22.1646471 L4.87412175,22.318 L4.24032763,22.2073529 C4.21606293,22.1889118 3.65506293,22.0112941 3.28720999,21.6405294 C2.90770999,21.2581176 2.72329822,20.6815882 2.72329822,20.6815882 L2.60294528,20.0196471 L2.7417394,19.8779412 L2.7087394,19.3868235 L3.14841587,19.4654412 L3.23285704,19.3790588 L3.21344528,19.3586765 C3.17170999,19.3169412 3.17170999,19.249 3.21344528,19.2072647 C3.23382763,19.1868824 3.26197469,19.1762059 3.28818057,19.1762059 C3.31632763,19.1762059 3.3435041,19.1868824 3.36485704,19.2072647 L3.38329822,19.2257059 L3.44347469,19.1645588 L3.4182394,19.1402941 C3.3765041,19.0985588 3.3765041,19.0306176 3.4182394,18.9888824 C3.43959234,18.9675294 3.46676881,18.9578235 3.49394528,18.9578235 C3.52209234,18.9578235 3.54829822,18.9675294 3.56965116,18.9888824 L3.59294528,19.0121765 L4.72756293,17.8581471 L4.72076881,17.8503824 C4.6800041,17.8086471 4.6800041,17.7416765 4.72076881,17.6999412 C4.74212175,17.6785882 4.76929822,17.6679118 4.79647469,17.6679118 C4.82365116,17.6679118 4.85179822,17.6785882 4.87218057,17.6999412 L4.8780041,17.7057647 L4.93818057,17.6436471 L4.92653351,17.632 C4.88479822,17.5902647 4.88479822,17.5232941 4.92653351,17.4815588 C4.94691587,17.4602059 4.97506293,17.4495294 5.0022394,17.4495294 C5.02941587,17.4495294 5.05659234,17.4602059 5.07794528,17.4815588 L5.08765116,17.4912647 L5.2332394,17.3437353 L5.49044528,17.3068529 L5.5710041,17.3738235 L11.7720923,11.1737059 L11.86721,11.0766471 L11.8691512,11.0756765 L11.7905335,10.9951176 L11.8109159,10.8029412 L11.9603865,10.6515294 L11.9400041,10.6311471 C11.8992394,10.5894118 11.8992394,10.5224412 11.9400041,10.4807059 C11.961357,10.4593529 11.9885335,10.4486765 12.0166806,10.4486765 C12.0428865,10.4486765 12.0710335,10.4593529 12.0914159,10.4807059 L12.1117982,10.5001176 L12.1729453,10.4389706 L12.1457688,10.4127647 C12.1040335,10.3710294 12.1040335,10.3030882 12.1457688,10.2613529 C12.1671218,10.2409706 12.1942982,10.2302941 12.2214747,10.2302941 C12.2486512,10.2302941 12.2758276,10.2409706 12.2971806,10.2613529 L12.3233865,10.2875588 L13.4725629,9.13255882 L13.4560629,9.11605882 C13.4143276,9.07432353 13.4143276,9.00638235 13.4560629,8.96464706 C13.4764453,8.94426471 13.5036218,8.93358824 13.5317688,8.93358824 C13.5589453,8.93358824 13.5861218,8.94426471 13.6074747,8.96464706 L13.6230041,8.98114706 L13.6831806,8.92 L13.660857,8.89767647 C13.6191218,8.85594118 13.6191218,8.788 13.660857,8.74626471 C13.68221,8.72588235 13.7093865,8.71520588 13.7365629,8.71520588 C13.7637394,8.71520588 13.7918865,8.72588235 13.8122688,8.74626471 L13.8345923,8.76858824 L13.9607688,8.64241176 L13.8937982,8.20952941 L14.3305629,8.26970588 L14.3936512,8.20661765 L14.5644747,8.03579412 L14.0180335,7.49420588 L11.2867982,2.44714706 C11.2867982,2.44714706 11.1771218,2.18314706 11.3634747,2.05211765 C11.4440335,1.99485294 11.5139159,1.97058824 11.5857394,1.97058824 C11.6789159,1.97058824 11.7759747,2.01135294 11.9079747,2.0725 C12.1418865,2.18314706 16.5347688,4.56885294 16.5347688,4.56885294 L17.2918276,5.30941176 L17.4286806,5.17158824 L17.3995629,5.14247059 L17.3549159,4.74841176 L17.8169159,4.81732353 L17.8790335,4.73482353 L18.4924453,4.84547059 C18.4924453,4.84547059 19.6649159,5.81702941 20.0929453,6.42364706 L20.21621,7.05064706 L20.13371,7.13411765 L20.1958276,7.56894118 L19.8677688,7.53108824 L19.7144159,7.67861765 L19.9890923,7.94747059 L19.9920041,7.94455882 L21.9952982,9.96144118 C21.9952982,9.96144118 22.0719747,10.0031765 21.9952982,10.0788824 C21.9865629,10.0876176 19.3892688,12.6645294 19.3892688,12.6645294 C19.3892688,12.6645294 19.3523865,12.7052941 19.3077394,12.7052941 C19.29221,12.7052941 19.2747394,12.6994706 19.2582394,12.6849118 L16.9123276,10.3613235 L16.6512394,10.6097941 Z M17.5067159,17.5740559 L19.82351,20.05585 L17.0583041,22.6356735 L14.65901,20.0082912 L12.8799218,17.3401441 L12.4062747,16.88785 L14.2901865,15.0039382 L14.7764512,15.5047618 L17.5067159,17.5740559 Z"
-                            })]
-                        })
-                    })
-                }, l.StaffBadgeIcon)
+            var n = i("61559"),
+                r = i("697218"),
+                o = i("385976"),
+                a = i("26430"),
+                s = i("305781");
+
+            function u(e) {
+                if (null == e) return;
+                let t = r.default.getCurrentUser();
+                if (null == t) return;
+                let {
+                    shouldSeeTopEmojiBar: i
+                } = (0, n.getEmojiPickerDiscoveryExperimentConfig)();
+                if (!i) return;
+                let u = o.default.getTopEmojisMetadata(e);
+                if (null != u) {
+                    let {
+                        topEmojisTTL: e
+                    } = u;
+                    if (null == e || Date.now() < e) return
+                }!a.default.getIsFetching(e) && (0, s.fetchTopEmojis)(e)
+            }
         }
     }
 ]);

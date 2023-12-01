@@ -1,839 +1,1411 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["6086"], {
-        519705: function(e, t, n) {
+    ["43820"], {
+        354087: function(e, t, i) {
             "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return c
-                }
-            }), n("222007"), n("702976");
-            var a = n("872717"),
-                l = n("819855"),
-                i = n("913144"),
-                d = n("679428"),
-                s = n("282109"),
-                r = n("568734"),
-                o = n("34676"),
-                u = n("49111"),
-                f = n("397336"),
-                g = n("782340"),
-                c = {
-                    open(e) {
-                        i.default.dispatch({
-                            type: "NOTIFICATION_SETTINGS_MODAL_OPEN",
-                            guildId: e
-                        })
-                    },
-                    close() {
-                        i.default.dispatch({
-                            type: "NOTIFICATION_SETTINGS_MODAL_CLOSE"
-                        })
-                    },
-                    updateGuildNotificationSettings(e, t, n) {
-                        let a = (0, o.getCurrentGuildSettings)(e);
-                        d.default.saveUserGuildSettings(e, t), i.default.dispatch({
-                            type: "USER_GUILD_SETTINGS_GUILD_UPDATE",
-                            guildId: e,
-                            settings: t
-                        }), (0, o.trackGuildNotificationSettingsUpdate)(e, t, a, n)
-                    },
-                    updateGuildAndChannelNotificationSettings(e, t, n) {
-                        let a = Object.keys(t.channel_overrides),
-                            l = (0, o.getCurrentGuildSettings)(e),
-                            s = (0, o.getManyCurrentChannelSettings)(e, a);
-                        d.default.saveUserGuildSettings(e, t), i.default.dispatch({
-                            type: "USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE",
-                            guildId: e,
-                            settings: t
-                        }), (0, o.trackGuildNotificationSettingsUpdate)(e, t, l, n), Object.keys(t.channel_overrides).forEach(a => {
-                            let l = s.get(a);
-                            (0, o.trackChannelNotificationSettingsUpdate)(e, a, t.channel_overrides[a], l, n)
-                        })
-                    },
-                    updateGuildNotificationSettingsBulk(e, t) {
-                        let n = Object.keys(e),
-                            a = (0, o.getManyCurrentGuildSettings)(n);
-                        d.default.saveUserGuildSettingsBulk(e), Object.entries(e).forEach(e => {
-                            let [n, l] = e, d = a.get(n);
-                            i.default.dispatch({
-                                type: "USER_GUILD_SETTINGS_GUILD_UPDATE",
-                                guildId: n,
-                                settings: l
-                            }), (0, o.trackGuildNotificationSettingsUpdate)(n, l, d, t)
-                        })
-                    },
-                    updateChannelOverrideSettings(e, t, n, a) {
-                        let s = (0, o.getCurrentChannelSettings)(e, t);
-                        d.default.saveUserGuildSettings(e, {
-                            channel_overrides: {
-                                [t]: n
-                            }
-                        }), i.default.dispatch({
-                            type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE",
-                            guildId: e,
-                            channelId: t,
-                            settings: n
-                        }), l.AccessibilityAnnouncer.announce(g.default.Messages.A11Y_ANNOUNCEMENT_CHANNEL_SETTINGS_UPDATED), (0, o.trackChannelNotificationSettingsUpdate)(e, t, n, s, a)
-                    },
-                    updateChannelOverrideSettingsBulk(e, t, n) {
-                        let a = Object.keys(t),
-                            l = (0, o.getManyCurrentChannelSettings)(e, a);
-                        d.default.saveUserGuildSettings(e, {
-                            channel_overrides: t
-                        }), i.default.dispatch({
-                            type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK",
-                            guildId: e,
-                            overrides: t
-                        }), Object.keys(t).forEach(a => (0, o.trackChannelNotificationSettingsUpdate)(e, a, t[a], l.get(a), n))
-                    },
-                    setForumThreadsCreated(e, t) {
-                        let n = t ? f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_ON : f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_OFF,
-                            a = t ? f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_OFF : f.ChannelNotificationSettingsFlags.NEW_FORUM_THREADS_ON,
-                            l = s.default.getChannelFlags(e);
-                        this.updateChannelOverrideSettings(e.guild_id, e.id, {
-                            flags: l & ~a | n
-                        })
-                    },
-                    setAccountFlag(e, t) {
-                        let n = s.default.accountNotificationSettings.flags,
-                            l = (0, r.setFlag)(n, e, t);
-                        a.default.patch({
-                            url: u.Endpoints.ACCOUNT_NOTIFICATION_SETTINGS,
-                            body: {
-                                flags: l
-                            }
-                        })
-                    }
-                }
-        },
-        412355: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                updateGuildSelfMember: function() {
-                    return r
-                }
-            }), n("702976");
-            var a = n("872717"),
-                l = n("913144"),
-                i = n("479756"),
-                d = n("38654"),
-                s = n("49111");
-
-            function r(e, t) {
-                let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                if (d.default.isFullServerPreview(e)) {
-                    (0, i.updateImpersonatedData)(e, {
-                        memberOptions: t
-                    });
-                    return
-                }
-                return l.default.dispatch({
-                    type: "GUILD_MEMBER_UPDATE_LOCAL",
-                    guildId: e,
-                    roles: t.roles,
-                    flags: t.flags
-                }), a.default.patch({
-                    url: s.Endpoints.SET_GUILD_MEMBER(e),
-                    body: t,
-                    oldFormErrors: !!n || void 0
-                })
-            }
-        },
-        921031: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return L
-                }
-            }), n("834022"), n("222007"), n("702976");
-            var a = n("917351"),
-                l = n.n(a),
-                i = n("249654"),
-                d = n("872717"),
-                s = n("913144"),
-                r = n("267363"),
-                o = n("716241"),
-                u = n("412355"),
-                f = n("479756"),
-                g = n("38654"),
-                c = n("629220"),
-                _ = n("42203"),
-                p = n("26989"),
-                E = n("697218"),
-                N = n("599110"),
-                h = n("568734"),
-                S = n("449008"),
-                O = n("286235"),
-                C = n("863636"),
-                I = n("380710"),
-                A = n("843323"),
-                G = n("49111"),
-                T = n("657944"),
-                D = n("133335");
-
-            function v(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                if (g.default.isFullServerPreview(e)) return;
-                let n = t ? C.default.getOnboardingPromptsForOnboarding(e) : C.default.getOnboardingPrompts(e),
-                    a = C.default.getOnboardingResponses(e),
-                    l = n.map(e => e.options.filter(e => a.includes(e.id))).flat(),
-                    i = {},
-                    r = {};
-                return (n.forEach(e => {
-                    i[e.id] = Date.now(), e.options.forEach(e => r[e.id] = Date.now())
-                }), t) ? d.default.post({
-                    url: G.Endpoints.GUILD_ONBOARDING_RESPONSES(e),
-                    body: {
-                        onboarding_responses: l.map(e => e.id),
-                        onboarding_prompts_seen: i,
-                        onboarding_responses_seen: r
-                    }
-                }).then(t => {
-                    null != t.body && s.default.dispatch({
-                        type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS",
-                        guildId: e,
-                        options: t.body.onboarding_responses,
-                        prompts_seen: t.body.onboarding_prompts_seen,
-                        options_seen: t.body.onboarding_responses_seen
-                    })
-                }).catch(e => O.default.captureException(e)) : d.default.put({
-                    url: G.Endpoints.GUILD_ONBOARDING_RESPONSES(e),
-                    body: {
-                        onboarding_responses: l.map(e => e.id),
-                        onboarding_prompts_seen: i,
-                        onboarding_responses_seen: r
-                    }
-                }).then(t => {
-                    null != t.body && s.default.dispatch({
-                        type: "GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS",
-                        guildId: e,
-                        options: t.body.onboarding_responses,
-                        prompts_seen: t.body.onboarding_prompts_seen,
-                        options_seen: t.body.onboarding_responses_seen
-                    })
-                }).catch(e => O.default.captureException(e))
-            }
-            var L = {
-                selectOption(e, t, n, a) {
-                    let i = C.default.getOnboardingPrompt(t);
-                    if (null == i) return;
-                    let d = i.singleSelect ? l.without(l.map(i.options, "id"), n) : [];
-                    s.default.dispatch({
-                        type: "GUILD_ONBOARDING_SELECT_OPTION",
-                        guildId: e,
-                        promptId: t,
-                        optionId: n,
-                        selected: a,
-                        removedOptionIds: d
-                    })
-                },
-                updateOnboardingResponses: l.debounce(v, 1e3),
-                updateRolesLocal: function(e, t, n) {
-                    var a, i;
-                    let d = null !== (i = null === (a = p.default.getSelfMember(e)) || void 0 === a ? void 0 : a.roles) && void 0 !== i ? i : [];
-                    if (g.default.isViewingRoles(e)) {
-                        (0, f.updateImpersonatedRoles)(e, l.difference(l.union(d, t), n));
-                        return
-                    }(t.length > 0 || n.length > 0) && s.default.dispatch({
-                        type: "GUILD_MEMBER_UPDATE_LOCAL",
-                        guildId: e,
-                        roles: l.difference(l.union(d, t), n),
-                        addedRoleIds: t,
-                        removedRoleIds: n
-                    })
-                },
-                completeOnboarding(e, t) {
-                    let n = t.length > 0 ? t[t.length - 1] : null,
-                        a = C.default.getSelectedOptions(e),
-                        l = (0, I.getSelectedRoleIds)(a),
-                        d = (0, I.getSelectedChannelIds)(a),
-                        s = C.default.getEnabled(e) ? C.default.getDefaultChannelIds(e) : [],
-                        [u, c] = (0, I.getChannelCoverageForOnboarding)(e, t, s),
-                        O = [...d, ...s],
-                        L = O.map(e => _.default.getChannel(e)).filter(S.isNotNullish),
-                        U = (0, A.getFlattenedChannels)(e, new Set(O), L, !0).length,
-                        b = null == n ? [] : n.options.map(e => e.id);
-                    if (N.default.track(G.AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, {
-                            ...(0, o.collectGuildAnalyticsMetadata)(e),
-                            step: t.length - 1,
-                            options_selected: null == n ? 0 : a.filter(e => b.includes(e.id)).length,
-                            skipped: b.length > 0,
-                            back: !1,
-                            in_onboarding: !0,
-                            is_final_step: !0,
-                            roles_granted: l.size,
-                            channels_granted: U,
-                            guild_onboarding_covered_channel_ids: u.map(e => e.id),
-                            guild_onboarding_uncovered_channel_ids: c.map(e => e.id)
-                        }), (0, r.ackGuildFeature)(e, D.ReadStateTypes.GUILD_ONBOARDING_QUESTION, i.default.fromTimestamp(Date.now())), v(e, !0), g.default.isFullServerPreview(e)) {
-                        (0, f.updateImpersonatedChannels)(e, O, []), (0, f.updateImpersonatedData)(e, {
-                            optInEnabled: !0
-                        }), (0, f.updateImpersonatedRoles)(e, Array.from(l));
-                        let t = E.default.getCurrentUser();
-                        if (null != t) {
-                            var F, y;
-                            let n = null !== (y = null === (F = p.default.getMember(e, t.id)) || void 0 === F ? void 0 : F.flags) && void 0 !== y ? y : 0;
-                            (0, f.updateImpersonatedData)(e, {
-                                memberOptions: {
-                                    flags: (0, h.setFlag)(n, T.GuildMemberFlags.COMPLETED_ONBOARDING, !0)
-                                }
-                            })
-                        }
-                    }
-                },
-                onboardExistingMember(e, t) {
-                    let n = new Set(t),
-                        a = C.default.getEnabled(e) ? C.default.getDefaultChannelIds(e) : [];
-                    a.forEach(e => n.add(e)), n.size > 0 && (0, c.bulkOptInChannels)(e, Array.from(n), !0, {
-                        page: G.AnalyticsPages.GUILD_ONBOARDING
-                    })
-                },
-                finishOnboarding(e) {
-                    s.default.dispatch({
-                        type: "GUILD_ONBOARDING_COMPLETE",
-                        guildId: e
-                    })
-                },
-                setUserOnboardingStep(e, t) {
-                    s.default.dispatch({
-                        type: "GUILD_ONBOARDING_SET_STEP",
-                        guildId: e,
-                        step: t
-                    })
-                },
-                async resetOnboarding(e) {
-                    let t = E.default.getCurrentUser();
-                    if (null != t) {
-                        var n, a;
-                        let l = null !== (a = null === (n = p.default.getMember(e, t.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== a ? a : 0;
-                        await (0, u.updateGuildSelfMember)(e, {
-                            flags: (0, h.setFlag)(l, T.GuildMemberFlags.COMPLETED_ONBOARDING, !1)
-                        })
-                    }
-                }
-            }
-        },
-        937692: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                discardOnboardingPromise: function() {
-                    return p
-                },
-                default: function() {
-                    return E
-                },
-                openAndWaitForOnboarding: function() {
-                    return N
-                },
-                isOnboardingActiveForGuild: function() {
-                    return h
+            i.r(t), i.d(t, {
+                DoorExitIcon: function() {
+                    return u
                 }
             });
-            var a = n("627445"),
-                l = n.n(a),
-                i = n("77078"),
-                d = n("851387"),
-                s = n("393414"),
-                r = n("921031"),
-                o = n("685829"),
-                u = n("471706"),
-                f = n("843035"),
-                g = n("49111"),
-                c = n("724210");
-            let _ = {};
-
-            function p(e) {
-                _[e] = null
-            }
-            async function E(e) {
+            var n = i("37983");
+            i("884691");
+            var r = i("669491"),
+                a = i("75196");
+            let u = e => {
                 let {
-                    guildId: t,
-                    returnChannelId: n,
-                    isPreview: a = !1
+                    width: t = 24,
+                    height: i = 24,
+                    color: u = r.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: s = "",
+                    ...l
                 } = e;
-                (0, i.closeAllModals)(), l(null == _[t], "should not double-join guilds");
-                let r = await (0, d.waitForGuild)(t);
-                if (r.hasFeature(g.GuildFeatures.COMMUNITY)) {
-                    if (a)(0, o.startOnboarding)(t);
-                    else {
-                        if (!r.hasFeature(g.GuildFeatures.GUILD_ONBOARDING)) return;
-                        await (0, o.maybeFetchOnboardingPrompts)(t)
-                    }
-                    u.default.shouldShowOnboarding(t) && (await N(t), null != n && (0, s.transitionTo)(g.Routes.CHANNEL(t, n)))
-                }
-            }
-
-            function N(e) {
-                return new Promise(t => {
-                    _[e] = t, (0, f.waitForOnboardingCompletion)(e).then(() => {
-                        var t, n;
-                        null === (n = _[t = e]) || void 0 === n || n.call(_), _[t] = null, r.default.finishOnboarding(e)
-                    }), (0, s.transitionTo)(g.Routes.CHANNEL(e, c.StaticChannelRoute.GUILD_ONBOARDING))
-                })
-            }
-
-            function h(e) {
-                return null != _[e]
-            }
-        },
-        843035: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                waitForOnboardingCompletion: function() {
-                    return s
-                }
-            }), n("702976");
-            var a = n("26989"),
-                l = n("568734"),
-                i = n("921031"),
-                d = n("657944");
-
-            function s(e) {
-                return new Promise(t => {
-                    a.default.addConditionalChangeListener(() => {
-                        var n;
-                        let s = a.default.getSelfMember(e);
-                        return !(0, l.hasFlag)(null !== (n = null == s ? void 0 : s.flags) && void 0 !== n ? n : 0, d.GuildMemberFlags.COMPLETED_ONBOARDING) || (i.default.finishOnboarding(e), t(), !1)
-                    })
+                return (0, n.jsxs)("svg", {
+                    ...(0, a.default)(l),
+                    width: t,
+                    height: i,
+                    viewBox: "0 0 24 24",
+                    fill: "none",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    children: [(0, n.jsx)("path", {
+                        d: "M9 12C9.55228 12 10 12.4477 10 13V15C10 15.5523 9.55228 16 9 16C8.44772 16 8 15.5523 8 15V13C8 12.4477 8.44772 12 9 12Z",
+                        fill: "string" == typeof u ? u : u.css,
+                        className: s
+                    }), (0, n.jsx)("path", {
+                        fillRule: "evenodd",
+                        clipRule: "evenodd",
+                        d: "M2.75026 3.01535C3.29851 2.3942 4.10384 2 5 2H15C16.6569 2 18 3.34315 18 5V12.6445C18 13.0769 17.4528 13.3388 17.0476 13.1881C15.9816 12.7917 14.7355 13.0219 13.8787 13.8787C12.7071 15.0503 12.7071 16.9497 13.8787 18.1213L13.9038 18.1464C14.2188 18.4614 13.9957 19 13.5503 19H13.4998C13.2237 19 13 19.2237 13 19.4998C13 21.3872 10.9886 22.5939 9.32334 21.7055L3.52933 18.6147C3.51922 18.6094 3.5092 18.6038 3.49927 18.598C2.60518 18.0808 2 17.1117 2 16V5C2 4.23985 2.28402 3.5436 2.75026 3.01535ZM4.05096 4.96617C4.02656 4.95663 4 4.9738 4 5V16C4 16.3638 4.19381 16.6836 4.48843 16.8596L10.2647 19.9409C10.5977 20.1186 11 19.8772 11 19.4998V8.02415C11 7.81827 10.8738 7.63343 10.682 7.55847L4.05096 4.96617Z",
+                        fill: "string" == typeof u ? u : u.css,
+                        className: s
+                    }), (0, n.jsx)("path", {
+                        d: "M15.2934 16.7076C14.9029 16.3171 14.9024 15.6834 15.2929 15.2929C15.6834 14.9024 16.3166 14.9024 16.7071 15.2929L21 19.5858V16C21 15.4477 21.4477 15 22 15C22.5523 15 23 15.4477 23 16V22C23 22.5523 22.5523 23 22 23H16C15.4477 23 15 22.5523 15 22C15 21.4477 15.4477 21 16 21H19.5858L15.2934 16.7076Z",
+                        fill: "string" == typeof u ? u : u.css,
+                        className: s
+                    })]
                 })
             }
         },
-        843323: function(e, t, n) {
+        493910: function(e, t, i) {
             "use strict";
-            n.r(t), n.d(t, {
-                getFlattenedChannels: function() {
-                    return r
+            i.r(t), i.d(t, {
+                MemberSafetySecondaryIndex: function() {
+                    return n
                 },
-                useFlattenedChannels: function() {
-                    return o
-                }
-            }), n("222007"), n("424973");
-            var a = n("917351"),
-                l = n.n(a),
-                i = n("446674"),
-                d = n("42203"),
-                s = n("449008");
-
-            function r(e, t, n) {
-                let a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-                    i = l(d.default.getMutableGuildChannelsForGuild(e)).values().groupBy("parent_id").value(),
-                    r = l(n).map(e => e.isCategory() ? e.id : e.parent_id).filter(s.isNotNullish).uniq().map(e => d.default.getChannel(e)).filter(s.isNotNullish).sortBy("position").value(),
-                    o = new Set(r.map(e => e.id)),
-                    u = n.filter(e => !e.isCategory() && (null == e.parent_id || !o.has(e.parent_id)));
-                for (let e of (u = l.sortBy(u, e => e.isGuildVocal() ? e.position + 1e4 : e.position), r)) {
-                    !a && u.push(e);
-                    let d = t.has(e.id) ? i[e.id] : n.filter(t => t.parent_id === e.id);
-                    d = l.sortBy(null != d ? d : [], e => e.isGuildVocal() ? e.position + 1e4 : e.position), u.push(...d)
-                }
-                return u
-            }
-
-            function o(e, t) {
-                let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    a = (0, i.useStateFromStoresArray)([d.default], () => {
-                        let a = Array.from(t).map(e => d.default.getChannel(e)).filter(s.isNotNullish);
-                        return r(e, t, a, n)
-                    });
-                return a
-            }
-        },
-        629220: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                setOptInChannel: function() {
+                GuildMemberSafetyMembers: function() {
                     return S
-                },
-                updateOptInChannelsImmediate: function() {
-                    return O
-                },
-                updateOptInChannelsBatched: function() {
-                    return I
-                },
-                bulkOptInChannels: function() {
-                    return A
-                },
-                setGuildOptIn: function() {
-                    return G
-                },
-                setIsFavorite: function() {
-                    return T
-                },
-                dimissFavoriteSuggestion: function() {
-                    return v
                 }
-            }), n("222007");
-            var a = n("917351"),
-                l = n("151426"),
-                i = n("913144"),
-                d = n("519705"),
-                s = n("716241"),
-                r = n("479756"),
-                o = n("38654"),
-                u = n("679428"),
-                f = n("872173"),
-                g = n("42203"),
-                c = n("282109"),
-                _ = n("599110"),
-                p = n("568734"),
-                E = n("34676"),
-                N = n("49111"),
-                h = n("397336");
+            }), i("424973"), i("222007");
+            var n, r, a = i("969176"),
+                u = i.n(a),
+                s = i("407846"),
+                l = i("654017"),
+                o = i("26989"),
+                d = i("697218"),
+                h = i("490931"),
+                m = i("159132");
+            let c = Date.now();
 
-            function S(e, t, n, a) {
-                if (null == e) return;
-                if (o.default.isFullServerPreview(e)) {
-                    (0, r.updateImpersonatedChannels)(e, n ? [t] : [], n ? [] : [t]);
-                    return
-                }
-                let l = c.default.getChannelIdFlags(e, t);
-                !n && (l = (0, p.setFlag)(l, h.ChannelNotificationSettingsFlags.FAVORITED, !1));
-                let d = (0, E.getCurrentChannelSettings)(e, t),
-                    f = {
-                        flags: (0, p.setFlag)(l, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, n)
-                    };
-                u.default.saveUserGuildSettingsBulk({
-                    [e]: {
-                        channel_overrides: {
-                            [t]: f
-                        }
-                    }
-                }), i.default.dispatch({
-                    type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE",
-                    guildId: e,
-                    channelId: t,
-                    settings: f
-                }), (0, E.trackChannelNotificationSettingsUpdate)(e, t, f, d, a), D(e), _.default.track(N.AnalyticEvents.CHANNEL_LIST_UPDATED, {
-                    ...(0, s.collectGuildAnalyticsMetadata)(e),
-                    ...(0, s.collectChannelAnalyticsMetadata)(g.default.getChannel(t)),
-                    action_type: n ? "add" : "remove",
-                    location: a
-                })
+            function _(e) {
+                let t = [e.isCurrentGuildMemberByTimestamp ? "CURRENT_GUILD_MEMBER" : "NEW_GUILD_MEMBER"];
+                return e.isIncludedInSearchResults && t.push("INCLUDED_IN_SEARCH_RESULTS"), t
             }
 
-            function O(e, t, n, a) {
-                if (null == e) return;
-                if (o.default.isFullServerPreview(e)) {
-                    (0, r.updateImpersonatedChannels)(e, n ? [t] : [], n ? [] : [t]), (0, r.updateImpersonatedData)(e, {
-                        optInEnabled: !0
-                    });
-                    return
-                }
-                let l = c.default.getChannelIdFlags(e, t);
-                !n && (l = (0, p.setFlag)(l, h.ChannelNotificationSettingsFlags.FAVORITED, !1));
-                let d = (0, E.getCurrentChannelSettings)(e, t),
-                    f = {
-                        flags: (0, p.setFlag)(l, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, n)
-                    };
-                if (!c.default.isOptInEnabled(e)) {
-                    let n = (0, p.setFlag)(c.default.getGuildFlags(e), h.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON, !0);
-                    u.default.saveUserGuildSettingsBulk({
-                        [e]: {
-                            channel_overrides: {
-                                [t]: f
-                            },
-                            flags: n
-                        }
-                    })
-                }
-                i.default.dispatch({
-                    type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE",
-                    guildId: e,
-                    channelId: t,
-                    settings: f
-                }), (0, E.trackChannelNotificationSettingsUpdate)(e, t, f, d, a), D(e), _.default.track(N.AnalyticEvents.CHANNEL_LIST_UPDATED, {
-                    ...(0, s.collectGuildAnalyticsMetadata)(e),
-                    ...(0, s.collectChannelAnalyticsMetadata)(g.default.getChannel(t)),
-                    action_type: n ? "add" : "remove",
-                    location: a
-                })
-            }
-            async function C(e, t) {
-                if (!(null == e || o.default.isFullServerPreview(e))) await u.default.saveUserGuildSettingsBulk({
-                    [e]: {
-                        channel_overrides: t
-                    }
-                }), i.default.dispatch({
-                    type: "USER_GUILD_SETTINGS_REMOVE_PENDING_CHANNEL_UPDATES",
-                    guildId: e,
-                    updates: t
-                })
-            }
-            let I = (0, a.debounce)((e, t) => C(e, t), 1e3);
-
-            function A(e, t) {
-                let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    a = arguments.length > 3 ? arguments[3] : void 0;
-                if (null == e) return;
-                if (o.default.isFullServerPreview(e)) {
-                    (0, r.updateImpersonatedChannels)(e, t, []), n && (0, r.updateImpersonatedData)(e, {
-                        optInEnabled: !0
-                    });
-                    return
-                }
-                let l = {};
-                if (t.forEach(t => {
-                        let n = c.default.getChannelIdFlags(e, t);
-                        l[t] = {
-                            flags: (0, p.setFlag)(n, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, !0)
-                        }
-                    }), n) {
-                    let t = (0, p.setFlag)(c.default.getGuildFlags(e), h.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON, !0);
-                    d.default.updateGuildAndChannelNotificationSettings(e, {
-                        flags: t,
-                        channel_overrides: l
-                    }), _.default.track(N.AnalyticEvents.CHANNEL_LIST_UPDATED, {
-                        ...(0, s.collectGuildAnalyticsMetadata)(e),
-                        action_type: "add_many_and_enable_guild",
-                        location: a
-                    })
-                } else d.default.updateChannelOverrideSettingsBulk(e, l), _.default.track(N.AnalyticEvents.CHANNEL_LIST_UPDATED, {
-                    ...(0, s.collectGuildAnalyticsMetadata)(e),
-                    action_type: "add_many",
-                    location: a
-                })
+            function M(e) {
+                return -e.joinedAtTimestamp
             }
 
-            function G(e, t, n) {
-                if (o.default.isFullServerPreview(e)) {
-                    (0, r.updateImpersonatedData)(e, {
-                        optInEnabled: t
-                    });
-                    return
+            function f() {
+                return new s.default(_, M)
+            }(r = n || (n = {})).NEW_GUILD_MEMBER = "NEW_GUILD_MEMBER", r.CURRENT_GUILD_MEMBER = "CURRENT_GUILD_MEMBER", r.INCLUDED_IN_SEARCH_RESULTS = "INCLUDED_IN_SEARCH_RESULTS";
+            class S {
+                reset() {
+                    this._membersMap.clear(), this._membersMap = f(), this.resetNewMemberTimestamp()
                 }
-                let a = c.default.getGuildFlags(e);
-                d.default.updateGuildNotificationSettings(e, {
-                    flags: (0, p.setFlag)(a, h.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON, t)
-                }), _.default.track(N.AnalyticEvents.CHANNEL_LIST_UPDATED, {
-                    ...(0, s.collectGuildAnalyticsMetadata)(e),
-                    action_type: t ? "guild_enabled" : "guild_disabled",
-                    location: n
-                })
-            }
-
-            function T(e, t, n, a) {
-                if (null == e || o.default.isFullServerPreview(e)) return;
-                let l = c.default.getChannelIdFlags(e, t);
-                !(0, p.hasFlag)(l, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED) && n && (l = (0, p.setFlag)(l, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, !0)), d.default.updateChannelOverrideSettings(e, t, {
-                    flags: (0, p.setFlag)(l, h.ChannelNotificationSettingsFlags.FAVORITED, n)
-                }), _.default.track(N.AnalyticEvents.CHANNEL_LIST_UPDATED, {
-                    ...(0, s.collectGuildAnalyticsMetadata)(e),
-                    action_type: n ? "favorited" : "unfavorited",
-                    location: a
-                })
-            }
-
-            function D(e) {
-                (0, f.updateUserGuildSettings)(e, e => (!(0, p.hasFlag)(e.guildOnboardingProgress, l.GuildOnboardingProgress.GUILD_NOTICE_CLEARED) || !!(0, p.hasFlag)(e.guildOnboardingProgress, l.GuildOnboardingProgress.GUILD_NOTICE_SHOWN)) && (e.guildOnboardingProgress = (0, p.addFlag)(e.guildOnboardingProgress, l.GuildOnboardingProgress.GUILD_NOTICE_CLEARED), e.guildOnboardingProgress = (0, p.setFlag)(e.guildOnboardingProgress, l.GuildOnboardingProgress.GUILD_NOTICE_SHOWN, !1), !0), f.UserSettingsDelay.INFREQUENT_USER_ACTION)
-            }
-
-            function v(e, t) {
-                i.default.dispatch({
-                    type: "DISMISS_FAVORITE_SUGGESTION",
-                    guildId: e,
-                    channelId: t
-                })
-            }
-        },
-        679428: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return C
+                resetNewMemberTimestamp() {
+                    this.newMemberTimestamp = Date.now() + 2e3
                 }
-            }), n("424973"), n("222007");
-            var a = n("917351"),
-                l = n.n(a),
-                i = n("872717"),
-                d = n("689988"),
-                s = n("605250"),
-                r = n("870691"),
-                o = n("42203"),
-                u = n("49111");
-            let f = {},
-                g = new s.default("UserGuildSettingsManager"),
-                c = 0;
-
-            function _() {
-                f = {
-                    ...r.default.getCollapsedCategories()
+                enhanceNewMember(e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                        i = null != e.joinedAt ? new Date(e.joinedAt) : new Date,
+                        n = i.getTime(),
+                        {
+                            hasUnusualDmActivity: r,
+                            hasSpammerUserFlag: a,
+                            sourceInviteCode: u,
+                            joinSourceType: s,
+                            inviterId: l,
+                            integrationType: o
+                        } = this._computeMemberSupplementals(e.userId, e.unusualDMActivityUntil),
+                        h = d.default.getUser(e.userId),
+                        m = {
+                            hasUnusualDmActivity: r,
+                            hasSpammerUserFlag: a,
+                            sourceInviteCode: u,
+                            joinSourceType: s,
+                            inviterId: l,
+                            integrationType: o,
+                            ...e,
+                            isCurrentGuildMemberByTimestamp: n <= this.newMemberTimestamp,
+                            isIncludedInSearchResults: !1,
+                            user: h,
+                            joinedAtTimestamp: n,
+                            ...t
+                        };
+                    return m
                 }
-            }
-
-            function p() {
-                !__OVERLAY__ && (clearTimeout(c), c = setTimeout(() => E(), 15e3))
-            }
-            async function E(e, t) {
-                await N(null != t ? {
-                    [null != e ? e : u.ME]: t
-                } : {})
-            }
-            async function N(e) {
-                clearTimeout(c);
-                let t = 0 !== Object.keys(e).length,
-                    n = r.default.getCollapsedCategories(),
-                    a = function() {
-                        let e = {},
-                            t = r.default.getCollapsedCategories();
-                        for (let n in t) t[n] !== f[n] && (e[n] = !0);
-                        for (let n in f) t[n] !== f[n] && (e[n] = !0);
-                        return e
-                    }();
-                for (let l in a) {
-                    let a = o.default.getChannel(l);
-                    null != a && null != a.guild_id && (!(a.guild_id in e) && (e[a.guild_id] = {}), null == e[a.guild_id].channel_overrides && (e[a.guild_id].channel_overrides = {}), e[a.guild_id].channel_overrides[a.id] = {
-                        ...e[a.guild_id].channel_overrides[a.id],
-                        collapsed: a.id in n
-                    }, t = !0)
-                }
-                if (!t) return;
-                f = {
-                    ...n
-                };
-                let d = l.map(e, (e, t) => ({
-                    guildId: t,
-                    updates: e,
-                    attempts: 0
-                }));
-                for (; d.length > 0;) {
-                    let e = d.shift();
-                    if (e.guildId !== u.FAVORITES) try {
-                        await i.default.patch({
-                            url: u.Endpoints.USER_GUILD_SETTINGS(e.guildId),
-                            body: e.updates
-                        }), await h(1e3)
-                    } catch (t) {
-                        g.error(t), e.attempts += 1, e.attempts < 3 && d.push(e), await h(5e3)
+                _computeMemberSupplementals(e, t) {
+                    var i;
+                    let n = (0, m.getMemberSupplementalByGuildId)(this.guildId),
+                        {
+                            sourceInviteCode: r,
+                            joinSourceType: a,
+                            inviterId: u,
+                            integrationType: s
+                        } = null !== (i = n[e]) && void 0 !== i ? i : {};
+                    return {
+                        sourceInviteCode: null != r ? r : null,
+                        joinSourceType: null != a ? a : null,
+                        inviterId: null != u ? u : null,
+                        integrationType: null != s ? s : null,
+                        hasUnusualDmActivity: function(e) {
+                            if (null == e) return !1;
+                            let t = new Date(e).getTime();
+                            return t >= c - h.UNUSUAL_DM_COMPARISON_DELTA
+                        }(t),
+                        hasSpammerUserFlag: (0, l.isSpammer)(e)
                     }
                 }
-            }
-
-            function h(e) {
-                return new Promise(t => setTimeout(t, e + Math.ceil(e * Math.random())))
-            }
-
-            function S() {
-                f = {
-                    ...r.default.getCollapsedCategories()
+                createMember(e) {
+                    return this._membersMap.set(e.userId, e)
                 }
-            }
-            class O extends d.default {
-                constructor(...e) {
-                    super(...e), this.actions = {
-                        CATEGORY_COLLAPSE: p,
-                        CATEGORY_EXPAND: p,
-                        CATEGORY_COLLAPSE_ALL: p,
-                        CATEGORY_EXPAND_ALL: p,
-                        POST_CONNECTION_OPEN: _,
-                        USER_GUILD_SETTINGS_FULL_UPDATE: S
-                    }, this.saveUserGuildSettings = E, this.saveUserGuildSettingsBulk = N
+                updateMember(e, t) {
+                    var i;
+                    if (null == t) return this._membersMap.set(e.userId, e);
+                    let n = {
+                            ...e
+                        },
+                        r = {
+                            ...t
+                        },
+                        a = !1,
+                        {
+                            sourceInviteCode: s,
+                            hasUnusualDmActivity: l,
+                            hasSpammerUserFlag: o,
+                            joinSourceType: d,
+                            inviterId: h,
+                            integrationType: m
+                        } = this._computeMemberSupplementals(n.userId, null !== (i = r.unusualDMActivityUntil) && void 0 !== i ? i : n.unusualDMActivityUntil);
+                    for (let e in n.sourceInviteCode !== s && (r.sourceInviteCode = s), n.hasUnusualDmActivity !== l && (r.hasUnusualDmActivity = l), n.hasSpammerUserFlag !== o && (r.hasSpammerUserFlag = o), n.joinSourceType !== d && (r.joinSourceType = d), n.inviterId !== h && (r.inviterId = h), n.integrationType !== m && (r.integrationType = m), r) {
+                        let t = r[e],
+                            i = n[e];
+                        !u(t, i) && (n[e] = t, a = !0)
+                    }
+                    return this._membersMap.set(n.userId, n) || a
                 }
-            }
-            var C = new O
-        },
-        870691: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return p
+                upsertMember(e, t) {
+                    let i = this.getMemberByUserId(e);
+                    if (null == i) {
+                        let t = o.default.getTrueMember(this.guildId, e);
+                        if (null == t) return !1;
+                        i = this.enhanceNewMember(t)
+                    }
+                    return this.updateMember(i, t)
                 }
-            }), n("222007");
-            var a = n("446674"),
-                l = n("913144"),
-                i = n("449008"),
-                d = n("42203"),
-                s = n("341542"),
-                r = n("923959"),
-                o = n("49111");
-            let u = {},
-                f = 0;
-
-            function g() {
-                f += 1
-            }
-
-            function c(e) {
-                if (null == u[e]) return !1;
-                delete u[e]
-            }
-            class _ extends a.default.PersistedStore {
-                initialize(e) {
-                    this.waitFor(d.default, s.default), this.removeChangeListener(g), this.addChangeListener(g), u = null != e ? e : {}
+                removeMember(e) {
+                    return this._membersMap.delete(e)
                 }
-                getState() {
-                    return u
+                syncFromGuildMemberStore(e, t) {
+                    let i = o.default.getTrueMember(e, t);
+                    return null == i ? this.removeMember(t) : this.upsertMember(t, i)
                 }
-                isCollapsed(e) {
-                    return null != e && "null" !== e && !!u[e] && u[e]
+                getMemberByUserId(e) {
+                    return this._membersMap.get(e)
                 }
-                getCollapsedCategories() {
-                    return u
+                values(e) {
+                    return this._membersMap.values(e, !0)
+                }
+                count(e) {
+                    return this._membersMap.size(e)
                 }
                 get version() {
-                    return f
+                    return this._membersMap.version
+                }
+                constructor(e) {
+                    this.newMemberTimestamp = Date.now() + 2e3, this.guildId = e, this._membersMap = f()
                 }
             }
-            _.displayName = "CategoryCollapseStore", _.persistKey = "collapsedCategories";
-            var p = new _(l.default, {
-                CONNECTION_OPEN: function(e) {
-                    for (let t of (!e.userGuildSettings.partial && (u = {}), e.userGuildSettings.entries))
-                        if (null != t.channel_overrides)
-                            for (let e of t.channel_overrides) e.collapsed ? u[e.channel_id] = !0 : delete u[e.channel_id]
-                },
-                USER_GUILD_SETTINGS_FULL_UPDATE: function(e) {
-                    let {
-                        userGuildSettings: t
-                    } = e, n = new Set(t.map(e => e.guild_id).filter(i.isNotNullish));
-                    for (let e in u) {
-                        let t = d.default.getChannel(e);
-                        null != t && null != t.guild_id && n.has(t.guild_id) && delete u[t.id]
+        },
+        637240: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                GuildMemberSafetyPageStore: function() {
+                    return o
+                }
+            }), i("222007"), i("808653"), i("424973");
+            var n = i("917351"),
+                r = i("26989"),
+                a = i("697218"),
+                u = i("493910"),
+                s = i("691386"),
+                l = i("936763");
+            class o {
+                getSearchIndex() {
+                    let e = null == this._search || this._search.hasDefaultQuery;
+                    return e ? u.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER : u.MemberSafetySecondaryIndex.INCLUDED_IN_SEARCH_RESULTS
+                }
+                initialize() {
+                    if (this._initialized) {
+                        this.lastCursorTimestamp = Date.now();
+                        return
                     }
-                    for (let e of t)
-                        for (let t of e.channel_overrides) t.collapsed && (u[t.channel_id] = !0)
+                    this._initialized = !0, this._search = new l.GuildMemberSafetySearch(this.guildId), this._members = new u.GuildMemberSafetyMembers(this.guildId);
+                    let e = r.default.getMemberIds(this.guildId);
+                    for (let t of e) this._members.syncFromGuildMemberStore(this.guildId, t);
+                    this._pagination = new s.GuildMemberSafetyPagination(this.guildId, this._members.values(this.getSearchIndex()))
+                }
+                get isInitialized() {
+                    return this._initialized
+                }
+                reset() {
+                    var e, t, i;
+                    let n = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                    this._initialized && (null === (e = this._members) || void 0 === e || e.reset(), null === (t = this._pagination) || void 0 === t || t.reset(), null === (i = this._search) || void 0 === i || i.reset(), n && this.initialize())
+                }
+                get searchChunkSize() {
+                    return null != this._pagination && this._initialized ? (0, s.getSearchChunkLimit)(this._pagination.getPaginationState()) : 0
+                }
+                getMember(e) {
+                    var t;
+                    return null != this._members && this._initialized ? null !== (t = this._members.getMemberByUserId(e)) && void 0 !== t ? t : null : null
+                }
+                getMembersByIndex(e) {
+                    return null != this._members && this._initialized ? [this._members.values(e), this._members.version] : [
+                        [], 0
+                    ]
+                }
+                countMembersByIndex(e) {
+                    return null != this._members && this._initialized ? this._members.count(e) : 0
+                }
+                _checkUpdatesForPaginationUpdate(e, t) {
+                    return null != t.isIncludedInSearchResults && t.isIncludedInSearchResults !== e.isIncludedInSearchResults || null != t.isCurrentGuildMemberByTimestamp && t.isCurrentGuildMemberByTimestamp !== e.isCurrentGuildMemberByTimestamp || !1
+                }
+                _getIsIncludedInSearch(e, t) {
+                    if (null == this._search) return [!1, !1];
+                    let i = this._search.hasDefaultQuery;
+                    if (i) return [!1, !1];
+                    let n = {
+                            ...e,
+                            ...t
+                        },
+                        r = this._search.isMemberIncludedInSearchResults(n),
+                        a = r !== e.isIncludedInSearchResults;
+                    return [r, a]
+                }
+                updatePaginationChunks() {
+                    if (null == this._pagination || null == this._members || !this._initialized) return !1;
+                    let e = this._members.values(this.getSearchIndex());
+                    return this._pagination.updateSortedMembers(e)
+                }
+                removeMember(e) {
+                    if (null == this._members || !this._initialized) return !1;
+                    let t = this._members.getMemberByUserId(e);
+                    if (null == t) return !1;
+                    let i = this._members.removeMember(e);
+                    return i ? this.updatePaginationChunks() : i
+                }
+                _rawUpdateMember(e, t) {
+                    if (null == this._members) return [!1, !1];
+                    let i = !1,
+                        n = this._members.getMemberByUserId(e);
+                    if (null == n) {
+                        i = !0;
+                        let a = r.default.getTrueMember(this.guildId, e);
+                        if (null == a) return [!1, !1];
+                        n = this._members.enhanceNewMember(a, t)
+                    }
+                    if (null == t.isIncludedInSearchResults) {
+                        let [e, r] = this._getIsIncludedInSearch(n, t);
+                        r && (i = !0, t.isIncludedInSearchResults = e)
+                    } else t.isIncludedInSearchResults !== n.isIncludedInSearchResults && (i = !0);
+                    let a = this._members.updateMember(n, t);
+                    return !i && (i = this._checkUpdatesForPaginationUpdate(n, t)), [i, a]
+                }
+                updateMember(e, t) {
+                    if (null == this._members || !this._initialized) return !1;
+                    let [i, n] = this._rawUpdateMember(e, t);
+                    return i ? this.updatePaginationChunks() : n
+                }
+                updateClientMembers(e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                    if (null == this._members || !this._initialized) return !1;
+                    let i = !1,
+                        n = !1;
+                    for (let r of e) {
+                        let [e, a] = this._rawUpdateMember(r.userId, t ? {
+                            ...r,
+                            isIncludedInSearchResults: !0
+                        } : r);
+                        i = e || i, n = a || n
+                    }
+                    return i ? this.updatePaginationChunks() : n
+                }
+                updateServerMembers(e) {
+                    if (null == this._members || !this._initialized) return !1;
+                    let t = !1,
+                        i = !1;
+                    for (let n of e) {
+                        let e = r.default.getTrueMember(this.guildId, n.user.id);
+                        if (null == e) continue;
+                        let [a, u] = this._rawUpdateMember(n.user.id, e);
+                        t = a || t, i = u || i
+                    }
+                    return t ? this.updatePaginationChunks() : i
+                }
+                updateMembersByMemberIds(e) {
+                    if (null == this._members || !this._initialized) return !1;
+                    let t = e.reduce((e, t) => {
+                        let i = r.default.getTrueMember(this.guildId, t);
+                        return null != i && e.push(i), e
+                    }, []);
+                    return this.updateClientMembers(t)
+                }
+                updateSearchedMembersByMemberIds(e) {
+                    if (null == this._search || null == this._members || !this._initialized) return !1;
+                    let t = e.reduce((e, t) => {
+                        let i = r.default.getTrueMember(this.guildId, t);
+                        return null != i && e.push(i), e
+                    }, []);
+                    return this.updateClientMembers(t, this._search.requiresUsernameMatch)
+                }
+                rebuildAllMembers() {
+                    if (null == this._members || !this._initialized) return !1;
+                    let e = r.default.getMembers(this.guildId);
+                    return this.updateClientMembers(e)
+                }
+                _scheduleRefresh(e) {
+                    this.lastRefreshTimestamp = e, this.lastCursorTimestamp = Date.now(), null != this._lastRefreshTimer && clearTimeout(this._lastRefreshTimer), this._lastRefreshTimer = setTimeout(() => {
+                        this._lastRefreshTimer = null, this.lastRefreshTimestamp = 0
+                    }, 3e3)
+                }
+                refreshNewMembersAndSearchResults() {
+                    if (null == this._search || null == this._members || !this._initialized) return !1;
+                    let e = Number(Date.now()),
+                        t = (0, n.cloneDeep)(this._members.values(u.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER)),
+                        i = !1;
+                    for (let n of t) i = this._members.updateMember(n, {
+                        isCurrentGuildMemberByTimestamp: !0,
+                        refreshTimestamp: e,
+                        user: a.default.getUser(n.userId)
+                    }) || i;
+                    this._members.resetNewMemberTimestamp(), this.resetSearchState() && (i = !1);
+                    let [r, s] = this.updatePaginationState({
+                        currentPage: 1
+                    });
+                    return s && (i = !1), this._scheduleRefresh(e), i && this.updatePaginationChunks(), !0
+                }
+                getNewMemberTimestamp() {
+                    return null != this._members && this._initialized ? this._members.newMemberTimestamp : 0
+                }
+                updateSearchState(e) {
+                    if (null == this._members || null == this._search || !this._initialized) return !1;
+                    let t = !!this._search.hasDefaultQuery,
+                        i = this._search.updateSearchState(e);
+                    if (this._search.hasDefaultQuery && t) return this.updatePaginationChunks();
+                    let r = (0, n.cloneDeep)(this._members.values(u.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER)),
+                        a = t !== this._search.hasDefaultQuery;
+                    for (let e of r) {
+                        if (!e.isCurrentGuildMemberByTimestamp) continue;
+                        let t = this._search.isMemberIncludedInSearchResults(e);
+                        t !== e.isIncludedInSearchResults && (a = !0, i = !0, this._members.updateMember(e, {
+                            isIncludedInSearchResults: t
+                        }))
+                    }
+                    return a ? (this.updatePaginationChunks(), this.updatePaginationState({
+                        currentPage: 1
+                    }), !0) : i
+                }
+                getSearchState() {
+                    return null != this._search && this._initialized ? this._search.getSearchState() : (0, l.getDefaultSearchState)()
+                }
+                hasDefaultSearchState() {
+                    return null == this._search || !this._initialized || this._search.hasDefaultQuery
+                }
+                resetSearchState() {
+                    if (null == this._search || !this._initialized) return !1;
+                    let e = this._search.resetSearchState();
+                    return !!e && this.updatePaginationChunks()
+                }
+                updatePaginationState(e) {
+                    return null != this._pagination && this._initialized ? (this.lastRefreshTimestamp = 0, this._pagination.updatePaginationState(e)) : [!1, !1]
+                }
+                getPaginationState() {
+                    return null != this._pagination && this._initialized ? this._pagination.getPaginationState() : (0, s.createDefaultMemberSafetyPaginationState)()
+                }
+                getPaginatedMembers() {
+                    return null != this._pagination && this._initialized ? [this._pagination.paginatedMembers, this._pagination.version] : [{}, 0]
+                }
+                calculateNewContinuationToken(e) {
+                    return null != this._pagination && this._initialized ? this._pagination.calculateNewContinuationToken(e) : null
+                }
+                updatePaginationToken(e) {
+                    return null != this._pagination && !!this._initialized && this._pagination.updatePaginationToken(e)
+                }
+                getElasticSearchPagination() {
+                    return null != this._pagination && this._initialized ? this._pagination.getElasticSearchPagination() : null
+                }
+                constructor(e) {
+                    this.lastRefreshTimestamp = 0, this.lastCursorTimestamp = Date.now(), this._lastRefreshTimer = null, this.guildId = e, this._initialized = !1, this._members = null, this._pagination = null, this._search = null
+                }
+            }
+        },
+        691386: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                PAGINATION_PAGE_SIZE_OPTIONS: function() {
+                    return l
                 },
-                CATEGORY_COLLAPSE: function(e) {
+                MAX_VISIBLE_PAGES: function() {
+                    return o
+                },
+                createDefaultMemberSafetyPaginationState: function() {
+                    return d
+                },
+                getSearchChunkLimit: function() {
+                    return h
+                },
+                GuildMemberSafetyPagination: function() {
+                    return m
+                }
+            }), i("808653"), i("424973"), i("222007");
+            var n, r, a = i("525065"),
+                u = i("26989"),
+                s = i("490931");
+            let l = [12, 25, 50, 100],
+                o = 7;
+
+            function d() {
+                return {
+                    pageSize: l[0],
+                    currentPage: 1,
+                    continuationToken: null
+                }
+            }(r = n || (n = {}))[r.FORWARD = 1] = "FORWARD", r[r.BACKWARD = -1] = "BACKWARD";
+
+            function h(e) {
+                return Math.max(5 * e.pageSize, 250)
+            }
+            class m {
+                reset() {
+                    this._paginationState = d(), this._sortedMemberIds = [], this._cachedPaginationChunks = {}, this._version += 1
+                }
+                _initPaginationFromRawMembers(e) {
+                    let t = [],
+                        i = e.reduce((e, i, n) => (e = this._reduceMemberIdsToPaginationChunks(e, i.userId, n), t.push(i.userId), e), {});
+                    return [t, i]
+                }
+                _buildPaginationFromMemberIds(e) {
+                    let t = e.reduce(this._reduceMemberIdsToPaginationChunks, {});
+                    return t
+                }
+                _rebuildPaginationChunksFromStoredMembers() {
+                    return this._cachedPaginationChunks = this._buildPaginationFromMemberIds(this._sortedMemberIds), this._version += 1, !0
+                }
+                calculateNewContinuationToken(e) {
+                    var t, i, n;
+                    let r = null !== (t = a.default.getMemberCount(this.guildId)) && void 0 !== t ? t : this._sortedMemberIds.length,
+                        u = this._sortedMemberIds.length - 1,
+                        s = this._sortedMemberIds[u],
+                        l = Math.min(h(this._paginationState), u);
+                    let o = null != (n = e).totalResultsCount ? n.totalResultsCount : n.currentPage * n.pageSize,
+                        d = null !== (i = this._sortedMemberIds[o - 1]) && void 0 !== i ? i : s;
+                    if (null == this._paginationState.continuationToken) return o < l ? this._paginationState.continuationToken : d;
+                    let m = this._sortedMemberIds.findIndex(e => e === this._paginationState.continuationToken);
+                    return -1 === m ? d : o > r ? s : m - o >= 0 ? this._paginationState.continuationToken : Math.ceil(o / l) > Math.ceil(m / l) ? d : this._paginationState.continuationToken
+                }
+                getPaginationState() {
+                    return this._paginationState
+                }
+                updatePaginationToken(e) {
+                    return e !== this._paginationState.continuationToken && (this._paginationState = {
+                        ...this._paginationState,
+                        continuationToken: e
+                    }, !0)
+                }
+                _calculateNewPageFromPageSizeChange(e, t) {
                     let {
-                        id: t
+                        currentPage: i,
+                        pageSize: n
+                    } = this._paginationState, r = e * n <= this._sortedMemberIds.length;
+                    return r ? Math.max(Math.ceil(n / e * (null != t ? t : i)), 1) : 1
+                }
+                updatePaginationState(e) {
+                    let t = !1,
+                        i = null != e.pageSize && e.pageSize !== this._paginationState.pageSize;
+                    if (i) {
+                        var n;
+                        t = !0, e.currentPage = this._calculateNewPageFromPageSizeChange(null !== (n = e.pageSize) && void 0 !== n ? n : this._paginationState.pageSize, e.currentPage)
+                    }
+                    return this._paginationState = {
+                        ...this._paginationState,
+                        ...e
+                    }, t && this._rebuildPaginationChunksFromStoredMembers(), [!0, t]
+                }
+                updateSortedMembers(e) {
+                    let [t, i] = this._initPaginationFromRawMembers(e);
+                    return this._sortedMemberIds = t, this._cachedPaginationChunks = i, this._version += 1, !0
+                }
+                updateSortedMembersByUserIds(e) {
+                    return this._sortedMemberIds = e, this._rebuildPaginationChunksFromStoredMembers(), !0
+                }
+                _findMember(e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+                        i = e;
+                    i < this._sortedMemberIds.length && (i = this._sortedMemberIds.length - 1), i < 0 && (i = 0);
+                    let n = this._sortedMemberIds[e],
+                        r = u.default.getMember(this.guildId, n);
+                    for (; null == r && !((e += t) < 0) && !(e >= this._sortedMemberIds.length);) {
+                        ;
+                        n = this._sortedMemberIds[e], (null == (r = u.default.getMember(this.guildId, n)) ? void 0 : r.joinedAt) == null && (r = null)
+                    }
+                    return r
+                }
+                getElasticSearchPagination() {
+                    let {
+                        pageSize: e,
+                        currentPage: t
+                    } = this._paginationState, i = h(this._paginationState), n = Math.min((Math.floor(e * t / i) + 1) * (i - 1), this._sortedMemberIds.length - 1), r = this._findMember(n, -1), a = this._findMember(Math.max(n - i, 0), 1);
+                    return {
+                        limit: i,
+                        after: (0, s.createMemberSearchCursor)(r),
+                        before: (0, s.createMemberSearchCursor)(a)
+                    }
+                }
+                get paginatedMembers() {
+                    return this._cachedPaginationChunks
+                }
+                get version() {
+                    return this._version
+                }
+                constructor(e, t) {
+                    this._reduceMemberIdsToPaginationChunks = (e, t, i) => {
+                        let n = Math.floor(i / this._paginationState.pageSize) + 1;
+                        return null == e[n] && (e[n] = []), e[n].push(t), e
+                    }, this.guildId = e, this._paginationState = d(), this._version = 0;
+                    let [i, n] = this._initPaginationFromRawMembers(t);
+                    this._sortedMemberIds = i, this._cachedPaginationChunks = n, this._version += 1
+                }
+            }
+        },
+        936763: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                getDefaultSearchState: function() {
+                    return o
+                },
+                GuildMemberSafetySearch: function() {
+                    return m
+                }
+            }), i("222007");
+            var n = i("448105"),
+                r = i.n(n),
+                a = i("969176"),
+                u = i.n(a),
+                s = i("509"),
+                l = i("770115");
+
+            function o() {
+                return {
+                    query: "",
+                    requireUnusualDmActivity: !1,
+                    requireCommunicationDisabled: !1,
+                    selectedRoleIds: new Set
+                }
+            }
+            let d = Object.freeze(o());
+
+            function h(e, t) {
+                return null != e && (!!(e.toLowerCase().includes(t.toLowerCase()) || r(e.toLowerCase(), t.toLowerCase())) || !1)
+            }
+            class m {
+                get requiresUsernameMatch() {
+                    return this._searchState.query.trim().length > 0
+                }
+                reset() {
+                    this._searchState = o(), this.hasDefaultQuery = !0
+                }
+                updateSearchState(e) {
+                    return this._searchState = {
+                        ...this._searchState,
+                        ...e
+                    }, this.hasDefaultQuery = u(this._searchState, d), !0
+                }
+                resetSearchState() {
+                    return !this.hasDefaultQuery && (this._searchState = o(), this.hasDefaultQuery = !0, !0)
+                }
+                getSearchState() {
+                    return this._searchState
+                }
+                isMemberIncludedInSearchResults(e) {
+                    let {
+                        query: t,
+                        requireUnusualDmActivity: i,
+                        requireCommunicationDisabled: n,
+                        selectedRoleIds: r
+                    } = this._searchState;
+                    if (t.length > 0 && ! function(e, t) {
+                            if ("" === t.trim()) return !1;
+                            let [i, n] = (0, l.splitQuery)(t);
+                            for (let t of n)
+                                if (e.userId === t) return !0;
+                            for (let t of i)
+                                if (h(e.nick, t)) return !0;
+                            if (null == e.user) return !1;
+                            let {
+                                globalName: r,
+                                username: a
+                            } = e.user;
+                            for (let e of i)
+                                if (h(a, e)) return !0;
+                            for (let e of i)
+                                if (h(r, e)) return !0;
+                            return !1
+                        }(e, t)) return !1;
+                    if (r.size > 0) {
+                        var a, u;
+                        if (a = e, !(0 !== (u = r).size && Array.from(u).every(e => a.roles.includes(e)))) return !1
+                    }
+                    if (i || n) return !!(i && e.hasUnusualDmActivity || n && (0, s.isMemberCommunicationDisabled)(e)) || !1;
+                    return !0
+                }
+                constructor(e) {
+                    this.guildId = e, this._searchState = o(), this.hasDefaultQuery = !0
+                }
+            }
+        },
+        770115: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                splitQuery: function() {
+                    return r
+                }
+            }), i("424973");
+            var n = i("389153");
+
+            function r(e) {
+                let t = e.split(",").map(e => e.trim()),
+                    i = [],
+                    r = [];
+                return t.forEach(e => {
+                    (0, n.isSnowflake)(e) ? i.push(e): r.push(e)
+                }), [r, i]
+            }
+        },
+        490931: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                UNUSUAL_DM_COMPARISON_DELTA: function() {
+                    return n
+                },
+                createMemberSearchCursor: function() {
+                    return r
+                }
+            });
+            let n = 1728e5;
+
+            function r(e) {
+                if (null == e || null == e.joinedAt) return null;
+                let t = new Date(e.joinedAt).getTime();
+                return {
+                    guild_joined_at: t,
+                    user_id: e.userId
+                }
+            }
+        },
+        178406: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                default: function() {
+                    return T
+                }
+            }), i("222007"), i("424973"), i("808653");
+            var n = i("446674"),
+                r = i("913144"),
+                a = i("271938"),
+                u = i("26989"),
+                s = i("305961"),
+                l = i("697218"),
+                o = i("449008"),
+                d = i("637240"),
+                h = i("159132"),
+                m = i("835257");
+            let c = !1,
+                _ = {};
+
+            function M(e) {
+                return null == _[e] && (_[e] = new d.GuildMemberSafetyPageStore(e)), _[e]
+            }
+
+            function f(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                    i = M(e);
+                i.reset(t)
+            }
+
+            function S(e) {
+                let {
+                    guildId: t,
+                    user: i
+                } = e, n = M(t);
+                return n.updateMembersByMemberIds([i.id])
+            }
+
+            function p(e) {
+                let {
+                    guildId: t
+                } = e, i = M(t);
+                return i.rebuildAllMembers()
+            }
+
+            function b(e) {
+                let {
+                    guildId: t,
+                    userId: i
+                } = e, n = M(t);
+                return n.updateMembersByMemberIds([i])
+            }
+
+            function E(e) {
+                let t = !1;
+                return e.guilds.forEach(e => {
+                    let {
+                        id: i,
+                        members: n
+                    } = e, r = M(i);
+                    t = r.updateServerMembers(n) || t
+                }), t
+            }
+            class g extends n.default.Store {
+                initialize() {
+                    this.waitFor(a.default, u.default, l.default)
+                }
+                isInitialized(e) {
+                    let t = M(e);
+                    return t.isInitialized
+                }
+                getMembersByGuildId(e, t) {
+                    let i = M(e);
+                    return i.getMembersByIndex(t)
+                }
+                getMembersCountByGuildId(e, t) {
+                    let i = M(e);
+                    return i.countMembersByIndex(t)
+                }
+                getEstimatedMemberSearchCountByGuildId(e) {
+                    let t = M(e),
+                        i = t.getPaginationState(),
+                        n = t.searchChunkSize,
+                        r = t.countMembersByIndex(t.getSearchIndex());
+                    return null == i.totalResultsCount || i.totalResultsCount < n ? r : i.totalResultsCount
+                }
+                getKnownMemberSearchCountByGuildId(e) {
+                    let t = M(e);
+                    return t.countMembersByIndex(t.getSearchIndex())
+                }
+                getCurrentMemberSearchResultsByGuildId(e) {
+                    let t = M(e);
+                    return t.getMembersByIndex(t.getSearchIndex())
+                }
+                getSearchStateByGuildId(e) {
+                    let t = M(e);
+                    return t.getSearchState()
+                }
+                hasDefaultSearchStateByGuildId(e) {
+                    let t = M(e);
+                    return t.hasDefaultSearchState()
+                }
+                getPagedMembersByGuildId(e) {
+                    let t = M(e);
+                    return t.getPaginatedMembers()
+                }
+                getPaginationStateByGuildId(e) {
+                    let t = M(e);
+                    return t.getPaginationState()
+                }
+                getElasticSearchPaginationByGuildId(e) {
+                    let t = M(e);
+                    return t.getElasticSearchPagination()
+                }
+                calculateNewContinuationToken(e, t) {
+                    let i = M(e);
+                    return i.calculateNewContinuationToken(t)
+                }
+                getEnhancedMember(e, t) {
+                    let i = M(e);
+                    return i.getMember(t)
+                }
+                getNewMemberTimestamp(e) {
+                    let t = M(e);
+                    return t.getNewMemberTimestamp()
+                }
+                getLastRefreshTimestamp(e) {
+                    let t = M(e);
+                    return t.lastRefreshTimestamp
+                }
+                getLastCursorTimestamp(e) {
+                    let t = M(e);
+                    return t.lastCursorTimestamp
+                }
+            }
+            g.displayName = "MemberSafetyStore";
+            let I = new g(r.default, {
+                CONNECTION_OPEN: function(e) {
+                    return c ? c = !1 : ! function() {
+                        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                        for (let t in _) f(t, e)
+                    }(!0), E(e)
+                },
+                CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
+                    return E(e)
+                },
+                LOCAL_MESSAGES_LOADED: function(e) {
+                    let {
+                        guildId: t,
+                        members: i
                     } = e;
-                    if (u[t]) return !1;
-                    u[t] = !0
+                    if (null == t || null == s.default.getGuild(t)) return !1;
+                    c = !0;
+                    let n = M(t),
+                        r = [];
+                    for (let e of i) {
+                        let t = n.getMember(e.userId);
+                        null == t && r.push(e)
+                    }
+                    return r.length > 0 && n.updateClientMembers(r)
                 },
-                CATEGORY_EXPAND: function(e) {
+                CACHE_LOADED: function(e) {
                     let {
-                        id: t
+                        guildMembers: t
+                    } = e, i = !1;
+                    return c = !0, Object.entries(t).forEach(e => {
+                        let [t, n] = e, r = M(t);
+                        i = r.updateClientMembers(Object.values(n)) || i
+                    }), i
+                },
+                PASSIVE_UPDATE_V1: function(e) {
+                    let {
+                        members: t,
+                        guildId: i
                     } = e;
-                    return c(t)
+                    if (null != t) {
+                        let e = M(i);
+                        return e.updateServerMembers(t)
+                    }
+                    return !1
                 },
-                CATEGORY_COLLAPSE_ALL: function(e) {
+                GUILD_CREATE: function(e) {
                     let {
-                        guildId: t
-                    } = e;
-                    r.default.getChannels(t)[o.ChannelTypes.GUILD_CATEGORY].forEach(e => {
-                        let {
-                            channel: t
-                        } = e;
-                        "null" !== t.id && (u[t.id] = !0)
-                    })
+                        guild: t
+                    } = e, i = M(t.id);
+                    f(t.id, i.isInitialized)
                 },
-                CATEGORY_EXPAND_ALL: function(e) {
+                GUILD_DELETE: function(e) {
                     let {
-                        guildId: t
-                    } = e;
-                    r.default.getChannels(t)[o.ChannelTypes.GUILD_CATEGORY].forEach(e => {
-                        let {
-                            channel: t
-                        } = e;
-                        delete u[t.id]
-                    })
-                },
-                CHANNEL_DELETE: function(e) {
-                    let {
-                        channel: {
+                        guild: {
                             id: t
                         }
                     } = e;
-                    return c(t)
+                    f(t)
+                },
+                GUILD_MEMBERS_CHUNK: function(e) {
+                    let {
+                        guildId: t,
+                        members: i
+                    } = e, n = M(t);
+                    return n.updateServerMembers(i)
+                },
+                GUILD_MEMBER_ADD: S,
+                GUILD_MEMBER_UPDATE: S,
+                GUILD_MEMBER_UPDATE_LOCAL: function(e) {
+                    let {
+                        guildId: t
+                    } = e, i = a.default.getId(), n = M(t);
+                    return n.updateMembersByMemberIds([i])
+                },
+                GUILD_MEMBER_REMOVE: function(e) {
+                    let {
+                        guildId: t,
+                        user: i
+                    } = e, n = M(t);
+                    return n.removeMember(i.id)
+                },
+                GUILD_ROLE_UPDATE: p,
+                GUILD_ROLE_DELETE: p,
+                GUILD_MEMBER_PROFILE_UPDATE: function(e) {
+                    let {
+                        guildId: t,
+                        guildMember: i
+                    } = e, n = M(t);
+                    return n.updateMembersByMemberIds([i.user.id])
+                },
+                GUILD_ROLE_MEMBER_REMOVE: b,
+                GUILD_ROLE_MEMBER_ADD: b,
+                THREAD_MEMBER_LIST_UPDATE: function(e) {
+                    let {
+                        guildId: t,
+                        members: i
+                    } = e;
+                    if (null == i || 0 === i.length) return !1;
+                    let n = M(t),
+                        r = i.map(e => {
+                            var t;
+                            return null === (t = e.member) || void 0 === t ? void 0 : t.user.id
+                        }).filter(o.isNotNullish);
+                    return n.updateMembersByMemberIds(r)
+                },
+                THREAD_MEMBERS_UPDATE: function(e) {
+                    let {
+                        guildId: t,
+                        addedMembers: i
+                    } = e;
+                    if (null == i || 0 === i.length) return !1;
+                    let n = M(t),
+                        r = i.map(e => e.userId);
+                    return n.updateMembersByMemberIds(r)
+                },
+                LOAD_ARCHIVED_THREADS_SUCCESS: function(e) {
+                    let {
+                        guildId: t,
+                        members: i
+                    } = e;
+                    if (null == i || 0 === i.length) return !1;
+                    let n = M(t),
+                        r = i.map(e => e.userId);
+                    return n.updateMembersByMemberIds(r)
+                },
+                LOAD_FORUM_POSTS: function(e) {
+                    let {
+                        guildId: t,
+                        threads: i
+                    } = e, n = Object.values(i);
+                    if (0 === n.length) return !1;
+                    let r = M(t),
+                        a = n.map(e => {
+                            var t;
+                            return null === (t = e.owner) || void 0 === t ? void 0 : t.user.id
+                        }).filter(o.isNotNullish);
+                    return r.updateMembersByMemberIds(a)
+                },
+                INITIALIZE_MEMBER_SAFETY_STORE: function(e) {
+                    let {
+                        guildId: t
+                    } = e, i = M(t);
+                    return i.initialize()
+                },
+                MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH: function(e) {
+                    let {
+                        guildId: t
+                    } = e, i = M(t);
+                    return i.refreshNewMembersAndSearchResults()
+                },
+                MEMBER_SAFETY_PAGINATION_UPDATE: function(e) {
+                    let {
+                        guildId: t,
+                        pagination: i
+                    } = e, n = M(t), [r] = n.updatePaginationState(i);
+                    return r
+                },
+                MEMBER_SAFETY_PAGINATION_TOKEN_UPDATE: function(e) {
+                    let {
+                        guildId: t,
+                        continuationToken: i
+                    } = e, n = M(t);
+                    return n.updatePaginationToken(i)
+                },
+                MEMBER_SAFETY_SEARCH_STATE_UPDATE: function(e) {
+                    let {
+                        guildId: t,
+                        searchState: i
+                    } = e, n = M(t);
+                    return n.updateSearchState(i)
+                },
+                FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS: function(e) {
+                    let {
+                        guildId: t,
+                        memberSupplementals: i
+                    } = e, n = (0, h.syncMemberSupplemental)(t, i);
+                    if (n) {
+                        let e = M(t);
+                        e.updateMembersByMemberIds(i.map(e => e.userId))
+                    }
+                    return n
+                },
+                MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: function(e) {
+                    let {
+                        guildId: t,
+                        members: i,
+                        total_result_count: n
+                    } = e, r = M(t), {
+                        memberIds: a,
+                        memberSupplementals: u
+                    } = i.reduce((e, t) => {
+                        let {
+                            member: i,
+                            source_invite_code: n,
+                            join_source_type: r,
+                            inviter_id: a
+                        } = t, u = i.user;
+                        return e.memberIds.push(u.id), e.memberSupplementals.push({
+                            userId: u.id,
+                            sourceInviteCode: n,
+                            joinSourceType: r,
+                            inviterId: a
+                        }), e
+                    }, {
+                        memberIds: [],
+                        memberSupplementals: []
+                    }), s = (0, h.syncMemberSupplemental)(t, u);
+                    (0, m.registerFetchedSupplementals)(t, a);
+                    let l = r.updateSearchedMembersByMemberIds(a),
+                        [o] = r.updatePaginationState({
+                            totalResultsCount: n
+                        });
+                    return s || l || o
                 }
-            })
+            });
+            var T = I
+        },
+        645266: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                initializeMemberSafetyStore: function() {
+                    return c
+                },
+                refreshMemberSafetyTimestamp: function() {
+                    return _
+                },
+                updateMemberSafetyTablePagination: function() {
+                    return M
+                },
+                requestNewPaginationChunk: function() {
+                    return f
+                },
+                updateSearchState: function() {
+                    return S
+                },
+                getMemberSupplemental: function() {
+                    return p
+                },
+                goToMemberSafetyDashboard: function() {
+                    return b
+                }
+            });
+            var n = i("812204"),
+                r = i("592407"),
+                a = i("393414"),
+                u = i("305961"),
+                s = i("536999"),
+                l = i("466818"),
+                o = i("95429"),
+                d = i("447038"),
+                h = i("49111"),
+                m = i("724210");
+            async function c(e) {
+                let t = (0, s.isInMembersSearchV2Experiment)(e, {
+                    autoTrackExposure: !0,
+                    location: n.default.MEMBER_SAFETY_PAGE
+                });
+                return t ? await (0, d.initializeMemberSafetyStoreV2)(e) : await (0, o.initializeMemberSafetyStoreV1)(e)
+            }
+
+            function _(e) {
+                let t = (0, s.isInMembersSearchV2Experiment)(e);
+                return t ? (0, d.refreshMemberSafetyTimestampV2)(e) : (0, o.refreshMemberSafetyTimestampV1)(e)
+            }
+
+            function M(e, t) {
+                let i = (0, s.isInMembersSearchV2Experiment)(e);
+                return i ? (0, d.updateMemberSafetyTablePaginationV2)(e, t) : (0, o.updateMemberSafetyTablePaginationV1)(e, t)
+            }
+
+            function f(e, t) {
+                let i = (0, s.isInMembersSearchV2Experiment)(e);
+                return i ? (0, d.requestNewPaginationChunkV2)(e, t) : (0, o.requestNewPaginationChunkV1)(e, t)
+            }
+
+            function S(e, t) {
+                let i = (0, s.isInMembersSearchV2Experiment)(e);
+                return i ? (0, d.updateSearchStateV2)(e, t) : (0, o.updateSearchStateV1)(e, t)
+            }
+
+            function p(e, t) {
+                let i = (0, s.isInMembersSearchV2Experiment)(e);
+                return i ? (0, d.getMemberSupplementalV2)(e, t) : (0, o.getMemberSupplementalV1)(e, t)
+            }
+
+            function b(e) {
+                let t = (0, l.canAccessMemberSafetyPage)(e),
+                    i = u.default.getGuild(e);
+                return !!t && null != i && (i.hasFeature(h.GuildFeatures.COMMUNITY) || i.hasFeature(h.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? ((0, a.transitionTo)(h.Routes.CHANNEL(e, m.StaticChannelRoute.MEMBER_SAFETY)), !0) : (r.default.open(i.id, h.GuildSettingsSections.MEMBERS), !0))
+            }
+        },
+        95429: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                initializeMemberSafetyStoreV1: function() {
+                    return l
+                },
+                refreshMemberSafetyTimestampV1: function() {
+                    return o
+                },
+                updateMemberSafetyTablePaginationV1: function() {
+                    return d
+                },
+                requestNewPaginationChunkV1: function() {
+                    return h
+                },
+                updateSearchStateV1: function() {
+                    return m
+                },
+                getMemberSupplementalV1: function() {
+                    return c
+                }
+            });
+            var n = i("913144"),
+                r = i("851387"),
+                a = i("525065"),
+                u = i("178406"),
+                s = i("835257");
+            async function l(e) {
+                let t = u.default.isInitialized(e);
+                if (t) r.default.searchRecentMembers(e);
+                else {
+                    var i;
+                    await n.default.dispatch({
+                        type: "INITIALIZE_MEMBER_SAFETY_STORE",
+                        guildId: e
+                    }), r.default.searchRecentMembers(e);
+                    let t = null !== (i = a.default.getMemberCount(e)) && void 0 !== i ? i : 0;
+                    t > 1e3 && r.default.requestMembers(e, "", 3e3)
+                }
+            }
+
+            function o(e) {
+                n.default.dispatch({
+                    type: "MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH",
+                    guildId: e
+                })
+            }
+
+            function d(e, t) {
+                let {
+                    continuationToken: i,
+                    ...r
+                } = t;
+                n.default.dispatch({
+                    type: "MEMBER_SAFETY_PAGINATION_UPDATE",
+                    guildId: e,
+                    pagination: r
+                })
+            }
+            async function h(e, t) {
+                var i, a;
+                let {
+                    query: u,
+                    continuationToken: s
+                } = t;
+                i = e, a = s, n.default.dispatch({
+                    type: "MEMBER_SAFETY_PAGINATION_TOKEN_UPDATE",
+                    guildId: i,
+                    continuationToken: a
+                }), await r.default.searchRecentMembers(e, {
+                    query: u,
+                    continuationToken: null != s ? s : void 0
+                })
+            }
+            async function m(e, t) {
+                await n.default.dispatch({
+                    type: "MEMBER_SAFETY_SEARCH_STATE_UPDATE",
+                    guildId: e,
+                    searchState: t
+                })
+            }
+            async function c(e, t) {
+                let i = await (0, s.fetchMemberSupplemental)(e, t);
+                return 0 === i.length ? [] : (await n.default.dispatch({
+                    type: "FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS",
+                    guildId: e,
+                    memberSupplementals: i
+                }), i)
+            }
+        },
+        447038: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                initializeMemberSafetyStoreV2: function() {
+                    return s
+                },
+                refreshMemberSafetyTimestampV2: function() {
+                    return l
+                },
+                updateMemberSafetyTablePaginationV2: function() {
+                    return o
+                },
+                requestNewPaginationChunkV2: function() {
+                    return d
+                },
+                updateSearchStateV2: function() {
+                    return h
+                },
+                getMemberSupplementalV2: function() {
+                    return m
+                }
+            });
+            var n = i("811022"),
+                r = i("913144"),
+                a = i("835257");
+            let u = new n.default("MemberSafetyStoreActionCreatorsV2");
+            async function s(e) {
+                await r.default.dispatch({
+                    type: "INITIALIZE_MEMBER_SAFETY_STORE",
+                    guildId: e
+                })
+            }
+
+            function l(e) {
+                u.info("JANK refreshMemberSafetyTimestampV2", {
+                    guildId: e
+                }), r.default.dispatch({
+                    type: "MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH",
+                    guildId: e
+                })
+            }
+
+            function o(e, t) {
+                let {
+                    continuationToken: i,
+                    ...n
+                } = t;
+                u.info("JANK updateMemberSafetyTablePaginationV2", {
+                    guildId: e,
+                    pagination: n
+                }), r.default.dispatch({
+                    type: "MEMBER_SAFETY_PAGINATION_UPDATE",
+                    guildId: e,
+                    pagination: n
+                })
+            }
+            async function d(e, t) {
+                var i, n;
+                let {
+                    continuationToken: a
+                } = t;
+                u.info("JANK requestNewPaginationChunkV2", {
+                    guildId: e,
+                    continuationToken: a
+                }), i = e, n = a, u.info("JANK updateMemberSafetyTablePaginationTokenV2", {
+                    guildId: i,
+                    continuationToken: n
+                }), r.default.dispatch({
+                    type: "MEMBER_SAFETY_PAGINATION_TOKEN_UPDATE",
+                    guildId: i,
+                    continuationToken: n
+                }), await Promise.resolve()
+            }
+            async function h(e, t) {
+                u.info("JANK updateSearchStateV2", {
+                    guildId: e,
+                    searchState: t
+                }), await r.default.dispatch({
+                    type: "MEMBER_SAFETY_SEARCH_STATE_UPDATE",
+                    guildId: e,
+                    searchState: t
+                })
+            }
+            async function m(e, t) {
+                let i = await (0, a.fetchMemberSupplemental)(e, t);
+                return 0 === i.length ? [] : (await r.default.dispatch({
+                    type: "FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS",
+                    guildId: e,
+                    memberSupplementals: i
+                }), i)
+            }
+        },
+        159132: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                getMemberSupplementalByGuildId: function() {
+                    return a
+                },
+                syncMemberSupplemental: function() {
+                    return u
+                }
+            });
+            var n = i("835257");
+            let r = {};
+
+            function a(e) {
+                return null == r[e] && (r[e] = {}), r[e]
+            }
+
+            function u(e, t) {
+                if (0 === t.length) return !1;
+                let i = a(e);
+                return t.forEach(e => {
+                    var t, r, a, u, s, l, o, d;
+                    let h = i[e.userId],
+                        m = null !== (r = null !== (t = e.joinSourceType) && void 0 !== t ? t : null == h ? void 0 : h.joinSourceType) && void 0 !== r ? r : null;
+                    (null == m || m === n.JoinSourceType.UNSPECIFIED) && null != e.sourceInviteCode && (m = n.JoinSourceType.INVITE), i[e.userId] = {
+                        userId: e.userId,
+                        sourceInviteCode: null !== (u = null !== (a = e.sourceInviteCode) && void 0 !== a ? a : null == h ? void 0 : h.sourceInviteCode) && void 0 !== u ? u : null,
+                        joinSourceType: m,
+                        inviterId: null !== (l = null !== (s = e.inviterId) && void 0 !== s ? s : null == h ? void 0 : h.inviterId) && void 0 !== l ? l : null,
+                        integrationType: null !== (d = null !== (o = e.integrationType) && void 0 !== o ? o : null == h ? void 0 : h.integrationType) && void 0 !== d ? d : null
+                    }
+                }), !0
+            }
+        },
+        835257: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                JoinSourceType: function() {
+                    return s
+                },
+                IntegrationType: function() {
+                    return l
+                },
+                registerFetchedSupplementals: function() {
+                    return _
+                },
+                fetchMemberSupplemental: function() {
+                    return f
+                }
+            });
+            var n, r, a, u, s, l, o = i("872717"),
+                d = i("49111");
+            (n = u || (u = {}))[n.FAILED = 0] = "FAILED", n[n.UNFETCHED = 1] = "UNFETCHED", n[n.PENDING = 2] = "PENDING", n[n.SUCCEEDED = 3] = "SUCCEEDED", (r = s || (s = {}))[r.UNSPECIFIED = 0] = "UNSPECIFIED", r[r.BOT = 1] = "BOT", r[r.INTEGRATION = 2] = "INTEGRATION", r[r.DISCOVERY = 3] = "DISCOVERY", r[r.HUB = 4] = "HUB", r[r.INVITE = 5] = "INVITE", r[r.VANITY_URL = 6] = "VANITY_URL", (a = l || (l = {})).DISCORD = "discord", a.TWITCH = "twitch", a.YOUTUBE = "youtube", a.GUILD_SUBSCRIPTION = "guild_subscription";
+            let h = {};
+
+            function m(e, t) {
+                return e + t
+            }
+
+            function c(e, t, i) {
+                h[e + t] = i
+            }
+
+            function _(e, t) {
+                t.forEach(t => c(e, t, 3))
+            }
+
+            function M(e) {
+                return {
+                    userId: e.user_id,
+                    sourceInviteCode: e.source_invite_code,
+                    joinSourceType: e.join_source_type,
+                    inviterId: e.inviter_id,
+                    integrationType: e.integration_type
+                }
+            }
+            async function f(e, t) {
+                let i = t.filter(t => 1 >= function(e, t) {
+                    let i = e + t;
+                    return null == h[i] && (h[i] = 1), h[i]
+                }(e, t));
+                if (0 === i.length) return [];
+                i.forEach(t => c(e, t, 2));
+                try {
+                    let t = await o.default.post({
+                        url: d.Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(e),
+                        body: {
+                            user_ids: i
+                        }
+                    });
+                    if (!Array.isArray(t.body)) return [];
+                    let n = t.body.map(M);
+                    return n.forEach(t => {
+                        let {
+                            userId: i
+                        } = t;
+                        return c(e, i, 3)
+                    }), n
+                } catch (t) {
+                    i.forEach(t => c(e, t, 0))
+                }
+                return []
+            }
+        },
+        334572: function(e, t, i) {
+            "use strict";
+
+            function n(e, t) {
+                let [, i] = e, [, n] = t;
+                return i === n
+            }
+            i.r(t), i.d(t, {
+                isVersionEqual: function() {
+                    return n
+                }
+            }), i("222007")
         }
     }
 ]);
