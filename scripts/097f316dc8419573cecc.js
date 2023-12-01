@@ -18,7 +18,7 @@
                 u = new Map,
                 c = (0, l.createQueuedAsyncInitializer)(async () => {
                     for (let e = 0; e < o; e++) {
-                        let e = new Worker(new URL(s.p + s.u("91315"), s.b));
+                        let e = new Worker(new URL(s.p + s.u("44839"), s.b));
                         d.push({
                             worker: e,
                             numActive: 0

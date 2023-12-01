@@ -1746,7 +1746,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "250522"
+                        buildNumber: "250523"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -41579,9 +41579,9 @@
                 l = n("446674"),
                 i = n("713349"),
                 r = n("95410"),
-                o = n("116949"),
-                u = n("397336"),
-                d = n("49111");
+                o = n("159885"),
+                u = n("116949"),
+                d = n("397336");
             let c = "selectedChannelGuildFrecency";
 
             function E(e) {
@@ -41635,7 +41635,7 @@
                     } = l.default.PersistedStore.migrateAndReadStoreState("StickersPersistedStore", [e => null == e || 0 === Object.keys(e).length ? t() : e, e => null == e || 0 === Object.keys(e).length ? t() : (null == e.favorites && (e.favorites = []), e)]);
                     if (null == n) return !1;
                     let a = !1;
-                    return n.favorites.length > 0 && (e.favoriteStickers = i.FavoriteStickers.create(), e.favoriteStickers.stickerIds = s.uniq(n.favorites).slice(0, u.MAX_FAVORITES), a = !0), s.size(n.usageHistory) > 0 && (e.stickerFrecency = i.StickerFrecency.create(), e.stickerFrecency.stickers = (0, o.serializeUsageHistory)(n.usageHistory, 100), a = !0), a
+                    return n.favorites.length > 0 && (e.favoriteStickers = i.FavoriteStickers.create(), e.favoriteStickers.stickerIds = s.uniq(n.favorites).slice(0, d.MAX_FAVORITES), a = !0), s.size(n.usageHistory) > 0 && (e.stickerFrecency = i.StickerFrecency.create(), e.stickerFrecency.stickers = (0, u.serializeUsageHistory)(n.usageHistory, 100), a = !0), a
                 },
                 cleanup() {
                     r.default.remove("StickersPersistedStore")
@@ -41650,7 +41650,7 @@
                     })]);
                     if (null == t) return !1;
                     let n = !1;
-                    return null != t.favorites && t.favorites.length > 0 && (e.favoriteEmojis = i.FavoriteEmojis.create(), e.favoriteEmojis.emojis = s.uniq(t.favorites).slice(0, u.MAX_FAVORITES), n = !0), s.size(t.usageHistory) > 0 && (e.emojiFrecency = i.EmojiFrecency.create(), e.emojiFrecency.emojis = (0, o.serializeUsageHistory)(t.usageHistory, 100), n = !0), n
+                    return null != t.favorites && t.favorites.length > 0 && (e.favoriteEmojis = i.FavoriteEmojis.create(), e.favoriteEmojis.emojis = s.uniq(t.favorites).slice(0, d.MAX_FAVORITES), n = !0), s.size(t.usageHistory) > 0 && (e.emojiFrecency = i.EmojiFrecency.create(), e.emojiFrecency.emojis = (0, u.serializeUsageHistory)(t.usageHistory, 100), n = !0), n
                 },
                 cleanup() {
                     r.default.remove("EmojiStore"), r.default.remove("EmojiUsageHistory"), r.default.remove("EmojiDiversitySurrogate")
@@ -41674,9 +41674,9 @@
                             continue
                         }
                         let r = i.FavoriteGIF.toBinary(l).length + s.length + 7;
-                        !(n + r > u.MAX_FAVORITE_GIFS_SIZE) && (n += r, e.favoriteGifs.gifs[s] = l)
+                        !(n + r > d.MAX_FAVORITE_GIFS_SIZE) && (n += r, e.favoriteGifs.gifs[s] = l)
                     }
-                    for (n = i.FavoriteGIFs.toBinary(e.favoriteGifs).length; n > u.MAX_FAVORITE_GIFS_SIZE;) {
+                    for (n = i.FavoriteGIFs.toBinary(e.favoriteGifs).length; n > d.MAX_FAVORITE_GIFS_SIZE;) {
                         let t = 0;
                         for (let n in e.favoriteGifs.gifs)
                             if (delete e.favoriteGifs.gifs[n], ++t >= 10) break;
@@ -41693,7 +41693,7 @@
                     } = l.default.PersistedStore.migrateAndReadStoreState("ApplicationCommandFrecency", []);
                     if (null == t) return !1;
                     let n = !1;
-                    return s.size(t.usageHistory) > 0 && (e.applicationCommandFrecency = i.ApplicationCommandFrecency.create(), e.applicationCommandFrecency.applicationCommands = (0, o.serializeUsageHistory)(t.usageHistory, 500), n = !0), n
+                    return s.size(t.usageHistory) > 0 && (e.applicationCommandFrecency = i.ApplicationCommandFrecency.create(), e.applicationCommandFrecency.applicationCommands = (0, u.serializeUsageHistory)(t.usageHistory, 500), n = !0), n
                 },
                 cleanup() {
                     r.default.remove("ApplicationCommandFrecency")
@@ -41722,8 +41722,8 @@
                 run(e) {
                     let t = r.default.get(c);
                     if (null == t) return !1;
-                    for (let e in t) !d.ID_REGEX.test(e) && delete t[e];
-                    return e.guildAndChannelFrecency = i.GuildAndChannelFrecency.create(), e.guildAndChannelFrecency.guildAndChannels = (0, o.serializeUsageHistory)(t, 100), !0
+                    for (let e in t) !(0, o.isProbablySnowflake)(e) && delete t[e];
+                    return e.guildAndChannelFrecency = i.GuildAndChannelFrecency.create(), e.guildAndChannelFrecency.guildAndChannels = (0, u.serializeUsageHistory)(t, 100), !0
                 },
                 cleanup() {
                     r.default.remove(c)
