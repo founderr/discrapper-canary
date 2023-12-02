@@ -7345,41 +7345,44 @@
             "use strict";
             s.r(t), s.d(t, {
                 useShouldScrollToWhatsNew: function() {
-                    return T
+                    return R
                 },
                 useClearNewBadge: function() {
-                    return f
+                    return A
                 },
                 default: function() {
-                    return S
+                    return p
                 }
             }), s("222007");
             var a = s("884691"),
-                n = s("151426"),
-                r = s("619935"),
-                l = s("833514"),
-                i = s("10641"),
-                u = s("235145"),
-                o = s("697218"),
-                d = s("764364"),
-                c = s("896630"),
-                _ = s("184684"),
-                E = s("646718");
-            let I = [
-                    [n.DismissibleContent.WHATS_NEW_AVATAR_DECOS_NOTIF_BADGE, _.WhatsNewAvatarDecoRollout, n.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP],
-                    [n.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE, _.WhatsNewProfileFXRollout, n.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP]
+                n = s("65597"),
+                r = s("151426"),
+                l = s("619935"),
+                i = s("833514"),
+                u = s("10641"),
+                o = s("235145"),
+                d = s("374363"),
+                c = s("697218"),
+                _ = s("764364"),
+                E = s("896630"),
+                I = s("184684"),
+                T = s("646718"),
+                f = s("397336");
+            let S = [
+                    [r.DismissibleContent.WHATS_NEW_AVATAR_DECOS_NOTIF_BADGE, I.WhatsNewAvatarDecoRollout, r.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP],
+                    [r.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE, I.WhatsNewProfileFXRollout, r.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP]
                 ],
-                T = () => I.some(e => {
+                R = () => S.some(e => {
                     let [t, s, a] = e, {
                         flipped: n
                     } = s.getCurrentConfig({
                         location: "useShouldShowNewBadge"
                     });
-                    return !!n && !(0, i.isDismissibleContentDismissed)(t)
+                    return !!n && !(0, u.isDismissibleContentDismissed)(t)
                 }),
-                f = () => {
-                    let e = (0, r.useBlockedPaymentsConfig)(),
-                        t = I.map(e => {
+                A = () => {
+                    let e = (0, l.useBlockedPaymentsConfig)(),
+                        t = S.map(e => {
                             let [t, s] = e, {
                                 flipped: a
                             } = s.getCurrentConfig({
@@ -7387,40 +7390,41 @@
                             });
                             return a ? t : null
                         }).filter(e => null != e),
-                        [s] = (0, u.useGetDismissibleContent)(e ? [] : t),
+                        [s] = (0, o.useGetDismissibleContent)(e ? [] : t),
                         a = null != s && t.includes(s) && !e;
-                    a && (0, i.markDismissibleContentAsDismissed)(s);
-                    let l = o.default.getCurrentUser(),
+                    a && (0, u.markDismissibleContentAsDismissed)(s);
+                    let n = c.default.getCurrentUser(),
                         {
-                            enabled: _
-                        } = (0, c.useQ4DropExperiment)(),
-                        T = _ && !(0, i.isDismissibleContentDismissed)(n.DismissibleContent.Q4_2023_NITRO_DROP_NITRO_TAB_BADGE) && (0, d.isPremiumExactly)(l, E.PremiumTypes.TIER_2);
-                    T && (0, i.markDismissibleContentAsDismissed)(n.DismissibleContent.Q4_2023_NITRO_DROP_NITRO_TAB_BADGE)
+                            enabled: i
+                        } = (0, E.useQ4DropExperiment)(),
+                        d = i && !(0, u.isDismissibleContentDismissed)(r.DismissibleContent.Q4_2023_NITRO_DROP_NITRO_TAB_BADGE) && (0, _.isPremiumExactly)(n, T.PremiumTypes.TIER_2);
+                    d && (0, u.markDismissibleContentAsDismissed)(r.DismissibleContent.Q4_2023_NITRO_DROP_NITRO_TAB_BADGE)
                 };
-            var S = () => {
-                let e = (0, r.useBlockedPaymentsConfig)(),
-                    t = I.map(e => {
+            var p = () => {
+                let e = (0, l.useBlockedPaymentsConfig)(),
+                    t = (0, n.default)([d.default], () => d.default.hasLoaded(f.UserSettingsTypes.PRELOADED_USER_SETTINGS)),
+                    s = S.map(e => {
                         let [t, s, a] = e, {
                             flipped: n
                         } = s.getCurrentConfig({
                             location: "useShouldShowNewBadge"
-                        }), r = null != a && (0, i.isDismissibleContentDismissed)(a);
+                        }), r = null != a && (0, u.isDismissibleContentDismissed)(a);
                         return n && !r ? t : null
                     }).filter(e => null != e);
                 a.useEffect(() => {
-                    I.forEach(e => {
+                    t && S.forEach(e => {
                         let [t, s, a] = e;
                         if (null == a) return;
-                        let n = (0, i.isDismissibleContentDismissed)(a);
-                        n && (0, i.markDismissibleContentAsDismissed)(t)
+                        let n = (0, u.isDismissibleContentDismissed)(a);
+                        n && (0, u.markDismissibleContentAsDismissed)(t)
                     })
-                }, [t]);
-                let [s] = (0, u.useGetDismissibleContent)(e ? [] : t), {
-                    collectiblesShopTabNewBadge: _
-                } = (0, l.default)(), T = o.default.getCurrentUser(), {
-                    enabled: f
-                } = (0, c.useQ4DropExperiment)(), S = f && !(0, i.isDismissibleContentDismissed)(n.DismissibleContent.Q4_2023_NITRO_DROP_NITRO_TAB_BADGE) && (0, d.isPremiumExactly)(T, E.PremiumTypes.TIER_2), R = null != s && t.includes(s);
-                return (R || S) && !e && !(null != _)
+                }, [s, t]);
+                let [I] = (0, o.useGetDismissibleContent)(e ? [] : s), {
+                    collectiblesShopTabNewBadge: R
+                } = (0, i.default)(), A = c.default.getCurrentUser(), {
+                    enabled: p
+                } = (0, E.useQ4DropExperiment)(), N = p && !(0, u.isDismissibleContentDismissed)(r.DismissibleContent.Q4_2023_NITRO_DROP_NITRO_TAB_BADGE) && (0, _.isPremiumExactly)(A, T.PremiumTypes.TIER_2), m = null != I && s.includes(I);
+                return (m || N) && !e && !(null != R)
             }
         },
         119829: function(e, t, s) {
