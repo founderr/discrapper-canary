@@ -12295,6 +12295,9 @@
                 PREMIUM_TIER_2_FEATURE_STREAMING: "HD video streaming",
                 PREMIUM_TIER_2_FEATURE_BOOSTS: "{numBoosts} Server Boosts",
                 PREMIUM_TIER_2_FEATURE_MORE: "Custom profiles and more!",
+                AFFINITIES_MARKETING_HEADER_3: "{username} and other friends have more fun with Nitro",
+                AFFINITIES_MARKETING_HEADER_2: "{username} and {otherUsername} have more fun with Nitro",
+                AFFINITIES_MARKETING_HEADER_1: "{username} has more fun with Nitro",
                 PICK_YOUR_PLAN: "Pick Your Plan",
                 AND_MORE: "And more!",
                 PREMIUM_TIER_0_MARKETING_COMPARISON_TABLE_ROW_LABEL_MONTHLY_PRICE: "Monthly Price",
@@ -18252,7 +18255,7 @@
                 u = E("782340");
             (0, i.setUpdateRules)(s.default), (0, n.default)(u.default, o.default, T.default), a.default.Emitter.injectBatchEmitChanges(r.batchUpdates), a.default.PersistedStore.disableWrites = __OVERLAY__, a.default.initialize();
             let L = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("250750", ", Version Hash: ").concat("2f5e95592d2242b22f2fa94ab6db20ad837984ae")), t.default.setTags({
+            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("250754", ", Version Hash: ").concat("9eb861d7c0c95c83e385c3378f058edc3f55f7c8")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), I.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
         },
@@ -20546,8 +20549,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "250750", "250750"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("250750")), _ = 0), _
+                let _ = parseInt((e = "250754", "250754"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("250754")), _ = 0), _
             }
         },
         990629: function(e, _, E) {
