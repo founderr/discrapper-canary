@@ -75,8 +75,8 @@
                 d = l("746379"),
                 u = l.n(d),
                 c = l("77078"),
-                m = l("605160"),
-                h = l("659500"),
+                h = l("605160"),
+                m = l("659500"),
                 p = l("888400"),
                 g = l("240873"),
                 f = l("103603"),
@@ -106,7 +106,7 @@
                     video: d,
                     provider: u,
                     allowFullScreen: c = !0,
-                    responsive: m = !1,
+                    responsive: h = !1,
                     renderImageComponent: p,
                     renderVideoComponent: g,
                     renderLinkComponent: x,
@@ -122,10 +122,10 @@
                     messageId: O,
                     channelId: L
                 } = e, [k, R] = s.useState(v), D = null != d && null == d.proxyURL, V = s.useCallback(() => R(!1), [R]), P = e => {
-                    e.preventDefault(), e.stopPropagation(), null == M || M(!1), R(!0), D && (h.ComponentDispatch.dispatch(S.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED), h.ComponentDispatch.subscribeOnce(S.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED, V))
+                    e.preventDefault(), e.stopPropagation(), null == M || M(!1), R(!0), D && (m.ComponentDispatch.dispatch(S.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED), m.ComponentDispatch.subscribeOnce(S.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED, V))
                 };
                 s.useEffect(() => () => {
-                    D && h.ComponentDispatch.unsubscribe(S.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED, V)
+                    D && m.ComponentDispatch.unsubscribe(S.ComponentActions.VIDEO_EMBED_PLAYBACK_STARTED, V)
                 }, [D, V]);
                 let {
                     width: F,
@@ -147,7 +147,7 @@
                         src: d.proxyURL,
                         width: F,
                         height: W,
-                        responsive: m,
+                        responsive: h,
                         autoPlay: v,
                         onEnded: w,
                         naturalWidth: d.width,
@@ -167,18 +167,18 @@
                             width: F,
                             height: W
                         },
-                        h = {
+                        m = {
                             width: F,
                             height: W
                         };
-                    if (m) {
+                    if (h) {
                         let t = 0 !== F ? W / F : 1;
                         a = {
                             maxWidth: n,
                             maxHeight: r,
                             width: void 0,
                             height: void 0
-                        }, h = {
+                        }, m = {
                             paddingBottom: "".concat(100 * t, "%"),
                             maxWidth: F
                         }, e = {
@@ -194,7 +194,7 @@
                         style: a,
                         children: (0, i.jsx)("div", {
                             className: o(_.embedVideo, l),
-                            style: h,
+                            style: m,
                             children: (0, i.jsx)(b.default, {
                                 provider: u,
                                 src: d.url,
@@ -209,7 +209,7 @@
                 }
                 return (0, i.jsxs)("div", {
                     className: o(_.embedVideo, t),
-                    style: m ? {
+                    style: h ? {
                         maxWidth: F
                     } : {
                         width: F,
@@ -221,7 +221,7 @@
                         height: W,
                         maxWidth: F,
                         maxHeight: W,
-                        responsive: m,
+                        responsive: h,
                         containerClassName: _.embedVideoImageComponent,
                         imageClassName: _.embedVideoImageComponentInner,
                         onClick: y && null != d ? P : null
@@ -252,8 +252,8 @@
                     video: d,
                     renderImageComponent: u,
                     responsive: c,
-                    alt: m,
-                    disableAltTextDisplay: h = !1,
+                    alt: h,
+                    disableAltTextDisplay: m = !1,
                     playable: p = !0,
                     hiddenSpoilers: g
                 } = e;
@@ -262,7 +262,7 @@
                     original: l,
                     poster: (0, T.getBestEffortSrcUrl)(a),
                     src: (0, T.getBestEffortSrcUrl)(d),
-                    alt: m,
+                    alt: h,
                     width: a.width,
                     height: a.height,
                     naturalHeight: d.height,
@@ -274,7 +274,7 @@
                     playable: p,
                     renderImageComponent: u,
                     hiddenSpoilers: g,
-                    disableAltTextDisplay: h
+                    disableAltTextDisplay: m
                 })
             }
 
@@ -301,13 +301,13 @@
                     c = s[4];
                 if (!["track", "playlist", "album", "artist", "user", "show", "episode"].includes(null != a ? a : "") || "user" === a && "playlist" !== d) return null;
                 "user" === a && "playlist" === d && null != c && (r = "/playlist/".concat(c));
-                let m = 352;
-                return "track" === a ? m = 80 : ("episode" === a || "show" === a) && (m = 232), (0, i.jsx)("iframe", {
+                let h = 352;
+                return "track" === a ? h = 80 : ("episode" === a || "show" === a) && (h = 232), (0, i.jsx)("iframe", {
                     className: o(_.embedSpotify, t),
                     src: N.SpotifyEndpoints.EMBED(r),
                     style: {
                         width: 400,
-                        height: m
+                        height: h
                     },
                     frameBorder: 0,
                     sandbox: "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
@@ -489,9 +489,10 @@
                         hiddenSpoiler: e = !1,
                         isVisible: t = !0
                     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, {
-                        embed: l,
+                        embed: l
+                    } = this.props, {
                         maxMediaHeight: n
-                    } = this.props;
+                    } = this.state;
                     if (null == l.images) return null;
                     let [r, s, a, o] = l.images.map(n => this.renderImage({
                         hiddenSpoiler: e,
@@ -523,14 +524,15 @@
                         alt: r = j.default.Messages.IMAGE,
                         allImages: s = null
                     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, {
-                        maxMediaWidth: a,
-                        maxMediaHeight: d,
-                        renderImageComponent: u,
-                        className: c,
-                        autoPlayGif: m
-                    } = this.props;
+                        renderImageComponent: a,
+                        className: d,
+                        autoPlayGif: u
+                    } = this.props, {
+                        maxMediaWidth: c,
+                        maxMediaHeight: h
+                    } = this.state;
                     if (null == l) return null;
-                    let h = (0, T.getBestEffortSrcUrl)(l),
+                    let m = (0, T.getBestEffortSrcUrl)(l),
                         p = null == s ? {} : (0, w.createMediaOnClickOverrides)(s.map(w.carouselAssetFromImageEmbed)),
                         g = y.default.isAnimated({
                             src: (0, T.getBestEffortSrcUrl)(l),
@@ -538,7 +540,7 @@
                             animated: !1
                         }),
                         f = {
-                            containerClassName: o(c, {
+                            containerClassName: o(d, {
                                 [_.embedMedia]: !n,
                                 [_.embedImage]: !n,
                                 [_.galleryImage]: n
@@ -551,22 +553,22 @@
                             limitResponsiveWidth: !n,
                             width: l.width,
                             height: l.height,
-                            maxWidth: a,
-                            maxHeight: d,
+                            maxWidth: c,
+                            maxHeight: h,
                             original: l.url,
                             shouldLink: t,
                             disableAltTextDisplay: !0,
                             hiddenSpoilers: e
                         };
-                    return h in p && (f.onClick = p[h]), (0, i.jsx)(I.GIFAccessoryContext.Consumer, {
+                    return m in p && (f.onClick = p[m]), (0, i.jsx)(I.GIFAccessoryContext.Consumer, {
                         children: t => (0, i.jsx)(C.MessagesInteractionContext.Consumer, {
                             children: l => {
                                 let {
                                     disableAnimations: n
                                 } = l;
-                                return u({
+                                return a({
                                     ...f,
-                                    autoPlay: m && !n && !e,
+                                    autoPlay: u && !n && !e,
                                     renderAccessory: g ? t : null
                                 })
                             }
@@ -585,17 +587,18 @@
                             video: s,
                             provider: a
                         },
-                        maxMediaWidth: o,
-                        maxMediaHeight: d,
-                        renderVideoComponent: u,
-                        renderImageComponent: c,
-                        renderLinkComponent: m,
-                        allowFullScreen: h,
-                        autoPlayGif: p,
-                        messageId: g,
-                        channelId: f,
-                        obscureReason: b
-                    } = this.props;
+                        renderVideoComponent: o,
+                        renderImageComponent: d,
+                        renderLinkComponent: u,
+                        allowFullScreen: c,
+                        autoPlayGif: h,
+                        messageId: m,
+                        channelId: p,
+                        obscureReason: g
+                    } = this.props, {
+                        maxMediaWidth: f,
+                        maxMediaHeight: b
+                    } = this.state;
                     if (null == n || null == r) return null;
                     if (e) return null == s ? null : (0, i.jsx)(C.MessagesInteractionContext.Consumer, {
                         children: e => {
@@ -607,33 +610,33 @@
                                 href: n,
                                 thumbnail: r,
                                 video: s,
-                                maxWidth: o,
-                                maxHeight: d,
+                                maxWidth: f,
+                                maxHeight: b,
                                 responsive: !0,
-                                autoPlay: !l && p && !a && t,
-                                renderImageComponent: c,
+                                autoPlay: !l && h && !a && t,
+                                renderImageComponent: d,
                                 playable: t,
                                 hiddenSpoilers: l,
-                                disableAltTextDisplay: null != b
+                                disableAltTextDisplay: null != g
                             })
                         }
                     });
                     return (0, i.jsx)(O, {
                         className: _.embedMedia,
                         href: n,
-                        allowFullScreen: h,
+                        allowFullScreen: c,
                         thumbnail: r,
                         video: s,
                         provider: null == a ? void 0 : a.name,
-                        maxWidth: o,
-                        maxHeight: d,
+                        maxWidth: f,
+                        maxHeight: b,
                         responsive: !0,
-                        renderImageComponent: c,
-                        renderVideoComponent: u,
-                        renderLinkComponent: m,
+                        renderImageComponent: d,
+                        renderVideoComponent: o,
+                        renderLinkComponent: u,
                         playable: t && !l,
-                        messageId: g,
-                        channelId: f
+                        messageId: m,
+                        channelId: p
                     })
                 }
                 renderFooter() {
@@ -733,25 +736,26 @@
                 }
                 getMaxWidth() {
                     let {
-                        maxMediaWidth: e,
-                        maxMediaHeight: t,
                         embed: {
-                            image: l,
-                            images: n,
-                            video: r,
-                            type: i
+                            image: e,
+                            images: t,
+                            video: l,
+                            type: n
                         }
-                    } = this.props, s = null != l ? l : r;
+                    } = this.props, {
+                        maxMediaWidth: r,
+                        maxMediaHeight: i
+                    } = this.state, s = null != e ? e : l;
                     if (null == s) return;
                     let {
                         width: a
                     } = (0, f.fit)({
                         width: s.width,
                         height: s.height,
-                        maxWidth: e,
-                        maxHeight: t
+                        maxWidth: r,
+                        maxHeight: i
                     });
-                    return i === S.MessageEmbedTypes.VIDEO || a >= 300 ? a + 32 : i === S.MessageEmbedTypes.RICH && void 0 !== n ? 520 : void 0
+                    return n === S.MessageEmbedTypes.VIDEO || a >= 300 ? a + 32 : n === S.MessageEmbedTypes.RICH && void 0 !== t ? 520 : void 0
                 }
                 isInline() {
                     let {
@@ -790,29 +794,30 @@
                 }
                 getSpoilerStyles(e) {
                     let {
-                        maxMediaWidth: t,
-                        maxMediaHeight: l,
                         embed: {
-                            image: n,
-                            images: r,
-                            video: i,
-                            type: s
+                            image: t,
+                            images: l,
+                            video: n,
+                            type: r
                         }
-                    } = this.props;
+                    } = this.props, {
+                        maxMediaWidth: i,
+                        maxMediaHeight: s
+                    } = this.state;
                     if (!this.usesJustifiedAutoStyle()) return;
                     let a = e ? void 0 : this.getMaxWidth();
-                    if (void 0 === a && void 0 === r && s !== S.MessageEmbedTypes.RICH) {
-                        let e = null != n ? n : i;
+                    if (void 0 === a && void 0 === l && r !== S.MessageEmbedTypes.RICH) {
+                        let e = null != t ? t : n;
                         if (void 0 !== e) {
                             let {
-                                width: n
+                                width: t
                             } = (0, f.fit)({
                                 width: e.width,
                                 height: e.height,
-                                maxWidth: t,
-                                maxHeight: l
+                                maxWidth: i,
+                                maxHeight: s
                             });
-                            a = n
+                            a = t
                         }
                     }
                     return {
@@ -850,7 +855,8 @@
                 constructor(...e) {
                     var t;
                     super(...e), t = this, this.state = {
-                        isVisible: null == this.props.obscureReason
+                        isVisible: null == this.props.obscureReason,
+                        ...(0, g.getMaxEmbedMediaSize)(this.props.embed)
                     }, this.onReveal = () => {
                         this.setState({
                             isVisible: !0
@@ -868,8 +874,8 @@
                         return (0, i.jsx)("div", {
                             "aria-hidden": e,
                             className: o(_.inlineMediaEmbed, n, {
-                                [_.spoilerAttachment]: l === m.ObscureReason.SPOILER,
-                                [_.hiddenExplicitAttachment]: null != l && [m.ObscureReason.EXPLICIT_CONTENT, m.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(l),
+                                [_.spoilerAttachment]: l === h.ObscureReason.SPOILER,
+                                [_.hiddenExplicitAttachment]: null != l && [h.ObscureReason.EXPLICIT_CONTENT, h.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(l),
                                 [_.isHidden]: e,
                                 [_.justifyAuto]: t.usesJustifiedAutoStyle()
                             }),
@@ -888,15 +894,15 @@
                                 title: d,
                                 description: u,
                                 fields: c,
-                                thumbnail: h,
+                                thumbnail: m,
                                 media: p,
                                 footer: g
                             } = t.renderAll();
                         return (0, i.jsx)("article", {
                             className: o(l, _.embedFull, A.markup, {
                                 [_.isHidden]: e,
-                                [_.spoilerEmbed]: r === m.ObscureReason.SPOILER,
-                                [_.hiddenExplicitEmbed]: null != r && [m.ObscureReason.EXPLICIT_CONTENT, m.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(r),
+                                [_.spoilerEmbed]: r === h.ObscureReason.SPOILER,
+                                [_.hiddenExplicitEmbed]: null != r && [h.ObscureReason.EXPLICIT_CONTENT, h.ObscureReason.POTENTIAL_EXPLICIT_CONTENT].includes(r),
                                 [_.justifyAuto]: t.usesJustifiedAutoStyle()
                             }),
                             "aria-hidden": e,
@@ -909,9 +915,9 @@
                                 children: (0, i.jsxs)("div", {
                                     className: o({
                                         [_.grid]: !0,
-                                        [_.hasThumbnail]: null != h
+                                        [_.hasThumbnail]: null != m
                                     }),
-                                    children: [null != n ? t.renderSuppressButton(n) : null, s, a, d, u, c, p, h, g]
+                                    children: [null != n ? t.renderSuppressButton(n) : null, s, a, d, u, c, p, m, g]
                                 })
                             })
                         })
@@ -921,9 +927,7 @@
                 hideMedia: !1,
                 allowFullScreen: !0,
                 maxThumbnailWidth: 80,
-                maxThumbnailHeight: 80,
-                maxMediaWidth: 400,
-                maxMediaHeight: 300
+                maxThumbnailHeight: 80
             }, r = n
         },
         633667: function(e, t, l) {
@@ -933,7 +937,7 @@
                     return r
                 },
                 default: function() {
-                    return h
+                    return m
                 }
             });
             var n, r, i = l("37983"),
@@ -958,7 +962,7 @@
                         }, e.origin)
                     }
                 }, [t]);
-                return s.useEffect(() => (window.addEventListener("message", r), () => window.removeEventListener("message", r)), [r]), (0, i.jsx)(m, {
+                return s.useEffect(() => (window.addEventListener("message", r), () => window.removeEventListener("message", r)), [r]), (0, i.jsx)(h, {
                     ref: n,
                     ...l
                 })
@@ -976,12 +980,12 @@
                     auto_play: "1"
                 }, l && (r.query.mute = "1"), r.search = null;
                 let s = o.format(r);
-                return (0, i.jsx)(m, {
+                return (0, i.jsx)(h, {
                     src: s,
                     ...n
                 })
             }
-            let m = s.forwardRef(function(e, t) {
+            let h = s.forwardRef(function(e, t) {
                 return (0, i.jsx)("iframe", {
                     ref: t,
                     className: d.embedIframe,
@@ -993,7 +997,7 @@
                 })
             });
 
-            function h(e) {
+            function m(e) {
                 switch (e.provider) {
                     case "YouTube":
                         return (0, i.jsx)(c, {
@@ -1004,7 +1008,7 @@
                             ...e
                         });
                     default:
-                        return (0, i.jsx)(m, {
+                        return (0, i.jsx)(h, {
                             ...e
                         })
                 }
@@ -1033,8 +1037,8 @@
                     naturalWidth: d,
                     naturalHeight: u,
                     play: c = !0,
-                    className: m,
-                    alt: h,
+                    className: h,
+                    alt: m,
                     responsive: p
                 } = e, g = r.useRef(null);
                 return (r.useEffect(() => {
@@ -1044,7 +1048,7 @@
                     null != e && (c ? e.play() : e.pause())
                 }, [c]), d <= a.MAX_VIDEO_WIDTH && u <= a.MAX_VIDEO_HEIGHT || d <= a.MAX_VIDEO_HEIGHT && u <= a.MAX_VIDEO_WIDTH) ? (0, n.jsx)(s.default, {
                     ref: g,
-                    className: m,
+                    className: h,
                     poster: t,
                     src: l,
                     width: i,
@@ -1054,7 +1058,7 @@
                     loop: !0,
                     autoPlay: c,
                     preload: "none",
-                    "aria-label": h
+                    "aria-label": m
                 }) : (0, n.jsx)("img", {
                     alt: "",
                     src: t,
@@ -1072,22 +1076,22 @@
                     responsive: a,
                     autoPlay: u,
                     className: c,
-                    playable: m = !0,
-                    renderImageComponent: h,
+                    playable: h = !0,
+                    renderImageComponent: m,
                     alt: p = o.default.Messages.GIF,
                     ...g
                 } = e;
                 return (0, n.jsx)(i.GIFAccessoryContext.Consumer, {
-                    children: e => h({
+                    children: e => m({
                         ...g,
                         alt: p,
                         src: l,
                         containerClassName: c,
                         autoPlay: u,
-                        animated: m,
+                        animated: h,
                         responsive: a,
                         renderAccessory: e,
-                        tabIndex: m ? 0 : -1,
+                        tabIndex: h ? 0 : -1,
                         children(e) {
                             let {
                                 src: l,
@@ -1105,7 +1109,7 @@
                                 naturalWidth: r,
                                 naturalHeight: s,
                                 responsive: a,
-                                play: m && o
+                                play: h && o
                             })
                         }
                     })
@@ -1161,8 +1165,8 @@
                 d = l("651693"),
                 u = l("924444"),
                 c = l("688622"),
-                m = l("599110"),
-                h = l("49111"),
+                h = l("599110"),
+                m = l("49111"),
                 p = l("377160");
 
             function g(e) {
@@ -1196,7 +1200,7 @@
                             var r, i;
                             let o = null !== (r = e.width) && void 0 !== r ? r : 0,
                                 d = null !== (i = e.height) && void 0 !== i ? i : 0,
-                                m = (0, c.getBestEffortSrcUrl)({
+                                h = (0, c.getBestEffortSrcUrl)({
                                     proxyURL: e.proxy_url,
                                     url: e.url
                                 });
@@ -1208,7 +1212,7 @@
                                     renderLinkComponent: e => (0, n.jsx)(s.default, {
                                         ...e
                                     }),
-                                    src: m,
+                                    src: h,
                                     shouldHideMediaOptions: t,
                                     obscure: (0, a.isMediaObscured)({
                                         type: a.ObscuredMediaTypes.Attachment,
@@ -1217,7 +1221,7 @@
                                 }),
                                 width: o,
                                 height: d,
-                                src: m
+                                src: h
                             }
                         }
                         return null
@@ -1230,22 +1234,22 @@
                         var r, i;
                         let o = null !== (r = e.width) && void 0 !== r ? r : 0,
                             d = null !== (i = e.height) && void 0 !== i ? i : 0,
-                            m = (0, c.getBestEffortSrcUrl)({
+                            h = (0, c.getBestEffortSrcUrl)({
                                 proxyURL: e.proxy_url,
                                 url: e.url
                             }),
-                            h = new URL(e.proxy_url);
-                        return h.searchParams.append("format", "jpeg"), {
+                            m = new URL(e.proxy_url);
+                        return m.searchParams.append("format", "jpeg"), {
                             component: (0, n.jsx)(u.VideoModal, {
                                 width: o,
                                 height: d,
-                                poster: h.toString(),
+                                poster: m.toString(),
                                 naturalWidth: o,
                                 naturalHeight: d,
                                 renderLinkComponent: e => (0, n.jsx)(s.default, {
                                     ...e
                                 }),
-                                src: m,
+                                src: h,
                                 fileSize: e.size,
                                 fileName: e.filename,
                                 shouldHideMediaOptions: t,
@@ -1256,7 +1260,7 @@
                             }),
                             width: o,
                             height: d,
-                            src: m
+                            src: h
                         }
                     }
                     return null
@@ -1267,8 +1271,8 @@
             function b(e, t) {
                 let s = {};
                 for (let [a, d] of e.entries()) s[d.src] = s => (function(e, t, s, a) {
-                    e.preventDefault(), (0, r.isElement)(e.currentTarget) && e.currentTarget.blur(), null != a && (m.default.track(h.AnalyticEvents.OPEN_MODAL, {
-                        type: h.AnalyticsSections.MEDIA_VIEWER,
+                    e.preventDefault(), (0, r.isElement)(e.currentTarget) && e.currentTarget.blur(), null != a && (h.default.track(m.AnalyticEvents.OPEN_MODAL, {
+                        type: m.AnalyticsSections.MEDIA_VIEWER,
                         ...a
                     }, {
                         throttlePercent: .01
