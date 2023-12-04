@@ -21843,8 +21843,8 @@ h6.title__7a3bb {
 
 .title_cb085d {
     font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     text-transform: uppercase
 }
 
@@ -21950,8 +21950,8 @@ h6.title__7a3bb {
     display: flex;
     align-items: center;
     border-radius: 5px;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 1rem;
+    line-height: 1.125rem;
     padding: 16px
 }
 
