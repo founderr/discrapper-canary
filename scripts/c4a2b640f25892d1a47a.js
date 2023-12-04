@@ -11636,8 +11636,8 @@
                     className: n,
                     emoji: a
                 } = e, s = (0, d.default)([m.default], () => {
-                    var e, t;
-                    return null === (e = m.default.getCustomEmojiById(null !== (t = null == a ? void 0 : a.id) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.animated
+                    var e, t, n;
+                    return null !== (n = null === (e = m.default.getCustomEmojiById(null !== (t = null == a ? void 0 : a.id) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.animated) && void 0 !== n && n
                 }, [a.id]);
                 return (0, l.jsx)(f.default, {
                     className: n,
