@@ -25781,10 +25781,6 @@
                 LOGIN_MFA_WEBAUTHN: function() {
                     k = R.LoginStates.LOGGING_IN_MFA_WEBAUTHN
                 },
-                LOGIN_MFA_WEBAUTHN_TO_TOTP: function() {
-                    if (k !== R.LoginStates.MFA_WEBAUTHN_STEP && k !== R.LoginStates.LOGGING_IN_MFA_WEBAUTHN) return !1;
-                    k = R.LoginStates.MFA_STEP
-                },
                 LOGIN_MFA_STEP: function(e) {
                     let {
                         ticket: t,
