@@ -11770,7 +11770,7 @@
                         ...null != s ? s : {},
                         key: e.id,
                         listing: e,
-                        paymentsCount: null !== (t = null == s ? void 0 : s.payments_count) && void 0 !== t ? t : 0
+                        paymentsCount: null !== (t = null == s ? void 0 : s.purchase_count) && void 0 !== t ? t : 0
                     }
                 }).filter(e => e.listing.published || e.paymentsCount > 0), [a, null == n ? void 0 : n.ppgs]);
                 return null == a || 0 === a.length ? null : (0, l.jsx)(r.default, {
