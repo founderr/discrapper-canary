@@ -5293,23 +5293,24 @@
                 R = e => {
                     let {
                         subscriptionTrial: t,
-                        expiresAt: s
-                    } = e, R = (0, c.formatPriceString)((0, c.getDefaultPrice)(E.SubscriptionPlans.PREMIUM_MONTH_TIER_2), E.SubscriptionIntervalTypes.MONTH), A = (0, c.formatIntervalDuration)({
+                        expiresAt: s,
+                        variant: R = "text-lg/normal"
+                    } = e, A = (0, c.formatPriceString)((0, c.getDefaultPrice)(E.SubscriptionPlans.PREMIUM_MONTH_TIER_2), E.SubscriptionIntervalTypes.MONTH), p = (0, c.formatIntervalDuration)({
                         intervalType: null == t ? void 0 : t.interval,
                         intervalCount: null == t ? void 0 : t.interval_count
-                    }), p = f.default.Messages.Q4_DROP_TRY_NITRO_FOR_DURATION.format({
-                        duration: A,
-                        price: R
-                    }), N = p.split(" "), [m, P] = n.useState(!1), [C, g] = n.useState(!1), [O, L] = n.useState(!1), h = (0, r.default)([u.default], () => u.default.useReducedMotion), [M, x] = (0, o.useDismissibleContentGroup)([l.DismissibleContent.Q4_MARKETING_PAGE_HEADER_ANIMATION]);
+                    }), N = f.default.Messages.Q4_DROP_TRY_NITRO_FOR_DURATION.format({
+                        duration: p,
+                        price: A
+                    }), m = N.split(" "), [P, C] = n.useState(!1), [g, O] = n.useState(!1), [L, h] = n.useState(!1), M = (0, r.default)([u.default], () => u.default.useReducedMotion), [x, U] = (0, o.useDismissibleContentGroup)([l.DismissibleContent.Q4_MARKETING_PAGE_HEADER_ANIMATION]);
                     return (n.useEffect(() => () => {
-                        M === l.DismissibleContent.Q4_MARKETING_PAGE_HEADER_ANIMATION && x(T.ContentDismissActionType.TAKE_ACTION)
-                    }, [M, x]), h || M !== l.DismissibleContent.Q4_MARKETING_PAGE_HEADER_ANIMATION) ? (0, a.jsxs)("div", {
+                        x === l.DismissibleContent.Q4_MARKETING_PAGE_HEADER_ANIMATION && U(T.ContentDismissActionType.TAKE_ACTION)
+                    }, [x, U]), M || x !== l.DismissibleContent.Q4_MARKETING_PAGE_HEADER_ANIMATION) ? (0, a.jsxs)("div", {
                         className: S.descriptionContainer,
                         children: [(0, a.jsx)(i.Text, {
-                            variant: "text-lg/normal",
+                            variant: R,
                             color: "always-white",
                             className: S.descriptionText,
-                            children: p
+                            children: N
                         }), (0, a.jsx)("div", {
                             className: S.countdownStatic,
                             children: (0, a.jsx)(i.Text, {
@@ -5334,23 +5335,23 @@
                             variant: "text-lg/semibold",
                             color: "always-white",
                             className: S.descriptionText,
-                            children: N.map((e, t) => {
-                                let s = t === N.length - 1;
+                            children: m.map((e, t) => {
+                                let s = t === m.length - 1;
                                 return (0, a.jsxs)("span", {
                                     className: S.descriptionTextChunk,
                                     style: {
                                         animationDelay: "".concat(.125 * t + .5, "s")
                                     },
-                                    onAnimationEnd: s ? () => P(!0) : () => null,
+                                    onAnimationEnd: s ? () => C(!0) : () => null,
                                     children: [e, "\xa0"]
                                 }, t)
                             })
                         }), (0, a.jsx)("div", {
-                            className: m ? S.countdownWithAnimation : S.countdown,
-                            onAnimationEnd: () => g(!0),
+                            className: P ? S.countdownWithAnimation : S.countdown,
+                            onAnimationEnd: () => O(!0),
                             children: (0, a.jsx)("div", {
-                                className: C ? S.countdownTextContainerWithAnimation : S.countdownTextContainer,
-                                onAnimationEnd: () => L(!0),
+                                className: g ? S.countdownTextContainerWithAnimation : S.countdownTextContainer,
+                                onAnimationEnd: () => h(!0),
                                 children: (0, a.jsx)(i.Text, {
                                     variant: "text-sm/bold",
                                     className: S.countdownText,
@@ -5358,7 +5359,7 @@
                                 })
                             })
                         }), (0, a.jsx)("div", {
-                            className: O ? S.termsApplyWithAnimation : S.termsApply,
+                            className: L ? S.termsApplyWithAnimation : S.termsApply,
                             children: (0, a.jsx)(i.Anchor, {
                                 href: d.default.getArticleURL(I.HelpdeskArticles.Q4_DROP),
                                 children: (0, a.jsx)(i.Text, {
@@ -5530,7 +5531,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return m
+                    return P
                 }
             });
             var a = s("37983");
@@ -5552,78 +5553,85 @@
                 R = s("881155"),
                 A = s("646718"),
                 p = s("782340"),
-                N = s("30126"),
-                m = e => {
-                    let {
-                        isFullscreen: t,
-                        className: s,
-                        subscriptionTier: n
-                    } = e, m = (0, T.useCheapestMonthlyPrice)(), {
-                        AnalyticsLocationProvider: P
-                    } = (0, u.default)(i.default.PREMIUM_MARKETING_HERO_CTA), C = (0, c.useHasActiveTrial)(), g = (0, d.useIsInPremiumOfferExperience)(), O = (0, I.useIsEligibleForBogoPromotion)(), L = (0, E.usePremiumTrialOffer)(), h = (null == L ? void 0 : L.trial_id) === A.PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID, {
-                        enabled: M
-                    } = _.Q4DropExperiment.useExperiment({
-                        location: "HeroHeading"
-                    }), x = h && M;
-                    return (0, a.jsx)(P, {
-                        children: (0, a.jsxs)("div", {
-                            className: r(N.container, s),
-                            "data-testid": "v2-marketing-page-hero-header",
-                            children: [(0, a.jsxs)("div", {
-                                className: t ? N.fullscreenTextContainer : N.settingsTextContainer,
-                                children: [(0, a.jsx)(l.Heading, {
-                                    variant: t ? "display-lg" : "display-md",
-                                    color: "always-white",
-                                    children: p.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
-                                }), !x && (0, a.jsx)(l.Text, {
-                                    variant: "text-lg/normal",
-                                    color: "always-white",
-                                    className: N.description,
-                                    children: p.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
-                                        cheapestMonthlyPrice: m
-                                    })
-                                }), x && (0, a.jsx)(f.default, {
-                                    subscriptionTrial: null == L ? void 0 : L.subscription_trial,
-                                    expiresAt: null == L ? void 0 : L.expires_at
-                                }), O ? (0, a.jsx)("div", {
+                N = s("30126");
+
+            function m(e) {
+                let {
+                    variant: t = "text-lg/normal"
+                } = e, s = (0, T.useCheapestMonthlyPrice)(), n = (0, E.usePremiumTrialOffer)(), r = (null == n ? void 0 : n.trial_id) === A.PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID, {
+                    enabled: i
+                } = _.Q4DropExperiment.useExperiment({
+                    location: "HeroHeading"
+                });
+                return r && i ? (0, a.jsx)(f.default, {
+                    subscriptionTrial: null == n ? void 0 : n.subscription_trial,
+                    expiresAt: null == n ? void 0 : n.expires_at
+                }) : (0, a.jsx)(l.Text, {
+                    variant: t,
+                    color: "always-white",
+                    className: N.description,
+                    children: p.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
+                        cheapestMonthlyPrice: s
+                    })
+                })
+            }
+            var P = e => {
+                let {
+                    isFullscreen: t,
+                    className: s,
+                    subscriptionTier: n
+                } = e, {
+                    AnalyticsLocationProvider: _
+                } = (0, u.default)(i.default.PREMIUM_MARKETING_HERO_CTA), E = (0, c.useHasActiveTrial)(), T = (0, d.useIsInPremiumOfferExperience)(), f = (0, I.useIsEligibleForBogoPromotion)();
+                return (0, a.jsx)(_, {
+                    children: (0, a.jsxs)("div", {
+                        className: r(N.container, s),
+                        "data-testid": "v2-marketing-page-hero-header",
+                        children: [(0, a.jsxs)("div", {
+                            className: t ? N.fullscreenTextContainer : N.settingsTextContainer,
+                            children: [(0, a.jsx)(l.Heading, {
+                                variant: t ? "display-lg" : "display-md",
+                                color: "always-white",
+                                children: p.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
+                            }), (0, a.jsx)(m, {}), f ? (0, a.jsx)("div", {
+                                className: N.buttonContainer,
+                                children: (0, a.jsx)(S.default, {
+                                    className: N.button,
+                                    forceWhite: !0
+                                })
+                            }) : (0, a.jsxs)(a.Fragment, {
+                                children: [T ? null : (0, a.jsxs)("div", {
+                                    className: N.buttonContainer,
+                                    children: [(0, a.jsx)(R.default, {
+                                        forceInverted: !0,
+                                        className: N.button,
+                                        subscriptionTier: n
+                                    }), (0, a.jsx)(S.default, {
+                                        className: N.button,
+                                        forceWhite: !0
+                                    })]
+                                }), E ? (0, a.jsx)("div", {
                                     className: N.buttonContainer,
                                     children: (0, a.jsx)(S.default, {
                                         className: N.button,
                                         forceWhite: !0
                                     })
-                                }) : (0, a.jsxs)(a.Fragment, {
-                                    children: [g ? null : (0, a.jsxs)("div", {
-                                        className: N.buttonContainer,
-                                        children: [(0, a.jsx)(R.default, {
-                                            forceInverted: !0,
-                                            className: N.button,
-                                            subscriptionTier: n
-                                        }), (0, a.jsx)(S.default, {
-                                            className: N.button,
-                                            forceWhite: !0
-                                        })]
-                                    }), C ? (0, a.jsx)("div", {
-                                        className: N.buttonContainer,
-                                        children: (0, a.jsx)(S.default, {
-                                            className: N.button,
-                                            forceWhite: !0
-                                        })
-                                    }) : null]
-                                })]
-                            }), g ? null : (0, a.jsxs)(a.Fragment, {
-                                children: [(0, a.jsx)(o.StretchedSparkleStar, {
-                                    className: t ? N.fullscreenSparkleStar1 : N.settingsSparkleStar1
-                                }), (0, a.jsx)(o.StretchedSparkleStar, {
-                                    className: t ? N.fullscreenSparkleStar2 : N.settingsSparkleStar2
-                                }), (0, a.jsx)(o.StretchedSparkleStar, {
-                                    className: t ? N.fullscreenSparkleStar3 : N.settingsSparkleStar3
-                                }), (0, a.jsx)(o.StretchedSparkleStar, {
-                                    className: t ? N.fullscreenSparkleStar4 : N.settingsSparkleStar4
-                                })]
+                                }) : null]
                             })]
-                        })
+                        }), T ? null : (0, a.jsxs)(a.Fragment, {
+                            children: [(0, a.jsx)(o.StretchedSparkleStar, {
+                                className: t ? N.fullscreenSparkleStar1 : N.settingsSparkleStar1
+                            }), (0, a.jsx)(o.StretchedSparkleStar, {
+                                className: t ? N.fullscreenSparkleStar2 : N.settingsSparkleStar2
+                            }), (0, a.jsx)(o.StretchedSparkleStar, {
+                                className: t ? N.fullscreenSparkleStar3 : N.settingsSparkleStar3
+                            }), (0, a.jsx)(o.StretchedSparkleStar, {
+                                className: t ? N.fullscreenSparkleStar4 : N.settingsSparkleStar4
+                            })]
+                        })]
                     })
-                }
+                })
+            }
         },
         830648: function(e, t, s) {
             "use strict";
