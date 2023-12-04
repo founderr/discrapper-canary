@@ -1,615 +1,687 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["49191"], {
-        462274: function(e, i, l) {
+    ["26230"], {
+        309570: function(t, e, n) {
             "use strict";
-            l.r(i), l.d(i, {
-                useColorStore: function() {
-                    return c
+            n.r(e), n.d(e, {
+                default: function() {
+                    return u
+                }
+            });
+            var l = n("49111");
+
+            function u(t) {
+                return null != t && t.type !== l.ActivityTypes.CUSTOM_STATUS && (null != t.details || null != t.assets && (null != t.assets.large_image || null != t.assets.small_text) || null != t.party || null != t.secrets || null != t.state)
+            }
+        },
+        716241: function(t, e, n) {
+            "use strict";
+            n.r(e), n.d(e, {
+                collectGuildAnalyticsMetadata: function() {
+                    return C
                 },
-                maybeFetchColors: function() {
-                    return f
+                collectChannelAnalyticsMetadataFromId: function() {
+                    return O
+                },
+                collectChannelAnalyticsMetadata: function() {
+                    return L
+                },
+                collectVoiceAnalyticsMetadata: function() {
+                    return M
+                },
+                trackWithMetadata: function() {
+                    return U
+                },
+                getVoiceStateMetadata: function() {
+                    return D
+                },
+                getCustomStatusMetadata: function() {
+                    return P
                 },
                 default: function() {
-                    return p
-                },
-                useAvatarColors: function() {
+                    return G
+                }
+            });
+            var l = n("917351"),
+                u = n.n(l),
+                i = n("316693"),
+                a = n("233069"),
+                s = n("271938"),
+                r = n("42203"),
+                d = n("923959"),
+                c = n("525065"),
+                o = n("26989"),
+                f = n("305961"),
+                _ = n("42887"),
+                g = n("957255"),
+                S = n("824563"),
+                E = n("945956"),
+                v = n("18494"),
+                p = n("162771"),
+                T = n("800762"),
+                I = n("599110"),
+                A = n("991170"),
+                h = n("761932"),
+                y = n("49111"),
+                m = n("724210");
+
+            function N(t) {
+                let e = 0;
+                for (let n in t) e += 1;
+                return e
+            }
+
+            function C(t) {
+                var e;
+                if (null == t) return null;
+                let n = f.default.getGuild(t);
+                if (null == n) return null;
+                let l = s.default.getId(),
+                    u = o.default.getMember(t, l),
+                    i = d.default.getChannels(t),
+                    a = i[d.GUILD_SELECTABLE_CHANNELS_KEY].length,
+                    r = i[d.GUILD_VOCAL_CHANNELS_KEY].length,
+                    _ = T.default.getVoiceStates(t);
+                return {
+                    guild_id: n.id,
+                    guild_size_total: c.default.getMemberCount(t),
+                    guild_num_channels: a + r,
+                    guild_num_text_channels: a,
+                    guild_num_voice_channels: r,
+                    guild_num_roles: N(n.roles),
+                    guild_member_num_roles: null != u ? u.roles.length : 0,
+                    guild_member_perms: String(null !== (e = g.default.getGuildPermissions(n)) && void 0 !== e ? e : A.default.NONE),
+                    guild_is_vip: n.hasFeature(y.GuildFeatures.VIP_REGIONS),
+                    is_member: null != u,
+                    num_voice_channels_active: N(_)
+                }
+            }
+
+            function O(t) {
+                if (null == t) return null;
+                let e = r.default.getChannel(t);
+                return null == e ? null : L(e)
+            }
+
+            function L(t) {
+                var e;
+                if (null == t) return null;
+                let n = !1,
+                    l = t.getGuildId();
+                if (null != l) {
+                    let e = t => {
+                        if (null == t) return !1;
+                        let e = t.permissionOverwrites[l];
+                        return null != e && i.default.has(e.deny, y.Permissions.VIEW_CHANNEL)
+                    };
+                    n = a.THREAD_CHANNEL_TYPES.has(t.type) && null != t.parent_id ? e(r.default.getChannel(t.parent_id)) : e(t)
+                }
+                return {
+                    channel_id: t.id,
+                    channel_type: t.type,
+                    channel_size_total: t.isPrivate() ? t.recipients.length : 0,
+                    channel_member_perms: String(null != l && null !== (e = g.default.getChannelPermissions(t)) && void 0 !== e ? e : A.default.NONE),
+                    channel_hidden: n
+                }
+            }
+
+            function M(t) {
+                if (null == t) return null;
+                let e = r.default.getChannel(t);
+                if (null == e) return null;
+                let n = _.default.isVideoEnabled(),
+                    l = E.default.getMediaSessionId();
+                return {
+                    channel_id: e.id,
+                    channel_type: e.type,
+                    guild_id: e.getGuildId(),
+                    media_session_id: l,
+                    ...D(e.getGuildId(), e.id, n),
+                    ...(0, h.getVoiceAnalyticsMetadataAdditional)()
+                }
+            }
+
+            function U(t) {
+                var e, n, l, u, i;
+                let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                    s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                if (I.default.isThrottled(t)) return;
+                let d = !("location" in a) || a.location !== y.AnalyticsLocations.GUILD_CREATE_INVITE_SUGGESTION,
+                    c = "guild_id" in a ? a.guild_id : d ? p.default.getGuildId() : null,
+                    o = "channel_id" in a ? a.channel_id : d ? v.default.getChannelId(c) : null,
+                    f = r.default.getChannel(o);
+                let _ = (e = f, n = c, null == e ? null != n ? n : null : e.isPrivate() ? null : null !== (u = null !== (l = e.getGuildId()) && void 0 !== l ? l : n) && void 0 !== u ? u : null);
+                let g = {
+                    ...a,
+                    ...C(_),
+                    ...null != c && null != o && (0, m.isStaticChannelRoute)(o) ? (i = 0, {
+                        channel_static_route: o,
+                        channel_hidden: !1
+                    }) : L(f)
+                };
+                I.default.track(t, g, {
+                    flush: s
+                })
+            }
+
+            function D(t, e, n) {
+                let l = {
+                    voice_state_count: 0,
+                    video_stream_count: 0,
+                    video_enabled: n
+                };
+                return u(T.default.getVoiceStates(t)).filter(t => t.channelId === e).filter(t => t.userId !== s.default.getId()).forEach(t => {
+                    l.voice_state_count++, (t.selfVideo || t.selfStream) && l.video_stream_count++
+                }), l
+            }
+
+            function P(t, e) {
+                let n = {
+                    custom_status_count: 0
+                };
+                return u(T.default.getVoiceStates(t)).forEach(t => {
+                    t.channelId === e && null != S.default.findActivity(t.userId, t => t.type === y.ActivityTypes.CUSTOM_STATUS) && n.custom_status_count++
+                }), n
+            }
+            var G = {
+                trackWithMetadata: U,
+                getVoiceStateMetadata: D
+            }
+        },
+        761932: function(t, e, n) {
+            "use strict";
+            n.r(e), n.d(e, {
+                getVoiceAnalyticsMetadataAdditional: function() {
+                    return u
+                }
+            });
+            var l = n("568307");
+
+            function u() {
+                let t = l.default.getCurrentGameForAnalytics();
+                return {
+                    game_name: null != t ? t.name : null,
+                    game_id: null != t ? t.id : null
+                }
+            }
+        },
+        32346: function(t, e, n) {
+            "use strict";
+            let l, u;
+            n.r(e), n.d(e, {
+                default: function() {
                     return _
                 }
-            }), l("222007");
-            var t = l("884691"),
-                n = l("656280"),
-                r = l.n(n),
-                u = l("308503"),
-                o = l("446674"),
-                d = l("206230"),
-                s = l("284679"),
-                a = l("103603");
-            let c = (0, u.default)(() => ({
-                palette: {},
-                fetching: {}
-            }));
-            async function f(e) {
-                null == c.getState().palette[e] && await m(e)
+            }), n("222007");
+            var i = n("917351"),
+                a = n.n(i),
+                s = n("446674"),
+                r = n("913144"),
+                d = n("49111");
+            let c = o();
+
+            function o() {
+                return {
+                    recentCustomStatuses: [],
+                    currentDefaultStatus: null
+                }
             }
-            async function m(e) {
-                if (!c.getState().fetching[e]) {
-                    c.setState(i => ({
-                        fetching: {
-                            ...i.fetching,
-                            [e]: !0
-                        }
-                    }));
-                    try {
-                        let i = await (0, a.getPaletteForAvatar)(e),
-                            l = (0, s.getComplimentaryPaletteForColor)(i[0]);
-                        c.setState(t => ({
-                            fetching: {
-                                ...t.fetching,
-                                [e]: !1
-                            },
-                            palette: {
-                                ...t.palette,
-                                [e]: [...i.slice(0, 2), ...l]
-                            }
-                        }))
-                    } catch (i) {
-                        c.setState(i => ({
-                            fetching: {
-                                ...i.fetching,
-                                [e]: !1
-                            }
-                        }))
+            class f extends s.default.PersistedStore {
+                initialize(t) {
+                    c = {
+                        ...o(),
+                        ...null != t ? t : {}
                     }
                 }
-            }
-
-            function p(e, i) {
-                let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                    [t] = _(e, i, l);
-                return t
-            }
-
-            function _(e, i) {
-                let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                    n = c(i => null == e ? void 0 : i.palette[e]),
-                    u = (0, o.useStateFromStores)([d.default], () => l && d.default.desaturateUserColors ? d.default.saturation : 1);
-                t.useEffect(() => {
-                    null != e && null == n && m(e)
-                }, [e, n]);
-                let s = t.useMemo(() => null == n ? void 0 : n.map(e => {
-                    let [i, l, t] = e, {
-                        h: n,
-                        s: o,
-                        l: d
-                    } = r({
-                        r: i,
-                        g: l,
-                        b: t
-                    }).toHsl();
-                    return r({
-                        h: n,
-                        s: o * u,
-                        l: d
-                    }).toHexString()
-                }), [n, u]);
-                return null != s ? s : [i, i]
-            }
-        },
-        811907: function(e, i, l) {
-            "use strict";
-            l.r(i), l.d(i, {
-                default: function() {
-                    return t
-                }
-            }), l("222007");
-            var t, n = l("906932"),
-                r = l("315102"),
-                u = l("719923"),
-                o = l("646718");
-
-            function d(e, i) {
-                return null == i || "" === i ? e : i
-            }
-            t = class {
-                get premiumSince() {
-                    return this._userProfile.premiumSince
-                }
-                get premiumGuildSince() {
-                    return this._userProfile.premiumGuildSince
-                }
-                get premiumType() {
-                    return this._userProfile.premiumType
-                }
-                get primaryColor() {
-                    var e, i;
-                    return null !== (i = null === (e = this.themeColors) || void 0 === e ? void 0 : e[0]) && void 0 !== i ? i : this.accentColor
-                }
-                get canUsePremiumProfileCustomization() {
-                    return u.default.isPremiumAtLeast(this.premiumType, o.PremiumTypes.TIER_2)
-                }
-                get canEditThemes() {
-                    return this.canUsePremiumProfileCustomization
-                }
-                get application() {
-                    return this._userProfile.application
-                }
-                hasThemeColors() {
-                    var e, i;
-                    return (null === (e = this.themeColors) || void 0 === e ? void 0 : e[0]) != null || (null === (i = this.themeColors) || void 0 === i ? void 0 : i[1]) != null
-                }
-                hasPremiumCustomization() {
-                    return this.isUsingGuildMemberBanner() || this.isUsingGuildMemberBio() || null != this.banner || this.hasThemeColors() || null != this.popoutAnimationParticleType
-                }
-                hasFullProfile() {
-                    return void 0 !== this._userProfile && (null == this.guildId || void 0 !== this._guildMemberProfile)
-                }
-                isUsingGuildMemberBanner() {
-                    var e;
-                    return (null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.banner) != null
-                }
-                isUsingGuildMemberBio() {
-                    var e, i;
-                    return (null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.bio) != null && (null === (i = this._guildMemberProfile) || void 0 === i ? void 0 : i.bio) !== ""
-                }
-                isUsingGuildMemberPronouns() {
-                    var e, i;
-                    return (null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.pronouns) != null && (null === (i = this._guildMemberProfile) || void 0 === i ? void 0 : i.pronouns) !== ""
-                }
-                getBannerURL(e) {
-                    let {
-                        canAnimate: i,
-                        size: l
-                    } = e;
-                    return null != this.guildId && this.isUsingGuildMemberBanner() ? (0, r.getGuildMemberBannerURL)({
-                        id: this.userId,
-                        guildId: this.guildId,
-                        banner: this.banner,
-                        canAnimate: i,
-                        size: l
-                    }) : (0, r.getUserBannerURL)({
-                        id: this.userId,
-                        banner: this.banner,
-                        canAnimate: i,
-                        size: l
-                    })
-                }
-                getPreviewBanner(e, i) {
-                    let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 480;
-                    return null != e ? e : null === e ? this.isUsingGuildMemberBanner() ? (0, r.getUserBannerURL)({
-                        id: this.userId,
-                        banner: this._userProfile.banner,
-                        canAnimate: i,
-                        size: l
-                    }) : null : this.getBannerURL({
-                        canAnimate: i,
-                        size: 480
-                    })
-                }
-                getPreviewBio(e) {
-                    var i;
-                    return (0, n.getProfilePreviewField)(e, null === (i = this._guildMemberProfile) || void 0 === i ? void 0 : i.bio, this._userProfile.bio, null != this.guildId)
-                }
-                getPreviewThemeColors(e) {
-                    return (null == e ? void 0 : e[0]) != null && (null == e ? void 0 : e[1]) != null ? e : void 0 !== e ? this._userProfile.themeColors : this.themeColors
-                }
-                getBadges() {
-                    var e, i, l;
-                    return [...null !== (i = this._userProfile.badges) && void 0 !== i ? i : [], ...null !== (l = null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.badges) && void 0 !== l ? l : []]
-                }
-                getLegacyUsername() {
-                    return this._userProfile.legacyUsername
-                }
-                constructor(e, i) {
-                    var l, t, n, r;
-                    this.userId = e.userId, this.guildId = null == i ? void 0 : i.guildId, this.banner = null !== (l = null == i ? void 0 : i.banner) && void 0 !== l ? l : e.banner, this.bio = d(e.bio, null == i ? void 0 : i.bio), this.pronouns = d(e.pronouns, null == i ? void 0 : i.pronouns), this.accentColor = e.accentColor, this.themeColors = null !== (t = null == i ? void 0 : i.themeColors) && void 0 !== t ? t : e.themeColors, this.popoutAnimationParticleType = null !== (n = null == i ? void 0 : i.popoutAnimationParticleType) && void 0 !== n ? n : e.popoutAnimationParticleType, this.profileEffectID = null !== (r = null == i ? void 0 : i.profileEffectID) && void 0 !== r ? r : e.profileEffectID, this._userProfile = e, this._guildMemberProfile = i
-                }
-            }
-        },
-        713135: function(e, i, l) {
-            "use strict";
-            l.r(i), l.d(i, {
-                default: function() {
-                    return w
-                }
-            }), l("222007"), l("702976");
-            var t = l("917351"),
-                n = l.n(t),
-                r = l("376556"),
-                u = l("915639"),
-                o = l("766274"),
-                d = l("271938"),
-                s = l("305961"),
-                a = l("824563"),
-                c = l("455079"),
-                f = l("677099");
-            let m = new Set,
-                p = new Set,
-                _ = {},
-                g = {},
-                h = {},
-                v = {},
-                b = {},
-                P = !1;
-
-            function S() {
-                m.clear(), p.clear(), _ = {}, g = {}, h = {}, v = {}, b = {}
-            }
-
-            function E(e) {
-                let {
-                    userId: i
-                } = e;
-                p.add(i)
-            }
-
-            function C(e) {
-                let {
-                    userId: i
-                } = e;
-                p.delete(i)
-            }
-
-            function I(e) {
-                p.delete(e.userId), h[e.userId] = n(e.mutualFriends).map(e => ({
-                    key: e.id,
-                    user: new o.default(e),
-                    status: a.default.getStatus(e.id)
-                })).sortBy(e => {
-                    let {
-                        user: i
-                    } = e;
-                    return i.username.toLowerCase()
-                }).value(), v[e.userId] = e.mutualFriends.length
-            }
-
-            function U() {
-                if (0 === Object.keys(b).length) return !1;
-                b = {}
-            }
-
-            function T(e) {
-                if (null == b[e.user.id]) return !1;
-                delete b[e.user.id]
-            }
-
-            function F(e) {
-                var i, l, t, n, u, o, d, a, c, p, h, P, S, E, C, I, U;
-                if (m.delete(e.user.id), null != e.mutual_guilds) {
-                    let i = {};
-                    e.mutual_guilds.forEach(e => {
-                        let {
-                            id: l,
-                            nick: t
-                        } = e, n = s.default.getGuild(l);
-                        null != n && (i[l] = {
-                            guild: n,
-                            nick: t
-                        })
-                    }), b[e.user.id] = f.default.getFlattenedGuildIds().filter(e => null != i[e]).map(e => ({
-                        guild: i[e].guild,
-                        nick: i[e].nick
-                    }))
-                }
-                if (null != e.mutual_friends_count) {
-                    let i = e.mutual_friends_count;
-                    v[e.user.id] = i
-                }
-                let T = null !== (c = e.premium_since) && void 0 !== c ? c : null,
-                    F = e.application;
-                if (_[e.user.id] = {
-                        userId: e.user.id,
-                        banner: null === (i = e.user_profile) || void 0 === i ? void 0 : i.banner,
-                        accentColor: null === (l = e.user_profile) || void 0 === l ? void 0 : l.accent_color,
-                        themeColors: null === (t = e.user_profile) || void 0 === t ? void 0 : t.theme_colors,
-                        popoutAnimationParticleType: null === (n = e.user_profile) || void 0 === n ? void 0 : n.popout_animation_particle_type,
-                        bio: null !== (p = null === (u = e.user_profile) || void 0 === u ? void 0 : u.bio) && void 0 !== p ? p : "",
-                        profileEffectID: null === (d = e.user_profile) || void 0 === d ? void 0 : null === (o = d.profile_effect) || void 0 === o ? void 0 : o.id,
-                        pronouns: null !== (h = null === (a = e.user_profile) || void 0 === a ? void 0 : a.pronouns) && void 0 !== h ? h : "",
-                        connectedAccounts: null !== (P = e.connected_accounts.filter(e => r.default.isSupported(e.type))) && void 0 !== P ? P : [],
-                        applicationRoleConnections: null !== (S = e.application_role_connections) && void 0 !== S ? S : [],
-                        premiumSince: null != T ? new Date(T) : null,
-                        premiumType: e.premium_type,
-                        premiumGuildSince: null != e.premium_guild_since ? new Date(e.premium_guild_since) : null,
-                        lastFetched: Date.now(),
-                        legacyUsername: e.legacy_username,
-                        profileFetchFailed: !1,
-                        application: null != F ? {
-                            id: F.id,
-                            primarySkuId: F.primary_sku_id,
-                            customInstallUrl: F.custom_install_url,
-                            installParams: F.install_params,
-                            flags: F.flags,
-                            popularApplicationCommandIds: F.popular_application_command_ids
-                        } : null,
-                        badges: e.badges
-                    }, null != e.guild_member_profile) {
-                    let i = {
-                        userId: e.user.id,
-                        guildId: e.guild_member_profile.guild_id,
-                        banner: e.guild_member_profile.banner,
-                        accentColor: e.guild_member_profile.accent_color,
-                        themeColors: null === (E = e.guild_member_profile) || void 0 === E ? void 0 : E.theme_colors,
-                        popoutAnimationParticleType: null === (C = e.guild_member_profile) || void 0 === C ? void 0 : C.popout_animation_particle_type,
-                        profileEffectID: null === (U = e.guild_member_profile) || void 0 === U ? void 0 : null === (I = U.profile_effect) || void 0 === I ? void 0 : I.id,
-                        bio: e.guild_member_profile.bio,
-                        pronouns: e.guild_member_profile.pronouns,
-                        badges: e.guild_badges
-                    };
-                    null != g[e.user.id] ? g[e.user.id][e.guild_member_profile.guild_id] = i : g[e.user.id] = {
-                        [e.guild_member_profile.guild_id]: i
-                    }
-                }
-            }
-
-            function y(e) {
-                let {
-                    userId: i
-                } = e;
-                m.add(i)
-            }
-
-            function A(e) {
-                var i;
-                let {
-                    userId: l
-                } = e;
-                _[l] = null !== (i = _[l]) && void 0 !== i ? i : {
-                    connectedAccounts: [],
-                    applicationRoleConnections: [],
-                    premiumSince: null,
-                    premiumGuildSince: null,
-                    lastFetched: Date.now(),
-                    profileFetchFailed: !0,
-                    application: null,
-                    legacyUsername: null,
-                    userId: l,
-                    banner: null,
-                    accentColor: null,
-                    bio: "",
-                    pronouns: ""
-                }, m.delete(l)
-            }
-
-            function M(e) {
-                return null != e.guild_id ? function(e) {
-                    let {
-                        userId: i,
-                        guild_id: l,
-                        accent_color: t,
-                        banner: n,
-                        bio: r,
-                        pronouns: u,
-                        popout_animation_particle_type: o,
-                        theme_colors: d,
-                        profileEffectID: s
-                    } = e;
-                    if (null == l || null == g[i]) return !1;
-                    let a = g[i][l];
-                    if (null == a) return !1;
-                    g[i][l] = {
-                        ...a,
-                        accentColor: t,
-                        banner: n,
-                        bio: r,
-                        pronouns: u,
-                        popoutAnimationParticleType: o,
-                        themeColors: d,
-                        profileEffectID: s
-                    }
-                }(e) : function(e) {
-                    let {
-                        userId: i,
-                        accent_color: l,
-                        banner: t,
-                        bio: n,
-                        pronouns: r,
-                        popout_animation_particle_type: u,
-                        theme_colors: o,
-                        profileEffectID: d
-                    } = e, s = _[i];
-                    if (null == s) return !1;
-                    _[i] = {
-                        ...s,
-                        accentColor: l,
-                        banner: t,
-                        bio: n,
-                        pronouns: r,
-                        popoutAnimationParticleType: u,
-                        themeColors: o,
-                        profileEffectID: d
-                    }
-                }(e)
-            }
-
-            function R(e) {
-                P = !0
-            }
-
-            function L(e) {
-                let {
-                    user: i
-                } = e;
-                if (m.has(i.id) || null == _[i.id]) return !1;
-                _[i.id].lastFetched = 0
-            }
-
-            function D() {
-                m.clear(), _ = {}, g = {}
-            }
-            class G extends c.default {
-                isFetchingProfile(e) {
-                    return m.has(e)
-                }
-                isFetchingFriends(e) {
-                    return p.has(e)
-                }
-                getUserProfile(e) {
-                    return _[e]
-                }
-                getGuildMemberProfile(e, i) {
-                    var l;
-                    return null == i ? null : null === (l = g[e]) || void 0 === l ? void 0 : l[i]
-                }
-                getMutualFriends(e) {
-                    return h[e]
-                }
-                getMutualFriendsCount(e) {
-                    return v[e]
-                }
-                getMutualGuilds(e) {
-                    return b[e]
-                }
-                getIsAccessibilityTooltipViewed() {
-                    return P
-                }
-                takeSnapshot() {
-                    let e = d.default.getId();
-                    return {
-                        version: G.LATEST_SNAPSHOT_VERSION,
-                        data: [{
-                            userId: e,
-                            profile: _[e]
-                        }]
-                    }
-                }
-                constructor() {
-                    super(), this.loadCache = () => {
-                        let e = this.readSnapshot(G.LATEST_SNAPSHOT_VERSION);
-                        null != e && e.forEach(e => {
-                            let {
-                                userId: i,
-                                profile: l
-                            } = e;
-                            _[i] = l
-                        })
-                    }, this.registerActionHandlers({
-                        CACHE_LOADED_LAZY: this.loadCache,
-                        USER_PROFILE_FETCH_START: y,
-                        USER_PROFILE_FETCH_FAILURE: A,
-                        USER_PROFILE_FETCH_SUCCESS: F,
-                        USER_PROFILE_UPDATE_SUCCESS: M,
-                        USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED: R,
-                        MUTUAL_FRIENDS_FETCH_START: E,
-                        MUTUAL_FRIENDS_FETCH_SUCCESS: I,
-                        MUTUAL_FRIENDS_FETCH_FAILURE: C,
-                        GUILD_JOIN: U,
-                        GUILD_DELETE: U,
-                        GUILD_MEMBER_ADD: T,
-                        GUILD_MEMBER_REMOVE: T,
-                        GUILD_MEMBER_UPDATE: L,
-                        USER_UPDATE: L,
-                        LOGOUT: S
-                    }), this.waitFor(f.default), this.syncWith([u.default], D)
-                }
-            }
-            G.displayName = "UserProfileStore", G.LATEST_SNAPSHOT_VERSION = 1;
-            var w = new G
-        },
-        506885: function(e, i, l) {
-            "use strict";
-            l.r(i), l.d(i, {
-                default: function() {
+                getState() {
                     return c
                 }
-            });
-            var t = l("913144"),
-                n = l("327037"),
-                r = l("462274"),
-                u = l("535013"),
-                o = l("42203"),
-                d = l("26989"),
-                s = l("713135"),
-                a = l("386714");
-            async function c(e, i) {
-                var l, c, f;
-                let m, {
-                    withMutualGuilds: p = !1,
-                    withMutualFriendsCount: _ = !1,
-                    friendToken: g,
-                    preloadUserBanner: h = !0,
-                    dispatchWait: v = !1,
-                    guildId: b,
-                    channelId: P
-                } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                if ("" === e) return;
-                null != i && (0, r.maybeFetchColors)(i), null != b && !p && (p = !0), null != b && (m = null !== (c = null === (l = (0, u.getVisibleConnectionsRole)({
-                    guildMember: d.default.getMember(b, e),
-                    channel: o.default.getChannel(P)
-                })) || void 0 === l ? void 0 : l.id) && void 0 !== c ? c : void 0);
-                let S = s.default.getUserProfile(e),
-                    E = s.default.getMutualGuilds(e),
-                    C = s.default.getMutualFriendsCount(e),
-                    I = s.default.isFetchingProfile(e),
-                    U = (null == S ? void 0 : S.profileFetchFailed) || !I && (!Array.isArray(E) && p || null == C && _),
-                    T = h ? a.default : void 0,
-                    F = !1;
-                if (null != b) {
-                    let i = s.default.getGuildMemberProfile(e, b);
-                    F = null == i
-                }!(!U && !F && (I || Date.now() - (null !== (f = null == S ? void 0 : S.lastFetched) && void 0 !== f ? f : 0) < 6e4)) && (v ? await t.default.wait(() => (0, n.fetchProfile)(e, {
-                    withMutualGuilds: p,
-                    withMutualFriendsCount: _,
-                    friendToken: g,
-                    guildId: b,
-                    connectionsRoleId: m
-                }, T)) : await (0, n.fetchProfile)(e, {
-                    withMutualGuilds: p,
-                    withMutualFriendsCount: _,
-                    friendToken: g,
-                    guildId: b,
-                    connectionsRoleId: m
-                }, T))
-            }
-        },
-        386714: function(e, i, l) {
-            "use strict";
-            l.r(i), l.d(i, {
-                default: function() {
-                    return r
+                getCurrentHangStatus() {
+                    return l
                 }
-            });
-            var t = l("845579"),
-                n = l("217513");
-
-            function r(e, i) {
-                if ("undefined" == typeof Image) return;
-                let l = (0, n.getDisplayProfile)(e.user.id, i);
-                if (null == l) return;
-                let r = t.GifAutoPlay.getSetting(),
-                    u = l.getBannerURL({
-                        canAnimate: r,
-                        size: 480
-                    });
-                if (null == u) return;
-                let o = new Image;
-                o.src = u
+                getCustomHangStatus() {
+                    return u
+                }
+                getRecentCustomStatuses() {
+                    return c.recentCustomStatuses
+                }
+                getCurrentDefaultStatus() {
+                    return c.currentDefaultStatus
+                }
+                getHangStatusActivity() {
+                    return null == l ? null : {
+                        type: d.ActivityTypes.HANG_STATUS,
+                        name: "Hang Status",
+                        state: l,
+                        details: null == u ? void 0 : u.status,
+                        emoji: null == u ? void 0 : u.emoji
+                    }
+                }
             }
-        },
-        217513: function(e, i, l) {
-            "use strict";
-            l.r(i), l.d(i, {
-                default: function() {
-                    return d
+            f.displayName = "HangStatusStore", f.persistKey = "HangStatusStore";
+            var _ = new f(r.default, {
+                LOGOUT: function() {
+                    c = o()
                 },
-                getDisplayProfile: function() {
-                    return a
+                UPDATE_HANG_STATUS: function(t) {
+                    let {
+                        status: e,
+                        saveAsDefault: n
+                    } = t;
+                    l = e, u = null, n && (c.currentDefaultStatus = {
+                        status: e,
+                        customHangStatus: u,
+                        expiresAt: Date.now() + 288e5
+                    })
+                },
+                UPDATE_HANG_STATUS_CUSTOM: function(t) {
+                    let {
+                        status: e,
+                        emoji: n,
+                        saveAsDefault: i
+                    } = t;
+                    l = d.HangStatusTypes.CUSTOM, u = {
+                        status: e,
+                        emoji: n
+                    };
+                    let s = [...c.recentCustomStatuses],
+                        r = s.findIndex(t => t.status === e && a.isEqual(t.emoji, n)); - 1 !== r ? s.splice(r, 1) : 8 === s.length && s.splice(7, 1), c.recentCustomStatuses = [u, ...s], i && (c.currentDefaultStatus = {
+                        status: l,
+                        customHangStatus: u,
+                        expiresAt: Date.now() + 288e5
+                    })
+                },
+                CLEAR_HANG_STATUS: function(t) {
+                    let {
+                        saveAsDefault: e
+                    } = t;
+                    l = null, u = null, e && (c.currentDefaultStatus = null)
                 }
-            }), l("222007");
-            var t = l("446674"),
-                n = l("697218"),
-                r = l("117362"),
-                u = l("811907"),
-                o = l("713135");
+            })
+        },
+        824563: function(t, e, n) {
+            "use strict";
+            n.r(e), n.d(e, {
+                default: function() {
+                    return D
+                }
+            }), n("222007"), n("424973");
+            var l = n("714617"),
+                u = n.n(l),
+                i = n("917351"),
+                a = n.n(i),
+                s = n("446674"),
+                r = n("913144"),
+                d = n("309570"),
+                c = n("32346"),
+                o = n("271938"),
+                f = n("697218"),
+                _ = n("49111");
+            let g = Object.freeze([]),
+                S = {},
+                E = {},
+                v = {},
+                p = {},
+                T = {};
 
-            function d(e, i) {
-                return (0, t.useStateFromStores)([n.default, o.default], () => a(e, i, [n.default, o.default]))
+            function I(t, e) {
+                let n = S[t];
+                return null != n ? n[e] : null
             }
-            let s = (0, r.cachedFunction)((e, i) => new u.default(e, i));
+            let A = t => {
+                    switch (t.type) {
+                        case _.ActivityTypes.CUSTOM_STATUS:
+                            return 4;
+                        case _.ActivityTypes.COMPETING:
+                            return 3;
+                        case _.ActivityTypes.STREAMING:
+                            return 2;
+                        case _.ActivityTypes.PLAYING:
+                            return 1;
+                        default:
+                            return 0
+                    }
+                },
+                h = t => (0, d.default)(t) ? 1 : 0;
 
-            function a(e, i) {
-                let [l, t] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [n.default, o.default], r = l.getUser(e), u = t.getUserProfile(e), d = t.getGuildMemberProfile(e, i);
-                return null == r || null == u ? null : s(u, d)
+            function y(t, e) {
+                var n, l, u, i, a;
+                return n = t, A(e) - A(n) || (l = t, h(e) - h(l)) || (u = t, (null !== (i = e.created_at) && void 0 !== i ? i : 0) - (null !== (a = u.created_at) && void 0 !== a ? a : 0))
             }
+
+            function m(t) {
+                if (delete E[t], delete v[t], delete p[t], null == S[t]) return;
+                let [e] = a.sortBy(S[t], t => -t.timestamp);
+                e.status !== _.StatusTypes.OFFLINE ? (E[t] = e.status, v[t] = e.activities, null != e.clientStatus && (p[t] = e.clientStatus)) : a.every(S[t], t => t.status === _.StatusTypes.OFFLINE) && delete S[t]
+            }
+
+            function N(t) {
+                let e = S[t];
+                if (null == e) return;
+                let n = a.maxBy(Object.values(e), t => t.timestamp);
+                n.status !== _.StatusTypes.OFFLINE && (E[t] = n.status, v[t] = n.activities, null != n.clientStatus && (p[t] = n.clientStatus))
+            }
+
+            function C(t) {
+                let {
+                    guildId: e,
+                    userId: n,
+                    status: l,
+                    clientStatus: i,
+                    activities: a
+                } = t;
+                if (n === o.default.getId()) return !1;
+                let s = S[n];
+                if (null == s) {
+                    if (l === _.StatusTypes.OFFLINE) return !1;
+                    s = S[n] = {}
+                }
+                if (l === _.StatusTypes.OFFLINE) s[e] = {
+                    status: l,
+                    clientStatus: i,
+                    activities: g,
+                    timestamp: Date.now()
+                };
+                else {
+                    let t = a.length > 1 ? [...a].sort(y) : a,
+                        n = s[e];
+                    a = null != n && u(n.activities, t) ? n.activities : t, s[e] = {
+                        status: l,
+                        clientStatus: i,
+                        activities: a,
+                        timestamp: Date.now()
+                    }
+                }
+                return delete T[n], m(n), !0
+            }
+
+            function O(t) {
+                let {
+                    guildId: e,
+                    userId: n,
+                    status: l,
+                    clientStatus: u,
+                    activities: i,
+                    timestamp: a
+                } = t;
+                if (n === o.default.getId()) return;
+                let s = S[n];
+                if (null == s) {
+                    if (l === _.StatusTypes.OFFLINE) return;
+                    s = S[n] = {}
+                }
+                if (l === _.StatusTypes.OFFLINE) s[e] = {
+                    status: l,
+                    clientStatus: u,
+                    activities: g,
+                    timestamp: Date.now()
+                };
+                else {
+                    let t = i.length > 1 ? [...i].sort(y) : i;
+                    s[e] = {
+                        status: l,
+                        clientStatus: u,
+                        activities: t,
+                        timestamp: a
+                    }
+                }
+            }
+
+            function L(t, e) {
+                if (e === o.default.getId()) return !1;
+                let n = S[e];
+                if (null == n || null == n[t]) return !1;
+                delete n[t], 0 === Object.keys(n).length && delete S[e], m(e)
+            }
+
+            function M(t) {
+                for (let e of Object.keys(S)) L(t, e)
+            }
+            class U extends s.default.Store {
+                initialize() {
+                    this.waitFor(o.default, c.default)
+                }
+                setCurrentUserOnConnectionOpen(t, e) {
+                    E[o.default.getId()] = t, v[o.default.getId()] = e
+                }
+                getStatus(t) {
+                    var e, n;
+                    let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                        u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.StatusTypes.OFFLINE,
+                        i = f.default.getUser(t);
+                    if (null != i && i.hasFlag(_.UserFlags.BOT_HTTP_INTERACTIONS) && (u = _.StatusTypes.UNKNOWN), null == i ? void 0 : i.isClyde()) return _.StatusTypes.ONLINE;
+                    if (null == l) return null !== (e = E[t]) && void 0 !== e ? e : u;
+                    let a = I(t, l);
+                    return null !== (n = null == a ? void 0 : a.status) && void 0 !== n ? n : u
+                }
+                getActivities(t) {
+                    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+                    if (null == e) {
+                        var n;
+                        return null !== (n = v[t]) && void 0 !== n ? n : g
+                    }
+                    let l = I(t, e);
+                    return null == l || null == l.activities ? g : l.activities
+                }
+                getPrimaryActivity(t) {
+                    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                        n = this.getActivities(t, e);
+                    return n[0]
+                }
+                getAllApplicationActivities(t) {
+                    let e = [];
+                    for (let n of Object.keys(v)) {
+                        let l = v[n];
+                        for (let u of l) u.application_id === t && e.push({
+                            userId: n,
+                            activity: u
+                        })
+                    }
+                    return e
+                }
+                getApplicationActivity(t, e) {
+                    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+                    return this.findActivity(t, t => t.application_id === e, n)
+                }
+                findActivity(t, e) {
+                    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+                    return this.getActivities(t, n).find(e)
+                }
+                getActivityMetadata(t) {
+                    return T[t]
+                }
+                getUserIds() {
+                    return Object.keys(v)
+                }
+                isMobileOnline(t) {
+                    let e = p[t];
+                    return null != e && e[_.ClientTypes.MOBILE] === _.StatusTypes.ONLINE && e[_.ClientTypes.DESKTOP] !== _.StatusTypes.ONLINE
+                }
+                getState() {
+                    return {
+                        presencesForGuilds: S,
+                        statuses: E,
+                        activities: v,
+                        activityMetadata: T,
+                        clientStatuses: p
+                    }
+                }
+            }
+            U.displayName = "PresenceStore";
+            var D = new U(r.default, {
+                CONNECTION_OPEN: function() {
+                    return !0
+                },
+                CONNECTION_OPEN_SUPPLEMENTAL: function(t) {
+                    let {
+                        guilds: e,
+                        presences: n
+                    } = t, l = o.default.getId();
+                    S = {}, T = {}, E = {
+                        [l]: E[l]
+                    }, v = {
+                        [l]: v[l]
+                    }, p = {
+                        [l]: {}
+                    };
+                    let u = new Set,
+                        i = Date.now();
+                    e.forEach(t => {
+                        t.presences.forEach(e => {
+                            let {
+                                user: n,
+                                status: l,
+                                clientStatus: a,
+                                activities: s
+                            } = e;
+                            O({
+                                guildId: t.id,
+                                userId: n.id,
+                                status: l,
+                                clientStatus: a,
+                                activities: s,
+                                timestamp: i
+                            }), u.add(n.id)
+                        })
+                    }), n.forEach(t => {
+                        let {
+                            user: e,
+                            status: n,
+                            clientStatus: l,
+                            activities: a
+                        } = t;
+                        null != e && (O({
+                            guildId: _.ME,
+                            userId: e.id,
+                            status: n,
+                            clientStatus: l,
+                            activities: a,
+                            timestamp: i
+                        }), u.add(e.id))
+                    }), u.delete(l), u.forEach(N)
+                },
+                OVERLAY_INITIALIZE: function(t) {
+                    let {
+                        presences: e
+                    } = t;
+                    S = e.presencesForGuilds, E = e.statuses, v = e.activities, T = e.activityMetadata
+                },
+                GUILD_CREATE: function(t) {
+                    let {
+                        guild: e
+                    } = t;
+                    e.presences.forEach(t => {
+                        let {
+                            user: n,
+                            status: l,
+                            clientStatus: u,
+                            activities: i
+                        } = t;
+                        C({
+                            guildId: e.id,
+                            userId: n.id,
+                            status: l,
+                            clientStatus: u,
+                            activities: i
+                        })
+                    })
+                },
+                GUILD_DELETE: function(t) {
+                    let {
+                        guild: e
+                    } = t;
+                    M(e.id)
+                },
+                GUILD_MEMBER_REMOVE: function(t) {
+                    let {
+                        guildId: e,
+                        user: n
+                    } = t;
+                    return L(e, n.id)
+                },
+                PRESENCE_UPDATES: function(t) {
+                    let {
+                        updates: e
+                    } = t;
+                    return e.map(t => {
+                        let {
+                            guildId: e,
+                            user: n,
+                            status: l,
+                            clientStatus: u,
+                            activities: i
+                        } = t;
+                        return C({
+                            guildId: null != e ? e : _.ME,
+                            userId: n.id,
+                            status: l,
+                            clientStatus: u,
+                            activities: i
+                        })
+                    }).some(t => t)
+                },
+                PRESENCES_REPLACE: function(t) {
+                    let {
+                        presences: e
+                    } = t;
+                    M(_.ME), e.forEach(t => {
+                        let {
+                            user: e,
+                            status: n,
+                            clientStatus: l,
+                            activities: u
+                        } = t;
+                        null != e && C({
+                            guildId: _.ME,
+                            userId: e.id,
+                            status: n,
+                            clientStatus: l,
+                            activities: u
+                        })
+                    })
+                },
+                ACTIVITY_METADATA_UPDATE: function(t) {
+                    let {
+                        userId: e,
+                        metadata: n
+                    } = t;
+                    return T[e] = n, !1
+                },
+                THREAD_MEMBER_LIST_UPDATE: function(t) {
+                    let {
+                        guildId: e,
+                        members: n
+                    } = t;
+                    n.forEach(t => {
+                        null != t.presence && C({
+                            guildId: e,
+                            userId: t.user_id,
+                            status: t.presence.status,
+                            clientStatus: t.presence.clientStatus,
+                            activities: t.presence.activities
+                        })
+                    })
+                },
+                THREAD_MEMBERS_UPDATE: function(t) {
+                    let {
+                        guildId: e,
+                        addedMembers: n
+                    } = t;
+                    null == n || n.forEach(t => {
+                        null != t.presence && C({
+                            guildId: e,
+                            userId: t.userId,
+                            status: t.presence.status,
+                            clientStatus: t.presence.clientStatus,
+                            activities: t.presence.activities
+                        })
+                    })
+                },
+                SELF_PRESENCE_STORE_UPDATE: function(t) {
+                    let e = o.default.getId();
+                    if (E[e] === t.status && v[e] === t.activities) return !1;
+                    E[e] = t.status, v[e] = t.activities, delete T[e]
+                }
+            })
         }
     }
 ]);
