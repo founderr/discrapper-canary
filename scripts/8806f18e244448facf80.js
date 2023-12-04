@@ -1746,7 +1746,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "250907"
+                        buildNumber: "250912"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -9374,7 +9374,7 @@
                 V = !1;
 
             function Y(e) {
-                b.log("Clearing cache store"), F = Date.now(), D.default.clear(), i.default.remove(U.CACHE_STORE_KEY), i.default.remove(U.CACHE_STORE_LAZY_KEY), i.default.remove(U.CACHE_STORE_CHANNELS_LAZY_KEY), (0, v.removeFile)("cache", U.CACHE_STORE_KEY), (0, v.removeFile)("cache", U.CACHE_STORE_LAZY_KEY), C.default.replaceDisableAllDatabases("CacheStore (".concat(e, ")")), k = "no-cache"
+                b.log("Clearing cache store"), F = Date.now(), D.default.clear(), i.default.remove(U.CACHE_STORE_KEY), i.default.remove(U.CACHE_STORE_LAZY_KEY), i.default.remove(U.CACHE_STORE_CHANNELS_LAZY_KEY), (0, v.removeFile)("cache", U.CACHE_STORE_FILE_KEY), (0, v.removeFile)("cache", U.CACHE_STORE_LAZY_FILE_KEY), C.default.replaceDisableAllDatabases("CacheStore (".concat(e, ")")), k = "no-cache"
             }
 
             function W() {
@@ -9427,7 +9427,7 @@
                             return A.default.getAllReadStates(!1)
                         }()
                     };
-                B = !0, i.default.remove(U.CACHE_STORE_KEY), i.default.remove(U.CACHE_STORE_LAZY_KEY), i.default.remove(U.CACHE_STORE_CHANNELS_LAZY_KEY), await (0, v.writeFile)("cache", U.CACHE_STORE_KEY, JSON.stringify(t), "utf8"), await q()
+                B = !0, i.default.remove(U.CACHE_STORE_KEY), i.default.remove(U.CACHE_STORE_LAZY_KEY), i.default.remove(U.CACHE_STORE_CHANNELS_LAZY_KEY), await (0, v.writeFile)("cache", U.CACHE_STORE_FILE_KEY, JSON.stringify(t), "utf8"), await q()
             }
             async function q() {
                 let e = Date.now().toString(),
@@ -9439,7 +9439,7 @@
                 b.verbose("Writing lazy cache (nonce: ".concat(e, ")")), r.default.dispatch({
                     type: "WRITE_CACHES",
                     nonce: e
-                }), await (0, v.writeFile)("cache", U.CACHE_STORE_LAZY_KEY, JSON.stringify(t), "utf8"), D.default.persist(e)
+                }), await (0, v.writeFile)("cache", U.CACHE_STORE_LAZY_FILE_KEY, JSON.stringify(t), "utf8"), D.default.persist(e)
             }
 
             function Q() {
@@ -9486,7 +9486,7 @@
             async function J() {
                 let e = performance.now(),
                     t = await new Promise(async e => {
-                        let t = await (0, v.readFile)("cache", U.CACHE_STORE_KEY, "utf8");
+                        let t = await (0, v.readFile)("cache", U.CACHE_STORE_FILE_KEY, "utf8");
                         null != t ? e(JSON.parse(t)) : i.default.asyncGet(U.CACHE_STORE_KEY, e)
                     });
                 return (null == t ? void 0 : t.version) === j ? (Z(t), [performance.now() - e, t]) : (b.log("cache either did not exist, or contains an incompatible version (required: ".concat(j, ", loaded: ").concat(null == t ? void 0 : t.version, ").")), [performance.now() - e, null])
@@ -9549,7 +9549,7 @@
             async function et(e, t, n, s, l) {
                 b.verbose("loading late lazy cache");
                 let [E, _, C, h, S] = await T.default.fetchLazyCache.measureAsync(() => Promise.all([a.default.timeAsync("\uD83D\uDCBE", "storage: ".concat(U.CACHE_STORE_LAZY_KEY), async () => {
-                    let e = await (0, v.readFile)("cache", U.CACHE_STORE_LAZY_KEY, "utf8");
+                    let e = await (0, v.readFile)("cache", U.CACHE_STORE_LAZY_FILE_KEY, "utf8");
                     return null != e ? e : i.default.asyncGetRaw(U.CACHE_STORE_LAZY_KEY)
                 }), (0, o.tryLoadAsync)(() => null != e ? a.default.timeAsync("\uD83D\uDCBE", "kv: cache_version", () => c.default.okAsync(e)) : Promise.resolve(!0)), (0, o.tryLoadAsync)(() => null != e ? a.default.timeAsync("\uD83D\uDCBE", "kv: guilds", () => d.default.getAsync(e)) : Promise.resolve([])), (0, o.tryLoadAsync)(() => null != e ? a.default.timeAsync("\uD83D\uDCBE", "kv: basic_channels", () => u.default.getAsync(e)) : Promise.resolve({
                     all: [],
