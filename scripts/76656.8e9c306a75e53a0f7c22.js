@@ -185,7 +185,7 @@
                     box: "#DB6D6D",
                     ribbon: "#67DA9C"
                 }],
-                y = [{
+                k = [{
                     box: "#EABB75",
                     ribbon: "#E4595C"
                 }, {
@@ -207,7 +207,7 @@
                     box: "#DB6F6F",
                     ribbon: "#81C29F"
                 }],
-                k = 1 / 300,
+                y = 1 / 300,
                 O = A.default.Millis.DAYS_30,
                 Z = (0, n.animated)(_.default),
                 G = (0, n.animated)(E.default),
@@ -217,19 +217,23 @@
                 let {
                     themeOverride: t,
                     hovered: s,
-                    isContentDismissed: l
-                } = e, C = (0, c.default)(), [a, d] = function(e) {
+                    isContentDismissed: l,
+                    boxColors: C = {
+                        dark: I,
+                        light: k
+                    }
+                } = e, a = (0, c.default)(), [d, u] = function(e) {
                     let [t, s] = o.useState(!1), [i, n] = o.useState(Math.floor(7 * Math.random()));
                     return o.useEffect(() => {
                         if (e) return;
-                        let t = Math.random() <= k;
+                        let t = Math.random() <= y;
                         if (s(t), !t) {
                             let e;
                             do e = Math.floor(7 * Math.random()); while (e === i);
                             n(e)
                         }
                     }, [e]), [t, i]
-                }(s), u = (0, n.useSpring)({
+                }(s), f = (0, n.useSpring)({
                     reverse: !s,
                     reset: !0,
                     from: {
@@ -242,14 +246,14 @@
                         tension: 800,
                         friction: 24
                     }
-                }), f = l ? d : 0, p = (0, r.isThemeDark)(null != t ? t : C) ? I[f] : y[f];
-                return !s && l ? (0, i.jsx)(H, {}) : l && a ? (0, i.jsx)(G, {
-                    isDark: (0, r.isThemeDark)(C),
-                    style: u
+                }), p = l ? u : 0, x = (0, r.isThemeDark)(null != t ? t : a) ? C.dark[p] : C.light[p];
+                return !s && l ? (0, i.jsx)(H, {}) : l && d ? (0, i.jsx)(G, {
+                    isDark: (0, r.isThemeDark)(a),
+                    style: f
                 }) : (0, i.jsx)(Z, {
-                    boxColor: p.box,
-                    ribbonColor: p.ribbon,
-                    style: u
+                    boxColor: x.box,
+                    ribbonColor: x.ribbon,
+                    style: f
                 })
             }
             var R = o.memo(function(e) {
@@ -264,8 +268,8 @@
                     location: "ChannelPremiumGiftButton"
                 }, {
                     autoTrackExposure: !1
-                }), I = (0, N.useDirectMessageRecipient)(s), y = null != I, {
-                    enabled: k
+                }), I = (0, N.useDirectMessageRecipient)(s), k = null != I, {
+                    enabled: y
                 } = m.ExpandedGiftingRevampExperiment.useExperiment({
                     location: "ChannelPremiumGiftButton"
                 }, {
@@ -298,7 +302,7 @@
                         children: [Z && (0, i.jsx)(u.default, {
                             onComplete: () => c(!1),
                             onDMCheckItOutClick: G,
-                            isDM: y
+                            isDM: k
                         }), (0, i.jsx)(M.default, {
                             innerClassName: B.button,
                             "aria-label": T.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
@@ -316,7 +320,7 @@
                     });
                 return Z ? H : (0, i.jsx)(d.TooltipContainer, {
                     className: S.container,
-                    text: (0, u.getSeasonalGiftingBody)(y, k),
+                    text: (0, u.getSeasonalGiftingBody)(k, y),
                     children: H
                 })
             })
