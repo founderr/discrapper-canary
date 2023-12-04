@@ -2643,7 +2643,8 @@
                     [p.SubscriptionStatusTypes.PAST_DUE]: "Past Due",
                     [p.SubscriptionStatusTypes.CANCELED]: "Canceled",
                     [p.SubscriptionStatusTypes.ENDED]: "Ended",
-                    [p.SubscriptionStatusTypes.ACCOUNT_HOLD]: "Account Hold"
+                    [p.SubscriptionStatusTypes.ACCOUNT_HOLD]: "Account Hold",
+                    [p.SubscriptionStatusTypes.PAUSED]: "Paused"
                 },
                 b = [{
                     label: "Unpaid",
@@ -2663,6 +2664,9 @@
                 }, {
                     label: "Account Hold",
                     value: p.SubscriptionStatusTypes.ACCOUNT_HOLD
+                }, {
+                    label: "Paused",
+                    value: p.SubscriptionStatusTypes.PAUSED
                 }],
                 x = {
                     "511651880837840896": "Nitro Monthly",

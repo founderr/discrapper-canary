@@ -22063,17 +22063,21 @@
                 r = n("998716");
 
             function u(e) {
-                return (0, i.useStateFromStores)([s.default, l.default], () => {
-                    let t = s.default.getMutableParticipants(e, r.StageChannelParticipantNamedIndex.SPEAKER),
-                        n = null != t.find(e => e.type === r.StageChannelParticipantTypes.STREAM);
-                    return n || l.default.hasVideo(e)
-                }, [e])
+                let t = function(e) {
+                        return (0, i.useStateFromStores)([s.default], () => {
+                            let t = s.default.getMutableParticipants(e, r.StageChannelParticipantNamedIndex.SPEAKER);
+                            return null != t.find(e => e.type === r.StageChannelParticipantTypes.STREAM)
+                        }, [e])
+                    }(e),
+                    n = (0, i.useStateFromStores)([l.default], () => l.default.hasVideo(e), [e]);
+                return n || t
             }
 
             function o(e) {
-                let t = s.default.getMutableParticipants(e, r.StageChannelParticipantNamedIndex.SPEAKER),
-                    n = null != t.find(e => e.type === r.StageChannelParticipantTypes.STREAM);
-                return n || l.default.hasVideo(e)
+                return function(e) {
+                    let t = s.default.getMutableParticipants(e, r.StageChannelParticipantNamedIndex.SPEAKER);
+                    return null != t.find(e => e.type === r.StageChannelParticipantTypes.STREAM)
+                }(e) || l.default.hasVideo(e)
             }
 
             function d(e) {
