@@ -161,6 +161,39 @@
                 });
             e.exports = n
         },
+        584811: function(e, t, s) {
+            var a = s("818477");
+            t.encode = a.encode, t.decode = a.decode
+        },
+        818477: function(e, t, s) {
+            var a = s("446825").Buffer;
+            s("70102");
+            var n = [255, 255, 26, 27, 28, 29, 30, 31, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 255, 255, 255, 255, 255, 255, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 255, 255, 255, 255, 255];
+            t.encode = function(e) {
+                !a.isBuffer(e) && (e = new a(e));
+                var t, s, n = 0,
+                    l = 0,
+                    i = 0,
+                    r = 0;
+                for (var o = new a(8 * (s = Math.floor((t = e).length / 5), t.length % 5 == 0 ? s : s + 1)); n < e.length;) {
+                    var d = e[n];
+                    i > 3 ? (r = (r = d & 255 >> i) << (i = (i + 5) % 8) | (n + 1 < e.length ? e[n + 1] : 0) >> 8 - i, n++) : (r = d >> 8 - (i + 5) & 31, 0 == (i = (i + 5) % 8) && n++), o[l] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567".charCodeAt(r), l++
+                }
+                for (n = l; n < o.length; n++) o[n] = 61;
+                return o
+            }, t.decode = function(e) {
+                var t, s = 0,
+                    l = 0,
+                    i = 0;
+                !a.isBuffer(e) && (e = new a(e));
+                for (var r = new a(Math.ceil(5 * e.length / 8)), o = 0; o < e.length && 61 != e[o]; o++) {
+                    var d = e[o] - 48;
+                    if (d < n.length) l = n[d], s <= 3 ? 0 == (s = (s + 5) % 8) ? (t |= l, r[i] = t, i++, t = 0) : t |= 255 & l << 8 - s : (t |= 255 & l >>> (s = (s + 5) % 8), r[i] = t, i++, t = 255 & l << 8 - s);
+                    else throw Error("Invalid input - it is not base32 encoded string")
+                }
+                return r.slice(0, i)
+            }
+        },
         337695: function(e, t, s) {
             "use strict";
             e.exports = s.p + "d29a5e9ac3e2efa42e40.svg"
@@ -9924,7 +9957,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "66683d42354bc1aef3f51e2bc748ec7ba319ad41", e.substring(0, 7)),
+                    S = (e = "cf52e24e7456c064aa6b6e5f930ee743cb0db364", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -9937,7 +9970,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "251157", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "251160", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
@@ -25600,6 +25633,48 @@
                     };
                     return t[e]
                 }
+        },
+        222038: function(e, t, s) {
+            "use strict";
+            s.r(t), s.d(t, {
+                hasCrypto: function() {
+                    return d
+                },
+                hasWebAuthn: function() {
+                    return u
+                },
+                generateTotpSecret: function() {
+                    return c
+                },
+                encodeTotpSecret: function() {
+                    return S
+                },
+                encodeTotpSecretAsUrl: function() {
+                    return E
+                }
+            }), s("311790"), s("477657"), s("811875"), s("90301"), s("652153"), s("28797"), s("817884"), s("597349"), s("667536"), s("690341"), s("781738");
+            var a, n, l, i = s("584811");
+            let r = null !== (l = null === (a = window) || void 0 === a ? void 0 : a.crypto) && void 0 !== l ? l : null === (n = window) || void 0 === n ? void 0 : n.msCrypto,
+                o = "Uint8Array" in window,
+                d = null != r && "getRandomValues" in r && o,
+                u = "PublicKeyCredential" in window && o;
+
+            function c() {
+                var e;
+                return function(e) {
+                    let t = i.encode(e).toString("utf8").replace(/=/g, "");
+                    return t.toLowerCase().replace(/(\w{4})/g, "$1 ").trim()
+                }((e = 20, r.getRandomValues(new Uint8Array(20))))
+            }
+
+            function S(e) {
+                return e.replace(/[\s._-]+/g, "").toUpperCase()
+            }
+
+            function E(e, t) {
+                let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "Discord";
+                return "otpauth://totp/".concat(encodeURI(s), ":").concat(encodeURI(e), "?secret=").concat(S(t), "&issuer=").concat(encodeURIComponent(s))
+            }
         },
         241088: function(e, t, s) {
             "use strict";

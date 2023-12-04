@@ -581,7 +581,6 @@
                         case E.LoginStates.MFA_SMS_STEP:
                         case E.LoginStates.LOGGING_IN_MFA:
                         case E.LoginStates.MFA_STEP:
-                        case E.LoginStates.MFA_WEBAUTHN_STEP:
                             return this.renderMFA();
                         case E.LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION:
                         case E.LoginStates.ACCOUNT_DISABLED:
