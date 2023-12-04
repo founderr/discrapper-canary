@@ -26189,7 +26189,7 @@
                                 onClick: e => {
                                     e.stopPropagation(), null == t || t(), D()
                                 },
-                                className: i(ee.status, ee.interactive),
+                                className: i(ee.interactive),
                                 children: (0, a.jsx)(B.default, {})
                             })
                         }
@@ -26220,7 +26220,7 @@
                                 onClick: e => {
                                     e.stopPropagation(), null == t || t(), D()
                                 },
-                                className: i(ee.status, ee.interactive, ee.toggleMute),
+                                className: i(ee.interactive, ee.toggleMute),
                                 children: (0, a.jsx)(V.default, {})
                             })
                         }
@@ -26228,9 +26228,7 @@
                 }
                 return _ && M.default.supports(Q.Features.VIDEO) || !g ? _ && g && I && !Y && (k = (0, a.jsx)(y.default, {
                     foreground: ee.localMuteStrikethrough
-                })) : k = (0, a.jsx)(O.default, {
-                    className: ee.status
-                }), A === J.ParticipantTypes.STREAM && !x && g && (H = (0, a.jsx)(h.Tooltip, {
+                })) : k = (0, a.jsx)(O.default, {}), A === J.ParticipantTypes.STREAM && !x && g && (H = (0, a.jsx)(h.Tooltip, {
                     text: $.default.Messages.OPTIONS,
                     children: e => {
                         let {

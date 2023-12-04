@@ -1,831 +1,747 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["60499"], {
-        340616: function(e, t, r) {
+    ["22198"], {
+        335189: function(e, t, r) {
             "use strict";
             r.r(t), r.d(t, {
-                default: function() {
+                saveClydeProfile: function() {
+                    return s
+                },
+                addClydeGuildMember: function() {
                     return c
-                }
-            });
-            var n = r("37983"),
-                l = r("884691"),
-                i = r("132710"),
-                a = r.n(i),
-                s = r("77078"),
-                u = r("812204"),
-                d = r("685665"),
-                o = r("128259"),
-                c = l.memo(function(e) {
-                    let {
-                        onClick: t,
-                        trusted: r,
-                        title: i,
-                        href: c,
-                        children: f,
-                        messageId: v,
-                        channelId: g,
-                        ...h
-                    } = e, {
-                        analyticsLocations: E
-                    } = (0, d.default)(u.default.MASKED_LINK), C = l.useCallback(t => (0, o.handleClick)(e, t, E), [E, e]), I = l.useCallback(e => {
-                        1 === e.button && C(e)
-                    }, [C]), R = a.sanitizeUrl(c);
-                    return (0, n.jsx)(s.Anchor, {
-                        ...h,
-                        title: i,
-                        target: "_blank",
-                        rel: "noreferrer noopener",
-                        href: R,
-                        onClick: C,
-                        onAuxClick: I,
-                        children: null != f ? f : i
-                    })
-                })
-        },
-        225389: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                CircleInformationIcon: function() {
-                    return a
-                }
-            });
-            var n = r("37983");
-            r("884691");
-            var l = r("669491"),
-                i = r("75196");
-            let a = e => {
-                let {
-                    width: t = 24,
-                    height: r = 24,
-                    secondaryColor: a = "transparent",
-                    secondaryColorClass: s = "",
-                    color: u = l.default.colors.INTERACTIVE_NORMAL,
-                    colorClass: d = "",
-                    ...o
-                } = e;
-                return (0, n.jsxs)("svg", {
-                    ...(0, i.default)(o),
-                    xmlns: "http://www.w3.org/2000/svg",
-                    width: t,
-                    height: r,
-                    fill: "none",
-                    viewBox: "0 0 24 24",
-                    children: [(0, n.jsx)("circle", {
-                        cx: "12",
-                        cy: "12",
-                        r: "10",
-                        fill: "string" == typeof a ? a : a.css,
-                        className: s
-                    }), (0, n.jsx)("path", {
-                        fill: "string" == typeof u ? u : u.css,
-                        fillRule: "evenodd",
-                        d: "M23 12a11 11 0 1 1-22 0 11 11 0 0 1 22 0Zm-9.5-4.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Zm-.77 3.96a1 1 0 1 0-1.96-.42l-1.04 4.86a2.77 2.77 0 0 0 4.31 2.83l.24-.17a1 1 0 1 0-1.16-1.62l-.24.17a.77.77 0 0 1-1.2-.79l1.05-4.86Z",
-                        clipRule: "evenodd",
-                        className: d
-                    })]
-                })
-            }
-        },
-        960460: function(e, t, r) {
-            "use strict";
-            let n;
-            r.r(t), r.d(t, {
-                applyStaffBuildOverride: function() {
+                },
+                generatePersonality: function() {
                     return d
                 },
-                applyPublicBuildOverride: function() {
-                    return o
+                setPendingPersonality: function() {
+                    return _
                 },
-                clearBuildOverride: function() {
-                    return c
+                setPendingNick: function() {
+                    return p
                 },
-                getPublicBuildOverrideLink: function() {
-                    return f
+                setPendingAvatar: function() {
+                    return y
+                },
+                setPendingBanner: function() {
+                    return S
+                },
+                setPendingThemeColors: function() {
+                    return T
+                },
+                resetPendingChanges: function() {
+                    return I
+                },
+                fetchClydeSettings: function() {
+                    return C
+                },
+                fetchClydeProfile: function() {
+                    return A
+                },
+                createClydeProfile: function() {
+                    return L
+                },
+                startEditingClydeProfile: function() {
+                    return m
+                },
+                doneEditingClydeProfile: function() {
+                    return D
                 }
             });
-            var l = r("872717"),
-                i = r("271938"),
-                a = r("922932"),
-                s = r("355025");
-            let u = "/__development/build_overrides";
+            var n = r("872717"),
+                u = r("913144"),
+                i = r("327037"),
+                l = r("599110"),
+                o = r("473591"),
+                a = r("680894"),
+                f = r("49111");
+            async function s(e, t) {
+                let r = await E(e, t);
+                return r
+            }
+            async function c(e) {
+                return await n.default.put({
+                    url: f.Endpoints.GUILD_CLYDE_ADD_MEMBER(e),
+                    oldFormErrors: !0
+                })
+            }
             async function d(e) {
                 try {
-                    var t;
-                    let r = await l.default.put({
-                        url: (0, s.getAPIEndpoint)(u),
+                    let t = await n.default.post({
+                        url: f.Endpoints.CLYDE_PROFILES_GENERATE_PERSONALITY,
+                        oldFormErrors: !0,
                         body: {
-                            overrides: e,
-                            version: s.APP_VERSION
-                        },
-                        headers: {
-                            Authorization: null !== (t = i.default.getToken()) && void 0 !== t ? t : ""
-                        },
-                        oldFormErrors: !0
+                            personality: e
+                        }
                     });
-                    return await n(r), r
+                    if (t.ok) return t.body.personality;
+                    return null
                 } catch (e) {
-                    return e
+                    return null
                 }
             }
-            async function o(e) {
-                try {
-                    let t = await l.default.put({
-                        url: (0, s.getAPIEndpoint)("/__development/link"),
-                        body: {
-                            payload: e,
-                            token: i.default.getToken(),
-                            version: s.APP_VERSION
-                        },
-                        oldFormErrors: !0
-                    });
-                    return await n(t), t
-                } catch (e) {
-                    return e
-                }
-            }
-            async function c() {
-                let e = await l.default.delete({
-                    url: (0, s.getAPIEndpoint)(u),
-                    oldFormErrors: !0
+            async function E(e, t) {
+                u.default.dispatch({
+                    type: "CLYDE_GUILD_SETTINGS_SAVE_START"
                 });
-                return await n(e), e
-            }
-
-            function f(e) {
-                var t;
-                return l.default.post({
-                    url: (0, s.getAPIEndpoint)("/__development/create_build_override_link"),
-                    body: e,
-                    headers: {
-                        Authorization: null !== (t = i.default.getToken()) && void 0 !== t ? t : ""
-                    },
-                    oldFormErrors: !0
-                }).then(e => ({
-                    url: e.body.url,
-                    error: !1
-                }), e => 400 === e.status ? {
-                    url: !1,
-                    error: e.body
-                } : {
-                    url: !1,
-                    error: "Error making API request (".concat(e.status, ")")
-                })
-            }
-            n = async e => {
+                let r = null != t.personality && o.default.getGeneratedPersonality() === o.default.getPendingPersonality();
                 try {
-                    await a.default.flushCookies()
-                } catch (e) {}
-            }
-        },
-        489740: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                State: function() {
-                    return l
-                },
-                default: function() {
-                    return f
-                }
-            });
-            var n, l, i = r("446674"),
-                a = r("913144"),
-                s = r("355025");
-            (n = l || (l = {}))[n.NotResolved = 0] = "NotResolved", n[n.Resolving = 1] = "Resolving", n[n.Resolved = 2] = "Resolved", n[n.Invalid = 3] = "Invalid";
-            let u = 0,
-                d = null,
-                o = {};
-            class c extends i.default.Store {
-                getCurrentBuildOverride() {
-                    return 0 === u && (u = 1, (0, s.getBuildOverride)().then(e => {
-                        a.default.dispatch({
-                            type: "CURRENT_BUILD_OVERRIDE_RESOLVED",
-                            overrides: e
-                        })
-                    })), {
-                        state: u,
-                        overrides: d
-                    }
-                }
-                getBuildOverride(e) {
-                    return ! function(e) {
-                        if (e in o) return;
-                        let t = (0, s.validateURL)(e);
-                        if (null == t) {
-                            o = {
-                                ...o,
-                                [e]: {
-                                    url: e,
-                                    state: 3
-                                }
-                            };
-                            return
+                    var i, s;
+                    let o = await n.default.patch({
+                        url: f.Endpoints.GUILD_CLYDE_SETTINGS(e),
+                        oldFormErrors: !0,
+                        body: {
+                            ...t,
+                            personality_preset: r ? "generated" : "custom"
                         }
-                        o = {
-                            ...o,
-                            [e]: {
-                                url: e,
-                                validatedURL: t.url,
-                                payload: String(t.payload),
-                                state: 1
-                            }
-                        };
-                        (0, s.getBuildOverrideMeta)(t.url).then(t => {
-                            a.default.dispatch({
-                                type: "BUILD_OVERRIDE_RESOLVED",
-                                url: e,
-                                override: t
-                            })
-                        })
-                    }(e), o[e]
-                }
-                getBuildOverrides() {
-                    return o
-                }
-            }
-            c.displayName = "BuildOverrideStore";
-            var f = new c(a.default, {
-                BUILD_OVERRIDE_RESOLVED: function(e) {
-                    let {
-                        url: t,
-                        override: r
-                    } = e;
-                    o = {
-                        ...o,
-                        [t]: {
-                            ...o[t],
-                            state: null == r ? 3 : 2,
-                            override: r
-                        }
-                    }
-                },
-                CURRENT_BUILD_OVERRIDE_RESOLVED: function(e) {
-                    let {
-                        overrides: t
-                    } = e;
-                    u = 2, d = t
-                }
-            })
-        },
-        161449: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                default: function() {
-                    return d
-                }
-            });
-            var n = r("917351"),
-                l = r.n(n),
-                i = r("271938"),
-                a = r("180855"),
-                s = r("49111"),
-                u = r("782340");
-
-            function d(e, t, r) {
-                if (null == e || null == t) return {
-                    valid: !1,
-                    reason: u.default.Messages.BUILD_OVERRIDE_INVALID
-                };
-                let {
-                    releaseChannel: n,
-                    expiresAt: d,
-                    validForUserIds: o,
-                    allowedVersions: c,
-                    targetBuildOverride: f
-                } = e, v = Object.keys(f);
-                if (0 === l.intersection(v, t).length) return {
-                    valid: !1,
-                    reason: u.default.Messages.BUILD_OVERRIDE_INCOMPATIBLE_TARGETS.format({
-                        requestedTargets: v.map(e => {
-                            var t;
-                            return null !== (t = a.BUILD_OVERRIDE_TARGET_NAMES[e]) && void 0 !== t ? t : "unknown"
-                        }).join(", ")
-                    })
-                };
-                if (null != n && n !== window.GLOBAL_ENV.RELEASE_CHANNEL) {
-                    let e = n === s.PublicReleaseChannels.PTB ? n.toUpperCase() : "".concat(n.charAt(0).toUpperCase()).concat(n.slice(1));
-                    return {
-                        valid: !1,
-                        reason: u.default.Messages.BUILD_OVERRIDE_INCOMPATIBLE_CLIENT.format({
-                            releaseChannel: e
-                        })
-                    }
-                }
-                if (null != c && (null == r || !c.includes(r))) return {
-                    valid: !1,
-                    reason: u.default.Messages.BUILD_OVERRIDE_INCOMPATIBLE_CLIENT.format({
-                        releaseChannel: c.join(", ")
-                    })
-                };
-                let g = null != d ? new Date(d).getTime() : null;
-                return null != g && g < Date.now() ? {
-                    valid: !1,
-                    reason: u.default.Messages.BUILD_OVERRIDE_EXPIRED
-                } : o.length > 0 && !o.includes(i.default.getId()) ? {
-                    valid: !1,
-                    reason: u.default.Messages.BUILD_OVERRIDE_INVALID_USER
-                } : {
-                    valid: !0
+                    });
+                    if (o.ok) return u.default.dispatch({
+                        type: "CLYDE_GUILD_SETTINGS_SAVE_SUCCESS",
+                        settings: o.body.settings
+                    }), null != o.body.guild_member_profile && u.default.dispatch({
+                        type: "USER_PROFILE_UPDATE_SUCCESS",
+                        userId: a.CLYDE_AI_USER_ID,
+                        profileEffectID: void 0,
+                        ...o.body.guild_member_profile
+                    }), null != o.body.guild_member && u.default.dispatch({
+                        type: "GUILD_MEMBER_PROFILE_UPDATE",
+                        guildMember: o.body.guild_member,
+                        guildId: e
+                    }), o.body.settings;
+                    return u.default.dispatch({
+                        type: "CLYDE_GUILD_SETTINGS_SAVE_FAIL",
+                        errors: null !== (s = null === (i = o.body) || void 0 === i ? void 0 : i.errors) && void 0 !== s ? s : {}
+                    }), l.default.track(f.AnalyticEvents.CLYDE_AI_PROFILE_UPDATE_FAILED, {
+                        guild_id: e,
+                        clyde_profile_id: t.clyde_profile_id
+                    }), null
+                } catch (r) {
+                    return u.default.dispatch({
+                        type: "CLYDE_GUILD_SETTINGS_SAVE_FAIL",
+                        errors: r.body
+                    }), l.default.track(f.AnalyticEvents.CLYDE_AI_PROFILE_UPDATE_FAILED, {
+                        guild_id: e,
+                        clyde_profile_id: t.clyde_profile_id
+                    }), null
                 }
             }
-        },
-        451540: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                default: function() {
-                    return m
-                }
-            }), r("222007");
-            var n = r("37983"),
-                l = r("884691"),
-                i = r("414456"),
-                a = r.n(i),
-                s = r("627445"),
-                u = r.n(s),
-                d = r("77078"),
-                o = r("68238"),
-                c = r("83900"),
-                f = r("626820"),
-                v = r("306160"),
-                g = r("701909"),
-                h = r("161449"),
-                E = r("49111"),
-                C = r("782340"),
-                I = r("939848");
 
-            function R(e) {
-                let {
-                    url: t
-                } = e, [r, i] = l.useState(!1), s = l.useRef(void 0), u = l.useCallback(() => {
-                    !r && ((0, v.copy)(t) && i(!0), s.current = setTimeout(() => i(!1), 2e3))
-                }, [t, r]);
-                return l.useEffect(() => () => clearTimeout(s.current), []), v.SUPPORTS_COPY ? (0, n.jsxs)(d.Clickable, {
-                    className: a(I.copyLink, r ? I.copied : null),
-                    onClick: u,
-                    children: [(0, n.jsx)(c.default, {
-                        className: I.copyLinkIcon
-                    }), r ? C.default.Messages.BUILD_OVERRIDE_LINK_COPIED : C.default.Messages.BUILD_OVERRIDE_LINK_COPY]
-                }) : null
+            function _(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                u.default.dispatch({
+                    type: "CLYDE_SET_PENDING_PERSONALITY",
+                    personality: e,
+                    isGenerated: t
+                })
             }
 
             function p(e) {
-                let {
-                    subHead: t,
-                    buildDetails: r,
-                    buttonColor: i,
-                    buttonClick: s,
-                    buttonText: u,
-                    disabled: o = !1,
-                    submitting: c = !1
-                } = e;
-                return (0, n.jsxs)(l.Fragment, {
-                    children: [(0, n.jsxs)("div", {
-                        className: I.buildInfo,
-                        children: [(0, n.jsx)(d.Text, {
-                            variant: "text-sm/medium",
-                            className: I.subHead,
-                            children: t
-                        }), (0, n.jsx)("div", {
-                            className: I.buildDetails,
-                            children: r
-                        })]
-                    }), (0, n.jsx)(d.Button, {
-                        submitting: c,
-                        color: i,
-                        onClick: s,
-                        className: a(I.button, o ? I.disabledButtonOverride : null),
-                        size: I.buttonSize,
-                        disabled: o,
-                        children: u
-                    })]
+                u.default.dispatch({
+                    type: "CLYDE_SET_PENDING_NICK",
+                    nick: null != e ? e : ""
                 })
             }
-            var m = e => {
-                var t, r, i;
-                let {
-                    loading: s = !1,
-                    currentOverrides: c,
-                    linkMeta: v,
-                    url: m,
-                    applyBuildOverride: L,
-                    clearBuildOverride: _
-                } = e, [O, B] = l.useState(!1), D = l.useCallback(() => {
-                    !O && (B(!0), L().catch(() => B(!1)))
-                }, [L, O]), b = l.useCallback(() => {
-                    !O && (B(!0), _().catch(() => B(!1)))
-                }, [_, O]);
-                return (0, n.jsxs)("div", {
-                    className: I.wrapper,
-                    children: [(t = v, r = m, i = s, (0, n.jsxs)(d.Text, {
-                        variant: "text-xs/normal",
-                        className: I.titleRegion,
-                        children: [(0, n.jsx)("strong", {
-                            className: I.title,
-                            children: null != t && null != t.releaseChannel ? C.default.Messages.BUILD_OVERRIDE_FOR.format({
-                                releaseChannel: t.releaseChannel
-                            }) : C.default.Messages.BUILD_OVERRIDE
-                        }), (0, n.jsx)(d.Anchor, {
-                            className: I.infoLink,
-                            href: g.default.getArticleURL(E.HelpdeskArticles.BUILD_OVERRIDE_EMBED),
-                            target: "_blank",
-                            children: (0, n.jsx)(o.default, {
-                                className: I.infoIcon
-                            })
-                        }), i ? null : (0, n.jsx)(R, {
-                            url: r
-                        })]
-                    })), (0, n.jsxs)("div", {
-                        className: I.content,
-                        children: [(0, n.jsx)(f.default, {
-                            className: I.icon
-                        }), s ? (0, n.jsxs)(l.Fragment, {
-                            children: [(0, n.jsxs)("div", {
-                                className: I.buildInfo,
-                                children: [(0, n.jsx)("div", {
-                                    className: a(I.barLoader, I.barTitle)
-                                }), (0, n.jsx)("div", {
-                                    className: I.barLoader
-                                })]
-                            }), (0, n.jsx)("div", {
-                                className: I.buttonLoader
-                            })]
-                        }) : function(e) {
-                            var t, r;
-                            let n, l, i, {
-                                    currentOverrides: a,
-                                    linkMeta: s,
-                                    applyBuildOverride: o,
-                                    clearBuildOverride: c,
-                                    submitting: f
-                                } = e,
-                                v = (0, h.default)(s, ["discord_web"]);
-                            if (!v.valid) return function(e) {
-                                return p({
-                                    subHead: C.default.Messages.BUILD_OVERRIDE_ISNT_AVAILABLE,
-                                    buttonColor: d.Button.Colors.TRANSPARENT,
-                                    buttonText: "Invalid",
-                                    buildDetails: e,
-                                    disabled: !0
-                                })
-                            }(v.reason);
-                            u(null != s, "BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved");
-                            let {
-                                discord_web: g
-                            } = s.targetBuildOverride;
-                            if (u(null != g, "BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web should never be null if resolved"), t = g, null == (r = a) || null == r.discord_web ? 1 : t.id !== r.discord_web.id || t.type !== r.discord_web.type) l = C.default.Messages.BUILD_OVERRIDE_APPLY, n = o, i = d.Button.Colors.GREEN;
-                            else l = C.default.Messages.BUILD_OVERRIDE_CLEAR, n = c, i = d.Button.Colors.RED;
-                            return p({
-                                subHead: C.default.Messages.BUILD_OVERRIDE_ID,
-                                buildDetails: g.id,
-                                buttonClick: n,
-                                buttonText: l,
-                                buttonColor: i,
-                                submitting: f
-                            })
-                        }({
-                            currentOverrides: c,
-                            linkMeta: v,
-                            applyBuildOverride: D,
-                            clearBuildOverride: b,
-                            submitting: O
-                        })]
-                    })]
+
+            function y(e) {
+                u.default.dispatch({
+                    type: "CLYDE_SET_PENDING_AVATAR",
+                    avatar: e
                 })
             }
-        },
-        198700: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                default: function() {
-                    return f
-                }
-            }), r("70102");
-            var n = r("37983"),
-                l = r("884691"),
-                i = r("446674"),
-                a = r("960460"),
-                s = r("489740"),
-                u = r("451540"),
-                d = r("425916");
-            async function o(e) {
-                let t = await (0, a.applyPublicBuildOverride)(e);
-                if (200 !== t.status) throw Error("Build override couldn't apply");
-                window.location.reload(!0)
-            }
-            async function c() {
-                await (0, a.clearBuildOverride)(), window.location.reload(!0)
-            }
-            var f = l.memo(function(e) {
-                let {
-                    url: t
-                } = e, r = (0, i.useStateFromStoresObject)([s.default], () => s.default.getCurrentBuildOverride()), a = (0, i.useStateFromStores)([s.default], () => s.default.getBuildOverride(t)), {
-                    payload: f,
-                    validatedURL: v
-                } = a, g = r.state === s.State.Resolving || a.state === s.State.Resolving, h = l.useCallback(() => null == f ? Promise.reject(Error("Invalid override payload")) : ((0, d.addRecentBuildOverride)(a.override, f), o(f)), [f, a]);
-                return null != v ? (0, n.jsx)(u.default, {
-                    loading: g,
-                    linkMeta: a.override,
-                    currentOverrides: r.overrides,
-                    applyBuildOverride: h,
-                    clearBuildOverride: c,
-                    url: v
-                }) : null
-            })
-        },
-        425916: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                getRecentBuildOverrides: function() {
-                    return i
-                },
-                addRecentBuildOverride: function() {
-                    return a
-                }
-            }), r("222007");
-            var n = r("95410");
-            let l = "recentBuildOverrides";
 
-            function i() {
-                var e;
-                let t = null !== (e = n.default.get(l)) && void 0 !== e ? e : [];
-                return t.filter(e => null == e.exp || e.exp > Date.now())
+            function S(e) {
+                u.default.dispatch({
+                    type: "CLYDE_SET_PENDING_BANNER",
+                    banner: e
+                })
             }
 
-            function a(e, t) {
-                if (null == t || null == e || null == e.targetBuildOverride.discord_web) return;
-                let r = {
-                        id: e.targetBuildOverride.discord_web.id,
-                        payload: t,
-                        exp: Date.parse(e.expiresAt)
-                    },
-                    a = i(),
-                    s = [r, ...a.filter(e => r.id !== e.id)].slice(0, 5);
-                n.default.set(l, s)
+            function T(e) {
+                u.default.dispatch({
+                    type: "CLYDE_SET_PENDING_THEME_COLORS",
+                    themeColors: e
+                })
             }
-        },
-        758926: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                isLinkTrusted: function() {
-                    return i
-                }
-            });
-            var n = r("176309"),
-                l = r("128259");
 
-            function i(e) {
-                return null != e.target && (0, l.isLinkTrusted)(e.target, null != e.title && "" !== e.title ? e.title : (0, n.astToString)(e.content))
+            function I() {
+                u.default.dispatch({
+                    type: "CLYDE_RESET_PENDING_CHANGES"
+                })
             }
-        },
-        47677: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                default: function() {
-                    return c
-                }
-            });
-            var n = r("37983"),
-                l = r("884691"),
-                i = r("176309"),
-                a = r("340616"),
-                s = r("355025"),
-                u = r("198700"),
-                d = r("128259"),
-                o = r("758926");
-
-            function c(e) {
-                return {
-                    react(t, r, c) {
-                        if (e.enableBuildOverrides && (0, s.isBuildOverrideLink)(t.target)) return (0, n.jsx)(l.Fragment, {
-                            children: (0, n.jsx)(u.default, {
-                                url: t.target
-                            }, t.target)
-                        }, c.key);
-                        let f = r(t.content, c),
-                            v = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, i.astToString)(t.content),
-                            g = (null == e ? void 0 : e.mustConfirmExternalLink) ? e => (null == e || e.stopPropagation(), null == e || e.preventDefault(), (0, d.handleClick)({
-                                href: t.target,
-                                shouldConfirm: !0,
-                                messageId: c.messageId,
-                                channelId: c.channelId
-                            }), null) : void 0;
-                        if (c.previewLinkTarget && !(0, o.isLinkTrusted)(t)) {
-                            let e = "\n\n(".concat(t.target, ")"),
-                                r = v.length + e.length;
-                            r > 1024 && (e = "..." + e, v = (v = v.substr(0, 1024 - e.length)).trimEnd()), v += e
-                        }
-                        return c.noStyleAndInteraction ? (0, n.jsx)("span", {
-                            title: v,
-                            children: f
-                        }, c.key) : (0, n.jsx)(a.default, {
-                            title: v,
-                            href: t.target,
-                            trusted: () => (0, o.isLinkTrusted)(t),
-                            onClick: g,
-                            messageId: c.messageId,
-                            channelId: c.channelId,
-                            children: f
-                        }, c.key)
+            async function C(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                if (t || o.default.shouldFetchSettings(e)) {
+                    (0, i.fetchProfile)(a.CLYDE_AI_USER_ID, {
+                        guildId: e
+                    }), u.default.dispatch({
+                        type: "CLYDE_GUILD_SETTINGS_FETCH_START",
+                        guildId: e
+                    });
+                    try {
+                        let t = await n.default.get({
+                                url: f.Endpoints.GUILD_CLYDE_SETTINGS(e),
+                                oldFormErrors: !0
+                            }),
+                            r = t.body;
+                        u.default.dispatch({
+                            type: "CLYDE_GUILD_SETTINGS_FETCH_SUCCESS",
+                            guildId: r.guild_id,
+                            settings: r
+                        })
+                    } catch (t) {
+                        u.default.dispatch({
+                            type: "CLYDE_GUILD_SETTINGS_FETCH_FAIL",
+                            guildId: e
+                        })
                     }
                 }
             }
+            async function A(e) {
+                if (null == o.default.getProfile(e)) {
+                    u.default.dispatch({
+                        type: "CLYDE_PROFILE_FETCH_START",
+                        clydeProfileId: e
+                    });
+                    try {
+                        let t = await n.default.get({
+                                url: f.Endpoints.CLYDE_PROFILES(e),
+                                oldFormErrors: !0
+                            }),
+                            r = t.body;
+                        u.default.dispatch({
+                            type: "CLYDE_PROFILE_FETCH_SUCCESS",
+                            profile: r
+                        })
+                    } catch (t) {
+                        u.default.dispatch({
+                            type: "CLYDE_PROFILE_FETCH_FAIL",
+                            clydeProfileId: e
+                        })
+                    }
+                }
+            }
+            async function L(e) {
+                try {
+                    let t = await n.default.post({
+                        url: f.Endpoints.CLYDE_PROFILES_CREATE(e),
+                        oldFormErrors: !0
+                    });
+                    return t.ok && u.default.dispatch({
+                        type: "CLYDE_PROFILE_CREATE_SUCCESS",
+                        profile: t.body
+                    }), t.body
+                } catch (e) {
+                    return null
+                }
+            }
+
+            function m() {
+                u.default.dispatch({
+                    type: "CLYDE_PROFILE_EDITING_START"
+                })
+            }
+
+            function D() {
+                u.default.dispatch({
+                    type: "CLYDE_PROFILE_EDITING_END"
+                })
+            }
         },
-        68238: function(e, t, r) {
+        845962: function(e, t, r) {
+            "use strict";
+            let n;
+            r.r(t), r.d(t, {
+                default: function() {
+                    return _
+                }
+            });
+            var u = r("917351"),
+                i = r("446674"),
+                l = r("913144");
+            let o = [],
+                a = !1;
+            let f = o,
+                s = {},
+                c = null,
+                d = e => {
+                    f = (0, u.cloneDeep)(e);
+                    let t = {};
+                    f.forEach(e => {
+                        t[e.id] = e
+                    }), s = t
+                };
+            class E extends i.default.Store {
+                get isFetching() {
+                    return a
+                }
+                get fetchError() {
+                    return n
+                }
+                get profileEffects() {
+                    return f
+                }
+                get tryItOutId() {
+                    return c
+                }
+                getProfileEffectById(e) {
+                    return null != e ? s[e] : void 0
+                }
+            }
+            E.displayName = "ProfileEffectStore";
+            var _ = new E(l.default, {
+                USER_PROFILE_EFFECTS_FETCH: () => {
+                    a = !0
+                },
+                USER_PROFILE_EFFECTS_FETCH_SUCCESS: e => {
+                    let {
+                        profileEffects: t
+                    } = e;
+                    a = !1, d(0 === t.length ? o : t)
+                },
+                USER_PROFILE_EFFECTS_FETCH_FAILURE: e => {
+                    let {
+                        error: t
+                    } = e;
+                    a = !1, n = t, d(o)
+                },
+                PROFILE_EFFECTS_SET_TRY_IT_OUT: e => {
+                    let {
+                        id: t
+                    } = e;
+                    c = t
+                },
+                LOGOUT: e => {
+                    a = !1, d(o), c = null
+                }
+            })
+        },
+        662286: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                useCanUseProfileEffects: function() {
+                    return i
+                },
+                canUseProfileEffects: function() {
+                    return l
+                }
+            });
+            var n = r("862205");
+            let u = (0, n.createExperiment)({
+                kind: "user",
+                id: "2023-08_profile_effects",
+                label: "Profile Effects User Experiment",
+                defaultConfig: {
+                    enabled: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "Enables profile effects and shop",
+                    config: {
+                        enabled: !0
+                    }
+                }]
+            });
+
+            function i(e) {
+                let {
+                    location: t,
+                    trackExposureOptions: r = {},
+                    autoTrackExposure: n = !0
+                } = e;
+                return u.useExperiment({
+                    location: t
+                }, {
+                    autoTrackExposure: n,
+                    trackExposureOptions: r
+                }).enabled
+            }
+
+            function l(e) {
+                let {
+                    location: t,
+                    trackExposureOptions: r = {},
+                    autoTrackExposure: n = !0
+                } = e;
+                return u.getCurrentConfig({
+                    location: t
+                }, {
+                    autoTrackExposure: n,
+                    trackExposureOptions: r
+                }).enabled
+            }
+        },
+        76047: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                ENTRY_DELAY: function() {
+                    return n
+                },
+                RESET: function() {
+                    return u
+                }
+            });
+            let n = 500,
+                u = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+        },
+        859498: function(e, t, r) {
+            "use strict";
+            var n, u, i, l;
+            r.r(t), r.d(t, {
+                RestartMethod: function() {
+                    return n
+                },
+                AnimationTypes: function() {
+                    return u
+                }
+            }), (i = n || (n = {})).FromLoop = "fromLoop", i.FromStart = "fromStart", (l = u || (u = {}))[l.UNSPECIFIED = 0] = "UNSPECIFIED", l[l.PERSISTENT = 1] = "PERSISTENT", l[l.INTERMITTENT = 2] = "INTERMITTENT"
+        },
+        687682: function(e, t, r) {
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return s
+                    return i
+                }
+            });
+            var n = r("884691");
+            let u = 1e3 / 24;
+            var i = function(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u,
+                    r = n.useRef(0),
+                    i = n.useRef(),
+                    l = n.useRef(!0),
+                    o = n.useCallback(() => {
+                        l.current = !1, cancelAnimationFrame(r.current)
+                    }, []),
+                    a = n.useCallback(n => {
+                        null == i.current && (i.current = n);
+                        let u = n - i.current;
+                        u >= t && (i.current = n, e(u)), l.current && (r.current = requestAnimationFrame(a))
+                    }, [e, t]),
+                    f = n.useCallback(() => {
+                        l.current = !0, i.current = void 0, r.current = requestAnimationFrame(a)
+                    }, [a]);
+                return n.useEffect(() => (r.current = requestAnimationFrame(a), () => cancelAnimationFrame(r.current)), []), {
+                    stop: o,
+                    reset: f,
+                    ticking: l
+                }
+            }
+        },
+        833395: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return u
+                }
+            }), r("222007"), r("808653"), r("424973");
+            var n = r("884691"),
+                u = (e, t) => {
+                    let [r, u] = n.useState(-1), i = n.useRef(-1);
+                    return n.useEffect(() => {
+                        let t = e.reduce((e, t) => (!e.includes(t.src) && e.push(t.src), e), []);
+                        u(t.length), i.current = t.length
+                    }, [e, i, u]), n.useEffect(() => {
+                        0 === r && t()
+                    }, [r, t]), {
+                        pending: r,
+                        pendingRef: i,
+                        setPending: u
+                    }
+                }
+        },
+        784410: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return i
+                }
+            }), r("222007"), r("808653");
+            var n = r("884691"),
+                u = r("845962"),
+                i = e => {
+                    let t = u.default.profileEffects,
+                        [r, i] = n.useState(e),
+                        [l, o] = n.useState(u.default.getProfileEffectById(e)),
+                        a = t.reduce((t, r, n) => (r.id === e && (t = n), t), 0),
+                        [, f] = n.useState(a),
+                        s = n.useRef(a);
+                    return n.useEffect(() => {
+                        o(u.default.getProfileEffectById(r))
+                    }, [r]), {
+                        increment: () => {
+                            let e = (s.current + 1) % t.length;
+                            s.current = e, f(e), i(t[e].id), o(t[e])
+                        },
+                        decrement: () => {
+                            let e = 0 === s.current ? t.length - 1 : s.current - 1;
+                            s.current = e, f(e), i(t[e].id), o(t[e])
+                        },
+                        id: r,
+                        preset: l
+                    }
+                }
+        },
+        525808: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                sortEffectLayers: function() {
+                    return n
+                }
+            });
+            let n = e => e.sort((e, t) => {
+                var r, n;
+                return (null !== (r = e.zIndex) && void 0 !== r ? r : 0) - (null !== (n = t.zIndex) && void 0 !== n ? n : 0)
+            })
+        },
+        635471: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return C
+                }
+            }), r("222007");
+            var n = r("37983"),
+                u = r("884691"),
+                i = r("414456"),
+                l = r.n(i),
+                o = r("446674"),
+                a = r("206230"),
+                f = r("662286"),
+                s = r("76047"),
+                c = r("859498"),
+                d = r("687682"),
+                E = r("525808"),
+                _ = r("465523"),
+                p = r("417675"),
+                y = r("188645"),
+                S = r("260742");
+            let T = e => {
+                    let {
+                        bannerAdjustment: t = 0,
+                        maxLoops: r,
+                        resetOnHover: i = !1,
+                        isHovering: o = !1,
+                        useOpacityOnHover: a = !0,
+                        autoPlay: f = !0,
+                        restartMethod: _,
+                        urlQueryString: y,
+                        profileEffectConfig: T,
+                        noBorderRadius: I = !1,
+                        introDelay: C = s.ENTRY_DELAY
+                    } = e, A = u.useRef(null), [L, m] = u.useState([]);
+                    (0, p.default)(T);
+                    let [D, h] = u.useState(0), [R, g] = u.useState(0), {
+                        accessibilityLabel: P
+                    } = T, [F, v] = u.useState(-C), {
+                        stop: N,
+                        reset: b,
+                        ticking: U
+                    } = (0, d.default)(e => {
+                        v(t => t + e)
+                    });
+                    u.useEffect(() => {
+                        v(-C), m((0, E.sortEffectLayers)(T.effects))
+                    }, [T]), u.useEffect(() => {
+                        let e = 0,
+                            t = 1 / 0;
+                        L.forEach(r => {
+                            let n = r.start + r.duration;
+                            n > e && (e = n), r.loop && r.start < t && (t = r.start)
+                        }), h(t), g(e)
+                    }, [g, L]);
+                    let [Y, G] = u.useState(!1);
+                    return u.useEffect(() => {
+                        !0 !== f && !o && (N(), v(0)), !o && Y && U.current && (N(), v(0)), i && o && !U.current && (b(), T.animationType === c.AnimationTypes.PERSISTENT ? v(_ === c.RestartMethod.FromStart ? 0 : D) : v(0))
+                    }, [o, Y, D, i, N, b, U, T.animationType, f, _]), (0, n.jsx)("div", {
+                        ref: A,
+                        className: l(S.profileEffects, {
+                            [S.hovered]: o && a
+                        }),
+                        children: (0, n.jsx)("div", {
+                            className: I ? S.innerNoRadius : S.inner,
+                            children: L.map((e, u) => {
+                                var i, l, o, a, d, E, _, p;
+                                if (!U.current) {
+                                    if (T.animationType === c.AnimationTypes.PERSISTENT && null != T.staticFrameSrc && 0 === u && !0 === f) {
+                                        let {
+                                            staticFrameSrc: r
+                                        } = T;
+                                        return (0, n.jsx)("img", {
+                                            className: S.effect,
+                                            style: {
+                                                top: null !== (d = null === (o = e.position) || void 0 === o ? void 0 : o.y) && void 0 !== d ? d : 0 - t,
+                                                left: null !== (E = null === (a = e.position) || void 0 === a ? void 0 : a.x) && void 0 !== E ? E : 0
+                                            },
+                                            src: r,
+                                            alt: P
+                                        }, e.src + u)
+                                    }
+                                    return (0, n.jsx)("img", {
+                                        src: s.RESET,
+                                        alt: P
+                                    }, e.src + u)
+                                }
+                                if (F < e.start || !e.loop && F > e.duration + e.start) return (0, n.jsx)("img", {
+                                    src: s.RESET,
+                                    alt: P
+                                }, e.src + u);
+                                if (T.animationType === c.AnimationTypes.PERSISTENT && !Y && null != r && F >= R && G(!0), e.loop && void 0 !== e.loopDelay && e.loopDelay > 0) {
+                                    let t = e.duration + e.loopDelay,
+                                        i = Math.floor((F - e.start) / t);
+                                    if (F - e.start - i * t > e.duration) return T.animationType === c.AnimationTypes.INTERMITTENT && !Y && null != r && i >= r && G(!0), (0, n.jsx)("img", {
+                                        src: s.RESET,
+                                        alt: P
+                                    }, e.src + u)
+                                }
+                                return (0, n.jsx)("img", {
+                                    src: null != y ? "".concat(e.src, "?query=").concat(y) : e.src,
+                                    className: S.effect,
+                                    style: {
+                                        top: (null !== (_ = null === (i = e.position) || void 0 === i ? void 0 : i.y) && void 0 !== _ ? _ : 0) - t,
+                                        left: null !== (p = null === (l = e.position) || void 0 === l ? void 0 : l.x) && void 0 !== p ? p : 0
+                                    },
+                                    alt: P
+                                }, e.src + u)
+                            })
+                        })
+                    })
+                },
+                I = e => {
+                    let {
+                        config: t,
+                        useThumbnail: r,
+                        bannerAdjustment: u = 0,
+                        noBorderRadius: i
+                    } = e, {
+                        reducedMotionSrc: l,
+                        thumbnailPreviewSrc: o,
+                        accessibilityLabel: a
+                    } = t;
+                    return (0, n.jsx)("div", {
+                        className: S.profileEffects,
+                        children: (0, n.jsx)("div", {
+                            className: i ? S.innerNoRadius : S.inner,
+                            children: (0, n.jsx)("img", {
+                                src: r ? o : l,
+                                className: S.effect,
+                                style: {
+                                    top: 0 - u
+                                },
+                                alt: a
+                            })
+                        })
+                    })
+                };
+            var C = e => {
+                let t = (0, f.useCanUseProfileEffects)({
+                        location: "WebWrappedProfileEffect"
+                    }),
+                    r = (0, o.useStateFromStores)([a.default], () => a.default.useReducedMotion),
+                    [i, l] = u.useState(!1),
+                    {
+                        preset: s
+                    } = (0, y.default)(e.profileEffectID, () => l(!1));
+                return t && null != s ? r || !1 === e.autoPlay && !1 === e.isHovering ? (0, n.jsx)(I, {
+                    useThumbnail: e.useThumbnail,
+                    config: s.config,
+                    bannerAdjustment: e.bannerAdjustment,
+                    noBorderRadius: e.noBorderRadius
+                }) : i ? (0, n.jsx)(T, {
+                    profileEffectConfig: s.config,
+                    ...e
+                }) : (0, n.jsx)(_.default, {
+                    profileEffectConfig: s.config,
+                    onReady: () => {
+                        l(!0)
+                    }
+                }) : null
+            }
+        },
+        465523: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return i
                 }
             });
             var n = r("37983");
             r("884691");
-            var l = r("469563"),
-                i = r("225389"),
-                a = r("75196"),
-                s = (0, l.replaceIcon)(function(e) {
+            var u = r("833395"),
+                i = e => {
                     let {
-                        width: t = 16,
-                        height: r = 16,
-                        color: l = "currentColor",
-                        foreground: i,
-                        ...s
-                    } = e;
-                    return (0, n.jsx)("svg", {
-                        ...(0, a.default)(s),
-                        width: t,
-                        height: r,
-                        viewBox: "0 0 12 12",
-                        children: (0, n.jsx)("path", {
-                            fill: l,
-                            className: i,
-                            d: "M6 1C3.243 1 1 3.244 1 6c0 2.758 2.243 5 5 5s5-2.242 5-5c0-2.756-2.243-5-5-5zm0 2.376a.625.625 0 110 1.25.625.625 0 010-1.25zM7.5 8.5h-3v-1h1V6H5V5h1a.5.5 0 01.5.5v2h1v1z"
-                        })
-                    })
-                }, i.CircleInformationIcon, {}, {
-                    size: 16
-                })
-        },
-        626820: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                default: function() {
-                    return a
-                }
-            });
-            var n = r("37983"),
-                l = r("884691"),
-                i = r("354214"),
-                a = l.memo(function(e) {
-                    let {
-                        className: t
-                    } = e;
-                    return (0, n.jsxs)("svg", {
-                        width: "57",
-                        height: "40",
-                        viewBox: "0 0 57 40",
-                        fill: "none",
-                        className: t,
-                        children: [(0, n.jsx)("path", {
-                            d: "M49.4949 36H3.9596C1.78182 36 0 34.2486 0 32.1081V3.89189C0 1.75135 1.78182 0 3.9596 0H49.4949C51.6727 0 53.4545 1.75135 53.4545 3.89189V32.1081C53.4545 34.2486 51.6727 36 49.4949 36Z",
-                            className: i.svgContentRight
-                        }), (0, n.jsx)("path", {
-                            d: "M44.5456 10.8889H25.7375C24.6486 10.8889 23.7577 9.99798 23.7577 8.90909C23.7577 7.8202 24.6486 6.92929 25.7375 6.92929H44.5456C45.6345 6.92929 46.5254 7.8202 46.5254 8.90909C46.5254 9.99798 45.6345 10.8889 44.5456 10.8889ZM19.7981 10.8889C18.7092 10.8889 17.8183 9.99798 17.8183 8.90909C17.8183 7.8202 18.7092 6.92929 19.7981 6.92929C20.887 6.92929 21.7779 7.8202 21.7779 8.90909C21.7779 9.99798 20.887 10.8889 19.7981 10.8889ZM44.5456 19.798H25.7375C24.6486 19.798 23.7577 18.9071 23.7577 17.8182C23.7577 16.7293 24.6486 15.8384 25.7375 15.8384H44.5456C45.6345 15.8384 46.5254 16.7293 46.5254 17.8182C46.5254 18.9071 45.6345 19.798 44.5456 19.798ZM19.7981 19.798C18.7092 19.798 17.8183 18.9071 17.8183 17.8182C17.8183 16.7293 18.7092 15.8384 19.7981 15.8384C20.887 15.8384 21.7779 16.7293 21.7779 17.8182C21.7779 18.9071 20.887 19.798 19.7981 19.798ZM31.6365 28.7071H25.7375C24.6486 28.7071 23.7577 27.8162 23.7577 26.7273C23.7577 25.6384 24.6486 24.7475 25.7375 24.7475H31.6365C32.7254 24.7475 33.6163 25.6384 33.6163 26.7273C33.6163 27.8162 32.7254 28.7071 31.6365 28.7071ZM19.7981 28.7071C18.7092 28.7071 17.8183 27.8162 17.8183 26.7273C17.8183 25.6384 18.7092 24.7475 19.7981 24.7475C20.887 24.7475 21.7779 25.6384 21.7779 26.7273C21.7779 27.8162 20.887 28.7071 19.7981 28.7071Z",
-                            className: i.svgContentLines
-                        }), (0, n.jsx)("path", {
-                            d: "M3.9596 36H13.8586V0H3.9596C1.78182 0 0 1.78182 0 3.9596V32.0404C0 34.2182 1.78182 36 3.9596 36Z",
-                            className: i.svgContentLeft
-                        }), (0, n.jsx)("path", {
-                            d: "M6.9293 10.8889C5.24647 10.8889 3.9596 9.60202 3.9596 7.91919C3.9596 6.23636 5.24647 4.94949 6.9293 4.94949C8.61212 4.94949 9.89899 6.23636 9.89899 7.91919C9.89899 9.60202 8.61212 10.8889 6.9293 10.8889ZM6.9293 20.7879C5.24647 20.7879 3.9596 19.501 3.9596 17.8182C3.9596 16.1354 5.24647 14.8485 6.9293 14.8485C8.61212 14.8485 9.89899 16.1354 9.89899 17.8182C9.89899 19.501 8.61212 20.7879 6.9293 20.7879ZM6.9293 30.6869C5.24647 30.6869 3.9596 29.4 3.9596 27.7172C3.9596 26.0343 5.24647 24.7475 6.9293 24.7475C8.61212 24.7475 9.89899 26.0343 9.89899 27.7172C9.89899 29.4 8.61212 30.6869 6.9293 30.6869Z",
-                            className: i.svgDots
-                        }), (0, n.jsx)("path", {
-                            fillRule: "evenodd",
-                            clipRule: "evenodd",
-                            d: "M41.4328 33L46 37.7129L43.7836 40L37 32.9999L39.2164 30.7128L39.2165 30.7129L43.7836 26L46 28.2871L41.4328 33Z",
-                            className: i.svgTag
-                        }), (0, n.jsx)("path", {
-                            fillRule: "evenodd",
-                            clipRule: "evenodd",
-                            d: "M54.7821 35.2871L54.7841 35.2892L57 33.0021L50.2159 26L48 28.2871L52.5662 33L48 37.7129L50.2159 40L54.7821 35.2871Z",
-                            className: i.svgTag
-                        })]
-                    })
-                })
-        },
-        515557: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                astToString: function() {
-                    return l
-                },
-                flattenAst: function() {
-                    return function e(t) {
-                        let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-                        if (Array.isArray(t)) {
-                            let n = t.length,
-                                l = [];
-                            for (let i = 0; i < n; i++) ! function(e, t) {
-                                if (Array.isArray(t)) {
-                                    let {
-                                        length: r
-                                    } = t;
-                                    for (let n = 0; n < r; n++) e.push(t[n]);
-                                    return
-                                }
-                                e.push(t)
-                            }(l, e(t[i], r));
-                            return l
-                        }
-                        return (null != t.content && (t.content = e(t.content, t)), null != r && t.type === r.type) ? t.content : t
-                    }
-                },
-                constrainAst: function() {
-                    return function e(t) {
-                        let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
-                            limit: 200
-                        };
-                        if (Array.isArray(t)) {
-                            let l = t.length;
-                            for (let i = 0; i < l; i++) {
-                                let l = e(t[i], r);
-                                if (l === n) {
-                                    t.length = i;
-                                    break
-                                }
-                                t[i] = l
+                        profileEffectConfig: t,
+                        onReady: r
+                    } = e, {
+                        pendingRef: i,
+                        setPending: l
+                    } = (0, u.default)(t.effects, r);
+                    return (0, n.jsx)("div", {
+                        children: t.effects.map(e => (0, n.jsx)("img", {
+                            src: e.src,
+                            alt: "Preload Profile Effect Asset",
+                            "aria-hidden": !0,
+                            style: {
+                                opacity: 0,
+                                position: "absolute"
+                            },
+                            onLoad: () => {
+                                l(i.current - 1), i.current = i.current - 1
                             }
-                        } else if ("text" !== t.type) {
-                            if (r.limit -= 1, r.limit <= 0) return n;
-                            Array.isArray(t.content) && (t.content = e(t.content, r))
-                        }
-                        return t
-                    }
+                        }, e.src))
+                    })
                 }
-            }), r("424973");
-            let n = {};
-
-            function l(e) {
-                return (function e(t) {
-                    let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-                    return Array.isArray(t) ? t.forEach(t => e(t, r)) : "string" == typeof t.content ? r.push(t.content) : null != t.content && e(t.content, r), r
-                })(e).join("")
-            }
         },
-        176309: function(e, t, r) {
-            "use strict";
-            let n;
-            r.r(t), r.d(t, {
-                reactParserFor: function() {
-                    return i
-                },
-                astParserFor: function() {
-                    return a
-                }
-            });
-            var l = r("515557");
-            r.es(l, t), n = r("214434").default;
-            let i = n.reactParserFor,
-                a = n.astParserFor
-        },
-        214434: function(e, t, r) {
+        417675: function(e, t, r) {
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return s
+                    return i
                 }
             });
-            var n = r("132710"),
-                l = r.n(n),
-                i = r("515557");
-
-            function a(e, t, r, n, l) {
-                let a;
-                return !r && (t += "\n\n"), a = e(t, {
-                    inline: r,
-                    ...n
-                }), a = (0, i.flattenAst)(a), a = (0, i.constrainAst)(a), null != l && (a = l(a, r)), a
+            var n = r("884691");
+            let u = e => {
+                e.effects.forEach(e => {
+                    let {
+                        src: t
+                    } = e, r = document.createElement("link");
+                    r.rel = "prefetch", r.href = t, document.body.appendChild(r)
+                })
+            };
+            var i = e => {
+                n.useEffect(() => {
+                    u(e)
+                }, [e])
             }
-            var s = {
-                reactParserFor(e) {
-                    let t = l.parserFor(e),
-                        r = l.reactFor(l.ruleOutput(e, "react"));
-                    return function() {
-                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-                            n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                            l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-                        return r(a(t, e, n, l, i), l)
-                    }
-                },
-                astParserFor(e) {
-                    let t = l.parserFor(e);
-                    return function() {
-                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-                            r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                            l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-                        return a(t, e, r, n, l)
+        },
+        188645: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return l
+                }
+            });
+            var n = r("884691"),
+                u = r("890503"),
+                i = r("784410"),
+                l = (e, t) => {
+                    let r = (0, u.default)("profile_effect_debug_controls"),
+                        {
+                            id: l,
+                            preset: o,
+                            increment: a,
+                            decrement: f
+                        } = (0, i.default)(e);
+                    return n.useEffect(() => {
+                        if (!r) return;
+                        let e = e => {
+                            "ArrowUp" === e.key && (a(), e.preventDefault()), "ArrowDown" === e.key && (f(), e.preventDefault()), "r" === e.key && (null == t || t(), e.preventDefault())
+                        };
+                        return window.addEventListener("keydown", e), () => {
+                            window.removeEventListener("keydown", e)
+                        }
+                    }, []), {
+                        id: null != l ? l : null,
+                        preset: o
                     }
                 }
-            }
         }
     }
 ]);
