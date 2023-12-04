@@ -3151,7 +3151,6 @@
                         forceCompact: c,
                         showNewMessagesBar: !g,
                         scrollerClassName: c ? ee.scroller : void 0,
-                        showingSpamBanner: !1,
                         showingQuarantineBanner: !1
                     }, t.id), (0, i.jsx)(G.MessagesInteractionContext.Provider, {
                         value: {
