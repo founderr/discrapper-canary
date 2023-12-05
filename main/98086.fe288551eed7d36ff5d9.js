@@ -23532,7 +23532,7 @@
                         matchComparator: f
                     } = e;
                     Q();
-                    let _ = i.toLowerCase().replaceAll("_", ""),
+                    let _ = i.toLowerCase().replaceAll(/[ _]/g, ""),
                         d = S.default.escape(_);
                     if (null == f) {
                         let e = RegExp("".concat(d), "i");
