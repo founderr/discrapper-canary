@@ -353,8 +353,8 @@
                     analyticsLocation: R,
                     analyticsLocations: h,
                     flowStartTime: g,
-                    subscriptionPlan: v,
-                    planGroup: M,
+                    subscriptionPlan: M,
+                    planGroup: v,
                     trialId: x,
                     priceOptions: y,
                     paymentSource: L,
@@ -395,24 +395,24 @@
                         emojiConfetti: N ? Z : void 0,
                         soundEffect: N ? K : void 0
                     });
-                    else if (s(null != v, "Missing subscriptionPlan"), C) {
-                        let t = (0, _.getPrice)(v.id, !1, !0, y);
+                    else if (s(null != M, "Missing subscriptionPlan"), C) {
+                        let t = (0, _.getPrice)(M.id, !1, !0, y);
                         if ("usd" === t.currency && (null == L ? void 0 : L.type) === E.PaymentSourceTypes.GCASH) {
                             var V;
                             let e = Error("Invalid USD currency for GCash");
                             (0, f.captureBillingException)(e, {
                                 tags: {
                                     paymentSourceId: null !== (V = null == L ? void 0 : L.id) && void 0 !== V ? V : "",
-                                    subscriptionPlanId: v.id,
+                                    subscriptionPlanId: M.id,
                                     priceOptions: JSON.stringify(y)
                                 }
                             })
                         }
-                        e = await (0, o.purchaseSKU)(p.PREMIUM_SUBSCRIPTION_APPLICATION, v.skuId, {
+                        e = await (0, o.purchaseSKU)(p.PREMIUM_SUBSCRIPTION_APPLICATION, M.skuId, {
                             expectedAmount: t.amount,
                             expectedCurrency: t.currency,
                             paymentSource: L,
-                            subscriptionPlanId: v.id,
+                            subscriptionPlanId: M.id,
                             isGift: !0,
                             giftStyle: A,
                             loadId: Y,
@@ -425,11 +425,11 @@
                         paymentSource: L,
                         currency: y.currency
                     }, h, R) : null != G ? await (0, i.updateSubscription)(G, {
-                        items: (0, _.getItemsWithUpsertedPlanIdForGroup)(G, v.id, 1, new Set(M)),
+                        items: (0, _.getItemsWithUpsertedPlanIdForGroup)(G, M.id, 1, new Set(v)),
                         paymentSource: L,
                         currency: y.currency
                     }, h, R) : await (0, u.subscribe)({
-                        planId: v.id,
+                        planId: M.id,
                         currency: y.currency,
                         paymentSource: L,
                         trialId: x,
@@ -500,7 +500,7 @@
                     selectedSkuId: h
                 } = (0, c.usePaymentContext)(), {
                     isGift: g
-                } = (0, o.useGiftContext)(), v = {
+                } = (0, o.useGiftContext)(), M = {
                     ...(0, l.useSharedPaymentModal)(),
                     paymentSources: N,
                     paymentSourceId: P,
@@ -509,7 +509,7 @@
                     setPurchaseError: A,
                     purchaseErrorBlockRef: O,
                     paymentAuthenticationState: R
-                }, M = (0, i.usePremiumTrialOffer)(I), x = !g && null != M && null != h && (0, m.SubscriptionTrials)[M.trial_id].skus.includes(h), y = null != E ? E : () => {
+                }, v = (0, i.usePremiumTrialOffer)(I), x = !g && null != v && null != h && (0, m.SubscriptionTrials)[v.trial_id].skus.includes(h), y = null != E ? E : () => {
                     let e = Object.values(N).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW;
                     _(e, {
                         trackedFromStep: d.Step.PAYMENT_TYPE
@@ -518,7 +518,7 @@
                 s(S, "Step should be set here");
                 let L = (0, a.useStableMemo)(() => Date.now(), [S]);
                 return (0, l.AddPaymentFlow)({
-                    paymentModalArgs: v,
+                    paymentModalArgs: M,
                     initialStep: d.Step.PAYMENT_TYPE,
                     prependSteps: [d.Step.PROMOTION_INFO],
                     appendSteps: [d.Step.REVIEW, d.Step.CONFIRM],
@@ -608,7 +608,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return M
+                    return v
                 }
             }), n("222007");
             var r = n("37983"),
@@ -636,14 +636,14 @@
                 R = n("102492"),
                 h = n("376641"),
                 g = n("49111"),
-                v = n("994770");
+                M = n("994770");
 
-            function M(e) {
+            function v(e) {
                 let {
                     premiumSubscription: t,
                     setPurchaseState: n,
                     onBack: a,
-                    onNext: M,
+                    onNext: v,
                     legalTermsNodeRef: x,
                     flashLegalTerms: y,
                     invoiceError: L,
@@ -714,7 +714,7 @@
                         isPrepaidPaymentPastDue: eC,
                         openInvoiceId: w,
                         premiumSubscription: t,
-                        onNext: M,
+                        onNext: v,
                         metadata: Y,
                         sku: eA,
                         skuPricePreview: eO,
@@ -731,7 +731,7 @@
                     let e = async () => {
                         if (!0 === ef) try {
                             if (null == I.default.redirectedPaymentId) return;
-                            await (0, o.redirectedPaymentSucceeded)(I.default.redirectedPaymentId), n(O.PurchaseState.COMPLETED), M()
+                            await (0, o.redirectedPaymentSucceeded)(I.default.redirectedPaymentId), n(O.PurchaseState.COMPLETED), v()
                         } catch (e) {
                             n(O.PurchaseState.FAIL), j(e), N.default.track(g.AnalyticEvents.PAYMENT_FLOW_FAILED, {
                                 ...G,
@@ -766,7 +766,7 @@
                         makePurchase: eh,
                         needsPaymentSource: null == e_ && !eT
                     }), (0, r.jsx)(h.default, {}), H && !eg ? (0, r.jsx)("div", {
-                        className: v.back,
+                        className: M.back,
                         children: (0, r.jsx)(f.default, {
                             onClick: a
                         })
@@ -1390,8 +1390,11 @@
         705820: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
+                CUSTOM_GIFT_MESSAGE_MAX_LENGTH: function() {
+                    return E
+                },
                 default: function() {
-                    return p
+                    return S
                 }
             }), n("222007");
             var r = n("37983"),
@@ -1407,54 +1410,55 @@
                 m = n("49111"),
                 _ = n("782340"),
                 I = n("809331");
-            let E = (0, f.createChannelRecord)({
-                id: "1",
-                type: m.ChannelTypes.DM
-            });
+            let E = 190,
+                p = (0, f.createChannelRecord)({
+                    id: "1",
+                    type: m.ChannelTypes.DM
+                });
 
-            function p(e) {
+            function S(e) {
                 let {
                     sectionTitle: t,
                     errors: n,
                     onTextChange: a,
                     pendingText: f,
                     placeholder: m,
-                    currentText: p,
-                    innerClassName: S,
-                    disabled: N = !1,
-                    disableThemedBackground: P = !1
-                } = e, [T, C] = s.useState(null != f ? f : p), [A, O] = s.useState((0, o.toRichValue)(T)), R = s.useRef(!1);
+                    currentText: S,
+                    innerClassName: N,
+                    disabled: P = !1,
+                    disableThemedBackground: T = !1
+                } = e, [C, A] = s.useState(null != f ? f : S), [O, R] = s.useState((0, o.toRichValue)(C)), h = s.useRef(!1);
                 return s.useEffect(() => {
-                    R.current = !0
+                    h.current = !0
                 }, []), s.useEffect(() => {
                     if (void 0 === f) {
-                        let e = (0, o.toRichValue)(p);
-                        C(p), O(e)
+                        let e = (0, o.toRichValue)(S);
+                        A(S), R(e)
                     }
-                }, [f, p]), (0, r.jsx)("div", {
+                }, [f, S]), (0, r.jsx)("div", {
                     className: I.body,
                     children: (0, r.jsxs)(d.default, {
                         title: t,
                         errors: n,
-                        disabled: N,
+                        disabled: P,
                         children: [(0, r.jsx)(c.default, {
-                            innerClassName: i(I.textArea, S),
-                            maxCharacterCount: 190,
+                            innerClassName: i(I.textArea, N),
+                            maxCharacterCount: E,
                             onChange: function(e, t, n) {
-                                t !== T && (C(t), O(n), a(t))
+                                t !== C && (A(t), R(n), a(t))
                             },
                             placeholder: m,
-                            channel: E,
-                            textValue: T,
-                            richValue: A,
+                            channel: p,
+                            textValue: C,
+                            richValue: O,
                             type: u.ChatInputTypes.CUSTOM_GIFT,
                             onBlur: () => {
-                                R.current = !1
+                                h.current = !1
                             },
                             onFocus: () => {
-                                R.current = !0
+                                h.current = !0
                             },
-                            focused: R.current,
+                            focused: h.current,
                             onSubmit: function() {
                                 return new Promise(e => {
                                     e({
@@ -1463,10 +1467,10 @@
                                     })
                                 })
                             },
-                            disableThemedBackground: P
+                            disableThemedBackground: T
                         }), (0, r.jsx)(l.HiddenVisually, {
                             children: _.default.Messages.MAXIMUM_LENGTH.format({
-                                maxLength: 190
+                                maxLength: E
                             })
                         })]
                     })
@@ -1534,15 +1538,15 @@
                         setSoundEffect: T
                     } = (0, i.useGiftContext)(), [C, A] = s.useState(!1), O = s.useRef(null), R = (0, a.useRadioGroup)({
                         orientation: "horizontal"
-                    }), h = (0, u.getGiftExperience)(e, !0, "premiumGiftSelect_GiftAnimationOptions"), g = u.GIFT_EXPERIENCES_WITH_CUSTOM_EMOJI_SOUNDBOARD.has(h), v = h !== u.GiftExperience.DEFAULT, M = (0, d.useIsSeasonalGiftingActive)(), {
+                    }), h = (0, u.getGiftExperience)(e, !0, "premiumGiftSelect_GiftAnimationOptions"), g = u.GIFT_EXPERIENCES_WITH_CUSTOM_EMOJI_SOUNDBOARD.has(h), M = h !== u.GiftExperience.DEFAULT, v = (0, d.useIsSeasonalGiftingActive)(), {
                         enabled: x
                     } = d.default.useExperiment({
                         location: "premiumGiftSelect_GiftAnimationOptions"
                     }, {
-                        autoTrackExposure: M
+                        autoTrackExposure: v
                     }), y = null;
-                    return v && (y = x ? I.SeasonalGiftStyles2023 : S), (0, r.jsxs)("div", {
-                        children: [v && (0, r.jsxs)("div", {
+                    return M && (y = x ? I.SeasonalGiftStyles2023 : S), (0, r.jsxs)("div", {
+                        children: [M && (0, r.jsxs)("div", {
                             className: p.giftMainAnimation,
                             children: [null != t ? (0, r.jsx)(f.default, {
                                 giftStyle: t,
@@ -1807,8 +1811,8 @@
                 R = n("154889"),
                 h = n("917247"),
                 g = n("279171"),
-                v = n("883662"),
-                M = n("824734"),
+                M = n("883662"),
+                v = n("824734"),
                 x = n("705820"),
                 y = n("889554"),
                 L = n("177998"),
@@ -1995,9 +1999,9 @@
                                 children: eN && null != ef && null != eT ? (0, r.jsxs)("div", {
                                     children: [(0, r.jsx)("div", {
                                         className: k.selectPlanDivider
-                                    }), (0, r.jsx)(v.PremiumInvoiceTableTotalRow, {
+                                    }), (0, r.jsx)(M.PremiumInvoiceTableTotalRow, {
                                         label: F.default.Messages.BILLING_PAYMENT_BREAKDOWN_TOTAL,
-                                        value: (0, r.jsx)(M.default, {
+                                        value: (0, r.jsx)(v.default, {
                                             price: eT.amount,
                                             currency: eT.currency,
                                             intervalType: $ ? null : ef.interval,
@@ -2129,10 +2133,10 @@
                 } = e, O = (0, u.useStateFromStores)([f.default], () => f.default.locale), R = (0, u.useStateFromStores)([m.default], () => m.default.get(n)), {
                     isGift: h,
                     giftRecipient: g
-                } = (0, d.useGiftContext)(), v = h && (0, _.shouldShowCustomGiftExperience)(g, !0, "PremiumSwitchPlanSelectOption");
+                } = (0, d.useGiftContext)(), M = h && (0, _.shouldShowCustomGiftExperience)(g, !0, "PremiumSwitchPlanSelectOption");
                 l(null != R, "Missing subscriptionPlan");
-                let M = null != t && t.planId === n,
-                    x = M || n === p.SubscriptionPlans.PREMIUM_MONTH_TIER_2 && null != t && [p.SubscriptionPlans.PREMIUM_YEAR_TIER_0, p.SubscriptionPlans.PREMIUM_YEAR_TIER_1].includes(t.planId),
+                let v = null != t && t.planId === n,
+                    x = v || n === p.SubscriptionPlans.PREMIUM_MONTH_TIER_2 && null != t && [p.SubscriptionPlans.PREMIUM_YEAR_TIER_0, p.SubscriptionPlans.PREMIUM_YEAR_TIER_1].includes(t.planId),
                     y = p.DISCOUNTS[n],
                     L = (0, I.getPrice)(n, !1, h, P),
                     b = (0, I.isPrepaidPaymentSource)(P.paymentSourceId),
@@ -2147,12 +2151,12 @@
                             discount: (0, E.formatPercent)(O, y / 100)
                         })
                     }),
-                    U = () => R.interval === p.SubscriptionIntervalTypes.YEAR && null != t || j && !M ? R.interval === p.SubscriptionIntervalTypes.YEAR && null != t ? (0, r.jsxs)("span", {
+                    U = () => R.interval === p.SubscriptionIntervalTypes.YEAR && null != t || j && !v ? R.interval === p.SubscriptionIntervalTypes.YEAR && null != t ? (0, r.jsxs)("span", {
                         className: N.planOptionMonthsFree,
                         children: ["(", S.default.Messages.BILLING_SWITCH_PLAN_YEARLY_FREE_MONTHS, ")"]
-                    }) : j && !M ? D() : void 0 : null;
+                    }) : j && !v ? D() : void 0 : null;
                 return (0, r.jsxs)(c.Clickable, {
-                    role: v ? "menuitem" : "radio",
+                    role: M ? "menuitem" : "radio",
                     "aria-checked": i,
                     tabIndex: i ? 0 : -1,
                     focusProps: {
@@ -2165,8 +2169,8 @@
                     },
                     onClick: x ? void 0 : () => s(n),
                     className: a(N.planOptionClickableContainer, {
-                        [N.selectedPlan]: v && i,
-                        [N.selectionBox]: v
+                        [N.selectedPlan]: M && i,
+                        [N.selectionBox]: M
                     }),
                     children: [(0, r.jsxs)("div", {
                         className: a(N.planOption, {
@@ -2174,7 +2178,7 @@
                         }),
                         children: [(0, r.jsxs)("div", {
                             className: N.planOptionClickable,
-                            children: [!v && (0, r.jsx)(c.Checkbox, {
+                            children: [!M && (0, r.jsx)(c.Checkbox, {
                                 readOnly: !0,
                                 displayOnly: !0,
                                 value: i,
@@ -2185,20 +2189,20 @@
                             }), (0, r.jsxs)("div", {
                                 children: [(0, r.jsxs)("div", {
                                     className: a(N.planOptionInterval, {
-                                        [N.optionSelected]: i || v,
-                                        [N.updatedOptionSelected]: T && (i || v)
+                                        [N.optionSelected]: i || M,
+                                        [N.updatedOptionSelected]: T && (i || M)
                                     }),
-                                    children: [(0, I.getIntervalString)(R.interval, h, b, R.intervalCount, v, (0, I.getPremiumType)(R.id)), v && U()]
-                                }), v && (0, r.jsx)("div", {
+                                    children: [(0, I.getIntervalString)(R.interval, h, b, R.intervalCount, M, (0, I.getPremiumType)(R.id)), M && U()]
+                                }), M && (0, r.jsx)("div", {
                                     className: N.planOneTimeCost,
                                     children: S.default.Messages.ONE_TIME_CHARGE.format({
                                         currencyAmount: (0, E.formatPrice)(L.amount, L.currency)
                                     })
                                 })]
-                            }), M && (0, r.jsxs)("span", {
+                            }), v && (0, r.jsxs)("span", {
                                 className: N.planOptionCurrentPlan,
                                 children: ["(", S.default.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, ")"]
-                            }), !v && U()]
+                            }), !M && U()]
                         }), T ? (0, r.jsx)("div", {
                             className: a({
                                 [N.optionPriceSelected]: i
@@ -2213,7 +2217,7 @@
                             })
                         }) : (0, r.jsx)("div", {
                             className: a({
-                                [N.optionSelected]: i || v
+                                [N.optionSelected]: i || M
                             }),
                             children: (0, E.formatPrice)(L.amount, L.currency)
                         })]
@@ -2311,8 +2315,8 @@
                 R = n("659632"),
                 h = n("719923"),
                 g = n("153160"),
-                v = n("210721"),
-                M = n("809071"),
+                M = n("210721"),
+                v = n("809071"),
                 x = n("154889"),
                 y = n("883662"),
                 L = n("623003"),
@@ -2374,7 +2378,7 @@
                     }],
                     eO = ea === S.PurchaseState.PURCHASING || ea === S.PurchaseState.COMPLETED,
                     eR = eE || eO,
-                    [eh, eg] = (0, M.useSubscriptionInvoicePreview)({
+                    [eh, eg] = (0, v.useSubscriptionInvoicePreview)({
                         items: eA,
                         renewal: !1,
                         preventFetch: eR,
@@ -2384,7 +2388,7 @@
                         trialId: et,
                         metadata: es
                     }),
-                    [ev, eM] = (0, M.useSubscriptionInvoicePreview)({
+                    [eM, ev] = (0, v.useSubscriptionInvoicePreview)({
                         items: eA,
                         renewal: !0,
                         preventFetch: eR,
@@ -2393,7 +2397,7 @@
                         currency: V.currency,
                         metadata: es
                     }),
-                    [ex, ey] = (0, M.useSubscriptionInvoicePreview)({
+                    [ex, ey] = (0, v.useSubscriptionInvoicePreview)({
                         items: [{
                             planId: B.SubscriptionPlans.PREMIUM_MONTH_TIER_2,
                             quantity: 1
@@ -2406,7 +2410,7 @@
                         metadata: es
                     }),
                     eL = eE && (0, R.shouldShowCustomGiftExperience)(ep, !0, "PremiumSubscriptionReview"),
-                    eb = null !== (a = null != eg ? eg : eM) && void 0 !== a ? a : ey,
+                    eb = null !== (a = null != eg ? eg : ev) && void 0 !== a ? a : ey,
                     ej = (0, u.useStateFromStores)([T.default], () => T.default.enabled),
                     eG = V.paymentSourceId,
                     {
@@ -2477,11 +2481,11 @@
                     })]
                 });
                 else {
-                    if (null == eh || null == ev || eW) return (0, r.jsx)("div", {
+                    if (null == eh || null == eM || eW) return (0, r.jsx)("div", {
                         className: Y.spinnerWrapper,
                         children: (0, r.jsx)(c.Spinner, {})
                     });
-                    eu && eh.subscriptionPeriodEnd !== ev.subscriptionPeriodEnd && (H = eh.subscriptionPeriodEnd), W = (0, r.jsxs)(y.PremiumInvoiceTable, {
+                    eu && eh.subscriptionPeriodEnd !== eM.subscriptionPeriodEnd && (H = eh.subscriptionPeriodEnd), W = (0, r.jsxs)(y.PremiumInvoiceTable, {
                         className: Y.invoice,
                         children: [(0, r.jsx)(y.PremiumInvoiceTableHeader, {
                             children: w.default.Messages.BILLING_SWITCH_PLAN_PURCHASE_DETAILS
@@ -2491,7 +2495,7 @@
                             isPrepaidPaymentSource: eB,
                             referralTrialOfferId: el
                         }), eB ? null : (0, r.jsx)(G.SubscriptionInvoiceFooter, {
-                            renewalInvoice: ev,
+                            renewalInvoice: eM,
                             isTrial: eu,
                             priceOptions: V,
                             overrideRenewalDate: H,
@@ -2526,7 +2530,7 @@
                             checkboxClassname: s,
                             checkboxLabelClassname: a
                         }
-                    }(null != eu && eu, ev, H),
+                    }(null != eu && eu, eM, H),
                     eJ = w.default.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({
                         planName: eC.name
                     });
@@ -2560,7 +2564,7 @@
                         children: eJ
                     }), eL && null != eS && (0, r.jsxs)(r.Fragment, {
                         children: [(0, r.jsx)(b.default, {
-                            defaultAnimationState: v.AnimationState.LOOP,
+                            defaultAnimationState: M.AnimationState.LOOP,
                             giftStyle: eS,
                             shouldAnimate: !0,
                             className: Y.giftMainAnimation
@@ -2616,7 +2620,7 @@
                             finePrint: (0, r.jsx)(f.default, {
                                 hide: eu || eo,
                                 subscriptionPlan: eC,
-                                renewalInvoice: ev,
+                                renewalInvoice: eM,
                                 isGift: eE,
                                 paymentSourceType: null === (n = K[null != eG ? eG : ""]) || void 0 === n ? void 0 : n.type,
                                 isEmbeddedIAP: ec,
@@ -2964,7 +2968,7 @@
                     })
                 }, [A, P, C]), g = s.useCallback(() => {
                     P(!1)
-                }, [P]), v = s.useCallback(() => {
+                }, [P]), M = s.useCallback(() => {
                     o.default.dispatch({
                         type: "EMOJI_INTERACTION_INITIATED",
                         interaction: d.EmojiInteractionPoint.EmojiButtonFocused
@@ -2978,7 +2982,7 @@
                     onMouseEnter: h,
                     onMouseOver: h,
                     onMouseLeave: g,
-                    onFocus: v,
+                    onFocus: M,
                     onClick: E,
                     "aria-label": f.default.Messages.SELECT_EMOJI,
                     "aria-controls": p,
