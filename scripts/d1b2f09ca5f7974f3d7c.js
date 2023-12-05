@@ -200,10 +200,10 @@
                 x = l("754576"),
                 N = l("228220"),
                 g = l("299039"),
-                I = l("803725"),
-                _ = l("142485"),
-                S = l("643290"),
-                L = l("431734"),
+                _ = l("803725"),
+                I = l("142485"),
+                L = l("643290"),
+                S = l("431734"),
                 T = l("80028"),
                 M = l("782340"),
                 j = l("515597"),
@@ -254,7 +254,7 @@
                 } = e, [O, k] = n.useState(null), {
                     onShareClick: F,
                     canAttachFiles: G
-                } = (0, _.default)({
+                } = (0, I.default)({
                     channelId: s,
                     setExporting: e => k(null != e ? "share" : null)
                 });
@@ -262,7 +262,7 @@
                     let e = f.default.getChannel(s);
                     k("export");
                     try {
-                        let n = await (0, I.exportClip)(t, {
+                        let n = await (0, _.exportClip)(t, {
                             ...i,
                             applicationAudio: P,
                             voiceAudio: x
@@ -290,7 +290,7 @@
                 async function V() {
                     k("export");
                     try {
-                        let e = await (0, I.exportClip)(t, {
+                        let e = await (0, _.exportClip)(t, {
                                 ...i,
                                 applicationAudio: P,
                                 voiceAudio: x
@@ -348,9 +348,9 @@
                         })]
                     }), (0, a.jsxs)("div", {
                         className: r(j.clipFormSection, j.metadataSection),
-                        children: [(0, a.jsx)(S.default, {
+                        children: [(0, a.jsx)(L.default, {
                             clip: t
-                        }), (0, a.jsx)(L.default, {
+                        }), (0, a.jsx)(S.default, {
                             className: j.userList,
                             clip: t
                         })]
@@ -469,9 +469,9 @@
                 x = l("756458");
 
             function N(e) {
-                var t, l, E, h, N, I, _, S;
+                var t, l, E, h, N, _, I, L;
                 let {
-                    clip: L,
+                    clip: S,
                     channelId: T,
                     transitionState: M,
                     onClose: j
@@ -482,7 +482,7 @@
                     (async function e() {
                         let e;
                         try {
-                            e = await u.default.clips.loadClip(L.filepath)
+                            e = await u.default.clips.loadClip(S.filepath)
                         } catch {
                             j(), s.default.show({
                                 title: C.default.Messages.CLIPS_LOAD_ERROR_TITLE,
@@ -500,15 +500,15 @@
                             }));
                         D(a), b(n)
                     })()
-                }, [L.filepath, j]), n.useEffect(() => () => {
+                }, [S.filepath, j]), n.useEffect(() => () => {
                     null != P && URL.revokeObjectURL(P)
                 }, [P]), n.useEffect(() => () => {
                     null != w && URL.revokeObjectURL(w)
                 }, [w]);
-                let [O, k] = n.useState(null === (N = null === (t = L.editMetadata) || void 0 === t ? void 0 : t.voiceAudio) || void 0 === N || N), [F, G] = n.useState(null === (I = null === (l = L.editMetadata) || void 0 === l ? void 0 : l.applicationAudio) || void 0 === I || I), [B, V] = n.useState({
-                    start: null !== (_ = null === (E = L.editMetadata) || void 0 === E ? void 0 : E.start) && void 0 !== _ ? _ : 0,
-                    end: null !== (S = null === (h = L.editMetadata) || void 0 === h ? void 0 : h.end) && void 0 !== S ? S : 0
-                }), [U, H] = n.useState(L.name), Z = n.useRef({
+                let [O, k] = n.useState(null === (N = null === (t = S.editMetadata) || void 0 === t ? void 0 : t.voiceAudio) || void 0 === N || N), [F, G] = n.useState(null === (_ = null === (l = S.editMetadata) || void 0 === l ? void 0 : l.applicationAudio) || void 0 === _ || _), [B, V] = n.useState({
+                    start: null !== (I = null === (E = S.editMetadata) || void 0 === E ? void 0 : E.start) && void 0 !== I ? I : 0,
+                    end: null !== (L = null === (h = S.editMetadata) || void 0 === h ? void 0 : h.end) && void 0 !== L ? L : 0
+                }), [U, H] = n.useState(S.name), Z = n.useRef({
                     name: U,
                     editMetadata: {
                         start: B.start,
@@ -526,13 +526,13 @@
                         applicationAudio: F
                     }
                 };
-                let z = (0, v.useClipProtocolURL)(L);
+                let z = (0, v.useClipProtocolURL)(S);
                 return n.useEffect(() => {
                     async function e() {
                         let e = {};
                         null != z && (e = {
                             thumbnail: await (0, m.createThumbnailFromVideo)(z, Z.current.editMetadata.start)
-                        }), (0, c.updateClipMetadata)(L.id, {
+                        }), (0, c.updateClipMetadata)(S.id, {
                             ...Z.current,
                             ...e
                         })
@@ -540,7 +540,7 @@
                     return () => {
                         e()
                     }
-                }, [L.id, z]), (0, a.jsx)(r.ModalRoot, {
+                }, [S.id, z]), (0, a.jsx)(r.ModalRoot, {
                     impression: {
                         impressionName: i.ImpressionNames.CLIP_EDITOR_VIEWED
                     },
@@ -573,7 +573,7 @@
                                     cropData: B,
                                     onSetClipName: H,
                                     clipName: U,
-                                    clip: L,
+                                    clip: S,
                                     onClose: j
                                 })]
                             })
@@ -630,7 +630,9 @@
                             audioSrc: c,
                             src: d,
                             isLoading: u,
-                            onDoneLoading: v
+                            onDoneLoading: v,
+                            startTime: t.start,
+                            endTime: t.end
                         })
                     }), u || f !== r.ModalTransitionState.ENTERED ? null : (0, a.jsx)(h.default, {
                         videoPlayerRef: m,
@@ -645,21 +647,23 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return u
+                    return d
                 }
             }), l("222007"), l("424973");
             var a = l("37983"),
                 n = l("884691"),
-                i = l("58608"),
-                r = l("756458");
+                i = l("917351"),
+                r = l("31695"),
+                s = l("58608"),
+                u = l("756458");
 
-            function s(e) {
+            function o(e) {
                 let {
                     setRef: t,
                     audioTrackLabel: l,
                     src: i,
-                    muted: s
-                } = e, u = n.useCallback(e => {
+                    muted: r
+                } = e, s = n.useCallback(e => {
                     t(e, l)
                 }, [t, l]), o = n.useCallback(e => {
                     Object.values(e.currentTarget.audioTracks).forEach(e => {
@@ -668,71 +672,86 @@
                 }, [l]);
                 return (0, a.jsx)("audio", {
                     id: "ClipsPlayerAudioTrack:".concat(l),
-                    className: r.hidden,
-                    ref: u,
+                    className: u.hidden,
+                    ref: s,
                     src: i,
-                    loop: !0,
-                    muted: s,
+                    muted: r,
                     preload: "auto",
                     onLoadedMetadata: o
                 })
             }
-            var u = n.forwardRef(function(e, t) {
+            var d = n.forwardRef(function(e, t) {
                 let {
                     src: l,
-                    audioSrc: u,
-                    applicationAudioEnabled: o,
-                    voiceAudioEnabled: d,
-                    isLoading: c,
-                    onDoneLoading: f
-                } = e, m = n.useRef({}), [v, p] = n.useState([]), E = n.useCallback(() => {
-                    for (let e of Object.values(m.current)) null != e && e.play()
-                }, []), h = n.useCallback(() => {
-                    for (let e of Object.values(m.current)) null != e && e.pause()
-                }, []), C = n.useCallback(e => {
-                    for (let t of Object.values(m.current)) null != t && (t.currentTime = e)
-                }, []), x = n.useCallback(() => {
-                    var e;
-                    (null === (e = m.current.main) || void 0 === e ? void 0 : e.paused) ? E(): h()
-                }, [E, h]), N = n.useCallback(e => {
-                    let t = m.current.main;
-                    if (null != t)
-                        for (let [l, a] of Object.entries(m.current)) {
-                            if ("main" === l || null == a) continue;
-                            let n = t.currentTime - a.currentTime;
-                            !(.1 >= Math.abs(n)) && (a.currentTime = e.currentTarget.currentTime)
-                        }
-                }, []), g = n.useCallback(e => {
-                    m.current.main = e
-                }, []), I = n.useCallback(e => {
-                    let t = [];
-                    for (let l of Object.values(e.currentTarget.audioTracks)) l.label.includes(":application") ? l.enabled = !0 : l.label.includes(":voice") ? (l.enabled = !1, !t.includes(l.label) && t.push(l.label)) : l.enabled = !1;
-                    p(t)
-                }, []), _ = n.useCallback((e, t) => {
-                    m.current[t] = e
-                }, []);
+                    audioSrc: d,
+                    applicationAudioEnabled: c,
+                    voiceAudioEnabled: f,
+                    isLoading: m,
+                    onDoneLoading: v,
+                    startTime: p = 0,
+                    endTime: E
+                } = e, h = n.useRef({}), [C, x] = n.useState([]), N = n.useRef(!1), g = n.useCallback(() => {
+                    let e = h.current.main;
+                    if (null == e) return;
+                    let t = (0, i.round)(e.currentTime, 3),
+                        l = (0, i.round)(p, 3),
+                        a = null != E ? (0, i.round)(E, 3) : (0, i.round)(e.duration, 3);
+                    if (t >= a || t < l) {
+                        for (let e of Object.values(h.current)) null != e && (e.currentTime = p);
+                        return !0
+                    }
+                }, [p, E]);
+                (0, r.default)(() => {
+                    if (N.current) {
+                        let e = g();
+                        e && _()
+                    }
+                });
+                let _ = n.useCallback(() => {
+                        for (let e of (N.current = !0, g(), Object.values(h.current))) null != e && e.play()
+                    }, [g]),
+                    I = n.useCallback(() => {
+                        for (let e of Object.values(h.current)) null != e && e.pause()
+                    }, []),
+                    L = n.useCallback(e => {
+                        var t;
+                        for (let l of ((null === (t = h.current.main) || void 0 === t ? void 0 : t.paused) && (N.current = !1), Object.values(h.current))) null != l && (l.currentTime = e)
+                    }, []),
+                    S = n.useCallback(() => {
+                        var e;
+                        (null === (e = h.current.main) || void 0 === e ? void 0 : e.paused) ? _(): I()
+                    }, [_, I]),
+                    T = n.useCallback(e => {
+                        h.current.main = e
+                    }, []),
+                    M = n.useCallback(e => {
+                        let t = [];
+                        for (let l of Object.values(e.currentTarget.audioTracks)) l.label.includes(":application") ? l.enabled = !0 : l.label.includes(":voice") ? (l.enabled = !1, !t.includes(l.label) && t.push(l.label)) : l.enabled = !1;
+                        x(t)
+                    }, []),
+                    j = n.useCallback((e, t) => {
+                        h.current[t] = e
+                    }, []);
                 return (n.useImperativeHandle(t, () => ({
-                    play: E,
-                    seek: C,
-                    pause: h,
-                    videoElement: m.current.main
+                    play: _,
+                    seek: L,
+                    pause: I,
+                    videoElement: h.current.main
                 })), null == l) ? null : (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsx)(i.default, {
-                        onClick: x,
-                        className: c ? r.hidden : r.displayVideo,
-                        ref: g,
+                    children: [(0, a.jsx)(s.default, {
+                        onClick: S,
+                        className: m ? u.hidden : u.displayVideo,
+                        ref: T,
                         src: l,
-                        muted: !o,
-                        onLoadedMetadata: I,
-                        onLoadedData: f,
-                        onTimeUpdate: N,
-                        preload: "auto",
-                        loop: !0
-                    }), v.map(e => (0, a.jsx)(s, {
+                        muted: !c,
+                        onLoadedMetadata: M,
+                        onLoadedData: v,
+                        preload: "auto"
+                    }), C.map(e => (0, a.jsx)(o, {
                         audioTrackLabel: e,
-                        setRef: _,
-                        src: u,
-                        muted: !d
+                        setRef: j,
+                        src: d,
+                        muted: !f
                     }, e))]
                 })
             })
@@ -765,39 +784,32 @@
                 let {
                     sourceURL: N,
                     cropData: g,
-                    videoPlayerRef: I,
-                    setCropData: _
-                } = e, [S, L] = n.useState((C = !(null === (l = I.current) || void 0 === l ? void 0 : null === (t = l.videoElement) || void 0 === t ? void 0 : t.paused), C)), T = n.useRef(null), [M, j] = n.useState(null), [A, R] = n.useState(), P = n.useRef(null), b = n.useRef(null), [w, D] = n.useState(0), [y, O] = n.useState(!1), [k, F] = n.useState(null);
+                    videoPlayerRef: _,
+                    setCropData: I
+                } = e, [L, S] = n.useState((C = !(null === (l = _.current) || void 0 === l ? void 0 : null === (t = l.videoElement) || void 0 === t ? void 0 : t.paused), C)), T = n.useRef(null), [M, j] = n.useState(null), [A, R] = n.useState(), P = n.useRef(null), b = n.useRef(null), [w, D] = n.useState(0), [y, O] = n.useState(!1), [k, F] = n.useState(null);
                 (0, c.default)(() => {
-                    var e, t;
-                    let l = null === (e = I.current) || void 0 === e ? void 0 : e.videoElement;
-                    if (null == l) return;
-                    let a = (0, s.round)(l.currentTime, 3),
-                        n = (0, s.round)(g.start, 3),
-                        i = (0, s.round)(g.end, 3);
-                    if (S && (a >= i || a < n)) {
-                        null === (t = I.current) || void 0 === t || t.seek(g.start), D(g.start);
-                        return
-                    }
-                    w !== a && D(a)
+                    var e;
+                    let t = null === (e = _.current) || void 0 === e ? void 0 : e.videoElement;
+                    null != t && w !== t.currentTime && D(t.currentTime)
                 });
                 let G = n.useMemo(() => g.end - g.start, [g]);
                 n.useEffect(() => {
                     var e;
-                    let t = null === (e = I.current) || void 0 === e ? void 0 : e.videoElement,
+                    let t = null === (e = _.current) || void 0 === e ? void 0 : e.videoElement,
                         l = P.current,
                         a = b.current;
                     if (null == t || null == l || null == a) return;
-                    let n = () => {
-                            j(null), O(!1), L(!0)
-                        },
+                    let n = (0, s.debounce)(S, E.CLIP_PLAYING_DEBOUNCE_MS),
                         i = () => {
-                            L(!1)
+                            j(null), O(!1), n.cancel(), n(!0)
+                        },
+                        r = () => {
+                            n.cancel(), n(!1)
                         };
-                    return t.addEventListener("play", n), t.addEventListener("pause", i), () => {
-                        t.removeEventListener("play", n), t.removeEventListener("pause", i)
+                    return t.addEventListener("play", i), t.addEventListener("pause", r), () => {
+                        t.removeEventListener("play", i), t.removeEventListener("pause", r)
                     }
-                }, [I]);
+                }, [_]);
                 let {
                     ref: B,
                     width: V = 0,
@@ -817,23 +829,23 @@
                             u = (r - k.left) / k.width * A,
                             o = (0, s.clamp)(u, 0, A),
                             d = M;
-                        if (null == d && t && (d = o <= g.start ? "start" : o >= g.end ? "end" : "playhead", null === (l = I.current) || void 0 === l || l.pause(), j(d), O(S)), "start" === d) {
+                        if (null == d && t && (d = o <= g.start ? "start" : o >= g.end ? "end" : "playhead", null === (l = _.current) || void 0 === l || l.pause(), j(d), O(L)), "start" === d) {
                             let e = (0, s.clamp)(o, 0, g.end - E.MIN_CLIP_DURATION_SECONDS);
-                            _({
+                            I({
                                 ...g,
                                 start: e
-                            }), null === (a = I.current) || void 0 === a || a.seek(e)
+                            }), null === (a = _.current) || void 0 === a || a.seek(e)
                         } else if ("end" === d) {
                             let e = (0, s.clamp)(o, g.start + E.MIN_CLIP_DURATION_SECONDS, A);
-                            _({
+                            I({
                                 ...g,
                                 end: e
-                            }), null === (n = I.current) || void 0 === n || n.seek(e)
+                            }), null === (n = _.current) || void 0 === n || n.seek(e)
                         } else if ("playhead" === d) {
                             let e = (0, s.clamp)(o, g.start, g.end);
-                            null === (i = I.current) || void 0 === i || i.seek(e)
+                            null === (i = _.current) || void 0 === i || i.seek(e)
                         }
-                    }, [A, k, M, g, I, S, _]),
+                    }, [A, k, M, g, _, L, I]),
                     W = n.useCallback(e => {
                         X(e.clientX, !0)
                     }, [X]),
@@ -843,10 +855,10 @@
                     K = n.useCallback(() => {
                         if (y) {
                             var e;
-                            null === (e = I.current) || void 0 === e || e.play()
+                            null === (e = _.current) || void 0 === e || e.play()
                         }
                         O(!1), j(null)
-                    }, [I, y]);
+                    }, [_, y]);
                 n.useEffect(() => (document.addEventListener("mousemove", Y), document.addEventListener("mouseup", K), () => {
                     document.removeEventListener("mousemove", Y), document.removeEventListener("mouseup", K)
                 }), [Y, K]), n.useEffect(() => {
@@ -884,7 +896,7 @@
                     })()
                 }, [V, U, B, A, Z]);
                 let q = w - g.start,
-                    J = null === (i = I.current) || void 0 === i ? void 0 : i.videoElement;
+                    J = null === (i = _.current) || void 0 === i ? void 0 : i.videoElement;
                 return (0, a.jsx)("div", {
                     className: h.centeringWrapper,
                     children: (0, a.jsxs)("div", {
@@ -894,10 +906,10 @@
                             children: (0, a.jsx)(o.Clickable, {
                                 onClick: () => {
                                     var e, t;
-                                    return S ? null === (e = I.current) || void 0 === e ? void 0 : e.pause() : null === (t = I.current) || void 0 === t ? void 0 : t.play()
+                                    return L ? null === (e = _.current) || void 0 === e ? void 0 : e.pause() : null === (t = _.current) || void 0 === t ? void 0 : t.play()
                                 },
                                 className: h.playPauseButton,
-                                children: S ? (0, a.jsx)(m.default, {
+                                children: L ? (0, a.jsx)(m.default, {
                                     width: 24,
                                     height: 24,
                                     className: h.playPauseIcon
@@ -931,9 +943,9 @@
                                     if (null != e) {
                                         if (R(e.duration), 0 === g.start && (0 === g.end || g.end === e.duration)) {
                                             var t;
-                                            null === (t = I.current) || void 0 === t || t.seek(e.duration / 2), D(e.duration / 2)
+                                            null === (t = _.current) || void 0 === t || t.seek(e.duration / 2), D(e.duration / 2)
                                         }
-                                        0 === g.end && _(t => ({
+                                        0 === g.end && I(t => ({
                                             ...t,
                                             end: e.duration
                                         }))
