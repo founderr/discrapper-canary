@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["72243"], {
+    ["24364"], {
         20860: function(e, t, n) {
             var r = {
                 "./bg.png": "585337",
@@ -25783,9 +25783,6 @@
                         };
                         return null != e.retryAfter && (t.retry_after = e.retryAfter), t
                     }(t)).date_of_birth ? C.LoginStates.LOGIN_AGE_GATE : C.LoginStates.NONE
-                },
-                LOGIN_MFA_WEBAUTHN: function() {
-                    w = C.LoginStates.LOGGING_IN_MFA_WEBAUTHN
                 },
                 LOGIN_MFA_STEP: function(e) {
                     let {

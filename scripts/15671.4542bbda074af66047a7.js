@@ -248,7 +248,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return N
                 }
             });
             var s = n("37983"),
@@ -271,8 +271,8 @@
                 T = n("782340"),
                 R = n("451862"),
                 I = n("173791"),
-                N = n("926622"),
-                S = i.default.connectStores([h.default, u.default, f.default, E.default], e => {
+                S = n("926622"),
+                N = i.default.connectStores([h.default, u.default, f.default, E.default], e => {
                     let {
                         giftCode: t
                     } = e, n = h.default.get(t.skuId), {
@@ -306,7 +306,7 @@
                         }) : (0, s.jsx)(m.Avatar, {
                             src: null != l ? l.getAvatarURL(void 0, 100) : null,
                             size: o.AvatarSizes.DEPRECATED_SIZE_100,
-                            className: N.marginBottom20
+                            className: S.marginBottom20
                         }), null != t ? (0, s.jsxs)(a.Fragment, {
                             children: [(0, s.jsx)(m.SubTitle, {
                                 children: T.default.Messages.INVITE_MODAL_ERROR_TITLE
@@ -317,7 +317,7 @@
                             children: [(0, s.jsx)(m.SubTitle, {
                                 children: f
                             }), (0, s.jsxs)(m.Title, {
-                                className: r(N.marginTop8, I.flexCenter),
+                                className: r(S.marginTop8, I.flexCenter),
                                 children: [i.productLine !== p.SKUProductLines.COLLECTIBLES && (0, s.jsx)(_.default, {
                                     size: _.default.Sizes.MEDIUM,
                                     className: R.applicationIcon,
@@ -359,8 +359,8 @@
                 T = n("770032"),
                 R = n("724554"),
                 I = n("878720"),
-                N = n("25033"),
-                S = n("589252"),
+                S = n("25033"),
+                N = n("589252"),
                 C = n("970366"),
                 L = n("271938"),
                 O = n("72177"),
@@ -369,8 +369,8 @@
                 v = n("124969"),
                 D = n("980428"),
                 U = n("599110"),
-                G = n("659500"),
-                b = n("773336"),
+                b = n("659500"),
+                G = n("773336"),
                 y = n("404432"),
                 P = n("719451"),
                 F = n("331085"),
@@ -568,7 +568,7 @@
                         className: e,
                         children: [(0, s.jsx)(P.InviteResolvingHeader, {}), (0, s.jsxs)(v.Block, {
                             className: V.marginTop20,
-                            children: [(0, s.jsx)(S.default, {
+                            children: [(0, s.jsx)(N.default, {
                                 className: V.marginBottom20,
                                 alpha2: t.alpha2,
                                 countryCode: t.code.split(" ")[0],
@@ -635,7 +635,7 @@
                         children: [(0, s.jsx)(v.Title, {
                             className: V.marginBottom8,
                             children: k.default.Messages.LOGIN_TITLE
-                        }, "title"), !1 === (0, b.isAndroidWeb)() ? (0, s.jsx)(v.SubTitle, {
+                        }, "title"), !1 === (0, G.isAndroidWeb)() ? (0, s.jsx)(v.SubTitle, {
                             children: k.default.Messages.AUTH_LOGIN_BODY
                         }, "subtitle") : null]
                     }) : (0, s.jsx)(P.default, {
@@ -669,7 +669,7 @@
                             }), n, (0, s.jsx)(d.HeadingLevel, {
                                 children: (0, s.jsxs)(v.Block, {
                                     className: V.marginTop20,
-                                    children: [(0, s.jsx)(S.default, {
+                                    children: [(0, s.jsx)(N.default, {
                                         alpha2: o.alpha2,
                                         countryCode: o.code.split(" ")[0],
                                         className: V.marginBottom20,
@@ -851,7 +851,6 @@
                         case B.LoginStates.MFA_SMS_STEP:
                         case B.LoginStates.LOGGING_IN_MFA:
                         case B.LoginStates.MFA_STEP:
-                        case B.LoginStates.LOGGING_IN_MFA_WEBAUTHN:
                             return this.renderMFA();
                         case B.LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION:
                         case B.LoginStates.ACCOUNT_DISABLED:
@@ -914,7 +913,7 @@
                             source: this.loginSource,
                             giftCodeSKUId: this.giftCodeSKUId,
                             invite: this.props.invite
-                        }), G.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE)
+                        }), b.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE)
                     }, this.handleIPAuthorize = async e => {
                         let {
                             password: t,
@@ -930,7 +929,7 @@
                                 undelete: n,
                                 source: this.loginSource,
                                 giftCodeSKUId: this.giftCodeSKUId
-                            }), G.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE)
+                            }), b.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE)
                         } catch (e) {
                             null != e.body && null != e.body.message && this.setState({
                                 phoneVerifyError: e.body.message
@@ -964,7 +963,7 @@
                             data: n,
                             ticket: s
                         } = e;
-                        return G.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE), E.default.loginMFAv2({
+                        return b.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE), E.default.loginMFAv2({
                             code: n,
                             ticket: s,
                             mfaType: t,
@@ -975,7 +974,7 @@
                         null != e && e.preventDefault(), null != this.loginRef && this.loginRef.focus();
                         let t = this.getFullLogin();
                         try {
-                            G.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE), await E.default.forgotPassword(t), (0, d.openModal)(e => (0, s.jsx)(d.ConfirmModal, {
+                            b.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE), await E.default.forgotPassword(t), (0, d.openModal)(e => (0, s.jsx)(d.ConfirmModal, {
                                 header: k.default.Messages.EMAIL_VERIFICATION_INSTRUCTIONS_HEADER,
                                 confirmText: k.default.Messages.OKAY,
                                 confirmButtonColor: v.Button.Colors.BRAND,
@@ -1020,7 +1019,7 @@
                         } = this.props, u = null != l ? (0, i.parse)(l.search) : {};
                         "" !== t && (u.email = t), null != n ? (u.mode = "register", e = B.Routes.INVITE(n.code)) : null != s ? (u.mode = "register", e = B.Routes.GIFT_CODE(s.code)) : null != a ? e = B.Routes.GUILD_TEMPLATE(a.code) : null != o ? (e = B.Routes.REGISTER, u.redirect_to = o) : e = B.Routes.REGISTER, E.default.loginReset(), r(e, {
                             search: (0, i.stringify)(u)
-                        }), G.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE)
+                        }), b.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE)
                     };
                     let a = null != e.location ? (0, i.parse)(e.location.search) : {};
                     this.state = {
@@ -1041,7 +1040,7 @@
                 transitionTo: e => n.g.location.assign(e)
             };
             var K = function(e) {
-                let t = (0, u.useStateFromStoresObject)([O.default, M.default, L.default, T.default, N.default], () => ({
+                let t = (0, u.useStateFromStoresObject)([O.default, M.default, L.default, T.default, S.default], () => ({
                     authenticated: L.default.isAuthenticated(),
                     handoffAvailable: O.default.isHandoffAvailable(),
                     user: O.default.user,
@@ -1052,7 +1051,7 @@
                     maskedPhone: L.default.getMaskedPhone(),
                     errors: L.default.getErrors(),
                     defaultRoute: M.default.defaultRoute,
-                    country: N.default.getCountryCode(),
+                    country: S.default.getCountryCode(),
                     hasLoggedInAccounts: T.default.getHasLoggedInAccounts()
                 }));
                 return (0, s.jsx)(Y, {
@@ -1171,8 +1170,8 @@
                 T = n("49111"),
                 R = n("843455"),
                 I = n("782340"),
-                N = n("103957"),
-                S = n("926622");
+                S = n("103957"),
+                N = n("926622");
             (l = s || (s = {}))[l.INITIALIZING = 0] = "INITIALIZING", l[l.PENDING_REMOTE_INIT = 1] = "PENDING_REMOTE_INIT", l[l.PENDING_FINISH = 2] = "PENDING_FINISH", l[l.PENDING_TICKET = 3] = "PENDING_TICKET", l[l.PENDING_LOGIN = 4] = "PENDING_LOGIN", l[l.FINISH = 5] = "FINISH", (r = a || (a = {}))[r.QR_CODE = 0] = "QR_CODE", r[r.CONFIRM = 1] = "CONFIRM";
             let C = n("527826"),
                 L = new h.default("LoginQRSocket");
@@ -1187,25 +1186,25 @@
                 }, [C]), o.useEffect(() => {
                     n && c.AccessibilityAnnouncer.announce(I.default.Messages.LOGIN_WITH_QR_LOADING_FINISHED_LABEL)
                 }, [n]), (0, i.jsx)("div", {
-                    className: N.qrCodeContainer,
+                    className: S.qrCodeContainer,
                     children: "" !== t && n ? (0, i.jsxs)(i.Fragment, {
                         children: [(0, i.jsx)(_.default, {
-                            className: N.qrCode,
+                            className: S.qrCode,
                             size: 160,
                             text: t
                         }), (0, i.jsx)("div", {
-                            className: N.qrCodeOverlay,
+                            className: S.qrCodeOverlay,
                             children: (0, i.jsx)("img", {
                                 src: C,
                                 alt: ""
                             })
                         })]
                     }) : (0, i.jsx)("div", {
-                        className: N.qrCodeOverlay,
+                        className: S.qrCodeOverlay,
                         "aria-label": I.default.Messages.LOGIN_WITH_QR_LOADING_LABEL,
                         "aria-busy": !0,
                         children: (0, i.jsx)(c.Spinner, {
-                            className: N.qrCode,
+                            className: S.qrCode,
                             type: c.Spinner.Type.WANDERING_CUBES,
                             "aria-hidden": !0
                         })
@@ -1238,7 +1237,7 @@
                             children: [(0, i.jsx)(O, {
                                 text: 1 === t.step ? "https://discord.com/ra/".concat(t.fingerprint) : ""
                             }), (0, i.jsx)(m.Title, {
-                                className: S.marginBottom8,
+                                className: N.marginBottom8,
                                 children: I.default.Messages.LOGIN_WITH_QR
                             }), null != s ? (0, i.jsx)(M, {
                                 children: s
@@ -1253,13 +1252,13 @@
                         } = t;
                         return (0, i.jsxs)(i.Fragment, {
                             children: [(0, i.jsx)(E.default, {
-                                className: N.qrAvatar,
+                                className: S.qrAvatar,
                                 user: e,
                                 size: c.AvatarSizes.SIZE_120,
                                 isMobile: !0,
                                 status: R.StatusTypes.ONLINE
                             }), (0, i.jsx)(m.Title, {
-                                className: S.marginBottom8,
+                                className: N.marginBottom8,
                                 children: I.default.Messages.CONFIRM_QR_CHECK_YOUR_PHONE
                             }), (0, i.jsx)(m.SubTitle, {
                                 children: I.default.Messages.LOGIN_AS.format({
@@ -1270,7 +1269,7 @@
                                 color: c.Button.Colors.LINK,
                                 size: c.Button.Sizes.MIN,
                                 onClick: n,
-                                className: N.startOverButton,
+                                className: S.startOverButton,
                                 children: I.default.Messages.QR_CODE_LOGIN_START_OVER
                             })]
                         })
@@ -1465,14 +1464,14 @@
                     })
                 }, [n, t, s, l]), (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)("div", {
-                        className: N.verticalSeparator
+                        className: S.verticalSeparator
                     }), (0, i.jsx)(c.Sequencer, {
                         fillParent: !0,
-                        className: N.qrLogin,
+                        className: S.qrLogin,
                         step: r,
                         steps: [0, 1],
                         children: (0, i.jsx)("div", {
-                            className: N.qrLoginInner,
+                            className: S.qrLoginInner,
                             children: (0, i.jsx)(x, {
                                 state: n,
                                 cancel: a
@@ -1543,8 +1542,8 @@
                 T = n("715570"),
                 R = n("486252"),
                 I = n("378020"),
-                N = n("980976"),
-                S = n("534438"),
+                S = n("980976"),
+                N = n("534438"),
                 C = n("946859"),
                 L = n("791160"),
                 O = n("434824"),
@@ -1553,8 +1552,8 @@
                 v = n("25033"),
                 D = n("255403"),
                 U = n("2581"),
-                G = n("644417"),
-                b = n("697543"),
+                b = n("644417"),
+                G = n("697543"),
                 y = n("79345"),
                 P = n("447997"),
                 F = n("970366"),
@@ -1800,7 +1799,7 @@
                     let {
                         invite: e
                     } = this.props;
-                    return (null == e ? void 0 : e.stage_instance) != null && null != e.guild ? (0, s.jsx)(S.default, {
+                    return (null == e ? void 0 : e.stage_instance) != null && null != e.guild ? (0, s.jsx)(N.default, {
                         stageInstance: e.stage_instance,
                         guild: e.guild
                     }) : (null == e ? void 0 : e.guild_scheduled_event) != null ? (0, s.jsx)(I.GuildScheduledEventInviteHeader, {
@@ -1896,7 +1895,7 @@
                             })]
                         }), null != e && i ? (0, s.jsx)(k.default, {
                             className: en.marginTop20,
-                            children: (0, s.jsx)(S.StageInviteFooter, {
+                            children: (0, s.jsx)(N.StageInviteFooter, {
                                 guild: e.guild,
                                 onlineCount: e.approximate_presence_count
                             })
@@ -1936,7 +1935,7 @@
                         },
                         authBoxClassName: I,
                         apiErrors: {
-                            email: S,
+                            email: N,
                             username: C,
                             global_name: L,
                             password: O,
@@ -1947,8 +1946,8 @@
                             hasCopyAboveButton: v
                         }
                     } = this.props, {
-                        subText: G,
-                        consentText: b
+                        subText: b,
+                        consentText: G
                     } = this.renderConsentComponents(), y = this.renderErrorMessage(), F = (0, s.jsx)(E.Tooltip, {
                         text: !u && A ? ee.default.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
                         children: e => (0, s.jsx)("div", {
@@ -1981,7 +1980,7 @@
                                 email: e,
                                 emailClientError: 0 === e.length ? ee.default.Messages.REQUIRED : null
                             }),
-                            error: null != f ? f : ea(S),
+                            error: null != f ? f : ea(N),
                             type: "email",
                             setRef: e => {
                                 this.emailRef = e
@@ -2061,7 +2060,7 @@
                             error: null != g ? g : ea(M),
                             value: d,
                             required: !0
-                        }), v && G, (0, s.jsx)(N.default, {}), F, y, b, !v && G, X.CONFERENCE_MODE_ENABLED ? null : (0, s.jsx)(k.Button, {
+                        }), v && b, (0, s.jsx)(S.default, {}), F, y, G, !v && b, X.CONFERENCE_MODE_ENABLED ? null : (0, s.jsx)(k.Button, {
                             look: T ? k.Button.Looks.FILLED : k.Button.Looks.LINK,
                             color: T ? k.Button.Colors.PRIMARY : k.Button.Colors.LINK,
                             onClick: this.handleGotoLogin,
@@ -2235,7 +2234,7 @@
                         country: v.default.getCountryCode(),
                         hasLoggedInAccounts: M.default.getHasLoggedInAccounts()
                     })),
-                    n = (0, b.useUURegistrationExperiment)(),
+                    n = (0, G.useUURegistrationExperiment)(),
                     l = (0, d.useStateFromStores)([U.default], () => U.default.registrationUsernameSuggestion()),
                     [r, i] = a.useState(Q.RegistrationSteps.FULL);
                 return (0, g.default)({
@@ -2271,14 +2270,14 @@
                     d = (0, y.useUsernameStatus)(n, r, !0),
                     c = r && n.length > 0;
                 return t = c ? (0, o.match)(d).with({
-                    type: G.NameValidationState.ERROR,
+                    type: b.NameValidationState.ERROR,
                     message: o.P.select()
                 }, e => (0, s.jsx)(E.Text, {
                     className: et.messageNegative,
                     variant: "text-sm/normal",
                     children: e
                 })).with({
-                    type: G.NameValidationState.AVAILABLE,
+                    type: b.NameValidationState.AVAILABLE,
                     message: o.P.select()
                 }, e => (0, s.jsx)(E.Text, {
                     className: et.messagePositive,
@@ -2300,7 +2299,7 @@
                     color: "text-normal",
                     children: ee.default.Messages.POMELO_EXISTING_FLOW_ERROR_INVALID
                 }), (0, s.jsx)(P.default, {
-                    show: c && (null == d ? void 0 : d.type) === G.NameValidationState.ERROR || i,
+                    show: c && (null == d ? void 0 : d.type) === b.NameValidationState.ERROR || i,
                     top: -12,
                     bottom: 20,
                     children: t
@@ -2680,8 +2679,8 @@
                 } = e, {
                     day: R,
                     setDay: I,
-                    month: N,
-                    setMonth: S,
+                    month: S,
+                    setMonth: N,
                     year: C,
                     setYear: L
                 } = function(e) {
@@ -2698,7 +2697,7 @@
                         year: u,
                         setYear: d
                     }
-                }(n), O = a.useMemo(() => null != R && null != N && null != C ? o("".concat(R, "/").concat(N, "/").concat(C), "DD/MM/YYYY") : null, [R, N, C]);
+                }(n), O = a.useMemo(() => null != R && null != S && null != C ? o("".concat(R, "/").concat(S, "/").concat(C), "DD/MM/YYYY") : null, [R, S, C]);
                 a.useEffect(() => {
                     i((null == O ? void 0 : O.isValid()) ? O : null)
                 }, [O, i]);
@@ -2719,8 +2718,8 @@
                     }(),
                     [v, D] = a.useState(A ? 0 : -1),
                     U = a.useRef(null),
-                    G = a.useRef(null),
                     b = a.useRef(null),
+                    G = a.useRef(null),
                     y = a.useMemo(p, []),
                     P = a.useCallback(() => {
                         var e, t, n, s;
@@ -2729,12 +2728,12 @@
                                 null === (t = U.current) || void 0 === t || t.focus();
                                 break;
                             case "month":
-                                null === (n = G.current) || void 0 === n || n.focus();
+                                null === (n = b.current) || void 0 === n || n.focus();
                                 break;
                             case "year":
-                                null === (s = b.current) || void 0 === s || s.focus()
+                                null === (s = G.current) || void 0 === s || s.focus()
                         }
-                    }, [v, U, G, b, y]);
+                    }, [v, U, b, G, y]);
                 a.useEffect(() => {
                     setTimeout(P, 500)
                 }, []), a.useEffect(() => {
@@ -2783,9 +2782,9 @@
                                 key: "month",
                                 input: (0, s.jsx)(g, {
                                     options: _,
-                                    selectOption: S,
+                                    selectOption: N,
                                     children: (0, s.jsx)(d.default, {
-                                        ref: G,
+                                        ref: b,
                                         className: E.inputMonth,
                                         "aria-label": c.default.Messages.AGE_GATE_DOB_MONTH,
                                         menuPlacement: d.default.MenuPlacements.TOP,
@@ -2794,12 +2793,12 @@
                                             children: c.default.Messages.AGE_GATE_DOB_MONTH
                                         }),
                                         options: _,
-                                        value: N,
+                                        value: S,
                                         onChange: t => {
                                             let {
                                                 value: n
                                             } = t;
-                                            S(n), D(e + 1)
+                                            N(n), D(e + 1)
                                         },
                                         maxMenuHeight: 215
                                     })
@@ -2813,7 +2812,7 @@
                                     options: x,
                                     selectOption: L,
                                     children: (0, s.jsx)(d.default, {
-                                        ref: b,
+                                        ref: G,
                                         className: E.inputYear,
                                         "aria-label": c.default.Messages.AGE_GATE_DOB_YEAR,
                                         menuPlacement: d.default.MenuPlacements.TOP,
@@ -3005,8 +3004,8 @@
                     invite: T = null,
                     giftCodeSKUId: R = null,
                     multiStep: I = !1,
-                    promoEmailConsent: N = null,
-                    usedUsernameSuggestion: S = null
+                    promoEmailConsent: S = null,
+                    usedUsernameSuggestion: N = null
                 } = e;
                 return r.default.dispatch({
                     type: "REGISTER",
@@ -3034,15 +3033,15 @@
                         date_of_birth: null == A ? void 0 : A.format("YYYY-MM-DD"),
                         gift_code_sku_id: R,
                         guild_template_code: p,
-                        promotional_email_opt_in: null == N ? void 0 : N.checked
+                        promotional_email_opt_in: null == S ? void 0 : S.checked
                     },
                     trackedActionData: {
                         event: l.NetworkActionNames.USER_REGISTER,
                         properties: {
                             invite_code: T,
-                            used_username_suggestion: S,
-                            promotional_email_opt_in: null == N ? void 0 : N.checked,
-                            promotional_email_pre_checked: null == N ? void 0 : N.preChecked,
+                            used_username_suggestion: N,
+                            promotional_email_opt_in: null == S ? void 0 : S.checked,
+                            promotional_email_pre_checked: null == S ? void 0 : S.preChecked,
                             was_unique_username: !0
                         }
                     }
@@ -3612,8 +3611,8 @@
             let R = "mweb_handoff_nonce",
                 I = "mweb_handoff_nonce_expiration";
             (a = s || (s = {})).NONCE_MISSING = "nonce_missing", a.NONCE_EXPIRED = "nonce_expired", a.NULL_HANDOFF_TOKEN = "deep_link_failed", a.HANDOFF_EXCHANGE = "handoff_exchange";
-            let N = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
-                S = new Set(["deep_link_failed"]),
+            let S = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
+                N = new Set(["deep_link_failed"]),
                 C = () => {
                     c.default.remove(R), c.default.remove(I)
                 };
@@ -3670,10 +3669,10 @@
                         if (null == L) return (0, l.jsxs)(l.Fragment, {
                             children: [_.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_1, (0, l.jsx)("br", {}), _.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_2]
                         });
-                        if (S.has(L)) return _.MOBILE_WEB_HANDOFF_ERROR_NO_TRY_AGAIN;
-                        if (N.has(L)) return _.MOBILE_WEB_HANDOFF_ERROR_TRY_AGAIN
+                        if (N.has(L)) return _.MOBILE_WEB_HANDOFF_ERROR_NO_TRY_AGAIN;
+                        if (S.has(L)) return _.MOBILE_WEB_HANDOFF_ERROR_TRY_AGAIN
                     })(),
-                    D = null != L && S.has(L);
+                    D = null != L && N.has(L);
                 return D ? (0, l.jsx)("div", {
                     className: T.errorContainer,
                     children: (0, l.jsx)(E.Text, {
@@ -3797,8 +3796,8 @@
                 T = n("694787"),
                 R = n("770032"),
                 I = n("927101"),
-                N = n("49111"),
-                S = n("782340"),
+                S = n("49111"),
+                N = n("782340"),
                 C = n("31295");
 
             function L(e) {
@@ -3819,12 +3818,12 @@
                     variant: "text-sm/semibold",
                     className: C.hintText,
                     color: "text-positive",
-                    children: S.default.Messages.SWITCH_ACCOUNTS_ACTIVE_ACCOUNT
+                    children: N.default.Messages.SWITCH_ACCOUNTS_ACTIVE_ACCOUNT
                 }) : O && (x = (0, l.jsx)(d.Text, {
                     variant: "text-sm/semibold",
                     className: C.hintText,
                     color: "text-danger",
-                    children: S.default.Messages.SWITCH_ACCOUNTS_INVALID_TOKEN
+                    children: N.default.Messages.SWITCH_ACCOUNTS_INVALID_TOKEN
                 })), (0, l.jsx)("div", {
                     className: C.accountCard,
                     children: (0, l.jsxs)("div", {
@@ -3861,14 +3860,14 @@
                                         s(0, n.id);
                                         return
                                     }
-                                    p.default.track(N.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+                                    p.default.track(S.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
                                         location: {
-                                            section: N.AnalyticsSections.MANAGE_ACCOUNTS_MODAL
+                                            section: S.AnalyticsSections.MANAGE_ACCOUNTS_MODAL
                                         }
                                     }), T.switchAccount(n.id), s(1, n.id)
                                 },
                                 color: d.Button.Colors.PRIMARY,
-                                children: O ? S.default.Messages.SWITCH_ACCOUNTS_ACTION_LOG_IN : t
+                                children: O ? N.default.Messages.SWITCH_ACCOUNTS_ACTION_LOG_IN : t
                             }), (0, l.jsx)(d.Button, {
                                 className: C.userActionMenu,
                                 onClick: function(e) {
@@ -3877,20 +3876,20 @@
                                             onSelect: t
                                         } = e;
                                         return (0, l.jsx)(d.Menu, {
-                                            "aria-label": S.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNT,
+                                            "aria-label": N.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNT,
                                             navId: "manage-multi-account",
                                             onClose: E.closeContextMenu,
                                             onSelect: t,
                                             children: (0, l.jsx)(d.MenuItem, {
                                                 id: "remove-account",
-                                                label: S.default.Messages.SWITCH_ACCOUNTS_REMOVE_ACCOUNT,
+                                                label: N.default.Messages.SWITCH_ACCOUNTS_REMOVE_ACCOUNT,
                                                 action: () => {
                                                     ! function() {
                                                         c.default.logout(null, n.id).finally(() => {
                                                             T.removeAccount(n.id)
                                                         });
                                                         let e = {};
-                                                        null != a ? e.section = N.AnalyticsSections.MANAGE_ACCOUNTS_MODAL : e.page = N.PageAnalyticsLocations.LOGIN, p.default.track(N.AnalyticEvents.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
+                                                        null != a ? e.section = S.AnalyticsSections.MANAGE_ACCOUNTS_MODAL : e.page = S.PageAnalyticsLocations.LOGIN, p.default.track(S.AnalyticEvents.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
                                                             location: e
                                                         }), s(2, n.id)
                                                     }(), null != t && t()
@@ -3903,7 +3902,7 @@
                                 size: d.Button.Sizes.ICON,
                                 look: d.Button.Looks.BLANK,
                                 color: d.Button.Colors.WHITE,
-                                "aria-label": S.default.Messages.MORE_OPTIONS,
+                                "aria-label": N.default.Messages.MORE_OPTIONS,
                                 children: (0, l.jsx)(g.default, {
                                     className: C.overflowMenuIcon
                                 })
@@ -4190,8 +4189,8 @@
                     autoFocus: T,
                     maxLength: R,
                     spellCheck: I,
-                    autoComplete: N,
-                    autoCapitalize: S,
+                    autoComplete: S,
+                    autoCapitalize: N,
                     autoCorrect: C,
                     onChange: L,
                     inputClassName: O
@@ -4225,8 +4224,8 @@
                                 let t = (0, u.shouldShowCountryCodeSelector)(l, e) ? n : "";
                                 L(e, t)
                             },
-                            autoComplete: N,
-                            autoCapitalize: S,
+                            autoComplete: S,
+                            autoCapitalize: N,
                             autoCorrect: C,
                             autoFocus: T,
                             maxLength: R,
