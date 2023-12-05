@@ -30097,7 +30097,7 @@
                     t.forEach(e => {
                         let {
                             user: t,
-                            guild_member: r
+                            member: r
                         } = e;
                         if (null == t) return;
                         A(t);

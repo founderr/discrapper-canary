@@ -112,10 +112,10 @@
                     return T
                 },
                 requestHarvest: function() {
-                    return g
+                    return I
                 },
                 setPendingAvatar: function() {
-                    return I
+                    return g
                 },
                 setPendingGlobalNameName: function() {
                     return N
@@ -276,14 +276,14 @@
                 })
             }
 
-            function g() {
+            function I() {
                 return l.default.post({
                     url: f.Endpoints.USER_HARVEST,
                     oldFormErrors: !0
                 })
             }
 
-            function I(e) {
+            function g(e) {
                 s.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR",
                     avatar: e
@@ -924,8 +924,8 @@
                 C = n("613767"),
                 S = n("822516"),
                 T = n("93550"),
-                g = n("707916"),
-                I = n("255050"),
+                I = n("707916"),
+                g = n("255050"),
                 N = n("644189"),
                 m = n("965353"),
                 A = n("360538"),
@@ -964,7 +964,7 @@
                     isChannelPublic: v,
                     canInvite: E,
                     ...S
-                }) : (0, l.jsx)(g.default, {
+                }) : (0, l.jsx)(I.default, {
                     isActive: c,
                     isUserLurking: p,
                     rsvped: f,
@@ -981,13 +981,13 @@
                     transitionState: o,
                     initialRecurrenceId: _,
                     onClose: C
-                } = e, [g, N] = i.useState(_), U = (0, r.useStateFromStores)([h.default], () => h.default.getGuildScheduledEvent(t), [t]), b = null == U ? void 0 : U.id, L = null == U ? void 0 : U.guild_id, {
+                } = e, [I, N] = i.useState(_), U = (0, r.useStateFromStores)([h.default], () => h.default.getGuildScheduledEvent(t), [t]), b = null == U ? void 0 : U.id, L = null == U ? void 0 : U.guild_id, {
                     guild: w,
                     isMember: M
-                } = (0, p.default)(L, b), D = (0, a.default)(n), j = null == U ? void 0 : U.channel_id, V = (0, r.useStateFromStores)([u.default], () => u.default.getChannel(j), [j]), F = (0, d.useUID)(), [G, k] = i.useState(y.EventDetailSections.EVENT_INFO), H = (0, v.default)(b, g), B = (0, r.useStateFromStores)([h.default], () => h.default.getUserCount(b, g)), [Z, {
+                } = (0, p.default)(L, b), D = (0, a.default)(n), j = null == U ? void 0 : U.channel_id, V = (0, r.useStateFromStores)([u.default], () => u.default.getChannel(j), [j]), F = (0, d.useUID)(), [G, k] = i.useState(y.EventDetailSections.EVENT_INFO), H = (0, v.default)(b, I), B = (0, r.useStateFromStores)([h.default], () => h.default.getUserCount(b, I)), [Z, {
                     loading: W,
                     error: Y
-                }] = (0, f.default)(() => E.default.getGuildEventUsers(null == U ? void 0 : U.id, g, L));
+                }] = (0, f.default)(() => E.default.getGuildEventUsers(null == U ? void 0 : U.id, I, L));
                 i.useEffect(() => {
                     null == U ? C() : c.default.track(O.AnalyticEvents.OPEN_MODAL, {
                         type: y.ANALYTICS_GUILD_EVENTS_MODAL_NAME,
@@ -1004,13 +1004,13 @@
                 let X = e => {
                         e !== G && (e === y.EventDetailSections.RSVP_LIST && Z(), k(e))
                     },
-                    J = null != g ? g : (0, S.getNextRecurrenceIdInEvent)(U);
+                    J = null != I ? I : (0, S.getNextRecurrenceIdInEvent)(U);
                 return (0, l.jsxs)(s.ModalRoot, {
                     size: s.ModalSize.MEDIUM,
                     transitionState: o,
                     "aria-labelledby": F,
                     className: P.root,
-                    children: [(null == U ? void 0 : U.image) != null && (0, l.jsx)(I.default, {
+                    children: [(null == U ? void 0 : U.image) != null && (0, l.jsx)(g.default, {
                         source: (0, T.default)(U),
                         className: P.banner
                     }), (0, l.jsx)(m.default, {
@@ -1161,8 +1161,8 @@
                 C = n("398604"),
                 S = n("882550"),
                 T = n("466148"),
-                g = n("189443"),
-                I = n("909151"),
+                I = n("189443"),
+                g = n("909151"),
                 N = n("427554"),
                 m = n("393745"),
                 A = n("586403"),
@@ -1294,7 +1294,7 @@
                 i.useEffect(() => {
                     v.default.getGuildEventUserCounts(n.id, t.id, null != _ ? [_] : []), v.default.getGuildEventsForCurrentUser(n.id)
                 }, [n.id, t.id, _]);
-                let D = (0, g.recurrenceRuleFromServer)(t.recurrence_rule);
+                let D = (0, I.recurrenceRuleFromServer)(t.recurrence_rule);
                 return (0, l.jsxs)("div", {
                     ref: h,
                     children: [(0, l.jsxs)("div", {
@@ -1331,7 +1331,7 @@
                             guildId: n.id
                         }, M.id), null != t.description && (0, l.jsx)("div", {
                             className: y.description,
-                            children: (0, l.jsx)(I.default, {
+                            children: (0, l.jsx)(g.default, {
                                 description: t.description,
                                 truncate: !1,
                                 guildId: n.id
@@ -1424,21 +1424,21 @@
                 C = n("398604"),
                 S = n("745049"),
                 T = n("782340"),
-                g = n("758024");
+                I = n("758024");
 
-            function I(e) {
+            function g(e) {
                 let {
                     children: t
                 } = e;
                 return (0, l.jsxs)("div", {
-                    className: g.emptyContainer,
+                    className: I.emptyContainer,
                     children: [(0, l.jsx)(d.default, {
                         children: (0, l.jsx)("div", {
-                            className: g.circle,
+                            className: I.circle,
                             children: (0, l.jsx)(v.default, {
                                 height: 40,
                                 width: 40,
-                                className: g.icon
+                                className: I.icon
                             })
                         })
                     }), t]
@@ -1446,22 +1446,22 @@
             }
 
             function N() {
-                return (0, l.jsx)(I, {
+                return (0, l.jsx)(g, {
                     children: (0, l.jsx)(a.Heading, {
                         color: "header-primary",
                         variant: "heading-xl/semibold",
-                        className: g.title,
+                        className: I.title,
                         children: T.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_EMPTY_TITLE
                     })
                 })
             }
 
             function m() {
-                return (0, l.jsx)(I, {
+                return (0, l.jsx)(g, {
                     children: (0, l.jsx)(a.Heading, {
                         color: "header-secondary",
                         variant: "heading-md/semibold",
-                        className: g.errorTitle,
+                        className: I.errorTitle,
                         children: T.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_FETCH_ERROR
                     })
                 })
@@ -1473,13 +1473,13 @@
                 } = e;
                 return (0, l.jsx)(l.Fragment, {
                     children: (0, l.jsxs)("div", {
-                        className: g.listRow,
+                        className: I.listRow,
                         children: [(0, l.jsx)("div", {
-                            className: r(g.listRowCircle, g.listAvatar),
+                            className: r(I.listRowCircle, I.listAvatar),
                             children: (0, l.jsx)(v.default, {
                                 height: 14,
                                 width: 14,
-                                className: g.icon
+                                className: I.icon
                             })
                         }), (0, l.jsx)(a.Text, {
                             color: "text-normal",
@@ -1497,7 +1497,7 @@
                 let {
                     eventUser: n,
                     onContextMenu: i
-                } = e, o = (0, s.useStateFromStores)([p.default], () => p.default.getUser(n.user_id)), d = null === (t = n.guild_member) || void 0 === t ? void 0 : t.guildId, v = (0, s.useStateFromStores)([_.default, h.default, E.default], () => n.user_id === E.default.getId() ? _.default.getStatus() : h.default.getStatus(n.user_id, d), [n.user_id, d]);
+                } = e, o = (0, s.useStateFromStores)([p.default], () => p.default.getUser(n.user_id)), d = null === (t = n.member) || void 0 === t ? void 0 : t.guildId, v = (0, s.useStateFromStores)([_.default, h.default, E.default], () => n.user_id === E.default.getId() ? _.default.getStatus() : h.default.getStatus(n.user_id, d), [n.user_id, d]);
                 return null == o ? null : (0, l.jsx)(a.Popout, {
                     preload: () => (0, c.default)(o.id, o.getAvatarURL(d, 80), {
                         guildId: d
@@ -1515,22 +1515,22 @@
                             isShown: c
                         } = t;
                         return (0, l.jsxs)(a.Clickable, {
-                            className: r(g.listRow, g.interactiveRow, {
-                                [g.selected]: c
+                            className: r(I.listRow, I.interactiveRow, {
+                                [I.selected]: c
                             }),
                             onContextMenu: e => i(e, o),
                             ...e,
                             children: [(0, l.jsx)(a.Avatar, {
-                                src: o.getAvatarURL(null === (s = n.guild_member) || void 0 === s ? void 0 : s.guildId, 24),
+                                src: o.getAvatarURL(null === (s = n.member) || void 0 === s ? void 0 : s.guildId, 24),
                                 "aria-label": o.username,
                                 size: a.AvatarSizes.SIZE_24,
-                                className: g.listAvatar,
+                                className: I.listAvatar,
                                 status: v
                             }), (0, l.jsx)(u.default, {
                                 user: o,
-                                className: g.listName,
-                                discriminatorClass: g.listDiscriminator,
-                                nick: null === (d = n.guild_member) || void 0 === d ? void 0 : d.nick
+                                className: I.listName,
+                                discriminatorClass: I.listDiscriminator,
+                                nick: null === (d = n.member) || void 0 === d ? void 0 : d.nick
                             })]
                         })
                     }
@@ -1544,7 +1544,7 @@
                     onContextMenu: i
                 } = e;
                 return (0, l.jsxs)(a.ScrollerThin, {
-                    className: g.listScroller,
+                    className: I.listScroller,
                     children: [t.map(e => (0, l.jsx)(R, {
                         eventUser: e,
                         onContextMenu: i
@@ -1560,7 +1560,7 @@
                     style: n
                 } = e;
                 return (0, l.jsx)("div", {
-                    className: g.container,
+                    className: I.container,
                     style: null != n ? n : {},
                     children: t
                 })
@@ -1592,7 +1592,7 @@
                     height: c,
                     children: (0, l.jsx)(a.Spinner, {
                         type: a.Spinner.Type.SPINNING_CIRCLE,
-                        className: g.spinner
+                        className: I.spinner
                     })
                 });
                 if (null != d && 0 === r.length) return (0, l.jsx)(O, {
@@ -1900,12 +1900,12 @@
                     stepConfigs: C,
                     setBodyNode: S,
                     setFooterNode: T,
-                    setModalOverlayNode: g,
-                    setReadySlideId: I
+                    setModalOverlayNode: I,
+                    setReadySlideId: g
                 } = (0, f.usePaymentContext)(), N = C.find(e => e.key === v);
                 i.useEffect(() => {
-                    g(null)
-                }, [v, g]), o(null != N, "Unknown step for current payment flow.");
+                    I(null)
+                }, [v, I]), o(null != N, "Unknown step for current payment flow.");
                 let m = null !== (u = null == N ? void 0 : null === (t = N.options) || void 0 === t ? void 0 : t.hideSlider) && void 0 !== u && u,
                     A = null == N ? void 0 : null === (n = N.options) || void 0 === n ? void 0 : n.bodyClassName,
                     R = void 0 !== _ && _ ? E.sliderBodyLarge : null == N ? void 0 : null === (r = N.options) || void 0 === r ? void 0 : r.sliderBodyClassName;
@@ -1916,7 +1916,7 @@
                             children: (0, l.jsx)(c.Slides, {
                                 activeSlide: v,
                                 centered: !1,
-                                onSlideReady: e => I(e),
+                                onSlideReady: e => g(e),
                                 children: C.filter(e => null != e.key).map(e => (0, l.jsx)(c.Slide, {
                                     id: e.key,
                                     children: (0, l.jsx)("form", {
@@ -1929,7 +1929,7 @@
                         }), (0, l.jsx)("div", {
                             ref: e => T(e)
                         }), (0, l.jsx)("div", {
-                            ref: e => g(e)
+                            ref: e => I(e)
                         })]
                     })]
                 })
@@ -1983,8 +1983,8 @@
                     analyticsObject: C,
                     analyticsLocation: S,
                     analyticsSourceLocation: T,
-                    isGift: g = !1,
-                    giftMessage: I,
+                    isGift: I = !1,
+                    giftMessage: g,
                     subscriptionTier: N,
                     trialId: m,
                     postSuccessGuild: A,
@@ -2008,8 +2008,8 @@
                             loadId: b,
                             subscriptionTier: N,
                             skuId: N,
-                            isGift: g,
-                            giftMessage: I,
+                            isGift: I,
+                            giftMessage: g,
                             giftRecipient: O,
                             initialPlanId: t,
                             followupSKUInfo: E,
@@ -2017,7 +2017,7 @@
                                 i(), null == h || h(e), e && (null == p || p())
                             },
                             onComplete: () => {
-                                x = !0, null == _ || _(), !g && ((0, o.setIsPersistentHelperHidden)(!0), (0, o.setCanPlayWowMoment)(!0))
+                                x = !0, null == _ || _(), !I && ((0, o.setIsPersistentHelperHidden)(!0), (0, o.setCanPlayWowMoment)(!0))
                             },
                             onSubscriptionConfirmation: p,
                             analyticsLocations: v,
@@ -2042,11 +2042,11 @@
                             location: null != S ? S : C,
                             source: T,
                             subscription_type: c.SubscriptionTypes.PREMIUM,
-                            is_gift: g,
+                            is_gift: I,
                             eligible_for_trial: null != m,
                             application_id: U,
                             location_stack: v
-                        }), (0, s.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == h || h(x), x && (!g && d.ComponentDispatch.dispatch(c.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED), null == p || p())
+                        }), (0, s.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == h || h(x), x && (!I && d.ComponentDispatch.dispatch(c.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED), null == p || p())
                     },
                     onCloseRequest: c.NOOP
                 })
@@ -2366,10 +2366,10 @@
                     return T
                 },
                 setTryItOutAvatar: function() {
-                    return g
+                    return I
                 },
                 setTryItOutAvatarDecoration: function() {
-                    return I
+                    return g
                 },
                 setTryItOutProfileEffect: function() {
                     return N
@@ -2486,14 +2486,14 @@
                 })
             }
 
-            function g(e) {
+            function I(e) {
                 i.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR",
                     avatar: e
                 }), f(c.AnalyticsPremiumFeatureNames.ANIMATED_AVATAR)
             }
 
-            function I(e) {
+            function g(e) {
                 i.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION",
                     avatarDecoration: e

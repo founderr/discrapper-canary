@@ -14895,7 +14895,7 @@
                     return g({
                         user_id: i,
                         guild_scheduled_event_id: a,
-                        guild_member: null != c ? c : {
+                        member: null != c ? c : {
                             guildId: l
                         },
                         guild_scheduled_event_exception_id: s,
