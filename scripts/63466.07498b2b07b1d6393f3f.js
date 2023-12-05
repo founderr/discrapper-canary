@@ -1734,7 +1734,6 @@
                     } = e;
                     return (0, r.jsx)(a.Clickable, {
                         innerRef: t,
-                        className: l.clickable,
                         onClick: () => i(s),
                         onFocus: u,
                         onBlur: o,

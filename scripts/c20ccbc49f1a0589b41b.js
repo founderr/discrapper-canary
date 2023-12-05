@@ -256,7 +256,7 @@
                 S = e => {
                     let {
                         selectedSkuId: t
-                    } = e, s = (0, l.useStateFromStores)([u.default], () => u.default.getFriendIDs()), S = (0, l.useStateFromStores)([o.default], () => o.default.filter(e => s.includes(e.id) && !e.bot), [s]), {
+                    } = e, s = (0, l.useStateFromStoresArray)([u.default], () => u.default.getFriendIDs()), S = (0, l.useStateFromStoresArray)([o.default], () => o.default.filter(e => s.includes(e.id) && !e.bot), [s]), {
                         giftRecipient: E,
                         setGiftRecipient: I,
                         giftRecipientError: p,
