@@ -4264,7 +4264,7 @@
                 c = s("659972");
 
             function _() {
-                let e = (0, l.useStateFromStores)([u.default], () => u.default.affinities.slice(0, 3)),
+                let e = (0, l.useStateFromStores)([u.default], () => u.default.affinities.slice(0, 3).reverse()),
                     t = e.map(e => (0, a.jsx)(E, {
                         affinity: e
                     }, e.id)),
@@ -4277,12 +4277,17 @@
                         username: e[0].globalName
                     }) : "", [e]);
                 return 0 === e.length ? null : (0, a.jsxs)("div", {
-                    className: c.iconContainer,
-                    children: [t, (0, a.jsx)(r.Text, {
-                        className: c.text,
-                        variant: "text-lg/normal",
-                        color: "always-white",
-                        children: s
+                    className: c.container,
+                    children: [(0, a.jsx)("div", {
+                        className: c.iconContainer,
+                        children: t
+                    }), (0, a.jsx)("div", {
+                        className: c.textContainer,
+                        children: (0, a.jsx)(r.Text, {
+                            variant: "text-lg/normal",
+                            color: "always-white",
+                            children: s
+                        })
                     })]
                 })
             }

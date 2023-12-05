@@ -1,22 +1,22 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["50283"], {
+    ["12180"], {
         717837: function(e, t, n) {
             "use strict";
             e.exports = function(e) {
-                return (e = String(e || ""), i.test(e)) ? "rtl" : l.test(e) ? "ltr" : "neutral"
+                return (e = String(e || ""), s.test(e)) ? "rtl" : l.test(e) ? "ltr" : "neutral"
             };
-            var r = "֑-߿יִ-﷽ﹰ-ﻼ",
-                s = "A-Za-z\xc0-\xd6\xd8-\xf6\xf8-ʸ̀-֐ࠀ-῿‎Ⰰ-﬜︀-﹯﻽-￿",
-                i = RegExp("^[^" + s + "]*[" + r + "]"),
-                l = RegExp("^[^" + r + "]*[" + s + "]")
+            var i = "֑-߿יִ-﷽ﹰ-ﻼ",
+                r = "A-Za-z\xc0-\xd6\xd8-\xf6\xf8-ʸ̀-֐ࠀ-῿‎Ⰰ-﬜︀-﹯﻽-￿",
+                s = RegExp("^[^" + r + "]*[" + i + "]"),
+                l = RegExp("^[^" + i + "]*[" + r + "]")
         },
         111633: function(e, t, n) {
             "use strict";
             e.exports = function(e) {
                 var t, n;
-                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), E.test(e) ? e = e.substr(0, e.length - 2) : g.test(e) && (e = e.substr(0, e.length - 1)), (n = _.exec(e)) ? o.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = b.exec(e)) && d.test(n[1]) && (e = n[1], x.test(e) ? e += "e" : C.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = v.exec(e)) && d.test(n[1]) && (e = n[1] + "i"), (n = y.exec(e)) && o.test(n[1]) && (e = n[1] + r[n[2]]), (n = j.exec(e)) && o.test(n[1]) && (e = n[1] + s[n[2]]), (n = N.exec(e)) ? c.test(n[1]) && (e = n[1]) : (n = h.exec(e)) && c.test(n[1]) && (e = n[1]), (n = m.exec(e)) && (c.test(n[1]) || u.test(n[1]) && !f.test(n[1])) && (e = n[1]), p.test(e) && c.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
+                return (e = String(e).toLowerCase()).length < 3 ? e : (121 === e.charCodeAt(0) && (t = !0, e = "Y" + e.substr(1)), E.test(e) ? e = e.substr(0, e.length - 2) : g.test(e) && (e = e.substr(0, e.length - 1)), (n = x.exec(e)) ? o.test(n[1]) && (e = e.substr(0, e.length - 1)) : (n = _.exec(e)) && d.test(n[1]) && (e = n[1], b.test(e) ? e += "e" : y.test(e) ? e = e.substr(0, e.length - 1) : f.test(e) && (e += "e")), (n = v.exec(e)) && d.test(n[1]) && (e = n[1] + "i"), (n = C.exec(e)) && o.test(n[1]) && (e = n[1] + i[n[2]]), (n = N.exec(e)) && o.test(n[1]) && (e = n[1] + r[n[2]]), (n = j.exec(e)) ? c.test(n[1]) && (e = n[1]) : (n = h.exec(e)) && c.test(n[1]) && (e = n[1]), (n = m.exec(e)) && (c.test(n[1]) || u.test(n[1]) && !f.test(n[1])) && (e = n[1]), p.test(e) && c.test(e) && (e = e.substr(0, e.length - 1)), t && (e = "y" + e.substr(1)), e)
             };
-            var r = {
+            var i = {
                     ational: "ate",
                     tional: "tion",
                     enci: "ence",
@@ -39,7 +39,7 @@
                     biliti: "ble",
                     logi: "log"
                 },
-                s = {
+                r = {
                     icate: "ic",
                     ative: "",
                     alize: "al",
@@ -48,60 +48,60 @@
                     ful: "",
                     ness: ""
                 },
-                i = "[aeiouy]",
+                s = "[aeiouy]",
                 l = "([^aeiou][^aeiouy]*)",
-                a = "(" + i + "[aeiou]*)",
+                a = "(" + s + "[aeiou]*)",
                 o = RegExp("^" + l + "?" + a + l),
                 u = RegExp("^" + l + "?" + a + l + a + "?$"),
                 c = RegExp("^" + l + "?(" + a + l + "){2,}"),
-                d = RegExp("^" + l + "?" + i),
-                f = RegExp("^" + l + i + "[^aeiouwxy]$"),
+                d = RegExp("^" + l + "?" + s),
+                f = RegExp("^" + l + s + "[^aeiouwxy]$"),
                 p = /ll$/,
                 m = /^(.+?)e$/,
                 v = /^(.+?)y$/,
                 h = /^(.+?(s|t))(ion)$/,
-                b = /^(.+?)(ed|ing)$/,
-                x = /(at|bl|iz)$/,
-                _ = /^(.+?)eed$/,
+                _ = /^(.+?)(ed|ing)$/,
+                b = /(at|bl|iz)$/,
+                x = /^(.+?)eed$/,
                 g = /^.+?[^s]s$/,
                 E = /^.+?(ss|i)es$/,
-                C = /([^aeiouylsz])\1$/,
-                y = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
-                j = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
-                N = RegExp("^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$")
+                y = /([^aeiouylsz])\1$/,
+                C = RegExp("^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$"),
+                N = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
+                j = RegExp("^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$")
         },
         949041: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return r
                 }
             }), n("70102");
-            var r = n("884691");
+            var i = n("884691");
 
-            function s() {
-                let e = (0, r.createContext)(void 0);
+            function r() {
+                let e = (0, i.createContext)(void 0);
                 return {
                     Provider: t => {
                         let {
                             initialStore: n,
-                            createStore: s,
-                            children: i
-                        } = t, l = (0, r.useRef)();
-                        return !l.current && (n && (console.warn("Provider initialStore is deprecated and will be removed in the next version."), !s && (s = () => n)), l.current = s()), (0, r.createElement)(e.Provider, {
+                            createStore: r,
+                            children: s
+                        } = t, l = (0, i.useRef)();
+                        return !l.current && (n && (console.warn("Provider initialStore is deprecated and will be removed in the next version."), !r && (r = () => n)), l.current = r()), (0, i.createElement)(e.Provider, {
                             value: l.current
-                        }, i)
+                        }, s)
                     },
                     useStore: function(t) {
                         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.is,
-                            s = (0, r.useContext)(e);
-                        if (!s) throw Error("Seems like you have not used zustand provider as an ancestor.");
-                        return s(t, n)
+                            r = (0, i.useContext)(e);
+                        if (!r) throw Error("Seems like you have not used zustand provider as an ancestor.");
+                        return r(t, n)
                     },
                     useStoreApi: () => {
-                        let t = (0, r.useContext)(e);
+                        let t = (0, i.useContext)(e);
                         if (!t) throw Error("Seems like you have not used zustand provider as an ancestor.");
-                        return (0, r.useMemo)(() => ({
+                        return (0, i.useMemo)(() => ({
                             getState: t.getState,
                             setState: t.setState,
                             subscribe: t.subscribe,
@@ -119,10 +119,18 @@
             "use strict";
             e.exports = n.p + "d063b4bf17f1fee95f05.svg"
         },
+        665718: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "5420f8fd9d89897c6448.svg"
+        },
+        897327: function(e, t, n) {
+            "use strict";
+            e.exports = n.p + "d8197d45ef3e7289594d.svg"
+        },
         926607: function(e, t, n) {
             "use strict";
 
-            function r(e, t) {
+            function i(e, t) {
                 return !t && (t = e.slice(0)), Object.freeze(Object.defineProperties(e, {
                     raw: {
                         value: Object.freeze(t)
@@ -131,9 +139,35 @@
             }
             n.r(t), n.d(t, {
                 _: function() {
-                    return r
+                    return i
                 }
             })
+        },
+        289867: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var i = n("913144"),
+                r = {
+                    toggleMembersSection() {
+                        i.default.dispatch({
+                            type: "CHANNEL_TOGGLE_MEMBERS_SECTION"
+                        })
+                    },
+                    toggleProfilePanelSection() {
+                        i.default.dispatch({
+                            type: "PROFILE_PANEL_TOGGLE_SECTION"
+                        })
+                    },
+                    toggleSummariesSection() {
+                        i.default.dispatch({
+                            type: "CHANNEL_TOGGLE_SUMMARIES_SECTION"
+                        })
+                    }
+                }
         },
         642950: function(e, t, n) {
             "use strict";
@@ -142,23 +176,23 @@
                     return m
                 }
             }), n("222007");
-            var r = n("37983"),
-                s = n("884691"),
-                i = n("414456"),
-                l = n.n(i),
+            var i = n("37983"),
+                r = n("884691"),
+                s = n("414456"),
+                l = n.n(s),
                 a = n("77078"),
                 o = n("54239"),
                 u = n("79112"),
                 c = n("49111"),
                 d = n("782340"),
                 f = n("519409");
-            class p extends s.Component {
+            class p extends r.Component {
                 render() {
-                    return (0, r.jsxs)("div", {
+                    return (0, i.jsxs)("div", {
                         className: f.streamerModeEnabled,
-                        children: [(0, r.jsx)("div", {
+                        children: [(0, i.jsx)("div", {
                             className: f.streamerModeEnabledImage
-                        }), (0, r.jsx)(a.Clickable, {
+                        }), (0, i.jsx)(a.Clickable, {
                             className: l(f.streamerModeEnabledBtn, {
                                 [f.disabled]: this.props.disableButton
                             }),
@@ -185,26 +219,26 @@
                     return l
                 }
             });
-            var r = n("37983");
+            var i = n("37983");
             n("884691");
-            var s = n("669491"),
-                i = n("75196");
+            var r = n("669491"),
+                s = n("75196");
             let l = e => {
                 let {
                     width: t = 24,
                     height: n = 24,
-                    color: l = s.default.colors.INTERACTIVE_NORMAL,
+                    color: l = r.default.colors.INTERACTIVE_NORMAL,
                     colorClass: a = "",
                     ...o
                 } = e;
-                return (0, r.jsx)("svg", {
-                    ...(0, i.default)(o),
+                return (0, i.jsx)("svg", {
+                    ...(0, s.default)(o),
                     xmlns: "http://www.w3.org/2000/svg",
                     width: t,
                     height: n,
                     fill: "none",
                     viewBox: "0 0 24 24",
-                    children: (0, r.jsx)("path", {
+                    children: (0, i.jsx)("path", {
                         fill: "string" == typeof l ? l : l.css,
                         d: "M12.7 3.3a1 1 0 0 0-1.4 0l-5 5a1 1 0 0 0 1.4 1.4L11 6.42V20a1 1 0 1 0 2 0V6.41l3.3 3.3a1 1 0 0 0 1.4-1.42l-5-5Z",
                         className: a
@@ -216,12 +250,12 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return s
                 }
             });
-            var r = n("884691");
-            let s = r.createContext(void 0);
-            var i = s
+            var i = n("884691");
+            let r = i.createContext(void 0);
+            var s = r
         },
         232268: function(e, t, n) {
             "use strict";
@@ -230,19 +264,19 @@
                     return l
                 }
             });
-            var r = n("37983");
+            var i = n("37983");
             n("884691");
-            var s = n("65597"),
-                i = n("880731");
+            var r = n("65597"),
+                s = n("880731");
 
             function l(e) {
                 let {
                     children: t,
                     confettiLocation: n
-                } = e, l = (0, s.default)([i.default], () => i.default.isEnabled({
+                } = e, l = (0, r.default)([s.default], () => s.default.isEnabled({
                     confettiLocation: n
                 }));
-                return l ? (0, r.jsx)(r.Fragment, {
+                return l ? (0, i.jsx)(i.Fragment, {
                     children: t
                 }) : null
             }
@@ -254,30 +288,30 @@
                     return a
                 }
             });
-            var r = n("884691"),
-                s = n("65597"),
-                i = n("526887"),
+            var i = n("884691"),
+                r = n("65597"),
+                s = n("526887"),
                 l = n("880731");
 
             function a() {
                 let {
                     createMultipleConfettiAt: e
-                } = r.useContext(i.ConfettiCannonContext), t = (0, s.default)([l.default], () => l.default.getState()), n = r.useCallback(e => ({
+                } = i.useContext(s.ConfettiCannonContext), t = (0, r.default)([l.default], () => l.default.getState()), n = i.useCallback(e => ({
                     size: {
                         type: "static-random",
                         minValue: e.confettiSize - 7,
                         maxValue: e.confettiSize + 7
                     }
-                }), []), a = r.useMemo(() => ({
-                    fire: (r, s, i) => {
+                }), []), a = i.useMemo(() => ({
+                    fire: (i, r, s) => {
                         var l, a;
-                        let o = (null == i ? void 0 : i.settings) != null ? {
+                        let o = (null == s ? void 0 : s.settings) != null ? {
                                 ...t,
-                                ...i.settings
+                                ...s.settings
                             } : t,
                             u = n(o);
-                        e(r, s, u, (null !== (l = null == i ? void 0 : i.count) && void 0 !== l ? l : o.confettiCount) * (null !== (a = null == i ? void 0 : i.countMultiplier) && void 0 !== a ? a : 1), {
-                            sprite: null == i ? void 0 : i.sprite
+                        e(i, r, u, (null !== (l = null == s ? void 0 : s.count) && void 0 !== l ? l : o.confettiCount) * (null !== (a = null == s ? void 0 : s.countMultiplier) && void 0 !== a ? a : 1), {
+                            sprite: null == s ? void 0 : s.sprite
                         })
                     }
                 }), [e, n, t]);
@@ -288,19 +322,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 useLocalizedPromoQuery: function() {
-                    return i
+                    return s
                 }
             });
-            var r = n("446674"),
-                s = n("160299");
+            var i = n("446674"),
+                r = n("160299");
 
-            function i() {
+            function s() {
                 let {
                     localizedPricingPromo: e,
                     hasError: t
-                } = (0, r.useStateFromStoresObject)([s.default], () => ({
-                    localizedPricingPromo: s.default.localizedPricingPromo,
-                    hasError: s.default.localizedPricingPromoHasError
+                } = (0, i.useStateFromStoresObject)([r.default], () => ({
+                    localizedPricingPromo: r.default.localizedPricingPromo,
+                    hasError: r.default.localizedPricingPromoHasError
                 }));
                 return t ? null : e
             }
@@ -309,16 +343,16 @@
             "use strict";
             n.r(t), n.d(t, {
                 useTrackLocalizedPricingPromoImpression: function() {
-                    return i
+                    return s
                 }
             });
-            var r = n("759843"),
-                s = n("428958");
+            var i = n("759843"),
+                r = n("428958");
 
-            function i(e, t) {
-                (0, s.default)({
-                    type: r.ImpressionTypes.VIEW,
-                    name: r.ImpressionNames.LOCALIZED_PRICING_UPSELL_VIEWED,
+            function s(e, t) {
+                (0, r.default)({
+                    type: i.ImpressionTypes.VIEW,
+                    name: i.ImpressionNames.LOCALIZED_PRICING_UPSELL_VIEWED,
                     properties: {
                         country_code: t,
                         action_location: e
@@ -333,22 +367,22 @@
                     return o
                 }
             }), n("222007");
-            var r = n("748820"),
-                s = n("49671"),
-                i = n("599110"),
+            var i = n("748820"),
+                r = n("49671"),
+                s = n("599110"),
                 l = n("49111");
             let a = new class e {
                 trackEvent(e, t) {
                     let n = Date.now();
                     requestIdleCallback(() => {
-                        i.default.track(e, {
+                        s.default.track(e, {
                             ... function() {
                                 var e, t, n;
-                                let r = "--campaign-id=",
-                                    i = null !== (n = null === s.default || void 0 === s.default ? void 0 : null === (t = s.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getMainArgvSync) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n ? n : [];
-                                for (let e of i)
-                                    if (e.startsWith(r)) return {
-                                        referrer: e.substr(r.length)
+                                let i = "--campaign-id=",
+                                    s = null !== (n = null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getMainArgvSync) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n ? n : [];
+                                for (let e of s)
+                                    if (e.startsWith(i)) return {
+                                        referrer: e.substr(i.length)
                                     };
                                 return {}
                             }(),
@@ -366,10 +400,10 @@
                                         css_transfer_byte_size: 0
                                     };
                                 return null != window.performance && null != window.performance.getEntries && window.performance.getEntries().forEach(n => {
-                                    let r = null != n.encodedBodySize ? n.encodedBodySize : n.decodedBodySize,
-                                        s = null != n.decodedBodySize ? n.decodedBodySize : n.encodedBodySize,
-                                        i = n.transferSize;
-                                    null != s && null != r && (e = !0, t.total_compressed_byte_size += r, t.total_uncompressed_byte_size += s, null != i && (t.total_uncompressed_byte_size += i), "resource" === n.entryType && ("script" === n.initiatorType && null != n.name && null != n.name.match(/\.js/) && (t.js_compressed_byte_size += r, t.js_uncompressed_byte_size += s, null != i && (t.js_uncompressed_byte_size += i)), "link" === n.initiatorType && null != n.name && null != n.name.match(/\.css/) && (t.css_compressed_byte_size += r, t.css_uncompressed_byte_size += s, null != i && (t.css_uncompressed_byte_size += i))))
+                                    let i = null != n.encodedBodySize ? n.encodedBodySize : n.decodedBodySize,
+                                        r = null != n.decodedBodySize ? n.decodedBodySize : n.encodedBodySize,
+                                        s = n.transferSize;
+                                    null != r && null != i && (e = !0, t.total_compressed_byte_size += i, t.total_uncompressed_byte_size += r, null != s && (t.total_uncompressed_byte_size += s), "resource" === n.entryType && ("script" === n.initiatorType && null != n.name && null != n.name.match(/\.js/) && (t.js_compressed_byte_size += i, t.js_uncompressed_byte_size += r, null != s && (t.js_uncompressed_byte_size += s)), "link" === n.initiatorType && null != n.name && null != n.name.match(/\.css/) && (t.css_compressed_byte_size += i, t.css_uncompressed_byte_size += r, null != s && (t.css_uncompressed_byte_size += s))))
                                 }), e ? t : {}
                             }(),
                             load_id: this.loadId,
@@ -382,13 +416,77 @@
                     !this.appUIViewed && (this.trackEvent(l.AnalyticEvents.APP_UI_VIEWED, e), this.appUIViewed = !0)
                 }
                 constructor() {
-                    this.loadId = (0, r.v4)(), this.appUIViewed = !1
+                    this.loadId = (0, i.v4)(), this.appUIViewed = !1
                 }
             };
 
             function o(e) {
                 a.trackAppUIViewed(e)
             }
+        },
+        893980: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                trackProfilePanelViewed: function() {
+                    return o
+                },
+                trackProfilePanelToggled: function() {
+                    return u
+                }
+            });
+            var i = n("373469"),
+                r = n("824563"),
+                s = n("27618"),
+                l = n("599110"),
+                a = n("49111");
+            let o = e => {
+                    let {
+                        displayProfile: t,
+                        isMobile: n,
+                        loadDurationMs: i,
+                        activity: r,
+                        customStatusActivity: s,
+                        status: o
+                    } = e;
+                    l.default.track(a.AnalyticEvents.DM_PROFILE_VIEWED, {
+                        has_mobile_indicator: n,
+                        has_activity: null != r && (null == r ? void 0 : r.type) !== a.ActivityTypes.CUSTOM_STATUS,
+                        has_game_activity: (null == r ? void 0 : r.type) === a.ActivityTypes.PLAYING,
+                        load_duration_ms: i,
+                        profile_user_status: o,
+                        has_custom_status: null != s,
+                        has_profile_effect: null != t.profileEffectID,
+                        ...c(t)
+                    })
+                },
+                u = (e, t) => {
+                    l.default.track(a.AnalyticEvents.DM_PROFILE_TOGGLED, {
+                        is_profile_open: t,
+                        ...c(e)
+                    })
+                },
+                c = e => {
+                    var t;
+                    if (null == e) return {};
+                    let n = e.userId,
+                        l = null != i.default.getAnyStreamForUser(n),
+                        o = r.default.findActivity(n, e => {
+                            let {
+                                type: t
+                            } = e;
+                            return l ? t === a.ActivityTypes.PLAYING : t !== a.ActivityTypes.CUSTOM_STATUS
+                        }),
+                        u = null == o ? void 0 : o.assets,
+                        c = s.default.isFriend(n);
+                    return {
+                        has_images: !!(null !== (t = null == u ? void 0 : u.large_image) && void 0 !== t ? t : null == u ? void 0 : u.small_image),
+                        is_friend: c,
+                        viewed_profile_user_id: n,
+                        profile_has_nitro_customization: e.hasPremiumCustomization(),
+                        profile_has_theme_color_customized: e.hasThemeColors(),
+                        profile_has_theme_animation: null != e.popoutAnimationParticleType
+                    }
+                }
         },
         476108: function(e, t, n) {
             "use strict";
@@ -397,9 +495,9 @@
                     return d
                 }
             });
-            var r = n("446674"),
-                s = n("95410"),
-                i = n("913144"),
+            var i = n("446674"),
+                r = n("95410"),
+                s = n("913144"),
                 l = n("49111");
             let a = {
                     lastViewedPath: null,
@@ -407,7 +505,7 @@
                 },
                 o = a,
                 u = "LAST_VIEWED_PATH";
-            class c extends r.default.PersistedStore {
+            class c extends i.default.PersistedStore {
                 initialize() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a;
                     o = null != e ? e : a
@@ -427,12 +525,12 @@
                 }
             }
             c.displayName = "DefaultRouteStore", c.persistKey = "DefaultRouteStore", c.migrations = [() => {
-                let e = s.default.get(u, null);
-                return s.default.remove(u), {
+                let e = r.default.get(u, null);
+                return r.default.remove(u), {
                     lastViewedPath: e
                 }
             }];
-            var d = new c(i.default, {
+            var d = new c(s.default, {
                 SAVE_LAST_ROUTE: function(e) {
                     let {
                         path: t
@@ -454,10 +552,10 @@
                     return f
                 }
             });
-            var r = n("37983"),
-                s = n("884691"),
-                i = n("414456"),
-                l = n.n(i),
+            var i = n("37983"),
+                r = n("884691"),
+                s = n("414456"),
+                l = n.n(s),
                 a = n("546671"),
                 o = n("341417");
             let u = {
@@ -472,13 +570,13 @@
                     [u.DOWN]: o.down,
                     [u.LEFT]: o.left
                 };
-            class d extends s.PureComponent {
+            class d extends r.PureComponent {
                 render() {
                     let {
                         direction: e,
                         className: t
                     } = this.props;
-                    return (0, r.jsx)(a.default, {
+                    return (0, i.jsx)(a.default, {
                         className: l(o.arrow, t, {
                             [c[e]]: !0
                         })
@@ -495,25 +593,25 @@
                     return a
                 }
             });
-            var r = n("37983");
+            var i = n("37983");
             n("884691");
-            var s = n("414456"),
-                i = n.n(s),
+            var r = n("414456"),
+                s = n.n(r),
                 l = n("561445"),
                 a = e => {
                     let {
                         aspectRatio: t,
                         style: n,
-                        className: s,
+                        className: r,
                         children: a
                     } = e;
-                    return (0, r.jsx)("div", {
-                        className: i(l.outer, s),
+                    return (0, i.jsx)("div", {
+                        className: s(l.outer, r),
                         style: {
                             paddingTop: "".concat(1 / t * 100, "%"),
                             ...n
                         },
-                        children: (0, r.jsx)("div", {
+                        children: (0, i.jsx)("div", {
                             className: l.inner,
                             children: a
                         })
@@ -527,15 +625,15 @@
                     return f
                 }
             }), n("222007");
-            var r = n("37983"),
-                s = n("884691"),
-                i = n("414456"),
-                l = n.n(i),
+            var i = n("37983"),
+                r = n("884691"),
+                s = n("414456"),
+                l = n.n(s),
                 a = n("77078"),
                 o = n("145131"),
                 u = n("461380"),
                 c = n("298619");
-            class d extends s.PureComponent {
+            class d extends r.PureComponent {
                 handleClick(e) {
                     let {
                         onBreadcrumbClick: t
@@ -547,7 +645,7 @@
                         breadcrumbs: e,
                         className: t
                     } = this.props, n = e.map(this.renderBreadcrumb);
-                    return (0, r.jsx)(o.default, {
+                    return (0, i.jsx)(o.default, {
                         justify: o.default.Justify.START,
                         className: l(c.breadcrumbs, t),
                         children: n
@@ -557,32 +655,94 @@
                     super(...e), this.renderBreadcrumb = (e, t) => {
                         let {
                             activeId: n,
-                            onBreadcrumbClick: s,
-                            breadcrumbs: i,
+                            onBreadcrumbClick: r,
+                            breadcrumbs: s,
                             renderCustomBreadcrumb: o,
                             separatorClassName: d
-                        } = this.props, f = e.id === n, p = t === i.length - 1, m = null != o ? o(e, f) : (0, r.jsx)("span", {
+                        } = this.props, f = e.id === n, p = t === s.length - 1, m = null != o ? o(e, f) : (0, i.jsx)("span", {
                             className: l(c.breadcrumb, {
                                 [c.activeBreadcrumb]: f,
-                                [c.interactiveBreadcrumb]: null != s
+                                [c.interactiveBreadcrumb]: null != r
                             }),
                             children: e.label
                         });
-                        return (0, r.jsxs)("div", {
+                        return (0, i.jsxs)("div", {
                             className: l(c.breadcrumbWrapper, {
                                 [c.breadcrumbFinalWrapper]: p
                             }),
-                            children: [null != s ? (0, r.jsx)(a.Clickable, {
+                            children: [null != r ? (0, i.jsx)(a.Clickable, {
                                 tag: "span",
                                 onClick: () => this.handleClick(e),
                                 className: c.breadcrumbClickWrapper,
                                 children: m
-                            }) : m, p ? null : (0, r.jsx)(u.default, {
+                            }) : m, p ? null : (0, i.jsx)(u.default, {
                                 className: l(c.breadcrumbArrow, d),
                                 direction: u.default.Directions.RIGHT
                             })]
                         }, e.id)
                     }
+                }
+            }
+            var f = d
+        },
+        440351: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return f
+                }
+            });
+            var i = n("37983"),
+                r = n("884691"),
+                s = n("414456"),
+                l = n.n(s),
+                a = n("77078"),
+                o = n("145131"),
+                u = n("296165"),
+                c = n("926622");
+            class d extends r.PureComponent {
+                render() {
+                    let {
+                        title: e,
+                        description: t,
+                        agreement: n,
+                        disagreement: r,
+                        onAgree: s,
+                        onDisagree: d,
+                        imageClassName: f
+                    } = this.props;
+                    return (0, i.jsxs)(o.default, {
+                        className: u.gatedContent,
+                        justify: o.default.Justify.CENTER,
+                        align: o.default.Align.CENTER,
+                        direction: o.default.Direction.VERTICAL,
+                        children: [(0, i.jsx)("div", {
+                            className: l(u.image, f)
+                        }), (0, i.jsx)("div", {
+                            className: l(u.title, c.marginBottom8),
+                            children: e
+                        }), (0, i.jsx)("div", {
+                            className: l(u.description, c.marginBottom20),
+                            children: t
+                        }), (0, i.jsxs)(o.default, {
+                            justify: o.default.Justify.CENTER,
+                            align: o.default.Align.CENTER,
+                            grow: 0,
+                            children: [null != r ? (0, i.jsx)(a.Button, {
+                                className: u.action,
+                                size: a.ButtonSizes.LARGE,
+                                color: a.ButtonColors.PRIMARY,
+                                onClick: d,
+                                children: r
+                            }) : null, null != n ? (0, i.jsx)(a.Button, {
+                                className: u.action,
+                                color: a.Button.Colors.RED,
+                                size: a.ButtonSizes.LARGE,
+                                onClick: s,
+                                children: n
+                            }) : null]
+                        })]
+                    })
                 }
             }
             var f = d
@@ -594,10 +754,10 @@
                     return f
                 }
             });
-            var r = n("37983"),
-                s = n("884691"),
-                i = n("414456"),
-                l = n.n(i),
+            var i = n("37983"),
+                r = n("884691"),
+                s = n("414456"),
+                l = n.n(s),
                 a = n("77078"),
                 o = n("782340"),
                 u = n("440318");
@@ -605,25 +765,25 @@
                 BLOCK: u.block,
                 INLINE: u.inline
             };
-            class d extends s.PureComponent {
+            class d extends r.PureComponent {
                 render() {
                     let {
                         children: e,
                         className: t,
                         textClassName: n,
-                        type: s = c.BLOCK,
-                        style: i
+                        type: r = c.BLOCK,
+                        style: s
                     } = this.props;
-                    return (0, r.jsxs)("div", {
-                        className: l(t, s),
-                        style: i,
-                        children: [(0, r.jsxs)(a.Text, {
+                    return (0, i.jsxs)("div", {
+                        className: l(t, r),
+                        style: s,
+                        children: [(0, i.jsxs)(a.Text, {
                             variant: "text-sm/bold",
                             tag: "div",
                             color: "text-positive",
                             className: u.pro,
                             children: [o.default.Messages.FORM_LABEL_ROLES_PRO_TIP, ":"]
-                        }), (0, r.jsx)(a.Text, {
+                        }), (0, i.jsx)(a.Text, {
                             className: l(u.tip, n),
                             variant: "text-sm/normal",
                             children: e
@@ -641,17 +801,17 @@
                     return a
                 }
             });
-            var r = n("37983");
+            var i = n("37983");
             n("884691");
-            var s = n("469563"),
-                i = n("7037"),
+            var r = n("469563"),
+                s = n("7037"),
                 l = n("246053"),
-                a = (0, s.replaceIcon)(function(e) {
-                    return (0, r.jsx)(l.default, {
+                a = (0, r.replaceIcon)(function(e) {
+                    return (0, i.jsx)(l.default, {
                         ...e,
                         direction: l.default.Directions.UP
                     })
-                }, i.ArrowSmallUpIcon)
+                }, s.ArrowSmallUpIcon)
         },
         265363: function(e, t, n) {
             "use strict";
@@ -660,35 +820,35 @@
                     return a
                 }
             });
-            var r = n("37983");
+            var i = n("37983");
             n("884691");
-            var s = n("469563"),
-                i = n("736616"),
+            var r = n("469563"),
+                s = n("736616"),
                 l = n("75196"),
-                a = (0, s.replaceIcon)(function(e) {
+                a = (0, r.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: n = 24,
-                        color: s = "currentColor",
-                        foreground: i,
+                        color: r = "currentColor",
+                        foreground: s,
                         ...a
                     } = e;
-                    return (0, r.jsxs)("svg", {
+                    return (0, i.jsxs)("svg", {
                         viewBox: "0 0 24 24",
                         ...(0, l.default)(a),
                         width: t,
                         height: n,
-                        children: [(0, r.jsx)("path", {
-                            fill: s,
-                            className: i,
+                        children: [(0, i.jsx)("path", {
+                            fill: r,
+                            className: s,
                             d: "M9.09091 12C9.09091 13.5786 10.3935 14.8571 12 14.8571C13.6065 14.8571 14.9091 13.5786 14.9091 12C14.9091 10.4214 13.6065 9.14286 12 9.14286C10.3935 9.14286 9.09091 10.4214 9.09091 12ZM13.3402 12C13.3402 12.789 12.689 13.4286 11.8857 13.4286C11.0823 13.4286 10.4311 12.789 10.4311 12C10.4311 11.211 11.0823 10.5714 11.8857 10.5714C12.689 10.5714 13.3402 11.211 13.3402 12Z"
-                        }), (0, r.jsx)("path", {
-                            fill: s,
-                            className: i,
+                        }), (0, i.jsx)("path", {
+                            fill: r,
+                            className: s,
                             d: "M4 2C2.89543 2 2 2.89543 2 4V20C2 21.1046 2.89543 22 4 22H20C21.1046 22 22 21.1046 22 20V4C22 2.89543 21.1046 2 20 2H4ZM4 12C4 12 7.38036 7 12 7C16.6196 7 20 12 20 12C20 12 16.6196 17 12 17C7.38036 17 4 12 4 12Z"
                         })]
                     })
-                }, i.EyeIcon, void 0, {
+                }, s.EyeIcon, void 0, {
                     size: 24
                 })
         },
@@ -702,13 +862,13 @@
                     return h
                 },
                 default: function() {
-                    return x
+                    return b
                 }
             });
-            var r = n("37983"),
-                s = n("884691"),
-                i = n("414456"),
-                l = n.n(i),
+            var i = n("37983"),
+                r = n("884691"),
+                s = n("414456"),
+                l = n.n(s),
                 a = n("353386"),
                 o = n("394846"),
                 u = n("77078"),
@@ -721,8 +881,8 @@
                     let {
                         className: t,
                         iconClassName: n,
-                        children: s,
-                        selected: i = !1,
+                        children: r,
+                        selected: s = !1,
                         disabled: a = !1,
                         showBadge: o = !1,
                         color: c,
@@ -730,18 +890,18 @@
                         background: f,
                         icon: v,
                         onClick: h,
-                        onContextMenu: b,
-                        tooltip: x = null,
-                        tooltipColor: _,
+                        onContextMenu: _,
+                        tooltip: b = null,
+                        tooltipColor: x,
                         tooltipPosition: g = "bottom",
                         hideOnClick: E = !0,
-                        role: C,
-                        "aria-label": y,
-                        "aria-hidden": j,
-                        "aria-checked": N,
-                        "aria-expanded": z,
-                        "aria-haspopup": w
-                    } = e, S = (0, r.jsx)(v, {
+                        role: y,
+                        "aria-label": C,
+                        "aria-hidden": N,
+                        "aria-checked": j,
+                        "aria-expanded": S,
+                        "aria-haspopup": T
+                    } = e, z = (0, i.jsx)(v, {
                         x: 0,
                         y: 0,
                         width: 24,
@@ -750,22 +910,22 @@
                         foreground: null != d ? d : void 0,
                         background: null != f ? f : void 0,
                         color: c
-                    }), k = y;
-                    return null == k && "string" == typeof x && (k = x), (0, r.jsx)(u.Tooltip, {
-                        text: x,
-                        color: _,
+                    }), R = C;
+                    return null == R && "string" == typeof b && (R = b), (0, i.jsx)(u.Tooltip, {
+                        text: b,
+                        color: x,
                         position: g,
                         hideOnClick: E,
                         children: e => {
                             let {
-                                onMouseEnter: x,
-                                onMouseLeave: _,
+                                onMouseEnter: b,
+                                onMouseLeave: x,
                                 onFocus: g,
                                 onBlur: E
                             } = e;
-                            return null == h ? (0, r.jsx)("div", {
+                            return null == h ? (0, i.jsx)("div", {
                                 className: l(t, [m.iconWrapper]),
-                                children: (0, r.jsx)(v, {
+                                children: (0, i.jsx)(v, {
                                     x: 0,
                                     y: 0,
                                     width: 24,
@@ -774,38 +934,38 @@
                                     foreground: null != d ? d : void 0,
                                     background: null != f ? f : void 0,
                                     color: c,
-                                    "aria-hidden": j,
-                                    onMouseEnter: x,
-                                    onMouseLeave: _,
+                                    "aria-hidden": N,
+                                    onMouseEnter: b,
+                                    onMouseLeave: x,
                                     onFocus: g,
                                     onBlur: E
                                 })
-                            }) : (0, r.jsxs)(u.Clickable, {
+                            }) : (0, i.jsxs)(u.Clickable, {
                                 tag: "div",
                                 onClick: a ? void 0 : h,
-                                onContextMenu: a ? void 0 : b,
-                                onMouseEnter: x,
-                                onMouseLeave: _,
+                                onContextMenu: a ? void 0 : _,
+                                onMouseEnter: b,
+                                onMouseLeave: x,
                                 onFocus: g,
                                 onBlur: E,
                                 className: l(t, {
                                     [m.iconWrapper]: !0,
                                     [m.clickable]: !a && null != h,
-                                    [m.selected]: i
+                                    [m.selected]: s
                                 }),
-                                role: C,
-                                "aria-label": k,
-                                "aria-hidden": j,
-                                "aria-checked": N,
-                                "aria-haspopup": w,
-                                "aria-expanded": z,
+                                role: y,
+                                "aria-label": R,
+                                "aria-hidden": N,
+                                "aria-checked": j,
+                                "aria-haspopup": T,
+                                "aria-expanded": S,
                                 tabIndex: a || null == h ? -1 : 0,
-                                children: [o ? (0, r.jsx)(p.default, {
+                                children: [o ? (0, i.jsx)(p.default, {
                                     mask: p.default.Masks.HEADER_BAR_BADGE,
-                                    children: S
-                                }) : S, o ? (0, r.jsx)("span", {
+                                    children: z
+                                }) : z, o ? (0, i.jsx)("span", {
                                     className: m.iconBadge
-                                }) : null, s]
+                                }) : null, r]
                             })
                         }
                     })
@@ -814,48 +974,48 @@
                     let {
                         className: t
                     } = e;
-                    return (0, r.jsx)("div", {
+                    return (0, i.jsx)("div", {
                         className: l(m.divider, t)
                     })
                 },
-                b = e => {
+                _ = e => {
                     let {
                         className: t,
                         innerClassName: n,
-                        children: i,
+                        children: s,
                         childrenBottom: d,
                         toolbar: f,
                         onDoubleClick: p,
                         "aria-label": v,
                         "aria-labelledby": h,
-                        role: b,
-                        scrollable: x,
-                        transparent: _ = !1
-                    } = e, g = s.useRef(null), E = s.useContext(c.default);
-                    return (0, r.jsx)("section", {
+                        role: _,
+                        scrollable: b,
+                        transparent: x = !1
+                    } = e, g = r.useRef(null), E = r.useContext(c.default);
+                    return (0, i.jsx)("section", {
                         className: l(t, m.container, {
-                            [m.themed]: !_,
-                            [m.transparent]: _,
+                            [m.themed]: !x,
+                            [m.transparent]: x,
                             [m.themedMobile]: o.isMobile
                         }),
                         "aria-label": v,
                         "aria-labelledby": h,
-                        role: b,
+                        role: _,
                         ref: g,
-                        children: (0, r.jsxs)(u.FocusRingScope, {
+                        children: (0, i.jsxs)(u.FocusRingScope, {
                             containerRef: g,
-                            children: [(0, r.jsxs)("div", {
+                            children: [(0, i.jsxs)("div", {
                                 className: m.upperContainer,
-                                children: [(0, r.jsxs)("div", {
+                                children: [(0, i.jsxs)("div", {
                                     className: l(m.children, n, {
-                                        [m.scrollable]: x
+                                        [m.scrollable]: b
                                     }),
                                     onDoubleClick: p,
-                                    children: [o.isMobile && null != E ? (0, r.jsx)(a.default, {
+                                    children: [o.isMobile && null != E ? (0, i.jsx)(a.default, {
                                         onClick: E,
                                         className: m.hamburger
-                                    }) : null, i]
-                                }), null != f ? (0, r.jsx)("div", {
+                                    }) : null, s]
+                                }), null != f ? (0, i.jsx)("div", {
                                     className: m.toolbar,
                                     children: f
                                 }) : null]
@@ -863,47 +1023,47 @@
                         })
                     })
                 };
-            b.Icon = v, b.Title = e => {
+            _.Icon = v, _.Title = e => {
                 let {
                     className: t,
                     wrapperClassName: n,
-                    children: s,
-                    onContextMenu: i,
+                    children: r,
+                    onContextMenu: s,
                     onClick: a,
                     id: o,
                     muted: c = !1,
                     level: d = 1
-                } = e, f = (0, r.jsx)(u.HeadingLevel, {
+                } = e, f = (0, i.jsx)(u.HeadingLevel, {
                     forceLevel: d,
-                    children: (0, r.jsx)(u.Heading, {
+                    children: (0, i.jsx)(u.Heading, {
                         variant: "heading-md/semibold",
                         color: c ? "header-secondary" : void 0,
                         className: l(t, m.title),
                         id: o,
-                        children: s
+                        children: r
                     })
                 });
-                return null != a ? (0, r.jsx)(u.Clickable, {
+                return null != a ? (0, i.jsx)(u.Clickable, {
                     onClick: a,
-                    onContextMenu: i,
+                    onContextMenu: s,
                     className: l(n, m.titleWrapper),
                     children: f
-                }) : (0, r.jsx)("div", {
+                }) : (0, i.jsx)("div", {
                     className: l(n, m.titleWrapper),
-                    onContextMenu: i,
+                    onContextMenu: s,
                     children: f
                 })
-            }, b.Divider = h, b.Caret = function(e) {
+            }, _.Divider = h, _.Caret = function(e) {
                 let {
                     direction: t = "right"
                 } = e;
-                return "right" === t ? (0, r.jsx)(f.default, {
+                return "right" === t ? (0, i.jsx)(f.default, {
                     className: m.caret
-                }) : (0, r.jsx)(d.default, {
+                }) : (0, i.jsx)(d.default, {
                     className: m.caret
                 })
             };
-            var x = b
+            var b = _
         },
         353386: function(e, t, n) {
             "use strict";
@@ -912,24 +1072,24 @@
                     return a
                 }
             });
-            var r = n("37983");
+            var i = n("37983");
             n("884691");
-            var s = n("580420"),
-                i = n.n(s),
+            var r = n("580420"),
+                s = n.n(r),
                 l = n("249907"),
                 a = e => {
                     let {
                         open: t = !1,
                         className: n,
-                        ...s
+                        ...r
                     } = e;
-                    return (0, r.jsxs)("button", {
+                    return (0, i.jsxs)("button", {
                         type: "button",
-                        className: i(l.btnHamburger, {
+                        className: s(l.btnHamburger, {
                             [l.btnHamburgerOpen]: t
                         }, n),
-                        ...s,
-                        children: [(0, r.jsx)("span", {}), (0, r.jsx)("span", {}), (0, r.jsx)("span", {}), (0, r.jsx)("span", {}), (0, r.jsx)("span", {}), (0, r.jsx)("span", {})]
+                        ...r,
+                        children: [(0, i.jsx)("span", {}), (0, i.jsx)("span", {}), (0, i.jsx)("span", {}), (0, i.jsx)("span", {}), (0, i.jsx)("span", {}), (0, i.jsx)("span", {})]
                     })
                 }
         }
