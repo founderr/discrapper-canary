@@ -2601,11 +2601,11 @@
                         guildId: E
                     }),
                     e3 = (null == eY ? void 0 : eY.id) === "936929561302675456",
-                    [e6, e5] = a.useState(!1),
-                    [e2, te] = a.useState(!1),
+                    [e6, e2] = a.useState(!1),
+                    [e5, te] = a.useState(!1),
                     [tt, tl] = a.useState(!0),
                     ti = e => {
-                        null != e && e5(e.scrollHeight > e.clientHeight)
+                        null != e && e2(e.scrollHeight > e.clientHeight)
                     },
                     ta = null != ez && ez.length > 0,
                     tn = (null == eY ? void 0 : eY.flags) != null,
@@ -2624,8 +2624,8 @@
                                     }), (0, i.jsx)("div", {
                                         ref: ti,
                                         className: s({
-                                            [em.descriptionClamp]: !e2,
-                                            [em.descriptionClampSafari]: !e2 && "Safari" === c.name
+                                            [em.descriptionClamp]: !e5,
+                                            [em.descriptionClampSafari]: !e5 && "Safari" === c.name
                                         }),
                                         children: (0, i.jsx)(Y.default, {
                                             className: em.detailedDescription,
@@ -2633,8 +2633,8 @@
                                             output: eh,
                                             children: n
                                         })
-                                    }), (e6 || e2) && (0, i.jsx)(eR, {
-                                        isViewAll: e2,
+                                    }), (e6 || e5) && (0, i.jsx)(eR, {
+                                        isViewAll: e5,
                                         onToggle: () => {
                                             te(e => !e)
                                         }
@@ -2736,7 +2736,7 @@
                             className: em.section,
                             children: e
                         }, t))
-                    }, [eY, e9, eq, ej, ez, eX, eD, eS, e2, e6, ta, tn]),
+                    }, [eY, e9, eq, ej, ez, eX, eD, eS, e5, e6, ta, tn]),
                     tr = a.useMemo(() => {
                         let e = H.current === m,
                             t = e && !er.current,
@@ -3239,30 +3239,35 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return m
+                    return f
                 }
             });
             var i = l("37983");
             l("884691");
-            var a = l("77078"),
-                n = l("970728"),
-                s = l("824021"),
-                r = l("139514"),
-                c = l("312016"),
-                o = l("844659"),
-                d = l("9074");
-            let u = /^discord.gg\/[a-zA-Z0-9-]+/,
-                p = {
-                    ...d.default.rules,
+            var a = l("132710"),
+                n = l.n(a),
+                s = l("77078"),
+                r = l("970728"),
+                c = l("824021"),
+                o = l("139514"),
+                d = l("312016"),
+                u = l("844659"),
+                p = l("9074");
+            let m = /^discord.gg\/[a-zA-Z0-9-]+/,
+                _ = {
+                    ...p.default.rules,
                     heading: {
-                        ...s.Rules.heading
+                        ...c.Rules.heading
+                    },
+                    image: {
+                        ...n.defaultRules.image
                     },
                     inviteLink: {
-                        order: d.default.rules.link.order + 1,
-                        match: (e, t) => t.inline ? u.exec(e) : null,
+                        order: p.default.rules.link.order + 1,
+                        match: (e, t) => t.inline ? m.exec(e) : null,
                         parse: (e, t, l) => {
-                            let i = (0, c.findCodedLink)(e[0]);
-                            return null == i || i.type !== r.CodedLinkType.INVITE ? {
+                            let i = (0, d.findCodedLink)(e[0]);
+                            return null == i || i.type !== o.CodedLinkType.INVITE ? {
                                 type: "text",
                                 content: e[0]
                             } : {
@@ -3273,7 +3278,7 @@
                                 }],
                                 onClick: () => {
                                     var e;
-                                    n.default.acceptInviteAndTransitionToInviteChannel({
+                                    r.default.acceptInviteAndTransitionToInviteChannel({
                                         inviteKey: i.code,
                                         context: {
                                             location: "Application Directory"
@@ -3282,15 +3287,15 @@
                                 }
                             }
                         },
-                        react: (e, t, l) => (0, i.jsx)(a.Anchor, {
+                        react: (e, t, l) => (0, i.jsx)(s.Anchor, {
                             onClick: t => {
                                 t.preventDefault(), e.onClick()
                             },
-                            children: (0, o.smartOutput)(e, t, l)
+                            children: (0, u.smartOutput)(e, t, l)
                         }, l.key)
                     }
                 };
-            var m = p
+            var f = _
         },
         370570: function(e, t, l) {
             "use strict";
