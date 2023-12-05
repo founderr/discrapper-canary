@@ -42379,9 +42379,10 @@ html .progress__4ef76 {
 }
 
 .modalHeader__67092 {
-    display: block;
+    padding: 16px 0 0;
     text-align: center;
-    padding: 16px 0 0
+    overflow: visible;
+    gap: 4px
 }
 
 .closeButton_d35106 {
@@ -42414,10 +42415,6 @@ html .progress__4ef76 {
 .title__25dda {
     display: inline-flex;
     margin-right: 4px
-}
-
-.betaTag_e4d227 {
-    display: inline-flex
 }
 
 .textArea__3124d {
