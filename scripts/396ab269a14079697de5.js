@@ -2644,6 +2644,7 @@
                     [p.SubscriptionStatusTypes.CANCELED]: "Canceled",
                     [p.SubscriptionStatusTypes.ENDED]: "Ended",
                     [p.SubscriptionStatusTypes.ACCOUNT_HOLD]: "Account Hold",
+                    [p.SubscriptionStatusTypes.BILLING_RETRY]: "Billing Retry",
                     [p.SubscriptionStatusTypes.PAUSED]: "Paused"
                 },
                 b = [{
@@ -2664,6 +2665,9 @@
                 }, {
                     label: "Account Hold",
                     value: p.SubscriptionStatusTypes.ACCOUNT_HOLD
+                }, {
+                    label: "Billing Retry",
+                    value: p.SubscriptionStatusTypes.BILLING_RETRY
                 }, {
                     label: "Paused",
                     value: p.SubscriptionStatusTypes.PAUSED

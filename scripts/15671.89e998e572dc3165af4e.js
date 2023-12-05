@@ -60,8 +60,8 @@
                 u = n("769846"),
                 d = n("77078"),
                 c = n("159885"),
-                E = n("99130");
-            let f = (0, c.cssValueToNumber)(u.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
+                f = n("99130");
+            let E = (0, c.cssValueToNumber)(u.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
                 h = {
                     START: 0,
                     END: 1
@@ -113,7 +113,7 @@
                     }
                     render() {
                         return (0, s.jsx)("div", {
-                            className: E.wrapper,
+                            className: f.wrapper,
                             children: (0, s.jsx)(d.AccessibilityPreferencesContext.Consumer, {
                                 children: t => {
                                     let {
@@ -133,7 +133,7 @@
                         super(...e), this.anim = new i.default.Value(h.START), this.state = {
                             shouldAnimate: !o.isMobile
                         }, this.handleResize = () => {
-                            let e = window.innerWidth > f;
+                            let e = window.innerWidth > E;
                             !this.state.shouldAnimate && e && this.anim.setValue(h.END), this.setState({
                                 shouldAnimate: e
                             })
@@ -158,12 +158,12 @@
                 u = n("2021"),
                 d = n("393414"),
                 c = n("725484"),
-                E = n("554054"),
-                f = n("159885"),
+                f = n("554054"),
+                E = n("159885"),
                 h = n("528502"),
                 _ = n("49111"),
                 m = n("71041");
-            let g = (0, f.cssValueToNumber)(m.responsiveWidthMobile),
+            let g = (0, E.cssValueToNumber)(m.responsiveWidthMobile),
                 p = [_.Routes.LOGIN, _.Routes.LOGIN_HANDOFF, _.Routes.REGISTER, _.Routes.INVITE(""), _.Routes.GIFT_CODE(""), _.Routes.GUILD_TEMPLATE_LOGIN(""), _.Routes.GUILD_TEMPLATE(""), _.Routes.DISABLE_EMAIL_NOTIFICATIONS, _.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, _.Routes.BILLING_PREMIUM_SUBSCRIBE, _.Routes.BILLING_PAYMENT_SOURCES_CREATE, _.Routes.BILLING_PAYMENTS, _.Routes.BILLING_PREMIUM_SWITCH_PLAN, _.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, _.Routes.VERIFY, _.Routes.VERIFY_HUB_EMAIL, _.Routes.REJECT_IP, _.Routes.REJECT_MFA, _.Routes.AUTHORIZE_IP, _.Routes.AUTHORIZE_PAYMENT, _.Routes.RESET, _.Routes.HANDOFF, _.Routes.REPORT, _.Routes.REPORT_SECOND_LOOK];
 
             function A(e) {
@@ -204,7 +204,7 @@
                                 children: [(0, s.jsx)(c.default, {
                                     show: !0,
                                     className: r(m.logo)
-                                }), (0, s.jsx)(E.Splash, {
+                                }), (0, s.jsx)(f.Splash, {
                                     splash: e,
                                     children: t
                                 })]
@@ -248,7 +248,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return N
+                    return S
                 }
             });
             var s = n("37983"),
@@ -260,8 +260,8 @@
                 u = n("299285"),
                 d = n("210721"),
                 c = n("65324"),
-                E = n("697218"),
-                f = n("10514"),
+                f = n("697218"),
+                E = n("10514"),
                 h = n("552712"),
                 _ = n("953109"),
                 m = n("124969"),
@@ -271,7 +271,7 @@
                 T = n("451862"),
                 R = n("173791"),
                 I = n("926622"),
-                N = i.default.connectStores([h.default, u.default, f.default, E.default], e => {
+                S = i.default.connectStores([h.default, u.default, E.default, f.default], e => {
                     let {
                         giftCode: t
                     } = e, n = h.default.get(t.skuId), {
@@ -281,7 +281,7 @@
                         sku: n,
                         subscriptionPlan: a,
                         application: u.default.getApplication(n.applicationId),
-                        gifter: E.default.getUser(t.userId)
+                        gifter: f.default.getUser(t.userId)
                     }
                 })(e => {
                     let {
@@ -290,13 +290,13 @@
                         gifter: l,
                         sku: i,
                         application: u,
-                        subscriptionPlan: E
-                    } = e, f = null == l ? A.default.Messages.GIFT_CODE_AUTH_GIFTED : A.default.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({
+                        subscriptionPlan: f
+                    } = e, E = null == l ? A.default.Messages.GIFT_CODE_AUTH_GIFTED : A.default.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({
                         username: l.username
                     }), h = i.name;
-                    return null != E && (h = (E.interval === p.SubscriptionIntervalTypes.MONTH ? A.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : A.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
+                    return null != f && (h = (f.interval === p.SubscriptionIntervalTypes.MONTH ? A.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : A.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
                         skuName: i.name,
-                        intervalCount: E.intervalCount
+                        intervalCount: f.intervalCount
                     })), (0, s.jsxs)(a.Fragment, {
                         children: [null != n.giftStyle ? (0, s.jsx)(c.default, {
                             defaultAnimationState: d.AnimationState.LOOP,
@@ -314,7 +314,7 @@
                             })]
                         }) : (0, s.jsxs)(a.Fragment, {
                             children: [(0, s.jsx)(m.SubTitle, {
-                                children: f
+                                children: E
                             }), (0, s.jsxs)(m.Title, {
                                 className: r(I.marginTop8, R.flexCenter),
                                 children: [(0, s.jsx)(_.default, {
@@ -347,8 +347,8 @@
                 u = n("446674"),
                 d = n("77078"),
                 c = n("913144"),
-                E = n("437822"),
-                f = n("697796"),
+                f = n("437822"),
+                E = n("697796"),
                 h = n("524824"),
                 _ = n("21572"),
                 m = n("791160"),
@@ -358,23 +358,23 @@
                 T = n("770032"),
                 R = n("724554"),
                 I = n("878720"),
-                N = n("25033"),
-                S = n("589252"),
+                S = n("25033"),
+                N = n("589252"),
                 C = n("970366"),
-                O = n("271938"),
-                L = n("72177"),
-                M = n("476108"),
+                L = n("271938"),
+                M = n("72177"),
+                O = n("476108"),
                 x = n("145131"),
                 v = n("124969"),
                 D = n("980428"),
                 U = n("599110"),
-                b = n("659500"),
-                G = n("773336"),
+                G = n("659500"),
+                b = n("773336"),
                 y = n("404432"),
-                P = n("719451"),
-                F = n("331085"),
-                j = n("598489"),
-                B = n("49111"),
+                j = n("719451"),
+                P = n("331085"),
+                B = n("598489"),
+                F = n("49111"),
                 w = n("579033"),
                 k = n("782340"),
                 H = n("741532"),
@@ -403,14 +403,14 @@
                         invite: s,
                         location: a
                     } = this.props;
-                    e && !t ? (0, f.handoffBegin)() : t && this.loginOrSSO(t, a, !0), U.default.track(B.AnalyticEvents.LOGIN_VIEWED, {
+                    e && !t ? (0, E.handoffBegin)() : t && this.loginOrSSO(t, a, !0), U.default.track(F.AnalyticEvents.LOGIN_VIEWED, {
                         location: null != s ? "Invite Login Page" : "Non-Invite Login Page",
                         login_source: this.loginSource,
                         authenticated: t,
                         ...null != n ? (0, m.default)(n, !1, !1) : {}
                     }, {
                         flush: !0
-                    }), E.default.getLocationMetadata(), (0, C.trackAppUIViewed)("login")
+                    }), f.default.getLocationMetadata(), (0, C.trackAppUIViewed)("login")
                 }
                 componentDidUpdate(e) {
                     let {
@@ -455,7 +455,7 @@
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                     e && null != t && (this.setState({
                         redirecting: !0
-                    }), n ? E.default.verifySSOToken().then(() => this.transitionSSO(t)) : this.transitionSSO(t))
+                    }), n ? f.default.verifySSOToken().then(() => this.transitionSSO(t)) : this.transitionSSO(t))
                 }
                 transitionSSO(e) {
                     let {
@@ -464,12 +464,12 @@
                         replaceWith: s
                     } = this.props, a = null != e ? (0, i.parse)(e.search) : {};
                     if (delete a.redirect_to, null != n) null != s ? s(n) : t(n);
-                    else if (null == a.service) t(B.Routes.APP);
+                    else if (null == a.service) t(F.Routes.APP);
                     else {
-                        let e = window.location.protocol + window.GLOBAL_ENV.API_ENDPOINT + B.Endpoints.SSO,
+                        let e = window.location.protocol + window.GLOBAL_ENV.API_ENDPOINT + F.Endpoints.SSO,
                             t = {
                                 ...a,
-                                token: O.default.getToken()
+                                token: L.default.getToken()
                             };
                         window.location = "".concat(e, "?").concat((0, i.stringify)(t))
                     }
@@ -513,7 +513,7 @@
                             children: k.default.Messages._BROWSER_HANDOFF_SUCCESS_BODY
                         }), (0, s.jsxs)(v.Block, {
                             children: [(0, s.jsx)(v.Button, {
-                                onClick: () => t(B.Routes.APP),
+                                onClick: () => t(F.Routes.APP),
                                 className: V.marginBottom8,
                                 children: k.default.Messages.BROWSER_HANDOFF_SUCCESS_ACTION.format({
                                     name: e.toString()
@@ -530,7 +530,7 @@
                 renderDisabledAccount() {
                     let {
                         authBoxClassName: e
-                    } = this.props, t = this.props.loginStatus === B.LoginStates.ACCOUNT_DISABLED, n = t ? k.default.Messages.ACCOUNT_DISABLED_TITLE : k.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_TITLE, a = t ? k.default.Messages.ACCOUNT_DISABLED_DESCRIPTION : k.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_DESCRIPTION;
+                    } = this.props, t = this.props.loginStatus === F.LoginStates.ACCOUNT_DISABLED, n = t ? k.default.Messages.ACCOUNT_DISABLED_TITLE : k.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_TITLE, a = t ? k.default.Messages.ACCOUNT_DISABLED_DESCRIPTION : k.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_DESCRIPTION;
                     return (0, s.jsx)(v.default, {
                         tag: "form",
                         onSubmit: this.handleReset,
@@ -565,9 +565,9 @@
                     } = this.props;
                     return (0, s.jsxs)(v.default, {
                         className: e,
-                        children: [(0, s.jsx)(P.InviteResolvingHeader, {}), (0, s.jsxs)(v.Block, {
+                        children: [(0, s.jsx)(j.InviteResolvingHeader, {}), (0, s.jsxs)(v.Block, {
                             className: V.marginTop20,
-                            children: [(0, s.jsx)(S.default, {
+                            children: [(0, s.jsx)(N.default, {
                                 className: V.marginBottom20,
                                 alpha2: t.alpha2,
                                 countryCode: t.code.split(" ")[0],
@@ -626,18 +626,18 @@
                         country: o,
                         showMobileWebHandoff: u,
                         disableAutofocusOnDefaultForm: c
-                    } = this.props, E = !this.hasError("email") && this.hasError("password"), f = (null == a ? void 0 : a.stage_instance) != null;
-                    return n = null == a || f ? null != l ? (0, s.jsx)(y.default, {
+                    } = this.props, f = !this.hasError("email") && this.hasError("password"), E = (null == a ? void 0 : a.stage_instance) != null;
+                    return n = null == a || E ? null != l ? (0, s.jsx)(y.default, {
                         giftCode: l
                     }) : (0, s.jsxs)("div", {
                         className: H.header,
                         children: [(0, s.jsx)(v.Title, {
                             className: V.marginBottom8,
                             children: k.default.Messages.LOGIN_TITLE
-                        }, "title"), !1 === (0, G.isAndroidWeb)() ? (0, s.jsx)(v.SubTitle, {
+                        }, "title"), !1 === (0, b.isAndroidWeb)() ? (0, s.jsx)(v.SubTitle, {
                             children: k.default.Messages.AUTH_LOGIN_BODY
                         }, "subtitle") : null]
-                    }) : (0, s.jsx)(P.default, {
+                    }) : (0, s.jsx)(j.default, {
                         invite: a
                     }), (0, s.jsxs)(x.default, {
                         direction: x.default.Direction.HORIZONTAL,
@@ -668,7 +668,7 @@
                             }), n, (0, s.jsx)(d.HeadingLevel, {
                                 children: (0, s.jsxs)(v.Block, {
                                     className: V.marginTop20,
-                                    children: [(0, s.jsx)(S.default, {
+                                    children: [(0, s.jsx)(N.default, {
                                         alpha2: o.alpha2,
                                         countryCode: o.code.split(" ")[0],
                                         className: V.marginBottom20,
@@ -684,7 +684,7 @@
                                         autoCorrect: "off",
                                         spellCheck: "false",
                                         value: this.state.login,
-                                        autoFocus: !E && !u && !c,
+                                        autoFocus: !f && !u && !c,
                                         required: !0
                                     }), (0, s.jsx)(v.Input, {
                                         label: k.default.Messages.FORM_LABEL_PASSWORD,
@@ -697,7 +697,7 @@
                                         setRef: this.setPasswordRef,
                                         autoComplete: "off",
                                         spellCheck: "false",
-                                        autoFocus: E && !u && !c,
+                                        autoFocus: f && !u && !c,
                                         value: this.state.password,
                                         required: !0
                                     }), (0, s.jsx)(v.Button, {
@@ -708,10 +708,10 @@
                                         children: k.default.Messages.FORGOT_PASSWORD
                                     }), (0, s.jsx)(v.Button, {
                                         type: "submit",
-                                        submitting: i === B.LoginStates.LOGGING_IN,
-                                        color: f ? v.Button.Colors.GREEN : v.Button.Colors.BRAND,
+                                        submitting: i === F.LoginStates.LOGGING_IN,
+                                        color: E ? v.Button.Colors.GREEN : v.Button.Colors.BRAND,
                                         className: V.marginBottom8,
-                                        children: f ? k.default.Messages._LOGIN_STAGE : k.default.Messages._LOGIN
+                                        children: E ? k.default.Messages._LOGIN_STAGE : k.default.Messages._LOGIN
                                     }), (0, s.jsxs)("div", {
                                         className: V.marginTop4,
                                         children: [(0, s.jsx)("span", {
@@ -728,7 +728,7 @@
                                 })
                             })]
                         }), (0, s.jsx)(d.HeadingLevel, {
-                            children: e ? (0, s.jsx)(F.default, {
+                            children: e ? (0, s.jsx)(P.default, {
                                 authTokenCallback: this.handleAuthToken
                             }) : null
                         })]
@@ -751,7 +751,7 @@
                     })
                 }
                 renderGuildTemplate(e) {
-                    return (0, s.jsx)(j.default, {
+                    return (0, s.jsx)(B.default, {
                         onSubmit: this.handleLogin,
                         tag: "form",
                         className: r(this.props.authBoxClassName, H.horizontalAuthBox),
@@ -797,7 +797,7 @@
                             }),
                             error: t,
                             onSubmit: this.handleIPAuthorize,
-                            onCancel: E.default.loginReset
+                            onCancel: f.default.loginReset
                         })
                     })
                 }
@@ -817,7 +817,7 @@
                             }),
                             error: t,
                             onSubmit: this.handlePasswordReset,
-                            onCancel: E.default.loginReset
+                            onCancel: f.default.loginReset
                         })
                     })
                 }
@@ -846,23 +846,23 @@
                     if (l) return this.renderHandOffAvailable();
                     if (e && r) return this.renderHandOffContinue();
                     switch (a) {
-                        case B.LoginStates.LOGGING_IN_MFA_SMS:
-                        case B.LoginStates.MFA_SMS_STEP:
-                        case B.LoginStates.LOGGING_IN_MFA:
-                        case B.LoginStates.MFA_STEP:
-                        case B.LoginStates.LOGGING_IN_MFA_WEBAUTHN:
+                        case F.LoginStates.LOGGING_IN_MFA_SMS:
+                        case F.LoginStates.MFA_SMS_STEP:
+                        case F.LoginStates.LOGGING_IN_MFA:
+                        case F.LoginStates.MFA_STEP:
+                        case F.LoginStates.LOGGING_IN_MFA_WEBAUTHN:
                             return this.renderMFA();
-                        case B.LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION:
-                        case B.LoginStates.ACCOUNT_DISABLED:
+                        case F.LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION:
+                        case F.LoginStates.ACCOUNT_DISABLED:
                             return this.renderDisabledAccount();
-                        case B.LoginStates.PHONE_IP_AUTHORIZATION:
+                        case F.LoginStates.PHONE_IP_AUTHORIZATION:
                             return this.renderIPAuthorization();
-                        case B.LoginStates.PASSWORD_RECOVERY_PHONE_VERIFICATION:
+                        case F.LoginStates.PASSWORD_RECOVERY_PHONE_VERIFICATION:
                             return this.renderPasswordRecovery();
-                        case B.LoginStates.LOGGING_IN:
-                        case B.LoginStates.NONE:
+                        case F.LoginStates.LOGGING_IN:
+                        case F.LoginStates.NONE:
                         default:
-                            if (null != t && t.state === B.InviteStates.RESOLVING) return this.renderResolving();
+                            if (null != t && t.state === F.InviteStates.RESOLVING) return this.renderResolving();
                             if (null != n) {
                                 if (n.state === w.GuildTemplateStates.RESOLVING) return this.renderResolving();
                                 return this.renderGuildTemplate(n)
@@ -874,8 +874,8 @@
                 constructor(e) {
                     var t, n;
                     super(e), this.handleAuthToken = async e => {
-                        await E.default.loginToken(e, !1), U.default.track(B.AnalyticEvents.LOGIN_SUCCESSFUL, {
-                            source: B.LoginSuccessfulSources.QR_CODE,
+                        await f.default.loginToken(e, !1), U.default.track(F.AnalyticEvents.LOGIN_SUCCESSFUL, {
+                            source: F.LoginSuccessfulSources.QR_CODE,
                             login_source: this.loginSource,
                             gift_code_sku_id: this.giftCodeSKUId,
                             is_new_user: !1
@@ -906,14 +906,14 @@
                             password: t,
                             undelete: n
                         } = this.state;
-                        null != e && e.preventDefault(), E.default.login({
+                        null != e && e.preventDefault(), f.default.login({
                             login: this.getFullLogin(),
                             password: t,
                             undelete: n,
                             source: this.loginSource,
                             giftCodeSKUId: this.giftCodeSKUId,
                             invite: this.props.invite
-                        }), b.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE)
+                        }), G.ComponentDispatch.dispatch(F.ComponentActions.WAVE_EMPHASIZE)
                     }, this.handleIPAuthorize = async e => {
                         let {
                             password: t,
@@ -923,13 +923,13 @@
                             let {
                                 token: a
                             } = await I.default.verifyPhone(s, e, !1);
-                            await E.default.authorizeIPAddress(a), E.default.login({
+                            await f.default.authorizeIPAddress(a), f.default.login({
                                 login: s,
                                 password: t,
                                 undelete: n,
                                 source: this.loginSource,
                                 giftCodeSKUId: this.giftCodeSKUId
-                            }), b.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE)
+                            }), G.ComponentDispatch.dispatch(F.ComponentActions.WAVE_EMPHASIZE)
                         } catch (e) {
                             null != e.body && null != e.body.message && this.setState({
                                 phoneVerifyError: e.body.message
@@ -946,7 +946,7 @@
                             let {
                                 token: n
                             } = await I.default.verifyPhone(this.getFullLogin(), e, !1);
-                            t(B.Routes.RESET, {
+                            t(F.Routes.RESET, {
                                 search: (0, i.stringify)({
                                     token: n,
                                     from_login: "true"
@@ -963,7 +963,7 @@
                             data: n,
                             ticket: s
                         } = e;
-                        return b.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE), E.default.loginMFAv2({
+                        return G.ComponentDispatch.dispatch(F.ComponentActions.WAVE_EMPHASIZE), f.default.loginMFAv2({
                             code: n,
                             ticket: s,
                             mfaType: t,
@@ -974,7 +974,7 @@
                         null != e && e.preventDefault(), null != this.loginRef && this.loginRef.focus();
                         let t = this.getFullLogin();
                         try {
-                            b.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE), await E.default.forgotPassword(t), (0, d.openModal)(e => (0, s.jsx)(d.ConfirmModal, {
+                            G.ComponentDispatch.dispatch(F.ComponentActions.WAVE_EMPHASIZE), await f.default.forgotPassword(t), (0, d.openModal)(e => (0, s.jsx)(d.ConfirmModal, {
                                 header: k.default.Messages.EMAIL_VERIFICATION_INSTRUCTIONS_HEADER,
                                 confirmText: k.default.Messages.OKAY,
                                 confirmButtonColor: v.Button.Colors.BRAND,
@@ -991,7 +991,7 @@
                     }, this.handleResendCode = () => {
                         I.default.resendCode(this.getFullLogin())
                     }, this.handleReset = e => {
-                        null != e && e.preventDefault(), E.default.loginReset(), this.setState({
+                        null != e && e.preventDefault(), f.default.loginReset(), this.setState({
                             password: "",
                             loginPrefix: "",
                             login: "",
@@ -1017,9 +1017,9 @@
                             transitionTo: r,
                             redirectTo: o
                         } = this.props, u = null != l ? (0, i.parse)(l.search) : {};
-                        "" !== t && (u.email = t), null != n ? (u.mode = "register", e = B.Routes.INVITE(n.code)) : null != s ? (u.mode = "register", e = B.Routes.GIFT_CODE(s.code)) : null != a ? e = B.Routes.GUILD_TEMPLATE(a.code) : null != o ? (e = B.Routes.REGISTER, u.redirect_to = o) : e = B.Routes.REGISTER, E.default.loginReset(), r(e, {
+                        "" !== t && (u.email = t), null != n ? (u.mode = "register", e = F.Routes.INVITE(n.code)) : null != s ? (u.mode = "register", e = F.Routes.GIFT_CODE(s.code)) : null != a ? e = F.Routes.GUILD_TEMPLATE(a.code) : null != o ? (e = F.Routes.REGISTER, u.redirect_to = o) : e = F.Routes.REGISTER, f.default.loginReset(), r(e, {
                             search: (0, i.stringify)(u)
-                        }), b.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE)
+                        }), G.ComponentDispatch.dispatch(F.ComponentActions.WAVE_EMPHASIZE)
                     };
                     let a = null != e.location ? (0, i.parse)(e.location.search) : {};
                     this.state = {
@@ -1040,18 +1040,18 @@
                 transitionTo: e => n.g.location.assign(e)
             };
             var K = function(e) {
-                let t = (0, u.useStateFromStoresObject)([L.default, M.default, O.default, T.default, N.default], () => ({
-                    authenticated: O.default.isAuthenticated(),
-                    handoffAvailable: L.default.isHandoffAvailable(),
-                    user: L.default.user,
-                    loginStatus: O.default.getLoginStatus(),
-                    mfaTicket: O.default.getMFATicket(),
-                    mfaSMS: O.default.getMFASMS(),
-                    mfaMethods: O.default.getMFAMethods(),
-                    maskedPhone: O.default.getMaskedPhone(),
-                    errors: O.default.getErrors(),
-                    defaultRoute: M.default.defaultRoute,
-                    country: N.default.getCountryCode(),
+                let t = (0, u.useStateFromStoresObject)([M.default, O.default, L.default, T.default, S.default], () => ({
+                    authenticated: L.default.isAuthenticated(),
+                    handoffAvailable: M.default.isHandoffAvailable(),
+                    user: M.default.user,
+                    loginStatus: L.default.getLoginStatus(),
+                    mfaTicket: L.default.getMFATicket(),
+                    mfaSMS: L.default.getMFASMS(),
+                    mfaMethods: L.default.getMFAMethods(),
+                    maskedPhone: L.default.getMaskedPhone(),
+                    errors: L.default.getErrors(),
+                    defaultRoute: O.default.defaultRoute,
+                    country: S.default.getCountryCode(),
                     hasLoggedInAccounts: T.default.getHasLoggedInAccounts()
                 }));
                 return (0, s.jsx)(Y, {
@@ -1076,8 +1076,8 @@
                 u = n("697796"),
                 d = n("524824"),
                 c = n("393414"),
-                E = n("271938"),
-                f = n("291850"),
+                f = n("271938"),
+                E = n("291850"),
                 h = n("49111"),
                 _ = n("724210");
 
@@ -1098,9 +1098,9 @@
                     {
                         isAuthenticated: n,
                         loginStatus: m
-                    } = (0, i.useStateFromStoresObject)([E.default], () => ({
-                        isAuthenticated: E.default.isAuthenticated(),
-                        loginStatus: E.default.getLoginStatus()
+                    } = (0, i.useStateFromStoresObject)([f.default], () => ({
+                        isAuthenticated: f.default.isAuthenticated(),
+                        loginStatus: f.default.getLoginStatus()
                     })),
                     {
                         location: g,
@@ -1141,7 +1141,7 @@
                             })
                         }
                     }
-                }, []), A || m === h.LoginStates.LOGGING_IN) ? (0, s.jsx)(f.LoginSpinner, {}) : (0, s.jsx)(f.default, {
+                }, []), A || m === h.LoginStates.LOGGING_IN) ? (0, s.jsx)(E.LoginSpinner, {}) : (0, s.jsx)(E.default, {
                     ...e,
                     transitionTo: t
                 })
@@ -1159,8 +1159,8 @@
                 u = n("981980"),
                 d = n("872717"),
                 c = n("77078"),
-                E = n("308289"),
-                f = n("905949"),
+                f = n("308289"),
+                E = n("905949"),
                 h = n("605250"),
                 _ = n("671278"),
                 m = n("124969"),
@@ -1170,13 +1170,13 @@
                 T = n("49111"),
                 R = n("843455"),
                 I = n("782340"),
-                N = n("103957"),
-                S = n("926622");
+                S = n("103957"),
+                N = n("926622");
             (l = s || (s = {}))[l.INITIALIZING = 0] = "INITIALIZING", l[l.PENDING_REMOTE_INIT = 1] = "PENDING_REMOTE_INIT", l[l.PENDING_FINISH = 2] = "PENDING_FINISH", l[l.PENDING_TICKET = 3] = "PENDING_TICKET", l[l.PENDING_LOGIN = 4] = "PENDING_LOGIN", l[l.FINISH = 5] = "FINISH", (r = a || (a = {}))[r.QR_CODE = 0] = "QR_CODE", r[r.CONFIRM = 1] = "CONFIRM";
             let C = n("527826"),
-                O = new h.default("LoginQRSocket");
+                L = new h.default("LoginQRSocket");
 
-            function L(e) {
+            function M(e) {
                 let {
                     text: t = ""
                 } = e, [n, s] = o.useState(!1);
@@ -1186,32 +1186,32 @@
                 }, [C]), o.useEffect(() => {
                     n && c.AccessibilityAnnouncer.announce(I.default.Messages.LOGIN_WITH_QR_LOADING_FINISHED_LABEL)
                 }, [n]), (0, i.jsx)("div", {
-                    className: N.qrCodeContainer,
+                    className: S.qrCodeContainer,
                     children: "" !== t && n ? (0, i.jsxs)(i.Fragment, {
                         children: [(0, i.jsx)(_.default, {
-                            className: N.qrCode,
+                            className: S.qrCode,
                             size: 160,
                             text: t
                         }), (0, i.jsx)("div", {
-                            className: N.qrCodeOverlay,
+                            className: S.qrCodeOverlay,
                             children: (0, i.jsx)("img", {
                                 src: C,
                                 alt: ""
                             })
                         })]
                     }) : (0, i.jsx)("div", {
-                        className: N.qrCodeOverlay,
+                        className: S.qrCodeOverlay,
                         "aria-label": I.default.Messages.LOGIN_WITH_QR_LOADING_LABEL,
                         "aria-busy": !0,
                         children: (0, i.jsx)(c.Spinner, {
-                            className: N.qrCode,
+                            className: S.qrCode,
                             type: c.Spinner.Type.WANDERING_CUBES,
                             "aria-hidden": !0
                         })
                     })
                 })
             }
-            let M = e => {
+            let O = e => {
                 let {
                     className: t,
                     children: n
@@ -1234,12 +1234,12 @@
                     case 0:
                     case 1:
                         return (0, i.jsxs)(i.Fragment, {
-                            children: [(0, i.jsx)(L, {
+                            children: [(0, i.jsx)(M, {
                                 text: 1 === t.step ? "https://discord.com/ra/".concat(t.fingerprint) : ""
                             }), (0, i.jsx)(m.Title, {
-                                className: S.marginBottom8,
+                                className: N.marginBottom8,
                                 children: I.default.Messages.LOGIN_WITH_QR
-                            }), null != s ? (0, i.jsx)(M, {
+                            }), null != s ? (0, i.jsx)(O, {
                                 children: s
                             }) : (0, i.jsx)(m.SubTitle, {
                                 children: I.default.Messages.LOGIN_WITH_QR_DESCRIPTION.format()
@@ -1251,14 +1251,14 @@
                             user: e
                         } = t;
                         return (0, i.jsxs)(i.Fragment, {
-                            children: [(0, i.jsx)(E.default, {
-                                className: N.qrAvatar,
+                            children: [(0, i.jsx)(f.default, {
+                                className: S.qrAvatar,
                                 user: e,
                                 size: c.AvatarSizes.SIZE_120,
                                 isMobile: !0,
                                 status: R.StatusTypes.ONLINE
                             }), (0, i.jsx)(m.Title, {
-                                className: S.marginBottom8,
+                                className: N.marginBottom8,
                                 children: I.default.Messages.CONFIRM_QR_CHECK_YOUR_PHONE
                             }), (0, i.jsx)(m.SubTitle, {
                                 children: I.default.Messages.LOGIN_AS.format({
@@ -1269,7 +1269,7 @@
                                 color: c.Button.Colors.LINK,
                                 size: c.Button.Sizes.MIN,
                                 onClick: n,
-                                className: N.startOverButton,
+                                className: S.startOverButton,
                                 children: I.default.Messages.QR_CODE_LOGIN_START_OVER
                             })]
                         })
@@ -1293,11 +1293,11 @@
                 } = function(e) {
                     let [t, n] = o.useState(0), [s, a] = o.useState(!1), [l, r] = o.useState({
                         step: 0
-                    }), [i, d] = o.useState(null), c = (0, f.default)(), E = o.useMemo(() => new u.default(1500, 3e4), []), h = o.useRef();
+                    }), [i, d] = o.useState(null), c = (0, E.default)(), f = o.useMemo(() => new u.default(1500, 3e4), []), h = o.useRef();
                     h.current = o.useCallback(() => {
                         r({
                             step: 0
-                        }), c ? n(e => e + 1) : (O.info("document is not visible, will defer reconnection when document becomes visible."), a(!0))
+                        }), c ? n(e => e + 1) : (L.info("document is not visible, will defer reconnection when document becomes visible."), a(!0))
                     }, [c]);
                     let _ = o.useCallback(() => {
                             (function(e) {
@@ -1309,31 +1309,31 @@
                             })(h)()
                         }, [h]),
                         m = o.useCallback(() => {
-                            O.error("Could not complete QR code login, trying to restart with a new QR code."), r({
+                            L.error("Could not complete QR code login, trying to restart with a new QR code."), r({
                                 step: 0
-                            }), !E.pending && E.fail(_)
-                        }, [_, E]);
+                            }), !f.pending && f.fail(_)
+                        }, [_, f]);
                     return o.useEffect(() => {
-                        c && s && 0 === l.step && (O.info("reconnecting, now that document is visible"), a(!1), n(e => e + 1))
+                        c && s && 0 === l.step && (L.info("reconnecting, now that document is visible"), a(!1), n(e => e + 1))
                     }, [l, c, s, a]), o.useEffect(() => {
                         let t = Date.now(),
                             n = () => "".concat(Date.now() - t, "ms"),
                             s = "wss:".concat(window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT, "/?v=2"),
                             a = new WebSocket(s);
-                        O.info("[0ms] connecting to ".concat(s));
-                        let l = e => O.info("[".concat(n(), "] ").concat(e)),
+                        L.info("[0ms] connecting to ".concat(s));
+                        let l = e => L.info("[".concat(n(), "] ").concat(e)),
                             i = null,
                             o = null,
                             u = null,
                             c = null,
-                            f = !0;
+                            E = !0;
 
                         function h() {
                             if (null != i) return i;
                             throw Error("No key pair set")
                         }
                         let A = () => {
-                            f ? (f = !1, a.send(JSON.stringify({
+                            E ? (E = !1, a.send(JSON.stringify({
                                 op: "heartbeat"
                             }))) : (l("heartbeat timeout, reconnecting."), a.close(), m())
                         };
@@ -1352,7 +1352,7 @@
                                     return
                                 }
                                 case "pending_remote_init": {
-                                    E.succeed(), g.ComponentDispatch.dispatch(T.ComponentActions.WAVE_EMPHASIZE);
+                                    f.succeed(), g.ComponentDispatch.dispatch(T.ComponentActions.WAVE_EMPHASIZE);
                                     let e = await (0, p.publicKeyFingerprint)(h());
                                     if (e !== s.fingerprint) throw Error("bad fingerprint ".concat(e, " !== ").concat(s.fingerprint));
                                     l("handshake complete awaiting remote auth."), r({
@@ -1411,7 +1411,7 @@
                                     return
                                 }
                                 case "heartbeat_ack":
-                                    f = !0
+                                    E = !0
                             }
                         }, a.onopen = async () => {
                             i = await (0, p.generateRsaKeyPair)(), o = await (0, p.serializePublicKey)(i);
@@ -1425,9 +1425,9 @@
                         }, a.onerror = e => {
                             l("disconnected, error: ".concat(JSON.stringify(e))), m()
                         }, () => {
-                            l("cleaning up"), a.onopen = () => null, a.onmessage = () => null, a.onclose = () => null, a.onerror = () => null, a.close(1e3), E.cancel(), null != c && clearTimeout(c), null != u && clearInterval(u)
+                            l("cleaning up"), a.onopen = () => null, a.onmessage = () => null, a.onclose = () => null, a.onerror = () => null, a.close(1e3), f.cancel(), null != c && clearTimeout(c), null != u && clearInterval(u)
                         }
-                    }, [_, e, t, E, m]), {
+                    }, [_, e, t, f, m]), {
                         state: l,
                         rsaKeyPair: i,
                         cancel: _,
@@ -1464,14 +1464,14 @@
                     })
                 }, [n, t, s, l]), (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)("div", {
-                        className: N.verticalSeparator
+                        className: S.verticalSeparator
                     }), (0, i.jsx)(c.Sequencer, {
                         fillParent: !0,
-                        className: N.qrLogin,
+                        className: S.qrLogin,
                         step: r,
                         steps: [0, 1],
                         children: (0, i.jsx)("div", {
-                            className: N.qrLoginInner,
+                            className: S.qrLoginInner,
                             children: (0, i.jsx)(x, {
                                 state: n,
                                 cancel: a
@@ -1531,8 +1531,8 @@
                 u = n("759843"),
                 d = n("446674"),
                 c = n("862337"),
-                E = n("77078"),
-                f = n("437822"),
+                f = n("77078"),
+                E = n("437822"),
                 h = n("678916"),
                 _ = n("816540"),
                 m = n("208266"),
@@ -1542,23 +1542,23 @@
                 T = n("715570"),
                 R = n("486252"),
                 I = n("378020"),
-                N = n("980976"),
-                S = n("534438"),
+                S = n("980976"),
+                N = n("534438"),
                 C = n("946859"),
-                O = n("791160"),
-                L = n("434824"),
-                M = n("770032"),
+                L = n("791160"),
+                M = n("434824"),
+                O = n("770032"),
                 x = n("165926"),
                 v = n("25033"),
                 D = n("255403"),
                 U = n("2581"),
-                b = n("644417"),
-                G = n("697543"),
+                G = n("644417"),
+                b = n("697543"),
                 y = n("79345"),
-                P = n("447997"),
-                F = n("970366"),
-                j = n("271938"),
-                B = n("350522"),
+                j = n("447997"),
+                P = n("970366"),
+                B = n("271938"),
+                F = n("350522"),
                 w = n("476108"),
                 k = n("124969"),
                 H = n("980428"),
@@ -1614,10 +1614,10 @@
                     V.default.track(Z.AnalyticEvents.REGISTER_VIEWED, {
                         location: null != t ? "Invite Register Page" : "Non-Invite Register Page",
                         registration_source: this.registrationSource,
-                        ...null != e ? (0, O.default)(e, !1, !1) : {}
+                        ...null != e ? (0, L.default)(e, !1, !1) : {}
                     }, {
                         flush: !0
-                    }), null == this.props.consentRequired && f.default.getLocationMetadata(), (0, F.trackAppUIViewed)("register")
+                    }), null == this.props.consentRequired && E.default.getLocationMetadata(), (0, P.trackAppUIViewed)("register")
                 }
                 componentWillUnmount() {
                     this._retryTimer.stop()
@@ -1678,7 +1678,7 @@
                         onRegister: u,
                         usernameSuggestion: d,
                         isMobileWebInviteRegistration: c
-                    } = this.props, E = null != r ? r.code : null, f = null != o ? o.skuId : null, h = p.usePromoEmailConsentStore.getState(), _ = (0, Y.isNullOrEmpty)(d) ? null : t === d, m = X.CONFERENCE_MODE_ENABLED ? await (0, C.formatUsername)(t) : t;
+                    } = this.props, f = null != r ? r.code : null, E = null != o ? o.skuId : null, h = p.usePromoEmailConsentStore.getState(), _ = (0, Y.isNullOrEmpty)(d) ? null : t === d, m = X.CONFERENCE_MODE_ENABLED ? await (0, C.formatUsername)(t) : t;
                     W.ComponentDispatch.dispatch(Z.ComponentActions.WAVE_EMPHASIZE);
                     try {
                         c || null == r ? await (0, T.registerFull)({
@@ -1687,16 +1687,16 @@
                             globalName: n,
                             consent: a,
                             password: s,
-                            invite: E,
+                            invite: f,
                             usedUsernameSuggestion: _,
                             guildTemplateCode: null == i ? void 0 : i.code,
-                            giftCodeSKUId: f,
+                            giftCodeSKUId: E,
                             birthday: l,
                             promoEmailConsent: h.required ? h : null
                         }) : await (0, T.default)({
                             consent: a,
-                            invite: E,
-                            giftCodeSKUId: f,
+                            invite: f,
+                            giftCodeSKUId: E,
                             usedUsernameSuggestion: _,
                             globalName: n
                         }), null == u || u()
@@ -1752,12 +1752,12 @@
                         className: e,
                         children: [(0, s.jsx)(z.InviteResolvingHeader, {}), (0, s.jsxs)(k.Block, {
                             className: en.marginTop40,
-                            children: [(0, s.jsx)(E.FormTitle, {
+                            children: [(0, s.jsx)(f.FormTitle, {
                                 children: ee.default.Messages.FORM_LABEL_USERNAME
-                            }), (0, s.jsx)(E.Tooltip, {
+                            }), (0, s.jsx)(f.Tooltip, {
                                 text: ee.default.Messages.AUTH_USERNAME_TOOLTIP,
                                 position: "right",
-                                color: E.Tooltip.Colors.BRAND,
+                                color: f.Tooltip.Colors.BRAND,
                                 children: e => {
                                     let {
                                         onMouseEnter: a,
@@ -1799,7 +1799,7 @@
                     let {
                         invite: e
                     } = this.props;
-                    return (null == e ? void 0 : e.stage_instance) != null && null != e.guild ? (0, s.jsx)(S.default, {
+                    return (null == e ? void 0 : e.stage_instance) != null && null != e.guild ? (0, s.jsx)(N.default, {
                         stageInstance: e.stage_instance,
                         guild: e.guild
                     }) : (null == e ? void 0 : e.guild_scheduled_event) != null ? (0, s.jsx)(I.GuildScheduledEventInviteHeader, {
@@ -1817,7 +1817,7 @@
                     } = this.props, {
                         consent: a
                     } = this.state, l = k.Button.Colors.BRAND, r = ee.default.Messages.CONTINUE;
-                    return (null == e ? void 0 : e.stage_instance) != null && (l = k.Button.Colors.GREEN, r = ee.default.Messages.INSTANT_INVITE_ACCEPT_STAGE), (0, s.jsx)(E.Tooltip, {
+                    return (null == e ? void 0 : e.stage_instance) != null && (l = k.Button.Colors.GREEN, r = ee.default.Messages.INSTANT_INVITE_ACCEPT_STAGE), (0, s.jsx)(f.Tooltip, {
                         text: !a && n ? ee.default.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
                         children: e => (0, s.jsx)("div", {
                             className: en.marginTop20,
@@ -1857,13 +1857,13 @@
                                 className: et.divider
                             }) : null, (0, s.jsxs)(k.Block, {
                                 className: i ? void 0 : en.marginTop40,
-                                children: [(0, s.jsx)(E.FormTitle, {
+                                children: [(0, s.jsx)(f.FormTitle, {
                                     error: ea(null != a ? a : n),
                                     children: ee.default.Messages.DISPLAY_NAME
-                                }), (0, s.jsx)(E.Tooltip, {
+                                }), (0, s.jsx)(f.Tooltip, {
                                     text: ee.default.Messages.AUTH_USERNAME_TOOLTIP,
                                     position: "right",
-                                    color: E.Tooltip.Colors.BRAND,
+                                    color: f.Tooltip.Colors.BRAND,
                                     children: e => {
                                         let {
                                             onMouseEnter: t,
@@ -1881,7 +1881,7 @@
                                             onMouseLeave: l
                                         })
                                     }
-                                }), (0, s.jsx)(E.Text, {
+                                }), (0, s.jsx)(f.Text, {
                                     variant: "text-sm/normal",
                                     color: "header-secondary",
                                     children: ee.default.Messages.UU_REGISTER_DISPLAY_NAME_HINT_2
@@ -1895,7 +1895,7 @@
                             })]
                         }), null != e && i ? (0, s.jsx)(k.default, {
                             className: en.marginTop20,
-                            children: (0, s.jsx)(S.StageInviteFooter, {
+                            children: (0, s.jsx)(N.StageInviteFooter, {
                                 guild: e.guild,
                                 onlineCount: e.approximate_presence_count
                             })
@@ -1922,7 +1922,7 @@
                         consent: u,
                         parsedDateOfBirth: d,
                         globalNameFocused: c,
-                        emailClientError: f,
+                        emailClientError: E,
                         usernameClientError: h,
                         passwordClientError: _,
                         dateOfBirthClientError: g
@@ -1935,20 +1935,20 @@
                         },
                         authBoxClassName: I,
                         apiErrors: {
-                            email: S,
+                            email: N,
                             username: C,
-                            global_name: O,
-                            password: L,
-                            date_of_birth: M
+                            global_name: L,
+                            password: M,
+                            date_of_birth: O
                         } = {},
                         hasLoggedInAccounts: x,
                         registrationCopyExperimentConfig: {
                             hasCopyAboveButton: v
                         }
                     } = this.props, {
-                        subText: b,
-                        consentText: G
-                    } = this.renderConsentComponents(), y = this.renderErrorMessage(), F = (0, s.jsx)(E.Tooltip, {
+                        subText: G,
+                        consentText: b
+                    } = this.renderConsentComponents(), y = this.renderErrorMessage(), P = (0, s.jsx)(f.Tooltip, {
                         text: !u && A ? ee.default.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
                         children: e => (0, s.jsx)("div", {
                             className: en.marginTop20,
@@ -1960,11 +1960,11 @@
                                 children: ee.default.Messages.CONTINUE
                             })
                         })
-                    }), j = async () => {
+                    }), B = async () => {
                         this.setState({
                             usernameFocused: !0
                         }), R && i.length > 0 && !U.default.wasRegistrationSuggestionFetched(i) && await D.default.fetchSuggestionsRegistration(i)
-                    }, B = null != e ? (0, s.jsx)(a.Fragment, {
+                    }, F = null != e ? (0, s.jsx)(a.Fragment, {
                         children: e()
                     }, "custom-header") : (0, s.jsx)(k.Title, {
                         children: ee.default.Messages.REGISTER_TITLE
@@ -1980,7 +1980,7 @@
                                 email: e,
                                 emailClientError: 0 === e.length ? ee.default.Messages.REQUIRED : null
                             }),
-                            error: null != f ? f : ea(S),
+                            error: null != E ? E : ea(N),
                             type: "email",
                             setRef: e => {
                                 this.emailRef = e
@@ -1994,7 +1994,7 @@
                             onChange: e => this.setState({
                                 globalName: e
                             }),
-                            error: ea(O),
+                            error: ea(L),
                             maxLength: $.MAX_DISPLAY_NAME_LENGTH,
                             setRef: e => {
                                 this.globalNameRef = e
@@ -2005,11 +2005,11 @@
                             onBlur: () => this.setState({
                                 globalNameFocused: !1
                             })
-                        }), (0, s.jsx)(P.default, {
+                        }), (0, s.jsx)(j.default, {
                             show: c,
                             top: -12,
                             bottom: 20,
-                            children: (0, s.jsx)(E.Text, {
+                            children: (0, s.jsx)(f.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-normal",
                                 children: ee.default.Messages.UU_REGISTER_DISPLAY_NAME_HINT_2
@@ -2018,7 +2018,7 @@
                             onBlur: () => this.setState({
                                 usernameFocused: !1
                             }),
-                            onFocus: j,
+                            onFocus: B,
                             tabIndex: -1,
                             children: [(0, s.jsx)(k.Input, {
                                 label: ee.default.Messages.FORM_LABEL_USERNAME,
@@ -2045,7 +2045,7 @@
                                 password: e,
                                 passwordClientError: 0 === e.length ? ee.default.Messages.REQUIRED : null
                             }),
-                            error: null != _ ? _ : ea(L),
+                            error: null != _ ? _ : ea(M),
                             type: "password",
                             setRef: e => {
                                 this.passwordRef = e
@@ -2057,10 +2057,10 @@
                             name: "date_of_birth",
                             onChange: this.handleBirthdayChange,
                             ref: this.dateOfBirthRef,
-                            error: null != g ? g : ea(M),
+                            error: null != g ? g : ea(O),
                             value: d,
                             required: !0
-                        }), v && b, (0, s.jsx)(N.default, {}), F, y, G, !v && b, X.CONFERENCE_MODE_ENABLED ? null : (0, s.jsx)(k.Button, {
+                        }), v && G, (0, s.jsx)(S.default, {}), P, y, b, !v && G, X.CONFERENCE_MODE_ENABLED ? null : (0, s.jsx)(k.Button, {
                             look: T ? k.Button.Looks.FILLED : k.Button.Looks.LINK,
                             color: T ? k.Button.Colors.PRIMARY : k.Button.Colors.LINK,
                             onClick: this.handleGotoLogin,
@@ -2072,7 +2072,7 @@
                         onSubmit: this.handleSubmit,
                         tag: "form",
                         className: r(I, et.horizontalAuthBox),
-                        children: () => [B, (0, s.jsxs)("div", {
+                        children: () => [F, (0, s.jsxs)("div", {
                             className: et.flex,
                             children: [(0, s.jsx)(k.Title, {
                                 className: et.createAccountTemplateHeader,
@@ -2094,12 +2094,12 @@
                                     width: 16,
                                     height: 16,
                                     className: et.caret
-                                }), (0, s.jsx)(E.Text, {
+                                }), (0, s.jsx)(f.Text, {
                                     variant: "text-md/normal",
                                     children: ee.default.Messages.AGE_GATE_GO_BACK
                                 })]
                             })
-                        }) : null, B, w]
+                        }) : null, F, w]
                     })
                 }
                 render() {
@@ -2113,7 +2113,7 @@
                         giftCode: a,
                         guildTemplate: l
                     } = this.props, r = null != n && null == n.guild && null == n.channel && null != n.inviter;
-                    return null == n || r || t ? null != l ? this.renderFull(() => (0, s.jsx)(L.default, {
+                    return null == n || r || t ? null != l ? this.renderFull(() => (0, s.jsx)(M.default, {
                         guildTemplate: l
                     }), !0) : null != a ? this.renderFull(() => (0, s.jsx)(K.default, {
                         giftCode: a
@@ -2142,11 +2142,11 @@
                             null == o || o(e);
                             return
                         }
-                        let E = null != r ? (0, i.parse)(r.search) : {};
-                        null != l ? t = Z.Routes.INVITE_LOGIN(l.code) : null != s ? t = Z.Routes.GIFT_CODE_LOGIN(s.code) : null != a ? t = Z.Routes.GUILD_TEMPLATE_LOGIN(a.code) : null != u ? (t = Z.Routes.LOGIN, E.redirect_to = u) : (t = Z.Routes.LOGIN, "" !== n && (E = {
+                        let f = null != r ? (0, i.parse)(r.search) : {};
+                        null != l ? t = Z.Routes.INVITE_LOGIN(l.code) : null != s ? t = Z.Routes.GIFT_CODE_LOGIN(s.code) : null != a ? t = Z.Routes.GUILD_TEMPLATE_LOGIN(a.code) : null != u ? (t = Z.Routes.LOGIN, f.redirect_to = u) : (t = Z.Routes.LOGIN, "" !== n && (f = {
                             email: n
-                        })), f.default.loginReset(), d(t, {
-                            search: (0, i.stringify)(E)
+                        })), E.default.loginReset(), d(t, {
+                            search: (0, i.stringify)(f)
                         }), null == o || o(e), W.ComponentDispatch.dispatch(Z.ComponentActions.WAVE_EMPHASIZE)
                     }, this.handleSubmit = e => {
                         null == e || e.preventDefault();
@@ -2225,16 +2225,16 @@
             }
 
             function er(e) {
-                let t = (0, d.useStateFromStoresObject)([B.default, j.default, h.default, v.default, M.default], () => ({
-                        consentRequired: B.default.getAuthenticationConsentRequired(),
-                        registering: j.default.getRegisterStatus() === Z.RegistrationStates.REGISTERING,
-                        apiErrors: j.default.getErrors(),
-                        authenticated: j.default.isAuthenticated(),
+                let t = (0, d.useStateFromStoresObject)([F.default, B.default, h.default, v.default, O.default], () => ({
+                        consentRequired: F.default.getAuthenticationConsentRequired(),
+                        registering: B.default.getRegisterStatus() === Z.RegistrationStates.REGISTERING,
+                        apiErrors: B.default.getErrors(),
+                        authenticated: B.default.isAuthenticated(),
                         isUnderage: h.default.isUnderageAnonymous(),
                         country: v.default.getCountryCode(),
-                        hasLoggedInAccounts: M.default.getHasLoggedInAccounts()
+                        hasLoggedInAccounts: O.default.getHasLoggedInAccounts()
                     })),
-                    n = (0, G.useUURegistrationExperiment)(),
+                    n = (0, b.useUURegistrationExperiment)(),
                     l = (0, d.useStateFromStores)([U.default], () => U.default.registrationUsernameSuggestion()),
                     [r, i] = a.useState(Q.RegistrationSteps.FULL);
                 return (0, g.default)({
@@ -2270,36 +2270,36 @@
                     d = (0, y.useUsernameStatus)(n, r, !0),
                     c = r && n.length > 0;
                 return t = c ? (0, o.match)(d).with({
-                    type: b.NameValidationState.ERROR,
+                    type: G.NameValidationState.ERROR,
                     message: o.P.select()
-                }, e => (0, s.jsx)(E.Text, {
+                }, e => (0, s.jsx)(f.Text, {
                     className: et.messageNegative,
                     variant: "text-sm/normal",
                     children: e
                 })).with({
-                    type: b.NameValidationState.AVAILABLE,
+                    type: G.NameValidationState.AVAILABLE,
                     message: o.P.select()
-                }, e => (0, s.jsx)(E.Text, {
+                }, e => (0, s.jsx)(f.Text, {
                     className: et.messagePositive,
                     variant: "text-sm/normal",
                     children: e
-                })).otherwise(() => (0, s.jsx)(E.Text, {
+                })).otherwise(() => (0, s.jsx)(f.Text, {
                     variant: "text-sm/normal",
                     color: "text-normal",
                     children: ee.default.Messages.POMELO_EXISTING_FLOW_ERROR_INVALID
-                })) : null != a && a.length > 0 && l.length > 0 ? (0, s.jsx)(E.Text, {
+                })) : null != a && a.length > 0 && l.length > 0 ? (0, s.jsx)(f.Text, {
                     variant: "text-sm/normal",
                     color: "text-normal",
                     children: ee.default.Messages.UU_REGISTER_SUGGESTION.format({
                         suggestion: a,
                         nameOnClick: u
                     })
-                }) : (0, s.jsx)(E.Text, {
+                }) : (0, s.jsx)(f.Text, {
                     variant: "text-sm/normal",
                     color: "text-normal",
                     children: ee.default.Messages.POMELO_EXISTING_FLOW_ERROR_INVALID
-                }), (0, s.jsx)(P.default, {
-                    show: c && (null == d ? void 0 : d.type) === b.NameValidationState.ERROR || i,
+                }), (0, s.jsx)(j.default, {
+                    show: c && (null == d ? void 0 : d.type) === G.NameValidationState.ERROR || i,
                     top: -12,
                     bottom: 20,
                     children: t
@@ -2309,31 +2309,6 @@
                 giftCodeResolved: !1,
                 transitionTo: e => n.g.location.assign(e)
             }
-        },
-        532760: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return l
-                }
-            });
-            var s = n("862205");
-            let a = (0, s.createExperiment)({
-                kind: "user",
-                id: "2023-02_mfa_remove_phone",
-                label: "Safety Experience MFA Remove Phone",
-                defaultConfig: {
-                    enabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enabled",
-                    config: {
-                        enabled: !0
-                    }
-                }]
-            });
-            var l = a
         },
         905949: function(e, t, n) {
             "use strict";
@@ -2377,13 +2352,13 @@
                 d = n("316272"),
                 c = n("49111");
 
-            function E(e, t) {
+            function f(e, t) {
                 u.default.track(c.AnalyticEvents.BROWSER_HANDOFF_SUCCEEDED, {
                     authenticated: e,
                     handoff_source: t
                 })
             }
-            class f extends d.default {
+            class E extends d.default {
                 _initialize() {
                     a.default.subscribe("BROWSER_HANDOFF_END", this.handleEnd), a.default.subscribe("BROWSER_HANDOFF_FROM_APP", this.handleHandoff)
                 }
@@ -2407,16 +2382,16 @@
                         let {
                             body: t
                         } = e;
-                        (0, r.handoffSetUser)(t.user), l.default.loginToken(t.token, !1), E(!0, o)
+                        (0, r.handoffSetUser)(t.user), l.default.loginToken(t.token, !1), f(!0, o)
                     }, e => {
-                        if (null != a && E(!1, o), l.default.setFingerprint(a), (0, r.handoffEnd)(), o === i.LoginHandoffSource.ROLE_SUBSCRIPTION) {
+                        if (null != a && f(!1, o), l.default.setFingerprint(a), (0, r.handoffEnd)(), o === i.LoginHandoffSource.ROLE_SUBSCRIPTION) {
                             var t;
                             u.default.track(c.AnalyticEvents.MOBILE_WEB_HANDOFF_FAILURE, {
                                 reason: null !== (t = e.message) && void 0 !== t ? t : e.text,
                                 handoff_source: o
                             })
                         }
-                    }) : null != a ? (l.default.setFingerprint(a), E(!1, o), (0, r.handoffEnd)()) : (l.default.setFingerprint(a), (0, r.handoffUnavailable)())
+                    }) : null != a ? (l.default.setFingerprint(a), f(!1, o), (0, r.handoffEnd)()) : (l.default.setFingerprint(a), (0, r.handoffUnavailable)())
                 }
                 constructor(...e) {
                     super(...e), this.handleEnd = e => {
@@ -2433,7 +2408,7 @@
                     }
                 }
             }
-            var h = new f
+            var h = new E
         },
         2021: function(e, t, n) {
             "use strict";
@@ -2582,7 +2557,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return f
                 }
             });
             var s = n("37983");
@@ -2595,7 +2570,7 @@
                 u = n("782340"),
                 d = n("177977");
             let c = () => (0, l.transitionTo)(o.Routes.LOGIN);
-            var E = e => {
+            var f = e => {
                 let {
                     authBoxClassName: t,
                     underageMessage: l
@@ -2639,15 +2614,15 @@
                 u = n("77078"),
                 d = n("954419"),
                 c = n("782340"),
-                E = n("512427");
-            let f = o().localeData().months(),
+                f = n("512427");
+            let E = o().localeData().months(),
                 h = Array.from(Array(31).keys()).map(e => ({
                     value: e + 1,
                     label: "".concat(e + 1)
                 })),
                 _ = Array.from(Array(12).keys()).map(e => ({
                     value: e + 1,
-                    label: f[e]
+                    label: E[e]
                 })),
                 m = /[a-zA-Z0-9]/;
 
@@ -2697,17 +2672,17 @@
                     value: n,
                     wrapperClassName: l,
                     onChange: i,
-                    onPopulated: f,
+                    onPopulated: E,
                     error: m,
                     autoFocus: A,
                     required: T
                 } = e, {
                     day: R,
                     setDay: I,
-                    month: N,
-                    setMonth: S,
+                    month: S,
+                    setMonth: N,
                     year: C,
-                    setYear: O
+                    setYear: L
                 } = function(e) {
                     let t = null,
                         n = null,
@@ -2722,12 +2697,12 @@
                         year: u,
                         setYear: d
                     }
-                }(n), L = a.useMemo(() => null != R && null != N && null != C ? o("".concat(R, "/").concat(N, "/").concat(C), "DD/MM/YYYY") : null, [R, N, C]);
+                }(n), M = a.useMemo(() => null != R && null != S && null != C ? o("".concat(R, "/").concat(S, "/").concat(C), "DD/MM/YYYY") : null, [R, S, C]);
                 a.useEffect(() => {
-                    i((null == L ? void 0 : L.isValid()) ? L : null)
-                }, [L, i]);
-                let M = m;
-                null != L && !L.isValid() && (M = c.default.Messages.AGE_GATE_INVALID_BIRTHDAY);
+                    i((null == M ? void 0 : M.isValid()) ? M : null)
+                }, [M, i]);
+                let O = m;
+                null != M && !M.isValid() && (O = c.default.Messages.AGE_GATE_INVALID_BIRTHDAY);
                 let x = function() {
                         let e = new Date().getFullYear(),
                             t = a.useRef(Array.from(Array(150).keys()).map(t => ({
@@ -2743,46 +2718,46 @@
                     }(),
                     [v, D] = a.useState(A ? 0 : -1),
                     U = a.useRef(null),
-                    b = a.useRef(null),
                     G = a.useRef(null),
+                    b = a.useRef(null),
                     y = a.useMemo(p, []),
-                    P = a.useCallback(() => {
+                    j = a.useCallback(() => {
                         var e, t, n, s;
                         switch (null === (e = y[v]) || void 0 === e ? void 0 : e.type) {
                             case "day":
                                 null === (t = U.current) || void 0 === t || t.focus();
                                 break;
                             case "month":
-                                null === (n = b.current) || void 0 === n || n.focus();
+                                null === (n = G.current) || void 0 === n || n.focus();
                                 break;
                             case "year":
-                                null === (s = G.current) || void 0 === s || s.focus()
+                                null === (s = b.current) || void 0 === s || s.focus()
                         }
-                    }, [v, U, b, G, y]);
+                    }, [v, U, G, b, y]);
                 a.useEffect(() => {
-                    setTimeout(P, 500)
+                    setTimeout(j, 500)
                 }, []), a.useEffect(() => {
                     if (v >= y.length) {
-                        null == f || f();
+                        null == E || E();
                         return
                     }
-                    P()
-                }, [v, P]);
-                let F = [];
+                    j()
+                }, [v, j]);
+                let P = [];
                 for (let e = 0; e < 3; e++) {
                     let {
                         type: t
                     } = y[e];
                     switch (t) {
                         case "day":
-                            F.push({
+                            P.push({
                                 key: "day",
                                 input: (0, s.jsx)(g, {
                                     options: h,
                                     selectOption: I,
                                     children: (0, s.jsx)(d.default, {
                                         ref: U,
-                                        className: E.inputDay,
+                                        className: f.inputDay,
                                         "aria-label": c.default.Messages.AGE_GATE_DOB_DAY,
                                         menuPlacement: d.default.MenuPlacements.TOP,
                                         placeholder: (0, s.jsx)("span", {
@@ -2803,14 +2778,14 @@
                             });
                             break;
                         case "month":
-                            F.push({
+                            P.push({
                                 key: "month",
                                 input: (0, s.jsx)(g, {
                                     options: _,
-                                    selectOption: S,
+                                    selectOption: N,
                                     children: (0, s.jsx)(d.default, {
-                                        ref: b,
-                                        className: E.inputMonth,
+                                        ref: G,
+                                        className: f.inputMonth,
                                         "aria-label": c.default.Messages.AGE_GATE_DOB_MONTH,
                                         menuPlacement: d.default.MenuPlacements.TOP,
                                         placeholder: (0, s.jsx)("span", {
@@ -2818,12 +2793,12 @@
                                             children: c.default.Messages.AGE_GATE_DOB_MONTH
                                         }),
                                         options: _,
-                                        value: N,
+                                        value: S,
                                         onChange: t => {
                                             let {
                                                 value: n
                                             } = t;
-                                            S(n), D(e + 1)
+                                            N(n), D(e + 1)
                                         },
                                         maxMenuHeight: 215
                                     })
@@ -2831,14 +2806,14 @@
                             });
                             break;
                         case "year":
-                            F.push({
+                            P.push({
                                 key: "year",
                                 input: (0, s.jsx)(g, {
                                     options: x,
-                                    selectOption: O,
+                                    selectOption: L,
                                     children: (0, s.jsx)(d.default, {
-                                        ref: G,
-                                        className: E.inputYear,
+                                        ref: b,
+                                        className: f.inputYear,
                                         "aria-label": c.default.Messages.AGE_GATE_DOB_YEAR,
                                         menuPlacement: d.default.MenuPlacements.TOP,
                                         placeholder: (0, s.jsx)("span", {
@@ -2851,7 +2826,7 @@
                                             let {
                                                 value: n
                                             } = t;
-                                            O(n), D(e + 1)
+                                            L(n), D(e + 1)
                                         },
                                         maxMenuHeight: 215
                                     })
@@ -2860,22 +2835,22 @@
                     }
                 }
                 return (0, s.jsxs)("fieldset", {
-                    className: r(E.container, l),
+                    className: r(f.container, l),
                     children: [(0, s.jsx)(u.FormTitle, {
                         tag: "legend",
                         required: T,
-                        error: M,
+                        error: O,
                         children: c.default.Messages.AGE_GATE_DATE_OF_BIRTH
                     }), (0, s.jsx)("div", {
-                        className: E.inputs,
-                        children: F.map((e, t) => {
+                        className: f.inputs,
+                        children: P.map((e, t) => {
                             let {
                                 key: n,
                                 input: a
                             } = e;
                             return (0, s.jsx)("div", {
                                 tabIndex: t + 1,
-                                className: E[n],
+                                className: f[n],
                                 children: a
                             }, n)
                         })
@@ -2999,8 +2974,8 @@
                 u = n("271938"),
                 d = n("599110"),
                 c = n("840707"),
-                E = n("395724"),
-                f = n("49111"),
+                f = n("395724"),
+                E = n("49111"),
                 h = n("586391");
 
             function _(e) {
@@ -3029,23 +3004,23 @@
                     invite: T = null,
                     giftCodeSKUId: R = null,
                     multiStep: I = !1,
-                    promoEmailConsent: N = null,
-                    usedUsernameSuggestion: S = null
+                    promoEmailConsent: S = null,
+                    usedUsernameSuggestion: N = null
                 } = e;
                 return r.default.dispatch({
                     type: "REGISTER",
                     birthday: I ? A : null
-                }), null != A && ((0, E.default)(A, f.AnalyticsSections.REGISTER), d.default.track(f.AnalyticEvents.AGE_GATE_ACTION, {
+                }), null != A && ((0, f.default)(A, E.AnalyticsSections.REGISTER), d.default.track(E.AnalyticEvents.AGE_GATE_ACTION, {
                     source: h.AgeGateSource.REGISTER,
                     action: h.AgeGateAnalyticAction.AGE_GATE_SUBMITTED
                 }), ! function(e) {
                     let t;
                     let n = a().diff(e, "years");
-                    !(n < 13) && (t = n >= 13 && n <= 17 ? "13-17" : n >= 18 && n <= 22 ? "18-22" : "23+", d.default.track(f.AnalyticEvents.USER_AGE_SUBMITTED, {
+                    !(n < 13) && (t = n >= 13 && n <= 17 ? "13-17" : n >= 18 && n <= 22 ? "18-22" : "23+", d.default.track(E.AnalyticEvents.USER_AGE_SUBMITTED, {
                         age_bucket: t
                     }))
                 }(A)), c.default.post({
-                    url: f.Endpoints.REGISTER,
+                    url: E.Endpoints.REGISTER,
                     body: {
                         fingerprint: u.default.getFingerprint(),
                         email: t,
@@ -3058,15 +3033,15 @@
                         date_of_birth: null == A ? void 0 : A.format("YYYY-MM-DD"),
                         gift_code_sku_id: R,
                         guild_template_code: p,
-                        promotional_email_opt_in: null == N ? void 0 : N.checked
+                        promotional_email_opt_in: null == S ? void 0 : S.checked
                     },
                     trackedActionData: {
                         event: l.NetworkActionNames.USER_REGISTER,
                         properties: {
                             invite_code: T,
-                            used_username_suggestion: S,
-                            promotional_email_opt_in: null == N ? void 0 : N.checked,
-                            promotional_email_pre_checked: null == N ? void 0 : N.preChecked,
+                            used_username_suggestion: N,
+                            promotional_email_opt_in: null == S ? void 0 : S.checked,
+                            promotional_email_pre_checked: null == S ? void 0 : S.preChecked,
                             was_unique_username: !0
                         }
                     }
@@ -3074,7 +3049,7 @@
                     r.default.dispatch({
                         type: "REGISTER_SUCCESS",
                         token: e.body.token
-                    }), d.default.track(f.AnalyticEvents.AGE_GATE_ACTION, {
+                    }), d.default.track(E.AnalyticEvents.AGE_GATE_ACTION, {
                         source: h.AgeGateSource.REGISTER,
                         action: h.AgeGateAnalyticAction.AGE_GATE_SUCCESS
                     })
@@ -3083,7 +3058,7 @@
                     throw r.default.dispatch({
                         type: "REGISTER_FAILURE",
                         error: t
-                    }), null != t.getFieldErrors("date_of_birth") && o.preventUnderageRegistration(h.AgeGateSource.REGISTER), d.default.track(f.AnalyticEvents.REGISTER_SUBMIT_ERRORED, {
+                    }), null != t.getFieldErrors("date_of_birth") && o.preventUnderageRegistration(h.AgeGateSource.REGISTER), d.default.track(E.AnalyticEvents.REGISTER_SUBMIT_ERRORED, {
                         is_unique_username_registration: !0,
                         email_error_reason: t.getFirstFieldErrorMessage("email"),
                         phone_error_reason: t.getFirstFieldErrorMessage("phone"),
@@ -3118,10 +3093,10 @@
                     onChange: n,
                     subText: a,
                     muted: c,
-                    marginTopStyle: E
+                    marginTopStyle: f
                 } = e;
                 return (0, s.jsx)(i.default, {
-                    className: null != E ? E : d.marginTop20,
+                    className: null != f ? f : d.marginTop20,
                     align: i.default.Align.CENTER,
                     children: (0, s.jsx)(r.Checkbox, {
                         value: t,
@@ -3214,8 +3189,8 @@
                     title: t,
                     subtitle: n,
                     error: c,
-                    onSubmit: E,
-                    onCancel: f
+                    onSubmit: f,
+                    onCancel: E
                 } = e;
                 return (0, s.jsxs)(r.default, {
                     direction: r.default.Direction.VERTICAL,
@@ -3228,15 +3203,15 @@
                     }), (0, s.jsxs)("div", {
                         children: [(0, s.jsx)(l.default, {
                             inputClassName: u.codeInput,
-                            onSubmit: E
+                            onSubmit: f
                         }), null != c ? (0, s.jsx)(a.Text, {
                             className: u.error,
                             variant: "text-sm/normal",
                             children: c
                         }) : null]
-                    }), null != f && (0, s.jsx)(a.Button, {
+                    }), null != E && (0, s.jsx)(a.Button, {
                         className: u.button,
-                        onClick: f,
+                        onClick: E,
                         color: a.Button.Colors.PRIMARY,
                         children: o.default.Messages.CANCEL
                     })]
@@ -3421,11 +3396,11 @@
                     guildTemplate: n
                 } = e, d = n.code, c = u[d];
                 if (null != c) {
-                    var E;
+                    var f;
                     let {
                         header: e,
                         description: u,
-                        author: f
+                        author: E
                     } = (0, l.default)(d);
                     return (0, s.jsxs)("div", {
                         children: [(0, s.jsx)("img", {
@@ -3440,8 +3415,8 @@
                             children: u
                         }), n.state === i.GuildTemplateStates.RESOLVED ? (0, s.jsx)(r.UsagePill, {
                             className: o.usagePill,
-                            count: null !== (E = n.usageCount) && void 0 !== E ? E : 0,
-                            verifiedName: f
+                            count: null !== (f = n.usageCount) && void 0 !== f ? f : 0,
+                            verifiedName: E
                         }) : null]
                     })
                 }
@@ -3472,8 +3447,8 @@
                 u = n("486952"),
                 d = n("819220"),
                 c = n("5487"),
-                E = n("579033"),
-                f = n("782340"),
+                f = n("579033"),
+                E = n("782340"),
                 h = n("426601"),
                 _ = n("926622");
 
@@ -3511,14 +3486,14 @@
                 } = e;
                 return (0, s.jsx)("div", {
                     className: l(h.usagePill, t, h.userText),
-                    children: null != a || null != r ? f.default.Messages.GUILD_TEMPLATE_USAGES_BY_CREATOR2.format({
+                    children: null != a || null != r ? E.default.Messages.GUILD_TEMPLATE_USAGES_BY_CREATOR2.format({
                         usageCount: n,
                         creator: null != r ? r : a,
                         creatorHook: (e, t) => (0, s.jsx)(g, {
                             text: e,
                             verified: null != r
                         }, t)
-                    }) : f.default.Messages.GUILD_TEMPLATE_USAGES.format({
+                    }) : E.default.Messages.GUILD_TEMPLATE_USAGES.format({
                         usageCount: n
                     })
                 })
@@ -3535,12 +3510,12 @@
                 if (null != a && "" !== a) return (0, s.jsxs)("div", {
                     className: h.container,
                     children: [(0, s.jsx)(o.Title, {
-                        children: f.default.Messages.INVITE_MODAL_ERROR_TITLE
+                        children: E.default.Messages.INVITE_MODAL_ERROR_TITLE
                     }), (0, s.jsx)(o.SubTitle, {
                         children: a
                     })]
                 });
-                if (n.state === E.GuildTemplateStates.RESOLVING) return (0, s.jsx)("div", {
+                if (n.state === f.GuildTemplateStates.RESOLVING) return (0, s.jsx)("div", {
                     className: h.container,
                     children: (0, s.jsx)(r.Spinner, {})
                 });
@@ -3562,7 +3537,7 @@
                         children: m
                     }), (0, s.jsx)(o.SubTitle, {
                         className: l(h.subtitle, _.marginTop2),
-                        children: f.default.Messages.GUILD_TEMPLATE_BASED_ON
+                        children: E.default.Messages.GUILD_TEMPLATE_BASED_ON
                     }), (0, s.jsx)(o.Title, {
                         className: l(h.title, h.userText),
                         children: n.name
@@ -3614,7 +3589,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return O
+                    return L
                 }
             }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("506083");
             var s, a, l = n("37983"),
@@ -3624,8 +3599,8 @@
                 u = n("446674"),
                 d = n("872717"),
                 c = n("95410"),
-                E = n("77078"),
-                f = n("913144"),
+                f = n("77078"),
+                E = n("913144"),
                 h = n("437822"),
                 _ = n("229353"),
                 m = n("271938"),
@@ -3636,12 +3611,12 @@
             let R = "mweb_handoff_nonce",
                 I = "mweb_handoff_nonce_expiration";
             (a = s || (s = {})).NONCE_MISSING = "nonce_missing", a.NONCE_EXPIRED = "nonce_expired", a.NULL_HANDOFF_TOKEN = "deep_link_failed", a.HANDOFF_EXCHANGE = "handoff_exchange";
-            let N = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
-                S = new Set(["deep_link_failed"]),
+            let S = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
+                N = new Set(["deep_link_failed"]),
                 C = () => {
                     c.default.remove(R), c.default.remove(I)
                 };
-            var O = () => {
+            var L = () => {
                 let e = (0, u.useStateFromStores)([m.default], () => m.default.getFingerprint()),
                     {
                         fingerprint: t,
@@ -3650,26 +3625,26 @@
                     s = Array.isArray(t) ? t.length > 1 ? t[0] : null : t,
                     a = null != s ? s : null !== e ? e : void 0;
                 r.useEffect(() => {
-                    null !== s && e !== s && f.default.dispatch({
+                    null !== s && e !== s && E.default.dispatch({
                         type: "FINGERPRINT",
                         fingerprint: s
                     })
                 }, [s, e]);
-                let [O, L] = r.useState(null), M = r.useCallback(e => {
-                    L(e), g.default.track(A.AnalyticEvents.MOBILE_WEB_HANDOFF_FAILURE, {
+                let [L, M] = r.useState(null), O = r.useCallback(e => {
+                    M(e), g.default.track(A.AnalyticEvents.MOBILE_WEB_HANDOFF_FAILURE, {
                         reason: e,
                         fingerprint: (0, o.maybeExtractId)(a)
                     }, {
                         fingerprint: a
                     })
-                }, [L, a]), x = c.default.get(R);
-                if ("null" === n && null === O && M("deep_link_failed"), null != n && "null" !== n && null == x && null === O && M("nonce_missing"), r.useEffect(() => {
+                }, [M, a]), x = c.default.get(R);
+                if ("null" === n && null === L && O("deep_link_failed"), null != n && "null" !== n && null == x && null === L && O("nonce_missing"), r.useEffect(() => {
                         if (null != x) {
                             let e = c.default.get(I);
-                            (null == e || Date.now() >= e) && (M("nonce_expired"), C())
+                            (null == e || Date.now() >= e) && (O("nonce_expired"), C())
                         }
-                    }, [x, M]), r.useEffect(() => {
-                        null != n && "null" !== n && null != x && null == O && d.default.post({
+                    }, [x, O]), r.useEffect(() => {
+                        null != n && "null" !== n && null != x && null == L && d.default.post({
                             url: A.Endpoints.HANDOFF_EXCHANGE,
                             body: {
                                 key: x,
@@ -3685,34 +3660,34 @@
                                 t = new URLSearchParams(e.search);
                             t.delete("handoff_token"), t.delete("fingerprint"), e.search = t.toString(), window.history.pushState(null, "", e)
                         }).catch(() => {
-                            M("handoff_exchange")
+                            O("handoff_exchange")
                         }).finally(() => {
                             C()
                         })
-                    }, [n, x, O, a, M]), null == a) return null;
+                    }, [n, x, L, a, O]), null == a) return null;
                 let v = (() => {
-                        if (null == O) return (0, l.jsxs)(l.Fragment, {
+                        if (null == L) return (0, l.jsxs)(l.Fragment, {
                             children: [_.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_1, (0, l.jsx)("br", {}), _.MOBILE_WEB_HANDOFF_EXPLANATION_TEXT_LINE_2]
                         });
-                        if (S.has(O)) return _.MOBILE_WEB_HANDOFF_ERROR_NO_TRY_AGAIN;
-                        if (N.has(O)) return _.MOBILE_WEB_HANDOFF_ERROR_TRY_AGAIN
+                        if (N.has(L)) return _.MOBILE_WEB_HANDOFF_ERROR_NO_TRY_AGAIN;
+                        if (S.has(L)) return _.MOBILE_WEB_HANDOFF_ERROR_TRY_AGAIN
                     })(),
-                    D = null != O && S.has(O);
+                    D = null != L && N.has(L);
                 return D ? (0, l.jsx)("div", {
                     className: T.errorContainer,
-                    children: (0, l.jsx)(E.Text, {
+                    children: (0, l.jsx)(f.Text, {
                         color: "interactive-normal",
                         variant: "text-sm/semibold",
                         children: v
                     })
                 }) : (0, l.jsxs)("div", {
                     className: T.container,
-                    children: [(0, l.jsx)(E.Text, {
+                    children: [(0, l.jsx)(f.Text, {
                         variant: "text-sm/semibold",
                         children: v
-                    }), (0, l.jsx)(E.Button, {
-                        look: E.Button.Looks.INVERTED,
-                        color: E.Button.Colors.BRAND_NEW,
+                    }), (0, l.jsx)(f.Button, {
+                        look: f.Button.Looks.INVERTED,
+                        color: f.Button.Colors.BRAND_NEW,
                         onClick: () => {
                             let e = p.default.generateNonce();
                             c.default.set(R, e), c.default.set(I, Date.now() + 6e4);
@@ -3729,7 +3704,7 @@
                                 flush: !0
                             }), window.location.href = t.toString()
                         },
-                        children: (0, l.jsx)(E.Text, {
+                        children: (0, l.jsx)(f.Text, {
                             className: T.buttonText,
                             variant: "text-sm/semibold",
                             children: _.MOBILE_WEB_HANDOFF_BUTTON_TEXT
@@ -3800,7 +3775,7 @@
                     return s
                 },
                 default: function() {
-                    return L
+                    return M
                 }
             }), n("506083");
             var s, a, l = n("37983"),
@@ -3810,8 +3785,8 @@
                 u = n("446674"),
                 d = n("77078"),
                 c = n("437822"),
-                E = n("272030"),
-                f = n("766274"),
+                f = n("272030"),
+                E = n("766274"),
                 h = n("271938"),
                 _ = n("102985"),
                 m = n("697218"),
@@ -3821,11 +3796,11 @@
                 T = n("694787"),
                 R = n("770032"),
                 I = n("927101"),
-                N = n("49111"),
-                S = n("782340"),
+                S = n("49111"),
+                N = n("782340"),
                 C = n("31295");
 
-            function O(e) {
+            function L(e) {
                 let {
                     actionText: t,
                     user: n,
@@ -3838,17 +3813,17 @@
                     currentUser: m.default.getCurrentUser(),
                     hidePrivateData: _.default.hidePersonalInformation,
                     isAuthenticated: h.default.isAuthenticated()
-                })), I = new f.default(n), O = i && (null == a ? void 0 : a.id) === I.id, L = n.tokenStatus === R.MultiAccountTokenStatus.INVALID, M = r || I.isPomelo() ? null : "#".concat(I.discriminator), x = null;
-                return O ? x = (0, l.jsx)(d.Text, {
+                })), I = new E.default(n), L = i && (null == a ? void 0 : a.id) === I.id, M = n.tokenStatus === R.MultiAccountTokenStatus.INVALID, O = r || I.isPomelo() ? null : "#".concat(I.discriminator), x = null;
+                return L ? x = (0, l.jsx)(d.Text, {
                     variant: "text-sm/semibold",
                     className: C.hintText,
                     color: "text-positive",
-                    children: S.default.Messages.SWITCH_ACCOUNTS_ACTIVE_ACCOUNT
-                }) : L && (x = (0, l.jsx)(d.Text, {
+                    children: N.default.Messages.SWITCH_ACCOUNTS_ACTIVE_ACCOUNT
+                }) : M && (x = (0, l.jsx)(d.Text, {
                     variant: "text-sm/semibold",
                     className: C.hintText,
                     color: "text-danger",
-                    children: S.default.Messages.SWITCH_ACCOUNTS_INVALID_TOKEN
+                    children: N.default.Messages.SWITCH_ACCOUNTS_INVALID_TOKEN
                 })), (0, l.jsx)("div", {
                     className: C.accountCard,
                     children: (0, l.jsxs)("div", {
@@ -3859,7 +3834,7 @@
                             "aria-label": n.username
                         }), (0, l.jsxs)("div", {
                             className: o(C.usernameSection, {
-                                [C.hasActionMaxWidth]: !O
+                                [C.hasActionMaxWidth]: !L
                             }),
                             children: [(0, l.jsxs)("div", {
                                 className: C.username,
@@ -3874,47 +3849,47 @@
                                 }), (0, l.jsx)(d.Text, {
                                     color: "header-secondary",
                                     variant: "text-sm/normal",
-                                    children: M
+                                    children: O
                                 })]
                             }), x]
                         }), (0, l.jsxs)("div", {
                             className: C.userActions,
-                            children: [!O && (0, l.jsx)(d.Button, {
+                            children: [!L && (0, l.jsx)(d.Button, {
                                 onClick: function() {
-                                    if (L) {
+                                    if (M) {
                                         s(0, n.id);
                                         return
                                     }
-                                    p.default.track(N.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+                                    p.default.track(S.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
                                         location: {
-                                            section: N.AnalyticsSections.MANAGE_ACCOUNTS_MODAL
+                                            section: S.AnalyticsSections.MANAGE_ACCOUNTS_MODAL
                                         }
                                     }), T.switchAccount(n.id), s(1, n.id)
                                 },
                                 color: d.Button.Colors.PRIMARY,
-                                children: L ? S.default.Messages.SWITCH_ACCOUNTS_ACTION_LOG_IN : t
+                                children: M ? N.default.Messages.SWITCH_ACCOUNTS_ACTION_LOG_IN : t
                             }), (0, l.jsx)(d.Button, {
                                 className: C.userActionMenu,
                                 onClick: function(e) {
-                                    (0, E.openContextMenu)(e, e => {
+                                    (0, f.openContextMenu)(e, e => {
                                         let {
                                             onSelect: t
                                         } = e;
                                         return (0, l.jsx)(d.Menu, {
-                                            "aria-label": S.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNT,
+                                            "aria-label": N.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNT,
                                             navId: "manage-multi-account",
-                                            onClose: E.closeContextMenu,
+                                            onClose: f.closeContextMenu,
                                             onSelect: t,
                                             children: (0, l.jsx)(d.MenuItem, {
                                                 id: "remove-account",
-                                                label: S.default.Messages.SWITCH_ACCOUNTS_REMOVE_ACCOUNT,
+                                                label: N.default.Messages.SWITCH_ACCOUNTS_REMOVE_ACCOUNT,
                                                 action: () => {
                                                     ! function() {
                                                         c.default.logout(null, n.id).finally(() => {
                                                             T.removeAccount(n.id)
                                                         });
                                                         let e = {};
-                                                        null != a ? e.section = N.AnalyticsSections.MANAGE_ACCOUNTS_MODAL : e.page = N.PageAnalyticsLocations.LOGIN, p.default.track(N.AnalyticEvents.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
+                                                        null != a ? e.section = S.AnalyticsSections.MANAGE_ACCOUNTS_MODAL : e.page = S.PageAnalyticsLocations.LOGIN, p.default.track(S.AnalyticEvents.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
                                                             location: e
                                                         }), s(2, n.id)
                                                     }(), null != t && t()
@@ -3927,7 +3902,7 @@
                                 size: d.Button.Sizes.ICON,
                                 look: d.Button.Looks.BLANK,
                                 color: d.Button.Colors.WHITE,
-                                "aria-label": S.default.Messages.MORE_OPTIONS,
+                                "aria-label": N.default.Messages.MORE_OPTIONS,
                                 children: (0, l.jsx)(g.default, {
                                     className: C.overflowMenuIcon
                                 })
@@ -3937,7 +3912,7 @@
                 })
             }
 
-            function L(e) {
+            function M(e) {
                 let {
                     actionText: t,
                     onAction: n
@@ -3948,7 +3923,7 @@
                 return (0, l.jsx)("div", {
                     className: C.list,
                     children: s ? (0, l.jsx)(d.Spinner, {}) : a.map((e, s) => (0, l.jsxs)(r.Fragment, {
-                        children: [(0, l.jsx)(O, {
+                        children: [(0, l.jsx)(L, {
                             user: e,
                             actionText: t,
                             onAction: n
@@ -3959,154 +3934,6 @@
                     }, e.id))
                 })
             }(a = s || (s = {}))[a.LOGIN_REQUIRED = 0] = "LOGIN_REQUIRED", a[a.SWITCHED = 1] = "SWITCHED", a[a.REMOVED = 2] = "REMOVED"
-        },
-        878720: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                ChangePhoneReason: function() {
-                    return a
-                },
-                default: function() {
-                    return _
-                }
-            });
-            var s, a, l = n("759843"),
-                r = n("872717"),
-                i = n("913144"),
-                o = n("532760"),
-                u = n("271938"),
-                d = n("730622"),
-                c = n("840707"),
-                E = n("482931"),
-                f = n("49111"),
-                h = n("782340");
-            (s = a || (a = {})).USER_ACTION_REQUIRED = "user_action_required", s.USER_SETTINGS_UPDATE = "user_settings_update", s.GUILD_PHONE_REQUIRED = "guild_phone_required", s.MFA_PHONE_UPDATE = "mfa_phone_update", s.CONTACT_SYNC = "contact_sync";
-            var _ = {
-                setCountryCode(e) {
-                    i.default.dispatch({
-                        type: "PHONE_SET_COUNTRY_CODE",
-                        countryCode: e
-                    })
-                },
-                removePhone: (e, t) => o.default.getCurrentConfig({
-                    location: "81427d_1"
-                }, {
-                    autoTrackExposure: !1
-                }).enabled ? (0, d.default)(n => r.default.delete({
-                    url: f.Endpoints.PHONE,
-                    body: {
-                        password: e,
-                        change_phone_reason: t,
-                        ...n
-                    },
-                    oldFormErrors: !0
-                }), {
-                    modalProps: {
-                        title: h.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_NUMBER_BUTTON,
-                        actionText: h.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_NUMBER_BUTTON
-                    },
-                    checkEnabled: !1
-                }) : r.default.delete({
-                    url: f.Endpoints.PHONE,
-                    body: {
-                        password: e,
-                        change_phone_reason: t
-                    },
-                    oldFormErrors: !0
-                }),
-                resendCode(e) {
-                    let t = {},
-                        n = u.default.getFingerprint();
-                    return null != n && "" !== n && (t["X-Fingerprint"] = n), r.default.post({
-                        url: f.Endpoints.RESEND_PHONE,
-                        headers: t,
-                        body: {
-                            phone: e
-                        }
-                    })
-                },
-                beginAddPhone: (e, t) => r.default.post({
-                    url: f.Endpoints.PHONE,
-                    body: {
-                        phone: e,
-                        change_phone_reason: t
-                    }
-                }),
-                addPhone: (e, t, n) => r.default.post({
-                    url: f.Endpoints.PHONE,
-                    body: {
-                        phone_token: e,
-                        password: t,
-                        change_phone_reason: n
-                    },
-                    oldFormErrors: !0
-                }),
-                addPhoneWithoutPassword: e => r.default.post({
-                    url: f.Endpoints.PHONE_VERIFY_NO_PASSWORD,
-                    body: {
-                        code: e
-                    }
-                }),
-                beginReverifyPhone: (e, t) => r.default.post({
-                    url: f.Endpoints.PHONE_REVERIFY,
-                    body: {
-                        phone: e,
-                        change_phone_reason: t
-                    }
-                }),
-                reverifyPhone: (e, t, n) => r.default.post({
-                    url: f.Endpoints.PHONE_REVERIFY,
-                    body: {
-                        phone_token: e,
-                        password: t,
-                        change_phone_reason: n
-                    },
-                    oldFormErrors: !0
-                }),
-                validatePhoneForSupport: e => r.default.post({
-                    url: f.Endpoints.VERIFY_PHONE_FOR_TICKET,
-                    body: {
-                        token: e
-                    },
-                    oldFormErrors: !0
-                }),
-                async verifyPhone(e, t) {
-                    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                        s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-                        a = {},
-                        r = u.default.getFingerprint();
-                    null != r && "" !== r && (a["X-Fingerprint"] = r), s && (a.authorization = "");
-                    let o = await c.default.post({
-                        url: f.Endpoints.VERIFY_PHONE,
-                        headers: a,
-                        body: {
-                            phone: e,
-                            code: t
-                        },
-                        oldFormErrors: !0,
-                        trackedActionData: {
-                            event: l.NetworkActionNames.USER_VERIFY_PHONE
-                        }
-                    });
-                    return n && i.default.dispatch({
-                        type: "MODAL_POP",
-                        key: E.PHONE_VERIFICATION_MODAL_KEY
-                    }), o.body
-                }
-            }
-        },
-        482931: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                PHONE_VERIFICATION_MODAL_KEY: function() {
-                    return s
-                },
-                PHONE_VERIFICATION_CODE_NUM_DIGITS: function() {
-                    return a
-                }
-            });
-            let s = "PHONE_VERIFICATION_MODAL_KEY",
-                a = 6
         },
         345327: function(e, t, n) {
             "use strict";
@@ -4142,8 +3969,8 @@
                 u = n("77078"),
                 d = n("206230"),
                 c = n("878720"),
-                E = n("189613"),
-                f = n("393004");
+                f = n("189613"),
+                E = n("393004");
 
             function h(e) {
                 let {
@@ -4173,28 +4000,28 @@
                     };
                 return (0, s.jsx)(u.Popout, {
                     position: "top",
-                    renderPopout: e => (0, s.jsx)(E.default, {
-                        className: f.popout,
+                    renderPopout: e => (0, s.jsx)(f.default, {
+                        className: E.popout,
                         onClick: t => {
                             R(t), e.closePopout()
                         }
                     }),
                     children: e => (0, s.jsx)("div", {
-                        className: r(f.outerContainer, {
-                            [f.hidden]: !(t || p)
+                        className: r(E.outerContainer, {
+                            [E.hidden]: !(t || p)
                         }),
                         children: (0, s.jsx)(i.animated.div, {
-                            className: f.container,
+                            className: E.container,
                             style: T,
                             children: (0, s.jsxs)("div", {
-                                className: f.innerContainer,
+                                className: E.innerContainer,
                                 ref: _,
                                 children: [(0, s.jsxs)(u.Clickable, {
                                     ...e,
-                                    className: f.countryCode,
+                                    className: E.countryCode,
                                     children: [n, " ", l]
                                 }), (0, s.jsx)("div", {
-                                    className: f.separator
+                                    className: E.separator
                                 })]
                             })
                         })
@@ -4206,7 +4033,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return E
                 }
             }), n("222007");
             var s = n("37983"),
@@ -4218,14 +4045,14 @@
                 u = n("345327"),
                 d = n("467413"),
                 c = n("713186"),
-                E = n("905518");
+                f = n("905518");
 
-            function f(e) {
+            function E(e) {
                 let {
                     alpha2: t,
                     countryCode: n,
                     forceMode: l,
-                    label: f,
+                    label: E,
                     error: h,
                     className: _,
                     required: m,
@@ -4235,43 +4062,43 @@
                     autoFocus: T,
                     maxLength: R,
                     spellCheck: I,
-                    autoComplete: N,
-                    autoCapitalize: S,
+                    autoComplete: S,
+                    autoCapitalize: N,
                     autoCorrect: C,
-                    onChange: O,
-                    inputClassName: L
-                } = e, M = (0, o.useUID)(), [x, v] = a.useState(!1), D = (0, u.shouldShowCountryCodeSelector)(l, g);
+                    onChange: L,
+                    inputClassName: M
+                } = e, O = (0, o.useUID)(), [x, v] = a.useState(!1), D = (0, u.shouldShowCountryCodeSelector)(l, g);
                 return (0, s.jsx)(i.FormItem, {
-                    title: f,
+                    title: E,
                     error: h,
                     className: _,
                     required: m,
                     tag: "label",
-                    htmlFor: M,
+                    htmlFor: O,
                     children: (0, s.jsxs)("div", {
-                        className: r(E.input, c.input, L, {
-                            [E.error]: null != h,
-                            [E.focused]: x
+                        className: r(f.input, c.input, M, {
+                            [f.error]: null != h,
+                            [f.focused]: x
                         }),
                         children: [(0, s.jsx)(d.default, {
                             show: D,
                             alpha2: t,
                             countryCode: n
                         }), (0, s.jsx)(i.TextInput, {
-                            id: M,
+                            id: O,
                             name: "email",
                             type: l === u.PhoneOrEmailSelectorForceMode.EMAIL ? "email" : "text",
                             value: g,
                             inputRef: p,
                             placeholder: A,
-                            "aria-label": f,
+                            "aria-label": E,
                             required: m,
                             onChange: function(e) {
                                 let t = (0, u.shouldShowCountryCodeSelector)(l, e) ? n : "";
-                                O(e, t)
+                                L(e, t)
                             },
-                            autoComplete: N,
-                            autoCapitalize: S,
+                            autoComplete: S,
+                            autoCapitalize: N,
                             autoCorrect: C,
                             autoFocus: T,
                             maxLength: R,
@@ -4292,10 +4119,10 @@
                     return a
                 },
                 QRCodeWithOverlay: function() {
-                    return E
+                    return f
                 },
                 default: function() {
-                    return f
+                    return E
                 }
             });
             var s, a, l = n("37983"),
@@ -4337,7 +4164,7 @@
                 bgColor: "#ffffff",
                 fgColor: "#000000"
             };
-            class E extends r.PureComponent {
+            class f extends r.PureComponent {
                 render() {
                     let {
                         overlaySize: e
@@ -4357,12 +4184,12 @@
                     })
                 }
             }
-            E.defaultProps = {
+            f.defaultProps = {
                 size: 144,
                 bgColor: "#ffffff",
                 fgColor: "#000000"
             };
-            var f = c
+            var E = c
         },
         98013: function(e, t, n) {
             "use strict";
@@ -4374,10 +4201,10 @@
                     return c
                 },
                 getCurrentPlatformDownloadURL: function() {
-                    return E
+                    return f
                 },
                 getMobileDownloadLink: function() {
-                    return f
+                    return E
                 }
             });
             var s = n("597755"),
@@ -4407,12 +4234,12 @@
                 })[d(e)]
             }
 
-            function E() {
+            function f() {
                 let e = d();
                 return u(e, !1, e === o ? "tar.gz" : null)
             }
 
-            function f(e, t, n) {
+            function E(e, t, n) {
                 let s = null != n ? n.toString() : null;
                 switch (t) {
                     case "iOS":
@@ -4446,7 +4273,7 @@
                     return o
                 },
                 decryptEncodedCiphertext: function() {
-                    return f
+                    return E
                 },
                 decryptNonce: function() {
                     return h
@@ -4492,23 +4319,23 @@
                 return u(t)
             }
 
-            function E(e, t) {
+            function f(e, t) {
                 return a(null != e.privateKey, "private key cannot be null"), window.crypto.subtle.decrypt({
                     name: "RSA-OAEP",
                     hash: "SHA-256"
                 }, e.privateKey, t)
             }
-            async function f(e, t) {
+            async function E(e, t) {
                 let n = new TextDecoder,
-                    s = await E(e, d(t));
+                    s = await f(e, d(t));
                 return n.decode(s)
             }
             async function h(e, t) {
-                let n = await E(e, d(t));
+                let n = await f(e, d(t));
                 return u(n)
             }
             async function _(e, t) {
-                t = await f(e, t);
+                t = await E(e, t);
                 let n = t.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
                 if (null == n) throw Error("Invalid encoded user record.");
                 let [, s, a, r, i] = n;
