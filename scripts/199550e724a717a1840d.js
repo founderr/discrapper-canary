@@ -1964,7 +1964,7 @@
                                 "aria-label": V.default.Messages.USER_SETTINGS_AVATAR
                             })
                         }), null != em ? (0, l.jsx)("div", {
-                            className: null != er ? K.checkmarkWrapper : K.profileEffectCheckmarkWrapper,
+                            className: K.checkmarkWrapper,
                             children: (0, l.jsx)(_.default, {
                                 width: 38,
                                 height: 38,
