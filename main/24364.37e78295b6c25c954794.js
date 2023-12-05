@@ -17157,7 +17157,8 @@
                     use_topic_dividers_in_chat: "Use summary topics as divider content in chat instead of string formatted dates.",
                     highlight_redesigned_icons: "Highlight redesigned icons",
                     alt_clips_1: "Use alt clip icon 1",
-                    alt_clips_2: "Use alt clip icon 2"
+                    alt_clips_2: "Use alt clip icon 2",
+                    profile_effect_debug_controls: "Scrolls through profile effects with arrow up / down. Restart with R"
                 },
                 a = {};
             class l extends r.default.DeviceSettingsStore {
