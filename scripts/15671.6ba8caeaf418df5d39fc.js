@@ -369,8 +369,8 @@
                 v = n("124969"),
                 D = n("980428"),
                 U = n("599110"),
-                b = n("659500"),
-                G = n("773336"),
+                G = n("659500"),
+                b = n("773336"),
                 y = n("404432"),
                 P = n("719451"),
                 F = n("331085"),
@@ -635,7 +635,7 @@
                         children: [(0, s.jsx)(v.Title, {
                             className: V.marginBottom8,
                             children: k.default.Messages.LOGIN_TITLE
-                        }, "title"), !1 === (0, G.isAndroidWeb)() ? (0, s.jsx)(v.SubTitle, {
+                        }, "title"), !1 === (0, b.isAndroidWeb)() ? (0, s.jsx)(v.SubTitle, {
                             children: k.default.Messages.AUTH_LOGIN_BODY
                         }, "subtitle") : null]
                     }) : (0, s.jsx)(P.default, {
@@ -914,7 +914,7 @@
                             source: this.loginSource,
                             giftCodeSKUId: this.giftCodeSKUId,
                             invite: this.props.invite
-                        }), b.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE)
+                        }), G.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE)
                     }, this.handleIPAuthorize = async e => {
                         let {
                             password: t,
@@ -930,7 +930,7 @@
                                 undelete: n,
                                 source: this.loginSource,
                                 giftCodeSKUId: this.giftCodeSKUId
-                            }), b.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE)
+                            }), G.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE)
                         } catch (e) {
                             null != e.body && null != e.body.message && this.setState({
                                 phoneVerifyError: e.body.message
@@ -964,7 +964,7 @@
                             data: n,
                             ticket: s
                         } = e;
-                        return b.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE), E.default.loginMFAv2({
+                        return G.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE), E.default.loginMFAv2({
                             code: n,
                             ticket: s,
                             mfaType: t,
@@ -975,7 +975,7 @@
                         null != e && e.preventDefault(), null != this.loginRef && this.loginRef.focus();
                         let t = this.getFullLogin();
                         try {
-                            b.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE), await E.default.forgotPassword(t), (0, d.openModal)(e => (0, s.jsx)(d.ConfirmModal, {
+                            G.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE), await E.default.forgotPassword(t), (0, d.openModal)(e => (0, s.jsx)(d.ConfirmModal, {
                                 header: k.default.Messages.EMAIL_VERIFICATION_INSTRUCTIONS_HEADER,
                                 confirmText: k.default.Messages.OKAY,
                                 confirmButtonColor: v.Button.Colors.BRAND,
@@ -1020,7 +1020,7 @@
                         } = this.props, u = null != l ? (0, i.parse)(l.search) : {};
                         "" !== t && (u.email = t), null != n ? (u.mode = "register", e = B.Routes.INVITE(n.code)) : null != s ? (u.mode = "register", e = B.Routes.GIFT_CODE(s.code)) : null != a ? e = B.Routes.GUILD_TEMPLATE(a.code) : null != o ? (e = B.Routes.REGISTER, u.redirect_to = o) : e = B.Routes.REGISTER, E.default.loginReset(), r(e, {
                             search: (0, i.stringify)(u)
-                        }), b.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE)
+                        }), G.ComponentDispatch.dispatch(B.ComponentActions.WAVE_EMPHASIZE)
                     };
                     let a = null != e.location ? (0, i.parse)(e.location.search) : {};
                     this.state = {
@@ -1553,8 +1553,8 @@
                 v = n("25033"),
                 D = n("255403"),
                 U = n("2581"),
-                b = n("644417"),
-                G = n("697543"),
+                G = n("644417"),
+                b = n("697543"),
                 y = n("79345"),
                 P = n("447997"),
                 F = n("970366"),
@@ -1947,8 +1947,8 @@
                             hasCopyAboveButton: v
                         }
                     } = this.props, {
-                        subText: b,
-                        consentText: G
+                        subText: G,
+                        consentText: b
                     } = this.renderConsentComponents(), y = this.renderErrorMessage(), F = (0, s.jsx)(E.Tooltip, {
                         text: !u && A ? ee.default.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
                         children: e => (0, s.jsx)("div", {
@@ -2061,7 +2061,7 @@
                             error: null != g ? g : ea(M),
                             value: d,
                             required: !0
-                        }), v && b, (0, s.jsx)(N.default, {}), F, y, G, !v && b, X.CONFERENCE_MODE_ENABLED ? null : (0, s.jsx)(k.Button, {
+                        }), v && G, (0, s.jsx)(N.default, {}), F, y, b, !v && G, X.CONFERENCE_MODE_ENABLED ? null : (0, s.jsx)(k.Button, {
                             look: T ? k.Button.Looks.FILLED : k.Button.Looks.LINK,
                             color: T ? k.Button.Colors.PRIMARY : k.Button.Colors.LINK,
                             onClick: this.handleGotoLogin,
@@ -2235,7 +2235,7 @@
                         country: v.default.getCountryCode(),
                         hasLoggedInAccounts: M.default.getHasLoggedInAccounts()
                     })),
-                    n = (0, G.useUURegistrationExperiment)(),
+                    n = (0, b.useUURegistrationExperiment)(),
                     l = (0, d.useStateFromStores)([U.default], () => U.default.registrationUsernameSuggestion()),
                     [r, i] = a.useState(Q.RegistrationSteps.FULL);
                 return (0, g.default)({
@@ -2271,14 +2271,14 @@
                     d = (0, y.useUsernameStatus)(n, r, !0),
                     c = r && n.length > 0;
                 return t = c ? (0, o.match)(d).with({
-                    type: b.NameValidationState.ERROR,
+                    type: G.NameValidationState.ERROR,
                     message: o.P.select()
                 }, e => (0, s.jsx)(E.Text, {
                     className: et.messageNegative,
                     variant: "text-sm/normal",
                     children: e
                 })).with({
-                    type: b.NameValidationState.AVAILABLE,
+                    type: G.NameValidationState.AVAILABLE,
                     message: o.P.select()
                 }, e => (0, s.jsx)(E.Text, {
                     className: et.messagePositive,
@@ -2300,7 +2300,7 @@
                     color: "text-normal",
                     children: ee.default.Messages.POMELO_EXISTING_FLOW_ERROR_INVALID
                 }), (0, s.jsx)(P.default, {
-                    show: c && (null == d ? void 0 : d.type) === b.NameValidationState.ERROR || i,
+                    show: c && (null == d ? void 0 : d.type) === G.NameValidationState.ERROR || i,
                     top: -12,
                     bottom: 20,
                     children: t
@@ -2310,31 +2310,6 @@
                 giftCodeResolved: !1,
                 transitionTo: e => n.g.location.assign(e)
             }
-        },
-        532760: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return l
-                }
-            });
-            var s = n("862205");
-            let a = (0, s.createExperiment)({
-                kind: "user",
-                id: "2023-02_mfa_remove_phone",
-                label: "Safety Experience MFA Remove Phone",
-                defaultConfig: {
-                    enabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enabled",
-                    config: {
-                        enabled: !0
-                    }
-                }]
-            });
-            var l = a
         },
         905949: function(e, t, n) {
             "use strict";
@@ -2744,8 +2719,8 @@
                     }(),
                     [v, D] = a.useState(A ? 0 : -1),
                     U = a.useRef(null),
-                    b = a.useRef(null),
                     G = a.useRef(null),
+                    b = a.useRef(null),
                     y = a.useMemo(p, []),
                     P = a.useCallback(() => {
                         var e, t, n, s;
@@ -2754,12 +2729,12 @@
                                 null === (t = U.current) || void 0 === t || t.focus();
                                 break;
                             case "month":
-                                null === (n = b.current) || void 0 === n || n.focus();
+                                null === (n = G.current) || void 0 === n || n.focus();
                                 break;
                             case "year":
-                                null === (s = G.current) || void 0 === s || s.focus()
+                                null === (s = b.current) || void 0 === s || s.focus()
                         }
-                    }, [v, U, b, G, y]);
+                    }, [v, U, G, b, y]);
                 a.useEffect(() => {
                     setTimeout(P, 500)
                 }, []), a.useEffect(() => {
@@ -2810,7 +2785,7 @@
                                     options: _,
                                     selectOption: S,
                                     children: (0, s.jsx)(d.default, {
-                                        ref: b,
+                                        ref: G,
                                         className: E.inputMonth,
                                         "aria-label": c.default.Messages.AGE_GATE_DOB_MONTH,
                                         menuPlacement: d.default.MenuPlacements.TOP,
@@ -2838,7 +2813,7 @@
                                     options: x,
                                     selectOption: L,
                                     children: (0, s.jsx)(d.default, {
-                                        ref: G,
+                                        ref: b,
                                         className: E.inputYear,
                                         "aria-label": c.default.Messages.AGE_GATE_DOB_YEAR,
                                         menuPlacement: d.default.MenuPlacements.TOP,
@@ -3968,47 +3943,26 @@
                     return a
                 },
                 default: function() {
-                    return _
+                    return E
                 }
             });
             var s, a, l = n("759843"),
                 r = n("872717"),
                 i = n("913144"),
-                o = n("532760"),
-                u = n("271938"),
-                d = n("730622"),
-                c = n("840707"),
-                E = n("482931"),
-                f = n("49111"),
-                h = n("782340");
+                o = n("271938"),
+                u = n("840707"),
+                d = n("482931"),
+                c = n("49111");
             (s = a || (a = {})).USER_ACTION_REQUIRED = "user_action_required", s.USER_SETTINGS_UPDATE = "user_settings_update", s.GUILD_PHONE_REQUIRED = "guild_phone_required", s.MFA_PHONE_UPDATE = "mfa_phone_update", s.CONTACT_SYNC = "contact_sync";
-            var _ = {
+            var E = {
                 setCountryCode(e) {
                     i.default.dispatch({
                         type: "PHONE_SET_COUNTRY_CODE",
                         countryCode: e
                     })
                 },
-                removePhone: (e, t) => o.default.getCurrentConfig({
-                    location: "81427d_1"
-                }, {
-                    autoTrackExposure: !1
-                }).enabled ? (0, d.default)(n => r.default.delete({
-                    url: f.Endpoints.PHONE,
-                    body: {
-                        password: e,
-                        change_phone_reason: t,
-                        ...n
-                    },
-                    oldFormErrors: !0
-                }), {
-                    modalProps: {
-                        title: h.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_NUMBER_BUTTON,
-                        actionText: h.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_NUMBER_BUTTON
-                    },
-                    checkEnabled: !1
-                }) : r.default.delete({
-                    url: f.Endpoints.PHONE,
+                removePhone: (e, t) => r.default.delete({
+                    url: c.Endpoints.PHONE,
                     body: {
                         password: e,
                         change_phone_reason: t
@@ -4017,9 +3971,9 @@
                 }),
                 resendCode(e) {
                     let t = {},
-                        n = u.default.getFingerprint();
+                        n = o.default.getFingerprint();
                     return null != n && "" !== n && (t["X-Fingerprint"] = n), r.default.post({
-                        url: f.Endpoints.RESEND_PHONE,
+                        url: c.Endpoints.RESEND_PHONE,
                         headers: t,
                         body: {
                             phone: e
@@ -4027,14 +3981,14 @@
                     })
                 },
                 beginAddPhone: (e, t) => r.default.post({
-                    url: f.Endpoints.PHONE,
+                    url: c.Endpoints.PHONE,
                     body: {
                         phone: e,
                         change_phone_reason: t
                     }
                 }),
                 addPhone: (e, t, n) => r.default.post({
-                    url: f.Endpoints.PHONE,
+                    url: c.Endpoints.PHONE,
                     body: {
                         phone_token: e,
                         password: t,
@@ -4043,20 +3997,20 @@
                     oldFormErrors: !0
                 }),
                 addPhoneWithoutPassword: e => r.default.post({
-                    url: f.Endpoints.PHONE_VERIFY_NO_PASSWORD,
+                    url: c.Endpoints.PHONE_VERIFY_NO_PASSWORD,
                     body: {
                         code: e
                     }
                 }),
                 beginReverifyPhone: (e, t) => r.default.post({
-                    url: f.Endpoints.PHONE_REVERIFY,
+                    url: c.Endpoints.PHONE_REVERIFY,
                     body: {
                         phone: e,
                         change_phone_reason: t
                     }
                 }),
                 reverifyPhone: (e, t, n) => r.default.post({
-                    url: f.Endpoints.PHONE_REVERIFY,
+                    url: c.Endpoints.PHONE_REVERIFY,
                     body: {
                         phone_token: e,
                         password: t,
@@ -4065,7 +4019,7 @@
                     oldFormErrors: !0
                 }),
                 validatePhoneForSupport: e => r.default.post({
-                    url: f.Endpoints.VERIFY_PHONE_FOR_TICKET,
+                    url: c.Endpoints.VERIFY_PHONE_FOR_TICKET,
                     body: {
                         token: e
                     },
@@ -4075,10 +4029,10 @@
                     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                         s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
                         a = {},
-                        r = u.default.getFingerprint();
+                        r = o.default.getFingerprint();
                     null != r && "" !== r && (a["X-Fingerprint"] = r), s && (a.authorization = "");
-                    let o = await c.default.post({
-                        url: f.Endpoints.VERIFY_PHONE,
+                    let E = await u.default.post({
+                        url: c.Endpoints.VERIFY_PHONE,
                         headers: a,
                         body: {
                             phone: e,
@@ -4091,8 +4045,8 @@
                     });
                     return n && i.default.dispatch({
                         type: "MODAL_POP",
-                        key: E.PHONE_VERIFICATION_MODAL_KEY
-                    }), o.body
+                        key: d.PHONE_VERIFICATION_MODAL_KEY
+                    }), E.body
                 }
             }
         },
