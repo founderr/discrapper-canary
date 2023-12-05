@@ -1746,7 +1746,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "251497"
+                        buildNumber: "251512"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -40153,7 +40153,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return v
+                    return O
                 }
             }), n("222007");
             var a = n("37983"),
@@ -40170,94 +40170,90 @@
                 _ = n("649844"),
                 C = n("244390"),
                 h = n("42887"),
-                I = n("471671"),
-                T = n("148349"),
-                S = n("754576"),
-                N = n("78581"),
-                A = n("429829"),
-                m = n("191191"),
-                p = n("994428"),
-                g = n("646718"),
-                R = n("782340"),
-                O = n("566398");
-            let L = "custom-call-sounds-education";
+                I = n("754576"),
+                T = n("78581"),
+                S = n("429829"),
+                N = n("191191"),
+                A = n("994428"),
+                m = n("646718"),
+                p = n("782340"),
+                g = n("566398");
+            let R = "custom-call-sounds-education";
 
-            function v(e) {
+            function O(e) {
                 let {
                     channel: t,
-                    iconClassName: v,
-                    className: M,
-                    innerClassName: P,
-                    ...D
+                    iconClassName: O,
+                    className: L,
+                    innerClassName: v,
+                    ...M
                 } = e, {
-                    mute: y,
-                    suppress: x
-                } = (0, C.default)(t), U = (0, i.default)([h.default], () => h.default.isDeaf()), b = y || x || U, [G, j] = s.useState(!1), w = t.getGuildId(), k = (0, N.useSoundBoardDismissContentTypes)({
-                    isSoundboardButtonDisabled: b
-                }), [F, B] = (0, E.useGetDismissibleContent)(k), {
-                    AnalyticsLocationProvider: H
-                } = (0, c.default)(d.default.SOUNDBOARD_BUTTON), V = (0, i.default)([I.default], () => I.default.isFocused()), Y = (0, l.v4)();
+                    mute: P,
+                    suppress: D
+                } = (0, C.default)(t), y = (0, i.default)([h.default], () => h.default.isDeaf()), x = P || D || y, [U, b] = s.useState(!1), G = t.getGuildId(), j = (0, T.useSoundBoardDismissContentTypes)({
+                    isSoundboardButtonDisabled: x
+                }), [w, k] = (0, E.useGetDismissibleContent)(j), {
+                    AnalyticsLocationProvider: F
+                } = (0, c.default)(d.default.SOUNDBOARD_BUTTON), B = (0, l.v4)();
 
-                function W(e) {
-                    null == e || e(), null != F && F !== r.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && B(p.ContentDismissActionType.UNKNOWN)
+                function H(e) {
+                    null == e || e(), null != w && w !== r.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && k(A.ContentDismissActionType.UNKNOWN)
                 }
 
-                function K(e) {
-                    null != w && (0, u.openContextMenuLazy)(e, async () => {
+                function V(e) {
+                    null != G && (0, u.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
                         } = await n.el("136137").then(n.bind(n, "136137"));
                         return t => (0, a.jsx)(e, {
-                            guildId: w,
+                            guildId: G,
                             ...t
                         })
                     })
                 }
-                let z = e => (0, a.jsx)(o.Popout, {
-                    shouldShow: G,
+                let Y = e => (0, a.jsx)(o.Popout, {
+                    shouldShow: U,
                     position: "top",
-                    onRequestClose: () => j(!1),
+                    onRequestClose: () => b(!1),
                     renderPopout: e => {
                         let {
                             closePopout: n
                         } = e;
-                        return (0, a.jsx)(m.default, {
-                            guildId: w,
+                        return (0, a.jsx)(N.default, {
+                            guildId: G,
                             channel: t,
                             onClose: n,
-                            gridNotice: F === r.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(A.CustomCallSoundUpsell, {
+                            gridNotice: w === r.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(S.CustomCallSoundUpsell, {
                                 onClose: n,
-                                markAsDismissed: B
+                                markAsDismissed: k
                             }),
                             analyticsSource: "rtc panel"
                         })
                     },
                     children: t => (0, a.jsx)("div", {
-                        children: (0, a.jsxs)(o.Button, {
+                        children: (0, a.jsx)(o.Button, {
                             ...e,
                             ...t,
-                            className: M,
-                            wrapperClassName: M,
-                            innerClassName: P,
-                            disabled: b,
+                            className: L,
+                            wrapperClassName: L,
+                            innerClassName: v,
+                            disabled: x,
                             onClick: () => {
                                 var t;
-                                W(), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), j(!G)
+                                H(), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), b(!U)
                             },
-                            onContextMenu: K,
+                            onContextMenu: V,
                             fullWidth: !0,
                             size: o.Button.Sizes.SMALL,
-                            ...D,
-                            children: [(0, a.jsx)(S.default, {
-                                className: v
-                            }), F === r.DismissibleContent.CUSTOM_CALL_SOUNDS_SPARKLES && (0, a.jsx)(T.default, {
-                                paused: !V
-                            })]
+                            ...M,
+                            children: (0, a.jsx)(I.default, {
+                                className: O
+                            })
                         })
                     })
                 });
-                return F === r.DismissibleContent.CUSTOM_CALL_SOUNDS_VOICE_COACHMARK ? (0, a.jsx)(o.Popout, {
-                    positionKey: Y,
+                return w === r.DismissibleContent.CUSTOM_CALL_SOUNDS_VOICE_COACHMARK ? (0, a.jsx)(o.Popout, {
+                    positionKey: B,
                     position: "top",
                     align: "center",
                     shouldShow: !0,
@@ -40266,42 +40262,42 @@
                             closePopout: t
                         } = e;
                         return (0, a.jsx)(o.Dialog, {
-                            "aria-labelledby": L,
+                            "aria-labelledby": R,
                             children: (0, a.jsx)(f.default, {
                                 isPremiumFeature: !0,
-                                header: R.default.Messages.CALL_SOUNDS_UPSELL_TITLE_NON_SUB,
-                                headerClassName: O.customCallSoundsFeatureHeader,
+                                header: p.default.Messages.CALL_SOUNDS_UPSELL_TITLE_NON_SUB,
+                                headerClassName: g.customCallSoundsFeatureHeader,
                                 body: (0, a.jsx)(o.Text, {
-                                    id: L,
+                                    id: R,
                                     variant: "text-sm/normal",
                                     color: "always-white",
-                                    children: R.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB
+                                    children: p.default.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB
                                 }),
-                                tryItText: R.default.Messages.PREMIUM_UPSELL_GET_NITRO,
+                                tryItText: p.default.Messages.PREMIUM_UPSELL_GET_NITRO,
                                 dismissibleContent: r.DismissibleContent.CUSTOM_CALL_SOUNDS_VOICE_COACHMARK,
-                                artClassName: O.customCallSoundsFeatureArt,
+                                artClassName: g.customCallSoundsFeatureArt,
                                 onTryFeature: () => {
                                     (0, _.default)({
-                                        subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
+                                        subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
                                         analyticsLocations: []
-                                    }), W(t)
+                                    }), H(t)
                                 },
-                                onClose: () => W(t),
+                                onClose: () => H(t),
                                 shouldUseHorizontalButtons: !0,
                                 inlineArt: !0
                             })
                         })
                     },
-                    children: () => z()
-                }) : (0, a.jsx)(H, {
+                    children: () => Y()
+                }) : (0, a.jsx)(F, {
                     children: (0, a.jsx)(o.Tooltip, {
                         text: function() {
-                            if (y) return R.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
-                            if (x) return R.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-                            if (U) return R.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
-                            return R.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
+                            if (P) return p.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
+                            if (D) return p.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
+                            if (y) return p.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
+                            return p.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
                         }(),
-                        children: e => z(e)
+                        children: e => Y(e)
                     })
                 })
             }
@@ -44732,46 +44728,6 @@
                     }),
                     ...c,
                     children: u
-                })
-            }
-        },
-        148349: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return u
-                }
-            });
-            var a = n("37983");
-            n("884691");
-            var s = n("414456"),
-                l = n.n(s),
-                i = n("128295"),
-                r = n("414868"),
-                o = n("682165");
-
-            function u(e) {
-                let {
-                    width: t = 10,
-                    height: n = 10,
-                    className: s,
-                    starClassName: u,
-                    plusClassName: d,
-                    paused: c = !1
-                } = e;
-                return (0, a.jsxs)("div", {
-                    className: l(o.sparkleContainer, {
-                        [o.paused]: c
-                    }, s),
-                    children: [(0, a.jsx)(r.default, {
-                        width: t,
-                        height: n,
-                        className: l(o.sparkleStar, u)
-                    }), (0, a.jsx)(i.default, {
-                        width: t,
-                        height: n,
-                        className: l(o.sparklePlus, d)
-                    })]
                 })
             }
         },
