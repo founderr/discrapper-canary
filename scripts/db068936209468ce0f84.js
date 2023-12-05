@@ -702,7 +702,7 @@
                 let {
                     onStepChange: t,
                     onBackClick: s,
-                    showBackButton: l,
+                    showBackButton: l = !1,
                     disabled: i = !1,
                     loading: a = !1
                 } = e, {
@@ -764,7 +764,6 @@
                             align: f.default.Align.CENTER,
                             children: (0, n.jsx)(C, {
                                 onStepChange: t,
-                                showBackButton: !0,
                                 onBackClick: s,
                                 disabled: null != T || null == A || A.id === (null == O ? void 0 : O.id) || d.length > u.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
                                 loading: m
