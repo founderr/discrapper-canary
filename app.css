@@ -19479,8 +19479,8 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -83725,6 +83725,11 @@ input::-webkit-inner-spin-button {
     flex-direction: column;
     position: absolute;
     bottom: 0
+}
+
+.cardTextBlur_e2acf1 {
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px)
 }
 
 .cardBackground_af6852 {
