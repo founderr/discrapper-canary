@@ -198,10 +198,14 @@
                             }),
                             align: "center",
                             position: "right",
-                            children: e => (0, n.jsx)(i.Button, {
+                            children: e => (0, n.jsx)(i.Clickable, {
                                 ...e,
-                                look: i.ButtonLooks.LINK,
-                                children: C.default.Messages.COLLECTIBLES_PREVIEW_GIFT_PROFILE
+                                className: T.previewLink,
+                                children: (0, n.jsx)(i.Text, {
+                                    variant: "text-xs/medium",
+                                    color: "text-link",
+                                    children: C.default.Messages.COLLECTIBLES_PREVIEW_GIFT_PROFILE
+                                })
                             })
                         }, o.id)]
                     }), (0, n.jsxs)("div", {
@@ -483,13 +487,13 @@
                     skuId: N,
                     isGift: g = !1,
                     giftRecipient: O,
-                    giftMessage: R,
-                    analyticsLocations: x,
+                    giftMessage: x,
+                    analyticsLocations: R,
                     returnRef: P
                 } = e, {
                     analyticsLocations: v,
                     AnalyticsLocationProvider: L
-                } = (0, a.default)([...x, i.default.COLLECTIBLES_PAYMENT_MODAL]), F = r.useRef(new l.Environment), [M, j] = r.useState(null), y = [f.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, p.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, E.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...f.SHARED_STEP_CONFIGS, f.REVIEW_STEP_CONFIG, {
+                } = (0, a.default)([...R, i.default.COLLECTIBLES_PAYMENT_MODAL]), F = r.useRef(new l.Environment), [M, j] = r.useState(null), y = [f.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, p.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, E.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...f.SHARED_STEP_CONFIGS, f.REVIEW_STEP_CONFIG, {
                     key: d.Step.CONFIRM,
                     renderStep: e => (0, n.jsx)(I.CollectiblesPaymentModalConfirmStep, {
                         ...e,
@@ -516,7 +520,7 @@
                         children: (0, n.jsx)(u.GiftContextProvider, {
                             isGift: g,
                             giftRecipient: O,
-                            giftMessage: R,
+                            giftMessage: x,
                             children: (0, n.jsx)(c.PaymentModal, {
                                 onClose: t,
                                 onComplete: s,
@@ -840,8 +844,8 @@
                 N = s("306160"),
                 g = s("659632"),
                 O = s("719923"),
-                R = s("158998"),
-                x = s("642906"),
+                x = s("158998"),
+                R = s("642906"),
                 P = s("49111"),
                 v = s("646718"),
                 L = s("782340"),
@@ -861,7 +865,7 @@
                     isSendingMessage: _
                 } = e, {
                     productLine: C
-                } = (0, x.usePaymentContext)(), [T, M] = r.useState(m.default.Modes.DEFAULT), y = (0, o.useStateFromStores)([h.default], () => h.default.enabled), U = () => null != a ? a.skuId : null != l ? l.id : null, b = () => {
+                } = (0, R.usePaymentContext)(), [T, M] = r.useState(m.default.Modes.DEFAULT), y = (0, o.useStateFromStores)([h.default], () => h.default.enabled), U = () => null != a ? a.skuId : null != l ? l.id : null, b = () => {
                     let e;
                     let t = null != u && v.SeasonalGiftStyles2023.includes(u);
                     if (null != I) return L.default.Messages.APPLICATION_STORE_GIFT_PURCHASE_FAILURE_GENERIC_BLURB;
@@ -952,10 +956,10 @@
                         }), (0, n.jsx)(d.Heading, {
                             className: F.giftRecipientName,
                             variant: "heading-md/semibold",
-                            children: R.default.getName(S)
+                            children: x.default.getName(S)
                         }), (0, n.jsxs)("div", {
                             className: F.giftRecipientTag,
-                            children: [" ", R.default.getUserTag(S)]
+                            children: [" ", x.default.getUserTag(S)]
                         }), (0, n.jsx)("div", {
                             className: F.giftSentMessage,
                             children: b()
@@ -987,7 +991,7 @@
                 } = (0, o.useStateFromStoresObject)([C.default], () => ({
                     userAffinities: C.default.getUserAffinitiesUserIds(),
                     isLoading: C.default.getFetching()
-                })), g = Array.from(A.values()), O = (0, o.useStateFromStores)([_.default], () => _.default.getFriendIDs()), x = u.difference(O, g), P = [...g, ...x], v = (0, o.useStateFromStores)([T.default], () => T.default.filter(e => P.includes(e.id) && !e.bot), [P]), M = null == v || 0 === v.length;
+                })), g = Array.from(A.values()), O = (0, o.useStateFromStores)([_.default], () => _.default.getFriendIDs()), R = u.difference(O, g), P = [...g, ...R], v = (0, o.useStateFromStores)([T.default], () => T.default.filter(e => P.includes(e.id) && !e.bot), [P]), M = null == v || 0 === v.length;
                 if (M) return null;
                 let j = u.sortBy(v, e => P.indexOf(e.id));
                 return (0, n.jsxs)("div", {
@@ -1013,7 +1017,7 @@
                             },
                             options: j.map(e => ({
                                 value: e,
-                                label: "".concat(R.default.getUserTag(e))
+                                label: "".concat(x.default.getUserTag(e))
                             }))
                         }), (0, n.jsx)(d.Button, {
                             disabled: null == l,
