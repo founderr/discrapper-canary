@@ -525,10 +525,10 @@
                         selectedSkuId: N,
                         step: y,
                         updatedSubscription: x,
-                        startingPremiumSubscriptionPlanIdRef: v
+                        startingPremiumSubscriptionPlanIdRef: M
                     } = (0, f.usePaymentContext)(),
                     {
-                        isGift: M,
+                        isGift: v,
                         giftRecipient: O,
                         giftCode: L,
                         hasSentMessage: R,
@@ -540,24 +540,24 @@
                     S(), null == I || I()
                 }, [S, I]);
                 return r.useEffect(() => {
-                    if (!M || null == O || null == L || R || b || (0, o.shouldShowCustomGiftExperience)(O, !0, "PremiumPaymentConfirmStep")) return;
+                    if (!v || null == O || null == L || R || b || (0, o.shouldShowCustomGiftExperience)(O, !0, "PremiumPaymentConfirmStep")) return;
                     let e = l.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
                         location: "36b986_1"
                     }).enabled;
                     e && j({
                         onSubscriptionConfirmation: I
                     })
-                }, [j, M, O, L, R, b, I]), s = null != _ ? _(g, U, x) : M ? (0, i.jsx)(u.PremiumSubscriptionGiftPurchaseConfirmation, {
+                }, [j, v, O, L, R, b, I]), s = null != _ ? _(g, U, x) : v ? (0, i.jsx)(u.PremiumSubscriptionGiftPurchaseConfirmation, {
                     planId: g.id,
                     onClose: U
-                }) : v.current === g.id ? (0, i.jsx)(u.default, {
+                }) : M.current === g.id ? (0, i.jsx)(u.default, {
                     planId: g.id,
                     postSuccessGuild: T,
                     onClose: U,
                     paymentSourceType: null === (t = h[null != A ? A : ""]) || void 0 === t ? void 0 : t.type
                 }) : (0, i.jsx)(u.default, {
                     followupSKUInfo: C,
-                    startingPremiumSubscriptionPlanId: v.current,
+                    startingPremiumSubscriptionPlanId: M.current,
                     planId: g.id,
                     onClose: U,
                     isDowngrade: null != P && (0, d.subscriptionCanDowngrade)(P, g.id, E),
@@ -607,8 +607,8 @@
                 N = n("176108"),
                 y = n("97461"),
                 x = n("403365"),
-                v = n("498475"),
-                M = n("254350"),
+                M = n("498475"),
+                v = n("254350"),
                 O = n("49111"),
                 L = n("646718"),
                 R = n("782340");
@@ -630,8 +630,8 @@
                     openInvoiceId: N,
                     onSubscriptionConfirmation: y,
                     renderPurchaseConfirmation: x,
-                    postSuccessGuild: v,
-                    followupSKUInfo: M,
+                    postSuccessGuild: M,
+                    followupSKUInfo: v,
                     renderHeader: R,
                     applicationId: b,
                     guildId: j,
@@ -677,8 +677,8 @@
                     openInvoiceId: N,
                     onSubscriptionConfirmation: y,
                     renderPurchaseConfirmation: x,
-                    postSuccessGuild: v,
-                    followupSKUInfo: M,
+                    postSuccessGuild: M,
+                    followupSKUInfo: v,
                     renderHeader: R,
                     applicationId: b,
                     guildId: j,
@@ -715,7 +715,7 @@
                     selectedSkuId: a
                 } = (0, S.usePaymentContext)(), {
                     isGift: l
-                } = (0, m.useGiftContext)(), u = (0, M.default)({
+                } = (0, m.useGiftContext)(), u = (0, v.default)({
                     isGift: l,
                     skuId: a,
                     referralTrialOfferId: r
@@ -749,7 +749,7 @@
                 }
             }, {
                 key: E.Step.WHAT_YOU_LOSE,
-                renderStep: e => (0, i.jsx)(v.PremiumPaymentWhatYouLoseStep, {
+                renderStep: e => (0, i.jsx)(M.PremiumPaymentWhatYouLoseStep, {
                     ...e
                 }),
                 options: {
@@ -880,8 +880,8 @@
                 N = n("85336"),
                 y = n("153727"),
                 x = n("628738"),
-                v = n("650484"),
-                M = n("310093"),
+                M = n("650484"),
+                v = n("310093"),
                 O = n("367767"),
                 L = n("49111"),
                 R = n("646718"),
@@ -959,11 +959,11 @@
                     eT = eu && null == eI,
                     eC = eu && null != eI;
                 return eT && (null == eE ? void 0 : eE.subscriptionPeriodEnd) == null ? (0, i.jsx)(x.default, {}) : (a(null != Y, "Step should be set"), a(ed.length > 0, "Premium plan options should be set"), (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(M.GiftNote, {
+                    children: [(0, i.jsx)(v.GiftNote, {
                         giftMessage: J
                     }), !(q && (0, C.shouldShowCustomGiftExperience)(X, !0, "PremiumPaymentPlanSelectStep")) && (0, i.jsx)(y.default, {
                         isEligibleForTrial: er
-                    }), (0, i.jsxs)(v.PaymentPortalBody, {
+                    }), (0, i.jsxs)(M.PaymentPortalBody, {
                         children: [eT && (0, i.jsx)("hr", {
                             className: j.planSelectSeparatorUpper
                         }), (0, i.jsx)(S.default, {
@@ -988,7 +988,7 @@
                                 })
                             })]
                         })]
-                    }), (0, i.jsx)(v.PaymentPortalFooter, {
+                    }), (0, i.jsx)(M.PaymentPortalFooter, {
                         children: (0, i.jsx)(u.ModalFooter, {
                             justify: T.default.Justify.BETWEEN,
                             align: T.default.Align.CENTER,
@@ -1292,7 +1292,8 @@
                         ctaButton: null,
                         showWumpus: !0,
                         showYearlyPrice: !0,
-                        isGift: n
+                        isGift: n,
+                        isModal: !0
                     })
                 })
             }

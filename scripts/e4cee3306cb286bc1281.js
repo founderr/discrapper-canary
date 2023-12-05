@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["41590"], {
+    ["10687"], {
         459149: function(t, r, n) {
             "use strict";
             var o = n("719756"),
@@ -115,6 +115,21 @@
                 }
             })
         },
+        448105: function(t, r, n) {
+            "use strict";
+            t.exports = function(t, r) {
+                var n = r.length,
+                    o = t.length;
+                if (o > n) return !1;
+                if (o === n) return t === r;
+                t: for (var e = 0, i = 0; e < o; e++) {
+                    for (var u = t.charCodeAt(e); i < n;)
+                        if (r.charCodeAt(i++) === u) continue t;
+                    return !1
+                }
+                return !0
+            }
+        },
         437083: function(t, r, n) {
             var o = n("561449"),
                 e = n("877297");
@@ -173,14 +188,14 @@
                     m = !0;
                 if ("function" != typeof t) throw TypeError("Expected a function");
 
-                function x(r) {
+                function d(r) {
                     var n = c,
                         o = s;
                     return c = s = void 0, p = r, h = t.apply(o, n)
                 }
                 r = i(r) || 0, o(n) && (b = !!n.leading, a = (g = "maxWait" in n) ? u(i(n.maxWait) || 0, r) : a, m = "trailing" in n ? !!n.trailing : m);
 
-                function d(t) {
+                function x(t) {
                     var n = t - l,
                         o = t - p;
                     return void 0 === l || n >= r || n < 0 || g && o >= a
@@ -188,23 +203,23 @@
 
                 function y() {
                     var t, n, o, i, u = e();
-                    if (d(u)) return w(u);
+                    if (x(u)) return w(u);
                     v = setTimeout(y, (n = (t = u) - l, o = t - p, i = r - n, g ? f(i, a - o) : i))
                 }
 
                 function w(t) {
-                    return (v = void 0, m && c) ? x(t) : (c = s = void 0, h)
+                    return (v = void 0, m && c) ? d(t) : (c = s = void 0, h)
                 }
 
                 function T() {
                     var t, n = e(),
-                        o = d(n);
+                        o = x(n);
                     if (c = arguments, s = this, l = n, o) {
                         if (void 0 === v) {
                             ;
-                            return p = t = l, v = setTimeout(y, r), b ? x(t) : h
+                            return p = t = l, v = setTimeout(y, r), b ? d(t) : h
                         }
-                        if (g) return clearTimeout(v), v = setTimeout(y, r), x(l)
+                        if (g) return clearTimeout(v), v = setTimeout(y, r), d(l)
                     }
                     return void 0 === v && (v = setTimeout(y, r)), h
                 }
@@ -379,17 +394,17 @@
                 }, {
                     quantize: function(u, f) {
                         if (!u.length || f < 2 || f > 256) return !1;
-                        var c, s, a, h, v, l, p, b, g, m, x, d, y, w, T, _, k = (c = u, v = Array(32768), c.forEach(function(n) {
+                        var c, s, a, h, v, l, p, b, g, m, d, x, y, w, T, _, C = (c = u, v = Array(32768), c.forEach(function(n) {
                                 a = n[0] >> t, h = n[1] >> t, v[s = r(a, h, n[2] >> t)] = (v[s] || 0) + 1
                             }), v),
-                            E = 0;
-                        k.forEach(function() {
-                            E++
+                            k = 0;
+                        C.forEach(function() {
+                            k++
                         });
-                        var z = (l = u, p = k, x = 1e6, d = 0, y = 1e6, w = 0, T = 1e6, _ = 0, l.forEach(function(r) {
-                                b = r[0] >> t, g = r[1] >> t, m = r[2] >> t, b < x ? x = b : b > d && (d = b), g < y ? y = g : g > w && (w = g), m < T ? T = m : m > _ && (_ = m)
-                            }), new e(x, d, y, w, T, _, p)),
-                            C = new n(function(t, r) {
+                        var E = (l = u, p = C, d = 1e6, x = 0, y = 1e6, w = 0, T = 1e6, _ = 0, l.forEach(function(r) {
+                                b = r[0] >> t, g = r[1] >> t, m = r[2] >> t, b < d ? d = b : b > x && (x = b), g < y ? y = g : g > w && (w = g), m < T ? T = m : m > _ && (_ = m)
+                            }), new e(d, x, y, w, T, _, p)),
+                            z = new n(function(t, r) {
                                 return o.naturalOrder(t.count(), r.count())
                             });
 
@@ -441,17 +456,17 @@
                                                     return e[s] = u, i[f] = e[s] + 1, [e, i]
                                                 }
                                         }
-                                    }(k, e),
+                                    }(C, e),
                                     c = f[0],
                                     s = f[1];
                                 if (!c) return;
                                 if (t.push(c), s && (t.push(s), i++), i >= n || u++ > 1e3) return
                             }
                         }
-                        C.push(z), M(C, .75 * f);
+                        z.push(E), M(z, .75 * f);
                         for (var O = new n(function(t, r) {
                                 return o.naturalOrder(t.count() * t.volume(), r.count() * r.volume())
-                            }); C.size();) O.push(C.pop());
+                            }); z.size();) O.push(z.pop());
                         M(O, f - O.size());
                         for (var R = new i; O.size();) R.push(O.pop());
                         return R
@@ -512,20 +527,20 @@
                         max: e,
                         cos: i,
                         round: u
-                    } = Math, f = t[0] | t[1] << 8 | t[2] << 16, c = t[3] | t[4] << 8, s = (63 & f) / 63, a = (f >> 6 & 63) / 31.5 - 1, h = (f >> 12 & 63) / 31.5 - 1, v = f >> 23, l = c >> 15, p = e(3, l ? v ? 5 : 7 : 7 & c), b = e(3, l ? 7 & c : v ? 5 : 7), g = v ? (15 & t[5]) / 15 : 1, m = (t[5] >> 4) / 15, x = v ? 6 : 5, d = 0, y = (r, n, o) => {
+                    } = Math, f = t[0] | t[1] << 8 | t[2] << 16, c = t[3] | t[4] << 8, s = (63 & f) / 63, a = (f >> 6 & 63) / 31.5 - 1, h = (f >> 12 & 63) / 31.5 - 1, v = f >> 23, l = c >> 15, p = e(3, l ? v ? 5 : 7 : 7 & c), b = e(3, l ? 7 & c : v ? 5 : 7), g = v ? (15 & t[5]) / 15 : 1, m = (t[5] >> 4) / 15, d = v ? 6 : 5, x = 0, y = (r, n, o) => {
                         let e = [];
                         for (let i = 0; i < n; i++)
-                            for (let u = i ? 0 : 1; u * n < r * (n - i); u++) e.push(((t[x + (d >> 1)] >> ((1 & d++) << 2) & 15) / 7.5 - 1) * o);
+                            for (let u = i ? 0 : 1; u * n < r * (n - i); u++) e.push(((t[d + (x >> 1)] >> ((1 & x++) << 2) & 15) / 7.5 - 1) * o);
                         return e
-                    }, w = y(p, b, (f >> 18 & 31) / 31), T = y(3, 3, 1.25 * ((c >> 3 & 63) / 63)), _ = y(3, 3, 1.25 * ((c >> 9 & 63) / 63)), k = v && y(5, 5, m), E = o(t), z = u(E > 1 ? 32 : 32 * E), C = u(E > 1 ? 32 / E : 32), M = new Uint8Array(z * C * 4), O = [], R = [];
-                    for (let t = 0, o = 0; t < C; t++)
-                        for (let u = 0; u < z; u++, o += 4) {
+                    }, w = y(p, b, (f >> 18 & 31) / 31), T = y(3, 3, 1.25 * ((c >> 3 & 63) / 63)), _ = y(3, 3, 1.25 * ((c >> 9 & 63) / 63)), C = v && y(5, 5, m), k = o(t), E = u(k > 1 ? 32 : 32 * k), z = u(k > 1 ? 32 / k : 32), M = new Uint8Array(E * z * 4), O = [], R = [];
+                    for (let t = 0, o = 0; t < z; t++)
+                        for (let u = 0; u < E; u++, o += 4) {
                             let f = s,
                                 c = a,
                                 l = h,
                                 m = g;
-                            for (let t = 0, n = e(p, v ? 5 : 3); t < n; t++) O[t] = i(r / z * (u + .5) * t);
-                            for (let n = 0, o = e(b, v ? 5 : 3); n < o; n++) R[n] = i(r / C * (t + .5) * n);
+                            for (let t = 0, n = e(p, v ? 5 : 3); t < n; t++) O[t] = i(r / E * (u + .5) * t);
+                            for (let n = 0, o = e(b, v ? 5 : 3); n < o; n++) R[n] = i(r / z * (t + .5) * n);
                             for (let t = 0, r = 0; t < b; t++)
                                 for (let n = t ? 0 : 1, o = 2 * R[t]; n * b < p * (b - t); n++, r++) f += w[r] * O[n] * o;
                             for (let t = 0, r = 0; t < 3; t++)
@@ -535,15 +550,15 @@
                                 }
                             if (v)
                                 for (let t = 0, r = 0; t < 5; t++)
-                                    for (let n = t ? 0 : 1, o = 2 * R[t]; n < 5 - t; n++, r++) m += k[r] * O[n] * o;
-                            let x = f - 2 / 3 * c,
-                                d = (3 * f - x + l) / 2,
-                                y = d - l;
-                            M[o] = e(0, 255 * n(1, d)), M[o + 1] = e(0, 255 * n(1, y)), M[o + 2] = e(0, 255 * n(1, x)), M[o + 3] = e(0, 255 * n(1, m))
+                                    for (let n = t ? 0 : 1, o = 2 * R[t]; n < 5 - t; n++, r++) m += C[r] * O[n] * o;
+                            let d = f - 2 / 3 * c,
+                                x = (3 * f - d + l) / 2,
+                                y = x - l;
+                            M[o] = e(0, 255 * n(1, x)), M[o + 1] = e(0, 255 * n(1, y)), M[o + 2] = e(0, 255 * n(1, d)), M[o + 3] = e(0, 255 * n(1, m))
                         }
                     return {
-                        w: z,
-                        h: C,
+                        w: E,
+                        h: z,
                         rgba: M
                     }
                 }(t);
