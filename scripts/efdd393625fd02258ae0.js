@@ -2508,41 +2508,24 @@
                     let {
                         sku: e,
                         storeListing: t,
-                        inLibrary: n,
-                        width: s,
-                        fetchFailed: i,
-                        renderFallback: r,
-                        renderCustomTitle: o,
-                        renderCustomTagline: d,
-                        renderCustomMedia: c
-                    } = this.props, {
-                        playing: h,
-                        muted: E
-                    } = this.state, _ = s > m.HORIZONTAL_EMBED_BREAKPOINT;
-                    if (null == e || null == t) return i ? r() : (0, a.jsx)(m.ResponsiveLoadingEmbedTile, {
-                        isHorizontal: _
+                        width: n,
+                        fetchFailed: s,
+                        renderFallback: i
+                    } = this.props, r = n > m.HORIZONTAL_EMBED_BREAKPOINT;
+                    if (null == e || null == t) return s ? i() : (0, a.jsx)(m.ResponsiveLoadingEmbedTile, {
+                        isHorizontal: r
                     });
-                    return (0, a.jsx)(u.default, {
+                    return e.productLine === S.SKUProductLines.COLLECTIBLES ? (0, a.jsx)(u.default, {
+                        section: S.AnalyticsSections.APPLICATION_EMBED,
+                        children: this.renderApplicationTile(e, t)
+                    }) : (0, a.jsx)(u.default, {
                         section: S.AnalyticsSections.APPLICATION_EMBED,
                         children: (0, a.jsx)(l.Link, {
                             onClick: this.handleLinkClick,
                             to: this.getStoreListingLocation(),
                             onMouseEnter: this.handleMouseEnter,
                             onMouseLeave: this.handleMouseLeave,
-                            children: (0, a.jsx)(f.default, {
-                                sku: e,
-                                storeListing: t,
-                                playing: h,
-                                muted: E,
-                                inLibrary: n,
-                                onToggleMute: this.handleToggleMute,
-                                renderCustomActions: () => this.renderActions(e),
-                                renderCustomTitle: o,
-                                renderCustomTagline: d,
-                                renderCustomMedia: c,
-                                isHorizontal: _,
-                                isEmbed: !0
-                            })
+                            children: this.renderApplicationTile(e, t)
                         })
                     })
                 }
@@ -2576,6 +2559,31 @@
                             onEmbedClick: t
                         } = this.props;
                         null != t && t(e)
+                    }, this.renderApplicationTile = (e, t) => {
+                        let {
+                            inLibrary: n,
+                            width: s,
+                            renderCustomTitle: l,
+                            renderCustomTagline: i,
+                            renderCustomMedia: r
+                        } = this.props, {
+                            playing: o,
+                            muted: u
+                        } = this.state, d = s > m.HORIZONTAL_EMBED_BREAKPOINT;
+                        return (0, a.jsx)(f.default, {
+                            sku: e,
+                            storeListing: t,
+                            playing: o,
+                            muted: u,
+                            inLibrary: n,
+                            onToggleMute: this.handleToggleMute,
+                            renderCustomActions: () => this.renderActions(e),
+                            renderCustomTitle: l,
+                            renderCustomTagline: i,
+                            renderCustomMedia: r,
+                            isHorizontal: d,
+                            isEmbed: !0
+                        })
                     }, this.renderActions = e => {
                         let {
                             inLibrary: t,
