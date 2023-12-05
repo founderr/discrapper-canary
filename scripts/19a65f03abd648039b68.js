@@ -8044,8 +8044,8 @@
                 u = n("77078"),
                 d = n("51565"),
                 c = n("845579"),
-                f = n("68238"),
-                h = n("794352"),
+                f = n("794352"),
+                h = n("290581"),
                 C = n("315102"),
                 m = n("974755"),
                 p = n("49111"),
@@ -8109,7 +8109,7 @@
                         children: e => (0, l.jsxs)("div", {
                             className: _.communityInfoPill,
                             ...e,
-                            children: [(0, l.jsx)(h.default, {
+                            children: [(0, l.jsx)(f.default, {
                                 width: 12,
                                 height: 12,
                                 className: _.communityIcon
@@ -8135,17 +8135,12 @@
                 })
             }
 
-            function N(e) {
-                let {
-                    guild: t
-                } = e, n = t.id === E.FAVORITES_RAW_GUILD_ID;
-                return n ? (0, l.jsx)(u.Tooltip, {
-                    text: "Super-duper alpha! This may break, change, or be removed at any time. One day real users can use this. :')",
-                    children: e => (0, l.jsx)(f.default, {
-                        className: _.favoritesInfo,
-                        ...e
-                    })
-                }) : null
+            function N() {
+                return (0, l.jsx)(h.default, {
+                    className: _.favoritesIcon,
+                    height: 20,
+                    width: 20
+                })
             }
             var T = a.memo(function(e) {
                 var t;
@@ -8155,28 +8150,28 @@
                     className: r,
                     onClick: f,
                     onContextMenu: h,
-                    onMouseDown: E,
-                    disableBannerAnimation: T,
-                    "aria-expanded": A,
-                    "aria-controls": L,
-                    guild: R,
-                    guildBanner: x,
-                    animationOverlayHeight: v,
-                    children: M,
-                    headerClassName: O,
-                    communityInfoVisible: y,
-                    hasSubheader: D
-                } = e, b = R.hasFeature(p.GuildFeatures.ANIMATED_BANNER), j = (0, d.default)(R), G = !j && R.hasCommunityInfoSubheader(), U = (0, C.isAnimatedIconHash)(x) && b && !T, [P, w] = a.useState(!1), F = a.useRef(), B = a.useRef(null), V = a.useRef(), H = c.GifAutoPlay.getSetting();
+                    onMouseDown: T,
+                    disableBannerAnimation: A,
+                    "aria-expanded": L,
+                    "aria-controls": R,
+                    guild: x,
+                    guildBanner: v,
+                    animationOverlayHeight: M,
+                    children: O,
+                    headerClassName: y,
+                    communityInfoVisible: D,
+                    hasSubheader: b
+                } = e, j = x.hasFeature(p.GuildFeatures.ANIMATED_BANNER), G = (0, d.default)(x), U = !G && x.hasCommunityInfoSubheader(), P = (0, C.isAnimatedIconHash)(v) && j && !A, [w, F] = a.useState(!1), B = a.useRef(), V = a.useRef(null), H = a.useRef(), k = c.GifAutoPlay.getSetting();
                 a.useEffect(() => {
-                    if (U && n && !F.current && H) return w(!0), V.current = setTimeout(() => {
-                        w(!1)
+                    if (P && n && !B.current && k) return F(!0), H.current = setTimeout(() => {
+                        F(!1)
                     }, 5e3), () => {
-                        clearTimeout(V.current)
+                        clearTimeout(H.current)
                     }
-                }, [U, n, H]), a.useEffect(() => {
-                    F.current = n
+                }, [P, n, k]), a.useEffect(() => {
+                    B.current = n
                 }, [n]);
-                let k = () => {
+                let Y = () => {
                     let {
                         renderBanner: t,
                         guildBanner: n
@@ -8185,72 +8180,70 @@
                 };
                 return (0, l.jsxs)(l.Fragment, {
                     children: [(0, l.jsxs)("div", {
-                        ref: B,
+                        ref: V,
                         className: i(r, {
                             [_.container]: !0,
                             [_.clickable]: null != f,
-                            [_.selected]: null != f && A,
-                            [_.hasBanner]: k(),
+                            [_.selected]: null != f && L,
+                            [_.hasBanner]: Y(),
                             [_.bannerVisible]: n,
-                            [_.communityInfoVisible]: !j && y || D && G
+                            [_.communityInfoVisible]: !G && D || b && U
                         }),
-                        onMouseDown: E,
+                        onMouseDown: T,
                         onContextMenu: h,
                         onClick: f,
                         children: [(0, l.jsxs)("header", {
-                            className: i(_.header, O, {
+                            className: i(_.header, y, {
                                 [_.themedHeaderMobile]: o.isMobile
                             }),
                             children: [(0, l.jsxs)("div", {
                                 className: i(_.headerContent, _.primaryInfo),
                                 children: [(0, l.jsx)(m.default, {
-                                    guild: R,
+                                    guild: x,
                                     isBannerVisible: n
                                 }), (0, l.jsxs)(u.Text, {
                                     color: "none",
                                     variant: "text-md/semibold",
                                     lineClamp: 1,
                                     className: _.name,
-                                    children: [R.toString(), (0, l.jsx)(N, {
-                                        guild: R
-                                    })]
+                                    children: [x.id === E.FAVORITES_RAW_GUILD_ID && (0, l.jsx)(N, {}), x.toString()]
                                 }), null != f && (0, l.jsx)(u.Clickable, {
                                     className: _.headerButton,
-                                    "aria-controls": L,
-                                    "aria-expanded": A,
+                                    "aria-controls": R,
+                                    "aria-expanded": L,
                                     focusProps: {
-                                        ringTarget: B,
+                                        ringTarget: V,
                                         offset: 4
                                     },
                                     onClick: f,
                                     onContextMenu: h,
                                     "aria-label": g.default.Messages.GUILD_SIDEBAR_ACTIONS_BUTTON.format({
-                                        guildName: null !== (t = null == R ? void 0 : R.toString()) && void 0 !== t ? t : ""
+                                        guildName: null !== (t = null == x ? void 0 : x.toString()) && void 0 !== t ? t : ""
                                     })
                                 }), (0, l.jsx)("div", {
                                     className: _.headerChildren,
-                                    children: M
+                                    children: O
                                 })]
-                            }), G && (0, l.jsx)(I, {
-                                guild: R,
+                            }), U && (0, l.jsx)(I, {
+                                guild: x,
                                 controller: s,
-                                hasBanner: null != x,
-                                hasSubheader: null != D && D
+                                hasBanner: null != v,
+                                hasSubheader: null != b && b
                             })]
-                        }), null != x ? (0, l.jsx)(S, {
-                            guild: R,
+                        }), null != v ? (0, l.jsx)(S, {
+                            guild: x,
                             controller: s,
-                            guildBanner: x,
-                            animate: P
+                            guildBanner: v,
+                            animate: w
                         }) : null]
-                    }), U && k() ? (0, l.jsx)("div", {
+                    }), P && Y() ? (0, l.jsx)("div", {
                         className: _.animatedBannerHoverLayer,
                         onMouseEnter: () => {
-                            w(!0), clearTimeout(V.current)
+                            F(!0), clearTimeout(H.current)
                         },
-                        onMouseLeave: () => w(!1),
+                        onMouseLeave: () => F(!1),
                         style: {
-                            height: v
+                            height: M
                         }
                     }) : null]
                 })
@@ -11623,7 +11616,7 @@
                 w = n("648647"),
                 F = n("982360"),
                 B = n("628570"),
-                V = n("597680"),
+                V = n("634384"),
                 H = n("822485"),
                 k = n("798573"),
                 Y = n("795853"),
@@ -11790,9 +11783,9 @@
                                 }),
                                 ref: em.scrollerRef,
                                 onScroll: em.handleScroll,
-                                children: [(0, l.jsx)(k.HomeButton, {}), eN ? (0, l.jsx)(V.default, {}) : null, (0, l.jsx)(F.default, {}), (0, l.jsx)(Y.default, {
+                                children: [(0, l.jsx)(k.HomeButton, {}), (0, l.jsx)(F.default, {}), (0, l.jsx)(Y.default, {
                                     isOnHubVerificationRoute: e_
-                                }), (0, l.jsx)(P.default, {}), E.map(e => (0, l.jsx)(X.default, {
+                                }), (0, l.jsx)(P.default, {}), eN ? (0, l.jsx)(V.default, {}) : null, E.map(e => (0, l.jsx)(X.default, {
                                     guildId: e
                                 }, e)), g ? (0, l.jsx)(Q.default, {}) : null, !n && eS ? (0, l.jsx)(H.default, {
                                     ref: em.guildDiscoveryRef,
@@ -12256,7 +12249,7 @@
                 })
             }
         },
-        597680: function(e, t, n) {
+        634384: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
