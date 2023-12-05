@@ -1746,7 +1746,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "251601"
+                        buildNumber: "251606"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -16289,38 +16289,6 @@
                     })]
                 })
             }
-        },
-        954732: function(e, t, n) {
-            "use strict";
-            n.r(t), n("222007");
-            var a = n("446674"),
-                s = n("913144");
-            let l = [];
-            class i extends a.default.Store {
-                getInvites() {
-                    return l
-                }
-            }
-            i.displayName = "GameInviteStore", new i(s.default, {
-                CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
-                    let {
-                        gameInvites: t
-                    } = e;
-                    l = t
-                },
-                GAME_INVITE_CREATE: function(e) {
-                    let {
-                        gameInvite: t
-                    } = e;
-                    l = [...l, t]
-                },
-                GAME_INVITE_DELETE: function(e) {
-                    let {
-                        inviteId: t
-                    } = e;
-                    l = l.filter(e => e.invite_id !== t)
-                }
-            })
         },
         132943: function(e, t, n) {
             "use strict";
