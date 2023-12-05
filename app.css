@@ -58602,7 +58602,7 @@ html .progress__4ef76 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 16px;
     gap: 4px
 }
 
@@ -92897,6 +92897,13 @@ html .invoiceCancelRow_a8669b {
     grid-gap: 0 8px;
     gap: 0 8px;
     cursor: pointer
+}
+
+.memberNameText__731e2 {
+    display: block;
+    max-width: 600px;
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 
 .memberName__747da {
