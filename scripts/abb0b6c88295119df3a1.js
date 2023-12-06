@@ -870,7 +870,7 @@
                                     children: this.buttonText
                                 })]
                             })]
-                        }), null != a.giftStyle && !u && (0, i.jsx)(i.Fragment, {
+                        }), null != a.giftStyle && !u && this.step !== B.GiftCodeModalStates.ERROR && (0, i.jsx)(i.Fragment, {
                             children: !x && !t && b && (null == p || null == C ? (0, i.jsx)(W, {
                                 openedGift: b && !x && !t
                             }) : (0, i.jsx)(w.default, {
