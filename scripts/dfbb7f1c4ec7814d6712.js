@@ -420,7 +420,7 @@
                         [m.tabDisabled]: n,
                         [m.preview]: !a && null != u
                     }),
-                    "aria-label": "",
+                    "aria-label": s,
                     children: [(0, l.jsx)("div", {
                         className: m.iconContainer,
                         children: t
@@ -825,7 +825,8 @@
             }
 
             function h() {
-                let e = (0, u.useGuildProductsSortOptionContext)();
+                let e = (0, u.useGuildProductsSortOptionContext)(),
+                    t = (0, c.getGuildProductSortOptionLabel)(e.sortOption);
                 return (0, l.jsx)(r.Popout, {
                     renderPopout: t => {
                         let {
@@ -838,24 +839,25 @@
                     },
                     position: "bottom",
                     align: "left",
-                    children: (t, s) => {
+                    children: (e, s) => {
                         let {
                             isShown: i
                         } = s;
                         return (0, l.jsxs)(r.Button, {
-                            ...t,
+                            ...e,
                             size: r.Button.Sizes.MIN,
                             color: r.Button.Colors.CUSTOM,
                             className: _.sortDropdown,
                             innerClassName: _.sortDropdownInner,
-                            "aria-label": C.default.Messages.GUILD_STORE_SORT_OPTION_TOGGLE_ARIA,
-                            children: [(0, l.jsx)(o.default, {}), (0, l.jsx)(a.default, {
+                            children: [(0, l.jsx)(o.default, {
+                                "aria-label": C.default.Messages.GUILD_STORE_SORT_OPTION_TOGGLE_ARIA
+                            }), (0, l.jsx)(a.default, {
                                 size: 8,
                                 horizontal: !0
                             }), (0, l.jsx)(r.Text, {
                                 variant: "text-sm/medium",
                                 color: "header-primary",
-                                children: (0, c.getGuildProductSortOptionLabel)(e.sortOption)
+                                children: t
                             }), i ? (0, l.jsx)(d.default, {
                                 width: 20
                             }) : (0, l.jsx)(n.default, {
