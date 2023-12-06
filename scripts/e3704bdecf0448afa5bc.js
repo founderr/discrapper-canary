@@ -1920,18 +1920,18 @@
                         })
                     };
                 if (void 0 === er && null != en && !1 === ep) return null;
-                let eA = null != ed ? {
-                    backgroundColor: ex ? "var(--background-floating)" : "var(--background-secondary)",
-                    borderColor: "var(--chat-border)",
-                    boxShadow: el ? "0 0 25px 1px ".concat(ed.primary.toHslString()) : "none"
-                } : void 0;
+                let eA = ex ? "0 0 15px 1px ".concat(i.default.unsafe_rawColors.WHITE_800.css) : "var(--elevation-high)";
                 return (0, l.jsx)(u.FocusRing, {
                     children: (0, l.jsxs)(u.Clickable, {
                         innerRef: Q,
                         className: K.shopCard,
                         onBlur: () => ea(!1),
                         onClick: eI,
-                        style: eA,
+                        style: null != ed ? {
+                            backgroundColor: ex ? "var(--background-floating)" : "var(--background-secondary)",
+                            borderColor: "var(--chat-border)",
+                            boxShadow: el ? eA : "none"
+                        } : void 0,
                         id: "shop-item-".concat(t.skuId),
                         children: [eC && (0, l.jsx)(u.Tooltip, {
                             tooltipContentClassName: K.premiumWheelTooltipContent,

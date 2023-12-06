@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["67615"], {
+    ["30304"], {
         273215: function(e, t, n) {
             "use strict";
             e.exports = n.p + "63900a1ba1f23d305c53.png"
@@ -19619,7 +19619,11 @@
             }
 
             function C(e, t) {
-                return null != t.id ? t.id === e.id : null == e.id && t.name === e.name
+                if (null != t.id) {
+                    let n = null != e.id ? "".concat(e.id) : e.id;
+                    return "".concat(t.id) === n
+                }
+                return null == e.id && t.name === e.name
             }
 
             function m() {
