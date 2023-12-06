@@ -2470,7 +2470,7 @@
                 (0, g.shouldShowNitroBadge)(null != T, "Message Username") && el && !v && !en && et.push((0, l.jsx)(K, {
                     currentUserIsPremium: er,
                     author: n.author
-                })), null != ee && et.push(ee), null != Y && et.push((0, l.jsx)(x.default, {
+                }, "nitro-author")), null != ee && et.push(ee), null != Y && et.push((0, l.jsx)(x.default, {
                     guild: Y,
                     message: n
                 }, "new-member")), null != k && null != Y && et.push((0, l.jsx)(u.default, {
