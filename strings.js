@@ -884,6 +884,10 @@
                 EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_RATE_AND_RENEWAL: "Hey! This purchase is for a recurring subscription, which will renew for **{rate}** on **{renewalDate, date, medium}**. You may cancel anytime under User Settings > Subscriptions, and previous charges won’t be refunded unless required by law. This purchase is being offered to you by the developer of this Activity and can be accessed and used only when you’re in this Activity.",
                 EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL: "Minimize activity",
                 EMBEDDED_ACTIVITIES_EXPAND_A11Y_LABEL: "Expand activity",
+                KRUNKER_STRIKE_COACHMARK_TITLE: "New Activity! Krunker Strike FRVR",
+                KRUNKER_STRIKE_COACHMARK_DESCRIPTION: "Squad up with friends or other players around the world and battle your way to victory in this first person shooter game",
+                KRUNKER_STRIKE_COACHMARK_BUTTON_CANCEL: "Maybe later",
+                KRUNKER_STRIKE_COACHMARK_BUTTON_ACCEPT: "Try it out",
                 ACTIVITY_REPORT_POST_ACTIVITY_HEADER: "How'd !!{applicationName}!! go?",
                 ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE: "What could have gone better?",
                 ACTIVITY_REPORTED_POSITIVE: "Thanks for sharing! Feedback like yours helps us improve Activities.",
@@ -18276,7 +18280,7 @@
                 u = E("782340");
             (0, a.setUpdateRules)(s.default), (0, n.default)(u.default, o.default, T.default), i.default.Emitter.injectBatchEmitChanges(r.batchUpdates), i.default.PersistedStore.disableWrites = __OVERLAY__, i.default.initialize();
             let L = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("251816", ", Version Hash: ").concat("92c5e73cd8d9cd848bd2a65eee537f25a545ac50")), t.default.setTags({
+            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("251819", ", Version Hash: ").concat("35fdab872611880cd54d5980f9c323d4ffd47368")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), I.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
         },
@@ -20570,8 +20574,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "251816", "251816"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("251816")), _ = 0), _
+                let _ = parseInt((e = "251819", "251819"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("251819")), _ = 0), _
             }
         },
         990629: function(e, _, E) {
