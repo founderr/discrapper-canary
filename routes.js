@@ -1567,7 +1567,8 @@
                     CLYDE_PROFILES: _ => "/clyde-profiles/".concat(_),
                     CLYDE_PROFILES_CREATE: _ => "/guilds/".concat(_, "/clyde-profiles"),
                     CLYDE_PROFILES_GENERATE_PERSONALITY: "/clyde-profiles/generate-personality",
-                    POLL_ANSWERS: (_, E) => "/channels/".concat(_, "/polls/").concat(E, "/answers")
+                    POLL_ANSWERS: (_, E) => "/channels/".concat(_, "/polls/").concat(E, "/answers"),
+                    PREMIUM_MARKETING: "/premium-marketing"
                 }),
                 I6 = Object.freeze({
                     INDEX: "/",
