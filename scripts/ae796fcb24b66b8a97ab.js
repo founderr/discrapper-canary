@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["49116"], {
+    ["47106"], {
         69448: function(e, t, n) {
             "use strict";
             e.exports = n.p + "f6da6e7ed1d57e445d0e.svg"
@@ -31,18 +31,18 @@
                     selectable: _ = !1,
                     onFocus: g,
                     onBlur: E,
-                    onMouseOver: p,
+                    onMouseOver: S,
                     onMouseLeave: h,
-                    ...S
-                } = e, [I, M] = s.useState(!1), v = s.useCallback(() => {
+                    ...p
+                } = e, [I, M] = s.useState(!1), R = s.useCallback(() => {
                     M(!0), null == g || g()
-                }, [g]), R = s.useCallback(() => {
+                }, [g]), v = s.useCallback(() => {
                     M(!1), null == E || E()
                 }, [E]), y = s.useCallback(() => {
-                    M(!0), null == p || p()
-                }, [p]), A = s.useCallback(() => {
+                    M(!0), null == S || S()
+                }, [S]), A = s.useCallback(() => {
                     M(!1), null == h || h()
-                }, [h]), C = s.useMemo(() => {
+                }, [h]), k = s.useMemo(() => {
                     if (t.type === d.ApplicationCommandSectionType.APPLICATION) {
                         var e;
                         return l.default.getApplicationIconURL({
@@ -56,13 +56,13 @@
                     return o
                 }, [t, i]);
                 return (0, a.jsx)("div", {
-                    ...S,
+                    ...p,
                     className: r(c.wrapper, f, {
                         [c.selectable]: _,
                         [c.selected]: _ && n
                     }),
-                    onFocus: v,
-                    onBlur: R,
+                    onFocus: R,
+                    onBlur: v,
                     onMouseOver: y,
                     onMouseLeave: A,
                     children: (0, a.jsx)(u.default, {
@@ -77,7 +77,7 @@
                                 width: i,
                                 height: m
                             },
-                            src: C
+                            src: k
                         })
                     })
                 })
@@ -178,25 +178,6 @@
                 }
             }
         },
-        633043: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return r
-                }
-            });
-            var a = n("37983");
-            n("884691");
-            var s = n("77078"),
-                i = n("850572"),
-                r = () => (0, a.jsx)("div", {
-                    className: i.loadingWrapper,
-                    children: (0, a.jsx)(s.Dots, {
-                        dotRadius: 4,
-                        themed: !0
-                    })
-                })
-        },
         931318: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -210,7 +191,7 @@
                     return E
                 },
                 completeMessageReminders: function() {
-                    return p
+                    return S
                 },
                 cleanupMessageReminders: function() {
                     return h
@@ -293,7 +274,7 @@
                 })
             }
 
-            function p(e) {
+            function S(e) {
                 c.default.track(f.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
                     skipped: !1,
                     reason: "complete and clear immediately",
@@ -313,7 +294,7 @@
                 e.some(e => e.complete) && I([], e.filter(e => e.complete))
             }
 
-            function S(e) {
+            function p(e) {
                 c.default.track(f.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
                     skipped: !1,
                     reason: "updated_from_server",
@@ -332,7 +313,7 @@
                         removed: t.map(m.savedMessageToServer)
                     }
                 }).then(e => {
-                    S(e.body.saved_messages.map(m.savedMessageToClient))
+                    p(e.body.saved_messages.map(m.savedMessageToClient))
                 })
             }
 
@@ -342,7 +323,7 @@
                 }).then(e => {
                     let t = e.body.saved_messages,
                         n = t.map(m.savedMessageToClient);
-                    S(n)
+                    p(n)
                 })
             }
         },
@@ -633,111 +614,6 @@
                         query: e,
                         search_type: r.SearchTypes.STICKER,
                         source_object: "Sticker Picker"
-                    })
-                }
-        },
-        563816: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return S
-                }
-            });
-            var a = n("37983"),
-                s = n("884691"),
-                i = n("627445"),
-                r = n.n(i),
-                u = n("446674"),
-                l = n("77078"),
-                d = n("240249"),
-                c = n("524768"),
-                o = n("389153"),
-                m = n("916565"),
-                f = n("355263"),
-                _ = n("633043"),
-                g = n("305961"),
-                E = n("317041"),
-                p = n("782340"),
-                h = n("205735"),
-                S = e => {
-                    let {
-                        commandType: t,
-                        commandTargetId: n,
-                        channel: i,
-                        guildId: S,
-                        onShow: I
-                    } = e, M = s.useRef(!1), v = s.useRef(0), R = (0, u.useStateFromStores)([g.default], () => g.default.getGuild(null != S ? S : i.guild_id)), {
-                        hasMoreAfter: y,
-                        scrollDown: A,
-                        sectionDescriptors: C,
-                        commands: k,
-                        placeholders: T
-                    } = d.useDiscovery(i, {
-                        commandType: t
-                    }, {
-                        placeholderCount: E.CONTEXT_MENU_PLACEHOLDER_COUNT,
-                        limit: E.CONTEXT_MENU_COMMANDS_QUERY_LIMIT
-                    }), {
-                        visibleCommands: N,
-                        sections: D
-                    } = s.useMemo(() => {
-                        let e = k.concat(T),
-                            t = {};
-                        return C.forEach(e => {
-                            t[e.id] = e
-                        }), {
-                            visibleCommands: e,
-                            sections: t
-                        }
-                    }, [k, C, T]), L = s.useMemo(() => (0, o.canUseContextMenuCommands)(i, N.length, d.getCommandTypeCount(i, t, null == R ? void 0 : R.applicationCommandCounts)), [i, t, N.length, null == R ? void 0 : R.applicationCommandCounts]);
-                    s.useEffect(() => {
-                        L !== M.current && (L && (null == I || I()), M.current = L)
-                    }, [L, I]), s.useEffect(() => {
-                        O(v.current)
-                    }, [N]);
-                    let O = s.useCallback(e => {
-                            y && e + 500 > 34 * N.length - 40 && A(), v.current = e
-                        }, [y, A, N]),
-                        x = s.useCallback(e => {
-                            if (e.inputType === c.ApplicationCommandInputType.PLACEHOLDER) return (0, a.jsx)(l.MenuItem, {
-                                id: "menu-command-".concat(e.id),
-                                render: () => (0, a.jsx)(_.default, {})
-                            }, "menu-command-".concat(e.id));
-                            r(null != i, "menu item should not show if channel is null");
-                            let t = D[e.applicationId],
-                                s = null != t ? (0, f.getIconComponent)(t) : void 0;
-                            return (0, a.jsx)(l.MenuItem, {
-                                id: e.id,
-                                label: e.displayName,
-                                showIconFirst: !0,
-                                icon: () => null != s ? (0, a.jsx)(s, {
-                                    channel: i,
-                                    section: t,
-                                    width: 18,
-                                    height: 18,
-                                    selectable: !1
-                                }) : null,
-                                action: () => {
-                                    (0, m.default)({
-                                        command: e,
-                                        optionValues: {},
-                                        context: {
-                                            channel: i,
-                                            guild: R
-                                        },
-                                        commandTargetId: n
-                                    })
-                                }
-                            }, e.id)
-                        }, [i, R, n, D]);
-                    return L && (0, a.jsx)(l.MenuItem, {
-                        id: "apps",
-                        label: p.default.Messages.APPS,
-                        onChildrenScroll: O,
-                        childRowHeight: 34,
-                        listClassName: h.list,
-                        disabled: 0 === N.length,
-                        children: N.map(x)
                     })
                 }
         },

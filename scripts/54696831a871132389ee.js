@@ -16912,7 +16912,7 @@
                                 naturalWidth: Y,
                                 naturalHeight: W,
                                 className: i(D, {
-                                    [x.noBottomBorderRadius]: H
+                                    [x.noBorderBottomRadius]: H
                                 }),
                                 playable: U,
                                 responsive: !0,
@@ -16923,7 +16923,7 @@
                                 mimeType: $,
                                 onPlay: p,
                                 downloadable: !q,
-                                mediaPlayerClassName: H ? x.noBottomBorderRadius : void 0
+                                mediaPlayerClassName: H ? x.noBorderBottomRadius : void 0
                             });
                         case "AUDIO":
                             return L({
@@ -17012,7 +17012,8 @@
                             [x.messageAttachmentNoJustify]: D,
                             [x.messageAttachmentFullWidth]: d,
                             [x.messageAttachmentMediaMosaic]: v,
-                            [x.hideOverflow]: v && j
+                            [x.hideOverflow]: v && j,
+                            [x.noBorderBottomRadius]: null != E
                         }),
                         children: null != C ? (0, a.jsx)(p.default, {
                             type: p.default.Types.ATTACHMENT,
