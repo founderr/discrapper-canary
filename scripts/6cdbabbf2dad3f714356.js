@@ -703,8 +703,8 @@
                     guildEvent: n,
                     guildId: x,
                     truncate: G,
-                    onActionTaken: D,
-                    className: R,
+                    onActionTaken: R,
+                    className: D,
                     isNew: L
                 } = e, {
                     id: U,
@@ -739,7 +739,7 @@
                     guildScheduledEvent: n,
                     isActive: K,
                     recurrenceId: b,
-                    onActionTaken: D
+                    onActionTaken: R
                 }), en = (0, i.default)(x), el = H ? void 0 : e => (0, E.openGuildEventDetails)({
                     eventId: U,
                     parentGuildId: x,
@@ -766,7 +766,7 @@
                     rsvped: k,
                     canInvite: Q,
                     ...et,
-                    className: R,
+                    className: D,
                     onClick: el,
                     truncate: G,
                     isNew: L,
@@ -808,8 +808,8 @@
                 I = n("707916"),
                 x = n("255050"),
                 G = n("400271"),
-                D = n("427554"),
-                R = n("644189"),
+                R = n("427554"),
+                D = n("644189"),
                 L = n("29913"),
                 U = n("745049"),
                 y = n("49111"),
@@ -988,7 +988,7 @@
                                 location: b,
                                 isExternal: en,
                                 isHub: M
-                            }), M ? (0, i.jsx)(R.default, {
+                            }), M ? (0, i.jsx)(D.default, {
                                 isActive: h,
                                 isUserLurking: m,
                                 isMember: y,
@@ -1018,7 +1018,7 @@
                         }), er && (0, i.jsx)("hr", {
                             className: A.divider
                         })]
-                    }), er && (0, i.jsx)(D.default, {
+                    }), er && (0, i.jsx)(R.default, {
                         guildId: null == l ? void 0 : l.id,
                         recurrenceRule: $,
                         guildEventId: X,
@@ -1075,8 +1075,8 @@
                 I = n("534222"),
                 x = n("473031"),
                 G = n("266763"),
-                D = n("842672"),
-                R = n("745049"),
+                R = n("842672"),
+                D = n("745049"),
                 L = n("49111"),
                 U = n("133335"),
                 y = n("782340"),
@@ -1087,7 +1087,7 @@
                     transitionState: t,
                     onClose: i,
                     guildId: A
-                } = e, V = (0, h.useUID)(), j = (0, s.useStateFromStores)([S.default], () => S.default.getGuild(A)), P = (0, p.default)(null == j ? void 0 : j.id), O = (0, I.default)(A), F = u.useRef(g.default.ackMessageId(A, U.ReadStateTypes.GUILD_EVENT)), b = (0, D.default)();
+                } = e, V = (0, h.useUID)(), j = (0, s.useStateFromStores)([S.default], () => S.default.getGuild(A)), P = (0, p.default)(null == j ? void 0 : j.id), O = (0, I.default)(A), F = u.useRef(g.default.ackMessageId(A, U.ReadStateTypes.GUILD_EVENT)), b = (0, R.default)();
                 return u.useEffect(() => {
                     O.forEach(e => T.default.getGuildEventUserCounts(A, e.id, [])), T.default.getGuildEventsForCurrentUser(A)
                 }, [O, A]), u.useEffect(() => {
@@ -1104,7 +1104,7 @@
                     null != n && c.fetchDirectoryEntries(n.id)
                 }, [A]), u.useEffect(() => {
                     C.default.track(L.AnalyticEvents.OPEN_MODAL, {
-                        type: R.ANALYTICS_GUILD_EVENTS_MODAL_NAME,
+                        type: D.ANALYTICS_GUILD_EVENTS_MODAL_NAME,
                         guild_id: A,
                         guild_events_count: O.length
                     })
@@ -1310,6 +1310,9 @@
         936965: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
+                updateRsvp: function() {
+                    return g
+                },
                 default: function() {
                     return m
                 }
@@ -1511,11 +1514,11 @@
                     I = d.default.isFetchingProfile(e),
                     x = (null == _ ? void 0 : _.profileFetchFailed) || !I && (!Array.isArray(T) && v || null == p && S),
                     G = h ? o.default : void 0,
-                    D = !1;
+                    R = !1;
                 if (null != N) {
                     let t = d.default.getGuildMemberProfile(e, N);
-                    D = null == t
-                }!(!x && !D && (I || Date.now() - (null !== (f = null == _ ? void 0 : _.lastFetched) && void 0 !== f ? f : 0) < 6e4)) && (m ? await l.default.wait(() => (0, u.fetchProfile)(e, {
+                    R = null == t
+                }!(!x && !R && (I || Date.now() - (null !== (f = null == _ ? void 0 : _.lastFetched) && void 0 !== f ? f : 0) < 6e4)) && (m ? await l.default.wait(() => (0, u.fetchProfile)(e, {
                     withMutualGuilds: v,
                     withMutualFriendsCount: S,
                     friendToken: g,
