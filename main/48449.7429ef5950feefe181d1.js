@@ -1921,7 +1921,7 @@
                             return (null !== (o = null == t ? void 0 : t.length) && void 0 !== o ? o : 0) > 1 && this.logger.warn("setClipRecordSSRC: More than one video SSRC for user ".concat(e, "! Behavior undefined.")), null == t ? void 0 : t[0]
                         }
                     })();
-                    null != o && (null === (a = this._connection) || void 0 === a || a.setClipRecordSsrc(o, t, n, i))
+                    null != o && (null === (a = this._connection) || void 0 === a || a.setClipRecordSsrc(e, o, t, n, i))
                 }
                 set channelId(e) {
                     this._channelId = e, this.channelIds.add(e)
@@ -14939,7 +14939,7 @@
                         var i;
                         let c = {
                                 environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                                build_number: "251663"
+                                build_number: "251664"
                             },
                             h = l.default.getCurrentUser();
                         null != h && (c.user_id = h.id, c.user_name = h.tag, null != h.email && (c.email = h.email));
@@ -15519,7 +15519,7 @@
                 setUseElectronVideo(e) {
                     this.useElectronVideo = e
                 }
-                setClipRecordSsrc(e, t, n, i) {}
+                setClipRecordSsrc(e, t, n, i, s) {}
                 getRemoteVideoSSRCsForUser(e) {
                     return []
                 }
@@ -15976,7 +15976,7 @@
                 saveClip(e, t) {
                     return Promise.reject(Error("UNSUPPORTED"))
                 }
-                saveClipForSSRC(e, t, n, i) {
+                saveClipForSSRC(e, t, n, i, s) {
                     return Promise.reject(Error("UNSUPPORTED"))
                 }
                 updateClipMetadata(e, t) {
@@ -16423,7 +16423,9 @@
                             address: r,
                             port: l
                         } = a;
-                        this.logger.info("Connected with local address ".concat(r, ":").concat(l, " and protocol: ").concat(o)), this.experimentFlags.has(S.ExperimentFlags.STREAMER_CLIP) && this.setClipRecordSsrc(this.audioSSRC, "audio", "outbound", !0), i(i => {
+                        this.logger.info("Connected with local address ".concat(r, ":").concat(l, " and protocol: ").concat(o));
+                        let u = this.context === g.MediaEngineContextTypes.STREAM && this.ids.userId !== this.streamUserId;
+                        this.experimentFlags.has(S.ExperimentFlags.STREAMER_CLIP) && !u && this.setClipRecordSsrc(this.ids.userId, this.audioSSRC, "audio", "outbound", !0), i(i => {
                             let s = (0, h.getExperimentCodecs)(this.experimentFlags);
                             this.codecs = [{
                                 type: "audio",
@@ -16565,10 +16567,10 @@
                 getRemoteAudioSSRCForUser(e) {
                     return this.remoteAudioSSRCs[e]
                 }
-                setClipRecordSsrc(e, t, n, i) {
+                setClipRecordSsrc(e, t, n, i, s) {
                     if (!this.destroyed) {
-                        var s, a, o, r;
-                        null != this.conn.setClipRecordSsrc2 ? null === (s = (a = this.conn).setClipRecordSsrc2) || void 0 === s || s.call(a, e, this.context === g.MediaEngineContextTypes.STREAM ? "application" : "user", i) : null != this.conn.setClipRecordSsrc && (null === (o = (r = this.conn).setClipRecordSsrc) || void 0 === o || o.call(r, e, t, n, i))
+                        var a, o, r, l;
+                        null != this.conn.setClipRecordUser ? this.conn.setClipRecordUser(e, (this.context === g.MediaEngineContextTypes.STREAM ? "application" : "user").concat("audio" === n ? "Audio" : "Video"), s) : null != this.conn.setClipRecordSsrc2 ? null === (a = (o = this.conn).setClipRecordSsrc2) || void 0 === a || a.call(o, t, this.context === g.MediaEngineContextTypes.STREAM ? "application" : "user", s) : null != this.conn.setClipRecordSsrc && (null === (r = (l = this.conn).setClipRecordSsrc) || void 0 === r || r.call(l, t, n, i, s))
                     }
                 }
                 setViewerSideClip(e) {
@@ -17070,7 +17072,7 @@
                         !this.videoEncoderFallbackPending && (this.logger.info("Falling back from current video encoder:" + e), this.codecs = this.codecs.map(t => ((e === t.name || "AV1" === t.name && "AV1X" === e) && (t.encode = !1), t)).filter(e => !("video" === e.type && !1 === e.encode && !1 === e.decode)), this.emit(c.BaseConnectionEvent.VideoEncoderFallback, this.codecs), this.videoEncoderFallbackPending = !0)
                     }, this.handleVideo = (e, t, n, i) => {
                         let s = a.cloneDeep(this.videoStreamParameters);
-                        e === this.ids.userId ? (this.experimentFlags.has(S.ExperimentFlags.STREAMER_CLIP) && this.context === g.MediaEngineContextTypes.STREAM && this.streamUserId === this.ids.userId && t > 0 && this.setClipRecordSsrc(t, "video", "outbound", !0), null != i && Array.isArray(i) && i.length > 0 ? i.forEach(e => {
+                        e === this.ids.userId ? (this.experimentFlags.has(S.ExperimentFlags.STREAMER_CLIP) && this.context === g.MediaEngineContextTypes.STREAM && this.streamUserId === this.ids.userId && t > 0 && this.setClipRecordSsrc(this.ids.userId, t, "video", "outbound", !0), null != i && Array.isArray(i) && i.length > 0 ? i.forEach(e => {
                             s.forEach((t, n) => {
                                 t.rid === e.rid && (s[n] = {
                                     ...t,
@@ -17756,7 +17758,7 @@
                 }
                 saveClip(e, t) {
                     let n = (0, f.getVoiceEngine)();
-                    return null == n.setClipBufferLength ? Promise.reject("unsupported") : new Promise((i, s) => {
+                    return null == n.setClipBufferLength || null == n.saveClip ? Promise.reject("unsupported") : new Promise((i, s) => {
                         n.saveClip(e, t, (e, t, n) => {
                             let s = JSON.parse(n);
                             return i({
@@ -17770,20 +17772,22 @@
                         })
                     })
                 }
-                saveClipForSSRC(e, t, n, i) {
-                    let s = (0, f.getVoiceEngine)();
-                    return null == s.saveClipForSSRC ? Promise.reject("unsupported") : new Promise((a, o) => {
-                        s.saveClipForSSRC(e, t, n, i, (e, t, n) => {
-                            let i = JSON.parse(n);
-                            return a({
-                                duration: e,
-                                thumbnail: t,
-                                clipStats: i
-                            })
-                        }, e => {
-                            let t = JSON.parse(e);
-                            return o(t)
-                        })
+                saveClipForSSRC(e, t, n, i, s) {
+                    let a = (0, f.getVoiceEngine)();
+                    return null == a.saveClipForSSRC && null == a.saveClipForUser ? Promise.reject("unsupported") : new Promise((o, r) => {
+                        let l = (e, t, n) => {
+                                let i = JSON.parse(n);
+                                return o({
+                                    duration: e,
+                                    thumbnail: t,
+                                    clipStats: i
+                                })
+                            },
+                            u = e => {
+                                let t = JSON.parse(e);
+                                return r(t)
+                            };
+                        null != a.saveClipForUser ? a.saveClipForUser(e, i, s, l, u) : a.saveClipForSSRC(t, n, i, s, l, u)
                     })
                 }
                 updateClipMetadata(e, t) {
@@ -21229,7 +21233,7 @@
                 saveClip(e, t) {
                     return Promise.reject(Error("UNSUPPORTED"))
                 }
-                saveClipForSSRC(e, t, n, i) {
+                saveClipForSSRC(e, t, n, i, s) {
                     return Promise.reject(Error("UNSUPPORTED"))
                 }
                 updateClipMetadata(e, t) {
