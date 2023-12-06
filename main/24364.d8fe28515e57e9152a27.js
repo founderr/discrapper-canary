@@ -33456,6 +33456,10 @@
                 [_.AnalyticEvents.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED]: {
                     throttlePeriod: 6e4,
                     throttleKeys: e => [e.guild_id, e.channel_id]
+                },
+                [_.AnalyticEvents.LIVE_ACTIVITY_SETTINGS_UPDATED]: {
+                    throttlePeriod: 36e5,
+                    throttleKeys: () => []
                 }
             };
 
