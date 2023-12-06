@@ -1424,41 +1424,42 @@
                     pendingText: f,
                     placeholder: m,
                     currentText: S,
-                    innerClassName: N,
-                    disabled: P = !1,
-                    disableThemedBackground: T = !1
-                } = e, [C, A] = s.useState(null != f ? f : S), [O, R] = s.useState((0, o.toRichValue)(C)), h = s.useRef(!1);
+                    className: N,
+                    innerClassName: P,
+                    disabled: T = !1,
+                    disableThemedBackground: C = !1
+                } = e, [A, O] = s.useState(null != f ? f : S), [R, h] = s.useState((0, o.toRichValue)(A)), g = s.useRef(!1);
                 return s.useEffect(() => {
-                    h.current = !0
+                    g.current = !0
                 }, []), s.useEffect(() => {
                     if (void 0 === f) {
                         let e = (0, o.toRichValue)(S);
-                        A(S), R(e)
+                        O(S), h(e)
                     }
                 }, [f, S]), (0, r.jsx)("div", {
-                    className: I.body,
+                    className: i(I.body, N),
                     children: (0, r.jsxs)(d.default, {
                         title: t,
                         errors: n,
-                        disabled: P,
+                        disabled: T,
                         children: [(0, r.jsx)(c.default, {
-                            innerClassName: i(I.textArea, N),
+                            innerClassName: i(I.textArea, P),
                             maxCharacterCount: E,
                             onChange: function(e, t, n) {
-                                t !== C && (A(t), R(n), a(t))
+                                t !== A && (O(t), h(n), a(t))
                             },
                             placeholder: m,
                             channel: p,
-                            textValue: C,
-                            richValue: O,
+                            textValue: A,
+                            richValue: R,
                             type: u.ChatInputTypes.CUSTOM_GIFT,
                             onBlur: () => {
-                                h.current = !1
+                                g.current = !1
                             },
                             onFocus: () => {
-                                h.current = !0
+                                g.current = !0
                             },
-                            focused: h.current,
+                            focused: g.current,
                             onSubmit: function() {
                                 return new Promise(e => {
                                     e({
@@ -1467,7 +1468,7 @@
                                     })
                                 })
                             },
-                            disableThemedBackground: T
+                            disableThemedBackground: C
                         }), (0, r.jsx)(l.HiddenVisually, {
                             children: _.default.Messages.MAXIMUM_LENGTH.format({
                                 maxLength: E
