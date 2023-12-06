@@ -1444,6 +1444,7 @@
                         disabled: T,
                         children: [(0, r.jsx)(c.default, {
                             innerClassName: i(I.textArea, P),
+                            editorClassName: I.editorTextArea,
                             maxCharacterCount: E,
                             onChange: function(e, t, n) {
                                 t !== A && (O(t), h(n), a(t))

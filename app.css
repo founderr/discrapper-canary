@@ -19479,8 +19479,8 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -27041,6 +27041,12 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
 
 .textAreaForPostCreation_d82a1b {
     padding: 0 !important
+}
+
+.textAreaCustomGift_eafd3f[role=textbox] {
+    position: absolute !important;
+    height: 100%;
+    box-sizing: border-box
 }
 
 @media all and (-webkit-max-device-pixel-ratio:1) {
@@ -81051,6 +81057,10 @@ input::-webkit-inner-spin-button {
 
 .textArea__771cd>div {
     height: 100%
+}
+
+.editorTextArea__5ee78 {
+    height: 136px
 }
 
 .theme-dark .textArea__771cd *>span {
