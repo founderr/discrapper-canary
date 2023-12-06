@@ -2743,6 +2743,9 @@
                 BEGINNING_GROUP_DM_MANAGED: "You will automatically leave this group when you're done.",
                 BEGINNING_GROUP_DM: "Welcome to the beginning of the **!!{name}!!** group.",
                 BEGINNING_GROUP_DM_NEW: "Welcome to your new group! Invite friends whenever you're ready.",
+                GROUP_DM_SINGLE_USER_SUMMARY: "!!{user}!!",
+                GROUP_DM_TWO_USER_SUMMARY: "!!{user1}!! and !!{user2}!!",
+                GROUP_DM_MULTIPLE_USER_SUMMARY: "!!{user1}!!, !!{user2}!!, and {extras, plural, =1 {{extras, number} other} other {{extras, number} others}}",
                 BEGINNING_CHANNEL_NO_HISTORY: "You do not have permission to view the message history of **#!!{channelName}!!**.",
                 BEGINNING_CHANNEL_WELCOME: "Welcome to !!{channelName}!!!",
                 BEGINNING_CHANNEL_DESCRIPTION: "This is the start of the !!{channelName}!! channel. $[](topicHook)",
@@ -18273,7 +18276,7 @@
                 u = E("782340");
             (0, a.setUpdateRules)(s.default), (0, n.default)(u.default, o.default, T.default), i.default.Emitter.injectBatchEmitChanges(r.batchUpdates), i.default.PersistedStore.disableWrites = __OVERLAY__, i.default.initialize();
             let L = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("251799", ", Version Hash: ").concat("08c621e70004020d6fd2597c898f9bc3795a821e")), t.default.setTags({
+            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("251804", ", Version Hash: ").concat("857cbe4e504628ecb839c4c851bdc0507e5bea74")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), I.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
         },
@@ -20567,8 +20570,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "251799", "251799"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("251799")), _ = 0), _
+                let _ = parseInt((e = "251804", "251804"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("251804")), _ = 0), _
             }
         },
         990629: function(e, _, E) {
