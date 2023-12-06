@@ -1949,7 +1949,8 @@
                             children: (0, l.jsx)(b.default, {
                                 isHovering: el,
                                 profileEffectId: null == en ? void 0 : en.id,
-                                isPurchased: null != em
+                                isPurchased: null != em,
+                                removeSetHeight: !0
                             })
                         }), null != er && (0, l.jsx)("div", {
                             className: K.avatarContainer,
@@ -2426,28 +2427,30 @@
                         profileEffectId: t,
                         isHovering: a,
                         forCollectedModal: r = !1,
-                        isPurchased: d
-                    } = e, f = r ? 250 : .1, [C, m] = s.useState(!0);
+                        isPurchased: d,
+                        removeSetHeight: f = !1
+                    } = e, C = r ? 250 : .1, [m, E] = s.useState(!0);
                     return (s.useEffect(() => {
-                        if (!0 !== r) m(!1);
+                        if (!0 !== r) E(!1);
                         else {
                             let e = setTimeout(() => {
-                                m(!1)
-                            }, f);
+                                E(!1)
+                            }, C);
                             return () => {
                                 clearTimeout(e)
                             }
                         }
-                    }, [f, r]), null != t) ? (0, l.jsxs)("div", {
+                    }, [C, r]), null != t) ? (0, l.jsxs)("div", {
                         className: n(c.previewContainer, {
-                            [c.previewContainerAnimation]: r
+                            [c.previewContainerAnimation]: r,
+                            [c.previewContainerSetHeight]: !f
                         }),
                         children: [(0, l.jsx)("img", {
                             src: u,
                             alt: " ",
                             className: r ? c.previewForCollected : c.preview,
                             "aria-hidden": !0
-                        }), !C && (0, l.jsx)("div", {
+                        }), !m && (0, l.jsx)("div", {
                             className: d ? c.purchasedEffect : void 0,
                             children: (0, l.jsx)(i.default, {
                                 profileEffectID: t,
@@ -2456,7 +2459,7 @@
                                 restartMethod: o.RestartMethod.FromStart,
                                 resetOnHover: !0,
                                 isHovering: a,
-                                introDelay: f,
+                                introDelay: C,
                                 useOpacityOnHover: !1
                             })
                         })]

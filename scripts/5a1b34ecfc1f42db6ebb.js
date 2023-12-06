@@ -519,28 +519,30 @@
                         profileEffectId: t,
                         isHovering: o,
                         forCollectedModal: a = !1,
-                        isPurchased: d
-                    } = e, f = a ? 250 : .1, [C, E] = n.useState(!0);
+                        isPurchased: d,
+                        removeSetHeight: f = !1
+                    } = e, C = a ? 250 : .1, [E, g] = n.useState(!0);
                     return (n.useEffect(() => {
-                        if (!0 !== a) E(!1);
+                        if (!0 !== a) g(!1);
                         else {
                             let e = setTimeout(() => {
-                                E(!1)
-                            }, f);
+                                g(!1)
+                            }, C);
                             return () => {
                                 clearTimeout(e)
                             }
                         }
-                    }, [f, a]), null != t) ? (0, r.jsxs)("div", {
+                    }, [C, a]), null != t) ? (0, r.jsxs)("div", {
                         className: l(u.previewContainer, {
-                            [u.previewContainerAnimation]: a
+                            [u.previewContainerAnimation]: a,
+                            [u.previewContainerSetHeight]: !f
                         }),
                         children: [(0, r.jsx)("img", {
                             src: c,
                             alt: " ",
                             className: a ? u.previewForCollected : u.preview,
                             "aria-hidden": !0
-                        }), !C && (0, r.jsx)("div", {
+                        }), !E && (0, r.jsx)("div", {
                             className: d ? u.purchasedEffect : void 0,
                             children: (0, r.jsx)(i.default, {
                                 profileEffectID: t,
@@ -549,7 +551,7 @@
                                 restartMethod: s.RestartMethod.FromStart,
                                 resetOnHover: !0,
                                 isHovering: o,
-                                introDelay: f,
+                                introDelay: C,
                                 useOpacityOnHover: !1
                             })
                         })]
