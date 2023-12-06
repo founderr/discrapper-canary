@@ -13791,8 +13791,23 @@
                             enabled: !0
                         }
                     }]
-                }),
-                s = function(e) {
+                });
+            (0, i.createExperiment)({
+                kind: "guild",
+                id: "2023-12_guild_members_table_safety_signal_filters",
+                label: "Guild Members Table Safety Signals",
+                defaultConfig: {
+                    enabled: !0
+                },
+                treatments: [{
+                    id: 1,
+                    label: "Safety Signals Enabled",
+                    config: {
+                        enabled: !0
+                    }
+                }]
+            });
+            let s = function(e) {
                     let {
                         autoTrackExposure: t = !1,
                         disable: n = !1,
