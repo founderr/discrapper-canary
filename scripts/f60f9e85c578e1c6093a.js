@@ -6228,8 +6228,8 @@
                     }
                 }, [n, g]);
                 return s.useEffect(() => {
-                    m.default.getGuildEventUserCounts(n, g, null != I ? [I] : []), m.default.getGuildEventsForCurrentUser(n)
-                }, [g, n, I]), (0, a.jsx)(_.default, {
+                    (null == T ? void 0 : T.id) == null && E.default.fetchGuildEvent(n, g), m.default.getGuildEventUserCounts(n, g, null != I ? [I] : []), m.default.getGuildEventsForCurrentUser(n)
+                }, [g, n, null == T ? void 0 : T.id, I]), (0, a.jsx)(_.default, {
                     guild: C,
                     channel: S,
                     guildScheduledEvent: T,

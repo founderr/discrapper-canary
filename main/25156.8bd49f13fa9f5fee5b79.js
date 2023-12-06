@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["67615"], {
+    ["25156"], {
         273215: function(e, t, n) {
             "use strict";
             e.exports = n.p + "63900a1ba1f23d305c53.png"
@@ -14859,6 +14859,12 @@
                         guild: t
                     } = e;
                     return O(t.id, !0), !0
+                },
+                FETCH_GUILD_EVENT: function(e) {
+                    let {
+                        guildScheduledEvent: t
+                    } = e;
+                    m(t)
                 },
                 FETCH_GUILD_EVENTS_FOR_GUILD: function(e) {
                     let {
