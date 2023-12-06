@@ -1218,7 +1218,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return eE
+                    return eI
                 }
             }), s("70102"), s("808653"), s("424973"), s("843762"), s("222007"), s("702976");
             var a = s("37983"),
@@ -1282,9 +1282,10 @@
                 ei = s("729199"),
                 eu = s("75576"),
                 eo = s("49111"),
-                ed = s("782340"),
-                ec = s("772734");
-            class e_ extends n.PureComponent {
+                ed = s("492249"),
+                ec = s("782340"),
+                e_ = s("772734");
+            class eE extends n.PureComponent {
                 get isChannelType() {
                     return null != this.props.channel
                 }
@@ -1318,7 +1319,7 @@
                         storeListing: i,
                         fetchStoreListing: u
                     } = this.props;
-                    if (i !== e.storeListing && null != i && (0, X.deepLinkRouteIfLandedAndNotAuthed)(eo.RPCDeepLinks.STORE_LISTING, {
+                    if (i !== e.storeListing && null != i && (0, X.deepLinkRouteIfLandedAndNotAuthed)(ed.RPCDeepLinks.STORE_LISTING, {
                             skuId: n,
                             slug: l
                         }), (t !== e.locale || n !== e.skuId) && u(), a && !e.shouldFetchStatistics) {
@@ -1391,21 +1392,21 @@
                         children: null != s ? (0, a.jsxs)(n.Fragment, {
                             children: [(0, a.jsx)(C.default.Icon, {
                                 icon: w.default,
-                                "aria-label": ed.default.Messages.STORE_CHANNEL
+                                "aria-label": ec.default.Messages.STORE_CHANNEL
                             }), (0, a.jsx)(C.default.Title, {
                                 children: s.name
                             })]
                         }) : null != t && t.premium ? (0, a.jsxs)(n.Fragment, {
                             children: [(0, a.jsx)(C.default.Icon, {
                                 icon: K.default,
-                                "aria-label": ed.default.Messages.PREMIUM
+                                "aria-label": ec.default.Messages.PREMIUM
                             }), (0, a.jsx)(en.default, {
                                 sku: t
                             })]
                         }) : null != t ? (0, a.jsxs)(n.Fragment, {
                             children: [(0, a.jsx)(C.default.Icon, {
                                 icon: w.default,
-                                "aria-label": ed.default.Messages.STORE_CHANNEL
+                                "aria-label": ec.default.Messages.STORE_CHANNEL
                             }), (0, a.jsx)(C.default.Title, {
                                 children: t.name
                             })]
@@ -1450,16 +1451,16 @@
                         theme: n
                     } = this.props, r = t.headerBackground, l = (0, o.isThemeLight)(n) ? t.headerLogoLightTheme : t.headerLogoDarkTheme;
                     return null == r || null == l ? (0, a.jsx)("div", {
-                        className: ec.noHeaderSpacer
+                        className: e_.noHeaderSpacer
                     }) : (0, a.jsxs)("div", {
-                        className: ec.headerAssets,
+                        className: e_.headerAssets,
                         children: [(0, a.jsx)("div", {
-                            className: ec.headerBackground,
+                            className: e_.headerBackground,
                             style: {
                                 backgroundImage: "url(".concat((0, Z.getAssetURL)(e.id, r, 1024, "png"), ")")
                             }
                         }), (0, a.jsx)("img", {
-                            className: ec.headerLogo,
+                            className: e_.headerLogo,
                             src: (0, Z.getAssetURL)(e.id, l, 1024, "png"),
                             alt: s.name
                         })]
@@ -1469,7 +1470,7 @@
                     return (0, a.jsx)(ea.default, {
                         sku: e,
                         storeListing: t,
-                        className: ec.whyYouMightLikeIt
+                        className: e_.whyYouMightLikeIt
                     })
                 }
                 renderVerifiedGuildInvite(e, t) {
@@ -1481,7 +1482,7 @@
                     return (0, a.jsx)(ei.default, {
                         skuId: t.id,
                         guild: e.guild,
-                        className: ec.guildInvite,
+                        className: e_.guildInvite,
                         inChannel: null != s,
                         pageSize: n
                     })
@@ -1493,7 +1494,7 @@
                 }
                 renderSystemRequirements(e) {
                     return null == e.systemRequirements || 0 === Object.keys(e.systemRequirements).length ? null : (0, a.jsx)(er.default, {
-                        className: ec.systemRequirements,
+                        className: e_.systemRequirements,
                         systemRequirements: e.systemRequirements,
                         pageSize: this.props.pageSize
                     })
@@ -1506,14 +1507,14 @@
                     return (0, a.jsxs)(n.Fragment, {
                         children: [(0, a.jsx)(B.default, {
                             tag: "h1",
-                            children: ed.default.Messages.APPLICATION_STORE_ABOUT_HEADER.format({
+                            children: ec.default.Messages.APPLICATION_STORE_ABOUT_HEADER.format({
                                 name: s.name
                             })
                         }), (0, a.jsx)(S.default, {}), (0, a.jsx)(J.default, {
                             applicationId: e.id,
                             blurb: t.summary,
                             description: r,
-                            className: ec.description,
+                            className: e_.description,
                             assets: t.assets
                         })]
                     })
@@ -1521,13 +1522,13 @@
                 renderApplicationContentRating(e) {
                     return (0, a.jsx)(Q.default, {
                         sku: e,
-                        className: ec.contentRating
+                        className: e_.contentRating
                     })
                 }
                 renderApplicationLegalInfo(e) {
                     return (0, a.jsx)($.default, {
                         sku: e,
-                        className: ec.legalInfo
+                        className: e_.legalInfo
                     })
                 }
                 renderJsonLD() {
@@ -1568,22 +1569,22 @@
                 }
                 renderSmall(e, t, s) {
                     return (0, a.jsxs)("div", {
-                        className: l(ec.listing, ec.listingSmall),
+                        className: l(e_.listing, e_.listingSmall),
                         children: [this.renderHeaderAssets(e, t, s), this.renderCarousel(e, t), this.renderWhyYouMightLikeThis(s, t), this.renderDescription(e, t, s), this.renderVerifiedGuildInvite(t, s), this.renderFeatures(s), this.renderSystemRequirements(s), this.renderApplicationContentRating(s), this.renderApplicationLegalInfo(s)]
                     })
                 }
                 renderLarge(e, t, s) {
                     return (0, a.jsxs)("div", {
-                        className: ec.listing,
+                        className: e_.listing,
                         children: [this.renderHeaderAssets(e, t, s), this.renderCarousel(e, t), (0, a.jsx)("div", {
-                            className: ec.listingLarge,
+                            className: e_.listingLarge,
                             children: (0, a.jsxs)("div", {
-                                className: ec.body,
+                                className: e_.body,
                                 children: [(0, a.jsxs)("div", {
-                                    className: ec.leftColumn,
+                                    className: e_.leftColumn,
                                     children: [this.renderWhyYouMightLikeThis(s, t), this.renderDescription(e, t, s), this.renderSystemRequirements(s), this.renderApplicationContentRating(s), this.renderApplicationLegalInfo(s)]
                                 }), (0, a.jsxs)("div", {
-                                    className: ec.rightColumn,
+                                    className: e_.rightColumn,
                                     children: [this.renderVerifiedGuildInvite(t, s), this.renderFeatures(s)]
                                 })]
                             })
@@ -1603,13 +1604,13 @@
                             align: k.default.Align.CENTER,
                             justify: k.default.Justify.CENTER,
                             children: (0, a.jsx)(d.Spinner, {
-                                className: ec.spinner
+                                className: e_.spinner
                             })
                         })]
                     });
                     if (!r && t.showAgeGate) {
                         let s = l ? null : (0, a.jsx)("div", {
-                            className: ec.gatedListing,
+                            className: e_.gatedListing,
                             children: this.renderListing()
                         });
                         return (0, a.jsxs)(n.Fragment, {
@@ -1621,7 +1622,7 @@
                         })
                     }
                     return l ? (0, a.jsxs)("div", {
-                        className: ec.listingWrapper,
+                        className: e_.listingWrapper,
                         children: [(0, a.jsx)(A.AppPageTitle, {
                             location: e.name
                         }), this.renderJsonLD(), (0, a.jsx)(f.default, {
@@ -1686,13 +1687,13 @@
                             guild: t
                         } = this.props;
                         return null != e && null != t && (x.default.can(eo.Permissions.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode) ? (0, a.jsx)(d.Button, {
-                            "aria-label": ed.default.Messages.CREATE_INSTANT_INVITE,
+                            "aria-label": ec.default.Messages.CREATE_INSTANT_INVITE,
                             look: d.Button.Looks.BLANK,
                             size: d.Button.Sizes.NONE,
                             onClick: this.handleCreateInstantInvite,
-                            className: ec.link,
+                            className: e_.link,
                             children: (0, a.jsx)(F.default, {
-                                className: ec.linkIcon
+                                className: e_.linkIcon
                             })
                         }) : null
                     }, this.renderCopyLink = () => {
@@ -1700,7 +1701,7 @@
                             showLinkCopied: e
                         } = this.state;
                         return this.isChannelType ? this.renderInviteLink() : (0, a.jsx)(d.Tooltip, {
-                            text: e ? ed.default.Messages.APPLICATION_STORE_LINK_COPIED : null,
+                            text: e ? ec.default.Messages.APPLICATION_STORE_LINK_COPIED : null,
                             position: "left",
                             forceOpen: e,
                             children: t => {
@@ -1709,15 +1710,15 @@
                                     onMouseLeave: n
                                 } = t;
                                 return (0, a.jsx)(d.Button, {
-                                    "aria-label": e ? ed.default.Messages.APPLICATION_STORE_LINK_COPIED : ed.default.Messages.COPY_LINK,
+                                    "aria-label": e ? ec.default.Messages.APPLICATION_STORE_LINK_COPIED : ec.default.Messages.COPY_LINK,
                                     look: d.Button.Looks.BLANK,
                                     size: d.Button.Sizes.NONE,
                                     onClick: this.copyCurrentUrl,
                                     onMouseEnter: s,
                                     onMouseLeave: n,
-                                    className: ec.link,
+                                    className: e_.link,
                                     children: (0, a.jsx)(F.default, {
-                                        className: ec.linkIcon
+                                        className: e_.linkIcon
                                     })
                                 })
                             }
@@ -1735,16 +1736,16 @@
                             showHeaderPurchaseUnit: o
                         } = this.state;
                         return (0, a.jsxs)("div", {
-                            className: ec.headerBarListing,
+                            className: e_.headerBarListing,
                             children: [(0, a.jsx)("div", {
-                                className: ec.headerSection,
+                                className: e_.headerSection,
                                 children: s && null != t ? (0, a.jsx)(el.default, {
                                     size: el.TestModeStoreListingButtonEnums.Sizes.MIN,
                                     dropdownSize: el.TestModeStoreListingButtonEnums.DropdownSizes.MEDIUM,
                                     look: el.TestModeStoreListingButtonEnums.Looks.OUTLINED,
                                     color: el.TestModeStoreListingButtonEnums.Colors.YELLOW,
                                     skuId: t.id,
-                                    className: ec.testModeSelectButton,
+                                    className: e_.testModeSelectButton,
                                     currentStoreListingId: null != r ? r.id : null,
                                     onStoreListingSelect: e => {
                                         null != t && (0, I.goToSKUStoreListing)(t.id, {
@@ -1759,13 +1760,13 @@
                                     }
                                 }) : null
                             }), (0, a.jsx)("div", {
-                                className: ec.headerSection,
+                                className: e_.headerSection,
                                 children: (0, a.jsxs)("div", {
-                                    className: l(ec.headerPurchase, {
-                                        [ec.active]: o
+                                    className: l(e_.headerPurchase, {
+                                        [e_.active]: o
                                     }),
                                     children: [null != t ? (0, P.default)(t) : null, null != e && null != t ? (0, a.jsx)(T.default, {
-                                        wrapperClassName: ec.headerActionButton,
+                                        wrapperClassName: e_.headerActionButton,
                                         applicationId: e.id,
                                         skuId: t.id,
                                         color: d.Button.Colors.GREEN,
@@ -1776,7 +1777,7 @@
                                         onStoreListing: !0
                                     }) : null, (0, a.jsx)(es.default, {
                                         messageStyle: es.MessageStyles.SHORT,
-                                        className: ec.purchaseError
+                                        className: e_.purchaseError
                                     })]
                                 })
                             }), this.renderCopyLink()]
@@ -1812,7 +1813,7 @@
                     }
                 }
             }
-            var eE = (0, R.default)((0, m.default)(i.default.connectStores([U.default, h.default, M.default, y.default, j.default, D.default, G.default, p.default, N.default, v.default, L.default, b.default], e => {
+            var eI = (0, R.default)((0, m.default)(i.default.connectStores([U.default, h.default, M.default, y.default, j.default, D.default, G.default, p.default, N.default, v.default, L.default, b.default], e => {
                 let t, s, a, {
                     inputSkuId: n,
                     applicationId: r,
@@ -1848,7 +1849,7 @@
                     locale: M.default.locale,
                     guild: null != u ? L.default.getGuild(u.getGuildId()) : null
                 }
-            })(e_)))
+            })(eE)))
         },
         704861: function(e, t, s) {
             "use strict";
