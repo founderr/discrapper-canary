@@ -910,8 +910,7 @@
                             product: t,
                             category: a,
                             analyticsLocations: q,
-                            analyticsSource: e,
-                            returnRef: $
+                            analyticsSource: e
                         })
                     },
                     eb = eL(f.default.COLLECTIBLES_SHOP_CARD),
@@ -1798,8 +1797,7 @@
                             product: t,
                             category: a,
                             analyticsLocations: $,
-                            analyticsSource: e,
-                            returnRef: J
+                            analyticsSource: e
                         })
                     },
                     ex = eb(C.default.COLLECTIBLES_SHOP_CARD),
