@@ -4270,10 +4270,10 @@
                         affinity: e
                     }, e.id)),
                     s = n.useMemo(() => 3 === e.length ? d.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
-                        username: e[0].globalName
+                        username: e[2].globalName
                     }) : 2 === e.length ? d.default.Messages.AFFINITIES_MARKETING_HEADER_2.format({
-                        username: e[0].globalName,
-                        otherUsername: e[1].globalName
+                        username: e[1].globalName,
+                        otherUsername: e[0].globalName
                     }) : 1 === e.length ? d.default.Messages.AFFINITIES_MARKETING_HEADER_1.format({
                         username: e[0].globalName
                     }) : "", [e]);
