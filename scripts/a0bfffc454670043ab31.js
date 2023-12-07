@@ -24974,9 +24974,11 @@
                                         hidePersonalInformation: eh,
                                         animateOnHover: !0,
                                         isHovering: Z
-                                    }), (0, a.jsx)(b.default, {
-                                        userId: r
-                                    }), (0, a.jsx)(L.default, {}), (0, a.jsx)(D.default, {
+                                    }), !Q.isSystemUser() && (0, a.jsxs)(a.Fragment, {
+                                        children: [(0, a.jsx)(b.default, {
+                                            userId: r
+                                        }), (0, a.jsx)(L.default, {})]
+                                    }), (0, a.jsx)(D.default, {
                                         user: Q,
                                         setNote: !1,
                                         hideNote: !1
