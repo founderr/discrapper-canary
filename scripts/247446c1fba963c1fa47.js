@@ -31922,7 +31922,7 @@
                 U = e => {
                     let {
                         discoveryEnabled: t,
-                        welcomeScreenEnabled: s,
+                        onboardingEnabled: s,
                         guildId: l
                     } = e, [i, c] = n.useState(!0 === d.default.get(x)), [E, _] = n.useState(!1);
                     n.useEffect(() => {
@@ -31989,10 +31989,10 @@
                             }), s ? null : (0, a.jsx)(u.Button, {
                                 size: u.Button.Sizes.SMALL,
                                 onClick: () => {
-                                    m.default.setSection(h.GuildSettingsSections.COMMUNITY_WELCOME)
+                                    m.default.setSection(h.GuildSettingsSections.ONBOARDING)
                                 },
                                 className: M.upsellButton,
-                                children: D.default.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BUTTON_WELCOME_SCREEN
+                                children: D.default.Messages.GUILD_SETTINGS_COMMUNITY_UPSELL_BUTTON_ONBOARDING
                             }), t ? null : (0, a.jsx)(u.Button, {
                                 size: u.Button.Sizes.SMALL,
                                 onClick: () => {
@@ -32131,7 +32131,7 @@
                         tag: u.FormTitleTags.H1,
                         children: [T ? (0, a.jsx)(U, {
                             discoveryEnabled: t.features.has(h.GuildFeatures.DISCOVERABLE),
-                            welcomeScreenEnabled: t.features.has(h.GuildFeatures.WELCOME_SCREEN_ENABLED),
+                            onboardingEnabled: t.features.has(h.GuildFeatures.GUILD_ONBOARDING),
                             guildId: t.id
                         }) : null, (0, a.jsxs)(u.FormSection, {
                             className: i(M.twoColumnFormSection, M.firstSection),
