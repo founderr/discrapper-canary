@@ -2305,6 +2305,9 @@
             n.r(t), n.d(t, {
                 useThrottledState: function() {
                     return i
+                },
+                useThrottledFunction: function() {
+                    return r
                 }
             }), n("222007");
             var a = n("884691"),
