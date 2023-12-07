@@ -4785,7 +4785,9 @@
                 let h = g && M.length > 0;
                 return (0, a.jsx)(f, {
                     children: (0, a.jsxs)("div", {
-                        className: l(C.container, s),
+                        className: l(C.container, s, {
+                            [C.settingsContainer]: !t
+                        }),
                         "data-testid": "v2-marketing-page-hero-header",
                         children: [(0, a.jsxs)("div", {
                             className: t ? C.fullscreenTextContainer : C.settingsTextContainer,
@@ -6385,7 +6387,9 @@
                             children: (0, a.jsx)(x.default, {
                                 subscriptionTier: Q,
                                 isFullscreen: s || es,
-                                className: r(s ? B.fullscreenHero : es ? B.settingsHeroNoBackground : B.settingsHero, {
+                                className: r({
+                                    [B.fullscreenHero]: s,
+                                    [B.settingsHeroNoBackground]: !s && es,
                                     [B.trialMarketingMargin]: es,
                                     [B.settingsHeroBogoHeight]: !s && ea,
                                     [B.settingsHeroBogoMarginFullscreen]: s && ea,
