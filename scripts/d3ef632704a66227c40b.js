@@ -12,10 +12,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 pushLayer: function() {
-                    return l
+                    return i
                 },
                 popLayer: function() {
-                    return i
+                    return l
                 },
                 popAllLayers: function() {
                     return a
@@ -23,14 +23,14 @@
             });
             var r = n("913144");
 
-            function l(e) {
+            function i(e) {
                 r.default.dispatch({
                     type: "LAYER_PUSH",
                     component: e
                 })
             }
 
-            function i() {
+            function l() {
                 r.default.dispatch({
                     type: "LAYER_POP"
                 })
@@ -50,19 +50,19 @@
                 }
             }), n("222007");
             var r = n("37983"),
-                l = n("884691"),
-                i = n("414456"),
-                a = n.n(i),
+                i = n("884691"),
+                l = n("414456"),
+                a = n.n(l),
                 s = n("77078"),
                 o = n("782340"),
                 u = n("347129");
-            class d extends l.PureComponent {
+            class d extends i.PureComponent {
                 render() {
                     var e;
                     let {
                         title: t,
                         actionText: n,
-                        children: i,
+                        children: l,
                         error: d,
                         isLoading: c,
                         maxLength: f,
@@ -73,13 +73,13 @@
                     } = this.props, {
                         code: h,
                         errorMessage: m,
-                        retrySuccess: S
-                    } = this.state, T = l.Children.count(i) > 0 ? (0, r.jsx)(s.Card, {
+                        retrySuccess: T
+                    } = this.state, S = i.Children.count(l) > 0 ? (0, r.jsx)(s.Card, {
                         type: s.Card.Types.WARNING,
                         className: u.card,
                         children: (0, r.jsx)(s.Text, {
                             variant: "text-md/normal",
-                            children: i
+                            children: l
                         })
                     }) : null, g = null != I ? (0, r.jsxs)(s.Text, {
                         className: a(u.submitText, u.spacing),
@@ -91,7 +91,7 @@
                                 children: I
                             })
                         })]
-                    }) : null, A = S ? (0, r.jsx)(s.Card, {
+                    }) : null, C = T ? (0, r.jsx)(s.Card, {
                         type: s.Card.Types.SUCCESS,
                         className: u.card,
                         children: (0, r.jsx)(s.Text, {
@@ -115,7 +115,7 @@
                                     variant: "text-md/normal",
                                     className: u.spacing,
                                     children: _
-                                }) : null, T, A, (0, r.jsxs)(s.FormItem, {
+                                }) : null, S, C, (0, r.jsxs)(s.FormItem, {
                                     title: this.getLabelText(),
                                     className: u.spacing,
                                     children: [(0, r.jsx)(s.TextInput, {
@@ -210,9 +210,9 @@
                 }
             }), n("424973");
             var r = n("37983"),
-                l = n("884691"),
-                i = n("310013"),
-                a = n.n(i),
+                i = n("884691"),
+                l = n("310013"),
+                a = n.n(l),
                 s = n("407063");
             let o = /url\(['"](.*)['"]\)/,
                 u = e => {
@@ -222,24 +222,24 @@
                 };
 
             function d(e) {
-                class t extends l.Component {
+                class t extends i.Component {
                     componentDidUpdate(e, t) {
                         if (t === this.state) return;
                         let {
                             cached: n,
                             loaded: r
                         } = this.state, {
-                            style: l
-                        } = this.props, i = null != l ? u(l.backgroundImage) : null;
-                        null == i && i !== n ? this.setState({
+                            style: i
+                        } = this.props, l = null != i ? u(i.backgroundImage) : null;
+                        null == l && l !== n ? this.setState({
                             loaded: !0,
-                            cached: i
-                        }) : this.cachedURLs.indexOf(i) >= 0 ? this.setState({
+                            cached: l
+                        }) : this.cachedURLs.indexOf(l) >= 0 ? this.setState({
                             loaded: !0,
-                            cached: i
-                        }) : null != i && i !== n && !0 === r && this.setState({
+                            cached: l
+                        }) : null != l && l !== n && !0 === r && this.setState({
                             loaded: !1
-                        }, () => this.preloadURL(i))
+                        }, () => this.preloadURL(l))
                     }
                     preloadURL(e) {
                         this.canceller && this.canceller(), this.canceller = (0, s.loadImage)(e, t => {
@@ -260,12 +260,12 @@
                         let {
                             style: t,
                             onBackgroundImageLoad: n,
-                            ...l
+                            ...i
                         } = this.props, {
-                            loaded: i,
+                            loaded: l,
                             cached: a
                         } = this.state;
-                        if (!i && null != t) {
+                        if (!l && null != t) {
                             var s;
                             t = {
                                 ...t,
@@ -274,7 +274,7 @@
                         }
                         return (0, r.jsx)(e, {
                             style: t,
-                            ...l
+                            ...i
                         })
                     }
                     constructor(e) {
@@ -300,18 +300,18 @@
             });
             var r = n("37983");
             n("884691");
-            var l = n("669491"),
-                i = n("75196");
+            var i = n("669491"),
+                l = n("75196");
             let a = e => {
                 let {
                     width: t = 24,
                     height: n = 24,
-                    color: a = l.default.colors.INTERACTIVE_NORMAL,
+                    color: a = i.default.colors.INTERACTIVE_NORMAL,
                     colorClass: s = "",
                     ...o
                 } = e;
                 return (0, r.jsx)("svg", {
-                    ...(0, i.default)(o),
+                    ...(0, l.default)(o),
                     xmlns: "http://www.w3.org/2000/svg",
                     width: t,
                     height: n,
@@ -334,16 +334,16 @@
                     return r
                 }
             });
-            var r, l = n("872717"),
-                i = n("49111"),
+            var r, i = n("872717"),
+                l = n("49111"),
                 a = n("782340");
-            r = class extends l.default.V8APIError {
+            r = class extends i.default.V8APIError {
                 constructor(e, t) {
                     super(e, t, null != t ? a.default.Messages.FORM_ERROR_GENERIC_WITH_DETAILS.format({
-                        statusPageURL: i.Links.STATUS,
+                        statusPageURL: l.Links.STATUS,
                         details: "".concat(t)
                     }) : a.default.Messages.FORM_ERROR_GENERIC.format({
-                        statusPageURL: i.Links.STATUS
+                        statusPageURL: l.Links.STATUS
                     }))
                 }
             }
@@ -355,16 +355,16 @@
                     return r
                 }
             });
-            var r, l = n("872717"),
-                i = n("49111"),
+            var r, i = n("872717"),
+                l = n("49111"),
                 a = n("782340");
-            r = class extends l.default.V6OrEarlierAPIError {
+            r = class extends i.default.V6OrEarlierAPIError {
                 constructor(e, t) {
                     super(e, t, null != t ? a.default.Messages.FORM_ERROR_GENERIC_WITH_DETAILS.format({
-                        statusPageURL: i.Links.STATUS,
+                        statusPageURL: l.Links.STATUS,
                         details: "".concat(t)
                     }) : a.default.Messages.FORM_ERROR_GENERIC.format({
-                        statusPageURL: i.Links.STATUS
+                        statusPageURL: l.Links.STATUS
                     }))
                 }
             }
@@ -373,18 +373,18 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return i
                 }
             });
             var r = n("773336");
-            async function l(e, t) {
+            async function i(e, t) {
                 let {
-                    default: l
-                } = await n.el("572544").then(n.bind(n, "572544")), i = l(e, {
+                    default: i
+                } = await n.el("572544").then(n.bind(n, "572544")), l = i(e, {
                     skipExtensionCheck: t,
                     analyticsLocations: []
                 });
-                if (null != i) i(null);
+                if (null != l) l(null);
                 else if (r.isPlatformEmbedded) window.open(e);
                 else {
                     let t = document.createElement("a");
@@ -394,15 +394,52 @@
         },
         988268: function(e, t, n) {
             "use strict";
-            var r, l, i, a;
+            var r, i, l, a;
             n.r(t), n.d(t, {
                 ApplicationTypes: function() {
                     return r
                 },
                 BotTagTypes: function() {
+                    return i
+                }
+            }), (l = r || (r = {}))[l.GAME = 1] = "GAME", l[l.TICKETED_EVENTS = 3] = "TICKETED_EVENTS", l[l.GUILD_ROLE_SUBSCRIPTIONS = 4] = "GUILD_ROLE_SUBSCRIPTIONS", (a = i || (i = {}))[a.BOT = 0] = "BOT", a[a.SERVER = 1] = "SERVER", a[a.SYSTEM_DM = 2] = "SYSTEM_DM", a[a.OFFICIAL = 3] = "OFFICIAL", a[a.STAFF_ONLY_DM = 4] = "STAFF_ONLY_DM", a[a.ORIGINAL_POSTER = 5] = "ORIGINAL_POSTER", a[a.AI = 6] = "AI", a[a.REMIX = 7] = "REMIX"
+        },
+        519374: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
                     return l
                 }
-            }), (i = r || (r = {}))[i.GAME = 1] = "GAME", i[i.TICKETED_EVENTS = 3] = "TICKETED_EVENTS", i[i.GUILD_ROLE_SUBSCRIPTIONS = 4] = "GUILD_ROLE_SUBSCRIPTIONS", (a = l || (l = {}))[a.BOT = 0] = "BOT", a[a.SERVER = 1] = "SERVER", a[a.SYSTEM_DM = 2] = "SYSTEM_DM", a[a.OFFICIAL = 3] = "OFFICIAL", a[a.STAFF_ONLY_DM = 4] = "STAFF_ONLY_DM", a[a.ORIGINAL_POSTER = 5] = "ORIGINAL_POSTER", a[a.AI = 6] = "AI", a[a.REMIX = 7] = "REMIX"
+            });
+            var r = n("862205");
+            let i = (0, r.createExperiment)({
+                kind: "user",
+                id: "2023-12_create_guild_modal_themeing",
+                label: "Create Guild Modal Force Light Theme",
+                defaultConfig: {
+                    forceLightTheme: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "Force Light Theme",
+                    config: {
+                        forceLightTheme: !0
+                    }
+                }]
+            });
+            var l = e => {
+                let {
+                    location: t,
+                    autoTrackExposure: n = !0,
+                    trackExposureOptions: r = {}
+                } = e;
+                return i.useExperiment({
+                    location: t
+                }, {
+                    autoTrackExposure: n,
+                    trackExposureOptions: r
+                })
+            }
         },
         297267: function(e, t, n) {
             "use strict";
@@ -416,29 +453,29 @@
             });
             var r = n("37983");
             n("884691");
-            var l = n("77078"),
-                i = n("42963"),
+            var i = n("77078"),
+                l = n("42963"),
                 a = n("599110"),
                 s = n("169626"),
                 o = n("243338"),
                 u = n("49111"),
                 d = n("149806");
 
-            function c(e, t, n, l) {
+            function c(e, t, n, i) {
                 return (0, r.jsx)(s.default, {
                     onSuccess: t => {
-                        i.default.flowStep(d.FlowType.CREATE_GUILD, d.CreateGuildSteps.SUCCESS), e.onClose(), null == l || l(t)
+                        l.default.flowStep(d.FlowType.CREATE_GUILD, d.CreateGuildSteps.SUCCESS), e.onClose(), null == i || i(t)
                     },
                     onSlideChange: e => (function(e, t) {
                         switch (e) {
                             case o.CreateGuildSlideTypes.GUILD_TEMPLATES:
-                                i.default.flowStepOrStart(d.FlowType.CREATE_GUILD, d.CreateGuildSteps.GUILD_TEMPLATES), a.default.track(u.AnalyticEvents.OPEN_MODAL, {
+                                l.default.flowStepOrStart(d.FlowType.CREATE_GUILD, d.CreateGuildSteps.GUILD_TEMPLATES), a.default.track(u.AnalyticEvents.OPEN_MODAL, {
                                     type: "Create Guild Templates",
                                     location: t
                                 });
                                 break;
                             case o.CreateGuildSlideTypes.CUSTOMIZE_GUILD:
-                                i.default.flowStep(d.FlowType.CREATE_GUILD, d.CreateGuildSteps.GUILD_CREATE), a.default.track(u.AnalyticEvents.OPEN_MODAL, {
+                                l.default.flowStep(d.FlowType.CREATE_GUILD, d.CreateGuildSteps.GUILD_CREATE), a.default.track(u.AnalyticEvents.OPEN_MODAL, {
                                     type: "Create Guild Step 2",
                                     location: t
                                 });
@@ -450,7 +487,7 @@
                                 });
                                 break;
                             case o.CreateGuildSlideTypes.JOIN_GUILD:
-                                i.default.flowStep(d.FlowType.CREATE_GUILD, d.CreateGuildSteps.JOIN_GUILD), a.default.track(u.AnalyticEvents.OPEN_MODAL, {
+                                l.default.flowStep(d.FlowType.CREATE_GUILD, d.CreateGuildSteps.JOIN_GUILD), a.default.track(u.AnalyticEvents.OPEN_MODAL, {
                                     type: "Join Guild",
                                     location: t
                                 })
@@ -467,7 +504,7 @@
                         location: n,
                         onSuccess: r
                     } = e;
-                    (0, l.openModal)(e => c(e, t, n, r), {
+                    (0, i.openModal)(e => c(e, t, n, r), {
                         modalKey: o.CREATE_GUILD_MODAL_KEY
                     })
                 },
@@ -476,134 +513,139 @@
                         slide: t,
                         location: n
                     } = e;
-                    (0, l.updateModal)(o.CREATE_GUILD_MODAL_KEY, e => c(e, t, n))
+                    (0, i.updateModal)(o.CREATE_GUILD_MODAL_KEY, e => c(e, t, n))
                 }
         },
         169626: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return g
                 }
             }), n("222007");
             var r = n("37983"),
-                l = n("884691"),
-                i = n("627445"),
-                a = n.n(i),
+                i = n("884691"),
+                l = n("627445"),
+                a = n.n(l),
                 s = n("759843"),
                 o = n("77078"),
                 u = n("84339"),
                 d = n("599110"),
                 c = n("439932"),
-                f = n("818351"),
-                E = n("21214"),
-                _ = n("622210"),
-                I = n("72405"),
-                p = n("110337"),
-                h = n("243338"),
-                m = n("49111"),
+                f = n("519374"),
+                E = n("818351"),
+                _ = n("21214"),
+                I = n("622210"),
+                p = n("72405"),
+                h = n("110337"),
+                m = n("243338"),
+                T = n("49111"),
                 S = n("91140");
 
-            function T(e) {
+            function g(e) {
                 let {
                     transitionState: t,
-                    initialSlide: n = h.CreateGuildSlideTypes.GUILD_TEMPLATES,
-                    onSuccess: i,
-                    onClose: T,
-                    onSlideChange: g,
+                    initialSlide: n = m.CreateGuildSlideTypes.GUILD_TEMPLATES,
+                    onSuccess: l,
+                    onClose: g,
+                    onSlideChange: C,
                     hasJoinButton: A
-                } = e, [C, N] = l.useState(n), R = (0, u.default)(C), [v, M] = l.useState(null), [L, O] = l.useState(null), [y, D] = l.useState(null), [U, w] = l.useState(!1);
-                l.useEffect(() => {
-                    N(n)
-                }, [N, n]), l.useEffect(() => {
-                    C !== R && g(C)
-                }, [g, C, R]);
-                let x = l.useCallback(e => {
-                        N(h.CreateGuildSlideTypes.CREATION_INTENT), O(e), d.default.track(m.AnalyticEvents.GUILD_TEMPLATE_SELECTED, {
+                } = e, [N, R] = i.useState(n), v = (0, u.default)(N), [M, L] = i.useState(null), [O, y] = i.useState(null), [D, U] = i.useState(null), [w, x] = i.useState(!1), {
+                    forceLightTheme: G
+                } = (0, f.default)({
+                    location: "CreateGuildModal"
+                });
+                i.useEffect(() => {
+                    R(n)
+                }, [R, n]), i.useEffect(() => {
+                    N !== v && C(N)
+                }, [C, N, v]);
+                let F = i.useCallback(e => {
+                        R(m.CreateGuildSlideTypes.CREATION_INTENT), y(e), d.default.track(T.AnalyticEvents.GUILD_TEMPLATE_SELECTED, {
                             template_name: e.id,
                             template_code: e.code
                         })
                     }, []),
-                    G = l.useCallback(e => {
-                        w(e), N(h.CreateGuildSlideTypes.CUSTOMIZE_GUILD)
+                    P = i.useCallback(e => {
+                        x(e), R(m.CreateGuildSlideTypes.CUSTOMIZE_GUILD)
                     }, []),
-                    F = l.useCallback(() => N(h.CreateGuildSlideTypes.JOIN_GUILD), [N]),
-                    P = l.useCallback(() => {
-                        if (C === h.CreateGuildSlideTypes.CUSTOMIZE_GUILD) {
-                            N(h.CreateGuildSlideTypes.CREATION_INTENT);
+                    b = i.useCallback(() => R(m.CreateGuildSlideTypes.JOIN_GUILD), [R]),
+                    V = i.useCallback(() => {
+                        if (N === m.CreateGuildSlideTypes.CUSTOMIZE_GUILD) {
+                            R(m.CreateGuildSlideTypes.CREATION_INTENT);
                             return
                         }
-                        N(h.CreateGuildSlideTypes.GUILD_TEMPLATES), O(null)
-                    }, [C]),
-                    b = l.useCallback(e => {
-                        D(e), i(e)
-                    }, [i, D]),
-                    V = l.useCallback(() => {
-                        a(null != y, "handleSuccess called before onGuildCreated"), i(y)
-                    }, [i, y]),
-                    k = {
+                        R(m.CreateGuildSlideTypes.GUILD_TEMPLATES), y(null)
+                    }, [N]),
+                    k = i.useCallback(e => {
+                        U(e), l(e)
+                    }, [l, U]),
+                    j = i.useCallback(() => {
+                        a(null != D, "handleSuccess called before onGuildCreated"), l(D)
+                    }, [l, D]),
+                    B = {
                         impression_group: s.ImpressionGroups.GUILD_ADD_FLOW
                     };
                 return (0, r.jsx)("div", {
-                    className: (0, c.getThemeClass)(m.ThemeTypes.LIGHT),
+                    className: G ? (0, c.getThemeClass)(T.ThemeTypes.LIGHT) : void 0,
                     children: (0, r.jsx)(o.ModalRoot, {
                         transitionState: t,
                         disableTrack: !0,
                         children: (0, r.jsx)("div", {
                             className: S.container,
                             children: (0, r.jsxs)(o.Slides, {
-                                activeSlide: C,
+                                activeSlide: N,
                                 width: 440,
-                                onSlideReady: e => M(e),
+                                onSlideReady: e => L(e),
                                 children: [(0, r.jsx)(o.Slide, {
-                                    id: h.CreateGuildSlideTypes.GUILD_TEMPLATES,
+                                    id: m.CreateGuildSlideTypes.GUILD_TEMPLATES,
                                     impressionName: s.ImpressionNames.GUILD_ADD_LANDING,
-                                    impressionProperties: k,
-                                    children: (0, r.jsx)(I.default, {
-                                        isNewUser: !1,
-                                        onJoin: A ? F : void 0,
-                                        onChooseTemplate: x,
-                                        onClose: T
-                                    })
-                                }), (0, r.jsx)(o.Slide, {
-                                    id: h.CreateGuildSlideTypes.CREATION_INTENT,
-                                    impressionName: s.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
-                                    impressionProperties: k,
-                                    children: (0, r.jsx)(E.default, {
-                                        onClose: T,
-                                        onBack: P,
-                                        onCreationIntentChosen: G
-                                    })
-                                }), (0, r.jsx)(o.Slide, {
-                                    id: h.CreateGuildSlideTypes.CUSTOMIZE_GUILD,
-                                    impressionName: s.ImpressionNames.GUILD_ADD_CUSTOMIZE,
-                                    impressionProperties: k,
-                                    children: (0, r.jsx)(_.default, {
-                                        guildTemplate: L,
-                                        onGuildCreated: b,
-                                        onClose: T,
-                                        onBack: P,
-                                        isSlideReady: v === h.CreateGuildSlideTypes.CUSTOMIZE_GUILD,
-                                        isCommunity: U
-                                    })
-                                }), (0, r.jsx)(o.Slide, {
-                                    id: h.CreateGuildSlideTypes.CHANNEL_PROMPT,
-                                    impressionName: s.ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
-                                    impressionProperties: k,
-                                    children: (0, r.jsx)(f.default, {
-                                        createdGuildId: y,
-                                        onClose: T,
-                                        onChannelPromptCompleted: V,
-                                        isSlideReady: v === h.CreateGuildSlideTypes.CHANNEL_PROMPT
-                                    })
-                                }), (0, r.jsx)(o.Slide, {
-                                    id: h.CreateGuildSlideTypes.JOIN_GUILD,
-                                    impressionName: s.ImpressionNames.GUILD_ADD_JOIN,
-                                    impressionProperties: k,
+                                    impressionProperties: B,
                                     children: (0, r.jsx)(p.default, {
-                                        onBack: P,
-                                        onClose: T,
-                                        isSlideReady: v === h.CreateGuildSlideTypes.JOIN_GUILD
+                                        isNewUser: !1,
+                                        onJoin: A ? b : void 0,
+                                        onChooseTemplate: F,
+                                        onClose: g
+                                    })
+                                }), (0, r.jsx)(o.Slide, {
+                                    id: m.CreateGuildSlideTypes.CREATION_INTENT,
+                                    impressionName: s.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
+                                    impressionProperties: B,
+                                    children: (0, r.jsx)(_.default, {
+                                        onClose: g,
+                                        onBack: V,
+                                        onCreationIntentChosen: P
+                                    })
+                                }), (0, r.jsx)(o.Slide, {
+                                    id: m.CreateGuildSlideTypes.CUSTOMIZE_GUILD,
+                                    impressionName: s.ImpressionNames.GUILD_ADD_CUSTOMIZE,
+                                    impressionProperties: B,
+                                    children: (0, r.jsx)(I.default, {
+                                        guildTemplate: O,
+                                        onGuildCreated: k,
+                                        onClose: g,
+                                        onBack: V,
+                                        isSlideReady: M === m.CreateGuildSlideTypes.CUSTOMIZE_GUILD,
+                                        isCommunity: w
+                                    })
+                                }), (0, r.jsx)(o.Slide, {
+                                    id: m.CreateGuildSlideTypes.CHANNEL_PROMPT,
+                                    impressionName: s.ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
+                                    impressionProperties: B,
+                                    children: (0, r.jsx)(E.default, {
+                                        createdGuildId: D,
+                                        onClose: g,
+                                        onChannelPromptCompleted: j,
+                                        isSlideReady: M === m.CreateGuildSlideTypes.CHANNEL_PROMPT
+                                    })
+                                }), (0, r.jsx)(o.Slide, {
+                                    id: m.CreateGuildSlideTypes.JOIN_GUILD,
+                                    impressionName: s.ImpressionNames.GUILD_ADD_JOIN,
+                                    impressionProperties: B,
+                                    children: (0, r.jsx)(h.default, {
+                                        onBack: V,
+                                        onClose: g,
+                                        isSlideReady: M === m.CreateGuildSlideTypes.JOIN_GUILD
                                     })
                                 })]
                             })
@@ -614,26 +656,26 @@
         },
         243338: function(e, t, n) {
             "use strict";
-            var r, l;
+            var r, i;
             n.r(t), n.d(t, {
                 CreateGuildSlideTypes: function() {
                     return r
                 },
                 CREATE_GUILD_MODAL_KEY: function() {
-                    return i
+                    return l
                 }
-            }), (l = r || (r = {})).GUILD_TEMPLATES = "guild-templates", l.CUSTOMIZE_GUILD = "customize-guild", l.CHANNEL_PROMPT = "channel-prompt", l.JOIN_GUILD = "join-guild", l.CREATION_INTENT = "creation-intent";
-            let i = "create-guild"
+            }), (i = r || (r = {})).GUILD_TEMPLATES = "guild-templates", i.CUSTOMIZE_GUILD = "customize-guild", i.CHANNEL_PROMPT = "channel-prompt", i.JOIN_GUILD = "join-guild", i.CREATION_INTENT = "creation-intent";
+            let l = "create-guild"
         },
         110337: function(e, t, n) {
             "use strict";
-            let r, l;
+            let r, i;
             n.r(t), n.d(t, {
                 default: function() {
                     return v
                 }
             }), n("222007");
-            var i = n("37983"),
+            var l = n("37983"),
                 a = n("884691"),
                 s = n("414456"),
                 o = n.n(s),
@@ -647,41 +689,41 @@
                 p = n("49111"),
                 h = n("782340"),
                 m = n("479030"),
-                S = n("529861"),
-                T = n("156465");
+                T = n("529861"),
+                S = n("156465");
             let g = "hTKzmak",
-                A = (0, _.uid)();
-            let C = (r = window.GLOBAL_ENV.INVITE_HOST, l = "", null == r && (r = location.host, l = p.Routes.INVITE("")), "".concat(location.protocol, "//").concat(r).concat(l, "/")),
-                N = [g, "".concat(C).concat(g), "".concat(C).concat("cool-people")],
+                C = (0, _.uid)();
+            let A = (r = window.GLOBAL_ENV.INVITE_HOST, i = "", null == r && (r = location.host, i = p.Routes.INVITE("")), "".concat(location.protocol, "//").concat(r).concat(i, "/")),
+                N = [g, "".concat(A).concat(g), "".concat(A).concat("cool-people")],
                 R = e => {
                     let {
                         onClick: t
                     } = e;
-                    return (0, i.jsxs)(u.Clickable, {
+                    return (0, l.jsxs)(u.Clickable, {
                         className: m.rowContainer,
                         onClick: () => {
                             t(), (0, f.transitionTo)(p.Routes.GUILD_DISCOVERY)
                         },
-                        children: [(0, i.jsx)("img", {
+                        children: [(0, l.jsx)("img", {
                             width: 40,
                             height: 40,
                             className: m.rowIcon,
                             alt: "",
-                            src: T
-                        }), (0, i.jsxs)("div", {
-                            children: [(0, i.jsx)(u.Heading, {
+                            src: S
+                        }), (0, l.jsxs)("div", {
+                            children: [(0, l.jsx)(u.Heading, {
                                 className: m.rowText,
                                 variant: "heading-md/semibold",
                                 children: h.default.Messages.DISCOVERY_UPSELL_HEADER
-                            }), (0, i.jsx)(u.Text, {
+                            }), (0, l.jsx)(u.Text, {
                                 className: m.rowText,
                                 variant: "text-xs/normal",
                                 children: h.default.Messages.DISCOVERY_UPSELL_DESCRIPTION
                             })]
-                        }), (0, i.jsx)("img", {
+                        }), (0, l.jsx)("img", {
                             className: m.rowArrow,
                             alt: "",
-                            src: S
+                            src: T
                         })]
                     })
                 };
@@ -691,29 +733,29 @@
                     onBack: t,
                     onClose: n,
                     isSlideReady: r
-                } = e, [l, s] = a.useState(""), [f, _] = a.useState(!1), [p, S] = a.useState(null), T = a.useRef(null);
+                } = e, [i, s] = a.useState(""), [f, _] = a.useState(!1), [p, T] = a.useState(null), S = a.useRef(null);
                 a.useEffect(() => {
                     var e;
-                    r && (null === (e = T.current) || void 0 === e || e.focus())
+                    r && (null === (e = S.current) || void 0 === e || e.focus())
                 }, [r]);
                 let v = e => {
                     e.preventDefault();
-                    let t = l.trim();
+                    let t = i.trim();
                     if ("" === t) {
-                        S(h.default.Messages.INVALID_INVITE_LINK_ERROR);
+                        T(h.default.Messages.INVALID_INVITE_LINK_ERROR);
                         return
                     }
-                    S(null), _(!0);
+                    T(null), _(!0);
                     let r = t.split("/"),
-                        i = r[r.length - 1];
-                    d.default.resolveInvite(i, "Join Guild", {
+                        l = r[r.length - 1];
+                    d.default.resolveInvite(l, "Join Guild", {
                         inputValue: t
                     }).then(e => {
                         let {
                             invite: t
                         } = e;
                         if (_(!1), null == t) {
-                            S(h.default.Messages.INSTANT_INVITE_EXPIRED);
+                            T(h.default.Messages.INSTANT_INVITE_EXPIRED);
                             return
                         }
                         if (null != t.channel) {
@@ -727,79 +769,79 @@
                             }).then(() => {}, e => {
                                 if (e instanceof c.V6OrEarlierAPIError || e instanceof c.APIError) {
                                     let t = (0, I.getInviteError)(e.code);
-                                    S(t)
-                                } else S(h.default.Messages.INVITE_MODAL_ERROR_DEFAULT)
+                                    T(t)
+                                } else T(h.default.Messages.INVITE_MODAL_ERROR_DEFAULT)
                             })
                         }
                     }, e => {
                         _(!1);
                         let t = new c.V6OrEarlierAPIError(e),
                             n = (0, I.getInviteError)(t.code);
-                        S(n)
+                        T(n)
                     })
                 };
-                return (0, i.jsxs)("div", {
-                    children: [(0, i.jsxs)(u.ModalHeader, {
+                return (0, l.jsxs)("div", {
+                    children: [(0, l.jsxs)(u.ModalHeader, {
                         className: m.header,
                         direction: E.default.Direction.VERTICAL,
                         separator: !1,
-                        children: [(0, i.jsx)(u.Heading, {
+                        children: [(0, l.jsx)(u.Heading, {
                             className: m.title,
                             variant: "heading-xl/semibold",
                             children: h.default.Messages.JOIN_SERVER_TITLE
-                        }), (0, i.jsx)(u.Text, {
+                        }), (0, l.jsx)(u.Text, {
                             color: "header-secondary",
                             variant: "text-sm/normal",
                             children: h.default.Messages.JOIN_SERVER_DESCRIPTION_NUF
-                        }), (0, i.jsx)(u.ModalCloseButton, {
+                        }), (0, l.jsx)(u.ModalCloseButton, {
                             className: m.closeButton,
                             onClick: n
                         })]
-                    }), (0, i.jsxs)(u.ModalContent, {
+                    }), (0, l.jsxs)(u.ModalContent, {
                         className: m.content,
-                        children: [(0, i.jsx)("form", {
+                        children: [(0, l.jsx)("form", {
                             onSubmit: v,
                             className: m.inputForm,
-                            children: (0, i.jsxs)(u.FormItem, {
-                                children: [(0, i.jsx)(u.FormTitle, {
-                                    id: A,
+                            children: (0, l.jsxs)(u.FormItem, {
+                                children: [(0, l.jsx)(u.FormTitle, {
+                                    id: C,
                                     error: p,
                                     className: o(m.formTitle, {
                                         [m.error]: null != p
                                     }),
                                     required: !0,
                                     children: h.default.Messages.FORM_LABEL_INVITE_LINK
-                                }), (0, i.jsx)(u.TextInput, {
-                                    value: l,
+                                }), (0, l.jsx)(u.TextInput, {
+                                    value: i,
                                     onChange: s,
                                     className: m.input,
                                     inputClassName: m.inputInner,
-                                    placeholder: "".concat(C).concat(g),
-                                    inputRef: T,
+                                    placeholder: "".concat(A).concat(g),
+                                    inputRef: S,
                                     required: !0,
-                                    "aria-labelledby": A
+                                    "aria-labelledby": C
                                 })]
                             })
-                        }), (0, i.jsx)(u.FormItem, {
+                        }), (0, l.jsx)(u.FormItem, {
                             title: h.default.Messages.JOIN_SERVER_INVITE_EXAMPLES_HEADER,
                             titleClassName: m.formTitle,
                             className: m.examplesForm,
-                            children: N.map(e => (0, i.jsx)(u.Clickable, {
+                            children: N.map(e => (0, l.jsx)(u.Clickable, {
                                 className: m.sampleLink,
                                 onClick: () => s(e),
                                 children: e
                             }, e))
-                        }), (0, i.jsx)(R, {
+                        }), (0, l.jsx)(R, {
                             onClick: n
                         })]
-                    }), (0, i.jsxs)(u.ModalFooter, {
+                    }), (0, l.jsxs)(u.ModalFooter, {
                         className: m.footer,
-                        children: [(0, i.jsx)(u.Button, {
+                        children: [(0, l.jsx)(u.Button, {
                             color: u.Button.Colors.BRAND,
                             submitting: f,
                             onClick: v,
                             children: h.default.Messages.NUF_JOIN_SERVER_BUTTON
-                        }), (0, i.jsx)(u.Button, {
+                        }), (0, l.jsx)(u.Button, {
                             color: u.Button.Colors.PRIMARY,
                             look: u.Button.Looks.LINK,
                             size: u.Button.Sizes.MIN,
@@ -818,8 +860,8 @@
                 }
             });
             var r = n("872717"),
-                l = n("913144"),
-                i = n("479756"),
+                i = n("913144"),
+                l = n("479756"),
                 a = n("38654"),
                 s = n("9294"),
                 o = n("26989"),
@@ -828,8 +870,8 @@
                 c = n("49111");
             let f = async (e, t) => {
                 let n = null != t ? t : u.default.getInviteKeyForGuildId(e),
-                    i = d.default.getCurrentUser(),
-                    a = !o.default.isMember(e, null == i ? void 0 : i.id);
+                    l = d.default.getCurrentUser(),
+                    a = !o.default.isMember(e, null == l ? void 0 : l.id);
                 try {
                     let t = await r.default.get({
                         url: c.Endpoints.GUILD_MEMBER_VERIFICATION(e),
@@ -841,20 +883,20 @@
                     });
                     if (null == t.body) throw t;
                     let {
-                        body: i
+                        body: l
                     } = t;
-                    return l.default.dispatch({
+                    return i.default.dispatch({
                         type: "MEMBER_VERIFICATION_FORM_UPDATE",
                         guildId: e,
                         form: {
-                            version: i.version,
-                            description: i.description,
-                            formFields: i.form_fields,
-                            guild: i.guild
+                            version: l.version,
+                            description: l.description,
+                            formFields: l.form_fields,
+                            guild: l.guild
                         }
-                    }), i
+                    }), l
                 } catch (t) {
-                    l.default.dispatch({
+                    i.default.dispatch({
                         type: "MEMBER_VERIFICATION_FORM_FETCH_FAIL",
                         guildId: e
                     })
@@ -868,15 +910,15 @@
                         oldFormErrors: !0
                     }),
                     {
-                        body: i
+                        body: l
                     } = n;
-                l.default.dispatch({
+                i.default.dispatch({
                     type: "MEMBER_VERIFICATION_FORM_UPDATE",
                     guildId: e,
                     form: {
-                        version: i.version,
-                        description: i.description,
-                        formFields: i.form_fields
+                        version: l.version,
+                        description: l.description,
+                        formFields: l.form_fields
                     }
                 })
             }, _ = async (e, t) => {
@@ -888,15 +930,15 @@
                         oldFormErrors: !0
                     }),
                     {
-                        body: i
+                        body: l
                     } = n;
-                l.default.dispatch({
+                i.default.dispatch({
                     type: "MEMBER_VERIFICATION_FORM_UPDATE",
                     guildId: e,
                     form: {
-                        version: i.version,
-                        description: i.description,
-                        formFields: i.form_fields
+                        version: l.version,
+                        description: l.description,
+                        formFields: l.form_fields
                     }
                 })
             }, I = async (e, t) => {
@@ -909,7 +951,7 @@
                 })
             }, p = async (e, t) => {
                 if (a.default.isFullServerPreview(e)) {
-                    (0, i.updateImpersonatedData)(e, {
+                    (0, l.updateImpersonatedData)(e, {
                         memberOptions: {
                             isPending: !1
                         }
@@ -925,13 +967,13 @@
                             }
                         }),
                         {
-                            body: i
+                            body: l
                         } = n;
-                    return l.default.dispatch({
+                    return i.default.dispatch({
                         type: "USER_GUILD_JOIN_REQUEST_UPDATE",
                         guildId: e,
-                        request: i
-                    }), i
+                        request: l
+                    }), l
                 } catch (e) {
                     throw e
                 }
@@ -948,7 +990,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 AUTOMATIC_APPROVAL_FORM_FIELDS: function() {
-                    return i
+                    return l
                 },
                 MANUAL_APPROVAL_FORM_FIELDS: function() {
                     return a
@@ -987,10 +1029,10 @@
                     return h
                 }
             }), n("222007");
-            var r, l = n("567054");
-            l.VerificationFormFieldTypes.VERIFICATION;
-            let i = new Set([l.VerificationFormFieldTypes.TERMS]),
-                a = new Set([l.VerificationFormFieldTypes.MULTIPLE_CHOICE, l.VerificationFormFieldTypes.TEXT_INPUT, l.VerificationFormFieldTypes.PARAGRAPH]),
+            var r, i = n("567054");
+            i.VerificationFormFieldTypes.VERIFICATION;
+            let l = new Set([i.VerificationFormFieldTypes.TERMS]),
+                a = new Set([i.VerificationFormFieldTypes.MULTIPLE_CHOICE, i.VerificationFormFieldTypes.TEXT_INPUT, i.VerificationFormFieldTypes.PARAGRAPH]),
                 s = 5,
                 o = 16,
                 u = 300,
@@ -1009,10 +1051,10 @@
             let r;
             n.r(t), n.d(t, {
                 openMemberVerificationModal: function() {
-                    return l
+                    return i
                 }
             }), r = n("453265").default;
-            let l = r.openMemberVerificationModal;
+            let i = r.openMemberVerificationModal;
             r.closeMemberVerificationModal
         },
         347977: function(e, t, n) {
@@ -1029,8 +1071,8 @@
                 }
             });
             var r = n("308503"),
-                l = n("659500"),
-                i = n("49111");
+                i = n("659500"),
+                l = n("49111");
             let a = Object.freeze({
                     hasUnsubmittedChanges: !1,
                     shouldShowWarning: !1
@@ -1044,7 +1086,7 @@
                 u = e => {
                     s.setState({
                         shouldShowWarning: e
-                    }), e && l.ComponentDispatch.dispatch(i.ComponentActions.EMPHASIZE_NOTICE)
+                    }), e && i.ComponentDispatch.dispatch(l.ComponentActions.EMPHASIZE_NOTICE)
                 }
         },
         453265: function(e, t, n) {
@@ -1056,19 +1098,19 @@
             });
             var r = n("37983");
             n("884691");
-            var l = n("551042"),
-                i = n("599110"),
+            var i = n("551042"),
+                l = n("599110"),
                 a = n("50926"),
                 s = n("347977"),
                 o = n("394294"),
                 u = n("49111");
             let d = () => {
-                    i.default.track(u.AnalyticEvents.MODAL_DISMISSED, {
+                    l.default.track(u.AnalyticEvents.MODAL_DISMISSED, {
                         type: o.MEMBER_VERIFICATION_TYPE
                     })
                 },
                 c = e => {
-                    i.default.track(u.AnalyticEvents.OPEN_MODAL, {
+                    l.default.track(u.AnalyticEvents.OPEN_MODAL, {
                         type: o.MEMBER_VERIFICATION_TYPE,
                         guild_id: e
                     })
@@ -1076,17 +1118,17 @@
             var f = {
                 openMemberVerificationModal(e, t) {
                     c(e);
-                    let i = async t => {
+                    let l = async t => {
                         await a.default.submitVerificationForm(e, t)
                     };
-                    (0, l.openModalLazy)(async () => {
+                    (0, i.openModalLazy)(async () => {
                         let {
                             default: t
                         } = await n.el("93184").then(n.bind(n, "93184"));
                         return n => (0, r.jsx)(t, {
                             ...n,
                             guildId: e,
-                            onComplete: i,
+                            onComplete: l,
                             onClose: function() {
                                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                                 if (!e) {
@@ -1102,14 +1144,14 @@
                     }, {
                         modalKey: o.IN_APP_MEMBER_VERIFICATION_MODAL_KEY,
                         onCloseRequest: () => {
-                            d(), s.useMemberVerificationFormNoticeStore.getState().hasUnsubmittedChanges ? (0, s.setShowWarning)(!0) : (0, l.closeModal)(o.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)
+                            d(), s.useMemberVerificationFormNoticeStore.getState().hasUnsubmittedChanges ? (0, s.setShowWarning)(!0) : (0, i.closeModal)(o.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)
                         },
                         onCloseCallback: t
                     })
                 },
                 closeMemberVerificationModal() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                    !e && d(), (0, l.closeModal)(o.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)
+                    !e && d(), (0, i.closeModal)(o.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)
                 }
             }
         },
@@ -1120,24 +1162,24 @@
                     return m
                 },
                 updateImpersonating: function() {
-                    return S
-                },
-                stopImpersonating: function() {
                     return T
                 },
+                stopImpersonating: function() {
+                    return S
+                },
                 updateImpersonatedChannels: function() {
-                    return A
+                    return C
                 },
                 updateImpersonatedRoles: function() {
-                    return C
+                    return A
                 },
                 updateImpersonatedData: function() {
                     return N
                 }
             }), n("222007");
             var r = n("913144"),
-                l = n("716241"),
-                i = n("393414"),
+                i = n("716241"),
+                l = n("393414"),
                 a = n("42203"),
                 s = n("923959"),
                 o = n("26989"),
@@ -1154,7 +1196,7 @@
             function m(e, t) {
                 E.default.track(p.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
                     num_roles: Object.keys(t.roles).length,
-                    ...(0, l.collectGuildAnalyticsMetadata)(e),
+                    ...(0, i.collectGuildAnalyticsMetadata)(e),
                     is_viewing_as_member: t.type === I.ImpersonateType.NEW_MEMBER
                 }), r.default.dispatch({
                     type: "IMPERSONATE_UPDATE",
@@ -1163,11 +1205,11 @@
                 }), g(e)
             }
 
-            function S(e, t) {
+            function T(e, t) {
                 let n = _.default.getData(e);
                 null != n && n.type === t.type && (E.default.track(p.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
                     num_roles: Object.keys(n.roles).length,
-                    ...(0, l.collectGuildAnalyticsMetadata)(e),
+                    ...(0, i.collectGuildAnalyticsMetadata)(e),
                     is_viewing_as_member: n.type === I.ImpersonateType.NEW_MEMBER
                 }), r.default.dispatch({
                     type: "IMPERSONATE_UPDATE",
@@ -1179,7 +1221,7 @@
                 }), g(e))
             }
 
-            function T(e) {
+            function S(e) {
                 r.default.dispatch({
                     type: "IMPERSONATE_STOP",
                     guildId: e
@@ -1192,19 +1234,19 @@
                     r = null != t && (0, h.isStaticChannelRoute)(t);
                 if (!r && !d.default.can(p.Permissions.VIEW_CHANNEL, n)) {
                     let t = s.default.getDefaultChannel(e);
-                    null != t && (0, i.transitionTo)(p.Routes.CHANNEL(e, t.id))
+                    null != t && (0, l.transitionTo)(p.Routes.CHANNEL(e, t.id))
                 }
             }
 
-            function A(e, t, n) {
+            function C(e, t, n) {
                 let r = new Set(f.default.getOptedInChannels(e));
-                t.forEach(e => r.add(e)), n.forEach(e => r.delete(e)), S(e, {
+                t.forEach(e => r.add(e)), n.forEach(e => r.delete(e)), T(e, {
                     type: I.ImpersonateType.NEW_MEMBER,
                     optInChannels: r
                 })
             }
 
-            function C(e, t) {
+            function A(e, t) {
                 let n = u.default.getGuild(e);
                 if (null == n) return;
                 ! function(e, t) {
@@ -1214,20 +1256,20 @@
                         let t = o.default.getSelfMember(e);
                         if (null == t) return !1;
                         if (r.some(e => !t.roles.includes(e))) return !0;
-                        let l = [...s.default.getSelectableChannelIds(e), ...s.default.getVocalChannelIds(e)],
-                            i = l.filter(e => !n.includes(e));
-                        return i.length > 0 && A(e, i, []), !1
+                        let i = [...s.default.getSelectableChannelIds(e), ...s.default.getVocalChannelIds(e)],
+                            l = i.filter(e => !n.includes(e));
+                        return l.length > 0 && C(e, l, []), !1
                     })
                 }(e, t);
                 let r = {};
-                t.forEach(e => r[e] = n.roles[e]), S(e, {
+                t.forEach(e => r[e] = n.roles[e]), T(e, {
                     type: I.ImpersonateType.NEW_MEMBER,
                     roles: r
                 })
             }
 
             function N(e, t) {
-                S(e, {
+                T(e, {
                     type: I.ImpersonateType.NEW_MEMBER,
                     ...t
                 })
@@ -1250,8 +1292,8 @@
                 }
             }), n("222007");
             var r = n("522632"),
-                l = n("833858");
-            let i = "event";
+                i = n("833858");
+            let l = "event";
 
             function a(e, t) {
                 if (null == t) return e;
@@ -1259,7 +1301,7 @@
                     let t = "?" === e.charAt(0) ? e.substring(1) : e;
                     try {
                         let e = r.parse(t);
-                        return (0, l.getFirstQueryStringValue)(e[i])
+                        return (0, i.getFirstQueryStringValue)(e[l])
                     } catch (e) {
                         return
                     }
@@ -1275,7 +1317,7 @@
                     baseCode: t,
                     guildScheduledEventId: n
                 } = e;
-                return null == n ? t : "".concat(t, "?").concat(i, "=").concat(n)
+                return null == n ? t : "".concat(t, "?").concat(l, "=").concat(n)
             }
 
             function o(e) {
@@ -1284,7 +1326,7 @@
                     baseCode: t
                 };
                 let a = r.parse(n),
-                    s = (0, l.getFirstQueryStringValue)(a[i]);
+                    s = (0, i.getFirstQueryStringValue)(a[l]);
                 return {
                     baseCode: t,
                     guildScheduledEventId: s
@@ -1298,16 +1340,16 @@
         },
         149806: function(e, t, n) {
             "use strict";
-            var r, l, i, a, s, o, u, d, c, f;
+            var r, i, l, a, s, o, u, d, c, f;
             n.r(t), n.d(t, {
                 FlowType: function() {
                     return r
                 },
                 AgeGateSteps: function() {
-                    return l
+                    return i
                 },
                 ClaimAccountSteps: function() {
-                    return i
+                    return l
                 },
                 CreateGuildSteps: function() {
                     return a
@@ -1315,7 +1357,7 @@
                 RegistrationSteps: function() {
                     return s
                 }
-            }), (o = r || (r = {})).UNKNOWN = "unknown", o.ANY = "any", o.INVITE = "invite", o.ORGANIC = "organic_registration", o.ORGANIC_MARKETING = "organic_marketing", o.ORGANIC_GUILD_TEMPLATES = "organic_guild_template", o.CREATE_GUILD = "create_guild", (u = l || (l = {})).AGE_GATE = "age_gate", u.AGE_GATE_UNDERAGE = "age_gate_underage", (d = i || (i = {})).CLAIM_ACCOUNT = "claim_account", d.CLAIM_ACCOUNT_SUCCESS = "claim_account_success", (c = a || (a = {})).GUILD_TEMPLATES = "guild_templates", c.GUILD_CREATE = "guild_create", c.CREATION_INTENT = "creation_intent", c.CHANNEL_PROMPT = "channel_prompt", c.JOIN_GUILD = "join_guild", c.SUCCESS = "create_success", (f = s || (s = {})).NUF_STARTED = "nuf_started", f.AGE_GATE = "age_gate", f.NUF_COMPLETE = "nuf_complete", f.HUB_CONNECTION = "hub_connection"
+            }), (o = r || (r = {})).UNKNOWN = "unknown", o.ANY = "any", o.INVITE = "invite", o.ORGANIC = "organic_registration", o.ORGANIC_MARKETING = "organic_marketing", o.ORGANIC_GUILD_TEMPLATES = "organic_guild_template", o.CREATE_GUILD = "create_guild", (u = i || (i = {})).AGE_GATE = "age_gate", u.AGE_GATE_UNDERAGE = "age_gate_underage", (d = l || (l = {})).CLAIM_ACCOUNT = "claim_account", d.CLAIM_ACCOUNT_SUCCESS = "claim_account_success", (c = a || (a = {})).GUILD_TEMPLATES = "guild_templates", c.GUILD_CREATE = "guild_create", c.CREATION_INTENT = "creation_intent", c.CHANNEL_PROMPT = "channel_prompt", c.JOIN_GUILD = "join_guild", c.SUCCESS = "create_success", (f = s || (s = {})).NUF_STARTED = "nuf_started", f.AGE_GATE = "age_gate", f.NUF_COMPLETE = "nuf_complete", f.HUB_CONNECTION = "hub_connection"
         },
         42963: function(e, t, n) {
             "use strict";
@@ -1325,8 +1367,8 @@
                 }
             });
             var r = n("308503"),
-                l = n("95410"),
-                i = n("605250"),
+                i = n("95410"),
+                l = n("605250"),
                 a = n("599110"),
                 s = n("149806"),
                 o = n("49111");
@@ -1335,7 +1377,7 @@
 
             function c(e) {
                 if (e === s.FlowType.UNKNOWN) return null;
-                let t = l.default.get("".concat(d, "-").concat(e));
+                let t = i.default.get("".concat(d, "-").concat(e));
                 if (null == t) return null;
                 let {
                     version: n,
@@ -1343,26 +1385,26 @@
                 } = t;
                 return 1 !== n ? null : r
             }
-            new i.default("UserFlowAnalytics");
+            new l.default("UserFlowAnalytics");
             let f = (0, r.default)((e, t) => ({
                 flows: {},
                 currentFlow: null,
                 activeFlow: () => {
                     var e;
-                    let n = null !== (e = t().currentFlow) && void 0 !== e ? e : l.default.get(u);
+                    let n = null !== (e = t().currentFlow) && void 0 !== e ? e : i.default.get(u);
                     if (null == n) return null;
                     let {
                         [n]: r
-                    } = t().flows, i = null != r ? r : c(n);
-                    return (null == i ? void 0 : i.currentStep) != null ? n : null
+                    } = t().flows, l = null != r ? r : c(n);
+                    return (null == l ? void 0 : l.currentStep) != null ? n : null
                 }
             }));
 
             function E(e, t) {
                 let {
                     [e]: n, ...r
-                } = f.getState().flows, l = null != n ? n : c(e);
-                if ((null == l ? void 0 : l.currentStep) == null || l.currentStep !== t) f.setState({
+                } = f.getState().flows, i = null != n ? n : c(e);
+                if ((null == i ? void 0 : i.currentStep) == null || i.currentStep !== t) f.setState({
                     flows: {
                         ...r,
                         [e]: {
@@ -1382,12 +1424,12 @@
                 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     r = e;
                 if (e === s.FlowType.ANY) {
-                    var l;
-                    r = null !== (l = f.getState().activeFlow()) && void 0 !== l ? l : s.FlowType.UNKNOWN
+                    var i;
+                    r = null !== (i = f.getState().activeFlow()) && void 0 !== i ? i : s.FlowType.UNKNOWN
                 }
                 let {
-                    [r]: i, ...a
-                } = f.getState().flows, o = null != i ? i : c(r);
+                    [r]: l, ...a
+                } = f.getState().flows, o = null != l ? l : c(r);
                 if (null != o && null != o.currentStep) o.currentStep !== t && f.setState({
                     flows: {
                         ...a,
@@ -1408,10 +1450,10 @@
                 if (null != e && (! function(e) {
                         if (e.type === s.FlowType.UNKNOWN) return;
                         let t = "".concat(d, "-").concat(e.type);
-                        e.ended ? (l.default.remove(t), l.default.remove(u)) : (l.default.set("".concat(d, "-").concat(e.type), {
+                        e.ended ? (i.default.remove(t), i.default.remove(u)) : (i.default.set("".concat(d, "-").concat(e.type), {
                             ...e,
                             version: 1
-                        }), l.default.set(u, e.type))
+                        }), i.default.set(u, e.type))
                     }(e), a.default.track(o.AnalyticEvents.NUO_TRANSITION, {
                         flow_type: e.type,
                         from_step: e.lastStep,
@@ -1449,8 +1491,8 @@
                     return r
                 }
             }), n("702976");
-            var r, l = n("866227"),
-                i = n.n(l),
+            var r, i = n("866227"),
+                l = n.n(i),
                 a = n("666038");
             r = class e extends a.default {
                 static createFromServer(t) {
@@ -1459,7 +1501,7 @@
                         ...t,
                         maxUses: t.max_uses,
                         maxAge: t.max_age,
-                        createdAt: i(null !== (n = t.created_at) && void 0 !== n ? n : void 0),
+                        createdAt: l(null !== (n = t.created_at) && void 0 !== n ? n : void 0),
                         targetType: t.target_type,
                         targetUser: t.target_user,
                         targetApplication: t.target_application
@@ -1468,14 +1510,14 @@
                 isExpired() {
                     let e = this.maxAge;
                     if (e > 0) {
-                        let t = i(this.createdAt);
+                        let t = l(this.createdAt);
                         if (t.add(e, "seconds").isBefore(Date.now())) return !0
                     }
                     return !1
                 }
                 getExpiresAt() {
                     if (this.maxAge > 0) {
-                        let e = i(this.createdAt);
+                        let e = l(this.createdAt);
                         return e.add(this.maxAge, "seconds").toDate()
                     }
                     return 1 / 0
@@ -1496,8 +1538,8 @@
                 }
             }), n("702976");
             var r = n("446674"),
-                l = n("913144"),
-                i = n("9294"),
+                i = n("913144"),
+                l = n("9294"),
                 a = n("49111");
             let s = {},
                 o = {},
@@ -1506,11 +1548,11 @@
             function d(e, t) {
                 var n;
                 e = null != e ? e : "";
-                let r = (0, i.parseExtraDataFromInviteKey)(e),
-                    l = s[e],
-                    o = null != l ? {
+                let r = (0, l.parseExtraDataFromInviteKey)(e),
+                    i = s[e],
+                    o = null != i ? {
                         state: a.InviteStates.RESOLVING,
-                        ...l
+                        ...i
                     } : {
                         state: a.InviteStates.RESOLVING,
                         code: r.baseCode
@@ -1544,11 +1586,11 @@
                 }
             }
             f.displayName = "InviteStore";
-            var E = new f(l.default, {
+            var E = new f(i.default, {
                 INVITE_RESOLVE: function(e) {
                     let {
                         code: t
-                    } = e, n = (0, i.parseExtraDataFromInviteKey)(t);
+                    } = e, n = (0, l.parseExtraDataFromInviteKey)(t);
                     s = {
                         ...s,
                         [t]: {
@@ -1624,8 +1666,8 @@
                 }
             }), n("222007");
             var r = n("627445"),
-                l = n.n(r),
-                i = n("446674"),
+                i = n.n(r),
+                l = n("446674"),
                 a = n("913144"),
                 s = n("816454");
             let o = new Map;
@@ -1641,7 +1683,7 @@
                     }
                 }) : t
             }
-            class d extends i.default.Store {
+            class d extends l.default.Store {
                 isFocused() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, s.getMainWindowId)();
                     return u(e).focused
@@ -1664,12 +1706,12 @@
             d.displayName = "WindowStore";
             let c = new d(a.default, {
                 WINDOW_INIT: function(e) {
-                    l(!o.has(e.windowId), "Window initialized multiple times");
+                    i(!o.has(e.windowId), "Window initialized multiple times");
                     let {
                         width: t,
                         height: n,
                         isElementFullscreen: r,
-                        focused: i
+                        focused: l
                     } = e;
                     return o.set(e.windowId, {
                         windowSize: {
@@ -1677,7 +1719,7 @@
                             height: n
                         },
                         isElementFullscreen: r,
-                        focused: i
+                        focused: l
                     }), !0
                 },
                 WINDOW_FULLSCREEN_CHANGE: function(e) {
@@ -1726,9 +1768,9 @@
                 }
             });
             var r = n("37983"),
-                l = n("884691"),
-                i = n("414456"),
-                a = n.n(i),
+                i = n("884691"),
+                l = n("414456"),
+                a = n.n(l),
                 s = n("77078"),
                 o = n("760607"),
                 u = n("89976");
@@ -1737,12 +1779,12 @@
                 let {
                     children: t,
                     size: n = 16,
-                    className: i,
+                    className: l,
                     flowerStarClassName: d,
                     ...c
-                } = e, f = l.Children.only(t), E = (0, s.useRedesignIconContext)().enabled;
+                } = e, f = i.Children.only(t), E = (0, s.useRedesignIconContext)().enabled;
                 return (0, r.jsxs)("div", {
-                    className: a(u.flowerStarContainer, i),
+                    className: a(u.flowerStarContainer, l),
                     style: {
                         width: n,
                         height: n
@@ -1763,13 +1805,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return C
+                    return A
                 }
             });
             var r = n("37983"),
-                l = n("884691"),
-                i = n("414456"),
-                a = n.n(i),
+                i = n("884691"),
+                l = n("414456"),
+                a = n.n(l),
                 s = n("90915"),
                 o = n("446674"),
                 u = n("669491"),
@@ -1800,7 +1842,7 @@
                     [h.LARGER]: 64,
                     [h.XLARGE]: 100
                 },
-                S = {
+                T = {
                     [h.SMOL]: [10, 10, 8, 6, 6, 4],
                     [h.MINI]: [12, 12, 10, 10, 8, 6, 4],
                     [h.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
@@ -1810,7 +1852,7 @@
                     [h.LARGER]: [19, 19, 17, 17, 15, 13, 11],
                     [h.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
                 };
-            class T extends l.PureComponent {
+            class S extends i.PureComponent {
                 renderAcronym() {
                     let {
                         guild: e,
@@ -1837,8 +1879,8 @@
                     var e, t;
                     let {
                         guild: n,
-                        className: l,
-                        showBadge: i,
+                        className: i,
+                        showBadge: l,
                         active: s,
                         size: o,
                         style: u = {},
@@ -1848,19 +1890,19 @@
                         onClick: I,
                         to: h,
                         badgeStrokeColor: m,
-                        animate: T,
+                        animate: S,
                         tabIndex: g,
-                        iconSrc: A,
-                        "aria-hidden": C,
+                        iconSrc: C,
+                        "aria-hidden": A,
                         ...N
-                    } = this.props, R = S[o], v = null != I ? d.Clickable : "div";
+                    } = this.props, R = T[o], v = null != I ? d.Clickable : "div";
                     return (0, r.jsxs)(v, {
-                        className: a(p.icon, l, (0, _.getClass)(p, "iconSize", o), {
+                        className: a(p.icon, i, (0, _.getClass)(p, "iconSize", o), {
                             [null !== (e = (0, _.getClass)(p, "iconActive", o)) && void 0 !== e ? e : ""]: s,
                             [p.iconInactive]: !s,
                             [p.noIcon]: null == n.icon
                         }),
-                        "aria-hidden": C,
+                        "aria-hidden": A,
                         style: null == n.icon ? {
                             fontSize: (null !== (t = R[n.acronym.length]) && void 0 !== t ? t : R[R.length - 1]) * c,
                             ...u
@@ -1881,7 +1923,7 @@
                         text: e.name,
                         position: n,
                         "aria-label": !1,
-                        children: e => l.cloneElement(l.Children.only(this.renderIcon()), {
+                        children: e => i.cloneElement(i.Children.only(this.renderIcon()), {
                             ...e
                         })
                     }) : this.renderIcon()
@@ -1891,11 +1933,11 @@
                         to: e,
                         guild: t,
                         source: n,
-                        tabIndex: l,
-                        "aria-hidden": i
+                        tabIndex: i,
+                        "aria-hidden": l
                     } = this.props;
                     return null != e ? (0, r.jsx)(s.Link, {
-                        "aria-hidden": i,
+                        "aria-hidden": l,
                         to: {
                             pathname: e,
                             state: null != n ? {
@@ -1903,7 +1945,7 @@
                             } : null
                         },
                         "aria-label": t.toString(),
-                        tabIndex: l,
+                        tabIndex: i,
                         children: this.renderTooltip()
                     }) : this.renderTooltip()
                 }
@@ -1913,26 +1955,26 @@
                     guild: t,
                     animate: n,
                     iconSrc: r,
-                    style: l,
-                    size: i
+                    style: i,
+                    size: l
                 } = e;
                 return {
                     style: {
-                        ...l,
-                        backgroundImage: (0, E.makeCssUrlString)(null != r ? r : t.getIconURL(m[i], n && f.default.isFocused()))
+                        ...i,
+                        backgroundImage: (0, E.makeCssUrlString)(null != r ? r : t.getIconURL(m[l], n && f.default.isFocused()))
                     }
                 }
-            })((0, c.backgroundImagePreloader)(e => (0, r.jsx)(T, {
+            })((0, c.backgroundImagePreloader)(e => (0, r.jsx)(S, {
                 ...e
             })));
-            class A extends l.PureComponent {
+            class C extends i.PureComponent {
                 render() {
                     return (0, r.jsx)(g, {
                         ...this.props
                     })
                 }
             }
-            A.Sizes = h, A.defaultProps = {
+            C.Sizes = h, C.defaultProps = {
                 size: h.LARGE,
                 textScale: 1,
                 showBadge: !1,
@@ -1942,7 +1984,7 @@
                 badgeStrokeColor: u.default.unsafe_rawColors.WHITE_500.css,
                 animate: !1
             };
-            var C = A
+            var A = C
         },
         476765: function(e, t, n) {
             "use strict";
@@ -1958,13 +2000,13 @@
                 }
             });
             var r = n("995008"),
-                l = n.n(r),
-                i = n("775560");
+                i = n.n(r),
+                l = n("775560");
             let a = function() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "uid_";
-                    return l(e)
+                    return i(e)
                 },
-                s = () => (0, i.useLazyValue)(() => a()),
+                s = () => (0, l.useLazyValue)(() => a()),
                 o = e => {
                     let {
                         children: t
@@ -1976,28 +2018,28 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return l
                 }
             });
             var r = n("37983");
             n("884691");
-            var l = n("75196"),
-                i = function(e) {
+            var i = n("75196"),
+                l = function(e) {
                     let {
                         width: t = 16,
                         height: n = 16,
-                        color: i = "currentColor",
+                        color: l = "currentColor",
                         foreground: a,
                         ...s
                     } = e;
                     return (0, r.jsx)("svg", {
-                        ...(0, l.default)(s),
+                        ...(0, i.default)(s),
                         width: t,
                         height: n,
                         viewBox: "0 0 16 15.2",
                         children: (0, r.jsx)("path", {
                             className: a,
-                            fill: i,
+                            fill: l,
                             fillRule: "evenodd",
                             d: "m16 7.6c0 .79-1.28 1.38-1.52 2.09s.44 2 0 2.59-1.84.35-2.46.8-.79 1.84-1.54 2.09-1.67-.8-2.47-.8-1.75 1-2.47.8-.92-1.64-1.54-2.09-2-.18-2.46-.8.23-1.84 0-2.59-1.54-1.3-1.54-2.09 1.28-1.38 1.52-2.09-.44-2 0-2.59 1.85-.35 2.48-.8.78-1.84 1.53-2.12 1.67.83 2.47.83 1.75-1 2.47-.8.91 1.64 1.53 2.09 2 .18 2.46.8-.23 1.84 0 2.59 1.54 1.3 1.54 2.09z"
                         })
@@ -2013,27 +2055,27 @@
             });
             var r = n("37983");
             n("884691");
-            var l = n("469563"),
-                i = n("276825"),
+            var i = n("469563"),
+                l = n("276825"),
                 a = n("75196"),
-                s = (0, l.replaceIcon)(function(e) {
+                s = (0, i.replaceIcon)(function(e) {
                     let {
                         width: t = 16,
                         height: n = 16,
-                        color: l = "currentColor",
-                        ...i
+                        color: i = "currentColor",
+                        ...l
                     } = e;
                     return (0, r.jsx)("svg", {
-                        ...(0, a.default)(i),
+                        ...(0, a.default)(l),
                         width: t,
                         height: n,
                         viewBox: "0 0 16 15.2",
                         children: (0, r.jsx)("path", {
                             d: "M7.4,11.17,4,8.62,5,7.26l2,1.53L10.64,4l1.36,1Z",
-                            fill: l
+                            fill: i
                         })
                     })
-                }, i.CheckmarkSmallIcon, void 0, {
+                }, l.CheckmarkSmallIcon, void 0, {
                     size: 16
                 })
         },
@@ -2045,8 +2087,8 @@
                     return p
                 }
             }), n("424973");
-            var l = n("917351"),
-                i = n.n(l),
+            var i = n("917351"),
+                l = n.n(i),
                 a = n("693566"),
                 s = n.n(a),
                 o = n("851387"),
@@ -2061,17 +2103,17 @@
             function _(e, t, n) {
                 null != r && clearTimeout(r), r = setTimeout(() => {
                     let r = [],
-                        l = e => {
+                        i = e => {
                             r.push(e.id)
                         };
-                    if (null == e) i.forEach(u.default.getGuilds(), l);
+                    if (null == e) l.forEach(u.default.getGuilds(), i);
                     else if (Array.isArray(e)) e.forEach(e => {
                         let t = u.default.getGuild(e);
-                        null != t && l(t)
+                        null != t && i(t)
                     });
                     else {
                         let t = u.default.getGuild(e);
-                        null != t && l(t)
+                        null != t && i(t)
                     }
                     r.length > 0 && o.default.requestMembers(r, t.toLocaleLowerCase(), n)
                 }, 200)
@@ -2094,17 +2136,17 @@
                 requestMembers(e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
                         r = Array.isArray(e),
-                        l = [],
-                        i = !1;
+                        i = [],
+                        l = !1;
                     if (r) e.forEach(e => {
                         let n = I(e, t);
-                        null == n && l.push(e)
+                        null == n && i.push(e)
                     });
                     else {
                         let n = I(e, t);
-                        null == n && (i = !0)
+                        null == n && (l = !0)
                     }
-                    l.length > 0 && r ? _(l, t, n) : i && _(e, t, n)
+                    i.length > 0 && r ? _(i, t, n) : l && _(e, t, n)
                 }
             }
         },
@@ -2136,19 +2178,19 @@
                     return m
                 },
                 dataUriFileSize: function() {
-                    return S
+                    return T
                 },
                 dataUrlToFile: function() {
-                    return T
+                    return S
                 },
                 isPNGAnimated: function() {
                     return g
                 }
             }), n("424973"), n("101997"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("70102");
             var r = n("627445"),
-                l = n.n(r),
-                i = n("917351"),
-                a = n.n(i),
+                i = n.n(r),
+                l = n("917351"),
+                a = n.n(l),
                 s = n("48648"),
                 o = n.n(s);
 
@@ -2157,15 +2199,15 @@
                     width: t,
                     height: n,
                     maxWidth: r,
-                    maxHeight: l,
-                    minWidth: i = 0,
+                    maxHeight: i,
+                    minWidth: l = 0,
                     minHeight: a = 0
                 } = e;
-                if (t !== r || n !== l) {
+                if (t !== r || n !== i) {
                     let e = t > r ? r / t : 1;
-                    t = Math.max(Math.round(t * e), i), n = Math.max(Math.round(n * e), a);
-                    let s = n > l ? l / n : 1;
-                    t = Math.max(Math.round(t * s), i), n = Math.max(Math.round(n * s), a)
+                    t = Math.max(Math.round(t * e), l), n = Math.max(Math.round(n * e), a);
+                    let s = n > i ? i / n : 1;
+                    t = Math.max(Math.round(t * s), l), n = Math.max(Math.round(n * s), a)
                 }
                 return {
                     width: t,
@@ -2189,11 +2231,11 @@
                     width: t,
                     height: n,
                     maxWidth: r,
-                    maxHeight: l
-                } = e, i = 1;
-                t > r && (i = r / t), t = Math.round(t * i);
+                    maxHeight: i
+                } = e, l = 1;
+                t > r && (l = r / t), t = Math.round(t * l);
                 let a = 1;
-                return (n = Math.round(n * i)) > l && (a = l / n), Math.min(i * a, 1)
+                return (n = Math.round(n * l)) > i && (a = i / n), Math.min(l * a, 1)
             }
 
             function f(e) {
@@ -2201,9 +2243,9 @@
                     width: t,
                     height: n,
                     maxWidth: r,
-                    maxHeight: l
+                    maxHeight: i
                 } = e;
-                return t === n ? 1 : Math.min(Math.max(r / t, l / n), 1)
+                return t === n ? 1 : Math.min(Math.max(r / t, i / n), 1)
             }
 
             function E(e) {
@@ -2215,17 +2257,17 @@
 
             function I(e, t, n) {
                 let r = document.createElement("canvas"),
-                    l = r.getContext("2d");
-                if (null == l) return _;
-                let i = r.width = 0 === e.width ? 128 : e.width,
+                    i = r.getContext("2d");
+                if (null == i) return _;
+                let l = r.width = 0 === e.width ? 128 : e.width,
                     a = r.height = 0 === e.height ? 128 : e.height;
-                l.drawImage(e, 0, 0, i, a);
-                let s = l.getImageData(0, 0, i, a).data,
+                i.drawImage(e, 0, 0, l, a);
+                let s = i.getImageData(0, 0, l, a).data,
                     u = function(e, t, n) {
                         let r = [];
-                        for (let l = 0, i, a, s, o, u; l < t; l += n) a = e[(i = 4 * l) + 0], s = e[i + 1], o = e[i + 2], (void 0 === (u = e[i + 3]) || u >= 125) && !(a > 250 && s > 250 && o > 250) && r.push([a, s, o]);
+                        for (let i = 0, l, a, s, o, u; i < t; i += n) a = e[(l = 4 * i) + 0], s = e[l + 1], o = e[l + 2], (void 0 === (u = e[l + 3]) || u >= 125) && !(a > 250 && s > 250 && o > 250) && r.push([a, s, o]);
                         return r
-                    }(s, i * a, n),
+                    }(s, l * a, n),
                     d = o(u, t);
                 return "boolean" == typeof d ? _ : d.palette()
             }
@@ -2243,28 +2285,28 @@
                 return new Promise((t, n) => {
                     let r = new FileReader;
                     r.readAsDataURL(e), r.onload = () => {
-                        l("string" == typeof r.result, "Result must be a string"), t(r.result)
+                        i("string" == typeof r.result, "Result must be a string"), t(r.result)
                     }, r.onerror = e => n(e)
                 })
             }
 
-            function S(e) {
+            function T(e) {
                 let t = e.split(";base64,");
-                return l(2 === t.length, "Input data is not a valid image."), atob(t[1]).length
+                return i(2 === t.length, "Input data is not a valid image."), atob(t[1]).length
             }
-            async function T(e, t, n) {
+            async function S(e, t, n) {
                 let r = function(e) {
                         let t;
                         t = e.split(",")[0].indexOf("base64") >= 0 ? atob(e.split(",")[1]) : btoa(e.split(",")[1]);
                         let n = e.split(",")[0].split(":")[1].split(";")[0],
                             r = new Uint8Array(t.length);
-                        for (var l = 0; l < t.length; l++) r[l] = t.charCodeAt(l);
+                        for (var i = 0; i < t.length; i++) r[i] = t.charCodeAt(i);
                         return new Blob([r], {
                             type: n
                         })
                     }(e),
-                    l = await r.arrayBuffer();
-                return new File([l], t, {
+                    i = await r.arrayBuffer();
+                return new File([i], t, {
                     type: n
                 })
             }
@@ -2273,21 +2315,21 @@
                 let n = null === (t = e.type) || void 0 === t ? void 0 : t.split(";")[0];
                 if ("image/png" !== n) throw Error("File is not a PNG");
                 let r = await e.text(),
-                    l = r.indexOf("IDAT");
-                return !!(l > 0) && -1 !== r.substring(0, l).indexOf("acTL") || !1
+                    i = r.indexOf("IDAT");
+                return !!(i > 0) && -1 !== r.substring(0, i).indexOf("acTL") || !1
             }
         },
         615931: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
                 resolveThunk: function() {
-                    return i
+                    return l
                 }
             });
             var r = n("917351"),
-                l = n.n(r);
-            let i = e => "function" == typeof e ? e() : e;
-            l.curry((e, t, n) => i(t) ? e(n) : n({}))
+                i = n.n(r);
+            let l = e => "function" == typeof e ? e() : e;
+            i.curry((e, t, n) => l(t) ? e(n) : n({}))
         },
         883029: function(e, t, n) {
             "use strict";
@@ -2300,8 +2342,8 @@
                 }
             });
             var r = n("697218"),
-                l = n("701909"),
-                i = n("719923"),
+                i = n("701909"),
+                l = n("719923"),
                 a = n("49111"),
                 s = n("782340");
 
@@ -2309,11 +2351,11 @@
                 switch (e) {
                     case a.AbortCodes.TOO_MANY_USER_GUILDS:
                         let t = r.default.getCurrentUser(),
-                            n = i.default.canUseIncreasedGuildCap(t) || (null == t ? void 0 : t.isStaff()),
-                            l = n ? a.MAX_USER_GUILDS_PREMIUM : a.MAX_USER_GUILDS;
+                            n = l.default.canUseIncreasedGuildCap(t) || (null == t ? void 0 : t.isStaff()),
+                            i = n ? a.MAX_USER_GUILDS_PREMIUM : a.MAX_USER_GUILDS;
                         return {
                             title: s.default.Messages.TOO_MANY_USER_GUILDS_TITLE_2.format({
-                                quantity: l
+                                quantity: i
                             }), description: s.default.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION
                         };
                     case a.AbortCodes.GUILD_AT_CAPACITY:
@@ -2341,7 +2383,7 @@
                         return s.default.Messages.INVALID_CANNOT_FRIEND_SELF;
                     case a.AbortCodes.INVITES_DISABLED:
                         return s.default.Messages.INVITES_DISABLED_MODAL_DESCRIPTION.format({
-                            articleLink: l.default.getArticleURL(a.HelpdeskArticles.INVITE_DISABLED)
+                            articleLink: i.default.getArticleURL(a.HelpdeskArticles.INVITE_DISABLED)
                         });
                     default:
                         return s.default.Messages.INVITE_MODAL_ERROR_DEFAULT
@@ -2350,27 +2392,27 @@
         },
         730622: function(e, t, n) {
             "use strict";
-            let r, l;
+            let r, i;
             n.r(t), n.d(t, {
                 default: function() {
                     return d
                 }
             }), n("70102");
-            var i = n("697218"),
+            var l = n("697218"),
                 a = n("615931");
             let s = () => {
                 throw Error("updateModal has not been implemented.")
             };
             {
                 let e = n("670924");
-                r = e.showModal, s = e.updateModalProps, l = n("551042").closeModal
+                r = e.showModal, s = e.updateModalProps, i = n("551042").closeModal
             }
 
             function o(e) {
                 let {
                     promiseFn: t,
                     resolve: n,
-                    reject: i,
+                    reject: l,
                     modalProps: a = {},
                     hooks: {
                         onEarlyClose: o
@@ -2387,11 +2429,11 @@
                 }
 
                 function f(e) {
-                    l(d), n(e)
+                    i(d), n(e)
                 }
 
                 function E(e) {
-                    l(d), i(e)
+                    i(d), l(e)
                 }
 
                 function _(e) {
@@ -2424,16 +2466,16 @@
                     promiseFn: t,
                     resolve: n,
                     reject: r,
-                    code: l,
-                    mfaCodeHandler: i = o,
+                    code: i,
+                    mfaCodeHandler: l = o,
                     isModalOpen: a = !1,
                     ...s
                 } = e;
-                return t(null != l ? {
-                    code: l
+                return t(null != i ? {
+                    code: i
                 } : {}).then(n, e => {
-                    var l, o;
-                    if (l = e, o = a, l.body && 60008 === l.body.code || o && 429 === l.status) return i({
+                    var i, o;
+                    if (i = e, o = a, i.body && 60008 === i.body.code || o && 429 === i.status) return l({
                         promiseFn: t,
                         resolve: n,
                         reject: r,
@@ -2447,11 +2489,11 @@
             function d(e, t) {
                 var n, r;
                 let {
-                    checkEnabled: l = null !== (r = null === (n = i.default.getCurrentUser()) || void 0 === n ? void 0 : n.mfaEnabled) && void 0 !== r && r,
+                    checkEnabled: i = null !== (r = null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.mfaEnabled) && void 0 !== r && r,
                     ...s
                 } = null != t ? t : {};
                 return new Promise((t, n) => {
-                    ((0, a.resolveThunk)(l) ? o : u)({
+                    ((0, a.resolveThunk)(i) ? o : u)({
                         promiseFn: e,
                         resolve: t,
                         reject: n,
@@ -2487,14 +2529,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 getClass: function() {
-                    return l
+                    return i
                 }
             }), n("808653");
             var r = n("159885");
 
-            function l(e, t) {
-                for (var n = arguments.length, l = Array(n > 2 ? n - 2 : 0), i = 2; i < n; i++) l[i - 2] = arguments[i];
-                let a = l.reduce((e, t) => e + (0, r.upperCaseFirstChar)(t), ""),
+            function i(e, t) {
+                for (var n = arguments.length, i = Array(n > 2 ? n - 2 : 0), l = 2; l < n; l++) i[l - 2] = arguments[l];
+                let a = i.reduce((e, t) => e + (0, r.upperCaseFirstChar)(t), ""),
                     s = "".concat(t).concat(a),
                     o = e[s];
                 if (null != o) return o
@@ -2512,25 +2554,25 @@
             });
             var r = n("37983");
             n("884691");
-            var l = n("551042"),
-                i = n("920636");
-            let a = (e, t, n) => function(l) {
-                return (0, r.jsx)(i.default, {
+            var i = n("551042"),
+                l = n("920636");
+            let a = (e, t, n) => function(i) {
+                return (0, r.jsx)(l.default, {
                     handleSubmit: e,
                     handleEarlyClose: t,
                     ...n,
-                    ...l
+                    ...i
                 })
             };
 
             function s(e, t, n) {
-                return (0, l.openModal)(a(e, t, n), {
+                return (0, i.openModal)(a(e, t, n), {
                     onCloseCallback: t
                 })
             }
 
             function o(e, t, n, r) {
-                return (0, l.updateModal)(e, a(t, n, r))
+                return (0, i.updateModal)(e, a(t, n, r))
             }
         }
     }
