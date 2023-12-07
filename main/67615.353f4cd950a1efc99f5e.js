@@ -8610,7 +8610,7 @@
                 let n = Date.now() - e;
                 d.default.increment({
                     name: r.MetricEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING,
-                    tags: ["timingBucket:".concat(Math.min(Math.floor(n / 1e3), 3)), "source".concat(t)]
+                    tags: ["timingBucket:".concat(Math.min(Math.floor(n / 1e3), 3)), "source:".concat(t)]
                 })
             }
 
