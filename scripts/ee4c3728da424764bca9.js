@@ -4270,32 +4270,38 @@
                 _ = s("782340"),
                 E = s("659972");
 
-            function I() {
-                let e = (0, i.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3).reverse()),
-                    t = e.map((t, s) => (0, a.jsx)(f, {
-                        affinity: t,
-                        applyMask: s !== e.length - 1
-                    }, t.id)),
-                    s = n.useMemo(() => 3 === e.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
-                        username: e[2].globalName
-                    }) : 2 === e.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_2.format({
-                        username: e[1].globalName,
-                        otherUsername: e[0].globalName
-                    }) : 1 === e.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_1.format({
-                        username: e[0].globalName
-                    }) : "", [e]);
-                return 0 === e.length ? null : (0, a.jsxs)("div", {
+            function I(e) {
+                let {
+                    smallerText: t
+                } = e, s = (0, i.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3).reverse()), l = s.map((e, t) => (0, a.jsx)(f, {
+                    affinity: e,
+                    applyMask: t !== s.length - 1
+                }, e.id)), r = n.useMemo(() => 3 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
+                    username: s[2].globalName
+                }) : 2 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_2.format({
+                    username: s[1].globalName,
+                    otherUsername: s[0].globalName
+                }) : 1 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_1.format({
+                    username: s[0].globalName
+                }) : "", [s]);
+                return 0 === s.length ? null : (0, a.jsxs)("div", {
                     className: E.container,
                     children: [(0, a.jsx)("div", {
                         className: E.iconContainer,
-                        children: t
+                        children: l
                     }), (0, a.jsx)("div", {
                         className: E.textContainer,
-                        children: (0, a.jsx)(u.Text, {
-                            variant: "text-lg/normal",
-                            color: "always-white",
-                            children: s
-                        })
+                        children: (0, a.jsx)(function() {
+                            return t ? (0, a.jsx)(u.Text, {
+                                variant: "text-lg/normal",
+                                color: "always-white",
+                                children: r
+                            }) : (0, a.jsx)(u.Heading, {
+                                variant: "heading-xl/normal",
+                                color: "always-white",
+                                children: r
+                            })
+                        }, {})
                     })]
                 })
             }
@@ -4786,7 +4792,8 @@
                 return (0, a.jsx)(f, {
                     children: (0, a.jsxs)("div", {
                         className: l(C.container, s, {
-                            [C.settingsContainer]: !t
+                            [C.settingsContainer]: !t,
+                            [C.affinityHeight]: !t && h
                         }),
                         "data-testid": "v2-marketing-page-hero-header",
                         children: [(0, a.jsxs)("div", {
@@ -4797,7 +4804,9 @@
                                 children: P.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
                             }), h ? (0, a.jsx)("div", {
                                 className: C.affinityDescription,
-                                children: (0, a.jsx)(R.default, {})
+                                children: (0, a.jsx)(R.default, {
+                                    smallerText: !t
+                                })
                             }) : (0, a.jsx)(O, {}), p ? (0, a.jsx)("div", {
                                 className: C.buttonContainer,
                                 children: (0, a.jsx)(N.default, {
