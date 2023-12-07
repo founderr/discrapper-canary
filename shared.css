@@ -18995,7 +18995,8 @@ html.disable-forced-colors * {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative
+    position: relative;
+    border-radius: 4px 4px 0 0
 }
 
 .closeButton_bf11e4 {
