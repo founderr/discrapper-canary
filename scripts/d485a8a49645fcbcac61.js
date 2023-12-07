@@ -9957,7 +9957,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "22bc7c66498c8de6329746e09e2abaf9466e6fb1", e.substring(0, 7)),
+                    S = (e = "f51038f6e0ea207c7d025a82edf0504dd178f6ef", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -9970,7 +9970,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "252301", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "252306", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
@@ -14405,9 +14405,17 @@
                 let n, {
                         integration: l
                     } = e,
-                    i = (0, r.useStateFromStores)([A.default], () => A.default.isJoining(l.id), [l.id]),
-                    o = null != (0, r.useStateFromStores)([O.default], () => O.default.getGuild(l.guild.id), [l.guild.id]);
-                return !o && (n = (0, a.jsx)(c.Button, {
+                    {
+                        isJoining: i,
+                        joinErrorMessage: o,
+                        showJoinErrorMessage: d
+                    } = (0, r.useStateFromStoresObject)([A.default], () => ({
+                        isJoining: A.default.isJoining(l.id),
+                        joinErrorMessage: "" === A.default.joinErrorMessage(l.id) ? W.default.Messages.ERROR : A.default.joinErrorMessage(l.id),
+                        showJoinErrorMessage: void 0 !== A.default.joinErrorMessage(l.id)
+                    }), [l.id]),
+                    u = null != (0, r.useStateFromStores)([O.default], () => O.default.getGuild(l.guild.id), [l.guild.id]);
+                return !u && (n = (0, a.jsx)(c.Button, {
                     size: c.ButtonSizes.SMALL,
                     onClick: function() {
                         E.default.joinServer(l.id, () => {})
@@ -14417,26 +14425,34 @@
                         children: i ? W.default.Messages.JOINING_GUILD : W.default.Messages.JOIN_GUILD
                     })
                 })), (0, a.jsxs)("div", {
-                    className: K.integration,
-                    children: [(0, a.jsx)(v.default, {
-                        size: v.default.Sizes.SMALL,
-                        guild: l.guild,
-                        className: K.guildIcon
-                    }), (0, a.jsxs)("div", {
-                        className: K.integrationInner,
-                        children: [(0, a.jsx)(c.Text, {
-                            variant: "text-md/semibold",
-                            color: "header-primary",
-                            children: l.guild.toString()
-                        }), (0, a.jsx)(c.Anchor, {
-                            href: null === (s = I.default.get(l.type)) || void 0 === s ? void 0 : null === (t = s.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(s, l.account),
-                            children: (0, a.jsx)(c.Text, {
-                                variant: "text-xs/normal",
-                                color: "header-secondary",
-                                children: l.account.name
-                            })
-                        })]
-                    }), n]
+                    className: K.integrationWrapper,
+                    children: [(0, a.jsxs)("div", {
+                        className: K.integration,
+                        children: [(0, a.jsx)(v.default, {
+                            size: v.default.Sizes.SMALL,
+                            guild: l.guild,
+                            className: K.guildIcon
+                        }), (0, a.jsxs)("div", {
+                            className: K.integrationInner,
+                            children: [(0, a.jsx)(c.Text, {
+                                variant: "text-md/semibold",
+                                color: "header-primary",
+                                children: l.guild.toString()
+                            }), (0, a.jsx)(c.Anchor, {
+                                href: null === (s = I.default.get(l.type)) || void 0 === s ? void 0 : null === (t = s.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(s, l.account),
+                                children: (0, a.jsx)(c.Text, {
+                                    variant: "text-xs/normal",
+                                    color: "header-secondary",
+                                    children: l.account.name
+                                })
+                            })]
+                        }), n]
+                    }), d && (0, a.jsx)(c.Text, {
+                        variant: "text-xs/normal",
+                        color: "text-danger",
+                        className: K.integrationError,
+                        children: o
+                    })]
                 })
             };
 
