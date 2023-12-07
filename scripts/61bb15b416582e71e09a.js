@@ -131,7 +131,7 @@
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, u = (0, S.default)(t), d = (0, M.default)(t), _ = (0, A.default)(t), O = (0, c.default)(t), U = (0, f.default)(t), h = (0, N.default)(t), I = (0, o.default)(t), p = (0, E.default)(t, n), v = (0, g.default)(t), R = (0, r.default)({
+                } = e, u = (0, S.default)(t), d = (0, M.default)(t), _ = (0, A.default)(t), O = (0, c.default)(t), U = (0, f.default)(t), h = (0, N.default)(t), p = (0, o.default)(t), I = (0, E.default)(t, n), v = (0, g.default)(t), R = (0, r.default)({
                     id: t.id,
                     label: L.default.Messages.COPY_ID_CHANNEL
                 }), m = (0, C.default)(t);
@@ -147,7 +147,7 @@
                     }, "channel-actions"), (0, a.jsxs)(i.MenuGroup, {
                         children: [d, _, (0, T.default)(t)]
                     }, "notifications"), (0, a.jsxs)(i.MenuGroup, {
-                        children: [h, I, p, v]
+                        children: [h, p, I, v]
                     }, "admin-actions"), (0, a.jsx)(i.MenuGroup, {
                         children: R
                     }, "developer-actions")]
@@ -1045,6 +1045,9 @@
         721281: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
+                VoiceActivityNotificationGuildExperiment: function() {
+                    return l
+                },
                 useVoiceActivityNotificationSettingsExperiment: function() {
                     return u
                 }

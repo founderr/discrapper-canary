@@ -1041,6 +1041,7 @@
                     MY_ARCHIVED_THREADS: _ => "/channels/".concat(_, "/users/@me/threads/archived/private"),
                     THREAD_SEARCH: _ => "/channels/".concat(_, "/threads/search"),
                     FORUM_POSTS: _ => "/channels/".concat(_, "/post-data"),
+                    VOICE_CHANNEL_NOTIFICATIONS: _ => "/channels/".concat(_, "/voice-push"),
                     PARTNER_REQUIREMENTS: _ => "/partners/".concat(_, "/requirements"),
                     AVATAR: function(_, E) {
                         let R = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "jpg";

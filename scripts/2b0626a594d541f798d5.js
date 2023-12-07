@@ -1666,6 +1666,9 @@
         721281: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
+                VoiceActivityNotificationGuildExperiment: function() {
+                    return u
+                },
                 useVoiceActivityNotificationSettingsExperiment: function() {
                     return l
                 }
