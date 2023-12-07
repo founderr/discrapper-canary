@@ -3494,7 +3494,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return E
                 }
             });
             var a = n("37983"),
@@ -3505,54 +3505,55 @@
                 o = n("292687"),
                 u = n("659500"),
                 d = n("191225"),
-                c = n("577261"),
-                f = n("272505"),
-                h = n("49111");
-            let p = (e, t) => {
+                c = n("420444"),
+                f = n("577261"),
+                h = n("272505"),
+                p = n("49111");
+            let m = (e, t) => {
                 i.default.wait(() => {
                     (0, r.updateRect)(e, t)
                 })
             };
 
-            function m(e) {
+            function E(e) {
                 let t, {
                         embedId: n,
                         className: i,
                         style: r
                     } = e,
-                    m = (0, s.useStateFromStores)([o.default], () => o.default.getWindow(h.PopoutWindowKeys.CHANNEL_CALL_POPOUT)),
-                    E = (0, c.default)(),
-                    C = (0, s.useStateFromStores)([d.default], () => d.default.getActivityPanelMode()),
-                    S = null != E && C === f.ActivityPanelModes.PANEL;
-                if (S) t = window;
+                    E = (0, s.useStateFromStores)([o.default], () => o.default.getWindow(p.PopoutWindowKeys.CHANNEL_CALL_POPOUT)),
+                    C = (0, f.default)(),
+                    S = (0, s.useStateFromStores)([d.default], () => d.default.getActivityPanelMode()),
+                    g = null != C && !(0, c.default)(C.channelId) && S === h.ActivityPanelModes.PANEL;
+                if (g) t = window;
                 else {
-                    var g;
-                    t = null !== (g = null == m ? void 0 : m.window) && void 0 !== g ? g : window
+                    var _;
+                    t = null !== (_ = null == E ? void 0 : E.window) && void 0 !== _ ? _ : window
                 }
-                let _ = l.useRef(null),
-                    I = l.useMemo(() => {
+                let I = l.useRef(null),
+                    T = l.useMemo(() => {
                         let e = null;
                         return () => {
                             null == e && (e = t.requestAnimationFrame(() => {
                                 var t, a;
-                                p(n, null !== (a = null === (t = _.current) || void 0 === t ? void 0 : t.getBoundingClientRect()) && void 0 !== a ? a : null), e = null
+                                m(n, null !== (a = null === (t = I.current) || void 0 === t ? void 0 : t.getBoundingClientRect()) && void 0 !== a ? a : null), e = null
                             }))
                         }
                     }, [n, t]);
-                return l.useEffect(() => (t.addEventListener("resize", I), u.ComponentDispatch.subscribe(h.ComponentActions.REMEASURE_TARGET, I), () => {
-                    t.removeEventListener("resize", I), u.ComponentDispatch.unsubscribe(h.ComponentActions.REMEASURE_TARGET, I)
-                }), [I, t]), l.useLayoutEffect(() => {
-                    let e = _.current;
+                return l.useEffect(() => (t.addEventListener("resize", T), u.ComponentDispatch.subscribe(p.ComponentActions.REMEASURE_TARGET, T), () => {
+                    t.removeEventListener("resize", T), u.ComponentDispatch.unsubscribe(p.ComponentActions.REMEASURE_TARGET, T)
+                }), [T, t]), l.useLayoutEffect(() => {
+                    let e = I.current;
                     if (null == e) return;
                     let t = e.ownerDocument.defaultView;
                     if (null == t) return;
-                    I();
-                    let a = new t.ResizeObserver(I);
+                    T();
+                    let a = new t.ResizeObserver(T);
                     return a.observe(e), () => {
-                        a.disconnect(), p(n, null)
+                        a.disconnect(), m(n, null)
                     }
-                }, [n, I]), (0, a.jsx)("div", {
-                    ref: _,
+                }, [n, T]), (0, a.jsx)("div", {
+                    ref: I,
                     style: r,
                     className: i
                 })
