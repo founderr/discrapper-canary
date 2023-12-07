@@ -94,8 +94,8 @@
                 r = s("884691"),
                 l = s("414456"),
                 u = s.n(l),
-                o = s("77078"),
-                d = s("339783"),
+                d = s("77078"),
+                o = s("339783"),
                 c = s("865146"),
                 f = s("145131"),
                 E = s("712218"),
@@ -131,9 +131,9 @@
                         brand: (0, p.upperCaseFirstChar)(e.brand),
                         last_4: e.last4
                     }) : e instanceof c.PaypalSourceRecord ? _.default.Messages.PAYMENT_SOURCE_PAYPAL : e instanceof c.SofortSourceRecord ? _.default.Messages.PAYMENT_SOURCE_SOFORT : e instanceof c.GiropaySourceRecord ? _.default.Messages.PAYMENT_SOURCE_GIROPAY : e instanceof c.Przelewy24SourceRecord ? _.default.Messages.PAYMENT_SOURCE_PRZELEWY24 : e instanceof c.PaysafeSourceRecord ? _.default.Messages.PAYMENT_SOURCE_PAYSAFE_CARD : e instanceof c.GcashSourceRecord ? _.default.Messages.PAYMENT_SOURCE_GCASH : e instanceof c.GrabPayMySourceRecord ? _.default.Messages.PAYMENT_SOURCE_GRABPAY : e instanceof c.MomoWalletSourceRecord ? _.default.Messages.PAYMENT_SOURCE_MOMO_WALLET : e instanceof c.VenmoSourceRecord ? _.default.Messages.PAYMENT_SOURCE_VENMO : e instanceof c.KaKaoPaySourceRecord ? _.default.Messages.PAYMENT_SOURCE_KAKAOPAY : e instanceof c.GoPayWalletSourceRecord ? _.default.Messages.PAYMENT_SOURCE_GOPAY_WALLET : e instanceof c.BancontactSourceRecord ? _.default.Messages.PAYMENT_SOURCE_BANCONTACT : e instanceof c.IdealSourceRecord ? _.default.Messages.PAYMENT_SOURCE_IDEAL_WITH_BANK.format({
-                        bank: (0, d.getIdealBankDisplayNameFromBankName)(e.bank)
+                        bank: (0, o.getIdealBankDisplayNameFromBankName)(e.bank)
                     }) : e instanceof c.EPSSourceRecord ? _.default.Messages.PAYMENT_SOURCE_EPS_WITH_BANK.format({
-                        bank: (0, d.getEPSBankDisplayNameFromBankName)(e.bank)
+                        bank: (0, o.getEPSBankDisplayNameFromBankName)(e.bank)
                     }) : e instanceof c.CashAppSourceRecord ? _.default.Messages.PAYMENT_SOURCE_CASH_APP_PAY : _.default.Messages.PAYMENT_SOURCE_UNKNOWN
                 }
                 renderDescription() {
@@ -141,7 +141,7 @@
                         paymentSource: e,
                         descriptionClassName: t
                     } = this.props;
-                    return (0, i.jsx)(o.Text, {
+                    return (0, i.jsx)(d.Text, {
                         className: u(m.description, t),
                         variant: "text-md/semibold",
                         children: this.getLabel(e)
@@ -208,8 +208,8 @@
                 r = s.n(i),
                 l = s("627445"),
                 u = s.n(l),
-                o = s("974667"),
-                d = s("446674"),
+                d = s("974667"),
+                o = s("446674"),
                 c = s("77078"),
                 f = s("913144"),
                 E = s("850068"),
@@ -235,22 +235,22 @@
                     locale: s,
                     compactMode: i,
                     numPages: l
-                } = e, u = n.useRef(null), [d, f] = n.useState(0), [I, p] = n.useState(null), m = t.slice(10 * d, (d + 1) * 10);
+                } = e, u = n.useRef(null), [o, f] = n.useState(0), [I, p] = n.useState(null), m = t.slice(10 * o, (o + 1) * 10);
                 n.useEffect(() => {
                     var e;
                     null === (e = u.current) || void 0 === e || e.scrollTo({
                         to: 0
                     })
-                }, [d]);
+                }, [o]);
                 let N = n.useCallback(e => {
                         f(e);
                         let s = t[t.length - 1].id;
                         e === l - 1 && I !== s && ((0, E.fetchPayments)(10, s), p(s))
                     }, [t, l, I]),
                     P = (0, _.default)("billing-history", u);
-                return (0, a.jsx)(o.ListNavigatorProvider, {
+                return (0, a.jsx)(d.ListNavigatorProvider, {
                     navigator: P,
-                    children: (0, a.jsx)(o.ListNavigatorContainer, {
+                    children: (0, a.jsx)(d.ListNavigatorContainer, {
                         children: e => {
                             let {
                                 ref: t,
@@ -258,7 +258,7 @@
                             } = e;
                             return (0, a.jsx)(R.default, {
                                 className: r(M.verticalFit, M.paginator),
-                                currentPageIndex: d,
+                                currentPageIndex: o,
                                 onChangePage: N,
                                 numPages: l,
                                 ref: t,
@@ -352,8 +352,8 @@
             }
 
             function U(e) {
-                let t = (0, d.useStateFromStores)([m.default], () => m.default.getPayments()),
-                    s = (0, d.useStateFromStores)([P.default], () => P.default.getPremiumTypeSubscription()),
+                let t = (0, o.useStateFromStores)([m.default], () => m.default.getPayments()),
+                    s = (0, o.useStateFromStores)([P.default], () => P.default.getPremiumTypeSubscription()),
                     i = n.useMemo(() => new Set(t.filter(D).map(e => {
                         let {
                             subscription: t
@@ -366,7 +366,7 @@
                         } = e;
                         return t
                     })), [t]),
-                    l = (0, d.useStateFromStoresArray)([N.default], () => N.default.getPlanIdsForSkus(Array.from(r))),
+                    l = (0, o.useStateFromStoresArray)([N.default], () => N.default.getPlanIdsForSkus(Array.from(r))),
                     u = n.useCallback(() => l.length === i.size, [l, i]);
                 return n.useEffect(() => {
                     !u() && f.default.wait(() => {
@@ -393,8 +393,8 @@
                 r = s("884691"),
                 l = s("414456"),
                 u = s.n(l),
-                o = s("627445"),
-                d = s.n(o),
+                d = s("627445"),
+                o = s.n(d),
                 c = s("866227"),
                 f = s.n(c),
                 E = s("974667"),
@@ -425,8 +425,8 @@
                 G = s("37785"),
                 F = s("712218"),
                 k = s("461380"),
-                w = s("36694"),
-                Y = s("945330"),
+                Y = s("36694"),
+                w = s("945330"),
                 H = s("743826"),
                 V = s("978679"),
                 K = s("216422"),
@@ -448,7 +448,7 @@
             (n = a || (a = {})).TIME_PLAYED = "TIME_PLAYED", n.PURCHASE_DATE = "PURCHASE_DATE", n.SKU_TYPE = "SKU_TYPE", n.ALREADY_REFUNDED = "ALREADY_REFUNDED", n.PAYMENT_STATUS = "PAYMENT_STATUS", n.PAYMENT_GATEWAY = "PAYMENT_GATEWAY", n.SKU_STICKER_PACK = "SKU_STICKER_PACK", n.SUBSCRIPTION_TYPE = "SUBSCRIPTION_TYPE", n.GUILD_PRODUCT = "GUILD_PRODUCT";
             let el = [ee.PaymentStatusTypes.FAILED, ee.PaymentStatusTypes.REVERSED, ee.PaymentStatusTypes.CANCELED],
                 eu = [es.PaymentGateways.APPLE],
-                eo = e => {
+                ed = e => {
                     let {
                         description: t,
                         cost: s
@@ -466,13 +466,13 @@
                     })
                 };
 
-            function ed(e) {
+            function eo(e) {
                 let {
                     value: t,
                     copyText: s,
                     copyFeedbackText: a
-                } = e, [n, l] = r.useState(!1), [u, o] = r.useState(!1), d = () => {
-                    (0, W.copy)(t), o(!0), l(!0)
+                } = e, [n, l] = r.useState(!1), [u, d] = r.useState(!1), o = () => {
+                    (0, W.copy)(t), d(!0), l(!0)
                 };
                 return (0, i.jsx)(_.Tooltip, {
                     forceOpen: u,
@@ -489,9 +489,9 @@
                                 n && l(!1), "function" == typeof s && s()
                             },
                             onMouseLeave: () => {
-                                o(!1), "function" == typeof a && a()
+                                d(!1), "function" == typeof a && a()
                             },
-                            onClick: d,
+                            onClick: o,
                             children: (0, i.jsx)("div", {
                                 className: en.copiableContainer,
                                 children: t
@@ -524,7 +524,7 @@
                     guildProductListingId: s
                 } = e, a = (0, T.useFetchGuildProductListing)(t, s, {
                     requireCurrentGuild: !1
-                }), n = (0, A.useProductType)(a), l = (0, p.useStateFromStores)([U.default], () => U.default.getGuild(t)), u = (null == a ? void 0 : a.role_id) != null && (null == a ? void 0 : a.attachments_count) === 0 ? ea.default.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : n, o = r.useCallback(async () => {
+                }), n = (0, A.useProductType)(a), l = (0, p.useStateFromStores)([U.default], () => U.default.getGuild(t)), u = (null == a ? void 0 : a.role_id) != null && (null == a ? void 0 : a.attachments_count) === 0 ? ea.default.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : n, d = r.useCallback(async () => {
                     (null == l ? void 0 : l.hasFeature(ee.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, g.default)(ee.Routes.GUILD_PRODUCT(t, s)) : await (0, g.default)(ee.Routes.CHANNEL(t)), (0, m.popLayer)()
                 }, [l, t, s]);
                 return (0, i.jsxs)(i.Fragment, {
@@ -534,7 +534,7 @@
                     }), null != l && (0, i.jsx)(ec, {
                         description: ea.default.Messages.GUILD_PRODUCT_BILLING_SERVER_NAME,
                         detail: (0, i.jsx)(G.default, {
-                            onClick: o,
+                            onClick: d,
                             children: l.name
                         })
                     })]
@@ -548,16 +548,16 @@
                     guildProductListingId: n
                 } = e, r = (0, T.useFetchGuildProductListing)(a, n, {
                     requireCurrentGuild: !1
-                }), l = (0, p.useStateFromStores)([C.default], () => C.default.getGuildProductFetchState(n) === C.FetchState.FETCHING), u = null == r ? void 0 : r.role_id, o = (0, p.useStateFromStores)([U.default], () => {
+                }), l = (0, p.useStateFromStores)([C.default], () => C.default.getGuildProductFetchState(n) === C.FetchState.FETCHING), u = null == r ? void 0 : r.role_id, d = (0, p.useStateFromStores)([U.default], () => {
                     var e;
                     return null != u ? null === (e = U.default.getGuild(a)) || void 0 === e ? void 0 : e.roles[u] : void 0
-                }, [a, u]), d = (null !== (s = null == r ? void 0 : null === (t = r.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== s ? s : 0) > 0, c = null != o;
+                }, [a, u]), o = (null !== (s = null == r ? void 0 : null === (t = r.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== s ? s : 0) > 0, c = null != d;
                 return l ? (0, i.jsx)("div", {
                     className: en.guildProductBenefits,
                     children: (0, i.jsx)(_.Spinner, {})
-                }) : null != r && (d || c) ? (0, i.jsxs)("div", {
+                }) : null != r && (o || c) ? (0, i.jsxs)("div", {
                     className: en.guildProductBenefits,
-                    children: [d && (0, i.jsxs)(i.Fragment, {
+                    children: [o && (0, i.jsxs)(i.Fragment, {
                         children: [(0, i.jsx)(_.Text, {
                             variant: "text-xs/semibold",
                             color: "header-secondary",
@@ -568,7 +568,7 @@
                             productId: r.id
                         })]
                     }), c && (0, i.jsxs)(i.Fragment, {
-                        children: [d && (0, i.jsx)("div", {
+                        children: [o && (0, i.jsx)("div", {
                             className: en.divider
                         }), (0, i.jsx)(_.Text, {
                             variant: "text-xs/semibold",
@@ -576,7 +576,7 @@
                             className: en.guildProductBenefitLabel,
                             children: ea.default.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_ROLE_UNLOCKED
                         }), (0, i.jsx)(L.default, {
-                            role: o
+                            role: d
                         })]
                     })]
                 }) : null
@@ -684,7 +684,7 @@
                             className: en.paymentInfo,
                             children: [(0, i.jsx)("div", {
                                 children: ea.default.Messages.BILLING_PAYMENT_ID
-                            }), (0, i.jsx)(ed, {
+                            }), (0, i.jsx)(eo, {
                                 value: e.id,
                                 copyText: ea.default.Messages.BILLING_PAYMENT_ID_COPY,
                                 copyFeedbackText: ea.default.Messages.BILLING_PAYMENT_ID_COPIED
@@ -701,8 +701,8 @@
                         taxInclusive: a,
                         tax: n,
                         amount: l,
-                        amountRefunded: o,
-                        currency: d
+                        amountRefunded: d,
+                        currency: o
                     } = e, c = null == s ? void 0 : s.guildId;
                     return (0, i.jsxs)("div", {
                         className: u(en.paymentText, en.paymentBreakdown),
@@ -712,26 +712,26 @@
                             descriptionClassName: en.paymentText
                         }) : null, (0, i.jsxs)("ul", {
                             children: [this.renderPaymentIdField(), !a && n > 0 ? (0, i.jsxs)(r.Fragment, {
-                                children: [(0, i.jsx)(eo, {
+                                children: [(0, i.jsx)(ed, {
                                     description: e.description,
-                                    cost: (0, X.formatPrice)(l - n, d)
-                                }), (0, i.jsx)(eo, {
+                                    cost: (0, X.formatPrice)(l - n, o)
+                                }), (0, i.jsx)(ed, {
                                     description: ea.default.Messages.BILLING_PAYMENT_BREAKDOWN_TAXES,
-                                    cost: (0, X.formatPrice)(n, d)
+                                    cost: (0, X.formatPrice)(n, o)
                                 })]
-                            }) : null, (0, i.jsx)(eo, {
+                            }) : null, (0, i.jsx)(ed, {
                                 description: ea.default.Messages.BILLING_PAYMENT_BREAKDOWN_TOTAL,
-                                cost: (0, X.formatPrice)(l, d)
+                                cost: (0, X.formatPrice)(l, o)
                             }), e.isGuildProductPurchase && null != c && null != e.sku && (0, i.jsx)(ef, {
                                 guildId: c,
                                 guildProductListingId: e.sku.id
-                            }), o > 0 && (0, i.jsxs)(i.Fragment, {
-                                children: [(0, i.jsx)(eo, {
+                            }), d > 0 && (0, i.jsxs)(i.Fragment, {
+                                children: [(0, i.jsx)(ed, {
                                     description: ea.default.Messages.BILLING_PAYMENT_BREAKDOWN_REFUNDED,
-                                    cost: (0, X.formatPrice)(o, d)
-                                }), (0, i.jsx)(eo, {
+                                    cost: (0, X.formatPrice)(d, o)
+                                }), (0, i.jsx)(ed, {
                                     description: ea.default.Messages.BILLING_PAYMENT_BREAKDOWN_NET,
-                                    cost: (0, X.formatPrice)(l - o, d)
+                                    cost: (0, X.formatPrice)(l - d, o)
                                 })]
                             })]
                         })]
@@ -759,27 +759,27 @@
                     });
                     let l = 0 === n.length,
                         u = ei(s),
-                        o = this.isPremium ? 5 : 14;
+                        d = this.isPremium ? 5 : 14;
                     return t = n.includes("SKU_TYPE") ? ea.default.Messages.BILLING_APPLICATION_CONSUMABLE_REFUND_TEXT_UNABLE.format({
                         supportURL: u
                     }) : l ? a.isPreorder && this.isSkuPreorder ? ea.default.Messages.BILLING_PREORDER_REFUND_TEXT.format({
                         supportURL: u
                     }) : a.isPremiumSubscription || a.isPremiumGuildSubscription ? ea.default.Messages.BILLING_PREMIUM_REFUND_TEXT.format({
-                        dateLimit: o,
+                        dateLimit: d,
                         supportURL: u
                     }) : a.isGift ? ea.default.Messages.BILLING_GIFT_REFUND_TEXT.format({
-                        dateLimit: o,
+                        dateLimit: d,
                         supportURL: u
                     }) : ea.default.Messages.BILLING_APPLICATION_REFUND_TEXT.format({
-                        dateLimit: o,
+                        dateLimit: d,
                         playtimeLimit: 2,
                         supportURL: u
                     }) : a.isGift ? ea.default.Messages.BILLING_GIFT_REFUND_TEXT_UNABLE.format({
-                        dateLimit: o
+                        dateLimit: d
                     }) : a.isPremiumSubscription || a.isPremiumGuildSubscription ? ea.default.Messages.BILLING_PREMIUM_REFUND_TEXT_UNABLE.format({
-                        dateLimit: o
+                        dateLimit: d
                     }) : ea.default.Messages.BILLING_APPLICATION_REFUND_TEXT_UNABLE.format({
-                        dateLimit: o,
+                        dateLimit: d,
                         playtimeLimit: 2
                     }), this.isPremium && (0, Q.userInRefundExperiment)() && (t = null), (0, i.jsxs)(r.Fragment, {
                         children: [(0, i.jsx)(_.H, {
@@ -817,15 +817,15 @@
                     } = this.props;
                     if (this.isSkuPreorder || e.includes("SKU_TYPE")) return null;
                     let u = (null === (t = l.sku) || void 0 === t ? void 0 : t.productLine) === ee.SKUProductLines.COLLECTIBLES,
-                        o = e.includes("PURCHASE_DATE") ? Y.default : w.default,
-                        d = e.includes("TIME_PLAYED") || (null === (a = l.premiumRefundDisqualificationReasons) || void 0 === a ? void 0 : a.includes($.PremiumRefundDisqualificationReason.PAST_REFUNDABLE_DATE)) ? Y.default : w.default;
+                        d = e.includes("PURCHASE_DATE") ? w.default : Y.default,
+                        o = e.includes("TIME_PLAYED") || (null === (a = l.premiumRefundDisqualificationReasons) || void 0 === a ? void 0 : a.includes($.PremiumRefundDisqualificationReason.PAST_REFUNDABLE_DATE)) ? w.default : Y.default;
                     if (!this.isPremium || !(0, Q.userInRefundExperiment)()) return (0, i.jsxs)("div", {
                         className: en.refundActions,
                         children: [(0, i.jsxs)("div", {
                             className: en.refundRules,
-                            children: [this.renderRefundCriteria(l.isPreorder ? ea.default.Messages.BILLING_REFUND_RELEASE_DATE_SUBHEADER : ea.default.Messages.BILLING_REFUND_PURCHASE_DATE_SUBHEADER, o, ea.default.Messages.BILLING_REFUND_PURCHASE_DATE.format({
+                            children: [this.renderRefundCriteria(l.isPreorder ? ea.default.Messages.BILLING_REFUND_RELEASE_DATE_SUBHEADER : ea.default.Messages.BILLING_REFUND_PURCHASE_DATE_SUBHEADER, d, ea.default.Messages.BILLING_REFUND_PURCHASE_DATE.format({
                                 daysSincePurchase: this.daysSincePurchase
-                            })), l.isSubscription || l.isGift || u ? null : this.renderRefundCriteria(ea.default.Messages.BILLING_REFUND_PLAY_TIME_SUBHEADER, d, null != this.timePlayed ? this.timePlayed.humanize() : ea.default.Messages.BILLING_REFUND_PLAY_TIME_NEVER_PLAYED)]
+                            })), l.isSubscription || l.isGift || u ? null : this.renderRefundCriteria(ea.default.Messages.BILLING_REFUND_PLAY_TIME_SUBHEADER, o, null != this.timePlayed ? this.timePlayed.humanize() : ea.default.Messages.BILLING_REFUND_PLAY_TIME_NEVER_PLAYED)]
                         }), (0, i.jsx)(_.Anchor, {
                             href: ei(r),
                             children: ea.default.Messages.BILLING_REFUND_REPORT_A_PROBLEM
@@ -880,7 +880,7 @@
                         guild: l,
                         stickerPack: u
                     } = this.props, {
-                        expanded: o
+                        expanded: d
                     } = this.state, c = a.sku, E = a.subscription, I = null != a.paymentSource && ee.PREPAID_PAYMENT_SOURCES.has(a.paymentSource.type);
                     if (null != E && 0 !== E.items.length) {
                         let s = [],
@@ -894,14 +894,14 @@
                         });
                         else if (E.type === ee.SubscriptionTypes.GUILD) {
                             let e = O.default.get(E.items[0].planId);
-                            d(null != e, "Guild subscription plan should already have been loaded");
+                            o(null != e, "Guild subscription plan should already have been loaded");
                             let t = e.interval === et.SubscriptionIntervalTypes.YEAR ? ea.default.Messages.YEARLY_GUILD_SUBSCRIPTION : ea.default.Messages.MONTHLY_GUILD_SUBSCRIPTION;
                             s.push(t.format({
                                 planName: e.name
                             })), a = e.skuId
                         } else if (E.type === ee.SubscriptionTypes.APPLICATION) {
                             let e = O.default.get(E.items[0].planId);
-                            d(null != e, "Application subscription plan should already have been loaded"), null != n ? s.push(ea.default.Messages.MONTHLY_APPLICATION_SUBSCRIPTION_V2.format({
+                            o(null != e, "Application subscription plan should already have been loaded"), null != n ? s.push(ea.default.Messages.MONTHLY_APPLICATION_SUBSCRIPTION_V2.format({
                                 tier: null == c ? void 0 : c.name
                             })) : s.push(ea.default.Messages.APPLICATION_SUBSCRIPTION_FROM_DELETED_APPLICATION), a = e.skuId
                         }
@@ -920,8 +920,8 @@
                             }) : a.isGuildProductPurchase && a.isSoftDeletedProduct ? ea.default.Messages.GUILD_PRODUCT_BILLING_DELISTED_PRODUCT : c.name, null != u) {
                             let t = (0, y.getStickerPackPreviewSticker)(u);
                             e = (0, i.jsx)(x.default, {
-                                disableAnimation: !o,
-                                isInteracting: o,
+                                disableAnimation: !d,
+                                isInteracting: d,
                                 sticker: t,
                                 className: en.descriptionIcon,
                                 size: 24
@@ -1122,15 +1122,15 @@
                     locale: n,
                     compactMode: l,
                     className: u
-                } = e, o = null != a.sku && er.includes(a.sku.type), d = null != a.sku && o ? a.sku.applicationId : null, c = null === (t = a.sku) || void 0 === t ? void 0 : t.applicationId, f = (null === (s = a.subscription) || void 0 === s ? void 0 : s.type) === ee.SubscriptionTypes.APPLICATION, {
+                } = e, d = null != a.sku && er.includes(a.sku.type), o = null != a.sku && d ? a.sku.applicationId : null, c = null === (t = a.sku) || void 0 === t ? void 0 : t.applicationId, f = (null === (s = a.subscription) || void 0 === s ? void 0 : s.type) === ee.SubscriptionTypes.APPLICATION, {
                     applicationStatistics: E,
                     gameApplication: I,
                     paymentSources: _
                 } = (0, p.useStateFromStoresObject)([v.default, B.default, S.default], () => {
                     var e, t;
                     return {
-                        applicationStatistics: null != d ? B.default.getCurrentUserStatisticsForApplication(d) : null,
-                        gameApplication: null !== (t = S.default.getApplication(null != d ? d : "")) && void 0 !== t ? t : null === (e = a.sku) || void 0 === e ? void 0 : e.application,
+                        applicationStatistics: null != o ? B.default.getCurrentUserStatisticsForApplication(o) : null,
+                        gameApplication: null !== (t = S.default.getApplication(null != o ? o : "")) && void 0 !== t ? t : null === (e = a.sku) || void 0 === e ? void 0 : e.application,
                         paymentSources: v.default.paymentSources
                     }
                 }), m = (0, p.useStateFromStores)([S.default], () => null != c ? S.default.getApplication(c) : null);
@@ -1140,7 +1140,7 @@
                 let N = (0, p.useStateFromStores)([U.default], () => U.default.getGuild(null == I ? void 0 : I.guildId));
                 return (0, i.jsx)(eI, {
                     applicationStatistics: E,
-                    application: f ? m : o ? I : void 0,
+                    application: f ? m : d ? I : void 0,
                     guild: N,
                     stickerPack: null,
                     paymentSources: _,
@@ -1222,30 +1222,6 @@
                     }
                 }
         },
-        858561: function(e, t, s) {
-            "use strict";
-            s.r(t), s.d(t, {
-                InvoicePdfAllowlistExperiment: function() {
-                    return n
-                }
-            });
-            var a = s("862205");
-            let n = (0, a.createExperiment)({
-                kind: "user",
-                id: "2023-08_invoice_pdf_allowlist",
-                label: "Invoice PDF download feature",
-                defaultConfig: {
-                    isUserEligibleForInvoicePdf: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enables users to download invoice PDF",
-                    config: {
-                        isUserEligibleForInvoicePdf: !0
-                    }
-                }]
-            })
-        },
         609190: function(e, t, s) {
             "use strict";
             s.r(t), s.d(t, {
@@ -1257,39 +1233,32 @@
             s("884691");
             var n = s("77078"),
                 i = s("681421"),
-                r = s("858561"),
-                l = s("843455"),
-                u = s("782340"),
-                o = s("852225");
+                r = s("843455"),
+                l = s("782340"),
+                u = s("852225");
 
             function d(e) {
                 let {
                     payment: t
-                } = e, {
-                    isUserEligibleForInvoicePdf: s
-                } = r.InvoicePdfAllowlistExperiment.useExperiment({
-                    location: "allow_invoice_pdf_download"
-                }, {
-                    autoTrackExposure: !0
-                }), d = s && null != t.paymentSource && t.status === l.PaymentStatusTypes.COMPLETED;
-                return null == t.downloadableInvoice || "" === t.downloadableInvoice ? d ? (0, a.jsx)("div", {
-                    className: o.downloadInvoice,
+                } = e, s = null != t.paymentSource && t.status === r.PaymentStatusTypes.COMPLETED;
+                return null == t.downloadableInvoice || "" === t.downloadableInvoice ? s ? (0, a.jsx)("div", {
+                    className: u.downloadInvoice,
                     children: (0, a.jsx)(n.Anchor, {
                         onClick: () => {
                             var e, s;
                             e = t, s = t.paymentSource, i.default.open(e, s)
                         },
-                        children: u.default.Messages.BILLING_DOWNLOAD_INVOICE
+                        children: l.default.Messages.BILLING_DOWNLOAD_INVOICE
                     })
                 }) : null : (0, a.jsxs)("div", {
-                    className: o.downloadInvoice,
+                    className: u.downloadInvoice,
                     children: [(0, a.jsx)(n.Anchor, {
                         href: t.downloadableInvoice,
-                        children: u.default.Messages.BILLING_DOWNLOAD_INVOICE_VAT
+                        children: l.default.Messages.BILLING_DOWNLOAD_INVOICE_VAT
                     }), null != t.downloadableRefundInvoices ? t.downloadableRefundInvoices.map((e, t) => (0, a.jsx)(n.Anchor, {
-                        className: o.downloadRefundInvoice,
+                        className: u.downloadRefundInvoice,
                         href: e,
-                        children: u.default.Messages.BILLING_DOWNLOAD_REFUND_INVOICE
+                        children: l.default.Messages.BILLING_DOWNLOAD_REFUND_INVOICE
                     }, t)) : null]
                 })
             }
@@ -1324,10 +1293,10 @@
             "use strict";
             s.r(t), s.d(t, {
                 SubscriptionDetailsEmpty: function() {
-                    return w
+                    return Y
                 },
                 default: function() {
-                    return Y
+                    return w
                 }
             }), s("222007");
             var a = s("37983"),
@@ -1336,8 +1305,8 @@
                 r = s.n(i),
                 l = s("627445"),
                 u = s.n(l),
-                o = s("866227"),
-                d = s.n(o),
+                d = s("866227"),
+                o = s.n(d),
                 c = s("446674"),
                 f = s("669491"),
                 E = s("77078"),
@@ -1371,15 +1340,15 @@
                         fromStandaloneBillingPage: i = !0,
                         className: l
                     } = e,
-                    o = (0, c.useStateFromStores)([S.default], () => {
+                    d = (0, c.useStateFromStores)([S.default], () => {
                         let e = S.default.getCurrentUser();
                         return u(null != e, "GuildBoostingHeader: currentUser cannot be undefined"), e
                     });
                 if (0 === (0, h.getNumPremiumGuildSubscriptions)(s.additionalPlans)) return null;
                 let {
-                    status: d
+                    status: o
                 } = s, f = (0, h.isPremiumGuildSubscriptionCanceled)(s);
-                return t = f ? B.guildBoostingSubscriptionRowCanceled : (0, h.isSubscriptionStatusFailedPayment)(d) ? B.guildBoostingSubscriptionRowFailedPayment : B.guildBoostingSubscriptionRowActive, (0, a.jsxs)(a.Fragment, {
+                return t = f ? B.guildBoostingSubscriptionRowCanceled : (0, h.isSubscriptionStatusFailedPayment)(o) ? B.guildBoostingSubscriptionRowFailedPayment : B.guildBoostingSubscriptionRowActive, (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsxs)("div", {
                         className: r(t, l),
                         children: [(0, a.jsx)("div", {
@@ -1396,7 +1365,7 @@
                                 children: (0, h.getPremiumGuildHeaderDescription)({
                                     subscription: s,
                                     renewalInvoicePreview: n,
-                                    user: o
+                                    user: d
                                 })
                             })]
                         }), i && (0, a.jsx)(y.default, {
@@ -1502,7 +1471,7 @@
                 })
             }
 
-            function w(e) {
+            function Y(e) {
                 let {
                     className: t
                 } = e;
@@ -1533,14 +1502,14 @@
                 })
             }
 
-            function Y(e) {
+            function w(e) {
                 var t;
                 let s, {
                         subscription: n,
                         paymentSource: i,
                         busy: l,
                         className: u,
-                        fromStandaloneBillingPage: o = !0,
+                        fromStandaloneBillingPage: d = !0,
                         analyticsLocation: f
                     } = e,
                     [I] = (0, M.useSubscriptionInvoicePreview)({
@@ -1560,18 +1529,18 @@
                         var e;
                         return null === (e = S.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasFreePremium()
                     }),
-                    R = d(n.currentPeriodEnd),
+                    R = o(n.currentPeriodEnd),
                     T = null != n.paymentSourceId,
                     C = null !== (t = null == m ? void 0 : m.total) && void 0 !== t ? t : 0,
                     A = null == i ? void 0 : i.invalid,
-                    h = !T && C > 0 && (7 >= R.diff(d(), "days") || n.status === v.SubscriptionStatusTypes.PAST_DUE) && !N && !n.isPurchasedExternally,
+                    h = !T && C > 0 && (7 >= R.diff(o(), "days") || n.status === v.SubscriptionStatusTypes.PAST_DUE) && !N && !n.isPurchasedExternally,
                     y = A && n.status === v.SubscriptionStatusTypes.PAST_DUE && !N && !n.isPurchasedExternally,
-                    w = (0, g.useIsPrepaidPaymentPastDue)(),
-                    Y = !N && w,
-                    H = (null == n ? void 0 : n.status) === v.SubscriptionStatusTypes.PAST_DUE ? d().diff(d(n.currentPeriodStart), "days") : 0,
+                    Y = (0, g.useIsPrepaidPaymentPastDue)(),
+                    w = !N && Y,
+                    H = (null == n ? void 0 : n.status) === v.SubscriptionStatusTypes.PAST_DUE ? o().diff(o(n.currentPeriodStart), "days") : 0,
                     [V] = (0, M.useGetSubscriptionInvoice)({
                         subscriptionId: n.id,
-                        preventFetch: !Y
+                        preventFetch: !w
                     });
                 return null == I || null == m ? (0, a.jsx)(E.Spinner, {}) : (null != n.renewalMutations && (n.renewalMutations.planId !== n.planId && !(0, P.isNoneSubscription)(n.renewalMutations.planId) || n.hasExternalPlanChange) && (s = (0, a.jsx)(U.default, {
                     subscription: n,
@@ -1586,7 +1555,7 @@
                             tag: "h1",
                             children: O.default.Messages.USER_SETTINGS_SUBSCRIPTIONS_HEADER
                         }),
-                        children: [h ? (0, a.jsx)(b, {}) : null, y ? (0, a.jsx)(G, {}) : null, Y && null != V ? (0, a.jsx)(F, {
+                        children: [h ? (0, a.jsx)(b, {}) : null, y ? (0, a.jsx)(G, {}) : null, w && null != V ? (0, a.jsx)(F, {
                             daysPastDue: H,
                             subscription: n,
                             openInvoiceId: V.id
@@ -1604,7 +1573,7 @@
                             }), (0, a.jsx)(j, {
                                 subscription: n,
                                 renewalInvoicePreview: I,
-                                fromStandaloneBillingPage: o,
+                                fromStandaloneBillingPage: d,
                                 className: B.guildSubscriptionRow
                             })]
                         }), (0, a.jsx)("div", {
@@ -1662,8 +1631,8 @@
                 r = s("627445"),
                 l = s.n(r),
                 u = s("77078"),
-                o = s("596523"),
-                d = s("812204"),
+                d = s("596523"),
+                o = s("812204"),
                 c = s("685665"),
                 f = s("605250"),
                 E = s("649844"),
@@ -1725,7 +1694,7 @@
             function y() {
                 let {
                     analyticsLocations: e
-                } = (0, c.default)(d.default.ACCOUNT_CREDIT_BANNER);
+                } = (0, c.default)(o.default.ACCOUNT_CREDIT_BANNER);
                 return (0, a.jsx)(M, {
                     wordMark: (0, a.jsx)(g, {}),
                     subscriptionInfo: (0, a.jsx)("div", {
@@ -1756,7 +1725,7 @@
                     analyticsLocation: x
                 } = e, {
                     analyticsLocations: D
-                } = (0, c.default)(d.default.SUBSCRIPTION_HEADER), U = () => {
+                } = (0, c.default)(o.default.SUBSCRIPTION_HEADER), U = () => {
                     (n.status === T.SubscriptionStatusTypes.ACTIVE || n.status === T.SubscriptionStatusTypes.PAST_DUE) && v()
                 }, v = () => {
                     (0, u.openModalLazy)(async () => {
@@ -1780,7 +1749,7 @@
                         let t = (0, P.getCurrencies)(e, null == f ? void 0 : f.id, !1),
                             s = t.length > 0 ? t[0] : n.currency,
                             a = !1;
-                        1 === t.length && (null == f ? void 0 : f.id) === n.paymentSourceId && (0, P.planHasCurrency)(e.id, s, null == f ? void 0 : f.id) && (a = !0), a ? o.resubscribe(n, D) : (0, E.default)({
+                        1 === t.length && (null == f ? void 0 : f.id) === n.paymentSourceId && (0, P.planHasCurrency)(e.id, s, null == f ? void 0 : f.id) && (a = !0), a ? d.resubscribe(n, D) : (0, E.default)({
                             initialPlanId: n.planIdFromItems,
                             analyticsLocations: D,
                             analyticsLocation: x,
@@ -1906,8 +1875,8 @@
                 r = s.n(i),
                 l = s("627445"),
                 u = s.n(l),
-                o = s("446674"),
-                d = s("77078"),
+                d = s("446674"),
+                o = s("77078"),
                 c = s("112679"),
                 f = s("596523"),
                 E = s("335430"),
@@ -1935,11 +1904,11 @@
                     analyticsLocation: x,
                     currentInvoicePreview: D,
                     disabled: U = !1
-                } = e, v = (0, o.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), [O, B] = (0, o.useStateFromStoresArray)([N.default], () => [N.default.paymentSources, N.default.hasFetchedPaymentSources]), j = (0, _.useSubscriptionPlansLoaded)((0, T.getSubscriptionSKUs)(t)), {
+                } = e, v = (0, d.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), [O, B] = (0, d.useStateFromStoresArray)([N.default], () => [N.default.paymentSources, N.default.hasFetchedPaymentSources]), j = (0, _.useSubscriptionPlansLoaded)((0, T.getSubscriptionSKUs)(t)), {
                     analyticsLocations: b
-                } = (0, p.default)(), G = n.useMemo(() => Object.values(O).filter(e => !e.invalid), [O]), [F, k] = n.useState(!1), [w, Y] = n.useState(t.currency), H = async (e, s) => {
+                } = (0, p.default)(), G = n.useMemo(() => Object.values(O).filter(e => !e.invalid), [O]), [F, k] = n.useState(!1), [Y, w] = n.useState(t.currency), H = async (e, s) => {
                     if (null == t) throw Error("missing subscription and paymentSource");
-                    null == e ? await f.changeSubscriptionCurrency(t, s, b, x) : await f.changePaymentSource(t, e, s, b, x), k(!1), Y(s)
+                    null == e ? await f.changeSubscriptionCurrency(t, s, b, x) : await f.changePaymentSource(t, e, s, b, x), k(!1), w(s)
                 }, V = async (e, s, a) => {
                     k(!0);
                     let n = await (0, C.updateSubscriptionInvoicePreview)({
@@ -1968,7 +1937,7 @@
                         V(e, K(e), H)
                     }), "function" == typeof i && i(e.id)
                 }, Z = () => {
-                    (0, d.openModalLazy)(async () => {
+                    (0, o.openModalLazy)(async () => {
                         let {
                             default: e
                         } = await s.el("960391").then(s.bind(s, "960391"));
@@ -1987,23 +1956,23 @@
                 if (t.isPurchasedExternally) return (e => {
                     u(null != e.paymentGateway, "Expected payment gateway when managed externally");
                     let t = (0, S.getExternalSubscriptionMethodUrl)(e.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT");
-                    return (0, a.jsx)(d.Anchor, {
+                    return (0, a.jsx)(o.Anchor, {
                         href: t,
                         useDefaultUnderlineStyles: !1,
                         className: L.externalLink,
-                        children: (0, a.jsx)(d.Button, {
+                        children: (0, a.jsx)(o.Button, {
                             fullWidth: !0,
-                            look: d.Button.Looks.FILLED,
-                            color: d.Button.Colors.PRIMARY,
+                            look: o.Button.Looks.FILLED,
+                            color: o.Button.Colors.PRIMARY,
                             children: h.default.Messages.BILLING_MANAGE_BILLING
                         })
                     })
                 })(t);
-                if (!B || !j) return (0, a.jsx)(d.Spinner, {});
-                if (!(G.length > 0)) return (0, a.jsx)(d.Button, {
+                if (!B || !j) return (0, a.jsx)(o.Spinner, {});
+                if (!(G.length > 0)) return (0, a.jsx)(o.Button, {
                     fullWidth: !0,
-                    look: d.Button.Looks.FILLED,
-                    color: l ? d.Button.Colors.BRAND : d.Button.Colors.PRIMARY,
+                    look: o.Button.Looks.FILLED,
+                    color: l ? o.Button.Colors.BRAND : o.Button.Colors.PRIMARY,
                     onClick: Z,
                     children: h.default.Messages.BILLING_ADD_PAYMENT_METHOD
                 });
@@ -2036,7 +2005,7 @@
                                     children: h.default.Messages.PAYMENT_CURRENCY_PAYING_IN
                                 }), (0, a.jsx)(E.default, {
                                     className: L.currencyDropdown,
-                                    selectedCurrency: w,
+                                    selectedCurrency: Y,
                                     currencies: s,
                                     onChange: e => {
                                         V(void 0, e, H)
@@ -2048,7 +2017,7 @@
                 }
             }
             let y = async (e, t, n) => {
-                let i = await (0, d.openModalLazy)(async () => {
+                let i = await (0, o.openModalLazy)(async () => {
                     let {
                         default: i
                     } = await s.el("336811").then(s.bind(s, "336811"));
@@ -2060,7 +2029,7 @@
                     })
                 }, {
                     onCloseRequest: () => {
-                        null != i && (0, d.closeModal)(i), n()
+                        null != i && (0, o.closeModal)(i), n()
                     }
                 })
             }
@@ -2078,8 +2047,8 @@
                 r = s.n(i),
                 l = s("627445"),
                 u = s.n(l),
-                o = s("446674"),
-                d = s("819855"),
+                d = s("446674"),
+                o = s("819855"),
                 c = s("77078"),
                 f = s("850068"),
                 E = s("812204"),
@@ -2101,7 +2070,7 @@
                     transitionState: n,
                     onClose: i,
                     analyticsLocation: r
-                } = e, l = (0, o.useStateFromStores)([p.default], () => p.default.theme), {
+                } = e, l = (0, d.useStateFromStores)([p.default], () => p.default.theme), {
                     analyticsLocations: P
                 } = (0, I.default)(E.default.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
                 async function A() {
@@ -2142,7 +2111,7 @@
                             children: T.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BUTTON
                         }), (0, a.jsx)(c.Button, {
                             look: c.Button.Looks.LINK,
-                            color: (0, d.isThemeLight)(l) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
+                            color: (0, o.isThemeLight)(l) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
                             onClick: i,
                             children: T.default.Messages.NEVERMIND
                         })]
@@ -2156,7 +2125,7 @@
                     renewalMutations: s,
                     className: i,
                     analyticsLocation: l
-                } = e, [u, o] = n.useState(!1);
+                } = e, [u, d] = n.useState(!1);
                 return (0, a.jsxs)("div", {
                     className: r(C.root, i),
                     children: [(0, a.jsx)(P.default, {
@@ -2169,7 +2138,7 @@
                         })
                     }), t.isPurchasedExternally ? null : (0, a.jsx)(c.Anchor, {
                         onClick: e => {
-                            o(!0), e.preventDefault()
+                            d(!0), e.preventDefault()
                         },
                         className: C.cancelLink,
                         children: T.default.Messages.CANCEL
@@ -2182,11 +2151,11 @@
                                 subscription: t,
                                 renewalMutations: s,
                                 transitionState: n,
-                                onClose: () => o(!1),
+                                onClose: () => d(!1),
                                 analyticsLocation: l
                             })
                         },
-                        onCloseRequest: () => o(!1)
+                        onCloseRequest: () => d(!1)
                     }) : null]
                 })
             }
@@ -2204,8 +2173,8 @@
                 r = s.n(i),
                 l = s("446674"),
                 u = s("77078"),
-                o = s("437822"),
-                d = s("135230"),
+                d = s("437822"),
+                o = s("135230"),
                 c = s("697218"),
                 f = s("782340");
             class E extends n.Component {
@@ -2235,7 +2204,7 @@
                         null == t || t(), this.setState({
                             isSendingVerificationEmail: !0
                         }, () => {
-                            o.default.verifyResend().then(() => (0, u.openModal)(t => (0, a.jsx)(u.ConfirmModal, {
+                            d.default.verifyResend().then(() => (0, u.openModal)(t => (0, a.jsx)(u.ConfirmModal, {
                                 header: f.default.Messages.VERIFICATION_EMAIL_TITLE,
                                 confirmText: f.default.Messages.OKAY,
                                 confirmButtonColor: u.Button.Colors.BRAND,
@@ -2250,7 +2219,7 @@
                                 let {
                                     body: t
                                 } = e, s = f.default.Messages.VERIFICATION_EMAIL_ERROR_BODY;
-                                null != t && t.email && (s = t.email), (0, u.openModal)(e => (0, a.jsx)(d.default, {
+                                null != t && t.email && (s = t.email), (0, u.openModal)(e => (0, a.jsx)(o.default, {
                                     title: f.default.Messages.VERIFICATION_EMAIL_ERROR_TITLE,
                                     body: s,
                                     ...e
@@ -2283,15 +2252,15 @@
             var a, n, i, r = s("199108"),
                 l = s("666038"),
                 u = s("568734"),
-                o = s("865146"),
-                d = s("137406"),
+                d = s("865146"),
+                o = s("137406"),
                 c = s("388290"),
                 f = s("49111"),
                 E = s("646718");
             (i = a || (a = {}))[i.GIFT = 1] = "GIFT", i[i.PREORDER = 8] = "PREORDER", n = class e extends l.default {
                 static createFromServer(t) {
-                    let s = null != t.payment_source ? o.default.createFromServer(t.payment_source) : null,
-                        a = null != t.sku ? d.default.createFromServer(t.sku) : null,
+                    let s = null != t.payment_source ? d.default.createFromServer(t.payment_source) : null,
+                        a = null != t.sku ? o.default.createFromServer(t.sku) : null,
                         n = null != t.subscription ? c.default.createFromServer(t.subscription) : null;
                     return new e({
                         id: t.id,
@@ -2365,7 +2334,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return o
+                    return d
                 }
             }), s("424973"), s("222007");
             var a = s("446674"),
@@ -2387,7 +2356,7 @@
                 }
             }
             u.displayName = "PaymentStore";
-            var o = new u(n.default, {
+            var d = new u(n.default, {
                 BILLING_PAYMENTS_FETCH_SUCCESS: function(e) {
                     let {
                         payments: t
@@ -2418,8 +2387,8 @@
                 r = s.n(i),
                 l = s("77078"),
                 u = s("980428"),
-                o = s("772280"),
-                d = s("782340"),
+                d = s("772280"),
+                o = s("782340"),
                 c = s("911545"),
                 f = n.forwardRef(function(e, t) {
                     let {
@@ -2445,17 +2414,17 @@
                                 onClick: _ ? void 0 : () => i(s - 1),
                                 children: (0, a.jsx)(u.default, {
                                     className: c.pageButtonIcon,
-                                    "aria-label": d.default.Messages.PAGINATION_PREVIOUS
+                                    "aria-label": o.default.Messages.PAGINATION_PREVIOUS
                                 })
                             }), I ? (0, a.jsx)("div", {
                                 className: c.pageIndicator,
-                                children: d.default.Messages.PAGINATOR_OF_PAGES.format({
+                                children: o.default.Messages.PAGINATOR_OF_PAGES.format({
                                     currentPage: s + 1,
                                     numPages: n
                                 })
                             }) : (0, a.jsx)("div", {
                                 className: c.pageIndicator,
-                                children: d.default.Messages.PAGINATOR_CURRENT_PAGE.format({
+                                children: o.default.Messages.PAGINATOR_CURRENT_PAGE.format({
                                     currentPage: s + 1
                                 })
                             }), (0, a.jsx)(l.Clickable, {
@@ -2464,9 +2433,9 @@
                                 }),
                                 tabIndex: m ? -1 : 0,
                                 onClick: m ? void 0 : () => i(s + 1),
-                                children: (0, a.jsx)(o.default, {
+                                children: (0, a.jsx)(d.default, {
                                     className: c.pageButtonIcon,
-                                    "aria-label": d.default.Messages.PAGINATION_NEXT
+                                    "aria-label": o.default.Messages.PAGINATION_NEXT
                                 })
                             })]
                         })]
