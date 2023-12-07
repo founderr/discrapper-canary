@@ -1746,7 +1746,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "252392"
+                        buildNumber: "252394"
                     }), (0, a.jsx)(I, {})]
                 }) : null
             }
@@ -11932,7 +11932,7 @@
                     r.default.removeChangeListener(this._updateClientTheme), i.default.removeChangeListener(this._updateClientTheme)
                 }
                 _resetClientTheme() {
-                    (0, o.resetBackgroundGradientPreset)(), (0, o.resetBackgroundGradientAngle)(), this._currentBackgroundGradientPresetId = void 0, this._currentBackgroundGradientAngle = void 0
+                    this._updateBackgroundGradientPresetId(void 0), this._updateBackgroundGradientAngle(void 0)
                 }
                 constructor(...e) {
                     super(...e), this._updateBackgroundGradientPresetId = e => {
