@@ -12081,10 +12081,12 @@
                 return (0, a.jsxs)("div", {
                     className: o.votesData,
                     children: [(0, a.jsxs)(l.Text, {
+                        className: o.voteDataLine,
                         variant: "text-xs/semibold",
                         color: "none",
                         children: [t, "%"]
                     }), (0, a.jsx)(l.Text, {
+                        className: o.voteDataLine,
                         variant: "text-xxs/semibold",
                         color: "none",
                         children: n
