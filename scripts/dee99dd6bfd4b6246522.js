@@ -1784,7 +1784,8 @@
                     pendingThemeColors: R,
                     pendingAccentColor: N,
                     pendingProfileEffectID: null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : null,
-                    hideFakeActivity: x
+                    hideFakeActivity: x,
+                    useLargeBanner: !0
                 };
                 return (0, i.jsxs)("div", {
                     className: w ? m.previewContainerWithTheme : m.previewContainerWithoutTheme,

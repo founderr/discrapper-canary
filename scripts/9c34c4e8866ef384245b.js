@@ -35,8 +35,8 @@
                 u = l("77078"),
                 d = l("159885"),
                 c = l("694187"),
-                m = l("49111"),
-                f = l("782340"),
+                f = l("49111"),
+                m = l("782340"),
                 v = l("911686");
 
             function h(e) {
@@ -67,8 +67,8 @@
                         showIconDisabled: A,
                         className: U,
                         imageClassName: N,
-                        iconClassName: T,
-                        iconWrapperClassName: E,
+                        iconClassName: E,
+                        iconWrapperClassName: T,
                         icon: j,
                         hideSize: y,
                         imageStyle: C,
@@ -90,7 +90,7 @@
                                 backgroundImage: l
                             },
                             children: [i, A && (0, t.jsx)("div", {
-                                className: r(v.imageUploaderIcon, v.imageUploaderIconDisabled, T),
+                                className: r(v.imageUploaderIcon, v.imageUploaderIconDisabled, E),
                                 children: j
                             })]
                         })
@@ -98,20 +98,20 @@
                     null != s ? n = (0, t.jsx)(u.Anchor, {
                         className: v.removeButton,
                         onClick: this.handleRemove,
-                        children: f.default.Messages.REMOVE
+                        children: m.default.Messages.REMOVE
                     }) : !y && (n = (0, t.jsx)("small", {
                         className: v.sizeInfo,
-                        children: f.default.Messages.MINIMUM_SIZE.format({
-                            size: m.AVATAR_SIZE
+                        children: m.default.Messages.MINIMUM_SIZE.format({
+                            size: f.AVATAR_SIZE
                         })
                     }));
-                    let k = null !== (e = null != _ ? _ : o) && void 0 !== e ? e : f.default.Messages.CHANGE_AVATAR;
+                    let k = null !== (e = null != _ ? _ : o) && void 0 !== e ? e : m.default.Messages.CHANGE_AVATAR;
                     return (0, t.jsxs)("div", {
                         className: r(v.imageUploader, U),
                         children: [(0, t.jsx)(u.FocusRing, {
                             within: !0,
                             children: (0, t.jsxs)("div", {
-                                className: S ? r(v.imageUploaderIconWrapper, E) : void 0,
+                                className: S ? r(v.imageUploaderIconWrapper, T) : void 0,
                                 children: [(0, t.jsxs)("div", {
                                     className: r(v.imageUploaderInner, N),
                                     style: {
@@ -139,7 +139,7 @@
                                     "aria-hidden": "true",
                                     children: o
                                 }), S && (0, t.jsx)(h, {
-                                    className: T,
+                                    className: E,
                                     icon: j
                                 })]
                             })
@@ -181,8 +181,8 @@
                 u = l("301165"),
                 d = l("77078"),
                 c = l("206230"),
-                m = l("777003"),
-                f = l("782340"),
+                f = l("777003"),
+                m = l("782340"),
                 v = l("337778"),
                 h = l("125632"),
                 p = l("591589");
@@ -223,13 +223,13 @@
                         s(e => (5399 === e && S.current.jitter(), ++e))
                     }, 1e3);
                     return () => clearInterval(e)
-                }, []), (0, n.jsxs)(m.default, {
+                }, []), (0, n.jsxs)(f.default, {
                     lastSection: !0,
                     "aria-hidden": !0,
                     children: [(0, n.jsx)(d.Heading, {
                         className: v.fakeActivityTitle,
                         variant: "eyebrow",
-                        children: f.default.Messages.USER_SETTINGS_CUSTOMIZE_PROFILE_TITLE
+                        children: m.default.Messages.USER_SETTINGS_CUSTOMIZE_PROFILE_TITLE
                     }), (0, n.jsxs)("div", {
                         className: v.fakeActivityLayout,
                         children: [(0, n.jsx)("div", {
@@ -243,10 +243,10 @@
                             className: v.fakeActivityContent,
                             children: [(0, n.jsx)(d.Text, {
                                 variant: "text-sm/semibold",
-                                children: null != a ? a : f.default.Messages.USER_SETTINGS_USER_PROFILE
+                                children: null != a ? a : m.default.Messages.USER_SETTINGS_USER_PROFILE
                             }), (0, n.jsx)(d.Text, {
                                 variant: "text-sm/normal",
-                                children: f.default.Messages.PROFILE_CUSTOMIZATION_ACTIVITY_TIME.format({
+                                children: m.default.Messages.PROFILE_CUSTOMIZATION_ACTIVITY_TIME.format({
                                     renderTimeHook(e, a) {
                                         let l = i % 60,
                                             t = (i - l) / 60;
@@ -263,7 +263,7 @@
                         color: v.buttonColor,
                         size: d.Button.Sizes.SMALL,
                         fullWidth: !0,
-                        children: f.default.Messages.USER_SETTINGS_CUSTOMIZE_PROFILE_EXAMPLE_BUTTON
+                        children: m.default.Messages.USER_SETTINGS_CUSTOMIZE_PROFILE_EXAMPLE_BUTTON
                     })]
                 })
             })
@@ -284,8 +284,8 @@
                 u = l("669491"),
                 d = l("77078"),
                 c = l("272030"),
-                m = l("875212"),
-                f = l("841098"),
+                f = l("875212"),
+                m = l("841098"),
                 v = l("206230"),
                 h = l("685665"),
                 p = l("462274"),
@@ -296,8 +296,8 @@
                 A = l("635471"),
                 U = l("388491"),
                 N = l("217513"),
-                T = l("581295"),
-                E = l("878569"),
+                E = l("581295"),
+                T = l("878569"),
                 j = l("430312"),
                 y = l("552243"),
                 C = l("10532"),
@@ -329,14 +329,14 @@
                 ee = l("923843"),
                 ea = l("231185");
             let el = Z.default.getEnableHardwareAcceleration() ? d.AnimatedAvatar : d.Avatar,
-                et = (0, E.buildGetPremiumUserBannerStyles)({
+                et = (0, T.buildGetPremiumUserBannerStyles)({
                     premiumUserWithBanner: ee.avatarUploaderPremium,
                     premiumUserWithoutBanner: ee.avatarUploaderPremiumNoBanner,
                     default: ee.avatarUploaderNormal
                 });
 
             function ei(e) {
-                var a, n, E;
+                var a, n, T;
                 let {
                     user: Z,
                     guild: ei,
@@ -347,8 +347,8 @@
                     pendingAccentColor: eu,
                     pendingBanner: ed,
                     pendingBio: ec,
-                    pendingPronouns: em,
-                    pendingAvatar: ef,
+                    pendingPronouns: ef,
+                    pendingAvatar: em,
                     pendingAvatarDecoration: ev,
                     pendingNickname: eh,
                     pendingGlobalName: ep,
@@ -359,28 +359,29 @@
                     activityCharacter: eA,
                     isTryItOutFlow: eU = !1,
                     disabledInputs: eN = !1,
-                    hideExampleButton: eT = !1,
-                    hideFakeActivity: eE = !1,
+                    hideExampleButton: eE = !1,
+                    hideFakeActivity: eT = !1,
                     hideBioSection: ej = !1,
                     forProfileEffectModal: ey = !1,
                     hideMemberStatusSection: eC = !0,
                     bodyClassName: eP,
-                    slideInAvatarDecoration: eb = !1
-                } = e, eM = i.useRef(null), [eR, e_] = i.useState(!1), ek = B.GifAutoPlay.getSetting(), {
-                    avatarDecorationSrc: ew,
-                    avatarSrc: eB,
-                    eventHandlers: eO
+                    slideInAvatarDecoration: eb = !1,
+                    useLargeBanner: eM = !1
+                } = e, eR = i.useRef(null), [e_, ek] = i.useState(!1), ew = B.GifAutoPlay.getSetting(), {
+                    avatarDecorationSrc: eB,
+                    avatarSrc: eO,
+                    eventHandlers: ez
                 } = (0, w.default)({
                     user: Z,
                     guildId: null == ei ? void 0 : ei.id,
                     avatarDecorationOverride: ev,
-                    avatarOverride: ef,
+                    avatarOverride: em,
                     size: d.AvatarSizes.SIZE_80,
                     showPending: !0
-                }), ez = (0, N.default)(Z.id, null == ei ? void 0 : ei.id), eL = (0, o.useStateFromStores)([v.default], () => v.default.syncProfileThemeWithUserTheme), eF = (0, f.default)(), eD = (0, o.useStateFromStores)([O.default], () => null == ei ? null : O.default.getMember(ei.id, Z.id)), eG = void 0 === ef ? Z.getAvatarURL(void 0, 80) : ef, eW = (0, p.default)(eG, (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_530).hsl(), !1), eH = null == ez ? void 0 : ez.getPreviewThemeColors(eg), eV = null !== (a = null == eH ? void 0 : eH[0]) && void 0 !== a ? a : null == ez ? void 0 : ez.primaryColor, eZ = eL ? eF : (0, U.getProfileTheme)(eV), eY = (0, x.default)(null !== (n = null != eu ? eu : eV) && void 0 !== n ? n : (0, s.hex2int)(eW)).hsl, eq = (0, o.useStateFromStores)([F.default], () => F.default.isFocused()), eK = null == ez ? void 0 : ez.getPreviewBanner(ed, ek ? eq : eR), eX = null != eK || null != eI, eJ = (null == ez ? void 0 : ez.profileEffectID) != null, eQ = null !== (E = (0, q.getPreviewNickname)(eh, null == eD ? void 0 : eD.nick)) && void 0 !== E ? E : (0, q.getPreviewDisplayName)(ep, V.default.getName(Z)), [e$, e0] = (0, o.useStateFromStoresArray)([z.default], () => [z.default.findActivity(Z.id, e => e.type === X.ActivityTypes.CUSTOM_STATUS), z.default.getStatus(Z.id)]), e1 = (0, o.useStateFromStores)([L.default], () => L.default.hidePersonalInformation), e5 = (null == ez ? void 0 : ez.canUsePremiumProfileCustomization) || en, e8 = i.useCallback(() => {
+                }), eL = (0, N.default)(Z.id, null == ei ? void 0 : ei.id), eF = (0, o.useStateFromStores)([v.default], () => v.default.syncProfileThemeWithUserTheme), eD = (0, m.default)(), eG = (0, o.useStateFromStores)([O.default], () => null == ei ? null : O.default.getMember(ei.id, Z.id)), eW = void 0 === em ? Z.getAvatarURL(void 0, 80) : em, eH = (0, p.default)(eW, (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_530).hsl(), !1), eV = null == eL ? void 0 : eL.getPreviewThemeColors(eg), eZ = null !== (a = null == eV ? void 0 : eV[0]) && void 0 !== a ? a : null == eL ? void 0 : eL.primaryColor, eY = eF ? eD : (0, U.getProfileTheme)(eZ), eq = (0, x.default)(null !== (n = null != eu ? eu : eZ) && void 0 !== n ? n : (0, s.hex2int)(eH)).hsl, eK = (0, o.useStateFromStores)([F.default], () => F.default.isFocused()), eX = null == eL ? void 0 : eL.getPreviewBanner(ed, ew ? eK : e_), eJ = null != eX || null != eI, eQ = eM || (null == eL ? void 0 : eL.profileEffectID) != null, e$ = null !== (T = (0, q.getPreviewNickname)(eh, null == eG ? void 0 : eG.nick)) && void 0 !== T ? T : (0, q.getPreviewDisplayName)(ep, V.default.getName(Z)), [e0, e1] = (0, o.useStateFromStoresArray)([z.default], () => [z.default.findActivity(Z.id, e => e.type === X.ActivityTypes.CUSTOM_STATUS), z.default.getStatus(Z.id)]), e5 = (0, o.useStateFromStores)([L.default], () => L.default.hidePersonalInformation), e8 = (null == eL ? void 0 : eL.canUsePremiumProfileCustomization) || en, e2 = i.useCallback(() => {
                     var e, a;
-                    null === (a = eM.current) || void 0 === a || null === (e = a.inputRef.current) || void 0 === e || e.activateUploadDialogue()
-                }, []), e2 = i.useCallback((e, a) => {
+                    null === (a = eR.current) || void 0 === a || null === (e = a.inputRef.current) || void 0 === e || e.activateUploadDialogue()
+                }, []), e3 = i.useCallback((e, a) => {
                     null == e || null == a ? es(null) : "image/gif" !== a.type || H.default.canUseAnimatedAvatar(Z) ? (0, d.openModalLazy)(async () => {
                         let {
                             default: i
@@ -400,11 +401,11 @@
                             ...l,
                             imgURI: e,
                             onChangeAvatar: () => {
-                                l.onClose(), e8()
+                                l.onClose(), e2()
                             }
                         })
                     })
-                }, [Z, e8, es]), e3 = (e, a) => {
+                }, [Z, e2, es]), e4 = (e, a) => {
                     if (null == e || null == a) return eo(null);
                     (0, d.openModalLazy)(async () => {
                         let {
@@ -421,50 +422,50 @@
                     })
                 };
 
-                function e4() {
-                    let e = null != eZ ? (0, d.getStatusBackdropColor)(eZ) : null;
+                function e6() {
+                    let e = null != eY ? (0, d.getStatusBackdropColor)(eY) : null;
                     return (0, t.jsxs)("div", {
                         className: ee.status,
-                        children: [null != e && (null == ez ? void 0 : ez.canUsePremiumProfileCustomization) && (0, t.jsx)("div", {
+                        children: [null != e && (null == eL ? void 0 : eL.canUsePremiumProfileCustomization) && (0, t.jsx)("div", {
                             className: ee.statusDotBackground,
                             style: {
                                 backgroundColor: e,
-                                opacity: (0, d.getStatusBackdropOpacity)(e0, e)
+                                opacity: (0, d.getStatusBackdropOpacity)(e1, e)
                             }
                         }), (0, t.jsx)("svg", {
                             className: ee.statusDot,
                             children: (0, t.jsx)("rect", {
                                 height: "100%",
                                 width: "100%",
-                                fill: (0, I.getColor)((0, d.getStatusColor)(e0)),
-                                mask: "url(#".concat((0, d.getStatusMask)(e0, !1), ")")
+                                fill: (0, I.getColor)((0, d.getStatusColor)(e1)),
+                                mask: "url(#".concat((0, d.getStatusMask)(e1, !1), ")")
                             })
                         })]
                     })
                 }
-                let e6 = "ProfileCustomizationPreview";
-                (0, m.useTriggerDebuggingAA)({
-                    location: e6 + " auto on",
+                let e9 = "ProfileCustomizationPreview";
+                (0, f.useTriggerDebuggingAA)({
+                    location: e9 + " auto on",
                     autoTrackExposure: !0
-                }), (0, m.useTriggerDebuggingAA)({
-                    location: e6 + " auto off",
+                }), (0, f.useTriggerDebuggingAA)({
+                    location: e9 + " auto off",
                     autoTrackExposure: !1
                 });
                 let {
-                    analyticsLocations: e9
+                    analyticsLocations: e7
                 } = (0, h.default)();
                 i.useEffect(() => {
-                    if (ek) return;
-                    let e = null == ez ? void 0 : ez.getBannerURL({
+                    if (ew) return;
+                    let e = null == eL ? void 0 : eL.getBannerURL({
                         canAnimate: !0,
                         size: 480
                     });
                     if (!W.isAnimatedImageURL(e)) return;
                     let a = new Image;
                     a.src = null != e ? e : ""
-                }, [ez, ek]);
-                let e7 = null == ei,
-                    ae = null == ez ? void 0 : ez.profileEffectID;
+                }, [eL, ew]);
+                let ae = null == ei,
+                    aa = null == eL ? void 0 : eL.profileEffectID;
                 return (0, t.jsxs)(j.default, {
                     forceShowPremium: en,
                     user: Z,
@@ -472,43 +473,43 @@
                     profileType: Q.UserProfileTypes.POPOUT,
                     pendingThemeColors: eg,
                     pendingProfileEffectId: eI,
-                    className: ey ? e5 ? ee.profileEffectsModalCustomizationPreviewWithTheme : ee.profileEffectsModalCustomizationPreviewWithoutTheme : e5 ? ee.profileCustomizationPreviewWithTheme : ee.profileCustomizationPreviewWithoutTheme,
+                    className: ey ? e8 ? ee.profileEffectsModalCustomizationPreviewWithTheme : ee.profileEffectsModalCustomizationPreviewWithoutTheme : e8 ? ee.profileCustomizationPreviewWithTheme : ee.profileCustomizationPreviewWithoutTheme,
                     children: [(0, t.jsx)(A.default, {
-                        profileEffectID: void 0 !== eI ? eI : ae
+                        profileEffectID: void 0 !== eI ? eI : aa
                     }), (0, t.jsxs)(d.HeadingLevel, {
-                        children: [(0, t.jsx)(T.default, {
+                        children: [(0, t.jsx)(E.default, {
                             profileType: Q.UserProfileTypes.POPOUT,
-                            hasBanner: eX,
+                            hasBanner: eJ,
                             isPremium: en,
-                            hasThemeColors: e5,
+                            hasThemeColors: e8,
                             forProfileEffectModal: ey,
-                            hasProfileEffect: eJ,
+                            hasProfileEffect: eQ,
                             children: en ? (0, t.jsxs)("div", {
-                                onMouseMove: () => e_(!0),
-                                onMouseLeave: () => e_(!1),
+                                onMouseMove: () => ek(!0),
+                                onMouseLeave: () => ek(!1),
                                 children: [(0, t.jsx)(S.default, {
                                     className: ee.bannerUploader,
                                     showRemoveButton: !1,
                                     disabled: !en || eN,
-                                    image: eK,
-                                    makeURL: () => eK,
-                                    onChange: e3,
+                                    image: eX,
+                                    makeURL: () => eX,
+                                    onChange: e4,
                                     imageStyle: {
-                                        backgroundColor: eY
+                                        backgroundColor: eq
                                     },
-                                    imageClassName: r(eX ? ee.bannerUploaderInnerSquare : ee.bannerUploaderInnerSquareEmpty),
+                                    imageClassName: r(eJ ? ee.bannerUploaderInnerSquare : ee.bannerUploaderInnerSquareEmpty),
                                     hint: $.default.Messages.CHANGE_BANNER,
-                                    onOpenImageSelectModal: () => (0, q.handleOpenSelectImageModal)(J.UploadTypes.BANNER, null == eD ? void 0 : eD.guildId, eU, void 0),
+                                    onOpenImageSelectModal: () => (0, q.handleOpenSelectImageModal)(J.UploadTypes.BANNER, null == eG ? void 0 : eG.guildId, eU, void 0),
                                     hideSize: !0,
                                     maxFileSizeBytes: K.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
                                     onFileSizeError: q.showFileSizeErrorModal
-                                }), !ek && W.isAnimatedImageURL(eK) ? (0, t.jsx)(D.default, {
+                                }), !ew && W.isAnimatedImageURL(eX) ? (0, t.jsx)(D.default, {
                                     className: ee.gifTag
                                 }) : null]
                             }) : (0, t.jsx)("div", {
-                                className: eJ ? ee.bannerUploaderInnerSquare : ee.bannerNormal,
+                                className: eQ ? ee.bannerUploaderInnerSquare : ee.bannerNormal,
                                 style: {
-                                    backgroundColor: eY
+                                    backgroundColor: eq
                                 },
                                 children: eN ? null : (0, t.jsx)(d.Clickable, {
                                     onClick: () => null == er ? void 0 : er({
@@ -522,14 +523,14 @@
                                     })
                                 })
                             })
-                        }), e7 ? function() {
-                            let e = () => (0, q.handleOpenSelectImageModal)(J.UploadTypes.AVATAR, null == eD ? void 0 : eD.guildId, eU),
+                        }), ae ? function() {
+                            let e = () => (0, q.handleOpenSelectImageModal)(J.UploadTypes.AVATAR, null == eG ? void 0 : eG.guildId, eU),
                                 a = () => (0, g.openAvatarDecorationModal)({
-                                    analyticsLocations: e9,
+                                    analyticsLocations: e7,
                                     isTryItOutFlow: eU
                                 });
                             return (0, t.jsxs)(d.Clickable, {
-                                ...eO,
+                                ...ez,
                                 "aria-disabled": eN,
                                 onClick: eN ? void 0 : i => {
                                     (0, c.openContextMenuLazy)(i, async () => {
@@ -544,62 +545,62 @@
                                 },
                                 className: r(et({
                                     isPremium: en,
-                                    hasBanner: eX,
-                                    hasProfileEffect: eJ
+                                    hasBanner: eJ,
+                                    hasProfileEffect: eQ
                                 }), {
                                     [ee.defaultCursor]: eN
                                 }),
                                 children: [(0, t.jsx)(el, {
                                     className: ee.avatarUploaderInner,
-                                    src: eB,
-                                    avatarDecoration: eb ? null : ew,
+                                    src: eO,
+                                    avatarDecoration: eb ? null : eB,
                                     size: d.AvatarSizes.SIZE_80,
                                     "aria-label": Z.username
                                 }), eb && (0, t.jsx)(y.default, {
                                     initTranslate3d: "translate3d(-20px, -120px, 0)",
                                     children: (0, t.jsx)(el, {
                                         src: ea,
-                                        avatarDecoration: ew,
+                                        avatarDecoration: eB,
                                         size: d.AvatarSizes.SIZE_80,
                                         status: X.StatusTypes.UNKNOWN,
                                         className: ee.tryingOutAvatarDecoration,
                                         "aria-hidden": !0
                                     })
-                                }, ew), eN ? null : (0, t.jsx)("div", {
+                                }, eB), eN ? null : (0, t.jsx)("div", {
                                     className: ee.hoverIconWrapper,
                                     children: (0, t.jsx)(G.default, {
                                         className: ee.hoverIcon,
                                         color: "white"
                                     })
-                                }), e4()]
+                                }), e6()]
                             })
                         }() : function() {
-                            let e = null != eD && !en,
+                            let e = null != eG && !en,
                                 a = (0, t.jsxs)("div", {
                                     className: et({
                                         isPremium: en,
-                                        hasBanner: eX,
-                                        hasProfileEffect: eJ
+                                        hasBanner: eJ,
+                                        hasProfileEffect: eQ
                                     }),
                                     children: [(0, t.jsx)(S.default, {
                                         disabled: eN,
-                                        ref: eM,
-                                        showIcon: null == ew,
+                                        ref: eR,
+                                        showIcon: null == eB,
                                         hint: e ? $.default.Messages.UNLOCK_GUILD_MEMBER_AVATAR : $.default.Messages.CHANGE_AVATAR,
                                         showRemoveButton: !1,
                                         imageClassName: r(ex, ee.avatarUploaderInner),
-                                        image: eB,
-                                        onChange: e2,
-                                        makeURL: () => eB,
+                                        image: eO,
+                                        onChange: e3,
+                                        makeURL: () => eO,
                                         maxFileSizeBytes: K.MAX_IMAGE_UPLOAD_FILESIZE_BYTES,
                                         onFileSizeError: q.showFileSizeErrorModal,
-                                        onOpenImageSelectModal: () => (0, q.handleOpenSelectImageModal)(J.UploadTypes.AVATAR, null == eD ? void 0 : eD.guildId, eU, void 0)
-                                    }), null != ew && (0, t.jsx)("img", {
+                                        onOpenImageSelectModal: () => (0, q.handleOpenSelectImageModal)(J.UploadTypes.AVATAR, null == eG ? void 0 : eG.guildId, eU, void 0)
+                                    }), null != eB && (0, t.jsx)("img", {
                                         className: ee.avatarDecoration,
-                                        src: ew,
+                                        src: eB,
                                         alt: " ",
                                         "aria-hidden": !0
-                                    }), e4()]
+                                    }), e6()]
                                 });
                             return e ? (0, t.jsx)(d.Clickable, {
                                 onClickCapture: e => {
@@ -615,42 +616,42 @@
                             isTryItOutFlow: eU,
                             forProfileEffectModal: ey
                         }), function() {
-                            let e = null == ez ? void 0 : ez.getPreviewBio(ec);
+                            let e = null == eL ? void 0 : eL.getPreviewBio(ec);
                             return (0, t.jsxs)(j.default.Inner, {
                                 className: r(ee.body, eP),
                                 children: [(0, t.jsx)(k.default, {
                                     isTryItOut: eU,
                                     user: Z,
-                                    nickname: null != eQ ? eQ : Z.username,
-                                    pronouns: null != em ? em : null == ez ? void 0 : ez.pronouns,
+                                    nickname: null != e$ ? e$ : Z.username,
+                                    pronouns: null != ef ? ef : null == eL ? void 0 : eL.pronouns,
                                     usernameIcon: (() => {
-                                        let e = null != eD;
+                                        let e = null != eG;
                                         if (!e) return;
-                                        let a = null === ef;
+                                        let a = null === em;
                                         if (a) return;
-                                        let l = null != eD.avatar || null != ef;
+                                        let l = null != eG.avatar || null != em;
                                         if (l) return (0, t.jsx)(b.default, {
                                             user: Z,
-                                            nickname: eQ
+                                            nickname: e$
                                         })
                                     })()
                                 }), !ey && (0, t.jsx)(R.default, {
-                                    customStatusActivity: e$
+                                    customStatusActivity: e0
                                 }), (0, t.jsx)(C.default, {}), !ej && (0, t.jsx)(M.default, {
                                     isUsingGuildBio: null == e ? void 0 : e.isUsingGuildValue,
                                     guild: ei,
                                     bio: null == e ? void 0 : e.value,
-                                    hidePersonalInformation: e1,
-                                    lastSection: eE,
+                                    hidePersonalInformation: e5,
+                                    lastSection: eT,
                                     lineClamp: ey ? 3 : void 0
                                 }), !eC && (0, t.jsx)(_.default, {
                                     userId: Z.id,
                                     guild: ei,
-                                    guildMember: eD
-                                }), !eE && (0, t.jsx)(Y.default, {
+                                    guildMember: eG
+                                }), !eT && (0, t.jsx)(Y.default, {
                                     activityName: eS,
                                     activityCharacter: eA,
-                                    showExampleButton: null == ei && !eT
+                                    showExampleButton: null == ei && !eE
                                 })]
                             })
                         }()]

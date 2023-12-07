@@ -347,7 +347,8 @@
                         pendingPronouns: void 0,
                         pendingAvatar: void 0,
                         pendingBanner: void 0,
-                        slideInAvatarDecoration: !0
+                        slideInAvatarDecoration: !0,
+                        useLargeBanner: !0
                     }), (0, a.jsxs)("div", {
                         children: [(0, a.jsx)(l.FormTitle, {
                             className: A.title,
