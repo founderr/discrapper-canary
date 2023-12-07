@@ -36,8 +36,8 @@
                 _ = a("697218"),
                 m = a("181114"),
                 E = a("599110"),
-                N = a("701909"),
-                f = a("719923"),
+                f = a("701909"),
+                N = a("719923"),
                 g = a("702542"),
                 h = a("646718"),
                 A = a("49111"),
@@ -63,7 +63,7 @@
                     location: v
                 } = (0, o.useAnalyticsContext)(), {
                     analyticsLocations: L
-                } = (0, c.default)(d.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), G = (0, n.useStateFromStores)([_.default], () => _.default.getCurrentUser()), B = (0, f.isPremiumExactly)(G, h.PremiumTypes.TIER_2), H = (0, f.isPremium)(G) && !B;
+                } = (0, c.default)(d.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), G = (0, n.useStateFromStores)([_.default], () => _.default.getCurrentUser()), B = (0, N.isPremiumExactly)(G, h.PremiumTypes.TIER_2), H = (0, N.isPremium)(G) && !B;
                 return (0, s.jsx)(g.default, {
                     renderModalProps: t,
                     video: {
@@ -81,7 +81,7 @@
                     subHeader: O.default.Messages.BOGO_ANNOUNCEMENT_MODAL_SUBHEADER,
                     subHeaderExtra: () => (0, s.jsx)(l.Anchor, {
                         className: C.termsApplyAnchor,
-                        href: N.default.getArticleURL(A.HelpdeskArticles.SUMMER_2023_BOGO),
+                        href: f.default.getArticleURL(A.HelpdeskArticles.SUMMER_2023_BOGO),
                         children: (0, s.jsx)(l.Heading, {
                             variant: "heading-md/normal",
                             className: C.termsApplyBodyText,
@@ -91,7 +91,7 @@
                     featureCards: [{
                         header: O.default.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_HEADER,
                         subHeader: O.default.Messages.BOGO_ANNOUNCEMENT_MODAL_REMIXING_CARD_BODY_FORMATTED.format({
-                            helpCenterLink: N.default.getArticleURL(A.HelpdeskArticles.REMIXING)
+                            helpCenterLink: f.default.getArticleURL(A.HelpdeskArticles.REMIXING)
                         }),
                         imageSrc: p,
                         tagText: O.default.Messages.EARLY_ACCESS
@@ -192,8 +192,8 @@
                 _ = a("560176"),
                 m = a("633667"),
                 E = a("476765"),
-                N = a("956089"),
-                f = a("58608"),
+                f = a("956089"),
+                N = a("58608"),
                 g = a("599110"),
                 h = a("215429"),
                 A = a("49111"),
@@ -204,7 +204,7 @@
                         tagText: t,
                         className: a
                     } = e;
-                    return (0, s.jsx)(N.TextBadge, {
+                    return (0, s.jsx)(f.TextBadge, {
                         className: l(C.tag, a),
                         text: t
                     })
@@ -249,7 +249,7 @@
                     className: t,
                     renderModalProps: a,
                     video: r,
-                    videoClassName: N,
+                    videoClassName: f,
                     modalDismissibleContent: p,
                     modalTopExtra: D,
                     header: T,
@@ -283,6 +283,7 @@
                         seconds_unmuted: Math.round(t / 1e3)
                     })
                 }, [S]), n.useEffect(() => {
+                    if (null == p) return;
                     (0, i.requestMarkDismissibleContentAsShown)(p);
                     let e = Date.now();
                     return g.default.track(A.AnalyticEvents.CHANGE_LOG_OPENED, {
@@ -310,8 +311,8 @@
                             variant: "display-md",
                             className: l(C.headerText, b),
                             children: T
-                        }), "video" === r.type ? (0, s.jsx)(f.default, {
-                            className: l(C.video, N),
+                        }), "video" === r.type ? (0, s.jsx)(N.default, {
+                            className: l(C.video, f),
                             autoPlay: !j,
                             loop: !0,
                             muted: !0,
@@ -335,7 +336,7 @@
                             },
                             disablePictureInPicture: !0
                         }) : (0, s.jsx)(_.EmbedVideo, {
-                            className: l(C.video, N),
+                            className: l(C.video, f),
                             allowFullScreen: !1,
                             href: r.href,
                             thumbnail: r.thumbnail,

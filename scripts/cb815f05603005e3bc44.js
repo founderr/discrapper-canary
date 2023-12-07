@@ -342,6 +342,7 @@
                         seconds_unmuted: Math.round(t / 1e3)
                     })
                 }, [P]), n.useEffect(() => {
+                    if (null == R) return;
                     (0, d.requestMarkDismissibleContentAsShown)(R);
                     let e = Date.now();
                     return A.default.track(T.AnalyticEvents.CHANGE_LOG_OPENED, {
