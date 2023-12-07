@@ -289,14 +289,13 @@
                     action: () => (0, i.openModalLazy)(async () => {
                         let {
                             default: t
-                        } = await n.el("575351").then(n.bind(n, "575351"));
+                        } = await n.el("338052").then(n.bind(n, "338052"));
                         return n => (0, a.jsx)(t, {
                             ...n,
                             onConfirm: () => {
                                 n.onClose(), (0, s.removeFavoriteCategory)(e.id)
                             },
-                            channel: e,
-                            isFavorites: !0
+                            channel: e
                         })
                     })
                 })

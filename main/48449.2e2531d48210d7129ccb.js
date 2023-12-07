@@ -5523,7 +5523,8 @@
                     panels_navigator: "Use panels navigator",
                     cozy_header: "Cozy header",
                     disable_file_link_redesign: "Disables the new file and links in search",
-                    enable_channel_emojis: "Enables channel emoji UI components"
+                    enable_channel_emojis: "Enables channel emoji UI components",
+                    mobile_profile_effect_debug_controls: "mobile_profile_effect_debug_controls"
                 },
                 o = {};
             class r extends i.default.DeviceSettingsStore {
@@ -15133,7 +15134,7 @@
                         var i;
                         let c = {
                                 environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                                build_number: "252296"
+                                build_number: "252301"
                             },
                             h = l.default.getCurrentUser();
                         null != h && (c.user_id = h.id, c.user_name = h.tag, null != h.email && (c.email = h.email));

@@ -343,31 +343,30 @@
                         channel: t,
                         onClose: s,
                         onConfirm: _,
-                        transitionState: p,
-                        isFavorites: M
-                    } = e, x = (0, r.default)(t, !0), R = t.id, I = t.isForumPost(), A = (0, n.useStateFromStores)([g.default], () => g.default.getGuild(t.getGuildId())), O = (0, h.useGuildChannelScheduledEvents)(R), {
-                        isSubscriptionGated: L
-                    } = (0, u.default)(t.id), v = (0, c.default)(A, t), [j, D] = a.useState(null), y = (0, n.useStateFromStores)([m.default], () => t.isOwner(m.default.getId()), [t]), F = (0, n.useStateFromStores)([T.default], () => T.default.can(t.isThread() ? S.Permissions.MANAGE_THREADS : S.Permissions.MANAGE_CHANNELS, t), [t]), b = (0, n.useStateFromStores)([f.default], () => {
+                        transitionState: p
+                    } = e, M = (0, r.default)(t, !0), x = t.id, R = t.isForumPost(), I = (0, n.useStateFromStores)([g.default], () => g.default.getGuild(t.getGuildId())), A = (0, h.useGuildChannelScheduledEvents)(x), {
+                        isSubscriptionGated: O
+                    } = (0, u.default)(t.id), L = (0, c.default)(I, t), [v, j] = a.useState(null), D = (0, n.useStateFromStores)([m.default], () => t.isOwner(m.default.getId()), [t]), y = (0, n.useStateFromStores)([T.default], () => T.default.can(t.isThread() ? S.Permissions.MANAGE_THREADS : S.Permissions.MANAGE_CHANNELS, t), [t]), F = (0, n.useStateFromStores)([f.default], () => {
                         var e;
                         return null !== (e = f.default.getCount(t.id)) && void 0 !== e ? e : 0
-                    }, [t.id]), P = I && (F || y && b < 1), H = O.length > 0 && (t.type === S.ChannelTypes.GUILD_VOICE || t.type === S.ChannelTypes.GUILD_STAGE_VOICE);
+                    }, [t.id]), b = R && (y || D && F < 1), P = A.length > 0 && (t.type === S.ChannelTypes.GUILD_VOICE || t.type === S.ChannelTypes.GUILD_STAGE_VOICE);
                     if (a.useEffect(() => {
                             (async () => {
-                                let e = await (0, o.isDefaultChannelThresholdMetAfterDelete)(t.getGuildId(), R);
+                                let e = await (0, o.isDefaultChannelThresholdMetAfterDelete)(t.getGuildId(), x);
                                 if (!e) {
-                                    D("default");
+                                    j("default");
                                     return
                                 }
-                                let s = await (0, d.getBlockForChannelDeletion)(t.getGuildId(), R);
+                                let s = await (0, d.getBlockForChannelDeletion)(t.getGuildId(), x);
                                 if (!1 !== s) {
-                                    D(s);
+                                    j(s);
                                     return
                                 }
                             })()
-                        }, [t, R]), null != j) {
+                        }, [t, x]), null != v) {
                         let e;
                         let t = N.default.Messages.DELETE_DEFAULT_CHANNEL_BODY;
-                        return e = "todo" === j ? N.default.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_TODO : "resource" === j ? N.default.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_RESOURCE : N.default.Messages.DESIGNATE_OTHER_CHANNEL_ONBOARDING, (0, l.jsxs)(i.ModalRoot, {
+                        return e = "todo" === v ? N.default.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_TODO : "resource" === v ? N.default.Messages.DESIGNATE_OTHER_CHANNEL_GUIDE_RESOURCE : N.default.Messages.DESIGNATE_OTHER_CHANNEL_ONBOARDING, (0, l.jsxs)(i.ModalRoot, {
                             transitionState: p,
                             "aria-label": N.default.Messages.CANNOT_DELETE_CHANNEL,
                             children: [(0, l.jsx)(i.ModalHeader, {
@@ -385,7 +384,7 @@
                                     variant: "text-md/normal",
                                     children: e.format({
                                         onClick: () => {
-                                            null != A && (E.default.open(A.id, S.GuildSettingsSections.ONBOARDING), null == s || s())
+                                            null != I && (E.default.open(I.id, S.GuildSettingsSections.ONBOARDING), null == s || s())
                                         }
                                     })
                                 })]
@@ -397,9 +396,9 @@
                             })]
                         })
                     }
-                    if (null == A) return null;
-                    if (A.hasFeature(S.GuildFeatures.COMMUNITY) && (A.rulesChannelId === R || A.publicUpdatesChannelId === R)) {
-                        let e = A.rulesChannelId === R,
+                    if (null == I) return null;
+                    if (I.hasFeature(S.GuildFeatures.COMMUNITY) && (I.rulesChannelId === x || I.publicUpdatesChannelId === x)) {
+                        let e = I.rulesChannelId === x,
                             t = e ? N.default.Messages.DELETE_RULES_CHANNEL_BODY : N.default.Messages.DELETE_UPDATES_CHANNEL_BODY;
                         return (0, l.jsxs)(i.ModalRoot, {
                             transitionState: p,
@@ -420,7 +419,7 @@
                                     className: C.modalText,
                                     children: N.default.Messages.DESIGNATE_OTHER_CHANNEL.format({
                                         onClick: () => {
-                                            E.default.open(A.id, S.GuildSettingsSections.COMMUNITY), null == s || s()
+                                            E.default.open(I.id, S.GuildSettingsSections.COMMUNITY), null == s || s()
                                         }
                                     })
                                 })]
@@ -438,41 +437,35 @@
                         } = (() => {
                             if (t.type === S.ChannelTypes.GUILD_CATEGORY) return {
                                 deleteText: N.default.Messages.DELETE_CATEGORY,
-                                deleteBody: M ? N.default.Messages.DELETE_CATEGORY_BODY_FAVORITES.format({
-                                    channelName: x
-                                }) : N.default.Messages.DELETE_CHANNEL_BODY.format({
-                                    channelName: x
+                                deleteBody: N.default.Messages.DELETE_CHANNEL_BODY.format({
+                                    channelName: M
                                 })
                             };
                             if (t.isForumPost()) return {
-                                deleteText: P ? N.default.Messages.DELETE_FORUM_POST : N.default.Messages.DELETE_MESSAGE,
-                                deleteBody: P && y && !F ? N.default.Messages.DELETE_FORUM_POST_OP_CONFIRM_BODY.format({
-                                    postName: x
-                                }) : P ? N.default.Messages.DELETE_FORUM_POST_CONFIRM_BODY.format({
-                                    postName: x
+                                deleteText: b ? N.default.Messages.DELETE_FORUM_POST : N.default.Messages.DELETE_MESSAGE,
+                                deleteBody: b && D && !y ? N.default.Messages.DELETE_FORUM_POST_OP_CONFIRM_BODY.format({
+                                    postName: M
+                                }) : b ? N.default.Messages.DELETE_FORUM_POST_CONFIRM_BODY.format({
+                                    postName: M
                                 }) : N.default.Messages.DELETE_FORUM_POST_OP_WITH_REPLIES_CONFIRM_BODY
                             };
                             if (t.isThread()) return {
                                 deleteText: N.default.Messages.DELETE_THREAD,
-                                deleteBody: M ? N.default.Messages.DELETE_CHANNEL_BODY_FAVORITES.format({
-                                    channelName: x
-                                }) : N.default.Messages.DELETE_CHANNEL_BODY.format({
-                                    channelName: x
+                                deleteBody: N.default.Messages.DELETE_CHANNEL_BODY.format({
+                                    channelName: M
                                 })
                             };
-                            else if (L && v > 0) return {
+                            else if (O && L > 0) return {
                                 deleteText: N.default.Messages.DELETE_CHANNEL,
                                 deleteBody: N.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_DELETE_CHANNEL_BODY.format({
-                                    channelName: x,
-                                    numGuildRoleSubscriptionMembers: v
+                                    channelName: M,
+                                    numGuildRoleSubscriptionMembers: L
                                 })
                             };
                             return {
                                 deleteText: N.default.Messages.DELETE_CHANNEL,
-                                deleteBody: M ? N.default.Messages.DELETE_CHANNEL_BODY_FAVORITES.format({
-                                    channelName: x
-                                }) : N.default.Messages.DELETE_CHANNEL_BODY.format({
-                                    channelName: x
+                                deleteBody: N.default.Messages.DELETE_CHANNEL_BODY.format({
+                                    channelName: M
                                 })
                             }
                         })();
@@ -491,12 +484,12 @@
                                     variant: "text-md/normal",
                                     color: "header-primary",
                                     children: a
-                                }), H ? (0, l.jsx)(i.Text, {
+                                }), P ? (0, l.jsx)(i.Text, {
                                     variant: "text-md/normal",
                                     color: "header-secondary",
                                     className: C.warningText,
                                     children: N.default.Messages.GUILD_EVENT_CHANNEL_DELETE_GUILD_EVENTS.format({
-                                        count: O.length
+                                        count: A.length
                                     })
                                 }) : null]
                             }), (0, l.jsxs)(i.ModalFooter, {
@@ -619,8 +612,8 @@
                 P = s("165161"),
                 H = s("460812"),
                 w = s("606762"),
-                B = s("49111"),
-                U = s("843455"),
+                U = s("49111"),
+                B = s("843455"),
                 G = s("782340"),
                 V = s("674310");
 
@@ -823,12 +816,12 @@
                     isPrivateGuildChannel: n,
                     roles: d,
                     members: u
-                } = e, c = (0, r.useStateFromStores)([p.default], () => p.default.can(U.Permissions.ADMINISTRATOR, t)), h = y.default.canEveryoneRole(U.Permissions.VIEW_CHANNEL, t), E = y.default.canEveryoneRole(U.Permissions.ADMINISTRATOR, t), f = {
+                } = e, c = (0, r.useStateFromStores)([p.default], () => p.default.can(B.Permissions.ADMINISTRATOR, t)), h = y.default.canEveryoneRole(B.Permissions.VIEW_CHANNEL, t), E = y.default.canEveryoneRole(B.Permissions.ADMINISTRATOR, t), f = {
                     title: G.default.Messages.PRIVATE_CHANNEL,
                     subtitle: G.default.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION,
                     formLabel: G.default.Messages.FORM_LABEL_CHANNEL_PERMISSIONS
                 };
-                return a.isCategory() ? (f.title = G.default.Messages.PRIVATE_CATEGORY, f.subtitle = G.default.Messages.CHANNEL_PERMISSIONS_PRIVATE_CATEGORY_DESCRIPTION, f.formLabel = G.default.Messages.FORM_LABEL_CATEGORY_PERMISSIONS) : a.type === B.ChannelTypes.GUILD_VOICE && (f.subtitle = G.default.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION_VOICE), (0, l.jsxs)("div", {
+                return a.isCategory() ? (f.title = G.default.Messages.PRIVATE_CATEGORY, f.subtitle = G.default.Messages.CHANNEL_PERMISSIONS_PRIVATE_CATEGORY_DESCRIPTION, f.formLabel = G.default.Messages.FORM_LABEL_CATEGORY_PERMISSIONS) : a.type === U.ChannelTypes.GUILD_VOICE && (f.subtitle = G.default.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION_VOICE), (0, l.jsxs)("div", {
                     className: i(V.settingCard, {
                         [V.active]: n
                     }),
@@ -929,7 +922,7 @@
                     }, {}), l = F.getExistingRolesRows(e, t, t.accessPermissions, n), a = F.getExistingMembersRows(s, t, e, t.accessPermissions, n), i = F.isPrivateGuildChannel(t, n))
                 }
                 return {
-                    canSyncChannel: null != s && p.default.can(U.Permissions.MANAGE_ROLES, s),
+                    canSyncChannel: null != s && p.default.can(B.Permissions.MANAGE_ROLES, s),
                     category: s,
                     channel: t,
                     filteredMembers: a,
@@ -950,11 +943,11 @@
                     isPrivateGuildChannel: h,
                     locked: E,
                     permissionUpdates: f
-                } = e, [g, T] = a.useState(!y.default.canEveryoneRole(U.Permissions.SEND_MESSAGES, i));
+                } = e, [g, T] = a.useState(!y.default.canEveryoneRole(B.Permissions.SEND_MESSAGES, i));
                 if (null == i || null == u) return null;
 
                 function S() {
-                    F.toggleChannelEveryonePermission(i, U.Permissions.SEND_MESSAGES, g), T(!g)
+                    F.toggleChannelEveryonePermission(i, B.Permissions.SEND_MESSAGES, g), T(!g)
                 }
 
                 function N() {
@@ -1508,8 +1501,8 @@
                 P = s("305961"),
                 H = s("957255"),
                 w = s("402904"),
-                B = s("697218"),
-                U = s("145131"),
+                U = s("697218"),
+                B = s("145131"),
                 G = s("476765"),
                 V = s("956089"),
                 k = s("404008"),
@@ -1636,7 +1629,7 @@
                         guild: x,
                         isForumPost: A,
                         isOwner: L
-                    } = this.props, v = y.THREAD_CHANNEL_TYPES.has(e.type), D = e.isForumLikeChannel(), F = D && (null === (s = e.availableTags) || void 0 === s ? void 0 : s.every(e => e.moderated)), b = (null === (a = B.default.getCurrentUser()) || void 0 === a ? void 0 : a.isStaff()) === !0, P = y.TOPIC_CHANNEL_TYPES.has(e.type) ? (0, l.jsxs)("div", {
+                    } = this.props, v = y.THREAD_CHANNEL_TYPES.has(e.type), D = e.isForumLikeChannel(), F = D && (null === (s = e.availableTags) || void 0 === s ? void 0 : s.every(e => e.moderated)), b = (null === (a = U.default.getCurrentUser()) || void 0 === a ? void 0 : a.isStaff()) === !0, P = y.TOPIC_CHANNEL_TYPES.has(e.type) ? (0, l.jsxs)("div", {
                         children: [(0, l.jsx)(h.FormItem, {
                             title: D ? et.default.Messages.FORM_LABEL_CHANNEL_GUIDELINES : et.default.Messages.FORM_LABEL_CHANNEL_TOPIC,
                             className: el.marginTop20,
@@ -1718,7 +1711,7 @@
                         }), (0, l.jsx)(h.FormDivider, {
                             className: i(el.marginTop40, el.marginBottom40)
                         })]
-                    }) : null, U = e.isForumLikeChannel() ? (0, l.jsxs)("div", {
+                    }) : null, B = e.isForumLikeChannel() ? (0, l.jsxs)("div", {
                         children: [(0, l.jsxs)("div", {
                             className: es.twoColumnSettings,
                             children: [(0, l.jsxs)(h.FormItem, {
@@ -1970,7 +1963,7 @@
                             })
                         }), (0, l.jsx)(h.FormDivider, {
                             className: i(el.marginTop40, el.marginBottom40)
-                        }), P, H, w, U, z, J, G, k, $, ed, eu, eh, ec, eE]
+                        }), P, H, w, B, z, J, G, k, $, ed, eu, eh, ec, eE]
                     })
                 }
                 renderHomeFlags(e) {
@@ -2043,8 +2036,8 @@
                     if (!this.showVoiceSettings()) return null;
                     let a = (0, k.getBitrateLimit)(t, e),
                         n = this.getError("bitrate");
-                    return (0, l.jsxs)(U.default, {
-                        direction: U.default.Direction.VERTICAL,
+                    return (0, l.jsxs)(B.default, {
+                        direction: B.default.Direction.VERTICAL,
                         className: el.marginBottom40,
                         children: [(0, l.jsx)(h.FormTitle, {
                             id: ed,
@@ -2100,8 +2093,8 @@
                         value: Q.VideoQualityMode.FULL,
                         name: et.default.Messages.VIDEO_QUALITY_MODE_FULL
                     }];
-                    return (0, l.jsxs)(U.default, {
-                        direction: U.default.Direction.VERTICAL,
+                    return (0, l.jsxs)(B.default, {
+                        direction: B.default.Direction.VERTICAL,
                         className: el.marginBottom40,
                         children: [(0, l.jsx)(h.FormItem, {
                             title: et.default.Messages.FORM_LABEL_VIDEO_QUALITY,
@@ -2134,8 +2127,8 @@
                     if (!this.showVoiceSettings()) return null;
                     let s = this.getError("user_limit"),
                         a = e.isGuildStageVoice() ? Q.MAX_STAGE_VOICE_USER_LIMIT : Q.MAX_VOICE_USER_LIMIT;
-                    return (0, l.jsxs)(U.default, {
-                        direction: U.default.Direction.VERTICAL,
+                    return (0, l.jsxs)(B.default, {
+                        direction: B.default.Direction.VERTICAL,
                         className: el.marginBottom40,
                         children: [(0, l.jsx)(h.FormTitle, {
                             id: eh,
@@ -2186,8 +2179,8 @@
                         })
                     }
                     let r = null !== (t = e.rtcRegion) && void 0 !== t ? t : eg;
-                    return (0, l.jsxs)(U.default, {
-                        direction: U.default.Direction.VERTICAL,
+                    return (0, l.jsxs)(B.default, {
+                        direction: B.default.Direction.VERTICAL,
                         children: [(0, l.jsx)(h.FormTitle, {
                             children: et.default.Messages.FORM_LABEL_REGION_OVERRIDE
                         }), (0, l.jsx)(h.SingleSelect, {
@@ -2206,8 +2199,8 @@
                     let {
                         theme: a
                     } = this.props;
-                    return t = e.type === Q.ChannelTypes.GUILD_CATEGORY ? (0, c.isThemeDark)(a) ? s("23141") : s("182418") : (0, c.isThemeDark)(a) ? s("34705") : s("164370"), (0, l.jsx)(U.default, {
-                        justify: U.default.Justify.CENTER,
+                    return t = e.type === Q.ChannelTypes.GUILD_CATEGORY ? (0, c.isThemeDark)(a) ? s("23141") : s("182418") : (0, c.isThemeDark)(a) ? s("34705") : s("164370"), (0, l.jsx)(B.default, {
+                        justify: B.default.Justify.CENTER,
                         className: el.marginTop60,
                         children: (0, l.jsx)("img", {
                             alt: "",
@@ -2515,8 +2508,8 @@
                 P = s("158998"),
                 H = s("51944"),
                 w = s("49111"),
-                B = s("782340"),
-                U = s("896888");
+                U = s("782340"),
+                B = s("896888");
             let G = o.default.connectStores([p.default, M.default], () => {
                 let e = M.default.getChannel(),
                     t = p.default.formState;
@@ -2591,35 +2584,35 @@
                 }, S = () => {
                     let e = f();
                     c.default.show({
-                        title: B.default.Messages.SETTINGS_PERMISSIONS_DELETE_TITLE,
-                        body: B.default.Messages.SETTINGS_PERMISSIONS_DELETE_BODY.format({
+                        title: U.default.Messages.SETTINGS_PERMISSIONS_DELETE_TITLE,
+                        body: U.default.Messages.SETTINGS_PERMISSIONS_DELETE_BODY.format({
                             name: e
                         }),
-                        cancelText: B.default.Messages.CANCEL,
+                        cancelText: U.default.Messages.CANCEL,
                         onConfirm: () => h.default.clearPermissionOverwrite(i, d)
                     })
                 }, N = e => {
                     let t = I.default.can(w.Permissions.ADMINISTRATOR, a) || I.default.can(w.Permissions.MANAGE_ROLES, s, void 0, void 0, !0);
-                    return s.isGuildStageVoice() && C.STAGE_CHANNEL_DISABLED_PERMISSIONS.has(e) ? B.default.Messages.STAGE_CHANNEL_CANNOT_OVERWRITE_PERMISSION : !((!r.default.equals(e, w.Permissions.MANAGE_ROLES) || t) && (null == e || I.default.can(e, a) || t)) && B.default.Messages.HELP_MISSING_PERMISSION
+                    return s.isGuildStageVoice() && C.STAGE_CHANNEL_DISABLED_PERMISSIONS.has(e) ? U.default.Messages.STAGE_CHANNEL_CANNOT_OVERWRITE_PERMISSION : !((!r.default.equals(e, w.Permissions.MANAGE_ROLES) || t) && (null == e || I.default.can(e, a) || t)) && U.default.Messages.HELP_MISSING_PERMISSION
                 }, _ = d === n, M = s.isForumLikeChannel() && r.default.has(t.deny, w.Permissions.SEND_MESSAGES), x = r.default.has(t.deny, w.Permissions.SEND_MESSAGES), O = r.default.has(t.deny, w.Permissions.READ_MESSAGE_HISTORY), v = F.default.generateChannelPermissionSpec(n, s, _, {
                     createPostsDisabled: M,
                     sendMessagesDisabled: x,
                     readMessageHistoryDisabled: O
                 });
                 return (0, l.jsxs)(L.default.Content, {
-                    className: U.layoutStyle,
+                    className: B.layoutStyle,
                     children: [v.map((e, s) => (0, l.jsx)(m.default, {
                         spec: e,
                         allow: t.allow,
                         deny: t.deny,
                         onChange: g,
                         permissionRender: N,
-                        className: U.permissionsForm
+                        className: B.permissionsForm
                     }, s)), n === d ? null : (0, l.jsx)(u.Button, {
                         look: u.Button.Looks.OUTLINED,
                         color: u.Button.Colors.RED,
                         onClick: S,
-                        children: B.default.Messages.REMOVE_ROLE_OR_USER.format({
+                        children: U.default.Messages.REMOVE_ROLE_OR_USER.format({
                             name: f()
                         })
                     })]
@@ -2633,9 +2626,9 @@
                     user: a
                 } = e, n = a.getAvatarURL(t, 32), i = y.default.getNickname(t, s, a), r = P.default.useUserTag(a), o = null, d = null;
                 return o = null != i ? i : a.hasAvatarForGuild(t) ? a.username : r, (null != i || a.hasAvatarForGuild(t)) && (d = (0, l.jsxs)("div", {
-                    className: U.userRowSubText,
+                    className: B.userRowSubText,
                     children: [a.hasAvatarForGuild(t) ? (0, l.jsx)(u.Avatar, {
-                        className: U.userRowSubAvatar,
+                        className: B.userRowSubAvatar,
                         size: u.AvatarSizes.SIZE_16,
                         src: a.getAvatarURL(void 0, 16),
                         "aria-label": a.username
@@ -2645,16 +2638,16 @@
                         children: r
                     })]
                 })), (0, l.jsxs)("div", {
-                    className: U.inline,
+                    className: B.inline,
                     children: [(0, l.jsx)(u.Avatar, {
                         size: u.AvatarSizes.SIZE_32,
                         src: n,
                         "aria-label": a.username,
-                        className: U.userRowAvatar
+                        className: B.userRowAvatar
                     }), (0, l.jsxs)("div", {
-                        className: U.userRowText,
+                        className: B.userRowText,
                         children: [(0, l.jsx)(u.Text, {
-                            className: U.userRowText,
+                            className: B.userRowText,
                             variant: "text-md/normal",
                             children: o
                         }), d]
@@ -2676,10 +2669,10 @@
                     position: d
                 } = e, u = (0, o.useStateFromStores)([x.default], () => x.default.getMemberIds(t.id));
                 return (0, l.jsx)(O.default, {
-                    label: B.default.Messages.OVERWRITE_AUTOCOMPLETE_LABEL,
-                    placeholder: B.default.Messages.OVERWRITE_AUTOCOMPLETE_PLACEHOLDER,
-                    "aria-label": B.default.Messages.OVERWRITE_AUTOCOMPLETE_A11Y_LABEL,
-                    sections: [B.default.Messages.ROLES, B.default.Messages.MEMBERS],
+                    label: U.default.Messages.OVERWRITE_AUTOCOMPLETE_LABEL,
+                    placeholder: U.default.Messages.OVERWRITE_AUTOCOMPLETE_PLACEHOLDER,
+                    "aria-label": U.default.Messages.OVERWRITE_AUTOCOMPLETE_A11Y_LABEL,
+                    sections: [U.default.Messages.ROLES, U.default.Messages.MEMBERS],
                     onRenderResult: e => {
                         if (W(e)) {
                             let t;
@@ -2759,21 +2752,21 @@
                                 decoration: "never"
                             }),
                             children: (0, l.jsxs)("div", {
-                                className: U.inline,
+                                className: B.inline,
                                 children: [(0, l.jsx)(u.Avatar, {
                                     size: u.AvatarSizes.SIZE_20,
                                     src: t,
                                     "aria-label": e.username,
-                                    className: U.xsmallAvatar
+                                    className: B.xsmallAvatar
                                 }), (0, l.jsx)("span", {
-                                    className: U.username,
+                                    className: B.username,
                                     children: P.default.getUserTag(e)
                                 })]
                             })
                         }, "".concat(n, "-").concat(e.id))
                     }).value();
                 return (0, l.jsx)(L.default.Sidebar, {
-                    className: U.layoutStyle,
+                    className: B.layoutStyle,
                     scrollable: !0,
                     children: (0, l.jsxs)(u.TabBar, {
                         onItemSelect: E.selectPermission,
@@ -2788,12 +2781,12 @@
                                 children: t => (0, l.jsx)(u.TabBar.Header, {
                                     ...t,
                                     children: (0, l.jsxs)("div", {
-                                        className: U.sidebarHeaderDefault,
+                                        className: B.sidebarHeaderDefault,
                                         children: [(0, l.jsxs)("span", {
-                                            children: [B.default.Messages.ROLES, "/", B.default.Messages.MEMBERS]
+                                            children: [U.default.Messages.ROLES, "/", U.default.Messages.MEMBERS]
                                         }), (0, l.jsx)("img", {
                                             alt: "",
-                                            className: U.sidebarHeader,
+                                            className: B.sidebarHeader,
                                             src: e
                                         })]
                                     })
@@ -2810,7 +2803,7 @@
                                 children: (0, l.jsx)(u.Anchor, {
                                     href: D.default.getArticleURL(w.HelpdeskArticles.PERMISSIONS_TUTORIAL),
                                     target: "_blank",
-                                    children: B.default.Messages.PERMISSION_HELPDESK
+                                    children: U.default.Messages.PERMISSION_HELPDESK
                                 })
                             })]
                         })]
@@ -2827,7 +2820,7 @@
                 if (null == a || null == e || null == t || null == s) return null;
                 let n = t[s];
                 return (0, l.jsxs)(L.default, {
-                    className: U.container,
+                    className: B.container,
                     children: [(0, l.jsx)(z, {}), (0, l.jsx)(V, {
                         overwrite: n
                     })]

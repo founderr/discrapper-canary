@@ -464,8 +464,8 @@
                         [, f] = n.useState(a),
                         s = n.useRef(a);
                     return n.useEffect(() => {
-                        i(e), o(u.default.getProfileEffectById(r))
-                    }, [r, e]), {
+                        i(e), o(u.default.getProfileEffectById(e))
+                    }, [e]), {
                         increment: () => {
                             let e = (s.current + 1) % t.length;
                             s.current = e, f(e), i(t[e].id), o(t[e])
