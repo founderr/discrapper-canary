@@ -1219,7 +1219,7 @@
                             },
                             oldFormErrors: !0
                         }).then(e => {
-                            if (null == e.body || "74c442bbf8e76308bad25b083e12c36c04780a11" === e.body.hash) return this._handleUpdateNotAvailable();
+                            if (null == e.body || "59ae8de0e059880c70b22ce20f585fae127eda7b" === e.body.hash) return this._handleUpdateNotAvailable();
                             if (e.body.required || (0, r.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
                             let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? 6048e5 : 864e5;
                             if (Date.now() - f > t) return s.default.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
@@ -1394,10 +1394,10 @@
                             label: null != t.parent_id ? d.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : d.default.Messages.FORM_LABEL_DEFAULT
                         }, {
                             setting: u.UserNotificationSettings.ALL_MESSAGES,
-                            label: d.default.Messages.FORM_LABEL_ALL_ACTIVITY
+                            label: d.default.Messages.FORM_LABEL_ALL_VOICE_ACTIVITY
                         }, {
                             setting: u.UserNotificationSettings.ONLY_MENTIONS,
-                            label: d.default.Messages.FORM_LABEL_ONLY_MENTIONS.format()
+                            label: d.default.Messages.FORM_LABEL_ONLY_TEXT_MENTIONS.format()
                         }, {
                             setting: u.UserNotificationSettings.NO_MESSAGES,
                             label: d.default.Messages.FORM_LABEL_NOTHING
@@ -1465,7 +1465,7 @@
                                 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                                 switch (e) {
                                     case u.UserNotificationSettings.ALL_MESSAGES:
-                                        return t.type === u.ChannelTypes.GUILD_VOICE && n ? d.default.Messages.FORM_LABEL_ALL_ACTIVITY : d.default.Messages.FORM_LABEL_ALL_MESSAGES;
+                                        return t.type === u.ChannelTypes.GUILD_VOICE && n ? d.default.Messages.FORM_LABEL_ALL_VOICE_ACTIVITY : d.default.Messages.FORM_LABEL_ALL_MESSAGES;
                                     case u.UserNotificationSettings.ONLY_MENTIONS:
                                         return d.default.Messages.FORM_LABEL_ONLY_MENTIONS.format();
                                     case u.UserNotificationSettings.NO_MESSAGES:
