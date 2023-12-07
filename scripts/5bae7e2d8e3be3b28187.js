@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["76193"], {
+    ["54527"], {
         820542: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -1285,25 +1285,6 @@
                     hasSpaceTerminator: i
                 }
             }
-        },
-        633043: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return a
-                }
-            });
-            var i = n("37983");
-            n("884691");
-            var l = n("77078"),
-                r = n("850572"),
-                a = () => (0, i.jsx)("div", {
-                    className: r.loadingWrapper,
-                    children: (0, i.jsx)(l.Dots, {
-                        dotRadius: 4,
-                        themed: !0
-                    })
-                })
         },
         44141: function(e, t, n) {
             "use strict";
@@ -3281,7 +3262,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return j
+                    return F
                 }
             });
             var i = n("37983");
@@ -3315,12 +3296,12 @@
                 O = n("314838"),
                 U = n("151200"),
                 D = n("692986"),
-                x = n("806179"),
-                G = n("816106"),
+                G = n("806179"),
+                x = n("816106"),
                 P = n("623879"),
                 b = n("49111"),
                 w = n("782340"),
-                j = (0, s.default)((0, a.default)(function(e) {
+                F = (0, s.default)((0, a.default)(function(e) {
                     let {
                         user: t,
                         channel: n,
@@ -3328,15 +3309,15 @@
                         showMute: s = !0,
                         showMediaItems: c = !1,
                         showChannelCallItems: b = !1,
-                        showModalItems: j = !0,
-                        targetIsUser: F = !1,
+                        showModalItems: F = !0,
+                        targetIsUser: j = !1,
                         context: V,
                         onSelect: B,
                         onHeightUpdate: H
-                    } = e, k = (0, x.default)(t.id, null), Y = (0, A.default)(t, V), Z = (0, N.default)({
+                    } = e, k = (0, G.default)(t.id, null), Y = (0, A.default)(t, V), Z = (0, N.default)({
                         user: t,
                         context: V
-                    }), z = (0, v.default)(t), K = (0, P.default)(t.id), W = (0, R.default)(n.id, a), X = (0, O.default)(t), Q = (0, u.default)(null, t), q = (0, G.default)(t.id), J = (0, U.default)(t.id, n.id), $ = (0, m.default)(t), ee = (0, D.default)(t.id), et = (0, y.default)(t.id, n.id), en = (0, M.default)(t), ei = (0, _.default)(n), el = (0, I.default)({
+                    }), z = (0, v.default)(t), K = (0, P.default)(t.id), W = (0, R.default)(n.id, a), Q = (0, O.default)(t), X = (0, u.default)(null, t), q = (0, x.default)(t.id), J = (0, U.default)(t.id, n.id), $ = (0, m.default)(t), ee = (0, D.default)(t.id), et = (0, y.default)(t.id, n.id), en = (0, M.default)(t), ei = (0, _.default)(n), el = (0, I.default)({
                         id: t.id,
                         label: w.default.Messages.COPY_ID_USER
                     }), er = (0, I.default)({
@@ -3366,15 +3347,15 @@
                             children: !eC && eu
                         }), (0, i.jsxs)(l.MenuGroup, {
                             children: [!eC && (0, i.jsxs)(i.Fragment, {
-                                children: [j && k, Y, !ep && J, j && Z, j && z, K]
+                                children: [F && k, Y, !ep && J, F && Z, F && z, K]
                             }), W]
                         }), !eC && (0, i.jsxs)(i.Fragment, {
                             children: [(0, i.jsx)(l.MenuGroup, {
                                 children: c && q
                             }), (0, i.jsx)(l.MenuGroup, {
-                                children: j && Q
+                                children: F && X
                             }), (0, i.jsxs)(l.MenuGroup, {
-                                children: [c && ee, c && et, ed, j && X, $, j && en, c && ec]
+                                children: [c && ee, c && et, ed, F && Q, $, F && en, c && ec]
                             }), (0, i.jsx)(l.MenuGroup, {
                                 children: s && ei
                             }), b && (0, i.jsxs)(l.MenuGroup, {
@@ -3383,117 +3364,12 @@
                         }), (0, i.jsx)(l.MenuGroup, {
                             children: eh
                         }), (0, i.jsxs)(l.MenuGroup, {
-                            children: [el, !F && er]
+                            children: [el, !j && er]
                         })]
                     })
                 }, {
                     object: b.AnalyticsObjects.CONTEXT_MENU
                 }), [c.default.CONTEXT_MENU, c.default.DM_USER_MENU])
-        },
-        563816: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return T
-                }
-            });
-            var i = n("37983"),
-                l = n("884691"),
-                r = n("627445"),
-                a = n.n(r),
-                s = n("446674"),
-                o = n("77078"),
-                u = n("240249"),
-                c = n("524768"),
-                d = n("389153"),
-                f = n("916565"),
-                h = n("355263"),
-                E = n("633043"),
-                _ = n("305961"),
-                I = n("317041"),
-                p = n("782340"),
-                C = n("205735"),
-                T = e => {
-                    let {
-                        commandType: t,
-                        commandTargetId: n,
-                        channel: r,
-                        guildId: T,
-                        onShow: S
-                    } = e, g = l.useRef(!1), m = l.useRef(0), v = (0, s.useStateFromStores)([_.default], () => _.default.getGuild(null != T ? T : r.guild_id)), {
-                        hasMoreAfter: N,
-                        scrollDown: L,
-                        sectionDescriptors: M,
-                        commands: A,
-                        placeholders: R
-                    } = u.useDiscovery(r, {
-                        commandType: t
-                    }, {
-                        placeholderCount: I.CONTEXT_MENU_PLACEHOLDER_COUNT,
-                        limit: I.CONTEXT_MENU_COMMANDS_QUERY_LIMIT
-                    }), {
-                        visibleCommands: y,
-                        sections: O
-                    } = l.useMemo(() => {
-                        let e = A.concat(R),
-                            t = {};
-                        return M.forEach(e => {
-                            t[e.id] = e
-                        }), {
-                            visibleCommands: e,
-                            sections: t
-                        }
-                    }, [A, M, R]), U = l.useMemo(() => (0, d.canUseContextMenuCommands)(r, y.length, u.getCommandTypeCount(r, t, null == v ? void 0 : v.applicationCommandCounts)), [r, t, y.length, null == v ? void 0 : v.applicationCommandCounts]);
-                    l.useEffect(() => {
-                        U !== g.current && (U && (null == S || S()), g.current = U)
-                    }, [U, S]), l.useEffect(() => {
-                        D(m.current)
-                    }, [y]);
-                    let D = l.useCallback(e => {
-                            N && e + 500 > 34 * y.length - 40 && L(), m.current = e
-                        }, [N, L, y]),
-                        x = l.useCallback(e => {
-                            if (e.inputType === c.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(o.MenuItem, {
-                                id: "menu-command-".concat(e.id),
-                                render: () => (0, i.jsx)(E.default, {})
-                            }, "menu-command-".concat(e.id));
-                            a(null != r, "menu item should not show if channel is null");
-                            let t = O[e.applicationId],
-                                l = null != t ? (0, h.getIconComponent)(t) : void 0;
-                            return (0, i.jsx)(o.MenuItem, {
-                                id: e.id,
-                                label: e.displayName,
-                                showIconFirst: !0,
-                                icon: () => null != l ? (0, i.jsx)(l, {
-                                    channel: r,
-                                    section: t,
-                                    width: 18,
-                                    height: 18,
-                                    selectable: !1
-                                }) : null,
-                                action: () => {
-                                    (0, f.default)({
-                                        command: e,
-                                        optionValues: {},
-                                        context: {
-                                            channel: r,
-                                            guild: v
-                                        },
-                                        commandTargetId: n
-                                    })
-                                }
-                            }, e.id)
-                        }, [r, v, n, O]);
-                    return U && (0, i.jsx)(o.MenuItem, {
-                        id: "apps",
-                        label: p.default.Messages.APPS,
-                        onChildrenScroll: D,
-                        childRowHeight: 34,
-                        listClassName: C.list,
-                        disabled: 0 === y.length,
-                        children: y.map(x)
-                    })
-                }
         },
         126710: function(e, t, n) {
             "use strict";
