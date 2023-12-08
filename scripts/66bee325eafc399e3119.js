@@ -96,15 +96,47 @@
                 createAudioMP4FromVideoMP4: function() {
                     return i
                 }
-            });
-            var a = l("547757"),
+            }), l("222007"), l("424973");
+            var a = l("469520"),
                 n = l.n(a);
             async function i(e) {
                 let t = n.createFile(),
-                    l = new Promise(e => {
-                        t.onReady = e
+                    l = n.createFile(),
+                    a = {};
+                e.fileStart = 0, t.onReady = e => {
+                    for (let n of (l.init({
+                            duration: e.duration,
+                            timescale: e.timescale
+                        }), e.audioTracks)) a[n.id] = n, t.setExtractionOptions(n.id, null, {
+                        nbSamples: 1 / 0
+                    }), l.addTrack({
+                        id: n.id,
+                        timescale: n.timescale,
+                        hdlr: "soun",
+                        type: "mp4a",
+                        duration: n.duration,
+                        layer: n.layer,
+                        channel_count: n.audio.channel_count,
+                        samplerate: n.audio.sample_rate,
+                        samplesize: n.audio.sample_size,
+                        name: n.name
                     });
-                return e.fileStart = 0, t.appendBuffer(e), t.flush(), await l, t.moov.boxes = t.moov.boxes.filter(e => !("trak" === e.type && "vide" === e.mdia.hdlr.handler)), t.getBuffer()
+                    t.start()
+                };
+                let i = new Promise(e => {
+                    t.onSamples = (n, i, r) => {
+                        for (let e of r) l.addSample(n, e.data, e);
+                        t.releaseUsedSamples(n, r.length), delete a[n];
+                        let s = l.getTrackById(n),
+                            u = t.getTrackById(n);
+                        if (null != u.edts) {
+                            let e = u.edts.elst;
+                            s.add("edts").boxes.push(e)
+                        }
+                        0 === Object.keys(a).length && e()
+                    }
+                });
+                return t.appendBuffer(e), t.flush(), await i, l.getBuffer()
             }
         },
         643290: function(e, t, l) {
@@ -198,10 +230,10 @@
                 h = l("36694"),
                 C = l("195812"),
                 x = l("754576"),
-                N = l("228220"),
-                g = l("299039"),
-                I = l("803725"),
-                S = l("142485"),
+                g = l("228220"),
+                N = l("299039"),
+                S = l("803725"),
+                I = l("142485"),
                 _ = l("643290"),
                 L = l("431734"),
                 T = l("80028"),
@@ -249,12 +281,12 @@
                     applicationAudioEnabled: P,
                     onSetClipName: b,
                     onChangeVoiceAudioEnabled: w,
-                    onChangeApplicationAudioEnabled: D,
-                    onClose: y
+                    onChangeApplicationAudioEnabled: y,
+                    onClose: D
                 } = e, [O, k] = n.useState(null), {
                     onShareClick: F,
                     canAttachFiles: G
-                } = (0, S.default)({
+                } = (0, I.default)({
                     channelId: s,
                     setExporting: e => k(null != e ? "share" : null)
                 });
@@ -262,15 +294,15 @@
                     let e = f.default.getChannel(s);
                     k("export");
                     try {
-                        let n = await (0, I.exportClip)(t, {
+                        let n = await (0, S.exportClip)(t, {
                             ...i,
                             applicationAudio: P,
                             voiceAudio: x
                         });
-                        y(), (0, o.openModalLazy)(async () => {
+                        D(), (0, o.openModalLazy)(async () => {
                             let {
                                 default: i
-                            } = await l.el("823749").then(l.bind(l, "823749")), r = (null == e ? void 0 : e.guild_id) != null ? m.default.getGuild(e.guild_id) : null, s = null != r && (0, c.getManageResourcePermissions)(r, v.default, E.default).canCreateExpressions, u = null == p || "" === p ? (0, T.CLIP_NAME_TEMPLATE)(g.default.extractTimestamp(t.id)) : p;
+                            } = await l.el("823749").then(l.bind(l, "823749")), r = (null == e ? void 0 : e.guild_id) != null ? m.default.getGuild(e.guild_id) : null, s = null != r && (0, c.getManageResourcePermissions)(r, v.default, E.default).canCreateExpressions, u = null == p || "" === p ? (0, T.CLIP_NAME_TEMPLATE)(N.default.extractTimestamp(t.id)) : p;
                             return t => (0, a.jsx)(i, {
                                 ...t,
                                 showGuildPicker: !0,
@@ -287,10 +319,10 @@
                         k(null)
                     }
                 }
-                async function V() {
+                async function U() {
                     k("export");
                     try {
-                        let e = await (0, I.exportClip)(t, {
+                        let e = await (0, S.exportClip)(t, {
                                 ...i,
                                 applicationAudio: P,
                                 voiceAudio: x
@@ -302,7 +334,7 @@
                     }
                 }
 
-                function U() {
+                function V() {
                     (0, o.openModalLazy)(async () => {
                         let {
                             default: e
@@ -311,7 +343,7 @@
                             clip: t,
                             ...l,
                             onDelete: async () => {
-                                await l.onClose(), y()
+                                await l.onClose(), D()
                             }
                         })
                     })
@@ -335,7 +367,7 @@
                         }), (0, a.jsxs)("div", {
                             className: j.clipFormSwitches,
                             children: [(0, a.jsx)(o.FormSwitch, {
-                                onChange: D,
+                                onChange: y,
                                 value: P,
                                 hideBorder: !0,
                                 children: M.default.Messages.CLIPS_EDIT_GAME_AUDIO
@@ -390,7 +422,7 @@
                                     [j.submittingWrapperFix]: null != O
                                 }),
                                 color: o.Button.Colors.PRIMARY,
-                                onClick: y,
+                                onClick: D,
                                 children: (0, a.jsx)(h.default, {})
                             })
                         }), (0, a.jsx)(o.Popout, {
@@ -398,7 +430,7 @@
                             renderPopout: e => (0, a.jsx)(R, {
                                 ...e,
                                 channelId: s,
-                                onExportToFile: V,
+                                onExportToFile: U,
                                 onExportToSoundboard: B
                             }),
                             children: (e, t) => {
@@ -435,8 +467,8 @@
                                 }),
                                 disabled: null != O,
                                 color: o.Button.Colors.PRIMARY,
-                                onClick: U,
-                                children: (0, a.jsx)(N.default, {})
+                                onClick: V,
+                                children: (0, a.jsx)(g.default, {})
                             })
                         })]
                     })]
@@ -447,7 +479,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return N
+                    return g
                 }
             }), l("222007"), l("511434"), l("313619"), l("654714"), l("287168"), l("956660");
             var a = l("37983"),
@@ -468,15 +500,15 @@
                 C = l("782340"),
                 x = l("756458");
 
-            function N(e) {
-                var t, l, E, h, N, I, S, _;
+            function g(e) {
+                var t, l, E, h, g, S, I, _;
                 let {
                     clip: L,
                     channelId: T,
                     transitionState: M,
                     onClose: j
-                } = e, [A, R] = n.useState(!0), [P, b] = n.useState(null), [w, D] = n.useState(null), {
-                    AnalyticsLocationProvider: y
+                } = e, [A, R] = n.useState(!0), [P, b] = n.useState(null), [w, y] = n.useState(null), {
+                    AnalyticsLocationProvider: D
                 } = (0, d.default)(o.default.CLIPS_EDITOR);
                 n.useEffect(() => {
                     (async function e() {
@@ -498,18 +530,18 @@
                             n = URL.createObjectURL(new Blob([e.data], {
                                 type: "video/mp4"
                             }));
-                        D(a), b(n)
+                        y(a), b(n)
                     })()
                 }, [L.filepath, j]), n.useEffect(() => () => {
                     null != P && URL.revokeObjectURL(P)
                 }, [P]), n.useEffect(() => () => {
                     null != w && URL.revokeObjectURL(w)
                 }, [w]);
-                let [O, k] = n.useState(null === (N = null === (t = L.editMetadata) || void 0 === t ? void 0 : t.voiceAudio) || void 0 === N || N), [F, G] = n.useState(null === (I = null === (l = L.editMetadata) || void 0 === l ? void 0 : l.applicationAudio) || void 0 === I || I), [B, V] = n.useState({
-                    start: null !== (S = null === (E = L.editMetadata) || void 0 === E ? void 0 : E.start) && void 0 !== S ? S : 0,
+                let [O, k] = n.useState(null === (g = null === (t = L.editMetadata) || void 0 === t ? void 0 : t.voiceAudio) || void 0 === g || g), [F, G] = n.useState(null === (S = null === (l = L.editMetadata) || void 0 === l ? void 0 : l.applicationAudio) || void 0 === S || S), [B, U] = n.useState({
+                    start: null !== (I = null === (E = L.editMetadata) || void 0 === E ? void 0 : E.start) && void 0 !== I ? I : 0,
                     end: null !== (_ = null === (h = L.editMetadata) || void 0 === h ? void 0 : h.end) && void 0 !== _ ? _ : 0
-                }), [U, H] = n.useState(L.name), Z = n.useRef({
-                    name: U,
+                }), [V, H] = n.useState(L.name), z = n.useRef({
+                    name: V,
                     editMetadata: {
                         start: B.start,
                         end: B.end,
@@ -517,8 +549,8 @@
                         applicationAudio: F
                     }
                 });
-                Z.current = {
-                    name: U,
+                z.current = {
+                    name: V,
                     editMetadata: {
                         start: B.start,
                         end: B.end,
@@ -526,40 +558,40 @@
                         applicationAudio: F
                     }
                 };
-                let z = (0, v.useClipProtocolURL)(L);
+                let Z = (0, v.useClipProtocolURL)(L);
                 return n.useEffect(() => {
                     async function e() {
                         let e = {};
-                        null != z && (e = {
-                            thumbnail: await (0, m.createThumbnailFromVideo)(z, Z.current.editMetadata.start)
+                        null != Z && (e = {
+                            thumbnail: await (0, m.createThumbnailFromVideo)(Z, z.current.editMetadata.start)
                         }), (0, c.updateClipMetadata)(L.id, {
-                            ...Z.current,
+                            ...z.current,
                             ...e
                         })
                     }
                     return () => {
                         e()
                     }
-                }, [L.id, z]), (0, a.jsx)(r.ModalRoot, {
+                }, [L.id, Z]), (0, a.jsx)(r.ModalRoot, {
                     impression: {
                         impressionName: i.ImpressionNames.CLIP_EDITOR_VIEWED
                     },
                     size: r.ModalSize.DYNAMIC,
                     className: x.modalRoot,
                     transitionState: M,
-                    children: (0, a.jsx)(y, {
+                    children: (0, a.jsx)(D, {
                         children: (0, a.jsx)(r.ModalContent, {
                             className: x.modalContent,
                             children: null == P || null == w ? (0, a.jsx)("div", {
                                 className: x.spinnerContainer,
                                 children: (0, a.jsx)(r.Spinner, {})
                             }) : (0, a.jsxs)(a.Fragment, {
-                                children: [(0, a.jsx)(g, {
+                                children: [(0, a.jsx)(N, {
                                     voiceAudioEnabled: O,
                                     applicationAudioEnabled: F,
                                     videoURL: P,
                                     cropData: B,
-                                    onSetCropData: V,
+                                    onSetCropData: U,
                                     isLoading: A,
                                     onDoneLoading: () => R(!1),
                                     audioURL: w,
@@ -572,7 +604,7 @@
                                     onChangeVoiceAudioEnabled: k,
                                     cropData: B,
                                     onSetClipName: H,
-                                    clipName: U,
+                                    clipName: V,
                                     clip: L,
                                     onClose: j
                                 })]
@@ -582,7 +614,7 @@
                 })
             }
 
-            function g(e) {
+            function N(e) {
                 let {
                     cropData: t,
                     onSetCropData: l,
@@ -690,7 +722,7 @@
                     onDoneLoading: v,
                     startTime: p = 0,
                     endTime: E
-                } = e, h = n.useRef({}), [C, x] = n.useState([]), N = n.useRef(!1), g = n.useCallback(() => {
+                } = e, h = n.useRef({}), [C, x] = n.useState([]), g = n.useRef(!1), N = n.useCallback(() => {
                     let e = h.current.main;
                     if (null == e) return;
                     let t = (0, i.round)(e.currentTime, 3),
@@ -702,25 +734,25 @@
                     }
                 }, [p, E]);
                 (0, r.default)(() => {
-                    if (N.current) {
-                        let e = g();
-                        e && I()
+                    if (g.current) {
+                        let e = N();
+                        e && S()
                     }
                 });
-                let I = n.useCallback(() => {
-                        for (let e of (N.current = !0, g(), Object.values(h.current))) null != e && e.play()
-                    }, [g]),
-                    S = n.useCallback(() => {
+                let S = n.useCallback(() => {
+                        for (let e of (g.current = !0, N(), Object.values(h.current))) null != e && e.play()
+                    }, [N]),
+                    I = n.useCallback(() => {
                         for (let e of Object.values(h.current)) null != e && e.pause()
                     }, []),
                     _ = n.useCallback(e => {
                         var t;
-                        for (let l of ((null === (t = h.current.main) || void 0 === t ? void 0 : t.paused) && (N.current = !1), Object.values(h.current))) null != l && (l.currentTime = e)
+                        for (let l of ((null === (t = h.current.main) || void 0 === t ? void 0 : t.paused) && (g.current = !1), Object.values(h.current))) null != l && (l.currentTime = e)
                     }, []),
                     L = n.useCallback(() => {
                         var e;
-                        (null === (e = h.current.main) || void 0 === e ? void 0 : e.paused) ? I(): S()
-                    }, [I, S]),
+                        (null === (e = h.current.main) || void 0 === e ? void 0 : e.paused) ? S(): I()
+                    }, [S, I]),
                     T = n.useCallback(e => {
                         h.current.main = e
                     }, []),
@@ -733,9 +765,9 @@
                         h.current[t] = e
                     }, []);
                 return (n.useImperativeHandle(t, () => ({
-                    play: I,
+                    play: S,
                     seek: _,
-                    pause: S,
+                    pause: I,
                     videoElement: h.current.main
                 })), null == l) ? null : (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(s.default, {
@@ -782,20 +814,20 @@
             function C(e) {
                 var t, l, i, C;
                 let {
-                    sourceURL: N,
-                    cropData: g,
-                    videoPlayerRef: I,
-                    setCropData: S
-                } = e, [_, L] = n.useState((C = !(null === (l = I.current) || void 0 === l ? void 0 : null === (t = l.videoElement) || void 0 === t ? void 0 : t.paused), C)), T = n.useRef(null), [M, j] = n.useState(null), [A, R] = n.useState(), P = n.useRef(null), b = n.useRef(null), [w, D] = n.useState(0), [y, O] = n.useState(!1), [k, F] = n.useState(null);
+                    sourceURL: g,
+                    cropData: N,
+                    videoPlayerRef: S,
+                    setCropData: I
+                } = e, [_, L] = n.useState((C = !(null === (l = S.current) || void 0 === l ? void 0 : null === (t = l.videoElement) || void 0 === t ? void 0 : t.paused), C)), T = n.useRef(null), [M, j] = n.useState(null), [A, R] = n.useState(), P = n.useRef(null), b = n.useRef(null), [w, y] = n.useState(0), [D, O] = n.useState(!1), [k, F] = n.useState(null);
                 (0, c.default)(() => {
                     var e;
-                    let t = null === (e = I.current) || void 0 === e ? void 0 : e.videoElement;
-                    null != t && w !== t.currentTime && D(t.currentTime)
+                    let t = null === (e = S.current) || void 0 === e ? void 0 : e.videoElement;
+                    null != t && w !== t.currentTime && y(t.currentTime)
                 });
-                let G = n.useMemo(() => g.end - g.start, [g]);
+                let G = n.useMemo(() => N.end - N.start, [N]);
                 n.useEffect(() => {
                     var e;
-                    let t = null === (e = I.current) || void 0 === e ? void 0 : e.videoElement,
+                    let t = null === (e = S.current) || void 0 === e ? void 0 : e.videoElement,
                         l = P.current,
                         a = b.current;
                     if (null == t || null == l || null == a) return;
@@ -809,18 +841,18 @@
                     return t.addEventListener("play", i), t.addEventListener("pause", r), () => {
                         t.removeEventListener("play", i), t.removeEventListener("pause", r)
                     }
-                }, [I]);
+                }, [S]);
                 let {
                     ref: B,
-                    width: V = 0,
-                    height: U = 0
+                    width: U = 0,
+                    height: V = 0
                 } = (0, d.default)(), H = (0, u.default)([f.default], () => f.default.windowSize());
                 n.useMemo(() => {
                     let e = B.current;
                     null != e && F(e.getBoundingClientRect())
-                }, [H.width, H.height, V]);
-                let Z = n.useRef(null),
-                    z = n.useRef({}),
+                }, [H.width, H.height, U]);
+                let z = n.useRef(null),
+                    Z = n.useRef({}),
                     X = n.useCallback((e, t) => {
                         var l, a, n, i;
                         if (null == A) return;
@@ -829,23 +861,23 @@
                             u = (r - k.left) / k.width * A,
                             o = (0, s.clamp)(u, 0, A),
                             d = M;
-                        if (null == d && t && (d = o <= g.start ? "start" : o >= g.end ? "end" : "playhead", null === (l = I.current) || void 0 === l || l.pause(), j(d), O(_)), "start" === d) {
-                            let e = (0, s.clamp)(o, 0, g.end - E.MIN_CLIP_DURATION_SECONDS);
-                            S({
-                                ...g,
+                        if (null == d && t && (d = o <= N.start ? "start" : o >= N.end ? "end" : "playhead", null === (l = S.current) || void 0 === l || l.pause(), j(d), O(_)), "start" === d) {
+                            let e = (0, s.clamp)(o, 0, N.end - E.MIN_CLIP_DURATION_SECONDS);
+                            I({
+                                ...N,
                                 start: e
-                            }), null === (a = I.current) || void 0 === a || a.seek(e)
+                            }), null === (a = S.current) || void 0 === a || a.seek(e)
                         } else if ("end" === d) {
-                            let e = (0, s.clamp)(o, g.start + E.MIN_CLIP_DURATION_SECONDS, A);
-                            S({
-                                ...g,
+                            let e = (0, s.clamp)(o, N.start + E.MIN_CLIP_DURATION_SECONDS, A);
+                            I({
+                                ...N,
                                 end: e
-                            }), null === (n = I.current) || void 0 === n || n.seek(e)
+                            }), null === (n = S.current) || void 0 === n || n.seek(e)
                         } else if ("playhead" === d) {
-                            let e = (0, s.clamp)(o, g.start, g.end);
-                            null === (i = I.current) || void 0 === i || i.seek(e)
+                            let e = (0, s.clamp)(o, N.start, N.end);
+                            null === (i = S.current) || void 0 === i || i.seek(e)
                         }
-                    }, [A, k, M, g, I, _, S]),
+                    }, [A, k, M, N, S, _, I]),
                     W = n.useCallback(e => {
                         X(e.clientX, !0)
                     }, [X]),
@@ -853,12 +885,12 @@
                         X(e.clientX, !1)
                     }, [X]),
                     K = n.useCallback(() => {
-                        if (y) {
+                        if (D) {
                             var e;
-                            null === (e = I.current) || void 0 === e || e.play()
+                            null === (e = S.current) || void 0 === e || e.play()
                         }
                         O(!1), j(null)
-                    }, [I, y]);
+                    }, [S, D]);
                 n.useEffect(() => (document.addEventListener("mousemove", Y), document.addEventListener("mouseup", K), () => {
                     document.removeEventListener("mousemove", Y), document.removeEventListener("mouseup", K)
                 }), [Y, K]), n.useEffect(() => {
@@ -867,36 +899,36 @@
                         let t = B.current,
                             l = T.current;
                         if (null == t || null == l || null == A) return;
-                        t.height = U, t.width = V;
+                        t.height = V, t.width = U;
                         let a = t.getContext("2d");
                         if (null == a) return;
-                        a.fillStyle = "#000", a.fillRect(0, 0, V, U);
+                        a.fillStyle = "#000", a.fillRect(0, 0, U, V);
                         let n = l.videoWidth / l.videoHeight,
-                            i = Math.ceil(U * n),
-                            r = Math.ceil(V / i),
-                            s = Z.current;
+                            i = Math.ceil(V * n),
+                            r = Math.ceil(U / i),
+                            s = z.current;
                         if (null == s) return;
-                        s.width = i, s.height = U;
+                        s.width = i, s.height = V;
                         let u = null == s ? void 0 : s.getContext("2d", {
                             willReadFrequently: !0
                         });
                         if (null == u) return;
-                        let o = z.current;
+                        let o = Z.current;
                         if ((null === (e = o[r]) || void 0 === e ? void 0 : e.length) === r) {
                             for (let e = 0; e < r; e++) a.putImageData(o[r][e], i * e, 0);
                             return
                         }
                         for (let e = 0; e < r; e++) await new Promise(t => {
                             l.onseeked = () => {
-                                a.drawImage(l, i * e, 0, i, U), u.drawImage(l, 0, 0, i, U);
-                                let n = u.getImageData(0, 0, i, U);
+                                a.drawImage(l, i * e, 0, i, V), u.drawImage(l, 0, 0, i, V);
+                                let n = u.getImageData(0, 0, i, V);
                                 null == o[r] && (o[r] = []), o[r][e] = n, t()
-                            }, l.currentTime = i / V * A * e
+                            }, l.currentTime = i / U * A * e
                         })
                     })()
-                }, [V, U, B, A, Z]);
-                let q = w - g.start,
-                    J = null === (i = I.current) || void 0 === i ? void 0 : i.videoElement;
+                }, [U, V, B, A, z]);
+                let q = w - N.start,
+                    J = null === (i = S.current) || void 0 === i ? void 0 : i.videoElement;
                 return (0, a.jsx)("div", {
                     className: h.centeringWrapper,
                     children: (0, a.jsxs)("div", {
@@ -906,7 +938,7 @@
                             children: (0, a.jsx)(o.Clickable, {
                                 onClick: () => {
                                     var e, t;
-                                    return _ ? null === (e = I.current) || void 0 === e ? void 0 : e.pause() : null === (t = I.current) || void 0 === t ? void 0 : t.play()
+                                    return _ ? null === (e = S.current) || void 0 === e ? void 0 : e.pause() : null === (t = S.current) || void 0 === t ? void 0 : t.play()
                                 },
                                 className: h.playPauseButton,
                                 children: _ ? (0, a.jsx)(m.default, {
@@ -926,7 +958,7 @@
                             onMouseDown: W,
                             children: [(0, a.jsx)("canvas", {
                                 className: h.hiddenCanvas,
-                                ref: Z
+                                ref: z
                             }), (0, a.jsx)("canvas", {
                                 className: h.timelineBackground,
                                 ref: B
@@ -941,11 +973,11 @@
                                 onLoadedMetadata: function() {
                                     let e = T.current;
                                     if (null != e) {
-                                        if (R(e.duration), 0 === g.start && (0 === g.end || g.end === e.duration)) {
+                                        if (R(e.duration), 0 === N.start && (0 === N.end || N.end === e.duration)) {
                                             var t;
-                                            null === (t = I.current) || void 0 === t || t.seek(e.duration / 2), D(e.duration / 2)
+                                            null === (t = S.current) || void 0 === t || t.seek(e.duration / 2), y(e.duration / 2)
                                         }
-                                        0 === g.end && S(t => ({
+                                        0 === N.end && I(t => ({
                                             ...t,
                                             end: e.duration
                                         }))
@@ -953,13 +985,13 @@
                                 },
                                 className: h.timelineVideo,
                                 ref: T,
-                                src: N,
+                                src: g,
                                 muted: !0
                             }), (0, a.jsxs)("div", {
                                 className: h.dragBox,
                                 style: {
-                                    left: null != A ? "".concat(g.start / A * 100, "%") : "0",
-                                    right: null != A ? "".concat((A - g.end) / A * 100, "%") : "0"
+                                    left: null != A ? "".concat(N.start / A * 100, "%") : "0",
+                                    right: null != A ? "".concat((A - N.end) / A * 100, "%") : "0"
                                 },
                                 children: [(0, a.jsx)("div", {
                                     className: h.timePillContainer,
