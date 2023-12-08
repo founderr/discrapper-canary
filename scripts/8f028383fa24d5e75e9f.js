@@ -31,12 +31,12 @@
                     analyticsLocations: R,
                     context: C,
                     icon: T
-                } = e, O = c.default.getGuild(t), I = o.default.getId(), N = (0, n.useStateFromStores)([_.default], () => _.default.getUser(A)), h = (0, n.useStateFromStores)([f.default], () => f.default.isGuestOrLurker(t, A), [t, A]);
+                } = e, O = c.default.getGuild(t), I = o.default.getId(), N = (0, n.useStateFromStores)([_.default], () => _.default.getUser(A)), v = (0, n.useStateFromStores)([f.default], () => f.default.isGuestOrLurker(t, A), [t, A]);
                 (0, n.useStateFromStores)([E.default], () => E.default.getGuildVersion(t), [t]);
-                let v = a.useMemo(() => ({
+                let h = a.useMemo(() => ({
                     [t]: [A]
                 }), [t, A]);
-                (0, d.useSubscribeGuildMembers)(v);
+                (0, d.useSubscribeGuildMembers)(h);
                 let p = C === M.AppContext.POPOUT,
                     b = (0, i.default)({
                         guild: O,
@@ -46,7 +46,7 @@
                 let U = I === A && (E.default.can(M.Permissions.CHANGE_NICKNAME, O) || E.default.can(M.Permissions.MANAGE_NICKNAMES, O)),
                     F = I === A,
                     L = E.default.canManageUser(M.Permissions.MANAGE_NICKNAMES, A, O);
-                if (!(U || L || F) || null == N || h) return null;
+                if (!(U || L || F) || null == N || v) return null;
                 let x = O.hasFeature(M.GuildFeatures.HUB),
                     G = x ? S.default.Messages.HUB_EDIT_PROFILE : S.default.Messages.CHANGE_IDENTITY,
                     j = F ? G : S.default.Messages.CHANGE_NICKNAME;
@@ -306,8 +306,8 @@
                 O = l("459870"),
                 I = l("393394"),
                 N = l("806179"),
-                h = l("97508"),
-                v = l("623879"),
+                v = l("97508"),
+                h = l("623879"),
                 p = l("49111"),
                 b = l("782340"),
                 U = (0, d.default)((0, r.default)(function(e) {
@@ -318,7 +318,7 @@
                         context: d,
                         onSelect: o,
                         onHeightUpdate: U
-                    } = e, F = (0, N.default)(t.id, l), L = (0, C.default)(t, l, d), x = (0, T.default)(t.id, d), G = (0, v.default)(t.id), j = (0, g.default)(t, d), y = (0, S.default)({
+                    } = e, F = (0, N.default)(t.id, l), L = (0, C.default)(t, l, d), x = (0, T.default)(t.id, d), G = (0, h.default)(t.id), j = (0, g.default)(t, d), y = (0, S.default)({
                         user: t,
                         guildId: l,
                         context: d
@@ -331,7 +331,7 @@
                             object: p.AnalyticsObjects.CONTEXT_MENU_ITEM
                         },
                         context: d
-                    }), D = (0, R.default)(t, l), V = (0, s.default)(null, t), H = (0, _.default)(t), B = (0, A.default)(t), K = (0, I.default)(t, l, r.id), Y = (0, h.default)(t.id, l), w = (0, O.default)(t, l), z = (0, f.default)({
+                    }), D = (0, R.default)(t, l), V = (0, s.default)(null, t), H = (0, _.default)(t), B = (0, A.default)(t), K = (0, I.default)(t, l, r.id), Y = (0, v.default)(t.id, l), w = (0, O.default)(t, l), z = (0, f.default)({
                         id: t.id,
                         label: b.default.Messages.COPY_ID_USER
                     }), q = (0, E.default)(t), W = (0, m.default)({
@@ -339,7 +339,7 @@
                         commandTargetId: t.id,
                         channel: r,
                         guildId: l,
-                        onShow: U
+                        onHeightUpdate: U
                     }), X = t.isNonUserBot();
                     return (0, u.jsxs)(a.Menu, {
                         navId: "user-context",

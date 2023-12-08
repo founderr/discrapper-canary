@@ -106,21 +106,21 @@
                     width: u,
                     height: f,
                     className: h,
-                    selectable: m = !1,
-                    onFocus: p,
-                    onBlur: v,
-                    onMouseOver: C,
-                    onMouseLeave: M,
-                    ...E
-                } = e, [g, I] = a.useState(!1), N = a.useCallback(() => {
-                    I(!0), null == p || p()
-                }, [p]), x = a.useCallback(() => {
-                    I(!1), null == v || v()
-                }, [v]), _ = a.useCallback(() => {
-                    I(!0), null == C || C()
-                }, [C]), A = a.useCallback(() => {
-                    I(!1), null == M || M()
-                }, [M]), S = a.useMemo(() => {
+                    selectable: v = !1,
+                    onFocus: m,
+                    onBlur: p,
+                    onMouseOver: M,
+                    onMouseLeave: C,
+                    ...I
+                } = e, [g, E] = a.useState(!1), N = a.useCallback(() => {
+                    E(!0), null == m || m()
+                }, [m]), x = a.useCallback(() => {
+                    E(!1), null == p || p()
+                }, [p]), _ = a.useCallback(() => {
+                    E(!0), null == M || M()
+                }, [M]), A = a.useCallback(() => {
+                    E(!1), null == C || C()
+                }, [C]), S = a.useMemo(() => {
                     if (t.type === c.ApplicationCommandSectionType.APPLICATION) {
                         var e;
                         return r.default.getApplicationIconURL({
@@ -134,10 +134,10 @@
                     return d
                 }, [t, u]);
                 return (0, l.jsx)("div", {
-                    ...E,
+                    ...I,
                     className: i(o.wrapper, h, {
-                        [o.selectable]: m,
-                        [o.selected]: m && n
+                        [o.selectable]: v,
+                        [o.selected]: v && n
                     }),
                     onFocus: N,
                     onBlur: x,
@@ -145,7 +145,7 @@
                     onMouseLeave: A,
                     children: (0, l.jsx)(s.default, {
                         className: o.mask,
-                        mask: m && (n || g) ? s.MaskIDs.SQUIRCLE : s.MaskIDs.AVATAR_DEFAULT,
+                        mask: v && (n || g) ? s.MaskIDs.SQUIRCLE : s.MaskIDs.AVATAR_DEFAULT,
                         width: u,
                         height: f,
                         children: (0, l.jsx)("img", {
@@ -315,7 +315,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return C
+                    return M
                 }
             });
             var l = n("37983");
@@ -330,55 +330,55 @@
                 d = n("667358"),
                 f = n("563816"),
                 h = n("518155"),
-                m = n("718381"),
-                p = n("875834"),
-                v = n("782340");
+                v = n("718381"),
+                m = n("875834"),
+                p = n("782340");
 
-            function C(e) {
+            function M(e) {
                 var t;
-                let n, C, M, {
-                        channel: E,
+                let n, M, C, {
+                        channel: I,
                         message: g,
-                        target: I,
+                        target: E,
                         attachment: N,
                         onSelect: x,
                         onHeightUpdate: _
                     } = e,
-                    A = I;
-                if (null != N) C = n = N.url;
+                    A = E;
+                if (null != N) M = n = N.url;
                 else
                     for (;
-                        (0, a.isElement)(A);)(0, a.isElement)(A, HTMLImageElement) && null != A.src && (C = A.src), (0, a.isElement)(A, HTMLAnchorElement) && null != A.href && (n = A.href, M = A.textContent), A = A.parentNode;
+                        (0, a.isElement)(A);)(0, a.isElement)(A, HTMLImageElement) && null != A.src && (M = A.src), (0, a.isElement)(A, HTMLAnchorElement) && null != A.href && (n = A.href, C = A.textContent), A = A.parentNode;
                 let S = null === (t = document.getSelection()) || void 0 === t ? void 0 : t.toString(),
-                    T = (0, c.default)(S),
-                    O = (0, d.default)(S),
-                    y = (0, f.default)({
+                    O = (0, c.default)(S),
+                    j = (0, d.default)(S),
+                    b = (0, f.default)({
                         commandType: s.ApplicationCommandType.MESSAGE,
                         commandTargetId: g.id,
-                        channel: E,
+                        channel: I,
                         guildId: void 0,
-                        onShow: _
+                        onHeightUpdate: _
                     }),
-                    j = (0, p.default)(g, E),
-                    R = (0, h.default)(g, E),
-                    b = (0, m.default)(g, E),
-                    w = (0, o.default)(null != n ? n : C, M),
+                    y = (0, m.default)(g, I),
+                    T = (0, h.default)(g, I),
+                    R = (0, v.default)(g, I),
+                    w = (0, o.default)(null != n ? n : M, C),
                     L = (0, r.default)({
                         id: g.id,
-                        label: v.default.Messages.COPY_ID_MESSAGE,
+                        label: p.default.Messages.COPY_ID_MESSAGE,
                         shiftId: "".concat(g.channel_id, "-").concat(g.id)
                     });
                 return (0, l.jsxs)(u.Menu, {
                     navId: "message",
                     onClose: i.closeContextMenu,
-                    "aria-label": v.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
+                    "aria-label": p.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
                     onSelect: x,
                     children: [(0, l.jsx)(u.MenuGroup, {
-                        children: T
-                    }), (0, l.jsx)(u.MenuGroup, {
                         children: O
+                    }), (0, l.jsx)(u.MenuGroup, {
+                        children: j
                     }), (0, l.jsxs)(u.MenuGroup, {
-                        children: [y, j, R, b]
+                        children: [b, y, T, R]
                     }), (0, l.jsx)(u.MenuGroup, {
                         children: w
                     }), (0, l.jsx)(u.MenuGroup, {
@@ -422,7 +422,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return v
                 }
             });
             var l = n("37983");
@@ -438,11 +438,11 @@
                 f = n("49111"),
                 h = n("782340");
 
-            function m(e, t) {
+            function v(e, t) {
                 let n = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
-                    m = (0, r.useIsActiveChannelOrUnarchivableThread)(t),
-                    p = (0, a.useStateFromStores)([c.default], () => c.default.can(f.Permissions.MANAGE_MESSAGES, t), [t]);
-                return e.state !== f.MessageStates.SENDING && (e.author.id === (null == n ? void 0 : n.id) || p) && e.type in f.MessageTypesDeletable && m ? (0, l.jsx)(u.MenuItem, {
+                    v = (0, r.useIsActiveChannelOrUnarchivableThread)(t),
+                    m = (0, a.useStateFromStores)([c.default], () => c.default.can(f.Permissions.MANAGE_MESSAGES, t), [t]);
+                return e.state !== f.MessageStates.SENDING && (e.author.id === (null == n ? void 0 : n.id) || m) && e.type in f.MessageTypesDeletable && v ? (0, l.jsx)(u.MenuItem, {
                     id: "delete",
                     label: h.default.Messages.DELETE_MESSAGE,
                     action: function(n) {
@@ -527,7 +527,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return v
+                    return p
                 }
             });
             var l = n("37983");
@@ -542,16 +542,16 @@
                 d = n("773336"),
                 f = n("50885"),
                 h = n("146574"),
-                m = n("49111"),
-                p = n("782340");
+                v = n("49111"),
+                m = n("782340");
 
-            function v(e, t, n, v) {
-                let C = (0, i.default)(null == n ? void 0 : n.getChannelId());
-                if (!d.isPlatformEmbedded || null == e || "" === e || C || (null == v ? void 0 : v.shouldHideMediaOptions) === !0 || null != e && null != (0, s.isStickerAssetUrl)(e) || null != e && (0, u.isRoleIconAssetUrl)(e)) return null;
-                let M = (0, r.getHostname)(e),
-                    E = n => {
-                        c.default.track(m.AnalyticEvents.CONTEXT_MENU_LINK_OPENED, {
-                            hostname: M,
+            function p(e, t, n, p) {
+                let M = (0, i.default)(null == n ? void 0 : n.getChannelId());
+                if (!d.isPlatformEmbedded || null == e || "" === e || M || (null == p ? void 0 : p.shouldHideMediaOptions) === !0 || null != e && null != (0, s.isStickerAssetUrl)(e) || null != e && (0, u.isRoleIconAssetUrl)(e)) return null;
+                let C = (0, r.getHostname)(e),
+                    I = n => {
+                        c.default.track(v.AnalyticEvents.CONTEXT_MENU_LINK_OPENED, {
+                            hostname: C,
                             ...(0, h.getNativeContextMenuChannelAnalytics)()
                         }), (0, o.handleClick)({
                             href: e,
@@ -561,17 +561,17 @@
                     };
                 return [(0, l.jsx)(a.MenuItem, {
                     id: "copy-native-link",
-                    label: p.default.Messages.COPY_LINK,
+                    label: m.default.Messages.COPY_LINK,
                     action: () => {
-                        c.default.track(m.AnalyticEvents.CONTEXT_MENU_LINK_COPIED, {
-                            hostname: M,
+                        c.default.track(v.AnalyticEvents.CONTEXT_MENU_LINK_COPIED, {
+                            hostname: C,
                             ...(0, h.getNativeContextMenuChannelAnalytics)()
                         }), f.default.copy(e)
                     }
                 }, "copy-native-link"), (0, l.jsx)(a.MenuItem, {
                     id: "open-native-link",
-                    label: p.default.Messages.OPEN_LINK,
-                    action: e => E(e)
+                    label: m.default.Messages.OPEN_LINK,
+                    action: e => I(e)
                 }, "open-native-link")]
             }
         },
@@ -607,7 +607,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return M
                 }
             });
             var l = n("37983"),
@@ -617,94 +617,87 @@
                 s = n("446674"),
                 r = n("77078"),
                 c = n("240249"),
-                o = n("524768"),
-                d = n("389153"),
-                f = n("916565"),
-                h = n("355263"),
-                m = n("633043"),
-                p = n("305961"),
+                o = n("916565"),
+                d = n("355263"),
+                f = n("633043"),
+                h = n("305961"),
                 v = n("317041"),
-                C = n("782340"),
-                M = n("205735"),
-                E = e => {
-                    let {
-                        commandType: t,
-                        commandTargetId: n,
-                        channel: u,
-                        guildId: E,
-                        onShow: g
-                    } = e, I = a.useRef(!1), N = a.useRef(0), x = (0, s.useStateFromStores)([p.default], () => p.default.getGuild(null != E ? E : u.guild_id)), {
-                        hasMoreAfter: _,
-                        scrollDown: A,
-                        sectionDescriptors: S,
-                        commands: T,
-                        placeholders: O
-                    } = c.useDiscovery(u, {
-                        commandType: t
-                    }, {
-                        placeholderCount: v.CONTEXT_MENU_PLACEHOLDER_COUNT,
-                        limit: v.CONTEXT_MENU_COMMANDS_QUERY_LIMIT
-                    }), {
-                        visibleCommands: y,
-                        sections: j
-                    } = a.useMemo(() => {
-                        let e = T.concat(O),
-                            t = {};
-                        return S.forEach(e => {
-                            t[e.id] = e
-                        }), {
-                            visibleCommands: e,
-                            sections: t
-                        }
-                    }, [T, S, O]), R = a.useMemo(() => (0, d.canUseContextMenuCommands)(u, y.length, c.getCommandTypeCount(u, t, null == x ? void 0 : x.applicationCommandCounts)), [u, t, y.length, null == x ? void 0 : x.applicationCommandCounts]);
+                m = n("782340"),
+                p = n("205735"),
+                M = e => {
+                    let t, {
+                            commandType: n,
+                            commandTargetId: u,
+                            channel: M,
+                            guildId: C,
+                            onHeightUpdate: I
+                        } = e,
+                        g = (0, s.useStateFromStores)([h.default], () => h.default.getGuild(null != C ? C : M.guild_id)),
+                        {
+                            commands: E,
+                            sectionDescriptors: N,
+                            loading: x
+                        } = c.useDiscovery(M, {
+                            commandType: n
+                        }, {
+                            limit: v.CONTEXT_MENU_COMMANDS_QUERY_LIMIT
+                        }),
+                        {
+                            sections: _
+                        } = a.useMemo(() => {
+                            let e = {};
+                            return N.forEach(t => {
+                                e[t.id] = t
+                            }), {
+                                sections: e
+                            }
+                        }, [N]),
+                        A = a.useRef(x.current);
                     a.useEffect(() => {
-                        R !== I.current && (R && (null == g || g()), I.current = R)
-                    }, [R, g]), a.useEffect(() => {
-                        b(N.current)
-                    }, [y]);
-                    let b = a.useCallback(e => {
-                            _ && e + 500 > 34 * y.length - 40 && A(), N.current = e
-                        }, [_, A, y]),
-                        w = a.useCallback(e => {
-                            if (e.inputType === o.ApplicationCommandInputType.PLACEHOLDER) return (0, l.jsx)(r.MenuItem, {
-                                id: "menu-command-".concat(e.id),
-                                render: () => (0, l.jsx)(m.default, {})
-                            }, "menu-command-".concat(e.id));
-                            i(null != u, "menu item should not show if channel is null");
-                            let t = j[e.applicationId],
-                                a = null != t ? (0, h.getIconComponent)(t) : void 0;
-                            return (0, l.jsx)(r.MenuItem, {
-                                id: e.id,
-                                label: e.displayName,
-                                showIconFirst: !0,
-                                icon: () => null != a ? (0, l.jsx)(a, {
-                                    channel: u,
-                                    section: t,
-                                    width: 18,
-                                    height: 18,
-                                    selectable: !1
-                                }) : null,
-                                action: () => {
-                                    (0, f.default)({
-                                        command: e,
-                                        optionValues: {},
-                                        context: {
-                                            channel: u,
-                                            guild: x
-                                        },
-                                        commandTargetId: n
-                                    })
-                                }
-                            }, e.id)
-                        }, [u, x, n, j]);
-                    return R && (0, l.jsx)(r.MenuItem, {
+                        x.current !== A.current && (A.current = x.current, null == I || I())
+                    }, [x, I]);
+                    let S = a.useCallback(e => {
+                        i(null != M, "menu item should not show if channel is null");
+                        let t = _[e.applicationId],
+                            n = null != t ? (0, d.getIconComponent)(t) : void 0;
+                        return (0, l.jsx)(r.MenuItem, {
+                            id: e.id,
+                            label: e.displayName,
+                            showIconFirst: !0,
+                            icon: () => null != n ? (0, l.jsx)(n, {
+                                channel: M,
+                                section: t,
+                                width: 18,
+                                height: 18,
+                                selectable: !1
+                            }) : null,
+                            action: () => {
+                                (0, o.default)({
+                                    command: e,
+                                    optionValues: {},
+                                    context: {
+                                        channel: M,
+                                        guild: g
+                                    },
+                                    commandTargetId: u
+                                })
+                            }
+                        }, e.id)
+                    }, [M, g, u, _]);
+                    return t = x.current ? (0, l.jsx)(r.MenuItem, {
+                        id: "menu-commands-placeholder",
+                        render: () => (0, l.jsx)(f.default, {}),
+                        disabled: !0
+                    }) : 0 === E.length ? (0, l.jsx)(r.MenuItem, {
+                        id: "menu-commands-empty",
+                        label: m.default.Messages.APPLICATION_COMMAND_NO_COMMANDS,
+                        disabled: !0
+                    }) : E.map(S), (0, l.jsx)(r.MenuItem, {
                         id: "apps",
-                        label: C.default.Messages.APPS,
-                        onChildrenScroll: b,
+                        label: m.default.Messages.APPS,
                         childRowHeight: 34,
-                        listClassName: M.list,
-                        disabled: 0 === y.length,
-                        children: y.map(w)
+                        listClassName: p.list,
+                        children: t
                     })
                 }
         },
@@ -715,7 +708,7 @@
                     return a
                 },
                 default: function() {
-                    return m
+                    return v
                 }
             });
             var l, a, u = n("37983");
@@ -729,14 +722,14 @@
                 f = n("423487"),
                 h = n("557296");
             (l = a || (a = {}))[l.WARNING = 0] = "WARNING", l[l.INFO = 1] = "INFO", l[l.ERROR = 2] = "ERROR", l[l.POSITIVE = 3] = "POSITIVE";
-            var m = function(e) {
+            var v = function(e) {
                 let {
                     children: t,
                     messageType: n,
                     className: l,
                     textColor: a = "text-normal",
                     textVariant: i = "text-sm/medium"
-                } = e, m = function(e) {
+                } = e, v = function(e) {
                     switch (e) {
                         case 0:
                             return f.default;
@@ -747,7 +740,7 @@
                         case 3:
                             return c.default
                     }
-                }(n), p = function(e) {
+                }(n), m = function(e) {
                     switch (e) {
                         case 0:
                             return h.warning;
@@ -760,10 +753,10 @@
                     }
                 }(n);
                 return (0, u.jsxs)("div", {
-                    className: s(h.container, p, l),
+                    className: s(h.container, m, l),
                     children: [(0, u.jsx)("div", {
                         className: h.iconDiv,
-                        children: (0, u.jsx)(m, {
+                        children: (0, u.jsx)(v, {
                             className: h.icon
                         })
                     }), (0, u.jsx)(r.Text, {
