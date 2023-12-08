@@ -1746,7 +1746,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "252483"
+                        buildNumber: "252499"
                     }), (0, a.jsx)(I, {})]
                 }) : null
             }
@@ -32934,35 +32934,38 @@
                 S = n("518151");
             class N extends l.default {
                 _initialize() {
-                    i.default.subscribe("POST_CONNECTION_OPEN", this.mayShowAnnouncementModal)
+                    i.default.subscribe("POST_CONNECTION_OPEN", this.mayShowAnnouncementModal), i.default.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
                 }
                 _terminate() {
-                    i.default.unsubscribe("POST_CONNECTION_OPEN", this.mayShowAnnouncementModal)
+                    i.default.unsubscribe("POST_CONNECTION_OPEN", this.mayShowAnnouncementModal), i.default.unsubscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
                 }
                 constructor(...e) {
-                    super(...e), this.mayShowAnnouncementModal = async () => {
+                    super(...e), this.maybeOpenServerDriveAnnouncementModal = e => {
+                        let t = (0, S.extractAnnouncementModalContent)({
+                            content: e
+                        });
+                        return null != t && ((0, s.openModalLazy)(async () => {
+                            let {
+                                default: e
+                            } = await n.el("518151").then(n.bind(n, "518151"));
+                            return n => (0, a.jsx)(e, {
+                                renderModalProps: n,
+                                properties: t
+                            })
+                        }), !0)
+                    }, this.handlePreview = e => {
+                        let {
+                            properties: t
+                        } = e;
+                        this.maybeOpenServerDriveAnnouncementModal(t)
+                    }, this.mayShowAnnouncementModal = async () => {
                         if (await (0, h.maybeFetchActiveBogoPromotion)(), await (0, o.maybeGetPacksForUser)("try packs modal"), E.ProcessArgs.isDisallowPopupsSet()) return;
                         if (!(0, s.hasAnyModalOpen)() && _.default.getCurrentConfig({
                                 location: "OfferAnnouncementManager"
                             }).enabled) {
                             let e = await (0, C.fetchPremiumMarketingContent)();
-                            for (let t of e) {
-                                let e = (0, S.extractAnnouncementModalContent)({
-                                    content: t
-                                });
-                                if (null != e) {
-                                    (0, s.openModalLazy)(async () => {
-                                        let {
-                                            default: t
-                                        } = await n.el("518151").then(n.bind(n, "518151"));
-                                        return n => (0, a.jsx)(t, {
-                                            renderModalProps: n,
-                                            properties: e
-                                        })
-                                    });
-                                    break
-                                }
-                            }
+                            for (let t of e)
+                                if (this.maybeOpenServerDriveAnnouncementModal(t)) break
                         }!(0, s.hasAnyModalOpen)() && (0, I.isEligibleForQ4DropAnnouncementModal)() && (0, s.openModalLazy)(async () => {
                             let {
                                 default: e

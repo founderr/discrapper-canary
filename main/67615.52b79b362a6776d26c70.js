@@ -12827,6 +12827,12 @@
                         G({
                             type: "GAME_INVITE_DELETE",
                             inviteId: t.invite_id
+                        });
+                        break;
+                    case "PREMIUM_MARKETING_PREVIEW":
+                        G({
+                            type: "PREMIUM_MARKETING_PREVIEW",
+                            properties: t.properties
                         })
                 }
             }
