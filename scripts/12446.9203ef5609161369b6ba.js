@@ -41,6 +41,10 @@
                     group: ".",
                     decimal: ","
                 },
+                "es-419": {
+                    group: ".",
+                    decimal: ","
+                },
                 fi: {
                     group: " ",
                     decimal: ","
