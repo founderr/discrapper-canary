@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["47106"], {
+    ["49116"], {
         69448: function(e, t, n) {
             "use strict";
             e.exports = n.p + "f6da6e7ed1d57e445d0e.svg"
@@ -31,18 +31,18 @@
                     selectable: _ = !1,
                     onFocus: g,
                     onBlur: E,
-                    onMouseOver: S,
-                    onMouseLeave: h,
+                    onMouseOver: h,
+                    onMouseLeave: S,
                     ...p
-                } = e, [I, M] = s.useState(!1), R = s.useCallback(() => {
+                } = e, [I, M] = s.useState(!1), v = s.useCallback(() => {
                     M(!0), null == g || g()
-                }, [g]), v = s.useCallback(() => {
+                }, [g]), A = s.useCallback(() => {
                     M(!1), null == E || E()
-                }, [E]), y = s.useCallback(() => {
-                    M(!0), null == S || S()
-                }, [S]), A = s.useCallback(() => {
-                    M(!1), null == h || h()
-                }, [h]), k = s.useMemo(() => {
+                }, [E]), R = s.useCallback(() => {
+                    M(!0), null == h || h()
+                }, [h]), y = s.useCallback(() => {
+                    M(!1), null == S || S()
+                }, [S]), k = s.useMemo(() => {
                     if (t.type === d.ApplicationCommandSectionType.APPLICATION) {
                         var e;
                         return l.default.getApplicationIconURL({
@@ -61,10 +61,10 @@
                         [c.selectable]: _,
                         [c.selected]: _ && n
                     }),
-                    onFocus: R,
-                    onBlur: v,
-                    onMouseOver: y,
-                    onMouseLeave: A,
+                    onFocus: v,
+                    onBlur: A,
+                    onMouseOver: R,
+                    onMouseLeave: y,
                     children: (0, a.jsx)(u.default, {
                         className: c.mask,
                         mask: _ && (n || I) ? u.MaskIDs.SQUIRCLE : u.MaskIDs.AVATAR_DEFAULT,
@@ -178,6 +178,25 @@
                 }
             }
         },
+        633043: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var a = n("37983");
+            n("884691");
+            var s = n("77078"),
+                i = n("850572"),
+                r = () => (0, a.jsx)("div", {
+                    className: i.loadingWrapper,
+                    children: (0, a.jsx)(s.Dots, {
+                        dotRadius: 4,
+                        themed: !0
+                    })
+                })
+        },
         931318: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -191,10 +210,10 @@
                     return E
                 },
                 completeMessageReminders: function() {
-                    return S
+                    return h
                 },
                 cleanupMessageReminders: function() {
-                    return h
+                    return S
                 },
                 fetchAndUpdateSavedMessages: function() {
                     return M
@@ -274,7 +293,7 @@
                 })
             }
 
-            function S(e) {
+            function h(e) {
                 c.default.track(f.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
                     skipped: !1,
                     reason: "complete and clear immediately",
@@ -284,7 +303,7 @@
                 I([], t.filter(t => t.messageId === e))
             }
 
-            function h() {
+            function S() {
                 c.default.track(f.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
                     skipped: !1,
                     reason: "clearing",
@@ -614,6 +633,104 @@
                         query: e,
                         search_type: r.SearchTypes.STICKER,
                         source_object: "Sticker Picker"
+                    })
+                }
+        },
+        563816: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return h
+                }
+            });
+            var a = n("37983"),
+                s = n("884691"),
+                i = n("627445"),
+                r = n.n(i),
+                u = n("446674"),
+                l = n("77078"),
+                d = n("240249"),
+                c = n("916565"),
+                o = n("355263"),
+                m = n("633043"),
+                f = n("305961"),
+                _ = n("317041"),
+                g = n("782340"),
+                E = n("205735"),
+                h = e => {
+                    let t, {
+                            commandType: n,
+                            commandTargetId: i,
+                            channel: h,
+                            guildId: S,
+                            onHeightUpdate: p
+                        } = e,
+                        I = (0, u.useStateFromStores)([f.default], () => f.default.getGuild(null != S ? S : h.guild_id)),
+                        {
+                            commands: M,
+                            sectionDescriptors: v,
+                            loading: A
+                        } = d.useDiscovery(h, {
+                            commandType: n
+                        }, {
+                            limit: _.CONTEXT_MENU_COMMANDS_QUERY_LIMIT
+                        }),
+                        {
+                            sections: R
+                        } = s.useMemo(() => {
+                            let e = {};
+                            return v.forEach(t => {
+                                e[t.id] = t
+                            }), {
+                                sections: e
+                            }
+                        }, [v]),
+                        y = s.useRef(A.current);
+                    s.useEffect(() => {
+                        A.current !== y.current && (y.current = A.current, null == p || p())
+                    }, [A, p]);
+                    let k = s.useCallback(e => {
+                        r(null != h, "menu item should not show if channel is null");
+                        let t = R[e.applicationId],
+                            n = null != t ? (0, o.getIconComponent)(t) : void 0;
+                        return (0, a.jsx)(l.MenuItem, {
+                            id: e.id,
+                            label: e.displayName,
+                            showIconFirst: !0,
+                            icon: () => null != n ? (0, a.jsx)(n, {
+                                channel: h,
+                                section: t,
+                                width: 18,
+                                height: 18,
+                                selectable: !1
+                            }) : null,
+                            action: () => {
+                                (0, c.default)({
+                                    command: e,
+                                    optionValues: {},
+                                    context: {
+                                        channel: h,
+                                        guild: I
+                                    },
+                                    commandTargetId: i
+                                })
+                            }
+                        }, e.id)
+                    }, [h, I, i, R]);
+                    return t = A.current ? (0, a.jsx)(l.MenuItem, {
+                        id: "menu-commands-placeholder",
+                        render: () => (0, a.jsx)(m.default, {}),
+                        disabled: !0
+                    }) : 0 === M.length ? (0, a.jsx)(l.MenuItem, {
+                        id: "menu-commands-empty",
+                        label: g.default.Messages.APPLICATION_COMMAND_NO_COMMANDS,
+                        disabled: !0
+                    }) : M.map(k), (0, a.jsx)(l.MenuItem, {
+                        id: "apps",
+                        label: g.default.Messages.APPS,
+                        childRowHeight: 34,
+                        listClassName: E.list,
+                        children: t
                     })
                 }
         },
