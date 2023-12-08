@@ -83712,7 +83712,8 @@ input::-webkit-inner-spin-button {
 }
 
 .profileCustomizationBody__54bc4 {
-    min-height: 100px
+    min-height: 100px;
+    padding-bottom: 12px
 }
 
 .priceTag_ff491e {

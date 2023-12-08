@@ -61,8 +61,8 @@
                 _ = s("946964"),
                 S = s("649844"),
                 T = s("635956"),
-                g = s("38766"),
-                h = s("184900"),
+                h = s("38766"),
+                g = s("184900"),
                 M = s("493390"),
                 v = s("217513"),
                 x = s("790618"),
@@ -135,7 +135,7 @@
                         giftingEnabled: S
                     } = (0, k.default)({
                         location: "CollectiblesProductPreviewInfo"
-                    }), h = D.default.canUseCollectibles(s), [v, x] = (0, n.useStateFromStoresArray)([b.default], () => [b.default.getPurchase(t.skuId), b.default.isClaiming === t.skuId]), O = (0, g.default)({
+                    }), g = D.default.canUseCollectibles(s), [v, x] = (0, n.useStateFromStoresArray)([b.default], () => [b.default.getPurchase(t.skuId), b.default.isClaiming === t.skuId]), O = (0, h.default)({
                         analyticsLocations: m
                     }), {
                         buttonColors: P,
@@ -230,7 +230,7 @@
                                         className: ee.priceTag,
                                         children: $.default.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
                                     });
-                                    if (!S || h) return (0, a.jsx)(G.default, {
+                                    if (!S || g) return (0, a.jsx)(G.default, {
                                         product: t,
                                         className: ee.priceTag
                                     });
@@ -272,7 +272,7 @@
                                 className: ee.buttonsContainer,
                                 children: [(0, a.jsxs)("div", {
                                     className: ee.primaryButtons,
-                                    children: [I && F && !h ? ed($.default.Messages.UNLOCK_WITH_NITRO) : h || I ? null != v ? (0, a.jsx)(o.Button, {
+                                    children: [I && F && !g ? ed($.default.Messages.UNLOCK_WITH_NITRO) : g || I ? null != v ? (0, a.jsx)(o.Button, {
                                         className: ee.button,
                                         look: o.Button.Looks.FILLED,
                                         onClick: () => {
@@ -314,7 +314,7 @@
                                         product: t,
                                         onSuccess: C
                                     })]
-                                }), S || !I || F || null != v || h ? null : (0, a.jsx)(T.default, {
+                                }), S || !I || F || null != v || g ? null : (0, a.jsx)(T.default, {
                                     subscriptionTier: J.PremiumSubscriptionSKUs.TIER_2,
                                     fullWidth: !0,
                                     color: o.Button.Colors.WHITE,
@@ -336,7 +336,7 @@
                                 color: "none",
                                 className: ee.disclaimer,
                                 variant: "text-xxs/normal",
-                                children: null != v ? null : h || I ? F ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER : er ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECT_PREMIUM_PURCHASE_DISCLAIMER : $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PREMIUM_PURCHASE_DISCLAIMER : er ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECTS_NON_PREMIUM_PURCHASE_DISCLAIMER : $.default.Messages.COLLECTIBLES_DETAILS_MODAL_NON_PREMIUM_PURCHASE_DISCLAIMER
+                                children: null != v ? null : g || I ? F ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER : er ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECT_PREMIUM_PURCHASE_DISCLAIMER : $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PREMIUM_PURCHASE_DISCLAIMER : er ? $.default.Messages.COLLECTIBLES_DETAILS_MODAL_PROFILE_EFFECTS_NON_PREMIUM_PURCHASE_DISCLAIMER : $.default.Messages.COLLECTIBLES_DETAILS_MODAL_NON_PREMIUM_PURCHASE_DISCLAIMER
                             })]
                         })]
                     })
@@ -351,7 +351,7 @@
                     }, [t]), c = l.useMemo(() => t.items.find(U.isProfileEffectRecord), [t]);
                     return (0, a.jsxs)("div", {
                         className: null != d ? ee.previewsContainerInner : ee.profileEffectPreviewsContainerInner,
-                        children: [(0, a.jsx)(h.default, {
+                        children: [(0, a.jsx)(g.default, {
                             ...o,
                             user: s,
                             canUsePremiumCustomization: i,
@@ -365,6 +365,7 @@
                             hideExampleButton: !0,
                             hideFakeActivity: null != d || u,
                             hideBioSection: null != d,
+                            hideMemberStatusSection: null != d,
                             useLargeBanner: !0
                         }), null != d && (0, a.jsx)(eu, {
                             user: s
@@ -500,7 +501,7 @@
                         hideSimpleEmbedContent: I = !0,
                         disableInteraction: _
                     } = e, S = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), T = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (s = null == E ? void 0 : E.guild_id) && void 0 !== s ? s : "", (null !== (l = i.editedTimestamp) && void 0 !== l ? l : i.timestamp).valueOf()), {
-                        content: g
+                        content: h
                     } = (0, u.default)(i, {
                         hideSimpleEmbedContent: I,
                         allowList: S.showListsAndHeaders || T.showListsAndHeaders,
@@ -520,7 +521,7 @@
                             channel: E,
                             guildId: void 0
                         }),
-                        childrenMessageContent: (0, d.default)(e, g),
+                        childrenMessageContent: (0, d.default)(e, h),
                         disableInteraction: _
                     })
                 })
