@@ -277,7 +277,8 @@
                     children: a,
                     tooltip: n,
                     dangerous: u = !1,
-                    className: c
+                    className: c,
+                    "aria-label": m
                 } = e;
                 return (0, l.jsx)(r.Tooltip, {
                     text: n,
@@ -285,17 +286,17 @@
                     children: e => {
                         let {
                             onMouseEnter: r,
-                            onMouseLeave: m,
-                            onClick: h
+                            onMouseLeave: h,
+                            onClick: p
                         } = e;
                         return (0, l.jsx)(o.Button, {
                             onMouseEnter: r,
-                            onMouseLeave: m,
+                            onMouseLeave: h,
                             onClick: e => {
-                                e.stopPropagation(), null == h || h(), t(e)
+                                e.stopPropagation(), null == p || p(), t(e)
                             },
                             dangerous: u,
-                            "aria-label": n,
+                            "aria-label": null != m ? m : n,
                             className: c,
                             children: s.Children.map(a, e => s.isValidElement(e) ? s.cloneElement(e, {
                                 className: i(e.props.className, d.actionBarIcon)
