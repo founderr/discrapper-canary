@@ -79,156 +79,159 @@
                         analyticsLocation: w,
                         referralTrialOfferId: F,
                         initialPlanId: O,
-                        subscriptionTier: U
+                        subscriptionTier: U,
+                        handleClose: G
                     } = e,
                     {
-                        activeSubscription: G,
-                        setUpdatedSubscription: D,
-                        contextMetadata: B,
-                        currencies: W,
-                        paymentSourceId: k,
-                        paymentSources: H,
-                        priceOptions: V,
-                        purchaseError: z,
-                        purchaseTokenAuthState: Y,
-                        selectedPlan: Z,
-                        selectedSkuId: K,
-                        setCurrency: Q,
-                        setPaymentSourceId: J,
-                        setPurchaseState: X,
-                        setPurchaseError: q,
-                        step: $,
-                        purchaseState: ee,
-                        isPremium: et,
-                        setHasAcceptedTerms: en,
-                        purchaseType: ei,
-                        setEntitlementsGranted: ea,
-                        startedPaymentFlowWithPaymentSourcesRef: er
+                        activeSubscription: D,
+                        setUpdatedSubscription: B,
+                        contextMetadata: W,
+                        currencies: k,
+                        paymentSourceId: H,
+                        paymentSources: V,
+                        priceOptions: z,
+                        purchaseError: Y,
+                        purchaseTokenAuthState: Z,
+                        selectedPlan: K,
+                        selectedSkuId: Q,
+                        setCurrency: J,
+                        setPaymentSourceId: X,
+                        setPurchaseState: q,
+                        setPurchaseError: $,
+                        step: ee,
+                        purchaseState: et,
+                        isPremium: en,
+                        setHasAcceptedTerms: ei,
+                        purchaseType: ea,
+                        setEntitlementsGranted: er,
+                        startedPaymentFlowWithPaymentSourcesRef: es
                     } = (0, S.usePaymentContext)(),
                     {
-                        isGift: es,
-                        giftMessage: el,
-                        giftRecipient: eu
+                        isGift: el,
+                        giftMessage: eu,
+                        giftRecipient: eo
                     } = (0, f.useGiftContext)();
-                s(null != $, "Step should be set");
-                let eo = a.useRef(null),
-                    [ec, ed] = (0, l.default)(!1, 500),
-                    ep = null !== (n = null != g ? g : F) && void 0 !== n ? n : null,
-                    em = null != ep && (!et || (0, C.SubscriptionTrials)[ep].skus.includes(K)) ? ep : null,
-                    ef = (0, c.usePremiumTrialOffer)(F),
-                    eS = (0, o.usePremiumDiscountOffer)(),
-                    eh = {
-                        user_trial_offer_id: null == ef ? void 0 : ef.id
+                s(null != ee, "Step should be set");
+                let ec = a.useRef(null),
+                    [ed, ep] = (0, l.default)(!1, 500),
+                    em = null !== (n = null != g ? g : F) && void 0 !== n ? n : null,
+                    ef = null != em && (!en || (0, C.SubscriptionTrials)[em].skus.includes(Q)) ? em : null,
+                    eS = (0, c.usePremiumTrialOffer)(F),
+                    eh = (0, o.usePremiumDiscountOffer)(),
+                    eP = {
+                        user_trial_offer_id: null == eS ? void 0 : eS.id
                     };
                 a.useEffect(() => {
-                    null != z && null != eo.current && eo.current.scrollIntoView({
+                    null != Y && null != ec.current && ec.current.scrollIntoView({
                         behavior: "smooth"
                     })
-                }, [z]);
-                let eP = a.useCallback((e, t) => {
-                        D(e), null != t && ea(t), N(h.Step.CONFIRM, {
+                }, [Y]);
+                let eI = a.useCallback((e, t) => {
+                        B(e), null != t && er(t), N(h.Step.CONFIRM, {
                             fulfillment: {
                                 subscription: e,
                                 entitlements: t
                             }
                         })
-                    }, [N, D, ea]),
-                    eI = null != k ? H[k] : null,
-                    ev = null != Z && C.MULTI_MONTH_PLANS.has(Z.id) && null != eI && !(0, u.isPaymentSourceEligibleForMultiMonthPlans)(eI) ? Error(_.default.Messages.BILLING_ERROR_INVALID_PLAN_FOR_PAYMENT_SOURCE) : null,
-                    eE = a.useRef(null),
-                    [ey, eT] = a.useState(null),
-                    ex = !es && null != ef && null != K && (0, C.SubscriptionTrials)[ef.trial_id].skus.includes(K),
-                    eC = null == eS ? void 0 : null === (t = eS.discount) || void 0 === t ? void 0 : t.plan_ids,
-                    eb = !es && null != eS && null != eC && null != Z && eC.includes(Z.id),
-                    e_ = es && (0, m.shouldShowCustomGiftExperience)(eu, !0, "PaymentModalReviewStep"),
-                    eN = null == O && null == U && ei === b.PurchaseTypes.SUBSCRIPTION,
-                    eg = (0, v.inOneStepSubscriptionCheckout)({
-                        isTrial: ex,
-                        isGift: es,
-                        selectedSkuId: K,
-                        startedPaymentFlowWithPaymentSources: er.current
+                    }, [N, B, er]),
+                    ev = null != H ? V[H] : null,
+                    eE = null != K && C.MULTI_MONTH_PLANS.has(K.id) && null != ev && !(0, u.isPaymentSourceEligibleForMultiMonthPlans)(ev) ? Error(_.default.Messages.BILLING_ERROR_INVALID_PLAN_FOR_PAYMENT_SOURCE) : null,
+                    ey = a.useRef(null),
+                    [eT, ex] = a.useState(null),
+                    eC = !el && null != eS && null != Q && (0, C.SubscriptionTrials)[eS.trial_id].skus.includes(Q),
+                    eb = null == eh ? void 0 : null === (t = eh.discount) || void 0 === t ? void 0 : t.plan_ids,
+                    e_ = !el && null != eh && null != eb && null != K && eb.includes(K.id),
+                    eN = el && (0, m.shouldShowCustomGiftExperience)(eo, !0, "PaymentModalReviewStep"),
+                    eg = null == O && null == U && ea === b.PurchaseTypes.SUBSCRIPTION,
+                    eL = (0, v.inOneStepSubscriptionCheckout)({
+                        isTrial: eC,
+                        isGift: el,
+                        selectedSkuId: Q,
+                        startedPaymentFlowWithPaymentSources: es.current
                     }),
-                    eL = es && ei === b.PurchaseTypes.ONE_TIME,
-                    eA = eL || (eg ? eN && et : et),
-                    ej = a.useCallback(() => {
-                        if (eg) {
+                    eA = el && ea === b.PurchaseTypes.ONE_TIME,
+                    ej = eA || (eL ? eg && en : en),
+                    eR = a.useCallback(() => {
+                        if (eL) {
                             N(h.Step.SKU_SELECT);
                             return
                         }
-                        return eL ? N(h.Step.GIFT_CUSTOMIZATION) : N(h.Step.PLAN_SELECT)
-                    }, [N, eg, eL]);
-                return ei === b.PurchaseTypes.ONE_TIME ? r = (0, i.jsx)(E.default, {
-                    hasLegalTermsFlash: ec,
-                    legalTermsNodeRef: eE,
-                    onPaymentSourceChange: e => J(null != e ? e.id : null),
+                        return eA ? N(h.Step.GIFT_CUSTOMIZATION) : N(h.Step.PLAN_SELECT)
+                    }, [N, eL, eA]);
+                return ea === b.PurchaseTypes.ONE_TIME ? r = (0, i.jsx)(E.default, {
+                    hasLegalTermsFlash: ed,
+                    legalTermsNodeRef: ey,
+                    onPaymentSourceChange: e => X(null != e ? e.id : null),
                     handlePaymentSourceAdd: () => N(h.Step.ADD_PAYMENT_STEPS)
-                }) : null == G || es ? (s(null != Z, "Expected plan to be selected"), r = (0, i.jsx)(d.default, {
-                    selectedPlanId: Z.id,
-                    paymentSources: H,
-                    onPaymentSourceChange: e => J(null != e ? e.id : null),
-                    priceOptions: V,
-                    currencies: W,
-                    onCurrencyChange: e => Q(e),
+                }) : null == D || el ? (s(null != K, "Expected plan to be selected"), r = (0, i.jsx)(d.default, {
+                    selectedPlanId: K.id,
+                    paymentSources: V,
+                    onPaymentSourceChange: e => X(null != e ? e.id : null),
+                    priceOptions: z,
+                    currencies: k,
+                    onCurrencyChange: e => J(e),
                     handlePaymentSourceAdd: () => N(h.Step.ADD_PAYMENT_STEPS),
-                    setHasAcceptedTerms: en,
-                    legalTermsNodeRef: eE,
-                    hasLegalTermsFlash: ec,
-                    trialId: em,
+                    setHasAcceptedTerms: ei,
+                    legalTermsNodeRef: ey,
+                    hasLegalTermsFlash: ed,
+                    trialId: ef,
                     trialFooterMessageOverride: L,
                     reviewWarningMessage: A,
-                    purchaseState: ee,
+                    purchaseState: et,
                     referralTrialOfferId: F,
-                    isTrial: ex,
-                    isDiscount: eb
-                })) : (s(null != Z, "Expected plan to be selected"), r = (0, i.jsx)(p.default, {
-                    premiumSubscription: G,
-                    paymentSources: H,
-                    priceOptions: V,
+                    isTrial: eC,
+                    isDiscount: e_,
+                    handleClose: G
+                })) : (s(null != K, "Expected plan to be selected"), r = (0, i.jsx)(p.default, {
+                    premiumSubscription: D,
+                    paymentSources: V,
+                    priceOptions: z,
                     onPaymentSourceChange: e => {
-                        J(null != e ? e.id : null)
+                        X(null != e ? e.id : null)
                     },
                     onPaymentSourceAdd: () => {
                         N(h.Step.ADD_PAYMENT_STEPS)
                     },
-                    planId: Z.id,
-                    setHasAcceptedTerms: en,
-                    legalTermsNodeRef: eE,
-                    hasLegalTermsFlash: ec,
-                    onInvoiceError: e => eT(e),
+                    planId: K.id,
+                    setHasAcceptedTerms: ei,
+                    legalTermsNodeRef: ey,
+                    hasLegalTermsFlash: ed,
+                    onInvoiceError: e => ex(e),
                     planGroup: j,
-                    currencies: W,
-                    onCurrencyChange: e => Q(e),
+                    currencies: k,
+                    onCurrencyChange: e => J(e),
                     hasOpenInvoice: null != R,
-                    purchaseState: ee
+                    purchaseState: et,
+                    handleClose: G
                 })), (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)(P.GiftNote, {
-                        giftMessage: el
-                    }), !e_ && (0, i.jsx)(y.default, {
-                        isEligibleForTrial: ex
+                        giftMessage: eu
+                    }), !eN && (0, i.jsx)(y.default, {
+                        isEligibleForTrial: eC
                     }), (0, i.jsxs)(x.PaymentPortalBody, {
                         children: [(0, i.jsx)(I.default, {}), r]
                     }), (0, i.jsx)(x.PaymentPortalFooter, {
                         children: (0, i.jsx)(T.default, {
-                            premiumSubscription: null != G ? G : null,
-                            setPurchaseState: X,
-                            onBack: ej,
-                            onNext: eP,
-                            onPurchaseError: e => q(e),
-                            legalTermsNodeRef: eE,
-                            flashLegalTerms: () => ed(!0),
-                            invoiceError: ey,
-                            planError: ev,
+                            premiumSubscription: null != D ? D : null,
+                            setPurchaseState: q,
+                            onBack: eR,
+                            onNext: eI,
+                            onPurchaseError: e => $(e),
+                            legalTermsNodeRef: ey,
+                            flashLegalTerms: () => ep(!0),
+                            invoiceError: eT,
+                            planError: eE,
                             analyticsLocation: w,
                             baseAnalyticsData: M,
-                            flowStartTime: B.startTime,
-                            trialId: em,
+                            flowStartTime: W.startTime,
+                            trialId: ef,
                             planGroup: j,
-                            purchaseTokenAuthState: Y,
+                            purchaseTokenAuthState: Z,
                             openInvoiceId: R,
-                            backButtonEligible: eA,
-                            metadata: eh,
-                            isTrial: ex,
-                            disablePurchase: null != eI && ei === b.PurchaseTypes.SUBSCRIPTION && ex && !eI.canRedeemTrial()
+                            backButtonEligible: ej,
+                            metadata: eP,
+                            isTrial: eC,
+                            disablePurchase: null != ev && ea === b.PurchaseTypes.SUBSCRIPTION && eC && !ev.canRedeemTrial()
                         })
                     })]
                 })
@@ -604,52 +607,54 @@
                         currencies: H,
                         onCurrencyChange: V,
                         hasOpenInvoice: z,
-                        purchaseState: Y
+                        purchaseState: Y,
+                        handleClose: Z
                     } = e,
                     {
-                        selectedSkuId: Z,
-                        defaultPlanId: K,
-                        isPremium: Q,
-                        startedPaymentFlowWithPaymentSourcesRef: J
+                        selectedSkuId: K,
+                        defaultPlanId: Q,
+                        isPremium: J,
+                        startedPaymentFlowWithPaymentSourcesRef: X
                     } = (0, P.usePaymentContext)(),
                     {
-                        isGift: X
+                        isGift: q
                     } = (0, h.useGiftContext)(),
-                    q = S.paymentSourceId,
-                    $ = (0, u.useStateFromStores)([T.default], () => T.default.get(A));
-                s(null != $, "Missing newPlan");
-                let ee = (0, u.useStateFromStores)([E.default], () => E.default.hidePersonalInformation);
-                n = z ? R.default.Messages.BILLING_PURCHASE_DETAILS_HEADER : (0, x.isPremiumSubscriptionPlan)(A) ? (0, x.getBillingReviewSubheader)(r, $) : R.default.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({
-                    planName: $.name
+                    $ = S.paymentSourceId,
+                    ee = (0, u.useStateFromStores)([T.default], () => T.default.get(A));
+                s(null != ee, "Missing newPlan");
+                let et = (0, u.useStateFromStores)([E.default], () => E.default.hidePersonalInformation);
+                n = z ? R.default.Messages.BILLING_PURCHASE_DETAILS_HEADER : (0, x.isPremiumSubscriptionPlan)(A) ? (0, x.getBillingReviewSubheader)(r, ee) : R.default.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({
+                    planName: ee.name
                 });
-                let et = l.CountryCodesSets.EEA_COUNTRIES.has(y.default.ipCountryCodeWithFallback),
-                    en = Y === I.PurchaseState.PURCHASING || Y === I.PurchaseState.COMPLETED,
-                    ei = (0, v.inOneStepSubscriptionCheckout)({
+                let en = l.CountryCodesSets.EEA_COUNTRIES.has(y.default.ipCountryCodeWithFallback),
+                    ei = Y === I.PurchaseState.PURCHASING || Y === I.PurchaseState.COMPLETED,
+                    ea = (0, v.inOneStepSubscriptionCheckout)({
                         isTrial: !1,
-                        isGift: X,
-                        selectedSkuId: Z,
-                        startedPaymentFlowWithPaymentSources: J.current
+                        isGift: q,
+                        selectedSkuId: K,
+                        startedPaymentFlowWithPaymentSources: X.current
                     }),
-                    ea = a.useMemo(() => (0, x.getPremiumPlanOptions)({
-                        skuId: Z,
-                        isPremium: Q,
+                    er = a.useMemo(() => (0, x.getPremiumPlanOptions)({
+                        skuId: K,
+                        isPremium: J,
                         multiMonthPlans: [],
                         currentSubscription: r,
-                        isGift: X,
+                        isGift: q,
                         isEligibleForTrial: !1,
-                        defaultPlanId: K,
+                        defaultPlanId: Q,
                         defaultToMonthlyPlan: !1
-                    }), [Z, r, K, Q, X]);
+                    }), [K, r, Q, J, q]);
                 return (0, i.jsxs)("div", {
                     className: w.stepBody,
-                    children: [ei && (0, i.jsxs)("div", {
+                    children: [ea && (0, i.jsxs)("div", {
                         children: [(0, i.jsx)(_.PremiumInvoiceTableDivider, {
                             negativeMarginTop: !0
                         }), (0, i.jsx)(L.PremiumSwitchPlanSelectBody, {
-                            planOptions: ea,
+                            planOptions: er,
                             eligibleForMultiMonthPlans: !1,
                             selectedPlanId: A,
-                            showTotal: !1
+                            showTotal: !1,
+                            handleClose: Z
                         }), (0, i.jsx)(_.PremiumInvoiceTableDivider, {})]
                     }), (0, i.jsx)(o.FormTitle, {
                         tag: o.FormTitleTags.H5,
@@ -661,17 +666,17 @@
                         preventFetch: !1
                     }) : (0, C.subscriptionCanSwitchImmediately)(r, A, k) ? (0, i.jsx)(U, {
                         premiumSubscription: r,
-                        newPlan: $,
+                        newPlan: ee,
                         onInvoiceError: W,
                         planGroup: k,
                         priceOptions: S,
-                        preventFetch: en
+                        preventFetch: ei
                     }) : (0, i.jsx)(D, {
                         premiumSubscription: r,
-                        newPlan: $,
+                        newPlan: ee,
                         planGroup: k,
                         priceOptions: S,
-                        preventFetch: en
+                        preventFetch: ei
                     }) : null, (0, i.jsxs)("div", {
                         className: w.paymentSourceWrapper,
                         children: [(0, i.jsx)(o.FormTitle, {
@@ -679,11 +684,11 @@
                             children: R.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE
                         }), (0, i.jsx)(p.default, {
                             paymentSources: Object.values(f),
-                            selectedPaymentSourceId: q,
+                            selectedPaymentSourceId: $,
                             onChange: b,
                             onPaymentSourceAdd: N,
-                            hidePersonalInformation: ee,
-                            disabled: en
+                            hidePersonalInformation: et,
+                            disabled: ei
                         })]
                     }), (0, i.jsxs)(c.CurrencyWrapper, {
                         currencies: H,
@@ -695,36 +700,36 @@
                             selectedCurrency: S.currency,
                             currencies: H,
                             onChange: V,
-                            disabled: en
+                            disabled: ei
                         })]
                     }), (0, i.jsx)(g.default, {
                         isActive: B,
                         ref: F,
                         children: null != r && (0, C.subscriptionCanSwitchImmediately)(r, A, k) ? (0, i.jsx)(G, {
                             premiumSubscription: r,
-                            newPlan: $,
+                            newPlan: ee,
                             onInvoiceError: W,
                             planGroup: k,
                             priceOptions: S,
-                            preventFetch: en,
-                            disabled: en,
-                            isEEA: et,
+                            preventFetch: ei,
+                            disabled: ei,
+                            isEEA: en,
                             paymentSources: f,
                             setHasAcceptedTerms: M
                         }) : (0, i.jsx)(m.default, {
                             onChange: M,
                             finePrint: (0, i.jsx)(d.default, {
-                                subscriptionPlan: $,
-                                paymentSourceType: null === (t = f[null != q ? q : ""]) || void 0 === t ? void 0 : t.type,
-                                basePrice: (0, x.getPrice)($.id, !1, X, S),
+                                subscriptionPlan: ee,
+                                paymentSourceType: null === (t = f[null != $ ? $ : ""]) || void 0 === t ? void 0 : t.type,
+                                basePrice: (0, x.getPrice)(ee.id, !1, q, S),
                                 currentSubscription: r,
                                 planGroup: k
                             }),
                             forceShow: !0,
-                            showPricingLink: $.currency !== j.CurrencyCodes.USD,
-                            showWithdrawalWaiver: et,
-                            disabled: en,
-                            subscriptionPlan: $,
+                            showPricingLink: ee.currency !== j.CurrencyCodes.USD,
+                            showWithdrawalWaiver: en,
+                            disabled: ei,
+                            subscriptionPlan: ee,
                             currentSubscription: r,
                             planGroup: k
                         })
