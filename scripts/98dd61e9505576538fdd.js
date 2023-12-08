@@ -9957,7 +9957,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "5ddd3a59a3b93cac29cb7bd72f5e62afdc919ef1", e.substring(0, 7)),
+                    S = (e = "16563886ce4d40050018a6d0afe73cc2bd27a9b6", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -9970,7 +9970,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "252829", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "252833", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
@@ -16975,7 +16975,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return S
+                    return E
                 }
             }), s("222007");
             var a = s("37983"),
@@ -16983,14 +16983,17 @@
                 l = s("446674"),
                 i = s("77078"),
                 r = s("452804"),
-                o = s("915639"),
-                d = s("782340"),
-                u = s("982110"),
-                c = s("390493"),
-                S = l.default.connectStores([o.default], () => ({
-                    currentLocale: o.default.locale
+                o = s("363996"),
+                d = s("915639"),
+                u = s("782340"),
+                c = s("982110"),
+                S = s("390493"),
+                E = l.default.connectStores([d.default], () => ({
+                    currentLocale: d.default.locale
                 }))(function(e) {
-                    let [t, l] = n.useState(e.currentLocale), [o] = n.useState(() => d.default.getAvailableLocales().map(e => {
+                    let [t, l] = n.useState(e.currentLocale), d = o.ESLatamLaunchExperiment.getCurrentConfig({
+                        location: "user_settings"
+                    }).enabled, [E] = n.useState(() => u.default.getAvailableLocales().filter(e => "es-419" !== e.value || d).map(e => {
                         let t;
                         try {
                             t = s("20860")("@discordapp/common/images/flags/".concat(e.value, ".png").replace("@discordapp/common/images/flags/", "./"))
@@ -17000,39 +17003,39 @@
                         return {
                             ...e,
                             name: (0, a.jsxs)("div", {
-                                className: u.option,
+                                className: c.option,
                                 children: [(0, a.jsx)("span", {
-                                    className: u.localeName,
+                                    className: c.localeName,
                                     children: e.name
                                 }), (0, a.jsx)("span", {
-                                    className: u.localizedName,
+                                    className: c.localizedName,
                                     children: e.localizedName
                                 }), (0, a.jsx)("div", {
-                                    className: u.flag,
+                                    className: c.flag,
                                     "aria-hidden": !0,
                                     children: (0, a.jsx)("img", {
                                         alt: "",
                                         src: t,
-                                        className: u.flagImage
+                                        className: c.flagImage
                                     })
                                 })]
                             })
                         }
-                    })), S = n.useCallback(e => {
+                    })), T = n.useCallback(e => {
                         let {
                             value: t
                         } = e;
-                        l(t), c.nextTick(() => r.default.updateLocale(t))
+                        l(t), S.nextTick(() => r.default.updateLocale(t))
                     }, []);
                     return (0, a.jsx)(i.FormSection, {
                         tag: i.FormTitleTags.H1,
-                        title: d.default.Messages.LANGUAGE,
+                        title: u.default.Messages.LANGUAGE,
                         children: (0, a.jsx)(i.FormSection, {
                             children: (0, a.jsx)(i.FormItem, {
-                                title: d.default.Messages.LANGUAGE_SELECT,
+                                title: u.default.Messages.LANGUAGE_SELECT,
                                 children: (0, a.jsx)(i.RadioGroup, {
-                                    onChange: S,
-                                    options: o,
+                                    onChange: T,
+                                    options: E,
                                     value: t
                                 })
                             })
