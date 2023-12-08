@@ -808,19 +808,19 @@
                     if (n && t && (0, x.hasStream)(s)) return {
                         type: "go-live"
                     };
-                    let l = o.default.getEmbeddedActivitiesForChannel(e.id),
-                        a = (null != l ? l : []).map(e => {
+                    let l = C.default.getChannelStatus(e);
+                    if (null != l && l.length > 0) return {
+                        type: "voice",
+                        text: l
+                    };
+                    let a = o.default.getEmbeddedActivitiesForChannel(e.id),
+                        r = (null != a ? a : []).map(e => {
                             var t;
                             return null === (t = u.default.getApplication(e.application_id)) || void 0 === t ? void 0 : t.name
                         }).filter(H.isNotNullish);
-                    if (a.length > 0) return {
+                    return r.length > 0 ? {
                         type: "embedded-activities",
-                        name: a.join(", ")
-                    };
-                    let r = C.default.getChannelStatus(e);
-                    return null != r && r.length > 0 ? {
-                        type: "voice",
-                        text: r
+                        name: r.join(", ")
                     } : null
                 }
                 return null
