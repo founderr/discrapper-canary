@@ -90,8 +90,8 @@
                 U = a("612696"),
                 j = a("871388"),
                 F = a("152311"),
-                D = a("407908"),
-                V = a("698372"),
+                V = a("407908"),
+                D = a("698372"),
                 P = a("141962"),
                 G = a("954016"),
                 Y = a("49111"),
@@ -109,7 +109,7 @@
                         } = e;
                         return a.has(t.id)
                     }) : a
-                }, [t, e]), W = (0, V.default)(), q = (0, n.useStateFromStores)([y.default], () => null == e || e.isPrivate() || y.default.can(Y.Permissions.SEND_MESSAGES, e), [e]), Q = (0, n.useStateFromStoresArray)([b.default], () => [...X.map(e => null != e.application_id && b.default.getState(e.application_id, Y.ActivityActionTypes.JOIN) === Y.ActivityActionStates.LOADING), ...z.map(e => b.default.getState(e.application_id, Y.ActivityActionTypes.JOIN) === Y.ActivityActionStates.LOADING)], [X, z]), Z = (0, r.default)([...X.filter(e => (null == e ? void 0 : e.application_id) != null).map(e => e.application_id), ...z.map(e => e.application_id)]), $ = null == e ? void 0 : e.id, ee = (0, n.useStateFromStoresArray)([v.default, m.default, A.default, N.default, C.default, h.default, y.default], () => [...X.map(e => (0, U.default)({
+                }, [t, e]), W = (0, D.default)(), q = (0, n.useStateFromStores)([y.default], () => null == e || e.isPrivate() || y.default.can(Y.Permissions.SEND_MESSAGES, e), [e]), Q = (0, n.useStateFromStoresArray)([b.default], () => [...X.map(e => null != e.application_id && b.default.getState(e.application_id, Y.ActivityActionTypes.JOIN) === Y.ActivityActionStates.LOADING), ...z.map(e => b.default.getState(e.application_id, Y.ActivityActionTypes.JOIN) === Y.ActivityActionStates.LOADING)], [X, z]), Z = (0, r.default)([...X.filter(e => (null == e ? void 0 : e.application_id) != null).map(e => e.application_id), ...z.map(e => e.application_id)]), $ = null == e ? void 0 : e.id, ee = (0, n.useStateFromStoresArray)([v.default, m.default, A.default, N.default, C.default, h.default, y.default], () => [...X.map(e => (0, U.default)({
                     user: null != t ? t : w,
                     activity: e,
                     application: Z.find(t => (null == t ? void 0 : t.id) === e.application_id),
@@ -195,7 +195,7 @@
                             messageId: null,
                             intent: G.ActivityIntent.PLAY,
                             embedded: (0, j.default)(e, Y.ActivityFlags.EMBEDDED)
-                        }), (0, D.default)({
+                        }), (0, V.default)({
                             type: Y.AnalyticsGameOpenTypes.JOIN,
                             userId: t.id,
                             applicationId: e.application_id,
@@ -613,7 +613,7 @@
                         id: t.id,
                         label: t.name,
                         action: () => (function(e, t) {
-                            let a = f.default.getDefaultChannel(e.id, !0);
+                            let a = f.default.getDefaultChannel(e.id, !0, v.Permissions.CREATE_INSTANT_INVITE);
                             if (null != a) {
                                 if (c({
                                         ...o,

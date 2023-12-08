@@ -106,15 +106,15 @@
                     guild: t,
                     discoverableGuildData: s
                 } = e, S = t.id, {
-                    isPremium: T,
-                    collectEnabled: x,
+                    isPremium: x,
+                    collectEnabled: T,
                     hasReachedMaxPacksCollected: V
                 } = (0, C.usePackCollectionData)({
                     expressionSourceGuild: s
                 }), O = (0, m.useUID)(), D = (0, i.default)([h.default], () => null != h.default.getPackByPackId({
                     packId: t.id,
                     allowDuplicateGuildPack: !0
-                })), G = x && !D, [H, P] = n.useState(!1), b = async () => {
+                })), G = T && !D, [H, P] = n.useState(!1), b = async () => {
                     let e = I.default.isLurking(S);
                     await f.default.leaveGuild(S), H && (g.default.track(M.AnalyticEvents.INVENTORY_PACK_ACTION_COMPLETED, {
                         type: N.EmojiPopoutType.ADD_PACK,
@@ -174,7 +174,7 @@
                             children: [(0, l.jsx)(v.default, {
                                 className: A.nitroWheel
                             }), L.default.Messages.INVENTORY_LEAVE_SERVER_DESCRIPTION]
-                        }), V && !T && (0, l.jsx)(r.Text, {
+                        }), V && !x && (0, l.jsx)(r.Text, {
                             variant: "text-sm/normal",
                             className: A.maxPacksNoticeText,
                             children: L.default.Messages.INVENTORY_ADD_NITRO_DESCRIPTION_WITH_PLURAL.format({
@@ -219,16 +219,16 @@
                     icon: M
                 } = e, p = f.default.getGuild(t), L = o.default.getId(), A = (0, s.useStateFromStores)([C.default], () => C.default.getUser(_)), S = (0, s.useStateFromStores)([c.default], () => c.default.isGuestOrLurker(t, _), [t, _]);
                 (0, s.useStateFromStores)([E.default], () => E.default.getGuildVersion(t), [t]);
-                let T = n.useMemo(() => ({
+                let x = n.useMemo(() => ({
                     [t]: [_]
                 }), [t, _]);
-                (0, i.useSubscribeGuildMembers)(T);
-                let x = g === h.AppContext.POPOUT,
+                (0, i.useSubscribeGuildMembers)(x);
+                let T = g === h.AppContext.POPOUT,
                     V = (0, d.default)({
                         guild: p,
                         analyticsLocation: m
                     });
-                if (null == p || x) return null;
+                if (null == p || T) return null;
                 let O = L === _ && (E.default.can(h.Permissions.CHANGE_NICKNAME, p) || E.default.can(h.Permissions.MANAGE_NICKNAMES, p)),
                     D = L === _,
                     G = E.default.canManageUser(h.Permissions.MANAGE_NICKNAMES, _, p);
@@ -338,11 +338,7 @@
                     guild: a,
                     channel: l,
                     stageInstance: s
-                } = e, r = (0, n.useStateFromStores)([i.default, d.default], () => {
-                    var e;
-                    let t = i.default.getChannels(a.id);
-                    return null === (e = t[0, i.GUILD_SELECTABLE_CHANNELS_KEY].find(e => d.default.can(o.Permissions.CREATE_INSTANT_INVITE, e.channel))) || void 0 === e ? void 0 : e.channel
-                }), c = (0, n.useStateFromStores)([d.default], () => (0, u.canViewInviteModal)(d.default, a, l, s)), f = E(t, a, c && null != l ? l : r), h = C(t);
+                } = e, r = (0, n.useStateFromStores)([i.default], () => i.default.getDefaultChannel(a.id, !0, o.Permissions.CREATE_INSTANT_INVITE)), c = (0, n.useStateFromStores)([d.default], () => (0, u.canViewInviteModal)(d.default, a, l, s)), f = E(t, a, c && null != l ? l : r), h = C(t);
                 return null == l && t === o.InstantInviteSources.GUILD_CONTEXT_MENU ? null : c || null != r ? f : h
             }
             let E = (e, t, n) => (0, l.jsx)(s.MenuItem, {

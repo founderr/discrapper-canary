@@ -39,15 +39,15 @@
                 r = t("812204"),
                 i = t("861370"),
                 d = t("308798"),
-                c = t("47006"),
-                o = t("878526"),
+                o = t("47006"),
+                c = t("878526"),
                 f = t("782340"),
                 E = (0, s.default)(function(e) {
                     let {
                         channel: n,
                         guild: t,
                         onSelect: s
-                    } = e, r = (0, c.default)(n), E = (0, o.default)(n, t), _ = (0, d.default)(n), N = (0, i.default)({
+                    } = e, r = (0, o.default)(n), E = (0, c.default)(n, t), _ = (0, d.default)(n), I = (0, i.default)({
                         id: n.id,
                         label: f.default.Messages.COPY_ID_CHANNEL
                     });
@@ -63,7 +63,7 @@
                         }), (0, a.jsx)(u.MenuGroup, {
                             children: _
                         }), (0, a.jsx)(u.MenuGroup, {
-                            children: N
+                            children: I
                         })]
                     })
                 }, [r.default.CONTEXT_MENU, r.default.CHANNEL_LIST_STORE_CHANNEL_MENU])
@@ -72,7 +72,7 @@
             "use strict";
             t.r(n), t.d(n, {
                 default: function() {
-                    return c
+                    return o
                 }
             });
             var a = t("37983");
@@ -84,19 +84,19 @@
                 i = t("49111"),
                 d = t("782340");
 
-            function c(e) {
+            function o(e) {
                 let {
                     canManageChannels: n,
                     canManageRoles: t,
-                    canManageWebhooks: c,
-                    canAccessChannel: o
+                    canManageWebhooks: o,
+                    canAccessChannel: c
                 } = (0, u.useStateFromStoresObject)([r.default], () => ({
                     canManageChannels: r.default.can(i.Permissions.MANAGE_CHANNELS, e),
                     canManageRoles: r.default.can(i.Permissions.MANAGE_ROLES, e),
                     canManageWebhooks: r.default.can(i.Permissions.MANAGE_WEBHOOKS, e),
                     canAccessChannel: r.default.can(e.accessPermissions, e)
                 }), [e]);
-                return !__OVERLAY__ && o && (n || t || c) ? (0, a.jsx)(l.MenuItem, {
+                return !__OVERLAY__ && c && (n || t || o) ? (0, a.jsx)(l.MenuItem, {
                     id: "edit-channel",
                     label: e.type === i.ChannelTypes.GUILD_CATEGORY ? d.default.Messages.EDIT_CATEGORY : d.default.Messages.EDIT_CHANNEL,
                     action: () => s.default.open(e.id)
@@ -137,8 +137,8 @@
                 r = t("923959"),
                 i = t("957255"),
                 d = t("76539"),
-                c = t("49111"),
-                o = t("782340");
+                o = t("49111"),
+                c = t("782340");
 
             function f(e) {
                 let {
@@ -146,18 +146,14 @@
                     guild: t,
                     channel: a,
                     stageInstance: l
-                } = e, d = (0, u.useStateFromStores)([r.default, i.default], () => {
-                    var e;
-                    let n = r.default.getChannels(t.id);
-                    return null === (e = n[0, r.GUILD_SELECTABLE_CHANNELS_KEY].find(e => i.default.can(c.Permissions.CREATE_INSTANT_INVITE, e.channel))) || void 0 === e ? void 0 : e.channel
-                }), o = (0, u.useStateFromStores)([i.default], () => (0, s.canViewInviteModal)(i.default, t, a, l)), f = E(n, t, o && null != a ? a : d), N = _(n);
-                return null == a && n === c.InstantInviteSources.GUILD_CONTEXT_MENU ? null : o || null != d ? f : N
+                } = e, d = (0, u.useStateFromStores)([r.default], () => r.default.getDefaultChannel(t.id, !0, o.Permissions.CREATE_INSTANT_INVITE)), c = (0, u.useStateFromStores)([i.default], () => (0, s.canViewInviteModal)(i.default, t, a, l)), f = E(n, t, c && null != a ? a : d), I = _(n);
+                return null == a && n === o.InstantInviteSources.GUILD_CONTEXT_MENU ? null : c || null != d ? f : I
             }
             let E = (e, n, u) => (0, a.jsx)(l.MenuItem, {
                     id: "invite-people",
-                    label: o.default.Messages.INVITE_PEOPLE,
+                    label: c.default.Messages.INVITE_PEOPLE,
                     color: "brand",
-                    icon: e === c.InstantInviteSources.GUILD_HEADER ? d.default : void 0,
+                    icon: e === o.InstantInviteSources.GUILD_HEADER ? d.default : void 0,
                     action: () => (0, l.openModalLazy)(async () => {
                         let {
                             default: l
@@ -172,9 +168,9 @@
                 }),
                 _ = e => (0, a.jsx)(l.MenuItem, {
                     id: "invite-people",
-                    label: o.default.Messages.INVITE_PEOPLE,
+                    label: c.default.Messages.INVITE_PEOPLE,
                     color: "brand",
-                    icon: e === c.InstantInviteSources.GUILD_HEADER ? d.default : void 0,
+                    icon: e === o.InstantInviteSources.GUILD_HEADER ? d.default : void 0,
                     action: () => (0, l.openModalLazy)(async () => {
                         let {
                             default: e

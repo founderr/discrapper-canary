@@ -127,8 +127,8 @@
                 o = n("261675"),
                 c = n("963150"),
                 f = n("308798"),
-                E = n("47006"),
-                _ = n("878526"),
+                _ = n("47006"),
+                E = n("878526"),
                 C = n("531674"),
                 p = n("619436"),
                 h = n("731390"),
@@ -141,7 +141,7 @@
                         guild: n,
                         includeTopic: i = !1,
                         onSelect: d
-                    } = e, O = (0, I.default)(t), g = (0, C.default)(t), A = (0, p.default)(t), M = (0, o.default)(t), m = (0, E.default)(t), L = (0, _.default)(t, n), S = (0, r.default)(t, n), x = (0, c.default)(t, n, N.ChannelTypes.GUILD_TEXT), v = (0, c.default)(t, n, N.ChannelTypes.GUILD_VOICE), U = (0, f.default)(t), y = (0, s.default)({
+                    } = e, O = (0, I.default)(t), g = (0, C.default)(t), M = (0, p.default)(t), m = (0, o.default)(t), A = (0, _.default)(t), L = (0, E.default)(t, n), S = (0, r.default)(t, n), x = (0, c.default)(t, n, N.ChannelTypes.GUILD_TEXT), v = (0, c.default)(t, n, N.ChannelTypes.GUILD_VOICE), U = (0, f.default)(t), y = (0, s.default)({
                         id: t.id,
                         label: T.default.Messages.COPY_ID_CHANNEL
                     }), P = (0, h.default)(t, "title_context_menu");
@@ -155,7 +155,7 @@
                         }), (0, a.jsx)(l.MenuGroup, {
                             children: g
                         }), (0, a.jsxs)(l.MenuGroup, {
-                            children: [i ? M : A, m]
+                            children: [i ? m : M, A]
                         }), (0, a.jsxs)(l.MenuGroup, {
                             children: [L, S, x, v]
                         }), (0, a.jsx)(l.MenuGroup, {
@@ -332,7 +332,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return E
                 }
             });
             var a = n("37983"),
@@ -346,7 +346,7 @@
                 c = n("49111"),
                 f = n("268333");
 
-            function E(e) {
+            function _(e) {
                 let {
                     windowKey: t,
                     channel: n
@@ -366,10 +366,10 @@
                 })
             }
 
-            function _(e, t) {
+            function E(e, t) {
                 let n = (0, r.useOpenInPopoutExperiment)(t),
                     i = l.useCallback(() => {
-                        s.open("".concat(c.PopoutWindowKeys.CHANNEL_POPOUT, "-").concat(e.id), t => (0, a.jsx)(E, {
+                        s.open("".concat(c.PopoutWindowKeys.CHANNEL_POPOUT, "-").concat(e.id), t => (0, a.jsx)(_, {
                             windowKey: t,
                             channel: e
                         }), {
@@ -405,7 +405,7 @@
             function f(e) {
                 let {
                     isFavoritesPerk: t
-                } = (0, i.useFavoritesServerExperiment)("useChannelOptInItems"), n = (0, s.useOptInEnabledForGuild)(e.guild_id), f = (0, l.useStateFromStores)([r.default], () => r.default.isChannelOptedIn(e.guild_id, e.id)), E = (0, l.useStateFromStores)([r.default], () => null != e.parent_id && r.default.isChannelOptedIn(e.guild_id, e.parent_id)), _ = (0, l.useStateFromStores)([r.default], () => r.default.isFavorite(e.guild_id, e.id)), C = () => {
+                } = (0, i.useFavoritesServerExperiment)("useChannelOptInItems"), n = (0, s.useOptInEnabledForGuild)(e.guild_id), f = (0, l.useStateFromStores)([r.default], () => r.default.isChannelOptedIn(e.guild_id, e.id)), _ = (0, l.useStateFromStores)([r.default], () => null != e.parent_id && r.default.isChannelOptedIn(e.guild_id, e.parent_id)), E = (0, l.useStateFromStores)([r.default], () => r.default.isFavorite(e.guild_id, e.id)), C = () => {
                     (0, d.setOptInChannel)(e.guild_id, e.id, !f, {
                         section: o.AnalyticsSections.CONTEXT_MENU
                     })
@@ -420,18 +420,18 @@
                     label: f ? c.default.Messages.CHANNEL_OPT_OUT : c.default.Messages.CHANNEL_OPT_IN,
                     action: () => C()
                 });
-                let h = _ ? c.default.Messages.REMOVE_FAVORITE : c.default.Messages.ADD_FAVORITE,
-                    I = _ ? c.default.Messages.UNPIN_CHANNEL : c.default.Messages.PIN_CHANNEL_TO_TOP;
+                let h = E ? c.default.Messages.REMOVE_FAVORITE : c.default.Messages.ADD_FAVORITE,
+                    I = E ? c.default.Messages.UNPIN_CHANNEL : c.default.Messages.PIN_CHANNEL_TO_TOP;
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(u.MenuItem, {
                         id: "opt-in-favorite-channel",
                         label: t ? I : h,
                         action: () => {
-                            (0, d.setIsFavorite)(e.guild_id, e.id, !_, {
+                            (0, d.setIsFavorite)(e.guild_id, e.id, !E, {
                                 section: o.AnalyticsSections.CONTEXT_MENU
                             })
                         }
-                    }), E ? (0, a.jsx)(u.MenuItem, {
+                    }), _ ? (0, a.jsx)(u.MenuItem, {
                         id: "opt-out-category",
                         label: c.default.Messages.CHANNEL_OPT_OUT_PARENT_CATEGORY,
                         action: () => p()
@@ -467,14 +467,10 @@
                     guild: n,
                     channel: a,
                     stageInstance: u
-                } = e, r = (0, l.useStateFromStores)([d.default, s.default], () => {
-                    var e;
-                    let t = d.default.getChannels(n.id);
-                    return null === (e = t[0, d.GUILD_SELECTABLE_CHANNELS_KEY].find(e => s.default.can(o.Permissions.CREATE_INSTANT_INVITE, e.channel))) || void 0 === e ? void 0 : e.channel
-                }), c = (0, l.useStateFromStores)([s.default], () => (0, i.canViewInviteModal)(s.default, n, a, u)), f = E(t, n, c && null != a ? a : r), C = _(t);
+                } = e, r = (0, l.useStateFromStores)([d.default], () => d.default.getDefaultChannel(n.id, !0, o.Permissions.CREATE_INSTANT_INVITE)), c = (0, l.useStateFromStores)([s.default], () => (0, i.canViewInviteModal)(s.default, n, a, u)), f = _(t, n, c && null != a ? a : r), C = E(t);
                 return null == a && t === o.InstantInviteSources.GUILD_CONTEXT_MENU ? null : c || null != r ? f : C
             }
-            let E = (e, t, l) => (0, a.jsx)(u.MenuItem, {
+            let _ = (e, t, l) => (0, a.jsx)(u.MenuItem, {
                     id: "invite-people",
                     label: c.default.Messages.INVITE_PEOPLE,
                     color: "brand",
@@ -491,7 +487,7 @@
                         })
                     })
                 }),
-                _ = e => (0, a.jsx)(u.MenuItem, {
+                E = e => (0, a.jsx)(u.MenuItem, {
                     id: "invite-people",
                     label: c.default.Messages.INVITE_PEOPLE,
                     color: "brand",

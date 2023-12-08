@@ -4,13 +4,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return s
                 }
             });
             var a = n("913144"),
                 l = n("679428"),
                 u = n("282109"),
-                d = {
+                s = {
                     update(e) {
                         a.default.dispatch({
                             type: "CHANNEL_COLLAPSE",
@@ -38,8 +38,8 @@
             n("884691");
             var l = n("77078"),
                 u = n("272030"),
-                d = n("923959"),
-                s = n("544955"),
+                s = n("923959"),
+                d = n("544955"),
                 i = n("263673"),
                 r = n("58622"),
                 o = n("49111"),
@@ -49,7 +49,7 @@
                 let {
                     guild: t,
                     onSelect: n
-                } = e, f = d.default.getDefaultChannel(t.id), E = (0, i.default)(t.id), I = (0, s.default)(t), _ = (0, r.default)({
+                } = e, f = s.default.getDefaultChannel(t.id, !0, o.Permissions.CREATE_INSTANT_INVITE), E = (0, i.default)(t.id), I = (0, d.default)(t), _ = (0, r.default)({
                     guild: t,
                     source: o.InstantInviteSources.GUILD_CONTEXT_MENU,
                     channel: f
@@ -78,13 +78,13 @@
             n("884691");
             var l = n("446674"),
                 u = n("77078"),
-                d = n("957255"),
-                s = n("49111"),
+                s = n("957255"),
+                d = n("49111"),
                 i = n("695838"),
                 r = n("782340");
 
             function o(e) {
-                let t = (0, l.useStateFromStores)([d.default], () => d.default.can(s.Permissions.MANAGE_CHANNELS, e));
+                let t = (0, l.useStateFromStores)([s.default], () => s.default.can(d.Permissions.MANAGE_CHANNELS, e));
                 return __OVERLAY__ ? null : e.id === i.FAVORITES_RAW_GUILD_ID ? (0, a.jsx)(a.Fragment, {
                     children: (0, a.jsx)(u.MenuItem, {
                         id: "create-category",
@@ -107,7 +107,7 @@
                         } = await n.el("581354").then(n.bind(n, "581354"));
                         return n => (0, a.jsx)(t, {
                             ...n,
-                            channelType: s.ChannelTypes.GUILD_TEXT,
+                            channelType: d.ChannelTypes.GUILD_TEXT,
                             guildId: e.id
                         })
                     })
@@ -120,7 +120,7 @@
                         } = await n.el("581354").then(n.bind(n, "581354"));
                         return n => (0, a.jsx)(t, {
                             ...n,
-                            channelType: s.ChannelTypes.GUILD_CATEGORY,
+                            channelType: d.ChannelTypes.GUILD_CATEGORY,
                             guildId: e.id
                         })
                     })
@@ -138,16 +138,16 @@
             n("884691");
             var l = n("446674"),
                 u = n("77078"),
-                d = n("126501"),
-                s = n("282109"),
+                s = n("126501"),
+                d = n("282109"),
                 i = n("782340");
 
             function r(e) {
-                let t = (0, l.useStateFromStores)([s.default], () => s.default.isGuildCollapsed(e), [e]);
+                let t = (0, l.useStateFromStores)([d.default], () => d.default.isGuildCollapsed(e), [e]);
                 return (0, a.jsx)(u.MenuCheckboxItem, {
                     id: "hide-muted-channels",
                     label: i.default.Messages.HIDE_MUTED_CHANNELS,
-                    action: () => d.default.toggleCollapseGuild(e),
+                    action: () => s.default.toggleCollapseGuild(e),
                     checked: t
                 })
             }
@@ -163,8 +163,8 @@
             n("884691");
             var l = n("446674"),
                 u = n("77078"),
-                d = n("242757"),
-                s = n("923959"),
+                s = n("242757"),
+                d = n("923959"),
                 i = n("957255"),
                 r = n("76539"),
                 o = n("49111"),
@@ -176,11 +176,7 @@
                     guild: n,
                     channel: a,
                     stageInstance: u
-                } = e, r = (0, l.useStateFromStores)([s.default, i.default], () => {
-                    var e;
-                    let t = s.default.getChannels(n.id);
-                    return null === (e = t[0, s.GUILD_SELECTABLE_CHANNELS_KEY].find(e => i.default.can(o.Permissions.CREATE_INSTANT_INVITE, e.channel))) || void 0 === e ? void 0 : e.channel
-                }), c = (0, l.useStateFromStores)([i.default], () => (0, d.canViewInviteModal)(i.default, n, a, u)), f = E(t, n, c && null != a ? a : r), _ = I(t);
+                } = e, r = (0, l.useStateFromStores)([d.default], () => d.default.getDefaultChannel(n.id, !0, o.Permissions.CREATE_INSTANT_INVITE)), c = (0, l.useStateFromStores)([i.default], () => (0, s.canViewInviteModal)(i.default, n, a, u)), f = E(t, n, c && null != a ? a : r), _ = I(t);
                 return null == a && t === o.InstantInviteSources.GUILD_CONTEXT_MENU ? null : c || null != r ? f : _
             }
             let E = (e, t, l) => (0, a.jsx)(u.MenuItem, {
