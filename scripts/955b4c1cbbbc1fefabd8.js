@@ -1746,7 +1746,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "252655"
+                        buildNumber: "252677"
                     }), (0, a.jsx)(I, {})]
                 }) : null
             }
@@ -33561,31 +33561,31 @@
                 C = n("121432");
 
             function h(e) {
-                var t, n, h, T;
+                var t, n;
                 let {
-                    content: I,
-                    renderModalProps: S,
-                    analyticsLocations: N,
-                    analyticsLocation: m,
-                    modalDismissibleContent: p
-                } = e, A = "AnnouncementModalVariant1", {
-                    onClose: g
-                } = S, R = null !== (T = null === (t = I.button) || void 0 === t ? void 0 : t.copy) && void 0 !== T ? T : f.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, O = (null === (n = I.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", L = (null === (h = I.button) || void 0 === h ? void 0 : h.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
-                    (0, r.transitionTo)(E.Routes.APPLICATION_STORE), g()
+                    content: h,
+                    renderModalProps: T,
+                    analyticsLocations: I,
+                    analyticsLocation: S,
+                    modalDismissibleContent: N
+                } = e, m = "AnnouncementModalVariant1", {
+                    onClose: p
+                } = T, A = null != h.button && "" !== h.button.copy ? h.button.copy : f.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, g = (null === (t = h.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = h.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+                    (0, r.transitionTo)(E.Routes.APPLICATION_STORE), p()
                 } : () => (0, l.default)({
                     subscriptionTier: c.PremiumSubscriptionSKUs.TIER_2,
-                    analyticsLocations: N,
+                    analyticsLocations: I,
                     analyticsObject: {
-                        ...m,
+                        ...S,
                         object: E.AnalyticsObjects.BUTTON_CTA,
                         objectType: E.AnalyticsObjectTypes.TIER_2
                     },
                     onClose: e => {
-                        e && g()
+                        e && p()
                     }
-                }), v = "" !== I.helpArticleId ? () => (0, a.jsx)(i.Anchor, {
+                }), O = "" !== h.helpArticleId ? () => (0, a.jsx)(i.Anchor, {
                     className: _.termsApplyAnchor,
-                    href: d.default.getArticleURL(I.helpArticleId),
+                    href: d.default.getArticleURL(h.helpArticleId),
                     children: (0, a.jsx)(i.Heading, {
                         variant: "heading-md/normal",
                         className: _.termsApplyBodyText,
@@ -33593,21 +33593,21 @@
                     })
                 }) : void 0;
                 return {
-                    renderModalProps: S,
-                    header: I.header,
-                    subHeader: I.subheader,
-                    subHeaderExtra: v,
+                    renderModalProps: T,
+                    header: h.header,
+                    subHeader: h.subheader,
+                    subHeaderExtra: O,
                     video: {
                         type: "video",
-                        src: I.videoLink
+                        src: h.videoLink
                     },
-                    featureCards: I.featureCards.map(e => ({
+                    featureCards: h.featureCards.map(e => ({
                         header: e.header,
                         subHeader: e.body,
                         imageSrc: e.imageLink,
                         tagText: "" !== e.pill ? e.pill : void 0
                     })),
-                    changeLogId: A,
+                    changeLogId: m,
                     button: () => {
                         let e = Date.now();
                         return (0, a.jsxs)(o.default, {
@@ -33617,20 +33617,20 @@
                             size: i.Button.Sizes.SMALL,
                             onClick: () => {
                                 u.default.track(E.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
-                                    change_log_id: A,
-                                    cta_type: O,
+                                    change_log_id: m,
+                                    cta_type: g,
                                     seconds_open: Math.round((Date.now() - e) / 1e3),
-                                    target: A
-                                }), L()
+                                    target: m
+                                }), R()
                             },
                             children: [(0, a.jsx)("img", {
                                 alt: "",
                                 className: _.nitroIconSubHeader,
                                 src: C
-                            }), R]
+                            }), A]
                         })
                     },
-                    modalDismissibleContent: p
+                    modalDismissibleContent: N
                 }
             }
         },
