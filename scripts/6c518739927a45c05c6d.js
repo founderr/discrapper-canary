@@ -1746,7 +1746,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: C.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "252905"
+                        buildNumber: "252910"
                     }), (0, a.jsx)(I, {})]
                 }) : null
             }
@@ -11977,9 +11977,6 @@
                 _terminate() {
                     r.default.removeChangeListener(this._updateClientTheme), i.default.removeChangeListener(this._updateClientTheme)
                 }
-                _resetClientTheme() {
-                    this._updateBackgroundGradientPresetId(void 0), this._updateBackgroundGradientAngle(void 0)
-                }
                 constructor(...e) {
                     super(...e), this._updateBackgroundGradientPresetId = e => {
                         if (this._currentBackgroundGradientPresetId !== e) {
@@ -11988,31 +11985,17 @@
                                 return
                             }(0, o.updateBackgroundGradientPreset)(e), this._currentBackgroundGradientPresetId = e
                         }
-                    }, this._updateBackgroundGradientAngle = e => {
-                        if (this._currentBackgroundGradientAngle !== e) {
-                            if (null == e) {
-                                (0, o.resetBackgroundGradientAngle)(), this._currentBackgroundGradientAngle = void 0;
-                                return
-                            }(0, o.updateBackgroundGradientAngle)(e), this._currentBackgroundGradientAngle = e
-                        }
                     }, this._updateClientTheme = () => {
-                        var e, t, n, a, r;
-                        let o, c;
-                        if (s.default.shouldSync("appearance")) {
-                            let {
-                                backgroundGradientPresetId: e,
-                                backgroundGradientAngle: t
-                            } = l.ClientThemeSettings.getSetting();
-                            o = e, c = t
-                        } else o = null === (n = s.default.getAppearanceSettings()) || void 0 === n ? void 0 : null === (t = n.clientThemeSettings) || void 0 === t ? void 0 : t.backgroundGradientPresetId, c = null === (r = s.default.getAppearanceSettings()) || void 0 === r ? void 0 : null === (a = r.clientThemeSettings) || void 0 === a ? void 0 : a.backgroundGradientAngle;
-                        if (null != o && (null === (e = d.BACKGROUND_GRADIENT_PRESETS_MAP[o]) || void 0 === e ? void 0 : e.theme) !== i.default.theme) {
-                            let e = d.BACKGROUND_GRADIENT_PRESETS_MAP[o];
+                        var e, t, n;
+                        let a = s.default.shouldSync("appearance") ? l.ClientThemeSettings.getSetting().backgroundGradientPresetId : null === (t = s.default.getAppearanceSettings()) || void 0 === t ? void 0 : null === (e = t.clientThemeSettings) || void 0 === e ? void 0 : e.backgroundGradientPresetId;
+                        if (null != a && (null === (n = d.BACKGROUND_GRADIENT_PRESETS_MAP[a]) || void 0 === n ? void 0 : n.theme) !== i.default.theme) {
+                            let e = d.BACKGROUND_GRADIENT_PRESETS_MAP[a];
                             if (!(0, u.areThemesEqualForGradientThemes)(e.theme, i.default.theme)) {
-                                this._resetClientTheme();
+                                this._updateBackgroundGradientPresetId(void 0);
                                 return
                             }
                         }
-                        this._updateBackgroundGradientPresetId(o), this._updateBackgroundGradientAngle(c)
+                        this._updateBackgroundGradientPresetId(a)
                     }
                 }
             }
