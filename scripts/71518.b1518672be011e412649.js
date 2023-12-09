@@ -24,11 +24,11 @@
 
             function o(e) {
                 let t = (0, a.default)([r.default], () => null != e ? r.default.get(e) : null),
-                    n = null == t ? void 0 : t.productLine,
+                    n = null != t && t.productLine !== u.SKUProductLines.COLLECTIBLES,
                     [o, c] = (0, a.useStateFromStoresArray)([l.default], () => [l.default.isFetching, l.default.getProduct(e)]);
                 return (0, i.useEffect)(() => {
-                    null != e && null == c && (null == n || n === u.SKUProductLines.COLLECTIBLES) && (0, s.fetchCollectiblesProduct)(e)
-                }, [e, c, n]), {
+                    null != e && null == c && !n && !o && (0, s.fetchCollectiblesProduct)(e)
+                }, [e, c, n, o]), {
                     product: c,
                     isFetching: o
                 }

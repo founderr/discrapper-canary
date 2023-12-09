@@ -82749,6 +82749,10 @@ input::-webkit-inner-spin-button {
     padding: 24px 48px 32px
 }
 
+.collectedInfoContainer_d8324a.default__48f1b {
+    background-color: var(--modal-background)
+}
+
 .collectedTextContainer__3e39d {
     display: flex;
     flex-direction: column;
