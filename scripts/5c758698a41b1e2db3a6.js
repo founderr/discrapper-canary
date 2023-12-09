@@ -10807,36 +10807,35 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return v
+                    return M
                 }
             }), n("222007"), n("881410");
             var a = n("627445"),
                 s = n.n(a),
                 l = n("917351"),
                 i = n.n(l),
-                r = n("418009"),
-                o = n("913144"),
-                u = n("404118"),
-                d = n("819689"),
-                c = n("448993"),
-                f = n("875978"),
-                m = n("815297"),
-                h = n("271938"),
-                E = n("474643"),
-                _ = n("377253"),
-                p = n("585722"),
-                g = n("914271"),
-                I = n("690714"),
-                T = n("641126"),
-                C = n("782340");
+                r = n("913144"),
+                o = n("404118"),
+                u = n("819689"),
+                d = n("448993"),
+                c = n("875978"),
+                f = n("815297"),
+                m = n("271938"),
+                h = n("474643"),
+                E = n("377253"),
+                _ = n("585722"),
+                p = n("914271"),
+                g = n("690714"),
+                I = n("641126"),
+                T = n("782340");
 
-            function S(e) {
+            function C(e) {
                 let {
                     channelId: t,
                     messageId: n,
                     isEditing: a
-                } = e, l = _.default.getMessage(t, n);
-                s(null != l, "Tapped on a non-existent poll message"), (0, T.updatePollState)(t, n, () => ({
+                } = e, l = E.default.getMessage(t, n);
+                s(null != l, "Tapped on a non-existent poll message"), (0, I.updatePollState)(t, n, () => ({
                     channelId: t,
                     selectedAnswerIds: new Set,
                     submitting: !1,
@@ -10844,27 +10843,27 @@
                 }))
             }
 
-            function A(e) {
+            function S(e) {
                 let {
                     channelId: t,
                     messageId: n
-                } = e, a = _.default.getMessage(t, n);
+                } = e, a = E.default.getMessage(t, n);
                 return null == a ? [] : a.reactions.flatMap(e => !0 === e.me_vote ? e.emoji.name : [])
             }
-            async function N(e) {
+            async function A(e) {
                 let t, {
                         channelId: n,
                         messageId: a,
                         answerIds: s
                     } = e,
-                    l = A({
+                    l = S({
                         channelId: n,
                         messageId: a
                     }),
-                    r = i.difference(l, s),
+                    o = i.difference(l, s),
                     u = i.difference(s, l),
-                    d = h.default.getId(),
-                    c = [...r.map(e => ({
+                    d = m.default.getId(),
+                    f = [...o.map(e => ({
                         type: "MESSAGE_REACTION_REMOVE",
                         id: e
                     })), ...u.map(e => ({
@@ -10875,7 +10874,7 @@
                         id: e,
                         type: s
                     }
-                    of c) t = o.default.dispatch({
+                    of f) t = r.default.dispatch({
                     type: s,
                     channelId: n,
                     messageId: a,
@@ -10885,45 +10884,45 @@
                     },
                     userId: d,
                     optimistic: !0,
-                    reactionType: f.ReactionTypes.VOTE
+                    reactionType: c.ReactionTypes.VOTE
                 });
                 null != t && await t
             }
-            async function M(e) {
+            async function N(e) {
                 let {
                     channelId: t,
                     messageId: n
-                } = e, a = (0, T.getPollState)(t, n);
-                s(null != a, "Must not be able to vote without existing state!"), (0, T.updatePollState)(t, n, e => (s(null != e, "Must not be able to vote without existing state!"), {
+                } = e, a = (0, I.getPollState)(t, n);
+                s(null != a, "Must not be able to vote without existing state!"), (0, I.updatePollState)(t, n, e => (s(null != e, "Must not be able to vote without existing state!"), {
                     ...e,
                     submitting: !0,
                     editing: !1
                 }));
-                let l = A({
+                let l = S({
                     channelId: t,
                     messageId: n
                 });
                 try {
                     let e = [...a.selectedAnswerIds.values()];
-                    await N({
+                    await A({
                         channelId: t,
                         messageId: n,
                         answerIds: e
-                    }), await I.submitPollVote({
+                    }), await g.submitPollVote({
                         channelId: t,
                         messageId: n,
                         answerIds: e
-                    }), (0, T.updatePollState)(t, n, () => void 0)
+                    }), (0, I.updatePollState)(t, n, () => void 0)
                 } catch (e) {
-                    var i, r, o;
-                    u.default.show({
-                        title: C.default.Messages.GENERIC_ERROR_TITLE,
-                        body: null !== (o = null !== (r = null === (i = e.getAnyErrorMessage) || void 0 === i ? void 0 : i.call(e)) && void 0 !== r ? r : e.message) && void 0 !== o ? o : C.default.Messages.GENERIC_ERROR_BODY
-                    }), await N({
+                    var i, r, u;
+                    o.default.show({
+                        title: T.default.Messages.GENERIC_ERROR_TITLE,
+                        body: null !== (u = null !== (r = null === (i = e.getAnyErrorMessage) || void 0 === i ? void 0 : i.call(e)) && void 0 !== r ? r : e.message) && void 0 !== u ? u : T.default.Messages.GENERIC_ERROR_BODY
+                    }), await A({
                         channelId: t,
                         messageId: n,
                         answerIds: l
-                    }), (0, T.updatePollState)(t, n, e => {
+                    }), (0, I.updatePollState)(t, n, e => {
                         if (null != e) return {
                             ...e,
                             submitting: !1,
@@ -10932,17 +10931,17 @@
                     })
                 }
             }
-            var v = {
+            var M = {
                 handlePollAnswerTapped: function(e) {
                     var t;
                     let {
                         channelId: n,
                         messageId: a,
                         answerId: l
-                    } = e, i = _.default.getMessage(n, a);
+                    } = e, i = E.default.getMessage(n, a);
                     s(null != i, "Tapped on a non-existent poll message");
                     let r = null === (t = i.poll) || void 0 === t ? void 0 : t.allow_multiselect;
-                    (0, T.updatePollState)(n, a, e => {
+                    (0, I.updatePollState)(n, a, e => {
                         if (null == e) return {
                             channelId: n,
                             selectedAnswerIds: new Set([l]),
@@ -10962,8 +10961,8 @@
                         return t
                     })
                 },
-                handlePollSubmitVote: M,
-                handleUpdateVoteEditingState: S,
+                handlePollSubmitVote: N,
+                handleUpdateVoteEditingState: C,
                 handlePollActionTapped: function(e) {
                     let {
                         channelId: t,
@@ -10972,20 +10971,20 @@
                     } = e;
                     switch (a) {
                         case "submit":
-                            M({
+                            N({
                                 channelId: t,
                                 messageId: n
                             });
                             break;
                         case "edit":
-                            S({
+                            C({
                                 channelId: t,
                                 messageId: n,
                                 isEditing: !0
                             });
                             break;
                         case "cancel":
-                            S({
+                            C({
                                 channelId: t,
                                 messageId: n,
                                 isEditing: !1
@@ -11003,13 +11002,13 @@
                         allowMultiSelect: s,
                         layout: l,
                         onClose: i
-                    } = e, o = p.default.getUploads(t.id, E.DraftType.Poll), u = a.map(e => {
+                    } = e, r = _.default.getUploads(t.id, h.DraftType.Poll), o = a.map(e => {
                         var t;
-                        let n = null == o ? void 0 : o.findIndex(t => t.id === e.uploadId),
+                        let n = null == r ? void 0 : r.findIndex(t => t.id === e.uploadId),
                             a = {
                                 attachment_ids: -1 !== n ? ["".concat(n)] : []
                             };
-                        l !== r.PollLayoutTypes.IMAGE_ONLY_ANSWERS && (a.text = e.text);
+                        a.text = e.text;
                         let s = null === (t = e.image) || void 0 === t ? void 0 : t.emoji;
                         return null != s && (null != s.id ? a.emoji = {
                             id: s.id,
@@ -11019,31 +11018,31 @@
                         })), {
                             poll_media: a
                         }
-                    }), f = {
+                    }), c = {
                         question: {
                             text: n,
                             attachment_ids: []
                         },
-                        answers: u,
+                        answers: o,
                         allow_multiselect: s,
                         layout_type: l
                     };
                     try {
-                        if (null != o && o.length > 0) {
-                            var _;
-                            let e = null !== (_ = h.default.getToken()) && void 0 !== _ ? _ : "";
-                            await g.sendPollMessageWithAttachments({
+                        if (null != r && r.length > 0) {
+                            var E;
+                            let e = null !== (E = m.default.getToken()) && void 0 !== E ? E : "";
+                            await p.sendPollMessageWithAttachments({
                                 channel: t,
-                                items: o,
+                                items: r,
                                 token: e,
-                                poll: f,
-                                nonce: (0, m.createNonce)(),
+                                poll: c,
+                                nonce: (0, f.createNonce)(),
                                 maxSizeCallback: () => {}
                             })
-                        } else await d.default.sendPollMessage(t.id, f);
+                        } else await u.default.sendPollMessage(t.id, c);
                         null == i || i()
                     } catch (t) {
-                        let e = t instanceof c.APIError ? t : new c.APIError(t);
+                        let e = t instanceof d.APIError ? t : new d.APIError(t);
                         if ("poll" === e.getAnyErrorMessage() && null != t.text) throw {
                             ...t,
                             body: JSON.parse(t.text)
