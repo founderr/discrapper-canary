@@ -4,7 +4,7 @@
             "use strict";
             t.r(s), t.d(s, {
                 default: function() {
-                    return I
+                    return M
                 }
             }), t("222007");
             var a = t("37983");
@@ -18,44 +18,44 @@
                 u = t("476765"),
                 c = t("49111"),
                 E = t("782340"),
-                _ = t("541958");
+                T = t("541958");
 
-            function I(e) {
+            function M(e) {
                 let {
                     transitionState: s,
                     guild: t,
                     onClose: l
-                } = e, I = (0, u.useUID)(), [T, {
-                    loading: h,
-                    error: m
-                }] = (0, i.default)(r.removeMonetization), M = async () => {
+                } = e, M = (0, u.useUID)(), [N, {
+                    loading: O,
+                    error: _
+                }] = (0, i.default)(r.removeMonetization), h = async () => {
                     n(null != t, "no guild");
-                    let e = await T(t.id);
+                    let e = await N(t.id);
                     null != e && l()
                 };
                 return (0, a.jsxs)(o.ModalRoot, {
                     transitionState: s,
-                    "aria-labelledby": I,
+                    "aria-labelledby": M,
                     children: [(0, a.jsxs)(o.ModalHeader, {
                         children: [(0, a.jsx)(o.Heading, {
-                            id: I,
+                            id: M,
                             variant: "heading-md/semibold",
-                            children: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_DISABLE_MONETIZATION_MODAL_HEADER
+                            children: E.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_MODAL_HEADER
                         }), (0, a.jsx)(o.ModalCloseButton, {
-                            className: _.closeButton,
+                            className: T.closeButton,
                             onClick: l
                         })]
                     }), (0, a.jsxs)(o.ModalContent, {
-                        className: _.content,
-                        children: [null != m ? (0, a.jsxs)(a.Fragment, {
+                        className: T.content,
+                        children: [null != _ ? (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsx)(o.FormErrorBlock, {
-                                children: m.message
+                                children: _.message
                             }), (0, a.jsx)(d.default, {
                                 size: 24
                             })]
                         }) : null, (0, a.jsx)(o.FormText, {
                             type: o.FormText.Types.ERROR,
-                            children: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_DISABLE_MONETIZATION_MODAL_DESCRIPTION.format({
+                            children: E.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_MODAL_DESCRIPTION.format({
                                 guildName: t.toString(),
                                 url: c.MarketingURLs.DEVELOPER_PORTAL_TEAMS
                             })
@@ -63,12 +63,12 @@
                             size: 16
                         })]
                     }), (0, a.jsx)(o.ModalFooter, {
-                        className: _.footer,
+                        className: T.footer,
                         children: (0, a.jsx)(o.Button, {
                             color: o.Button.Colors.RED,
-                            className: _.goBackButton,
-                            submitting: h,
-                            onClick: M,
+                            className: T.goBackButton,
+                            submitting: O,
+                            onClick: h,
                             children: E.default.Messages.SAVE
                         })
                     })]

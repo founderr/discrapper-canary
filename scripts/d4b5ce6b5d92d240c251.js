@@ -11466,7 +11466,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return g
+                    return A
                 }
             });
             var a = s("37983");
@@ -11480,54 +11480,61 @@
                 u = s("313584"),
                 c = s("657960"),
                 E = s("657650"),
-                _ = s("900938"),
-                T = s("442379"),
-                I = s("559821"),
-                S = s("762051"),
-                N = s("782340");
+                _ = s("441901"),
+                T = s("900938"),
+                I = s("442379"),
+                S = s("559821"),
+                N = s("762051"),
+                f = s("782340");
 
-            function f(e) {
+            function g(e) {
                 let {
                     listingId: t
-                } = e, s = (0, T.useGuildProductListingById)(t);
+                } = e, s = (0, I.useGuildProductListingById)(t);
                 return null == s ? null : (0, a.jsx)(r.Cell, {
                     children: s.name
                 })
             }
 
-            function g(e) {
+            function A(e) {
                 var t, s, r;
                 let {
-                    guildId: T
-                } = e, g = (0, I.default)(T), A = (0, i.useCreatorMonetizationSettingsDisabled)(), L = (0, n.default)([_.default], () => _.default.getGuild());
-                return g.loading || null == L ? (0, a.jsx)(l.Spinner, {}) : null == g.application ? (0, a.jsx)(c.default, {
-                    guild: L,
+                    guildId: I
+                } = e, A = (0, S.default)(I), L = (0, i.useCreatorMonetizationSettingsDisabled)(), m = (0, n.default)([T.default], () => T.default.getGuild());
+                return A.loading || null == m ? (0, a.jsx)(l.Spinner, {}) : null == A.application ? (0, a.jsx)(c.default, {
+                    guild: m,
                     hideDisableSection: !0
                 }) : (0, a.jsxs)(u.default, {
                     children: [(0, a.jsx)(d.default, {
-                        revenue: g.metrics.revenue,
-                        revenueTrend: g.metrics.revenuePctChange,
-                        summaryMetricLabel: N.default.Messages.GUILD_PRODUCT_PURCHASES_TITLE,
-                        summaryMetricValue: null !== (s = g.metrics.paymentsCount) && void 0 !== s ? s : "-",
-                        summaryMetricTrend: null !== (r = g.metrics.paymentsCountChange) && void 0 !== r ? r : 0,
+                        revenue: A.metrics.revenue,
+                        revenueTrend: A.metrics.revenuePctChange,
+                        summaryMetricLabel: f.default.Messages.GUILD_PRODUCT_PURCHASES_TITLE,
+                        summaryMetricValue: null !== (s = A.metrics.paymentsCount) && void 0 !== s ? s : "-",
+                        summaryMetricTrend: null !== (r = A.metrics.paymentsCountChange) && void 0 !== r ? r : 0,
                         summaryMetricTrendIsPercent: !1,
-                        children: (0, a.jsx)(S.default, {
-                            guildId: T,
-                            earningsData: g
+                        children: (0, a.jsx)(N.default, {
+                            guildId: I,
+                            earningsData: A
                         })
                     }), (0, a.jsx)(l.FormSection, {
-                        title: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_HEADER,
+                        title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_EARNINGS_EARNINGS_HISTORY_HEADER,
                         children: (0, a.jsx)(o.default, {
-                            ListingIdLabel: f,
-                            payoutsByPeriod: g.payoutsByPeriod,
-                            team: null === (t = g.application) || void 0 === t ? void 0 : t.team
+                            ListingIdLabel: g,
+                            payoutsByPeriod: A.payoutsByPeriod,
+                            team: null === (t = A.application) || void 0 === t ? void 0 : t.team
                         })
                     }), (0, a.jsx)(l.FormSection, {
-                        title: N.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TITLE,
-                        disabled: A,
+                        title: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_PAYMENT_TEAM_SECTION_TITLE,
+                        disabled: L,
                         children: (0, a.jsx)(E.default, {
-                            guildId: T,
-                            application: g.application
+                            guildId: I,
+                            application: A.application
+                        })
+                    }), (0, a.jsx)(l.FormSection, {
+                        title: f.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
+                        children: (0, a.jsx)(_.default, {
+                            guildId: I,
+                            allPeriods: A.payoutsByPeriod
                         })
                     })]
                 })
@@ -17711,7 +17718,7 @@
                             application: u
                         })
                     }), (0, a.jsx)(n.FormSection, {
-                        title: A.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
+                        title: A.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
                         className: L.formSection,
                         children: (0, a.jsx)(f.default, {
                             guildId: d,
@@ -17875,7 +17882,7 @@
                             isGuildOwner: N
                         })]
                     }), !s && (0, a.jsx)(i.FormSection, {
-                        title: R.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
+                        title: R.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
                         className: D.selfDemonetization,
                         children: (0, a.jsx)(L.default, {
                             guildId: t.id,
@@ -18339,45 +18346,48 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return c
+                    return E
                 }
             });
             var a = s("37983");
             s("884691");
             var n = s("65597"),
                 l = s("77078"),
-                i = s("305961"),
-                r = s("191814"),
-                o = s("837008"),
-                d = s("397056"),
-                u = s("782340");
+                i = s("442379"),
+                r = s("305961"),
+                o = s("191814"),
+                d = s("837008"),
+                u = s("397056"),
+                c = s("782340");
 
-            function c(e) {
+            function E(e) {
                 let {
                     guildId: t,
-                    allPeriods: c
-                } = e, E = (0, n.default)([i.default], () => i.default.getGuild(t)), _ = (0, o.useSubscriptionListingsForGuild)(t, {
+                    allPeriods: E
+                } = e, _ = (0, n.default)([r.default], () => r.default.getGuild(t)), T = (0, d.useSubscriptionListingsForGuild)(t, {
                     includeSoftDeleted: !0
-                }), T = c.filter(e => {
+                }), I = (0, i.useGuildProductsForGuild)(t, {
+                    publishedOnly: !1
+                }), S = E.filter(e => {
                     var t;
                     let s = Object.values(null !== (t = e.ppgs) && void 0 !== t ? t : {})[0];
-                    return (null == s ? void 0 : s.status) === d.PaymentPayoutGroupStatuses.OPEN || (null == s ? void 0 : s.status) === d.PaymentPayoutGroupStatuses.PAYOUT_DEFERRED
-                }), I = _.length > 0, S = T.length > 0;
-                return null == E ? null : (0, a.jsxs)("div", {
+                    return (null == s ? void 0 : s.status) === u.PaymentPayoutGroupStatuses.OPEN || (null == s ? void 0 : s.status) === u.PaymentPayoutGroupStatuses.PAYOUT_DEFERRED
+                }), N = T.length > 0, f = I.length > 0, g = S.length > 0;
+                return null == _ ? null : (0, a.jsxs)("div", {
                     children: [(0, a.jsx)(l.FormText, {
                         type: l.FormText.Types.DESCRIPTION,
-                        children: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_DISABLE_MONETIZATION_SECTION_DESCRIPTION.format({
-                            guildName: E.toString()
+                        children: c.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_DESCRIPTION.format({
+                            guildName: _.toString()
                         })
-                    }), (0, a.jsx)(r.default, {
+                    }), (0, a.jsx)(o.default, {
                         size: 16
                     }), (0, a.jsx)(l.Button, {
-                        disabled: I || S,
+                        disabled: N || f || g,
                         look: l.Button.Looks.FILLED,
                         color: l.Button.Colors.RED,
                         onClick: () => {
                             var e;
-                            return e = E, void(0, l.openModalLazy)(async () => {
+                            return e = _, void(0, l.openModalLazy)(async () => {
                                 let {
                                     default: t
                                 } = await s.el("264514").then(s.bind(s, "264514"));
@@ -18387,7 +18397,7 @@
                                 })
                             })
                         },
-                        children: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_DISABLE_MONETIZATION_CTA
+                        children: c.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_CTA
                     })]
                 })
             }
