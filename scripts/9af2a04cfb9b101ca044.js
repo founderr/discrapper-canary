@@ -411,11 +411,11 @@
                 } = (0, m.default)(a, s), B = n.useRef([]), {
                     togglePollExpressionPicker: F,
                     lastActiveParentIndex: W
-                } = (0, T.default)(I), Y = n.useCallback(() => {
+                } = (0, T.default)(I), V = n.useCallback(() => {
                     r(null != W, "Must have an active input");
                     let e = B.current[W];
                     return r(null != e, "Expected a mounted answer input component"), e.getBoundingClientRect()
-                }, [W]), V = I === d.PollLayoutTypes.DEFAULT, H = n.useCallback(() => {
+                }, [W]), Y = I === d.PollLayoutTypes.DEFAULT, H = n.useCallback(() => {
                     let e = c.length > 0 || o.some(e => (0, f.isAnswerFilled)(e, I));
                     e ? (0, p.default)({
                         title: R.default.Messages.CREATE_POLL_MODAL_WARNING_MODAL_TITLE,
@@ -464,7 +464,7 @@
                             selectedLayoutType: I,
                             onSelectedLayoutType: N
                         }), (0, l.jsxs)("div", {
-                            className: i(g.answerInputsContainer, V ? g.defaultContainer : g.imageOnlyContainer),
+                            className: i(g.answerInputsContainer, Y ? g.defaultContainer : g.imageOnlyContainer),
                             role: "group",
                             "aria-label": R.default.Messages.POLL_OPTIONS_ARIA,
                             children: [o.map((e, t) => (0, l.jsx)(A.default, {
@@ -477,12 +477,12 @@
                                 onAnswerTextChange: b,
                                 onRemoveAnswer: D
                             }, e.uploadId)), j && (0, l.jsxs)(u.Clickable, {
-                                className: V ? g.addAnswerButtonDefault : g.addAnswerButtonImageOnly,
+                                className: Y ? g.addAnswerButtonDefault : g.addAnswerButtonImageOnly,
                                 onClick: j ? S : void 0,
                                 "aria-label": R.default.Messages.CREATE_POLL_ADD_ANSWER_BUTTON,
                                 children: [(0, l.jsx)(E.default, {
-                                    className: V ? g.addAnswerIconDefault : g.addAnswerIconImageOnly
-                                }), V && (0, l.jsx)(u.Text, {
+                                    className: Y ? g.addAnswerIconDefault : g.addAnswerIconImageOnly
+                                }), Y && (0, l.jsx)(u.Text, {
                                     variant: "text-md/normal",
                                     color: "text-muted",
                                     children: R.default.Messages.CREATE_POLL_ADD_ANSWER_BUTTON
@@ -520,7 +520,7 @@
                         parentModalKey: x.POLL_CREATION_MODAL_KEY,
                         onEmojiSelect: k,
                         onGifSelect: y,
-                        positionTargetRef: Y,
+                        positionTargetRef: V,
                         lastActiveInputIndex: W
                     })]
                 })
@@ -717,19 +717,19 @@
                 r = t("13030");
 
             function u(e) {
-                let [a, t] = l.useState(null), [u, d, c] = (0, o.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], n.default), E = i.ChatInputTypes.CREATE_POLL, f = null != u && null != d && d === E, m = e === s.PollLayoutTypes.DEFAULT ? r.ExpressionPickerViewType.EMOJI : r.ExpressionPickerViewType.GIF, A = l.useCallback(e => {
-                    t(e), (0, o.toggleExpressionPicker)(m, E)
-                }, [m, E]), _ = l.useCallback(() => {
-                    (0, o.closeExpressionPicker)(E)
-                }, [E]);
+                let [a, t] = l.useState(null), [u, d, c, E] = (0, o.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.lastActiveView, e.pickerId], n.default), f = i.ChatInputTypes.CREATE_POLL, m = null != u && null != d && d === f, A = null != c ? c : e === s.PollLayoutTypes.DEFAULT ? r.ExpressionPickerViewType.EMOJI : r.ExpressionPickerViewType.GIF, _ = l.useCallback(e => {
+                    t(e), (0, o.toggleExpressionPicker)(A, f)
+                }, [A, f]), L = l.useCallback(() => {
+                    (0, o.closeExpressionPicker)(f)
+                }, [f]);
                 return l.useEffect(() => () => {
-                    (0, o.closeExpressionPicker)(E)
-                }, [E]), {
-                    showPollExpressionPicker: f,
-                    togglePollExpressionPicker: A,
-                    closePollExpressionPicker: _,
-                    pollExpressionPickerId: c,
-                    chatInputType: E,
+                    (0, o.closeExpressionPicker)(f)
+                }, [f]), {
+                    showPollExpressionPicker: m,
+                    togglePollExpressionPicker: _,
+                    closePollExpressionPicker: L,
+                    pollExpressionPickerId: E,
+                    chatInputType: f,
                     lastActiveParentIndex: a
                 }
             }
