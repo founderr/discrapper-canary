@@ -2924,23 +2924,23 @@
                     } = e, n = new b.default({
                         channelId: t.id,
                         content: a
-                    }), l = (0, x.useShowImprovedMarkdownUserExperimentConfig)(new Date().valueOf()), r = (0, x.useShowImprovedMarkdownGuildExperimentConfig)(t.guild_id, new Date().valueOf()), {
-                        content: i
+                    }), l = (0, x.useShowImprovedMarkdownUserExperimentConfig)(new Date().valueOf()), i = (0, x.useShowImprovedMarkdownGuildExperimentConfig)(t.guild_id, new Date().valueOf()), {
+                        content: o
                     } = (0, A.default)(n, {
                         hideSimpleEmbedContent: !0,
                         isInteracting: !1,
                         formatInline: !1,
                         allowList: !0,
                         allowHeading: !0,
-                        allowLinks: l.showMaskedLinks || r.showMaskedLinks,
-                        previewLinkTarget: l.showMaskedLinks || r.showMaskedLinks
-                    }), o = (0, v.default)({
+                        allowLinks: l.showMaskedLinks || i.showMaskedLinks,
+                        previewLinkTarget: l.showMaskedLinks || i.showMaskedLinks
+                    }), u = (0, v.default)({
                         message: n,
                         channel: t
-                    }, i, !1);
+                    }, o, !1);
                     return (0, s.jsx)("div", {
-                        className: em.channelTextAreaInner,
-                        children: o
+                        className: r(em.channelTextAreaInner, em.previewTextArea),
+                        children: u
                     })
                 }),
                 eS = n.memo(function(e) {
