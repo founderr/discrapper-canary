@@ -262,24 +262,24 @@
                     channel: s
                 } = e, {
                     analyticsLocations: n
-                } = (0, p.default)(f.default.GIFT_BUTTON), [r, c] = o.useState(!1), b = (0, h.useIsDismissibleContentTypeDismissed)(a.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023), _ = (0, C.useStateFromStores)([L.default], () => L.default.getCurrentUser()), E = null != _ ? l.default.age(_.id) : 0, {
-                    enabled: A
+                } = (0, p.default)(f.default.GIFT_BUTTON), [r, c] = o.useState(!1), b = (0, h.useIsDismissibleContentTypeDismissed)(a.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023), _ = (0, C.useStateFromStores)([L.default], () => L.default.getCurrentUser()), E = null != _ ? l.default.age(_.id) : 0, A = !t && !b && E >= O, {
+                    enabled: I
                 } = F.SeasonalGiftingMarketingExperiment.useExperiment({
                     location: "ChannelPremiumGiftButton"
                 }, {
-                    autoTrackExposure: !1
-                }), I = (0, N.useDirectMessageRecipient)(s), k = null != I, {
-                    enabled: y
+                    autoTrackExposure: A
+                }), k = (0, N.useDirectMessageRecipient)(s), y = null != k, {
+                    enabled: Z
                 } = m.ExpandedGiftingRevampExperiment.useExperiment({
                     location: "ChannelPremiumGiftButton"
                 }, {
                     autoTrackExposure: !1
-                }), Z = A && !t && !b && E >= O;
+                }), G = I && A;
                 if (t) return null;
-                let G = () => {
+                let H = () => {
                         (0, j.default)({
                             isGift: !0,
-                            giftRecipient: null == I ? void 0 : I,
+                            giftRecipient: null == k ? void 0 : k,
                             initialPlanId: null,
                             subscriptionTier: g.PremiumSubscriptionSKUs.TIER_2,
                             analyticsLocations: n,
@@ -291,7 +291,7 @@
                             }
                         })
                     },
-                    H = (0, i.jsxs)("div", {
+                    P = (0, i.jsxs)("div", {
                         className: S.container,
                         onMouseEnter: () => {
                             !r && c(!0)
@@ -299,10 +299,10 @@
                         onMouseLeave: () => {
                             c(!1)
                         },
-                        children: [Z && (0, i.jsx)(u.default, {
+                        children: [G && (0, i.jsx)(u.default, {
                             onComplete: () => c(!1),
-                            onDMCheckItOutClick: G,
-                            isDM: k
+                            onDMCheckItOutClick: H,
+                            isDM: y
                         }), (0, i.jsx)(M.default, {
                             innerClassName: B.button,
                             "aria-label": T.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
@@ -310,21 +310,21 @@
                             onClick: () => {
                                 c(!1), (0, x.markDismissibleContentAsDismissed)(a.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023, {
                                     dismissAction: D.ContentDismissActionType.TAKE_ACTION
-                                }), G()
+                                }), H()
                             },
                             children: (0, i.jsx)("div", {
                                 className: S.noPointerEvents,
                                 children: (0, i.jsx)(w, {
                                     hovered: r,
-                                    isContentDismissed: !Z
+                                    isContentDismissed: !G
                                 })
                             })
                         })]
                     });
-                return Z ? H : (0, i.jsx)(d.TooltipContainer, {
+                return G ? P : (0, i.jsx)(d.TooltipContainer, {
                     className: S.container,
-                    text: (0, u.getSeasonalGiftingBody)(k, y),
-                    children: H
+                    text: (0, u.getSeasonalGiftingBody)(y, Z),
+                    children: P
                 })
             })
         },

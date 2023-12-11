@@ -6833,13 +6833,15 @@
             }
 
             function X() {
-                let {
-                    enabled: e
-                } = y.SeasonalGiftingMarketingExperiment.useExperiment({
-                    location: "GiftNitro"
-                }, {
-                    autoTrackExposure: !1
-                }), t = (0, y.useIsSeasonalGiftingActive)(), s = e && t;
+                let e = (0, y.useIsSeasonalGiftingActive)(),
+                    {
+                        enabled: t
+                    } = y.SeasonalGiftingMarketingExperiment.useExperiment({
+                        location: "GiftNitro"
+                    }, {
+                        autoTrackExposure: e
+                    }),
+                    s = t && e;
                 return (0, a.jsxs)("div", {
                     className: i(K.giftCard, {
                         [K.giftCardSeasonal]: s
@@ -10473,7 +10475,7 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "2130b97a116613ab330149a6e22ad69a7692ca09", e.substring(0, 7)),
+                    S = (e = "dedef569c5adcc9ecfddff94d14d27d812d69c07", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
                     T = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
@@ -10486,7 +10488,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "253279", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "253282", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]

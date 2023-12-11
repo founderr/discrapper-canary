@@ -6141,13 +6141,13 @@
                         className: t
                     } = e, {
                         AnalyticsLocationProvider: s
-                    } = (0, u.default)(i.default.PREMIUM_MARKETING_GIFT_SECTION), {
-                        enabled: n
+                    } = (0, u.default)(i.default.PREMIUM_MARKETING_GIFT_SECTION), n = (0, o.useIsSeasonalGiftingActive)(), {
+                        enabled: f
                     } = o.SeasonalGiftingMarketingExperiment.useExperiment({
                         location: "GiftNitro"
                     }, {
-                        autoTrackExposure: !1
-                    }), f = (0, o.useIsSeasonalGiftingActive)(), T = n && f;
+                        autoTrackExposure: n
+                    }), T = f && n;
                     return (0, a.jsx)(s, {
                         children: (0, a.jsx)("div", {
                             className: r(_.container, t),
