@@ -5792,15 +5792,15 @@
             });
             var a = (0, r("237436").defineColorTokens)({
                 "polls-normal-border": {
-                    dark: "primary.260",
+                    dark: "primary.700",
                     light: "primary.260"
                 },
                 "polls-normal-fill": {
-                    dark: "white.500",
+                    dark: "primary.530",
                     light: "white.500"
                 },
                 "polls-normal-label": {
-                    dark: "primary.600",
+                    dark: "white.500",
                     light: "primary.600"
                 },
                 "polls-normal-confetti": {
