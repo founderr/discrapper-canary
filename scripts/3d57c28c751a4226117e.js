@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["30927"], {
+    ["70077"], {
         855143: function(e, t, n) {
             "use strict";
             e.exports = n.p + "01864c39871ce619d855.svg"
@@ -18,10 +18,10 @@
                     return E
                 },
                 bulkAck: function() {
-                    return f
+                    return C
                 },
                 localAck: function() {
-                    return C
+                    return f
                 },
                 enableAutomaticAck: function() {
                     return _
@@ -88,7 +88,7 @@
                 }(e.id, !0, !0) : e.isForumLikeChannel() ? c(e.id, !0, !0, l.default.fromTimestamp(Date.now())) : c(e.id, !0, !0)
             }
 
-            function f(e) {
+            function C(e) {
                 i.default.dispatch({
                     type: "BULK_ACK",
                     channels: e,
@@ -96,7 +96,7 @@
                 })
             }
 
-            function C(e) {
+            function f(e) {
                 i.default.dispatch({
                     type: "CHANNEL_LOCAL_ACK",
                     channelId: e
@@ -158,14 +158,14 @@
                         size: s = u.AvatarSizes.SIZE_32,
                         animate: c = !1,
                         "aria-hidden": E = !1,
-                        ...f
-                    } = e, C = i.useContext(a.default);
+                        ...C
+                    } = e, f = i.useContext(a.default);
                     return (0, l.jsx)(u.Avatar, {
-                        src: (t = o, n = (0, u.getAvatarSize)(s), r = c, d = C, t.getAvatarURL(d, n, r)),
+                        src: (t = o, n = (0, u.getAvatarSize)(s), r = c, d = f, t.getAvatarURL(d, n, r)),
                         size: s,
                         "aria-label": E ? void 0 : o.username,
                         "aria-hidden": E,
-                        ...f
+                        ...C
                     })
                 })
         },
@@ -315,8 +315,8 @@
                 s = n("87657"),
                 c = n("812204"),
                 E = n("685665"),
-                f = n("679653"),
-                C = n("419830"),
+                C = n("679653"),
+                f = n("419830"),
                 _ = n("123561"),
                 A = n("161778"),
                 T = n("233069"),
@@ -340,7 +340,7 @@
                     ChannelIcon: n,
                     selected: i,
                     onClick: u
-                } = e, a = (0, f.default)(t);
+                } = e, a = (0, C.default)(t);
                 return (0, l.jsxs)(o.Clickable, {
                     className: O.channelRow,
                     onClick: () => u(t.id),
@@ -391,7 +391,7 @@
                             } = e;
                             if (t > 0) return null;
                             let a = s[i],
-                                r = (0, C.getChannelIconComponent)(a);
+                                r = (0, f.getChannelIconComponent)(a);
                             return null == r ? null : (0, l.jsx)(P, {
                                 channel: a,
                                 ChannelIcon: r,
@@ -475,7 +475,7 @@
                     editMetadata: n,
                     transitionState: u,
                     onClose: s
-                } = e, [f, C] = i.useState(""), [_, A] = i.useState(!1), [T, I] = i.useState(null), g = (0, r.useStateFromStoresArray)([S.default], () => S.default.getFriendIDs()), D = (0, r.useStateFromStoresArray)([L.default], () => g.map(e => L.default.getUser(e)).filter(U.isNotNullish), [g]), v = (0, r.useStateFromStores)([h.default], () => h.default.getLastSelectedGuildId()), {
+                } = e, [C, f] = i.useState(""), [_, A] = i.useState(!1), [T, I] = i.useState(null), g = (0, r.useStateFromStoresArray)([S.default], () => S.default.getFriendIDs()), D = (0, r.useStateFromStoresArray)([L.default], () => g.map(e => L.default.getUser(e)).filter(U.isNotNullish), [g]), v = (0, r.useStateFromStores)([h.default], () => h.default.getLastSelectedGuildId()), {
                     analyticsLocations: m
                 } = (0, E.default)(c.default.CLIPS_SHARE_MODAL);
                 async function P() {
@@ -507,17 +507,17 @@
                         children: p.default.Messages.CLIP_SHARE_MODAL_SUBTITLE
                     }), (0, l.jsx)(N.default, {
                         className: O.searchBar,
-                        query: f,
-                        onChange: C,
+                        query: C,
+                        onChange: f,
                         size: N.default.Sizes.MEDIUM,
                         onClear: function() {
-                            C("")
+                            f("")
                         },
                         placeholder: p.default.Messages.INVITE_SEARCH_FOR_FRIENDS
                     }), (0, l.jsx)("div", {
                         className: a(O.divider, O.topDivider)
                     }), (0, l.jsx)(x, {
-                        searchQuery: f,
+                        searchQuery: C,
                         friends: D
                     }), null != v && (0, l.jsx)(G, {
                         guildId: v,
@@ -558,8 +558,8 @@
                 s = n("398604"),
                 c = n("401690"),
                 E = n("755624"),
-                f = n("374363"),
-                C = n("271938"),
+                C = n("374363"),
+                f = n("271938"),
                 _ = n("870691"),
                 A = n("42203"),
                 T = n("816092"),
@@ -666,7 +666,7 @@
             }
             class b extends u.default.Store {
                 initialize() {
-                    this.waitFor(c.default, C.default, _.default, A.default, T.default, r.default, S.default, o.default, s.default, E.default, h.default, L.default, I.default, N.default, f.default, d.default)
+                    this.waitFor(c.default, f.default, _.default, A.default, T.default, r.default, S.default, o.default, s.default, E.default, h.default, L.default, I.default, N.default, C.default, d.default)
                 }
                 getGuild(e, t) {
                     let n = O.getGuild(e, t);
@@ -796,7 +796,7 @@
                         guildId: t,
                         user: n
                     } = e;
-                    return C.default.getId() === n.id && O.clearGuildId(t)
+                    return f.default.getId() === n.id && O.clearGuildId(t)
                 },
                 GUILD_ROLE_CREATE: G,
                 GUILD_ROLE_DELETE: G,
@@ -892,21 +892,6 @@
                 WINDOW_FOCUS: H
             })
         },
-        615387: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                getHasImportantUnread: function() {
-                    return a
-                }
-            }), n("446674");
-            var l = n("660478"),
-                i = n("282109"),
-                u = n("133335");
-
-            function a(e) {
-                return l.default.hasUnread(e.id) && i.default.getChannelUnreadMode(e) === u.UnreadMode.IMPORTANT
-            }
-        },
         870691: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -928,11 +913,11 @@
                 c += 1
             }
 
-            function f(e) {
+            function C(e) {
                 if (null == s[e]) return !1;
                 delete s[e]
             }
-            class C extends l.default.PersistedStore {
+            class f extends l.default.PersistedStore {
                 initialize(e) {
                     this.waitFor(a.default, r.default), this.removeChangeListener(E), this.addChangeListener(E), s = null != e ? e : {}
                 }
@@ -949,8 +934,8 @@
                     return c
                 }
             }
-            C.displayName = "CategoryCollapseStore", C.persistKey = "collapsedCategories";
-            var _ = new C(i.default, {
+            f.displayName = "CategoryCollapseStore", f.persistKey = "collapsedCategories";
+            var _ = new f(i.default, {
                 CONNECTION_OPEN: function(e) {
                     for (let t of (!e.userGuildSettings.partial && (s = {}), e.userGuildSettings.entries))
                         if (null != t.channel_overrides)
@@ -978,7 +963,7 @@
                     let {
                         id: t
                     } = e;
-                    return f(t)
+                    return C(t)
                 },
                 CATEGORY_COLLAPSE_ALL: function(e) {
                     let {
@@ -1008,7 +993,7 @@
                             id: t
                         }
                     } = e;
-                    return f(t)
+                    return C(t)
                 }
             })
         },
@@ -1029,8 +1014,8 @@
                 s = n("305961"),
                 c = n("49111");
             let E = null,
-                f = {},
-                C = null;
+                C = {},
+                f = null;
 
             function _() {
                 return {
@@ -1065,11 +1050,11 @@
                         channel: t,
                         index: -1
                     }), n[t.id] = []
-                }), t[0, o.GUILD_SELECTABLE_CHANNELS_KEY].forEach(l), t[0, o.GUILD_VOCAL_CHANNELS_KEY].forEach(l), (0, u.default)(n._categories, n).forEach(T), f[e] = n, n
+                }), t[0, o.GUILD_SELECTABLE_CHANNELS_KEY].forEach(l), t[0, o.GUILD_VOCAL_CHANNELS_KEY].forEach(l), (0, u.default)(n._categories, n).forEach(T), C[e] = n, n
             }
 
             function h() {
-                f = {}, null != E && S(E)
+                C = {}, null != E && S(E)
             }
 
             function L(e) {
@@ -1078,7 +1063,7 @@
                         id: t
                     }
                 } = e;
-                f[t] = void 0, E === t && S(t)
+                C[t] = void 0, E === t && S(t)
             }
 
             function I(e) {
@@ -1088,20 +1073,20 @@
                     }
                 } = e;
                 if (null == t) return !1;
-                f[t] = void 0, E === t && S(t)
+                C[t] = void 0, E === t && S(t)
             }
 
             function N(e) {
                 let {
                     guildId: t
                 } = e;
-                f[t] = void 0, t === E && S(t)
+                C[t] = void 0, t === E && S(t)
             }
 
             function g(e, t) {
-                if (C = t, null == e || null == e.getGuildId()) return !1;
+                if (f = t, null == e || null == e.getGuildId()) return !1;
                 let n = e.getGuildId();
-                return null != n && (f[n] = void 0, n === E && S(n), !0)
+                return null != n && (C[n] = void 0, n === E && S(n), !0)
             }
 
             function D() {
@@ -1113,7 +1098,7 @@
                 }
                 getCategories(e) {
                     return null != e ? function(e) {
-                        let t = f[e];
+                        let t = C[e];
                         return null != t ? t : S(e)
                     }(e) : A
                 }
@@ -1124,7 +1109,7 @@
                     let {
                         guildId: t
                     } = e;
-                    if (E = null != t ? t : null, null == t || null != f[t]) return !1;
+                    if (E = null != t ? t : null, null == t || null != C[t]) return !1;
                     S(t)
                 },
                 CONNECTION_OPEN: h,
@@ -1138,7 +1123,7 @@
                             id: t
                         }
                     } = e;
-                    delete f[t]
+                    delete C[t]
                 },
                 CHANNEL_CREATE: I,
                 CHANNEL_DELETE: I,
@@ -1149,7 +1134,7 @@
                     for (let {
                             guild_id: e
                         }
-                        of t) null != e && (f[e] = void 0, n = !0, E === e && S(e));
+                        of t) null != e && (C[e] = void 0, n = !0, E === e && S(e));
                     return n
                 },
                 GUILD_MEMBER_UPDATE: function(e) {
@@ -1158,7 +1143,7 @@
                         user: n
                     } = e;
                     if (r.default.getId() !== n.id) return !1;
-                    f[t] = void 0, t === E && S(t)
+                    C[t] = void 0, t === E && S(t)
                 },
                 CURRENT_USER_UPDATE: function() {
                     if (null == E) return !1;
@@ -1173,7 +1158,7 @@
                     let {
                         channelId: t
                     } = e;
-                    return null == t && null != C ? g(d.default.getChannel(C), null) : g(d.default.getChannel(t), t)
+                    return null == t && null != f ? g(d.default.getChannel(f), null) : g(d.default.getChannel(t), t)
                 },
                 VOICE_STATE_UPDATES: function(e) {
                     let {
@@ -1210,8 +1195,8 @@
                 s = n("77078"),
                 c = n("145131"),
                 E = n("49111"),
-                f = n("430098"),
-                C = n("926622");
+                C = n("430098"),
+                f = n("926622");
             let {
                 Provider: _,
                 Consumer: A
@@ -1230,7 +1215,7 @@
                     return (0, u.jsx)(A, {
                         children: s => (0, u.jsx)(c.default.Child, {
                             grow: 0,
-                            className: d(f.image, C.marginBottom40),
+                            className: d(C.image, f.marginBottom40),
                             style: {
                                 ...r,
                                 width: n,
@@ -1256,10 +1241,10 @@
                     direction: c.default.Direction.VERTICAL,
                     style: a,
                     children: [null != t && (0, u.jsx)(s.H, {
-                        className: d(n, f.title),
+                        className: d(n, C.title),
                         children: t
                     }), null != i ? (0, u.jsx)("div", {
-                        className: d(l, f.text, C.marginTop8),
+                        className: d(l, C.text, f.marginTop8),
                         children: i
                     }) : null]
                 })
@@ -1278,7 +1263,7 @@
                             direction: c.default.Direction.VERTICAL,
                             align: c.default.Align.CENTER,
                             justify: c.default.Justify.CENTER,
-                            className: d(f.wrapper, n),
+                            className: d(C.wrapper, n),
                             style: l,
                             children: e
                         })
