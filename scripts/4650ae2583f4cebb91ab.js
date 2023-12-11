@@ -416,7 +416,6 @@
                                 iconClass: P.repliedTextContentIcon,
                                 iconSize: I.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
                             }), d = t.message.isPoll() ? (0, a.jsx)(f.default, {
-                                isRepliedPoll: !0,
                                 className: P.pollBadgeReplied
                             }) : null;
                             return (0, a.jsxs)(a.Fragment, {

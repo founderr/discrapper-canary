@@ -4,6 +4,40 @@
             "use strict";
             e.exports = n.p + "b024d0fd63aa42ba8670.png"
         },
+        167115: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                PollsIcon: function() {
+                    return r
+                }
+            });
+            var a = n("37983");
+            n("884691");
+            var i = n("669491"),
+                s = n("75196");
+            let r = e => {
+                let {
+                    width: t = 24,
+                    height: n = 24,
+                    color: r = i.default.colors.INTERACTIVE_NORMAL,
+                    colorClass: l = "",
+                    ...o
+                } = e;
+                return (0, a.jsx)("svg", {
+                    ...(0, s.default)(o),
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: t,
+                    height: n,
+                    fill: "none",
+                    viewBox: "0 0 24 24",
+                    children: (0, a.jsx)("path", {
+                        fill: "string" == typeof r ? r : r.css,
+                        d: "M2 5c0-1.1.9-2 2-2h16a2 2 0 1 1 0 4H4a2 2 0 0 1-2-2ZM2 12c0-1.1.9-2 2-2h6a2 2 0 1 1 0 4H4a2 2 0 0 1-2-2ZM4 17a2 2 0 1 0 0 4h12a2 2 0 1 0 0-4H4Z",
+                        className: l
+                    })
+                })
+            }
+        },
         25116: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
@@ -21,12 +55,12 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return s
                 }
             }), n("702976");
             var a = n("568734"),
                 i = n("49111"),
-                r = e => null != e && null != e.attachments && !(e.attachments.length < 1) && e.attachments.some(e => null != e.flags && (0, a.hasFlag)(e.flags, i.MessageAttachmentFlags.IS_REMIX))
+                s = e => null != e && null != e.attachments && !(e.attachments.length < 1) && e.attachments.some(e => null != e.flags && (0, a.hasFlag)(e.flags, i.MessageAttachmentFlags.IS_REMIX))
         },
         95045: function(e, t, n) {
             "use strict";
@@ -40,41 +74,41 @@
             }), n("222007"), n("781738"), n("355025");
             var a = n("367376"),
                 i = n("240873"),
-                r = n("49111");
-            let s = new Set([r.MessageEmbedTypes.IMAGE, r.MessageEmbedTypes.GIFV]),
+                s = n("49111");
+            let r = new Set([s.MessageEmbedTypes.IMAGE, s.MessageEmbedTypes.GIFV]),
                 l = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
 
             function o(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     n = t.formatInline ? a.default.parseInlineReply : a.default.parse;
                 return function(e, t, n) {
-                    var a, r;
+                    var a, s;
                     let {
                         toAST: o = !1,
                         hideSimpleEmbedContent: u = !0,
                         formatInline: m = !1,
                         postProcessor: f
                     } = n, g = !1;
-                    let p = e(t.content, !0, (a = t, r = n, {
-                        allowLinks: null != a.webhookId || !!r.allowLinks,
+                    let p = e(t.content, !0, (a = t, s = n, {
+                        allowLinks: null != a.webhookId || !!s.allowLinks,
                         allowEmojiLinks: null != a.webhookId,
                         channelId: a.channel_id,
                         messageId: a.id,
                         mentionChannels: a.mentionChannels,
-                        isInteracting: !!r.isInteracting,
-                        formatInline: !!r.formatInline,
-                        noStyleAndInteraction: !!r.noStyleAndInteraction,
-                        allowHeading: !!r.allowHeading,
-                        allowList: !!r.allowList,
-                        previewLinkTarget: !!r.previewLinkTarget,
-                        disableAnimatedEmoji: !!r.disableAnimatedEmoji,
+                        isInteracting: !!s.isInteracting,
+                        formatInline: !!s.formatInline,
+                        noStyleAndInteraction: !!s.noStyleAndInteraction,
+                        allowHeading: !!s.allowHeading,
+                        allowList: !!s.allowList,
+                        previewLinkTarget: !!s.previewLinkTarget,
+                        disableAnimatedEmoji: !!s.disableAnimatedEmoji,
                         disableAutoBlockNewlines: !0,
                         muted: !1
                     }), (e, n) => (!Array.isArray(e) && (e = [e]), u && (e = function(e, t) {
                         if (1 !== e.length || 1 !== t.length) return e;
                         let n = e[0],
                             a = t[0];
-                        return ("link" === n.type || "attachmentLink" === n.type) && s.has(a.type) && (0, i.isEmbedInline)(a) ? [] : e
+                        return ("link" === n.type || "attachmentLink" === n.type) && r.has(a.type) && (0, i.isEmbedInline)(a) ? [] : e
                     }(e, t.embeds)), !m && (e = function(e, t) {
                         return t ? c(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = c(e[0].content)), e)
                     }(e, n)), g = function(e, t) {
@@ -129,7 +163,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 getMessageContentId: function() {
-                    return s
+                    return r
                 },
                 getMessageReplyId: function() {
                     return l
@@ -155,9 +189,9 @@
             });
             var a = n("862013"),
                 i = n("913491"),
-                r = n("49111");
+                s = n("49111");
 
-            function s(e) {
+            function r(e) {
                 return "message-content-".concat(e.id)
             }
 
@@ -183,33 +217,33 @@
             }
 
             function m(e, t, n) {
-                let c = e.type === r.MessageTypes.REPLY && null != e.messageReference,
+                let c = e.type === s.MessageTypes.REPLY && null != e.messageReference,
                     m = e.embeds.length > 0,
                     f = e.attachments.length > 0,
                     g = e.stickerItems.length > 0,
                     p = e.codedLinks.length > 0,
-                    E = e.hasFlag(r.MessageFlags.HAS_THREAD),
-                    S = m || f || g || p || E || e.type === r.MessageTypes.THREAD_CREATED,
-                    h = m && e.content === e.embeds[0].url && e.embeds[0].type === r.MessageEmbedTypes.GIFV,
-                    A = e.type !== r.MessageTypes.DEFAULT || !h && "" !== e.content,
-                    y = (0, i.default)(e),
-                    I = !y && (null == n ? void 0 : n.hasTimestamp) !== !1,
-                    T = o(e, t),
+                    E = e.hasFlag(s.MessageFlags.HAS_THREAD),
+                    A = m || f || g || p || E || e.type === s.MessageTypes.THREAD_CREATED,
+                    S = m && e.content === e.embeds[0].url && e.embeds[0].type === s.MessageEmbedTypes.GIFV,
+                    h = e.type !== s.MessageTypes.DEFAULT || !S && "" !== e.content,
+                    I = (0, i.default)(e),
+                    T = !I && (null == n ? void 0 : n.hasTimestamp) !== !1,
+                    y = o(e, t),
                     M = l(e),
-                    x = y ? "" : "".concat(c ? M : T, " ").concat(a.MESSAGE_NICKNAME_PAUSE_LABEL_SEGMENT_ID);
+                    v = I ? "" : "".concat(c ? M : y, " ").concat(a.MESSAGE_NICKNAME_PAUSE_LABEL_SEGMENT_ID);
+                if (h) {
+                    let t = r(e);
+                    v += " ".concat(t)
+                }
                 if (A) {
-                    let t = s(e);
-                    x += " ".concat(t)
-                }
-                if (S) {
                     let t = d(e);
-                    x += " ".concat(t)
+                    v += " ".concat(t)
                 }
-                if (I) {
+                if (T) {
                     let t = u(e);
-                    x += " ".concat(a.MESSAGE_PRE_TIMESTAMP_PAUSE_LABEL_SEGMENT_ID, " ").concat(t)
+                    v += " ".concat(a.MESSAGE_PRE_TIMESTAMP_PAUSE_LABEL_SEGMENT_ID, " ").concat(t)
                 }
-                return x.trim()
+                return v.trim()
             }
 
             function f(e) {
@@ -222,7 +256,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return r
                 }
             });
             var a = n("741566");
@@ -231,10 +265,10 @@
                     LATIN24: a.latin24CompactTimeStamp,
                     ASIAN: a.asianCompactTimeStamp
                 },
-                r = /(AM|PM)$/;
+                s = /(AM|PM)$/;
 
-            function s(e) {
-                return null != e.match(r) ? i.LATIN24 : e.length <= 5 ? i.LATIN12 : i.ASIAN
+            function r(e) {
+                return null != e.match(s) ? i.LATIN24 : e.length <= 5 ? i.LATIN12 : i.ASIAN
             }
         },
         119001: function(e, t, n) {
@@ -247,63 +281,31 @@
             var a = n("37983");
             n("884691");
             var i = n("414456"),
-                r = n.n(i),
-                s = n("77078"),
-                l = n("956089"),
-                o = n("855891"),
+                s = n.n(i),
+                r = n("167115"),
+                l = n("77078"),
+                o = n("956089"),
                 u = n("782340"),
                 c = n("301893");
 
             function d(e) {
                 let {
-                    isRepliedPoll: t = !1,
-                    className: n
-                } = e, i = t ? c.badgeReplied : c.badgeDefault;
-                return (0, a.jsx)(l.TextBadge, {
-                    className: r(n, i),
+                    className: t
+                } = e;
+                return (0, a.jsx)(o.TextBadge, {
+                    className: s(t, c.badge),
                     disableColor: !0,
                     text: (0, a.jsxs)("div", {
                         className: c.innerBadge,
-                        children: [(0, a.jsx)(o.default, {
-                            className: c.icon
-                        }), (0, a.jsx)(s.Text, {
+                        children: [(0, a.jsx)(r.PollsIcon, {
+                            className: c.icon,
+                            color: l.tokens.colors.INTERACTIVE_ACTIVE
+                        }), (0, a.jsx)(l.Text, {
                             variant: "text-xs/semibold",
-                            color: t ? "interactive-active" : "text-normal",
+                            color: "interactive-active",
                             children: u.default.Messages.POLL
                         })]
                     })
-                })
-            }
-        },
-        855891: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return r
-                }
-            });
-            var a = n("37983");
-            n("884691");
-            var i = n("75196");
-
-            function r(e) {
-                let {
-                    color: t = "currentColor",
-                    ...n
-                } = e;
-                return (0, a.jsxs)("svg", {
-                    ...(0, i.default)(n),
-                    width: "16",
-                    height: "16",
-                    viewBox: "0 0 16 16",
-                    fill: t,
-                    children: [(0, a.jsx)("path", {
-                        d: "M3.48325 0H0.727273C0.325611 0 0 0.325611 0 0.727273V15.2727C0 15.6744 0.325611 16 0.727273 16H3.48325C3.88492 16 4.21053 15.6744 4.21053 15.2727V0.727273C4.21053 0.325611 3.88492 0 3.48325 0Z"
-                    }), (0, a.jsx)("path", {
-                        d: "M9.37799 8H6.62201C6.22035 8 5.89474 8.32561 5.89474 8.72727V15.2727C5.89474 15.6744 6.22035 16 6.62201 16H9.37799C9.77965 16 10.1053 15.6744 10.1053 15.2727V8.72727C10.1053 8.32561 9.77965 8 9.37799 8Z"
-                    }), (0, a.jsx)("path", {
-                        d: "M15.2727 4.36364H12.5167C12.1151 4.36364 11.7895 4.68925 11.7895 5.09091V15.2727C11.7895 15.6744 12.1151 16 12.5167 16H15.2727C15.6744 16 16 15.6744 16 15.2727V5.09091C16 4.68925 15.6744 4.36364 15.2727 4.36364Z"
-                    })]
                 })
             }
         },
@@ -322,21 +324,21 @@
             });
             var a = n("716241"),
                 i = n("25116"),
-                r = n("599110"),
-                s = n("69741"),
+                s = n("599110"),
+                r = n("69741"),
                 l = n("49111"),
                 o = n("929887");
 
             function u(e) {
-                return (0, i.default)(e) && e.messageReference.guild_id === s.PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID || null != e.author && e.author.id === s.PUBLIC_GUILD_UPDATES_WEBHOOK_USER_ID
+                return (0, i.default)(e) && e.messageReference.guild_id === r.PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID || null != e.author && e.author.id === r.PUBLIC_GUILD_UPDATES_WEBHOOK_USER_ID
             }
 
             function c() {
                 return o
             }
             let d = e => {
-                r.default.track(l.AnalyticEvents.USER_FLOW_TRANSITION, {
-                    flow_type: s.ENABLE_COMMUNITY_FLOW_MODAL_KEY,
+                s.default.track(l.AnalyticEvents.USER_FLOW_TRANSITION, {
+                    flow_type: r.ENABLE_COMMUNITY_FLOW_MODAL_KEY,
                     from_step: e.fromStep,
                     to_step: e.toStep,
                     ...(0, a.collectGuildAnalyticsMetadata)(e.guildId)
@@ -347,10 +349,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 useCanSeeRemixBadge: function() {
-                    return r
+                    return s
                 },
                 useIsRemixANitroPerk: function() {
-                    return s
+                    return r
                 }
             }), n("685665");
             var a = n("862205");
@@ -390,7 +392,7 @@
                 }]
             });
 
-            function r() {
+            function s() {
                 return i.useExperiment({
                     location: "canSeeRemixBadge"
                 }, {
@@ -398,7 +400,7 @@
                 }).canSeeRemixBadge
             }
 
-            function s() {
+            function r() {
                 return !!i.useExperiment({
                     location: "isRemixANitroPerkHook"
                 }, {
@@ -413,16 +415,16 @@
                     return E
                 },
                 memoizeMessageProps: function() {
-                    return S
+                    return A
                 },
                 default: function() {
-                    return h
+                    return S
                 }
             });
             var a = n("37983"),
                 i = n("884691"),
-                r = n("414456"),
-                s = n.n(r),
+                s = n("414456"),
+                r = n.n(s),
                 l = n("717837"),
                 o = n.n(l),
                 u = n("233736"),
@@ -438,48 +440,48 @@
                     asPartialPreview: n = !1
                 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
                 if (e.isPoll() && n) {
-                    var a, i, r;
-                    return null !== (r = null === (i = e.poll) || void 0 === i ? void 0 : null === (a = i.question) || void 0 === a ? void 0 : a.text) && void 0 !== r ? r : ""
+                    var a, i, s;
+                    return null !== (s = null === (i = e.poll) || void 0 === i ? void 0 : null === (a = i.question) || void 0 === a ? void 0 : a.text) && void 0 !== s ? s : ""
                 }
                 return e.isPoll() ? "" : e.hasFlag(m.MessageFlags.SOURCE_MESSAGE_DELETED) ? f.default.Messages.SOURCE_MESSAGE_DELETED : t
             }
 
-            function S(e, t) {
+            function A(e, t) {
                 var n, a;
                 let {
                     message: i
                 } = t, {
-                    message: r
+                    message: s
                 } = e;
-                return (0, u.default)(e, t, ["message"]) && i.content === r.content && i.state === r.state && (null === (n = i.editedTimestamp) || void 0 === n ? void 0 : n.toString()) === (null === (a = r.editedTimestamp) || void 0 === a ? void 0 : a.toString())
+                return (0, u.default)(e, t, ["message"]) && i.content === s.content && i.state === s.state && (null === (n = i.editedTimestamp) || void 0 === n ? void 0 : n.toString()) === (null === (a = s.editedTimestamp) || void 0 === a ? void 0 : a.toString())
             }
-            var h = i.memo(function(e) {
+            var S = i.memo(function(e) {
                 var t;
                 let {
                     className: n,
-                    message: r,
+                    message: s,
                     children: l,
                     content: u,
-                    onUpdate: S,
-                    contentRef: h,
-                    asPartialPreview: A
-                } = e, y = r.isEdited(), I = r.state === m.MessageStates.SEND_FAILED, T = r.state === m.MessageStates.SENDING, M = r.isCommandType(), x = null === (t = r.editedTimestamp) || void 0 === t ? void 0 : t.toString(), v = i.useRef(!1);
+                    onUpdate: A,
+                    contentRef: S,
+                    asPartialPreview: h
+                } = e, I = s.isEdited(), T = s.state === m.MessageStates.SEND_FAILED, y = s.state === m.MessageStates.SENDING, M = s.isCommandType(), v = null === (t = s.editedTimestamp) || void 0 === t ? void 0 : t.toString(), x = i.useRef(!1);
                 return i.useLayoutEffect(() => {
-                    v.current ? null != S && S() : v.current = !0
-                }, [S, r.content, u, x, l]), (0, a.jsxs)("div", {
-                    id: (0, c.getMessageContentId)(r),
-                    ref: h,
-                    className: s(n, g.markup, {
+                    x.current ? null != A && A() : x.current = !0
+                }, [A, s.content, u, v, l]), (0, a.jsxs)("div", {
+                    id: (0, c.getMessageContentId)(s),
+                    ref: S,
+                    className: r(n, g.markup, {
                         [p.messageContent]: !0,
-                        [p.isSending]: T && !M,
-                        [p.markupRtl]: "rtl" === o(r.content),
-                        [p.isFailed]: I
+                        [p.isSending]: y && !M,
+                        [p.markupRtl]: "rtl" === o(s.content),
+                        [p.isFailed]: T
                     }),
-                    children: [null != l ? l : E(r, u, {
-                        asPartialPreview: A
-                    }), y && null != r.editedTimestamp && (0, a.jsxs)(a.Fragment, {
+                    children: [null != l ? l : E(s, u, {
+                        asPartialPreview: h
+                    }), I && null != s.editedTimestamp && (0, a.jsxs)(a.Fragment, {
                         children: [" ", (0, a.jsx)(d.default, {
-                            timestamp: r.editedTimestamp,
+                            timestamp: s.editedTimestamp,
                             isEdited: !0,
                             isInline: !1,
                             children: (0, a.jsxs)("span", {
@@ -489,7 +491,7 @@
                         })]
                     })]
                 })
-            }, S)
+            }, A)
         },
         587904: function(e, t, n) {
             "use strict";
@@ -501,8 +503,8 @@
             var a = n("37983");
             n("884691");
             var i = n("414456"),
-                r = n.n(i),
-                s = n("77078"),
+                s = n.n(i),
+                r = n("77078"),
                 l = n("38600"),
                 o = n("888400"),
                 u = n("782340"),
@@ -518,19 +520,19 @@
                         isInline: g = !0,
                         id: p,
                         isEdited: E = !1
-                    } = e, S = (0, o.accessibilityLabelCalendarFormat)(d), h = i ? (0, o.dateFormat)(d, "LT") : (0, o.calendarFormat)(d), A = i ? (0, l.default)(h) : null, y = E ? u.default.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({
-                        timeFormatted: S
-                    }) : S;
+                    } = e, A = (0, o.accessibilityLabelCalendarFormat)(d), S = i ? (0, o.dateFormat)(d, "LT") : (0, o.calendarFormat)(d), h = i ? (0, l.default)(S) : null, I = E ? u.default.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({
+                        timeFormatted: A
+                    }) : A;
                     return (0, a.jsx)("span", {
-                        className: r(n, A, {
+                        className: s(n, h, {
                             [c.timestamp]: !0,
                             [c.timestampVisibleOnHover]: m,
                             [c.timestampInline]: g,
                             [c.alt]: f
                         }),
-                        children: (0, a.jsx)(s.Tooltip, {
+                        children: (0, a.jsx)(r.Tooltip, {
                             text: (0, o.dateFormat)(d, "LLLL"),
-                            "aria-label": y,
+                            "aria-label": I,
                             tooltipClassName: c.timestampTooltip,
                             delay: 750,
                             children: e => (0, a.jsx)("time", {
@@ -542,7 +544,7 @@
                                         className: c.separator,
                                         "aria-hidden": !0,
                                         children: i ? "[" : " — "
-                                    }), h, i && (0, a.jsxs)("i", {
+                                    }), S, i && (0, a.jsxs)("i", {
                                         className: c.separator,
                                         "aria-hidden": !0,
                                         children: ["]", " "]
@@ -563,8 +565,8 @@
             var a = n("37983");
             n("884691");
             var i = n("25116"),
-                r = n("730541"),
-                s = n("79798"),
+                s = n("730541"),
+                r = n("79798"),
                 l = n("680894"),
                 o = n("741566");
 
@@ -578,7 +580,7 @@
                     hideIcon: f = !1,
                     children: g
                 } = e;
-                return ((null == n ? void 0 : n.isSystemDM()) ? t = s.default.Types.SYSTEM_DM : null != n && (0, i.default)(n) ? t = (0, r.isPublicSystemMessage)(n) ? s.default.Types.OFFICIAL : s.default.Types.SERVER : (null == c ? void 0 : c.id) === l.CLYDE_AI_USER_ID ? t = s.default.Types.AI : (null == c ? void 0 : c.bot) ? t = s.default.Types.BOT : null != u && u.isForumPost() && u.ownerId === (null == c ? void 0 : c.id) && !m && (t = s.default.Types.ORIGINAL_POSTER), null == t) ? null : (0, a.jsx)(s.default, {
+                return ((null == n ? void 0 : n.isSystemDM()) ? t = r.default.Types.SYSTEM_DM : null != n && (0, i.default)(n) ? t = (0, s.isPublicSystemMessage)(n) ? r.default.Types.OFFICIAL : r.default.Types.SERVER : (null == c ? void 0 : c.id) === l.CLYDE_AI_USER_ID ? t = r.default.Types.AI : (null == c ? void 0 : c.bot) ? t = r.default.Types.BOT : null != u && u.isForumPost() && u.ownerId === (null == c ? void 0 : c.id) && !m && (t = r.default.Types.ORIGINAL_POSTER), null == t) ? null : (0, a.jsx)(r.default, {
                     className: d ? o.botTagCompact : o.botTagCozy,
                     type: t,
                     verified: null == c ? void 0 : c.isVerifiedBot(),
@@ -595,11 +597,11 @@
                     return i
                 },
                 default: function() {
-                    return I
+                    return T
                 }
             });
-            var a, i, r = n("37983"),
-                s = n("884691"),
+            var a, i, s = n("37983"),
+                r = n("884691"),
                 l = n("414456"),
                 o = n.n(l),
                 u = n("394846"),
@@ -610,100 +612,100 @@
                 g = n("500858"),
                 p = n("238956"),
                 E = n("506885"),
-                S = n("79798"),
-                h = n("315102"),
-                A = n("741566");
+                A = n("79798"),
+                S = n("315102"),
+                h = n("741566");
 
-            function y(e) {
+            function I(e) {
                 let {
                     compact: t
                 } = e;
-                return (0, r.jsx)(S.default, {
-                    className: t ? A.botTagCompact : A.botTagCozy,
-                    type: S.default.Types.REMIX,
+                return (0, s.jsx)(A.default, {
+                    className: t ? h.botTagCompact : h.botTagCozy,
+                    type: A.default.Types.REMIX,
                     useRemSizes: !0
                 })
             }
 
-            function I(e) {
+            function T(e) {
                 let t, {
                         author: n,
                         message: a,
                         userOverride: i,
                         compact: l = !1,
-                        withMentionPrefix: S = !1,
-                        showPopout: I = !1,
-                        className: T,
+                        withMentionPrefix: A = !1,
+                        showPopout: T = !1,
+                        className: y,
                         onClick: M,
-                        onContextMenu: x,
-                        onPopoutRequestClose: v,
+                        onContextMenu: v,
+                        onPopoutRequestClose: x,
                         renderPopout: _,
-                        renderRemixTag: b = !1,
+                        renderRemixTag: N = !1,
                         decorations: L
                     } = e,
-                    C = s.useContext(f.default),
+                    b = r.useContext(f.default),
                     {
-                        nick: N,
-                        colorString: R,
+                        nick: R,
+                        colorString: C,
                         colorRoleName: k
                     } = n,
                     j = null != a.messageReference && null != a.webhookId,
                     D = (0, c.useStateFromStores)([m.default], () => m.default.roleStyle),
                     w = (0, p.useCanSeeRemixBadge)(),
-                    F = {
-                        className: A.username,
-                        style: "username" === D && null != R ? {
-                            color: R
+                    P = {
+                        className: h.username,
+                        style: "username" === D && null != C ? {
+                            color: C
                         } : void 0,
                         onClick: M,
-                        onContextMenu: x,
-                        children: (S ? "@" : "") + N
+                        onContextMenu: v,
+                        children: (A ? "@" : "") + R
                     };
-                t = null != _ && null != I ? (0, r.jsx)(d.Popout, {
+                t = null != _ && null != T ? (0, s.jsx)(d.Popout, {
                     preload: j ? void 0 : function() {
                         let e = null != i ? i : a.author;
-                        return (0, E.default)(e.id, null != n.guildMemberAvatar && null != C ? (0, h.getGuildMemberAvatarURLSimple)({
-                            guildId: C,
+                        return (0, E.default)(e.id, null != n.guildMemberAvatar && null != b ? (0, S.getGuildMemberAvatarURLSimple)({
+                            guildId: b,
                             userId: e.id,
                             avatar: n.guildMemberAvatar,
                             size: 80
-                        }) : e.getAvatarURL(C, 80), {
-                            guildId: C,
+                        }) : e.getAvatarURL(b, 80), {
+                            guildId: b,
                             channelId: a.channel_id
                         })
                     },
                     renderPopout: _,
-                    shouldShow: I,
+                    shouldShow: T,
                     position: u.isMobile ? "window_center" : "right",
-                    onRequestClose: v,
+                    onRequestClose: x,
                     children: e => {
                         let {
                             onClick: t,
                             ...n
                         } = e;
-                        return (0, r.jsx)(d.Clickable, {
+                        return (0, s.jsx)(d.Clickable, {
                             tag: "span",
                             ...n,
-                            ...F,
-                            className: o(F.className, A.clickable, T)
+                            ...P,
+                            className: o(P.className, h.clickable, y)
                         })
                     }
-                }) : (0, r.jsx)(d.Clickable, {
-                    ...F,
-                    className: o(F.className, T)
+                }) : (0, s.jsx)(d.Clickable, {
+                    ...P,
+                    className: o(P.className, y)
                 });
-                let P = null != L ? L[0] : null,
+                let F = null != L ? L[0] : null,
                     B = null != L ? L[1] : null;
-                return (0, r.jsxs)(r.Fragment, {
-                    children: [null != P && l ? (0, r.jsxs)(r.Fragment, {
-                        children: [" ", P, " "]
-                    }) : null, "dot" === D ? (0, r.jsx)(d.RoleDot, {
-                        color: R,
+                return (0, s.jsxs)(s.Fragment, {
+                    children: [null != F && l ? (0, s.jsxs)(s.Fragment, {
+                        children: [" ", F, " "]
+                    }) : null, "dot" === D ? (0, s.jsx)(d.RoleDot, {
+                        color: C,
                         name: k,
-                        className: A.roleDot
-                    }) : null, t, null != B ? (0, r.jsx)(r.Fragment, {
+                        className: h.roleDot
+                    }) : null, t, null != B ? (0, s.jsx)(s.Fragment, {
                         children: B
-                    }) : null, null == P || l ? null : P, null != a && (0, g.default)(a) && w && b ? (0, r.jsx)(y, {}) : null]
+                    }) : null, null == F || l ? null : F, null != a && (0, g.default)(a) && w && N ? (0, s.jsx)(I, {}) : null]
                 })
             }(a = i || (i = {}))[a.SYSTEM_TAG = 0] = "SYSTEM_TAG", a[a.BADGES = 1] = "BADGES"
         }
